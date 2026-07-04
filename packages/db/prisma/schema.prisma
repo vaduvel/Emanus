@@ -1,0 +1,159 @@
+// Emanus — schema Prisma (workbook §7). Postgres.
+// Faza 1 rulează in-memory; DB se cablează în Faza 1.5.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum AgeCategoryId {
+  kids0_5
+  kids6_11
+  teens12_18
+  women
+  men
+  parents
+  grandparents
+}
+
+enum GrowthAxisId {
+  identity
+  emotional_peace
+  relationships
+  living_faith
+  character
+  freedom
+}
+
+enum ProgressStatus {
+  not_started
+  in_progress
+  completed
+}
+
+enum PostStatus {
+  visible
+  pending
+  removed
+}
+
+model Category {
+  id             AgeCategoryId @id
+  name           String
+  ageRange       String
+  dominantFormat String
+  config         Json
+  modules        Module[]
+}
+
+model Module {
+  id         String        @id
+  category   Category      @relation(fields: [categoryId], references: [id])
+  categoryId AgeCategoryId
+  order      Int
+  title      String
+  axis       GrowthAxisId
+  unlockRule Json?
+  courses    Course[]
+}
+
+model Course {
+  id       String   @id
+  module   Module   @relation(fields: [moduleId], references: [id])
+  moduleId String
+  order    Int
+  title    String
+  struggle String
+  truth    String
+  lessons  Lesson[]
+}
+
+model Lesson {
+  id             String         @id
+  course         Course         @relation(fields: [courseId], references: [id])
+  courseId       String
+  order          Int
+  title          String
+  estMinutes     Int
+  anchorRefs     String[]
+  memoryVerseRef String
+  badgeId        String?
+  steps          Json // LessonStep[] serializat
+  progress       Progress[]
+  journals       JournalEntry[]
+}
+
+model User {
+  id         String          @id @default(cuid())
+  anonName   String
+  avatar     String
+  ageBand    String?
+  categoryId AgeCategoryId
+  createdAt  DateTime        @default(now())
+  consent    Json
+  progress   Progress[]
+  gamState   GamState?
+  growth     GrowthScore[]
+  journals   JournalEntry[]
+  posts      CommunityPost[]
+}
+
+model Progress {
+  user        User           @relation(fields: [userId], references: [id])
+  userId      String
+  lesson      Lesson         @relation(fields: [lessonId], references: [id])
+  lessonId    String
+  status      ProgressStatus @default(not_started)
+  completedAt DateTime?
+  choicesMade Json
+
+  @@id([userId, lessonId])
+}
+
+model GamState {
+  user           User      @relation(fields: [userId], references: [id])
+  userId         String    @id
+  xp             Int       @default(0)
+  level          Int       @default(1)
+  streakDays     Int       @default(0)
+  lastActiveDate DateTime?
+  badgeIds       String[]
+  certificateIds String[]
+}
+
+model GrowthScore {
+  user      User         @relation(fields: [userId], references: [id])
+  userId    String
+  axis      GrowthAxisId
+  baseline  Int
+  current   Int
+  updatedAt DateTime     @updatedAt
+
+  @@id([userId, axis])
+}
+
+model JournalEntry {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  lesson    Lesson   @relation(fields: [lessonId], references: [id])
+  lessonId  String
+  prompt    String
+  text      String
+  createdAt DateTime @default(now())
+  private   Boolean  @default(true)
+}
+
+model CommunityPost {
+  id         String        @id @default(cuid())
+  user       User          @relation(fields: [userId], references: [id])
+  userId     String
+  categoryId AgeCategoryId
+  body       String
+  createdAt  DateTime      @default(now())
+  status     PostStatus    @default(pending)
+}

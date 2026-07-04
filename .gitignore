@@ -12,3 +12,16 @@
 # OS / sistem
 Thumbs.db
 desktop.ini
+
+# Node / monorepo
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+.env
+.env.local
+coverage/
+.pnpm-store/
+
+# Prisma
+packages/db/prisma/*.db

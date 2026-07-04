@@ -1,0 +1,106 @@
+import type { AgeCategoryId, Category } from "./domain.js"
+
+// Cele 7 categorii (workbook §2 & §5). Modulele se populează pe măsură ce se adaugă conținut.
+// Regula de aur (§4): a adăuga o categorie = conținut + config, NU cod nou.
+export const CATEGORY_CONFIGS: Record<AgeCategoryId, Category> = {
+  kids0_5: {
+    id: "kids0_5",
+    name: "Bebeluși & preșcolari",
+    ageRange: "0-5",
+    dominantFormat: "Animație + audio, cu părintele",
+    config: {
+      tone: "cald, narativ, o singură idee",
+      bubbleMaxChars: 0,
+      mediaMix: ["animation", "audio"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+      requiresParent: true,
+    },
+    moduleIds: [],
+  },
+  kids6_11: {
+    id: "kids6_11",
+    name: "Copii",
+    ageRange: "6-11",
+    dominantFormat: "Text simplu + animație + quiz",
+    config: {
+      tone: "de prieten, nu de profesor",
+      bubbleMaxChars: 140,
+      mediaMix: ["chat", "animation"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+    },
+    moduleIds: [],
+  },
+  teens12_18: {
+    id: "teens12_18",
+    name: "Adolescenți",
+    ageRange: "12-18",
+    dominantFormat: "Chat interactiv + video",
+    config: {
+      tone: "relatable, direct, fără clișee",
+      bubbleMaxChars: 220,
+      mediaMix: ["chat", "video"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+    },
+    moduleIds: ["teens_m1_identity"],
+  },
+  women: {
+    id: "women",
+    name: "Adulți — femei",
+    ageRange: "18+",
+    dominantFormat: "Chat + video + reflecție",
+    config: {
+      tone: "cald, matur, fără clișee",
+      bubbleMaxChars: 280,
+      mediaMix: ["chat", "video"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+    },
+    moduleIds: [],
+  },
+  men: {
+    id: "men",
+    name: "Adulți — bărbați",
+    ageRange: "18+",
+    dominantFormat: "Chat + video + reflecție",
+    config: {
+      tone: "direct, fără ocolișuri",
+      bubbleMaxChars: 280,
+      mediaMix: ["chat", "video"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+    },
+    moduleIds: [],
+  },
+  parents: {
+    id: "parents",
+    name: "Părinți",
+    ageRange: "—",
+    dominantFormat: "Chat + ghiduri practice",
+    config: {
+      tone: "practic, cu har",
+      bubbleMaxChars: 280,
+      mediaMix: ["chat"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+    },
+    moduleIds: [],
+  },
+  grandparents: {
+    id: "grandparents",
+    name: "Bunici",
+    ageRange: "—",
+    dominantFormat: "Chat + audio, font mare",
+    config: {
+      tone: "liniștit, cald",
+      bubbleMaxChars: 260,
+      mediaMix: ["chat", "audio"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+      accessibility: { largeFont: true, highContrast: true, audioFirst: true },
+    },
+    moduleIds: [],
+  },
+}
