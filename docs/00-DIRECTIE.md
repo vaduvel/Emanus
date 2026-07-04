@@ -210,3 +210,27 @@ Da, versetul poate fi același pentru mulți — Cuvântul e unul. Dar **întâl
 3. **Bibliotecă de întrebări grele** cu răspunsuri cu har (căutabile + întrebare liberă).
 4. **Daniel: ascultă → reflectă → Cuvânt → afară**, în ordinea asta; niciodată predică peste durere.
 5. **Recomandarea (§13) explică mereu *de ce* acest pas pentru tine acum** — transparent, nu impus.
+
+---
+
+## 15 · Arhitectura conținutului & ecosistemul — direcție (etapizat)
+
+> Conturează progresul pe termen mediu-lung. Nu schimbă MVP-ul (§11); adaugă orizontul spre care creștem. Tot ce se adaugă aici trece prin Ușa (§13) și prin ascultare (§14).
+
+### Două straturi pentru același om
+
+Rulează în paralel, nu se exclud — temelie + drum personal:
+
+- **Conținut general (programa biblică):** cursuri generale despre Biblie — Geneza/Creație, Vechiul Testament, Noul Testament și tot ce cuprind. Coloana vertebrală de cunoaștere, structură stabilă, aceeași pentru toți.
+- **Conținut custom (personal):** cursuri și parcursuri personalizate, interactive, proactive, construite pe inputul și stadiul omului (§14) + recomandarea (§13). Drumul care se pliază pe viața lui.
+
+### Greii greilor (etape următoare, după MVP)
+
+1. **Spațiu de testimonii** — userii scriu cum a lucrat Isus în viața lor. Extinde zidul Ebenezer (§5) la nivel comunitar: motor de credință, de revenire și mărturie cu har. Moderare obligatorie (§12).
+2. **Course Creator Space** — pastori, preoți, influenceri creștini pot crea cursuri și lecții. Sabie cu două tăișuri (în bine): (a) câștigăm conținut original + calitate; (b) câștigăm userii care sunt deja urmăritorii acelui creator. Necesită QA teologic (§9) + moderare (§12); bază pentru creștere și monetizare (donații/creatori).
+3. **Live Bible Study** — studiu biblic live, în timp real, comunitar, cu ghid/creator uman.
+
+### Guvernanță (non-negociabil pentru conținut comunitar)
+
+- Tot ce e generat de useri/creatori trece prin **QA teologic + moderare** înainte de publicare.
+- **Ușa, nu unghiul** (§13) se aplică și creatorilor: fără tabără care respinge, fără jargon care exclude — totul ancorat în Scriptură și îndreptat spre Iisus.
