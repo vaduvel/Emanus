@@ -151,17 +151,62 @@ Ne întâlnim cu fiecare **acolo unde este** (onboarding pe punctul lui de porni
 
 Toți ceilalți te învață *despre* Dumnezeu (informație + obicei + calmare — tranzacțional). Emanus construiește o **relație** care schimbă **motivația inimii**: de la **frică** la **iubire**.
 
-- **Legea (frică):** „țin poruncile ca să nu fiu pedepsit" — conformare externă, moralism.
+- **Legea (frică):** „țin poruncile ca să nu fiu pedepsit” — conformare externă, moralism.
 - **Harul (iubire):** iubirea împlinește Legea (Romani 13:10; Galateni 5:14). Poruncile nu sunt abolite, ci *transcedate*: nu mai ai nevoie de regula externă când iubești.
 
 Aceasta e temelia **celor 2 inimi** (§1): inima de piatră → inima de carne (Ezechiel 36:26); litera ucide, Duhul dă viață (2 Corinteni 3; Ieremia 31:33). De aceea **axa #1 e identitatea**, nu comportamentul.
 
 ### Ce înseamnă concret pentru conținut
 
-1. **Identitate înainte de datorie** — „cine ești TU pentru că Iisus a făcut X" înainte de „ce ai de făcut".
+1. **Identitate înainte de datorie** — „cine ești TU pentru că Iisus a făcut X” înainte de „ce ai de făcut”.
 2. **Crucea re-trăită, nu predată** — întâlnire, nu capitol de curs.
-3. **Fiecare „poruncă" = răspuns la iubire** — nu „nu minți", ci „ești atât de iubit încât nu mai ai nevoie să minți".
+3. **Fiecare „poruncă” = răspuns la iubire** — nu „nu minți”, ci „ești atât de iubit încât nu mai ai nevoie să minți”.
 4. **Eșecul tratat ca tatăl fiului risipitor** — har la cădere, nu pedeapsă de streak.
-5. **Măsurăm creșterea inimii**, nu deschiderile — radarul pe 6 axe = „devii ca Iisus?", nu „ai bifat azi?".
+5. **Măsurăm creșterea inimii**, nu deschiderile — radarul pe 6 axe = „devii ca Iisus?”, nu „ai bifat azi?”.
 
-Ei fac „**știu despre Dumnezeu**". Noi facem „**Îl cunosc și sunt schimbat de El**".
+Ei fac „**știu despre Dumnezeu**”. Noi facem „**Îl cunosc și sunt schimbat de El**”.
+
+---
+
+## 14 · Ascultarea înainte de învățătură — inputul, sinceritatea, întrebările libere — decizie fixată
+
+> Completează §13. Dacă §13 spune *ce* conținut oferim (har, nu lege), §14 spune *cum* ajungem la om: întâi îl ascultăm, apoi vorbim. Nu turnăm versete și cursuri pe gât.
+
+### Principiul
+
+Luăm omul din stadiul în care este — nu de unde ne-ar conveni nouă. Întâi ascultăm, simțim și înțelegem unde e el în viața și în călătoria lui spre Iisus; abia apoi venim cu Cuvântul, personal, nu mecanic. Isus întreba înainte să învețe („Ce vrei să-ți fac?” — Marcu 10:51). Așa facem și noi.
+
+### Inputul real (nu doar Likert)
+
+Pe lângă diagnosticul pe axe, colectăm starea reală a omului:
+
+- **Check-in sincer:** „Cum ești, cu adevărat, azi?” — emoție, nu bifă.
+- **Realitatea vieții tale:** context, lupte, întrebări — spuse în cuvintele lui.
+- **Câmp liber de scris:** loc unde poate turna ce are pe inimă, fără format impus.
+
+Inputul acesta hrănește recomandarea (§13) și ritualul zilnic (§2): versetul și pasul urmează *lupta lui de azi*, nu un calendar rigid.
+
+### Zona de întrebări libere (free-range) — fără frică de judecată
+
+Un spațiu unde omul poate întreba ORICE, fără să fie corectat sau rușinat. Întrebările reale, grele, pe care mulți nu îndrăznesc să le pună în biserică:
+
+- „De ce mă lovesc doar eu de așa ceva?”
+- „Sunt prea păcătos ca să fiu iubit?”
+- „Sunt cumva blestemat?”
+- „Mai am șanse la mântuire?”
+- „Chiar am nevoie de Dumnezeu?”
+- „Chiar mă va ajuta, pe mine?”
+
+Răspundem cu empatie + Cuvânt, niciodată cu clișee sau condamnare. Daniel (§7) ascultă, reflectă înapoi ce a auzit, apoi duce blând la Scriptură și, la nevoie, la om real (biserică, familie, linie de criză §15).
+
+### Personal, nu mecanic — „one verse fits all”? Da și nu
+
+Da, versetul poate fi același pentru mulți — Cuvântul e unul. Dar **întâlnirea e personală**: același verset, așezat în rana lui, în întrebarea lui, în stadiul lui. Nu-i băgăm cursul pe gât; îi arătăm *de ce* tocmai acel pas e pentru el, acum. Scopul: să înțeleagă **planul lui Dumnezeu pentru el**, ca persoană, nu ca rând dintr-o programă.
+
+### Concret pentru produs
+
+1. **Check-in emoțional** la intrarea în ritual (nu doar „start lecție”).
+2. **Câmp liber „ce ai pe inimă azi”** care influențează versetul și pasul recomandat.
+3. **Bibliotecă de întrebări grele** cu răspunsuri cu har (căutabile + întrebare liberă).
+4. **Daniel: ascultă → reflectă → Cuvânt → afară**, în ordinea asta; niciodată predică peste durere.
+5. **Recomandarea (§13) explică mereu *de ce* acest pas pentru tine acum** — transparent, nu impus.
