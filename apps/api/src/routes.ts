@@ -140,6 +140,44 @@ export function registerRoutes(app: Express): void {
     }
   })
 
+  // Antrenorul de rugăciune: nivelurile progresive (docs/00-DIRECTIE §4)
+  app.get("/me/prayer/levels", (_req, res) => {
+    res.json({ levels: store.prayerLevels() })
+  })
+
+  // Zidul Ebenezer: listează rugăciunile utilizatorului (docs/00-DIRECTIE §5)
+  app.get("/me/ebenezer", async (req, res, next) => {
+    try {
+      res.json({ requests: await store.listEbenezer(userIdOf(req)) })
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Zidul Ebenezer: adaugă o rugăciune
+  app.post("/me/ebenezer", async (req, res, next) => {
+    try {
+      const text = typeof req.body?.text === "string" ? req.body.text.trim() : ""
+      if (!text) return res.status(400).json({ error: "empty" })
+      if (text.length > 500) return res.status(400).json({ error: "too_long" })
+      res.json(await store.addPrayerRequest(userIdOf(req), text))
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Zidul Ebenezer: marchează o rugăciune ca răspunsă
+  app.post("/me/ebenezer/:id/answered", async (req, res, next) => {
+    try {
+      const note = typeof req.body?.note === "string" ? req.body.note.trim() : undefined
+      const updated = await store.markPrayerAnswered(userIdOf(req), req.params.id, note)
+      if (!updated) return res.status(404).json({ error: "not_found" })
+      res.json(updated)
+    } catch (e) {
+      next(e)
+    }
+  })
+
   // Resurse de criză (workbook §15)
   app.get("/crisis", (_req, res) => {
     res.json({ resources: CRISIS_RESOURCES })

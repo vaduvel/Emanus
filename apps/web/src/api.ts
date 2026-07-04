@@ -9,6 +9,8 @@ import type {
   GrowthScore,
   Lesson,
   ModerationResult,
+  PrayerLevel,
+  PrayerRequest,
   RecommendationView,
 } from "@emanus/shared"
 import { getUserId } from "./session"
@@ -129,4 +131,20 @@ export function createPost(categoryId: string, body: string): Promise<CreatePost
 
 export function getCrisis(): Promise<{ resources: CrisisResource[] }> {
   return getJson("/crisis")
+}
+
+export function getPrayerLevels(): Promise<{ levels: PrayerLevel[] }> {
+  return getJson("/me/prayer/levels")
+}
+
+export function getEbenezer(): Promise<{ requests: PrayerRequest[] }> {
+  return getJson("/me/ebenezer")
+}
+
+export function addPrayerRequest(text: string): Promise<PrayerRequest> {
+  return postJson<PrayerRequest>("/me/ebenezer", { text })
+}
+
+export function markPrayerAnswered(id: string, note?: string): Promise<PrayerRequest> {
+  return postJson<PrayerRequest>(`/me/ebenezer/${id}/answered`, { note })
 }

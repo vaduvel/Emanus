@@ -2,8 +2,10 @@ import { useState } from "react"
 import { Community } from "./Community"
 import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
+import { Ebenezer } from "./Ebenezer"
 import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
+import { PrayerCoach } from "./PrayerCoach"
 import { Recommendation } from "./Recommendation"
 import { navigate, useHashRoute } from "./router"
 import { isOnboarded } from "./session"
@@ -50,6 +52,22 @@ export default function App() {
     return (
       <main className="app">
         <Recommendation />
+      </main>
+    )
+  }
+
+  if (route.name === "prayer") {
+    return (
+      <main className="app">
+        <PrayerCoach />
+      </main>
+    )
+  }
+
+  if (route.name === "ebenezer") {
+    return (
+      <main className="app">
+        <Ebenezer />
       </main>
     )
   }

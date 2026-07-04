@@ -1,5 +1,6 @@
 import {
   CATEGORY_CONFIGS,
+  PRAYER_LEVELS,
   applyAxisDeltas,
   applyReward,
   buildDashboard,
@@ -27,6 +28,8 @@ import type {
   Lesson,
   ModerationResult,
   Module,
+  PrayerLevel,
+  PrayerRequest,
   RecommendationView,
   Reward,
 } from "@emanus/shared"
@@ -59,8 +62,10 @@ const memGam = new Map<string, GamState>()
 const memGrowth = new Map<string, GrowthScore[]>()
 const memDone = new Map<string, Set<string>>()
 const memPosts: CommunityPostView[] = []
+const memPrayers = new Map<string, PrayerRequest[]>()
 let memUserSeq = 0
 let memPostSeq = 0
+let memPrayerSeq = 0
 
 // Dacă DATABASE_URL e setat (Supabase), citește din DB; altfel in-memory.
 const useDb = Boolean(process.env.DATABASE_URL)
@@ -246,6 +251,46 @@ function diagnostic(categoryId: string): DiagnosticQuestion[] {
   return sharedGetDiagnostic(categoryId as any)
 }
 
+// --- Antrenorul de rugăciune (docs/00-DIRECTIE §4) + Zidul Ebenezer (§5) ---
+// Deocamdată in-memory (nu există încă tabel în @emanus/db); se persistă la login real.
+
+function prayerLevels(): PrayerLevel[] {
+  return PRAYER_LEVELS
+}
+
+async function listEbenezer(userId: string): Promise<PrayerRequest[]> {
+  return memPrayers.get(userId) ?? []
+}
+
+async function addPrayerRequest(userId: string, text: string): Promise<PrayerRequest> {
+  const request: PrayerRequest = {
+    id: `mem-prayer-${++memPrayerSeq}`,
+    userId,
+    text,
+    createdAt: new Date().toISOString(),
+    answered: false,
+  }
+  const list = memPrayers.get(userId) ?? []
+  list.unshift(request)
+  memPrayers.set(userId, list)
+  return request
+}
+
+async function markPrayerAnswered(
+  userId: string,
+  id: string,
+  note?: string,
+): Promise<PrayerRequest | undefined> {
+  const list = memPrayers.get(userId) ?? []
+  const found = list.find((p) => p.id === id)
+  if (!found) return undefined
+  found.answered = true
+  found.answeredAt = new Date().toISOString()
+  if (note) found.answerNote = note
+  memPrayers.set(userId, list)
+  return found
+}
+
 async function createUser(input: {
   anonName: string
   avatar: string
@@ -312,6 +357,10 @@ export const store = {
   growth,
   recommendation,
   diagnostic,
+  prayerLevels,
+  listEbenezer,
+  addPrayerRequest,
+  markPrayerAnswered,
   createUser,
   setBaseline,
   createPost,

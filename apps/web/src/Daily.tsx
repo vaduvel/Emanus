@@ -52,6 +52,9 @@ export function Daily() {
             Deschide rugăciunea
           </button>
         )}
+        <button type="button" className="ghost" onClick={() => navigate("/prayer")}>
+          🙏 Învață să te rogi
+        </button>
       </article>
 
       <div className="daily__nav">
@@ -67,6 +70,9 @@ export function Daily() {
         <div className="daily__links">
           <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
             Parcursul meu
+          </button>
+          <button type="button" className="ghost" onClick={() => navigate("/ebenezer")}>
+            🪨 Ebenezer
           </button>
           <button type="button" className="ghost" onClick={() => navigate("/community")}>
             Comunitate

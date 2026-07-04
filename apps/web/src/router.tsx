@@ -6,6 +6,8 @@ export type Route =
   | { name: "daily" }
   | { name: "onboarding" }
   | { name: "recommendation" }
+  | { name: "prayer" }
+  | { name: "ebenezer" }
   | { name: "community" }
   | { name: "lesson"; id?: string }
 
@@ -17,6 +19,8 @@ export function parseRoute(): Route {
   if (h === "/daily") return { name: "daily" }
   if (h === "/onboarding") return { name: "onboarding" }
   if (h === "/recommendation") return { name: "recommendation" }
+  if (h === "/prayer") return { name: "prayer" }
+  if (h === "/ebenezer") return { name: "ebenezer" }
   if (h === "/community") return { name: "community" }
   return { name: "home" }
 }
