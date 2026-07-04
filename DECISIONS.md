@@ -5,9 +5,9 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 ## D-001 · Stack
 - **Monorepo** cu pnpm workspaces + TypeScript peste tot.
 - **Backend:** Node + TypeScript + Express (endorsat de workbook §14). Prisma + PostgreSQL pentru persistență.
-- **Shared domain package** (`@emanus/shared`) = sursa unică de adevăr pentru tipuri (workbook §7). Backend + (viitor) frontend le importă.
-- **Frontend:** web-first cu React (Vite) în PR-ul următor (deep links din TikTok, prima lecție fără cont). React Native ulterior.
-- Motiv: standard, ușor de rulat pe M1, aliniat cu §14.
+- **Shared domain package** (`@emanus/shared`) = sursa unică de adevăr pentru tipuri (workbook §7). Backend + frontend le importă.
+- **Frontend:** **un singur codebase web-first — React (Vite) ca PWA**, care acoperă web + mobil. Vezi D-007 pentru împachetarea în aplicații iOS/Android.
+- Motiv: standard, ușor de rulat pe M1, aliniat cu §14, și ideal pentru conținut de tip chat scriptat cu deep links.
 
 ## D-002 · Engine FIX + config
 - `LessonStep` cu cele 14 tipuri din §6 este parte din engine-ul comun.
@@ -28,4 +28,18 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - Fără reclame/tracking pe minori.
 
 ## D-006 · Jocuri (mini-scene)
-- În afara scope-ului acestui PR. Vor fi un tip nou `interactive_scene` în `LessonStep`, livrat cu HTML5 (Phaser/PixiJS) — nu Unreal (cerințe <2s / offline / deep links, §15). Spec separat.
+- În afara scope-ului PR-ului de fundație. Vor fi un tip nou `interactive_scene` în `LessonStep`, livrat cu HTML5 (Phaser/PixiJS) — nu Unreal (cerințe <2s / offline / deep links, §15). Rulează nativ în PWA. Spec separat.
+
+## D-007 · PWA + mobil (iOS & Android)
+**Cerință:** produsul trebuie să fie PWA, să meargă pe web și mobil, și să existe ca aplicație iOS și Android.
+
+**Decizie:** un singur codebase React (Vite) construit ca **PWA** (manifest + service worker), împachetat pentru magazine cu **Capacitor**.
+- **Web + Android install:** PWA acoperă foarte bine (installable, offline pe lecția curentă, push).
+- **Play Store:** Capacitor (sau TWA) împachetează același cod ca APK/AAB.
+- **App Store (iOS):** Capacitor împachetează pentru submit în App Store. Necesar fiindcă PWA pe iOS are limitări (instalare doar din Safari „Add to Home Screen", push disponibil abia din iOS 16.4+ și restrâns, fără background real).
+- **Offline:** service worker cache-uiește app shell + lecția curentă (§15 „suport offline pentru lecția curentă").
+- **Deep links:** rute web + Universal Links (iOS) / App Links (Android) pentru intrări directe din TikTok într-o lecție/categorie (§1).
+
+**De ce NU React Native/Flutter:** aplicația e conținut de tip chat scriptat + web games HTML5, nu UI nativ greu. PWA + Capacitor = **un singur cod**, mentenanță minimă, reutilizează direct engine-ul web și jocurile. RN ar dubla efortul fără câștig real aici.
+
+**Structură planificată:** `apps/web` (React PWA) + `apps/mobile` (shell Capacitor care încarcă același build web).
