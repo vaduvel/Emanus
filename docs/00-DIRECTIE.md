@@ -128,3 +128,40 @@ Apoi: familia, temele ca dimensiune de navigare, restul vârstelor, monetizare/d
 - Relație, nu terapie. Har ȘI adevăr împreună. Scriptura e autoritatea.
 - AI-ul nu se dă drept Dumnezeu; aplicația te scoate afară, în Biserică.
 - Retenție prin har, nu prin vină. Frăție, nu izolare.
+
+---
+
+## 13 · Filozofia de conținut: Ușa, nu unghiul (de la Lege la Har) — decizie fixată
+
+> Sufletul conținutului. Ghidează fiecare lecție, verset și mesaj de aici înainte. Validată de research-ul de concurență (vezi analiza de piață): concurenții optimizează pentru *cunoaștere/engagement*; noi, pentru *transformarea inimii*.
+
+### Ușa, nu unghiul
+
+Teoriile, unghiurile și denominațiile sunt multe; modul în care Dumnezeu lucrează în fiecare viață diferă. Dar temelia e **una** — **Cuvântul** — și capătul e **unul**: **Iisus este Calea** (Ioan 14:6).
+
+Nu alegem un *unghi* (denominațional, sectar) care filtrează cine are voie să intre. Construim o **Ușă** (Ioan 10:9) — o singură intrare, largă, ancorată în Scriptură, prin care poate intra **orice fel de om**:
+
+- cel care **deja are o relație cu Iisus** și caută adâncime;
+- **căutătorul** curios, la început de drum;
+- cel **rătăcit / sceptic**, care nu înțelege încă *cum* l-ar putea schimba Iisus.
+
+Ne întâlnim cu fiecare **acolo unde este** (onboarding pe punctul lui de pornire spiritual), dar toți intră pe **aceeași Ușă** și sunt conduși spre **aceeași Cale**. Fără jargon care exclude, fără tabără care respinge.
+
+### De la Lege la Har
+
+Toți ceilalți te învață *despre* Dumnezeu (informație + obicei + calmare — tranzacțional). Emanus construiește o **relație** care schimbă **motivația inimii**: de la **frică** la **iubire**.
+
+- **Legea (frică):** „țin poruncile ca să nu fiu pedepsit" — conformare externă, moralism.
+- **Harul (iubire):** iubirea împlinește Legea (Romani 13:10; Galateni 5:14). Poruncile nu sunt abolite, ci *transcedate*: nu mai ai nevoie de regula externă când iubești.
+
+Aceasta e temelia **celor 2 inimi** (§1): inima de piatră → inima de carne (Ezechiel 36:26); litera ucide, Duhul dă viață (2 Corinteni 3; Ieremia 31:33). De aceea **axa #1 e identitatea**, nu comportamentul.
+
+### Ce înseamnă concret pentru conținut
+
+1. **Identitate înainte de datorie** — „cine ești TU pentru că Iisus a făcut X" înainte de „ce ai de făcut".
+2. **Crucea re-trăită, nu predată** — întâlnire, nu capitol de curs.
+3. **Fiecare „poruncă" = răspuns la iubire** — nu „nu minți", ci „ești atât de iubit încât nu mai ai nevoie să minți".
+4. **Eșecul tratat ca tatăl fiului risipitor** — har la cădere, nu pedeapsă de streak.
+5. **Măsurăm creșterea inimii**, nu deschiderile — radarul pe 6 axe = „devii ca Iisus?", nu „ai bifat azi?".
+
+Ei fac „**știu despre Dumnezeu**". Noi facem „**Îl cunosc și sunt schimbat de El**".
