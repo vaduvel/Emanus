@@ -14,12 +14,12 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - Categoriile se adaugă prin `CategoryConfig` (date), nu cod nou (regula de aur §4).
 
 ## D-003 · API rulabil din prima zi (in-memory)
-- Pentru Faza 1, API-ul servește conținut dintr-un store **in-memory** încărcat din `apps/api/src/seed/*.json`.
-- Prisma/Postgres (Supabase) se cablează în Faza 1.5 (schema există deja). Motiv: feedback rapid fără infra.
+- Pentru Faza 1, API-ul servește conținut dintr-un store **in-memory** încărcat din seed-ul partajat.
+- Prisma/Postgres (Supabase) s-a cablat în Faza 1.5. Store-ul comută automat: dacă `DATABASE_URL` e setat, citește din DB; altfel in-memory.
 
 ## D-004 · Seed conținut
 - Seed inclus: Adolescenți → Modul 1 (`identity`) → Curs 1.1 „Cine sunt eu, de fapt?".
-- **L1 „Nu ești ce zic like-urile" = conținut complet** (din workbook §13).
+- **L1 „Nu ești ce zic like-urile" = conținut complet** (din workbook §13), inclusiv un pas de ramificație (`l1_branch_c`).
 - **L2–L6 = doar metadate + pași DRAFT.** Conținutul integral trebuie importat din sursa aprobată (pagina „Cursul 1.1" din Notion). NU se inventează teologie/versete (workbook §18).
 
 ## D-005 · Guardrails moștenite din workbook §15/§18
@@ -28,49 +28,42 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - Fără reclame/tracking pe minori.
 
 ## D-006 · Jocuri (mini-scene)
-- În afara scope-ului PR-ului de fundație. Vor fi un tip nou `interactive_scene` în `LessonStep`, livrat cu HTML5 (Phaser/PixiJS) — nu Unreal (cerințe <2s / offline / deep links, §15). Rulează nativ în PWA. Spec separat.
+- În afara scope-ului fundației. Vor fi un tip nou `interactive_scene` în `LessonStep`, livrat cu HTML5 (Phaser/PixiJS) — nu Unreal (cerințe <2s / offline / deep links, §15). Rulează nativ în PWA. Spec separat.
 
 ## D-007 · PWA + mobil (iOS & Android)
-**Cerință:** produsul trebuie să fie PWA, să meargă pe web și mobil, și să existe ca aplicație iOS și Android.
-
 **Decizie:** un singur codebase React (Vite) construit ca **PWA** (manifest + service worker), împachetat pentru magazine cu **Capacitor**.
-- **Web + Android install:** PWA acoperă foarte bine (installable, offline pe lecția curentă, push).
-- **Play Store:** Capacitor (sau TWA) împachetează același cod ca APK/AAB.
-- **App Store (iOS):** Capacitor împachetează pentru submit în App Store. Necesar fiindcă PWA pe iOS are limitări (instalare doar din Safari, push abia din iOS 16.4+ și restrâns, fără background real).
-- **Offline:** service worker cache-uiește app shell + lecția curentă (§15).
-- **Deep links:** rute web + Universal Links (iOS) / App Links (Android) (§1).
-
-**De ce NU React Native/Flutter:** aplicația e conținut de tip chat scriptat + web games HTML5, nu UI nativ greu. PWA + Capacitor = un singur cod, mentenanță minimă.
-
-**Structură:** `apps/web` (React PWA) + `apps/mobile` (shell Capacitor).
+- **Web + Android install:** PWA (installable, offline pe lecția curentă, push).
+- **Play Store / App Store:** Capacitor împachetează același cod. Pe iOS e necesar fiindcă PWA are limitări (push restrâns, fără background real).
+- **De ce NU React Native/Flutter:** conținut de tip chat scriptat + web games HTML5, nu UI nativ greu. PWA + Capacitor = un singur cod, mentenanță minimă.
+- **Structură:** `apps/web` (React PWA) + `apps/mobile` (shell Capacitor).
 
 ## D-008 · Supabase (Postgres gestionat)
-**Context:** avem cont și proiect Supabase.
-
 **Decizie:** Supabase = baza de date Postgres a platformei, accesată prin **Prisma**.
 - `DATABASE_URL` = conexiune *pooled* (PgBouncer, port 6543) pentru runtime.
 - `DIRECT_URL` = conexiune directă (port 5432) pentru migrări Prisma (`directUrl` în schema).
 - Secretele stau doar în `.env` (gitignored) / în mediul agentului desktop; niciodată în cod sau în client.
 
-**Opțional în fazele următoare (de decis):**
-- **Supabase Auth** pentru Google/OTP/email (§14) — economisește mult față de JWT propriu.
-- **Supabase Storage** (S3-compatible) pentru media lecțiilor (§14).
-- **RLS (Row Level Security)** pentru jurnalele private și datele minorilor (§15).
+**Opțional în fazele următoare (de decis):** Supabase Auth (Google/OTP/email, §14); Supabase Storage pentru media (§14); RLS pentru jurnalele private și datele minorilor (§15).
 
 ## D-009 · Monetizare — donații-first (nu paywall dur)
-**Context:** workbook §7 sugera freemium (conversie 3–8%) + donații + pay-it-forward. Fondatorul a decis modelul principal: **donații**, nu paywall clasic.
-
 **Decizie — accesul la conținut e liber; susținerea e prin dăruire:**
-- **Tot conținutul de bază rămâne gratuit.** Fără lecții blocate în spatele plății. Motiv: se potrivește misiunii (Evanghelia nu se vinde) și culturii RO/evanghelice (așteptarea că un mesaj de credință e gratis; românul plătește greu abonamente).
-- **Donații** recurente și one-time, opționale, niciodată intruzive. Prompt discret după momente de valoare (final de lecție/modul/certificat), nu popup agresiv.
-- **Pay-it-forward:** un donator poate „plăti mai departe" acces/sprijin pentru altcineva (mecanism nativ cultural în comunitățile de credință). Se leagă de `parentLink`/referral din §1.
-- **Fără reclame și fără tracking, mai ales pe minori** (non-negociabil, D-005 / §18). Donațiile sunt singura logică de venit pe zona de minori.
+- **Tot conținutul de bază rămâne gratuit.** Fără lecții blocate în spatele plății (misiune + cultură RO/evanghelică).
+- **Donații** recurente și one-time, discrete, după momente de valoare; niciodată popup agresiv.
+- **Pay-it-forward:** un donator poate plăti acces/sprijin pentru altcineva.
+- **Fără reclame și fără tracking, mai ales pe minori** (§18).
+- **Upside comercial:** diaspora română + potențial export/licențiere; piața internă pe donații + impact.
+- Suport tehnic (Faza 7): procesator de plăți (ex. Stripe), model `Donation`, pagină „unde merg banii".
 
-**De susținut tehnic (faze ulterioare, Faza 7):**
-- Integrare procesator de plăți (ex. Stripe) pentru donații recurente/one-time; chitanțe.
-- Model de date: `Donation` (userId?, amount, currency, recurring, status, forwardedToUserId?), `SupporterState` (badge de susținător, opțional și discret).
-- Transparență: pagină „unde merg banii" pentru încredere.
+## D-010 · Utilizator demo + gamificare (Faza 3, pre-auth)
+**Context:** Auth real vine în Faza 4 (§9). Faza 3 (gamificare + radar + dashboard) are nevoie de un „user" ca să persiste XP/streak/insigne și scorurile de creștere.
 
-**Upside comercial (din discuția de strategie):** cea mai bună țintă de venit e **diaspora română** (willingness-to-pay mai mare) + potențial export/licențiere; piața internă rămâne pe donații + impact.
+**Decizie:**
+- Fără auth încă: cererile folosesc un utilizator identificat prin header `x-user-id`; dacă lipsește, se folosește `demo-user` (constanta `DEMO_USER_ID` din `@emanus/shared`). La prima atingere, user + GamState + GrowthScore baseline se creează automat.
+- **Gamificare (§8):** XP +10/lecție; bonus +20 la absolvire de modul (dedus din reward cu `certificateId`/`unlocksModuleId`); nivel la fiecare 100 XP (`levelForXp`).
+- **Streak:** zile consecutive; aceeași zi nu incrementează; grace de 1 zi; 2+ zile lipsă → reset la 1.
+- **Radar (§10):** 6 axe, baseline implicit 20; `axisDeltas` din reward se adaugă la `current` (clamp 0..100). Reevaluarea formală (0.5*selfReport+0.3*moduleReview+0.2*behaviorSignal) rămâne pentru diagnostic/review (Faza 4).
+- Engine-ul (XP/streak/growth/dashboard) stă în `@emanus/shared` (pur, testabil); persistența (DB sau in-memory) doar apelează funcțiile pure.
 
-**Ce NU facem:** paywall dur pe lecții, abonament obligatoriu ca să continui un curs, reclame, vânzare de date.
+**Endpoints noi:** `POST /lessons/:id/progress` (aplică reward real), `GET /me/dashboard`, `GET /me/growth`.
+
+**De înlocuit în Faza 4:** `demo-user` → utilizator real din Supabase Auth (D-008).

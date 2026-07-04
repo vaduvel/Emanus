@@ -1,4 +1,4 @@
-import type { Category, Lesson } from "@emanus/shared"
+import type { Category, DashboardView, GamState, GrowthScore, Lesson } from "@emanus/shared"
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api"
 
@@ -20,7 +20,16 @@ export function getCategories(): Promise<Category[]> {
   return getJson<Category[]>("/categories")
 }
 
+export function getDashboard(): Promise<DashboardView> {
+  return getJson<DashboardView>("/me/dashboard")
+}
+
+export function getGrowth(): Promise<GrowthScore[]> {
+  return getJson<GrowthScore[]>("/me/growth")
+}
+
 export interface ProgressResult {
+  lessonId: string
   status: string
   reward: {
     xp: number
@@ -28,6 +37,10 @@ export interface ProgressResult {
     certificateId?: string
     unlocksModuleId?: string
   }
+  moduleCompleted: boolean
+  gam: GamState
+  growth: GrowthScore[]
+  levelAfter: number
 }
 
 export async function submitProgress(

@@ -4,11 +4,15 @@ import { getFirstLesson, submitProgress } from "./api"
 import type { ProgressResult } from "./api"
 import { LessonPlayer } from "./LessonPlayer"
 import type { LessonResult } from "./LessonPlayer"
+import { Dashboard } from "./Dashboard"
+
+type View = "lesson" | "reward" | "dashboard"
 
 export default function App() {
   const [lesson, setLesson] = useState<Lesson | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [result, setResult] = useState<ProgressResult | null>(null)
+  const [view, setView] = useState<View>("lesson")
   const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
@@ -25,6 +29,14 @@ export default function App() {
     )
   }
 
+  if (view === "dashboard") {
+    return (
+      <main className="app">
+        <Dashboard onBack={() => setView(result ? "reward" : "lesson")} />
+      </main>
+    )
+  }
+
   if (!lesson) {
     return (
       <main className="app">
@@ -33,7 +45,7 @@ export default function App() {
     )
   }
 
-  if (result) {
+  if (view === "reward" && result) {
     return (
       <main className="app">
         <div className="card reward-card">
@@ -55,9 +67,14 @@ export default function App() {
           {result.reward.unlocksModuleId && (
             <p className="muted">🔓 Ai deblocat un modul nou!</p>
           )}
-          <button type="button" onClick={() => window.location.reload()}>
-            Reia lecția
-          </button>
+          <div className="reward-card__actions">
+            <button type="button" onClick={() => setView("dashboard")}>
+              Vezi parcursul meu
+            </button>
+            <button type="button" className="ghost" onClick={() => window.location.reload()}>
+              Reia lecția
+            </button>
+          </div>
         </div>
       </main>
     )
@@ -73,6 +90,7 @@ export default function App() {
           try {
             const res = await submitProgress(lesson.id, r.choicesMade)
             setResult(res)
+            setView("reward")
           } catch (e: unknown) {
             setError(e instanceof Error ? e.message : String(e))
           } finally {

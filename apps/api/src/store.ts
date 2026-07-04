@@ -1,5 +1,23 @@
-import { CATEGORY_CONFIGS, teensM1C1 } from "@emanus/shared"
-import type { Category, Course, Lesson, Module } from "@emanus/shared"
+import {
+  CATEGORY_CONFIGS,
+  applyAxisDeltas,
+  applyReward,
+  buildDashboard,
+  defaultGrowth,
+  emptyGam,
+  isModuleCompletingReward,
+  teensM1C1,
+} from "@emanus/shared"
+import type {
+  Category,
+  Course,
+  DashboardView,
+  GamState,
+  GrowthScore,
+  Lesson,
+  Module,
+  Reward,
+} from "@emanus/shared"
 
 export interface CourseNode extends Course {
   lessons: Lesson[]
@@ -8,10 +26,21 @@ export interface ModuleNode extends Module {
   courses: CourseNode[]
 }
 
+export interface ProgressOutcome {
+  status: "completed"
+  reward: Reward
+  moduleCompleted: boolean
+  gam: GamState
+  growth: GrowthScore[]
+}
+
 // --- Fallback in-memory (dev fără DB), din seed-ul partajat @emanus/shared ---
 const memModules = new Map<string, Module>([[teensM1C1.module.id, teensM1C1.module]])
 const memCourses = new Map<string, Course>([[teensM1C1.course.id, teensM1C1.course]])
 const memLessons = new Map<string, Lesson>(teensM1C1.lessons.map((l) => [l.id, l]))
+const memGam = new Map<string, GamState>()
+const memGrowth = new Map<string, GrowthScore[]>()
+const memDone = new Map<string, Set<string>>()
 
 // Dacă DATABASE_URL e setat (Supabase), citește din DB; altfel in-memory.
 const useDb = Boolean(process.env.DATABASE_URL)
@@ -56,7 +85,6 @@ async function lesson(id: string): Promise<Lesson | undefined> {
 }
 
 async function firstLesson(): Promise<Lesson | undefined> {
-  // Prima lecție publică (workbook §16.4).
   return lesson("teens_m1_c1_l1")
 }
 
@@ -65,4 +93,75 @@ async function tree(categoryId: string): Promise<ModuleNode[]> {
   return memTree(categoryId)
 }
 
-export const store = { categories, category, lesson, firstLesson, tree }
+function memGetGam(userId: string): GamState {
+  return memGam.get(userId) ?? emptyGam(userId)
+}
+
+function memGetGrowth(userId: string): GrowthScore[] {
+  return memGrowth.get(userId) ?? defaultGrowth(userId)
+}
+
+function memApplyProgress(
+  userId: string,
+  lsn: Lesson,
+  choicesMade: Record<string, string>,
+): ProgressOutcome {
+  void choicesMade
+  const rewardStep = [...lsn.steps].reverse().find((s) => s.reward)
+  const reward: Reward = rewardStep?.reward ?? { xp: 10 }
+  const moduleCompleted = isModuleCompletingReward(reward)
+  const gam = applyReward(memGetGam(userId), reward, { moduleCompleted })
+  memGam.set(userId, gam)
+  const growth = applyAxisDeltas(memGetGrowth(userId), reward.axisDeltas)
+  memGrowth.set(userId, growth)
+  const done = memDone.get(userId) ?? new Set<string>()
+  done.add(lsn.id)
+  memDone.set(userId, done)
+  return { status: "completed", reward, moduleCompleted, gam, growth }
+}
+
+function memDashboard(userId: string, categoryId = "teens12_18"): DashboardView {
+  const modules = memTree(categoryId).map((m) => ({
+    id: m.id,
+    title: m.title,
+    axis: m.axis,
+    order: m.order,
+    lessons: m.courses.flatMap((c) => c.lessons).map((l) => ({ id: l.id, title: l.title })),
+  }))
+  return buildDashboard({
+    gam: memGetGam(userId),
+    growth: memGetGrowth(userId),
+    modules,
+    completedLessonIds: memDone.get(userId) ?? new Set<string>(),
+  })
+}
+
+async function applyProgress(
+  userId: string,
+  lsn: Lesson,
+  choicesMade: Record<string, string>,
+): Promise<ProgressOutcome> {
+  if (useDb) return (await db()).applyLessonProgress(userId, lsn, choicesMade)
+  return memApplyProgress(userId, lsn, choicesMade)
+}
+
+async function dashboard(userId: string, categoryId = "teens12_18"): Promise<DashboardView> {
+  if (useDb) return (await db()).getDashboard(userId, categoryId)
+  return memDashboard(userId, categoryId)
+}
+
+async function growth(userId: string): Promise<GrowthScore[]> {
+  if (useDb) return (await db()).getOrInitGrowth(userId)
+  return memGetGrowth(userId)
+}
+
+export const store = {
+  categories,
+  category,
+  lesson,
+  firstLesson,
+  tree,
+  applyProgress,
+  dashboard,
+  growth,
+}
