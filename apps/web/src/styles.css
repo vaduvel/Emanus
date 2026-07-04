@@ -35,6 +35,7 @@ body {
   flex-direction: column;
   gap: 16px;
   min-height: 70dvh;
+  max-height: 92dvh;
 }
 
 .player__head h1 { margin: 0 0 4px; font-size: 1.25rem; }
@@ -62,12 +63,47 @@ body {
   transition: width 0.25s ease;
 }
 
+/* --- Chat log conversational (workbook §1/§6) --- */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.msg { display: flex; gap: 8px; align-items: flex-start; }
+.msg--guide { justify-content: flex-start; }
+.msg--me { justify-content: flex-end; }
+.msg__avatar {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #10263a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.msg__body { display: flex; flex-direction: column; gap: 3px; max-width: 82%; }
+.msg__name { font-size: 0.72rem; color: var(--muted); margin-left: 4px; }
+.bubble--me {
+  background: var(--accent);
+  color: #04222f;
+  border-radius: 14px 14px 4px 14px;
+  padding: 12px 14px;
+  max-width: 82%;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
 .bubbles { display: flex; flex-direction: column; gap: 10px; }
 .bubble {
   background: #0b1220;
   border-radius: 14px 14px 14px 4px;
   padding: 12px 14px;
-  max-width: 90%;
+  max-width: 100%;
   line-height: 1.4;
 }
 
