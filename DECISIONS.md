@@ -56,3 +56,21 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - **Supabase Auth** pentru Google/OTP/email (§14) — economisește mult față de JWT propriu.
 - **Supabase Storage** (S3-compatible) pentru media lecțiilor (§14).
 - **RLS (Row Level Security)** pentru jurnalele private și datele minorilor (§15).
+
+## D-009 · Monetizare — donații-first (nu paywall dur)
+**Context:** workbook §7 sugera freemium (conversie 3–8%) + donații + pay-it-forward. Fondatorul a decis modelul principal: **donații**, nu paywall clasic.
+
+**Decizie — accesul la conținut e liber; susținerea e prin dăruire:**
+- **Tot conținutul de bază rămâne gratuit.** Fără lecții blocate în spatele plății. Motiv: se potrivește misiunii (Evanghelia nu se vinde) și culturii RO/evanghelice (așteptarea că un mesaj de credință e gratis; românul plătește greu abonamente).
+- **Donații** recurente și one-time, opționale, niciodată intruzive. Prompt discret după momente de valoare (final de lecție/modul/certificat), nu popup agresiv.
+- **Pay-it-forward:** un donator poate „plăti mai departe" acces/sprijin pentru altcineva (mecanism nativ cultural în comunitățile de credință). Se leagă de `parentLink`/referral din §1.
+- **Fără reclame și fără tracking, mai ales pe minori** (non-negociabil, D-005 / §18). Donațiile sunt singura logică de venit pe zona de minori.
+
+**De susținut tehnic (faze ulterioare, Faza 7):**
+- Integrare procesator de plăți (ex. Stripe) pentru donații recurente/one-time; chitanțe.
+- Model de date: `Donation` (userId?, amount, currency, recurring, status, forwardedToUserId?), `SupporterState` (badge de susținător, opțional și discret).
+- Transparență: pagină „unde merg banii" pentru încredere.
+
+**Upside comercial (din discuția de strategie):** cea mai bună țintă de venit e **diaspora română** (willingness-to-pay mai mare) + potențial export/licențiere; piața internă rămâne pe donații + impact.
+
+**Ce NU facem:** paywall dur pe lecții, abonament obligatoriu ca să continui un curs, reclame, vânzare de date.
