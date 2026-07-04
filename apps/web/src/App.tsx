@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Community } from "./Community"
 import { Dashboard } from "./Dashboard"
 import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
@@ -47,6 +48,14 @@ export default function App() {
     return (
       <main className="app">
         <LessonView lessonId={route.id} />
+      </main>
+    )
+  }
+
+  if (route.name === "community") {
+    return (
+      <main className="app">
+        <Community onBack={() => navigate(onboarded ? "/dashboard" : "/")} />
       </main>
     )
   }

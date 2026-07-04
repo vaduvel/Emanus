@@ -76,11 +76,16 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
         <p className="muted">🏅 Certificate: {gam.certificateIds.join(", ")}</p>
       )}
 
-      {next && (
-        <button type="button" onClick={() => navigate(`/lesson/${next.lessonId}`)}>
-          Continuă: {next.title}
+      <div className="dash-nav">
+        {next && (
+          <button type="button" onClick={() => navigate(`/lesson/${next.lessonId}`)}>
+            Continuă: {next.title}
+          </button>
+        )}
+        <button type="button" className="ghost" onClick={() => navigate("/community")}>
+          Comunitate
         </button>
-      )}
+      </div>
     </section>
   )
 }

@@ -1,4 +1,4 @@
-import { DEMO_USER_ID } from "@emanus/shared"
+import { CRISIS_RESOURCES, DEMO_USER_ID, MAX_POST_LENGTH } from "@emanus/shared"
 import type { Express, Request } from "express"
 import { store } from "./store.js"
 
@@ -9,7 +9,7 @@ function userIdOf(req: Request): string {
 
 export function registerRoutes(app: Express): void {
   app.get("/health", (_req, res) => {
-    res.json({ ok: true, service: "emanus-api", phase: 4 })
+    res.json({ ok: true, service: "emanus-api", phase: 5 })
   })
 
   // Prima lecție gratis, fără cont (workbook §16.4)
@@ -113,6 +113,38 @@ export function registerRoutes(app: Express): void {
   app.get("/me/growth", async (req, res, next) => {
     try {
       res.json(await store.growth(userIdOf(req)))
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Resurse de criză (workbook §15)
+  app.get("/crisis", (_req, res) => {
+    res.json({ resources: CRISIS_RESOURCES })
+  })
+
+  // Comunitate: listează postele vizibile (workbook §16.5)
+  app.get("/community", async (req, res, next) => {
+    try {
+      const categoryId = (req.query.category as string) || "teens12_18"
+      res.json({ categoryId, posts: await store.listCommunity(categoryId) })
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Comunitate: creează o postare (cu moderare automată + detectare criză)
+  app.post("/community", async (req, res, next) => {
+    try {
+      const { categoryId, body } = req.body ?? {}
+      const text = typeof body === "string" ? body.trim() : ""
+      if (!text) return res.status(400).json({ error: "empty" })
+      if (text.length > MAX_POST_LENGTH) return res.status(400).json({ error: "too_long" })
+      const result = await store.createPost(userIdOf(req), categoryId || "teens12_18", text)
+      res.json({
+        ...result,
+        crisisResources: result.moderation.crisis ? CRISIS_RESOURCES : undefined,
+      })
     } catch (e) {
       next(e)
     }

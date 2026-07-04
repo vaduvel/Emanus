@@ -1,10 +1,13 @@
 import type {
   Category,
+  CommunityPostView,
+  CrisisResource,
   DashboardView,
   DiagnosticQuestion,
   GamState,
   GrowthScore,
   Lesson,
+  ModerationResult,
 } from "@emanus/shared"
 import { getUserId } from "./session"
 
@@ -94,4 +97,24 @@ export function submitProgress(
   choicesMade: Record<string, string> = {},
 ): Promise<ProgressResult> {
   return postJson<ProgressResult>(`/lessons/${id}/progress`, { choicesMade })
+}
+
+export function getCommunity(
+  category: string,
+): Promise<{ categoryId: string; posts: CommunityPostView[] }> {
+  return getJson(`/community?category=${encodeURIComponent(category)}`)
+}
+
+export interface CreatePostResult {
+  post: CommunityPostView
+  moderation: ModerationResult
+  crisisResources?: CrisisResource[]
+}
+
+export function createPost(categoryId: string, body: string): Promise<CreatePostResult> {
+  return postJson<CreatePostResult>("/community", { categoryId, body })
+}
+
+export function getCrisis(): Promise<{ resources: CrisisResource[] }> {
+  return getJson("/crisis")
 }

@@ -185,6 +185,8 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(248, 113, 113, 0
 .mod__bar { height: 6px; background: #1e293b; border-radius: 999px; margin-top: 8px; overflow: hidden; }
 .mod__bar span { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
 .mod.locked { opacity: 0.55; }
+.dash-nav { display: flex; flex-direction: column; gap: 8px; }
+.dash-nav .ghost { text-align: center; }
 
 /* --- Landing + Onboarding (Faza 4) --- */
 .landing {
@@ -277,3 +279,52 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(248, 113, 113, 0
 }
 .likert__dot.picked { border-color: var(--accent); background: #10263a; }
 .likert__legend { display: flex; justify-content: space-between; margin-top: 4px; }
+
+/* --- Comunitate + criză (Faza 5) --- */
+.community {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.composer { display: flex; flex-direction: column; gap: 8px; }
+.composer textarea {
+  width: 100%;
+  background: #0b1220;
+  color: var(--text);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 10px;
+  font: inherit;
+  resize: vertical;
+}
+.composer__foot { display: flex; align-items: center; justify-content: space-between; }
+
+.notice {
+  background: #10263a;
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+.notice--warn { border-color: var(--bad); background: rgba(248, 113, 113, 0.1); }
+
+.crisis {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+.crisis h3 { margin: 0 0 6px; }
+.crisis ul { margin: 8px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+.crisis b { font-size: 1.05rem; }
+
+.posts { display: flex; flex-direction: column; gap: 10px; }
+.post { background: #0b1220; border-radius: 12px; padding: 12px 14px; }
+.post__head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.post__avatar { font-size: 1.2rem; }
+.post__body { margin: 0; line-height: 1.45; white-space: pre-wrap; }

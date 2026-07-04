@@ -4,6 +4,7 @@ export type Route =
   | { name: "home" }
   | { name: "dashboard" }
   | { name: "onboarding" }
+  | { name: "community" }
   | { name: "lesson"; id?: string }
 
 export function parseRoute(): Route {
@@ -12,6 +13,7 @@ export function parseRoute(): Route {
   if (h === "/lesson") return { name: "lesson" }
   if (h === "/dashboard") return { name: "dashboard" }
   if (h === "/onboarding") return { name: "onboarding" }
+  if (h === "/community") return { name: "community" }
   return { name: "home" }
 }
 

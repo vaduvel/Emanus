@@ -8,16 +8,19 @@ import {
   emptyGam,
   getDiagnostic as sharedGetDiagnostic,
   isModuleCompletingReward,
+  moderatePost,
   teensM1C1,
 } from "@emanus/shared"
 import type {
   Category,
+  CommunityPostView,
   Course,
   DashboardView,
   DiagnosticQuestion,
   GamState,
   GrowthScore,
   Lesson,
+  ModerationResult,
   Module,
   Reward,
 } from "@emanus/shared"
@@ -37,6 +40,11 @@ export interface ProgressOutcome {
   growth: GrowthScore[]
 }
 
+export interface CreatePostResult {
+  post: CommunityPostView
+  moderation: ModerationResult
+}
+
 // --- Fallback in-memory (dev fără DB), din seed-ul partajat @emanus/shared ---
 const memModules = new Map<string, Module>([[teensM1C1.module.id, teensM1C1.module]])
 const memCourses = new Map<string, Course>([[teensM1C1.course.id, teensM1C1.course]])
@@ -44,7 +52,9 @@ const memLessons = new Map<string, Lesson>(teensM1C1.lessons.map((l) => [l.id, l
 const memGam = new Map<string, GamState>()
 const memGrowth = new Map<string, GrowthScore[]>()
 const memDone = new Map<string, Set<string>>()
+const memPosts: CommunityPostView[] = []
 let memUserSeq = 0
+let memPostSeq = 0
 
 // Dacă DATABASE_URL e setat (Supabase), citește din DB; altfel in-memory.
 const useDb = Boolean(process.env.DATABASE_URL)
@@ -206,6 +216,39 @@ async function setBaseline(
   return memSetBaseline(userId, baselines)
 }
 
+async function createPost(
+  userId: string,
+  categoryId: string,
+  body: string,
+): Promise<CreatePostResult> {
+  const moderation = moderatePost(body)
+  if (useDb) {
+    const post = await (await db()).createPost({
+      userId,
+      categoryId,
+      body,
+      status: moderation.decision,
+    })
+    return { post, moderation }
+  }
+  const post: CommunityPostView = {
+    id: `mem-post-${++memPostSeq}`,
+    userId,
+    author: { anonName: "Explorator", avatar: "🌱" },
+    categoryId,
+    body,
+    createdAt: new Date().toISOString(),
+    status: moderation.decision,
+  }
+  memPosts.unshift(post)
+  return { post, moderation }
+}
+
+async function listCommunity(categoryId: string): Promise<CommunityPostView[]> {
+  if (useDb) return (await db()).listPosts(categoryId, "visible")
+  return memPosts.filter((p) => p.categoryId === categoryId && p.status === "visible")
+}
+
 export const store = {
   categories,
   category,
@@ -218,4 +261,6 @@ export const store = {
   diagnostic,
   createUser,
   setBaseline,
+  createPost,
+  listCommunity,
 }

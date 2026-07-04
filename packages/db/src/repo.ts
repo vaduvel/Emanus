@@ -7,6 +7,7 @@ import {
   isModuleCompletingReward,
 } from "@emanus/shared"
 import type {
+  CommunityPostView,
   Course,
   DashboardView,
   GamState,
@@ -153,7 +154,6 @@ export async function getOrInitGrowth(userId: string): Promise<GrowthScore[]> {
   return seeded
 }
 
-/** Setează baseline = current din diagnosticul inițial (workbook §10). */
 export async function setBaseline(
   userId: string,
   baselines: Array<{ axis: string; score: number }>,
@@ -261,4 +261,53 @@ export async function getDashboard(
     modules,
     completedLessonIds: doneRows.map((r: any) => r.lessonId),
   })
+}
+
+// --- Comunitate (workbook §16.5) ---
+
+function toPost(row: any): CommunityPostView {
+  return {
+    id: row.id,
+    userId: row.userId,
+    author: {
+      anonName: row.user?.anonName ?? "Anonim",
+      avatar: row.user?.avatar ?? "🌱",
+    },
+    categoryId: row.categoryId,
+    body: row.body,
+    createdAt: row.createdAt ? row.createdAt.toISOString() : new Date().toISOString(),
+    status: row.status,
+  }
+}
+
+export async function createPost(input: {
+  userId: string
+  categoryId: string
+  body: string
+  status: string
+}): Promise<CommunityPostView> {
+  await ensureUser(input.userId)
+  const row = await prisma.communityPost.create({
+    data: {
+      userId: input.userId,
+      categoryId: input.categoryId as any,
+      body: input.body,
+      status: input.status as any,
+    },
+    include: { user: { select: { anonName: true, avatar: true } } },
+  })
+  return toPost(row)
+}
+
+export async function listPosts(
+  categoryId: string,
+  status = "visible",
+): Promise<CommunityPostView[]> {
+  const rows = await prisma.communityPost.findMany({
+    where: { categoryId: categoryId as any, status: status as any },
+    orderBy: { createdAt: "desc" },
+    take: 50,
+    include: { user: { select: { anonName: true, avatar: true } } },
+  })
+  return rows.map(toPost)
 }

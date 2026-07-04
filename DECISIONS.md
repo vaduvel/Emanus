@@ -6,7 +6,7 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - **Monorepo** cu pnpm workspaces + TypeScript peste tot.
 - **Backend:** Node + TypeScript + Express (endorsat de workbook §14). Prisma + PostgreSQL pentru persistență.
 - **Shared domain package** (`@emanus/shared`) = sursa unică de adevăr pentru tipuri (workbook §7). Backend + frontend le importă.
-- **Frontend:** un singur codebase web-first — React (Vite) ca PWA, care acoperă web + mobil. Vezi D-007 pentru împachetarea în aplicații iOS/Android.
+- **Frontend:** un singur codebase web-first — React (Vite) ca PWA, care acoperă web + mobil. Vezi D-007.
 - Motiv: standard, ușor de rulat pe M1, aliniat cu §14, și ideal pentru conținut de tip chat scriptat cu deep links.
 
 ## D-002 · Engine FIX + config
@@ -24,7 +24,7 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 
 ## D-005 · Guardrails moștenite din workbook §15/§18
 - Biblia = adevărul; versetele-ancoră aprobate nu se schimbă.
-- Protocol de criză (112 / 116 111 / 116 123), moderare comunitate, GDPR minori — de implementat în Fazele 4–5.
+- Protocol de criză (112 / 116 111 / 116 123), moderare comunitate, GDPR minori — implementate începând cu Faza 5 (D-012).
 - Fără reclame/tracking pe minori.
 
 ## D-006 · Jocuri (mini-scene)
@@ -33,8 +33,8 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 ## D-007 · PWA + mobil (iOS & Android)
 **Decizie:** un singur codebase React (Vite) construit ca PWA (manifest + service worker), împachetat pentru magazine cu Capacitor.
 - Web + Android install: PWA (installable, offline pe lecția curentă, push).
-- Play Store / App Store: Capacitor împachetează același cod. Pe iOS e necesar fiindcă PWA are limitări (push restrâns, fără background real).
-- De ce NU React Native/Flutter: conținut de tip chat scriptat + web games HTML5, nu UI nativ greu. PWA + Capacitor = un singur cod, mentenanță minimă.
+- Play Store / App Store: Capacitor împachetează același cod. Pe iOS e necesar fiindcă PWA are limitări.
+- De ce NU React Native/Flutter: conținut de tip chat scriptat + web games HTML5, nu UI nativ greu. PWA + Capacitor = un singur cod.
 - Structură: `apps/web` (React PWA) + `apps/mobile` (shell Capacitor).
 
 ## D-008 · Supabase (Postgres gestionat)
@@ -43,38 +43,39 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - `DIRECT_URL` = conexiune directă (port 5432) pentru migrări Prisma (`directUrl` în schema).
 - Secretele stau doar în `.env` (gitignored) / în mediul agentului desktop; niciodată în cod sau în client.
 
-**Opțional în fazele următoare (de decis):** Supabase Auth (Google/OTP/email, §14); Supabase Storage pentru media (§14); RLS pentru jurnalele private și datele minorilor (§15).
+**Opțional în fazele următoare:** Supabase Auth (§14); Supabase Storage pentru media (§14); RLS pentru jurnalele private și datele minorilor (§15).
 
 ## D-009 · Monetizare — donații-first (nu paywall dur)
-**Decizie — accesul la conținut e liber; susținerea e prin dăruire:**
-- Tot conținutul de bază rămâne gratuit. Fără lecții blocate în spatele plății (misiune + cultură RO/evanghelică).
+- Tot conținutul de bază rămâne gratuit. Fără lecții blocate în spatele plății.
 - Donații recurente și one-time, discrete, după momente de valoare; niciodată popup agresiv.
 - Pay-it-forward: un donator poate plăti acces/sprijin pentru altcineva.
 - Fără reclame și fără tracking, mai ales pe minori (§18).
-- Upside comercial: diaspora română + potențial export/licențiere; piața internă pe donații + impact.
+- Upside comercial: diaspora română + potențial export/licențiere.
 - Suport tehnic (Faza 7): procesator de plăți (ex. Stripe), model `Donation`, pagină „unde merg banii".
 
 ## D-010 · Utilizator demo + gamificare (Faza 3, pre-auth)
-**Context:** Auth real vine în Faza 4 (§9). Faza 3 (gamificare + radar + dashboard) are nevoie de un „user" ca să persiste XP/streak/insigne și scorurile de creștere.
-
-**Decizie:**
-- Fără auth încă: cererile folosesc un utilizator identificat prin header `x-user-id`; dacă lipsește, se folosește `demo-user` (constanta `DEMO_USER_ID` din `@emanus/shared`). La prima atingere, user + GamState + GrowthScore baseline se creează automat.
-- Gamificare (§8): XP +10/lecție; bonus +20 la absolvire de modul (dedus din reward cu `certificateId`/`unlocksModuleId`); nivel la fiecare 100 XP (`levelForXp`).
+- Fără auth încă: cererile folosesc un utilizator identificat prin header `x-user-id`; dacă lipsește, se folosește `demo-user` (`DEMO_USER_ID`). La prima atingere, user + GamState + GrowthScore baseline se creează automat.
+- Gamificare (§8): XP +10/lecție; bonus +20 la absolvire de modul; nivel la fiecare 100 XP.
 - Streak: zile consecutive; aceeași zi nu incrementează; grace de 1 zi; 2+ zile lipsă → reset la 1.
 - Radar (§10): 6 axe, baseline implicit 20; `axisDeltas` din reward se adaugă la `current` (clamp 0..100).
-- Engine-ul (XP/streak/growth/dashboard) stă în `@emanus/shared` (pur, testabil); persistența (DB sau in-memory) doar apelează funcțiile pure.
-
-**Endpoints:** `POST /lessons/:id/progress` (aplică reward real), `GET /me/dashboard`, `GET /me/growth`.
+- Engine-ul stă în `@emanus/shared` (pur, testabil); persistența doar apelează funcțiile pure.
 
 ## D-011 · Onboarding + diagnostic + deep links (Faza 4)
-**Context:** §16.4 — utilizatorul trebuie să poată intra, să-și seteze baseline-ul radarului și să deschidă direct o lecție dintr-un link partajat.
+- Onboarding (client): categorie → profil anonim (nume + avatar) → consimțământ → diagnostic. La final `POST /users` → `id` (cuid) salvat în localStorage și trimis ca header `x-user-id` (înlocuiește `demo-user`).
+- Diagnostic (§10): chestionar Likert 1–5, câte un enunț pe fiecare din cele 6 axe (`@emanus/shared/diagnostic.ts`). `POST /me/diagnostic` setează baseline = current pe GrowthScore.
+- Deep links (hash): `#/lesson/:id`, `#/dashboard`, `#/onboarding`, `#/community`, `#/`. Fără router extern.
+- Sesiune client (localStorage): `userId`, `category`, `onboarded`.
+
+## D-012 · Comunitate + moderare + protocol de criză (Faza 5)
+**Context:** §16.5 + §15/§18 — comunitate sigură, mai ales pentru minori.
 
 **Decizie:**
-- Onboarding (client): pas 1 alege categoria de vârstă; pas 2 profil anonim (nume + avatar emoji); pas 3 consimțământ (GDPR/minori); pas 4 diagnostic. La final: `POST /users` → primești `id` (cuid), salvat în localStorage și trimis mai departe ca header `x-user-id` (înlocuiește `demo-user` din D-010).
-- Diagnostic (§10): un scurt chestionar Likert 1–5, câte un enunț pe fiecare din cele 6 axe (definit în `@emanus/shared/diagnostic.ts`, per categorie). `likertToScore` mapează 1..5 → 0..100; `computeBaseline` mediază pe axă. `POST /me/diagnostic` setează baseline = current pe GrowthScore (radarul pornește din realitatea utilizatorului, nu din 20 implicit).
-- Deep links (client, PWA + Capacitor): rutare pe hash — `#/lesson/:id` (lecție publică, partajabilă), `#/dashboard`, `#/onboarding`, `#/` (landing dacă neonboardat, altfel dashboard). Fără dependență de router extern.
-- Sesiunea client (localStorage): `userId`, `category`, `onboarded`.
+- Model `CommunityPost` (deja în schemă) cu status `visible|pending|removed`.
+- **Moderare automată** (motor pur în `@emanus/shared/moderation.ts`): normalizează textul (minuscule + fără diacritice) și verifică liste de cuvinte. Curat → `visible` (auto-publicat); vulgaritate → `pending` (verificare umană); ură/slur → `removed`; **limbaj de criză → `pending` + NU se publică, se afișează imediat resurse de ajutor**.
+- **Protocol de criză** (§15): la semnale de autovătămare/suicid/abuz, aplicația afișează resurse: **112**, **116 111** (Telefonul Copilului), **116 123** (sprijin emoțional). Endpoint `GET /crisis`.
+- Listele de cuvinte sunt un start MVP; de înlocuit/completat cu un serviciu dedicat + coadă de moderare umană.
+- Fără reclame/tracking; postările pot fi anonime (anonName + avatar).
 
-**Endpoints noi:** `POST /users`, `GET /diagnostic?category=`, `POST /me/diagnostic`.
+**Endpoints noi:** `GET /community?category=`, `POST /community`, `GET /crisis`.
 
-**De rafinat în fazele următoare:** auth real (Supabase Auth) în locul id-ului din localStorage; diagnostice dedicate pentru celelalte categorii; ecrane onboarding adaptate pe categorie.
+**De rafinat:** dashboard de moderare umană (aprobă/respinge pending), raportare postări, rate limiting, RLS pentru datele minorilor.
