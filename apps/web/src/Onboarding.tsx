@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import type { DiagnosticQuestion } from "@emanus/shared"
+import type { DiagnosticQuestion, FaithStage } from "@emanus/shared"
+import { FAITH_STAGES } from "@emanus/shared"
 import { createUser, getDiagnostic, submitDiagnostic } from "./api"
-import { setCategory, setOnboarded, setUserId } from "./session"
+import { setCategory, setFaithStage, setOnboarded, setUserId } from "./session"
 
 const CATEGORIES = [
   { id: "kids0_5", label: "Copii 0–5", emoji: "🧸" },
@@ -19,6 +20,7 @@ const LIKERT = [1, 2, 3, 4, 5]
 export function Onboarding({ onDone }: { onDone: () => void }) {
   const [step, setStep] = useState(0)
   const [categoryId, setCategoryId] = useState("teens12_18")
+  const [faith, setFaith] = useState<FaithStage>("seeking")
   const [anonName, setAnonName] = useState("")
   const [avatar, setAvatar] = useState("🌱")
   const [consent, setConsent] = useState(false)
@@ -28,7 +30,7 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (step === 3 && questions.length === 0) {
+    if (step === 4 && questions.length === 0) {
       getDiagnostic(categoryId)
         .then((d) => setQuestions(d.questions))
         .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)))
@@ -49,6 +51,7 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
       })
       setUserId(user.id)
       setCategory(categoryId)
+      setFaithStage(faith)
       await submitDiagnostic(categoryId, answers)
       setOnboarded()
       onDone()
@@ -61,7 +64,7 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
   return (
     <section className="onboarding">
       <div className="onboarding__progress">
-        {[0, 1, 2, 3].map((i) => (
+        {[0, 1, 2, 3, 4].map((i) => (
           <span key={i} className={i <= step ? "on" : ""} />
         ))}
       </div>
@@ -93,6 +96,39 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
 
       {step === 1 && (
         <div className="onboarding__step">
+          <h1>Unde ești cu Dumnezeu acum?</h1>
+          <p className="muted">
+            Nu contează de unde pornești — aceeași ușă, pentru oricine. Așa știm cum să-ți vorbim.
+          </p>
+          <div className="faith-list">
+            {FAITH_STAGES.map((s) => (
+              <button
+                key={s.id}
+                type="button"
+                className={`faith-opt${faith === s.id ? " picked" : ""}`}
+                onClick={() => setFaith(s.id)}
+              >
+                <span className="faith-opt__emoji">{s.emoji}</span>
+                <span>
+                  <span className="faith-opt__label">{s.label}</span>
+                  <span className="faith-opt__blurb">{s.blurb}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+          <div className="onboarding__nav">
+            <button type="button" className="ghost" onClick={() => setStep(0)}>
+              Înapoi
+            </button>
+            <button type="button" onClick={() => setStep(2)}>
+              Continuă
+            </button>
+          </div>
+        </div>
+      )}
+
+      {step === 2 && (
+        <div className="onboarding__step">
           <h1>Cum să-ți spunem?</h1>
           <p className="muted">Un nume (poate fi anonim) și un avatar.</p>
           <input
@@ -115,17 +151,17 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
             ))}
           </div>
           <div className="onboarding__nav">
-            <button type="button" className="ghost" onClick={() => setStep(0)}>
+            <button type="button" className="ghost" onClick={() => setStep(1)}>
               Înapoi
             </button>
-            <button type="button" disabled={!anonName.trim()} onClick={() => setStep(2)}>
+            <button type="button" disabled={!anonName.trim()} onClick={() => setStep(3)}>
               Continuă
             </button>
           </div>
         </div>
       )}
 
-      {step === 2 && (
+      {step === 3 && (
         <div className="onboarding__step">
           <h1>Un spațiu sigur 🔒</h1>
           <p className="muted">
@@ -140,17 +176,17 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
             <span>Sunt de acord cu termenii și cu prelucrarea datelor pentru contul meu.</span>
           </label>
           <div className="onboarding__nav">
-            <button type="button" className="ghost" onClick={() => setStep(1)}>
+            <button type="button" className="ghost" onClick={() => setStep(2)}>
               Înapoi
             </button>
-            <button type="button" disabled={!consent} onClick={() => setStep(3)}>
+            <button type="button" disabled={!consent} onClick={() => setStep(4)}>
               Continuă
             </button>
           </div>
         </div>
       )}
 
-      {step === 3 && (
+      {step === 4 && (
         <div className="onboarding__step">
           <h1>Unde ești acum?</h1>
           <p className="muted">
@@ -182,7 +218,7 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
             ))}
           </div>
           <div className="onboarding__nav">
-            <button type="button" className="ghost" onClick={() => setStep(2)}>
+            <button type="button" className="ghost" onClick={() => setStep(3)}>
               Înapoi
             </button>
             <button type="button" disabled={!allAnswered || busy} onClick={finish}>

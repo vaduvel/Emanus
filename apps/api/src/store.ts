@@ -3,6 +3,7 @@ import {
   applyAxisDeltas,
   applyReward,
   buildDashboard,
+  buildRecommendation,
   computeBaseline,
   dailyRitualForDay,
   defaultGrowth,
@@ -20,11 +21,13 @@ import type {
   DailyView,
   DashboardView,
   DiagnosticQuestion,
+  FaithStage,
   GamState,
   GrowthScore,
   Lesson,
   ModerationResult,
   Module,
+  RecommendationView,
   Reward,
 } from "@emanus/shared"
 
@@ -207,6 +210,38 @@ async function growth(userId: string): Promise<GrowthScore[]> {
   return memGetGrowth(userId)
 }
 
+// Recomandarea de parcurs după onboarding (docs/00-DIRECTIE §13: „Ușa, nu unghiul”).
+// Pornim de la axa cea mai fragedă din diagnostic și adaptăm tonul la FaithStage.
+async function recommendation(
+  userId: string,
+  categoryId = "teens12_18",
+  faithStage: FaithStage = "seeking",
+): Promise<RecommendationView> {
+  const [modules, growthScores] = await Promise.all([tree(categoryId), growth(userId)])
+  const focusAxis =
+    [...growthScores].sort((a, b) => a.current - b.current)[0]?.axis ?? "identity"
+  const match = modules.find((m) => m.axis === focusAxis) ?? modules[0]
+  const firstCourse = match?.courses[0]
+  const firstLesson = firstCourse?.lessons[0]
+  const cat = category(categoryId)
+  return buildRecommendation({
+    faithStage,
+    categoryName: cat?.name ?? "",
+    focusAxis,
+    course:
+      match && firstCourse
+        ? {
+            moduleId: match.id,
+            courseId: firstCourse.id,
+            title: firstCourse.title,
+            struggle: firstCourse.struggle,
+            truth: firstCourse.truth,
+            firstLessonId: firstLesson?.id,
+          }
+        : undefined,
+  })
+}
+
 function diagnostic(categoryId: string): DiagnosticQuestion[] {
   return sharedGetDiagnostic(categoryId as any)
 }
@@ -275,6 +310,7 @@ export const store = {
   dashboard,
   dailyRitual,
   growth,
+  recommendation,
   diagnostic,
   createUser,
   setBaseline,

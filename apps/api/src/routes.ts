@@ -1,4 +1,4 @@
-import { CRISIS_RESOURCES, DEMO_USER_ID, MAX_POST_LENGTH } from "@emanus/shared"
+import { CRISIS_RESOURCES, DEMO_USER_ID, MAX_POST_LENGTH, isFaithStage } from "@emanus/shared"
 import type { Express, Request } from "express"
 import { store } from "./store.js"
 
@@ -114,6 +114,18 @@ export function registerRoutes(app: Express): void {
     try {
       const categoryId = (req.query.category as string) || "teens12_18"
       res.json(await store.dashboard(userIdOf(req), categoryId))
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Recomandare de parcurs după onboarding (docs/00-DIRECTIE §13: „Ușa, nu unghiul”)
+  app.get("/me/recommendation", async (req, res, next) => {
+    try {
+      const categoryId = (req.query.category as string) || "teens12_18"
+      const stageRaw = req.query.stage as string
+      const faithStage = isFaithStage(stageRaw) ? stageRaw : "seeking"
+      res.json(await store.recommendation(userIdOf(req), categoryId, faithStage))
     } catch (e) {
       next(e)
     }

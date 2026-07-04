@@ -276,6 +276,25 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(248, 113, 113, 0
 .chip.picked { border-color: var(--accent); background: #10263a; }
 .chip__emoji { font-size: 1.1rem; }
 
+/* Ecranul Ușii: „Unde ești cu Dumnezeu acum?” (docs/00-DIRECTIE §13) */
+.faith-list { display: flex; flex-direction: column; gap: 10px; }
+.faith-opt {
+  background: #0b1220;
+  border: 1px solid #334155;
+  color: var(--text);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+.faith-opt.picked { border-color: var(--accent); background: #10263a; }
+.faith-opt__emoji { font-size: 1.5rem; line-height: 1; }
+.faith-opt__label { display: block; font-weight: 600; }
+.faith-opt__blurb { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+
 .text-input {
   width: 100%;
   background: #0b1220;
@@ -315,6 +334,51 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(248, 113, 113, 0
 }
 .likert__dot.picked { border-color: var(--accent); background: #10263a; }
 .likert__legend { display: flex; justify-content: space-between; margin-top: 4px; }
+
+/* --- Ecranul „Parcursul tău” (recomandare după onboarding, §13) --- */
+.recommend {
+  width: 100%;
+  max-width: 460px;
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.recommend__badge {
+  align-self: flex-start;
+  background: #10263a;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.recommend__welcome { margin: 0; font-size: 1.1rem; line-height: 1.5; }
+.recommend__focus {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #0b1220;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.recommend__focus-kicker { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.recommend__focus b { font-size: 1.15rem; text-transform: capitalize; }
+.recommend__course {
+  background: #0b1220;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.recommend__course h1 { margin: 0; font-size: 1.25rem; }
+.recommend__struggle { margin: 0; font-style: italic; color: var(--muted); }
+.recommend__truth { margin: 0; line-height: 1.5; border-left: 3px solid var(--accent); padding-left: 12px; }
+.recommend__nav { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.recommend__nav .ghost { text-align: center; }
 
 /* --- Comunitate + criză (Faza 5) --- */
 .community {

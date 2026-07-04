@@ -4,6 +4,7 @@ import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
 import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
+import { Recommendation } from "./Recommendation"
 import { navigate, useHashRoute } from "./router"
 import { isOnboarded } from "./session"
 
@@ -38,9 +39,17 @@ export default function App() {
         <Onboarding
           onDone={() => {
             setOnb(true)
-            navigate("/daily")
+            navigate("/recommendation")
           }}
         />
+      </main>
+    )
+  }
+
+  if (route.name === "recommendation") {
+    return (
+      <main className="app">
+        <Recommendation />
       </main>
     )
   }

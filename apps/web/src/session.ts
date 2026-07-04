@@ -3,6 +3,7 @@
 const K_USER = "emanus_user_id"
 const K_CAT = "emanus_category"
 const K_ONB = "emanus_onboarded"
+const K_STAGE = "emanus_faith_stage"
 
 export function getUserId(): string {
   try {
@@ -31,6 +32,22 @@ export function getCategory(): string {
 export function setCategory(c: string): void {
   try {
     localStorage.setItem(K_CAT, c)
+  } catch {
+    /* ignore */
+  }
+}
+
+export function getFaithStage(): string {
+  try {
+    return localStorage.getItem(K_STAGE) ?? "seeking"
+  } catch {
+    return "seeking"
+  }
+}
+
+export function setFaithStage(s: string): void {
+  try {
+    localStorage.setItem(K_STAGE, s)
   } catch {
     /* ignore */
   }

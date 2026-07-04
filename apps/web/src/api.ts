@@ -9,6 +9,7 @@ import type {
   GrowthScore,
   Lesson,
   ModerationResult,
+  RecommendationView,
 } from "@emanus/shared"
 import { getUserId } from "./session"
 
@@ -57,6 +58,12 @@ export function getDashboard(): Promise<DashboardView> {
 
 export function getGrowth(): Promise<GrowthScore[]> {
   return getJson<GrowthScore[]>("/me/growth")
+}
+
+export function getRecommendation(category: string, stage: string): Promise<RecommendationView> {
+  return getJson<RecommendationView>(
+    `/me/recommendation?category=${encodeURIComponent(category)}&stage=${encodeURIComponent(stage)}`,
+  )
 }
 
 export function getDiagnostic(
