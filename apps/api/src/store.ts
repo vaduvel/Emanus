@@ -4,9 +4,11 @@ import {
   applyReward,
   buildDashboard,
   computeBaseline,
+  dailyRitualForDay,
   defaultGrowth,
   emptyGam,
   getDiagnostic as sharedGetDiagnostic,
+  graceMessage,
   isModuleCompletingReward,
   moderatePost,
   teensM1C1,
@@ -15,6 +17,7 @@ import type {
   Category,
   CommunityPostView,
   Course,
+  DailyView,
   DashboardView,
   DiagnosticQuestion,
   GamState,
@@ -186,6 +189,19 @@ async function dashboard(userId: string, categoryId = "teens12_18"): Promise<Das
   return memDashboard(userId, categoryId)
 }
 
+// Ritualul zilnic „Timp cu Dumnezeu” (docs/00-DIRECTIE §2): versetul urmează axa cea mai fragedă.
+async function dailyRitual(userId: string, categoryId = "teens12_18"): Promise<DailyView> {
+  const dash = await dashboard(userId, categoryId)
+  const focus = [...dash.growth].sort((a, b) => a.current - b.current)[0]?.axis
+  const ritual = dailyRitualForDay(new Date(), focus)
+  return {
+    ritual,
+    rhythmDays: dash.gam.streakDays,
+    nextLesson: dash.next,
+    graceMessage: graceMessage(dash.gam.streakDays),
+  }
+}
+
 async function growth(userId: string): Promise<GrowthScore[]> {
   if (useDb) return (await db()).getOrInitGrowth(userId)
   return memGetGrowth(userId)
@@ -257,6 +273,7 @@ export const store = {
   tree,
   applyProgress,
   dashboard,
+  dailyRitual,
   growth,
   diagnostic,
   createUser,

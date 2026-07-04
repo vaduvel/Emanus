@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 export type Route =
   | { name: "home" }
   | { name: "dashboard" }
+  | { name: "daily" }
   | { name: "onboarding" }
   | { name: "community" }
   | { name: "lesson"; id?: string }
@@ -12,6 +13,7 @@ export function parseRoute(): Route {
   if (h.startsWith("/lesson/")) return { name: "lesson", id: decodeURIComponent(h.slice("/lesson/".length)) }
   if (h === "/lesson") return { name: "lesson" }
   if (h === "/dashboard") return { name: "dashboard" }
+  if (h === "/daily") return { name: "daily" }
   if (h === "/onboarding") return { name: "onboarding" }
   if (h === "/community") return { name: "community" }
   return { name: "home" }

@@ -2,6 +2,7 @@ import type {
   Category,
   CommunityPostView,
   CrisisResource,
+  DailyView,
   DashboardView,
   DiagnosticQuestion,
   GamState,
@@ -44,6 +45,10 @@ export function getLesson(id: string): Promise<Lesson> {
 
 export function getCategories(): Promise<Category[]> {
   return getJson<Category[]>("/categories")
+}
+
+export function getDaily(): Promise<DailyView> {
+  return getJson<DailyView>("/me/daily")
 }
 
 export function getDashboard(): Promise<DashboardView> {

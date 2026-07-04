@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Community } from "./Community"
+import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
 import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
@@ -37,7 +38,7 @@ export default function App() {
         <Onboarding
           onDone={() => {
             setOnb(true)
-            navigate("/dashboard")
+            navigate("/daily")
           }}
         />
       </main>
@@ -55,7 +56,7 @@ export default function App() {
   if (route.name === "community") {
     return (
       <main className="app">
-        <Community onBack={() => navigate(onboarded ? "/dashboard" : "/")} />
+        <Community onBack={() => navigate(onboarded ? "/daily" : "/")} />
       </main>
     )
   }
@@ -63,7 +64,15 @@ export default function App() {
   if (route.name === "dashboard") {
     return (
       <main className="app">
-        <Dashboard onBack={() => navigate("/")} />
+        <Dashboard onBack={() => navigate("/daily")} />
+      </main>
+    )
+  }
+
+  if (route.name === "daily") {
+    return (
+      <main className="app">
+        <Daily />
       </main>
     )
   }
@@ -72,7 +81,7 @@ export default function App() {
   if (onboarded) {
     return (
       <main className="app">
-        <Dashboard onBack={() => navigate("/lesson/teens_m1_c1_l1")} />
+        <Daily />
       </main>
     )
   }

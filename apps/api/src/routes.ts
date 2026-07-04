@@ -99,7 +99,17 @@ export function registerRoutes(app: Express): void {
     }
   })
 
-  // Dashboard „Parcursul meu" (workbook §10)
+  // Ritualul zilnic „Timp cu Dumnezeu” (docs/00-DIRECTIE §2)
+  app.get("/me/daily", async (req, res, next) => {
+    try {
+      const categoryId = (req.query.category as string) || "teens12_18"
+      res.json(await store.dailyRitual(userIdOf(req), categoryId))
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Dashboard „Parcursul meu” (workbook §10)
   app.get("/me/dashboard", async (req, res, next) => {
     try {
       const categoryId = (req.query.category as string) || "teens12_18"

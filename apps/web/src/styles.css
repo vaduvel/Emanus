@@ -364,3 +364,42 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(248, 113, 113, 0
 .post__head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .post__avatar { font-size: 1.2rem; }
 .post__body { margin: 0; line-height: 1.45; white-space: pre-wrap; }
+
+/* --- Ritualul zilnic „Timp cu Dumnezeu” (Ecran #2) --- */
+.daily {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.daily__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.daily__head h1 { margin: 0 0 4px; font-size: 1.25rem; }
+.rhythm {
+  flex: 0 0 auto;
+  background: #10263a;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.daily__card {
+  background: #0b1220;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.daily__kicker { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.daily__verse { margin: 0; font-size: 1.15rem; line-height: 1.5; font-style: italic; }
+.daily__ref { color: var(--accent); font-style: normal; font-size: 0.9rem; }
+.daily__q { color: var(--text); font-weight: 600; margin: 0; }
+.daily__prayer { margin: 0; line-height: 1.5; border-left: 3px solid var(--accent); padding-left: 12px; }
+.daily__nav { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.daily__links { display: flex; gap: 8px; }
+.daily__links .ghost { flex: 1; text-align: center; }
