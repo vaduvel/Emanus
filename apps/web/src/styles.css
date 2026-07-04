@@ -465,8 +465,8 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(248, 113, 113, 0
 .daily__q { color: var(--text); font-weight: 600; margin: 0; }
 .daily__prayer { margin: 0; line-height: 1.5; border-left: 3px solid var(--accent); padding-left: 12px; }
 .daily__nav { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
-.daily__links { display: flex; gap: 8px; }
-.daily__links .ghost { flex: 1; text-align: center; }
+.daily__links { display: flex; flex-wrap: wrap; gap: 8px; }
+.daily__links .ghost { flex: 1; min-width: 40%; text-align: center; }
 
 /* --- Antrenorul de rugăciune (Ecran #4, §4) --- */
 .prayer {
@@ -552,3 +552,60 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(248, 113, 113, 0
 .eb-item__body p { margin: 0; line-height: 1.4; }
 .eb-item.answered { border-left: 3px solid var(--ok); }
 .eb-item.answered .eb-item__body p { color: var(--muted); }
+
+/* --- Legământul familiei (Ecran 👪 Familie, §6) --- */
+.family {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.family__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.family__head h1 { margin: 0 0 4px; font-size: 1.25rem; }
+.family__field { display: flex; flex-direction: column; gap: 6px; }
+.family__field span { font-weight: 600; font-size: 0.9rem; }
+.family__themes { display: flex; flex-direction: column; gap: 8px; }
+.family__theme {
+  background: #0b1220;
+  border: 1px solid #334155;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  width: 100%;
+}
+.family__theme.picked { border-color: var(--accent); background: #10263a; }
+.family__theme b { font-size: 1rem; }
+.family__covenant {
+  background: #0b1220;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.family__badge {
+  align-self: flex-start;
+  background: #10263a;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.family__covenant p { margin: 0; line-height: 1.5; }
+.family__wall {
+  background: #0b1220;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
