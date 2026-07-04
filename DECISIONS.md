@@ -6,7 +6,7 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - **Monorepo** cu pnpm workspaces + TypeScript peste tot.
 - **Backend:** Node + TypeScript + Express (endorsat de workbook §14). Prisma + PostgreSQL pentru persistență.
 - **Shared domain package** (`@emanus/shared`) = sursa unică de adevăr pentru tipuri (workbook §7). Backend + frontend le importă.
-- **Frontend:** **un singur codebase web-first — React (Vite) ca PWA**, care acoperă web + mobil. Vezi D-007 pentru împachetarea în aplicații iOS/Android.
+- **Frontend:** un singur codebase web-first — React (Vite) ca PWA, care acoperă web + mobil. Vezi D-007 pentru împachetarea în aplicații iOS/Android.
 - Motiv: standard, ușor de rulat pe M1, aliniat cu §14, și ideal pentru conținut de tip chat scriptat cu deep links.
 
 ## D-002 · Engine FIX + config
@@ -14,13 +14,13 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - Categoriile se adaugă prin `CategoryConfig` (date), nu cod nou (regula de aur §4).
 
 ## D-003 · API rulabil din prima zi (in-memory)
-- Pentru Faza 1, API-ul servește conținut dintr-un store **in-memory** încărcat din seed-ul partajat.
+- Pentru Faza 1, API-ul servește conținut dintr-un store in-memory încărcat din seed-ul partajat.
 - Prisma/Postgres (Supabase) s-a cablat în Faza 1.5. Store-ul comută automat: dacă `DATABASE_URL` e setat, citește din DB; altfel in-memory.
 
 ## D-004 · Seed conținut
 - Seed inclus: Adolescenți → Modul 1 (`identity`) → Curs 1.1 „Cine sunt eu, de fapt?".
-- **L1 „Nu ești ce zic like-urile" = conținut complet** (din workbook §13), inclusiv un pas de ramificație (`l1_branch_c`).
-- **L2–L6 = doar metadate + pași DRAFT.** Conținutul integral trebuie importat din sursa aprobată (pagina „Cursul 1.1" din Notion). NU se inventează teologie/versete (workbook §18).
+- L1 „Nu ești ce zic like-urile" = conținut complet (din workbook §13), inclusiv un pas de ramificație (`l1_branch_c`).
+- L2–L6 = doar metadate + pași DRAFT. Conținutul integral trebuie importat din sursa aprobată (pagina „Cursul 1.1" din Notion). NU se inventează teologie/versete (workbook §18).
 
 ## D-005 · Guardrails moștenite din workbook §15/§18
 - Biblia = adevărul; versetele-ancoră aprobate nu se schimbă.
@@ -31,15 +31,15 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 - În afara scope-ului fundației. Vor fi un tip nou `interactive_scene` în `LessonStep`, livrat cu HTML5 (Phaser/PixiJS) — nu Unreal (cerințe <2s / offline / deep links, §15). Rulează nativ în PWA. Spec separat.
 
 ## D-007 · PWA + mobil (iOS & Android)
-**Decizie:** un singur codebase React (Vite) construit ca **PWA** (manifest + service worker), împachetat pentru magazine cu **Capacitor**.
-- **Web + Android install:** PWA (installable, offline pe lecția curentă, push).
-- **Play Store / App Store:** Capacitor împachetează același cod. Pe iOS e necesar fiindcă PWA are limitări (push restrâns, fără background real).
-- **De ce NU React Native/Flutter:** conținut de tip chat scriptat + web games HTML5, nu UI nativ greu. PWA + Capacitor = un singur cod, mentenanță minimă.
-- **Structură:** `apps/web` (React PWA) + `apps/mobile` (shell Capacitor).
+**Decizie:** un singur codebase React (Vite) construit ca PWA (manifest + service worker), împachetat pentru magazine cu Capacitor.
+- Web + Android install: PWA (installable, offline pe lecția curentă, push).
+- Play Store / App Store: Capacitor împachetează același cod. Pe iOS e necesar fiindcă PWA are limitări (push restrâns, fără background real).
+- De ce NU React Native/Flutter: conținut de tip chat scriptat + web games HTML5, nu UI nativ greu. PWA + Capacitor = un singur cod, mentenanță minimă.
+- Structură: `apps/web` (React PWA) + `apps/mobile` (shell Capacitor).
 
 ## D-008 · Supabase (Postgres gestionat)
-**Decizie:** Supabase = baza de date Postgres a platformei, accesată prin **Prisma**.
-- `DATABASE_URL` = conexiune *pooled* (PgBouncer, port 6543) pentru runtime.
+**Decizie:** Supabase = baza de date Postgres a platformei, accesată prin Prisma.
+- `DATABASE_URL` = conexiune pooled (PgBouncer, port 6543) pentru runtime.
 - `DIRECT_URL` = conexiune directă (port 5432) pentru migrări Prisma (`directUrl` în schema).
 - Secretele stau doar în `.env` (gitignored) / în mediul agentului desktop; niciodată în cod sau în client.
 
@@ -47,11 +47,11 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 
 ## D-009 · Monetizare — donații-first (nu paywall dur)
 **Decizie — accesul la conținut e liber; susținerea e prin dăruire:**
-- **Tot conținutul de bază rămâne gratuit.** Fără lecții blocate în spatele plății (misiune + cultură RO/evanghelică).
-- **Donații** recurente și one-time, discrete, după momente de valoare; niciodată popup agresiv.
-- **Pay-it-forward:** un donator poate plăti acces/sprijin pentru altcineva.
-- **Fără reclame și fără tracking, mai ales pe minori** (§18).
-- **Upside comercial:** diaspora română + potențial export/licențiere; piața internă pe donații + impact.
+- Tot conținutul de bază rămâne gratuit. Fără lecții blocate în spatele plății (misiune + cultură RO/evanghelică).
+- Donații recurente și one-time, discrete, după momente de valoare; niciodată popup agresiv.
+- Pay-it-forward: un donator poate plăti acces/sprijin pentru altcineva.
+- Fără reclame și fără tracking, mai ales pe minori (§18).
+- Upside comercial: diaspora română + potențial export/licențiere; piața internă pe donații + impact.
 - Suport tehnic (Faza 7): procesator de plăți (ex. Stripe), model `Donation`, pagină „unde merg banii".
 
 ## D-010 · Utilizator demo + gamificare (Faza 3, pre-auth)
@@ -59,11 +59,22 @@ Arhitectural Decision Record. Conform workbook §4 („o singură bază de cod, 
 
 **Decizie:**
 - Fără auth încă: cererile folosesc un utilizator identificat prin header `x-user-id`; dacă lipsește, se folosește `demo-user` (constanta `DEMO_USER_ID` din `@emanus/shared`). La prima atingere, user + GamState + GrowthScore baseline se creează automat.
-- **Gamificare (§8):** XP +10/lecție; bonus +20 la absolvire de modul (dedus din reward cu `certificateId`/`unlocksModuleId`); nivel la fiecare 100 XP (`levelForXp`).
-- **Streak:** zile consecutive; aceeași zi nu incrementează; grace de 1 zi; 2+ zile lipsă → reset la 1.
-- **Radar (§10):** 6 axe, baseline implicit 20; `axisDeltas` din reward se adaugă la `current` (clamp 0..100). Reevaluarea formală (0.5*selfReport+0.3*moduleReview+0.2*behaviorSignal) rămâne pentru diagnostic/review (Faza 4).
+- Gamificare (§8): XP +10/lecție; bonus +20 la absolvire de modul (dedus din reward cu `certificateId`/`unlocksModuleId`); nivel la fiecare 100 XP (`levelForXp`).
+- Streak: zile consecutive; aceeași zi nu incrementează; grace de 1 zi; 2+ zile lipsă → reset la 1.
+- Radar (§10): 6 axe, baseline implicit 20; `axisDeltas` din reward se adaugă la `current` (clamp 0..100).
 - Engine-ul (XP/streak/growth/dashboard) stă în `@emanus/shared` (pur, testabil); persistența (DB sau in-memory) doar apelează funcțiile pure.
 
-**Endpoints noi:** `POST /lessons/:id/progress` (aplică reward real), `GET /me/dashboard`, `GET /me/growth`.
+**Endpoints:** `POST /lessons/:id/progress` (aplică reward real), `GET /me/dashboard`, `GET /me/growth`.
 
-**De înlocuit în Faza 4:** `demo-user` → utilizator real din Supabase Auth (D-008).
+## D-011 · Onboarding + diagnostic + deep links (Faza 4)
+**Context:** §16.4 — utilizatorul trebuie să poată intra, să-și seteze baseline-ul radarului și să deschidă direct o lecție dintr-un link partajat.
+
+**Decizie:**
+- Onboarding (client): pas 1 alege categoria de vârstă; pas 2 profil anonim (nume + avatar emoji); pas 3 consimțământ (GDPR/minori); pas 4 diagnostic. La final: `POST /users` → primești `id` (cuid), salvat în localStorage și trimis mai departe ca header `x-user-id` (înlocuiește `demo-user` din D-010).
+- Diagnostic (§10): un scurt chestionar Likert 1–5, câte un enunț pe fiecare din cele 6 axe (definit în `@emanus/shared/diagnostic.ts`, per categorie). `likertToScore` mapează 1..5 → 0..100; `computeBaseline` mediază pe axă. `POST /me/diagnostic` setează baseline = current pe GrowthScore (radarul pornește din realitatea utilizatorului, nu din 20 implicit).
+- Deep links (client, PWA + Capacitor): rutare pe hash — `#/lesson/:id` (lecție publică, partajabilă), `#/dashboard`, `#/onboarding`, `#/` (landing dacă neonboardat, altfel dashboard). Fără dependență de router extern.
+- Sesiunea client (localStorage): `userId`, `category`, `onboarded`.
+
+**Endpoints noi:** `POST /users`, `GET /diagnostic?category=`, `POST /me/diagnostic`.
+
+**De rafinat în fazele următoare:** auth real (Supabase Auth) în locul id-ului din localStorage; diagnostice dedicate pentru celelalte categorii; ecrane onboarding adaptate pe categorie.

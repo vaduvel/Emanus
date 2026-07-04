@@ -114,6 +114,25 @@ export async function ensureUser(userId: string = DEMO_USER_ID): Promise<void> {
   })
 }
 
+export async function createUser(input: {
+  anonName: string
+  avatar: string
+  ageBand?: string
+  categoryId: string
+  consent: Record<string, unknown>
+}): Promise<{ id: string }> {
+  const u = await prisma.user.create({
+    data: {
+      anonName: input.anonName,
+      avatar: input.avatar,
+      ageBand: input.ageBand ?? null,
+      categoryId: input.categoryId as any,
+      consent: input.consent as any,
+    },
+  })
+  return { id: u.id }
+}
+
 export async function getOrInitGam(userId: string): Promise<GamState> {
   const row = await prisma.gamState.findUnique({ where: { userId } })
   if (row) return toGam(row)
@@ -132,6 +151,24 @@ export async function getOrInitGrowth(userId: string): Promise<GrowthScore[]> {
     ),
   )
   return seeded
+}
+
+/** Setează baseline = current din diagnosticul inițial (workbook §10). */
+export async function setBaseline(
+  userId: string,
+  baselines: Array<{ axis: string; score: number }>,
+): Promise<GrowthScore[]> {
+  await ensureUser(userId)
+  await prisma.$transaction(
+    baselines.map((b) =>
+      prisma.growthScore.upsert({
+        where: { userId_axis: { userId, axis: b.axis as any } },
+        update: { baseline: b.score, current: b.score },
+        create: { userId, axis: b.axis as any, baseline: b.score, current: b.score },
+      }),
+    ),
+  )
+  return getOrInitGrowth(userId)
 }
 
 export interface ProgressOutcome {

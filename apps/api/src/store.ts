@@ -3,8 +3,10 @@ import {
   applyAxisDeltas,
   applyReward,
   buildDashboard,
+  computeBaseline,
   defaultGrowth,
   emptyGam,
+  getDiagnostic as sharedGetDiagnostic,
   isModuleCompletingReward,
   teensM1C1,
 } from "@emanus/shared"
@@ -12,6 +14,7 @@ import type {
   Category,
   Course,
   DashboardView,
+  DiagnosticQuestion,
   GamState,
   GrowthScore,
   Lesson,
@@ -41,6 +44,7 @@ const memLessons = new Map<string, Lesson>(teensM1C1.lessons.map((l) => [l.id, l
 const memGam = new Map<string, GamState>()
 const memGrowth = new Map<string, GrowthScore[]>()
 const memDone = new Map<string, Set<string>>()
+let memUserSeq = 0
 
 // Dacă DATABASE_URL e setat (Supabase), citește din DB; altfel in-memory.
 const useDb = Boolean(process.env.DATABASE_URL)
@@ -136,6 +140,28 @@ function memDashboard(userId: string, categoryId = "teens12_18"): DashboardView 
   })
 }
 
+function memCreateUser(): { id: string } {
+  const id = `mem-user-${++memUserSeq}`
+  memGrowth.set(id, defaultGrowth(id))
+  return { id }
+}
+
+function memSetBaseline(
+  userId: string,
+  baselines: Array<{ axis: string; score: number }>,
+): GrowthScore[] {
+  const now = new Date().toISOString()
+  const growth = baselines.map((b) => ({
+    userId,
+    axis: b.axis as GrowthScore["axis"],
+    baseline: b.score,
+    current: b.score,
+    updatedAt: now,
+  }))
+  memGrowth.set(userId, growth)
+  return growth
+}
+
 async function applyProgress(
   userId: string,
   lsn: Lesson,
@@ -155,6 +181,31 @@ async function growth(userId: string): Promise<GrowthScore[]> {
   return memGetGrowth(userId)
 }
 
+function diagnostic(categoryId: string): DiagnosticQuestion[] {
+  return sharedGetDiagnostic(categoryId as any)
+}
+
+async function createUser(input: {
+  anonName: string
+  avatar: string
+  ageBand?: string
+  categoryId: string
+  consent: Record<string, unknown>
+}): Promise<{ id: string }> {
+  if (useDb) return (await db()).createUser(input)
+  return memCreateUser()
+}
+
+async function setBaseline(
+  userId: string,
+  categoryId: string,
+  answers: Record<string, number>,
+): Promise<GrowthScore[]> {
+  const baselines = computeBaseline(categoryId as any, answers)
+  if (useDb) return (await db()).setBaseline(userId, baselines)
+  return memSetBaseline(userId, baselines)
+}
+
 export const store = {
   categories,
   category,
@@ -164,4 +215,7 @@ export const store = {
   applyProgress,
   dashboard,
   growth,
+  diagnostic,
+  createUser,
+  setBaseline,
 }

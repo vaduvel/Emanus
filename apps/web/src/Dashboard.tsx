@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { GROWTH_AXES } from "@emanus/shared"
 import type { DashboardView, GrowthAxisId, GrowthScore } from "@emanus/shared"
 import { getDashboard } from "./api"
+import { navigate } from "./router"
 
 const AXIS_LABEL: Record<GrowthAxisId, string> = {
   identity: "Identitate",
@@ -76,7 +77,7 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
       )}
 
       {next && (
-        <button type="button" onClick={onBack}>
+        <button type="button" onClick={() => navigate(`/lesson/${next.lessonId}`)}>
           Continuă: {next.title}
         </button>
       )}

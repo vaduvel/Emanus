@@ -1,103 +1,75 @@
-import { useEffect, useState } from "react"
-import type { Lesson } from "@emanus/shared"
-import { getFirstLesson, submitProgress } from "./api"
-import type { ProgressResult } from "./api"
-import { LessonPlayer } from "./LessonPlayer"
-import type { LessonResult } from "./LessonPlayer"
+import { useState } from "react"
 import { Dashboard } from "./Dashboard"
+import { LessonView } from "./LessonView"
+import { Onboarding } from "./Onboarding"
+import { navigate, useHashRoute } from "./router"
+import { isOnboarded } from "./session"
 
-type View = "lesson" | "reward" | "dashboard"
+function Landing() {
+  return (
+    <section className="landing">
+      <div className="landing__icon">🕊️</div>
+      <h1>Emanus</h1>
+      <p className="landing__tag">Dumnezeu cu tine, pas cu pas.</p>
+      <p className="muted">
+        Lecții scurte, ca o conversație. Descoperă cine ești, cu adevărat.
+      </p>
+      <div className="landing__actions">
+        <button type="button" onClick={() => navigate("/lesson/teens_m1_c1_l1")}>
+          Încearcă prima lecție
+        </button>
+        <button type="button" className="ghost" onClick={() => navigate("/onboarding")}>
+          Începe călătoria mea
+        </button>
+      </div>
+    </section>
+  )
+}
 
 export default function App() {
-  const [lesson, setLesson] = useState<Lesson | null>(null)
-  const [error, setError] = useState<string | null>(null)
-  const [result, setResult] = useState<ProgressResult | null>(null)
-  const [view, setView] = useState<View>("lesson")
-  const [submitting, setSubmitting] = useState(false)
+  const route = useHashRoute()
+  const [onboarded, setOnb] = useState(isOnboarded())
 
-  useEffect(() => {
-    getFirstLesson()
-      .then(setLesson)
-      .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)))
-  }, [])
-
-  if (error) {
+  if (route.name === "onboarding" || (!onboarded && route.name === "dashboard")) {
     return (
       <main className="app">
-        <p className="error">{error}</p>
+        <Onboarding
+          onDone={() => {
+            setOnb(true)
+            navigate("/dashboard")
+          }}
+        />
       </main>
     )
   }
 
-  if (view === "dashboard") {
+  if (route.name === "lesson") {
     return (
       <main className="app">
-        <Dashboard onBack={() => setView(result ? "reward" : "lesson")} />
+        <LessonView lessonId={route.id} />
       </main>
     )
   }
 
-  if (!lesson) {
+  if (route.name === "dashboard") {
     return (
       <main className="app">
-        <p className="muted">Se încarcă…</p>
+        <Dashboard onBack={() => navigate("/")} />
       </main>
     )
   }
 
-  if (view === "reward" && result) {
+  // home
+  if (onboarded) {
     return (
       <main className="app">
-        <div className="card reward-card">
-          <div className="reward-card__icon">✨</div>
-          <h2>Bravo! +{result.reward.xp} XP</h2>
-          <p>
-            Ai terminat lecția <strong>„{lesson.title}”</strong>.
-          </p>
-          {result.reward.badgeId && (
-            <p className="muted">🎖️ Insignă: {result.reward.badgeId}</p>
-          )}
-          <blockquote className="scripture">
-            Verset de memorat
-            <cite>{lesson.memoryVerseRef}</cite>
-          </blockquote>
-          {result.reward.certificateId && (
-            <p className="muted">🏅 Certificat: {result.reward.certificateId}</p>
-          )}
-          {result.reward.unlocksModuleId && (
-            <p className="muted">🔓 Ai deblocat un modul nou!</p>
-          )}
-          <div className="reward-card__actions">
-            <button type="button" onClick={() => setView("dashboard")}>
-              Vezi parcursul meu
-            </button>
-            <button type="button" className="ghost" onClick={() => window.location.reload()}>
-              Reia lecția
-            </button>
-          </div>
-        </div>
+        <Dashboard onBack={() => navigate("/lesson/teens_m1_c1_l1")} />
       </main>
     )
   }
-
   return (
     <main className="app">
-      <LessonPlayer
-        lesson={lesson}
-        submitting={submitting}
-        onComplete={async (r: LessonResult) => {
-          setSubmitting(true)
-          try {
-            const res = await submitProgress(lesson.id, r.choicesMade)
-            setResult(res)
-            setView("reward")
-          } catch (e: unknown) {
-            setError(e instanceof Error ? e.message : String(e))
-          } finally {
-            setSubmitting(false)
-          }
-        }}
-      />
+      <Landing />
     </main>
   )
 }

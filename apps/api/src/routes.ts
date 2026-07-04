@@ -9,7 +9,7 @@ function userIdOf(req: Request): string {
 
 export function registerRoutes(app: Express): void {
   app.get("/health", (_req, res) => {
-    res.json({ ok: true, service: "emanus-api", phase: 3 })
+    res.json({ ok: true, service: "emanus-api", phase: 4 })
   })
 
   // Prima lecție gratis, fără cont (workbook §16.4)
@@ -55,6 +55,45 @@ export function registerRoutes(app: Express): void {
       const choicesMade = (req.body?.choicesMade ?? {}) as Record<string, string>
       const outcome = await store.applyProgress(userIdOf(req), lesson, choicesMade)
       res.json({ lessonId: lesson.id, levelAfter: outcome.gam.level, ...outcome })
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Onboarding: creează utilizatorul (workbook §16.4 / §9)
+  app.post("/users", async (req, res, next) => {
+    try {
+      const { anonName, avatar, ageBand, categoryId, consent } = req.body ?? {}
+      if (!anonName || !categoryId) return res.status(400).json({ error: "missing_fields" })
+      const user = await store.createUser({
+        anonName,
+        avatar: avatar ?? "🌱",
+        ageBand,
+        categoryId,
+        consent: consent ?? {},
+      })
+      res.json(user)
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Diagnostic inițial: întrebările (workbook §10)
+  app.get("/diagnostic", (req, res) => {
+    const categoryId = (req.query.category as string) || "teens12_18"
+    res.json({ categoryId, questions: store.diagnostic(categoryId) })
+  })
+
+  // Diagnostic inițial: setează baseline-ul radarului din răspunsuri
+  app.post("/me/diagnostic", async (req, res, next) => {
+    try {
+      const { categoryId, answers } = req.body ?? {}
+      const growth = await store.setBaseline(
+        userIdOf(req),
+        categoryId || "teens12_18",
+        (answers ?? {}) as Record<string, number>,
+      )
+      res.json({ growth })
     } catch (e) {
       next(e)
     }
