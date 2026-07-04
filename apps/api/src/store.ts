@@ -1,5 +1,6 @@
 import {
   CATEGORY_CONFIGS,
+  FAMILY_THEMES,
   PRAYER_LEVELS,
   applyAxisDeltas,
   applyReward,
@@ -10,6 +11,7 @@ import {
   defaultGrowth,
   emptyGam,
   getDiagnostic as sharedGetDiagnostic,
+  getFamilyTheme,
   graceMessage,
   isModuleCompletingReward,
   moderatePost,
@@ -23,6 +25,11 @@ import type {
   DashboardView,
   DiagnosticQuestion,
   FaithStage,
+  Family,
+  FamilyMember,
+  FamilyPrayer,
+  FamilyThemeOption,
+  FamilyView,
   GamState,
   GrowthScore,
   Lesson,
@@ -63,9 +70,13 @@ const memGrowth = new Map<string, GrowthScore[]>()
 const memDone = new Map<string, Set<string>>()
 const memPosts: CommunityPostView[] = []
 const memPrayers = new Map<string, PrayerRequest[]>()
+const memFamilies = new Map<string, Family>()
+const memFamilyPrayers = new Map<string, FamilyPrayer[]>()
 let memUserSeq = 0
 let memPostSeq = 0
 let memPrayerSeq = 0
+let memFamilySeq = 0
+let memFamilyPrayerSeq = 0
 
 // Dacă DATABASE_URL e setat (Supabase), citește din DB; altfel in-memory.
 const useDb = Boolean(process.env.DATABASE_URL)
@@ -291,6 +302,68 @@ async function markPrayerAnswered(
   return found
 }
 
+// --- Legământul familiei (docs/00-DIRECTIE §6) ---
+// Temă comună + zid de rugăciune al familiei. In-memory pentru MVP.
+
+function familyThemes(): FamilyThemeOption[] {
+  return FAMILY_THEMES
+}
+
+async function getFamily(userId: string): Promise<FamilyView> {
+  const family = memFamilies.get(userId) ?? null
+  const theme = family ? getFamilyTheme(family.themeId) ?? null : null
+  const prayers = memFamilyPrayers.get(userId) ?? []
+  return { family, theme, prayers }
+}
+
+async function createFamily(
+  userId: string,
+  input: { name: string; themeId: string; covenant: string; members: FamilyMember[] },
+): Promise<FamilyView> {
+  const existing = memFamilies.get(userId)
+  const family: Family = {
+    id: existing?.id ?? `mem-family-${++memFamilySeq}`,
+    name: input.name,
+    themeId: input.themeId,
+    covenant: input.covenant,
+    members: input.members,
+    createdAt: existing?.createdAt ?? new Date().toISOString(),
+  }
+  memFamilies.set(userId, family)
+  return getFamily(userId)
+}
+
+async function addFamilyPrayer(
+  userId: string,
+  author: string,
+  text: string,
+): Promise<FamilyPrayer> {
+  const prayer: FamilyPrayer = {
+    id: `mem-fprayer-${++memFamilyPrayerSeq}`,
+    author,
+    text,
+    createdAt: new Date().toISOString(),
+    answered: false,
+  }
+  const list = memFamilyPrayers.get(userId) ?? []
+  list.unshift(prayer)
+  memFamilyPrayers.set(userId, list)
+  return prayer
+}
+
+async function markFamilyPrayerAnswered(
+  userId: string,
+  id: string,
+): Promise<FamilyPrayer | undefined> {
+  const list = memFamilyPrayers.get(userId) ?? []
+  const found = list.find((p) => p.id === id)
+  if (!found) return undefined
+  found.answered = true
+  found.answeredAt = new Date().toISOString()
+  memFamilyPrayers.set(userId, list)
+  return found
+}
+
 async function createUser(input: {
   anonName: string
   avatar: string
@@ -361,6 +434,11 @@ export const store = {
   listEbenezer,
   addPrayerRequest,
   markPrayerAnswered,
+  familyThemes,
+  getFamily,
+  createFamily,
+  addFamilyPrayer,
+  markFamilyPrayerAnswered,
   createUser,
   setBaseline,
   createPost,

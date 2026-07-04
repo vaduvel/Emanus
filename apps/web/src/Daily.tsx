@@ -71,6 +71,9 @@ export function Daily() {
           <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
             Parcursul meu
           </button>
+          <button type="button" className="ghost" onClick={() => navigate("/family")}>
+            👪 Familie
+          </button>
           <button type="button" className="ghost" onClick={() => navigate("/ebenezer")}>
             🪨 Ebenezer
           </button>

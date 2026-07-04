@@ -3,6 +3,7 @@ import { Community } from "./Community"
 import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
 import { Ebenezer } from "./Ebenezer"
+import { Family } from "./Family"
 import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
 import { PrayerCoach } from "./PrayerCoach"
@@ -68,6 +69,14 @@ export default function App() {
     return (
       <main className="app">
         <Ebenezer />
+      </main>
+    )
+  }
+
+  if (route.name === "family") {
+    return (
+      <main className="app">
+        <Family />
       </main>
     )
   }

@@ -5,6 +5,10 @@ import type {
   DailyView,
   DashboardView,
   DiagnosticQuestion,
+  FamilyMember,
+  FamilyPrayer,
+  FamilyThemeOption,
+  FamilyView,
   GamState,
   GrowthScore,
   Lesson,
@@ -147,4 +151,29 @@ export function addPrayerRequest(text: string): Promise<PrayerRequest> {
 
 export function markPrayerAnswered(id: string, note?: string): Promise<PrayerRequest> {
   return postJson<PrayerRequest>(`/me/ebenezer/${id}/answered`, { note })
+}
+
+export function getFamilyThemes(): Promise<{ themes: FamilyThemeOption[] }> {
+  return getJson("/me/family/themes")
+}
+
+export function getFamily(): Promise<FamilyView> {
+  return getJson<FamilyView>("/me/family")
+}
+
+export function createFamily(input: {
+  name: string
+  themeId: string
+  covenant: string
+  members?: FamilyMember[]
+}): Promise<FamilyView> {
+  return postJson<FamilyView>("/me/family", input)
+}
+
+export function addFamilyPrayer(text: string, author: string): Promise<FamilyPrayer> {
+  return postJson<FamilyPrayer>("/me/family/prayers", { text, author })
+}
+
+export function markFamilyPrayerAnswered(id: string): Promise<FamilyPrayer> {
+  return postJson<FamilyPrayer>(`/me/family/prayers/${id}/answered`, {})
 }

@@ -178,6 +178,62 @@ export function registerRoutes(app: Express): void {
     }
   })
 
+  // Legământul familiei: teme sugerate (docs/00-DIRECTIE §6)
+  app.get("/me/family/themes", (_req, res) => {
+    res.json({ themes: store.familyThemes() })
+  })
+
+  // Legământul familiei: starea curentă (temă + legământ + zid)
+  app.get("/me/family", async (req, res, next) => {
+    try {
+      res.json(await store.getFamily(userIdOf(req)))
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Legământul familiei: creează sau actualizează
+  app.post("/me/family", async (req, res, next) => {
+    try {
+      const { name, themeId, covenant, members } = req.body ?? {}
+      if (!name || !themeId) return res.status(400).json({ error: "missing_fields" })
+      res.json(
+        await store.createFamily(userIdOf(req), {
+          name: String(name).trim(),
+          themeId: String(themeId),
+          covenant: typeof covenant === "string" ? covenant.trim() : "",
+          members: Array.isArray(members) ? members : [],
+        }),
+      )
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Legământul familiei: adaugă o rugăciune pe zidul familiei
+  app.post("/me/family/prayers", async (req, res, next) => {
+    try {
+      const text = typeof req.body?.text === "string" ? req.body.text.trim() : ""
+      const author = typeof req.body?.author === "string" ? req.body.author.trim() : ""
+      if (!text) return res.status(400).json({ error: "empty" })
+      if (text.length > 500) return res.status(400).json({ error: "too_long" })
+      res.json(await store.addFamilyPrayer(userIdOf(req), author || "Familie", text))
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Legământul familiei: marchează o rugăciune ca răspunsă
+  app.post("/me/family/prayers/:id/answered", async (req, res, next) => {
+    try {
+      const updated = await store.markFamilyPrayerAnswered(userIdOf(req), req.params.id)
+      if (!updated) return res.status(404).json({ error: "not_found" })
+      res.json(updated)
+    } catch (e) {
+      next(e)
+    }
+  })
+
   // Resurse de criză (workbook §15)
   app.get("/crisis", (_req, res) => {
     res.json({ resources: CRISIS_RESOURCES })
