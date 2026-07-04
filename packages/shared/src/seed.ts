@@ -47,6 +47,7 @@ export const teensM1C1: SeedBundle = {
         { id: "l1_s1", type: "check_in", order: 1, bubbles: [{ from: "guide", text: "Salut! Sunt Daniel. Cum ești azi, sincer?" }] },
         { id: "l1_s2", type: "hook", order: 2, bubbles: [{ from: "guide", text: "Ai șters vreodată o postare fiindcă n-a luat destule aprecieri?" }] },
         { id: "l1_s3", type: "choice", order: 3, choice: { prompt: "Tu?", options: [{ id: "a", label: "Da, mi s-a întâmplat" }, { id: "b", label: "Nu, dar înțeleg senzația" }, { id: "c", label: "Mie nici nu-mi pasă", branchStepId: "l1_branch_c" }] } },
+        { id: "l1_branch_c", type: "name_struggle", order: 3, bubbles: [{ from: "guide", text: "Respect că ești sincer. Dar hai un gând: dacă chiar nu ți-ar păsa deloc de aprecieri, te-ai mai gândi vreodată la ele? De multe ori spunem «nu-mi pasă» exact pentru că undeva doare. Și e ok. Hai să vedem ce zice Cel care ți-a dat valoarea." }] },
         { id: "l1_s4", type: "scripture", order: 4, scripture: { text: "Dumnezeu a făcut pe om după chipul Său.", ref: "Geneza 1:27" } },
         { id: "l1_s5", type: "quiz", order: 5, quiz: { question: "Care e adevărat?", options: [{ text: "Valoarea mea crește cu fiecare like", correct: false }, { text: "Valoarea mea vine de la Cel care m-a făcut", correct: true }], explanation: "Valoarea nu e un scor, e o amprentă." } },
         { id: "l1_s6", type: "step", order: 6, bubbles: [{ from: "guide", text: "Azi: nu verifica aprecierile 24 de ore. Observă ce simți." }] },

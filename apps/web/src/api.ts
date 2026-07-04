@@ -2,24 +2,43 @@ import type { Category, Lesson } from "@emanus/shared"
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api"
 
-export async function getFirstLesson(): Promise<Lesson> {
-  const res = await fetch(`${BASE}/public/first-lesson`)
-  if (!res.ok) throw new Error("Nu am putut încărca prima lecție.")
-  return res.json()
+async function getJson<T>(path: string): Promise<T> {
+  const res = await fetch(`${BASE}${path}`)
+  if (!res.ok) throw new Error(`Cerere eșuată (${res.status}): ${path}`)
+  return (await res.json()) as T
 }
 
-export async function getCategories(): Promise<Category[]> {
-  const res = await fetch(`${BASE}/categories`)
-  if (!res.ok) throw new Error("Nu am putut încărca categoriile.")
-  return res.json()
+export function getFirstLesson(): Promise<Lesson> {
+  return getJson<Lesson>("/public/first-lesson")
 }
 
-export async function completeLesson(id: string): Promise<{ reward: { xp: number } }> {
+export function getLesson(id: string): Promise<Lesson> {
+  return getJson<Lesson>(`/lessons/${id}`)
+}
+
+export function getCategories(): Promise<Category[]> {
+  return getJson<Category[]>("/categories")
+}
+
+export interface ProgressResult {
+  status: string
+  reward: {
+    xp: number
+    badgeId?: string
+    certificateId?: string
+    unlocksModuleId?: string
+  }
+}
+
+export async function submitProgress(
+  id: string,
+  choicesMade: Record<string, string> = {},
+): Promise<ProgressResult> {
   const res = await fetch(`${BASE}/lessons/${id}/progress`, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: "{}"
+    body: JSON.stringify({ choicesMade }),
   })
   if (!res.ok) throw new Error("Nu am putut salva progresul.")
-  return res.json()
+  return (await res.json()) as ProgressResult
 }

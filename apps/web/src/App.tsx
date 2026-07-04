@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react"
 import type { Lesson } from "@emanus/shared"
-import { completeLesson, getFirstLesson } from "./api"
+import { getFirstLesson, submitProgress } from "./api"
+import type { ProgressResult } from "./api"
 import { LessonPlayer } from "./LessonPlayer"
+import type { LessonResult } from "./LessonPlayer"
 
 export default function App() {
   const [lesson, setLesson] = useState<Lesson | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [reward, setReward] = useState<number | null>(null)
+  const [result, setResult] = useState<ProgressResult | null>(null)
+  const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
     getFirstLesson()
@@ -30,12 +33,31 @@ export default function App() {
     )
   }
 
-  if (reward !== null) {
+  if (result) {
     return (
       <main className="app">
-        <div className="card">
-          <h2>Bravo! ⭐ +{reward} XP</h2>
-          <p className="muted">Ai terminat prima lecție.</p>
+        <div className="card reward-card">
+          <div className="reward-card__icon">✨</div>
+          <h2>Bravo! +{result.reward.xp} XP</h2>
+          <p>
+            Ai terminat lecția <strong>„{lesson.title}”</strong>.
+          </p>
+          {result.reward.badgeId && (
+            <p className="muted">🎖️ Insignă: {result.reward.badgeId}</p>
+          )}
+          <blockquote className="scripture">
+            Verset de memorat
+            <cite>{lesson.memoryVerseRef}</cite>
+          </blockquote>
+          {result.reward.certificateId && (
+            <p className="muted">🏅 Certificat: {result.reward.certificateId}</p>
+          )}
+          {result.reward.unlocksModuleId && (
+            <p className="muted">🔓 Ai deblocat un modul nou!</p>
+          )}
+          <button type="button" onClick={() => window.location.reload()}>
+            Reia lecția
+          </button>
         </div>
       </main>
     )
@@ -45,9 +67,17 @@ export default function App() {
     <main className="app">
       <LessonPlayer
         lesson={lesson}
-        onComplete={async () => {
-          const res = await completeLesson(lesson.id)
-          setReward(res.reward.xp)
+        submitting={submitting}
+        onComplete={async (r: LessonResult) => {
+          setSubmitting(true)
+          try {
+            const res = await submitProgress(lesson.id, r.choicesMade)
+            setResult(res)
+          } catch (e: unknown) {
+            setError(e instanceof Error ? e.message : String(e))
+          } finally {
+            setSubmitting(false)
+          }
         }}
       />
     </main>
