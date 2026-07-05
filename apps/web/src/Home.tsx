@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import type { DailyView, DashboardView, GrowthAxisId } from "@emanus/shared"
 import { getDaily, getDashboard } from "./api"
 import { navigate } from "./router"
-import { CheckIn, GrowthRadar, Hero, JourneyPath, TabBar } from "./components"
+import { CheckIn, GrowthRadar, Hero, JourneyPath } from "./components"
 import type { NextLesson } from "./components"
 
 const AXIS_LABEL: Record<GrowthAxisId, string> = {
@@ -52,81 +52,75 @@ export function Home() {
   const strongest = byScore[byScore.length - 1]
 
   return (
-    <>
-      <section className="home">
-        <Hero gam={gam} next={nextLesson} onContinue={(id) => navigate(`/lesson/${id}`)} />
+    <section className="home">
+      <Hero gam={gam} next={nextLesson} onContinue={(id) => navigate(`/lesson/${id}`)} />
 
-        <CheckIn />
+      <CheckIn />
 
-        <section className="tile">
-          <h2 className="tile__title">
-            Creșterea ta
-            <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
-              Detalii
-            </button>
-          </h2>
-          <div className="growth-mini">
-            <GrowthRadar scores={growth} size={150} showLabels={false} />
-            <div className="growth-mini__side">
-              {strongest && weakest ? (
-                <p className="growth-mini__cap">
-                  Cel mai mult crești la <b>{AXIS_LABEL[strongest.axis]}</b>. Zona ta de sprijin
-                  acum: <b>{AXIS_LABEL[weakest.axis]}</b>.
-                </p>
-              ) : (
-                <p className="growth-mini__cap">
-                  Începe o lecție ca să-ți vezi radarul de creștere.
-                </p>
-              )}
-            </div>
-          </div>
-        </section>
-
-        <section className="tile">
-          <h2 className="tile__title">
-            Parcursul tău
-            <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
-              Tot parcursul
-            </button>
-          </h2>
-          <JourneyPath
-            modules={modules}
-            nextLessonId={next?.lessonId ?? null}
-            onSelect={(id) => navigate(`/lesson/${id}`)}
-          />
-        </section>
-
-        <section className="tile">
-          <h2 className="tile__title">Din comunitate</h2>
-          <div className="social-strip">
-            <div className="social-strip__avatars">
-              <span>🙂</span>
-              <span>🌿</span>
-              <span>🕊️</span>
-              <span>✨</span>
-            </div>
-            <span className="social-strip__text">Alți frați cresc alături de tine chiar acum.</span>
-          </div>
-          <button type="button" className="ghost" style={moreBtnStyle} onClick={() => navigate("/community")}>
-            Vezi comunitatea →
+      <section className="tile">
+        <h2 className="tile__title">
+          Creșterea ta
+          <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
+            Detalii
           </button>
-        </section>
-
-        {daily && (
-          <div
-            className="verse-strip"
-            role="button"
-            tabIndex={0}
-            style={verseStyle}
-            onClick={() => navigate("/daily")}
-          >
-            <span className="verse-strip__q">„{daily.ritual.verseText}”</span>
-            <span className="verse-strip__ref">{daily.ritual.verseRef} · Timp cu Dumnezeu →</span>
+        </h2>
+        <div className="growth-mini">
+          <GrowthRadar scores={growth} size={150} showLabels={false} />
+          <div className="growth-mini__side">
+            {strongest && weakest ? (
+              <p className="growth-mini__cap">
+                Cel mai mult crești la <b>{AXIS_LABEL[strongest.axis]}</b>. Zona ta de sprijin acum:{" "}
+                <b>{AXIS_LABEL[weakest.axis]}</b>.
+              </p>
+            ) : (
+              <p className="growth-mini__cap">Începe o lecție ca să-ți vezi radarul de creștere.</p>
+            )}
           </div>
-        )}
+        </div>
       </section>
 
-      <TabBar active="home" />
-    </>
+      <section className="tile">
+        <h2 className="tile__title">
+          Parcursul tău
+          <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
+            Tot parcursul
+          </button>
+        </h2>
+        <JourneyPath
+          modules={modules}
+          nextLessonId={next?.lessonId ?? null}
+          onSelect={(id) => navigate(`/lesson/${id}`)}
+        />
+      </section>
+
+      <section className="tile">
+        <h2 className="tile__title">Din comunitate</h2>
+        <div className="social-strip">
+          <div className="social-strip__avatars">
+            <span>🙂</span>
+            <span>🌿</span>
+            <span>🕊️</span>
+            <span>✨</span>
+          </div>
+          <span className="social-strip__text">Alți frați cresc alături de tine chiar acum.</span>
+        </div>
+        <button type="button" className="ghost" style={moreBtnStyle} onClick={() => navigate("/community")}>
+          Vezi comunitatea →
+        </button>
+      </section>
+
+      {daily && (
+        <div
+          className="verse-strip"
+          role="button"
+          tabIndex={0}
+          style={verseStyle}
+          onClick={() => navigate("/daily")}
+        >
+          <span className="verse-strip__q">„{daily.ritual.verseText}”</span>
+          <span className="verse-strip__ref">{daily.ritual.verseRef} · Timp cu Dumnezeu →</span>
+        </div>
+      )}
+    </section>
   )
 }

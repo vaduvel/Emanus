@@ -9,6 +9,7 @@ import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
 import { PrayerCoach } from "./PrayerCoach"
 import { Recommendation } from "./Recommendation"
+import { TabBar } from "./components"
 import { navigate, useHashRoute } from "./router"
 import { isOnboarded } from "./session"
 
@@ -50,81 +51,53 @@ export default function App() {
     )
   }
 
-  if (route.name === "recommendation") {
-    return (
-      <main className="app">
-        <Recommendation />
-      </main>
-    )
+  let screen: JSX.Element
+  let tab: string | null = null
+
+  switch (route.name) {
+    case "recommendation":
+      screen = <Recommendation />
+      break
+    case "prayer":
+      screen = <PrayerCoach />
+      tab = "prayer"
+      break
+    case "ebenezer":
+      screen = <Ebenezer />
+      break
+    case "family":
+      screen = <Family />
+      tab = "family"
+      break
+    case "lesson":
+      screen = <LessonView lessonId={route.id} />
+      break
+    case "community":
+      screen = <Community onBack={() => navigate("/")} />
+      tab = "community"
+      break
+    case "dashboard":
+      screen = <Dashboard onBack={() => navigate("/")} />
+      tab = "journey"
+      break
+    case "daily":
+      screen = <Daily />
+      break
+    default:
+      if (onboarded) {
+        screen = <Home />
+        tab = "home"
+      } else {
+        screen = <Landing />
+      }
   }
 
-  if (route.name === "prayer") {
-    return (
-      <main className="app">
-        <PrayerCoach />
-      </main>
-    )
-  }
+  const tabbed = tab !== null && tab !== "home"
 
-  if (route.name === "ebenezer") {
-    return (
-      <main className="app">
-        <Ebenezer />
-      </main>
-    )
-  }
-
-  if (route.name === "family") {
-    return (
-      <main className="app">
-        <Family />
-      </main>
-    )
-  }
-
-  if (route.name === "lesson") {
-    return (
-      <main className="app">
-        <LessonView lessonId={route.id} />
-      </main>
-    )
-  }
-
-  if (route.name === "community") {
-    return (
-      <main className="app">
-        <Community onBack={() => navigate("/")} />
-      </main>
-    )
-  }
-
-  if (route.name === "dashboard") {
-    return (
-      <main className="app">
-        <Dashboard onBack={() => navigate("/")} />
-      </main>
-    )
-  }
-
-  if (route.name === "daily") {
-    return (
-      <main className="app">
-        <Daily />
-      </main>
-    )
-  }
-
-  // home
-  if (onboarded) {
-    return (
-      <main className="app">
-        <Home />
-      </main>
-    )
-  }
   return (
-    <main className="app">
-      <Landing />
+    <main className={`app${tabbed ? " app--tabbed" : ""}`}>
+      {screen}
+      {tab && <TabBar active={tab} />}
     </main>
   )
 }
