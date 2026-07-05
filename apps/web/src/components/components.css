@@ -1,0 +1,211 @@
+/* Componente premium reskin (pasul 2). Folosesc doar tokenii din styles.css. */
+
+/* Container Acasa (launchpad) */
+.home {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 88px; /* loc pentru tab bar */
+}
+
+/* Card generic (tile) */
+.tile {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+}
+.tile__title {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Hero (header + Continua) --- */
+.hero { display: flex; flex-direction: column; gap: 14px; }
+.hero-head { display: flex; align-items: center; gap: 12px; }
+.hero-head__avatar {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+.hero-head__hi { flex: 1; min-width: 0; }
+.hero-head__hi b { display: block; font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.2; }
+.hero-head__hi span { color: var(--muted); font-size: 0.82rem; }
+
+.streak-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--gold-soft);
+  color: #7a5a12;
+  border-radius: var(--radius-pill);
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+[data-theme="dark"] .streak-pill { color: var(--gold); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .streak-pill { color: var(--gold); }
+}
+
+.level-ring { position: relative; width: 44px; height: 44px; flex: 0 0 auto; }
+.level-ring svg { transform: rotate(-90deg); }
+.level-ring__track { fill: none; stroke: var(--border); stroke-width: 4; }
+.level-ring__val { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 0.35s ease; }
+.level-ring__num { position: absolute; inset: 0; display: grid; place-items: center; font-size: 0.78rem; font-weight: 700; }
+
+/* Card Continua lectia (buton stilizat ca panel) */
+.continue-card {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  text-align: left;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.continue-card__thumb {
+  flex: 0 0 62px;
+  width: 62px;
+  height: 62px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.continue-card__body { flex: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.continue-card__kicker { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.continue-card__title { margin: 0; font-size: 1.05rem; font-family: var(--font-serif); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.continue-card__bar { height: 6px; background: var(--surface-2); border-radius: var(--radius-pill); overflow: hidden; }
+.continue-card__bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-bright)); border-radius: var(--radius-pill); }
+.continue-card__meta { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--muted); }
+.xp-chip { background: var(--accent-soft); color: var(--accent-strong); border-radius: var(--radius-pill); padding: 2px 8px; font-weight: 700; font-size: 0.72rem; }
+
+/* --- Check-in de stare (psihologie) --- */
+.checkin__moods { display: flex; gap: 8px; }
+.checkin__mood {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--surface-2);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: none;
+  padding: 10px 2px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.checkin__mood .emo { font-size: 1.4rem; line-height: 1; }
+.checkin__mood.picked { border-color: var(--accent); background: var(--accent-soft); color: var(--text); }
+
+/* --- Growth mini (radar langa text) --- */
+.growth-mini { display: flex; gap: 12px; align-items: center; }
+.growth-mini .radar { max-width: 148px; }
+.growth-mini__side { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.growth-mini__cap { color: var(--muted); font-size: 0.85rem; line-height: 1.4; }
+
+/* --- Journey path (traseu stil Duolingo) --- */
+.journey { display: flex; flex-direction: column; gap: 16px; }
+.journey__module.locked { opacity: 0.6; }
+.journey__module-title { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; margin-bottom: 10px; }
+.journey__module-title .muted { margin-left: auto; font-weight: 400; }
+.journey__track { display: flex; align-items: center; flex-wrap: wrap; row-gap: 10px; }
+.jconn { width: 16px; height: 3px; background: var(--border); border-radius: 2px; }
+.jconn--done { background: var(--gold); }
+.jnode__circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+  border: 2px solid var(--border);
+  background: var(--surface-2);
+  color: var(--muted);
+}
+.jnode--done .jnode__circle { background: var(--gold); border-color: var(--gold); color: #fff; }
+.jnode--current .jnode__circle { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.22); }
+.jnode--clickable { cursor: pointer; }
+
+/* --- Strip social --- */
+.social-strip { display: flex; align-items: center; gap: 10px; }
+.social-strip__avatars { display: flex; }
+.social-strip__avatars span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 2px solid var(--panel);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  margin-left: -8px;
+}
+.social-strip__avatars span:first-child { margin-left: 0; }
+.social-strip__text { font-size: 0.85rem; color: var(--muted); line-height: 1.4; }
+
+/* --- Strip verset (retrogradat) --- */
+.verse-strip { display: flex; flex-direction: column; gap: 2px; padding: 10px 14px; background: var(--surface-2); border-radius: var(--radius-sm); }
+.verse-strip__q { font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; line-height: 1.4; }
+.verse-strip__ref { color: var(--gold); font-size: 0.78rem; }
+
+/* --- Tab bar (5 tab-uri) --- */
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-around;
+  background: var(--panel);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 24px rgba(16, 51, 55, 0.06);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+}
+.tabbar__item {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  padding: 6px 0;
+  cursor: pointer;
+}
+.tabbar__item .ic { font-size: 1.25rem; line-height: 1; }
+.tabbar__item.active { color: var(--accent); }
