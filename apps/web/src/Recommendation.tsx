@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Sparkles } from "lucide-react"
 import type { RecommendationView } from "@emanus/shared"
 import { getRecommendation } from "./api"
 import { navigate } from "./router"
@@ -16,7 +17,9 @@ export function Recommendation() {
 
   return (
     <section className="recommend">
-      <div className="recommend__badge">✨ Parcursul tău</div>
+      <div className="recommend__badge">
+        <Sparkles size={15} strokeWidth={1.9} aria-hidden /> Parcursul tău
+      </div>
 
       {error && <p className="error">{error}</p>}
       {!rec && !error && <p className="muted">Îți pregătim parcursul…</p>}
@@ -43,10 +46,7 @@ export function Recommendation() {
 
           <div className="recommend__nav">
             {rec.course?.firstLessonId && (
-              <button
-                type="button"
-                onClick={() => navigate(`/lesson/${rec.course?.firstLessonId}`)}
-              >
+              <button type="button" onClick={() => navigate(`/lesson/${rec.course?.firstLessonId}`)}>
                 Începe primul pas
               </button>
             )}

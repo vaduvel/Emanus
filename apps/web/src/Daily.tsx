@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { BookOpen, Flame, HandHeart, HelpCircle, Landmark, Lightbulb, Users } from "lucide-react"
 import type { DailyView } from "@emanus/shared"
 import { getDaily } from "./api"
 import { navigate } from "./router"
@@ -27,24 +28,32 @@ export function Daily() {
           <p className="muted">{graceMessage}</p>
         </div>
         <span className="rhythm" title="Ritmul tău cu Dumnezeu">
-          🔥 {rhythmDays}
+          <Flame size={16} strokeWidth={2} aria-hidden /> {rhythmDays}
         </span>
       </header>
 
       <article className="daily__card">
-        <span className="daily__kicker">📖 Cuvântul de azi</span>
+        <span className="daily__kicker">
+          <BookOpen size={16} strokeWidth={1.8} aria-hidden /> Cuvântul de azi
+        </span>
         <blockquote className="daily__verse">“{ritual.verseText}”</blockquote>
         <cite className="daily__ref">{ritual.verseRef}</cite>
       </article>
 
       <article className="daily__card">
-        <span className="daily__kicker">💡 Pentru viața ta</span>
+        <span className="daily__kicker">
+          <Lightbulb size={16} strokeWidth={1.8} aria-hidden /> Pentru viața ta
+        </span>
         <p>{ritual.forYourLife}</p>
-        <p className="daily__q">❓ {ritual.reflectionQuestion}</p>
+        <p className="daily__q">
+          <HelpCircle size={15} strokeWidth={1.8} aria-hidden /> {ritual.reflectionQuestion}
+        </p>
       </article>
 
       <article className="daily__card">
-        <span className="daily__kicker">🙏 Roagă-te</span>
+        <span className="daily__kicker">
+          <HandHeart size={16} strokeWidth={1.8} aria-hidden /> Roagă-te
+        </span>
         {prayerOpen ? (
           <p className="daily__prayer">{ritual.prayer}</p>
         ) : (
@@ -52,30 +61,30 @@ export function Daily() {
             Deschide rugăciunea
           </button>
         )}
-        <button type="button" className="ghost" onClick={() => navigate("/prayer")}>
-          🙏 Învață să te rogi
+        <button type="button" className="ghost title-icon" onClick={() => navigate("/prayer")}>
+          <HandHeart size={16} strokeWidth={1.8} aria-hidden /> Învață să te rogi
         </button>
       </article>
 
       <div className="daily__nav">
         {nextLesson ? (
           <button type="button" onClick={() => navigate(`/lesson/${nextLesson.lessonId}`)}>
-            👉 Continuă lecția: {nextLesson.title}
+            Continuă lecția: {nextLesson.title}
           </button>
         ) : (
           <button type="button" onClick={() => navigate("/lesson/teens_m1_c1_l1")}>
-            👉 Începe o lecție
+            Începe o lecție
           </button>
         )}
         <div className="daily__links">
           <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
             Parcursul meu
           </button>
-          <button type="button" className="ghost" onClick={() => navigate("/family")}>
-            👪 Familie
+          <button type="button" className="ghost title-icon" onClick={() => navigate("/family")}>
+            <Users size={16} strokeWidth={1.8} aria-hidden /> Familie
           </button>
-          <button type="button" className="ghost" onClick={() => navigate("/ebenezer")}>
-            🪨 Ebenezer
+          <button type="button" className="ghost title-icon" onClick={() => navigate("/ebenezer")}>
+            <Landmark size={16} strokeWidth={1.8} aria-hidden /> Ebenezer
           </button>
           <button type="button" className="ghost" onClick={() => navigate("/community")}>
             Comunitate

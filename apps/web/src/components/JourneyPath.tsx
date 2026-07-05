@@ -1,4 +1,6 @@
 import { Fragment } from "react"
+import type { LucideIcon } from "lucide-react"
+import { Check, Feather, Flame, Footprints, Heart, Leaf, Lock, MessageCircle, Star } from "lucide-react"
 
 export interface JourneyModule {
   id: string
@@ -9,7 +11,7 @@ export interface JourneyModule {
   percent: number
 }
 
-const NODE_ICONS = ["💬", "❤️", "⭐", "🕊️", "🔥", "🌿"]
+const NODE_ICONS: LucideIcon[] = [MessageCircle, Heart, Star, Feather, Flame, Leaf]
 
 export function JourneyPath({
   modules,
@@ -28,7 +30,13 @@ export function JourneyPath({
         return (
           <div key={m.id} className={`journey__module${m.locked ? " locked" : ""}`}>
             <div className="journey__module-title">
-              <span>{m.locked ? "🔒" : "📿"}</span>
+              <span>
+                {m.locked ? (
+                  <Lock size={16} strokeWidth={1.9} aria-hidden />
+                ) : (
+                  <Footprints size={16} strokeWidth={1.9} aria-hidden />
+                )}
+              </span>
               {m.title}
               <span className="muted">
                 {m.lessonsCompleted}/{m.lessonsTotal}
@@ -43,6 +51,7 @@ export function JourneyPath({
                   currentPlaced = true
                 }
                 const clickable = state === "current" && !!nextLessonId
+                const NodeGlyph = NODE_ICONS[i % NODE_ICONS.length]
                 return (
                   <Fragment key={i}>
                     {i > 0 && (
@@ -54,7 +63,11 @@ export function JourneyPath({
                       onClick={clickable ? () => onSelect?.(nextLessonId as string) : undefined}
                     >
                       <span className="jnode__circle">
-                        {state === "done" ? "✓" : NODE_ICONS[i % NODE_ICONS.length]}
+                        {state === "done" ? (
+                          <Check size={16} strokeWidth={2.2} aria-hidden />
+                        ) : (
+                          <NodeGlyph size={16} strokeWidth={1.9} aria-hidden />
+                        )}
                       </span>
                     </div>
                   </Fragment>

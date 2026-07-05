@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import type { CSSProperties, ReactNode } from "react"
+import { Award, Flame, Lock } from "lucide-react"
 import { GROWTH_AXES } from "@emanus/shared"
 import type { DashboardView, GrowthAxisId, GrowthScore } from "@emanus/shared"
 import { getDashboard } from "./api"
@@ -40,7 +42,14 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
       <div className="stats">
         <Stat label="XP" value={gam.xp} />
         <Stat label="Nivel" value={gam.level} />
-        <Stat label="Streak" value={`${gam.streakDays}🔥`} />
+        <Stat
+          label="Streak"
+          value={
+            <span className="stat-streak">
+              <Flame size={16} strokeWidth={2} aria-hidden /> {gam.streakDays}
+            </span>
+          }
+        />
         <Stat label="Insigne" value={gam.badgeIds.length} />
       </div>
 
@@ -54,26 +63,30 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
 
       <div className="modules">
         <h2 className="section-title">Modulele mele</h2>
-        {modules.map((m) => (
-          <div key={m.id} className={`mod${m.locked ? " locked" : ""}`}>
-            <div className="mod__top">
-              <span>
-                {m.locked ? "🔒 " : ""}
-                {m.title}
-              </span>
-              <span className="muted">
-                {m.lessonsCompleted}/{m.lessonsTotal}
-              </span>
+        {modules.map((m) => {
+          const modBarStyle: CSSProperties = { width: `${m.percent}%` }
+          return (
+            <div key={m.id} className={`mod${m.locked ? " locked" : ""}`}>
+              <div className="mod__top">
+                <span className="mod__title">
+                  {m.locked ? <Lock size={14} strokeWidth={1.9} aria-hidden /> : null} {m.title}
+                </span>
+                <span className="muted">
+                  {m.lessonsCompleted}/{m.lessonsTotal}
+                </span>
+              </div>
+              <div className="mod__bar">
+                <span style={modBarStyle} />
+              </div>
             </div>
-            <div className="mod__bar">
-              <span style={{ width: `${m.percent}%` }} />
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
 
       {gam.certificateIds.length > 0 && (
-        <p className="muted">🏅 Certificate: {gam.certificateIds.join(", ")}</p>
+        <p className="muted">
+          <Award size={16} strokeWidth={1.9} aria-hidden /> Certificate: {gam.certificateIds.join(", ")}
+        </p>
       )}
 
       <div className="dash-nav">
@@ -90,7 +103,7 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
   )
 }
 
-function Stat({ label, value }: { label: string; value: number | string }) {
+function Stat({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="stat">
       <b>{value}</b>

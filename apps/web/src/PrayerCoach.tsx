@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { HandHeart, Landmark } from "lucide-react"
 import type { PrayerLevel } from "@emanus/shared"
 import { suggestedPrayerLevel } from "@emanus/shared"
 import { addPrayerRequest, getPrayerLevels } from "./api"
@@ -43,7 +44,9 @@ export function PrayerCoach() {
     <section className="prayer">
       <header className="prayer__head">
         <div>
-          <h1>🙏 Învață să te rogi</h1>
+          <h1 className="title-icon">
+            <HandHeart size={22} strokeWidth={1.8} aria-hidden /> Învață să te rogi
+          </h1>
           <p className="muted">Te învață pas cu pas, apoi te lasă liber.</p>
         </div>
         <button type="button" className="ghost" onClick={() => navigate("/daily")}>
@@ -82,19 +85,15 @@ export function PrayerCoach() {
             ))}
           </div>
         ) : (
-          <textarea
-            className="text-input"
-            rows={6}
-            placeholder="Spune-I tot ce e pe inima ta…"
-          />
+          <textarea className="text-input" rows={6} placeholder="Spune-I tot ce e pe inima ta…" />
         )}
       </article>
 
       <article className="prayer__ebenezer">
-        <span className="daily__kicker">🪨 Ai o cerere anume?</span>
-        <p className="muted">
-          Pune-o pe Zidul Ebenezer și marcheaz-o când Dumnezeu răspunde.
-        </p>
+        <span className="daily__kicker">
+          <Landmark size={16} strokeWidth={1.8} aria-hidden /> Ai o cerere anume?
+        </span>
+        <p className="muted">Pune-o pe Zidul Ebenezer și marcheaz-o când Dumnezeu răspunde.</p>
         <textarea
           className="text-input"
           rows={2}
@@ -102,7 +101,7 @@ export function PrayerCoach() {
           onChange={(e) => setRequest(e.target.value)}
           placeholder="Doamne, mă rog pentru…"
         />
-        {saved && <p className="notice">Adăugată pe Zidul Ebenezer. 🙏</p>}
+        {saved && <p className="notice">Adăugată pe Zidul Ebenezer.</p>}
         <div className="prayer__actions">
           <button type="button" onClick={saveRequest} disabled={saving || !request.trim()}>
             Adaugă pe Zid
