@@ -8,7 +8,7 @@ export interface TabItem {
 }
 
 export const EMANUS_TABS: TabItem[] = [
-  { key: "home", label: "Acasă", icon: "🏠", route: "/daily" },
+  { key: "home", label: "Acasă", icon: "🏠", route: "/" },
   { key: "journey", label: "Parcurs", icon: "📿", route: "/dashboard" },
   { key: "prayer", label: "Rugăc.", icon: "🙏", route: "/prayer" },
   { key: "community", label: "Comun.", icon: "👥", route: "/community" },

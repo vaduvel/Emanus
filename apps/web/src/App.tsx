@@ -4,6 +4,7 @@ import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
 import { Ebenezer } from "./Ebenezer"
 import { Family } from "./Family"
+import { Home } from "./Home"
 import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
 import { PrayerCoach } from "./PrayerCoach"
@@ -92,7 +93,7 @@ export default function App() {
   if (route.name === "community") {
     return (
       <main className="app">
-        <Community onBack={() => navigate(onboarded ? "/daily" : "/")} />
+        <Community onBack={() => navigate("/")} />
       </main>
     )
   }
@@ -100,7 +101,7 @@ export default function App() {
   if (route.name === "dashboard") {
     return (
       <main className="app">
-        <Dashboard onBack={() => navigate("/daily")} />
+        <Dashboard onBack={() => navigate("/")} />
       </main>
     )
   }
@@ -117,7 +118,7 @@ export default function App() {
   if (onboarded) {
     return (
       <main className="app">
-        <Daily />
+        <Home />
       </main>
     )
   }
