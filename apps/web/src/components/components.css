@@ -1,4 +1,4 @@
-/* Componente premium reskin (pasul 2). Folosesc doar tokenii din styles.css. */
+/* Componente premium reskin. Consumă doar tokeni (bridge in styles.css -> ds/tokens.css). */
 
 /* Container Acasa (launchpad) */
 .home {
@@ -57,16 +57,12 @@
   align-items: center;
   gap: 4px;
   background: var(--gold-soft);
-  color: #7a5a12;
+  color: var(--gold);
   border-radius: var(--radius-pill);
   padding: 6px 10px;
   font-weight: 700;
   font-size: 0.85rem;
   white-space: nowrap;
-}
-[data-theme="dark"] .streak-pill { color: var(--gold); }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .streak-pill { color: var(--gold); }
 }
 
 .level-ring { position: relative; width: 44px; height: 44px; flex: 0 0 auto; }
@@ -188,12 +184,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 20;
+  z-index: var(--z-tabbar);
   display: flex;
   justify-content: space-around;
   background: var(--panel);
   border-top: 1px solid var(--border);
-  box-shadow: 0 -6px 24px rgba(16, 51, 55, 0.06);
+  box-shadow: 0 -4px 16px color-mix(in srgb, var(--text) 8%, transparent);
   padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
 }
 .tabbar__item {

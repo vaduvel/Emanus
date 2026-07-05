@@ -4,6 +4,7 @@
  * Emanus Design System — tokens
  * Theme: "Marea de cristal" (light default + dark)
  * Everything downstream should consume the SEMANTIC vars, not the raw palette.
+ * This file is the single source of truth for color, type, spacing, elevation.
  */
 
 :root {
@@ -166,6 +167,43 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.42);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Auto-dark by OS preference unless the user explicitly chose light. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #08191c;
+    --surface: #0f2b30;
+    --surface-2: #133238;
+    --surface-3: #17414a;
+    --elevated: #143840;
+    --border: #1e4952;
+    --border-strong: #2a5c66;
+    --text: #eaf6f5;
+    --text-muted: #9fc0c1;
+    --text-subtle: #6f9295;
+    --text-on-accent: #04171a;
+    --accent: #2ea0af;
+    --accent-hover: #4bb4c1;
+    --accent-press: #66c3ce;
+    --accent-soft: #123840;
+    --accent-bright: #4bb4c1;
+    --gold: #d3a94e;
+    --gold-soft: #2c2617;
+    --success: #3cc7a3;
+    --success-soft: #10322c;
+    --danger: #e88a76;
+    --danger-soft: #35211c;
+    --focus-ring: color-mix(in srgb, var(--accent) 55%, transparent);
+    --grad-ph: radial-gradient(120% 120% at 15% 15%, #2ea0af 0%, rgba(46,160,175,0) 45%),
+               radial-gradient(120% 120% at 85% 20%, #c1902f 0%, rgba(193,144,47,0) 40%),
+               radial-gradient(140% 140% at 80% 90%, #0f2b30 0%, rgba(15,43,48,0) 55%),
+               linear-gradient(160deg, #17414a, #0f2b30);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.42);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

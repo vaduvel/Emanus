@@ -1,106 +1,35 @@
+/*
+ * Emanus — global base + legacy token bridge.
+ *
+ * The single source of truth for design tokens is ds/tokens.css.
+ * Historically the app used a separate token vocabulary (--panel, --muted,
+ * --radius, --font-serif, --ok/--bad, --shadow-card...). Rather than rewrite
+ * every rule, we alias those legacy names to DS tokens here, so the whole app
+ * renders from one system and shares the DS dark theme. Prefer DS tokens
+ * (--surface, --text-muted, --radius-lg, --shadow-md, --success...) in new CSS.
+ */
+
 :root {
-  color-scheme: light;
+  /* Legacy aliases -> DS tokens (light + dark follow automatically) */
+  --bg-grad-1: var(--bg);
+  --bg-grad-2: var(--surface);
+  --panel: var(--surface);
+  --muted: var(--text-muted);
+  --accent-strong: var(--accent-hover);
+  --on-accent: var(--text-on-accent);
+  --ok: var(--success);
+  --bad: var(--danger);
+  --font-serif: var(--font-display);
+  --radius: var(--radius-lg);
+  --shadow-card: var(--shadow-md);
+  --shadow-pop: var(--shadow-lg);
 
-  /* === Paleta: Marea de cristal (light) - Ap. 4:6 & 15:2 === */
-  --bg: #eaf3f3;
-  --bg-grad-1: #eef6f5;
-  --bg-grad-2: #f8fcfb;
-  --panel: #ffffff;
-  --surface-2: #eef6f5;      /* insertii / campuri */
-  --accent-soft: #dcefef;    /* stare selectata */
-  --border: #d3e6e4;
-  --text: #0f2b30;           /* cerneala teal-inchis */
-  --muted: #5d7d80;
-
-  /* accente */
-  --accent: #1d7f8f;         /* teal principal */
-  --accent-strong: #17707e;
-  --accent-bright: #2ea0af;
-  --gold: #c1902f;           /* aur antic */
-  --gold-soft: #f3e6c4;
-  --on-accent: #ffffff;      /* text peste accent */
-  --ok: #2fae8f;
-  --bad: #e0674f;
-
-  /* rgb pentru rgba() */
+  /* rgb triples for legacy rgba() overlays (radar, quiz, crisis, notice) */
   --accent-rgb: 29, 127, 143;
   --gold-rgb: 193, 144, 47;
   --ok-rgb: 47, 174, 143;
   --bad-rgb: 224, 103, 79;
   --muted-rgb: 93, 125, 128;
-
-  /* tipografie */
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Fraunces', 'Spectral', Georgia, 'Times New Roman', serif;
-
-  /* geometrie + elevatie */
-  --radius: 20px;
-  --radius-sm: 12px;
-  --radius-pill: 999px;
-  --shadow-card: 0 10px 34px rgba(16, 51, 55, 0.08);
-  --shadow-sm: 0 2px 10px rgba(16, 51, 55, 0.06);
-  --shadow-pop: 0 16px 44px rgba(16, 51, 55, 0.14);
-}
-
-/* === Tema intunecata: Tron de safir (Ezechiel 1:26 / Ap. 4:3) === */
-[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #081633;
-  --bg-grad-1: #081633;
-  --bg-grad-2: #0c2150;
-  --panel: #12224a;
-  --surface-2: #0d1c40;
-  --accent-soft: #173063;
-  --border: #24356b;
-  --text: #e7edf7;
-  --muted: #93a4c8;
-  --accent: #2ea0af;
-  --accent-strong: #238ea0;
-  --accent-bright: #57c7d6;
-  --gold: #e9c56a;
-  --gold-soft: #2a2712;
-  --on-accent: #04222f;
-  --ok: #5ed1a6;
-  --bad: #f2896f;
-  --accent-rgb: 46, 160, 175;
-  --gold-rgb: 233, 197, 106;
-  --ok-rgb: 94, 209, 166;
-  --bad-rgb: 242, 137, 111;
-  --muted-rgb: 147, 164, 200;
-  --shadow-card: 0 10px 34px rgba(0, 0, 0, 0.38);
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
-  --shadow-pop: 0 16px 44px rgba(0, 0, 0, 0.5);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #081633;
-    --bg-grad-1: #081633;
-    --bg-grad-2: #0c2150;
-    --panel: #12224a;
-    --surface-2: #0d1c40;
-    --accent-soft: #173063;
-    --border: #24356b;
-    --text: #e7edf7;
-    --muted: #93a4c8;
-    --accent: #2ea0af;
-    --accent-strong: #238ea0;
-    --accent-bright: #57c7d6;
-    --gold: #e9c56a;
-    --gold-soft: #2a2712;
-    --on-accent: #04222f;
-    --ok: #5ed1a6;
-    --bad: #f2896f;
-    --accent-rgb: 46, 160, 175;
-    --gold-rgb: 233, 197, 106;
-    --ok-rgb: 94, 209, 166;
-    --bad-rgb: 242, 137, 111;
-    --muted-rgb: 147, 164, 200;
-    --shadow-card: 0 10px 34px rgba(0, 0, 0, 0.38);
-    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
-    --shadow-pop: 0 16px 44px rgba(0, 0, 0, 0.5);
-  }
 }
 
 * { box-sizing: border-box; }
@@ -145,6 +74,7 @@ body {
 
 .muted { color: var(--muted); font-size: 0.85rem; }
 .error { color: var(--bad); }
+.title-icon { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; }
 .prompt { font-weight: 600; margin: 0 0 10px; }
 .section-title { font-size: 0.95rem; margin: 0 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
 
@@ -391,7 +321,6 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(var(--bad-rgb), 
 .chip.picked { border-color: var(--accent); background: var(--accent-soft); }
 .chip__emoji { font-size: 1.1rem; }
 
-/* Ecranul Ușii: „Unde ești cu Dumnezeu acum?” (docs/00-DIRECTIE §13) */
 .faith-list { display: flex; flex-direction: column; gap: 10px; }
 .faith-opt {
   background: var(--surface-2);
@@ -678,7 +607,7 @@ button.ghost.wrong { border-color: var(--bad); background: rgba(var(--bad-rgb), 
 .eb-item.answered { border-left: 3px solid var(--ok); }
 .eb-item.answered .eb-item__body p { color: var(--muted); }
 
-/* --- Legământul familiei (Ecran 👪 Familie, §6) --- */
+/* --- Legământul familiei (Ecran Familie, §6) --- */
 .family {
   width: 100%;
   max-width: 480px;
