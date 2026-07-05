@@ -4,6 +4,7 @@ import { getDaily, getDashboard } from "./api"
 import { navigate } from "./router"
 import { CheckIn, GrowthRadar, Hero, JourneyPath } from "./components"
 import type { NextLesson } from "./components"
+import { Avatar } from "./ds"
 
 const AXIS_LABEL: Record<GrowthAxisId, string> = {
   identity: "Identitate",
@@ -97,10 +98,10 @@ export function Home() {
         <h2 className="tile__title">Din comunitate</h2>
         <div className="social-strip">
           <div className="social-strip__avatars">
-            <span>🙂</span>
-            <span>🌿</span>
-            <span>🕊️</span>
-            <span>✨</span>
+            <Avatar name="Andrei M" size="sm" />
+            <Avatar name="Maria I" size="sm" />
+            <Avatar name="David P" size="sm" />
+            <Avatar name="Ioana R" size="sm" />
           </div>
           <span className="social-strip__text">Alți frați cresc alături de tine chiar acum.</span>
         </div>

@@ -1,20 +1,47 @@
 import { useEffect, useState } from "react"
+import type { LucideIcon } from "lucide-react"
+import {
+  Baby,
+  BookOpen,
+  Crown,
+  Feather,
+  Flame,
+  Flower2,
+  Headphones,
+  Home,
+  Leaf,
+  Mountain,
+  Palette,
+  Sprout,
+  Star,
+  Swords,
+} from "lucide-react"
 import type { DiagnosticQuestion, FaithStage } from "@emanus/shared"
 import { FAITH_STAGES } from "@emanus/shared"
 import { createUser, getDiagnostic, submitDiagnostic } from "./api"
 import { setCategory, setFaithStage, setOnboarded, setUserId } from "./session"
 
-const CATEGORIES = [
-  { id: "kids0_5", label: "Copii 0–5", emoji: "🧸" },
-  { id: "kids6_11", label: "Copii 6–11", emoji: "🎨" },
-  { id: "teens12_18", label: "Adolescenți 12–18", emoji: "🔥" },
-  { id: "women", label: "Femei", emoji: "🌸" },
-  { id: "men", label: "Bărbați", emoji: "⚔️" },
-  { id: "parents", label: "Părinți", emoji: "🏡" },
-  { id: "grandparents", label: "Bunici", emoji: "🌿" },
+const CATEGORIES: { id: string; label: string; icon: LucideIcon }[] = [
+  { id: "kids0_5", label: "Copii 0–5", icon: Baby },
+  { id: "kids6_11", label: "Copii 6–11", icon: Palette },
+  { id: "teens12_18", label: "Adolescenți 12–18", icon: Flame },
+  { id: "women", label: "Femei", icon: Flower2 },
+  { id: "men", label: "Bărbați", icon: Swords },
+  { id: "parents", label: "Părinți", icon: Home },
+  { id: "grandparents", label: "Bunici", icon: Leaf },
 ]
 
-const AVATARS = ["🌱", "🕊️", "🦁", "🌟", "🔥", "🎧", "📖", "🏔️"]
+const AVATARS: { key: string; icon: LucideIcon }[] = [
+  { key: "sprout", icon: Sprout },
+  { key: "feather", icon: Feather },
+  { key: "crown", icon: Crown },
+  { key: "star", icon: Star },
+  { key: "flame", icon: Flame },
+  { key: "headphones", icon: Headphones },
+  { key: "book", icon: BookOpen },
+  { key: "mountain", icon: Mountain },
+]
+
 const LIKERT = [1, 2, 3, 4, 5]
 
 export function Onboarding({ onDone }: { onDone: () => void }) {
@@ -22,7 +49,7 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
   const [categoryId, setCategoryId] = useState("teens12_18")
   const [faith, setFaith] = useState<FaithStage>("seeking")
   const [anonName, setAnonName] = useState("")
-  const [avatar, setAvatar] = useState("🌱")
+  const [avatar, setAvatar] = useState("sprout")
   const [consent, setConsent] = useState(false)
   const [questions, setQuestions] = useState<DiagnosticQuestion[]>([])
   const [answers, setAnswers] = useState<Record<string, number>>({})
@@ -73,20 +100,25 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
 
       {step === 0 && (
         <div className="onboarding__step">
-          <h1>Bine ai venit 👋</h1>
+          <h1>Bine ai venit</h1>
           <p className="muted">Pentru cine este călătoria aceasta?</p>
           <div className="chips">
-            {CATEGORIES.map((c) => (
-              <button
-                key={c.id}
-                type="button"
-                className={`chip${categoryId === c.id ? " picked" : ""}`}
-                onClick={() => setCategoryId(c.id)}
-              >
-                <span className="chip__emoji">{c.emoji}</span>
-                {c.label}
-              </button>
-            ))}
+            {CATEGORIES.map((c) => {
+              const Glyph = c.icon
+              return (
+                <button
+                  key={c.id}
+                  type="button"
+                  className={`chip${categoryId === c.id ? " picked" : ""}`}
+                  onClick={() => setCategoryId(c.id)}
+                >
+                  <span className="chip__emoji">
+                    <Glyph size={18} strokeWidth={1.8} aria-hidden />
+                  </span>
+                  {c.label}
+                </button>
+              )
+            })}
           </div>
           <button type="button" onClick={() => setStep(1)}>
             Continuă
@@ -108,7 +140,6 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
                 className={`faith-opt${faith === s.id ? " picked" : ""}`}
                 onClick={() => setFaith(s.id)}
               >
-                <span className="faith-opt__emoji">{s.emoji}</span>
                 <span>
                   <span className="faith-opt__label">{s.label}</span>
                   <span className="faith-opt__blurb">{s.blurb}</span>
@@ -139,16 +170,20 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
             maxLength={24}
           />
           <div className="avatars">
-            {AVATARS.map((a) => (
-              <button
-                key={a}
-                type="button"
-                className={`avatar${avatar === a ? " picked" : ""}`}
-                onClick={() => setAvatar(a)}
-              >
-                {a}
-              </button>
-            ))}
+            {AVATARS.map((a) => {
+              const Glyph = a.icon
+              return (
+                <button
+                  key={a.key}
+                  type="button"
+                  className={`avatar${avatar === a.key ? " picked" : ""}`}
+                  onClick={() => setAvatar(a.key)}
+                  aria-label={a.key}
+                >
+                  <Glyph size={22} strokeWidth={1.8} aria-hidden />
+                </button>
+              )
+            })}
           </div>
           <div className="onboarding__nav">
             <button type="button" className="ghost" onClick={() => setStep(1)}>
@@ -163,7 +198,7 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
 
       {step === 3 && (
         <div className="onboarding__step">
-          <h1>Un spațiu sigur 🔒</h1>
+          <h1>Un spațiu sigur</h1>
           <p className="muted">
             Jurnalul tău e privat. Nu afișăm reclame și nu urmărim minorii. Poți pleca oricând.
           </p>

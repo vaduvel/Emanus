@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Feather } from "lucide-react"
 import { Community } from "./Community"
 import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
@@ -10,6 +11,7 @@ import { Onboarding } from "./Onboarding"
 import { PrayerCoach } from "./PrayerCoach"
 import { Recommendation } from "./Recommendation"
 import { TabBar } from "./components"
+import { Button } from "./ds"
 import { Gallery } from "./ds/Gallery"
 import { navigate, useHashRoute } from "./router"
 import { isOnboarded } from "./session"
@@ -17,19 +19,19 @@ import { isOnboarded } from "./session"
 function Landing() {
   return (
     <section className="landing">
-      <div className="landing__icon">🕊️</div>
+      <div className="landing__icon">
+        <Feather size={40} strokeWidth={1.6} aria-hidden />
+      </div>
       <h1>Emanus</h1>
       <p className="landing__tag">Dumnezeu cu tine, pas cu pas.</p>
-      <p className="muted">
-        Lecții scurte, ca o conversație. Descoperă cine ești, cu adevărat.
-      </p>
+      <p className="muted">Lеcții scurte, ca o conversație. Descoperă cine ești, cu adevărat.</p>
       <div className="landing__actions">
-        <button type="button" onClick={() => navigate("/lesson/teens_m1_c1_l1")}>
+        <Button variant="primary" block onClick={() => navigate("/lesson/teens_m1_c1_l1")}>
           Încearcă prima lecție
-        </button>
-        <button type="button" className="ghost" onClick={() => navigate("/onboarding")}>
+        </Button>
+        <Button variant="secondary" block onClick={() => navigate("/onboarding")}>
           Începe călătoria mea
-        </button>
+        </Button>
       </div>
     </section>
   )

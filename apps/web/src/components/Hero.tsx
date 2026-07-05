@@ -1,5 +1,7 @@
 import { XP_PER_LESSON, XP_PER_LEVEL } from "@emanus/shared"
 import type { GamState } from "@emanus/shared"
+import type { CSSProperties } from "react"
+import { BookOpen, Feather, Flame } from "lucide-react"
 
 export interface NextLesson {
   lessonId: string
@@ -37,31 +39,38 @@ export function Hero({
   const hi = greeting ?? timeGreeting()
   const xpInto = gam.xp % XP_PER_LEVEL
   const pct = Math.round((xpInto / XP_PER_LEVEL) * 100)
+  const barStyle: CSSProperties | undefined = next ? { width: `${lessonPct(next)}%` } : undefined
 
   return (
     <div className="hero">
       <div className="hero-head">
-        <div className="hero-head__avatar">🕊️</div>
+        <div className="hero-head__avatar">
+          <Feather size={22} strokeWidth={1.8} aria-hidden />
+        </div>
         <div className="hero-head__hi">
           <b>
             {hi}, {userName}
           </b>
           <span>Bine ai revenit la parcursul tău</span>
         </div>
-        <span className="streak-pill">🔥 {gam.streakDays}</span>
+        <span className="streak-pill">
+          <Flame size={15} strokeWidth={2} aria-hidden /> {gam.streakDays}
+        </span>
         <LevelRing level={gam.level} pct={pct} />
       </div>
 
       {next && (
         <button type="button" className="continue-card" onClick={() => onContinue?.(next.lessonId)}>
-          <span className="continue-card__thumb">📖</span>
+          <span className="continue-card__thumb">
+            <BookOpen size={22} strokeWidth={1.8} aria-hidden />
+          </span>
           <span className="continue-card__body">
             <span className="continue-card__kicker">Continuă lecția</span>
             <span className="continue-card__title">{next.title}</span>
             {typeof next.lessonsTotal === "number" && next.lessonsTotal > 0 && (
               <>
                 <span className="continue-card__bar">
-                  <span style={{ width: `${lessonPct(next)}%` }} />
+                  <span style={barStyle} />
                 </span>
                 <span className="continue-card__meta">
                   Lecția {(next.lessonsCompleted ?? 0) + 1} din {next.lessonsTotal}
