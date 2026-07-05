@@ -1,4 +1,23 @@
 import { useEffect, useMemo, useRef, useState } from "react"
+import type { CSSProperties } from "react"
+import type { LucideIcon } from "lucide-react"
+import {
+  BookOpen,
+  Brain,
+  Flame,
+  Footprints,
+  Frown,
+  HandHeart,
+  HeartCrack,
+  Laugh,
+  Lightbulb,
+  Meh,
+  MessageCircle,
+  MessageSquare,
+  NotebookPen,
+  PartyPopper,
+  Smile,
+} from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
 
 export interface LessonResult {
@@ -9,30 +28,27 @@ export interface LessonResult {
 const GUIDE_NAME = "Daniel"
 
 /** Icon pe tip de beat (workbook §1): conversație cu bule tipizate. */
-function stepIcon(type: LessonStep["type"]): string {
+function stepIcon(type: LessonStep["type"]): LucideIcon {
   switch (type) {
     case "scripture":
-      return "📖"
+      return BookOpen
     case "memory_verse":
-      return "🧠"
+      return Brain
     case "prayer":
-      return "🙏"
+      return HandHeart
     case "step":
-      return "👣"
+      return Footprints
     case "journal":
-      return "📓"
+      return NotebookPen
     case "reward":
-      return "🔥"
+      return Flame
     default:
-      return "💬"
+      return MessageCircle
   }
 }
 
 /**
  * Player de lecție conversațional (workbook §1 + §6).
- * Redă cele 12 beat-uri ca o CONVERSAȚIE: fiecare bulă apare pe rând și
- * rămâne pe ecran (istoric), exact ca modelul chat din docs/01. `choice`
- * poate declanșa un branch (un gând în plus), apoi revine pe firul principal.
  */
 export function LessonPlayer({
   lesson,
@@ -84,7 +100,6 @@ export function LessonPlayer({
   }
 
   function advance() {
-    // dacă tocmai am afișat un branch, revenim pe firul principal
     toNextMain()
   }
 
@@ -110,11 +125,10 @@ export function LessonPlayer({
 
   const total = Math.max(1, mainSteps.length)
   const stepNo = Math.min(mainIdx + 1, total)
-  const quizAnswered =
-    current.type !== "quiz" || quizAnswers[current.id] !== undefined
+  const progressStyle: CSSProperties = { width: `${(stepNo / total) * 100}%` }
+  const quizAnswered = current.type !== "quiz" || quizAnswers[current.id] !== undefined
   const showContinue = current.type !== "choice" && quizAnswered
-  const continueLabel =
-    atLastMain && !inBranch ? "Termină lecția" : "Continuă"
+  const continueLabel = atLastMain && !inBranch ? "Termină lecția" : "Continuă"
 
   return (
     <section className="player">
@@ -124,7 +138,7 @@ export function LessonPlayer({
           {lesson.memoryVerseRef} · ~{lesson.estMinutes} min
         </p>
         <div className="progress" aria-hidden="true">
-          <span style={{ width: `${(stepNo / total) * 100}%` }} />
+          <span style={progressStyle} />
         </div>
       </header>
 
@@ -139,9 +153,7 @@ export function LessonPlayer({
             quizAnswerIdx={quizAnswers[s.id]}
             journal={journal}
             onJournal={setJournal}
-            onQuiz={(idx) =>
-              setQuizAnswers((q) => ({ ...q, [s.id]: idx }))
-            }
+            onQuiz={(idx) => setQuizAnswers((q) => ({ ...q, [s.id]: idx }))}
             onPick={(opt) => pickChoice(s, opt)}
           />
         ))}
@@ -161,10 +173,12 @@ export function LessonPlayer({
   )
 }
 
-function GuideMsg({ icon, text }: { icon: string; text: string }) {
+function GuideMsg({ icon: Glyph, text }: { icon: LucideIcon; text: string }) {
   return (
     <div className="msg msg--guide">
-      <div className="msg__avatar">{icon}</div>
+      <div className="msg__avatar">
+        <Glyph size={18} strokeWidth={1.8} aria-hidden />
+      </div>
       <div className="msg__body">
         <span className="msg__name">{GUIDE_NAME}</span>
         <div className="bubble">{text}</div>
@@ -200,12 +214,14 @@ function Turn({
       return (
         <div className="msg msg--guide">
           <div className="msg__avatar">
-            {step.type === "memory_verse" ? "🧠" : "📖"}
+            {step.type === "memory_verse" ? (
+              <Brain size={18} strokeWidth={1.8} aria-hidden />
+            ) : (
+              <BookOpen size={18} strokeWidth={1.8} aria-hidden />
+            )}
           </div>
           <blockquote className="scripture">
-            {step.scripture
-              ? `„${step.scripture.text}”`
-              : `„${lesson.memoryVerseRef}”`}
+            {step.scripture ? `„${step.scripture.text}”` : `„${lesson.memoryVerseRef}”`}
             <cite>{step.scripture?.ref ?? lesson.memoryVerseRef}</cite>
           </blockquote>
         </div>
@@ -214,7 +230,9 @@ function Turn({
     case "prayer":
       return (
         <div className="msg msg--guide">
-          <div className="msg__avatar">🙏</div>
+          <div className="msg__avatar">
+            <HandHeart size={18} strokeWidth={1.8} aria-hidden />
+          </div>
           <div className="bubble">
             {(step.bubbles ?? []).map((b) => b.text).join(" ") || "Rugăciune"}
           </div>
@@ -225,7 +243,7 @@ function Turn({
       return (
         <>
           {(step.bubbles ?? []).map((b, k) => (
-            <GuideMsg key={k} icon="💬" text={b.text} />
+            <GuideMsg key={k} icon={MessageCircle} text={b.text} />
           ))}
           {isCurrent && <MoodChips />}
         </>
@@ -235,9 +253,7 @@ function Turn({
       const picked = step.choice?.options.find((o) => o.id === pickedOptionId)
       return (
         <>
-          {step.choice?.prompt && (
-            <GuideMsg icon="💭" text={step.choice.prompt} />
-          )}
+          {step.choice?.prompt && <GuideMsg icon={MessageSquare} text={step.choice.prompt} />}
           {picked ? (
             <div className="msg msg--me">
               <div className="bubble bubble--me">{picked.label}</div>
@@ -245,11 +261,7 @@ function Turn({
           ) : (
             <div className="choice__opts">
               {step.choice?.options.map((o) => (
-                <button
-                  key={o.id}
-                  className="ghost"
-                  onClick={() => onPick(o)}
-                >
+                <button key={o.id} className="ghost" onClick={() => onPick(o)}>
                   {o.label}
                 </button>
               ))}
@@ -263,7 +275,7 @@ function Turn({
       const answered = quizAnswerIdx !== undefined
       return (
         <>
-          <GuideMsg icon="💬" text={step.quiz?.question ?? ""} />
+          <GuideMsg icon={MessageCircle} text={step.quiz?.question ?? ""} />
           <div className="quiz">
             {step.quiz?.options.map((o, k) => {
               let cls = ""
@@ -285,7 +297,9 @@ function Turn({
           </div>
           {answered && step.quiz?.explanation && (
             <div className="msg msg--guide">
-              <div className="msg__avatar">💡</div>
+              <div className="msg__avatar">
+                <Lightbulb size={18} strokeWidth={1.8} aria-hidden />
+              </div>
               <div className="bubble">{step.quiz.explanation}</div>
             </div>
           )}
@@ -296,7 +310,7 @@ function Turn({
     case "journal":
       return (
         <>
-          <GuideMsg icon="📓" text={step.journalPrompt ?? ""} />
+          <GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />
           {isCurrent ? (
             <div className="journal">
               <textarea
@@ -317,9 +331,12 @@ function Turn({
     case "reward":
       return (
         <div className="msg msg--guide">
-          <div className="msg__avatar">🔥</div>
-          <div className="bubble">
-            🎉 {step.reward ? `+${step.reward.xp} XP` : "Recompensă"}
+          <div className="msg__avatar">
+            <Flame size={18} strokeWidth={1.8} aria-hidden />
+          </div>
+          <div className="bubble title-icon">
+            <PartyPopper size={16} strokeWidth={1.8} aria-hidden />{" "}
+            {step.reward ? `+${step.reward.xp} XP` : "Recompensă"}
             {step.reward?.badgeId ? " · insignă nouă" : ""}
           </div>
         </div>
@@ -337,21 +354,30 @@ function Turn({
 }
 
 function MoodChips() {
-  const moods = ["😀", "🙂", "😐", "😔", "😢"]
+  const MOODS: { key: string; icon: LucideIcon; label: string }[] = [
+    { key: "great", icon: Laugh, label: "grozav" },
+    { key: "good", icon: Smile, label: "bine" },
+    { key: "meh", icon: Meh, label: "așa și așa" },
+    { key: "down", icon: Frown, label: "trist" },
+    { key: "hard", icon: HeartCrack, label: "greu" },
+  ]
   const [picked, setPicked] = useState<string | null>(null)
   return (
     <div className="moods">
-      {moods.map((m) => (
-        <button
-          key={m}
-          type="button"
-          className={`mood${picked === m ? " picked" : ""}`}
-          onClick={() => setPicked(m)}
-          aria-label={`stare ${m}`}
-        >
-          {m}
-        </button>
-      ))}
+      {MOODS.map((m) => {
+        const Glyph = m.icon
+        return (
+          <button
+            key={m.key}
+            type="button"
+            className={`mood${picked === m.key ? " picked" : ""}`}
+            onClick={() => setPicked(m.key)}
+            aria-label={`stare ${m.label}`}
+          >
+            <Glyph size={22} strokeWidth={1.8} aria-hidden />
+          </button>
+        )
+      })}
     </div>
   )
 }

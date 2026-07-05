@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Check, HandHeart, Users } from "lucide-react"
 import type { FamilyThemeOption, FamilyView } from "@emanus/shared"
 import {
   addFamilyPrayer,
@@ -83,7 +84,9 @@ export function Family() {
       <section className="family">
         <header className="family__head">
           <div>
-            <h1>👪 Legământul familiei</h1>
+            <h1 className="title-icon">
+              <Users size={22} strokeWidth={1.8} aria-hidden /> Legământul familiei
+            </h1>
             <p className="muted">O temă comună și un zid de rugăciune, pentru toată casa.</p>
           </div>
           <button type="button" className="ghost" onClick={() => navigate("/daily")}>
@@ -143,7 +146,9 @@ export function Family() {
     <section className="family">
       <header className="family__head">
         <div>
-          <h1>👪 {family.name}</h1>
+          <h1 className="title-icon">
+            <Users size={22} strokeWidth={1.8} aria-hidden /> {family.name}
+          </h1>
           <p className="muted">Legământul familiei</p>
         </div>
         <button type="button" className="ghost" onClick={() => navigate("/daily")}>
@@ -163,7 +168,9 @@ export function Family() {
       )}
 
       <article className="family__wall">
-        <span className="daily__kicker">🙏 Zidul de rugăciune al familiei</span>
+        <span className="daily__kicker">
+          <HandHeart size={16} strokeWidth={1.8} aria-hidden /> Zidul de rugăciune al familiei
+        </span>
         <input
           className="text-input"
           value={pAuthor}
@@ -189,19 +196,24 @@ export function Family() {
               <li key={p.id} className={`eb-item${p.answered ? " answered" : ""}`}>
                 <div className="eb-item__body">
                   <p>{p.text}</p>
-                  <span className="muted">
+                  <span className="muted eb-item__meta">
                     {p.author} · {new Date(p.createdAt).toLocaleDateString("ro-RO")}
-                    {p.answered ? " · ✓ răspuns" : ""}
+                    {p.answered ? (
+                      <>
+                        {" · "}
+                        <Check size={13} strokeWidth={2.2} aria-hidden /> răspuns
+                      </>
+                    ) : null}
                   </span>
                 </div>
                 {!p.answered && (
                   <button
                     type="button"
-                    className="ghost"
+                    className="ghost title-icon"
                     onClick={() => answer(p.id)}
                     disabled={busy}
                   >
-                    ✓ Răspuns
+                    <Check size={15} strokeWidth={2.2} aria-hidden /> Răspuns
                   </button>
                 )}
               </li>

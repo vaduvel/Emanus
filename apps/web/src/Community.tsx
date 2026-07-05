@@ -4,11 +4,12 @@ import { MAX_POST_LENGTH } from "@emanus/shared"
 import { createPost, getCommunity } from "./api"
 import type { CreatePostResult } from "./api"
 import { getCategory } from "./session"
+import { Avatar } from "./ds"
 
 export function CrisisBanner({ resources }: { resources: CrisisResource[] }) {
   return (
     <div className="crisis">
-      <h3>Nu ești singur 💙</h3>
+      <h3>Nu ești singur</h3>
       <p>
         Pare că treci prin ceva greu. Nu e nevoie să duci asta singur — te rugăm vorbește acum cu
         cineva care te poate ajuta:
@@ -116,7 +117,7 @@ export function Community({ onBack }: { onBack: () => void }) {
         {posts?.map((p) => (
           <article key={p.id} className="post">
             <div className="post__head">
-              <span className="post__avatar">{p.author.avatar}</span>
+              <Avatar name={p.author.anonName} size="sm" />
               <b>{p.author.anonName}</b>
             </div>
             <p className="post__body">{p.body}</p>

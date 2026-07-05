@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Check, Clock, Landmark } from "lucide-react"
 import type { PrayerRequest } from "@emanus/shared"
 import { EBENEZER_VERSE } from "@emanus/shared"
 import { addPrayerRequest, getEbenezer, markPrayerAnswered } from "./api"
@@ -48,7 +49,9 @@ export function Ebenezer() {
     <section className="ebenezer">
       <header className="ebenezer__head">
         <div>
-          <h1>🪨 Zidul Ebenezer</h1>
+          <h1 className="title-icon">
+            <Landmark size={22} strokeWidth={1.8} aria-hidden /> Zidul Ebenezer
+          </h1>
           <p className="muted">
             „{EBENEZER_VERSE.text}” {EBENEZER_VERSE.ref}
           </p>
@@ -85,19 +88,29 @@ export function Ebenezer() {
             <li key={it.id} className={`eb-item${it.answered ? " answered" : ""}`}>
               <div className="eb-item__body">
                 <p>{it.text}</p>
-                <span className="muted">
+                <span className="muted eb-item__meta">
                   {new Date(it.createdAt).toLocaleDateString("ro-RO")}
-                  {it.answered ? " · ✓ răspuns" : " · ⏳ în așteptare"}
+                  {it.answered ? (
+                    <>
+                      {" · "}
+                      <Check size={13} strokeWidth={2.2} aria-hidden /> răspuns
+                    </>
+                  ) : (
+                    <>
+                      {" · "}
+                      <Clock size={13} strokeWidth={1.9} aria-hidden /> în așteptare
+                    </>
+                  )}
                 </span>
               </div>
               {!it.answered && (
                 <button
                   type="button"
-                  className="ghost"
+                  className="ghost title-icon"
                   onClick={() => answer(it.id)}
                   disabled={busy}
                 >
-                  ✓ Răspuns
+                  <Check size={15} strokeWidth={2.2} aria-hidden /> Răspuns
                 </button>
               )}
             </li>

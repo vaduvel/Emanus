@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Award, LockOpen, Medal, Sparkles } from "lucide-react"
 import type { Lesson } from "@emanus/shared"
 import { getFirstLesson, getLesson, submitProgress } from "./api"
 import type { ProgressResult } from "./api"
@@ -25,20 +26,32 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
   if (result) {
     return (
       <div className="card reward-card">
-        <div className="reward-card__icon">✨</div>
+        <div className="reward-card__icon">
+          <Sparkles size={40} strokeWidth={1.6} aria-hidden />
+        </div>
         <h2>Bravo! +{result.reward.xp} XP</h2>
         <p>
           Ai terminat lecția <strong>„{lesson.title}”</strong>.
         </p>
-        {result.reward.badgeId && <p className="muted">🎖️ Insignă: {result.reward.badgeId}</p>}
+        {result.reward.badgeId && (
+          <p className="muted title-icon">
+            <Medal size={16} strokeWidth={1.9} aria-hidden /> Insignă: {result.reward.badgeId}
+          </p>
+        )}
         <blockquote className="scripture">
           Verset de memorat
           <cite>{lesson.memoryVerseRef}</cite>
         </blockquote>
         {result.reward.certificateId && (
-          <p className="muted">🏅 Certificat: {result.reward.certificateId}</p>
+          <p className="muted title-icon">
+            <Award size={16} strokeWidth={1.9} aria-hidden /> Certificat: {result.reward.certificateId}
+          </p>
         )}
-        {result.reward.unlocksModuleId && <p className="muted">🔓 Ai deblocat un modul nou!</p>}
+        {result.reward.unlocksModuleId && (
+          <p className="muted title-icon">
+            <LockOpen size={16} strokeWidth={1.9} aria-hidden /> Ai deblocat un modul nou!
+          </p>
+        )}
         <div className="reward-card__actions">
           <button type="button" onClick={() => navigate("/dashboard")}>
             Vezi parcursul meu
