@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+/*
+ * Emanus Design System — tokens
+ * Theme: "Marea de cristal" (light default + dark)
+ * Everything downstream should consume the SEMANTIC vars, not the raw palette.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Raw palette (do not use directly in components) ---- */
+  --palette-teal-50: #eef7f7;
+  --palette-teal-100: #d7ecec;
+  --palette-teal-200: #b3dbdb;
+  --palette-teal-300: #84c3c6;
+  --palette-teal-400: #4ea6ac;
+  --palette-teal-500: #2ea0af;
+  --palette-teal-600: #1d7f8f;
+  --palette-teal-700: #17707e;
+  --palette-teal-800: #125863;
+  --palette-teal-900: #0f2b30;
+  --palette-mist: #eaf3f3;
+  --palette-gold-400: #d3a94e;
+  --palette-gold-500: #c1902f;
+  --palette-gold-600: #a87a22;
+  --palette-red-400: #e88a76;
+  --palette-red-500: #e0674f;
+  --palette-red-600: #b3452c;
+  --palette-green-500: #2fae8f;
+  --palette-white: #ffffff;
+
+  /* ---- Semantic: surfaces & text (light) ---- */
+  --bg: var(--palette-mist);
+  --surface: var(--palette-white);
+  --surface-2: #eef6f5;
+  --surface-3: #dcefef;
+  --elevated: var(--palette-white);
+  --border: #d3e6e4;
+  --border-strong: #bcd8d5;
+  --text: #0f2b30;
+  --text-muted: #5d7d80;
+  --text-subtle: #89a4a6;
+  --text-on-accent: #ffffff;
+
+  /* ---- Semantic: brand & status ---- */
+  --accent: #1d7f8f;
+  --accent-hover: #17707e;
+  --accent-press: #125863;
+  --accent-soft: #dcefef;
+  --accent-bright: #2ea0af;
+  --gold: #c1902f;
+  --gold-soft: #f6edd8;
+  --success: #2fae8f;
+  --success-soft: #d9f2ea;
+  --danger: #e0674f;
+  --danger-soft: #fbe4de;
+  --warning: #d3a94e;
+  --info: #2ea0af;
+  --focus-ring: color-mix(in srgb, var(--accent) 40%, transparent);
+
+  /* ---- Gradients ---- */
+  --grad-hero: linear-gradient(155deg, #1d7f8f, #17707e 45%, #0f2b30);
+  --grad-crisis: linear-gradient(155deg, #b3452c, #8f3423 60%, #0f2b30);
+  --grad-gold: linear-gradient(155deg, #c1902f, #a87a22 55%, #0f2b30);
+  /* Placeholder “mesh” for slots awaiting real art/animation */
+  --grad-ph: radial-gradient(120% 120% at 15% 15%, #2ea0af 0%, rgba(46,160,175,0) 45%),
+             radial-gradient(120% 120% at 85% 20%, #c1902f 0%, rgba(193,144,47,0) 40%),
+             radial-gradient(140% 140% at 80% 90%, #17707e 0%, rgba(23,112,126,0) 50%),
+             linear-gradient(160deg, #dcefef, #b3dbdb);
+
+  /* ---- Typography ---- */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.04em;
+
+  /* ---- Spacing (4pt grid) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ---- Radius ---- */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Elevation ---- */
+  --shadow-xs: 0 1px 2px rgba(15, 43, 48, 0.06);
+  --shadow-sm: 0 2px 8px rgba(15, 43, 48, 0.08);
+  --shadow-md: 0 8px 24px rgba(15, 43, 48, 0.10);
+  --shadow-lg: 0 16px 40px rgba(15, 43, 48, 0.14);
+  --shadow-focus: 0 0 0 3px var(--focus-ring);
+
+  /* ---- Motion ---- */
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+  --dur-4: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- Z-index ---- */
+  --z-header: 100;
+  --z-tabbar: 200;
+  --z-sheet: 900;
+  --z-toast: 1000;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #08191c;
+  --surface: #0f2b30;
+  --surface-2: #133238;
+  --surface-3: #17414a;
+  --elevated: #143840;
+  --border: #1e4952;
+  --border-strong: #2a5c66;
+  --text: #eaf6f5;
+  --text-muted: #9fc0c1;
+  --text-subtle: #6f9295;
+  --text-on-accent: #04171a;
+  --accent: #2ea0af;
+  --accent-hover: #4bb4c1;
+  --accent-press: #66c3ce;
+  --accent-soft: #123840;
+  --accent-bright: #4bb4c1;
+  --gold: #d3a94e;
+  --gold-soft: #2c2617;
+  --success: #3cc7a3;
+  --success-soft: #10322c;
+  --danger: #e88a76;
+  --danger-soft: #35211c;
+  --focus-ring: color-mix(in srgb, var(--accent) 55%, transparent);
+  --grad-ph: radial-gradient(120% 120% at 15% 15%, #2ea0af 0%, rgba(46,160,175,0) 45%),
+             radial-gradient(120% 120% at 85% 20%, #c1902f 0%, rgba(193,144,47,0) 40%),
+             radial-gradient(140% 140% at 80% 90%, #0f2b30 0%, rgba(15,43,48,0) 55%),
+             linear-gradient(160deg, #17414a, #0f2b30);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.42);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

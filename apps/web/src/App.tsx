@@ -10,6 +10,7 @@ import { Onboarding } from "./Onboarding"
 import { PrayerCoach } from "./PrayerCoach"
 import { Recommendation } from "./Recommendation"
 import { TabBar } from "./components"
+import { Gallery } from "./ds/Gallery"
 import { navigate, useHashRoute } from "./router"
 import { isOnboarded } from "./session"
 
@@ -37,6 +38,11 @@ function Landing() {
 export default function App() {
   const route = useHashRoute()
   const [onboarded, setOnb] = useState(isOnboarded())
+
+  // DS gallery is standalone (no shell, no onboarding gate).
+  if (route.name === "ds") {
+    return <Gallery />
+  }
 
   if (route.name === "onboarding" || (!onboarded && route.name === "dashboard")) {
     return (

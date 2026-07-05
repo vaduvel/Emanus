@@ -10,6 +10,7 @@ export type Route =
   | { name: "ebenezer" }
   | { name: "family" }
   | { name: "community" }
+  | { name: "ds" }
   | { name: "lesson"; id?: string }
 
 export function parseRoute(): Route {
@@ -24,6 +25,7 @@ export function parseRoute(): Route {
   if (h === "/ebenezer") return { name: "ebenezer" }
   if (h === "/family") return { name: "family" }
   if (h === "/community") return { name: "community" }
+  if (h === "/ds") return { name: "ds" }
   return { name: "home" }
 }
 
