@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import type { CSSProperties, ReactNode } from "react"
 import {
   Award,
   BookOpen,
@@ -31,17 +32,24 @@ import {
   useToast,
 } from "."
 
-const wrap: React.CSSProperties = {
+const wrap: CSSProperties = {
   maxWidth: 480,
   margin: "0 auto",
   padding: "var(--space-5)",
   minHeight: "100dvh",
   background: "var(--bg)",
 }
+const sectionStyle: CSSProperties = { marginTop: "var(--space-6)" }
+const h1Style: CSSProperties = { fontSize: "var(--text-2xl)", margin: 0 }
+const introStyle: CSSProperties = { fontSize: "var(--text-sm)", marginTop: "var(--space-2)" }
+const cardTitleStyle: CSSProperties = { fontSize: "var(--text-lg)", margin: 0 }
+const cardTextStyle: CSSProperties = { fontSize: "var(--text-sm)", margin: 0 }
+const skelStackStyle: CSSProperties = { flex: 1 }
+const spacerStyle: CSSProperties = { height: "var(--space-12)" }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <Stack gap={3} style= marginTop: "var(--space-6)" >
+    <Stack gap={3} style={sectionStyle}>
       <span className="ds-eyebrow">{title}</span>
       {children}
     </Stack>
@@ -65,7 +73,7 @@ function GalleryInner() {
   return (
     <div style={wrap}>
       <Row justify="space-between">
-        <h1 className="ds-display" style= fontSize: "var(--text-2xl)", margin: 0 >
+        <h1 className="ds-display" style={h1Style}>
           Emanus DS
         </h1>
         <Button
@@ -77,7 +85,7 @@ function GalleryInner() {
           {theme === "light" ? "Dark" : "Light"}
         </Button>
       </Row>
-      <p className="ds-muted" style= fontSize: "var(--text-sm)", marginTop: "var(--space-2)" >
+      <p className="ds-muted" style={introStyle}>
         Fundația vizuală — tokens, primitive, iconițe Lucide, placeholdere gradient.
       </p>
 
@@ -89,11 +97,15 @@ function GalleryInner() {
             <Button variant="ghost">Ghost</Button>
           </Row>
           <Row gap={2} wrap>
-            <Button variant="gold" iconLeft={HeartHandshake}>Dăruiește</Button>
+            <Button variant="gold" iconLeft={HeartHandshake}>
+              Dăruiește
+            </Button>
             <Button variant="danger">Urgență</Button>
             <Button loading>Se încarcă</Button>
           </Row>
-          <Button variant="primary" block iconLeft={Sparkles}>Începe lecția</Button>
+          <Button variant="primary" block iconLeft={Sparkles}>
+            Începe lecția
+          </Button>
         </Stack>
       </Section>
 
@@ -101,8 +113,10 @@ function GalleryInner() {
         <Card variant="elevated">
           <Stack gap={3}>
             <GradientPlaceholder ratio="16 / 9" variant="hero" label="Ilustrație — vine la final" />
-            <h2 className="ds-display" style= fontSize: "var(--text-lg)", margin: 0 >Cine sunt eu?</h2>
-            <p className="ds-muted" style= fontSize: "var(--text-sm)", margin: 0 >
+            <h2 className="ds-display" style={cardTitleStyle}>
+              Cine sunt eu?
+            </h2>
+            <p className="ds-muted" style={cardTextStyle}>
               6 lecții despre identitate în Cristos.
             </p>
             <ProgressBar value={60} max={100} label="Progres" showValue />
@@ -131,7 +145,12 @@ function GalleryInner() {
 
       <Section title="List rows">
         <Stack gap={2}>
-          <ListRow icon={BookOpen} title="Nu ești ce postezi" subtitle="4 min · Identitate" onClick={() => toast.show("Deschid lecția")} />
+          <ListRow
+            icon={BookOpen}
+            title="Nu ești ce postezi"
+            subtitle="4 min · Identitate"
+            onClick={() => toast.show("Deschid lecția")}
+          />
           <ListRow icon={Flame} title="Pace peste frică" subtitle="Emoții · 6 lecții" meta="Nou" onClick={() => {}} />
           <ListRow icon={Users} title="Prietenii & presiunea" subtitle="Blocat" locked />
         </Stack>
@@ -148,9 +167,13 @@ function GalleryInner() {
       <Section title="Badge, avatar, skeleton">
         <Row gap={2} wrap>
           <Badge tone="accent">Nivel 4</Badge>
-          <Badge tone="gold" dot>Mentor</Badge>
+          <Badge tone="gold" dot>
+            Mentor
+          </Badge>
           <Badge tone="success">Răspunsă</Badge>
-          <Badge tone="danger" dot>Urgent</Badge>
+          <Badge tone="danger" dot>
+            Urgent
+          </Badge>
         </Row>
         <Row gap={2}>
           <Avatar name="Andrei Marin" ring />
@@ -162,7 +185,7 @@ function GalleryInner() {
         <Card>
           <Row gap={3}>
             <Skeleton variant="circle" width={42} height={42} />
-            <Stack gap={2} style= flex: 1 >
+            <Stack gap={2} style={skelStackStyle}>
               <Skeleton variant="text" width="70%" />
               <Skeleton variant="text" width="40%" />
             </Stack>
@@ -172,13 +195,19 @@ function GalleryInner() {
 
       <Section title="Overlay">
         <Row gap={2} wrap>
-          <Button variant="secondary" onClick={() => setSheetOpen(true)}>Deschide sheet</Button>
-          <Button variant="ghost" onClick={() => toast.show("Salvat cu succes", "success")}>Toast succes</Button>
-          <Button variant="ghost" onClick={() => toast.show("Ceva n-a mers", "danger")}>Toast eroare</Button>
+          <Button variant="secondary" onClick={() => setSheetOpen(true)}>
+            Deschide sheet
+          </Button>
+          <Button variant="ghost" onClick={() => toast.show("Salvat cu succes", "success")}>
+            Toast succes
+          </Button>
+          <Button variant="ghost" onClick={() => toast.show("Ceva n-a mers", "danger")}>
+            Toast eroare
+          </Button>
         </Row>
       </Section>
 
-      <div style= height: "var(--space-12)"  />
+      <div style={spacerStyle} />
 
       <Sheet open={sheetOpen} onClose={() => setSheetOpen(false)} title="Cerere de rugăciune">
         <Stack gap={4}>
