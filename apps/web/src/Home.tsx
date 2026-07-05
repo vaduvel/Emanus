@@ -14,6 +14,9 @@ const AXIS_LABEL: Record<GrowthAxisId, string> = {
   freedom: "Libertate",
 }
 
+const moreBtnStyle = { marginTop: 10 }
+const verseStyle = { cursor: "pointer" } as const
+
 export function Home() {
   const [dash, setDash] = useState<DashboardView | null>(null)
   const [daily, setDaily] = useState<DailyView | null>(null)
@@ -104,12 +107,7 @@ export function Home() {
             </div>
             <span className="social-strip__text">Alți frați cresc alături de tine chiar acum.</span>
           </div>
-          <button
-            type="button"
-            className="ghost"
-            style= marginTop: 10 
-            onClick={() => navigate("/community")}
-          >
+          <button type="button" className="ghost" style={moreBtnStyle} onClick={() => navigate("/community")}>
             Vezi comunitatea →
           </button>
         </section>
@@ -119,7 +117,7 @@ export function Home() {
             className="verse-strip"
             role="button"
             tabIndex={0}
-            style= cursor: "pointer" 
+            style={verseStyle}
             onClick={() => navigate("/daily")}
           >
             <span className="verse-strip__q">„{daily.ritual.verseText}”</span>
