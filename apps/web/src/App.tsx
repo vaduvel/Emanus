@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Feather } from "lucide-react"
 import { Community } from "./Community"
+import { Crisis } from "./Crisis"
 import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
 import { Ebenezer } from "./Ebenezer"
@@ -83,6 +84,9 @@ export default function App() {
     case "community":
       screen = <Community onBack={() => navigate("/")} />
       tab = "community"
+      break
+    case "crisis":
+      screen = <Crisis onBack={() => navigate("/")} />
       break
     case "dashboard":
       screen = <Dashboard onBack={() => navigate("/")} />

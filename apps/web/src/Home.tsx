@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import type { CSSProperties } from "react"
+import { LifeBuoy } from "lucide-react"
 import type { DailyView, DashboardView, GrowthAxisId } from "@emanus/shared"
 import { getDaily, getDashboard } from "./api"
 import { navigate } from "./router"
@@ -17,6 +19,21 @@ const AXIS_LABEL: Record<GrowthAxisId, string> = {
 
 const moreBtnStyle = { marginTop: 10 }
 const verseStyle = { cursor: "pointer" } as const
+const sosStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 6,
+  alignSelf: "flex-start",
+  background: "var(--danger-soft)",
+  color: "var(--bad)",
+  border: "1px solid var(--bad)",
+  borderRadius: "var(--radius-pill)",
+  padding: "8px 14px",
+  fontSize: "0.85rem",
+  fontWeight: 600,
+  boxShadow: "none",
+  cursor: "pointer",
+}
 
 export function Home() {
   const [dash, setDash] = useState<DashboardView | null>(null)
@@ -55,6 +72,11 @@ export function Home() {
   return (
     <section className="home">
       <Hero gam={gam} next={nextLesson} onContinue={(id) => navigate(`/lesson/${id}`)} />
+
+      <button type="button" style={sosStyle} onClick={() => navigate("/crisis")}>
+        <LifeBuoy size={16} aria-hidden />
+        Ai nevoie de ajutor acum?
+      </button>
 
       <CheckIn />
 
