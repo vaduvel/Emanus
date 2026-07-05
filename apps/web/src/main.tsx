@@ -6,6 +6,7 @@ import "./styles.css"
 import "./components/components.css"
 import "./components/screens.css"
 import "./components/entry.css"
+import "./components/immersive.css"
 
 // Înregistrează service worker-ul PWA (auto-update).
 registerSW({ immediate: true })

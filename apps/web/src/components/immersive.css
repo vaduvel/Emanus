@@ -1,0 +1,54 @@
+/* Strat imersiv (placeholder mesh gradient; se inlocuieste ulterior cu foto). */
+/* Scoped pe .home .hero ca sa nu afecteze alte ecrane. */
+
+.home .hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 22px 18px 20px;
+  gap: 18px;
+  background:
+    radial-gradient(115% 85% at 12% 0%, rgba(46, 160, 175, 0.9), rgba(46, 160, 175, 0) 55%),
+    radial-gradient(120% 95% at 98% 8%, rgba(87, 199, 214, 0.55), rgba(87, 199, 214, 0) 60%),
+    radial-gradient(95% 85% at 85% 108%, rgba(193, 144, 47, 0.5), rgba(193, 144, 47, 0) 55%),
+    linear-gradient(155deg, #1d7f8f 0%, #17707e 45%, #0f2b30 100%);
+  box-shadow: var(--shadow-pop);
+}
+.home .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 80% at 50% -12%, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
+}
+
+.home .hero-head {
+  position: relative;
+  z-index: 1;
+}
+.home .hero-head__avatar {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+.home .hero-head__hi b { color: #fff; }
+.home .hero-head__hi span { color: rgba(255, 255, 255, 0.82); }
+
+.home .hero .streak-pill {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+.home .hero .level-ring__track { stroke: rgba(255, 255, 255, 0.28); }
+.home .hero .level-ring__val { stroke: #fff; }
+.home .hero .level-ring__num { color: #fff; }
+
+.home .hero .continue-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 12px 30px rgba(15, 43, 48, 0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
