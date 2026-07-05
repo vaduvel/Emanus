@@ -4,6 +4,7 @@ import { registerSW } from "virtual:pwa-register"
 import App from "./App"
 import "./styles.css"
 import "./components/components.css"
+import "./components/screens.css"
 
 // Înregistrează service worker-ul PWA (auto-update).
 registerSW({ immediate: true })
