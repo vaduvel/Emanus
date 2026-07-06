@@ -83,6 +83,21 @@ export function cancelMentorSession(id: string): Promise<{ ok: boolean }> {
   return postJson<{ ok: boolean }>(`/me/mentorat/${id}/cancel`, {})
 }
 
+// Mentor: oferă un slot propriu (dată/oră, subiect, durată).
+export function offerMentorSlot(input: {
+  mentorName: string
+  topic: string
+  startsAt: string
+  durationMin: number
+}): Promise<MentorSlot> {
+  return postJson<MentorSlot>("/me/mentorat/offer", input)
+}
+
+// Mentor: retrage un slot oferit (încă neprogramat).
+export function withdrawMentorSlot(id: string): Promise<{ ok: boolean }> {
+  return postJson<{ ok: boolean }>(`/me/mentorat/${id}/withdraw`, {})
+}
+
 // Login LAST: leagă progresul anonim curent (x-user-id) de id-ul stabil Supabase.
 // Se apelează ÎNAINTE de a schimba id-ul local, ca headerul să conțină id-ul anonim.
 export function linkAccount(toUserId: string): Promise<{ ok: boolean; userId: string }> {

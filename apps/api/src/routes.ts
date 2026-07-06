@@ -67,7 +67,7 @@ export function registerRoutes(app: Express): void {
       if (!anonName || !categoryId) return res.status(400).json({ error: "missing_fields" })
       const user = await store.createUser({
         anonName,
-        avatar: avatar ?? "🌱",
+        avatar: avatar ?? "\ud83c\udf31",
         ageBand,
         categoryId,
         consent: consent ?? {},
@@ -142,6 +142,30 @@ export function registerRoutes(app: Express): void {
     res.json(store.mentorat(userIdOf(req)))
   })
 
+  // Calendar de mentorat: un mentor oferă un slot propriu (înainte de rutele cu :id)
+  app.post("/me/mentorat/offer", (req, res) => {
+    const topic = typeof req.body?.topic === "string" ? req.body.topic.trim() : ""
+    const startsAt = typeof req.body?.startsAt === "string" ? req.body.startsAt.trim() : ""
+    if (!topic || !startsAt) return res.status(400).json({ error: "missing_fields" })
+    const when = new Date(startsAt)
+    if (Number.isNaN(when.getTime())) return res.status(400).json({ error: "bad_date" })
+    const mentorName =
+      typeof req.body?.mentorName === "string" && req.body.mentorName.trim()
+        ? req.body.mentorName.trim()
+        : "Mentor"
+    const durationRaw = Number(req.body?.durationMin)
+    const durationMin =
+      Number.isFinite(durationRaw) && durationRaw > 0 ? Math.round(durationRaw) : 30
+    res.json(
+      store.offerMentorSlot(userIdOf(req), {
+        mentorName,
+        topic,
+        startsAt: when.toISOString(),
+        durationMin,
+      }),
+    )
+  })
+
   // Calendar de mentorat: programează un slot
   app.post("/me/mentorat/:id/book", (req, res) => {
     const booked = store.bookMentorSlot(userIdOf(req), req.params.id)
@@ -152,6 +176,13 @@ export function registerRoutes(app: Express): void {
   // Calendar de mentorat: anulează o sesiune programată
   app.post("/me/mentorat/:id/cancel", (req, res) => {
     const ok = store.cancelMentorSlot(userIdOf(req), req.params.id)
+    if (!ok) return res.status(404).json({ error: "not_found" })
+    res.json({ ok: true })
+  })
+
+  // Calendar de mentorat: un mentor retrage un slot oferit (încă neprogramat)
+  app.post("/me/mentorat/:id/withdraw", (req, res) => {
+    const ok = store.withdrawMentorSlot(userIdOf(req), req.params.id)
     if (!ok) return res.status(404).json({ error: "not_found" })
     res.json({ ok: true })
   })
@@ -323,8 +354,10 @@ export function registerRoutes(app: Express): void {
         text,
         postKind,
       )
-      // TODO(push): la o cerere de rugăciune vizibilă, notifică comunitatea
-      // („cineva a cerut rugăciune”) când există infra de push.
+      // La o cerere de rugăciune vizibilă, notifică comunitatea prin push (best-effort).
+      if (postKind === "prayer_request" && result.post.status === "visible") {
+        store.notifyPrayerRequest(result.post).catch(() => {})
+      }
       res.json({
         ...result,
         crisisResources: result.moderation.crisis ? CRISIS_RESOURCES : undefined,
@@ -343,5 +376,24 @@ export function registerRoutes(app: Express): void {
     } catch (e) {
       next(e)
     }
+  })
+
+  // Push: cheia publică VAPID pentru abonare din client (gol dacă push nu e configurat)
+  app.get("/push/public-key", (_req, res) => {
+    res.json({ key: store.pushPublicKey() })
+  })
+
+  // Push: înregistrează / dezinregistrează un abonament al utilizatorului curent
+  app.post("/push/subscribe", (req, res) => {
+    const sub = req.body?.subscription
+    if (!sub || typeof sub !== "object" || typeof sub.endpoint !== "string") {
+      return res.status(400).json({ error: "bad_subscription" })
+    }
+    res.json(store.savePushSubscription(userIdOf(req), sub))
+  })
+
+  app.post("/push/unsubscribe", (req, res) => {
+    const endpoint = typeof req.body?.endpoint === "string" ? req.body.endpoint : ""
+    res.json(store.removePushSubscription(userIdOf(req), endpoint))
   })
 }

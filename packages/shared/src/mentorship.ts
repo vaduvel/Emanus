@@ -1,5 +1,6 @@
 // Calendar de mentorat (docs/00-DIRECTIE): mentorii oferă sesiuni, menteii le programează.
-// MVP: sloturi demo generate din data curentă; rezervările se țin în memorie (persistă la login real).
+// MVP: sloturi demo generate din data curentă + sloturi oferite de mentori;
+// rezervările și ofertele se țin în memorie (persistă la login real).
 
 export type MentorSlotStatus = "open" | "booked"
 
@@ -11,11 +12,15 @@ export interface MentorSlot {
   durationMin: number
   status: MentorSlotStatus
   bookedBy?: string
+  /** id-ul mentorului care a oferit slotul (dacă e slot propriu, nu demo). */
+  offeredBy?: string
 }
 
 export interface MentoratView {
   upcoming: MentorSlot[]
   mySessions: MentorSlot[]
+  /** Sloturile oferite de utilizatorul curent (ca mentor), pentru gestionare. */
+  myOfferedSlots: MentorSlot[]
 }
 
 function slotAt(base: Date, dayOffset: number, hour: number, minute: number): string {
