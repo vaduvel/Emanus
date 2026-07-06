@@ -83,7 +83,12 @@ const bookedTagStyle: CSSProperties = {
   fontWeight: 600,
   whiteSpace: "nowrap",
 }
-const offerFormStyle: CSSProperties = { display: "flex", flexDirection: "column", gap: 10, marginTop: 8 }
+const offerFormStyle: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 10,
+  marginTop: 8,
+}
 const fieldStyle: CSSProperties = { display: "flex", flexDirection: "column", gap: 4 }
 const fieldRowStyle: CSSProperties = { display: "flex", gap: 10, flexWrap: "wrap" }
 const labelStyle: CSSProperties = { fontSize: "0.8rem", fontWeight: 600, color: "var(--text)" }
@@ -97,7 +102,13 @@ const inputStyle: CSSProperties = {
   fontFamily: "inherit",
   width: "100%",
 }
-const flexColStyle: CSSProperties = { flex: 1, minWidth: 140, display: "flex", flexDirection: "column", gap: 4 }
+const flexColStyle: CSSProperties = {
+  flex: 1,
+  minWidth: 140,
+  display: "flex",
+  flexDirection: "column",
+  gap: 4,
+}
 const mentorHintStyle: CSSProperties = { fontSize: "0.8rem" }
 
 const DURATIONS = [30, 45, 60]
