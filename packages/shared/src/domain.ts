@@ -9,6 +9,8 @@ export type AgeCategoryId =
   | "men"
   | "parents"
   | "grandparents"
+  | "couples"
+  | "doctrine"
 
 export type GrowthAxisId =
   | "identity"

@@ -1,6 +1,6 @@
 import type { AgeCategoryId, Category } from "./domain.js"
 
-// Cele 7 categorii (workbook §2 & §5). Modulele se populează pe măsură ce se adaugă conținut.
+// Cele 9 categorii (workbook §2 & §5). Modulele se populează pe măsură ce se adaugă conținut.
 // Regula de aur (§4): a adăuga o categorie = conținut + config, NU cod nou.
 export const CATEGORY_CONFIGS: Record<AgeCategoryId, Category> = {
   kids0_5: {
@@ -100,6 +100,34 @@ export const CATEGORY_CONFIGS: Record<AgeCategoryId, Category> = {
       bibleTranslation: "VDC",
       diagnosticQuestionIds: [],
       accessibility: { largeFont: true, highContrast: true, audioFirst: true },
+    },
+    moduleIds: [],
+  },
+  couples: {
+    id: "couples",
+    name: "Soț-Soție",
+    ageRange: "Cuplu",
+    dominantFormat: "Chat + exerciții pentru doi",
+    config: {
+      tone: "cald, pentru doi, cu respect și har",
+      bubbleMaxChars: 300,
+      mediaMix: ["chat", "video"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
+    },
+    moduleIds: [],
+  },
+  doctrine: {
+    id: "doctrine",
+    name: "Doctrină",
+    ageRange: "—",
+    dominantFormat: "Studiu structurat + referințe",
+    config: {
+      tone: "clar, temeinic, cu smerenie față de mister",
+      bubbleMaxChars: 340,
+      mediaMix: ["chat"],
+      bibleTranslation: "VDC",
+      diagnosticQuestionIds: [],
     },
     moduleIds: [],
   },

@@ -1,7 +1,18 @@
 import { useEffect, useState } from "react"
 import type { CSSProperties } from "react"
 import type { LucideIcon } from "lucide-react"
-import { Baby, Check, Flame, Flower2, Home as HomeIcon, Leaf, Palette, Swords } from "lucide-react"
+import {
+  Baby,
+  Check,
+  Flame,
+  Flower2,
+  Heart,
+  Home as HomeIcon,
+  Leaf,
+  Palette,
+  ScrollText,
+  Swords,
+} from "lucide-react"
 import type { Category } from "@emanus/shared"
 import { getCategories } from "./api"
 import { navigate } from "./router"
@@ -16,6 +27,8 @@ const ICONS: Record<string, LucideIcon> = {
   men: Swords,
   parents: HomeIcon,
   grandparents: Leaf,
+  couples: Heart,
+  doctrine: ScrollText,
 }
 
 const iconWrapStyle: CSSProperties = {

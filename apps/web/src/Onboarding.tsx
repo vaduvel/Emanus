@@ -8,10 +8,12 @@ import {
   Flame,
   Flower2,
   Headphones,
+  Heart,
   Home,
   Leaf,
   Mountain,
   Palette,
+  ScrollText,
   Sprout,
   Star,
   Swords,
@@ -29,6 +31,8 @@ const CATEGORIES: { id: string; label: string; icon: LucideIcon }[] = [
   { id: "men", label: "Bărbați", icon: Swords },
   { id: "parents", label: "Părinți", icon: Home },
   { id: "grandparents", label: "Bunici", icon: Leaf },
+  { id: "couples", label: "Soț-Soție", icon: Heart },
+  { id: "doctrine", label: "Doctrină", icon: ScrollText },
 ]
 
 const AVATARS: { key: string; icon: LucideIcon }[] = [
