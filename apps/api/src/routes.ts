@@ -1,6 +1,14 @@
 import { CRISIS_RESOURCES, DEMO_USER_ID, MAX_POST_LENGTH, isFaithStage } from "@emanus/shared"
 import type { Express, Request } from "express"
 import { store } from "./store.js"
+import {
+  pushEnabled,
+  pushPublicKey,
+  reassignPushSubscriptions,
+  removePushSubscription,
+  savePushSubscription,
+  sendPushToAll,
+} from "./push.js"
 
 function userIdOf(req: Request): string {
   const h = req.header("x-user-id")
@@ -83,7 +91,10 @@ export function registerRoutes(app: Express): void {
   app.post("/me/link", (req, res) => {
     const to = typeof req.body?.toUserId === "string" ? req.body.toUserId.trim() : ""
     if (!to) return res.status(400).json({ error: "missing_to" })
-    res.json(store.linkAccount(userIdOf(req), to))
+    const from = userIdOf(req)
+    const result = store.linkAccount(from, to)
+    reassignPushSubscriptions(from, to)
+    res.json(result)
   })
 
   // Diagnostic inițial: întrebările (workbook §10)
@@ -348,14 +359,19 @@ export function registerRoutes(app: Express): void {
       if (!text) return res.status(400).json({ error: "empty" })
       if (text.length > MAX_POST_LENGTH) return res.status(400).json({ error: "too_long" })
       const postKind = kind === "prayer_request" ? "prayer_request" : "post"
-      const result = await store.createPost(
-        userIdOf(req),
-        categoryId || "teens12_18",
-        text,
-        postKind,
-      )
-      // TODO(push): la o cerere de rugăciune vizibilă, notifică comunitatea
-      // („cineva a cerut rugăciune") când există infra de push.
+      const authorId = userIdOf(req)
+      const result = await store.createPost(authorId, categoryId || "teens12_18", text, postKind)
+      // La o cerere de rugăciune vizibilă, anunță comunitatea prin push (best-effort, exclude autorul).
+      if (postKind === "prayer_request" && result.post.status === "visible") {
+        void sendPushToAll(
+          {
+            title: "Cineva a cerut rugăciune",
+            body: "Un membru al comunității are nevoie de rugăciunea ta.",
+            url: "/community",
+          },
+          { excludeUserId: authorId },
+        ).catch(() => {})
+      }
       res.json({
         ...result,
         crisisResources: result.moderation.crisis ? CRISIS_RESOURCES : undefined,
@@ -374,5 +390,25 @@ export function registerRoutes(app: Express): void {
     } catch (e) {
       next(e)
     }
+  })
+
+  // Push: cheia publică VAPID pentru abonare din client (gol dacă push nu e configurat)
+  app.get("/push/public-key", (_req, res) => {
+    res.json({ key: pushPublicKey(), enabled: pushEnabled() })
+  })
+
+  // Push: înregistrează abonamentul utilizatorului curent
+  app.post("/push/subscribe", (req, res) => {
+    const sub = req.body?.subscription
+    if (!sub || typeof sub !== "object" || typeof sub.endpoint !== "string") {
+      return res.status(400).json({ error: "bad_subscription" })
+    }
+    res.json(savePushSubscription(userIdOf(req), sub))
+  })
+
+  // Push: dezinregistrează abonamentul (după endpoint)
+  app.post("/push/unsubscribe", (req, res) => {
+    const endpoint = typeof req.body?.endpoint === "string" ? req.body.endpoint : ""
+    res.json(removePushSubscription(userIdOf(req), endpoint))
   })
 }
