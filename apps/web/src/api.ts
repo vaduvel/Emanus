@@ -13,7 +13,9 @@ import type {
   GamState,
   GrowthScore,
   Lesson,
+  MentorSlot,
   MentorStatus,
+  MentoratView,
   ModerationResult,
   NeedProfile,
   PrayerLevel,
@@ -67,6 +69,18 @@ export function getDashboard(): Promise<DashboardView> {
 
 export function getMentor(): Promise<MentorStatus> {
   return getJson<MentorStatus>("/me/mentor")
+}
+
+export function getMentorat(): Promise<MentoratView> {
+  return getJson<MentoratView>("/me/mentorat")
+}
+
+export function bookMentorSession(id: string): Promise<MentorSlot> {
+  return postJson<MentorSlot>(`/me/mentorat/${id}/book`, {})
+}
+
+export function cancelMentorSession(id: string): Promise<{ ok: boolean }> {
+  return postJson<{ ok: boolean }>(`/me/mentorat/${id}/cancel`, {})
 }
 
 export function getGrowth(): Promise<GrowthScore[]> {

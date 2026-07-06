@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import type { CSSProperties, ReactNode } from "react"
-import { Award, Flame, GraduationCap, Lock } from "lucide-react"
+import { Award, CalendarClock, Flame, GraduationCap, Lock } from "lucide-react"
 import { GROWTH_AXES } from "@emanus/shared"
 import type { DashboardView, GrowthAxisId, GrowthScore, MentorStatus } from "@emanus/shared"
 import { getDashboard, getMentor } from "./api"
@@ -131,10 +131,10 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
                   <button
                     type="button"
                     style={mentorBtnStyle}
-                    onClick={() => navigate("/community")}
+                    onClick={() => navigate("/mentorat")}
                   >
-                    <GraduationCap size={15} aria-hidden />
-                    Însoțește comunitatea
+                    <CalendarClock size={15} aria-hidden />
+                    Deschide mentoratul
                   </button>
                 </>
               ) : (
@@ -159,6 +159,14 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
                       mentor.certificatesRemaining === 0 &&
                       "Ești aproape acolo!"}
                   </p>
+                  <button
+                    type="button"
+                    style={mentorBtnStyle}
+                    onClick={() => navigate("/mentorat")}
+                  >
+                    <CalendarClock size={15} aria-hidden />
+                    Ai nevoie de un mentor? Programează
+                  </button>
                 </>
               )}
             </section>

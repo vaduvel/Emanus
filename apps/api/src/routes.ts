@@ -129,6 +129,25 @@ export function registerRoutes(app: Express): void {
     }
   })
 
+  // Calendar de mentorat: sloturi disponibile + sesiunile mele (docs/00-DIRECTIE)
+  app.get("/me/mentorat", (req, res) => {
+    res.json(store.mentorat(userIdOf(req)))
+  })
+
+  // Calendar de mentorat: programează un slot
+  app.post("/me/mentorat/:id/book", (req, res) => {
+    const booked = store.bookMentorSlot(userIdOf(req), req.params.id)
+    if (!booked) return res.status(404).json({ error: "not_found" })
+    res.json(booked)
+  })
+
+  // Calendar de mentorat: anulează o sesiune programată
+  app.post("/me/mentorat/:id/cancel", (req, res) => {
+    const ok = store.cancelMentorSlot(userIdOf(req), req.params.id)
+    if (!ok) return res.status(404).json({ error: "not_found" })
+    res.json({ ok: true })
+  })
+
   // Recomandare de parcurs după onboarding (docs/00-DIRECTIE §13: „Ușa, nu unghiul”)
   app.get("/me/recommendation", async (req, res, next) => {
     try {

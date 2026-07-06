@@ -9,6 +9,7 @@ import { Family } from "./Family"
 import { GrowthOnboarding } from "./GrowthOnboarding"
 import { Home } from "./Home"
 import { LessonView } from "./LessonView"
+import { Mentorat } from "./Mentorat"
 import { Onboarding } from "./Onboarding"
 import { PrayerCoach } from "./PrayerCoach"
 import { Recommendation } from "./Recommendation"
@@ -88,6 +89,10 @@ export default function App() {
       break
     case "growth":
       screen = <GrowthOnboarding />
+      tab = "journey"
+      break
+    case "mentorat":
+      screen = <Mentorat />
       tab = "journey"
       break
     case "crisis":

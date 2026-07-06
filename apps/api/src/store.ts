@@ -6,6 +6,7 @@ import {
   applyAxisDeltas,
   applyReward,
   buildDashboard,
+  buildDemoMentorSlots,
   buildRecommendation,
   computeBaseline,
   dailyRitualForDay,
@@ -36,7 +37,9 @@ import type {
   GamState,
   GrowthScore,
   Lesson,
+  MentorSlot,
   MentorStatus,
+  MentoratView,
   ModerationResult,
   Module,
   NeedProfile,
@@ -98,6 +101,8 @@ const memPrayers = new Map<string, PrayerRequest[]>()
 const memFamilies = new Map<string, Family>()
 const memFamilyPrayers = new Map<string, FamilyPrayer[]>()
 const memGrowthProfiles = new Map<string, NeedProfile>()
+// Rezervări de mentorat per utilizator (slotId -> slot rezervat). Se persistă la login real.
+const memMentorBookings = new Map<string, Map<string, MentorSlot>>()
 let memUserSeq = 0
 let memPostSeq = 0
 let memPrayerSeq = 0
@@ -238,6 +243,37 @@ async function dashboard(userId: string, categoryId = "teens12_18"): Promise<Das
 async function mentor(userId: string, categoryId = "teens12_18"): Promise<MentorStatus> {
   const dash = await dashboard(userId, categoryId)
   return computeMentorStatus(dash.gam)
+}
+
+// --- Calendar de mentorat (docs/00-DIRECTIE) ---
+// Sloturi demo + rezervări in-memory. Se persistă la login real.
+function byStart(a: MentorSlot, b: MentorSlot): number {
+  return a.startsAt < b.startsAt ? -1 : a.startsAt > b.startsAt ? 1 : 0
+}
+
+function mentorat(userId: string): MentoratView {
+  const all = buildDemoMentorSlots(new Date())
+  const mine = memMentorBookings.get(userId) ?? new Map<string, MentorSlot>()
+  const upcoming = all.filter((s) => !mine.has(s.id)).sort(byStart)
+  const mySessions = [...mine.values()].sort(byStart)
+  return { upcoming, mySessions }
+}
+
+function bookMentorSlot(userId: string, slotId: string): MentorSlot | undefined {
+  const slot = buildDemoMentorSlots(new Date()).find((s) => s.id === slotId)
+  if (!slot) return undefined
+  const booked: MentorSlot = { ...slot, status: "booked", bookedBy: userId }
+  const mine = memMentorBookings.get(userId) ?? new Map<string, MentorSlot>()
+  mine.set(slotId, booked)
+  memMentorBookings.set(userId, mine)
+  return booked
+}
+
+function cancelMentorSlot(userId: string, slotId: string): boolean {
+  const mine = memMentorBookings.get(userId)
+  if (!mine || !mine.has(slotId)) return false
+  mine.delete(slotId)
+  return true
 }
 
 // Ritualul zilnic „Timp cu Dumnezeu” (docs/00-DIRECTIE §2): versetul urmează axa cea mai fragedă.
@@ -527,6 +563,9 @@ export const store = {
   applyProgress,
   dashboard,
   mentor,
+  mentorat,
+  bookMentorSlot,
+  cancelMentorSlot,
   dailyRitual,
   growth,
   recommendation,

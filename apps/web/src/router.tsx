@@ -11,6 +11,7 @@ export type Route =
   | { name: "family" }
   | { name: "community" }
   | { name: "growth" }
+  | { name: "mentorat" }
   | { name: "crisis" }
   | { name: "ds" }
   | { name: "lesson"; id?: string }
@@ -28,6 +29,7 @@ export function parseRoute(): Route {
   if (h === "/family") return { name: "family" }
   if (h === "/community") return { name: "community" }
   if (h === "/growth") return { name: "growth" }
+  if (h === "/mentorat") return { name: "mentorat" }
   if (h === "/crisis") return { name: "crisis" }
   if (h === "/ds") return { name: "ds" }
   return { name: "home" }
