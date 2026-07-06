@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg"],
+      includeAssets: ["favicon.svg", "push-sw.js"],
       manifest: {
         name: "Emanus",
         short_name: "Emanus",
@@ -26,6 +26,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
+        // Handlerele de push trăiesc într-un fișier separat, importat în SW-ul generat.
+        importScripts: ["push-sw.js"],
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.pathname.startsWith("/api"),

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import type { CSSProperties } from "react"
-import { HandHeart } from "lucide-react"
+import { BellOff, BellRing, HandHeart } from "lucide-react"
 import type { CommunityPostView, CrisisResource } from "@emanus/shared"
 import { MAX_POST_LENGTH } from "@emanus/shared"
 import { createPost, getCommunity, prayForPost } from "./api"
 import type { CreatePostResult } from "./api"
+import { disablePush, enablePush, isPushEnabled, pushSupported } from "./push"
 import { getCategory } from "./session"
 import { Avatar } from "./ds"
 
@@ -59,6 +60,27 @@ const prayBtnStyle: CSSProperties = {
   cursor: "pointer",
 }
 const prayCountStyle: CSSProperties = { fontSize: "0.8rem" }
+const pushRowStyle: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: 10,
+  flexWrap: "wrap",
+  margin: "2px 0 14px",
+}
+const pushBtnStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 6,
+  background: "var(--surface)",
+  color: "var(--text)",
+  border: "1px solid var(--border)",
+  borderRadius: "var(--radius-pill)",
+  padding: "6px 14px",
+  fontSize: "0.85rem",
+  fontWeight: 600,
+  boxShadow: "none",
+  cursor: "pointer",
+}
 
 export function Community({ onBack }: { onBack: () => void }) {
   const category = getCategory()
@@ -70,6 +92,10 @@ export function Community({ onBack }: { onBack: () => void }) {
   const [notice, setNotice] = useState<CreatePostResult | null>(null)
   const [prayCounts, setPrayCounts] = useState<Record<string, number>>({})
   const [prayedIds, setPrayedIds] = useState<Record<string, boolean>>({})
+  const [pushOn, setPushOn] = useState(false)
+  const [pushBusy, setPushBusy] = useState(false)
+  const [pushMsg, setPushMsg] = useState<string | null>(null)
+  const supportsPush = pushSupported()
 
   function load() {
     getCommunity(category)
@@ -81,6 +107,41 @@ export function Community({ onBack }: { onBack: () => void }) {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    if (!supportsPush) return
+    isPushEnabled()
+      .then(setPushOn)
+      .catch(() => {})
+  }, [supportsPush])
+
+  async function togglePush() {
+    setPushBusy(true)
+    setPushMsg(null)
+    try {
+      if (pushOn) {
+        await disablePush()
+        setPushOn(false)
+        setPushMsg("Notificările au fost oprite.")
+        return
+      }
+      const r = await enablePush()
+      if (r.ok) {
+        setPushOn(true)
+        setPushMsg("Vei fi anunțat când cineva cere rugăciune.")
+      } else if (r.reason === "denied") {
+        setPushMsg("Permisiunea pentru notificări a fost refuzată.")
+      } else if (r.reason === "not_configured") {
+        setPushMsg("Notificările nu sunt încă activate pe server.")
+      } else if (r.reason === "unsupported") {
+        setPushMsg("Dispozitivul nu suportă notificări.")
+      } else {
+        setPushMsg("Nu am putut activa notificările.")
+      }
+    } finally {
+      setPushBusy(false)
+    }
+  }
 
   async function submit() {
     if (!body.trim()) return
@@ -123,6 +184,24 @@ export function Community({ onBack }: { onBack: () => void }) {
         </button>
       </header>
       <p className="muted">Un spațiu sigur. Fii bun și încurajator. Postările sunt moderate.</p>
+
+      {supportsPush && (
+        <div style={pushRowStyle}>
+          <button type="button" style={pushBtnStyle} disabled={pushBusy} onClick={togglePush}>
+            {pushOn ? <BellOff size={15} aria-hidden /> : <BellRing size={15} aria-hidden />}
+            {pushBusy
+              ? "Se procesează…"
+              : pushOn
+                ? "Oprește notificările"
+                : "Anunță-mă la cereri de rugăciune"}
+          </button>
+          {pushMsg && (
+            <span className="muted" style={prayCountStyle}>
+              {pushMsg}
+            </span>
+          )}
+        </div>
+      )}
 
       <div className="composer">
         <textarea

@@ -249,3 +249,16 @@ export function addFamilyPrayer(text: string, author: string): Promise<FamilyPra
 export function markFamilyPrayerAnswered(id: string): Promise<FamilyPrayer> {
   return postJson<FamilyPrayer>(`/me/family/prayers/${id}/answered`, {})
 }
+
+// Push notifications (opt-in pentru cereri de rugăciune în comunitate).
+export function getPushPublicKey(): Promise<{ key: string; enabled: boolean }> {
+  return getJson<{ key: string; enabled: boolean }>("/push/public-key")
+}
+
+export function subscribePush(subscription: unknown): Promise<{ ok: boolean; enabled?: boolean }> {
+  return postJson<{ ok: boolean; enabled?: boolean }>("/push/subscribe", { subscription })
+}
+
+export function unsubscribePush(endpoint: string): Promise<{ ok: boolean }> {
+  return postJson<{ ok: boolean }>("/push/unsubscribe", { endpoint })
+}
