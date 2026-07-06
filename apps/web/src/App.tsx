@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Feather } from "lucide-react"
+import { Categories } from "./Categories"
 import { Community } from "./Community"
 import { Crisis } from "./Crisis"
 import { Daily } from "./Daily"
@@ -94,6 +95,9 @@ export default function App() {
     case "mentorat":
       screen = <Mentorat />
       tab = "journey"
+      break
+    case "categories":
+      screen = <Categories />
       break
     case "crisis":
       screen = <Crisis onBack={() => navigate("/")} />

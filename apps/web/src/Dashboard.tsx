@@ -207,6 +207,9 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
             Continuă: {next.title}
           </button>
         )}
+        <button type="button" className="ghost" onClick={() => navigate("/categories")}>
+          Schimbă categoria
+        </button>
         <button type="button" className="ghost" onClick={() => navigate("/community")}>
           Comunitate
         </button>

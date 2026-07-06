@@ -22,7 +22,7 @@ import type {
   PrayerRequest,
   RecommendationView,
 } from "@emanus/shared"
-import { getUserId } from "./session"
+import { getCategory, getUserId } from "./session"
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api"
 
@@ -60,15 +60,15 @@ export function getCategories(): Promise<Category[]> {
 }
 
 export function getDaily(): Promise<DailyView> {
-  return getJson<DailyView>("/me/daily")
+  return getJson<DailyView>(`/me/daily?category=${encodeURIComponent(getCategory())}`)
 }
 
 export function getDashboard(): Promise<DashboardView> {
-  return getJson<DashboardView>("/me/dashboard")
+  return getJson<DashboardView>(`/me/dashboard?category=${encodeURIComponent(getCategory())}`)
 }
 
 export function getMentor(): Promise<MentorStatus> {
-  return getJson<MentorStatus>("/me/mentor")
+  return getJson<MentorStatus>(`/me/mentor?category=${encodeURIComponent(getCategory())}`)
 }
 
 export function getMentorat(): Promise<MentoratView> {
