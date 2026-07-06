@@ -119,6 +119,16 @@ export function registerRoutes(app: Express): void {
     }
   })
 
+  // Nivelul Mentor (docs/00-DIRECTIE): eligibilitate din nivel + module absolvite
+  app.get("/me/mentor", async (req, res, next) => {
+    try {
+      const categoryId = (req.query.category as string) || "teens12_18"
+      res.json(await store.mentor(userIdOf(req), categoryId))
+    } catch (e) {
+      next(e)
+    }
+  })
+
   // Recomandare de parcurs după onboarding (docs/00-DIRECTIE §13: „Ușa, nu unghiul”)
   app.get("/me/recommendation", async (req, res, next) => {
     try {

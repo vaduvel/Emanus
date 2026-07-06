@@ -15,6 +15,7 @@ import {
   getFamilyTheme,
   graceMessage,
   isModuleCompletingReward,
+  mentorStatus as computeMentorStatus,
   moderatePost,
   teensM1C1,
 } from "@emanus/shared"
@@ -35,6 +36,7 @@ import type {
   GamState,
   GrowthScore,
   Lesson,
+  MentorStatus,
   ModerationResult,
   Module,
   NeedProfile,
@@ -230,6 +232,12 @@ async function applyProgress(
 async function dashboard(userId: string, categoryId = "teens12_18"): Promise<DashboardView> {
   if (useDb) return (await db()).getDashboard(userId, categoryId)
   return memDashboard(userId, categoryId)
+}
+
+// Nivelul Mentor (docs/00-DIRECTIE): eligibilitate din nivel + module absolvite.
+async function mentor(userId: string, categoryId = "teens12_18"): Promise<MentorStatus> {
+  const dash = await dashboard(userId, categoryId)
+  return computeMentorStatus(dash.gam)
 }
 
 // Ritualul zilnic „Timp cu Dumnezeu” (docs/00-DIRECTIE §2): versetul urmează axa cea mai fragedă.
@@ -518,6 +526,7 @@ export const store = {
   tree,
   applyProgress,
   dashboard,
+  mentor,
   dailyRitual,
   growth,
   recommendation,

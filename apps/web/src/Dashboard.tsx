@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import type { CSSProperties, ReactNode } from "react"
-import { Award, Flame, Lock } from "lucide-react"
+import { Award, Flame, GraduationCap, Lock } from "lucide-react"
 import { GROWTH_AXES } from "@emanus/shared"
-import type { DashboardView, GrowthAxisId, GrowthScore } from "@emanus/shared"
-import { getDashboard } from "./api"
+import type { DashboardView, GrowthAxisId, GrowthScore, MentorStatus } from "@emanus/shared"
+import { getDashboard, getMentor } from "./api"
 import { navigate } from "./router"
 
 const AXIS_LABEL: Record<GrowthAxisId, string> = {
@@ -15,14 +15,57 @@ const AXIS_LABEL: Record<GrowthAxisId, string> = {
   freedom: "Libertate",
 }
 
+const mentorCardStyle: CSSProperties = {
+  background: "var(--surface)",
+  border: "1px solid var(--border)",
+  borderRadius: "var(--radius-lg)",
+  boxShadow: "var(--shadow-sm)",
+  padding: 16,
+  marginTop: 8,
+  display: "flex",
+  flexDirection: "column",
+  gap: 8,
+}
+const mentorHeadStyle: CSSProperties = { display: "flex", alignItems: "center", gap: 8 }
+const mentorTitleStyle: CSSProperties = { fontWeight: 700, fontSize: "1rem", margin: 0 }
+const mentorIconStyle: CSSProperties = { color: "var(--accent)" }
+const mentorIconGoldStyle: CSSProperties = { color: "var(--gold)" }
+const barTrackStyle: CSSProperties = {
+  height: 8,
+  background: "var(--border)",
+  borderRadius: 999,
+  overflow: "hidden",
+}
+const mentorBtnStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 6,
+  alignSelf: "flex-start",
+  background: "var(--accent-soft)",
+  color: "var(--accent-strong)",
+  border: "1px solid var(--accent)",
+  borderRadius: "var(--radius-pill)",
+  padding: "7px 14px",
+  fontSize: "0.85rem",
+  fontWeight: 600,
+  boxShadow: "none",
+  cursor: "pointer",
+}
+
 export function Dashboard({ onBack }: { onBack: () => void }) {
   const [data, setData] = useState<DashboardView | null>(null)
+  const [mentor, setMentor] = useState<MentorStatus | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     getDashboard()
       .then(setData)
       .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)))
+    getMentor()
+      .then(setMentor)
+      .catch(() => {
+        /* statutul de mentor e opțional */
+      })
   }, [])
 
   if (error) return <p className="error">{error}</p>
@@ -60,6 +103,67 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
           <span className="dot dot--base" /> Înainte · <span className="dot dot--now" /> Acum
         </p>
       </div>
+
+      {mentor &&
+        (() => {
+          const barFillStyle: CSSProperties = {
+            width: `${mentor.progressPercent}%`,
+            height: "100%",
+            display: "block",
+            background: "var(--accent)",
+          }
+          return (
+            <section style={mentorCardStyle}>
+              <div style={mentorHeadStyle}>
+                <GraduationCap
+                  size={20}
+                  aria-hidden
+                  style={mentor.isMentor ? mentorIconGoldStyle : mentorIconStyle}
+                />
+                <h2 style={mentorTitleStyle}>{mentor.isMentor ? "Ești Mentor" : "Devino Mentor"}</h2>
+              </div>
+              {mentor.isMentor ? (
+                <>
+                  <p className="muted">
+                    Ai crescut destul cât să însoțești alți frați. Fii prezent, ascultă și roagă-te
+                    alături de ei.
+                  </p>
+                  <button
+                    type="button"
+                    style={mentorBtnStyle}
+                    onClick={() => navigate("/community")}
+                  >
+                    <GraduationCap size={15} aria-hidden />
+                    Însoțește comunitatea
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p className="muted">
+                    Continuă să crești ca să poți însoți alți frați pe drumul lor.
+                  </p>
+                  <div style={barTrackStyle}>
+                    <span style={barFillStyle} />
+                  </div>
+                  <p className="muted">
+                    {mentor.levelsRemaining > 0 &&
+                      `Încă ${mentor.levelsRemaining} ${
+                        mentor.levelsRemaining === 1 ? "nivel" : "niveluri"
+                      }`}
+                    {mentor.levelsRemaining > 0 && mentor.certificatesRemaining > 0 && " · "}
+                    {mentor.certificatesRemaining > 0 &&
+                      `${mentor.certificatesRemaining} ${
+                        mentor.certificatesRemaining === 1 ? "modul absolvit" : "module absolvite"
+                      }`}
+                    {mentor.levelsRemaining === 0 &&
+                      mentor.certificatesRemaining === 0 &&
+                      "Ești aproape acolo!"}
+                  </p>
+                </>
+              )}
+            </section>
+          )
+        })()}
 
       <div className="modules">
         <h2 className="section-title">Modulele mele</h2>

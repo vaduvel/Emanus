@@ -13,6 +13,7 @@ import type {
   GamState,
   GrowthScore,
   Lesson,
+  MentorStatus,
   ModerationResult,
   NeedProfile,
   PrayerLevel,
@@ -62,6 +63,10 @@ export function getDaily(): Promise<DailyView> {
 
 export function getDashboard(): Promise<DashboardView> {
   return getJson<DashboardView>("/me/dashboard")
+}
+
+export function getMentor(): Promise<MentorStatus> {
+  return getJson<MentorStatus>("/me/mentor")
 }
 
 export function getGrowth(): Promise<GrowthScore[]> {
