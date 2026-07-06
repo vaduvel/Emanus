@@ -83,6 +83,12 @@ export function cancelMentorSession(id: string): Promise<{ ok: boolean }> {
   return postJson<{ ok: boolean }>(`/me/mentorat/${id}/cancel`, {})
 }
 
+// Login LAST: leagă progresul anonim curent (x-user-id) de id-ul stabil Supabase.
+// Se apelează ÎNAINTE de a schimba id-ul local, ca headerul să conțină id-ul anonim.
+export function linkAccount(toUserId: string): Promise<{ ok: boolean; userId: string }> {
+  return postJson<{ ok: boolean; userId: string }>("/me/link", { toUserId })
+}
+
 export function getGrowth(): Promise<GrowthScore[]> {
   return getJson<GrowthScore[]>("/me/growth")
 }

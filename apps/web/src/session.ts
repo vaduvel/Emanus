@@ -1,9 +1,11 @@
-// Sesiune client (Faza 4). Fără auth real încă — id-ul utilizatorului stă în
-// localStorage și se trimite ca header x-user-id. Se înlocuiește cu Supabase Auth.
+// Sesiune client. Id-ul utilizatorului stă în localStorage și se trimite ca header
+// x-user-id. La login (ultimul pas) id-ul anonim e înlocuit cu id-ul stabil Supabase,
+// iar progresul se leagă pe server (POST /me/link).
 const K_USER = "emanus_user_id"
 const K_CAT = "emanus_category"
 const K_ONB = "emanus_onboarded"
 const K_STAGE = "emanus_faith_stage"
+const K_EMAIL = "emanus_email"
 
 export function getUserId(): string {
   try {
@@ -67,4 +69,33 @@ export function setOnboarded(): void {
   } catch {
     /* ignore */
   }
+}
+
+// --- Autentificare (login LAST) ---
+export function getEmail(): string {
+  try {
+    return localStorage.getItem(K_EMAIL) ?? ""
+  } catch {
+    return ""
+  }
+}
+
+export function setEmail(email: string): void {
+  try {
+    localStorage.setItem(K_EMAIL, email)
+  } catch {
+    /* ignore */
+  }
+}
+
+export function clearEmail(): void {
+  try {
+    localStorage.removeItem(K_EMAIL)
+  } catch {
+    /* ignore */
+  }
+}
+
+export function isSignedIn(): boolean {
+  return getEmail().length > 0
 }
