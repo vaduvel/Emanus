@@ -103,6 +103,9 @@ const memFamilyPrayers = new Map<string, FamilyPrayer[]>()
 const memGrowthProfiles = new Map<string, NeedProfile>()
 // Rezervări de mentorat per utilizator (slotId -> slot rezervat). Se persistă la login real.
 const memMentorBookings = new Map<string, Map<string, MentorSlot>>()
+// Sloturi oferite de mentori (globale, vizibile tuturor). Se persistă la login real.
+const memOfferedSlots: MentorSlot[] = []
+let memOfferSeq = 0
 let memUserSeq = 0
 let memPostSeq = 0
 let memPrayerSeq = 0
@@ -246,23 +249,32 @@ async function mentor(userId: string, categoryId = "teens12_18"): Promise<Mentor
 }
 
 // --- Calendar de mentorat (docs/00-DIRECTIE) ---
-// Sloturi demo + rezervări in-memory. Se persistă la login real.
+// Sloturi demo + sloturi oferite de mentori + rezervări in-memory. Se persistă la login real.
 function byStart(a: MentorSlot, b: MentorSlot): number {
   return a.startsAt < b.startsAt ? -1 : a.startsAt > b.startsAt ? 1 : 0
 }
 
 function mentorat(userId: string): MentoratView {
-  const all = buildDemoMentorSlots(new Date())
+  const demo = buildDemoMentorSlots(new Date())
+  const offeredOpen = memOfferedSlots.filter((s) => s.status === "open")
+  const pool = [...demo, ...offeredOpen]
   const mine = memMentorBookings.get(userId) ?? new Map<string, MentorSlot>()
-  const upcoming = all.filter((s) => !mine.has(s.id)).sort(byStart)
+  const upcoming = pool.filter((s) => !mine.has(s.id)).sort(byStart)
   const mySessions = [...mine.values()].sort(byStart)
-  return { upcoming, mySessions }
+  const myOfferedSlots = memOfferedSlots.filter((s) => s.offeredBy === userId).sort(byStart)
+  return { upcoming, mySessions, myOfferedSlots }
 }
 
 function bookMentorSlot(userId: string, slotId: string): MentorSlot | undefined {
-  const slot = buildDemoMentorSlots(new Date()).find((s) => s.id === slotId)
-  if (!slot) return undefined
-  const booked: MentorSlot = { ...slot, status: "booked", bookedBy: userId }
+  const offered = memOfferedSlots.find((s) => s.id === slotId)
+  if (offered && offered.status === "booked") return undefined
+  const base = offered ?? buildDemoMentorSlots(new Date()).find((s) => s.id === slotId)
+  if (!base) return undefined
+  const booked: MentorSlot = { ...base, status: "booked", bookedBy: userId }
+  if (offered) {
+    offered.status = "booked"
+    offered.bookedBy = userId
+  }
   const mine = memMentorBookings.get(userId) ?? new Map<string, MentorSlot>()
   mine.set(slotId, booked)
   memMentorBookings.set(userId, mine)
@@ -273,6 +285,40 @@ function cancelMentorSlot(userId: string, slotId: string): boolean {
   const mine = memMentorBookings.get(userId)
   if (!mine || !mine.has(slotId)) return false
   mine.delete(slotId)
+  // Dacă era un slot oferit, îl redeschidem pentru alții.
+  const offered = memOfferedSlots.find((s) => s.id === slotId)
+  if (offered && offered.bookedBy === userId) {
+    offered.status = "open"
+    offered.bookedBy = undefined
+  }
+  return true
+}
+
+// Un mentor oferă un slot propriu (subiect + dată/oră + durată).
+function offerMentorSlot(
+  userId: string,
+  input: { mentorName: string; topic: string; startsAt: string; durationMin: number },
+): MentorSlot {
+  const slot: MentorSlot = {
+    id: `offer-${++memOfferSeq}`,
+    mentorName: input.mentorName,
+    topic: input.topic,
+    startsAt: input.startsAt,
+    durationMin: input.durationMin,
+    status: "open",
+    offeredBy: userId,
+  }
+  memOfferedSlots.unshift(slot)
+  return slot
+}
+
+// Un mentor retrage un slot oferit (doar dacă e încă neprogramat).
+function withdrawMentorSlot(userId: string, slotId: string): boolean {
+  const idx = memOfferedSlots.findIndex(
+    (s) => s.id === slotId && s.offeredBy === userId && s.status === "open",
+  )
+  if (idx === -1) return false
+  memOfferedSlots.splice(idx, 1)
   return true
 }
 
@@ -299,6 +345,10 @@ function linkAccount(fromUserId: string, toUserId: string): { ok: boolean; userI
   reassignMap(memFamilyPrayers, fromUserId, toUserId)
   reassignMap(memGrowthProfiles, fromUserId, toUserId)
   reassignMap(memMentorBookings, fromUserId, toUserId)
+  for (const s of memOfferedSlots) {
+    if (s.offeredBy === fromUserId) s.offeredBy = toUserId
+    if (s.bookedBy === fromUserId) s.bookedBy = toUserId
+  }
   for (const p of memPosts) {
     if (p.userId === fromUserId) p.userId = toUserId
   }
@@ -552,7 +602,7 @@ async function createPost(
   const post: CommunityPostView = {
     id: `mem-post-${++memPostSeq}`,
     userId,
-    author: { anonName: "Explorator", avatar: "🌱" },
+    author: { anonName: "Explorator", avatar: "\ud83c\udf31" },
     categoryId,
     body,
     kind,
@@ -601,6 +651,8 @@ export const store = {
   mentorat,
   bookMentorSlot,
   cancelMentorSlot,
+  offerMentorSlot,
+  withdrawMentorSlot,
   linkAccount,
   dailyRitual,
   growth,

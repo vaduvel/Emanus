@@ -354,10 +354,8 @@ export function registerRoutes(app: Express): void {
         text,
         postKind,
       )
-      // La o cerere de rugăciune vizibilă, notifică comunitatea prin push (best-effort).
-      if (postKind === "prayer_request" && result.post.status === "visible") {
-        store.notifyPrayerRequest(result.post).catch(() => {})
-      }
+      // TODO(push): la o cerere de rugăciune vizibilă, notifică comunitatea
+      // („cineva a cerut rugăciune") când există infra de push.
       res.json({
         ...result,
         crisisResources: result.moderation.crisis ? CRISIS_RESOURCES : undefined,
@@ -376,24 +374,5 @@ export function registerRoutes(app: Express): void {
     } catch (e) {
       next(e)
     }
-  })
-
-  // Push: cheia publică VAPID pentru abonare din client (gol dacă push nu e configurat)
-  app.get("/push/public-key", (_req, res) => {
-    res.json({ key: store.pushPublicKey() })
-  })
-
-  // Push: înregistrează / dezinregistrează un abonament al utilizatorului curent
-  app.post("/push/subscribe", (req, res) => {
-    const sub = req.body?.subscription
-    if (!sub || typeof sub !== "object" || typeof sub.endpoint !== "string") {
-      return res.status(400).json({ error: "bad_subscription" })
-    }
-    res.json(store.savePushSubscription(userIdOf(req), sub))
-  })
-
-  app.post("/push/unsubscribe", (req, res) => {
-    const endpoint = typeof req.body?.endpoint === "string" ? req.body.endpoint : ""
-    res.json(store.removePushSubscription(userIdOf(req), endpoint))
   })
 }
