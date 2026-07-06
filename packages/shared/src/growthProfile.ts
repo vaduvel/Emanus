@@ -65,6 +65,18 @@ export const NEED_TAXONOMY: NeedTag[] = [
     axis: "identity",
     keywords: ["ma compar", "comparati", "invidi", "gelos", "altii sunt mai"],
   },
+  {
+    id: "perfectionism",
+    label: "Perfecționism și presiune",
+    axis: "identity",
+    keywords: ["perfectionis", "trebuie sa fiu perfect", "totul perfect", "nu am voie sa gresesc", "frica de greseli", "presiune sa reusesc"],
+  },
+  {
+    id: "body_image",
+    label: "Imagine de sine și corp",
+    axis: "identity",
+    keywords: ["corpul meu", "cum arat", "nu imi place cum arat", "sunt gras", "sunt urat", "greutatea mea", "aspectul meu"],
+  },
   // --- Pace ---
   {
     id: "anxiety",
@@ -89,6 +101,18 @@ export const NEED_TAXONOMY: NeedTag[] = [
     label: "Singurătate",
     axis: "emotional_peace",
     keywords: ["singur", "insingur", "izolat", "nimeni langa mine"],
+  },
+  {
+    id: "burnout",
+    label: "Epuizare și suprasolicitare",
+    axis: "emotional_peace",
+    keywords: ["epuiz", "coples", "suprasolicit", "nu mai pot", "surmen", "ars pe dinauntru", "prea multe pe cap"],
+  },
+  {
+    id: "grief",
+    label: "Doliu și pierdere",
+    axis: "emotional_peace",
+    keywords: ["doliu", "a murit", "moarte", "pierderea", "am pierdut pe", "jale", "dupa ce a murit"],
   },
   // --- Relații ---
   {
@@ -121,6 +145,24 @@ export const NEED_TAXONOMY: NeedTag[] = [
     axis: "relationships",
     keywords: ["prieten", "apartenen", "relatii cu ceilalti", "sa fac parte"],
   },
+  {
+    id: "singleness",
+    label: "Simțământ de necesitate a unei relații",
+    axis: "relationships",
+    keywords: ["necasatorit", "vreau o relatie", "nu am pe nimeni", "sa ma casatoresc", "nu gasesc pe cineva", "as vrea o familie"],
+  },
+  {
+    id: "family_origin",
+    label: "Familia de origine",
+    axis: "relationships",
+    keywords: ["parintii mei", "tatal meu", "mama mea", "familia in care am crescut", "fratele meu", "sora mea", "cum am fost crescut"],
+  },
+  {
+    id: "boundaries",
+    label: "Limite sănătoase",
+    axis: "relationships",
+    keywords: ["limite", "sa spun nu", "ma calca", "manipul", "profita de mine", "nu stiu sa refuz"],
+  },
   // --- Credință ---
   {
     id: "doubt",
@@ -145,6 +187,24 @@ export const NEED_TAXONOMY: NeedTag[] = [
     label: "Sens și scop",
     axis: "living_faith",
     keywords: ["sens", "scop", "rost", "de ce traiesc", "chemare", "planul lui dumnezeu"],
+  },
+  {
+    id: "church",
+    label: "Biserică și comunitate de credință",
+    axis: "living_faith",
+    keywords: ["biseric", "adunare", "congregat", "comunitatea de credinta", "fratii din biserica"],
+  },
+  {
+    id: "surrender",
+    label: "Predare și încredere în Dumnezeu",
+    axis: "living_faith",
+    keywords: ["predare", "sa ma predau", "vointa lui dumnezeu", "sa las totul in mainile", "abandon in fata lui dumnezeu", "sa ma incred"],
+  },
+  {
+    id: "spiritual_dryness",
+    label: "Răceală spirituală",
+    axis: "living_faith",
+    keywords: ["departe de dumnezeu", "indepartat de dumnezeu", "raceala spiritual", "uscaciune", "nu mai simt pe dumnezeu", "nu mai simt nimic"],
   },
   // --- Caracter ---
   {
@@ -171,6 +231,18 @@ export const NEED_TAXONOMY: NeedTag[] = [
     axis: "character",
     keywords: ["disciplin", "amanare", "procrastin", "lene", "nu am vointa"],
   },
+  {
+    id: "honesty",
+    label: "Sinceritate și adevăr",
+    axis: "character",
+    keywords: ["minciun", "mintit", "nesincer", "ipocri", "necinstit", "insel"],
+  },
+  {
+    id: "materialism",
+    label: "Bani și materialism",
+    axis: "character",
+    keywords: ["materialis", "lacomi", "avar", "posesiun", "bogati", "sa am mai mult", "obsedat de bani"],
+  },
   // --- Libertate ---
   {
     id: "addiction",
@@ -189,6 +261,18 @@ export const NEED_TAXONOMY: NeedTag[] = [
     label: "Ispită și păcat repetat",
     axis: "freedom",
     keywords: ["ispit", "tentat", "pacat repetat", "recad", "cad mereu"],
+  },
+  {
+    id: "food",
+    label: "Mâncare și mâncat emoțional",
+    axis: "freedom",
+    keywords: ["mancare", "mananc prea mult", "supraalimentare", "pofta de mancare", "manc pe nervi", "mancat emotional", "nu ma pot opri din mancat"],
+  },
+  {
+    id: "lust",
+    label: "Pofte și puritate sexuală",
+    axis: "freedom",
+    keywords: ["curvie", "imoralit", "ganduri necurate", "desfrau", "necurati", "dorinte sexuale", "puritate"],
   },
 ]
 
