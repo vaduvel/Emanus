@@ -1,5 +1,6 @@
 import type {
   Category,
+  CommunityPostKind,
   CommunityPostView,
   CrisisResource,
   DailyView,
@@ -129,8 +130,16 @@ export interface CreatePostResult {
   crisisResources?: CrisisResource[]
 }
 
-export function createPost(categoryId: string, body: string): Promise<CreatePostResult> {
-  return postJson<CreatePostResult>("/community", { categoryId, body })
+export function createPost(
+  categoryId: string,
+  body: string,
+  kind: CommunityPostKind = "post",
+): Promise<CreatePostResult> {
+  return postJson<CreatePostResult>("/community", { categoryId, body, kind })
+}
+
+export function prayForPost(postId: string): Promise<{ prayCount: number }> {
+  return postJson<{ prayCount: number }>(`/community/${postId}/pray`, {})
 }
 
 export function getCrisis(): Promise<{ resources: CrisisResource[] }> {

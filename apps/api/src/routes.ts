@@ -249,18 +249,38 @@ export function registerRoutes(app: Express): void {
     }
   })
 
-  // Comunitate: creează o postare (cu moderare automată + detectare criză)
+  // Comunitate: creează o postare (cu moderare automată + detectare criză).
+  // kind = "prayer_request" apare în feed ca „[user] a cerut rugăciune”.
   app.post("/community", async (req, res, next) => {
     try {
-      const { categoryId, body } = req.body ?? {}
+      const { categoryId, body, kind } = req.body ?? {}
       const text = typeof body === "string" ? body.trim() : ""
       if (!text) return res.status(400).json({ error: "empty" })
       if (text.length > MAX_POST_LENGTH) return res.status(400).json({ error: "too_long" })
-      const result = await store.createPost(userIdOf(req), categoryId || "teens12_18", text)
+      const postKind = kind === "prayer_request" ? "prayer_request" : "post"
+      const result = await store.createPost(
+        userIdOf(req),
+        categoryId || "teens12_18",
+        text,
+        postKind,
+      )
+      // TODO(push): la o cerere de rugăciune vizibilă, notifică comunitatea
+      // („cineva a cerut rugăciune”) când există infra de push.
       res.json({
         ...result,
         crisisResources: result.moderation.crisis ? CRISIS_RESOURCES : undefined,
       })
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // Comunitate: „Mă rog pentru tine” — incrementează contorul unei cereri de rugăciune
+  app.post("/community/:id/pray", async (req, res, next) => {
+    try {
+      const updated = await store.prayForPost(userIdOf(req), req.params.id)
+      if (!updated) return res.status(404).json({ error: "not_found" })
+      res.json(updated)
     } catch (e) {
       next(e)
     }

@@ -19,6 +19,7 @@ import {
 } from "@emanus/shared"
 import type {
   Category,
+  CommunityPostKind,
   CommunityPostView,
   Course,
   DailyView,
@@ -69,6 +70,12 @@ const memGam = new Map<string, GamState>()
 const memGrowth = new Map<string, GrowthScore[]>()
 const memDone = new Map<string, Set<string>>()
 const memPosts: CommunityPostView[] = []
+// Metadate cerere-de-rugăciune (kind + contor + cine s-a rugat), stratificate peste
+// posturi indiferent de sursa lor (in-memory sau DB). Se persistă la login real.
+const memPostMeta = new Map<
+  string,
+  { kind: CommunityPostKind; prayCount: number; prayedBy: Set<string> }
+>()
 const memPrayers = new Map<string, PrayerRequest[]>()
 const memFamilies = new Map<string, Family>()
 const memFamilyPrayers = new Map<string, FamilyPrayer[]>()
@@ -385,19 +392,32 @@ async function setBaseline(
   return memSetBaseline(userId, baselines)
 }
 
+// Îmbogățește un post cu metadatele de cerere-de-rugăciune (kind + contor).
+function enrichPost(p: CommunityPostView): CommunityPostView {
+  const meta = memPostMeta.get(p.id)
+  return {
+    ...p,
+    kind: meta?.kind ?? p.kind ?? "post",
+    prayCount: meta?.prayCount ?? p.prayCount ?? 0,
+  }
+}
+
 async function createPost(
   userId: string,
   categoryId: string,
   body: string,
+  kind: CommunityPostKind = "post",
 ): Promise<CreatePostResult> {
   const moderation = moderatePost(body)
   if (useDb) {
-    const post = await (await db()).createPost({
+    const dbPost = await (await db()).createPost({
       userId,
       categoryId,
       body,
       status: moderation.decision,
     })
+    const post: CommunityPostView = { ...dbPost, kind, prayCount: 0 }
+    memPostMeta.set(post.id, { kind, prayCount: 0, prayedBy: new Set() })
     return { post, moderation }
   }
   const post: CommunityPostView = {
@@ -406,16 +426,38 @@ async function createPost(
     author: { anonName: "Explorator", avatar: "🌱" },
     categoryId,
     body,
+    kind,
+    prayCount: 0,
     createdAt: new Date().toISOString(),
     status: moderation.decision,
   }
   memPosts.unshift(post)
+  memPostMeta.set(post.id, { kind, prayCount: 0, prayedBy: new Set() })
   return { post, moderation }
 }
 
+// „Mă rog pentru tine”: incrementează contorul cumulativ (o dată per utilizator).
+async function prayForPost(
+  userId: string,
+  postId: string,
+): Promise<{ prayCount: number } | undefined> {
+  const meta = memPostMeta.get(postId)
+  if (!meta) return undefined
+  if (!meta.prayedBy.has(userId)) {
+    meta.prayedBy.add(userId)
+    meta.prayCount += 1
+  }
+  return { prayCount: meta.prayCount }
+}
+
 async function listCommunity(categoryId: string): Promise<CommunityPostView[]> {
-  if (useDb) return (await db()).listPosts(categoryId, "visible")
-  return memPosts.filter((p) => p.categoryId === categoryId && p.status === "visible")
+  if (useDb) {
+    const base = await (await db()).listPosts(categoryId, "visible")
+    return base.map(enrichPost)
+  }
+  return memPosts
+    .filter((p) => p.categoryId === categoryId && p.status === "visible")
+    .map(enrichPost)
 }
 
 export const store = {
@@ -442,5 +484,6 @@ export const store = {
   createUser,
   setBaseline,
   createPost,
+  prayForPost,
   listCommunity,
 }
