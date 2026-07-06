@@ -140,6 +140,28 @@ export function registerRoutes(app: Express): void {
     }
   })
 
+  // „Creșterea mea”: al doilea onboarding profund — text liber -> profil de nevoi + conținut adaptiv
+  app.post("/me/growth-profile", async (req, res, next) => {
+    try {
+      const text = typeof req.body?.text === "string" ? req.body.text.trim() : ""
+      if (!text) return res.status(400).json({ error: "empty" })
+      if (text.length > 2000) return res.status(400).json({ error: "too_long" })
+      const categoryId = (req.body?.categoryId as string) || "teens12_18"
+      res.json(await store.saveGrowthProfile(userIdOf(req), categoryId, text))
+    } catch (e) {
+      next(e)
+    }
+  })
+
+  // „Creșterea mea”: profilul de nevoi salvat (dacă există)
+  app.get("/me/growth-profile", async (req, res, next) => {
+    try {
+      res.json({ profile: await store.getGrowthProfile(userIdOf(req)) })
+    } catch (e) {
+      next(e)
+    }
+  })
+
   // Antrenorul de rugăciune: nivelurile progresive (docs/00-DIRECTIE §4)
   app.get("/me/prayer/levels", (_req, res) => {
     res.json({ levels: store.prayerLevels() })

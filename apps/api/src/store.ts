@@ -2,6 +2,7 @@ import {
   CATEGORY_CONFIGS,
   FAMILY_THEMES,
   PRAYER_LEVELS,
+  analyzeGrowthText,
   applyAxisDeltas,
   applyReward,
   buildDashboard,
@@ -36,6 +37,7 @@ import type {
   Lesson,
   ModerationResult,
   Module,
+  NeedProfile,
   PrayerLevel,
   PrayerRequest,
   RecommendationView,
@@ -62,6 +64,20 @@ export interface CreatePostResult {
   moderation: ModerationResult
 }
 
+export interface AdaptiveCourse {
+  moduleId: string
+  courseId: string
+  title: string
+  struggle: string
+  truth: string
+  firstLessonId?: string
+}
+
+export interface GrowthProfileResult {
+  profile: NeedProfile
+  adaptive: AdaptiveCourse | null
+}
+
 // --- Fallback in-memory (dev fără DB), din seed-ul partajat @emanus/shared ---
 const memModules = new Map<string, Module>([[teensM1C1.module.id, teensM1C1.module]])
 const memCourses = new Map<string, Course>([[teensM1C1.course.id, teensM1C1.course]])
@@ -79,6 +95,7 @@ const memPostMeta = new Map<
 const memPrayers = new Map<string, PrayerRequest[]>()
 const memFamilies = new Map<string, Family>()
 const memFamilyPrayers = new Map<string, FamilyPrayer[]>()
+const memGrowthProfiles = new Map<string, NeedProfile>()
 let memUserSeq = 0
 let memPostSeq = 0
 let memPrayerSeq = 0
@@ -392,6 +409,39 @@ async function setBaseline(
   return memSetBaseline(userId, baselines)
 }
 
+// --- „Creșterea mea”: al doilea onboarding profund (docs/00-DIRECTIE) ---
+// Text liber -> profil de nevoi (axe + etichete) -> conținut adaptiv (modulul axei dominante).
+async function saveGrowthProfile(
+  userId: string,
+  categoryId: string,
+  text: string,
+): Promise<GrowthProfileResult> {
+  const profile = analyzeGrowthText(text)
+  memGrowthProfiles.set(userId, profile)
+  const modules = await tree(categoryId)
+  const match = profile.primaryAxis
+    ? modules.find((m) => m.axis === profile.primaryAxis)
+    : undefined
+  const course = match?.courses[0]
+  const firstLesson = course?.lessons[0]
+  const adaptive: AdaptiveCourse | null =
+    match && course
+      ? {
+          moduleId: match.id,
+          courseId: course.id,
+          title: course.title,
+          struggle: course.struggle,
+          truth: course.truth,
+          firstLessonId: firstLesson?.id,
+        }
+      : null
+  return { profile, adaptive }
+}
+
+async function getGrowthProfile(userId: string): Promise<NeedProfile | null> {
+  return memGrowthProfiles.get(userId) ?? null
+}
+
 // Îmbogățește un post cu metadatele de cerere-de-rugăciune (kind + contor).
 function enrichPost(p: CommunityPostView): CommunityPostView {
   const meta = memPostMeta.get(p.id)
@@ -483,6 +533,8 @@ export const store = {
   markFamilyPrayerAnswered,
   createUser,
   setBaseline,
+  saveGrowthProfile,
+  getGrowthProfile,
   createPost,
   prayForPost,
   listCommunity,
