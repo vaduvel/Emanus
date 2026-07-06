@@ -66,7 +66,7 @@ title: 'Emanus — Draft conținut · 👩 Adulți — femei (18+)'
 	- 🔵 „Pot să respir — nu totul depinde de mine.”
 </callout>
 <callout icon="🧔" color="green_bg">
-	Data viitoare când te definești prin cât ai bifat, înlocuiește gândul: *„Sunt fiica iubită a lui Dumnezeu — asta nu se clă­tină azi.”*
+	Data viitoare când te definești prin cât ai bifat, înlocuiește gândul: *„Sunt fiica iubită a lui Dumnezeu — asta nu se clatină azi.”*
 </callout>
 <callout icon="✅" color="blue_bg">
 	**Pasul tău de azi (alege unul):**
@@ -82,6 +82,222 @@ title: 'Emanus — Draft conținut · 👩 Adulți — femei (18+)'
 </callout>
 
 ---
+## Lecția 2 (scrisă complet) — „Valoarea nu vine din cât fac”
+<callout icon="🧔" color="green_bg">
+	Bun venit înapoi. Azi atingem ceva ce multe femei simt, dar rar spun: oboseala de a demonstra mereu că meriți.
+</callout>
+<callout icon="🧔" color="green_bg">
+	Sincer: simți uneori că, dacă te oprești din făcut, valoarea ta scade?
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Tu alegi:**
+	- 🔵 Da — dacă nu produc, mă simt vinovată.
+	- 🔵 Câteodată, mai ales în zilele grele.
+	- 🔵 Nu, am învățat să mă opresc.
+</callout>
+<details>
+<summary>Dacă alegi: „Da / mă simt vinovată”</summary>
+	<callout icon="🧔" color="green_bg">
+		E o povară grea — și nedreaptă. Ai fost învățată că odihna se merită. Dumnezeu spune altceva: odihna e un dar, nu o recompensă.
+	</callout>
+</details>
+<callout icon="🧔" color="green_bg">
+	Minciuna: *„Valorez cât reușesc să duc.”* Dar dragostea Lui a venit **înainte** să faci ceva pentru El. Nimic din ce faci nu o mărește; nimic din ce ratezi nu o micșorează.
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.”** — *Matei 11:28*
+</callout>
+<callout icon="🧔" color="green_bg">
+	Isus nu spune „munciți mai mult ca să meritați odihna”. Spune „veniți”. Odihna e locul de unde pornești, nu premiul de la capăt.
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„În zadar vă sculați de dimineață… El dă preaiubiților Lui pâine când dorm.”** — *Psalmul 127:2*
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Ce adevăr te eliberează acum?**
+	- 🔵 „Pot să mă opresc fără să pierd ceva.”
+	- 🔵 „Odihna e dar, nu recompensă.”
+	- 🔵 „Sunt iubită și când nu produc nimic.”
+</callout>
+<callout icon="🧔" color="green_bg">
+	O pauză nu e lene. E felul în care recunoști că lumea nu stă pe umerii tăi — ci în mâinile Lui.
+</callout>
+<callout icon="✅" color="blue_bg">
+	**Pasul tău de azi (alege unul):**
+	- [ ] Ia 10 minute de odihnă reală, fără vinovăție.
+	- [ ] Spune „nu” la o sarcină în plus, azi.
+	- [ ] Notează 3 lucruri pe care le prețuiești la tine, care nu țin de ce faci.
+</callout>
+<callout icon="🙏" color="purple_bg">
+	*„Tată, ajută-mă să cred că sunt iubită și când mă opresc. Îți predau lista mea nesfârșită. Amin.”*
+</callout>
+<callout icon="🏅" color="green_bg">
+	**Lecția 2 gata.** +1 streak · insigna **„Odihnă fără vină”**. Mâine: *„Când mă simt nevăzută”*.
+</callout>
+
+---
+## Lecția 3 (scrisă complet) — „Când mă simt nevăzută”
+<callout icon="🧔" color="green_bg">
+	Sunt zile în care faci totul — și nimeni nu observă. Munca ta e reală, dar parcă invizibilă. Azi vorbim despre asta.
+</callout>
+<callout icon="🧔" color="green_bg">
+	Ți se întâmplă să simți că efortul tău trece neobservat?
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Tu alegi:**
+	- 🔵 Da, des mă simt nevăzută.
+	- 🔵 Uneori, și doare mai mult decât recunosc.
+	- 🔵 Rar — am oameni care mă văd.
+</callout>
+<details>
+<summary>Dacă alegi: „Da / doare”</summary>
+	<callout icon="🧔" color="green_bg">
+		Mulțumesc că ai spus-o. E o durere tăcută. Vestea bună: chiar dacă oamenii ratează ce faci, există Cineva căruia nu-I scapă nimic din tine.
+	</callout>
+</details>
+<callout icon="🧔" color="green_bg">
+	În Biblie, o femeie singură și disprețuită, Agar, în pustie, Îi dă lui Dumnezeu un nume nou: „Tu ești Dumnezeul care mă vede.”
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„Ea a numit… pe Domnul care îi vorbise: «Tu ești El-Roi» (Dumnezeul care mă vede).”** — *Geneza 16:13*
+</callout>
+<callout icon="🧔" color="green_bg">
+	Nu ești invizibilă. Cel mai important martor al vieții tale te vede exact acolo unde ești, în ce faci fără aplauze.
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„Tatăl tău, care vede în ascuns, îți va răsplăti.”** — *Matei 6:4*
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Ce adevăr îți încălzește inima?**
+	- 🔵 „Dumnezeu mă vede, chiar acum.”
+	- 🔵 „Munca mea ascunsă nu e degeaba.”
+	- 🔵 „Nu depind de aplauze ca să contez.”
+</callout>
+<callout icon="🧔" color="green_bg">
+	Când te simți trecută cu vederea, spune-ți: *„Sunt văzută de El-Roi.”* Nu ești singură în ce duci.
+</callout>
+<callout icon="✅" color="blue_bg">
+	**Pasul tău de azi (alege unul):**
+	- [ ] Scrie-I lui Dumnezeu un rând sincer despre ce nu vede nimeni.
+	- [ ] Fă un lucru bun în ascuns, doar pentru El.
+	- [ ] Spune cuiva un „te văd și îți mulțumesc” — dăruiește ce ai nevoie.
+</callout>
+<callout icon="🙏" color="purple_bg">
+	*„Tată, mulțumesc că mă vezi când nimeni nu vede. Ajută-mă să trăiesc pentru privirea Ta. Amin.”*
+</callout>
+<callout icon="🏅" color="green_bg">
+	**Lecția 3 gata.** +1 streak · insigna **„Văzută de El-Roi”**. Mâine: *„Vinovăția și harul”*.
+</callout>
+
+---
+## Lecția 4 (scrisă complet) — „Vinovăția și harul”
+<callout icon="🧔" color="green_bg">
+	Multe femei duc o listă tăcută de „n-am făcut destul”: pentru copii, pentru soț, pentru Dumnezeu. Azi punem lista jos.
+</callout>
+<callout icon="🧔" color="green_bg">
+	Te însoțește des sentimentul că, orice ai face, tot nu e de ajuns?
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Tu alegi:**
+	- 🔵 Da, aproape zilnic.
+	- 🔵 Uneori mă lovește puternic.
+	- 🔵 Am învățat să-l las mai ușor.
+</callout>
+<details>
+<summary>Dacă alegi: „Da / zilnic”</summary>
+	<callout icon="🧔" color="green_bg">
+		E epuizant să trăiești cu un judecător intern care nu tace. Vestea Evangheliei e că verdictul a fost deja dat — și nu e „vinovată”, ci „iubită și iertată”.
+	</callout>
+</details>
+<callout icon="🧔" color="green_bg">
+	E o diferență între vină (de la Dumnezeu, blândă, spre schimbare) și rușine (te spune „ești rea”). Harul răspunde amândurora: te ridică, nu te apasă.
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„Acum dar nu este nicio osândire pentru cei ce sunt în Hristos Isus.”** — *Romani 8:1*
+</callout>
+<callout icon="🧔" color="green_bg">
+	Niciuna. Nu „mai puțină”. Ce n-ai reușit tu, a acoperit El. Nu trebuie să-ți plătești vina cu oboseală și autopedeapsă.
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„Cât este de departe răsăritul de apus, atât de mult depărtează El fărădelegile noastre de la noi.”** — *Psalmul 103:12*
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Ce adevăr vrei să primești?**
+	- 🔵 „Nu mai e nicio osândire pentru mine.”
+	- 🔵 „Harul acoperă ce n-am reușit.”
+	- 🔵 „Pot să pun jos lista de vinovății.”
+</callout>
+<callout icon="🧔" color="green_bg">
+	Data viitoare când vinovăția strigă, întreab-o: *„E de la Dumnezeu, spre bine — sau e rușine care mă apasă?”* Apoi primește harul.
+</callout>
+<callout icon="✅" color="blue_bg">
+	**Pasul tău de azi (alege unul):**
+	- [ ] Scrie o vină pe care o porți și, dedesubt: *„Iertată prin har.”*
+	- [ ] Primește iertarea cu voce tare, ca pe un dar.
+	- [ ] Renunță la o autopedeapsă (o critică pe care ți-o repeți).
+</callout>
+<callout icon="🙏" color="purple_bg">
+	*„Tată, mulțumesc că nu mai e osândire pentru mine. Ia povara vinovăției și dă-mi harul Tău. Amin.”*
+</callout>
+<callout icon="🏅" color="green_bg">
+	**Lecția 4 gata.** +1 streak · insigna **„Fără osândire”**. Mâine: *„Chemarea mea”*.
+</callout>
+
+---
+## Lecția 5 (scrisă complet) — „Chemarea mea”
+<callout icon="🧔" color="green_bg">
+	Ultima lecție din curs. Uneori viața pare doar un șir de sarcini. Azi căutăm firul de rost care le leagă.
+</callout>
+<callout icon="🧔" color="green_bg">
+	Simți că zilele tale sunt „doar de bifat”, fără un sens mai mare?
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Tu alegi:**
+	- 🔵 Da, de multe ori mă întreb „la ce bun?”
+	- 🔵 Uneori întrezăresc un rost.
+	- 🔵 Îmi cunosc destul de bine chemarea.
+</callout>
+<details>
+<summary>Dacă alegi: „Da / la ce bun”</summary>
+	<callout icon="🧔" color="green_bg">
+		E o întrebare bună, nu un semn de slăbiciune. Chemarea ta nu e neapărat un rol nou — e adesea felul în care Dumnezeu vrea să-ți folosească darurile chiar acolo unde ești.
+	</callout>
+</details>
+<callout icon="🧔" color="green_bg">
+	Nu ești o mașină de sarcini. Ești lucrarea Lui, făcută cu un scop — nu doar ca să faci, ci ca să aduci ceva bun în lume prin ceea ce doar tu poți da.
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„Suntem lucrarea Lui și am fost zidiți… pentru faptele bune pe care le-a pregătit mai dinainte.”** — *Efeseni 2:10*
+</callout>
+<callout icon="🧔" color="green_bg">
+	Chemarea începe cu o întrebare simplă: „Ce dar am pus deoparte?” Poate un talent, o blândețe, o pricepere. Un pas mic spre el schimbă tonul întregii săptămâni.
+</callout>
+<callout icon="📖" color="yellow_bg">
+	**„Ca niște buni ispravnici ai harului… fiecare să slujească altora după darul pe care l-a primit.”** — *1 Petru 4:10*
+</callout>
+<callout icon="👉" color="blue_bg">
+	**Ce adevăr vrei să iei cu tine?**
+	- 🔵 „Am un rost, nu doar sarcini.”
+	- 🔵 „Darul meu contează pentru cineva.”
+	- 🔵 „Pot face un pas mic spre chemarea mea.”
+</callout>
+<callout icon="🧔" color="green_bg">
+	Nu trebuie să-ți schimbi viața peste noapte. Un singur pas spre darul tău, azi, e destul ca să pornească drumul.
+</callout>
+<callout icon="✅" color="blue_bg">
+	**Pasul tău de azi (alege unul):**
+	- [ ] Scrie un dar pe care simți că l-ai pus deoparte.
+	- [ ] Fă un pas mic spre el azi (15 minute).
+	- [ ] Roagă-L pe Dumnezeu să-ți arate un loc unde darul tău e nevoie.
+</callout>
+<callout icon="🙏" color="purple_bg">
+	*„Tată, mulțumesc că am un rost în planul Tău. Arată-mi darul meu și dă-mi curaj pentru primul pas. Amin.”*
+</callout>
+<callout icon="🏅" color="green_bg">
+	**Ai terminat cursul „Identitatea mea dincolo de roluri”!** 🌟🌟 Insigna mare: **„Fiică cu chemare”**. Următorul curs: *„Anxietate, epuizare și odihnă”*.
+</callout>
+
+---
 <callout icon="✅" color="gray_bg">
-	**QA & ton:** empatie fără morală · versete în context, nu bombardament · pas realist pentru o zi încărcată · zero „trebuie să fii mai bună”.
+	**QA & ton:** empatie fără morală · versete în context, nu bombardament · pas realist pentru o zi încărcată · zero „trebuie să fii mai bună” · fiecare lecție duce spre următoarea.
 </callout>
