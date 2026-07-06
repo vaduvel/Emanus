@@ -24,7 +24,12 @@ const slotRowStyle: CSSProperties = {
 const slotBodyStyle: CSSProperties = { flex: 1, display: "flex", flexDirection: "column", gap: 2 }
 const slotTopicStyle: CSSProperties = { fontWeight: 600, color: "var(--text)" }
 const slotMetaStyle: CSSProperties = { fontSize: "0.8rem" }
-const metaRowStyle: CSSProperties = { display: "inline-flex", alignItems: "center", gap: 5 }
+const slotWhenStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 5,
+  fontSize: "0.8rem",
+}
 const cancelBtnStyle: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
@@ -121,7 +126,7 @@ export function Mentorat() {
                   <span className="muted" style={slotMetaStyle}>
                     {s.mentorName}
                   </span>
-                  <span className="muted" style= ...slotMetaStyle, ...metaRowStyle >
+                  <span className="muted" style={slotWhenStyle}>
                     <CalendarClock size={13} aria-hidden /> {formatWhen(s.startsAt)} · {s.durationMin}
                     {" "}min
                   </span>
@@ -156,7 +161,7 @@ export function Mentorat() {
                     <span className="muted" style={slotMetaStyle}>
                       {s.mentorName}
                     </span>
-                    <span className="muted" style= ...slotMetaStyle, ...metaRowStyle >
+                    <span className="muted" style={slotWhenStyle}>
                       <Clock size={13} aria-hidden /> {formatWhen(s.startsAt)} · {s.durationMin} min
                     </span>
                   </div>
