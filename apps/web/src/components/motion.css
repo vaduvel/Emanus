@@ -1,0 +1,78 @@
+/* Emanus — strat de micro-interacțiuni & animații de intrare.
+ * Încărcat DUPĂ ds.css. Toate animațiile degradează elegant sub
+ * prefers-reduced-motion (guard global în tokens.css + guard local mai jos).
+ * Keyframes prefixate `ema-` ca să nu intre în coliziune cu cele `ds-`. */
+
+@keyframes ema-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ema-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes ema-pop {
+  0% { opacity: 0; transform: scale(0.94); }
+  60% { transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes ema-sheen {
+  0% { transform: translateX(-120%) skewX(-12deg); }
+  60%, 100% { transform: translateX(220%) skewX(-12deg); }
+}
+@keyframes ema-pulse-ring {
+  0% { box-shadow: 0 0 0 0 var(--danger-soft); }
+  70% { box-shadow: 0 0 0 12px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* ---- Tranziție de rută (aplicată pe shell-ul .app la schimbarea rutei) ---- */
+.route-anim { animation: ema-rise var(--dur-3) var(--ease-emphasized) both; }
+
+/* ---- Utilitare opt-in ---- */
+.ema-rise { animation: ema-rise var(--dur-3) var(--ease-emphasized) both; }
+.ema-fade { animation: ema-fade var(--dur-3) var(--ease-standard) both; }
+.ema-pop { animation: ema-pop var(--dur-3) var(--ease-spring) both; }
+
+/* ---- Intrare în cascadă pentru liste/carduri ---- */
+.ema-stagger > * { animation: ema-rise var(--dur-3) var(--ease-emphasized) both; }
+.ema-stagger > *:nth-child(1) { animation-delay: 40ms; }
+.ema-stagger > *:nth-child(2) { animation-delay: 90ms; }
+.ema-stagger > *:nth-child(3) { animation-delay: 140ms; }
+.ema-stagger > *:nth-child(4) { animation-delay: 190ms; }
+.ema-stagger > *:nth-child(5) { animation-delay: 240ms; }
+.ema-stagger > *:nth-child(6) { animation-delay: 290ms; }
+.ema-stagger > *:nth-child(7) { animation-delay: 340ms; }
+.ema-stagger > *:nth-child(n+8) { animation-delay: 380ms; }
+
+/* ---- Sweep de lumină peste placeholder-ele de artă (stand-in vizual).
+ * ds.css deține .ds-gradient (::after nefolosit); adăugăm un ::before sheen. */
+.ds-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 45%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: translateX(-120%) skewX(-12deg);
+  animation: ema-sheen 5.5s var(--ease-standard) infinite;
+  pointer-events: none;
+}
+
+/* ---- Inel pulsatil pentru afordanțe urgente (SOS) — opt-in. ---- */
+.ema-pulse { animation: ema-pulse-ring 2s var(--ease-standard) infinite; }
+
+/* ---- Feedback la apăsare pentru orice card/rând clicabil neacoperit deja. ---- */
+.ema-press { transition: transform var(--dur-1) var(--ease-standard); }
+.ema-press:active { transform: scale(0.98); }
+
+@media (prefers-reduced-motion: reduce) {
+  .route-anim,
+  .ema-rise,
+  .ema-fade,
+  .ema-pop,
+  .ema-stagger > *,
+  .ds-gradient::before,
+  .ema-pulse {
+    animation: none !important;
+  }
+}

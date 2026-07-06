@@ -125,7 +125,7 @@ export default function App() {
   const tabbed = tab !== null && tab !== "home"
 
   return (
-    <main className={`app${tabbed ? " app--tabbed" : ""}`}>
+    <main key={route.name} className={`app route-anim${tabbed ? " app--tabbed" : ""}`}>
       {screen}
       {tab && <TabBar active={tab} />}
     </main>
