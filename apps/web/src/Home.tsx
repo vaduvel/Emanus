@@ -1,9 +1,23 @@
 import { useEffect, useState } from "react"
-import type { CSSProperties } from "react"
-import { LifeBuoy } from "lucide-react"
-import type { DailyView, DashboardView, GrowthAxisId } from "@emanus/shared"
-import { getDaily, getDashboard } from "./api"
+import type { CSSProperties, ComponentType } from "react"
+import {
+  HandHeart,
+  LifeBuoy,
+  MessagesSquare,
+  Milestone,
+  Sprout,
+  Sunrise,
+  Users,
+} from "lucide-react"
+import type {
+  CommunityPostView,
+  DailyView,
+  DashboardView,
+  GrowthAxisId,
+} from "@emanus/shared"
+import { getCommunity, getDaily, getDashboard, prayForPost } from "./api"
 import { navigate } from "./router"
+import { getCategory } from "./session"
 import { CheckIn, GrowthRadar, Hero, JourneyPath } from "./components"
 import type { NextLesson } from "./components"
 import { Avatar } from "./ds"
@@ -16,6 +30,17 @@ const AXIS_LABEL: Record<GrowthAxisId, string> = {
   character: "Caracter",
   freedom: "Libertate",
 }
+
+// Pilonii aplicației — Acasa „mix-first” oferă intrări echilibrate spre toate lumile,
+// nu doar spre parcursul de învățare (docs/00-DIRECTIE: bible app x learning x comunitate).
+const PILLARS: Array<{ label: string; icon: ComponentType<{ size?: number; style?: CSSProperties; "aria-hidden"?: boolean }>; route: string }> = [
+  { label: "Timp cu Dumnezeu", icon: Sunrise, route: "/daily" },
+  { label: "Rugăciune", icon: HandHeart, route: "/prayer" },
+  { label: "Creșterea mea", icon: Sprout, route: "/dashboard" },
+  { label: "Zidul Ebenezer", icon: Milestone, route: "/ebenezer" },
+  { label: "Familie", icon: Users, route: "/family" },
+  { label: "Comunitate", icon: MessagesSquare, route: "/community" },
+]
 
 const moreBtnStyle = { marginTop: 10 }
 const verseStyle = { cursor: "pointer" } as const
@@ -34,11 +59,57 @@ const sosStyle: CSSProperties = {
   boxShadow: "none",
   cursor: "pointer",
 }
+const pillarGridStyle: CSSProperties = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: 10,
+}
+const pillarTileStyle: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: 8,
+  padding: "16px 8px",
+  background: "var(--surface)",
+  border: "1px solid var(--border)",
+  borderRadius: "var(--radius-lg)",
+  boxShadow: "var(--shadow-sm)",
+  cursor: "pointer",
+  textAlign: "center",
+}
+const pillarIconStyle: CSSProperties = { color: "var(--accent)" }
+const pillarLabelStyle: CSSProperties = {
+  fontSize: "0.82rem",
+  fontWeight: 600,
+  color: "var(--text)",
+  lineHeight: 1.2,
+}
+const prayerLineStyle: CSSProperties = { display: "flex", alignItems: "center", gap: 10 }
+const prayerLineTextStyle: CSSProperties = { flex: 1 }
+const prayBtnStyle: CSSProperties = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: 6,
+  background: "var(--accent-soft)",
+  color: "var(--accent-strong)",
+  border: "1px solid var(--accent)",
+  borderRadius: "var(--radius-pill)",
+  padding: "6px 12px",
+  fontSize: "0.8rem",
+  fontWeight: 600,
+  boxShadow: "none",
+  cursor: "pointer",
+  whiteSpace: "nowrap",
+}
+const prayCountStyle: CSSProperties = { fontSize: "0.78rem", marginTop: 6, display: "block" }
 
 export function Home() {
   const [dash, setDash] = useState<DashboardView | null>(null)
   const [daily, setDaily] = useState<DailyView | null>(null)
+  const [posts, setPosts] = useState<CommunityPostView[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [prayed, setPrayed] = useState(false)
+  const [prayCount, setPrayCount] = useState<number | null>(null)
 
   useEffect(() => {
     getDashboard()
@@ -48,6 +119,11 @@ export function Home() {
       .then(setDaily)
       .catch(() => {
         /* versetul e opțional pentru Acasă */
+      })
+    getCommunity(getCategory())
+      .then((r) => setPosts(r.posts))
+      .catch(() => {
+        /* comunitatea e opțională pentru Acasă */
       })
   }, [])
 
@@ -69,6 +145,19 @@ export function Home() {
   const weakest = byScore[0]
   const strongest = byScore[byScore.length - 1]
 
+  const latestPrayer = posts?.find((p) => p.kind === "prayer_request") ?? null
+
+  async function pray(postId: string) {
+    if (prayed) return
+    setPrayed(true)
+    try {
+      const r = await prayForPost(postId)
+      setPrayCount(r.prayCount)
+    } catch {
+      setPrayed(false)
+    }
+  }
+
   return (
     <section className="home">
       <Hero gam={gam} next={nextLesson} onContinue={(id) => navigate(`/lesson/${id}`)} />
@@ -77,6 +166,39 @@ export function Home() {
         <LifeBuoy size={16} aria-hidden />
         Ai nevoie de ajutor acum?
       </button>
+
+      {daily && (
+        <div
+          className="verse-strip"
+          role="button"
+          tabIndex={0}
+          style={verseStyle}
+          onClick={() => navigate("/daily")}
+        >
+          <span className="verse-strip__q">„{daily.ritual.verseText}”</span>
+          <span className="verse-strip__ref">{daily.ritual.verseRef} · Timp cu Dumnezeu →</span>
+        </div>
+      )}
+
+      <section className="tile">
+        <h2 className="tile__title">Explorează</h2>
+        <div style={pillarGridStyle}>
+          {PILLARS.map((p) => {
+            const Icon = p.icon
+            return (
+              <button
+                key={p.route}
+                type="button"
+                style={pillarTileStyle}
+                onClick={() => navigate(p.route)}
+              >
+                <Icon size={22} style={pillarIconStyle} aria-hidden />
+                <span style={pillarLabelStyle}>{p.label}</span>
+              </button>
+            )
+          })}
+        </div>
+      </section>
 
       <CheckIn />
 
@@ -118,32 +240,47 @@ export function Home() {
 
       <section className="tile">
         <h2 className="tile__title">Din comunitate</h2>
-        <div className="social-strip">
-          <div className="social-strip__avatars">
-            <Avatar name="Andrei M" size="sm" />
-            <Avatar name="Maria I" size="sm" />
-            <Avatar name="David P" size="sm" />
-            <Avatar name="Ioana R" size="sm" />
+        {latestPrayer ? (
+          <>
+            <div className="social-strip" style={prayerLineStyle}>
+              <Avatar name={latestPrayer.author.anonName} size="sm" />
+              <span className="social-strip__text" style={prayerLineTextStyle}>
+                <b>{latestPrayer.author.anonName}</b> a cerut rugăciune
+              </span>
+              <button
+                type="button"
+                style={prayBtnStyle}
+                disabled={prayed}
+                onClick={() => pray(latestPrayer.id)}
+              >
+                <HandHeart size={14} aria-hidden />
+                {prayed ? "Te-ai rugat" : "Mă rog"}
+              </button>
+            </div>
+            {(() => {
+              const count = prayCount ?? latestPrayer.prayCount
+              return count > 0 ? (
+                <span className="muted" style={prayCountStyle}>
+                  {count} {count === 1 ? "persoană s-a rugat" : "persoane s-au rugat"}
+                </span>
+              ) : null
+            })()}
+          </>
+        ) : (
+          <div className="social-strip">
+            <div className="social-strip__avatars">
+              <Avatar name="Andrei M" size="sm" />
+              <Avatar name="Maria I" size="sm" />
+              <Avatar name="David P" size="sm" />
+              <Avatar name="Ioana R" size="sm" />
+            </div>
+            <span className="social-strip__text">Alți frați cresc alături de tine chiar acum.</span>
           </div>
-          <span className="social-strip__text">Alți frați cresc alături de tine chiar acum.</span>
-        </div>
+        )}
         <button type="button" className="ghost" style={moreBtnStyle} onClick={() => navigate("/community")}>
           Vezi comunitatea →
         </button>
       </section>
-
-      {daily && (
-        <div
-          className="verse-strip"
-          role="button"
-          tabIndex={0}
-          style={verseStyle}
-          onClick={() => navigate("/daily")}
-        >
-          <span className="verse-strip__q">„{daily.ritual.verseText}”</span>
-          <span className="verse-strip__ref">{daily.ritual.verseRef} · Timp cu Dumnezeu →</span>
-        </div>
-      )}
     </section>
   )
 }
