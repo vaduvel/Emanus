@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import type { CSSProperties, ReactNode } from "react"
-import { Award, CalendarClock, Flame, GraduationCap, Lock } from "lucide-react"
+import { Award, CalendarClock, Flame, GraduationCap, Lock, UserCircle } from "lucide-react"
 import { GROWTH_AXES } from "@emanus/shared"
 import type { DashboardView, GrowthAxisId, GrowthScore, MentorStatus } from "@emanus/shared"
 import { getDashboard, getMentor } from "./api"
 import { navigate } from "./router"
+import { getEmail } from "./session"
 
 const AXIS_LABEL: Record<GrowthAxisId, string> = {
   identity: "Identitate",
@@ -51,11 +52,21 @@ const mentorBtnStyle: CSSProperties = {
   boxShadow: "none",
   cursor: "pointer",
 }
+const authRowStyle: CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: 8,
+  marginTop: 16,
+  paddingTop: 12,
+  borderTop: "1px solid var(--border)",
+  fontSize: "0.85rem",
+}
 
 export function Dashboard({ onBack }: { onBack: () => void }) {
   const [data, setData] = useState<DashboardView | null>(null)
   const [mentor, setMentor] = useState<MentorStatus | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const email = getEmail()
 
   useEffect(() => {
     getDashboard()
@@ -213,6 +224,22 @@ export function Dashboard({ onBack }: { onBack: () => void }) {
         <button type="button" className="ghost" onClick={() => navigate("/community")}>
           Comunitate
         </button>
+      </div>
+
+      <div style={authRowStyle}>
+        <UserCircle size={18} aria-hidden />
+        {email ? (
+          <span className="muted">
+            Conectat ca <b>{email}</b> —{" "}
+            <button type="button" className="linklike" onClick={() => navigate("/auth")}>
+              cont
+            </button>
+          </span>
+        ) : (
+          <button type="button" className="linklike" onClick={() => navigate("/auth")}>
+            Salvează-mi progresul (conectează-te)
+          </button>
+        )}
       </div>
     </section>
   )
