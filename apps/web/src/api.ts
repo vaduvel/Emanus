@@ -14,6 +14,7 @@ import type {
   GrowthScore,
   Lesson,
   ModerationResult,
+  NeedProfile,
   PrayerLevel,
   PrayerRequest,
   RecommendationView,
@@ -65,6 +66,28 @@ export function getDashboard(): Promise<DashboardView> {
 
 export function getGrowth(): Promise<GrowthScore[]> {
   return getJson<GrowthScore[]>("/me/growth")
+}
+
+export interface AdaptiveCourse {
+  moduleId: string
+  courseId: string
+  title: string
+  struggle: string
+  truth: string
+  firstLessonId?: string
+}
+
+export interface GrowthProfileResult {
+  profile: NeedProfile
+  adaptive: AdaptiveCourse | null
+}
+
+export function saveGrowthProfile(text: string, categoryId: string): Promise<GrowthProfileResult> {
+  return postJson<GrowthProfileResult>("/me/growth-profile", { text, categoryId })
+}
+
+export function getGrowthProfile(): Promise<{ profile: NeedProfile | null }> {
+  return getJson<{ profile: NeedProfile | null }>("/me/growth-profile")
 }
 
 export function getRecommendation(category: string, stage: string): Promise<RecommendationView> {

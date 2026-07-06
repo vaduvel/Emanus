@@ -36,7 +36,7 @@ const AXIS_LABEL: Record<GrowthAxisId, string> = {
 const PILLARS: Array<{ label: string; icon: ComponentType<{ size?: number; style?: CSSProperties; "aria-hidden"?: boolean }>; route: string }> = [
   { label: "Timp cu Dumnezeu", icon: Sunrise, route: "/daily" },
   { label: "Rugăciune", icon: HandHeart, route: "/prayer" },
-  { label: "Creșterea mea", icon: Sprout, route: "/dashboard" },
+  { label: "Creșterea mea", icon: Sprout, route: "/growth" },
   { label: "Zidul Ebenezer", icon: Milestone, route: "/ebenezer" },
   { label: "Familie", icon: Users, route: "/family" },
   { label: "Comunitate", icon: MessagesSquare, route: "/community" },

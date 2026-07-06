@@ -6,6 +6,7 @@ import { Daily } from "./Daily"
 import { Dashboard } from "./Dashboard"
 import { Ebenezer } from "./Ebenezer"
 import { Family } from "./Family"
+import { GrowthOnboarding } from "./GrowthOnboarding"
 import { Home } from "./Home"
 import { LessonView } from "./LessonView"
 import { Onboarding } from "./Onboarding"
@@ -84,6 +85,10 @@ export default function App() {
     case "community":
       screen = <Community onBack={() => navigate("/")} />
       tab = "community"
+      break
+    case "growth":
+      screen = <GrowthOnboarding />
+      tab = "journey"
       break
     case "crisis":
       screen = <Crisis onBack={() => navigate("/")} />
