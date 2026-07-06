@@ -78,6 +78,14 @@ export function registerRoutes(app: Express): void {
     }
   })
 
+  // Autentificare (login LAST): leagă progresul anonim de contul autentificat (Supabase).
+  // Se apelează cu x-user-id = id-ul anonim curent și toUserId = id-ul Supabase.
+  app.post("/me/link", (req, res) => {
+    const to = typeof req.body?.toUserId === "string" ? req.body.toUserId.trim() : ""
+    if (!to) return res.status(400).json({ error: "missing_to" })
+    res.json(store.linkAccount(userIdOf(req), to))
+  })
+
   // Diagnostic inițial: întrebările (workbook §10)
   app.get("/diagnostic", (req, res) => {
     const categoryId = (req.query.category as string) || "teens12_18"

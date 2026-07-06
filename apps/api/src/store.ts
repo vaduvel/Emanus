@@ -276,6 +276,41 @@ function cancelMentorSlot(userId: string, slotId: string): boolean {
   return true
 }
 
+// --- Autentificare (login LAST): leagă contul anonim de cel autentificat (Supabase) ---
+// La primul login mutăm progresul acumulat anonim (mem-user-*) pe id-ul stabil Supabase,
+// ca utilizatorul să nu piardă nimic. Notă: cu DATABASE_URL setat, legarea reală se face
+// în @emanus/db (TODO); aici e best-effort peste starea in-memory.
+function reassignMap<V>(m: Map<string, V>, from: string, to: string): void {
+  const v = m.get(from)
+  if (v === undefined) return
+  if (!m.has(to)) m.set(to, v)
+  m.delete(from)
+}
+
+function linkAccount(fromUserId: string, toUserId: string): { ok: boolean; userId: string } {
+  if (!fromUserId || !toUserId || fromUserId === toUserId) {
+    return { ok: true, userId: toUserId || fromUserId }
+  }
+  reassignMap(memGam, fromUserId, toUserId)
+  reassignMap(memGrowth, fromUserId, toUserId)
+  reassignMap(memDone, fromUserId, toUserId)
+  reassignMap(memPrayers, fromUserId, toUserId)
+  reassignMap(memFamilies, fromUserId, toUserId)
+  reassignMap(memFamilyPrayers, fromUserId, toUserId)
+  reassignMap(memGrowthProfiles, fromUserId, toUserId)
+  reassignMap(memMentorBookings, fromUserId, toUserId)
+  for (const p of memPosts) {
+    if (p.userId === fromUserId) p.userId = toUserId
+  }
+  for (const meta of memPostMeta.values()) {
+    if (meta.prayedBy.has(fromUserId)) {
+      meta.prayedBy.delete(fromUserId)
+      meta.prayedBy.add(toUserId)
+    }
+  }
+  return { ok: true, userId: toUserId }
+}
+
 // Ritualul zilnic „Timp cu Dumnezeu” (docs/00-DIRECTIE §2): versetul urmează axa cea mai fragedă.
 async function dailyRitual(userId: string, categoryId = "teens12_18"): Promise<DailyView> {
   const dash = await dashboard(userId, categoryId)
@@ -566,6 +601,7 @@ export const store = {
   mentorat,
   bookMentorSlot,
   cancelMentorSlot,
+  linkAccount,
   dailyRitual,
   growth,
   recommendation,
