@@ -1,0 +1,667 @@
+/*
+ * Emanus — global base + legacy token bridge.
+ *
+ * The single source of truth for design tokens is ds/tokens.css.
+ * Historically the app used a separate token vocabulary (--panel, --muted,
+ * --radius, --font-serif, --ok/--bad, --shadow-card...). Rather than rewrite
+ * every rule, we alias those legacy names to DS tokens here, so the whole app
+ * renders from one system and shares the DS dark theme. Prefer DS tokens
+ * (--surface, --text-muted, --radius-lg, --shadow-md, --success...) in new CSS.
+ */
+
+:root {
+  /* Legacy aliases -> DS tokens (light + dark follow automatically) */
+  --bg-grad-1: var(--bg);
+  --bg-grad-2: var(--surface);
+  --panel: var(--surface);
+  --muted: var(--text-muted);
+  --accent-strong: var(--accent-hover);
+  --on-accent: var(--text-on-accent);
+  --ok: var(--success);
+  --bad: var(--danger);
+  --font-serif: var(--font-display);
+  --radius: var(--radius-lg);
+  --shadow-card: var(--shadow-md);
+  --shadow-pop: var(--shadow-lg);
+
+  /* rgb triples for legacy rgba() overlays (radar, quiz, crisis, notice) */
+  --accent-rgb: 29, 127, 143;
+  --gold-rgb: 193, 144, 47;
+  --ok-rgb: 47, 174, 143;
+  --bad-rgb: 224, 103, 79;
+  --muted-rgb: 93, 125, 128;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: linear-gradient(180deg, var(--bg-grad-1), var(--bg-grad-2));
+  background-attachment: fixed;
+  min-height: 100dvh;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.player {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 70dvh;
+  max-height: 92dvh;
+}
+
+.player__head h1 { margin: 0 0 4px; font-size: 1.25rem; font-family: var(--font-serif); letter-spacing: 0.01em; }
+.player__foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+
+.stage { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+.muted { color: var(--muted); font-size: 0.85rem; }
+.error { color: var(--bad); }
+.title-icon { display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; }
+.prompt { font-weight: 600; margin: 0 0 10px; }
+.section-title { font-size: 0.95rem; margin: 0 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.progress {
+  margin-top: 10px;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  border-radius: var(--radius-pill);
+  transition: width 0.25s ease;
+}
+
+/* --- Chat log conversational (workbook §1/§6) --- */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.msg { display: flex; gap: 8px; align-items: flex-start; }
+.msg--guide { justify-content: flex-start; }
+.msg--me { justify-content: flex-end; }
+.msg__avatar {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.msg__body { display: flex; flex-direction: column; gap: 3px; max-width: 82%; }
+.msg__name { font-size: 0.72rem; color: var(--muted); margin-left: 4px; }
+.bubble--me {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-radius: 14px 14px 4px 14px;
+  padding: 12px 14px;
+  max-width: 82%;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.bubbles { display: flex; flex-direction: column; gap: 10px; }
+.bubble {
+  background: var(--surface-2);
+  border-radius: 14px 14px 14px 4px;
+  padding: 12px 14px;
+  max-width: 100%;
+  line-height: 1.4;
+}
+
+.scripture {
+  margin: 0;
+  border-left: 3px solid var(--gold);
+  padding: 8px 14px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  line-height: 1.5;
+}
+.scripture cite { display: block; margin-top: 8px; color: var(--muted); font-style: normal; font-family: var(--font-sans); }
+
+.choice__opts, .quiz { display: flex; flex-direction: column; gap: 8px; }
+
+.journal textarea {
+  width: 100%;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font: inherit;
+  resize: vertical;
+}
+
+.moods { display: flex; gap: 8px; margin-top: 6px; }
+.mood {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.mood.picked { border-color: var(--accent); background: var(--accent-soft); }
+
+.explanation {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+button {
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 0;
+  border-radius: var(--radius-pill);
+  padding: 10px 18px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: filter 0.15s ease, transform 0.05s ease;
+}
+button:hover { filter: brightness(1.05); }
+button:active { transform: translateY(1px); }
+button:disabled { opacity: 0.55; cursor: default; box-shadow: none; }
+
+button.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  text-align: left;
+  box-shadow: none;
+}
+button.ghost.picked { border-color: var(--accent); background: var(--accent-soft); }
+button.ghost.correct { border-color: var(--ok); background: rgba(var(--ok-rgb), 0.12); color: var(--text); }
+button.ghost.wrong { border-color: var(--bad); background: rgba(var(--bad-rgb), 0.12); color: var(--text); }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 28px;
+  text-align: center;
+  max-width: 420px;
+}
+.reward-card { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.reward-card__icon { font-size: 2.5rem; }
+.reward-card .scripture { text-align: left; align-self: stretch; }
+.reward-card__actions { display: flex; flex-direction: column; gap: 8px; width: 100%; margin-top: 6px; }
+.reward-card__actions .ghost { text-align: center; }
+
+/* --- Dashboard (Faza 3) --- */
+.dashboard {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.dashboard__head { display: flex; align-items: center; justify-content: space-between; }
+.dashboard__head h1 { margin: 0; font-size: 1.25rem; font-family: var(--font-serif); }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.stat { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 6px; text-align: center; }
+.stat b { display: block; font-size: 1.15rem; }
+.stat .muted { font-size: 0.75rem; }
+
+.radar-wrap { display: flex; flex-direction: column; align-items: center; }
+.radar-wrap .section-title { align-self: flex-start; }
+.radar { width: 100%; max-width: 300px; height: auto; display: block; }
+.radar__ring { fill: none; stroke: var(--border); stroke-width: 1; }
+.radar__spoke { stroke: var(--border); stroke-width: 1; }
+.radar__baseline { fill: rgba(var(--muted-rgb), 0.15); stroke: var(--muted); stroke-width: 1.5; }
+.radar__current { fill: rgba(var(--accent-rgb), 0.28); stroke: var(--accent); stroke-width: 2; }
+.radar__label { fill: var(--muted); font-size: 10px; }
+.legend { display: flex; align-items: center; gap: 4px; margin: 6px 0 0; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.dot--base { background: var(--muted); }
+.dot--now { background: var(--accent); }
+
+.modules { display: flex; flex-direction: column; gap: 10px; }
+.mod { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px; }
+.mod__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.mod__bar { height: 6px; background: var(--border); border-radius: var(--radius-pill); margin-top: 8px; overflow: hidden; }
+.mod__bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-bright)); border-radius: var(--radius-pill); }
+.mod.locked { opacity: 0.55; }
+.dash-nav { display: flex; flex-direction: column; gap: 8px; }
+.dash-nav .ghost { text-align: center; }
+
+/* --- Landing + Onboarding (Faza 4) --- */
+.landing {
+  width: 100%;
+  max-width: 420px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.landing__icon { font-size: 3rem; }
+.landing h1 { margin: 0; font-size: 2rem; letter-spacing: 0.02em; font-family: var(--font-serif); }
+.landing__tag { margin: 0; font-size: 1.05rem; color: var(--text); }
+.landing__actions { display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 12px; }
+.landing__actions .ghost { text-align: center; }
+
+.onboarding {
+  width: 100%;
+  max-width: 460px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.onboarding h1 { margin: 0; font-size: 1.35rem; font-family: var(--font-serif); }
+.onboarding__step { display: flex; flex-direction: column; gap: 14px; }
+.onboarding__progress { display: flex; gap: 6px; }
+.onboarding__progress span { flex: 1; height: 4px; border-radius: var(--radius-pill); background: var(--border); }
+.onboarding__progress span.on { background: var(--accent); }
+.onboarding__nav { display: flex; justify-content: space-between; gap: 10px; }
+.onboarding__nav .ghost { text-align: center; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-pill);
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+.chip.picked { border-color: var(--accent); background: var(--accent-soft); }
+.chip__emoji { font-size: 1.1rem; }
+
+.faith-list { display: flex; flex-direction: column; gap: 10px; }
+.faith-opt {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+.faith-opt.picked { border-color: var(--accent); background: var(--accent-soft); }
+.faith-opt__emoji { font-size: 1.5rem; line-height: 1; }
+.faith-opt__label { display: block; font-weight: 600; }
+.faith-opt__blurb { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+
+.text-input {
+  width: 100%;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  font: inherit;
+}
+
+.avatars { display: flex; flex-wrap: wrap; gap: 8px; }
+.avatar {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.avatar.picked { border-color: var(--accent); background: var(--accent-soft); }
+
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; line-height: 1.4; }
+.consent input { margin-top: 3px; }
+
+.diagnostic { display: flex; flex-direction: column; gap: 16px; }
+.diag-q p { margin: 0 0 8px; }
+.likert { display: flex; gap: 8px; }
+.likert__dot {
+  flex: 1;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+}
+.likert__dot.picked { border-color: var(--accent); background: var(--accent-soft); }
+.likert__legend { display: flex; justify-content: space-between; margin-top: 4px; }
+
+/* --- Ecranul „Parcursul tău” (recomandare după onboarding, §13) --- */
+.recommend {
+  width: 100%;
+  max-width: 460px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.recommend__badge {
+  align-self: flex-start;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.recommend__welcome { margin: 0; font-size: 1.1rem; line-height: 1.5; }
+.recommend__focus {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+.recommend__focus-kicker { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.recommend__focus b { font-size: 1.15rem; text-transform: capitalize; }
+.recommend__course {
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.recommend__course h1 { margin: 0; font-size: 1.25rem; font-family: var(--font-serif); }
+.recommend__struggle { margin: 0; font-style: italic; color: var(--muted); }
+.recommend__truth { margin: 0; line-height: 1.5; border-left: 3px solid var(--gold); padding-left: 12px; font-family: var(--font-serif); }
+.recommend__nav { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.recommend__nav .ghost { text-align: center; }
+
+/* --- Comunitate + criză (Faza 5) --- */
+.community {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.composer { display: flex; flex-direction: column; gap: 8px; }
+.composer textarea {
+  width: 100%;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font: inherit;
+  resize: vertical;
+}
+.composer__foot { display: flex; align-items: center; justify-content: space-between; }
+
+.notice {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+.notice--warn { border-color: var(--bad); background: rgba(var(--bad-rgb), 0.1); }
+
+.crisis {
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+.crisis h3 { margin: 0 0 6px; }
+.crisis ul { margin: 8px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+.crisis b { font-size: 1.05rem; }
+
+.posts { display: flex; flex-direction: column; gap: 10px; }
+.post { background: var(--surface-2); border-radius: var(--radius-sm); padding: 12px 14px; }
+.post__head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.post__avatar { font-size: 1.2rem; }
+.post__body { margin: 0; line-height: 1.45; white-space: pre-wrap; }
+
+/* --- Ritualul zilnic „Timp cu Dumnezeu” (Ecran #2) --- */
+.daily {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.daily__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.daily__head h1 { margin: 0 0 4px; font-size: 1.25rem; font-family: var(--font-serif); }
+.rhythm {
+  flex: 0 0 auto;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.daily__card {
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.daily__kicker { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.daily__verse { margin: 0; font-size: 1.15rem; line-height: 1.5; font-style: italic; font-family: var(--font-serif); }
+.daily__ref { color: var(--gold); font-style: normal; font-size: 0.9rem; font-family: var(--font-sans); }
+.daily__q { color: var(--text); font-weight: 600; margin: 0; }
+.daily__prayer { margin: 0; line-height: 1.5; border-left: 3px solid var(--gold); padding-left: 12px; }
+.daily__nav { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.daily__links { display: flex; flex-wrap: wrap; gap: 8px; }
+.daily__links .ghost { flex: 1; min-width: 40%; text-align: center; }
+
+/* --- Antrenorul de rugăciune (Ecran #4, §4) --- */
+.prayer {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.prayer__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.prayer__head h1 { margin: 0 0 4px; font-size: 1.25rem; font-family: var(--font-serif); }
+.prayer__levels { display: flex; gap: 8px; }
+.prayer__lvl {
+  flex: 1;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px 0;
+  font-weight: 700;
+}
+.prayer__lvl.picked { border-color: var(--accent); background: var(--accent-soft); }
+.prayer__card {
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.prayer__card h2 { margin: 0; font-size: 1.15rem; }
+.prayer__badge {
+  align-self: flex-start;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.prayer__intro { margin: 0; line-height: 1.5; }
+.prayer__prompts { display: flex; flex-direction: column; gap: 10px; }
+.prayer__prompt { display: flex; flex-direction: column; gap: 4px; }
+.prayer__prompt span { font-weight: 600; font-size: 0.9rem; }
+.prayer__ebenezer {
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.prayer__actions { display: flex; gap: 8px; }
+.prayer__actions .ghost { text-align: center; }
+
+/* --- Zidul Ebenezer (Ecran #4, §5) --- */
+.ebenezer {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ebenezer__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.ebenezer__head h1 { margin: 0 0 4px; font-size: 1.25rem; font-family: var(--font-serif); }
+.eb-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.eb-item {
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.eb-item__body { display: flex; flex-direction: column; gap: 4px; }
+.eb-item__body p { margin: 0; line-height: 1.4; }
+.eb-item.answered { border-left: 3px solid var(--ok); }
+.eb-item.answered .eb-item__body p { color: var(--muted); }
+
+/* --- Legământul familiei (Ecran Familie, §6) --- */
+.family {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.family__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.family__head h1 { margin: 0 0 4px; font-size: 1.25rem; font-family: var(--font-serif); }
+.family__field { display: flex; flex-direction: column; gap: 6px; }
+.family__field span { font-weight: 600; font-size: 0.9rem; }
+.family__themes { display: flex; flex-direction: column; gap: 8px; }
+.family__theme {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  width: 100%;
+}
+.family__theme.picked { border-color: var(--accent); background: var(--accent-soft); }
+.family__theme b { font-size: 1rem; }
+.family__covenant {
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.family__badge {
+  align-self: flex-start;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.family__covenant p { margin: 0; line-height: 1.5; }
+.family__wall {
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

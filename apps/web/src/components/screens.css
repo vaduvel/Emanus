@@ -1,0 +1,553 @@
+/* Skin premium: ecrane interne. Consumă doar tokeni (bridge in styles.css -> ds/tokens.css). */
+
+/* ===================== Lecție: player conversațional ===================== */
+.player {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+.player__head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg-grad-1);
+  padding: 14px 4px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.player__head h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+}
+.player__head .muted { font-size: 0.8rem; }
+.progress {
+  margin-top: 10px;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  border-radius: var(--radius-pill);
+  transition: width 0.3s ease;
+}
+
+.chat {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 2px 20px;
+}
+.msg { display: flex; gap: 8px; align-items: flex-end; }
+.msg--guide { justify-content: flex-start; }
+.msg--me { justify-content: flex-end; }
+.msg__avatar {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  align-self: flex-start;
+}
+.msg__body { display: flex; flex-direction: column; gap: 3px; max-width: 78%; }
+.msg__name { font-size: 0.7rem; color: var(--muted); margin-left: 4px; }
+.bubble {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  border-bottom-left-radius: 6px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-sm);
+  line-height: 1.45;
+  font-size: 0.95rem;
+  max-width: 78%;
+}
+.msg--me .bubble,
+.bubble--me {
+  background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+  color: var(--on-accent);
+  border: none;
+  border-radius: 18px;
+  border-bottom-right-radius: 6px;
+}
+
+.scripture {
+  margin: 0;
+  background: var(--surface-2);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.scripture cite {
+  font-style: normal;
+  font-family: var(--font-sans);
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+.choice__opts,
+.quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 40px;
+}
+.choice__opts .ghost,
+.quiz .ghost {
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow-sm);
+  font-weight: 500;
+  color: var(--text);
+}
+.quiz .ghost.correct {
+  border-color: var(--ok);
+  background: rgba(var(--ok-rgb), 0.12);
+}
+.quiz .ghost.wrong {
+  border-color: var(--bad);
+  background: rgba(var(--bad-rgb), 0.12);
+}
+
+.moods {
+  display: flex;
+  gap: 8px;
+  margin-left: 40px;
+}
+.moods .mood {
+  flex: 1;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 0;
+  color: var(--muted);
+  font-size: 1.4rem;
+  box-shadow: none;
+  cursor: pointer;
+}
+.moods .mood.picked {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.journal { margin-left: 40px; }
+.journal textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--panel);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  resize: vertical;
+}
+.journal textarea:focus { outline: none; border-color: var(--accent); }
+
+.player__foot {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 4px calc(12px + env(safe-area-inset-bottom));
+  background: var(--bg-grad-1);
+  border-top: 1px solid var(--border);
+}
+.player__foot .muted { font-size: 0.78rem; }
+.player__foot button {
+  border-radius: var(--radius-pill);
+  padding: 12px 22px;
+}
+
+/* Card recompensă (final de lecție) */
+.reward-card {
+  max-width: 420px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding: 28px 22px;
+  background: linear-gradient(180deg, var(--panel), var(--surface-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-pop);
+}
+.reward-card__icon {
+  color: var(--gold);
+  font-size: 2.6rem;
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gold-soft);
+}
+.reward-card h2 { font-family: var(--font-serif); margin: 0; }
+.reward-card .scripture { text-align: left; width: 100%; }
+.reward-card__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* ===================== Rugăciune ===================== */
+.prayer {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.prayer__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.prayer__head h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+.prayer__head .muted { font-size: 0.85rem; }
+
+.prayer__levels {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+.prayer__lvl {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  font-weight: 700;
+  box-shadow: none;
+  cursor: pointer;
+}
+.prayer__lvl.picked {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+.prayer__card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.prayer__card h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+}
+.prayer__badge {
+  align-self: flex-start;
+  background: var(--gold-soft);
+  color: var(--gold);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.prayer__intro { line-height: 1.5; }
+.prayer__prompts { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+.prayer__prompt { display: flex; flex-direction: column; gap: 6px; font-weight: 500; }
+
+.text-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  resize: vertical;
+}
+.text-input:focus { outline: none; border-color: var(--accent); background: var(--panel); }
+
+.prayer__ebenezer {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.prayer__actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+.notice {
+  background: rgba(var(--ok-rgb), 0.14);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+.notice--warn { background: rgba(var(--bad-rgb), 0.14); }
+
+/* ===================== Elemente comune ===================== */
+.dashboard__head,
+.ebenezer__head,
+.family__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dashboard__head h1,
+.ebenezer__head h1,
+.family__head h1 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+.section-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.daily__kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 4px;
+}
+
+/* Liste rugăciune (Ebenezer + Familie) */
+.eb-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.eb-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 12px 14px;
+}
+.eb-item.answered { border-left-color: var(--ok); opacity: 0.85; }
+.eb-item.answered .eb-item__body p { text-decoration: line-through; color: var(--muted); }
+.eb-item__body { display: flex; flex-direction: column; gap: 3px; }
+.eb-item__body p { margin: 0; line-height: 1.4; }
+
+/* ===================== Parcurs (Dashboard) ===================== */
+.dashboard {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 12px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.stat b { font-size: 1.2rem; font-family: var(--font-serif); }
+.stat .muted { font-size: 0.7rem; }
+
+.radar-wrap {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 18px;
+  text-align: center;
+}
+.radar { width: 100%; max-width: 300px; height: auto; }
+.radar__ring { fill: none; stroke: var(--border); stroke-width: 1; }
+.radar__spoke { stroke: var(--border); stroke-width: 1; }
+.radar__baseline { fill: rgba(var(--muted-rgb), 0.18); stroke: var(--muted); stroke-width: 1.5; }
+.radar__current { fill: rgba(var(--accent-rgb), 0.28); stroke: var(--accent); stroke-width: 2; }
+.radar__label { fill: var(--muted); font-size: 11px; font-weight: 600; }
+.legend { display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 0.8rem; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: middle; margin-right: 4px; }
+.dot--base { background: var(--muted); }
+.dot--now { background: var(--accent); }
+
+.modules { display: flex; flex-direction: column; gap: 10px; }
+.mod {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mod.locked { opacity: 0.55; }
+.mod__top { display: flex; justify-content: space-between; align-items: center; font-weight: 500; }
+.mod__bar {
+  height: 8px;
+  background: var(--surface-2);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.mod__bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  border-radius: var(--radius-pill);
+}
+.dash-nav { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ===================== Comunitate ===================== */
+.community {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.composer {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.composer textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  resize: vertical;
+}
+.composer textarea:focus { outline: none; border-color: var(--accent); background: var(--panel); }
+.composer__foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+
+.posts { display: flex; flex-direction: column; gap: 12px; }
+.post {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.post__head { display: flex; align-items: center; gap: 8px; }
+.post__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+}
+.post__body { line-height: 1.5; margin: 0; }
+.crisis {
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.crisis h3 { margin: 0 0 6px; }
+
+/* ===================== Familie ===================== */
+.family {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.family__field { display: flex; flex-direction: column; gap: 6px; font-weight: 500; }
+.family__themes { display: flex; flex-direction: column; gap: 8px; }
+.family__theme {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.family__theme .muted { font-family: var(--font-serif); font-style: italic; font-size: 0.82rem; }
+.family__theme.picked { border-color: var(--accent); background: var(--accent-soft); }
+.family__covenant,
+.family__wall {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.family__badge {
+  align-self: flex-start;
+  background: var(--gold-soft);
+  color: var(--gold);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}

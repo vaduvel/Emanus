@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emanus — Culori cerești (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: radial-gradient(1200px 800px at 50% -10%, #1b1e2b, #0c0d12 60%);
+    color: #e7e9f0;
+    padding: 40px 20px 80px;
+    min-height: 100vh;
+  }
+  .page-head { text-align: center; max-width: 760px; margin: 0 auto 36px; }
+  .page-head h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 30px; letter-spacing: 0.2px; }
+  .page-head p { color: #9aa1b4; margin-top: 10px; line-height: 1.55; font-size: 15px; }
+  .gallery { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start; max-width: 1200px; margin: 0 auto; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 340px; }
+  .col .caption { text-align: center; }
+  .col .caption b { font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; display: block; }
+  .col .caption span { color: #9aa1b4; font-size: 12.5px; display: block; margin-top: 3px; line-height: 1.4; }
+
+  /* ---- Phone frame ---- */
+  .phone {
+    width: 340px; border-radius: 42px; padding: 12px;
+    background: #05060a;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.05);
+  }
+  .screen {
+    border-radius: 32px; overflow: hidden; position: relative;
+    height: 720px; display: flex; flex-direction: column;
+    background: linear-gradient(180deg, var(--bg), var(--bg2));
+    color: var(--text);
+  }
+  .body { flex: 1; overflow: hidden; padding: 22px 18px 12px; display: flex; flex-direction: column; gap: 16px; }
+
+  .topbar { display: flex; align-items: center; justify-content: space-between; }
+  .topbar .hi { font-size: 13px; color: var(--muted); }
+  .topbar .hi b { display: block; font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px; color: var(--text); margin-top: 2px; }
+  .streak {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--chip); border: 1px solid var(--chip-b);
+    color: var(--text); border-radius: 999px; padding: 7px 12px; font-weight: 600; font-size: 13px;
+  }
+
+  .hero {
+    border-radius: 24px; padding: 22px 20px 20px; position: relative; overflow: hidden;
+    background: linear-gradient(150deg, var(--hero1), var(--hero2));
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35), 0 0 60px var(--glow);
+    border: 1px solid var(--hero-b);
+  }
+  .hero::after {
+    content: ''; position: absolute; top: -60px; right: -40px; width: 180px; height: 180px;
+    background: radial-gradient(circle, var(--halo), transparent 70%); pointer-events: none;
+  }
+  .hero .kick { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--hero-kick); font-weight: 700; }
+  .hero blockquote { font-family: 'Fraunces', serif; font-weight: 500; font-size: 23px; line-height: 1.32; margin: 12px 0 8px; color: #fdfdfb; }
+  .hero cite { font-style: normal; color: var(--hero-cite); font-size: 13.5px; font-weight: 600; }
+  .hero .listen {
+    margin-top: 16px; display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: var(--on-accent); border: 0; border-radius: 999px;
+    padding: 10px 18px; font-weight: 700; font-size: 13.5px; font-family: 'Inter'; cursor: pointer;
+  }
+
+  .card {
+    border-radius: 20px; padding: 16px; background: var(--surface); border: 1px solid var(--surface-b);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .card .play {
+    width: 44px; height: 44px; flex: 0 0 44px; border-radius: 14px; display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent); font-size: 18px;
+  }
+  .card .meta small { color: var(--muted); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; }
+  .card .meta b { display: block; font-family: 'Fraunces', serif; font-weight: 600; font-size: 16px; margin: 3px 0 2px; }
+  .card .meta span { color: var(--muted); font-size: 12.5px; }
+
+  .section-label { font-size: 12px; color: var(--muted); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .chip-item {
+    border-radius: 16px; padding: 14px 14px; background: var(--surface); border: 1px solid var(--surface-b);
+    font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 9px;
+  }
+  .chip-item .ic { font-size: 17px; }
+
+  .rhythm { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
+  .rhythm .dot { color: var(--grace); font-weight: 700; }
+
+  .tabbar {
+    display: flex; justify-content: space-around; align-items: center; padding: 12px 6px 18px;
+    background: var(--tabbar); border-top: 1px solid var(--surface-b);
+  }
+  .tab { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--muted); font-size: 10px; font-weight: 600; }
+  .tab .ic { font-size: 19px; filter: grayscale(0.2); opacity: 0.7; }
+  .tab.active { color: var(--accent); }
+  .tab.active .ic { opacity: 1; filter: none; }
+
+  /* =========== PALETE CEREȘTI =========== */
+
+  /* 1. Tron de safir — Ezechiel 1:26, Apocalipsa 4:3 */
+  .v-safir {
+    --bg:#081633; --bg2:#0c2150;
+    --text:#F4F6FB; --muted:#9DB1D6;
+    --accent:#E9C56A; --on-accent:#2a1d02; --accent-soft:rgba(233,197,106,0.15);
+    --grace:#5ED1A6;
+    --chip:rgba(233,197,106,0.12); --chip-b:rgba(233,197,106,0.35);
+    --surface:rgba(255,255,255,0.055); --surface-b:rgba(255,255,255,0.10);
+    --hero1:#14346e; --hero2:#0f2350; --hero-b:rgba(120,170,255,0.22);
+    --hero-kick:#8fe6c6; --hero-cite:#cde0ff; --glow:rgba(63,184,143,0.25);
+    --halo:rgba(120,190,255,0.35);
+    --tabbar:#060f26;
+  }
+
+  /* 2. Noul Ierusalim — Apocalipsa 21 (aur curat, ametist, mărgăritar) */
+  .v-ierusalim {
+    --bg:#1a0f3a; --bg2:#2a1358;
+    --text:#F8F3EE; --muted:#C0AEDD;
+    --accent:#F2CB77; --on-accent:#33220a; --accent-soft:rgba(242,203,119,0.16);
+    --grace:#8bd6b0;
+    --chip:rgba(242,203,119,0.13); --chip-b:rgba(242,203,119,0.38);
+    --surface:rgba(255,255,255,0.06); --surface-b:rgba(255,255,255,0.12);
+    --hero1:#4a2585; --hero2:#2e1560; --hero-b:rgba(201,162,232,0.3);
+    --hero-kick:#e7c6ff; --hero-cite:#e9dcff; --glow:rgba(242,203,119,0.28);
+    --halo:rgba(201,162,232,0.4);
+    --tabbar:#140a30;
+  }
+
+  /* 3. Marea de cristal — Apocalipsa 4:6 & 15:2 (light, cristal/aur) */
+  .v-cristal {
+    --bg:#EAF3F3; --bg2:#F7FBFA;
+    --text:#123240; --muted:#5C7784;
+    --accent:#C99A3A; --on-accent:#fff; --accent-soft:rgba(201,154,58,0.14);
+    --grace:#2E9A78;
+    --chip:rgba(201,154,58,0.14); --chip-b:rgba(201,154,58,0.4);
+    --surface:#FFFFFF; --surface-b:rgba(18,50,64,0.09);
+    --hero1:#1d7f8f; --hero2:#2ea0af; --hero-b:rgba(255,255,255,0.35);
+    --hero-kick:#d9f5f0; --hero-cite:#e8fbf7; --glow:rgba(46,160,175,0.3);
+    --halo:rgba(255,255,255,0.5);
+    --tabbar:#FFFFFF;
+  }
+</style>
+</head>
+<body>
+  <div class="page-head">
+    <h1>Emanus — Culori cerești</h1>
+    <p>Trei palete inspirate din felul în care Scriptura descrie cerul: safirul tronului (Ezechiel 1:26), aurul curat și mărgăritarul Noului Ierusalim (Apocalipsa 21), marea de cristal dinaintea tronului (Apocalipsa 4:6). Același ecran „Acasă”, trei atmosfere. Spune-mi care te cheamă.</p>
+  </div>
+
+  <div class="gallery">
+
+    <!-- ============ 1. SAFIR ============ -->
+    <div class="col">
+      <div class="phone">
+        <div class="screen v-safir">
+          <div class="body">
+            <div class="topbar">
+              <div class="hi">Bună seara,<b>Andrei</b></div>
+              <div class="streak">🔥 12 zile</div>
+            </div>
+            <div class="hero">
+              <div class="kick">Cuvântul de azi</div>
+              <blockquote>„Până aici Domnul ne-a ajutat.”</blockquote>
+              <cite>— 1 Samuel 7:12</cite>
+              <div><button class="listen">🔊 Ascultă</button></div>
+            </div>
+            <div class="card">
+              <div class="play">▶</div>
+              <div class="meta">
+                <small>Continuă</small>
+                <b>Cine sunt eu, de fapt?</b>
+                <span>Lecția 3 · 4 min</span>
+              </div>
+            </div>
+            <div class="section-label">Pentru tine</div>
+            <div class="chips">
+              <div class="chip-item"><span class="ic">🙏</span> Rugăciune</div>
+              <div class="chip-item"><span class="ic">📊</span> Radar</div>
+              <div class="chip-item"><span class="ic">👪</span> Familie</div>
+              <div class="chip-item"><span class="ic">🪨</span> Ebenezer</div>
+            </div>
+            <div class="rhythm">Ritmul tău: <span class="dot">🔥 12 zile · cu har</span></div>
+          </div>
+          <div class="tabbar">
+            <div class="tab active"><span class="ic">🏠</span>Acasă</div>
+            <div class="tab"><span class="ic">📿</span>Parcurs</div>
+            <div class="tab"><span class="ic">🙏</span>Rugăc.</div>
+            <div class="tab"><span class="ic">👥</span>Comun.</div>
+            <div class="tab"><span class="ic">👤</span>Profil</div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>1 · Tron de safir</b><span>Ezechiel 1:26 · Apocalipsa 4:3<br>albastru safir + aur + smarald</span></div>
+    </div>
+
+    <!-- ============ 2. NOUL IERUSALIM ============ -->
+    <div class="col">
+      <div class="phone">
+        <div class="screen v-ierusalim">
+          <div class="body">
+            <div class="topbar">
+              <div class="hi">Bună seara,<b>Andrei</b></div>
+              <div class="streak">🔥 12 zile</div>
+            </div>
+            <div class="hero">
+              <div class="kick">Cuvântul de azi</div>
+              <blockquote>„Până aici Domnul ne-a ajutat.”</blockquote>
+              <cite>— 1 Samuel 7:12</cite>
+              <div><button class="listen">🔊 Ascultă</button></div>
+            </div>
+            <div class="card">
+              <div class="play">▶</div>
+              <div class="meta">
+                <small>Continuă</small>
+                <b>Cine sunt eu, de fapt?</b>
+                <span>Lecția 3 · 4 min</span>
+              </div>
+            </div>
+            <div class="section-label">Pentru tine</div>
+            <div class="chips">
+              <div class="chip-item"><span class="ic">🙏</span> Rugăciune</div>
+              <div class="chip-item"><span class="ic">📊</span> Radar</div>
+              <div class="chip-item"><span class="ic">👪</span> Familie</div>
+              <div class="chip-item"><span class="ic">🪨</span> Ebenezer</div>
+            </div>
+            <div class="rhythm">Ritmul tău: <span class="dot">🔥 12 zile · cu har</span></div>
+          </div>
+          <div class="tabbar">
+            <div class="tab active"><span class="ic">🏠</span>Acasă</div>
+            <div class="tab"><span class="ic">📿</span>Parcurs</div>
+            <div class="tab"><span class="ic">🙏</span>Rugăc.</div>
+            <div class="tab"><span class="ic">👥</span>Comun.</div>
+            <div class="tab"><span class="ic">👤</span>Profil</div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>2 · Noul Ierusalim</b><span>Apocalipsa 21<br>ametist + aur curat + mărgăritar</span></div>
+    </div>
+
+    <!-- ============ 3. MAREA DE CRISTAL ============ -->
+    <div class="col">
+      <div class="phone">
+        <div class="screen v-cristal">
+          <div class="body">
+            <div class="topbar">
+              <div class="hi">Bună seara,<b>Andrei</b></div>
+              <div class="streak">🔥 12 zile</div>
+            </div>
+            <div class="hero">
+              <div class="kick">Cuvântul de azi</div>
+              <blockquote>„Până aici Domnul ne-a ajutat.”</blockquote>
+              <cite>— 1 Samuel 7:12</cite>
+              <div><button class="listen">🔊 Ascultă</button></div>
+            </div>
+            <div class="card">
+              <div class="play">▶</div>
+              <div class="meta">
+                <small>Continuă</small>
+                <b>Cine sunt eu, de fapt?</b>
+                <span>Lecția 3 · 4 min</span>
+              </div>
+            </div>
+            <div class="section-label">Pentru tine</div>
+            <div class="chips">
+              <div class="chip-item"><span class="ic">🙏</span> Rugăciune</div>
+              <div class="chip-item"><span class="ic">📊</span> Radar</div>
+              <div class="chip-item"><span class="ic">👪</span> Familie</div>
+              <div class="chip-item"><span class="ic">🪨</span> Ebenezer</div>
+            </div>
+            <div class="rhythm">Ritmul tău: <span class="dot">🔥 12 zile · cu har</span></div>
+          </div>
+          <div class="tabbar">
+            <div class="tab active"><span class="ic">🏠</span>Acasă</div>
+            <div class="tab"><span class="ic">📿</span>Parcurs</div>
+            <div class="tab"><span class="ic">🙏</span>Rugăc.</div>
+            <div class="tab"><span class="ic">👥</span>Comun.</div>
+            <div class="tab"><span class="ic">👤</span>Profil</div>
+          </div>
+        </div>
+      </div>
+      <div class="caption"><b>3 · Marea de cristal</b><span>Apocalipsa 4:6 &amp; 15:2<br>cristal/turcoaz + aur (temă luminoasă)</span></div>
+    </div>
+
+  </div>
+</body>
+</html>
