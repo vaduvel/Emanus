@@ -2,6 +2,34 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Current Product Structure (MVP)
+
+- UI stack: React + MUI (`ThemeProvider`, global design system in `src/theme/appTheme.js`)
+- Public flow style: `hope.study` (header + footer + course catalog + course detail + lesson flow)
+- Auth: Firebase Auth (email/password + Google)
+- User onboarding save: Firestore (`users/{uid}`)
+- Course content source (for now): local data in `src/data/courses.js`
+- Lesson script source (for now): local data in `src/lessons/ziuaInchinare.js`
+
+### Routes
+
+- `/` - Home / product overview
+- `/cursuri` - Course catalog with filters
+- `/cursuri/:courseSlug` - Course detail page
+- `/lesson/:courseSlug/:lessonId` - Interactive lesson page
+- `/auth` - Login / signup page
+- `/mentorat`, `/consiliere`, `/comunitate`, `/criza` - placeholder modules for phase 2
+
+## Firebase Setup
+
+1. Copy `.env.example` to `.env`.
+2. Add values from Firebase Console:
+`Project settings -> General -> Your apps -> SDK setup and configuration`.
+3. Restart the dev server after updating `.env`.
+
+Important: never commit `.env` to git.
+If `.env` is missing, the app currently falls back to the existing `emanus-8075b` config to avoid a blank screen.
+
 ## Available Scripts
 
 In the project directory, you can run:
