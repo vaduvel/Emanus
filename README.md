@@ -1,28 +1,45 @@
-# Emanus — Pachet complet de conținut (ediția plină)
+# Emanus
 
-**Platformă educațională creștină pentru toată familia.** „Cuvântul din Biblie este adevărul.”
+**Emanus = Emanuel** („Dumnezeu cu noi" — Isaia 7:14; Matei 1:23) **+ Emaus** (Luca 24).
 
-Acest pachet conține TOT conținutul construit până acum, gata de predat unui agent de cod sau unei echipe de conținut. Fiecare categorie de vârstă are **coloana (spina)** + **6 cursuri complete a câte 5 lecții** fiecare.
+> **Dumnezeu cu tine, pe drumul vieții tale** — care te învață cum să aplici Scriptura în viața de zi cu zi, ca să înțelegi cum se biruie lumea prin Iisus (Ioan 16:33; 1 Ioan 5:4–5).
+
+Nu un curs *despre* Dumnezeu, ci relația cu Dumnezeu trăită zilnic, de toată familia. Destinația: **din orfan → în fiu iubit pe veci și mântuit.** „Cuvântul din Biblie este adevărul."
+
+**`docs/00-DIRECTIE.md` este sursa unică de adevăr.** Când orice alt document pare să-l contrazică, `00` are prioritate.
 
 ---
 
-## Ce e în pachet
+## Model de venit — decis
+
+**Nu cerem bani nimănui, pentru nimic.** Singurul venit sunt **donațiile** (plus, eventual, asociați/parteneri). Fără paywall, fără conținut blocat, fără abonament, fără freemium. Vezi `DECISIONS.md` D-009 și `00-DIRECTIE.md` §12.
+
+> Notă: `docs/01-raport-viabilitate.md` §9–§10 descrie încă scenarii de freemium și licențiere către biserici. Acele secțiuni sunt **istorice** (analiză de piață), nu decizii active.
+
+---
+
+## Documentele
 
 | Fișier | Conținut |
 |---|---|
-| `01-raport-viabilitate.md` | Analiză de viabilitate 2026: piață, monetizare, distribuție creator-led, riscuri |
-| `02-programa-curriculum.md` | Programa & cursurile pe cele 7 categorii de vârstă + cele 6 axe |
-| `03-workbook-implementare.md` | Workbook de implementare (build spec pentru agent) — toate cele 7 categorii, arhitectură, gamificare, chat, comunitate, siguranță |
-| `04-lectie-pilot.md` | Lecția pilot: „Simt că nu sunt de ajuns” |
-| `05-adolescenti-traseu.md` | Traseul complet Adolescenți (12–18), cap-coadă |
-| `06-adolescenti-curs-1-1.md` | Cursul 1.1 detaliat (6 lecții): „Cine sunt eu, de fapt?” |
-| `07-adolescenti-cursuri-2-6.md` | Cursurile 2.1–6.1 complete pentru adolescenți |
-| `08-femei.md` | Coloana + 6 cursuri complete (Femei) |
-| `09-barbati.md` | Coloana + 6 cursuri complete (Bărbați) |
-| `10-parinti.md` | Coloana + 6 cursuri complete (Părinți) |
-| `11-bunici.md` | Coloana + 6 cursuri complete (Bunici) |
-| `12-copii-6-11.md` | Coloana + 6 cursuri complete (Copii 6–11) |
-| `13-bebelusi-0-5.md` | Coloana + 6 cursuri complete (Bebeluși 0–5, format dublu copil+părinte) |
+| `docs/00-DIRECTIE.md` | **Direcția canonică — sursă unică de adevăr.** Teza, ritualul zilnic, retenția cu har, Ușa nu unghiul, ascultarea înainte de învățătură, ecosistemul |
+| `docs/01-raport-viabilitate.md` | Analiză de viabilitate 2026: piață, distribuție creator-led, riscuri (secțiunile de monetizare = istoric) |
+| `docs/02-programa-curriculum.md` | Programa & cursurile pe cele 7 categorii de vârstă + cele 6 axe |
+| `docs/03-workbook-implementare.md` | Workbook de implementare (build spec) — arhitectură, gamificare, chat, comunitate, siguranță |
+| `docs/04-lectie-pilot.md` | Lecția pilot: „Simt că nu sunt de ajuns” |
+| `docs/08-continut-bebelusi.md` | Conținut Bebeluși 0–5 (format dublu copil+părinte) |
+| `docs/09-continut-copii.md` | Conținut Copii 6–11 |
+| `docs/10-continut-femei.md` | Conținut Femei |
+| `docs/11-continut-barbati.md` | Conținut Bărbați |
+| `docs/12-continut-parinti.md` | Conținut Părinți |
+| `docs/13-continut-bunici.md` | Conținut Bunici |
+| `docs/Emanus — Mapare lecții…md` | Maparea temelor / playlisturilor |
+| `docs/Emanus — Ritmul zilnic & Rugăciunea…md` | Ritualul zilnic + antrenorul de rugăciune |
+| `docs/Emanus — Studiu de caz hope.study…md` | Studiu de caz: player conversațional |
+| `adolescenti/` | Traseul complet Adolescenți 12–18 (05–07: traseu, cursul 1.1, cursurile 2.1–6.1) |
+| `bebelusi-0-5/` `copii-6-11/` `femei/` `barbati/` `parinti/` `bunici/` | Foldere editoriale pe categorie |
+| `DECISIONS.md` | Registrul deciziilor (D-001…) |
+| `DEVELOPMENT.md` | Cum rulezi local (API, web, DB) |
 
 ---
 
@@ -30,7 +47,7 @@ Acest pachet conține TOT conținutul construit până acum, gata de predat unui
 
 **Categorii:** Bebeluși (0–5) · Copii (6–11) · Adolescenți (12–18) · Femei · Bărbați · Părinți · Bunici.
 
-**Cele 6 axe (module) pentru fiecare categorie:**
+**Cele 6 axe de creștere:**
 1. `identity` — Identitate
 2. `emotional_peace` — Pace emoțională
 3. `relationships` — Relații
@@ -38,26 +55,34 @@ Acest pachet conține TOT conținutul construit până acum, gata de predat unui
 5. `character` — Caracter
 6. `freedom` — Libertate
 
-Fiecare axă = un curs de 5 lecții. 6 cursuri × 5 lecții = **30 de lecții per categorie**.
+Ierarhia din cod: Categorie → Modul (pe axă) → Curs → Lecție (5–7 min) → 12 beat-uri. Numărul de cursuri și lecții per categorie diferă între documente; **sursa de adevăr pentru numere este `docs/02-programa-curriculum.md`**, nu acest README.
+
+Separat de axe, ritualul zilnic e structurat pe **cele 6 organe ale relației**: Prezența, Vorbirea, Ascultarea, Încrederea, Umblarea, Comuniunea (`00-DIRECTIE.md` §8). Cele două cadre nu se contopesc.
 
 ---
 
 ## Formatul lecțiilor
 
-**Standard (adolescenți / adulți / bunici):**
-💥 Cârligul → 🧠 Cutia de știință → 🔄 Minciuna→Adevărul → 📖 Adevărul (Scriptură) → 🎯 Pasul (24–48h) → 📓 Jurnal.
+**Player de chat conversațional**, 12 beat-uri: `check_in → hook → choice → name_struggle → world_vs_truth → scripture → truth_simple → quiz → how_god_helps → step → memory_verse+prayer → journal+reward`.
 
-**Copii 6–11:** 💥 Cârligul → ✨ Știai că? → 🔄 Unii cred→Adevărul → 📖 Din Biblie → 🎯 Pasul → 📓 Jurnal (limbaj simplu, adresat copilului).
-
-**Bebeluși 0–5 (dublu):** 💥 De ce contează → 🧠 Pentru părinte → 🔄 Minciună→Adevăr → 📖 Din Biblie → 🎯 Activitate cu cel mic → 📓 Jurnal de părinte (părintele = „profesorul”).
+Variante editoriale pe vârstă:
+- **Standard (adolescenți / adulți / bunici):** 💥 Cârligul → 🧠 Cutia de știință → 🔄 Minciuna→Adevărul → 📖 Adevărul (Scriptură) → 🎯 Pasul (24–48h) → 📓 Jurnal.
+- **Copii 6–11:** 💥 Cârligul → ✨ Știai că? → 🔄 Unii cred→Adevărul → 📖 Din Biblie → 🎯 Pasul → 📓 Jurnal.
+- **Bebeluși 0–5 (dublu):** 💥 De ce contează → 🧠 Pentru părinte → 🔄 Minciună→Adevăr → 📖 Din Biblie → 🎯 Activitate cu cel mic → 📓 Jurnal de părinte.
 
 ---
 
 ## Principii de calitate
 
 - Fără clișee, fără culpabilizare.
-- Se pleacă de la știință / psihologie / cultură, apoi Scriptura ca adevăr mai ascuțit.
-- Personaj-ghid: „Daniel”.
-- Distribuție: creator-led (@danielincredinta pe TikTok + influenceri creștini), NU prin biserici.
-- Model: freemium (conversie 3–8%) + donații / pay-it-forward + export.
-- Linii de criză (workbook §15): 112, 116 111, 116 123.
+- Identitate înainte de datorie; har la cădere, nu pedeapsă.
+- Se pleacă de la viața reală / știință / cultură, apoi Scriptura ca adevăr mai ascuțit.
+- Personaj-ghid: „Daniel”. Nu se dă niciodată drept Dumnezeu; duce mereu la Cuvânt și afară, în Biserică.
+- Distribuție: creator-led (TikTok + influenceri creștini), NU prin biserici.
+- Linii de criză (workbook §15): **112**, **116 111** (Telefonul Copilului), **116 123** (suport emoțional).
+
+---
+
+## Stack
+
+pnpm workspace · TypeScript strict · React + Vite (PWA) · Express + Prisma · Supabase Postgres · Capacitor (shell mobil). Vezi `DEVELOPMENT.md`.
