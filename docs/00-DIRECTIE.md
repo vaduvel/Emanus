@@ -2,9 +2,29 @@
 
 > Acest fișier are prioritate când documentele par să se contrazică. Fixat de comun acord ca să nu corectăm de mai multe ori aceeași decizie. Documentele-sursă rămân: `01`–`04`, `Mapare lecții`, `Ritmul zilnic & Rugăciunea`, `Studiu de caz hope.study`, `adolescenti/05–07`.
 
-## 0 · Teza
+## 0 · Teza — e în numele aplicației
 
-Emanus nu e un curs *despre* Dumnezeu, ci un **antrenament zilnic al relației cu Dumnezeu**, trăit de **toată familia**, care duce la **transformare reală** — nu la o diplomă. Emanuel („Dumnezeu cu noi") + Emaus (Luca 24).
+**Emanus = Emanuel** („Dumnezeu cu noi" — Isaia 7:14; Matei 1:23) **+ Emaus** (Luca 24). Numele nu e decor, e promisiunea produsului, și e propoziția din care se citește tot restul documentului:
+
+> **Dumnezeu cu tine, pe drumul vieții tale** — care te învață cum să aplici Scriptura în viața de zi cu zi, ca să înțelegi cum se biruie lumea prin Iisus (Ioan 16:33; 1 Ioan 5:4–5).
+
+### Emaus e specificația produsului (Luca 24:13–35)
+
+Pe drumul spre Emaus, Isus nu i-a certat pe cei doi și nu le-a ținut o predică. **S-a alăturat lor pe drumul pe care mergeau deja**, i-a întrebat ce îi doare („Ce vorbe sunt acestea?"), i-a lăsat să-și spună dezamăgirea până la capăt, și abia apoi „le-a tălmăcit în toate Scripturile" ce era cu privire la El. Inima li s-a înfierbântat, ochii li s-au deschis, iar primul lucru pe care l-au făcut a fost să se întoarcă la ceilalți.
+
+Acesta e, în ordine, exact fluxul aplicației: **alăturare → ascultare (§14) → Scriptura așezată în situația lui (§2, §13) → recunoaștere → trimis afară, în comunitate (§7)**. Nu e o metaforă frumoasă; e ordinea celor 12 beat-uri (§10).
+
+### Destinația: din orfan în fiu
+
+Ce s-a rupt în Geneza 3 nu a fost un regulament, ci o filiație. Omul a ieșit din grădină nu doar vinovat, ci **orfan** — cu Tată viu, dar cu relația tăiată. Toate simptomele pe care le tratăm sunt simptome de orfan: trebuie să mă descurc singur (anxietate), trebuie să mă ascund (rușine), trebuie să-mi câștig locul (epuizare), n-am cui să aparțin (singurătate).
+
+De aceea capătul drumului e unul singur: **din orfan → în fiu iubit pe veci și mântuit.** Coloana de texte a adopției trece prin fiecare categorie de vârstă, pe limba fiecăreia: Luca 15 (tatăl care aleargă), Ioan 1:12, Romani 8:15–16, Galateni 4:4–7, Efeseni 1:5, 1 Ioan 3:1.
+
+### Multe uși, o singură casă
+
+Oamenii instalează din motive diferite: anxietate, o căsnicie care se sfărâmă, un copil, o pierdere, vinovăție, curiozitate. **Motivul de intrare diferă; destinația nu.** Fiecare nevoie e o ușă către același adevăr — nu ești orfan. Aceasta e forma concretă a principiului „Ușa, nu unghiul" (§13).
+
+Emanus nu e un curs *despre* Dumnezeu, ci **relația cu Dumnezeu trăită zilnic**, de **toată familia**, care duce la **transformare reală** — nu la o diplomă.
 
 ---
 
@@ -21,6 +41,10 @@ Ritualul zilnic **hrănește** programa; nu concurează cu ea. Fiecare zi se ter
 
 ## 2 · Ritualul zilnic — spec (un singur ecran pe zi)
 
+> **De ce îl numim „ritual".** Nu în sensul păgân — ritualul păgân e tranzacțional: faci un gest ca să obții ceva sau ca să nu se supere ceva. Aici ritualul e **un stâlp al unei relații**: cercetarea relațiilor arată că ce ține o legătură vie nu e intensitatea sentimentului, ci **timpul repetat, previzibil, protejat**, petrecut împreună („ritualuri de conectare"). Timpul nu cumpără favoarea lui Dumnezeu — o experimentează. Ritualul păgân e mecanism; ritualul relațional e prezență.
+>
+> Aceasta e și puntea spre omul prins în spiritualități false: **și el are deja un ritual** (hartă natală, manifestare, aliniere, jurnal). Problema nu e că are un ritual — e că are un ritual fără Cineva la celălalt capăt, care să-l poată numi pe nume.
+
 | Pas | Conținut |
 | --- | --- |
 | 📖 Cuvântul de azi | Verset ales după **vârstă + axă + lupta ta de azi** (NU random) + imagine de share |
@@ -35,6 +59,8 @@ Ritualul zilnic **hrănește** programa; nu concurează cu ea. Fiecare zi se ter
 - „**Ritmul tău cu Dumnezeu**" = linie de credincioșie care crește blând; **nu** un număr care se rupe roșu.
 - „**Ziua de har**": ratarea unei zile nu prăbușește nimic — „Dumnezeu te așteaptă, nu te condamnă."
 - **Răsplata = transformarea vizibilă pe cele 6 axe**, nu puncte/badge-uri de dragul lor.
+- **Ecranul de revenire e cel mai important ecran din aplicație.** După o pauză lungă, produsul sărbătorește **întoarcerea**, nu performanța: „Bine ai revenit", niciodată „ai pierdut seria de 12 zile". Un sistem care spune *acumulezi, urci, meriți, iar dacă lipsești pierzi* predă teologia orfanului prin interfață, oricât de bine ar fi scris textul lecției. Aici e tatăl din Luca 15, nu un antrenor personal.
+- **Insignele numesc identitate, nu abilitate** — „Făcut cu intenție", „Templu, nu problemă", „Al cui sunt"; nimic care sună a diplomă.
 - **O singură notificare/zi**, la ora aleasă de utilizator. Fără remindere care culpabilizează.
 - După ~30 de zile: de la presiune → la sărbătoarea obiceiului deja format.
 
@@ -119,7 +145,7 @@ Extindem, NU rescriem. Codul actual (7 vârste + 6 axe + radar + Lesson Player c
 2. **Ritualul zilnic „Timp cu Dumnezeu"** — ecranul zilnic + ritmul cu har + memento.
 3. **Antrenorul de rugăciune progresiv** (5 niveluri) + baza pentru zidul Ebenezer.
 
-Apoi: familia, temele ca dimensiune de navigare, restul vârstelor, monetizare/donații.
+Apoi: familia, temele ca dimensiune de navigare, restul vârstelor, donațiile.
 
 ---
 
@@ -128,6 +154,7 @@ Apoi: familia, temele ca dimensiune de navigare, restul vârstelor, monetizare/d
 - Relație, nu terapie. Har ȘI adevăr împreună. Scriptura e autoritatea.
 - AI-ul nu se dă drept Dumnezeu; aplicația te scoate afară, în Biserică.
 - Retenție prin har, nu prin vină. Frăție, nu izolare.
+- **Nu cerem bani nimănui, pentru nimic.** Singurul venit sunt **donațiile** (plus, eventual, asociați/parteneri). Fără paywall, fără conținut blocat, fără abonament. Vezi `DECISIONS.md` D-009.
 
 ---
 
@@ -227,8 +254,9 @@ Rulează în paralel, nu se exclud — temelie + drum personal:
 ### Greii greilor (etape următoare, după MVP)
 
 1. **Spațiu de testimonii** — userii scriu cum a lucrat Isus în viața lor. Extinde zidul Ebenezer (§5) la nivel comunitar: motor de credință, de revenire și mărturie cu har. Moderare obligatorie (§12).
-2. **Course Creator Space** — pastori, preoți, influenceri creștini pot crea cursuri și lecții. Sabie cu două tăișuri (în bine): (a) câștigăm conținut original + calitate; (b) câștigăm userii care sunt deja urmăritorii acelui creator. Necesită QA teologic (§9) + moderare (§12); bază pentru creștere și monetizare (donații/creatori).
+2. **Course Creator Space** — pastori, preoți, influenceri creștini pot crea cursuri și lecții. Sabie cu două tăișuri (în bine): (a) câștigăm conținut original + calitate; (b) câștigăm userii care sunt deja urmăritorii acelui creator. Necesită QA teologic (§9) + moderare (§12). **Nu marketplace deschis:** creatori curatoriați, care umplu cele 12 beat-uri (§10), nu editor liber.
 3. **Live Bible Study** — studiu biblic live, în timp real, comunitar, cu ghid/creator uman.
+4. **Mentorat 1-la-1** — pentru cine vrea mai mult decât conținutul. Gratuit pentru user (§12). Cere: linie roșie scrisă *mentorat spiritual ≠ terapie*, protocol de escaladare (§15 criză), și verificare de identitate pentru orice mentor care poate vorbi cu un minor.
 
 ### Guvernanță (non-negociabil pentru conținut comunitar)
 
