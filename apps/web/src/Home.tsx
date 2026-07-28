@@ -129,6 +129,18 @@ export function Home() {
 
       <CheckIn />
 
+      {/* Lecție pilot, pentru validare de ton. Se scoate înainte de lansare. */}
+      <section className="tile">
+        <h2 className="tile__title">Lecție de probă</h2>
+        <p className="muted">
+          „N-ai fost făcut pentru tine” — pentru cine merge la biserică de ani de zile și nu s-a
+          schimbat nimic. Aproximativ 11 minute. Nu se salvează nimic.
+        </p>
+        <button type="button" style={moreBtnStyle} onClick={() => navigate("/lesson/mohler_l1")}>
+          Deschide lecția
+        </button>
+      </section>
+
       <section className="tile">
         <h2 className="tile__title">
           Unde ești pe drum
