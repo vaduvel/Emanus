@@ -1,8 +1,20 @@
 import { useEffect, useState } from "react"
-import { BookOpen, Flame, HandHeart, HelpCircle, Landmark, Lightbulb, Users } from "lucide-react"
+import { BookOpen, HandHeart, HelpCircle, Landmark, Lightbulb, Users } from "lucide-react"
 import type { DailyView } from "@emanus/shared"
 import { getDaily } from "./api"
 import { navigate } from "./router"
+
+/*
+ * Timp cu Dumnezeu (docs/19-decizii-ui.md).
+ *
+ * Două corecții făcute aici:
+ *  1. Flacăra cu `rhythmDays` a fost scoasă — nicio cifră care măsoară un om.
+ *     `graceMessage` rămâne: el spune ce trebuie spus, fără să numere.
+ *  2. Butonul de rezervă trimitea toată lumea la `teens_m1_c1_l1` — lecția 1
+ *     pentru adolescenți — indiferent de cine era omul. Era un bug, nu o
+ *     decizie. Dacă nu există o lecție următoare, înseamnă că omul nu a ales
+ *     încă de unde începe, deci mergem la "Ce te-a adus aici?".
+ */
 
 export function Daily() {
   const [data, setData] = useState<DailyView | null>(null)
@@ -18,7 +30,7 @@ export function Daily() {
   if (error) return <p className="error">{error}</p>
   if (!data) return <p className="muted">Se încarcă…</p>
 
-  const { ritual, rhythmDays, nextLesson, graceMessage } = data
+  const { ritual, nextLesson, graceMessage } = data
 
   return (
     <section className="daily">
@@ -27,9 +39,6 @@ export function Daily() {
           <h1>Timp cu Dumnezeu</h1>
           <p className="muted">{graceMessage}</p>
         </div>
-        <span className="rhythm" title="Ritmul tău cu Dumnezeu">
-          <Flame size={16} strokeWidth={2} aria-hidden /> {rhythmDays}
-        </span>
       </header>
 
       <article className="daily__card">
@@ -69,11 +78,11 @@ export function Daily() {
       <div className="daily__nav">
         {nextLesson ? (
           <button type="button" onClick={() => navigate(`/lesson/${nextLesson.lessonId}`)}>
-            Continuă lecția: {nextLesson.title}
+            Continuă: {nextLesson.title}
           </button>
         ) : (
-          <button type="button" onClick={() => navigate("/lesson/teens_m1_c1_l1")}>
-            Începe o lecție
+          <button type="button" onClick={() => navigate("/onboarding")}>
+            Alege de unde începi
           </button>
         )}
         <div className="daily__links">
