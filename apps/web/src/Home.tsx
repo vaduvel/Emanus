@@ -1,88 +1,46 @@
 import { useEffect, useState } from "react"
-import type { CSSProperties, ComponentType } from "react"
-import {
-  HandHeart,
-  LifeBuoy,
-  MessagesSquare,
-  Milestone,
-  Sprout,
-  Sunrise,
-  Users,
-} from "lucide-react"
-import type {
-  CommunityPostView,
-  DailyView,
-  DashboardView,
-  GrowthAxisId,
-} from "@emanus/shared"
-import { getCommunity, getDaily, getDashboard, prayForPost } from "./api"
+import type { CSSProperties } from "react"
+import { HandHeart, LifeBuoy } from "lucide-react"
+import type { CommunityPostView, DashboardView } from "@emanus/shared"
+import { getCommunity, getDashboard, prayForPost } from "./api"
 import { navigate } from "./router"
 import { getCategory } from "./session"
-import { CheckIn, GrowthRadar, Hero, JourneyPath } from "./components"
+import { CheckIn, Hero, JourneyPath } from "./components"
 import type { NextLesson } from "./components"
 import { Avatar } from "./ds"
 
-const AXIS_LABEL: Record<GrowthAxisId, string> = {
-  identity: "Identitate",
-  emotional_peace: "Pace",
-  relationships: "Relații",
-  living_faith: "Credință",
-  character: "Caracter",
-  freedom: "Libertate",
-}
-
-// Pilonii aplicației — Acasa „mix-first” oferă intrări echilibrate spre toate lumile,
-// nu doar spre parcursul de învățare (docs/00-DIRECTIE: bible app x learning x comunitate).
-const PILLARS: Array<{ label: string; icon: ComponentType<{ size?: number; style?: CSSProperties; "aria-hidden"?: boolean }>; route: string }> = [
-  { label: "Timp cu Dumnezeu", icon: Sunrise, route: "/daily" },
-  { label: "Rugăciune", icon: HandHeart, route: "/prayer" },
-  { label: "Creșterea mea", icon: Sprout, route: "/growth" },
-  { label: "Zidul Ebenezer", icon: Milestone, route: "/ebenezer" },
-  { label: "Familie", icon: Users, route: "/family" },
-  { label: "Comunitate", icon: MessagesSquare, route: "/community" },
-]
+/*
+ * Acasă — "un singur lucru azi" (docs/19-decizii-ui.md §4).
+ *
+ * Ce a fost scos, si de ce:
+ *  - rândul cu flacăra / XP / nivel  → nicio cifră care măsoară un om;
+ *  - radarul hexagonal pe 6 axe      → formulă cu ponderi inventate, scos din navigare
+ *                                      (rămâne accesibil doar din /dashboard);
+ *  - grila "Exploreză" cu 6 piloni    → 6 blocuri egale = niciun lucru important;
+ *  - versetul zilei deconectat        → devine pasul din modulul tău, nu un card separat.
+ *
+ * Ce a rămas, în ordinea în care se citește ecranul:
+ *  1. un singur lucru de făcut azi (Hero + "Continuă");
+ *  2. "Cum e cu sufletul tău azi?" — intrarea în motorul de memorie (docs/18);
+ *  3. unde ești pe drum;
+ *  4. o cerere reală de rugăciune de la altcineva.
+ */
 
 const moreBtnStyle = { marginTop: 10 }
-const verseStyle = { cursor: "pointer" } as const
 const sosStyle: CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   gap: 6,
   alignSelf: "flex-start",
-  background: "var(--danger-soft)",
-  color: "var(--bad)",
-  border: "1px solid var(--bad)",
+  background: "var(--crisis-soft)",
+  color: "var(--crisis-ink)",
+  border: "1px solid var(--crisis)",
   borderRadius: "var(--radius-pill)",
   padding: "8px 14px",
   fontSize: "0.85rem",
   fontWeight: 600,
   boxShadow: "none",
   cursor: "pointer",
-}
-const pillarGridStyle: CSSProperties = {
-  display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gap: 10,
-}
-const pillarTileStyle: CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  gap: 8,
-  padding: "16px 8px",
-  background: "var(--surface)",
-  border: "1px solid var(--border)",
-  borderRadius: "var(--radius-lg)",
-  boxShadow: "var(--shadow-sm)",
-  cursor: "pointer",
-  textAlign: "center",
-}
-const pillarIconStyle: CSSProperties = { color: "var(--accent)" }
-const pillarLabelStyle: CSSProperties = {
-  fontSize: "0.82rem",
-  fontWeight: 600,
-  color: "var(--text)",
-  lineHeight: 1.2,
 }
 const prayerLineStyle: CSSProperties = { display: "flex", alignItems: "center", gap: 10 }
 const prayerLineTextStyle: CSSProperties = { flex: 1 }
@@ -105,7 +63,6 @@ const prayCountStyle: CSSProperties = { fontSize: "0.78rem", marginTop: 6, displ
 
 export function Home() {
   const [dash, setDash] = useState<DashboardView | null>(null)
-  const [daily, setDaily] = useState<DailyView | null>(null)
   const [posts, setPosts] = useState<CommunityPostView[] | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [prayed, setPrayed] = useState(false)
@@ -115,11 +72,6 @@ export function Home() {
     getDashboard()
       .then(setDash)
       .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)))
-    getDaily()
-      .then(setDaily)
-      .catch(() => {
-        /* versetul e opțional pentru Acasă */
-      })
     getCommunity(getCategory())
       .then((r) => setPosts(r.posts))
       .catch(() => {
@@ -130,7 +82,7 @@ export function Home() {
   if (error) return <p className="error">{error}</p>
   if (!dash) return <p className="muted">Se încarcă…</p>
 
-  const { gam, growth, modules, next } = dash
+  const { gam, modules, next } = dash
   const currentModule = modules.find((m) => !m.locked && m.lessonsCompleted < m.lessonsTotal)
   const nextLesson: NextLesson | null = next
     ? {
@@ -140,10 +92,6 @@ export function Home() {
         lessonsTotal: currentModule?.lessonsTotal,
       }
     : null
-
-  const byScore = [...growth].sort((a, b) => a.current - b.current)
-  const weakest = byScore[0]
-  const strongest = byScore[byScore.length - 1]
 
   const latestPrayer = posts?.find((p) => p.kind === "prayer_request") ?? null
 
@@ -162,71 +110,28 @@ export function Home() {
     <section className="home">
       <Hero gam={gam} next={nextLesson} onContinue={(id) => navigate(`/lesson/${id}`)} />
 
+      {!nextLesson && (
+        <section className="tile">
+          <h2 className="tile__title">Ce te-a adus aici?</h2>
+          <p className="muted">
+            Alege de unde începi. Poți schimba oricând — nu se pierde nimic.
+          </p>
+          <button type="button" style={moreBtnStyle} onClick={() => navigate("/onboarding")}>
+            Alege un început
+          </button>
+        </section>
+      )}
+
       <button type="button" style={sosStyle} onClick={() => navigate("/crisis")}>
         <LifeBuoy size={16} aria-hidden />
         Ai nevoie de ajutor acum?
       </button>
 
-      {daily && (
-        <div
-          className="verse-strip"
-          role="button"
-          tabIndex={0}
-          style={verseStyle}
-          onClick={() => navigate("/daily")}
-        >
-          <span className="verse-strip__q">„{daily.ritual.verseText}”</span>
-          <span className="verse-strip__ref">{daily.ritual.verseRef} · Timp cu Dumnezeu →</span>
-        </div>
-      )}
-
-      <section className="tile">
-        <h2 className="tile__title">Explorează</h2>
-        <div style={pillarGridStyle}>
-          {PILLARS.map((p) => {
-            const Icon = p.icon
-            return (
-              <button
-                key={p.route}
-                type="button"
-                style={pillarTileStyle}
-                onClick={() => navigate(p.route)}
-              >
-                <Icon size={22} style={pillarIconStyle} aria-hidden />
-                <span style={pillarLabelStyle}>{p.label}</span>
-              </button>
-            )
-          })}
-        </div>
-      </section>
-
       <CheckIn />
 
       <section className="tile">
         <h2 className="tile__title">
-          Creșterea ta
-          <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
-            Detalii
-          </button>
-        </h2>
-        <div className="growth-mini">
-          <GrowthRadar scores={growth} size={150} showLabels={false} />
-          <div className="growth-mini__side">
-            {strongest && weakest ? (
-              <p className="growth-mini__cap">
-                Cel mai mult crești la <b>{AXIS_LABEL[strongest.axis]}</b>. Zona ta de sprijin acum:{" "}
-                <b>{AXIS_LABEL[weakest.axis]}</b>.
-              </p>
-            ) : (
-              <p className="growth-mini__cap">Începe o lecție ca să-ți vezi radarul de creștere.</p>
-            )}
-          </div>
-        </div>
-      </section>
-
-      <section className="tile">
-        <h2 className="tile__title">
-          Parcursul tău
+          Unde ești pe drum
           <button type="button" className="ghost" onClick={() => navigate("/dashboard")}>
             Tot parcursul
           </button>
@@ -239,7 +144,7 @@ export function Home() {
       </section>
 
       <section className="tile">
-        <h2 className="tile__title">Din comunitate</h2>
+        <h2 className="tile__title">Cineva are nevoie de rugăciune</h2>
         {latestPrayer ? (
           <>
             <div className="social-strip" style={prayerLineStyle}>
@@ -274,7 +179,7 @@ export function Home() {
               <Avatar name="David P" size="sm" />
               <Avatar name="Ioana R" size="sm" />
             </div>
-            <span className="social-strip__text">Alți frați cresc alături de tine chiar acum.</span>
+            <span className="social-strip__text">Nu ești singur pe drumul ăsta.</span>
           </div>
         )}
         <button type="button" className="ghost" style={moreBtnStyle} onClick={() => navigate("/community")}>
