@@ -1,6 +1,7 @@
 export * from "./domain.js"
 export * from "./categoryConfig.js"
 export * from "./seed.js"
+export * from "./lessonMohler.js"
 export * from "./daily.js"
 export * from "./gamification.js"
 export * from "./diagnostic.js"
