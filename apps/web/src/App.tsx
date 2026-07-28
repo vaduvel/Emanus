@@ -1,133 +1,101 @@
-import { useState } from "react"
-import { Feather } from "lucide-react"
-import { Auth } from "./Auth"
-import { Categories } from "./Categories"
-import { Community } from "./Community"
+import { LifeBuoy } from "lucide-react"
+import { Sunrise, HandHeart } from "lucide-react"
 import { Crisis } from "./Crisis"
-import { Daily } from "./Daily"
-import { Dashboard } from "./Dashboard"
-import { Ebenezer } from "./Ebenezer"
-import { Family } from "./Family"
-import { GrowthOnboarding } from "./GrowthOnboarding"
-import { Home } from "./Home"
 import { LessonView } from "./LessonView"
-import { Mentorat } from "./Mentorat"
-import { Onboarding } from "./Onboarding"
-import { PrayerCoach } from "./PrayerCoach"
-import { Recommendation } from "./Recommendation"
-import { TabBar } from "./components"
-import { Button } from "./ds"
 import { Gallery } from "./ds/Gallery"
+import { hasStarted } from "./journey"
 import { navigate, useHashRoute } from "./router"
-import { isOnboarded } from "./session"
+import { Doors } from "./screens/Doors"
+import { PathEnd } from "./screens/PathEnd"
+import { Prayers } from "./screens/Prayers"
+import { Today } from "./screens/Today"
+import "./journey.css"
 
-function Landing() {
+/*
+ * Carcasa aplicației. (docs/20 §8)
+ *
+ * Două taburi, atât: Azi și Rugăciunile mele.
+ * Butonul de ajutor stă sus, pe fiecare ecran, și nu se ascunde niciodată.
+ */
+
+function Tabs({ active }: { active: "today" | "prayers" }) {
   return (
-    <section className="landing">
-      <div className="landing__icon">
-        <Feather size={40} strokeWidth={1.6} aria-hidden />
-      </div>
-      <h1>Emanus</h1>
-      <p className="landing__tag">Dumnezeu cu tine, pas cu pas.</p>
-      <p className="muted">Lеcții scurte, ca o conversație. Descoperă cine ești, cu adevărat.</p>
-      <div className="landing__actions">
-        <Button variant="primary" block onClick={() => navigate("/lesson/teens_m1_c1_l1")}>
-          Încearcă prima lecție
-        </Button>
-        <Button variant="secondary" block onClick={() => navigate("/onboarding")}>
-          Începe călătoria mea
-        </Button>
-      </div>
-    </section>
+    <nav className="tabs2" aria-label="Navigare">
+      <button
+        type="button"
+        className={active === "today" ? "active" : ""}
+        onClick={() => navigate("/")}
+      >
+        <Sunrise size={20} strokeWidth={1.8} aria-hidden />
+        <span>Azi</span>
+      </button>
+      <button
+        type="button"
+        className={active === "prayers" ? "active" : ""}
+        onClick={() => navigate("/rugaciuni")}
+      >
+        <HandHeart size={20} strokeWidth={1.8} aria-hidden />
+        <span>Rugăciuni</span>
+      </button>
+    </nav>
+  )
+}
+
+function HelpButton() {
+  return (
+    <button
+      type="button"
+      className="helpbar"
+      onClick={() => navigate("/criza")}
+      aria-label="Am nevoie de ajutor acum"
+    >
+      <LifeBuoy size={16} strokeWidth={1.9} aria-hidden />
+      <span>Am nevoie de ajutor acum</span>
+    </button>
   )
 }
 
 export default function App() {
   const route = useHashRoute()
-  const [onboarded, setOnb] = useState(isOnboarded())
 
-  // DS gallery is standalone (no shell, no onboarding gate).
-  if (route.name === "ds") {
-    return <Gallery />
-  }
+  if (route.name === "ds") return <Gallery />
+  if (route.name === "crisis") return <Crisis onBack={() => navigate("/")} />
 
-  if (route.name === "onboarding" || (!onboarded && route.name === "dashboard")) {
+  // Poarta: nimeni nu intră în aplicație fără să spună o dată ce l-a adus.
+  if (route.name === "doors" || !hasStarted()) {
     return (
-      <main className="app">
-        <Onboarding
-          onDone={() => {
-            setOnb(true)
-            navigate("/recommendation")
-          }}
-        />
+      <main className="app route-anim">
+        <HelpButton />
+        <Doors />
       </main>
     )
   }
 
-  let screen: JSX.Element
-  let tab: string | null = null
-
-  switch (route.name) {
-    case "recommendation":
-      screen = <Recommendation />
-      break
-    case "prayer":
-      screen = <PrayerCoach />
-      tab = "prayer"
-      break
-    case "ebenezer":
-      screen = <Ebenezer />
-      break
-    case "family":
-      screen = <Family />
-      tab = "family"
-      break
-    case "lesson":
-      screen = <LessonView lessonId={route.id} />
-      break
-    case "community":
-      screen = <Community onBack={() => navigate("/")} />
-      tab = "community"
-      break
-    case "growth":
-      screen = <GrowthOnboarding />
-      tab = "journey"
-      break
-    case "mentorat":
-      screen = <Mentorat />
-      tab = "journey"
-      break
-    case "categories":
-      screen = <Categories />
-      break
-    case "auth":
-      screen = <Auth />
-      break
-    case "crisis":
-      screen = <Crisis onBack={() => navigate("/")} />
-      break
-    case "dashboard":
-      screen = <Dashboard onBack={() => navigate("/")} />
-      tab = "journey"
-      break
-    case "daily":
-      screen = <Daily />
-      break
-    default:
-      if (onboarded) {
-        screen = <Home />
-        tab = "home"
-      } else {
-        screen = <Landing />
-      }
+  if (route.name === "lesson") {
+    return (
+      <main className="app route-anim">
+        <HelpButton />
+        <LessonView lessonId={route.id} />
+      </main>
+    )
   }
 
-  const tabbed = tab !== null && tab !== "home"
+  if (route.name === "pathend") {
+    return (
+      <main className="app route-anim app--tabbed">
+        <HelpButton />
+        <PathEnd />
+        <Tabs active="today" />
+      </main>
+    )
+  }
 
+  const isPrayers = route.name === "prayers"
   return (
-    <main key={route.name} className={`app route-anim${tabbed ? " app--tabbed" : ""}`}>
-      {screen}
-      {tab && <TabBar active={tab} />}
+    <main key={route.name} className="app route-anim app--tabbed">
+      <HelpButton />
+      {isPrayers ? <Prayers /> : <Today />}
+      <Tabs active={isPrayers ? "prayers" : "today"} />
     </main>
   )
 }
