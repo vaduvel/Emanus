@@ -1,42 +1,32 @@
 import { useEffect, useState } from "react"
 
+/*
+ * Rutele aplicației, după reducere. (docs/20 §8)
+ *
+ * Ecrane vii: /intrare, / (Azi), /lesson/:id, /rugaciuni, /final, /criza.
+ * Ecranele vechi (comunitate, familie, mentorat, dashboard, categorii,
+ * recomandare, creștere) rămân în cod, dar nu mai sunt legate nicăieri:
+ * se reintroduc pe rând, după ce parcursul e testat pe oameni reali.
+ */
 export type Route =
-  | { name: "home" }
-  | { name: "dashboard" }
-  | { name: "daily" }
-  | { name: "onboarding" }
-  | { name: "recommendation" }
-  | { name: "prayer" }
-  | { name: "ebenezer" }
-  | { name: "family" }
-  | { name: "community" }
-  | { name: "growth" }
-  | { name: "mentorat" }
-  | { name: "categories" }
-  | { name: "auth" }
+  | { name: "today" }
+  | { name: "doors" }
+  | { name: "prayers" }
+  | { name: "pathend" }
   | { name: "crisis" }
   | { name: "ds" }
   | { name: "lesson"; id?: string }
 
 export function parseRoute(): Route {
   const h = window.location.hash.replace(/^#/, "")
-  if (h.startsWith("/lesson/")) return { name: "lesson", id: decodeURIComponent(h.slice("/lesson/".length)) }
-  if (h === "/lesson") return { name: "lesson" }
-  if (h === "/dashboard") return { name: "dashboard" }
-  if (h === "/daily") return { name: "daily" }
-  if (h === "/onboarding") return { name: "onboarding" }
-  if (h === "/recommendation") return { name: "recommendation" }
-  if (h === "/prayer") return { name: "prayer" }
-  if (h === "/ebenezer") return { name: "ebenezer" }
-  if (h === "/family") return { name: "family" }
-  if (h === "/community") return { name: "community" }
-  if (h === "/growth") return { name: "growth" }
-  if (h === "/mentorat") return { name: "mentorat" }
-  if (h === "/categories") return { name: "categories" }
-  if (h === "/auth") return { name: "auth" }
-  if (h === "/crisis") return { name: "crisis" }
+  if (h.startsWith("/lesson/"))
+    return { name: "lesson", id: decodeURIComponent(h.slice("/lesson/".length)) }
+  if (h === "/intrare") return { name: "doors" }
+  if (h === "/rugaciuni") return { name: "prayers" }
+  if (h === "/final") return { name: "pathend" }
+  if (h === "/criza" || h === "/crisis") return { name: "crisis" }
   if (h === "/ds") return { name: "ds" }
-  return { name: "home" }
+  return { name: "today" }
 }
 
 export function navigate(path: string): void {
