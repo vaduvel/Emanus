@@ -6,6 +6,8 @@ Documentul de structură. Ce vede omul, în ce ordine, și de ce în ordinea ace
 
 **Pâine, nu firimituri.** Un verset pe zi ajută la retenție. Un studiu despre iubire ajută. Dar ce caută omul e un **traseu întreg, așezat pe lupta lui de acum** — cuvânt explicat și aplicat, situația lui, întrebările lui, înțelegerile lui greșite despre Dumnezeu. De aceea Emanus nu are un „verset al zilei". Ce primește azi e **pasul următor din modulul lui**, și întotdeauna știe de ce îl primește.
 
+**Relație, nu obicei.** Aplicația e proactivă — dar ca un soț, nu ca un memento de calendar: își amintește ce a spus omul și revine la asta, nu numără zile. Comportamentul complet: `docs/18-prezenta-proactiva.md`.
+
 ---
 
 ## Legea de ordine — imaginea lui Dumnezeu vine înaintea iubirii lui Dumnezeu
@@ -28,7 +30,7 @@ Un singur drum, un singur sens, patru poziții. Nu niveluri — poziții. Nu eș
 
 | Poziție | Cine e | Ce primește | Stare azi |
 | --- | --- | --- | --- |
-| **Vino** | departe, curios, rănit, sceptic | ochii deschiși, chemarea | parțial specificat, neconstruit |
+| **Vino** | departe, curios, rănit, sceptic | ochii deschiși, întoarcerea, chemarea | parțial specificat, neconstruit |
 | **Rămâi** | a spus da, nu simte nimic | dimineața de mâine, timpul zilnic, Biblia | parțial |
 | **Crește** | merge de o vreme, se luptă cu ceva | modulul pe lupta lui | mecanica există, conținutul nu |
 | **Dă mai departe** | a crescut, vrea să ducă lumina | de dat, nu de primit | **zero** |
@@ -40,18 +42,19 @@ Ultima linie e gaura structurală a produsului. Omul care a crescut trei luni nu
 ## Straturile, în ordinea prin care trece omul
 
 ```
-0 · Ce te-a adus aici?        — 8 uși, o singură întrebare, fără cont
-1 · Deschiderea ochilor       — cine e Dumnezeu, de fapt (obligatoriu pe ușile de durere)
-2 · Fundamentul               — arcul complet + chemarea (oricine, oricând)
-3 · Modulul meu               — lupta mea, 4–6 lecții, pâinea zilnică
-4 · Dă mai departe            — mărturie, studiu, pliant, răspuns în comunitate
+0   · Ce te-a adus aici?        — 8 uși, o singură întrebare, fără cont
+1   · Deschiderea ochilor       — cine e Dumnezeu, de fapt (obligatoriu pe ușile de durere)
+1.5 · Întoarcerea               — ce se întâmplă în mine: păcătos, smerit, strigăt
+2   · Fundamentul               — arcul complet + chemarea (oricine, oricând)
+3   · Modulul meu               — lupta mea, 4–6 lecții, pâinea zilnică
+4   · Dă mai departe            — mărturie, studiu, pliant, răspuns în comunitate
 ```
 
 Niciun strat nu e blocat de altul. Cine intră pentru doliu poate merge direct la doliu. Ordinea e **recomandarea aplicației**, nu un lacăt.
 
 ### Stratul 0 · „Ce te-a adus aici?"
 
-Primul ecran, înaintea oricărui cont. O întrebare, opt uși, un singur tap. Înlocuiește onboardingul actual și diagnosticul — nimeni venit de pe TikTok nu răspunde la doiăsprăzece întrebări înainte să vadă ceva.
+Primul ecran, înaintea oricărui cont. O întrebare, opt uși, un singur tap. Înlocuiește onboardingul actual și diagnosticul — nimeni venit de pe TikTok nu răspunde la douăsprezece întrebări înainte să vadă ceva.
 
 Ușile: *nu mai simt nimic* · *mi-e frică tot timpul* · *am pierdut pe cineva* · *casa mea se rupe* · *nu știu dacă există* · *am greșit prea mult* · *vreau să-L cunosc* · *sunt bine, vreau să cresc*.
 
@@ -64,13 +67,23 @@ Modul nou, 6 lecții scurte, servit **automat** pe ușile de durere și disponib
 | # | Înțelegerea de răsturnat | Text |
 | --- | --- | --- |
 | 1 | „Dumnezeu face și rău și bine" | Iacov 1:17 · 1 Ioan 1:5 — nu există întuneric în El |
-| 2 | „Dumnezeu vrea să sufer, ca să mă învețe" | Plngeri 3:33 · Ioan 11:35 — El plânge la mormânt, nu explică |
+| 2 | „Dumnezeu vrea să sufer, ca să mă învețe" | Plângeri 3:33 · Ioan 11:35 — El plânge la mormânt, nu explică |
 | 3 | „Dumnezeu mă ispitește și așteaptă să cad" | Iacov 1:13-14 · Luca 15:20 — Tatăl aleargă primul |
-| 4 | „Ce mi s-a făcut, El a permis, deci e vina Lui" | Ioan 10:10 · Ezechiel 18:20 — hoi și rău sunt ale altcuiva |
+| 4 | „Ce mi s-a făcut, El a permis, deci e vina Lui" | Ioan 10:10 · Ezechiel 18:20 — hoțul și răul sunt ale altcuiva |
 | 5 | „Dumnezeu stă cu mâinile în sân" | Romani 5:8 · Isaia 53:4-5 — dovada e o cruce, nu o promisiune |
 | 6 | „Dumnezeu mă iubește în general, nu pe mine" | Isaia 43:1 · Psalm 139 — pe nume, cu istoria mea |
 
 **Reguli de siguranță pentru acest modul:** nu se explică de ce s-a întâmplat ce s-a întâmplat, nu se cere iertarea nimănui, nu se cere povestirea traumei, nu se pune niciun pas care implică confruntarea cuiva. Se spune ce nu e Dumnezeu, și se oprește. Lecția 6 e prima în care apare cuvântul „iubire" — și abia după celelalte cinci.
+
+### Stratul 1.5 · „Întoarcerea" — `core_turning`
+
+`docs/17-modul-intoarcerea.md`. Șapte lecții. Stratul 1 spune **cine e Dumnezeu**; Fundamentul spune **ce s-a întâmplat în istorie**; acesta spune **ce se întâmplă în mine acum**.
+
+Fără el, ecranul deciziei vine prea devreme pentru cine n-a ajuns încă la capătul puterilor: niciun fiu risipitor nu se întoarce până nu lovește fundul sacului, și niciun om mândru nu se smerește pentru că i s-a explicat frumos. Doctrina fără mișcarea asta produce oameni informați și neschimbați.
+
+Pașii, în ordine: sunt păcătos · mândria mă orbește · **nu trebuie să fiu curat ca să-L strig** · o inimă sinceră face mai mult decât o rugăciune corectă · doar El poate · își vine în fire · am nevoie de mântuire.
+
+**Legea modulului:** pașii se oferă ca **recunoaștere**, nu ca poartă. Omul își recunoaște poziția, nu i se cere s-o atingă. Aplicația **nu produce fundul sacului** — n-ar avea voie nici teologic, nici după ce s-a scris în stratul 1. Convingerea de păcat e lucrarea Duhului (Ioan 16:8); aplicația numește, nu convinge.
 
 ### Stratul 2 · Fundamentul
 
@@ -139,6 +152,8 @@ Azi sunt: Acasă · Parcurs · Rugăc. · Comun. · Familie — pentru 16 rute. 
 - **XP și niveluri.** Creșterea spirituală nu e liniară și nu se punctează. Insignele rămân, dar ca **identitate** („Făcut cu intenție", „Al cui sunt"), nu ca scor.
 - **Comparația cu alți utilizatori**, în orice formă.
 
+Ce le ia locul nu e absența, ci **memoria**: aplicația revine la ce a spus omul (cererea de acum două săptămâni, pasul asumat, ziua grea din calendarul lui), nu la câte zile a bifat. Vezi `docs/18-prezenta-proactiva.md`.
+
 ---
 
 ## Ordinea de sprint
@@ -146,11 +161,11 @@ Azi sunt: Acasă · Parcurs · Rugăc. · Comun. · Familie — pentru 16 rute. 
 | # | Ce | De ce acum |
 | --- | --- | --- |
 | 1 | Fix `teens_m1_c1_l1` + „Ce te-a adus aici?" | primul ecran pe care îl vede tot traficul din TikTok |
-| 2 | `core_eyes` (6 lecții) + Fundamentul (8) + `/decizie` | motivul pentru care omul a venit |
+| 2 | `core_eyes` (6) + `core_turning` (7) + Fundamentul (8) + `/decizie` | motivul pentru care omul a venit |
 | 3 | Biblia | ce caută în aceeași seară |
 | 4 | Remaparea taburilor + Home „un singur lucru" | fără ea, nimic din ce s-a construit nu se găsește |
 | 5 | Întreabă, pe răspunsuri curatoriate | întrebarea vine înaintea lecției |
-| 6 | Ecranul de revenire, scoaterea flăcării și a XP | retenție fără vinovăție |
+| 6 | Ecranul de revenire, scoaterea flăcării și a XP, motorul de memorie | retenție fără vinovăție |
 | 7 | „Dă mai departe" + pliantul de tipărit | distribuția și poziția 4 |
 | 8 | 3–4 module tematice reale | ca să existe ce să țină omul luna a doua |
 | — | Mentorat | **doar după** politici, verificare și protecția minorilor |
@@ -165,4 +180,4 @@ De folosit intern ca argument de design (**pragul de 4 ori pe săptămână cont
 
 ---
 
-*Documente legate:* `docs/00-DIRECTIE.md` · `docs/06-curs-fundamentul.md` · `docs/07-sablon-curs-creatori.md` · `docs/14-carta-doctrinara.md` · `docs/15-doctrina-generala.md` · mockup vizual: `design/mockups/`
+*Documente legate:* `docs/00-DIRECTIE.md` · `docs/06-curs-fundamentul.md` · `docs/07-sablon-curs-creatori.md` · `docs/14-carta-doctrinara.md` · `docs/15-doctrina-generala.md` · `docs/16-modul-pilde.md` · `docs/17-modul-intoarcerea.md` · `docs/18-prezenta-proactiva.md` · mockup vizual: `design/mockups/`
