@@ -1,137 +1,71 @@
-import { useEffect, useState } from "react"
-import { Award, LockOpen, Medal, Sparkles } from "lucide-react"
+import { useMemo, useState } from "react"
+import { findLessonAnywhere, mohlerNotForMe } from "@emanus/shared"
 import type { Lesson } from "@emanus/shared"
-import { mohlerNotForMe } from "@emanus/shared"
-import { getFirstLesson, getLesson, submitProgress } from "./api"
-import type { ProgressResult } from "./api"
 import { LessonPlayer } from "./LessonPlayer"
 import type { LessonResult } from "./LessonPlayer"
+import { completeLesson, plan } from "./journey"
 import { navigate } from "./router"
 
 /*
- * Lecții pilot: se încarcă direct din pachetul partajat, nu prin API.
- * Motivul: pot fi testate cap-coadă fără DATABASE_URL și fără seed în Supabase.
- * La final NU se trimite progres — sunt pentru validare de conținut și de ton.
+ * Rularea unei lecții.
+ *
+ * Lecțiile din parcursuri vin direct din @emanus/shared și se joacă fără API și
+ * fără bază de date. Progresul se scrie local (journey.ts). Când se leagă Supabase,
+ * se schimbă doar journey.ts.
+ *
+ * Fără XP, fără insigne, fără "lecția 3 din 7" la final. (docs/20 §1)
  */
-const PILOT_LESSONS = new Map<string, Lesson>(
-  mohlerNotForMe.lessons.map((l) => [l.id, l] as const),
-)
+
+const EXTRA: Map<string, Lesson> = new Map(mohlerNotForMe.lessons.map((l) => [l.id, l] as const))
 
 export function LessonView({ lessonId }: { lessonId?: string }) {
-  const [lesson, setLesson] = useState<Lesson | null>(null)
-  const [error, setError] = useState<string | null>(null)
-  const [result, setResult] = useState<ProgressResult | null>(null)
-  const [pilotDone, setPilotDone] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
+  const lesson = useMemo<Lesson | undefined>(() => {
+    if (!lessonId) return undefined
+    return findLessonAnywhere(lessonId) ?? EXTRA.get(lessonId)
+  }, [lessonId])
 
-  const pilot = lessonId ? PILOT_LESSONS.get(lessonId) : undefined
+  const [done, setDone] = useState(false)
 
-  useEffect(() => {
-    setLesson(null)
-    setResult(null)
-    setPilotDone(false)
-    setError(null)
-
-    if (pilot) {
-      setLesson(pilot)
-      return
-    }
-    const p = lessonId ? getLesson(lessonId) : getFirstLesson()
-    p.then(setLesson).catch((e: unknown) =>
-      setError(e instanceof Error ? e.message : String(e)),
-    )
-  }, [lessonId, pilot])
-
-  if (error) return <p className="error">{error}</p>
-  if (!lesson) return <p className="muted">Se încarcă…</p>
-
-  if (pilotDone) {
+  if (!lesson) {
     return (
-      <div className="card reward-card">
-        <div className="reward-card__icon">
-          <Sparkles size={40} strokeWidth={1.6} aria-hidden />
-        </div>
-        <h2>Ai ajuns la capăt.</h2>
-        <p>
-          Lecția <strong>„{lesson.title}”</strong> — versiune pilot, pentru testare.
-        </p>
-        <blockquote className="scripture">
-          Nu mai trăiesc eu, ci Hristos trăiește în mine.
-          <cite>{lesson.memoryVerseRef}</cite>
-        </blockquote>
-        <p className="muted">Progresul nu s-a salvat. E o lecție de probă.</p>
-        <div className="reward-card__actions">
-          <button type="button" onClick={() => window.location.reload()}>
-            Reia lecția
-          </button>
-          <button type="button" className="ghost" onClick={() => navigate("/")}>
-            Înapoi acasă
-          </button>
-        </div>
-      </div>
+      <section className="player">
+        <p className="muted">Lecția asta nu există (încă).</p>
+        <button type="button" onClick={() => navigate("/")}>
+          Înapoi la Azi
+        </button>
+      </section>
     )
   }
 
-  if (result) {
+  function onComplete(result: LessonResult) {
+    if (!lesson) return
+    completeLesson(lesson.id, result.journal)
+    setDone(true)
+  }
+
+  if (done) {
+    const next = plan()
+    const finished = next?.kind === "path_complete"
     return (
-      <div className="card reward-card">
-        <div className="reward-card__icon">
-          <Sparkles size={40} strokeWidth={1.6} aria-hidden />
-        </div>
-        <h2>Bravo! +{result.reward.xp} XP</h2>
-        <p>
-          Ai terminat lecția <strong>„{lesson.title}”</strong>.
-        </p>
-        {result.reward.badgeId && (
-          <p className="muted title-icon">
-            <Medal size={16} strokeWidth={1.9} aria-hidden /> Insignă: {result.reward.badgeId}
+      <section className="player player--done">
+        <div className="tile">
+          <h2>Gata pe azi</h2>
+          <p>
+            Nu îți dau niciun punct și nicio insignă. Ai auzit ceva adevărat — asta rămâne
+            oricum.
           </p>
-        )}
-        <blockquote className="scripture">
-          Verset de memorat
-          <cite>{lesson.memoryVerseRef}</cite>
-        </blockquote>
-        {result.reward.certificateId && (
-          <p className="muted title-icon">
-            <Award size={16} strokeWidth={1.9} aria-hidden /> Certificat: {result.reward.certificateId}
+          <p className="muted">
+            {finished
+              ? "Ai terminat drumul. Hai să-ți arăt ceva."
+              : "Mâine e ziua de pus în practică. Lecția următoare vine poimâine."}
           </p>
-        )}
-        {result.reward.unlocksModuleId && (
-          <p className="muted title-icon">
-            <LockOpen size={16} strokeWidth={1.9} aria-hidden /> Ai deblocat un modul nou!
-          </p>
-        )}
-        <div className="reward-card__actions">
-          <button type="button" onClick={() => navigate("/dashboard")}>
-            Vezi parcursul meu
-          </button>
-          <button type="button" className="ghost" onClick={() => window.location.reload()}>
-            Reia lecția
+          <button type="button" onClick={() => navigate(finished ? "/final" : "/")}>
+            {finished ? "Vezi" : "Înapoi la Azi"}
           </button>
         </div>
-      </div>
+      </section>
     )
   }
 
-  return (
-    <LessonPlayer
-      lesson={lesson}
-      submitting={submitting}
-      onComplete={async (r: LessonResult) => {
-        if (pilot) {
-          setPilotDone(true)
-          return
-        }
-        setSubmitting(true)
-        try {
-          const res = await submitProgress(lesson.id, r.choicesMade)
-          setResult(res)
-        } catch (e: unknown) {
-          setError(e instanceof Error ? e.message : String(e))
-        } finally {
-          setSubmitting(false)
-        }
-      }}
-    />
-  )
+  return <LessonPlayer lesson={lesson} onComplete={onComplete} />
 }
