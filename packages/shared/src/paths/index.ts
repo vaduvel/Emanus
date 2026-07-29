@@ -6,6 +6,8 @@ import { neiertareL6, neiertareL7 } from "./neiertareC.js"
 import { neiertareO1, neiertareO2 } from "./neiertareOpen.js"
 import { rusineL1, rusineL2, rusineL3, rusineL4 } from "./rusineA.js"
 import { rusineL5, rusineL6, rusineL7 } from "./rusineB.js"
+import { schimbareL1, schimbareL2, schimbareL3, schimbareL4 } from "./schimbareA.js"
+import { schimbareL5, schimbareL6, schimbareL7 } from "./schimbareB.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
@@ -13,6 +15,8 @@ export * from "./doctrina.js"
 export * from "./neiertareOpen.js"
 export * from "./rusineA.js"
 export * from "./rusineB.js"
+export * from "./schimbareA.js"
+export * from "./schimbareB.js"
 export * from "./umblareA.js"
 export * from "./umblareB.js"
 
@@ -83,7 +87,7 @@ export const ROOMS: Room[] = [
     id: "c5",
     title: "Nu mă pot schimba",
     lie: "Sunt defect, asta sunt.",
-    pathId: null,
+    pathId: "path_schimbare",
   },
   {
     id: "c6",
@@ -304,6 +308,45 @@ export const pathNeiertare: PathDef = {
 }
 
 /*
+ * Camera 5: "Nu mă pot schimba".
+ * Intră aici dependența, recăderea, anxietatea, tristețea, furia.
+ *
+ * ORDINEA (docs/21 §2): nu începem cu "lasă-te de". Începem cu ce e omul — nu e
+ * defect (Marcu 5; Psalmul 139). Apoi de ce cedează voința, apoi ce se taie, apoi
+ * ce se pune în loc. Metoda vine după identitate, altfel e doar un alt program.
+ *
+ * SIGURANȚĂ (docs/22 §1, NENEGOCIABIL): aici sunt cele mai multe simptome cu
+ * posibilă cauză medicală. Lecția 6 trimite explicit la medic și la 116 123,
+ * lecția 5 la 0800 801 200 pentru alcool/droguri/jocuri. Nicio lecție din camera
+ * asta nu spune omului că starea lui vine din lipsă de credință.
+ */
+export const pathSchimbare: PathDef = {
+  id: "path_schimbare",
+  roomId: "c5",
+  title: "Când nu te poți schimba",
+  promise:
+    "Șapte lecții, una la două zile. Fără «strânge din dinți» și fără să îți cerem să promiți că nu mai faci.",
+  lessons: [
+    schimbareL1,
+    schimbareL2,
+    schimbareL3,
+    schimbareL4,
+    schimbareL5,
+    schimbareL6,
+    schimbareL7,
+  ],
+  practices: [
+    "Azi nu încerca să te lași de nimic. Doar observă când îți spui «asa sunt eu» și taci la propoziția aia.",
+    "Azi, când vine impulsul, scrie un singur cuvânt: ce simțeai în minutul dinainte.",
+    "Lucrul pe care l-ai scos ieri — verifică dacă e chiar scos. Și vezi ce faci azi la ora aia.",
+    "Azi ține programarea pe care ai scris-o. Zece minute cu El, la ora la care cădeai.",
+    "Citește-ți protocolul de trei rânduri o dată, cu voce tare. Ca să ți-l amintești la ora două noaptea.",
+    "Azi un lucru pentru corp, nu pentru suflet: somn, mâncare, o plimbare. Și, dacă durează, sună la medic — nu e lipsă de credință.",
+    "Ai terminat drumul. Azi spune UNUI om că te lupți cu ceva. Nu detalii — doar atât.",
+  ],
+}
+
+/*
  * Temelia. Camera 3 ("nu e real") și, până se scriu celelalte camere, drumul
  * oricui a apăsat o ușă a cărei cameră nu e gata. Și drumul propriu al omului
  * care spune "vreau doar să-L cunosc" — pentru el nu e supliment, e drumul.
@@ -350,7 +393,13 @@ export const pathUmblare: PathDef = {
   ],
 }
 
-export const PATHS: PathDef[] = [pathAcasa, pathNeiertare, pathTemelie, pathUmblare]
+export const PATHS: PathDef[] = [
+  pathAcasa,
+  pathNeiertare,
+  pathSchimbare,
+  pathTemelie,
+  pathUmblare,
+]
 
 export function getPath(pathId: string | null | undefined): PathDef | undefined {
   if (!pathId) return undefined
