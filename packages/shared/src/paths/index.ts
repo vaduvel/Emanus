@@ -7,41 +7,173 @@ import { neiertareL6, neiertareL7 } from "./neiertareC.js"
 export * from "./doctrina.js"
 
 /*
- * Uși și parcursuri personal-generalizate.
- * Referință: docs/20-parcursuri-personal-generalizate.md
+ * Uși, camere și parcursuri personal-generalizate.
+ * Referință: docs/21-cum-lucreaza-Dumnezeu.md și docs/20-parcursuri-personal-generalizate.md
  *
  * Modelul întreg stă pe un singur câmp salvat despre om: `pathId`.
- * Fără profil, fără scoruri, fără memorie per utilizator.
+ * Fără profil, fără scoruri, fără chestionar, fără memorie per utilizator.
+ *
+ * PRINCIPIUL: Dumnezeu întâlnește omul în mijlocul durerii lui. Nu există sală
+ * de așteptare și nu există etape de trecut înainte de întâlnire. Omul intră
+ * prin durerea lui, iar adevărul despre cine e Dumnezeu i se spune PRIN rană.
+ *
+ * GENERALIZAREA: nu grupăm după durere — durerile sunt infinite. Grupăm după
+ * minciuna de dedesubt; alea sunt șapte. Durerea e simptomul, minciuna e boala.
+ * Ușile rămân multe și în cuvintele omului; camerele sunt puține.
  */
 
-export interface Door {
+/** Cele șapte minciuni despre Dumnezeu din care iese aproape orice durere. */
+export interface Room {
   id: string
-  /** Spus în cuvinte de om, nu religioase. */
-  label: string
-  /** null = parcurs încă nescris; se oferă un drum care e gata. */
+  /** Numele camerei, cum îl vede omul. */
+  title: string
+  /** Minciuna pe care o crede omul care intră aici. Nu se afișează ca etichetă. */
+  lie: string
+  /** Parcursul scris pentru camera asta; null = încă nescris. */
   pathId: string | null
 }
 
-export const DOORS: Door[] = [
-  { id: "neiertare", label: "Nu pot ierta pe cineva", pathId: "path_neiertare" },
-  { id: "doliu", label: "Am pierdut pe cineva", pathId: null },
-  { id: "frica", label: "Mi-e frică tot timpul", pathId: null },
-  { id: "uscaciune", label: "Nu mai simt nimic", pathId: null },
-  { id: "dependenta", label: "Sunt prins într-un lucru de care nu scap", pathId: null },
-  { id: "casnicie", label: "Familia mea se destramă", pathId: null },
-  { id: "forma", label: "Merg la biserică de ani de zile și nu s-a schimbat nimic", pathId: null },
-  { id: "indoiala", label: "Nu știu dacă Dumnezeu există", pathId: "path_temelie" },
-  { id: "rusine", label: "Mi-e rușine de ce am făcut", pathId: null },
-  { id: "singuratate", label: "Sunt singur", pathId: null },
-  { id: "inceput", label: "Vreau doar să-L cunosc", pathId: "path_temelie" },
+export const ROOMS: Room[] = [
+  {
+    id: "c1",
+    title: "Nu mă vrea așa cum sunt",
+    lie: "Sunt prea murdar pentru El.",
+    pathId: null,
+  },
+  {
+    id: "c2",
+    title: "Nu e bun / m-a lăsat",
+    lie: "Dacă era bun, nu s-ar fi întâmplat.",
+    pathId: "path_neiertare",
+  },
+  {
+    id: "c3",
+    title: "Nu e real / nu se poate ști",
+    lie: "Poate e doar o poveste.",
+    pathId: "path_temelie",
+  },
+  {
+    id: "c4",
+    title: "E departe, nu mă aude",
+    lie: "Am rămas singur pe drum.",
+    pathId: null,
+  },
+  {
+    id: "c5",
+    title: "Nu mă pot schimba",
+    lie: "Sunt defect, asta sunt.",
+    pathId: null,
+  },
+  {
+    id: "c6",
+    title: "Trebuie să merit",
+    lie: "Mă iubește cât de bun sunt.",
+    pathId: null,
+  },
+  {
+    id: "c7",
+    title: "Sunt singur în asta",
+    lie: "Nimeni nu înțelege și nimănui nu-i pasă.",
+    pathId: null,
+  },
 ]
 
-/** Ieșirea obligatorie din ecranul de uși. */
-export const DOOR_NONE_LABEL = "Niciuna nu e a mea."
+export function getRoom(roomId: string | null | undefined): Room | undefined {
+  if (!roomId) return undefined
+  return ROOMS.find((r) => r.id === roomId)
+}
+
+export interface Door {
+  id: string
+  /** Spus în cuvinte de om, nu religioase. Omul își vede propria propoziție. */
+  label: string
+  /** Camera în care duce ușa. `null` doar pentru ușile de explorare. */
+  roomId: string | null
+}
+
+/*
+ * Cele 31 de uși. (docs/21 §3)
+ * Omul nu alege o cameră — alege o propoziție. Nu află niciodată că e pe același
+ * culoar cu alți patru. Ordinea e intenționat amestecată între camere, ca lista
+ * să nu arate ca niște categorii.
+ */
+export const DOORS: Door[] = [
+  { id: "rusine", label: "Am făcut lucruri de care mi-e rușine", roomId: "c1" },
+  { id: "neiertare", label: "Mi s-a făcut ceva și nu pot ierta", roomId: "c2" },
+  { id: "indoiala", label: "Nu știu dacă există Dumnezeu", roomId: "c3" },
+  { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4" },
+  { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5" },
+  { id: "obisnuinta", label: "Merg la biserică din obișnuință", roomId: "c6" },
+  { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7" },
+  { id: "doliu", label: "Am pierdut pe cineva", roomId: "c2" },
+  { id: "avort", label: "Am făcut un avort", roomId: "c1" },
+  { id: "biblia_inventata", label: "Cred că Biblia e inventată de oameni", roomId: "c3" },
+  { id: "recadere", label: "Am promis de o sută de ori și tot cad", roomId: "c5" },
+  { id: "uscaciune", label: "Nu mai simt nimic când mă rog", roomId: "c4" },
+  { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6" },
+  { id: "familie_respinge", label: "Familia mea nu mă înțelege", roomId: "c7" },
+  { id: "boala", label: "Sunt bolnav sau e bolnav cineva drag", roomId: "c2" },
+  { id: "infidelitate", label: "Mi-am înșelat soțul sau soția", roomId: "c1" },
+  { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c5" },
+  { id: "nu_inteleg", label: "Sunt creștin, dar nu înțeleg ce citesc", roomId: "c3" },
+  { id: "flacara", label: "Am fost aproape de Dumnezeu cândva", roomId: "c4" },
+  { id: "frica_pedeapsa", label: "Mi-e frică să nu mă pedepsească", roomId: "c6" },
+  { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7" },
+  { id: "de_ce_permis", label: "Nu înțeleg de ce a permis Dumnezeu asta", roomId: "c2" },
+  { id: "pornografie", label: "Mă lupt cu pornografia", roomId: "c1" },
+  { id: "tristete", label: "Nu mai am chef de nimic", roomId: "c5" },
+  { id: "alte_credinte", label: "Am crezut alte lucruri înainte (energii, karma, univers)", roomId: "c3" },
+  { id: "cum_citesc", label: "Nu știu cum să citesc Biblia", roomId: "c4" },
+  { id: "epuizat_slujire", label: "Sunt obosit de slujire", roomId: "c6" },
+  { id: "nou_venit", label: "Sunt nou și nu cunosc pe nimeni", roomId: "c7" },
+  { id: "divort", label: "Am trecut printr-un divorț", roomId: "c2" },
+  { id: "prea_departe", label: "Cred că sunt prea departe ca să mă mai întorc", roomId: "c1" },
+  { id: "furie", label: "Mă enervez și rănesc oamenii din jur", roomId: "c5" },
+]
+
+/*
+ * Ușile de la capătul listei: omul fără durere anume. (docs/21 §3)
+ * Nu îl forțăm într-o rană pe care nu o are. Pentru el, lecțiile despre cine e
+ * Dumnezeu nu sunt un preambul — sunt chiar drumul lui.
+ */
+export const EXPLORE_DOORS: Door[] = [
+  { id: "inceput", label: "Vreau doar să-L cunosc", roomId: null },
+  { id: "nu_stiu", label: "Nu știu. Arată-mi tu.", roomId: null },
+]
+
+export const ALL_DOORS: Door[] = [...DOORS, ...EXPLORE_DOORS]
+
+export function getDoor(doorId: string | null | undefined): Door | undefined {
+  if (!doorId) return undefined
+  return ALL_DOORS.find((d) => d.id === doorId)
+}
+
+/** Drumul dat omului care n-are încă o cameră scrisă, sau care doar explorează. */
+export const FALLBACK_PATH_ID = "path_temelie"
+
+/**
+ * Nicio ușă nu e fundătură. (docs/21 §7 pct. 5)
+ * Dacă parcursul camerei nu e scris încă, omul primește temelia — cu un rând
+ * onest, nu cu un "în lucru" care îl trimite acasă.
+ */
+export function resolveDoorPath(doorId: string): string {
+  const room = getRoom(getDoor(doorId)?.roomId)
+  return room?.pathId ?? FALLBACK_PATH_ID
+}
+
+/** True dacă ușa duce în camera ei proprie, nu în temelie. */
+export function doorHasOwnRoom(doorId: string): boolean {
+  return getRoom(getDoor(doorId)?.roomId)?.pathId != null
+}
+
+export function doorsForRoom(roomId: string): Door[] {
+  return DOORS.filter((d) => d.roomId === roomId)
+}
 
 export interface PathDef {
   id: string
-  doorId: string
+  /** Camera căreia îi aparține parcursul; null pentru temelie. */
+  roomId: string | null
   title: string
   /** Ce primește omul. O propoziție, fără promisiuni pe care nu le putem ține. */
   promise: string
@@ -50,9 +182,18 @@ export interface PathDef {
   practices: string[]
 }
 
+/*
+ * Camera 2: "Nu e bun / m-a lăsat".
+ * Intră aici doliul, boala, nedreptatea, divorțul, neiertarea, "unde era El?".
+ *
+ * DE SCRIS (docs/21 §7 pct. 2): cele două lecții de deschidere ale camerei —
+ * cine e Dumnezeu, spus prin rana asta: "nu El ți-a făcut asta" (Iacov 1:17;
+ * Ioan 10:10). Azi lecția 2 acoperă parțial partea asta, dar camera trebuie să
+ * înceapă cu ea, nu s-o strecoare la mijloc. Aceeași lumină, alt geam.
+ */
 export const pathNeiertare: PathDef = {
   id: "path_neiertare",
-  doorId: "neiertare",
+  roomId: "c2",
   title: "Când nu poți ierta",
   promise:
     "Șapte lecții, una la două zile. Nu îți cerem să uiți și nu îți cerem să spui că n-a fost grav.",
@@ -77,13 +218,13 @@ export const pathNeiertare: PathDef = {
 }
 
 /*
- * Al doilea drum: pentru cine n-are o rană anume de numit, pentru cine nu știe
- * dacă Dumnezeu există, și pentru cine spune "niciuna nu e a mea".
- * Sunt exact lecțiile de doctrină, dar aici sunt drumul, nu suplimentul.
+ * Temelia. Camera 3 ("nu e real") și, până se scriu celelalte camere, drumul
+ * oricui a apăsat o ușă a cărei cameră nu e gata. Și drumul propriu al omului
+ * care spune "vreau doar să-L cunosc" — pentru el nu e supliment, e drumul.
  */
 export const pathTemelie: PathDef = {
   id: "path_temelie",
-  doorId: "inceput",
+  roomId: "c3",
   title: "De la zero",
   promise:
     "Trei lecții, una la două zile. Fără presupunerea că știi ceva dinainte și fără să te facă nimeni să te simți prost că întrebi.",
