@@ -1,14 +1,14 @@
-import { LifeBuoy } from "lucide-react"
-import { Sunrise, HandHeart } from "lucide-react"
+import { HandHeart, LifeBuoy, Sunrise } from "lucide-react"
 import { Crisis } from "./Crisis"
 import { LessonView } from "./LessonView"
 import { Gallery } from "./ds/Gallery"
-import { hasStarted } from "./journey"
+import { hasSeenWelcome, hasStarted } from "./journey"
 import { navigate, useHashRoute } from "./router"
 import { Doors } from "./screens/Doors"
 import { PathEnd } from "./screens/PathEnd"
 import { Prayers } from "./screens/Prayers"
 import { Today } from "./screens/Today"
+import { Welcome } from "./screens/Welcome"
 import "./journey.css"
 
 /*
@@ -16,6 +16,11 @@ import "./journey.css"
  *
  * Două taburi, atât: Azi și Rugăciunile mele.
  * Butonul de ajutor stă sus, pe fiecare ecran, și nu se ascunde niciodată.
+ *
+ * Ordinea porților la prima deschidere:
+ *   1. Welcome  — cine suntem și ce NU-ți cerem
+ *   2. Doors    — ce te-a adus aici
+ *   3. Today    — restul vieții aplicației
  */
 
 function Tabs({ active }: { active: "today" | "prayers" }) {
@@ -60,6 +65,15 @@ export default function App() {
 
   if (route.name === "ds") return <Gallery />
   if (route.name === "crisis") return <Crisis onBack={() => navigate("/")} />
+
+  // Primul contact: nimeni nu ajunge la uși fără să știe unde a intrat.
+  if (!hasStarted() && !hasSeenWelcome() && route.name !== "doors") {
+    return (
+      <main className="app route-anim">
+        <Welcome />
+      </main>
+    )
+  }
 
   // Poarta: nimeni nu intră în aplicație fără să spună o dată ce l-a adus.
   if (route.name === "doors" || !hasStarted()) {
