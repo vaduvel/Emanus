@@ -3,6 +3,7 @@ import { ArrowLeft, BookOpen, ChevronRight, Lock } from "lucide-react"
 import type { LibraryCourse, LibraryShelf } from "@emanus/shared"
 import { courseIsOpen, visibleShelves } from "@emanus/shared"
 import { navigate } from "../router"
+import "../library.css"
 
 /*
  * Biblioteca. (docs/21, decizia din chat)
