@@ -73,7 +73,7 @@ Aceasta este politica, nu o nuanta de lectie. Se aplica in tot continutul despre
 
 Pasii `n6_3`, `n6_4`, `n6_5` din `neiertareC.ts` sunt implementarea acestei politici si sunt **nenegociabili**. Nu se rescriu, nu se scurteaza, nu se muta mai tarziu in lectie.
 
-La fel, `u5_7` (postul: nu se practica in tratament, tulburari de alimentatie, sarcina, alaptare) si `u6_8` (depresia cere medic, nu post) din `umblareB.ts` sunt **nenegociabile**.
+La fel, `u5_7` (postul: nu se practica in tratament, tulburari de alimentatie, sarcina, alaptare) si `u6_8` (depresia cere medic, nu post) din `umblareB.ts` sunt **nenegociabili**.
 
 ---
 
@@ -137,10 +137,13 @@ Asta e tot. Serveste unui singur scop: sa vedem unde pierdem omul si sa reparam 
 
 Acestea stau in `localStorage` (`emanus_journey_v1`) si urca in Supabase **doar** in randul propriului utilizator, sub politici `journey_own` / `journal_own` / `prayers_own`. Nimeni din echipa nu citeste jurnalul cuiva. Nu exista ecran de administrare care sa arate text de jurnal.
 
+**Cum se spune omului, in aplicatie:** textul de sub primul camp de rugaciune se schimba dupa configuratie (`privacyLine()` in `Today.tsx`). Cand backupul in cloud e activ, NU scriem "nu pleaca nicaieri de pe telefonul tau" — scriem ca se salveaza si intr-un spatiu de backup legat doar de el. O promisiune de confidentialitate care nu e adevarata e mai grava decat lipsa promisiunii.
+
 ### Ce nu masuram deloc
 
 - **Nu te masuram pe tine.** Fara XP, fara serie, fara nivel, fara procent, fara "ziua X din Y". Absenta schimba doar tonul, niciodata scorul.
 - Fara clasamente, fara comparatii intre utilizatori, fara badge-uri publice.
+- Pasul de tip `reward` din player nu afiseaza puncte sau insigne. Campul `reward.xp` a ramas in tipuri din prima iteratie, e 0 in tot continutul nou si e ignorat deliberat la randare.
 
 ### Reguli tehnice
 
@@ -159,14 +162,40 @@ Acestea stau in `localStorage` (`emanus_journey_v1`) si urca in Supabase **doar*
 
 ---
 
-## 10. Cine raspunde
+## 10. Cine e autorul si cine raspunde
 
-Doua roluri, si amandoua au nevoie de un nume real inainte de lansare:
+Aici au fost amestecate multa vreme doua lucruri diferite. Se separa definitiv.
 
-1. **Cine semneaza doctrina** — traducerea Bibliei folosita, subiectele disputate, standardul pentru afirmatii medicale si psihologice din lectii.
-2. **Cine raspunde de siguranta** — actualizarea numerelor, tratarea rapoartelor, decizia de a retrage continut.
+### 10.1 Autorul lectiilor: Emanus
 
-Pana cand aceste doua roluri au nume, **nu se publica public** cursuri semnate de creatori, nu se deschide comunitatea, nu se deschide mentoratul.
+Lectiile din aplicatie **nu au autor uman afisat**. Autorul este **Emanus**, iar sursa este **Biblia**. Nu punem nume de persoana pe ele, din trei motive:
+
+1. **Siguranta.** Un nume de om sugereaza o persoana reala care citeste jurnalul si raspunsurile. Nu citeste nimeni. De aceea vocea din chat se prezinta ca Emanus (`GUIDE_NAME` in `LessonPlayer.tsx`), nu ca om.
+2. **Autoritatea sta in text, nu in autor.** Fiecare afirmatie tare din lectie sta pe o referinta din Scriptura, la vedere, cu explicatie. Cine verifica, verifica versetul, nu reputatia cuiva.
+3. **Nu construim cult de personalitate.** Aplicatia nu duce omul la un om. Il duce la Iisus.
+
+Consecinta practica: **nu se blocheaza scrierea de continut** pentru lipsa unui nume de autor. Cele 35 de lectii care lipsesc se pot scrie acum.
+
+### 10.2 Autorii apar cand apar creatorii
+
+Cand se deschide zona pentru creatori — influenceri, pastori, oameni care aduc public in aplicatie — **acele** lectii au autor cu nume si fata, pentru ca omul trebuie sa stie de la cine primeste. Regula:
+
+- Lectiile de baza ale aplicatiei: fara autor, semnate Emanus.
+- Lectiile de creator: cu autor la vedere, dupa sablon, dupa validare de doctrina si de siguranta (§7).
+- Nu se amesteca. Omul vede clar ce e continut de baza si ce e continut al unui creator.
+
+### 10.3 Responsabilul de siguranta: are nevoie de un om real
+
+Asta **nu** poate fi "Emanus". Nu e o chestiune de voce, e o chestiune de cineva care raspunde la telefon:
+
+- verifica numerele de urgenta o data la sase luni;
+- primeste rapoartele si reclamatiile;
+- decide retragerea unui continut sau a unui creator;
+- raspunde de continutul pentru minori.
+
+Pana la lansarea publica, acest rol e al proprietarului aplicatiei, prin lipsa altcuiva. Nu e nevoie sa fie afisat in fiecare lectie, dar trebuie sa existe o adresa de contact reala in aplicatie si un om in spatele ei.
+
+**Ce rămâne blocat de §10.3, si numai asta:** comunitatea, mentoratul si publicarea de lectii de creator. Nu continutul de baza.
 
 ---
 
@@ -182,3 +211,4 @@ O lectie nu intra in cod daca nu trece toate liniile:
 - [ ] Niciun verset citat gol; niciun cuvant de biserica neexplicat.
 - [ ] Se termina cu un pas concret pentru astazi, nu cu o tema.
 - [ ] Nu e fundatura: exista drum mai departe dupa ultimul pas.
+- [ ] Vocea nu are nume de om si nu pretinde ca citeste ce a scris omul.
