@@ -4,7 +4,6 @@ import type { LucideIcon } from "lucide-react"
 import {
   BookOpen,
   Brain,
-  Flame,
   Footprints,
   Frown,
   HandHeart,
@@ -15,8 +14,8 @@ import {
   MessageCircle,
   MessageSquare,
   NotebookPen,
-  PartyPopper,
   Smile,
+  Sunrise,
 } from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
 
@@ -51,7 +50,7 @@ function stepIcon(type: LessonStep["type"]): LucideIcon {
     case "journal":
       return NotebookPen
     case "reward":
-      return Flame
+      return Sunrise
     default:
       return MessageCircle
   }
@@ -338,19 +337,28 @@ function Turn({
         </>
       )
 
-    case "reward":
+    /*
+     * Pasul de închidere.
+     *
+     * NU se afișează puncte, XP, insigne sau procente — nicăieri, niciodată.
+     * (docs/20 §1: dacă aplicația măsoară omul, relația devine obicei.)
+     * Câmpul `reward.xp` a rămas în tipuri din prima iterație și e 0 în tot
+     * conținutul nou; aici îl ignorăm deliberat. Dacă lecția are text propriu
+     * pentru finalul ăsta, îl folosim; altfel, o închidere liniștită.
+     */
+    case "reward": {
+      const closing =
+        (step.bubbles ?? []).map((b) => b.text).join(" ") ||
+        "Atât pentru azi. Nu îți dau note și nu număr zile — ne vedem când revii."
       return (
         <div className="msg msg--guide">
           <div className="msg__avatar">
-            <Flame size={18} strokeWidth={1.8} aria-hidden />
+            <Sunrise size={18} strokeWidth={1.8} aria-hidden />
           </div>
-          <div className="bubble title-icon">
-            <PartyPopper size={16} strokeWidth={1.8} aria-hidden />{" "}
-            {step.reward ? `+${step.reward.xp} XP` : "Recompensă"}
-            {step.reward?.badgeId ? " · insignă nouă" : ""}
-          </div>
+          <div className="bubble">{closing}</div>
         </div>
       )
+    }
 
     default:
       return (
