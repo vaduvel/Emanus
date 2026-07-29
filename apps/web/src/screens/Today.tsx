@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowRight, BookOpen, HandHeart, Sunrise } from "lucide-react"
+import { ArrowRight, BellRing, BookOpen, HandHeart, Sunrise } from "lucide-react"
 import type { Lesson } from "@emanus/shared"
 import {
   addPrayer,
@@ -11,6 +11,7 @@ import {
   plan,
   shouldInviteFirstPrayer,
 } from "../journey"
+import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
 
 /*
@@ -35,6 +36,7 @@ export function Today() {
   const [inviteOpen, setInviteOpen] = useState(() => shouldInviteFirstPrayer())
   const [prayerText, setPrayerText] = useState("")
   const [prayerSaved, setPrayerSaved] = useState(false)
+  const [askReminder, setAskReminder] = useState(() => shouldOfferReminder())
 
   const complete = dayPlan?.kind === "path_complete"
   useEffect(() => {
@@ -73,7 +75,7 @@ export function Today() {
             începem de la capăt.
           </p>
           <p className="muted">
-            Reluam exact de unde ai rămas. Și, dacă vrei să știi: nici El nu ține socoteala
+            Reluăm exact de unde ai rămas. Și, dacă vrei să știi: nici El nu ține socoteala
             zilelor în care n-ai vorbit cu El.
           </p>
         </div>
@@ -202,6 +204,43 @@ export function Today() {
               </div>
             </>
           )}
+        </div>
+      )}
+
+      {/*
+        Notificarea. Se cere o singură dată, după prima lecție — nu la instalare,
+        când omul încă nu știe ce primește. (docs/18)
+      */}
+      {askReminder && (
+        <div className="tile today__invite">
+          <p className="today__kicker">
+            <BellRing size={15} aria-hidden /> O dată pe zi, dimineața
+          </p>
+          <p>
+            Îți trimitem un singur mesaj pe zi, cu ce urmează. Niciodată două și niciodată
+            „ai pierdut șirul”.
+          </p>
+          <div className="today__invite-actions">
+            <button
+              type="button"
+              className="today__cta"
+              onClick={() => {
+                void enableReminder().then(() => setAskReminder(false))
+              }}
+            >
+              Da, o dată pe zi
+            </button>
+            <button
+              type="button"
+              className="ghost"
+              onClick={() => {
+                declineReminder()
+                setAskReminder(false)
+              }}
+            >
+              Nu, mulțumesc
+            </button>
+          </div>
         </div>
       )}
 
