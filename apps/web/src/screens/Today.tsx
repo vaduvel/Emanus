@@ -13,6 +13,7 @@ import {
 } from "../journey"
 import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
+import { backupEnabled } from "../cloud"
 
 /*
  * "Azi" — singurul ecran principal. (docs/20 §8)
@@ -20,11 +21,22 @@ import { navigate } from "../router"
  * Ce NU are voie să apară aici, niciodată:
  * serie de zile, XP, nivel, procent, "ziua 4 din 7", clasament.
  * Dacă aplicația măsoară ceva, devine obicei. (docs/20 §1)
+ *
+ * REGULĂ DE ONESTITATE (docs/22 §8): nu promitem niciodată că datele "nu pleacă
+ * de pe telefon" cât timp există backup în cloud. Textul se schimbă după cum e
+ * configurată aplicația, nu după cum ar suna mai bine.
  */
 
 function memoryVerse(lesson: Lesson): { text: string; ref: string } | null {
   const s = lesson.steps.find((x) => x.type === "memory_verse" && x.scripture)
   return s?.scripture ?? null
+}
+
+/** Ce scrie sub câmpul de rugăciune. Adevărul, nu ce sună mai liniștitor. */
+function privacyLine(): string {
+  return backupEnabled()
+    ? "Nu o citește nimeni. Se salvează pe telefonul tău și într-un spațiu de backup legat doar de tine, ca să n-o pierzi dacă schimbi telefonul."
+    : "Nu o citește nimeni și nu pleacă nicăieri de pe telefonul tău."
 }
 
 export function Today() {
@@ -91,7 +103,7 @@ export function Today() {
                 L-am făcut
               </button>
               <button type="button" onClick={() => setYesterday("nu")}>
-                N-am reșit
+                N-am reușit
               </button>
               <button type="button" onClick={() => setYesterday("uitat")}>
                 Am uitat
@@ -177,8 +189,7 @@ export function Today() {
                 <HandHeart size={15} aria-hidden /> Un lucru pe care Îl aștepți
               </p>
               <p>
-                Scrie un singur lucru pentru care te rogi acum. Nu-l citește nimeni și nu
-                pleacă nicăieri de pe telefonul tău.
+                Scrie un singur lucru pentru care te rogi acum. {privacyLine()}
               </p>
               <textarea
                 className="journal"
