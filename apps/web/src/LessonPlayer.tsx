@@ -25,7 +25,17 @@ export interface LessonResult {
   journal: string
 }
 
-const GUIDE_NAME = "Daniel"
+/**
+ * Numele de deasupra bulelor de chat.
+ *
+ * Decizie (docs/19, docs/22 SS1): vocea din lectii NU se prezinta cu nume de om.
+ * Motivul e de siguranta, nu de estetica: daca vocea are nume de persoana,
+ * omul poate crede ca exista cineva real care ii citeste jurnalul si
+ * raspunsurile. Nimeni nu le citeste. Deci vocea e aplicatia insasi.
+ *
+ * Nu pune aici un nume de persoana (a fost "Daniel" pana la aceasta decizie).
+ */
+const GUIDE_NAME = "Emanus"
 
 /** Icon pe tip de beat (workbook §1): conversație cu bule tipizate. */
 function stepIcon(type: LessonStep["type"]): LucideIcon {
