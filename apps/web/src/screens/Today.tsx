@@ -13,7 +13,7 @@ import {
 } from "../journey"
 import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
-import { backupEnabled } from "../cloud"
+import { cloudEnabled } from "../cloud"
 
 /*
  * "Azi" — singurul ecran principal. (docs/20 §8)
@@ -34,7 +34,7 @@ function memoryVerse(lesson: Lesson): { text: string; ref: string } | null {
 
 /** Ce scrie sub câmpul de rugăciune. Adevărul, nu ce sună mai liniștitor. */
 function privacyLine(): string {
-  return backupEnabled()
+  return cloudEnabled()
     ? "Nu o citește nimeni. Se salvează pe telefonul tău și într-un spațiu de backup legat doar de tine, ca să n-o pierzi dacă schimbi telefonul."
     : "Nu o citește nimeni și nu pleacă nicăieri de pe telefonul tău."
 }
