@@ -1,5 +1,5 @@
 import type { Lesson } from "../domain.js"
-import { DOCTRINE_LESSONS } from "./doctrina.js"
+import { DOCTRINE_LESSONS, doctrinaL1, doctrinaL2, doctrinaL3 } from "./doctrina.js"
 import { neiertareL1, neiertareL2, neiertareL3 } from "./neiertareA.js"
 import { neiertareL4, neiertareL5 } from "./neiertareB.js"
 import { neiertareL6, neiertareL7 } from "./neiertareC.js"
@@ -18,7 +18,7 @@ export interface Door {
   id: string
   /** Spus în cuvinte de om, nu religioase. */
   label: string
-  /** null = parcurs încă nescris; se oferă parcursul de început. */
+  /** null = parcurs încă nescris; se oferă un drum care e gata. */
   pathId: string | null
 }
 
@@ -30,10 +30,10 @@ export const DOORS: Door[] = [
   { id: "dependenta", label: "Sunt prins într-un lucru de care nu scap", pathId: null },
   { id: "casnicie", label: "Familia mea se destramă", pathId: null },
   { id: "forma", label: "Merg la biserică de ani de zile și nu s-a schimbat nimic", pathId: null },
-  { id: "indoiala", label: "Nu știu dacă Dumnezeu există", pathId: null },
+  { id: "indoiala", label: "Nu știu dacă Dumnezeu există", pathId: "path_temelie" },
   { id: "rusine", label: "Mi-e rușine de ce am făcut", pathId: null },
   { id: "singuratate", label: "Sunt singur", pathId: null },
-  { id: "inceput", label: "Vreau doar să-L cunosc", pathId: null },
+  { id: "inceput", label: "Vreau doar să-L cunosc", pathId: "path_temelie" },
 ]
 
 /** Ieșirea obligatorie din ecranul de uși. */
@@ -76,7 +76,26 @@ export const pathNeiertare: PathDef = {
   ],
 }
 
-export const PATHS: PathDef[] = [pathNeiertare]
+/*
+ * Al doilea drum: pentru cine n-are o rană anume de numit, pentru cine nu știe
+ * dacă Dumnezeu există, și pentru cine spune "niciuna nu e a mea".
+ * Sunt exact lecțiile de doctrină, dar aici sunt drumul, nu suplimentul.
+ */
+export const pathTemelie: PathDef = {
+  id: "path_temelie",
+  doorId: "inceput",
+  title: "De la zero",
+  promise:
+    "Trei lecții, una la două zile. Fără presupunerea că știi ceva dinainte și fără să te facă nimeni să te simți prost că întrebi.",
+  lessons: [doctrinaL1, doctrinaL2, doctrinaL3],
+  practices: [
+    "Azi citește singur zece versete din Evanghelia după Ioan, capitolul 1. Nu trebuie să înțelegi tot. Doar citește-le.",
+    "Azi observă de câte ori încerci să meriți ceva: la muncă, acasă, în cap. Nu schimba nimic. Doar observă.",
+    "Ai terminat. Azi spune-I, cu cuvintele tale, ce crezi și ce încă nu crezi. Nu Se supără de partea a doua.",
+  ],
+}
+
+export const PATHS: PathDef[] = [pathNeiertare, pathTemelie]
 
 export function getPath(pathId: string | null | undefined): PathDef | undefined {
   if (!pathId) return undefined
@@ -93,6 +112,11 @@ export function findLessonAnywhere(lessonId: string): Lesson | undefined {
     if (l) return l
   }
   return DOCTRINE_LESSONS.find((l) => l.id === lessonId)
+}
+
+/** Drumurile pe care le poate începe cineva care tocmai a terminat `pathId`. */
+export function otherPaths(pathId: string | null | undefined): PathDef[] {
+  return PATHS.filter((p) => p.id !== pathId)
 }
 
 /*
