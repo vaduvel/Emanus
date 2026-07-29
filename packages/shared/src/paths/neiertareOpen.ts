@@ -17,7 +17,9 @@ import type { Lesson } from "../domain.js"
  * REGULI RESPECTATE (docs/22-siguranta.md):
  *  - nu spunem nicăieri "ți s-a întâmplat pentru că nu ai crezut / nu ai iertat";
  *  - nu explicăm de ce a permis Dumnezeu; nu avem răspunsul și nu inventăm unul;
- *  - `o1_10` trimite la ajutor real și NU se șterge.
+ *  - `o1_10` trimite la ajutor real și NU se șterge;
+ *  - vocea nu se prezintă cu nume de om (vezi GUIDE_NAME în LessonPlayer.tsx).
+ *    Motivul: dacă pare o persoană reală, omul crede că cineva îi citește jurnalul.
  *
  * NOTĂ: câmpul `order` de aici e 1 și 2; lecțiile vechi din C2 își păstrează
  * numerotarea 1-7 până la o renumerotare separată. Ordinea reală a drumului e
@@ -38,10 +40,14 @@ export const neiertareO1: Lesson = {
       type: "check_in",
       order: 1,
       bubbles: [
-        { from: "guide", text: "Bine că ești aici. Sunt Daniel." },
+        { from: "guide", text: "Bine că ești aici." },
         {
           from: "guide",
-          text: "Nu îți cer povestea și nu îți cer numele nimănui. Tu le știi. Eu am altceva de spus, și e ceva ce trebuie spus înaintea oricărui pas.",
+          text: "Nu îți cer povestea și nu îți cer numele nimănui. Tu le știi. Ce scrii aici rămâne în telefonul tău — nu citește nimeni.",
+        },
+        {
+          from: "guide",
+          text: "Eu am altceva de spus, și e ceva ce trebuie spus înaintea oricărui pas.",
         },
       ],
     },
@@ -83,7 +89,7 @@ export const neiertareO1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Ți s-au spus, probabil, lucruri de felul: «așa a vrut Dumnezeu», «El știe ce face», «te-a încercat».",
+          text: "Ți s-au spus, probabil, lucruri de felul: «asa a vrut Dumnezeu», «El știe ce face», «te-a încercat».",
         },
         {
           from: "guide",
@@ -170,7 +176,7 @@ export const neiertareO1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Un lucru înainte de pasul de azi, și îl spun o dată, clar: dacă acum ești în pericol, sau te gândești să-ți faci rău, nu rămâi singur cu asta. Sună 112. Sau 116 123, gratuit, oricând. Eu te aștept aici după.",
+          text: "Un lucru înainte de pasul de azi, și îl spun o dată, clar: dacă acum ești în pericol, sau te gândești să-ți faci rău, nu rămâi singur cu asta. Sună 112. Sau 116 123, gratuit, oricând. Aplicația asta nu înlocuiește medicul, psihologul sau poliția. Te aștept aici după.",
         },
         {
           from: "guide",
@@ -358,7 +364,7 @@ export const neiertareO2: Lesson = {
       type: "quiz",
       order: 11,
       quiz: {
-        question: "Ce arată faptul că Iisus a plâns la mormântul lui Lazăr?",
+        question: "Ce arată faptul că Iisus a plâns la mormântul lui Lazar?",
         options: [
           { text: "Că nu putea face nimic în situația aia", correct: false },
           { text: "Că durerea oamenilor Îl atinge, chiar și când are soluția în mână", correct: true },
@@ -399,7 +405,7 @@ export const neiertareO2: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Doamne, am crezut că nu Ți-a păsat. Astăzi am văzut că Ai plâns la o groapă și că ai strigat aceeași întrebare pe care o strig eu. Nu-Ți cer explicația. Îți cer să nu pleci. Amin.",
+          text: "Doamne, am crezut că nu Ți-a păsat. Astăzi am văzut că ai plâns la o groapă și că ai strigat aceeași întrebare pe care o strig eu. Nu-Ți cer explicația. Îți cer să nu pleci. Amin.",
         },
       ],
     },
