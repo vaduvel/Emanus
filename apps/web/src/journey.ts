@@ -1,15 +1,15 @@
 import type { DayPlan, Lesson, PathDef } from "@emanus/shared"
 import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared"
+import { cloudEnabled, pullState, pushState } from "./cloud"
 
 /*
- * Starea drumului, ținută local (localStorage).
+ * Starea drumului.
  *
- * DE CE LOCAL, DEOCAMDATĂ: aplicația trebuie să fie completă și testabilă pe oameni
- * reali fără server și fără cont. Când se leagă Supabase, se înlocuiește DOAR acest
- * fișier cu aceleași funcții peste tabele: journey (1 rând/user), journal, prayers.
- * Nimic din UI nu se schimbă.
+ * Sursa de adevăr pentru ecrane e localStorage — aplicația merge întreagă fără
+ * internet și fără cont. Supabase e copia de siguranță: după fiecare salvare se
+ * urcă tăcut în fundal, iar pe un telefon nou se aduce înapoi.
  *
- * NU se salvează: scoruri, serii de zile, nivele. Niciodată. (docs/20 §1)
+ * NU se salvează, nicăieri: scoruri, serii de zile, nivele, profil. (docs/20 §1)
  */
 
 const K = "emanus_journey_v1"
@@ -81,13 +81,41 @@ export function load(): JourneyState {
   }
 }
 
-function save(s: JourneyState): JourneyState {
+function writeLocal(s: JourneyState): JourneyState {
   try {
     localStorage.setItem(K, JSON.stringify(s))
   } catch {
     /* mod privat / cotă plină — aplicația merge, dar nu ține minte */
   }
   return s
+}
+
+function save(s: JourneyState): JourneyState {
+  writeLocal(s)
+  // Copia în nor pleacă în fundal. Dacă nu merge, nimeni nu află și nimic nu se blochează.
+  if (cloudEnabled()) void pushState(s)
+  return s
+}
+
+function isEmpty(s: JourneyState): boolean {
+  return s.pathId === null && s.journal.length === 0 && s.prayers.length === 0
+}
+
+/**
+ * De apelat o dată la pornire, înainte de primul randare.
+ * Telefon nou și local gol -> aduce din nor. Altfel localul învinge și se urcă.
+ * Returnează true dacă s-a adus ceva din nor (ecranele trebuie redesenate).
+ */
+export async function hydrateFromCloud(): Promise<boolean> {
+  if (!cloudEnabled()) return false
+  const local = load()
+  const remote = await pullState()
+  if (remote && isEmpty(local) && !isEmpty(remote)) {
+    writeLocal(remote)
+    return true
+  }
+  if (!isEmpty(local)) void pushState(local)
+  return false
 }
 
 // --- Primul contact ---
