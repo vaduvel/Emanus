@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-/* --- Intrarea: cele 11 uși --- */
+/* --- Intrarea: cele 31 de uși, în cuvintele omului (docs/21 §3) --- */
 .doors {
   padding: 8px 18px 32px;
 }
@@ -173,6 +173,26 @@
   font-size: 0.72rem;
   color: var(--text-muted, #6c8b88);
 }
+
+/*
+ * Ușile de la capătul listei: "vreau doar să-L cunosc" și "nu știu, arată-mi tu".
+ * Mai discrete decât durerile, dar tot uși — nu linkuri pierdute.
+ */
+.doors__list--quiet {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border, #dbe8e6);
+}
+.door--quiet {
+  background: none;
+  border-style: dashed;
+  color: var(--text-muted, #6c8b88);
+}
+.door--quiet:hover {
+  border-style: solid;
+  color: var(--text-body, #33534f);
+}
+
 .doors__none {
   display: block;
   width: 100%;
@@ -196,6 +216,73 @@
 }
 .doors__pending button {
   margin-right: 8px;
+}
+
+/*
+ * Ecranul 3: confirmarea. (docs/21 §4)
+ * Prima propoziție de pe ecran e propoziția LUI, nu a noastră.
+ */
+.confirm {
+  max-width: 520px;
+  margin: 0 auto;
+  padding-top: 28px;
+}
+.confirm__echo {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.35rem;
+  line-height: 1.4;
+  margin: 0 0 16px;
+  color: var(--text, #13302e);
+}
+.confirm__lead {
+  margin: 0 0 22px;
+  line-height: 1.6;
+  color: var(--text-body, #33534f);
+}
+.confirm__card {
+  padding: 20px 18px;
+  border: 1px solid var(--border, #dbe8e6);
+  border-left: 3px solid var(--accent, #0f6b68);
+  border-radius: 0 16px 16px 0;
+  background: var(--surface, #fff);
+}
+.confirm__title {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+  color: var(--text, #13302e);
+}
+.confirm__promise {
+  margin: 0 0 10px;
+  line-height: 1.58;
+  color: var(--text-body, #33534f);
+}
+.confirm__meta {
+  margin: 0;
+  font-size: 0.82rem;
+}
+.confirm__note {
+  margin: 18px 0 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.confirm__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent, #0f6b68);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.confirm__cta:hover {
+  background: var(--accent-hover, #12807b);
 }
 
 /* --- Azi --- */
