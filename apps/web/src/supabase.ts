@@ -1,13 +1,25 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js"
 
-// Client Supabase lazy. Dacă variabilele de mediu lipsesc (ex. în sandbox), rămâne null
-// și aplicația funcționează anonim mai departe — login-ul e ultimul pas, opțional.
+/*
+ * Client Supabase lazy.
+ *
+ * Cheia de aici e PUBLICĂ prin definiție (publishable / anon) — ajunge în browserul
+ * fiecărui om și nu poate face nimic fără politicile RLS din supabase/schema.sql.
+ * Cheia secretă (service_role / sb_secret_...) NU are ce căuta în apps/web,
+ * niciodată: ocolește RLS și ar da oricui jurnalele și rugăciunile tuturor.
+ *
+ * Dacă variabilele lipsesc (sandbox, build de test), rămâne null și aplicația
+ * merge complet local. Sincronizarea e un plus, nu o condiție de intrare.
+ */
 let cached: SupabaseClient | null | undefined
 
 export function getSupabase(): SupabaseClient | null {
   if (cached !== undefined) return cached
-  const url = import.meta.env.VITE_SUPABASE_URL as string | undefined
-  const key = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined
+  const env = import.meta.env
+  const url = env.VITE_SUPABASE_URL as string | undefined
+  const key = (env.VITE_SUPABASE_PUBLISHABLE_KEY ?? env.VITE_SUPABASE_ANON_KEY) as
+    | string
+    | undefined
   if (!url || !key) {
     cached = null
     return cached
@@ -16,7 +28,7 @@ export function getSupabase(): SupabaseClient | null {
     auth: {
       persistSession: true,
       autoRefreshToken: true,
-      detectSessionInUrl: false,
+      detectSessionInUrl: true,
     },
   })
   return cached
