@@ -30,12 +30,16 @@ export interface Prayer {
 }
 
 export interface JourneyState {
+  /** A văzut ecranele de primul contact (ce e Emanus). */
+  seenWelcome: boolean
   pathId: string | null
   lessonsDone: number
   /** Câte lecții de doctrină generală a terminat, în ordine. */
   doctrineDone: number
   /** YYYY-MM-DD */
   lastLessonDate: string | null
+  /** Invitația la prima rugăciune se face O SINGURĂ DATĂ, apoi nu mai insistăm. */
+  prayerInviteSeen: boolean
   journal: JournalEntry[]
   prayers: Prayer[]
   /** Marcat când omul a văzut ecranul de final de parcurs. */
@@ -43,10 +47,12 @@ export interface JourneyState {
 }
 
 const EMPTY: JourneyState = {
+  seenWelcome: false,
   pathId: null,
   lessonsDone: 0,
   doctrineDone: 0,
   lastLessonDate: null,
+  prayerInviteSeen: false,
   journal: [],
   prayers: [],
   pathCompletedSeen: false,
@@ -84,13 +90,30 @@ function save(s: JourneyState): JourneyState {
   return s
 }
 
+// --- Primul contact ---
+
+export function hasSeenWelcome(): boolean {
+  return load().seenWelcome
+}
+
+export function markWelcomeSeen(): void {
+  save({ ...load(), seenWelcome: true })
+}
+
 export function hasStarted(): boolean {
   return load().pathId !== null
 }
 
 export function chooseDoor(pathId: string): JourneyState {
   const s = load()
-  return save({ ...s, pathId, lessonsDone: 0, lastLessonDate: null, pathCompletedSeen: false })
+  return save({
+    ...s,
+    seenWelcome: true,
+    pathId,
+    lessonsDone: 0,
+    lastLessonDate: null,
+    pathCompletedSeen: false,
+  })
 }
 
 export function currentPath(): PathDef | undefined {
@@ -152,10 +175,30 @@ export function markPathSeen(): void {
 
 export function resetJourney(): void {
   const s = load()
-  save({ ...EMPTY, prayers: s.prayers, journal: s.journal })
+  save({
+    ...EMPTY,
+    seenWelcome: true,
+    prayerInviteSeen: s.prayerInviteSeen,
+    prayers: s.prayers,
+    journal: s.journal,
+  })
 }
 
 // --- Memorialul: rugăciuni și răspunsuri (docs/20; cârligul lung) ---
+
+/**
+ * Cine nu scrie nicio rugăciune nu ajunge niciodată la memorial — adică pierde
+ * exact lucrul pentru care se întoarce peste un an. Deci îl invităm o dată,
+ * după a doua lecție, când deja știe cu cine vorbește. O dată, nu mereu.
+ */
+export function shouldInviteFirstPrayer(): boolean {
+  const s = load()
+  return !s.prayerInviteSeen && s.prayers.length === 0 && s.lessonsDone >= 2
+}
+
+export function dismissPrayerInvite(): void {
+  save({ ...load(), prayerInviteSeen: true })
+}
 
 export function addPrayer(text: string): Prayer[] {
   const s = load()
@@ -165,7 +208,7 @@ export function addPrayer(text: string): Prayer[] {
     createdAt: today(),
     answeredAt: null,
   }
-  return save({ ...s, prayers: [p, ...s.prayers] }).prayers
+  return save({ ...s, prayerInviteSeen: true, prayers: [p, ...s.prayers] }).prayers
 }
 
 export function markAnswered(id: string, note: string): Prayer[] {
