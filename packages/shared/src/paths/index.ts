@@ -3,16 +3,19 @@ import { DOCTRINE_LESSONS, doctrinaL1, doctrinaL2, doctrinaL3 } from "./doctrina
 import { neiertareL1, neiertareL2, neiertareL3 } from "./neiertareA.js"
 import { neiertareL4, neiertareL5 } from "./neiertareB.js"
 import { neiertareL6, neiertareL7 } from "./neiertareC.js"
+import { neiertareO1, neiertareO2 } from "./neiertareOpen.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
 export * from "./doctrina.js"
+export * from "./neiertareOpen.js"
 export * from "./umblareA.js"
 export * from "./umblareB.js"
 
 /*
  * Uși, camere și parcursuri personal-generalizate.
  * Referință: docs/21-cum-lucreaza-Dumnezeu.md și docs/20-parcursuri-personal-generalizate.md
+ * Siguranță și limite: docs/22-siguranta.md (are prioritate).
  *
  * Modelul întreg stă pe un singur câmp salvat despre om: `pathId`.
  * Fără profil, fără scoruri, fără chestionar, fără memorie per utilizator.
@@ -224,18 +227,26 @@ export interface PathDef {
  * Camera 2: "Nu e bun / m-a lăsat".
  * Intră aici doliul, boala, nedreptatea, divorțul, neiertarea, "unde era El?".
  *
- * DE SCRIS (docs/21 §7 pct. 2): cele două lecții de deschidere ale camerei —
- * cine e Dumnezeu, spus prin rana asta: "nu El ți-a făcut asta" (Iacov 1:17;
- * Ioan 10:10). Azi lecția 2 acoperă parțial partea asta, dar camera trebuie să
- * înceapă cu ea, nu s-o strecoare la mijloc. Aceeași lumină, alt geam.
+ * ORDINEA CONTEAZĂ (docs/21 §2): camera începe cu cele două lecții despre cine e
+ * Dumnezeu, spuse PRIN rana asta — "nu El ți-a făcut asta" (Iacov 1:17) și
+ * "n-a privit de departe" (Ioan 11:35; Matei 27:46). Omul nedreptățit nu poate
+ * ierta cât timp Îl bănuiește pe Dumnezeu că a fost de partea celui care l-a
+ * rănit. Aceeași lumină, alt geam.
+ *
+ * DE FĂCUT: lecțiile 3-9 (fostele 1-7) își păstrează `order` 1-7 din vechea
+ * numerotare, iar `neiertare_l1` mai conține prezentarea "Sunt Daniel", care
+ * acum se face în `neiertare_o1`. De curățat la o trecere separată; ordinea
+ * reală a drumului e array-ul `lessons`, nu `order`.
  */
 export const pathNeiertare: PathDef = {
   id: "path_neiertare",
   roomId: "c2",
   title: "Când nu poți ierta",
   promise:
-    "Șapte lecții, una la două zile. Nu îți cerem să uiți și nu îți cerem să spui că n-a fost grav.",
+    "Nouă lecții, una la două zile. Nu îți cerem să uiți și nu îți cerem să spui că n-a fost grav.",
   lessons: [
+    neiertareO1,
+    neiertareO2,
     neiertareL1,
     neiertareL2,
     neiertareL3,
@@ -245,6 +256,8 @@ export const pathNeiertare: PathDef = {
     neiertareL7,
   ],
   practices: [
+    "Azi nu adăuga nimic. Când te prinzi că Îl bănuiești, spune o dată: «nu Tu mi-ai făcut asta». Atât.",
+    "Azi citește singur Ioan 11, de la versetul 17 la 44. Încet. Uită-te doar la ce face Iisus cu oamenii rămași în urmă.",
     "Ieri I-ai spus ce ți s-a făcut. Azi nu adăuga nimic. Citește versetul de două ori și stai un minut în liniște.",
     "Azi observă doar: de câte ori Îl bănuiești pe Dumnezeu că nu-ți vrea binele. Nu te certa cu gândul. Doar numără-l.",
     "Ai cerut iertare cuiva peste care s-a scurs amărăciunea? Dacă nu, azi e ziua. Două propoziții, fără explicații.",
