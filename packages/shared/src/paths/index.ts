@@ -1,5 +1,16 @@
 import type { Lesson } from "../domain.js"
+import { aproapeL1, aproapeL2, aproapeL3, aproapeL4, aproapeL5, aproapeL6, aproapeL7 } from "./aproape.js"
 import { DOCTRINE_LESSONS, doctrinaL1, doctrinaL2, doctrinaL3 } from "./doctrina.js"
+import { harL1, harL2, harL3, harL4, harL5, harL6, harL7 } from "./har.js"
+import {
+  impreunaL1,
+  impreunaL2,
+  impreunaL3,
+  impreunaL4,
+  impreunaL5,
+  impreunaL6,
+  impreunaL7,
+} from "./impreuna.js"
 import { neiertareL1, neiertareL2, neiertareL3 } from "./neiertareA.js"
 import { neiertareL4, neiertareL5 } from "./neiertareB.js"
 import { neiertareL6, neiertareL7 } from "./neiertareC.js"
@@ -11,7 +22,10 @@ import { schimbareL5, schimbareL6, schimbareL7 } from "./schimbareB.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
+export * from "./aproape.js"
 export * from "./doctrina.js"
+export * from "./har.js"
+export * from "./impreuna.js"
 export * from "./neiertareOpen.js"
 export * from "./rusineA.js"
 export * from "./rusineB.js"
@@ -45,6 +59,9 @@ export * from "./umblareB.js"
  *   1. vine cu o durere        → camera lui (c1…c7)
  *   2. vine de la zero         → path_temelie
  *   3. vine să-și întărească relația → path_umblare
+ *
+ * STARE: toate cele șapte camere au acum parcurs scris. `FALLBACK_PATH_ID`
+ * rămâne în cod ca plasă de siguranță, nu ca soluție pentru camere goale.
  */
 
 /** Cele șapte tipare spirituale dominante din care iese aproape orice durere. */
@@ -81,7 +98,7 @@ export const ROOMS: Room[] = [
     id: "c4",
     title: "E departe, nu mă aude",
     lie: "Am rămas singur pe drum.",
-    pathId: null,
+    pathId: "path_aproape",
   },
   {
     id: "c5",
@@ -93,13 +110,13 @@ export const ROOMS: Room[] = [
     id: "c6",
     title: "Trebuie să merit",
     lie: "Mă iubește cât de bun sunt.",
-    pathId: null,
+    pathId: "path_har",
   },
   {
     id: "c7",
     title: "Sunt singur în asta",
     lie: "Nimeni nu înțelege și nimănui nu-i pasă.",
-    pathId: null,
+    pathId: "path_impreuna",
   },
 ]
 
@@ -194,13 +211,13 @@ export function getDoor(doorId: string | null | undefined): Door | undefined {
   return ALL_DOORS.find((d) => d.id === doorId)
 }
 
-/** Drumul dat omului a cărui cameră nu e scrisă încă. */
+/** Plasă de siguranță, dacă apare vreodată o ușă fără drum. */
 export const FALLBACK_PATH_ID = "path_temelie"
 
 /**
  * Nicio ușă nu e fundătură. (docs/21 §7 pct. 5)
- * Dacă parcursul camerei nu e scris încă, omul primește temelia — cu un rând
- * onest, nu cu un "în lucru" care îl trimite acasă.
+ * Toate cele șapte camere au parcurs scris, deci fallback-ul nu se mai atinge
+ * în practică. Rămâne pentru uși noi adăugate înainte de contențutul lor.
  */
 export function resolveDoorPath(doorId: string): string {
   const door = getDoor(doorId)
@@ -308,6 +325,37 @@ export const pathNeiertare: PathDef = {
 }
 
 /*
+ * Camera 4: "E departe, nu mă aude".
+ * Intră aici peretele în rugăciune, uscăciunea, flăcăra stinsă, "nu știu să citesc".
+ *
+ * ORDINEA (docs/21 §2): începem cu faptul că El nu a plecat — promisiune, nu
+ * senzație. Omul de aici nu are nevoie de o tehnică în prima zi, are nevoie să
+ * afle că nu a fost abandonat. Metoda (cum se aude, cum se citește) vine de la
+ * lecția 4 încolo.
+ *
+ * SIGURANȚĂ (docs/22 §1): lecția 3 atinge întrebarea "e ceva la mine?" și se
+ * încheie explicit cu "foarte des nu e nimic de reparat". Pasul `a2_9` trimite la
+ * medic pentru lipsa totală de simtire, insomnie și epuizare.
+ */
+export const pathAproape: PathDef = {
+  id: "path_aproape",
+  roomId: "c4",
+  title: "Când pare departe",
+  promise:
+    "Șapte lecții, una la două zile. Fără să îți promitem că de mâine simți și fără să îți spunem că e vina ta.",
+  lessons: [aproapeL1, aproapeL2, aproapeL3, aproapeL4, aproapeL5, aproapeL6, aproapeL7],
+  practices: [
+    "Azi spune-I o dată, cu voce tare: «nu Te simt, dar ai spus că ești aici». Amândouă părțile, în aceeași propoziție.",
+    "Citește-ți psalmul pe care l-ai scris ieri. Cu voce tare, o dată. Și nu-l corecta.",
+    "Lucrul care a ieșit la cercetare — dacă a ieșit — rezolvă-l azi. Dacă nu a ieșit nimic, azi nu te mai căuta. Chiar nu.",
+    "Din nou cele trei minute de liniște, la aceeași oră. Telefonul în altă cameră.",
+    "Un paragraf, patru întrebări, în scris. Zece minute. Dacă s-a terminat Ioan 1, mergi mai departe cu Ioan 2.",
+    "Lucrul de la început pe care l-ai reluat ieri — fă-l și azi. A doua zi e mai greu decât prima.",
+    "Ai terminat drumul. Azi ține întâlnirea de zece minute la ora pe care ai scris-o. Și scrie undeva o rugăciune la care aștepți răspuns.",
+  ],
+}
+
+/*
  * Camera 5: "Nu mă pot schimba".
  * Intră aici dependența, recăderea, anxietatea, tristețea, furia.
  *
@@ -347,9 +395,78 @@ export const pathSchimbare: PathDef = {
 }
 
 /*
- * Temelia. Camera 3 ("nu e real") și, până se scriu celelalte camere, drumul
- * oricui a apăsat o ușă a cărei cameră nu e gata. Și drumul propriu al omului
- * care spune "vreau doar să-L cunosc" — pentru el nu e supliment, e drumul.
+ * Camera 6: "Trebuie să merit".
+ * Intră aici meritul, obișnuința, frica de pedeapsă, epuizarea din slujire.
+ *
+ * ORDINEA (docs/21 §2): începem cu faptul că nu se poate cumpăra. Omul de aici nu
+ * are nevoie de mai multă disciplină — are nevoie să afle că balanța din capul
+ * lui nu există. Ascultarea (lecția 4) vine DUPĂ har, altfel drumul ar produce
+ * exact ce vrea să vindece.
+ *
+ * ATENȚIE (docs/22 §6): nu arătăm cu degetul către nicio denominațiune. Lecția 6
+ * vorbește despre mecanismul "forma fără relație", care funcționează identic în
+ * orice tradiție — și în oameni care nu merg niciunde.
+ */
+export const pathHar: PathDef = {
+  id: "path_har",
+  roomId: "c6",
+  title: "Nu se cumpără",
+  promise:
+    "Șapte lecții, una la două zile. Fără să îți cerem să faci mai mult și fără să îți spună nimeni că nu ești destul.",
+  lessons: [harL1, harL2, harL3, harL4, harL5, harL6, harL7],
+  practices: [
+    "Azi roagă-te încă o dată fără să pomenești nici ce ai făcut, nici ce n-ai făcut. Doar «ai milă de mine» și mulțumește.",
+    "Azi spune-I «Tata» la începutul rugăciunii. Dacă te blochează, spune-I și asta.",
+    "Azi cere încă un lucru pentru tine. Cine se teme de pedeapsă nu cere niciodată pentru el.",
+    "Azi fă din nou un bine despre care nu află nimeni. Alții nu au ce să pună la punctaj.",
+    "Ziua de odihnă: nu adaugă nimic pe listă. Zece minute jos, ca Maria, și atât.",
+    "Lucrul pe care l-ai umplut ieri — fă-l și azi la fel, încet, uitându-te la El.",
+    "Ai terminat drumul. Azi primește ceva fără să dai nimic în schimb. Și scrie undeva o rugăciune la care aștepți răspuns.",
+  ],
+}
+
+/*
+ * Camera 7: "Sunt singur în asta".
+ * Intră aici singurătatea, familia care respinge, rana din biserică, cel nou venit.
+ *
+ * ORDINEA (docs/21 §2): începem cu faptul că El a fost părăsit de toți — nu cu
+ * "du-te la biserică". Omului singur nu i se dă o sarcină socială în prima zi.
+ * Pașii practici de găsire a oamenilor vin în lecțiile 6 și 7.
+ *
+ * SIGURANȚĂ (docs/22 §1-2, NENEGOCIABIL): `im1_1` are avertisment cu 116 123 și
+ * 112. Lecția 3 spune explicit că răbdarea în familie nu înseamnă să rămâi în
+ * pericol (112, 0800 500 333). Lecția 4 nu apără rana din biserică, nu trimite
+ * omul înapoi și numește abuzul abuz (112, 119).
+ */
+export const pathImpreuna: PathDef = {
+  id: "path_impreuna",
+  roomId: "c7",
+  title: "Să nu rămâi singur",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți cerem să te întorci nicăieri și nu îți promitem că fabricăm oameni în șapte lecții.",
+  lessons: [
+    impreunaL1,
+    impreunaL2,
+    impreunaL3,
+    impreunaL4,
+    impreunaL5,
+    impreunaL6,
+    impreunaL7,
+  ],
+  practices: [
+    "Azi spune-I încă o dată, fără să înfrumusețezi: «mi-e singur». Nu e o plângere nepotrivită.",
+    "Azi cere încă un lucru mic unui om. Un orfan nu cere — tu nu ești orfan.",
+    "Azi roagă-te pe nume pentru omul din casă care te înțelege cel mai puțin. Și nu-i explica nimic.",
+    "Azi nu adăuga nimic la ce ai scris ieri. Dacă te ține treaz, sună 116 123 — nu e lipsă de credință.",
+    "Cele două nume — mai sunt bune la lumina zilei? Dacă nu, caută azi un grup mic aproape de tine.",
+    "Dacă ai trimis mesajul și ți-a răspuns, propune ceva concret: o cafea, o plimbare, o oră. Dacă nu ți-a răspuns, nu înseamnă nimic despre tine.",
+    "Ai terminat drumul. Azi fă un lucru pentru cineva mai singur decât tine. Și scrie undeva o rugăciune la care aștepți răspuns.",
+  ],
+}
+
+/*
+ * Temelia. Camera 3 ("nu e real") și drumul propriu al omului care spune "vreau
+ * doar să-L cunosc" — pentru el nu e supliment, e drumul.
  */
 export const pathTemelie: PathDef = {
   id: "path_temelie",
@@ -396,8 +513,11 @@ export const pathUmblare: PathDef = {
 export const PATHS: PathDef[] = [
   pathAcasa,
   pathNeiertare,
-  pathSchimbare,
   pathTemelie,
+  pathAproape,
+  pathSchimbare,
+  pathHar,
+  pathImpreuna,
   pathUmblare,
 ]
 
