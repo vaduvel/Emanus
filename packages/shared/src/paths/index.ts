@@ -3,8 +3,12 @@ import { DOCTRINE_LESSONS, doctrinaL1, doctrinaL2, doctrinaL3 } from "./doctrina
 import { neiertareL1, neiertareL2, neiertareL3 } from "./neiertareA.js"
 import { neiertareL4, neiertareL5 } from "./neiertareB.js"
 import { neiertareL6, neiertareL7 } from "./neiertareC.js"
+import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
+import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
 export * from "./doctrina.js"
+export * from "./umblareA.js"
+export * from "./umblareB.js"
 
 /*
  * Uși, camere și parcursuri personal-generalizate.
@@ -18,16 +22,26 @@ export * from "./doctrina.js"
  * prin durerea lui, iar adevărul despre cine e Dumnezeu i se spune PRIN rană.
  *
  * GENERALIZAREA: nu grupăm după durere — durerile sunt infinite. Grupăm după
- * minciuna de dedesubt; alea sunt șapte. Durerea e simptomul, minciuna e boala.
- * Ușile rămân multe și în cuvintele omului; camerele sunt puține.
+ * tiparul spiritual de dedesubt; alea sunt șapte. Ușile rămân multe și în
+ * cuvintele omului; camerele sunt puține.
+ *
+ * ATENȚIE, limită asumată: cele șapte tipare sunt un instrument de orientare
+ * inițială, NU un diagnostic. O durere poate avea și cauze medicale, relaționale
+ * sau sociale. Nu spunem niciodată omului "boala ta e că nu crezi X" — ar fi o
+ * vină în plus pusă pe cineva care deja suferă. Vezi docs/22-siguranta.md.
+ *
+ * TREI INTRĂRI, nu două (docs/21 §3):
+ *   1. vine cu o durere        → camera lui (c1…c7)
+ *   2. vine de la zero         → path_temelie
+ *   3. vine să-și întărească relația → path_umblare
  */
 
-/** Cele șapte minciuni despre Dumnezeu din care iese aproape orice durere. */
+/** Cele șapte tipare spirituale dominante din care iese aproape orice durere. */
 export interface Room {
   id: string
   /** Numele camerei, cum îl vede omul. */
   title: string
-  /** Minciuna pe care o crede omul care intră aici. Nu se afișează ca etichetă. */
+  /** Ce crede omul care intră aici. Nu se afișează niciodată ca etichetă. */
   lie: string
   /** Parcursul scris pentru camera asta; null = încă nescris. */
   pathId: string | null
@@ -87,8 +101,12 @@ export interface Door {
   id: string
   /** Spus în cuvinte de om, nu religioase. Omul își vede propria propoziție. */
   label: string
-  /** Camera în care duce ușa. `null` doar pentru ușile de explorare. */
+  /** Camera în care duce ușa. `null` doar pentru ușile de la capătul listei. */
   roomId: string | null
+  /** Doar pentru ușile fără cameră: drumul către care duc direct. */
+  pathId?: string
+  /** True pentru cele 10 propoziții arătate înainte de "Arată-mi tot". */
+  common?: boolean
 }
 
 /*
@@ -96,26 +114,29 @@ export interface Door {
  * Omul nu alege o cameră — alege o propoziție. Nu află niciodată că e pe același
  * culoar cu alți patru. Ordinea e intenționat amestecată între camere, ca lista
  * să nu arate ca niște categorii.
+ *
+ * `common: true` = intră în primele 10 de pe ecran. Restul se văd la
+ * "Arată-mi tot". 31 de opțiuni deodată obosesc pe telefon.
  */
 export const DOORS: Door[] = [
-  { id: "rusine", label: "Am făcut lucruri de care mi-e rușine", roomId: "c1" },
-  { id: "neiertare", label: "Mi s-a făcut ceva și nu pot ierta", roomId: "c2" },
-  { id: "indoiala", label: "Nu știu dacă există Dumnezeu", roomId: "c3" },
-  { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4" },
-  { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5" },
+  { id: "rusine", label: "Am făcut lucruri de care mi-e rușine", roomId: "c1", common: true },
+  { id: "neiertare", label: "Mi s-a făcut ceva și nu pot ierta", roomId: "c2", common: true },
+  { id: "indoiala", label: "Nu știu dacă există Dumnezeu", roomId: "c3", common: true },
+  { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4", common: true },
+  { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5", common: true },
+  { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c5", common: true },
+  { id: "doliu", label: "Am pierdut pe cineva", roomId: "c2", common: true },
+  { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6", common: true },
+  { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7", common: true },
+  { id: "nu_inteleg", label: "Sunt creștin, dar nu înțeleg ce citesc", roomId: "c3", common: true },
   { id: "obisnuinta", label: "Merg la biserică din obișnuință", roomId: "c6" },
-  { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7" },
-  { id: "doliu", label: "Am pierdut pe cineva", roomId: "c2" },
   { id: "avort", label: "Am făcut un avort", roomId: "c1" },
   { id: "biblia_inventata", label: "Cred că Biblia e inventată de oameni", roomId: "c3" },
   { id: "recadere", label: "Am promis de o sută de ori și tot cad", roomId: "c5" },
   { id: "uscaciune", label: "Nu mai simt nimic când mă rog", roomId: "c4" },
-  { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6" },
   { id: "familie_respinge", label: "Familia mea nu mă înțelege", roomId: "c7" },
   { id: "boala", label: "Sunt bolnav sau e bolnav cineva drag", roomId: "c2" },
   { id: "infidelitate", label: "Mi-am înșelat soțul sau soția", roomId: "c1" },
-  { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c5" },
-  { id: "nu_inteleg", label: "Sunt creștin, dar nu înțeleg ce citesc", roomId: "c3" },
   { id: "flacara", label: "Am fost aproape de Dumnezeu cândva", roomId: "c4" },
   { id: "frica_pedeapsa", label: "Mi-e frică să nu mă pedepsească", roomId: "c6" },
   { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7" },
@@ -131,14 +152,28 @@ export const DOORS: Door[] = [
   { id: "furie", label: "Mă enervez și rănesc oamenii din jur", roomId: "c5" },
 ]
 
+export const COMMON_DOORS: Door[] = DOORS.filter((d) => d.common)
+export const MORE_DOORS: Door[] = DOORS.filter((d) => !d.common)
+
 /*
- * Ușile de la capătul listei: omul fără durere anume. (docs/21 §3)
- * Nu îl forțăm într-o rană pe care nu o are. Pentru el, lecțiile despre cine e
- * Dumnezeu nu sunt un preambul — sunt chiar drumul lui.
+ * Ușile de la capătul listei: cine nu vine cu o rană anume. (docs/21 §3)
+ * Nu îl forțăm într-o durere pe care nu o are.
+ *
+ * Sunt DOUĂ feluri de oameni aici și nu au nevoie de același lucru:
+ *   - cel care nu știe nimic → De la zero (temelia)
+ *   - cel care merge de ani și vrea mai adânc → Umblarea
+ * Înainte aveam un singur drum pentru amândoi, adică îl trimiteam pe al doilea
+ * la clasa întâia.
  */
 export const EXPLORE_DOORS: Door[] = [
-  { id: "inceput", label: "Vreau doar să-L cunosc", roomId: null },
-  { id: "nu_stiu", label: "Nu știu. Arată-mi tu.", roomId: null },
+  { id: "inceput", label: "Vreau doar să-L cunosc", roomId: null, pathId: "path_temelie" },
+  {
+    id: "umblare",
+    label: "Merg cu El, dar vreau mai aproape",
+    roomId: null,
+    pathId: "path_umblare",
+  },
+  { id: "nu_stiu", label: "Nu știu. Arată-mi tu.", roomId: null, pathId: "path_temelie" },
 ]
 
 export const ALL_DOORS: Door[] = [...DOORS, ...EXPLORE_DOORS]
@@ -148,7 +183,7 @@ export function getDoor(doorId: string | null | undefined): Door | undefined {
   return ALL_DOORS.find((d) => d.id === doorId)
 }
 
-/** Drumul dat omului care n-are încă o cameră scrisă, sau care doar explorează. */
+/** Drumul dat omului a cărui cameră nu e scrisă încă. */
 export const FALLBACK_PATH_ID = "path_temelie"
 
 /**
@@ -157,13 +192,16 @@ export const FALLBACK_PATH_ID = "path_temelie"
  * onest, nu cu un "în lucru" care îl trimite acasă.
  */
 export function resolveDoorPath(doorId: string): string {
-  const room = getRoom(getDoor(doorId)?.roomId)
-  return room?.pathId ?? FALLBACK_PATH_ID
+  const door = getDoor(doorId)
+  if (door?.pathId) return door.pathId
+  return getRoom(door?.roomId)?.pathId ?? FALLBACK_PATH_ID
 }
 
-/** True dacă ușa duce în camera ei proprie, nu în temelie. */
+/** True dacă ușa duce în drumul ei propriu, nu într-un înlocuitor. */
 export function doorHasOwnRoom(doorId: string): boolean {
-  return getRoom(getDoor(doorId)?.roomId)?.pathId != null
+  const door = getDoor(doorId)
+  if (door?.pathId) return true
+  return getRoom(door?.roomId)?.pathId != null
 }
 
 export function doorsForRoom(roomId: string): Door[] {
@@ -172,7 +210,7 @@ export function doorsForRoom(roomId: string): Door[] {
 
 export interface PathDef {
   id: string
-  /** Camera căreia îi aparține parcursul; null pentru temelie. */
+  /** Camera căreia îi aparține parcursul; null pentru drumurile fără cameră. */
   roomId: string | null
   title: string
   /** Ce primește omul. O propoziție, fără promisiuni pe care nu le putem ține. */
@@ -236,7 +274,35 @@ export const pathTemelie: PathDef = {
   ],
 }
 
-export const PATHS: PathDef[] = [pathNeiertare, pathTemelie]
+/*
+ * UMBLAREA — M7. A treia intrare.
+ *
+ * Pentru cine nu vine cu o rană, ci vine să întărească o relație care există.
+ * Nu e o cameră: nu vindecăm nimic aici, ridicăm ștacheta. Presupunem experiență,
+ * deci intrăm în text, în context și în metodă.
+ *
+ * E și drumul de după: cine termină camera lui în două-trei săptămâni ajunge
+ * exact aici, altfel rămâne cu un ecran gol.
+ */
+export const pathUmblare: PathDef = {
+  id: "path_umblare",
+  roomId: null,
+  title: "Umblarea",
+  promise:
+    "Șapte lecții pentru cine merge deja cu El: cum se ascultă, cum se citește, ce faci când nu simți nimic.",
+  lessons: [umblareL1, umblareL2, umblareL3, umblareL4, umblareL5, umblareL6, umblareL7],
+  practices: [
+    "Azi, după ce termini de vorbit cu El, nu te ridica. Cinci minute fără să ceri nimic.",
+    "Un singur paragraf, trecut prin cele patru întrebări, în scris. Nu un capitol.",
+    "Lucrul mic pe care îl amâni — fă-l azi. Dacă nu poți singur, spune-I: «vreau, dar nu pot».",
+    "Zece minute cu El fără să ceri și fără să citești. Doar spune-I de ce Îl iubești.",
+    "O oră fără telefon, treaz, cu El. Când vine lista, scrie-o și taci.",
+    "Azi fă exact ce ai face dacă ai simți. Și spune-I: «nu simt nimic și totuși sunt aici».",
+    "Ai terminat drumul. Azi caută omul căruia îi spui cele trei propoziții. Întreabă-l ce mai face.",
+  ],
+}
+
+export const PATHS: PathDef[] = [pathNeiertare, pathTemelie, pathUmblare]
 
 export function getPath(pathId: string | null | undefined): PathDef | undefined {
   if (!pathId) return undefined
