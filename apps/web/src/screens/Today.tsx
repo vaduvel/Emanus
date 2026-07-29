@@ -1,7 +1,16 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowRight, BookOpen, HandHeart, Sunrise } from "lucide-react"
 import type { Lesson } from "@emanus/shared"
-import { currentPath, daysAgo, doctrineAvailable, oldestUnanswered, plan } from "../journey"
+import {
+  addPrayer,
+  currentPath,
+  daysAgo,
+  dismissPrayerInvite,
+  doctrineAvailable,
+  oldestUnanswered,
+  plan,
+  shouldInviteFirstPrayer,
+} from "../journey"
 import { navigate } from "../router"
 
 /*
@@ -23,6 +32,9 @@ export function Today() {
   const memorial = useMemo(() => oldestUnanswered(), [])
   const doctrine = useMemo(() => doctrineAvailable(), [])
   const [yesterday, setYesterday] = useState<string | null>(null)
+  const [inviteOpen, setInviteOpen] = useState(() => shouldInviteFirstPrayer())
+  const [prayerText, setPrayerText] = useState("")
+  const [prayerSaved, setPrayerSaved] = useState(false)
 
   const complete = dayPlan?.kind === "path_complete"
   useEffect(() => {
@@ -34,16 +46,41 @@ export function Today() {
   const lastLesson = path.lessons[dayPlan.lessonIndex]
   const verse = lastLesson ? memoryVerse(lastLesson) : null
   const isFirstEver = dayPlan.kind === "lesson" && dayPlan.lessonIndex === 0
+  const away = dayPlan.awayDays
+
+  function saveFirstPrayer() {
+    if (!prayerText.trim()) return
+    addPrayer(prayerText)
+    setPrayerSaved(true)
+  }
 
   return (
     <section className="today">
       <header className="today__head">
         <Sunrise size={22} strokeWidth={1.7} aria-hidden />
-        <h1>Bine că ești aici</h1>
+        <h1>{away ? "Te-ai întors" : "Bine că ești aici"}</h1>
       </header>
 
+      {/*
+        Întoarcerea după tăcere. NU e o mustrare și nu se afișează ca statistică.
+        Omul care lipsește trei săptămâni se întoarce cu vinovăție; dacă primește
+        și de la noi o palmă, pleacă definitiv.
+      */}
+      {away && (
+        <div className="tile today__back">
+          <p>
+            Au trecut {away} de zile de când n-ai mai intrat. Nu s-a șters nimic și nu
+            începem de la capăt.
+          </p>
+          <p className="muted">
+            Reluam exact de unde ai rămas. Și, dacă vrei să știi: nici El nu ține socoteala
+            zilelor în care n-ai vorbit cu El.
+          </p>
+        </div>
+      )}
+
       {/* "Cum a fost ieri?" — o singură atingere, nu chestionar. Nu se salvează. */}
-      {!isFirstEver && dayPlan.kind === "lesson" && (
+      {!isFirstEver && !away && dayPlan.kind === "lesson" && (
         <div className="tile today__yesterday">
           <p className="today__q">Pasul de data trecută — cum a fost?</p>
           {yesterday === null ? (
@@ -80,7 +117,7 @@ export function Today() {
             className="today__cta"
             onClick={() => navigate(`/lesson/${dayPlan.lesson?.id ?? ""}`)}
           >
-            Începe <ArrowRight size={18} aria-hidden />
+            {away ? "Reia" : "Începe"} <ArrowRight size={18} aria-hidden />
           </button>
           {isFirstEver && <p className="muted today__promise">{path.promise}</p>}
         </div>
@@ -110,6 +147,62 @@ export function Today() {
           {verse.text}
           <cite>{verse.ref}</cite>
         </blockquote>
+      )}
+
+      {/*
+        Prima rugăciune. O singură invitație, după a doua lecție.
+        Fără ea, memorialul nu pornește niciodată — și memorialul e motivul
+        pentru care omul se întoarce peste un an.
+      */}
+      {inviteOpen && (
+        <div className="tile today__invite">
+          {prayerSaved ? (
+            <>
+              <p className="today__kicker">
+                <HandHeart size={15} aria-hidden /> Am scris-o
+              </p>
+              <p>
+                Nu ți-o mai amintim mâine. Dar peste câteva săptămâni te întrebăm o dată
+                unde a ajuns.
+              </p>
+              <button type="button" className="ghost" onClick={() => setInviteOpen(false)}>
+                Bine
+              </button>
+            </>
+          ) : (
+            <>
+              <p className="today__kicker">
+                <HandHeart size={15} aria-hidden /> Un lucru pe care Îl aștepți
+              </p>
+              <p>
+                Scrie un singur lucru pentru care te rogi acum. Nu-l citește nimeni și nu
+                pleacă nicăieri de pe telefonul tău.
+              </p>
+              <textarea
+                className="journal"
+                rows={3}
+                value={prayerText}
+                placeholder="Doamne, aș vrea să…"
+                onChange={(e) => setPrayerText(e.target.value)}
+              />
+              <div className="today__invite-actions">
+                <button type="button" className="today__cta" onClick={saveFirstPrayer}>
+                  Scrie
+                </button>
+                <button
+                  type="button"
+                  className="ghost"
+                  onClick={() => {
+                    dismissPrayerInvite()
+                    setInviteOpen(false)
+                  }}
+                >
+                  Nu acum
+                </button>
+              </div>
+            </>
+          )}
+        </div>
       )}
 
       {/*
