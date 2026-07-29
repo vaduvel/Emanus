@@ -4,11 +4,15 @@ import { neiertareL1, neiertareL2, neiertareL3 } from "./neiertareA.js"
 import { neiertareL4, neiertareL5 } from "./neiertareB.js"
 import { neiertareL6, neiertareL7 } from "./neiertareC.js"
 import { neiertareO1, neiertareO2 } from "./neiertareOpen.js"
+import { rusineL1, rusineL2, rusineL3, rusineL4 } from "./rusineA.js"
+import { rusineL5, rusineL6, rusineL7 } from "./rusineB.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
 export * from "./doctrina.js"
 export * from "./neiertareOpen.js"
+export * from "./rusineA.js"
+export * from "./rusineB.js"
 export * from "./umblareA.js"
 export * from "./umblareB.js"
 
@@ -55,7 +59,7 @@ export const ROOMS: Room[] = [
     id: "c1",
     title: "Nu mă vrea așa cum sunt",
     lie: "Sunt prea murdar pentru El.",
-    pathId: null,
+    pathId: "path_acasa",
   },
   {
     id: "c2",
@@ -224,6 +228,37 @@ export interface PathDef {
 }
 
 /*
+ * Camera 1: "Nu mă vrea așa cum sunt".
+ * Intră aici rușinea, pornografia, infidelitatea, avortul, "sunt prea departe".
+ *
+ * ORDINEA (docs/21 §2): camera NU începe cu păcatul omului, ci cu faptul că El
+ * S-a mișcat primul, când omul era încă murdar (Romani 5:8; Luca 15:20).
+ * Cine crede că trebuie să se curețe înainte de a veni nu va veni niciodată.
+ * Mărturisirea vine abia în lecția 5, după ce omul știe că nu e aruncat afară.
+ *
+ * SIGURANȚĂ: lecțiile 5 și 6 ating abuz, avort și autovătămare. Primul pas al
+ * fiecăreia e avertisment cu numere reale (docs/22 §2). Lecția 5 spune explicit
+ * că ce i s-a FĂCUT omului nu e păcatul lui și că nu ia legătura cu agresorul.
+ */
+export const pathAcasa: PathDef = {
+  id: "path_acasa",
+  roomId: "c1",
+  title: "Drumul înapoi",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți cerem să povestești nimănui ce ai făcut și nu îți cerem să promiți nimic.",
+  lessons: [rusineL1, rusineL2, rusineL3, rusineL4, rusineL5, rusineL6, rusineL7],
+  practices: [
+    "Azi nu adaugă nimic. Când te prinzi că vrei să te cureți înainte să vii, spune o dată: «El a alergat primul».",
+    "Azi doar observă: de câte ori spui «sunt» în loc de «am făcut». Nu te certa cu gândul — tradu-l într-o faptă anume.",
+    "Azi, când îți revine fapta în minte, spune cu voce tare, o singură dată: «s-a plătit». Nu de zece ori.",
+    "Azi ascultă cum te numești tu pe tine. Când vine eticheta, răspunde-i: «asta am făcut, nu asta sunt».",
+    "Ieri ai spus cu voce tare ce ascundeai. Azi nu adaugă nimic. Dacă vrei să spui și unui om, gândește-te o zi — nu e obligatoriu și nu e o condiție.",
+    "Azi citește singur Romani 8, primele patru versete. Încet. Dacă gândul te ține treaz nopțile, sună 116 123 — nu e lipsă de credință.",
+    "Ai terminat drumul. Azi caută omul căruia îi poți spune «m-am întors» când se întâmplă. Și scrie undeva o rugăciune la care aștepți răspuns.",
+  ],
+}
+
+/*
  * Camera 2: "Nu e bun / m-a lăsat".
  * Intră aici doliul, boala, nedreptatea, divorțul, neiertarea, "unde era El?".
  *
@@ -315,7 +350,7 @@ export const pathUmblare: PathDef = {
   ],
 }
 
-export const PATHS: PathDef[] = [pathNeiertare, pathTemelie, pathUmblare]
+export const PATHS: PathDef[] = [pathAcasa, pathNeiertare, pathTemelie, pathUmblare]
 
 export function getPath(pathId: string | null | undefined): PathDef | undefined {
   if (!pathId) return undefined
