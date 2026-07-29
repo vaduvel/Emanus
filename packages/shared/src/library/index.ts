@@ -1,8 +1,11 @@
 import type { Lesson } from "../domain.js"
 import { DOCTRINE_HAR_LESSONS } from "./doctrineHar2.js"
+import { DOCTRINE_VESNICIA_LESSONS } from "./doctrineVesnicia2.js"
 
 export * from "./doctrineHar.js"
 export * from "./doctrineHar2.js"
+export * from "./doctrineVesnicia.js"
+export * from "./doctrineVesnicia2.js"
 
 /*
  * Biblioteca Emanus — raftul de cursuri, dupa SUBIECT, nu dupa cine e omul.
@@ -115,8 +118,14 @@ const shelfIntrebari: LibraryShelf = {
       title: "Ce urmează după moarte?",
       forWhom: "Nu știi ce e raiul, ce e iadul, sau dacă poți fi sigur de ceva.",
       plannedLessons: 5,
-      lessonIds: [],
-      state: "planned",
+      lessonIds: [
+        "vesnicia_l1",
+        "vesnicia_l2",
+        "vesnicia_l3",
+        "vesnicia_l4",
+        "vesnicia_l5",
+      ],
+      state: "live",
       source: "docs/15-doctrina-generala.md §Cursul 4",
     },
     {
@@ -457,7 +466,10 @@ export function nextCourseLesson(
  * Toate lecțiile de bibliotecă scrise până acum. Playerul le caută aici când
  * lecția nu face parte din niciun parcurs.
  */
-export const LIBRARY_LESSONS: Lesson[] = [...DOCTRINE_HAR_LESSONS]
+export const LIBRARY_LESSONS: Lesson[] = [
+  ...DOCTRINE_HAR_LESSONS,
+  ...DOCTRINE_VESNICIA_LESSONS,
+]
 
 export function findLibraryLesson(id: string): Lesson | undefined {
   return LIBRARY_LESSONS.find((l) => l.id === id)
@@ -480,7 +492,6 @@ export function libraryCourseLessons(courseId: string): Lesson[] {
  * scriere și din chat. Lista asta e pentru noi, nu se afișează.
  */
 export const WRITING_ORDER: string[] = [
-  "doctrine_c4_vesnicia",
   "lib_pilde",
   "doctrine_c1_biblia",
   "doctrine_c3_biserica",
