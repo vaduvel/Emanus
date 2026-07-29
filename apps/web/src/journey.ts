@@ -132,9 +132,12 @@ export function plan(): DayPlan | null {
  * Lecția de doctrină disponibilă acum, dacă există.
  * Se deschide după lecția 5 din parcurs; nu înlocuiește niciodată lecția zilei,
  * stă alături, ca lucru opțional.
+ *
+ * Pe drumul "De la zero" nu se oferă: acolo doctrina ESTE drumul.
  */
 export function doctrineAvailable(): Lesson | undefined {
   const s = load()
+  if (s.pathId === "path_temelie") return undefined
   const path = getPath(s.pathId)
   if (!path) return undefined
   return nextDoctrineLesson(s.lessonsDone, path.lessons.length, s.doctrineDone)
@@ -146,8 +149,9 @@ export function completeLesson(lessonId: string, journalText: string): JourneySt
     ? [...s.journal.filter((j) => j.lessonId !== lessonId), { lessonId, text: journalText.trim(), date: today() }]
     : s.journal
 
-  // Lecțiile de doctrină nu consumă ziua și nu avansează parcursul personal.
-  if (lessonId.startsWith("doctrina_")) {
+  // Doctrina făcută ca supliment nu consumă ziua și nu avansează parcursul personal.
+  // Excepție: pe drumul "De la zero", aceleași lecții sunt chiar parcursul.
+  if (lessonId.startsWith("doctrina_") && s.pathId !== "path_temelie") {
     return save({ ...s, doctrineDone: s.doctrineDone + 1, journal })
   }
 
@@ -171,6 +175,19 @@ export function firstJournalEntry(): JournalEntry | undefined {
 
 export function markPathSeen(): void {
   save({ ...load(), pathCompletedSeen: true })
+}
+
+/** Trece pe alt drum, păstrând tot ce a scris (jurnal și rugăciuni). */
+export function switchPath(pathId: string): JourneyState {
+  const s = load()
+  return save({
+    ...s,
+    pathId,
+    lessonsDone: 0,
+    doctrineDone: 0,
+    lastLessonDate: null,
+    pathCompletedSeen: false,
+  })
 }
 
 export function resetJourney(): void {
