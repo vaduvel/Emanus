@@ -1,7 +1,10 @@
 import type { Lesson } from "../domain.js"
+import { DOCTRINE_LESSONS } from "./doctrina.js"
 import { neiertareL1, neiertareL2, neiertareL3 } from "./neiertareA.js"
 import { neiertareL4, neiertareL5 } from "./neiertareB.js"
 import { neiertareL6, neiertareL7 } from "./neiertareC.js"
+
+export * from "./doctrina.js"
 
 /*
  * Uși și parcursuri personal-generalizate.
@@ -89,7 +92,7 @@ export function findLessonAnywhere(lessonId: string): Lesson | undefined {
     const l = p.lessons.find((x) => x.id === lessonId)
     if (l) return l
   }
-  return undefined
+  return DOCTRINE_LESSONS.find((l) => l.id === lessonId)
 }
 
 /*
@@ -138,4 +141,27 @@ export function planToday(
     }
   }
   return { kind: "lesson", lessonIndex: lessonsDone, lesson: path.lessons[lessonsDone] }
+}
+
+/*
+ * Doctrina generală, în paralel. (docs/20 §6)
+ * Se deschide DUPĂ lecția 5 din parcursul personal — nu înainte.
+ * Nimeni nu învață despre canonul Scripturii înainte să afle că e iubit.
+ * Apoi: o lecție de doctrină la fiecare trei lecții personale.
+ */
+export const DOCTRINE_UNLOCK_AFTER = 5
+
+export function doctrineAllowance(lessonsDone: number, pathLength: number): number {
+  if (lessonsDone < DOCTRINE_UNLOCK_AFTER) return 0
+  if (lessonsDone >= pathLength) return DOCTRINE_LESSONS.length
+  return Math.floor((lessonsDone - DOCTRINE_UNLOCK_AFTER) / 3) + 1
+}
+
+export function nextDoctrineLesson(
+  lessonsDone: number,
+  pathLength: number,
+  doctrineDone: number,
+): Lesson | undefined {
+  if (doctrineDone >= doctrineAllowance(lessonsDone, pathLength)) return undefined
+  return DOCTRINE_LESSONS[doctrineDone]
 }
