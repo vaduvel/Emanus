@@ -108,7 +108,16 @@ export interface DayPlan {
   lessonIndex: number
   lesson?: Lesson
   practiceText?: string
+  /**
+   * Câte zile a lipsit, dacă a lipsit mult (>= ABSENCE_DAYS).
+   * Nu e o mustrare și nu se afișează ca statistică — e doar semnalul că ecranul
+   * trebuie să-l primească altfel pe omul care se întoarce. (docs/20 §1)
+   */
+  awayDays?: number
 }
+
+/** De la câte zile de tăcere considerăm că omul "se întoarce", nu "continuă". */
+export const ABSENCE_DAYS = 5
 
 /**
  * @param path parcursul ales
@@ -120,6 +129,11 @@ export function planToday(
   lessonsDone: number,
   daysSinceLastLesson: number | null,
 ): DayPlan {
+  const away =
+    daysSinceLastLesson !== null && daysSinceLastLesson >= ABSENCE_DAYS
+      ? daysSinceLastLesson
+      : undefined
+
   if (lessonsDone >= path.lessons.length) {
     return { kind: "path_complete", lessonIndex: path.lessons.length - 1 }
   }
@@ -140,7 +154,12 @@ export function planToday(
       practiceText: path.practices[lessonsDone - 1],
     }
   }
-  return { kind: "lesson", lessonIndex: lessonsDone, lesson: path.lessons[lessonsDone] }
+  return {
+    kind: "lesson",
+    lessonIndex: lessonsDone,
+    lesson: path.lessons[lessonsDone],
+    awayDays: away,
+  }
 }
 
 /*
