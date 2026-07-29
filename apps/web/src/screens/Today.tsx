@@ -1,7 +1,7 @@
-import { useMemo, useState } from "react"
-import { ArrowRight, HandHeart, Sunrise } from "lucide-react"
+import { useEffect, useMemo, useState } from "react"
+import { ArrowRight, BookOpen, HandHeart, Sunrise } from "lucide-react"
 import type { Lesson } from "@emanus/shared"
-import { currentPath, daysAgo, oldestUnanswered, plan } from "../journey"
+import { currentPath, daysAgo, doctrineAvailable, oldestUnanswered, plan } from "../journey"
 import { navigate } from "../router"
 
 /*
@@ -21,14 +21,15 @@ export function Today() {
   const path = currentPath()
   const dayPlan = useMemo(() => plan(), [])
   const memorial = useMemo(() => oldestUnanswered(), [])
+  const doctrine = useMemo(() => doctrineAvailable(), [])
   const [yesterday, setYesterday] = useState<string | null>(null)
 
-  if (!path || !dayPlan) return null
+  const complete = dayPlan?.kind === "path_complete"
+  useEffect(() => {
+    if (complete) navigate("/final")
+  }, [complete])
 
-  if (dayPlan.kind === "path_complete") {
-    navigate("/final")
-    return null
-  }
+  if (!path || !dayPlan || complete) return null
 
   const lastLesson = path.lessons[dayPlan.lessonIndex]
   const verse = lastLesson ? memoryVerse(lastLesson) : null
@@ -44,7 +45,7 @@ export function Today() {
       {/* "Cum a fost ieri?" — o singură atingere, nu chestionar. Nu se salvează. */}
       {!isFirstEver && dayPlan.kind === "lesson" && (
         <div className="tile today__yesterday">
-          <p className="today__q">Pasul de data trecut — cum a fost?</p>
+          <p className="today__q">Pasul de data trecută — cum a fost?</p>
           {yesterday === null ? (
             <div className="today__chips">
               <button type="button" onClick={() => setYesterday("da")}>
@@ -109,6 +110,27 @@ export function Today() {
           {verse.text}
           <cite>{verse.ref}</cite>
         </blockquote>
+      )}
+
+      {/*
+        Doctrina generală — se deschide abia după lecția 5 din parcurs. (docs/20 §6)
+        Nu înlocuiește ziua de azi, stă alături și e opțională.
+      */}
+      {doctrine && (
+        <div className="tile today__extra">
+          <p className="today__kicker">
+            <BookOpen size={15} aria-hidden /> Dacă vrei și limpezime, nu doar vindecare
+          </p>
+          <h3>{doctrine.title}</h3>
+          <p className="muted">{doctrine.estMinutes} minute. Când ai chef, nu azi obligatoriu.</p>
+          <button
+            type="button"
+            className="ghost"
+            onClick={() => navigate(`/lesson/${doctrine.id}`)}
+          >
+            Deschide
+          </button>
+        </div>
       )}
 
       {/* Cârligul lung: aplicația ține minte ce a cerut. Întreabă o singură dată. */}
