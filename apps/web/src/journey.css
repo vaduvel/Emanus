@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-/* --- Intrarea: cele 31 de uși, în cuvintele omului (docs/21 §3) --- */
+/* --- Intrarea: 10 uși întâi, restul la "Arată-mi tot" (docs/21 §4) --- */
 .doors {
   padding: 8px 18px 32px;
 }
@@ -167,20 +167,59 @@
   flex: 0 0 auto;
   color: var(--accent, #0f6b68);
 }
-.door__soon {
-  flex: 0 0 auto;
-  font-style: normal;
-  font-size: 0.72rem;
-  color: var(--text-muted, #6c8b88);
+
+/* "Arată-mi toate opțiunile" — nu un buton principal, doar o cale mai departe. */
+.doors__more {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  padding: 13px;
+  border: 1px solid var(--border, #dbe8e6);
+  border-radius: 999px;
+  background: none;
+  color: var(--text-body, #33534f);
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.doors__more:hover {
+  border-color: var(--accent, #0f6b68);
+  color: var(--accent, #0f6b68);
 }
 
 /*
- * Ușile de la capătul listei: "vreau doar să-L cunosc" și "nu știu, arată-mi tu".
+ * Căutarea apare DOAR în lista completă. Omul care plânge alege, nu tastează —
+ * de asta nu e primul lucru de pe ecran.
+ */
+.doors__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 12px;
+  padding: 11px 14px;
+  border: 1px solid var(--border, #dbe8e6);
+  border-radius: 999px;
+  background: var(--surface, #fff);
+  color: var(--text-muted, #6c8b88);
+}
+.doors__search input {
+  flex: 1 1 auto;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  color: var(--text, #13302e);
+}
+.doors__search:focus-within {
+  border-color: var(--accent, #0f6b68);
+}
+
+/*
+ * Ușile de la capătul listei: cine nu vine cu o rană anume.
  * Mai discrete decât durerile, dar tot uși — nu linkuri pierdute.
  */
 .doors__list--quiet {
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 18px;
+  padding-top: 18px;
   border-top: 1px solid var(--border, #dbe8e6);
 }
 .door--quiet {
@@ -193,29 +232,13 @@
   color: var(--text-body, #33534f);
 }
 
-.doors__none {
-  display: block;
-  width: 100%;
-  margin-top: 18px;
-  padding: 12px;
-  border: none;
-  background: none;
+/* Nota de subsol din intrare: ce nu facem. Se scrie o dată, nu se repetă. */
+.doors__note {
+  margin: 18px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  text-align: center;
   color: var(--text-muted, #6c8b88);
-  font-size: 0.9rem;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.doors__pending {
-  margin-top: 18px;
-  padding: 16px;
-  border-radius: 14px;
-  background: var(--surface-3, #e2f1ef);
-}
-.doors__pending p {
-  margin: 0 0 10px;
-}
-.doors__pending button {
-  margin-right: 8px;
 }
 
 /*
@@ -225,7 +248,7 @@
 .confirm {
   max-width: 520px;
   margin: 0 auto;
-  padding-top: 28px;
+  padding: 28px 18px 32px;
 }
 .confirm__echo {
   font-family: var(--font-display, Georgia, serif);
@@ -260,11 +283,13 @@
 .confirm__meta {
   margin: 0;
   font-size: 0.82rem;
+  color: var(--text-muted, #6c8b88);
 }
 .confirm__note {
   margin: 18px 0 0;
   font-size: 0.86rem;
   line-height: 1.55;
+  color: var(--text-muted, #6c8b88);
 }
 .confirm__cta {
   display: inline-flex;
@@ -383,6 +408,23 @@
 }
 .today__back p:last-child {
   margin-bottom: 0;
+}
+
+/* Ieșirea dintr-un drum care nu i se mai potrivește. Vizibilă, nu în setări. */
+.today__switch {
+  display: block;
+  width: 100%;
+  margin: 6px 0 4px;
+  padding: 12px;
+  border: none;
+  background: none;
+  color: var(--text-muted, #6c8b88);
+  font-size: 0.86rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.today__switch:hover {
+  color: var(--accent, #0f6b68);
 }
 
 .today__verse {
