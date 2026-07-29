@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { findLessonAnywhere, mohlerNotForMe } from "@emanus/shared"
+import { findLessonAnywhere, mohlerNotForMe, LIBRARY_LESSONS } from "@emanus/shared"
 import type { Lesson } from "@emanus/shared"
 import { LessonPlayer } from "./LessonPlayer"
 import type { LessonResult } from "./LessonPlayer"
@@ -13,10 +13,15 @@ import { navigate } from "./router"
  * fără bază de date. Progresul se scrie local (journey.ts). Când se leagă Supabase,
  * se schimbă doar journey.ts.
  *
+ * EXTRA ține lecțiile care nu sunt într-un parcurs: lecția pilot și tot ce e în
+ * bibliotecă (rafturile din library/index.ts).
+ *
  * Fără XP, fără insigne, fără "lecția 3 din 7" la final. (docs/20 §1)
  */
 
-const EXTRA: Map<string, Lesson> = new Map(mohlerNotForMe.lessons.map((l) => [l.id, l] as const))
+const EXTRA: Map<string, Lesson> = new Map(
+  [...mohlerNotForMe.lessons, ...LIBRARY_LESSONS].map((l) => [l.id, l] as const),
+)
 
 export function LessonView({ lessonId }: { lessonId?: string }) {
   const lesson = useMemo<Lesson | undefined>(() => {
