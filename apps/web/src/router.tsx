@@ -3,15 +3,19 @@ import { useEffect, useState } from "react"
 /*
  * Rutele aplicației, după reducere. (docs/20 §8)
  *
- * Ecrane vii: /intrare, / (Azi), /lesson/:id, /rugaciuni, /final, /criza.
- * Ecranele vechi (comunitate, familie, mentorat, dashboard, categorii,
- * recomandare, creștere) rămân în cod, dar nu mai sunt legate nicăieri:
- * se reintroduc pe rând, după ce parcursul e testat pe oameni reali.
+ * Ecrane vii: /intrare, / (Azi), /lesson/:id, /rugaciuni, /biblioteca, /final, /criza.
+ * Ecranele vechi (comunitate, familie, mentorat, dashboard, recomandare,
+ * creștere) rămân în cod, dar nu mai sunt legate nicăieri: se reintroduc pe
+ * rând, după ce parcursul e testat pe oameni reali.
+ *
+ * Biblioteca e primul dintre ele care revine — ca raft pe subiect, nu ca poartă
+ * de intrare și fără categorii de identitate.
  */
 export type Route =
   | { name: "today" }
   | { name: "doors" }
   | { name: "prayers" }
+  | { name: "library" }
   | { name: "pathend" }
   | { name: "crisis" }
   | { name: "ds" }
@@ -23,6 +27,7 @@ export function parseRoute(): Route {
     return { name: "lesson", id: decodeURIComponent(h.slice("/lesson/".length)) }
   if (h === "/intrare") return { name: "doors" }
   if (h === "/rugaciuni") return { name: "prayers" }
+  if (h === "/biblioteca") return { name: "library" }
   if (h === "/final") return { name: "pathend" }
   if (h === "/criza" || h === "/crisis") return { name: "crisis" }
   if (h === "/ds") return { name: "ds" }
