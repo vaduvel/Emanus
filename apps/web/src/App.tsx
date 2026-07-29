@@ -5,6 +5,7 @@ import { Gallery } from "./ds/Gallery"
 import { hasSeenWelcome, hasStarted } from "./journey"
 import { navigate, useHashRoute } from "./router"
 import { Doors } from "./screens/Doors"
+import { Library } from "./screens/Library"
 import { PathEnd } from "./screens/PathEnd"
 import { Prayers } from "./screens/Prayers"
 import { Today } from "./screens/Today"
@@ -14,7 +15,8 @@ import "./journey.css"
 /*
  * Carcasa aplicației. (docs/20 §8)
  *
- * Două taburi, atât: Azi și Rugăciunile mele.
+ * Două taburi, atât: Azi și Rugăciunile mele. Biblioteca NU e tab — se intră
+ * din "Azi", ca să nu concureze cu singurul lucru de azi.
  * Butonul de ajutor stă sus, pe fiecare ecran, și nu se ascunde niciodată.
  *
  * Ordinea porților la prima deschidere:
@@ -90,6 +92,16 @@ export default function App() {
       <main className="app route-anim">
         <HelpButton />
         <LessonView lessonId={route.id} />
+      </main>
+    )
+  }
+
+  if (route.name === "library") {
+    return (
+      <main className="app route-anim app--tabbed">
+        <HelpButton />
+        <Library />
+        <Tabs active="today" />
       </main>
     )
   }
