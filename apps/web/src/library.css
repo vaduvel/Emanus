@@ -1,0 +1,160 @@
+/*
+ * Biblioteca. Foloseste tokenii temei light "Marea de cristal" (docs/19 §2).
+ * Nicio bara de progres, niciun procent, niciun badge de numar de lectii.
+ */
+
+.library {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 4px 0 24px;
+}
+
+.library__back {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.library__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+}
+
+.library__head h1 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text);
+}
+
+.library__intro {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.libshelf {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.libshelf__head {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+}
+
+.libshelf__title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  color: var(--text);
+}
+
+.libshelf__blurb {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.libshelf__chev {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--text-muted);
+  transition: transform 160ms ease;
+}
+
+.libshelf__chev--open {
+  transform: rotate(90deg);
+}
+
+.libshelf__body {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.libshelf__none {
+  padding: 12px 14px 14px;
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.libcourse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.libcourse:last-child {
+  border-bottom: 0;
+}
+
+.libcourse:hover:not(:disabled) {
+  background: var(--accent-soft);
+}
+
+.libcourse__main {
+  display: block;
+}
+
+.libcourse__title {
+  display: block;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.libcourse__for {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.libcourse--soon {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.libcourse__soon {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+}
+
+.library__gated {
+  border-style: dashed;
+}
