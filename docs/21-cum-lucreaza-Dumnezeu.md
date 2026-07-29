@@ -1,140 +1,204 @@
-# 21 — Cum lucrează Dumnezeu în viața omului (harta care determină modulele)
+# Cum lucreaza Dumnezeu in viata omului
 
-> Documentul ăsta stă înaintea tuturor celorlalte documente de produs.
-> Ordinea modulelor, ordinea lecțiilor și ordinea ecranelor nu se decid din UX,
-> ci din ordinea în care lucrează Dumnezeu de obicei. Dacă un ecran contrazice
-> harta asta, ecranul se schimbă, nu harta.
-
-## 0. De ce există documentul
-
-Până acum aveam idei bune și ecrane construite, dar nu aveam coloana.
-Se vede în cod: omul care alege ușa „Nu pot ierta pe cineva” primește direct
-lucrul cel mai greu (etapa 6), sărind peste tot ce îl face posibil (etapele 2–5).
-Nimeni nu poate ierta înainte să vadă cine e Dumnezeu.
-
-Harta nu e o formulă și nu e liniară. Oamenii se învârt, cad înapoi, sar etape,
-fac 7 și 8 în același timp. Dar e o coloană, și o coloană e exact ce ne lipsea.
+Harta dupa care se construieste Emanus: unde intra omul, ce i se da, in ce ordine, si de ce.
 
 ---
 
-## 1. Cele 9 etape
+## 0. Principiul care sta deasupra intregii harti
 
-| # | Etapa | Ce spune omul, în cuvintele lui | Ce lucrează Dumnezeu | Ce are nevoie |
+**Dumnezeu intalneste omul fix in mijlocul durerii lui.** Acolo unde este, in momentul cel mai disperat, in clipa in care s-a predat, cand a crezut ca nu mai e speranta, in ratacirea lui.
+
+Nu il asteapta la capatul unei pregatiri. Nu ii cere sa treaca intai prin niste etape ca sa aiba dreptul la intalnire.
+
+- Femeia samariteanca primeste cea mai inalta descoperire despre inchinare **langa fantana, cu cinci barbati in spate** (Ioan 4). Nu dupa ce si-a reparat viata.
+- Talharul de pe cruce sare **toate** etapele si intra in Rai in aceeasi zi (Luca 23:43).
+- Tatal alearga la fiul risipitor **cand era inca departe** si mirosea a porci (Luca 15:20).
+
+**Consecinta pentru aplicatie:** etapele din §1 descriu **directia de mers**, nu **locul de intrare** si nu ordinea in care il primim pe om. Nu exista sala de asteptare. Nu exista coada la ghiseu. Omul intra prin durerea lui, iar adevarul despre cine e Dumnezeu i se spune **prin rana**, nu inaintea ei.
+
+---
+
+## 1. Cele 9 etape - directia de mers
+
+Asa lucreaza Dumnezeu, in general, in viata unui om. Le folosim ca sa stim **incotro** ducem pe cineva, nu ca sa il sortam la intrare.
+
+| # | Etapa | Ce spune omul | Ce lucreaza Dumnezeu | Repere |
 |---|---|---|---|---|
-| 1 | **Neliniștea** | „Nu știu ce am. Nu-mi ajunge nimic.” | Pune un gol pe care nimic din lume nu-l umple; îl atrage | Să afle că neliniștea e chemare, nu defect |
-| 2 | **Descoperirea Persoanei** | „Credeam că e un polițist care așteaptă să greșesc.” | Se arată așa cum e: bun, nu supărat | Să-L vadă pe El înainte să se vadă pe el |
-| 3 | **Oglinda** | „Abia acum îmi dau seama ce am făcut.” | Bunătatea Lui aduce vederea, nu rușinea | Să înțeleagă păcatul ca ruptură de relație, nu ca listă |
-| 4 | **Întoarcerea** | „Nu mai pot așa. Iau altă direcție.” | Pocăință: schimbare de stăpân, nu remușcare | Să știe ce înseamnă concret să te predai |
-| 5 | **Înfierea** | „Deci chiar sunt al Lui? Fără să merit?” | Din orfan în fiu; iertare, siguranță | Să nu mai trăiască precum un angajat pe probă |
-| 6 | **Curățirea camerelor** | „Sunt iertat, dar tot nu pot să-l iert pe el.” | Scoate pe rând ce a rămas din viața veche | Lucru pe o rană anume, lună de lună |
-| 7 | **Umblarea** | „Cum arată o zi cu El, practic?” | Devine obișnuit: Cuvânt, vorbire, ascultare | Ritm zilnic care nu e bifă |
-| 8 | **Tăcerea și încercarea** | „M-am rugat și nu s-a întâmplat nimic.” | Maturizează credința tocmai prin întârziere | Să nu interpreteze tăcerea ca respingere |
-| 9 | **Rodul** | „Cineva mi-a cerut ajutorul și am știut ce să spun.” | Îl trimite; mângâierea primită devine mângâiere dată | Un loc unde dă mai departe |
+| 1 | Nelinistea | "Ceva lipseste si nu stiu ce" | Trezeste setea | Ecl 3:11; Ioan 6:44; Fapte 17:27 |
+| 2 | Descoperirea Persoanei | "Deci asa esti Tu?" | Se arata bun | Rom 2:4; Ioan 14:9; Iacov 1:17; Luca 15:20 |
+| 3 | Oglinda | "Sunt mai rau decat credeam" | Aduce lumina, nu rusine | Isaia 6:5; Luca 5:8; Rom 3:23 |
+| 4 | Intoarcerea | "Ma intorc acasa" | Cheama, nu forteaza | 2 Cor 7:10; Fapte 3:19; Luca 15:18 |
+| 5 | Infierea | "Sunt fiu, nu servitor" | Da identitate | Ioan 1:12; Rom 8:15-16; Efes 1:5; Rom 8:1 |
+| 6 | Curatirea camerelor | "Mai am lucruri inauntru" | Elibereaza pe rand | Evrei 12:15; Efes 4:31-32; Rom 6:6; Ioan 8:36 |
+| 7 | Umblarea | "Vreau sa raman aproape" | Invata ritmul relatiei | Ioan 15:4-5; Ps 1; Matei 6:6; Iosua 1:8 |
+| 8 | Tacerea si incercarea | "Unde esti?" | Adanceste incredera | Iacov 1:2-4; Evrei 12:5-11; Ps 13; Isaia 55:8-9 |
+| 9 | Rodul | "Vreau sa dau mai departe" | Trimite | 2 Cor 1:3-4; Matei 28:19-20; Apoc 12:11 |
 
-### Reperele din Scriptură pentru fiecare etapă
-
-1. Eclesiastul 3:11 · Ioan 6:44 · Fapte 17:27
-2. Romani 2:4 · Ioan 14:9 · Iacov 1:17 · Luca 15:20
-3. Isaia 6:5 · Luca 5:8 · Romani 3:23 · Geneza 3 (ruptura, nu lista)
-4. 2 Corinteni 7:10 · Fapte 3:19 · Luca 15:18
-5. Ioan 1:12 · Romani 8:15–16 · Efeseni 1:5 · Romani 8:1
-6. Evrei 12:15 · Efeseni 4:31–32 · Romani 6:6 · Ioan 8:36
-7. Ioan 15:4–5 · Psalm 1 · Matei 6:6 · Iosua 1:8
-8. Iacov 1:2–4 · Evrei 12:5–11 · Psalm 13 · Isaia 55:8–9
-9. 2 Corinteni 1:3–4 · Matei 28:19–20 · Apocalipsa 12:11
+**Regula de aur:** oriunde ar intra omul, drumul lui merge in directia 5 -> 7. Adica: sa stie ca e fiu, si sa stie sa umble cu Dumnezeu zi de zi. Restul e traseu, nu destinatie.
 
 ---
 
-## 2. Modulele: cele 9 etape, nu 9 idei
+## 2. Cele 7 camere - dupa ce grupam oamenii
 
-| Modul | Etapa | Lecții | Stare azi |
+Situatiile oamenilor sunt infinite: ateu, ratacit, ranit, confuz, curios, deschis, gata sa cunoasca, stie Biblia dar nu intelege, neiertare, trauma, abuz, anxietate, tristete, relatie racita, si-a pierdut flacara, viata de rugaciune slaba, si asa mai departe. **Nu putem face 45 de parcursuri. Nu trebuie.**
+
+**Nu grupam dupa durere. Grupam dupa minciuna de dedesubt.**
+
+Durerile sunt infinite. Minciunile despre Dumnezeu care ies din ele sunt vreo sapte. Doi oameni cu povesti care nu seamana deloc - unul a facut avort la 19 ani, altul si-a inselat sotia la 40 - cred exact acelasi lucru: *nu ma vrea asa cum sunt*. Se vindeca cu acelasi adevar.
+
+> **Durerea e simptomul; minciuna e boala. Si noi tratam boala.**
+
+| # | Camera | Minciuna | Cine intra aici |
 |---|---|---|---|
-| **M1 Neliniștea** — intro „Grădina” | 1 | 1 | storyboard în https://app.notion.com/p/f2a1c3d4e5b64789a012bcde3456f789, nescris |
-| **M2 Ochii noi** — cine e Dumnezeu de fapt | 2 | 6 | schițat (`core_eyes`), nescris |
-| **M3 Oglinda** — ce e păcatul și de ce am nevoie de salvare | 3 | 4 | nescris |
-| **M4 Întoarcerea** — predarea, concret | 4 | 3 | nescris |
-| **M5 Fiul** — identitate, iertare, siguranță | 5 | 4 | nescris |
-| **M6 Camerele** — cele 11 uși, câte 7 lecții | 6 | 11 × 7 | 1 din 11 scris (neiertare) |
-| **M7 Umblarea** — Cuvânt, rugăciune, ascultare | 7 | nu se termină | parțial (ritmul zilnic există în cod) |
-| **M8 Când tace** — uscăciune și așteptare | 8 | 5 | nescris |
-| **M9 Dă mai departe** — mărturie, mentorat, cursuri create | 9 | — | doar decis |
+| **C1** | Nu ma vrea asa cum sunt | *Sunt prea murdar pentru El* | rusine, vinovatie, pacat ascuns, avort, adulter, pornografie, trecut murdar, rusinea celui abuzat |
+| **C2** | Nu e bun / m-a lasat | *Daca era bun, nu se intampla* | doliu, boala, nedreptate, copil pierdut, divort, neiertare, "unde era El cand mi s-a intamplat?" |
+| **C3** | Nu e real / nu se poate sti | *Poate e doar o poveste* | ateu, agnostic, indoiala, "Biblia e inventata", confuzie doctrinara, new age |
+| **C4** | E departe, nu ma aude | *Am ramas singur pe drum* | relatie racita, uscaciune, viata de rugaciune slaba, tacerea Lui, "mi-am pierdut flacara" |
+| **C5** | Nu ma pot schimba | *Sunt defect, asta sunt* | dependente, recadere, anxietate, tristete, furie, "am promis de o suta de ori" |
+| **C6** | Trebuie sa merit | *Ma iubeste cat de bun sunt* | forma fara putere, religiozitate mostenita, epuizare in slujire, frica de pedeapsa, perfectionism |
+| **C7** | Sunt singur in asta | *Nimeni nu intelege si nimanui nu-i pasa* | singuratate, izolare, respins de familie sau de biserica, nou-venit care nu cunoaste pe nimeni |
 
-**Transversale, în paralel, nu în coloană:**
+**7 camere x 7 lectii = 49 de lectii.** Fezabil. Fata de 45 de parcursuri, care nu se pot scrie niciodata.
 
-- **Doctrina generală** — se deschide după lecția 5 din camera lui; 3 lecții scrise, ~19 planificate
-- **Pildele** — 20 de fișe, explicate; se pot citi oricând
-- **Criza** — buton permanent, pe orice ecran, în orice etapă
+### Cum ramane personal desi e generalizat
 
----
+Usile raman multe si scrise **in cuvintele omului**, nu in limbaj de sistem. Omul isi vede propria propozitie pe ecran. Nu afla niciodata ca e pe acelasi culoar cu alti patru. Personalizarea traita e la usa; economia de continut e in camera.
 
-## 3. Cum abordăm omul care intră (partea practică)
+### Fiecare camera incepe cu doua lectii despre cine e Dumnezeu - spuse prin rana
 
-**Nu îl întrebăm în ce etapă e.** Nu are cum să știe și nu e treaba lui.
-Fără chestionar, fără diagnostic, fără profil. (regula din docs/20 §1)
+Etapa 2 (Descoperirea Persoanei) nu vine **inaintea** camerei, ci **inauntrul** ei, in limbajul ranii:
 
-**Ușa pe care o alege ne spune etapa.**
+- In **C2**, "Dumnezeu e bun" se aude ca: *nu El ti-a facut asta* (Iacov 1:17; Ioan 10:10).
+- In **C1**, acelasi adevar suna: *nu Se scarbeste de tine* (Luca 15:20).
+- In **C5**: *nu Se satura de tine dupa a suta oara* (Filip 1:6).
+- In **C6**: *nu trebuie sa platesti ceva ce e deja platit* (Efes 2:8-9).
 
-| Ușa aleasă | Etapa reală | Unde îl ducem |
-|---|---|---|
-| „Nu știu dacă Dumnezeu există” | 1–2 | M1 → M2 → doctrină |
-| „Vreau doar să-L cunosc” | 1–2 | M1 → M2 → M3 |
-| „Mi-e rușine de ce am făcut” | 3–5 | M2 (scurt) → M5 → camera lui |
-| „Merg la biserică de ani de zile și nu s-a schimbat nimic” | 5 sau 8 | M2 → M5 → M8 |
-| „Nu pot ierta”, „Mi-e frică”, „Sunt prins”, „Am pierdut pe cineva” | 6 | M2 → camera lui din M6 |
-| „Nu mai simt nimic” | 8 | M2 → M8 |
-| „Niciuna nu e a mea” | necunoscut | M1 → M2, drumul de bază |
-
-### Regula de aur a ordinii
-
-> **Oricine intră, pe orice ușă, primește întâi M2 (ochii noi), apoi camera lui.**
-> Restul se deschid pe drum.
-
-Asta e „scheletul fix cu intrări diferite” din docs/20, dar acum are un motiv,
-nu e o găselniță de produs: nimeni nu poate ierta înainte să vadă cine e Dumnezeu,
-și nimeni nu se poate pocăi de frică — bunătatea Lui aduce pocăința (Romani 2:4).
-
-### Câte lecții din M2 înainte de cameră
-
-Nu toate 6. Cine vine cu o rană sfâșietoare nu rezistă la șase lecții de teologie
-înainte să fie atinsă rana. Regula:
-
-- intrare prin durere (etapa 6) → **2 lecții din M2**, apoi camera; restul de 4 se
-  intercalează pe parcurs
-- intrare prin îndoială sau început (etapele 1–2) → **toate 6**, ele SUNT drumul
+> **Aceeasi lumina, alt geam.**
 
 ---
 
-## 4. Ce contrazice codul de azi
+## 3. Usile si maparea lor
 
-1. Orașul intră direct în etapa 6. `pathNeiertare` începe cu rana, nu cu M2.
-   → primele două lecții din M2 trebuie să intre înaintea oricărei camere.
-2. M1, M3, M4, M5, M8, M9 nu există deloc în cod.
-3. `path_temelie` („De la zero”) folosește lecțiile de doctrină pe post de M2.
-   E o soluție de moment, corectă ca ritm, greșită ca fond: doctrina răspunde
-   „e adevărat?”, M2 răspunde „cine e El?”. Se înlocuiește când M2 e scris.
-4. M7 există doar ca ritm (o lecție la două zile + ziua de practică), fără conținut
-   propriu despre cum arătă o zi cu El.
+Omul nu alege o camera. Alege o propozitie. Propozitia duce in camera.
+
+| Usa (ce citeste omul) | Camera |
+|---|---|
+| Am facut lucruri de care mi-e rusine | C1 |
+| Am facut un avort | C1 |
+| Mi-am inselat sotul / sotia | C1 |
+| Ma lupt cu pornografia | C1 |
+| Cred ca sunt prea departe ca sa ma mai intorc | C1 |
+| Mi s-a facut ceva si nu pot ierta | C2 |
+| Am pierdut pe cineva | C2 |
+| Sunt bolnav / e bolnav cineva drag | C2 |
+| Nu inteleg de ce a permis Dumnezeu asta | C2 |
+| Am trecut printr-un divort | C2 |
+| Nu stiu daca exista Dumnezeu | C3 |
+| Cred ca Biblia e inventata de oameni | C3 |
+| Sunt crestin, dar nu inteleg ce citesc | C3 |
+| Am crezut alte lucruri inainte (energii, karma, univers) | C3 |
+| Ma rog si parca vorbesc in perete | C4 |
+| Nu mai simt nimic cand ma rog | C4 |
+| Am fost aproape de Dumnezeu candva | C4 |
+| Nu stiu cum sa citesc Biblia | C4 |
+| Nu ma pot lasa de un lucru | C5 |
+| Am promis de o suta de ori si tot cad | C5 |
+| Traiesc cu anxietate | C5 |
+| Nu mai am chef de nimic | C5 |
+| Ma enervez si ranesc oamenii din jur | C5 |
+| Fac tot ce trebuie si tot nu-mi ajunge | C6 |
+| Merg la biserica din obisnuinta | C6 |
+| Mi-e frica sa nu ma pedepseasca | C6 |
+| Sunt obosit de slujire | C6 |
+| Nu am pe nimeni | C7 |
+| Familia mea nu ma intelege | C7 |
+| M-am simtit respins in biserica | C7 |
+| Sunt nou si nu cunosc pe nimeni | C7 |
+
+Sub lista, doua randuri mai discrete:
+
+- **Vreau doar sa-L cunosc** -> `path_temelie`
+- **Nu stiu. Arata-mi tu.** -> `path_temelie`
+
+### Poarta pentru omul fara durere
+
+Omul curios, deschis, "vreau doar sa-L cunosc" **nu intra in nicio camera**. Pentru el, cele 6 lectii din M2 (cine e Dumnezeu) nu sunt un preambul - sunt chiar drumul lui. Acesta e rolul lui `path_temelie`. Nu il fortam intr-o rana pe care nu o are.
 
 ---
 
-## 5. Ordinea de scris, dedusă din hartă
+## 4. Onboardingul - trei ecrane, o singura atingere
 
-1. **M2 Ochii noi** (6 lecții) — fără el nimic altceva nu stă în picioare
-2. **M5 Fiul** (4) — din orfan în fiu; teza aplicației
-3. **M3 Oglinda** (4) și **M4 Întoarcerea** (3)
-4. **M1 Neliniștea** — intro „Grădina”, video
-5. **M8 Când tace** (5)
-6. Restul camerelor din **M6**, pe rând
-7. **M7** ca modul cu conținut propriu
-8. **M9**, ultimul — are nevoie de moderare și politici, nu doar de text
+Nu intrebam omul de ce a venit si apoi ce vrea. **Nu il punem sa se autoclasifice.** Nimeni nu poate raspunde onest la "ai un motiv anume sau doar explorezi?". Lista de usi *este* bifurcatia: cine are o durere o vede scrisa si o apasa; cine exploreaza ajunge la capatul listei.
+
+**Ecran 1 - Cine suntem, ce nu-ti cerem** *(exista: `Welcome.tsx`)*
+Emanuel + Emaus. Ce nu facem: nu cerem bani, nu cerem date, nu masuram, nu te judecam.
+
+**Ecran 2 - "Ce te-a adus aici?"** *(exista partial: `Doors.tsx`)*
+Lista de usi din §3, in cuvintele omului, cu scroll. La final, cele doua randuri discrete.
+
+**Ecran 3 - Confirmarea**
+Numele camerei, ce primeste, cat dureaza, si butonul **Incepe**. Nu il intoarcem la un ecran de pornire - il ducem direct in primul pas de azi.
+
+**Interzis in onboarding:** chestionare, profil psihologic, scale de la 1 la 10, intrebari despre varsta / stare civila / denominatie, cont obligatoriu, orice ecran care il face sa creada ca e la evaluare.
+
+**Ce retinem despre om:** usa aleasa. Atat.
+
+### De ce nu "raftul de module"
+
+Omul care nu stie ce-i trebuie nu poate alege dintr-un raft. Se plimba, admira, iese si nu se mai intoarce. Rafturile sunt pentru cine stie deja. De aceea ramura "e lasat sa exploreze modulele" nu exista ca ecran; exista doar ca `path_temelie` - un drum concret, nu un meniu.
 
 ---
 
-## 6. Cine validează
+## 5. Linkul de la creator - onboardingul care s-a intamplat deja
 
-Conținutul care ajunge la un om rănit nu poate fi validat doar de cine îl scrie.
-Modelul: prima versiune scrisă din material-sursă → citită și tăiată de un om cu nume,
-care își asumă → publicată. Aceeași regulă pe care o cerem creatorilor de cursuri
-(șablon fix + validare de doctrină) se aplică și conținutului nostru.
+Canalul principal de intrare sunt creatorii crestini. Daca cineva face un clip despre neiertare si pune linkul, **clipul a fost onboardingul**. Nu are sens sa-l punem apoi sa aleaga dintr-o lista.
 
-**Încă nedecis:** cine semnează doctrina în Emanus.
+- Fiecare creator primeste un link cu eticheta camerei: `/#/intrare?u=neiertare`
+- La prima deschidere, aplicatia sare peste Ecranul 2 si merge direct la Ecranul 3, cu camera deja aleasa.
+- Ramane vizibil un rand: *Nu asta e a mea* -> se deschide lista intreaga.
+- Eticheta se salveaza local; nu trimitem date de identificare nicaieri.
+
+---
+
+## 6. Cele 9 module de continut
+
+| Modul | Ce contine | Lectii | Stare |
+|---|---|---|---|
+| M1 | Nelinistea - intro narativ "Gradina" | 1 | de scris |
+| M2 | Ochii noi - cine e Dumnezeu | 6 | schitat (`core_eyes`) |
+| M3 | Oglinda - de ce am nevoie de mantuire | 4 | de scris |
+| M4 | Intoarcerea - pocainta, nu remuscarea | 3 | de scris |
+| M5 | Fiul - identitate, nu performanta | 4 | de scris |
+| M6 | **Camerele** - 7 camere x 7 lectii | 49 | 7 din 49 (C2 partial) |
+| M7 | Umblarea - ritmul zilnic | fara sfarsit | doar ritm, fara continut |
+| M8 | Cand tace - incercarea | 5 | de scris |
+| M9 | Da mai departe | - | de scris |
+
+Transversale: **doctrina** (3 din ~22), **pildele** (20 de fise), **criza** (exista).
+
+---
+
+## 7. Ce contrazice codul de azi
+
+1. `DOORS` are 11 usi, dintre care doar 3 duc undeva. Trebuie 31 de usi mapate la 7 camere.
+2. `pathNeiertare` e de fapt **C2** si ii lipsesc cele 2 lectii de inceput despre cine e Dumnezeu, spuse prin rana.
+3. Nu exista Ecranul 3 (confirmarea). Dupa alegerea usii, omul ajunge in lista de drumuri, nu in primul pas.
+4. Nu exista suport pentru linkul de creator (`?u=`).
+5. Usile fara camera scrisa nu trebuie sa fie fundaturi: pana se scrie camera, duc in `path_temelie` cu un rand onest.
+
+---
+
+## 8. Ordinea de scris
+
+1. Restructurarea `DOORS` si `PATHS` pe cele 7 camere
+2. Cele 2 lectii de deschidere pentru C2 (M2 prin rana)
+3. Ecranul 3 - confirmarea
+4. Linkul de creator
+5. C1 si C5 (cel mai mare volum de oameni)
+6. Restul camerelor, apoi M2 complet, apoi M3-M5
+
+---
+
+## 9. Cine valideaza
+
+Continutul care ajunge la un om ranit nu poate ramane validat de o singura persoana. Fiecare lectie are **un autor** si **un validator de doctrina, cu nume**, inainte de publicare. Aceasta decizie e inca deschisa si blocheaza scrierea in masa a lectiilor.
