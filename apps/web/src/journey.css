@@ -10,7 +10,7 @@
   padding-bottom: 84px;
 }
 
-/* --- Bara de ajutor, permanentă (decisă la cererea 55) --- */
+/* --- Bara de ajutor, permanentă --- */
 .helpbar {
   display: flex;
   align-items: center;
@@ -28,6 +28,84 @@
 }
 .helpbar:hover {
   filter: brightness(0.98);
+}
+
+/* --- Primul contact --- */
+.welcome {
+  padding: 32px 22px 40px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.welcome__mark {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 8px auto 22px;
+  border-radius: 50%;
+  background: var(--accent-soft, #e2f1ef);
+  color: var(--accent, #0f6b68);
+}
+.welcome__title {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 18px;
+  color: var(--text, #13302e);
+}
+.welcome__lead {
+  font-size: 1.02rem;
+  line-height: 1.62;
+  color: var(--text-body, #33534f);
+  margin: 0 0 14px;
+}
+.welcome__lead strong {
+  color: var(--text, #13302e);
+}
+.welcome__list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.welcome__list li {
+  padding: 12px 14px;
+  border-left: 2px solid var(--accent, #0f6b68);
+  background: var(--surface, #fff);
+  border-radius: 0 10px 10px 0;
+  color: var(--text-body, #33534f);
+  line-height: 1.45;
+}
+.welcome__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent, #0f6b68);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.welcome__cta:hover {
+  background: var(--accent-hover, #12807b);
+}
+.welcome__skip {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  background: none;
+  color: var(--text-muted, #6c8b88);
+  font-size: 0.88rem;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* --- Intrarea: cele 11 uși --- */
@@ -203,6 +281,23 @@
 .today__chips button:hover {
   border-color: var(--accent, #0f6b68);
 }
+
+/*
+ * Întoarcerea după tăcere. Cald, nu roșu, nu de alarmă — omul se întoarce deja
+ * cu vinovăție, nu i-o mai desenăm și noi.
+ */
+.today__back {
+  background: var(--accent-soft, #e2f1ef);
+  border-color: transparent;
+}
+.today__back p {
+  margin: 0 0 8px;
+  line-height: 1.55;
+}
+.today__back p:last-child {
+  margin-bottom: 0;
+}
+
 .today__verse {
   margin: 18px 0;
   padding: 16px 18px;
@@ -221,6 +316,41 @@
   font-size: 0.78rem;
   font-style: normal;
   color: var(--text-muted, #6c8b88);
+}
+
+/* --- Invitația la prima rugăciune (o singură dată) --- */
+.today__invite {
+  background: var(--surface-3, #e2f1ef);
+  border-color: transparent;
+}
+.today__invite p {
+  line-height: 1.55;
+}
+.today__invite textarea.journal {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px;
+  border: 1px solid var(--border, #dbe8e6);
+  border-radius: 12px;
+  background: var(--surface, #fff);
+  font: inherit;
+  resize: vertical;
+}
+.today__invite-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.today__invite .ghost {
+  margin-top: 12px;
+  padding: 11px 18px;
+  border: 1px solid var(--border, #dbe8e6);
+  border-radius: 999px;
+  background: none;
+  color: var(--text-body, #33534f);
+  font-size: 0.92rem;
+  cursor: pointer;
 }
 
 /*
