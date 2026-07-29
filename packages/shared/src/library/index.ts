@@ -1,3 +1,9 @@
+import type { Lesson } from "../domain.js"
+import { DOCTRINE_HAR_LESSONS } from "./doctrineHar2.js"
+
+export * from "./doctrineHar.js"
+export * from "./doctrineHar2.js"
+
 /*
  * Biblioteca Emanus — raftul de cursuri, dupa SUBIECT, nu dupa cine e omul.
  *
@@ -11,6 +17,8 @@
  *    `state` de mai jos e pentru NOI (ce e scris, ce nu), nu se arată ca notă.
  * 4. Raftul de creatori apare în UI abia când validarea doctrinară există
  *    (docs/14, docs/22 §10.2). Până atunci `gated: true` îl ține ascuns.
+ * 5. Regula 10 din chat: nicio lecție scrisă nu rămâne nelegată. Un curs are
+ *    `lessonIds` și `state: "live"` în același commit în care se scrie.
  */
 
 /** Ce stare are un curs în producție. Nu se afișează ca progres al omului. */
@@ -91,8 +99,15 @@ const shelfIntrebari: LibraryShelf = {
       title: "Religie sau credință — ce mă mântuiește?",
       forWhom: "Ai crescut cu ideea că ești creștin din naștere, sau că faptele bune se cântăresc la final.",
       plannedLessons: 6,
-      lessonIds: [],
-      state: "planned",
+      lessonIds: [
+        "har_d_l1",
+        "har_d_l2",
+        "har_d_l3",
+        "har_d_l4",
+        "har_d_l5",
+        "har_d_l6",
+      ],
+      state: "live",
       source: "docs/15-doctrina-generala.md §Cursul 2",
     },
     {
@@ -439,11 +454,32 @@ export function nextCourseLesson(
 }
 
 /**
+ * Toate lecțiile de bibliotecă scrise până acum. Playerul le caută aici când
+ * lecția nu face parte din niciun parcurs.
+ */
+export const LIBRARY_LESSONS: Lesson[] = [...DOCTRINE_HAR_LESSONS]
+
+export function findLibraryLesson(id: string): Lesson | undefined {
+  return LIBRARY_LESSONS.find((l) => l.id === id)
+}
+
+/** Lecțiile unui curs de bibliotecă, în ordine. */
+export function libraryCourseLessons(courseId: string): Lesson[] {
+  const course = getLibraryCourse(courseId)
+  if (!course) return []
+  const out: Lesson[] = []
+  for (const id of course.lessonIds) {
+    const l = findLibraryLesson(id)
+    if (l) out.push(l)
+  }
+  return out
+}
+
+/**
  * Ce se scrie mai departe, în ordinea deciziilor din docs/15 §Ordinea de
  * scriere și din chat. Lista asta e pentru noi, nu se afișează.
  */
 export const WRITING_ORDER: string[] = [
-  "doctrine_c2_har",
   "doctrine_c4_vesnicia",
   "lib_pilde",
   "doctrine_c1_biblia",
