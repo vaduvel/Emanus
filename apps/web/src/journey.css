@@ -222,6 +222,36 @@
   font-style: normal;
   color: var(--text-muted, #6c8b88);
 }
+
+/*
+ * Doctrina generală — opțională, deci se vede că e altceva decât ziua de azi:
+ * fără fundal plin, doar o linie aurie discretă. Nu concurează cu lecția.
+ */
+.today__extra {
+  border-left: 3px solid var(--gold, #b3862a);
+  background: var(--surface, #fff);
+}
+.today__extra h3 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.08rem;
+  margin: 0 0 6px;
+  color: var(--text, #13302e);
+}
+.today__extra .ghost {
+  margin-top: 10px;
+  padding: 9px 16px;
+  border: 1px solid var(--border, #dbe8e6);
+  border-radius: 999px;
+  background: none;
+  color: var(--text-body, #33534f);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.today__extra .ghost:hover {
+  border-color: var(--accent, #0f6b68);
+  color: var(--accent, #0f6b68);
+}
+
 .today__memorial {
   background: var(--surface-3, #e2f1ef);
   border-color: transparent;
