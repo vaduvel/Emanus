@@ -13,7 +13,7 @@ import { chooseDoor } from "../journey"
 import { navigate } from "../router"
 
 /*
- * INTRAREA. (docs/21 §4)
+ * INTRAREA. (docs/21 §4, docs/22 §0)
  *
  * Trei ecrane, o singură atingere. Lista de uși ESTE bifurcația — nu îl întrebăm
  * niciodată pe om "ai un scop anume sau doar explorezi?". Nimeni nu se
@@ -48,7 +48,16 @@ export function Doors() {
   }, [fromLink])
 
   if (askLink) {
-    return <FromCreator doorId={askLink} onNo={() => setAskLink(null)} />
+    return (
+      <FromCreator
+        doorId={askLink}
+        onYes={(id) => {
+          setAskLink(null)
+          setPicked(id)
+        }}
+        onNo={() => setAskLink(null)}
+      />
+    )
   }
 
   if (picked) {
@@ -64,7 +73,7 @@ export function Doors() {
     <section className="doors">
       <p className="doors__mark">Emanus</p>
       <h1 className="doors__title">Ce te-a adus aici?</h1>
-      <p className="doors__sub">Alege propoziția care semănă cel mai mult cu ce trăiești.</p>
+      <p className="doors__sub">Alege propoziția care seamănă cel mai mult cu ce trăiești.</p>
 
       {!term && (
         <ul className="doors__list">
@@ -130,6 +139,7 @@ export function Doors() {
       <p className="doors__note">
         Nu îți cerem bani, nu îți cerem date și nu îți dăm note. Poți schimba drumul oricând.
       </p>
+      <p className="doors__note">Emanus nu înlocuiește medicul, psihologul, poliția sau 112.</p>
     </section>
   )
 }
@@ -137,8 +147,20 @@ export function Doors() {
 /*
  * Venit din materialul unui creator. Clipul a fost onboardingul — dar tot îl
  * întrebăm o dată, ca să nu presupunem despre el pe baza unui video.
+ *
+ * "Da, începe" NU navighează — ridică starea în sus, la Doors, care arată
+ * confirmarea. Dacă am naviga la /intrare?pick=..., ?u= ar rămâne în hash și
+ * ecranul s-ar reîntoarce la această întrebare, în buclă.
  */
-function FromCreator({ doorId, onNo }: { doorId: string; onNo: () => void }) {
+function FromCreator({
+  doorId,
+  onYes,
+  onNo,
+}: {
+  doorId: string
+  onYes: (doorId: string) => void
+  onNo: () => void
+}) {
   const door = getDoor(doorId)
   if (!door) {
     onNo()
@@ -150,7 +172,7 @@ function FromCreator({ doorId, onNo }: { doorId: string; onNo: () => void }) {
       <p className="confirm__lead">Ai ajuns aici dintr-un material despre:</p>
       <p className="confirm__echo">„{door.label}”</p>
       <p className="confirm__note">E și ce ai nevoie tu acum?</p>
-      <button type="button" className="confirm__cta" onClick={() => navigate(`/intrare?pick=${door.id}`)}>
+      <button type="button" className="confirm__cta" onClick={() => onYes(door.id)}>
         Da, începe <ArrowRight size={18} aria-hidden />
       </button>
       <button type="button" className="today__back" onClick={onNo}>
