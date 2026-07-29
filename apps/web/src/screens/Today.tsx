@@ -91,7 +91,7 @@ export function Today() {
                 L-am făcut
               </button>
               <button type="button" onClick={() => setYesterday("nu")}>
-                N-am reușit
+                N-am reșit
               </button>
               <button type="button" onClick={() => setYesterday("uitat")}>
                 Am uitat
@@ -278,6 +278,16 @@ export function Today() {
           </button>
         </div>
       )}
+
+      {/*
+        Ieșirea. Alegerea de la intrare nu îl închide pe om într-un singur drum, și
+        asta nu se ascunde în setări: sunt oameni care aleg greșit prima dată, și
+        alții pe care îi doare altceva peste două săptămâni.
+        Ce a scris rămâne al lui, oricare drum alege.
+      */}
+      <button type="button" className="today__switch" onClick={() => navigate("/intrare")}>
+        Nu mă mai regăsesc aici. Vreau alt drum.
+      </button>
     </section>
   )
 }
