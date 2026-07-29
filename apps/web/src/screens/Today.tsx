@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowRight, BellRing, BookOpen, HandHeart, Sunrise } from "lucide-react"
+import { ArrowRight, BellRing, BookOpen, HandHeart, Library as LibraryIcon, Sunrise } from "lucide-react"
 import type { Lesson } from "@emanus/shared"
 import {
   addPrayer,
@@ -289,6 +289,18 @@ export function Today() {
           </button>
         </div>
       )}
+
+      {/*
+        Biblioteca. Stă jos, după ce e de azi, și nu e tab: cine intră să caute
+        altceva o găsește, dar nu concurează cu singurul lucru de azi.
+      */}
+      <button
+        type="button"
+        className="today__switch"
+        onClick={() => navigate("/biblioteca")}
+      >
+        <LibraryIcon size={15} aria-hidden /> Vreau să învăț și altceva
+      </button>
 
       {/*
         Ieșirea. Alegerea de la intrare nu îl închide pe om într-un singur drum, și
