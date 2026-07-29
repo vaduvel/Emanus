@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
-import { ArrowRight, Feather } from "lucide-react"
+import { useEffect, useMemo, useState } from "react"
+import { ArrowRight, Search } from "lucide-react"
 import {
-  DOORS,
+  COMMON_DOORS,
   EXPLORE_DOORS,
+  MORE_DOORS,
   doorHasOwnRoom,
   getDoor,
   getPath,
@@ -12,110 +13,166 @@ import { chooseDoor } from "../journey"
 import { navigate } from "../router"
 
 /*
- * Intrarea în aplicație. O SINGURĂ ATINGERE. (docs/21 §4)
+ * INTRAREA. (docs/21 §4)
  *
- * Nu întrebăm omul de ce a venit și apoi ce vrea. Nu îl punem să se
- * autoclasifice în "am un scop anume" vs "doar explorez" — nimeni nu poate
- * răspunde onest la asta, iar cel mai disper[at om nu bifează categorii la 2
- * noaptea. Lista de uși ESTE bifurcația: cine are o durere o vede scrisă și o
- * apasă; cine explorează ajunge la capătul listei.
+ * Trei ecrane, o singură atingere. Lista de uși ESTE bifurcația — nu îl întrebăm
+ * niciodată pe om "ai un scop anume sau doar explorezi?". Nimeni nu se
+ * autoclasifică la două noaptea.
  *
- * REGULI:
- * - nicio ușă nu e fundătură; camerele nescrise duc în temelie, cu un rând onest
- * - zero întrebări despre om; reținem doar ușa aleasă
- * - nu-l întoarcem la un ecran de pornire: din confirmare merge direct în ziua lui
+ * Zece propoziții întâi, restul la "Arată-mi tot". 31 de opțiuni deodată obosesc
+ * pe telefon și produc indecizie. Căutarea apare doar în lista completă: omul
+ * care plânge alege, nu tastează.
+ *
+ * INTERZIS aici: câmpuri despre om, vârstă, denominație, scale, cont.
  */
 
-/** Linkul de creator: /#/intrare?u=neiertare. Clipul a fost onboardingul. (docs/21 §5) */
 function doorFromLink(): string | null {
   const hash = window.location.hash
   const q = hash.indexOf("?")
-  if (q < 0) return null
+  if (q === -1) return null
   const id = new URLSearchParams(hash.slice(q + 1)).get("u")
-  if (!id) return null
-  return getDoor(id) ? id : null
+  return id && getDoor(id) ? id : null
 }
 
 export function Doors() {
+  const fromLink = useMemo(doorFromLink, [])
   const [picked, setPicked] = useState<string | null>(null)
-  const [fromLink, setFromLink] = useState(false)
+  const [showAll, setShowAll] = useState(false)
+  const [q, setQ] = useState("")
+
+  // Venit din clipul unui creator: întrebăm o dată, nu presupunem.
+  const [askLink, setAskLink] = useState<string | null>(fromLink)
 
   useEffect(() => {
-    const id = doorFromLink()
-    if (id) {
-      setPicked(id)
-      setFromLink(true)
-    }
-  }, [])
+    if (fromLink) setAskLink(fromLink)
+  }, [fromLink])
+
+  if (askLink) {
+    return <FromCreator doorId={askLink} onNo={() => setAskLink(null)} />
+  }
 
   if (picked) {
-    return (
-      <Confirm
-        doorId={picked}
-        fromLink={fromLink}
-        onBack={() => {
-          setPicked(null)
-          setFromLink(false)
-        }}
-      />
-    )
+    return <Confirm doorId={picked} onBack={() => setPicked(null)} />
   }
+
+  const term = q.trim().toLowerCase()
+  const rest = term
+    ? [...COMMON_DOORS, ...MORE_DOORS].filter((d) => d.label.toLowerCase().includes(term))
+    : MORE_DOORS
 
   return (
     <section className="doors">
-      <div className="doors__mark">
-        <Feather size={28} strokeWidth={1.6} aria-hidden />
-      </div>
+      <p className="doors__mark">Emanus</p>
       <h1 className="doors__title">Ce te-a adus aici?</h1>
-      <p className="muted doors__sub">
-        Alege ce e mai aproape de adevăr azi. Poți schimba oricând — nu se pierde nimic.
-      </p>
+      <p className="doors__sub">Alege propoziția care semănă cel mai mult cu ce trăiești.</p>
 
-      <ul className="doors__list">
-        {DOORS.map((d) => (
-          <li key={d.id}>
-            <button type="button" className="door" onClick={() => setPicked(d.id)}>
-              <span>{d.label}</span>
-              <ArrowRight size={18} aria-hidden />
-            </button>
-          </li>
-        ))}
-      </ul>
+      {!term && (
+        <ul className="doors__list">
+          {COMMON_DOORS.map((d) => (
+            <li key={d.id}>
+              <button type="button" className="door" onClick={() => setPicked(d.id)}>
+                <span>{d.label}</span>
+                <ArrowRight size={18} aria-hidden />
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
 
+      {!showAll && !term && (
+        <button type="button" className="doors__more" onClick={() => setShowAll(true)}>
+          Arată-mi toate opțiunile
+        </button>
+      )}
+
+      {showAll && (
+        <>
+          <label className="doors__search">
+            <Search size={16} aria-hidden />
+            <input
+              type="text"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Caută în cuvintele tale"
+              aria-label="Caută în cuvintele tale"
+            />
+          </label>
+          <ul className="doors__list">
+            {rest.map((d) => (
+              <li key={d.id}>
+                <button type="button" className="door" onClick={() => setPicked(d.id)}>
+                  <span>{d.label}</span>
+                  <ArrowRight size={18} aria-hidden />
+                </button>
+              </li>
+            ))}
+          </ul>
+          {term && rest.length === 0 && (
+            <p className="doors__sub">
+              Nu găsim propoziția asta. Nu înseamnă că nu e loc pentru tine — alege de mai jos.
+            </p>
+          )}
+        </>
+      )}
+
+      {/* Cine nu vine cu o rană anume. Trei feluri, nu unul. */}
       <ul className="doors__list doors__list--quiet">
         {EXPLORE_DOORS.map((d) => (
           <li key={d.id}>
             <button type="button" className="door door--quiet" onClick={() => setPicked(d.id)}>
               <span>{d.label}</span>
-              <ArrowRight size={18} aria-hidden />
+              <ArrowRight size={16} aria-hidden />
             </button>
           </li>
         ))}
       </ul>
+
+      <p className="doors__note">
+        Nu îți cerem bani, nu îți cerem date și nu îți dăm note. Poți schimba drumul oricând.
+      </p>
     </section>
   )
 }
 
 /*
- * Ecranul 3: confirmarea. Numele drumului, ce primește, cât durează, și "Începe".
- * Aici, și numai aici, spunem adevărul dacă camera lui nu e scrisă încă.
+ * Venit din materialul unui creator. Clipul a fost onboardingul — dar tot îl
+ * întrebăm o dată, ca să nu presupunem despre el pe baza unui video.
  */
-function Confirm({
-  doorId,
-  fromLink,
-  onBack,
-}: {
-  doorId: string
-  fromLink: boolean
-  onBack: () => void
-}) {
+function FromCreator({ doorId, onNo }: { doorId: string; onNo: () => void }) {
+  const door = getDoor(doorId)
+  if (!door) {
+    onNo()
+    return null
+  }
+  return (
+    <section className="confirm">
+      <p className="doors__mark">Emanus</p>
+      <p className="confirm__lead">Ai ajuns aici dintr-un material despre:</p>
+      <p className="confirm__echo">„{door.label}”</p>
+      <p className="confirm__note">E și ce ai nevoie tu acum?</p>
+      <button type="button" className="confirm__cta" onClick={() => navigate(`/intrare?pick=${door.id}`)}>
+        Da, începe <ArrowRight size={18} aria-hidden />
+      </button>
+      <button type="button" className="today__back" onClick={onNo}>
+        Nu, vreau să aleg eu
+      </button>
+    </section>
+  )
+}
+
+/* Ecranul 3: confirmarea. Prima propoziție de pe ecran e propoziția LUI. */
+function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
   const door = getDoor(doorId)
   const pathId = resolveDoorPath(doorId)
   const path = getPath(pathId)
-  const own = doorHasOwnRoom(doorId)
-  const explore = door?.roomId == null
+  if (!door || !path) {
+    onBack()
+    return null
+  }
 
-  if (!door || !path) return null
+  const own = doorHasOwnRoom(doorId)
+  const explore = door.roomId === null
+  const minutes = path.lessons[0]?.estMinutes ?? 10
 
   function start() {
     chooseDoor(pathId)
@@ -123,47 +180,40 @@ function Confirm({
   }
 
   return (
-    <section className="doors confirm">
+    <section className="confirm">
       <p className="confirm__echo">„{door.label}”</p>
 
-      {own && (
+      {own && !explore && <p className="confirm__lead">Bine că ai spus-o. Mergem de aici.</p>}
+      {!own && (
         <p className="confirm__lead">
-          Bine că ai spus-o. Nu ești primul și nu e ceva de care să-ți fie rușine aici.
+          Bine că ai spus-o. Drumul scris exact pentru asta nu e gata încă — nu îți dau ceva pe
+          jumătate. Dar începem cu ce e dedesubt oricum, la toată lumea.
         </p>
       )}
-      {!own && !explore && (
-        <p className="confirm__lead">
-          Bine că ai spus-o. Drumul scris exact pentru asta încă nu e gata — nu-ți dau ceva pe
-          jumătate. Dar începe cu ce e dedesubt oricum, la toată lumea.
-        </p>
-      )}
-      {explore && (
+      {own && explore && (
         <p className="confirm__lead">
           Nu toată lumea vine cu o rană anume, și nu e nimic în neregulă cu asta.
         </p>
       )}
 
       <div className="confirm__card">
-        <h1 className="confirm__title">{path.title}</h1>
+        <h2 className="confirm__title">{path.title}</h2>
         <p className="confirm__promise">{path.promise}</p>
-        <p className="muted confirm__meta">
-          {path.lessons.length} lecții · câte una la două zile · {path.lessons[0].estMinutes} minute
-          prima
+        <p className="confirm__meta">
+          {path.lessons.length} lecții &middot; câte una la două zile &middot; {minutes} minute prima
         </p>
       </div>
 
-      <p className="muted confirm__note">
-        Nu-ți cerem bani, nu-ți cerem date și nu măsurăm nimic. Poți schimba drumul oricând — ce
-        scrii rămâne al tău.
+      <p className="confirm__note">
+        Nu îți cerem bani și nu îți dăm note. Poți schimba drumul oricând, fără să pierzi ce ai
+        scris.
       </p>
 
       <button type="button" className="confirm__cta" onClick={start}>
-        Începe
-        <ArrowRight size={18} aria-hidden />
+        Începe <ArrowRight size={18} aria-hidden />
       </button>
-
-      <button type="button" className="doors__none" onClick={onBack}>
-        {fromLink ? "Nu asta e a mea" : "Înapoi la listă"}
+      <button type="button" className="today__back" onClick={onBack}>
+        Nu asta e a mea
       </button>
     </section>
   )
