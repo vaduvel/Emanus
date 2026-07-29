@@ -1,35 +1,64 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ArrowRight, Feather } from "lucide-react"
-import { DOORS, DOOR_NONE_LABEL, getPath } from "@emanus/shared"
+import {
+  DOORS,
+  EXPLORE_DOORS,
+  doorHasOwnRoom,
+  getDoor,
+  getPath,
+  resolveDoorPath,
+} from "@emanus/shared"
 import { chooseDoor } from "../journey"
 import { navigate } from "../router"
 
 /*
- * Intrarea în aplicație. O SINGURĂ ÎnTREBARE. (docs/20 §1 și §3)
- * Nu e onboarding, nu e chestionar, nu e profil. Omul spune de ce a venit,
- * și din secunda aia aplicația are un drum pentru el.
+ * Intrarea în aplicație. O SINGURĂ ATINGERE. (docs/21 §4)
  *
- * REGULĂ: nicio alegere de aici nu se termină într-un mesaj. Nici ușile nescrise,
- * nici "niciuna nu e a mea". Omul care a avut curajul să apese pe durerea lui
- * trebuie să plece de pe ecranul ăsta cu ceva în mână.
+ * Nu întrebăm omul de ce a venit și apoi ce vrea. Nu îl punem să se
+ * autoclasifice în "am un scop anume" vs "doar explorez" — nimeni nu poate
+ * răspunde onest la asta, iar cel mai disper[at om nu bifează categorii la 2
+ * noaptea. Lista de uși ESTE bifurcația: cine are o durere o vede scrisă și o
+ * apasă; cine explorează ajunge la capătul listei.
+ *
+ * REGULI:
+ * - nicio ușă nu e fundătură; camerele nescrise duc în temelie, cu un rând onest
+ * - zero întrebări despre om; reținem doar ușa aleasă
+ * - nu-l întoarcem la un ecran de pornire: din confirmare merge direct în ziua lui
  */
 
-const READY = ["path_neiertare", "path_temelie"]
+/** Linkul de creator: /#/intrare?u=neiertare. Clipul a fost onboardingul. (docs/21 §5) */
+function doorFromLink(): string | null {
+  const hash = window.location.hash
+  const q = hash.indexOf("?")
+  if (q < 0) return null
+  const id = new URLSearchParams(hash.slice(q + 1)).get("u")
+  if (!id) return null
+  return getDoor(id) ? id : null
+}
 
 export function Doors() {
-  const [pending, setPending] = useState<string | null>(null)
+  const [picked, setPicked] = useState<string | null>(null)
+  const [fromLink, setFromLink] = useState(false)
 
-  function start(pathId: string) {
-    chooseDoor(pathId)
-    navigate("/")
-  }
-
-  function pick(pathId: string | null, label: string) {
-    if (pathId) {
-      start(pathId)
-      return
+  useEffect(() => {
+    const id = doorFromLink()
+    if (id) {
+      setPicked(id)
+      setFromLink(true)
     }
-    setPending(label)
+  }, [])
+
+  if (picked) {
+    return (
+      <Confirm
+        doorId={picked}
+        fromLink={fromLink}
+        onBack={() => {
+          setPicked(null)
+          setFromLink(false)
+        }}
+      />
+    )
   }
 
   return (
@@ -45,68 +74,97 @@ export function Doors() {
       <ul className="doors__list">
         {DOORS.map((d) => (
           <li key={d.id}>
-            <button type="button" className="door" onClick={() => pick(d.pathId, d.label)}>
+            <button type="button" className="door" onClick={() => setPicked(d.id)}>
               <span>{d.label}</span>
-              {d.pathId ? (
-                <ArrowRight size={18} aria-hidden />
-              ) : (
-                <em className="door__soon">în lucru</em>
-              )}
+              <ArrowRight size={18} aria-hidden />
             </button>
           </li>
         ))}
       </ul>
 
-      <button
-        type="button"
-        className="doors__none"
-        onClick={() => setPending(DOOR_NONE_LABEL)}
-      >
-        {DOOR_NONE_LABEL}
+      <ul className="doors__list doors__list--quiet">
+        {EXPLORE_DOORS.map((d) => (
+          <li key={d.id}>
+            <button type="button" className="door door--quiet" onClick={() => setPicked(d.id)}>
+              <span>{d.label}</span>
+              <ArrowRight size={18} aria-hidden />
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+/*
+ * Ecranul 3: confirmarea. Numele drumului, ce primește, cât durează, și "Începe".
+ * Aici, și numai aici, spunem adevărul dacă camera lui nu e scrisă încă.
+ */
+function Confirm({
+  doorId,
+  fromLink,
+  onBack,
+}: {
+  doorId: string
+  fromLink: boolean
+  onBack: () => void
+}) {
+  const door = getDoor(doorId)
+  const pathId = resolveDoorPath(doorId)
+  const path = getPath(pathId)
+  const own = doorHasOwnRoom(doorId)
+  const explore = door?.roomId == null
+
+  if (!door || !path) return null
+
+  function start() {
+    chooseDoor(pathId)
+    navigate("/")
+  }
+
+  return (
+    <section className="doors confirm">
+      <p className="confirm__echo">„{door.label}”</p>
+
+      {own && (
+        <p className="confirm__lead">
+          Bine că ai spus-o. Nu ești primul și nu e ceva de care să-ți fie rușine aici.
+        </p>
+      )}
+      {!own && !explore && (
+        <p className="confirm__lead">
+          Bine că ai spus-o. Drumul scris exact pentru asta încă nu e gata — nu-ți dau ceva pe
+          jumătate. Dar începe cu ce e dedesubt oricum, la toată lumea.
+        </p>
+      )}
+      {explore && (
+        <p className="confirm__lead">
+          Nu toată lumea vine cu o rană anume, și nu e nimic în neregulă cu asta.
+        </p>
+      )}
+
+      <div className="confirm__card">
+        <h1 className="confirm__title">{path.title}</h1>
+        <p className="confirm__promise">{path.promise}</p>
+        <p className="muted confirm__meta">
+          {path.lessons.length} lecții · câte una la două zile · {path.lessons[0].estMinutes} minute
+          prima
+        </p>
+      </div>
+
+      <p className="muted confirm__note">
+        Nu-ți cerem bani, nu-ți cerem date și nu măsurăm nimic. Poți schimba drumul oricând — ce
+        scrii rămâne al tău.
+      </p>
+
+      <button type="button" className="confirm__cta" onClick={start}>
+        Începe
+        <ArrowRight size={18} aria-hidden />
       </button>
 
-      {pending && (
-        <div className="doors__pending">
-          {pending === DOOR_NONE_LABEL ? (
-            <p>
-              Bine că ai spus-o. Nu toată lumea vine cu o rană anume, și nu e nimic în neregulă
-              cu asta.
-            </p>
-          ) : (
-            <p>
-              <strong>„{pending}”</strong> — drumul ăsta nu e scris încă. Nu îți dau ceva pe
-              jumătate și nu îți cer să aștepți degeaba.
-            </p>
-          )}
-          <p className="muted">
-            Sunt gata două drumuri. Alege-l pe cel care sună mai aproape — poți schimba
-            oricând, fără să pierzi ce ai scris.
-          </p>
-
-          <ul className="doors__list">
-            {READY.map((id) => {
-              const p = getPath(id)
-              if (!p) return null
-              return (
-                <li key={id}>
-                  <button type="button" className="door" onClick={() => start(id)}>
-                    <span>
-                      <strong>{p.title}</strong>
-                      <br />
-                      <small className="muted">{p.promise}</small>
-                    </span>
-                    <ArrowRight size={18} aria-hidden />
-                  </button>
-                </li>
-              )
-            })}
-          </ul>
-
-          <button type="button" className="doors__none" onClick={() => setPending(null)}>
-            Înapoi la listă
-          </button>
-        </div>
-      )}
+      <button type="button" className="doors__none" onClick={onBack}>
+        {fromLink ? "Nu asta e a mea" : "Înapoi la listă"}
+      </button>
     </section>
   )
 }
