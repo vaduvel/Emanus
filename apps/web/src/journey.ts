@@ -1,5 +1,5 @@
-import type { DayPlan, PathDef } from "@emanus/shared"
-import { getPath, planToday } from "@emanus/shared"
+import type { DayPlan, Lesson, PathDef } from "@emanus/shared"
+import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared"
 
 /*
  * Starea drumului, ținută local (localStorage).
@@ -32,6 +32,8 @@ export interface Prayer {
 export interface JourneyState {
   pathId: string | null
   lessonsDone: number
+  /** Câte lecții de doctrină generală a terminat, în ordine. */
+  doctrineDone: number
   /** YYYY-MM-DD */
   lastLessonDate: string | null
   journal: JournalEntry[]
@@ -43,6 +45,7 @@ export interface JourneyState {
 const EMPTY: JourneyState = {
   pathId: null,
   lessonsDone: 0,
+  doctrineDone: 0,
   lastLessonDate: null,
   journal: [],
   prayers: [],
@@ -102,11 +105,29 @@ export function plan(): DayPlan | null {
   return planToday(path, s.lessonsDone, since)
 }
 
+/**
+ * Lecția de doctrină disponibilă acum, dacă există.
+ * Se deschide după lecția 5 din parcurs; nu înlocuiește niciodată lecția zilei,
+ * stă alături, ca lucru opțional.
+ */
+export function doctrineAvailable(): Lesson | undefined {
+  const s = load()
+  const path = getPath(s.pathId)
+  if (!path) return undefined
+  return nextDoctrineLesson(s.lessonsDone, path.lessons.length, s.doctrineDone)
+}
+
 export function completeLesson(lessonId: string, journalText: string): JourneyState {
   const s = load()
   const journal = journalText.trim()
     ? [...s.journal.filter((j) => j.lessonId !== lessonId), { lessonId, text: journalText.trim(), date: today() }]
     : s.journal
+
+  // Lecțiile de doctrină nu consumă ziua și nu avansează parcursul personal.
+  if (lessonId.startsWith("doctrina_")) {
+    return save({ ...s, doctrineDone: s.doctrineDone + 1, journal })
+  }
+
   return save({
     ...s,
     lessonsDone: Math.max(s.lessonsDone, indexOfLesson(lessonId) + 1),
