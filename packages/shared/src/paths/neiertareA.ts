@@ -4,13 +4,17 @@ import type { Lesson } from "../domain.js"
  * Parcursul "Neiertare" — lecțiile 1-3 (pașii 1-3 din schelet).
  * Reguli: docs/20-parcursuri-personal-generalizate.md §6.
  * Fără întrebări de diagnostic. Afirmații, nu formulare.
+ *
+ * ATENȚIE la ordine: în cameră aceste lecții vin DUPĂ `neiertareO1` și `neiertareO2`
+ * (vezi neiertareOpen.ts). De aceea `n1_1` nu mai face nicio prezentare — ea se
+ * face o singură dată, în prima lecție a camerei. Vocea nu are nume de om.
  */
 
 export const neiertareL1: Lesson = {
   id: "neiertare_l1",
   courseId: "path_neiertare",
   order: 1,
-  title: "Ce ți s-a făcut a fost real",
+  title: "Ce ti s-a facut a fost real",
   estMinutes: 9,
   anchorRefs: ["Psalm 34:18", "Psalm 56:8"],
   memoryVerseRef: "Psalm 34:18",
@@ -19,10 +23,7 @@ export const neiertareL1: Lesson = {
       id: "n1_1",
       type: "check_in",
       order: 1,
-      bubbles: [
-        { from: "guide", text: "Bine că ești aici. Sunt Daniel." },
-        { from: "guide", text: "Înainte de orice — cum ești azi?" },
-      ],
+      bubbles: [{ from: "guide", text: "Înainte de orice — cum ești azi?" }],
     },
     {
       id: "n1_2",
@@ -52,7 +53,7 @@ export const neiertareL1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Poate ți s-a spus «iartă și treci peste». Poate ți s-a spus «era și el om», sau «nu mai scormoni».",
+          text: "Poate ți s-a spus «iartă și trece peste». Poate ți s-a spus «era și el om», sau «nu mai scormoni».",
         },
         {
           from: "guide",
@@ -113,9 +114,9 @@ export const neiertareL1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Deci să fim înțeleși de la început: drumul ăsta nu începe cu «nu a fost așa de grav».",
+          text: "Deci să fim înțieleși de la început: drumul ăsta nu începe cu «nu a fost așa de grav».",
         },
-        { from: "guide", text: "Începe cu: a fost grav, Și El a văzut tot." },
+        { from: "guide", text: "Începe cu: a fost grav, și El a văzut tot." },
       ],
     },
     {
@@ -149,7 +150,7 @@ export const neiertareL1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Doamne, nu vin să-ți spun că sunt bine. Nu sunt. M-a durut și încă mă doare. Tu ai văzut tot și n-ai uitat nimic. Nu-ți cer încă să pot ierta. Îți cer doar să fii aproape, așa cum ai spus că ești. Amin.",
+          text: "Doamne, nu vin să-Ți spun că sunt bine. Nu sunt. M-a durut și încă mă doare. Tu ai văzut tot și n-ai uitat nimic. Nu-Ți cer încă să pot ierta. Îți cer doar să fii aproape, așa cum ai spus că ești. Amin.",
         },
       ],
     },
@@ -227,7 +228,7 @@ export const neiertareL2: Lesson = {
       type: "scripture",
       order: 5,
       scripture: {
-        text: "Hoțul nu vine decât să fure, să junghie și să prapădească. Eu am venit ca oile să aibă viață, și s-o aibă din belșug.",
+        text: "Hoțul nu vine decât să fure, să junghie și să prăpădească. Eu am venit ca oile să aibă viață, și s-o aibă din belșug.",
         ref: "Ioan 10:10",
       },
     },
@@ -335,7 +336,7 @@ export const neiertareL3: Lesson = {
   id: "neiertare_l3",
   courseId: "path_neiertare",
   order: 3,
-  title: "De ce te ține și acum",
+  title: "De ce te tine si acum",
   estMinutes: 10,
   anchorRefs: ["Evrei 12:15", "Efeseni 4:26-27"],
   memoryVerseRef: "Evrei 12:15",
