@@ -27,8 +27,6 @@ def runtime_files() -> list[Path]:
 FILES = runtime_files()
 errors: list[str] = []
 texts = {path: path.read_text(encoding="utf-8") for path in FILES}
-# Captures the dominant runtime ID convention. Some legacy live lessons use
-# other names, so this count is a regression floor, not the total catalog size.
 lesson_id_re = re.compile(r'\bid\s*:\s*["\']([A-Za-z0-9_-]+_l\d+)["\']')
 locations: dict[str, list[str]] = {}
 for path, text in texts.items():
@@ -61,7 +59,7 @@ for path, text in texts.items():
             errors.append(f"{path.relative_to(ROOT)}:{line}: {label}: {match.group(0)!r}")
 
 required_by_file = {
-    "traseeCopii.ts": ["adult sigur", "atinge nepotrivit", "gânduri să te rănești"],
+    "traseeCopii.ts": ["adult sigur", "atinge nepotrivit", "te gândești să te rănești"],
     "sotiLegamant.ts": ["consimțământ", "112", "violență activă"],
     "relatiiComune2.ts": ["consimțământ", "ajutor medical", "terapeut"],
     "relatiiComune3.ts": ["112", "plan de siguranță", "consiliere de cuplu"],
