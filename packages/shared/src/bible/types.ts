@@ -1,0 +1,73 @@
+// Model de continut pentru „Biblia explicata". Sursa de adevar: docs/21-biblia-explicata.md
+//
+// Regula editoriala de baza: textul biblic ramane neatins, integral, in campul
+// text. Explicatia Emanus sta separat, in campuri proprii, ca sa nu poata fi
+// niciodata confundata cu Scriptura.
+
+export type Testament = "vt" | "nt"
+
+export type BibleStatus = "draft" | "in_review" | "published"
+
+export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
+
+/** Un cuvant din limba originala, explicat pe intelesul cititorului. */
+export interface WordStudy {
+  original: string
+  transliteration: string
+  language: OriginalLanguage
+  meaning: string
+}
+
+/** O unitate de sens: un verset sau un grup mic de versete, explicat. */
+export interface BibleUnit {
+  id: string
+  /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
+  ref: string
+  heading: string
+  /** Textul biblic, nemodificat. Cornilescu 1924, editia originala. */
+  text: string
+  /** Invatatura Emanus. Markdown. */
+  teaching: string
+  words?: WordStudy[]
+  crossRefs?: string[]
+  /** Aplicatia pastorala, adresata direct cititorului. */
+  forYourHeart?: string
+}
+
+export interface BibleChapter {
+  id: string
+  bookId: string
+  number: number
+  title: string
+  summary: string
+  literaryContext: string
+  historicalContext: string
+  units: BibleUnit[]
+  prayer: string
+  status: BibleStatus
+}
+
+export interface BibleBook {
+  id: string
+  name: string
+  testament: Testament
+  order: number
+  blurb: string
+  chapters: BibleChapter[]
+}
+
+/** Traducerea afisata. Editia originala 1924 este in domeniul public. */
+export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"
+
+/** Un capitol se deschide cititorului doar dupa revizie umana. */
+export function chapterIsOpen(chapter: BibleChapter): boolean {
+  return chapter.status === "published"
+}
+
+export function openChapters(book: BibleBook): BibleChapter[] {
+  return book.chapters.filter(chapterIsOpen)
+}
+
+export function countUnits(book: BibleBook): number {
+  return book.chapters.reduce((sum, c) => sum + c.units.length, 0)
+}
