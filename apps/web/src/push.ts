@@ -2,13 +2,16 @@
 // Funcționează doar dacă serverul are VAPID configurat și browserul suportă Push API.
 import { getPushPublicKey, subscribePush, unsubscribePush } from "./api"
 
-function urlBase64ToUint8Array(base64String: string): Uint8Array {
+// Intoarce ArrayBuffer, nu Uint8Array: `applicationServerKey` cere BufferSource,
+// iar `Uint8Array<ArrayBufferLike>` nu este acceptat de tipurile noi de DOM.
+function urlBase64ToArrayBuffer(base64String: string): ArrayBuffer {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4)
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/")
   const raw = atob(base64)
-  const out = new Uint8Array(raw.length)
-  for (let i = 0; i < raw.length; i += 1) out[i] = raw.charCodeAt(i)
-  return out
+  const buffer = new ArrayBuffer(raw.length)
+  const view = new Uint8Array(buffer)
+  for (let i = 0; i < raw.length; i += 1) view[i] = raw.charCodeAt(i)
+  return buffer
 }
 
 export function pushSupported(): boolean {
@@ -51,7 +54,7 @@ export async function enablePush(): Promise<EnablePushResult> {
       existing ??
       (await reg.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(key),
+        applicationServerKey: urlBase64ToArrayBuffer(key),
       }))
     await subscribePush(sub.toJSON())
     return { ok: true }
