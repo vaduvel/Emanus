@@ -1,0 +1,175 @@
+import type { BibleChapter } from "./types.js"
+
+/*
+ * Geneza 28, explicata verset cu verset.
+ * Text: Cornilescu 1924, editia originala. Explicatia: scrisa pentru Emanus.
+ */
+
+export const GENEZA_28: BibleChapter = {
+  id: "geneza-28",
+  bookId: "geneza",
+  number: 28,
+  title: "Geneza 28 — O piatra sub cap, si o scara pana la cer",
+  summary:
+    "Un tanar pleaca de acasa fugind, cu un toiag in mana si cu o minciuna in urma. Se culca in camp deschis, cu o piatra sub cap. Si tocmai acolo, in cea mai proasta noapte a vietii lui, Dumnezeu Se pogoara la el, ii deschide cerul si ii fagaduieste ca nu-l va parasi. Iar el se trezeste si zice: Domnul este in locul acesta, si eu n-am stiut.",
+  literaryContext:
+    "Capitolul acesta este cotitura vietii lui Iacov. Pana aici l-am vazut numai smulgand cu mana lui; de aici inainte incepe lucrarea lui Dumnezeu asupra lui, care va tine douazeci de ani si se va sfarsi la Iaboc, cu un sold scrantit si cu un nume nou. Ia aminte ca fagaduinta data la Betel se va implini punct cu punct in capitolele urmatoare, si ca Iacov se va intoarce la Betel in capitolul al treizeci si cincilea, ca sa-si tina juramantul. Ia aminte si la simetrie: pleaca singur, cu un toiag; se va intoarce cu doua tabere.",
+  historicalContext:
+    "Luz era o asezare veche pe drumul care leaga miazanoapte de miazazi, la vreo optzeci de kilometri de Beer-Seba, cale de doua-trei zile de mers pe jos. In toata acea lume, oamenii credeau ca zeii locuiesc fiecare in tinutul lui si ca de aceea trebuie sa te inchini altui zeu cand treci hotarul; de aceea fagaduinta ca Domnul merge cu el pe drum era ceva cu totul nou. Turnurile in trepte pe care le zideau popoarele de acolo, ca acela din Babel, aveau o scara pe care se credea ca zeii coboara la oameni; iar aici Dumnezeu arata scara adevarata, si nu una zidita de mana omului. Stalpul de piatra uns cu untdelemn era chipul obisnuit de a insemna un loc ca fiind sfant.",
+  status: "in_review",
+  units: [
+    {
+      id: "geneza-28-1-5",
+      ref: "Geneza 28:1-5",
+      heading: "De data aceasta, pe fata",
+      text:
+        "Isaac a chemat pe Iacov, l-a binecuvantat, si i-a dat porunca aceasta: „Sa nu-ti iei nevasta dintre fetele lui Canaan. Scoala-te, du-te la Padan-Aram, in casa lui Betuel, tatal mamei tale, si ia-ti de acolo o nevasta, dintre fetele lui Laban, fratele mamei tale. Dumnezeul cel Atotputernic sa te binecuvinteze, sa te faca sa cresti si sa te inmultesti, ca sa ajungi o ceata de noroade! Sa-ti dea binecuvantarea lui Avraam, tie si semintei tale cu tine, ca sa stapanesti tara in care locuiesti ca strain, si pe care a dat-o lui Avraam.\" Si Isaac a trimis pe Iacov, care s-a dus la Padan-Aram, la Laban, fiul lui Betuel, Arameul, fratele Rebecai, mama lui Iacov si a lui Esau.",
+      teaching:
+        "Ia aminte cat de altfel este ceasul acesta fata de capitolul dinainte.\n\nAcolo, batranul chemase in taina pe unul singur, ceruse o mancare care ii place, si vorbise pe ascuns.\n\nAici cheama pe fata, stie limpede pe cine cheama, si binecuvinteaza cu ochii deschisi.\n\nSe cuvine sa luam bine seama: aceasta este cea dintai binecuvantare adevarata pe care o da Isaac.\n\nCealalta fusese smulsa. Aceasta este data.\n\nSi ia aminte ce s-a schimbat intre timp. Batranul se cutremurase cu un cutremur mare, cand intelesese ca Dumnezeu lucrase pe deasupra capului lui.\n\nIar acum se supune de bunavoie.\n\nUn om care s-a impotrivit multi ani lui Dumnezeu poate, intr-o zi, sa se plece — si de acolo incepe ce este bun in el.\n\nApoi ia aminte la Numele pe care il cheama: Dumnezeul cel Atotputernic.\n\nIn ebraica, El Șadai. Este Numele sub care Dumnezeu i Se aratase lui Avraam la nouazeci si noua de ani, cand i-a fagaduit un fiu din trup mort.\n\nDeci il trimite la drum cu Numele Aceluia care face din nimic.\n\nSi ia aminte la ce cere pentru el: sa-ti dea binecuvantarea lui Avraam.\n\nAceasta nu se mai cumpara cu linte, si nu se mai fura cu blana de ied. Se da din mana in mana, cu numele pe fata.\n\nApoi ia aminte la oprelistea pe care i-o pune, aceeasi ca odinioara pentru el: sa nu-ti iei nevasta dintre fetele lui Canaan.\n\nDar sa cantarim deosebirea. Pentru Isaac se facuse drumul de catre altul; sluga a plecat, s-a rugat la fantana si i-a adus nevasta acasa.\n\nIacov merge singur.\n\nSunt lucruri pe care parintii le pot face pentru copii. Si sunt drumuri pe care fiecare le face pe picioarele lui.\n\nSi la sfarsit, ia aminte la ce nu se spune: nu se pomeneste nici o slugă, nici o camila, nici un dar de aur.\n\nPleaca singur, si sarac.\n\nEl insusi va spune peste douazeci de ani: cu toiagul acesta am trecut Iordanul.",
+      words: [
+        {
+          original: "אֵל שַׁדַּי",
+          transliteration: "El Șadai",
+          language: "ebraica",
+          meaning:
+            "Dumnezeul cel Atotputernic; Numele sub care Dumnezeu Se arata cand implineste ce este cu neputinta firii."
+        }
+      ],
+      crossRefs: [
+        "Geneza 17:1",
+        "Geneza 24:3-4",
+        "Geneza 27:33",
+        "Geneza 32:10",
+        "Geneza 12:2-3",
+        "Evrei 11:20",
+        "Deuteronom 7:3-4",
+        "Galateni 3:14",
+        "Proverbe 22:6"
+      ],
+      forYourHeart:
+        "Cealalta binecuvantare fusese smulsa; aceasta a fost data. Un om care s-a impotrivit ani intregi lui Dumnezeu poate intr-o zi sa se plece — si de acolo incepe ce este bun in el."
+    },
+    {
+      id: "geneza-28-6-9",
+      ref: "Geneza 28:6-9",
+      heading: "Incercarea de a drege",
+      text:
+        "Esau a vazut ca Isaac binecuvantase pe Iacov, si-l trimisese la Padan-Aram, ca sa-si ia nevasta de acolo... Esau a inteles astfel ca fetele lui Canaan nu-i placeau tatalui sau Isaac. Si Esau s-a dus la Ismael. El a mai luat de nevasta, pe langa nevestele pe cari le avea, pe Mahalat, fata lui Ismael, fiul lui Avraam, si sora lui Nebaiot.",
+      teaching:
+        "Ia aminte cum incepe: Esau a vazut.\n\nA vazut ca fratele lui pleaca binecuvantat. A vazut ca tatal lui ii pusese o oprelisce anume. Si a inteles, in sfarsit, ceva ce ar fi trebuit sa stie de multa vreme: ca nevestele lui nu erau pe placul tatalui sau.\n\nSe cuvine sa spunem ca aici este ceva bun. Omul acesta vrea sa faca pe placul tatalui sau. Il doare ca a gresit.\n\nDar sa luam bine seama la felul in care incearca sa dreaga.\n\nNu-si lasa nevestele hetite. Nu se duce sa vorbeasca cu tatal sau. Nu se pocaieste de nimic.\n\nMai ia una pe deasupra.\n\nSi ia aminte de unde o ia: din casa lui Ismael.\n\nAdica din ramura care fusese si ea trimisa afara din fagaduinta.\n\nSa cantarim bine cat este de trist. Cel scos din binecuvantare se insoara in casa celui scos din binecuvantare.\n\nSe cuvine sa spunem cinstit ce se petrece aici, fiindca este un lucru pe care il facem si noi.\n\nOmul acesta face ceva care aduce cu ascultarea, dar pe dinafara.\n\nA priceput litera: tatii nu le plac canaanitele. Deci ia una din neam.\n\nNu a priceput nimic din inima lucrului: ca era vorba de inchinare, nu de spita neamului.\n\nApostolul Pavel va scrie despre o intristare a lumii, care aduce moartea, si despre o intristare dupa voia lui Dumnezeu, care aduce pocainta.\n\nCea dintai vrea sa dreaga urmarile. Cea de a doua schimba omul.\n\nSi mai ia aminte la ceva. Nu i-a cerut nimeni sa se insoare a treia oara. Nimeni nu i-a spus ca asa se indreapta lucrurile.\n\nA facut de capul lui un lucru pe care l-a socotit de folos.\n\nAsa se nasc multe fapte religioase: din dorinta de a fi bine vazut, fara nici o intrebare pusa lui Dumnezeu.\n\nSe cuvine sa ne cercetam pe noi insine: cate lucruri facem ca sa dregem ceva, in loc sa lasam ce trebuie lasat?",
+      crossRefs: [
+        "Geneza 26:34-35",
+        "Geneza 36:2-3",
+        "2 Corinteni 7:10",
+        "1 Samuel 15:22",
+        "Isaia 29:13",
+        "Matei 15:8-9",
+        "Marcu 7:6-8",
+        "Coloseni 2:23",
+        "Evrei 12:16-17"
+      ],
+      forYourHeart:
+        "A priceput litera si a pierdut inima lucrului. Cate fapte facem ca sa dregem ceva, in loc sa lasam ce trebuie lasat?"
+    },
+    {
+      id: "geneza-28-10-12",
+      ref: "Geneza 28:10-12",
+      heading: "O piatra sub cap",
+      text:
+        "Iacov a plecat din Beer-Seba, si si-a luat drumul spre Haran. A ajuns intr-un loc unde a ramas peste noapte, caci asfintise soarele. A luat o piatra de acolo, a pus-o capatai, si s-a culcat in locul acela. Si a visat o scara rezemata de pamant, al carei varf ajungea pana la cer. Ingerii lui Dumnezeu se suiau si se pogorau pe scara aceea.",
+      teaching:
+        "Sa ne oprim aici si sa privim bine in ce stare este omul acesta.\n\nA plecat din Beer-Seba. Adica din casa in care se nascuse, unde erau turmele, robii, cortul cald si masa pusa.\n\nEste singur. Nu se pomeneste nici o slugă cu el.\n\nFuge, fiindca fratele lui vrea sa-l omoare.\n\nSi a plecat cu o minciuna in urma, si cu numele stricat in casa lui.\n\nIa aminte la vorba: caci asfintise soarele.\n\nS-a oprit nu fiindca a ajuns undeva, ci fiindca s-a facut intuneric. A ramas unde l-a prins noaptea.\n\nSi ia aminte la piatra: a luat o piatra de acolo, a pus-o capatai.\n\nUn tanar dintr-o casa bogata, culcat pe pamant gol, cu o piatra sub cap.\n\nSe cuvine sa luam bine seama la ceasul acesta, fiindca este cea mai de jos noapte a vietii lui.\n\nSi tocmai acolo i Se arata Dumnezeu.\n\nNu in cortul parintesc. Nu la altarul lui Avraam. Nu dupa vreo rugaciune — nu scrie nicaieri ca s-ar fi rugat inainte de a se culca.\n\nDumnezeu vine peste un om care nu Il cauta.\n\nApoi ia aminte la ce vede: o scara rezemata de pamant, al carei varf ajungea pana la cer.\n\nSi ia aminte in ce ordine se misca ingerii: se suiau si se pogorau.\n\nIntai se suiau.\n\nAdica erau deja aici, jos, langa el, inainte ca el sa fi vazut ceva.\n\nSa cantarim bine ce inseamna asta. Cerul lucra langa el pe cand el credea ca este singur in mijlocul campului.\n\nSi mai ia aminte la un lucru: scara este rezemata de pamant si ajunge la cer.\n\nOamenii de la Babel incercasera sa faca un turn cu varful pana la cer, si nu au putut.\n\nNu se urca de jos in sus. Se pogoara de sus in jos.\n\nIar Domnul Isus va spune el insusi, catre Natanael, ca vor vedea cerul deschis si pe ingerii lui Dumnezeu suindu-se si pogorandu-se peste Fiul omului.\n\nDeci scara nu este un lucru, ci o Persoana.\n\nEl este drumul dintre cer si pamantul acesta pe care noi ne culcam cu piatra sub cap.",
+      crossRefs: [
+        "Ioan 1:51",
+        "Ioan 14:6",
+        "1 Timotei 2:5",
+        "Geneza 11:4",
+        "Evrei 1:14",
+        "Psalmul 34:7",
+        "2 Imparati 6:16-17",
+        "Efeseni 2:13",
+        "Romani 5:8"
+      ],
+      forYourHeart:
+        "Ingerii se suiau intai: cerul lucra langa el pe cand se credea singur in camp. Si nu se urca de jos in sus — scara s-a pogorat la tine."
+    },
+    {
+      id: "geneza-28-13-15",
+      ref: "Geneza 28:13-15",
+      heading: "Cine sta in capul scarii",
+      text:
+        "Si Domnul statea deasupra ei, si zicea: „Eu sunt Domnul, Dumnezeul tatalui tau Avraam, si Dumnezeul lui Isaac. Pamantul pe care esti culcat, ti-l voi da tie si semintei tale. Samanta ta va fi ca pulberea pamantului; te vei intinde la apus si la rasarit, la miazanoapte si la miazazi; si toate familiile pamantului vor fi binecuvantate in tine si in samanta ta. Iata, Eu sunt cu tine; te voi pazi pretutindeni pe unde vei merge, si te voi aduce inapoi in tara aceasta; caci nu te voi parasi, pana nu voi implini ce-ti spun.\"",
+      teaching:
+        "Ia aminte la ce vede in capul scarii: nu ingeri, ci pe Domnul insusi.\n\nSi ia aminte la cel dintai lucru pe care il spune: Eu sunt Domnul, Dumnezeul tatalui tau Avraam, si Dumnezeul lui Isaac.\n\nSe cuvine sa luam seama la ce nu spune inca: nu spune Dumnezeul tau.\n\nAsta va veni mai tarziu, dupa Iaboc.\n\nDar iata ca Se prezinta el insusi unui om care Il cunostea doar din povestile casei.\n\nApoi ia aminte la fagaduinta pamantului: pamantul pe care esti culcat, ti-l voi da tie.\n\nSa cantarim bine. Omul acela nu avea nimic sub el decat tarana si o piatra.\n\nSi tocmai atunci i se spune: pamantul pe care esti culcat este al tau.\n\nDumnezeu ii vorbeste despre mostenire in ceasul in care nu are nici perna.\n\nApoi ia aminte la cele patru zari: la apus si la rasarit, la miazanoapte si la miazazi.\n\nOmul acesta fugea pe un singur drum, spre miazanoapte, cat mai departe. Iar Dumnezeu ii deschide toate zarile.\n\nSi acum ia aminte la cele patru fagaduinte din urma, fiindca ele sunt hrana a mii de credinciosi de atunci incoace.\n\nCea dintai: Iata, Eu sunt cu tine.\n\nNu voi fi cand vei fi mai bun. Sunt acum, cu omul care fuge dupa ce a mintit.\n\nA doua: te voi pazi pretutindeni pe unde vei merge.\n\nPretutindeni. Si in casa lui Laban, si in cei douazeci de ani de robie, si pe drumul de intoarcere.\n\nSe cuvine sa luam bine seama: in vremea aceea, oamenii credeau ca fiecare dumnezeu are tinutul lui si ca la hotar ramai fara ocrotire.\n\nDomnul ii spune: merg cu tine peste hotar.\n\nA treia: te voi aduce inapoi in tara aceasta.\n\nDeci fuga aceasta are un capat, si capatul este acasa.\n\nA patra, si cea mai frumoasa: caci nu te voi parasi, pana nu voi implini ce-ti spun.\n\nSa ne oprim aici si sa nu trecem cu usurinta.\n\nDumnezeu isi leaga prezenta de implinirea cuvantului Sau. Cu alte cuvinte: nu plec de langa tine cat inca mai am ceva de facut cu tine.\n\nIar Cuvantul Lui nu se sfarseste niciodata de implinit.\n\nSi ia aminte la un lucru care ne opreste: in toate aceste randuri nu este nici o mustrare.\n\nNici o vorba despre blana de ied. Nici o conditie. Nici un daca.\n\nSe cuvine sa spunem limpede: asta nu inseamna ca minciuna a fost trecuta cu vederea — el o va plati douazeci de ani.\n\nInseamna ca harul lui Dumnezeu nu asteapta sa fim in randuiala ca sa ni se arate.",
+      crossRefs: [
+        "Geneza 12:3",
+        "Geneza 13:14-16",
+        "Geneza 31:3",
+        "Geneza 35:1",
+        "Deuteronom 31:6",
+        "Iosua 1:5",
+        "Evrei 13:5",
+        "Matei 28:20",
+        "Filipeni 1:6",
+        "Romani 5:8"
+      ],
+      forYourHeart:
+        "Nu te voi parasi pana nu voi implini ce-ti spun. Nu pleaca de langa tine cat mai are ceva de facut cu tine — si nu asteapta sa fii in randuiala ca sa ti Se arate."
+    },
+    {
+      id: "geneza-28-16-19",
+      ref: "Geneza 28:16-19",
+      heading: "Si eu n-am stiut",
+      text:
+        "Iacov s-a trezit din somn, si a zis: „Cu adevarat, Domnul este in locul acesta, si eu n-am stiut.\" I-a fost frica, si a zis: „Cat de infricosat este locul acesta! Aici este casa lui Dumnezeu, aici este poarta cerurilor!\" Si Iacov s-a sculat dis de dimineata, a luat piatra pe care o pusese capatai, a pus-o ca stalp de aducere aminte, si a turnat untdelemn pe varful ei. El a pus locului acestuia numele Betel; dar mai inainte cetatea se chema Luz.",
+      teaching:
+        "Ia aminte la vorba cu care se trezeste, fiindca este una dintre cele mai adevarate din toata Scriptura: Domnul este in locul acesta, si eu n-am stiut.\n\nSa ne oprim si sa cantarim bine.\n\nDumnezeu era acolo si inainte de vis. Nu a venit odata cu scara.\n\nSingurul lucru care s-a schimbat este ca omul a aflat.\n\nSe cuvine sa luam mangaiere si mustrare de aici deodata.\n\nMangaiere: sunt locuri prin care ai trecut plangand si in care Dumnezeu era de fata, iar tu n-ai stiut.\n\nMustrare: cate nopti am dormit cu Dumnezeu langa noi si am crezut ca suntem singuri.\n\nApoi ia aminte la ce simte: i-a fost frica.\n\nNu s-a bucurat intai. S-a temut.\n\nAsa este de fiecare data cand un om intalneste cu adevarat pe Dumnezeu: nu se simte bine, se simte mic.\n\nSi ia aminte la vorba: cat de infricosat este locul acesta!\n\nEra un camp gol. Nici altar, nici cetate, nici cort.\n\nDeci nu locul il facea sfant. Prezenta Lui il facea.\n\nApoi ia aminte la doua numiri pe care le da: aici este casa lui Dumnezeu, aici este poarta cerurilor.\n\nOmul care fugea dintr-o casa gaseste casa lui Dumnezeu tocmai in mijlocul pustiului.\n\nSi ia aminte la ce face de dimineata: se scoala dis de dimineata.\n\nCand un om a intalnit cerul, nu mai doarme pana tarziu.\n\nIa piatra care ii fusese capatai si o pune stalp de aducere aminte.\n\nSa luam bine seama la acest amanunt: piatra pe care isi odihnise capul in cea mai grea noapte ajunge semn de pomenire.\n\nCe ne-a fost cel mai greu ajunge, la Dumnezeu, cel mai de pret semn.\n\nApoi toarna untdelemn pe varful ei — semnul prin care se punea deoparte pentru Dumnezeu un lucru.\n\nSi ia aminte la nume. Locul se chema Luz, adica migdal. Un nume obisnuit, de asezare oarecare.\n\nEl il numeste Betel, adica Casa lui Dumnezeu.\n\nSe cuvine sa tinem minte lucrul acesta: cand Dumnezeu Se intalneste cu un om intr-un loc, locul acela isi schimba numele pentru totdeauna in viata lui.",
+      words: [
+        {
+          original: "בֵּית־אֵל",
+          transliteration: "Bet-El",
+          language: "ebraica",
+          meaning: "casa lui Dumnezeu; numele dat de Iacov locului numit mai inainte Luz."
+        }
+      ],
+      crossRefs: [
+        "Geneza 35:1-7",
+        "Exod 3:5-6",
+        "Isaia 6:5",
+        "Luca 5:8",
+        "Apocalipsa 1:17",
+        "Psalmul 139:7-10",
+        "Matei 18:20",
+        "Fapte 17:27-28",
+        "Iosua 4:5-7"
+      ],
+      forYourHeart:
+        "Domnul era acolo si inainte de vis; singurul lucru schimbat este ca el a aflat. Sunt locuri prin care ai trecut plangand, si El era de fata, iar tu n-ai stiut."
+    },
+    {
+      id: "geneza-28-20-22",
+      ref: "Geneza 28:20-22",
+      heading: "Juramantul unui negustor",
+      text:
+        "Iacov a facut o juruinta, si a zis: „Daca va fi Dumnezeu cu mine si ma va pazi in timpul calatoriei pe care o fac, daca-mi va da paine sa mananc si haine sa ma imbrac, si daca ma voi intoarce in pace in casa tatalui meu, atunci Domnul va fi Dumnezeul meu; piatra aceasta, pe care am pus-o ca stalp de aducere aminte, va fi casa lui Dumnezeu, si Iti voi da a zecea parte din tot ce-mi vei da.\"",
+      teaching:
+        "Sa ne oprim aici si sa fim cinstiti cu textul, fiindca randurile acestea se citesc de obicei prea frumos.\n\nIa aminte cu ce cuvant incepe: daca.\n\nSi il repeta de trei ori.\n\nDumnezeu tocmai ii spusese, fara nici o conditie: Iata, Eu sunt cu tine; te voi pazi pretutindeni pe unde vei merge; te voi aduce inapoi.\n\nIar el raspunde: daca va fi Dumnezeu cu mine, daca ma va pazi, daca ma voi intoarce in pace.\n\nSa cantarim bine ce face aici. Ia fagaduintele lui Dumnezeu si le preface in conditii de targ.\n\nEste tocmai omul pe care il stim: cel care s-a targuit pentru dreptul de intai nascut cu o strachina de linte.\n\nAcum se targuieste cu Dumnezeu.\n\nSe cuvine sa spunem asta limpede, dar sa nu ne oprim aici, fiindca ar fi nedrept.\n\nIa aminte cat de putin cere: paine sa mananc si haine sa ma imbrac.\n\nNu cere avere, nu cere stapanire, nu cere razbunare pe fratele lui.\n\nCere painea si haina.\n\nApostolul Pavel va scrie mai tarziu: daca avem cu ce sa ne hranim si cu ce sa ne imbracam, ne va fi de ajuns.\n\nIar Domnul Isus ne-a invatat sa cerem painea cea de toate zilele.\n\nDeci este ceva copilaresc si sincer in cererea lui.\n\nApoi ia aminte la ce fagaduieste: atunci Domnul va fi Dumnezeul meu.\n\nIata ce lipsea pana acum. Il stia ca Dumnezeul tatalui sau si al bunicului sau. Vrea sa ajunga al lui.\n\nSi se cuvine sa spunem cu bucurie ca a ajuns. La Iaboc, dupa douazeci de ani si o noapte de lupta, va primi nume nou; iar la sfarsitul vietii va vorbi despre Dumnezeul inaintea caruia au umblat parintii lui si care l-a hranit ca un pastor toata viata lui.\n\nDeci de aici incepe drumul, cu un targ. Si se sfarseste cu inchinare, rezemat in varful toiagului.\n\nDumnezeu are rabdare cu inceputurile stangace.\n\nSi ia aminte la vorba din urma: Iti voi da a zecea parte din tot ce-mi vei da.\n\nEste a doua zeciuiala pomenita in Scriptura, dupa cea a lui Avraam catre Melhisedec.\n\nUn om care nu avea decat un toiag fagaduieste a zecea parte din ce nu are inca.\n\nSe cuvine sa luam aminte la asta: se poate fagadui din saracie, cand nu ai nimic in mana — si tocmai atunci se vede ce crede omul despre Dumnezeu.\n\nIar Dumnezeu nu i-a raspuns la niciun daca. Si-a tinut cuvantul intreg.",
+      crossRefs: [
+        "Geneza 14:20",
+        "Geneza 31:13",
+        "Geneza 35:1-3",
+        "Geneza 32:24-30",
+        "Geneza 48:15-16",
+        "Evrei 11:21",
+        "1 Timotei 6:8",
+        "Matei 6:11",
+        "Matei 6:33",
+        "Maleahi 3:10"
+      ],
+      forYourHeart:
+        "Dumnezeu ii fagaduise fara nici o conditie, iar el a raspuns cu trei daca. Si totusi El nu S-a suparat pe inceputul acela stangaci — are rabdare cu inceputurile."
+    }
+  ],
+  prayer:
+    "Doamne Dumnezeule, Iti multumim ca Te pogori la oameni care fug, si ca deschizi cerul in noptile in care noi credem ca suntem singuri.\n\nDeschide-ne ochii sa vedem ca esti in locul acesta, chiar daca noi nu stim.\n\nFa din pietrele care ne-au fost capatai in vremurile grele semne de aducere aminte pentru bunatatea Ta.\n\nIarta-ne cand facem targuri cu Tine in loc sa Te credem pe cuvant, si ai rabdare cu inceputurile noastre stangace.\n\nSi du-ne, ca pe Iacov, de la daca pana la ziua in care vom putea spune din toata inima: Domnul este Dumnezeul meu. Amin."
+}
