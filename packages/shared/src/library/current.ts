@@ -3,16 +3,25 @@ import type { LibraryCourse, LibraryShelf } from "./index.js"
 import * as base from "./index.js"
 import { DOCTRINE_BIBLIA_LESSONS } from "./doctrineBiblia2.js"
 import { DOCTRINE_BISERICA_LESSONS } from "./doctrineBiserica2.js"
+import { RUGACIUNE_INCEPUT_LESSONS } from "./rugaciuneInceput3.js"
 
 export type { CourseState, LibraryCourse, LibraryShelf } from "./index.js"
 export * from "./doctrineBiblia.js"
 export * from "./doctrineBiblia2.js"
 export * from "./doctrineBiserica.js"
 export * from "./doctrineBiserica2.js"
+export * from "./rugaciuneInceput.js"
+export * from "./rugaciuneInceput2.js"
+export * from "./rugaciuneInceput3.js"
 
 const liveCourses: Record<string, string[]> = {
   doctrine_c1_biblia: ["biblia_l1", "biblia_l2", "biblia_l3", "biblia_l4", "biblia_l5", "biblia_l6"],
   doctrine_c3_biserica: ["biserica_l1", "biserica_l2", "biserica_l3", "biserica_l4", "biserica_l5"],
+  lib_rug_inceput: [
+    "rug_inceput_l1", "rug_inceput_l2", "rug_inceput_l3",
+    "rug_inceput_l4", "rug_inceput_l5", "rug_inceput_l6",
+    "rug_inceput_l7", "rug_inceput_l8", "rug_inceput_l9",
+  ],
 }
 
 function openWrittenCourse(course: LibraryCourse): LibraryCourse {
@@ -37,6 +46,7 @@ export const LIBRARY_LESSONS: Lesson[] = [
   ...base.LIBRARY_LESSONS,
   ...DOCTRINE_BIBLIA_LESSONS,
   ...DOCTRINE_BISERICA_LESSONS,
+  ...RUGACIUNE_INCEPUT_LESSONS,
 ]
 export function findLibraryLesson(id: string): Lesson | undefined { return LIBRARY_LESSONS.find((l) => l.id === id) }
 export function libraryCourseLessons(courseId: string): Lesson[] {
@@ -45,5 +55,5 @@ export function libraryCourseLessons(courseId: string): Lesson[] {
 }
 
 export const WRITING_ORDER: string[] = base.WRITING_ORDER.filter(
-  (id) => id !== "doctrine_c1_biblia" && id !== "doctrine_c3_biserica",
+  (id) => id !== "doctrine_c1_biblia" && id !== "doctrine_c3_biserica" && id !== "lib_rug_inceput",
 )
