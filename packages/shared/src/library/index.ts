@@ -2,6 +2,7 @@ import type { Lesson } from "../domain.js"
 import { DOCTRINE_HAR_LESSONS } from "./doctrineHar2.js"
 import { DOCTRINE_VESNICIA_LESSONS } from "./doctrineVesnicia2.js"
 import { PILDE_TATAL_LESSONS } from "./pildeTatal2.js"
+import { PILDE_FIUL_LESSONS } from "./pildeFiul2.js"
 
 export * from "./doctrineHar.js"
 export * from "./doctrineHar2.js"
@@ -9,6 +10,8 @@ export * from "./doctrineVesnicia.js"
 export * from "./doctrineVesnicia2.js"
 export * from "./pildeTatal.js"
 export * from "./pildeTatal2.js"
+export * from "./pildeFiul.js"
+export * from "./pildeFiul2.js"
 
 /*
  * Biblioteca Emanus — raftul de cursuri, dupa SUBIECT, nu dupa cine e omul.
@@ -190,10 +193,16 @@ const shelfCuvantul: LibraryShelf = {
     {
       id: "parables_c3_fiul",
       title: "Pildele — cum trăiește un fiu",
-      forWhom: "Înțelegi ce a făcut Iisus și întrebi „bun, și acum concret ce fac?".",
+      forWhom: "Înțelegi ce a făcut Iisus și întrebi: bun, și acum concret ce fac?",
       plannedLessons: 5,
-      lessonIds: [],
-      state: "planned",
+      lessonIds: [
+        "pilda_samariteanul",
+        "pilda_talantii",
+        "pilda_doi_fii",
+        "pilda_casa_stanca",
+        "pilda_smochinul",
+      ],
+      state: "live",
       source: "docs/16-modul-pilde.md §Cursul 3",
     },
     {
@@ -509,6 +518,7 @@ export const LIBRARY_LESSONS: Lesson[] = [
   ...DOCTRINE_HAR_LESSONS,
   ...DOCTRINE_VESNICIA_LESSONS,
   ...PILDE_TATAL_LESSONS,
+  ...PILDE_FIUL_LESSONS,
 ]
 
 export function findLibraryLesson(id: string): Lesson | undefined {
@@ -532,7 +542,6 @@ export function libraryCourseLessons(courseId: string): Lesson[] {
  * scriere, docs/16 §Ordinea de scriere și din chat. Lista e pentru noi.
  */
 export const WRITING_ORDER: string[] = [
-  "parables_c3_fiul",
   "parables_c2_imparatia",
   "parables_c4_vesnicia",
   "doctrine_c1_biblia",
