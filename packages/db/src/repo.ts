@@ -108,7 +108,7 @@ export async function ensureUser(userId: string = DEMO_USER_ID): Promise<void> {
     create: {
       id: userId,
       anonName: "Explorator",
-      avatar: "🌱",
+      avatar: "\ud83c\udf31",
       categoryId: "teens12_18" as any,
       consent: { termsAccepted: true, dataProcessing: true } as any,
     },
@@ -265,16 +265,21 @@ export async function getDashboard(
 
 // --- Comunitate (workbook §16.5) ---
 
+// `kind` si `prayCount` sunt obligatorii in CommunityPostView. Schema Prisma poate
+// sa nu aiba inca aceste coloane, deci se completeaza cu valori implicite sigure:
+// un post obisnuit, cu zero rugaciuni.
 function toPost(row: any): CommunityPostView {
   return {
     id: row.id,
     userId: row.userId,
     author: {
       anonName: row.user?.anonName ?? "Anonim",
-      avatar: row.user?.avatar ?? "🌱",
+      avatar: row.user?.avatar ?? "\ud83c\udf31",
     },
     categoryId: row.categoryId,
     body: row.body,
+    kind: row.kind === "prayer_request" ? "prayer_request" : "post",
+    prayCount: typeof row.prayCount === "number" ? row.prayCount : 0,
     createdAt: row.createdAt ? row.createdAt.toISOString() : new Date().toISOString(),
     status: row.status,
   }
