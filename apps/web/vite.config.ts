@@ -2,7 +2,6 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import { VitePWA } from "vite-plugin-pwa"
 
-// PWA: manifest + service worker (offline pe app shell + lecția curentă, workbook §15).
 export default defineConfig({
   plugins: [
     react(),
@@ -21,31 +20,40 @@ export default defineConfig({
         icons: [
           { src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
           { src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
-          { src: "/icons/icon-512-maskable.png", sizes: "512x512", type: "image/png", purpose: "maskable" }
-        ]
+          { src: "/icons/icon-512-maskable.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+        ],
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
-        // Handlerele de push trăiesc într-un fișier separat, importat în SW-ul generat.
         importScripts: ["push-sw.js"],
-        runtimeCaching: [
-          {
-            urlPattern: ({ url }) => url.pathname.startsWith("/api"),
-            handler: "NetworkFirst",
-            options: { cacheName: "emanus-api", networkTimeoutSeconds: 3 }
-          }
-        ]
-      }
-    })
+        runtimeCaching: [{
+          urlPattern: ({ url }) => url.pathname.startsWith("/api"),
+          handler: "NetworkFirst",
+          options: { cacheName: "emanus-api", networkTimeoutSeconds: 3 },
+        }],
+      },
+    }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules/react") || id.includes("node_modules/lucide-react")) return "vendor-react"
+          if (id.includes("packages/shared/dist/library/")) return "content-library"
+          if (id.includes("packages/shared/dist/paths/")) return "content-paths"
+          return undefined
+        },
+      },
+    },
+  },
   server: {
     port: 5173,
     proxy: {
       "/api": {
         target: "http://localhost:3000",
         changeOrigin: true,
-        rewrite: (p) => p.replace(/^\/api/, "")
-      }
-    }
-  }
+        rewrite: (p) => p.replace(/^\/api/, ""),
+      },
+    },
+  },
 })
