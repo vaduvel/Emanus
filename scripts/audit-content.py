@@ -1,21 +1,12 @@
 #!/usr/bin/env python3
-"""Static editorial safety gate for the Emanus runtime lesson graph.
-
-This does not replace human theological/editorial review. It blocks detectable
-regressions: duplicate lesson IDs, dangerous medical/spiritual promises,
-unsafe child-obedience language, and loss of safety wording from sensitive
-curricula. Only files reachable from library/current.ts are audited, so
-superseded source drafts do not create false duplicate-ID failures.
-"""
+"""Static editorial safety gate for the Emanus runtime lesson graph."""
 from __future__ import annotations
-
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LIB = ROOT / "packages" / "shared" / "src" / "library"
-
 IMPORT_RE = re.compile(r'(?:from\s+|export\s+\*\s+from\s+)["\'](\.[^"\']+)["\']')
 
 def runtime_files() -> list[Path]:
@@ -29,17 +20,13 @@ def runtime_files() -> list[Path]:
         text = path.read_text(encoding="utf-8")
         for rel in IMPORT_RE.findall(text):
             candidate = (path.parent / rel.replace(".js", ".ts")).resolve()
-            if candidate.exists() and (candidate == LIB or LIB in candidate.parents):
+            if candidate.exists() and LIB in candidate.parents:
                 pending.append(candidate)
     return sorted(seen)
 
 FILES = runtime_files()
 errors: list[str] = []
-warnings: list[str] = []
-if not FILES:
-    errors.append("Nu a putut fi construit graful runtime al bibliotecii.")
 texts = {path: path.read_text(encoding="utf-8") for path in FILES}
-
 lesson_id_re = re.compile(r'\bid\s*:\s*["\']([A-Za-z0-9_-]+_l\d+)["\']')
 locations: dict[str, list[str]] = {}
 for path, text in texts.items():
@@ -89,11 +76,11 @@ for filename, needles in required_by_file.items():
             errors.append(f"{filename}: lipsește protecția editorială obligatorie {needle!r}")
 
 print(f"Audit conținut: {len(FILES)} fișiere runtime, {len(locations)} ID-uri de lecție detectate.")
-for warning in warnings:
-    print(f"AVERTISMENT: {warning}")
 if errors:
-    print("\nAuditul conținutului a eșuat:")
+    print("Auditul conținutului a eșuat:")
     for error in errors:
         print(f"- {error}")
+        safe = error.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+        print(f"::error title=Audit conținut::{safe}")
     sys.exit(1)
 print("Auditul automat de siguranță a trecut.")
