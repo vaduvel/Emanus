@@ -70,6 +70,26 @@ pnpm content:publish
 intră niciodată în `apps/web`. CI verifică manifestul, toate țintele de ramură
 și payload-urile obligatorii înainte ca un release să poată fi publicat.
 
+### Standardul interactiv
+
+Autorul sau agentul editorial scrie în continuare ideea biblică, alegerile și
+ramurile specifice lecției. La generarea release-ului,
+`packages/shared/src/interactionEnrichment.ts` completează determinist standardul
+minim, fără AI la runtime:
+
+- fiecare opțiune fără ramură primește confirmare imediată, fără judecată;
+- fiecare lecție are jurnal, reflecție sau declarație;
+- fiecare curs are cel puțin o selecție multiplă;
+- ultima lecție are o declarație voluntară, care poate fi sărită;
+- formulările generate sunt adaptate pentru `0-5`, `6-11` și publicul matur;
+- durata estimată crește când sunt adăugate interacțiuni.
+
+Pașii generați folosesc sufixele `__course_focus`, `__reflection` și
+`__closing_declaration`. Nu se scriu manual cu aceste ID-uri. Dacă lecția are
+deja o interacțiune editorială mai bună, aceasta are prioritate. Ramurile cu
+răspuns specific trebuie scrise de autor; generatorul nu inventează teologie și
+nu deduce traume dintr-o alegere.
+
 ## Endpoints (Faza 1)
 - `GET /health`
 - `GET /public/first-lesson`

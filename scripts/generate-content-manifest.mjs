@@ -13,6 +13,9 @@ import {
   LIBRARY_LESSONS,
   SHELVES,
 } from "../packages/shared/dist/library/current.js"
+import {
+  enrichLessonCollection,
+} from "../packages/shared/dist/interactionEnrichment.js"
 
 const outputUrl = new URL(
   "../packages/shared/src/contentCatalog.generated.ts",
@@ -34,6 +37,27 @@ function lessonSummary(lesson) {
   }
 }
 
+const rawLessons = new Map()
+for (const lesson of [
+  ...PATHS.flatMap((path) => path.lessons),
+  ...DOCTRINE_LESSONS,
+  ...LIBRARY_LESSONS,
+]) {
+  rawLessons.set(lesson.id, lesson)
+}
+
+const ageHints = Object.fromEntries(
+  SHELVES.flatMap((shelf) =>
+    shelf.courses.map((course) => [course.id, course.ageHint]),
+  ),
+)
+const versionedLessons = new Map(
+  enrichLessonCollection([...rawLessons.values()], ageHints).map((lesson) => [
+    lesson.id,
+    lesson,
+  ]),
+)
+
 const payload = {
   schemaVersion: 1,
   rooms: ROOMS,
@@ -44,10 +68,14 @@ const payload = {
     roomId: path.roomId,
     title: path.title,
     promise: path.promise,
-    lessons: path.lessons.map(lessonSummary),
+    lessons: path.lessons.map((lesson) =>
+      lessonSummary(versionedLessons.get(lesson.id) ?? lesson),
+    ),
     practices: path.practices,
   })),
-  doctrineLessons: DOCTRINE_LESSONS.map(lessonSummary),
+  doctrineLessons: DOCTRINE_LESSONS.map((lesson) =>
+    lessonSummary(versionedLessons.get(lesson.id) ?? lesson),
+  ),
   shelves: SHELVES.map((shelf) => ({
     id: shelf.id,
     title: shelf.title,
@@ -55,15 +83,6 @@ const payload = {
     gated: shelf.gated ?? false,
     courses: shelf.courses,
   })),
-}
-
-const versionedLessons = new Map()
-for (const lesson of [
-  ...PATHS.flatMap((path) => path.lessons),
-  ...DOCTRINE_LESSONS,
-  ...LIBRARY_LESSONS,
-]) {
-  versionedLessons.set(lesson.id, lesson)
 }
 
 const contentVersion = createHash("sha256")

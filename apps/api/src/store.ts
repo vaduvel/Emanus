@@ -23,6 +23,8 @@ import {
 import { LIBRARY_LESSONS } from "@emanus/shared/library"
 import { mohlerNotForMe } from "@emanus/shared/lesson-mohler"
 import { PATHS } from "@emanus/shared/paths"
+import { STATIC_CONTENT_MANIFEST } from "@emanus/shared/content-catalog"
+import { enrichLessonCollection } from "@emanus/shared/interaction-enrichment"
 import type {
   Category,
   CommunityPostKind,
@@ -89,13 +91,24 @@ export interface GrowthProfileResult {
 // --- Fallback in-memory (dev fără DB), din seed-ul partajat @emanus/shared ---
 const memModules = new Map<string, Module>([[teensM1C1.module.id, teensM1C1.module]])
 const memCourses = new Map<string, Course>([[teensM1C1.course.id, teensM1C1.course]])
-const memLessons = new Map<string, Lesson>(
+const memLessonSource = new Map<string, Lesson>(
   [
     ...teensM1C1.lessons,
     ...PATHS.flatMap((path) => path.lessons),
     ...LIBRARY_LESSONS,
     ...mohlerNotForMe.lessons,
   ].map((lesson) => [lesson.id, lesson]),
+)
+const memLessonAgeHints = Object.fromEntries(
+  STATIC_CONTENT_MANIFEST.shelves.flatMap((shelf) =>
+    shelf.courses.map((course) => [course.id, course.ageHint]),
+  ),
+)
+const memLessons = new Map<string, Lesson>(
+  enrichLessonCollection(
+    [...memLessonSource.values()],
+    memLessonAgeHints,
+  ).map((lesson) => [lesson.id, lesson]),
 )
 const memGam = new Map<string, GamState>()
 const memGrowth = new Map<string, GrowthScore[]>()

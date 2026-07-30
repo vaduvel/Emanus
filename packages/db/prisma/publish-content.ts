@@ -7,22 +7,61 @@ import { mohlerNotForMe } from "@emanus/shared/lesson-mohler"
 import { PATHS } from "@emanus/shared/paths"
 import { STATIC_CONTENT_MANIFEST } from "@emanus/shared/content-catalog"
 import type { Lesson } from "@emanus/shared/domain"
+import { enrichLessonCollection } from "@emanus/shared/interaction-enrichment"
 
 config({ path: fileURLToPath(new URL("../../../.env", import.meta.url)) })
 
-const lessons = new Map<string, Lesson>()
+const rawLessons = new Map<string, Lesson>()
 for (const lesson of [
   ...PATHS.flatMap((path) => path.lessons),
   ...LIBRARY_LESSONS,
   ...mohlerNotForMe.lessons,
   ...teensM1C1.lessons,
 ]) {
-  const existing = lessons.get(lesson.id)
+  const existing = rawLessons.get(lesson.id)
   if (existing && JSON.stringify(existing) !== JSON.stringify(lesson)) {
     throw new Error(`Lecția ${lesson.id} are două definiții diferite.`)
   }
-  lessons.set(lesson.id, lesson)
+  rawLessons.set(lesson.id, lesson)
 }
+
+const ageHints = Object.fromEntries(
+  STATIC_CONTENT_MANIFEST.shelves.flatMap((shelf) =>
+    shelf.courses.map((course) => [course.id, course.ageHint]),
+  ),
+)
+const lessons = new Map(
+  enrichLessonCollection([...rawLessons.values()], ageHints).map((lesson) => [
+    lesson.id,
+    lesson,
+  ]),
+)
+const enrichedAgain = new Map(
+  enrichLessonCollection([...lessons.values()], ageHints).map((lesson) => [
+    lesson.id,
+    lesson,
+  ]),
+)
+for (const [id, lesson] of lessons) {
+  if (JSON.stringify(lesson) !== JSON.stringify(enrichedAgain.get(id))) {
+    throw new Error(`Îmbogățirea interactivă nu este idempotentă pentru ${id}.`)
+  }
+}
+
+const ANSWER_INPUT_TYPES = new Set([
+  "choice",
+  "multi_choice",
+  "check_in",
+  "quiz",
+  "journal",
+  "reflection",
+  "declaration",
+])
+const WRITTEN_RESPONSE_TYPES = new Set([
+  "journal",
+  "reflection",
+  "declaration",
+])
 
 function validateLesson(lesson: Lesson): void {
   if (!lesson.id || !lesson.courseId || !lesson.title.trim()) {
@@ -33,6 +72,12 @@ function validateLesson(lesson: Lesson): void {
   }
   if (lesson.steps.length === 0) {
     throw new Error(`Lecția ${lesson.id} nu are pași.`)
+  }
+  if (!lesson.steps.some((step) => ANSWER_INPUT_TYPES.has(step.type))) {
+    throw new Error(`Lecția ${lesson.id} nu cere niciun răspuns utilizatorului.`)
+  }
+  if (!lesson.steps.some((step) => WRITTEN_RESPONSE_TYPES.has(step.type))) {
+    throw new Error(`Lecția ${lesson.id} nu are reflecție sau răspuns liber.`)
   }
 
   const stepIds = new Set<string>()
@@ -47,8 +92,39 @@ function validateLesson(lesson: Lesson): void {
     if (step.type === "choice" && !step.choice?.options.length) {
       throw new Error(`Pasul ${lesson.id}/${step.id} nu are opțiuni.`)
     }
-    if (step.type === "multi_choice" && !step.multiChoice?.options.length) {
-      throw new Error(`Pasul multiplu ${lesson.id}/${step.id} nu are opțiuni.`)
+    if (step.choice) {
+      const optionIds = new Set<string>()
+      for (const option of step.choice.options) {
+        if (optionIds.has(option.id)) {
+          throw new Error(
+            `Pasul ${lesson.id}/${step.id} are opțiunea duplicată ${option.id}.`,
+          )
+        }
+        optionIds.add(option.id)
+        if (!option.branchStepId && !option.feedback?.trim()) {
+          throw new Error(
+            `Opțiunea ${lesson.id}/${step.id}/${option.id} nu are feedback sau ramură.`,
+          )
+        }
+      }
+    }
+    if (step.type === "multi_choice") {
+      const spec = step.multiChoice
+      if (!spec?.options.length) {
+        throw new Error(`Pasul multiplu ${lesson.id}/${step.id} nu are opțiuni.`)
+      }
+      const min = spec.minSelections ?? 1
+      const max = spec.maxSelections ?? spec.options.length
+      if (min < 0 || max < min || max > spec.options.length) {
+        throw new Error(
+          `Pasul multiplu ${lesson.id}/${step.id} are limite invalide.`,
+        )
+      }
+      if (new Set(spec.options.map((option) => option.id)).size !== spec.options.length) {
+        throw new Error(
+          `Pasul multiplu ${lesson.id}/${step.id} are opțiuni duplicate.`,
+        )
+      }
     }
     if (
       (step.type === "reflection" || step.type === "declaration") &&
@@ -71,6 +147,29 @@ function validateLesson(lesson: Lesson): void {
 
 for (const lesson of lessons.values()) validateLesson(lesson)
 
+const courses = new Map<string, Lesson[]>()
+for (const lesson of lessons.values()) {
+  const course = courses.get(lesson.courseId) ?? []
+  course.push(lesson)
+  courses.set(lesson.courseId, course)
+}
+for (const [courseId, course] of courses) {
+  const ordered = [...course].sort(
+    (a, b) => a.order - b.order || a.id.localeCompare(b.id),
+  )
+  if (
+    !ordered.some((lesson) =>
+      lesson.steps.some((step) => step.type === "multi_choice"),
+    )
+  ) {
+    throw new Error(`Cursul ${courseId} nu are selecție multiplă.`)
+  }
+  const finalLesson = ordered[ordered.length - 1]
+  if (!finalLesson?.steps.some((step) => step.type === "declaration")) {
+    throw new Error(`Ultima lecție din ${courseId} nu are declarație de încheiere.`)
+  }
+}
+
 const referencedIds = new Set([
   ...STATIC_CONTENT_MANIFEST.paths.flatMap((path) =>
     path.lessons.map((lesson) => lesson.id),
@@ -87,7 +186,8 @@ for (const id of referencedIds) {
   }
 }
 
-const rows = [...referencedIds].map((id) => lessons.get(id)!).map((lesson) => ({
+const releaseLessons = [...referencedIds].map((id) => lessons.get(id)!)
+const rows = releaseLessons.map((lesson) => ({
   id: lesson.id,
   course_id: lesson.courseId,
   sort_order: lesson.order,
@@ -100,10 +200,29 @@ const rows = [...referencedIds].map((id) => lessons.get(id)!).map((lesson) => ({
   steps: lesson.steps,
 }))
 
+const releaseOptions = releaseLessons.flatMap((lesson) =>
+  lesson.steps.flatMap((step) => step.choice?.options ?? []),
+)
+const interactionSummary = [
+  `${new Set(releaseLessons.map((lesson) => lesson.courseId)).size} cursuri`,
+  `${releaseLessons.filter((lesson) =>
+    lesson.steps.some((step) => WRITTEN_RESPONSE_TYPES.has(step.type)),
+  ).length} răspunsuri libere`,
+  `${releaseLessons.filter((lesson) =>
+    lesson.steps.some((step) => step.type === "multi_choice"),
+  ).length} selecții multiple`,
+  `${releaseLessons.filter((lesson) =>
+    lesson.steps.some((step) => step.type === "declaration"),
+  ).length} declarații`,
+  `${releaseOptions.filter((option) => option.feedback).length} opțiuni cu feedback`,
+  `${releaseOptions.filter((option) => option.branchStepId).length} opțiuni cu ramură`,
+].join(", ")
+
 if (process.argv.includes("--dry-run")) {
   console.log(
     `Conținut valid: ${STATIC_CONTENT_MANIFEST.contentVersion}, ${rows.length} lecții.`,
   )
+  console.log(`Acoperire interactivă: ${interactionSummary}.`)
   process.exit(0)
 }
 
@@ -132,4 +251,5 @@ if (error) throw error
 console.log(
   `Release publicat: ${STATIC_CONTENT_MANIFEST.contentVersion}, ${rows.length} lecții.`,
 )
+console.log(`Acoperire interactivă: ${interactionSummary}.`)
 console.log(data)

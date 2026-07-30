@@ -34,7 +34,11 @@ suplimentare în Emanus: opoziția rigidă „blame or forgive” și îndemnul 
 Consecințe implementate în Emanus:
 
 - playerul păstrează conversația acumulativă și răspunsurile utilizatorului;
-- există selecție multiplă, răspuns liber, feedback și ramuri;
+- toate cele 313 lecții publicabile cer un răspuns liber;
+- toate cele 52 de cursuri au selecție multiplă și declarație finală voluntară;
+- 831 de opțiuni primesc feedback contextual imediat, iar 53 duc în ramuri
+  editoriale proprii;
+- quizul, alegerea, jurnalul și pasul practic rămân în conversația acumulativă;
 - cursul despre neiertare cere povestirea rănii numai într-un câmp privat;
 - declarația de iertare acceptă și forma onestă „vreau să ajung să pot alege”;
 - înaintea pașilor sensibili apare un ecran separat de siguranță;

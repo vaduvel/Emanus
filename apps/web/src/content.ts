@@ -250,16 +250,34 @@ export async function loadLesson(id: string): Promise<Lesson> {
   }
 
   try {
-    const [{ findLessonAnywhere }, { LIBRARY_LESSONS }, { mohlerNotForMe }] =
+    const [
+      { PATHS },
+      { LIBRARY_LESSONS },
+      { mohlerNotForMe },
+      { enrichLessonCollection },
+    ] =
       await Promise.all([
         import("@emanus/shared/paths"),
         import("@emanus/shared/library"),
         import("@emanus/shared/lesson-mohler"),
+        import("@emanus/shared/interaction-enrichment"),
       ])
-    const local =
-      findLessonAnywhere(id) ??
-      LIBRARY_LESSONS.find((lesson) => lesson.id === id) ??
-      mohlerNotForMe.lessons.find((lesson) => lesson.id === id)
+    const source = new Map(
+      [
+        ...PATHS.flatMap((path) => path.lessons),
+        ...LIBRARY_LESSONS,
+        ...mohlerNotForMe.lessons,
+      ].map((lesson) => [lesson.id, lesson]),
+    )
+    const ageHints = Object.fromEntries(
+      activeManifest.shelves.flatMap((shelf) =>
+        shelf.courses.map((course) => [course.id, course.ageHint]),
+      ),
+    )
+    const local = enrichLessonCollection(
+      [...source.values()],
+      ageHints,
+    ).find((lesson) => lesson.id === id)
     if (local) {
       await writeCachedLesson(local)
       return local

@@ -244,7 +244,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_acasa",
           "order": 1,
           "title": "El S-a miscat primul",
-          "estMinutes": 10,
+          "estMinutes": 12,
           "memoryVerse": {
             "text": "Pe cand eram noi inca pacatosi, Hristos a murit pentru noi.",
             "ref": "Romani 5:8"
@@ -266,7 +266,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_acasa",
           "order": 3,
           "title": "S-a ispravit",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "A sters zapisul care sta impotriva noastra si l-a nimicit pironindu-l pe cruce.",
             "ref": "Coloseni 2:14"
@@ -310,7 +310,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_acasa",
           "order": 7,
           "title": "De aici incolo",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Harul lui Dumnezeu ne invața sa trăim in veacul de acum cu cumpătare, dreptate si evlavie.",
             "ref": "Tit 2:11-12"
@@ -426,7 +426,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_neiertare",
           "order": 7,
           "title": "Ce fac când revine",
-          "estMinutes": 10,
+          "estMinutes": 12,
           "memoryVerse": {
             "text": "Acela care a început în voi această bună lucrare o va isprăvi.",
             "ref": "Filipeni 1:6"
@@ -456,7 +456,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "course_doctrina",
           "order": 1,
           "title": "De unde știm că Biblia nu e inventată",
-          "estMinutes": 8,
+          "estMinutes": 11,
           "memoryVerse": {
             "text": "Toată Scriptura este insuflată de Dumnezeu și de folos ca să învețe, să mustre, să îndrepte.",
             "ref": "2 Timotei 3:16"
@@ -467,7 +467,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "course_doctrina",
           "order": 2,
           "title": "Ce înseamnă, de fapt, har",
-          "estMinutes": 8,
+          "estMinutes": 10,
           "memoryVerse": {
             "text": "Prin har ați fost mântuiți, prin credință. Nu prin fapte, ca să nu se laude nimeni.",
             "ref": "Efeseni 2:8-9"
@@ -478,7 +478,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "course_doctrina",
           "order": 3,
           "title": "Cine spune Iisus că este",
-          "estMinutes": 9,
+          "estMinutes": 11,
           "memoryVerse": {
             "text": "Eu sunt Calea, Adevărul și Viața. Nimeni nu vine la Tatăl decât prin Mine.",
             "ref": "Ioan 14:6"
@@ -502,7 +502,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_aproape",
           "order": 1,
           "title": "N-a plecat El",
-          "estMinutes": 10,
+          "estMinutes": 12,
           "memoryVerse": {
             "text": "Nicidecum nu te voi lasa si cu niciun chip nu te voi parasi.",
             "ref": "Evrei 13:5"
@@ -513,7 +513,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_aproape",
           "order": 2,
           "title": "Cand tace",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Eu mă încred in bunatatea Ta.",
             "ref": "Psalmul 13:5"
@@ -524,7 +524,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_aproape",
           "order": 3,
           "title": "Daca e ceva de pus in ordine",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Cerceteaza-ma, Dumnezeule, si cunoaste-mi inima!",
             "ref": "Psalmul 139:23"
@@ -546,7 +546,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_aproape",
           "order": 5,
           "title": "Cum citesc, ca sa nu fie degeaba",
-          "estMinutes": 12,
+          "estMinutes": 14,
           "memoryVerse": {
             "text": "Cuvantul Tau este o candela pentru picioarele mele.",
             "ref": "Psalmul 119:105"
@@ -568,7 +568,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_aproape",
           "order": 7,
           "title": "Statornicia",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Sa nu obosim in facerea binelui; la vremea potrivita, vom culege.",
             "ref": "Galateni 6:9"
@@ -596,7 +596,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_schimbare",
           "order": 1,
           "title": "Nu esti defect",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Te laud ca sunt o făptura atat de minunata.",
             "ref": "Psalmul 139:14"
@@ -607,7 +607,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_schimbare",
           "order": 2,
           "title": "De ce nu tine voința",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Dacă Fiul va va face slobozi, veti fi in adevar slobozi.",
             "ref": "Ioan 8:36"
@@ -662,7 +662,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_schimbare",
           "order": 7,
           "title": "Cum se schimba cineva, de fapt",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Acela care a inceput in voi aceasta buna lucrare o va isprăvi.",
             "ref": "Filipeni 1:6"
@@ -690,7 +690,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_har",
           "order": 1,
           "title": "Nu se cumpara",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Prin har ati fost mantuiti... este darul lui Dumnezeu.",
             "ref": "Efeseni 2:8"
@@ -723,7 +723,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_har",
           "order": 4,
           "title": "Atunci de ce sa mai fac ceva?",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Dragostea lui Hristos ne strange.",
             "ref": "2 Corinteni 5:14"
@@ -756,7 +756,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_har",
           "order": 7,
           "title": "Cum trăiesc ca un fiu",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Nu mai esti rob, ci fiu.",
             "ref": "Galateni 4:7"
@@ -784,7 +784,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_impreuna",
           "order": 1,
           "title": "El stie cum e",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Chiar dacă tatal meu si mama mea m-ar parasi, Domnul mă va primi.",
             "ref": "Psalmul 27:10"
@@ -806,7 +806,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_impreuna",
           "order": 3,
           "title": "Cand familia nu te ințelege",
-          "estMinutes": 12,
+          "estMinutes": 14,
           "memoryVerse": {
             "text": "Va primi de o suta de ori mai mult acum, in vremea de acum.",
             "ref": "Marcu 10:30"
@@ -839,7 +839,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_impreuna",
           "order": 6,
           "title": "Cum se gasesc oamenii",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Funia impletita in trei nu se rupe ușor.",
             "ref": "Eclesiastul 4:12"
@@ -850,7 +850,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_impreuna",
           "order": 7,
           "title": "De la singur, la al cuiva",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Purtați-va poverile unii altora.",
             "ref": "Galateni 6:2"
@@ -878,7 +878,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_umblare",
           "order": 1,
           "title": "Rugaciunea nu e monolog",
-          "estMinutes": 11,
+          "estMinutes": 12,
           "memoryVerse": {
             "text": "Oile Mele ascultă glasul Meu; Eu le cunosc, și ele vin după Mine.",
             "ref": "Ioan 10:27"
@@ -944,7 +944,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_umblare",
           "order": 7,
           "title": "Ce fac cu ce am primit",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Ne mangaie în toate necazurile noastre, pentru ca să putem mangaia pe cei ce se află în vreun necaz.",
             "ref": "2 Corinteni 1:4"
@@ -968,7 +968,7 @@ export const GENERATED_CONTENT_MANIFEST = {
       "courseId": "course_doctrina",
       "order": 1,
       "title": "De unde știm că Biblia nu e inventată",
-      "estMinutes": 8,
+      "estMinutes": 11,
       "memoryVerse": {
         "text": "Toată Scriptura este insuflată de Dumnezeu și de folos ca să învețe, să mustre, să îndrepte.",
         "ref": "2 Timotei 3:16"
@@ -979,7 +979,7 @@ export const GENERATED_CONTENT_MANIFEST = {
       "courseId": "course_doctrina",
       "order": 2,
       "title": "Ce înseamnă, de fapt, har",
-      "estMinutes": 8,
+      "estMinutes": 10,
       "memoryVerse": {
         "text": "Prin har ați fost mântuiți, prin credință. Nu prin fapte, ca să nu se laude nimeni.",
         "ref": "Efeseni 2:8-9"
@@ -990,7 +990,7 @@ export const GENERATED_CONTENT_MANIFEST = {
       "courseId": "course_doctrina",
       "order": 3,
       "title": "Cine spune Iisus că este",
-      "estMinutes": 9,
+      "estMinutes": 11,
       "memoryVerse": {
         "text": "Eu sunt Calea, Adevărul și Viața. Nimeni nu vine la Tatăl decât prin Mine.",
         "ref": "Ioan 14:6"
@@ -1896,5 +1896,5 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     }
   ],
-  "contentVersion": "e1ed553325aaef55"
+  "contentVersion": "f36d156626b9bc14"
 } as const
