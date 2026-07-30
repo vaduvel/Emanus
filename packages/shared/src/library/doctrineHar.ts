@@ -53,7 +53,7 @@ export const harD_l1: Lesson = {
       type: "name_struggle",
       order: 3,
       bubbles: [
-        { from: "guide", text: "Obiecția, în forma ei cea mai tare, sună așa: „Eu cred în Dumnezeu de când mă știu. Am fost botezat, mă închin, țin sărbătorile. Ce vrei mai mult de la mine?"" },
+        { from: "guide", text: "Obiecția, în forma ei cea mai tare, sună așa: „Eu cred în Dumnezeu de când mă știu. Am fost botezat, mă închin, țin sărbătorile. Ce vrei mai mult de la mine?”" },
         { from: "guide", text: "Și e o întrebare corectă. Nimeni nu are dreptul să o trateze de sus." },
       ],
     },
@@ -97,8 +97,8 @@ export const harD_l1: Lesson = {
       type: "truth_simple",
       order: 7,
       bubbles: [
-        { from: "guide", text: "„Nici din sânge" — nu prin cine ți-e neam. „Nici din voia vreunui om" — nu pentru că a hotărât cineva pentru tine când erai mic." },
-        { from: "guide", text: "Cuvântul grecesc pentru „a primit" e *elabon*: a lua ceva ce ți se întinde. Presupune două mâini. Ale Lui, care dau. Și ale tale, care iau." },
+        { from: "guide", text: "„Nici din sânge” — nu prin cine ți-e neam. „Nici din voia vreunui om” — nu pentru că a hotărât cineva pentru tine când erai mic." },
+        { from: "guide", text: "Cuvântul grecesc pentru „a primit” e *elabon*: a lua ceva ce ți se întinde. Presupune două mâini. Ale Lui, care dau. Și ale tale, care iau." },
         { from: "guide", text: "Iacov scrie undeva o propoziție care sperie: și dracii cred că este un Dumnezeu, și tremură. Deci a crede că El există nu e încă o relație. E doar o informație corectă." },
       ],
     },
@@ -132,7 +132,7 @@ export const harD_l1: Lesson = {
       type: "step",
       order: 10,
       bubbles: [
-        { from: "guide", text: "Un lucru azi, nu zece: citește Ioan 3, primele opt versete. Doar atât. Și, dacă te ajută, întreabă-L direct: „Doamne, dacă asta îmi lipsește, arată-mi."" },
+        { from: "guide", text: "Un lucru azi, nu zece: citește Ioan 3, primele opt versete. Doar atât. Și, dacă te ajută, întreabă-L direct: „Doamne, dacă asta îmi lipsește, arată-mi.”" },
       ],
     },
     {
@@ -170,7 +170,7 @@ export const harD_l2: Lesson = {
       type: "name_struggle",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Obiecția, cinstit: „N-am omorât pe nimeni. Ajut oameni. Sunt mai bun decât mulți care stau în biserică. De ce n-ar conta asta?"" },
+        { from: "guide", text: "Obiecția, cinstit: „N-am omorât pe nimeni. Ajut oameni. Sunt mai bun decât mulți care stau în biserică. De ce n-ar conta asta?”" },
         { from: "guide", text: "Răspunsul scurt: contează. Doar nu la ce credeai că contează." },
       ],
     },
@@ -206,8 +206,8 @@ export const harD_l2: Lesson = {
         ref: "Efeseni 2:8-9",
       },
       bubbles: [
-        { from: "guide", text: "„Har" e un cuvânt tocit. În greacă e *charis*: un bine făcut cuiva care nu l-a meritat și nu-l poate plăti înapoi." },
-        { from: "guide", text: "Și mai e o vorbă acolo, la final: „ca să nu se laude nimeni". Dumnezeu a aranjat lucrurile așa încât nimeni să nu ajungă acolo cu nasul pe sus." },
+        { from: "guide", text: "„Har” e un cuvânt tocit. În greacă e *charis*: un bine făcut cuiva care nu l-a meritat și nu-l poate plăti înapoi." },
+        { from: "guide", text: "Și mai e o vorbă acolo, la final: „ca să nu se laude nimeni”. Dumnezeu a aranjat lucrurile așa încât nimeni să nu ajungă acolo cu nasul pe sus." },
       ],
     },
     {
@@ -335,7 +335,7 @@ export const harD_l3: Lesson = {
       order: 5,
       bubbles: [
         { from: "guide", text: "Iacov spune un lucru care închide subiectul: cine calcă o singură poruncă e vinovat față de toată Legea." },
-        { from: "guide", text: "Sună dur, până înțelegi imaginea: nu e o listă din care bifezi cât poți. E ca un geam. Nu-l spargi „parțial"." },
+        { from: "guide", text: "Sună dur, până înțelegi imaginea: nu e o listă din care bifezi cât poți. E ca un geam. Nu-l spargi „parțial”." },
       ],
     },
     {

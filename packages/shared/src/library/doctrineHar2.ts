@@ -34,7 +34,7 @@ export const harD_l4: Lesson = {
       type: "name_struggle",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Frica de dedesubt, spusă cinstit: „Eu, așa cum sunt, cu ce am făcut săptămâna asta, n-am cum să stau de vorbă cu Dumnezeu. Îmi trebuie cineva mai curat decât mine care să pună o vorbă bună."" },
+        { from: "guide", text: "Frica de dedesubt, spusă cinstit: „Eu, așa cum sunt, cu ce am făcut săptămâna asta, n-am cum să stau de vorbă cu Dumnezeu. Îmi trebuie cineva mai curat decât mine care să pună o vorbă bună.”" },
         { from: "guide", text: "Frica asta e cinstită. Are și un răspuns, și răspunsul s-a văzut într-o zi anume." },
       ],
     },
@@ -69,7 +69,7 @@ export const harD_l4: Lesson = {
         ref: "1 Timotei 2:5",
       },
       bubbles: [
-        { from: "guide", text: "„Mijlocitor" e, în greacă, *mesites*: cel care stinge o datorie între două părți și garantează cu el însuși." },
+        { from: "guide", text: "„Mijlocitor” e, în greacă, *mesites*: cel care stinge o datorie între două părți și garantează cu el însuși." },
         { from: "guide", text: "Motivul pentru care e Unul singur nu e că Dumnezeu ar fi zgârcit cu accesul. E că numai Unul a plătit." },
       ],
     },
@@ -82,7 +82,7 @@ export const harD_l4: Lesson = {
         ref: "Evrei 4:16",
       },
       bubbles: [
-        { from: "guide", text: "„Cu deplină încredere" traduce *parrhesia*: dreptul de a vorbi deschis, cum vorbește un cetățean, nu cum șoptește un străin care cere o favoare." },
+        { from: "guide", text: "„Cu deplină încredere” traduce *parrhesia*: dreptul de a vorbi deschis, cum vorbește un cetățean, nu cum șoptește un străin care cere o favoare." },
         { from: "guide", text: "Și tronul și-a schimbat numele. Nu e scaunul judecății. E scaunul harului. Cine șade pe el te-a văzut deja, și tot te cheamă." },
       ],
     },
@@ -137,7 +137,7 @@ export const harD_l4: Lesson = {
       type: "prayer",
       order: 11,
       bubbles: [
-        { from: "guide", text: "Dacă vrei, spune-o cu voce tare, o dată: „Doamne, vin așa cum sunt. Nu am pe nimeni care să pună o vorbă bună pentru mine și înțeleg că nici nu am nevoie. Iisus a plătit. Vorbesc cu Tine."" },
+        { from: "guide", text: "Dacă vrei, spune-o cu voce tare, o dată: „Doamne, vin așa cum sunt. Nu am pe nimeni care să pună o vorbă bună pentru mine și înțeleg că nici nu am nevoie. Iisus a plătit. Vorbesc cu Tine.”" },
       ],
     },
     {
@@ -224,7 +224,7 @@ export const harD_l5: Lesson = {
         ref: "Ioan 15:5",
       },
       bubbles: [
-        { from: "guide", text: "Verbul „a rămâne" e *meno*: a locui, a sta acolo, nu a trece în vizită." },
+        { from: "guide", text: "Verbul „a rămâne” e *meno*: a locui, a sta acolo, nu a trece în vizită." },
         { from: "guide", text: "O mlădiță nu se sfortează să facă struguri. Stați lipită de viță și asta se întâmplă. Efortul ei e să nu se rupă." },
       ],
     },
@@ -240,7 +240,7 @@ export const harD_l5: Lesson = {
           { text: "Iacov scrie pentru cei mai buni, Pavel pentru începători", correct: false },
         ],
         explanation:
-          "Amândoi spun că relația adevărată se vede. Diferența e că unul răspunde la întrebarea „cum sunt primit", celălalt la întrebarea „de unde știu că e real".",
+          "Amândoi spun că relația adevărată se vede. Diferența e că unul răspunde la întrebarea „cum sunt primit”, celălalt la întrebarea „de unde știu că e real”.",
       },
     },
     {
@@ -248,7 +248,7 @@ export const harD_l5: Lesson = {
       type: "how_god_helps",
       order: 8,
       bubbles: [
-        { from: "guide", text: "Limita cinstită: nu-ți dăm un număr. Nu există „atâtea fapte pe săptămână" și nimeni nu-ți poate măsura credința după cât face. Oamenii bolnavi, obosiți sau închiși în casă nu sunt mai puțin ai Lui." },
+        { from: "guide", text: "Limita cinstită: nu-ți dăm un număr. Nu există „atâtea fapte pe săptămână” și nimeni nu-ți poate măsura credința după cât face. Oamenii bolnavi, obosiți sau închiși în casă nu sunt mai puțin ai Lui." },
         { from: "guide", text: "Întrebarea nu e cât. E din ce. Dintr-o datorie sau dintr-un dar." },
       ],
     },
@@ -299,7 +299,7 @@ export const harD_l6: Lesson = {
         { from: "guide", text: "Se scria pe socoteli și pe înscrisurile de datorie, atunci, în lumea aceea. Însemna: plătit integral. Nu mai e nimic de dat." },
       ],
       scripture: {
-        text: "Când a luat Isus oțetul, a zis: „S-a isprăvit!" Apoi Și-a plecat capul și Și-a dat sufletul.",
+        text: "Când a luat Isus oțetul, a zis: „S-a isprăvit!” Apoi Și-a plecat capul și Și-a dat sufletul.",
         ref: "Ioan 19:30",
       },
     },
@@ -308,7 +308,7 @@ export const harD_l6: Lesson = {
       type: "truth_simple",
       order: 3,
       bubbles: [
-        { from: "guide", text: "N-a spus „s-a terminat cu Mine", ca un om învins. A spus că lucrarea e încheiată, ca un om care și-a dus treaba până la capăt." },
+        { from: "guide", text: "N-a spus „s-a terminat cu Mine”, ca un om învins. A spus că lucrarea e încheiată, ca un om care și-a dus treaba până la capăt." },
         { from: "guide", text: "Și verbul e la un timp care, în greacă, spune ceva ce româna nu poate spune într-o vorbă: s-a făcut o dată și rămâne făcut. Nu se reia." },
       ],
     },
@@ -321,7 +321,7 @@ export const harD_l6: Lesson = {
         ref: "Evrei 10:14",
       },
       bubbles: [
-        { from: "guide", text: "„O singură" și „pentru totdeauna" stau în aceeași propoziție. Autorul epistolei le pune împreună intenionat, pentru niște oameni obișnuiți cu jertfe repetate an de an." },
+        { from: "guide", text: "„O singură” și „pentru totdeauna” stau în aceeași propoziție. Autorul epistolei le pune împreună intenionat, pentru niște oameni obișnuiți cu jertfe repetate an de an." },
       ],
     },
     {
@@ -333,7 +333,7 @@ export const harD_l6: Lesson = {
         ref: "Coloseni 2:14",
       },
       bubbles: [
-        { from: "guide", text: "„Zapisul" era înscrisul de datorie, scris de mână, semnat de datornic. Dovada că dai ceva." },
+        { from: "guide", text: "„Zapisul” era înscrisul de datorie, scris de mână, semnat de datornic. Dovada că dai ceva." },
         { from: "guide", text: "Pavel spune că hârtia n-a fost ascunsă și n-a fost amânată. A fost bătută în cui, la vedere, pe cruce." },
       ],
     },

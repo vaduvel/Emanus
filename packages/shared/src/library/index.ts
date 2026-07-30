@@ -211,7 +211,7 @@ const shelfCuvantul: LibraryShelf = {
     {
       id: "parables_c2_imparatia",
       title: "Pildele — ce e Împărăția și cine intră",
-      forWhom: "Auzi „Împărăția lui Dumnezeu" și nu știi la ce se referă.",
+      forWhom: "Auzi „Împărăția lui Dumnezeu” și nu știi la ce se referă.",
       plannedLessons: 5,
       lessonIds: [
         "pilda_semanatorul",
@@ -263,7 +263,7 @@ const shelfRugaciune: LibraryShelf = {
     {
       id: "lib_rug_inceput",
       title: "Când nu știi ce să spui",
-      forWhom: "Te blochezi după „Doamne" și îți pare că spui prostii.",
+      forWhom: "Te blochezi după „Doamne” și îți pare că spui prostii.",
       plannedLessons: 5,
       lessonIds: [],
       state: "planned",

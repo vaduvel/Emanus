@@ -36,7 +36,7 @@ export const vesniciaL1: Lesson = {
         ref: "Apocalipsa 21:3-4",
       },
       bubbles: [
-        { from: "guide", text: "Citește încă o dată prima propoziție. Nu începe cu un loc. Începe cu Cineva: „Dumnezeu Însuși va fi cu ei"." },
+        { from: "guide", text: "Citește încă o dată prima propoziție. Nu începe cu un loc. Începe cu Cineva: „Dumnezeu Însuși va fi cu ei”." },
       ],
     },
     {
@@ -57,7 +57,7 @@ export const vesniciaL1: Lesson = {
         ref: "Ioan 17:3",
       },
       bubbles: [
-        { from: "guide", text: "Iisus definește singur viața veșnică. Și nu spune „un loc" și nu spune „o durată". Spune: să Te cunoască." },
+        { from: "guide", text: "Iisus definește singur viața veșnică. Și nu spune „un loc” și nu spune „o durată”. Spune: să Te cunoască." },
         { from: "guide", text: "Verbul din greacă e *ginosko*: a cunoaște prin trăire, cum cunoști un om cu care ai locuit, nu cum știi un lucru dintr-o carte." },
       ],
     },
@@ -104,7 +104,7 @@ export const vesniciaL1: Lesson = {
           { text: "Odihna de la muncă", correct: false },
         ],
         explanation:
-          "Textul începe cu „Dumnezeu Însuși va fi cu ei". Restul — fără lacrimi, fără moarte — vine din asta.",
+          "Textul începe cu „Dumnezeu Însuși va fi cu ei”. Restul — fără lacrimi, fără moarte — vine din asta.",
       },
     },
     {
@@ -143,7 +143,7 @@ export const vesniciaL2: Lesson = {
       order: 1,
       bubbles: [
         { from: "guide", text: "Lecția asta se putea scrie ca să te sperie. N-o scriem așa." },
-        { from: "guide", text: "Frica te poate mișca o săptămână. Relația te ține o viață. Deci nu-ți spunem „dacă mori diseară". Îți spunem doar ce scrie, și de ce e grav." },
+        { from: "guide", text: "Frica te poate mișca o săptămână. Relația te ține o viață. Deci nu-ți spunem „dacă mori diseară”. Îți spunem doar ce scrie, și de ce e grav." },
       ],
     },
     {
@@ -164,7 +164,7 @@ export const vesniciaL2: Lesson = {
         ref: "2 Tesaloniceni 1:9",
       },
       bubbles: [
-        { from: "guide", text: "Uită-te la miezul propoziției: „de la fața Domnului". Cuvântul greu din verset nu e „foc". E „de la"." },
+        { from: "guide", text: "Uită-te la miezul propoziției: „de la fața Domnului”. Cuvântul greu din verset nu e „foc”. E „de la”." },
         { from: "guide", text: "Adică despărțire. Locul din care lipsește tot ce e bun, pentru că lipsește Cine e bun." },
       ],
     },
@@ -182,12 +182,12 @@ export const vesniciaL2: Lesson = {
       type: "scripture",
       order: 5,
       scripture: {
-        text: "Atunci le voi spune curat: „Niciodată nu v-am cunoscut; depărtați-vă de la Mine."",
+        text: "Atunci le voi spune curat: „Niciodată nu v-am cunoscut; depărtați-vă de la Mine.”",
         ref: "Matei 7:23",
       },
       bubbles: [
         { from: "guide", text: "Cea mai grea propoziție din Evanghelii nu e despre foc. E despre a nu fi cunoscut. Iar Iisus o spune unor oameni religioși, care făcuseră lucruri impresionante." },
-        { from: "guide", text: "Deci întrebarea nu e „am făcut destul?". E „mă cunoaște?"." },
+        { from: "guide", text: "Deci întrebarea nu e „am făcut destul?”. E „mă cunoaște?”." },
       ],
     },
     {
@@ -236,7 +236,7 @@ export const vesniciaL2: Lesson = {
           { text: "Că nu se știe nimic", correct: false },
         ],
         explanation:
-          "„De la fața Domnului" e cheia. Gravitatea vine din despărțire, nu din decor.",
+          "„De la fața Domnului” e cheia. Gravitatea vine din despărțire, nu din decor.",
       },
     },
     {
@@ -299,7 +299,7 @@ export const vesniciaL3: Lesson = {
         ref: "Ezechiel 33:11",
       },
       bubbles: [
-        { from: "guide", text: "„Pe viața Mea" e cel mai tare jurământ care există în Vechiul Testament. Dumnezeu jură pe El Însuși ca să spună un singur lucru: nu vreau asta." },
+        { from: "guide", text: "„Pe viața Mea” e cel mai tare jurământ care există în Vechiul Testament. Dumnezeu jură pe El Însuși ca să spună un singur lucru: nu vreau asta." },
       ],
     },
     {
@@ -317,7 +317,7 @@ export const vesniciaL3: Lesson = {
       order: 5,
       bubbles: [
         { from: "guide", text: "Lumea spune: dacă Dumnezeu e bun, ar trebui să ne primească pe toți, oricum." },
-        { from: "guide", text: "Biblia spune că a făcut ceva mai costisitor decât asta: a venit El, a plătit El, a luat El despărțirea în locul nostru. Pe cruce a strigat „de ce M-ai părăsit?" — ca să nu trebuiască noi." },
+        { from: "guide", text: "Biblia spune că a făcut ceva mai costisitor decât asta: a venit El, a plătit El, a luat El despărțirea în locul nostru. Pe cruce a strigat „de ce M-ai părăsit?” — ca să nu trebuiască noi." },
       ],
     },
     {
