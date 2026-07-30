@@ -30,11 +30,13 @@ async function ensureUser(): Promise<string | null> {
     const { data } = await sb.auth.getSession()
     if (data.session?.user) {
       userId = data.session.user.id
+      ready = true
       return userId
     }
     const { data: anon, error } = await sb.auth.signInAnonymously()
     if (error || !anon.user) return null
     userId = anon.user.id
+    ready = true
     return userId
   } catch {
     return null
@@ -108,6 +110,8 @@ export async function pullState(): Promise<JourneyState | null> {
       lastLessonDate: (j.last_lesson_date as string | null) ?? null,
       prayerInviteSeen: Boolean(j.prayer_invite_seen),
       pathCompletedSeen: Boolean(j.path_completed_seen),
+      lessonResponses: {},
+      lessonDrafts: {},
       journal: (jr ?? []).map((r) => ({
         lessonId: String(r.lesson_id),
         text: String(r.text),
@@ -128,10 +132,6 @@ export async function pullState(): Promise<JourneyState | null> {
 
 export function cloudReady(): boolean {
   return ready
-}
-
-export function markCloudReady(): void {
-  ready = true
 }
 
 /**

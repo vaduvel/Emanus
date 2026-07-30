@@ -35,6 +35,9 @@ jobs:
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
+      - name: Verifica release-ul de continut
+        run: pnpm validate:content-release
+
       - name: Typecheck
         run: pnpm typecheck
 

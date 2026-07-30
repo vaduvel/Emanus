@@ -112,6 +112,16 @@ Desenate acum în același limbaj. Sunt muncă de ecrane, nu de sistem — token
 | 3 | **Ecranul de revenire** | „Bine că te-ai întors. Nu ai pierdut nimic.” În locul flăcării stinse. |
 | 4 | **Întreabă** | Bibliotecă curatoriată + un om real care răspunde în 24 de ore la coada lungă. |
 | 5 | **Biblia** | Intrarea se face prin durere („Când nu poți dormi”), nu prin cuprins. |
+
+### Stare runtime — 30 iulie 2026
+
+- `Azi` este ritualul și continuarea drumului.
+- `Biblia` deschide biblioteca biblică și cursurile publicate.
+- `Întreabă` caută exclusiv în conținutul verificat; nu generează răspunsuri
+  spirituale când nu există unul.
+- `Ai mei` deschide memorialul de rugăciune. Relațiile între utilizatori rămân
+  blocate până există moderare și operare umană.
+- `Eu` arată drumul și adevărul despre stocarea datelor.
 | 6 | **Modul noapte** | Fără cont, fără notificări, ecran întunecat, audio care se oprește singur. |
 | 7 | **Cardul de dat mai departe** | Fiecare lecție produce ceva de dat. Umple poziția „Dă mai departe”, care era goală. |
 

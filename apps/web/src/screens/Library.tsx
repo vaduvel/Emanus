@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { ArrowLeft, BookOpen, ChevronRight, Lock } from "lucide-react"
-import type { LibraryCourse, LibraryShelf } from "@emanus/shared/library"
-import { courseIsOpen, visibleShelves } from "@emanus/shared/library"
+import type { ContentCourse, ContentShelf } from "@emanus/shared/content-catalog"
+import { courseIsOpen, visibleContentShelves } from "../content"
 import { navigate } from "../router"
 import "../library.css"
 
-function Course({ course }: { course: LibraryCourse }) {
+function Course({ course }: { course: ContentCourse }) {
   const open = courseIsOpen(course)
   const first = course.lessonIds[0]
   return <button type="button" className={open ? "libcourse" : "libcourse libcourse--soon"} disabled={!open} onClick={() => { if (open && first) navigate(`/lesson/${first}`) }}>
@@ -14,7 +14,7 @@ function Course({ course }: { course: LibraryCourse }) {
   </button>
 }
 
-function Shelf({ shelf }: { shelf: LibraryShelf }) {
+function Shelf({ shelf }: { shelf: ContentShelf }) {
   const [open, setOpen] = useState(false)
   const ready = shelf.courses.filter(courseIsOpen).length
   return <section className="libshelf">
@@ -24,11 +24,11 @@ function Shelf({ shelf }: { shelf: LibraryShelf }) {
 }
 
 export function Library() {
-  const shelves = visibleShelves()
+  const shelves = visibleContentShelves()
   return <section className="library">
     <button type="button" className="ghost library__back" onClick={() => navigate("/")}><ArrowLeft size={16} aria-hidden /> Azi</button>
-    <header className="library__head"><BookOpen size={22} strokeWidth={1.7} aria-hidden /><h1>Biblioteca</h1></header>
-    <p className="library__intro">Drumul tău merge înainte fără asta. Aici intri doar când vrei să înveți și altceva.</p>
+    <header className="library__head"><BookOpen size={22} strokeWidth={1.7} aria-hidden /><h1>Biblia și cursurile</h1></header>
+    <p className="library__intro">Intră prin întrebarea pe care o ai acum. Cursurile leagă textul biblic de viața reală, fără să înlocuiască citirea Scripturii.</p>
     {shelves.map((s) => <Shelf key={s.id} shelf={s} />)}
     <div className="tile library__gated"><p className="today__kicker"><Lock size={15} aria-hidden /> De la creatori</p><p className="muted">Cursuri scrise de oameni care duc mai departe ce au primit. Se deschide când există cine să citească fiecare lecție înainte să ajungă la tine.</p></div>
   </section>

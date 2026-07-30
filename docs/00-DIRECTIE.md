@@ -133,7 +133,7 @@ Nu se contopesc. Sunt lentile complementare:
 
 ## 10 · Format lecție (FIX — deja implementat)
 
-**Player de chat conversațional** (workbook §1/§6): bulele apar pe rând și rămân pe ecran (conversație acumulativă), ghid = Daniel cu avatar. Cele 12 beat-uri: check_in → hook → choice(branch) → name_struggle → world_vs_truth → scripture → truth_simple → quiz → how_god_helps → step → memory_verse+prayer → journal+reward. Model de referință: hope.study (conversație, nu video pasiv).
+**Player de chat conversațional** (workbook §1/§6): bulele apar pe rând și rămân pe ecran (conversație acumulativă), ghid = Emanus cu marca aplicației, nu o persoană umană simulată. Cele 12 beat-uri: check_in → hook → choice(branch) → name_struggle → world_vs_truth → scripture → truth_simple → quiz → how_god_helps → step → memory_verse+prayer → journal+reward. Model de referință: hope.study (conversație, nu video pasiv).
 
 ---
 

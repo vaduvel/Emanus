@@ -10,7 +10,7 @@ import { addPrayer, daysAgo, listPrayers, markAnswered, removePrayer } from "../
  * dovadă că Dumnezeu i-a răspuns. Noi doar ținem minte în locul lui.
  * Nu numărăm nimic și nu arătăm procente de "rugăciuni împlinite".
  */
-export function Prayers() {
+export function Prayers({ title = "Rugăciunile mele" }: { title?: string }) {
   const [items, setItems] = useState<Prayer[]>(() => listPrayers())
   const [draft, setDraft] = useState("")
   const [answering, setAnswering] = useState<string | null>(null)
@@ -35,7 +35,7 @@ export function Prayers() {
     <section className="prayers">
       <header className="today__head">
         <HandHeart size={22} strokeWidth={1.7} aria-hidden />
-        <h1>Rugăciunile mele</h1>
+        <h1>{title}</h1>
       </header>
       <p className="muted">
         Scrie ce ceri. Nu uităm noi în locul tău. Când vine răspunsul, îl însemnezi aici.

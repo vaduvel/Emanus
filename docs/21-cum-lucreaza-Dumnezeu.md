@@ -204,7 +204,7 @@ Transversale: **doctrina** (3 din ~22, `path_temelie`), **pildele** (20 de fise)
 ## 7. Ce contrazice codul de azi
 
 1. ~~`DOORS` are 11 usi~~ **rezolvat:** 31 de usi mapate la 7 camere, 10 + 21, plus 3 intrari de explorare.
-2. `pathNeiertare` e de fapt **C2** si ii lipsesc cele 2 lectii de inceput despre cine e Dumnezeu, spuse prin rana (Iacov 1:17; Ioan 10:10). **Singurul punct deschis din lista.**
+2. `pathNeiertare` este **C2**. Cele 2 lecții de început despre cine este Dumnezeu prin rană sunt implementate în `neiertareOpen.ts` și vin înaintea pașilor despre iertare.
 3. ~~Nu exista Ecranul 3~~ **rezolvat:** `Confirm` in `Doors.tsx`.
 4. ~~Nu exista suport pentru linkul de creator~~ **rezolvat:** `?u=` + `FromCreator`.
 5. ~~Usile fara camera sunt fundaturi~~ **rezolvat:** `resolveDoorPath` duce in `path_temelie` cu un rand onest.

@@ -17,6 +17,11 @@ export const neiertareL6: Lesson = {
   estMinutes: 11,
   anchorRefs: ["Efeseni 4:31-32", "Marcu 11:25"],
   memoryVerseRef: "Efeseni 4:32",
+  safety: {
+    topic: "abuse",
+    notice:
+      "Iertarea din această lecție nu înseamnă împăcare, contact cu agresorul, renunțarea la dreptate sau întoarcerea într-un loc periculos.",
+  },
   steps: [
     {
       id: "n6_1",
@@ -90,7 +95,7 @@ export const neiertareL6: Lesson = {
       type: "truth_simple",
       order: 7,
       bubbles: [
-        { from: "guide", text: "Iertarea nu e un sentiment. E o hotărâre, luată îmotriva sentimentului." },
+        { from: "guide", text: "Iertarea nu e un sentiment. E o hotărâre, luată împotriva sentimentului." },
         {
           from: "guide",
           text: "Iisus n-a așteptat pe cruce să-I treacă durerea ca să spună «iartă-i». A spus-o în timp ce Îl durea cel mai tare.",
@@ -123,19 +128,26 @@ export const neiertareL6: Lesson = {
     },
     {
       id: "n6_10",
-      type: "step",
+      type: "declaration",
       order: 10,
       bubbles: [
         { from: "guide", text: "Pasul de azi. Ia hârtia. Spune cu voce tare, uitându-te la ea:" },
         {
           from: "guide",
-          text: "«Alegem — nu simt, dar aleg — să nu mai încasez eu datoria asta. O predau lui Dumnezeu. Nu-mi mai aparține.» Spune numele lui. Pe urmă rupe hârtia.",
+          text: "«Aleg — nu simt, dar aleg — să nu mai încasez eu datoria asta. O predau lui Dumnezeu. Nu-mi mai aparține.» Poți spune numele lui doar dacă este sigur pentru tine. Pe urmă rupe hârtia.",
         },
         {
           from: "guide",
           text: "Dacă plângi, e în regulă. Dacă nu simți absolut nimic, tot e în regulă. Ai făcut-o și rămâne făcută.",
         },
       ],
+      response: {
+        prompt:
+          "Scrie declarația pe care o poți face onest azi. Poate fi «Aleg să iert și predau dreptatea lui Dumnezeu» sau «Doamne, vreau să ajung să pot alege iertarea».",
+        placeholder: "Declarația mea…",
+        required: true,
+        minLength: 8,
+      },
     },
     {
       id: "n6_11",

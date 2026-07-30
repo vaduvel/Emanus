@@ -1,4 +1,10 @@
-import { Home, Footprints, HandHeart, MessagesSquare, Users } from "lucide-react"
+import {
+  BookOpen,
+  CircleHelp,
+  Sunrise,
+  UserRound,
+  UsersRound,
+} from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import { navigate } from "../router"
 
@@ -10,11 +16,11 @@ export interface TabItem {
 }
 
 export const EMANUS_TABS: TabItem[] = [
-  { key: "home", label: "Acasă", icon: Home, route: "/" },
-  { key: "journey", label: "Parcurs", icon: Footprints, route: "/dashboard" },
-  { key: "prayer", label: "Rugăc.", icon: HandHeart, route: "/prayer" },
-  { key: "community", label: "Comun.", icon: MessagesSquare, route: "/community" },
-  { key: "family", label: "Familie", icon: Users, route: "/family" },
+  { key: "today", label: "Azi", icon: Sunrise, route: "/" },
+  { key: "bible", label: "Biblia", icon: BookOpen, route: "/biblia" },
+  { key: "ask", label: "Întreabă", icon: CircleHelp, route: "/intreaba" },
+  { key: "people", label: "Ai mei", icon: UsersRound, route: "/ai-mei" },
+  { key: "profile", label: "Eu", icon: UserRound, route: "/eu" },
 ]
 
 export function TabBar({

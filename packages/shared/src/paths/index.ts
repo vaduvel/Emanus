@@ -289,10 +289,8 @@ export const pathAcasa: PathDef = {
  * ierta cât timp Îl bănuiește pe Dumnezeu că a fost de partea celui care l-a
  * rănit. Aceeași lumină, alt geam.
  *
- * DE FĂCUT: lecțiile 3-9 (fostele 1-7) își păstrează `order` 1-7 din vechea
- * numerotare, iar `neiertare_l1` mai conține prezentarea "Sunt Daniel", care
- * acum se face în `neiertare_o1`. De curățat la o trecere separată; ordinea
- * reală a drumului e array-ul `lessons`, nu `order`.
+ * Lecțiile 3-9 își păstrează intern `order` 1-7 pentru compatibilitate. Ordinea
+ * reală a drumului este array-ul `lessons`, nu acest câmp istoric.
  */
 export const pathNeiertare: PathDef = {
   id: "path_neiertare",

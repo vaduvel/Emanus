@@ -25,6 +25,14 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
+        // Fallback-ul editorial complet se descarcă doar dacă Supabase și API-ul
+        // nu pot livra lecția. Lecțiile deschise sunt cache-uite de content.ts.
+        globIgnores: [
+          "assets/content-paths-*.js",
+          "assets/content-library-*.js",
+          "assets/lessonMohler-*.js",
+        ],
+        cleanupOutdatedCaches: true,
         importScripts: ["push-sw.js"],
         runtimeCaching: [{
           urlPattern: ({ url }) => url.pathname.startsWith("/api"),

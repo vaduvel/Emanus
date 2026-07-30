@@ -4,6 +4,7 @@
  */
 
 .app {
+  flex-direction: column;
   padding-bottom: 24px;
 }
 .app--tabbed {
@@ -28,6 +29,27 @@
 }
 .helpbar:hover {
   filter: brightness(0.98);
+}
+
+.app:has(.player) .helpbar {
+  position: fixed;
+  left: max(16px, calc(50% - 344px));
+  bottom: calc(76px + env(safe-area-inset-bottom));
+  z-index: 20;
+  width: auto;
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--crisis-ink, #8c3f3a) 20%, transparent);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 620px) {
+  .app:has(.player) .helpbar {
+    left: 12px;
+    bottom: calc(72px + env(safe-area-inset-bottom));
+    max-width: calc(100% - 150px);
+    font-size: 0.75rem;
+  }
 }
 
 /* --- Primul contact --- */
@@ -313,8 +335,85 @@
 /* --- Azi --- */
 .today,
 .prayers,
-.pathend {
+.pathend,
+.ask-screen,
+.profile-screen {
   padding: 4px 18px 24px;
+}
+
+.ask-screen,
+.profile-screen {
+  width: 100%;
+  max-width: 520px;
+}
+
+.ask-screen__search {
+  display: grid;
+  gap: 7px;
+  margin: 18px 0 12px;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.ask-screen__search > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 0 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.ask-screen__search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+}
+.ask-screen__suggestions,
+.ask-screen__results,
+.profile-screen {
+  display: grid;
+  gap: 10px;
+}
+.ask-screen__suggestions .ghost {
+  min-height: 44px;
+  text-align: left;
+}
+.ask-result {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  color: var(--text);
+}
+.ask-result > span {
+  display: grid;
+  gap: 3px;
+}
+.ask-result small {
+  color: var(--muted);
+  font-weight: 400;
+}
+.ask-screen__empty {
+  margin-top: 16px;
+}
+.ask-screen__empty h2,
+.profile-screen__section h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+}
+.profile-screen__section {
+  display: grid;
+  gap: 8px;
+}
+.profile-screen__section p {
+  margin: 0;
 }
 .today__head {
   display: flex;

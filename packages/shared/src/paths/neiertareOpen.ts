@@ -34,6 +34,11 @@ export const neiertareO1: Lesson = {
   estMinutes: 10,
   anchorRefs: ["Iacov 1:17", "Ioan 10:10", "Iacov 1:13"],
   memoryVerseRef: "Iacov 1:17",
+  safety: {
+    topic: "abuse",
+    notice:
+      "Lecția vorbește despre răni, nedreptate și abuz. Nu îți cere să contactezi persoana care te-a rănit și nu îți cere să rămâi într-un loc periculos.",
+  },
   steps: [
     {
       id: "o1_1",
@@ -43,7 +48,7 @@ export const neiertareO1: Lesson = {
         { from: "guide", text: "Bine că ești aici." },
         {
           from: "guide",
-          text: "Nu îți cer povestea și nu îți cer numele nimănui. Tu le știi. Ce scrii aici rămâne în telefonul tău — nu citește nimeni.",
+          text: "Nu îți cer numele nimănui. Tu alegi cât scrii. Răspunsul este privat și nu este afișat altor utilizatori sau mentorilor.",
         },
         {
           from: "guide",
@@ -227,6 +232,11 @@ export const neiertareO2: Lesson = {
   estMinutes: 11,
   anchorRefs: ["Ioan 11:33-35", "Matei 27:46", "Evrei 4:15-16"],
   memoryVerseRef: "Evrei 4:16",
+  safety: {
+    topic: "abuse",
+    notice:
+      "Lecția te invită să numești o rană. Scrie numai cât poți duce în siguranță acum; poți opri conversația oricând și poți cere ajutor.",
+  },
   steps: [
     {
       id: "o2_1",
@@ -263,6 +273,27 @@ export const neiertareO2: Lesson = {
         },
         { from: "guide", text: "Omul care a scris asta n-a fost dat afară pentru întrebare. A fost pus în Biblie." },
       ],
+    },
+    {
+      id: "o2_reflect",
+      type: "multi_choice",
+      order: 3.5,
+      bubbles: [
+        {
+          from: "guide",
+          text: "Nu trebuie să alegi o singură parte a rănii. Uneori apasă mai multe deodată.",
+        },
+      ],
+      multiChoice: {
+        prompt: "Ce parte te apasă cel mai mult acum? Poți alege mai multe.",
+        minSelections: 1,
+        options: [
+          { id: "o2_4_fapta", label: "Ce s-a întâmplat" },
+          { id: "o2_4_urmari", label: "Urmările care au rămas" },
+          { id: "o2_4_absenta", label: "Gândul că Dumnezeu a fost absent" },
+          { id: "o2_4_singur", label: "Faptul că nu m-a înțeles nimeni" },
+        ],
+      },
     },
     {
       id: "o2_4",

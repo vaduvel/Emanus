@@ -9,6 +9,38 @@
 
 # 1 · Studiu de caz: [hope.study](http://hope.study)
 
+## Verificare autentificată — 30 iulie 2026
+
+Au fost verificate în player cursurile **A Gift from Eden** și
+**Forgive…to Live**, nu doar paginile publice de prezentare.
+
+Formatul observat:
+
+- bule de conversație afișate progresiv;
+- răspuns liber, alegere unică și alegere multiplă;
+- poll cu distribuția agregată a răspunsurilor;
+- feedback imediat după răspuns;
+- blocuri de Scriptură în interiorul conversației;
+- întrebare de angajament personal la final;
+- lecții deblocate secvențial, rating și bibliotecă de cursuri.
+
+În **Forgive…to Live**, traseul editorial pornește de la nedreptatea reală,
+separă vina pentru fapta inițială de responsabilitatea pentru vindecare și mută
+omul din neputință spre alegerea iertării. Două formulări cer însă protecții
+suplimentare în Emanus: opoziția rigidă „blame or forgive” și îndemnul de a nu
+încerca schimbarea celuilalt nu trebuie aplicate ca presiune unei persoane aflate
+în abuz activ.
+
+Consecințe implementate în Emanus:
+
+- playerul păstrează conversația acumulativă și răspunsurile utilizatorului;
+- există selecție multiplă, răspuns liber, feedback și ramuri;
+- cursul despre neiertare cere povestirea rănii numai într-un câmp privat;
+- declarația de iertare acceptă și forma onestă „vreau să ajung să pot alege”;
+- înaintea pașilor sensibili apare un ecran separat de siguranță;
+- iertarea este separată explicit de împăcare, contact, tăcere și revenirea în
+  pericol.
+
 **Cine:** Hope Channel International (media creștină). Bibliotecă de cursuri online **gratuite** care răspund la întrebările mari ale vieții din Biblie.
 
 **Programa (cum e structurat):**

@@ -23,5 +23,20 @@ pnpm --filter @emanus/db migrate          # creează/aplică migrări (foloseșt
 ```
 După prima migrare, tabelele apar în Supabase (Table Editor).
 
+## Conținutul public
+
+Tabelele de conținut și politicile lor RLS sunt în `supabase/migrations`.
+Aplică-le cu Supabase CLI, apoi publică release-ul validat:
+
+```bash
+supabase db push
+pnpm validate:content-release
+pnpm content:publish
+```
+
+Browserul citește numai manifestul activ și lecțiile cu `status = published`.
+Scrierea este permisă exclusiv funcției de publicare apelate cu cheia secretă
+de server.
+
 ## De ce două URL-uri?
 Supabase pune un pooler (PgBouncer) pe 6543 pentru conexiuni de runtime (eficient, serverless-friendly). Migrările Prisma au nevoie de o conexiune directă (5432), de aceea `directUrl`.

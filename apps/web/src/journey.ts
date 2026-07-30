@@ -1,7 +1,15 @@
-import type { Lesson } from "@emanus/shared/domain"
-import type { DayPlan, PathDef } from "@emanus/shared/paths"
-import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared/paths"
-import { cloudEnabled, pullState, pushState } from "./cloud"
+import type { LessonAnswers } from "@emanus/shared/domain"
+import type {
+  ContentDayPlan,
+  ContentLessonSummary,
+  ContentPath,
+} from "@emanus/shared/content-catalog"
+import { cloudEnabled, cloudReady, pullState, pushState } from "./cloud"
+import {
+  contentPath,
+  nextDoctrineLesson,
+  planTodayFromContent,
+} from "./content"
 
 /*
  * Starea drumului.
@@ -30,6 +38,16 @@ export interface Prayer {
   answerNote?: string
 }
 
+export interface LessonResponse extends LessonAnswers {
+  completedAt: string
+}
+
+export interface LessonDraft extends LessonAnswers {
+  mainStepId: string
+  revealedStepIds: string[]
+  updatedAt: string
+}
+
 export interface JourneyState {
   /** A văzut ecranele de primul contact (ce e Emanus). */
   seenWelcome: boolean
@@ -43,6 +61,10 @@ export interface JourneyState {
   prayerInviteSeen: boolean
   journal: JournalEntry[]
   prayers: Prayer[]
+  /** Răspunsurile interactive rămân locale; nu sunt incluse în backup-ul cloud. */
+  lessonResponses: Record<string, LessonResponse>
+  /** Poziția curentă permite reluarea unei lecții după închiderea aplicației. */
+  lessonDrafts: Record<string, LessonDraft>
   /** Marcat când omul a văzut ecranul de final de parcurs. */
   pathCompletedSeen: boolean
 }
@@ -56,6 +78,8 @@ const EMPTY: JourneyState = {
   prayerInviteSeen: false,
   journal: [],
   prayers: [],
+  lessonResponses: {},
+  lessonDrafts: {},
   pathCompletedSeen: false,
 }
 
@@ -105,10 +129,12 @@ function isEmpty(s: JourneyState): boolean {
 /**
  * De apelat o dată la pornire, înainte de primul randare.
  * Telefon nou și local gol -> aduce din nor. Altfel localul învinge și se urcă.
- * Returnează true dacă s-a adus ceva din nor (ecranele trebuie redesenate).
+ * Returnează true dacă s-a adus ceva din nor sau dacă sesiunea de backup a
+ * devenit disponibilă (ecranele trebuie redesenate).
  */
 export async function hydrateFromCloud(): Promise<boolean> {
   if (!cloudEnabled()) return false
+  const cloudWasReady = cloudReady()
   const local = load()
   const remote = await pullState()
   if (remote && isEmpty(local) && !isEmpty(remote)) {
@@ -116,7 +142,7 @@ export async function hydrateFromCloud(): Promise<boolean> {
     return true
   }
   if (!isEmpty(local)) void pushState(local)
-  return false
+  return cloudReady() !== cloudWasReady
 }
 
 // --- Primul contact ---
@@ -145,16 +171,16 @@ export function chooseDoor(pathId: string): JourneyState {
   })
 }
 
-export function currentPath(): PathDef | undefined {
-  return getPath(load().pathId)
+export function currentPath(): ContentPath | undefined {
+  return contentPath(load().pathId)
 }
 
-export function plan(): DayPlan | null {
+export function plan(): ContentDayPlan | null {
   const s = load()
-  const path = getPath(s.pathId)
+  const path = contentPath(s.pathId)
   if (!path) return null
   const since = s.lastLessonDate === null ? null : daysBetween(s.lastLessonDate, today())
-  return planToday(path, s.lessonsDone, since)
+  return planTodayFromContent(path, s.lessonsDone, since)
 }
 
 /**
@@ -164,31 +190,71 @@ export function plan(): DayPlan | null {
  *
  * Pe drumul "De la zero" nu se oferă: acolo doctrina ESTE drumul.
  */
-export function doctrineAvailable(): Lesson | undefined {
+export function doctrineAvailable(): ContentLessonSummary | undefined {
   const s = load()
   if (s.pathId === "path_temelie") return undefined
-  const path = getPath(s.pathId)
+  const path = contentPath(s.pathId)
   if (!path) return undefined
   return nextDoctrineLesson(s.lessonsDone, path.lessons.length, s.doctrineDone)
 }
 
-export function completeLesson(lessonId: string, journalText: string): JourneyState {
+export function saveLessonDraft(lessonId: string, draft: LessonDraft): JourneyState {
   const s = load()
-  const journal = journalText.trim()
-    ? [...s.journal.filter((j) => j.lessonId !== lessonId), { lessonId, text: journalText.trim(), date: today() }]
+  return writeLocal({
+    ...s,
+    lessonDrafts: { ...s.lessonDrafts, [lessonId]: draft },
+  })
+}
+
+export function lessonDraft(lessonId: string): LessonDraft | undefined {
+  return load().lessonDrafts[lessonId]
+}
+
+export function completeLesson(lessonId: string, answers: LessonAnswers): JourneyState {
+  const s = load()
+  const journalText = Object.values(answers.textResponses)
+    .map((text) => text.trim())
+    .filter(Boolean)
+    .join("\n\n")
+  const journal = journalText
+    ? [...s.journal.filter((j) => j.lessonId !== lessonId), { lessonId, text: journalText, date: today() }]
     : s.journal
+  const lessonDrafts = { ...s.lessonDrafts }
+  delete lessonDrafts[lessonId]
+  const lessonResponses = {
+    ...s.lessonResponses,
+    [lessonId]: { ...answers, completedAt: new Date().toISOString() },
+  }
 
   // Doctrina făcută ca supliment nu consumă ziua și nu avansează parcursul personal.
   // Excepție: pe drumul "De la zero", aceleași lecții sunt chiar parcursul.
   if (lessonId.startsWith("doctrina_") && s.pathId !== "path_temelie") {
-    return save({ ...s, doctrineDone: s.doctrineDone + 1, journal })
+    return save({
+      ...s,
+      doctrineDone: s.doctrineDone + 1,
+      journal,
+      lessonDrafts,
+      lessonResponses,
+    })
+  }
+
+  const lessonIndex = indexOfLesson(lessonId)
+  if (lessonIndex < 0) {
+    return save({
+      ...s,
+      journal,
+      lessonDrafts,
+      lessonResponses,
+    })
   }
 
   return save({
     ...s,
-    lessonsDone: Math.max(s.lessonsDone, indexOfLesson(lessonId) + 1),
+    lessonsDone: Math.max(s.lessonsDone, lessonIndex + 1),
     lastLessonDate: today(),
     journal,
+    lessonDrafts,
+    lessonResponses,
   })
 }
 

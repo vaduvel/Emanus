@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useState } from "react"
 import { ArrowRight, BellRing, BookOpen, HandHeart, Library as LibraryIcon, Sunrise } from "lucide-react"
-import type { Lesson } from "@emanus/shared"
+import type { ContentLessonSummary } from "@emanus/shared/content-catalog"
 import {
   addPrayer,
   currentPath,
@@ -13,7 +13,7 @@ import {
 } from "../journey"
 import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
-import { cloudEnabled } from "../cloud"
+import { cloudReady } from "../cloud"
 
 /*
  * "Azi" — singurul ecran principal. (docs/20 §8)
@@ -27,23 +27,22 @@ import { cloudEnabled } from "../cloud"
  * configurată aplicația, nu după cum ar suna mai bine.
  */
 
-function memoryVerse(lesson: Lesson): { text: string; ref: string } | null {
-  const s = lesson.steps.find((x) => x.type === "memory_verse" && x.scripture)
-  return s?.scripture ?? null
+function memoryVerse(lesson: ContentLessonSummary): { text: string; ref: string } | null {
+  return lesson.memoryVerse
 }
 
 /** Ce scrie sub câmpul de rugăciune. Adevărul, nu ce sună mai liniștitor. */
 function privacyLine(): string {
-  return cloudEnabled()
-    ? "Nu o citește nimeni. Se salvează pe telefonul tău și într-un spațiu de backup legat doar de tine, ca să n-o pierzi dacă schimbi telefonul."
+  return cloudReady()
+    ? "Nu o citește nimeni. Se salvează pe dispozitiv și în spațiul privat al sesiunii tale."
     : "Nu o citește nimeni și nu pleacă nicăieri de pe telefonul tău."
 }
 
 export function Today() {
   const path = currentPath()
-  const dayPlan = useMemo(() => plan(), [])
-  const memorial = useMemo(() => oldestUnanswered(), [])
-  const doctrine = useMemo(() => doctrineAvailable(), [])
+  const dayPlan = plan()
+  const memorial = oldestUnanswered()
+  const doctrine = doctrineAvailable()
   const [yesterday, setYesterday] = useState<string | null>(null)
   const [inviteOpen, setInviteOpen] = useState(() => shouldInviteFirstPrayer())
   const [prayerText, setPrayerText] = useState("")
