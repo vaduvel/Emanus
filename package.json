@@ -5,8 +5,11 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "build": "pnpm -r build",
-    "dev:api": "pnpm --filter @emanus/api dev",
-    "dev:web": "pnpm --filter @emanus/web dev",
-    "typecheck": "pnpm -r typecheck"
+    "build:shared": "pnpm --filter @emanus/shared build",
+    "dev:api": "pnpm build:shared && pnpm --filter @emanus/api dev",
+    "dev:web": "pnpm build:shared && pnpm --filter @emanus/web dev",
+    "typecheck": "pnpm -r typecheck",
+    "fix:quotes": "python3 scripts/fix-quotes.py",
+    "check:quotes": "python3 scripts/fix-quotes.py --check"
   }
 }
