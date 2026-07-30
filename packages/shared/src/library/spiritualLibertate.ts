@@ -1,0 +1,14 @@
+import type { Lesson } from "../domain.js"
+const mk=(id:string,order:number,title:string,refs:string[],truth:string,practice:string,prayer:string):Lesson=>({id,courseId:"spiritual_c4_libertate",order,title,estMinutes:13,anchorRefs:refs,memoryVerseRef:refs[0],steps:[
+{id:`${id}_1`,type:"hook",order:1,bubbles:[{from:"guide",text:truth}]},
+{id:`${id}_2`,type:"scripture",order:2,scripture:{text:order===1?"Cel ce este în voi este mai mare decât cel ce este în lume.":order===2?"Dacă ne mărturisim păcatele, El este credincios și drept ca să ne ierte.":"El ne-a izbăvit de sub puterea întunericului și ne-a strămutat în Împărăția Fiului dragostei Lui.",ref:refs[0]}},
+{id:`${id}_3`,type:"truth_simple",order:3,bubbles:[{from:"guide",text:practice}]},
+{id:`${id}_4`,type:"choice",order:4,choice:{prompt:"Care este pasul tău acum?",options:[{id:`${id}a`,label:"Să spun adevărul fără să ascund."},{id:`${id}b`,label:"Să renunț concret la ceea ce mă ține."},{id:`${id}c`,label:"Să cer sprijinul unui om matur."}]}},
+{id:`${id}_5`,type:"step",order:5,bubbles:[{from:"guide",text:practice}]},
+{id:`${id}_6`,type:"prayer",order:6,bubbles:[{from:"guide",text:prayer}]},
+{id:`${id}_7`,type:"memory_verse",order:7,scripture:{text:order===1?"Cel ce este în voi este mai mare decât cel ce este în lume.":order===2?"El este credincios și drept ca să ne ierte.":"El ne-a izbăvit de sub puterea întunericului.",ref:refs[0]}}
+]})
+export const libertateL1=mk("spirit_libertate_l1",1,"Identitatea înaintea confruntării",["1 Ioan 4:4","Romani 8:14-17"],"Libertatea nu începe cu demonul, ci cu Iisus și cu apartenența ta. Frica întreabă cine te revendică; Evanghelia răspunde cine te-a răscumpărat.","Scrie adevărul despre cine este Iisus și cui Îi aparții. Nu începe confruntarea până când centrul nu este Hristos.","«Iisuse, Îți aparțin. Așază-mi identitatea în lucrarea Ta și păzește-mă de frică și spectacol.»")
+export const libertateL2=mk("spirit_libertate_l2",2,"Pocăință, nu autopedepsire",["1 Ioan 1:9","Faptele 3:19"],"Pocăința numește păcatul, se întoarce și primește iertarea. Autopedepsirea păstrează centrul în om și nu adaugă nimic crucii.","Numește fapta reală, fără scuze și fără identități false. Repară unde este posibil și primește iertarea.","«Tată, mărturisesc ___. Mă întorc de la acest păcat și primesc curățirea oferită prin Iisus.»")
+export const libertateL3=mk("spirit_libertate_l3",3,"Renunțarea la minciună și ocultism",["Coloseni 1:13","Faptele 19:18-20"],"Renunțarea nu este incantație. Omul numește practica sau acordul real, îl părăsește și alege domnia lui Iisus.","Renunță doar la ce cunoști, închide accesul concret și implică un credincios matur. Nu inventa păcate ascunse pentru a completa o listă.","«Doamne Iisuse, renunț la ___ și la minciuna ___. Aleg adevărul și domnia Ta. Condu-mă în lumină.»")
+export const SPIRITUAL_LIBERTATE_PART_A:Lesson[]=[libertateL1,libertateL2,libertateL3]
