@@ -53,7 +53,7 @@ const shelfCuvantul = shelf("lib_cuvantul", "Cuvântul", "Cum se citește, de un
 ])
 
 const shelfRugaciune = shelf("lib_rugaciune", "Rugăciunea", "Cum se vorbește cu El, mai ales când nu ai cuvinte și când nu primești răspuns.", [
-  c("lib_rug_inceput", "Când nu știi ce să spui", "Te blochezi după «Doamne» și îți pare că spui prostii.", 5, { source: "docs/Emanus — Ritmul zilnic & Rugăciunea" }),
+  c("lib_rug_inceput", "Doamne, învață-mă să mă rog", "Vrei să înțelegi «Tatăl nostru» ca tipar viu, nu ca poezie repetată.", 9, { source: "docs/Emanus — Ritmul zilnic & Rugăciunea" }),
   c("lib_rug_psalmi", "Psalmii ca școală de rugăciune", "Vrei să te rogi cinstit, inclusiv când ești supărat pe El.", 5),
   c("lib_rug_mijlocire", "Postul și mijlocirea", "Te rogi pentru cineva de mult și nu se schimbă nimic.", 4),
 ])
