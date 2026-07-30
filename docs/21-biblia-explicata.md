@@ -1,0 +1,109 @@
+# Biblia explicata
+
+## De ce
+
+Toata lumea are Biblia in telefon. Nimeni nu o are explicata. Oamenii citesc si nu
+inteleg, fiindca nimeni nu le sta alaturi la text. Emanus nu adauga inca o Biblie
+in lista. Adauga Biblia cu explicatia deja langa verset.
+
+Modelul de referinta este invatatura verset cu verset a pastorului Allen Nolan
+(Cornerstone Fellowship, Tahlequah, Oklahoma): oprire pe fiecare sintagma, cuvantul
+din ebraica sau greaca lamurit, contextul povestit, aplicatia la inima. Preluam
+felul de a invata, nu formularea lui.
+
+## Unde intra in aplicatie
+
+**In tabul „Biblia\", al doilea din cele cinci taburi ale machetei.**
+
+Macheta (`emanus-mockup.html`) prevede cinci taburi-verbe: Azi, Biblia, Intreaba,
+Ai mei, Eu. Tabul „Biblia\" este marcat acolo drept **gaura majora**: README spune
+ca „Cuvantul din Biblie este adevarul\", dar in aplicatie Biblia nu se poate
+deschide. In cod nu exista niciun fisier `Bible*.tsx`, iar `router.tsx` nu are
+nicio ruta de Biblie.
+
+Deci nu se face un tab nou. **Biblia explicata este continutul care umple un tab
+deja proiectat si inca gol.**
+
+### Ecranele
+
+| Ecran | Ruta | Ce contine |
+| --- | --- | --- |
+| Biblia — acasa | `/biblia` | Cartile scrise pana acum, unde ai ramas, cautare, intrarea pe durere |
+| Capitol | `/biblia/:carte/:capitol` | Textul curat, cu explicatia pliata sub fiecare unitate |
+| Unitate | in pagina capitolului | Verset, invatatura, cuvinte, trimiteri, „Pentru inima ta\" |
+
+Actiunile de sub text, deja schitate in macheta: **Salveaza**, **Trimite**,
+**Intreaba**. Butonul Intreaba duce conversatia in tabul „Intreaba\", cu versetul
+ca punct de plecare.
+
+Textul biblic ramane intotdeauna in strat propriu, vizibil separat de explicatie.
+Cititorul trebuie sa vada dintr-o privire ce este Scriptura si ce este comentariu.
+
+## Modelul de date
+
+`packages/shared/src/bible/types.ts`
+
+- `BibleBook` — cartea, cu blurb si capitole
+- `BibleChapter` — titlu, rezumat, context literar, context istoric, unitati, rugaciune, statut
+- `BibleUnit` — un verset sau un grup mic: `text`, `teaching`, `words`, `crossRefs`, `forYourHeart`
+- `WordStudy` — cuvantul original, transliterarea, limba, intelesul
+- `BibleStatus` — `draft` / `in_review` / `published`
+
+Un capitol se deschide cititorului numai cand ajunge `published`, adica dupa ce a
+fost citit de un om. Nu punem pe jumatate.
+
+Modelul sta separat de `Lesson` si `Course`. Biblia explicata nu este un curs cu
+pasi, XP si recompense. Este text de referinta cu straturi.
+
+## Textul biblic
+
+**Cornilescu 1924, editia originala.** Domeniu public prin expirarea drepturilor.
+Editia revizuita (2014, VDC) este sub drepturi si nu se foloseste.
+
+## Explicatia
+
+Scrisa integral pentru Emanus. Ideile, faptele istorice si sensurile cuvintelor
+ebraice si grecesti nu apartin nimanui; formularea unui autor apartine autorului.
+Cercetam din surse, dar propozitiile sunt ale noastre.
+
+## Registrul (obligatoriu)
+
+Asezat, bisericesc, de amvon. Grav si cald. Adresare la persoana a doua singular,
+dar cu respect.
+
+Formule proprii:
+
+- „Sa ne oprim aici si sa nu trecem mai departe cu usurinta\"
+- „Ia aminte la...\" / „Sa luam bine seama\"
+- „Se cuvine sa fim cinstiti cu textul\"
+- „Domnul Isus\", „Sfanta Scriptura\", „Duhul Sfant\"
+- „Pentru inima ta\" — titlul sectiunii de aplicatie
+
+Nu se folosesc niciodata: expresii din vorbirea de fiecare zi, anglicisme, jargon,
+formulari care fac textul sa sune „nou\".
+
+## Structura unei unitati
+
+1. Citatul biblic, ca bloc, neatins
+2. Oprire pe fiecare sintagma
+3. Cuvantul ebraic sau grecesc, cu transliterare si inteles simplu
+4. Contextul istoric si cultural, povestit, nu insirat
+5. Trimiteri la alte locuri din Scriptura
+6. Semnificatia duhovniceasca
+7. „Pentru inima ta\"
+8. Rugaciune, la sfarsitul capitolului
+
+## Ordinea de scriere
+
+1. **Geneza** — in lucru (capitolul 1 scris, `in_review`)
+2. Ioan
+3. Apocalipsa
+4. Viata lui Pavel
+
+Adica exact cartile pe care Allen Nolan le-a parcurs verset cu verset.
+
+## Ce ramane de facut in cod
+
+- `apps/web/src/screens/Bible.tsx` si ruta `/biblia` in `router.tsx`
+- legarea in bara de cinci taburi (sarcina Codex, impreuna cu restul barei)
+- cuplarea celor 38 de etichete de nevoi la intrarea pe durere
