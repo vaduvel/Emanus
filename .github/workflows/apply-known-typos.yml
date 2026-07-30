@@ -1,0 +1,38 @@
+name: Apply known typo fixes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/fix-known-typos.py
+      - .github/workflows/apply-known-typos.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: python3 scripts/fix-known-typos.py
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check:quotes
+      - run: pnpm typecheck
+      - name: Commit corrected content
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add packages/shared/src apps/web/src
+          git commit -m "fix(content): corecteaza typo-uri cunoscute in lectii"
+          git push origin HEAD:main
