@@ -1,11 +1,14 @@
 import type { Lesson } from "../domain.js"
 import { DOCTRINE_HAR_LESSONS } from "./doctrineHar2.js"
 import { DOCTRINE_VESNICIA_LESSONS } from "./doctrineVesnicia2.js"
+import { PILDE_TATAL_LESSONS } from "./pildeTatal2.js"
 
 export * from "./doctrineHar.js"
 export * from "./doctrineHar2.js"
 export * from "./doctrineVesnicia.js"
 export * from "./doctrineVesnicia2.js"
+export * from "./pildeTatal.js"
+export * from "./pildeTatal2.js"
 
 /*
  * Biblioteca Emanus — raftul de cursuri, dupa SUBIECT, nu dupa cine e omul.
@@ -22,6 +25,8 @@ export * from "./doctrineVesnicia2.js"
  *    (docs/14, docs/22 §10.2). Până atunci `gated: true` îl ține ascuns.
  * 5. Regula 10 din chat: nicio lecție scrisă nu rămâne nelegată. Un curs are
  *    `lessonIds` și `state: "live"` în același commit în care se scrie.
+ * 6. Pildele sunt sursa unică de adevăr (docs/16): când o pildă apare în alt
+ *    curs, nu se re-explică — se leagă la fișa ei de aici.
  */
 
 /** Ce stare are un curs în producție. Nu se afișează ca progres al omului. */
@@ -159,6 +164,7 @@ const shelfIntrebari: LibraryShelf = {
 
 /* ------------------------------------------------------------------ *
  * 3. Cuvântul — cum se citește Biblia
+ * Pildele sunt împărțite în patru cursuri, ca în docs/16.
  * ------------------------------------------------------------------ */
 
 const shelfCuvantul: LibraryShelf = {
@@ -167,13 +173,46 @@ const shelfCuvantul: LibraryShelf = {
   blurb: "Cum se citește, de unde se începe și ce înseamnă ce citești.",
   courses: [
     {
-      id: "lib_pilde",
-      title: "Pildele lui Iisus",
+      id: "parables_c1_tatal",
+      title: "Pildele — cine e Tatăl",
       forWhom: "Le-ai auzit de mic și tot nu știi ce cer de la tine.",
-      plannedLessons: 20,
+      plannedLessons: 5,
+      lessonIds: [
+        "pilda_risipitor",
+        "pilda_oaia",
+        "pilda_vamesul",
+        "pilda_lucratorii",
+        "pilda_robul_datornic",
+      ],
+      state: "live",
+      source: "docs/16-modul-pilde.md §Cursul 1",
+    },
+    {
+      id: "parables_c3_fiul",
+      title: "Pildele — cum trăiește un fiu",
+      forWhom: "Înțelegi ce a făcut Iisus și întrebi „bun, și acum concret ce fac?".",
+      plannedLessons: 5,
       lessonIds: [],
       state: "planned",
-      source: "docs/16-modul-pilde.md",
+      source: "docs/16-modul-pilde.md §Cursul 3",
+    },
+    {
+      id: "parables_c2_imparatia",
+      title: "Pildele — ce e Împărăția și cine intră",
+      forWhom: "Auzi „Împărăția lui Dumnezeu" și nu știi la ce se referă.",
+      plannedLessons: 5,
+      lessonIds: [],
+      state: "planned",
+      source: "docs/16-modul-pilde.md §Cursul 2",
+    },
+    {
+      id: "parables_c4_vesnicia",
+      title: "Pildele — bani, moarte și ce rămâne",
+      forWhom: "Te întrebi ce rămâne din ce strângi și ce contează la capăt.",
+      plannedLessons: 5,
+      lessonIds: [],
+      state: "planned",
+      source: "docs/16-modul-pilde.md §Cursul 4",
     },
     {
       id: "lib_carti",
@@ -469,6 +508,7 @@ export function nextCourseLesson(
 export const LIBRARY_LESSONS: Lesson[] = [
   ...DOCTRINE_HAR_LESSONS,
   ...DOCTRINE_VESNICIA_LESSONS,
+  ...PILDE_TATAL_LESSONS,
 ]
 
 export function findLibraryLesson(id: string): Lesson | undefined {
@@ -489,10 +529,12 @@ export function libraryCourseLessons(courseId: string): Lesson[] {
 
 /**
  * Ce se scrie mai departe, în ordinea deciziilor din docs/15 §Ordinea de
- * scriere și din chat. Lista asta e pentru noi, nu se afișează.
+ * scriere, docs/16 §Ordinea de scriere și din chat. Lista e pentru noi.
  */
 export const WRITING_ORDER: string[] = [
-  "lib_pilde",
+  "parables_c3_fiul",
+  "parables_c2_imparatia",
+  "parables_c4_vesnicia",
   "doctrine_c1_biblia",
   "doctrine_c3_biserica",
   "lib_rug_inceput",
