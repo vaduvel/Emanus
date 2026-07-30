@@ -8,7 +8,7 @@
     "build:shared": "pnpm --filter @emanus/shared build",
     "dev:api": "pnpm build:shared && pnpm --filter @emanus/api dev",
     "dev:web": "pnpm build:shared && pnpm --filter @emanus/web dev",
-    "typecheck": "pnpm -r typecheck",
+    "typecheck": "pnpm build:shared && pnpm -r typecheck",
     "fix:quotes": "python3 scripts/fix-quotes.py",
     "check:quotes": "python3 scripts/fix-quotes.py --check"
   }
