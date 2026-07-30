@@ -17,6 +17,7 @@ import { RELATII_BARBATI_FEMEI_LESSONS } from "./relatiiBarbatiFemei.js"
 import { SOTI_LEGAMANT_LESSONS } from "./sotiLegamant.js"
 import { PARINTI_PREZENTI_LESSONS } from "./parintiPrezenti.js"
 import { RELATII_COMUNE_1_LESSONS } from "./relatiiComune1.js"
+import { RELATII_COMUNE_2_LESSONS } from "./relatiiComune2.js"
 import { SPIRITUAL_LUMEA_LESSONS } from "./spiritualLumeaNevazuta2.js"
 import { SPIRITUAL_DISCERN_LESSONS } from "./spiritualDiscernamant2.js"
 import { SPIRITUAL_BLESTEM_LESSONS } from "./spiritualBlesteme2.js"
@@ -39,6 +40,7 @@ export * from "./relatiiBarbatiFemei.js"
 export * from "./sotiLegamant.js"
 export * from "./parintiPrezenti.js"
 export * from "./relatiiComune1.js"
+export * from "./relatiiComune2.js"
 export * from "./spiritualLumeaNevazuta2.js"
 export * from "./spiritualDiscernamant2.js"
 export * from "./spiritualBlesteme2.js"
@@ -49,7 +51,7 @@ const live:Record<string,string[]>={
  lib_fundamentul:ids("fund_l",8),lib_rug_context:ids("rug_context_l",11),lib_casnicie:ids("casnicie_l",6),lib_bani:ids("bani_l",5),lib_munca:ids("munca_l",5),lib_integritate:ids("integritate_l",4),lib_timp:ids("timp_l",4),
  lib_micii_facut:ids("micii_facut_l",5),lib_copii_cine_sunt:ids("copii_identitate_l",5),lib_copii_emotii:ids("copii_emotii_l",4),lib_teens_identitate:ids("teens_identitate_l",5),lib_teens_indoieli:ids("teens_indoieli_l",5),
  identitate_c1_chip:ids("identitate_vocatie_l",6),identitate_c2_caracter:ids("caracter_hristos_l",7),barbati_c1_formare:ids("barbat_formare_l",7),barbati_c2_lupta:ids("barbat_lupta_l",7),barbati_c3_relatii:ids("barbat_relatii_l",6),barbati_c4_sot:ids("sot_hristos_l",7),barbati_c5_tata:ids("tata_prezent_l",6),femei_c1_formare:ids("femeie_formare_l",7),femei_c2_lupta:ids("femeie_lupta_l",7),femei_c3_relatii:ids("femeie_relatii_l",6),femei_c4_sotie:ids("sotie_legamant_l",7),femei_c5_mama:ids("mama_fara_pierdere_l",6),
- comun_c1_singuratate:ids("singuratate_l",5),comun_c2_intalniri:ids("intalniri_l",5),
+ comun_c1_singuratate:ids("singuratate_l",5),comun_c2_intalniri:ids("intalniri_l",5),comun_c3_sexualitate:ids("sexualitate_l",6),comun_c4_limite:ids("limite_l",5),
  doctrine_c1_biblia:ids("biblia_l",6),doctrine_c3_biserica:ids("biserica_l",5),lib_rug_inceput:ids("rug_inceput_l",9),spiritual_c1_lumea_nevazuta:ids("spirit_lumea_l",6),spiritual_c2_discernamant:ids("spirit_discern_l",6),spiritual_c3_blessings:ids("spirit_blestem_l",6),spiritual_c4_libertate:ids("spirit_libertate_l",7),
 }
 const open=(c:LibraryCourse):LibraryCourse=>live[c.id]?{...c,lessonIds:live[c.id],plannedLessons:live[c.id].length,state:"live"}:c
@@ -60,7 +62,7 @@ const baseShelves=base.SHELVES.map(s=>({...s,courses:[...s.courses.map(open),...
 const identity=shelf("lib_identitate_vocatie","Identitate, trup și vocație","Om creat după chipul lui Dumnezeu și ucenic al lui Iisus înaintea rolurilor.",[course("identitate_c1_chip","Creat după chipul lui Dumnezeu",6,"live"),course("identitate_c2_caracter","Caracterul lui Hristos în mine",7,"live")])
 const men=shelf("lib_barbati","Viața de bărbat","Bărbat format după chipul lui Hristos, nu după guru sau stereotipuri.",[course("barbati_c1_formare","Bărbat după chipul lui Hristos",7,"live"),course("barbati_c2_lupta","Lupta din interiorul bărbatului",7,"live"),course("barbati_c3_relatii","Bărbatul în relații",6,"live"),course("barbati_c4_sot","Soț care iubește asemenea lui Hristos",7,"live"),course("barbati_c5_tata","Tată prezent",6,"live")])
 const women=shelf("lib_femei","Viața de femeie","Femeie formată de Scriptură, nu redusă la imagine, rol sau social media.",[course("femei_c1_formare","Femeie după inima lui Dumnezeu",7,"live"),course("femei_c2_lupta","Lupta din interiorul femeii",7,"live"),course("femei_c3_relatii","Femeia în relații",6,"live"),course("femei_c4_sotie","Soție, parteneră de legământ",7,"live"),course("femei_c5_mama","Mamă fără să se piardă pe sine",6,"live")])
-const common=shelf("lib_relatii_comune","Relații, sexualitate și siguranță","Cursuri comune pentru femei și bărbați, fără presiunea statutului și fără acoperirea abuzului.",[course("comun_c1_singuratate","Singurătate și apartenență",5,"live"),course("comun_c2_intalniri","Întâlniri și discernământ",5,"live"),course("comun_c3_sexualitate","Trup, sexualitate, pornografie și curăție",6),course("comun_c4_limite","Limite și consimțământ",5),course("comun_c5_siguranta","Abuz, control și siguranță",6),course("comun_c6_partener","Partener necredincios",5),course("comun_c7_copil","Copil îndepărtat",5)])
+const common=shelf("lib_relatii_comune","Relații, sexualitate și siguranță","Cursuri comune pentru femei și bărbați, fără presiunea statutului și fără acoperirea abuzului.",[course("comun_c1_singuratate","Singurătate și apartenență",5,"live"),course("comun_c2_intalniri","Întâlniri și discernământ",5,"live"),course("comun_c3_sexualitate","Trup, sexualitate, pornografie și curăție",6,"live"),course("comun_c4_limite","Limite și consimțământ",5,"live"),course("comun_c5_siguranta","Abuz, control și siguranță",6),course("comun_c6_partener","Partener necredincios",5),course("comun_c7_copil","Copil îndepărtat",5)])
 const spiritual=shelf("lib_spiritual","Lumea nevăzută și libertatea","Discernământ și libertate în Hristos fără folclor, panică sau diagnostic prin ecran.",[course("spiritual_c1_lumea_nevazuta","Lumea nevăzută: ce spune Biblia",6,"live"),course("spiritual_c2_discernamant","Discerne lupta",6,"live"),course("spiritual_c3_blessings","Blesteme, legături și uși deschise",6,"live"),course("spiritual_c4_libertate","Libertate și autoritate în Hristos",7,"live")])
 export const SHELVES:LibraryShelf[]=[...baseShelves,identity,men,women,common,spiritual]
 export function visibleShelves(){return SHELVES.filter(s=>!s.gated)}
@@ -69,8 +71,8 @@ export const ALL_LIBRARY_COURSES=SHELVES.flatMap(s=>s.courses)
 export function getLibraryCourse(id:string){return ALL_LIBRARY_COURSES.find(c=>c.id===id)}
 export const courseIsOpen=base.courseIsOpen
 export const nextCourseLesson=base.nextCourseLesson
-export const LIBRARY_LESSONS:Lesson[]=[...base.LIBRARY_LESSONS,...FUNDAMENTUL_LESSONS,...DOCTRINE_BIBLIA_LESSONS,...DOCTRINE_BISERICA_LESSONS,...RUGACIUNE_INCEPUT_LESSONS,...RUGACIUNI_CONTEXTUALE_LESSONS,...CASNICIE_LESSONS,...BANI_LESSONS,...MUNCA_LESSONS,...INTEGRITATE_LESSONS,...TIMP_LESSONS,...TRASEE_COPII_LESSONS,...TRASEE_ADOLESCENTI_LESSONS,...IDENTITATE_BARBATI_FEMEI_LESSONS,...CARACTER_HRISTOS_LESSONS,...LUPTE_INTERIOARE_LESSONS,...RELATII_BARBATI_FEMEI_LESSONS,...SOTI_LEGAMANT_LESSONS,...PARINTI_PREZENTI_LESSONS,...RELATII_COMUNE_1_LESSONS,...SPIRITUAL_LUMEA_LESSONS,...SPIRITUAL_DISCERN_LESSONS,...SPIRITUAL_BLESTEM_LESSONS,...SPIRITUAL_LIBERTATE_LESSONS]
+export const LIBRARY_LESSONS:Lesson[]=[...base.LIBRARY_LESSONS,...FUNDAMENTUL_LESSONS,...DOCTRINE_BIBLIA_LESSONS,...DOCTRINE_BISERICA_LESSONS,...RUGACIUNE_INCEPUT_LESSONS,...RUGACIUNI_CONTEXTUALE_LESSONS,...CASNICIE_LESSONS,...BANI_LESSONS,...MUNCA_LESSONS,...INTEGRITATE_LESSONS,...TIMP_LESSONS,...TRASEE_COPII_LESSONS,...TRASEE_ADOLESCENTI_LESSONS,...IDENTITATE_BARBATI_FEMEI_LESSONS,...CARACTER_HRISTOS_LESSONS,...LUPTE_INTERIOARE_LESSONS,...RELATII_BARBATI_FEMEI_LESSONS,...SOTI_LEGAMANT_LESSONS,...PARINTI_PREZENTI_LESSONS,...RELATII_COMUNE_1_LESSONS,...RELATII_COMUNE_2_LESSONS,...SPIRITUAL_LUMEA_LESSONS,...SPIRITUAL_DISCERN_LESSONS,...SPIRITUAL_BLESTEM_LESSONS,...SPIRITUAL_LIBERTATE_LESSONS]
 export function findLibraryLesson(id:string){return LIBRARY_LESSONS.find(l=>l.id===id)}
 export function libraryCourseLessons(courseId:string):Lesson[]{const c=getLibraryCourse(courseId);return c?c.lessonIds.map(findLibraryLesson).filter((x):x is Lesson=>Boolean(x)):[]}
 const done=new Set(Object.keys(live))
-export const WRITING_ORDER=["comun_c3_sexualitate","comun_c4_limite","comun_c5_siguranta","comun_c6_partener","comun_c7_copil",...base.WRITING_ORDER].filter((id,i,a)=>!done.has(id)&&a.indexOf(id)===i)
+export const WRITING_ORDER=["comun_c5_siguranta","comun_c6_partener","comun_c7_copil",...base.WRITING_ORDER].filter((id,i,a)=>!done.has(id)&&a.indexOf(id)===i)
