@@ -3,11 +3,13 @@ export * from "./types.js"
 import type { BibleBook } from "./types.js"
 import { GENEZA as GENEZA_BASE } from "./geneza.js"
 import { GENEZA_2 } from "./geneza2.js"
+import { GENEZA_3 } from "./geneza3.js"
+import { GENEZA_4 } from "./geneza4.js"
 
 /** Geneza, cu toate capitolele scrise pana acum. */
 export const GENEZA: BibleBook = {
   ...GENEZA_BASE,
-  chapters: [...GENEZA_BASE.chapters, GENEZA_2],
+  chapters: [...GENEZA_BASE.chapters, GENEZA_2, GENEZA_3, GENEZA_4],
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
