@@ -16,8 +16,8 @@ export const rugInceputL7: Lesson = {
     ]},
     { id: "ri7_4", type: "scripture", order: 4, scripture: { text: "Dacă ne mărturisim păcatele, El este credincios și drept ca să ne ierte păcatele și să ne curățească de orice nelegiuire.", ref: "1 Ioan 1:9" } },
     { id: "ri7_5", type: "world_vs_truth", order: 5, bubbles: [
-      { from: "guide", text: "Iertarea nu este negarea răului și nu spune că durerea a fost mică. Nu înseamnă împăcare automată, încredere restaurată instantaneu sau întoarcere într-un loc periculos." },
-      { from: "guide", text: "Poți ierta și păstra limita. Poți ierta și raporta infracțiunea. Poți ierta și cere dreptate. Împăcarea cere adevăr, pocăință și siguranță din partea ambelor persoane." },
+      { from: "guide", text: "Iertarea nu este negarea răului. Nu înseamnă împăcare automată, încredere restaurată instantaneu sau întoarcere într-un loc periculos." },
+      { from: "guide", text: "Poți ierta și păstra limita. Poți ierta și raporta infracțiunea. Împăcarea cere adevăr, pocăință și siguranță din partea ambelor persoane." },
     ]},
     { id: "ri7_6", type: "choice", order: 6, choice: { prompt: "Care parte are nevoie de adevăr astăzi?", options: [
       { id: "ri7a", label: "Trebuie să mărturisesc ceva concret." },
@@ -25,8 +25,8 @@ export const rugInceputL7: Lesson = {
       { id: "ri7c", label: "Sunt presat să mă întorc într-un loc nesigur." },
     ]}},
     { id: "ri7_7", type: "how_god_helps", order: 7, bubbles: [
-      { from: "guide", text: "Dacă ai greșit, numește fapta și următorul pas de reparare. Dacă ai fost rănit, poți începe: «Nu pot declara că nu doare, dar renunț să fac din răzbunare stăpânul meu»." },
-      { from: "guide", text: "Dacă ești în pericol, prima ascultare poate fi ieșirea, limita și cererea de ajutor. Nu lăsa pe nimeni să folosească această rugăciune pentru a te trimite înapoi la abuz." },
+      { from: "guide", text: "Dacă ai greșit, numește fapta și următorul pas de reparare. Dacă ai fost rănit, poți spune: «Nu numesc mic răul, dar renunț să fac din răzbunare stăpânul meu»." },
+      { from: "guide", text: "Dacă ești în pericol, prima ascultare poate fi ieșirea, limita și cererea de ajutor. Nimeni nu trebuie să folosească iertarea pentru a te trimite înapoi la abuz." },
     ]},
     { id: "ri7_8", type: "quiz", order: 8, quiz: { question: "Ce NU cere iertarea?", options: [
       { text: "Să renunți la răzbunare", correct: false },
@@ -34,13 +34,13 @@ export const rugInceputL7: Lesson = {
       { text: "Să refaci imediat încrederea și să revii în pericol", correct: true },
     ], explanation: "Iertarea, împăcarea și încrederea sunt lucruri diferite. Siguranța și dreptatea nu sunt dușmanii iertării." }},
     { id: "ri7_9", type: "step", order: 9, bubbles: [
-      { from: "guide", text: "Roagă două propoziții separate: «Iartă-mă pentru ___ și arată-mi cum repar». Apoi: «Aduc înaintea Ta ce mi-a făcut ___. Nu numesc bine răul, dar refuz să trăiesc condus de răzbunare»." },
+      { from: "guide", text: "Roagă două propoziții: «Iartă-mă pentru ___ și arată-mi cum repar». Apoi: «Aduc înaintea Ta ce mi-a făcut ___. Refuz să trăiesc condus de răzbunare»." },
     ]},
     { id: "ri7_10", type: "how_god_helps", order: 10, bubbles: [
-      { from: "guide", text: "Limita cinstită: iertarea poate fi un proces lung. Faptul că durerea revine nu dovedește că ai eșuat și nu te obligă să repeți mecanic aceeași declarație până nu mai simți nimic." },
+      { from: "guide", text: "Limita cinstită: iertarea poate fi un proces lung. Faptul că durerea revine nu dovedește că ai eșuat." },
     ]},
     { id: "ri7_11", type: "prayer", order: 11, bubbles: [
-      { from: "guide", text: "«Tată, aduc în lumină păcatul meu și rana mea. Iartă-mă, curăță-mă și învață-mă să ofer altora har fără să numesc răul bine.»" },
+      { from: "guide", text: "«Tată, aduc în lumină păcatul meu și rana mea. Iartă-mă, curăță-mă și învață-mă să ofer har fără să numesc răul bine.»" },
     ]},
     { id: "ri7_12", type: "memory_verse", order: 12, scripture: { text: "Dacă ne mărturisim păcatele, El este credincios și drept ca să ne ierte.", ref: "1 Ioan 1:9" } },
   ],
@@ -61,7 +61,7 @@ export const rugInceputL8: Lesson = {
     ]},
     { id: "ri8_4", type: "scripture", order: 4, scripture: { text: "Vegheați și rugați-vă, ca să nu cădeți în ispită; duhul, în adevăr, este plin de râvnă, dar carnea este neputincioasă.", ref: "Matei 26:41" } },
     { id: "ri8_5", type: "world_vs_truth", order: 5, bubbles: [
-      { from: "guide", text: "Rugăciunea nu înlocuiește ieșirea practică. Dacă ceri protecție, dar păstrezi accesul secret, conversația, banii sau contextul care te trage, ignori o parte din răspuns." },
+      { from: "guide", text: "Rugăciunea nu înlocuiește ieșirea practică. Dacă ceri protecție, dar păstrezi accesul sau contextul care te trage, ignori o parte din răspuns." },
       { from: "guide", text: "Nici căderea nu dovedește automat că un demon te-a controlat. Responsabilitatea, pocăința, sprijinul și uneori tratamentul rămân necesare." },
     ]},
     { id: "ri8_6", type: "choice", order: 6, choice: { prompt: "Unde trebuie să te rogi înainte, nu doar după?", options: [
@@ -73,13 +73,13 @@ export const rugInceputL8: Lesson = {
       { from: "guide", text: "Numește ispita, minciuna din spatele ei și o ieșire. De exemplu: «Când mă simt singur, cred că acest lucru mă va liniști. Astăzi blochez accesul și sun omul care știe lupta mea»." },
     ]},
     { id: "ri8_8", type: "step", order: 8, bubbles: [
-      { from: "guide", text: "Completează: «Tată, păzește-mă astăzi când ___. Minciuna pe care sunt tentat s-o cred este ___. Adevărul Tău este ___. Ieșirea mea concretă este ___.»" },
+      { from: "guide", text: "Completează: «Tată, păzește-mă când ___. Minciuna este ___. Adevărul Tău este ___. Ieșirea mea concretă este ___.»" },
     ]},
     { id: "ri8_9", type: "how_god_helps", order: 9, bubbles: [
-      { from: "guide", text: "Dacă lupta implică dependență, auto-vătămare, violență sau pierderea controlului, nu rămâne doar cu o rugăciune din aplicație. Implică imediat un om sigur și ajutor specializat." },
+      { from: "guide", text: "Dacă lupta implică dependență, auto-vătămare, violență sau pierderea controlului, implică imediat un om sigur și ajutor specializat." },
     ]},
     { id: "ri8_10", type: "prayer", order: 10, bubbles: [
-      { from: "guide", text: "«Tată, eu nu sunt mai puternic decât orice ispită. Fă-mă atent, arată-mi ieșirea și dă-mi smerenia să fug și să cer ajutor înainte să ascund.»" },
+      { from: "guide", text: "«Tată, fă-mă atent, arată-mi ieșirea și dă-mi smerenia să fug și să cer ajutor înainte să ascund.»" },
     ]},
     { id: "ri8_11", type: "memory_verse", order: 11, scripture: { text: "Vegheați și rugați-vă, ca să nu cădeți în ispită.", ref: "Matei 26:41" } },
   ],
@@ -88,47 +88,48 @@ export const rugInceputL8: Lesson = {
 export const rugInceputL9: Lesson = {
   id: "rug_inceput_l9", courseId: "lib_rug_inceput", order: 9,
   title: "Izbăvește-ne de cel rău", estMinutes: 15,
-  anchorRefs: ["Matei 6:13", "Efeseni 6:10-18", "Iacov 4:7", "Psalmul 4:8"], memoryVerseRef: "Iacov 4:7",
+  anchorRefs: ["Matei 6:13", "Efeseni 6:10-18", "Iacov 4:7"], memoryVerseRef: "Iacov 4:7",
   steps: [
     { id: "ri9_1", type: "hook", order: 1, bubbles: [
       { from: "guide", text: "Rugăciunea Domnului se încheie recunoscând că răul este real și că nu ne putem păzi singuri. Dar nu se termină în frică, ci în dependență de Tatăl." },
     ]},
     { id: "ri9_2", type: "scripture", order: 2, scripture: { text: "Și nu ne duce în ispită, ci izbăvește-ne de cel rău.", ref: "Matei 6:13" } },
     { id: "ri9_3", type: "truth_simple", order: 3, bubbles: [
-      { from: "guide", text: "Cel rău nu este egalul lui Dumnezeu. Satan și demonii sunt creaturi limitate, iar Iisus are autoritate asupra lor. Rugăciunea nu este duel între două puteri egale." },
-      { from: "guide", text: "Cerem protecție pentru minte, trup, casă, relații și credință. Ne împotrivim minciunii, dar nu diagnosticăm automat fiecare boală, coșmar sau gând ca demon." },
+      { from: "guide", text: "Cel rău nu este egalul lui Dumnezeu. Satan și demonii sunt creaturi limitate, iar Iisus are autoritate asupra lor." },
+      { from: "guide", text: "Cerem protecție pentru minte, trup, casă, relații și credință. Ne împotrivim minciunii, fără să diagnosticăm automat fiecare boală, coșmar sau gând ca demon." },
     ]},
     { id: "ri9_4", type: "scripture", order: 4, scripture: { text: "Supuneți-vă, dar, lui Dumnezeu. Împotriviți-vă diavolului, și el va fugi de la voi.", ref: "Iacov 4:7" }, bubbles: [
-      { from: "guide", text: "Ordinea contează: întâi supunere lui Dumnezeu, apoi împotrivire. Autoritatea nu vine din volum, formule sau curaj teatral, ci din apartenența la Iisus." },
+      { from: "guide", text: "Ordinea contează: întâi supunere lui Dumnezeu, apoi împotrivire. Autoritatea nu vine din volum sau formule, ci din apartenența la Iisus." },
     ]},
     { id: "ri9_5", type: "world_vs_truth", order: 5, bubbles: [
-      { from: "guide", text: "Emanus nu se prezintă drept Duhul Sfânt și nu poate declara că cineva are un demon. Pentru manifestări severe, omul are nevoie de o echipă pastorală matură și, când există simptome medicale sau psihice, de specialiști." },
+      { from: "guide", text: "Emanus nu se prezintă drept Duhul Sfânt și nu poate declara că cineva are un demon. Pentru manifestări severe este nevoie de oameni maturi și, când există simptome medicale sau psihice, de specialiști." },
       { from: "guide", text: "Rugăciunea și ajutorul medical nu sunt dușmani. Nu opri tratamentul și nu te izola pentru a dovedi credința." },
     ]},
-    { id: "ri9_6", type: "choice", order: 6, choice: { prompt: "Pentru ce ceri protecția lui Dumnezeu astăzi?", options: [
+    { id: "ri9_6", type: "choice", order: 6, choice: { prompt: "Pentru ce ceri protecția lui Dumnezeu?", options: [
       { id: "ri9a", label: "Mintea mea și minciunile care mă acuză." },
       { id: "ri9b", label: "Casa, familia și relațiile mele." },
-      { id: "ri9c", label: "O luptă spirituală pentru care am nevoie și de oameni maturi." },
+      { id: "ri9c", label: "O luptă pentru care am nevoie și de oameni maturi." },
     ]}},
     { id: "ri9_7", type: "how_god_helps", order: 7, bubbles: [
       { from: "guide", text: "Poți spune ferm: «Iisus este Domn. Aleg adevărul Lui și refuz minciuna care spune ___. Tată, păzește-mă și condu-mă spre ajutorul potrivit»." },
     ]},
-    { id: "ri9_8", type: "step", order: 8, bubbles: [
-      { from: "guide", text: "Acum folosește întregul tipar, cu propriile cuvinte: Tată — cine este El; Numele — unde vrei să-L reprezinți; Împărăția — unde să conducă; voia — ce predai; pâinea — ce ai nevoie; iertarea — ce aduci în lumină; ispita și răul — unde ceri pază." },
+    { id: "ri9_8", type: "truth_simple", order: 8, bubbles: [
+      { from: "guide", text: "Acest curs aparține Timpului de rugăciune: momentul așezat al zilei în care rămâi înaintea lui Dumnezeu și folosești «Tatăl nostru» ca schelet pentru o conversație adâncă." },
+      { from: "guide", text: "Nu transformăm acest tipar în rugăciunea pentru fiecare context. Dimineața, masa, munca, familia, călătoria, vindecarea și celelalte nevoi vor avea rugăciuni distincte." },
     ]},
     { id: "ri9_9", type: "step", order: 9, bubbles: [
-      { from: "guide", text: "Dimineața: mulțumește pentru noua zi, predă planurile, cere pâinea de azi și protecție. Pentru muncă: cere minte limpede, mâini cinstite, relații curate și ca lucrul tău să servească oameni." },
+      { from: "guide", text: "Pentru Timpul de rugăciune, așază-te fără grabă. Parcurge cu propriile cuvinte: Tatăl; Numele; Împărăția; voia; pâinea și nevoile; iertarea; ispita și izbăvirea de rău." },
     ]},
     { id: "ri9_10", type: "step", order: 10, bubbles: [
-      { from: "guide", text: "La masă: mulțumește pentru hrană și pentru oamenii prin care a venit; amintește-ți de cei care nu au. La culcare: mulțumește, mărturisește, predă ce a rămas neterminat și încredințează-I noaptea." },
+      { from: "guide", text: "Nu trebuie să acorzi zilnic același timp fiecărei părți. Tiparul îți păzește direcția, dar conversația rămâne vie: uneori vei rămâne mai mult în mulțumire, alteori în mărturisire, cerere sau tăcere." },
     ]},
     { id: "ri9_11", type: "how_god_helps", order: 11, bubbles: [
-      { from: "guide", text: "Acestea nu sunt patru poezii noi. Sunt patru feluri de a folosi același tipar. Schimbă cuvintele, numește ziua reală și lasă schela să dispară treptat." },
+      { from: "guide", text: "Pe lângă Timpul de rugăciune, aplicația va avea rugăciuni distincte pentru momente și nevoi: dimineață, seară, masă, muncă, familie, călătorie, cereri, întărire, vindecare, protecție și mijlocire." },
       { from: "guide", text: "Limita cinstită: rugăciunea nu garantează răspunsul, momentul sau senzația dorită. Tăcerea nu dovedește automat o tehnică greșită, credință slabă ori pedeapsă." },
     ]},
-    { id: "ri9_12", type: "journal", order: 12, journalPrompt: "Scrie rugăciunea ta de astăzi folosind cele șapte mișcări, dar fără să copiezi formulările lecției. Unde ai rămas cel mai mult?" },
+    { id: "ri9_12", type: "journal", order: 12, journalPrompt: "Scrie rugăciunea Timpului tău de rugăciune folosind cele șapte mișcări, fără să copiezi formulările lecției. La care parte ai rămas cel mai mult?" },
     { id: "ri9_13", type: "prayer", order: 13, bubbles: [
-      { from: "guide", text: "Acum Emanus se oprește. Roagă-te în cuvintele tale. Nu trebuie să sune frumos, iar aplicația nu te evaluează." },
+      { from: "guide", text: "Acum Emanus se oprește. Rămâi tu cu Dumnezeu și roagă-te în cuvintele tale. Aplicația nu te evaluează." },
     ]},
     { id: "ri9_14", type: "memory_verse", order: 14, scripture: { text: "Supuneți-vă lui Dumnezeu. Împotriviți-vă diavolului, și el va fugi de la voi.", ref: "Iacov 4:7" } },
   ],
