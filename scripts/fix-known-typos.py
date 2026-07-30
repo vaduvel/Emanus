@@ -7,7 +7,7 @@ ROOTS = [Path("packages/shared/src"), Path("apps/web/src")]
 REPLACEMENTS = {
     "]i-am călcat": "ți-am călcat", "A dăt ploaia": "A dat ploaia", "a arunca-o": "a aruncat-o",
     "primesc uor": "primesc ușor", "moWtenire": "moștenire", "vorbește-I Și": "vorbește-I și",
-    "aseapta": "așteaptă", "mariae": "mărire", "rada": "roadă", "puin": "puțin",
+    "aseapta": "așteaptă", "mariae": "mărire", "puin": "puțin",
     "ieseire": "ieșire", "stradiuasca": "străduiască", "increed": "încred", "foloseesti": "folosești",
     "ieseit": "ieșit", "isprvi": "isprăvi", "Îî spuneau": "Îi spuneau", "caUtat": "căutat",
     "caUtam": "căutăm", "soluti a": "soluția", "ajunge satul": "ajunge sătul", "ispravî": "isprăvi",
