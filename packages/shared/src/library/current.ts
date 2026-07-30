@@ -9,6 +9,7 @@ import { RUGACIUNI_CONTEXTUALE_LESSONS } from "./rugaciuniContextuale.js"
 import { CASNICIE_LESSONS, BANI_LESSONS } from "./viataCasaBani.js"
 import { MUNCA_LESSONS, INTEGRITATE_LESSONS, TIMP_LESSONS } from "./viataZilnica.js"
 import { TRASEE_ADOLESCENTI_LESSONS } from "./traseeAdolescenti.js"
+import { TRASEE_COPII_LESSONS } from "./traseeCopii.js"
 import { SPIRITUAL_LUMEA_LESSONS } from "./spiritualLumeaNevazuta2.js"
 import { SPIRITUAL_DISCERN_LESSONS } from "./spiritualDiscernamant2.js"
 import { SPIRITUAL_BLESTEM_LESSONS } from "./spiritualBlesteme2.js"
@@ -27,6 +28,7 @@ export * from "./rugaciuniContextuale.js"
 export * from "./viataCasaBani.js"
 export * from "./viataZilnica.js"
 export * from "./traseeAdolescenti.js"
+export * from "./traseeCopii.js"
 export * from "./spiritualLumeaNevazuta.js"
 export * from "./spiritualLumeaNevazuta2.js"
 export * from "./spiritualDiscernamant.js"
@@ -40,6 +42,7 @@ const ids=(prefix:string,count:number)=>Array.from({length:count},(_,i)=>`${pref
 const liveCourses:Record<string,string[]>={
  lib_fundamentul:ids("fund_l",8),lib_rug_context:ids("rug_context_l",11),lib_casnicie:ids("casnicie_l",6),lib_bani:ids("bani_l",5),
  lib_munca:ids("munca_l",5),lib_integritate:ids("integritate_l",4),lib_timp:ids("timp_l",4),
+ lib_micii_facut:ids("micii_facut_l",5),lib_copii_cine_sunt:ids("copii_identitate_l",5),lib_copii_emotii:ids("copii_emotii_l",4),
  lib_teens_identitate:ids("teens_identitate_l",5),lib_teens_indoieli:ids("teens_indoieli_l",5),
  doctrine_c1_biblia:ids("biblia_l",6),doctrine_c3_biserica:ids("biserica_l",5),lib_rug_inceput:ids("rug_inceput_l",9),
  spiritual_c1_lumea_nevazuta:ids("spirit_lumea_l",6),spiritual_c2_discernamant:ids("spirit_discern_l",6),
@@ -65,7 +68,7 @@ export const ALL_LIBRARY_COURSES=SHELVES.flatMap(s=>s.courses)
 export function getLibraryCourse(id:string){return ALL_LIBRARY_COURSES.find(c=>c.id===id)}
 export const courseIsOpen=base.courseIsOpen
 export const nextCourseLesson=base.nextCourseLesson
-export const LIBRARY_LESSONS:Lesson[]=[...base.LIBRARY_LESSONS,...FUNDAMENTUL_LESSONS,...DOCTRINE_BIBLIA_LESSONS,...DOCTRINE_BISERICA_LESSONS,...RUGACIUNE_INCEPUT_LESSONS,...RUGACIUNI_CONTEXTUALE_LESSONS,...CASNICIE_LESSONS,...BANI_LESSONS,...MUNCA_LESSONS,...INTEGRITATE_LESSONS,...TIMP_LESSONS,...TRASEE_ADOLESCENTI_LESSONS,...SPIRITUAL_LUMEA_LESSONS,...SPIRITUAL_DISCERN_LESSONS,...SPIRITUAL_BLESTEM_LESSONS,...SPIRITUAL_LIBERTATE_LESSONS]
+export const LIBRARY_LESSONS:Lesson[]=[...base.LIBRARY_LESSONS,...FUNDAMENTUL_LESSONS,...DOCTRINE_BIBLIA_LESSONS,...DOCTRINE_BISERICA_LESSONS,...RUGACIUNE_INCEPUT_LESSONS,...RUGACIUNI_CONTEXTUALE_LESSONS,...CASNICIE_LESSONS,...BANI_LESSONS,...MUNCA_LESSONS,...INTEGRITATE_LESSONS,...TIMP_LESSONS,...TRASEE_COPII_LESSONS,...TRASEE_ADOLESCENTI_LESSONS,...SPIRITUAL_LUMEA_LESSONS,...SPIRITUAL_DISCERN_LESSONS,...SPIRITUAL_BLESTEM_LESSONS,...SPIRITUAL_LIBERTATE_LESSONS]
 export function findLibraryLesson(id:string){return LIBRARY_LESSONS.find(l=>l.id===id)}
 export function libraryCourseLessons(courseId:string):Lesson[]{const c=getLibraryCourse(courseId);return c?c.lessonIds.map(findLibraryLesson).filter((x):x is Lesson=>Boolean(x)):[]}
-export const WRITING_ORDER=base.WRITING_ORDER.filter(id=>!["lib_fundamentul","doctrine_c1_biblia","doctrine_c3_biserica","lib_rug_inceput","lib_casnicie","lib_bani","lib_munca","lib_integritate","lib_timp","lib_teens_identitate","lib_teens_indoieli"].includes(id))
+export const WRITING_ORDER=base.WRITING_ORDER.filter(id=>!["lib_fundamentul","doctrine_c1_biblia","doctrine_c3_biserica","lib_rug_inceput","lib_casnicie","lib_bani","lib_munca","lib_integritate","lib_timp","lib_micii_facut","lib_copii_cine_sunt","lib_copii_emotii","lib_teens_identitate","lib_teens_indoieli"].includes(id))
