@@ -1,6 +1,8 @@
 import {
   CATEGORY_CONFIGS,
   FAMILY_THEMES,
+  LIBRARY_LESSONS,
+  PATHS,
   PRAYER_LEVELS,
   analyzeGrowthText,
   applyAxisDeltas,
@@ -18,6 +20,7 @@ import {
   isModuleCompletingReward,
   mentorStatus as computeMentorStatus,
   moderatePost,
+  mohlerNotForMe,
   teensM1C1,
 } from "@emanus/shared"
 import type {
@@ -86,7 +89,14 @@ export interface GrowthProfileResult {
 // --- Fallback in-memory (dev fără DB), din seed-ul partajat @emanus/shared ---
 const memModules = new Map<string, Module>([[teensM1C1.module.id, teensM1C1.module]])
 const memCourses = new Map<string, Course>([[teensM1C1.course.id, teensM1C1.course]])
-const memLessons = new Map<string, Lesson>(teensM1C1.lessons.map((l) => [l.id, l]))
+const memLessons = new Map<string, Lesson>(
+  [
+    ...teensM1C1.lessons,
+    ...PATHS.flatMap((path) => path.lessons),
+    ...LIBRARY_LESSONS,
+    ...mohlerNotForMe.lessons,
+  ].map((lesson) => [lesson.id, lesson]),
+)
 const memGam = new Map<string, GamState>()
 const memGrowth = new Map<string, GrowthScore[]>()
 const memDone = new Map<string, Set<string>>()
@@ -149,7 +159,7 @@ function category(id: string): Category | undefined {
 async function lesson(id: string): Promise<Lesson | undefined> {
   if (useDb) {
     const found = await (await db()).getLesson(id)
-    return found ?? undefined
+    if (found) return found
   }
   return memLessons.get(id)
 }

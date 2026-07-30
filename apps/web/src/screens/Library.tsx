@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { ArrowLeft, BookOpen, ChevronRight, Lock } from "lucide-react"
-import type { LibraryCourse, LibraryShelf } from "@emanus/shared"
-import { courseIsOpen, visibleShelves } from "@emanus/shared"
+import type { ContentCourse, ContentShelf } from "@emanus/shared/content-catalog"
+import { courseIsOpen, visibleContentShelves } from "../content"
 import { navigate } from "../router"
 import "../library.css"
 
@@ -19,7 +19,7 @@ import "../library.css"
  * Alea sunt camerele din paths/ si se intra pe usa, cu parcurs.
  */
 
-function Course({ course }: { course: LibraryCourse }) {
+function Course({ course }: { course: ContentCourse }) {
   const open = courseIsOpen(course)
   const first = course.lessonIds[0]
 
@@ -42,7 +42,7 @@ function Course({ course }: { course: LibraryCourse }) {
   )
 }
 
-function Shelf({ shelf }: { shelf: LibraryShelf }) {
+function Shelf({ shelf }: { shelf: ContentShelf }) {
   const [open, setOpen] = useState(false)
   const ready = shelf.courses.filter(courseIsOpen).length
 
@@ -84,7 +84,7 @@ function Shelf({ shelf }: { shelf: LibraryShelf }) {
 }
 
 export function Library() {
-  const shelves = visibleShelves()
+  const shelves = visibleContentShelves()
 
   return (
     <section className="library">

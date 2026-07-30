@@ -2,6 +2,7 @@ import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { registerSW } from "virtual:pwa-register"
 import App from "./App"
+import { hydrateContentManifest } from "./content"
 import { hydrateFromCloud } from "./journey"
 import { initReminder } from "./reminder"
 import "./ds/tokens.css"
@@ -32,7 +33,10 @@ function render() {
 // Desenăm imediat din datele locale — aplicația nu așteaptă niciodată rețeaua.
 render()
 
-// Telefon nou: dacă local e gol și în nor există un drum, îl aducem și redesenăm o dată.
-void hydrateFromCloud().then((restored) => {
-  if (restored) render()
-})
+// Manifestul publicat și drumul omului se hidratează în paralel. Ecranul pornește
+// imediat din fallback-ul compact, apoi se redesenează numai dacă s-a schimbat ceva.
+void Promise.all([hydrateContentManifest(), hydrateFromCloud()]).then(
+  ([contentChanged, journeyRestored]) => {
+    if (contentChanged || journeyRestored) render()
+  },
+)

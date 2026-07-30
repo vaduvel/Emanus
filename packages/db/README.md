@@ -9,6 +9,10 @@ Dashboard Supabase -> **Project Settings -> Database -> Connection string**:
 
 (Opțional, pentru Auth/Storage) **Project Settings -> API**: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`.
 
+Pentru publicarea lecțiilor, cheia secretă rămâne numai pe server/local:
+`SUPABASE_SECRET_KEY` sau `SUPABASE_SERVICE_ROLE_KEY`. Nu folosi niciodată
+această cheie într-o variabilă `VITE_*`.
+
 ## 2. Configurează local
 ```bash
 cp .env.example .env   # în rădăcina repo-ului

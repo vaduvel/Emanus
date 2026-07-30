@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowRight, BellRing, BookOpen, HandHeart, Library as LibraryIcon, Sunrise } from "lucide-react"
-import type { Lesson } from "@emanus/shared"
+import type { ContentLessonSummary } from "@emanus/shared/content-catalog"
 import {
   addPrayer,
   currentPath,
@@ -27,9 +27,8 @@ import { cloudEnabled } from "../cloud"
  * configurată aplicația, nu după cum ar suna mai bine.
  */
 
-function memoryVerse(lesson: Lesson): { text: string; ref: string } | null {
-  const s = lesson.steps.find((x) => x.type === "memory_verse" && x.scripture)
-  return s?.scripture ?? null
+function memoryVerse(lesson: ContentLessonSummary): { text: string; ref: string } | null {
+  return lesson.memoryVerse
 }
 
 /** Ce scrie sub câmpul de rugăciune. Adevărul, nu ce sună mai liniștitor. */

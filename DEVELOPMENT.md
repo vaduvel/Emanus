@@ -37,6 +37,40 @@ pnpm dev:api                       # acum citește din Supabase
 ```
 Detalii și unde găsești connection string-urile: `packages/db/README.md`.
 
+## Publicarea conținutului
+
+Conținutul de producție nu este inclus integral în aplicația web:
+
+- `content_manifests` păstrează catalogul activ, versionat atomic;
+- `content_lessons` păstrează fiecare lecție separat;
+- browserul descarcă numai lecția deschisă și o păstrează pentru offline;
+- fișierele TypeScript din `packages/shared/src/paths` și
+  `packages/shared/src/library` sunt sursa editorială și fallback-ul API local.
+
+Prima configurare a proiectului Supabase:
+
+```bash
+supabase login
+supabase link --project-ref <PROJECT_REF>
+supabase db push
+pnpm content:publish
+```
+
+`pnpm content:publish` folosește `SUPABASE_URL` și
+`SUPABASE_SECRET_KEY`/`SUPABASE_SERVICE_ROLE_KEY` din `.env`. Publisher-ul
+validează referințele, publică lecțiile și activează manifestul într-o singură
+tranzacție SQL.
+
+După orice modificare de curs sau lecție:
+
+```bash
+pnpm generate:content-manifest
+pnpm check:content-manifest
+pnpm content:publish
+```
+
+CI respinge modificările de conținut dacă manifestul compact nu a fost regenerat.
+
 ## Endpoints (Faza 1)
 - `GET /health`
 - `GET /public/first-lesson`

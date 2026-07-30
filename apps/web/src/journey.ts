@@ -1,7 +1,14 @@
-import type { Lesson } from "@emanus/shared/domain"
-import type { DayPlan, PathDef } from "@emanus/shared/paths"
-import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared/paths"
+import type {
+  ContentDayPlan,
+  ContentLessonSummary,
+  ContentPath,
+} from "@emanus/shared/content-catalog"
 import { cloudEnabled, pullState, pushState } from "./cloud"
+import {
+  contentPath,
+  nextDoctrineLesson,
+  planTodayFromContent,
+} from "./content"
 
 /*
  * Starea drumului.
@@ -145,16 +152,16 @@ export function chooseDoor(pathId: string): JourneyState {
   })
 }
 
-export function currentPath(): PathDef | undefined {
-  return getPath(load().pathId)
+export function currentPath(): ContentPath | undefined {
+  return contentPath(load().pathId)
 }
 
-export function plan(): DayPlan | null {
+export function plan(): ContentDayPlan | null {
   const s = load()
-  const path = getPath(s.pathId)
+  const path = contentPath(s.pathId)
   if (!path) return null
   const since = s.lastLessonDate === null ? null : daysBetween(s.lastLessonDate, today())
-  return planToday(path, s.lessonsDone, since)
+  return planTodayFromContent(path, s.lessonsDone, since)
 }
 
 /**
@@ -164,10 +171,10 @@ export function plan(): DayPlan | null {
  *
  * Pe drumul "De la zero" nu se oferă: acolo doctrina ESTE drumul.
  */
-export function doctrineAvailable(): Lesson | undefined {
+export function doctrineAvailable(): ContentLessonSummary | undefined {
   const s = load()
   if (s.pathId === "path_temelie") return undefined
-  const path = getPath(s.pathId)
+  const path = contentPath(s.pathId)
   if (!path) return undefined
   return nextDoctrineLesson(s.lessonsDone, path.lessons.length, s.doctrineDone)
 }

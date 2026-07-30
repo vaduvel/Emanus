@@ -26,6 +26,9 @@ jobs:
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
+      - name: Verifica manifestul de continut
+        run: pnpm check:content
+
       - name: Typecheck
         run: pnpm typecheck
 

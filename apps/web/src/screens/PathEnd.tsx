@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 import { ArrowRight, HandHeart, Mountain } from "lucide-react"
-import { otherPaths } from "@emanus/shared"
+import { otherContentPaths } from "../content"
 import { currentPath, firstJournalEntry, load, markPathSeen, switchPath } from "../journey"
 import { navigate } from "../router"
 
@@ -22,7 +22,7 @@ export function PathEnd() {
     const j = load().journal
     return j[j.length - 1]
   }, [])
-  const next = useMemo(() => otherPaths(state.pathId), [state.pathId])
+  const next = useMemo(() => otherContentPaths(state.pathId), [state.pathId])
 
   function go(pathId: string) {
     switchPath(pathId)

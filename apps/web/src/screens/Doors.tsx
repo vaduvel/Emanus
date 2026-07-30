@@ -1,14 +1,14 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowRight, Search } from "lucide-react"
 import {
-  COMMON_DOORS,
-  EXPLORE_DOORS,
-  MORE_DOORS,
+  commonContentDoors,
+  contentDoor as getDoor,
+  contentPath as getPath,
   doorHasOwnRoom,
-  getDoor,
-  getPath,
+  exploreContentDoors,
+  moreContentDoors,
   resolveDoorPath,
-} from "@emanus/shared/paths"
+} from "../content"
 import { chooseDoor } from "../journey"
 import { navigate } from "../router"
 
@@ -21,6 +21,9 @@ function doorFromLink(): string | null {
 }
 
 export function Doors() {
+  const commonDoors = commonContentDoors()
+  const moreDoors = moreContentDoors()
+  const exploreDoors = exploreContentDoors()
   const fromLink = useMemo(doorFromLink, [])
   const [picked, setPicked] = useState<string | null>(null)
   const [showAll, setShowAll] = useState(false)
@@ -47,18 +50,18 @@ export function Doors() {
 
   const term = q.trim().toLowerCase()
   const rest = term
-    ? [...COMMON_DOORS, ...MORE_DOORS].filter((d) => d.label.toLowerCase().includes(term))
-    : MORE_DOORS
+    ? [...commonDoors, ...moreDoors].filter((d) => d.label.toLowerCase().includes(term))
+    : moreDoors
 
   return (
     <section className="doors">
       <p className="doors__mark">Emanus</p>
       <h1 className="doors__title">Ce te-a adus aici?</h1>
       <p className="doors__sub">Alege propoziția care seamănă cel mai mult cu ce trăiești.</p>
-      {!term && <ul className="doors__list">{COMMON_DOORS.map((d) => <li key={d.id}><button type="button" className="door" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={18} aria-hidden /></button></li>)}</ul>}
+      {!term && <ul className="doors__list">{commonDoors.map((d) => <li key={d.id}><button type="button" className="door" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={18} aria-hidden /></button></li>)}</ul>}
       {!showAll && !term && <button type="button" className="doors__more" onClick={() => setShowAll(true)}>Arată-mi toate opțiunile</button>}
       {showAll && <><label className="doors__search"><Search size={16} aria-hidden /><input type="text" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Caută în cuvintele tale" aria-label="Caută în cuvintele tale" /></label><ul className="doors__list">{rest.map((d) => <li key={d.id}><button type="button" className="door" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={18} aria-hidden /></button></li>)}</ul>{term && rest.length === 0 && <p className="doors__sub">Nu găsim propoziția asta. Nu înseamnă că nu e loc pentru tine — alege de mai jos.</p>}</>}
-      <ul className="doors__list doors__list--quiet">{EXPLORE_DOORS.map((d) => <li key={d.id}><button type="button" className="door door--quiet" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={16} aria-hidden /></button></li>)}</ul>
+      <ul className="doors__list doors__list--quiet">{exploreDoors.map((d) => <li key={d.id}><button type="button" className="door door--quiet" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={16} aria-hidden /></button></li>)}</ul>
       <p className="doors__note">Nu îți cerem bani, nu îți cerem date și nu îți dăm note. Poți schimba drumul oricând.</p>
       <p className="doors__note">Emanus nu înlocuiește medicul, psihologul, poliția sau 112.</p>
     </section>
