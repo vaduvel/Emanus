@@ -23,7 +23,7 @@ export const schimbareL1: Lesson = {
   courseId: "path_schimbare",
   order: 1,
   title: "Nu esti defect",
-  estMinutes: 11,
+  estMinutes: 12,
   anchorRefs: ["Marcu 5:1-15", "Psalmul 139:13-14", "Romani 7:15"],
   memoryVerseRef: "Psalmul 139:14",
   steps: [
@@ -65,11 +65,59 @@ export const schimbareL1: Lesson = {
       choice: {
         prompt: "Ce te-a adus aici seamana mai mult cu:",
         options: [
-          { id: "s1c_a", label: "Un lucru de care nu mă pot lasa" },
-          { id: "s1c_b", label: "O stare pe care nu o pot opri (frica, tristete)" },
-          { id: "s1c_c", label: "O reactie care raneste oamenii din jur" },
+          {
+            id: "s1c_a",
+            label: "Un lucru de care nu mă pot lasa",
+            branchStepId: "s1_branch_dependency",
+          },
+          {
+            id: "s1c_b",
+            label: "O stare pe care nu o pot opri (frica, tristete)",
+            branchStepId: "s1_branch_state",
+          },
+          {
+            id: "s1c_c",
+            label: "O reactie care raneste oamenii din jur",
+            branchStepId: "s1_branch_reaction",
+          },
         ],
       },
+    },
+    {
+      id: "s1_branch_dependency",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Lucrul care te ține nu este identitatea ta. Schimbarea va cere și pași concreți, iar alcoolul, drogurile, jocurile de noroc sau alte dependențe pot cere ajutor specializat. A cere acel ajutor nu concurează cu credința.",
+        },
+      ],
+    },
+    {
+      id: "s1_branch_state",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Frica sau tristețea persistentă nu dovedesc lipsă de credință și nu trebuie tratate ca un simplu obicei rău. Vom vorbi și despre corp, traumă, medic și psiholog, nu doar despre voință.",
+        },
+      ],
+    },
+    {
+      id: "s1_branch_reaction",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu ești redus la cea mai rea reacție a ta, dar oamenii răniți au nevoie de siguranță, nu doar de promisiunile tale. Dacă există risc de violență, creează distanță acum și cere ajutor competent; schimbarea începe cu asumare și protecție.",
+        },
+      ],
     },
     {
       id: "s1_4",

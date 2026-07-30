@@ -20,7 +20,7 @@ export const rusineL5: Lesson = {
   courseId: "path_acasa",
   order: 5,
   title: "Sa nu mai ascunzi",
-  estMinutes: 12,
+  estMinutes: 14,
   anchorRefs: ["1 Ioan 1:9", "Psalmul 32:3-5", "Iacov 5:16"],
   memoryVerseRef: "1 Ioan 1:9",
   steps: [
@@ -52,9 +52,71 @@ export const rusineL5: Lesson = {
       bubbles: [{ from: "guide", text: "Cum esti azi?" }],
     },
     {
+      id: "r5_ownership",
+      type: "choice",
+      order: 3,
+      choice: {
+        prompt:
+          "Inainte sa vorbim despre marturisire, ce descrie mai corect greutatea pe care o porti?",
+        options: [
+          {
+            id: "r5_own_action",
+            label: "Este ceva ce am ales si am facut",
+            branchStepId: "r5_branch_own_action",
+          },
+          {
+            id: "r5_harmed",
+            label: "Este ceva ce mi s-a facut sau am fost constrans",
+            branchStepId: "r5_branch_harmed",
+          },
+          {
+            id: "r5_mixed",
+            label: "Sunt amandoua si nu le pot desparti inca",
+            branchStepId: "r5_branch_mixed",
+          },
+        ],
+      },
+    },
+    {
+      id: "r5_branch_own_action",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Vom numi fapta fara sa te confundam cu ea. Marturisirea nu cere sa scrii detalii aici si nu sterge raspunderea sau repararea care mai este posibila. Opreste ascunderea, nu adevarul.",
+        },
+      ],
+    },
+    {
+      id: "r5_branch_harmed",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Ce ti s-a facut nu devine pacatul tau, nici daca ai inghetat, ai tacut sau ai cedat ca sa supravietuiesti. Nu marturisi vina agresorului. Daca pericolul continua, primul pas este siguranta si ajutorul, nu o discutie cu el.",
+        },
+      ],
+    },
+    {
+      id: "r5_branch_mixed",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu trebuie sa separi totul singur si nici astazi. Poti numi doar ce stii ca ai ales tu, fara sa iei asupra ta constrangerea sau raul altcuiva. Un consilier sigur te poate ajuta sa desfaci lucrurile fara sa-ti adauge vina.",
+        },
+      ],
+    },
+    {
       id: "r5_3",
       type: "name_struggle",
-      order: 3,
+      order: 4,
       bubbles: [
         {
           from: "guide",
@@ -70,7 +132,7 @@ export const rusineL5: Lesson = {
     {
       id: "r5_4",
       type: "scripture",
-      order: 4,
+      order: 5,
       scripture: {
         text:
           "Daca ne marturisim pacatele, El este credincios si drept ca sa ne ierte pacatele si sa ne curateasca de orice nelegiuire.",
@@ -97,7 +159,7 @@ export const rusineL5: Lesson = {
     {
       id: "r5_5",
       type: "scripture",
-      order: 5,
+      order: 6,
       scripture: {
         text:
           "Cat am tacut, mi se topeau oasele... Atunci Ti-am marturisit pacatul meu si nu mi-am ascuns fardelegea. Si Tu ai iertat vina pacatului meu.",
@@ -119,7 +181,7 @@ export const rusineL5: Lesson = {
     {
       id: "r5_6",
       type: "world_vs_truth",
-      order: 6,
+      order: 7,
       bubbles: [
         {
           from: "guide",
@@ -140,7 +202,7 @@ export const rusineL5: Lesson = {
     {
       id: "r5_7",
       type: "quiz",
-      order: 7,
+      order: 8,
       quiz: {
         question: "Ce inseamna, la origine, cuvantul tradus «marturisire»?",
         options: [
@@ -156,7 +218,7 @@ export const rusineL5: Lesson = {
     {
       id: "r5_8",
       type: "how_god_helps",
-      order: 8,
+      order: 9,
       bubbles: [
         {
           from: "guide",
@@ -183,7 +245,7 @@ export const rusineL5: Lesson = {
     {
       id: "r5_9",
       type: "step",
-      order: 9,
+      order: 10,
       bubbles: [
         {
           from: "guide",
@@ -200,7 +262,7 @@ export const rusineL5: Lesson = {
     {
       id: "r5_10",
       type: "prayer",
-      order: 10,
+      order: 11,
       bubbles: [
         {
           from: "guide",
@@ -215,14 +277,14 @@ export const rusineL5: Lesson = {
     {
       id: "r5_11",
       type: "journal",
-      order: 11,
+      order: 12,
       journalPrompt:
         "Daca vrei, scrie aici ce ai spus cu voce tare. Nimeni nu il citește. Poti sa il stergi in orice moment.",
     },
     {
       id: "r5_12",
       type: "memory_verse",
-      order: 12,
+      order: 13,
       scripture: {
         text: "Daca ne marturisim pacatele, El este credincios si drept ca sa ne ierte.",
         ref: "1 Ioan 1:9",

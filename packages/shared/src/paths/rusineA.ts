@@ -28,7 +28,7 @@ export const rusineL1: Lesson = {
   courseId: "path_acasa",
   order: 1,
   title: "El S-a miscat primul",
-  estMinutes: 10,
+  estMinutes: 11,
   anchorRefs: ["Luca 15:20", "Romani 5:8", "Luca 19:10"],
   memoryVerseRef: "Romani 5:8",
   steps: [
@@ -70,11 +70,59 @@ export const rusineL1: Lesson = {
       choice: {
         prompt: "Ca sa fie clar de unde pornim — care propozitie seamana mai mult cu tine?",
         options: [
-          { id: "r1c_a", label: "M-ar primi, dar nu asa cum sunt acum" },
-          { id: "r1c_b", label: "Cred ca am trecut linia. Pe mine nu." },
-          { id: "r1c_c", label: "Nu stiu ce cred. Mi-e doar rusine." },
+          {
+            id: "r1c_a",
+            label: "M-ar primi, dar nu asa cum sunt acum",
+            branchStepId: "r1_branch_clean_first",
+          },
+          {
+            id: "r1c_b",
+            label: "Cred ca am trecut linia. Pe mine nu.",
+            branchStepId: "r1_branch_too_far",
+          },
+          {
+            id: "r1c_c",
+            label: "Nu stiu ce cred. Mi-e doar rusine.",
+            branchStepId: "r1_branch_only_shame",
+          },
         ],
       },
+    },
+    {
+      id: "r1_branch_clean_first",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Atunci problema nu este că nu vrei să vii, ci că încerci să devii acceptabil înainte. În povestea pe care o citim, curățarea nu este biletul de intrare. Întoarcerea începe exact așa cum ești acum.",
+        },
+      ],
+    },
+    {
+      id: "r1_branch_too_far",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu voi micșora ce s-a întâmplat și nici consecințele lui. Dar crucea nu are o listă ascunsă de fapte pentru care plata nu ajunge. Lecția aceasta nu îți cere să crezi totul dintr-o dată; doar să vezi cine face primul pas.",
+        },
+      ],
+    },
+    {
+      id: "r1_branch_only_shame",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Poți continua și fără să ai acum o concluzie despre Dumnezeu. Rușinea te face să te ascunzi înainte să poți explica de ce. Pentru moment este suficient că ai numit-o și că nu mai stai singur în fața ei.",
+        },
+      ],
     },
     {
       id: "r1_4",

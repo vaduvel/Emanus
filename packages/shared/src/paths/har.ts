@@ -23,7 +23,7 @@ export const harL1: Lesson = {
   courseId: "path_har",
   order: 1,
   title: "Nu se cumpara",
-  estMinutes: 11,
+  estMinutes: 12,
   anchorRefs: ["Efeseni 2:8-9", "Tit 3:5", "Luca 18:9-14"],
   memoryVerseRef: "Efeseni 2:8-9",
   steps: [
@@ -64,11 +64,59 @@ export const harL1: Lesson = {
       choice: {
         prompt: "Care propozitie seamana mai mult cu tine?",
         options: [
-          { id: "h1c_a", label: "Simt ca nu fac niciodata destul" },
-          { id: "h1c_b", label: "Fac ce trebuie, dar nu simt nimic" },
-          { id: "h1c_c", label: "Mi-e frica sa nu mă pedepseasca" },
+          {
+            id: "h1c_a",
+            label: "Simt ca nu fac niciodata destul",
+            branchStepId: "h1_branch_never_enough",
+          },
+          {
+            id: "h1c_b",
+            label: "Fac ce trebuie, dar nu simt nimic",
+            branchStepId: "h1_branch_numb",
+          },
+          {
+            id: "h1c_c",
+            label: "Mi-e frica sa nu mă pedepseasca",
+            branchStepId: "h1_branch_punishment",
+          },
         ],
       },
+    },
+    {
+      id: "h1_branch_never_enough",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Când măsura se mută de fiecare dată după ce ai reușit, problema nu mai este cât faci, ci ideea că acceptarea poate fi cumpărată. Harul oprește tocmai această contabilitate.",
+        },
+      ],
+    },
+    {
+      id: "h1_branch_numb",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Faptul că ai continuat nu te face fals, iar lipsa emoției nu anulează automat relația. Dar poți recunoaște oboseala și rutina fără să le acoperi cu activitate. Aici nu îți vom mai adăuga încă o sarcină.",
+        },
+      ],
+    },
+    {
+      id: "h1_branch_punishment",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Frica poate veni din felul în care ai fost tratat sau dintr-o imagine a lui Dumnezeu construită prin amenințări. Consecințele și disciplina nu sunt același lucru cu respingerea sau teroarea. Vom despărți lucrurile acestea.",
+        },
+      ],
     },
     {
       id: "h1_4",

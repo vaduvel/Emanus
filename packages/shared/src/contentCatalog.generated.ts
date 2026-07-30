@@ -288,7 +288,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_acasa",
           "order": 5,
           "title": "Sa nu mai ascunzi",
-          "estMinutes": 12,
+          "estMinutes": 14,
           "memoryVerse": {
             "text": "Daca ne marturisim pacatele, El este credincios si drept ca sa ne ierte.",
             "ref": "1 Ioan 1:9"
@@ -415,7 +415,7 @@ export const GENERATED_CONTENT_MANIFEST = {
           "courseId": "path_neiertare",
           "order": 6,
           "title": "Iertarea nu e un sentiment",
-          "estMinutes": 11,
+          "estMinutes": 13,
           "memoryVerse": {
             "text": "Iertați-vă unul pe altul, cum v-a iertat și Dumnezeu pe voi în Hristos.",
             "ref": "Efeseni 4:32"
@@ -1896,5 +1896,5 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     }
   ],
-  "contentVersion": "f36d156626b9bc14"
+  "contentVersion": "76ba69f998b49cf6"
 } as const

@@ -24,7 +24,7 @@ export const impreunaL1: Lesson = {
   courseId: "path_impreuna",
   order: 1,
   title: "El stie cum e",
-  estMinutes: 11,
+  estMinutes: 12,
   anchorRefs: ["Isaia 53:3", "Matei 26:56", "Psalmul 27:10"],
   memoryVerseRef: "Psalmul 27:10",
   steps: [
@@ -68,11 +68,59 @@ export const impreunaL1: Lesson = {
       choice: {
         prompt: "Care seamana mai mult cu situația ta?",
         options: [
-          { id: "im1c_a", label: "Nu am pe nimeni apropiat" },
-          { id: "im1c_b", label: "Am oameni, dar nu mă ințelege niciunul" },
-          { id: "im1c_c", label: "Am fost respins acolo unde speram sa fiu primit" },
+          {
+            id: "im1c_a",
+            label: "Nu am pe nimeni apropiat",
+            branchStepId: "im1_branch_alone",
+          },
+          {
+            id: "im1c_b",
+            label: "Am oameni, dar nu mă ințelege niciunul",
+            branchStepId: "im1_branch_unseen",
+          },
+          {
+            id: "im1c_c",
+            label: "Am fost respins acolo unde speram sa fiu primit",
+            branchStepId: "im1_branch_rejected",
+          },
         ],
       },
+    },
+    {
+      id: "im1_branch_alone",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu îți voi spune doar să ieși mai mult sau să fii mai sociabil. Singurătatea nu se repară prin mulțime. Drumul acesta caută mai întâi un om sigur și o legătură reală, nu popularitate.",
+        },
+      ],
+    },
+    {
+      id: "im1_branch_unseen",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Poți fi înconjurat și totuși nevăzut. Nu vom presupune că oamenii sunt răi sau că tu nu te deschizi destul. Vom învăța să numești ce ai nevoie și să recunoști cine poate purta acel adevăr.",
+        },
+      ],
+    },
+    {
+      id: "im1_branch_rejected",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Respingerea din familie sau din biserică doare tocmai fiindcă acolo trebuia să existe adăpost. Nu te vom trimite automat înapoi și nu vom numi răul «unitate». Mai întâi punem adevăr și siguranță în jurul rănii.",
+        },
+      ],
     },
     {
       id: "im1_4",

@@ -62,6 +62,16 @@ const WRITTEN_RESPONSE_TYPES = new Set([
   "reflection",
   "declaration",
 ])
+const REQUIRED_EDITORIAL_BRANCHES = [
+  { lessonId: "rusine_l1", stepId: "r1_3" },
+  { lessonId: "rusine_l4", stepId: "r4_5" },
+  { lessonId: "rusine_l5", stepId: "r5_ownership" },
+  { lessonId: "neiertare_l6", stepId: "n6_readiness" },
+  { lessonId: "aproape_l1", stepId: "a1_3" },
+  { lessonId: "schimbare_l1", stepId: "s1_3" },
+  { lessonId: "har_l1", stepId: "h1_3" },
+  { lessonId: "impreuna_l1", stepId: "im1_3" },
+] as const
 
 function validateLesson(lesson: Lesson): void {
   if (!lesson.id || !lesson.courseId || !lesson.title.trim()) {
@@ -146,6 +156,29 @@ function validateLesson(lesson: Lesson): void {
 }
 
 for (const lesson of lessons.values()) validateLesson(lesson)
+
+for (const required of REQUIRED_EDITORIAL_BRANCHES) {
+  const lesson = lessons.get(required.lessonId)
+  const step = lesson?.steps.find((candidate) => candidate.id === required.stepId)
+  if (!lesson || !step?.choice?.options.length) {
+    throw new Error(
+      `Ramificarea editorială obligatorie ${required.lessonId}/${required.stepId} lipsește.`,
+    )
+  }
+  for (const option of step.choice.options) {
+    const target = option.branchStepId
+      ? lesson.steps.find((candidate) => candidate.id === option.branchStepId)
+      : undefined
+    if (
+      !target ||
+      !target.bubbles?.some((bubble) => bubble.text.trim())
+    ) {
+      throw new Error(
+        `Opțiunea editorială ${lesson.id}/${step.id}/${option.id} nu are un răspuns pastoral complet.`,
+      )
+    }
+  }
+}
 
 const courses = new Map<string, Lesson[]>()
 for (const lesson of lessons.values()) {

@@ -23,7 +23,7 @@ export const aproapeL1: Lesson = {
   courseId: "path_aproape",
   order: 1,
   title: "N-a plecat El",
-  estMinutes: 10,
+  estMinutes: 11,
   anchorRefs: ["Evrei 13:5", "Matei 28:20", "Deuteronom 31:6"],
   memoryVerseRef: "Evrei 13:5",
   steps: [
@@ -65,11 +65,59 @@ export const aproapeL1: Lesson = {
       choice: {
         prompt: "Ce seamana mai mult cu tine acum?",
         options: [
-          { id: "a1c_a", label: "Mă rog si nu primesc nimic" },
-          { id: "a1c_b", label: "Am fost aproape de El candva, acum nu mai sunt" },
-          { id: "a1c_c", label: "Nu stiu cum să fac, poate de-aia nu merge" },
+          {
+            id: "a1c_a",
+            label: "Mă rog si nu primesc nimic",
+            branchStepId: "a1_branch_unanswered",
+          },
+          {
+            id: "a1c_b",
+            label: "Am fost aproape de El candva, acum nu mai sunt",
+            branchStepId: "a1_branch_distance",
+          },
+          {
+            id: "a1c_c",
+            label: "Nu stiu cum să fac, poate de-aia nu merge",
+            branchStepId: "a1_branch_method",
+          },
         ],
       },
+    },
+    {
+      id: "a1_branch_unanswered",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Tăcerea este dureroasă, dar nu dovedește absența Lui și nu îți voi promite un termen în care trebuie să vină răspunsul. Putem ține împreună două propoziții adevărate: încă nu ai primit ce ai cerut și nu ai fost părăsit.",
+        },
+      ],
+    },
+    {
+      id: "a1_branch_distance",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Faptul că îți amintești apropierea face distanța de acum și mai grea. Vom privi și la ce s-a schimbat, fără să presupunem imediat că ai greșit. Promisiunea Lui rămâne înainte să găsim explicația.",
+        },
+      ],
+    },
+    {
+      id: "a1_branch_method",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Rugăciunea și Biblia se pot învăța, iar lecțiile următoare te vor ajuta practic. Dar Dumnezeu nu este deschis printr-o formulă corectă. Nepriceperea ta nu Îl ține la distanță.",
+        },
+      ],
     },
     {
       id: "a1_4",

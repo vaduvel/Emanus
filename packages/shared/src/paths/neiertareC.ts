@@ -14,7 +14,7 @@ export const neiertareL6: Lesson = {
   courseId: "path_neiertare",
   order: 6,
   title: "Iertarea nu e un sentiment",
-  estMinutes: 11,
+  estMinutes: 13,
   anchorRefs: ["Efeseni 4:31-32", "Marcu 11:25"],
   memoryVerseRef: "Efeseni 4:32",
   safety: {
@@ -127,9 +127,70 @@ export const neiertareL6: Lesson = {
       ],
     },
     {
+      id: "n6_readiness",
+      type: "choice",
+      order: 10,
+      choice: {
+        prompt: "Ce poti spune onest inaintea pasului de iertare?",
+        options: [
+          {
+            id: "n6_ready",
+            label: "Pot alege sa predau dreptatea, chiar daca inca doare",
+            branchStepId: "n6_branch_ready",
+          },
+          {
+            id: "n6_not_ready",
+            label: "Vreau sa iert, dar nu pot spune inca faptul ca am ales",
+            branchStepId: "n6_branch_not_ready",
+          },
+          {
+            id: "n6_afraid",
+            label: "Mi-e teama ca iertarea ma obliga sa ma intorc sau sa tac",
+            branchStepId: "n6_branch_afraid",
+          },
+        ],
+      },
+    },
+    {
+      id: "n6_branch_ready",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Atunci poti numi alegerea fara sa pretinzi ca durerea a disparut. Declaratia nu spune ca fapta a fost mica si nici ca sentimentul tau trebuie sa se schimbe astazi. Spune doar in mana cui lasi dreptatea.",
+        },
+      ],
+    },
+    {
+      id: "n6_branch_not_ready",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu spune o declaratie pe care nu o crezi. Poti scrie onest: «Doamne, vreau sa ajung sa pot alege iertarea; arata-mi ce ma tine». Dorinta de a veni spre iertare este pasul adevarat de astazi, nu un esec.",
+        },
+      ],
+    },
+    {
+      id: "n6_branch_afraid",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Iertarea nu te obliga la contact, impacare, tacere, retragerea unei plangeri sau renuntarea la limite. Daca declaratia este folosita ca sa te trimita inapoi in pericol, nu mai vorbim despre iertare biblica. Siguranta ramane prima.",
+        },
+      ],
+    },
+    {
       id: "n6_10",
       type: "declaration",
-      order: 10,
+      order: 11,
       bubbles: [
         { from: "guide", text: "Pasul de azi. Ia hârtia. Spune cu voce tare, uitându-te la ea:" },
         {
@@ -152,7 +213,7 @@ export const neiertareL6: Lesson = {
     {
       id: "n6_11",
       type: "memory_verse",
-      order: 11,
+      order: 12,
       scripture: {
         text: "Iertați-vă unul pe altul, cum v-a iertat și Dumnezeu pe voi în Hristos.",
         ref: "Efeseni 4:32",
@@ -161,7 +222,7 @@ export const neiertareL6: Lesson = {
     {
       id: "n6_12",
       type: "prayer",
-      order: 12,
+      order: 13,
       bubbles: [
         {
           from: "guide",
@@ -172,7 +233,7 @@ export const neiertareL6: Lesson = {
     {
       id: "n6_13",
       type: "journal",
-      order: 13,
+      order: 14,
       journalPrompt: "Ai rupt hârtia? Scrie ce ai simțit — sau ce n-ai simțit.",
       reward: { xp: 0 },
     },
