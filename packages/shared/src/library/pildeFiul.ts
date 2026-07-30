@@ -36,12 +36,12 @@ export const pildaSamariteanul: Lesson = {
       type: "scripture",
       order: 2,
       scripture: {
-        text: "Dar el, vrând să se îndreptățească, a zis lui Isus: „Și cine este aproapele meu?"",
+        text: "Dar el, vrând să se îndreptățească, a zis lui Isus: „Și cine este aproapele meu?”",
         ref: "Luca 10:29",
       },
       bubbles: [
         { from: "guide", text: "Cui i-a fost spusă: unui învățător al Legii, om instruit, care voia să se îndreptățească. Luca ne spune motivul lui, ca să nu-l ghicim noi." },
-        { from: "guide", text: "„Cine este aproapele meu" nu era o întrebare de curiozitate. Era o căutare de limite: spune-mi unde se termină lista, ca să știu că mi-am făcut treaba." },
+        { from: "guide", text: "„Cine este aproapele meu” nu era o întrebare de curiozitate. Era o căutare de limite: spune-mi unde se termină lista, ca să știu că mi-am făcut treaba." },
       ],
     },
     {
@@ -62,7 +62,7 @@ export const pildaSamariteanul: Lesson = {
         ref: "Luca 10:36",
       },
       bubbles: [
-        { from: "guide", text: "Punctul principal, și Iisus îl spune singur: întrebarea e întoarsă. Nu „cine intră pe lista mea", ci „cui poți fi tu aproapele"." },
+        { from: "guide", text: "Punctul principal, și Iisus îl spune singur: întrebarea e întoarsă. Nu „cine intră pe lista mea”, ci „cui poți fi tu aproapele”." },
         { from: "guide", text: "Prima întrebare caută o limită. A doua nu are limită, pentru că depinde numai de tine și de omul care e în fața ta acum." },
       ],
     },
@@ -71,7 +71,7 @@ export const pildaSamariteanul: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, cea pe care am auzit-o cu toții: „fii bun cu oamenii, ajută-i pe cei în nevoie". E adevărat și totuși e cea mai mică parte din ce s-a spus." },
+        { from: "guide", text: "Citirea greșită, cea pe care am auzit-o cu toții: „fii bun cu oamenii, ajută-i pe cei în nevoie”. E adevărat și totuși e cea mai mică parte din ce s-a spus." },
         { from: "guide", text: "Pentru că pilda e și o oglindă. Încearcă să te pui în groapă, nu pe drum. Tu ești omul jefuit, lăsat pe jumătate mort. Cei care ar fi trebuit să te ajute au trecut pe partea cealaltă. Și cel care s-a oprit e Cel pe care tu îl disprețuiai." },
         { from: "guide", text: "Iisus a fost numit samaritean ca insultă, în Ioan 8:48. Cei de la masă au prins asta înaintea noastră." },
       ],
@@ -113,7 +113,7 @@ export const pildaSamariteanul: Lesson = {
       type: "quiz",
       order: 9,
       quiz: {
-        question: "Ce face Iisus cu întrebarea „cine este aproapele meu?"",
+        question: "Ce face Iisus cu întrebarea „cine este aproapele meu?”",
         options: [
           { text: "O lărgește: aproapele e orice om de pe pământ", correct: false },
           { text: "O întoarce: nu cine îmi este, ci cui pot fi eu aproapele", correct: true },
@@ -180,7 +180,7 @@ export const pildaTalantii: Lesson = {
         ref: "Matei 25:24-25",
       },
       bubbles: [
-        { from: "guide", text: "„Mi-a fost teamă." Asta e propoziția din care se înțelege toată pilda." },
+        { from: "guide", text: "„Mi-a fost teamă.” Asta e propoziția din care se înțelege toată pilda." },
         { from: "guide", text: "El nu a furat și nu a pierdut nimic. A păstrat perfect. Și a păstrat perfect pentru că își imagina un stăpân dur, care caută greșeala." },
       ],
     },
@@ -202,7 +202,7 @@ export const pildaTalantii: Lesson = {
         ref: "1 Ioan 4:18",
       },
       bubbles: [
-        { from: "guide", text: "De aceea nu se rezolvă nimic dacă îți spui „trebuie să fac mai mult". Frica nu se scoate cu efort. Se scoate când se schimbă imaginea despre Cel pentru care lucrezi." },
+        { from: "guide", text: "De aceea nu se rezolvă nimic dacă îți spui „trebuie să fac mai mult”. Frica nu se scoate cu efort. Se scoate când se schimbă imaginea despre Cel pentru care lucrezi." },
       ],
     },
     {
@@ -210,8 +210,8 @@ export const pildaTalantii: Lesson = {
       type: "world_vs_truth",
       order: 6,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, foarte plăcută la auz: „Dumnezeu vrea să ai succes, să-ți înmulțești banii și talentele"." },
-        { from: "guide", text: "În pildă, nimic nu e al robului. Argintul e al stăpânului, de la început până la sfârșit. Iar răsplata nu e o promovare și nici bani — e „intră în bucuria stăpânului tău"." },
+        { from: "guide", text: "Citirea greșită, foarte plăcută la auz: „Dumnezeu vrea să ai succes, să-ți înmulțești banii și talentele”." },
+        { from: "guide", text: "În pildă, nimic nu e al robului. Argintul e al stăpânului, de la început până la sfârșit. Iar răsplata nu e o promovare și nici bani — e „intră în bucuria stăpânului tău”." },
       ],
     },
     {
@@ -249,7 +249,7 @@ export const pildaTalantii: Lesson = {
           { text: "S-a temut — și frica l-a făcut să nu încerce nimic", correct: true },
         ],
         explanation:
-          "Matei 25:25: „mi-a fost teamă". La rădăcină stă o imagine greșită despre stăpân, nu lenea.",
+          "Matei 25:25: „mi-a fost teamă”. La rădăcină stă o imagine greșită despre stăpân, nu lenea.",
       },
     },
     {
@@ -302,7 +302,7 @@ export const pildaDoiFii: Lesson = {
       type: "name_struggle",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Cui i-a fost spusă: preoților de seamă și bătrânilor poporului, în Templu, în săptămâna dinainte de cruce. Oameni cu funcții și cu răspundere, care spuseseră „da" toată viața." },
+        { from: "guide", text: "Cui i-a fost spusă: preoților de seamă și bătrânilor poporului, în Templu, în săptămâna dinainte de cruce. Oameni cu funcții și cu răspundere, care spuseseră „da” toată viața." },
         { from: "guide", text: "De aceea urmează imediat o propoziție care i-a scandalizat: vameșii și femeile de stradă intră înaintea lor în Împărăție." },
       ],
     },
@@ -311,8 +311,8 @@ export const pildaDoiFii: Lesson = {
       type: "truth_simple",
       order: 3,
       bubbles: [
-        { from: "guide", text: "Punctul principal: contează cine s-a dus, nu cine a spus „da"." },
-        { from: "guide", text: "Și mai e ceva blând în pildă, care se pierde: primul fiu a răspuns urât, apoi s-a căit și s-a dus. Un „nu" spus azi nu e ultima propoziție din viața nimănui." },
+        { from: "guide", text: "Punctul principal: contează cine s-a dus, nu cine a spus „da”." },
+        { from: "guide", text: "Și mai e ceva blând în pildă, care se pierde: primul fiu a răspuns urât, apoi s-a căit și s-a dus. Un „nu” spus azi nu e ultima propoziție din viața nimănui." },
       ],
     },
     {
@@ -320,7 +320,7 @@ export const pildaDoiFii: Lesson = {
       type: "world_vs_truth",
       order: 4,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, foarte a zilelor noastre: „contează intenția, important e că în suflet vreau binele"." },
+        { from: "guide", text: "Citirea greșită, foarte a zilelor noastre: „contează intenția, important e că în suflet vreau binele”." },
         { from: "guide", text: "În pildă, fiul cu intenția frumoasă și cu vorba respectuoasă e cel care nu face voia tatălui. Iisus nu întreabă cine a fost sincer când a vorbit. Întreabă cine a ajuns la vie." },
       ],
     },
@@ -342,8 +342,8 @@ export const pildaDoiFii: Lesson = {
       type: "how_god_helps",
       order: 6,
       bubbles: [
-        { from: "guide", text: "Dacă ai bifat prima: nu îți cerem să spui „da" mai tare. Îți propunem invers — promite mai puțin și fă acel puțin. Un lucru mic, dus la capăt, spune mai mult decât zece angajamente." },
-        { from: "guide", text: "Dacă ai bifat a doua: ești fiul lăudat în pildă, și probabil te simți cel mai puțin în regulă dintre toți. Ți-e rușine de „nu"-ul spus și ai uitat că te-ai dus." },
+        { from: "guide", text: "Dacă ai bifat prima: nu îți cerem să spui „da” mai tare. Îți propunem invers — promite mai puțin și fă acel puțin. Un lucru mic, dus la capăt, spune mai mult decât zece angajamente." },
+        { from: "guide", text: "Dacă ai bifat a doua: ești fiul lăudat în pildă, și probabil te simți cel mai puțin în regulă dintre toți. Ți-e rușine de „nu”-ul spus și ai uitat că te-ai dus." },
       ],
     },
     {
@@ -351,7 +351,7 @@ export const pildaDoiFii: Lesson = {
       type: "step",
       order: 7,
       bubbles: [
-        { from: "guide", text: "Un singur lucru azi: alege un „da" pe care l-ai spus și nu l-ai făcut. Ori îl faci în 48 de ore, ori te duci și spui cinstit omului că nu poți." },
+        { from: "guide", text: "Un singur lucru azi: alege un „da” pe care l-ai spus și nu l-ai făcut. Ori îl faci în 48 de ore, ori te duci și spui cinstit omului că nu poți." },
         { from: "guide", text: "A retrage un da nefăcut e mai aproape de adevăr decât a-l lăsa să atrâne acolo." },
       ],
     },
@@ -362,8 +362,8 @@ export const pildaDoiFii: Lesson = {
       quiz: {
         question: "Care fiu a făcut voia tatălui?",
         options: [
-          { text: "Cel care a răspuns respectuos „mă duc"", correct: false },
-          { text: "Cel care a spus „nu vreau", apoi s-a căit și s-a dus", correct: true },
+          { text: "Cel care a răspuns respectuos „mă duc”", correct: false },
+          { text: "Cel care a spus „nu vreau”, apoi s-a căit și s-a dus", correct: true },
           { text: "Niciunul — pilda își lasă finalul deschis", correct: false },
         ],
         explanation:

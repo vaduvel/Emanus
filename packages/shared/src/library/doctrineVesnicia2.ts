@@ -45,7 +45,7 @@ export const vesniciaL4: Lesson = {
         ref: "Romani 2:14-15",
       },
       bubbles: [
-        { from: "guide", text: "„Știința lor" traduce *syneidesis*: conștiința, martorul dinăuntru. Pavel spune că Dumnezeu a pus în fiecare om ceva care știe să acuze și să apere." },
+        { from: "guide", text: "„Știința lor” traduce *syneidesis*: conștiința, martorul dinăuntru. Pavel spune că Dumnezeu a pus în fiecare om ceva care știe să acuze și să apere." },
         { from: "guide", text: "Deci nimeni nu e complet fără nimic. Toată lumea are un martor." },
       ],
     },
@@ -134,7 +134,7 @@ export const vesniciaL4: Lesson = {
       type: "prayer",
       order: 11,
       bubbles: [
-        { from: "guide", text: "Dacă ai un nume în minte, spune-l acum, cu voce tare, și adaugă: „Doamne, nu știu ce a fost între Tine și el. Îți las asta. Știu că ești mai drept și mai bun decât mine."" },
+        { from: "guide", text: "Dacă ai un nume în minte, spune-l acum, cu voce tare, și adaugă: „Doamne, nu știu ce a fost între Tine și el. Îți las asta. Știu că ești mai drept și mai bun decât mine.”" },
       ],
     },
     {
@@ -164,7 +164,7 @@ export const vesniciaL5: Lesson = {
       order: 1,
       bubbles: [
         { from: "guide", text: "Ultima lecție. Și cea care contează pentru azi, nu pentru ultima zi." },
-        { from: "guide", text: "Foarte mulți oameni trăiesc cu o nesiguranță de fond: sper că sunt al Lui. Iar Biblia folosește alt cuvânt decât „sper"." },
+        { from: "guide", text: "Foarte mulți oameni trăiesc cu o nesiguranță de fond: sper că sunt al Lui. Iar Biblia folosește alt cuvânt decât „sper”." },
       ],
     },
     {
@@ -176,8 +176,8 @@ export const vesniciaL5: Lesson = {
         ref: "1 Ioan 5:13",
       },
       bubbles: [
-        { from: "guide", text: "„Ca să știți". Verbul e *eidete* — să știți, nu să sperați. Ioan spune că a scris o scrisoare întreagă exact ca să scoată nesiguranța din oameni." },
-        { from: "guide", text: "Și mai spune „aveți", la timpul prezent. Nu „veți avea, dacă rezistăm până la capăt"." },
+        { from: "guide", text: "„Ca să știți”. Verbul e *eidete* — să știți, nu să sperați. Ioan spune că a scris o scrisoare întreagă exact ca să scoată nesiguranța din oameni." },
+        { from: "guide", text: "Și mai spune „aveți”, la timpul prezent. Nu „veți avea, dacă rezistăm până la capăt”." },
       ],
     },
     {
@@ -190,7 +190,7 @@ export const vesniciaL5: Lesson = {
       },
       bubbles: [
         { from: "guide", text: "Două mâini. Nu una. Iisus ține și Tatăl ține peste." },
-        { from: "guide", text: "Și uită-te la verb: „smulge". Nu „plecă". Discuția din verset e despre ce ți se poate lua, nu despre ce poți tu strica într-o zi proastă." },
+        { from: "guide", text: "Și uită-te la verb: „smulge”. Nu „plecă”. Discuția din verset e despre ce ți se poate lua, nu despre ce poți tu strica într-o zi proastă." },
       ],
     },
     {
@@ -243,7 +243,7 @@ export const vesniciaL5: Lesson = {
       order: 8,
       bubbles: [
         { from: "guide", text: "Un lucru practic: când vine nesiguranța, nu te apuca să-ți verifici sentimentele. Nu au ce să-ți spună." },
-        { from: "guide", text: "Întoarce-te la ce e scris și spune-o cu voce tare, chiar dacă nu simți nimic: „nimeni nu mă smulge din mâna Lui". Adevărul spus tare face mai mult decât adevărul răsucit în minte." },
+        { from: "guide", text: "Întoarce-te la ce e scris și spune-o cu voce tare, chiar dacă nu simți nimic: „nimeni nu mă smulge din mâna Lui”. Adevărul spus tare face mai mult decât adevărul răsucit în minte." },
       ],
     },
     {
@@ -258,7 +258,7 @@ export const vesniciaL5: Lesson = {
           { text: "Pe cât de mult simt", correct: false },
         ],
         explanation:
-          "Textul spune de două ori „nimeni nu le poate smulge" — și de fiecare dată subiectul care ține e El, nu noi.",
+          "Textul spune de două ori „nimeni nu le poate smulge” — și de fiecare dată subiectul care ține e El, nu noi.",
       },
     },
     {

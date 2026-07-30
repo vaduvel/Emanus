@@ -34,7 +34,7 @@ export const pildaLucratorii: Lesson = {
       type: "name_struggle",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Cui i-a fost spusă: ucenicilor, imediat după ce Petru întrebase, în practică, „noi am lăsat tot și Te-am urmat — ce vom avea?"" },
+        { from: "guide", text: "Cui i-a fost spusă: ucenicilor, imediat după ce Petru întrebase, în practică, „noi am lăsat tot și Te-am urmat — ce vom avea?”" },
         { from: "guide", text: "Deci nu e o pildă despre salarii. E răspunsul dat unor oameni care începuseră să-și socotească vechimea." },
       ],
     },
@@ -56,7 +56,7 @@ export const pildaLucratorii: Lesson = {
       order: 4,
       bubbles: [
         { from: "guide", text: "Punctul principal: harul nu se calculează pe oră lucrată. Stăpânul nu înșeală pe nimeni — plătește întocmai ce a promis, și în plus e generos cu alții." },
-        { from: "guide", text: "Și întrebarea finală a stăpânului e miezul pildei: „Nu-mi este îngăduit să fac ce vreau cu ce e al meu?"" },
+        { from: "guide", text: "Și întrebarea finală a stăpânului e miezul pildei: „Nu-mi este îngăduit să fac ce vreau cu ce e al meu?”" },
       ],
     },
     {
@@ -64,7 +64,7 @@ export const pildaLucratorii: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, foarte modernă: „o lecție despre nedreptate la plată" — sau invers, un argument că munca nu contează." },
+        { from: "guide", text: "Citirea greșită, foarte modernă: „o lecție despre nedreptate la plată” — sau invers, un argument că munca nu contează." },
         { from: "guide", text: "Pilda nu e despre bani. E despre invidia celui care a lucrat de dimineață. Nimeni n-a primit mai puțin. Unii au primit mai mult decât socoteau ei că se cuvine — și asta a fost de nesuportat." },
       ],
     },
@@ -102,7 +102,7 @@ export const pildaLucratorii: Lesson = {
           { text: "Despre faptul că nu contează ce faci", correct: false },
         ],
         explanation:
-          "Vine imediat după întrebarea „ce vom avea noi?". Răspunsul e că nimeni nu primește mai puțin, dar nici nu are un drept câștigat peste ceilalți.",
+          "Vine imediat după întrebarea „ce vom avea noi?”. Răspunsul e că nimeni nu primește mai puțin, dar nici nu are un drept câștigat peste ceilalți.",
       },
     },
     {
@@ -170,7 +170,7 @@ export const pildaRobulDatornic: Lesson = {
         ref: "Matei 18:33",
       },
       bubbles: [
-        { from: "guide", text: "„Cum am avut eu milă de tine" — asta e cheia. Iertarea noastră nu e o taxă de intrare. E o curgere: din ce am primit, dau." },
+        { from: "guide", text: "„Cum am avut eu milă de tine” — asta e cheia. Iertarea noastră nu e o taxă de intrare. E o curgere: din ce am primit, dau." },
       ],
     },
     {
@@ -178,7 +178,7 @@ export const pildaRobulDatornic: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, și cea care a chinuit mulți oameni: „dacă nu reușesc să iert, îmi pierd mântuirea"." },
+        { from: "guide", text: "Citirea greșită, și cea care a chinuit mulți oameni: „dacă nu reușesc să iert, îmi pierd mântuirea”." },
         { from: "guide", text: "Asta transformă pilda într-o condiție de plată — exact ce a stricat robul din pildă. Punctul nu e cât de bine reușești tu să ierți. Punctul e că un om care a înțeles cât i s-a șters nu mai poate sta cu mâna de gâtul altuia pentru o sută de dinari." },
         { from: "guide", text: "Iar dacă azi nu poți ierta, nu ești robul rău din pildă. Ești un om rănit care încă nu a văzut socoteala întreagă." },
       ],
@@ -201,7 +201,7 @@ export const pildaRobulDatornic: Lesson = {
       type: "how_god_helps",
       order: 7,
       bubbles: [
-        { from: "guide", text: "Dacă ai bifat prima: iertarea nu începe cu sentimentul și nu e o comandă pe care o dai inimii. Începe cu o predare: „Doamne, nu pot, dar nu mai vreau să fiu eu cel care ține socoteala."" },
+        { from: "guide", text: "Dacă ai bifat prima: iertarea nu începe cu sentimentul și nu e o comandă pe care o dai inimii. Începe cu o predare: „Doamne, nu pot, dar nu mai vreau să fiu eu cel care ține socoteala.”" },
         { from: "guide", text: "Și ceva ce trebuie spus limpede: a ierta nu înseamnă a te împăca, nu înseamnă că ce s-a făcut a fost în regulă, și nu înseamnă să te întorci lângă cineva care te rănește. Sunt trei lucruri diferite, iar pilda vorbește doar despre primul." },
       ],
     },

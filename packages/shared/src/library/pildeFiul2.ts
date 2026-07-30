@@ -56,7 +56,7 @@ export const pildaCasaStanca: Lesson = {
       order: 4,
       bubbles: [
         { from: "guide", text: "Cui i-a fost spusă: e ultimul lucru din Predica de pe munte, spus mulțimii care ascultase tot. Iisus încheie trei capitole de învățătură cu întrebarea: și acum ce faci cu ce ai auzit?" },
-        { from: "guide", text: "Stânca, în text, nu e o idee abstractă. E „cine aude cuvintele Mele și le face". Nu „cine le știe"." },
+        { from: "guide", text: "Stânca, în text, nu e o idee abstractă. E „cine aude cuvintele Mele și le face”. Nu „cine le știe”." },
       ],
     },
     {
@@ -64,7 +64,7 @@ export const pildaCasaStanca: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, și cea mai crudă dintre toate: „cine ascultă de Dumnezeu nu are furtuni; dacă ai necazuri, undeva ai greșit"." },
+        { from: "guide", text: "Citirea greșită, și cea mai crudă dintre toate: „cine ascultă de Dumnezeu nu are furtuni; dacă ai necazuri, undeva ai greșit”." },
         { from: "guide", text: "Textul spune exact invers. Ploaia vine și peste stâncă. Boala, șomajul, moartea cuiva drag, trădările — nu sunt dovada că ai clădit rău." },
         { from: "guide", text: "Promisiunea nu e că nu te udă. Promisiunea e că nu te prăbușești." },
       ],
@@ -164,7 +164,7 @@ export const pildaSmochinul: Lesson = {
         ref: "Luca 13:8-9",
       },
       bubbles: [
-        { from: "guide", text: "Ultimul cuvânt din pildă nu e „taie-l". E o cerere de amânare, făcută de cineva care se oferă să muncească el la rădăcină." },
+        { from: "guide", text: "Ultimul cuvânt din pildă nu e „taie-l”. E o cerere de amânare, făcută de cineva care se oferă să muncească el la rădăcină." },
       ],
     },
     {
@@ -173,7 +173,7 @@ export const pildaSmochinul: Lesson = {
       order: 3,
       bubbles: [
         { from: "guide", text: "Cui i-a fost spusă: unor oameni care veniseră să-I spună despre o nenorocire — niște galișeni omorâți — și care voiau, de fapt, să afle dacă aceia fuseseră mai păcătoși decât ei." },
-        { from: "guide", text: "Deci pilda vine ca răspuns la o întrebare despre alții. Și răspunsul mută discuția de la „ei ce-au meritat" la „tu ce faci cu timpul care ți s-a dat"." },
+        { from: "guide", text: "Deci pilda vine ca răspuns la o întrebare despre alții. Și răspunsul mută discuția de la „ei ce-au meritat” la „tu ce faci cu timpul care ți s-a dat”." },
       ],
     },
     {
@@ -190,7 +190,7 @@ export const pildaSmochinul: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, cea care a lăsat oameni cu frică în piept: „Dumnezeu își pierde răbdarea; încă un an și te taie"." },
+        { from: "guide", text: "Citirea greșită, cea care a lăsat oameni cu frică în piept: „Dumnezeu își pierde răbdarea; încă un an și te taie”." },
         { from: "guide", text: "Uită-te încă o dată la text: în pildă există cineva care mijlocește pentru mai mult timp. Nu ești singur în fața unei sentințe — e Cineva care vorbește pentru tine și care se oferă să lucreze la pământul tău." },
       ],
     },
@@ -258,7 +258,7 @@ export const pildaSmochinul: Lesson = {
       type: "prayer",
       order: 11,
       bubbles: [
-        { from: "guide", text: "Roagă-te scurt, cu cuvintele tale: „Doamne, sapă în jurul meu. Nu știu să fac rod prin puterea mea."" },
+        { from: "guide", text: "Roagă-te scurt, cu cuvintele tale: „Doamne, sapă în jurul meu. Nu știu să fac rod prin puterea mea.”" },
       ],
     },
     {

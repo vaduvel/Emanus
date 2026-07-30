@@ -37,7 +37,7 @@ export const pildaRisipitor: Lesson = {
       type: "scripture",
       order: 2,
       scripture: {
-        text: "Toți vameșii și păcătoșii se apropiau de Isus să-L audă. Și fariseii și cărturarii murmurau și ziceau: „Omul acesta primește pe păcătoși și mănâncă cu ei."",
+        text: "Toți vameșii și păcătoșii se apropiau de Isus să-L audă. Și fariseii și cărturarii murmurau și ziceau: „Omul acesta primește pe păcătoși și mănâncă cu ei.”",
         ref: "Luca 15:1-2",
       },
       bubbles: [
@@ -72,7 +72,7 @@ export const pildaRisipitor: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, în forma ei cea mai frumoasă: „Dacă te îndrepți și îți ceri iertare cum trebuie, Dumnezeu te primește înapoi." Așa am înțeles-o și eu." },
+        { from: "guide", text: "Citirea greșită, în forma ei cea mai frumoasă: „Dacă te îndrepți și îți ceri iertare cum trebuie, Dumnezeu te primește înapoi.” Așa am înțeles-o și eu." },
         { from: "guide", text: "Numai că în text tatăl aleargă când băiatul e încă departe, cu discursul nespus și cu mirosul de porci pe el. Nu s-a mișcat pentru că băiatul s-a îndreptat. Băiatul nici nu se îndreptase — se întorcea de foame." },
       ],
     },
@@ -108,7 +108,7 @@ export const pildaRisipitor: Lesson = {
       order: 8,
       bubbles: [
         { from: "guide", text: "Dacă ești cel mic: nu e nevoie să vii cu un plan de plată. Planul tău de argat va fi întrerupt oricum. Vii așa cum ești, iar hainele se dau la intrare." },
-        { from: "guide", text: "Dacă ești cel mare: nu ți se cere să muncești mai mult. Ți se spune ce i-a spus tatălui: „tot ce am eu e al tău". Ai trăit ca un angajat în casa în care erai fiu. Asta se poate schimba azi." },
+        { from: "guide", text: "Dacă ești cel mare: nu ți se cere să muncești mai mult. Ți se spune ce i-a spus tatălui: „tot ce am eu e al tău”. Ai trăit ca un angajat în casa în care erai fiu. Asta se poate schimba azi." },
       ],
     },
     {
@@ -180,7 +180,7 @@ export const pildaOaia: Lesson = {
         ref: "Luca 15:4",
       },
       bubbles: [
-        { from: "guide", text: "„Până când o găsește." Nu „cât are timp", nu „dacă merită efortul"." },
+        { from: "guide", text: "„Până când o găsește.” Nu „cât are timp”, nu „dacă merită efortul”." },
       ],
     },
     {
@@ -197,7 +197,7 @@ export const pildaOaia: Lesson = {
       type: "world_vs_truth",
       order: 4,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, cea de care am trăit mulți dintre noi: „Dacă te-ai rătăcit, treaba ta e să găsești drumul înapoi. Dumnezeu te așteaptă acasă."" },
+        { from: "guide", text: "Citirea greșită, cea de care am trăit mulți dintre noi: „Dacă te-ai rătăcit, treaba ta e să găsești drumul înapoi. Dumnezeu te așteaptă acasă.”" },
         { from: "guide", text: "În pildă, oaia nu se întoarce. Nu face nimic corect. Singurul lucru care se întâmplă din partea ei e că se lasă ridicată." },
       ],
     },
@@ -284,7 +284,7 @@ export const pildaVamesul: Lesson = {
       type: "hook",
       order: 1,
       bubbles: [
-        { from: "guide", text: "Pilda asta are, în text, adresa scrisă pe ea. Luca spune limpede cui i-a fost spusă: „unora care se încredeau în ei înșiși că sunt neprihăniți și disprețuiau pe ceilalți"." },
+        { from: "guide", text: "Pilda asta are, în text, adresa scrisă pe ea. Luca spune limpede cui i-a fost spusă: „unora care se încredeau în ei înșiși că sunt neprihăniți și disprețuiau pe ceilalți”." },
       ],
     },
     {
@@ -292,7 +292,7 @@ export const pildaVamesul: Lesson = {
       type: "scripture",
       order: 2,
       scripture: {
-        text: "Fariseul sta în picioare și a început să se roage în sine astfel: „Dumnezeule, Ți mulțumesc că nu sunt ca ceilalți oameni... Eu postesc de două ori pe săptămână, dau zeciuială din toate veniturile mele."",
+        text: "Fariseul sta în picioare și a început să se roage în sine astfel: „Dumnezeule, Ți mulțumesc că nu sunt ca ceilalți oameni... Eu postesc de două ori pe săptămână, dau zeciuială din toate veniturile mele.”",
         ref: "Luca 18:11-12",
       },
       bubbles: [
@@ -305,11 +305,11 @@ export const pildaVamesul: Lesson = {
       type: "scripture",
       order: 3,
       scripture: {
-        text: "Vameșul sta departe și nu îndrăznea nici ochii să-și ridice spre cer, ci se bătea în piept și zicea: „Dumnezeule, ai milă de mine, păcătosul!"",
+        text: "Vameșul sta departe și nu îndrăznea nici ochii să-și ridice spre cer, ci se bătea în piept și zicea: „Dumnezeule, ai milă de mine, păcătosul!”",
         ref: "Luca 18:13",
       },
       bubbles: [
-        { from: "guide", text: "În greacă, ce spune el e mai tăios decât în traducere: *hilastheti moi* — „fie făcută ispașire pentru mine". Nu cere îngăduință. Cere să plătească altcineva." },
+        { from: "guide", text: "În greacă, ce spune el e mai tăios decât în traducere: *hilastheti moi* — „fie făcută ispașire pentru mine”. Nu cere îngăduință. Cere să plătească altcineva." },
       ],
     },
     {
@@ -326,7 +326,7 @@ export const pildaVamesul: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, cea blândă: „smerenia e o virtute recomandată, e frumos să fii modest"." },
+        { from: "guide", text: "Citirea greșită, cea blândă: „smerenia e o virtute recomandată, e frumos să fii modest”." },
         { from: "guide", text: "Textul e mult mai dur: omul cu bilanțul curat a plecat acasă **neiertat**. Nu i s-a scăzut o notă. A ieșit din clădire exact cum a intrat." },
       ],
     },
@@ -364,7 +364,7 @@ export const pildaVamesul: Lesson = {
           { text: "Cu o mustrare, dar iertat", correct: false },
         ],
         explanation:
-          "Iisus spune că vameșul a coborât acasă socotit neprihănit „mai degrabă decât celălalt". Nu e o clasare. E o despărțire.",
+          "Iisus spune că vameșul a coborât acasă socotit neprihănit „mai degrabă decât celălalt”. Nu e o clasare. E o despărțire.",
       },
     },
     {
@@ -372,7 +372,7 @@ export const pildaVamesul: Lesson = {
       type: "how_god_helps",
       order: 9,
       bubbles: [
-        { from: "guide", text: "Limita cinstită: pilda nu spune că postul și dărnicia sunt rele. Spune ce se întâmplă când țin locul lui Dumnezeu. Și nu ne dă dreptul să ne uităm acum la alții și să le spunem „tu ești fariseul" — asta ar fi exact rugăciunea fariseului, cu alte cuvinte." },
+        { from: "guide", text: "Limita cinstită: pilda nu spune că postul și dărnicia sunt rele. Spune ce se întâmplă când țin locul lui Dumnezeu. Și nu ne dă dreptul să ne uităm acum la alții și să le spunem „tu ești fariseul” — asta ar fi exact rugăciunea fariseului, cu alte cuvinte." },
       ],
     },
     {
@@ -380,7 +380,7 @@ export const pildaVamesul: Lesson = {
       type: "prayer",
       order: 10,
       bubbles: [
-        { from: "guide", text: "Spune-o o dată, cu voce tare, exact așa, fără să adaugi nimic: „Dumnezeule, ai milă de mine, păcătosul."" },
+        { from: "guide", text: "Spune-o o dată, cu voce tare, exact așa, fără să adaugi nimic: „Dumnezeule, ai milă de mine, păcătosul.”" },
       ],
     },
     {

@@ -35,7 +35,7 @@ export function Welcome() {
             a mers lângă ei și le-a explicat Scripturile, fără ca ei să-Și dea seama cine e.
           </p>
           <p className="welcome__lead">
-            Asta încearcă să fie aplicacția: cineva care merge lângă tine pe drum și îți arată
+            Asta încearcă să fie aplicația: cineva care merge lângă tine pe drum și îți arată
             ce scrie acolo, pe înțelesul tău.
           </p>
           <button type="button" className="welcome__cta" onClick={() => setStep(1)}>

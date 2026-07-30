@@ -28,7 +28,7 @@ export const pildaComoara: Lesson = {
       order: 1,
       bubbles: [
         { from: "guide", text: "Două pilde de două rânduri fiecare. Un om dă peste o comoară într-un câmp și vinde tot ca să cumpere câmpul. Un negustor găsește o perlă și vinde tot ca să o cumpere." },
-        { from: "guide", text: "Un cuvânt le ține pe amândouă și aproape nimeni nu-l citește: „de bucurie"." },
+        { from: "guide", text: "Un cuvânt le ține pe amândouă și aproape nimeni nu-l citește: „de bucurie”." },
       ],
     },
     {
@@ -40,7 +40,7 @@ export const pildaComoara: Lesson = {
         ref: "Matei 13:44",
       },
       bubbles: [
-        { from: "guide", text: "Nu „cu strângere de inimă". Nu „din datorie". De bucuria ei." },
+        { from: "guide", text: "Nu „cu strângere de inimă”. Nu „din datorie”. De bucuria ei." },
       ],
     },
     {
@@ -57,9 +57,9 @@ export const pildaComoara: Lesson = {
       type: "world_vs_truth",
       order: 4,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, cea care a obosit oameni ani întregi: „credința e o listă de renunțări; dă tot și speră că merită"." },
+        { from: "guide", text: "Citirea greșită, cea care a obosit oameni ani întregi: „credința e o listă de renunțări; dă tot și speră că merită”." },
         { from: "guide", text: "În pildă, nu se cere nicio renunțare. Cei doi vind pentru că au văzut prețul lucrului. Nimeni nu-i pune, nimeni nu-i îndeamnă. Un om care își vinde mașina ca să-și cumpere casă nu simte că a pierdut o mașină." },
-        { from: "guide", text: "De asta e o întrebare rea „cât trebuie să renunț?". Întrebarea din pildă e: am văzut ce e Împărăția?" },
+        { from: "guide", text: "De asta e o întrebare rea „cât trebuie să renunț?”. Întrebarea din pildă e: am văzut ce e Împărăția?" },
       ],
     },
     {
@@ -118,7 +118,7 @@ export const pildaComoara: Lesson = {
           { text: "Din teamă că altcineva o ia înaintea lui", correct: false },
         ],
         explanation:
-          "Matei 13:44: „de bucuria ei". Pilda nu vorbește despre renunțare, ci despre valoare văzută.",
+          "Matei 13:44: „de bucuria ei”. Pilda nu vorbește despre renunțare, ci despre valoare văzută.",
       },
     },
     {
@@ -192,8 +192,8 @@ export const pildaFecioarele: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Prima citire greșită: „dacă adormi spiritual, ești pierdut". Nu asta spune pilda. Toate au adormit și cinci au intrat la nuntă." },
-        { from: "guide", text: "A doua citire greșită, mai periculoasă: „trăiește în frică, că poți rămâne afară oricând". Frica te mișcă o săptămână. Relația te ține o viață." },
+        { from: "guide", text: "Prima citire greșită: „dacă adormi spiritual, ești pierdut”. Nu asta spune pilda. Toate au adormit și cinci au intrat la nuntă." },
+        { from: "guide", text: "A doua citire greșită, mai periculoasă: „trăiește în frică, că poți rămâne afară oricând”. Frica te mișcă o săptămână. Relația te ține o viață." },
         { from: "guide", text: "A treia, mai subtilă: pilda nu e o hartă a viitorului. Nu se fac calcule cu ea, nu se ghicesc date și nu se numără semne. Încheierea o spune limpede: nu știți." },
       ],
     },
@@ -206,7 +206,7 @@ export const pildaFecioarele: Lesson = {
         ref: "Matei 25:13",
       },
       bubbles: [
-        { from: "guide", text: "„Nu știți" e concluzia dată de El. Orice om care îți spune că știe ziua contrazice versetul cu care se încheie chiar pilda pe care o citește." },
+        { from: "guide", text: "„Nu știți” e concluzia dată de El. Orice om care îți spune că știe ziua contrazice versetul cu care se încheie chiar pilda pe care o citește." },
       ],
     },
     {
@@ -227,7 +227,7 @@ export const pildaFecioarele: Lesson = {
       type: "how_god_helps",
       order: 8,
       bubbles: [
-        { from: "guide", text: "Întrebarea practică a pildei nu e „când vine", ci „cu ce aștepți". Cele cinci n-au fost mai treze — au fost mai aprovizionate." },
+        { from: "guide", text: "Întrebarea practică a pildei nu e „când vine”, ci „cu ce aștepți”. Cele cinci n-au fost mai treze — au fost mai aprovizionate." },
         { from: "guide", text: "Tradus în viața de zi cu zi: nu se ține o așteptare lungă pe entuziasm. Se ține pe lucrurile mici, repetate, care nu se văd — câteva minute cu El, un jurnal, un om căruia să-i spui cinstit unde ești." },
         { from: "guide", text: "Și untdelemnul nu se împrumută: nimeni nu poate umbla cu Dumnezeu în locul tău — nici părinții, nici partenerul, nici un om de la amvon." },
       ],
@@ -270,7 +270,7 @@ export const pildaFecioarele: Lesson = {
       type: "prayer",
       order: 12,
       bubbles: [
-        { from: "guide", text: "Roagă-te scurt, cu cuvintele tale: „Doamne, învață-mă să Te aștept lung, fără să mă sting și fără să mă tem de Tine."" },
+        { from: "guide", text: "Roagă-te scurt, cu cuvintele tale: „Doamne, învață-mă să Te aștept lung, fără să mă sting și fără să mă tem de Tine.”" },
       ],
     },
     {

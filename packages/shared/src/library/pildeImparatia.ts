@@ -66,9 +66,9 @@ export const pildaSemanatorul: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Prima citire greșită: „dacă nu rodește, semănătorul a greșit — nu s-a spus bine, nu s-a explicat frumos"." },
+        { from: "guide", text: "Prima citire greșită: „dacă nu rodește, semănătorul a greșit — nu s-a spus bine, nu s-a explicat frumos”." },
         { from: "guide", text: "În pildă, semănătorul face un singur lucru și îl face bine. Nu e vina Lui că un pământ e bătătorit. Asta scoate o povară uriașă de pe orice om care a vorbit despre Iisus și n-a fost primit." },
-        { from: "guide", text: "A doua citire greșită, mai grea: „eu sunt pământ cu spini, aia e, așa am fost făcut". Solul nu e o sentință. Un pământ se lucrează: drumul se sapă, pietrele se scot, spinii se taie. Nimeni nu se naște pământ bun." },
+        { from: "guide", text: "A doua citire greșită, mai grea: „eu sunt pământ cu spini, aia e, așa am fost făcut”. Solul nu e o sentință. Un pământ se lucrează: drumul se sapă, pietrele se scot, spinii se taie. Nimeni nu se naște pământ bun." },
       ],
     },
     {
@@ -152,7 +152,7 @@ export const pildaNeghina: Lesson = {
       order: 1,
       bubbles: [
         { from: "guide", text: "Un om seamănă grâu bun. Peste noapte, vine un dușman și seamănă neghină între grâu. Când răsar amândouă, robii vin cu o propunere foarte logică: să mergem să smulgem neghina." },
-        { from: "guide", text: "Răspunsul stăpânului e „nu". Și motivul lui e cel mai important lucru din pildă." },
+        { from: "guide", text: "Răspunsul stăpânului e „nu”. Și motivul lui e cel mai important lucru din pildă." },
       ],
     },
     {
@@ -191,7 +191,7 @@ export const pildaNeghina: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, și cea care a făcut cel mai mult rău între credincioși: „trebuie curățită adunarea de cei nevrednici, ca să rămână numai cei adevărați"." },
+        { from: "guide", text: "Citirea greșită, și cea care a făcut cel mai mult rău între credincioși: „trebuie curățită adunarea de cei nevrednici, ca să rămână numai cei adevărați”." },
         { from: "guide", text: "Stăpânul spune, cu gura lui, exact invers: lăsați-le să crească împreună. Și motivul nu e că nu contează diferența, ci că mâna noastră nu e sigură." },
         { from: "guide", text: "Atenție: pilda nu desființează disciplina și nu spune că orice se poate tolera oriunde. Vorbește despre judecata finală a unui om — aceea nu ne aparține." },
       ],
@@ -205,7 +205,7 @@ export const pildaNeghina: Lesson = {
         options: [
           { id: "i2c_a", label: "Mă mânie că răul rămâne nepedepsit." },
           { id: "i2c_b", label: "Mă tem că eu sunt neghina." },
-          { id: "i2c_c", label: "Am fost dat la o parte de cineva care făcea „curățenie"." },
+          { id: "i2c_c", label: "Am fost dat la o parte de cineva care făcea „curățenie”." },
         ],
       },
     },
@@ -276,7 +276,7 @@ export const pildaMustarul: Lesson = {
       type: "truth_simple",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Două propoziții de context: sămânța de muștar era, în vorbirea de atunci, imaginea standard pentru „cel mai mic lucru cu putință". Iar aluatul nu se vede și nu se aude — lucrează pe dinlăuntru, peste noapte." },
+        { from: "guide", text: "Două propoziții de context: sămânța de muștar era, în vorbirea de atunci, imaginea standard pentru „cel mai mic lucru cu putință”. Iar aluatul nu se vede și nu se aude — lucrează pe dinlăuntru, peste noapte." },
         { from: "guide", text: "Punctul principal: Împărăția începe nevăzut și crește din interior. Nu se instalează cu zgomot, crește pe dedesubt până cuprinde totul." },
       ],
     },
@@ -306,7 +306,7 @@ export const pildaMustarul: Lesson = {
       type: "world_vs_truth",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Citirea greșită, foarte prezentă azi: „Dumnezeu lucrează prin lucruri mari și spectaculoase — dacă e de la El, se vede, se aude, umple săli"." },
+        { from: "guide", text: "Citirea greșită, foarte prezentă azi: „Dumnezeu lucrează prin lucruri mari și spectaculoase — dacă e de la El, se vede, se aude, umple săli”." },
         { from: "guide", text: "În cele două pilde, tot ce e de la El începe atât de mic încât îți vine să nu-l bagi în seamă. Iar aluatul lucrează tocmai când nimeni nu se uită." },
       ],
     },
