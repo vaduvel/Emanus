@@ -209,7 +209,7 @@ export const schimbareL1: Lesson = {
       type: "journal",
       order: 11,
       journalPrompt:
-        "Scrie propozitia cu care te-ai obisnuit sa te descrii. Exact cum suna in capul tau. O vom recitî la final.",
+        "Scrie propozitia cu care te-ai obisnuit sa te descrii. Exact cum suna in capul tau. O vom recitit la final.",
     },
     {
       id: "s1_12",
@@ -356,7 +356,7 @@ export const schimbareL2: Lesson = {
           { text: "Pentru ca voința e un lucru rau", correct: false },
         ],
         explanation:
-          "Romani 7 e scris de un om care voia si nu putea. De aia intrebarea lui nu e «ce metoda incerc?», ci «cine ma va izbavi?». Voința are un rol — in ce hranesti si ce tai — dar nu are puterea sa te scoata din robîe.",
+          "Romani 7 e scris de un om care voia si nu putea. De aia intrebarea lui nu e «ce metoda incerc?», ci «cine ma va izbavi?». Voința are un rol — in ce hranesti si ce tai — dar nu are puterea sa te scoata din robie.",
       },
     },
     {
@@ -367,7 +367,7 @@ export const schimbareL2: Lesson = {
         {
           from: "guide",
           text:
-            "Asta nu inseamna ca stai si aspepti. Inseamna ca schimbi ce ceri.",
+            "Asta nu inseamna ca stai si aștepți. Inseamna ca schimbi ce ceri.",
         },
         {
           from: "guide",
@@ -679,7 +679,7 @@ export const schimbareL4: Lesson = {
         {
           from: "guide",
           text:
-            "O mladita nu se strainăduiete sa faca struguri. Sta lipita si primeste seva. Roada e o consecinta a locului, nu a efortului.",
+            "O mladita nu se străduiește sa faca struguri. Sta lipita si primeste seva. Roada e o consecinta a locului, nu a efortului.",
         },
         {
           from: "guide",

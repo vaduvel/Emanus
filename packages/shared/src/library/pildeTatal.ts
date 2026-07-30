@@ -81,7 +81,7 @@ export const pildaRisipitor: Lesson = {
       type: "scripture",
       order: 6,
       scripture: {
-        text: "Iată, eu îți slujesc ca un rob de atâția ani și niciodată nu ]i-am călcat porunca; și mie niciodată nu mi-ai dat măcar un ied să mă veselesc cu amicii mei.",
+        text: "Iată, eu îți slujesc ca un rob de atâția ani și niciodată nu ți-am călcat porunca; și mie niciodată nu mi-ai dat măcar un ied să mă veselesc cu amicii mei.",
         ref: "Luca 15:29",
       },
       bubbles: [

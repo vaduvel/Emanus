@@ -34,7 +34,7 @@ export const pildaCasaStanca: Lesson = {
       type: "scripture",
       order: 2,
       scripture: {
-        text: "A dăt ploaia, au venit șuvoaiele, au suflat vânturile și au bătut în casa aceea, dar ea nu s-a prăbușit, pentru că avea temelia zidită pe stâncă.",
+        text: "A dat ploaia, au venit șuvoaiele, au suflat vânturile și au bătut în casa aceea, dar ea nu s-a prăbușit, pentru că avea temelia zidită pe stâncă.",
         ref: "Matei 7:25",
       },
       bubbles: [
@@ -130,7 +130,7 @@ export const pildaCasaStanca: Lesson = {
       type: "memory_verse",
       order: 11,
       scripture: {
-        text: "A dăt ploaia, au venit șuvoaiele... dar ea nu s-a prăbușit, pentru că avea temelia zidită pe stâncă.",
+        text: "A dat ploaia, au venit șuvoaiele... dar ea nu s-a prăbușit, pentru că avea temelia zidită pe stâncă.",
         ref: "Matei 7:25",
       },
     },

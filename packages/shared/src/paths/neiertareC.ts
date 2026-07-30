@@ -264,7 +264,7 @@ export const neiertareL7: Lesson = {
       type: "scripture",
       order: 8,
       scripture: {
-        text: "Sunt încredințat că Acela care a început în voi această bună lucrare o va isprvi până în ziua lui Iisus Hristos.",
+        text: "Sunt încredințat că Acela care a început în voi această bună lucrare o va isprăvi până în ziua lui Iisus Hristos.",
         ref: "Filipeni 1:6",
       },
     },
@@ -285,7 +285,7 @@ export const neiertareL7: Lesson = {
       type: "memory_verse",
       order: 10,
       scripture: {
-        text: "Acela care a început în voi această bună lucrare o va isprvi.",
+        text: "Acela care a început în voi această bună lucrare o va isprăvi.",
         ref: "Filipeni 1:6",
       },
     },

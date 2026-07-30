@@ -135,7 +135,7 @@ export const rusineL1: Lesson = {
         {
           from: "guide",
           text:
-            "Tatal a ales sa se faca de rusine el, in fata satului, ca sa ajunga la fiu inainte sa ajunge satul la el.",
+            "Tatal a ales sa se faca de rusine el, in fata satului, ca sa ajunga la fiu inainte sa ajunge sătul la el.",
         },
         { from: "guide", text: "Nu a asteptat sa se spele. L-a sarutat murdar de porci." },
       ],
@@ -195,7 +195,7 @@ export const rusineL1: Lesson = {
         },
         {
           from: "guide",
-          text: "Nu te-a gasit murdar si S-a intors din drum. Te-a caUtat murdar. Aia e treaba Lui.",
+          text: "Nu te-a gasit murdar si S-a intors din drum. Te-a căutat murdar. Aia e treaba Lui.",
         },
       ],
     },
@@ -340,7 +340,7 @@ export const rusineL2: Lesson = {
         {
           from: "guide",
           text:
-            "Frunzele au fost soluti a omului. Nu ii aduna nimeni frunzele. El le-a inlocuit. Dar ca sa fie piele, a murit un animal. Prima moarte din Biblie a fost ca sa fie acoperita rusinea unui om.",
+            "Frunzele au fost soluția omului. Nu ii aduna nimeni frunzele. El le-a inlocuit. Dar ca sa fie piele, a murit un animal. Prima moarte din Biblie a fost ca sa fie acoperita rusinea unui om.",
         },
         {
           from: "guide",

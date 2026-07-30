@@ -478,7 +478,7 @@ export const schimbareL7: Lesson = {
         },
         {
           from: "guide",
-          text: "Ce s-a schimbat e altceva: acum stii cum functioneaza, si nu mai lupti cu arma greenieta.",
+          text: "Ce s-a schimbat e altceva: acum stii cum functioneaza, si nu mai lupti cu arma greșită.",
         },
       ],
     },
@@ -553,7 +553,7 @@ export const schimbareL7: Lesson = {
         {
           from: "guide",
           text:
-            "Si un lucru care nu e opriunal, chiar dacă e cel mai greu pentru cine s-a ascuns ani: oamenii.",
+            "Si un lucru care nu e opțional, chiar dacă e cel mai greu pentru cine s-a ascuns ani: oamenii.",
         },
         {
           from: "guide",
@@ -573,7 +573,7 @@ export const schimbareL7: Lesson = {
       order: 7,
       scripture: {
         text:
-          "Sunt increzător ca Acela care a inceput in voi aceasta buna lucrare o va ispravî pana in ziua lui Iisus Hristos.",
+          "Sunt increzător ca Acela care a inceput in voi aceasta buna lucrare o va isprăvi pana in ziua lui Iisus Hristos.",
         ref: "Filipeni 1:6",
       },
       bubbles: [
@@ -640,7 +640,7 @@ export const schimbareL7: Lesson = {
       type: "memory_verse",
       order: 11,
       scripture: {
-        text: "Acela care a inceput in voi aceasta buna lucrare o va ispravî.",
+        text: "Acela care a inceput in voi aceasta buna lucrare o va isprăvi.",
         ref: "Filipeni 1:6",
       },
     },

@@ -223,7 +223,7 @@ export const harL2: Lesson = {
   id: "har_l2",
   courseId: "path_har",
   order: 2,
-  title: "Fiul care a rams acasa",
+  title: "Fiul care a rămas acasa",
   estMinutes: 11,
   anchorRefs: ["Luca 15:25-32", "Romani 8:15", "Galateni 4:7"],
   memoryVerseRef: "Luca 15:31",
@@ -242,11 +242,11 @@ export const harL2: Lesson = {
         {
           from: "guide",
           text:
-            "Pilda cu fiul risipitor are doi fii. Aproape toti vorbesc despre cel care a plecat. Iisus a spus-o insa pentru cel care a rams.",
+            "Pilda cu fiul risipitor are doi fii. Aproape toti vorbesc despre cel care a plecat. Iisus a spus-o insa pentru cel care a rămas.",
         },
         {
           from: "guide",
-          text: "Iar cel care a rams e cel care nu intra in casa la final.",
+          text: "Iar cel care a rămas e cel care nu intra in casa la final.",
         },
       ],
     },
@@ -444,7 +444,7 @@ export const harL3: Lesson = {
       order: 3,
       scripture: {
         text:
-          "In dragoste nu este frica; ci dragostea desavarsita izgonS frica; pentru ca frica are cu ea pedeapsa.",
+          "In dragoste nu este frica; ci dragostea desavarsita izgonit frica; pentru ca frica are cu ea pedeapsa.",
         ref: "1 Ioan 4:18",
       },
       bubbles: [
@@ -488,14 +488,14 @@ export const harL3: Lesson = {
       order: 5,
       scripture: {
         text:
-          "Sa ne apropiem dar cu deplina increedere de scaunul harului, ca sa capatam mila si sa gasim har, ca sa fim ajutati la vreme de nevoie.",
+          "Sa ne apropiem dar cu deplina încredere de scaunul harului, ca sa capatam mila si sa gasim har, ca sa fim ajutati la vreme de nevoie.",
         ref: "Evrei 4:16",
       },
       bubbles: [
         {
           from: "guide",
           text:
-            "Cuvantul din greaca pentru «deplina increedere» e «parrhesia»: dreptul de a vorbi liber, fara sa îți ceri scuze că exiști.",
+            "Cuvantul din greaca pentru «deplina încredere» e «parrhesia»: dreptul de a vorbi liber, fara sa îți ceri scuze că exiști.",
         },
         {
           from: "guide",
@@ -582,7 +582,7 @@ export const harL3: Lesson = {
       id: "h3_11",
       type: "memory_verse",
       order: 11,
-      scripture: { text: "In dragoste nu este frica; dragostea desavarsita izgonS frica.", ref: "1 Ioan 4:18" },
+      scripture: { text: "In dragoste nu este frica; dragostea desavarsita izgonit frica.", ref: "1 Ioan 4:18" },
     },
   ],
 }
@@ -1142,7 +1142,7 @@ export const harL7: Lesson = {
         {
           from: "guide",
           text:
-            "In dreptul roman, diferenta dintre rob si fiu nu era cat de bine muncea. Robul putea fi mai harnic. Diferenta era statutul, si el nu se caștiga prin muncA.",
+            "In dreptul roman, diferenta dintre rob si fiu nu era cat de bine muncea. Robul putea fi mai harnic. Diferenta era statutul, si el nu se caștiga prin muncă.",
         },
         {
           from: "guide",
@@ -1188,7 +1188,7 @@ export const harL7: Lesson = {
           { text: "Nu il mai deranjeaza nimic", correct: false },
         ],
         explanation:
-          "Fiul cel mare din pilda era ireproSabil si nu suporta iertarea data fratelui lui. Duritatea fata de alții e semnul cel mai sigur ca un om inca isi plăteste singur intrarea.",
+          "Fiul cel mare din pilda era ireproșabil si nu suporta iertarea data fratelui lui. Duritatea fata de alții e semnul cel mai sigur ca un om inca isi plăteste singur intrarea.",
       },
     },
     {
@@ -1204,7 +1204,7 @@ export const harL7: Lesson = {
         {
           from: "guide",
           text:
-            "Omul care scrie asta avea cea mai buna educație religioasa a vremii si o viața ireproSabila. Le numeste «pierdere» — nu pentru ca erau rele, ci pentru ca le folosise ca plata.",
+            "Omul care scrie asta avea cea mai buna educație religioasa a vremii si o viața ireproșabila. Le numeste «pierdere» — nu pentru ca erau rele, ci pentru ca le folosise ca plata.",
         },
         {
           from: "guide",

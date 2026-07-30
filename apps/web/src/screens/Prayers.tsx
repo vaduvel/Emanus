@@ -108,7 +108,7 @@ export function Prayers() {
           <h2 className="prayers__section">Ce a făcut El</h2>
           <p className="muted">
             În Biblie, oamenii puneau o piatră acolo unde Dumnezeu îi ajutase, ca să nu uite.
-            Îî spuneau Eben-Ezer: „Până aici Domnul ne-a ajutat.”
+            Îi spuneau Eben-Ezer: „Până aici Domnul ne-a ajutat.”
           </p>
           <ul className="prayers__list">
             {answered.map((p) => (

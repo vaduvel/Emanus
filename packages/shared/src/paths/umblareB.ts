@@ -137,7 +137,7 @@ export const umblareL4: Lesson = {
         options: [
           { text: "Sa aduca rod", correct: false },
           { text: "Sa rama lipita de vita", correct: true },
-          { text: "Sa se stradiuasca mai mult in anii slabi", correct: false },
+          { text: "Sa se străduiască mai mult in anii slabi", correct: false },
         ],
         explanation:
           "Rodul nu e o comanda data mladitei, e ce iese din lipire. Cand inversam ordinea, ajungem harnici si secati.",
@@ -299,7 +299,7 @@ export const umblareL5: Lesson = {
       id: "u5_10",
       type: "journal",
       order: 10,
-      journalPrompt: "Ce a ieseit la suprafata in liniste? Scrie lista, fara sa o comentezi.",
+      journalPrompt: "Ce a ieșit la suprafata in liniste? Scrie lista, fara sa o comentezi.",
     },
   ],
 }
@@ -352,7 +352,7 @@ export const umblareL6: Lesson = {
         },
         {
           from: "guide",
-          text: "Si uita-te la structura psalmului: patru versete de plangere, apoi \u00abeu ma increed in bunatatea Ta\u00bb. Nu se schimbase nimic in situatie intre versete. S-a schimbat unde se uita.",
+          text: "Si uita-te la structura psalmului: patru versete de plangere, apoi \u00abeu ma încred in bunatatea Ta\u00bb. Nu se schimbase nimic in situatie intre versete. S-a schimbat unde se uita.",
         },
       ],
     },
@@ -581,7 +581,7 @@ export const umblareL7: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Si un lucru pe care il uita cei mai zeloși: nu ai voie sa foloseesti durerea altuia ca ocazie de predica. Cine plange are nevoie de cineva care sta jos langa el.",
+          text: "Si un lucru pe care il uita cei mai zeloși: nu ai voie sa folosești durerea altuia ca ocazie de predica. Cine plange are nevoie de cineva care sta jos langa el.",
         },
         {
           from: "guide",

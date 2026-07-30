@@ -288,7 +288,7 @@ export const aproapeL2: Lesson = {
         {
           from: "guide",
           text:
-            "Versetele 5-6: «Eu mă increed in bunatatea Ta.» Nu spune ca s-a schimbat situația. Situația e identica. S-a schimbat unde s-a ancorat.",
+            "Versetele 5-6: «Eu mă încred in bunatatea Ta.» Nu spune ca s-a schimbat situația. Situația e identica. S-a schimbat unde s-a ancorat.",
         },
       ],
     },
@@ -368,7 +368,7 @@ export const aproapeL2: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "«Pana cand, Doamne? Și totusi, nu plec. Ma increed in bunatatea Ta.»",
+          text: "«Pana cand, Doamne? Și totusi, nu plec. Ma încred in bunatatea Ta.»",
         },
       ],
     },
@@ -376,7 +376,7 @@ export const aproapeL2: Lesson = {
       id: "a2_11",
       type: "memory_verse",
       order: 11,
-      scripture: { text: "Eu mă increed in bunatatea Ta.", ref: "Psalmul 13:5" },
+      scripture: { text: "Eu mă încred in bunatatea Ta.", ref: "Psalmul 13:5" },
     },
   ],
 }
@@ -515,7 +515,7 @@ export const aproapeL3: Lesson = {
         {
           from: "guide",
           text:
-            "Daca vine un lucru anume — un om, o fapta, o ușa lasata deschisa — scrie-l si fa ce se poate face azi. Daca nu vine nimic, treci mai departe liniStit.",
+            "Daca vine un lucru anume — un om, o fapta, o ușa lasata deschisa — scrie-l si fa ce se poate face azi. Daca nu vine nimic, treci mai departe liniștit.",
         },
       ],
     },
@@ -992,8 +992,8 @@ export const aproapeL6: Lesson = {
       quiz: {
         question: "Ce se cere celui care si-a pierdut dragostea dintai?",
         options: [
-          { text: "Sa aspepte pana revine simtirea", correct: false },
-          { text: "Sa faca faptele de la inceput — actițunea inaintea simtirii", correct: true },
+          { text: "Sa aștepte pana revine simtirea", correct: false },
+          { text: "Sa faca faptele de la inceput — acțiunea inaintea simtirii", correct: true },
           { text: "Sa munceasca mai mult in biserica", correct: false },
           { text: "Sa se retraga o vreme, pana se lamureste", correct: false },
         ],
@@ -1027,7 +1027,7 @@ export const aproapeL6: Lesson = {
       type: "scripture",
       order: 7,
       scripture: {
-        text: "Sa cunoastem, sa caUtam sa cunoastem pe Domnul! Caci El Se iveste ca zorile diminetii si va veni la noi ca o ploaie.",
+        text: "Sa cunoastem, sa căutăm sa cunoastem pe Domnul! Caci El Se iveste ca zorile diminetii si va veni la noi ca o ploaie.",
         ref: "Osea 6:3",
       },
       bubbles: [
@@ -1037,7 +1037,7 @@ export const aproapeL6: Lesson = {
         },
         {
           from: "guide",
-          text: "Iar verbul e la persoana intai plural si repetat: sa cunoastem, sa caUtam sa cunoastem. E o urmarire, nu o asteptare.",
+          text: "Iar verbul e la persoana intai plural si repetat: sa cunoastem, sa căutăm sa cunoastem. E o urmarire, nu o asteptare.",
         },
       ],
     },
@@ -1053,7 +1053,7 @@ export const aproapeL6: Lesson = {
         },
         {
           from: "guide",
-          text: "Fara sa aspepti sa îți vina chef. Cheful vine dupa, si de obicei mult dupa.",
+          text: "Fara sa aștepți sa îți vina chef. Cheful vine dupa, si de obicei mult dupa.",
         },
       ],
     },

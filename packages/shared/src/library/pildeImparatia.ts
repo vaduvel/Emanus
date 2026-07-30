@@ -46,7 +46,7 @@ export const pildaSemanatorul: Lesson = {
       order: 3,
       bubbles: [
         { from: "guide", text: "Două propoziții de context: acolo se semăna cu mâna, aruncând, înainte de a ara. De asta cad semințe și pe drum și în spini — nu pentru că semănătorul era neatent, ci pentru că așa se semăna." },
-        { from: "guide", text: "Punctul principal: același cuvânt, patru feluri de pământ. Diferența e în sol, nu în sămânță și nici în mâna care a arunca-o." },
+        { from: "guide", text: "Punctul principal: același cuvânt, patru feluri de pământ. Diferența e în sol, nu în sămânță și nici în mâna care a aruncat-o." },
       ],
     },
     {

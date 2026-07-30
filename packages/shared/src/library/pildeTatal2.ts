@@ -76,7 +76,7 @@ export const pildaLucratorii: Lesson = {
         prompt: "Unde te găsești în pildă?",
         options: [
           { id: "p4c_a", label: "Am venit târziu și mi-e rușine de anii pierduți." },
-          { id: "p4c_b", label: "Sunt de dimineață și mă ustură când alții primesc uor." },
+          { id: "p4c_b", label: "Sunt de dimineață și mă ustură când alții primesc ușor." },
           { id: "p4c_c", label: "Mi se pare, sincer, nedrept." },
         ],
       },
@@ -86,7 +86,7 @@ export const pildaLucratorii: Lesson = {
       type: "how_god_helps",
       order: 7,
       bubbles: [
-        { from: "guide", text: "Dacă ai venit târziu: nu primești o versiune redusă. Nu există fii de rangul doi, cu jumătate de moWtenire." },
+        { from: "guide", text: "Dacă ai venit târziu: nu primești o versiune redusă. Nu există fii de rangul doi, cu jumătate de moștenire." },
         { from: "guide", text: "Dacă ești de dimineață și te ustură: nu ți s-a luat nimic. Usturimea nu vine din pierdere, vine din comparație — și comparația e singurul lucru care poate face grea o zi în care nimeni n-a fost înșelat." },
       ],
     },

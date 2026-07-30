@@ -225,7 +225,7 @@ export const harD_l5: Lesson = {
       },
       bubbles: [
         { from: "guide", text: "Verbul „a rămâne” e *meno*: a locui, a sta acolo, nu a trece în vizită." },
-        { from: "guide", text: "O mlădiță nu se sfortează să facă struguri. Stați lipită de viță și asta se întâmplă. Efortul ei e să nu se rupă." },
+        { from: "guide", text: "O mlădiță nu se străduiește să facă struguri. Stai lipit de viță și asta se întâmplă. Efortul ei e să nu se rupă." },
       ],
     },
     {
@@ -317,11 +317,11 @@ export const harD_l6: Lesson = {
       type: "scripture",
       order: 4,
       scripture: {
-        text: "Căci printr-o singură jertfă El a făcut desdesăvârșiți pentru totdeauna pe cei ce sunt sfințiți.",
+        text: "Căci printr-o singură jertfă El a făcut desăvârșiți pentru totdeauna pe cei ce sunt sfințiți.",
         ref: "Evrei 10:14",
       },
       bubbles: [
-        { from: "guide", text: "„O singură” și „pentru totdeauna” stau în aceeași propoziție. Autorul epistolei le pune împreună intenionat, pentru niște oameni obișnuiți cu jertfe repetate an de an." },
+        { from: "guide", text: "„O singură” și „pentru totdeauna” stau în aceeași propoziție. Autorul epistolei le pune împreună intenționat, pentru niște oameni obișnuiți cu jertfe repetate an de an." },
       ],
     },
     {

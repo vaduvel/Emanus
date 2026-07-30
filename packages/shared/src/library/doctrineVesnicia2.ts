@@ -208,7 +208,7 @@ export const vesniciaL5: Lesson = {
       order: 5,
       bubbles: [
         { from: "guide", text: "Vocea din tine spune: dacă nu simți, nu e real. Și dacă ai căzut, ai ieșit." },
-        { from: "guide", text: "Textul spune: siguranța nu stai pe ce simți tu despre El, ci pe ce a făcut El pentru tine și pe cine te ține. Sentimentele se schimbă cu somnul și cu vremea. Mâna Lui nu." },
+        { from: "guide", text: "Textul spune: siguranța nu te bazezi pe ce simți tu despre El, ci pe ce a făcut El pentru tine și pe cine te ține. Sentimentele se schimbă cu somnul și cu vremea. Mâna Lui nu." },
       ],
     },
     {

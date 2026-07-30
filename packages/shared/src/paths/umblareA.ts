@@ -86,7 +86,7 @@ export const umblareL1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Ilie a facut greseala pe care o facem toti. Il aseapta pe Dumnezeu in vant puternic, in cutremur, in foc. Dumnezeu n-a fost in niciunul.",
+          text: "Ilie a facut greseala pe care o facem toti. Il așteaptă pe Dumnezeu in vant puternic, in cutremur, in foc. Dumnezeu n-a fost in niciunul.",
         },
         {
           from: "guide",
@@ -113,7 +113,7 @@ export const umblareL1: Lesson = {
         },
         {
           from: "guide",
-          text: "Doi: ce lasa in urma? Vocea Lui aduce liniste chiar si cand te mustra. Acuzarea care te lasa mic, rusinat si fara ieseire nu e a Lui - e a celui care acuza ziua si noaptea.",
+          text: "Doi: ce lasa in urma? Vocea Lui aduce liniste chiar si cand te mustra. Acuzarea care te lasa mic, rusinat si fara ieșire nu e a Lui - e a celui care acuza ziua si noaptea.",
         },
         {
           from: "guide",
@@ -156,10 +156,10 @@ export const umblareL1: Lesson = {
       type: "quiz",
       order: 9,
       quiz: {
-        question: "Un gand care te lasa rusinat, mic si fara ieseire - de la cine vine?",
+        question: "Un gand care te lasa rusinat, mic si fara ieșire - de la cine vine?",
         options: [
           { text: "De la Dumnezeu, care ne mustra", correct: false },
-          { text: "Nu de la El - mustrarea Lui lasa liniste si o ieseire", correct: true },
+          { text: "Nu de la El - mustrarea Lui lasa liniste si o ieșire", correct: true },
           { text: "Nu se poate sti niciodata", correct: false },
         ],
         explanation:
@@ -240,7 +240,7 @@ export const umblareL2: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Cuvantul tradus \u00abcugeta\u00bb e hagah. In alte locuri, aceeasi rada descrie leul care mariae peste prada si porumbelul care geme. E un sunet scos incet, iar si iar.",
+          text: "Cuvantul tradus \u00abcugeta\u00bb e hagah. In alte locuri, aceeasi rada descrie leul care mărire peste prada si porumbelul care geme. E un sunet scos incet, iar si iar.",
         },
         {
           from: "guide",
@@ -395,7 +395,7 @@ export const umblareL3: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Nu e o vorba de intelepciune populara. Iisus o spune intr-un context despre bani, adica despre lucrul cel mai puin spiritual din lista.",
+          text: "Nu e o vorba de intelepciune populara. Iisus o spune intr-un context despre bani, adica despre lucrul cel mai puțin spiritual din lista.",
         },
         {
           from: "guide",

@@ -157,7 +157,7 @@ export const impreunaL1: Lesson = {
           { text: "Ca trebuie sa te obisnuiesti sa fii singur", correct: false },
         ],
         explanation:
-          "Nu era nimic in neregula cu El, si totusi a rams singur. Deci singuratatea nu masoara valoarea unui om. Si nu inseamna ca oamenii nu conteaza — despre asta e restul drumului.",
+          "Nu era nimic in neregula cu El, si totusi a rămas singur. Deci singuratatea nu masoara valoarea unui om. Si nu inseamna ca oamenii nu conteaza — despre asta e restul drumului.",
       },
     },
     {
@@ -288,7 +288,7 @@ export const impreunaL2: Lesson = {
         {
           from: "guide",
           text:
-            "«Ne-a randăit mai inainte sa fim adoptați» (Efeseni 1:5). In dreptul roman, un fiu adoptat pierdea toate datoriile vechi si primea numele si moștenirea noii familii.",
+            "«Ne-a rânduit mai inainte sa fim adoptați» (Efeseni 1:5). In dreptul roman, un fiu adoptat pierdea toate datoriile vechi si primea numele si moștenirea noii familii.",
         },
         {
           from: "guide",
@@ -642,7 +642,7 @@ export const impreunaL4: Lesson = {
       order: 3,
       scripture: {
         text:
-          "Nu mă batjocoreste un vrajmas — as suferi; ci tu, om socotit deopotriva cu mine, prietenul si increedeutul meu, cu care mergeam impreuna la Casa lui Dumnezeu!",
+          "Nu mă batjocoreste un vrajmas — as suferi; ci tu, om socotit deopotriva cu mine, prietenul si încredeutul meu, cu care mergeam impreuna la Casa lui Dumnezeu!",
         ref: "Psalmul 55:12-14",
       },
       bubbles: [
@@ -671,7 +671,7 @@ export const impreunaL4: Lesson = {
         {
           from: "guide",
           text:
-            "Vindecat de Iisus, si excluS din comunitate pentru că nu a vrut sa retracteze ce trAise.",
+            "Vindecat de Iisus, si exclus din comunitate pentru că nu a vrut sa retracteze ce trăise.",
         },
         {
           from: "guide",
@@ -712,12 +712,12 @@ export const impreunaL4: Lesson = {
         question: "Ce a facut Iisus cu omul dat afara din sinagoga?",
         options: [
           { text: "I-a spus sa se intoarca si sa se supuna", correct: false },
-          { text: "L-a caUtat El, afara, si S-a descoperit lui", correct: true },
+          { text: "L-a căutat El, afara, si S-a descoperit lui", correct: true },
           { text: "L-a lasat sa se descurce singur", correct: false },
           { text: "I-a explicat ca liderii aveau dreptate", correct: false },
         ],
         explanation:
-          "Ioan 9:35 spune ca Iisus a auzit ca fusese dat afara si l-a caUtat. Dumnezeu nu S-a asociat cu decizia comunitații. Nu esti in afara Lui pentru ca cineva te-a scos in afara unui grup.",
+          "Ioan 9:35 spune ca Iisus a auzit ca fusese dat afara si l-a căutat. Dumnezeu nu S-a asociat cu decizia comunitații. Nu esti in afara Lui pentru ca cineva te-a scos in afara unui grup.",
       },
     },
     {
@@ -807,12 +807,12 @@ export const impreunaL5: Lesson = {
         {
           from: "guide",
           text:
-            "Cand auzi «biserica», îți vine in minte o clAdire, un program si niste scaune. Asa o folosim toti.",
+            "Cand auzi «biserica», îți vine in minte o clădire, un program si niste scaune. Asa o folosim toti.",
         },
         {
           from: "guide",
           text:
-            "Dar cuvantul din greaca, «ekklesia», nu insemna clAdire. Insemna adunarea de oameni chemați la un loc. Nu exista in original ideea de imobil.",
+            "Dar cuvantul din greaca, «ekklesia», nu insemna clădire. Insemna adunarea de oameni chemați la un loc. Nu exista in original ideea de imobil.",
         },
       ],
     },
@@ -849,7 +849,7 @@ export const impreunaL5: Lesson = {
         {
           from: "guide",
           text:
-            "«Frangeau pAinea acasa». Cea mai mare parte din ce vezi acolo se intampla in case, la masa. Nu intr-o instituție.",
+            "«Frangeau pâinea acasa». Cea mai mare parte din ce vezi acolo se intampla in case, la masa. Nu intr-o instituție.",
         },
         {
           from: "guide",
@@ -887,7 +887,7 @@ export const impreunaL5: Lesson = {
       quiz: {
         question: "Care e minimul, dupa Matei 18:20?",
         options: [
-          { text: "O clAdire si un lider", correct: false },
+          { text: "O clădire si un lider", correct: false },
           { text: "Doi sau trei oameni adunati in numele Lui", correct: true },
           { text: "O adunare de cel puțin cateva zeci", correct: false },
           { text: "Un program saptamanal fix", correct: false },
@@ -908,7 +908,7 @@ export const impreunaL5: Lesson = {
         {
           from: "guide",
           text:
-            "Și e ințeleaga bila dupa ce ai fost ranit. Dar Noul Testament nu are un singur exemplu de creștin care trăiește izolat, din alegere.",
+            "Și e înțeleagă Biblia dupa ce ai fost ranit. Dar Noul Testament nu are un singur exemplu de creștin care trăiește izolat, din alegere.",
         },
         {
           from: "guide",
@@ -1039,7 +1039,7 @@ export const impreunaL6: Lesson = {
       order: 5,
       scripture: {
         text:
-          "Cand a venit in Ierusalim, Saul a caUtat sa se lipeasca de ucenici; dar toți se temeau de el, caci nu puteau sa creada ca este ucenic. Atunci Barnaba l-a luat cu el.",
+          "Cand a venit in Ierusalim, Saul a căutat sa se lipeasca de ucenici; dar toți se temeau de el, caci nu puteau sa creada ca este ucenic. Atunci Barnaba l-a luat cu el.",
         ref: "Fapte 9:26-27",
       },
       bubbles: [
@@ -1050,7 +1050,7 @@ export const impreunaL6: Lesson = {
         },
         {
           from: "guide",
-          text: "«A caUtat sa se lipeasca» — a incercat, si a fost respins. Nu din prima, deci.",
+          text: "«A căutat sa se lipeasca» — a incercat, si a fost respins. Nu din prima, deci.",
         },
         {
           from: "guide",
@@ -1201,7 +1201,7 @@ export const impreunaL7: Lesson = {
         {
           from: "guide",
           text:
-            "Nu e o metoda de distragere. Cine primeste tot timpul rămâne in poziti a celui asistat. Cine da devine cuiva necesar — si aia e apartenența.",
+            "Nu e o metoda de distragere. Cine primeste tot timpul rămâne in poziția celui asistat. Cine da devine cuiva necesar — si aia e apartenența.",
         },
       ],
     },
@@ -1227,7 +1227,7 @@ export const impreunaL7: Lesson = {
       order: 6,
       scripture: {
         text:
-          "Sa veghem unii asupra altora, ca sa ne indemnam la dragoste si la fapte bune. Sa nu parasșim adunarea noastra, cum au unii obicei.",
+          "Sa veghem unii asupra altora, ca sa ne indemnam la dragoste si la fapte bune. Sa nu părăsim adunarea noastra, cum au unii obicei.",
         ref: "Evrei 10:24-25",
       },
       bubbles: [
