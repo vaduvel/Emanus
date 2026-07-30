@@ -11,7 +11,7 @@
     "typecheck": "pnpm build:shared && pnpm --filter @emanus/db build && pnpm -r typecheck",
     "fix:quotes": "python3 scripts/fix-quotes.py",
     "check:quotes": "python3 scripts/fix-quotes.py --check",
-    "check:typos": "python3 scripts/fix-known-typos.py && git diff --exit-code",
+    "check:typos": "python3 scripts/fix-known-typos.py --check",
     "check:content": "python3 scripts/audit-content.py"
   }
 }
