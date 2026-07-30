@@ -5,7 +5,11 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+    "./domain": { "types": "./dist/domain.d.ts", "default": "./dist/domain.js" },
+    "./paths": { "types": "./dist/paths/index.d.ts", "default": "./dist/paths/index.js" },
+    "./library": { "types": "./dist/library/index.d.ts", "default": "./dist/library/index.js" },
+    "./lesson-mohler": { "types": "./dist/lessonMohler.d.ts", "default": "./dist/lessonMohler.js" }
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
