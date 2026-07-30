@@ -55,7 +55,7 @@ pentru că omul de azi nu recunoaște că are păcat până nu află întâi cin
 O singură întrebare la intrare: **„Ce te-a adus aici?”**
 
 1. Nu-mi pot ierta pe cineva / pe mine → `path_neiertare`
-2. Am pierdut pe cineva → `path_doliu`
+2. Am pierdut pe cineva / sunt bolnav / nu înțeleg de ce a permis Dumnezeu → `path_suferinta`
 3. Mi-e frică / anxietate → `path_frica`
 4. Nu mai simt nimic → `path_uscaciune`
 5. Sunt prins într-o dependență → `path_dependenta`

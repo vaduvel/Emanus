@@ -7,22 +7,30 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LIB = ROOT / "packages" / "shared" / "src" / "library"
+PATHS = ROOT / "packages" / "shared" / "src" / "paths"
+RUNTIME_ROOTS = (LIB, PATHS)
 IMPORT_RE = re.compile(r'(?:from\s+|export\s+\*\s+from\s+)["\'](\.[^"\']+)["\']')
 
+
+def is_runtime_file(path: Path) -> bool:
+    return any(root == path.parent or root in path.parents for root in RUNTIME_ROOTS)
+
+
 def runtime_files() -> list[Path]:
-    pending = [LIB / "current.ts"]
+    pending = [LIB / "current.ts", PATHS / "index.ts"]
     seen: set[Path] = set()
     while pending:
         path = pending.pop()
-        if path in seen or not path.exists() or LIB not in path.parents:
+        if path in seen or not path.exists() or not is_runtime_file(path):
             continue
         seen.add(path)
         text = path.read_text(encoding="utf-8")
         for rel in IMPORT_RE.findall(text):
             candidate = (path.parent / rel.replace(".js", ".ts")).resolve()
-            if candidate.exists() and LIB in candidate.parents:
+            if candidate.exists() and is_runtime_file(candidate):
                 pending.append(candidate)
     return sorted(seen)
+
 
 FILES = runtime_files()
 errors: list[str] = []

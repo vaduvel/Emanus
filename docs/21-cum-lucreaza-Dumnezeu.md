@@ -50,7 +50,10 @@ Durerile sunt infinite. Tiparele in care omul ajunge sa gandeasca despre Dumneze
 
 > **ATENTIE, limita asumata.** Cele sapte tipare sunt un **instrument de orientare initiala**, nu un diagnostic si nu un adevar absolut despre om.
 >
-> - Nu spunem niciodata omului "boala ta e ca nu crezi X". Nu ii comunicam eticheta camerei.
+> - Daca omul numeste un pacat concret si consecinta lui, nu il ascundem sub
+>   cuvantul "incercare": chemam la marturisire, oprire si reparare. Dar nu
+>   transformam simpla existenta a bolii intr-un verdict despre un pacat ascuns
+>   (Ioan 9:1-3; 1 Corinteni 11:29-32).
 > - Nu punem vina pe om pentru ce simte. Anxietatea, tristetea, epuizarea, insomnia pot avea cauze medicale: tiroida, trauma, lipsa de somn, medicatie, boala. Cand un simptom poate fi medical, il numim si trimitem la medic in acelasi pas (vezi `u5_7`, `u6_8`).
 > - Un om poate fi in doua camere deodata, sau in niciuna. De aceea "Nu ma mai regasesc aici" e vizibil, nu ascuns in setari.
 >
@@ -59,14 +62,17 @@ Durerile sunt infinite. Tiparele in care omul ajunge sa gandeasca despre Dumneze
 | # | Camera | Tiparul (ce ajunge omul sa creada) | Cine intra aici |
 |---|---|---|---|
 | **C1** | Nu ma vrea asa cum sunt | *Sunt prea murdar pentru El* | rusine, vinovatie, pacat ascuns, avort, adulter, pornografie, trecut murdar, rusinea celui abuzat |
-| **C2** | Nu e bun / m-a lasat | *Daca era bun, nu se intampla* | doliu, boala, nedreptate, copil pierdut, divort, neiertare, "unde era El cand mi s-a intamplat?" |
+| **C2** | Nu e bun / m-a lasat | *Daca era bun, nu se intampla* | doliu, boala, nedreptate, copil pierdut, divort, neiertare, "unde era El cand mi s-a intamplat?" — camera are trasee distincte pentru rana produsa de un om si pentru suferinta fara agresor |
 | **C3** | Nu e real / nu se poate sti | *Poate e doar o poveste* | ateu, agnostic, indoiala, "Biblia e inventata", confuzie doctrinara, new age |
 | **C4** | E departe, nu ma aude | *Am ramas singur pe drum* | relatie racita, uscaciune, viata de rugaciune slaba, tacerea Lui, "mi-am pierdut flacara" |
 | **C5** | Nu ma pot schimba | *Sunt defect, asta sunt* | dependente, recadere, anxietate, tristete, furie, "am promis de o suta de ori" |
 | **C6** | Trebuie sa merit | *Ma iubeste cat de bun sunt* | forma fara putere, religiozitate mostenita, epuizare in slujire, frica de pedeapsa, perfectionism |
 | **C7** | Sunt singur in asta | *Nimeni nu intelege si nimanui nu-i pasa* | singuratate, izolare, respins de familie sau de biserica, nou-venit care nu cunoaste pe nimeni |
 
-**7 camere x 7 lectii = 49 de lectii.** Fezabil. Fata de 45 de parcursuri, care nu se pot scrie niciodata.
+**Sapte camere, cu trasee distincte numai cand progresia o cere.** C2 are un
+traseu pentru rana produsa de un om si unul pentru doliu, boala si intrebarea
+"de ce?". Separarea evita atat zeci de cursuri aproape identice, cat si
+fortarea unor oameni intr-o concluzie care nu apartine durerii lor.
 
 ### Cum ramane personal desi e generalizat
 
@@ -76,7 +82,9 @@ Usile raman multe si scrise **in cuvintele omului**, nu in limbaj de sistem. Omu
 
 Etapa 2 (Descoperirea Persoanei) nu vine **inaintea** camerei, ci **inauntrul** ei, in limbajul ranii:
 
-- In **C2**, "Dumnezeu e bun" se aude ca: *nu El ti-a facut asta* (Iacov 1:17; Ioan 10:10).
+- In **C2**, pentru rana produsa de un om, bunatatea Lui se vede prin faptul ca
+  nu este de partea raului. Pentru doliu si boala nu inventam cauza: pastram
+  impreuna Ioan 9:1-3 si 1 Corinteni 11:29-32.
 - In **C1**, acelasi adevar suna: *nu Se scarbeste de tine* (Luca 15:20).
 - In **C5**: *nu Se satura de tine dupa a suta oara* (Filip 1:6).
 - In **C6**: *nu trebuie sa platesti ceva ce e deja platit* (Efes 2:8-9).
@@ -87,7 +95,10 @@ Etapa 2 (Descoperirea Persoanei) nu vine **inaintea** camerei, ci **inauntrul** 
 
 ## 3. Usile si maparea lor
 
-Omul nu alege o camera. Alege o propozitie. Propozitia duce in camera.
+Omul nu alege o camera. Alege o propozitie. Propozitia duce in camera. O usa
+poate suprascrie traseul general al camerei cand subiectul cere alta progresie
+editoriala. In C2, `neiertare` si `divort` raman in `path_neiertare`, iar
+`doliu`, `boala` si `de_ce_permis` duc explicit in `path_suferinta`.
 
 Cele 31 de usi nu apar deodata. **Zece intai** (`COMMON_DOORS`), apoi butonul *Arata-mi toate optiunile* deschide restul de **21** (`MORE_DOORS`) plus un camp de **cautare in cuvintele omului**. Cautarea filtreaza in toate cele 31, dar apare doar in lista completa: omul care plange alege, nu tasteaza.
 
@@ -192,7 +203,7 @@ Canalul principal de intrare sunt creatorii crestini. Daca cineva face un clip d
 | M3 | Oglinda - de ce am nevoie de mantuire | 4 | de scris |
 | M4 | Intoarcerea - pocainta, nu remuscarea | 3 | de scris |
 | M5 | Fiul - identitate, nu performanta | 4 | de scris |
-| M6 | **Camerele** - 7 camere x 7 lectii | 49 | 7 din 49 (C2 partial) |
+| M6 | **Camerele** - 7 camere, cu C2 impartita in doua trasee | 54 | **scris** |
 | M7 | **Umblarea** - ritmul zilnic (`path_umblare`) | 7 + 7 practici | **scris** |
 | M8 | Cand tace - incercarea | 5 | de scris |
 | M9 | Da mai departe | - | de scris |
@@ -204,7 +215,9 @@ Transversale: **doctrina** (3 din ~22, `path_temelie`), **pildele** (20 de fise)
 ## 7. Ce contrazice codul de azi
 
 1. ~~`DOORS` are 11 usi~~ **rezolvat:** 31 de usi mapate la 7 camere, 10 + 21, plus 3 intrari de explorare.
-2. `pathNeiertare` este **C2**. Cele 2 lecții de început despre cine este Dumnezeu prin rană sunt implementate în `neiertareOpen.ts` și vin înaintea pașilor despre iertare.
+2. C2 are doua trasee: `path_neiertare` pentru rana produsa de un om si
+   `path_suferinta` pentru doliu, boala si intrebarea "de ce?". Cele trei usi
+   sensibile au mapare explicita, validata la release.
 3. ~~Nu exista Ecranul 3~~ **rezolvat:** `Confirm` in `Doors.tsx`.
 4. ~~Nu exista suport pentru linkul de creator~~ **rezolvat:** `?u=` + `FromCreator`.
 5. ~~Usile fara camera sunt fundaturi~~ **rezolvat:** `resolveDoorPath` duce in `path_temelie` cu un rand onest.
@@ -219,10 +232,11 @@ Transversale: **doctrina** (3 din ~22, `path_temelie`), **pildele** (20 de fise)
 2. ~~Ecranul 3 - confirmarea~~ facut
 3. ~~Linkul de creator~~ facut
 4. ~~M7 - Umblarea~~ facut
-5. **Cele 2 lectii de deschidere pentru C2 (M2 prin rana)** - urmatorul pas
-6. C1 si C5 (cel mai mare volum de oameni)
-7. Restul camerelor (C4, C6, C7), apoi M2 complet, apoi M3-M5
-8. Restul lectiilor de doctrina (Biblia 6, Har 6, Biserica 5, Vesnicia 5)
+5. ~~Cele 2 lectii de deschidere pentru C2 (M2 prin rana)~~ facut
+6. ~~C1, C4, C5, C6 si C7~~ facut
+7. ~~Traseul separat pentru doliu, boala si intrebarea "de ce?"~~ facut
+8. Revizie editoriala si doctrinara cu autor si validator numiti
+9. Restul lectiilor de doctrina si Biblia explicata
 
 ---
 

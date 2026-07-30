@@ -71,7 +71,16 @@ const REQUIRED_EDITORIAL_BRANCHES = [
   { lessonId: "schimbare_l1", stepId: "s1_3" },
   { lessonId: "har_l1", stepId: "h1_3" },
   { lessonId: "impreuna_l1", stepId: "im1_3" },
+  { lessonId: "suferinta_l1", stepId: "sf1_focus" },
+  { lessonId: "suferinta_l2", stepId: "sf2_belief" },
+  { lessonId: "suferinta_l4", stepId: "sf4_need" },
+  { lessonId: "suferinta_l6", stepId: "sf6_hope" },
 ] as const
+const REQUIRED_DOOR_PATHS = {
+  doliu: "path_suferinta",
+  boala: "path_suferinta",
+  de_ce_permis: "path_suferinta",
+} as const
 
 function validateLesson(lesson: Lesson): void {
   if (!lesson.id || !lesson.courseId || !lesson.title.trim()) {
@@ -177,6 +186,17 @@ for (const required of REQUIRED_EDITORIAL_BRANCHES) {
         `Opțiunea editorială ${lesson.id}/${step.id}/${option.id} nu are un răspuns pastoral complet.`,
       )
     }
+  }
+}
+
+for (const [doorId, pathId] of Object.entries(REQUIRED_DOOR_PATHS)) {
+  const door = STATIC_CONTENT_MANIFEST.doors.find(
+    (candidate) => candidate.id === doorId,
+  )
+  if (door?.pathId !== pathId) {
+    throw new Error(
+      `Ușa ${doorId} trebuie să ducă explicit în ${pathId}, nu în traseul general al camerei.`,
+    )
   }
 }
 

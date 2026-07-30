@@ -86,6 +86,7 @@ export const GENERATED_CONTENT_MANIFEST = {
       "id": "doliu",
       "label": "Am pierdut pe cineva",
       "roomId": "c2",
+      "pathId": "path_suferinta",
       "common": true
     },
     {
@@ -139,7 +140,8 @@ export const GENERATED_CONTENT_MANIFEST = {
     {
       "id": "boala",
       "label": "Sunt bolnav sau e bolnav cineva drag",
-      "roomId": "c2"
+      "roomId": "c2",
+      "pathId": "path_suferinta"
     },
     {
       "id": "infidelitate",
@@ -164,7 +166,8 @@ export const GENERATED_CONTENT_MANIFEST = {
     {
       "id": "de_ce_permis",
       "label": "Nu înțeleg de ce a permis Dumnezeu asta",
-      "roomId": "c2"
+      "roomId": "c2",
+      "pathId": "path_suferinta"
     },
     {
       "id": "pornografie",
@@ -443,6 +446,100 @@ export const GENERATED_CONTENT_MANIFEST = {
         "Hârtia cu ce îți datorează — mai e la tine? Citește-o o dată și pune-o la loc. Mâine facem ceva cu ea.",
         "Azi roagă-te pentru el o dată. O propoziție. Dacă nu-ți iese, spune-I lui Dumnezeu că nu-ți iese.",
         "Ai terminat drumul. Azi doar mulțumește. Și scrie undeva o rugăciune la care aștepți răspuns."
+      ]
+    },
+    {
+      "id": "path_suferinta",
+      "roomId": "c2",
+      "title": "Când doare și nu ai explicație",
+      "promise": "Șapte lecții biblice despre pierdere, boală și întrebarea «de ce?», fără vină inventată și fără promisiuni false.",
+      "lessons": [
+        {
+          "id": "suferinta_l1",
+          "courseId": "path_suferinta",
+          "order": 1,
+          "title": "Ce ai pierdut este real",
+          "estMinutes": 11,
+          "memoryVerse": {
+            "text": "Domnul este aproape de cei cu inima frântă.",
+            "ref": "Psalmul 34:18"
+          }
+        },
+        {
+          "id": "suferinta_l2",
+          "courseId": "path_suferinta",
+          "order": 2,
+          "title": "Este pedeapsă sau este o lume ruptă?",
+          "estMinutes": 13,
+          "memoryVerse": {
+            "text": "N-a păcătuit nici omul acesta, nici părinții lui.",
+            "ref": "Ioan 9:3"
+          }
+        },
+        {
+          "id": "suferinta_l3",
+          "courseId": "path_suferinta",
+          "order": 3,
+          "title": "Iisus a plâns",
+          "estMinutes": 11,
+          "memoryVerse": {
+            "text": "Iisus plângea.",
+            "ref": "Ioan 11:35"
+          }
+        },
+        {
+          "id": "suferinta_l4",
+          "courseId": "path_suferinta",
+          "order": 4,
+          "title": "Când nu vine explicația",
+          "estMinutes": 12,
+          "memoryVerse": {
+            "text": "Până când, Doamne?",
+            "ref": "Psalmul 13:1"
+          }
+        },
+        {
+          "id": "suferinta_l5",
+          "courseId": "path_suferinta",
+          "order": 5,
+          "title": "Ascultarea de astăzi",
+          "estMinutes": 11,
+          "memoryVerse": {
+            "text": "Purtați-vă sarcinile unii altora.",
+            "ref": "Galateni 6:2"
+          }
+        },
+        {
+          "id": "suferinta_l6",
+          "courseId": "path_suferinta",
+          "order": 6,
+          "title": "Speranță fără promisiuni false",
+          "estMinutes": 12,
+          "memoryVerse": {
+            "text": "Moartea nu va mai fi. Nu va mai fi nici tânguire, nici țipăt, nici durere.",
+            "ref": "Apocalipsa 21:4"
+          }
+        },
+        {
+          "id": "suferinta_l7",
+          "courseId": "path_suferinta",
+          "order": 7,
+          "title": "Mergi mai departe fără să negi ce a fost",
+          "estMinutes": 11,
+          "memoryVerse": {
+            "text": "Îndurările Lui nu sunt la capăt, ci se înnoiesc în fiecare dimineață.",
+            "ref": "Plângerile 3:22-23"
+          }
+        }
+      ],
+      "practices": [
+        "Astăzi spune adevărul într-o propoziție: ce ai pierdut și de ce doare. Nu îl micșora și nu îl explica.",
+        "Pune în ordine păcatul concret pe care îl vezi. Refuză vina pentru care nu ai nici faptă, nici temei biblic.",
+        "Spune unui om sigur «astăzi mi-e greu» sau lasă zece minute durerii pe care ai tot împins-o.",
+        "Scrie întrebarea rămasă fără să îi inventezi răspunsul. Du-o lui Dumnezeu exact așa.",
+        "Fă pasul medical, practic sau relațional pe care l-ai ales. Rugăciunea nu îl înlocuiește.",
+        "Cere vindecare fără termen inventat și citește Apocalipsa 21:1-5 cu voce tare.",
+        "Păstrează la vedere cele trei rânduri pentru ziua grea: omul, adevărul biblic și pasul practic."
       ]
     },
     {
@@ -1896,5 +1993,5 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     }
   ],
-  "contentVersion": "76ba69f998b49cf6"
+  "contentVersion": "1967f247448b2585"
 } as const

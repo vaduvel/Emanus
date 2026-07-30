@@ -5,6 +5,7 @@ import { navigate } from "../router"
 
 const SUGGESTIONS = [
   "Cum pot ierta?",
+  "De ce a permis Dumnezeu asta?",
   "De ce nu Îl simt pe Dumnezeu?",
   "Cum încep să mă rog?",
   "Pot avea încredere în Biblie?",
@@ -32,6 +33,8 @@ const STOP_WORDS = new Set([
 
 const PATH_SEARCH_ALIASES: Record<string, string> = {
   path_neiertare: "iert ierta iertare neiertare rana ranit",
+  path_suferinta:
+    "doliu moarte pierdere pierdut boala bolnav suferinta durere de ce a permis dumnezeu pedeapsa",
   path_aproape: "nu il simt pe dumnezeu absent departe tacere",
   path_umblare: "cum incep sa ma rog rugaciune citirea bibliei",
   path_temelie: "pot avea incredere in biblie scriptura adevarata",
@@ -39,6 +42,9 @@ const PATH_SEARCH_ALIASES: Record<string, string> = {
 
 const CURATED_QUERY_TARGETS: Record<string, string> = {
   "cum pot ierta": "path_neiertare",
+  "de ce a permis dumnezeu asta": "path_suferinta",
+  "am pierdut pe cineva": "path_suferinta",
+  "sunt bolnav": "path_suferinta",
   "de ce nu il simt pe dumnezeu": "path_aproape",
   "cum incep sa ma rog": "path_umblare",
   "pot avea incredere in biblie": "path_temelie",

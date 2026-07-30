@@ -22,6 +22,10 @@ complet si nu trebuie folosita ca substitut pentru un curs lipsa.
 | `path_schimbare` | `schimbare_l1 / s1_3` | Dependenta, starea emotionala persistenta si reactia care raneste cer limite si ajutor diferite. |
 | `path_har` | `har_l1 / h1_3` | Performanta, amorteala si frica de pedeapsa pornesc din imagini diferite despre Dumnezeu. |
 | `path_impreuna` | `impreuna_l1 / im1_3` | Lipsa oamenilor, lipsa intelegerii si respingerea intr-un loc de incredere cer pasi diferiti. |
+| `path_suferinta` | `suferinta_l1 / sf1_focus` | Diferentiaza doliul, boala si intrebarea despre permisiunea lui Dumnezeu. |
+| `path_suferinta` | `suferinta_l2 / sf2_belief` | Separa consecinta unui pacat cunoscut de vina presupusa si de cazul neclar. |
+| `path_suferinta` | `suferinta_l4 / sf4_need` | Lipsa explicatiei, cenzurarea intrebarii si explicatiile religioase vatamatoare cer raspunsuri diferite. |
+| `path_suferinta` | `suferinta_l6 / sf6_hope` | Dorinta unei garantii, teama de uitare si epuizarea nu primesc acelasi raspuns despre speranta. |
 
 Fiecare optiune din selectiile de mai sus trebuie sa aiba `branchStepId`, iar
 tinta trebuie sa contina un raspuns editorial real. Validatorul release-ului
@@ -41,15 +45,12 @@ blocheaza publicarea daca matricea nu mai este respectata.
 - `neiertare_o2 / o2_reflect` permite selectii multiple. Optiunile se pot
   suprapune, deci nu alegem arbitrar o singura ramura.
 
-## Limita structurala descoperita
+## Separarea structurala implementata
 
-Usile `doliu`, `boala` si `de_ce_permis` intra acum in `path_neiertare`.
-Primele doua lectii ale traseului vorbesc util despre suferinta si despre
-caracterul lui Dumnezeu, dar lectiile urmatoare presupun existenta unui om care
-a produs rana si conduc spre o declaratie de iertare.
+Usile `doliu`, `boala` si `de_ce_permis` duc explicit in `path_suferinta`.
+Usile `neiertare` si `divort` raman in `path_neiertare`.
 
-Un mesaj conditionat nu rezolva aceasta nepotrivire. Inainte de lansarea
-productiei, aceste usi au nevoie de un traseu separat despre suferinta, doliu si
-intrebarea „de ce?”, sau de continut conditionat persistent la nivel de curs.
-Nu cerem utilizatorului sa ierte o persoana atunci cand rana lui nu are un
-agresor.
+Traseul despre suferinta nu presupune un agresor si nu conduce spre o declaratie
+de iertare a unei persoane. El trateaza doliul, boala, cauzalitatea biblica,
+limita explicatiilor omenesti, ajutorul medical si speranta invierii. Validatorul
+release-ului blocheaza publicarea daca cele trei usi pierd aceasta mapare.

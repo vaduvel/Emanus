@@ -19,6 +19,7 @@ import { rusineL1, rusineL2, rusineL3, rusineL4 } from "./rusineA.js"
 import { rusineL5, rusineL6, rusineL7 } from "./rusineB.js"
 import { schimbareL1, schimbareL2, schimbareL3, schimbareL4 } from "./schimbareA.js"
 import { schimbareL5, schimbareL6, schimbareL7 } from "./schimbareB.js"
+import { SUFERINTA_LESSONS } from "./suferinta.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
@@ -31,6 +32,7 @@ export * from "./rusineA.js"
 export * from "./rusineB.js"
 export * from "./schimbareA.js"
 export * from "./schimbareB.js"
+export * from "./suferinta.js"
 export * from "./umblareA.js"
 export * from "./umblareB.js"
 
@@ -131,7 +133,7 @@ export interface Door {
   label: string
   /** Camera în care duce ușa. `null` doar pentru ușile de la capătul listei. */
   roomId: string | null
-  /** Doar pentru ușile fără cameră: drumul către care duc direct. */
+  /** Suprascrie drumul camerei când ușa are nevoie de un traseu propriu. */
   pathId?: string
   /** True pentru cele 10 propoziții arătate înainte de "Arată-mi tot". */
   common?: boolean
@@ -153,7 +155,13 @@ export const DOORS: Door[] = [
   { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4", common: true },
   { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5", common: true },
   { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c5", common: true },
-  { id: "doliu", label: "Am pierdut pe cineva", roomId: "c2", common: true },
+  {
+    id: "doliu",
+    label: "Am pierdut pe cineva",
+    roomId: "c2",
+    pathId: "path_suferinta",
+    common: true,
+  },
   { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6", common: true },
   { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7", common: true },
   { id: "nu_inteleg", label: "Sunt creștin, dar nu înțeleg ce citesc", roomId: "c3", common: true },
@@ -163,12 +171,22 @@ export const DOORS: Door[] = [
   { id: "recadere", label: "Am promis de o sută de ori și tot cad", roomId: "c5" },
   { id: "uscaciune", label: "Nu mai simt nimic când mă rog", roomId: "c4" },
   { id: "familie_respinge", label: "Familia mea nu mă înțelege", roomId: "c7" },
-  { id: "boala", label: "Sunt bolnav sau e bolnav cineva drag", roomId: "c2" },
+  {
+    id: "boala",
+    label: "Sunt bolnav sau e bolnav cineva drag",
+    roomId: "c2",
+    pathId: "path_suferinta",
+  },
   { id: "infidelitate", label: "Mi-am înșelat soțul sau soția", roomId: "c1" },
   { id: "flacara", label: "Am fost aproape de Dumnezeu cândva", roomId: "c4" },
   { id: "frica_pedeapsa", label: "Mi-e frică să nu mă pedepsească", roomId: "c6" },
   { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7" },
-  { id: "de_ce_permis", label: "Nu înțeleg de ce a permis Dumnezeu asta", roomId: "c2" },
+  {
+    id: "de_ce_permis",
+    label: "Nu înțeleg de ce a permis Dumnezeu asta",
+    roomId: "c2",
+    pathId: "path_suferinta",
+  },
   { id: "pornografie", label: "Mă lupt cu pornografia", roomId: "c1" },
   { id: "tristete", label: "Nu mai am chef de nimic", roomId: "c5" },
   { id: "alte_credinte", label: "Am crezut alte lucruri înainte (energii, karma, univers)", roomId: "c3" },
@@ -281,7 +299,9 @@ export const pathAcasa: PathDef = {
 
 /*
  * Camera 2: "Nu e bun / m-a lăsat".
- * Intră aici doliul, boala, nedreptatea, divorțul, neiertarea, "unde era El?".
+ * Acest drum este pentru rana produsă de un om: nedreptate, divorț,
+ * neiertare. Doliul, boala și întrebarea "de ce a permis Dumnezeu?" folosesc
+ * `path_suferinta`, fiindcă nu presupun automat existența unui agresor.
  *
  * ORDINEA CONTEAZĂ (docs/21 §2): camera începe cu cele două lecții despre cine e
  * Dumnezeu, spuse PRIN rana asta — "nu El ți-a făcut asta" (Iacov 1:17) și
@@ -319,6 +339,31 @@ export const pathNeiertare: PathDef = {
     "Hârtia cu ce îți datorează — mai e la tine? Citește-o o dată și pune-o la loc. Mâine facem ceva cu ea.",
     "Azi roagă-te pentru el o dată. O propoziție. Dacă nu-ți iese, spune-I lui Dumnezeu că nu-ți iese.",
     "Ai terminat drumul. Azi doar mulțumește. Și scrie undeva o rugăciune la care aștepți răspuns.",
+  ],
+}
+
+/*
+ * A doua intrare în camera 2: doliu, boală și suferință fără explicație.
+ *
+ * Nu transformăm durerea în neiertare și nu inventăm un vinovat. Spunem direct
+ * ce spune Scriptura: suferința poate fi uneori consecință sau disciplină
+ * pentru păcat, dar nu orice boală este verdictul unui păcat personal.
+ */
+export const pathSuferinta: PathDef = {
+  id: "path_suferinta",
+  roomId: "c2",
+  title: "Când doare și nu ai explicație",
+  promise:
+    "Șapte lecții biblice despre pierdere, boală și întrebarea «de ce?», fără vină inventată și fără promisiuni false.",
+  lessons: SUFERINTA_LESSONS,
+  practices: [
+    "Astăzi spune adevărul într-o propoziție: ce ai pierdut și de ce doare. Nu îl micșora și nu îl explica.",
+    "Pune în ordine păcatul concret pe care îl vezi. Refuză vina pentru care nu ai nici faptă, nici temei biblic.",
+    "Spune unui om sigur «astăzi mi-e greu» sau lasă zece minute durerii pe care ai tot împins-o.",
+    "Scrie întrebarea rămasă fără să îi inventezi răspunsul. Du-o lui Dumnezeu exact așa.",
+    "Fă pasul medical, practic sau relațional pe care l-ai ales. Rugăciunea nu îl înlocuiește.",
+    "Cere vindecare fără termen inventat și citește Apocalipsa 21:1-5 cu voce tare.",
+    "Păstrează la vedere cele trei rânduri pentru ziua grea: omul, adevărul biblic și pasul practic.",
   ],
 }
 
@@ -511,6 +556,7 @@ export const pathUmblare: PathDef = {
 export const PATHS: PathDef[] = [
   pathAcasa,
   pathNeiertare,
+  pathSuferinta,
   pathTemelie,
   pathAproape,
   pathSchimbare,

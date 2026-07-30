@@ -21,12 +21,38 @@ Nu o formulam ca disclaimer juridic. O formulam ca grija: omul trebuie sa intele
 ## 1. Ce nu facem niciodata
 
 - **Nu diagnosticam.** Cele sapte camere sunt tipare spirituale dominante folosite pentru orientare initiala. Nu sunt un diagnostic si nu se comunica niciodata omului ca eticheta.
-- **Nu punem vina pe om.** Nicio lectie nu spune "boala ta e ca nu crezi X". Anxietatea, tristetea, epuizarea, insomnia pot avea cauze medicale: tiroida, trauma, lipsa de somn, medicatie, boala. Cand un simptom poate fi medical, trimitem la medic in acelasi pas in care il numim.
+- **Nu inventam vina omului.** Cand exista un pacat concret si o consecinta
+  cunoscuta, le numim direct si chemam omul la marturisire, oprire, reparare si
+  acceptarea consecintelor. Nu spunem insa "boala ta e ca nu crezi X" si nu
+  folosim boala drept dovada automata a unui pacat ascuns. Anxietatea,
+  tristetea, epuizarea si insomnia pot avea cauze medicale. Cand un simptom
+  poate fi medical, trimitem la medic in acelasi pas in care il numim.
 - **Nu facem interogatoriu si nu construim profil psihologic.** Onboardingul nu are nicio intrebare despre om. Singura informatie pastrata este usa aleasa.
 - **Nu cerem bani pentru nimic.** Donatiile sunt singura sursa de venit si nu deblocheaza continut.
 - **Nu inlocuim comunitatea reala.** Aplicatia spune explicit, in lectiile de final de drum, ca omul are nevoie de oameni.
 - **Nu promitem vindecare, minune, insanatosire sau rezultat.** Promitem insotire.
 - **Nu cerem omului sa contacteze pe cineva care i-a facut rau.**
+
+### 1.1 Cauzalitate biblica, fara jumatati de adevar
+
+Standardul editorial pastreaza impreuna textele pe care o explicatie simplista
+le-ar separa:
+
+- `1 Corinteni 11:29-32` si `Ioan 5:14` arata ca suferinta poate fi uneori
+  consecinta sau disciplina legata de pacat. Cand legatura este cunoscuta, nu o
+  indulcim si nu numim "incercare" rodul neascultarii.
+- `Ioan 9:1-3`, `Iov 42:7` si `Luca 13:1-5` interzic diagnosticul universal:
+  existenta bolii sau a tragediei nu ne da dreptul sa inventam vinovatia unei
+  persoane.
+- Faptul ca Dumnezeu foloseste o suferinta pentru a trezi, curati sau intoarce
+  un om nu dovedeste automat ca El a trimis acea boala pentru un pacat anume.
+- Ne rugam pentru vindecare si spunem pocainta pe nume, dar nu garantam
+  vindecarea imediata si nu opunem credinta consultului sau tratamentului
+  medical.
+
+Orice afirmatie individuala de cauza cere temei explicit in textul biblic si in
+faptele cunoscute. Aplicatia nu primeste autoritatea de a completa ce Dumnezeu
+nu a descoperit.
 
 ---
 
