@@ -1,5 +1,6 @@
-import type { DayPlan, Lesson, PathDef } from "@emanus/shared"
-import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared"
+import type { Lesson } from "@emanus/shared/domain"
+import type { DayPlan, PathDef } from "@emanus/shared/paths"
+import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared/paths"
 import { cloudEnabled, pullState, pushState } from "./cloud"
 
 /*
