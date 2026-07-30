@@ -26,6 +26,10 @@ jobs:
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
+      # Lista explicita de typo-uri cunoscute trebuie sa ramana idempotenta.
+      - name: Verifica typo-urile cunoscute
+        run: pnpm check:typos
+
       # Blocheaza ID-uri duplicate, promisiuni medicale/spirituale periculoase
       # si pierderea formularilor de siguranta din cursurile sensibile.
       - name: Verifica siguranta continutului
