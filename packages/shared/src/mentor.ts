@@ -3,8 +3,10 @@
 // Funcție pură și testabilă — persistența doar o apelează.
 import type { GamState } from "./domain.js"
 
-export const MENTOR_MIN_LEVEL = 5
-export const MENTOR_MIN_CERTIFICATES = 1
+// Tipate explicit ca `number`, nu ca literali: altfel TypeScript considera
+// comparatiile de mai jos imposibile (TS2367) si build-ul cadea.
+export const MENTOR_MIN_LEVEL: number = 5
+export const MENTOR_MIN_CERTIFICATES: number = 1
 
 export interface MentorStatus {
   isMentor: boolean
@@ -24,9 +26,9 @@ export function mentorStatus(gam: GamState): MentorStatus {
   const levelsRemaining = Math.max(0, MENTOR_MIN_LEVEL - level)
   const certificatesRemaining = Math.max(0, MENTOR_MIN_CERTIFICATES - certificates)
   const isMentor = levelsRemaining === 0 && certificatesRemaining === 0
-  const levelProgress = MENTOR_MIN_LEVEL === 0 ? 1 : Math.min(1, level / MENTOR_MIN_LEVEL)
+  const levelProgress = MENTOR_MIN_LEVEL <= 0 ? 1 : Math.min(1, level / MENTOR_MIN_LEVEL)
   const certProgress =
-    MENTOR_MIN_CERTIFICATES === 0 ? 1 : Math.min(1, certificates / MENTOR_MIN_CERTIFICATES)
+    MENTOR_MIN_CERTIFICATES <= 0 ? 1 : Math.min(1, certificates / MENTOR_MIN_CERTIFICATES)
   const progressPercent = Math.round(((levelProgress + certProgress) / 2) * 100)
   return {
     isMentor,
