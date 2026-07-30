@@ -24,6 +24,7 @@ import { GENEZA_20 } from "./geneza20.js"
 import { GENEZA_21 } from "./geneza21.js"
 import { GENEZA_22 } from "./geneza22.js"
 import { GENEZA_23 } from "./geneza23.js"
+import { GENEZA_24 } from "./geneza24.js"
 
 /** Geneza, cu toate capitolele scrise pana acum. */
 export const GENEZA: BibleBook = {
@@ -52,6 +53,7 @@ export const GENEZA: BibleBook = {
     GENEZA_21,
     GENEZA_22,
     GENEZA_23,
+    GENEZA_24,
   ],
 }
 
