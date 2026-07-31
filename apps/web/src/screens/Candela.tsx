@@ -1,8 +1,8 @@
 // Candela de seara (docs/27 §4.6).
 //
-// Psalmul 119:105: „Cuvantul Tau este o candela pentru PICIOARELE mele”. De aceea
-// animatia are pasi si drum, nu doar text: lumina cade jos, pe piatra urmatoare.
-// Lumina nu dezvaluie niciodata tot drumul — asta e chiar teologia versetului.
+// Psalmul 119:105: „Cuvântul Tău este o candelă pentru PICIOARELE mele”. De aceea
+// animația are pași și drum, nu doar text: lumina cade jos, pe piatra următoare.
+// Lumina nu dezvăluie niciodată tot drumul — asta e chiar teologia versetului.
 import { useMemo, useState } from "react"
 import { drawScrollVerse, sectionForMood } from "@emanus/shared"
 import { ScriptureReveal } from "../components/ScriptureReveal"
@@ -20,7 +20,7 @@ export default function Candela() {
   const [note, setNote] = useState("")
   const [saved, setSaved] = useState(() => eveningNoteSavedToday())
 
-  // Acelasi verset toata seara: nu se trage din nou pana iese unul mai frumos.
+  // Același verset toată seara: nu se trage din nou până iese unul mai frumos.
   const verse = useMemo(() => {
     const mood = lastMood()
     const drawn = drawScrollVerse({
@@ -45,7 +45,7 @@ export default function Candela() {
         ← Azi
       </button>
 
-      <p className="today__kicker">Candela de seara</p>
+      <p className="today__kicker">Candela de seară</p>
 
       <ScriptureReveal
         variant="lamp"
@@ -56,12 +56,12 @@ export default function Candela() {
       />
 
       <p className="muted today__promise">
-        Candela lumineaza un pas, nu tot drumul. Atat ti-a promis (Psalmul 119:105).
+        Candela luminează un pas, nu tot drumul. Atât ți-a promis (Psalmul 119:105).
       </p>
 
-      {/* Jurnal de seara: doua randuri, nu un formular. */}
+      {/* Jurnal de seară: două rânduri, nu un formular. */}
       {saved ? (
-        <p className="today__memorial">Notat. Stinge lumina liniStit.</p>
+        <p className="today__memorial">Notat. Stinge lumina liniștit.</p>
       ) : (
         <div className="journal">
           <label htmlFor="candela-note">Unde a fost Dumnezeu azi?</label>
@@ -69,7 +69,7 @@ export default function Candela() {
             id="candela-note"
             rows={2}
             value={note}
-            placeholder="Doua randuri sunt destul."
+            placeholder="Două rânduri sunt destul."
             onChange={(e) => setNote(e.target.value)}
           />
           <div className="today__invite-actions">
