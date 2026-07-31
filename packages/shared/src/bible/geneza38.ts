@@ -16,7 +16,7 @@ export const GENEZA_38: BibleChapter = {
   number: 38,
   title: "Geneza 38 — Iuda si Tamar",
   summary:
-    "In mijlocul povestii lui Iosif se opreste totul, si ni se arata ce facea, in vremea aceea, fratele care il vanduse. Iuda se desparte de ai lui, isi ia nevasta din Canaan, isi ingroapa doi fii si mintе pe nora lui, lasand-o vaduva fara nadejde. Tamar isi face singura dreptate, prin viclesug si prin rusine. Iar cand se descopera totul, Iuda spune cea dintai vorba cinstita a vietii lui: ea este mai putin vinovata decat mine. Din femeia aceasta se va naste sirul care duce la Imparat.",
+    "In mijlocul povestii lui Iosif se opreste totul, si ni se arata ce facea, in vremea aceea, fratele care il vanduse. Iuda se desparte de ai lui, isi ia nevasta din Canaan, isi ingroapa doi fii si minte pe nora lui, lasand-o vaduva fara nadejde. Tamar isi face singura dreptate, prin viclesug si prin rusine. Iar cand se descopera totul, Iuda spune cea dintai vorba cinstita a vietii lui: ea este mai putin vinovata decat mine. Din femeia aceasta se va naste sirul care duce la Imparat.",
   literaryContext:
     "Capitolul acesta pare pus pe nepotrivite, intre vanzarea lui Iosif si Egipt — dar este pus anume. Ia aminte la cuvintele care se leaga: fratii ii spusesera tatalui cunoaste-o, este haina fiului tau, iar aici Tamar ii spune lui Iuda cunoaste-o, a cui este pecetea aceasta. Cel care a inselat cu un semn este demascat cu un semn. Si ia aminte la doi barbati asezati fata in fata: Iosif, in Egipt, fuge de o femeie care il cheama la pacat; Iuda, in Canaan, se duce singur la o femeie pe care o socotea desfranata. Iar la sfarsit, tocmai Iuda, cel schimbat aici, va fi cel care se va da chezas pentru Beniamin, si din el va veni imparatia.",
   historicalContext:
