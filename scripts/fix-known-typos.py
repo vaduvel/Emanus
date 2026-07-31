@@ -44,17 +44,11 @@ REPLACEMENTS = {
     "\\Zice:": "\\n\\nZice:",
     "\\Cel de al doilea:": "\\n\\nCel de al doilea:",
     "\\n\\n Doua cuvinte": "\\n\\nDoua cuvinte",
-    # diacritice scapate acolo unde fisierele se scriu fara diacritice
-    "d\u0103duse": "daduse",
-    "marita\u0163e": "maritate",
-    "imparti\u0163a": "impartita",
-    "slug\u0103": "sluga",
-    "veri\u0219oara": "verisoara",
-    "sa pun\u0103 argintul": "sa puna argintul",
-    "oameni fr\u00e2nti": "oameni franti",
-    "se invioreaz\u0103": "se invioreaza",
     # litera chirilica strecurata in loc de cea latina
     "mint\u0435": "minte",
+    # ATENTIE: nu se mai pun aici corecturi care scot diacritice.
+    # Textul biblic din packages/shared/src/bible este acum adus din editia
+    # Cornilescu 1924 cu diacriticele lui, iar o astfel de corectura l-ar strica.
 }
 
 check = "--check" in sys.argv[1:]
