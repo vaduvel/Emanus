@@ -89,7 +89,7 @@ export const GENEZA_35: BibleChapter = {
       words: [
         {
           original: "אֵל שַׁדַּי",
-          transliteration: "El Sadai",
+          transliteration: "El Șadai",
           language: "ebraica",
           meaning: "Dumnezeul Cel Atotputernic; Numele Celui ce face din nimic."
         }

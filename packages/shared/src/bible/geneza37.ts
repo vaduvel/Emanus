@@ -29,7 +29,7 @@ export const GENEZA_37: BibleChapter = {
       words: [
         {
           original: "שָׁלוֹם",
-          transliteration: "salom",
+          transliteration: "șalom",
           language: "ebraica",
           meaning:
             "pace, buna intelegere; textul spune cuvant cu cuvant ca nu puteau sa-i vorbeasca de pace."

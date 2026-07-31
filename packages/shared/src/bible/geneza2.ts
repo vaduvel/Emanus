@@ -100,7 +100,7 @@ export const GENEZA_2: BibleChapter = {
           original: "אָדָם",
           transliteration: "adam",
           language: "ebraica",
-          meaning: "om, omenire. Sunna aproape la fel cu adama, pamantul din care a fost luat."
+          meaning: "om, omenire. Suna aproape la fel cu adama, pamantul din care a fost luat."
         },
         {
           original: "אֲדָמָה",
@@ -113,7 +113,7 @@ export const GENEZA_2: BibleChapter = {
           transliteration: "nișmat hayyim",
           language: "ebraica",
           meaning:
-            "suflare de viata. Cuvantul acesta pentru suflare se spune in Scriptura numai despre Dumnezeu si despre om."
+            "suflare de viata. Cuvantul acesta pentru suflare se spune mai cu seama despre Dumnezeu si despre om, desi la Geneza 7:22 se rosteste si despre vietuitoare."
         },
         {
           original: "נֶפֶשׁ חַיָּה",
@@ -329,11 +329,11 @@ export const GENEZA_2: BibleChapter = {
             "a se lipi, a se prinde strans. Acelasi cuvant se foloseste pentru credinciosia fata de Domnul."
         },
         {
-          original: "עָרוּם",
-          transliteration: "arum",
+          original: "עֲרֻמִּים",
+          transliteration: "arummim",
           language: "ebraica",
           meaning:
-            "gol. Cuvantul suna aproape la fel cu cel folosit indata pentru siretenia sarpelui."
+            "goi. Cuvantul suna aproape la fel cu cel folosit indata pentru siretenia sarpelui."
         }
       ],
       crossRefs: [

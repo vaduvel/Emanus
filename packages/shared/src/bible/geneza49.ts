@@ -61,7 +61,7 @@ export const GENEZA_49: BibleChapter = {
       words: [
         {
           original: "שִׁילוֹ",
-          transliteration: "Silo",
+          transliteration: "Șilo",
           language: "ebraica",
           meaning:
             "cuvant greu de talmacit; citit de unii ca Acela al caruia este toiagul, de altii ca Cel ce aduce odihna si pace. Din vechime a fost inteles ca fiind despre Mesia."

@@ -61,7 +61,7 @@ export const GENEZA_43: BibleChapter = {
       words: [
         {
           original: "אֵל שַׁדַּי",
-          transliteration: "El Sadai",
+          transliteration: "El Șadai",
           language: "ebraica",
           meaning:
             "Dumnezeul cel Atotputernic, Cel indestulator; Numele legamantului, cu care S-a aratat lui Avraam si lui Iacov."
@@ -93,7 +93,7 @@ export const GENEZA_43: BibleChapter = {
       words: [
         {
           original: "שָׁלוֹם",
-          transliteration: "salom",
+          transliteration: "șalom",
           language: "ebraica",
           meaning:
             "pace, intregime, bunastare; nu numai lipsa vrajbei, ci lucrul asezat la locul lui si intreg."

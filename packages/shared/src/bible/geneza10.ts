@@ -28,7 +28,7 @@ export const GENEZA_10: BibleChapter = {
         "Ia aminte la cuvantul spita neamului. In ebraica este toledot, cuvantul care imparte toata cartea Genezei, ca niste titluri de capitole: acestea sunt neamurile cerurilor si ale pamantului, acestea sunt neamurile lui Adam, acestea sunt neamurile lui Noe. De fiecare data cand se aude, se deschide o pagina noua.\n\nSi acum ia aminte la ce urmeaza dupa cuvantul acesta, aici: dupa potop li s-au nascut fii.\n\nSa nu trecem cu usurinta peste asta. Capitolul dinainte s-a incheiat cu un mormant. Iar capitolul de fata incepe cu nasteri. Dupa apele care au sters totul, se scrie iarasi ca s-au nascut copii.\n\nAsa lucreaza Dumnezeu. Nu vindeca lumea printr-o minune de o clipa, ci prin prunci care se nasc, unul dupa altul, in case obisnuite. Ce a inceput cu opt oameni intr-o lada de lemn se va face saptezeci de neamuri.\n\nSi ia aminte la ordinea numelor. Sem este pus intai, desi in capitolul urmator ni se va spune ca Iafet era mai mare. Sfanta Scriptura il aseaza intai pe cel prin care va veni fagaduinta. Nu tine socoteala dupa varsta, ci dupa har.",
       words: [
         {
-          original: "תוֹלְדֹות",
+          original: "תּוֹלְדֹת",
           transliteration: "toledot",
           language: "ebraica",
           meaning:

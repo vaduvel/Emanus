@@ -147,7 +147,7 @@ export const GENEZA_4: BibleChapter = {
           transliteration: "demei",
           language: "ebraica",
           meaning:
-            "sangiuri, la plural. Nu numai viata luata, ci si urmasii care nu se vor mai naste."
+            "sangiuri, la plural. Din forma aceasta au inteles tilcuitorii din vechime nu numai viata luata, ci si urmasii care nu se vor mai naste."
         }
       ],
       crossRefs: [

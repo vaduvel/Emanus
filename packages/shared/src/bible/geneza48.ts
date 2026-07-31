@@ -29,7 +29,7 @@ export const GENEZA_48: BibleChapter = {
       words: [
         {
           original: "אֵל שַׁדַּי",
-          transliteration: "El Sadai",
+          transliteration: "El Șadai",
           language: "ebraica",
           meaning:
             "Dumnezeul cel Atotputernic, Cel indestulator; Numele sub care S-a legat cu Avraam si cu Iacov."

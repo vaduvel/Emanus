@@ -126,7 +126,7 @@ export const GENEZA_38: BibleChapter = {
       words: [
         {
           original: "פֶּרֶץ",
-          transliteration: "Peret",
+          transliteration: "Pereț",
           language: "ebraica",
           meaning: "spartura, rupere; strabunul lui David si al Domnului Isus."
         },

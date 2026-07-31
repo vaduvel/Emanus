@@ -130,7 +130,7 @@ export const GENEZA_41: BibleChapter = {
       words: [
         {
           original: "מְנַשֶּׁה",
-          transliteration: "Menase",
+          transliteration: "Menașe",
           language: "ebraica",
           meaning: "cel care face sa uiti; de la a face sa se uite."
         },
