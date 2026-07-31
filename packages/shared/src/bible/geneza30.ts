@@ -179,7 +179,6 @@ export const GENEZA_30: BibleChapter = {
         "Geneza 31:42",
         "Geneza 28:15",
         "Geneza 32:10",
-        "Romans 12:19",
         "Romani 12:19",
         "Psalmul 37:5-7",
         "Proverbe 21:31",
