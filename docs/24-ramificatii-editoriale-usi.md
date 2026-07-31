@@ -17,10 +17,12 @@ complet si nu trebuie folosita ca substitut pentru un curs lipsa.
 | `path_acasa` | `rusine_l1 / r1_3` | Nevoia de curatare, convingerea ca a trecut limita si rusinea fara concluzie cer raspunsuri diferite. |
 | `path_acasa` | `rusine_l4 / r4_5` | Acceptarea iertarii si neputinta de a opri comportamentul nu sunt acelasi blocaj. |
 | `path_acasa` | `rusine_l5 / r5_ownership` | Separa vina proprie de abuz, constrangere sau o situatie amestecata. |
+| `path_neiertare` | `neiertare_o1 / o1_context` | Diferentiaza rana interpersonală, divorțul si pericolul care continua. |
 | `path_neiertare` | `neiertare_l6 / n6_readiness` | Diferentiaza alegerea iertarii, dorinta fara disponibilitate si teama ca iertarea obliga la contact. |
+| `path_temelie` | `doctrina_l1 / d1_entry` | Îndoiala despre Dumnezeu, neincrederea in Biblie, credintele anterioare si inceperea de la zero cer raspunsuri initiale diferite. |
 | `path_aproape` | `aproape_l1 / a1_3` | Rugaciunea fara raspuns, distanta aparuta in timp si lipsa unei metode nu au acelasi raspuns. |
 | `path_schimbare` | `schimbare_l1 / s1_3` | Dependenta, starea emotionala persistenta si reactia care raneste cer limite si ajutor diferite. |
-| `path_har` | `har_l1 / h1_3` | Performanta, amorteala si frica de pedeapsa pornesc din imagini diferite despre Dumnezeu. |
+| `path_har` | `har_l1 / h1_3` | Performanta, amorteala, frica de pedeapsa si epuizarea in slujire cer raspunsuri diferite. |
 | `path_impreuna` | `impreuna_l1 / im1_3` | Lipsa oamenilor, lipsa intelegerii si respingerea intr-un loc de incredere cer pasi diferiti. |
 | `path_suferinta` | `suferinta_l1 / sf1_focus` | Diferentiaza doliul, boala si intrebarea despre permisiunea lui Dumnezeu. |
 | `path_suferinta` | `suferinta_l2 / sf2_belief` | Separa consecinta unui pacat cunoscut de vina presupusa si de cazul neclar. |
@@ -33,8 +35,8 @@ blocheaza publicarea daca matricea nu mai este respectata.
 
 ## Excluderi intentionate
 
-- `path_temelie` ramane liniar: este un traseu doctrinar, nu o conversatie de
-  triere pastorala.
+- `path_temelie` ramifica numai intrebarea de intrare. Continutul doctrinar
+  ramane comun si nu se modifica in functie de raspuns.
 - `path_umblare` ramane liniar: este o practica de aprofundare aleasa direct,
   nu un traseu pornit dintr-o rana.
 - quiz-urile nu se ramifica. Ele verifica intelegerea si afiseaza explicatia
@@ -54,3 +56,17 @@ Traseul despre suferinta nu presupune un agresor si nu conduce spre o declaratie
 de iertare a unei persoane. El trateaza doliul, boala, cauzalitatea biblica,
 limita explicatiilor omenesti, ajutorul medical si speranta invierii. Validatorul
 release-ului blocheaza publicarea daca cele trei usi pierd aceasta mapare.
+
+## Maparea completa a usilor
+
+Nu construim cate un curs pentru fiecare formulare. Usile care ajung la acelasi
+blocaj spiritual folosesc acelasi traseu, iar prima selectie editoriala
+diferentiaza situatia concreta. Doua corectii de mapare sunt explicite:
+
+- `pornografie` intra in `path_schimbare`, unde sunt tratate dependenta,
+  declansatorii, recaderea si ajutorul competent, nu doar rusinea;
+- `nu_inteleg` intra in `path_aproape`, alaturi de `cum_citesc`, unde traseul
+  ajunge la metoda concreta de citire a Scripturii.
+
+Validatorul contine destinatia asteptata pentru toate cele 31 de usi si opreste
+release-ul daca una ajunge in alt traseu.

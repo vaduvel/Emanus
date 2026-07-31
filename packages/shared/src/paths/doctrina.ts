@@ -3,9 +3,9 @@ import type { Lesson } from "../domain.js"
 /*
  * Doctrină generală — ȘABLONUL A (docs/20 §4).
  *
- * Identică pentru toată lumea, indiferent de ușă. Nu se personalizează.
- * FĂRĂ check-in, FĂRĂ jurnal, FĂRĂ "cum te simți". Nu e loc de emoții aici,
- * e loc de claritate.
+ * Adevărul doctrinar este identic pentru toată lumea. Prima lecție recunoaște
+ * însă întrebarea de intrare și răspunde diferit, fără să schimbe doctrina.
+ * FĂRĂ check-in și FĂRĂ "cum te simți". Nu e loc de diagnostic, ci de claritate.
  *
  * Ritm: se deschide după lecția 5 din parcursul personal, apoi una la trei.
  * Nimeni nu învață ce e canonul Scripturii înainte să afle că e iubit.
@@ -47,6 +47,84 @@ export const doctrinaL1: Lesson = {
         {
           from: "guide",
           text: "Nu e o părere pe care s-o combatem cu credință. E o afirmație despre documente, și se verifică cu documente.",
+        },
+      ],
+    },
+    {
+      id: "d1_entry",
+      type: "choice",
+      order: 2.5,
+      choice: {
+        prompt: "Cu ce întrebare ai venit la începutul acestui drum?",
+        options: [
+          {
+            id: "d1_entry_exists",
+            label: "Nu știu dacă Dumnezeu există",
+            branchStepId: "d1_branch_exists",
+          },
+          {
+            id: "d1_entry_bible",
+            label: "Cred că Biblia poate fi inventată de oameni",
+            branchStepId: "d1_branch_bible",
+          },
+          {
+            id: "d1_entry_beliefs",
+            label: "Am crezut în energii, karma sau univers",
+            branchStepId: "d1_branch_beliefs",
+          },
+          {
+            id: "d1_entry_start",
+            label: "Vreau să încep de la zero și să înțeleg",
+            branchStepId: "d1_branch_start",
+          },
+        ],
+      },
+    },
+    {
+      id: "d1_branch_exists",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu îți cer să declari o credință pe care nu o ai. Vom separa ce poate fi verificat de ce trebuie decis: existența documentelor, mărturia despre Iisus și afirmațiile Lui. Îndoiala sinceră cercetează; nu se preface și nici nu închide cazul înainte să privească dovezile.",
+        },
+      ],
+    },
+    {
+      id: "d1_branch_bible",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu vom răspunde «Biblia este adevărată pentru că Biblia spune asta». Întrebarea despre transmiterea textului se verifică prin manuscrise, datare și mărturii. După ce stabilim ce au scris autorii, cercetăm dacă mărturia lor despre Iisus este adevărată.",
+        },
+      ],
+    },
+    {
+      id: "d1_branch_beliefs",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Energiile, karma, «universul» și Dumnezeul Bibliei nu sunt nume diferite pentru același lucru. Fac afirmații incompatibile despre cine conduce lumea, despre rău și despre mântuire. Nu le amestecăm. Le verificăm, iar ceea ce Îl contrazice pe Hristos trebuie lăsat, nu botezat cu vocabular creștin.",
+        },
+      ],
+    },
+    {
+      id: "d1_branch_start",
+      type: "how_god_helps",
+      order: 94,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu trebuie să cunoști vocabular religios ca să începi. Pornim cu trei întrebări simple: textul a fost păstrat, mărturia este credibilă și cine spune Iisus că este? Nu sărim peste întrebări și nu numim neștiința păcat.",
         },
       ],
     },

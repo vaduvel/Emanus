@@ -63,13 +63,75 @@ export const neiertareO1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Ai apăsat un rând care spune că ți s-a luat ceva, sau ți s-a făcut ceva, sau ai pierdut pe cineva.",
+          text:
+            "Ai apăsat un rând care spune că ți s-a făcut ceva sau că ai trecut printr-un divorț care a lăsat o rană.",
         },
         {
           from: "guide",
           text: "Iar undeva, poate fără să fi spus-o vreodată cu voce tare, s-a lipit de tine o întrebare: dacă Dumnezeu e bun, de ce arată așa viața mea?",
         },
         { from: "guide", text: "Nu fug de întrebarea asta. Începem cu ea." },
+      ],
+    },
+    {
+      id: "o1_context",
+      type: "choice",
+      order: 2.5,
+      choice: {
+        prompt: "Ce descrie mai corect locul din care intri?",
+        options: [
+          {
+            id: "o1_context_harm",
+            label: "Mi s-a făcut rău și nu pot ierta",
+            branchStepId: "o1_branch_harm",
+          },
+          {
+            id: "o1_context_divorce",
+            label: "Divorțul a lăsat trădare, abandon sau conflict",
+            branchStepId: "o1_branch_divorce",
+          },
+          {
+            id: "o1_context_danger",
+            label: "Răul sau pericolul continuă și acum",
+            branchStepId: "o1_branch_danger",
+          },
+        ],
+      },
+    },
+    {
+      id: "o1_branch_harm",
+      type: "how_god_helps",
+      order: 91,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Nu vom micșora fapta ca să facem iertarea mai ușoară. O numim rău, păstrăm răspunderea celui care a făcut-o și separăm iertarea de împăcare. A preda dreptatea lui Dumnezeu nu înseamnă să spui că nu contează.",
+        },
+      ],
+    },
+    {
+      id: "o1_branch_divorce",
+      type: "how_god_helps",
+      order: 92,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Divorțul nu este o singură rană. Poate cuprinde legământ rupt, trădare, copii prinși la mijloc, casă, bani și viitor schimbat. Nu îl reducem la «iartă și mergi mai departe». Îți asumi păcatul tău concret, dacă există, fără să iei asupra ta păcatul celuilalt.",
+        },
+      ],
+    },
+    {
+      id: "o1_branch_danger",
+      type: "how_god_helps",
+      order: 93,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Dacă pericolul continuă, nu începem cu o declarație de iertare și nu inițiem contact. Ieși într-un loc sigur și cere ajutor. Pentru pericol imediat sună la 112; pentru violență domestică poți suna la 0800 500 333. Siguranța nu este lipsă de credință.",
+        },
       ],
     },
     {

@@ -66,7 +66,9 @@ const REQUIRED_EDITORIAL_BRANCHES = [
   { lessonId: "rusine_l1", stepId: "r1_3" },
   { lessonId: "rusine_l4", stepId: "r4_5" },
   { lessonId: "rusine_l5", stepId: "r5_ownership" },
+  { lessonId: "neiertare_o1", stepId: "o1_context" },
   { lessonId: "neiertare_l6", stepId: "n6_readiness" },
+  { lessonId: "doctrina_l1", stepId: "d1_entry" },
   { lessonId: "aproape_l1", stepId: "a1_3" },
   { lessonId: "schimbare_l1", stepId: "s1_3" },
   { lessonId: "har_l1", stepId: "h1_3" },
@@ -77,9 +79,110 @@ const REQUIRED_EDITORIAL_BRANCHES = [
   { lessonId: "suferinta_l6", stepId: "sf6_hope" },
 ] as const
 const REQUIRED_DOOR_PATHS = {
+  rusine: "path_acasa",
+  avort: "path_acasa",
+  infidelitate: "path_acasa",
+  prea_departe: "path_acasa",
+  neiertare: "path_neiertare",
+  divort: "path_neiertare",
   doliu: "path_suferinta",
   boala: "path_suferinta",
   de_ce_permis: "path_suferinta",
+  indoiala: "path_temelie",
+  biblia_inventata: "path_temelie",
+  alte_credinte: "path_temelie",
+  perete: "path_aproape",
+  nu_inteleg: "path_aproape",
+  uscaciune: "path_aproape",
+  flacara: "path_aproape",
+  cum_citesc: "path_aproape",
+  dependenta: "path_schimbare",
+  anxietate: "path_schimbare",
+  recadere: "path_schimbare",
+  pornografie: "path_schimbare",
+  tristete: "path_schimbare",
+  furie: "path_schimbare",
+  merit: "path_har",
+  obisnuinta: "path_har",
+  frica_pedeapsa: "path_har",
+  epuizat_slujire: "path_har",
+  singuratate: "path_impreuna",
+  familie_respinge: "path_impreuna",
+  respins_biserica: "path_impreuna",
+  nou_venit: "path_impreuna",
+} as const
+const REQUIRED_DOOR_ENTRY_OPTIONS = {
+  rusine: { lessonId: "rusine_l1", stepId: "r1_3", optionId: "r1c_c" },
+  avort: { lessonId: "rusine_l5", stepId: "r5_ownership", optionId: "r5_own_action" },
+  infidelitate: {
+    lessonId: "rusine_l5",
+    stepId: "r5_ownership",
+    optionId: "r5_own_action",
+  },
+  prea_departe: { lessonId: "rusine_l1", stepId: "r1_3", optionId: "r1c_b" },
+  neiertare: {
+    lessonId: "neiertare_o1",
+    stepId: "o1_context",
+    optionId: "o1_context_harm",
+  },
+  divort: {
+    lessonId: "neiertare_o1",
+    stepId: "o1_context",
+    optionId: "o1_context_divorce",
+  },
+  doliu: { lessonId: "suferinta_l1", stepId: "sf1_focus", optionId: "sf1_loss" },
+  boala: {
+    lessonId: "suferinta_l1",
+    stepId: "sf1_focus",
+    optionId: "sf1_illness",
+  },
+  de_ce_permis: {
+    lessonId: "suferinta_l1",
+    stepId: "sf1_focus",
+    optionId: "sf1_why",
+  },
+  indoiala: {
+    lessonId: "doctrina_l1",
+    stepId: "d1_entry",
+    optionId: "d1_entry_exists",
+  },
+  biblia_inventata: {
+    lessonId: "doctrina_l1",
+    stepId: "d1_entry",
+    optionId: "d1_entry_bible",
+  },
+  alte_credinte: {
+    lessonId: "doctrina_l1",
+    stepId: "d1_entry",
+    optionId: "d1_entry_beliefs",
+  },
+  perete: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_a" },
+  nu_inteleg: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_c" },
+  uscaciune: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_b" },
+  flacara: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_b" },
+  cum_citesc: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_c" },
+  dependenta: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_a" },
+  anxietate: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_b" },
+  recadere: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_a" },
+  pornografie: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_a" },
+  tristete: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_b" },
+  furie: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_c" },
+  merit: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_a" },
+  obisnuinta: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_b" },
+  frica_pedeapsa: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_c" },
+  epuizat_slujire: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_d" },
+  singuratate: { lessonId: "impreuna_l1", stepId: "im1_3", optionId: "im1c_a" },
+  familie_respinge: {
+    lessonId: "impreuna_l1",
+    stepId: "im1_3",
+    optionId: "im1c_b",
+  },
+  respins_biserica: {
+    lessonId: "impreuna_l1",
+    stepId: "im1_3",
+    optionId: "im1c_c",
+  },
+  nou_venit: { lessonId: "impreuna_l1", stepId: "im1_3", optionId: "im1c_a" },
 } as const
 
 function validateLesson(lesson: Lesson): void {
@@ -193,9 +296,42 @@ for (const [doorId, pathId] of Object.entries(REQUIRED_DOOR_PATHS)) {
   const door = STATIC_CONTENT_MANIFEST.doors.find(
     (candidate) => candidate.id === doorId,
   )
-  if (door?.pathId !== pathId) {
+  const roomPathId = STATIC_CONTENT_MANIFEST.rooms.find(
+    (room) => room.id === door?.roomId,
+  )?.pathId
+  const resolvedPathId = door?.pathId ?? roomPathId
+  if (resolvedPathId !== pathId) {
     throw new Error(
-      `Ușa ${doorId} trebuie să ducă explicit în ${pathId}, nu în traseul general al camerei.`,
+      `Ușa ${doorId} trebuie să ducă în ${pathId}, nu în ${resolvedPathId ?? "niciun traseu"}.`,
+    )
+  }
+}
+
+if (
+  Object.keys(REQUIRED_DOOR_PATHS).length !==
+    STATIC_CONTENT_MANIFEST.doors.length ||
+  Object.keys(REQUIRED_DOOR_ENTRY_OPTIONS).length !==
+    STATIC_CONTENT_MANIFEST.doors.length
+) {
+  throw new Error(
+    "Fiecare ușă trebuie să aibă traseu și opțiune editorială declarate în validator.",
+  )
+}
+
+for (const door of STATIC_CONTENT_MANIFEST.doors) {
+  const expected = REQUIRED_DOOR_ENTRY_OPTIONS[
+    door.id as keyof typeof REQUIRED_DOOR_ENTRY_OPTIONS
+  ]
+  const lesson = expected ? lessons.get(expected.lessonId) : undefined
+  const step = lesson?.steps.find(
+    (candidate) => candidate.id === expected?.stepId,
+  )
+  const option = step?.choice?.options.find(
+    (candidate) => candidate.id === expected?.optionId,
+  )
+  if (!expected || !option?.branchStepId) {
+    throw new Error(
+      `Ușa ${door.id} nu are o opțiune editorială ramificată în traseul ei.`,
     )
   }
 }

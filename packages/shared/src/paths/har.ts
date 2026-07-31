@@ -79,6 +79,11 @@ export const harL1: Lesson = {
             label: "Mi-e frica sa nu mă pedepseasca",
             branchStepId: "h1_branch_punishment",
           },
+          {
+            id: "h1c_d",
+            label: "Sunt epuizat de slujire, dar mi-e teamă să mă opresc",
+            branchStepId: "h1_branch_burnout",
+          },
         ],
       },
     },
@@ -115,6 +120,18 @@ export const harL1: Lesson = {
           from: "guide",
           text:
             "Frica poate veni din felul în care ai fost tratat sau dintr-o imagine a lui Dumnezeu construită prin amenințări. Consecințele și disciplina nu sunt același lucru cu respingerea sau teroarea. Vom despărți lucrurile acestea.",
+        },
+      ],
+    },
+    {
+      id: "h1_branch_burnout",
+      type: "how_god_helps",
+      order: 94,
+      bubbles: [
+        {
+          from: "guide",
+          text:
+            "Dumnezeu nu are nevoie de prăbușirea ta ca lucrarea Lui să continue. Iisus îi chema pe ucenici să se retragă și să se odihnească. Oprirea unei sarcini nu cumpără și nu pierde acceptarea Lui. Spune clar unui responsabil ce nu mai poți purta și lasă astăzi o sarcină neesențială.",
         },
       ],
     },

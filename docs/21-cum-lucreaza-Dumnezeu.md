@@ -61,11 +61,11 @@ Durerile sunt infinite. Tiparele in care omul ajunge sa gandeasca despre Dumneze
 
 | # | Camera | Tiparul (ce ajunge omul sa creada) | Cine intra aici |
 |---|---|---|---|
-| **C1** | Nu ma vrea asa cum sunt | *Sunt prea murdar pentru El* | rusine, vinovatie, pacat ascuns, avort, adulter, pornografie, trecut murdar, rusinea celui abuzat |
+| **C1** | Nu ma vrea asa cum sunt | *Sunt prea murdar pentru El* | rusine, vinovatie, pacat ascuns, avort, adulter, trecut murdar, rusinea celui abuzat |
 | **C2** | Nu e bun / m-a lasat | *Daca era bun, nu se intampla* | doliu, boala, nedreptate, copil pierdut, divort, neiertare, "unde era El cand mi s-a intamplat?" — camera are trasee distincte pentru rana produsa de un om si pentru suferinta fara agresor |
 | **C3** | Nu e real / nu se poate sti | *Poate e doar o poveste* | ateu, agnostic, indoiala, "Biblia e inventata", confuzie doctrinara, new age |
-| **C4** | E departe, nu ma aude | *Am ramas singur pe drum* | relatie racita, uscaciune, viata de rugaciune slaba, tacerea Lui, "mi-am pierdut flacara" |
-| **C5** | Nu ma pot schimba | *Sunt defect, asta sunt* | dependente, recadere, anxietate, tristete, furie, "am promis de o suta de ori" |
+| **C4** | E departe, nu ma aude | *Am ramas singur pe drum* | relatie racita, uscaciune, viata de rugaciune slaba, tacerea Lui, "mi-am pierdut flacara", nu stiu cum sa citesc sau sa inteleg Biblia |
+| **C5** | Nu ma pot schimba | *Sunt defect, asta sunt* | dependente, pornografie, recadere, anxietate, tristete, furie, "am promis de o suta de ori" |
 | **C6** | Trebuie sa merit | *Ma iubeste cat de bun sunt* | forma fara putere, religiozitate mostenita, epuizare in slujire, frica de pedeapsa, perfectionism |
 | **C7** | Sunt singur in asta | *Nimeni nu intelege si nimanui nu-i pasa* | singuratate, izolare, respins de familie sau de biserica, nou-venit care nu cunoaste pe nimeni |
 
@@ -99,6 +99,8 @@ Omul nu alege o camera. Alege o propozitie. Propozitia duce in camera. O usa
 poate suprascrie traseul general al camerei cand subiectul cere alta progresie
 editoriala. In C2, `neiertare` si `divort` raman in `path_neiertare`, iar
 `doliu`, `boala` si `de_ce_permis` duc explicit in `path_suferinta`.
+Maparea tuturor celor 31 de usi este verificata la release; o usa mutata
+accidental intr-un traseu nepotrivit opreste publicarea.
 
 Cele 31 de usi nu apar deodata. **Zece intai** (`COMMON_DOORS`), apoi butonul *Arata-mi toate optiunile* deschide restul de **21** (`MORE_DOORS`) plus un camp de **cautare in cuvintele omului**. Cautarea filtreaza in toate cele 31, dar apare doar in lista completa: omul care plange alege, nu tasteaza.
 
@@ -115,7 +117,7 @@ Cele 31 de usi nu apar deodata. **Zece intai** (`COMMON_DOORS`), apoi butonul *A
 | Am pierdut pe cineva | `doliu` | C2 |
 | Fac tot ce trebuie si tot nu-mi ajunge | `merit` | C6 |
 | Nu am pe nimeni | `singuratate` | C7 |
-| Sunt crestin, dar nu inteleg ce citesc | `nu_inteleg` | C3 |
+| Sunt crestin, dar nu inteleg ce citesc | `nu_inteleg` | C4 |
 
 ### Cele 21 de usi din lista completa
 
@@ -133,7 +135,7 @@ Cele 31 de usi nu apar deodata. **Zece intai** (`COMMON_DOORS`), apoi butonul *A
 | Mi-e frica sa nu ma pedepseasca | `frica_pedeapsa` | C6 |
 | M-am simtit respins in biserica | `respins_biserica` | C7 |
 | Nu inteleg de ce a permis Dumnezeu asta | `de_ce_permis` | C2 |
-| Ma lupt cu pornografia | `pornografie` | C1 |
+| Ma lupt cu pornografia | `pornografie` | C5 |
 | Nu mai am chef de nimic | `tristete` | C5 |
 | Am crezut alte lucruri inainte (energii, karma, univers) | `alte_credinte` | C3 |
 | Nu stiu cum sa citesc Biblia | `cum_citesc` | C4 |

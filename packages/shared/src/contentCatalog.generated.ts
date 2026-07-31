@@ -104,7 +104,7 @@ export const GENERATED_CONTENT_MANIFEST = {
     {
       "id": "nu_inteleg",
       "label": "Sunt creștin, dar nu înțeleg ce citesc",
-      "roomId": "c3",
+      "roomId": "c4",
       "common": true
     },
     {
@@ -172,7 +172,7 @@ export const GENERATED_CONTENT_MANIFEST = {
     {
       "id": "pornografie",
       "label": "Mă lupt cu pornografia",
-      "roomId": "c1"
+      "roomId": "c5"
     },
     {
       "id": "tristete",
@@ -1993,5 +1993,5 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     }
   ],
-  "contentVersion": "1967f247448b2585"
+  "contentVersion": "657dc82234d5a996"
 } as const
