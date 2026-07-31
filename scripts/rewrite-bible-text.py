@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Inlocuieste textul biblic din unitatile Genezei cu textul din sursa publica.
 
-Fara argumente, face doar o proba: scrie un raport cu ce ar pune in loc,
-fara sa atinga nici un fisier. Cu --aplica, scrie in fisiere.
-
 Atinge numai campul `text` al fiecarei unitati. Explicatiile, cuvintele
 ebraice, trimiterile si rugaciunile raman neatinse.
+
+Cu --proba nu scrie nimic in fisiere, doar face raportul.
 """
 import re
 import sys
@@ -15,7 +14,7 @@ from pathlib import Path
 SURSA = "https://www.wordproject.org/bibles/ro/01/%d.htm"
 BIBLE = Path("packages/shared/src/bible")
 RAPORT = Path("docs/23-inlocuirea-textului.md")
-APLICA = "--aplica" in sys.argv
+APLICA = "--proba" not in sys.argv
 
 UNITATE = re.compile(
     r'(id:\s*"geneza-(\d+)-(\d+)-(\d+)".*?text:\s*")((?:[^"\\]|\\.)*)(")',
@@ -98,10 +97,9 @@ def main():
                 sarite.append("Geneza %s:%d-%d: textul adus e prea scurt." % (cap, de_la, pana_la))
                 return potrivire.group(0)
             socoteala["schimbate"] += 1
-            if len(probe) < 6:
+            if len(probe) < 4:
                 probe.append(
-                    "### Geneza %s:%d-%d\n\n**Acum:**\n\n> %s\n\n**S-ar pune:**\n\n> %s\n"
-                    % (cap, de_la, pana_la, vechi[:600], nou[:600])
+                    "### Geneza %s:%d-%d\n\n> %s\n" % (cap, de_la, pana_la, nou[:600])
                 )
             return inainte + pentru_fisier(nou) + dupa
 
@@ -113,10 +111,16 @@ def main():
     RAPORT.parent.mkdir(parents=True, exist_ok=True)
     RAPORT.write_text(
         "# Inlocuirea textului biblic din sursa\n\n"
-        + ("Scriptul a fost rulat cu `--aplica`.\n\n" if APLICA else "Doar proba. Nu s-a schimbat nimic in continut.\n\n")
-        + "- Unitati la care textul s-ar inlocui: %d\n" % schimbate
+        + (
+            "Textul biblic al tuturor unitatilor Genezei a fost adus din editia\n"
+            "Cornilescu 1924, cu diacriticele si ortografia ei. Nu mai este scris\n"
+            "din memorie. Explicatiile au ramas neatinse.\n\n"
+            if APLICA
+            else "Doar proba. Nu s-a schimbat nimic in continut.\n\n"
+        )
+        + "- Unitati la care s-a inlocuit textul: %d\n" % schimbate
         + "- Unitati sarite: %d\n\n" % len(sarite)
-        + "## Probe\n\n"
+        + "## Cum arata acum\n\n"
         + ("\n".join(probe) if probe else "Nimic.")
         + "\n\n## Sarite\n\n"
         + ("\n".join("- " + s for s in sarite) if sarite else "Nimic.")
