@@ -95,12 +95,34 @@ formulari care fac textul sa sune „nou\".
 
 ## Ordinea de scriere
 
-1. **Geneza** — in lucru (capitolul 1 scris, `in_review`)
-2. Ioan
-3. Apocalipsa
-4. Viata lui Pavel
+Hotarata impreuna cu autorul proiectului. Se merge pe rand, o carte terminata
+inainte de a incepe alta.
 
-Adica exact cartile pe care Allen Nolan le-a parcurs verset cu verset.
+### Intai
+
+1. **Geneza, capitolele 1—50** — in lucru. Se duce pana la capat, fara sarituri.
+
+### Dupa Geneza (se hotaraste ordinea exacta atunci)
+
+2. **Ioan** — cea mai dorita. „Ioan e perfect sa il avem.\"
+3. **Matei**
+4. **Fapte, partile despre Pavel** — nu toata cartea, ci viata si drumurile lui
+   Pavel, asa cum se vad in Fapte.
+
+Cu acestea patru, spunea autorul proiectului, „e perfect ca inceput\".
+
+### Mai departe, dupa nevoie
+
+- **Levitic** — greu de inteles pentru cei mai multi, si tocmai de aceea de mare
+  folos explicat: jertfele, curatirea, sfintenia, si cum arata toate spre Domnul
+  Isus.
+- **Proverbe** — intelepciunea pentru viata de fiecare zi.
+- **Isaia** — proorocia si Robul Domnului.
+- **Apocalipsa** — de scris cu multa masura, dupa ce restul stau in picioare.
+
+Cele mai multe dintre acestea sunt si cartile pe care Allen Nolan le-a parcurs
+verset cu verset: Geneza (studiu in 89 de parti, capitolele 1—50), Apocalipsa,
+Exod, Levitic, cartile de intelepciune.
 
 ## Ce ramane de facut in cod
 
