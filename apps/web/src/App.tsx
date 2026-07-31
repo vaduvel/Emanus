@@ -6,6 +6,10 @@ import { navigate, useHashRoute } from "./router"
 import "./journey.css"
 
 const Ask = lazy(() => import("./screens/Ask").then((module) => ({ default: module.Ask })))
+const Bible = lazy(() => import("./screens/Bible").then((module) => ({ default: module.Bible })))
+const BibleChapterScreen = lazy(() =>
+  import("./screens/Bible").then((module) => ({ default: module.BibleChapterScreen })),
+)
 const Crisis = lazy(() => import("./Crisis").then((module) => ({ default: module.Crisis })))
 const Doors = lazy(() => import("./screens/Doors").then((module) => ({ default: module.Doors })))
 const Gallery = lazy(() => import("./ds/Gallery").then((module) => ({ default: module.Gallery })))
@@ -107,19 +111,31 @@ export default function App() {
         <LessonView lessonId={route.id} />
       </main>
     )
-  } else if (route.name === "bible") {
+  } else if (route.name === "library") {
     screen = (
       <TabbedScreen active="bible">
         <Library />
       </TabbedScreen>
     )
+  } else if (route.name === "bible") {
+    screen = (
+      <TabbedScreen active="bible">
+        <Bible />
+      </TabbedScreen>
+    )
+  } else if (route.name === "bibleChapter") {
+    screen = (
+      <TabbedScreen active="bible">
+        <BibleChapterScreen bookId={route.bookId} chapter={route.chapter} />
+      </TabbedScreen>
+    )
   } else if (route.name === "ask") {
     screen = (
       <TabbedScreen active="ask">
-        <Ask />
+        <Ask despre={route.despre} />
       </TabbedScreen>
     )
-  } else if (route.name === "people") {
+  } else if (route.name === "people" || route.name === "prayers") {
     screen = (
       <TabbedScreen active="people">
         <Prayers title="Ai mei în rugăciune" />

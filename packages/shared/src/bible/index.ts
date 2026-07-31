@@ -34,8 +34,25 @@ import { GENEZA_30 } from "./geneza30.js"
 import { GENEZA_31 } from "./geneza31.js"
 import { GENEZA_32 } from "./geneza32.js"
 import { GENEZA_33 } from "./geneza33.js"
+import { GENEZA_34 } from "./geneza34.js"
+import { GENEZA_35 } from "./geneza35.js"
+import { GENEZA_36 } from "./geneza36.js"
+import { GENEZA_37 } from "./geneza37.js"
+import { GENEZA_38 } from "./geneza38.js"
+import { GENEZA_39 } from "./geneza39.js"
+import { GENEZA_40 } from "./geneza40.js"
+import { GENEZA_41 } from "./geneza41.js"
+import { GENEZA_42 } from "./geneza42.js"
+import { GENEZA_43 } from "./geneza43.js"
+import { GENEZA_44 } from "./geneza44.js"
+import { GENEZA_45 } from "./geneza45.js"
+import { GENEZA_46 } from "./geneza46.js"
+import { GENEZA_47 } from "./geneza47.js"
+import { GENEZA_48 } from "./geneza48.js"
+import { GENEZA_49 } from "./geneza49.js"
+import { GENEZA_50 } from "./geneza50.js"
 
-/** Geneza, cu toate capitolele scrise pana acum. */
+/** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
   ...GENEZA_BASE,
   chapters: [
@@ -72,6 +89,23 @@ export const GENEZA: BibleBook = {
     GENEZA_31,
     GENEZA_32,
     GENEZA_33,
+    GENEZA_34,
+    GENEZA_35,
+    GENEZA_36,
+    GENEZA_37,
+    GENEZA_38,
+    GENEZA_39,
+    GENEZA_40,
+    GENEZA_41,
+    GENEZA_42,
+    GENEZA_43,
+    GENEZA_44,
+    GENEZA_45,
+    GENEZA_46,
+    GENEZA_47,
+    GENEZA_48,
+    GENEZA_49,
+    GENEZA_50,
   ],
 }
 

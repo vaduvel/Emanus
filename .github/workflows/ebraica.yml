@@ -1,0 +1,32 @@
+name: Indreapta ebraica
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/fix-hebrew.py"
+
+permissions:
+  contents: write
+
+jobs:
+  ebraica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ruleaza
+        run: python3 scripts/fix-hebrew.py
+
+      - name: Pune in proiect
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "fix(biblia): indreptarile la ebraica"
+            git push
+          else
+            echo "Nimic de schimbat."
+          fi

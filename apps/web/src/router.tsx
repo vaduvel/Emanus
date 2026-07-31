@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react"
 
-/*
- * Rutele aplicației, după reducere. (docs/20 §8)
- *
- * Ecrane vii: /intrare, / (Azi), /biblia, /intreaba, /ai-mei, /eu,
- * /lesson/:id, /final și /criza. Aliasurile vechi pentru bibliotecă și
- * rugăciuni rămân funcționale pentru linkurile deja distribuite.
- */
 export type Route =
   | { name: "today" }
   | { name: "doors" }
   | { name: "bible" }
-  | { name: "ask" }
+  | { name: "bibleChapter"; bookId: string; chapter: number }
+  | { name: "library" }
+  | { name: "ask"; despre?: string }
   | { name: "people" }
+  | { name: "prayers" }
   | { name: "profile" }
   | { name: "pathend" }
   | { name: "crisis" }
@@ -20,14 +16,27 @@ export type Route =
   | { name: "lesson"; id?: string }
 
 export function parseRoute(): Route {
-  const h = window.location.hash.replace(/^#/, "")
-  const path = h.split("?")[0] ?? ""
-  if (path.startsWith("/lesson/"))
+  const hash = window.location.hash.replace(/^#/, "")
+  const [path, query = ""] = hash.split("?", 2)
+
+  if (path.startsWith("/lesson/")) {
     return { name: "lesson", id: decodeURIComponent(path.slice("/lesson/".length)) }
+  }
+  if (path.startsWith("/biblia/")) {
+    const [encodedBookId, encodedChapter] = path.slice("/biblia/".length).split("/", 2)
+    const bookId = decodeURIComponent(encodedBookId ?? "")
+    const chapter = Number.parseInt(encodedChapter ?? "", 10)
+    return bookId && Number.isFinite(chapter) ? { name: "bibleChapter", bookId, chapter } : { name: "bible" }
+  }
+  if (path === "/biblia") return { name: "bible" }
+  if (path === "/biblioteca") return { name: "library" }
+  if (path === "/intreaba") {
+    const despre = new URLSearchParams(query).get("despre")
+    return despre ? { name: "ask", despre } : { name: "ask" }
+  }
   if (path === "/intrare") return { name: "doors" }
-  if (path === "/biblia" || path === "/biblioteca") return { name: "bible" }
-  if (path === "/intreaba") return { name: "ask" }
-  if (path === "/ai-mei" || path === "/rugaciuni") return { name: "people" }
+  if (path === "/ai-mei") return { name: "people" }
+  if (path === "/rugaciuni") return { name: "prayers" }
   if (path === "/eu") return { name: "profile" }
   if (path === "/final") return { name: "pathend" }
   if (path === "/criza" || path === "/crisis") return { name: "crisis" }

@@ -20,6 +20,40 @@ REPLACEMENTS = {
     "increedeutul": "încrezutul", "desdesăvârșiți": "desăvârșiți", "intenionat": "intenționat",
     "Stați lipită de viță": "Stai lipit de viță", "nu stai pe ce simți tu": "nu te bazezi pe ce simți tu",
     "se sfortează": "se străduiește",
+    # --- Biblia explicata: Geneza 1-50 ---
+    # cuvinte lipite sau rupte
+    "buni cioara": "bunicioara",
+    "in raut atea": "in rautatea",
+    "sa daramape nimeni": "sa darame pe nimeni",
+    "sa punastapanire": "sa puna stapanire",
+    "isprav it": "ispravit",
+    "tradu cerea": "traducerea",
+    "trudi ti": "truditi",
+    "stranegeau": "strangeau",
+    "oprelisce": "opreliste",
+    "unii tradue": "unii traduc",
+    "nu se pot despatri": "nu se pot desparti",
+    "nopta aceleia": "noptii aceleia",
+    "un capetenie": "o capetenie",
+    # formulare gresita, Geneza 46:28
+    "ca sa nu se ratoiasca nimeni si sa nu se ratoiasca lucrurile":
+        "ca sa nu se rataceasca nimeni si sa nu se incurce lucrurile",
+    # trimitere scrisa de doua ori, o data in engleza, Geneza 30:37-43
+    "        \"Romans 12:19\",\n": "",
+    # paragrafe rupte gresit
+    "\\Zice:": "\\n\\nZice:",
+    "\\Cel de al doilea:": "\\n\\nCel de al doilea:",
+    "\\n\\n Doua cuvinte": "\\n\\nDoua cuvinte",
+    # litera chirilica strecurata in loc de cea latina
+    "mint\u0435": "minte",
+    # inceput de paragraf cu litera mica, Geneza 14
+    "\\n\\ntargul": "\\n\\nTargul",
+    # verb gresit, Geneza 24
+    "sa isprava de vorbit": "sa ispraveasca de vorbit",
+    # ATENTIE: nu se mai pun aici corecturi care scot diacritice.
+    # Textul biblic din packages/shared/src/bible este acum adus din editia
+    # Cornilescu 1924 cu diacriticele si ortografia ei, iar o astfel de
+    # corectura l-ar strica.
 }
 
 check = "--check" in sys.argv[1:]

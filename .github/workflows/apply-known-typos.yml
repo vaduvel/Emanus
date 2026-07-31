@@ -1,0 +1,32 @@
+name: Aplica corecturile cunoscute
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/fix-known-typos.py"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aplica corecturile
+        run: python3 scripts/fix-known-typos.py
+
+      - name: Comite ce s-a schimbat
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "fix(biblia): aplica corecturile de litera"
+            git push
+          else
+            echo "Nimic de corectat."
+          fi

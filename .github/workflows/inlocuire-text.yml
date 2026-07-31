@@ -1,0 +1,42 @@
+name: Inlocuieste textul biblic
+
+on:
+  workflow_dispatch:
+    inputs:
+      aplica:
+        description: "Scrie in fisiere, nu doar proba"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - "scripts/rewrite-bible-text.py"
+
+permissions:
+  contents: write
+
+jobs:
+  inlocuire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ruleaza
+        run: |
+          if [ "${{ inputs.aplica }}" = "true" ]; then
+            python3 scripts/rewrite-bible-text.py --aplica
+          else
+            python3 scripts/rewrite-bible-text.py
+          fi
+
+      - name: Pune rezultatul in proiect
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore(biblia): rezultatul inlocuirii textului biblic"
+            git push
+          else
+            echo "Nimic de schimbat."
+          fi

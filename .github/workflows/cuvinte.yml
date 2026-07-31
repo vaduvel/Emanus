@@ -1,0 +1,32 @@
+name: Strange cuvintele in limba originala
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/list-bible-words.py"
+
+permissions:
+  contents: write
+
+jobs:
+  cuvinte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ruleaza
+        run: python3 scripts/list-bible-words.py
+
+      - name: Pune raportul in proiect
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "docs(biblia): lista cuvintelor in limba originala"
+            git push
+          else
+            echo "Nimic de schimbat."
+          fi
