@@ -20,6 +20,36 @@ REPLACEMENTS = {
     "increedeutul": "încrezutul", "desdesăvârșiți": "desăvârșiți", "intenionat": "intenționat",
     "Stați lipită de viță": "Stai lipit de viță", "nu stai pe ce simți tu": "nu te bazezi pe ce simți tu",
     "se sfortează": "se străduiește",
+    # --- Biblia explicata: Geneza 1-50 ---
+    # cuvinte lipite sau rupte
+    "buni cioara": "bunicioara",
+    "in raut atea": "in rautatea",
+    "sa daramape nimeni": "sa darame pe nimeni",
+    "sa punastapanire": "sa puna stapanire",
+    "isprav it": "ispravit",
+    "tradu cerea": "traducerea",
+    "trudi ti": "truditi",
+    "stranegeau": "strangeau",
+    "oprelisce": "opreliste",
+    "unii tradue": "unii traduc",
+    "nu se pot despatri": "nu se pot desparti",
+    "nopta aceleia": "noptii aceleia",
+    "un capetenie": "o capetenie",
+    # paragrafe rupte gresit
+    "\\Zice:": "\\n\\nZice:",
+    "\\Cel de al doilea:": "\\n\\nCel de al doilea:",
+    "\\n\\n Doua cuvinte": "\\n\\nDoua cuvinte",
+    # diacritice scapate acolo unde fisierele se scriu fara diacritice
+    "d\u0103duse": "daduse",
+    "marita\u0163e": "maritate",
+    "imparti\u0163a": "impartita",
+    "slug\u0103": "sluga",
+    "veri\u0219oara": "verisoara",
+    "sa pun\u0103 argintul": "sa puna argintul",
+    "oameni fr\u00e2nti": "oameni franti",
+    "se invioreaz\u0103": "se invioreaza",
+    # litera chirilica strecurata in loc de cea latina
+    "mint\u0435": "minte",
 }
 
 check = "--check" in sys.argv[1:]
