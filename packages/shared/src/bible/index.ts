@@ -49,6 +49,7 @@ import { GENEZA_45 } from "./geneza45.js"
 import { GENEZA_46 } from "./geneza46.js"
 import { GENEZA_47 } from "./geneza47.js"
 import { GENEZA_48 } from "./geneza48.js"
+import { GENEZA_49 } from "./geneza49.js"
 
 /** Geneza, cu toate capitolele scrise pana acum. */
 export const GENEZA: BibleBook = {
@@ -102,6 +103,7 @@ export const GENEZA: BibleBook = {
     GENEZA_46,
     GENEZA_47,
     GENEZA_48,
+    GENEZA_49,
   ],
 }
 
