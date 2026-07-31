@@ -106,7 +106,7 @@ export function Today() {
                 L-am făcut
               </button>
               <button type="button" onClick={() => setYesterday("nu")}>
-                N-am reșit
+                N-am reșitășit
               </button>
               <button type="button" onClick={() => setYesterday("uitat")}>
                 Am uitat
