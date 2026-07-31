@@ -1,0 +1,26 @@
+.ask { display: flex; flex-direction: column; gap: 14px; padding-bottom: 24px; }
+.ask__back { align-self: flex-start; }
+.ask__head { display: flex; align-items: center; gap: 10px; }
+.ask__head h1 { margin: 0; font-size: 1.5rem; letter-spacing: -0.01em; }
+.ask__intro { margin: 0; line-height: 1.62; opacity: 0.86; }
+.ask__despre { margin: 0; font-size: 0.92rem; opacity: 0.8; }
+
+.ask__field { display: flex; flex-direction: column; gap: 6px; }
+.ask__field textarea {
+  width: 100%; resize: vertical; padding: 12px 14px; border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12); background: rgba(255, 255, 255, 0.6);
+  font: inherit; line-height: 1.55;
+}
+.ask__send { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.ask__send[disabled] { opacity: 0.45; cursor: default; }
+.ask__gata { margin: 0; line-height: 1.6; opacity: 0.9; }
+
+.ask__grele h2, .ask__mele h2 { margin: 18px 0 8px; font-size: 1.02rem; }
+.ask__lista { display: flex; flex-direction: column; gap: 8px; }
+.ask__grea {
+  text-align: left; padding: 11px 14px; border-radius: 14px; font: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1); background: rgba(255, 255, 255, 0.5);
+  cursor: pointer; line-height: 1.5;
+}
+.ask__grea:hover { background: rgba(255, 255, 255, 0.78); }
+.ask__mea { margin: 0 0 8px; line-height: 1.55; }

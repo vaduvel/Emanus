@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react"
-import { BookOpen, HandHeart, LifeBuoy, Sunrise } from "lucide-react"
+import { BookOpen, HandHeart, HelpCircle, LifeBuoy, Sunrise } from "lucide-react"
 import { hasSeenWelcome, hasStarted } from "./journey"
 import { navigate, useHashRoute } from "./router"
 import "./journey.css"
@@ -11,13 +11,14 @@ const Doors = lazy(() => import("./screens/Doors").then((m) => ({ default: m.Doo
 const Library = lazy(() => import("./screens/Library").then((m) => ({ default: m.Library })))
 const Bible = lazy(() => import("./screens/Bible").then((m) => ({ default: m.Bible })))
 const BibleChapterScreen = lazy(() => import("./screens/Bible").then((m) => ({ default: m.BibleChapterScreen })))
+const Ask = lazy(() => import("./screens/Ask").then((m) => ({ default: m.Ask })))
 const PathEnd = lazy(() => import("./screens/PathEnd").then((m) => ({ default: m.PathEnd })))
 const Prayers = lazy(() => import("./screens/Prayers").then((m) => ({ default: m.Prayers })))
 const Today = lazy(() => import("./screens/Today").then((m) => ({ default: m.Today })))
 const Welcome = lazy(() => import("./screens/Welcome").then((m) => ({ default: m.Welcome })))
 
-function Tabs({ active }: { active: "today" | "bible" | "prayers" }) {
-  return <nav className="tabs2" aria-label="Navigare"><button type="button" className={active === "today" ? "active" : ""} onClick={() => navigate("/")}><Sunrise size={20} strokeWidth={1.8} aria-hidden /><span>Azi</span></button><button type="button" className={active === "bible" ? "active" : ""} onClick={() => navigate("/biblia")}><BookOpen size={20} strokeWidth={1.8} aria-hidden /><span>Biblia</span></button><button type="button" className={active === "prayers" ? "active" : ""} onClick={() => navigate("/rugaciuni")}><HandHeart size={20} strokeWidth={1.8} aria-hidden /><span>Rugăciuni</span></button></nav>
+function Tabs({ active }: { active: "today" | "bible" | "ask" | "prayers" }) {
+  return <nav className="tabs2" aria-label="Navigare"><button type="button" className={active === "today" ? "active" : ""} onClick={() => navigate("/")}><Sunrise size={20} strokeWidth={1.8} aria-hidden /><span>Azi</span></button><button type="button" className={active === "bible" ? "active" : ""} onClick={() => navigate("/biblia")}><BookOpen size={20} strokeWidth={1.8} aria-hidden /><span>Biblia</span></button><button type="button" className={active === "ask" ? "active" : ""} onClick={() => navigate("/intreaba")}><HelpCircle size={20} strokeWidth={1.8} aria-hidden /><span>Întreabă</span></button><button type="button" className={active === "prayers" ? "active" : ""} onClick={() => navigate("/rugaciuni")}><HandHeart size={20} strokeWidth={1.8} aria-hidden /><span>Rugăciuni</span></button></nav>
 }
 
 function HelpButton() {
@@ -37,6 +38,7 @@ export default function App() {
   else if (route.name === "library") screen = <main className="app route-anim app--tabbed"><HelpButton /><Library /><Tabs active="today" /></main>
   else if (route.name === "bible") screen = <main className="app route-anim app--tabbed"><HelpButton /><Bible /><Tabs active="bible" /></main>
   else if (route.name === "bibleChapter") screen = <main key={`${route.bookId}-${route.chapter}`} className="app route-anim app--tabbed"><HelpButton /><BibleChapterScreen bookId={route.bookId} chapter={route.chapter} /><Tabs active="bible" /></main>
+  else if (route.name === "ask") screen = <main key={route.despre ?? "ask"} className="app route-anim app--tabbed"><HelpButton /><Ask despre={route.despre} /><Tabs active="ask" /></main>
   else if (route.name === "pathend") screen = <main className="app route-anim app--tabbed"><HelpButton /><PathEnd /><Tabs active="today" /></main>
   else {
     const isPrayers = route.name === "prayers"

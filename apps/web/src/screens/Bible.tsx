@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, Search, Send } from "lucide-react"
+import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, HelpCircle, Search, Send } from "lucide-react"
 import type { BibleBook, BibleChapter, BibleUnit } from "@emanus/shared/bible"
 import { BIBLE_BOOKS, BIBLE_TRANSLATION, findChapter } from "@emanus/shared/bible"
 import { navigate } from "../router"
 import "../bible.css"
+import "../needs.css"
 
 /*
  * Biblia explicata. Textul (Cornilescu 1924, editia originala) sta intr-un
@@ -12,6 +13,10 @@ import "../bible.css"
  *
  * Capitolele cu status "in_review" se deschid, dar poarta un semn: nu au fost
  * inca citite de un om.
+ *
+ * Intrarea nu este numai pe carti si capitole, ci si pe durere: "cand te
+ * doare, citeste". Omul care sufera nu stie sa caute Geneza 37; stie sa spuna
+ * ca l-a lasat cineva.
  */
 
 const LAST_KEY = "emanus.bible.last"
@@ -60,6 +65,86 @@ function paragraphs(text: string): string[] {
   return text.split("\n\n").map((p) => p.trim()).filter((p) => p.length > 0)
 }
 
+/* Textul biblic are diacritice, explicatiile inca nu. Cautarea le pune la fel. */
+function plat(text: string): string {
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+}
+
+/* ------------------------------------------------- Cand te doare, citeste */
+
+type Nevoie = { eticheta: string; cuvinte: string[] }
+
+const NEVOI: Nevoie[] = [
+  { eticheta: "Mi-a murit cineva", cuvinte: ["a murit", "jelit", "mormant", "ingropat", "plans dupa", "doliu"] },
+  { eticheta: "Boală şi spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
+  { eticheta: "S-a rupt casa mea", cuvinte: ["nevasta", "barbatul ei", "casnicie", "despartit", "s-a dus de langa"] },
+  { eticheta: "Bani şi datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
+  { eticheta: "Sunt departe de ai mei", cuvinte: ["strain", "instrainat", "tara straina", "departe de casa", "pribeag"] },
+  { eticheta: "Beau. Nu mă pot opri", cuvinte: ["vin", "beat", "s-a imbatat", "patima"] },
+  { eticheta: "Pofta care mă ţine", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
+  { eticheta: "Nu pot să iert în familie", cuvinte: ["fratii lui", "ura", "il urau", "iertare", "a iertat", "razbunare"] },
+  { eticheta: "Mi-e ruşine de ce am făcut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
+  { eticheta: "Mi-e frică de moarte", cuvinte: ["frica", "nu te teme", "moartea", "mor"] },
+  { eticheta: "Mă rog şi nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
+  { eticheta: "De ce a îngăduit Dumnezeu", cuvinte: ["de ce", "ai avut in gand sa-mi faceti rau", "incercare", "a ingaduit"] },
+  { eticheta: "Am umblat cu descântece", cuvinte: ["idoli", "ghicire", "vraji", "dumnezei straini"] },
+  { eticheta: "Copilul meu s-a depărtat", cuvinte: ["fiul meu", "copilul", "s-a dus de la", "tatal lui plangea"] },
+]
+
+type Gasit = { bookId: string; bookName: string; chapter: number; ref: string; heading: string }
+
+function cauta(nevoie: Nevoie): Gasit[] {
+  const out: Gasit[] = []
+  for (const book of BIBLE_BOOKS) {
+    for (const ch of book.chapters) {
+      for (const u of ch.units) {
+        const fan = plat(`${u.heading} ${u.text} ${u.teaching} ${u.forYourHeart ?? ""}`)
+        if (nevoie.cuvinte.some((c) => fan.includes(plat(c)))) {
+          out.push({ bookId: book.id, bookName: book.name, chapter: ch.number, ref: u.ref, heading: u.heading })
+        }
+      }
+    }
+  }
+  return out.slice(0, 12)
+}
+
+function Nevoi() {
+  const [aleasa, setAleasa] = useState<Nevoie | null>(null)
+  const gasite = useMemo(() => (aleasa ? cauta(aleasa) : []), [aleasa])
+
+  return <section className="bneeds">
+    <h2 className="bneeds__title">Când te doare, citeşte</h2>
+    <p className="bneeds__intro">Spune ce te apasă acum. Îţi arătăm locurile din Scriptură unde se vorbeşte despre asta — nu versete rupte, ci întâmplări întregi, cu explicaţie.</p>
+
+    <div className="bneeds__list">
+      {NEVOI.map((n) => <button
+        key={n.eticheta}
+        type="button"
+        className={aleasa?.eticheta === n.eticheta ? "bneed is-on" : "bneed"}
+        onClick={() => setAleasa(aleasa?.eticheta === n.eticheta ? null : n)}
+      >{n.eticheta}</button>)}
+    </div>
+
+    {aleasa && <div className="bfound">
+      <div className="bfound__head">
+        <h3>{aleasa.eticheta}</h3>
+        <button type="button" className="ghost" onClick={() => setAleasa(null)}>Închide</button>
+      </div>
+      {gasite.length === 0
+        ? <p className="muted">Deocamdată n-avem scris nimic pe durerea aceasta. Avem doar Geneza. Vine şi restul.</p>
+        : gasite.map((g) => <button
+            key={`${g.ref}-${g.heading}`}
+            type="button"
+            className="bfound__item"
+            onClick={() => navigate(`/biblia/${g.bookId}/${g.chapter}`)}
+          >
+            <span className="bfound__ref">{g.ref}</span>
+            <span className="bfound__heading">{g.heading}</span>
+          </button>)}
+    </div>}
+  </section>
+}
+
 /* ---------------------------------------------------------------- Acasa */
 
 function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter }) {
@@ -79,9 +164,9 @@ function Book({ book, query }: { book: BibleBook; query: string }) {
   const chapters = useMemo(() => {
     if (q.length === 0) return book.chapters
     return book.chapters.filter((c) => {
-      const hay = `${c.number} ${c.title} ${c.summary}`.toLowerCase()
-      if (hay.includes(q)) return true
-      return c.units.some((u) => `${u.heading} ${u.ref} ${u.text}`.toLowerCase().includes(q))
+      const hay = plat(`${c.number} ${c.title} ${c.summary}`)
+      if (hay.includes(plat(q))) return true
+      return c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
     })
   }, [book, q])
 
@@ -115,6 +200,8 @@ export function Bible() {
       <span className="bible__resume-title">{last.title}</span>
       <ArrowRight size={18} strokeWidth={1.8} aria-hidden />
     </button>}
+
+    <Nevoi />
 
     <label className="bsearch">
       <Search size={16} strokeWidth={1.9} aria-hidden />
@@ -159,6 +246,10 @@ function Unit({ unit }: { unit: BibleUnit }) {
     void window.navigator.clipboard?.writeText(payload).catch(() => undefined)
   }
 
+  function onAsk(): void {
+    navigate(`/intreaba?despre=${encodeURIComponent(unit.ref)}`)
+  }
+
   return <article className="bunit">
     <p className="bunit__ref">{unit.ref}</p>
     <h3 className="bunit__heading">{unit.heading}</h3>
@@ -188,6 +279,7 @@ function Unit({ unit }: { unit: BibleUnit }) {
         {saved ? "Salvat" : "Salvează"}
       </button>
       <button type="button" className="ghost" onClick={onSend}><Send size={16} aria-hidden /> Trimite</button>
+      <button type="button" className="ghost" onClick={onAsk}><HelpCircle size={16} aria-hidden /> Întreabă</button>
     </div>
   </article>
 }
