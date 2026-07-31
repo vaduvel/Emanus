@@ -1,4 +1,4 @@
-# 27 · Devoțional 365 · Mesajul zilei · Borcanul cu versete — spec de implementare
+# 27 · Devoțional 365 · Mesajul zilei · Pergamentul cu versete — spec de implementare
 
 > Spec pentru trei features noi, aliniate cu `docs/00-DIRECTIE.md` (sursă unică de adevăr). Unde acest document pare să contrazică `00`, `00` are prioritate.
 >
@@ -12,7 +12,7 @@
 |---|---|---|
 | **F1** | **Devoțional 365** | Un traseu de un an, o intrare pe zi (3–4 min): verset → meditație → întrebare → rugăciune → pas. |
 | **F2** | **Mesajul zilei** | Un card frumos, distribuibil, cu ce îți spune Dumnezeu **din Cuvântul Său** astăzi. Motor de creștere organică. |
-| **F3** | **Borcanul cu versete** | Versetul zilei ca gest, nu ca text: deschizi Cuvântul, versetul iese din lumină și se așază, animat. |
+| **F3** | **Pergamentul cu versete** | Versetul zilei ca gest, nu ca text: desfaci sulul dimineața, aprinzi candela seara. |
 
 Cele trei nu sunt independente: **F3 este forma de prezentare** a versetului, **F2 este forma de share**, **F1 este una din sursele** de conținut zilnic. Se construiesc ca piese care se combină, nu ca trei ecrane paralele.
 
@@ -46,7 +46,7 @@ Devoționalul are 365 de intrări indexate `1…365`. Utilizatorul are propriul 
 - Începi la ziua 1 **în ziua în care instalezi**, nu pe 1 ianuarie.
 - `dayIndex` avansează **doar când deschizi** o zi. Dacă lipsești o săptămână, revii exact unde ai rămas — nu ai „7 zile restante".
 - Nu există recuperare obligatorie, nu există „zile pierdute". Poți naviga liber înainte/înapoi în arhivă.
-- Motiv: `00` §3. Un contor calendaristic care te lasă în urmă predă teologia orfanului prin interfață.
+- Motiv: `00` §3 și regula manei (§4.5). Un contor calendaristic care te lasă în urmă predă teologia orfanului prin interfață.
 
 ### 2.3 Model de date (`packages/shared`)
 
@@ -166,7 +166,7 @@ A doua coloană nu e greșită *emoțional* — e greșită *ca atribuire*. Acel
 ```ts
 export type MessageMood =
   | "obosit" | "speriat" | "vinovat" | "in_asteptare"
-  | "singur" | "recunoscator" | "fara_direcție"
+  | "singur" | "recunoscator" | "fara_directie"
 
 export interface MessageCard {
   id: string
@@ -213,70 +213,113 @@ POST /messages/:id/shared       → contor agregat de share-uri (fără date per
 
 ---
 
-## 4 · F3 · Borcanul cu versete + componenta `<ScriptureReveal>`
+## 4 · F3 · Pergamentul cu versete (dimineața) și candela (seara)
 
-### 4.1 Referința culturală
+### 4.1 De ce NU borcan — decizie de produs, nu de estetică
 
-Obiectul fizic există de decenii: *promise box* / *verse jar* — o cutie sau un borcan cu 90–240 de cărticele cu versete, din care scoți una pe zi. Variantele moderne sunt sortate **pe emoții** („când ești speriat", „când ai pierdut pe cineva"). Ce se digitalizează aici nu e textul, ci **gestul**: întinzi mâna și primești.
+Obiectul fizic „borcan / cutie cu versete" (*verse jar*, *promise box*) se vinde comercial de decenii și este vândut și de creatori creștini români cu care Emanus vrea să fie în parteneriat, nu în concurență. Un borcan digital gratuit în app subminează exact produsul partenerului.
 
-**Diferența Emanus:** borcanul de pe raft e random. Al nostru te ascultă întâi (`00` §14) — versetul vine din secțiunea potrivită stării tale de azi.
+**Decizie:** app-ul nu reproduce borcanul. Obiectul digital este **sulul (pergamentul)**; borcanul rămâne obiect fizic, al partenerului. Direcția de colaborare devine naturală: borcanul fizic poartă un cod/QR care deschide în app versetul și micro-lecția din spatele lui. Fiecare își păstrează teritoriul.
 
-### 4.2 Secțiunile borcanului
+**De evitat pentru același motiv:** coșul / pâinea zilnică („Our Daily Bread Promise Box" e o cutie-pâine cu 240 de versete, produs existent).
+
+### 4.2 Obiectul: sulul, și nu ca metaforă
+
+Sulul **este** forma reală în care a existat Scriptura. În Luca 4:17, în sinagoga din Nazaret, lui Isus „I s-a dat cartea prorocului Isaia. Când a deschis-o…" — a desfășurat un sul. Deci nu inventăm un obiect drăguț cu versete înăuntru; ne întoarcem la obiectul original.
+
+Avantaje colaterale: nimeni nu are drepturi pe el, și animația de desfășurare e mai simplă și mai fiabilă decât o carte 3D cu coperte care se rotesc pe `rotateY` (partea cea mai fragilă din versiunea anterioară a acestui spec, eliminată).
+
+### 4.3 Secțiunile (sertarele de pergamente)
 
 `când te doare` · `când ești speriat` · `când te simți vinovat` · `când aștepți` · `când ești singur` · `când mulțumești` · `când nu știi încotro`
 
-Alegerea vine automat din check-in, sau o face userul manual („azi vreau din altă parte").
+Alegerea vine automat din check-in-ul emoțional, sau o face userul manual („azi vreau din altă parte"). **Aici e diferența față de orice obiect de raft: acela e random, al nostru te ascultă întâi** (`00` §14).
 
-### 4.3 Animația — spec exact
+### 4.4 Animația de dimineață: sulul se desfășoară
 
-Total **~2,5 s**, în trei acte. Se poate sări cu un tap în orice moment.
+Total **~2,3 s**, trei acte. Se poate sări cu un tap în orice moment.
 
 | Timp | Ce se vede |
 |---|---|
-| **Act I — 0 → 600 ms** | Cartea închisă, centrată, „respiră" lent (`scale 1 → 1.02`, 3 s, alternate). Sub ea: „Deschide Cuvântul pentru mine". |
-| **Act II — 600 → 1600 ms** | Copertele se rotesc (`rotateY`, ±72°, `perspective: 1200px`, easing `cubic-bezier(.22,.9,.24,1)`). Din interstițiu crește un halou radial (`scale .4 → 1`, `opacity 0 → .85`) plus 6–8 raze conice care se rotesc foarte lent (`rotate 0 → 6deg`), cu `blur`. 12–18 particule urcă prin fascicul, cu opacitate și viteză randomizate — ele dau senzația de real. |
-| **Act III — 1600 → 2500 ms** | Textul apare **din** lumină: `scale .82 → 1`, `opacity 0 → 1`, `filter: blur(8px) → blur(0)`, `translateY 12px → 0`. Lumina scade la ~30% și rămâne ca aură. Referința intră cu 200 ms întârziere, dedesubt. |
+| **Act I — 0 → 500 ms** | Sulul legat cu șnur, centrat, „respiră" lent (`scale 1 → 1.02`, 3 s, alternate). Sub el: „Desfășoară Cuvântul pentru azi". |
+| **Act II — 500 → 1500 ms** | Șnurul cade, sulul se desfășoară de sus în jos: mască CSS cu `height 0 → 100%`, easing `cubic-bezier(.22,.9,.24,1)`, plus o umbră moale care coboară cu marginea și un rulou care se micșorează sus. Lumină caldă difuză în spate (SVG `radialGradient` + `feGaussianBlur`), cu 8–12 particule fine de praf care urcă prin ea. |
+| **Act III — 1500 → 2300 ms** | Textul apare **odată cu** pergamentul, rând cu rând (fiecare rând: `opacity 0 → 1`, `translateY 8px → 0`, decalaj 90 ms). Referința intră ultima, mai mică, dedesubt. |
 | **După** | Nimic nu se mișcă, nimic nu expiră. Versetul stă. Acțiuni: „Citește contextul" · „Adaugă la Zidul de aducere-aminte" (`00` §5) · „Salvează cardul" (→ F2) · „Continuă lecția". |
 
-### 4.4 Decizie tehnică: CSS + SVG + Web Animations API
+### 4.5 Ritmul: mana (Exod 16)
+
+Mana nu e un obiect în interfață, e **explicația ritmului**. În Exod 16 mana se strângea dimineața, ajungea exact pentru ziua aceea, și cine strângea pentru mâine găsea dimineața stricat.
+
+Consecințe concrete în produs:
+- Zilele lipsă **nu se acumulează** și nu apar ca datorie. Nu există „ai pierdut 5 zile" — mana de azi e pentru azi.
+- Nu se poate „citi înainte" ca să acumulezi progres. Arhiva e deschisă pentru revăzut, dar `dayIndex` avansează câte o zi.
+- Textul de revenire după o pauză: nu „te-ai întors după 12 zile", ci „estăzi e mana de azi". Formularea finală se decide la conținut, dar sensul e obligatoriu.
+- Astfel regula harului (`00` §3) nu mai e un mesaj de UX, e Scriptură.
+
+### 4.6 Animația de seară: candela și pașii
+
+Psalmul 119:105 — *„Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea."*
+
+**Regulă de design derivată direct din verset:** candela nu e de admirat, e pentru **văzut unde calci**. Deci animația conține obligatoriu **drumul și pașii**, nu doar o flacără frumoasă cu text.
+
+**Și a doua regulă, mai importantă:** o candelă luminează cam un metru. Nu-ți arată drumul, îți arată **pasul următor**. Cercul de lumină **nu dezvăluie niciodată tot drumul** — nici la finalul anului, nici ca recompensă, niciodată. Cine cere harta, primește candela. Aceasta este și replica directă la anxietate (Matei 6:34).
+
+| Timp | Ce se vede |
+|---|---|
+| **Act I — 0 → 500 ms** | Ecran aproape negru. Un drum de piatră abia ghicit. Jos, o candelă stinsă. Text: „Aprinde candela pentru pasul de mâine". |
+| **Act II — 500 → 1400 ms** | Tap → flacăra crește (două căi SVG suprapuse, `scale` + `blur`, culori caldă/albă). Cercul de lumină se deschide `scale .3 → 1` și dezvăluie **doar piatra următoare**, cu conturul unui pas pe ea. Restul drumului rămâne în întuneric. |
+| **Act III — 1400 → 2300 ms** | Versetul apare pe drum, în lumină (`opacity`, `blur 6px → 0`). În urmă, 3–5 pietre deja luminate slab (~15% opacitate) = zilele umblate; se leagă vizual de Zidul de aducere-aminte (`Ebenezer.tsx`). |
+| **După** | Flacăra pâlpâie continuu, discret (`opacity`/`scale` ±4%, 1,8 s, `ease-in-out`) — singurul lucru care se mișcă după final. Acțiuni: „Pasul de mâine" · jurnal de 2 rânduri („cum a fost ziua cu El?"). |
+
+Astfel ziua are două capete fără conținut suplimentar: dimineața desfaci sulul (verset + pas), seara aprinzi candela (ce a fost + pasul următor).
+
+### 4.7 Decizie tehnică: CSS + SVG + Web Animations API
 
 **NU** Lottie, **NU** video, **NU** WebGL.
 
-- Razele și haloul = SVG cu `radialGradient` + `feGaussianBlur`, animate prin `transform`/`opacity` → rulează pe compositor, 60 fps și pe telefoane slabe.
-- Coperta = 2 elemente cu `rotateY` + `perspective`. Ajunge; nu e nevoie de 3D real.
+- Lumina = SVG cu `radialGradient` + `feGaussianBlur`, animată prin `transform`/`opacity` → rulează pe compositor, 60 fps și pe telefoane slabe.
+- Sulul = mască pe înălțime + textură de pergament. Fără transformări 3D.
+- Candela și drumul = SVG plat, cu cercul de lumină ca mască radială. Pietrele sunt elemente, deci pot fi luminate independent (utile pentru zilele umblate).
 - Cost total estimat: **~15 KB**, zero request de rețea, funcționează offline.
-- Motiv: cerințele de sub 2s / offline / deep links din workbook §15 exclud un video sau un Lottie greu. Un `<video>` de 2 MB pentru un gest de 2,5 secunde e exact tipul de decizie pe care o regretăm la a treia lună.
+- Motiv: cerințele de sub 2s / offline / deep links din workbook §15 exclud un video sau un Lottie greu. Un `<video>` de 2 MB pentru un gest de două secunde e exact tipul de decizie pe care o regretăm la a treia lună.
 
-### 4.5 Accesibilitate — obligatoriu
+### 4.8 Accesibilitate — obligatoriu
 
-- `prefers-reduced-motion: reduce` → fără raze, fără particule; versetul apare cu un fade de 200 ms.
+- `prefers-reduced-motion: reduce` → fără particule, fără pâlpâire, fără desfășurare; versetul apare cu un fade de 200 ms, iar candela e statică.
 - Tap oriunde = skip la starea finală. La a 40-a zi, animația nu trebuie să devină o taxă.
 - Textul e text real (selectabil, citibil de screen reader), nu imagine. `aria-live="polite"` pe container.
-- Contrast minim 4.5:1 între text și fundalul luminat — se verifică pe fundalul cel mai deschis.
+- Contrast minim 4.5:1 între text și fundal — se verifică și pe pergamentul cel mai deschis, și pe drumul cel mai întunecat.
 
-### 4.6 Componenta e reutilizabilă
+### 4.9 Componenta e reutilizabilă
 
 ```ts
 interface ScriptureRevealProps {
   verseText: string
   verseRef: string
-  variant?: "jar" | "lesson"   // jar: cu deschiderea cărții; lesson: doar lumina + text
+  variant?: "scroll" | "lamp" | "lesson"
+  // scroll: sulul se desfășoară (dimineața)
+  // lamp:   candela + drumul + pasul următor (seara)
+  // lesson: doar lumina + text, fără obiect, ca să nu întrerupă conversația
+  stepText?: string          // folosit de varianta "lamp"
+  walkedDays?: number        // pietrele deja luminate în urmă (0–5 vizibile)
   autoPlay?: boolean
   onRevealed?: () => void
 }
 ```
 
-Se folosește în **două** locuri, nu unul:
-1. Borcanul cu versete (`variant: "jar"`).
-2. Beat-ul `scripture` din player-ul de lecție — al 6-lea din cele 12 (`variant: "lesson"`, fără cartea care se deschide, ca să nu întrerupă conversația).
+Se folosește în **trei** locuri, nu unul:
+1. Pergamentul de dimineață (`variant: "scroll"`).
+2. Candela de seară (`variant: "lamp"`).
+3. Beat-ul `scripture` din player-ul de lecție — al 6-lea din cele 12 (`variant: "lesson"`).
 
 Asta e justificarea reală a efortului: nu e un ecran decorativ, e felul în care Scriptura intră în scenă în toată aplicația.
 
-### 4.7 API
+### 4.10 API
 
 ```
-GET /jar/sections                    → secțiunile disponibile
-GET /jar/draw?section=&mood=         → un verset (fără repetare în ultimele 60 de zile)
+GET /scroll/sections                 → secțiunile disponibile
+GET /scroll/draw?section=&mood=      → un verset (fără repetare în ultimele 60 de zile)
+GET /evening/today                   → versetul de seară + pasul de mâine
 ```
 
 Extragerea se poate face și **complet local** din seed, ca să funcționeze offline. Serverul e doar sincronizare.
@@ -289,6 +332,7 @@ Extragerea se poate face și **complet local** din seed, ca să funcționeze off
 - Traduceri biblice multiple. Se folosește traducerea deja aprobată în seed.
 - Monetizare de orice fel (D-009).
 - Sunet obligatoriu la animație. Eventual mai târziu, implicit oprit.
+- Reproducerea borcanului sau a cutiei-pâine cu versete (§4.1).
 
 ---
 
@@ -296,12 +340,13 @@ Extragerea se poate face și **complet local** din seed, ca să funcționeze off
 
 | Fază | Livrabil | Depinde de |
 |---|---|---|
-| **A** | `<ScriptureReveal>` funcțională + integrată în beat-ul `scripture` | nimic |
-| **B** | Borcanul: secțiuni + extragere locală + ecranul de tragere | A |
-| **C** | `MessageCard` + `<MessageCardView>` + export PNG + `#/mesaj/:id` | nimic |
-| **D** | Devoțional: model, API, ecran, comutator în ritualul zilnic | nimic |
-| **E** | Conținut: 60 de zile de devoțional + 60 de carduri (suficient pentru validare reală) | D, C |
-| **F** | Variante pe vârste + legarea la Legământul familiei | E |
+| **A** | `<ScriptureReveal variant="scroll">` + integrare în beat-ul `scripture` (`variant="lesson"`) | nimic |
+| **B** | Secțiunile pe stări + extragere locală + ecranul de dimineață | A |
+| **C** | `variant="lamp"`: candela, drumul, pasul de mâine, jurnalul de seară | A |
+| **D** | `MessageCard` + `<MessageCardView>` + export PNG + `#/mesaj/:id` | nimic |
+| **E** | Devoțional: model, API, ecran, comutator în ritualul zilnic, regula manei | nimic |
+| **F** | Conținut: 60 de zile de devoțional + 60 de carduri (suficient pentru validare reală) | D, E |
+| **G** | Variante pe vârste + legarea la Legământul familiei | F |
 
 Faza A prima, deliberat: e cea mai mică, se vede imediat cu ochii, și e piesa refolosită de toate celelalte.
 
@@ -311,13 +356,15 @@ Faza A prima, deliberat: e cea mai mică, se vede imediat cu ochii, și e piesa 
 
 > Nu am scris direct în `DECISIONS.md` ca să nu intru în conflict cu ceilalți agenți care lucrează pe fișierele comune. Textul de mai jos e gata de lipit ca **D-013**.
 
-**D-013 · Devoțional 365, Mesajul zilei, Borcanul cu versete**
+**D-013 · Devoțional 365, Mesajul zilei, Pergamentul cu versete**
 
 - **Atribuire:** orice text la persoana I atribuit lui Dumnezeu este parafraza unui verset real, cu referința vizibilă. Formula „Dumnezeu îți transmite astăzi" + frază inventată este interzisă (`00` §7, D-005).
-- **Numerotare devoțional:** `dayIndex` per utilizator, nu zi calendaristică. Zilele lipsă nu se acumulează și nu se recuperează obligatoriu (`00` §3).
+- **Obiectul digital este sulul, nu borcanul.** Borcanul și cutia-pâine cu versete sunt produse fizice existente pe piață, inclusiv la creatori creștini parteneri; app-ul nu le reproduce gratuit. Colaborarea se face invers: obiectul fizic trimite în app prin cod/QR.
+- **Numerotare devoțional:** `dayIndex` per utilizator, nu zi calendaristică. Zilele lipsă nu se acumulează și nu se recuperează obligatoriu — regula manei, Exod 16 (`00` §3).
+- **Candela implică pași.** Psalmul 119:105 cere drum și picioare în animație, nu doar flacără. Cercul de lumină nu dezvăluie niciodată tot drumul, ci doar pasul următor.
 - **Carduri:** generate în client din HTML/CSS + export PNG; un template × N texte. Fără imagini pre-randate per mesaj.
-- **Animație:** CSS + SVG + Web Animations API. Fără Lottie, video sau WebGL. `prefers-reduced-motion` respectat, skip la tap.
-- **Reutilizare:** `<ScriptureReveal>` deservește atât borcanul, cât și beat-ul `scripture` din player.
+- **Animație:** CSS + SVG + Web Animations API. Fără Lottie, video sau WebGL. Fără transformări 3D. `prefers-reduced-motion` respectat, skip la tap.
+- **Reutilizare:** `<ScriptureReveal>` deservește dimineața (`scroll`), seara (`lamp`) și beat-ul `scripture` din player (`lesson`).
 - **Conținut extern:** cardurile de tip „mesaj de la Dumnezeu" din social media aparțin autorilor lor; se folosesc doar ca referință de format, niciodată copiate.
 
 ---
@@ -328,7 +375,7 @@ Faza A prima, deliberat: e cea mai mică, se vede imediat cu ochii, și e piesa 
 |---|---|
 | **Widget iOS/Android** cu versetul zilei | Cel mai bun raport retenție/efort care există; prezență fără deschiderea app-ului. |
 | **Audio: versetul citit** (~30 s, vocea Emanus) | Pentru cei care conduc, gătesc, alăptează; și pentru bunicii cu vederea slabă, ca înlocuitor al textului. |
-| **Ecran de dimineață vs. de seară** | Dimineața verset + pas; seara „cum a fost ziua cu El?" + 2 rânduri de jurnal. Închide bucla fără conținut nou. |
 | **Versetul de memorat cu fade progresiv** | Aceeași frază 7 zile, cu tot mai multe cuvinte ascunse. Mecanică veche, cost mic, funcționează. |
 | **„Trimite versetul cuiva"** | Nu doar share public: „trimite-l mamei", cu o linie scrisă de tine. Leagă F2 de Legământul familiei. |
-| **Borcanul familiei** | Toți scot același verset în aceeași zi și văd cine a deschis deja. „Am fost și eu azi", fără competiție. |
+| **Pergamentul familiei** | Toți desfășoară același verset în aceeași zi și văd cine a deschis deja. „Am fost și eu azi", fără competiție. |
+| **Cod/QR pe obiectul fizic al partenerului** | Borcanul cumpărat deschide în app versetul și micro-lecția din spatele lui. Parteneriat, nu concurență (§4.1). |
