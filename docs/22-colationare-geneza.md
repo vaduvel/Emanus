@@ -2,11 +2,11 @@
 
 Raport scris de `scripts/collate-bible.py`. Nu schimba nimic in continut.
 Compara textul biblic din fiecare unitate cu sursa publica, dupa ce scoate
-diacriticele si semnele de punctuatie, ca sa nu se sperie de fleacuri.
+diacriticele si semnele de punctuatie, ca sa nu se opreasca la fleacuri.
 
 - Unitati cercetate: 289
 - Unitati cu text prescurtat (au puncte de suspensie): 67
-- Unitati care nu se potrivesc sub pragul 0.9: 112
+- Unitati care nu se potrivesc sub pragul 0.90: 112
 
 ## Ce trebuie recitit
 
