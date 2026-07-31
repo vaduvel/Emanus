@@ -46,9 +46,14 @@ REPLACEMENTS = {
     "\\n\\n Doua cuvinte": "\\n\\nDoua cuvinte",
     # litera chirilica strecurata in loc de cea latina
     "mint\u0435": "minte",
+    # inceput de paragraf cu litera mica, Geneza 14
+    "\\n\\ntargul": "\\n\\nTargul",
+    # verb gresit, Geneza 24
+    "sa isprava de vorbit": "sa ispraveasca de vorbit",
     # ATENTIE: nu se mai pun aici corecturi care scot diacritice.
     # Textul biblic din packages/shared/src/bible este acum adus din editia
-    # Cornilescu 1924 cu diacriticele lui, iar o astfel de corectura l-ar strica.
+    # Cornilescu 1924 cu diacriticele si ortografia ei, iar o astfel de
+    # corectura l-ar strica.
 }
 
 check = "--check" in sys.argv[1:]
