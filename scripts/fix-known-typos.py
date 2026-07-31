@@ -35,6 +35,11 @@ REPLACEMENTS = {
     "nu se pot despatri": "nu se pot desparti",
     "nopta aceleia": "noptii aceleia",
     "un capetenie": "o capetenie",
+    # formulare gresita, Geneza 46:28
+    "ca sa nu se ratoiasca nimeni si sa nu se ratoiasca lucrurile":
+        "ca sa nu se rataceasca nimeni si sa nu se incurce lucrurile",
+    # trimitere scrisa de doua ori, o data in engleza, Geneza 30:37-43
+    "        \"Romans 12:19\",\n": "",
     # paragrafe rupte gresit
     "\\Zice:": "\\n\\nZice:",
     "\\Cel de al doilea:": "\\n\\nCel de al doilea:",
