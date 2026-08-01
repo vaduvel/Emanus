@@ -75,7 +75,7 @@ export function ScriptureReveal({
     [],
   )
 
-  /** Tap oriunde: sare la final. Nimeni nu trebuie sa aspecte o animatie. */
+  /** Tap oriunde: sare la final. Nimeni nu trebuie sa astepte o animatie. */
   function skip() {
     timers.current.forEach((t) => window.clearTimeout(t))
     timers.current = []
@@ -186,7 +186,7 @@ function ScrollStage({ phase }: { phase: Phase }) {
 
 /**
  * Candela: flacara arde, cercul de lumina creste si dezvaluie DOAR piatra
- * urmatoare, cu conturul unui pas pe ea. Restul drumului rmane in intuneric —
+ * urmatoare, cu conturul unui pas pe ea. Restul drumului ramane in intuneric —
  * lumina nu dezvaluie niciodata tot drumul (docs/27 §4.6).
  */
 function LampStage({ phase, walkedDays }: { phase: Phase; walkedDays: number }) {
