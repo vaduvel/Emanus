@@ -227,7 +227,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     verseRef: "1 Timotei 1:15",
     verseText: "O, adevărat și cu totul vrednic de primit este cuvântul care zice: „Hristos Isus a venit în lume ca să mântuiască pe cei păcătoși”, dintre care cel dintâi sunt eu.",
     meditation:
-      "Pavel scrie „sunt”, la prezent, după ani de slujire. Nu se lauda cu trecutul și nu se preface că a ajuns altcineva. Cine ține minte că e păcătos mântuit are mereu loc pentru alții.",
+      "Pavel scrie „sunt”, la prezent, după ani de slujire. Nu se lăuda cu trecutul și nu se prefăcea că a ajuns altcineva. Cine ține minte că e păcătos mântuit are mereu loc pentru alții.",
     question: "Ai uitat de unde te-a scos?",
     prayer: "Doamne, sunt un păcătos mântuit de Tine. Nu vreau să uit. Amin.",
     step: "Povestește-I azi lui Dumnezeu, pe scurt, de unde te-a scos.",
@@ -240,7 +240,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     verseRef: "Filipeni 3:13-14",
     verseText: "Fraților, eu nu cred că l-am apucat încă; dar fac un singur lucru: uitând ce este în urma mea și aruncându-mă spre ce este înainte, alerg spre țintă.",
     meditation:
-      "„Uitând” nu înseamnă amnezie, ci refuzul de a mai trăi cu fața întoarsă înapoi. Pavel avea și realizări, și crime în trecut — le lasă pe amândouă. Alergarea cere privirea înainte.",
+      "„Uitând” nu înseamnă amnezie, ci refuzul de a mai trăi cu fața întoarsă înapoi. Pavel avea și realizări, și vinovății grele în trecut — le lasă pe amândouă. Alergarea cere privirea înainte.",
     question: "Ce trecut duci cu tine în fiecare zi?",
     prayer: "Doamne, las în urmă ce e în urmă. Alerg mai departe. Amin.",
     step: "Scrie un lucru din trecut și, sub el, un pas de mâine.",
@@ -279,7 +279,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     verseRef: "Psalmul 145:14",
     verseText: "Domnul sprijină pe toți cei ce cad și îndreaptă pe cei încovoiați.",
     meditation:
-      "Psalmul înalță măreția lui Dumnezeu și, în mijlocul ei, spune că se ocupă de cei căzuți. Măreția Lui nu se vede numai în crearea lumii, ci și în aplecarea spre cineva încovoiat. Cei doi Îl arată pe același Dumnezeu.",
+      "Psalmul înalță măreția lui Dumnezeu și, în mijlocul ei, spune că se ocupă de cei căzuți. Măreția Lui nu se vede numai în crearea lumii, ci și în aplecarea spre cineva încovoiat. Cele două Îl arată pe același Dumnezeu.",
     question: "Sub ce greutate mergi încovoiat?",
     prayer: "Doamne, îndreaptă-mă. Nu mă mai pot ridica singur. Amin.",
     step: "Spune cuiva de încredere care e greutatea pe care o duci.",
@@ -333,7 +333,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     meditation:
       "Cel căruia Îi ceri ajutor știe dinăuntru ce e ispita. N-a citit despre ea, a trecut prin ea. De aceea rugăciunea ta în clipa slabă nu cade în gol și nu ajunge la cineva scandalizat.",
     question: "Ce ispită ți se pare prea rușinoasă ca să I-o spui?",
-    prayer: "Doamne, Tu înțelegi. Vin la Tine cu ce mă doboară. Amin.",
+    prayer: "Doamne, Tu înțelegi. Vin la Tine cu ce mă doboră. Amin.",
     step: "Spune-I azi, pe nume, ispita ta cea mai frecventă.",
   },
   {
@@ -368,7 +368,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Osea 14:4",
-    verseText: "Le voi vindeca vătămarea adusă de neascultarea lor, Îi voi iubi cu adevărat!",
+    verseText: "Le voi vindeca vătămarea adusă de neascultarea lor, îi voi iubi cu adevărat!",
     meditation:
       "Dumnezeu nu spune doar că iartă, ci că vindecă rănile făcute chiar de neascultare. Sunt urmări pe care iertarea nu le șterge automat și care au nevoie de vindecare în timp. Har înseamnă și îngrijirea cicatricilor.",
     question: "Ce rană ți-ai făcut singur și are nevoie de vindecare?",
@@ -383,7 +383,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     verseRef: "Osea 6:1",
     verseText: "Veniți să ne întoarcem la Domnul! Căci El ne-a sfâșiat, dar tot El ne va vindeca; El ne-a lovit, dar tot El ne va lega rănile.",
     meditation:
-      "Chemarea e la plural: „să ne întoarcem”. Întoarcerea nu e o performanță individuală, ci ceva ce faci împreună cu alții. Și se întoarce cineva la Același care a permis durerea, pentru că tot El leagă rănile.",
+      "Chemarea e la plural: „să ne întoarcem”. Întoarcerea nu e o performanță individuală, ci ceva ce faci împreună cu alții. Și te întorci la Același care a îngăduit durerea, pentru că tot El leagă rănile.",
     question: "Cu cine te-ai putea întoarce împreună?",
     prayer: "Doamne, ne întoarcem la Tine. Leagă-ne rănile. Amin.",
     step: "Cheamă azi pe cineva să se roage cu tine, chiar și la telefon.",
