@@ -2,23 +2,39 @@ import type { JourneyState } from "./journey"
 import { getSupabase } from "./supabase"
 
 /*
- * Sincronizarea cu Supabase. (pasul 6 din ordinea de fluxuri)
+ * Sincronizarea opțională cu Supabase.
  *
  * REGULI:
- *  1. Nu se cere cont și nu se cere e-mail. Intrare anonimă, făcută tăcut, în fundal.
- *     Omul nu vede niciodată un ecran de "înregistrează-te ca să salvezi".
- *  2. Local rămâne sursa de adevăr pentru ecrane. Norul e doar copia de siguranță.
- *     Dacă rețeaua cade, aplicația nu se blochează și nu arată nicio eroare.
- *  3. La prima pornire pe un telefon nou, dacă local e gol și în nor există ceva,
- *     se aduce din nor. Altfel, localul învinge și se urcă.
- *  4. Nu se urcă nimic ce nu vede și omul: fără scoruri, fără evenimente, fără analitică.
+ *  1. Local rămâne sursa de adevăr.
+ *  2. Nicio sesiune anonimă și nicio încărcare nu pornesc fără acordul explicit
+ *     dat în ecranul „Eu”.
+ *  3. Nu se urcă răspunsurile la alegeri, schițele, scoruri sau analitică.
  */
 
 let userId: string | null = null
 let ready = false
+const BACKUP_CONSENT_KEY = "emanus_backup_consent_v1"
 
 export function cloudEnabled(): boolean {
   return getSupabase() !== null
+}
+
+export function cloudBackupEnabled(): boolean {
+  if (!cloudEnabled()) return false
+  try {
+    return localStorage.getItem(BACKUP_CONSENT_KEY) === "enabled"
+  } catch {
+    return false
+  }
+}
+
+export function setCloudBackupConsent(enabled: boolean): void {
+  try {
+    if (enabled) localStorage.setItem(BACKUP_CONSENT_KEY, "enabled")
+    else localStorage.removeItem(BACKUP_CONSENT_KEY)
+  } catch {
+    // Dacă browserul blochează localStorage, backup-ul rămâne oprit.
+  }
 }
 
 /** Intrare anonimă. Returnează id-ul sau null dacă nu se poate (offline, neconfigurat). */
@@ -43,13 +59,36 @@ async function ensureUser(): Promise<string | null> {
   }
 }
 
-/** Urcă starea curentă. Se apelează după fiecare salvare locală; eșecul se ignoră. */
-export async function pushState(s: JourneyState): Promise<void> {
+async function deleteStaleRows(
+  table: "journal" | "prayers",
+  idColumn: "lesson_id" | "id",
+  localIds: string[],
+  uid: string,
+): Promise<boolean> {
+  const sb = getSupabase()
+  if (!sb) return false
+  const { data, error } = await sb.from(table).select(idColumn).eq("user_id", uid)
+  if (error) return false
+  const local = new Set(localIds)
+  const stale = (data ?? [])
+    .map((row) => String((row as Record<string, unknown>)[idColumn]))
+    .filter((id) => !local.has(id))
+  if (stale.length === 0) return true
+  const { error: deleteError } = await sb
+    .from(table)
+    .delete()
+    .eq("user_id", uid)
+    .in(idColumn, stale)
+  return !deleteError
+}
+
+/** Urcă starea curentă numai după acord; returnează dacă sincronizarea a reușit. */
+export async function pushState(s: JourneyState): Promise<boolean> {
   const sb = getSupabase()
   const uid = await ensureUser()
-  if (!sb || !uid) return
+  if (!sb || !uid) return false
   try {
-    await sb.from("journey").upsert({
+    const { error: journeyError } = await sb.from("journey").upsert({
       user_id: uid,
       seen_welcome: s.seenWelcome,
       path_id: s.pathId,
@@ -58,11 +97,16 @@ export async function pushState(s: JourneyState): Promise<void> {
       last_lesson_date: s.lastLessonDate,
       prayer_invite_seen: s.prayerInviteSeen,
       path_completed_seen: s.pathCompletedSeen,
+      course_progress: s.courseProgress,
       updated_at: new Date().toISOString(),
     })
+    if (journeyError) return false
 
+    if (!(await deleteStaleRows("journal", "lesson_id", s.journal.map((item) => item.lessonId), uid))) {
+      return false
+    }
     if (s.journal.length > 0) {
-      await sb.from("journal").upsert(
+      const { error } = await sb.from("journal").upsert(
         s.journal.map((j) => ({
           user_id: uid,
           lesson_id: j.lessonId,
@@ -71,10 +115,14 @@ export async function pushState(s: JourneyState): Promise<void> {
           updated_at: new Date().toISOString(),
         })),
       )
+      if (error) return false
     }
 
+    if (!(await deleteStaleRows("prayers", "id", s.prayers.map((item) => item.id), uid))) {
+      return false
+    }
     if (s.prayers.length > 0) {
-      await sb.from("prayers").upsert(
+      const { error } = await sb.from("prayers").upsert(
         s.prayers.map((p) => ({
           id: p.id,
           user_id: uid,
@@ -84,9 +132,11 @@ export async function pushState(s: JourneyState): Promise<void> {
           answer_note: p.answerNote ?? null,
         })),
       )
+      if (error) return false
     }
+    return true
   } catch {
-    /* rețea proastă — se reia la următoarea salvare */
+    return false
   }
 }
 
@@ -110,7 +160,21 @@ export async function pullState(): Promise<JourneyState | null> {
       lastLessonDate: (j.last_lesson_date as string | null) ?? null,
       prayerInviteSeen: Boolean(j.prayer_invite_seen),
       pathCompletedSeen: Boolean(j.path_completed_seen),
-      courseProgress: {},
+      courseProgress:
+        j.course_progress &&
+        typeof j.course_progress === "object" &&
+        !Array.isArray(j.course_progress)
+          ? Object.fromEntries(
+              Object.entries(j.course_progress as Record<string, unknown>)
+                .filter(([, lessonIds]) => Array.isArray(lessonIds))
+                .map(([courseId, lessonIds]) => [
+                  courseId,
+                  (lessonIds as unknown[]).filter(
+                    (lessonId): lessonId is string => typeof lessonId === "string",
+                  ),
+                ]),
+            )
+          : {},
       lessonResponses: {},
       lessonDrafts: {},
       journal: (jr ?? []).map((r) => ({
@@ -133,6 +197,47 @@ export async function pullState(): Promise<JourneyState | null> {
 
 export function cloudReady(): boolean {
   return ready
+}
+
+async function existingUser(): Promise<string | null> {
+  const sb = getSupabase()
+  if (!sb) return null
+  if (userId) return userId
+  try {
+    const { data } = await sb.auth.getSession()
+    if (!data.session?.user) return null
+    userId = data.session.user.id
+    ready = true
+    return userId
+  } catch {
+    return null
+  }
+}
+
+/** Șterge contul anonim/legat și toate datele Emanus prin cascade. */
+export async function deleteCloudData(): Promise<boolean> {
+  const sb = getSupabase()
+  const uid = await existingUser()
+  if (!sb || !uid) return true
+  try {
+    const { error: accountError } = await sb.rpc("delete_own_account")
+    if (!accountError) {
+      await sb.auth.signOut({ scope: "local" })
+      userId = null
+      ready = false
+      return true
+    }
+
+    // Compatibilitate până când migrarea ajunge în proiectul Supabase.
+    const results = await Promise.all([
+      sb.from("journal").delete().eq("user_id", uid),
+      sb.from("prayers").delete().eq("user_id", uid),
+      sb.from("journey").delete().eq("user_id", uid),
+    ])
+    return results.every(({ error }) => !error)
+  } catch {
+    return false
+  }
 }
 
 /**

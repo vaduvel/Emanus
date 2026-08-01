@@ -4,7 +4,14 @@ import type {
   ContentLessonSummary,
   ContentPath,
 } from "@emanus/shared/content-catalog"
-import { cloudEnabled, cloudReady, pullState, pushState } from "./cloud"
+import {
+  cloudBackupEnabled,
+  cloudReady,
+  deleteCloudData,
+  pullState,
+  pushState,
+  setCloudBackupConsent,
+} from "./cloud"
 import {
   contentPath,
   nextDoctrineLesson,
@@ -15,8 +22,8 @@ import {
  * Starea drumului.
  *
  * Sursa de adevăr pentru ecrane e localStorage — aplicația merge întreagă fără
- * internet și fără cont. Supabase e copia de siguranță: după fiecare salvare se
- * urcă tăcut în fundal, iar pe un telefon nou se aduce înapoi.
+ * internet și fără cont. Backup-ul Supabase pornește numai după acordul explicit
+ * al omului și poate fi oprit sau șters din ecranul „Eu”.
  *
  * NU se salvează, nicăieri: scoruri, serii de zile, nivele, profil. (docs/20 §1)
  */
@@ -120,8 +127,7 @@ function writeLocal(s: JourneyState): JourneyState {
 
 function save(s: JourneyState): JourneyState {
   writeLocal(s)
-  // Copia în nor pleacă în fundal. Dacă nu merge, nimeni nu află și nimic nu se blochează.
-  if (cloudEnabled()) void pushState(s)
+  if (cloudBackupEnabled()) void pushState(s)
   return s
 }
 
@@ -141,7 +147,7 @@ function isEmpty(s: JourneyState): boolean {
  * devenit disponibilă (ecranele trebuie redesenate).
  */
 export async function hydrateFromCloud(): Promise<boolean> {
-  if (!cloudEnabled()) return false
+  if (!cloudBackupEnabled()) return false
   const cloudWasReady = cloudReady()
   const local = load()
   const remote = await pullState()
@@ -151,6 +157,24 @@ export async function hydrateFromCloud(): Promise<boolean> {
   }
   if (!isEmpty(local)) void pushState(local)
   return cloudReady() !== cloudWasReady
+}
+
+export async function setBackupEnabled(enabled: boolean): Promise<boolean> {
+  setCloudBackupConsent(enabled)
+  if (!enabled) return true
+  return pushState(load())
+}
+
+export async function eraseJourneyData(): Promise<boolean> {
+  const removedFromCloud = await deleteCloudData()
+  if (!removedFromCloud) return false
+  setCloudBackupConsent(false)
+  try {
+    localStorage.removeItem(K)
+  } catch {
+    return false
+  }
+  return true
 }
 
 // --- Primul contact ---

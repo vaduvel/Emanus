@@ -6,8 +6,8 @@
 --  * Se salvează EXACT ce vede omul în aplicație: ce drum a ales, unde a ajuns,
 --    ce a scris el cu mâna lui (jurnal și rugăciuni).
 --  * Jurnalul și rugăciunile sunt cele mai intime lucruri din aplicație.
---    Nimeni, niciodată, nu vede rândurile altcuiva — de aia RLS e obligatoriu
---    pe fiecare tabel, fără nicio excepție "pentru administrare".
+--    RLS separă utilizatorii. Backup-ul nu este criptat end-to-end, deci accesul
+--    operațional cu service_role trebuie limitat și auditat.
 --
 -- AUTENTIFICARE: intrare anonimă (Supabase > Authentication > Providers >
 -- Anonymous sign-ins = ON). Omul nu-și face cont și nu dă niciun e-mail.
@@ -24,6 +24,7 @@ create table if not exists public.journey (
   last_lesson_date date,
   prayer_invite_seen boolean not null default false,
   path_completed_seen boolean not null default false,
+  course_progress jsonb not null default '{}'::jsonb,
   updated_at timestamptz not null default now()
 );
 
@@ -68,3 +69,23 @@ create policy journal_own on public.journal
 drop policy if exists prayers_own on public.prayers;
 create policy prayers_own on public.prayers
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+-- Utilizatorul își poate șterge propriul cont; cascadele elimină toate datele.
+create or replace function public.delete_own_account()
+returns void
+language plpgsql
+security definer
+set search_path = public, auth
+as $$
+declare
+  caller_id uuid := auth.uid();
+begin
+  if caller_id is null then
+    raise exception 'authentication required';
+  end if;
+  delete from auth.users where id = caller_id;
+end;
+$$;
+
+revoke all on function public.delete_own_account() from public, anon;
+grant execute on function public.delete_own_account() to authenticated;

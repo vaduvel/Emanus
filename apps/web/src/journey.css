@@ -415,6 +415,46 @@
 .profile-screen__section p {
   margin: 0;
 }
+
+.profile-screen__status {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--text);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.profile-screen__danger {
+  border-color: color-mix(in srgb, var(--danger) 28%, var(--border));
+}
+
+.profile-screen__delete-link {
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 34%, var(--border));
+}
+
+.profile-screen__confirm {
+  display: grid;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.profile-screen__confirm > p {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.profile-screen__confirm > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-screen__delete {
+  background: var(--danger);
+  color: white;
+}
 .today__head {
   display: flex;
   align-items: center;

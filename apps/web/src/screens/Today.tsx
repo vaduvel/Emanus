@@ -13,7 +13,7 @@ import {
 } from "../journey"
 import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
-import { cloudReady } from "../cloud"
+import { cloudBackupEnabled } from "../cloud"
 
 /*
  * "Azi" — singurul ecran principal. (docs/20 §8)
@@ -33,9 +33,9 @@ function memoryVerse(lesson: ContentLessonSummary): { text: string; ref: string 
 
 /** Ce scrie sub câmpul de rugăciune. Adevărul, nu ce sună mai liniștitor. */
 function privacyLine(): string {
-  return cloudReady()
-    ? "Nu o citește nimeni. Se salvează pe dispozitiv și în spațiul privat al sesiunii tale."
-    : "Nu o citește nimeni și nu pleacă nicăieri de pe telefonul tău."
+  return cloudBackupEnabled()
+    ? "Se salvează local și în backup-ul activat de tine. Nu o publicăm și nu o folosim pentru analiză."
+    : "Rămâne pe acest dispozitiv; backup-ul este oprit."
 }
 
 export function Today() {
