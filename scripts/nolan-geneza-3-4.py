@@ -6,6 +6,10 @@ asaza Allen Nolan in studiul asupra Genezei.
 Regula care nu se calca: nu se copiaza nicio fraza a lui. Invatatura este a
 lui, ordinea opririlor este a lui, cuvintele sunt ale noastre.
 
+Scriptul trebuie sa poata fi rulat de oricate ori, fara sa adauge de doua
+ori acelasi lucru. De aceea se cerceteaza intai daca indreptarea este deja
+facuta, si abia dupa aceea se cauta textul vechi.
+
 Ruleaza fara argumente ca sa aplice. Ruleaza cu --check ca sa verifice.
 """
 
@@ -24,27 +28,11 @@ INDREPTARI = [
     ),
     (
         "geneza3.ts",
-        """      crossRefs: [
-        "Isaia 7:14",
-        "Galateni 4:4",
-        "Ioan 12:31",
-        "Coloseni 2:15",
-        "Evrei 2:14-15",
-        "Romani 16:20",
-        "Apocalipsa 12:17"
-      ],""",
-        """      crossRefs: [
-        "Isaia 7:14",
-        "Galateni 4:4",
-        "Ioan 8:44",
+        """        "Ioan 12:31",""",
+        """        "Ioan 8:44",
         "Matei 23:33",
         "1 Ioan 3:12",
-        "Ioan 12:31",
-        "Coloseni 2:15",
-        "Evrei 2:14-15",
-        "Romani 16:20",
-        "Apocalipsa 12:17"
-      ],""",
+        "Ioan 12:31",""",
         "3:15 trimiterile pentru cele doua semintii",
     ),
     (
@@ -75,12 +63,15 @@ def main() -> int:
 
         text = cale.read_text(encoding="utf-8")
 
+        # Intai cercetam daca indreptarea este deja facuta. Altfel, cand textul
+        # nou il cuprinde pe cel vechi, adaosul s-ar lipi la fiecare rulare.
+        if nou in text:
+            print(f"  {fisier}: deja facut - {de_ce}")
+            continue
+
         if vechi not in text:
-            if nou in text:
-                print(f"  {fisier}: deja facut - {de_ce}")
-            else:
-                print(f"::warning title=Indreptare nefacuta::{fisier}: {de_ce}")
-                nefacute += 1
+            print(f"::warning title=Indreptare nefacuta::{fisier}: {de_ce}")
+            nefacute += 1
             continue
 
         if text.count(vechi) > 1:
