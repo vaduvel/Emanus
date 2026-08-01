@@ -11,8 +11,11 @@ import {
   devotionalDay,
   devotionalDaysAvailable,
   manaMessage,
+  FAMILY_COVENANT_EMPTY_DRAFT,
+  type DevotionalAgeMode,
   type DevotionalDay,
   type DevotionalProgress,
+  type FamilyCovenantDraft,
   type MessageMood,
 } from "@emanus/shared"
 
@@ -26,12 +29,20 @@ interface Seen {
   at: string
 }
 
+interface SavedCovenant {
+  draft: FamilyCovenantDraft
+  text: string
+  at: string
+}
+
 interface GiftsState {
   devotional: DevotionalProgress
   seenCards: Seen[]
   seenVerses: Seen[]
   eveningNotes: { at: string; text: string }[]
   lastMood: MessageMood | null
+  ageMode: DevotionalAgeMode
+  covenant: SavedCovenant | null
 }
 
 const EMPTY: GiftsState = {
@@ -40,6 +51,8 @@ const EMPTY: GiftsState = {
   seenVerses: [],
   eveningNotes: [],
   lastMood: null,
+  ageMode: "adult",
+  covenant: null,
 }
 
 function read(): GiftsState {
@@ -53,6 +66,8 @@ function read(): GiftsState {
       seenVerses: parsed.seenVerses ?? [],
       eveningNotes: parsed.eveningNotes ?? [],
       lastMood: parsed.lastMood ?? null,
+      ageMode: parsed.ageMode ?? "adult",
+      covenant: parsed.covenant ?? null,
     }
   } catch {
     return { ...EMPTY }
@@ -96,7 +111,7 @@ function isToday(iso: string | null): boolean {
   )
 }
 
-// —— Devoțional ————————————————————————————————————————————————
+// —— Devoțional —————————————————————————————————————
 
 /**
  * Ziua de citit acum. Regula manei (Exod 16, docs/27 §4.5): zilele în care
@@ -146,7 +161,39 @@ export function walkedDays(): number {
   return read().devotional.openedDays.length
 }
 
-// —— Mesajul zilei ————————————————————————————————————————————
+// —— Varianta pe vârstă (faza G, docs/27 §6) ————————————————————
+
+/** Cu cine citești azi. Alegerea rămâne, nu se întreabă zilnic. */
+export function devotionalAgeMode(): DevotionalAgeMode {
+  return read().ageMode
+}
+
+export function setDevotionalAgeMode(mode: DevotionalAgeMode): void {
+  write({ ...read(), ageMode: mode })
+}
+
+// —— Legământul familiei ——————————————————————————————
+
+export function familyCovenant(): SavedCovenant | null {
+  return read().covenant
+}
+
+export function familyCovenantDraft(): FamilyCovenantDraft {
+  return read().covenant?.draft ?? { ...FAMILY_COVENANT_EMPTY_DRAFT, names: ["", ""] }
+}
+
+export function saveFamilyCovenant(draft: FamilyCovenantDraft, text: string): void {
+  write({
+    ...read(),
+    covenant: { draft, text, at: new Date().toISOString() },
+  })
+}
+
+export function clearFamilyCovenant(): void {
+  write({ ...read(), covenant: null })
+}
+
+// —— Mesajul zilei ——————————————————————————————————
 
 export function recentCardIds(): string[] {
   return fresh(read().seenCards)
@@ -157,7 +204,7 @@ export function rememberCard(id: string): void {
   write({ ...s, seenCards: remember(s.seenCards, id) })
 }
 
-// —— Pergament / candelă ———————————————————————————————————————
+// —— Pergament / candelă ——————————————————————————————
 
 export function recentVerseIds(): string[] {
   return fresh(read().seenVerses)
