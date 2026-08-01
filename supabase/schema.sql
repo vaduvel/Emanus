@@ -18,6 +18,7 @@
 create table if not exists public.journey (
   user_id uuid primary key references auth.users (id) on delete cascade,
   seen_welcome boolean not null default false,
+  selected_door_id text,
   path_id text,
   lessons_done integer not null default 0,
   doctrine_done integer not null default 0,

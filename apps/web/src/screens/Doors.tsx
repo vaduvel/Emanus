@@ -88,6 +88,6 @@ function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
   const own = doorHasOwnRoom(doorId)
   const explore = door.roomId === null
   const minutes = path.lessons[0]?.estMinutes ?? 10
-  function start() { chooseDoor(pathId); navigate("/") }
+  function start() { chooseDoor(doorId); navigate("/") }
   return <section className="confirm"><p className="confirm__echo">„{door.label}”</p>{own && !explore && <p className="confirm__lead">Bine că ai spus-o. Mergem de aici.</p>}{!own && <p className="confirm__lead">Bine că ai spus-o. Drumul scris exact pentru asta nu e gata încă — nu îți dau ceva pe jumătate. Dar începem cu ce e dedesubt oricum, la toată lumea.</p>}{own && explore && <p className="confirm__lead">Nu toată lumea vine cu o rană anume, și nu e nimic în neregulă cu asta.</p>}<div className="confirm__card"><h2 className="confirm__title">{path.title}</h2><p className="confirm__promise">{path.promise}</p><p className="confirm__meta">{path.lessons.length} lecții &middot; câte una la două zile &middot; {minutes} minute prima</p></div><p className="confirm__note">Nu îți cerem bani și nu îți dăm note. Poți schimba drumul oricând, fără să pierzi ce ai scris.</p><button type="button" className="confirm__cta" onClick={start}>Începe <ArrowRight size={18} aria-hidden /></button><button type="button" className="today__back" onClick={onBack}>Nu asta e a mea</button></section>
 }

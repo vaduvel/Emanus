@@ -1,6 +1,7 @@
 import type { LessonAnswers } from "@emanus/shared/domain"
 import type {
   ContentDayPlan,
+  ContentDoor,
   ContentLessonSummary,
   ContentPath,
 } from "@emanus/shared/content-catalog"
@@ -13,9 +14,11 @@ import {
   setCloudBackupConsent,
 } from "./cloud"
 import {
+  contentDoor,
   contentPath,
   nextDoctrineLesson,
   planTodayFromContent,
+  resolveDoorPath,
 } from "./content"
 
 /*
@@ -58,6 +61,8 @@ export interface LessonDraft extends LessonAnswers {
 export interface JourneyState {
   /** A văzut ecranele de primul contact (ce e Emanus). */
   seenWelcome: boolean
+  /** Ușa aleasă păstrează propoziția omului până la intrarea editorială relevantă. */
+  selectedDoorId: string | null
   pathId: string | null
   lessonsDone: number
   /** Câte lecții de doctrină generală a terminat, în ordine. */
@@ -80,6 +85,7 @@ export interface JourneyState {
 
 const EMPTY: JourneyState = {
   seenWelcome: false,
+  selectedDoorId: null,
   pathId: null,
   lessonsDone: 0,
   doctrineDone: 0,
@@ -191,16 +197,24 @@ export function hasStarted(): boolean {
   return load().pathId !== null
 }
 
-export function chooseDoor(pathId: string): JourneyState {
+export function chooseDoor(doorId: string): JourneyState {
   const s = load()
   return save({
     ...s,
     seenWelcome: true,
-    pathId,
+    selectedDoorId: doorId,
+    pathId: resolveDoorPath(doorId),
     lessonsDone: 0,
     lastLessonDate: null,
     pathCompletedSeen: false,
   })
+}
+
+export function selectedDoorEntry(
+  lessonId: string,
+): ContentDoor["entry"] | undefined {
+  const entry = contentDoor(load().selectedDoorId)?.entry
+  return entry?.lessonId === lessonId ? entry : undefined
 }
 
 export function currentPath(): ContentPath | undefined {
@@ -327,6 +341,7 @@ export function switchPath(pathId: string): JourneyState {
   const s = load()
   return save({
     ...s,
+    selectedDoorId: null,
     pathId,
     lessonsDone: 0,
     doctrineDone: 0,

@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url"
 
 import {
   DOORS,
+  DOOR_ENTRY_OPTIONS,
   EXPLORE_DOORS,
   PATHS,
   ROOMS,
@@ -61,7 +62,10 @@ const versionedLessons = new Map(
 const payload = {
   schemaVersion: 1,
   rooms: ROOMS,
-  doors: DOORS,
+  doors: DOORS.map((door) => ({
+    ...door,
+    entry: DOOR_ENTRY_OPTIONS[door.id],
+  })),
   exploreDoors: EXPLORE_DOORS,
   paths: PATHS.map((path) => ({
     id: path.id,

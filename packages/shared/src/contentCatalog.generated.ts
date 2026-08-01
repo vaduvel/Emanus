@@ -50,169 +50,324 @@ export const GENERATED_CONTENT_MANIFEST = {
       "id": "rusine",
       "label": "Am făcut lucruri de care mi-e rușine",
       "roomId": "c1",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "rusine_l1",
+        "stepId": "r1_3",
+        "optionId": "r1c_c"
+      }
     },
     {
       "id": "neiertare",
       "label": "Mi s-a făcut ceva și nu pot ierta",
       "roomId": "c2",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "neiertare_o1",
+        "stepId": "o1_context",
+        "optionId": "o1_context_harm"
+      }
     },
     {
       "id": "indoiala",
       "label": "Nu știu dacă există Dumnezeu",
       "roomId": "c3",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "doctrina_l1",
+        "stepId": "d1_entry",
+        "optionId": "d1_entry_exists"
+      }
     },
     {
       "id": "perete",
       "label": "Mă rog și parcă vorbesc în perete",
       "roomId": "c4",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "aproape_l1",
+        "stepId": "a1_3",
+        "optionId": "a1c_a"
+      }
     },
     {
       "id": "dependenta",
       "label": "Nu mă pot lăsa de un lucru",
       "roomId": "c5",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "schimbare_l1",
+        "stepId": "s1_3",
+        "optionId": "s1c_a"
+      }
     },
     {
       "id": "anxietate",
       "label": "Trăiesc cu anxietate",
       "roomId": "c5",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "schimbare_l1",
+        "stepId": "s1_3",
+        "optionId": "s1c_b"
+      }
     },
     {
       "id": "doliu",
       "label": "Am pierdut pe cineva",
       "roomId": "c2",
       "pathId": "path_suferinta",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "suferinta_l1",
+        "stepId": "sf1_focus",
+        "optionId": "sf1_loss"
+      }
     },
     {
       "id": "merit",
       "label": "Fac tot ce trebuie și tot nu-mi ajunge",
       "roomId": "c6",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "har_l1",
+        "stepId": "h1_3",
+        "optionId": "h1c_a"
+      }
     },
     {
       "id": "singuratate",
       "label": "Nu am pe nimeni",
       "roomId": "c7",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "impreuna_l1",
+        "stepId": "im1_3",
+        "optionId": "im1c_a"
+      }
     },
     {
       "id": "nu_inteleg",
       "label": "Sunt creștin, dar nu înțeleg ce citesc",
       "roomId": "c4",
-      "common": true
+      "common": true,
+      "entry": {
+        "lessonId": "aproape_l1",
+        "stepId": "a1_3",
+        "optionId": "a1c_c"
+      }
     },
     {
       "id": "obisnuinta",
       "label": "Merg la biserică din obișnuință",
-      "roomId": "c6"
+      "roomId": "c6",
+      "entry": {
+        "lessonId": "har_l1",
+        "stepId": "h1_3",
+        "optionId": "h1c_b"
+      }
     },
     {
       "id": "avort",
       "label": "Am făcut un avort",
-      "roomId": "c1"
+      "roomId": "c1",
+      "entry": {
+        "lessonId": "rusine_l5",
+        "stepId": "r5_ownership",
+        "optionId": "r5_own_action"
+      }
     },
     {
       "id": "biblia_inventata",
       "label": "Cred că Biblia e inventată de oameni",
-      "roomId": "c3"
+      "roomId": "c3",
+      "entry": {
+        "lessonId": "doctrina_l1",
+        "stepId": "d1_entry",
+        "optionId": "d1_entry_bible"
+      }
     },
     {
       "id": "recadere",
       "label": "Am promis de o sută de ori și tot cad",
-      "roomId": "c5"
+      "roomId": "c5",
+      "entry": {
+        "lessonId": "schimbare_l1",
+        "stepId": "s1_3",
+        "optionId": "s1c_a"
+      }
     },
     {
       "id": "uscaciune",
       "label": "Nu mai simt nimic când mă rog",
-      "roomId": "c4"
+      "roomId": "c4",
+      "entry": {
+        "lessonId": "aproape_l1",
+        "stepId": "a1_3",
+        "optionId": "a1c_b"
+      }
     },
     {
       "id": "familie_respinge",
       "label": "Familia mea nu mă înțelege",
-      "roomId": "c7"
+      "roomId": "c7",
+      "entry": {
+        "lessonId": "impreuna_l1",
+        "stepId": "im1_3",
+        "optionId": "im1c_b"
+      }
     },
     {
       "id": "boala",
       "label": "Sunt bolnav sau e bolnav cineva drag",
       "roomId": "c2",
-      "pathId": "path_suferinta"
+      "pathId": "path_suferinta",
+      "entry": {
+        "lessonId": "suferinta_l1",
+        "stepId": "sf1_focus",
+        "optionId": "sf1_illness"
+      }
     },
     {
       "id": "infidelitate",
       "label": "Mi-am înșelat soțul sau soția",
-      "roomId": "c1"
+      "roomId": "c1",
+      "entry": {
+        "lessonId": "rusine_l5",
+        "stepId": "r5_ownership",
+        "optionId": "r5_own_action"
+      }
     },
     {
       "id": "flacara",
       "label": "Am fost aproape de Dumnezeu cândva",
-      "roomId": "c4"
+      "roomId": "c4",
+      "entry": {
+        "lessonId": "aproape_l1",
+        "stepId": "a1_3",
+        "optionId": "a1c_b"
+      }
     },
     {
       "id": "frica_pedeapsa",
       "label": "Mi-e frică să nu mă pedepsească",
-      "roomId": "c6"
+      "roomId": "c6",
+      "entry": {
+        "lessonId": "har_l1",
+        "stepId": "h1_3",
+        "optionId": "h1c_c"
+      }
     },
     {
       "id": "respins_biserica",
       "label": "M-am simțit respins în biserică",
-      "roomId": "c7"
+      "roomId": "c7",
+      "entry": {
+        "lessonId": "impreuna_l1",
+        "stepId": "im1_3",
+        "optionId": "im1c_c"
+      }
     },
     {
       "id": "de_ce_permis",
       "label": "Nu înțeleg de ce a permis Dumnezeu asta",
       "roomId": "c2",
-      "pathId": "path_suferinta"
+      "pathId": "path_suferinta",
+      "entry": {
+        "lessonId": "suferinta_l1",
+        "stepId": "sf1_focus",
+        "optionId": "sf1_why"
+      }
     },
     {
       "id": "pornografie",
       "label": "Mă lupt cu pornografia",
-      "roomId": "c5"
+      "roomId": "c5",
+      "entry": {
+        "lessonId": "schimbare_l1",
+        "stepId": "s1_3",
+        "optionId": "s1c_a"
+      }
     },
     {
       "id": "tristete",
       "label": "Nu mai am chef de nimic",
-      "roomId": "c5"
+      "roomId": "c5",
+      "entry": {
+        "lessonId": "schimbare_l1",
+        "stepId": "s1_3",
+        "optionId": "s1c_b"
+      }
     },
     {
       "id": "alte_credinte",
       "label": "Am crezut alte lucruri înainte (energii, karma, univers)",
-      "roomId": "c3"
+      "roomId": "c3",
+      "entry": {
+        "lessonId": "doctrina_l1",
+        "stepId": "d1_entry",
+        "optionId": "d1_entry_beliefs"
+      }
     },
     {
       "id": "cum_citesc",
       "label": "Nu știu cum să citesc Biblia",
-      "roomId": "c4"
+      "roomId": "c4",
+      "entry": {
+        "lessonId": "aproape_l1",
+        "stepId": "a1_3",
+        "optionId": "a1c_c"
+      }
     },
     {
       "id": "epuizat_slujire",
       "label": "Sunt obosit de slujire",
-      "roomId": "c6"
+      "roomId": "c6",
+      "entry": {
+        "lessonId": "har_l1",
+        "stepId": "h1_3",
+        "optionId": "h1c_d"
+      }
     },
     {
       "id": "nou_venit",
       "label": "Sunt nou și nu cunosc pe nimeni",
-      "roomId": "c7"
+      "roomId": "c7",
+      "entry": {
+        "lessonId": "impreuna_l1",
+        "stepId": "im1_3",
+        "optionId": "im1c_a"
+      }
     },
     {
       "id": "divort",
       "label": "Am trecut printr-un divorț",
-      "roomId": "c2"
+      "roomId": "c2",
+      "entry": {
+        "lessonId": "neiertare_o1",
+        "stepId": "o1_context",
+        "optionId": "o1_context_divorce"
+      }
     },
     {
       "id": "prea_departe",
       "label": "Cred că sunt prea departe ca să mă mai întorc",
-      "roomId": "c1"
+      "roomId": "c1",
+      "entry": {
+        "lessonId": "rusine_l1",
+        "stepId": "r1_3",
+        "optionId": "r1c_b"
+      }
     },
     {
       "id": "furie",
       "label": "Mă enervez și rănesc oamenii din jur",
-      "roomId": "c5"
+      "roomId": "c5",
+      "entry": {
+        "lessonId": "schimbare_l1",
+        "stepId": "s1_3",
+        "optionId": "s1c_c"
+      }
     }
   ],
   "exploreDoors": [
@@ -4941,5 +5096,5 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     }
   ],
-  "contentVersion": "40a45345e1c1e668"
+  "contentVersion": "3e3f7ab308fcc3fc"
 } as const

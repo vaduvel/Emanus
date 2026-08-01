@@ -25,6 +25,7 @@ import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
 export * from "./aproape.js"
 export * from "./doctrina.js"
+export * from "./doorEntries.js"
 export * from "./har.js"
 export * from "./impreuna.js"
 export * from "./neiertareOpen.js"

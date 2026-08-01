@@ -31,6 +31,11 @@ export interface ContentDoor {
   roomId: string | null
   pathId?: string
   common?: boolean
+  entry?: {
+    lessonId: string
+    stepId: string
+    optionId: string
+  }
 }
 
 export type ContentCourseState = "live" | "partial" | "planned"
@@ -122,7 +127,11 @@ export function isContentManifest(value: unknown): value is ContentManifest {
       (door) =>
         isRecord(door) &&
         typeof door.id === "string" &&
-        typeof door.label === "string",
+        typeof door.label === "string" &&
+        isRecord(door.entry) &&
+        typeof door.entry.lessonId === "string" &&
+        typeof door.entry.stepId === "string" &&
+        typeof door.entry.optionId === "string",
     ) &&
     Array.isArray(manifest.exploreDoors) &&
     manifest.exploreDoors.every(

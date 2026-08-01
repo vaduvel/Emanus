@@ -100,12 +100,14 @@ export function LessonPlayer({
   onComplete,
   onProgress,
   initialDraft,
+  initialChoices,
   submitting = false,
 }: {
   lesson: Lesson
   onComplete: (result: LessonResult) => void
   onProgress?: (draft: LessonDraft) => void
   initialDraft?: LessonDraft
+  initialChoices?: Record<string, string>
   submitting?: boolean
 }) {
   const { mainSteps, stepById } = useMemo(() => {
@@ -132,7 +134,10 @@ export function LessonPlayer({
     initialRevealed(initialDraft, stepById, mainSteps[0]),
   )
   const [mainIdx, setMainIdx] = useState(restoredMainIdx)
-  const [choices, setChoices] = useState(restoredAnswers.choicesMade)
+  const [choices, setChoices] = useState({
+    ...initialChoices,
+    ...restoredAnswers.choicesMade,
+  })
   const [multiChoices, setMultiChoices] = useState(restoredAnswers.multiChoicesMade)
   const [quizAnswers, setQuizAnswers] = useState(restoredAnswers.quizAnswers)
   const [checkIns, setCheckIns] = useState(restoredAnswers.checkIns)
@@ -149,6 +154,7 @@ export function LessonPlayer({
   const [safetyAccepted, setSafetyAccepted] = useState(!lesson.safety)
   const scrollRef = useRef<HTMLDivElement>(null)
   const completedRef = useRef(false)
+  const restoredChoicesHandledRef = useRef(new Set<string>())
 
   useEffect(() => {
     scrollRef.current?.scrollTo({
@@ -160,6 +166,13 @@ export function LessonPlayer({
   const current = revealed[revealed.length - 1]
   const inBranch = current ? !mainSteps.includes(current) : false
   const atLastMain = mainIdx >= mainSteps.length - 1
+  const visibleBubbleCount = current
+    ? bubbleCounts[current.id] ??
+      Math.min(1, current.bubbles?.length ?? 0)
+    : 0
+  const interactionReady = current
+    ? visibleBubbleCount >= (current.bubbles?.length ?? 0)
+    : false
 
   const answers = useMemo<LessonAnswers>(
     () => ({
@@ -305,6 +318,47 @@ export function LessonPlayer({
     submitting,
   ])
 
+  useEffect(() => {
+    if (
+      !current ||
+      current.type !== "choice" ||
+      !interactionReady ||
+      submitting ||
+      !safetyAccepted ||
+      restoredChoicesHandledRef.current.has(current.id)
+    ) {
+      return
+    }
+    const optionId = choices[current.id]
+    const option = current.choice?.options.find(
+      (candidate) => candidate.id === optionId,
+    )
+    if (!option) return
+
+    restoredChoicesHandledRef.current.add(current.id)
+    const branchStep = option.branchStepId
+      ? stepById.get(option.branchStepId)
+      : undefined
+    if (branchStep) {
+      setRevealed((steps) =>
+        steps.some((step) => step.id === branchStep.id)
+          ? steps
+          : [...steps, branchStep],
+      )
+      return
+    }
+    toNextMain({ ...answers, choicesMade: choices })
+  }, [
+    answers,
+    choices,
+    current,
+    interactionReady,
+    safetyAccepted,
+    stepById,
+    submitting,
+    toNextMain,
+  ])
+
   if (!safetyAccepted && lesson.safety) {
     return (
       <SafetyGate
@@ -321,11 +375,6 @@ export function LessonPlayer({
       </section>
     )
   }
-
-  const visibleBubbleCount =
-    bubbleCounts[current.id] ?? Math.min(1, current.bubbles?.length ?? 0)
-  const interactionReady =
-    visibleBubbleCount >= (current.bubbles?.length ?? 0)
 
   return (
     <section className="player">
@@ -542,7 +591,7 @@ function Turn({
         {step.choice?.prompt ? (
           <GuideMsg icon={MessageSquare} text={step.choice.prompt} />
         ) : null}
-        {picked ? (
+        {picked && interactionReady ? (
           <>
             <UserMsg text={picked.label} />
             {picked.feedback ? <GuideMsg text={picked.feedback} /> : null}

@@ -9,6 +9,7 @@ import {
   lessonDraft,
   plan,
   saveLessonDraft,
+  selectedDoorEntry,
 } from "./journey"
 import type { LessonDraft } from "./journey"
 import { navigate } from "./router"
@@ -157,12 +158,16 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
           updatedAt: new Date().toISOString(),
         }
       : undefined
+  const doorEntry = preview ? undefined : selectedDoorEntry(lesson.id)
 
   return (
     <LessonPlayer
       key={`${lesson.id}:${previewStepId ?? "start"}`}
       lesson={lesson}
       initialDraft={preview ? previewDraft : lessonDraft(lesson.id)}
+      initialChoices={
+        doorEntry ? { [doorEntry.stepId]: doorEntry.optionId } : undefined
+      }
       onProgress={
         preview ? undefined : (draft) => saveLessonDraft(lesson.id, draft)
       }

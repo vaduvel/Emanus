@@ -88,9 +88,10 @@ export async function pushState(s: JourneyState): Promise<boolean> {
   const uid = await ensureUser()
   if (!sb || !uid) return false
   try {
-    const { error: journeyError } = await sb.from("journey").upsert({
+    const journeyRow = {
       user_id: uid,
       seen_welcome: s.seenWelcome,
+      selected_door_id: s.selectedDoorId,
       path_id: s.pathId,
       lessons_done: s.lessonsDone,
       doctrine_done: s.doctrineDone,
@@ -99,7 +100,16 @@ export async function pushState(s: JourneyState): Promise<boolean> {
       path_completed_seen: s.pathCompletedSeen,
       course_progress: s.courseProgress,
       updated_at: new Date().toISOString(),
-    })
+    }
+    let { error: journeyError } = await sb.from("journey").upsert(journeyRow)
+    if (journeyError?.message.includes("selected_door_id")) {
+      const legacyJourneyRow = Object.fromEntries(
+        Object.entries(journeyRow).filter(([key]) => key !== "selected_door_id"),
+      )
+      journeyError = (
+        await sb.from("journey").upsert(legacyJourneyRow)
+      ).error
+    }
     if (journeyError) return false
 
     if (!(await deleteStaleRows("journal", "lesson_id", s.journal.map((item) => item.lessonId), uid))) {
@@ -154,6 +164,7 @@ export async function pullState(): Promise<JourneyState | null> {
     if (!j) return null
     return {
       seenWelcome: Boolean(j.seen_welcome),
+      selectedDoorId: (j.selected_door_id as string | null) ?? null,
       pathId: (j.path_id as string | null) ?? null,
       lessonsDone: Number(j.lessons_done ?? 0),
       doctrineDone: Number(j.doctrine_done ?? 0),

@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url"
 import { teensM1C1 } from "@emanus/shared"
 import { LIBRARY_LESSONS } from "@emanus/shared/library"
 import { mohlerNotForMe } from "@emanus/shared/lesson-mohler"
-import { PATHS } from "@emanus/shared/paths"
+import { DOOR_ENTRY_OPTIONS, PATHS } from "@emanus/shared/paths"
 import { STATIC_CONTENT_MANIFEST } from "@emanus/shared/content-catalog"
 import type { Lesson } from "@emanus/shared/domain"
 import { enrichLessonCollection } from "@emanus/shared/interaction-enrichment"
@@ -111,80 +111,6 @@ const REQUIRED_DOOR_PATHS = {
   respins_biserica: "path_impreuna",
   nou_venit: "path_impreuna",
 } as const
-const REQUIRED_DOOR_ENTRY_OPTIONS = {
-  rusine: { lessonId: "rusine_l1", stepId: "r1_3", optionId: "r1c_c" },
-  avort: { lessonId: "rusine_l5", stepId: "r5_ownership", optionId: "r5_own_action" },
-  infidelitate: {
-    lessonId: "rusine_l5",
-    stepId: "r5_ownership",
-    optionId: "r5_own_action",
-  },
-  prea_departe: { lessonId: "rusine_l1", stepId: "r1_3", optionId: "r1c_b" },
-  neiertare: {
-    lessonId: "neiertare_o1",
-    stepId: "o1_context",
-    optionId: "o1_context_harm",
-  },
-  divort: {
-    lessonId: "neiertare_o1",
-    stepId: "o1_context",
-    optionId: "o1_context_divorce",
-  },
-  doliu: { lessonId: "suferinta_l1", stepId: "sf1_focus", optionId: "sf1_loss" },
-  boala: {
-    lessonId: "suferinta_l1",
-    stepId: "sf1_focus",
-    optionId: "sf1_illness",
-  },
-  de_ce_permis: {
-    lessonId: "suferinta_l1",
-    stepId: "sf1_focus",
-    optionId: "sf1_why",
-  },
-  indoiala: {
-    lessonId: "doctrina_l1",
-    stepId: "d1_entry",
-    optionId: "d1_entry_exists",
-  },
-  biblia_inventata: {
-    lessonId: "doctrina_l1",
-    stepId: "d1_entry",
-    optionId: "d1_entry_bible",
-  },
-  alte_credinte: {
-    lessonId: "doctrina_l1",
-    stepId: "d1_entry",
-    optionId: "d1_entry_beliefs",
-  },
-  perete: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_a" },
-  nu_inteleg: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_c" },
-  uscaciune: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_b" },
-  flacara: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_b" },
-  cum_citesc: { lessonId: "aproape_l1", stepId: "a1_3", optionId: "a1c_c" },
-  dependenta: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_a" },
-  anxietate: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_b" },
-  recadere: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_a" },
-  pornografie: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_a" },
-  tristete: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_b" },
-  furie: { lessonId: "schimbare_l1", stepId: "s1_3", optionId: "s1c_c" },
-  merit: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_a" },
-  obisnuinta: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_b" },
-  frica_pedeapsa: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_c" },
-  epuizat_slujire: { lessonId: "har_l1", stepId: "h1_3", optionId: "h1c_d" },
-  singuratate: { lessonId: "impreuna_l1", stepId: "im1_3", optionId: "im1c_a" },
-  familie_respinge: {
-    lessonId: "impreuna_l1",
-    stepId: "im1_3",
-    optionId: "im1c_b",
-  },
-  respins_biserica: {
-    lessonId: "impreuna_l1",
-    stepId: "im1_3",
-    optionId: "im1c_c",
-  },
-  nou_venit: { lessonId: "impreuna_l1", stepId: "im1_3", optionId: "im1c_a" },
-} as const
-
 function validateLesson(lesson: Lesson): void {
   if (!lesson.id || !lesson.courseId || !lesson.title.trim()) {
     throw new Error("Lecție fără id, courseId sau titlu.")
@@ -310,7 +236,7 @@ for (const [doorId, pathId] of Object.entries(REQUIRED_DOOR_PATHS)) {
 if (
   Object.keys(REQUIRED_DOOR_PATHS).length !==
     STATIC_CONTENT_MANIFEST.doors.length ||
-  Object.keys(REQUIRED_DOOR_ENTRY_OPTIONS).length !==
+  Object.keys(DOOR_ENTRY_OPTIONS).length !==
     STATIC_CONTENT_MANIFEST.doors.length
 ) {
   throw new Error(
@@ -319,9 +245,17 @@ if (
 }
 
 for (const door of STATIC_CONTENT_MANIFEST.doors) {
-  const expected = REQUIRED_DOOR_ENTRY_OPTIONS[
-    door.id as keyof typeof REQUIRED_DOOR_ENTRY_OPTIONS
-  ]
+  const expected = DOOR_ENTRY_OPTIONS[door.id]
+  if (
+    !expected ||
+    door.entry?.lessonId !== expected.lessonId ||
+    door.entry.stepId !== expected.stepId ||
+    door.entry.optionId !== expected.optionId
+  ) {
+    throw new Error(
+      `Ușa ${door.id} nu publică exact alegerea editorială declarată.`,
+    )
+  }
   const lesson = expected ? lessons.get(expected.lessonId) : undefined
   const step = lesson?.steps.find(
     (candidate) => candidate.id === expected?.stepId,
