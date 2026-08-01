@@ -51,7 +51,7 @@ export const bisericaL1: Lesson = {
 export const bisericaL2: Lesson = {
   id: "biserica_l2", courseId: "doctrine_c3_biserica", order: 2,
   title: "O clădire sau oamenii?", estMinutes: 10,
-  anchorRefs: ["Matei 16:18", "1 Corinteni 12:12-14", "1 Petru 2:5"], memoryVerseRef: "1 Corinteni 12:27",
+  anchorRefs: ["Matei 16:18", "1 Corinteni 12:12-14", "1 Corinteni 12:27", "1 Petru 2:5"], memoryVerseRef: "1 Corinteni 12:27",
   steps: [
     { id: "bc2_1", type: "hook", order: 1, bubbles: [
       { from: "guide", text: "Spunem «mă duc la biserică» și arătăm spre o clădire. Noul Testament ar fi spus mai aproape de: «biserica se adună în locul acela»." },

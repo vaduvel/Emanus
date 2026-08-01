@@ -237,7 +237,7 @@ Transversale: **doctrina** (3 din ~22, `path_temelie`), **pildele** (20 de fise)
 5. ~~Cele 2 lectii de deschidere pentru C2 (M2 prin rana)~~ facut
 6. ~~C1, C4, C5, C6 si C7~~ facut
 7. ~~Traseul separat pentru doliu, boala si intrebarea "de ce?"~~ facut
-8. Revizie editoriala si doctrinara cu autor si validator numiti
+8. ~~Fundatia mecanica pentru revizie editoriala si doctrinara~~ facut: temeiuri biblice, porti de siguranta si gate-uri de review sunt validate la release; revizia umana continua
 9. Restul lectiilor de doctrina si Biblia explicata
 
 ---
@@ -254,6 +254,6 @@ Transversale: **doctrina** (3 din ~22, `path_temelie`), **pildele** (20 de fise)
 
 ## 10. Cine valideaza
 
-Continutul care ajunge la un om ranit nu poate ramane validat de o singura persoana. Fiecare lectie are **un autor** si **un validator de doctrina, cu nume**, inainte de publicare. Include: traducerea Bibliei folosita, subiectele disputate, standardul pentru afirmatii medicale si psihologice.
+Lectiile de baza sunt semnate **Emanus**, nu de o persoana care ar parea ca citeste jurnalul omului. Temeiurile, ramurile si siguranta sunt validate mecanic la fiecare release, iar revizia umana ramane obligatorie editorial.
 
-Aceasta decizie e inca deschisa si blocheaza scrierea in masa a lectiilor. Al doilea rol necesar, cine raspunde de siguranta, e definit in `docs/22-siguranta.md` §10.
+Cursurile cu risc ridicat declara in date `requiredReviews`. Ele pot fi scrise ca draft, dar nu se deschid si nu se publica `live` pana cand aprobarea reala apare in `approvedReviews`. Pentru doliu prin sinucidere sunt obligatorii cel putin revizia pastorala si clinica. Continutul creatorilor si responsabilul uman de safeguarding raman guvernate de `docs/22-siguranta.md` §10.

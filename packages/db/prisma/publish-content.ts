@@ -8,6 +8,10 @@ import { DOOR_ENTRY_OPTIONS, PATHS } from "@emanus/shared/paths"
 import { STATIC_CONTENT_MANIFEST } from "@emanus/shared/content-catalog"
 import type { Lesson } from "@emanus/shared/domain"
 import { enrichLessonCollection } from "@emanus/shared/interaction-enrichment"
+import {
+  LESSON_SAFETY_POLICIES,
+  lessonBiblicalAnchorErrors,
+} from "@emanus/shared/editorial-policy"
 
 config({ path: fileURLToPath(new URL("../../../.env", import.meta.url)) })
 
@@ -127,6 +131,18 @@ function validateLesson(lesson: Lesson): void {
   if (!lesson.steps.some((step) => WRITTEN_RESPONSE_TYPES.has(step.type))) {
     throw new Error(`Lecția ${lesson.id} nu are reflecție sau răspuns liber.`)
   }
+  const biblicalErrors = lessonBiblicalAnchorErrors(lesson)
+  if (biblicalErrors.length > 0) {
+    throw new Error(`Lecția ${lesson.id} ${biblicalErrors.join("; ")}.`)
+  }
+
+  const requiredSafety = LESSON_SAFETY_POLICIES[lesson.id]
+  if (requiredSafety && JSON.stringify(lesson.safety) !== JSON.stringify(requiredSafety)) {
+    throw new Error(`Lecția ${lesson.id} nu are poarta de siguranță editorială canonică.`)
+  }
+  if (lesson.safety && !requiredSafety) {
+    throw new Error(`Lecția ${lesson.id} are safety, dar lipsește din politica editorială explicită.`)
+  }
 
   const stepIds = new Set<string>()
   for (const step of lesson.steps) {
@@ -194,6 +210,12 @@ function validateLesson(lesson: Lesson): void {
 }
 
 for (const lesson of lessons.values()) validateLesson(lesson)
+
+for (const lessonId of Object.keys(LESSON_SAFETY_POLICIES)) {
+  if (!lessons.has(lessonId)) {
+    throw new Error(`Politica de siguranță indică lecția lipsă ${lessonId}.`)
+  }
+}
 
 for (const required of REQUIRED_EDITORIAL_BRANCHES) {
   const lesson = lessons.get(required.lessonId)
@@ -302,6 +324,20 @@ const referencedIds = new Set([
     shelf.courses.flatMap((course) => course.lessonIds),
   ),
 ])
+
+for (const shelf of STATIC_CONTENT_MANIFEST.shelves) {
+  for (const course of shelf.courses) {
+    const approved = new Set(course.approvedReviews ?? [])
+    const missing = (course.requiredReviews ?? []).filter(
+      (review) => !approved.has(review),
+    )
+    if (course.state === "live" && course.lessonIds.length > 0 && missing.length > 0) {
+      throw new Error(
+        `Cursul ${course.id} este live fără reviziile obligatorii: ${missing.join(", ")}.`,
+      )
+    }
+  }
+}
 
 for (const id of referencedIds) {
   if (!lessons.has(id)) {

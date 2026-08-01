@@ -49,7 +49,7 @@ export const rugInceputL7: Lesson = {
 export const rugInceputL8: Lesson = {
   id: "rug_inceput_l8", courseId: "lib_rug_inceput", order: 8,
   title: "Nu ne lăsa în ispită", estMinutes: 12,
-  anchorRefs: ["Matei 6:13", "Iacov 1:13-16", "1 Corinteni 10:12-13"], memoryVerseRef: "Matei 26:41",
+  anchorRefs: ["Matei 6:13", "Matei 26:41", "Iacov 1:13-16", "1 Corinteni 10:12-13"], memoryVerseRef: "Matei 26:41",
   steps: [
     { id: "ri8_1", type: "hook", order: 1, bubbles: [
       { from: "guide", text: "Iisus ne învață să cerem ajutor înainte să cădem, nu doar iertare după. Este rugăciunea omului care și-a recunoscut slăbiciunea." },

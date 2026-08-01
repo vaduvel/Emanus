@@ -308,7 +308,7 @@ export const fund_l6 = makeFoundationLesson({
 
 export const fund_l7 = makeFoundationLesson({
   id: "fund_l7", order: 7, title: "Poți spune da acum", minutes: 10,
-  refs: ["Romani 3:23", "Ioan 3:16", "Fapte 3:19", "Romani 10:9-10"], memoryRef: "Ioan 1:12",
+  refs: ["Romani 3:23", "Ioan 3:16", "Fapte 3:19", "Romani 10:9-10", "Ioan 1:12"], memoryRef: "Ioan 1:12",
   checkIn: "După ce ai parcurs până aici, unde ești față de Iisus?",
   hook: [
     "Nu există o formulă magică și nici o emoție obligatorie.",

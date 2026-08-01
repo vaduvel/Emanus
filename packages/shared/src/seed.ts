@@ -42,7 +42,7 @@ export const teensM1C1: SeedBundle = {
       order: 1,
       title: "Nu ești ce zic like-urile",
       estMinutes: 6,
-      anchorRefs: ["Geneza 1:27"],
+      anchorRefs: ["Geneza 1:27", "Psalm 139:14"],
       memoryVerseRef: "Psalm 139:14",
       badgeId: "badge_beyond_likes",
       steps: [
@@ -96,7 +96,7 @@ export const teensM1C1: SeedBundle = {
       order: 3,
       title: "Capcana comparației",
       estMinutes: 6,
-      anchorRefs: ["2 Corinteni 10:12"],
+      anchorRefs: ["2 Corinteni 10:12", "Galateni 6:4"],
       memoryVerseRef: "Galateni 6:4",
       badgeId: "badge_free_from_feed",
       steps: [
@@ -122,7 +122,7 @@ export const teensM1C1: SeedBundle = {
       order: 4,
       title: "Oglinda: cum mă văd",
       estMinutes: 6,
-      anchorRefs: ["1 Corinteni 6:19-20"],
+      anchorRefs: ["1 Corinteni 6:19-20", "Psalm 139:14"],
       memoryVerseRef: "Psalm 139:14",
       badgeId: "badge_temple_not_problem",
       steps: [
@@ -148,7 +148,7 @@ export const teensM1C1: SeedBundle = {
       order: 5,
       title: "Pentru ce exist?",
       estMinutes: 6,
-      anchorRefs: ["Efeseni 2:10"],
+      anchorRefs: ["Efeseni 2:10", "Ieremia 1:5"],
       memoryVerseRef: "Ieremia 1:5",
       badgeId: "badge_made_with_purpose",
       steps: [

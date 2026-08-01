@@ -1,4 +1,5 @@
 import type { ChoiceOption, Lesson, LessonStep } from "./domain.js"
+import { safetyPolicyForLesson } from "./editorialPolicy.js"
 
 export type LessonAgeHint = "0-5" | "6-11" | "12-18" | "adult" | "bunici"
 
@@ -179,6 +180,7 @@ function enrichLesson(
   lesson: Lesson,
   context: LessonInteractionContext,
 ): Lesson {
+  const safety = lesson.safety ?? safetyPolicyForLesson(lesson.id)
   const addsChoiceFeedback = lesson.steps.some((step) =>
     step.choice?.options.some(
       (option) => !option.feedback && !option.branchStepId,
@@ -226,6 +228,7 @@ function enrichLesson(
   if (generated.length === 0) {
     return {
       ...lesson,
+      ...(safety ? { safety } : {}),
       estMinutes: lesson.estMinutes + generatedMinutes,
       steps,
     }
@@ -243,6 +246,7 @@ function enrichLesson(
 
   return {
     ...lesson,
+    ...(safety ? { safety } : {}),
     estMinutes: lesson.estMinutes + generatedMinutes,
     steps: combined,
   }

@@ -25,7 +25,7 @@ Acestea sunt afirmațiile pe care Emanus le susține explicit și pe care orice 
 5. **Toți oamenii au păcătuit** și au nevoie de El. Nimeni nu e un caz special, în niciun sens. (Romani 3:23)
 6. **Iisus e singura cale către Tatăl.** (Ioan 14:6)
 7. **Scriptura e Cuvântul lui Dumnezeu** și autoritatea finală în orice lecție Emanus. Nicio experiență, viziune sau trăire nu o corectează.
-8. **Dumnezeu nu e autorul răului și nu ispitește pe nimeni.** (Iacov 1:13)
+8. **Dumnezeu nu ispitește pe nimeni la rău și nu poate fi făcut autorul moral al păcatului.** El rămâne suveran, poate disciplina și poate folosi suferința fără să devină autorul păcatului oamenilor. (Iacov 1:13; Evrei 12:5-11)
 9. **Dumnezeu îl caută pe om primul.** Neînțelegerea care ține oamenii la distanță nu e despre gravitatea păcatului, ci despre **caracterul** lui Dumnezeu.
 10. **Cine crede devine fiu — pe vecie**, și filiația nu depinde de ce simte dimineața următoare. (Ioan 1:12; Romani 8:15-16; Galateni 4:4-7)
 11. **Credința se trăiește în trup, cu alți oameni.** Aplicația nu înlocuiește o biserică locală și spune asta explicit.
@@ -63,9 +63,9 @@ Orice lecție, mesaj sau intervenție live care conține unul din punctele de ma
 
 1. **Promisiuni condiționate.** „Dacă faci X, Dumnezeu îți dă Y" — vindecare, bani, un partener, restaurarea unei căsnicii, un copil.
 2. **Teologia prosperității** în orice formă: sărăcia ca lipsă de credință, sămânța financiară, dărnicia ca investiție.
-3. **Boala, sărăcia sau nefericirea explicate ca pedeapsă** sau ca dovadă de credință slabă.
+3. **Diagnosticul cauzal inventat din boală, sărăcie sau tragedie.** Existența suferinței nu dovedește automat un păcat ascuns ori o credință slabă (Ioan 9:1-3; Luca 13:1-5). Când Scriptura și faptele cunoscute arată o legătură concretă între păcat și consecință sau disciplină, o numim direct și chemăm la pocăință (1 Corinteni 11:29-32; Ioan 5:14); aplicația nu completează însă ce Dumnezeu nu a descoperit.
 4. **Diagnostic spiritual la distanță.** „Ai un blestem", „ai un duh de…", „ai o legătură din familie" — spus cuiva pe care nu-l cunoști, printr-un ecran.
-5. **Sfat pastoral pe situații grave** dat într-o lecție: divorț, abuz, violență, sinucidere, tulburări psihice, dependențe, avort, tulburări de alimentație. Se pot **numi** ca durere; nu se **rezolvă** într-un text scris o dată pentru mii de oameni.
+5. **Verdict sau soluție individuală definitivă pe situații grave** dată printr-o lecție: divorț, abuz, violență, sinucidere, tulburări psihice, dependențe, avort, tulburări de alimentație. Lecția poate spune principiul biblic, poate numi păcatul, poate cere oprirea răului și poate trimite la protecție ori ajutor competent; nu pretinde că a evaluat cazul și nu înlocuiește intervenția reală.
 6. **Descurajarea ajutorului medical sau psihologic.** Niciodată „ai nevoie doar de rugăciune", niciodată sugestia de a opri un tratament.
 7. **Cerere de bani.** Nici pentru platformă, nici pentru creator, nici pentru o biserică, nici pentru o cauză. Emanus nu cere bani nimănui, pentru nimic.
 8. **Contact privat în afara aplicației.** Numere, conturi personale, grupuri paralele. **Interzis absolut către minori**, în orice context.
@@ -118,4 +118,4 @@ Carta se aplică și conținutului scris de echipa Emanus. Nu există excepții 
 
 ---
 
-*Documente legate:* `docs/07-sablon-curs-creatori.md` (formatul și validarea) · `docs/06-curs-fundamentul.md` (cursul zero și chemarea) · `docs/00-DIRECTIE.md` (teza).
+*Documente legate:* `docs/07-sablon-curs-creatori.md` (formatul și validarea) · `docs/06-curs-fundamentul.md` (cursul zero și chemarea) · `docs/22-siguranta.md` (cauzalitate, criză și safeguarding) · `docs/00-DIRECTIE.md` (teza).

@@ -39,6 +39,7 @@ export interface ContentDoor {
 }
 
 export type ContentCourseState = "live" | "partial" | "planned"
+export type ContentCourseReviewKind = "doctrinal" | "pastoral" | "clinical" | "safeguarding"
 
 export interface ContentCourse {
   id: string
@@ -49,6 +50,8 @@ export interface ContentCourse {
   state: ContentCourseState
   source?: string
   ageHint?: "0-5" | "6-11" | "12-18" | "adult" | "bunici"
+  requiredReviews?: ContentCourseReviewKind[]
+  approvedReviews?: ContentCourseReviewKind[]
   /** Rezumatele publice permit afișarea cursului și offline. */
   lessons?: ContentLessonSummary[]
 }
@@ -104,6 +107,12 @@ function isLessonSummary(value: unknown): value is ContentLessonSummary {
       (isRecord(value.memoryVerse) &&
         typeof value.memoryVerse.text === "string" &&
         typeof value.memoryVerse.ref === "string"))
+  )
+}
+
+function isCourseReviewKind(value: unknown): value is ContentCourseReviewKind {
+  return ["doctrinal", "pastoral", "clinical", "safeguarding"].includes(
+    String(value),
   )
 }
 
@@ -171,6 +180,12 @@ export function isContentManifest(value: unknown): value is ContentManifest {
           typeof course.forWhom === "string" &&
           Array.isArray(course.lessonIds) &&
           course.lessonIds.every((id) => typeof id === "string") &&
+          (course.requiredReviews === undefined ||
+            (Array.isArray(course.requiredReviews) &&
+              course.requiredReviews.every(isCourseReviewKind))) &&
+          (course.approvedReviews === undefined ||
+            (Array.isArray(course.approvedReviews) &&
+              course.approvedReviews.every(isCourseReviewKind))) &&
           (course.lessons === undefined ||
             (Array.isArray(course.lessons) && course.lessons.every(isLessonSummary))),
         ),
@@ -268,5 +283,9 @@ export function nextDoctrineLessonSummary(
 }
 
 export function contentCourseIsOpen(course: ContentCourse): boolean {
-  return course.lessonIds.length > 0
+  const approved = new Set(course.approvedReviews ?? [])
+  const reviewsComplete = (course.requiredReviews ?? []).every((review) =>
+    approved.has(review),
+  )
+  return course.state === "live" && course.lessonIds.length > 0 && reviewsComplete
 }

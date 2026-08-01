@@ -20,10 +20,13 @@ export * from "./pildeVesnicia.js"
 export * from "./pildeVesnicia2.js"
 
 export type CourseState = "live" | "partial" | "planned"
+export type CourseReviewKind = "doctrinal" | "pastoral" | "clinical" | "safeguarding"
 export type LibraryCourse = {
   id: string; title: string; forWhom: string; plannedLessons: number
   lessonIds: string[]; state: CourseState; source?: string
   ageHint?: "0-5" | "6-11" | "12-18" | "adult" | "bunici"
+  requiredReviews?: CourseReviewKind[]
+  approvedReviews?: CourseReviewKind[]
 }
 export type LibraryShelf = { id: string; title: string; blurb: string; courses: LibraryCourse[]; gated?: boolean }
 
@@ -90,7 +93,13 @@ export function visibleShelves(): LibraryShelf[] { return SHELVES.filter((s) => 
 export function getShelf(id: string): LibraryShelf | undefined { return SHELVES.find((s) => s.id === id) }
 export const ALL_LIBRARY_COURSES: LibraryCourse[] = SHELVES.flatMap((s) => s.courses)
 export function getLibraryCourse(id: string): LibraryCourse | undefined { return ALL_LIBRARY_COURSES.find((x) => x.id === id) }
-export function courseIsOpen(course: LibraryCourse): boolean { return course.lessonIds.length > 0 }
+export function missingCourseReviews(course: LibraryCourse): CourseReviewKind[] {
+  const approved = new Set(course.approvedReviews ?? [])
+  return (course.requiredReviews ?? []).filter((review) => !approved.has(review))
+}
+export function courseIsOpen(course: LibraryCourse): boolean {
+  return course.state === "live" && course.lessonIds.length > 0 && missingCourseReviews(course).length === 0
+}
 export function nextCourseLesson(course: LibraryCourse, lessonsDone: string[]): string | null { return course.lessonIds.find((id) => !lessonsDone.includes(id)) ?? null }
 
 export const LIBRARY_LESSONS: Lesson[] = [

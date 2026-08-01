@@ -239,7 +239,8 @@ O lectie nu intra in cod daca nu trece toate liniile:
 
 - [ ] Nu pune vina pe om pentru un simptom care poate fi medical.
 - [ ] Nu cere iertare ca pretext pentru intoarcere in pericol.
-- [ ] Are avertisment separat daca atinge abuz, violenta, dependenta, autovatamare.
+- [ ] Are avertisment separat daca atinge abuz, violenta, dependenta, depresie, autovatamare, agresiune sexuala, avort sau doliu prin sinucidere.
+- [ ] Daca subiectul cere revizie umana specializata, cursul declara `requiredReviews` si nu este `live` pana cand aprobarea reala exista in `approvedReviews`.
 - [ ] Nu cere date personale.
 - [ ] Nu promite rezultat.
 - [ ] Niciun verset citat gol; niciun cuvant de biserica neexplicat.

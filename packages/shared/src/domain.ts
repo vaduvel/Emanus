@@ -41,6 +41,16 @@ export type LessonStepType =
 
 export type MediaKind = "chat" | "video" | "audio" | "animation"
 
+export type LessonSafetyTopic =
+  | "abuse"
+  | "violence"
+  | "dependency"
+  | "self_harm"
+  | "mental_health"
+  | "sexual_violence"
+  | "pregnancy_loss"
+  | "suicide_loss"
+
 export interface CategoryConfig {
   tone: string
   bubbleMaxChars: number
@@ -90,7 +100,7 @@ export interface Lesson {
   memoryVerseRef: string
   badgeId?: string
   safety?: {
-    topic: "abuse" | "violence" | "dependency" | "self_harm" | "mental_health"
+    topic: LessonSafetyTopic
     notice: string
   }
   steps: LessonStep[]
