@@ -1,7 +1,7 @@
 // Devoțional, luna 6: „Ai tăi și singurătatea” (docs/27 §2.4, axa relationships).
 //
 // Regula lunii: singurătatea nu se rezolvă cu îndemnul „ieși mai mult între
-// oameni”. Zilele merg pe două fire care se îmletesc: oamenii pe care Dumnezeu
+// oameni”. Zilele merg pe două fire care se împletesc: oamenii pe care Dumnezeu
 // ți-i dă și prezența Lui în zilele când nu e nimeni. Nicăieri nu se sugerează că
 // un om singur ar fi un om mai puțin iubit.
 //
@@ -43,7 +43,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Eclesiastul 4:9-10",
-    verseText: "Mai bine doi decât unul... Căci, dacă se îmtimplă să cadă, se ridică unul pe altul; dar vai de cine este singur și cade, fără să aibă pe altul care să-l ridice!",
+    verseText: "Mai bine doi decât unul... Căci, dacă se întâmplă să cadă, se ridică unul pe altul; dar vai de cine este singur și cade, fără să aibă pe altul care să-l ridice!",
     meditation:
       "Textul nu spune că doi nu cad. Spune că unul singur rămâne jos. De aceea oamenii nu-ți trebuie ca să nu greșești, ci pentru ziua în care ai greșit deja.",
     question: "Cine ar ști, în 24 de ore, dacă ai cădea?",
@@ -123,7 +123,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     verseRef: "Iov 2:13",
     verseText: "Și au șezut pe pământ lângă el șapte zile și șapte nopți, fără să-i spună o vorbă, căci vedeau cât de mare îi este durerea.",
     meditation:
-      "Prietenii lui Iov au fost desavârșiți șapte zile: au tăcut. Necazul a început când au deschis gura ca să explice suferința. Cel mai bun lucru pe care îl poți face pentru un om lovit e să stai jos lângă el.",
+      "Prietenii lui Iov au fost desăvârșiți șapte zile: au tăcut. Necazul a început când au deschis gura ca să explice suferința. Cel mai bun lucru pe care îl poți face pentru un om lovit e să stai jos lângă el.",
     question: "Te grăbești să explici sau poți să stai în tăcere?",
     prayer: "Doamne, învață-mă să tac lângă cei care suferă. Amin.",
     step: "Stai azi cu cineva la greu fără să-i dai niciun sfat.",
@@ -199,7 +199,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Fapte 2:46",
-    verseText: "Toti împreună, în fiecare zi, stăruiau în Templu, frângeau pâinea acasă și luau hrana cu bucurie și curăție de inimă.",
+    verseText: "Toți împreună, în fiecare zi, stăruiau în Templu, frângeau pâinea acasă și luau hrana cu bucurie și curăție de inimă.",
     meditation:
       "Biserica de la început a crescut între două locuri: Templul și bucătăria. Nu totul se petrece în adunări mari; mult din viața creștină se întâmplă la o masă, cu oameni care nu se grăbesc.",
     question: "Când ai avut ultima dată pe cineva la masă, fără ocazie specială?",
@@ -227,7 +227,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     verseRef: "Romani 12:15",
     verseText: "Bucurați-vă cu cei ce se bucură; plângeți cu cei ce plâng.",
     meditation:
-      "Amintirea e în două direcții și nu știu care e mai grea. Să plângi cu cineva cere timp; să te bucuri cu cineva cere să nu fii invidios. Cine reușește amândouă e un om rar.",
+      "Îndemnul e în două direcții și nu știu care e mai grea. Să plângi cu cineva cere timp; să te bucuri cu cineva cere să nu fii invidios. Cine reușește amândouă e un om rar.",
     question: "Care îți vine mai greu: plânsul cu cineva sau bucuria pentru cineva?",
     prayer: "Doamne, dă-mi o inimă care ține pasul cu inimile altora. Amin.",
     step: "Sună azi pe cineva care sărbătorește ceva și pe cineva care jelește ceva.",
@@ -277,7 +277,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Psalmul 25:16",
-    verseText: "Întoarce-Ti Fața spre mine și ai milă de mine, căci sunt părăsit și nenorocit.",
+    verseText: "Întoarce-Ți Fața spre mine și ai milă de mine, căci sunt părăsit și nenorocit.",
     meditation:
       "Biblia nu-i cere omului singur să se prefacă bine. David își spune starea pe nume și o pune înaintea lui Dumnezeu. E o rugăciune scurtă, pe care o poți ține minte pentru serile grele.",
     question: "Ai spus vreodată în rugăciune, exact așa: „sunt singur”?",
@@ -292,7 +292,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     verseRef: "Psalmul 142:4",
     verseText: "Aruncă-ți ochii la dreapta și privește! Nimeni nu mă mai cunoaște, orice scăpare este pierdută pentru mine, nimănui nu-i pasă de sufletul meu.",
     meditation:
-      "Psalmul a fost scris într-o peșteră. Faptul că stă în Biblie înseamnă că Dumnezeu a păstrat intenționat, în cartea Lui, propoziția „nimănui nu-i pasă de sufletul meu”. Nu ți se cere să o cenșurezi când o simți.",
+      "Psalmul a fost scris într-o peșteră. Faptul că stă în Biblie înseamnă că Dumnezeu a păstrat intenționat, în cartea Lui, propoziția „nimănui nu-i pasă de sufletul meu”. Nu ți se cere să o cenzurezi când o simți.",
     question: "Ce ai spune dacă ai avea voie să fii complet sincer cu Dumnezeu?",
     prayer: "Doamne, Îți spun tot, chiar și partea urâtă. Amin.",
     step: "Scrie azi o rugăciune necenzurată. Nu o citește nimeni în afară de El.",
@@ -307,7 +307,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     meditation:
       "Pavel scrie asta la sfârșitul vieții, după zeci de ani de slujire și sute de oameni ajutați. Chiar și așa, a existat o zi în care n-a venit nimeni. Și tot atunci a învățat că Cineva stă lângă tine exact când nu mai stă nimeni.",
     question: "Unde a fost Dumnezeu în cea mai singură zi a ta?",
-    prayer: "Doamne, mulțumesc că ai fost lângă mine când nu Știam. Amin.",
+    prayer: "Doamne, mulțumesc că ai fost lângă mine când nu știam. Amin.",
     step: "Amintește-ți o zi grea din trecut și caută un semn că nu ai fost singur.",
   },
   {
@@ -344,9 +344,9 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     verseRef: "Evrei 13:5",
     verseText: "Căci El Însuși a zis: „Nicidecum n-am să te las, cu niciun chip nu te voi părăsi.”",
     meditation:
-      "În original, negațiile se îngrămădesc — e cea mai apasată promisiune de acest fel din Noul Testament. Oamenii pleacă, uneori fără vina lor: se mută, se sting, se schimbă. Promisiunea asta e făcută de Cineva care nu are cum să plece.",
-    question: "Pe cine ai pierdut și te temi că Și El va pleca la fel?",
-    prayer: "Doamne, Tu nu pleci. Îmi lipește inima de promisiunea asta. Amin.",
+      "În original, negațiile se îngrămădesc — e cea mai apăsată promisiune de acest fel din Noul Testament. Oamenii pleacă, uneori fără vina lor: se mută, se sting, se schimbă. Promisiunea asta e făcută de Cineva care nu are cum să plece.",
+    question: "Pe cine ai pierdut și te temi că și El va pleca la fel?",
+    prayer: "Doamne, Tu nu pleci. Îmi lipesc inima de promisiunea asta. Amin.",
     step: "Învață azi versetul pe de rost. Are opt cuvinte care țin.",
   },
   {
@@ -370,7 +370,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     verseRef: "Isaia 41:9",
     verseText: "Tu ești robul Meu, te aleg și nu te lepăd!",
     meditation:
-      "Sunt oameni care poartă toată viața senzația că au fost alegăi ultimii. Versetul ăsta răstoarnă ordinea: Dumnezeu alege primul și nu retrage alegerea. Nu ești tolerat în familia Lui; ești dorit.",
+      "Sunt oameni care poartă toată viața senzația că au fost aleși ultimii. Versetul ăsta răstoarnă ordinea: Dumnezeu alege primul și nu retrage alegerea. Nu ești tolerat în familia Lui; ești dorit.",
     question: "Te-ai simțit vreodată ales ultimul?",
     prayer: "Doamne, mulțumesc că m-ai ales și nu mă lepezi. Amin.",
     step: "Scrie versetul ăsta și pune-l unde te îmbraci dimineața.",
@@ -394,7 +394,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Efeseni 2:19",
-    verseText: "Așadar, voi nu mai sunteți nici străini, nici oaspeți ai casei, ci sunteți îmreună-cetățeni cu sfinții, oameni din casa lui Dumnezeu.",
+    verseText: "Așadar, voi nu mai sunteți nici străini, nici oaspeți ai casei, ci sunteți împreună-cetățeni cu sfinții, oameni din casa lui Dumnezeu.",
     meditation:
       "S-a încheiat jumătate de an. Versetul spune trei lucruri: nu ești străin, nu ești musafir, ești de-al casei. Un musafir se poartă frumos și pleacă; un om al casei rămâne și când e dezordine. De luna viitoare vorbim despre rugăciune — limba în care se vorbește în casa asta.",
     question: "Te porți ca un musafir sau ca un om de-al casei?",
