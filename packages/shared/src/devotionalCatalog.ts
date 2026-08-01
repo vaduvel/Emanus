@@ -10,12 +10,14 @@
 import { DEVOTIONAL_DAYS, type DevotionalDay } from "./devotional.js"
 import { DEVOTIONAL_DAYS_LUNA_2 } from "./devotional-luna-02.js"
 import { DEVOTIONAL_DAYS_LUNA_3 } from "./devotional-luna-03.js"
+import { DEVOTIONAL_DAYS_LUNA_4 } from "./devotional-luna-04.js"
 
 /** Toate zilele scrise până acum, sortate după numărul zilei. */
 export const DEVOTIONAL_DAYS_ALL: DevotionalDay[] = [
   ...DEVOTIONAL_DAYS,
   ...DEVOTIONAL_DAYS_LUNA_2,
   ...DEVOTIONAL_DAYS_LUNA_3,
+  ...DEVOTIONAL_DAYS_LUNA_4,
 ].sort((a, b) => a.dayNumber - b.dayNumber)
 
 export function devotionalDay(dayNumber: number): DevotionalDay | null {
