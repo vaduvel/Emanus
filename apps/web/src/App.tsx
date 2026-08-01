@@ -86,7 +86,7 @@ export default function App() {
   if (route.name === "ds") {
     screen = <Gallery />
   } else if (route.name === "crisis") {
-    screen = <Crisis onBack={() => navigate("/")} />
+    screen = <Crisis intents={route.intents} onBack={() => navigate("/")} />
   } else if (isLessonPreview && route.name === "lesson") {
     screen = (
       <main className="app route-anim">

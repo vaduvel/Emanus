@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
-import { BookOpen, Search } from "lucide-react"
+import { BookOpen, Phone, Search, ShieldAlert } from "lucide-react"
 import { contentManifest, visibleContentShelves } from "../content"
+import { crisisPath, detectCrisisIntents } from "../crisisResources"
 import { navigate } from "../router"
 
 const SUGGESTIONS = [
@@ -85,6 +86,8 @@ export function Ask({ despre }: { despre?: string }) {
       .filter((resource) => resource.searchText.includes(term) || (words.length > 0 && words.every((word) => resource.searchText.includes(word))))
       .sort((a, b) => Number(b.id === preferredId) - Number(a.id === preferredId))
   }, [query, resources])
+  const crisisIntents = useMemo(() => detectCrisisIntents(query), [query])
+  const needsImmediateHelp = crisisIntents.length > 0
 
   function openCourse(resource: SearchResult) {
     const first = resource.lessonIds[0]
@@ -107,8 +110,29 @@ export function Ask({ despre }: { despre?: string }) {
         </div>
       </label>
       {!query ? <div className="ask-screen__suggestions" aria-label="Întrebări frecvente">{SUGGESTIONS.map((suggestion) => <button key={suggestion} type="button" className="ghost" onClick={() => setQuery(suggestion)}>{suggestion}</button>)}</div> : null}
-      {query && results.length > 0 ? <div className="ask-screen__results"><p className="today__kicker">Răspunsuri găsite</p>{results.slice(0, 12).map((resource) => <button key={resource.id} type="button" className="tile ask-result" disabled={resource.lessonIds.length === 0} onClick={() => openCourse(resource)}><BookOpen size={19} aria-hidden /><span><strong>{resource.title}</strong><small>{resource.forWhom}</small></span></button>)}</div> : null}
-      {query && results.length === 0 ? <div className="tile ask-screen__empty"><h2>Nu avem încă un răspuns verificat</h2><p className="muted">Nu trimitem întrebarea nimănui și nu generăm automat un răspuns spiritual.</p></div> : null}
+      {needsImmediateHelp ? (
+        <div className="ask-screen__safety" role="alert">
+          <ShieldAlert size={22} aria-hidden />
+          <div>
+            <h2>Înaintea oricărui curs, caută ajutor direct</h2>
+            <p>
+              Mesajul tău poate descrie un pericol real. Emanus nu pune un diagnostic și nu înlocuiește
+              intervenția de urgență. Dacă pericolul este imediat, sună acum la 112.
+            </p>
+          </div>
+          <div className="ask-screen__safety-actions">
+            <a className="ask-screen__call" href="tel:112">
+              <Phone size={17} aria-hidden />
+              Sună 112
+            </a>
+            <button type="button" className="ghost" onClick={() => navigate(crisisPath(crisisIntents))}>
+              Vezi ajutorul potrivit situației
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {query && !needsImmediateHelp && results.length > 0 ? <div className="ask-screen__results"><p className="today__kicker">Răspunsuri găsite</p>{results.slice(0, 12).map((resource) => <button key={resource.id} type="button" className="tile ask-result" disabled={resource.lessonIds.length === 0} onClick={() => openCourse(resource)}><BookOpen size={19} aria-hidden /><span><strong>{resource.title}</strong><small>{resource.forWhom}</small></span></button>)}</div> : null}
+      {query && !needsImmediateHelp && results.length === 0 ? <div className="tile ask-screen__empty"><h2>Nu avem încă un răspuns verificat</h2><p className="muted">Nu trimitem întrebarea nimănui și nu generăm automat un răspuns spiritual.</p></div> : null}
     </section>
   )
 }

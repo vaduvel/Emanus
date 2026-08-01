@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { parseCrisisIntents, type CrisisIntent } from "./crisisResources"
 
 export type Route =
   | { name: "today" }
@@ -12,7 +13,7 @@ export type Route =
   | { name: "prayers" }
   | { name: "profile" }
   | { name: "pathend" }
-  | { name: "crisis" }
+  | { name: "crisis"; intents: CrisisIntent[] }
   | { name: "ds" }
   | { name: "lesson"; id?: string }
 
@@ -43,7 +44,9 @@ export function parseRoute(): Route {
   if (path === "/rugaciuni") return { name: "prayers" }
   if (path === "/eu") return { name: "profile" }
   if (path === "/final") return { name: "pathend" }
-  if (path === "/criza" || path === "/crisis") return { name: "crisis" }
+  if (path === "/criza" || path === "/crisis") {
+    return { name: "crisis", intents: parseCrisisIntents(new URLSearchParams(query).get("motiv")) }
+  }
   if (path === "/ds") return { name: "ds" }
   return { name: "today" }
 }
