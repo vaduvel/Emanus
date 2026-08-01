@@ -19,6 +19,9 @@ const LessonView = lazy(() =>
 const Library = lazy(() =>
   import("./screens/Library").then((module) => ({ default: module.Library })),
 )
+const Course = lazy(() =>
+  import("./screens/Course").then((module) => ({ default: module.Course })),
+)
 const PathEnd = lazy(() =>
   import("./screens/PathEnd").then((module) => ({ default: module.PathEnd })),
 )
@@ -115,6 +118,12 @@ export default function App() {
     screen = (
       <TabbedScreen active="bible">
         <Library />
+      </TabbedScreen>
+    )
+  } else if (route.name === "course") {
+    screen = (
+      <TabbedScreen active="bible">
+        <Course courseId={route.id} />
       </TabbedScreen>
     )
   } else if (route.name === "bible") {

@@ -6,6 +6,7 @@ export type Route =
   | { name: "bible" }
   | { name: "bibleChapter"; bookId: string; chapter: number }
   | { name: "library" }
+  | { name: "course"; id?: string }
   | { name: "ask"; despre?: string }
   | { name: "people" }
   | { name: "prayers" }
@@ -30,6 +31,9 @@ export function parseRoute(): Route {
   }
   if (path === "/biblia") return { name: "bible" }
   if (path === "/biblioteca") return { name: "library" }
+  if (path.startsWith("/curs/")) {
+    return { name: "course", id: decodeURIComponent(path.slice("/curs/".length)) }
+  }
   if (path === "/intreaba") {
     const despre = new URLSearchParams(query).get("despre")
     return despre ? { name: "ask", despre } : { name: "ask" }

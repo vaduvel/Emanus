@@ -44,6 +44,8 @@ export interface ContentCourse {
   state: ContentCourseState
   source?: string
   ageHint?: "0-5" | "6-11" | "12-18" | "adult" | "bunici"
+  /** Rezumatele publice permit afișarea cursului și offline. */
+  lessons?: ContentLessonSummary[]
 }
 
 export interface ContentShelf {
@@ -156,10 +158,12 @@ export function isContentManifest(value: unknown): value is ContentManifest {
           (course) =>
             isRecord(course) &&
             typeof course.id === "string" &&
-            typeof course.title === "string" &&
-            typeof course.forWhom === "string" &&
-            Array.isArray(course.lessonIds) &&
-            course.lessonIds.every((id) => typeof id === "string"),
+          typeof course.title === "string" &&
+          typeof course.forWhom === "string" &&
+          Array.isArray(course.lessonIds) &&
+          course.lessonIds.every((id) => typeof id === "string") &&
+          (course.lessons === undefined ||
+            (Array.isArray(course.lessons) && course.lessons.every(isLessonSummary))),
         ),
     )
   )

@@ -7,8 +7,7 @@ import "../library.css"
 
 function Course({ course }: { course: ContentCourse }) {
   const open = courseIsOpen(course)
-  const first = course.lessonIds[0]
-  return <button type="button" className={open ? "libcourse" : "libcourse libcourse--soon"} disabled={!open} onClick={() => { if (open && first) navigate(`/lesson/${first}`) }}>
+  return <button type="button" className={open ? "libcourse" : "libcourse libcourse--soon"} disabled={!open} onClick={() => { if (open) navigate(`/curs/${encodeURIComponent(course.id)}`) }}>
     <span className="libcourse__main"><span className="libcourse__title">{course.title}</span><span className="libcourse__for">{course.forWhom}</span>{!open && <span className="libcourse__soon">Se scrie</span>}</span>
     {open && <ChevronRight size={18} strokeWidth={1.8} aria-hidden />}
   </button>

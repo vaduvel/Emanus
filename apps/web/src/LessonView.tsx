@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import type { Lesson } from "@emanus/shared/domain"
-import { loadLesson } from "./content"
+import { contentCourseForLesson, loadLesson } from "./content"
 import { LessonPlayer } from "./LessonPlayer"
 import type { LessonResult } from "./LessonPlayer"
 import {
   completeLesson,
+  courseLessonsDone,
   lessonDraft,
   plan,
   saveLessonDraft,
@@ -94,32 +95,49 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
 
   function onComplete(result: LessonResult) {
     if (!lesson) return
-    if (!preview) completeLesson(lesson.id, result)
+    if (!preview) completeLesson(lesson.id, result, contentCourseForLesson(lesson.id)?.id)
     setDone(true)
   }
 
   if (done) {
+    const course = contentCourseForLesson(lesson.id)
+    const nextCourseLesson = course?.lessonIds.find(
+      (id) => !courseLessonsDone(course.id).includes(id),
+    )
+    const courseFinished = Boolean(course && !nextCourseLesson)
     const next = plan()
     const finished = next?.kind === "path_complete"
     return (
       <section className="player player--done player--status">
         <div className="tile">
-          <p className="player__eyebrow">Pentru azi este destul</p>
+          <p className="player__eyebrow">{course ? "Lecție parcursă" : "Pentru azi este destul"}</p>
           <h2>Conversația rămâne cu tine</h2>
           <p>
             Nu primești puncte și nu pierzi nimic dacă iei o pauză. Important
             este pasul pe care l-ai înțeles și îl poți trăi.
           </p>
           <p className="muted">
-            {finished
+            {course
+              ? courseFinished
+                ? "Ai ajuns la capătul acestui curs."
+                : "Următoarea lecție din curs este pregătită când alegi să continui."
+              : finished
               ? "Ai ajuns la capătul acestui drum."
               : "Următoarea zi este pentru practică, nu pentru încă o lecție."}
           </p>
           <button
             type="button"
-            onClick={() => navigate(finished ? "/final" : "/")}
+            onClick={() =>
+              navigate(
+                course
+                  ? `/curs/${encodeURIComponent(course.id)}`
+                  : finished
+                    ? "/final"
+                    : "/",
+              )
+            }
           >
-            {finished ? "Vezi ce urmează" : "Înapoi la Azi"}
+            {course ? "Înapoi la curs" : finished ? "Vezi ce urmează" : "Înapoi la Azi"}
           </button>
         </div>
       </section>

@@ -110,6 +110,7 @@ export async function pullState(): Promise<JourneyState | null> {
       lastLessonDate: (j.last_lesson_date as string | null) ?? null,
       prayerInviteSeen: Boolean(j.prayer_invite_seen),
       pathCompletedSeen: Boolean(j.path_completed_seen),
+      courseProgress: {},
       lessonResponses: {},
       lessonDrafts: {},
       journal: (jr ?? []).map((r) => ({

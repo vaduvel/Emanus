@@ -67,6 +67,8 @@ export interface JourneyState {
   lessonDrafts: Record<string, LessonDraft>
   /** Marcat când omul a văzut ecranul de final de parcurs. */
   pathCompletedSeen: boolean
+  /** Lecțiile terminate în cursurile bibliotecii, grupate pe curs. */
+  courseProgress: Record<string, string[]>
 }
 
 const EMPTY: JourneyState = {
@@ -81,6 +83,7 @@ const EMPTY: JourneyState = {
   lessonResponses: {},
   lessonDrafts: {},
   pathCompletedSeen: false,
+  courseProgress: {},
 }
 
 export function today(): string {
@@ -123,7 +126,12 @@ function save(s: JourneyState): JourneyState {
 }
 
 function isEmpty(s: JourneyState): boolean {
-  return s.pathId === null && s.journal.length === 0 && s.prayers.length === 0
+  return (
+    s.pathId === null &&
+    s.journal.length === 0 &&
+    s.prayers.length === 0 &&
+    Object.keys(s.courseProgress).length === 0
+  )
 }
 
 /**
@@ -210,8 +218,17 @@ export function lessonDraft(lessonId: string): LessonDraft | undefined {
   return load().lessonDrafts[lessonId]
 }
 
-export function completeLesson(lessonId: string, answers: LessonAnswers): JourneyState {
+export function courseLessonsDone(courseId: string): string[] {
+  return load().courseProgress[courseId] ?? []
+}
+
+export function completeLesson(
+  lessonId: string,
+  answers: LessonAnswers,
+  courseId?: string,
+): JourneyState {
   const s = load()
+  const alreadyCompleted = Boolean(s.lessonResponses[lessonId])
   const journalText = Object.values(answers.textResponses)
     .map((text) => text.trim())
     .filter(Boolean)
@@ -225,16 +242,23 @@ export function completeLesson(lessonId: string, answers: LessonAnswers): Journe
     ...s.lessonResponses,
     [lessonId]: { ...answers, completedAt: new Date().toISOString() },
   }
+  const completedInCourse = courseId
+    ? Array.from(new Set([...(s.courseProgress[courseId] ?? []), lessonId]))
+    : undefined
+  const courseProgress = completedInCourse && courseId
+    ? { ...s.courseProgress, [courseId]: completedInCourse }
+    : s.courseProgress
 
   // Doctrina făcută ca supliment nu consumă ziua și nu avansează parcursul personal.
   // Excepție: pe drumul "De la zero", aceleași lecții sunt chiar parcursul.
   if (lessonId.startsWith("doctrina_") && s.pathId !== "path_temelie") {
     return save({
       ...s,
-      doctrineDone: s.doctrineDone + 1,
+      doctrineDone: alreadyCompleted ? s.doctrineDone : s.doctrineDone + 1,
       journal,
       lessonDrafts,
       lessonResponses,
+      courseProgress,
     })
   }
 
@@ -245,6 +269,7 @@ export function completeLesson(lessonId: string, answers: LessonAnswers): Journe
       journal,
       lessonDrafts,
       lessonResponses,
+      courseProgress,
     })
   }
 
@@ -255,6 +280,7 @@ export function completeLesson(lessonId: string, answers: LessonAnswers): Journe
     journal,
     lessonDrafts,
     lessonResponses,
+    courseProgress,
   })
 }
 
@@ -293,6 +319,7 @@ export function resetJourney(): void {
     prayerInviteSeen: s.prayerInviteSeen,
     prayers: s.prayers,
     journal: s.journal,
+    courseProgress: s.courseProgress,
   })
 }
 

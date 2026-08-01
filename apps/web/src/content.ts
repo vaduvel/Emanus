@@ -135,6 +135,19 @@ export function visibleContentShelves(): ContentShelf[] {
   return activeManifest.shelves.filter((shelf) => !shelf.gated)
 }
 
+export function contentCourse(courseId: string | null | undefined): ContentCourse | undefined {
+  if (!courseId) return undefined
+  return activeManifest.shelves
+    .flatMap((shelf) => shelf.courses)
+    .find((course) => course.id === courseId)
+}
+
+export function contentCourseForLesson(lessonId: string): ContentCourse | undefined {
+  return activeManifest.shelves
+    .flatMap((shelf) => shelf.courses)
+    .find((course) => course.lessonIds.includes(lessonId))
+}
+
 export function courseIsOpen(course: ContentCourse): boolean {
   return contentCourseIsOpen(course)
 }

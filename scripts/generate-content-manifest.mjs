@@ -81,7 +81,13 @@ const payload = {
     title: shelf.title,
     blurb: shelf.blurb,
     gated: shelf.gated ?? false,
-    courses: shelf.courses,
+    courses: shelf.courses.map((course) => ({
+      ...course,
+      lessons: course.lessonIds
+        .map((lessonId) => versionedLessons.get(lessonId))
+        .filter(Boolean)
+        .map(lessonSummary),
+    })),
   })),
 }
 
