@@ -1,0 +1,32 @@
+name: Aduce observatiile din studiul lui Nolan
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/nolan-geneza.py"
+      - ".github/workflows/nolan.yml"
+  workflow_dispatch:
+
+jobs:
+  aplica:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aplica observatiile
+        run: python3 scripts/nolan-geneza.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "feat(biblia): observatiile din studiul lui Nolan in Geneza 1"
+            git push
+          else
+            echo "Nimic de schimbat."
+          fi
