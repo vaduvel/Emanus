@@ -1366,13 +1366,87 @@ export const GENERATED_CONTENT_MANIFEST = {
         },
         {
           "id": "lib_intoarcerea",
-          "title": "Întoarcerea",
-          "forWhom": "Ai înțeles că ceva nu e în ordine și vrei să știi ce faci mai departe.",
-          "plannedLessons": 5,
-          "lessonIds": [],
-          "state": "planned",
-          "source": "docs/17-modul-intoarcerea.md",
-          "lessons": []
+          "title": "Pocăință, mărturisire și reparare",
+          "forWhom": "Ai înțeles că ceva nu e în ordine și vrei să numești păcatul, să-l oprești și să repari ce se poate.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "pocainta_l1",
+            "pocainta_l2",
+            "pocainta_l3",
+            "pocainta_l4",
+            "pocainta_l5",
+            "pocainta_l6"
+          ],
+          "state": "live",
+          "source": "docs/17-modul-intoarcerea.md; Luca 3:8; Luca 19:8",
+          "lessons": [
+            {
+              "id": "pocainta_l1",
+              "courseId": "lib_intoarcerea",
+              "order": 1,
+              "title": "Pocăință, remușcare sau rușine?",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Întristarea după voia lui Dumnezeu aduce o pocăință care duce la mântuire.",
+                "ref": "2 Corinteni 7:10"
+              }
+            },
+            {
+              "id": "pocainta_l2",
+              "courseId": "lib_intoarcerea",
+              "order": 2,
+              "title": "Numește păcatul fără eufemisme",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cine își mărturisește și se lasă de păcat capătă îndurare.",
+                "ref": "Proverbe 28:13"
+              }
+            },
+            {
+              "id": "pocainta_l3",
+              "courseId": "lib_intoarcerea",
+              "order": 3,
+              "title": "Cui mărturisești și ce nu expui",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Mărturisiți-vă unii altora păcatele și rugați-vă unii pentru alții.",
+                "ref": "Iacov 5:16"
+              }
+            },
+            {
+              "id": "pocainta_l4",
+              "courseId": "lib_intoarcerea",
+              "order": 4,
+              "title": "Lasă păcatul și taie-i provizia",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nu purtați grijă de firea pământească pentru ca să-i treziți poftele.",
+                "ref": "Romani 13:14"
+              }
+            },
+            {
+              "id": "pocainta_l5",
+              "courseId": "lib_intoarcerea",
+              "order": 5,
+              "title": "Reparare și restituire",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dacă am nedreptățit pe cineva cu ceva, îi dau înapoi împătrit.",
+                "ref": "Luca 19:8"
+              }
+            },
+            {
+              "id": "pocainta_l6",
+              "courseId": "lib_intoarcerea",
+              "order": 6,
+              "title": "Primește consecințele și adu rod",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Faceți dar roade vrednice de pocăința voastră.",
+                "ref": "Luca 3:8"
+              }
+            }
+          ]
         }
       ]
     },
@@ -1702,6 +1776,258 @@ export const GENERATED_CONTENT_MANIFEST = {
           "lessonIds": [],
           "state": "planned",
           "lessons": []
+        },
+        {
+          "id": "doctrine_c5_providenta",
+          "title": "Providență, boală, disciplină și suferință",
+          "forWhom": "Vrei adevăr despre suferință fără vină inventată și fără negarea disciplinei biblice.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "providenta_l1",
+            "providenta_l2",
+            "providenta_l3",
+            "providenta_l4",
+            "providenta_l5",
+            "providenta_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; Carta doctrinară; programa Emanus",
+          "lessons": [
+            {
+              "id": "providenta_l1",
+              "courseId": "doctrine_c5_providenta",
+              "order": 1,
+              "title": "Suveran fără să fie autorul păcatului",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Voi ați plănuit să-mi faceți rău, dar Dumnezeu a schimbat răul în bine.",
+                "ref": "Geneza 50:20"
+              }
+            },
+            {
+              "id": "providenta_l2",
+              "courseId": "doctrine_c5_providenta",
+              "order": 2,
+              "title": "O lume căzută, nu o ecuație simplă",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Toată firea suspină și suferă durerile nașterii până acum.",
+                "ref": "Romani 8:22"
+              }
+            },
+            {
+              "id": "providenta_l3",
+              "courseId": "doctrine_c5_providenta",
+              "order": 3,
+              "title": "Când suferința este consecință sau disciplină",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Disciplina aduce celor încercați prin ea roada dătătoare de pace a neprihănirii.",
+                "ref": "Evrei 12:11"
+              }
+            },
+            {
+              "id": "providenta_l4",
+              "courseId": "doctrine_c5_providenta",
+              "order": 4,
+              "title": "Rugăciune, medicină și vindecare",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Este vreunul bolnav între voi? Să cheme pe prezbiterii bisericii și să se roage pentru el.",
+                "ref": "Iacov 5:14"
+              }
+            },
+            {
+              "id": "providenta_l5",
+              "courseId": "doctrine_c5_providenta",
+              "order": 5,
+              "title": "Când nu primești explicația",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Lucrurile ascunse sunt ale Domnului, iar cele descoperite sunt ale noastre.",
+                "ref": "Deuteronomul 29:29"
+              }
+            },
+            {
+              "id": "providenta_l6",
+              "courseId": "doctrine_c5_providenta",
+              "order": 6,
+              "title": "Providența care duce spre speranță",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nimic nu ne va putea despărți de dragostea lui Dumnezeu în Hristos Iisus.",
+                "ref": "Romani 8:38-39"
+              }
+            }
+          ]
+        },
+        {
+          "id": "doctrine_c7_duhul_sfant",
+          "title": "Duhul Sfânt și viața credinciosului",
+          "forWhom": "Vrei să înțelegi Persoana, lucrarea, rodul, darurile și diferențele dintre tradiții.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "duhul_l1",
+            "duhul_l2",
+            "duhul_l3",
+            "duhul_l4",
+            "duhul_l5",
+            "duhul_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; Carta doctrinară; programa Emanus",
+          "lessons": [
+            {
+              "id": "duhul_l1",
+              "courseId": "doctrine_c7_duhul_sfant",
+              "order": 1,
+              "title": "Duhul Sfânt este Persoană și Dumnezeu",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Tatăl vă va da un alt Mângâietor, care să rămână cu voi în veac.",
+                "ref": "Ioan 14:16"
+              }
+            },
+            {
+              "id": "duhul_l2",
+              "courseId": "doctrine_c7_duhul_sfant",
+              "order": 2,
+              "title": "Naștere din nou, locuire și pecetluire",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dacă n-are cineva Duhul lui Hristos, nu este al Lui.",
+                "ref": "Romani 8:9"
+              }
+            },
+            {
+              "id": "duhul_l3",
+              "courseId": "doctrine_c7_duhul_sfant",
+              "order": 3,
+              "title": "Rodul înaintea spectacolului",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Rodul Duhului este dragostea, bucuria, pacea, răbdarea, bunătatea, facerea de bine, credincioșia, blândețea și stăpânirea de sine.",
+                "ref": "Galateni 5:22-23"
+              }
+            },
+            {
+              "id": "duhul_l4",
+              "courseId": "doctrine_c7_duhul_sfant",
+              "order": 4,
+              "title": "Daruri pentru zidirea trupului",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Slujiți-vă unii altora după darul pe care l-a primit fiecare.",
+                "ref": "1 Petru 4:10"
+              }
+            },
+            {
+              "id": "duhul_l5",
+              "courseId": "doctrine_c7_duhul_sfant",
+              "order": 5,
+              "title": "Unde credincioșii diferă despre lucrarea Duhului",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Toate să se facă spre zidire.",
+                "ref": "1 Corinteni 14:26"
+              }
+            },
+            {
+              "id": "duhul_l6",
+              "courseId": "doctrine_c7_duhul_sfant",
+              "order": 6,
+              "title": "Testează și umblă prin Duhul",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cercetați toate lucrurile și păstrați ce este bun.",
+                "ref": "1 Tesaloniceni 5:21"
+              }
+            }
+          ]
+        },
+        {
+          "id": "doctrine_c8_botez_cina",
+          "title": "Botezul, Cina și apartenența la Biserică",
+          "forWhom": "Vrei temeiurile biblice și diferențele confesionale prezentate fără caricatură.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "botez_cina_l1",
+            "botez_cina_l2",
+            "botez_cina_l3",
+            "botez_cina_l4",
+            "botez_cina_l5",
+            "botez_cina_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; Carta doctrinară; programa Emanus",
+          "lessons": [
+            {
+              "id": "botez_cina_l1",
+              "courseId": "doctrine_c8_botez_cina",
+              "order": 1,
+              "title": "Hristos te așază într-un popor",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Voi sunteți trupul lui Hristos și fiecare, în parte, mădularele lui.",
+                "ref": "1 Corinteni 12:27"
+              }
+            },
+            {
+              "id": "botez_cina_l2",
+              "courseId": "doctrine_c8_botez_cina",
+              "order": 2,
+              "title": "Ce mărturisește botezul",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Am fost îngropați împreună cu El prin botez, ca să trăim o viață nouă.",
+                "ref": "Romani 6:4"
+              }
+            },
+            {
+              "id": "botez_cina_l3",
+              "courseId": "doctrine_c8_botez_cina",
+              "order": 3,
+              "title": "Prunc sau credincios: diferența spusă cinstit",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Pocăiți-vă și fiecare din voi să fie botezat în Numele lui Iisus Hristos.",
+                "ref": "Faptele 2:38"
+              }
+            },
+            {
+              "id": "botez_cina_l4",
+              "courseId": "doctrine_c8_botez_cina",
+              "order": 4,
+              "title": "Cina: amintire, proclamare și părtășie",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Ori de câte ori mâncați pâinea aceasta și beți paharul, vestiți moartea Domnului până va veni El.",
+                "ref": "1 Corinteni 11:26"
+              }
+            },
+            {
+              "id": "botez_cina_l5",
+              "courseId": "doctrine_c8_botez_cina",
+              "order": 5,
+              "title": "Unde tradițiile diferă despre Cină",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Paharul binecuvântat nu este el părtășia cu sângele lui Hristos?",
+                "ref": "1 Corinteni 10:16"
+              }
+            },
+            {
+              "id": "botez_cina_l6",
+              "courseId": "doctrine_c8_botez_cina",
+              "order": 6,
+              "title": "Apartenență, disciplină și conștiință",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nu ca și cum ați stăpâni peste cei ce v-au căzut la împărțeală, ci făcându-vă pilde turmei.",
+                "ref": "1 Petru 5:3"
+              }
+            }
+          ]
         }
       ]
     },
@@ -2016,6 +2342,90 @@ export const GENERATED_CONTENT_MANIFEST = {
           "lessonIds": [],
           "state": "planned",
           "lessons": []
+        },
+        {
+          "id": "doctrine_c6_context",
+          "title": "Cum citesc Biblia în context",
+          "forWhom": "Vrei să deosebești genul, contextul, descrierea, porunca, interpretarea și aplicația.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "context_l1",
+            "context_l2",
+            "context_l3",
+            "context_l4",
+            "context_l5",
+            "context_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; Carta doctrinară; programa Emanus",
+          "lessons": [
+            {
+              "id": "context_l1",
+              "courseId": "doctrine_c6_context",
+              "order": 1,
+              "title": "Observă înainte să explici",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Citeau deslușit și îi arătau înțelesul, ca să-i facă să înțeleagă.",
+                "ref": "Neemia 8:8"
+              }
+            },
+            {
+              "id": "context_l2",
+              "courseId": "doctrine_c6_context",
+              "order": 2,
+              "title": "Genul literar schimbă felul citirii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Deschide-mi ochii ca să văd lucrurile minunate ale Legii Tale.",
+                "ref": "Psalmul 119:18"
+              }
+            },
+            {
+              "id": "context_l3",
+              "courseId": "doctrine_c6_context",
+              "order": 3,
+              "title": "Context istoric și loc în poveste",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Am găsit cu cale să ți le scriu în șir, ca să poți cunoaște temeinicia învățăturilor.",
+                "ref": "Luca 1:3-4"
+              }
+            },
+            {
+              "id": "context_l4",
+              "courseId": "doctrine_c6_context",
+              "order": 4,
+              "title": "Descriere nu înseamnă automat poruncă",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Fiecare făcea ce-i plăcea.",
+                "ref": "Judecători 21:25"
+              }
+            },
+            {
+              "id": "context_l5",
+              "courseId": "doctrine_c6_context",
+              "order": 5,
+              "title": "Un sens, aplicații credincioase",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Fiți împlinitori ai Cuvântului, nu numai ascultători.",
+                "ref": "Iacov 1:22"
+              }
+            },
+            {
+              "id": "context_l6",
+              "courseId": "doctrine_c6_context",
+              "order": 6,
+              "title": "Texte grele și diferențe cinstite",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cercetau Scripturile în fiecare zi, ca să vadă dacă ce li se spunea era așa.",
+                "ref": "Faptele 17:11"
+              }
+            }
+          ]
         }
       ]
     },
@@ -2149,10 +2559,84 @@ export const GENERATED_CONTENT_MANIFEST = {
           "id": "lib_rug_psalmi",
           "title": "Psalmii ca școală de rugăciune",
           "forWhom": "Vrei să te rogi cinstit, inclusiv când ești supărat pe El.",
-          "plannedLessons": 5,
-          "lessonIds": [],
-          "state": "planned",
-          "lessons": []
+          "plannedLessons": 6,
+          "lessonIds": [
+            "psalmi_l1",
+            "psalmi_l2",
+            "psalmi_l3",
+            "psalmi_l4",
+            "psalmi_l5",
+            "psalmi_l6"
+          ],
+          "state": "live",
+          "lessons": [
+            {
+              "id": "psalmi_l1",
+              "courseId": "lib_rug_psalmi",
+              "order": 1,
+              "title": "Dumnezeu ne-a dat cuvinte pentru rugăciune",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Învățați-vă și sfătuiți-vă cu psalmi, cântări de laudă și cântări duhovnicești.",
+                "ref": "Coloseni 3:16"
+              }
+            },
+            {
+              "id": "psalmi_l2",
+              "courseId": "lib_rug_psalmi",
+              "order": 2,
+              "title": "Plângerea care rămâne în relație",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Eu am încredere în bunătatea Ta și mă bucur de mântuirea Ta.",
+                "ref": "Psalmul 13:5"
+              }
+            },
+            {
+              "id": "psalmi_l3",
+              "courseId": "lib_rug_psalmi",
+              "order": 3,
+              "title": "Mărturisire fără autoînșelare",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Ți-am mărturisit păcatul meu și nu mi-am ascuns fărădelegea.",
+                "ref": "Psalmul 32:5"
+              }
+            },
+            {
+              "id": "psalmi_l4",
+              "courseId": "lib_rug_psalmi",
+              "order": 4,
+              "title": "Mulțumire care își amintește",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Binecuvântează, suflete, pe Domnul și nu uita niciuna din binefacerile Lui.",
+                "ref": "Psalmul 103:2"
+              }
+            },
+            {
+              "id": "psalmi_l5",
+              "courseId": "lib_rug_psalmi",
+              "order": 5,
+              "title": "Furia, nedreptatea și psalmii grei",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Tu auzi dorințele celor nenorociți; le întărești inima și Îți pleci urechea.",
+                "ref": "Psalmul 10:17"
+              }
+            },
+            {
+              "id": "psalmi_l6",
+              "courseId": "lib_rug_psalmi",
+              "order": 6,
+              "title": "Vorbește sufletului în timp ce aștepți",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Pentru ce te mâhnești, suflete, și gemi? Nădăjduiește în Dumnezeu.",
+                "ref": "Psalmul 42:5"
+              }
+            }
+          ]
         },
         {
           "id": "lib_rug_mijlocire",
@@ -4740,6 +5224,289 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     },
     {
+      "id": "lib_dependente",
+      "title": "Ieșirea din dependențe",
+      "blurb": "Adevăr biblic, tratament competent, oprirea accesului, reparare și o viață nouă — fără aceeași rețetă pentru probleme diferite.",
+      "gated": false,
+      "courses": [
+        {
+          "id": "dependenta_alcool",
+          "title": "Alcool: adevăr, tratament și trezvie",
+          "forWhom": "Consumul te stăpânește, produce frică ori consecințe și ai nevoie de un plan sigur.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "alcool_l1",
+            "alcool_l2",
+            "alcool_l3",
+            "alcool_l4",
+            "alcool_l5",
+            "alcool_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; Carta doctrinară; programa Emanus",
+          "lessons": [
+            {
+              "id": "alcool_l1",
+              "courseId": "dependenta_alcool",
+              "order": 1,
+              "title": "Alcoolul: numește stăpânul real",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nu mă voi lăsa stăpânit de nimic.",
+                "ref": "1 Corinteni 6:12"
+              }
+            },
+            {
+              "id": "alcool_l2",
+              "courseId": "dependenta_alcool",
+              "order": 2,
+              "title": "Ieși din secret și din promisiuni vagi",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cine își mărturisește și se lasă de păcat capătă îndurare.",
+                "ref": "Proverbe 28:13"
+              }
+            },
+            {
+              "id": "alcool_l3",
+              "courseId": "dependenta_alcool",
+              "order": 3,
+              "title": "Sevrajul poate fi urgență medicală",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nu cei sănătoși au trebuință de doctor, ci cei bolnavi.",
+                "ref": "Luca 5:31"
+              }
+            },
+            {
+              "id": "alcool_l4",
+              "courseId": "dependenta_alcool",
+              "order": 4,
+              "title": "Taie accesul și schimbă ritmul",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nu purtați grijă de firea pământească pentru ca să-i treziți poftele.",
+                "ref": "Romani 13:14"
+              }
+            },
+            {
+              "id": "alcool_l5",
+              "courseId": "dependenta_alcool",
+              "order": 5,
+              "title": "Repară răul fără să ceri încredere instant",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Lăsați-vă de minciună și fiecare să spună aproapelui său adevărul.",
+                "ref": "Efeseni 4:25"
+              }
+            },
+            {
+              "id": "alcool_l6",
+              "courseId": "dependenta_alcool",
+              "order": 6,
+              "title": "Recăderea nu este scuză și nici capăt",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cel neprihănit de șapte ori cade și se ridică.",
+                "ref": "Proverbe 24:16"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dependenta_droguri",
+          "title": "Droguri: din robie spre viață",
+          "forWhom": "Substanța îți controlează trupul, alegerile sau siguranța și ai nevoie de evaluare reală.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "droguri_l1",
+            "droguri_l2",
+            "droguri_l3",
+            "droguri_l4",
+            "droguri_l5",
+            "droguri_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; Carta doctrinară; programa Emanus",
+          "lessons": [
+            {
+              "id": "droguri_l1",
+              "courseId": "dependenta_droguri",
+              "order": 1,
+              "title": "Substanța nu îți mai promite viață",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nu mă voi lăsa stăpânit de nimic.",
+                "ref": "1 Corinteni 6:12"
+              }
+            },
+            {
+              "id": "droguri_l2",
+              "courseId": "dependenta_droguri",
+              "order": 2,
+              "title": "Supradoza cere acțiune, nu secret",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Izbăvește pe cei târâți la moarte și scapă pe cei ce sunt aproape să fie înjunghiați.",
+                "ref": "Proverbe 24:11"
+              }
+            },
+            {
+              "id": "droguri_l3",
+              "courseId": "dependenta_droguri",
+              "order": 3,
+              "title": "Evaluare, detoxifiere și tratament",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Planurile izbutesc când sunt mulți sfetnici.",
+                "ref": "Proverbe 15:22"
+              }
+            },
+            {
+              "id": "droguri_l4",
+              "courseId": "dependenta_droguri",
+              "order": 4,
+              "title": "Rupe rețeaua care hrănește consumul",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Tovărășiile rele strică obiceiurile bune.",
+                "ref": "1 Corinteni 15:33"
+              }
+            },
+            {
+              "id": "droguri_l5",
+              "courseId": "dependenta_droguri",
+              "order": 5,
+              "title": "Păcat, infracțiune și reparare",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cine fura să nu mai fure, ci să lucreze și să aibă ce să dea celui lipsit.",
+                "ref": "Efeseni 4:28"
+              }
+            },
+            {
+              "id": "droguri_l6",
+              "courseId": "dependenta_droguri",
+              "order": 6,
+              "title": "Viață nouă, nu doar absența substanței",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Harul ne învață să o rupem cu poftele lumești și să trăim cu cumpătare, dreptate și evlavie.",
+                "ref": "Tit 2:12"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dependenta_jocuri",
+          "title": "Jocuri de noroc: oprește pierderea",
+          "forWhom": "Pariul, datoria și secretul au început să conducă banii, timpul sau relațiile.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "jocuri_l1",
+            "jocuri_l2",
+            "jocuri_l3",
+            "jocuri_l4",
+            "jocuri_l5",
+            "jocuri_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; Carta doctrinară; programa Emanus",
+          "lessons": [
+            {
+              "id": "jocuri_l1",
+              "courseId": "dependenta_jocuri",
+              "order": 1,
+              "title": "Jocul vinde controlul pe care nu îl ai",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Să nu fiți iubitori de bani. Mulțumiți-vă cu ce aveți.",
+                "ref": "Evrei 13:5"
+              }
+            },
+            {
+              "id": "jocuri_l2",
+              "courseId": "dependenta_jocuri",
+              "order": 2,
+              "title": "Adu toate cifrele la lumină",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Stă mai întâi să-și facă socoteala cheltuielilor.",
+                "ref": "Luca 14:28"
+              }
+            },
+            {
+              "id": "jocuri_l3",
+              "courseId": "dependenta_jocuri",
+              "order": 3,
+              "title": "Blochează jocul înaintea impulsului",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Ferește-te de calea răului, nu trece pe ea; ocolește-o și mergi înainte.",
+                "ref": "Proverbe 4:15"
+              }
+            },
+            {
+              "id": "jocuri_l4",
+              "courseId": "dependenta_jocuri",
+              "order": 4,
+              "title": "Datorii, restituire și consecințe",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cel ce ia cu împrumut este robul celui ce-i dă cu împrumut.",
+                "ref": "Proverbe 22:7"
+              }
+            },
+            {
+              "id": "jocuri_l5",
+              "courseId": "dependenta_jocuri",
+              "order": 5,
+              "title": "Declanșatorul din spatele pariului",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Vărsați-vă inimile înaintea Lui; Dumnezeu este adăpostul nostru.",
+                "ref": "Psalmul 62:8"
+              }
+            },
+            {
+              "id": "jocuri_l6",
+              "courseId": "dependenta_jocuri",
+              "order": 6,
+              "title": "Muncă, mulțumire și recuperare de durată",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Evlavia însoțită de mulțumire este un mare câștig.",
+                "ref": "1 Timotei 6:6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lib_doliu_traumatic",
+      "title": "Doliu traumatic",
+      "blurb": "Cursuri care nu se deschid până când materialul a primit revizia umană potrivită.",
+      "gated": false,
+      "courses": [
+        {
+          "id": "pastoral_doliu_suicid",
+          "title": "Doliu după pierderea prin sinucidere",
+          "forWhom": "Ai pierdut pe cineva prin sinucidere și ai nevoie de adevăr, siguranță și speranță fără verdicte inventate.",
+          "plannedLessons": 5,
+          "lessonIds": [],
+          "state": "planned",
+          "source": "Draft Emanus; publicarea cere revizie pastorală și clinică",
+          "requiredReviews": [
+            "pastoral",
+            "clinical"
+          ],
+          "approvedReviews": [],
+          "lessons": []
+        }
+      ]
+    },
+    {
       "id": "lib_spiritual",
       "title": "Lumea nevăzută și libertatea",
       "blurb": "Discernământ și libertate în Hristos fără folclor, panică sau diagnostic prin ecran.",
@@ -5096,5 +5863,5 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     }
   ],
-  "contentVersion": "30fb086bba2db9c9"
+  "contentVersion": "43bbcea85564873a"
 } as const

@@ -71,8 +71,9 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
         <div className="tile">
           <h2>Lecția nu s-a putut deschide</h2>
           <p className="muted">
-            Verifică legătura la internet. Lecțiile deschise anterior rămân
-            disponibile și offline.
+            Este posibil ca lecția să nu facă parte din versiunea publicată sau
+            să nu fi putut fi descărcată. Lecțiile deschise anterior rămân
+            disponibile offline.
           </p>
           <div className="choice__opts">
             <button

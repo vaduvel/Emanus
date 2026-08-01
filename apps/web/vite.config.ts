@@ -61,7 +61,10 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes("node_modules/react") || id.includes("node_modules/lucide-react")) return "vendor-react"
-          if (id.includes("packages/shared/dist/library/")) return "content-library"
+          const libraryModule = id.match(
+            /packages\/shared\/dist\/library\/([^/]+)\.js$/,
+          )
+          if (libraryModule) return `content-library-${libraryModule[1]}`
           if (id.includes("packages/shared/dist/paths/")) return "content-paths"
           const bibleChapter = id.match(
             /packages\/shared\/dist\/bible\/geneza(\d*)\.js$/,

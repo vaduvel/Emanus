@@ -1,5 +1,5 @@
 import { ArrowLeft, BookOpen, Check, ChevronRight, Clock3, Lock } from "lucide-react"
-import { contentCourse, courseIsOpen } from "../content"
+import { contentCourse, courseIsOpen, courseMissingReviews } from "../content"
 import { courseLessonsDone } from "../journey"
 import { navigate } from "../router"
 import "../library.css"
@@ -21,6 +21,7 @@ export function Course({ courseId }: { courseId?: string }) {
   const nextLessonId = course.lessonIds.find((lessonId) => !completed.has(lessonId))
   const nextIndex = nextLessonId ? course.lessonIds.indexOf(nextLessonId) : -1
   const isOpen = courseIsOpen(course)
+  const missingReviews = courseMissingReviews(course)
 
   return (
     <section className="course-screen">
@@ -38,11 +39,13 @@ export function Course({ courseId }: { courseId?: string }) {
       {!isOpen ? (
         <div className="tile course-screen__notice">
           <Lock size={18} aria-hidden />
-          <p>Acest curs este în redactare. Nu îl deschidem până când lecțiile nu sunt verificate.</p>
+          <p>{missingReviews.length > 0 ? "Acest curs nu se deschide până când primește toate reviziile umane declarate." : "Acest curs este în redactare. Nu îl deschidem până când lecțiile nu sunt verificate."}</p>
         </div>
       ) : (
         <>
-          <p className="course-screen__source">{course.source ?? "Curs biblic Emanus"}</p>
+          <p className="course-screen__source">
+            Curs biblic Emanus · {course.lessonIds.length} lecții
+          </p>
           {nextLessonId ? (
             <button
               type="button"

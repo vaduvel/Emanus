@@ -2,6 +2,7 @@ import type { Lesson } from "@emanus/shared/domain"
 import {
   STATIC_CONTENT_MANIFEST,
   contentCourseIsOpen,
+  contentCourseMissingReviews,
   contentDoorHasOwnRoom,
   getContentDoor,
   getContentPath,
@@ -152,6 +153,10 @@ export function courseIsOpen(course: ContentCourse): boolean {
   return contentCourseIsOpen(course)
 }
 
+export function courseMissingReviews(course: ContentCourse) {
+  return contentCourseMissingReviews(course)
+}
+
 function lessonRequest(id: string): Request {
   const key = encodeURIComponent(`${activeManifest.contentVersion}:${id}`)
   return new Request(new URL(`/__emanus_content/lessons/${key}`, window.location.origin))
@@ -263,34 +268,34 @@ export async function loadLesson(id: string): Promise<Lesson> {
   }
 
   try {
-    const [
-      { PATHS },
-      { LIBRARY_LESSONS },
-      { mohlerNotForMe },
-      { enrichLessonCollection },
-    ] =
+    const course = contentCourseForLesson(id)
+    if (course) {
+      const [{ loadLibraryCourseLessons }, { enrichLessonCollection }] =
+        await Promise.all([
+          import("@emanus/shared/library-loader"),
+          import("@emanus/shared/interaction-enrichment"),
+        ])
+      const courseLessons = await loadLibraryCourseLessons(course.id)
+      const local = enrichLessonCollection(courseLessons, {
+        [course.id]: course.ageHint,
+      }).find((lesson) => lesson.id === id)
+      if (local) {
+        await writeCachedLesson(local)
+        return local
+      }
+    }
+
+    const [{ PATHS }, { mohlerNotForMe }, { enrichLessonCollection }] =
       await Promise.all([
         import("@emanus/shared/paths"),
-        import("@emanus/shared/library"),
         import("@emanus/shared/lesson-mohler"),
         import("@emanus/shared/interaction-enrichment"),
       ])
-    const source = new Map(
-      [
-        ...PATHS.flatMap((path) => path.lessons),
-        ...LIBRARY_LESSONS,
-        ...mohlerNotForMe.lessons,
-      ].map((lesson) => [lesson.id, lesson]),
-    )
-    const ageHints = Object.fromEntries(
-      activeManifest.shelves.flatMap((shelf) =>
-        shelf.courses.map((course) => [course.id, course.ageHint]),
-      ),
-    )
-    const local = enrichLessonCollection(
-      [...source.values()],
-      ageHints,
-    ).find((lesson) => lesson.id === id)
+    const source = [
+      ...PATHS.flatMap((path) => path.lessons),
+      ...mohlerNotForMe.lessons,
+    ]
+    const local = enrichLessonCollection(source).find((lesson) => lesson.id === id)
     if (local) {
       await writeCachedLesson(local)
       return local

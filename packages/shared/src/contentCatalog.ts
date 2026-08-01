@@ -283,9 +283,12 @@ export function nextDoctrineLessonSummary(
 }
 
 export function contentCourseIsOpen(course: ContentCourse): boolean {
+  return course.state === "live" && course.lessonIds.length > 0 && contentCourseMissingReviews(course).length === 0
+}
+
+export function contentCourseMissingReviews(
+  course: ContentCourse,
+): ContentCourseReviewKind[] {
   const approved = new Set(course.approvedReviews ?? [])
-  const reviewsComplete = (course.requiredReviews ?? []).every((review) =>
-    approved.has(review),
-  )
-  return course.state === "live" && course.lessonIds.length > 0 && reviewsComplete
+  return (course.requiredReviews ?? []).filter((review) => !approved.has(review))
 }

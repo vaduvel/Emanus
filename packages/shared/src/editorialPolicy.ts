@@ -10,6 +10,8 @@ const DEPENDENCY_NOTICE =
   "Lecția atinge dependența, compulsia sau recăderea. Poți opri oricând. Sevrajul și riscul medical cer evaluare de specialitate; rugăciunea și pocăința nu înlocuiesc tratamentul."
 const MENTAL_HEALTH_NOTICE =
   "Lecția atinge depresia, trauma sau gândurile de autovătămare. Poți opri oricând. Dacă nu ești în siguranță sau te gândești să îți faci rău, folosește acum ecranul de ajutor."
+const SUICIDE_LOSS_NOTICE =
+  "Lecția atinge pierderea prin sinucidere, vina traumatică și propriile gânduri de moarte. Nu îți cere detalii despre metodă. Poți opri oricând; dacă nu ești în siguranță, folosește acum ecranul de ajutor."
 
 /**
  * Lista este editorială și intenționată. Nu o înlocuim cu detecție după cuvinte:
@@ -86,6 +88,29 @@ export const LESSON_SAFETY_POLICIES: Readonly<Record<string, LessonSafety>> = {
     notice:
       "Lecția discută suferința psihică și limbajul despre posesie. Nu pune singur un diagnostic spiritual sau medical. În pericol ori criză, caută imediat ajutor competent.",
   },
+  alcool_l1: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  alcool_l2: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  alcool_l3: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  alcool_l4: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  alcool_l5: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  alcool_l6: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  droguri_l1: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  droguri_l2: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  droguri_l3: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  droguri_l4: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  droguri_l5: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  droguri_l6: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  jocuri_l1: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  jocuri_l2: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  jocuri_l3: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  jocuri_l4: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  jocuri_l5: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  jocuri_l6: { topic: "dependency", notice: DEPENDENCY_NOTICE },
+  doliu_suicid_l1: { topic: "suicide_loss", notice: SUICIDE_LOSS_NOTICE },
+  doliu_suicid_l2: { topic: "suicide_loss", notice: SUICIDE_LOSS_NOTICE },
+  doliu_suicid_l3: { topic: "suicide_loss", notice: SUICIDE_LOSS_NOTICE },
+  doliu_suicid_l4: { topic: "suicide_loss", notice: SUICIDE_LOSS_NOTICE },
+  doliu_suicid_l5: { topic: "suicide_loss", notice: SUICIDE_LOSS_NOTICE },
 }
 
 export function safetyPolicyForLesson(lessonId: string): LessonSafety | undefined {

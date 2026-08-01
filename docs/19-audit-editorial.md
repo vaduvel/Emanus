@@ -8,12 +8,15 @@ Acest document separă verificările automate de revizia umană. Un CI verde nu 
 
 ## Catalog runtime
 
-- 55 de cursuri în catalog;
-- 54 vizibile și un curs creator ascuns;
-- 44 de cursuri live;
-- 11 cursuri planificate;
-- 259 de lecții de bibliotecă și 61 de lecții de traseu;
-- 320 de lecții unice în release, grupate în 53 de cursuri/trasee publicate.
+- 63 de cursuri în catalog;
+- 62 vizibile și un curs creator ascuns;
+- 53 de cursuri live;
+- 10 cursuri planificate;
+- 318 lecții de bibliotecă scrise în sursă: 313 publice și 5 drafturi blocate;
+- 61 de lecții de traseu;
+- 374 de lecții unice în release, grupate în 53 de cursuri și trasee publicate;
+- 379 de lecții unice scrise în cod dacă includem și cele 5 drafturi despre
+  doliul prin sinucidere care nu intră în release.
 
 Sursa runtime este `packages/shared/src/library/current.ts`.
 
@@ -45,11 +48,13 @@ Validatorul de release verifică suplimentar:
 
 - fiecare lecție are `anchorRefs`, `memoryVerseRef` și citate biblice ne-goale;
 - fiecare referință citată sau memorată este acoperită de temeiurile lecției, inclusiv subintervale de versete;
-- cele 41 de lecții sensibile declarate editorial primesc exact poarta de siguranță canonică;
+- cele 64 de lecții sensibile declarate editorial primesc exact poarta de siguranță canonică;
 - nicio lecție nu poate adăuga ori pierde o poartă de siguranță în afara politicii explicite;
 - fiecare ramură obligatorie duce la un răspuns pastoral real;
 - fiecare curs cere răspuns liber, selecție multiplă și declarație finală;
 - un curs `live` care declară revizie doctrinară, pastorală, clinică sau de safeguarding nu se publică până când toate aprobările sunt în date.
+- fiecare curs care are lecții locale este acoperit de loader-ul dinamic; CI
+  compară toate cele 318 lecții cu sursa și blochează o mapare lipsă.
 
 ## Probleme remediate
 
@@ -61,6 +66,13 @@ Validatorul de release verifică suplimentar:
 - workflow-ul temporar care a aplicat corecțiile a fost șters după utilizare;
 - neconcordanțele dintre șapte versete memorate și `anchorRefs` au fost corectate;
 - porțile de siguranță nu mai depind de copiere manuală în fiecare fișier, ci de `packages/shared/src/editorialPolicy.ts`.
+- cursurile despre pocăință, providență, citirea Bibliei, Duhul Sfânt, botez și
+  Cină, Psalmi și cele trei dependențe distincte au fost conectate la catalog;
+- cele cinci lecții despre doliul prin sinucidere există numai ca draft, fără
+  `lessonIds` publice, și cer explicit revizie pastorală și clinică.
+- fallback-ul local nu mai descarcă întreaga bibliotecă la prima lecție:
+  modulele se încarcă pe grup de curs, iar fișierele de conținut nu intră în
+  precache-ul shell-ului PWA.
 
 ## Cursuri cu protecții editoriale explicite
 
@@ -70,12 +82,14 @@ Validatorul de release verifică suplimentar:
 - traseele pentru soți și părinți;
 - relații, sexualitate, limite, consimțământ și siguranță;
 - partener necredincios și copil îndepărtat.
+- alcool, droguri și jocuri de noroc;
+- doliul după pierderea prin sinucidere, inclusiv cât timp cursul este draft.
 
 Aceste protecții nu reprezintă aprobarea finală a fiecărei lecții.
 
 ## Revizie umană încă necesară
 
-Pentru toate cele 320 de lecții trebuie verificate manual:
+Pentru toate cele 374 de lecții publicate trebuie verificate manual:
 
 - fidelitatea citatelor biblice și traducerea folosită;
 - parafrazele care pot părea citate exacte;
@@ -89,12 +103,18 @@ Pentru toate cele 320 de lecții trebuie verificate manual:
 - repetițiile și pașii practici;
 - licențierea citatelor și permisiunile pentru surse externe.
 
+Cele cinci drafturi despre pierderea prin sinucidere au o cerință mai strictă:
+nu intră în release până când un revizor pastoral și unul clinic le aprobă în
+mod real. CI verifică absența aprobărilor, nu le poate substitui.
+
 ## Statut editorial
 
 - **Verificări automate:** active și verzi.
 - **Corecții mecanice cunoscute:** aplicate.
 - **Revizie pastorală și teologică integrală:** în desfășurare.
-- **Aprobare finală a tuturor celor 320 de lecții:** încă neacordată.
+- **Aprobare finală a tuturor celor 374 de lecții publicate:** încă neacordată.
+- **Cursul despre doliul prin sinucidere:** draft tehnic complet, blocat de
+  reviziile pastorală și clinică.
 
 ## Regula de publicare
 
