@@ -6,6 +6,7 @@ import {
   Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
 } from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
+import { ScriptureReveal } from "./components/ScriptureReveal"
 
 export interface LessonResult { choicesMade: Record<string, string>; journal: string }
 const GUIDE_NAME = "Emanus"
@@ -128,7 +129,13 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
   onQuiz: (idx: number) => void; journal: string; onJournal: (v: string) => void; onJournalDone: (skip?: boolean) => void; onExerciseDone: () => void; onMood: (mood: string) => void; onPick: (opt: ChoiceOption) => void
 }) {
   const bubbles = (step.bubbles ?? []).slice(0, visibleBubbleCount)
-  if (step.type === "scripture" || step.type === "memory_verse") return <><div className="msg msg--guide"><div className="msg__avatar">{step.type === "memory_verse" ? <Brain size={18} aria-hidden /> : <BookOpen size={18} aria-hidden />}</div><blockquote className="scripture">{step.scripture ? `„${step.scripture.text}”` : `„${lesson.memoryVerseRef}”`}<cite>{step.scripture?.ref ?? lesson.memoryVerseRef}</cite></blockquote></div>{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}</>
+  /*
+   * Beat-ul 6 (scripture): versetul nu mai apare dintr-o dată, ci se limpezește
+   * rând cu rând — aceeași componentă ca la pergament și candelă (docs/27 §4.4),
+   * dar fără scenă: în lecție versetul stă într-o conversație, nu pe un altar.
+   * Versetul de memorat rămâne citație simplă: acolo omul îl recitește, nu îl primește.
+   */
+  if (step.type === "scripture" || step.type === "memory_verse") return <><div className="msg msg--guide"><div className="msg__avatar">{step.type === "memory_verse" ? <Brain size={18} aria-hidden /> : <BookOpen size={18} aria-hidden />}</div>{step.type === "scripture" && step.scripture ? <ScriptureReveal variant="lesson" verseText={step.scripture.text} verseRef={step.scripture.ref} /> : <blockquote className="scripture">{step.scripture ? `„${step.scripture.text}”` : `„${lesson.memoryVerseRef}”`}<cite>{step.scripture?.ref ?? lesson.memoryVerseRef}</cite></blockquote>}</div>{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}</>
   if (step.type === "prayer") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={HandHeart} text={b.text} />)}{isCurrent && interactionReady && <div className="choice__opts"><button onClick={onExerciseDone}>Am terminat rugăciunea</button></div>}</>
   if (step.type === "step") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={Footprints} text={b.text} />)}{isCurrent && interactionReady && <div className="choice__opts"><button onClick={onExerciseDone}>Am făcut pasul</button><button className="ghost" onClick={onExerciseDone}>Sar peste acum</button></div>}</>
   if (step.type === "check_in") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}{isCurrent && interactionReady && <MoodChips picked={pickedMoodId} onPick={onMood} />}</>
