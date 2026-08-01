@@ -30,7 +30,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Psalmul 22:1-2",
-    verseText: "Dumnezeule! Dumnezeule! Pentru ce m-ai părăsit și pentru ce Te depărtezi fără să-mi ajuti? Strig ziua, și nu-mi răspunzi.",
+    verseText: "Dumnezeule! Dumnezeule! Pentru ce m-ai părăsit și pentru ce Te depărtezi fără să-mi ajuți? Strig ziua, și nu-mi răspunzi.",
     meditation:
       "Psalmul ăsta a fost rugăciunea lui Isus pe cruce. Înseamnă că sentimentul de părăsire poate fi trăit de un om care nu e părăsit cu adevărat. Simțirea nu e un raport exact despre unde e Dumnezeu.",
     question: "Ce concluzii ai tras despre Dumnezeu doar din ce ai simțit?",
@@ -58,7 +58,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     verseRef: "Iov 23:10",
     verseText: "Dar El știe ce cale am urmat și, dacă m-ar încerca, aș ieși curat ca aurul.",
     meditation:
-      "În aceeași respirație în care spune că nu-L găsește, Iov spune că Dumnezeu îl vede. E o credință fără dovezi și fără explicații: „nu Știu unde e El, dar El știe unde sunt eu”. Atât e destul pentru o zi.",
+      "În aceeași respirație în care spune că nu-L găsește, Iov spune că Dumnezeu îl vede. E o credință fără dovezi și fără explicații: „nu știu unde e El, dar El știe unde sunt eu”. Atât e destul pentru o zi.",
     question: "Poți spune și tu propoziția asta azi?",
     prayer: "Doamne, nu Te văd, dar Tu știi calea pe care merg. Amin.",
     step: "Rostește versetul ăsta de trei ori azi, când te lovește nesiguranța.",
@@ -69,11 +69,11 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Habacuc 1:2",
-    verseText: "Până când voi striga către Tine, Doamne, fără să asculti?",
+    verseText: "Până când voi striga către Tine, Doamne, fără să asculți?",
     meditation:
-      "Cartea unui profet începe cu o plângere îmotriva tăcerii lui Dumnezeu. Habacuc nu-și cere scuze pentru întrebare și nu primește mustrare. Dumnezeu suportă întrebările oamenilor mai bine decât suportăm noi.",
+      "Cartea unui profet începe cu o plângere împotriva tăcerii lui Dumnezeu. Habacuc nu-și cere scuze pentru întrebare și nu primește mustrare. Dumnezeu suportă întrebările oamenilor mai bine decât suportăm noi.",
     question: "Te temi că Dumnezeu se supără dacă Îi reproșezi ceva?",
-    prayer: "Doamne, strig și nu aud nimic. Dar strig către Tine, nu îmotriva Ta. Amin.",
+    prayer: "Doamne, strig și nu aud nimic. Dar strig către Tine, nu împotriva Ta. Amin.",
     step: "Citește azi primul capitol din Habacuc. Are doar 17 versete.",
   },
   {
@@ -110,7 +110,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     verseRef: "Plângerile lui Ieremia 3:8",
     verseText: "Să tot strig și să tot cer ajutor, căci El tot nu-mi primește rugăciunea.",
     meditation:
-      "Versetul ăsta e în Biblie și nu e cenzurat. Ieremia își spune durerea fără să o îmblanzească, iar Dumnezeu a păstrat-o în Scriptură. Dacă ai gândit vreodată așa, nu ești în afara credinței.",
+      "Versetul ăsta e în Biblie și nu e cenzurat. Ieremia își spune durerea fără să o îmblânzească, iar Dumnezeu a păstrat-o în Scriptură. Dacă ai gândit vreodată așa, nu ești în afara credinței.",
     question: "Ce nu îndrăznești să spui pentru că ți se pare prea negru?",
     prayer: "Doamne, Îți spun și partea întunecată. Nu vreau să mă prefac înaintea Ta. Amin.",
     step: "Scrie o rugăciune pe care nu ai spune-o cu voce tare într-o adunare.",
@@ -162,7 +162,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     verseRef: "Deuteronom 29:29",
     verseText: "Lucrurile ascunse sunt ale Domnului Dumnezeului nostru, iar lucrurile descoperite sunt ale noastre și ale copiilor noștri, pe vecie.",
     meditation:
-      "Există două categorii și pace se găsește când nu le amesteci. Multă frământare vine din încercarea de a locui în prima categorie. Ai îndeajuns de lucru cu ce ți-a fost descoperit.",
+      "Există două categorii și pacea se găsește când nu le amesteci. Multă frământare vine din încercarea de a locui în prima categorie. Ai îndeajuns de lucru cu ce ți-a fost descoperit.",
     question: "Ce încerci să afli, deși nu ți-a fost dat să știi?",
     prayer: "Doamne, las la Tine ce e ascuns. Îmi văd de ce mi-ai spus limpede. Amin.",
     step: "Scrie o întrebare la care nu vei primi răspuns și las-o, pe hârtie, în grija Lui.",
@@ -290,7 +290,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Psalmul 77:19",
-    verseText: "Ți-ai croit un drum prin mare, o cărare prin apele cele mari, și nu Ti s-au mai cunoscut urmele.",
+    verseText: "Ți-ai croit un drum prin mare, o cărare prin apele cele mari, și nu Ți s-au mai cunoscut urmele.",
     meditation:
       "Dumnezeu a mers înaintea poporului prin mare, dar apa n-a păstrat urmele pașilor. Așa arată uneori lucrarea Lui: e reală, dar nu lasă dovezi vizibile. Faptul că nu vezi urme nu înseamnă că n-a trecut pe acolo.",
     question: "Cauți urme sau Îl cauți pe El?",
@@ -318,7 +318,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     verseRef: "Geneza 15:5-6",
     verseText: "Și, după ce l-a dus afară, i-a zis: „Uită-te spre cer și numără stelele, dacă poți să le numeri.” Și i-a zis: „Așa va fi sămânța ta.” Avram a crezut pe Domnul.",
     meditation:
-      "Între promisiune și împlinire au trecut vreo douăzeci și cinci de ani. Dumnezeu i-a dat un cer plin de stele și nimic altceva. Sunt perioade în care tot ce ai e un cuvânt primit demult.",
+      "Între promisiune și Þmplinire au trecut vreo douăzeci și cinci de ani. Dumnezeu i-a dat un cer plin de stele și nimic altceva. Sunt perioade în care tot ce ai e un cuvânt primit demult.",
     question: "Ce cuvânt ți-a dat Dumnezeu și încă nu s-a împlinit?",
     prayer: "Doamne, mă țin de ce mi-ai spus, chiar dacă a trecut mult. Amin.",
     step: "Ieși azi afară seara și uită-te câteva minute la cer.",
@@ -396,7 +396,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     verseRef: "Ioan 20:29",
     verseText: "Ferice de cei ce n-au văzut și au crezut.",
     meditation:
-      "Isus i-a spus asta lui Toma după ce i-a arătat rănile — deci nu e o mustrare, ci o binecuvântare pentru cei ca noi. Se încheie luna cea mai grea a anului și nu ți s-a promis niciun răspuns până azi. Ai rămas, și asta e credință. De luna viitoare vorbim despre ce crește pe nevazut — exact în pământul ăsta tăcut.",
+      "Isus i-a spus asta lui Toma după ce i-a arătat rănile — deci nu e o mustrare, ci o binecuvântare pentru cei ca noi. Se încheie luna cea mai grea a anului și nu ți s-a promis niciun răspuns până azi. Ai rămas, și asta e credință. De luna viitoare vorbim despre ce crește pe nevăzut — exact în pământul ăsta tăcut.",
     question: "Ce ai învățat în treizeci de zile de așteptare?",
     prayer: "Doamne, n-am văzut și totuși cred. Ține-mă așa. Amin.",
     step: "Recitește ce ai scris în ziua 216 și adaugă un rând, orice s-ar fi întâmplat.",
