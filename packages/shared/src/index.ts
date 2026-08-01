@@ -17,6 +17,7 @@ export {
 } from "./devotional.js"
 export type { DevotionalAgeVariant, DevotionalDay, DevotionalProgress } from "./devotional.js"
 export * from "./devotional-luna-02.js"
+export * from "./devotional-luna-03.js"
 export * from "./devotionalCatalog.js"
 export * from "./messageCards.js"
 export * from "./scroll.js"
