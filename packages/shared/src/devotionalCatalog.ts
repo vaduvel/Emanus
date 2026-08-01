@@ -13,6 +13,7 @@ import { DEVOTIONAL_DAYS_LUNA_3 } from "./devotional-luna-03.js"
 import { DEVOTIONAL_DAYS_LUNA_4 } from "./devotional-luna-04.js"
 import { DEVOTIONAL_DAYS_LUNA_5 } from "./devotional-luna-05.js"
 import { DEVOTIONAL_DAYS_LUNA_6 } from "./devotional-luna-06.js"
+import { DEVOTIONAL_DAYS_LUNA_7 } from "./devotional-luna-07.js"
 
 /** Toate zilele scrise până acum, sortate după numărul zilei. */
 export const DEVOTIONAL_DAYS_ALL: DevotionalDay[] = [
@@ -22,6 +23,7 @@ export const DEVOTIONAL_DAYS_ALL: DevotionalDay[] = [
   ...DEVOTIONAL_DAYS_LUNA_4,
   ...DEVOTIONAL_DAYS_LUNA_5,
   ...DEVOTIONAL_DAYS_LUNA_6,
+  ...DEVOTIONAL_DAYS_LUNA_7,
 ].sort((a, b) => a.dayNumber - b.dayNumber)
 
 export function devotionalDay(dayNumber: number): DevotionalDay | null {
