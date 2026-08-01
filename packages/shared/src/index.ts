@@ -6,7 +6,18 @@ export * from "./paths/index.js"
 export * from "./library/index.js"
 export * from "./bible/index.js"
 export * from "./daily.js"
-export * from "./devotional.js"
+// Devoțional: conținutul stă în fișiere pe lună, iar `devotionalDay()` și
+// `devotionalDaysAvailable()` vin din catalog, ca să vadă toate lunile scrise.
+export {
+  DEVOTIONAL_TRACK_ID,
+  DEVOTIONAL_MONTHS,
+  DEVOTIONAL_DAYS,
+  DEVOTIONAL_EMPTY_PROGRESS,
+  manaMessage,
+} from "./devotional.js"
+export type { DevotionalAgeVariant, DevotionalDay, DevotionalProgress } from "./devotional.js"
+export * from "./devotional-luna-02.js"
+export * from "./devotionalCatalog.js"
 export * from "./messageCards.js"
 export * from "./scroll.js"
 export * from "./gamification.js"
