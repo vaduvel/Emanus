@@ -44,7 +44,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     verseRef: "Matei 25:21",
     verseText: "Bine, rob bun și credincios, ai fost credincios în puține lucruri, te voi pune peste multe lucruri; intră în bucuria stăpânului tău!",
     meditation:
-      "Lauda nu e pentru cât a produs, ci pentru că a fost credincios. Cel cu două talanți primește exact aceeași propoziție ca cel cu cinci. Dumnezeu nu compară oamenii între ei.",
+      "Lauda nu e pentru cât a produs, ci pentru că a fost credincios. Cel cu doi talanți primește exact aceeași propoziție ca cel cu cinci. Dumnezeu nu compară oamenii între ei.",
     question: "Ce ți-a dat ție în mână, mic și concret?",
     prayer: "Doamne, vreau să fiu credincios cu puținul meu. Amin.",
     step: "Fă azi bine lucrul pe care ți l-a dat de făcut, chiar dacă e neimportant.",
@@ -148,7 +148,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     verseRef: "Cântarea Cântărilor 2:15",
     verseText: "Prindeți-ne vulpile, vulpile cele mici, care strică viile.",
     meditation:
-      "Nu lupii strică via, ci vulpile mici. În căsnicii și în prietenii, rareori distruge o catastrofă — de obicei sunt zeci de lucruri mărunte lăsate nerezolvate. Cine strangă vulpile mici salvează via.",
+      "Nu lupii strică via, ci vulpile mici. În căsnicii și în prietenii, rareori distruge o catastrofă — de obicei sunt zeci de lucruri mărunte lăsate nerezolvate. Cine prinde vulpile mici salvează via.",
     question: "Care e vulpea mică din relația ta cea mai apropiată?",
     prayer: "Doamne, ajută-mă să prind vulpile mici înainte să facă pagubă. Amin.",
     step: "Rezolvă azi o mică nemulțumire, înainte să devină mare.",
@@ -159,7 +159,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Neemia 4:6",
-    verseText: "Am zidit zidul, care a fost isprvit pretutindeni până la jumătate din înălțimea lui. Și poporul lucra cu inimă.",
+    verseText: "Am zidit zidul, care a fost isprăvit pretutindeni până la jumătate din înălțimea lui. Și poporul lucra cu inimă.",
     meditation:
       "Zidul Ierusalimului a fost ridicat pentru că fiecare familie a lucrat în dreptul casei ei. Nimeni n-a văzut tot șantierul; fiecare și-a văzut bucata. Așa se ridică lucruri mari: porțiuni mici, făcute simultan de oameni obișnuiți.",
     question: "Care e bucata ta de zid?",
@@ -174,7 +174,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     verseRef: "Matei 6:3-4",
     verseText: "Ci tu, când faci milostenie, să nu știe stânga ta ce face dreapta, pentru ca milostenia ta să fie făcută în ascuns.",
     meditation:
-      "Isus cere o disțiplină ciudată: să faci binele și să-l uiți. Un bine povestit și-a primit deja plata. Ce rămâne în ascuns rămâne între tine și Dumnezeu.",
+      "Isus cere o disciplină ciudată: să faci binele și să-l uiți. Un bine povestit și-a primit deja plata. Ce rămâne în ascuns rămâne între tine și Dumnezeu.",
     question: "Cât din binele tău are nevoie de martori?",
     prayer: "Doamne, vreau să fac bine și să tac. Amin.",
     step: "Fă azi un bine despre care nu vei spune nimănui, niciodată.",
@@ -211,7 +211,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "1 Tesaloniceni 4:11",
-    verseText: "Să cautăți să trăiți liniștiți, să vă vedeți de treburi și să lucrați cu mâinile voastre.",
+    verseText: "Să căutați să trăiți liniștiți, să vă vedeți de treburi și să lucrați cu mâinile voastre.",
     meditation:
       "E o ambiție ciudată pentru creștini: să trăiești liniștit. Într-o lume care cere vizibilitate, Pavel recomandă o viață așezată și o muncă făcută cu mâinile. Nu toată lumea e chemată la scenă; aproape toată lumea e chemată la statornicie.",
     question: "Cauți liniște sau cauți să fii văzut?",
@@ -226,7 +226,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     verseRef: "Proverbe 13:11",
     verseText: "Bogăția câștigată fără trudă scade, dar ce se strânge încetul cu încetul crește.",
     meditation:
-      "Proverbul vorbește despre bani, dar legea e mai largă: ce vine repede pleacă repede. Se aplică la sănătate, la prietenii și la cunoașterea Scripturii. Încetul cu încetul nu e o consolare pentru încei, ci calea normală.",
+      "Proverbul vorbește despre bani, dar legea e mai largă: ce vine repede pleacă repede. Se aplică la sănătate, la prietenii și la cunoașterea Scripturii. Încetul cu încetul nu e o consolare pentru cei înceți, ci calea normală.",
     question: "Ce vrei să obții repede și ar trebui câștigat încet?",
     prayer: "Doamne, învață-mă să strâng încetul cu încetul. Amin.",
     step: "Alege un lucru și pune azi deoparte pentru el: bani, timp sau efort.",
@@ -241,7 +241,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     meditation:
       "Furnica nu are șef și totuși își strânge hrana la vreme. Înțelepciunea de aici nu e despre talent, ci despre ritm: puțin, în fiecare zi, la timpul potrivit. Cel mai bun lucru pe care îl poți învăța de la o insectă e consecvența.",
     question: "Ce faci doar când te obligă cineva?",
-    prayer: "Doamne, dă-mi ritm și statornicie fără să fiu îmins de la spate. Amin.",
+    prayer: "Doamne, dă-mi ritm și statornicie fără să fiu împins de la spate. Amin.",
     step: "Fă azi, din proprie inițiativă, un lucru pe care nu ți l-a cerut nimeni.",
   },
   {
@@ -250,7 +250,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Proverbe 24:30-31",
-    verseText: "Am trecut pe lângă ogorul unui leneș... și era acoperit cu spini, urțicile creșteau peste tot, și zidul de piatră era prăbușit.",
+    verseText: "Am trecut pe lângă ogorul unui leneș... și era acoperit cu spini, urzicile creșteau peste tot, și zidul de piatră era prăbușit.",
     meditation:
       "Nimeni n-a dărâmat zidul acela; a căzut singur, din nefacere. Paragina nu e un eveniment, ci suma multor zile în care nu s-a făcut nimic. Lucrurile bune nu se strică brusc, ci prin neglijare.",
     question: "Ce zid din viața ta se surpă încet, pentru că nu-l repari?",
@@ -307,7 +307,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
       "Banii sunt, pentru Isus, un lucru mic — iar felul în care îi folosești arată ce ți se poate încredința mai departe. Nu e o predică despre sărăcie, ci despre administrare. Un om corect cu banii mărunți e un om căruia i se pot da suflete.",
     question: "Ce spun cheltuielile tale din ultima lună despre tine?",
     prayer: "Doamne, învață-mă să fiu bun administrator al puținului. Amin.",
-    step: "Uiță-te azi peste cheltuielile ultimei luni și taie una.",
+    step: "Uită-te azi peste cheltuielile ultimei luni și taie una.",
   },
   {
     id: "dev_294",
@@ -330,7 +330,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     verseRef: "Rut 2:3",
     verseText: "Ea s-a dus într-un ogor să strângă spice pe urma secerătorilor. Și s-a întâmplat că ogorul acela era al lui Boaz.",
     meditation:
-      "Rut s-a dus să facă o muncă umilă ca să aibă ce mânca, iar textul spune sec: „s-a întâmplat”. În povestea aceea, întâmplarea a devenit strămoșii lui David. Providența lucrează cel mai des în timp ce tu îți faci treaba.",
+      "Rut s-a dus să facă o muncă umilă ca să aibă ce mânca, iar textul spune sec: „s-a întâmplat”. În povestea aceea, întâmplarea a dus la strămoșii lui David. Providența lucrează cel mai des în timp ce tu îți faci treaba.",
     question: "Ce muncă modestă ai de făcut azi?",
     prayer: "Doamne, îmi fac treaba și las întâmplările în grija Ta. Amin.",
     step: "Fă-ți azi treaba fără să te plângi nici măcar o dată.",
@@ -398,6 +398,6 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
       "E ziua 300 și ai ajuns aici tot printr-un lucru mic, repetat: ai deschis pagina asta. Dumnezeu nu îți cere să fii mare, ci credincios în puțin. Luna viitoare intrăm într-un loc mai greu, rușinea — pentru că tocmai ea îi face pe oameni să creadă că puținul lor nu valorează nimic.",
     question: "Ce lucru mic ai făcut zilnic în luna asta?",
     prayer: "Doamne, rămân credincios în puțin. Amin.",
-    step: "Recitește ce ai scris în ziua 271 și vezi ct a crescut acel început.",
+    step: "Recitește ce ai scris în ziua 271 și vezi cât a crescut acel început.",
   },
 ]
