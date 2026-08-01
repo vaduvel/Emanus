@@ -1,7 +1,20 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, HelpCircle, Search, Send } from "lucide-react"
-import type { BibleBook, BibleChapter, BibleUnit } from "@emanus/shared/bible"
-import { BIBLE_BOOKS, BIBLE_TRANSLATION, findChapter } from "@emanus/shared/bible"
+import type {
+  BibleBookSummary,
+  BibleChapter,
+  BibleChapterSummary,
+  BibleUnit,
+} from "@emanus/shared/bible"
+import {
+  BIBLE_CATALOG,
+  BIBLE_TRANSLATION,
+  findBibleBook,
+  findBibleChapterSummary,
+  loadAllBibleChapters,
+  loadBibleBookChapters,
+  loadBibleChapter,
+} from "@emanus/shared/bible"
 import { navigate } from "../router"
 import "../bible.css"
 import "../needs.css"
@@ -93,15 +106,23 @@ const NEVOI: Nevoie[] = [
 
 type Gasit = { bookId: string; bookName: string; chapter: number; ref: string; heading: string }
 
-function cauta(nevoie: Nevoie): Gasit[] {
+function cauta(nevoie: Nevoie, chapters: BibleChapter[]): Gasit[] {
   const out: Gasit[] = []
-  for (const book of BIBLE_BOOKS) {
-    for (const ch of book.chapters) {
-      for (const u of ch.units) {
-        const fan = plat(`${u.heading} ${u.text} ${u.teaching} ${u.forYourHeart ?? ""}`)
-        if (nevoie.cuvinte.some((c) => fan.includes(plat(c)))) {
-          out.push({ bookId: book.id, bookName: book.name, chapter: ch.number, ref: u.ref, heading: u.heading })
-        }
+  for (const chapter of chapters) {
+    const book = findBibleBook(chapter.bookId)
+    if (!book) continue
+    for (const unit of chapter.units) {
+      const fan = plat(
+        `${unit.heading} ${unit.text} ${unit.teaching} ${unit.forYourHeart ?? ""}`,
+      )
+      if (nevoie.cuvinte.some((word) => fan.includes(plat(word)))) {
+        out.push({
+          bookId: book.id,
+          bookName: book.name,
+          chapter: chapter.number,
+          ref: unit.ref,
+          heading: unit.heading,
+        })
       }
     }
   }
@@ -110,7 +131,34 @@ function cauta(nevoie: Nevoie): Gasit[] {
 
 function Nevoi() {
   const [aleasa, setAleasa] = useState<Nevoie | null>(null)
-  const gasite = useMemo(() => (aleasa ? cauta(aleasa) : []), [aleasa])
+  const [gasite, setGasite] = useState<Gasit[]>([])
+  const [loading, setLoading] = useState(false)
+  const [failed, setFailed] = useState(false)
+
+  useEffect(() => {
+    if (!aleasa) {
+      setGasite([])
+      setLoading(false)
+      setFailed(false)
+      return
+    }
+    let active = true
+    setLoading(true)
+    setFailed(false)
+    void loadAllBibleChapters()
+      .then((chapters) => {
+        if (active) setGasite(cauta(aleasa, chapters))
+      })
+      .catch(() => {
+        if (active) setFailed(true)
+      })
+      .finally(() => {
+        if (active) setLoading(false)
+      })
+    return () => {
+      active = false
+    }
+  }, [aleasa])
 
   return <section className="bneeds">
     <h2 className="bneeds__title">Când te doare, citeşte</h2>
@@ -130,7 +178,11 @@ function Nevoi() {
         <h3>{aleasa.eticheta}</h3>
         <button type="button" className="ghost" onClick={() => setAleasa(null)}>Închide</button>
       </div>
-      {gasite.length === 0
+      {loading
+        ? <p className="muted">Căutăm în capitolele scrise…</p>
+        : failed
+          ? <p className="muted">Căutarea nu s-a putut încărca. Încearcă din nou.</p>
+          : gasite.length === 0
         ? <p className="muted">Deocamdată n-avem scris nimic pe durerea aceasta. Avem doar Geneza. Vine şi restul.</p>
         : gasite.map((g) => <button
             key={`${g.ref}-${g.heading}`}
@@ -147,7 +199,7 @@ function Nevoi() {
 
 /* ---------------------------------------------------------------- Acasa */
 
-function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter }) {
+function ChapterLink({ book, chapter }: { book: BibleBookSummary; chapter: BibleChapterSummary }) {
   const review = chapter.status !== "published"
   return <button type="button" className="bchap" onClick={() => navigate(`/biblia/${book.id}/${chapter.number}`)}>
     <span className="bchap__no">{chapter.number}</span>
@@ -159,16 +211,48 @@ function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter
   </button>
 }
 
-function Book({ book, query }: { book: BibleBook; query: string }) {
+function Book({ book, query }: { book: BibleBookSummary; query: string }) {
   const q = query.trim().toLowerCase()
+  const [fullChapters, setFullChapters] = useState<BibleChapter[] | null>(null)
+  const [searching, setSearching] = useState(false)
+  const [searchFailed, setSearchFailed] = useState(false)
+
+  useEffect(() => {
+    if (q.length < 2) {
+      setSearching(false)
+      return
+    }
+    let active = true
+    setSearching(true)
+    setSearchFailed(false)
+    void loadBibleBookChapters(book.id)
+      .then((chapters) => {
+        if (active) setFullChapters(chapters)
+      })
+      .catch(() => {
+        if (active) setSearchFailed(true)
+      })
+      .finally(() => {
+        if (active) setSearching(false)
+      })
+    return () => {
+      active = false
+    }
+  }, [book.id, q])
+
   const chapters = useMemo(() => {
     if (q.length === 0) return book.chapters
     return book.chapters.filter((c) => {
       const hay = plat(`${c.number} ${c.title} ${c.summary}`)
       if (hay.includes(plat(q))) return true
-      return c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
+      const full = fullChapters?.find((chapter) => chapter.number === c.number)
+      return Boolean(
+        full?.units.some((unit) =>
+          plat(`${unit.heading} ${unit.ref} ${unit.text}`).includes(plat(q)),
+        ),
+      )
     })
-  }, [book, q])
+  }, [book, fullChapters, q])
 
   return <section className="bbook">
     <header className="bbook__head">
@@ -176,7 +260,9 @@ function Book({ book, query }: { book: BibleBook; query: string }) {
       <p className="muted">{book.blurb}</p>
       <p className="bbook__count">{book.chapters.length} capitole scrise</p>
     </header>
-    {chapters.length === 0
+    {searching && <p className="muted bbook__none">Căutăm în textul capitolelor…</p>}
+    {searchFailed && <p className="muted bbook__none">Căutarea în text nu este disponibilă offline până când capitolele nu au fost deschise.</p>}
+    {!searching && chapters.length === 0
       ? <p className="muted bbook__none">Nimic cu cuvântul acesta în {book.name}.</p>
       : <div className="bbook__list">{chapters.map((c) => <ChapterLink key={c.id} book={book} chapter={c} />)}</div>}
   </section>
@@ -214,7 +300,7 @@ export function Bible() {
       />
     </label>
 
-    {BIBLE_BOOKS.map((b) => <Book key={b.id} book={b} query={query} />)}
+    {BIBLE_CATALOG.map((b) => <Book key={b.id} book={b} query={query} />)}
 
     <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explicaţiile sunt scrise pentru Emanus.</p>
   </section>
@@ -285,12 +371,59 @@ function Unit({ unit }: { unit: BibleUnit }) {
 }
 
 export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapter: number }) {
-  const found = findChapter(bookId, chapter)
-  const book = BIBLE_BOOKS.find((b) => b.id === bookId)
+  const book = findBibleBook(bookId)
+  const summary = findBibleChapterSummary(bookId, chapter)
+  const [found, setFound] = useState<BibleChapter | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [failed, setFailed] = useState(false)
+  const [attempt, setAttempt] = useState(0)
 
   useEffect(() => {
-    if (found) writeLast({ bookId, chapter, title: found.title })
-  }, [bookId, chapter, found])
+    let active = true
+    setFound(null)
+    setFailed(false)
+    if (!summary) {
+      setLoading(false)
+      return () => {
+        active = false
+      }
+    }
+    setLoading(true)
+    void loadBibleChapter(bookId, chapter)
+      .then((loaded) => {
+        if (!active) return
+        if (!loaded) {
+          setFailed(true)
+          return
+        }
+        setFound(loaded)
+        writeLast({ bookId, chapter, title: loaded.title })
+      })
+      .catch(() => {
+        if (active) setFailed(true)
+      })
+      .finally(() => {
+        if (active) setLoading(false)
+      })
+    return () => {
+      active = false
+    }
+  }, [attempt, bookId, chapter, summary])
+
+  if (loading) {
+    return <section className="bible">
+      <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
+      <p className="muted">Se deschide capitolul…</p>
+    </section>
+  }
+
+  if (failed) {
+    return <section className="bible">
+      <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
+      <p className="muted">Capitolul nu s-a putut descărca. Dacă l-ai deschis anterior, verifică dacă actualizarea aplicației s-a terminat.</p>
+      <button type="button" onClick={() => setAttempt((value) => value + 1)}>Încearcă din nou</button>
+    </section>
+  }
 
   if (!found || !book) {
     return <section className="bible">

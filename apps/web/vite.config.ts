@@ -31,14 +31,28 @@ export default defineConfig({
           "assets/content-paths-*.js",
           "assets/content-library-*.js",
           "assets/lessonMohler-*.js",
+          "assets/bible-chapter-*.js",
         ],
         cleanupOutdatedCaches: true,
         importScripts: ["push-sw.js"],
-        runtimeCaching: [{
-          urlPattern: ({ url }) => url.pathname.startsWith("/api"),
-          handler: "NetworkFirst",
-          options: { cacheName: "emanus-api", networkTimeoutSeconds: 3 },
-        }],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith("/api"),
+            handler: "NetworkFirst",
+            options: { cacheName: "emanus-api", networkTimeoutSeconds: 3 },
+          },
+          {
+            urlPattern: ({ url }) =>
+              url.origin === self.location.origin &&
+              /^\/assets\/bible-chapter-.*\.js$/.test(url.pathname),
+            handler: "CacheFirst",
+            options: {
+              cacheName: "emanus-bible-chapters",
+              cacheableResponse: { statuses: [0, 200] },
+              expiration: { maxEntries: 80, maxAgeSeconds: 31536000 },
+            },
+          },
+        ],
       },
     }),
   ],
@@ -49,6 +63,12 @@ export default defineConfig({
           if (id.includes("node_modules/react") || id.includes("node_modules/lucide-react")) return "vendor-react"
           if (id.includes("packages/shared/dist/library/")) return "content-library"
           if (id.includes("packages/shared/dist/paths/")) return "content-paths"
+          const bibleChapter = id.match(
+            /packages\/shared\/dist\/bible\/geneza(\d*)\.js$/,
+          )
+          if (bibleChapter) {
+            return `bible-chapter-geneza-${bibleChapter[1] || "1"}`
+          }
           return undefined
         },
       },

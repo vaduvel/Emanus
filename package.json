@@ -11,6 +11,8 @@
     "typecheck": "pnpm build:shared && pnpm --filter @emanus/db build && pnpm -r typecheck",
     "generate:content-manifest": "pnpm build:shared && node scripts/generate-content-manifest.mjs && pnpm build:shared",
     "check:content-manifest": "pnpm build:shared && node scripts/generate-content-manifest.mjs --check",
+    "generate:bible-catalog": "pnpm build:shared && node scripts/generate-bible-catalog.mjs && pnpm build:shared",
+    "check:bible-catalog": "pnpm build:shared && node scripts/generate-bible-catalog.mjs --check",
     "validate:content-release": "pnpm check:content-manifest && pnpm --filter @emanus/db validate-content",
     "content:publish": "pnpm generate:content-manifest && pnpm --filter @emanus/db publish-content",
     "fix:quotes": "python3 scripts/fix-quotes.py",

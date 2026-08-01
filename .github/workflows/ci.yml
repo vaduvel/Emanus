@@ -38,6 +38,9 @@ jobs:
       - name: Verifica release-ul de continut
         run: pnpm validate:content-release
 
+      - name: Verifica catalogul Bibliei
+        run: pnpm check:bible-catalog
+
       - name: Typecheck
         run: pnpm typecheck
 

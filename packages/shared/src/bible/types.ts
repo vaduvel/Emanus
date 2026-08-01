@@ -56,6 +56,20 @@ export interface BibleBook {
   chapters: BibleChapter[]
 }
 
+export type BibleChapterSummary = Pick<
+  BibleChapter,
+  "id" | "bookId" | "number" | "title" | "summary" | "status"
+>
+
+export interface BibleBookSummary {
+  id: string
+  name: string
+  testament: Testament
+  order: number
+  blurb: string
+  chapters: BibleChapterSummary[]
+}
+
 /** Traducerea afisata. Editia originala 1924 este in domeniul public. */
 export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"
 
