@@ -59,7 +59,7 @@ export const SCROLL_VERSES: ScrollVerse[] = [
     id: "sv_ps147_3",
     section: "cand_te_doare",
     ref: "Psalmul 147:3",
-    text: "El tămăduiește pe cei cu inima zărobită și le leagă rănile.",
+    text: "El tămăduiește pe cei cu inima zdrobită și le leagă rănile.",
     axis: "emotional_peace",
     step: "Numește rana, nu doar starea. „Mă doare că…”",
   },
