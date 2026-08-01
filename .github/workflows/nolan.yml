@@ -28,11 +28,11 @@ jobs:
       - name: Aplica observatiile pentru Geneza 2 si 3
         run: python3 scripts/nolan-geneza-2-3.py
 
-      - name: Aplica observatiile pentru Geneza 3
-        run: python3 scripts/nolan-geneza-3.py
-
       - name: Aplica observatiile pentru Geneza 3 si 4
         run: python3 scripts/nolan-geneza-3-4.py
+
+      - name: Aplica observatiile pentru Geneza 3
+        run: python3 scripts/nolan-geneza-3.py
 
       - name: Aplica observatiile pentru Geneza 5 si 6
         run: python3 scripts/nolan-geneza-5-6.py
