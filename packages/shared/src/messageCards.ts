@@ -254,7 +254,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Nu te sprijini pe priceperea ta. Eu îți netezesc căile.",
     verseRef: "Proverbe 3:5-6",
     verseText:
-      "Încrede-te în Domnul cu toată inima ta și nu te încrede în înțelepciunea ta; recunoaște-L în toate căile tale, și El îți va netezi cile.",
+      "Încrede-te în Domnul cu toată inima ta și nu te încrede în înțelepciunea ta; recunoaște-L în toate căile tale, și El îți va netezi cărările.",
     axis: "living_faith",
     moods: ["fara_directie"],
     background: "pergament",
