@@ -413,7 +413,7 @@ export const pathAproape: PathDef = {
  *
  * SIGURANȚĂ (docs/22 §1, NENEGOCIABIL): aici sunt cele mai multe simptome cu
  * posibilă cauză medicală. Lecția 6 trimite explicit la medic și la 116 123,
- * lecția 5 la 0800 801 200 pentru alcool/droguri/jocuri. Nicio lecție din camera
+ * iar lecția 5 separă ajutorul pentru alcool, droguri și jocuri. Nicio lecție din camera
  * asta nu spune omului că starea lui vine din lipsă de credință.
  */
 export const pathSchimbare: PathDef = {

@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LIB = ROOT / "packages" / "shared" / "src" / "library"
 PATHS = ROOT / "packages" / "shared" / "src" / "paths"
+SAFETY_RESOURCES = ROOT / "packages" / "shared" / "src" / "safetyResources.ts"
 RUNTIME_ROOTS = (LIB, PATHS)
 IMPORT_RE = re.compile(r'(?:from\s+|export\s+\*\s+from\s+)["\'](\.[^"\']+)["\']')
 
@@ -65,6 +66,33 @@ for path, text in texts.items():
         for match in re.finditer(pattern, text, flags=re.IGNORECASE):
             line = text.count("\n", 0, match.start()) + 1
             errors.append(f"{path.relative_to(ROOT)}:{line}: {label}: {match.group(0)!r}")
+
+unsafe_resource_claims = {
+    r"TelVerde antidrog.{0,80}0800\s*801\s*200": "0800 801 200 este linie antisuicid, nu antidrog",
+    r"116\s*123.{0,50}(?:oricand|non-stop)": "program neverificat pentru 116 123",
+    r"116\s*111.{0,50}non-stop": "program fals pentru Telefonul Copilului",
+}
+for path, text in texts.items():
+    for pattern, label in unsafe_resource_claims.items():
+        for match in re.finditer(pattern, text, flags=re.IGNORECASE | re.DOTALL):
+            line = text.count("\n", 0, match.start()) + 1
+            errors.append(f"{path.relative_to(ROOT)}:{line}: {label}")
+
+safety_text = SAFETY_RESOURCES.read_text(encoding="utf-8") if SAFETY_RESOURCES.exists() else ""
+for needle in (
+    'id: "112"',
+    'id: "116123"',
+    'id: "antisuicid"',
+    'id: "119"',
+    'id: "116111"',
+    'id: "anes"',
+    'id: "antidrog"',
+    'id: "gambling"',
+    'phone: "0800 870 070"',
+    'phone: "0800 800 099"',
+):
+    if needle not in safety_text:
+        errors.append(f"safetyResources.ts: lipsește resursa canonică {needle!r}")
 
 required_by_file = {
     "traseeCopii.ts": ["adult sigur", "atinge nepotrivit", "te gândești să te rănești"],

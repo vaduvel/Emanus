@@ -11,7 +11,7 @@ import type { Lesson } from "../domain.js"
  *  - §2: lectia 5 si lectia 6 primesc avertisment la primul pas. Cand exista
  *    ecranul separat de avertisment in UI, pasul se muta acolo.
  *  - §0: "Emanus nu inlocuieste medicul, psihologul, poliția sau 112" — in `s5_1`
- *    si `s6_1`. Dependența de alcool sau droguri: 0800 801 200. Sprijin: 116 123.
+ *    si `s6_1`. Droguri: 0800 870 070. Jocuri: 0800 800 099. Sprijin: 116 123.
  */
 
 export const schimbareL5: Lesson = {
@@ -36,7 +36,7 @@ export const schimbareL5: Lesson = {
         {
           from: "guide",
           text:
-            "Si ceva ce trebuie spus direct: dacă e vorba de alcool, droguri sau jocuri de noroc, ai nevoie si de ajutor omenesc, nu doar de lectii. TelVerde antidrog: 0800 801 200. Sprijin emoțional: 116 123. Urgențe: 112.",
+            "Si ceva ce trebuie spus direct: dacă e vorba de alcool, droguri sau jocuri de noroc, ai nevoie si de ajutor omenesc, nu doar de lectii. Pentru alcool: medicul de familie, un psihiatru sau un serviciu de adictii. Pentru droguri: TelVerde 0800 870 070. Pentru jocuri: programul privat Joc Responsabil, 0800 800 099 (luni-vineri, 10:00-18:00). Sprijin psihologic: 116 123. Urgențe: 112.",
         },
         {
           from: "guide",

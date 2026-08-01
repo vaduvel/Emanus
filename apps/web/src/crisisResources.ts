@@ -1,78 +1,11 @@
-export type CrisisIntent = "suicide" | "violence" | "child"
+import {
+  CRISIS_INTENTS,
+  SAFETY_RESOURCES,
+  type CrisisIntent,
+  type CrisisResource,
+} from "@emanus/shared/safety-resources"
 
-export interface CrisisResource {
-  id: string
-  intents: CrisisIntent[]
-  dial: string
-  display: string
-  label: string
-  availability: string
-  note: string
-  sourceLabel: string
-  sourceUrl: string
-  email?: string
-}
-
-const ALL_INTENTS: CrisisIntent[] = ["suicide", "violence", "child"]
-
-export const CRISIS_RESOURCES: CrisisResource[] = [
-  {
-    id: "112",
-    intents: ALL_INTENTS,
-    dial: "112",
-    display: "112",
-    label: "Urgențe: ambulanță și poliție",
-    availability: "Non-stop și gratuit",
-    note: "Sună acum dacă viața ta sau a altcuiva este în pericol imediat.",
-    sourceLabel: "Serviciul de Telecomunicații Speciale",
-    sourceUrl: "https://www.112.ro/",
-  },
-  {
-    id: "antisuicid",
-    intents: ["suicide"],
-    dial: "0800801200",
-    display: "0800 801 200",
-    label: "TelVerde Antisuicid",
-    availability: "Vineri–duminică, 16:00–04:00",
-    note: "Sprijin pentru adulți. În afara programului sau la pericol imediat, sună la 112.",
-    email: "sos@antisuicid.ro",
-    sourceLabel: "Findahelpline, verificat de linie",
-    sourceUrl: "https://findahelpline.com/organizations/telverde-antisuicid?expand=true",
-  },
-  {
-    id: "119",
-    intents: ["child"],
-    dial: "119",
-    display: "119",
-    label: "Numărul unic național pentru copii",
-    availability: "Apel gratuit",
-    note: "Pentru sesizarea abuzului, neglijării, exploatării sau violenței asupra unui copil.",
-    sourceLabel: "Catalogul serviciilor publice",
-    sourceUrl: "https://serviciipublice.gov.ro/serviciu/numarul-unic-national-pentru-copii-119",
-  },
-  {
-    id: "116111",
-    intents: ["child"],
-    dial: "116111",
-    display: "116 111",
-    label: "Telefonul Copilului",
-    availability: "Luni–vineri, 08:00–20:00",
-    note: "Consiliere gratuită pentru copii și adolescenți.",
-    sourceLabel: "Asociația Telefonul Copilului",
-    sourceUrl: "https://bedrugfree.116111.ro/cum-te-ajutam/",
-  },
-  {
-    id: "anes",
-    intents: ["violence"],
-    dial: "0800500333",
-    display: "0800 500 333",
-    label: "Linie națională pentru violență domestică",
-    availability: "Non-stop și gratuit",
-    note: "Sprijin pentru violență domestică, trafic de persoane și discriminare pe criteriul de sex.",
-    sourceLabel: "Agenția Națională pentru Egalitatea de Șanse",
-    sourceUrl: "https://anes.gov.ro/call-center/",
-  },
-]
+export type { CrisisIntent } from "@emanus/shared/safety-resources"
 
 function normalize(value: string): string {
   return value.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase()
@@ -118,6 +51,12 @@ const CHILD_PATTERNS = [
   /\bparintii ma bat\b/,
 ]
 
+const DRUG_EMERGENCY_PATTERNS = [
+  /\bsupradoz(?:a|at|ata)?\b/,
+  /\boverdose\b/,
+  /\bam luat prea multe pastile\b/,
+]
+
 export function detectCrisisIntents(input: string): CrisisIntent[] {
   const value = normalize(input)
   const intents: CrisisIntent[] = []
@@ -128,13 +67,14 @@ export function detectCrisisIntents(input: string): CrisisIntent[] {
   const child = matchesAny(value, CHILD_PATTERNS)
   if (child && violence) intents.push("child")
   if (violence) intents.push("violence")
+  if (matchesAny(value, DRUG_EMERGENCY_PATTERNS)) intents.push("drugs")
 
   return intents
 }
 
 export function parseCrisisIntents(value: string | null): CrisisIntent[] {
   if (!value) return []
-  const allowed = new Set<CrisisIntent>(ALL_INTENTS)
+  const allowed = new Set<CrisisIntent>(CRISIS_INTENTS)
   return [...new Set(value.split(",").filter((item): item is CrisisIntent => allowed.has(item as CrisisIntent)))]
 }
 
@@ -144,8 +84,8 @@ export function crisisPath(intents: CrisisIntent[]): string {
 }
 
 export function crisisResourcesFor(intents: CrisisIntent[]): CrisisResource[] {
-  if (intents.length === 0) return CRISIS_RESOURCES
-  return CRISIS_RESOURCES.filter(
+  if (intents.length === 0) return SAFETY_RESOURCES
+  return SAFETY_RESOURCES.filter(
     (resource) => resource.id === "112" || resource.intents.some((intent) => intents.includes(intent)),
   )
 }

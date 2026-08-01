@@ -11,6 +11,12 @@ function situationCopy(intents: CrisisIntent[]): string {
   if (intents.includes("violence")) {
     return "Dacă ești amenințat sau agresat, mergi într-un loc sigur dacă poți face asta fără să te expui unui pericol mai mare și cere ajutor direct."
   }
+  if (intents.includes("drugs")) {
+    return "O posibilă supradoză este o urgență medicală. Sună la 112 acum; nu aștepta să vezi dacă simptomele trec și nu încerca să gestionezi singur situația."
+  }
+  if (intents.includes("gambling")) {
+    return "Dacă jocurile de noroc te-au adus la gânduri de suicid sau la pericol imediat, sună la 112. Pentru oprire și consiliere folosește resursa specializată de mai jos."
+  }
   return "Alege resursa potrivită situației. Dacă există un pericol imediat, sună mai întâi la 112."
 }
 
@@ -45,7 +51,7 @@ export function Crisis({ intents, onBack }: { intents: CrisisIntent[]; onBack: (
               key={resource.id}
             >
               <div className="crisis-resource__body">
-                <p className="crisis-resource__number">{resource.display}</p>
+                <p className="crisis-resource__number">{resource.phone}</p>
                 <h2>{resource.label}</h2>
                 <p className="crisis-resource__availability">{resource.availability}</p>
                 <p className="muted">{resource.note}</p>

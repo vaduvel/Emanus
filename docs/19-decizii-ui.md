@@ -81,7 +81,7 @@ Nicio a treia excepție nu se adaugă fără o decizie scrisă aici.
 | **„Cum e cu sufletul tău azi?” cu cele 5 fețe** | Nu e decorativ. E cea mai ieftină cale prin care aplicația află că a fost o zi grea, fără să ceară cuiva să scrie. |
 | **Rugăciunea pe 5 niveluri** | Progresie fără punctaj. Exact ce trebuie. |
 | **Ebenezer „Trece cererea în piatră”** + Doar eu / Familia / Comunitatea | Metaforă bună (1 Samuel 7:12) și control de intimitate corect. |
-| **Ecranul de criză** | Numere RO reale (112 · 116 111 · 116 123 · 0800 801 200), ton corect. |
+| **Ecranul de criză** | Resurse RO cu sursă și program afișat; 0800 801 200 este antisuicid, nu antidrog. |
 
 O singură schimbare de fond la fețe: **capătă consecință**. Ce apeși acolo intră în motorul de memorie (`docs/18-prezenta-proactiva.md`) și schimbă ce ți se propune mâine. Altfel e un buton fără urmări, adică minciună.
 

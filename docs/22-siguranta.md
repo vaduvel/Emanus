@@ -72,13 +72,16 @@ Avertismentul nu se dilueaza in text. E ecran separat.
 
 Accesibil permanent din `.helpbar`, fara sa fie nevoie de cont si fara sa treaca prin nicio lectie.
 
-| Situatie | Numar |
-| --- | --- |
-| Urgenta, pericol imediat | **112** |
-| Copii si adolescenti (Telefonul Copilului) | **116 111** |
-| Suport emotional / gand de suicid | **116 123** |
-| TelVerde antidrog | **0800 801 200** |
-| Violenta domestica | **0800 500 333** |
+| Situatie | Resursa | Disponibilitate declarata |
+| --- | --- | --- |
+| Urgenta, pericol imediat | **112** | Non-stop |
+| Suport psihologic / gand de suicid | **116 123** | Gratuit; programul se verifica la apel |
+| Linie antisuicid pentru adulti | **0800 801 200** / **sos@antisuicid.ro** | Vineri-duminica, 16:00-04:00; e-mail oricand |
+| Abuz, neglijare sau violenta asupra copilului | **119** | Apel gratuit |
+| Copii si adolescenti (Telefonul Copilului) | **116 111** | Luni-vineri, 08:00-20:00 |
+| Violenta domestica | **0800 500 333** | Non-stop |
+| Consum si dependenta de droguri | **0800 870 070** | Programul poate varia |
+| Jocuri de noroc, program privat | **0800 800 099** | Luni-vineri, 10:00-18:00 |
 
 Reguli pe ecranul de criza:
 
@@ -86,6 +89,11 @@ Reguli pe ecranul de criza:
 - Zero intrebari. Nu cerem omului sa descrie ce se intampla.
 - Un singur rand dupa numere: "Nu ești singur. Suna. Ne intoarcem la drum cand ești in siguranta."
 - Numerele nu se schimba fara verificare pe sursa oficiala.
+
+Sursele si legaturile verificabile sunt pastrate in
+packages/shared/src/safetyResources.ts. Pentru un serviciu privat, ecranul
+spune explicit ca nu este linie de stat. Ultima verificare editoriala:
+**1 august 2026**.
 
 ---
 
