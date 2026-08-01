@@ -58,7 +58,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     verseRef: "Matei 6:9",
     verseText: "Iată dar cum trebuie să vă rugați: „Tatăl nostru care ești în ceruri! Sfințească-se Numele Tău.”",
     meditation:
-      "Primul cuvânt e „Tată”, nu „Domn” și nu „Stapân”. Al doilea e „nostru” — chiar și în camera încuiată nu ești singur înaintea Lui. Din primele patru cuvinte afli cine ești și cine e El.",
+      "Primul cuvânt e „Tată”, nu „Domn” și nu „Stăpân”. Al doilea e „nostru” — chiar și în camera încuiată nu ești singur înaintea Lui. Din primele patru cuvinte afli cine ești și cine e El.",
     question: "Îi spui Tată sau doar Doamne?",
     prayer: "Tatăl nostru care ești în ceruri, sfințească-se Numele Tău. Amin.",
     step: "Citește azi rar Tatăl nostru și oprește-te la fiecare propoziție.",
@@ -136,7 +136,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     verseRef: "Ioan 14:13",
     verseText: "Și orice veți cere în Numele Meu, voi face, pentru ca Tatăl să fie proslăvit în Fiul.",
     meditation:
-      "„În Numele Meu” nu e o formulă pusă la sfârșit, ci un temei: vii înaintea Tatălui pe contă Lui, nu pe al tău. Și scopul e spus limpede — ca Tatăl să fie proslăvit. Rugăciunea ta e legată de ceva mai mare decât confortul tău.",
+      "„În Numele Meu” nu e o formulă pusă la sfârșit, ci un temei: vii înaintea Tatălui pe contul Lui, nu pe al tău. Și scopul e spus limpede — ca Tatăl să fie proslăvit. Rugăciunea ta e legată de ceva mai mare decât confortul tău.",
     question: "Ce ai cere dacă scopul ar fi slava Lui, nu liniștea ta?",
     prayer: "Doamne, vin în Numele lui Isus, nu cu numele meu. Amin.",
     step: "Adaugă azi la o cerere veche întrebarea: „la ce bun, pentru Împărăția Ta?”",
@@ -149,7 +149,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     verseRef: "Filipeni 4:6",
     verseText: "Nu vă îngrijorați de nimic, ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu, prin rugăciuni și cereri, cu mulțumiri.",
     meditation:
-      "„În orice lucru” desființează ideea că unele probleme sunt prea mici pentru Dumnezeu. Și „cu mulțumiri” schimbă tonul: nu vii ca la un birou de reclămații. Grija dusă la El se preface în cerere; grija ținută în tine se preface în frică.",
+      "„În orice lucru” desființează ideea că unele probleme sunt prea mici pentru Dumnezeu. Și „cu mulțumiri” schimbă tonul: nu vii ca la un birou de reclamații. Grija dusă la El se preface în cerere; grija ținută în tine se preface în frică.",
     question: "Ce lucru ți se pare prea mic ca să-l spui în rugăciune?",
     prayer: "Doamne, Îți spun și lucrurile mici. Mulțumesc că asculți. Amin.",
     step: "Roagă-te azi pentru un lucru banal — o întâlnire, un drum, o factură.",
@@ -199,7 +199,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Iacov 1:6",
-    verseText: "Dar să ceară cu credință, fără să se îndoiască deloc, pentru că cine se îndoiește seamănă cu valul mării, tulburat și îmins de vânt încoace și încolo.",
+    verseText: "Dar să ceară cu credință, fără să se îndoiască deloc, pentru că cine se îndoiește seamănă cu valul mării, tulburat și împins de vânt încoace și încolo.",
     meditation:
       "Îndoiala de care vorbește Iacov nu e întrebarea sinceră, ci nehotărârea omului care nu știe dacă vrea sau nu ajutorul lui Dumnezeu. Poți veni cu întrebări; nu poți veni cu jumătate de inimă. Cere și rămâi acolo.",
     question: "Ceri cu adevărat sau doar încerci, „să vedem”?",
@@ -242,7 +242,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     meditation:
       "„Vărsați” e un cuvânt fără eleganță: răstorni tot, nu torni cu grijă. Dumnezeu nu are nevoie de un rezumat ordonat al stării tale. Multe rugăciuni sunt seci pentru că sunt politicoase.",
     question: "Ce n-ai spus încă, pentru că sună urât?",
-    prayer: "Doamne, În fața Ta răstorn tot ce am în piept. Amin.",
+    prayer: "Doamne, în fața Ta răstorn tot ce am în piept. Amin.",
     step: "Roagă-te azi cu voce tare, singur, exact ce simți.",
   },
   {
@@ -267,7 +267,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     verseText: "A doua zi dimineața, pe când era încă întuneric de tot, Isus S-a sculat, a ieșit și S-a dus într-un loc pustiu. Și Se ruga acolo.",
     meditation:
       "Isus avea cea mai bună legătură posibilă cu Tatăl și totuși Și-a făcut timp și loc. Se sculase după o zi încheiată târziu, cu tot orașul la ușă. Dacă El a avut nevoie de ora aceea, nu e o pierdere de timp pentru tine.",
-    question: "Ce ar trebui să muti în program ca să ai un sfert de oră cu El?",
+    question: "Ce ar trebui să muți în program ca să ai un sfert de oră cu El?",
     prayer: "Doamne, Îți dau prima parte a zilei. Amin.",
     step: "Pune azi ceasul cu cincisprezece minute mai devreme pentru mâine.",
   },
@@ -316,9 +316,9 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "2 Cronici 20:12",
-    verseText: "Noi suntem fără putere înaintea acestei mari mulțimi care înaintează îmotriva noastră și nu știm ce să facem, dar ochii noștri sunt îndreptați spre Tine.",
+    verseText: "Noi suntem fără putere înaintea acestei mari mulțimi care înaintează împotriva noastră și nu știm ce să facem, dar ochii noștri sunt îndreptați spre Tine.",
     meditation:
-      "E rugăciunea unui împărat înaintea unei armate, și conține trei recunoașteri: nu avem putere, nu știm ce să facem, ne uităm la Tine. Nu e o rugăciune de învină. Dumnezeu a răspuns că lupta e a Lui.",
+      "E rugăciunea unui împărat înaintea unei armate și conține trei recunoașteri: nu avem putere, nu știm ce să facem, ne uităm la Tine. Nu e o rugăciune de învins. Dumnezeu a răspuns că lupta e a Lui.",
     question: "În ce situație ai putea spune exact cuvintele astea?",
     prayer: "Doamne, nu știu ce să fac, dar ochii mei sunt spre Tine. Amin.",
     step: "Scrie versetul ăsta și pune-l acolo unde te lovește nesiguranța.",
@@ -333,7 +333,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     meditation:
       "Ana se ruga atât de tulburată încât preotul a crezut că e beată. Se ruga fără glas, doar cu buzele. Dumnezeu a auzit rugăciunea pe care nici omul din templu n-a putut-o auzi.",
     question: "Crezi că El aude și ce nu poți rosti?",
-    prayer: "Doamne, Îi vărs sufletul înaintea Ta, chiar dacă nu iese niciun sunet. Amin.",
+    prayer: "Doamne, îmi vărs sufletul înaintea Ta, chiar dacă nu iese niciun sunet. Amin.",
     step: "Roagă-te azi în gând, într-un loc public, pentru cineva de lângă tine.",
   },
   {
@@ -370,7 +370,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     verseRef: "Efeseni 6:18",
     verseText: "Faceți în toată vremea, prin Duhul, tot felul de rugăciuni și cereri... și rugați-vă pentru toți sfinții.",
     meditation:
-      "Pavel așază rugăciunea la capătul armurii, ca lucrul care le ține pe toate în funcțiune. Și o întoarce spre alții: „pentru toți sfinții”. Un om care se roagă doar pentru sine se împutinează.",
+      "Pavel așază rugăciunea la capătul armurii, ca lucrul care le ține pe toate în funcțiune. Și o întoarce spre alții: „pentru toți sfinții”. Un om care se roagă doar pentru sine se împuținează.",
     question: "Cât din rugăciunea ta e despre tine?",
     prayer: "Doamne, învață-mă să mă rog și pentru alții. Amin.",
     step: "Fă-ți azi o listă cu cinci oameni și roagă-te pe nume pentru ei.",
@@ -394,7 +394,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Apocalipsa 8:4",
-    verseText: "Fumul de tămâie s-a ridicat din mâna îngerului înaintea lui Dumnezeu, îmreună cu rugăciunile sfinților.",
+    verseText: "Fumul de tămâie s-a ridicat din mâna îngerului înaintea lui Dumnezeu, împreună cu rugăciunile sfinților.",
     meditation:
       "Se încheie luna rugăciunii cu o imagine din cer: rugăciunile nu se pierd. Ce ai șoptit într-o bucătărie e păstrat și adus înaintea lui Dumnezeu. Luna viitoare vorbim despre ce faci când El pare că tace — și pornește tocmai de la versetul ăsta.",
     question: "Ce rugăciune a ta pare pierdută?",
