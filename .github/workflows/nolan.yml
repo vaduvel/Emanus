@@ -24,13 +24,16 @@ jobs:
       - name: Aplica observatiile pentru Geneza 2 si 3
         run: python3 scripts/nolan-geneza-2-3.py
 
+      - name: Aplica observatiile pentru Geneza 3 si 4
+        run: python3 scripts/nolan-geneza-3-4.py
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "feat(biblia): curatarea textului si observatiile din Geneza 2 si 3"
+            git commit -m "feat(biblia): observatiile din studiul lui Nolan, valul al treilea"
             git push
           else
             echo "Nimic de schimbat."
