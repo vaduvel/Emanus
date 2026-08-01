@@ -6,7 +6,8 @@
 //
 // Regula rămâne cea din D-004: nu se publică zile fără verset-ancoră. Aplicația
 // nu promite 365 de zile, ci atâtea câte sunt scrise — `devotionalDaysAvailable()`
-// spune adevărul, nu o cifră de marketing.
+// spune adevărul, nu o cifră de marketing. De la luna 12 încoace, adevărul ăsta
+// e 365.
 import { DEVOTIONAL_DAYS, type DevotionalDay } from "./devotional.js"
 import { DEVOTIONAL_DAYS_LUNA_2 } from "./devotional-luna-02.js"
 import { DEVOTIONAL_DAYS_LUNA_3 } from "./devotional-luna-03.js"
@@ -18,6 +19,7 @@ import { DEVOTIONAL_DAYS_LUNA_8 } from "./devotional-luna-08.js"
 import { DEVOTIONAL_DAYS_LUNA_9 } from "./devotional-luna-09.js"
 import { DEVOTIONAL_DAYS_LUNA_10 } from "./devotional-luna-10.js"
 import { DEVOTIONAL_DAYS_LUNA_11 } from "./devotional-luna-11.js"
+import { DEVOTIONAL_DAYS_LUNA_12 } from "./devotional-luna-12.js"
 
 /** Toate zilele scrise până acum, sortate după numărul zilei. */
 export const DEVOTIONAL_DAYS_ALL: DevotionalDay[] = [
@@ -32,13 +34,14 @@ export const DEVOTIONAL_DAYS_ALL: DevotionalDay[] = [
   ...DEVOTIONAL_DAYS_LUNA_9,
   ...DEVOTIONAL_DAYS_LUNA_10,
   ...DEVOTIONAL_DAYS_LUNA_11,
+  ...DEVOTIONAL_DAYS_LUNA_12,
 ].sort((a, b) => a.dayNumber - b.dayNumber)
 
 export function devotionalDay(dayNumber: number): DevotionalDay | null {
   return DEVOTIONAL_DAYS_ALL.find((d) => d.dayNumber === dayNumber) ?? null
 }
 
-/** Câte zile de conținut există efectiv (nu 365 până se scrie tot). */
+/** Câte zile de conținut există efectiv. */
 export function devotionalDaysAvailable(): number {
   return DEVOTIONAL_DAYS_ALL.length
 }
