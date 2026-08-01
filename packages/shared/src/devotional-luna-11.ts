@@ -2,7 +2,7 @@
 //
 // Regula lunii: se face diferența, zi de zi, între vinovăție („am făcut ceva
 // rău”) și rușine („sunt ceva rău”). Prima se rezolvă prin iertare, a doua prin
-// a fi văzut și totuși primit. Nicio zi nu îi cere omului să-și „iartă singur”
+// a fi văzut și totuși primit. Nicio zi nu îi cere omului să-și „ierte singur”
 // trecutul și niciuna nu-l grăbește să-și spună povestea cuiva nesigur.
 //
 // Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
@@ -45,7 +45,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     verseRef: "Geneza 3:9",
     verseText: "Dar Domnul Dumnezeu a chemat pe om și i-a zis: „Unde ești?”",
     meditation:
-      "Dumnezeu știa unde e Adam; întrebarea era pentru Adam. Prima mișcare după cădere n-a fost pedeapsa, ci căutarea. Rușinea te îmine în tufișuri, iar El vine și te strigă pe nume.",
+      "Dumnezeu știa unde e Adam; întrebarea era pentru Adam. Prima mișcare după cădere n-a fost pedeapsa, ci căutarea. Rușinea te împinge în tufișuri, iar El vine și te strigă pe nume.",
     question: "Unde te-ai ascuns în ultima vreme?",
     prayer: "Doamne, ies din tufiș. Sunt aici. Amin.",
     step: "Spune-I azi în rugăciune exact unde te-ai ascuns și de ce.",
@@ -71,7 +71,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     verseRef: "Psalmul 25:3",
     verseText: "Da, toți cei ce nădăjduiesc în Tine nu vor fi dați de rușine.",
     meditation:
-      "E o promisiune ciudat de concretă pentru un om care trăiește cu fața în pământ. Nu spune că nu vei greși, ci că nu vei rămâne acolo. Nădejdea pusă în El nu se întoarce îmotriva ta.",
+      "E o promisiune ciudat de concretă pentru un om care trăiește cu fața în pământ. Nu spune că nu vei greși, ci că nu vei rămâne acolo. Nădejdea pusă în El nu se întoarce împotriva ta.",
     question: "Ce te face să-ți ții privirea în pământ?",
     prayer: "Doamne, în Tine nădăjduiesc. Ridică-mi capul. Amin.",
     step: "Când vorbești azi cu cineva, privește-l în ochi.",
@@ -82,7 +82,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Isaia 54:4",
-    verseText: "Nu te teme, căci nu vei rămâne de rușine; nu roși, căci nu vei fi acoperită de rușine; ți vei uita și rușinea tinereților.",
+    verseText: "Nu te teme, căci nu vei rămâne de rușine; nu roși, căci nu vei fi acoperită de rușine; vei uita și rușinea tinereților.",
     meditation:
       "Dumnezeu vorbește aici unui popor cu un trecut umilitor și îi promite că rușinea tinereții nu va fi ultimul cuvânt. Nu spune că nu s-a întâmplat, ci că nu te va mai defini. Vindecarea nu șterge istoria; îi ia puterea.",
     question: "Ce rușine din tinerețe te definește încă?",
@@ -111,7 +111,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     verseText: "Veți mânca și vă veți sătura și veți lăuda Numele Domnului Dumnezeului vostru... și poporul Meu niciodată nu va mai fi de ocară!",
     meditation:
       "Contextul e o țară mâncată de lăcuste, adică ani pierduți. Dumnezeu promite sătul și sfârșitul ocarei în același loc. Cine a pierdut ani întregi are aici o promisiune anume pentru el.",
-    question: "Ce ani ți s-au mâncat și îi plangești încă?",
+    question: "Ce ani ți s-au mâncat și îi plângi încă?",
     prayer: "Doamne, răsplătește-mi anii pierduți. Amin.",
     step: "Numește în rugăciune anii aceia și cere-I să-i folosească.",
   },
@@ -173,7 +173,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Marcu 8:38",
-    verseText: "Pentru că de oricine Îi va fi rușine de Mine și de cuvintele Mele în acest neam preacurvar și păcătos, Î va fi rușine și Fiului omului.",
+    verseText: "Pentru că de oricine Îi va fi rușine de Mine și de cuvintele Mele în acest neam preacurvar și păcătos, Îi va fi rușine și Fiului omului.",
     meditation:
       "Rușinea are două sensuri în luna asta: cea care te apasă și cea pe care o alegi. E ușor să taci despre El într-un birou sau într-un grup. Tăcerea aceea e o formă discretă de lepădare.",
     question: "Unde ți-e rușine să fii cunoscut ca creștin?",
@@ -212,9 +212,9 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Ioan 8:10-11",
-    verseText: "Femeie, unde sunt pârâșii tăi? Nimeni nu te-a osndit? Nici Eu nu te osndesc. Du-te și să nu mai păcătuiești.",
+    verseText: "Femeie, unde sunt pârâșii tăi? Nimeni nu te-a osândit? Nici Eu nu te osândesc. Du-te și să nu mai păcătuiești.",
     meditation:
-      "Femeia fusese adusă în mijlocul curții Templului, expusă dinadins. Isus a scris în țărână și le-a lăsat timp să plece. A făcut două lucruri odată: n-a osndit-o și n-a numit păcatul „nimic”.",
+      "Femeia fusese adusă în mijlocul curții Templului, expusă dinadins. Isus a scris în țărână și le-a lăsat timp să plece. A făcut două lucruri odată: n-a osândit-o și n-a numit păcatul „nimic”.",
     question: "Ai fost expus vreodată în fața altora?",
     prayer: "Doamne, Tu nu mă osândești. Și nici nu mă lași unde sunt. Amin.",
     step: "Renunță azi să expui greșeala cuiva în fața altora.",
@@ -277,7 +277,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Luca 15:21",
-    verseText: "Fiul i-a zis: „Tată, am păcătuit îmotriva cerului și îmotriva ta, nu mai sunt vrednic să mă chem fiul tău.”",
+    verseText: "Fiul i-a zis: „Tată, am păcătuit împotriva cerului și împotriva ta, nu mai sunt vrednic să mă chem fiul tău.”",
     meditation:
       "Fiul își pregătise un discurs în care cerea să fie făcut argat. Tatăl nu-l lasă să-l termine și cere haina, inelul și încălțămintea — semnele de fiu. Rușinea ne învață să negociem o poziție mai mică decât cea pe care ne-o dă Dumnezeu.",
     question: "Ce poziție mai mică Îi ceri, ca să fie mai ușor de crezut?",
@@ -316,7 +316,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Proverbe 28:13",
-    verseText: "Cine își ascunde fărădelegile nu propașește, dar cine le mărturisește și se lasă de ele capătă îndurare.",
+    verseText: "Cine își ascunde fărădelegile nu propășește, dar cine le mărturisește și se lasă de ele capătă îndurare.",
     meditation:
       "Sunt două verbe, nu unul: mărturisește și se lasă. Mărturisirea fără părăsire devine un ritual, iar părăsirea fără mărturisire rămâne o luptă singuratică. Îndurarea stă la capătul amândurora.",
     question: "Care dintre cele două verbe îți lipsește?",
@@ -331,7 +331,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     verseRef: "1 Ioan 3:20",
     verseText: "În orice ne osândește inima noastră; căci Dumnezeu este mai mare decât inima noastră și cunoaște toate lucrurile.",
     meditation:
-      "Sunt zile în care propria inimă e cel mai aspru judecător. Ioan nu spune „ascultă-ți inima”, ci exact invers: Dumnezeu e mai mare decât ea. El știe tot — și cunoscnd tot, tot te primește.",
+      "Sunt zile în care propria inimă e cel mai aspru judecător. Ioan nu spune „ascultă-ți inima”, ci exact invers: Dumnezeu e mai mare decât ea. El știe tot — și cunoscând tot, tot te primește.",
     question: "Cine te condamnă mai tare: Dumnezeu sau tu?",
     prayer: "Doamne, Tu ești mai mare decât inima mea care mă acuză. Amin.",
     step: "Când te acuzi azi, spune cu voce tare versetul ăsta.",
@@ -342,7 +342,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Romani 8:33",
-    verseText: "Cine va ridica pâră îmotriva aleșilor lui Dumnezeu? Dumnezeu este Acela care-i socotește neprihăniți!",
+    verseText: "Cine va ridica pâră împotriva aleșilor lui Dumnezeu? Dumnezeu este Acela care-i socotește neprihăniți!",
     meditation:
       "Pavel folosește limbaj de tribunal: cine e procurorul? Judecătorul te-a declarat deja neprihănit. Rușinea vine mereu îmbrăcată în rechizitoriu, dar n-are mandat.",
     question: "Ce acuzație ți se repetă în minte?",
@@ -370,7 +370,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     verseRef: "Zaharia 3:4",
     verseText: "Dezbrăcați-l de hainele murdare de pe el! Apoi a zis lui Iosua: „Iată că îndepărtez de la tine nelegiuirea și te îmbrac cu haine de sărbătoare!”",
     meditation:
-      "E o scenă de tribunal în care Satana stă de-a dreapta ca să pârască, iar Dumnezeu nu discută acuzațiile: schimbă hainele. Nu i se cere lui Iosua să-și spele singur veșmintele. Curatirea vine ca dar, în fața martorilor.",
+      "E o scenă de tribunal în care Satana stă de-a dreapta ca să pârască, iar Dumnezeu nu discută acuzațiile: schimbă hainele. Nu i se cere lui Iosua să-și spele singur veșmintele. Curățirea vine ca dar, în fața martorilor.",
     question: "În ce haine te vezi când te gândești la tine?",
     prayer: "Doamne, ia-mi hainele murdare și îmbracă-mă Tu. Amin.",
     step: "Alege azi o haină curată și, îmbrăcând-o, adu-ți aminte de versetul ăsta.",
@@ -383,7 +383,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     verseRef: "Isaia 50:7",
     verseText: "Dar Domnul Dumnezeu M-a ajutat; de aceea nu M-am rușinat, de aceea Mi-am făcut fața ca o cremene, știind că nu voi fi dat de rușine.",
     meditation:
-      "„Fața ca o cremene” nu înseamnă obrăznicie, ci hotărârea de a merge înainte când știi cine te susține. E o profeție despre Isus mergnd spre Ierusalim. Un om care nu-și mai apără imaginea are o tărie ciudată.",
+      "„Fața ca o cremene” nu înseamnă obrăznicie, ci hotărârea de a merge înainte când știi cine te susține. E o profeție despre Isus mergând spre Ierusalim. Un om care nu-și mai apără imaginea are o tărie ciudată.",
     question: "Ce ai face azi dacă nu ți-ar mai fi frică de părerea nimănui?",
     prayer: "Doamne, întărește-mi fața și moaie-mi inima. Amin.",
     step: "Fă azi lucrul bun pe care îl amâni de teamă că vei părea ciudat.",
