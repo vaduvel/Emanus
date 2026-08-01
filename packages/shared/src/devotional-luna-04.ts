@@ -19,7 +19,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     verseText: "În ziua a șaptea, Dumnezeu Și-a sfârșit lucrarea pe care o făcuse; și în ziua a șaptea S-a odihnit de toată lucrarea Lui.",
     meditation:
       "Dumnezeu nu Se odihnește pentru că obosește. Se odihnește pentru că lucrarea era terminată — și pune odihna în ritmul lumii înainte ca omul să fi muncit ceva. Prima zi întreagă a lui Adam a fost o zi de odihnă, nu una de producție.",
-    question: "Odihna ta e un dar primit sau o pauză pe care crezi că trebuie să ți-o meți?",
+    question: "Odihna ta e un dar primit sau o pauză pe care crezi că trebuie să ți-o meriți?",
     prayer: "Doamne, Tu Te-ai odihnit primul. Învață-mă să nu mă simt vinovat când mă opresc. Amin.",
     step: "Oprește-te azi cincisprezece minute fără să produci nimic și fără să te justifici.",
   },
@@ -59,7 +59,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     meditation:
       "Sunt două feluri de oboseală în verset: „trudiți”, adică cei care muncesc, și „încărcați”, adică cei cărora li s-a pus ceva în spate. Isus nu cere să alegi categoria. Cere doar să vii cu ea.",
     question: "Oboseala ta vine din ce faci sau din ce duci?",
-    prayer: "Doamne, vin obosit. Nu vin refacut, ca să-ți fie mai ușor. Amin.",
+    prayer: "Doamne, vin obosit. Nu vin refăcut, ca să-ți fie mai ușor. Amin.",
     step: "Spune-I azi, într-o propoziție, de ce anume ești obosit. Fii exact.",
   },
   {
@@ -70,7 +70,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     verseRef: "Psalmul 23:2",
     verseText: "El mă paște în pășuni verzi și mă duce la ape de odihnă.",
     meditation:
-      "O oaie nu se culcă dacă Îi e foame, dacă se teme sau dacă e învălmășeală în turmă. Faptul că stă jos e dovada că Păstorul și-a făcut treaba. Odihna ta e, de cele mai multe ori, rezultatul încrederii, nu al circumstanțelor.",
+      "O oaie nu se culcă dacă îi e foame, dacă se teme sau dacă e învălmășeală în turmă. Faptul că stă jos e dovada că Păstorul și-a făcut treaba. Odihna ta e, de cele mai multe ori, rezultatul încrederii, nu al circumstanțelor.",
     question: "Ce anume te ține în picioare, deși ai putea sta jos?",
     prayer: "Doamne, du-mă la ape liniștite. Nu știu singur drumul spre ele. Amin.",
     step: "Fă azi un lucru care te liniștește și pe care l-ai amânat pentru că „nu e productiv”.",
@@ -84,7 +84,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     verseText: "Degeaba vă sculați de dimineață și vă culcați târziu, ca să mâncați o pâine câștigată cu durere; căci preaiubiților Lui El le dă pâine ca în somn.",
     meditation:
       "Psalmul nu condamnă munca, ci munca disperată — aceea care crede că totul depinde de câte ore stai treaz. Dumnezeu lucrează și în orele în care tu dormi. Somnul e un act de credință: recunoști că lumea merge și fără tine câteva ore.",
-    question: "Cât din programul tău vine din hotea de a nu rămâne în urmă?",
+    question: "Cât din programul tău vine din teama de a nu rămâne în urmă?",
     prayer: "Doamne, nu totul depinde de mine. Pot să dorm. Amin.",
     step: "Culcă-te azi cu treizeci de minute mai devreme, chiar dacă mai era ceva de făcut.",
   },
@@ -96,9 +96,9 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     verseRef: "Marcu 6:31",
     verseText: "Veniți singuri la o parte, într-un loc pustiu, și odihniți-vă puțin.",
     meditation:
-      "Isus spune asta ucenicilor exact când lucrarea mergea cel mai bine și lumea venea val-vartej. Nu i-a trimis la odihnă când nu mai avea cine să ceară ceva de la ei, pentru că ziua aceea nu vine niciodată.",
+      "Isus spune asta ucenicilor exact când lucrarea mergea cel mai bine și lumea venea val-vârtej. Nu i-a trimis la odihnă când nu mai avea cine să ceară ceva de la ei, pentru că ziua aceea nu vine niciodată.",
     question: "Aștepți să se liniștească lucrurile ca să te odihnești?",
-    prayer: "Doamne, mă tragi deoparte. Nu mă lasă să confund folositor cu sănătos. Amin.",
+    prayer: "Doamne, mă tragi deoparte. Nu mă lăsa să confund folositor cu sănătos. Amin.",
     step: "Ia-ți azi treizeci de minute în care nu ești disponibil pentru nimeni. Spune asta din timp, ca să nu minți.",
   },
   {
@@ -122,7 +122,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     verseRef: "Exod 33:14",
     verseText: "Domnul a răspuns: „Voi merge Eu Însumi cu tine și îți voi da odihnă.”",
     meditation:
-      "Moise ceruse îndrumare și a primit însotire. Observă legătura: odihna vine în același pachet cu prezența. Nu te odihnești pentru că ți s-a explicat drumul, ci pentru că nu mergi singur pe el.",
+      "Moise ceruse îndrumare și a primit însoțire. Observă legătura: odihna vine în același pachet cu prezența. Nu te odihnești pentru că ți s-a explicat drumul, ci pentru că nu mergi singur pe el.",
     question: "Ce ai vrea să-ți explice Dumnezeu înainte să mergi mai departe?",
     prayer: "Doamne, dacă nu-mi explici, dar vii cu mine, e destul. Amin.",
     step: "Începe azi un lucru pentru care nu ai toate răspunsurile.",
@@ -224,7 +224,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Exod 16:4",
-    verseText: "Poporul va ieși și va strânge, zi de zi, cont cât îi trebuie pentru fiecare zi.",
+    verseText: "Poporul va ieși și va strânge, zi de zi, cât îi trebuie pentru fiecare zi.",
     meditation:
       "Cine strângea mai multă mană „pentru orice eventualitate” o găsea a doua zi stricată. Dumnezeu a legat intenționat hrana de o singură zi, ca să învețe un popor de foști sclavi că nu mai trebuie să se teamă de mâine. Devoționalul acesta funcționează la fel: ziua lipsită nu se recuperează.",
     question: "Ce încerci să depozitezi pentru o zi care poate nu vine?",
@@ -265,7 +265,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     verseRef: "Marcu 4:38",
     verseText: "Și El dormea la cârmă pe căpătâi.",
     meditation:
-      "Isus dormea în furtună. Nu pentru că nu știa ce se întâmplă, ci pentru că Știa unde e Tatăl. Somnul Lui în barcă e cea mai tăcută predică despre încredere din Evanghelii.",
+      "Isus dormea în furtună. Nu pentru că nu știa ce se întâmplă, ci pentru că știa unde e Tatăl. Somnul Lui în barcă e cea mai tăcută predică despre încredere din Evanghelii.",
     question: "Ce ar trebui să fie adevărat ca să poți dormi în furtuna ta?",
     prayer: "Doamne, învață-mă să dorm în barcă. Amin.",
     step: "Când te trezești azi noapte cu gânduri, spune o dată: „El e în barcă” și culcă-te la loc.",
