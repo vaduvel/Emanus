@@ -22,6 +22,7 @@ import { useEffect, useState } from "react"
  * Cele trei daruri de zi (docs/27) nu primesc tab propriu, ca să nu se umple
  * bara de jos: se intră din „Azi”. /mesaj/:id există ca link public — cine
  * primește un card ajunge direct la verset, nu la un ecran de reclamă.
+ * /legamant e Legământul familiei (faza G): se intră din devoțional, nu din bară.
  */
 export type Route =
   | { name: "today" }
@@ -39,6 +40,7 @@ export type Route =
   | { name: "scroll" }
   | { name: "lamp" }
   | { name: "message"; id?: string }
+  | { name: "covenant" }
 
 export function parseRoute(): Route {
   const h = window.location.hash.replace(/^#/, "")
@@ -70,6 +72,7 @@ export function parseRoute(): Route {
   if (h === "/devotional") return { name: "devotional" }
   if (h === "/pergament") return { name: "scroll" }
   if (h === "/candela") return { name: "lamp" }
+  if (h === "/legamant") return { name: "covenant" }
   if (h === "/mesaj") return { name: "message" }
   if (h === "/ds") return { name: "ds" }
   return { name: "today" }
