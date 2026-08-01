@@ -74,7 +74,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
       "Legea semănatului e nemiloasă și cinstită: nu culegi altceva decât ai pus în pământ. Se aplică și în rău, și în bine. Multe din lucrurile pe care le trăiești azi au fost semănate acum câțiva ani, de tine.",
     question: "Ce semeni acum, fără să-ți dai seama?",
     prayer: "Doamne, arată-mi ce seamăn cu adevărat în zilele mele. Amin.",
-    step: "Uiță-te azi la un obicei zilnic și întreabă-te ce recoltă pregătește.",
+    step: "Uită-te azi la un obicei zilnic și întreabă-te ce recoltă pregătește.",
   },
   {
     id: "dev_246",
@@ -137,7 +137,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     verseText: "Așa încât Hristos să locuiască în inimile voastre prin credință; pentru ca, având rădăcina și temelia pusă în dragoste...",
     meditation:
       "Rădăcina nu e în reguli, nici în frică, ci în dragoste. Un om care crește din teamă face lucruri corecte cu o inimă uscată. Verifică din când în când nu doar ce faci, ci din ce rădăcină.",
-    question: "Din ce rădăcină Î-I slujești: dragoste sau teamă?",
+    question: "Din ce rădăcină Îi slujești: dragoste sau teamă?",
     prayer: "Doamne, mută-mi rădăcina în dragostea Ta. Amin.",
     step: "Fă azi un lucru bun pentru că vrei, nu pentru că trebuie.",
   },
@@ -177,7 +177,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     meditation:
       "E „roada”, la singular, nu „roadele”: nu îți alegi două și le lași pe restul. Și e roada Duhului, nu realizarea ta — tu doar rămâi în viță. Privește lista ca pe un portret al lui Isus, nu ca pe o fișă de evaluare.",
     question: "Care dintre cele nouă lipsește cel mai tare din viața ta?",
-    prayer: "Duhule Sfinte, crește în mine ce lipsește. Amin.",
+    prayer: "Duhule Sfânt, crește în mine ce lipsește. Amin.",
     step: "Alege una dintre cele nouă și roagă-te pentru ea în fiecare zi din luna asta.",
   },
   {
