@@ -31,7 +31,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Coloseni 3:13",
-    verseText: "Încredințați-vă unii pe alții și, dacă unul are pricină să se plângă de altul, iertați-vă unul pe altul. Cum v-a iertat Hristos, așa iertați-vă și voi.",
+    verseText: "Êngăduiți-vă unii pe alții și, dacă unul are pricină să se plângă de altul, iertați-vă unul pe altul. Cum v-a iertat Hristos, așa iertați-vă și voi.",
     meditation:
       "Pavel recunoaște că există „pricină să te plângi”. Nu ți se cere să pretinzi că nu s-a întâmplat nimic și nici că nu te-a durut. Iertarea biblică începe cu recunoașterea faptei, nu cu mușamalizarea ei.",
     question: "Ai spus vreodată „nu-i nimic” când, de fapt, era ceva?",
