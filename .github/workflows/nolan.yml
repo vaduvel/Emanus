@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "scripts/nolan-*.py"
+      - "scripts/review-geneza-*.py"
       - "scripts/curata-sursa.py"
       - "scripts/dedup-paragrafe.py"
       - "scripts/dedup-fraze.py"
@@ -68,6 +69,9 @@ jobs:
       - name: Aplica transcrierile 2, 9, 15 si 20
         run: python3 scripts/nolan-geneza-2-9-15-20.py
 
+      - name: Aplica primul val de revizie AI pentru Geneza 1-11
+        run: python3 scripts/review-geneza-1-11.py
+
       - name: Curata paragrafele repetate
         run: python3 scripts/dedup-paragrafe.py
 
@@ -80,7 +84,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
-            git commit -m "fix(biblia): paragrafe si fraze repetate curatate; observatiile din studiul lui Nolan"
+            git commit -m "fix(biblia): aplica revizia si curata repetitiile"
             git push
           else
             echo "Nimic de schimbat."
