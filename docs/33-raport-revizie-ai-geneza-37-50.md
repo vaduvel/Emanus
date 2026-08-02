@@ -18,7 +18,7 @@ Revizia a urmarit in mod deosebit:
 
 ## Rezultat
 
-Au fost pregatite **34 de indreptari** in 13 fisiere de capitol. Registrul bisericesc, ritmul omiletic si explicatia duhovniceasca au fost pastrate; au fost schimbate numai formularile care cereau mai mult decat putea purta textul.
+Au fost aplicate **28 de indreptari** in 13 fisiere de capitol. Registrul bisericesc, ritmul omiletic si explicatia duhovniceasca au fost pastrate; au fost schimbate numai formularile care cereau mai mult decat putea purta textul.
 
 ### Directii principale
 
@@ -44,7 +44,7 @@ Au fost pregatite **34 de indreptari** in 13 fisiere de capitol. Registrul biser
 
 ## Verificare
 
-Modificarile sunt aplicate prin `scripts/review-geneza-37-50.py`, care valideaza fiecare potrivire si este idempotent. Fluxul de CI al ramurii ruleaza:
+Fluxul de CI al ramurii ruleaza:
 
 - `pnpm check:quotes`;
 - `pnpm check:typos`;
