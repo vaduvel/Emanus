@@ -4,7 +4,8 @@ import { useEffect, useState } from "react"
  * Rutele aplicației, după reducere. (docs/20 §8)
  *
  * Ecrane vii: /intrare, / (Azi), /lesson/:id, /rugaciuni, /biblioteca, /biblia,
- * /biblia/:carte/:capitol, /intreaba, /final, /criza.
+ * /biblia/:carte/:capitol, /biblia-mea, /intreaba, /inbox-intrebari,
+ * /auth, /final, /criza.
  * Ecranele vechi (comunitate, familie, mentorat, dashboard, recomandare,
  * creștere) rămân în cod, dar nu mai sunt legate nicăieri: se reintroduc pe
  * rând, după ce parcursul e testat pe oameni reali. Din bara de jos lipsesc
@@ -15,9 +16,9 @@ import { useEffect, useState } from "react"
  * de intrare și fără categorii de identitate.
  *
  * Biblia explicată e al doilea tab din machetă (Azi · Biblia · Întreabă · Ai
- * mei · Eu) și are două ecrane: raftul cărților și capitolul. Al treilea tab,
- * Întreabă, primește întrebarea și, când vine dintr-un capitol, ține minte
- * despre ce loc din Scriptură este vorba.
+ * mei · Eu) și are raftul, capitolul și memoria personală. Al treilea tab,
+ * Întreabă, păstrează referința Scripturii și trimite întrebarea în inboxul
+ * pastoral protejat prin rol.
  */
 export type Route =
   | { name: "today" }
@@ -26,7 +27,17 @@ export type Route =
   | { name: "library" }
   | { name: "bible" }
   | { name: "bibleChapter"; bookId: string; chapter: number }
-  | { name: "ask"; despre?: string }
+  | { name: "bibleMine" }
+  | { name: "questionInbox" }
+  | { name: "auth" }
+  | {
+      name: "ask"
+      despre?: string
+      bookId?: string
+      bookName?: string
+      chapter?: number
+      unitId?: string
+    }
   | { name: "pathend" }
   | { name: "crisis" }
   | { name: "ds" }
@@ -36,6 +47,9 @@ export function parseRoute(): Route {
   const h = window.location.hash.replace(/^#/, "")
   if (h.startsWith("/lesson/"))
     return { name: "lesson", id: decodeURIComponent(h.slice("/lesson/".length)) }
+  if (h === "/biblia-mea") return { name: "bibleMine" }
+  if (h === "/inbox-intrebari") return { name: "questionInbox" }
+  if (h === "/auth") return { name: "auth" }
   if (h.startsWith("/biblia/")) {
     const parts = h.slice("/biblia/".length).split("/")
     const bookId = decodeURIComponent(parts[0] ?? "")
@@ -50,7 +64,19 @@ export function parseRoute(): Route {
     if (semn === -1) return { name: "ask" }
     const cauta = new URLSearchParams(h.slice(semn + 1))
     const despre = cauta.get("despre")
-    return despre && despre.length > 0 ? { name: "ask", despre } : { name: "ask" }
+    const bookId = cauta.get("carte") || undefined
+    const bookName = cauta.get("numeCarte") || undefined
+    const chapterValue = Number.parseInt(cauta.get("capitol") ?? "", 10)
+    const chapter = Number.isFinite(chapterValue) ? chapterValue : undefined
+    const unitId = cauta.get("unitate") || undefined
+    return {
+      name: "ask",
+      despre: despre || undefined,
+      bookId,
+      bookName,
+      chapter,
+      unitId,
+    }
   }
   if (h === "/intrare") return { name: "doors" }
   if (h === "/rugaciuni") return { name: "prayers" }

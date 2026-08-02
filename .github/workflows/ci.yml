@@ -43,8 +43,17 @@ jobs:
       - name: Verifica Biblia explicata Matei
         run: pnpm check:matei
 
+      - name: Verifica structura sursei Bibliei
+        run: pnpm check:bible-source
+
+      - name: Verifica securitatea Bibliei cloud
+        run: pnpm check:bible-cloud
+
       - name: Typecheck
         run: pnpm typecheck
 
       - name: Build
         run: pnpm build
+
+      - name: Verifica bundle-ul Bibliei
+        run: pnpm check:bible-bundle

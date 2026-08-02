@@ -1,4 +1,5 @@
 import type { JourneyState } from "./journey"
+import { ensureCloudUser } from "./cloudSession"
 import { getSupabase } from "./supabase"
 
 /*
@@ -14,37 +15,16 @@ import { getSupabase } from "./supabase"
  *  4. Nu se urcă nimic ce nu vede și omul: fără scoruri, fără evenimente, fără analitică.
  */
 
-let userId: string | null = null
 let ready = false
 
 export function cloudEnabled(): boolean {
   return getSupabase() !== null
 }
 
-/** Intrare anonimă. Returnează id-ul sau null dacă nu se poate (offline, neconfigurat). */
-async function ensureUser(): Promise<string | null> {
-  const sb = getSupabase()
-  if (!sb) return null
-  if (userId) return userId
-  try {
-    const { data } = await sb.auth.getSession()
-    if (data.session?.user) {
-      userId = data.session.user.id
-      return userId
-    }
-    const { data: anon, error } = await sb.auth.signInAnonymously()
-    if (error || !anon.user) return null
-    userId = anon.user.id
-    return userId
-  } catch {
-    return null
-  }
-}
-
 /** Urcă starea curentă. Se apelează după fiecare salvare locală; eșecul se ignoră. */
 export async function pushState(s: JourneyState): Promise<void> {
   const sb = getSupabase()
-  const uid = await ensureUser()
+  const uid = (await ensureCloudUser())?.id ?? null
   if (!sb || !uid) return
   try {
     await sb.from("journey").upsert({
@@ -91,7 +71,7 @@ export async function pushState(s: JourneyState): Promise<void> {
 /** Aduce starea din nor. Returnează null dacă nu există nimic salvat. */
 export async function pullState(): Promise<JourneyState | null> {
   const sb = getSupabase()
-  const uid = await ensureUser()
+  const uid = (await ensureCloudUser())?.id ?? null
   if (!sb || !uid) return null
   try {
     const [{ data: j }, { data: jr }, { data: pr }] = await Promise.all([

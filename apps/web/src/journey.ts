@@ -230,6 +230,11 @@ export function resetJourney(): void {
   })
 }
 
+/** Sterge copia locala fara sa suprascrie copia contului din cloud. */
+export function clearJourneyLocal(): void {
+  writeLocal({ ...EMPTY, journal: [], prayers: [] })
+}
+
 // --- Memorialul: rugăciuni și răspunsuri (docs/20; cârligul lung) ---
 
 /**

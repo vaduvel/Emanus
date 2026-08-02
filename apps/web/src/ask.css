@@ -11,9 +11,14 @@
   border: 1px solid rgba(0, 0, 0, 0.12); background: rgba(255, 255, 255, 0.6);
   font: inherit; line-height: 1.55;
 }
+.ask__field small { color: var(--text-muted); font-size: var(--text-xs); line-height: 1.45; }
 .ask__send { display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
 .ask__send[disabled] { opacity: 0.45; cursor: default; }
-.ask__gata { margin: 0; line-height: 1.6; opacity: 0.9; }
+.ask__gata {
+  display: flex; align-items: flex-start; gap: 7px; margin: 0; padding: 11px 12px;
+  border-radius: var(--radius-sm); background: var(--success-soft); line-height: 1.55;
+}
+.ask__gata--local { background: var(--surface-2); }
 
 .ask__grele h2, .ask__mele h2 { margin: 18px 0 8px; font-size: 1.02rem; }
 .ask__lista { display: flex; flex-direction: column; gap: 8px; }
@@ -23,4 +28,8 @@
   cursor: pointer; line-height: 1.5;
 }
 .ask__grea:hover { background: rgba(255, 255, 255, 0.78); }
-.ask__mea { margin: 0 0 8px; line-height: 1.55; }
+.ask__mele-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ask__mele-head h2 { margin-bottom: 8px; }
+.ask__mele-head button { padding: 6px 10px; font-size: var(--text-xs); }
+.ask__mea { margin: 0 0 8px; padding: 11px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); line-height: 1.55; }
+.ask__mea p { margin: 0 0 4px; }

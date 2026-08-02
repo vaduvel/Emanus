@@ -2,8 +2,12 @@ import { useState } from "react"
 import type { CSSProperties } from "react"
 import { LogOut, Mail, ShieldCheck } from "lucide-react"
 import { linkAccount } from "./api"
+import { clearBiblePersonalLocal, syncBiblePersonal } from "./biblePersonal"
+import { ensureCloudUser, invalidateCloudUser } from "./cloudSession"
+import { pushState } from "./cloud"
+import { clearJourneyLocal, load } from "./journey"
 import { navigate } from "./router"
-import { clearEmail, getEmail, setEmail as saveEmail, setUserId } from "./session"
+import { clearEmail, clearUserId, getEmail, setEmail as saveEmail, setUserId } from "./session"
 import { getSupabase, isAuthConfigured } from "./supabase"
 import { Button } from "./ds"
 
@@ -76,6 +80,7 @@ export function Auth() {
   const configured = isAuthConfigured()
   const existing = getEmail()
   const [phase, setPhase] = useState<"email" | "code">("email")
+  const [verification, setVerification] = useState<"signin" | "email_change">("signin")
   const [email, setEmailInput] = useState("")
   const [code, setCode] = useState("")
   const [busy, setBusy] = useState(false)
@@ -90,11 +95,23 @@ export function Auth() {
     setBusy(true)
     setError(null)
     try {
-      const { error: err } = await sb.auth.signInWithOtp({
-        email: addr,
-        options: { shouldCreateUser: true },
-      })
-      if (err) throw err
+      const current = await ensureCloudUser()
+      if (current?.is_anonymous) {
+        const { error: linkError } = await sb.auth.updateUser({ email: addr })
+        if (!linkError) {
+          setVerification("email_change")
+        } else if (/already|registered|exists/i.test(linkError.message)) {
+          const { error: signInError } = await sb.auth.signInWithOtp({ email: addr, options: { shouldCreateUser: false } })
+          if (signInError) throw signInError
+          setVerification("signin")
+        } else {
+          throw linkError
+        }
+      } else {
+        const { error: signInError } = await sb.auth.signInWithOtp({ email: addr, options: { shouldCreateUser: true } })
+        if (signInError) throw signInError
+        setVerification("signin")
+      }
       setInfo(`Ți-am trimis un cod de conectare la ${addr}. Verifică-ți e-mailul.`)
       setPhase("code")
     } catch (e) {
@@ -110,13 +127,16 @@ export function Auth() {
     setBusy(true)
     setError(null)
     try {
-      const { data, error: err } = await sb.auth.verifyOtp({
+      let result = await sb.auth.verifyOtp({
         email: email.trim(),
         token: code.trim(),
-        type: "email",
+        type: verification,
       })
-      if (err) throw err
-      const uid = data.user?.id
+      if (result.error && verification === "email_change") {
+        result = await sb.auth.verifyOtp({ email: email.trim(), token: code.trim(), type: "email" })
+      }
+      if (result.error) throw result.error
+      const uid = result.data.user?.id
       if (uid) {
         // Leagă progresul anonim de contul autentificat ÎNAINTE de a schimba id-ul local.
         try {
@@ -126,6 +146,8 @@ export function Auth() {
         }
         setUserId(uid)
         saveEmail(email.trim())
+        invalidateCloudUser()
+        await Promise.all([syncBiblePersonal(), pushState(load())])
       }
       navigate("/")
     } catch (e) {
@@ -137,15 +159,26 @@ export function Auth() {
 
   async function signOut() {
     const sb = getSupabase()
-    if (sb) {
-      try {
-        await sb.auth.signOut()
-      } catch {
-        /* ignore */
+    setBusy(true)
+    setError(null)
+    try {
+      if (sb) {
+        // Impinge ultima stare in cont inainte sa dispara tokenul curent.
+        await Promise.all([syncBiblePersonal(), pushState(load())])
+        const { error: signOutError } = await sb.auth.signOut()
+        if (signOutError) throw signOutError
+        invalidateCloudUser()
       }
+      clearBiblePersonalLocal()
+      clearJourneyLocal()
+      clearEmail()
+      clearUserId()
+      navigate("/")
+    } catch (cause) {
+      setError(msg(cause))
+    } finally {
+      setBusy(false)
     }
-    clearEmail()
-    navigate("/")
   }
 
   return (
@@ -169,9 +202,9 @@ export function Auth() {
           <p className="muted">
             Ești conectat. Progresul tău e legat de acest cont și te urmează pe orice dispozitiv.
           </p>
-          <button type="button" style={outBtnStyle} onClick={signOut}>
+          <button type="button" style={outBtnStyle} disabled={busy} onClick={() => void signOut()}>
             <LogOut size={15} aria-hidden />
-            Deconectează-te
+            {busy ? "Se deconectează…" : "Deconectează-te"}
           </button>
         </>
       ) : !configured ? (
