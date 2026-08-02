@@ -4,7 +4,8 @@
 // schimbat, ci pentru o lucrare terminată în afara ta. De aceea aproape fiecare
 // zi de aici stă pe un verb la trecut: a plătit, a șters, a isprăvit.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 // Fișier separat de `devotional.ts` ca să nu rescriem luna 1 la fiecare adăugare.
 import type { DevotionalDay } from "./devotional.js"
 
@@ -30,7 +31,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Tit 3:5",
-    verseText: "El ne-a mântuit nu pentru faptele făcute de noi în neprihănire, ci pentru îndurarea Lui.",
+    verseText: "El ne-a mântuit nu pentru faptele făcute de noi în neprihănire, ci pentru îndurarea Lui, prin spălarea nașterii din nou și prin înnoirea făcută de Duhul Sfânt.",
     meditation:
       "Versetul taie exact lucrul de care ne agățăm: faptele noastre bune. Nu spune că sunt urâte, spune că nu ele au plătit. Dacă nu ele te-au adus înăuntru, nici lipsa lor nu te scoate afară.",
     question: "Ce faptă bună de-a ta folosești, fără să recunoști, ca dovadă că Dumnezeu ar trebui să te primească?",
@@ -69,7 +70,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Isaia 53:5",
-    verseText: "Dar El era străpuns pentru păcatele noastre, zdrobit pentru fărădelegile noastre... și prin rănile Lui suntem tămăduiți.",
+    verseText: "Dar El era străpuns pentru păcatele noastre, zdrobit pentru fărădelegile noastre. Pedeapsa care ne dă pacea a căzut peste El, și prin rănile Lui suntem tămăduiți.",
     meditation:
       "Isaia scrie asta cu sute de ani înainte. Nu e o explicație inventată după, ca să se împace cineva cu o moarte urâtă; era planul, spus dinainte. Iar cuvântul „noastre” apare de patru ori: nimic din ce a purtat nu era al Lui.",
     question: "Ce parte din tine crezi că a rămas nepurtată de El?",
@@ -82,7 +83,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Ioan 19:30",
-    verseText: "Când a luat Isus oțetul, a zis: „S-a isprăvit!” Apoi Și-a plecat capul și Și-a dat duhul.",
+    verseText: "Când a luat Isus oțetul, a zis: „S-a isprăvit!” Apoi și-a plecat capul și Și-a dat duhul.",
     meditation:
       "Cuvântul din original se scria pe facturi, cu sensul „plătit integral”. Nu a zis „am rezistat”, nici „am făcut ce am putut”. A zis că s-a terminat. Un lucru terminat nu se mai continuă de tine, oricât de vinovat te-ai simți.",
     question: "Ce încerci să termini tu, din ceea ce El a spus deja că s-a isprăvit?",
@@ -108,7 +109,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Coloseni 2:14",
-    verseText: "A șters zapisul cu poruncile lui, care stătea împotriva noastră... l-a pironit pe cruce.",
+    verseText: "A șters zapisul cu poruncile lui, care stătea împotriva noastră și ne era potrivnic, și l-a nimicit pironindu-l pe cruce.",
     meditation:
       "Zapisul era hârtia cu datoria scrisă, semnată de datornic. Pavel spune că nu a fost micșorată, ci ștearsă și bătută în cuie la vedere. Vinovăția care îți citește azi lista îți citește dintr-o hârtie care nu mai are valoare juridică.",
     question: "Cine îți citește lista, în capul tău, și cu ce voce?",
@@ -121,7 +122,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Romani 6:4",
-    verseText: "Noi deci, prin botezul în moartea Lui, am fost îngropați împreună cu El, pentru ca... să trăim și noi o viață nouă.",
+    verseText: "Noi deci, prin botezul în moartea Lui, am fost îngropați împreună cu El, pentru ca, după cum Hristos a înviat din morți prin slava Tatălui, tot așa și noi să trăim o viață nouă.",
     meditation:
       "Un om îngropat nu se mai apără, nu mai are reputație de păzit, nu mai are de dovedit nimic. Asta e libertatea ciudată de care vorbește Pavel. Viața nouă nu e o versiune îmbunătățită a celei vechi; e alta, primită după o înmormântare.",
     question: "Ce parte din viața veche încerci să reînvii, deși a fost îngropată?",
@@ -147,7 +148,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "1 Petru 1:3",
-    verseText: "Ne-a născut din nou la o nădejde vie, prin învierea lui Isus Hristos din morți.",
+    verseText: "Ne-a născut din nou, prin învierea lui Isus Hristos din morți, la o nădejde vie.",
     meditation:
       "Nădejdea creștină nu e optimism. Optimismul spune „poate iese bine”; nădejdea vie se sprijină pe un lucru care s-a întâmplat deja, într-o zi anume, cu martori. Nu speri că Dumnezeu poate învia ceva; te uiți înapoi la ce a înviat.",
     question: "Nădejdea ta stă pe ce simți sau pe ce s-a întâmplat?",
@@ -160,7 +161,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Romani 4:5",
-    verseText: "Pe când, celui ce nu lucrează, ci crede în Cel ce socotește pe păcătos neprihănit, credința pe care o are el îi este socotită ca neprihănire.",
+    verseText: "Pe când celui ce nu lucrează, ci crede în Cel ce socotește pe păcătos neprihănit, credința pe care o are el îi este socotită ca neprihănire.",
     meditation:
       "E cel mai scandalos verset din Pavel: Dumnezeu îndreptățește pe cel nelegiuit, nu pe cel cumsecade. Dacă ar fi îndreptățit oameni buni, ar fi o afacere corectă și tu ai avea de ce să te temi. Așa, ai o singură problemă: să nu te crezi prea bun ca să ai nevoie.",
     question: "Te crezi prea rău pentru Dumnezeu sau prea bun ca să ai nevoie de El?",
@@ -186,7 +187,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Evrei 4:16",
-    verseText: "Să ne apropiem dar cu deplină încredere de scaunul harului, ca să căpătăm îndurare și să găsim har.",
+    verseText: "Să ne apropiem dar cu deplină încredere de scaunul harului ca să căpătăm îndurare și să găsim har, pentru ca să fim ajutați la vreme de nevoie.",
     meditation:
       "Se numește „scaunul harului”, nu scaunul judecății. Iar invitația e „cu deplină încredere”, exact în momentul în care ai greșit — pentru că atunci ai nevoie de îndurare. Instinctul nostru e invers: ne apropiem când ne merge bine și ne ascundem când cădem.",
     question: "Ce faci, de obicei, în prima oră după ce ai greșit?",
@@ -199,7 +200,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Evrei 7:25",
-    verseText: "De aceea și poate să mântuiască în chip desăvârșit pe cei ce se apropie de Dumnezeu prin El, fiindcă trăiește pururea ca să mijlocească pentru ei.",
+    verseText: "De aceea și poate să mântuiască în chip desăvârșit pe cei ce se apropie de Dumnezeu prin El, pentru că trăiește pururea ca să mijlocească pentru ei.",
     meditation:
       "În timp ce citești rândul acesta, cineva vorbește cu Tatăl despre tine. Nu ocazional, ci „pururea”. Rugăciunea ta slabă de azi nu e singura rugăciune care se face pentru tine azi.",
     question: "Ce s-ar schimba în ziua ta dacă ai crede că se mijlocește pentru tine chiar acum?",
@@ -212,7 +213,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Romani 8:34",
-    verseText: "Cine-i va osândi? Hristos a murit! Ba mai mult, a și înviat, stă la dreapta lui Dumnezeu și mijlocește pentru noi!",
+    verseText: "Cine-i va osândi? Hristos a murit! Ba mai mult, El a și înviat, stă la dreapta lui Dumnezeu și mijlocește pentru noi!",
     meditation:
       "Pavel pune întrebarea ca la tribunal: cine acuză? Și răspunde nu cu o apărare, ci cu o persoană. Singurul care ar avea dreptul să te condamne e Cel care S-a așezat de partea ta.",
     question: "Cine te acuză cel mai des: alții, tu sau o voce pe care o crezi a lui Dumnezeu?",
@@ -225,7 +226,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "1 Ioan 2:1",
-    verseText: "Copilașilor, vă scriu aceste lucruri ca să nu păcătuiți. Dar dacă cineva a păcătuit, avem la Tatăl un Mijlocitor, pe Isus Hristos, Cel neprihănit.",
+    verseText: "Copilașilor, vă scriu aceste lucruri ca să nu păcătuiți. Dar, dacă cineva a păcătuit, avem la Tatăl un Mijlocitor, pe Isus Hristos, Cel neprihănit.",
     meditation:
       "Ioan nu face pace cu păcatul — scrie tocmai ca să nu păcătuiești. Dar știe și ce urmează. „Dar dacă” nu e o portiță; e un loc pregătit dinainte pentru ziua în care cazi, ca să nu fugi de acasă.",
     question: "Când cazi, fugi de Dumnezeu sau la El?",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Ioan 6:37",
-    verseText: "Pe cel ce vine la Mine nu-l voi izgoni afară.",
+    verseText: "Pe cel ce vine la Mine, nu-l voi izgoni afară.",
     meditation:
       "Nu spune „pe cel ce vine curat”. Nici „pe cel ce vine a treia oară cu aceeași problemă”. Condiția e una singură: să vii. Iar promisiunea e negativă, adică imposibil de răstălmăcit: nu te dă afară.",
     question: "De câte ori crezi că mai ai voie să vii cu același lucru?",
@@ -277,7 +278,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Psalmul 103:12",
-    verseText: "Cât este de departe răsăritul de apus, atât de mult depărtează El fărădelegile noastre de la noi.",
+    verseText: "Cât de departe este răsăritul de apus, atât de mult depărtează El fărădelegile noastre de la noi.",
     meditation:
       "David alege dinadins răsăritul și apusul, nu nordul și sudul: nordul și sudul au capăt, răsăritul și apusul nu se întâlnesc niciodată. E singura măsură care nu poate fi parcursă. Păcatul iertat nu e pus deoparte, e pus în neîntâlnire.",
     question: "Ce păcat iertat mai ții tu aproape, ca să nu-l uiți?",
@@ -290,7 +291,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Mica 7:19",
-    verseText: "Vei arunca în fundul mării toate păcatele noastre.",
+    verseText: "El va avea iarăși milă de noi, va călca în picioare nelegiuirile noastre și va arunca în fundul mării toate păcatele lor.",
     meditation:
       "În fundul mării, nu la mal. Adâncul era, pentru omul din vechime, locul din care nimic nu se mai scoate. Dumnezeu nu are un dosar la care se întoarce când te porți urât.",
     question: "Îl bănuiești pe Dumnezeu că ține evidența, chiar dacă spune că nu?",
@@ -303,7 +304,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Isaia 1:18",
-    verseText: "De vor fi păcatele voastre cum e cârmâzul, se vor face albe ca zăpada.",
+    verseText: "De vor fi păcatele voastre cum e cârmâzul, se vor face albe ca zăpada; de vor fi roșii ca purpura, se vor face ca lâna.",
     meditation:
       "Cârmâzul era o vopsea care nu ieșea la spălat; alegerea culorii e intenționată. Dumnezeu nu spune că păcatul tău e mai mic decât crezi. Spune că e exact atât de adânc pe cât te temi — și tot iese.",
     question: "Ce pată crezi că nu iese la tine?",
@@ -316,7 +317,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Ezechiel 36:26",
-    verseText: "Vă voi da o inimă nouă și voi pune în voi un duh nou; voi scoate din trupul vostru inima de piatră.",
+    verseText: "Vă voi da o inimă nouă și voi pune în voi un duh nou; voi scoate din trupul vostru inima de piatră și vă voi da o inimă de carne.",
     meditation:
       "Cine are inimă de piatră nu simte că are; piatra nu doare. De aceea promisiunea nu e „te ajut să simți mai mult”, ci „schimb organul”. Faptul că te doare azi nepăsarea ta e deja semn că lucrarea a început.",
     question: "Unde te-ai împietrit fără să bagi de seamă?",
@@ -368,7 +369,7 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "1 Corinteni 6:11",
-    verseText: "Și așa erați unii din voi! Dar ați fost spălați, ați fost sfințiți, ați fost socotiți neprihăniți.",
+    verseText: "Și așa erați unii din voi! Dar ați fost spălați, ați fost sfințiți, ați fost socotiți neprihăniți în Numele Domnului Isus Hristos și prin Duhul Dumnezeului nostru.",
     meditation:
       "„Așa erați” — Pavel tocmai enumerase o listă grea, și scrie unor oameni care fuseseră pe ea. Trei verbe la trecut, toate făcute asupra lor, nu de ei. Trecutul tău e trecutul tău tocmai pentru că cineva a lucrat asupra ta.",
     question: "Ce etichetă veche mai porți, deși versetul o pune la trecut?",
@@ -381,9 +382,9 @@ export const DEVOTIONAL_DAYS_LUNA_2: DevotionalDay[] = [
     theme: LUNA_2,
     axis: "identity",
     verseRef: "Iuda 1:24",
-    verseText: "Iar a Aceluia care poate să vă păzească de orice cădere și să vă facă să vă înfățișați fără prihană și plini de bucurie înaintea slavei Sale...",
+    verseText: "Iar Aceluia care poate să vă păzească de orice cădere și să vă facă să vă înfățișați fără prihană și plini de bucurie înaintea slavei Sale...",
     meditation:
-      "Două luni s-au încheiat, și versetul de final nu îți cere nimic: „a Aceluia care poate”. Nu tu te păzești și nu tu te înfățișezi. Dacă ai lipsit zile, nu s-a rupt nimic — mana de azi e pentru azi. De luna viitoare vorbim despre frică și grijă, dar de pe temelia asta.",
+      "Două luni s-au încheiat, și versetul de final nu îți cere nimic: „Aceluia care poate”. Nu tu te păzești și nu tu te înfățișezi. Dacă ai lipsit zile, nu s-a rupt nimic — mana de azi e pentru azi. De luna viitoare vorbim despre frică și grijă, dar de pe temelia asta.",
     question: "Ce s-a schimbat în felul în care te vezi, față de ziua 1?",
     prayer: "Doamne, Tu poți. Eu vin. Mulțumesc pentru cele două luni. Amin.",
     step: "Recitește rândul scris în ziua 31 și adaugă unul singur, pentru luna asta.",
