@@ -55,6 +55,11 @@ import { IOAN as IOAN_BASE } from "./ioan.js"
 import { IOAN_3 } from "./ioan3.js"
 import { IOAN_4 } from "./ioan4.js"
 import { IOAN_5 } from "./ioan5.js"
+import { IOAN_6 } from "./ioan6.js"
+import { IOAN_7 } from "./ioan7.js"
+import { IOAN_8 } from "./ioan8.js"
+import { IOAN_9 } from "./ioan9.js"
+import { IOAN_10 } from "./ioan10.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -113,10 +118,20 @@ export const GENEZA: BibleBook = {
   ],
 }
 
-/** Ioan, inceput cu primul val 1-5 scris. */
+/** Ioan, scris acum pana la capitolul 10. */
 export const IOAN: BibleBook = {
   ...IOAN_BASE,
-  chapters: [...IOAN_BASE.chapters, IOAN_3, IOAN_4, IOAN_5],
+  chapters: [
+    ...IOAN_BASE.chapters,
+    IOAN_3,
+    IOAN_4,
+    IOAN_5,
+    IOAN_6,
+    IOAN_7,
+    IOAN_8,
+    IOAN_9,
+    IOAN_10,
+  ],
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
