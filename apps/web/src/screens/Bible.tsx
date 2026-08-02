@@ -18,6 +18,11 @@ import "../needs.css"
  * Intrarea nu este numai pe carti si capitole, ci si pe durere: "cand te
  * doare, citeste". Omul care sufera nu stie sa caute Geneza 37; stie sa spuna
  * ca l-a lasat cineva.
+ *
+ * ORTOGRAFIE. In tot ce se vede pe ecran folosim s si t cu virgula dedesubt
+ * (U+0219 / U+021B), nu cu sedila (U+015F / U+0163). Textul biblic a fost
+ * indreptat in comitul ec7ddf76; aici se indreapta si interfata, ca omul sa
+ * nu vada butonul scris altfel decat Scriptura de sub el.
  */
 
 const LAST_KEY = "emanus.bible.last"
@@ -83,19 +88,19 @@ type Nevoie = { eticheta: string; cuvinte: string[] }
 
 const NEVOI: Nevoie[] = [
   { eticheta: "Mi-a murit cineva", cuvinte: ["a murit", "jelit", "mormant", "ingropat", "plans dupa", "doliu"] },
-  { eticheta: "Boală şi spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
+  { eticheta: "Boal\u0103 \u0219i spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
   { eticheta: "S-a rupt casa mea", cuvinte: ["nevasta", "barbatul ei", "casnicie", "despartit", "s-a dus de langa"] },
-  { eticheta: "Bani şi datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
+  { eticheta: "Bani \u0219i datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
   { eticheta: "Sunt departe de ai mei", cuvinte: ["strain", "instrainat", "tara straina", "departe de casa", "pribeag"] },
-  { eticheta: "Beau. Nu mă pot opri", cuvinte: ["vin", "beat", "s-a imbatat", "patima"] },
-  { eticheta: "Pofta care mă ţine", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
-  { eticheta: "Nu pot să iert în familie", cuvinte: ["fratii lui", "ura", "il urau", "iertare", "a iertat", "razbunare"] },
-  { eticheta: "Mi-e ruşine de ce am făcut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
-  { eticheta: "Mi-e frică de moarte", cuvinte: ["frica", "nu te teme", "moartea", "mor"] },
-  { eticheta: "Mă rog şi nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
-  { eticheta: "De ce a îngăduit Dumnezeu", cuvinte: ["de ce", "ai avut in gand sa-mi faceti rau", "incercare", "a ingaduit"] },
-  { eticheta: "Am umblat cu descântece", cuvinte: ["idoli", "ghicire", "vraji", "dumnezei straini"] },
-  { eticheta: "Copilul meu s-a depărtat", cuvinte: ["fiul meu", "copilul", "s-a dus de la", "tatal lui plangea"] },
+  { eticheta: "Beau. Nu m\u0103 pot opri", cuvinte: ["vin", "beat", "s-a imbatat", "patima"] },
+  { eticheta: "Pofta care m\u0103 \u021bine", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
+  { eticheta: "Nu pot s\u0103 iert \u00een familie", cuvinte: ["fratii lui", "ura", "il urau", "iertare", "a iertat", "razbunare"] },
+  { eticheta: "Mi-e ru\u0219ine de ce am f\u0103cut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
+  { eticheta: "Mi-e fric\u0103 de moarte", cuvinte: ["frica", "nu te teme", "moartea", "mor"] },
+  { eticheta: "M\u0103 rog \u0219i nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
+  { eticheta: "De ce a \u00eeng\u0103duit Dumnezeu", cuvinte: ["de ce", "ai avut in gand sa-mi faceti rau", "incercare", "a ingaduit"] },
+  { eticheta: "Am umblat cu desc\u00e2ntece", cuvinte: ["idoli", "ghicire", "vraji", "dumnezei straini"] },
+  { eticheta: "Copilul meu s-a dep\u0103rtat", cuvinte: ["fiul meu", "copilul", "s-a dus de la", "tatal lui plangea"] },
 ]
 
 type Gasit = { bookId: string; bookName: string; chapter: number; ref: string; heading: string }
@@ -121,8 +126,8 @@ function Nevoi() {
   const gasite = useMemo(() => (aleasa ? cauta(aleasa) : []), [aleasa])
 
   return <section className="bneeds">
-    <h2 className="bneeds__title">Când te doare, citeşte</h2>
-    <p className="bneeds__intro">Spune ce te apasă acum. Îţi arătăm locurile din Scriptură unde se vorbeşte despre asta — nu versete rupte, ci întâmplări întregi, cu explicaţie.</p>
+    <h2 className="bneeds__title">C\u00e2nd te doare, cite\u0219te</h2>
+    <p className="bneeds__intro">Spune ce te apas\u0103 acum. \u00ce\u021bi ar\u0103t\u0103m locurile din Scriptur\u0103 unde se vorbe\u0219te despre asta \u2014 nu versete rupte, ci \u00eent\u00e2mpl\u0103ri \u00eentregi, cu explica\u021bie.</p>
 
     <div className="bneeds__list">
       {NEVOI.map((n) => <button
@@ -136,10 +141,10 @@ function Nevoi() {
     {aleasa && <div className="bfound">
       <div className="bfound__head">
         <h3>{aleasa.eticheta}</h3>
-        <button type="button" className="ghost" onClick={() => setAleasa(null)}>Închide</button>
+        <button type="button" className="ghost" onClick={() => setAleasa(null)}>\u00cenchide</button>
       </div>
       {gasite.length === 0
-        ? <p className="muted">Deocamdată n-avem scris nimic pe durerea aceasta. Avem doar Geneza. Vine şi restul.</p>
+        ? <p className="muted">Deocamdat\u0103 n-avem scris nimic pe durerea aceasta. Vine \u0219i restul.</p>
         : gasite.map((g) => <button
             key={`${g.ref}-${g.heading}`}
             type="button"
@@ -163,7 +168,7 @@ function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter
       <span className="bchap__title">{chapter.title}</span>
       <span className="bchap__sum">{chapter.summary}</span>
     </span>
-    {review && <span className="bchap__flag" title="Scris, dar necitit inca de un om">în revizie</span>}
+    {review && <span className="bchap__flag" title="Scris, dar necitit inca de un om">\u00een revizie</span>}
   </button>
 }
 
@@ -186,7 +191,7 @@ function Book({ book, query }: { book: BibleBook; query: string }) {
       <p className="bbook__count">{book.chapters.length} capitole scrise</p>
     </header>
     {chapters.length === 0
-      ? <p className="muted bbook__none">Nimic cu cuvântul acesta în {book.name}.</p>
+      ? <p className="muted bbook__none">Nimic cu cuv\u00e2ntul acesta \u00een {book.name}.</p>
       : <div className="bbook__list">{chapters.map((c) => <ChapterLink key={c.id} book={book} chapter={c} />)}</div>}
   </section>
 }
@@ -201,12 +206,12 @@ export function Bible() {
 
     <header className="bible__head">
       <BookOpen size={22} strokeWidth={1.7} aria-hidden />
-      <h1>Biblia explicată</h1>
+      <h1>Biblia explicat\u0103</h1>
     </header>
-    <p className="bible__intro">Textul întreg, aşa cum este scris, şi lângă el explicaţia verset cu verset. Nu ca să treci peste Scriptură, ci ca să nu rămâi în faţa ei fără să înţelegi.</p>
+    <p className="bible__intro">Textul \u00eentreg, a\u0219a cum este scris, \u0219i l\u00e2ng\u0103 el explica\u021bia verset cu verset. Nu ca s\u0103 treci peste Scriptur\u0103, ci ca s\u0103 nu r\u0103m\u00e2i \u00een fa\u021ba ei f\u0103r\u0103 s\u0103 \u00een\u021belegi.</p>
 
     {last && <button type="button" className="tile bible__resume" onClick={() => navigate(`/biblia/${last.bookId}/${last.chapter}`)}>
-      <span className="today__kicker">Unde ai rămas</span>
+      <span className="today__kicker">Unde ai r\u0103mas</span>
       <span className="bible__resume-title">{last.title}</span>
       <ArrowRight size={18} strokeWidth={1.8} aria-hidden />
     </button>}
@@ -218,17 +223,17 @@ export function Bible() {
       <input
         type="search"
         value={query}
-        placeholder="Caută un capitol, un nume, o vorbă"
+        placeholder="Caut\u0103 un capitol, un nume, o vorb\u0103"
         onChange={(e) => setQuery(e.currentTarget.value)}
-        aria-label="Caută în Biblia explicată"
+        aria-label="Caut\u0103 \u00een Biblia explicat\u0103"
       />
     </label>
 
     {books.length > 0
       ? books.map((b) => <Book key={b.id} book={b} query={query} />)
-      : <p className="muted bible__note">Capitolele sunt în revizie și vor apărea după aprobarea umană.</p>}
+      : <p className="muted bible__note">Capitolele sunt \u00een revizie \u0219i vor ap\u0103rea dup\u0103 aprobarea uman\u0103.</p>}
 
-    <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explicaţiile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explica\u021biile sunt scrise pentru Emanus.</p>
   </section>
 }
 
@@ -249,7 +254,7 @@ function Unit({ unit, open, onToggle }: { unit: BibleUnit; open: boolean; onTogg
   }
 
   function onSend(): void {
-    const payload = `${unit.ref} — ${unit.heading}\n\n${unit.text}`
+    const payload = `${unit.ref} \u2014 ${unit.heading}\n\n${unit.text}`
     const nav = window.navigator as Navigator & { share?: (d: { title: string; text: string }) => Promise<void> }
     if (typeof nav.share === "function") {
       void nav.share({ title: unit.ref, text: payload }).catch(() => undefined)
@@ -285,7 +290,7 @@ function Unit({ unit, open, onToggle }: { unit: BibleUnit; open: boolean; onTogg
       aria-controls={bodyId}
       onClick={onToggle}
     >
-      {open ? <><ChevronUp size={15} aria-hidden /> Închide explicaţia</> : <><ChevronDown size={15} aria-hidden /> Citeşte explicaţia completă</>}
+      {open ? <><ChevronUp size={15} aria-hidden /> \u00cenchide explica\u021bia</> : <><ChevronDown size={15} aria-hidden /> Cite\u0219te explica\u021bia complet\u0103</>}
     </button>}
 
     {open && unit.words && unit.words.length > 0 && <div className="bwords">
@@ -296,7 +301,7 @@ function Unit({ unit, open, onToggle }: { unit: BibleUnit; open: boolean; onTogg
       </p>)}
     </div>}
 
-    {open && unit.crossRefs && unit.crossRefs.length > 0 && <p className="brefs">{unit.crossRefs.join(" · ")}</p>}
+    {open && unit.crossRefs && unit.crossRefs.length > 0 && <p className="brefs">{unit.crossRefs.join(" \u00b7 ")}</p>}
 
     {open && unit.forYourHeart && <div className="bheart">
       <p className="today__kicker">Pentru inima ta</p>
@@ -306,10 +311,10 @@ function Unit({ unit, open, onToggle }: { unit: BibleUnit; open: boolean; onTogg
     <div className="bactions">
       <button type="button" className="ghost" onClick={onSave} aria-pressed={saved}>
         {saved ? <BookmarkCheck size={16} aria-hidden /> : <Bookmark size={16} aria-hidden />}
-        {saved ? "Salvat" : "Salvează"}
+        {saved ? "Salvat" : "Salveaz\u0103"}
       </button>
       <button type="button" className="ghost" onClick={onSend}><Send size={16} aria-hidden /> Trimite</button>
-      <button type="button" className="ghost" onClick={onAsk}><HelpCircle size={16} aria-hidden /> Întreabă</button>
+      <button type="button" className="ghost" onClick={onAsk}><HelpCircle size={16} aria-hidden /> \u00centreab\u0103</button>
     </div>
   </article>
 }
@@ -360,7 +365,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
   if (!found || !book || !visible) {
     return <section className="bible">
       <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
-      <p className="muted">Capitolul acesta nu este încă publicat. Nu-l punem înainte să fie revizuit.</p>
+      <p className="muted">Capitolul acesta nu este \u00eenc\u0103 publicat. Nu-l punem \u00eenainte s\u0103 fie revizuit.</p>
     </section>
   }
 
@@ -397,11 +402,11 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p className="today__kicker">{book.name} {found.number}</p>
       <h1>{found.title}</h1>
       <p className="bchead__sum">{found.summary}</p>
-      {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greşit, spune-ne.</p>}
+      {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit \u00eenc\u0103 de un om. Dac\u0103 vezi ceva gre\u0219it, spune-ne.</p>}
     </header>
 
     <details className="bctx">
-      <summary>Unde suntem în carte</summary>
+      <summary>Unde suntem \u00een carte</summary>
       <p>{found.literaryContext}</p>
     </details>
     <details className="bctx">
@@ -420,14 +425,14 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
         >{u.ref}</button>)}
       </div>
       <button type="button" className="ghost bunits__all" onClick={toggleAll}>
-        {allOpen ? <><ChevronUp size={15} aria-hidden /> Închide tot</> : <><ChevronDown size={15} aria-hidden /> Extinde tot</>}
+        {allOpen ? <><ChevronUp size={15} aria-hidden /> \u00cenchide tot</> : <><ChevronDown size={15} aria-hidden /> Extinde tot</>}
       </button>
     </nav>
 
     {units.map((u) => <Unit key={u.id} unit={u} open={openUnits[u.id] === true} onToggle={() => toggleUnit(u.id)} />)}
 
     <div className="bprayer">
-      <p className="today__kicker">Rugăciune</p>
+      <p className="today__kicker">Rug\u0103ciune</p>
       {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}
     </div>
 
