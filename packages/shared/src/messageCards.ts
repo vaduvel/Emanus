@@ -6,29 +6,22 @@
 // Formula „Dumnezeu îți transmite astăzi” + frază inventată este interzisă.
 //
 // Conținut original Emanus. Cardurile care circulă pe rețele aparțin autorilor
-// lor și nu se copiază (docs/27 §1.2). Versetele sunt Cornilescu VDC 1924
-// (domeniu public), colaționate verset cu verset.
+// lor și nu se copiază (docs/27 §1.2). Versetele sunt Cornilescu, ediția
+// corectată (RCCV), colaționate verset cu verset. ATENȚIE: drepturile asupra
+// traducerii Cornilescu NU sunt lămurite pentru România (docs/39).
+//
+// Stările vin din vocabularul unic (docs/41, `needs.ts`). Câmpul `moods` s-a
+// numit așa până la unificare; acum e `needs` și cunoaște toate cele 20.
 import type { AgeCategoryId, GrowthAxisId } from "./domain.js"
+import { LEGACY_MOOD_IDS, needById, NEEDS, type MessageMood, type NeedId } from "./needs.js"
 
-/** Stările din check-in-ul emoțional (docs/00-DIRECTIE §14). */
-export type MessageMood =
-  | "obosit"
-  | "speriat"
-  | "vinovat"
-  | "in_asteptare"
-  | "singur"
-  | "recunoscator"
-  | "fara_directie"
+export type { MessageMood, NeedId }
 
-export const MESSAGE_MOODS: { id: MessageMood; label: string }[] = [
-  { id: "obosit", label: "sunt obosit" },
-  { id: "speriat", label: "mi-e frică" },
-  { id: "vinovat", label: "mă simt vinovat" },
-  { id: "in_asteptare", label: "aștept ceva" },
-  { id: "singur", label: "sunt singur" },
-  { id: "recunoscator", label: "vreau să mulțumesc" },
-  { id: "fara_directie", label: "nu știu încotro" },
-]
+/** Cele 7 stări vechi din check-in, cu etichetele luate din vocabularul unic. */
+export const MESSAGE_MOODS: { id: MessageMood; label: string }[] = LEGACY_MOOD_IDS.map((id) => ({
+  id,
+  label: needById(id)?.label ?? id,
+}))
 
 /** Doar aceste titluri sunt permise pe card (docs/27 §3.2). */
 export const ALLOWED_CARD_TITLES = [
@@ -49,7 +42,8 @@ export interface MessageCard {
   verseRef: string
   verseText: string
   axis: GrowthAxisId
-  moods: MessageMood[]
+  /** Stările pentru care se potrivește cardul (docs/41). */
+  needs: NeedId[]
   background: CardBackground
   ageVariants?: Partial<Record<AgeCategoryId, { title: CardTitle; body: string }>>
 }
@@ -63,7 +57,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Nu vă îngrijorați dar de ziua de mâine; căci ziua de mâine se va îngrijora de ea însăși. Ajunge zilei necazul ei.",
     axis: "emotional_peace",
-    moods: ["obosit", "speriat"],
+    needs: ["obosit", "speriat"],
     background: "pergament",
   },
   {
@@ -73,7 +67,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 119:105",
     verseText: "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea.",
     axis: "living_faith",
-    moods: ["fara_directie", "speriat"],
+    needs: ["fara_directie", "speriat"],
     background: "pergament-cald",
   },
   {
@@ -83,7 +77,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Ioan 14:18",
     verseText: "Nu vă voi lăsa orfani, Mă voi întoarce la voi.",
     axis: "identity",
-    moods: ["singur"],
+    needs: ["singur", "doliu"],
     background: "pergament",
   },
   {
@@ -93,7 +87,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Romani 8:1",
     verseText: "Acum dar nu este nicio osândire pentru cei ce sunt în Hristos Isus.",
     axis: "freedom",
-    moods: ["vinovat"],
+    needs: ["vinovat"],
     background: "pergament-umbra",
   },
   {
@@ -103,7 +97,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Isaia 49:16",
     verseText: "Iată că te-am săpat pe mâinile Mele, și zidurile tale sunt totdeauna înaintea ochilor Mei!",
     axis: "identity",
-    moods: ["singur", "obosit"],
+    needs: ["singur", "obosit"],
     background: "pergament",
   },
   {
@@ -113,7 +107,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Isaia 43:1",
     verseText: "Nu te teme de nimic, căci Eu te izbăvesc, te chem pe nume: ești al Meu.",
     axis: "identity",
-    moods: ["speriat", "fara_directie"],
+    needs: ["speriat", "fara_directie"],
     background: "pergament-cald",
   },
   {
@@ -123,7 +117,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Matei 11:28",
     verseText: "Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.",
     axis: "emotional_peace",
-    moods: ["obosit"],
+    needs: ["obosit"],
     background: "pergament",
   },
   {
@@ -133,7 +127,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Ioan 14:27",
     verseText: "Vă las pacea, vă dau pacea Mea. Nu v-o dau cum o dă lumea.",
     axis: "emotional_peace",
-    moods: ["speriat", "obosit"],
+    needs: ["speriat", "obosit"],
     background: "pergament-cald",
   },
   {
@@ -144,7 +138,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Dar cei ce se încred în Domnul își înnoiesc puterea; ei zboară ca vulturii; aleargă, și nu obosesc, umblă, și nu ostenesc.",
     axis: "living_faith",
-    moods: ["in_asteptare", "obosit"],
+    needs: ["in_asteptare", "obosit"],
     background: "pergament",
   },
   {
@@ -154,7 +148,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Evrei 13:5",
     verseText: "Căci El Însuși a zis: „Nicidecum n-am să te las, cu niciun chip nu te voi părăsi.”",
     axis: "identity",
-    moods: ["singur", "speriat"],
+    needs: ["singur", "speriat", "departe"],
     background: "pergament",
   },
   {
@@ -165,7 +159,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Dacă ne mărturisim păcatele, El este credincios și drept ca să ne ierte păcatele și să ne curățească de orice nelegiuire.",
     axis: "freedom",
-    moods: ["vinovat"],
+    needs: ["vinovat"],
     background: "pergament-umbra",
   },
   {
@@ -175,7 +169,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 34:18",
     verseText: "Domnul este aproape de cei cu inima înfrântă și mântuiește pe cei cu duhul zdrobit.",
     axis: "emotional_peace",
-    moods: ["singur", "vinovat"],
+    needs: ["singur", "vinovat", "doliu", "casa_rupta"],
     background: "pergament-umbra",
   },
   {
@@ -186,7 +180,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Căci Eu știu gândurile pe care le am cu privire la voi, zice Domnul, gânduri de pace, și nu de nenorocire, ca să vă dau un viitor și o nădejde.",
     axis: "living_faith",
-    moods: ["fara_directie", "in_asteptare"],
+    needs: ["fara_directie", "in_asteptare"],
     background: "pergament-cald",
   },
   {
@@ -196,7 +190,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Romani 8:28",
     verseText: "De altă parte, știm că toate lucrurile lucrează împreună spre binele celor ce iubesc pe Dumnezeu.",
     axis: "living_faith",
-    moods: ["fara_directie", "in_asteptare"],
+    needs: ["fara_directie", "in_asteptare", "de_ce"],
     background: "pergament",
   },
   {
@@ -206,7 +200,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 103:13",
     verseText: "Cum se îndură un tată de copiii lui, așa Se îndură Domnul de cei ce se tem de El.",
     axis: "identity",
-    moods: ["vinovat", "obosit"],
+    needs: ["vinovat", "obosit"],
     background: "pergament-cald",
   },
   {
@@ -216,7 +210,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Ioan 8:36",
     verseText: "Deci, dacă Fiul vă face slobozi, veți fi cu adevărat slobozi.",
     axis: "freedom",
-    moods: ["vinovat", "fara_directie"],
+    needs: ["vinovat", "fara_directie", "patima_bautura", "pofta"],
     background: "pergament",
   },
   {
@@ -226,7 +220,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 103:2",
     verseText: "Binecuvântează, suflete, pe Domnul și nu uita niciuna din binefacerile Lui!",
     axis: "character",
-    moods: ["recunoscator"],
+    needs: ["recunoscator"],
     background: "pergament-cald",
   },
   {
@@ -237,7 +231,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Căci noi suntem lucrarea Lui și am fost zidiți în Hristos Isus pentru faptele bune pe care le-a pregătit Dumnezeu mai dinainte ca să umblăm în ele.",
     axis: "identity",
-    moods: ["vinovat", "fara_directie"],
+    needs: ["vinovat", "fara_directie"],
     background: "pergament",
   },
   {
@@ -248,7 +242,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Sunt încredințat că Acela care a început în voi această bună lucrare o va isprăvi până în ziua lui Isus Hristos.",
     axis: "character",
-    moods: ["obosit", "in_asteptare"],
+    needs: ["obosit", "in_asteptare"],
     background: "pergament",
   },
   {
@@ -259,7 +253,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Încrede-te în Domnul din toată inima ta și nu te bizui pe înțelepciunea ta! Recunoaște-L în toate căile tale, și El îți va netezi cărările.",
     axis: "living_faith",
-    moods: ["fara_directie"],
+    needs: ["fara_directie"],
     background: "pergament",
   },
   {
@@ -269,7 +263,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 56:8",
     verseText: "Tu numeri pașii vieții mele de pribeag; pune-mi lacrimile în burduful Tău! Nu sunt ele scrise în cartea Ta?",
     axis: "emotional_peace",
-    moods: ["singur", "in_asteptare"],
+    needs: ["singur", "in_asteptare", "doliu"],
     background: "pergament-umbra",
   },
   {
@@ -279,7 +273,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Ioan 7:37",
     verseText: "Dacă însetează cineva, să vină la Mine și să bea.",
     axis: "living_faith",
-    moods: ["obosit", "fara_directie"],
+    needs: ["obosit", "fara_directie"],
     background: "pergament-cald",
   },
   {
@@ -290,7 +284,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Uitați-vă la păsările cerului: ele nici nu seamănă, nici nu seceră și nici nu strâng nimic în grânare, și totuși Tatăl vostru cel ceresc le hrănește. Oare nu sunteți voi cu mult mai de preț decât ele?",
     axis: "emotional_peace",
-    moods: ["speriat", "obosit"],
+    needs: ["speriat", "obosit", "bani"],
     background: "pergament",
   },
   {
@@ -300,7 +294,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Isaia 26:3",
     verseText: "Celui cu inima tare, Tu-i chezășuiești pacea; da, pacea, căci se încrede în Tine.",
     axis: "emotional_peace",
-    moods: ["speriat", "in_asteptare"],
+    needs: ["speriat", "in_asteptare"],
     background: "pergament",
   },
   {
@@ -311,7 +305,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Nu te teme, căci Eu sunt cu tine; nu te uita cu îngrijorare, căci Eu sunt Dumnezeul tău; Eu te întăresc, tot Eu îți vin în ajutor. Eu te sprijin cu dreapta Mea biruitoare.",
     axis: "emotional_peace",
-    moods: ["speriat", "singur"],
+    needs: ["speriat", "singur", "boala"],
     background: "pergament-cald",
   },
   {
@@ -321,7 +315,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "1 Petru 5:7",
     verseText: "Și aruncați asupra Lui toate îngrijorările voastre, căci El Însuși îngrijește de voi.",
     axis: "emotional_peace",
-    moods: ["obosit", "speriat"],
+    needs: ["obosit", "speriat"],
     background: "pergament",
   },
   {
@@ -331,7 +325,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 103:12",
     verseText: "Cât de departe este răsăritul de apus, atât de mult depărtează El fărădelegile noastre de la noi.",
     axis: "freedom",
-    moods: ["vinovat"],
+    needs: ["vinovat"],
     background: "pergament-umbra",
   },
   {
@@ -342,7 +336,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Veniți totuși să ne judecăm, zice Domnul. De vor fi păcatele voastre cum e cârmâzul, se vor face albe ca zăpada; de vor fi roșii ca purpura, se vor face ca lâna.",
     axis: "freedom",
-    moods: ["vinovat"],
+    needs: ["vinovat"],
     background: "pergament-umbra",
   },
   {
@@ -353,7 +347,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Când era încă departe, tatăl său l-a văzut și i s-a făcut milă de el, a alergat de a căzut pe grumazul lui și l-a sărutat mult.",
     axis: "identity",
-    moods: ["vinovat", "singur"],
+    needs: ["vinovat", "singur", "copil_departat"],
     background: "pergament-cald",
   },
   {
@@ -364,7 +358,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Vă voi da o inimă nouă și voi pune în voi un duh nou; voi scoate din trupul vostru inima de piatră și vă voi da o inimă de carne.",
     axis: "character",
-    moods: ["vinovat", "fara_directie"],
+    needs: ["vinovat", "fara_directie", "patima_bautura", "pofta"],
     background: "pergament",
   },
   {
@@ -375,7 +369,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Căci este o prorocie a cărei vreme este hotărâtă, se apropie de împlinire și nu va minți; dacă zăbovește, așteapt-o, căci va veni și se va împlini negreșit.",
     axis: "living_faith",
-    moods: ["in_asteptare"],
+    needs: ["in_asteptare", "rugaciune_fara_raspuns"],
     background: "pergament",
   },
   {
@@ -385,7 +379,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 27:14",
     verseText: "Nădăjduiește în Domnul! Fii tare, îmbărbătează-ți inima și nădăjduiește în Domnul!",
     axis: "living_faith",
-    moods: ["in_asteptare", "obosit"],
+    needs: ["in_asteptare", "obosit"],
     background: "pergament",
   },
   {
@@ -395,7 +389,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Eclesiastul 3:11",
     verseText: "Orice lucru El îl face frumos la vremea lui.",
     axis: "living_faith",
-    moods: ["in_asteptare", "fara_directie"],
+    needs: ["in_asteptare", "fara_directie"],
     background: "pergament-cald",
   },
   {
@@ -406,7 +400,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Iată că nu dormitează, nici nu doarme Cel ce păzește pe Israel.",
     axis: "emotional_peace",
-    moods: ["speriat", "singur"],
+    needs: ["speriat", "singur"],
     background: "pergament-umbra",
   },
   {
@@ -417,7 +411,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Unde mă voi duce departe de Duhul Tău și unde voi fugi departe de Fața Ta? Dacă mă voi sui în cer, Tu ești acolo.",
     axis: "identity",
-    moods: ["singur", "fara_directie"],
+    needs: ["singur", "fara_directie", "departe"],
     background: "pergament",
   },
   {
@@ -427,7 +421,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 68:6",
     verseText: "Dumnezeu dă o familie celor părăsiți, El izbăvește pe prinșii de război și-i face fericiți.",
     axis: "relationships",
-    moods: ["singur"],
+    needs: ["singur", "casa_rupta"],
     background: "pergament-cald",
   },
   {
@@ -437,7 +431,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "1 Tesaloniceni 5:18",
     verseText: "Mulțumiți lui Dumnezeu pentru toate lucrurile, căci aceasta este voia lui Dumnezeu, în Hristos Isus, cu privire la voi.",
     axis: "character",
-    moods: ["recunoscator"],
+    needs: ["recunoscator"],
     background: "pergament",
   },
   {
@@ -447,7 +441,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "Psalmul 118:24",
     verseText: "Aceasta este ziua pe care a făcut-o Domnul: să ne bucurăm și să ne veselim în ea!",
     axis: "character",
-    moods: ["recunoscator"],
+    needs: ["recunoscator"],
     background: "pergament-cald",
   },
   {
@@ -458,7 +452,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Orice ni se dă bun și orice dar desăvârșit este de sus, coborându-se de la Tatăl luminilor, în care nu este nici schimbare, nici umbră de mutare.",
     axis: "character",
-    moods: ["recunoscator"],
+    needs: ["recunoscator"],
     background: "pergament",
   },
   {
@@ -469,7 +463,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "„Eu”, zice Domnul, „te voi învăța și-ți voi arăta calea pe care trebuie s-o urmezi, te voi sfătui și voi avea privirea îndreptată asupra ta.”",
     axis: "living_faith",
-    moods: ["fara_directie"],
+    needs: ["fara_directie"],
     background: "pergament",
   },
   {
@@ -480,7 +474,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Dacă vreunuia dintre voi îi lipsește înțelepciunea, s-o ceară de la Dumnezeu, care dă tuturor cu mână largă și fără mustrare, și ea îi va fi dată.",
     axis: "living_faith",
-    moods: ["fara_directie", "in_asteptare"],
+    needs: ["fara_directie", "in_asteptare"],
     background: "pergament",
   },
   {
@@ -491,7 +485,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Urechile tale vor auzi după tine glasul care va zice: „Iată drumul, mergeți pe el!”, când veți voi să vă mai abateți la dreapta sau la stânga.",
     axis: "living_faith",
-    moods: ["fara_directie"],
+    needs: ["fara_directie"],
     background: "pergament-cald",
   },
   {
@@ -501,7 +495,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseRef: "2 Corinteni 12:9",
     verseText: "Harul Meu îți este de ajuns, căci puterea Mea în slăbiciune este făcută desăvârșită.",
     axis: "character",
-    moods: ["obosit", "vinovat"],
+    needs: ["obosit", "vinovat", "boala"],
     background: "pergament-umbra",
   },
   {
@@ -512,7 +506,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Bunătățile Domnului nu s-au sfârșit, îndurările Lui nu sunt la capăt, ci se înnoiesc în fiecare dimineață. Și credincioșia Ta este atât de mare!",
     axis: "freedom",
-    moods: ["vinovat", "obosit"],
+    needs: ["vinovat", "obosit"],
     background: "pergament-cald",
   },
   {
@@ -523,7 +517,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     verseText:
       "Căci sunt bine încredințat că nici moartea, nici viața... nici o altă făptură nu vor fi în stare să ne despartă de dragostea lui Dumnezeu.",
     axis: "identity",
-    moods: ["singur", "speriat"],
+    needs: ["singur", "speriat", "doliu", "frica_moarte"],
     background: "pergament",
   },
 ]
@@ -537,6 +531,38 @@ export function messageCardById(id: string): MessageCard | null {
   return MESSAGE_CARDS.find((c) => c.id === id) ?? null
 }
 
+export function cardsForNeed(need: NeedId): MessageCard[] {
+  return MESSAGE_CARDS.filter((c) => c.needs.includes(need))
+}
+
+/**
+ * Cât de acoperită e fiecare stare față de ținta din docs/41. Folosită de
+ * verificarea `check:pergament` și de raportul editorial.
+ */
+export function needCoverage(): {
+  need: NeedId
+  label: string
+  have: number
+  target: number
+  missing: number
+}[] {
+  return NEEDS.map((n) => {
+    const have = cardsForNeed(n.id).length
+    return {
+      need: n.id,
+      label: n.label,
+      have,
+      target: n.target,
+      missing: Math.max(0, n.target - have),
+    }
+  })
+}
+
+/** Stările pentru care nu s-a scris încă niciun card. */
+export function needsWithoutCards(): NeedId[] {
+  return NEEDS.filter((n) => cardsForNeed(n.id).length === 0).map((n) => n.id)
+}
+
 function dayNumber(date: Date): number {
   return Math.floor(
     Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()) / 86400000,
@@ -546,23 +572,38 @@ function dayNumber(date: Date): number {
 /**
  * Alegerea cardului de azi (docs/27 §3.4). NU e random:
  *  1. starea de la check-in, dacă există;
- *  2. altfel, axa cea mai frageda din radar;
+ *  2. altfel, axa cea mai fragedă din radar;
  *  3. altfel, rotație stabilă pe zi, evitând ce s-a văzut recent.
+ *
+ * Ocolirea repetării se face pe VERSET, nu doar pe card (docs/41 §5.6): două
+ * carduri pe același verset i se par omului același lucru spus de două ori.
+ * Dacă ocolirea pe verset nu mai lasă nimic, se slăbește la ocolirea pe card,
+ * ca omul să primească totuși ceva potrivit cu starea lui.
  */
 export function pickMessageCard(input: {
+  need?: NeedId
+  /** @deprecated numele vechi al stării; folosește `need`. */
   mood?: MessageMood
   focusAxis?: GrowthAxisId
   recentIds?: string[]
+  recentVerseRefs?: string[]
   date?: Date
 }): MessageCard {
-  const recent = new Set(input.recentIds ?? [])
+  const recentIds = new Set(input.recentIds ?? [])
+  const recentRefs = new Set(input.recentVerseRefs ?? [])
   const date = input.date ?? new Date()
+  const need: NeedId | undefined = input.need ?? input.mood
 
-  const byMood = input.mood ? MESSAGE_CARDS.filter((c) => c.moods.includes(input.mood as MessageMood)) : []
+  const byNeed = need ? MESSAGE_CARDS.filter((c) => c.needs.includes(need)) : []
   const byAxis = input.focusAxis ? MESSAGE_CARDS.filter((c) => c.axis === input.focusAxis) : []
+  const lists = [byNeed, byAxis, MESSAGE_CARDS]
 
-  for (const list of [byMood, byAxis, MESSAGE_CARDS]) {
-    const fresh = list.filter((c) => !recent.has(c.id))
+  for (const list of lists) {
+    const fresh = list.filter((c) => !recentIds.has(c.id) && !recentRefs.has(c.verseRef))
+    if (fresh.length > 0) return fresh[dayNumber(date) % fresh.length]
+  }
+  for (const list of lists) {
+    const fresh = list.filter((c) => !recentIds.has(c.id))
     if (fresh.length > 0) return fresh[dayNumber(date) % fresh.length]
   }
   return MESSAGE_CARDS[dayNumber(date) % MESSAGE_CARDS.length]
