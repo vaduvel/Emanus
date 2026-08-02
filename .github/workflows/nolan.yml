@@ -70,7 +70,7 @@ jobs:
         run: python3 scripts/nolan-geneza-2-9-15-20.py
 
       - name: Aplica primul val de revizie AI pentru Geneza 1-11
-        run: python3 scripts/review-geneza-1-11.py
+        run: python3 scripts/review-geneza-1-11-v2.py
 
       - name: Curata paragrafele repetate
         run: python3 scripts/dedup-paragrafe.py
