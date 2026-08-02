@@ -5,7 +5,8 @@
 // a fi văzut și totuși primit. Nicio zi nu îi cere omului să-și „ierte singur”
 // trecutul și niciuna nu-l grăbește să-și spună povestea cuiva nesigur.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_11 = "Rușinea"
@@ -82,7 +83,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Isaia 54:4",
-    verseText: "Nu te teme, căci nu vei rămâne de rușine; nu roși, căci nu vei fi acoperită de rușine; vei uita și rușinea tinereților.",
+    verseText: "Nu te teme, căci nu vei rămâne de rușine; nu roși, căci nu vei fi acoperită de rușine, ci vei uita și rușinea tinereții tale.",
     meditation:
       "Dumnezeu vorbește aici unui popor cu un trecut umilitor și îi promite că rușinea tinereții nu va fi ultimul cuvânt. Nu spune că nu s-a întâmplat, ci că nu te va mai defini. Vindecarea nu șterge istoria; îi ia puterea.",
     question: "Ce rușine din tinerețe te definește încă?",
@@ -95,7 +96,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Isaia 61:7",
-    verseText: "În locul rușinii voastre veți avea îndoită parte; în locul ocarei, se vor bucura de partea lor.",
+    verseText: "În locul ocării voastre, veți avea îndoită cinste; în locul rușinii, se vor veseli de partea lor.",
     meditation:
       "În legea veche, cel nedreptățit primea îndoit — deci Dumnezeu vorbește ca despre o despăgubire. Nu doar șterge rușinea, ci pune ceva în locul ei. Locurile cele mai umilite din viața unui om devin adesea locurile din care ajută pe alții.",
     question: "Ce ai putea da altcuiva tocmai din locul tău rușinos?",
@@ -108,7 +109,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Ioel 2:26",
-    verseText: "Veți mânca și vă veți sătura și veți lăuda Numele Domnului Dumnezeului vostru... și poporul Meu niciodată nu va mai fi de ocară!",
+    verseText: "Veți mânca și vă veți sătura și veți lăuda Numele Domnului Dumnezeului vostru, care va face minuni cu voi, și poporul Meu niciodată nu va mai fi de ocară!",
     meditation:
       "Contextul e o țară mâncată de lăcuste, adică ani pierduți. Dumnezeu promite sătul și sfârșitul ocarei în același loc. Cine a pierdut ani întregi are aici o promisiune anume pentru el.",
     question: "Ce ani ți s-au mâncat și îi plângi încă?",
@@ -121,7 +122,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Romani 10:11",
-    verseText: "Fiindcă Scriptura zice: „Oricine crede în El nu va fi dat de rușine.”",
+    verseText: "După cum zice Scriptura: „Oricine crede în El nu va fi dat de rușine.”",
     meditation:
       "Pavel repetă un verset din Isaia și adaugă un cuvânt care schimbă totul: oricine. Nu „cine merită”, nu „cine are un trecut curat”. Rușinea încearcă mereu să te scoată din categoria „oricine”.",
     question: "Te-ai simțit vreodată excepția de la promisiunile lui Dumnezeu?",
@@ -147,7 +148,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Evrei 12:2",
-    verseText: "El, pentru bucuria care-I era pusă înainte, a suferit crucea, a disprețuit rușinea și șade la dreapta scaunului de domnie al lui Dumnezeu.",
+    verseText: "Să ne uităm țintă la Căpetenia și Desăvârșirea credinței noastre, adică la Isus, care, pentru bucuria care-I era pusă înainte, a suferit crucea, a disprețuit rușinea și șade la dreapta scaunului de domnie al lui Dumnezeu.",
     meditation:
       "Crucea era, înainte de toate, o rușine publică: dezbrăcat, atârnat la marginea drumului, batjocorit. Isus a trecut prin exact ce te îngrozește pe tine — să fii văzut în cel mai rău moment. Și a făcut-o în locul tău.",
     question: "Ce schimbă faptul că El a fost expus în locul tău?",
@@ -160,7 +161,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Evrei 2:11",
-    verseText: "Căci Cel ce sfințește și cei ce sunt sfințiți sunt dintr-unul. De aceea, Lui nu-I este rușine să-i numească „frați”.",
+    verseText: "Căci Cel ce sfințește și cei ce sunt sfințiți sunt dintr-unul. De aceea, Lui nu-I este rușine să-i numească frați.",
     meditation:
       "Versetul spune limpede ce ai crede imposibil: Lui nu-I e rușine cu tine. Nu Îl jenești și nu are nevoie să explice nimănui de ce te ține aproape. În fața cerului, te numește frate.",
     question: "Crezi că lui Dumnezeu Îi e rușine cu tine?",
@@ -173,7 +174,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Marcu 8:38",
-    verseText: "Pentru că de oricine Îi va fi rușine de Mine și de cuvintele Mele în acest neam preacurvar și păcătos, Îi va fi rușine și Fiului omului.",
+    verseText: "Pentru că de oricine se va rușina de Mine și de cuvintele Mele, în acest neam preacurvar și păcătos, Se va rușina și Fiul omului când va veni în slava Tatălui Său împreună cu sfinții îngeri.",
     meditation:
       "Rușinea are două sensuri în luna asta: cea care te apasă și cea pe care o alegi. E ușor să taci despre El într-un birou sau într-un grup. Tăcerea aceea e o formă discretă de lepădare.",
     question: "Unde ți-e rușine să fii cunoscut ca creștin?",
@@ -199,7 +200,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "2 Timotei 1:12",
-    verseText: "Și din pricina aceasta sufer aceste lucruri; dar nu mi-e rușine, căci știu în cine am crezut.",
+    verseText: "Și din pricina aceasta sufăr aceste lucruri, dar nu mi-e rușine, căci știu în cine am crezut.",
     meditation:
       "Pavel scria din închisoare, cu o viață care, după orice standard, arăta a eșec. Nu spune „știu ce cred”, ci „știu în cine am crezut”. Rușinea se stinge în fața unei Persoane, nu în fața unui argument.",
     question: "În cine ai crezut, dincolo de ce crezi?",
@@ -212,7 +213,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Ioan 8:10-11",
-    verseText: "Femeie, unde sunt pârâșii tăi? Nimeni nu te-a osândit? Nici Eu nu te osândesc. Du-te și să nu mai păcătuiești.",
+    verseText: "Femeie, unde sunt pârâșii tăi? Nimeni nu te-a osândit?... Nici Eu nu te osândesc. Du-te și să nu mai păcătuiești.",
     meditation:
       "Femeia fusese adusă în mijlocul curții Templului, expusă dinadins. Isus a scris în țărână și le-a lăsat timp să plece. A făcut două lucruri odată: n-a osândit-o și n-a numit păcatul „nimic”.",
     question: "Ai fost expus vreodată în fața altora?",
@@ -225,7 +226,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Luca 8:47",
-    verseText: "Femeia, când s-a văzut dată de gol, a venit tremurând, s-a aruncat jos înaintea Lui și a spus în fața întregului norod din ce pricină se atinsese de El.",
+    verseText: "Femeia, când s-a văzut dată de gol, a venit tremurând, s-a aruncat jos, înaintea Lui, și a spus în fața întregului norod din ce pricină se atinsese de El și cum fusese vindecată numaidecât.",
     meditation:
       "Boala ei o făcea necurată — doisprezece ani în care nu avea voie să atingă pe nimeni. Isus a cerut să iasă la vedere nu ca să o umilească, ci ca să fie reintegrată public în popor. Vindecarea ascunsă ar fi lăsat-o tot singură.",
     question: "Ce vindecare a ta ar trebui să fie știută de cineva?",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Luca 19:5",
-    verseText: "Zacheu, dă-te jos degrabă, căci astăzi trebuie să rămân în casa ta.",
+    verseText: "Zachee, dă-te jos degrabă, căci astăzi trebuie să rămân în casa ta.",
     meditation:
       "Zacheu era disprețuit de tot orașul și se urcase într-un copac ca să vadă fără să fie văzut. Isus l-a strigat pe nume și S-a autoinvitat la el acasă, înaintea oricărei schimbări. Schimbarea a venit după masă, nu înainte.",
     question: "Aștepți să te faci mai bun înainte să-L primești în casă?",
@@ -251,7 +252,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Ioan 4:29",
-    verseText: "Veniți de vedeți un om care mi-a spus tot ce am făcut; nu cumva este Acesta Hristosul?",
+    verseText: "Veniți de vedeți un om care mi-a spus tot ce am făcut. Nu cumva este acesta Hristosul?",
     meditation:
       "Femeia venise la fântână la amiază, la ora la care nu era nimeni, tocmai ca să evite privirile. Se întoarce în cetate și spune tuturor exact ce ascundea. Când cineva te cunoaște în întregime și totuși rămâne, secretul își pierde puterea.",
     question: "Ce ți-ar schimba viața dacă nu ar mai fi secret?",
@@ -264,7 +265,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Luca 7:38",
-    verseText: "Și stătea înapoi, lângă picioarele lui Isus, și plângea. Apoi a început să-I stropească picioarele cu lacrimile ei și să le șteargă cu părul capului ei.",
+    verseText: "Și stătea înapoi lângă picioarele lui Isus și plângea. Apoi a început să-I stropească picioarele cu lacrimile ei și să le șteargă cu părul capului ei.",
     meditation:
       "A intrat neinvitată într-o casă de fariseu, știind exact ce se spunea despre ea. A ales umilirea sigură în locul rușinii ascunse. Isus a primit-o și a mustrat gazda, nu pe ea.",
     question: "Ce te-ar costa să vii așa la El?",
@@ -303,7 +304,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Psalmul 32:3-5",
-    verseText: "Câtă vreme am tăcut, mi se topeau oasele... Atunci ți-am mărturisit păcatul meu și nu mi-am ascuns fărădelegea. Și Tu ai iertat vina păcatului meu.",
+    verseText: "Câtă vreme am tăcut, mi se topeau oasele... Atunci Ți-am mărturisit păcatul meu și nu mi-am ascuns fărădelegea. Și Tu ai iertat vina păcatului meu.",
     meditation:
       "Tăcerea are un preț fizic: David vorbește de oase și de putere secată. Secretul ținut consumă mai multă energie decât mărturisirea. Eliberarea a venit în clipa în care a spus lucrurile pe nume.",
     question: "Ce te obosește să ții ascuns?",
@@ -329,7 +330,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "1 Ioan 3:20",
-    verseText: "În orice ne osândește inima noastră; căci Dumnezeu este mai mare decât inima noastră și cunoaște toate lucrurile.",
+    verseText: "Ori în ce ne osândește inima noastră; căci Dumnezeu este mai mare decât inima noastră și cunoaște toate lucrurile.",
     meditation:
       "Sunt zile în care propria inimă e cel mai aspru judecător. Ioan nu spune „ascultă-ți inima”, ci exact invers: Dumnezeu e mai mare decât ea. El știe tot — și cunoscând tot, tot te primește.",
     question: "Cine te condamnă mai tare: Dumnezeu sau tu?",
@@ -381,7 +382,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "Isaia 50:7",
-    verseText: "Dar Domnul Dumnezeu M-a ajutat; de aceea nu M-am rușinat, de aceea Mi-am făcut fața ca o cremene, știind că nu voi fi dat de rușine.",
+    verseText: "Dar Domnul Dumnezeu M-a ajutat, de aceea nu M-am rușinat, de aceea Mi-am făcut fața ca o cremene, știind că nu voi fi dat de rușine.",
     meditation:
       "„Fața ca o cremene” nu înseamnă obrăznicie, ci hotărârea de a merge înainte când știi cine te susține. E o profeție despre Isus mergând spre Ierusalim. Un om care nu-și mai apără imaginea are o tărie ciudată.",
     question: "Ce ai face azi dacă nu ți-ar mai fi frică de părerea nimănui?",
@@ -394,7 +395,7 @@ export const DEVOTIONAL_DAYS_LUNA_11: DevotionalDay[] = [
     theme: LUNA_11,
     axis: "freedom",
     verseRef: "2 Corinteni 7:10",
-    verseText: "În adevăr, când întristarea este după voia lui Dumnezeu, aduce o pocăință care duce la mântuire; pe când întristarea lumii aduce moartea.",
+    verseText: "În adevăr, când întristarea este după voia lui Dumnezeu, aduce o pocăință care duce la mântuire și de care cineva nu se căiește niciodată, pe când întristarea lumii aduce moartea.",
     meditation:
       "Se încheie luna cu criteriul care le desparte pe toate: o întristare te duce spre Dumnezeu, cealaltă te închide în tine. Prima spune „am greșit și pot veni acasă”; a doua spune „sunt o greșeală”. Luna viitoare, ultima, e despre exact ce se întâmplă când cazi — har la cădere.",
     question: "În ce fel de întristare ai trăit în luna asta?",
