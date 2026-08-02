@@ -5,7 +5,8 @@
 // ți-i dă și prezența Lui în zilele când nu e nimeni. Nicăieri nu se sugerează că
 // un om singur ar fi un om mai puțin iubit.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_6 = "Ai tăi și singurătatea"
@@ -30,7 +31,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Psalmul 68:6",
-    verseText: "Dumnezeu dă o familie celor părăsiți, El izbăvește pe prinșii de război.",
+    verseText: "Dumnezeu dă o familie celor părăsiți, El izbăvește pe prinșii de război și-i face fericiți.",
     meditation:
       "Dumnezeu nu ține doar predici despre singurătate: așază oameni. În Biblie, răspunsul Lui la singurătate e aproape mereu o familie — uneori cea în care te-ai născut, de multe ori una pe care nu o alegi tu.",
     question: "Cine ți-a fost, în ultimii ani, familie fără să-ți fie rudă?",
@@ -43,7 +44,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Eclesiastul 4:9-10",
-    verseText: "Mai bine doi decât unul... Căci, dacă se întâmplă să cadă, se ridică unul pe altul; dar vai de cine este singur și cade, fără să aibă pe altul care să-l ridice!",
+    verseText: "Mai bine doi decât unul, căci iau o plată cu atât mai bună pentru munca lor. Căci, dacă se întâmplă să cadă, se ridică unul pe altul. Dar vai de cine este singur și cade fără să aibă pe altul care să-l ridice!",
     meditation:
       "Textul nu spune că doi nu cad. Spune că unul singur rămâne jos. De aceea oamenii nu-ți trebuie ca să nu greșești, ci pentru ziua în care ai greșit deja.",
     question: "Cine ar ști, în 24 de ore, dacă ai cădea?",
@@ -69,7 +70,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Proverbe 18:24",
-    verseText: "Cine își face mulți prieteni îi face spre paguba lui, dar este un prieten care ține mai mult la tine decât un frate.",
+    verseText: "Cine își face mulți prieteni îi face spre nenorocirea lui, dar este un prieten care ține mai mult la tine decât un frate.",
     meditation:
       "Proverbul opune cantitatea calității și o face fără menajamente. Astăzi e și mai ușor să aduni oameni și să n-ai pe nimeni. Prietenia adevărată se cunoaște după ce rămâne când nu mai ești de folos.",
     question: "Ai un prieten pe care l-ai putea suna la 3 dimineața?",
@@ -121,7 +122,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Iov 2:13",
-    verseText: "Și au șezut pe pământ lângă el șapte zile și șapte nopți, fără să-i spună o vorbă, căci vedeau cât de mare îi este durerea.",
+    verseText: "Și au șezut pe pământ, lângă el, șapte zile și șapte nopți, fără să-i spună o vorbă, căci vedeau cât de mare îi este durerea.",
     meditation:
       "Prietenii lui Iov au fost desăvârșiți șapte zile: au tăcut. Necazul a început când au deschis gura ca să explice suferința. Cel mai bun lucru pe care îl poți face pentru un om lovit e să stai jos lângă el.",
     question: "Te grăbești să explici sau poți să stai în tăcere?",
@@ -134,7 +135,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Rut 1:16",
-    verseText: "Unde vei merge tu, voi merge și eu; unde vei locui tu, voi locui și eu; poporul tău va fi poporul meu și Dumnezeul tău va fi Dumnezeul meu.",
+    verseText: "Încotro vei merge tu, voi merge și eu; unde vei locui tu, voi locui și eu; poporul tău va fi poporul meu și Dumnezeul tău va fi Dumnezeul meu.",
     meditation:
       "Rut spune asta unei femei sărace, amărâte și fără nimic de oferit. Nu era o alegere înțeleaptă din niciun punct de vedere practic. Așa arată legământul: rămâi și când nu mai iese nimic din relația aceea.",
     question: "Cui i-ai rămas alături când nu mai era nimic de câștigat?",
@@ -160,7 +161,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "1 Samuel 23:16",
-    verseText: "Atunci Ionatan, fiul lui Saul, s-a sculat și s-a dus la David în pădure. El i-a întărit încrederea în Dumnezeu.",
+    verseText: "Atunci, Ionatan, fiul lui Saul, s-a sculat și s-a dus la David în pădure. El i-a întărit încrederea în Dumnezeu.",
     meditation:
       "Ionatan s-a dus în pădure, adică acolo unde era David, nu unde îi era lui comod. Și n-a venit să-l încurajeze cu vorbe generale, ci să-i întărească încrederea în Dumnezeu. Cea mai bună prietenie te duce înapoi la El, nu la ea însăși.",
     question: "Prietenia ta cea mai apropiată te apropie de Dumnezeu sau te ține departe?",
@@ -173,7 +174,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Exod 17:12",
-    verseText: "Mâinile lui Moise fiind trudite, ei au luat o piatră... iar Aaron și Hur îi sprijineau mâinile, unul de o parte, iar altul de alta.",
+    verseText: "Mâinile lui Moise fiind trudite, ei au luat o piatră, au pus-o sub el, și el a șezut pe ea. Aaron și Hur îi sprijineau mâinile, unul de o parte, iar altul de alta.",
     meditation:
       "Bătălia se câștiga atât timp cât mâinile lui Moise erau ridicate — și mâinile lui au obosit, ca ale oricui. Doi oameni au stat, ore întregi, doar ca să țină brațele altcuiva. Uneori asta e toată slujba ta în viața cuiva.",
     question: "Cui îi ții tu mâinile ridicate?",
@@ -186,7 +187,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Marcu 2:4",
-    verseText: "Fiindcă nu puteau să ajungă până la El din pricina norodului, au desfăcut acoperișul casei... și au coborât pe acolo patul în care zăcea slăbănogul.",
+    verseText: "Fiindcă nu puteau să ajungă până la El din pricina norodului, au desfăcut acoperișul casei unde era Isus și, după ce l-au spart, au coborât pe acolo patul în care zăcea slăbănogul.",
     meditation:
       "Omul acela n-a ajuns la Isus pe picioarele lui, ci pe credința a patru prieteni care au stricat un acoperiș. Sunt zile în care cineva trebuie să te ducă. Și sunt zile în care tu ești unul dintre cei patru.",
     question: "Pe cine duci tu, acum, la Dumnezeu în rugăciune?",
@@ -199,7 +200,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Fapte 2:46",
-    verseText: "Toți împreună, în fiecare zi, stăruiau în Templu, frângeau pâinea acasă și luau hrana cu bucurie și curăție de inimă.",
+    verseText: "Toți împreună erau nelipsiți de la Templu în fiecare zi, frângeau pâinea acasă și luau hrana cu bucurie și curăție de inimă.",
     meditation:
       "Biserica de la început a crescut între două locuri: Templul și bucătăria. Nu totul se petrece în adunări mari; mult din viața creștină se întâmplă la o masă, cu oameni care nu se grăbesc.",
     question: "Când ai avut ultima dată pe cineva la masă, fără ocazie specială?",
@@ -212,7 +213,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Evrei 10:24-25",
-    verseText: "Să veghem unii asupra altora, ca să ne îndemnăm la dragoste și la fapte bune. Să nu părăsim adunarea noastră, cum au unii obicei.",
+    verseText: "Să veghem unii asupra altora, ca să ne îndemnăm la dragoste și la fapte bune. Să nu părăsim adunarea noastră, cum au unii obicei; ci să ne îndemnăm unii pe alții, și cu atât mai mult, cu cât vedeți că ziua se apropie.",
     meditation:
       "Motivul dat nu e „că așa se cade”, ci ca să ne îndemnăm unii pe alții. Credința ținută numai în privat se stinge încet, fără dramă, ca un jar scos din foc. Nu ai nevoie de o adunare perfectă, ci de una reală.",
     question: "Ce te ține departe de oamenii credinței: rănirea, rușinea sau comoditatea?",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Galateni 6:2",
-    verseText: "Purtați-vă sarcinile unii altora și veți împlini astfel Legea lui Hristos.",
+    verseText: "Purtați-vă sarcinile unii altora și veți împlini astfel legea lui Hristos.",
     meditation:
       "Câteva rânduri mai jos, Pavel spune că fiecare își va purta și propria povară. Nu e o contradicție: sunt greutăți care te strivesc și trebuie împărțite, și responsabilități care rămân ale tale. Înțelepciunea e să știi ce ceri și ce duci.",
     question: "Ce greutate duci singur, deși cineva ar putea-o împărți cu tine?",
@@ -277,11 +278,11 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Psalmul 25:16",
-    verseText: "Întoarce-Ți Fața spre mine și ai milă de mine, căci sunt părăsit și nenorocit.",
+    verseText: "Privește-mă și ai milă de mine, căci sunt părăsit și nenorocit!",
     meditation:
       "Biblia nu-i cere omului singur să se prefacă bine. David își spune starea pe nume și o pune înaintea lui Dumnezeu. E o rugăciune scurtă, pe care o poți ține minte pentru serile grele.",
     question: "Ai spus vreodată în rugăciune, exact așa: „sunt singur”?",
-    prayer: "Doamne, întoarce-Ți fața spre mine. Sunt singur. Amin.",
+    prayer: "Doamne, privește-mă și ai milă de mine. Sunt singur. Amin.",
     step: "Când te lovește azi singurătatea, spune versetul ăsta în loc să deschizi telefonul.",
   },
   {
@@ -290,7 +291,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Psalmul 142:4",
-    verseText: "Aruncă-ți ochii la dreapta și privește! Nimeni nu mă mai cunoaște, orice scăpare este pierdută pentru mine, nimănui nu-i pasă de sufletul meu.",
+    verseText: "Aruncă-Ți ochii la dreapta și privește! Nimeni nu mă mai cunoaște, orice scăpare este pierdută pentru mine, nimănui nu-i pasă de sufletul meu.",
     meditation:
       "Psalmul a fost scris într-o peșteră. Faptul că stă în Biblie înseamnă că Dumnezeu a păstrat intenționat, în cartea Lui, propoziția „nimănui nu-i pasă de sufletul meu”. Nu ți se cere să o cenzurezi când o simți.",
     question: "Ce ai spune dacă ai avea voie să fii complet sincer cu Dumnezeu?",
@@ -303,7 +304,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "2 Timotei 4:16-17",
-    verseText: "La întâiul meu răspuns de apărare, nimeni n-a fost cu mine, ci toți m-au părăsit... Însă Domnul a stătut lângă mine și m-a întărit.",
+    verseText: "La întâiul meu răspuns de apărare, nimeni n-a fost cu mine, ci toți m-au părăsit. Să nu li se țină în socoteală lucrul acesta! Însă Domnul a stat lângă mine și m-a întărit.",
     meditation:
       "Pavel scrie asta la sfârșitul vieții, după zeci de ani de slujire și sute de oameni ajutați. Chiar și așa, a existat o zi în care n-a venit nimeni. Și tot atunci a învățat că Cineva stă lângă tine exact când nu mai stă nimeni.",
     question: "Unde a fost Dumnezeu în cea mai singură zi a ta?",
@@ -316,7 +317,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Ioan 16:32",
-    verseText: "Iată că vine ceasul... când veți fi risipiți fiecare la ale lui și pe Mine Mă veți lăsa singur; dar nu sunt singur, căci Tatăl este cu Mine.",
+    verseText: "Iată că vine ceasul, și a și venit, când veți fi risipiți fiecare la ale lui; și pe Mine Mă veți lăsa singur; dar nu sunt singur, căci Tatăl este cu Mine.",
     meditation:
       "Isus a fost lăsat singur de toți prietenii Lui, deci știe exact cum e. Și, chiar în propoziția în care recunoaște asta, spune unde își ține sprijinul. Singurătatea nu e o experiență străină pentru Cel căruia I te rogi.",
     question: "Te ajută să știi că El a trecut prin asta?",
@@ -329,7 +330,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Matei 26:40",
-    verseText: "Apoi a venit la ucenici, i-a găsit dormind și a zis lui Petru: „Ce, un ceas n-ați putut să vegheați împreună cu Mine?”",
+    verseText: "Apoi a venit la ucenici, i-a găsit dormind și a zis lui Petru: „Ce, un ceas n-ați putut să vegheați împreună cu Mine!”",
     meditation:
       "În cea mai grea noapte a Lui, Isus a cerut companie — nu soluții, ci prezență — și prietenii au adormit. Ceruse și El ceva simplu. Data viitoare când cineva îți cere doar să fii acolo, adu-ți aminte de grădina asta.",
     question: "Cine te-a chemat să-i stai alături și tu ai fost prea obosit?",
@@ -355,7 +356,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Psalmul 139:7-8",
-    verseText: "Unde mă voi duce departe de Duhul Tău și unde voi fugi departe de Fața Ta? Dacă mă voi sui în cer, Tu ești acolo; dacă mă voi culca în locuința morților, iată-Te și acolo.",
+    verseText: "Unde mă voi duce departe de Duhul Tău și unde voi fugi departe de Fața Ta? Dacă mă voi sui în cer, Tu ești acolo; dacă mă voi culca în Locuința morților, iată-Te și acolo.",
     meditation:
       "Psalmul numără locurile în care ai putea fi singur și le taie pe rând. Nu există cameră, spital, celulă sau țară străină în care să fii în afara razei Lui. Nu simți mereu asta — dar simțirea nu schimbă geografia.",
     question: "În ce loc ți-e cel mai greu să crezi că El e de față?",
@@ -368,7 +369,7 @@ export const DEVOTIONAL_DAYS_LUNA_6: DevotionalDay[] = [
     theme: LUNA_6,
     axis: "relationships",
     verseRef: "Isaia 41:9",
-    verseText: "Tu ești robul Meu, te aleg și nu te lepăd!",
+    verseText: "Tu ești robul Meu, te aleg și nu te lepăd.",
     meditation:
       "Sunt oameni care poartă toată viața senzația că au fost aleși ultimii. Versetul ăsta răstoarnă ordinea: Dumnezeu alege primul și nu retrage alegerea. Nu ești tolerat în familia Lui; ești dorit.",
     question: "Te-ai simțit vreodată ales ultimul?",
