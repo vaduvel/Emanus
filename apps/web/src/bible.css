@@ -186,6 +186,7 @@
   gap: 12px;
   padding-top: 18px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
+  scroll-margin-top: 84px;
 }
 
 .bunit__ref {
@@ -304,4 +305,93 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+/* ------------------------------------------------ Straturi + navigator */
+
+.bunit__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: 7px 13px;
+  cursor: pointer;
+}
+
+.bunit__toggle:hover {
+  filter: brightness(1.05);
+}
+
+.bunit__toggle.is-open {
+  order: 1;
+}
+
+.bactions {
+  order: 2;
+}
+
+.bunits {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 0;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 6px 18px rgba(16, 66, 64, 0.07);
+}
+
+.bunits__scroll {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.bunits__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.bunit__jump {
+  flex: 0 0 auto;
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 8px 11px;
+  color: var(--text-body);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bunit__jump:hover {
+  border-color: var(--accent);
+}
+
+.bunit__jump.is-on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-on-accent);
+}
+
+.bunits__all {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, HelpCircle, Search, Send } from "lucide-react"
+import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, ChevronDown, ChevronUp, HelpCircle, Search, Send } from "lucide-react"
 import type { BibleBook, BibleChapter, BibleUnit } from "@emanus/shared/bible"
 import { BIBLE_BOOKS, BIBLE_TRANSLATION, chapterIsOpen, findChapter } from "@emanus/shared/bible"
 import { navigate } from "../router"
@@ -7,9 +7,10 @@ import "../bible.css"
 import "../needs.css"
 
 /*
- * Biblia explicata. Textul (Cornilescu 1924, editia originala) sta intr-un
- * strat vizual separat de explicatie: cine vrea numai textul il poate citi
- * fara sa treaca prin comentariu.
+ * Biblia explicata. Textul sta intr-un strat vizual separat de explicatie:
+ * versetul si primul paragraf din explicatie sunt mereu vizibile; restul
+ * (paragrafele urmatoare, cuvintele, trimiterile, aplicatia) se extinde la
+ * cerere. Un navigator fix de pasaje te duce direct la orice unitate.
  *
  * Capitolele cu status "in_review" se deschid numai in dezvoltare, cu un semn
  * vizibil. Build-ul de productie arata exclusiv continutul aprobat.
@@ -233,7 +234,7 @@ export function Bible() {
 
 /* -------------------------------------------------------------- Capitol */
 
-function Unit({ unit }: { unit: BibleUnit }) {
+function Unit({ unit, open, onToggle }: { unit: BibleUnit; open: boolean; onToggle: () => void }) {
   const [saved, setSaved] = useState(false)
 
   useEffect(() => {
@@ -261,15 +262,33 @@ function Unit({ unit }: { unit: BibleUnit }) {
     navigate(`/intreaba?despre=${encodeURIComponent(unit.ref)}`)
   }
 
-  return <article className="bunit">
+  const paras = paragraphs(unit.teaching)
+  const bodyId = `bunit-body-${unit.id}`
+
+  return <article id={unit.id} className="bunit">
     <p className="bunit__ref">{unit.ref}</p>
     <h3 className="bunit__heading">{unit.heading}</h3>
 
     <blockquote className="bunit__text">{unit.text}</blockquote>
 
-    <div className="bunit__teaching">{paragraphs(unit.teaching).map((p, i) => <p key={i}>{p}</p>)}</div>
+    {paras.length > 0 && <div className="bunit__teaching">
+      <p>{paras[0]}</p>
+      <div id={bodyId} hidden={!open}>
+        {paras.slice(1).map((p, i) => <p key={i}>{p}</p>)}
+      </div>
+    </div>}
 
-    {unit.words && unit.words.length > 0 && <div className="bwords">
+    {paras.length > 1 && <button
+      type="button"
+      className={open ? "bunit__toggle is-open" : "bunit__toggle"}
+      aria-expanded={open}
+      aria-controls={bodyId}
+      onClick={onToggle}
+    >
+      {open ? <><ChevronUp size={15} aria-hidden /> Închide explicaţia</> : <><ChevronDown size={15} aria-hidden /> Citeşte explicaţia completă</>}
+    </button>}
+
+    {open && unit.words && unit.words.length > 0 && <div className="bwords">
       {unit.words.map((w) => <p key={w.transliteration} className="bword">
         <span className="bword__orig" lang="he">{w.original}</span>
         <span className="bword__tr">{w.transliteration}</span>
@@ -277,9 +296,9 @@ function Unit({ unit }: { unit: BibleUnit }) {
       </p>)}
     </div>}
 
-    {unit.crossRefs && unit.crossRefs.length > 0 && <p className="brefs">{unit.crossRefs.join(" · ")}</p>}
+    {open && unit.crossRefs && unit.crossRefs.length > 0 && <p className="brefs">{unit.crossRefs.join(" · ")}</p>}
 
-    {unit.forYourHeart && <div className="bheart">
+    {open && unit.forYourHeart && <div className="bheart">
       <p className="today__kicker">Pentru inima ta</p>
       <p>{unit.forYourHeart}</p>
     </div>}
@@ -300,9 +319,43 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
   const book = BIBLE_BOOKS.find((b) => b.id === bookId)
   const visible = found ? chapterIsVisible(found) : false
 
+  const [openUnits, setOpenUnits] = useState<Record<string, boolean>>({})
+  const [activeId, setActiveId] = useState<string | null>(null)
+
   useEffect(() => {
     if (found && visible) writeLast({ bookId, chapter, title: found.title })
+    setOpenUnits({})
+    setActiveId(found?.units[0]?.id ?? null)
   }, [bookId, chapter, found, visible])
+
+  useEffect(() => {
+    if (!found || !visible || found.units.length === 0) return
+    let raf = 0
+    const onScroll = () => {
+      if (raf) return
+      raf = requestAnimationFrame(() => {
+        raf = 0
+        let current = found.units[0].id
+        let nearest = Number.POSITIVE_INFINITY
+        for (const u of found.units) {
+          const el = document.getElementById(u.id)
+          if (!el) continue
+          const dist = Math.abs(el.getBoundingClientRect().top - 110)
+          if (dist < nearest) {
+            nearest = dist
+            current = u.id
+          }
+        }
+        setActiveId(current)
+      })
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    onScroll()
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (raf) cancelAnimationFrame(raf)
+    }
+  }, [found, visible])
 
   if (!found || !book || !visible) {
     return <section className="bible">
@@ -311,10 +364,31 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
     </section>
   }
 
+  const units = found.units
   const numbers = book.chapters.filter(chapterIsVisible).map((c) => c.number).sort((a, b) => a - b)
   const at = numbers.indexOf(chapter)
   const prev = at > 0 ? numbers[at - 1] : undefined
   const next = at >= 0 && at < numbers.length - 1 ? numbers[at + 1] : undefined
+
+  const allOpen = units.every((u) => openUnits[u.id] === true)
+
+  function toggleUnit(id: string): void {
+    setOpenUnits((prev) => ({ ...prev, [id]: !prev[id] }))
+  }
+
+  function toggleAll(): void {
+    if (allOpen) {
+      setOpenUnits({})
+    } else {
+      const next: Record<string, boolean> = {}
+      for (const u of units) next[u.id] = true
+      setOpenUnits(next)
+    }
+  }
+
+  function scrollToUnit(id: string): void {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
 
   return <section className="bible bible--chapter">
     <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
@@ -335,7 +409,22 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p>{found.historicalContext}</p>
     </details>
 
-    {found.units.map((u) => <Unit key={u.id} unit={u} />)}
+    <nav className="bunits" aria-label="Pasaje">
+      <div className="bunits__scroll">
+        {units.map((u) => <button
+          key={u.id}
+          type="button"
+          className={u.id === activeId ? "bunit__jump is-on" : "bunit__jump"}
+          aria-current={u.id === activeId ? "true" : undefined}
+          onClick={() => scrollToUnit(u.id)}
+        >{u.ref}</button>)}
+      </div>
+      <button type="button" className="ghost bunits__all" onClick={toggleAll}>
+        {allOpen ? <><ChevronUp size={15} aria-hidden /> Închide tot</> : <><ChevronDown size={15} aria-hidden /> Extinde tot</>}
+      </button>
+    </nav>
+
+    {units.map((u) => <Unit key={u.id} unit={u} open={openUnits[u.id] === true} onToggle={() => toggleUnit(u.id)} />)}
 
     <div className="bprayer">
       <p className="today__kicker">Rugăciune</p>
