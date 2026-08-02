@@ -5,7 +5,8 @@
 // ci de un drum — de aceea zilele merg de la iertarea primită spre cea dată.
 // Nicăieri în luna asta iertarea nu înseamnă întoarcerea într-un loc periculos.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_5 = "Iertarea"
@@ -30,7 +31,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Coloseni 3:13",
-    verseText: "Îngăduiți-vă unii pe alții și, dacă unul are pricină să se plângă de altul, iertați-vă unul pe altul.",
+    verseText: "Încredințați-vă unii pe alții și, dacă unul are pricină să se plângă de altul, iertați-vă unul pe altul. Cum v-a iertat Hristos, așa iertați-vă și voi.",
     meditation:
       "Pavel recunoaște că există „pricină să te plângi”. Nu ți se cere să pretinzi că nu s-a întâmplat nimic și nici că nu te-a durut. Iertarea biblică începe cu recunoașterea faptei, nu cu mușamalizarea ei.",
     question: "Ai spus vreodată „nu-i nimic” când, de fapt, era ceva?",
@@ -56,7 +57,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Matei 18:21-22",
-    verseText: "Doamne, de câte ori să iert pe fratele meu?... Isus i-a zis: Eu nu-ți zic până la șapte ori, ci până la șaptezeci de ori câte șapte.",
+    verseText: "Atunci, Petru s-a apropiat de El și I-a zis: „Doamne, de câte ori să iert pe fratele meu când va păcătui împotriva mea? Până la șapte ori?” Isus i-a zis: „Eu nu-ți zic până la șapte ori, ci până la șaptezeci de ori câte șapte.”",
     meditation:
       "Petru credea că e generos; rabinii vremii ziceau de trei ori. Isus nu ridică plafonul, îl desființează — cine numără tot n-a iertat. Uneori nu ierți de șaptezeci de ori pe cineva, ci de șaptezeci de ori același lucru, pentru că revine în minte.",
     question: "E ceva ce ai iertat deja, dar îți revine și trebuie iertat din nou?",
@@ -69,7 +70,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Matei 18:27",
-    verseText: "Stăpânul robului aceluia s-a făcut milă de el, l-a lăsat să plece și i-a iertat datoria.",
+    verseText: "Stăpânul robului aceluia, făcându-i-se milă de el, i-a dat drumul și i-a iertat datoria.",
     meditation:
       "Datoria era de zece mii de talanți — o sumă pe care un om n-o putea câștiga în mai multe vieți. Isus a ales intenționat o cifră absurdă, ca să nu-ți treacă prin cap că ai fi putut-o plăti. Iertarea nu înseamnă că datoria a dispărut, ci că a preluat-o altcineva.",
     question: "Cât crezi că ți s-a iertat ție?",
@@ -82,7 +83,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Matei 18:28",
-    verseText: "Robul acela, când a ieșit afară, a întâlnit pe unul din tovarășii lui de slujbă, care-i era dator o sută de lei.",
+    verseText: "Robul acela, când a ieșit afară, a întâlnit pe unul din tovarășii lui de slujbă, care-i era dator o sută de lei. A pus mâna pe el și-l strângea de gât, zicând: ‘Plătește-mi ce-mi ești dator.’",
     meditation:
       "O sută de lei nu e nimic, dar nici nu era zero — era o datorie reală. Ce ți s-a făcut ție chiar contează. Doar că, pus lângă ce ți s-a iertat, își schimbă proporția.",
     question: "Dacă pui rănirea ta lângă iertarea pe care ai primit-o, ce vezi?",
@@ -95,7 +96,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Luca 23:34",
-    verseText: "Isus zicea: „Tată, iartă-i, căci nu știu ce fac.”",
+    verseText: "Isus zicea: „Tată, iartă-i, căci nu știu ce fac!”",
     meditation:
       "A spus-o în timp ce se băteau cuiele, nu după ani de vindecare. Și n-a spus-o oamenilor, ci Tatălui — iertarea a început ca o rugăciune, nu ca o conversație. Uneori ăsta e singurul loc în care poți începe.",
     question: "Poți să-I ceri lui Dumnezeu să-l ierte, chiar dacă tu încă nu poți?",
@@ -108,7 +109,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Luca 6:27-28",
-    verseText: "Iubiți pe vrăjmașii voștri, faceți bine celor ce vă urăsc, binecuvântați pe cei ce vă blestemă, rugați-vă pentru cei ce se poartă rău cu voi.",
+    verseText: "Dar Eu vă spun vouă, care Mă ascultați: Iubiți pe vrăjmașii voștri, faceți bine celor ce vă urăsc, binecuvântați pe cei ce vă blestemă, rugați-vă pentru cei ce se poartă rău cu voi.",
     meditation:
       "Isus nu cere un sentiment, ci patru fapte: iubește, fă bine, binecuvântează, roagă-te. Sunt lucruri pe care le poți face și când inima încă nu e acolo. Adesea inima vine după fapte, nu înaintea lor.",
     question: "Care dintre cele patru ți-e cel mai la îndemână azi?",
@@ -121,9 +122,9 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Romani 12:18",
-    verseText: "Dacă este cu putință, întrucât atârnă de voi, trăiți în pace cu toți oamenii.",
+    verseText: "Dacă este cu putință, întru cât atârnă de voi, trăiți în pace cu toți oamenii.",
     meditation:
-      "Două limitări cinstite într-un singur verset: „dacă este cu putință” și „întrucât atârnă de voi”. Sunt împăcări care nu depind de tine, pentru că celălalt nu vrea. Nu ești responsabil pentru jumătatea lui de drum.",
+      "Două limitări cinstite într-un singur verset: „dacă este cu putință” și „întru cât atârnă de voi”. Sunt împăcări care nu depind de tine, pentru că celălalt nu vrea. Nu ești responsabil pentru jumătatea lui de drum.",
     question: "Cât din partea ta ai făcut, sincer?",
     prayer: "Doamne, ajută-mă să-mi fac partea și să las restul în mâna Ta. Amin.",
     step: "Scrie ce ar însemna, concret, „partea ta” într-un conflict de acum.",
@@ -134,11 +135,11 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Romani 12:19",
-    verseText: "Preaiubiților, nu vă răzbunați singuri, ci lăsați să se răzbune mânia lui Dumnezeu; căci este scris: „Răzbunarea este a Mea; Eu voi răsplăti.”",
+    verseText: "Preaiubiților, nu vă răzbunați singuri, ci lăsați să se răzbune mânia lui Dumnezeu, căci este scris: ‘Răzbunarea este a Mea; Eu voi răsplăti’, zice Domnul.",
     meditation:
       "Versetul nu spune că nedreptatea nu contează, ci că nu tu ești judecătorul. Iertarea nu înseamnă că fapta rămâne nepedepsită, ci că predai dosarul cuiva care judecă mai drept decât tine. E, în fond, o ușurare: nu mai trebuie să ții tu socoteala.",
     question: "Ce dosar ții deschis, ca să se facă dreptate cândva?",
-    prayer: "Doamne, Ți-l dau Ție. Judecă Tu, cum știi Tu. Amin.",
+    prayer: "Doamne, ți-l dau Ție. Judecă Tu, cum știi Tu. Amin.",
     step: "Spune azi cu voce tare: „nu eu sunt judecătorul lui”.",
   },
   {
@@ -147,7 +148,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Geneza 50:20",
-    verseText: "Voi, negreșit, v-ați gândit să-mi faceți rău, dar Dumnezeu a schimbat răul în bine.",
+    verseText: "Voi, negreșit, v-ați gândit să-mi faceți rău, dar Dumnezeu a schimbat răul în bine, ca să împlinească ceea ce se vede azi, și anume să scape viața unui popor în mare număr.",
     meditation:
       "Iosif nu spune că frații n-au greșit — zice limpede „gândit să-mi faceți rău”. Iertarea lui nu rescrie trecutul, ci vede o mână mai mare peste el. Au trecut însă douăzeci de ani până la propoziția asta.",
     question: "Ai răbdare cu tine într-un proces care poate dura ani?",
@@ -160,7 +161,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Geneza 45:5",
-    verseText: "Acum, nu vă întristați și nu fiți mâhniți că m-ați vândut ca să fiu adus aici.",
+    verseText: "Acum, nu vă întristați și nu fiți mâhniți că m-ați vândut ca să fiu adus aici, căci ca să vă scap viața m-a trimis Dumnezeu înaintea voastră.",
     meditation:
       "Când s-a descoperit fraților, Iosif a plâns atât de tare încât l-au auzit egiptenii. Iertarea nu e răceală și nici stăpânire de sine perfectă. De multe ori trece exact prin locul în care în sfârșit plângi.",
     question: "Ai plâns vreodată pentru ce ți s-a făcut, sau ai sărit direct la „trebuie să iert”?",
@@ -173,7 +174,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Fapte 7:60",
-    verseText: "Apoi a îngenuncheat și a strigat cu glas tare: „Doamne, nu le ține în seamă păcatul acesta!”",
+    verseText: "Apoi, a îngenuncheat și a strigat cu glas tare: „Doamne, nu le ține în seamă păcatul acesta!”",
     meditation:
       "Ștefan a învățat asta de la Isus și a spus-o în aceleași condiții. În mulțime stătea un tânăr pe nume Saul. Nu știm ce a făcut acea rugăciune în el, dar Ștefan n-a apucat să vadă răspunsul — și asta e valabil pentru multe iertări.",
     question: "Ai putea ierta ceva fără să vezi niciodată rezultatul?",
@@ -199,7 +200,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "1 Corinteni 13:5",
-    verseText: "Dragostea... nu se mânie, nu se gândește la rău.",
+    verseText: "Dragostea… nu se mânie, nu se gândește la rău.",
     meditation:
       "„Nu se gândește la rău” e, în original, un termen de contabilitate: nu ține registrul. Sunt case în care soții au un registru complet, cu date și citate exacte. Registrul ăsta nu apără pe nimeni, doar hrănește procesul.",
     question: "Ce ții în registrul tău și poți cita pe de rost?",
@@ -212,7 +213,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Efeseni 4:26-27",
-    verseText: "Mâniați-vă și nu păcătuiți. Să n-apună soarele peste mânia voastră și să nu dați prilej diavolului.",
+    verseText: "„Mâniați-vă și nu păcătuiți.” Să n-apună soarele peste mânia voastră și să nu dați prilej diavolului.",
     meditation:
       "Mânia nu e interzisă; îmbătrânirea ei este. O supărare lăsată peste noapte capătă argumente, iar peste o săptămână devine convingere. De aceea Pavel pune un termen: apusul soarelui.",
     question: "Cât timp ții, de obicei, o supărare?",
@@ -225,7 +226,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Evrei 12:15",
-    verseText: "Luați seama... ca nu cumva să dea vreo rădăcină de amărăciune lăstari și să vă aducă tulburare, și mulți să fie întinați de ea.",
+    verseText: "Luați seama bine ca nimeni să nu se abată de la harul lui Dumnezeu, pentru ca nu cumva să dea lăstari vreo rădăcină de amărăciune, să vă aducă tulburare și mulți să fie întinați de ea.",
     meditation:
       "Amărăciunea e descrisă ca o rădăcină: crește sub pământ și se vede târziu. Și nu rămâne la tine — „mulți să fie întinați”. Copiii învață să urască oameni pe care nu i-au cunoscut niciodată.",
     question: "Cine mai poartă, în afară de tine, greutatea amărăciunii tale?",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Marcu 11:25",
-    verseText: "Și, când stați în picioare de vă rugați, să iertați orice aveți împotriva cuiva.",
+    verseText: "Și, când stați în picioare de vă rugați, să iertați orice aveți împotriva cuiva, pentru ca și Tatăl vostru, care este în ceruri, să vă ierte greșelile voastre.",
     meditation:
       "Isus leagă iertarea de rugăciune, nu de întâlnirea cu omul acela. Poți ierta într-o cameră goală, fără ca el să afle vreodată. Prima mișcare se face între tine și Dumnezeu.",
     question: "Ce te-ar elibera azi, chiar dacă nu vorbești cu nimeni?",
@@ -251,7 +252,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Matei 5:23-24",
-    verseText: "Dacă îți aduci darul la altar și acolo îți aduci aminte că fratele tău are ceva împotriva ta, lasă-ți darul acolo înaintea altarului și du-te întâi de împacă-te cu fratele tău.",
+    verseText: "Așa că, dacă îți aduci darul la altar și acolo îți aduci aminte că fratele tău are ceva împotriva ta, lasă-ți darul acolo, înaintea altarului, și du-te întâi de împacă-te cu fratele tău.",
     meditation:
       "Aici nu e vorba de ce ți s-a făcut, ci de ce ai făcut tu. Isus întrerupe închinarea pentru o împăcare — e singurul loc din Evanghelii în care ți se spune să lași darul și să pleci. Cerul nu primește cântarea unui om care refuză să-și ceară iertare.",
     question: "Cine ar avea ceva împotriva ta, pe drept?",
@@ -316,7 +317,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Luca 15:22",
-    verseText: "Dar tatăl a zis robilor săi: „Aduceți repede haina cea mai bună și îmbrăcați-l cu ea; puneți-i un inel în deget și încălțăminte în picioare.”",
+    verseText: "Dar tatăl a zis robilor săi: ‘Aduceți repede haina cea mai bună și îmbrăcați-l cu ea; puneți-i un inel în deget și încălțăminte în picioare.’",
     meditation:
       "Fiul pregătise un discurs și o funcție mai mică: „fă-mă ca pe unul din argații tăi”. Tatăl nu l-a lăsat să termine. Iertarea deplină nu te retrogradează în familie — haina, inelul și încălțămintea sunt semne de fiu, nu de slugă tolerată.",
     question: "Trăiești ca un fiu iertat sau ca un argat tolerat?",
@@ -329,7 +330,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Ioan 21:17",
-    verseText: "A treia oară i-a zis: „Simone, fiul lui Iona, Mă iubești?”... Isus i-a zis: „Paște oile Mele!”",
+    verseText: "A treia oară i-a zis Isus: „Simone, fiul lui Iona, Mă iubești?” Petru s-a întristat că-i zisese a treia oară: „Mă iubești?” Și I-a răspuns: „Doamne, Tu toate le știi, știi că Te iubesc.” Isus i-a zis: „Paște oile Mele!”",
     meditation:
       "Petru se lepădase de trei ori lângă un foc; Isus îl întreabă de trei ori lângă alt foc. N-a ținut prelegeri despre trădare: a refăcut legătura și i-a dat înapoi lucrarea. Iertarea completă nu doar șterge, ci redă un rost.",
     question: "Ce ai încetat să mai faci pentru că te simți descalificat?",
@@ -342,7 +343,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Filimon 1:18",
-    verseText: "Și, dacă ți-a adus vreo vătămare sau îți este dator cu ceva, pune aceasta în socoteala mea.",
+    verseText: "Și dacă ți-a adus vreo vătămare sau îți este dator cu ceva, pune aceasta în socoteala mea.",
     meditation:
       "Pavel scrie pentru un rob fugar și se oferă să plătească el paguba. Așa arată iertarea când coboară din teorie: cineva absoarbe o pierdere reală. De fiecare dată când ierți, plătești tu ceva ce nu ți se cuvenea.",
     question: "Ce ai de pierdut, concret, dacă ierți?",
@@ -355,7 +356,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "2 Corinteni 2:7-8",
-    verseText: "Așa că acum e mai bine să-l iertați și să-l mângâiați, ca să nu fie doborât de prea multă întristare. De aceea, vă rog să vă arătați dragoste față de el.",
+    verseText: "Așa că acum este mai bine să-l iertați și să-l mângâiați, ca să nu fie doborât de prea multă mâhnire. De aceea, vă rog să vă arătați iarăși dragostea față de el.",
     meditation:
       "E vorba de un om disciplinat de biserică, care s-a pocăit — iar Pavel se teme că pedeapsa ținută prea mult îl va îngropa. Există o cruzime a celor drepți: păstrezi distanța mult după ce omul s-a îndreptat. Iertarea trebuie și arătată, nu doar declarată.",
     question: "Pe cine ții la distanță deși ai spus că l-ai iertat?",
@@ -368,7 +369,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Matei 5:44",
-    verseText: "Dar Eu vă spun: iubiți pe vrăjmașii voștri și rugați-vă pentru cei ce vă prigonesc.",
+    verseText: "Dar Eu vă spun: Iubiți pe vrăjmașii voștri, binecuvântați pe cei ce vă blestemă, faceți bine celor ce vă urăsc și rugați-vă pentru cei ce vă asupresc și vă prigonesc.",
     meditation:
       "E greu să urăști mult timp pe cineva pentru care te rogi cu adevărat. Rugăciunea îl scoate din categoria „dușman” și îl pune în categoria „om”. Nu-ți cere să-i aprobi faptele, ci să-i vrei mântuirea.",
     question: "Ce s-ar schimba în tine dacă te-ai ruga pentru el o lună?",
@@ -381,7 +382,7 @@ export const DEVOTIONAL_DAYS_LUNA_5: DevotionalDay[] = [
     theme: LUNA_5,
     axis: "relationships",
     verseRef: "Romani 12:21",
-    verseText: "Nu te lăsa biruit de rău, ci biruie răul prin bine.",
+    verseText: "Nu te lăsa biruit de rău, ci biruiește răul prin bine.",
     meditation:
       "Sunt două feluri de a pierde într-o rănire: să fii rănit și să devii ca cel care te-a rănit. Al doilea e mai grav. Binele făcut deliberat e singura armă care nu te transformă în dușmanul tău.",
     question: "În ce fel ai început să semeni cu omul care te-a rănit?",
