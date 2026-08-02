@@ -79,6 +79,26 @@ import { MATEI_25 } from "./matei25.js"
 import { MATEI_26 } from "./matei26.js"
 import { MATEI_27 } from "./matei27.js"
 import { MATEI_28 } from "./matei28.js"
+import { IOAN as IOAN_BASE } from "./ioan.js"
+import { IOAN_3 } from "./ioan3.js"
+import { IOAN_4 } from "./ioan4.js"
+import { IOAN_5 } from "./ioan5.js"
+import { IOAN_6 } from "./ioan6.js"
+import { IOAN_7 } from "./ioan7.js"
+import { IOAN_8 } from "./ioan8.js"
+import { IOAN_9 } from "./ioan9.js"
+import { IOAN_10 } from "./ioan10.js"
+import { IOAN_11 } from "./ioan11.js"
+import { IOAN_12 } from "./ioan12.js"
+import { IOAN_13 } from "./ioan13.js"
+import { IOAN_14 } from "./ioan14.js"
+import { IOAN_15 } from "./ioan15.js"
+import { IOAN_16 } from "./ioan16.js"
+import { IOAN_17 } from "./ioan17.js"
+import { IOAN_18 } from "./ioan18.js"
+import { IOAN_19 } from "./ioan19.js"
+import { IOAN_20 } from "./ioan20.js"
+import { IOAN_21 } from "./ioan21.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -172,8 +192,35 @@ export const MATEI: BibleBook = {
   ],
 }
 
+/** Ioan, scris acum pana la capitolul 21. */
+export const IOAN: BibleBook = {
+  ...IOAN_BASE,
+  chapters: [
+    ...IOAN_BASE.chapters,
+    IOAN_3,
+    IOAN_4,
+    IOAN_5,
+    IOAN_6,
+    IOAN_7,
+    IOAN_8,
+    IOAN_9,
+    IOAN_10,
+    IOAN_11,
+    IOAN_12,
+    IOAN_13,
+    IOAN_14,
+    IOAN_15,
+    IOAN_16,
+    IOAN_17,
+    IOAN_18,
+    IOAN_19,
+    IOAN_20,
+    IOAN_21,
+  ],
+}
+
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, IOAN]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)
