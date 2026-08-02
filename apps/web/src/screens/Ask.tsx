@@ -1,64 +1,63 @@
 import { useEffect, useState } from "react"
-import { ArrowLeft, HelpCircle, Send } from "lucide-react"
+import { ArrowLeft, HelpCircle, Save } from "lucide-react"
 import { navigate } from "../router"
 import "../ask.css"
 
 /*
- * Intreaba. Locul intrebarilor grele, cele pe care omul nu le pune cu glas tare
- * in biserica. Astazi ecranul nu da raspuns pe loc: primeste intrebarea, o
- * tine langa el si spune limpede ca o va citi un om. Nu ne prefacem ca avem un
- * raspuns automat cand nu il avem.
+ * Întreabă. În main nu există încă un inbox pastoral conectat. Până când acel
+ * flux este activ, întrebările se păstrează numai pe dispozitivul utilizatorului.
+ * Nu spunem că a primit-o sau că o citește un om dacă nu a fost trimisă nicăieri.
  */
 
-const KEY = "emanus.ask.trimise"
+const KEY = "emanus.ask.saved"
 
-type Trimisa = { text: string; despre?: string; cand: string }
+type SavedQuestion = { text: string; despre?: string; cand: string }
 
-function citeste(): Trimisa[] {
+function citeste(): SavedQuestion[] {
   try {
     const raw = window.localStorage.getItem(KEY)
     if (!raw) return []
     const parsed = JSON.parse(raw) as unknown
-    return Array.isArray(parsed) ? (parsed as Trimisa[]) : []
+    return Array.isArray(parsed) ? (parsed as SavedQuestion[]) : []
   } catch {
     return []
   }
 }
 
-function scrie(lista: Trimisa[]): void {
+function scrie(lista: SavedQuestion[]): void {
   try {
     window.localStorage.setItem(KEY, JSON.stringify(lista))
   } catch {
-    /* stocarea poate fi oprita; nu e o problema */
+    /* stocarea poate fi oprită; nu blocăm ecranul */
   }
 }
 
 const GRELE: string[] = [
-  "De ce a ingaduit Dumnezeu sa mi se intample asta?",
-  "Ma rog si nu simt nimic. Inseamna ca nu ma aude?",
-  "Se poate ierta si ce am facut eu?",
-  "Trebuie sa aleg intre stiinta si Geneza?",
-  "De ce sunt in Vechiul Testament lucruri atat de aspre?",
-  "Ce fac cu un om care nu mi-a cerut iertare niciodata?",
-  "Daca m-am rugat pentru cineva si a murit?",
+  "De ce a îngăduit Dumnezeu să mi se întâmple asta?",
+  "Mă rog și nu simt nimic. Înseamnă că nu mă aude?",
+  "Se poate ierta și ce am făcut eu?",
+  "Trebuie să aleg între știință și Geneza?",
+  "De ce sunt în Vechiul Testament lucruri atât de aspre?",
+  "Ce fac cu un om care nu mi-a cerut iertare niciodată?",
+  "Dacă m-am rugat pentru cineva și a murit?",
 ]
 
 export function Ask({ despre }: { despre?: string }) {
   const [text, setText] = useState("")
-  const [trimise, setTrimise] = useState<Trimisa[]>([])
+  const [salvate, setSalvate] = useState<SavedQuestion[]>([])
   const [tocmai, setTocmai] = useState(false)
 
   useEffect(() => {
-    setTrimise(citeste())
+    setSalvate(citeste())
   }, [])
 
-  function trimite(intrebare: string): void {
+  function salveaza(intrebare: string): void {
     const curat = intrebare.trim()
     if (curat.length === 0) return
-    const noua: Trimisa = { text: curat, despre, cand: new Date().toISOString() }
+    const noua: SavedQuestion = { text: curat, despre, cand: new Date().toISOString() }
     const lista = [noua, ...citeste()].slice(0, 50)
     scrie(lista)
-    setTrimise(lista)
+    setSalvate(lista)
     setText("")
     setTocmai(true)
   }
@@ -72,7 +71,8 @@ export function Ask({ despre }: { despre?: string }) {
       <HelpCircle size={22} strokeWidth={1.7} aria-hidden />
       <h1>Întreabă</h1>
     </header>
-    <p className="ask__intro">Aici se pun întrebările grele, cele pe care nu le pui cu glas tare. Nimeni nu te judecă pentru ele. Îndoiala pusă în cuvinte nu este necredinţă; este începutul unui răspuns.</p>
+    <p className="ask__intro">Aici poți pune în cuvinte întrebările grele, cele pe care nu le spui cu glas tare. Îndoiala formulată cinstit nu este necredință.</p>
+    <p className="muted">Trimiterea către echipa Emanus nu este încă activă. Deocamdată întrebarea se păstrează numai pe dispozitivul tău, ca să nu o pierzi.</p>
 
     {despre && <p className="ask__despre">Întrebi despre: <strong>{despre}</strong></p>}
 
@@ -81,26 +81,26 @@ export function Ask({ despre }: { despre?: string }) {
       <textarea
         value={text}
         rows={4}
-        placeholder="Scrie cum îţi vine. Nu trebuie să sune frumos."
+        placeholder="Scrie cum îți vine. Nu trebuie să sune frumos."
         onChange={(e) => setText(e.currentTarget.value)}
       />
     </label>
-    <button type="button" className="tile ask__send" onClick={() => trimite(text)} disabled={text.trim().length === 0}>
-      <Send size={16} aria-hidden /> Trimite întrebarea
+    <button type="button" className="tile ask__send" onClick={() => salveaza(text)} disabled={text.trim().length === 0}>
+      <Save size={16} aria-hidden /> Păstrează întrebarea
     </button>
 
-    {tocmai && <p className="ask__gata">Am primit-o. Nu-ţi răspunde o maşină pe loc: o citeşte un om. Până atunci, întrebarea rămâne aici, la tine.</p>}
+    {tocmai && <p className="ask__gata">Întrebarea a fost păstrată pe dispozitivul tău. Nu a fost trimisă încă unei persoane.</p>}
 
     <section className="ask__grele">
-      <h2>Întrebări pe care le pun mulţi</h2>
+      <h2>Întrebări pe care le pun mulți</h2>
       <div className="ask__lista">
         {GRELE.map((g) => <button key={g} type="button" className="ask__grea" onClick={() => setText(g)}>{g}</button>)}
       </div>
     </section>
 
-    {trimise.length > 0 && <section className="ask__mele">
-      <h2>Ce ai întrebat</h2>
-      {trimise.map((t) => <p key={t.cand} className="ask__mea">
+    {salvate.length > 0 && <section className="ask__mele">
+      <h2>Întrebările păstrate</h2>
+      {salvate.map((t) => <p key={t.cand} className="ask__mea">
         <span>{t.text}</span>
         {t.despre && <span className="muted"> · {t.despre}</span>}
       </p>)}
