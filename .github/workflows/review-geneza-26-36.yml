@@ -1,0 +1,57 @@
+name: Aplica revizia Geneza 26-36
+
+on:
+  push:
+    branches: [review/geneza-26-36]
+
+permissions:
+  contents: write
+
+jobs:
+  revise-and-verify:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/geneza-26-36
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Aplica revizia
+        run: python3 scripts/review-geneza-26-36.py
+
+      - name: Instaleaza dependentele
+        run: pnpm install --frozen-lockfile
+
+      - name: Verifica ghilimelele
+        run: pnpm check:quotes
+
+      - name: Verifica typo-urile
+        run: pnpm check:typos
+
+      - name: Verifica siguranta continutului
+        run: pnpm check:content
+
+      - name: Verifica registrul Genezei
+        run: pnpm check:bible-publication
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publica revizia verificata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "docs(biblia): revizuieste Geneza 26-36"
+          git push origin HEAD:review/geneza-26-36
