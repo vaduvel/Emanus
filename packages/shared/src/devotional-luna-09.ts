@@ -5,7 +5,8 @@
 // fără martori. Zilele nu cer performanță, ci răbdare și statornicie în lucruri
 // mici, repetate.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_9 = "Ce crește pe nevăzut"
@@ -17,7 +18,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Marcu 4:26-27",
-    verseText: "Cu Împărăția lui Dumnezeu este ca atunci când aruncă un om sămânță în pământ; fie că doarme noaptea, fie că se scoală ziua, sămânța încolțește și crește fără să știe el cum.",
+    verseText: "Cu Împărăția lui Dumnezeu este ca atunci când aruncă un om sămânța în pământ; fie că doarme noaptea, fie că stă treaz ziua, sămânța încolțește și crește fără să știe el cum.",
     meditation:
       "Omul din pildă doarme și totuși lucrarea merge înainte. Creșterea nu depinde de cât de atent o supraveghezi. E o veste bună pentru cine s-a săturat să se autoevalueze zilnic.",
     question: "Îți verifici creșterea ca pe o sămânță pe care o dezgropi în fiecare zi?",
@@ -30,7 +31,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Marcu 4:31-32",
-    verseText: "Se aseamănă cu un grăunte de muștar care, când este semănat în pământ, este cea mai mică dintre toate semințele de pe pământ; dar, după ce a fost semănat, crește.",
+    verseText: "Se aseamănă cu un grăunte de muștar, care, când este semănat în pământ, este cea mai mică dintre toate semințele de pe pământ, dar, după ce a fost semănat, crește.",
     meditation:
       "Isus alege dinadins cel mai mic exemplu pe care îl aveau la îndemână. Distanța dintre sămânță și copac nu se face într-un salt, ci într-un timp. Ce ai tu acum poate fi mic și real în același timp.",
     question: "Disprețuiești începutul tău pentru că e mic?",
@@ -43,7 +44,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Ioan 12:24",
-    verseText: "Dacă grăuntele de grâu care a căzut pe pământ nu moare, rămâne singur; dar, dacă moare, aduce multă roadă.",
+    verseText: "Dacă grăuntele de grâu care a căzut pe pământ nu moare, rămâne singur, dar dacă moare, aduce multă roadă.",
     meditation:
       "Prima mișcare a creșterii nu e în sus, ci în jos: sămânța se îngroapă și se desface. Isus spunea asta despre El Însuși, cu câteva zile înainte de cruce. Ce simți tu acum ca pierdere poate fi începutul rodului.",
     question: "Ce a trebuit să moară în tine ca să crească altceva?",
@@ -69,7 +70,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Galateni 6:7",
-    verseText: "Nu vă înșelați: Dumnezeu nu Se lasă să fie batjocorit. Ce seamănă omul, aceea va și secera.",
+    verseText: "Nu vă înșelați: „Dumnezeu nu Se lasă să fie batjocorit.” Ce seamănă omul, aceea va și secera.",
     meditation:
       "Legea semănatului e nemiloasă și cinstită: nu culegi altceva decât ai pus în pământ. Se aplică și în rău, și în bine. Multe din lucrurile pe care le trăiești azi au fost semănate acum câțiva ani, de tine.",
     question: "Ce semeni acum, fără să-ți dai seama?",
@@ -82,7 +83,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Iacov 5:7",
-    verseText: "Iată că plugarul așteaptă roada scumpă a pământului și o așteaptă cu răbdare, până primește ploaie timpurie și târzie.",
+    verseText: "Iată că plugarul așteaptă roada scumpă a pământului, și o așteaptă cu răbdare până primește ploaie timpurie și târzie.",
     meditation:
       "Plugarul nu e pasiv și nici agitat. Știe ce depinde de el și ce nu — nu poate face ploaie. Răbdarea nu e resemnare, ci meseria omului care lucrează cu vremea lui Dumnezeu.",
     question: "Ce parte e a ta și ce parte e a Lui, în lucrul care te presează?",
@@ -108,7 +109,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Ieremia 17:8",
-    verseText: "Căci el este ca un pom sădit lângă ape care-și întinde rădăcinile spre râu; nu se teme de căldură, când vine, și frunzișul lui rămâne verde.",
+    verseText: "Căci el este ca un pom sădit lângă ape, care-și întinde rădăcinile spre râu; nu se teme de căldură, când vine, și frunzișul lui rămâne verde.",
     meditation:
       "Ce se vede la un pom în secetă e ce a făcut sub pământ în anii buni. Rădăcinile nu se fac în timpul crizei. De aceea obiceiurile mici din zilele liniștite sunt investiții pentru zilele grele.",
     question: "Ce rădăcină îți faci acum, pentru seceta de mâine?",
@@ -121,7 +122,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Coloseni 2:7",
-    verseText: "Fiți înrădăcinați și zidiți în El, întăriți prin credință, după învățăturile care v-au fost date, și sporind în ea cu mulțumiri către Dumnezeu.",
+    verseText: "Fiind înrădăcinați și zidiți în El, întăriți prin credință, după învățăturile care v-au fost date, și sporind în ea cu mulțumiri către Dumnezeu.",
     meditation:
       "Pavel amestecă două imagini: pomul și casa. Una crește singură, cealaltă se zidește cărămidă cu cărămidă. Creșterea duhovnicească le are pe amândouă — lucrare a Lui și alegeri ale tale.",
     question: "Ce cărămidă ai de pus tu azi?",
@@ -134,7 +135,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Efeseni 3:17",
-    verseText: "Așa încât Hristos să locuiască în inimile voastre prin credință; pentru ca, având rădăcina și temelia pusă în dragoste...",
+    verseText: "Așa încât Hristos să locuiască în inimile voastre prin credință; pentru ca, având rădăcina și temelia puse în dragoste...",
     meditation:
       "Rădăcina nu e în reguli, nici în frică, ci în dragoste. Un om care crește din teamă face lucruri corecte cu o inimă uscată. Verifică din când în când nu doar ce faci, ci din ce rădăcină.",
     question: "Din ce rădăcină Îi slujești: dragoste sau teamă?",
@@ -147,7 +148,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Ioan 15:2",
-    verseText: "Pe orice mlădiță care aduce roadă, o curățește, ca să aducă și mai multă roadă.",
+    verseText: "Pe orice mlădiță care aduce rod, o curățește, ca să aducă și mai mult rod.",
     meditation:
       "Tăierea nu e pedeapsă; e semn că mlădița rodește. Vierul taie exact ramurile bune, ca puterea să nu se risipească. Unele pierderi din viața ta sunt lucrare de grădină, nu abandon.",
     question: "Ce ți s-a luat, deși nu era rău?",
@@ -160,7 +161,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Ioan 15:4",
-    verseText: "Rămâneți în Mine și Eu voi rămâne în voi. După cum mlădița nu poate aduce roadă de la sine, dacă nu rămâne în viță, tot așa nici voi nu puteți aduce roadă dacă nu rămâneți în Mine.",
+    verseText: "Rămâneți în Mine, și Eu voi rămâne în voi. După cum mlădița nu poate aduce rod de la sine, dacă nu rămâne în viță, tot așa nici voi nu puteți aduce rod dacă nu rămâneți în Mine.",
     meditation:
       "Mlădița nu se străduiește să facă struguri; rămâne legată și strugurii vin. Cuvântul cheie al capitolului nu e „rodește”, ci „rămâneți”. Toată lupta ta se poate muta din producție în legătură.",
     question: "Te străduiești să rodești sau te străduiești să rămâi?",
@@ -173,7 +174,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Galateni 5:22-23",
-    verseText: "Roada Duhului, dimpotrivă, este dragostea, bucuria, pacea, îndelunga răbdare, bunătatea, facerea de bine, credincioșia, blândețea, înfrânarea.",
+    verseText: "Roada Duhului, dimpotrivă, este: dragostea, bucuria, pacea, îndelunga răbdare, bunătatea, facerea de bine, credincioșia, blândețea, înfrânarea poftelor.",
     meditation:
       "E „roada”, la singular, nu „roadele”: nu îți alegi două și le lași pe restul. Și e roada Duhului, nu realizarea ta — tu doar rămâi în viță. Privește lista ca pe un portret al lui Isus, nu ca pe o fișă de evaluare.",
     question: "Care dintre cele nouă lipsește cel mai tare din viața ta?",
@@ -199,7 +200,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Luca 13:8-9",
-    verseText: "Doamne, mai lasă-l și anul acesta; am să-l sap de jur împrejur și am să-i pun gunoi la rădăcină. Poate că de acum înainte va face roadă.",
+    verseText: "Doamne, mai lasă-l și anul acesta; am să-l sap de jur împrejur și am să-i pun gunoi la rădăcină. Poate că de acum înainte va face rod.",
     meditation:
       "E o pildă despre îngăduință: cineva mijlocește pentru un pom neroditor și cere încă un an. Dumnezeu dă timp, dar timpul dat vine cu săpat și îngrășat. Harul nu înseamnă că nu se întâmplă nimic anul ăsta.",
     question: "Ce an în plus ți-a dat Dumnezeu și cum îl folosești?",
@@ -225,9 +226,9 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "2 Corinteni 4:16",
-    verseText: "De aceea, noi nu cădem de oboseală. Ci, chiar dacă omul nostru de afară se trece, totuși omul nostru dinlăuntru se înnoiește din zi în zi.",
+    verseText: "De aceea, noi nu cădem de oboseală. Ci chiar dacă omul nostru de afară se trece, totuși omul nostru dinăuntru se înnoiește din zi în zi.",
     meditation:
-      "Sunt două mișcări simultane: una în jos, văzută, alta în sus, nevăzută. Trupul îmbătrânește și toată lumea vede; omul dinlăuntru se înnoiește și nu vede aproape nimeni. „Din zi în zi” înseamnă că se întâmplă și azi.",
+      "Sunt două mișcări simultane: una în jos, văzută, alta în sus, nevăzută. Trupul îmbătrânește și toată lumea vede; omul dinăuntru se înnoiește și nu vede aproape nimeni. „Din zi în zi” înseamnă că se întâmplă și azi.",
     question: "Care dintre cele două mișcări te preocupă mai mult?",
     prayer: "Doamne, înnoiește-mă pe dinăuntru, chiar dacă nu se vede. Amin.",
     step: "Fă azi un lucru pentru omul dinăuntru și unul pentru trupul tău.",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "2 Corinteni 3:18",
-    verseText: "Noi toți privim cu fața descoperită, ca într-o oglindă, slava Domnului și suntem schimbați în același chip al Lui, din slavă în slavă.",
+    verseText: "Noi toți privim cu fața descoperită, ca într-o oglindă, slava Domnului și suntem schimbați în același chip al Lui, din slavă în slavă, prin Duhul Domnului.",
     meditation:
       "Schimbarea vine din privire, nu din încordare. Devii ca Acela la care te uiți mult — lucru care se vede și în rău, la ce consumi zilnic. „Din slavă în slavă” e o mișcare lentă, cu trepte.",
     question: "La ce te uiți cel mai mult într-o zi?",
@@ -251,7 +252,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Romani 5:3-4",
-    verseText: "Ba mai mult, ne bucurăm chiar și în necazurile noastre; căci știm că necazul aduce răbdare, răbdarea aduce biruință în încercare, iar biruința aceasta aduce nădejdea.",
+    verseText: "Ba mai mult, ne bucurăm chiar și în necazurile noastre, căci știm că necazul aduce răbdare, răbdarea aduce biruință în încercare, iar biruința aceasta aduce nădejdea.",
     meditation:
       "E un lanț, nu un salt: necaz, răbdare, caracter încercat, nădejde. Nimeni nu ajunge la ultima verigă sărind peste primele. Nu înseamnă că necazul e bun, ci că Dumnezeu știe să-l folosească.",
     question: "În ce verigă ești acum?",
@@ -264,7 +265,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Iacov 1:3-4",
-    verseText: "Căci știți că încercarea credinței voastre lucrează răbdare. Dar răbdarea trebuie să-și facă desăvârșit lucrarea.",
+    verseText: "Încercarea credinței voastre lucrează răbdare. Dar răbdarea trebuie să-și facă desăvârșit lucrarea, pentru ca să fiți desăvârșiți, întregi și să nu duceți lipsă de nimic.",
     meditation:
       "Iacov cere ceva greu: să lași răbdarea să-și termine treaba. Noi vrem să ieșim din încercare cu o zi mai devreme și pierdem exact partea finală. Cine grăbește procesul rămâne cu jumătate din lecție.",
     question: "Ce încerci să grăbești în viața ta?",
@@ -303,7 +304,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Eclesiastul 11:6",
-    verseText: "Dimineața, seamănă-ți sămânța, și până seara nu lăsa mâna să ți se odihnească; fiindcă nu știi ce va izbândi.",
+    verseText: "Dimineața seamănă-ți sămânța și până seara nu lăsa mâna să ți se odihnească, fiindcă nu știi ce va izbuti.",
     meditation:
       "Fiindcă nu știi care sămânță prinde, seamănă mai multe. E un antidot pentru perfecționismul care așteaptă condiții ideale. Fă binele care îți stă în mână, chiar dacă nu-i vezi rostul.",
     question: "Ce bine amâni pentru că nu știi dacă folosește la ceva?",
@@ -316,7 +317,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Isaia 61:3",
-    verseText: "Ca să le dau o cunună împărătească în loc de cenușă... ca să fie numiți terebinți ai neprihănirii, un sad al Domnului, ca să slujească spre slava Lui.",
+    verseText: "Să le dau o cunună împărătească, în loc de cenușă... ca să fie numiți terebinți ai neprihănirii, un sad al Domnului, ca să slujească spre slava Lui.",
     meditation:
       "Dumnezeu nu doar consolează; transformă cenușa în copaci. Terebintul e un arbore care trăiește sute de ani și crește încet. Din cele mai arse locuri ale vieții tale poate ieși ceva care să țină umbră altora.",
     question: "Care e cenușa din care ar putea Dumnezeu să facă ceva?",
@@ -342,7 +343,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Psalmul 92:14",
-    verseText: "Ei aduc roade și la bătrânețe, sunt plini de suc și verzi.",
+    verseText: "Ei aduc roade și la bătrânețe; sunt plini de suc și verzi.",
     meditation:
       "E o promisiune pentru partea a doua a vieții, când lumea spune că nu mai ai ce da. În Împărăție, anii nu scad valoarea unui om, ci o adaugă. Bătrânii care rodesc sunt cea mai rară și cea mai necesară bogăție a unei biserici.",
     question: "Ce bătrân roditor cunoști și când i-ai mulțumit ultima dată?",
@@ -355,9 +356,9 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Osea 10:12",
-    verseText: "Semănați potrivit cu neprihănirea și veți secera potrivit cu îndurarea. Desfundați-vă un ogor nou!",
+    verseText: "Semănați potrivit cu neprihănirea, și veți secera potrivit cu îndurarea. Desțeleniți-vă un ogor nou!",
     meditation:
-      "Ogorul nedesfundat e pământ bun peste care s-a făcut crustă. Nu-i lipsește sămânța, ci spărtura. Uneori nu ai nevoie de o nouă învățătură, ci să spargi o crustă veche de obișnuință.",
+      "Ogorul nedesțelenit e pământ bun peste care s-a făcut crustă. Nu-i lipsește sămânța, ci spărtura. Uneori nu ai nevoie de o nouă învățătură, ci să spargi o crustă veche de obișnuință.",
     question: "Unde s-a făcut crustă în viața ta duhovnicească?",
     prayer: "Doamne, sparge crusta din inima mea. Amin.",
     step: "Schimbă azi ceva în rutina ta cu Dumnezeu: altă oră, alt loc, altă carte.",
@@ -368,7 +369,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Matei 13:8",
-    verseText: "O altă parte a căzut în pământ bun și a dat roadă: un grăunte a dat o sută, altul șaizeci și altul treizeci.",
+    verseText: "O altă parte a căzut în pământ bun și a dat rod: un grăunte a dat o sută, altul, șaizeci și altul, treizeci.",
     meditation:
       "Chiar și în pământ bun, recolta diferă. Treizeci nu e eșec și o sută nu e merit. Comparația cu alții e cel mai bun mod de a strica o roadă adevărată.",
     question: "Cu cine te compari și ce îți face comparația asta?",
@@ -381,7 +382,7 @@ export const DEVOTIONAL_DAYS_LUNA_9: DevotionalDay[] = [
     theme: LUNA_9,
     axis: "character",
     verseRef: "Matei 13:22",
-    verseText: "Sămânța căzută între spini este cel ce aude Cuvântul, dar îngrijorările veacului acestuia și înșelăciunea bogățiilor îneacă acest Cuvânt și îl fac astfel neroditor.",
+    verseText: "Sămânța căzută între spini este cel ce aude Cuvântul, dar îngrijorările veacului acestuia și înșelăciunea bogățiilor îneacă acest Cuvânt și ajunge neroditor.",
     meditation:
       "Spinii nu neagă sămânța; o sufocă. Nimeni nu decide să-și înece viața duhovnicească — pur și simplu lasă să crească alături lucruri care cer tot spațiul. Grădinăritul înseamnă și smulgere, nu doar semănat.",
     question: "Ce spin crește acum lângă lucrurile bune din viața ta?",
