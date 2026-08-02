@@ -1,16 +1,13 @@
-// Model de continut pentru „Biblia explicata". Sursa de adevar: docs/21-biblia-explicata.md
+// Model de conținut pentru „Biblia explicată".
 //
-// Regula editoriala de baza: textul biblic ramane neatins, integral, in campul
-// text. Explicatia Emanus sta separat, in campuri proprii, ca sa nu poata fi
-// niciodata confundata cu Scriptura.
+// Regula editorială: textul biblic stă separat de explicația Emanus. Starea
+// `in_review` nu înseamnă „ascuns de proprietar"; înseamnă că Daniel îl poate
+// parcurge în aplicație și încă nu l-a aprobat pentru lansarea publică.
 
 export type Testament = "vt" | "nt"
-
 export type BibleStatus = "draft" | "in_review" | "published"
-
 export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
 
-/** Un cuvant din limba originala, explicat pe intelesul cititorului. */
 export interface WordStudy {
   original: string
   transliteration: string
@@ -18,19 +15,16 @@ export interface WordStudy {
   meaning: string
 }
 
-/** O unitate de sens: un verset sau un grup mic de versete, explicat. */
 export interface BibleUnit {
   id: string
-  /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
   ref: string
   heading: string
-  /** Textul biblic, nemodificat. RCCV, ortografie moderna. */
+  /** Textul biblic RCCV; nu se modifică în tăcere de editorii Emanus. */
   text: string
-  /** Invatatura Emanus. Markdown. */
+  /** Explicația Emanus, distinctă de Scriptură. */
   teaching: string
   words?: WordStudy[]
   crossRefs?: string[]
-  /** Aplicatia pastorala, adresata direct cititorului. */
   forYourHeart?: string
 }
 
@@ -56,18 +50,34 @@ export interface BibleBook {
   chapters: BibleChapter[]
 }
 
-/** Traducerea afisata. RCCV este in domeniul public. */
-export const BIBLE_TRANSLATION = "Cornilescu, editia corectata (RCCV)"
+/**
+ * Ediția afișată. Folosirea RCCV este supusă clarificării și permisiunii
+ * titularului drepturilor; etichetele „public domain" din API-uri terțe nu sunt
+ * tratate de Emanus ca dovadă suficientă pentru România.
+ */
+export const BIBLE_TRANSLATION = "Cornilescu, ediția corectată (RCCV)"
 
-/** Un capitol se deschide cititorului doar dupa revizie umana. */
-export function chapterIsOpen(chapter: BibleChapter): boolean {
+/** Disponibil publicului după aprobarea finală a proprietarului. */
+export function chapterIsPublic(chapter: BibleChapter): boolean {
   return chapter.status === "published"
 }
 
+/** Disponibil proprietarului pentru parcurgere și revizie în aplicație. */
+export function chapterIsReviewable(chapter: BibleChapter): boolean {
+  return chapter.status === "published" || chapter.status === "in_review"
+}
+
+/** Alias păstrat pentru compatibilitate: „open" înseamnă public. */
+export const chapterIsOpen = chapterIsPublic
+
 export function openChapters(book: BibleBook): BibleChapter[] {
-  return book.chapters.filter(chapterIsOpen)
+  return book.chapters.filter(chapterIsPublic)
+}
+
+export function reviewableChapters(book: BibleBook): BibleChapter[] {
+  return book.chapters.filter(chapterIsReviewable)
 }
 
 export function countUnits(book: BibleBook): number {
-  return book.chapters.reduce((sum, c) => sum + c.units.length, 0)
+  return book.chapters.reduce((sum, chapter) => sum + chapter.units.length, 0)
 }
