@@ -37,6 +37,8 @@ export interface JourneyState {
   lessonsDone: number
   /** Câte lecții de doctrină generală a terminat, în ordine. */
   doctrineDone: number
+  /** Lecții opționale terminate în Bibliotecă. Nu consumă ritmul drumului. */
+  libraryDone?: string[]
   /** YYYY-MM-DD */
   lastLessonDate: string | null
   /** Invitația la prima rugăciune se face O SINGURĂ DATĂ, apoi nu mai insistăm. */
@@ -52,6 +54,7 @@ const EMPTY: JourneyState = {
   pathId: null,
   lessonsDone: 0,
   doctrineDone: 0,
+  libraryDone: [],
   lastLessonDate: null,
   prayerInviteSeen: false,
   journal: [],
@@ -99,7 +102,12 @@ function save(s: JourneyState): JourneyState {
 }
 
 function isEmpty(s: JourneyState): boolean {
-  return s.pathId === null && s.journal.length === 0 && s.prayers.length === 0
+  return (
+    s.pathId === null &&
+    s.journal.length === 0 &&
+    s.prayers.length === 0 &&
+    (s.libraryDone ?? []).length === 0
+  )
 }
 
 /**
@@ -172,11 +180,18 @@ export function doctrineAvailable(): Lesson | undefined {
   return nextDoctrineLesson(s.lessonsDone, path.lessons.length, s.doctrineDone)
 }
 
+function journalAfterLesson(s: JourneyState, lessonId: string, journalText: string): JournalEntry[] {
+  const text = journalText.trim()
+  if (!text) return s.journal
+  return [
+    ...s.journal.filter((j) => j.lessonId !== lessonId),
+    { lessonId, text, date: today() },
+  ]
+}
+
 export function completeLesson(lessonId: string, journalText: string): JourneyState {
   const s = load()
-  const journal = journalText.trim()
-    ? [...s.journal.filter((j) => j.lessonId !== lessonId), { lessonId, text: journalText.trim(), date: today() }]
-    : s.journal
+  const journal = journalAfterLesson(s, lessonId, journalText)
 
   // Doctrina făcută ca supliment nu consumă ziua și nu avansează parcursul personal.
   // Excepție: pe drumul "De la zero", aceleași lecții sunt chiar parcursul.
@@ -190,6 +205,24 @@ export function completeLesson(lessonId: string, journalText: string): JourneySt
     lastLessonDate: today(),
     journal,
   })
+}
+
+/**
+ * Lecțiile din Bibliotecă au progres propriu. Nu modifică `lessonsDone`,
+ * `lastLessonDate` sau ritmul de două zile al drumului personal.
+ */
+export function completeLibraryLesson(lessonId: string, journalText: string): JourneyState {
+  const s = load()
+  const done = s.libraryDone ?? []
+  return save({
+    ...s,
+    libraryDone: done.includes(lessonId) ? done : [...done, lessonId],
+    journal: journalAfterLesson(s, lessonId, journalText),
+  })
+}
+
+export function libraryCompletedLessonIds(): string[] {
+  return [...(load().libraryDone ?? [])]
 }
 
 function indexOfLesson(lessonId: string): number {
@@ -227,6 +260,7 @@ export function resetJourney(): void {
     prayerInviteSeen: s.prayerInviteSeen,
     prayers: s.prayers,
     journal: s.journal,
+    libraryDone: s.libraryDone ?? [],
   })
 }
 
