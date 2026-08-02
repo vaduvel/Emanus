@@ -1,8 +1,8 @@
 // Model de conținut pentru „Biblia explicată".
 //
-// Regula editorială: textul biblic stă separat de explicația Emanus. Starea
-// `in_review` nu înseamnă „ascuns de proprietar"; înseamnă că Daniel îl poate
-// parcurge în aplicație și încă nu l-a aprobat pentru lansarea publică.
+// Regula editorială: textul biblic stă separat de explicația redactată pe baza
+// studiilor Zac Poonen. Starea `in_review` înseamnă că Daniel poate parcurge
+// capitolul în aplicație, dar încă nu l-a aprobat pentru lansarea publică.
 
 export type Testament = "vt" | "nt"
 export type BibleStatus = "draft" | "in_review" | "published"
@@ -19,9 +19,9 @@ export interface BibleUnit {
   id: string
   ref: string
   heading: string
-  /** Textul biblic RCCV; nu se modifică în tăcere de editorii Emanus. */
+  /** Textul biblic RCCV; nu se modifică în tăcere de editori. */
   text: string
-  /** Explicația Emanus, distinctă de Scriptură. */
+  /** Explicația redactată în română din sursele Poonen, distinctă de Scriptură. */
   teaching: string
   words?: WordStudy[]
   crossRefs?: string[]
