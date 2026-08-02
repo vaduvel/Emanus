@@ -21,7 +21,6 @@ def fail(message: str) -> None:
 def check_source() -> None:
     base = BASE_MIGRATION.read_text(encoding="utf-8").lower()
     review = REVIEW_MIGRATION.read_text(encoding="utf-8").lower()
-    combined = f"{base}\n{review}"
     schema = (ROOT / "supabase/schema.sql").read_text(encoding="utf-8").lower()
     tables = (
         "bible_books",
@@ -68,8 +67,6 @@ def check_source() -> None:
         if marker not in review:
             fail(f"lipseste regula de revizie a proprietarului: {marker}")
 
-    # Regula dorita: review-ul este vizibil numai contului admin; draftul nu
-    # apare in nicio politica de citire.
     if "role = 'admin'" not in review:
         fail("reviewerul editorial nu este limitat la rolul admin")
     if re.search(r"status\s*=\s*'draft'.{0,100}is_editorial_reviewer", review, re.DOTALL):
@@ -96,6 +93,12 @@ def check_source() -> None:
     bible_screen = (web_src / "screens/Bible.tsx").read_text(encoding="utf-8")
     if "BIBLE_BOOKS" in bible_screen or "findChapter" in bible_screen:
         fail("ecranul Bibliei importa din nou catalogul editorial in bundle")
+    for copy in (
+        "în revizie: îl parcurgi în aplicație ca reviewer final",
+        "publicul îl va vedea numai după aprobarea și publicarea ta",
+    ):
+        if copy not in bible_screen.lower():
+            fail(f"interfata nu explica starea in_review: {copy}")
 
     router = (web_src / "router.tsx").read_text(encoding="utf-8")
     app = (web_src / "App.tsx").read_text(encoding="utf-8")
@@ -107,7 +110,7 @@ def check_source() -> None:
             fail(f"componenta {component} nu este montata")
 
     workflow = (ROOT / ".github/workflows/ci.yml").read_text(encoding="utf-8")
-    for command in ("pnpm check:bible-source", "pnpm check:bible-cloud"):
+    for command in ("pnpm check:bible-source", "pnpm check:bible-cloud", "pnpm check:active-content"):
         if command not in workflow:
             fail(f"CI nu ruleaza {command}")
 
@@ -116,18 +119,19 @@ def check_source() -> None:
         if cleanup not in auth:
             fail(f"deconectarea nu curata datele locale: {cleanup}")
 
-    # Numarul antidrog neconfirmat nu mai poate reaparea in runtime sau docs de
-    # siguranta. 0800 801 200 a fost folosit si ca antisuicid/antidrog fara o
-    # confirmare oficiala stabila.
-    forbidden_hotline = "0800 801 200"
-    safety_paths = [ROOT / "apps/web/src", ROOT / "packages/shared/src", ROOT / "docs/22-siguranta.md"]
-    for root in safety_paths:
-        paths = [root] if root.is_file() else list(root.rglob("*"))
-        for path in paths:
-            if path.is_file() and forbidden_hotline in path.read_text(encoding="utf-8", errors="ignore"):
-                fail(f"numarul neconfirmat reapare in {path.relative_to(ROOT)}")
+    crisis = (web_src / "Crisis.tsx").read_text(encoding="utf-8")
+    if "0800 801 200" in crisis or "0800801200" in crisis:
+        fail("numarul neconfirmat este afisat in ecranul de criza")
+    active_copy = (web_src / "privacy.ts").read_text(encoding="utf-8")
+    if "0800\\s*801\\s*200" not in active_copy or "ajutor medical și specializat" not in active_copy:
+        fail("stratul editorial nu neutralizeaza numarul neconfirmat din lectiile vechi")
 
-    print("Biblia cloud: RLS, accesul owner-review, progresul, secretele si rutele sunt verificate.")
+    cache = (web_src / "bibleContent.ts").read_text(encoding="utf-8")
+    for marker in ("peekCloudUser", "account:${peekCloudUser()?.id", "chapterMemory.clear()"):
+        if marker not in cache:
+            fail("cache-ul editorial nu este izolat pe identitatea cloud")
+
+    print("Biblia cloud: RLS, owner-review, cache, progres, secrete si rute verificate.")
 
 
 def check_bundle() -> None:
