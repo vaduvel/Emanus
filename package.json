@@ -13,6 +13,7 @@
     "check:quotes": "python3 scripts/fix-quotes.py --check",
     "check:typos": "python3 scripts/fix-known-typos.py --check",
     "check:content": "python3 scripts/audit-content.py",
+    "check:active-content": "python3 scripts/check-active-content.py",
     "check:bible-publication": "python3 scripts/publica-geneza.py --check && python3 scripts/publica-matei.py --check",
     "check:matei": "python3 scripts/check-matei.py",
     "check:bible-source": "pnpm build:shared && pnpm --filter @emanus/web check:bible-source",
