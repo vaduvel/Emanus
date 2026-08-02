@@ -127,7 +127,7 @@ function Needs() {
       </div>
       {loading
         ? <BibleLoading rows={2} />
-        : <HitList hits={hits} empty="Nu avem încă un loc publicat pentru această nevoie. Conținutul aflat în revizie nu este folosit înainte de aprobare." />}
+        : <HitList hits={hits} empty="Nu am găsit încă un loc vizibil pentru contul acesta. Contul de reviewer vede și conținutul în revizie; publicul vede numai capitolele aprobate." />}
     </div>}
   </section>
 }
@@ -140,7 +140,7 @@ function ChapterLink({ book, chapter }: { book: BibleCatalogBook; chapter: Bible
       <span className="bchap__title">{chapter.title}</span>
       <span className="bchap__sum">{chapter.summary}</span>
     </span>
-    {review && <span className="bchap__flag" title="Așteaptă revizia umană">în revizie</span>}
+    {review && <span className="bchap__flag" title="Vizibil contului de reviewer înainte de publicarea finală">în revizie</span>}
   </button>
 }
 
@@ -149,7 +149,7 @@ function Book({ book }: { book: BibleCatalogBook }) {
     <header className="bbook__head">
       <h2>{book.name}</h2>
       <p className="muted">{book.blurb}</p>
-      <p className="bbook__count">{book.chapters.length} capitole disponibile</p>
+      <p className="bbook__count">{book.chapters.length} capitole vizibile pentru acest cont</p>
     </header>
     <div className="bbook__list">
       {book.chapters.map((chapter) => <ChapterLink key={chapter.id} book={book} chapter={chapter} />)}
@@ -234,7 +234,7 @@ export function Bible() {
     {query.trim().length >= 2
       ? <section className="bsearch-results" aria-live="polite">
           <h2>Rezultate</h2>
-          {searching ? <BibleLoading rows={3} /> : <HitList hits={hits} empty="Nu am găsit acest cuvânt în capitolele publicate." />}
+          {searching ? <BibleLoading rows={3} /> : <HitList hits={hits} empty="Nu am găsit acest cuvânt în capitolele vizibile pentru contul tău." />}
         </section>
       : books === null
         ? <BibleLoading rows={4} />
@@ -242,10 +242,10 @@ export function Bible() {
           ? books.map((book) => <Book key={book.id} book={book} />)
           : <div className="bible__empty">
               <BookOpen size={24} strokeWidth={1.6} aria-hidden />
-              <p>Niciun capitol nu este încă publicat. Capitolele în revizie apar doar după aprobarea umană.</p>
+              <p>Niciun capitol nu este vizibil pentru acest cont. Pentru revizia internă, autentifică-te cu contul căruia i-a fost acordat rolul de admin.</p>
             </div>}
 
-    <p className="muted bible__note">Traducere: {translation}. Explicațiile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Traducere: {translation}. Explicațiile sunt Emanus și rămân distincte de textul Scripturii. Folosirea ediției trebuie autorizată înainte de lansarea publică.</p>
   </section>
 }
 
@@ -424,7 +424,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
       <div className="bible__empty">
         <BookOpen size={24} strokeWidth={1.6} aria-hidden />
-        <p>Capitolul acesta nu este publicat sau nu este disponibil offline încă.</p>
+        <p>Capitolul nu este disponibil pentru contul acesta sau nu a fost încă păstrat offline.</p>
         <button type="button" onClick={() => navigate("/biblia")}>Înapoi la cărți</button>
       </div>
     </section>
@@ -441,7 +441,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p className="today__kicker">{book.name} {content.number}</p>
       <h1>{content.title}</h1>
       <p className="bchead__sum">{content.summary}</p>
-      {content.status !== "published" && <p className="bchead__flag">Versiune editorială în revizie. Nu apare în aplicația publică.</p>}
+      {content.status !== "published" && <p className="bchead__flag">În revizie: îl parcurgi în aplicație ca reviewer final. Publicul îl va vedea numai după aprobarea și publicarea ta.</p>}
     </header>
 
     <details className="bctx">
