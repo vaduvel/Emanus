@@ -1,35 +1,58 @@
 import { useState } from "react"
-import { ArrowLeft, BookOpen, ChevronRight, Lock } from "lucide-react"
+import { ArrowLeft, BookOpen, Check, ChevronRight, Lock } from "lucide-react"
 import type { LibraryCourse, LibraryShelf } from "@emanus/shared/library"
-import { courseIsOpen, visibleShelves } from "@emanus/shared/library"
+import { courseIsOpen, nextCourseLesson, visibleShelves } from "@emanus/shared/library"
+import { libraryCompletedLessonIds } from "../journey"
 import { navigate } from "../router"
 import "../library.css"
 
-function Course({ course }: { course: LibraryCourse }) {
+function Course({ course, completed }: { course: LibraryCourse; completed: string[] }) {
   const open = courseIsOpen(course)
-  const first = course.lessonIds[0]
-  return <button type="button" className={open ? "libcourse" : "libcourse libcourse--soon"} disabled={!open} onClick={() => { if (open && first) navigate(`/lesson/${first}`) }}>
-    <span className="libcourse__main"><span className="libcourse__title">{course.title}</span><span className="libcourse__for">{course.forWhom}</span>{!open && <span className="libcourse__soon">Se scrie</span>}</span>
+  const next = nextCourseLesson(course, completed)
+  const finished = open && next === null
+  const target = next ?? course.lessonIds[course.lessonIds.length - 1]
+  const doneCount = course.lessonIds.filter((id) => completed.includes(id)).length
+
+  return <button
+    type="button"
+    className={open ? "libcourse" : "libcourse libcourse--soon"}
+    disabled={!open}
+    onClick={() => { if (open && target) navigate(`/lesson/${target}`) }}
+  >
+    <span className="libcourse__main">
+      <span className="libcourse__title">{course.title}</span>
+      <span className="libcourse__for">{course.forWhom}</span>
+      {!open && <span className="libcourse__soon">Se scrie</span>}
+      {open && !finished && doneCount > 0 && <span className="libcourse__soon">Continuă · {doneCount}/{course.lessonIds.length}</span>}
+      {finished && <span className="libcourse__soon"><Check size={13} aria-hidden /> Terminat</span>}
+    </span>
     {open && <ChevronRight size={18} strokeWidth={1.8} aria-hidden />}
   </button>
 }
 
-function Shelf({ shelf }: { shelf: LibraryShelf }) {
+function Shelf({ shelf, completed }: { shelf: LibraryShelf; completed: string[] }) {
   const [open, setOpen] = useState(false)
   const ready = shelf.courses.filter(courseIsOpen).length
   return <section className="libshelf">
-    <button type="button" className="libshelf__head" onClick={() => setOpen(!open)} aria-expanded={open}><span><span className="libshelf__title">{shelf.title}</span><span className="libshelf__blurb">{shelf.blurb}</span></span><ChevronRight size={20} strokeWidth={1.8} aria-hidden className={open ? "libshelf__chev libshelf__chev--open" : "libshelf__chev"} /></button>
-    {open && <div className="libshelf__body">{shelf.courses.map((c) => <Course key={c.id} course={c} />)}{ready === 0 && <p className="muted libshelf__none">Raftul acesta este scris pe hârtie, dar încă nu în aplicație. Nu-l punem pe jumătate.</p>}</div>}
+    <button type="button" className="libshelf__head" onClick={() => setOpen(!open)} aria-expanded={open}>
+      <span><span className="libshelf__title">{shelf.title}</span><span className="libshelf__blurb">{shelf.blurb}</span></span>
+      <ChevronRight size={20} strokeWidth={1.8} aria-hidden className={open ? "libshelf__chev libshelf__chev--open" : "libshelf__chev"} />
+    </button>
+    {open && <div className="libshelf__body">
+      {shelf.courses.map((c) => <Course key={c.id} course={c} completed={completed} />)}
+      {ready === 0 && <p className="muted libshelf__none">Raftul acesta este scris pe hârtie, dar încă nu în aplicație. Nu-l punem pe jumătate.</p>}
+    </div>}
   </section>
 }
 
 export function Library() {
   const shelves = visibleShelves()
+  const completed = libraryCompletedLessonIds()
   return <section className="library">
     <button type="button" className="ghost library__back" onClick={() => navigate("/")}><ArrowLeft size={16} aria-hidden /> Azi</button>
     <header className="library__head"><BookOpen size={22} strokeWidth={1.7} aria-hidden /><h1>Biblioteca</h1></header>
     <p className="library__intro">Drumul tău merge înainte fără asta. Aici intri doar când vrei să înveți și altceva.</p>
-    {shelves.map((s) => <Shelf key={s.id} shelf={s} />)}
+    {shelves.map((s) => <Shelf key={s.id} shelf={s} completed={completed} />)}
     <div className="tile library__gated"><p className="today__kicker"><Lock size={15} aria-hidden /> De la creatori</p><p className="muted">Cursuri scrise de oameni care duc mai departe ce au primit. Se deschide când există cine să citească fiecare lecție înainte să ajungă la tine.</p></div>
   </section>
 }
