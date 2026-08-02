@@ -460,11 +460,12 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
     </section>
   }
 
+  const units = content.units
   const chapterNumbers = book.chapters.map((item) => item.number).sort((left, right) => left - right)
   const position = chapterNumbers.indexOf(chapter)
   const previous = position > 0 ? chapterNumbers[position - 1] : undefined
   const next = position >= 0 && position < chapterNumbers.length - 1 ? chapterNumbers[position + 1] : undefined
-  const allOpen = content.units.length > 0 && content.units.every((unit) => openUnits[unit.id] === true)
+  const allOpen = units.length > 0 && units.every((unit) => openUnits[unit.id] === true)
 
   function toggleUnit(id: string): void {
     setOpenUnits((current) => ({ ...current, [id]: !current[id] }))
@@ -475,7 +476,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       setOpenUnits({})
       return
     }
-    setOpenUnits(Object.fromEntries(content.units.map((unit) => [unit.id, true])))
+    setOpenUnits(Object.fromEntries(units.map((unit) => [unit.id, true])))
   }
 
   return <section className="bible bible--chapter">
@@ -504,7 +505,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       </button>
     </nav>
 
-    {content.units.map((unit) => <Unit
+    {units.map((unit) => <Unit
       key={unit.id}
       unit={unit}
       book={book}
