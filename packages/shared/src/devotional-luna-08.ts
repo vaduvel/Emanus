@@ -5,7 +5,8 @@
 // așteptare, cu textele care spun exact ce simte el — pentru că Biblia are și
 // „până când?”, nu doar „Amin”.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924 (domeniu
+// public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_8 = "Când Dumnezeu tace"
@@ -30,7 +31,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Psalmul 22:1-2",
-    verseText: "Dumnezeule! Dumnezeule! Pentru ce m-ai părăsit și pentru ce Te depărtezi fără să-mi ajuți? Strig ziua, și nu-mi răspunzi.",
+    verseText: "Dumnezeule! Dumnezeule! Pentru ce m-ai părăsit și pentru ce Te depărtezi fără să-mi ajuți și fără s-asculți plângerile mele? Strig ziua, Dumnezeule, și nu-mi răspunzi; strig și noaptea, și tot n-am odihnă.",
     meditation:
       "Psalmul ăsta a fost rugăciunea lui Isus pe cruce. Înseamnă că sentimentul de părăsire poate fi trăit de un om care nu e părăsit cu adevărat. Simțirea nu e un raport exact despre unde e Dumnezeu.",
     question: "Ce concluzii ai tras despre Dumnezeu doar din ce ai simțit?",
@@ -43,7 +44,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Iov 23:8-9",
-    verseText: "Dar, dacă mă duc la răsărit, nu este acolo; dacă mă duc la apus, nu-L găsesc.",
+    verseText: "Dar, dacă mă duc la răsărit, nu este acolo; dacă mă duc la apus, nu-L găsesc; dacă are treabă la miazănoapte, nu-L pot vedea; dacă Se ascunde la miazăzi, nu-L pot descoperi.",
     meditation:
       "Iov nu-L nega pe Dumnezeu; Îl căuta și nu-L găsea. E o stare pe care mulți creștini o trăiesc și despre care nu îndrăznesc să vorbească în biserică. Faptul că Îl cauți încă e, în sine, un semn de credință.",
     question: "Ai crezut că ești singurul care trece prin asta?",
@@ -69,7 +70,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Habacuc 1:2",
-    verseText: "Până când voi striga către Tine, Doamne, fără să asculți?",
+    verseText: "Până când voi striga către Tine, Doamne, fără s-asculți? Până când mă voi tângui Ție, fără să dai ajutor?",
     meditation:
       "Cartea unui profet începe cu o plângere împotriva tăcerii lui Dumnezeu. Habacuc nu-și cere scuze pentru întrebare și nu primește mustrare. Dumnezeu suportă întrebările oamenilor mai bine decât suportăm noi.",
     question: "Te temi că Dumnezeu se supără dacă Îi reproșezi ceva?",
@@ -82,7 +83,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Habacuc 2:3",
-    verseText: "Căci este o prorocie a cărei vreme este hotărâtă... dacă zăbovește, așteapt-o, căci va veni și se va împlini negreșit.",
+    verseText: "Căci este o prorocie a cărei vreme este hotărâtă, se apropie de împlinire și nu va minți; dacă zăbovește, așteapt-o, căci va veni și se va împlini negreșit.",
     meditation:
       "Răspunsul lui Dumnezeu la „până când?” n-a fost o dată exactă, ci un cuvânt: așteaptă. Întârzierea nu înseamnă anulare. Înseamnă că vremea e hotărâtă de Altcineva.",
     question: "Confunzi întârzierea cu refuzul?",
@@ -95,7 +96,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Habacuc 3:17-18",
-    verseText: "Căci, chiar dacă smochinul nu va înflori... eu tot mă voi bucura în Domnul, mă voi bucura în Dumnezeul mântuirii mele!",
+    verseText: "Căci, chiar dacă smochinul nu va înflori, vița nu va da niciun rod, rodul măslinului va lipsi și câmpiile nu vor da hrană, oile vor pieri din staule și nu vor mai fi boi în grajduri, eu tot mă voi bucura în Domnul, mă voi bucura în Dumnezeul mântuirii mele!",
     meditation:
       "E ultimul cuvânt al cărții și nu s-a schimbat nimic în circumstanțe: smochinul tot nu înflorea. S-a schimbat locul în care își pusese bucuria. Asta e credința matură — nu negația, ci mutarea temeliei.",
     question: "Pe ce stă bucuria ta acum: pe circumstanțe sau pe El?",
@@ -121,7 +122,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Plângerile lui Ieremia 3:22-23",
-    verseText: "Bunătățile Domnului nu s-au sfârșit, îndurările Lui nu sunt la capăt, ci se înnoiesc în fiecare dimineață.",
+    verseText: "Bunătățile Domnului nu s-au sfârșit, îndurările Lui nu sunt la capăt, ci se înnoiesc în fiecare dimineață. Și credincioșia Ta este atât de mare!",
     meditation:
       "Sunt la doar câteva rânduri după versetul de ieri, în aceeași carte și în același om. Așa arată credința reală: plângerea și nădejdea stau alături, uneori în aceeași zi. Nu trebuie să alegi doar una.",
     question: "Poți ține împreună durerea și încrederea?",
@@ -147,7 +148,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Isaia 55:8-9",
-    verseText: "Căci gândurile Mele nu sunt gândurile voastre și căile voastre nu sunt căile Mele, zice Domnul.",
+    verseText: "„Căci gândurile Mele nu sunt gândurile voastre și căile voastre nu sunt căile Mele”, zice Domnul.",
     meditation:
       "Versetul ăsta e folosit adesea ca să închidă gura celui îndurerat. Dar el nu spune că Dumnezeu e capricios, ci că gândește mai sus — iar contextul vorbește despre iertare, nu despre distanță. Un Dumnezeu pe care L-ai putea înțelege complet ar fi de mărimea minții tale.",
     question: "Ai nevoie de un Dumnezeu pe care să-L înțelegi sau de unul în care să te încrezi?",
@@ -160,7 +161,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Deuteronom 29:29",
-    verseText: "Lucrurile ascunse sunt ale Domnului Dumnezeului nostru, iar lucrurile descoperite sunt ale noastre și ale copiilor noștri, pe vecie.",
+    verseText: "Lucrurile ascunse sunt ale Domnului Dumnezeului nostru, iar lucrurile descoperite sunt ale noastre și ale copiilor noștri, pe vecie, ca să împlinim toate cuvintele legii acesteia.",
     meditation:
       "Există două categorii și pacea se găsește când nu le amesteci. Multă frământare vine din încercarea de a locui în prima categorie. Ai îndeajuns de lucru cu ce ți-a fost descoperit.",
     question: "Ce încerci să afli, deși nu ți-a fost dat să știi?",
@@ -173,7 +174,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Ioan 11:6",
-    verseText: "Deci, când a auzit că Lazăr este bolnav, a mai rămas două zile în locul în care era.",
+    verseText: "Deci, când a auzit că Lazăr este bolnav, a mai zăbovit două zile în locul în care era.",
     meditation:
       "Versetul dinainte spune că Isus îi iubea. Deci întârzierea Lui n-a fost lipsă de dragoste — textul le pune intenționat una lângă alta. Cea mai grea lecție a lunii ăsteia e că iubirea Lui și întârzierea Lui pot sta împreună.",
     question: "Ai crezut că, dacă întârzie, înseamnă că nu-I pasă?",
@@ -225,7 +226,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Marcu 15:34",
-    verseText: "Și la ceasul al nouălea, Isus a strigat cu glas tare: „Eloi, Eloi, lama sabactani”, care tălmăcit înseamnă: „Dumnezeul Meu, Dumnezeul Meu, pentru ce M-ai părăsit?”",
+    verseText: "Și în ceasul al nouălea, Isus a strigat cu glas tare: „Eloi, Eloi, Lama Sabactani?”, care, tălmăcit, înseamnă: „Dumnezeul Meu, Dumnezeul Meu, pentru ce M-ai părăsit?”",
     meditation:
       "A fost o tăcere reală, nu închipuită, și El a suportat-o în locul tău. De aceea, orice ar însemna tăcerea pe care o trăiești tu, nu înseamnă respingere. Cel care a fost respins în locul tău a fost El.",
     question: "Ce schimbă asta în felul în care îți citești tăcerea?",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Luca 23:46",
-    verseText: "Isus a strigat cu glas tare: „Tată, în mâinile Tale Îmi încredințez duhul!”",
+    verseText: "Isus a strigat cu glas tare: „Tată, în mâinile Tale Îmi încredințez duhul!” Și când a zis aceste vorbe, Și-a dat duhul.",
     meditation:
       "După strigătul de părăsire vine predarea. Îi spune iar „Tată”, deși cerul tăcuse ore în șir. E cel mai curat model de încredere: te lași în mâinile Cuiva care nu ți-a răspuns încă.",
     question: "Ce ai putea lăsa azi în mâinile Lui, fără să ai un răspuns?",
@@ -264,7 +265,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Psalmul 30:5",
-    verseText: "Seara vine plânsul, iar dimineața, veselia.",
+    verseText: "Căci mânia Lui ține numai o clipă, dar îndurarea Lui ține toată viața: seara vine plânsul, iar dimineața, veselia.",
     meditation:
       "Psalmul nu spune cât ține noaptea. Spune doar că dimineața există. Pentru un om în așteptare, asta nu e puțin: e diferența dintre o noapte și o veșnicie.",
     question: "Ai început să crezi că noaptea ta nu se mai termină?",
@@ -316,9 +317,9 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Geneza 15:5-6",
-    verseText: "Și, după ce l-a dus afară, i-a zis: „Uită-te spre cer și numără stelele, dacă poți să le numeri.” Și i-a zis: „Așa va fi sămânța ta.” Avram a crezut pe Domnul.",
+    verseText: "Și după ce l-a dus afară, i-a zis: „Uită-te spre cer și numără stelele, dacă poți să le numeri.” Și i-a zis: „Așa va fi sămânța ta.” Avram a crezut pe Domnul, și Domnul i-a socotit lucrul acesta ca neprihănire.",
     meditation:
-      "Între promisiune și Þmplinire au trecut vreo douăzeci și cinci de ani. Dumnezeu i-a dat un cer plin de stele și nimic altceva. Sunt perioade în care tot ce ai e un cuvânt primit demult.",
+      "Între promisiune și împlinire au trecut vreo douăzeci și cinci de ani. Dumnezeu i-a dat un cer plin de stele și nimic altceva. Sunt perioade în care tot ce ai e un cuvânt primit demult.",
     question: "Ce cuvânt ți-a dat Dumnezeu și încă nu s-a împlinit?",
     prayer: "Doamne, mă țin de ce mi-ai spus, chiar dacă a trecut mult. Amin.",
     step: "Ieși azi afară seara și uită-te câteva minute la cer.",
@@ -342,7 +343,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Evrei 11:13",
-    verseText: "În credință au murit toți aceștia, fără să fi căpătat lucrurile făgăduite, ci doar le-au văzut și le-au urat de bine de departe.",
+    verseText: "În credință au murit toți aceștia, fără să fi căpătat lucrurile făgăduite, ci doar le-au văzut și le-au urat de bine de departe, mărturisind că sunt străini și călători pe pământ.",
     meditation:
       "E un verset cinstit și greu: unii oameni credincioși nu au primit în viața asta ce li se promisese. Biblia nu ascunde asta ca să ne țină motivați. Și totuși îi numește oameni de credință, nu oameni înșelați.",
     question: "Ai putea rămâne credincios chiar dacă nu primești în viața asta?",
@@ -355,7 +356,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "1 Împărați 19:12",
-    verseText: "Și după foc a venit un susur blând și subțire.",
+    verseText: "Și după cutremurul de pământ, a venit un foc. Domnul nu era în focul acela. Și după foc, a venit un susur blând și subțire.",
     meditation:
       "Dumnezeu nu era în vânt, nici în cutremur, nici în foc — lucruri pe care nu aveai cum să le ratezi. A vorbit într-o șoaptă. Poate nu tace; poate vorbește mai încet decât zăngănitul din jurul tău.",
     question: "Câtă liniște ai într-o zi obișnuită?",
@@ -381,7 +382,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "2 Corinteni 5:7",
-    verseText: "Pentru că umblăm prin credință, nu prin vedere.",
+    verseText: "pentru că umblăm prin credință, nu prin vedere.",
     meditation:
       "Cuvântul important e „umblăm”: se merge, nu se stă pe loc până se face lumină. Candela de la Psalmul 119:105 luminează un pas, nu tot drumul. În așteptare, ascultarea înseamnă pur și simplu următorul pas.",
     question: "Care e următorul pas pe care îl știi, chiar dacă restul e întuneric?",
@@ -394,7 +395,7 @@ export const DEVOTIONAL_DAYS_LUNA_8: DevotionalDay[] = [
     theme: LUNA_8,
     axis: "living_faith",
     verseRef: "Ioan 20:29",
-    verseText: "Ferice de cei ce n-au văzut și au crezut.",
+    verseText: "„Tomo”, i-a zis Isus, „pentru că M-ai văzut, ai crezut. Ferice de cei ce n-au văzut, și au crezut.”",
     meditation:
       "Isus i-a spus asta lui Toma după ce i-a arătat rănile — deci nu e o mustrare, ci o binecuvântare pentru cei ca noi. Se încheie luna cea mai grea a anului și nu ți s-a promis niciun răspuns până azi. Ai rămas, și asta e credință. De luna viitoare vorbim despre ce crește pe nevăzut — exact în pământul ăsta tăcut.",
     question: "Ce ai învățat în treizeci de zile de așteptare?",
