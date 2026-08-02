@@ -1,214 +1,152 @@
-# 22 — Siguranta, safeguarding si ce masuram
+# 22 — Siguranță, safeguarding și limitele Emanus
 
-Status: politica activa. Orice lectie, ecran sau functie noua se verifica impotriva acestui document inainte de a fi scrisa in cod.
+**Status:** politică activă. Orice lecție, ecran sau funcție nouă se verifică împotriva acestui document.
 
----
+## 1. Propoziția care stă la vedere
 
-## 0. Propozitia care sta la vedere
+**Emanus nu înlocuiește medicul, psihologul, poliția sau 112.**
 
-**"Emanus nu inlocuieste medicul, psihologul, poliția sau 112."**
+Aplicația însoțește, explică Scriptura și oferă pași de reflecție. Nu tratează, nu diagnostichează și nu investighează situații de abuz.
 
-Unde apare, fara sa fie ascunsa in setari:
+## 2. Ce nu facem niciodată
 
-1. Pe ecranul de intrare (`Doors`), in nota de jos, alaturi de "Nu iti cerem bani, nu iti cerem date si nu iti dam note."
-2. In bara de ajutor (`.helpbar`), prezenta pe toate ecranele, care duce la ecranul de criza.
-3. La primul pas al oricarei lectii care atinge abuz, violenta, dependenta, depresie, post sau autovatamare.
+- Nu diagnosticăm omul prin cele șapte camere. Ele sunt uși editoriale, nu profil psihologic.
+- Nu spunem că anxietatea, depresia, insomnia, boala sau epuizarea dovedesc automat lipsă de credință ori un păcat anume.
+- Nu promitem vindecare, minune, însănătoșire sau un rezultat garantat.
+- Nu cerem victimei să contacteze, să confrunte sau să se întoarcă la persoana care i-a făcut rău.
+- Nu confundăm iertarea cu împăcarea, încrederea, retragerea plângerii sau renunțarea la limite.
+- Nu folosim un număr de ajutor până când nu este confirmat dintr-o sursă oficială.
+- Nu punem explicația Emanus pe același plan cu textul Scripturii.
+- Nu afișăm ca adevăr sigur o interpretare, o etimologie, o afirmație medicală sau istorică fără măsura potrivită.
 
-Nu o formulam ca disclaimer juridic. O formulam ca grija: omul trebuie sa inteleaga ca aplicatia il insoteste, nu il trateaza.
+## 3. Avertismentul separat înaintea lecțiilor grele
 
----
+Lecțiile despre abuz, violență, agresiune sexuală, dependență, autovătămare, depresie profundă și alte răni sensibile primesc, înaintea primului pas, un ecran separat:
 
-## 1. Ce nu facem niciodata
+> Ce urmează atinge [subiectul]. Poți opri oricând și poți reveni. Dacă ești în pericol sau te gândești să îți faci rău, cere ajutor acum.
 
-- **Nu diagnosticam.** Cele sapte camere sunt tipare spirituale dominante folosite pentru orientare initiala. Nu sunt un diagnostic si nu se comunica niciodata omului ca eticheta.
-- **Nu punem vina pe om.** Nicio lectie nu spune "boala ta e ca nu crezi X". Anxietatea, tristetea, epuizarea, insomnia pot avea cauze medicale: tiroida, trauma, lipsa de somn, medicatie, boala. Cand un simptom poate fi medical, trimitem la medic in acelasi pas in care il numim.
-- **Nu facem interogatoriu si nu construim profil psihologic.** Onboardingul nu are nicio intrebare despre om. Singura informatie pastrata este usa aleasa.
-- **Nu cerem bani pentru nimic.** Donatiile sunt singura sursa de venit si nu deblocheaza continut.
-- **Nu inlocuim comunitatea reala.** Aplicatia spune explicit, in lectiile de final de drum, ca omul are nevoie de oameni.
-- **Nu promitem vindecare, minune, insanatosire sau rezultat.** Promitem insotire.
-- **Nu cerem omului sa contacteze pe cineva care i-a facut rau.**
+Acțiuni:
 
----
+- **Continuă**
+- **Am nevoie de ajutor acum**
 
-## 2. Avertisment inaintea lectiilor grele
+Configurația activă este în `apps/web/src/lessonSafety.ts`. Numerele nu se copiază manual în fiecare lecție; sunt citite din registrul canonic.
 
-Lectiile care ating abuz, violenta domestica, agresiune sexuala, avort, dependenta, autovatamare, doliu prin sinucidere primesc, **inainte de primul pas**, un ecran scurt:
+## 4. Registrul canonic al resurselor pentru România
 
-> Ce urmeaza atinge [subiectul]. Poti opri oricand si poti reveni. Daca acum ești in pericol sau te gandesti sa iti faci rau, apasa aici.
+Sursa tehnică unică: `packages/shared/src/crisis.ts`.
 
-Cu doua actiuni: **Continua** si **Am nevoie de ajutor acum** (duce la ecranul de criza).
+| Situație | Număr | Disponibilitate afișată |
+| --- | --- | --- |
+| Pericol imediat | **112** | 24/7 |
+| Abuz, neglijare sau violență asupra unui copil | **119** | 24/7 |
+| Telefonul Copilului | **116 111** | luni–vineri, 10:00–20:00 |
+| Sprijin emoțional | **116 123** | conform disponibilității serviciului |
+| Violență domestică, trafic de persoane și discriminare | **0800 500 333** | 24/7 |
 
-Avertismentul nu se dilueaza in text. E ecran separat.
+Pentru alcool, droguri sau jocuri de noroc, Emanus îndrumă spre medic și servicii specializate locale. Nu afișează un TelVerde național neconfirmat.
 
----
+Reguli pentru ecranul de criză:
 
-## 3. Ecranul de criza — numere reale
+1. Numerele apar înaintea oricărui verset sau comentariu.
+2. Nu cerem omului să descrie ce s-a întâmplat.
+3. În pericol imediat, mesajul este simplu: **sună la 112 acum**.
+4. Resursele se verifică periodic și se modifică numai în registrul canonic.
 
-Accesibil permanent din `.helpbar`, fara sa fie nevoie de cont si fara sa treaca prin nicio lectie.
+## 5. Iertarea nu anulează dreptatea
 
-| Situatie | Numar |
-| --- | --- |
-| Urgenta, pericol imediat | **112** |
-| Copii si adolescenti (Telefonul Copilului) | **116 111** |
-| Suport emotional / gand de suicid | **116 123** |
-| TelVerde antidrog | **0800 801 200** |
-| Violenta domestica | **0800 500 333** |
+Politica pentru toate lecțiile despre familie, neiertare, biserică și abuz:
 
-Reguli pe ecranul de criza:
+- **Iertarea** înseamnă renunțarea la răzbunarea personală și predarea judecății lui Dumnezeu.
+- **Împăcarea** cere două persoane, adevăr, pocăință și schimbare reală.
+- **Încrederea** se reconstruiește în timp și nu este datorată automat.
+- **Limitele** pot rămâne necesare după iertare.
+- **Poliția, protecția copilului, medicul și instanța** nu sunt o negare a iertării.
+- Întoarcerea într-un loc periculos nu este o dovadă de credință sau ascultare.
 
-- Zero versete inaintea numerelor. Numerele sunt primele pe ecran.
-- Zero intrebari. Nu cerem omului sa descrie ce se intampla.
-- Un singur rand dupa numere: "Nu ești singur. Suna. Ne intoarcem la drum cand ești in siguranta."
-- Numerele nu se schimba fara verificare pe sursa oficiala.
+## 6. Minori și persoane vulnerabile
 
----
+- Nu servim minorilor automat lecții pentru adulți despre avort, infidelitate sau sexualitate explicită.
+- Pentru un copil aflat în pericol: `119` sau `112`.
+- `116 111` se afișează împreună cu programul, nu ca serviciu 24/7.
+- Nu cerem adresă, școală, fotografii, numele părinților ori alte date care nu sunt necesare.
+- Nu există mesagerie privată între utilizatori.
+- Comunitatea și mentoratul nu se lansează fără moderare umană, raportare, verificarea adulților și reguli speciale pentru minori.
 
-## 4. Iertare ≠ impacare ≠ intoarcere in pericol
+## 7. Confidențialitatea scrierilor
 
-Aceasta este politica, nu o nuanta de lectie. Se aplica in tot continutul despre neiertare, familie, casnicie, abuz.
+Jurnalul, rugăciunile și notele sunt private, dar textul afișat depinde de configurația reală:
 
-- **Iertarea** este ce faci tu inaintea lui Dumnezeu cu datoria pe care ti-o datoreaza cineva.
-- **Impacarea** cere doua persoane si cere schimbare reala din partea celui care a facut raul.
-- **Intoarcerea intr-un loc unde ești lovit, umilit sau in pericol nu este iertare si nu este ascultare.**
+- fără cloud: se păstrează numai pe dispozitiv;
+- cu backup: se păstrează pe dispozitiv și în copia privată asociată contului.
 
-Pasii `n6_3`, `n6_4`, `n6_5` din `neiertareC.ts` sunt implementarea acestei politici si sunt **nenegociabili**. Nu se rescriu, nu se scurteaza, nu se muta mai tarziu in lectie.
+Nu mai folosim promisiunea hardcodată „nu pleacă niciodată de pe telefon”. Mesajul activ este generat de `apps/web/src/privacy.ts`.
 
-La fel, `u5_7` (postul: nu se practica in tratament, tulburari de alimentatie, sarcina, alaptare) si `u6_8` (depresia cere medic, nu post) din `umblareB.ts` sunt **nenegociabili**.
+Nimeni din echipa pastorală nu primește automat acces la jurnal. Întrebările trimise prin „Întreabă” sunt un flux separat, explicit.
 
----
+Ștergerea locală a unei rugăciuni sau intrări trebuie reflectată și în cloud; altfel conținutul ar putea reapărea pe alt dispozitiv.
 
-## 5. Minori si oameni vulnerabili
+## 8. Ce măsurăm
 
-- Continutul pentru adolescenti este **separat**. Nu servim adolescentilor lectii scrise pentru adulti despre infidelitate, pornografie, avort, divort.
-- Cele sase lectii pentru adolescenti (folderul `adolescenti/`) se migreaza in arhitectura noua **numai** dupa ce trec prin acest document.
-- In continutul pentru adolescenti, orice pas care atinge abuz duce la **116 111**, nu la 116 123.
-- Nu cerem nicaieri varsta, adresa, scoala, numele parintilor, fotografii.
-- Nu exista mesagerie privata intre utilizatori si nu va exista fara moderare umana.
+Produsul nou nu măsoară valoarea spirituală a omului:
 
----
+- fără XP;
+- fără nivel;
+- fără streak;
+- fără radar spiritual;
+- fără clasament;
+- fără procent de sfințire.
 
-## 6. Inainte de comunitate
+Progresul tehnic poate reține numai locul în drum sau curs, pentru continuitatea experienței. Absența schimbă tonul, nu scorul.
 
-Zona de comunitate **nu se lanseaza** pana nu exista, scrise si aplicate:
+Engine-ul vechi este izolat prin `@emanus/shared/legacy`; aplicația web nouă nu are voie să importe simbolurile lui.
 
-1. Reguli publice de postare, la vedere inainte de prima postare.
-2. Buton de raportare pe fiecare postare, cu destinatie reala.
-3. Cel putin un moderator uman responsabil, cu nume.
-4. Interdictie de sfat medical, financiar si juridic intre utilizatori.
-5. Interdictie de solicitare de bani intre utilizatori.
-6. Zero acces pentru conturi de minori la mesaje private.
+## 9. Biblia explicată și starea `in_review`
 
----
+Scriptura este autoritatea finală. Explicația Emanus este o lucrare omenească și poate fi corectată.
 
-## 7. Inainte de mentorat
+- `draft`: nu este conținut de parcurs și rămâne ascuns.
+- `in_review`: este vizibil în aplicație contului proprietarului cu rol `admin`, pentru testare în experiența reală.
+- `published`: este vizibil publicului.
 
-Mentoratul **nu se lanseaza** pana nu exista:
+Daniel Văduva este reviewerul uman final înainte de lansare. El parcurge conținutul ca primul utilizator și decide dacă trece la `published`.
 
-1. Verificare de identitate a mentorului.
-2. Acord semnat: mentorul nu da sfat medical, nu cere bani, nu cere intalniri private cu minori, nu foloseste relatia pentru recrutare.
-3. Regula "doi adulti" pentru orice interactiune cu un minor.
-4. Canal de reclamatie direct catre echipa, nu catre mentor.
-5. Posibilitatea utilizatorului de a intrerupe relatia dintr-un singur pas, fara explicatii.
+Aprobarea nu înseamnă infailibilitate. Înseamnă că textul a fost citit, comparat cu Scriptura și asumat înainte de publicare.
 
-Acelasi standard se aplica creatorilor de cursuri: cursul intra in aplicatie doar dupa validarea de doctrina si dupa validarea de siguranta.
+Registrul și criteriile auditului sunt în `docs/40-audit-biblic-si-editorial.md`.
 
----
+## 10. Drepturi de autor
 
-## 8. Ce masuram si ce nu iese niciodata din telefon
+- Materialele secundare sunt surse de cercetare, nu texte de copiat.
+- Conținutul Emanus trebuie formulat original.
+- Materialul Mohler cu drepturi neclarificate nu este expus în runtime.
+- RCCV nu este declarată domeniu public pentru România. Lansarea publică a textului biblic cere clarificarea și permisiunea titularului drepturilor.
+- Numele unui predicator sau autor nu este folosit ca autoritate doctrinară finală; fiecare afirmație se cântărește prin Scriptură.
 
-### Ce masuram, anonim, la nivel de produs
+## 11. Înainte de comunitate, mentorat și creatori
 
-Fara identitate, fara profil, fara continut scris de om:
+Aceste zone rămân blocate până există:
 
-1. Cate persoane deschid ecranul de intrare si cate apasa o usa (abandonul la uși).
-2. Care uși sunt apasate cel mai des.
-3. Cati incep prima lectie dupa ce au ales o usa.
-4. La ce pas se opreste lectia (numarul pasului, nu ce a scris omul).
-5. Cati revin dupa doua zile.
-6. Cati ating ecranul de criza (numar, nu cine).
+1. responsabil uman identificat;
+2. reguli publice;
+3. raportare și retragere rapidă;
+4. moderare reală;
+5. interdicția solicitării de bani și a sfatului medical/juridic prezentat drept profesional;
+6. verificarea mentorilor și regula a doi adulți pentru minori;
+7. validare biblică, de siguranță și de drepturi pentru fiecare curs de creator.
 
-Asta e tot. Serveste unui singur scop: sa vedem unde pierdem omul si sa reparam drumul.
+## 12. Checklist înaintea unei lecții
 
-### Ce nu iese niciodata din telefon fara actiunea explicita a omului
-
-- **Jurnalul.** Tot ce scrie omul in pasii de jurnal.
-- **Rugaciunile** si notele de raspuns.
-- Orice text liber.
-
-Acestea stau in `localStorage` (`emanus_journey_v1`) si urca in Supabase **doar** in randul propriului utilizator, sub politici `journey_own` / `journal_own` / `prayers_own`. Nimeni din echipa nu citeste jurnalul cuiva. Nu exista ecran de administrare care sa arate text de jurnal.
-
-**Cum se spune omului, in aplicatie:** textul de sub primul camp de rugaciune se schimba dupa configuratie (`privacyLine()` in `Today.tsx`). Cand backupul in cloud e activ, NU scriem "nu pleaca nicaieri de pe telefonul tau" — scriem ca se salveaza si intr-un spatiu de backup legat doar de el. O promisiune de confidentialitate care nu e adevarata e mai grava decat lipsa promisiunii.
-
-### Ce nu masuram deloc
-
-- **Nu te masuram pe tine.** Fara XP, fara serie, fara nivel, fara procent, fara "ziua X din Y". Absenta schimba doar tonul, niciodata scorul.
-- Fara clasamente, fara comparatii intre utilizatori, fara badge-uri publice.
-- Pasul de tip `reward` din player nu afiseaza puncte sau insigne. Campul `reward.xp` a ramas in tipuri din prima iteratie, e 0 in tot continutul nou si e ignorat deliberat la randare.
-
-### Reguli tehnice
-
-- Cheia secreta Supabase nu intra niciodata in `apps/web`.
-- Repo-ul care contine chei de exemplu rămâne fara valori reale (`.env.example`).
-- Orice cheie expusă se roteste, nu se ascunde.
-
----
-
-## 9. Stergerea si controlul omului asupra datelor
-
-- Un singur pas, vizibil, care sterge tot: jurnal, rugaciuni, drum, progres.
-- "Ce ai scris rămâne al tău, oricare drum alegi" — schimbarea drumului nu sterge jurnalul.
-- "Nu ma mai regasesc aici. Vreau alt drum." este vizibil pe ecranul de azi, nu in setari.
-- Nu exista cont obligatoriu pentru a folosi aplicatia.
-
----
-
-## 10. Cine e autorul si cine raspunde
-
-Aici au fost amestecate multa vreme doua lucruri diferite. Se separa definitiv.
-
-### 10.1 Autorul lectiilor: Emanus
-
-Lectiile din aplicatie **nu au autor uman afisat**. Autorul este **Emanus**, iar sursa este **Biblia**. Nu punem nume de persoana pe ele, din trei motive:
-
-1. **Siguranta.** Un nume de om sugereaza o persoana reala care citeste jurnalul si raspunsurile. Nu citeste nimeni. De aceea vocea din chat se prezinta ca Emanus (`GUIDE_NAME` in `LessonPlayer.tsx`), nu ca om.
-2. **Autoritatea sta in text, nu in autor.** Fiecare afirmatie tare din lectie sta pe o referinta din Scriptura, la vedere, cu explicatie. Cine verifica, verifica versetul, nu reputatia cuiva.
-3. **Nu construim cult de personalitate.** Aplicatia nu duce omul la un om. Il duce la Iisus.
-
-Consecinta practica: **nu se blocheaza scrierea de continut** pentru lipsa unui nume de autor. Cele 35 de lectii care lipsesc se pot scrie acum.
-
-### 10.2 Autorii apar cand apar creatorii
-
-Cand se deschide zona pentru creatori — influenceri, pastori, oameni care aduc public in aplicatie — **acele** lectii au autor cu nume si fata, pentru ca omul trebuie sa stie de la cine primeste. Regula:
-
-- Lectiile de baza ale aplicatiei: fara autor, semnate Emanus.
-- Lectiile de creator: cu autor la vedere, dupa sablon, dupa validare de doctrina si de siguranta (§7).
-- Nu se amesteca. Omul vede clar ce e continut de baza si ce e continut al unui creator.
-
-### 10.3 Responsabilul de siguranta: are nevoie de un om real
-
-Asta **nu** poate fi "Emanus". Nu e o chestiune de voce, e o chestiune de cineva care raspunde la telefon:
-
-- verifica numerele de urgenta o data la sase luni;
-- primeste rapoartele si reclamatiile;
-- decide retragerea unui continut sau a unui creator;
-- raspunde de continutul pentru minori.
-
-Pana la lansarea publica, acest rol e al proprietarului aplicatiei, prin lipsa altcuiva. Nu e nevoie sa fie afisat in fiecare lectie, dar trebuie sa existe o adresa de contact reala in aplicatie si un om in spatele ei.
-
-**Ce rămâne blocat de §10.3, si numai asta:** comunitatea, mentoratul si publicarea de lectii de creator. Nu continutul de baza.
-
----
-
-## 11. Verificarea inainte de fiecare lectie noua
-
-O lectie nu intra in cod daca nu trece toate liniile:
-
-- [ ] Nu pune vina pe om pentru un simptom care poate fi medical.
-- [ ] Nu cere iertare ca pretext pentru intoarcere in pericol.
-- [ ] Are avertisment separat daca atinge abuz, violenta, dependenta, autovatamare.
-- [ ] Nu cere date personale.
-- [ ] Nu promite rezultat.
-- [ ] Niciun verset citat gol; niciun cuvant de biserica neexplicat.
-- [ ] Se termina cu un pas concret pentru astazi, nu cu o tema.
-- [ ] Nu e fundatura: exista drum mai departe dupa ultimul pas.
-- [ ] Vocea nu are nume de om si nu pretinde ca citeste ce a scris omul.
+- [ ] Pasajul spune în context ceea ce afirmă lecția.
+- [ ] Interpretarea este marcată drept interpretare.
+- [ ] Nu sunt inventate gândurile personajelor biblice.
+- [ ] Nu este lărgită o promisiune dincolo de destinatarii ei.
+- [ ] Nu este folosită o etimologie ca dovadă a doctrinei.
+- [ ] Nu este diagnosticat spiritual un simptom medical.
+- [ ] Nu este pusă vină suplimentară pe victimă.
+- [ ] Iertarea rămâne distinctă de împăcare, încredere și consecințe.
+- [ ] Lecția sensibilă are safety gate și resursele corecte.
+- [ ] Mesajul despre stocarea datelor este adevărat pentru configurația curentă.
+- [ ] Textul este original sau drepturile sunt clare.
+- [ ] Omul poate distinge Scriptura de explicația Emanus.
+- [ ] Există un pas concret, fără promisiune de rezultat garantat.
