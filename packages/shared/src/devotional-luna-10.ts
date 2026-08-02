@@ -4,7 +4,8 @@
 // arată din ce anume cresc — din gesturi mici, repetate, pe care nu le vede
 // nimeni. Nicio zi nu cere fapte mari; toate cer un singur lucru făcut bine azi.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924 (domeniu
+// public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_10 = "Lucrurile mici"
@@ -29,7 +30,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Luca 16:10",
-    verseText: "Cine este credincios în cele mai mici lucruri este credincios și în cele mari.",
+    verseText: "Cine este credincios în cele mai mici lucruri este credincios și în cele mari și cine este nedrept în cele mai mici lucruri este nedrept și în cele mari.",
     meditation:
       "Isus nu spune că lucrurile mici duc la cele mari, ci că ele arată deja cine ești. Nu există două caractere, unul pentru lucrurile importante și altul pentru fleacuri. Cine minte în lucruri mărunte a învățat deja să mintă.",
     question: "În ce lucru mic ești nesincer, pentru că „nu contează”?",
@@ -68,7 +69,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Marcu 14:8",
-    verseText: "Ea a făcut ce a putut.",
+    verseText: "Ea a făcut ce a putut; Mi-a uns trupul mai dinainte pentru îngropare.",
     meditation:
       "E apărarea pe care i-o face Isus unei femei criticate pentru un gest „risipitor”. Nu spune că a făcut totul, ci că a făcut ce a putut — și I-a fost de ajuns. Multe zile bune sunt stricate de standarde pe care Dumnezeu nu le-a cerut.",
     question: "Te judeci pentru ce n-ai putut face?",
@@ -81,7 +82,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Matei 10:42",
-    verseText: "Și oricine va da de băut numai un pahar de apă rece unuia din acești micuți... nu-și va pierde răsplata.",
+    verseText: "Și oricine va da de băut numai un pahar de apă rece unuia din acești micuți în numele unui ucenic, adevărat vă spun că nu-și va pierde răsplata.",
     meditation:
       "Cel mai ieftin gest posibil în Israelul acela: un pahar de apă. Isus îl așază în categoria faptelor care nu se pierd. Dumnezeu ține socoteala unor lucruri pe care noi nici nu le ținem minte.",
     question: "Ce gest mic ai putea face azi pentru cineva fără importanță socială?",
@@ -94,7 +95,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Ioan 6:9",
-    verseText: "Este aici un băiețel care are cinci pâini de orz și doi pești; dar ce sunt acestea la atâția?",
+    verseText: "Este aici un băiețel care are cinci pâini de orz și doi pești, dar ce sunt acestea la atâția?",
     meditation:
       "Pâinea de orz era mâncarea săracilor, iar cantitatea era ridicolă față de nevoie. Andrei spune și partea bună, și îndoiala, în aceeași propoziție. Isus n-a cerut mai mult; a cerut ce era acolo.",
     question: "Ce ai tu, puțin și real, și nu vrei să dai pentru că pare ridicol?",
@@ -107,7 +108,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "2 Împărați 5:13",
-    verseText: "Părinte, dacă prorocul ți-ar fi cerut un lucru greu, nu l-ai fi făcut? Cu atât mai mult trebuie să faci ce ți-a spus: „Spală-te și vei fi curat.”",
+    verseText: "Părinte, dacă prorocul ți-ar fi cerut un lucru greu, nu l-ai fi făcut? Cu atât mai mult trebuie să faci ce ți-a spus: „Scaldă-te și vei fi curat.”",
     meditation:
       "Naaman s-a supărat că vindecarea era prea simplă. Suntem dispuși la eforturi mari și refuzăm ascultarea măruntă, pentru că aceea nu ne face eroi. Slujitorii lui au avut curajul să-i spună asta în față.",
     question: "Ce lucru simplu ți-a spus Dumnezeu și îl ocolești pentru că pare banal?",
@@ -120,7 +121,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "1 Împărați 18:44",
-    verseText: "Și a șaptea oară, slujitorul a zis: „Iată că se ridică un mic nor din mare, de mărimea unei palme de om.”",
+    verseText: "A șaptea oară, slujitorul a zis: „Iată că se ridică un mic nor din mare, ca o palmă de om.”",
     meditation:
       "După trei ani de secetă, semnul a fost cât o palmă — și a fost de ajuns pentru Ilie ca să anunțe ploaia. Slujitorul s-a uitat de șapte ori înainte să vadă ceva. Învățătura e să te mai uiți o dată și să nu ceri semne mari.",
     question: "Ce nor cât o palmă ai văzut și n-ai luat în seamă?",
@@ -133,7 +134,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Iacov 3:4-5",
-    verseText: "Iată, și corăbiile, măcar că sunt așa de mari și mânate de vânturi puternice, totuși sunt cârmuite de o cârmă foarte mică. Tot așa și limba este un mic mădular.",
+    verseText: "Iată, și corăbiile, cât de mari sunt, și, măcar că sunt mânate de vânturi iuți, totuși sunt cârmuite de o cârmă foarte mică, după gustul cârmaciului. Tot așa și limba este un mic mădular și se fălește cu lucruri mari.",
     meditation:
       "Lucrurile mici nu sunt doar bune; unele sunt periculoase tocmai pentru că par neimportante. O propoziție spusă în treacăt poate schimba direcția unei zile întregi într-o casă. Cârma e mică, dar hotărăște unde ajunge corabia.",
     question: "Ce propoziție mică spui des și strici cu ea?",
@@ -146,7 +147,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Cântarea Cântărilor 2:15",
-    verseText: "Prindeți-ne vulpile, vulpile cele mici, care strică viile.",
+    verseText: "Prindeți-ne vulpile, vulpile cele mici, care strică viile, căci viile noastre sunt în floare!",
     meditation:
       "Nu lupii strică via, ci vulpile mici. În căsnicii și în prietenii, rareori distruge o catastrofă — de obicei sunt zeci de lucruri mărunte lăsate nerezolvate. Cine prinde vulpile mici salvează via.",
     question: "Care e vulpea mică din relația ta cea mai apropiată?",
@@ -172,7 +173,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Matei 6:3-4",
-    verseText: "Ci tu, când faci milostenie, să nu știe stânga ta ce face dreapta, pentru ca milostenia ta să fie făcută în ascuns.",
+    verseText: "Ci tu, când faci milostenie, să nu știe stânga ta ce face dreapta, pentru ca milostenia ta să fie făcută în ascuns; și Tatăl tău, care vede în ascuns, îți va răsplăti.",
     meditation:
       "Isus cere o disciplină ciudată: să faci binele și să-l uiți. Un bine povestit și-a primit deja plata. Ce rămâne în ascuns rămâne între tine și Dumnezeu.",
     question: "Cât din binele tău are nevoie de martori?",
@@ -211,7 +212,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "1 Tesaloniceni 4:11",
-    verseText: "Să căutați să trăiți liniștiți, să vă vedeți de treburi și să lucrați cu mâinile voastre.",
+    verseText: "Să căutați să trăiți liniștiți, să vă vedeți de treburi și să lucrați cu mâinile voastre, cum v-am sfătuit.",
     meditation:
       "E o ambiție ciudată pentru creștini: să trăiești liniștit. Într-o lume care cere vizibilitate, Pavel recomandă o viață așezată și o muncă făcută cu mâinile. Nu toată lumea e chemată la scenă; aproape toată lumea e chemată la statornicie.",
     question: "Cauți liniște sau cauți să fii văzut?",
@@ -250,7 +251,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Proverbe 24:30-31",
-    verseText: "Am trecut pe lângă ogorul unui leneș... și era acoperit cu spini, urzicile creșteau peste tot, și zidul de piatră era prăbușit.",
+    verseText: "Am trecut pe lângă ogorul unui leneș și pe lângă via unui om fără minte. Și era numai spini, acoperit de mărăcini, și zidul de piatră era prăbușit.",
     meditation:
       "Nimeni n-a dărâmat zidul acela; a căzut singur, din nefacere. Paragina nu e un eveniment, ci suma multor zile în care nu s-a făcut nimic. Lucrurile bune nu se strică brusc, ci prin neglijare.",
     question: "Ce zid din viața ta se surpă încet, pentru că nu-l repari?",
@@ -289,7 +290,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Luca 2:51-52",
-    verseText: "Apoi S-a coborât împreună cu ei, a venit la Nazaret și le era supus... Și Isus creștea în înțelepciune, în statură și era tot mai plăcut înaintea lui Dumnezeu și înaintea oamenilor.",
+    verseText: "Apoi, S-a coborât împreună cu ei, a venit la Nazaret și le era supus... Și Isus creștea în înțelepciune, în statură și era tot mai plăcut înaintea lui Dumnezeu și înaintea oamenilor.",
     meditation:
       "Isus a petrecut vreo treizeci de ani într-un sat mic, făcând muncă obișnuită, și doar trei în lucrare publică. Cea mai mare parte a vieții Lui n-a fost spectaculoasă. Dacă anii ascunși au fost buni pentru El, nu sunt timp pierdut nici pentru tine.",
     question: "Consideri anii tăi obișnuiți timp pierdut?",
@@ -328,7 +329,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Rut 2:3",
-    verseText: "Ea s-a dus într-un ogor să strângă spice pe urma secerătorilor. Și s-a întâmplat că ogorul acela era al lui Boaz.",
+    verseText: "Ea s-a dus într-un ogor să strângă spice pe urma secerătorilor. Și s-a întâmplat că ogorul acela era al lui Boaz, care era din familia lui Elimelec.",
     meditation:
       "Rut s-a dus să facă o muncă umilă ca să aibă ce mânca, iar textul spune sec: „s-a întâmplat”. În povestea aceea, întâmplarea a dus la strămoșii lui David. Providența lucrează cel mai des în timp ce tu îți faci treaba.",
     question: "Ce muncă modestă ai de făcut azi?",
@@ -354,7 +355,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Matei 13:33",
-    verseText: "Împărăția cerurilor se aseamănă cu un aluat pe care l-a luat o femeie și l-a pus în trei măsuri de făină, până s-a dospit toată plămădeala.",
+    verseText: "Împărăția cerurilor se aseamănă cu un aluat pe care l-a luat o femeie și l-a pus în trei măsuri de făină de grâu, până s-a dospit toată plămădeala.",
     meditation:
       "Aluatul lucrează fără zgomot și fără să-l vezi, dar schimbă toată plămădeala. Așa se răspândește Împărăția: nu prin cucerire, ci prin pătrundere. Un creștin așezat într-un birou sau într-o familie e aluat.",
     question: "În ce „plămădeală” te-a pus Dumnezeu?",
@@ -393,7 +394,7 @@ export const DEVOTIONAL_DAYS_LUNA_10: DevotionalDay[] = [
     theme: LUNA_10,
     axis: "character",
     verseRef: "Luca 19:17",
-    verseText: "El i-a zis: „Bine, rob bun; fiindcă ai fost credincios în puține lucruri, primește cârmuirea a zece cetăți.”",
+    verseText: "El i-a zis: „Bine, rob bun, fiindcă ai fost credincios în puține lucruri, primește cârmuirea a zece cetăți.”",
     meditation:
       "E ziua 300 și ai ajuns aici tot printr-un lucru mic, repetat: ai deschis pagina asta. Dumnezeu nu îți cere să fii mare, ci credincios în puțin. Luna viitoare intrăm într-un loc mai greu, rușinea — pentru că tocmai ea îi face pe oameni să creadă că puținul lor nu valorează nimic.",
     question: "Ce lucru mic ai făcut zilnic în luna asta?",
