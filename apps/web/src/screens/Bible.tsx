@@ -6,6 +6,8 @@ import {
   BookOpen,
   Bookmark,
   BookmarkCheck,
+  ChevronDown,
+  ChevronUp,
   HelpCircle,
   NotebookPen,
   Search,
@@ -37,6 +39,7 @@ import { navigate } from "../router"
 import { useBiblePersonal } from "../useBiblePersonal"
 import { Skeleton } from "../ds"
 import "../bible.css"
+import "../bible-expand.css"
 import "../needs.css"
 
 function paragraphs(text: string): string[] {
@@ -245,7 +248,7 @@ export function Bible() {
               <p>Niciun capitol nu este vizibil pentru acest cont. Pentru revizia internă, autentifică-te cu contul căruia i-a fost acordat rolul de admin.</p>
             </div>}
 
-    <p className="muted bible__note">Traducere: {translation}. Explicațiile sunt Emanus și rămân distincte de textul Scripturii. Folosirea ediției trebuie autorizată înainte de lansarea publică.</p>
+    <p className="muted bible__note">Traducere: {translation}. Explicațiile sunt redactate în română pe baza studiilor verse-by-verse ale lui Zac Poonen, păstrând sensul doctrinar și separarea clară față de textul Scripturii. Folosirea ediției biblice trebuie autorizată înainte de lansarea publică.</p>
   </section>
 }
 
@@ -309,12 +312,14 @@ function NoteEditor({ source, notes }: { source: Required<BibleSourceSnapshot>; 
   </div>
 }
 
-function Unit({ unit, book, chapter, notes, saved }: {
+function Unit({ unit, book, chapter, notes, saved, open, onToggle }: {
   unit: BibleUnit
   book: BibleCatalogBook
   chapter: BibleChapter
   notes: BibleNote[]
   saved: boolean
+  open: boolean
+  onToggle: () => void
 }) {
   const [copied, setCopied] = useState(false)
   const source: Required<BibleSourceSnapshot> = {
@@ -350,14 +355,34 @@ function Unit({ unit, book, chapter, notes, saved }: {
     capitol: String(chapter.number),
     unitate: unit.id,
   })
+  const teachingParagraphs = paragraphs(unit.teaching)
+  const bodyId = `bunit-body-${unit.id}`
 
   return <article className="bunit" id={unit.id}>
     <p className="bunit__ref">{unit.ref}</p>
     <h3 className="bunit__heading">{unit.heading}</h3>
     <blockquote className="bunit__text">{unit.text}</blockquote>
-    <div className="bunit__teaching">{paragraphs(unit.teaching).map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
 
-    {unit.words && unit.words.length > 0 && <div className="bwords">
+    {teachingParagraphs.length > 0 && <div className="bunit__teaching">
+      <p>{teachingParagraphs[0]}</p>
+      <div id={bodyId} hidden={!open}>
+        {teachingParagraphs.slice(1).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+      </div>
+    </div>}
+
+    {teachingParagraphs.length > 1 && <button
+      type="button"
+      className={open ? "bunit__toggle is-open" : "bunit__toggle"}
+      aria-expanded={open}
+      aria-controls={bodyId}
+      onClick={onToggle}
+    >
+      {open
+        ? <><ChevronUp size={15} aria-hidden /> Închide explicația</>
+        : <><ChevronDown size={15} aria-hidden /> Citește explicația completă</>}
+    </button>}
+
+    {open && unit.words && unit.words.length > 0 && <div className="bwords">
       {unit.words.map((word) => <p key={`${word.language}-${word.transliteration}`} className="bword">
         <span className="bword__orig" lang={word.language === "greaca" ? "el" : "he"}>{word.original}</span>
         <span className="bword__tr">{word.transliteration}</span>
@@ -365,8 +390,8 @@ function Unit({ unit, book, chapter, notes, saved }: {
       </p>)}
     </div>}
 
-    {unit.crossRefs && unit.crossRefs.length > 0 && <p className="brefs">{unit.crossRefs.join(" · ")}</p>}
-    {unit.forYourHeart && <div className="bheart">
+    {open && unit.crossRefs && unit.crossRefs.length > 0 && <p className="brefs">{unit.crossRefs.join(" · ")}</p>}
+    {open && unit.forYourHeart && <div className="bheart">
       <p className="today__kicker">Pentru inima ta</p>
       <p>{unit.forYourHeart}</p>
     </div>}
@@ -387,6 +412,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
   const { state } = useBiblePersonal()
   const [catalog, setCatalog] = useState<BibleCatalogBook[] | null>(null)
   const [content, setContent] = useState<BibleChapter | null | undefined>(undefined)
+  const [openUnits, setOpenUnits] = useState<Record<string, boolean>>({})
 
   useEffect(() => {
     let alive = true
@@ -396,6 +422,10 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       setContent(nextContent)
     })
     return () => { alive = false }
+  }, [bookId, chapter])
+
+  useEffect(() => {
+    setOpenUnits({})
   }, [bookId, chapter])
 
   const book = catalog?.find((item) => item.id === bookId)
@@ -434,6 +464,19 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
   const position = chapterNumbers.indexOf(chapter)
   const previous = position > 0 ? chapterNumbers[position - 1] : undefined
   const next = position >= 0 && position < chapterNumbers.length - 1 ? chapterNumbers[position + 1] : undefined
+  const allOpen = content.units.length > 0 && content.units.every((unit) => openUnits[unit.id] === true)
+
+  function toggleUnit(id: string): void {
+    setOpenUnits((current) => ({ ...current, [id]: !current[id] }))
+  }
+
+  function toggleAll(): void {
+    if (allOpen) {
+      setOpenUnits({})
+      return
+    }
+    setOpenUnits(Object.fromEntries(content.units.map((unit) => [unit.id, true])))
+  }
 
   return <section className="bible bible--chapter">
     <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
@@ -453,6 +496,14 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p>{content.historicalContext}</p>
     </details>
 
+    <nav className="bunits" aria-label="Controlul explicațiilor">
+      <button type="button" className="ghost bunits__all" onClick={toggleAll}>
+        {allOpen
+          ? <><ChevronUp size={15} aria-hidden /> Închide tot</>
+          : <><ChevronDown size={15} aria-hidden /> Extinde tot</>}
+      </button>
+    </nav>
+
     {content.units.map((unit) => <Unit
       key={unit.id}
       unit={unit}
@@ -460,6 +511,8 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       chapter={content}
       saved={Boolean(state.saved[unit.id]?.saved)}
       notes={activeNotes.filter((note) => note.unitId === unit.id)}
+      open={openUnits[unit.id] === true}
+      onToggle={() => toggleUnit(unit.id)}
     />)}
 
     <div className="bprayer">

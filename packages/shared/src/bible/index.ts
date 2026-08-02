@@ -99,128 +99,48 @@ import { IOAN_18 } from "./ioan18.js"
 import { IOAN_19 } from "./ioan19.js"
 import { IOAN_20 } from "./ioan20.js"
 import { IOAN_21 } from "./ioan21.js"
+import { MARCU as MARCU_BASE } from "./marcu.js"
+import { MARCU_2 } from "./marcu2.js"
+import { MARCU_3 } from "./marcu3.js"
+import { MARCU_4 } from "./marcu4.js"
+import { MARCU_5 } from "./marcu5.js"
+import { MARCU_6 } from "./marcu6.js"
+import { MARCU_7 } from "./marcu7.js"
+import { MARCU_8 } from "./marcu8.js"
+import { MARCU_9 } from "./marcu9.js"
+import { MARCU_10 } from "./marcu10.js"
+import { MARCU_11 } from "./marcu11.js"
+import { MARCU_12 } from "./marcu12.js"
+import { MARCU_13 } from "./marcu13.js"
+import { MARCU_14 } from "./marcu14.js"
+import { MARCU_15 } from "./marcu15.js"
+import { MARCU_16 } from "./marcu16.js"
 
-/** Geneza, cu toate cele 50 de capitole. */
-export const GENEZA: BibleBook = {
-  ...GENEZA_BASE,
-  chapters: [
-    ...GENEZA_BASE.chapters,
-    GENEZA_2,
-    GENEZA_3,
-    GENEZA_4,
-    GENEZA_5,
-    GENEZA_6,
-    GENEZA_7,
-    GENEZA_8,
-    GENEZA_9,
-    GENEZA_10,
-    GENEZA_11,
-    GENEZA_12,
-    GENEZA_13,
-    GENEZA_14,
-    GENEZA_15,
-    GENEZA_16,
-    GENEZA_17,
-    GENEZA_18,
-    GENEZA_19,
-    GENEZA_20,
-    GENEZA_21,
-    GENEZA_22,
-    GENEZA_23,
-    GENEZA_24,
-    GENEZA_25,
-    GENEZA_26,
-    GENEZA_27,
-    GENEZA_28,
-    GENEZA_29,
-    GENEZA_30,
-    GENEZA_31,
-    GENEZA_32,
-    GENEZA_33,
-    GENEZA_34,
-    GENEZA_35,
-    GENEZA_36,
-    GENEZA_37,
-    GENEZA_38,
-    GENEZA_39,
-    GENEZA_40,
-    GENEZA_41,
-    GENEZA_42,
-    GENEZA_43,
-    GENEZA_44,
-    GENEZA_45,
-    GENEZA_46,
-    GENEZA_47,
-    GENEZA_48,
-    GENEZA_49,
-    GENEZA_50,
-  ],
-}
+export const GENEZA: BibleBook = { ...GENEZA_BASE, chapters: [
+  ...GENEZA_BASE.chapters, GENEZA_2, GENEZA_3, GENEZA_4, GENEZA_5, GENEZA_6, GENEZA_7, GENEZA_8, GENEZA_9, GENEZA_10,
+  GENEZA_11, GENEZA_12, GENEZA_13, GENEZA_14, GENEZA_15, GENEZA_16, GENEZA_17, GENEZA_18, GENEZA_19, GENEZA_20,
+  GENEZA_21, GENEZA_22, GENEZA_23, GENEZA_24, GENEZA_25, GENEZA_26, GENEZA_27, GENEZA_28, GENEZA_29, GENEZA_30,
+  GENEZA_31, GENEZA_32, GENEZA_33, GENEZA_34, GENEZA_35, GENEZA_36, GENEZA_37, GENEZA_38, GENEZA_39, GENEZA_40,
+  GENEZA_41, GENEZA_42, GENEZA_43, GENEZA_44, GENEZA_45, GENEZA_46, GENEZA_47, GENEZA_48, GENEZA_49, GENEZA_50,
+] }
 
-/** Evanghelia după Matei, cu toate cele 28 de capitole în revizie. */
-export const MATEI: BibleBook = {
-  ...MATEI_BASE,
-  chapters: [
-    ...MATEI_BASE.chapters,
-    MATEI_2,
-    MATEI_3,
-    MATEI_4,
-    MATEI_5,
-    MATEI_6,
-    MATEI_7,
-    MATEI_8,
-    MATEI_9,
-    MATEI_10,
-    MATEI_11,
-    MATEI_12,
-    MATEI_13,
-    MATEI_14,
-    MATEI_15,
-    MATEI_16,
-    MATEI_17,
-    MATEI_18,
-    MATEI_19,
-    MATEI_20,
-    MATEI_21,
-    MATEI_22,
-    MATEI_23,
-    MATEI_24,
-    MATEI_25,
-    MATEI_26,
-    MATEI_27,
-    MATEI_28,
-  ],
-}
+export const MATEI: BibleBook = { ...MATEI_BASE, chapters: [
+  ...MATEI_BASE.chapters, MATEI_2, MATEI_3, MATEI_4, MATEI_5, MATEI_6, MATEI_7, MATEI_8, MATEI_9, MATEI_10,
+  MATEI_11, MATEI_12, MATEI_13, MATEI_14, MATEI_15, MATEI_16, MATEI_17, MATEI_18, MATEI_19, MATEI_20,
+  MATEI_21, MATEI_22, MATEI_23, MATEI_24, MATEI_25, MATEI_26, MATEI_27, MATEI_28,
+] }
 
-/** Ioan, scris acum pana la capitolul 21. */
-export const IOAN: BibleBook = {
-  ...IOAN_BASE,
-  chapters: [
-    ...IOAN_BASE.chapters,
-    IOAN_3,
-    IOAN_4,
-    IOAN_5,
-    IOAN_6,
-    IOAN_7,
-    IOAN_8,
-    IOAN_9,
-    IOAN_10,
-    IOAN_11,
-    IOAN_12,
-    IOAN_13,
-    IOAN_14,
-    IOAN_15,
-    IOAN_16,
-    IOAN_17,
-    IOAN_18,
-    IOAN_19,
-    IOAN_20,
-    IOAN_21,
-  ],
-}
+export const IOAN: BibleBook = { ...IOAN_BASE, chapters: [
+  ...IOAN_BASE.chapters, IOAN_3, IOAN_4, IOAN_5, IOAN_6, IOAN_7, IOAN_8, IOAN_9, IOAN_10, IOAN_11, IOAN_12,
+  IOAN_13, IOAN_14, IOAN_15, IOAN_16, IOAN_17, IOAN_18, IOAN_19, IOAN_20, IOAN_21,
+] }
 
-/** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, IOAN]
+export const MARCU: BibleBook = { ...MARCU_BASE, chapters: [
+  ...MARCU_BASE.chapters, MARCU_2, MARCU_3, MARCU_4, MARCU_5, MARCU_6, MARCU_7, MARCU_8,
+  MARCU_9, MARCU_10, MARCU_11, MARCU_12, MARCU_13, MARCU_14, MARCU_15, MARCU_16,
+] }
+
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, IOAN, MARCU]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)

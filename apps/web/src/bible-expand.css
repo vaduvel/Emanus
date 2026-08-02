@@ -1,0 +1,52 @@
+.bunit__teaching {
+  display: grid;
+  gap: 12px;
+}
+
+.bunit__teaching p {
+  margin: 0;
+}
+
+.bunit__toggle,
+.bunits__all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.bunit__toggle {
+  align-self: flex-start;
+  padding: 8px 11px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  color: var(--text-body);
+  box-shadow: none;
+  font-size: var(--text-sm);
+}
+
+.bunit__toggle:hover,
+.bunit__toggle.is-open {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.bunits {
+  position: sticky;
+  top: 8px;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  box-shadow: var(--shadow-xs);
+  backdrop-filter: blur(12px);
+}
+
+.bunits__all {
+  padding: 7px 10px;
+  font-size: var(--text-sm);
+}
