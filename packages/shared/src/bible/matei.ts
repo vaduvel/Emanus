@@ -4,7 +4,7 @@ import { mateiChapter, teaching } from "./mateiHelpers.js"
 /*
  * Evanghelia după Matei, explicată pe unități de sens.
  *
- * Textul biblic: Cornilescu 1924, păstrat separat în mateiText.ts.
+ * Textul biblic: Cornilescu, editia corectata (RCCV), păstrat separat în mateiText.ts.
  * Explicația: scrisă pentru Emanus după cercetarea textului și a surselor
  * declarate în docs/35-plan-scriere-matei.md. Nu se copiază formularea
  * niciunui predicator sau comentator.

@@ -10,7 +10,7 @@ Matei **nu este curs** și nu intră în `LessonPlayer`. Este o carte din secți
 - `BibleBook` pentru carte;
 - `BibleChapter` pentru fiecare dintre cele 28 de capitole;
 - `BibleUnit` pentru unități mici de sens;
-- textul Cornilescu 1924 în câmpul `text`;
+- textul Cornilescu (RCCV) în câmpul `text`;
 - explicația originală Emanus în `teaching`, separată vizual și semantic;
 - `words`, `crossRefs`, `forYourHeart` și rugăciunea capitolului;
 - toate capitolele rămân `status: "in_review"` până la revizia umană.

@@ -63,7 +63,7 @@ Capitolele care cer atentie sporita la citirea finala din acest motiv sunt:
 - Ioan 19
 - Ioan 20
 
-Aceste capitole trebuie citite cu grija la revizia finala, pentru a ramane cat mai aproape de Cornilescu 1924, editia originala.
+Aceste capitole trebuie citite cu grija la revizia finala, pentru a ramane cat mai aproape de Cornilescu, editia corectata (RCCV).
 
 ## Rezultat tehnic
 

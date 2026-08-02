@@ -24,7 +24,7 @@ export interface BibleUnit {
   /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
   ref: string
   heading: string
-  /** Textul biblic, nemodificat. Cornilescu 1924, editia originala. */
+  /** Textul biblic, nemodificat. RCCV, ortografie moderna. */
   text: string
   /** Invatatura Emanus. Markdown. */
   teaching: string
@@ -56,8 +56,8 @@ export interface BibleBook {
   chapters: BibleChapter[]
 }
 
-/** Traducerea afisata. Editia originala 1924 este in domeniul public. */
-export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"
+/** Traducerea afisata. RCCV este in domeniul public. */
+export const BIBLE_TRANSLATION = "Cornilescu, editia corectata (RCCV)"
 
 /** Un capitol se deschide cititorului doar dupa revizie umana. */
 export function chapterIsOpen(chapter: BibleChapter): boolean {

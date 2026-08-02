@@ -4,7 +4,7 @@ Tot ce se putea verifica automat a fost pregătit. Publicarea rămâne legată d
 
 ## Ce este încheiat
 
-- Toate cele 289 de unități din Geneza 1–50 au textul biblic adus din ediția Cornilescu 1924.
+- Toate cele 289 de unități din Geneza 1–50 au textul biblic adus din ediția Cornilescu corectată (RCCV, 2013).
 - Colăționarea, greșelile de literă, ghilimelele, repetițiile și build-ul sunt păzite automat.
 - Cele 196 de însemnări despre limba originală sunt strânse în `docs/24-cuvinte-in-limba-originala.md`.
 - Toate capitolele sunt astăzi `in_review`; niciunul nu este socotit aprobat prin simpla lui existență în cod.
