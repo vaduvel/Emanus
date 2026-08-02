@@ -99,6 +99,7 @@ import { IOAN_18 } from "./ioan18.js"
 import { IOAN_19 } from "./ioan19.js"
 import { IOAN_20 } from "./ioan20.js"
 import { IOAN_21 } from "./ioan21.js"
+import { MARCU as MARCU_BASE } from "./marcu.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -219,8 +220,16 @@ export const IOAN: BibleBook = {
   ],
 }
 
+/** Marcu, scris acum pana la capitolul 1. */
+export const MARCU: BibleBook = {
+  ...MARCU_BASE,
+  chapters: [
+    ...MARCU_BASE.chapters,
+  ],
+}
+
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, IOAN]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, IOAN, MARCU]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)
