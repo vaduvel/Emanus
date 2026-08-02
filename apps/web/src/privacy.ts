@@ -58,5 +58,35 @@ export function truthfulPrivacyCopy(text: string): string {
     "Căderea este serioasă. Adesea, rușinea și ascunderea din orele de după o adâncesc și taie tocmai legăturile de care ai nevoie.",
   )
 
+  reviewed = reviewed.replace(
+    /Avem peste cinci mii de copii în greacă ale Noului Testament\. Cea mai veche bucată păstrată e un fragment din Ioan, datat pe la anul 125 — la vreo treizeci de ani după ce a fost scrisă cărticica\./giu,
+    "Avem peste cinci mii de manuscrise grecești ale Noului Testament. Fragmentul P52 din Ioan este adesea datat în secolul al II-lea, dar data exactă este discutată; nu îl folosim ca pe un cronometru sigur la treizeci de ani de original.",
+  )
+
+  reviewed = reviewed.replace(
+    /L-au pus lângă Isaia din Bibliile de azi, copiat o mie de ani mai târziu\. Același text\. Diferențele erau de ortografie\./giu,
+    "Compararea sulului mare al lui Isaia cu tradiția masoretică arată o transmitere remarcabil de stabilă, dar există și variante textuale, nu numai diferențe de ortografie. Ele trebuie descrise cinstit, fără a pretinde identitate literă cu literă.",
+  )
+
+  reviewed = reviewed.replace(
+    /Sincer: din documente nu ieși cu «Dumnezeu există»\. Ieși cu «nu m-a mințit nimeni despre ce s-a întâmplat»\. De acolo încolo e o întâlnire, nu o demonstrație\./giu,
+    "Documentele pot arăta că textul este vechi, transmis și legat de mărturii timpurii. Ele nu pot demonstra singure că fiecare afirmație este adevărată și nici că niciun autor nu a putut greși sau minți. Întrebarea adevărului cere toate dovezile și întâlnirea cu Hristos.",
+  )
+
+  reviewed = reviewed.replace(
+    /Ăsta e limbaj de reporter, nu de mitologie\./giu,
+    "Acesta este limbajul unui autor care declară că a cercetat mărturii și a urmărit o relatare ordonată; afirmația lui trebuie evaluată, nu respinsă numai prin eticheta de mit.",
+  )
+
+  reviewed = reviewed.replace(
+    /Toate religiile lumii funcționează așa\. Creștinismul e singurul care spune că balanța nu se poate echilibra — și că a fost plătită de altcineva\./giu,
+    "Multe sisteme religioase și multe forme de religiozitate sunt trăite ca o balanță a meritelor. Evanghelia apostolică spune însă că mântuirea nu este câștigată prin fapte, ci primită prin har în Hristos.",
+  )
+
+  reviewed = reviewed.replace(
+    /Cine se întoarce liniștit, n-a înțeles încă nimic\./giu,
+    "Harul nu face pace cu păcatul. Totuși, nu putem vedea deplin inima altuia; urmărim dacă există pocăință și rod, fără să pronunțăm printr-o propoziție verdictul final asupra omului.",
+  )
+
   return reviewed
 }
