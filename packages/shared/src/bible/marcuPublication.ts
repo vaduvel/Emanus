@@ -1,23 +1,27 @@
 import type { BibleStatus } from "./types.js"
 
-/** Starea editorială este separată de conținut, ca aprobarea să fie auditabilă. */
+/**
+ * Capitolele scrise sunt vizibile direct în aplicație, ca proprietarul să le
+ * poată parcurge și revizui în interfața reală. Conținutul respins se corectează
+ * sau se retrage după revizia proprietarului.
+ */
 export const MARCU_STATUSES: Record<number, BibleStatus> = {
-  1: "in_review",
-  2: "in_review",
-  3: "in_review",
-  4: "in_review",
-  5: "in_review",
-  6: "in_review",
-  7: "in_review",
-  8: "in_review",
-  9: "in_review",
-  10: "in_review",
-  11: "in_review",
-  12: "in_review",
-  13: "in_review",
-  14: "in_review",
-  15: "in_review",
-  16: "in_review",
+  1: "published",
+  2: "published",
+  3: "published",
+  4: "published",
+  5: "published",
+  6: "published",
+  7: "published",
+  8: "published",
+  9: "published",
+  10: "published",
+  11: "published",
+  12: "published",
+  13: "published",
+  14: "published",
+  15: "published",
+  16: "published",
 }
 
 export function marcuStatus(chapter: number): BibleStatus {
