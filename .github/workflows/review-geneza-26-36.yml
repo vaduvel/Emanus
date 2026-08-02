@@ -17,38 +17,49 @@ jobs:
           ref: review/geneza-26-36
           fetch-depth: 0
 
+      - name: Aplica revizia si captureaza eroarea
+        id: revise
+        continue-on-error: true
+        run: python3 scripts/review-geneza-26-36.py > review-error.log 2>&1
+
+      - name: Publica diagnosticul daca revizia a esuat
+        if: steps.revise.outcome == 'failure'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add review-error.log
+          git commit -m "chore: consemneaza eroarea reviziei"
+          git push origin HEAD:review/geneza-26-36
+
+      - name: Opreste dupa diagnostic
+        if: steps.revise.outcome == 'failure'
+        run: exit 1
+
       - uses: pnpm/action-setup@v4
+        if: steps.revise.outcome == 'success'
 
       - uses: actions/setup-node@v4
+        if: steps.revise.outcome == 'success'
         with:
           node-version: 20
           cache: pnpm
 
-      - name: Aplica revizia
-        run: python3 scripts/review-geneza-26-36.py
-
       - name: Instaleaza dependentele
+        if: steps.revise.outcome == 'success'
         run: pnpm install --frozen-lockfile
 
-      - name: Verifica ghilimelele
-        run: pnpm check:quotes
-
-      - name: Verifica typo-urile
-        run: pnpm check:typos
-
-      - name: Verifica siguranta continutului
-        run: pnpm check:content
-
-      - name: Verifica registrul Genezei
-        run: pnpm check:bible-publication
-
-      - name: Typecheck
-        run: pnpm typecheck
-
-      - name: Build
-        run: pnpm build
+      - name: Verificari
+        if: steps.revise.outcome == 'success'
+        run: |
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:bible-publication
+          pnpm typecheck
+          pnpm build
 
       - name: Publica revizia verificata
+        if: steps.revise.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
