@@ -2,31 +2,40 @@ import type { JourneyState } from "./journey"
 import { ensureCloudUser } from "./cloudSession"
 import { getSupabase } from "./supabase"
 
-/*
- * Sincronizarea cu Supabase. (pasul 6 din ordinea de fluxuri)
- *
- * REGULI:
- *  1. Nu se cere cont și nu se cere e-mail. Intrare anonimă, făcută tăcut, în fundal.
- *     Omul nu vede niciodată un ecran de "înregistrează-te ca să salvezi".
- *  2. Local rămâne sursa de adevăr pentru ecrane. Norul e doar copia de siguranță.
- *     Dacă rețeaua cade, aplicația nu se blochează și nu arată nicio eroare.
- *  3. La prima pornire pe un telefon nou, dacă local e gol și în nor există ceva,
- *     se aduce din nor. Altfel, localul învinge și se urcă.
- *  4. Nu se urcă nimic ce nu vede și omul: fără scoruri, fără evenimente, fără analitică.
- */
-
 let ready = false
 
 export function cloudEnabled(): boolean {
   return getSupabase() !== null
 }
 
-/** Urcă starea curentă. Se apelează după fiecare salvare locală; eșecul se ignoră. */
+type RowId = string
+
+async function deleteStaleRows(
+  table: "journal" | "prayers",
+  idColumn: "lesson_id" | "id",
+  userId: string,
+  localIds: RowId[],
+): Promise<void> {
+  const sb = getSupabase()
+  if (!sb) return
+  const { data } = await sb.from(table).select(idColumn).eq("user_id", userId)
+  const keep = new Set(localIds)
+  const stale = (data ?? [])
+    .map((row) => String(row[idColumn]))
+    .filter((id) => !keep.has(id))
+  if (stale.length > 0) await sb.from(table).delete().eq("user_id", userId).in(idColumn, stale)
+}
+
+/**
+ * Urcă imaginea completă a stării. Nu facem numai upsert: ștergerile locale se
+ * reflectă și în cloud, altfel o rugăciune ștearsă reapare pe telefonul următor.
+ */
 export async function pushState(s: JourneyState): Promise<void> {
   const sb = getSupabase()
   const uid = (await ensureCloudUser())?.id ?? null
   if (!sb || !uid) return
   try {
+    const stamp = new Date().toISOString()
     await sb.from("journey").upsert({
       user_id: uid,
       seen_welcome: s.seenWelcome,
@@ -36,69 +45,81 @@ export async function pushState(s: JourneyState): Promise<void> {
       last_lesson_date: s.lastLessonDate,
       prayer_invite_seen: s.prayerInviteSeen,
       path_completed_seen: s.pathCompletedSeen,
-      updated_at: new Date().toISOString(),
+      path_progress: s.pathProgressById,
+      library_done: s.libraryDone,
+      updated_at: stamp,
     })
 
     if (s.journal.length > 0) {
       await sb.from("journal").upsert(
-        s.journal.map((j) => ({
+        s.journal.map((entry) => ({
           user_id: uid,
-          lesson_id: j.lessonId,
-          text: j.text,
-          entry_date: j.date,
-          updated_at: new Date().toISOString(),
+          lesson_id: entry.lessonId,
+          context_id: entry.contextId ?? null,
+          text: entry.text,
+          entry_date: entry.date,
+          updated_at: stamp,
         })),
       )
     }
+    await deleteStaleRows("journal", "lesson_id", uid, s.journal.map((entry) => entry.lessonId))
 
     if (s.prayers.length > 0) {
       await sb.from("prayers").upsert(
-        s.prayers.map((p) => ({
-          id: p.id,
+        s.prayers.map((prayer) => ({
+          id: prayer.id,
           user_id: uid,
-          text: p.text,
-          created_date: p.createdAt,
-          answered_date: p.answeredAt,
-          answer_note: p.answerNote ?? null,
+          text: prayer.text,
+          created_date: prayer.createdAt,
+          answered_date: prayer.answeredAt,
+          answer_note: prayer.answerNote ?? null,
         })),
       )
     }
+    await deleteStaleRows("prayers", "id", uid, s.prayers.map((prayer) => prayer.id))
   } catch {
-    /* rețea proastă — se reia la următoarea salvare */
+    /* Offline sau schema încă neaplicată: localul rămâne sursa de adevăr. */
   }
 }
 
-/** Aduce starea din nor. Returnează null dacă nu există nimic salvat. */
 export async function pullState(): Promise<JourneyState | null> {
   const sb = getSupabase()
   const uid = (await ensureCloudUser())?.id ?? null
   if (!sb || !uid) return null
   try {
-    const [{ data: j }, { data: jr }, { data: pr }] = await Promise.all([
+    const [{ data: journey }, { data: journal }, { data: prayers }] = await Promise.all([
       sb.from("journey").select("*").eq("user_id", uid).maybeSingle(),
       sb.from("journal").select("*").eq("user_id", uid).order("entry_date"),
       sb.from("prayers").select("*").eq("user_id", uid).order("created_date", { ascending: false }),
     ])
-    if (!j) return null
+    if (!journey) return null
     return {
-      seenWelcome: Boolean(j.seen_welcome),
-      pathId: (j.path_id as string | null) ?? null,
-      lessonsDone: Number(j.lessons_done ?? 0),
-      doctrineDone: Number(j.doctrine_done ?? 0),
-      lastLessonDate: (j.last_lesson_date as string | null) ?? null,
-      prayerInviteSeen: Boolean(j.prayer_invite_seen),
-      pathCompletedSeen: Boolean(j.path_completed_seen),
-      journal: (jr ?? []).map((r) => ({
-        lessonId: String(r.lesson_id),
-        text: String(r.text),
-        date: String(r.entry_date),
+      seenWelcome: Boolean(journey.seen_welcome),
+      pathId: (journey.path_id as string | null) ?? null,
+      lessonsDone: Number(journey.lessons_done ?? 0),
+      doctrineDone: Number(journey.doctrine_done ?? 0),
+      lastLessonDate: (journey.last_lesson_date as string | null) ?? null,
+      prayerInviteSeen: Boolean(journey.prayer_invite_seen),
+      pathCompletedSeen: Boolean(journey.path_completed_seen),
+      pathProgressById:
+        journey.path_progress && typeof journey.path_progress === "object"
+          ? journey.path_progress as JourneyState["pathProgressById"]
+          : {},
+      libraryDone: Array.isArray(journey.library_done)
+        ? journey.library_done.map(String)
+        : [],
+      journal: (journal ?? []).map((row) => ({
+        lessonId: String(row.lesson_id),
+        contextId: row.context_id ? String(row.context_id) : undefined,
+        text: String(row.text),
+        date: String(row.entry_date),
       })),
-      prayers: (pr ?? []).map((r) => ({
-        id: String(r.id),
-        text: String(r.text),
-        createdAt: String(r.created_date),
-        answeredAt: (r.answered_date as string | null) ?? null,
-        answerNote: (r.answer_note as string | undefined) ?? undefined,
+      prayers: (prayers ?? []).map((row) => ({
+        id: String(row.id),
+        text: String(row.text),
+        createdAt: String(row.created_date),
+        answeredAt: (row.answered_date as string | null) ?? null,
+        answerNote: (row.answer_note as string | undefined) ?? undefined,
       })),
     }
   } catch {
@@ -106,19 +127,9 @@ export async function pullState(): Promise<JourneyState | null> {
   }
 }
 
-export function cloudReady(): boolean {
-  return ready
-}
+export function cloudReady(): boolean { return ready }
+export function markCloudReady(): void { ready = true }
 
-export function markCloudReady(): void {
-  ready = true
-}
-
-/**
- * Leagă un e-mail peste contul anonim, ca omul să-și regăsească drumul pe alt telefon.
- * Se oferă doar dacă cere el, niciodată ca poartă de intrare. Primește un link pe mail,
- * fără parolă de ținut minte.
- */
 export async function linkEmail(email: string): Promise<boolean> {
   const sb = getSupabase()
   if (!sb) return false
