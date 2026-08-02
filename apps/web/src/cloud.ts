@@ -19,8 +19,9 @@ async function deleteStaleRows(
   const sb = getSupabase()
   if (!sb) return
   const { data } = await sb.from(table).select(idColumn).eq("user_id", userId)
+  const rows = (data ?? []) as Array<Record<string, unknown>>
   const keep = new Set(localIds)
-  const stale = (data ?? [])
+  const stale = rows
     .map((row) => String(row[idColumn]))
     .filter((id) => !keep.has(id))
   if (stale.length > 0) await sb.from(table).delete().eq("user_id", userId).in(idColumn, stale)
