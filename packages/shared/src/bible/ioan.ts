@@ -97,14 +97,14 @@ export const IOAN: BibleBook = {
               transliteration: "tekna Theou",
               language: "greaca",
               meaning:
-                "copii ai lui Dumnezeu. Expresia filiației date prin har."
+                "copii ai lui Dumnezeu. Expresia filiatiei date prin har."
             },
             {
               original: "ἐκ θεοῦ",
               transliteration: "ek Theou",
               language: "greaca",
               meaning:
-                "din Dumnezeu. Originea noii nașteri nu este omeneasca, ci dumnezeiasca."
+                "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiasca."
             }
           ],
           crossRefs: [
@@ -243,6 +243,130 @@ export const IOAN: BibleBook = {
       ],
       prayer:
         "Doamne Isuse Hristoase, Cuvant vesnic al Tatalui, Iti multumim ca nu ai ramas departe de noi, ci Te-ai facut trup si ai locuit printre noi, plin de har si de adevar.\n\nLumina Ta lumineaza si astazi in intuneric. Lasa lumina aceasta sa intre si in noi, acolo unde inca ne ascundem, unde inca ne temem si unde inca nu vedem limpede.\n\nInvata-ne sa Te privim ca pe Mielul lui Dumnezeu, nu doar ca pe un Invatator mare. Rupe in noi orice nadejde pusa in noi insine si fa-ne sa venim iarasi la Tine, cu mainile goale si cu inima deschisa.\n\nSi cum ai chemat pe cei dintai ucenici cu vorba blanda: Veniti de vedeti, cheama-ne si pe noi la o ramanere adevarata cu Tine. Amin."
+    },
+    {
+      id: "ioan-2",
+      bookId: "ioan",
+      number: 2,
+      title: "Ioan 2 — Slava din Cana si ravna pentru casa Tatalui",
+      summary:
+        "Capitolul al doilea arata inceputul semnelor Domnului Isus la nunta din Cana, apoi curatirea Templului si deosebirea dintre credinta trezita de semne si cunoasterea deplina a inimii omului pe care o are El.",
+      literaryContext:
+        "Dupa chemarea celor dintai ucenici, Ioan incepe sa aseze semnele Domnului Isus. Capitolul sta in trei miscari. Mai intai, la Cana, slava Lui se arata in taina unui sat si in bucuria unei case. Apoi, la Ierusalim, aceeasi slava se arata cu putere si curatie in Templu. La sfarsit, Ioan pune o observatie scurta si grea: multi cred in Numele Lui vazand semnele, dar Isus stie ce este in om. Capitolul leaga astfel semnul, casa Tatalui si inima omului.",
+      historicalContext:
+        "Nunta era una dintre cele mai mari bucurii ale lumii iudaice, iar rusinea lipsei la masa cadea greu asupra casei. Vasele de piatra pomenite de Ioan tin de curatirile iudaice, iar curatirea Templului se petrece in apropierea Pastelor, cand Ierusalimul era plin. Curtea Templului ajunsese loc de vanzare si schimb de bani pentru jertfe si moneda. In acest cadru, Domnul Isus Se descopera atat ca aducator al bucuriei curate, cat si ca Domn al casei Tatalui Sau.",
+      status: "in_review",
+      units: [
+        {
+          id: "ioan-2-1-12",
+          ref: "Ioan 2:1-12",
+          heading: "Inceputul semnelor in Cana",
+          text:
+            "A treia zi s-a facut o nunta in Cana din Galileea. Mama lui Isus era acolo. Si la nunta a fost chemat si Isus cu ucenicii Lui. Cand s-a ispravit vinul, mama lui Isus I-a zis: \"Nu mai au vin\". Isus i-a raspuns: \"Femeie, ce am a face Eu cu tine? Nu Mi-a venit inca ceasul.\" Mama lui a zis slugilor: \"Sa faceti orice va va zice\". Si acolo erau sase vase de piatra, puse dupa obiceiul de curatire al iudeilor; si in fiecare vas incapeau cate doua sau trei vedre. Isus le-a zis: \"Umpleti vasele acestea cu apa\". Si le-au umplut pana sus. \"Scoateti acum\", le-a zis El, \"si aduceti nunului\". Si i-au adus. Nunul, dupa ce a gustat apa facuta vin (el nu stia de unde vine vinul acesta, slugile insa, care scosesera apa, stiau), a chemat pe mire si i-a zis: \"Orice om pune la masa intai vinul cel bun si, dupa ce oamenii au baut bine, atunci pune pe cel mai putin bun, dar tu ai tinut vinul cel bun pana acum\". Acest inceput al semnelor Lui l-a facut Isus in Cana din Galileea. El Si-a aratat slava Sa, si ucenicii Lui au crezut in El. Dupa aceea, S-a pogorat la Capernaum, impreuna cu mama, fratii si ucenicii Lui si acolo n-au ramas multe zile.",
+          teaching:
+            "Sa luam bine seama unde incepe Ioan semnele Domnului Isus. Nu in palat, nu in mijlocul unei dezbateri, ci la o nunta. Evanghelia nu intra in lume ca sa usuce bucuria curata a omului, ci sa o curateasca si sa o umple de slava lui Dumnezeu.\n\nApoi vine lipsa. Nu mai au vin. Se cuvine sa observam ca semnul acesta nu este facut pentru spectacol, ci in miezul unei nevoi care ar fi adus rusine unei case. Domnul vede nevoia omeneasca si nu o dispretuieste. Dar tot textul ne pazeste sa nu coboram semnul la un simplu ajutor social ori la o reteta pentru confortul nostru. Ioan spune limpede: acesta a fost inceputul semnelor Lui si prin el Si-a aratat slava.\n\nCuvintele spuse mamei Sale trebuie citite cu evlavie si cu masura. Domnul nu o cinsteste mai putin, dar arata ca lucrarea Lui nu este condusa nici de apropierea de familie, nici de presiunea clipei, ci de ceasul hotarat de Tatal. In Evanghelia aceasta, ceasul Lui merge spre cruce si spre slava.\n\nSi ia aminte la vorba mamei Lui catre slugi: Sa faceti orice va va zice. Este una dintre cele mai simple si mai curate chemari la ascultare din toata Scriptura. Acolo incepe si minunea: nu in zgomotul multimii, ci in ascultarea celor care umplu vasele pana sus.\n\nLa urma, Ioan spune ca ucenicii au crezut in El. Nu inseamna ca pana atunci nu avusesera niciun fel de credinta, ci ca prin semnul acesta credinta lor a fost adancita. Asa lucreaza si Domnul cu ai Sai: arata slava Lui pe rand, ca sa-i aseze mai adanc in incredere.",
+          words: [
+            {
+              original: "σημεῖον",
+              transliteration: "semeion",
+              language: "greaca",
+              meaning:
+                "semn. La Ioan, nu minune goala, ci lucrare care arata cine este Isus."
+            },
+            {
+              original: "ὥρα",
+              transliteration: "hora",
+              language: "greaca",
+              meaning:
+                "ceasul. Vremea hotarata a lucrarii si a slavei lui Hristos."
+            },
+            {
+              original: "δόξα",
+              transliteration: "doxa",
+              language: "greaca",
+              meaning:
+                "slava. Frumusetea si greutatea dumnezeiasca aratate in Fiul."
+            }
+          ],
+          crossRefs: [
+            "Ioan 1:14",
+            "Ioan 7:30",
+            "Ioan 19:26-27",
+            "Apocalipsa 19:7-9"
+          ],
+          forYourHeart:
+            "Domnul Isus poate lucra si in locul in care ti se pare ca a ramas numai rusinea unei lipse. Dar mai mult decat rezolvarea lipsei, El urmareste sa-Si arate slava si sa te aseze intr-o ascultare mai simpla si mai adanca."
+        },
+        {
+          id: "ioan-2-13-22",
+          ref: "Ioan 2:13-22",
+          heading: "Casa Tatalui Meu",
+          text:
+            "Pastile iudeilor erau aproape si Isus S-a suit la Ierusalim. In Templu a gasit pe cei ce vindeau boi, oi si porumbei si pe schimbatorii de bani sezand jos. A facut un bici de streanguri si i-a scos pe toti din Templu, impreuna cu oile si boii, a varsat banii schimbatorilor si le-a rasturnat mesele. Si a zis celor ce vindeau porumbei: \"Ridicati acestea de aici si nu faceti din casa Tatalui Meu o casa de negustorie.\" Ucenicii Lui si-au adus aminte ca este scris: \"Ravna pentru casa Ta Ma mananca pe Mine\". Iudeii au luat cuvantul si I-au zis: \"Prin ce semn ne arati ca ai putere sa faci astfel de lucruri?\" Drept raspuns, Isus le-a zis: \"Stricati templul acesta, si in trei zile il voi ridica.\" Iudeii au zis: \"Au trebuit patruzeci si sase de ani ca sa se zideasca templul acesta, si Tu il vei ridica in trei zile?\" Dar El le vorbea despre templul trupului Sau. Tocmai de aceea, cand a inviat din morti, ucenicii Lui si-au adus aminte ca le spusese vorbele acestea si au crezut Scriptura si cuvintele pe care le spusese Isus.",
+          teaching:
+            "Ia aminte la schimbarea de tablou. Din bucuria unei nunti ajungem la curtile Templului. Acelasi Domn care a umplut lipsa unei case este si Domnul care curata casa Tatalui Sau. Harul Lui nu inseamna nepasare fata de profanare.\n\nSe cuvine sa fim cinstiti cu textul. Mania aceasta nu este capriciu, nici iesire necontrolata. Este ravna sfanta pentru locul in care Dumnezeu trebuia cinstit, nu vandut. Ceea ce trebuia sa ajute inchinarea ajunsese sa o acopere. Si aceasta ramane o cercetare pentru orice vreme: lucrurile religioase se pot inmulti pana acopera pe Dumnezeu Insusi.\n\nApoi ia aminte la vorba: casa Tatalui Meu. Domnul Isus nu Se poarta aici ca un reformator oarecare, ci ca Fiul. Tocmai de aceea cererea de semn nu este nevinovata. Ei nu vad sfintenia casei, ci se impiedica de autoritatea Fiului.\n\nRaspunsul Lui merge mai adanc decat au inteles cei de fata: Stricati templul acesta, si in trei zile il voi ridica. Ioan insusi ne pazeste de orice ratacire spunand ca El vorbea despre templul trupului Sau. Cu alte cuvinte, adevarata intalnire dintre Dumnezeu si om nu se va mai odihni in ziduri, ci in Persoana Fiului care va muri si va invia.\n\nUcenicii au inteles deplin abia dupa inviere. Si aici se cuvine sa luam mangaie-re. Sunt cuvinte ale Domnului pe care le auzim acum fara sa le putem purta pe deplin. Dar dupa ce trecem prin cruce si inviere, lumina lor se aseaza altfel in noi.",
+          words: [
+            {
+              original: "ζῆλος",
+              transliteration: "zelos",
+              language: "greaca",
+              meaning:
+                "ravna. Foc sfant pentru onoarea lui Dumnezeu."
+            },
+            {
+              original: "ναός",
+              transliteration: "naos",
+              language: "greaca",
+              meaning:
+                "templu. In vorba Domnului de aici, Ioan arata ca se refera la trupul Sau."
+            }
+          ],
+          crossRefs: [
+            "Psalmul 69:9",
+            "Matei 21:12-13",
+            "Ioan 1:14",
+            "Ioan 14:19",
+            "1 Corinteni 3:16"
+          ],
+          forYourHeart:
+            "Domnul Isus nu vine doar sa-ti aline lipsurile, ci si sa curete ce a ajuns negustorie in locul inchinarii. Harul care mangaie este acelasi har care rasturna mesele inimii atunci cand casa Tatalui a fost umpluta cu altceva."
+        },
+        {
+          id: "ioan-2-23-25",
+          ref: "Ioan 2:23-25",
+          heading: "El stia ce este in om",
+          text:
+            "Pe cand era Isus in Ierusalim, la Praznicul Pastelor, multi au crezut in Numele Lui, caci vedeau semnele pe care le facea. Dar Isus nu Se incredea in ei, pentru ca ii cunostea pe toti. Si n-avea trebuinta sa-I faca cineva marturisiri despre niciun om, fiindca El Insusi stia ce este in om.",
+          teaching:
+            "Sa nu trecem cu graba peste aceste trei versete, fiindca ele sunt grele. Multi au crezut in Numele Lui, vazand semnele. Si totusi Isus nu Se incredea in ei. Ioan foloseste aproape acelasi cuvant pentru credinta lor si pentru increderea pe care El nu Si-o pune in ei. Se vede astfel ca nu orice miscare a omului spre Isus este inca predare adanca a inimii.\n\nSe cuvine sa fim cinstiti cu textul si cu noi insine. Exista o credinta starnita de uimire, de folosul primit ori de puterea vazuta, care inca nu a ajuns la zdrobirea adevarata inaintea Fiului. Domnul nu dispretuieste omul aflat la inceput, dar nici nu se lasa inselat de entuziasmul de suprafata.\n\nApoi vine una dintre cele mai patrunzatoare propozitii despre El: stia ce este in om. Nu doar ce spune omul, nici numai ce arata in clipa aceea, ci ce este in om. De aceea Evanghelia nu se sprijina pe impresia pe care o lasam noi inaintea Lui. Ea se sprijina pe faptul ca El ne cunoaste mai adanc decat ne cunoastem noi si totusi cheama la Sine.",
+          words: [
+            {
+              original: "πιστεύω",
+              transliteration: "pisteuo",
+              language: "greaca",
+              meaning:
+                "a crede, a se increde. Acelasi verb arata aici si credinta oamenilor, si faptul ca Isus nu Se incredea in ei."
+            },
+            {
+              original: "γινώσκω",
+              transliteration: "ginosko",
+              language: "greaca",
+              meaning:
+                "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie."
+            }
+          ],
+          crossRefs: [
+            "1 Samuel 16:7",
+            "Ioan 6:26",
+            "Ioan 16:30",
+            "Apocalipsa 2:23"
+          ],
+          forYourHeart:
+            "Domnul Isus nu Se lasa impresionat de masca omului, dar tocmai aici este si nadejdea ta. El stie ce este in tine mai bine decat oricine si totusi nu-ti inchide drumul spre El. Credinta adevarata incepe cand omul inceteaza sa mai joace un rol inaintea Lui."
+        }
+      ],
+      prayer:
+        "Doamne Isuse, Iti multumim ca inceputul semnelor Tale nu a fost spre slava omului, ci spre aratarea slavei Tale. Da-ne ochi sa vedem in toate lucrarile Tale nu doar folosul primit, ci cine esti Tu.\n\nCurateste-ne inima, ca sa nu facem nici din inchinare, nici din lucrurile sfinte o negustorie a intereselor noastre. Pazeste-ne sa nu ne ascundem dupa forme si sa nu alergam doar dupa semne.\n\nTu stii ce este in om. Cerceteaza-ne cu adevar si atrage-ne la o credinta mai adanca, mai curata si mai smerita. Amin."
     }
   ],
 }
