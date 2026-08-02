@@ -150,7 +150,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     verseRef: "Filipeni 4:6",
     verseText: "Nu vă îngrijorați de nimic, ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu, prin rugăciuni și cereri, cu mulțumiri.",
     meditation:
-      "„În orice lucru” desființează ideea că unele probleme sunt prea mici pentru Dumnezeu. Și „cu mulțumiri” schimbă tonul: nu vii ca la un birou de reclaţii. Grija dusă la El se preface în cerere; grija ținută în tine se preface în frică.",
+      "„În orice lucru” desființează ideea că unele probleme sunt prea mici pentru Dumnezeu. Și „cu mulțumiri” schimbă tonul: nu vii ca la un birou de reclamații. Grija dusă la El se preface în cerere; grija ținută în tine se preface în frică.",
     question: "Ce lucru ți se pare prea mic ca să-l spui în rugăciune?",
     prayer: "Doamne, Îți spun și lucrurile mici. Mulțumesc că asculți. Amin.",
     step: "Roagă-te azi pentru un lucru banal — o întâlnire, un drum, o factură.",
