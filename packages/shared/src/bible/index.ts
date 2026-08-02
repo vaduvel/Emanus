@@ -51,7 +51,8 @@ import { GENEZA_47 } from "./geneza47.js"
 import { GENEZA_48 } from "./geneza48.js"
 import { GENEZA_49 } from "./geneza49.js"
 import { GENEZA_50 } from "./geneza50.js"
-import { IOAN } from "./ioan.js"
+import { IOAN as IOAN_BASE } from "./ioan.js"
+import { IOAN_3 } from "./ioan3.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -108,6 +109,12 @@ export const GENEZA: BibleBook = {
     GENEZA_49,
     GENEZA_50,
   ],
+}
+
+/** Ioan, inceput cu primele capitole scrise. */
+export const IOAN: BibleBook = {
+  ...IOAN_BASE,
+  chapters: [...IOAN_BASE.chapters, IOAN_3],
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
