@@ -1,6 +1,7 @@
 import { BIBLE_TRANSLATION } from "@emanus/shared/bible/types"
 import type { BibleBook, BibleChapter, BibleStatus, BibleUnit, Testament, WordStudy } from "@emanus/shared/bible/types"
 import { readBibleCache, writeBibleCache } from "./bibleCache"
+import { onCloudUserChange, peekCloudUser } from "./cloudSession"
 import { getSupabase } from "./supabase"
 
 export const DEFAULT_BIBLE_TRANSLATION = BIBLE_TRANSLATION
@@ -42,13 +43,25 @@ let catalogMemory: BibleCatalogBook[] | null = null
 let catalogRequest: Promise<BibleCatalogBook[]> | null = null
 const chapterMemory = new Map<string, BibleChapter>()
 
+/**
+ * Cache-ul este izolat pe identitatea Supabase. Astfel, un capitol `in_review`
+ * citit de proprietar nu poate fi recuperat din IndexedDB după deconectare de
+ * un alt utilizator al aceluiași dispozitiv.
+ */
 function cachePrefix(): string {
-  return import.meta.env.DEV ? "editorial" : "public"
+  if (import.meta.env.DEV) return "editorial:dev"
+  return `account:${peekCloudUser()?.id ?? "public"}`
 }
 
 function chapterKey(bookId: string, chapter: number): string {
   return `${cachePrefix()}:chapter:${bookId}:${chapter}`
 }
+
+onCloudUserChange(() => {
+  catalogMemory = null
+  catalogRequest = null
+  chapterMemory.clear()
+})
 
 export function normalizeBibleSearch(value: string): string {
   return value
@@ -153,18 +166,16 @@ export async function loadBibleCatalog(force = false): Promise<BibleCatalogBook[
     }
     try {
       const remote = await fetchCatalog()
-      if (remote.length > 0 || !import.meta.env.DEV) {
-        catalogMemory = remote
-        await writeBibleCache(cacheKey, remote)
-        return remote
-      }
+      catalogMemory = remote
+      await writeBibleCache(cacheKey, remote)
+      return remote
     } catch {
-      if (!import.meta.env.DEV && cached) {
+      if (cached) {
         catalogMemory = cached
         return cached
       }
     }
-    catalogMemory = cached ?? []
+    catalogMemory = []
     return catalogMemory
   })()
   try {
@@ -225,36 +236,35 @@ async function loadEditorialChapter(bookId: string, chapter: number): Promise<Bi
 }
 
 export async function loadBibleChapter(bookId: string, chapter: number): Promise<BibleChapter | null> {
-  const key = `${bookId}:${chapter}`
-  const memory = chapterMemory.get(key)
-  if (memory) return memory
   const cacheKey = chapterKey(bookId, chapter)
+  const memory = chapterMemory.get(cacheKey)
+  if (memory) return memory
   if (import.meta.env.DEV) {
     const local = await loadEditorialChapter(bookId, chapter)
     if (local) {
-      chapterMemory.set(key, local)
+      chapterMemory.set(cacheKey, local)
       await writeBibleCache(cacheKey, local)
     }
     return local
   }
   const cached = await readBibleCache<BibleChapter>(cacheKey)
   if (!online() && cached) {
-    chapterMemory.set(key, cached)
+    chapterMemory.set(cacheKey, cached)
     return cached
   }
   try {
     const remote = await fetchChapter(bookId, chapter)
     if (remote) {
-      chapterMemory.set(key, remote)
+      chapterMemory.set(cacheKey, remote)
       await writeBibleCache(cacheKey, remote)
       return remote
     }
-    // Un raspuns gol primit online inseamna ca RLS nu mai publica acel capitol.
-    // Nu reinviem din cache un continut retras editorial.
+    // Dacă RLS nu mai permite capitolul identității curente, nu îl reînviem
+    // dintr-un cache vechi.
     if (online()) return null
   } catch {
     if (cached) {
-      chapterMemory.set(key, cached)
+      chapterMemory.set(cacheKey, cached)
       return cached
     }
   }
@@ -298,7 +308,7 @@ export async function searchBible(query: string, limit = 20): Promise<BibleSearc
       p_limit: limit,
     })
     if (!error) {
-      const hits = (data ?? []).map((row: Record<string, unknown>): BibleSearchHit => ({
+      return (data ?? []).map((row: Record<string, unknown>): BibleSearchHit => ({
         unitId: String(row.unit_id),
         bookId: String(row.book_id),
         bookName: String(row.book_name),
@@ -307,7 +317,6 @@ export async function searchBible(query: string, limit = 20): Promise<BibleSearc
         heading: String(row.heading),
         excerpt: String(row.excerpt),
       }))
-      return hits
     }
   }
   return []
