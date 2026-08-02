@@ -35,7 +35,7 @@ export const CARDS_DE_CE: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Habacuc a strigat «până când?» Și nu a fost mustrat pentru asta.",
     verseRef: "Habacuc 1:2",
-    verseText: "Până când voi striga către Tine, Doamne, fără s-ascultoș ti?",
+    verseText: "Până când voi striga către Tine, Doamne, fără s-asculți?",
     axis: "living_faith",
     needs: ["de_ce", "rugaciune_fara_raspuns"],
     background: "pergament-umbra",
