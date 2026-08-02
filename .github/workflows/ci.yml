@@ -21,25 +21,21 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
-      # Aici se opreste build-ul inainte sa ajunga in main, nu dupa.
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
-      # Lista explicita de typo-uri cunoscute trebuie sa ramana idempotenta.
       - name: Verifica typo-urile cunoscute
         run: pnpm check:typos
 
-      # Blocheaza ID-uri duplicate, promisiuni medicale/spirituale periculoase
-      # si pierderea formularilor de siguranta din cursurile sensibile.
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
-      # Niciun capitol biblic nu poate fi publicat fara nume si data in registrul cartii.
+      - name: Verifica continutul activ
+        run: pnpm check:active-content
+
       - name: Verifica aprobarea Bibliei explicate
         run: pnpm check:bible-publication
 
-      # Matei trebuie sa ramana complet, ordonat si cu protectiile editoriale intacte.
       - name: Verifica Biblia explicata Matei
         run: pnpm check:matei
 
