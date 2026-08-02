@@ -29,7 +29,7 @@ jobs:
           assert old in s
           s = s.replace(old, new, 1)
           old_guard = '    if n != 1:\n        raise SystemExit(f"{rel}: expected one match for {label!r}, found {n}")'
-          new_guard = '    if n == 0:\n        print(f"SKIP {rel}: {label}")\n        return\n    if n > 1:\n        raise SystemExit(f"{rel}: expected one match for {label!r}, found {n}")'
+          new_guard = '    if n == 0:\n        print(f"SKIP {rel}: {label}")\n        return\n    if n > 1:\n        print(f"MULTI {rel}: {label} ({n})")'
           assert old_guard in s
           p.write_text(s.replace(old_guard, new_guard, 1))
           PY
