@@ -71,6 +71,16 @@ const loadPsalmiSiDoliu: CourseLessonLoader = () =>
   import("./psalmiSiDoliu.js").then((module) => module.PSALMI_SI_DOLIU_LESSONS)
 const loadDependente: CourseLessonLoader = () =>
   import("./dependenteDistincte.js").then((module) => module.DEPENDENTE_DISTINCTE_LESSONS)
+const loadDumnezeuAdevar: CourseLessonLoader = () =>
+  import("./formareDumnezeuAdevar.js").then((module) => module.FORMARE_DUMNEZEU_ADEVAR_LESSONS)
+const loadInimaCaracter: CourseLessonLoader = () =>
+  import("./formareInimaCaracter.js").then((module) => module.FORMARE_INIMA_CARACTER_LESSONS)
+const loadIntelepciune: CourseLessonLoader = () =>
+  import("./formareIntelepciune.js").then((module) => module.FORMARE_INTELEPCIUNE_LESSONS)
+const loadUcenicieDragoste: CourseLessonLoader = () =>
+  import("./formareUcenicieDragoste.js").then((module) => module.FORMARE_UCENICIE_DRAGOSTE_LESSONS)
+const loadHristosSperanta: CourseLessonLoader = () =>
+  import("./formareHristosSperanta.js").then((module) => module.FORMARE_HRISTOS_SPERANTA_LESSONS)
 
 const COURSE_LOADERS: Readonly<Record<string, CourseLessonLoader>> = {
   doctrine_c2_har: loadBaseHar,
@@ -127,6 +137,21 @@ const COURSE_LOADERS: Readonly<Record<string, CourseLessonLoader>> = {
   dependenta_alcool: loadDependente,
   dependenta_droguri: loadDependente,
   dependenta_jocuri: loadDependente,
+  formare_atribute: loadDumnezeuAdevar,
+  formare_religie_inima: loadDumnezeuAdevar,
+  formare_inima: loadInimaCaracter,
+  formare_auzire: loadInimaCaracter,
+  formare_decizii: loadInimaCaracter,
+  formare_limba: loadInimaCaracter,
+  formare_timp_cu_dumnezeu: loadInimaCaracter,
+  formare_intelepciune: loadIntelepciune,
+  formare_ucenicie: loadUcenicieDragoste,
+  formare_ceidoisprezece: loadUcenicieDragoste,
+  formare_dragoste: loadUcenicieDragoste,
+  formare_cuvantul: loadHristosSperanta,
+  formare_cruce_inviere: loadHristosSperanta,
+  formare_pregatit_moarte: loadHristosSperanta,
+  formare_advent: loadHristosSperanta,
 }
 
 export async function loadLibraryCourseLessons(courseId: string): Promise<Lesson[]> {

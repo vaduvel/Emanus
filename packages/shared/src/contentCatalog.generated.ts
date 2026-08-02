@@ -3572,6 +3572,974 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     },
     {
+      "id": "lib_dumnezeu_adevar",
+      "title": "Dumnezeu și adevărul care schimbă",
+      "blurb": "Cine este Dumnezeu și de ce religia exterioară nu poate înlocui inima înnoită.",
+      "gated": false,
+      "courses": [
+        {
+          "id": "formare_atribute",
+          "title": "Cine este Dumnezeu: atributele Sale",
+          "forWhom": "Vrei să-L cunoști pe Dumnezeu din Scriptură, nu din proiecții, sloganuri sau frică.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "atribute_l1",
+            "atribute_l2",
+            "atribute_l3",
+            "atribute_l4",
+            "atribute_l5",
+            "atribute_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs3Uig4Klvtzbp4Wi9b0w7fg",
+          "lessons": [
+            {
+              "id": "atribute_l1",
+              "courseId": "formare_atribute",
+              "order": 1,
+              "title": "Creatorul și creatura",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Din veșnicie în veșnicie, Tu ești Dumnezeu.",
+                "ref": "Psalmul 90:2"
+              }
+            },
+            {
+              "id": "atribute_l2",
+              "courseId": "formare_atribute",
+              "order": 2,
+              "title": "El știe tot și mă cunoaște",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Doamne, Tu mă cercetezi de aproape și mă cunoști.",
+                "ref": "Psalmul 139:1"
+              }
+            },
+            {
+              "id": "atribute_l3",
+              "courseId": "formare_atribute",
+              "order": 3,
+              "title": "Neschimbător în caracter, viu în relație",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "La Tatăl luminilor nu este nici schimbare, nici umbră de mutare.",
+                "ref": "Iacov 1:17"
+              }
+            },
+            {
+              "id": "atribute_l4",
+              "courseId": "formare_atribute",
+              "order": 4,
+              "title": "Suveranitatea și rugăciunea",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dacă cerem ceva după voia Lui, ne ascultă.",
+                "ref": "1 Ioan 5:14"
+              }
+            },
+            {
+              "id": "atribute_l5",
+              "courseId": "formare_atribute",
+              "order": 5,
+              "title": "Dumnezeu nu are nevoie de noi",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "El dă tuturor viața, suflarea și toate lucrurile.",
+                "ref": "Faptele 17:25"
+              }
+            },
+            {
+              "id": "atribute_l6",
+              "courseId": "formare_atribute",
+              "order": 6,
+              "title": "Sfânt, drept și iubitor",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dreptatea și judecata sunt temelia scaunului Tău de domnie.",
+                "ref": "Psalmul 89:14"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_religie_inima",
+          "title": "Religie sau inimă schimbată",
+          "forWhom": "Ai activitate religioasă, dar vrei să verifici dacă există naștere din nou și rod real.",
+          "plannedLessons": 3,
+          "lessonIds": [
+            "religie_inima_l1",
+            "religie_inima_l2",
+            "religie_inima_l3"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs2ZTmhaSPXlbqFMqVQFkLBw; https://www.youtube.com/playlist?list=PLaPig5gEoOs3vXeqjv6eHt6Xb2kUUzvHW",
+          "lessons": [
+            {
+              "id": "religie_inima_l1",
+              "courseId": "formare_religie_inima",
+              "order": 1,
+              "title": "Masca religioasă",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Omul se uită la ceea ce izbește ochii, dar Domnul Se uită la inimă.",
+                "ref": "1 Samuel 16:7"
+              }
+            },
+            {
+              "id": "religie_inima_l2",
+              "courseId": "formare_religie_inima",
+              "order": 2,
+              "title": "Nicodim și nașterea din nou",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dacă un om nu se naște din nou, nu poate vedea Împărăția lui Dumnezeu.",
+                "ref": "Ioan 3:3"
+              }
+            },
+            {
+              "id": "religie_inima_l3",
+              "courseId": "formare_religie_inima",
+              "order": 3,
+              "title": "Semnul exterior și inima tăiată împrejur",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Tăierea împrejur este aceea a inimii, în duh, nu în slovă.",
+                "ref": "Romani 2:29"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lib_inima_caracter",
+      "title": "Inimă, caracter și alegeri",
+      "blurb": "Adevărul coboară în gânduri, motive, cuvinte, decizii și ritmul zilnic.",
+      "gated": false,
+      "courses": [
+        {
+          "id": "formare_inima",
+          "title": "Păzește-ți inima",
+          "forWhom": "Vrei să înțelegi ce produce reacțiile tale și cum lucrează Dumnezeu schimbarea lăuntrică.",
+          "plannedLessons": 4,
+          "lessonIds": [
+            "inima_l1",
+            "inima_l2",
+            "inima_l3",
+            "inima_l4"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs1yPKKPaZevYeelUXcbR7L_",
+          "lessons": [
+            {
+              "id": "inima_l1",
+              "courseId": "formare_inima",
+              "order": 1,
+              "title": "Ce numește Biblia «inimă»",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Păzește-ți inima mai mult decât orice, căci din ea ies izvoarele vieții.",
+                "ref": "Proverbe 4:23"
+              }
+            },
+            {
+              "id": "inima_l2",
+              "courseId": "formare_inima",
+              "order": 2,
+              "title": "Mintea hrănită cu adevăr",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Să vă prefaceți prin înnoirea minții voastre.",
+                "ref": "Romani 12:2"
+              }
+            },
+            {
+              "id": "inima_l3",
+              "courseId": "formare_inima",
+              "order": 3,
+              "title": "Conștiință sensibilă, slabă sau întinată",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Ținta poruncii este dragostea care vine dintr-o inimă curată și un cuget bun.",
+                "ref": "1 Timotei 1:5"
+              }
+            },
+            {
+              "id": "inima_l4",
+              "courseId": "formare_inima",
+              "order": 4,
+              "title": "Păzește izvoarele, nu doar aparența",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cărarea pe care mergi să fie netedă și toate căile tale să fie hotărâte.",
+                "ref": "Proverbe 4:26"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_auzire",
+          "title": "Auzi Cuvântul și rămâi",
+          "forWhom": "Auzi mult, dar vrei ca adevărul să prindă rădăcină și să reziste presiunii.",
+          "plannedLessons": 2,
+          "lessonIds": [
+            "auzire_l1",
+            "auzire_l2"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs2_X8mIwZ9Kb9jBvRSUF9d_",
+          "lessons": [
+            {
+              "id": "auzire_l1",
+              "courseId": "formare_auzire",
+              "order": 1,
+              "title": "Sămânța și pământul inimii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Ei aud Cuvântul, îl primesc și fac rod.",
+                "ref": "Marcu 4:20"
+              }
+            },
+            {
+              "id": "auzire_l2",
+              "courseId": "formare_auzire",
+              "order": 2,
+              "title": "Rămâi când ascultarea costă",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dacă rămâneți în Cuvântul Meu, sunteți în adevăr ucenicii Mei.",
+                "ref": "Ioan 8:31"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_decizii",
+          "title": "Decizii sub Cuvânt",
+          "forWhom": "Ai de ales și vrei să separi porunca, înțelepciunea, libertatea și responsabilitatea.",
+          "plannedLessons": 4,
+          "lessonIds": [
+            "decizii_l1",
+            "decizii_l2",
+            "decizii_l3",
+            "decizii_l4"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs3tHRwe8F7azwfAMS_bhkeW",
+          "lessons": [
+            {
+              "id": "decizii_l1",
+              "courseId": "formare_decizii",
+              "order": 1,
+              "title": "Ce valoare conduce alegerea",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea.",
+                "ref": "Psalmul 119:105"
+              }
+            },
+            {
+              "id": "decizii_l2",
+              "courseId": "formare_decizii",
+              "order": 2,
+              "title": "Asumare fără învinovățirea lui Dumnezeu",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nebunia omului îi sucește calea și apoi cârtește împotriva Domnului.",
+                "ref": "Proverbe 19:3"
+              }
+            },
+            {
+              "id": "decizii_l3",
+              "courseId": "formare_decizii",
+              "order": 3,
+              "title": "Poruncă, exemplu și libertate",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Toată Scriptura este insuflată de Dumnezeu și de folos pentru învățătură.",
+                "ref": "2 Timotei 3:16"
+              }
+            },
+            {
+              "id": "decizii_l4",
+              "courseId": "formare_decizii",
+              "order": 4,
+              "title": "Testul biblic al unei decizii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Orice faceți să faceți în Numele Domnului Iisus.",
+                "ref": "Coloseni 3:17"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_limba",
+          "title": "Limba care rănește și repară",
+          "forWhom": "Cuvintele tale au produs rană, conflict sau manipulare și vrei pocăință concretă.",
+          "plannedLessons": 4,
+          "lessonIds": [
+            "limba_l1",
+            "limba_l2",
+            "limba_l3",
+            "limba_l4"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs11TBFaDEw51q-BJA3KxT3d",
+          "lessons": [
+            {
+              "id": "limba_l1",
+              "courseId": "formare_limba",
+              "order": 1,
+              "title": "Cuvintele dau direcție",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Limba înțelepților aduce vindecare.",
+                "ref": "Proverbe 12:18"
+              }
+            },
+            {
+              "id": "limba_l2",
+              "courseId": "formare_limba",
+              "order": 2,
+              "title": "Toți greșim în vorbire",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Pune, Doamne, o strajă înaintea gurii mele.",
+                "ref": "Psalmul 141:3"
+              }
+            },
+            {
+              "id": "limba_l3",
+              "courseId": "formare_limba",
+              "order": 3,
+              "title": "Focul care scapă din control",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Niciun cuvânt stricat să nu vă iasă din gură, ci unul bun pentru zidire.",
+                "ref": "Efeseni 4:29"
+              }
+            },
+            {
+              "id": "limba_l4",
+              "courseId": "formare_limba",
+              "order": 4,
+              "title": "Mărturisește și repară prin cuvinte",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Lăsați-vă de minciună; fiecare să spună aproapelui său adevărul.",
+                "ref": "Efeseni 4:25"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_timp_cu_dumnezeu",
+          "title": "Timp cu Dumnezeu",
+          "forWhom": "Vrei o practică simplă de citire, rugăciune și ascultare, fără performanță religioasă.",
+          "plannedLessons": 2,
+          "lessonIds": [
+            "timp_dumnezeu_l1",
+            "timp_dumnezeu_l2"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs2sP_cxpmp_R4Y-7BZLfc4M",
+          "lessons": [
+            {
+              "id": "timp_dumnezeu_l1",
+              "courseId": "formare_timp_cu_dumnezeu",
+              "order": 1,
+              "title": "De ce cauți un loc liniștit",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Despărțiți de Mine nu puteți face nimic.",
+                "ref": "Ioan 15:5"
+              }
+            },
+            {
+              "id": "timp_dumnezeu_l2",
+              "courseId": "formare_timp_cu_dumnezeu",
+              "order": 2,
+              "title": "Citește, meditează, răspunde, ascultă",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Fiți împlinitori ai Cuvântului, nu numai ascultători.",
+                "ref": "Iacov 1:22"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lib_intelepciune_ucenicie",
+      "title": "Înțelepciune și ucenicie",
+      "blurb": "Cum citești viața sub frica Domnului și cum Îl urmezi pe Iisus în relații reale.",
+      "gated": false,
+      "courses": [
+        {
+          "id": "formare_intelepciune",
+          "title": "Cărțile înțelepciunii",
+          "forWhom": "Vrei să citești Proverbe, Eclesiastul și Iov fără promisiuni absolute sau diagnostice inventate.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "intelepciune_l1",
+            "intelepciune_l2",
+            "intelepciune_l3",
+            "intelepciune_l4",
+            "intelepciune_l5",
+            "intelepciune_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs10u1k2aKLyjL9_Y2f5cteK",
+          "lessons": [
+            {
+              "id": "intelepciune_l1",
+              "courseId": "formare_intelepciune",
+              "order": 1,
+              "title": "Proverbul nu este promisiune absolută",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Frica Domnului este începutul științei.",
+                "ref": "Proverbe 1:7"
+              }
+            },
+            {
+              "id": "intelepciune_l2",
+              "courseId": "formare_intelepciune",
+              "order": 2,
+              "title": "Frica Domnului și priceperea de a trăi",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Începutul înțelepciunii este frica de Domnul.",
+                "ref": "Proverbe 9:10"
+              }
+            },
+            {
+              "id": "intelepciune_l3",
+              "courseId": "formare_intelepciune",
+              "order": 3,
+              "title": "Eclesiastul și viața «sub soare»",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Teme-te de Dumnezeu și păzește poruncile Lui; aceasta este datoria oricărui om.",
+                "ref": "Eclesiastul 12:13"
+              }
+            },
+            {
+              "id": "intelepciune_l4",
+              "courseId": "formare_intelepciune",
+              "order": 4,
+              "title": "Iov și formula falsă a răsplătirii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Ce! Primim de la Dumnezeu binele și să nu primim și răul?",
+                "ref": "Iov 2:10"
+              }
+            },
+            {
+              "id": "intelepciune_l5",
+              "courseId": "formare_intelepciune",
+              "order": 5,
+              "title": "Prietenii care vorbesc greșit despre Dumnezeu",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cine răspunde fără să fi ascultat face o nebunie și își trage rușinea.",
+                "ref": "Proverbe 18:13"
+              }
+            },
+            {
+              "id": "intelepciune_l6",
+              "courseId": "formare_intelepciune",
+              "order": 6,
+              "title": "Răscumpărătorul viu și limita răspunsurilor",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Știu că Răscumpărătorul meu este viu.",
+                "ref": "Iov 19:25"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_ucenicie",
+          "title": "Ce înseamnă să fii ucenic",
+          "forWhom": "Nu vrei doar informații despre Iisus, ci o viață formată de chemarea, costul și misiunea Lui.",
+          "plannedLessons": 4,
+          "lessonIds": [
+            "ucenic_l1",
+            "ucenic_l2",
+            "ucenic_l3",
+            "ucenic_l4"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs1PQ6UKhaK0ppHYWADgV26h",
+          "lessons": [
+            {
+              "id": "ucenic_l1",
+              "courseId": "formare_ucenicie",
+              "order": 1,
+              "title": "Chemarea: vino după Mine",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Veniți după Mine și vă voi face pescari de oameni.",
+                "ref": "Marcu 1:17"
+              }
+            },
+            {
+              "id": "ucenic_l2",
+              "courseId": "formare_ucenicie",
+              "order": 2,
+              "title": "Costul și ascultarea",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dacă voiește cineva să vină după Mine, să se lepede de sine și să Mă urmeze în fiecare zi.",
+                "ref": "Luca 9:23"
+              }
+            },
+            {
+              "id": "ucenic_l3",
+              "courseId": "formare_ucenicie",
+              "order": 3,
+              "title": "Numai Iisus are cuvintele vieții",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Doamne, la cine să ne ducem? Tu ai cuvintele vieții veșnice.",
+                "ref": "Ioan 6:68"
+              }
+            },
+            {
+              "id": "ucenic_l4",
+              "courseId": "formare_ucenicie",
+              "order": 4,
+              "title": "Fă ucenici, nu admiratori ai tăi",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Duceți-vă și faceți ucenici din toate neamurile.",
+                "ref": "Matei 28:19"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_ceidoisprezece",
+          "title": "Cei doisprezece: oameni formați de Iisus",
+          "forWhom": "Vrei să vezi cum Iisus formează oameni diferiți, inclusiv prin eșec, corectare și slujire nevăzută.",
+          "plannedLessons": 5,
+          "lessonIds": [
+            "doisprezece_l1",
+            "doisprezece_l2",
+            "doisprezece_l3",
+            "doisprezece_l4",
+            "doisprezece_l5"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs31_ZG6k9AM7yP1M3iOzf08",
+          "lessons": [
+            {
+              "id": "doisprezece_l1",
+              "courseId": "formare_ceidoisprezece",
+              "order": 1,
+              "title": "Petru și Andrei: chemați și formați",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Tu ești Simon; tu te vei chema Chifa, care înseamnă Petru.",
+                "ref": "Ioan 1:42"
+              }
+            },
+            {
+              "id": "doisprezece_l2",
+              "courseId": "formare_ceidoisprezece",
+              "order": 2,
+              "title": "Iacov și Ioan: zelul transformat în slujire",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Fiul omului n-a venit să I se slujească, ci El să slujească și să-Și dea viața.",
+                "ref": "Marcu 10:45"
+              }
+            },
+            {
+              "id": "doisprezece_l3",
+              "courseId": "formare_ceidoisprezece",
+              "order": 3,
+              "title": "Filip, Natanael și Toma: întrebări aduse la Iisus",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Ferice de cei ce n-au văzut și au crezut.",
+                "ref": "Ioan 20:29"
+              }
+            },
+            {
+              "id": "doisprezece_l4",
+              "courseId": "formare_ceidoisprezece",
+              "order": 4,
+              "title": "Matei și ucenicii mai puțin văzuți",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "N-am venit să chem la pocăință pe cei neprihăniți, ci pe cei păcătoși.",
+                "ref": "Matei 9:13"
+              }
+            },
+            {
+              "id": "doisprezece_l5",
+              "courseId": "formare_ceidoisprezece",
+              "order": 5,
+              "title": "Simon și Iuda: zel supus sau inimă împărțită",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Doamne, la cine să ne ducem? Tu ai cuvintele vieții veșnice.",
+                "ref": "Ioan 6:68"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_dragoste",
+          "title": "Dragostea potrivit Scripturii",
+          "forWhom": "Vrei dragoste cu adevăr, jertfă și limite curate, nu sentimentalism, control sau acoperirea răului.",
+          "plannedLessons": 8,
+          "lessonIds": [
+            "dragoste_l1",
+            "dragoste_l2",
+            "dragoste_l3",
+            "dragoste_l4",
+            "dragoste_l5",
+            "dragoste_l6",
+            "dragoste_l7",
+            "dragoste_l8"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs3NwJ95Bd4vjufuTVcs0zzP",
+          "lessons": [
+            {
+              "id": "dragoste_l1",
+              "courseId": "formare_dragoste",
+              "order": 1,
+              "title": "Dragostea primește forma lui Hristos",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cum v-am iubit Eu, așa să vă iubiți și voi unii pe alții.",
+                "ref": "Ioan 13:34"
+              }
+            },
+            {
+              "id": "dragoste_l2",
+              "courseId": "formare_dragoste",
+              "order": 2,
+              "title": "Răbdare și bunătate fără invidie",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dragostea este îndelung răbdătoare, este plină de bunătate și nu pizmuiește.",
+                "ref": "1 Corinteni 13:4"
+              }
+            },
+            {
+              "id": "dragoste_l3",
+              "courseId": "formare_dragoste",
+              "order": 3,
+              "title": "Dragostea nu se laudă și nu se umflă",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "În smerenie, fiecare să privească pe altul mai presus de el însuși.",
+                "ref": "Filipeni 2:3"
+              }
+            },
+            {
+              "id": "dragoste_l4",
+              "courseId": "formare_dragoste",
+              "order": 4,
+              "title": "Nu caută folosul său",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Fiecare să se uite nu la foloasele lui, ci și la foloasele altora.",
+                "ref": "Filipeni 2:4"
+              }
+            },
+            {
+              "id": "dragoste_l5",
+              "courseId": "formare_dragoste",
+              "order": 5,
+              "title": "Dragostea nu acoperă răul ca să-l păstreze",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dragostea nu se bucură de nelegiuire, ci se bucură de adevăr.",
+                "ref": "1 Corinteni 13:6"
+              }
+            },
+            {
+              "id": "dragoste_l6",
+              "courseId": "formare_dragoste",
+              "order": 6,
+              "title": "Se bucură de adevăr și dreptate",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Credincioși adevărului, în dragoste, să creștem în toate privințele în Hristos.",
+                "ref": "Efeseni 4:15"
+              }
+            },
+            {
+              "id": "dragoste_l7",
+              "courseId": "formare_dragoste",
+              "order": 7,
+              "title": "Rabdă, crede și speră fără orbire",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dacă este cu putință și cât atârnă de voi, trăiți în pace cu toți oamenii.",
+                "ref": "Romani 12:18"
+              }
+            },
+            {
+              "id": "dragoste_l8",
+              "courseId": "formare_dragoste",
+              "order": 8,
+              "title": "Dragostea nu cade",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Rămân credința, nădejdea și dragostea; dar cea mai mare dintre ele este dragostea.",
+                "ref": "1 Corinteni 13:13"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lib_hristos_speranta",
+      "title": "Hristos și speranța Evangheliei",
+      "blurb": "Persoana Fiului, crucea, învierea și speranța care schimbă felul în care trăim și murim.",
+      "gated": false,
+      "courses": [
+        {
+          "id": "formare_cuvantul",
+          "title": "Cuvântul veșnic",
+          "forWhom": "Vrei să vezi din Ioan cine este Iisus, dincolo de versiunile micșorate construite de oameni.",
+          "plannedLessons": 2,
+          "lessonIds": [
+            "cuvantul_l1",
+            "cuvantul_l2"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs3ZGGbnVHkhHRwVVT_KtFhG",
+          "lessons": [
+            {
+              "id": "cuvantul_l1",
+              "courseId": "formare_cuvantul",
+              "order": 1,
+              "title": "Cuvântul era Dumnezeu",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cuvântul S-a făcut trup și a locuit printre noi, plin de har și de adevăr.",
+                "ref": "Ioan 1:14"
+              }
+            },
+            {
+              "id": "cuvantul_l2",
+              "courseId": "formare_cuvantul",
+              "order": 2,
+              "title": "Cine este Iisus cu adevărat",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Aceste lucruri au fost scrise ca să credeți că Iisus este Hristosul, Fiul lui Dumnezeu.",
+                "ref": "Ioan 20:31"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_cruce_inviere",
+          "title": "Crucea și învierea",
+          "forWhom": "Vrei să înțelegi de ce a murit Iisus, ce înseamnă mormântul gol și cum restaurează El.",
+          "plannedLessons": 6,
+          "lessonIds": [
+            "cruce_l1",
+            "cruce_l2",
+            "cruce_l3",
+            "cruce_l4",
+            "cruce_l5",
+            "cruce_l6"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs3fhMOZRbI7nb8aZgsrQvbx; https://www.youtube.com/playlist?list=PLaPig5gEoOs2X7GpYWaDmD1n0-VGFDwU9",
+          "lessons": [
+            {
+              "id": "cruce_l1",
+              "courseId": "formare_cruce_inviere",
+              "order": 1,
+              "title": "De ce crucea",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Fiul omului a venit să-Și dea viața ca răscumpărare pentru mulți.",
+                "ref": "Marcu 10:45"
+              }
+            },
+            {
+              "id": "cruce_l2",
+              "courseId": "formare_cruce_inviere",
+              "order": 2,
+              "title": "Jertfa care împacă",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dumnezeu Își arată dragostea față de noi prin faptul că Hristos a murit pentru noi pe când eram păcătoși.",
+                "ref": "Romani 5:8"
+              }
+            },
+            {
+              "id": "cruce_l3",
+              "courseId": "formare_cruce_inviere",
+              "order": 3,
+              "title": "Mormântul gol",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Nu este aici, ci a înviat. Aduceți-vă aminte ce v-a spus.",
+                "ref": "Luca 24:6"
+              }
+            },
+            {
+              "id": "cruce_l4",
+              "courseId": "formare_cruce_inviere",
+              "order": 4,
+              "title": "Martorii învierii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Dumnezeu L-a înviat pe acest Iisus, și noi toți suntem martori ai Lui.",
+                "ref": "Faptele Apostolilor 2:32"
+              }
+            },
+            {
+              "id": "cruce_l5",
+              "courseId": "formare_cruce_inviere",
+              "order": 5,
+              "title": "Drumul spre Emaus",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "A început de la Moise și de la toți prorocii și le-a tâlcuit ce era cu privire la El în toate Scripturile.",
+                "ref": "Luca 24:27"
+              }
+            },
+            {
+              "id": "cruce_l6",
+              "courseId": "formare_cruce_inviere",
+              "order": 6,
+              "title": "Petru restaurat și trimis",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Doamne, Tu toate le știi; știi că Te iubesc. Iisus i-a zis: «Paște oile Mele.»",
+                "ref": "Ioan 21:17"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_pregatit_moarte",
+          "title": "Pregătit pentru moarte și înviere",
+          "forWhom": "Te confrunți cu frica morții și vrei siguranță, pregătire responsabilă și speranță biblică.",
+          "plannedLessons": 3,
+          "lessonIds": [
+            "moarte_pregatire_l1",
+            "moarte_pregatire_l2",
+            "moarte_pregatire_l3"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs1heE3sm-5O3LkV-Qr2j4Fk",
+          "lessons": [
+            {
+              "id": "moarte_pregatire_l1",
+              "courseId": "formare_pregatit_moarte",
+              "order": 1,
+              "title": "Siguranța mântuirii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Cine are pe Fiul are viața; cine n-are pe Fiul lui Dumnezeu n-are viața.",
+                "ref": "1 Ioan 5:12"
+              }
+            },
+            {
+              "id": "moarte_pregatire_l2",
+              "courseId": "formare_pregatit_moarte",
+              "order": 2,
+              "title": "Frica de moarte",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Chiar dacă ar fi să umblu prin valea umbrei morții, nu mă tem de niciun rău, căci Tu ești cu mine.",
+                "ref": "Psalmii 23:4"
+              }
+            },
+            {
+              "id": "moarte_pregatire_l3",
+              "courseId": "formare_pregatit_moarte",
+              "order": 3,
+              "title": "Trupul, înmormântarea și speranța învierii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Trupul este semănat în putrezire și înviază în neputrezire.",
+                "ref": "1 Corinteni 15:42"
+              }
+            }
+          ]
+        },
+        {
+          "id": "formare_advent",
+          "title": "Adventul în Scriptură",
+          "forWhom": "Vrei să citești promisiunea și nașterea lui Hristos în context, fără decor gol sau speculații.",
+          "plannedLessons": 4,
+          "lessonIds": [
+            "advent_l1",
+            "advent_l2",
+            "advent_l3",
+            "advent_l4"
+          ],
+          "state": "live",
+          "source": "Scriptura; conținut original Emanus; documentare tematică Allen Nolan: https://www.youtube.com/playlist?list=PLaPig5gEoOs004kn727twWYcu94ZXX4vD; https://www.youtube.com/playlist?list=PLaPig5gEoOs3XL2TFrrGrJLoMBG13qQBY",
+          "lessons": [
+            {
+              "id": "advent_l1",
+              "courseId": "formare_advent",
+              "order": 1,
+              "title": "Isaia, Ahaz și semnul lui Emanuel",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Iată, fecioara va rămâne însărcinată, va naște un fiu și-i va pune numele Emanuel.",
+                "ref": "Isaia 7:14"
+              }
+            },
+            {
+              "id": "advent_l2",
+              "courseId": "formare_advent",
+              "order": 2,
+              "title": "Copilul promis și Împăratul păcii",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Un Copil ni S-a născut, un Fiu ni S-a dat, iar domnia va fi pe umărul Lui.",
+                "ref": "Isaia 9:6"
+              }
+            },
+            {
+              "id": "advent_l3",
+              "courseId": "formare_advent",
+              "order": 3,
+              "title": "Maria, har și ascultare",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Iată roaba Domnului; facă-mi-se după cuvintele tale.",
+                "ref": "Luca 1:38"
+              }
+            },
+            {
+              "id": "advent_l4",
+              "courseId": "formare_advent",
+              "order": 4,
+              "title": "Cuvântul S-a făcut trup",
+              "estMinutes": 12,
+              "memoryVerse": {
+                "text": "Astăzi, în cetatea lui David, vi S-a născut un Mântuitor, care este Hristos, Domnul.",
+                "ref": "Luca 2:11"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "lib_identitate_vocatie",
       "title": "Identitate, trup și vocație",
       "blurb": "Om creat după chipul lui Dumnezeu și ucenic al lui Iisus înaintea rolurilor.",
@@ -5863,5 +6831,5 @@ export const GENERATED_CONTENT_MANIFEST = {
       ]
     }
   ],
-  "contentVersion": "43bbcea85564873a"
+  "contentVersion": "8d5e781ba943d334"
 } as const
