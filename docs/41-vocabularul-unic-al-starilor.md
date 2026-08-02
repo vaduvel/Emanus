@@ -1,7 +1,7 @@
 # 41. Vocabularul unic al starilor
 
-Hotarare de lucru. Aplicatia are astazi DOUA vocabulare ale durerii, care nu se
-vorbesc intre ele:
+Hotarare de lucru. Aplicatia avea DOUA vocabulare ale durerii, care nu se
+vorbeau intre ele:
 
 1. Cele 7 stari din check-in (`MessageMood` in `packages/shared/src/messageCards.ts`):
    obosit, speriat, vinovat, in_asteptare, singur, recunoscator, fara_directie.
@@ -13,6 +13,9 @@ viata. Omul care si-a ingropat tatal, cand apasa la check-in, nu are ce alege.
 
 **Hotararea: un singur vocabular pentru toata aplicatia.** Aceleasi stari aleg
 pergamentul, pornesc cautarea in Biblia explicata si stau la check-in.
+
+**Stare: pus in lucru.** Vezi SS8 pentru ce s-a facut si pentru singura abatere
+de la ce scria aici la inceput.
 
 ---
 
@@ -31,14 +34,14 @@ nu e durere, dar are nevoie de un cuvant).
 | 6 | `patima_bautura` | Beau. Nu ma pot opri | durere | 8 |
 | 7 | `pofta` | Pofta care ma tine | durere | 8 |
 | 8 | `neiertare` | Nu pot sa iert in familie | durere | 12 |
-| 9 | `rusine` | Mi-e rusine de ce am facut | durere | 16 |
+| 9 | `vinovat` | Mi-e rusine de ce am facut | durere | 16 |
 | 10 | `frica_moarte` | Mi-e frica de moarte | durere | 8 |
 | 11 | `rugaciune_fara_raspuns` | Ma rog si nu simt nimic | durere | 10 |
 | 12 | `de_ce` | De ce a ingaduit Dumnezeu | durere | 10 |
 | 13 | `ocult` | Am umblat cu descantece | durere | 6 |
 | 14 | `copil_departat` | Copilul meu s-a departat | durere | 10 |
 | 15 | `singur` | Sunt singur | durere | 18 |
-| 16 | `frica` | Mi-e frica de ce vine | durere | 18 |
+| 16 | `speriat` | Mi-e frica de ce vine | durere | 18 |
 | 17 | `obosit` | Sunt obosit, nu mai pot | stare | 20 |
 | 18 | `fara_directie` | Nu stiu incotro | stare | 14 |
 | 19 | `in_asteptare` | Astept ceva si intarzie | stare | 12 |
@@ -55,10 +58,10 @@ zi, pergamentul se deschide cand doare.
 ### Cate stari se arata deodata
 
 Douazeci de butoane inseamna un perete. La check-in se arata **opt** (obosit,
-frica, singur, rusine, fara_directie, in_asteptare, recunoscator, plus cea mai
-des apasata de omul acela pana atunci), si dedesubt un rand: "altceva ma apasa".
-Acolo se deschid toate douazeci. In "Cand te doare, citeste" se arata toate,
-pentru ca acolo omul vine anume dupa durerea lui.
+speriat, singur, vinovat, fara_directie, in_asteptare, recunoscator, plus
+`doliu`), si dedesubt un rand: "altceva ma apasa". Acolo se deschid toate
+douazeci. In "Cand te doare, citeste" se arata toate, pentru ca acolo omul vine
+anume dupa durerea lui. Cele opt stau in cod pe `showAtCheckin` in `needs.ts`.
 
 ---
 
@@ -84,7 +87,7 @@ temelia. Un card se scrie NUMAI pe un verset real, iar trimiterea apare pe card
    1 Corinteni 6:19-20; 2 Timotei 2:22; 1 Ioan 2:16-17
 8. **neiertare** - Geneza 50:20; Matei 6:14-15; Matei 18:21-22; Luca 6:37;
    Romani 12:19; Efeseni 4:31-32; Coloseni 3:13
-9. **rusine** - Psalmul 34:5; Psalmul 103:12; Isaia 1:18; Isaia 61:7;
+9. **vinovat** - Psalmul 34:5; Psalmul 103:12; Isaia 1:18; Isaia 61:7;
    Luca 15:20; Romani 8:1; Romani 10:11; 1 Ioan 1:9
 10. **frica_moarte** - Psalmul 23:4; Ioan 11:25; 1 Corinteni 15:55-57;
     Filipeni 1:21; 2 Timotei 1:10; Evrei 2:14-15; Apocalipsa 1:17-18
@@ -98,7 +101,7 @@ temelia. Un card se scrie NUMAI pe un verset real, iar trimiterea apare pe card
     Luca 15:20; Fapte 16:31; Psalmul 126:5-6; 2 Petru 3:9
 15. **singur** - Deuteronom 31:8; Psalmul 68:6; Psalmul 139:7-10;
     Isaia 49:15-16; Ioan 14:18; Evrei 13:5; Matei 28:20
-16. **frica** - Psalmul 27:1; Psalmul 56:3; Isaia 41:10; Isaia 43:1-2;
+16. **speriat** - Psalmul 27:1; Psalmul 56:3; Isaia 41:10; Isaia 43:1-2;
     Matei 6:34; Ioan 14:27; 2 Timotei 1:7; 1 Ioan 4:18
 17. **obosit** - Exod 33:14; Psalmul 23:2-3; Psalmul 127:2; Isaia 40:29-31;
     Matei 11:28-30; Galateni 6:9; 1 Petru 5:7
@@ -111,62 +114,55 @@ temelia. Un card se scrie NUMAI pe un verset real, iar trimiterea apare pe card
 
 ---
 
-## 3. Unde suntem acum: 13 stari din 20 nu au NIMIC
+## 3. Unde suntem acum
 
-Cele 45 de carduri de azi, dupa mutarea pe vocabularul nou:
+La scrierea acestui document, treisprezece stari din douazeci nu aveau NICIUN
+card scris anume pentru ele, iar pe axa `relationships` exista UN singur card in
+tot fisierul (Psalmul 68:6), desi lunile 5 si 6 din devotional sunt tocmai
+iertarea si "ai tai".
 
-| Stare | Carduri acum | Lipsesc |
-|-------|--------------|---------|
-| obosit | 13 | 7 |
-| frica | 11 | 7 |
-| rusine | 12 | 4 |
-| singur | 11 | 7 |
-| fara_directie | 14 | 0 |
-| in_asteptare | 10 | 2 |
-| recunoscator | 4 | 6 |
-| doliu | 0 | 12 |
-| boala | 0 | 10 |
-| casa_rupta | 0 | 10 |
-| bani | 0 | 8 |
-| departe | 0 | 8 |
-| patima_bautura | 0 | 8 |
-| pofta | 0 | 8 |
-| neiertare | 0 | 12 |
-| frica_moarte | 0 | 8 |
-| rugaciune_fara_raspuns | 0 | 10 |
-| de_ce | 0 | 10 |
-| ocult | 0 | 6 |
-| copil_departat | 0 | 10 |
+**Aici a stat un tabel cu numarul de carduri pe fiecare stare. A fost scos
+anume.** Un numar scris de mana intr-un document imbatraneste in aceeasi zi in
+care cineva mai adauga un card, si atunci documentul incepe sa minta. Numarul
+adevarat se cere codului:
 
-Treisprezece stari din douazeci nu au niciun card scris anume pentru ele. Pe axa
-`relationships` exista astazi UN singur card in tot fisierul (Psalmul 68:6),
-desi lunile 5 si 6 din devotional sunt tocmai iertarea si "ai tai".
+```ts
+import { needCoverage, needsWithoutCards, duplicateCardIds } from "@emanus/shared"
+
+needCoverage()      // { need, label, have, target, missing } pentru toate cele 20
+needsWithoutCards() // starile ramase fara niciun card
+duplicateCardIds()  // id scris de doua ori in cele cinci fisiere
+```
 
 ### Ordinea scrierii
 
 1. **Intai golurile mari de durere**: doliu, neiertare, copil_departat,
-   casa_rupta, boala (54 de carduri). Acestea sunt durerile care duc omul la
-   aplicatie, si acum nu gaseste nimic.
-2. **Apoi legaturile si patimile**: pofta, patima_bautura, rusine (in plus),
-   de_ce, rugaciune_fara_raspuns.
-3. **La urma completarile**: bani, departe, frica_moarte, ocult, recunoscator,
-   plus intregirea starilor care stau deja bine.
+   casa_rupta, boala. Acestea sunt durerile care duc omul la aplicatie, si
+   atunci nu gasea nimic. **FACUT** - `messageCardsPierdere.ts`,
+   `messageCardsFamilie.ts`.
+2. **Apoi legaturile si patimile**: pofta, patima_bautura, de_ce,
+   rugaciune_fara_raspuns. **FACUT** - `messageCardsRobie.ts`,
+   `messageCardsTacere.ts`.
+3. **La urma completarile**: bani, departe, frica_moarte (FACUT), `ocult` (NU -
+   asteapta hotararea din SS7), `recunoscator` si intregirea starilor care stau
+   deja bine (DE FACUT).
 
 ---
 
-## 4. Mutarea celor 45 de carduri (nu se arunca niciunul)
+## 4. Mutarea celor 45 de carduri (nu s-a aruncat niciunul)
 
-Potrivirea de temelie intre vechi si nou:
+Potrivirea de temelie intre vechi si nou - id-urile vechi au ramas neatinse,
+vezi SS8:
 
 - `obosit` -> `obosit`
-- `speriat` -> `frica`
-- `vinovat` -> `rusine`
+- `speriat` -> `speriat`
+- `vinovat` -> `vinovat`
 - `singur` -> `singur`
 - `in_asteptare` -> `in_asteptare`
 - `recunoscator` -> `recunoscator`
 - `fara_directie` -> `fara_directie`
 
-Peste asta, aceste carduri primesc stari noi, pentru ca versetul lor le duce
+Peste asta, aceste carduri au primit stari noi, pentru ca versetul lor le duce
 acolo:
 
 | Card | Primeste in plus |
@@ -183,31 +179,39 @@ acolo:
 | `msg_toate_lucrurile` (Romani 8:28) | `de_ce` |
 | `msg_nu_te_las_orfan` (Ioan 14:18) | `doliu` |
 | `msg_tata_al_orfanilor` (Psalmul 68:6) | `casa_rupta` |
+| `msg_nimic_nu_desparte` (Romani 8:38-39) | `doliu`, `frica_moarte` |
+| `msg_nu_te_voi_lasa` (Evrei 13:5) | `departe` |
+| `msg_te_intaresc` (Isaia 41:10) | `boala` |
 
 ---
 
 ## 5. Ce se schimba in cod
 
-1. **Fisier nou** `packages/shared/src/needs.ts`:
-   `export type NeedId = ...` (cele 20) si `export const NEEDS: Need[]` cu
-   `{ id, label, kind: "durere" | "stare", showAtCheckin: boolean, order }`.
-   Acesta devine singurul loc unde traiesc etichetele.
-2. **`messageCards.ts`**: campul `moods: MessageMood[]` devine
-   `needs: NeedId[]`. `MessageMood` ramane o vreme ca nume vechi, ca sa nu se
-   rupa nimic, dar nu se mai foloseste la carduri noi.
-3. **`Bible.tsx`**: `NEVOI` nu-si mai tine etichetele lui. Ia `NEEDS` din
-   pachetul comun si pastreaza numai `cuvinte` (cuvintele de cautare in text),
-   mutate intr-o harta `NeedId -> string[]`.
-4. **`pickMessageCard`**: primeste `need?: NeedId` in loc de `mood?`.
-5. **`dailyGifts.ts`**: `lastMood()` / `setLastMood()` devin `lastNeed()` /
-   `setLastNeed()`.
-6. **Ocolirea repetarii se muta pe verset, nu pe card.** Acum se tin minte
-   `id`-uri de card. Daca sunt trei carduri pe Ioan 14:18, omul le poate primi
-   trei zile la rand si i se pare ca se repeta. Se tine minte `verseRef`.
+1. **Fisier nou** `packages/shared/src/needs.ts`: `NeedId` (cele 20) si
+   `NEEDS: Need[]` cu `{ id, label, kind, showAtCheckin, target,
+   needsCrisisLine }`. Acesta este singurul loc unde traiesc etichetele.
+   **FACUT.**
+2. **`messageCards.ts`**: campul `moods: MessageMood[]` a devenit
+   `needs: NeedId[]`. `MessageMood` ramane exportat ca nume vechi, ca sa nu se
+   rupa nimic, dar nu se mai foloseste la carduri noi. **FACUT.**
+3. **`Bible.tsx`**: `NEVOI` sa nu-si mai tina etichetele lui. Sa ia `NEEDS` din
+   pachetul comun si sa pastreze numai `cuvinte` (cuvintele de cautare in text),
+   mutate intr-o harta `NeedId -> string[]`. **DE FACUT** - fisierul este acum
+   in mana altui agent, care indreapta acolo sedilele. Se face dupa el, ca sa nu
+   ne calcam pe picioare.
+4. **`pickMessageCard`**: primeste `need?: NeedId`. **FACUT** - primeste si
+   `mood?`, ca `Mesaj.tsx` sa mearga mai departe neschimbat.
+5. **`dailyGifts.ts`**: `lastMood()` / `setLastMood()` -> `lastNeed()` /
+   `setLastNeed()`. **NU S-A FACUT, SI E BINE ASA** - vezi SS8.
+6. **Ocolirea repetarii se muta pe verset, nu pe card.** Daca sunt trei carduri
+   pe Ioan 14:18, omul le poate primi trei zile la rand si i se pare ca se
+   repeta. **FACUT** in `pickMessageCard` (`recentVerseRefs`); ramane de legat
+   in `dailyGifts.ts`, ca sa se tina minte si trimiterile, nu doar id-urile.
    `NO_REPEAT_DAYS` ramane 60.
-7. **Verificare noua** `check:pergament`: pica build-ul daca o stare are mai
-   putine carduri decat un prag (deocamdata 4) sau daca vreun card nu trece de
-   `isCardAnchored`.
+7. **Verificare noua** `check:pergament`: sa pice build-ul daca o stare are mai
+   putine carduri decat un prag (deocamdata 4), daca vreun card nu trece de
+   `isCardAnchored` sau daca `duplicateCardIds()` intoarce ceva. Uneltele exista
+   deja in cod; **scriptul e DE FACUT**.
 
 ---
 
@@ -227,14 +231,25 @@ acolo:
 4. **La durerile grele, fara graba spre incheiere fericita.** La `doliu`,
    `de_ce`, `rugaciune_fara_raspuns` se scrie si din Psalmii de plangere
    (13, 22, 88), nu numai din fagaduinte. Omul zdrobit simte cand e grabit.
+   La `de_ce` nu se da raspuns la "de ce": lui Iov nu i s-a dat unul, si cardul
+   nu incearca sa fie mai lamuritor decat Scriptura. Nu se scrie niciodata
+   "totul se intampla cu un rost", "Dumnezeu avea nevoie de el in cer" sau
+   "daca ai fi avut destula credinta".
 5. **Fundal dupa greutate**: `pergament-umbra` la durerile grele,
    `pergament-cald` la mangaiere si multumire, `pergament` la restul.
 6. **Aceeasi poarta de om ca la Biblie.** Sunt parafraze puse in gura lui
    Dumnezeu. La 45 se poate citi totul pe apucate; la 150, daca poarta nu se
-   pune de la inceput, nu se mai pune niciodata.
+   pune de la inceput, nu se mai pune niciodata. Fiecare fisier de carduri noi
+   poarta in antet "DE COLATIONAT": cardurile stau scrise, dar nu se publica
+   pana nu le citeste un om.
 7. **La `ocult`, `patima_bautura` si `frica_moarte`**: cardul nu tine loc de
    ajutor. Sub el sta si randul catre `/criza` si numerele 112, 116 111,
-   116 123 (docs/22-siguranta).
+   116 123 (docs/22-siguranta). In cod: `needsCrisisLine` in `needs.ts`.
+8. **La bani nu se fagaduieste imbogatire.** Nu se scrie din Maleahi 3:10 si nu
+   se atinge "evanghelia prosperitatii" (docs/14-carta-doctrinara).
+9. **La casa rupta nu se scrie niciun card care sa-i spuna omului ce ar fi
+   trebuit sa faca.** Cine deschide usa aceea e deja acuzat de toata lumea din
+   jur.
 
 ---
 
@@ -242,5 +257,33 @@ acolo:
 
 - Daca la `ocult` se scrie deloc in pergamente sau numai in Biblia explicata.
   Este singura stare unde un card scurt poate face mai mult rau decat bine.
+  **Pana la hotarare, `ocult` a ramas cu zero carduri, anume.**
 - Daca `casa_rupta` se desparte in doua ("sotul m-a lasat" si "eu am plecat"),
   pentru ca mangaierea nu este aceeasi.
+
+---
+
+## 8. Indreptare: id-urile `frica` si `rusine` nu s-au folosit
+
+Documentul acesta, asa cum a fost scris intai, cerea id-urile `frica` si
+`rusine`. La implementare nu s-au folosit. S-au pastrat cele sapte id-uri vechi,
+neatinse: `obosit`, `speriat`, `vinovat`, `in_asteptare`, `singur`,
+`recunoscator`, `fara_directie`. Trei motive, gasite la citirea codului:
+
+1. **`dailyGifts.ts` tine starea in `localStorage`, sub `emanus.daruri.v1`.** O
+   redenumire ar face nefolositor ce este salvat deja in telefonul omului. Omul
+   nu are de unde sti ca noi am schimbat un cuvant in cod, dar vede ca
+   aplicatia l-a uitat.
+2. **`scroll.ts` are `SCROLL_SECTIONS` cu un camp `mood: MessageMood`** - al
+   treilea vocabular, care ar fi trebuit mutat si el in aceeasi zi.
+3. **`Mesaj.tsx` cheama `pickMessageCard({ mood: lastMood() })`.** Neschimband
+   numele, ecranele nu s-au atins deloc.
+
+Ceea ce s-a schimbat este eticheta, nu id-ul: `speriat` se arata omului ca
+"mi-e frica de ce vine", iar `vinovat` ca "mi-e rusine de ce am facut". Omul
+vede cuvantul potrivit; codul isi tine numele vechi. Etichetele stau intr-un
+singur loc, in `needs.ts`, si de acolo le ia si check-in-ul, si pergamentul.
+
+`NeedId` este asadar un superset de 20 peste cele 7 vechi, iar `MessageMood`
+ramane un tip-subset derivat din `LEGACY_MOOD_IDS`, ca sa nu apara al patrulea
+vocabular.
