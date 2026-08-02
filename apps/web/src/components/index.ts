@@ -1,6 +1,5 @@
 export { Hero } from "./Hero"
 export type { NextLesson } from "./Hero"
-export { GrowthRadar } from "./GrowthRadar"
 export { JourneyPath } from "./JourneyPath"
 export type { JourneyModule } from "./JourneyPath"
 export { CheckIn } from "./CheckIn"
