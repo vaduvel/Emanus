@@ -6,6 +6,7 @@ import {
   Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
 } from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
+import { privateWritingNotice, truthfulPrivacyCopy } from "./privacy"
 
 export interface LessonResult { choicesMade: Record<string, string>; journal: string }
 const GUIDE_NAME = "Emanus"
@@ -120,7 +121,7 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
 }
 
 function GuideMsg({ icon: Glyph, text }: { icon: LucideIcon; text: string }) {
-  return <div className="msg msg--guide"><div className="msg__avatar"><Glyph size={18} strokeWidth={1.8} aria-hidden /></div><div className="msg__body"><span className="msg__name">{GUIDE_NAME}</span><div className="bubble">{text}</div></div></div>
+  return <div className="msg msg--guide"><div className="msg__avatar"><Glyph size={18} strokeWidth={1.8} aria-hidden /></div><div className="msg__body"><span className="msg__name">{GUIDE_NAME}</span><div className="bubble">{truthfulPrivacyCopy(text)}</div></div></div>
 }
 
 function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, pickedOptionId, pickedMoodId, quizAnswerIdx, onQuiz, journal, onJournal, onJournalDone, onExerciseDone, onMood, onPick }: {
@@ -143,7 +144,7 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
       return <button key={k} className={`ghost${cls}`} disabled={answered} onClick={() => onQuiz(k)}>{o.text}</button>
     })}</div>{answered && step.quiz?.explanation && <GuideMsg icon={Lightbulb} text={step.quiz.explanation} />}</>
   }
-  if (step.type === "journal") return <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici… (privat, doar pentru tine)" rows={4} /><div className="choice__opts"><button onClick={() => onJournalDone(false)}>Am terminat</button><button className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</>
+  if (step.type === "journal") return <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici…" rows={4} /><p className="muted">{privateWritingNotice()}</p><div className="choice__opts"><button onClick={() => onJournalDone(false)}>Am terminat</button><button className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</>
   if (step.type === "reward") return <GuideMsg icon={Sunrise} text={bubbles.map((b) => b.text).join(" ") || "Atât pentru azi. Revino când ești pregătit."} />
   return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={stepIcon(step.type)} text={b.text} />)}</>
 }
