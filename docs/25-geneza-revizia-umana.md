@@ -1,78 +1,102 @@
-# Geneza — ce mai rămâne de făcut, şi de cine
+# Geneza — revizia omului și registrul de publicare
 
-Tot ce se putea face fără om s-a făcut. Hârtia aceasta spune limpede ce a fost
-verificat de maşină şi ce aşteaptă ochi de om.
+Tot ce se putea verifica automat a fost pregătit. Publicarea rămâne legată de citirea și asumarea fiecărui capitol. Fișele de lucru sunt în `docs/28-fise-revizie-geneza.md`.
 
 ## Ce este încheiat
 
-- **Textul biblic.** Toate cele 289 de unităţi din Geneza 1–50 au textul adus din
-  ediţia Cornilescu 1924, cu diacriticele şi ortografia ei. Nu mai este scris
-  din memorie niciun cuvânt de Scriptură. Mecanismul: `scripts/rewrite-bible-text.py`.
-- **Colăţionarea.** `docs/22-colationare-geneza.md` a arătat 112 unităţi sub prag
-  şi 67 de citări prescurtate; înlocuirea din sursă le-a rezolvat pe toate.
-- **Greşelile de literă.** `scripts/fix-known-typos.py`, cu pază în CI.
-- **Cuvintele în limba originală.** Toate 196 sunt strânse în
-  `docs/24-cuvinte-in-limba-originala.md`. Cele găsite greşite au fost îndreptate
-  prin `scripts/fix-hebrew.py`:
-  - Geneza 2:25 — forma este de plural (*arummim*, goţi amândoi), nu *arum*;
-    jocul de cuvinte cu şiretenia şarpelui din 3:1 rămâne, dar acum e scris drept.
-  - Geneza 2:7 — suflarea de viaţă nu se spune numai despre Dumnezeu şi om;
-    la Geneza 7:22 se rosteşte şi despre vietăţi. Afirmaţia a fost îngustată.
-  - Geneza 4:10 — înţelesul pluralului „sângiuri" ca urmaşii nenăscuţi este
-    tâlcuire veche, nu spusă a textului. Acum se arată ca atare.
-  - Scrieri greşite ale cuvintelor: Geneza 10 (*toledot*, *ghibor*), 24 (*la-suah*),
-    44 (*qesura*).
-  - Transliterări nepotrivite între ele: *El Șadai*, *şalom*, *Menaşe*, *Șilo*, *Pereţ*.
+- Toate cele 289 de unități din Geneza 1–50 au textul biblic adus din ediția Cornilescu 1924.
+- Colăționarea, greșelile de literă, ghilimelele, repetițiile și build-ul sunt păzite automat.
+- Cele 196 de însemnări despre limba originală sunt strânse în `docs/24-cuvinte-in-limba-originala.md`.
+- Toate capitolele sunt astăzi `in_review`; niciunul nu este socotit aprobat prin simpla lui existență în cod.
 
-## Ce cere om, şi nu se poate altfel
+## Rânduiala publicării
 
-### 1. Cercetarea cuvintelor ebraice într-un lexicon
+1. Se citește capitolul după fișa din `docs/28`.
+2. Afirmațiile îndoielnice se păstrează, se arată limpede ca interpretări ori se scot.
+3. Cititorul își scrie numele și data pe rândul capitolului de mai jos și schimbă `[ ]` în `[x]`.
+4. Se rulează `python3 scripts/publica-geneza.py --chapters "1-11"` pentru lotul aprobat.
+5. `pnpm check:bible-publication` oprește orice capitol `published` fără aprobare și orice aprobare care nu a fost publicată.
 
-Cele 196 de afirmaţii au fost scrise din cunoştinţă şi curate de ce era vădit
-greşit. Nu au fost încă puse faţă în faţă cu un lexicon. **Ce nu se confirmă, se
-scoate** — nu se îndulceşte, se scoate. Lista e gata de lucru în `docs/24`.
+Aprobarea nu înseamnă că un om este socotit fără greșeală. Înseamnă că o persoană identificată a citit textul care va ajunge înaintea oamenilor și își asumă hotărârea editorială.
 
-Locurile care cer cea mai mare luare-aminte, fiind cele mai greu de sprijinit:
+## Registrul aprobărilor
 
-- afirmaţiile cu „cel dintâi loc din Scriptură" (Geneza 6:8 *hen*, 6:18 *berit*,
-  8:20 *mizbeah*, 14:19 *El Elion*, 48:15 *ha-roe*, 49:24 *Abir Iaakov*);
-- *Șilo* la 49:10, unde am dat trei citiri deodată;
-- *Tafnat-Paeneah* la 41:45, cuvânt egiptean, nu ebraic;
-- numărul de 110 ani ca viaţă împlinită la egipteni, îmbălsămarea de 40 de zile
-  şi jelirea de 70, la Geneza 50.
+Formatul rândurilor este citit de script și nu trebuie schimbat. Un rând nebifat nu este aprobare.
 
-### 2. Citirea teologică
+### Lotul I — Geneza 1–11
 
-50 de capitole, 289 de unităţi. **Niciun capitol nu trece pe `published` fără
-citire de om.** Toate poartă astăzi `status: "in_review"` şi arată în aplicaţie
-semnul „în revizie".
+- [ ] Geneza 1 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 2 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 3 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 4 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 5 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 6 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 7 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 8 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 9 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 10 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 11 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
 
-Se poate merge capitol cu capitol: se schimbă `status` în `"published"` în
-fişierul capitolului, iar semnul dispare de la sine.
+### Lotul II — Geneza 12–25
 
-Locurile de citit cu cea mai mare grijă, fiind cele unde textul atinge răni:
-Geneza 16:9, 19:8, 19:30-38, 22:9-10, 29:23-25, 30:14-21, 34, 38, 39:19-20,
-50:20. Pentru fiecare s-a scris cu măsură, dar măsura se cade cântărită de om.
+- [ ] Geneza 12 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 13 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 14 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 15 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 16 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 17 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 18 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 19 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 20 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 21 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 22 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 23 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 24 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 25 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
 
-### 3. Ce nu s-a lămurit şi trebuie hotărât
+### Lotul III — Geneza 26–36
 
-- **Diacriticele.** Textul biblic le are, explicaţiile nu. Neuniformitatea este
-  asumată deocamdată: era mai important ca textul sfânt să fie corect decât
-  potrivit la haină cu restul. De hotărât dacă se pun peste tot.
-- La Geneza 4:8 lipseşte din textul masoretic ce i-a zis Cain lui Abel;
-  am spus-o în explicaţie, dar se cade văzut dacă e spus destul de limpede.
+- [ ] Geneza 26 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 27 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 28 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 29 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 30 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 31 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 32 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 33 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 34 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 35 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 36 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
 
-## Datoria de recunoştinţă
+### Lotul IV — Geneza 37–50
 
-Ordinea unităţilor, opririle, observaţiile şi aplicaţiile urmează predica verset
-cu verset a păstorului Allen Nolan (Cornerstone Fellowship, Tahlequah). **Niciun
-rând nu este copiat** — cuvintele sunt scrise pentru Emanus. Păstorul Nolan nu a
-văzut şi nu a încuviinţat nimic din ce este aici; nu se poate spune nicăieri că
-ar fi făcut-o. La fiecare carte se pune notă de mulţumire.
+- [ ] Geneza 37 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 38 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 39 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 40 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 41 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 42 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 43 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 44 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 45 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 46 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 47 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 48 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 49 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
+- [ ] Geneza 50 — aprobat de: NENUMIT; data: AAAA-LL-ZZ
 
-## Ce urmează după Geneza
+## Cercetări care cer cea mai mare luare-aminte
 
-Ioan, apoi Matei, apoi părţile despre Pavel din Fapte; mai departe Levitic,
-Proverbe, Isaia; Apocalipsa la urmă. Pentru fiecare carte nouă, textul biblic se
-aduce de la început din sursă (`wordproject.org/bibles/ro/<NN>/<cap>.htm`), nu
-din memorie.
+- Afirmațiile despre „cel dintâi loc din Scriptură”: Geneza 6:8 `hen`, 6:18 `berit`, 8:20 `mizbeah`, 14:19 `El Elion`, 48:15 `ha-roe`, 49:24 `Abir Iaakov`.
+- Cele trei citiri ale lui `Șilo` la 49:10.
+- `Tafnat-Paeneah` la 41:45, cuvânt egiptean.
+- 110 ani, îmbălsămarea de 40 de zile, jelirea de 70 de zile și cele șapte zile de la Geneza 50.
+- La Geneza 4:8, textul masoretic nu păstrează cuvintele spuse de Cain lui Abel.
+
+## Hotărârea despre diacritice
+
+Pentru prima ediție se păstrează textul biblic cu ortografia sursei, iar explicațiile în forma lor actuală. Diacriticele explicațiilor nu se adaugă mecanic: ar putea strica nume, termeni ebraici și citate. Ele pot primi o corectură editorială separată după publicare.
+
+## Datoria de recunoștință
+
+O parte însemnată a observațiilor a fost cercetată pornind de la seria despre Geneza a păstorului Allen Nolan, apoi verificată și rescrisă pentru Emanus. Niciun rând nu este copiat. Păstorul Nolan nu a văzut și nu a încuviințat acest text; nu se va spune nicăieri că ar fi făcut-o.

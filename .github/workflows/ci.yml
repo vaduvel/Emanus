@@ -35,6 +35,10 @@ jobs:
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
+      # Niciun capitol din Geneza nu poate fi publicat fara nume si data in registrul reviziei.
+      - name: Verifica aprobarea Genezei
+        run: pnpm check:bible-publication
+
       - name: Typecheck
         run: pnpm typecheck
 
