@@ -9,6 +9,12 @@ import type { BibleBook } from "./types.js"
  * cercetare, dar propozitiile sunt ale noastre.
  *
  * Registrul este cel aprobat: asezat, bisericesc, de amvon. Fara jargon.
+ *
+ * REGULA DE COPIERE A TEXTULUI BIBLIC: in campul `text` intra numai Scriptura.
+ * Nimic altceva. Cand textul se ia de pe un site, se sterg mai intai notele de
+ * subsol, numerele de nota, mentiunile de drepturi si orice rand de subsol al
+ * paginii. Un asemenea rand a ajuns odata in Geneza 1:29-31 si a stat acolo
+ * pana a fost gasit la citire.
  */
 
 export const GENEZA: BibleBook = {
@@ -41,14 +47,14 @@ export const GENEZA: BibleBook = {
             "Sa ne oprim aici si sa nu trecem mai departe cu usurinta. Sunt zece cuvinte in randul acesta, si in ele incape tot ce se poate spune despre lume.\n\nIa aminte intai la ce nu se spune. Nu se spune de unde vine Dumnezeu. Nu se aduce nicio dovada ca El este. Sfanta Scriptura nu incepe cu o dovedire, ci cu o marturisire. Cel ce vorbeste era acolo inainte de a fi ceva de vazut, si nu are nevoie sa Se sprijine pe nimic din ceea ce a facut. Cand cineva iti cere astazi sa dovedesti ca Dumnezeu este, adu-ti aminte ca nici Scriptura nu incepe asa. Ea incepe cu El, si de acolo se lamureste tot restul.\n\nIa aminte apoi la cuvantul la inceput. In limba ebraica sta bereșit. Nu inseamna doar ca atunci s-a intamplat ceva. Inseamna ca atunci a inceput timpul insusi. Nu era un ceas care mergea si intr-o zi Dumnezeu a lucrat. Ceasul a inceput sa mearga acolo. Ceea ce a fost mai inainte de randul acesta nu se poate masura in ani, pentru ca anii se nasc aici.\n\nCuvantul a facut este bara. Se cuvine sa fim cinstiti cu textul: cuvantul acesta, in toata Sfanta Scriptura, nu se spune niciodata despre om. Omul cioplește, zidește, tese, insa nu bara niciodata. Omul lucreaza numai cu ce i s-a dat mai inainte. Lemnul il gaseste, lutul il gaseste, cantecul il gaseste in sine. Numai Dumnezeu incepe fara nimic in mana.\n\nSi mai ia aminte la cerurile si pamantul. Evreul nu avea un cuvant pentru tot ce este. Cand voia sa spuna totul, punea cele doua margini una langa alta si intelegea prin ele tot ce se afla intre ele. Asa se spune si astazi: din varf pana in talpa. Deci randul acesta nu vorbeste despre doua locuri, ci despre tot. Nu a ramas nimic pe dinafara.",
           words: [
             {
-              original: "בְּרֵאשִׁית",
+              original: "בְּרֵאשִׁית",
               transliteration: "bereșit",
               language: "ebraica",
               meaning:
                 "la inceput, in capul lucrurilor. Nu un inceput oarecare, ci inceputul de la care se socoteste tot."
             },
             {
-              original: "בָּרָא",
+              original: "בָּרָא",
               transliteration: "bara",
               language: "ebraica",
               meaning:
@@ -116,7 +122,7 @@ export const GENEZA: BibleBook = {
               meaning: "lumina. Cea dintai faptura numita buna."
             },
             {
-              original: "בָּדַל",
+              original: "בָּדַל",
               transliteration: "badal",
               language: "ebraica",
               meaning:
@@ -187,7 +193,7 @@ export const GENEZA: BibleBook = {
           text:
             "Dumnezeu a zis: „Să fie nişte luminători în întinderea cerului, ca să despartă ziua de noapte; ei să fie nişte semne cari să arate vremile, zilele şi anii; şi să slujească de luminători în întinderea cerului, ca să lumineze pămîntul.\" Şi aşa a fost. Dumnezeu a făcut cei doi mari luminători, şi anume: luminătorul cel mai mare ca să stăpînească ziua, şi luminătorul cel mai mic ca să stăpînească noaptea; a făcut şi stelele. Dumnezeu i-a aşezat în întinderea cerului, ca să lumineze pămîntul, să stăpînească ziua şi noaptea, şi să despartă lumina de întunerec. Dumnezeu a văzut că lucrul acesta era bun. Astfel, a fost o seară, şi apoi a fost o dimineaţă: aceasta a fost ziua a patra.",
           teaching:
-            "Sa ne oprim aici, fiindca este unul din locurile in care textul loveste tacut in idolii lumii de atunci.\n\nIa aminte ca nu se spune soare si nu se spune luna. Se spune luminatorul cel mai mare si luminatorul cel mai mic. Nu este o scapare. In limbile din jur, numele soarelui si al lunii erau numele unor dumnezei. Sfanta Scriptura nu le rosteste. Le zice pe nume dupa slujba pe care o fac, ca si cum ar spune: acestea nu sunt fete carora sa te inchini, ci felinare puse in cer.\n\nSi mai ia aminte la cele patru cuvinte prin care se spune ce fac ele. Despart, arata vremurile, lumineaza, stapanesc. Toate patru sunt slujbe primite, nu puteri avute. Chiar si cuvantul stapaneasca este dat, nu luat. Cerul intreg lucreaza sub porunca.\n\nApoi vine o vorba scurta, aruncata parca la o parte: a facut si stelele. Neamurile de atunci isi citeau soarta in stele, isi randuiau razboaiele dupa ele, se temeau de ele. Iar Moise le pomeneste in trei cuvinte, la coada randului. Nu din nebagare de seama, ci fiindca asa este masura lor fata de Cel ce le-a facut.\n\nSe cuvine sa spunem si ce nu spune textul. Nu ni se lamureste cum stau la un loc ziua intai, cu lumina ei, si ziua a patra, cu luminatorii. Oamenii credinciosi au dat mai multe raspunsuri de-a lungul vremii. Textul insa nu se ostenește sa raspunda, fiindca nu despre asta vrea sa ne invete. Vrea sa ne invete cine porunceste soarelui.",
+            "Sa ne oprim aici, fiindca este unul din locurile in care textul loveste tacut in idolii lumii de atunci.\n\nIa aminte ca nu se spune soare si nu se spune luna. Se spune luminatorul cel mai mare si luminatorul cel mai mic. Nu este o scapare. In limbile din jur, numele soarelui si al lunii erau numele unor dumnezei. Sfanta Scriptura nu le rosteste. Le zice pe nume dupa slujba pe care o fac, ca si cum ar spune: acestea nu sunt fete carora sa te inchini, ci felinare puse in cer.\n\nSi mai ia aminte la cele patru cuvinte prin care se spune ce fac ele. Despart, arata vremurile, lumineaza, stapanesc. Toate patru sunt slujbe primite, nu puteri avute. Chiar si cuvantul stapaneasca este dat, nu luat. Cerul intreg lucreaza sub porunca.\n\nApoi vine o vorba scurta, aruncata parca la o parte: a facut si stelele. Neamurile de atunci isi citeau soarta in stele, isi randuiau razboaiele dupa ele, se temeau de ele. Iar Moise le pomeneste in trei cuvinte, la coada randului. Nu din nebagare de seama, ci fiindca asa este masura lor fata de Cel ce le-a facut.\n\nSe cuvine sa spunem si ce nu spune textul. Nu ni se lamureste cum stau la un loc ziua intai, cu lumina ei, si ziua a patra, cu luminatorii. Oamenii credinciosi au dat mai multe raspunsuri de-a lungul vremii. Textul insa nu se ostenște sa raspunda, fiindca nu despre asta vrea sa ne invete. Vrea sa ne invete cine porunceste soarelui.",
           words: [
             {
               original: "מְאֹרֹת",
@@ -224,14 +230,14 @@ export const GENEZA: BibleBook = {
             "Aici incep sa se umple incaperile facute mai inainte. Apele de dedesubt si intinderea cerului primesc locuitori.\n\nIa aminte la cuvantul talmacit petii cei mari. In ebraica sta tanninim, si nu inseamna simplu peste. Este cuvantul pentru dihaniile cele mari ale adancului, fapturile de care se temea lumea veche si pe care neamurile le socoteau puteri potrivnice dumnezeilor. Sfanta Scriptura le pune intre celelalte lucruri facute, la rand cu pasarile, si adauga ca erau bune. Nimic din adanc nu sta in afara stapanirii Lui.\n\nApoi apare intaia oara in Scriptura cuvantul a binecuvantat. Sa luam bine seama: cea dintai binecuvantare din Biblie nu se da omului, ci vietuitoarelor. Iar binecuvantarea nu este o vorba frumoasa; este o putere data, puterea de a creste si de a umple. A binecuvanta, in Sfanta Scriptura, inseamna a face pe cineva in stare de rod.\n\nSe cuvine sa bagam de seama ca Dumnezeu nu voieste o lume goala. De trei ori in randurile acestea se aude porunca de a umple. Golul nu este starea pe care o iubeste El.",
           words: [
             {
-              original: "תַּנִּינִם",
+              original: "תַּנִּינִם",
               transliteration: "tanninim",
               language: "ebraica",
               meaning:
                 "dihaniile cele mari ale apelor. Cuvant folosit in alte parti pentru fiara adancului de care se temeau neamurile."
             },
             {
-              original: "בָּרַךְ",
+              original: "בָּרַךְ",
               transliteration: "barak",
               language: "ebraica",
               meaning: "a binecuvanta; a da putere de rod si de crestere."
@@ -260,17 +266,17 @@ export const GENEZA: BibleBook = {
           text:
             "Apoi Dumnezeu a zis: „Să facem om după chipul Nostru, după asemănarea Noastră; el să stăpînească peste peştii mării, peste păsările cerului, peste vite, peste tot pămîntul şi peste toate tîrîtoarele cari se mişcă pe pămînt.\" Dumnezeu a făcut pe om după chipul Său, l-a făcut după chipul lui Dumnezeu; parte bărbătească şi parte femeiască i-a făcut. Dumnezeu i-a binecuvîntat, şi Dumnezeu le-a zis: „Creşteţi, înmulţiţi-vă, umpleţi pămîntul, şi supuneţi-l; şi stăpîniţi peste peştii mării, peste păsările cerului, şi peste orice vieţuitoare care se mişcă pe pămînt.\"",
           teaching:
-            "Sa ne oprim aici mai mult decat oriunde in capitolul acesta.\n\nIa aminte intai la schimbarea glasului. Pana acum s-a spus de fiecare data sa fie. Acum se spune sa facem. Nu mai este o porunca aruncata catre faptura, ci o sfatuire launtrica. Unii au socotit ca Dumnezeu vorbeste cu ingerii, insa omul nu este facut dupa chipul ingerilor. Cei mai multi dintre credinciosi au vazut aici cel dintai licar din ceea ce Noul Testament va spune deschis: ca Dumnezeu nu este singur in Sine.\n\nApoi vin cele doua cuvinte grele. Chip este țelem, si inseamna statuie, infatisare cioplita, ceva pus undeva ca sa arate pe altcineva. In lumea veche, imparatul care cucerea o tara aseza in ea chipul lui de piatra, ca sa se stie a cui este acea tara. Sfanta Scriptura spune ca Dumnezeu a asezat pe pamant un chip al Sau, si acela este omul. Nu de piatra, ci viu.\n\nAsemanare este demut, si mai domoleste putin cuvantul dintai, ca sa nu socotim ca omul ar fi la fel cu Dumnezeu. Este asemenea, nu deopotriva.\n\nSi acum sa luam bine seama la un lucru pe care lumea de atunci nu-l spunea niciodata: parte barbateasca si parte femeiasca i-a facut. La celelalte neamuri, chipul dumnezeului era imparatul, si numai el. Aici, chipul lui Dumnezeu este omul, tot omul, barbat si femeie deopotriva. Nu este scris ca barbatul poarta chipul si femeia il poarta prin barbat. Amandoi il poarta, in acelasi rand al Scripturii.\n\nRamane cuvantul stapaniti. In ebraica sunt doua cuvinte tari, radah si kabaș, si se cuvine sa fim cinstiti: sunt cuvinte de domnie. Insa domnia se masoara dupa Cel al carui chip il porti. Un imparat rau jefuieste tara pe care o are in mana. Cel ce stapaneste in numele lui Dumnezeu ingrijeste. Cine se poarta cu faptura ca un pradator nu-si implineste porunca, ci si-o calca.",
+            "Sa ne oprim aici mai mult decat oriunde in capitolul acesta.\n\nIa aminte intai la schimbarea glasului. Pana acum s-a spus de fiecare data sa fie. Acum se spune sa facem. Nu mai este o porunca aruncata catre faptura, ci o sfatuire launtrica. Unii au socotit ca Dumnezeu vorbeste cu ingerii, insa omul nu este facut dupa chipul ingerilor. Cei mai multi dintre credinciosi au vazut aici cel dintai licar din ceea ce Noul Testament va spune deschis: ca Dumnezeu nu este singur in Sine.\n\nApoi vin cele doua cuvinte grele. Chip este ţelem, si inseamna statuie, infatisare cioplita, ceva pus undeva ca sa arate pe altcineva. In lumea veche, imparatul care cucerea o tara aseza in ea chipul lui de piatra, ca sa se stie a cui este acea tara. Sfanta Scriptura spune ca Dumnezeu a asezat pe pamant un chip al Sau, si acela este omul. Nu de piatra, ci viu.\n\nAsemanare este demut, si mai domoleste putin cuvantul dintai, ca sa nu socotim ca omul ar fi la fel cu Dumnezeu. Este asemenea, nu deopotriva.\n\nSi acum sa luam bine seama la un lucru pe care lumea de atunci nu-l spunea niciodata: parte barbateasca si parte femeiasca i-a facut. La celelalte neamuri, chipul dumnezeului era imparatul, si numai el. Aici, chipul lui Dumnezeu este omul, tot omul, barbat si femeie deopotriva. Nu este scris ca barbatul poarta chipul si femeia il poarta prin barbat. Amandoi il poarta, in acelasi rand al Scripturii.\n\nRamane cuvantul stapaniti. In ebraica sunt doua cuvinte tari, radah si kabaș, si se cuvine sa fim cinstiti: sunt cuvinte de domnie. Insa domnia se masoara dupa Cel al carui chip il porti. Un imparat rau jefuieste tara pe care o are in mana. Cel ce stapaneste in numele lui Dumnezeu ingrijeste. Cine se poarta cu faptura ca un pradator nu-si implineste porunca, ci si-o calca.",
           words: [
             {
               original: "צֶלֶם",
-              transliteration: "țelem",
+              transliteration: "ţelem",
               language: "ebraica",
               meaning:
                 "chip, infatisare asezata. In lumea veche, chipul imparatului pus intr-o tara arata cui apartine acea tara."
             },
             {
-              original: "דְּמוּת",
+              original: "דְּמוּת",
               transliteration: "demut",
               language: "ebraica",
               meaning: "asemanare. Omul este asemenea lui Dumnezeu, nu deopotriva cu El."
@@ -299,7 +305,7 @@ export const GENEZA: BibleBook = {
           ref: "Geneza 1:29-31",
           heading: "Foarte bun",
           text:
-            "Şi Dumnezeu a zis: „Iată că v'am dat orice iarbă care face sămînţă şi care este pe faţa întregului pămînt, şi orice pom, care are în el rod cu sămînţă: aceasta să fie hrana voastră.\" Iar tuturor fiarelor pămîntului, tuturor păsărilor cerului, şi tuturor vietăţilor cari se mişcă pe pămînt, cari au în ele o suflare de viaţă, le-am dat ca hrană toată iarba verde.\" Şi aşa a fost. Dumnezeu S'a uitat la tot ce făcuse; şi iată că erau foarte bune. Astfel a fost o seară, şi apoi a fost o dimineaţă: aceasta a fost ziua a şasea. Wordproject® is a registered name of the International Biblical Association, a non-profit organization registered in Macau, China. Contact | Disclaimer | Statement of Faith | Mission |",
+            "Şi Dumnezeu a zis: „Iată că v'am dat orice iarbă care face sămînţă şi care este pe faţa întregului pămînt, şi orice pom, care are în el rod cu sămînţă: aceasta să fie hrana voastră.\" Iar tuturor fiarelor pămîntului, tuturor păsărilor cerului, şi tuturor vietăţilor cari se mişcă pe pămînt, cari au în ele o suflare de viaţă, le-am dat ca hrană toată iarba verde.\" Şi aşa a fost. Dumnezeu S'a uitat la tot ce făcuse; şi iată că erau foarte bune. Astfel a fost o seară, şi apoi a fost o dimineaţă: aceasta a fost ziua a şasea.",
           teaching:
             "La sfarsit, Dumnezeu da hrana. Ia aminte ca nu porunceste omului sa si-o smulga singur. I-o pune inainte. Lumea nu este un loc in care trebuie sa te lupti pentru fiecare imbucatura; asa va ajunge dupa cadere, dar nu asa a fost facuta.\n\nApoi vine randul cel mai cuprinzator din tot capitolul. Pana acum s-a spus de sase ori ca lucrul era bun. Acum se spune altfel. In ebraica sta tov meod, foarte bun, si nu se mai spune despre o parte, ci despre tot ce facuse, laolalta. Fiecare lucru era bun in sine; toate impreuna erau mai mult decat suma lor.\n\nSe cuvine sa fim cinstiti cu ceea ce urmeaza. Peste doua capitole, lumea aceasta se rupe. Insa Scriptura a avut grija sa aseze intai randul de fata. Raul nu este de la inceput. Nu este parte din faptura. A intrat. Iar ceea ce a intrat poate fi scos afara.\n\nDe aceea, cand Sfanta Scriptura vorbeste mai tarziu despre mantuire, nu vorbeste despre fuga din lume, ci despre dregerea ei. Cerul nou si pamantul nou nu sunt altceva decat ceea ce s-a spus aici, adus inapoi la cuvantul foarte bun.",
           words: [
