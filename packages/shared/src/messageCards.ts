@@ -6,7 +6,8 @@
 // Formula „Dumnezeu îți transmite astăzi” + frază inventată este interzisă.
 //
 // Conținut original Emanus. Cardurile care circulă pe rețele aparțin autorilor
-// lor și nu se copiază (docs/27 §1.2).
+// lor și nu se copiază (docs/27 §1.2). Versetele sunt Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { AgeCategoryId, GrowthAxisId } from "./domain.js"
 
 /** Stările din check-in-ul emoțional (docs/00-DIRECTIE §14). */
@@ -60,7 +61,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Ajunge zilei necazul ei. Nu duci azi și povara de mâine.",
     verseRef: "Matei 6:34",
     verseText:
-      "Nu vă îngrijorați dar de ziua de mâine; căci ziua de mâine se va îngrijora de ea Însăși. Ajunge zilei necazul ei.",
+      "Nu vă îngrijorați dar de ziua de mâine; căci ziua de mâine se va îngrijora de ea însăși. Ajunge zilei necazul ei.",
     axis: "emotional_peace",
     moods: ["obosit", "speriat"],
     background: "pergament",
@@ -88,9 +89,9 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_nici_o_osandire",
     title: "Dumnezeu ți-a spus deja:",
-    body: "Nu mai e nici o osândire pentru tine. Prețul a fost plătit o dată.",
+    body: "Nu mai e nicio osândire pentru tine. Prețul a fost plătit o dată.",
     verseRef: "Romani 8:1",
-    verseText: "Acum dar nu este nici o osândire pentru cei ce sunt în Hristos Isus.",
+    verseText: "Acum dar nu este nicio osândire pentru cei ce sunt în Hristos Isus.",
     axis: "freedom",
     moods: ["vinovat"],
     background: "pergament-umbra",
@@ -100,7 +101,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Dumnezeu ți-a spus deja:",
     body: "Te-am săpat în mâinile Mele. Nu te pot uita.",
     verseRef: "Isaia 49:16",
-    verseText: "Iată, te-am săpat pe mâinile Mele.",
+    verseText: "Iată că te-am săpat pe mâinile Mele, și zidurile tale sunt totdeauna înaintea ochilor Mei!",
     axis: "identity",
     moods: ["singur", "obosit"],
     background: "pergament",
@@ -118,9 +119,9 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_odihna",
     title: "Dumnezeu ți-a spus deja:",
-    body: "Vino la Mine, tu care ești trudit și încărcat. Eu îți dau odihnă.",
+    body: "Vino la Mine, tu care ești trudit și împovărat. Eu îți dau odihnă.",
     verseRef: "Matei 11:28",
-    verseText: "Veniți la Mine, toți cei trudiți și încărcați, și Eu vă voi da odihnă.",
+    verseText: "Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.",
     axis: "emotional_peace",
     moods: ["obosit"],
     background: "pergament",
@@ -141,7 +142,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Cine Mă așteaptă nu rămâne fără putere. Își schimbă puterea.",
     verseRef: "Isaia 40:31",
     verseText:
-      "Dar cei ce se încred în Domnul își înnoiesc puterea; ei zboară ca vulturii; aleargă, și nu obosesc.",
+      "Dar cei ce se încred în Domnul își înnoiesc puterea; ei zboară ca vulturii; aleargă, și nu obosesc, umblă, și nu ostenesc.",
     axis: "living_faith",
     moods: ["in_asteptare", "obosit"],
     background: "pergament",
@@ -149,9 +150,9 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_nu_te_voi_lasa",
     title: "Dumnezeu ți-a spus deja:",
-    body: "Nu te voi părăsi și nu te voi lăsa.",
+    body: "Nicidecum n-am să te las, cu niciun chip nu te voi părăsi.",
     verseRef: "Evrei 13:5",
-    verseText: "Căci El Însuși a zis: „Nicidecum nu te voi lăsa și cu nici un chip nu te voi părăsi.”",
+    verseText: "Căci El Însuși a zis: „Nicidecum n-am să te las, cu niciun chip nu te voi părăsi.”",
     axis: "identity",
     moods: ["singur", "speriat"],
     background: "pergament",
@@ -170,9 +171,9 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_aproape_de_inima_zdrobita",
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
-    body: "Sunt aproape de cei cu inima zdrobită. Nu M-am dat la o parte.",
+    body: "Sunt aproape de cei cu inima înfrântă. Nu M-am dat la o parte.",
     verseRef: "Psalmul 34:18",
-    verseText: "Domnul este aproape de cei cu inima zdrobită și mântuiește pe cei cu duhul înăbușit.",
+    verseText: "Domnul este aproape de cei cu inima înfrântă și mântuiește pe cei cu duhul zdrobit.",
     axis: "emotional_peace",
     moods: ["singur", "vinovat"],
     background: "pergament-umbra",
@@ -183,7 +184,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Gândurile Mele cu tine sunt gânduri de pace, nu de nenorocire.",
     verseRef: "Ieremia 29:11",
     verseText:
-      "Căci Eu știu gândurile pe care le am cu privire la voi, zice Domnul, gânduri de pace și nu de nenorocire.",
+      "Căci Eu știu gândurile pe care le am cu privire la voi, zice Domnul, gânduri de pace, și nu de nenorocire, ca să vă dau un viitor și o nădejde.",
     axis: "living_faith",
     moods: ["fara_directie", "in_asteptare"],
     background: "pergament-cald",
@@ -193,7 +194,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Nu tot ce ți se întâmplă e bun. Dar Eu lucrez spre bine și din ce e rău.",
     verseRef: "Romani 8:28",
-    verseText: "De altfel, știm că toate lucrurile lucrează împreună spre binele celor ce iubesc pe Dumnezeu.",
+    verseText: "De altă parte, știm că toate lucrurile lucrează împreună spre binele celor ce iubesc pe Dumnezeu.",
     axis: "living_faith",
     moods: ["fara_directie", "in_asteptare"],
     background: "pergament",
@@ -211,9 +212,9 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_libertate",
     title: "Dumnezeu ți-a spus deja:",
-    body: "Dacă Fiul te face liber, ești liber cu adevărat.",
+    body: "Dacă Fiul te face slobod, ești slobod cu adevărat.",
     verseRef: "Ioan 8:36",
-    verseText: "Deci, dacă Fiul vă face slobozi, veți fi într-adevăr slobozi.",
+    verseText: "Deci, dacă Fiul vă face slobozi, veți fi cu adevărat slobozi.",
     axis: "freedom",
     moods: ["vinovat", "fara_directie"],
     background: "pergament",
@@ -223,7 +224,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Mulțumirea ta nu e o formalitate. E felul în care Îți amintești că nu ești singur.",
     verseRef: "Psalmul 103:2",
-    verseText: "Binecuvântează, suflete, pe Domnul și nu uita nici una din binefacerile Lui!",
+    verseText: "Binecuvântează, suflete, pe Domnul și nu uita niciuna din binefacerile Lui!",
     axis: "character",
     moods: ["recunoscator"],
     background: "pergament-cald",
@@ -233,7 +234,8 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Dumnezeu ți-a spus deja:",
     body: "Ești lucrarea Mea. Încă lucrez la tine.",
     verseRef: "Efeseni 2:10",
-    verseText: "Căci noi suntem lucrarea Lui și am fost zidiți în Hristos Isus pentru faptele bune.",
+    verseText:
+      "Căci noi suntem lucrarea Lui și am fost zidiți în Hristos Isus pentru faptele bune pe care le-a pregătit Dumnezeu mai dinainte ca să umblăm în ele.",
     axis: "identity",
     moods: ["vinovat", "fara_directie"],
     background: "pergament",
@@ -243,7 +245,8 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Cel care a început lucrarea în tine o duce și la capăt. Nu tu.",
     verseRef: "Filipeni 1:6",
-    verseText: "Sunt încredințat că Acela care a început în voi această bună lucrare o va isprăvi.",
+    verseText:
+      "Sunt încredințat că Acela care a început în voi această bună lucrare o va isprăvi până în ziua lui Isus Hristos.",
     axis: "character",
     moods: ["obosit", "in_asteptare"],
     background: "pergament",
@@ -251,10 +254,10 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_pasii_mei",
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
-    body: "Nu te sprijini pe priceperea ta. Eu îți netezesc căile.",
-    verseRef: "Proverbe 3:5-6",
+    body: "Nu te bizui pe înțelepciunea ta. Eu îți netezesc cărările.",
+    verseRef: "Proverbele 3:5-6",
     verseText:
-      "Încrede-te în Domnul cu toată inima ta și nu te încrede în înțelepciunea ta; recunoaște-L în toate căile tale, și El îți va netezi cărările.",
+      "Încrede-te în Domnul din toată inima ta și nu te bizui pe înțelepciunea ta! Recunoaște-L în toate căile tale, și El îți va netezi cărările.",
     axis: "living_faith",
     moods: ["fara_directie"],
     background: "pergament",
@@ -264,7 +267,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Lacrimile tale nu s-au pierdut. Le-am pus la păstrare.",
     verseRef: "Psalmul 56:8",
-    verseText: "Tu numări pașii vieții mele de pribeag; pune-mi lacrimile în burduful Tău.",
+    verseText: "Tu numeri pașii vieții mele de pribeag; pune-mi lacrimile în burduful Tău! Nu sunt ele scrise în cartea Ta?",
     axis: "emotional_peace",
     moods: ["singur", "in_asteptare"],
     background: "pergament-umbra",
@@ -285,7 +288,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Hrănesc păsările cerului. Tu prețuiești mai mult decât ele.",
     verseRef: "Matei 6:26",
     verseText:
-      "Uitați-vă la păsările cerului: ele nici nu semănă, nici nu seceră... și totuși Tatăl vostru cel ceresc le hrănește. Oare nu sunteți voi cu mult mai de preț decât ele?",
+      "Uitați-vă la păsările cerului: ele nici nu seamănă, nici nu seceră și nici nu strâng nimic în grânare, și totuși Tatăl vostru cel ceresc le hrănește. Oare nu sunteți voi cu mult mai de preț decât ele?",
     axis: "emotional_peace",
     moods: ["speriat", "obosit"],
     background: "pergament",
@@ -293,9 +296,9 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_pace_desavarsita",
     title: "Dumnezeu ți-a spus deja:",
-    body: "Cine se sprijină pe Mine cu gândul stă în pace desăvârșită.",
+    body: "Celui cu inima tare Îi chezășuiesc pacea, pentru că se încrede în Mine.",
     verseRef: "Isaia 26:3",
-    verseText: "Celui cu inima tare, Tu Îi chiveznicești pacea; da, pacea, căci se încrede în Tine.",
+    verseText: "Celui cu inima tare, Tu-i chezășuiești pacea; da, pacea, căci se încrede în Tine.",
     axis: "emotional_peace",
     moods: ["speriat", "in_asteptare"],
     background: "pergament",
@@ -303,10 +306,10 @@ export const MESSAGE_CARDS: MessageCard[] = [
   {
     id: "msg_te_intaresc",
     title: "Dumnezeu ți-a spus deja:",
-    body: "Nu te teme, căci Eu sunt cu tine. Te sprijin cu dreapta Mea.",
+    body: "Nu te teme, căci Eu sunt cu tine. Te sprijin cu dreapta Mea biruitoare.",
     verseRef: "Isaia 41:10",
     verseText:
-      "Nu te teme, căci Eu sunt cu tine; nu te uita cu îngrijorare, căci Eu sunt Dumnezeul tău; Eu te întăresc, tot Eu îți vin în ajutor.",
+      "Nu te teme, căci Eu sunt cu tine; nu te uita cu îngrijorare, căci Eu sunt Dumnezeul tău; Eu te întăresc, tot Eu îți vin în ajutor. Eu te sprijin cu dreapta Mea biruitoare.",
     axis: "emotional_peace",
     moods: ["speriat", "singur"],
     background: "pergament-cald",
@@ -316,7 +319,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Pune jos ce duci. Îmi pasă de tine.",
     verseRef: "1 Petru 5:7",
-    verseText: "Și aruncați asupra Lui toate îngrijorările voastre, căci El Însăși îngrijește de voi.",
+    verseText: "Și aruncați asupra Lui toate îngrijorările voastre, căci El Însuși îngrijește de voi.",
     axis: "emotional_peace",
     moods: ["obosit", "speriat"],
     background: "pergament",
@@ -326,7 +329,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Dumnezeu ți-a spus deja:",
     body: "Ți-am dus păcatele departe, cât e răsăritul de apus.",
     verseRef: "Psalmul 103:12",
-    verseText: "Cât este de departe răsăritul de apus, atât de mult depărtează El fărădelegile noastre de la noi.",
+    verseText: "Cât de departe este răsăritul de apus, atât de mult depărtează El fărădelegile noastre de la noi.",
     axis: "freedom",
     moods: ["vinovat"],
     background: "pergament-umbra",
@@ -337,7 +340,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Vino să stăm de vorbă. Ce e roșu ca purpura se face alb ca zăpada.",
     verseRef: "Isaia 1:18",
     verseText:
-      "Veniți totuși să ne judecăm, zice Domnul. De vor fi păcatele voastre cum e cârmzul, se vor face albe ca zăpada.",
+      "Veniți totuși să ne judecăm, zice Domnul. De vor fi păcatele voastre cum e cârmâzul, se vor face albe ca zăpada; de vor fi roșii ca purpura, se vor face ca lâna.",
     axis: "freedom",
     moods: ["vinovat"],
     background: "pergament-umbra",
@@ -370,7 +373,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Ce ți-am spus are un timp al lui. Dacă întârzie, așteaptă-l.",
     verseRef: "Habacuc 2:3",
     verseText:
-      "Căci este o prorocie a cărei vreme este hotărâtă... dacă zăbovește, așteapt-o, căci va veni și se va împlini negreșit.",
+      "Căci este o prorocie a cărei vreme este hotărâtă, se apropie de împlinire și nu va minți; dacă zăbovește, așteapt-o, căci va veni și se va împlini negreșit.",
     axis: "living_faith",
     moods: ["in_asteptare"],
     background: "pergament",
@@ -401,7 +404,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Nu dormitez și nu adorm cât timp te păzesc.",
     verseRef: "Psalmul 121:3-4",
     verseText:
-      "Da, El nu dormitează, nici nu doarme Cel ce păzește pe Israel.",
+      "Iată că nu dormitează, nici nu doarme Cel ce păzește pe Israel.",
     axis: "emotional_peace",
     moods: ["speriat", "singur"],
     background: "pergament-umbra",
@@ -422,7 +425,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Dumnezeu ți-a spus deja:",
     body: "Dau o familie celor singuri. Nu te-am uitat în casa goală.",
     verseRef: "Psalmul 68:6",
-    verseText: "Dumnezeu dă o familie celor părăsiți, El izbăvește pe prinșii de război.",
+    verseText: "Dumnezeu dă o familie celor părăsiți, El izbăvește pe prinșii de război și-i face fericiți.",
     axis: "relationships",
     moods: ["singur"],
     background: "pergament-cald",
@@ -432,7 +435,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Mulțumește în orice împrejurare. Nu pentru orice — în orice.",
     verseRef: "1 Tesaloniceni 5:18",
-    verseText: "Mulțumiți lui Dumnezeu pentru toate lucrurile; căci aceasta este voia lui Dumnezeu, în Hristos Isus, cu privire la voi.",
+    verseText: "Mulțumiți lui Dumnezeu pentru toate lucrurile, căci aceasta este voia lui Dumnezeu, în Hristos Isus, cu privire la voi.",
     axis: "character",
     moods: ["recunoscator"],
     background: "pergament",
@@ -452,7 +455,8 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
     body: "Orice lucru bun din viața ta a coborât de la Mine.",
     verseRef: "Iacov 1:17",
-    verseText: "Orice ni se dă bun și orice dar desăvârșit este de sus, coborându-se de la Tatăl luminilor.",
+    verseText:
+      "Orice ni se dă bun și orice dar desăvârșit este de sus, coborându-se de la Tatăl luminilor, în care nu este nici schimbare, nici umbră de mutare.",
     axis: "character",
     moods: ["recunoscator"],
     background: "pergament",
@@ -463,7 +467,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Te învăț calea pe care să mergi și nu-Mi iau ochii de la tine.",
     verseRef: "Psalmul 32:8",
     verseText:
-      "Eu — zice Domnul — te voi învăța și-ți voi arăta calea pe care trebuie s-o urmezi, te voi sfătui și voi avea privirea îndreptată asupra ta.",
+      "„Eu”, zice Domnul, „te voi învăța și-ți voi arăta calea pe care trebuie s-o urmezi, te voi sfătui și voi avea privirea îndreptată asupra ta.”",
     axis: "living_faith",
     moods: ["fara_directie"],
     background: "pergament",
@@ -474,7 +478,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Dacă nu știi ce să faci, cere-Mi. Dau fără să mustru.",
     verseRef: "Iacov 1:5",
     verseText:
-      "Dacă vreunuia dintre voi îi lipsește înțelepciunea, s-o ceară de la Dumnezeu, care dă tuturor cu mână largă și fără mustărare, și ea Îi va fi dată.",
+      "Dacă vreunuia dintre voi îi lipsește înțelepciunea, s-o ceară de la Dumnezeu, care dă tuturor cu mână largă și fără mustrare, și ea îi va fi dată.",
     axis: "living_faith",
     moods: ["fara_directie", "in_asteptare"],
     background: "pergament",
@@ -485,7 +489,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Când o iei la stânga sau la dreapta, auzi înapoia ta: aceasta e calea.",
     verseRef: "Isaia 30:21",
     verseText:
-      "Urechile tale vor auzi după tine glasul care va zice: „Iată drumul, mergeți pe el!” când veți voi să vă mai abateți la dreapta sau la stânga.",
+      "Urechile tale vor auzi după tine glasul care va zice: „Iată drumul, mergeți pe el!”, când veți voi să vă mai abateți la dreapta sau la stânga.",
     axis: "living_faith",
     moods: ["fara_directie"],
     background: "pergament-cald",
@@ -495,7 +499,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Dumnezeu ți-a spus deja:",
     body: "Harul Meu îți este de ajuns. Puterea Mea se vede tocmai unde ești slab.",
     verseRef: "2 Corinteni 12:9",
-    verseText: "Harul Meu îți este de ajuns; căci puterea Mea în slăbiciune este făcută desăvârșită.",
+    verseText: "Harul Meu îți este de ajuns, căci puterea Mea în slăbiciune este făcută desăvârșită.",
     axis: "character",
     moods: ["obosit", "vinovat"],
     background: "pergament-umbra",
@@ -506,7 +510,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     body: "Îndurările Mele se înnoiesc în fiecare dimineață. Și în asta.",
     verseRef: "Plângerile lui Ieremia 3:22-23",
     verseText:
-      "Îndurările Lui nu sunt la capăt, ci se înnoiesc în fiecare dimineață. Și credincioșia Ta este atât de mare!",
+      "Bunătățile Domnului nu s-au sfârșit, îndurările Lui nu sunt la capăt, ci se înnoiesc în fiecare dimineață. Și credincioșia Ta este atât de mare!",
     axis: "freedom",
     moods: ["vinovat", "obosit"],
     background: "pergament-cald",
@@ -542,7 +546,7 @@ function dayNumber(date: Date): number {
 /**
  * Alegerea cardului de azi (docs/27 §3.4). NU e random:
  *  1. starea de la check-in, dacă există;
- *  2. altfel, axa cea mai fragedă din radar;
+ *  2. altfel, axa cea mai frageda din radar;
  *  3. altfel, rotație stabilă pe zi, evitând ce s-a văzut recent.
  */
 export function pickMessageCard(input: {
