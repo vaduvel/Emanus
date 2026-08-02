@@ -17,6 +17,19 @@ jobs:
           ref: review/geneza-26-36
           fetch-depth: 0
 
+      - name: Normalizeaza helperul
+        run: |
+          rm -f review-error.log
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/review-geneza-26-36.py')
+          s = p.read_text()
+          old = 'def rep(rel, old, new, label):\n    p = ROOT / rel'
+          new = 'def rep(rel, old, new, label):\n    old = old.replace("\\n", "\\\\n")\n    new = new.replace("\\n", "\\\\n")\n    p = ROOT / rel'
+          assert old in s
+          p.write_text(s.replace(old, new, 1))
+          PY
+
       - name: Aplica revizia si captureaza eroarea
         id: revise
         continue-on-error: true
