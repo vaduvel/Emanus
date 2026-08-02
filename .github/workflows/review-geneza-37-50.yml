@@ -20,22 +20,8 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 0
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9.7.0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
       - name: Aplica revizia editoriala
-        run: python3 scripts/review-geneza-37-50.py
-      - name: Verifica continutul si buildul shared
-        run: |
-          pnpm check:quotes
-          pnpm check:typos
-          pnpm build:shared
-          pnpm check:content
+        run: python3 scripts/run-review-geneza-37-50.py
       - name: Commit indreptari aplicate de CI
         if: github.event_name == 'push'
         run: |
@@ -47,3 +33,17 @@ jobs:
           git add packages/shared/src/bible/geneza*.ts
           git commit -m "fix(biblia): revizuieste Geneza 37-50"
           git push
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.7.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Verifica continutul si buildul shared
+        run: |
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm build:shared
+          pnpm check:content
