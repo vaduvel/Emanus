@@ -4,7 +4,8 @@
 // ci prin mutarea privirii spre Cine este de față. De aceea aici nu veți găsi
 // „nu-ți mai face griji”, ci „uite cu Cine treci prin asta”.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_3 = "Frica și grija"
@@ -29,7 +30,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Filipeni 4:6-7",
-    verseText: "Nu vă îngrijorați de nimic; ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu, prin rugăciuni și cereri, cu mulțumiri. Și pacea lui Dumnezeu... vă va păzi inimile.",
+    verseText: "Nu vă îngrijorați de nimic, ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu, prin rugăciuni și cereri, cu mulțumiri. Și pacea lui Dumnezeu, care întrece orice pricepere, vă va păzi inimile și gândurile în Hristos Isus.",
     meditation:
       "Pavel nu spune „nu vă îngrijorați” și atât — asta ar fi crud. Spune ce să faci cu grija: s-o muți. Grija are nevoie de o destinație, altfel se învârte în cerc. Iar pacea promisă nu e explicație, e pază: stă la ușă, nu îți răspunde la întrebări.",
     question: "Ce grijă învârti de zile întregi fără să o fi spus vreodată lui Dumnezeu?",
@@ -42,7 +43,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Matei 6:26",
-    verseText: "Uitați-vă la păsările cerului: ele nici nu seamănă, nici nu seceră... și totuși Tatăl vostru cel ceresc le hrănește. Oare nu sunteți voi cu mult mai de preț decât ele?",
+    verseText: "Uitați-vă la păsările cerului: ele nici nu seamănă, nici nu seceră și nici nu strâng nimic în grânare, și totuși Tatăl vostru cel ceresc le hrănește. Oare nu sunteți voi cu mult mai de preț decât ele?",
     meditation:
       "Isus nu spune că păsările stau degeaba — o pasăre muncește toată ziua. Spune că nu depozitează. Diferența dintre muncă și grijă e aici: munca ține de azi, grija încearcă să controleze un an care nu a venit.",
     question: "Muncești pentru ziua de azi sau încerci să asiguri un viitor pe care nu-l poți vedea?",
@@ -55,7 +56,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Matei 6:27",
-    verseText: "Și apoi, cine dintre voi, chiar îngrijorându-se, poate să adauge un cot la înălțimea lui?",
+    verseText: "Și apoi, cine dintre voi, chiar îngrijorându-se, poate să adauge măcar un cot la înălțimea lui?",
     meditation:
       "E singura întrebare din Biblie la care toți știm răspunsul și tot facem invers. Grija dă senzația că lucrăm la problemă. În realitate, e singura formă de efort care consumă tot și nu mută nimic.",
     question: "Ce a rezolvat, concret, grija ta din ultima săptămână?",
@@ -81,7 +82,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "1 Petru 5:7",
-    verseText: "Și aruncați asupra Lui toate îngrijorările voastre, căci El Însăși îngrijește de voi.",
+    verseText: "Și aruncați asupra Lui toate îngrijorările voastre, căci El Însuși îngrijește de voi.",
     meditation:
       "„Aruncați” e un verb de descotorosire, nu de împărțire. Iar motivul din a doua parte e cel mai important: nu „pentru că ești slab”, ci „pentru că Lui Îi pasă”. Nu arunci ceva la un birou; îi dai cuiva căruia îi pasă de tine.",
     question: "Ce grijă ai „aruncat” și ai luat înapoi de trei ori?",
@@ -94,9 +95,9 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Psalmul 46:1-2",
-    verseText: "Dumnezeu este adăpostul și sprijinul nostru, un ajutor care nu lipsește niciodată în nevoi. De aceea nu ne tem, chiar dacă s-ar zgudui pământul.",
+    verseText: "Dumnezeu este adăpostul și sprijinul nostru, un ajutor care nu lipsește niciodată în nevoi. De aceea nu ne temem chiar dacă s-ar zgudui pământul și s-ar clătina munții în inima mărilor.",
     meditation:
-      "Psalmul nu promite că pământul nu se zguduie. Curățenia asta e importantă: credința nu e o asigurare că nu vin cutremure, ci un loc în care stai când vin. Sunt oameni care Își pierd credința pentru că li s-a promis, greșit, că nu se va clătina nimic.",
+      "Psalmul nu promite că pământul nu se zguduie. Curățenia asta e importantă: credința nu e o asigurare că nu vin cutremure, ci un loc în care stai când vin. Sunt oameni care își pierd credința pentru că li s-a promis, greșit, că nu se va clătina nimic.",
     question: "Ce s-a zguduit în viața ta și încă nu s-a așezat?",
     prayer: "Doamne, nu-ți cer să nu se miște pământul. Îți cer să fii Tu adăpostul. Amin.",
     step: "Numește azi un lucru care s-a zguduit și spune-I unde ai fugit atunci.",
@@ -133,7 +134,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Psalmul 23:4",
-    verseText: "Chiar dacă ar fi să umblu prin valea umbrei morții, nu mă tem de niciun rău, căci Tu ești cu mine.",
+    verseText: "Chiar dacă ar fi să umblu prin valea umbrei morții, nu mă tem de niciun rău, căci Tu ești cu mine. Toiagul și nuiaua Ta mă mângâie.",
     meditation:
       "„Prin”, nu „în”. Valea nu e destinație, e drum. Și mai e ceva: până aici psalmul vorbea despre Dumnezeu la persoana a treia — „El mă paște”. În vale, David Îi vorbește direct: „Tu ești cu mine”. Locurile grele ne apropie limbajul.",
     question: "Prin ce vale treci acum și de cât timp?",
@@ -146,7 +147,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Isaia 43:2",
-    verseText: "Dacă vei trece prin ape, Eu voi fi cu tine; și râurile nu te vor îneca.",
+    verseText: "Dacă vei trece prin ape, Eu voi fi cu tine și râurile nu te vor îneca; dacă vei merge prin foc, nu te va arde și flacăra nu te va aprinde.",
     meditation:
       "Dumnezeu nu promite ocolirea apelor. Promite că nu te îneci. Sunt două credințe foarte diferite: una așteaptă ca Dumnezeu să îndepărteze apa și se prăbușește când nu o face, alta învață să Îl recunoască în apă.",
     question: "Te rogi să fie luată apa sau să fie El cu tine în ea?",
@@ -172,7 +173,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Iosua 1:9",
-    verseText: "Nu ți-am dat Eu oare porunca aceasta: „Întărește-te și îmbărbătează-te?” Nu te înspăimânta și nu te îngrozi, căci Domnul Dumnezeul tău este cu tine.",
+    verseText: "Nu ți-am dat Eu oare porunca aceasta: ‘Întărește-te și îmbărbătează-te’? Nu te înspăimânta și nu te îngrozi, căci Domnul Dumnezeul tău este cu tine în tot ce vei face.",
     meditation:
       "I se spune de trei ori aceluiași om, ceea ce înseamnă că Iosua se temea. Curajul biblic nu e o trăsătură de caracter, e o ascultare: te miști înainte pentru că ți s-a spus și pentru că El e cu tine, nu pentru că ți-a trecut frica.",
     question: "Ce lucru amâni până când îți va trece frica?",
@@ -185,7 +186,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Psalmul 94:19",
-    verseText: "Când gânduri negre se frimântă cu grămada înăuntrul meu, mângâierile Tale îmi înviorează sufletul.",
+    verseText: "Când gânduri negre se frământă cu grămada înăuntrul meu, mângâierile Tale îmi înviorează sufletul.",
     meditation:
       "„Cu grămada” — psalmistul știe cum e când gândurile nu vin unul câte unul. Nu spune că le-a oprit. Spune că a primit mângâiere în timp ce ele se învârteau. Uneori Dumnezeu nu îți liniștește capul, îți ține sufletul.",
     question: "Când ți se adună gândurile, cauți liniște sau mângâiere? Nu e același lucru.",
@@ -198,7 +199,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Marcu 4:39-40",
-    verseText: "El S-a sculat, a certat vântul și a zis mării: „Taci! Fără gură!”... Apoi le-a zis: „Pentru ce sunteți așa de fricosi?”",
+    verseText: "El S-a sculat, a certat vântul și a zis mării: „Taci! Fără gură!” Vântul a stat și s-a făcut o liniște mare. Apoi le-a zis: „Pentru ce sunteți așa de fricoși? Tot n-aveți credință?”",
     meditation:
       "Ucenicii nu se temeau că vor muri singuri — se temeau că Lui nu-I pasă: „nu-ți pasă că pierim?” Asta e frica de dedesubt, la toți. Nu că furtuna e mare, ci că poate am rămas singuri în ea.",
     question: "În furtuna ta de acum, te temi de furtună sau că Lui nu-I pasă?",
@@ -211,7 +212,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Matei 14:30-31",
-    verseText: "Dar, când a văzut că vântul era tare, s-a temut și, fiindcă începea să se afunde, a strigat: „Doamne, scapă-mă!” Îndată, Isus a întins mâna.",
+    verseText: "Dar, când a văzut că vântul era tare, s-a temut și, fiindcă începea să se afunde, a strigat: „Doamne, scapă-mă!” Îndată, Isus a întins mâna, l-a apucat și i-a zis: „Puțin credinciosule, pentru ce te-ai îndoit?”",
     meditation:
       "Petru s-a scufundat, dar rugăciunea lui a fost cea mai scurtă din Evanghelii și a funcționat imediat. Nu ai nevoie de cuvinte frumoase când te afunzi. Și observă: Isus l-a prins întâi și l-a întrebat după aceea.",
     question: "Crezi că trebuie să te aduni întâi și abia apoi să strigi?",
@@ -224,7 +225,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Psalmul 34:4",
-    verseText: "Eu am căutat pe Domnul, și mi-a răspuns: m-a izbăvit din toate temerile mele.",
+    verseText: "Eu am căutat pe Domnul și mi-a răspuns: m-a izbăvit din toate temerile mele.",
     meditation:
       "Verbele sunt la trecut: a căutat, a primit răspuns, a fost izbăvit. Psalmii ne învață să ne aducem aminte — memoria e o armă împotriva fricii. Frica vorbește mereu despre viitor; amintirea îți arată că ai mai fost scos și altă dată.",
     question: "Din ce teamă te-a scos Dumnezeu deja, și ai uitat?",
@@ -237,7 +238,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Proverbe 12:25",
-    verseText: "Neliniștea din inima omului îl doboară, dar o vorbă bună îl înveseleste.",
+    verseText: "Neliniștea din inima omului îl doboară, dar o vorbă bună îl înveselește.",
     meditation:
       "Soluția propusă aici nu e teologică, e omenească: o vorbă bună. Dumnezeu folosește des oameni ca să ridice pe cine s-a îndoit sub greutate. Poate azi tu ești cel ridicat. Poate ești vorba bună a altcuiva.",
     question: "Cine, din jurul tău, duce ceva greu și nu spune?",
@@ -250,7 +251,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Luca 12:32",
-    verseText: "Nu te teme, turmă mică; pentru că Tatăl vostru vă dă cu plăcere Împărăția.",
+    verseText: "Nu te teme, turmă mică, pentru că Tatăl vostru vă dă cu plăcere Împărăția.",
     meditation:
       "„Turmă mică” — Isus recunoaște că sunt puțini și slabi. Nu-i minte. Dar leagă liniștea lor nu de mărimea turmei, ci de bucuria Tatălui de a da. Dumnezeu nu dă din obligație, ci „cu plăcere”.",
     question: "Ți-e teamă că ceri prea mult, prea des?",
@@ -263,11 +264,11 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Psalmul 121:3-4",
-    verseText: "Da, El nu dormitează, nici nu doarme Cel ce păzește pe Israel.",
+    verseText: "Da, El nu va îngădui să ți se clatine piciorul; Cel ce te păzește nu va dormita. Iată că nu dormitează, nici nu doarme Cel ce păzește pe Israel.",
     meditation:
       "Frica are program de noapte. Psalmul răspunde exact acolo: când tu nu poți dormi, Cineva oricum nu doarme — și nu de grijă, ci de pază. Nu ești singurul treaz în casa asta.",
     question: "Ce te ține treaz noaptea, în ultima vreme?",
-    prayer: "Doamne, Tu veți păzi și când eu adorm. Pot să închid ochii. Amin.",
+    prayer: "Doamne, Tu vei păzi și când eu adorm. Pot să închid ochii. Amin.",
     step: "Astă-seară, înainte să dormi, spune o singură propoziție: „Tu nu dormi, deci eu pot”.",
   },
   {
@@ -291,7 +292,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     verseRef: "Matei 11:29",
     verseText: "Luați jugul Meu asupra voastră și învățați de la Mine, căci Eu sunt blând și smerit cu inima; și veți găsi odihnă pentru sufletele voastre.",
     meditation:
-      "Jugul se punea pe doi boi, iar cel tânăr învăța mergnd lângă unul bătrân, care ducea greul. Isus nu îți promite că nu vei mai trage; îți spune lângă Cine vei trage. Și Își descrie caracterul, nu puterea: blând.",
+      "Jugul se punea pe doi boi, iar cel tânăr învăța mergând lângă unul bătrân, care ducea greul. Isus nu îți promite că nu vei mai trage; îți spune lângă Cine vei trage. Și Își descrie caracterul, nu puterea: blând.",
     question: "Tragi singur la ceva la care ai fi putut cere ajutor?",
     prayer: "Doamne, sunt în jug cu Tine, nu în fața Ta. Amin.",
     step: "Cere azi ajutor la un lucru concret, de la un om. Neînțelegerea comună e că asta ar fi slăbiciune.",
@@ -302,7 +303,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Psalmul 55:22",
-    verseText: "Încredințează-ți soarta în mâna Domnului, și El te va sprijini.",
+    verseText: "Încredințează-ți soarta în mâna Domnului și El te va sprijini! El nu va lăsa niciodată să se clatine cel neprihănit.",
     meditation:
       "Cuvântul tradus „soarta” înseamnă și „povara ta” — sarcina care ți-a fost dată, nu doar viitorul. Uneori nu ceri să fii scăpat de responsabilitate, ci să fii sprijinit în ea. Asta e promisiunea: sprijin, nu evadare.",
     question: "Ce responsabilitate duci acum și n-o poți lăsa jos?",
@@ -315,7 +316,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Romani 8:31",
-    verseText: "Dacă Dumnezeu este pentru noi, cine va fi împotriva noastră?",
+    verseText: "Deci ce vom zice noi în fața tuturor acestor lucruri? Dacă Dumnezeu este pentru noi, cine va fi împotriva noastră?",
     meditation:
       "Întrebarea nu neagă că există oameni împotriva ta. Spune doar că nu contează la fel de mult. Iar dovada că Dumnezeu e de partea ta nu e că îți merge bine — e versetul următor, unde scrie că nu Și-a cruțat Fiul.",
     question: "Pe cine simți că ai împotrivă și cât spațiu îi dai în minte?",
@@ -341,7 +342,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "2 Corinteni 12:9",
-    verseText: "Harul Meu îți este de ajuns; căci puterea Mea în slăbiciune este făcută desăvârșită.",
+    verseText: "Harul Meu îți este de ajuns, căci puterea Mea în slăbiciune este făcută desăvârșită.",
     meditation:
       "Pavel ceruse de trei ori să fie scutit și i s-a spus nu. Răspunsul lui Dumnezeu nu a fost o vindecare, ci o prezență suficientă. Sunt rugăciuni la care primim exact asta: nu scăpare, ci har cât să mai stai o zi.",
     question: "Ce ai cerut de mai multe ori și încă nu s-a schimbat?",
@@ -354,10 +355,10 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Plângerile lui Ieremia 3:22-23",
-    verseText: "Îndurările Domnului nu s-au sfârșit... ele se înnoiesc în fiecare dimineață.",
+    verseText: "Bunătățile Domnului nu s-au sfârșit, îndurările Lui nu sunt la capăt, ci se înnoiesc în fiecare dimineață. Și credincioșia Ta este atât de mare!",
     meditation:
       "Cartea se numește Plângeri — e scrisă după o catastrofă națională, nu într-o zi bună. Iar „în fiecare dimineață” înseamnă că nu se transferă: harul de ieri nu ține azi și nici nu trebuie. Se dă zilnic, ca mana.",
-    question: "Te treziși azi cu impresia că ai consumat deja răbdarea lui Dumnezeu?",
+    question: "Te trezești azi cu impresia că ai consumat deja răbdarea lui Dumnezeu?",
     prayer: "Doamne, e dimineață. Îndurările Tale sunt noi, chiar dacă eu sunt același. Amin.",
     step: "Când te trezești mâine, spune versetul înainte să te ridici din pat.",
   },
@@ -367,7 +368,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Matei 6:34",
-    verseText: "Nu vă îngrijorați dar de ziua de mâine; căci ziua de mâine se va îngrijora de ea Însăși. Ajunge zilei necazul ei.",
+    verseText: "Nu vă îngrijorați dar de ziua de mâine; căci ziua de mâine se va îngrijora de ea însăși. Ajunge zilei necazul ei.",
     meditation:
       "Isus nu spune că mâine nu va fi greu. Spune că ai putere pentru o zi și că puterea nu se poate împrumuta înainte. Când duci azi și povara de mâine, ești singur cu greutatea a două zile într-una.",
     question: "Cât din greutatea ta de azi aparține, de fapt, zilei de mâine?",
@@ -380,7 +381,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Psalmul 62:8",
-    verseText: "Popoare, încredeți-vă în El în orice vreme, vărsați-vă inimile înaintea Lui!",
+    verseText: "Popoare, în orice vreme, încredeți-vă în El, vărsați-vă inimile înaintea Lui! Dumnezeu este adăpostul nostru.",
     meditation:
       "„Vărsați” — nu „prezentați ordonat”. Dumnezeu nu are nevoie de o rugăciune structurată, ci de una golită până la fund. Cine își toarnă inima pe jumătate rămâne cu jumătate.",
     question: "Ce nu I-ai spus încă, deși ți-e în cap de săptămâni?",
@@ -393,7 +394,7 @@ export const DEVOTIONAL_DAYS_LUNA_3: DevotionalDay[] = [
     theme: LUNA_3,
     axis: "emotional_peace",
     verseRef: "Ioan 16:33",
-    verseText: "În lume veți avea necazuri; dar îndrăzniți, Eu am biruit lumea.",
+    verseText: "V-am spus aceste lucruri ca să aveți pace în Mine. În lume veți avea necazuri, dar îndrăzniți, Eu am biruit lumea.",
     meditation:
       "E cea mai cinstită propoziție despre viață din toată Biblia: vor fi necazuri, spuse înainte să vină, ca să nu crezi că s-a stricat ceva când vin. Iar îndemnul nu stă pe optimism, ci pe un rezultat deja obținut. Luna asta se încheie aici: frica nu a dispărut, dar nu mai e singură în cameră.",
     question: "Ce s-a schimbat în felul în care îți vorbești în frică, față de ziua 61?",
