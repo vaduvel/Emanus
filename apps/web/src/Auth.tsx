@@ -1,7 +1,6 @@
 import { useState } from "react"
 import type { CSSProperties } from "react"
 import { LogOut, Mail, ShieldCheck } from "lucide-react"
-import { linkAccount } from "./api"
 import { clearBiblePersonalLocal, syncBiblePersonal } from "./biblePersonal"
 import { ensureCloudUser, invalidateCloudUser } from "./cloudSession"
 import { pushState } from "./cloud"
@@ -11,8 +10,8 @@ import { clearEmail, clearUserId, getEmail, setEmail as saveEmail, setUserId } f
 import { getSupabase, isAuthConfigured } from "./supabase"
 import { Button } from "./ds"
 
-function msg(e: unknown): string {
-  return e instanceof Error ? e.message : String(e)
+function message(error: unknown): string {
+  return error instanceof Error ? error.message : String(error)
 }
 
 const iconWrapStyle: CSSProperties = {
@@ -87,85 +86,87 @@ export function Auth() {
   const [error, setError] = useState<string | null>(null)
   const [info, setInfo] = useState<string | null>(null)
 
-  async function sendCode() {
-    const sb = getSupabase()
-    if (!sb) return
-    const addr = email.trim()
-    if (!addr) return
+  async function sendCode(): Promise<void> {
+    const supabase = getSupabase()
+    const address = email.trim()
+    if (!supabase || !address) return
     setBusy(true)
     setError(null)
     try {
       const current = await ensureCloudUser()
       if (current?.is_anonymous) {
-        const { error: linkError } = await sb.auth.updateUser({ email: addr })
-        if (!linkError) {
+        const { error: updateError } = await supabase.auth.updateUser({ email: address })
+        if (!updateError) {
           setVerification("email_change")
-        } else if (/already|registered|exists/i.test(linkError.message)) {
-          const { error: signInError } = await sb.auth.signInWithOtp({ email: addr, options: { shouldCreateUser: false } })
+        } else if (/already|registered|exists/i.test(updateError.message)) {
+          const { error: signInError } = await supabase.auth.signInWithOtp({
+            email: address,
+            options: { shouldCreateUser: false },
+          })
           if (signInError) throw signInError
           setVerification("signin")
         } else {
-          throw linkError
+          throw updateError
         }
       } else {
-        const { error: signInError } = await sb.auth.signInWithOtp({ email: addr, options: { shouldCreateUser: true } })
+        const { error: signInError } = await supabase.auth.signInWithOtp({
+          email: address,
+          options: { shouldCreateUser: true },
+        })
         if (signInError) throw signInError
         setVerification("signin")
       }
-      setInfo(`Ți-am trimis un cod de conectare la ${addr}. Verifică-ți e-mailul.`)
+      setInfo(`Ți-am trimis un cod de conectare la ${address}. Verifică-ți e-mailul.`)
       setPhase("code")
-    } catch (e) {
-      setError(msg(e))
+    } catch (cause) {
+      setError(message(cause))
     } finally {
       setBusy(false)
     }
   }
 
-  async function verify() {
-    const sb = getSupabase()
-    if (!sb) return
+  async function verify(): Promise<void> {
+    const supabase = getSupabase()
+    if (!supabase) return
     setBusy(true)
     setError(null)
     try {
-      let result = await sb.auth.verifyOtp({
+      let result = await supabase.auth.verifyOtp({
         email: email.trim(),
         token: code.trim(),
         type: verification,
       })
       if (result.error && verification === "email_change") {
-        result = await sb.auth.verifyOtp({ email: email.trim(), token: code.trim(), type: "email" })
+        result = await supabase.auth.verifyOtp({
+          email: email.trim(),
+          token: code.trim(),
+          type: "email",
+        })
       }
       if (result.error) throw result.error
-      const uid = result.data.user?.id
-      if (uid) {
-        // Leagă progresul anonim de contul autentificat ÎNAINTE de a schimba id-ul local.
-        try {
-          await linkAccount(uid)
-        } catch {
-          /* best-effort: chiar dacă legarea eșuează, continuăm cu login-ul */
-        }
-        setUserId(uid)
+      const userId = result.data.user?.id
+      if (userId) {
+        setUserId(userId)
         saveEmail(email.trim())
         invalidateCloudUser()
         await Promise.all([syncBiblePersonal(), pushState(load())])
       }
       navigate("/")
-    } catch (e) {
-      setError(msg(e))
+    } catch (cause) {
+      setError(message(cause))
     } finally {
       setBusy(false)
     }
   }
 
-  async function signOut() {
-    const sb = getSupabase()
+  async function signOut(): Promise<void> {
+    const supabase = getSupabase()
     setBusy(true)
     setError(null)
     try {
-      if (sb) {
-        // Impinge ultima stare in cont inainte sa dispara tokenul curent.
+      if (supabase) {
         await Promise.all([syncBiblePersonal(), pushState(load())])
-        const { error: signOutError } = await sb.auth.signOut()
+        const { error: signOutError } = await supabase.auth.signOut()
         if (signOutError) throw signOutError
         invalidateCloudUser()
       }
@@ -175,7 +176,7 @@ export function Auth() {
       clearUserId()
       navigate("/")
     } catch (cause) {
-      setError(msg(cause))
+      setError(message(cause))
     } finally {
       setBusy(false)
     }
@@ -185,9 +186,7 @@ export function Auth() {
     <section className="auth">
       <header className="dashboard__head">
         <h1>Contul meu</h1>
-        <button type="button" className="ghost" onClick={() => navigate("/")}>
-          ← Acasă
-        </button>
+        <button type="button" className="ghost" onClick={() => navigate("/")}>← Acasă</button>
       </header>
 
       <div style={iconWrapStyle}>
@@ -196,12 +195,8 @@ export function Auth() {
 
       {existing ? (
         <>
-          <p style={signedRowStyle}>
-            <Mail size={16} aria-hidden /> {existing}
-          </p>
-          <p className="muted">
-            Ești conectat. Progresul tău e legat de acest cont și te urmează pe orice dispozitiv.
-          </p>
+          <p style={signedRowStyle}><Mail size={16} aria-hidden /> {existing}</p>
+          <p className="muted">Ești conectat. Progresul tău este asociat acestui cont.</p>
           <button type="button" style={outBtnStyle} disabled={busy} onClick={() => void signOut()}>
             <LogOut size={15} aria-hidden />
             {busy ? "Se deconectează…" : "Deconectează-te"}
@@ -209,21 +204,12 @@ export function Auth() {
         </>
       ) : !configured ? (
         <>
-          <p className="muted">
-            Conectarea nu e disponibilă în acest mediu (lipsesc cheile Supabase). Poți folosi
-            aplicația anonim — progresul e salvat local până la prima conectare.
-          </p>
-          <Button variant="secondary" block onClick={() => navigate("/")}>
-            Înapoi la Acasă
-          </Button>
+          <p className="muted">Conectarea nu este disponibilă în acest mediu. Aplicația rămâne utilizabilă local.</p>
+          <Button variant="secondary" block onClick={() => navigate("/")}>Înapoi la Acasă</Button>
         </>
       ) : (
         <>
-          <p className="muted">
-            Salvează-ți progresul și regăsește-l pe orice dispozitiv. Îți trimitem un cod pe e-mail
-            — fără parolă de reținut.
-          </p>
-
+          <p className="muted">Leagă progresul de e-mail printr-un cod, fără parolă.</p>
           {error && <p className="error">{error}</p>}
           {info && <p style={infoStyle}>{info}</p>}
 
@@ -236,9 +222,9 @@ export function Auth() {
                 autoComplete="email"
                 placeholder="nume@exemplu.ro"
                 value={email}
-                onChange={(e) => setEmailInput(e.target.value)}
+                onChange={(event) => setEmailInput(event.target.value)}
               />
-              <Button variant="primary" block disabled={busy || !email.trim()} onClick={sendCode}>
+              <Button variant="primary" block disabled={busy || !email.trim()} onClick={() => void sendCode()}>
                 {busy ? "Se trimite…" : "Trimite-mi codul"}
               </Button>
             </>
@@ -252,22 +238,16 @@ export function Auth() {
                 placeholder="000000"
                 maxLength={6}
                 value={code}
-                onChange={(e) => setCode(e.target.value.replace(/[^0-9]/g, ""))}
+                onChange={(event) => setCode(event.target.value.replace(/[^0-9]/g, ""))}
               />
-              <Button variant="primary" block disabled={busy || code.trim().length < 6} onClick={verify}>
+              <Button variant="primary" block disabled={busy || code.trim().length < 6} onClick={() => void verify()}>
                 {busy ? "Se verifică…" : "Confirmă și intră"}
               </Button>
-              <button
-                type="button"
-                className="ghost"
-                onClick={() => {
-                  setPhase("email")
-                  setCode("")
-                  setInfo(null)
-                }}
-              >
-                Am greșit e-mailul
-              </button>
+              <button type="button" className="ghost" onClick={() => {
+                setPhase("email")
+                setCode("")
+                setInfo(null)
+              }}>Am greșit e-mailul</button>
             </>
           )}
         </>
