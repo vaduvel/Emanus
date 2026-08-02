@@ -2,7 +2,7 @@
 //
 // Conținut ORIGINAL Emanus. Nu se rescriu devoționale existente de pe web:
 // un devoțional rescris rămâne operă derivată (docs/27 §1.2). Versetele sunt
-// din traducerea Cornilescu (domeniu public).
+// din Cornilescu VDC 1924 (domeniu public), colaționate verset cu verset.
 //
 // Regula manei (Exod 16, docs/27 §4.5): ziua ta, nu ziua din calendar. Zilele
 // lipsă nu se acumulează ca datorie și nu se recuperează. `dayIndex` avansează
@@ -67,7 +67,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Ioan 1:12",
-    verseText: "Dar tuturor celor ce L-au primit le-a dat dreptul să se facă copii ai lui Dumnezeu.",
+    verseText: "Dar tuturor celor ce L-au primit, adică celor ce cred în Numele Lui, le-a dat dreptul să se facă copii ai lui Dumnezeu.",
     meditation:
       "Observă ce nu spune versetul. Nu spune că ai devenit un om mai bun, nici că ai primit o listă de reguli. Spune că ai primit un drept — dreptul de a fi copil. Dreptul nu se câștigă cu purtarea, se primește cu numele. Astăzi începi un drum de un an, și primul lucru pe care trebuie să-l știi e că nu pornești ca să ajungi fiu. Pornești pentru că ești.",
     question: "Unde te-ai purtat în ultima vreme ca un angajat al lui Dumnezeu, nu ca un copil al Lui?",
@@ -81,7 +81,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Galateni 4:7",
-    verseText: "Așa că nu mai ești rob, ci fiu; și dacă ești fiu, ești și moștenitor.",
+    verseText: "Așa că nu mai ești rob, ci fiu; și dacă ești fiu, ești și moștenitor prin Dumnezeu.",
     meditation:
       "Robul și fiul pot face aceeași muncă în aceeași casă. Diferența nu e în ce fac, e în ce se întâmplă dacă greșesc. Robul se teme că va fi dat afară. Fiul știe că rămâne. Dacă te rogi cu frica de a fi dat afară, te rogi ca un rob într-o casă unde ești fiu.",
     question: "Ce ai face azi altfel, dacă ai fi absolut sigur că nu poți fi dat afară?",
@@ -96,7 +96,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     axis: "identity",
     verseRef: "Romani 8:15",
     verseText:
-      "Și voi n-ați primit un duh de robie, ca să mai aveți frică; ci ați primit un duh de înfiere, care ne face să strigăm: „Ava!”, adică „Tată!”",
+      "Și voi n-ați primit un duh de robie, ca să mai aveți frică, ci ați primit un duh de înfiere, care ne face să strigăm: „Ava!”, adică „Tată!”",
     meditation:
       "„Ava” nu e un cuvânt teologic. E cuvântul pe care un copil mic îl strigă prin casă când s-a lovit. Pavel spune că exact acel cuvânt ți-a fost dat. Nu ți s-a dat un formular, ți s-a dat un strigăt. Iar strigătul nu are nevoie să fie frumos ca să fie auzit.",
     question: "Când te-ai rugat ultima dată cu cuvintele tale, nu cu cele corecte?",
@@ -109,7 +109,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "1 Ioan 3:1",
-    verseText: "Vedeți ce dragoste ne-a arătat Tatăl: să ne numim copii ai lui Dumnezeu!",
+    verseText: "Vedeți ce dragoste ne-a arătat Tatăl: să ne numim copii ai lui Dumnezeu! Și suntem.",
     meditation:
       "Ioan nu argumentează aici, se miră. „Vedeți ce dragoste” e exclamația unui om care nu s-a obișnuit cu ce a primit. Pericolul, după câțiva ani, nu e să nu crezi. E să te obișnuiești. Mirarea nu e un sentiment de începător; e semnul că încă vezi limpede.",
     question: "Cu ce te-ai obișnuit atât de mult încât nu te mai miră?",
@@ -122,7 +122,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Efeseni 1:5",
-    verseText: "Ne-a rânduit mai dinainte să fim înfiați prin Isus Hristos, după buna plăcere a voii Sale.",
+    verseText: "Ne-a rânduit mai dinainte să fim înfiați prin Isus Hristos, după buna plăcere a voiei Sale.",
     meditation:
       "Un copil înfiat nu ajunge în familie din întâmplare. Cineva a vrut, a semnat și a plătit. Copilul născut poate spune „așa s-a nimerit”; cel înfiat nu poate spune asta niciodată. Tu ești înfiat. Nu ești în familia asta din întâmplare, ci pentru că Cineva a vrut anume pe tine.",
     question: "Te vezi mai des ca pe un om tolerat de Dumnezeu sau ca pe unul dorit de El?",
@@ -150,7 +150,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Psalmul 139:14",
-    verseText: "Te laud că sunt o făptură așa de minunată.",
+    verseText: "Te laud că sunt o făptură așa de minunată. Minunate sunt lucrările Tale și ce bine vede sufletul meu lucrul acesta!",
     meditation:
       "E ciudat de citit versetul acesta într-o zi în care nu te placi. Dar observă: David nu se laudă pe el, Îl laudă pe Dumnezeu. Nu spune „sunt grozav”, spune „ai lucrat bine”. Poți spune asta și într-o zi grea, pentru că nu vorbește despre performanța ta, ci despre meseria Lui.",
     question: "Ce parte din tine îți vine cel mai greu să crezi că a fost făcută intenționat?",
@@ -164,7 +164,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Ieremia 1:5",
-    verseText: "Mai înainte ca să te fi întocmit în burta mamei tale, te cunoșteam.",
+    verseText: "Mai înainte ca să te fi întocmit în pântecele mamei tale te cunoșteam.",
     meditation:
       "Dumnezeu nu te-a cunoscut pe parcurs. Nu a aflat despre tine ce fel de om ești, dezamăgindu-se treptat. Te cunoștea înainte să existe cineva care să te cunoască. Deci nimic din ce a ieșit la lumină în tine în ultimii ani nu a fost o surpriză pentru El.",
     question: "Ce crezi că a descoperit Dumnezeu despre tine și l-a dezamăgit?",
@@ -177,7 +177,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Efeseni 2:10",
-    verseText: "Căci noi suntem lucrarea Lui.",
+    verseText: "Căci noi suntem lucrarea Lui și am fost zidiți în Hristos Isus pentru faptele bune pe care le-a pregătit Dumnezeu mai dinainte ca să umblăm în ele.",
     meditation:
       "Cuvântul din original spune „lucrare”, ca despre ceva lucrat cu mâna, nu produs în serie. Un om care se crede accident se poartă ca un accident. Un om care știe că e lucrare are răbdare cu el însuși, pentru că știe că lucrarea nu e gata.",
     question: "În ce parte a vieții tale te grăbești să fii deja gata?",
@@ -191,7 +191,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     axis: "identity",
     verseRef: "Romani 8:38-39",
     verseText:
-      "Nici moartea, nici viața, nici o altă făptură nu ne va putea despărți de dragostea lui Dumnezeu.",
+      "Căci sunt bine încredințat că nici moartea, nici viața... nici o altă făptură nu vor fi în stare să ne despartă de dragostea lui Dumnezeu, care este în Isus Hristos, Domnul nostru.",
     meditation:
       "Pavel face o listă lungă și lasă înadins un loc gol: „nici o altă făptură”. Adică inclusiv tu. Ești o făptură. Nici tu nu te poți despărți de dragostea Lui. Asta e cel mai greu de crezut, pentru că mulți oameni cred că Dumnezeu îi iubește, dar bănuiesc că ei pot strica lucrul.",
     question: "Ce crezi, în adâncul tău, că ar putea rupe legătura dintre tine și Dumnezeu?",
@@ -205,7 +205,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Ioan 15:15",
-    verseText: "Nu vă mai numesc robi... v-am numit prieteni.",
+    verseText: "Nu vă mai numesc robi... ci v-am numit prieteni, pentru că v-am făcut cunoscut tot ce am auzit de la Tatăl Meu.",
     meditation:
       "Isus schimbă cuvântul în mijlocul relației. Nu la început, când nu Îl cunoșteau, ci după ce L-au văzut obosit, trist și trădat de unul de-al lor. Prietenia nu e o promovare pentru cei care s-au descurcat bine. E felul în care El a decis să numească oameni care aveau să-L lase singur în noaptea aceea.",
     question: "Te-ai purta cu Dumnezeu diferit dacă ai crede că te consideră prieten?",
@@ -218,7 +218,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "2 Corinteni 5:17",
-    verseText: "Dacă este cineva în Hristos, este o făptură nouă. Cele vechi s-au dus.",
+    verseText: "Căci, dacă este cineva în Hristos, este o făptură nouă. Cele vechi s-au dus, iată că toate lucrurile s-au făcut noi.",
     meditation:
       "Versetul nu spune că amintirile s-au dus, nici că lupta s-a dus. Spune că „cele vechi” — ce te definea — s-au dus. Un om care a fost eliberat din închisoare poate încă visa noaptea celula. Visul nu îl întoarce înăuntru. Trecutul tău poate să te viziteze, dar nu mai are drept de proprietate.",
     question: "Ce lucru vechi încă vorbește despre tine ca și cum ar avea dreptul?",
@@ -232,7 +232,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Coloseni 3:3",
-    verseText: "Căci viața voastră este ascunsă cu Hristos în Dumnezeu.",
+    verseText: "Căci voi ați murit, și viața voastră este ascunsă cu Hristos în Dumnezeu.",
     meditation:
       "„Ascunsă” e un cuvânt bun. Înseamnă că cea mai importantă parte din tine nu e la vedere și nu poate fi atinsă de ce se vede. Reputația ta poate fi lovită, corpul poate obosi, planurile pot cădea. Viața, cea adevărată, e pusă la păstrare în alt loc.",
     question: "Ce parte din tine ai crezut că e viața ta, deși e doar vitrina ei?",
@@ -245,7 +245,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Isaia 49:16",
-    verseText: "Iată, te-am săpat pe mâinile Mele.",
+    verseText: "Iată că te-am săpat pe mâinile Mele, și zidurile tale sunt totdeauna înaintea ochilor Mei!",
     meditation:
       "Nu scris, nu notat: săpat. Un lucru săpat nu se poate șterge fără să rămână urma. Iar mâna e locul pe care îl vezi de o sută de ori pe zi, fără să vrei. Dumnezeu spune că ești în locul la care se uită mereu, într-o formă care nu se poate șterge.",
     question: "Ce te face să crezi că Dumnezeu te-a uitat?",
@@ -272,7 +272,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Luca 15:20",
-    verseText: "Când era încă departe, tatăl său l-a văzut și i s-a făcut milă de el; a alergat de i s-a aruncat pe gât.",
+    verseText: "Când era încă departe, tatăl său l-a văzut și i s-a făcut milă de el, a alergat de a căzut pe grumazul lui și l-a sărutat mult.",
     meditation:
       "Fiul avea un discurs pregătit. Tatăl nu l-a lăsat să-l termine. Observă cine aleargă în povestea asta: nu cel care s-a întors, ci cel care aștepta. Iar tatăl l-a văzut „când era încă departe”, ceea ce înseamnă că se uita spre drum de mult timp.",
     question: "Ce discurs de scuze ai pregătit pentru Dumnezeu, crezând că fără el nu ești primit?",
@@ -285,7 +285,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Romani 5:8",
-    verseText: "Pe când eram noi încă păcătoși, Hristos a murit pentru noi.",
+    verseText: "Dar Dumnezeu Își arată dragostea față de noi prin faptul că, pe când eram noi încă păcătoși, Hristos a murit pentru noi.",
     meditation:
       "Ordinea din verset e totul. Nu „a murit pentru noi după ce ne-am îndreptat”. Dovada dragostei a venit în cel mai prost moment al nostru, nu în cel mai bun. Deci nu poți fi într-o zi atât de rea încât dovada să nu mai fie valabilă — a fost dată exact pentru zilele acelea.",
     question: "Aștepți să te aranjezi puțin înainte să te apropii de El?",
@@ -298,7 +298,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Efeseni 1:7",
-    verseText: "În El avem răscumpărarea, prin sângele Lui, iertarea păcatelor.",
+    verseText: "În El avem răscumpărarea, prin sângele Lui, iertarea păcatelor, după bogățiile harului Său.",
     meditation:
       "Răscumpărare înseamnă că prețul a fost plătit de altcineva, integral, o dată. Un om iertat care încă își plătește pedeapsa în gând nu trăiește iertarea, ci o rescrie. Dacă prețul a fost plătit, a-l mai plăti tu nu e smerenie, e neîncredere.",
     question: "Pentru ce lucru iertat te mai pedepsești singur?",
@@ -311,7 +311,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "1 Petru 2:9",
-    verseText: "Voi însă sunteți o seminție aleasă, o preoție împărătească, un neam sfânt.",
+    verseText: "Voi însă sunteți o seminție aleasă, o preoție împărătească, un neam sfânt, un popor pe care Dumnezeu Și l-a câștigat ca să fie al Lui.",
     meditation:
       "Petru scrie asta unor oameni împrăștiați, fără putere și fără poziție în lume. Nu le spune ce vor deveni dacă se organizează. Le spune ce sunt deja, în timp ce sunt slabi. Identitatea nu e recompensa pentru forță; e ce ai când n-ai nimic altceva.",
     question: "Ce crezi că trebuie să obții ca să fii cineva?",
@@ -350,7 +350,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Isaia 62:4",
-    verseText: "Nu te vor mai numi Părăsită... ci te vor numi Plăcerea Mea.",
+    verseText: "Nu te vor mai numi „Părăsită”... ci te vor numi „Plăcerea Mea este în ea”.",
     meditation:
       "Dumnezeu schimbă numele oamenilor și al locurilor. Cine a trăit mult timp cu un nume urât — ratat, singur, nefolositor — ajunge să răspundă la el fără să se gândească. Dumnezeu nu îți cere să te motivezi. Îți schimbă numele.",
     question: "La ce nume vechi mai răspunzi, deși El l-a schimbat?",
@@ -376,11 +376,11 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Romani 8:1",
-    verseText: "Acum dar nu este nici o osândire pentru cei ce sunt în Hristos Isus.",
+    verseText: "Acum dar nu este nicio osândire pentru cei ce sunt în Hristos Isus, care nu trăiesc după îndemnurile firii pământești, ci după îndemnurile Duhului.",
     meditation:
       "Nu „mai puțină osândire”. Nici una. Vocea care te acuză dimineața, înainte să te trezești bine, nu e vocea lui Dumnezeu — pentru că Dumnezeu nu are ce să acuze acolo unde a plătit. Vinovăția care te duce la El e de la El. Cea care te ține departe de El nu e.",
     question: "Vinovăția pe care o simți acum te trage spre Dumnezeu sau te ține departe?",
-    prayer: "Doamne, nu e nici o osândire. Închide gura care mă acuză în numele Tău. Amin.",
+    prayer: "Doamne, nu e nicio osândire. Închide gura care mă acuză în numele Tău. Amin.",
     step: "Când te acuză azi un gând, întreabă-l o dată: „mă duci la El sau mă ții departe?”",
   },
   {
@@ -389,7 +389,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Psalmul 34:5",
-    verseText: "Când îți întorci privirile spre El, te luminezi de bucurie și nu ți se roșește obrazul de rușine.",
+    verseText: "Când îți întorci privirile spre El, te luminezi de bucurie și nu ți se umple fața de rușine.",
     meditation:
       "Rușinea are un obicei: îți apleacă privirea. Nu întâmplător versetul vorbește despre a ridica ochii. Nu poți argumenta cu rușinea, dar poți privi în altă direcție. Iar când privești spre El, se întâmplă un lucru pe care nu-l poți produce singur: fața ta se schimbă.",
     question: "În ce lucru din viața ta mergi cu privirea în jos?",
@@ -402,7 +402,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "1 Ioan 4:18",
-    verseText: "În dragoste nu este frică; ci dragostea desăvârșită izgonește frica.",
+    verseText: "În dragoste nu este frică, ci dragostea desăvârșită izgonește frica.",
     meditation:
       "Ioan spune că frica de pedeapsă și siguranța de a fi iubit nu pot locui în același loc. Deci frica de Dumnezeu, în sensul de teroare, nu e semn de evlavie — e semn că încă nu te-ai așezat în dragostea Lui. Nu te lupta direct cu frica. Așază-te în dragoste, și frica pierde locul.",
     question: "De ce te temi cel mai mult în legătura ta cu Dumnezeu?",
@@ -441,7 +441,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     theme: LUNA_1,
     axis: "identity",
     verseRef: "Ioan 15:16",
-    verseText: "Nu voi M-ați ales pe Mine; ci Eu v-am ales pe voi.",
+    verseText: "Nu voi M-ați ales pe Mine, ci Eu v-am ales pe voi.",
     meditation:
       "Cine crede că el l-a ales pe Dumnezeu trăiește cu frica de a se răzgândi — sau de a fi găsit nepotrivit. Isus întoarce ordinea. Alegerea nu a pornit de la tine, deci nu se termină cu tine. Ești ținut de o hotărâre care nu e a ta.",
     question: "Legătura ta cu Dumnezeu depinde mai mult de statornicia ta sau de a Lui?",
@@ -468,7 +468,7 @@ export const DEVOTIONAL_DAYS: DevotionalDay[] = [
     axis: "identity",
     verseRef: "Filipeni 1:6",
     verseText:
-      "Sunt încredințat că Acela care a început în voi această bună lucrare o va isprăvi.",
+      "Sunt încredințat că Acela care a început în voi această bună lucrare o va isprăvi până în ziua lui Isus Hristos.",
     meditation:
       "O lună. Dacă ai lipsit zile, nu s-a stricat nimic — mana de azi e pentru azi, nu pentru zilele în care n-ai strâns. Versetul acesta e semnătura lunii: cel care a început nu e tu, deci nici cel care duce la capăt nu ești tu. Luna viitoare continuăm de aici.",
     question: "Ce s-a mișcat în tine în luna asta, chiar și puțin?",
