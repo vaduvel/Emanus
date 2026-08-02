@@ -1,0 +1,24 @@
+name: Apply Geneza 12-25 review
+on:
+  push:
+    branches: [review/geneza-12-25-v2]
+    paths:
+      - scripts/review-geneza-12-25-v2.py
+      - .github/workflows/apply-geneza-12-25-review.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/geneza-12-25-v2
+      - run: python3 scripts/review-geneza-12-25-v2.py
+      - run: |
+          rm scripts/review-geneza-12-25-v2.py .github/workflows/apply-geneza-12-25-review.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add packages/shared/src/bible scripts .github/workflows
+          git commit -m "fix(content): revizuieste Geneza 12-25"
+          git push
