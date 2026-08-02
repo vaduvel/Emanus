@@ -12,6 +12,9 @@
 //
 // Stările vin din vocabularul unic (docs/41, `needs.ts`). Câmpul `moods` s-a
 // numit așa până la unificare; acum e `needs` și cunoaște toate cele 20.
+//
+// Cardurile stau în cinci fișiere, ca lunile devoționalului: cele 45 dintâi aici,
+// restul pe grupe de durere (pierdere, familie, robie, tăcere).
 import type { AgeCategoryId, GrowthAxisId } from "./domain.js"
 import { LEGACY_MOOD_IDS, needById, NEEDS, type MessageMood, type NeedId } from "./needs.js"
 
@@ -48,7 +51,13 @@ export interface MessageCard {
   ageVariants?: Partial<Record<AgeCategoryId, { title: CardTitle; body: string }>>
 }
 
-export const MESSAGE_CARDS: MessageCard[] = [
+import { MESSAGE_CARDS_PIERDERE } from "./messageCardsPierdere.js"
+import { MESSAGE_CARDS_FAMILIE } from "./messageCardsFamilie.js"
+import { MESSAGE_CARDS_ROBIE } from "./messageCardsRobie.js"
+import { MESSAGE_CARDS_TACERE } from "./messageCardsTacere.js"
+
+/** Cele 45 de carduri scrise întâi, mutate pe vocabularul unic. */
+const CARDS_BAZA: MessageCard[] = [
   {
     id: "msg_ajunge_zilei",
     title: "Dumnezeu ți-a spus deja:",
@@ -397,8 +406,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
     title: "Dumnezeu ți-a spus deja:",
     body: "Nu dormitez și nu adorm cât timp te păzesc.",
     verseRef: "Psalmul 121:3-4",
-    verseText:
-      "Iată că nu dormitează, nici nu doarme Cel ce păzește pe Israel.",
+    verseText: "Iată că nu dormitează, nici nu doarme Cel ce păzește pe Israel.",
     axis: "emotional_peace",
     needs: ["speriat", "singur"],
     background: "pergament-umbra",
@@ -522,6 +530,14 @@ export const MESSAGE_CARDS: MessageCard[] = [
   },
 ]
 
+export const MESSAGE_CARDS: MessageCard[] = [
+  ...CARDS_BAZA,
+  ...MESSAGE_CARDS_PIERDERE,
+  ...MESSAGE_CARDS_FAMILIE,
+  ...MESSAGE_CARDS_ROBIE,
+  ...MESSAGE_CARDS_TACERE,
+]
+
 /** Verificare de siguranță: un card fără verset-ancoră nu are ce căuta în app. */
 export function isCardAnchored(card: MessageCard): boolean {
   return card.verseRef.trim().length > 0 && card.verseText.trim().length > 0
@@ -561,6 +577,17 @@ export function needCoverage(): {
 /** Stările pentru care nu s-a scris încă niciun card. */
 export function needsWithoutCards(): NeedId[] {
   return NEEDS.filter((n) => cardsForNeed(n.id).length === 0).map((n) => n.id)
+}
+
+/** Id-uri scrise de două ori. Cu cinci fișiere, greșeala devine ușoară. */
+export function duplicateCardIds(): string[] {
+  const seen = new Set<string>()
+  const dupes = new Set<string>()
+  for (const card of MESSAGE_CARDS) {
+    if (seen.has(card.id)) dupes.add(card.id)
+    seen.add(card.id)
+  }
+  return [...dupes]
 }
 
 function dayNumber(date: Date): number {
