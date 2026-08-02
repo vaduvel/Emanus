@@ -36,6 +36,7 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
   }, [lessonId])
 
   if (!lesson) return <section className="player"><p className="muted">Lecția asta nu există (încă).</p><button type="button" onClick={() => navigate("/")}>Înapoi la Azi</button></section>
+  const activeLesson = lesson
 
   if (safetyGate && !gateAccepted) {
     const resources = crisisResources(safetyGate.resources)
@@ -59,8 +60,8 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
   }
 
   function onComplete(result: LessonResult) {
-    if (libraryCourse) completeLibraryLesson(lesson.id, libraryCourse.id, result.journal)
-    else completeLesson(lesson.id, result.journal)
+    if (libraryCourse) completeLibraryLesson(activeLesson.id, libraryCourse.id, result.journal)
+    else completeLesson(activeLesson.id, result.journal)
     setDone(true)
   }
 
@@ -84,5 +85,5 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
     return <section className="player player--done"><div className="tile"><h2>Gata pe azi</h2><p>Nu îți dau niciun punct și nicio insignă. Ai auzit ceva adevărat — asta rămâne oricum.</p><p className="muted">{finished ? "Ai terminat drumul. Hai să-ți arăt ceva." : "Mâine e ziua de pus în practică. Lecția următoare vine poimâine."}</p><button type="button" onClick={() => navigate(finished ? "/final" : "/")}>{finished ? "Vezi" : "Înapoi la Azi"}</button></div></section>
   }
 
-  return <LessonPlayer lesson={lesson} onComplete={onComplete} />
+  return <LessonPlayer lesson={activeLesson} onComplete={onComplete} />
 }
