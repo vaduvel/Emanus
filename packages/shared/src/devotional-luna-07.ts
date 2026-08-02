@@ -5,7 +5,8 @@
 // faci când nu-ți ies cuvintele și ce faci când răspunsul întârzie. Pașii rămân
 // mici: două minute făcute zilnic bat o oră promisă și neonorată.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924 (domeniu
+// public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_7 = "Rugăciunea"
@@ -43,7 +44,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Matei 6:7",
-    verseText: "Când vă rugați, să nu bolborosiți aceleași vorbe, ca păgânii, care își închipuie că, dacă spun o mulțime de vorbe, vor fi ascultați.",
+    verseText: "Când vă rugați, să nu bolborosiți aceleași vorbe, ca păgânii, cărora li se pare că, dacă spun o mulțime de vorbe, vor fi ascultați.",
     meditation:
       "Dumnezeu nu se lasă impresionat de lungime și nici de limbaj bisericesc. Păgânii credeau că zeii trebuie convinși; Tatăl tău nu trebuie convins să te asculte. De aceea poți vorbi simplu, cum vorbești de obicei.",
     question: "Te rogi cu alte cuvinte decât cele pe care le folosești în viață?",
@@ -56,7 +57,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Matei 6:9",
-    verseText: "Iată dar cum trebuie să vă rugați: „Tatăl nostru care ești în ceruri! Sfințească-se Numele Tău.”",
+    verseText: "Iată dar cum trebuie să vă rugați: ‘Tatăl nostru care ești în ceruri! Sfințească-se Numele Tău’",
     meditation:
       "Primul cuvânt e „Tată”, nu „Domn” și nu „Stăpân”. Al doilea e „nostru” — chiar și în camera încuiată nu ești singur înaintea Lui. Din primele patru cuvinte afli cine ești și cine e El.",
     question: "Îi spui Tată sau doar Doamne?",
@@ -95,7 +96,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Luca 18:13",
-    verseText: "Vameșul stătea departe și nu îndrăznea nici ochii să-și ridice spre cer, ci se bătea în piept și zicea: „Dumnezeule, ai milă de mine, păcătosul!”",
+    verseText: "Vameșul stătea departe și nu îndrăznea nici ochii să și-i ridice spre cer, ci se bătea în piept și zicea: ‘Dumnezeule, ai milă de mine, păcătosul!’",
     meditation:
       "E cea mai scurtă rugăciune ascultată din Evanghelii și n-are nimic în ea în afară de adevăr. Fariseul avea material mai bun și a plecat acasă cu mâinile goale. Ce contează nu e cât de bine vorbești, ci cât de sincer stai.",
     question: "Când te rogi, îți prezinți meritele sau nevoia?",
@@ -108,7 +109,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Luca 11:9",
-    verseText: "Cereți și vi se va da; căutați și veți găsi; bateți și vi se va deschide.",
+    verseText: "Cereți, și vi se va da; căutați, și veți găsi; bateți, și vi se va deschide.",
     meditation:
       "Trei verbe, tot mai insistente: ceri, cauți, bați. Isus vorbește apoi despre un tată care nu dă copilului o piatră când cere pâine. Toată încrederea din rugăciune stă pe cine e Cel căruia Îi ceri.",
     question: "Ce nu ai cerut niciodată, pentru că ți s-a părut prea mult?",
@@ -149,7 +150,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     verseRef: "Filipeni 4:6",
     verseText: "Nu vă îngrijorați de nimic, ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu, prin rugăciuni și cereri, cu mulțumiri.",
     meditation:
-      "„În orice lucru” desființează ideea că unele probleme sunt prea mici pentru Dumnezeu. Și „cu mulțumiri” schimbă tonul: nu vii ca la un birou de reclamații. Grija dusă la El se preface în cerere; grija ținută în tine se preface în frică.",
+      "„În orice lucru” desființează ideea că unele probleme sunt prea mici pentru Dumnezeu. Și „cu mulțumiri” schimbă tonul: nu vii ca la un birou de reclaţii. Grija dusă la El se preface în cerere; grija ținută în tine se preface în frică.",
     question: "Ce lucru ți se pare prea mic ca să-l spui în rugăciune?",
     prayer: "Doamne, Îți spun și lucrurile mici. Mulțumesc că asculți. Amin.",
     step: "Roagă-te azi pentru un lucru banal — o întâlnire, un drum, o factură.",
@@ -173,7 +174,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Romani 8:26",
-    verseText: "Și tot astfel și Duhul ne ajută în slăbiciunea noastră, căci nu știm cum trebuie să ne rugăm; dar Însuși Duhul mijlocește pentru noi cu suspine negrăite.",
+    verseText: "Și tot astfel și Duhul ne ajută în slăbiciunea noastră, căci nu știm cum trebuie să ne rugăm. Dar Însuși Duhul mijlocește pentru noi cu suspine negrăite.",
     meditation:
       "Versetul ăsta e pentru zilele în care nu-ți ies cuvintele. Nu spune că rugăciunea ta e refuzată pentru că e săracă, ci că Altcineva o traduce. Un oftat poate ajunge întreg înaintea lui Dumnezeu.",
     question: "Ai tăcut vreodată pentru că nu știai ce să ceri?",
@@ -186,7 +187,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Evrei 4:16",
-    verseText: "Să ne apropiem dar cu deplină încredere de scaunul harului, ca să căpătăm îndurare și să găsim har, pentru ca să fim ajutați la vreme de nevoie.",
+    verseText: "Să ne apropiem dar cu deplină încredere de scaunul harului ca să căpătăm îndurare și să găsim har, pentru ca să fim ajutați la vreme de nevoie.",
     meditation:
       "Se numește scaunul harului, nu al meritelor, și tocmai de aceea poți veni cu încredere. Nu îți trebuie o săptămână bună ca să ai voie să te rogi. „La vreme de nevoie” înseamnă exact la momentul potrivit, nu mai devreme.",
     question: "Amâni rugăciunea până când te simți mai vrednic?",
@@ -199,7 +200,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Iacov 1:6",
-    verseText: "Dar să ceară cu credință, fără să se îndoiască deloc, pentru că cine se îndoiește seamănă cu valul mării, tulburat și împins de vânt încoace și încolo.",
+    verseText: "Dar s-o ceară cu credință, fără să se îndoiască deloc, pentru că cine se îndoiește seamănă cu valul mării, tulburat și împins de vânt încoace și încolo.",
     meditation:
       "Îndoiala de care vorbește Iacov nu e întrebarea sinceră, ci nehotărârea omului care nu știe dacă vrea sau nu ajutorul lui Dumnezeu. Poți veni cu întrebări; nu poți veni cu jumătate de inimă. Cere și rămâi acolo.",
     question: "Ceri cu adevărat sau doar încerci, „să vedem”?",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Psalmul 62:8",
-    verseText: "Popoare, în orice vreme, încredeți-vă în El, vărsați-vă inimile înaintea Lui!",
+    verseText: "Popoare, în orice vreme, încredeți-vă în El, vărsați-vă inimile înaintea Lui! Dumnezeu este adăpostul nostru.",
     meditation:
       "„Vărsați” e un cuvânt fără eleganță: răstorni tot, nu torni cu grijă. Dumnezeu nu are nevoie de un rezumat ordonat al stării tale. Multe rugăciuni sunt seci pentru că sunt politicoase.",
     question: "Ce n-ai spus încă, pentru că sună urât?",
@@ -251,7 +252,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Psalmul 5:3",
-    verseText: "Doamne, auzi-mi glasul dimineața! Dimineața eu îmi îndrept rugăciunea spre Tine și aștept.",
+    verseText: "Doamne, auzi-mi glasul dimineața! Dimineața, eu îmi îndrept rugăciunea spre Tine și aștept.",
     meditation:
       "Ultimul cuvânt e cel mai greu: „aștept”. Rugăciunea nu se termină când taci; urmează partea în care stai cu ochii pe drum. Cine cere și pleacă imediat nu vede răspunsurile când vin.",
     question: "Aștepți răspunsul sau treci imediat la ziua ta?",
@@ -303,7 +304,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Neemia 2:4",
-    verseText: "Împăratul mi-a zis: „Ce ceri?” Eu m-am rugat Dumnezeului cerurilor.",
+    verseText: "Și împăratul mi-a zis: „Ce ceri?” Eu m-am rugat Dumnezeului cerurilor",
     meditation:
       "Între întrebarea împăratului și răspunsul lui Neemia încape o rugăciune de două secunde. Nimeni din sală n-a observat. Așa se roagă un om care știe că Dumnezeu e la o distanță de un gând.",
     question: "Te rogi înainte să răspunzi la lucrurile importante?",
@@ -316,7 +317,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "2 Cronici 20:12",
-    verseText: "Noi suntem fără putere înaintea acestei mari mulțimi care înaintează împotriva noastră și nu știm ce să facem, dar ochii noștri sunt îndreptați spre Tine.",
+    verseText: "Căci noi suntem fără putere înaintea acestei mari mulțimi care înaintează împotriva noastră și nu știm ce să facem, dar ochii noștri sunt îndreptați spre Tine!",
     meditation:
       "E rugăciunea unui împărat înaintea unei armate și conține trei recunoașteri: nu avem putere, nu știm ce să facem, ne uităm la Tine. Nu e o rugăciune de învins. Dumnezeu a răspuns că lupta e a Lui.",
     question: "În ce situație ai putea spune exact cuvintele astea?",
@@ -329,7 +330,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "1 Samuel 1:15",
-    verseText: "Nu, domnul meu, eu sunt o femeie care suferă în inima ei... ci îmi vărsam sufletul înaintea Domnului.",
+    verseText: "Nu, domnul meu, eu sunt o femeie care suferă în inima ei și n-am băut nici vin, nici băutură amețitoare, ci îmi vărsam sufletul înaintea Domnului.",
     meditation:
       "Ana se ruga atât de tulburată încât preotul a crezut că e beată. Se ruga fără glas, doar cu buzele. Dumnezeu a auzit rugăciunea pe care nici omul din templu n-a putut-o auzi.",
     question: "Crezi că El aude și ce nu poți rosti?",
@@ -368,7 +369,7 @@ export const DEVOTIONAL_DAYS_LUNA_7: DevotionalDay[] = [
     theme: LUNA_7,
     axis: "living_faith",
     verseRef: "Efeseni 6:18",
-    verseText: "Faceți în toată vremea, prin Duhul, tot felul de rugăciuni și cereri... și rugați-vă pentru toți sfinții.",
+    verseText: "Faceți în toată vremea, prin Duhul, tot felul de rugăciuni și cereri. Vegheați la aceasta cu toată stăruința și rugăciune pentru toți sfinții",
     meditation:
       "Pavel așază rugăciunea la capătul armurii, ca lucrul care le ține pe toate în funcțiune. Și o întoarce spre alții: „pentru toți sfinții”. Un om care se roagă doar pentru sine se împuținează.",
     question: "Cât din rugăciunea ta e despre tine?",
