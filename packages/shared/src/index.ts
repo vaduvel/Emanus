@@ -1,6 +1,22 @@
-// Suprafața activă a produsului nou.
-// Engine-ul vechi este disponibil numai prin `@emanus/shared/legacy`.
+// Suprafața rădăcină păstrează temporar compatibilitatea API-ului vechi.
+// Aplicația web nouă folosește subpath-urile active; CI interzice importarea
+// simbolurilor de XP, radar, diagnostic, comunitate și mentorat în `apps/web`.
+// Migrarea API-ului către `@emanus/shared/legacy` se face separat, fără big bang.
 export * from "./domain.js"
+export * from "./categoryConfig.js"
+export * from "./seed.js"
+export * from "./lessonMohler.js"
 export * from "./paths/index.js"
 export * from "./library/index.js"
+export * from "./daily.js"
+export * from "./gamification.js"
+export * from "./diagnostic.js"
+export * from "./recommendation.js"
 export * from "./crisis.js"
+export * from "./moderation.js"
+export * from "./community.js"
+export * from "./prayer.js"
+export * from "./family.js"
+export * from "./growthProfile.js"
+export * from "./mentor.js"
+export * from "./mentorship.js"
