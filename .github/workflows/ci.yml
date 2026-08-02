@@ -39,6 +39,9 @@ jobs:
       - name: Verifica Biblia explicata Matei
         run: pnpm check:matei
 
+      - name: Verifica Biblia explicata Marcu
+        run: pnpm check:marcu
+
       - name: Verifica structura sursei Bibliei
         run: pnpm check:bible-source
 
