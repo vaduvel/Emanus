@@ -5,7 +5,8 @@
 // niciuna nu-l lasă pe om afară. Ultimele zile încheie anul și trimit înapoi la
 // ziua 1, pentru că drumul nu se termină la 365.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_12 = "Har la cădere"
@@ -17,9 +18,9 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Proverbe 24:16",
-    verseText: "Căci cel neprihănit de șapte ori cade și se scoală, dar cei răi se prăbușesc în nenorocire.",
+    verseText: "Căci cel neprihănit de șapte ori cade și se ridică, dar cei răi se prăbușesc în nenorocire.",
     meditation:
-      "Proverbul nu spune că omul drept nu cade, ci că se scoală. Diferența între cei doi oameni din verset nu e numărul căderilor, ci ridicarea. Dacă te-ai judecat pentru că ai căzut iar, ai folosit o măsură care nu e a Bibliei.",
+      "Proverbul nu spune că omul drept nu cade, ci că se ridică. Diferența între cei doi oameni din verset nu e numărul căderilor, ci ridicarea. Dacă te-ai judecat pentru că ai căzut iar, ai folosit o măsură care nu e a Bibliei.",
     question: "Câte căderi credeai că ai voie să ai?",
     prayer: "Doamne, mă ridic din nou. A șaptea oară, dacă trebuie. Amin.",
     step: "Ridică-te azi într-un lucru în care ai renunțat să mai încerci.",
@@ -30,7 +31,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Psalmul 37:24",
-    verseText: "Când cade, nu este doborât de tot, căci Domnul îl apucă de mână.",
+    verseText: "Dacă se întâmplă să cadă, nu este doborât de tot, căci Domnul îl apucă de mână.",
     meditation:
       "Textul recunoaște căderea ca pe un fapt, nu ca pe o excepție. Ce se schimbă e că cineva te ține de mână în timp ce cazi. Nu ești susținut pentru că ești stabil, ci pentru că ești ținut.",
     question: "Cine te-a ținut de mână ultima dată când ai căzut?",
@@ -43,7 +44,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Mica 7:8",
-    verseText: "Nu te bucura de mine, vrăjmașă, căci, chiar dacă am căzut, mă voi scula; chiar dacă stau în întuneric, totuși Domnul este Lumina mea.",
+    verseText: "Nu te bucura de mine, vrăjmașă, căci, chiar dacă am căzut, mă voi scula iarăși; chiar dacă stau în întuneric, totuși Domnul este Lumina mea!",
     meditation:
       "E o replică spusă din țărână, nu de pe podium. Profetul nu neagă căderea și nici întunericul; le recunoaște și tot spune „mă voi scula”. Credința nu e să pretinzi că stai în picioare.",
     question: "Ce ai putea spune azi din locul în care ești?",
@@ -56,7 +57,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Luca 22:31-32",
-    verseText: "Simone, Simone, Satana v-a cerut să vă cearnă ca grâul. Dar Eu M-am rugat pentru tine, ca să nu se piardă credința ta; și, după ce te vei întoarce la Dumnezeu, să întărești pe frații tăi.",
+    verseText: "Simone, Simone, Satana v-a cerut să vă cearnă ca grâul. Dar Eu M-am rugat pentru tine, ca să nu se piardă credința ta și, după ce te vei întoarce la Dumnezeu, să întărești pe frații tăi.",
     meditation:
       "Isus știa că Petru va cădea și s-a rugat dinainte, nu ca să evite căderea, ci ca să nu se piardă credința. Și îi dă o misiune de după: să-și întărească frații. Căderea nu l-a scos din plan.",
     question: "Crezi că ești încă folosibil după ce ai căzut?",
@@ -69,7 +70,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Luca 22:61-62",
-    verseText: "Domnul S-a întors și S-a uitat țintă la Petru... Și Petru a ieșit afară și a plâns cu amărăciune.",
+    verseText: "Domnul S-a întors și S-a uitat țintă la Petru... Și a ieșit afară și a plâns cu amar.",
     meditation:
       "Privirea aceea putea fi de dispreț, dar Petru n-a fugit definitiv, ci a plâns și s-a întors. Sunt priviri care te distrug și priviri care te trezesc. Durerea de după păcat nu e semn că ești pierdut; adesea e semn că ești ținut.",
     question: "Cum Îți imaginezi privirea Lui când cazi?",
@@ -108,7 +109,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Marcu 16:7",
-    verseText: "Dar duceți-vă de spuneți ucenicilor Lui și lui Petru că merge înaintea voastră în Galileea.",
+    verseText: "Dar duceți-vă de spuneți ucenicilor Lui și lui Petru că merge înaintea voastră în Galileea; acolo Îl veți vedea, cum v-a spus.",
     meditation:
       "„Și lui Petru” sunt două cuvinte pe care le-a pus îngerul special pentru un om care se credea scos din grup. Cel căzut are nevoie să fie numit separat, ca să știe că mesajul e și pentru el. Dumnezeu știe să adauge un nume.",
     question: "Ai crezut că veștile bune sunt pentru alții, nu pentru tine?",
@@ -121,7 +122,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Psalmul 130:3-4",
-    verseText: "Dacă ai păstra, Doamne, aducerea aminte a nelegiuirilor, cine ar putea sta în picioare, Doamne? Dar la Tine este iertare, ca să fii temut.",
+    verseText: "Dacă ai păstra, Doamne, aducerea aminte a nelegiuirilor, cine ar putea sta în picioare, Doamne? Dar la Tine este iertare, ca să fii de temut.",
     meditation:
       "Psalmistul începe cu o întrebare la care răspunsul e „nimeni”. Apoi spune ceva surprinzător: iertarea Lui nu produce ușurătate, ci teamă sfântă. Cine e iertat mult nu devine neserios, ci respectuos.",
     question: "Iertarea Lui te-a făcut mai ușuratic sau mai serios?",
@@ -147,7 +148,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Ioan 8:36",
-    verseText: "Deci dacă Fiul vă face slobozi, veți fi cu adevărat slobozi.",
+    verseText: "Deci, dacă Fiul vă face slobozi, veți fi cu adevărat slobozi.",
     meditation:
       "Isus vorbea unor oameni care susțineau că n-au fost niciodată robi nimănui. Robia cea mai greu de recunoscut e cea din obișnuință. Libertatea nu se obține prin voință mai mare, ci se primește de la Fiul.",
     question: "Ce numeai „obicei” și e de fapt robie?",
@@ -160,7 +161,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Romani 7:19",
-    verseText: "Căci binele pe care vreau să-l fac, nu-l fac, ci răul pe care nu vreau să-l fac, iată ce fac!",
+    verseText: "Căci binele, pe care vreau să-l fac, nu-l fac, ci răul, pe care nu vreau să-l fac, iată ce fac!",
     meditation:
       "Cel care scrie asta e Pavel, nu un începător. În Biblie există loc pentru descrierea sinceră a eșecului repetat. Faptul că lupta ta seamănă cu a lui nu înseamnă că nu ești creștin, ci că ești în luptă.",
     question: "Ce bine vrei să faci și tot nu-l faci?",
@@ -212,7 +213,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Romani 6:1-2",
-    verseText: "Ce vom zice dar? Să păcătuim mereu, ca să se înmulțească harul? Nicidecum! Noi, care am murit față de păcat, cum să mai trăim în păcat?",
+    verseText: "Ce vom zice dar? Să păcătuim mereu ca să se înmulțească harul? Nicidecum! Noi, care am murit față de păcat, cum să mai trăim în păcat?",
     meditation:
       "Pavel pune singur întrebarea pe care știa că o va stârni predica lui despre har. Răspunsul nu e o amenințare, ci o mirare: nu se potrivește cu cine ai devenit. Harul nu e permisiune, e înviere.",
     question: "Folosești harul ca scuză undeva?",
@@ -238,7 +239,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Filipeni 3:13-14",
-    verseText: "Fraților, eu nu cred că l-am apucat încă; dar fac un singur lucru: uitând ce este în urma mea și aruncându-mă spre ce este înainte, alerg spre țintă.",
+    verseText: "Fraților, eu nu cred că l-am apucat încă, dar fac un singur lucru: uitând ce este în urma mea și aruncându-mă spre ce este înainte, alerg spre țintă, pentru premiul chemării cerești a lui Dumnezeu, în Hristos Isus.",
     meditation:
       "„Uitând” nu înseamnă amnezie, ci refuzul de a mai trăi cu fața întoarsă înapoi. Pavel avea și realizări, și vinovății grele în trecut — le lasă pe amândouă. Alergarea cere privirea înainte.",
     question: "Ce trecut duci cu tine în fiecare zi?",
@@ -290,7 +291,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Isaia 40:31",
-    verseText: "Dar cei ce se încred în Domnul își înnoiesc puterea; ei zboară ca vulturii; aleargă și nu obosesc; umblă și nu ostenesc.",
+    verseText: "Dar cei ce se încred în Domnul își înnoiesc puterea; ei zboară ca vulturii; aleargă, și nu obosesc, umblă, și nu ostenesc.",
     meditation:
       "Ordinea din verset coboară, nu urcă: zbor, alergare, umblet. Ultima e cea mai grea și cea mai des întâlnită — să mergi când nu simți nimic. Promisiunea acoperă și zilele în care nu zbori.",
     question: "În ce etapă ești azi: zbor, alergare sau umblet?",
@@ -303,7 +304,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Galateni 6:1",
-    verseText: "Fraților, chiar dacă un om ar cădea deodată în vreo greșeală, voi, care sunteți duhovnicești, să-l ridicați cu duhul blândeții. Și ia seama la tine însuți, ca să nu fii ispitit și tu.",
+    verseText: "Fraților, chiar dacă un om ar cădea deodată în vreo greșeală, voi, care sunteți duhovnicești, să-l ridicați cu duhul blândeții. Și ia seama la tine însuți ca să nu fii ispitit și tu.",
     meditation:
       "Semnul că ești duhovnicesc nu e că vezi căderea altuia, ci că știi să ridici blând. Iar avertismentul din final e pentru cel care ridică, nu pentru cel căzut. Cine judecă aspru e următorul la rând.",
     question: "Cum reacționezi când cade cineva?",
@@ -316,7 +317,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Iacov 5:19-20",
-    verseText: "Fraților, dacă s-a rătăcit vreunul dintre voi de la adevăr și-l întoarce un altul, să știți că cine întoarce pe un păcătos de la rătăcirea căii lui va mântui un suflet de la moarte.",
+    verseText: "Fraților, dacă s-a rătăcit vreunul dintre voi de la adevăr și-l întoarce un altul, să știți că cine întoarce pe un păcătos de la rătăcirea căii lui va mântui un suflet de la moarte și va acoperi o sumedenie de păcate.",
     meditation:
       "Epistola se încheie nu cu o învățătură înaltă, ci cu o sarcină practică: du-te după cel rătăcit. E o lucrare pe care o poate face oricine, nu doar pastorul. Multe întoarceri au început cu un mesaj trimis la timp.",
     question: "Cine s-a depărtat și nu l-a căutat nimeni?",
@@ -329,7 +330,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Evrei 4:15",
-    verseText: "Căci n-avem un Mare Preot care să n-aibă milă de slăbiciunile noastre, ci Unul care în toate lucrurile a fost ispitit ca și noi, dar fără păcat.",
+    verseText: "Căci n-avem un Mare Preot care să n-aibă milă de slăbiciunile noastre, ci unul care în toate lucrurile a fost ispitit ca și noi, dar fără păcat.",
     meditation:
       "Cel căruia Îi ceri ajutor știe dinăuntru ce e ispita. N-a citit despre ea, a trecut prin ea. De aceea rugăciunea ta în clipa slabă nu cade în gol și nu ajunge la cineva scandalizat.",
     question: "Ce ispită ți se pare prea rușinoasă ca să I-o spui?",
@@ -342,7 +343,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Luca 15:4",
-    verseText: "Care om dintre voi, dacă are o sută de oi și pierde pe una din ele, nu lasă pe celelalte nouăzeci și nouă pe islaz și se duce după cea pierdută până când o găsește?",
+    verseText: "Care om dintre voi, dacă are o sută de oi și pierde pe una din ele, nu lasă pe celelalte nouăzeci și nouă pe islaz și se duce după cea pierdută, până când o găsește?",
     meditation:
       "Oaia pierdută nu se întoarce singură; e căutată. „Până când o găsește” e partea cea mai importantă a propoziției. Căutarea Lui nu are termen de expirare.",
     question: "Crezi că a obosit să te caute?",
@@ -355,7 +356,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Ieremia 31:3",
-    verseText: "Te iubesc cu o iubire veșnică; de aceea îți păstrez bunătatea Mea!",
+    verseText: "Te iubesc cu o iubire veșnică, de aceea îți păstrez bunătatea Mea!",
     meditation:
       "Cuvântul „veșnică” înseamnă că iubirea asta n-a început când te-ai purtat frumos și nu se termină când cazi. E spusă unui popor aflat în exil, deci în plină consecință a păcatului. Dumnezeu iubește și în timpul pedepsei.",
     question: "Crezi că iubirea Lui depinde de ziua ta?",
@@ -394,7 +395,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Ioel 2:25",
-    verseText: "Vă voi răsplăti astfel anii pe care i-au mâncat lăcustele.",
+    verseText: "Vă voi răsplăti astfel anii pe care i-au mâncat lăcustele...",
     meditation:
       "Nu scrie că anii nu s-au pierdut, ci că vor fi răsplătiți. Dumnezeu nu se preface că paguba n-a existat; dă înapoi. Cine a pierdut zece ani într-o robie are aici o promisiune, nu o consolare.",
     question: "Ce ani aștepți să-ți fie răsplătiți?",
@@ -446,7 +447,7 @@ export const DEVOTIONAL_DAYS_LUNA_12: DevotionalDay[] = [
     theme: LUNA_12,
     axis: "freedom",
     verseRef: "Apocalipsa 21:5",
-    verseText: "Iată că Eu fac toate lucrurile noi.",
+    verseText: "Iată, Eu fac toate lucrurile noi.",
     meditation:
       "Nu scrie „Eu fac toate lucrurile altele”, ci noi — aceleași lucruri, reînnoite. Și verbul e la prezent: se întâmplă deja. Ce a fost stricat în viața ta intră în această lucrare, nu la coșul de gunoi.",
     question: "Ce ai vrea să fie făcut nou în tine?",
