@@ -4,7 +4,8 @@
 // (omul a fost făcut în ziua a șasea și prima lui zi întreagă a fost o zi de
 // odihnă). Luna 3 a vorbit despre frică; frica și graba sunt aceeași boală.
 //
-// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu (domeniu public).
+// Conținut ORIGINAL Emanus (docs/27 §1.2). Versete: Cornilescu VDC 1924
+// (domeniu public), colaționate verset cu verset.
 import type { DevotionalDay } from "./devotional.js"
 
 const LUNA_4 = "Odihna"
@@ -16,7 +17,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Geneza 2:2",
-    verseText: "În ziua a șaptea, Dumnezeu Și-a sfârșit lucrarea pe care o făcuse; și în ziua a șaptea S-a odihnit de toată lucrarea Lui.",
+    verseText: "În ziua a șaptea, Dumnezeu Și-a sfârșit lucrarea pe care o făcuse și în ziua a șaptea S-a odihnit de toată lucrarea Lui pe care o făcuse.",
     meditation:
       "Dumnezeu nu Se odihnește pentru că obosește. Se odihnește pentru că lucrarea era terminată — și pune odihna în ritmul lumii înainte ca omul să fi muncit ceva. Prima zi întreagă a lui Adam a fost o zi de odihnă, nu una de producție.",
     question: "Odihna ta e un dar primit sau o pauză pe care crezi că trebuie să ți-o meriți?",
@@ -42,7 +43,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Marcu 2:27",
-    verseText: "Sabatul a fost făcut pentru om, iar nu omul pentru Sabat.",
+    verseText: "Sabatul a fost făcut pentru om, iar nu omul, pentru Sabat.",
     meditation:
       "Isus a spus asta unor oameni care făcuseră din odihnă încă o muncă, cu reguli și note de trecere. Se poate obosi și din religie. Odihna ți-a fost dată ție; nu e un examen la care să ieși bine.",
     question: "Ai transformat vreun lucru bun — rugăciune, post, program — într-o obligație care te apasă?",
@@ -55,9 +56,9 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Matei 11:28",
-    verseText: "Veniți la Mine, toți cei trudiți și încărcați, și Eu vă voi da odihnă.",
+    verseText: "Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.",
     meditation:
-      "Sunt două feluri de oboseală în verset: „trudiți”, adică cei care muncesc, și „încărcați”, adică cei cărora li s-a pus ceva în spate. Isus nu cere să alegi categoria. Cere doar să vii cu ea.",
+      "Sunt două feluri de oboseală în verset: „trudiți”, adică cei care muncesc, și „împovărați”, adică cei cărora li s-a pus ceva în spate. Isus nu cere să alegi categoria. Cere doar să vii cu ea.",
     question: "Oboseala ta vine din ce faci sau din ce duci?",
     prayer: "Doamne, vin obosit. Nu vin refăcut, ca să-ți fie mai ușor. Amin.",
     step: "Spune-I azi, într-o propoziție, de ce anume ești obosit. Fii exact.",
@@ -81,7 +82,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Psalmul 127:2",
-    verseText: "Degeaba vă sculați de dimineață și vă culcați târziu, ca să mâncați o pâine câștigată cu durere; căci preaiubiților Lui El le dă pâine ca în somn.",
+    verseText: "Degeaba vă sculați de dimineață și vă culcați târziu ca să mâncați o pâine câștigată cu durere, căci preaiubiților Lui El le dă pâine ca în somn.",
     meditation:
       "Psalmul nu condamnă munca, ci munca disperată — aceea care crede că totul depinde de câte ore stai treaz. Dumnezeu lucrează și în orele în care tu dormi. Somnul e un act de credință: recunoști că lumea merge și fără tine câteva ore.",
     question: "Cât din programul tău vine din teama de a nu rămâne în urmă?",
@@ -107,7 +108,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Evrei 4:9-10",
-    verseText: "Rămâne dar o odihnă ca cea de Sabat pentru poporul lui Dumnezeu. Fiindcă cine intră în odihna Lui se odihnește și el de lucrările lui.",
+    verseText: "Rămâne dar o odihnă ca cea de Sabat pentru poporul lui Dumnezeu. Fiindcă cine intră în odihna Lui se odihnește și el de lucrările lui, cum S-a odihnit Dumnezeu de lucrările Sale.",
     meditation:
       "Odihna de care vorbește Evrei nu e o zi liberă, ci încetarea efortului de a-ți câștiga locul înaintea lui Dumnezeu. Cine a înțeles că nu are ce adăuga la lucrarea lui Hristos poate lucra mult, dar nu mai lucrează din frică.",
     question: "Mai încerci să adaugi ceva la o lucrare terminată?",
@@ -133,7 +134,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Psalmul 46:10",
-    verseText: "Opriți-vă și să știți că Eu sunt Dumnezeu.",
+    verseText: "Opriți-vă și să știți că Eu sunt Dumnezeu: Eu stăpânesc peste neamuri, Eu stăpânesc pe pământ.",
     meditation:
       "Versetul e spus într-un psalm despre război și prăbușire, nu într-unul despre vacanță. „Opriți-vă” înseamnă, în original, și „lăsați armele jos”. Sunt lupte în care singurul lucru de făcut e să încetezi să te mai zbați.",
     question: "În ce luptă te zbați de prea mult timp?",
@@ -146,7 +147,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Isaia 30:15",
-    verseText: "În liniște și odihnă va fi mântuirea voastră, în liniștire și încredere va fi tăria voastră.",
+    verseText: "În liniște și odihnă va fi mântuirea voastră, în sonoritate și încredere va fi tăria voastră.",
     meditation:
       "Versetul se încheie trist: „dar n-ați voit”. Israel a preferat să fugă după alianțe și cai egipteni. E mai ușor să alergi decât să aștepți, iar graba trece adesea drept credincioșie.",
     question: "Ce „soluție” cauți acum, doar ca să nu stai liniștit în așteptare?",
@@ -159,7 +160,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Luca 10:41-42",
-    verseText: "Marto, Marto, pentru multe lucruri te îngrijorezi și te frămânți tu, dar un singur lucru trebuiește.",
+    verseText: "Marto, Marto, pentru multe lucruri te îngrijorezi și te frămânți tu, dar un singur lucru trebuie.",
     meditation:
       "Marta făcea un lucru bun și necesar: gătea pentru Isus. Nu e o poveste despre leneși și harnici. E despre cum poți fi atât de ocupat cu slujirea cuiva încât să nu mai stai cu El.",
     question: "Ce faci pentru Dumnezeu în loc să stai cu El?",
@@ -172,7 +173,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Psalmul 131:2",
-    verseText: "Dimpotrivă, sufletul îmi este liniștit și potolit, ca un copil înțărcat, care stă lângă mama sa.",
+    verseText: "Dimpotrivă, sufletul îmi este liniștit și potolit ca un copil înțărcat care stă lângă mama sa.",
     meditation:
       "Un copil la sân stă liniștit pentru că primește; unul înțărcat stă liniștit pentru că e cu mama lui. E o credință mai matură: nu vii doar ca să iei, vii ca să fii aproape.",
     question: "Te apropii de Dumnezeu doar când ai nevoie de ceva?",
@@ -190,7 +191,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
       "Solomon nu spune că lenea e bună, ci că există o muncă din care nu rămâne nimic. „Goană după vânt” e imaginea perfectă a omului care aleargă mult și strânge în pumn aer.",
     question: "Ce faci mult și nu rămâne nimic din asta?",
     prayer: "Doamne, arată-mi ce e goană după vânt în viața mea. Am curajul să văd. Amin.",
-    step: "Tăie azi de pe listă un lucru care nu contează cu adevărat. Chiar tăie-l.",
+    step: "Tăie azi de pe listă un lucru care nu contează cu adevărat. Chiar taie-l.",
   },
   {
     id: "dev_105",
@@ -198,7 +199,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Ieremia 6:16",
-    verseText: "Întrebați care este calea cea bună și umblați pe ea, și veți găsi odihnă pentru sufletele voastre.",
+    verseText: "Stați în drumuri, uitați-vă și întrebați care sunt cărările cele vechi, care este calea cea bună: umblați pe ea și veți găsi odihnă pentru sufletele voastre!",
     meditation:
       "Odihna e legată aici de a merge pe drumul potrivit, nu de a te opri. Un om care trăiește împotriva a ceea ce crede nu se odihnește niciodată, oricât doarme. Oboseala are și o cauză morală, nu doar una de program.",
     question: "E vreun lucru în viața ta care te obosește pentru că știi că nu e drept?",
@@ -224,7 +225,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Exod 16:4",
-    verseText: "Poporul va ieși și va strânge, zi de zi, cât îi trebuie pentru fiecare zi.",
+    verseText: "Poporul va ieși afară și va strânge cât îi trebuie pentru fiecare zi.",
     meditation:
       "Cine strângea mai multă mană „pentru orice eventualitate” o găsea a doua zi stricată. Dumnezeu a legat intenționat hrana de o singură zi, ca să învețe un popor de foști sclavi că nu mai trebuie să se teamă de mâine. Devoționalul acesta funcționează la fel: ziua lipsită nu se recuperează.",
     question: "Ce încerci să depozitezi pentru o zi care poate nu vine?",
@@ -237,7 +238,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Psalmul 4:8",
-    verseText: "Eu mă culc și adorm în pace, căci numai Tu, Doamne, îmi dai liniștea.",
+    verseText: "Eu mă culc și adorm în pace, căci numai Tu, Doamne, îmi dai liniște deplină în locuința mea.",
     meditation:
       "David a scris asta în fugă, cu oameni care îl vânau. Somnul lui nu venea din siguranța locului, ci din încrederea în Cel care păzește locul. Uneori cea mai curajoasă faptă de credință dintr-o zi grea e să închizi ochii.",
     question: "Ce faci, de obicei, în ultimele minute înainte de somn?",
@@ -250,7 +251,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "1 Împărați 19:5-6",
-    verseText: "Un înger l-a atins și i-a zis: „Scoală-te și mănâncă.”... A mâncat și a băut, apoi s-a culcat din nou.",
+    verseText: "Și, iată, l-a atins un înger și i-a zis: „Scoală-te și mănâncă.” El s-a uitat și, la căpătâiul lui, erau o turtă coaptă pe niște pietre încălzite și un urcior cu apă. A mâncat și a băut, apoi s-a culcat din nou.",
     meditation:
       "Ilie voia să moară. Dumnezeu nu i-a făcut întâi teologie și nu l-a certat: l-a lăsat să doarmă și i-a dat de mâncare, de două ori. Sunt zile în care lucrul cel mai duhovnicesc pe care îl poți face e să mănânci ceva cald și să dormi.",
     question: "Cât din descurajarea ta de acum e, de fapt, oboseală și foame?",
@@ -263,7 +264,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Marcu 4:38",
-    verseText: "Și El dormea la cârmă pe căpătâi.",
+    verseText: "Și El dormea la cârmă, pe căpătâi.",
     meditation:
       "Isus dormea în furtună. Nu pentru că nu știa ce se întâmplă, ci pentru că știa unde e Tatăl. Somnul Lui în barcă e cea mai tăcută predică despre încredere din Evanghelii.",
     question: "Ce ar trebui să fie adevărat ca să poți dormi în furtuna ta?",
@@ -289,7 +290,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Ioan 15:5",
-    verseText: "Cine rămâne în Mine și în cine rămân Eu aduce multă roadă; căci despărțiți de Mine nu puteți face nimic.",
+    verseText: "Cine rămâne în Mine și în cine rămân Eu aduce multă roadă, căci, despărțiți de Mine, nu puteți face nimic.",
     meditation:
       "O ramură nu se străduiește să facă struguri; rămâne legată și rodul vine. Cuvântul cheie nu e „munciți”, ci „rămâneți”. Multe epuizări creștine vin din încercarea de a produce rod prin efort, rămânând rupt de tulpină.",
     question: "Produci sau rămâi?",
@@ -302,7 +303,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Psalmul 62:1",
-    verseText: "Da, numai în Dumnezeu se încrede sufletul meu; de la El îmi vine ajutorul.",
+    verseText: "Da, numai în Dumnezeu mi se încrede sufletul; de la El îmi vine ajutorul.",
     meditation:
       "„Numai” e cuvântul greu. Nu e rău să ai un plan de rezervă, dar e obositor să ai zece — pentru că fiecare trebuie ținut în viață. Odihna vine când nu mai întreții, în paralel, toate variantele.",
     question: "Câte planuri de rezervă ții în viață și cât te costă?",
@@ -328,7 +329,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Psalmul 37:7",
-    verseText: "Taci înaintea Domnului și nădăjduiește în El.",
+    verseText: "Taci înaintea Domnului și nădăjduiește în El!",
     meditation:
       "E o tăcere activă, nu una îmbufnată. Psalmul continuă cu „nu te mânia pe cel ce izbutește” — deci tăcerea aceasta e antidotul pentru comparație. Cine se compară nu se odihnește niciodată, pentru că mereu e cineva mai înainte.",
     question: "Cine ți-a stricat ultima dată liniștea doar prin faptul că lui îi merge bine?",
@@ -354,7 +355,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Deuteronom 5:15",
-    verseText: "Adu-ți aminte că și tu ai fost rob în țara Egiptului și Domnul Dumnezeul tău te-a scos din ea... de aceea ți-a poruncit Domnul să ții ziua de odihnă.",
+    verseText: "Adu-ți aminte că și tu ai fost rob în țara Egiptului, și Domnul Dumnezeul tău te-a scos din ea cu mână tare și cu braț întins, de aceea ți-a poruncit Domnul Dumnezeul tău să ții ziua de odihnă.",
     meditation:
       "Motivul odihnei e libertatea. Sclavul nu are voie să se oprească; omul liber, da. De fiecare dată când te oprești, spui cu trupul tău că nu mai ești în Egipt — și că valoarea ta nu se măsoară în producție.",
     question: "Cine sau ce te ține în ritm de sclav, deși nimeni nu te mai obligă?",
@@ -380,7 +381,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Evrei 4:11",
-    verseText: "Să ne grăbim dar să intrăm în odihna aceasta.",
+    verseText: "Să ne grăbim dar să intrăm în odihna aceasta, pentru ca nimeni să nu cadă în aceeași pildă de neascultare.",
     meditation:
       "E o formulare ciudată dinadins: singura grabă recomandată în Biblie e graba spre odihnă. Odihna nu vine de la sine; e o ușă prin care trebuie să intri, adică o hotărâre, nu o stare de spirit.",
     question: "Ce decizie concretă ar însemna, pentru tine, „să intri”?",
@@ -393,7 +394,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Isaia 32:18",
-    verseText: "Poporul Meu va locui în locuința păcii, în case fără grijă și în adăposturi liniștite.",
+    verseText: "Poporul meu va locui în locuința păcii, în case fără grijă și în adăposturi liniștite.",
     meditation:
       "Se încheie a patra lună și a doua pe axa păcii. Versetul privește înainte: nu tot ce ni s-a promis a venit încă. Dar cine învață acum să se oprească învață, de fapt, limba locului spre care merge. De luna viitoare vorbim despre iertare — nu se poate odihnă adevărată câtă vreme porți ranchiună.",
     question: "Ce s-a schimbat în ritmul tău în lunile astea două?",
