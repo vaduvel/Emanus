@@ -62,6 +62,9 @@ jobs:
       - name: Aplica observatiile pentru Geneza 48
         run: python3 scripts/nolan-geneza-48.py
 
+      - name: Aplica observatiile pentru Geneza 3 si 11
+        run: python3 scripts/nolan-geneza-3-11.py
+
       - name: Curata paragrafele repetate
         run: python3 scripts/dedup-paragrafe.py
 
