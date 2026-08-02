@@ -29,6 +29,17 @@ export * from "./devotional-luna-11.js"
 export * from "./devotional-luna-12.js"
 export * from "./devotionalCatalog.js"
 export * from "./devotionalAge.js"
+// Vocabularul unic al stărilor (docs/41). `MessageMood` și `NeedId` ies prin
+// `messageCards.js`, ca să nu fie exportate de două ori.
+export {
+  NEEDS,
+  needById,
+  checkinNeeds,
+  hiddenNeeds,
+  LEGACY_MOOD_IDS,
+  isLegacyMood,
+} from "./needs.js"
+export type { Need, NeedKind } from "./needs.js"
 export * from "./messageCards.js"
 export * from "./scroll.js"
 export * from "./gamification.js"
