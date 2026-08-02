@@ -51,6 +51,7 @@ import { GENEZA_47 } from "./geneza47.js"
 import { GENEZA_48 } from "./geneza48.js"
 import { GENEZA_49 } from "./geneza49.js"
 import { GENEZA_50 } from "./geneza50.js"
+import { IOAN } from "./ioan.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -110,7 +111,7 @@ export const GENEZA: BibleBook = {
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, IOAN]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)
