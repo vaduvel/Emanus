@@ -13,8 +13,8 @@
 // Stările vin din vocabularul unic (docs/41, `needs.ts`). Câmpul `moods` s-a
 // numit așa până la unificare; acum e `needs` și cunoaște toate cele 20.
 //
-// Cardurile stau în cinci fișiere, ca lunile devoționalului: cele 45 dintâi aici,
-// restul pe grupe de durere (pierdere, familie, robie, tăcere).
+// Cardurile stau în șase fișiere, ca lunile devoționalului: cele 45 dintâi aici,
+// restul pe grupe (pierdere, familie, robie, tăcere, întregire).
 import type { AgeCategoryId, GrowthAxisId } from "./domain.js"
 import { LEGACY_MOOD_IDS, needById, NEEDS, type MessageMood, type NeedId } from "./needs.js"
 
@@ -55,6 +55,7 @@ import { MESSAGE_CARDS_PIERDERE } from "./messageCardsPierdere.js"
 import { MESSAGE_CARDS_FAMILIE } from "./messageCardsFamilie.js"
 import { MESSAGE_CARDS_ROBIE } from "./messageCardsRobie.js"
 import { MESSAGE_CARDS_TACERE } from "./messageCardsTacere.js"
+import { MESSAGE_CARDS_INTARIRE } from "./messageCardsIntarire.js"
 
 /** Cele 45 de carduri scrise întâi, mutate pe vocabularul unic. */
 const CARDS_BAZA: MessageCard[] = [
@@ -536,6 +537,7 @@ export const MESSAGE_CARDS: MessageCard[] = [
   ...MESSAGE_CARDS_FAMILIE,
   ...MESSAGE_CARDS_ROBIE,
   ...MESSAGE_CARDS_TACERE,
+  ...MESSAGE_CARDS_INTARIRE,
 ]
 
 /** Verificare de siguranță: un card fără verset-ancoră nu are ce căuta în app. */
@@ -579,7 +581,7 @@ export function needsWithoutCards(): NeedId[] {
   return NEEDS.filter((n) => cardsForNeed(n.id).length === 0).map((n) => n.id)
 }
 
-/** Id-uri scrise de două ori. Cu cinci fișiere, greșeala devine ușoară. */
+/** Id-uri scrise de două ori. Cu șase fișiere, greșeala devine ușoară. */
 export function duplicateCardIds(): string[] {
   const seen = new Set<string>()
   const dupes = new Set<string>()
