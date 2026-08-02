@@ -147,7 +147,7 @@ export const DEVOTIONAL_DAYS_LUNA_4: DevotionalDay[] = [
     theme: LUNA_4,
     axis: "emotional_peace",
     verseRef: "Isaia 30:15",
-    verseText: "În liniște și odihnă va fi mântuirea voastră, în sonoritate și încredere va fi tăria voastră.",
+    verseText: "În liniște și odihnă va fi mântuirea voastră, în seninătate și încredere va fi tăria voastră.",
     meditation:
       "Versetul se încheie trist: „dar n-ați voit”. Israel a preferat să fugă după alianțe și cai egipteni. E mai ușor să alergi decât să aștepți, iar graba trece adesea drept credincioșie.",
     question: "Ce „soluție” cauți acum, doar ca să nu stai liniștit în așteptare?",
