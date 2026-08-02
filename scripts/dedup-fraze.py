@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """Curata repetitiile din explicatii.
 
-Doua feluri de repetitii s-au strecurat in fisierele de capitole:
-1. bucati despartite prin randuri goale, repetate una dupa alta;
-2. grupuri de fraze insirate in acelasi camp, repetate cuvant cu cuvant.
-
-Scriptul le strange pe amandoua si scrie cate o instiintare pentru fiecare
-fisier atins.
+Repetitiile s-au strecurat in doua feluri: fraze insirate una dupa alta in
+acelasi camp, si paragrafe intregi despartite prin randuri goale scrise ca
+\\n\\n. Amandoua se arata la fel: o bucata de text incheiata cu punct, urmata
+indata de ea insasi. Scriptul le strange pe amandoua.
 """
 
 import re
@@ -15,43 +13,18 @@ from pathlib import Path
 
 RADACINA = Path("packages/shared/src/bible")
 
-# Un grup de cel putin saizeci de semne, fara ghilimele si fara scapari de rand,
-# incheiat cu punct si spatiu, care se repeta imediat dupa el insusi.
-TIPAR_FRAZE = re.compile(r"((?:[^\"\n]{60,3000}?\. ))\1+")
-
-# Acelasi lucru pentru bucatile despartite prin randuri goale scrise ca \n\n.
-TIPAR_PARAGRAFE = re.compile(r"(\\n\\n(?:[^\"\n]{40,3000}?))(?=\\n\\n|\")")
+# O bucata de cel putin saizeci de semne, fara ghilimele, incheiata cu punct,
+# urmata de ea insasi. Intre cele doua copii pot sta spatii sau randuri goale
+# scrise ca \n\n.
+TIPAR_REPETARE = re.compile(r"((?:[^\"\n]{60,3000}?)\.)(?:\s|\\n)*\1")
 
 
-def colapseaza_fraze(text: str) -> str:
+def colapseaza(text: str) -> str:
     while True:
-        nou = TIPAR_FRAZE.sub(r"\1", text)
+        nou = TIPAR_REPETARE.sub(r"\1", text)
         if nou == text:
             return text
         text = nou
-
-
-def colapseaza_paragrafe(text: str) -> str:
-    """Scoate bucatile care se repeta in acelasi sir de text."""
-    rezultat = []
-    pozitie = 0
-    for potrivire in re.finditer(r'"(?:[^"\\]|\\.)*"', text):
-        sir = potrivire.group(0)
-        if "\\n\\n" not in sir:
-            continue
-        bucati = sir.split("\\n\\n")
-        vazute = []
-        for bucata in bucati:
-            if bucata in vazute and len(bucata) > 40:
-                continue
-            vazute.append(bucata)
-        curat = "\\n\\n".join(vazute)
-        if curat != sir:
-            rezultat.append(text[pozitie : potrivire.start()])
-            rezultat.append(curat)
-            pozitie = potrivire.end()
-    rezultat.append(text[pozitie:])
-    return "".join(rezultat)
 
 
 def main() -> int:
@@ -60,7 +33,7 @@ def main() -> int:
 
     for cale in sorted(RADACINA.glob("*.ts")):
         text = cale.read_text(encoding="utf-8")
-        curat = colapseaza_paragrafe(colapseaza_fraze(text))
+        curat = colapseaza(text)
         if curat == text:
             continue
 
