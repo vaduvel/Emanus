@@ -51,6 +51,34 @@ import { GENEZA_47 } from "./geneza47.js"
 import { GENEZA_48 } from "./geneza48.js"
 import { GENEZA_49 } from "./geneza49.js"
 import { GENEZA_50 } from "./geneza50.js"
+import { MATEI as MATEI_BASE } from "./matei.js"
+import { MATEI_2 } from "./matei2.js"
+import { MATEI_3 } from "./matei3.js"
+import { MATEI_4 } from "./matei4.js"
+import { MATEI_5 } from "./matei5.js"
+import { MATEI_6 } from "./matei6.js"
+import { MATEI_7 } from "./matei7.js"
+import { MATEI_8 } from "./matei8.js"
+import { MATEI_9 } from "./matei9.js"
+import { MATEI_10 } from "./matei10.js"
+import { MATEI_11 } from "./matei11.js"
+import { MATEI_12 } from "./matei12.js"
+import { MATEI_13 } from "./matei13.js"
+import { MATEI_14 } from "./matei14.js"
+import { MATEI_15 } from "./matei15.js"
+import { MATEI_16 } from "./matei16.js"
+import { MATEI_17 } from "./matei17.js"
+import { MATEI_18 } from "./matei18.js"
+import { MATEI_19 } from "./matei19.js"
+import { MATEI_20 } from "./matei20.js"
+import { MATEI_21 } from "./matei21.js"
+import { MATEI_22 } from "./matei22.js"
+import { MATEI_23 } from "./matei23.js"
+import { MATEI_24 } from "./matei24.js"
+import { MATEI_25 } from "./matei25.js"
+import { MATEI_26 } from "./matei26.js"
+import { MATEI_27 } from "./matei27.js"
+import { MATEI_28 } from "./matei28.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -109,8 +137,43 @@ export const GENEZA: BibleBook = {
   ],
 }
 
+/** Evanghelia după Matei, cu toate cele 28 de capitole în revizie. */
+export const MATEI: BibleBook = {
+  ...MATEI_BASE,
+  chapters: [
+    ...MATEI_BASE.chapters,
+    MATEI_2,
+    MATEI_3,
+    MATEI_4,
+    MATEI_5,
+    MATEI_6,
+    MATEI_7,
+    MATEI_8,
+    MATEI_9,
+    MATEI_10,
+    MATEI_11,
+    MATEI_12,
+    MATEI_13,
+    MATEI_14,
+    MATEI_15,
+    MATEI_16,
+    MATEI_17,
+    MATEI_18,
+    MATEI_19,
+    MATEI_20,
+    MATEI_21,
+    MATEI_22,
+    MATEI_23,
+    MATEI_24,
+    MATEI_25,
+    MATEI_26,
+    MATEI_27,
+    MATEI_28,
+  ],
+}
+
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)

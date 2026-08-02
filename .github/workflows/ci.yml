@@ -35,9 +35,13 @@ jobs:
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
-      # Niciun capitol din Geneza nu poate fi publicat fara nume si data in registrul reviziei.
-      - name: Verifica aprobarea Genezei
+      # Niciun capitol biblic nu poate fi publicat fara nume si data in registrul cartii.
+      - name: Verifica aprobarea Bibliei explicate
         run: pnpm check:bible-publication
+
+      # Matei trebuie sa ramana complet, ordonat si cu protectiile editoriale intacte.
+      - name: Verifica Biblia explicata Matei
+        run: pnpm check:matei
 
       - name: Typecheck
         run: pnpm typecheck
