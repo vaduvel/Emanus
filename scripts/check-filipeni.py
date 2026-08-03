@@ -73,7 +73,7 @@ def main() -> int:
         errors.append("Starea nu vine din registrul editorial")
     if 'import { FILIPENI } from "./filipeni.js"' not in index:
         errors.append("Filipeni nu este importat în catalog")
-    if not re.search(r"BIBLE_BOOKS:\s*BibleBook\[\]\s*=\s*\[[^\]]*\bEFESENI,\s*FILIPENI,\s*TIT\b", index):
+    if not re.search(r"BIBLE_BOOKS:\s*BibleBook\[\]\s*=\s*\[[^\]]*\bEFESENI,\s*FILIPENI,\s*(?:COLOSENI,\s*)?TIT\b", index):
         errors.append("Filipeni nu este în poziția canonică din BIBLE_BOOKS")
 
     book = (BIBLE / "filipeni.ts").read_text(encoding="utf-8")
