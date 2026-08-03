@@ -78,7 +78,7 @@ def main() -> int:
         errors.append("1 Tesaloniceni nu este după Coloseni în BIBLE_BOOKS")
 
     book = (BIBLE / "unuTesaloniceni.ts").read_text(encoding="utf-8")
-    match = re.search(r"export const UNU_TESALONICENI: BibleBook = \{.*?chapters:\s*\[(.*?)\]\s*,?\n\s*\]\s*,?\n\}", book, re.S)
+    match = re.search(r"export const UNU_TESALONICENI: BibleBook = \{.*?chapters:\s*\[(.*?)\]\s*,?\s*\n\}", book, re.S)
     assembled = [int(x) for x in re.findall(r"\bUNU_TESALONICENI_(\d+)\b", match.group(1))] if match else []
     if assembled != list(range(1, 6)):
         errors.append(f"Ordinea capitolelor este {assembled}")
@@ -91,6 +91,8 @@ def main() -> int:
         errors.append("Comanda check:1-tesaloniceni lipsește")
     if (ROOT / ".github" / "workflows" / "research-1-tesaloniceni.yml").exists():
         errors.append("Workflow-ul temporar research-1-tesaloniceni.yml trebuie eliminat")
+    if (ROOT / ".github" / "workflows" / "integrate-1-tesaloniceni.yml").exists():
+        errors.append("Workflow-ul temporar integrate-1-tesaloniceni.yml trebuie eliminat")
 
     lowered = "\n".join(chapter_texts).lower()
     for phrase in REQUIRED_GUARDS:
