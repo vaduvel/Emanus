@@ -6,6 +6,9 @@ on:
       - agent/integrate-biblical-review
     paths:
       - .github/workflows/research-luca-wave-2.yml
+  pull_request:
+    paths:
+      - .github/workflows/research-luca-wave-2.yml
 
 permissions:
   contents: read
