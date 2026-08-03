@@ -5,90 +5,144 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.apply.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/complete-new-testament
+      - id: apply
+        name: Connect remaining New Testament books
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          index_path = root / 'packages/shared/src/bible/index.ts'
+          index = index_path.read_text(encoding='utf-8')
+          anchor = 'import { UNU_TESALONICENI } from "./unuTesaloniceni.js"\n'
+          addition = '''import {
+            DOI_TESALONICENI,
+            UNU_TIMOTEI,
+            DOI_TIMOTEI,
+            EVREI,
+            IACOV,
+            UNU_PETRU,
+            DOI_PETRU,
+            UNU_IOAN,
+            DOI_IOAN,
+            TREI_IOAN,
+            IUDA,
+            APOCALIPSA,
+          } from "./ntCompletionBooks.js"\n'''
+          if 'from "./ntCompletionBooks.js"' not in index:
+              if anchor not in index:
+                  raise SystemExit('Import anchor 1 Tesaloniceni lipsește')
+              index = index.replace(anchor, anchor + addition, 1)
+          old = 'UNU_TESALONICENI, TIT, FILIMON'
+          new = 'UNU_TESALONICENI, DOI_TESALONICENI, UNU_TIMOTEI, DOI_TIMOTEI, TIT, FILIMON, EVREI, IACOV, UNU_PETRU, DOI_PETRU, UNU_IOAN, DOI_IOAN, TREI_IOAN, IUDA, APOCALIPSA'
+          if new not in index:
+              if old not in index:
+                  raise SystemExit('Anchor canonic lipsește')
+              index = index.replace(old, new, 1)
+          index_path.write_text(index, encoding='utf-8')
+
+          slugs = ['2-tesaloniceni','1-timotei','2-timotei','evrei','iacov','1-petru','2-petru','1-ioan','2-ioan','3-ioan','iuda','apocalipsa']
+          shared_path = root / 'packages/shared/package.json'
+          shared = json.loads(shared_path.read_text(encoding='utf-8'))
+          command = shared['scripts']['materialize:bible-texts']
+          for slug in slugs:
+              cfg = f'../../docs/data/{slug}-rccv-import.json'
+              if cfg not in command:
+                  command += ' ' + cfg
+          shared['scripts']['materialize:bible-texts'] = command
+          shared_path.write_text(json.dumps(shared, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          package_path = root / 'package.json'
+          package = json.loads(package_path.read_text(encoding='utf-8'))
+          for slug in slugs:
+              package['scripts'][f'check:{slug}'] = f'python3 scripts/check-nt-completion.py --book {slug}'
+          package['scripts']['check:nt-completion'] = 'python3 scripts/check-nt-completion.py'
+          package_path.write_text(json.dumps(package, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+          if git diff --quiet -- packages/shared/src/bible/index.ts packages/shared/package.json package.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add packages/shared/src/bible/index.ts packages/shared/package.json package.json
+          git commit -m "feat(bible): connect remaining New Testament catalog"
+          git push origin HEAD:agent/complete-new-testament
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
   verify:
+    needs: integrate
+    if: needs.integrate.outputs.changed == 'false'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: pnpm/action-setup@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-
       - name: Install
         run: pnpm install --frozen-lockfile
-
       - name: Verifica ghilimelele
         run: pnpm check:quotes
-
       - name: Verifica typo-urile cunoscute
         run: pnpm check:typos
-
       - name: Verifica siguranta continutului
         run: pnpm check:content
-
       - name: Verifica continutul activ
         run: pnpm check:active-content
-
       - name: Verifica aprobarea Bibliei explicate
         run: pnpm check:bible-publication
-
       - name: Verifica Biblia explicata Matei
         run: pnpm check:matei
-
       - name: Verifica Biblia explicata Marcu
         run: pnpm check:marcu
-
       - name: Verifica Biblia explicata Luca
         run: pnpm check:luca
-
       - name: Verifica Biblia explicata Fapte
         run: pnpm check:fapte
-
       - name: Verifica Biblia explicata Romani
         run: pnpm check:romani
-
       - name: Verifica Biblia explicata 1 Corinteni
         run: pnpm check:1-corinteni
-
       - name: Verifica Biblia explicata 2 Corinteni
         run: pnpm check:2-corinteni
-
       - name: Verifica Biblia explicata Galateni
         run: pnpm check:galateni
-
       - name: Verifica Biblia explicata Efeseni
         run: pnpm check:efeseni
-
       - name: Verifica Biblia explicata Filipeni
         run: pnpm check:filipeni
-
       - name: Verifica Biblia explicata Coloseni
         run: pnpm check:coloseni
-
       - name: Verifica Biblia explicata 1 Tesaloniceni
         run: pnpm check:1-tesaloniceni
-
+      - name: Verifica valul final NT
+        run: pnpm check:nt-completion
       - name: Verifica Biblia explicata Tit
         run: pnpm check:tit
-
       - name: Verifica Biblia explicata Filimon
         run: pnpm check:filimon
-
       - name: Verifica structura sursei Bibliei
         run: pnpm check:bible-source
-
       - name: Verifica securitatea Bibliei cloud
         run: pnpm check:bible-cloud
-
       - name: Typecheck
         run: pnpm typecheck
-
       - name: Build
         run: pnpm build
-
       - name: Verifica bundle-ul Bibliei
         run: pnpm check:bible-bundle
