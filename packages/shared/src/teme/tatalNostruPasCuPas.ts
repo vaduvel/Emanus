@@ -141,7 +141,7 @@ export const TATAL_NOSTRU_LESSONS: Lesson[] = [
       "Poți însă lua chiar rugăciunea Tatăl nostru și s-o repeți ca un papagal de douăzeci de ori. Va asculta Dumnezeu mai mult dacă altul o spune de cincizeci de ori? Isus a spus limpede că acesta este un gând păgân. Inima hotărăște ce aude Dumnezeu.",
       "Și încă ceva: Tatăl vostru știe de ce aveți trebuință mai înainte ca să-I cereți voi. Când te rogi, nu-I dai lui Dumnezeu o știre nouă.",
       "Unii își închipuie că rugăciunea înseamnă să-L înduplecăm pe Dumnezeu să aibă milă de cineva față de care ar fi împietrit. Este fără sens. Dumnezeu are pentru fiecare om mai multă milă decât vom avea noi vreodată.",
-      "Ne rugăm ca să arătăm că atârnăm de El și că El este Cel care îmclinește toate nevoile noastre.",
+      "Ne rugăm ca să arătăm că atârnăm de El și că El este Cel care împlinește toate nevoile noastre.",
     ],
     wrongA: "Cu cât mă rog mai mult timp, cu atât sunt mai ascultat.",
     right: "Inima hotărăște, nu numărul cuvintelor; stăruința din inimă este altceva decât bolboroseala.",
