@@ -16,6 +16,8 @@ EXPECTED_RANGES = {
     3: [(1, 6), (7, 14), (15, 20), (21, 22), (23, 38)],
     4: [(1, 13), (14, 19), (20, 30), (31, 37), (38, 44)],
     5: [(1, 11), (12, 16), (17, 26), (27, 32), (33, 39)],
+    6: [(1, 11), (12, 19), (20, 26), (27, 38), (39, 49)],
+    7: [(1, 10), (11, 17), (18, 35), (36, 50)],
 }
 REQUIRED_GUARDS = {
     "luca4.ts": [
@@ -26,6 +28,15 @@ REQUIRED_GUARDS = {
     "luca5.ts": [
         "nu promite că fiecare boală va dispărea imediat",
         "nu ne permite să diagnosticăm astfel suferința altuia",
+    ],
+    "luca6.ts": [
+        "iubirea și iertarea nu obligă victima să rămână în pericol",
+        "dragostea nu cere întoarcerea într-un mediu nesigur",
+        "nu interzice discernământul sau protejarea celui vulnerabil",
+    ],
+    "luca7.ts": [
+        "nu devine o promisiune că fiecare cerere medicală va primi imediat același răspuns",
+        "nu justifică oprirea tratamentului",
     ],
 }
 
@@ -48,6 +59,7 @@ def main() -> int:
     index = (BIBLE / "index.ts").read_text(encoding="utf-8")
     helper = (BIBLE / "lucaHelpers.ts").read_text(encoding="utf-8")
     publication = (BIBLE / "lucaPublication.ts").read_text(encoding="utf-8")
+    source_meta = (BIBLE / "lucaSource.ts").read_text(encoding="utf-8")
     import_config = json.loads((DATA / "luca-rccv-import.json").read_text(encoding="utf-8"))
     source_manifest = json.loads((DATA / "luca-poonen-source.json").read_text(encoding="utf-8"))
 
@@ -57,6 +69,8 @@ def main() -> int:
         3: BIBLE / "luca3.ts",
         4: BIBLE / "luca4.ts",
         5: BIBLE / "luca5.ts",
+        6: BIBLE / "luca6.ts",
+        7: BIBLE / "luca7.ts",
     }
     markers = {
         1: "const LUCA_1 = lucaChapter",
@@ -64,6 +78,8 @@ def main() -> int:
         3: "export const LUCA_3 = lucaChapter",
         4: "export const LUCA_4 = lucaChapter",
         5: "export const LUCA_5 = lucaChapter",
+        6: "export const LUCA_6 = lucaChapter",
+        7: "export const LUCA_7 = lucaChapter",
     }
     total_units = 0
     for number, path in files.items():
@@ -98,11 +114,22 @@ def main() -> int:
     if source_manifest.get("publicationStatus") != "in_review":
         errors.append("luca-poonen-source.json: starea trebuie sa fie in_review")
 
+    if import_config.get("sourceSha256") not in source_meta:
+        errors.append("lucaSource.ts: SHA-ul RCCV nu corespunde configuratiei de import")
+    if import_config.get("sourceUrl", "").replace("raw.githubusercontent.com", "github.com").replace(
+        "/seven1m/open-bibles/", "/seven1m/open-bibles/blob/"
+    ) not in source_meta:
+        errors.append("lucaSource.ts: sursa RCCV nu este fixata la commitul configurat")
+    if "pe baza studiilor verse-by-verse și a transcrierilor Zac Poonen" not in source_meta:
+        errors.append("lucaSource.ts: politica editoriala nu declara corect sursa explicatiilor")
+    if "fără interpretări doctrinare inventate de Emanus" not in source_meta:
+        errors.append("lucaSource.ts: lipseste interdictia doctrinei inventate")
+
     if "status: lucaStatus(input.number)" not in helper:
         errors.append("lucaHelpers.ts: starea nu vine din registrul editorial")
     if 'import { LUCA as LUCA_BASE } from "./luca.js"' not in index:
         errors.append("bible/index.ts: baza Luca nu este importata")
-    for number in range(2, 6):
+    for number in range(2, 8):
         if f'import {{ LUCA_{number} }} from "./luca{number}.js"' not in index:
             errors.append(f"bible/index.ts: Luca {number} nu este importat")
     luca_block_match = re.search(
@@ -115,7 +142,7 @@ def main() -> int:
     else:
         block = luca_block_match.group(1)
         assembled = [int(number) for number in re.findall(r"\bLUCA_(\d+)\b", block)]
-        if assembled != [2, 3, 4, 5]:
+        if assembled != [2, 3, 4, 5, 6, 7]:
             errors.append(f"bible/index.ts: ordinea capitolelor Luca este {assembled}")
         if "...LUCA_BASE.chapters" not in block:
             errors.append("bible/index.ts: Luca 1 nu vine din LUCA_BASE")
@@ -134,7 +161,7 @@ def main() -> int:
                 errors.append(f"{filename}: lipseste protectia editoriala {phrase!r}")
 
     print(
-        f"Poarta Luca: 5 capitole active, {total_units} unitati, "
+        f"Poarta Luca: 7 capitole active, {total_units} unitati, "
         "1151 versete RCCV configurate, 24 episoade sursa."
     )
     if errors:
