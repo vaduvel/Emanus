@@ -1,9 +1,9 @@
 name: Integrate 1 Tesaloniceni
 
 on:
-  push:
+  pull_request:
     branches:
-      - agent/1-tesaloniceni
+      - agent/coloseni
     paths:
       - .github/workflows/integrate-1-tesaloniceni.yml
 
