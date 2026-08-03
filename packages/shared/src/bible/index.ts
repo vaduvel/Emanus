@@ -120,6 +120,8 @@ import { LUCA_2 } from "./luca2.js"
 import { LUCA_3 } from "./luca3.js"
 import { LUCA_4 } from "./luca4.js"
 import { LUCA_5 } from "./luca5.js"
+import { LUCA_6 } from "./luca6.js"
+import { LUCA_7 } from "./luca7.js"
 import { TIT } from "./tit.js"
 import { FILIMON } from "./filimon.js"
 
@@ -197,6 +199,8 @@ export const LUCA: BibleBook = {
     LUCA_3,
     LUCA_4,
     LUCA_5,
+    LUCA_6,
+    LUCA_7,
   ],
 }
 
