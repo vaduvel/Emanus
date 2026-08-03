@@ -40,9 +40,10 @@ export const LUCA_3 = lucaChapter({
       teaching: teaching(
         "Ioan nu folosește trezirea din jurul lui ca să-și construiască un nume. Când oamenii se întreabă dacă el este Hristosul, îi îndreaptă imediat spre Cel mai puternic, înaintea căruia nu se consideră vrednic nici măcar de lucrarea unui rob.",
         "Botezul lui Ioan cu apă pregătește poporul; Hristos botează cu Duhul Sfânt. Poonen leagă lucrarea Duhului de puterea pentru o viață schimbată și o slujire care Îl arată pe Isus, nu de o emoție sau un semn folosit pentru laudă personală.",
+        "Imaginea focului descrie și o lucrare de curățire. Duhul Sfânt nu este primit ca o etichetă religioasă, ci ca putere care arde pleava din viață și produce curăție, prospețime și slujire. Poonen avertizează atât împotriva imitațiilor care produc doar manifestări, cât și împotriva reacției care respinge cu totul lucrarea Duhului.",
         "Imaginea vânturării arată și seriozitatea venirii Lui: Mesia curăță și judecă. Harul nu transformă păcatul într-un lucru neimportant. Același Ioan care vestește Evanghelia îl mustră pe Irod pentru răul concret, chiar dacă adevărul îl va costa libertatea.",
       ),
-      crossRefs: ["Matei 3:11-12", "Fapte 1:5-8", "Ioan 3:27-30"],
+      crossRefs: ["Matei 3:11-12", "Fapte 1:5-8", "Ioan 3:27-30", "Fapte 2:1-4"],
       forYourHeart:
         "Nu folosi lucrarea lui Dumnezeu ca să devii tu centrul. O slujire sănătoasă spune mereu: «El trebuie să crească, iar eu să mă micșorez».",
     },
@@ -50,13 +51,15 @@ export const LUCA_3 = lucaChapter({
       verses: [21, 22],
       heading: "Pe când Se ruga, cerul s-a deschis",
       teaching: teaching(
+        "Isus nu avea nevoie de pocăință, dar intră în apă pentru a împlini toată dreptatea. Poonen vede botezul ca mărturie publică a unei căi: moarte față de voia proprie și viață pentru voia Tatălui. Pentru credincios, botezul nu este doar un ritual, ci semnul îngropării omului vechi și al umblării într-o viață nouă.",
         "Luca notează că Isus Se ruga atunci când cerul s-a deschis și Duhul Sfânt a coborât peste El. Poonen subliniază legătura dintre rugăciune și ungerea pentru lucrare: Fiul nu tratează puterea Duhului ca pe ceva automat sau independent de părtășia cu Tatăl.",
+        "Aprobarea Tatălui vine după treizeci de ani de ascultare ascunsă și înaintea oricărei minuni sau predici publice. Răspunsurile spectaculoase și succesul vizibil nu dovedesc singure că o viață Îi este plăcută lui Dumnezeu; ascultarea, smerenia și biruința asupra păcatului au greutate înaintea Lui.",
         "Isus trăise deja treizeci de ani fără păcat, dar acum este uns pentru lucrarea publică. Poonen folosește acest fapt pentru a arăta că prezența Duhului în viața omului și puterea pentru slujire nu trebuie reduse la formule teologice; credinciosul este chemat să ceară, să se predea și să experimenteze lucrarea reală a lui Dumnezeu.",
         "Glasul Tatălui vine înaintea minunilor și a predicării publice: «Tu ești Fiul Meu preaiubit». Identitatea și plăcerea Tatălui nu sunt premiul popularității, ci temelia ascultării.",
       ),
-      crossRefs: ["Psalmul 2:7", "Isaia 42:1", "Fapte 10:38", "Luca 11:13"],
+      crossRefs: ["Matei 3:13-17", "Romani 6:3-4", "Psalmul 2:7", "Isaia 42:1", "Fapte 10:38", "Luca 11:13"],
       forYourHeart:
-        "Nu căuta putere fără părtășie. Roagă-te ca lucrarea Duhului să te facă folositor altora și primește mai întâi siguranța că, în Hristos, ești iubit de Tatăl.",
+        "Nu căuta putere fără părtășie și nu măsura aprobarea lui Dumnezeu doar prin rezultate vizibile. Alege voia Tatălui, roagă-te și primește în Hristos siguranța că ești iubit.",
     },
     {
       verses: [23, 38],
@@ -72,5 +75,5 @@ export const LUCA_3 = lucaChapter({
     },
   ],
   prayer:
-    "Doamne, dă-mi o pocăință care produce rod, o inimă smerită care Îl arată pe Hristos și o viață de rugăciune deschisă lucrării Duhului Sfânt. Păzește-mă de ambiție, de nedreptate și de o credință fără ascultare. Amin.",
+    "Doamne, dă-mi o pocăință care produce rod, o inimă smerită care Îl arată pe Hristos și o viață de rugăciune deschisă lucrării Duhului Sfânt. Învață-mă să mor față de voia proprie, să caut aprobarea Ta mai mult decât rezultatele vizibile și să trăiesc în ascultare. Amin.",
 })
