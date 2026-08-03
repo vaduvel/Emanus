@@ -24,12 +24,11 @@ jobs:
           base64 -d /tmp/payload.b64 > /tmp/payload.tar.xz
           tar -xJf /tmp/payload.tar.xz -C .
           python3 apply.py
+          git checkout -- .github/workflows/ci.yml
           rm -f apply.py
           rm -rf .github/payload-2-corinteni
-          rm -f .github/workflows/research-2-corinteni.yml
-          rm -f .github/workflows/finalize-2-corinteni.yml
 
-      - name: Commit final integration
+      - name: Commit book integration
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
