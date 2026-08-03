@@ -48,6 +48,9 @@ jobs:
       - name: Verifica Biblia explicata Fapte
         run: pnpm check:fapte
 
+      - name: Verifica Biblia explicata Romani
+        run: pnpm check:romani
+
       - name: Verifica Biblia explicata Tit
         run: pnpm check:tit
 
