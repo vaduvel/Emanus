@@ -143,7 +143,7 @@ export const IERTARE_SI_VOIA_LUI_DUMNEZEU_LESSONS: Lesson[] = [
       "Altă minciună: că ești primit de Dumnezeu pe temeiul faptelor tale. Nu; suntem primiți pe temeiul pocăinței și al credinței în Hristos.",
       "Să zicem că într-o dimineață n-ai avut vreme să citești Biblia și ai plecat la lucru. Vei avea vreun accident în ziua aceea? Diavolul îți va spune că poate. Aceasta este superstiție. Singurul lucru care rupe părtășia cu Dumnezeu este păcatul făcut cu bună știință.",
       "Gândiți-vă la minciunile despre viitor. Ce este îngrijorarea? Rodul minciunilor pe care ni le spune diavolul despre ce se va întâmpla. Cred că nouă zeci și nouă la sută din lucrurile de care ne temem nu se întâmplă niciodată.",
-      "Gândiți-vă la ce v-a îngrijorat în anii trecuți. Nu s-au întâmplat. Dar ați pierdut vreme, somn și putere suf‐letească. Cine a făcut asta? Satana.",
+      "Gândiți-vă la ce v-a îngrijorat în anii trecuți. Nu s-au întâmplat. Dar ați pierdut vreme, somn și putere sufletească. Cine a făcut asta? Satana.",
       "Să luăm hotărârea de azi că nu-l mai lăsăm să ne păcălească. Vom iubi adevărul și vom da pe față înșelăciunea lui.",
     ],
     wrongA: "Simțirile mele îmi arată dacă sunt copil al lui Dumnezeu.",
