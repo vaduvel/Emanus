@@ -43,7 +43,7 @@
     }
   },
   "scripts": {
-    "materialize:bible-texts": "node ../../scripts/materialize-rccv-book.mjs ../../docs/data/luca-rccv-import.json ../../docs/data/fapte-rccv-import.json ../../docs/data/romani-rccv-import.json ../../docs/data/1-corinteni-rccv-import.json",
+    "materialize:bible-texts": "node ../../scripts/materialize-rccv-book.mjs ../../docs/data/luca-rccv-import.json ../../docs/data/fapte-rccv-import.json ../../docs/data/romani-rccv-import.json ../../docs/data/1-corinteni-rccv-import.json ../../docs/data/2-corinteni-rccv-import.json",
     "build": "pnpm materialize:bible-texts && tsc -p tsconfig.json",
     "typecheck": "pnpm materialize:bible-texts && tsc -p tsconfig.json --noEmit"
   },
