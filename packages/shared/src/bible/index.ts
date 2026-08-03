@@ -115,6 +115,7 @@ import { MARCU_13 } from "./marcu13.js"
 import { MARCU_14 } from "./marcu14.js"
 import { MARCU_15 } from "./marcu15.js"
 import { MARCU_16 } from "./marcu16.js"
+import { TIT } from "./tit.js"
 import { FILIMON } from "./filimon.js"
 
 export const GENEZA: BibleBook = {
@@ -183,7 +184,7 @@ export const MARCU: BibleBook = {
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, IOAN, FILIMON]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, IOAN, TIT, FILIMON]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((book) => book.id === id)
