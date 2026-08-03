@@ -2,7 +2,9 @@
   "name": "emanus",
   "private": true,
   "packageManager": "pnpm@9.7.0",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "pnpm -r build",
     "build:shared": "pnpm --filter @emanus/shared build",
@@ -18,6 +20,7 @@
     "check:matei": "python3 scripts/check-matei.py",
     "check:marcu": "python3 scripts/check-marcu.py",
     "check:luca": "python3 scripts/check-luca.py",
+    "check:fapte": "python3 scripts/check-fapte.py",
     "check:tit": "python3 scripts/check-tit.py",
     "check:filimon": "python3 scripts/check-filimon.py",
     "check:bible-source": "pnpm build:shared && pnpm --filter @emanus/web check:bible-source",

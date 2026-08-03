@@ -139,6 +139,7 @@ import { LUCA_21 } from "./luca21.js"
 import { LUCA_22 } from "./luca22.js"
 import { LUCA_23 } from "./luca23.js"
 import { LUCA_24 } from "./luca24.js"
+import { FAPTE } from "./fapte.js"
 import { TIT } from "./tit.js"
 import { FILIMON } from "./filimon.js"
 
@@ -193,8 +194,25 @@ export const IOAN: BibleBook = {
   ...IOAN_BASE,
   chapters: [
     ...IOAN_BASE.chapters,
-    IOAN_3, IOAN_4, IOAN_5, IOAN_6, IOAN_7, IOAN_8, IOAN_9, IOAN_10, IOAN_11, IOAN_12,
-    IOAN_13, IOAN_14, IOAN_15, IOAN_16, IOAN_17, IOAN_18, IOAN_19, IOAN_20, IOAN_21,
+    IOAN_3,
+    IOAN_4,
+    IOAN_5,
+    IOAN_6,
+    IOAN_7,
+    IOAN_8,
+    IOAN_9,
+    IOAN_10,
+    IOAN_11,
+    IOAN_12,
+    IOAN_13,
+    IOAN_14,
+    IOAN_15,
+    IOAN_16,
+    IOAN_17,
+    IOAN_18,
+    IOAN_19,
+    IOAN_20,
+    IOAN_21,
   ],
 }
 
@@ -202,8 +220,21 @@ export const MARCU: BibleBook = {
   ...MARCU_BASE,
   chapters: [
     ...MARCU_BASE.chapters,
-    MARCU_2, MARCU_3, MARCU_4, MARCU_5, MARCU_6, MARCU_7, MARCU_8, MARCU_9, MARCU_10, MARCU_11,
-    MARCU_12, MARCU_13, MARCU_14, MARCU_15, MARCU_16,
+    MARCU_2,
+    MARCU_3,
+    MARCU_4,
+    MARCU_5,
+    MARCU_6,
+    MARCU_7,
+    MARCU_8,
+    MARCU_9,
+    MARCU_10,
+    MARCU_11,
+    MARCU_12,
+    MARCU_13,
+    MARCU_14,
+    MARCU_15,
+    MARCU_16,
   ],
 }
 
@@ -239,7 +270,7 @@ export const LUCA: BibleBook = {
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, LUCA, IOAN, TIT, FILIMON]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, LUCA, IOAN, FAPTE, TIT, FILIMON]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((book) => book.id === id)
