@@ -1,0 +1,167 @@
+name: Research Luca YouTube playlist
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/integrate-biblical-review
+    paths:
+      - .github/workflows/research-luca-youtube.yml
+
+permissions:
+  contents: read
+
+jobs:
+  collect-transcripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PLAYLIST_URL: https://www.youtube.com/watch?v=_OX6ET9Z7Qw&list=PL3myepmxcTQSnSKfFkN-4cNo4kl9B0ILf
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install yt-dlp
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "yt-dlp>=2025.7.21"
+
+      - name: Download playlist metadata and English captions
+        shell: bash
+        run: |
+          mkdir -p .research/luca-youtube/raw .research/luca-youtube/text
+          yt-dlp \
+            --ignore-errors \
+            --yes-playlist \
+            --playlist-start 1 \
+            --playlist-end 96 \
+            --skip-download \
+            --write-info-json \
+            --write-subs \
+            --write-auto-subs \
+            --sub-langs "en,en-US,en-GB,en-orig" \
+            --sub-format "json3/vtt/best" \
+            --output ".research/luca-youtube/raw/%(playlist_index)03d-%(id)s.%(ext)s" \
+            "$PLAYLIST_URL"
+
+      - name: Normalize captions into research transcripts
+        shell: bash
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+
+          import html
+          import json
+          import re
+          from pathlib import Path
+
+          root = Path('.research/luca-youtube')
+          raw = root / 'raw'
+          out = root / 'text'
+          out.mkdir(parents=True, exist_ok=True)
+
+          def clean(value: str) -> str:
+              value = html.unescape(value)
+              value = re.sub(r'<[^>]+>', '', value)
+              value = value.replace('\u200b', '').replace('\ufeff', '')
+              value = re.sub(r'\s+', ' ', value).strip()
+              value = re.sub(r'\s+([,.;:!?])', r'\1', value)
+              return value
+
+          def parse_json3(path: Path) -> str:
+              data = json.loads(path.read_text(encoding='utf-8'))
+              chunks: list[str] = []
+              previous = ''
+              for event in data.get('events', []):
+                  text = clean(''.join(seg.get('utf8', '') for seg in event.get('segs', [])))
+                  if not text or text == previous:
+                      continue
+                  chunks.append(text)
+                  previous = text
+              return clean(' '.join(chunks))
+
+          def parse_vtt(path: Path) -> str:
+              chunks: list[str] = []
+              previous = ''
+              for raw_line in path.read_text(encoding='utf-8', errors='replace').splitlines():
+                  line = clean(raw_line)
+                  if not line or line == 'WEBVTT' or '-->' in line:
+                      continue
+                  if line.startswith(('Kind:', 'Language:', 'NOTE', 'STYLE', 'REGION')):
+                      continue
+                  if re.fullmatch(r'\d+', line):
+                      continue
+                  if line == previous:
+                      continue
+                  chunks.append(line)
+                  previous = line
+              return clean(' '.join(chunks))
+
+          rows: list[dict[str, object]] = []
+          for info_path in sorted(raw.glob('*.info.json')):
+              info = json.loads(info_path.read_text(encoding='utf-8'))
+              index = info.get('playlist_index')
+              video_id = str(info.get('id') or '')
+              if not index:
+                  match = re.match(r'(\d+)-', info_path.name)
+                  index = int(match.group(1)) if match else len(rows) + 1
+              prefix = info_path.name.removesuffix('.info.json')
+              caption_files = sorted(raw.glob(f'{prefix}*.json3')) + sorted(raw.glob(f'{prefix}*.vtt'))
+              transcript = ''
+              caption_source = None
+              for caption_path in caption_files:
+                  try:
+                      candidate = parse_json3(caption_path) if caption_path.suffix == '.json3' else parse_vtt(caption_path)
+                  except Exception as exc:
+                      print(f'::warning title=Caption parse::{caption_path.name}: {exc}')
+                      continue
+                  if len(candidate) > len(transcript):
+                      transcript = candidate
+                      caption_source = caption_path.name
+
+              title = str(info.get('title') or f'Luke video {index}')
+              url = str(info.get('webpage_url') or f'https://www.youtube.com/watch?v={video_id}')
+              target = out / f'{int(index):03d}-{video_id}.txt'
+              if transcript:
+                  target.write_text(
+                      f'Title: {title}\nURL: {url}\nPlaylist index: {index}\n\n{transcript}\n',
+                      encoding='utf-8',
+                  )
+              else:
+                  print(f'::warning title=Missing transcript::{index}. {title}')
+
+              rows.append({
+                  'index': int(index),
+                  'id': video_id,
+                  'title': title,
+                  'url': url,
+                  'duration': info.get('duration'),
+                  'captionSource': caption_source,
+                  'transcriptBytes': len(transcript.encode('utf-8')),
+              })
+
+          rows.sort(key=lambda row: int(row['index']))
+          summary = {
+              'playlistUrl': 'https://www.youtube.com/playlist?list=PL3myepmxcTQSnSKfFkN-4cNo4kl9B0ILf',
+              'videosDiscovered': len(rows),
+              'transcriptsCreated': sum(1 for row in rows if int(row['transcriptBytes']) > 0),
+              'videos': rows,
+          }
+          (out / 'index.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(
+              f"YouTube Luca: {summary['videosDiscovered']} clipuri găsite, "
+              f"{summary['transcriptsCreated']} transcrieri create."
+          )
+          if not rows:
+              raise SystemExit('Playlistul nu a putut fi citit.')
+          PY
+
+      - name: Upload private research artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: luca-youtube-transcripts-${{ github.sha }}
+          path: .research/luca-youtube/text
+          if-no-files-found: warn
+          retention-days: 1
