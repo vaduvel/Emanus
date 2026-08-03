@@ -30,7 +30,7 @@ REQUIRED_GUARDS = {
         "nu ne permite să diagnosticăm astfel suferința altuia",
     ],
     "luca6.ts": [
-        "iubirea și iertarea nu obligă victima să rămână în pericol",
+        "o victimă poate pune limite",
         "dragostea nu cere întoarcerea într-un mediu nesigur",
         "nu interzice discernământul sau protejarea celui vulnerabil",
     ],
