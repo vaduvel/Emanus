@@ -1,0 +1,57 @@
+name: Research Luca wave 2
+
+on:
+  push:
+    branches:
+      - agent/integrate-biblical-review
+    paths:
+      - .github/workflows/research-luca-wave-2.yml
+
+permissions:
+  contents: read
+
+jobs:
+  transcribe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install transcription tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install --upgrade pip
+          python -m pip install openai-whisper==20250625
+
+      - name: Download official CFC audio
+        run: |
+          mkdir -p .research/luca-wave-2/audio .research/luca-wave-2/transcripts
+          curl --fail --location --retry 4 \
+            "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt03-luke-chapter-2-39-to-chapter-3-20.mp3" \
+            --output .research/luca-wave-2/audio/03-luke-2-39-to-3-20.mp3
+          curl --fail --location --retry 4 \
+            "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt03-luke-chapter-3-21-to-chapter-4-19.mp3" \
+            --output .research/luca-wave-2/audio/04-luke-3-21-to-4-19.mp3
+
+      - name: Transcribe episodes 3 and 4
+        run: |
+          whisper .research/luca-wave-2/audio/03-luke-2-39-to-3-20.mp3 \
+            --model small.en --language English --task transcribe \
+            --output_format txt --output_dir .research/luca-wave-2/transcripts
+          whisper .research/luca-wave-2/audio/04-luke-3-21-to-4-19.mp3 \
+            --model small.en --language English --task transcribe \
+            --output_format txt --output_dir .research/luca-wave-2/transcripts
+          test "$(find .research/luca-wave-2/transcripts -name '*.txt' -size +5k | wc -l)" -eq 2
+
+      - name: Upload private research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: luca-wave-2-transcripts
+          path: .research/luca-wave-2/transcripts/*.txt
+          if-no-files-found: error
+          retention-days: 1
