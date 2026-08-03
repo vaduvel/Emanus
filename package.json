@@ -17,6 +17,7 @@
     "check:bible-publication": "python3 scripts/publica-geneza.py --check && python3 scripts/publica-matei.py --check",
     "check:matei": "python3 scripts/check-matei.py",
     "check:marcu": "python3 scripts/check-marcu.py",
+    "check:tit": "python3 scripts/check-tit.py",
     "check:filimon": "python3 scripts/check-filimon.py",
     "check:bible-source": "pnpm build:shared && pnpm --filter @emanus/web check:bible-source",
     "check:bible-cloud": "python3 scripts/check-bible-cloud.py",
