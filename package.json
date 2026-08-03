@@ -27,6 +27,7 @@
     "check:bible-source": "pnpm build:shared && pnpm --filter @emanus/web check:bible-source",
     "check:bible-cloud": "python3 scripts/check-bible-cloud.py",
     "check:bible-bundle": "python3 scripts/check-bible-cloud.py --bundle",
-    "sync:bible-content": "pnpm build:shared && pnpm --filter @emanus/web sync:bible-content"
+    "sync:bible-content": "pnpm build:shared && pnpm --filter @emanus/web sync:bible-content",
+    "check:1-corinteni": "python3 scripts/check-1-corinteni.py"
   }
 }
