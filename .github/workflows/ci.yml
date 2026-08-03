@@ -42,6 +42,9 @@ jobs:
       - name: Verifica Biblia explicata Marcu
         run: pnpm check:marcu
 
+      - name: Verifica Biblia explicata Luca
+        run: pnpm check:luca
+
       - name: Verifica Biblia explicata Tit
         run: pnpm check:tit
 
