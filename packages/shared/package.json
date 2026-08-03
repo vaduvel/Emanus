@@ -43,7 +43,7 @@
     }
   },
   "scripts": {
-    "materialize:bible-texts": "node ../../scripts/materialize-rccv-book.mjs ../../docs/data/luca-rccv-import.json ../../docs/data/fapte-rccv-import.json ../../docs/data/romani-rccv-import.json ../../docs/data/1-corinteni-rccv-import.json ../../docs/data/2-corinteni-rccv-import.json ../../docs/data/galateni-rccv-import.json ../../docs/data/efeseni-rccv-import.json ../../docs/data/filipeni-rccv-import.json ../../docs/data/coloseni-rccv-import.json ../../docs/data/1-tesaloniceni-rccv-import.json",
+    "materialize:bible-texts": "node ../../scripts/materialize-rccv-book.mjs ../../docs/data/luca-rccv-import.json ../../docs/data/fapte-rccv-import.json ../../docs/data/romani-rccv-import.json ../../docs/data/1-corinteni-rccv-import.json ../../docs/data/2-corinteni-rccv-import.json ../../docs/data/galateni-rccv-import.json ../../docs/data/efeseni-rccv-import.json ../../docs/data/filipeni-rccv-import.json ../../docs/data/coloseni-rccv-import.json ../../docs/data/1-tesaloniceni-rccv-import.json ../../docs/data/2-tesaloniceni-rccv-import.json ../../docs/data/1-timotei-rccv-import.json ../../docs/data/2-timotei-rccv-import.json ../../docs/data/evrei-rccv-import.json ../../docs/data/iacov-rccv-import.json ../../docs/data/1-petru-rccv-import.json ../../docs/data/2-petru-rccv-import.json ../../docs/data/1-ioan-rccv-import.json ../../docs/data/2-ioan-rccv-import.json ../../docs/data/3-ioan-rccv-import.json ../../docs/data/iuda-rccv-import.json ../../docs/data/apocalipsa-rccv-import.json",
     "build": "pnpm materialize:bible-texts && tsc -p tsconfig.json",
     "typecheck": "pnpm materialize:bible-texts && tsc -p tsconfig.json --noEmit"
   },

@@ -148,6 +148,20 @@ import { EFESENI } from "./efeseni.js"
 import { FILIPENI } from "./filipeni.js"
 import { COLOSENI } from "./coloseni.js"
 import { UNU_TESALONICENI } from "./unuTesaloniceni.js"
+import {
+  DOI_TESALONICENI,
+  UNU_TIMOTEI,
+  DOI_TIMOTEI,
+  EVREI,
+  IACOV,
+  UNU_PETRU,
+  DOI_PETRU,
+  UNU_IOAN,
+  DOI_IOAN,
+  TREI_IOAN,
+  IUDA,
+  APOCALIPSA,
+} from "./ntCompletionBooks.js"
 import { TIT } from "./tit.js"
 import { FILIMON } from "./filimon.js"
 
@@ -278,7 +292,7 @@ export const LUCA: BibleBook = {
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, LUCA, IOAN, FAPTE, ROMANI, UNU_CORINTENI, DOI_CORINTENI, GALATENI, EFESENI, FILIPENI, COLOSENI, UNU_TESALONICENI, TIT, FILIMON]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, LUCA, IOAN, FAPTE, ROMANI, UNU_CORINTENI, DOI_CORINTENI, GALATENI, EFESENI, FILIPENI, COLOSENI, UNU_TESALONICENI, DOI_TESALONICENI, UNU_TIMOTEI, DOI_TIMOTEI, TIT, FILIMON, EVREI, IACOV, UNU_PETRU, DOI_PETRU, UNU_IOAN, DOI_IOAN, TREI_IOAN, IUDA, APOCALIPSA]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((book) => book.id === id)
