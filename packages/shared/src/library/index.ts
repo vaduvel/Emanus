@@ -5,6 +5,9 @@ import { PILDE_TATAL_LESSONS } from "./pildeTatal2.js"
 import { PILDE_FIUL_LESSONS } from "./pildeFiul2.js"
 import { PILDE_IMPARATIA_LESSONS } from "./pildeImparatia2.js"
 import { PILDE_VESNICIA_LESSONS } from "./pildeVesnicia2.js"
+import { SPIRITUAL_MIJLOCITOR_LESSONS } from "./spiritualMijlocitor.js"
+import { NEW_AGE_LESSONS } from "./newAge.js"
+import { SPIRITUAL_VRAJITORIE_LESSONS } from "./spiritualVrajitorie.js"
 
 export * from "./doctrineHar.js"
 export * from "./doctrineHar2.js"
@@ -18,6 +21,9 @@ export * from "./pildeImparatia.js"
 export * from "./pildeImparatia2.js"
 export * from "./pildeVesnicia.js"
 export * from "./pildeVesnicia2.js"
+export * from "./spiritualMijlocitor.js"
+export * from "./newAge.js"
+export * from "./spiritualVrajitorie.js"
 
 export type CourseState = "live" | "partial" | "planned"
 export type LibraryCourse = {
@@ -40,7 +46,9 @@ const shelfIntrebari = shelf("lib_intrebari", "Întrebări mari", "Lucrurile car
   c("doctrine_c4_vesnicia", "Ce urmează după moarte?", "Nu știi ce e raiul, ce e iadul, sau dacă poți fi sigur de ceva.", 5, { lessonIds: ["vesnicia_l1", "vesnicia_l2", "vesnicia_l3", "vesnicia_l4", "vesnicia_l5"], state: "live", source: "docs/15-doctrina-generala.md §Cursul 4" }),
   c("doctrine_c1_biblia", "Pot să am încredere în Biblie?", "Ți s-a spus că e o carte scrisă de oameni, rescrisă de nu știu câte ori.", 6, { source: "docs/15-doctrina-generala.md §Cursul 1" }),
   c("doctrine_c3_biserica", "Cine e Biserica lui Iisus?", "Dacă fiecare zice altceva, cine are dreptate? Sau ai fost rănit acolo.", 5, { source: "docs/15-doctrina-generala.md §Cursul 3" }),
-  c("lib_alte_credinte", "Energii, horoscop, karma", "Ai luat de peste tot câte puțin și nu mai știi ce se bate cap în cap.", 5),
+  c("spiritual_c5_mijlocitor", "Cine te aude când te rogi", "Crezi că Dumnezeu e real, dar simți că nu ai voie să-I vorbești tu, direct.", 4, { lessonIds: ["spirit_mijl_l1", "spirit_mijl_l2", "spirit_mijl_l3", "spirit_mijl_l4"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 1" }),
+  c("lib_alte_credinte", "Energii, horoscop, karma", "Ai luat de peste tot câte puțin și nu mai știi ce se bate cap în cap.", 6, { lessonIds: ["newage_l1", "newage_l2", "newage_l3", "newage_l4", "newage_l5", "newage_l6"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 2" }),
+  c("spiritual_c6_vrajitorie", "Vrăjitoria: reală, dar nu suverană", "Ți s-a spus că ți s-a făcut ceva, sau ai fost tu la cineva care face.", 4, { lessonIds: ["vraj_l1", "vraj_l2", "vraj_l3", "vraj_l4"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 3" }),
 ])
 
 const shelfCuvantul = shelf("lib_cuvantul", "Cuvântul", "Cum se citește, de unde se începe și ce înseamnă ce citești.", [
@@ -97,6 +105,8 @@ export const LIBRARY_LESSONS: Lesson[] = [
   ...DOCTRINE_HAR_LESSONS, ...DOCTRINE_VESNICIA_LESSONS,
   ...PILDE_TATAL_LESSONS, ...PILDE_FIUL_LESSONS,
   ...PILDE_IMPARATIA_LESSONS, ...PILDE_VESNICIA_LESSONS,
+  ...SPIRITUAL_MIJLOCITOR_LESSONS, ...NEW_AGE_LESSONS,
+  ...SPIRITUAL_VRAJITORIE_LESSONS,
 ]
 export function findLibraryLesson(id: string): Lesson | undefined { return LIBRARY_LESSONS.find((x) => x.id === id) }
 export function libraryCourseLessons(courseId: string): Lesson[] {
