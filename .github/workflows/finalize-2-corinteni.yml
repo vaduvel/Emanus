@@ -1,9 +1,11 @@
 name: Finalize 2 Corinteni
 
 on:
-  push:
+  pull_request:
     branches:
-      - agent/2-corinteni
+      - agent/1-corinteni
+    types:
+      - reopened
     paths:
       - .github/workflows/finalize-2-corinteni.yml
 
