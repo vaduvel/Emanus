@@ -7,6 +7,9 @@ on:
       - agent/integrate-biblical-review
     paths:
       - .github/workflows/research-luca-youtube.yml
+  pull_request:
+    paths:
+      - .github/workflows/research-luca-youtube.yml
 
 permissions:
   contents: read
