@@ -269,7 +269,7 @@ export const LUCA: BibleBook = {
   ],
 }
 
-/** Cărțile scrise până acum. Se adaugă pe rând, după revizie. */
+/** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
 export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, LUCA, IOAN, FAPTE, TIT, FILIMON]
 
 export function findBook(id: string): BibleBook | undefined {
