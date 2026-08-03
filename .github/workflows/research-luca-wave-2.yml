@@ -29,7 +29,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
           python -m pip install --upgrade pip
-          python -m pip install openai-whisper==20250625
+          python -m pip install faster-whisper==1.2.0
 
       - name: Download official CFC audio
         run: |
@@ -43,12 +43,28 @@ jobs:
 
       - name: Transcribe episodes 3 and 4
         run: |
-          whisper .research/luca-wave-2/audio/03-luke-2-39-to-3-20.mp3 \
-            --model tiny.en --language English --task transcribe \
-            --output_format txt --output_dir .research/luca-wave-2/transcripts
-          whisper .research/luca-wave-2/audio/04-luke-3-21-to-4-19.mp3 \
-            --model tiny.en --language English --task transcribe \
-            --output_format txt --output_dir .research/luca-wave-2/transcripts
+          python - <<'PY'
+          from pathlib import Path
+          from faster_whisper import WhisperModel
+
+          root = Path('.research/luca-wave-2')
+          model = WhisperModel('tiny.en', device='cpu', compute_type='int8')
+          for source in sorted((root / 'audio').glob('*.mp3')):
+              segments, info = model.transcribe(
+                  str(source),
+                  language='en',
+                  beam_size=5,
+                  vad_filter=True,
+              )
+              lines = []
+              for segment in segments:
+                  text = ' '.join(segment.text.split())
+                  if text:
+                      lines.append(text)
+              target = root / 'transcripts' / f'{source.stem}.txt'
+              target.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+              print(f'{source.name}: {info.duration:.1f}s audio, {target.stat().st_size} bytes transcript')
+          PY
           test "$(find .research/luca-wave-2/transcripts -name '*.txt' -size +5k | wc -l)" -eq 2
 
       - name: Upload private research artifact
