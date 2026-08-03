@@ -1,0 +1,68 @@
+name: Research 2 Corinteni
+
+on:
+  pull_request:
+    branches:
+      - agent/1-corinteni
+    paths:
+      - .github/workflows/research-2-corinteni.yml
+
+permissions:
+  contents: read
+
+jobs:
+  transcribe:
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        episode: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install transcription tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install faster-whisper==1.2.0 requests
+      - name: Download, transcribe and stage episode
+        env:
+          EPISODE_NUMBER: ${{ matrix.episode }}
+        run: |
+          python - <<'PY'
+          import json, os, re, requests
+          from pathlib import Path
+          from faster_whisper import WhisperModel
+
+          root = Path('.research/2-corinteni')
+          root.mkdir(parents=True, exist_ok=True)
+          manifest = json.loads(Path('docs/data/2-corinteni-poonen-source.json').read_text())
+          item = manifest['episodes'][int(os.environ['EPISODE_NUMBER']) - 1]
+          slug = f"{item['number']:02d}-" + re.sub(r'[^a-z0-9]+', '-', item['range'].lower()).strip('-')
+          audio = root / f'{slug}.mp3'
+          target = root / f'{slug}.txt'
+          response = requests.get(item['audioUrl'], timeout=120)
+          response.raise_for_status()
+          audio.write_bytes(response.content)
+          model = WhisperModel('tiny.en', device='cpu', compute_type='int8', cpu_threads=4)
+          segments, info = model.transcribe(str(audio), language='en', beam_size=1, best_of=1, vad_filter=True)
+          lines = [' '.join(segment.text.split()) for segment in segments if segment.text.strip()]
+          target.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          print(f'{audio.name}: {info.duration:.1f}s, {target.stat().st_size} bytes')
+          if target.stat().st_size < 5000:
+              raise SystemExit('Transcriere prea scurta')
+          Path('/tmp/artifact-name').write_text(slug)
+          PY
+          echo "name=$(cat /tmp/artifact-name)" >> "$GITHUB_OUTPUT"
+        id: transcript
+      - name: Upload private research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: doi-corinteni-${{ steps.transcript.outputs.name }}
+          path: .research/2-corinteni/*.txt
+          if-no-files-found: error
+          retention-days: 1
