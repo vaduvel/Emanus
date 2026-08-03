@@ -52,21 +52,13 @@ jobs:
           root = json.loads(root_path.read_text(encoding='utf-8'))
           root['scripts']['check:coloseni'] = 'python3 scripts/check-coloseni.py'
           root_path.write_text(json.dumps(root, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-
-          gate_path = Path('scripts/check-filipeni.py')
-          gate = gate_path.read_text(encoding='utf-8')
-          old = r'EFESENI,\\s*FILIPENI,\\s*TIT\\b'
-          new = r'EFESENI,\\s*FILIPENI,\\s*(?:COLOSENI,\\s*)?TIT\\b'
-          if old not in gate:
-              raise SystemExit('Filipeni canonical gate anchor lipseste')
-          gate_path.write_text(gate.replace(old, new, 1), encoding='utf-8')
           PY
 
       - name: Commit catalog integration
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add packages/shared/src/bible/index.ts packages/shared/package.json package.json scripts/check-filipeni.py
+          git add packages/shared/src/bible/index.ts packages/shared/package.json package.json
           git diff --cached --quiet && exit 0
           git commit -m "feat(bible): connect Coloseni to catalog and build"
           git push origin HEAD:agent/coloseni
