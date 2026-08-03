@@ -122,6 +122,23 @@ import { LUCA_4 } from "./luca4.js"
 import { LUCA_5 } from "./luca5.js"
 import { LUCA_6 } from "./luca6.js"
 import { LUCA_7 } from "./luca7.js"
+import { LUCA_8 } from "./luca8.js"
+import { LUCA_9 } from "./luca9.js"
+import { LUCA_10 } from "./luca10.js"
+import { LUCA_11 } from "./luca11.js"
+import { LUCA_12 } from "./luca12.js"
+import { LUCA_13 } from "./luca13.js"
+import { LUCA_14 } from "./luca14.js"
+import { LUCA_15 } from "./luca15.js"
+import { LUCA_16 } from "./luca16.js"
+import { LUCA_17 } from "./luca17.js"
+import { LUCA_18 } from "./luca18.js"
+import { LUCA_19 } from "./luca19.js"
+import { LUCA_20 } from "./luca20.js"
+import { LUCA_21 } from "./luca21.js"
+import { LUCA_22 } from "./luca22.js"
+import { LUCA_23 } from "./luca23.js"
+import { LUCA_24 } from "./luca24.js"
 import { TIT } from "./tit.js"
 import { FILIMON } from "./filimon.js"
 
@@ -190,7 +207,7 @@ export const MARCU: BibleBook = {
   ],
 }
 
-/** Evanghelia după Luca, adăugată gradual și păstrată în revizie. */
+/** Evanghelia după Luca, cu toate cele 24 de capitole păstrate în revizie. */
 export const LUCA: BibleBook = {
   ...LUCA_BASE,
   chapters: [
@@ -201,6 +218,23 @@ export const LUCA: BibleBook = {
     LUCA_5,
     LUCA_6,
     LUCA_7,
+    LUCA_8,
+    LUCA_9,
+    LUCA_10,
+    LUCA_11,
+    LUCA_12,
+    LUCA_13,
+    LUCA_14,
+    LUCA_15,
+    LUCA_16,
+    LUCA_17,
+    LUCA_18,
+    LUCA_19,
+    LUCA_20,
+    LUCA_21,
+    LUCA_22,
+    LUCA_23,
+    LUCA_24,
   ],
 }
 
