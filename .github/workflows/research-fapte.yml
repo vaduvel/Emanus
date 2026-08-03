@@ -1,0 +1,127 @@
+name: Research Faptele Apostolilor
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/fapte-apostolilor
+    paths:
+      - .github/workflows/research-fapte.yml
+
+permissions:
+  contents: read
+
+jobs:
+  transcribe:
+    strategy:
+      fail-fast: false
+      max-parallel: 14
+      matrix:
+        episode:
+          - number: 1
+            slug: 01-acts-1-1-to-2-21
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-1-1-to-chapter-2-21.mp3
+          - number: 2
+            slug: 02-acts-2-22-to-3-16
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-2-22-to-chapter-3-16.mp3
+          - number: 3
+            slug: 03-acts-3-17-to-5-11
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-3-17-to-chapter-5-11.mp3
+          - number: 4
+            slug: 04-acts-5-12-to-7-54
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-5-12-to-chapter-7-54.mp3
+          - number: 5
+            slug: 05-acts-7-54-to-9-25
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-7-54-to-chapter-9-25.mp3
+          - number: 6
+            slug: 06-acts-9-26-to-11-30
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-9-26-to-chapter-11-30.mp3
+          - number: 7
+            slug: 07-acts-12-1-to-13-52
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-12-1-to-chapter-13-52.mp3
+          - number: 8
+            slug: 08-acts-14-1-to-16-10
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-14-1-to-chapter-16-10.mp3
+          - number: 9
+            slug: 09-acts-16-11-to-17-23
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-16-11-to-chapter-17-23.mp3
+          - number: 10
+            slug: 10-acts-17-24-to-19-23
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-17-24-to-chapter-19-23.mp3
+          - number: 11
+            slug: 11-acts-19-23-to-20-24
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-19-23-to-chapter-20-24.mp3
+          - number: 12
+            slug: 12-acts-20-25-to-21-26
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-20-25-to-chapter-21-26.mp3
+          - number: 13
+            slug: 13-acts-21-27-to-24-27
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-21-27-to-chapter-24-27.mp3
+          - number: 14
+            slug: 14-acts-25-1-to-28-31
+            url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt05-acts-chapter-25-1-to-chapter-28-31.mp3
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install transcription tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install faster-whisper==1.2.0
+
+      - name: Download official CFC audio
+        env:
+          EPISODE_URL: ${{ matrix.episode.url }}
+          EPISODE_SLUG: ${{ matrix.episode.slug }}
+        run: |
+          mkdir -p .research/fapte/audio .research/fapte/transcripts
+          curl --fail --location --retry 4 "$EPISODE_URL" \
+            --output ".research/fapte/audio/$EPISODE_SLUG.mp3"
+          test -s ".research/fapte/audio/$EPISODE_SLUG.mp3"
+
+      - name: Transcribe episode
+        env:
+          EPISODE_SLUG: ${{ matrix.episode.slug }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          from faster_whisper import WhisperModel
+
+          root = Path('.research/fapte')
+          slug = os.environ['EPISODE_SLUG']
+          source = root / 'audio' / f'{slug}.mp3'
+          target = root / 'transcripts' / f'{slug}.txt'
+          model = WhisperModel('tiny.en', device='cpu', compute_type='int8', cpu_threads=4)
+          segments, info = model.transcribe(
+              str(source),
+              language='en',
+              beam_size=1,
+              best_of=1,
+              vad_filter=True,
+          )
+          lines = []
+          for segment in segments:
+              text = ' '.join(segment.text.split())
+              if text:
+                  lines.append(text)
+          target.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          print(f'{source.name}: {info.duration:.1f}s audio, {target.stat().st_size} bytes transcript')
+          if target.stat().st_size < 5000:
+              raise SystemExit('Transcriere prea scurta')
+          PY
+
+      - name: Upload private research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fapte-${{ matrix.episode.slug }}
+          path: .research/fapte/transcripts/${{ matrix.episode.slug }}.txt
+          if-no-files-found: error
+          retention-days: 1
