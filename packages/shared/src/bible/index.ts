@@ -144,6 +144,7 @@ import { ROMANI } from "./romani.js"
 import { UNU_CORINTENI } from "./unuCorinteni.js"
 import { DOI_CORINTENI } from "./doiCorinteni.js"
 import { GALATENI } from "./galateni.js"
+import { EFESENI } from "./efeseni.js"
 import { TIT } from "./tit.js"
 import { FILIMON } from "./filimon.js"
 
@@ -274,7 +275,7 @@ export const LUCA: BibleBook = {
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, LUCA, IOAN, FAPTE, ROMANI, UNU_CORINTENI, DOI_CORINTENI, GALATENI, TIT, FILIMON]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, MARCU, LUCA, IOAN, FAPTE, ROMANI, UNU_CORINTENI, DOI_CORINTENI, GALATENI, EFESENI, TIT, FILIMON]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((book) => book.id === id)
