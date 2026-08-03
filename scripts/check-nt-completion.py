@@ -19,7 +19,7 @@ BOOKS = [
     {"slug":"2-ioan","var":"DOI_IOAN","camel":"doiIoan","name":"2 Ioan","bookId":"2JN","counts":[13]},
     {"slug":"3-ioan","var":"TREI_IOAN","camel":"treiIoan","name":"3 Ioan","bookId":"3JN","counts":[14]},
     {"slug":"iuda","var":"IUDA","camel":"iuda","name":"Iuda","bookId":"JUD","counts":[25]},
-    {"slug":"apocalipsa","var":"APOCALIPSA","camel":"apocalipsa","name":"Apocalipsa","bookId":"REV","counts":[20,29,22,11,14,17,17,13,21,11,19,18,18,20,8,21,18,24,21,15,27,21]},
+    {"slug":"apocalipsa","var":"APOCALIPSA","camel":"apocalipsa","name":"Apocalipsa","bookId":"REV","counts":[20,29,22,11,14,17,17,13,21,11,19,17,18,20,8,21,18,24,21,15,27,21]},
 ]
 CANONICAL = [book["var"] for book in BOOKS]
 
@@ -85,7 +85,7 @@ def main() -> int:
             if position <= cursor:
                 errors.append(f"Ordine canonică greșită la {name}")
             cursor = position
-        if (chapters, verses, units, episodes) != (69, 1382, 272, 52):
+        if (chapters, verses, units, episodes) != (69, 1381, 272, 52):
             errors.append(f"Totaluri: {chapters} capitole, {verses} versete, {units} unități, {episodes} episoade")
         for temporary in (ROOT / ".github/workflows/research-nt-completion.yml", ROOT / ".github/workflows/finalize-nt-completion.yml", ROOT / ".nt-completion-payload.b64"):
             if temporary.exists():
