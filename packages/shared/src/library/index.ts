@@ -8,6 +8,7 @@ import { PILDE_VESNICIA_LESSONS } from "./pildeVesnicia2.js"
 import { SPIRITUAL_MIJLOCITOR_LESSONS } from "./spiritualMijlocitor.js"
 import { NEW_AGE_LESSONS } from "./newAge.js"
 import { SPIRITUAL_VRAJITORIE_LESSONS } from "./spiritualVrajitorie.js"
+import { SPIRITUAL_BLESTEM_PART_A } from "./spiritualBlesteme.js"
 
 export * from "./doctrineHar.js"
 export * from "./doctrineHar2.js"
@@ -24,6 +25,7 @@ export * from "./pildeVesnicia2.js"
 export * from "./spiritualMijlocitor.js"
 export * from "./newAge.js"
 export * from "./spiritualVrajitorie.js"
+export * from "./spiritualBlesteme.js"
 
 export type CourseState = "live" | "partial" | "planned"
 export type LibraryCourse = {
@@ -44,16 +46,17 @@ const shelfTemelie = shelf("lib_temelie", "Temelia", "De la zero: cine e Dumneze
 const shelfIntrebari = shelf("lib_intrebari", "Întrebări mari", "Lucrurile care te opresc să crezi, luate pe rând și cinstit — inclusiv unde nu avem răspuns.", [
   c("doctrine_c2_har", "Religie sau credință — ce mă mântuiește?", "Ai crescut cu ideea că ești creștin din naștere, sau că faptele bune se cântăresc la final.", 6, { lessonIds: ["har_d_l1", "har_d_l2", "har_d_l3", "har_d_l4", "har_d_l5", "har_d_l6"], state: "live", source: "docs/15-doctrina-generala.md §Cursul 2" }),
   c("doctrine_c4_vesnicia", "Ce urmează după moarte?", "Nu știi ce e raiul, ce e iadul, sau dacă poți fi sigur de ceva.", 5, { lessonIds: ["vesnicia_l1", "vesnicia_l2", "vesnicia_l3", "vesnicia_l4", "vesnicia_l5"], state: "live", source: "docs/15-doctrina-generala.md §Cursul 4" }),
-  c("doctrine_c1_biblia", "Pot să am încredere în Biblie?", "Ți s-a spus că e o carte scrisă de oameni, rescrisă de nu știu câte ori.", 6, { source: "docs/15-doctrina-generala.md §Cursul 1" }),
+  c("doctrine_c1_biblia", "Pot să am încredere în Biblie?", "ți s-a spus că e o carte scrisă de oameni, rescrisă de nu știu câte ori.", 6, { source: "docs/15-doctrina-generala.md §Cursul 1" }),
   c("doctrine_c3_biserica", "Cine e Biserica lui Iisus?", "Dacă fiecare zice altceva, cine are dreptate? Sau ai fost rănit acolo.", 5, { source: "docs/15-doctrina-generala.md §Cursul 3" }),
   c("spiritual_c5_mijlocitor", "Cine te aude când te rogi", "Crezi că Dumnezeu e real, dar simți că nu ai voie să-I vorbești tu, direct.", 4, { lessonIds: ["spirit_mijl_l1", "spirit_mijl_l2", "spirit_mijl_l3", "spirit_mijl_l4"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 1" }),
   c("lib_alte_credinte", "Energii, horoscop, karma", "Ai luat de peste tot câte puțin și nu mai știi ce se bate cap în cap.", 6, { lessonIds: ["newage_l1", "newage_l2", "newage_l3", "newage_l4", "newage_l5", "newage_l6"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 2" }),
-  c("spiritual_c6_vrajitorie", "Vrăjitoria: reală, dar nu suverană", "Ți s-a spus că ți s-a făcut ceva, sau ai fost tu la cineva care face.", 4, { lessonIds: ["vraj_l1", "vraj_l2", "vraj_l3", "vraj_l4"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 3" }),
+  c("spiritual_c6_vrajitorie", "Vrăjitoria: reală, dar nu suverană", "ți s-a spus că ți s-a făcut ceva, sau ai fost tu la cineva care face.", 4, { lessonIds: ["vraj_l1", "vraj_l2", "vraj_l3", "vraj_l4"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 3" }),
+  c("spiritual_c3_blessings", "Ce moștenești și ce nu", "Simți că familia ta are un tipar care se repetă, sau ți s-a spus că poți moșteni blesteme.", 6, { lessonIds: ["spirit_blestem_l1", "spirit_blestem_l2", "spirit_blestem_l3", "spirit_blestem_l4", "spirit_blestem_l5", "spirit_blestem_l6"], state: "live", source: "docs/42-module-ocult-newage.md §Cursul 4" }),
 ])
 
 const shelfCuvantul = shelf("lib_cuvantul", "Cuvântul", "Cum se citește, de unde se începe și ce înseamnă ce citești.", [
   c("parables_c1_tatal", "Pildele — cine e Tatăl", "Le-ai auzit de mic și tot nu știi ce cer de la tine.", 5, { lessonIds: ["pilda_risipitor", "pilda_oaia", "pilda_vamesul", "pilda_lucratorii", "pilda_robul_datornic"], state: "live", source: "docs/16-modul-pilde.md §Cursul 1" }),
-  c("parables_c3_fiul", "Pildele — cum trăiește un fiu", "Înțelegi ce a făcut Iisus și întrebi: bun, și acum concret ce fac?", 5, { lessonIds: ["pilda_samariteanul", "pilda_talantii", "pilda_doi_fii", "pilda_casa_stanca", "pilda_smochinul"], state: "live", source: "docs/16-modul-pilde.md §Cursul 3" }),
+  c("parables_c3_fiul", "Pildele — cum trăiește un fiu", "înțelegi ce a făcut Iisus și întrebi: bun, și acum concret ce fac?", 5, { lessonIds: ["pilda_samariteanul", "pilda_talantii", "pilda_doi_fii", "pilda_casa_stanca", "pilda_smochinul"], state: "live", source: "docs/16-modul-pilde.md §Cursul 3" }),
   c("parables_c2_imparatia", "Pildele — ce e Împărăția și cine intră", "Auzi «Împărăția lui Dumnezeu» și nu știi la ce se referă.", 5, { lessonIds: ["pilda_semanatorul", "pilda_neghina", "pilda_mustarul", "pilda_comoara", "pilda_fecioarele"], state: "live", source: "docs/16-modul-pilde.md §Cursul 2" }),
   c("parables_c4_vesnicia", "Pildele — bani, moarte și ce rămâne", "Te întrebi ce rămâne din ce strângi și ce contează la capăt.", 5, { lessonIds: ["pilda_bogatul_nebun", "pilda_bogatul_lazar", "pilda_iconomul_viclean", "pilda_nunta_imparatului", "pilda_judecatorul_nedrept"], state: "live", source: "docs/16-modul-pilde.md §Cursul 4" }),
   c("lib_carti", "Cărțile Bibliei, una câte una", "Ai deschis la Geneza, ai ajuns la Levitic și te-ai oprit.", 12),
@@ -76,7 +79,7 @@ const shelfCasa = shelf("lib_casa", "Casa", "Ce se întâmplă cu credința acol
 
 const shelfViata = shelf("lib_viata", "Viața de zi cu zi", "Bani, muncă, timp, cinste — acolo unde Scriptura se aplică sau nu se aplică deloc.", [
   c("lib_bani", "Bani și datorii", "Ai rate, ai frică de mâine și ți-e rușine să vorbești despre asta.", 5, { source: "docs/11-continut-barbati.md" }),
-  c("lib_munca", "Muncă și rost", "Muncești mult și tot pare că nu însemni nimic.", 5),
+  c("lib_munca", "Muncă și rost", "Muncesti mult și tot pare că nu însemni nimic.", 5),
   c("lib_integritate", "Cinstea când nu te vede nimeni", "Se fură mărunt în jurul tău și pare normal.", 4),
   c("lib_timp", "Timpul și oboseala", "Nu ai zece minute, dar ai două ore pe telefon.", 4),
 ])
@@ -106,7 +109,7 @@ export const LIBRARY_LESSONS: Lesson[] = [
   ...PILDE_TATAL_LESSONS, ...PILDE_FIUL_LESSONS,
   ...PILDE_IMPARATIA_LESSONS, ...PILDE_VESNICIA_LESSONS,
   ...SPIRITUAL_MIJLOCITOR_LESSONS, ...NEW_AGE_LESSONS,
-  ...SPIRITUAL_VRAJITORIE_LESSONS,
+  ...SPIRITUAL_VRAJITORIE_LESSONS, ...SPIRITUAL_BLESTEM_PART_A,
 ]
 export function findLibraryLesson(id: string): Lesson | undefined { return LIBRARY_LESSONS.find((x) => x.id === id) }
 export function libraryCourseLessons(courseId: string): Lesson[] {
