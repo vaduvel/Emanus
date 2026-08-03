@@ -1,10 +1,11 @@
 name: Integrate Efeseni
 
 on:
-  pull_request:
+  push:
     branches:
-      - agent/galateni
-    types: [reopened]
+      - agent/efeseni
+    paths:
+      - .github/workflows/integrate-efeseni.yml
 
 permissions:
   contents: write
