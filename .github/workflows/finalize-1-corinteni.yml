@@ -1,0 +1,35 @@
+name: Finalize 1 Corinteni
+
+on:
+  push:
+    branches:
+      - agent/1-corinteni
+    paths:
+      - .github/workflows/finalize-1-corinteni.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/1-corinteni
+          persist-credentials: true
+
+      - name: Materialize and commit 1 Corinthians files
+        run: |
+          cat .unu-corinteni-payload/part* | base64 -d > /tmp/1cor-final.tar.xz
+          tar -xJf /tmp/1cor-final.tar.xz -C .
+          python3 scripts/apply-1-corinteni-integration.py
+          rm -f scripts/apply-1-corinteni-integration.py
+          rm -rf .unu-corinteni-payload
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add 1 Corinteni 1-16"
+          git push origin HEAD:agent/1-corinteni
