@@ -8,13 +8,17 @@
     ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
     "./domain": { "types": "./dist/domain.d.ts", "default": "./dist/domain.js" },
     "./paths": { "types": "./dist/paths/index.d.ts", "default": "./dist/paths/index.js" },
+    "./paths/neiertare-review": { "types": "./dist/paths/neiertareBReview.d.ts", "default": "./dist/paths/neiertareBReview.js" },
     "./library": { "types": "./dist/library/current.d.ts", "default": "./dist/library/current.js" },
     "./bible": { "types": "./dist/bible/index.d.ts", "default": "./dist/bible/index.js" },
+    "./bible/types": { "types": "./dist/bible/types.d.ts", "default": "./dist/bible/types.js" },
+    "./legacy": { "types": "./dist/legacy.d.ts", "default": "./dist/legacy.js" },
     "./lesson-mohler": { "types": "./dist/lessonMohler.d.ts", "default": "./dist/lessonMohler.js" }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "materialize:luca": "node ../../scripts/materialize-rccv-book.mjs ../../docs/data/luca-rccv-import.json",
+    "build": "pnpm materialize:luca && tsc -p tsconfig.json",
+    "typecheck": "pnpm materialize:luca && tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": { "typescript": "^5.5.4" }
 }

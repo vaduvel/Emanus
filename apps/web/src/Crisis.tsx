@@ -1,29 +1,6 @@
 import type { CSSProperties } from "react"
 import { ArrowLeft, LifeBuoy, Phone, ShieldAlert } from "lucide-react"
-
-type Hotline = { dial: string; display: string; label: string; note: string }
-
-// Linii de urgență din România (verificate). Conținut canonic, independent de backend.
-const HOTLINES: Hotline[] = [
-  {
-    dial: "112",
-    display: "112",
-    label: "Urgențe · Ambulanță și Poliție",
-    note: "Non-stop și gratuit. Sună dacă viața ta sau a cuiva este în pericol imediat.",
-  },
-  {
-    dial: "116111",
-    display: "116 111",
-    label: "Telefonul Copilului",
-    note: "Consiliere gratuită și confidențială pentru copii și adolescenți.",
-  },
-  {
-    dial: "0800801200",
-    display: "0800 801 200",
-    label: "Linie de sprijin Antisuicid",
-    note: "Sprijin emoțional în momente de criză. Cineva te ascultă.",
-  },
-]
+import { CRISIS_RESOURCES } from "@emanus/shared"
 
 const headIconStyle: CSSProperties = { color: "var(--bad)" }
 const disclaimerStyle: CSSProperties = { display: "flex", gap: 8, alignItems: "flex-start", lineHeight: 1.45 }
@@ -54,7 +31,7 @@ export function Crisis({ onBack }: { onBack: () => void }) {
             <LifeBuoy size={22} strokeWidth={1.8} style={headIconStyle} aria-hidden />
             Ai nevoie de ajutor acum?
           </h1>
-          <span className="muted">Nu ești singur. Iată la cine poți apela imediat.</span>
+          <span className="muted">Numerele sunt primele. Nu trebuie să explici aplicației ce s-a întâmplat.</span>
         </div>
         <button type="button" className="ghost" onClick={onBack} aria-label="Înapoi">
           <ArrowLeft size={20} aria-hidden />
@@ -64,20 +41,20 @@ export function Crisis({ onBack }: { onBack: () => void }) {
       <div className="notice notice--warn" style={disclaimerStyle}>
         <ShieldAlert size={18} aria-hidden style={disclaimerIconStyle} />
         <span>
-          Emanus nu înlocuiește ajutorul profesionist. Dacă ești în pericol, contactează imediat
-          serviciile de urgență.
+          Emanus nu înlocuiește medicul, psihologul, poliția sau 112. Dacă există pericol imediat,
+          sună la 112 acum.
         </span>
       </div>
 
       <ul className="eb-list">
-        {HOTLINES.map((h) => (
-          <li className="eb-item" key={h.dial}>
+        {CRISIS_RESOURCES.map((resource) => (
+          <li className="eb-item" key={resource.id}>
             <div className="eb-item__body">
-              <p style={numStyle}>{h.display}</p>
-              <p style={labelStyle}>{h.label}</p>
-              <p className="muted">{h.note}</p>
+              <p style={numStyle}>{resource.phone}</p>
+              <p style={labelStyle}>{resource.label}</p>
+              <p className="muted">{resource.availability} · {resource.note}</p>
             </div>
-            <a href={`tel:${h.dial}`} style={callBtnStyle}>
+            <a href={`tel:${resource.phone.replace(/\s/g, "")}`} style={callBtnStyle}>
               <Phone size={16} aria-hidden />
               Sună
             </a>
@@ -86,7 +63,7 @@ export function Crisis({ onBack }: { onBack: () => void }) {
       </ul>
 
       <p className="muted" style={footStyle}>
-        Poți reveni oricând la aplicație. Suntem alături de tine, pas cu pas.
+        Nu ești singur. Sună. Ne întoarcem la drum când ești în siguranță.
       </p>
     </section>
   )

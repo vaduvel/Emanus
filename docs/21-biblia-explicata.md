@@ -57,8 +57,11 @@ pasi, XP si recompense. Este text de referinta cu straturi.
 
 ## Textul biblic
 
-**Cornilescu 1924, editia originala.** Domeniu public prin expirarea drepturilor.
-Editia revizuita (2014, VDC) este sub drepturi si nu se foloseste.
+**Cornilescu, editia corectata (RCCV, 2013).** Ortografie moderna, domeniu public.
+RCCV = Romanian Corrected Cornilescu Version; sursa de colationare:
+https://github.com/seven1m/open-bibles (ron-rccv.usfx.xml).
+Editia originala 1924 (ortografie veche) si editia revizuita (2014, VDC, sub
+drepturi) nu se folosesc.
 
 ## Explicatia
 

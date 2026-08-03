@@ -5,12 +5,15 @@ import { navigate, useHashRoute } from "./router"
 import "./journey.css"
 
 const Crisis = lazy(() => import("./Crisis").then((m) => ({ default: m.Crisis })))
+const Auth = lazy(() => import("./Auth").then((m) => ({ default: m.Auth })))
 const LessonView = lazy(() => import("./LessonView").then((m) => ({ default: m.LessonView })))
 const Gallery = lazy(() => import("./ds/Gallery").then((m) => ({ default: m.Gallery })))
 const Doors = lazy(() => import("./screens/Doors").then((m) => ({ default: m.Doors })))
 const Library = lazy(() => import("./screens/Library").then((m) => ({ default: m.Library })))
 const Bible = lazy(() => import("./screens/Bible").then((m) => ({ default: m.Bible })))
 const BibleChapterScreen = lazy(() => import("./screens/Bible").then((m) => ({ default: m.BibleChapterScreen })))
+const BibleMine = lazy(() => import("./screens/BibleMine").then((m) => ({ default: m.BibleMine })))
+const QuestionInbox = lazy(() => import("./screens/QuestionInbox").then((m) => ({ default: m.QuestionInbox })))
 const Ask = lazy(() => import("./screens/Ask").then((m) => ({ default: m.Ask })))
 const PathEnd = lazy(() => import("./screens/PathEnd").then((m) => ({ default: m.PathEnd })))
 const Prayers = lazy(() => import("./screens/Prayers").then((m) => ({ default: m.Prayers })))
@@ -32,13 +35,16 @@ export default function App() {
   let screen
   if (route.name === "ds") screen = <Gallery />
   else if (route.name === "crisis") screen = <Crisis onBack={() => navigate("/")} />
+  else if (route.name === "auth") screen = <main className="app route-anim"><Auth /></main>
   else if (!hasStarted() && !hasSeenWelcome() && route.name !== "doors") screen = <main className="app route-anim"><Welcome /></main>
   else if (route.name === "doors" || !hasStarted()) screen = <main className="app route-anim"><HelpButton /><Doors /></main>
   else if (route.name === "lesson") screen = <main className="app route-anim"><HelpButton /><LessonView lessonId={route.id} /></main>
   else if (route.name === "library") screen = <main className="app route-anim app--tabbed"><HelpButton /><Library /><Tabs active="today" /></main>
   else if (route.name === "bible") screen = <main className="app route-anim app--tabbed"><HelpButton /><Bible /><Tabs active="bible" /></main>
   else if (route.name === "bibleChapter") screen = <main key={`${route.bookId}-${route.chapter}`} className="app route-anim app--tabbed"><HelpButton /><BibleChapterScreen bookId={route.bookId} chapter={route.chapter} /><Tabs active="bible" /></main>
-  else if (route.name === "ask") screen = <main key={route.despre ?? "ask"} className="app route-anim app--tabbed"><HelpButton /><Ask despre={route.despre} /><Tabs active="ask" /></main>
+  else if (route.name === "bibleMine") screen = <main className="app route-anim app--tabbed"><HelpButton /><BibleMine /><Tabs active="bible" /></main>
+  else if (route.name === "questionInbox") screen = <main className="app route-anim app--tabbed"><HelpButton /><QuestionInbox /><Tabs active="bible" /></main>
+  else if (route.name === "ask") screen = <main key={route.despre ?? "ask"} className="app route-anim app--tabbed"><HelpButton /><Ask source={{ ref: route.despre, bookId: route.bookId, bookName: route.bookName, chapter: route.chapter, unitId: route.unitId }} /><Tabs active="ask" /></main>
   else if (route.name === "pathend") screen = <main className="app route-anim app--tabbed"><HelpButton /><PathEnd /><Tabs active="today" /></main>
   else {
     const isPrayers = route.name === "prayers"

@@ -1,7 +1,7 @@
 # Inlocuirea textului biblic din sursa
 
 Textul biblic al tuturor unitatilor Genezei a fost adus din editia
-Cornilescu 1924, cu diacriticele si ortografia ei. Nu mai este scris
+Cornilescu, editia corectata (RCCV), ortografie moderna. Nu mai este scris
 din memorie. Explicatiile au ramas neatinse.
 
 - Unitati la care s-a inlocuit textul: 289

@@ -1,26 +1,5 @@
-// Moderare automată + protocol de criză (workbook §15, §18). Motor pur, testabil.
-// Listele de cuvinte sunt un start MVP — de înlocuit/completat cu un serviciu dedicat.
-
-export interface CrisisResource {
-  label: string
-  phone: string
-  note: string
-}
-
-// Resurse de criză în România (workbook §15).
-export const CRISIS_RESOURCES: CrisisResource[] = [
-  { label: "Urgențe", phone: "112", note: "Pericol imediat, non-stop." },
-  {
-    label: "Telefonul Copilului",
-    phone: "116 111",
-    note: "Gratuit, confidențial, non-stop — pentru copii și adolescenți.",
-  },
-  {
-    label: "Sprijin emoțional (anti-suicid)",
-    phone: "116 123",
-    note: "Linie gratuită de sprijin emoțional.",
-  },
-]
+// Moderare automată + protocol de criză. Motor pur, testabil.
+// Listele de cuvinte sunt un început MVP — de completat înaintea comunității publice.
 
 export type ModerationDecision = "visible" | "pending" | "removed"
 
@@ -51,7 +30,7 @@ const CRISIS_SIGNALS = [
   "sinucid",
   "sinuciga",
   "ma tai",
-  "ma taiat",
+  "m-am taiat",
   "autovatamare",
   "self harm",
   "selfharm",
@@ -87,9 +66,7 @@ export function moderatePost(body: string): ModerationResult {
 
   let decision: ModerationDecision = "visible"
   if (hate) decision = "removed"
-  else if (crisis)
-    decision = "pending" // nu publica imediat; oferă sprijin + semnalează pentru om
-  else if (profanity) decision = "pending"
+  else if (crisis || profanity) decision = "pending"
 
   return { decision, crisis, reasons }
 }

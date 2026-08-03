@@ -23,6 +23,14 @@ export function setUserId(id: string): void {
   }
 }
 
+export function clearUserId(): void {
+  try {
+    localStorage.removeItem(K_USER)
+  } catch {
+    /* ignore */
+  }
+}
+
 export function getCategory(): string {
   try {
     return localStorage.getItem(K_CAT) ?? "teens12_18"

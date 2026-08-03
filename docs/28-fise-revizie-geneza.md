@@ -6,7 +6,7 @@ Acest document nu înlocuiește citirea capitolelor. El arată cititorului unde 
 
 Pentru fiecare capitol se citesc, în ordine: textul biblic, explicațiile, cuvintele ebraice, trimiterile, „Pentru inima ta” și rugăciunea. Se bifează numai dacă toate cele șase întrebări au răspuns bun:
 
-- [ ] Textul biblic corespunde ediției Cornilescu 1924 și nu este amestecat cu parafraza.
+- [ ] Textul biblic corespunde ediției Cornilescu corectate (RCCV) și nu este amestecat cu parafraza.
 - [ ] Explicația nu spune drept certitudine ceea ce textul lasă deschis.
 - [ ] Afirmațiile despre ebraică și istorie sunt sprijinite ori scoase.
 - [ ] Trimiterile duc la locul potrivit și nu răstălmăcesc contextul.
@@ -87,4 +87,4 @@ Hotărârea pentru o afirmație îndoielnică este una dintre acestea: **păstre
 
 ## Hotărârea despre diacritice
 
-Pentru această ediție se păstrează deocamdată starea existentă: textul biblic are ortografia ediției Cornilescu 1924, iar explicațiile rămân în ortografia în care au fost scrise. O adăugare mecanică a diacriticelor poate schimba nume, transliterări și citate; ea nu este condiție de adevăr pentru publicare și nu se face fără o corectură separată.
+Pentru această ediție se păstrează deocamdată starea existentă: textul biblic are ortografia ediției Cornilescu corectate (RCCV), iar explicațiile rămân în ortografia în care au fost scrise. O adăugare mecanică a diacriticelor poate schimba nume, transliterări și citate; ea nu este condiție de adevăr pentru publicare și nu se face fără o corectură separată.

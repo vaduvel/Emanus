@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sync:bible-content": "node scripts/sync-bible-content.mjs",
+    "check:bible-source": "node scripts/sync-bible-content.mjs --dry-run"
   },
   "dependencies": {
     "@emanus/shared": "workspace:*",

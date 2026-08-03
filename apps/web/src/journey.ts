@@ -4,19 +4,17 @@ import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared/paths"
 import { cloudEnabled, pullState, pushState } from "./cloud"
 
 /*
- * Starea drumului.
- *
- * Sursa de adevăr pentru ecrane e localStorage — aplicația merge întreagă fără
- * internet și fără cont. Supabase e copia de siguranță: după fiecare salvare se
- * urcă tăcut în fundal, iar pe un telefon nou se aduce înapoi.
- *
- * NU se salvează, nicăieri: scoruri, serii de zile, nivele, profil. (docs/20 §1)
+ * Starea drumului este offline-first. Nu există XP, nivel, serie sau clasament.
+ * Progresul fiecărui drum se păstrează separat, ca omul să poată schimba drumul
+ * și să revină fără să piardă locul în care a ajuns.
  */
 
 const K = "emanus_journey_v1"
 
 export interface JournalEntry {
   lessonId: string
+  /** Drumul sau cursul în care a fost scrisă intrarea. */
+  contextId?: string
   text: string
   date: string
 }
@@ -25,26 +23,42 @@ export interface Prayer {
   id: string
   text: string
   createdAt: string
-  /** ISO date când omul a marcat că s-a răspuns. */
   answeredAt: string | null
   answerNote?: string
 }
 
+export interface PathProgress {
+  lessonsDone: number
+  doctrineDone: number
+  lastLessonDate: string | null
+  pathCompletedSeen: boolean
+}
+
 export interface JourneyState {
-  /** A văzut ecranele de primul contact (ce e Emanus). */
   seenWelcome: boolean
   pathId: string | null
+
+  /** Câmpuri active păstrate pentru compatibilitate cu backupurile vechi. */
   lessonsDone: number
-  /** Câte lecții de doctrină generală a terminat, în ordine. */
   doctrineDone: number
-  /** YYYY-MM-DD */
   lastLessonDate: string | null
-  /** Invitația la prima rugăciune se face O SINGURĂ DATĂ, apoi nu mai insistăm. */
+  pathCompletedSeen: boolean
+
+  /** Sursa nouă pentru progresul tuturor drumurilor. */
+  pathProgressById: Record<string, PathProgress>
+  /** Lecțiile opționale terminate în Bibliotecă. */
+  libraryDone: string[]
+
   prayerInviteSeen: boolean
   journal: JournalEntry[]
   prayers: Prayer[]
-  /** Marcat când omul a văzut ecranul de final de parcurs. */
-  pathCompletedSeen: boolean
+}
+
+const EMPTY_PROGRESS: PathProgress = {
+  lessonsDone: 0,
+  doctrineDone: 0,
+  lastLessonDate: null,
+  pathCompletedSeen: false,
 }
 
 const EMPTY: JourneyState = {
@@ -53,10 +67,12 @@ const EMPTY: JourneyState = {
   lessonsDone: 0,
   doctrineDone: 0,
   lastLessonDate: null,
+  pathCompletedSeen: false,
+  pathProgressById: {},
+  libraryDone: [],
   prayerInviteSeen: false,
   journal: [],
   prayers: [],
-  pathCompletedSeen: false,
 }
 
 export function today(): string {
@@ -72,41 +88,87 @@ function daysBetween(fromIso: string, toIso: string): number {
   return Math.round((b.getTime() - a.getTime()) / 86400000)
 }
 
+function progressFromActive(s: Pick<JourneyState, "lessonsDone" | "doctrineDone" | "lastLessonDate" | "pathCompletedSeen">): PathProgress {
+  return {
+    lessonsDone: Number.isFinite(s.lessonsDone) ? Math.max(0, s.lessonsDone) : 0,
+    doctrineDone: Number.isFinite(s.doctrineDone) ? Math.max(0, s.doctrineDone) : 0,
+    lastLessonDate: s.lastLessonDate ?? null,
+    pathCompletedSeen: Boolean(s.pathCompletedSeen),
+  }
+}
+
+function normalize(raw: Partial<JourneyState>): JourneyState {
+  const base: JourneyState = {
+    ...EMPTY,
+    ...raw,
+    pathProgressById: { ...(raw.pathProgressById ?? {}) },
+    libraryDone: Array.isArray(raw.libraryDone) ? [...new Set(raw.libraryDone)] : [],
+    journal: Array.isArray(raw.journal) ? raw.journal : [],
+    prayers: Array.isArray(raw.prayers) ? raw.prayers : [],
+  }
+
+  // Migrare fără pierdere: primul backup vechi devine progresul drumului activ.
+  if (base.pathId && !base.pathProgressById[base.pathId]) {
+    base.pathProgressById[base.pathId] = progressFromActive(base)
+  }
+
+  const active = base.pathId ? base.pathProgressById[base.pathId] : undefined
+  if (active) {
+    base.lessonsDone = active.lessonsDone
+    base.doctrineDone = active.doctrineDone
+    base.lastLessonDate = active.lastLessonDate
+    base.pathCompletedSeen = active.pathCompletedSeen
+  }
+  return base
+}
+
 export function load(): JourneyState {
   try {
     const raw = localStorage.getItem(K)
-    if (!raw) return { ...EMPTY }
-    return { ...EMPTY, ...(JSON.parse(raw) as Partial<JourneyState>) }
+    if (!raw) return normalize({})
+    return normalize(JSON.parse(raw) as Partial<JourneyState>)
   } catch {
-    return { ...EMPTY }
+    return normalize({})
+  }
+}
+
+function withActiveProgress(s: JourneyState): JourneyState {
+  if (!s.pathId) return s
+  return {
+    ...s,
+    pathProgressById: {
+      ...s.pathProgressById,
+      [s.pathId]: progressFromActive(s),
+    },
   }
 }
 
 function writeLocal(s: JourneyState): JourneyState {
+  const normalized = normalize(withActiveProgress(s))
   try {
-    localStorage.setItem(K, JSON.stringify(s))
+    localStorage.setItem(K, JSON.stringify(normalized))
   } catch {
     /* mod privat / cotă plină — aplicația merge, dar nu ține minte */
   }
-  return s
+  return normalized
 }
 
 function save(s: JourneyState): JourneyState {
-  writeLocal(s)
-  // Copia în nor pleacă în fundal. Dacă nu merge, nimeni nu află și nimic nu se blochează.
-  if (cloudEnabled()) void pushState(s)
-  return s
+  const stored = writeLocal(s)
+  if (cloudEnabled()) void pushState(stored)
+  return stored
 }
 
 function isEmpty(s: JourneyState): boolean {
-  return s.pathId === null && s.journal.length === 0 && s.prayers.length === 0
+  return (
+    s.pathId === null &&
+    s.journal.length === 0 &&
+    s.prayers.length === 0 &&
+    s.libraryDone.length === 0 &&
+    Object.keys(s.pathProgressById).length === 0
+  )
 }
 
-/**
- * De apelat o dată la pornire, înainte de primul randare.
- * Telefon nou și local gol -> aduce din nor. Altfel localul învinge și se urcă.
- * Returnează true dacă s-a adus ceva din nor (ecranele trebuie redesenate).
- */
 export async function hydrateFromCloud(): Promise<boolean> {
   if (!cloudEnabled()) return false
   const local = load()
@@ -119,35 +181,29 @@ export async function hydrateFromCloud(): Promise<boolean> {
   return false
 }
 
-// --- Primul contact ---
+export function hasSeenWelcome(): boolean { return load().seenWelcome }
+export function markWelcomeSeen(): void { save({ ...load(), seenWelcome: true }) }
+export function hasStarted(): boolean { return load().pathId !== null }
 
-export function hasSeenWelcome(): boolean {
-  return load().seenWelcome
-}
-
-export function markWelcomeSeen(): void {
-  save({ ...load(), seenWelcome: true })
-}
-
-export function hasStarted(): boolean {
-  return load().pathId !== null
+function activatePath(s: JourneyState, pathId: string): JourneyState {
+  const storedCurrent = withActiveProgress(s)
+  const target = storedCurrent.pathProgressById[pathId] ?? EMPTY_PROGRESS
+  return {
+    ...storedCurrent,
+    seenWelcome: true,
+    pathId,
+    lessonsDone: target.lessonsDone,
+    doctrineDone: target.doctrineDone,
+    lastLessonDate: target.lastLessonDate,
+    pathCompletedSeen: target.pathCompletedSeen,
+  }
 }
 
 export function chooseDoor(pathId: string): JourneyState {
-  const s = load()
-  return save({
-    ...s,
-    seenWelcome: true,
-    pathId,
-    lessonsDone: 0,
-    lastLessonDate: null,
-    pathCompletedSeen: false,
-  })
+  return save(activatePath(load(), pathId))
 }
 
-export function currentPath(): PathDef | undefined {
-  return getPath(load().pathId)
-}
+export function currentPath(): PathDef | undefined { return getPath(load().pathId) }
 
 export function plan(): DayPlan | null {
   const s = load()
@@ -157,13 +213,6 @@ export function plan(): DayPlan | null {
   return planToday(path, s.lessonsDone, since)
 }
 
-/**
- * Lecția de doctrină disponibilă acum, dacă există.
- * Se deschide după lecția 5 din parcurs; nu înlocuiește niciodată lecția zilei,
- * stă alături, ca lucru opțional.
- *
- * Pe drumul "De la zero" nu se oferă: acolo doctrina ESTE drumul.
- */
 export function doctrineAvailable(): Lesson | undefined {
   const s = load()
   if (s.pathId === "path_temelie") return undefined
@@ -172,51 +221,68 @@ export function doctrineAvailable(): Lesson | undefined {
   return nextDoctrineLesson(s.lessonsDone, path.lessons.length, s.doctrineDone)
 }
 
+function journalAfterLesson(s: JourneyState, lessonId: string, contextId: string | undefined, journalText: string): JournalEntry[] {
+  const text = journalText.trim()
+  if (!text) return s.journal
+  return [
+    ...s.journal.filter((entry) => !(entry.lessonId === lessonId && entry.contextId === contextId)),
+    { lessonId, contextId, text, date: today() },
+  ]
+}
+
 export function completeLesson(lessonId: string, journalText: string): JourneyState {
   const s = load()
-  const journal = journalText.trim()
-    ? [...s.journal.filter((j) => j.lessonId !== lessonId), { lessonId, text: journalText.trim(), date: today() }]
-    : s.journal
+  const path = getPath(s.pathId)
+  const index = path?.lessons.findIndex((lesson) => lesson.id === lessonId) ?? -1
+  const journal = journalAfterLesson(s, lessonId, s.pathId ?? undefined, journalText)
 
-  // Doctrina făcută ca supliment nu consumă ziua și nu avansează parcursul personal.
-  // Excepție: pe drumul "De la zero", aceleași lecții sunt chiar parcursul.
-  if (lessonId.startsWith("doctrina_") && s.pathId !== "path_temelie") {
+  // Doctrina opțională nu consumă ritmul drumului.
+  if (lessonId.startsWith("doctrina_") && s.pathId !== "path_temelie" && index === -1) {
     return save({ ...s, doctrineDone: s.doctrineDone + 1, journal })
   }
 
+  // Protecție: o lecție care nu aparține drumului activ nu poate modifica ziua.
+  if (index < 0) return save({ ...s, journal })
+
   return save({
     ...s,
-    lessonsDone: Math.max(s.lessonsDone, indexOfLesson(lessonId) + 1),
+    lessonsDone: Math.max(s.lessonsDone, index + 1),
     lastLessonDate: today(),
     journal,
   })
 }
 
-function indexOfLesson(lessonId: string): number {
-  const path = currentPath()
-  if (!path) return 0
-  return path.lessons.findIndex((l) => l.id === lessonId)
-}
-
-export function firstJournalEntry(): JournalEntry | undefined {
-  return load().journal[0]
-}
-
-export function markPathSeen(): void {
-  save({ ...load(), pathCompletedSeen: true })
-}
-
-/** Trece pe alt drum, păstrând tot ce a scris (jurnal și rugăciuni). */
-export function switchPath(pathId: string): JourneyState {
+export function completeLibraryLesson(lessonId: string, courseId: string, journalText: string): JourneyState {
   const s = load()
   return save({
     ...s,
-    pathId,
-    lessonsDone: 0,
-    doctrineDone: 0,
-    lastLessonDate: null,
-    pathCompletedSeen: false,
+    libraryDone: s.libraryDone.includes(lessonId) ? s.libraryDone : [...s.libraryDone, lessonId],
+    journal: journalAfterLesson(s, lessonId, `library:${courseId}`, journalText),
   })
+}
+
+export function libraryCompletedLessonIds(): string[] { return [...load().libraryDone] }
+
+export function pathJournalEntries(pathId: string | null | undefined): JournalEntry[] {
+  if (!pathId) return []
+  const path = getPath(pathId)
+  if (!path) return []
+  const lessonIds = new Set(path.lessons.map((lesson) => lesson.id))
+  return load().journal.filter((entry) => entry.contextId === pathId || (!entry.contextId && lessonIds.has(entry.lessonId)))
+}
+
+export function firstJournalEntry(pathId: string | null | undefined = load().pathId): JournalEntry | undefined {
+  return pathJournalEntries(pathId)[0]
+}
+
+export function lastJournalEntry(pathId: string | null | undefined = load().pathId): JournalEntry | undefined {
+  return pathJournalEntries(pathId).at(-1)
+}
+
+export function markPathSeen(): void { save({ ...load(), pathCompletedSeen: true }) }
+
+export function switchPath(pathId: string): JourneyState {
+  return save(activatePath(load(), pathId))
 }
 
 export function resetJourney(): void {
@@ -227,41 +293,34 @@ export function resetJourney(): void {
     prayerInviteSeen: s.prayerInviteSeen,
     prayers: s.prayers,
     journal: s.journal,
+    libraryDone: s.libraryDone,
+    pathProgressById: s.pathProgressById,
   })
 }
 
-// --- Memorialul: rugăciuni și răspunsuri (docs/20; cârligul lung) ---
+/** Șterge copia locală fără să suprascrie copia contului din cloud. */
+export function clearJourneyLocal(): void {
+  writeLocal({ ...EMPTY, journal: [], prayers: [] })
+}
 
-/**
- * Cine nu scrie nicio rugăciune nu ajunge niciodată la memorial — adică pierde
- * exact lucrul pentru care se întoarce peste un an. Deci îl invităm o dată,
- * după a doua lecție, când deja știe cu cine vorbește. O dată, nu mereu.
- */
 export function shouldInviteFirstPrayer(): boolean {
   const s = load()
   return !s.prayerInviteSeen && s.prayers.length === 0 && s.lessonsDone >= 2
 }
 
-export function dismissPrayerInvite(): void {
-  save({ ...load(), prayerInviteSeen: true })
-}
+export function dismissPrayerInvite(): void { save({ ...load(), prayerInviteSeen: true }) }
 
 export function addPrayer(text: string): Prayer[] {
   const s = load()
-  const p: Prayer = {
-    id: `pr_${Date.now()}`,
-    text: text.trim(),
-    createdAt: today(),
-    answeredAt: null,
-  }
+  const p: Prayer = { id: `pr_${Date.now()}`, text: text.trim(), createdAt: today(), answeredAt: null }
   return save({ ...s, prayerInviteSeen: true, prayers: [p, ...s.prayers] }).prayers
 }
 
 export function markAnswered(id: string, note: string): Prayer[] {
   const s = load()
-  const prayers = s.prayers.map((p) =>
-    p.id === id ? { ...p, answeredAt: today(), answerNote: note.trim() || undefined } : p,
-  )
+  const prayers = s.prayers.map((p) => p.id === id
+    ? { ...p, answeredAt: today(), answerNote: note.trim() || undefined }
+    : p)
   return save({ ...s, prayers }).prayers
 }
 
@@ -270,21 +329,13 @@ export function removePrayer(id: string): Prayer[] {
   return save({ ...s, prayers: s.prayers.filter((p) => p.id !== id) }).prayers
 }
 
-export function listPrayers(): Prayer[] {
-  return load().prayers
-}
+export function listPrayers(): Prayer[] { return load().prayers }
 
-/**
- * Rugăciuni mai vechi de 21 de zile, fără răspuns marcat.
- * Aplicația întreabă O SINGURĂ DATĂ despre cea mai veche: "Unde e acum?".
- */
 export function oldestUnanswered(minDays = 21): Prayer | undefined {
   const t = today()
-  return load()
-    .prayers.filter((p) => p.answeredAt === null && daysBetween(p.createdAt, t) >= minDays)
+  return load().prayers
+    .filter((p) => p.answeredAt === null && daysBetween(p.createdAt, t) >= minDays)
     .sort((a, b) => a.createdAt.localeCompare(b.createdAt))[0]
 }
 
-export function daysAgo(iso: string): number {
-  return daysBetween(iso, today())
-}
+export function daysAgo(iso: string): number { return daysBetween(iso, today()) }

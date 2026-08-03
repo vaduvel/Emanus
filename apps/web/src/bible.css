@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 100%;
 }
 
 .bible__back {
@@ -22,6 +23,7 @@
 .bible__head h1 {
   margin: 0;
   font-size: 1.5rem;
+  font-family: var(--font-display);
 }
 
 .bible__intro {
@@ -37,6 +39,33 @@
   text-align: left;
   width: 100%;
   cursor: pointer;
+  color: var(--text);
+}
+
+.bible__quick {
+  display: grid;
+  gap: 10px;
+}
+
+.bible__mine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  color: var(--text);
+}
+
+.bible__mine > span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bible__mine small {
+  color: var(--text-muted);
+  font-weight: 400;
 }
 
 .bible__resume-title {
@@ -54,8 +83,9 @@
   align-items: center;
   gap: 8px;
   padding: 10px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  background: var(--surface);
 }
 
 .bsearch input {
@@ -105,9 +135,10 @@
   width: 100%;
   text-align: left;
   padding: 12px 14px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
   border-radius: 12px;
-  background: transparent;
+  background: var(--surface);
+  color: var(--text);
   cursor: pointer;
 }
 
@@ -163,7 +194,7 @@
 }
 
 .bctx {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 10px 14px;
 }
@@ -185,7 +216,7 @@
   flex-direction: column;
   gap: 12px;
   padding-top: 18px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid var(--border);
 }
 
 .bunit__ref {
@@ -205,9 +236,10 @@
 .bunit__text {
   margin: 0;
   padding: 14px 16px;
-  border-left: 3px solid rgba(0, 0, 0, 0.25);
+  border-left: 3px solid var(--gold);
   border-radius: 0 10px 10px 0;
-  background: rgba(0, 0, 0, 0.035);
+  background: var(--gold-soft);
+  color: var(--gold-ink);
   font-size: 1.02rem;
   line-height: 1.75;
 }
@@ -223,7 +255,7 @@
   gap: 8px;
   padding: 12px 14px;
   border-radius: 12px;
-  background: rgba(0, 0, 0, 0.03);
+  background: var(--surface-2);
 }
 
 .bword {
@@ -259,7 +291,7 @@
 .bheart {
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border);
 }
 
 .bheart p:last-child {
@@ -282,7 +314,7 @@
 .bprayer {
   padding: 16px;
   border-radius: 14px;
-  background: rgba(0, 0, 0, 0.035);
+  background: var(--surface-2);
 }
 
 .bprayer p {
@@ -304,4 +336,346 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.bsearch-results h2,
+.bmine-section h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+}
+
+.bloading {
+  display: grid;
+  gap: 10px;
+}
+
+.bloading__row {
+  display: grid;
+  gap: 8px;
+  min-height: 58px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.bible__empty,
+.bmine-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-body);
+  text-align: center;
+}
+
+.bible__empty p,
+.bmine-empty p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.bnotes {
+  display: grid;
+  gap: 10px;
+}
+
+.bnote {
+  padding: 12px 14px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--gold-soft);
+}
+
+.bnote > p {
+  margin: 0;
+  color: var(--gold-ink);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.bnote__actions,
+.bnote__confirm,
+.bnote-editor__actions,
+.qinbox-card__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bnote__actions {
+  margin-top: 8px;
+}
+
+.bnote__actions button,
+.bnote__confirm button {
+  padding: 7px 11px;
+  font-size: 0.78rem;
+}
+
+button.bnote__delete {
+  background: var(--danger);
+  color: var(--text-on-accent);
+}
+
+.bnote-add {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bnote-editor {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.bnote-editor label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.bnote-editor textarea,
+.qinbox-card textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.55;
+}
+
+.bnote-editor textarea:focus,
+.qinbox-card textarea:focus,
+.bsearch:focus-within {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.bnote-editor__actions,
+.qinbox-card__actions {
+  justify-content: flex-end;
+}
+
+/* Biblia mea */
+.bmine-sync {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--success-soft);
+  color: var(--text-body);
+  font-size: var(--text-sm);
+}
+
+.bmine-sync--offline,
+.bmine-sync--error,
+.bmine-sync--local {
+  background: var(--surface-2);
+}
+
+.bmine-sync button {
+  margin-left: auto;
+  padding: 5px 9px;
+  font-size: var(--text-xs);
+}
+
+.bmine-account {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.bmine-account p {
+  margin: 0;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+
+.bmine-account button {
+  justify-self: start;
+}
+
+.bmine-inbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  color: var(--text);
+}
+
+.bmine-inbox > span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bmine-inbox small {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.bmine-section > h2 span {
+  margin-left: 3px;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+}
+
+.bmine-list,
+.qinbox-list {
+  display: grid;
+  gap: 10px;
+}
+
+.bmine-card,
+.qinbox-card {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.bmine-card--saved {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.bmine-card__open,
+.bmine-card__place {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+  text-align: left;
+}
+
+.bmine-card__open {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bmine-card__open small {
+  color: var(--text-muted);
+}
+
+.bmine-card__place {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent);
+  font-size: var(--text-sm);
+}
+
+.bmine-card__remove {
+  padding: 6px 9px;
+  font-size: var(--text-xs);
+}
+
+.bmine-card__body,
+.qinbox-card__question {
+  margin: 10px 0 0;
+  color: var(--text-body);
+  line-height: 1.62;
+  white-space: pre-wrap;
+}
+
+.bmine-question__meta,
+.qinbox-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.bmine-status,
+.qinbox-card__meta > span {
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  color: var(--text-body);
+  font-weight: var(--weight-semibold);
+}
+
+.bmine-status--answered {
+  background: var(--success-soft);
+}
+
+.bmine-answer {
+  margin-top: 12px;
+  padding: 12px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--accent-soft);
+}
+
+.bmine-answer p {
+  margin: 6px 0 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Inbox pastoral */
+.qinbox-card {
+  display: grid;
+  gap: 12px;
+}
+
+.qinbox-card__question {
+  margin-top: 0;
+  color: var(--text);
+  font-size: var(--text-md);
+}
+
+.qinbox-card__answer {
+  display: grid;
+  gap: 6px;
+  color: var(--text-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+@media (min-width: 680px) {
+  .bible__quick {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bmine-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bmine-question,
+  .qinbox-card {
+    grid-column: 1 / -1;
+  }
 }

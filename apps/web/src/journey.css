@@ -4,10 +4,20 @@
  */
 
 .app {
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
   padding-bottom: 24px;
 }
 .app--tabbed {
   padding-bottom: 84px;
+}
+
+.app > .player {
+  align-self: center;
 }
 
 /* --- Bara de ajutor, permanentă --- */
@@ -614,14 +624,14 @@
   color: var(--text-body, #33534f);
 }
 
-/* --- Cele două taburi --- */
+/* --- Navigarea principală --- */
 .tabs2 {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
   background: var(--surface, #fff);
