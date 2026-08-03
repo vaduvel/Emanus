@@ -1,0 +1,56 @@
+name: Finalize Faptele Apostolilor
+
+on:
+  push:
+    branches:
+      - agent/fapte-apostolilor
+    paths:
+      - .github/workflows/finalize-fapte.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/fapte-apostolilor
+
+      - name: Materialize final Acts files
+        run: |
+          cat .fapte-payload/part* | base64 -d > /tmp/fapte-final.tar.xz
+          tar -xJf /tmp/fapte-final.tar.xz -C .
+          rm -rf .fapte-payload
+          rm -f .github/workflows/finalize-fapte.yml
+          rm -f .github/workflows/research-fapte.yml
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify Acts editorial gate
+        run: pnpm check:fapte
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
+
+      - name: Commit final Acts wave
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add Faptele Apostolilor 1-28"
+          git push origin HEAD:agent/fapte-apostolilor
