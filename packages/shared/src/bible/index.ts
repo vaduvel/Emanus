@@ -117,6 +117,9 @@ import { MARCU_15 } from "./marcu15.js"
 import { MARCU_16 } from "./marcu16.js"
 import { LUCA as LUCA_BASE } from "./luca.js"
 import { LUCA_2 } from "./luca2.js"
+import { LUCA_3 } from "./luca3.js"
+import { LUCA_4 } from "./luca4.js"
+import { LUCA_5 } from "./luca5.js"
 import { TIT } from "./tit.js"
 import { FILIMON } from "./filimon.js"
 
@@ -188,7 +191,13 @@ export const MARCU: BibleBook = {
 /** Evanghelia după Luca, adăugată gradual și păstrată în revizie. */
 export const LUCA: BibleBook = {
   ...LUCA_BASE,
-  chapters: [...LUCA_BASE.chapters, LUCA_2],
+  chapters: [
+    ...LUCA_BASE.chapters,
+    LUCA_2,
+    LUCA_3,
+    LUCA_4,
+    LUCA_5,
+  ],
 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
