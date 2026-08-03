@@ -15,11 +15,11 @@ import { PACATELE_CARE_NE_DISTRUG_LESSONS } from "./pacateleCareNeDistrug.js"
 import { IERTARE_SI_VOIA_LUI_DUMNEZEU_LESSONS } from "./iertareSiVoiaLuiDumnezeu.js"
 
 /**
- * Modulele de teme dupa Zac Poonen, "Basic Christian Teachings" (cele 72 de teme).
- * Vezi docs/41-module-teme-poonen.md pentru mapare si docs/42-sursa-si-atribuire-poonen.md
- * pentru sursa si atribuire. Continutul este tradus fidel din textul autorului.
+ * Modulele de teme după Zac Poonen, "Basic Christian Teachings" (cele 72 de teme).
+ * Vezi docs/41-module-teme-poonen.md pentru mapare și docs/42-sursa-si-atribuire-poonen.md
+ * pentru sursa și atribuire. Conținutul este tradus fidel din textul autorului.
  *
- * Toate cursurile sunt in_review: asteapta citirea finala a unui om.
+ * Toate cursurile sunt in_review: așteaptă citirea finală a unui om.
  */
 
 export type TemeCourseState = "in_review" | "published"
@@ -56,8 +56,8 @@ const ids = (lessons: Lesson[]) => lessons.map((l) => l.id)
 export const TEME_COURSES: TemeCourse[] = [
   {
     id: "teme_c1_origine",
-    title: "Originea raului si puterea alegerii",
-    forWhom: "Pentru oricine intreaba de unde vine raul",
+    title: "Originea răului și puterea alegerii",
+    forWhom: "Pentru oricine întreabă de unde vine răul",
     plannedLessons: ORIGINEA_RAULUI_LESSONS.length,
     lessonIds: ids(ORIGINEA_RAULUI_LESSONS),
     state: "in_review",
@@ -65,7 +65,7 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c2_crucea",
-    title: "De ce a murit Hristos si darul Duhului",
+    title: "De ce a murit Hristos și darul Duhului",
     forWhom: "Pentru cine vrea temelia",
     plannedLessons: DE_CE_A_MURIT_HRISTOS_LESSONS.length,
     lessonIds: ids(DE_CE_A_MURIT_HRISTOS_LESSONS),
@@ -74,8 +74,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c3_cuvantul",
-    title: "Cuvantul: hrana, arma si innoirea mintii",
-    forWhom: "Pentru cine vrea sa citeasca altfel Biblia",
+    title: "Cuvântul: hrană, armă și înnoirea minții",
+    forWhom: "Pentru cine vrea să citească altfel Biblia",
     plannedLessons: CUVANTUL_HRANA_SI_ARMA_LESSONS.length,
     lessonIds: ids(CUVANTUL_HRANA_SI_ARMA_LESSONS),
     state: "in_review",
@@ -83,8 +83,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c4_religiozitate",
-    title: "Religiozitate sau viata",
-    forWhom: "Pentru cine se satura de forma fara putere",
+    title: "Religiozitate sau viață",
+    forWhom: "Pentru cine se satură de formă fără putere",
     plannedLessons: RELIGIOZITATE_SAU_VIATA_LESSONS.length,
     lessonIds: ids(RELIGIOZITATE_SAU_VIATA_LESSONS),
     state: "in_review",
@@ -92,8 +92,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c5_fapte_moarte",
-    title: "Faptele moarte si harul",
-    forWhom: "Pentru cine se osteneste si nu are pace",
+    title: "Faptele moarte și harul",
+    forWhom: "Pentru cine se ostenește și nu are pace",
     plannedLessons: FAPTELE_MOARTE_SI_HARUL_LESSONS.length,
     lessonIds: ids(FAPTELE_MOARTE_SI_HARUL_LESSONS),
     state: "in_review",
@@ -101,17 +101,17 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c6_esec",
-    title: "De ce dam gres",
-    forWhom: "Pentru cine cade mereu in acelasi loc",
+    title: "De ce dăm greș",
+    forWhom: "Pentru cine cade mereu în același loc",
     plannedLessons: DE_CE_DAM_GRES_LESSONS.length,
     lessonIds: ids(DE_CE_DAM_GRES_LESSONS),
     state: "in_review",
-    source: "Zac Poonen, Basic Christian Teachings, temele 22-24 si 72",
+    source: "Zac Poonen, Basic Christian Teachings, temele 22-24 și 72",
   },
   {
     id: "teme_c7_lauda",
-    title: "Lauda ca arma",
-    forWhom: "Pentru cine trece prin stramtorare",
+    title: "Lauda ca armă",
+    forWhom: "Pentru cine trece prin strâmtorare",
     plannedLessons: LAUDA_CA_ARMA_LESSONS.length,
     lessonIds: ids(LAUDA_CA_ARMA_LESSONS),
     state: "in_review",
@@ -119,8 +119,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c8_smerenia",
-    title: "Scopul lui Dumnezeu si smerenia lui Hristos",
-    forWhom: "Pentru cine vrea sa stie de ce a fost facut",
+    title: "Scopul lui Dumnezeu și smerenia lui Hristos",
+    forWhom: "Pentru cine vrea să știe de ce a fost făcut",
     plannedLessons: SCOPUL_SI_SMERENIA_LESSONS.length,
     lessonIds: ids(SCOPUL_SI_SMERENIA_LESSONS),
     state: "in_review",
@@ -128,8 +128,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c9_cum_a_trait",
-    title: "Cum a trait Isus",
-    forWhom: "Pentru cine vrea sa-I calce pe urme",
+    title: "Cum a trăit Isus",
+    forWhom: "Pentru cine vrea să-I calce pe urme",
     plannedLessons: CUM_A_TRAIT_ISUS_LESSONS.length,
     lessonIds: ids(CUM_A_TRAIT_ISUS_LESSONS),
     state: "in_review",
@@ -137,8 +137,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c10_tatal_banii",
-    title: "Tatal, intelepciunea si banii",
-    forWhom: "Pentru cine duce grija zilei de maine",
+    title: "Tatăl, înțelepciunea și banii",
+    forWhom: "Pentru cine duce grija zilei de mâine",
     plannedLessons: TATAL_SI_BANII_LESSONS.length,
     lessonIds: ids(TATAL_SI_BANII_LESSONS),
     state: "in_review",
@@ -146,7 +146,7 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c11_casa",
-    title: "Casa: sot, sotie, copii",
+    title: "Casa: soț, soție, copii",
     forWhom: "Pentru familii",
     plannedLessons: CASA_SOT_SOTIE_COPII_LESSONS.length,
     lessonIds: ids(CASA_SOT_SOTIE_COPII_LESSONS),
@@ -155,8 +155,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c12_rugaciunea",
-    title: "Tatal nostru, pas cu pas",
-    forWhom: "Pentru cine vrea sa invete sa se roage",
+    title: "Tatăl nostru, pas cu pas",
+    forWhom: "Pentru cine vrea să învețe să se roage",
     plannedLessons: TATAL_NOSTRU_LESSONS.length,
     lessonIds: ids(TATAL_NOSTRU_LESSONS),
     state: "in_review",
@@ -164,8 +164,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c13_pacate",
-    title: "Pacatele care ne distrug",
-    forWhom: "Pentru cine vrea sa vada pacatul cum il vede Isus",
+    title: "Păcatele care ne distrug",
+    forWhom: "Pentru cine vrea să vadă păcatul cum îl vede Isus",
     plannedLessons: PACATELE_CARE_NE_DISTRUG_LESSONS.length,
     lessonIds: ids(PACATELE_CARE_NE_DISTRUG_LESSONS),
     state: "in_review",
@@ -173,8 +173,8 @@ export const TEME_COURSES: TemeCourse[] = [
   },
   {
     id: "teme_c14_voia_lui",
-    title: "Iertare, minciunile celui rau, voia lui Dumnezeu",
-    forWhom: "Pentru cine are hotarari de luat",
+    title: "Iertare, minciunile celui rău, voia lui Dumnezeu",
+    forWhom: "Pentru cine are hotărâri de luat",
     plannedLessons: IERTARE_SI_VOIA_LUI_DUMNEZEU_LESSONS.length,
     lessonIds: ids(IERTARE_SI_VOIA_LUI_DUMNEZEU_LESSONS),
     state: "in_review",
