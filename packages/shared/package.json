@@ -16,8 +16,9 @@
     "./lesson-mohler": { "types": "./dist/lessonMohler.d.ts", "default": "./dist/lessonMohler.js" }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "materialize:luca": "node ../../scripts/materialize-rccv-book.mjs ../../docs/data/luca-rccv-import.json",
+    "build": "pnpm materialize:luca && tsc -p tsconfig.json",
+    "typecheck": "pnpm materialize:luca && tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": { "typescript": "^5.5.4" }
 }
