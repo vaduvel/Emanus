@@ -7,12 +7,18 @@ on:
       - agent/fapte-apostolilor
     paths:
       - .github/workflows/research-fapte.yml
+  pull_request:
+    branches:
+      - agent/integrate-biblical-review
+    paths:
+      - .github/workflows/research-fapte.yml
 
 permissions:
   contents: read
 
 jobs:
   transcribe:
+    if: github.event_name != 'push'
     strategy:
       fail-fast: false
       max-parallel: 14
