@@ -54,20 +54,28 @@ jobs:
           root_path.write_text(json.dumps(root, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
           filipeni_path = Path('scripts/check-filipeni.py')
-          filipeni = filipeni_path.read_text(encoding='utf-8')
-          old = r'EFESENI,\s*FILIPENI,\s*(?:COLOSENI,\s*)?TIT\b'
-          new = r'EFESENI,\s*FILIPENI,\s*COLOSENI\b'
-          if old in filipeni:
-              filipeni = filipeni.replace(old, new, 1)
-          filipeni_path.write_text(filipeni, encoding='utf-8')
+          filipeni_lines = filipeni_path.read_text(encoding='utf-8').splitlines()
+          changed = False
+          for i, line in enumerate(filipeni_lines):
+              if 'if not re.search' in line and 'BIBLE_BOOKS' in line and 'FILIPENI' in line:
+                  filipeni_lines[i] = '    if not re.search(r"BIBLE_BOOKS:\\s*BibleBook\\[\\]\\s*=\\s*\\[[^\\]]*\\bEFESENI,\\s*FILIPENI,\\s*COLOSENI\\b", index):'
+                  changed = True
+                  break
+          if not changed:
+              raise SystemExit('Linia canonica Filipeni nu a fost gasita')
+          filipeni_path.write_text('\n'.join(filipeni_lines) + '\n', encoding='utf-8')
 
           coloseni_path = Path('scripts/check-coloseni.py')
-          coloseni = coloseni_path.read_text(encoding='utf-8')
-          old = r'EFESENI,\s*FILIPENI,\s*COLOSENI,\s*TIT\b'
-          new = r'FILIPENI,\s*COLOSENI,\s*UNU_TESALONICENI\b'
-          if old not in coloseni:
-              raise SystemExit('Poarta canonica Coloseni nu a fost gasita')
-          coloseni_path.write_text(coloseni.replace(old, new, 1), encoding='utf-8')
+          coloseni_lines = coloseni_path.read_text(encoding='utf-8').splitlines()
+          changed = False
+          for i, line in enumerate(coloseni_lines):
+              if 'if not re.search' in line and 'BIBLE_BOOKS' in line and 'COLOSENI' in line:
+                  coloseni_lines[i] = '    if not re.search(r"BIBLE_BOOKS:\\s*BibleBook\\[\\]\\s*=\\s*\\[[^\\]]*\\bFILIPENI,\\s*COLOSENI,\\s*UNU_TESALONICENI\\b", index):'
+                  changed = True
+                  break
+          if not changed:
+              raise SystemExit('Linia canonica Coloseni nu a fost gasita')
+          coloseni_path.write_text('\n'.join(coloseni_lines) + '\n', encoding='utf-8')
           PY
 
       - name: Commit catalog integration
