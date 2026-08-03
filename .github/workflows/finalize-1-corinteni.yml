@@ -25,6 +25,7 @@ jobs:
       - name: Materialize and commit 1 Corinthians files
         run: |
           cat .unu-corinteni-payload/part* | base64 -d > /tmp/1cor-final.tar.xz
+          echo "e0e5ec8f92b050c604fac8765ef9250994f7d0d5d215719dbcee38609d82a457  /tmp/1cor-final.tar.xz" | sha256sum --check
           tar -xJf /tmp/1cor-final.tar.xz -C .
           python3 scripts/apply-1-corinteni-integration.py
           rm -f scripts/apply-1-corinteni-integration.py
