@@ -57,6 +57,9 @@ jobs:
       - name: Verifica Biblia explicata 2 Corinteni
         run: pnpm check:2-corinteni
 
+      - name: Verifica Biblia explicata Galateni
+        run: pnpm check:galateni
+
       - name: Verifica Biblia explicata Tit
         run: pnpm check:tit
 
