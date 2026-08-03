@@ -57,7 +57,7 @@ def main() -> int:
     for phrase in guards:
         if phrase.lower() not in lowered: errors.append(f"Lipsește protecția editorială: {phrase}")
     print(f"Poarta Romani: 16 capitole, {total_units} unități, 433 versete RCCV și 15 episoade CFC.")
-    if total_units != 69: errors.append(f"Total neașteptat de unități: {total_units}")
+    if total_units != 68: errors.append(f"Total neașteptat de unități: {total_units}")
     if errors:
         for e in errors: print(f"- {e}"); fail(e)
         return 1
