@@ -41,21 +41,22 @@ EXPECTED_RANGES = {
     27: [(1, 12), (13, 26), (27, 44)],
     28: [(1, 10), (11, 22), (23, 31)],
 }
+
 REQUIRED_GUARDS = [
-    'criză suicidară are nevoie imediată de protecție',
-    'nu ne dă dreptul să promitem tuturor o vindecare imediată',
-    'oprirea tratamentului medical',
-    'nu cere însă să rămâi într-un pericol evitabil sau într-un abuz',
-    'nu permite manipularea financiară',
-    'poate merge împreună cu medicină',
-    'nu cere victimei să refuze protecția',
-    'iertarea nu declară violența acceptabilă și nu oprește dreptatea',
-    'nu ne dau dreptul să promitem fiecărui bolnav o vindecare imediată',
-    'nu justifică oprirea tratamentului',
-    'omul aflat în pericol suicidar are nevoie imediată',
-    'iertarea nu anulează dreptul de a cere răspundere legală',
-    'nu ne autorizează să etichetăm bolile mintale',
-    'credința nu obligă victima să rămână',
+    "criză suicidară are nevoie imediată de protecție",
+    "nu ne dă dreptul să promitem tuturor o vindecare imediată",
+    "oprirea tratamentului medical",
+    "nu cere însă să rămâi într-un pericol evitabil sau într-un abuz",
+    "nu permite manipularea financiară",
+    "poate merge împreună cu medicină",
+    "nu cere victimei să refuze protecția",
+    "iertarea nu declară violența acceptabilă și nu oprește dreptatea",
+    "nu ne dau dreptul să promitem fiecărui bolnav o vindecare imediată",
+    "nu justifică oprirea tratamentului",
+    "omul aflat în pericol suicidar are nevoie imediată",
+    "iertarea nu anulează dreptul de a cere răspundere legală",
+    "nu ne autorizează să etichetăm bolile mintale",
+    "credința nu obligă victima să rămână",
 ]
 
 
@@ -64,25 +65,39 @@ def fail(message: str) -> None:
     print(f"::error title=Poarta Fapte::{safe}")
 
 
+def chapter_block(path: Path, marker: str) -> str:
+    content = path.read_text(encoding="utf-8")
+    start = content.find(marker)
+    return "" if start < 0 else content[start:]
+
+
 def main() -> int:
     errors: list[str] = []
     index = (BIBLE / "index.ts").read_text(encoding="utf-8")
     helper = (BIBLE / "fapteHelpers.ts").read_text(encoding="utf-8")
     publication = (BIBLE / "faptePublication.ts").read_text(encoding="utf-8")
     source_meta = (BIBLE / "fapteSource.ts").read_text(encoding="utf-8")
-    content = (BIBLE / "fapte.ts").read_text(encoding="utf-8")
+    book = (BIBLE / "fapte.ts").read_text(encoding="utf-8")
     import_config = json.loads((DATA / "fapte-rccv-import.json").read_text(encoding="utf-8"))
     source_manifest = json.loads((DATA / "fapte-poonen-source.json").read_text(encoding="utf-8"))
 
+    files = {1: BIBLE / "fapte.ts"}
+    files.update({number: BIBLE / f"fapte{number}.ts" for number in range(2, 29)})
+    markers = {1: "const FAPTE_1 = fapteChapter"}
+    markers.update({number: f"export const FAPTE_{number} = fapteChapter" for number in range(2, 29)})
+
     total_units = 0
-    for number in range(1, 29):
-        marker = f"const FAPTE_{number} = fapteChapter"
-        start = content.find(marker)
-        if start < 0:
+    chapter_contents: list[str] = []
+    for number, path in files.items():
+        if not path.exists():
+            errors.append(f"Fapte {number}: fișier lipsă")
+            continue
+        content = path.read_text(encoding="utf-8")
+        chapter_contents.append(content)
+        block = chapter_block(path, markers[number])
+        if not block:
             errors.append(f"Fapte {number}: declarația capitolului lipsește")
             continue
-        next_start = content.find(f"const FAPTE_{number + 1} = fapteChapter", start) if number < 28 else content.find("export const FAPTE:", start)
-        block = content[start:next_start if next_start >= 0 else len(content)]
         ranges = [(int(a), int(b)) for a, b in re.findall(r"verses:\s*\[(\d+),\s*(\d+)\]", block)]
         total_units += len(ranges)
         if ranges != EXPECTED_RANGES[number]:
@@ -123,7 +138,15 @@ def main() -> int:
     if not re.search(r"BIBLE_BOOKS:\s*BibleBook\[\]\s*=\s*\[[^\]]*\bFAPTE\b", index):
         errors.append("bible/index.ts: Fapte nu este conectat în catalog")
 
-    book_match = re.search(r"export const FAPTE: BibleBook = \{.*?chapters:\s*\[(.*?)\]\s*,?\n\}", content, re.S)
+    for number in range(2, 29):
+        if f'import {{ FAPTE_{number} }} from "./fapte{number}.js"' not in book:
+            errors.append(f"fapte.ts: importul FAPTE_{number} lipsește")
+
+    book_match = re.search(
+        r"export const FAPTE: BibleBook = \{.*?chapters:\s*\[(.*?)\]\s*,?\n\}",
+        book,
+        re.S,
+    )
     if not book_match:
         errors.append("fapte.ts: cartea Fapte nu este asamblată")
     else:
@@ -135,16 +158,18 @@ def main() -> int:
     shared_package = (ROOT / "packages" / "shared" / "package.json").read_text(encoding="utf-8")
     if "fapte-rccv-import.json" not in shared_package:
         errors.append("packages/shared/package.json: textul RCCV Fapte nu este materializat la build")
-    if (ROOT / ".github" / "workflows" / "research-fapte.yml").exists():
-        errors.append("workflow-ul temporar research-fapte.yml trebuie eliminat după cercetare")
 
-    lowered = content.lower()
+    for workflow in ("research-fapte.yml", "finalize-fapte.yml"):
+        if (ROOT / ".github" / "workflows" / workflow).exists():
+            errors.append(f"workflow-ul temporar {workflow} trebuie eliminat")
+
+    lowered = "\n".join(chapter_contents).lower()
     for phrase in ("explicație originală emanus", "transcriere integrală", 'status: "published"'):
         if phrase in lowered:
             errors.append(f"Fapte: formulare interzisă detectată: {phrase}")
     for phrase in REQUIRED_GUARDS:
         if phrase.lower() not in lowered:
-            errors.append(f"fapte.ts: lipsește protecția editorială {phrase!r}")
+            errors.append(f"Fapte: lipsește protecția editorială {phrase!r}")
 
     print(
         f"Poarta Fapte: 28 capitole active, {total_units} unități, "
