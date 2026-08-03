@@ -1,15 +1,22 @@
 #!/usr/bin/env node
 
 import { createHash } from "node:crypto"
-import { readFile, writeFile } from "node:fs/promises"
+import { readFile, writeFile, mkdir } from "node:fs/promises"
+import { dirname, resolve } from "node:path"
+import { fileURLToPath } from "node:url"
 import process from "node:process"
 
-const configPath = process.argv[2]
-if (!configPath) {
+const scriptDir = dirname(fileURLToPath(import.meta.url))
+const root = resolve(scriptDir, "..")
+const configArgument = process.argv[2]
+if (!configArgument) {
   throw new Error("Utilizare: node scripts/materialize-rccv-book.mjs <config.json>")
 }
 
+const configPath = resolve(process.cwd(), configArgument)
 const config = JSON.parse(await readFile(configPath, "utf8"))
+const outputPath = resolve(root, config.output)
+
 const response = await fetch(config.sourceUrl)
 if (!response.ok) {
   throw new Error(`Sursa RCCV nu a putut fi descărcată: ${response.status} ${response.statusText}`)
@@ -72,15 +79,11 @@ for (let chapter = 1; chapter <= config.verseCounts.length; chapter += 1) {
   total += actual
 }
 
-function quoted(value) {
-  return JSON.stringify(value)
-}
-
 const lines = [`export const ${config.constant}: readonly (readonly string[])[] = [`, "  [],"]
 for (let chapter = 1; chapter <= config.verseCounts.length; chapter += 1) {
   lines.push("  [", '    "",')
   for (let verse = 1; verse <= config.verseCounts[chapter - 1]; verse += 1) {
-    lines.push(`    ${quoted(chapters[chapter][verse])},`)
+    lines.push(`    ${JSON.stringify(chapters[chapter][verse])},`)
   }
   lines.push("  ],")
 }
@@ -102,7 +105,8 @@ lines.push(
   "",
 )
 
-await writeFile(config.output, `${lines.join("\n")}\n`, "utf8")
+await mkdir(dirname(outputPath), { recursive: true })
+await writeFile(outputPath, `${lines.join("\n")}\n`, "utf8")
 console.log(
   `${config.bookName}: ${config.verseCounts.length} capitole, ${total} versete RCCV materializate în ${config.output}.`,
 )
