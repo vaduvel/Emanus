@@ -1,0 +1,80 @@
+name: Integrate 1 Tesaloniceni
+
+on:
+  push:
+    branches:
+      - agent/1-tesaloniceni
+    paths:
+      - .github/workflows/integrate-1-tesaloniceni.yml
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/1-tesaloniceni
+
+      - name: Connect 1 Tesaloniceni to catalog and build
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          index_path = Path('packages/shared/src/bible/index.ts')
+          index = index_path.read_text(encoding='utf-8')
+          needle = 'import { COLOSENI } from "./coloseni.js"\n'
+          addition = needle + 'import { UNU_TESALONICENI } from "./unuTesaloniceni.js"\n'
+          if 'import { UNU_TESALONICENI } from "./unuTesaloniceni.js"' not in index:
+              if needle not in index:
+                  raise SystemExit('Import anchor COLOSENI lipseste')
+              index = index.replace(needle, addition, 1)
+          old_books = 'EFESENI, FILIPENI, COLOSENI, TIT, FILIMON'
+          new_books = 'EFESENI, FILIPENI, COLOSENI, UNU_TESALONICENI, TIT, FILIMON'
+          if new_books not in index:
+              if old_books not in index:
+                  raise SystemExit('BIBLE_BOOKS anchor lipseste')
+              index = index.replace(old_books, new_books, 1)
+          index_path.write_text(index, encoding='utf-8')
+
+          shared_path = Path('packages/shared/package.json')
+          shared = json.loads(shared_path.read_text(encoding='utf-8'))
+          materialize = shared['scripts']['materialize:bible-texts']
+          cfg = '../../docs/data/1-tesaloniceni-rccv-import.json'
+          if cfg not in materialize:
+              shared['scripts']['materialize:bible-texts'] = materialize + ' ' + cfg
+          shared_path.write_text(json.dumps(shared, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          root_path = Path('package.json')
+          root = json.loads(root_path.read_text(encoding='utf-8'))
+          root['scripts']['check:1-tesaloniceni'] = 'python3 scripts/check-1-tesaloniceni.py'
+          root_path.write_text(json.dumps(root, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          filipeni_path = Path('scripts/check-filipeni.py')
+          filipeni = filipeni_path.read_text(encoding='utf-8')
+          old = r'EFESENI,\s*FILIPENI,\s*(?:COLOSENI,\s*)?TIT\b'
+          new = r'EFESENI,\s*FILIPENI,\s*COLOSENI\b'
+          if old in filipeni:
+              filipeni = filipeni.replace(old, new, 1)
+          filipeni_path.write_text(filipeni, encoding='utf-8')
+
+          coloseni_path = Path('scripts/check-coloseni.py')
+          coloseni = coloseni_path.read_text(encoding='utf-8')
+          old = r'EFESENI,\s*FILIPENI,\s*COLOSENI,\s*TIT\b'
+          new = r'FILIPENI,\s*COLOSENI,\s*UNU_TESALONICENI\b'
+          if old not in coloseni:
+              raise SystemExit('Poarta canonica Coloseni nu a fost gasita')
+          coloseni_path.write_text(coloseni.replace(old, new, 1), encoding='utf-8')
+          PY
+
+      - name: Commit catalog integration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add packages/shared/src/bible/index.ts packages/shared/package.json package.json scripts/check-filipeni.py scripts/check-coloseni.py
+          git diff --cached --quiet && exit 0
+          git commit -m "feat(bible): connect 1 Tesaloniceni to catalog and build"
+          git push origin HEAD:agent/1-tesaloniceni
