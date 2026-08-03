@@ -1,0 +1,35 @@
+name: Finalize Romani
+
+on:
+  push:
+    branches:
+      - agent/romani
+    paths:
+      - .github/workflows/finalize-romani.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/romani
+          persist-credentials: true
+
+      - name: Materialize and commit Romans files
+        run: |
+          cat .romani-payload/part* | base64 -d > /tmp/romani-final.tar.xz
+          tar -xJf /tmp/romani-final.tar.xz -C .
+          python3 scripts/apply-romani-integration.py
+          rm -f scripts/apply-romani-integration.py
+          rm -rf .romani-payload
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add Romani 1-16"
+          git push origin HEAD:agent/romani
