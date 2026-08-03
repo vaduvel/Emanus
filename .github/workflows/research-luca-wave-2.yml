@@ -44,10 +44,10 @@ jobs:
       - name: Transcribe episodes 3 and 4
         run: |
           whisper .research/luca-wave-2/audio/03-luke-2-39-to-3-20.mp3 \
-            --model small.en --language English --task transcribe \
+            --model tiny.en --language English --task transcribe \
             --output_format txt --output_dir .research/luca-wave-2/transcripts
           whisper .research/luca-wave-2/audio/04-luke-3-21-to-4-19.mp3 \
-            --model small.en --language English --task transcribe \
+            --model tiny.en --language English --task transcribe \
             --output_format txt --output_dir .research/luca-wave-2/transcripts
           test "$(find .research/luca-wave-2/transcripts -name '*.txt' -size +5k | wc -l)" -eq 2
 
