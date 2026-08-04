@@ -18,7 +18,7 @@ Acest document păstrează deciziile transversale folosite la auditarea traducer
 - `sar-tseva YHWH`: „Căpetenia oștirii DOMNULUI”;
 - `Sefer hayYashar`: „Cartea celui Drept”, cu alternativa „Cartea lui Iașar” documentată;
 - `sakal`: redat prin acțiune înțeleaptă sau chibzuită, nu automat prin prosperitate materială;
-- `hereditate / naḥalah`: „moștenire”, păstrând rolul teritorial și familial;
+- `naḥalah`: „moștenire”, păstrând rolul teritorial și familial;
 - `seranim`: „conducători” ai filistenilor, nu uniformizat cu „regi”.
 
 ## Variante documentate până la Iosua 15
