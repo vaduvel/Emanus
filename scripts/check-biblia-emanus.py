@@ -373,10 +373,15 @@ def validate_ledger(
         if not str(record.get("englishUrl", "")).startswith("https://ebible.org/engwebp/"):
             fail(f"source-ledger.json: englishUrl invalid pentru {chapter_id}")
         source_url_key = "hebrewUrl" if testament == "OT" else "greekUrl"
-        source_url_prefix = (
-            "https://ebible.org/hboWLC/" if testament == "OT" else "https://www.sblgnt.com/"
+        source_url = str(record.get(source_url_key, ""))
+        source_url_valid = (
+            source_url.startswith("https://ebible.org/hboWLC/")
+            if testament == "OT"
+            else source_url.startswith(
+                f"https://github.com/LogosBible/SBLGNT/blob/{SBLGNT_COMMIT}/"
+            )
         )
-        if not str(record.get(source_url_key, "")).startswith(source_url_prefix):
+        if not source_url_valid:
             fail(f"source-ledger.json: {source_url_key} invalid pentru {chapter_id}")
         variants = record.get("textualVariantReview", [])
         if not isinstance(variants, list):
@@ -688,7 +693,9 @@ def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
             fail(f"source-lock.json: id invalid pentru regula {index}")
         rule_ids.add(rule_id)
         source_lock_id = rule.get("sourceLockId")
-        if source_lock_id not in files or files[source_lock_id].get("role") not in {"original", "original-supplement"}:
+        if source_lock_id not in files or files[source_lock_id].get("role") not in {
+            "base", "original", "original-supplement", "benchmark"
+        }:
             fail(f"source-lock.json: sursă invalidă în regula {rule_id}")
         if rule.get("bookId") not in books or files[source_lock_id].get("bookId") != rule["bookId"]:
             fail(f"source-lock.json: carte invalidă în regula {rule_id}")
