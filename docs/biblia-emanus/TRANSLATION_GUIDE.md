@@ -33,8 +33,11 @@ WEBU este baza de lucru și de segmentare. Pentru Vechiul Testament, sensurile i
 ## 5. Numele lui Dumnezeu
 
 - `Elohim` este redat de regulă prin `Dumnezeu`.
-- Tetragrama `YHWH` este redată provizoriu prin `DOMNUL`, cu o notă la prima apariție.
-- Decizia finală privind `DOMNUL`, `Iahve` sau o altă redare trebuie documentată în audit înainte ca un capitol care conține tetragrama să poată fi publicat.
+- În prima ediție, tetragrama `YHWH` este redată consecvent prin `DOMNUL`.
+- Combinația `YHWH Elohim` este redată prin `DOMNUL Dumnezeu`.
+- La prima apariție a tetragramei se explică faptul că textul ebraic conține numele propriu `YHWH`; majusculele din `DOMNUL` marchează această convenție editorială.
+- Redarea `DOMNUL` nu afirmă că textul ebraic folosește un simplu titlu și nu elimină din notele editoriale alternative precum `Iahve` sau forma nevocalizată `YHWH`.
+- Schimbarea acestei reguli pentru o ediție viitoare cere o decizie editorială globală; nu se alternează arbitrar între `DOMNUL`, `Iahve` și `YHWH` de la un verset la altul.
 
 ## 6. Termeni care cer atenție
 
