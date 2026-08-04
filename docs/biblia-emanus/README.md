@@ -5,7 +5,7 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 ## Stare
 
 - traducere în lucru;
-- Geneza 1–20 există ca ciornă editorială;
+- Geneza 1–25 există ca ciornă editorială;
 - explicațiile Emanus sunt păstrate separat de textul biblic;
 - textul existent RCCV nu este modificat de această ramură;
 - un capitol poate deveni public automat numai după trecerea integrală a porții de audit descrise în `AUTOMATED-PUBLICATION.md`.
@@ -46,6 +46,6 @@ Biblia Emanus este pregătită pentru publicare sub `CC BY 4.0`, cu atribuirea p
 
 ## Progres curent
 
-`docs/data/biblia-emanus/` conține ciornele complete pentru Geneza 1–20: 20 de capitole și 514 versete. Fiecare capitol are sursele exacte, numărul canonic de versete și note editoriale pentru termenii sau variantele care cer revizie.
+`docs/data/biblia-emanus/` conține ciornele complete pentru Geneza 1–25: 25 de capitole și 693 de versete. Fiecare capitol are sursele exacte, numărul canonic de versete și note editoriale pentru termenii sau variantele care cer revizie.
 
-Geneza 1–20 nu este încă publicată: capitolele trebuie mai întâi migrate la noua schemă de audit, comparate și trecute prin toate controalele automate.
+Geneza 1–25 nu este încă publicată: capitolele trebuie mai întâi migrate la noua schemă de audit, comparate și trecute prin toate controalele automate.
