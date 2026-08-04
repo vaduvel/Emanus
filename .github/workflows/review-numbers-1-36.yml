@@ -1,0 +1,34 @@
+name: Review Numbers 1-36
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-numeri
+    paths:
+      - scripts/review-numbers-1-36.py
+      - .github/workflows/review-numbers-1-36.yml
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-numeri
+          fetch-depth: 0
+      - name: Audit Numbers
+        run: python3 scripts/review-numbers-1-36.py
+      - name: Commit audited book
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs/data/biblia-emanus/NUM.*.json docs/data/biblia-emanus/manifest.json docs/data/biblia-emanus/.audit-NUM-notes.txt docs/data/biblia-emanus/.audit-NUM-summary.txt docs/data/biblia-emanus/.audit-NUM-verses.txt docs/biblia-emanus/NUMERI-AUDIT.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Audit and publish Numbers 1-36"
+          git push origin HEAD:agent/biblia-emanus-numeri
