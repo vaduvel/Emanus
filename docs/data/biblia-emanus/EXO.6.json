@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 6,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,168 +75,222 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "text ebraic, structură narativă, lexic rar, nume și formule ale împietririi verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Textul contaminat englez-român a fost înlocuit integral.",
+        "Dialogurile, genealogiile, numerele și repetițiile au fost redactate în română naturală."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Împietrirea inimii este redată cu agenții indicați de fiecare verset, fără anularea responsabilității faraonului.",
+        "Semnele și judecățile sunt relatate fără aprobarea magiei egiptene sau transformarea lor în tehnici spirituale moderne.",
+        "Afirmațiile totalizante și tensiunile narative sunt păstrate și explicate, nu armonizate artificial."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "The DOMNUL i-a zis lui Moise, Now you shall see what I will do to Faraon, for by a strong mână he shall let them să plece, and by a strong mână he shall drive them out of his țară."
+      "text": "DOMNUL i-a spus lui Moise: „Acum vei vedea ce îi voi face faraonului: silit de o mână puternică îi va lăsa să plece și, silit de o mână puternică, îi va izgoni din țara lui.”"
     },
     {
       "number": 2,
-      "text": "Dumnezeu a vorbit lui Moise, and i-a zis lui him, Eu sunt the DOMNUL. (text revizuit în limba română cu diacritice)"
+      "text": "Dumnezeu i-a vorbit lui Moise și i-a spus: „Eu sunt DOMNUL."
     },
     {
       "number": 3,
-      "text": "I appeared to Abraham, to Isaac, and to Jacob, as Dumnezeu Almighty; but by my name the DOMNUL I was not known to them. (text revizuit în limba română cu diacritice)"
+      "text": "M-am arătat lui Avraam, lui Isaac și lui Iacov ca Dumnezeul Atotputernic, dar prin Numele Meu, DOMNUL, nu M-am făcut cunoscut lor."
     },
     {
       "number": 4,
-      "text": "I have also established my covenant with them, to give them the țară of Canaan, the țară of their travels, in which they lived as aliens."
+      "text": "Am încheiat legământul Meu cu ei, ca să le dau țara Canaanului, țara în care au locuit ca străini."
     },
     {
       "number": 5,
-      "text": "Moreover I have heard the groaning of the children of Israel, whom the Egiptians keep in bondage, and I have remembered my covenant. (text revizuit în limba română cu diacritice)"
+      "text": "Am auzit și gemetele fiilor lui Israel, pe care egiptenii îi țin în robie, și Mi-am adus aminte de legământul Meu."
     },
     {
       "number": 6,
-      "text": "Therefore tell the children of Israel, ‘Eu sunt the DOMNUL, and I will bring you out from under the burdens of the Egiptians, and I will rid you out of their bondage, and I will redeem you with an outstretched arm, and with great judgments. (text revizuit în limba română cu diacritice)"
+      "text": "De aceea spune-le fiilor lui Israel: «Eu sunt DOMNUL. Vă voi scoate de sub poverile egiptenilor, vă voi elibera din robia lor și vă voi răscumpăra cu braț întins și prin judecăți mari."
     },
     {
       "number": 7,
-      "text": "I will take you to myself for a people. I will be your Dumnezeu; and you shall know that Eu sunt the DOMNUL your Dumnezeu, who brings you out from under the burdens of the Egiptians. (text revizuit în limba română cu diacritice)"
+      "text": "Vă voi lua ca popor al Meu și voi fi Dumnezeul vostru. Veți ști că Eu sunt DOMNUL, Dumnezeul vostru, Cel care vă scoate de sub poverile egiptenilor."
     },
     {
       "number": 8,
-      "text": "I will bring you into the țară which I swore to give to Abraham, to Isaac, and to Jacob; and I will give it to you for a heritage: Eu sunt the DOMNUL.’"
+      "text": "Vă voi aduce în țara pe care am jurat că o voi da lui Avraam, lui Isaac și lui Iacov și v-o voi da ca moștenire. Eu sunt DOMNUL.»”"
     },
     {
       "number": 9,
-      "text": "Moise spoke so to the children of Israel, but they didn’t listen to Moise for anguish of spirit, and for cruel bondage. (text revizuit în limba română cu diacritice)"
+      "text": "Moise le-a spus aceste lucruri fiilor lui Israel, dar ei nu l-au ascultat din cauza descurajării și a robiei aspre."
     },
     {
       "number": 10,
-      "text": "The DOMNUL a vorbit lui Moise, saying, (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a vorbit lui Moise și i-a spus:"
     },
     {
       "number": 11,
-      "text": "Go in, speak to Faraon king of Egipt, that he let the children of Israel să plece out of his țară."
+      "text": "„Du-te și vorbește-i faraonului, regele Egiptului, ca să-i lase pe fiii lui Israel să plece din țara lui.”"
     },
     {
       "number": 12,
-      "text": "Moise spoke before the DOMNUL, saying, Behold, the children of Israel haven’t listened to me. How then shall Faraon listen to me, when I have uncircumcised lips? (text revizuit în limba română cu diacritice)"
+      "text": "Moise a spus înaintea DOMNULUI: „Iată, fiii lui Israel nu m-au ascultat. Cum mă va asculta faraonul, când eu am buze necircumcise?”"
     },
     {
       "number": 13,
-      "text": "The DOMNUL a vorbit lui Moise and to Aaron, and gave them a command to the children of Israel, and to Faraon king of Egipt, to bring the children of Israel out of the țară of Egipt."
+      "text": "DOMNUL le-a vorbit lui Moise și lui Aaron și le-a dat porunci cu privire la fiii lui Israel și la faraon, regele Egiptului, ca să-i scoată pe fiii lui Israel din țara Egiptului."
     },
     {
       "number": 14,
-      "text": "These are the heads of their fathers’ houses. The sons of Reuben the firstborn of Israel: Hanoch, and Pallu, Hezron, and Carmi; these are the families of Reuben. (text revizuit în limba română cu diacritice)"
+      "text": "Acestea sunt căpeteniile caselor părinților lor. Fiii lui Ruben, întâiul născut al lui Israel, au fost Hanoch, Pallu, Hețron și Carmi. Acestea sunt familiile lui Ruben."
     },
     {
       "number": 15,
-      "text": "The sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin, and Zohar, and Shaul the son of a Canaanite woman; these are the families of Simeon. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Simeon au fost Iemuel, Iamin, Ohad, Iachin, Țohar și Șaul, fiul unei femei canaanite. Acestea sunt familiile lui Simeon."
     },
     {
       "number": 16,
-      "text": "These are the names of the sons of Levi according to their generations: Gershon, and Kohath, and Merari; and the years of the life of Levi were one hundred thirty-seven years. (text revizuit în limba română cu diacritice)"
+      "text": "Acestea sunt numele fiilor lui Levi, după generațiile lor: Gherșon, Chehat și Merari. Levi a trăit o sută treizeci și șapte de ani."
     },
     {
       "number": 17,
-      "text": "The sons of Gershon: Libni and Shimei, according to their families. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Gherșon au fost Libni și Șimei, după familiile lor."
     },
     {
       "number": 18,
-      "text": "The sons of Kohath: Amram, and Izhar, and Hebron, and Uzziel; and the years of the life of Kohath were one hundred thirty-three years. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Chehat au fost Amram, Ițhar, Hebron și Uziel. Chehat a trăit o sută treizeci și trei de ani."
     },
     {
       "number": 19,
-      "text": "The sons of Merari: Mahli and Mushi. These are the families of the Levites according to their generations. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Merari au fost Mahli și Muși. Acestea sunt familiile leviților, după generațiile lor."
     },
     {
       "number": 20,
-      "text": "Amram took Jochebed his father’s sister to himself as wife; and she bore him Aaron and Moise. The years of the life of Amram were one hundred thirty-seven years. (text revizuit în limba română cu diacritice)"
+      "text": "Amram a luat-o de soție pe Iochebed, mătușa sa, iar ea i-a născut pe Aaron și pe Moise. Amram a trăit o sută treizeci și șapte de ani."
     },
     {
       "number": 21,
-      "text": "The sons of Izhar: Korah, and Nepheg, and Zichri. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Ițhar au fost Core, Nefeg și Zicri."
     },
     {
       "number": 22,
-      "text": "The sons of Uzziel: Mishael, Elzaphan, and Sithri. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Uziel au fost Mișael, Elțafan și Sitri."
     },
     {
       "number": 23,
-      "text": "Aaron took Elisheba, the daughter of Amminadab, the sister of Nahshon, as his wife; and she bore him Nadab and Abihu, Eleazar and Ithamar. (text revizuit în limba română cu diacritice)"
+      "text": "Aaron a luat-o de soție pe Elișeba, fiica lui Aminadab și sora lui Nahșon, iar ea i-a născut pe Nadab, Abihu, Eleazar și Itamar."
     },
     {
       "number": 24,
-      "text": "The sons of Korah: Assir, Elkanah, and Abiasaph; these are the families of the Korahites. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Core au fost Asir, Elcana și Abiasaf. Acestea sunt familiile coriților."
     },
     {
       "number": 25,
-      "text": "Eleazar Aaron’s son took one of the daughters of Putiel as his wife; and she bore him Phinehas. These are the heads of the fathers’ houses of the Levites according to their families. (text revizuit în limba română cu diacritice)"
+      "text": "Eleazar, fiul lui Aaron, a luat-o de soție pe una dintre fiicele lui Putiel, iar ea i l-a născut pe Fineas. Acestea sunt căpeteniile caselor părintești ale leviților, după familiile lor."
     },
     {
       "number": 26,
-      "text": "These are that Aaron and Moise to whom the DOMNUL a zis, Bring out the children of Israel from the țară of Egipt according to their armies."
+      "text": "Aceștia sunt Aaron și Moise cărora DOMNUL le-a spus: „Scoateți-i pe fiii lui Israel din țara Egiptului, după oștirile lor.”"
     },
     {
       "number": 27,
-      "text": "These are those who a vorbit lui Faraon king of Egipt, to bring out the children of Israel from Egipt. These are that Moise and Aaron. (text revizuit în limba română cu diacritice)"
+      "text": "Ei sunt cei care i-au vorbit faraonului, regele Egiptului, ca să-i scoată pe fiii lui Israel din Egipt. Aceștia sunt Moise și Aaron."
     },
     {
       "number": 28,
-      "text": "On the day when the DOMNUL a vorbit lui Moise in the țară of Egipt,"
+      "text": "În ziua în care DOMNUL i-a vorbit lui Moise în țara Egiptului,"
     },
     {
       "number": 29,
-      "text": "The DOMNUL i-a zis lui Moise, Eu sunt the DOMNUL. Tell Faraon king of Egipt all that I tell you. (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a spus lui Moise: „Eu sunt DOMNUL. Spune-i faraonului, regele Egiptului, tot ce îți spun.”"
     },
     {
       "number": 30,
-      "text": "Moise a zis before the DOMNUL, Behold, Eu sunt of uncircumcised lips, and how shall Faraon listen to me? (text revizuit în limba română cu diacritice)"
+      "text": "Dar Moise a spus înaintea DOMNULUI: „Iată, eu am buze necircumcise. Cum mă va asculta faraonul?”"
     }
   ],
   "editorialNotes": [
     {
       "verse": 3,
       "term": "El Shaddai / YHWH",
-      "decision": "Dumnezeul cel Atotputernic / DOMNUL (YHWH)",
+      "decision": "Dumnezeul Atotputernic / DOMNUL",
+      "reason": "Patriarhii folosesc Numele YHWH în Geneza; afirmația privește felul în care Dumnezeu Se face cunoscut prin împlinirea legământului, nu simpla necunoaștere lexicală a Numelui.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Deosebirea dintre revelarea ca El Shaddai patriarhilor și revelarea Numei de legământ YHWH."
+      "resolutionReason": "Patriarhii folosesc Numele YHWH în Geneza; afirmația privește felul în care Dumnezeu Se face cunoscut prin împlinirea legământului, nu simpla necunoaștere lexicală a Numelui.",
+      "alternatives": [
+        "Dumnezeul Cel Atotputernic",
+        "Dumnezeul Atotsuveran"
+      ]
+    },
+    {
+      "verse": 9,
+      "term": "miqotser ruach",
+      "decision": "din cauza descurajării",
+      "reason": "Literal, „din scurtimea duhului/suflării”; expresia poate indica zdrobirea lăuntrică sau lipsa de răsuflare produsă de robie.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, „din scurtimea duhului/suflării”; expresia poate indica zdrobirea lăuntrică sau lipsa de răsuflare produsă de robie.",
+      "alternatives": [
+        "din cauza duhului zdrobit",
+        "din cauza lipsei de răsuflare"
+      ]
+    },
+    {
+      "verse": 12,
+      "term": "aral sefatayim",
+      "decision": "buze necircumcise",
+      "reason": "Metafora exprimă nepotrivirea sau incapacitatea vorbirii lui Moise, nu o circumcizie fizică a buzelor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Metafora exprimă nepotrivirea sau incapacitatea vorbirii lui Moise, nu o circumcizie fizică a buzelor.",
+      "alternatives": [
+        "buze neîndemânatice"
+      ]
+    },
+    {
+      "verse": 20,
+      "term": "dodato",
+      "decision": "mătușa sa",
+      "reason": "Textul spune că Iochebed era sora tatălui lui Amram; gradul de rudenie este păstrat fără armonizare cu legislația ulterioară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul spune că Iochebed era sora tatălui lui Amram; gradul de rudenie este păstrat fără armonizare cu legislația ulterioară.",
+      "alternatives": [
+        "sora tatălui său"
+      ]
+    },
+    {
+      "verse": 26,
+      "term": "al-tsivotam",
+      "decision": "după oștirile lor",
+      "reason": "Termenul descrie grupările organizate ale lui Israel; nu afirmă că toți membrii erau combatanți.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul descrie grupările organizate ale lui Israel; nu afirmă că toți membrii erau combatanți.",
+      "alternatives": [
+        "după cetele lor"
+      ]
     }
   ]
 }

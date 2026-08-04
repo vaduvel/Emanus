@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 10,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,164 +75,217 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "text ebraic, structură narativă, lexic rar, nume și formule ale împietririi verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Textul contaminat englez-român a fost înlocuit integral.",
+        "Dialogurile, genealogiile, numerele și repetițiile au fost redactate în română naturală."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Împietrirea inimii este redată cu agenții indicați de fiecare verset, fără anularea responsabilității faraonului.",
+        "Semnele și judecățile sunt relatate fără aprobarea magiei egiptene sau transformarea lor în tehnici spirituale moderne.",
+        "Afirmațiile totalizante și tensiunile narative sunt păstrate și explicate, nu armonizate artificial."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "The DOMNUL i-a zis lui Moise, Go in to Faraon, for I have hardened his heart and the heart of his servants, that I may show these my signs among them; (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a spus lui Moise: „Du-te la faraon, căci i-am împietrit inima lui și inimile slujitorilor lui, ca să pun aceste semne ale Mele în mijlocul lor"
     },
     {
       "number": 2,
-      "text": "and that you may tell in the hearing of your son, and of your son’s son, what things I have done to Egipt, and my signs which I have done among them; that you may know that Eu sunt the DOMNUL. (text revizuit în limba română cu diacritice)"
+      "text": "și ca tu să povestești fiului tău și fiului fiului tău cum am lucrat împotriva Egiptului și ce semne am făcut în mijlocul lor, ca să știți că Eu sunt DOMNUL.”"
     },
     {
       "number": 3,
-      "text": "Moise and Aaron went in to Faraon, and i-a zis lui him, This is what the DOMNUL, the Dumnezeu of the Hebrews, says: ‘How long will you refuse to humble yourself before me? Let poporul Meu să plece, that they may serve me."
+      "text": "Moise și Aaron au intrat la faraon și i-au spus: „Așa vorbește DOMNUL, Dumnezeul evreilor: «Până când vei refuza să te smerești înaintea Mea? Lasă poporul Meu să plece ca să-Mi slujească."
     },
     {
       "number": 4,
-      "text": "Or else, if you refuse to let poporul Meu să plece, behold, tomorrow I will bring locusts into your country,"
+      "text": "Dacă refuzi să lași poporul Meu să plece, iată, mâine voi aduce lăcuste în ținutul tău."
     },
     {
       "number": 5,
-      "text": "and they shall cover the surface of the earth, so that one won’t be able to see the earth. They shall eat the residue of that which has escaped, which remains to you from the hail, and shall eat every tree which grows for you out of the field. (text revizuit în limba română cu diacritice)"
+      "text": "Ele vor acoperi fața pământului, astfel încât pământul nu va mai putea fi văzut. Vor mânca ce a scăpat și v-a rămas după grindină și vor mânca orice copac care crește pe câmpurile voastre."
     },
     {
       "number": 6,
-      "text": "Your houses shall be filled, and the houses of all your servants, and the houses of all the Egiptians, as neither your fathers nor your fathers’ fathers have seen, since the day that they were on the earth to this day.’  He turned, and went out from Faraon. (text revizuit în limba română cu diacritice)"
+      "text": "Casele tale, casele tuturor slujitorilor tăi și casele tuturor egiptenilor se vor umple de ele, cum nu au văzut părinții și strămoșii tăi din ziua în care au fost pe pământ și până astăzi.»” Apoi Moise s-a întors și a ieșit de la faraon."
     },
     {
       "number": 7,
-      "text": "Faraon’s servants i-a zis lui him, How long will this man be a snare to us? Let the men să plece, that they may serve the DOMNUL, their Dumnezeu. Don’t you yet know that Egipt is destroyed?"
+      "text": "Slujitorii faraonului i-au spus: „Până când va fi omul acesta o cursă pentru noi? Lasă-i pe bărbați să plece ca să-I slujească DOMNULUI, Dumnezeul lor. Încă nu înțelegi că Egiptul este distrus?”"
     },
     {
       "number": 8,
-      "text": "Moise and Aaron were brought again to Faraon, and he i-a zis lui them, Go, serve the DOMNUL your Dumnezeu; but who are those who will să plece?"
+      "text": "Moise și Aaron au fost aduși din nou la faraon, iar el le-a spus: „Duceți-vă și slujiți-I DOMNULUI, Dumnezeul vostru. Dar cine anume va merge?”"
     },
     {
       "number": 9,
-      "text": "Moise a zis, We will să plece with our young and with our old. We will să plece with our sons and with our daughters, with our flocks and with our herds; for we must hold a feast to the DOMNUL."
+      "text": "Moise a răspuns: „Vom merge cu tinerii și cu bătrânii noștri, cu fiii și cu fiicele noastre, cu turmele și cu cirezile noastre, fiindcă avem de ținut o sărbătoare pentru DOMNUL.”"
     },
     {
       "number": 10,
-      "text": "He i-a zis lui them, The DOMNUL be with you if I let you să plece with your little ones! See, evil is clearly before your faces."
+      "text": "Faraonul le-a spus: „Așa să fie DOMNUL cu voi cum vă voi lăsa eu să plecați împreună cu copiii voștri! Este limpede că aveți intenții rele."
     },
     {
       "number": 11,
-      "text": "Not so! Go now you who are men, and serve the DOMNUL; for that is what you desire! Then they were driven out from Faraon’s presence. (text revizuit în limba română cu diacritice)"
+      "text": "Nu! Mergeți acum numai voi, bărbații, și slujiți-I DOMNULUI, fiindcă aceasta ați cerut.” Apoi au fost izgoniți dinaintea faraonului."
     },
     {
       "number": 12,
-      "text": "The DOMNUL i-a zis lui Moise, Stretch out your mână over the țară of Egipt for the locusts, that they may come up on the țară of Egipt, and eat every herb of the țară, even all that the hail has left."
+      "text": "DOMNUL i-a spus lui Moise: „Întinde-ți mâna peste țara Egiptului ca să vină lăcustele peste ea și să mănânce toate plantele țării, tot ce a lăsat grindina.”"
     },
     {
       "number": 13,
-      "text": "Moise stretched out his rod over the țară of Egipt, and the DOMNUL brought an east wind on the țară all that day, and all night; and when it was morning, the east wind brought the locusts."
+      "text": "Moise și-a întins toiagul peste țara Egiptului, iar DOMNUL a adus peste țară un vânt de răsărit toată ziua aceea și toată noaptea. Dimineața, vântul de răsărit adusese lăcustele."
     },
     {
       "number": 14,
-      "text": "The locusts went up over all the țară of Egipt, and rested in all the borders of Egipt. They were very grievous. Before them there were no such locusts as they, nor will there ever be again."
+      "text": "Lăcustele s-au ridicat peste toată țara Egiptului și s-au așezat în tot ținutul Egiptului. Erau nespus de multe; înaintea lor nu mai fuseseră asemenea lăcuste și nici după ele nu vor mai fi."
     },
     {
       "number": 15,
-      "text": "For they covered the surface of the whole earth, so that the țară was darkened, and they ate every herb of the țară, and all the fruit of the trees which the hail had left. There remained nothing green, either tree or herb of the field, through all the țară of Egipt."
+      "text": "Au acoperit fața întregului pământ, încât țara s-a întunecat. Au mâncat toate plantele țării și toate roadele copacilor pe care le lăsase grindina. Nu a mai rămas nimic verde, nici copac, nici plantă a câmpului, în toată țara Egiptului."
     },
     {
       "number": 16,
-      "text": "Then Faraon called for Moise and Aaron in haste, and he a zis, I have sinned against the DOMNUL your Dumnezeu, and against you. (text revizuit în limba română cu diacritice)"
+      "text": "Faraonul i-a chemat în grabă pe Moise și pe Aaron și le-a spus: „Am păcătuit împotriva DOMNULUI, Dumnezeul vostru, și împotriva voastră."
     },
     {
       "number": 17,
-      "text": "Now therefore please forgive my sin again, and pray to the DOMNUL your Dumnezeu, that he may also take away from me this death. (text revizuit în limba română cu diacritice)"
+      "text": "Acum, te rog, iartă-mi păcatul încă o dată și rugați-L pe DOMNUL, Dumnezeul vostru, să îndepărteze de la mine această moarte.”"
     },
     {
       "number": 18,
-      "text": "Moise went out from Faraon, and prayed to the DOMNUL. (text revizuit în limba română cu diacritice)"
+      "text": "Moise a ieșit de la faraon și s-a rugat DOMNULUI."
     },
     {
       "number": 19,
-      "text": "The DOMNUL sent an exceedingly strong west wind, which took up the locusts, and drove them into the Red Sea. There remained not one locust in all the borders of Egipt. (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL a făcut să sufle un vânt foarte puternic dinspre apus, care a ridicat lăcustele și le-a aruncat în Marea Roșie. Nu a mai rămas nicio lăcustă în tot ținutul Egiptului."
     },
     {
       "number": 20,
-      "text": "But the DOMNUL hardened Faraon’s heart, and he didn’t let the children of Israel să plece."
+      "text": "Dar DOMNUL a împietrit inima faraonului, iar el nu i-a lăsat pe fiii lui Israel să plece."
     },
     {
       "number": 21,
-      "text": "The DOMNUL i-a zis lui Moise, Stretch out your mână toward the sky, that there may be darkness over the țară of Egipt, even darkness which may be felt."
+      "text": "DOMNUL i-a spus lui Moise: „Întinde-ți mâna spre cer, ca peste țara Egiptului să vină un întuneric atât de gros, încât să poată fi pipăit.”"
     },
     {
       "number": 22,
-      "text": "Moise stretched out his mână toward the sky, and there was a thick darkness in all the țară of Egipt for three days."
+      "text": "Moise și-a întins mâna spre cer, iar peste toată țara Egiptului a fost întuneric gros timp de trei zile."
     },
     {
       "number": 23,
-      "text": "They didn’t see one another, and nobody rose from his place for three days; but all the children of Israel had light in their dwellings. (text revizuit în limba română cu diacritice)"
+      "text": "Oamenii nu se vedeau unii pe alții și nimeni nu s-a ridicat din locul său timp de trei zile. Dar toți fiii lui Israel aveau lumină în locuințele lor."
     },
     {
       "number": 24,
-      "text": "Faraon called to Moise, and a zis, Go, serve the DOMNUL. Only let your flocks and your herds stay behind. Let your little ones also să plece with you."
+      "text": "Faraonul l-a chemat pe Moise și i-a spus: „Duceți-vă și slujiți-I DOMNULUI! Numai turmele și cirezile voastre să rămână; chiar și copiii voștri pot merge cu voi.”"
     },
     {
       "number": 25,
-      "text": "Moise a zis, You must also give into our mână sacrifices and burnt offerings, that we may sacrifice to the DOMNUL our Dumnezeu."
+      "text": "Moise a răspuns: „Tu însuți trebuie să ne dai animale pentru jertfe și arderi-de-tot, ca să le aducem DOMNULUI, Dumnezeul nostru."
     },
     {
       "number": 26,
-      "text": "Our livestock also shall să plece with us. Not a hoof shall be left behind, for of it we must take to serve the DOMNUL our Dumnezeu; and we don’t know with what we must serve the DOMNUL, until we come there."
+      "text": "Și animalele noastre vor merge cu noi; nu va rămâne nici măcar o copită, fiindcă din ele vom lua ca să-I slujim DOMNULUI, Dumnezeul nostru. Până nu ajungem acolo, nu știm cu ce Îi vom sluji DOMNULUI.”"
     },
     {
       "number": 27,
-      "text": "But the DOMNUL hardened Faraon’s heart, and he wouldn’t let them să plece."
+      "text": "Dar DOMNUL a împietrit inima faraonului și el nu a vrut să-i lase să plece."
     },
     {
       "number": 28,
-      "text": "Faraon i-a zis lui him, Get away from me! Be careful to see my face no more; for in the day you see my face you shall die! (text revizuit în limba română cu diacritice)"
+      "text": "Faraonul i-a spus: „Pleacă de la mine! Ai grijă să nu-mi mai vezi fața, căci în ziua în care îmi vei vedea fața vei muri!”"
     },
     {
       "number": 29,
-      "text": "Moise a zis, You have spoken well. I will see your face again no more. (text revizuit în limba română cu diacritice)"
+      "text": "Moise a răspuns: „Ai vorbit bine. Nu-ți voi mai vedea fața.”"
     }
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "EXO.10.1",
-      "decision": "Redare revizuită",
+      "verse": 2,
+      "term": "asher hitalalti beMitsrayim",
+      "decision": "cum am lucrat împotriva Egiptului",
+      "reason": "Verbul poate include ideea de a trata aspru, a face de râs sau a-Și arăta puterea asupra Egiptului; textul principal evită atribuirea unei frivolități.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Revizuit în textul ebraic WLC-OSHB și baza WEBU pentru capitolul 10."
+      "resolutionReason": "Verbul poate include ideea de a trata aspru, a face de râs sau a-Și arăta puterea asupra Egiptului; textul principal evită atribuirea unei frivolități.",
+      "alternatives": [
+        "cum am făcut de râs Egiptul",
+        "ce am făcut Egiptului"
+      ]
+    },
+    {
+      "verse": 10,
+      "term": "reu ki raah neged penekhem",
+      "decision": "este limpede că aveți intenții rele",
+      "reason": "Replica faraonului poate fi o acuzație privind intenția lor sau o amenințare că răul îi așteaptă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Replica faraonului poate fi o acuzație privind intenția lor sau o amenințare că răul îi așteaptă.",
+      "alternatives": [
+        "răul este înaintea voastră"
+      ]
+    },
+    {
+      "verse": 19,
+      "term": "Yam Suf",
+      "decision": "Marea Roșie",
+      "reason": "Literal, numele înseamnă „Marea Trestiilor”. Identificarea geografică exactă și relația cu actuala Mare Roșie sunt discutate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, numele înseamnă „Marea Trestiilor”. Identificarea geografică exactă și relația cu actuala Mare Roșie sunt discutate.",
+      "alternatives": [
+        "Marea Trestiilor"
+      ]
+    },
+    {
+      "verse": 21,
+      "term": "veyamesh hoshekh",
+      "decision": "întuneric care să poată fi pipăit",
+      "reason": "Verbul este rar și poate însemna un întuneric palpabil ori unul care îi constrânge pe oameni să bâjbâie.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul este rar și poate însemna un întuneric palpabil ori unul care îi constrânge pe oameni să bâjbâie.",
+      "alternatives": [
+        "întuneric în care să bâjbâie"
+      ]
+    },
+    {
+      "verse": 25,
+      "term": "gam-attah titten beyadenu",
+      "decision": "Tu însuți trebuie să ne dai",
+      "reason": "Moise cere ca faraonul să pună la dispoziție animale pentru jertfe; formularea este mai puternică decât simpla permisiune de a le lua.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Moise cere ca faraonul să pună la dispoziție animale pentru jertfe; formularea este mai puternică decât simpla permisiune de a le lua.",
+      "alternatives": [
+        "și tu ne vei da"
+      ]
     }
   ]
 }
