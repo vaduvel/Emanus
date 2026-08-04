@@ -100,6 +100,11 @@ import { IOAN_19 } from "./ioan19.js"
 import { IOAN_20 } from "./ioan20.js"
 import { IOAN_21 } from "./ioan21.js"
 import { MARCU as MARCU_BASE } from "./marcu.js"
+import { MARCU_2 } from "./marcu2.js"
+import { MARCU_3 } from "./marcu3.js"
+import { MARCU_4 } from "./marcu4.js"
+import { MARCU_5 } from "./marcu5.js"
+import { MARCU_8 } from "./marcu8.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -220,11 +225,20 @@ export const IOAN: BibleBook = {
   ],
 }
 
-/** Marcu, scris acum pana la capitolul 1. */
+/**
+ * Marcu: capitolele scrise și cablate sunt 1-5 și 8.
+ * Capitolele 6, 7 și 9-16 nu există încă ca fișiere.
+ * Toate sunt in_review, deci nu se deschid încă cititorului.
+ */
 export const MARCU: BibleBook = {
   ...MARCU_BASE,
   chapters: [
     ...MARCU_BASE.chapters,
+    MARCU_2,
+    MARCU_3,
+    MARCU_4,
+    MARCU_5,
+    MARCU_8,
   ],
 }
 
