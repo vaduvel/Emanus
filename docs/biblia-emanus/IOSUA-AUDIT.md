@@ -48,3 +48,15 @@ Acest document păstrează deciziile transversale folosite la auditarea traducer
 - rezumatele cuceririi totale sunt citite împreună cu afirmațiile explicite despre teritorii și cetăți rămase;
 - listele de hotare și cetăți sunt păstrate integral, inclusiv neconcordanțele de numărare și variantele de nume;
 - inițiativa Acsei în cererea izvoarelor este păstrată, fără reducerea ei la un rol pasiv.
+
+## Extindere — Iosua 16–20
+
+- hotarele lui Efraim, Manase și Beniamin sunt păstrate fără modernizarea sau armonizarea artificială a topografiei;
+- `mas-oved` este redat prin „muncă silnică”, nu printr-un termen fiscal care ar ascunde constrângerea;
+- dreptul fiicelor lui Țelofhad la moștenire este păstrat explicit;
+- `sheloshet hannafet` din Iosua 17:11 rămâne „cele trei înălțimi”, cu alternativele textuale documentate;
+- descrierea țării la Șilo este consemnată ca document organizat după cetăți, fără transformarea sorților într-o tehnică universală de decizie;
+- totalurile cetăților și toponimele dificile din Iosua 19 sunt păstrate chiar când nu pot fi armonizate simplu;
+- `go'el haddam` este „răzbunătorul sângelui”, termen juridic și familial, nu o aprobare a răzbunării private;
+- cetățile de refugiu disting uciderea neintenționată de omorul deliberat și cer judecată publică înaintea adunării;
+- forma mai scurtă a unor tradiții grecești pentru Iosua 20:4–6 este documentată, iar textul principal urmează textul masoretic.
