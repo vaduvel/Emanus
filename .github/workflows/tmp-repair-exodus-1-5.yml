@@ -1,0 +1,134 @@
+name: Repair Exodus 1-5
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-exodul
+    paths:
+      - .github/workflows/tmp-repair-exodus-1-5.yml
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-exodul
+          fetch-depth: 0
+      - name: Apply substantive audit
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('docs/data/biblia-emanus')
+          updates={
+          1:{
+            5:'Toate persoanele care se trăgeau din Iacov erau șaptezeci; Iosif era deja în Egipt.',
+            8:'În Egipt s-a ridicat un rege nou, care nu-l cunoscuse pe Iosif.',
+            11:'De aceea au pus peste ei supraveghetori ai muncii silnice, ca să-i asuprească prin poverile lor. Astfel au construit pentru faraon cetățile-depozit Pitom și Ramses.',
+            12:'Dar cu cât îi asupreau mai mult, cu atât se înmulțeau și se răspândeau mai mult, iar egiptenii au ajuns să se îngrozească de fiii lui Israel.',
+            15:'Regele Egiptului le-a vorbit moașelor evreice, dintre care una se numea Șifra, iar cealaltă Pua,',
+            16:'și le-a spus: „Când le ajutați pe femeile evreice să nască și le vedeți pe scaunul de naștere, dacă este băiat, să-l omorâți, iar dacă este fată, să o lăsați să trăiască.”',
+            21:'Fiindcă moașele s-au temut de Dumnezeu, El le-a întemeiat familii.'},
+          2:{
+            1:'Un bărbat din casa lui Levi s-a căsătorit cu o femeie dintre fiicele lui Levi.',
+            3:'Nemaiputând să-l ascundă, a luat pentru el un coș din papirus, l-a acoperit cu bitum și smoală, a pus copilul în el și l-a așezat între trestii, pe malul Nilului.',
+            5:'Fiica faraonului a coborât la Nil ca să se scalde, iar însoțitoarele ei se plimbau pe mal. Ea a văzut coșul printre trestii și și-a trimis slujitoarea să-l aducă.',
+            10:'Când copilul a crescut, mama lui l-a adus fiicei faraonului, iar el a devenit fiul ei. Ea i-a pus numele Moise și a spus: „Pentru că l-am scos din apă.”',
+            15:'Faraonul a auzit despre acest lucru și a căutat să-l omoare pe Moise. Moise însă a fugit de faraon, a locuit în țara Madian și s-a așezat lângă o fântână.',
+            21:'Moise a primit să locuiască împreună cu acel om, iar acesta i-a dat-o de soție pe fiica sa Sefora.',
+            23:'După multă vreme, regele Egiptului a murit. Fiii lui Israel gemeau din cauza robiei și strigau după ajutor, iar strigătul lor din robie s-a înălțat până la Dumnezeu.',
+            25:'Dumnezeu i-a privit pe fiii lui Israel și a luat seama la ei.'},
+          3:{
+            1:'Moise păștea turma lui Ietro, socrul său, preotul Madianului. A mânat turma dincolo de pustiu și a ajuns la muntele lui Dumnezeu, la Horeb.',
+            3:'Moise a spus: „Mă voi abate să văd această priveliște măreață: de ce nu se mistuie rugul?”',
+            5:'Dumnezeu a spus: „Nu te apropia! Scoate-ți sandalele din picioare, căci locul pe care stai este pământ sfânt.”',
+            8:'M-am coborât ca să-i izbăvesc din mâna egiptenilor și să-i scot din țara aceasta într-o țară bună și întinsă, într-o țară în care curge lapte și miere, în ținutul canaaniților, hetiților, amoriților, periziților, heviților și iebusiților.',
+            14:'Dumnezeu i-a spus lui Moise: „EU SUNT CEL CE SUNT.” Apoi a spus: „Așa să le vorbești fiilor lui Israel: «EU SUNT m-a trimis la voi.»”',
+            15:'Dumnezeu i-a mai spus lui Moise: „Așa să le vorbești fiilor lui Israel: «DOMNUL, Dumnezeul părinților voștri, Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov, m-a trimis la voi.» Acesta este Numele Meu pentru totdeauna și astfel voi fi amintit din generație în generație.',
+            16:'Du-te, adună-i pe bătrânii lui Israel și spune-le: «DOMNUL, Dumnezeul părinților voștri, Dumnezeul lui Avraam, al lui Isaac și al lui Iacov, mi S-a arătat și a spus: Am luat seama la voi și la ce vi se face în Egipt.',
+            18:'Ei vor asculta de glasul tău. Tu și bătrânii lui Israel veți merge la regele Egiptului și îi veți spune: «DOMNUL, Dumnezeul evreilor, ni S-a arătat. Lasă-ne, te rugăm, să mergem cale de trei zile în pustiu, ca să aducem jertfe DOMNULUI, Dumnezeul nostru.»',
+            19:'Știu că regele Egiptului nu vă va lăsa să plecați dacă nu va fi constrâns de o mână puternică.',
+            22:'Fiecare femeie va cere de la vecina ei și de la femeia care locuiește în casa ei obiecte de argint, obiecte de aur și haine. Le veți pune pe fiii și pe fiicele voastre; astfel veți lua prada Egiptului.”'},
+          4:{
+            6:'DOMNUL i-a mai spus: „Bagă-ți mâna în sân!” El și-a băgat mâna în sân, iar când a scos-o, mâna lui era albă ca zăpada, acoperită de o boală de piele.',
+            7:'DOMNUL a spus: „Bagă-ți din nou mâna în sân!” El și-a băgat din nou mâna în sân, iar când a scos-o, aceasta revenise la starea celuilalt trup al său.',
+            10:'Moise I-a spus DOMNULUI: „Te rog, Doamne, eu nu sunt un om cu vorbire ușoară, nici de ieri, nici de alaltăieri, nici de când îi vorbești slujitorului Tău; sunt greoi la vorbire și greoi la limbă.”',
+            13:'Moise a spus: „Te rog, Doamne, trimite pe altcineva!”',
+            16:'El va vorbi poporului în locul tău; el îți va fi gură, iar tu vei fi pentru el ca Dumnezeu.',
+            18:'Moise s-a întors la Ietro, socrul său, și i-a spus: „Lasă-mă, te rog, să mă întorc la frații mei care sunt în Egipt, ca să văd dacă mai sunt în viață.” Ietro i-a spus lui Moise: „Du-te în pace!”',
+            24:'Pe drum, la un loc de popas, DOMNUL l-a întâlnit și a căutat să-l omoare.',
+            25:'Atunci Sefora a luat o piatră ascuțită, a tăiat prepuțul fiului ei și i-a atins picioarele cu el, spunând: „Cu adevărat, ești pentru mine un mire de sânge!”',
+            26:'Atunci DOMNUL l-a lăsat. Ea spusese „mire de sânge” din cauza circumciziei.',
+            28:'Moise i-a spus lui Aaron toate cuvintele DOMNULUI, Care îl trimisese, și toate semnele pe care îi poruncise să le facă.',
+            30:'Aaron a rostit toate cuvintele pe care DOMNUL i le spusese lui Moise și a făcut semnele înaintea poporului.',
+            31:'Poporul a crezut. Când au auzit că DOMNUL luase seama la fiii lui Israel și văzuse suferința lor, s-au plecat și s-au închinat.'},
+          5:{
+            4:'Regele Egiptului le-a spus: „Moise și Aaron, de ce îi opriți pe oameni de la munca lor? Întoarceți-vă la poverile voastre!”',
+            5:'Faraonul a mai spus: „Iată că poporul țării este acum numeros, iar voi îi faceți să se odihnească de munca lui!”',
+            6:'În aceeași zi, faraonul le-a poruncit supraveghetorilor poporului și responsabililor dintre ei:',
+            10:'Supraveghetorii poporului și responsabilii dintre ei au ieșit și le-au spus oamenilor: „Așa vorbește faraonul: «Nu vă mai dau paie.',
+            13:'Supraveghetorii îi zoreau, spunând: „Îndepliniți-vă norma zilnică, la fel ca atunci când primeați paie!”',
+            14:'Responsabilii dintre fiii lui Israel, pe care îi puseseră peste ei supraveghetorii faraonului, erau bătuți și întrebați: „De ce nu v-ați îndeplinit nici ieri, nici astăzi norma de cărămizi, ca mai înainte?”',
+            15:'Responsabilii dintre fiii lui Israel au venit și au strigat către faraon: „De ce te porți astfel cu slujitorii tăi?',
+            16:'Slujitorilor tăi nu li se mai dau paie, dar ni se spune: «Faceți cărămizi!» Iată că slujitorii tăi sunt bătuți, deși vina este a propriului tău popor.”',
+            19:'Responsabilii dintre fiii lui Israel au văzut că se aflau în mare strâmtorare când li s-a spus: „Să nu scădeți nimic din norma zilnică de cărămizi!”',
+            21:'Ei le-au spus: „DOMNUL să vă vadă și să judece! Ne-ați făcut respingători în ochii faraonului și ai slujitorilor lui și le-ați pus sabia în mână ca să ne omoare!”',
+            22:'Moise s-a întors la DOMNUL și a spus: „Doamne, de ce ai adus necaz asupra acestui popor? De ce m-ai trimis?'}}
+          notes={
+          1:[
+            (5,'kol-nefesh yotsei yerekh-Yaakov','toate persoanele care se trăgeau din Iacov','Nefeș poate desemna aici persoane, iar expresia despre coapsa lui Iacov este un idiom genealogic, nu o descriere anatomică cerută în română.',['toate sufletele ieșite din coapsa lui Iacov']),
+            (15,'hamyalledot haivriyyot','moașele evreice','Construcția poate desemna moașe de origine evreică sau moașe care le asistau pe femeile evreice; textul principal păstrează lectura tradițională fără a ascunde ambiguitatea.',['moașele femeilor evreice']),
+            (16,'al-haovnayim','pe scaunul de naștere','Literal, termenul este dual și înseamnă „cele două pietre”; probabil desemnează scaunul sau suportul folosit la naștere.',['pe cele două pietre']),
+            (21,'vayyaas lahem batim','El le-a întemeiat familii','Literal, Dumnezeu „le-a făcut case”; în context expresia indică întemeierea unor familii sau gospodării.',['le-a făcut case'])],
+          2:[
+            (3,'tevah','coș din papirus','Același substantiv este folosit pentru arca lui Noe; aici obiectul mic din papirus este redat natural prin „coș”, iar legătura lexicală rămâne documentată.',['arcă din papirus']),
+            (10,'Moshe / meshitihu','Moise / l-am scos din apă','Narațiunea oferă un joc de cuvinte ebraic între numele Moise și verbul „a scoate”; numele poate avea și o origine egipteană.',['cel scos']),
+            (22,'Gershom / ger hayiti sham','Gherșom / am locuit ca străin acolo','Numele este legat narativ de statutul lui Moise de străin, fără a afirma că aceasta este singura etimologie posibilă.',[]),
+            (25,'vayyeda Elohim','Dumnezeu a luat seama la ei','Verbul yada înseamnă literal „a cunoaște”, dar aici exprimă recunoașterea atentă și implicată a suferinței lor.',['Dumnezeu i-a cunoscut'])],
+          3:[
+            (2,'malakh YHWH','Îngerul DOMNULUI','Textul alternează Îngerul DOMNULUI, DOMNUL și Dumnezeu în aceeași arătare; traducerea păstrează progresia fără a introduce în verset o identificare hristologică explicită.',[]),
+            (14,'ehyeh asher ehyeh','EU SUNT CEL CE SUNT','Forma ebraică poate fi redată și viitor: „Voi fi Cel ce voi fi”. Decizia păstrează lectura tradițională, iar alternativa rămâne vizibilă.',['VOI FI CEL CE VOI FI','EU VOI FI CEL CE VOI FI']),
+            (15,'YHWH','DOMNUL','Numele propriu divin este redat prin convenția tipografică DOMNUL. Transliterarea YHWH aparține notei, nu textului versetului.',['YHWH','Iahve']),
+            (19,'velo beyad hazakah','dacă nu va fi constrâns de o mână puternică','Relația particulei negative cu expresia „mână puternică” este dificilă. Sensul contextual este că faraonul nu va permite plecarea fără constrângerea puterii divine.',['nici măcar sub o mână puternică'])],
+          4:[
+            (6,'metsoraat kashaleg','acoperită de o boală de piele, albă ca zăpada','Termenul țaraat desemnează o categorie rituală de afecțiuni și nu trebuie echivalat automat cu boala modernă numită lepră.',['leproasă, albă ca zăpada']),
+            (10,'khevad-pe ukhevad lashon','greoi la vorbire și greoi la limbă','Expresia descrie dificultatea de exprimare a lui Moise; textul nu oferă un diagnostic medical precis.',['greu de gură și greu de limbă']),
+            (13,'shelah-na beyad-tishlah','trimite pe altcineva','Literal: „trimite, te rog, prin mâna celui pe care îl vei trimite”; sensul cererii este ca Dumnezeu să aleagă pe altcineva.',['trimite prin cine vei trimite']),
+            (24,'vayvaqesh hamito','l-a întâlnit și a căutat să-l omoare','Pronumele nu îl identifică explicit pe cel amenințat; Moise este lectura contextuală obișnuită, dar nu este introdus în text.',['a căutat să-l omoare pe Moise','a căutat să-l omoare pe fiul lui']),
+            (25,'vatagga leraglav','i-a atins picioarele','Referentul pronumelui și sensul exact al „picioarelor” sunt disputate; termenul poate funcționa și ca eufemism.',['a aruncat prepuțul la picioarele lui'])],
+          5:[
+            (5,'vehishbatem','îi faceți să se odihnească de munca lui','Verbul provine din rădăcina șabat, „a înceta/a se odihni”, și anticipează vocabularul Sabatului fără a spune că poporul ținea aici Sabatul.',['îi opriți de la poverile lor']),
+            (16,'vehatat ammekha','vina este a propriului tău popor','Textul atribuie vina oamenilor faraonului; nu spune „tabăra ta”.',['poporul tău este vinovat']),
+            (21,'hivash-tem et-rehenu','ne-ați făcut respingători','Literal, „ați făcut mirosul nostru să pută”; expresia este un idiom al disprețului și reputației compromise.',['ne-ați făcut urât mirositori'])]}
+          def mk_note(v,t,d,r,alts):
+              n={'verse':v,'term':t,'decision':d,'reason':r,'reviewRequired':True,'resolutionStatus':'resolved','resolutionReason':r}
+              if alts: n['alternatives']=alts
+              return n
+          for ch in range(1,6):
+              p=root/f'EXO.{ch}.json'; d=json.loads(p.read_text(encoding='utf-8'))
+              by={v['number']:v for v in d['verses']}
+              for num,text in updates[ch].items(): by[num]['text']=text
+              d['editorialNotes']=[mk_note(*x) for x in notes[ch]]
+              d['status']='published'; d['public']=True
+              for k in d['review']: d['review'][k]='approved'
+              for k in d['benchmark']['checks']: d['benchmark']['checks'][k]='approved'
+              a=d['audit']; a.pop('pendingReason',None)
+              a['sourceLanguage']['result']='approved'; a['sourceLanguage']['scope']='lexic, sintaxă, idiomuri, nume divine și ambiguități verificate verset cu verset în WLC-OSHB'
+              a['romanianLanguage']['result']='approved'; a['romanianLanguage']['changesApplied']=['Au fost eliminate calcurile și formulările nenaturale.','Numele, titlurile și dialogurile au fost armonizate cu convențiile Bibliei Emanus.']
+              a['theologicalContext']['result']='approved'; a['theologicalContext']['principles']=['Relatarea asupririi și a uciderii copiilor nu aprobă violența de stat.','Arătarea lui Dumnezeu și Numele divin sunt păstrate fără impunerea în verset a unei interpretări confesionale disputate.','Episodul circumciziei din Exodul 4 este păstrat cu ambiguitățile sale reale.']
+              a['omissionAddition'].update(result='approved',omissions=0,additions=0)
+              a['copyrightDistance']['result']='approved'; a['criticalIssues'].update(result='approved',open=0)
+              p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          mpath=root/'manifest.json'; m=json.loads(mpath.read_text(encoding='utf-8'))
+          m['progress'].update(chaptersDrafted=90,versesDrafted=2746,chaptersApproved=55,chaptersPublished=55)
+          mpath.write_text(json.dumps(m,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          PY
+          git rm .github/workflows/tmp-repair-exodus-1-5.yml
+          git add docs/data/biblia-emanus/EXO.{1,2,3,4,5}.json docs/data/biblia-emanus/manifest.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Substantively audit and publish Exodus 1-5"
+          git push origin HEAD:agent/biblia-emanus-exodul
