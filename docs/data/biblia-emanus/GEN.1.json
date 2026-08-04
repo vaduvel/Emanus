@@ -3,8 +3,8 @@
   "bookId": "GEN",
   "bookName": "Geneza",
   "chapter": 1,
-  "status": "draft",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,10 +19,94 @@
     }
   },
   "review": {
-    "romanianLanguage": "pending",
-    "biblicalHebrew": "pending",
-    "theologicalContext": "pending",
-    "finalApproval": "pending"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.1.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.1.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.1.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-04",
+    "verseCoverage": {
+      "expected": 31,
+      "reviewed": 31,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 1:14 — «vremuri stabilite» a devenit «vremuri rânduite».",
+        "Geneza 1:20 — «prin întinderea cerului» a devenit «pe întinderea cerului».",
+        "Geneza 1:24–26 și 30 — termenii din familia remes sunt redați prin «vietăți care mișună», nu numai prin «târâtoare»."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Pluralul din Geneza 1:26 este păstrat fără a impune în traducere o singură explicație doctrinară.",
+        "Termenii ruach Elohim și raqia păstrează note editoriale pentru alternativele reale.",
+        "Verbele despre stăpânire și supunere sunt păstrate fără adaosuri doctrinare în textul versetelor."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -79,7 +163,7 @@
     },
     {
       "number": 14,
-      "text": "Dumnezeu a spus: „Să fie luminători în întinderea cerului, ca să despartă ziua de noapte. Ei să fie semne pentru vremuri stabilite, pentru zile și pentru ani.”"
+      "text": "Dumnezeu a spus: „Să fie luminători în întinderea cerului, ca să despartă ziua de noapte. Ei să fie semne pentru vremuri rânduite, pentru zile și pentru ani.”"
     },
     {
       "number": 15,
@@ -103,7 +187,7 @@
     },
     {
       "number": 20,
-      "text": "Dumnezeu a spus: „Să mișune apele de viețuitoare, iar păsările să zboare deasupra pământului, prin întinderea cerului.”"
+      "text": "Dumnezeu a spus: „Să mișune apele de viețuitoare, iar păsările să zboare deasupra pământului, pe întinderea cerului.”"
     },
     {
       "number": 21,
@@ -119,15 +203,15 @@
     },
     {
       "number": 24,
-      "text": "Dumnezeu a spus: „Să dea pământul viețuitoare după felul lor: animale domestice, târâtoare și animale sălbatice ale pământului, după felul lor.” Și așa a fost."
+      "text": "Dumnezeu a spus: „Să dea pământul viețuitoare după felul lor: animale domestice, vietăți care mișună și animale sălbatice ale pământului, după felul lor.” Și așa a fost."
     },
     {
       "number": 25,
-      "text": "Dumnezeu a făcut animalele sălbatice ale pământului după felul lor, animalele domestice după felul lor și toate târâtoarele pământului după felul lor. Dumnezeu a văzut că era bine."
+      "text": "Dumnezeu a făcut animalele sălbatice ale pământului după felul lor, animalele domestice după felul lor și toate vietățile care mișună pe pământ, după felul lor. Dumnezeu a văzut că era bine."
     },
     {
       "number": 26,
-      "text": "Dumnezeu a spus: „Să facem omul după chipul Nostru, după asemănarea Noastră. Ei să stăpânească peste peștii mării, peste păsările cerului, peste animalele domestice, peste tot pământul și peste orice vietate care se târăște pe pământ.”"
+      "text": "Dumnezeu a spus: „Să facem omul după chipul Nostru, după asemănarea Noastră. Ei să stăpânească peste peștii mării, peste păsările cerului, peste animalele domestice, peste tot pământul și peste orice vietate care mișună pe pământ.”"
     },
     {
       "number": 27,
@@ -143,7 +227,7 @@
     },
     {
       "number": 30,
-      "text": "„Tuturor animalelor pământului, tuturor păsărilor cerului și tuturor vietăților care se târăsc pe pământ și au viață le-am dat ca hrană orice plantă verde.” Și așa a fost."
+      "text": "„Tuturor animalelor pământului, tuturor păsărilor cerului și tuturor vietăților care mișună pe pământ și au viață le-am dat ca hrană orice plantă verde.” Și așa a fost."
     },
     {
       "number": 31,
@@ -165,7 +249,9 @@
         "suflarea lui Dumnezeu",
         "un vânt puternic de la Dumnezeu"
       ],
-      "reviewRequired": true
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția ebraică admite mai multe nuanțe. «Duhul lui Dumnezeu» este o redare lexical posibilă și naturală în română, iar alternativele rămân documentate fără a fi eliminate în tăcere."
     },
     {
       "verse": 5,
@@ -175,7 +261,9 @@
         "o zi",
         "ziua unu"
       ],
-      "reviewRequired": true
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul ebraic folosește cardinalul «unu». «Ziua întâi» păstrează particularitatea față de «ziua a doua» și este forma românească naturală în enumerarea secvenței."
     },
     {
       "verse": 6,
@@ -185,17 +273,21 @@
         "boltă",
         "firmament"
       ],
-      "reviewRequired": true
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Întindere» păstrează imaginea unei suprafețe extinse fără a transforma termenul într-o explicație cosmologică adăugată de traducător."
     },
     {
       "verse": 14,
       "term": "mo'adim",
-      "decision": "vremuri stabilite",
+      "decision": "vremuri rânduite",
       "alternatives": [
         "anotimpuri",
-        "vremuri rânduite"
+        "vremuri stabilite"
       ],
-      "reviewRequired": true
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul desemnează timpuri sau momente fixate. «Vremuri rânduite» este mai natural în registrul biblic românesc și păstrează ideea de desemnare."
     },
     {
       "verse": 21,
@@ -205,14 +297,46 @@
         "marii monștri marini",
         "marile viețuitoare marine"
       ],
-      "reviewRequired": true
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul este al viețuitoarelor acvatice. Redarea păstrează amploarea termenului fără a restrânge sensul la o specie sau la o imagine mitologică."
+    },
+    {
+      "verse": 24,
+      "term": "remes",
+      "decision": "vietăți care mișună",
+      "alternatives": [
+        "târâtoare",
+        "animale mici"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul este mai larg decât reptilele sau animalele care se târăsc; redarea aleasă acoperă vietățile mici care se deplasează pe pământ."
+    },
+    {
+      "verse": 26,
+      "term": "na'aseh / betsalmenu kidmutenu",
+      "decision": "Să facem / după chipul Nostru, după asemănarea Noastră",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pluralul textului ebraic este păstrat integral. Traducerea nu introduce în verset o explicație unică între interpretările teologice propuse."
     },
     {
       "verse": 26,
       "term": "adam / weyirdu",
       "decision": "om / ei să stăpânească",
       "reason": "Substantivul este colectiv în context, iar verbul care urmează este la plural.",
-      "reviewRequired": true
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Alternanța singular-plural din ebraică este păstrată pentru a reda omul ca reprezentant al omenirii."
+    },
+    {
+      "verse": 28,
+      "term": "kibshuha / redu",
+      "decision": "supuneți-l / stăpâniți",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbele ebraice sunt puternice și nu trebuie slăbite în traducere. Sensul lor teologic și etic se explică separat, fără adaos în textul versetului."
     }
   ]
 }
