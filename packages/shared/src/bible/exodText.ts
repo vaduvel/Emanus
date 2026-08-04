@@ -18,7 +18,7 @@ const EXOD_TEXT: Record<number, readonly string[]> = {
     "Peste Egipt s-a ridicat un nou împărat, care nu cunoscuse pe Iosif.",
     "El a zis poporului său: „Iată că poporul copiilor lui Israel este mai mare și mai puternic decât noi.",
     "Veniți să ne arătăm dibaci față de el, ca să nu crească, pentru ca nu cumva, dacă se va întâmpla un război, să se unească și el cu vrăjmașii noștri, să ne bată și să iasă apoi din țară.”",
-    "Și au pus peste ei imprăvnicei, ca să-i asuprească prin munci grele. Astfel a zidit el cetățile Pitom și Ramses, ca să slujească de hambare lui Faraon.",
+    "Și au pus peste ei isprăvnicei, ca să-i asuprească prin munci grele. Astfel a zidit el cetățile Pitom și Ramses, ca să slujească de hambare lui Faraon.",
     "Dar cu cât îl asupreau mai mult, cu atât se înmulțea și creștea; și s-au scârbit de copiii lui Israel.",
     "Atunci egiptenii au adus pe copiii lui Israel la o aspră robie.",
     "Le-au făcut viața amară prin lucrări grele de lut și cărămizi, și prin tot felul de lucrări de pe câmp: în toate muncile acestea pe care îi sileau să le facă, erau fără nici un pic de milă.",
