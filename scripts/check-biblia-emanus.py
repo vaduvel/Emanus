@@ -13,14 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "docs" / "data" / "biblia-emanus"
 MANIFEST_PATH = DATA_DIR / "manifest.json"
 ALLOWED_STATUSES = {"draft", "in_review", "approved", "published"}
+ALLOWED_REVIEW_VALUES = {"pending", "approved", "changes_requested"}
 ROMANIAN_DIACRITICS = set("ăâîșțĂÂÎȘȚ")
 FORBIDDEN_SEDILLA = set("şţŞŢ")
-REQUIRED_REVIEWS = {
-    "romanianLanguage",
-    "sourceLanguage",
-    "theologicalContext",
-    "finalApproval",
-}
+BASE_REVIEW_KEYS = {"romanianLanguage", "theologicalContext", "finalApproval"}
+SOURCE_REVIEW_KEYS = {"sourceLanguage", "biblicalHebrew", "biblicalGreek"}
 
 
 class ValidationError(Exception):
@@ -50,16 +47,16 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def validate_manifest(manifest: dict[str, Any]) -> None:
-    if manifest.get("id") != "biblia-emanus":
-        fail("manifest.json: id trebuie să fie biblia-emanus")
-    if manifest.get("abbreviation") != "BE":
-        fail("manifest.json: abrevierea trebuie să fie BE")
-    if manifest.get("language") != "ro":
-        fail("manifest.json: limba trebuie să fie ro")
-    if manifest.get("canon") != "protestant-66":
-        fail("manifest.json: canonul inițial trebuie să fie protestant-66")
-    if manifest.get("public") is not False:
-        fail("manifest.json: proiectul trebuie să rămână nepublic în faza de ciornă")
+    expected = {
+        "id": "biblia-emanus",
+        "abbreviation": "BE",
+        "language": "ro",
+        "canon": "protestant-66",
+        "public": False,
+    }
+    for key, value in expected.items():
+        if manifest.get(key) != value:
+            fail(f"manifest.json: {key} trebuie să fie {value!r}")
 
     method = manifest.get("translationMethod")
     if not isinstance(method, dict):
@@ -83,30 +80,32 @@ def validate_manifest(manifest: dict[str, Any]) -> None:
         fail("manifest.json: lipsește protecția mărcii World English Bible")
 
     old_testament = sources.get("oldTestament")
-    if not isinstance(old_testament, dict):
-        fail("manifest.json: lipsește sursa ebraică")
-    if old_testament.get("textLicense") != "Public Domain":
+    if not isinstance(old_testament, dict) or old_testament.get("textLicense") != "Public Domain":
         fail("manifest.json: licența textului WLC trebuie documentată")
 
     new_testament = sources.get("newTestament")
-    if not isinstance(new_testament, dict):
-        fail("manifest.json: lipsește sursa greacă")
-    if new_testament.get("license") != "CC BY 4.0":
+    if not isinstance(new_testament, dict) or new_testament.get("license") != "CC BY 4.0":
         fail("manifest.json: SBLGNT trebuie atribuit sub CC BY 4.0")
 
 
 def validate_review(path: Path, review: Any, status: str) -> None:
     if not isinstance(review, dict):
         fail(f"{path.name}: lipsește obiectul review")
-    missing = REQUIRED_REVIEWS.difference(review)
+    missing = BASE_REVIEW_KEYS.difference(review)
     if missing:
         fail(f"{path.name}: lipsesc câmpurile de review: {', '.join(sorted(missing))}")
-    allowed_review_values = {"pending", "approved", "changes_requested"}
-    for key in REQUIRED_REVIEWS:
-        if review[key] not in allowed_review_values:
+    source_keys = SOURCE_REVIEW_KEYS.intersection(review)
+    if len(source_keys) != 1:
+        fail(
+            f"{path.name}: trebuie un singur review de limbă-sursă "
+            "(sourceLanguage, biblicalHebrew sau biblicalGreek)"
+        )
+    reviewed_keys = BASE_REVIEW_KEYS | source_keys
+    for key in reviewed_keys:
+        if review[key] not in ALLOWED_REVIEW_VALUES:
             fail(f"{path.name}: valoare review invalidă pentru {key}")
     if status in {"approved", "published"} and any(
-        review[key] != "approved" for key in REQUIRED_REVIEWS
+        review[key] != "approved" for key in reviewed_keys
     ):
         fail(f"{path.name}: un capitol {status} cere toate review-urile aprobate")
 
@@ -127,7 +126,8 @@ def validate_chapter(path: Path, data: dict[str, Any], manifest: dict[str, Any])
     status = data.get("status")
     if status not in ALLOWED_STATUSES:
         fail(f"{path.name}: status invalid")
-    if data.get("public") is not (status == "published"):
+    expected_public = status == "published"
+    if data.get("public") != expected_public:
         fail(f"{path.name}: public trebuie să fie adevărat numai pentru published")
     if status == "published" and manifest.get("licenseDecision") == "pending":
         fail(f"{path.name}: publicarea este blocată până la alegerea licenței")
@@ -144,8 +144,8 @@ def validate_chapter(path: Path, data: dict[str, Any], manifest: dict[str, Any])
         fail(f"{path.name}: sursa engleză trebuie să fie Public Domain")
     if not str(english.get("passageUrl", "")).startswith("https://ebible.org/engweb"):
         fail(f"{path.name}: URL WEBU invalid")
-    if "hebrew" not in source and "greek" not in source:
-        fail(f"{path.name}: trebuie declarată sursa ebraică sau greacă")
+    if ("hebrew" in source) == ("greek" in source):
+        fail(f"{path.name}: declară exact una dintre sursele ebraică sau greacă")
 
     verses = data.get("verses")
     if not isinstance(verses, list) or not verses:
@@ -195,8 +195,7 @@ def main() -> int:
             validate_chapter(path, load_json(path), manifest) for path in chapter_paths
         ]
 
-        declared = manifest.get("draftedChapters")
-        if declared != chapters:
+        if manifest.get("draftedChapters") != chapters:
             fail(
                 "manifest.json: draftedChapters trebuie să corespundă exact fișierelor "
                 f"({chapters})"
