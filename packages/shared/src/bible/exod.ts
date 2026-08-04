@@ -1,5 +1,6 @@
 import type { BibleBook } from "./types.js"
 import { exodChapter, teaching } from "./exodHelpers.js"
+import { EXOD_2 } from "./exod2.js"
 
 /*
  * Cartea Exod (Ieșirea), explicată pe unități de sens.
@@ -7,6 +8,9 @@ import { exodChapter, teaching } from "./exodHelpers.js"
  * Textul biblic: Cornilescu, editia corectata (RCCV), păstrat separat în exodText.ts.
  * Explicația: scrisă pentru Emanus după cercetarea textului. Nu se copiază
  * formularea niciunui predicator sau comentator.
+ *
+ * Aici se adună toate capitolele cărții. Fiecare capitol nou se importă și se
+ * adaugă în lista de mai jos, ca să nu mai fie nevoie de atins index.ts.
  */
 
 export const EXOD_1 = exodChapter({
@@ -134,5 +138,5 @@ export const EXOD: BibleBook = {
   order: 2,
   blurb:
     "Cartea ieșirii din robie. În ebraică se numește „Numele”, fiindcă începe cu oameni chemați pe nume. Aici Dumnezeu Se coboără în suferința unui popor, Își descoperă Numele, scoate cu mână tare, dă Legea și vine să locuiască în mijlocul alor Săi.",
-  chapters: [EXOD_1],
+  chapters: [EXOD_1, EXOD_2],
 }
