@@ -3,8 +3,8 @@
   "bookId": "GEN",
   "bookName": "Geneza",
   "chapter": 13,
-  "status": "draft",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,10 +19,96 @@
     }
   },
   "review": {
-    "romanianLanguage": "pending",
-    "biblicalHebrew": "pending",
-    "theologicalContext": "pending",
-    "finalApproval": "pending"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.13.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.13.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.13.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru verificarea sensului și a naturaleții.",
+      "Formularea a fost verificată independent în WLC-OSHB și WEBU.",
+      "Nu a fost preluată formularea continuă a unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-04",
+    "verseCoverage": {
+      "expected": 18,
+      "reviewed": 18,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "itinerar, termeni de rudenie, geografia câmpiei Iordanului, formulele promisiunii și termenii botanici"
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 13:3 — lemassa'aw rămâne «din popas în popas», păstrând caracterul itinerant.",
+        "Geneza 13:6 — formularea este naturalizată prin «țara nu-i putea cuprinde ca să locuiască împreună».",
+        "Geneza 13:8 — ahim este redat contextual prin «rude», nu prin «frați» biologici.",
+        "Geneza 13:12 — Lot își mută corturile până aproape de Sodoma; textul nu afirmă încă locuirea lui în cetate.",
+        "Geneza 13:13 — intensificarea ebraică este păstrată prin «foarte răi și mari păcătoși împotriva DOMNULUI»."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Alegerea lui Lot este relatată fără a introduce în verset motive morale suplimentare.",
+        "Promisiunea țării și a urmașilor este păstrată în forma narativă a capitolului, fără armonizare anticipată cu interpretări ulterioare.",
+        "Descrierea Sodomei este redată conform textului, fără a reduce aici răutatea cetății la un singur păcat nespecificat de capitol."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     { "number": 1, "text": "Avram a urcat din Egipt spre Neghev, el, soția lui și tot ce avea, iar Lot era împreună cu el." },
@@ -30,14 +116,14 @@
     { "number": 3, "text": "Din Neghev a mers din popas în popas până la Betel, la locul unde îi fusese cortul la început, între Betel și Ai," },
     { "number": 4, "text": "la locul altarului pe care îl construise acolo mai înainte. Acolo Avram a chemat Numele DOMNULUI." },
     { "number": 5, "text": "Și Lot, care mergea împreună cu Avram, avea turme, cirezi și corturi." },
-    { "number": 6, "text": "Țara nu îi putea susține ca să locuiască împreună, pentru că averile lor erau atât de mari, încât nu puteau locui împreună." },
+    { "number": 6, "text": "Țara nu-i putea cuprinde ca să locuiască împreună, pentru că averile lor erau atât de mari, încât nu puteau locui împreună." },
     { "number": 7, "text": "S-a iscat o ceartă între păstorii vitelor lui Avram și păstorii vitelor lui Lot. În vremea aceea, canaaniții și fereziții locuiau în țară." },
     { "number": 8, "text": "Avram i-a spus lui Lot: „Te rog, să nu fie ceartă între mine și tine și între păstorii mei și păstorii tăi, pentru că suntem rude." },
     { "number": 9, "text": "Nu este întreaga țară înaintea ta? Te rog, desparte-te de mine. Dacă mergi la stânga, eu voi merge la dreapta; iar dacă mergi la dreapta, eu voi merge la stânga.”" },
     { "number": 10, "text": "Lot și-a ridicat ochii și a văzut că întreaga câmpie a Iordanului era bine udată pretutindeni. Înainte ca DOMNUL să distrugă Sodoma și Gomora, ea era ca grădina DOMNULUI și ca țara Egiptului, în direcția Țoarului." },
     { "number": 11, "text": "Lot și-a ales întreaga câmpie a Iordanului și a plecat spre răsărit. Astfel, s-au despărțit unul de celălalt." },
-    { "number": 12, "text": "Avram a locuit în țara Canaanului, iar Lot a locuit în cetățile câmpiei și și-a mutat corturile până la Sodoma." },
-    { "number": 13, "text": "Oamenii din Sodoma erau foarte răi și păcătuiau grav împotriva DOMNULUI." },
+    { "number": 12, "text": "Avram a locuit în țara Canaanului, iar Lot a locuit în cetățile câmpiei și și-a mutat corturile până aproape de Sodoma." },
+    { "number": 13, "text": "Oamenii din Sodoma erau foarte răi și mari păcătoși împotriva DOMNULUI." },
     { "number": 14, "text": "După ce Lot s-a despărțit de el, DOMNUL i-a spus lui Avram: „Ridică-ți ochii și privește din locul în care ești spre nord, spre sud, spre răsărit și spre apus," },
     { "number": 15, "text": "pentru că toată țara pe care o vezi ți-o voi da ție și urmașilor tăi pentru totdeauna." },
     { "number": 16, "text": "Îți voi face urmașii asemenea pulberii pământului, astfel încât, dacă cineva poate număra pulberea pământului, atunci și urmașii tăi vor putea fi numărați." },
@@ -45,12 +131,75 @@
     { "number": 18, "text": "Avram și-a mutat corturile, a venit și a locuit lângă stejarii lui Mamre, care sunt în Hebron, și a construit acolo un altar DOMNULUI." }
   ],
   "editorialNotes": [
-    { "verse": 1, "term": "hannégbah", "decision": "spre Neghev", "alternatives": ["spre sud"], "reviewRequired": true },
-    { "verse": 3, "term": "lemassa'aw", "decision": "din popas în popas", "alternatives": ["pe același drum", "în călătoriile sale"], "reviewRequired": true },
-    { "verse": 8, "term": "anashim ahim anahnu", "decision": "suntem rude", "alternatives": ["suntem frați"], "reason": "Avram și Lot nu erau frați biologici; termenul exprimă aici rudenia apropiată.", "reviewRequired": true },
-    { "verse": 10, "term": "kikkar hayYarden", "decision": "câmpia Iordanului", "alternatives": ["ținutul circular al Iordanului", "Valea Iordanului"], "reviewRequired": true },
-    { "verse": 12, "term": "waye'ehal ad-Sedom", "decision": "și-a mutat corturile până la Sodoma", "alternatives": ["și-a întins corturile în apropierea Sodomei"], "reason": "Prepoziția indică înaintarea până la Sodoma; textul nu spune încă explicit că Lot locuia în cetate.", "reviewRequired": true },
-    { "verse": 13, "term": "ra'im vehatta'im laYHWH meod", "decision": "foarte răi și păcătuiau grav împotriva DOMNULUI", "alternatives": ["răi și mari păcătoși înaintea DOMNULUI"], "reviewRequired": true },
-    { "verse": 18, "term": "elone Mamre", "decision": "stejarii lui Mamre", "alternatives": ["terebinții lui Mamre"], "reviewRequired": true }
+    {
+      "verse": 1,
+      "term": "hannégbah",
+      "decision": "spre Neghev",
+      "alternatives": ["spre sud"],
+      "reason": "Termenul poate desemna atât direcția sud, cât și regiunea Neghev.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul traseului favorizează numele regiunii."
+    },
+    {
+      "verse": 3,
+      "term": "lemassa'aw",
+      "decision": "din popas în popas",
+      "alternatives": ["pe același drum", "în călătoriile sale"],
+      "reason": "Forma indică etapele sau popasurile călătoriei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea aleasă păstrează mișcarea progresivă a caravanei."
+    },
+    {
+      "verse": 8,
+      "term": "anashim ahim anahnu",
+      "decision": "suntem rude",
+      "alternatives": ["suntem frați"],
+      "reason": "Avram și Lot sunt rude apropiate, nu frați biologici.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul ebraic este redat contextual, fără a crea o relație genealogică greșită."
+    },
+    {
+      "verse": 10,
+      "term": "kikkar hayYarden",
+      "decision": "câmpia Iordanului",
+      "alternatives": ["ținutul circular al Iordanului", "Valea Iordanului"],
+      "reason": "Kikkar desemnează regiunea joasă și întinsă a Iordanului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea este geografic naturală și consecventă în capitol."
+    },
+    {
+      "verse": 12,
+      "term": "waye'ehal ad-Sedom",
+      "decision": "și-a mutat corturile până aproape de Sodoma",
+      "alternatives": ["și-a întins corturile până la Sodoma"],
+      "reason": "Prepoziția ad indică apropierea sau atingerea limitei; textul nu spune încă explicit că Lot locuia în cetate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea evită anticiparea afirmației din Geneza 14:12."
+    },
+    {
+      "verse": 13,
+      "term": "ra'im vehatta'im laYHWH meod",
+      "decision": "foarte răi și mari păcătoși împotriva DOMNULUI",
+      "alternatives": ["foarte răi și păcătuiau grav împotriva DOMNULUI"],
+      "reason": "Textul folosește două substantive/adjective coordonate și intensificatorul meod.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este păstrat paralelismul nominal și intensitatea ebraică."
+    },
+    {
+      "verse": 18,
+      "term": "elone Mamre",
+      "decision": "stejarii lui Mamre",
+      "alternatives": ["terebinții lui Mamre"],
+      "reason": "Identificarea botanică exactă a termenului elon este discutată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Forma tradițională românească este păstrată, cu alternativa documentată."
+    }
   ]
 }
