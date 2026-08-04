@@ -1,0 +1,46 @@
+name: Fix Exodus 20 ledger note
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-exodul
+    paths:
+      - .github/workflows/tmp-fix-exodus-20-note.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-exodul
+          fetch-depth: 0
+      - name: Add missing note and clean report
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('docs/data/biblia-emanus/EXO.20.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          note={
+            'verse':2,
+            'term':'mibbeit avadim',
+            'decision':'din casa robiei',
+            'reason':'Literal, expresia înseamnă „din casa sclavilor/sclaviei” și descrie Egiptul ca sistem al robiei din care Dumnezeu l-a eliberat pe Israel; nu este numele unei clădiri.',
+            'reviewRequired':True,
+            'resolutionStatus':'resolved',
+            'resolutionReason':'Literal, expresia înseamnă „din casa sclavilor/sclaviei” și descrie Egiptul ca sistem al robiei din care Dumnezeu l-a eliberat pe Israel; nu este numele unei clădiri.',
+            'alternatives':['din casa sclaviei']
+          }
+          if not any(n.get('verse')==2 for n in d.get('editorialNotes',[])):
+              d['editorialNotes'].insert(0,note)
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+          git rm .github/workflows/tmp-fix-exodus-20-note.yml docs/data/biblia-emanus/.audit-EXO-missing-notes.txt
+          git add docs/data/biblia-emanus/EXO.20.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Resolve final Exodus ledger note"
+          git push origin HEAD:agent/biblia-emanus-exodul
