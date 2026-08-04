@@ -1,4 +1,5 @@
 import { EXOD_TEXT_1_TO_4 } from "./exodText1to4.js"
+import { EXOD_TEXT_5 } from "./exodText5.js"
 
 /*
  * Textul biblic al cărții Exod, păstrat separat de explicație.
@@ -12,6 +13,7 @@ import { EXOD_TEXT_1_TO_4 } from "./exodText1to4.js"
 
 const EXOD_TEXT: Record<number, readonly string[]> = {
   ...EXOD_TEXT_1_TO_4,
+  ...EXOD_TEXT_5,
 }
 
 /** Câte versete are capitolul cerut. Aruncă dacă textul nu a fost încă adăugat. */
