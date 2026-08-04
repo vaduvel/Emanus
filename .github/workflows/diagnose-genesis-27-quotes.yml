@@ -1,4 +1,4 @@
-name: Diagnose Genesis 27 Quotes
+name: Fix Genesis 27 Quotes
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  diagnose:
+  fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,30 +20,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Count Romanian quotes by verse
+      - name: Keep Rebekah's speech open through verse 45
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
-          source = Path('docs/data/biblia-emanus/GEN.27.json')
-          report = Path('docs/data/biblia-emanus/GEN.27.quotes.txt')
-          data = json.loads(source.read_text(encoding='utf-8'))
-          depth = 0
-          lines = []
+          path = Path('docs/data/biblia-emanus/GEN.27.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
           for verse in data['verses']:
-              text = verse['text']
-              opens = text.count('„')
-              closes = text.count('”')
-              depth += opens - closes
-              lines.append(f"{verse['number']:02d}\topens={opens}\tcloses={closes}\tdepth={depth}\t{text}")
+              if verse['number'] == 42:
+                  expected = 'Rebecăi i-au fost spuse cuvintele fiului ei cel mare, Esau. Ea a trimis să-l cheme pe fiul ei cel mic, Iacov, și i-a spus: „Iată, fratele tău Esau își găsește mângâierea în gândul că te va ucide.”'
+                  if verse['text'] != expected:
+                      raise SystemExit(f"Text neașteptat în Geneza 27:42: {verse['text']}")
+                  verse['text'] = verse['text'][:-1]
           full = ' '.join(v['text'] for v in data['verses'])
-          lines.insert(0, f"TOTAL opens={full.count('„')} closes={full.count('”')} final_depth={depth}")
-          report.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          if full.count('„') != full.count('”'):
+              raise SystemExit(f"Ghilimele încă neechilibrate: {full.count('„')} / {full.count('”')}")
+          path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
           PY
-      - name: Commit diagnostic report
+      - name: Commit quote correction
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/data/biblia-emanus/GEN.27.quotes.txt
-          git commit -m 'Add Genesis 27 quote diagnostic'
+          git add docs/data/biblia-emanus/GEN.27.json
+          git commit -m 'Balance Romanian quotes in Genesis 27'
           git push origin HEAD:agent/biblia-emanus
