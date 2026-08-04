@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 12,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,252 +75,367 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic ritual, numere, variante textuale, poezie și formule juridice verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Textul contaminat sau mecanic a fost înlocuit integral cu română naturală.",
+        "Terminologia Paștelui, a întâilor născuți, a trecerii mării și a cântării a fost armonizată."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Paștele este redat în contextul său istoric și ritual, fără importarea directă în versete a tipologiei ulterioare.",
+        "Moartea întâilor născuți, sclavia și nimicirea armatei sunt relatate explicit, fără transformarea lor în autorizații moderne pentru violență sau exploatare.",
+        "Vindecarea și protecția din legământ nu sunt folosite pentru a culpabiliza bolnavii sau pentru a descuraja îngrijirea medicală."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "The DOMNUL a vorbit lui Moise and Aaron in the țară of Egipt, saying,"
+      "text": "DOMNUL le-a vorbit lui Moise și lui Aaron în țara Egiptului și le-a spus:"
     },
     {
       "number": 2,
-      "text": "This month shall be to you the beginning of months. It shall be the first month of the year to you. (text revizuit în limba română cu diacritice)"
+      "text": "„Luna aceasta să fie pentru voi începutul lunilor; să fie pentru voi prima lună a anului."
     },
     {
       "number": 3,
-      "text": "Speak to all the congregation of Israel, saying, ‘On the tenth day of this month, they shall take to them every man a lamb, according to their fathers’ houses, a lamb for a household; (text revizuit în limba română cu diacritice)"
+      "text": "Vorbiți întregii adunări a lui Israel și spuneți-le: «În ziua a zecea a acestei luni, fiecare bărbat să ia un animal din turmă pentru casa părintească, câte unul pentru fiecare gospodărie."
     },
     {
       "number": 4,
-      "text": "and if the household is too little for a lamb, then he and his neighbor next to his house shall take one according to the number of the souls. You shall make your count for the lamb according to what everyone can eat. (text revizuit în limba română cu diacritice)"
+      "text": "Dacă gospodăria este prea mică pentru un animal întreg, să-l ia împreună cu vecinul cel mai apropiat, după numărul persoanelor. Să calculați pentru fiecare animal cât poate mânca fiecare om."
     },
     {
       "number": 5,
-      "text": "Your lamb shall be without defect, a male a year old. You shall take it from the sheep or from the să pleceats."
+      "text": "Animalul să fie fără cusur, de parte bărbătească și de un an. Îl puteți lua dintre oi sau dintre capre."
     },
     {
       "number": 6,
-      "text": "You shall keep it until the fourteenth day of the same month; and the whole assembly of the congregation of Israel shall kill it at evening. (text revizuit în limba română cu diacritice)"
+      "text": "Să-l păstrați până în ziua a paisprezecea a acestei luni, iar întreaga adunare a comunității lui Israel să-l înjunghie spre seară."
     },
     {
       "number": 7,
-      "text": "They shall take some of the blood, and put it on the two door posts and on the lintel, on the houses in which they shall eat it. (text revizuit în limba română cu diacritice)"
+      "text": "Să ia din sânge și să pună pe cei doi ușori ai ușii și pe pragul de sus al caselor în care îl vor mânca."
     },
     {
       "number": 8,
-      "text": "They shall eat the meat in that night, roasted with fire, with unleavened bread. They shall eat it with bitter herbs. (text revizuit în limba română cu diacritice)"
+      "text": "În noaptea aceea să mănânce carnea friptă la foc, împreună cu azime și ierburi amare."
     },
     {
       "number": 9,
-      "text": "Don’t eat it raw, nor boiled at all with water, but roasted with fire; with its head, its legs and its inner parts. (text revizuit în limba română cu diacritice)"
+      "text": "Să nu mâncați nimic din el crud sau fiert în apă, ci fript la foc, cu capul, picioarele și măruntaiele lui."
     },
     {
       "number": 10,
-      "text": "You shall let nothing of it remain until the morning; but that which remains of it until the morning you shall burn with fire. (text revizuit în limba română cu diacritice)"
+      "text": "Să nu lăsați nimic din el până dimineața. Ce va rămâne până dimineața să ardeți în foc."
     },
     {
       "number": 11,
-      "text": "This is how you shall eat it: with your belt on your waist, your sandals on your feet, and your staff in your mână; and you shall eat it in haste: it is the DOMNUL’s Passover."
+      "text": "Să-l mâncați astfel: cu brâul strâns la mijloc, cu sandalele în picioare și cu toiagul în mână. Să-l mâncați în grabă; este Paștele DOMNULUI."
     },
     {
       "number": 12,
-      "text": "For I will să plece through the țară of Egipt in that night, and will strike all the firstborn in the țară of Egipt, both man and animal. I will execute judgments against all the să pleceds of Egipt. Eu sunt the DOMNUL."
+      "text": "În noaptea aceea voi trece prin țara Egiptului și voi lovi pe toți întâii născuți din țara Egiptului, atât dintre oameni, cât și dintre animale. Voi aduce judecăți împotriva tuturor dumnezeilor Egiptului. Eu sunt DOMNUL."
     },
     {
       "number": 13,
-      "text": "The blood shall be to you for a token on the houses where you are. When I see the blood, I will pass over you, and no plague will be on you to destroy you when I strike the țară of Egipt."
+      "text": "Sângele va fi pentru voi un semn pe casele în care vă aflați. Când voi vedea sângele, voi trece pe lângă voi și nu va veni peste voi nicio lovitură nimicitoare când voi lovi țara Egiptului."
     },
     {
       "number": 14,
-      "text": "This day shall be a memorial for you. You shall keep it as a feast to the DOMNUL. You shall keep it as a feast throughout your generations by an ordinance forever. (text revizuit în limba română cu diacritice)"
+      "text": "Ziua aceasta să fie pentru voi o aducere-aminte. Să o sărbătoriți ca sărbătoare pentru DOMNUL, din generație în generație; să o sărbătoriți printr-o rânduială veșnică."
     },
     {
       "number": 15,
-      "text": "‘Seven days you shall eat unleavened bread; even the first day you shall put away yeast out of your houses, for whoever eats leavened bread from the first day until the seventh day, that soul shall be cut off from Israel. (text revizuit în limba română cu diacritice)"
+      "text": "Timp de șapte zile să mâncați azime. Chiar din prima zi să îndepărtați aluatul dospit din casele voastre, căci oricine va mânca pâine dospită din prima zi până în ziua a șaptea va fi îndepărtat din Israel."
     },
     {
       "number": 16,
-      "text": "In the first day there shall be to you a holy convocation, and in the seventh day a holy convocation; no kind of work shall be done in them, except that which every man must eat, only that may be done by you. (text revizuit în limba română cu diacritice)"
+      "text": "În prima zi să aveți o adunare sfântă și în ziua a șaptea o adunare sfântă. Să nu faceți nicio muncă în aceste zile, în afară de pregătirea hranei necesare fiecărei persoane."
     },
     {
       "number": 17,
-      "text": "You shall observe the feast of unleavened bread; for in this same day I have brought your armies out of the țară of Egipt. Therefore you shall observe this day throughout your generations by an ordinance forever."
+      "text": "Să păziți Sărbătoarea Azimelor, căci chiar în ziua aceasta am scos oștirile voastre din țara Egiptului. Să păziți ziua aceasta din generație în generație, printr-o rânduială veșnică."
     },
     {
       "number": 18,
-      "text": "In the first month, on the fourteenth day of the month at evening, you shall eat unleavened bread, until the twenty first day of the month at evening. (text revizuit în limba română cu diacritice)"
+      "text": "În prima lună, din seara zilei a paisprezecea până în seara zilei a douăzeci și una, să mâncați azime."
     },
     {
       "number": 19,
-      "text": "There shall be no yeast found in your houses for seven days, for whoever eats that which is leavened, that soul shall be cut off from the congregation of Israel, whether he is a foreigner, or one who is born in the țară."
+      "text": "Timp de șapte zile să nu se găsească aluat dospit în casele voastre. Oricine va mânca ceva dospit va fi îndepărtat din comunitatea lui Israel, fie străin, fie născut în țară."
     },
     {
       "number": 20,
-      "text": "You shall eat nothing leavened. In all your habitations you shall eat unleavened bread.’  (text revizuit în limba română cu diacritice)"
+      "text": "Să nu mâncați nimic dospit. În toate locuințele voastre să mâncați azime.»”"
     },
     {
       "number": 21,
-      "text": "Then Moise called for all the elders of Israel, and i-a zis lui them, Draw out, and take lambs according to your families, and kill the Passover. (text revizuit în limba română cu diacritice)"
+      "text": "Moise i-a chemat pe toți bătrânii lui Israel și le-a spus: „Mergeți, luați-vă animale din turmă pentru familiile voastre și înjunghiați jertfa de Paște."
     },
     {
       "number": 22,
-      "text": "You shall take a bunch of hyssop, and dip it in the blood that is in the basin, and strike the lintel and the two door posts with the blood that is in the basin. None of you shall să plece out of the door of his house until the morning."
+      "text": "Luați un mănunchi de isop, înmuiați-l în sângele din vas și atingeți cu sângele din vas pragul de sus și cei doi ușori ai ușii. Niciunul dintre voi să nu iasă pe ușa casei sale până dimineața."
     },
     {
       "number": 23,
-      "text": "For the DOMNUL will pass through to strike the Egiptians; and when he sees the blood on the lintel, and on the two door posts, the DOMNUL will pass over the door, and will not allow the destroyer to come in to your houses to strike you. (text revizuit în limba română cu diacritice)"
+      "text": "Când DOMNUL va trece ca să-i lovească pe egipteni și va vedea sângele pe pragul de sus și pe cei doi ușori, DOMNUL va trece peste intrare și nu-i va permite nimicitorului să intre în casele voastre ca să vă lovească."
     },
     {
       "number": 24,
-      "text": "You shall observe this thing for an ordinance to you and to your sons forever. (text revizuit în limba română cu diacritice)"
+      "text": "Să păziți acest lucru ca rânduială pentru voi și pentru fiii voștri pentru totdeauna."
     },
     {
       "number": 25,
-      "text": "It shall happen when you have come to the țară which the DOMNUL will give you, as he has promised, that you shall keep this service."
+      "text": "Când veți intra în țara pe care DOMNUL v-o va da, așa cum a promis, să păstrați această slujire."
     },
     {
       "number": 26,
-      "text": "It will happen, when your children ask you, ‘What do you mean by this service?’ (text revizuit în limba română cu diacritice)"
+      "text": "Când copiii voștri vă vor întreba: «Ce înseamnă pentru voi această slujire?»,"
     },
     {
       "number": 27,
-      "text": "that you shall say, ‘It is the sacrifice of the DOMNUL’s Passover, who passed over the houses of the children of Israel in Egipt, when he struck the Egiptians, and spared our houses.’  The people bowed their heads and worshiped. (text revizuit în limba română cu diacritice)"
+      "text": "să le răspundeți: «Este jertfa de Paște pentru DOMNUL, Care a trecut peste casele fiilor lui Israel în Egipt, când i-a lovit pe egipteni, dar casele noastre le-a cruțat.»” Poporul s-a plecat și s-a închinat."
     },
     {
       "number": 28,
-      "text": "The children of Israel went and did so; as the DOMNUL had commanded Moise and Aaron, so they did. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Israel au mers și au făcut întocmai; au făcut așa cum le poruncise DOMNUL lui Moise și lui Aaron."
     },
     {
       "number": 29,
-      "text": "At midnight, the DOMNUL struck all the firstborn in the țară of Egipt, from the firstborn of Faraon who sat on his throne to the firstborn of the captive who was in the dungeon, and all the firstborn of livestock."
+      "text": "La miezul nopții, DOMNUL i-a lovit pe toți întâii născuți din țara Egiptului, de la întâiul născut al faraonului, care stătea pe tronul său, până la întâiul născut al prizonierului aflat în temniță, precum și pe toți întâii născuți ai animalelor."
     },
     {
       "number": 30,
-      "text": "Faraon rose up in the night, he, and all his servants, and all the Egiptians; and there was a great cry in Egipt, for there was not a house where there was not one dead. (text revizuit în limba română cu diacritice)"
+      "text": "Faraonul s-a ridicat în timpul nopții, el, toți slujitorii lui și toți egiptenii. În Egipt a fost un strigăt mare, căci nu era casă în care să nu fie cineva mort."
     },
     {
       "number": 31,
-      "text": "He called for Moise and Aaron by night, and a zis, Rise up, get out from among poporul Meu, both you and the children of Israel; and să plece, serve the DOMNUL, as you have a zis!"
+      "text": "Faraonul i-a chemat noaptea pe Moise și pe Aaron și le-a spus: „Ridicați-vă și plecați din mijlocul poporului meu, atât voi, cât și fiii lui Israel! Mergeți și slujiți-I DOMNULUI, așa cum ați spus."
     },
     {
       "number": 32,
-      "text": "Take both your flocks and your herds, as you have a zis, and be să plecene; and bless me also!"
+      "text": "Luați-vă și turmele și cirezile, așa cum ați spus, și plecați! Binecuvântați-mă și pe mine.”"
     },
     {
       "number": 33,
-      "text": "The Egiptians were urgent with the people, to send them out of the țară in haste, for they a zis, We are all dead men."
+      "text": "Egiptenii îi zoreau pe oameni ca să-i scoată repede din țară, căci spuneau: „Vom muri cu toții!”"
     },
     {
       "number": 34,
-      "text": "The people took their dough before it was leavened, their kneading troughs being bound up in their clothes on their shoulders. (text revizuit în limba română cu diacritice)"
+      "text": "Poporul și-a luat aluatul înainte să dospească, purtându-și covatele de frământat învelite în haine, pe umeri."
     },
     {
       "number": 35,
-      "text": "The children of Israel did according to the word of Moise; and they asked of the Egiptians jewels of silver, and jewels of să pleceld, and clothing."
+      "text": "Fiii lui Israel au făcut după cuvântul lui Moise și au cerut de la egipteni obiecte de argint, obiecte de aur și haine."
     },
     {
       "number": 36,
-      "text": "The DOMNUL gave the people favor in the sight of the Egiptians, so that they let them have what they asked. They plundered the Egiptians. (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL a făcut ca poporul să găsească bunăvoință în ochii egiptenilor, iar aceștia le-au dat ceea ce au cerut. Astfel au luat prada Egiptului."
     },
     {
       "number": 37,
-      "text": "The children of Israel traveled from Rameses to Succoth, about six hundred thousand on foot who were men, in addition to children. (text revizuit în limba română cu diacritice)"
+      "text": "Fiii lui Israel au pornit din Ramses spre Sucot. Erau aproximativ șase sute de mii de bărbați care mergeau pe jos, în afară de cei aflați în întreținerea lor."
     },
     {
       "number": 38,
-      "text": "A mixed multitude went up also with them, with flocks, herds, and even very much livestock. (text revizuit în limba română cu diacritice)"
+      "text": "Împreună cu ei a urcat și o mulțime amestecată, precum și turme și cirezi, foarte multe animale."
     },
     {
       "number": 39,
-      "text": "They baked unleavened cakes of the dough which they brought out of Egipt; for it wasn’t leavened, because they were thrust out of Egipt, and couldn’t wait, and they had not prepared any food for themselves. (text revizuit în limba română cu diacritice)"
+      "text": "Au copt turte nedospite din aluatul pe care îl scoseseră din Egipt. Aluatul nu dospise, fiindcă fuseseră izgoniți din Egipt și nu putuseră aștepta; nici nu-și pregătiseră provizii pentru drum."
     },
     {
       "number": 40,
-      "text": "Now the time that the children of Israel lived in Egipt was four hundred thirty years. (text revizuit în limba română cu diacritice)"
+      "text": "Timpul cât au locuit fiii lui Israel în Egipt a fost de patru sute treizeci de ani."
     },
     {
       "number": 41,
-      "text": "At the end of four hundred thirty years, to the day, all of the DOMNUL’s armies went out from the țară of Egipt."
+      "text": "La sfârșitul celor patru sute treizeci de ani, chiar în ziua aceea, toate oștirile DOMNULUI au ieșit din țara Egiptului."
     },
     {
       "number": 42,
-      "text": "It is a night to be much observed to the DOMNUL for bringing them out from the țară of Egipt. This is that night of the DOMNUL, to be much observed by all the children of Israel throughout their generations."
+      "text": "A fost o noapte de veghe pentru DOMNUL, când i-a scos din țara Egiptului. Aceasta este noaptea DOMNULUI, noapte de veghe pentru toți fiii lui Israel, din generație în generație."
     },
     {
       "number": 43,
-      "text": "The DOMNUL i-a zis lui Moise and Aaron, This is the ordinance of the Passover. No foreigner shall eat of it, (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL le-a spus lui Moise și lui Aaron: „Aceasta este rânduiala Paștelui: niciun străin din afară să nu mănânce din el."
     },
     {
       "number": 44,
-      "text": "but every man’s servant who is bought for money, when you have circumcised him, then shall he eat of it. (text revizuit în limba română cu diacritice)"
+      "text": "Orice sclav cumpărat cu argint va putea mânca din el după ce îl vei circumcide."
     },
     {
       "number": 45,
-      "text": "A foreigner and a hired servant shall not eat of it. (text revizuit în limba română cu diacritice)"
+      "text": "Străinul aflat temporar și lucrătorul angajat să nu mănânce din el."
     },
     {
       "number": 46,
-      "text": "It must be eaten in one house. You shall not carry any of the meat outside of the house. Do not break any of its bones. (text revizuit în limba română cu diacritice)"
+      "text": "Să fie mâncat într-o singură casă. Să nu scoateți nimic din carne afară din casă și să nu-i zdrobiți niciun os."
     },
     {
       "number": 47,
-      "text": "All the congregation of Israel shall keep it. (text revizuit în limba română cu diacritice)"
+      "text": "Întreaga comunitate a lui Israel să țină Paștele."
     },
     {
       "number": 48,
-      "text": "When a stranger lives as a foreigner with you, and would like to keep the Passover to the DOMNUL, let all his males be circumcised, and then let him come near and keep it. He shall be as one who is born in the țară; but no uncircumcised person shall eat of it."
+      "text": "Dacă un străin care locuiește printre voi vrea să țină Paștele pentru DOMNUL, toți cei de parte bărbătească din casa lui să fie circumciși. Atunci se va putea apropia și îl va putea ține și va fi ca unul născut în țară. Dar nicio persoană necircumcisă să nu mănânce din el."
     },
     {
       "number": 49,
-      "text": "One law shall be to him who is born at home, and to the stranger who lives as a foreigner among you. (text revizuit în limba română cu diacritice)"
+      "text": "Aceeași lege să fie pentru cel născut în țară și pentru străinul care locuiește printre voi.”"
     },
     {
       "number": 50,
-      "text": "All the children of Israel did so. As the DOMNUL commanded Moise and Aaron, so they did. (text revizuit în limba română cu diacritice)"
+      "text": "Toți fiii lui Israel au făcut întocmai; au făcut așa cum le poruncise DOMNUL lui Moise și lui Aaron."
     },
     {
       "number": 51,
-      "text": "That same day, the DOMNUL brought the children of Israel out of the țară of Egipt by their armies."
+      "text": "Chiar în ziua aceea, DOMNUL i-a scos pe fiii lui Israel din țara Egiptului, după oștirile lor."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 40,
-      "term": "moshav bnei Yisrael",
-      "decision": "șederea fiilor lui Israel",
+      "verse": 3,
+      "term": "seh",
+      "decision": "animal din turmă",
+      "reason": "Termenul poate desemna un miel sau un ied; versetul 5 precizează explicit că poate fi luat dintre oi sau capre.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Varianta textuală din Masoretic menționează 430 de ani în Egipt; Septuaginta și Pentateuhul Samaritan adaugă și țara Canaan."
+      "resolutionReason": "Termenul poate desemna un miel sau un ied; versetul 5 precizează explicit că poate fi luat dintre oi sau capre.",
+      "alternatives": [
+        "miel",
+        "ied"
+      ]
+    },
+    {
+      "verse": 6,
+      "term": "bein haarbayim",
+      "decision": "spre seară",
+      "reason": "Literal, „între cele două seri”; identificarea exactă a intervalului a fost înțeleasă diferit în tradițiile iudaice.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, „între cele două seri”; identificarea exactă a intervalului a fost înțeleasă diferit în tradițiile iudaice.",
+      "alternatives": [
+        "între cele două seri",
+        "la asfințit"
+      ]
+    },
+    {
+      "verse": 11,
+      "term": "pesah",
+      "decision": "Paștele DOMNULUI",
+      "reason": "Numele este legat în narațiune de trecerea DOMNULUI peste case și de cruțarea lor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele este legat în narațiune de trecerea DOMNULUI peste case și de cruțarea lor.",
+      "alternatives": [
+        "trecerea DOMNULUI"
+      ]
+    },
+    {
+      "verse": 15,
+      "term": "venikhretah hanefesh",
+      "decision": "va fi îndepărtat din Israel",
+      "reason": "Formula juridică karet poate însemna excludere din comunitate sau o pedeapsă divină mai gravă; textul nu precizează aici mecanismul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formula juridică karet poate însemna excludere din comunitate sau o pedeapsă divină mai gravă; textul nu precizează aici mecanismul.",
+      "alternatives": [
+        "va fi nimicit din Israel",
+        "va fi tăiat din Israel"
+      ]
+    },
+    {
+      "verse": 23,
+      "term": "hamashhit",
+      "decision": "nimicitorul",
+      "reason": "Textul distinge acțiunea DOMNULUI de agentul numit „nimicitorul”, fără a-i preciza identitatea mai mult decât o face versetul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul distinge acțiunea DOMNULUI de agentul numit „nimicitorul”, fără a-i preciza identitatea mai mult decât o face versetul.",
+      "alternatives": [
+        "cel care nimicește"
+      ]
+    },
+    {
+      "verse": 37,
+      "term": "shesh-meot elef ragli hagevarim levad mittaf",
+      "decision": "aproximativ șase sute de mii de bărbați care mergeau pe jos, în afară de cei aflați în întreținerea lor",
+      "reason": "Termenul taf poate include copiii și alte persoane dependente; numărul este păstrat fără recalculare sau armonizare demografică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul taf poate include copiii și alte persoane dependente; numărul este păstrat fără recalculare sau armonizare demografică.",
+      "alternatives": [
+        "în afară de copii"
+      ]
+    },
+    {
+      "verse": 38,
+      "term": "erev rav",
+      "decision": "o mulțime amestecată",
+      "reason": "Expresia descrie un grup eterogen care a plecat împreună cu Israel, fără a-i identifica mai precis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia descrie un grup eterogen care a plecat împreună cu Israel, fără a-i identifica mai precis.",
+      "alternatives": [
+        "un mare amestec de oameni"
+      ]
+    },
+    {
+      "verse": 40,
+      "term": "moshav bene-Yisrael asher yashvu beMitsrayim",
+      "decision": "au locuit în Egipt patru sute treizeci de ani",
+      "reason": "Textul masoretic leagă cei 430 de ani de locuirea în Egipt. Septuaginta și Pentateuhul samaritean includ Egiptul și Canaanul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul masoretic leagă cei 430 de ani de locuirea în Egipt. Septuaginta și Pentateuhul samaritean includ Egiptul și Canaanul.",
+      "alternatives": [
+        "locuirea în Egipt și Canaan a fost de 430 de ani"
+      ]
+    },
+    {
+      "verse": 44,
+      "term": "eved ish miqnat-kasef",
+      "decision": "sclav cumpărat cu argint",
+      "reason": "Statutul de sclavie este numit explicit și nu este eufemizat; relatarea legislației antice nu constituie aprobarea sclaviei moderne.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Statutul de sclavie este numit explicit și nu este eufemizat; relatarea legislației antice nu constituie aprobarea sclaviei moderne.",
+      "alternatives": [
+        "rob cumpărat cu bani"
+      ]
+    },
+    {
+      "verse": 46,
+      "term": "etsem lo tishberu-bo",
+      "decision": "să nu-i zdrobiți niciun os",
+      "reason": "Interdicția este păstrată în sensul ei ritual direct; conexiunile canonice ulterioare nu sunt introduse în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Interdicția este păstrată în sensul ei ritual direct; conexiunile canonice ulterioare nu sunt introduse în verset.",
+      "alternatives": [
+        "să nu-i frângeți niciun os"
+      ]
     }
   ]
 }

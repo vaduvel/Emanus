@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 11,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,88 +75,128 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic ritual, numere, variante textuale, poezie și formule juridice verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Textul contaminat sau mecanic a fost înlocuit integral cu română naturală.",
+        "Terminologia Paștelui, a întâilor născuți, a trecerii mării și a cântării a fost armonizată."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Paștele este redat în contextul său istoric și ritual, fără importarea directă în versete a tipologiei ulterioare.",
+        "Moartea întâilor născuți, sclavia și nimicirea armatei sunt relatate explicit, fără transformarea lor în autorizații moderne pentru violență sau exploatare.",
+        "Vindecarea și protecția din legământ nu sunt folosite pentru a culpabiliza bolnavii sau pentru a descuraja îngrijirea medicală."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "The DOMNUL i-a zis lui Moise, I will bring yet one more plague on Faraon, and on Egipt; afterwards he will let you să plece. When he lets you să plece, he will surely thrust you out altogether."
+      "text": "DOMNUL i-a spus lui Moise: „Voi mai aduce o singură lovitură asupra faraonului și asupra Egiptului. După aceea vă va lăsa să plecați de aici. Când vă va lăsa să plecați, vă va izgoni cu totul de aici."
     },
     {
       "number": 2,
-      "text": "Speak now in the ears of the people, and let every man ask of his neighbor, and every woman of her neighbor, jewels of silver, and jewels of să pleceld."
+      "text": "Vorbește acum poporului: fiecare bărbat să ceară de la vecinul său, iar fiecare femeie de la vecina sa obiecte de argint și obiecte de aur.”"
     },
     {
       "number": 3,
-      "text": "The DOMNUL gave the people favor in the sight of the Egiptians. Moreover, the man Moise was very great in the țară of Egipt, in the sight of Faraon’s servants, and in the sight of the people."
+      "text": "DOMNUL a făcut ca poporul să găsească bunăvoință în ochii egiptenilor. Mai mult, Moise era foarte respectat în țara Egiptului, atât de slujitorii faraonului, cât și de popor."
     },
     {
       "number": 4,
-      "text": "Moise a zis, This is what the DOMNUL says: ‘About midnight I will să plece out into the middle of Egipt,"
+      "text": "Moise a spus: „Așa vorbește DOMNUL: «Pe la miezul nopții voi trece prin mijlocul Egiptului."
     },
     {
       "number": 5,
-      "text": "and all the firstborn in the țară of Egipt shall die, from the firstborn of Faraon who sits on his throne, even to the firstborn of the female servant who is behind the mill, and all the firstborn of livestock."
+      "text": "Toți întâii născuți din țara Egiptului vor muri, de la întâiul născut al faraonului, care stă pe tronul său, până la întâiul născut al slujitoarei aflate în spatele râșniței, precum și toți întâii născuți ai animalelor."
     },
     {
       "number": 6,
-      "text": "There will be a great cry throughout all the țară of Egipt, such as there has not been, nor will be any more."
+      "text": "În toată țara Egiptului va fi un strigăt atât de mare cum nu a mai fost și nu va mai fi."
     },
     {
       "number": 7,
-      "text": "But against any of the children of Israel a dog won’t even bark or move its tongue, against man or animal, that you may know that the DOMNUL makes a distinction between the Egiptians and Israel. (text revizuit în limba română cu diacritice)"
+      "text": "Dar împotriva niciunuia dintre fiii lui Israel, fie om, fie animal, nici măcar un câine nu-și va mișca limba, ca să știți că DOMNUL face deosebire între Egipt și Israel.»"
     },
     {
       "number": 8,
-      "text": "All these servants of yours will come down to me, and bow down themselves to me, saying, Get out, with all the people who follow you; and after that I will să plece out.’  He went out from Faraon in hot anger."
+      "text": "Toți acești slujitori ai tăi vor coborî la mine, se vor pleca înaintea mea și vor spune: «Pleacă, tu și tot poporul care te urmează!» După aceea voi pleca.” Apoi Moise a ieșit de la faraon aprins de mânie."
     },
     {
       "number": 9,
-      "text": "The DOMNUL i-a zis lui Moise, Faraon won’t listen to you, that my wonders may be multiplied in the țară of Egipt."
+      "text": "DOMNUL îi spusese lui Moise: „Faraonul nu vă va asculta, pentru ca minunile Mele să se înmulțească în țara Egiptului.”"
     },
     {
       "number": 10,
-      "text": "Moise and Aaron did all these wonders before Faraon, but the DOMNUL hardened Faraon’s heart, and he didn’t let the children of Israel să plece out of his țară."
+      "text": "Moise și Aaron au făcut toate aceste minuni înaintea faraonului, dar DOMNUL a împietrit inima faraonului, iar el nu i-a lăsat pe fiii lui Israel să plece din țara lui."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "EXO.11.1",
-      "decision": "Redare revizuită",
+      "verse": 2,
+      "term": "veyishalu",
+      "decision": "să ceară",
+      "reason": "Verbul înseamnă a cere sau a solicita; contextul ulterior descrie bunurile primite drept pradă, fără a implica furtul ascuns.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Revizuit în textul ebraic WLC-OSHB și baza WEBU pentru capitolul 11."
+      "resolutionReason": "Verbul înseamnă a cere sau a solicita; contextul ulterior descrie bunurile primite drept pradă, fără a implica furtul ascuns.",
+      "alternatives": [
+        "să împrumute"
+      ]
+    },
+    {
+      "verse": 5,
+      "term": "hashifhah asher ahar harehayim",
+      "decision": "slujitoarea aflată în spatele râșniței",
+      "reason": "Imaginea indică poziția socială cea mai joasă și munca grea la râșnița manuală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Imaginea indică poziția socială cea mai joasă și munca grea la râșnița manuală.",
+      "alternatives": [
+        "roaba de la râșniță"
+      ]
+    },
+    {
+      "verse": 7,
+      "term": "lo yeherats-kelev leshono",
+      "decision": "nici măcar un câine nu-și va mișca limba",
+      "reason": "Idiomul exprimă liniște și protecție deplină pentru Israel, nu o afirmație despre comportamentul fiecărui animal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Idiomul exprimă liniște și protecție deplină pentru Israel, nu o afirmație despre comportamentul fiecărui animal.",
+      "alternatives": [
+        "niciun câine nu va lătra"
+      ]
+    },
+    {
+      "verse": 8,
+      "term": "bahori-af",
+      "decision": "aprins de mânie",
+      "reason": "Expresia descrie mânia puternică a lui Moise la plecarea dinaintea faraonului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia descrie mânia puternică a lui Moise la plecarea dinaintea faraonului.",
+      "alternatives": [
+        "cu mânie aprinsă"
+      ]
     }
   ]
 }

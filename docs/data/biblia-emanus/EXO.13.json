@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 13,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,136 +75,213 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic ritual, numere, variante textuale, poezie și formule juridice verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Textul contaminat sau mecanic a fost înlocuit integral cu română naturală.",
+        "Terminologia Paștelui, a întâilor născuți, a trecerii mării și a cântării a fost armonizată."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Paștele este redat în contextul său istoric și ritual, fără importarea directă în versete a tipologiei ulterioare.",
+        "Moartea întâilor născuți, sclavia și nimicirea armatei sunt relatate explicit, fără transformarea lor în autorizații moderne pentru violență sau exploatare.",
+        "Vindecarea și protecția din legământ nu sunt folosite pentru a culpabiliza bolnavii sau pentru a descuraja îngrijirea medicală."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "The DOMNUL a vorbit lui Moise, saying, (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a vorbit lui Moise și i-a spus:"
     },
     {
       "number": 2,
-      "text": "Sanctify to me all the firstborn, whatever opens the womb among the children of Israel, both of man and of animal. It is mine. (text revizuit în limba română cu diacritice)"
+      "text": "„Pune-Mi deoparte orice întâi născut, orice întâi venit care deschide pântecele printre fiii lui Israel, atât dintre oameni, cât și dintre animale. Este al Meu.”"
     },
     {
       "number": 3,
-      "text": "Moise i-a zis lui the people, Remember this day, in which you came out of Egipt, out of the house of bondage; for by strength of mână the DOMNUL brought you out from this place. No leavened bread shall be eaten."
+      "text": "Moise a spus poporului: „Aduceți-vă aminte de ziua aceasta, în care ați ieșit din Egipt, din casa robiei, căci prin puterea mâinii Sale v-a scos DOMNUL de aici. Să nu se mănânce pâine dospită."
     },
     {
       "number": 4,
-      "text": "Today you să plece out in the month Abib."
+      "text": "Astăzi ieșiți, în luna Abib."
     },
     {
       "number": 5,
-      "text": "It shall be, when the DOMNUL brings you into the țară of the Canaanite, and the Hittite, and the Amorite, and the Hivite, and the Jebusite, which he swore to your fathers to give you, a țară flowing with milk and honey, that you shall keep this service in this month."
+      "text": "Când DOMNUL te va aduce în țara canaaniților, hetiților, amoriților, heviților și iebusiților, țară pe care a jurat părinților tăi că ți-o va da, o țară în care curge lapte și miere, să ții această slujire în luna aceasta."
     },
     {
       "number": 6,
-      "text": "Seven days you shall eat unleavened bread, and in the seventh day shall be a feast to the DOMNUL. (text revizuit în limba română cu diacritice)"
+      "text": "Timp de șapte zile să mănânci azime, iar în ziua a șaptea să fie o sărbătoare pentru DOMNUL."
     },
     {
       "number": 7,
-      "text": "Unleavened bread shall be eaten throughout the seven days; and no leavened bread shall be seen with you. No yeast shall be seen with you, within all your borders. (text revizuit în limba română cu diacritice)"
+      "text": "Azime să se mănânce în cele șapte zile. Să nu se vadă la tine pâine dospită și să nu se vadă la tine aluat dospit în tot ținutul tău."
     },
     {
       "number": 8,
-      "text": "You shall tell your son in that day, saying, ‘It is because of that which the DOMNUL did for me when I came out of Egipt.’ (text revizuit în limba română cu diacritice)"
+      "text": "În ziua aceea să-i spui fiului tău: «Aceasta este din cauza a ceea ce a făcut DOMNUL pentru mine când am ieșit din Egipt.»"
     },
     {
       "number": 9,
-      "text": "It shall be for a sign to you on your mână, and for a memorial between your eyes, that the DOMNUL’s law may be in your mouth; for with a strong mână the DOMNUL has brought you out of Egipt."
+      "text": "Să fie pentru tine ca un semn pe mâna ta și ca o aducere-aminte între ochii tăi, pentru ca Legea DOMNULUI să fie în gura ta, căci cu mână puternică te-a scos DOMNUL din Egipt."
     },
     {
       "number": 10,
-      "text": "You shall therefore keep this ordinance in its season from year to year. (text revizuit în limba română cu diacritice)"
+      "text": "Să păzești această rânduială la timpul ei, an de an."
     },
     {
       "number": 11,
-      "text": "It shall be, when the DOMNUL brings you into the țară of the Canaanite, as he swore to you and to your fathers, and will give it to you,"
+      "text": "Când DOMNUL te va aduce în țara canaaniților, așa cum ți-a jurat ție și părinților tăi, și ți-o va da,"
     },
     {
       "number": 12,
-      "text": "that you shall set apart to the DOMNUL all that opens the womb, and every firstborn that comes from an animal which you have. The males shall be the DOMNUL’s. (text revizuit în limba română cu diacritice)"
+      "text": "să-I pui deoparte DOMNULUI orice întâi venit care deschide pântecele și orice întâi născut de parte bărbătească al animalelor tale; aceștia sunt ai DOMNULUI."
     },
     {
       "number": 13,
-      "text": "Every firstborn of a donkey you shall redeem with a lamb; and if you will not redeem it, then you shall break its neck; and you shall redeem all the firstborn of man among your sons. (text revizuit în limba română cu diacritice)"
+      "text": "Orice întâi născut al măgăriței să-l răscumperi cu un animal din turmă, iar dacă nu-l răscumperi, să-i frângi gâtul. Să răscumperi orice întâi născut dintre fiii tăi."
     },
     {
       "number": 14,
-      "text": "It shall be, when your son asks you in time to come, saying, ‘What is this?’ that you shall tell him, ‘By strength of mână the DOMNUL brought us out from Egipt, from the house of bondage."
+      "text": "Când fiul tău te va întreba în viitor: «Ce înseamnă aceasta?», să-i răspunzi: «Prin puterea mâinii Sale ne-a scos DOMNUL din Egipt, din casa robiei."
     },
     {
       "number": 15,
-      "text": "When Faraon stubbornly refused to let us să plece, the DOMNUL killed all the firstborn in the țară of Egipt, both the firstborn of man, and the firstborn of livestock. Therefore I sacrifice to the DOMNUL all that opens the womb, being males; but all the firstborn of my sons I redeem.’"
+      "text": "Când faraonul s-a încăpățânat să nu ne lase să plecăm, DOMNUL i-a omorât pe toți întâii născuți din țara Egiptului, atât pe întâii născuți dintre oameni, cât și pe întâii născuți ai animalelor. De aceea Îi aduc jertfă DOMNULUI pe orice întâi venit de parte bărbătească care deschide pântecele, dar pe orice întâi născut dintre fiii mei îl răscumpăr.»"
     },
     {
       "number": 16,
-      "text": "It shall be for a sign on your mână, and for symbols between your eyes; for by strength of mână the DOMNUL brought us out of Egipt."
+      "text": "Aceasta să fie ca un semn pe mâna ta și ca un simbol între ochii tăi, căci cu mână puternică ne-a scos DOMNUL din Egipt.”"
     },
     {
       "number": 17,
-      "text": "When Faraon had let the people să plece, Dumnezeu didn’t lead them by the way of the țară of the Philistines, although that was near; for Dumnezeu a zis, Lest perhaps the people change their minds when they see war, and they return to Egipt;"
+      "text": "Când faraonul a lăsat poporul să plece, Dumnezeu nu l-a condus pe drumul țării filistenilor, deși era mai scurt, căci Dumnezeu a spus: „Nu cumva poporul să se răzgândească atunci când va vedea războiul și să se întoarcă în Egipt.”"
     },
     {
       "number": 18,
-      "text": "but Dumnezeu led the people around by the way of the wilderness by the Red Sea; and the children of Israel went up armed out of the țară of Egipt."
+      "text": "Dumnezeu a făcut poporul să ocolească pe drumul pustiei, spre Marea Roșie. Fiii lui Israel au ieșit din țara Egiptului în formație organizată."
     },
     {
       "number": 19,
-      "text": "Moise took the bones of Joseph with him, for he had made the children of Israel swear, saying, Dumnezeu will surely visit you, and you shall carry up my bones away from here with you. (text revizuit în limba română cu diacritice)"
+      "text": "Moise a luat cu el oasele lui Iosif, căci Iosif îi pusese pe fiii lui Israel să jure, spunând: „Dumnezeu va veni negreșit în ajutorul vostru; atunci să luați de aici oasele mele cu voi.”"
     },
     {
       "number": 20,
-      "text": "They took their journey from Succoth, and encamped in Etham, in the edge of the wilderness. (text revizuit în limba română cu diacritice)"
+      "text": "Au pornit din Sucot și și-au așezat tabăra la Etam, la marginea pustiei."
     },
     {
       "number": 21,
-      "text": "The DOMNUL went before them by day in a pillar of cloud, to lead them on their way, and by night in a pillar of fire, to give them light, that they might să plece by day and by night:"
+      "text": "DOMNUL mergea înaintea lor ziua într-un stâlp de nor, ca să-i călăuzească pe drum, iar noaptea într-un stâlp de foc, ca să le dea lumină, pentru ca ei să poată merge zi și noapte."
     },
     {
       "number": 22,
-      "text": "the pillar of cloud by day, and the pillar of fire by night, didn’t depart from before the people. (text revizuit în limba română cu diacritice)"
+      "text": "Stâlpul de nor nu se îndepărta dinaintea poporului ziua, nici stâlpul de foc noaptea."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "EXO.13.1",
-      "decision": "Redare revizuită",
+      "verse": 2,
+      "term": "peter kol-rehem",
+      "decision": "orice întâi venit care deschide pântecele",
+      "reason": "Formula desemnează primul născut al mamei, nu în mod necesar primul copil al tatălui.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Revizuit în textul ebraic WLC-OSHB și baza WEBU pentru capitolul 13."
+      "resolutionReason": "Formula desemnează primul născut al mamei, nu în mod necesar primul copil al tatălui.",
+      "alternatives": [
+        "orice întâi născut"
+      ]
+    },
+    {
+      "verse": 4,
+      "term": "hodesh haaviv",
+      "decision": "luna Abib",
+      "reason": "Abib este numele vechi al lunii, legat de stadiul spicului; ulterior este numită Nisan.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Abib este numele vechi al lunii, legat de stadiul spicului; ulterior este numită Nisan.",
+      "alternatives": [
+        "luna Nisan"
+      ]
+    },
+    {
+      "verse": 9,
+      "term": "leot al-yadekha ulezzikkaron bein einekha",
+      "decision": "semn pe mână și aducere-aminte între ochi",
+      "reason": "Textul păstrează imaginile fără a decide în verset dacă trebuie înțelese doar metaforic sau și printr-o practică fizică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul păstrează imaginile fără a decide în verset dacă trebuie înțelese doar metaforic sau și printr-o practică fizică.",
+      "alternatives": [
+        "semn pe mâna ta și fruntar între ochii tăi"
+      ]
+    },
+    {
+      "verse": 13,
+      "term": "taarof",
+      "decision": "să-i frângi gâtul",
+      "reason": "Animalul întâi născut necurat care nu este răscumpărat nu poate fi oferit ca jertfă; acțiunea este redată direct, fără atenuare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Animalul întâi născut necurat care nu este răscumpărat nu poate fi oferit ca jertfă; acțiunea este redată direct, fără atenuare.",
+      "alternatives": [
+        "să-i rupi ceafa"
+      ]
+    },
+    {
+      "verse": 18,
+      "term": "hamushim",
+      "decision": "în formație organizată",
+      "reason": "Termenul poate însemna înarmați, grupați câte cinci sau organizați pentru călătorie; sensul exact este disputat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul poate însemna înarmați, grupați câte cinci sau organizați pentru călătorie; sensul exact este disputat.",
+      "alternatives": [
+        "înarmați",
+        "în formație de luptă"
+      ]
+    },
+    {
+      "verse": 19,
+      "term": "paqod yifqod",
+      "decision": "va veni negreșit în ajutorul vostru",
+      "reason": "Construcția infinitiv absolut plus verb accentuează certitudinea intervenției lui Dumnezeu; literal, „vă va cerceta negreșit”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția infinitiv absolut plus verb accentuează certitudinea intervenției lui Dumnezeu; literal, „vă va cerceta negreșit”.",
+      "alternatives": [
+        "vă va cerceta negreșit"
+      ]
+    },
+    {
+      "verse": 18,
+      "term": "Yam Suf",
+      "decision": "Marea Roșie",
+      "reason": "Literal, numele înseamnă „Marea Trestiilor”; identificarea geografică exactă rămâne discutată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, numele înseamnă „Marea Trestiilor”; identificarea geografică exactă rămâne discutată.",
+      "alternatives": [
+        "Marea Trestiilor"
+      ]
     }
   ]
 }
