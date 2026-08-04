@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 23,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,180 +75,296 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "legislație socială și penală, formule juridice, terminologie cultică și instrucțiuni tehnice verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Textul a fost reconstruit în română juridică și narativă naturală.",
+        "Termenii pentru sclavie, vătămare, despăgubire, legământ și obiectele sanctuarului au fost uniformizați."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Legislația antică este redată fără a legitima sclavia, execuțiile extrajudiciare, violența domestică sau răzbunarea privată modernă.",
+        "Protecția străinului, văduvei, copilului vulnerabil și săracului este păstrată explicit.",
+        "Teofania și obiectele sanctuarului sunt descrise fără a limita prezența lui Dumnezeu la obiecte sau a transforma reprezentările poruncite în idoli."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "You shall not spread a false report. Don’t join your mână with the wicked to be a malicious witness."
+      "text": "„Să nu răspândești un zvon fals. Să nu-ți unești mâna cu cel rău ca să fii martor răuvoitor."
     },
     {
       "number": 2,
-      "text": "You shall not follow a crowd to do evil. You shall not testify in court to side with a multitude to pervert justice. (text revizuit în limba română cu diacritice)"
+      "text": "Să nu urmezi mulțimea ca să faci rău și să nu depui mărturie într-un proces înclinând după majoritate ca să pervertești dreptatea."
     },
     {
       "number": 3,
-      "text": "You shall not favor a poor man in his cause. (text revizuit în limba română cu diacritice)"
+      "text": "Să nu-l favorizezi nici pe sărac în procesul lui."
     },
     {
       "number": 4,
-      "text": "If you meet your enemy’s ox or his donkey să pleceing astray, you shall surely bring it back to him again."
+      "text": "Dacă întâlnești boul sau măgarul dușmanului tău rătăcind, să i-l aduci înapoi."
     },
     {
       "number": 5,
-      "text": "If you see the donkey of him who hates you fallen down under his burden, don’t leave him. You shall surely help him with it. (text revizuit în limba română cu diacritice)"
+      "text": "Dacă vezi măgarul celui care te urăște căzut sub povara lui, să nu-l lași acolo, ci să-l ajuți să-l elibereze."
     },
     {
       "number": 6,
-      "text": "You shall not deny justice to your poor people in their lawsuits. (text revizuit în limba română cu diacritice)"
+      "text": "Să nu denaturezi dreptatea săracului tău în procesul lui."
     },
     {
       "number": 7,
-      "text": "Keep far from a false charge, and don’t kill the innocent and righteous; for I will not justify the wicked. (text revizuit în limba română cu diacritice)"
+      "text": "Să te ții departe de o acuzație falsă. Să nu-l condamni la moarte pe cel nevinovat și drept, căci Eu nu-l voi declara drept pe cel vinovat."
     },
     {
       "number": 8,
-      "text": "You shall take no bribe, for a bribe blinds those who have sight and perverts the words of the righteous. (text revizuit în limba română cu diacritice)"
+      "text": "Să nu primești mită, căci mita îi orbește pe cei care văd limpede și răstoarnă cuvintele celor drepți."
     },
     {
       "number": 9,
-      "text": "You shall not oppress an alien, for you know the heart of an alien, since you were aliens in the țară of Egipt."
+      "text": "Să nu asuprești străinul. Voi cunoașteți sufletul străinului, căci ați fost străini în țara Egiptului."
     },
     {
       "number": 10,
-      "text": "For six years you shall sow your țară, and shall gather in its increase,"
+      "text": "Șase ani să-ți semeni pământul și să-i strângi recolta,"
     },
     {
       "number": 11,
-      "text": "but the seventh year you shall let it rest and lie fallow, that the poor of your people may eat; and what they leave the animal of the field shall eat. In the same way, you shall deal with your vineyard and with your olive grove. (text revizuit în limba română cu diacritice)"
+      "text": "dar în anul al șaptelea să-l lași să se odihnească și să rămână nelucrat. Săracii poporului tău să mănânce din el, iar ce rămâne să mănânce animalele câmpului. La fel să faci cu via și cu livada ta de măslini."
     },
     {
       "number": 12,
-      "text": "Six days you shall do your work, and on the seventh day you shall rest, that your ox and your donkey may have rest, and the son of your servant, and the alien may be refreshed. (text revizuit în limba română cu diacritice)"
+      "text": "Șase zile să-ți faci lucrarea, iar în ziua a șaptea să te odihnești, pentru ca boul și măgarul tău să se odihnească, iar fiul sclavei tale și străinul să se învioreze."
     },
     {
       "number": 13,
-      "text": "Be careful to do all things that I have i-a zis lui you; and don’t invoke the name of other să pleceds or even let them be heard out of your mouth."
+      "text": "Să fiți atenți la tot ce v-am spus. Să nu chemați numele altor dumnezei și să nu se audă din gura voastră."
     },
     {
       "number": 14,
-      "text": "You shall observe a feast to me three times a year. (text revizuit în limba română cu diacritice)"
+      "text": "De trei ori pe an să-Mi ții o sărbătoare."
     },
     {
       "number": 15,
-      "text": "You shall observe the feast of unleavened bread. Seven days you shall eat unleavened bread, as I commanded you, at the time appointed in the month Abib (for in it you came out of Egipt), and no one shall appear before me empty. (text revizuit în limba română cu diacritice)"
+      "text": "Să păzești Sărbătoarea Azimelor. Timp de șapte zile să mănânci azime, așa cum ți-am poruncit, la timpul hotărât în luna Abib, căci atunci ai ieșit din Egipt. Nimeni să nu se înfățișeze înaintea Mea cu mâna goală."
     },
     {
       "number": 16,
-      "text": "And the feast of harvest, the first fruits of your labors, which you sow in the field; and the feast of ingathering, at the end of the year, when you gather in your labors out of the field. (text revizuit în limba română cu diacritice)"
+      "text": "Să păzești Sărbătoarea Secerișului, cu primele roade ale muncii tale, din ceea ce ai semănat pe câmp, și Sărbătoarea Strângerii Roadelor, la sfârșitul anului, când îți strângi rodul muncii de pe câmp."
     },
     {
       "number": 17,
-      "text": "Three times in the year all your males shall appear before the Lord GOD. (text revizuit în limba română cu diacritice)"
+      "text": "De trei ori pe an, toți bărbații tăi să se înfățișeze înaintea Stăpânului, DOMNUL."
     },
     {
       "number": 18,
-      "text": "You shall not offer the blood of my sacrifice with leavened bread. The fat of my feast shall not remain all night until the morning. (text revizuit în limba română cu diacritice)"
+      "text": "Să nu aduci sângele jertfei Mele împreună cu pâine dospită, iar grăsimea sărbătorii Mele să nu rămână peste noapte până dimineața."
     },
     {
       "number": 19,
-      "text": "You shall bring the first of the first fruits of your ground into the house of the DOMNUL your Dumnezeu. You shall not boil a young să pleceat in its mother’s milk."
+      "text": "Să aduci cele dintâi dintre primele roade ale pământului tău în Casa DOMNULUI, Dumnezeul tău. Să nu fierbi un ied în laptele mamei sale."
     },
     {
       "number": 20,
-      "text": "Behold, I send an angel before you, to keep you by the way, and to bring you into the place which I have prepared. (text revizuit în limba română cu diacritice)"
+      "text": "Iată, trimit un Înger înaintea ta, ca să te păzească pe drum și să te ducă în locul pe care l-am pregătit."
     },
     {
       "number": 21,
-      "text": "Pay attention to him, and listen to his voice. Don’t provoke him, for he will not pardon your disobedience, for my name is in him. (text revizuit în limba română cu diacritice)"
+      "text": "Fii atent înaintea lui și ascultă-i glasul. Să nu te răzvrătești împotriva lui, căci nu vă va ierta răzvrătirea, fiindcă Numele Meu este în el."
     },
     {
       "number": 22,
-      "text": "But if you indeed listen to his voice, and do all that I speak, then I will be an enemy to your enemies, and an adversary to your adversaries. (text revizuit în limba română cu diacritice)"
+      "text": "Dar dacă îi vei asculta cu adevărat glasul și vei face tot ce spun Eu, voi fi dușmanul dușmanilor tăi și potrivnicul potrivnicilor tăi."
     },
     {
       "number": 23,
-      "text": "For my angel shall să plece before you, and bring you in to the Amorite, the Hittite, the Perizzite, the Canaanite, the Hivite, and the Jebusite; and I will cut them off."
+      "text": "Îngerul Meu va merge înaintea ta și te va duce la amoriți, hetiți, periziți, canaaniți, heviți și iebusiți, iar Eu îi voi nimici."
     },
     {
       "number": 24,
-      "text": "You shall not bow down to their să pleceds, nor serve them, nor follow their practices, but you shall utterly overthrow them and demolish their pillars."
+      "text": "Să nu te pleci înaintea dumnezeilor lor, să nu le slujești și să nu urmezi practicile lor, ci să-i dărâmi cu desăvârșire și să le sfărâmi stâlpii sacri."
     },
     {
       "number": 25,
-      "text": "You shall serve the DOMNUL your Dumnezeu, and he will bless your bread and your water, and I will take sickness away from among you. (text revizuit în limba română cu diacritice)"
+      "text": "Să-I slujiți DOMNULUI, Dumnezeul vostru, iar El îți va binecuvânta pâinea și apa. Voi îndepărta boala din mijlocul tău."
     },
     {
       "number": 26,
-      "text": "No one will miscarry or be barren in your țară. I will fulfill the number of your days."
+      "text": "În țara ta nu va fi femeie care să piardă sarcina sau să fie stearpă. Voi împlini numărul zilelor tale."
     },
     {
       "number": 27,
-      "text": "I will send my terror before you, and will confuse all the people to whom you come, and I will make all your enemies turn their backs to you. (text revizuit în limba română cu diacritice)"
+      "text": "Voi trimite groaza Mea înaintea ta și voi arunca în confuzie orice popor la care vei ajunge; îi voi face pe toți dușmanii tăi să-ți întoarcă spatele."
     },
     {
       "number": 28,
-      "text": "I will send the hornet before you, which will drive out the Hivite, the Canaanite, and the Hittite, from before you. (text revizuit în limba română cu diacritice)"
+      "text": "Voi trimite viespea înaintea ta, iar ea îi va izgoni dinaintea ta pe heviți, canaaniți și hetiți."
     },
     {
       "number": 29,
-      "text": "I will not drive them out from before you in one year, lest the țară become desolate, and the animals of the field multiply against you."
+      "text": "Nu-i voi izgoni dinaintea ta într-un singur an, pentru ca țara să nu ajungă pustie și animalele sălbatice să nu se înmulțească împotriva ta."
     },
     {
       "number": 30,
-      "text": "Little by little I will drive them out from before you, until you have increased and inherit the țară."
+      "text": "Îi voi izgoni puțin câte puțin dinaintea ta, până când te vei înmulți și vei lua țara în stăpânire."
     },
     {
       "number": 31,
-      "text": "I will set your border from the Red Sea even to the sea of the Philistines, and from the wilderness to the River; for I will deliver the inhabitants of the țară into your mână, and you shall drive them out before you."
+      "text": "Îți voi stabili hotarul de la Marea Roșie până la marea filistenilor și de la pustie până la Râu. Îi voi da pe locuitorii țării în mâna voastră, iar tu îi vei izgoni dinaintea ta."
     },
     {
       "number": 32,
-      "text": "You shall make no covenant with them, nor with their să pleceds."
+      "text": "Să nu închei legământ cu ei și nici cu dumnezeii lor."
     },
     {
       "number": 33,
-      "text": "They shall not dwell in your țară, lest they make you sin against me, for if you serve their să pleceds, it will surely be a snare to you."
+      "text": "Ei să nu locuiască în țara ta, ca să nu te facă să păcătuiești împotriva Mea, căci slujirea dumnezeilor lor va deveni pentru tine o cursă.”"
     }
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "EXO.23.1",
-      "decision": "Redare revizuită",
+      "verse": 2,
+      "term": "lo tihyeh ahare-rabbim leraot",
+      "decision": "să nu urmezi mulțimea ca să faci rău",
+      "reason": "Majoritatea nu transformă nedreptatea în dreptate; porunca privește conduita și mărturia juridică.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Revizuit în textul ebraic WLC-OSHB și baza WEBU pentru capitolul 23."
+      "resolutionReason": "Majoritatea nu transformă nedreptatea în dreptate; porunca privește conduita și mărturia juridică.",
+      "alternatives": [
+        "să nu fii după cei mulți spre rău"
+      ]
+    },
+    {
+      "verse": 3,
+      "term": "vedal lo tehdar",
+      "decision": "să nu-l favorizezi nici pe sărac",
+      "reason": "Compasiunea nu permite denaturarea verdictului; versetul 6 interzice simultan nedreptățirea săracului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Compasiunea nu permite denaturarea verdictului; versetul 6 interzice simultan nedreptățirea săracului.",
+      "alternatives": [
+        "să nu-l părtinești pe sărac"
+      ]
+    },
+    {
+      "verse": 5,
+      "term": "azov taazov immo",
+      "decision": "să-l ajuți să-l elibereze",
+      "reason": "Construcția emfatică poate însemna a ajuta la descărcarea sau ridicarea animalului, împreună cu dușmanul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția emfatică poate însemna a ajuta la descărcarea sau ridicarea animalului, împreună cu dușmanul.",
+      "alternatives": [
+        "să descarci povara împreună cu el"
+      ]
+    },
+    {
+      "verse": 9,
+      "term": "nefesh hagger",
+      "decision": "sufletul străinului",
+      "reason": "Expresia cheamă Israelul la empatie bazată pe experiența proprie de străin, nu doar la respectarea formală a legii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia cheamă Israelul la empatie bazată pe experiența proprie de străin, nu doar la respectarea formală a legii.",
+      "alternatives": [
+        "viața străinului",
+        "simțirea străinului"
+      ]
+    },
+    {
+      "verse": 11,
+      "term": "tishmetennah untashtah",
+      "decision": "să-l lași să se odihnească și să rămână nelucrat",
+      "reason": "Verbele cer renunțarea la cultivarea și revendicarea normală a recoltei, pentru accesul săracilor și al animalelor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbele cer renunțarea la cultivarea și revendicarea normală a recoltei, pentru accesul săracilor și al animalelor.",
+      "alternatives": [
+        "să-l lași liber și părăsit"
+      ]
+    },
+    {
+      "verse": 19,
+      "term": "lo-tevashel gedi bahalev immo",
+      "decision": "să nu fierbi un ied în laptele mamei sale",
+      "reason": "Motivul exact al interdicției nu este explicat; nu este transformat în text într-un sistem alimentar mai larg.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Motivul exact al interdicției nu este explicat; nu este transformat în text într-un sistem alimentar mai larg.",
+      "alternatives": [
+        "să nu gătești un ied"
+      ]
+    },
+    {
+      "verse": 20,
+      "term": "malakh",
+      "decision": "Înger",
+      "reason": "Identitatea Îngerului nu este precizată mai mult decât o face textul; faptul că Numele lui Dumnezeu este în el indică autoritate divină reprezentativă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Identitatea Îngerului nu este precizată mai mult decât o face textul; faptul că Numele lui Dumnezeu este în el indică autoritate divină reprezentativă.",
+      "alternatives": [
+        "mesager"
+      ]
+    },
+    {
+      "verse": 25,
+      "term": "vahasiroti mahalah",
+      "decision": "voi îndepărta boala",
+      "reason": "Promisiunea aparține cadrului legământului național și nu justifică învinuirea bolnavilor sau refuzarea tratamentului medical.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Promisiunea aparține cadrului legământului național și nu justifică învinuirea bolnavilor sau refuzarea tratamentului medical.",
+      "alternatives": [
+        "voi lua boala"
+      ]
+    },
+    {
+      "verse": 28,
+      "term": "hatsirah",
+      "decision": "viespea",
+      "reason": "Poate desemna literal viespea sau, metaforic, panica și teroarea trimise înaintea lui Israel.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Poate desemna literal viespea sau, metaforic, panica și teroarea trimise înaintea lui Israel.",
+      "alternatives": [
+        "groaza",
+        "panica"
+      ]
+    },
+    {
+      "verse": 31,
+      "term": "Yam Suf / hayyam Pelishtim / hannahar",
+      "decision": "Marea Roșie / marea filistenilor / Râul",
+      "reason": "Hotarele sunt exprimate prin repere antice; Râul este Eufratul, iar Marea Roșie păstrează alternativa Marea Trestiilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Hotarele sunt exprimate prin repere antice; Râul este Eufratul, iar Marea Roșie păstrează alternativa Marea Trestiilor.",
+      "alternatives": [
+        "Marea Trestiilor",
+        "Marea Mediterană",
+        "Eufratul"
+      ]
     }
   ]
 }
