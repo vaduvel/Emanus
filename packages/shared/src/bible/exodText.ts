@@ -1,21 +1,21 @@
 import { EXOD_TEXT_1_TO_4 } from "./exodText1to4.js"
 import { EXOD_TEXT_5 } from "./exodText5.js"
 import { EXOD_TEXT_6 } from "./exodText6.js"
+import { EXOD_TEXT_7 } from "./exodText7.js"
 
 /*
  * Textul biblic al cărții Exod, păstrat separat de explicație.
  * Traducerea: Cornilescu, editia corectata (RCCV), în ortografie modernă.
  *
  * Fișierul acesta nu ține versete: doar adună părțile de text și dă cele două
- * helpere folosite de fișierele de capitol. Fiecare grup de capitole stă în
- * fișierul lui (exodText1to4.ts, exodText5.ts, ...), ca adăugarea unui capitol
- * nou să nu ceară rescrierea întregului text al cărții.
+ * helpere folosite de fișierele de capitol.
  */
 
 const EXOD_TEXT: Record<number, readonly string[]> = {
   ...EXOD_TEXT_1_TO_4,
   ...EXOD_TEXT_5,
   ...EXOD_TEXT_6,
+  ...EXOD_TEXT_7,
 }
 
 /** Câte versete are capitolul cerut. Aruncă dacă textul nu a fost încă adăugat. */
