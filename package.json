@@ -49,7 +49,9 @@
     "check:apocalipsa": "python3 scripts/check-nt-completion.py --book apocalipsa",
     "check:nt-completion": "python3 scripts/check-nt-completion.py",
     "check:biblia-emanus": "python3 scripts/check-biblia-emanus.py",
-    "test:biblia-emanus": "python3 -m unittest scripts/test_biblia_emanus.py",
+    "check:biblia-emanus-versification": "python3 scripts/check-biblia-emanus-versification.py",
+    "check:biblia-emanus-book": "python3 scripts/check-biblia-emanus-book.py",
+    "test:biblia-emanus": "python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py",
     "seal:biblia-emanus": "python3 scripts/seal-biblia-emanus.py"
   }
 }

@@ -120,6 +120,9 @@ jobs:
       - name: Verifica Biblia Emanus
         run: pnpm check:biblia-emanus
 
+      - name: Verifica versificatia Noului Testament Emanus
+        run: pnpm check:biblia-emanus-versification
+
       - name: Testeaza poarta Biblia Emanus
         run: pnpm test:biblia-emanus
 
