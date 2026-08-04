@@ -38,6 +38,7 @@ import { EXOD_36 } from "./exod36.js"
 import { EXOD_37 } from "./exod37.js"
 import { EXOD_38 } from "./exod38.js"
 import { EXOD_39 } from "./exod39.js"
+import { EXOD_40 } from "./exod40.js"
 
 /*
  * Cartea Exod (Ieșirea).
@@ -45,8 +46,9 @@ import { EXOD_39 } from "./exod39.js"
  * Textul biblic stă în exodText.ts (fișierele exodTextN.ts).
  * Explicația stă în fișierele de capitol: exod1.ts, exod2.ts, exod3.ts, ...
  *
- * Fișierul acesta doar adună cartea. Fiecare capitol nou se importă aici și se
- * adaugă în lista `chapters`, ca să nu mai fie nevoie de atins index.ts.
+ * Fișierul acesta doar adună cartea. Toate cele patruzeci de capitole sunt
+ * importate aici și așezate în lista `chapters`, ca să nu fie nevoie de atins
+ * index.ts.
  */
 
 export { EXOD_1 } from "./exod1.js"
@@ -88,6 +90,7 @@ export { EXOD_36 } from "./exod36.js"
 export { EXOD_37 } from "./exod37.js"
 export { EXOD_38 } from "./exod38.js"
 export { EXOD_39 } from "./exod39.js"
+export { EXOD_40 } from "./exod40.js"
 
 export const EXOD: BibleBook = {
   id: "exod",
@@ -136,5 +139,6 @@ export const EXOD: BibleBook = {
     EXOD_37,
     EXOD_38,
     EXOD_39,
+    EXOD_40,
   ],
 }
