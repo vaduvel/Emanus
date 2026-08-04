@@ -51,7 +51,9 @@
     "check:biblia-emanus": "python3 scripts/check-biblia-emanus.py",
     "check:biblia-emanus-versification": "python3 scripts/check-biblia-emanus-versification.py",
     "check:biblia-emanus-book": "python3 scripts/check-biblia-emanus-book.py",
-    "test:biblia-emanus": "python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py",
-    "seal:biblia-emanus": "python3 scripts/seal-biblia-emanus.py"
+    "test:biblia-emanus": "python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py scripts/test_materialize_biblia_emanus_nt.py",
+    "seal:biblia-emanus": "python3 scripts/seal-biblia-emanus.py",
+    "materialize:biblia-emanus-nt": "python3 scripts/materialize-biblia-emanus-nt.py",
+    "check:biblia-emanus-nt-materialized": "python3 scripts/materialize-biblia-emanus-nt.py --check"
   }
 }
