@@ -33,8 +33,8 @@ WEBU este baza de lucru și de segmentare. Pentru Vechiul Testament, sensurile i
 ## 5. Numele lui Dumnezeu
 
 - `Elohim` este redat de regulă prin `Dumnezeu`.
-- Tetragrama `YHWH` va fi redată provizoriu prin `DOMNUL`, cu o notă la prima apariție.
-- Decizia finală privind `DOMNUL`, `Iahve` sau o altă redare se ia înainte de publicarea Genezei 2.
+- Tetragrama `YHWH` este redată provizoriu prin `DOMNUL`, cu o notă la prima apariție.
+- Decizia finală privind `DOMNUL`, `Iahve` sau o altă redare trebuie documentată în audit înainte ca un capitol care conține tetragrama să poată fi publicat.
 
 ## 6. Termeni care cer atenție
 
@@ -50,20 +50,40 @@ Exemple:
 
 Traducerile românești existente pot fi consultate numai pentru control și detectarea unor posibile erori. Formularea Bibliei Emanus trebuie să fie redactată independent din sursele permise. O coincidență inevitabilă în expresii foarte scurte nu justifică reproducerea sistematică a unei ediții existente.
 
+Comparația cu traducerile românești este o triangulare de sens, nu o sursă de formulare. Pentru fiecare capitol publicat sunt necesare minimum trei etaloane românești distincte, dintre care cel puțin unul din familia Cornilescu. Textele protejate nu se stochează integral în repository.
+
 ## 8. Statutul fiecărui capitol
 
 - `draft`: ciornă de traducere; nu apare publicului;
-- `in_review`: verificată tehnic și pregătită pentru revizie umană;
-- `approved`: acceptată editorial, dar încă nepublicată;
-- `published`: aprobată explicit pentru utilizatori.
+- `in_review`: capitol aflat în auditul automat complet;
+- `approved`: toate controalele au fost aprobate, dar publicarea tehnică nu a fost încă aplicată;
+- `published`: capitol public, cu `public: true`.
 
-Trecerea la `approved` sau `published` cere:
+Un capitol poate deveni `approved` sau `published` numai după ce toate controalele obligatorii sunt `approved`:
 
-- revizie de limba română;
-- revizie din ebraică sau greacă;
-- revizie teologică și contextuală;
-- aprobarea finală a proprietarului proiectului.
+- revizia AI din limba-sursă;
+- revizia AI de limba română;
+- revizia AI teologică și canonică;
+- controlul omisiunilor și adaosurilor;
+- comparația cu minimum trei traduceri românești;
+- controlul distanței de copyright;
+- confirmarea că nu există probleme critice nerezolvate.
+
+Orice notă cu `reviewRequired: true` trebuie să aibă `resolutionStatus: resolved` și o motivare documentată. Orice variantă textuală înscrisă în registrul surselor trebuie să aibă o decizie editorială înainte de publicare.
+
+Aprobarea umană separată nu este obligatorie. Când toate porțile automate sunt aprobate, capitolul poate trece direct la:
+
+```json
+{
+  "status": "published",
+  "public": true
+}
+```
+
+Regula completă și schema porții sunt definite în `AUTOMATED-PUBLICATION.md` și în manifestul traducerii.
 
 ## 9. Licența rezultatului
 
-Licența finală a Bibliei Emanus rămâne de decis înainte de prima publicare. Intenția proiectului este ca textul să rămână gratuit și reutilizabil, cu atribuire și fără posibilitatea închiderii lui în spatele unui paywall. Alegerea exactă între CC BY 4.0, CC BY-SA 4.0 sau CC0 trebuie aprobată explicit.
+Biblia Emanus este pregătită pentru publicare sub **Creative Commons Attribution 4.0 International (`CC BY 4.0`)**.
+
+Reutilizarea, distribuirea și adaptarea sunt permise cu atribuirea corespunzătoare a proiectului Biblia Emanus și cu păstrarea atribuirilor obligatorii pentru sursele folosite. Licența și atribuirile declarate în `manifest.json` reprezintă regula tehnică aplicată la publicare.
