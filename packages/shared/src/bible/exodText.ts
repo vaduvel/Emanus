@@ -26,6 +26,7 @@ import { EXOD_TEXT_28 } from "./exodText28.js"
 import { EXOD_TEXT_29 } from "./exodText29.js"
 import { EXOD_TEXT_30 } from "./exodText30.js"
 import { EXOD_TEXT_31 } from "./exodText31.js"
+import { EXOD_TEXT_32 } from "./exodText32.js"
 
 /*
  * Textul biblic al cărții Exod, păstrat separat de explicație.
@@ -64,6 +65,7 @@ const EXOD_TEXT: Record<number, readonly string[]> = {
   ...EXOD_TEXT_29,
   ...EXOD_TEXT_30,
   ...EXOD_TEXT_31,
+  ...EXOD_TEXT_32,
 }
 
 /** Câte versete are capitolul cerut. Aruncă dacă textul nu a fost încă adăugat. */
