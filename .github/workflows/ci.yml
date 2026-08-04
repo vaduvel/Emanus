@@ -6,30 +6,6 @@ on:
   pull_request:
 
 jobs:
-  apply_leviticus_quote_repair:
-    if: github.event_name == 'pull_request' && github.head_ref == 'agent/biblia-emanus-leviticul'
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: agent/biblia-emanus-leviticul
-          fetch-depth: 0
-      - name: Repair all Leviticus quotation marks
-        run: python3 scripts/fix-leviticus-all-quotes.py
-      - name: Commit quotation repairs
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/biblia-emanus/LEV.*.json
-          if git diff --cached --quiet; then
-            echo "No quote changes"
-            exit 0
-          fi
-          git commit -m "Fix Leviticus quotation balance"
-          git push origin HEAD:agent/biblia-emanus-leviticul
-
   verify:
     runs-on: ubuntu-latest
     steps:
