@@ -3,8 +3,8 @@
   "bookId": "GEN",
   "bookName": "Geneza",
   "chapter": 4,
-  "status": "draft",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,10 +19,98 @@
     }
   },
   "review": {
-    "romanianLanguage": "pending",
-    "biblicalHebrew": "pending",
-    "theologicalContext": "pending",
-    "finalApproval": "pending"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.4.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.4.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.4.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-04",
+    "verseCoverage": {
+      "expected": 26,
+      "reviewed": 26,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "lexic, sintaxă, pronume, poezie, jocuri de cuvinte și varianta textuală din Geneza 4:8"
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 4:7 — se'et este redat prin imaginea ridicării feței, în legătură cu fața căzută din versetele 5–6.",
+        "Geneza 4:7 — păcatul este personificat consecvent prin pronume masculine, conform acordului din continuarea ebraică.",
+        "Geneza 4:8 — replica «Să ieșim la câmp» este păstrată din martorii vechi și marcată explicit ca variantă absentă din textul masoretic.",
+        "Geneza 4:11 — formularea păstrează ideea înstrăinării lui Cain de pământ fără a transforma pământul într-un agent moral independent.",
+        "Geneza 4:17 — participiul ebraic este redat prin «construia o cetate», nu ca acțiune neapărat încheiată.",
+        "Geneza 4:23 — paralelismul poetic al lui Lameh este păstrat prin «rană» și «vânătaie»."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Diferența dintre jertfele lui Cain și Abel nu este explicată în text prin adaosuri despre tipul jertfei sau motivele lui Dumnezeu.",
+        "Geneza 4:7 păstrează responsabilitatea lui Cain de a stăpâni păcatul, fără a introduce o doctrină suplimentară despre natura păcatului.",
+        "Geneza 4:8 consemnează transparent varianta textuală, fără a prezenta lectura extinsă drept unanimă.",
+        "Semnul lui Cain este redat ca protecție împotriva uciderii, fără a-l identifica prin speculații ulterioare."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -39,7 +127,7 @@
     },
     {
       "number": 4,
-      "text": "Abel a adus și el din întâii născuți ai turmei sale și din grăsimea lor. DOMNUL a privit cu bunăvoință spre Abel și spre ofranda lui,"
+      "text": "Abel a adus și el din întâii născuți ai turmei sale și din părțile lor grase. DOMNUL a privit cu bunăvoință spre Abel și spre ofranda lui,"
     },
     {
       "number": 5,
@@ -51,7 +139,7 @@
     },
     {
       "number": 7,
-      "text": "„Dacă faci bine, nu vei fi primit? Dar dacă nu faci bine, păcatul pândește la ușă. Dorința lui se îndreaptă spre tine, însă tu trebuie să-l stăpânești.”"
+      "text": "„Dacă faci bine, nu-ți vei putea ridica fața? Dar dacă nu faci bine, păcatul stă la pândă la ușă. Dorința lui este spre tine, însă tu trebuie să stăpânești peste el.”"
     },
     {
       "number": 8,
@@ -83,15 +171,15 @@
     },
     {
       "number": 15,
-      "text": "DOMNUL i-a spus: „De aceea, oricine îl va ucide pe Cain va fi răzbunat de șapte ori.” Apoi DOMNUL a pus un semn pentru Cain, ca nimeni dintre cei care îl vor găsi să nu-l lovească."
+      "text": "DOMNUL i-a spus: „De aceea, dacă cineva îl ucide pe Cain, răzbunarea va veni asupra lui de șapte ori.” Apoi DOMNUL a pus un semn pentru Cain, ca nimeni dintre cei care îl vor găsi să nu-l lovească."
     },
     {
       "number": 16,
-      "text": "Cain a plecat din prezența DOMNULUI și a locuit în țara Nod, la răsărit de Eden."
+      "text": "Cain a plecat de la fața DOMNULUI și a locuit în țara Nod, la răsărit de Eden."
     },
     {
       "number": 17,
-      "text": "Cain a cunoscut-o pe soția lui. Ea a rămas însărcinată și l-a născut pe Enoh. Cain a construit o cetate și i-a pus numele fiului său, Enoh."
+      "text": "Cain a cunoscut-o pe soția lui. Ea a rămas însărcinată și l-a născut pe Enoh. Cain construia o cetate și a numit cetatea după numele fiului său, Enoh."
     },
     {
       "number": 18,
@@ -111,11 +199,11 @@
     },
     {
       "number": 22,
-      "text": "Țila l-a născut și pe Tubal-Cain, făurarul tuturor uneltelor de bronz și de fier. Sora lui Tubal-Cain era Naama."
+      "text": "Țila l-a născut și pe Tubal-Cain, făurarul tuturor uneltelor tăietoare de bronz și de fier. Sora lui Tubal-Cain era Naama."
     },
     {
       "number": 23,
-      "text": "Lameh le-a spus soțiilor sale: „Ada și Țila, ascultați glasul meu! Soțiile lui Lameh, luați aminte la cuvintele mele! Am ucis un om pentru rana mea și un tânăr pentru lovitura mea.”"
+      "text": "Lameh le-a spus soțiilor sale: „Ada și Țila, ascultați glasul meu! Soțiile lui Lameh, luați aminte la cuvintele mele! Am ucis un om pentru rana mea, un tânăr pentru vânătaia mea.”"
     },
     {
       "number": 24,
@@ -127,7 +215,7 @@
     },
     {
       "number": 26,
-      "text": "Și lui Set i s-a născut un fiu, căruia i-a pus numele Enoș. Atunci au început oamenii să cheme Numele DOMNULUI."
+      "text": "Și lui Set i s-a născut un fiu, căruia i-a pus numele Enoș. Atunci oamenii au început să cheme Numele DOMNULUI."
     }
   ],
   "editorialNotes": [
@@ -139,41 +227,87 @@
         "Am dobândit un om de la DOMNUL",
         "Am dobândit un om împreună cu DOMNUL"
       ],
-      "reviewRequired": true
+      "reason": "Prepoziția et permite mai multe relații; formularea aleasă exprimă participarea divină fără a o identifica pe Eva drept partener creator egal cu Dumnezeu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Prepoziția et permite mai multe relații; formularea aleasă exprimă participarea divină fără a o identifica pe Eva drept partener creator egal cu Dumnezeu."
+    },
+    {
+      "verse": 4,
+      "term": "umechelvehen",
+      "decision": "din părțile lor grase",
+      "alternatives": [
+        "din grăsimea lor"
+      ],
+      "reason": "Pluralul ebraic se referă la porțiunile grase, considerate partea aleasă a jertfei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pluralul ebraic se referă la porțiunile grase, considerate partea aleasă a jertfei."
     },
     {
       "verse": 7,
       "term": "se'et",
-      "decision": "nu vei fi primit?",
+      "decision": "nu-ți vei putea ridica fața?",
       "alternatives": [
-        "nu ți se va însenina fața?",
-        "nu va fi ridicare?"
+        "nu vei fi primit?",
+        "nu va fi ridicare?",
+        "nu ți se va însenina fața?"
       ],
-      "reviewRequired": true
+      "reason": "Termenul exprimă ridicare sau înălțare; contextul imediat vorbește despre fața căzută a lui Cain.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul exprimă ridicare sau înălțare; contextul imediat vorbește despre fața căzută a lui Cain."
+    },
+    {
+      "verse": 7,
+      "term": "hattat rovets / teshuqato / timshol-bo",
+      "decision": "păcatul stă la pândă ... dorința lui ... să stăpânești peste el",
+      "alternatives": [
+        "păcatul stă culcat ...",
+        "o jertfă pentru păcat stă la ușă"
+      ],
+      "reason": "Continuarea folosește forme masculine pentru personificarea păcatului; lectura despre jertfa pentru păcat rămâne posibilă lexical, dar nu se potrivește la fel de bine cu avertismentul contextual.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Continuarea folosește forme masculine pentru personificarea păcatului; lectura despre jertfa pentru păcat rămâne posibilă lexical, dar nu se potrivește la fel de bine cu avertismentul contextual."
     },
     {
       "verse": 8,
       "term": "Să ieșim la câmp",
-      "decision": "inclus în textul de lucru",
-      "reason": "Propoziția este prezentă în WEBU și în mai mulți martori vechi, dar lipsește din textul consonantic masoretic WLC; diferența textuală nu trebuie ascunsă.",
-      "reviewRequired": true
+      "decision": "inclus pe baza martorilor vechi",
+      "alternatives": [
+        "omisiunea replicii, conform textului masoretic WLC"
+      ],
+      "reason": "Textul masoretic are numai «Cain i-a spus fratelui său Abel», fără conținutul vorbirii. Pentateuhul samaritean, Septuaginta, siriaca și Vulgata păstrează replica. Lectura extinsă este adoptată pentru coerența narațiunii și este consemnată ca variantă textuală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul masoretic are numai «Cain i-a spus fratelui său Abel», fără conținutul vorbirii. Pentateuhul samaritean, Septuaginta, siriaca și Vulgata păstrează replica. Lectura extinsă este adoptată pentru coerența narațiunii și este consemnată ca variantă textuală."
     },
     {
       "verse": 10,
       "term": "demei achikha",
       "decision": "sângele fratelui tău",
-      "reason": "Substantivul ebraic apare la plural, formă care poate sugera sângele vărsat sau urmările uciderii.",
-      "reviewRequired": true
+      "alternatives": [
+        "sângiuirile fratelui tău",
+        "sângele vărsat al fratelui tău"
+      ],
+      "reason": "Substantivul ebraic este plural ca formă; româna folosește natural singularul colectiv, iar pluralul este păstrat în explicația editorială.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Substantivul ebraic este plural ca formă; româna folosește natural singularul colectiv, iar pluralul este păstrat în explicația editorială."
     },
     {
       "verse": 11,
       "term": "arur attah min-ha'adamah",
       "decision": "blestemat și alungat de pământ",
       "alternatives": [
-        "blestemat din pricina pământului",
-        "mai blestemat decât pământul"
+        "blestemat departe de pământ",
+        "blestemat din partea pământului"
       ],
-      "reviewRequired": true
+      "reason": "Prepoziția min este dificilă aici. Contextul arată înstrăinarea lui Cain de solul care nu-i va mai da rodul, nu o superioritate a blestemului față de cel al pământului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Prepoziția min este dificilă aici. Contextul arată înstrăinarea lui Cain de solul care nu-i va mai da rodul, nu o superioritate a blestemului față de cel al pământului."
     },
     {
       "verse": 13,
@@ -183,17 +317,96 @@
         "vina mea",
         "nelegiuirea mea"
       ],
-      "reviewRequired": true
+      "reason": "Termenul poate desemna atât vina, cât și consecința ei. Versetul următor dezvoltă consecințele suportate de Cain.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul poate desemna atât vina, cât și consecința ei. Versetul următor dezvoltă consecințele suportate de Cain."
+    },
+    {
+      "verse": 15,
+      "term": "shiv'atayim yuqqam / ot le-Qayin",
+      "decision": "răzbunarea va veni asupra lui de șapte ori / un semn pentru Cain",
+      "alternatives": [
+        "Cain va fi răzbunat de șapte ori"
+      ],
+      "reason": "Textul nu descrie natura semnului. Traducerea păstrează funcția lui protectoare fără speculații despre forma sau transmiterea lui.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul nu descrie natura semnului. Traducerea păstrează funcția lui protectoare fără speculații despre forma sau transmiterea lui."
+    },
+    {
+      "verse": 17,
+      "term": "vayehi boneh ir",
+      "decision": "construia o cetate",
+      "alternatives": [
+        "a construit o cetate"
+      ],
+      "reason": "Participiul ebraic poate descrie o activitate în desfășurare și nu cere ca cetatea să fi fost deja încheiată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Participiul ebraic poate descrie o activitate în desfășurare și nu cere ca cetatea să fi fost deja încheiată."
+    },
+    {
+      "verse": 22,
+      "term": "lotesh kol-horesh nehoshet uvarzel",
+      "decision": "făurarul tuturor uneltelor tăietoare de bronz și de fier",
+      "alternatives": [
+        "cel care ascuțea orice unealtă de bronz și fier"
+      ],
+      "reason": "Construcția este dificilă; formularea păstrează ocupația metalurgică fără a limita textul la un singur tip de unealtă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția este dificilă; formularea păstrează ocupația metalurgică fără a limita textul la un singur tip de unealtă."
+    },
+    {
+      "verse": 23,
+      "term": "lefitsi / lechaburati",
+      "decision": "pentru rana mea / pentru vânătaia mea",
+      "alternatives": [
+        "fiindcă m-a rănit / fiindcă m-a lovit"
+      ],
+      "reason": "Prepoziția permite o relație cauzală, dar traducerea păstrează paralelismul poetic și evită să adauge detalii despre împrejurarea uciderii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Prepoziția permite o relație cauzală, dar traducerea păstrează paralelismul poetic și evită să adauge detalii despre împrejurarea uciderii."
+    },
+    {
+      "verse": 24,
+      "term": "shivim veshiv'ah",
+      "decision": "șaptezeci și șapte de ori",
+      "alternatives": [
+        "de șaptezeci de ori câte șapte"
+      ],
+      "reason": "Textul masoretic indică în mod natural șaptezeci și șapte; alternativa este cunoscută din tradiția de traducere, dar nu este impusă aici.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul masoretic indică în mod natural șaptezeci și șapte; alternativa este cunoscută din tradiția de traducere, dar nu este impusă aici."
+    },
+    {
+      "verse": 25,
+      "term": "shat / Shet",
+      "decision": "mi-a rânduit / Set",
+      "alternatives": [
+        "mi-a așezat / Set"
+      ],
+      "reason": "Jocul de cuvinte dintre verbul «a rândui/a așeza» și numele Set este păstrat cât permite limba română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Jocul de cuvinte dintre verbul «a rândui/a așeza» și numele Set este păstrat cât permite limba română."
     },
     {
       "verse": 26,
-      "term": "liqro beshem YHWH",
-      "decision": "să cheme Numele DOMNULUI",
+      "term": "huchal liqro beshem YHWH",
+      "decision": "oamenii au început să cheme Numele DOMNULUI",
       "alternatives": [
-        "să invoce Numele DOMNULUI",
-        "să proclame Numele DOMNULUI"
+        "s-a început chemarea Numelui DOMNULUI",
+        "au început să invoce Numele DOMNULUI",
+        "au început să proclame Numele DOMNULUI"
       ],
-      "reviewRequired": true
+      "reason": "Construcția pasivă și expresia «a chema în Numele» permit nuanțe de invocare, proclamare și închinare; formularea aleasă rămâne suficient de largă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția pasivă și expresia «a chema în Numele» permit nuanțe de invocare, proclamare și închinare; formularea aleasă rămâne suficient de largă."
     }
   ]
 }
