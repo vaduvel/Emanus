@@ -7,11 +7,12 @@ import { EXOD_5 } from "./exod5.js"
 import { EXOD_6 } from "./exod6.js"
 import { EXOD_7 } from "./exod7.js"
 import { EXOD_8 } from "./exod8.js"
+import { EXOD_9 } from "./exod9.js"
 
 /*
  * Cartea Exod (Ieșirea).
  *
- * Textul biblic: Cornilescu, editia corectata (RCCV), păstrat în exodText.ts.
+ * Textul biblic stă în exodText.ts (fișierele exodTextN.ts).
  * Explicația stă în fișierele de capitol: exod1.ts, exod2.ts, exod3.ts, ...
  *
  * Fișierul acesta doar adună cartea. Fiecare capitol nou se importă aici și se
@@ -26,6 +27,7 @@ export { EXOD_5 } from "./exod5.js"
 export { EXOD_6 } from "./exod6.js"
 export { EXOD_7 } from "./exod7.js"
 export { EXOD_8 } from "./exod8.js"
+export { EXOD_9 } from "./exod9.js"
 
 export const EXOD: BibleBook = {
   id: "exod",
@@ -43,5 +45,6 @@ export const EXOD: BibleBook = {
     EXOD_6,
     EXOD_7,
     EXOD_8,
+    EXOD_9,
   ],
 }
