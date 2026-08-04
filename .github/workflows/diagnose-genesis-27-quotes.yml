@@ -1,0 +1,49 @@
+name: Diagnose Genesis 27 Quotes
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus
+    paths:
+      - .github/workflows/diagnose-genesis-27-quotes.yml
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Count Romanian quotes by verse
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          source = Path('docs/data/biblia-emanus/GEN.27.json')
+          report = Path('docs/data/biblia-emanus/GEN.27.quotes.txt')
+          data = json.loads(source.read_text(encoding='utf-8'))
+          depth = 0
+          lines = []
+          for verse in data['verses']:
+              text = verse['text']
+              opens = text.count('„')
+              closes = text.count('”')
+              depth += opens - closes
+              lines.append(f"{verse['number']:02d}\topens={opens}\tcloses={closes}\tdepth={depth}\t{text}")
+          full = ' '.join(v['text'] for v in data['verses'])
+          lines.insert(0, f"TOTAL opens={full.count('„')} closes={full.count('”')} final_depth={depth}")
+          report.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          PY
+      - name: Commit diagnostic report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus/GEN.27.quotes.txt
+          git commit -m 'Add Genesis 27 quote diagnostic'
+          git push origin HEAD:agent/biblia-emanus
