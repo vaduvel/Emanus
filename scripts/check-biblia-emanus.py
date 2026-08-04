@@ -168,8 +168,6 @@ def validate_chapter(path: Path, data: dict[str, Any], manifest: dict[str, Any])
             fail(f"{path.name}: diacritice cu sedilă la versetul {number}")
         if "\ufffd" in text:
             fail(f"{path.name}: caracter Unicode deteriorat la versetul {number}")
-        if text.count("„") != text.count("”"):
-            fail(f"{path.name}: ghilimele românești neechilibrate la versetul {number}")
         actual_numbers.append(number)
         combined_text.append(text)
     if actual_numbers != expected_numbers:
@@ -178,6 +176,8 @@ def validate_chapter(path: Path, data: dict[str, Any], manifest: dict[str, Any])
     full_text = " ".join(combined_text)
     if not ROMANIAN_DIACRITICS.intersection(full_text):
         fail(f"{path.name}: textul nu conține diacritice românești")
+    if full_text.count("„") != full_text.count("”"):
+        fail(f"{path.name}: ghilimelele românești sunt neechilibrate în capitol")
 
     return f"{book_id}.{chapter}"
 
