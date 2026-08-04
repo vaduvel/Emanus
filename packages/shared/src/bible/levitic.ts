@@ -1,6 +1,7 @@
 import type { BibleBook } from "./types.js"
 import { LEVITIC_1 } from "./levitic1.js"
 import { LEVITIC_2 } from "./levitic2.js"
+import { LEVITIC_3 } from "./levitic3.js"
 
 /*
  * Cartea Levitic.
@@ -9,7 +10,7 @@ import { LEVITIC_2 } from "./levitic2.js"
  * nu fie nevoie de atins index.ts la fiecare capitol nou.
  */
 
-export { LEVITIC_1, LEVITIC_2 }
+export { LEVITIC_1, LEVITIC_2, LEVITIC_3 }
 
 export const LEVITIC: BibleBook = {
   id: "levitic",
@@ -18,5 +19,5 @@ export const LEVITIC: BibleBook = {
   order: 3,
   blurb:
     "Cartea apropierii de Dumnezeu. În ebraică se numește „Și a chemat”, fiindcă începe cu un glas care iese din cortul abia ridicat. Aici se arată cum poate veni un om păcătos înaintea unui Dumnezeu sfânt, ce costă apropierea și cine o plătește.",
-  chapters: [LEVITIC_1, LEVITIC_2],
+  chapters: [LEVITIC_1, LEVITIC_2, LEVITIC_3],
 }
