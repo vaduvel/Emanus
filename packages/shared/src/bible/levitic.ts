@@ -6,6 +6,7 @@ import { LEVITIC_4 } from "./levitic4.js"
 import { LEVITIC_5 } from "./levitic5.js"
 import { LEVITIC_6 } from "./levitic6.js"
 import { LEVITIC_7 } from "./levitic7.js"
+import { LEVITIC_8 } from "./levitic8.js"
 
 /*
  * Cartea Levitic.
@@ -14,7 +15,16 @@ import { LEVITIC_7 } from "./levitic7.js"
  * nu fie nevoie de atins index.ts la fiecare capitol nou.
  */
 
-export { LEVITIC_1, LEVITIC_2, LEVITIC_3, LEVITIC_4, LEVITIC_5, LEVITIC_6, LEVITIC_7 }
+export {
+  LEVITIC_1,
+  LEVITIC_2,
+  LEVITIC_3,
+  LEVITIC_4,
+  LEVITIC_5,
+  LEVITIC_6,
+  LEVITIC_7,
+  LEVITIC_8,
+}
 
 export const LEVITIC: BibleBook = {
   id: "levitic",
@@ -31,5 +41,6 @@ export const LEVITIC: BibleBook = {
     LEVITIC_5,
     LEVITIC_6,
     LEVITIC_7,
+    LEVITIC_8,
   ],
 }
