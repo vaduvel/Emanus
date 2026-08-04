@@ -10,13 +10,13 @@ import { exodChapter, teaching } from "./exodHelpers.js"
 
 export const EXOD_25 = exodChapter({
   number: 25,
-  title: "Exod 25 — „Să Îmi facl un locaș, ca să locuiesc în mijlocul lor”",
+  title: "Exod 25 — „Să Îmi facă un locaș, ca să locuiesc în mijlocul lor”",
   summary:
     "Începe partea cea mai amănunțită a cărții: rânduiala cortului. Dumnezeu cere daruri, dar numai de la cei care dau cu inimă bună, și spune pricina pentru care le cere: ca să locuiască în mijlocul poporului. Urmează cele trei lucruri dinăuntru. Chivotul, de lemn de acacia îmbrăcat cu aur, în care se pune mărturia, cu un capac de aur curat și doi heruvimi cu aripile întinse; de deasupra capacului, între heruvimi, va vorbi Dumnezeu cu Moise. Masa pe care stă mereu pâinea așezată înaintea Lui. Și candelabrul de aur curat, bătut dintr-o singură bucată, cu șapte candele și cu flori de migdal. Totul se face după chipul arătat pe munte.",
   literaryContext:
     "De aici și până la sfârșitul cărții, Exodul Își schimbă felul: nu mai sunt semne și lupte, ci măsuri, materiale și lucrări. Multor cititori partea aceasta le pare seacă, și tocmai aici stă învățătura: Dumnezeu a dat mai mult spațiu locuirii Lui în mijlocul poporului decât despărțirii mării. Ia aminte și la ordinea dinăuntru: nu se începe de la îngrăditură spre mijloc, ci de la chivot spre afară. Dumnezeu începe cu locul în care Se întâlnește cu omul. Și ține minte când se rostesc toate acestea: în cele patruzeci de zile în care, jos, poporul Își turna un vițel. Iar cuvintele „după chipul care ți s-a arătat” se vor repeta de mai multe ori — și Noul Legământ le va lua ca dovadă că tot cortul era umbra unor lucruri adevărate.",
   historicalContext:
-    "Popoarele din jur aveau temple de piatră, nemișcate, cu chipul zeului în mijloc. Ce se cere aici este un cort care se strânge și se duce mai departe — un Dumnezeu care merge cu poporul Lui — și, în locul chipului, un chivot gol, cu mărturia înăuntru. Materialele pomenite sunt cele scoase din Egipt: aur, argint, aramă, fir albastru și purpuriu, in subțire, piei și lemn de acacia, singurul lemn tare al pustiei. Chivotul avea, în măsurile de astăzi, cam un metru și un sfert în lungime și șaptezeci de centimetri în lățime și înălțime. Scândurile purtate cu drugi — care nu se scoteau din verigi — erau chipul obișnuit al lucrurilor sfinte purtate în lume veche, dar aici se spune limpede că nimeni nu punea mâna pe chivotul însuși. Iar candelabrul cu șapte candele, bătut dintr-o singură bucată de aur, era o lucrare de o măiestrie rară chiar pentru meșterii vremii.",
+    "Popoarele din jur aveau temple de piatră, nemișcate, cu chipul zeului în mijloc. Ce se cere aici este un cort care se strânge și se duce mai departe — un Dumnezeu care merge cu poporul Lui — și, în locul chipului, un chivot gol, cu mărturia înăuntru. Materialele pomenite sunt cele scoase din Egipt: aur, argint, aramă, fir albastru și purpuriu, in subțire, piei și lemn de acacia, singurul lemn tare al pustiei. Chivotul avea, în măsurile de astăzi, cam un metru și un sfert în lungime și șaptezeci de centimetri în lățime și înălțime. Scândurile purtate cu drugi — care nu se scoteau din verigi — erau chipul obișnuit al lucrurilor sfinte purtate în lumea veche, dar aici se spune limpede că nimeni nu punea mâna pe chivotul însuși. Iar candelabrul cu șapte candele, bătut dintr-o singură bucată de aur, era o lucrare de o măiestrie rară chiar pentru meșterii vremii.",
   units: [
     {
       verses: [1, 9],
@@ -25,7 +25,7 @@ export const EXOD_25 = exodChapter({
         "Spune copiilor lui Israel să Îmi aducă un dar; să-l luați de la orice om care Îl dă cu inimă bună. Ia aminte că Dumnezeu, care putea porunci, cere. Cel care despicase marea nu ia cu sila nici un fir de in. Iată cea dintâi învățătură a cortului: Dumnezeu nu primește ce se dă din silă sau din rușine.",
         "Și vezi ce se cere: aur și argint, dar și piei, și păr de capră, și lemn. Nu numai lucrurile scumpe. Fiecare om din tabără avea ceva de dat, și tocmai așa se face lucrarea lui Dumnezeu: nu din darul unuia bogat, ci din ce aduc mulți. Cine socotește că nu are nimic de adus nu a citit lista.",
         "Iar pricina se spune în cel mai frumos verset al capitolului: să Îmi facă un locaș, ca să locuiesc în mijlocul lor. Ia seama: nu „ca să aibă unde să vină la Mine”, ci „ca să locuiesc în mijlocul lor”. Aurul și inul nu sunt cerute pentru frumusețea lor, ci pentru o apropiere. Dumnezeu nu voia numai să-i scoată din Egipt; voia să stea cu ei.",
-        "Și ține minte unde se sfârșește lucrul acesta. Ioan va scrie despre Cuvântul care S-a făcut trup și și-a întins cortul între noi; iar Pavel va spune că trupurile noastre sunt templu al Duhului Sfânt. Ce a început aici cu aur și piei se sfârșește în oameni. Și totul — ia aminte — după chipul arătat pe munte, nu după socotința meșterilor. Închinarea nu se născocește.",
+        "Și ține minte unde se sfârșește lucrul acesta. Ioan va scrie despre Cuvântul care S-a făcut trup și Și-a întins cortul între noi; iar Pavel va spune că trupurile noastre sunt templu al Duhului Sfânt. Ce a început aici cu aur și piei se sfârșește în oameni. Și totul — ia aminte — după chipul arătat pe munte, nu după socotința meșterilor. Închinarea nu se născocește.",
       ),
       words: [
         {
@@ -110,7 +110,7 @@ export const EXOD_25 = exodChapter({
       teaching: teaching(
         "Al doilea lucru este o masă, tot de acacia îmbrăcată cu aur, cu farfurii și căni și pahare, și pe ea pâinea așezată înaintea Domnului, neîncetat. Ia aminte că în casa lui Dumnezeu este o masă. Nu numai un altar și un chivot: și o masă cu pâine.",
         "Pâinea era așezată în două șiruri, câte șase, una pentru fiecare seminție; se schimba în fiecare zi de odihnă și preoții mâncau pe cea scoasă. Deci masa aceea sta cu numele tuturor pe ea. Nici o casă din Israel nu lipsea din locul acela, chiar dacă nici un om din ea nu putea intra.",
-        "Și se cade să zăbovim asupra unui cuvânt: pâinea stă „me-reu” înaintea Lui. Nu la sărbători, nu când Își amintește cineva. Sunt zile în care nu simțim nimic și nu putem aduce nimic; și totuși pâinea stă acolo, fiindcă așa a poruncit El. Legătura noastră cu Dumnezeu nu atârnă de căldura zilei de astăzi.",
+        "Și se cade să zăbovim asupra unui cuvânt: pâinea stă mereu înaintea Lui. Nu la sărbători, nu când Își amintește cineva. Sunt zile în care nu simțim nimic și nu putem aduce nimic; și totuși pâinea stă acolo, fiindcă așa a poruncit El. Legătura noastră cu Dumnezeu nu atârnă de căldura zilei de astăzi.",
         "Nu se cade să căutăm în fiecare lucru un înțeles ascuns; dar atât se vede limpede din tot ce urmează în Scriptură: pâinea din casa lui Dumnezeu duce spre Cel care va spune „Eu sunt Pâinea vieții”. Și mai târziu, când ucenicii vor fi înfometați și vor fi mustrați, tocmai la pâinea aceasta va trimite Domnul Iisus, ca să arate că mila este mai mare decât rânduiala.",
       ),
       words: [
@@ -144,7 +144,7 @@ export const EXOD_25 = exodChapter({
       verses: [31, 40],
       heading: "Candelabrul bătut dintr-o singură bucată",
       teaching: teaching(
-        "Al treilea lucru este candelabrul de aur curat, cu șase brațe și cu șapte candele, și toate — cupele, gurguăele, florile — bătute dintr-o singură bucată. Ia aminte că nu era îmbinat din părți lipite: era bătut cu ciocanul dintr-un singur talant de aur. Ce dă lumină în casa lui Dumnezeu nu se face prin lipire, ci prin lovire.",
+        "Al treilea lucru este candelabrul de aur curat, cu șase brațe și cu șapte candele, și toate — cupele, gurgueele, florile — bătute dintr-o singură bucată. Ia aminte că nu era îmbinat din părți lipite: era bătut cu ciocanul dintr-un singur talant de aur. Ce dă lumină în casa lui Dumnezeu nu se face prin lipire, ci prin lovire.",
         "Și se cade spus limpede, fără să forțăm nimic: aurul nu ia chipul acela fără ciocan. Nu spunem că orice suferință vine din mâna lui Dumnezeu ca să ne facă frumoși — Scriptura nu ne îngăduie să vorbim așa. Dar spunem ce se vede: oamenii care luminează în casa lui Dumnezeu nu sunt de obicei oamenii pe care nu i-a atins nimic niciodată.",
         "Podoabele erau în chip de floare de migdal — pomul care înflorește cel dintâi, când încă nu se vede primăvara. Iar mai târziu, toiagul lui Aaron va înfrunzi și va face migdale în fața chivotului. Lumina și viața stau alături în casa lui Dumnezeu: ce luminează acolo este viu, nu numai lucrat.",
         "Iar capitolul se încheie cum a început: vezi să faci totul după chipul care ți s-a arătat pe munte. Nu este lucrare a închipuirii omenești. Ia aminte și la încă un lucru, care se va vedea mai târziu: candelele acestea trebuiau îngrijite în fiecare seară și în fiecare dimineață, curățite de mucuri și umplute cu ulei. Lumina din casa lui Dumnezeu nu se aprinde o dată; se îngrijește zi de zi.",
@@ -185,5 +185,5 @@ export const EXOD_25 = exodChapter({
     },
   ],
   prayer:
-    "Doamne, Tu nu iei cu sila nimic de la nimeni; învață-ne să dăm cu inimă bună.\n\nMulțumim că nu ai voit doar să ne scoți din robie, ci să locuiești în mijlocul nostru.\n\nVorbește-ne de deasupra ispășirii, fiindcă din vrednicia noastră nu am auzi niciodată nimic.\n\nȘi îngrijește lumina noastră în fiecare seară și în fiecare dimineață, ca să nu se stingă. Amin.",
+    "Doamne, Tu nu iei cu sila nimic de la nimeni; învață-ne să dăm cu inimă bună.\n\nMulțumim că nu ai voit doar să ne scoți din robie, ci să locuiești în mijlocul nostru.\n\nVorbește-ne de deasupra ispășirii, fiindcă din vrednicia noastră nu am auzi niciodată nimic.\n\nȘi îngrijește lumina noastră în fiecare seară și în fiecare dimineață, ca să nu se stingă. Amin."
 })
