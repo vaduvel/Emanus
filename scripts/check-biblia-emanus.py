@@ -92,6 +92,9 @@ FIXED_AUTOMATED_THRESHOLDS = {
     "minimumRomanianTokenOverlap": 0.14,
     "maximumChapterSequenceSimilarity": 0.94,
 }
+FORBIDDEN_EDITORIAL_MARKERS = re.compile(
+    r"(?:\bDE (?:TRADUS|DOCUMENTAT|VERIFICAT)\b|\b(?:TODO|TBD|FIXME)\b|<placeholder>)"
+)
 
 
 class ValidationError(Exception):
@@ -131,6 +134,22 @@ def load_json(path: Path) -> dict[str, Any]:
     if not isinstance(value, dict):
         fail(f"{path.name}: rădăcina trebuie să fie un obiect JSON")
     return value
+
+
+def validate_no_editorial_placeholders(value: Any, owner: str = "chapter") -> None:
+    """Reject unresolved production markers anywhere in a chapter payload."""
+    if isinstance(value, dict):
+        for key, child in value.items():
+            validate_no_editorial_placeholders(child, f"{owner}.{key}")
+        return
+    if isinstance(value, list):
+        for index, child in enumerate(value):
+            validate_no_editorial_placeholders(child, f"{owner}[{index}]")
+        return
+    if isinstance(value, str):
+        match = FORBIDDEN_EDITORIAL_MARKERS.search(value)
+        if match:
+            fail(f"{owner}: marcaj editorial nerezolvat {match.group(0)!r}")
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -1403,6 +1422,7 @@ def validate_chapter(
     source_data: dict[str, Any],
     forbidden_names: list[str],
 ) -> tuple[str, int, int, str, int]:
+    validate_no_editorial_placeholders(data, path.name)
     if data.get("translation") != "BE":
         fail(f"{path.name}: translation trebuie să fie BE")
     book_id = data.get("bookId")

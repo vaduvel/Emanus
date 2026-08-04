@@ -475,6 +475,26 @@ def ledger_fixture(
 
 
 class BibliaEmanusNewTestamentTests(unittest.TestCase):
+    def test_editorial_placeholders_are_rejected_anywhere_in_chapter(self) -> None:
+        data, manifest, ledger, source_data = draft_nt_chapter(
+            "Cartea nașterii lui Isus Hristos."
+        )
+        data["editorialNotes"] = [
+            {
+                "verse": 1,
+                "term": "γενέσεως",
+                "decision": "DE DOCUMENTAT din aparatul critic",
+                "reviewRequired": True,
+                "resolutionStatus": "pending",
+            }
+        ]
+        with self.assertRaisesRegex(
+            validator.ValidationError, "marcaj editorial nerezolvat"
+        ):
+            validator.validate_chapter(
+                Path("MAT.1.json"), data, manifest, ledger, source_data, []
+            )
+
     def test_sblgnt_plaintext_parser_preserves_greek_and_rejects_duplicates(self) -> None:
         raw = (
             "Matthew 1:1\tΒίβλος γενέσεως Ἰησοῦ Χριστοῦ\n"
