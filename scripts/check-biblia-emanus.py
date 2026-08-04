@@ -40,22 +40,15 @@ BOOK_NAMES = {
     "GEN": "Geneza",
     "EXO": "Exodul",
     "LEV": "Leviticul",
+    "NUM": "Numeri",
 }
 BOOK_ORDER = {
     "GEN": 1,
     "EXO": 2,
     "LEV": 3,
+    "NUM": 4,
 }
-BOOK_NAMES = {
-    "GEN": "Geneza",
-    "EXO": "Exodul",
-    "LEV": "Leviticul",
-}
-BOOK_ORDER = {
-    "GEN": 1,
-    "EXO": 2,
-    "LEV": 3,
-}
+
 CHAPTER_ID_PATTERN = re.compile(r"^[A-Z0-9]{3}\.([1-9][0-9]*)$")
 VERSE_ID_PATTERN = re.compile(r"^([A-Z0-9]{3})\.([1-9][0-9]*)\.([1-9][0-9]*)$")
 
