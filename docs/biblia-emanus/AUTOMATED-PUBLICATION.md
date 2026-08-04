@@ -1,52 +1,73 @@
-# Publicarea automată a Bibliei Emanus
+# Poarta automată de publicare — Biblia Emanus
 
-Biblia Emanus nu mai cere o aprobare umană obligatorie pentru fiecare capitol. Un capitol poate deveni `published` automat numai după ce trece toate porțile de mai jos.
+Biblia Emanus nu cere aprobarea umană a fiecărui capitol. Un capitol poate deveni `published` numai după un audit AI complet și după verificările deterministe executate din surse fixate.
 
-## Principiul de bază
+## Autoritatea textului
 
-Textul ebraic sau grecesc rămâne autoritatea principală. World English Bible Updated este baza inițială de lucru. Traducerile românești sunt martori comparativi și nu sunt sursa formulării Bibliei Emanus.
+Textul ebraic sau grecesc este autoritatea principală. WEBU este baza de segmentare și prima punte de lucru. Traducerile românești sunt etaloane comparative, nu sursa formulării.
 
-Potrivirea cu o singură traducere românească nu este suficientă. O formulare poate coincide cu un etalon și totuși să moștenească aceeași interpretare, omisiune sau exprimare protejată. De aceea comparația este o triangulare, nu o copiere și nu un test de identitate textuală.
+Un etalon mai scurt nu justifică scurtarea originalului. Toate propozițiile, repetițiile, binecuvântările, blestemele și ambiguitățile prezente în original trebuie păstrate sau explicate editorial. Motorul reunește liniile poetice și continuările USFM înainte de comparație.
 
-## Porțile obligatorii
+## Procesul obligatoriu
 
-1. **Revizie AI din limba-sursă**
-   - fiecare verset este verificat din ebraică sau greacă;
-   - sunt controlate lexicul, sintaxa, pronumele, timpurile verbale, idiomurile și variantele textuale;
-   - prima traducere este tratată ca ipoteză care trebuie infirmată sau confirmată.
+1. Sursele WEBU și WLC/SBLGNT sunt fixate într-un snapshot cu SHA-256.
+2. AI redactează independent traducerea românească.
+3. AI verifică fiecare verset în limba-sursă și documentează domeniul reviziei.
+4. AI verifică limba română, terminologia, numele și continuitatea discursului.
+5. AI verifică implicațiile teologice și canonice fără a elimina ambiguitățile reale.
+6. Sensul este triangulat cu minimum trei etaloane românești, inclusiv unul din familia Cornilescu.
+7. Motorul recalculează acoperirea, versificația, raporturile de lungime, convergența lexicală, omisiunile evidente și riscul de copiere sistematică.
+8. Toate variantele și notele `reviewRequired` trebuie să fie `resolved` cu motivare.
+9. Auditul este legat de textul exact și de snapshotul exact prin SHA-256.
+10. CI reexecută toate controalele la fiecare schimbare.
 
-2. **Revizie AI de limba română**
-   - text natural, corect și reverent;
-   - diacritice Unicode `ă`, `â`, `î`, `ș`, `ț`;
-   - fără calcuri inutile din engleză;
-   - consecvență terminologică și onomastică.
+## Etaloane
 
-3. **Revizie AI teologică și canonică**
-   - traducerea nu introduce o doctrină absentă din original;
-   - ambiguitățile reale nu sunt eliminate în tăcere;
-   - conexiunile cu restul Scripturii sunt păstrate;
-   - narațiunile despre păcat, constrângere sau abuz nu sunt transformate în aprobare morală.
+Pentru Geneza și Iosua, snapshotul conține:
 
-4. **Triangulare cu traduceri românești**
-   - minimum trei traduceri românești distincte;
-   - cel puțin una din familia Cornilescu, de exemplu VDC sau EDCR;
-   - se verifică omisiunile, adaosurile, sensul, terminologia și naturalețea;
-   - nu se stochează și nu se reproduce textul integral al edițiilor protejate;
-   - diferențele sunt consemnate ca observații, nu prin copierea formulării.
+- Cornilescu 1924, domeniu public, folosit ca etalon din familia Cornilescu;
+- Biblia Traducerea Fidela, domeniu public;
+- NTR, consultată extern numai pentru comparație, fără stocarea textului protejat.
 
-5. **Controlul distanței de copyright**
-   - `exactTextCopied` trebuie să fie `false`;
-   - formularea este justificată de original și de limba română, nu de dependența de o traducere protejată;
-   - coincidențele inevitabile în expresii scurte sau consacrate nu sunt tratate ca sursă de traducere.
+Potrivirea exactă cu un etalon nu este cerută. Convergența sensului trebuie justificată de original, iar formularea Bibliei Emanus trebuie să rămână independentă.
 
-6. **Zero probleme critice nerezolvate**
-   - orice variantă textuală marcată în registru are o decizie documentată;
-   - orice notă cu `reviewRequired: true` are `resolutionStatus: resolved` înainte de publicare;
-   - niciun control nu poate rămâne `pending` sau `changes_requested`.
+## Ce verifică sigiliul
+
+Un capitol `approved` sau `published` trebuie să conțină:
+
+- acoperire integrală verset cu verset;
+- audit AI din limba-sursă, de limba română și teologic;
+- zero omisiuni, adaosuri și probleme critice declarate;
+- dovada etaloanelor fixate și externe;
+- `textDigest` calculat din numărul și textul fiecărui verset;
+- hashul snapshotului-sursă;
+- identificarea agentului AI și a metodei de audit.
+
+Schimbarea unui singur caracter din text invalidează sigiliul și blochează CI până la refacerea auditului.
+
+## Comenzi
+
+```bash
+pnpm check:biblia-emanus
+pnpm test:biblia-emanus
+pnpm seal:biblia-emanus --check --book GEN
+pnpm seal:biblia-emanus --book GEN --engine "Numele agentului AI"
+```
+
+Utilitarul de sigilare nu inventează revizia semantică. El publică numai capitolele care au deja decizii AI complete și care trec toate controalele recalculate.
 
 ## Regula de publicare
 
-Când toate controalele automate sunt `approved`, benchmarkul conține minimum trei traduceri și toate problemele critice sunt rezolvate, capitolul poate trece direct la:
+Manifestul păstrează:
+
+```json
+{
+  "humanApprovalRequired": false,
+  "publishWhenAllChecksApproved": true
+}
+```
+
+După trecerea tuturor porților, capitolul devine:
 
 ```json
 {
@@ -55,8 +76,6 @@ Când toate controalele automate sunt `approved`, benchmarkul conține minimum t
 }
 ```
 
-Nu este necesară o aprobare umană separată. Potrivirea exactă cu Cornilescu nu este o condiție și nu este urmărită; fidelitatea față de original și convergența sensului sunt condițiile reale.
-
 ## Licență
 
-Biblia Emanus este pregătită pentru publicare sub `CC BY 4.0`, cu atribuirea surselor relevante. Această alegere permite distribuirea, adaptarea și reutilizarea traducerii cu menționarea autorilor și a proiectului.
+Biblia Emanus este publicată sub `CC BY 4.0`, cu atribuirile surselor declarate în manifest.

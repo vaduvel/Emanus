@@ -9,13 +9,15 @@
     "english": {
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/GEN11.htm",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "lockId": "WEBU-GEN"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/GEN11.htm",
       "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-GEN"
     }
   },
   "review": {
@@ -30,10 +32,10 @@
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "VDC-1924",
+        "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.11.VDC"
+        "referenceUrl": "https://ebible.org/ron1924/GEN11.htm"
       },
       {
         "id": "NTR",
@@ -42,10 +44,10 @@
         "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.11.NTR"
       },
       {
-        "id": "BTF2015",
+        "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.11.BTF2015"
+        "referenceUrl": "https://ebible.org/ronbtf/GEN11.htm"
       }
     ],
     "exactTextCopied": false,
@@ -108,7 +110,21 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:c96cc4dcf14ef44450d9993b6657c119b4d3cb8b870f0f77f2799076adc1b131"
   },
   "verses": [
     { "number": 1, "text": "Întregul pământ avea o singură limbă și aceleași cuvinte." },

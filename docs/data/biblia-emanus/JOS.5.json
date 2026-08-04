@@ -9,13 +9,15 @@
     "english": {
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JOS05.htm",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "lockId": "WEBU-JOS"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JOS05.htm",
       "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-JOS"
     }
   },
   "review": {
@@ -82,7 +84,7 @@
     },
     {
       "number": 14,
-      "text": "El a răspuns: „Nu. Eu am venit acum în calitate de Căpetenie a oștirii DOMNULUI.” Iosua a căzut cu fața la pământ, s-a plecat înaintea lui și l-a întrebat: „Ce îi spune stăpânul meu slujitorului său?”"
+      "text": "El a răspuns: „Nu, ci Eu sunt Căpetenia oștirii DOMNULUI; acum am venit.” Iosua a căzut cu fața la pământ, s-a plecat înaintea lui și l-a întrebat: „Ce îi spune stăpânul meu slujitorului său?”"
     },
     {
       "number": 15,
@@ -153,13 +155,13 @@
     {
       "verse": 14,
       "term": "lo ... sar-tseva YHWH",
-      "decision": "Nu. Eu am venit acum în calitate de Căpetenie a oștirii DOMNULUI",
-      "reason": "Răspunsul «Nu» refuză împărțirea simplă propusă de Iosua. Identitatea exactă a personajului nu este numită explicit în pasaj.",
+      "decision": "Nu, ci Eu sunt Căpetenia oștirii DOMNULUI; acum am venit",
+      "reason": "Răspunsul refuză împărțirea propusă de Iosua și păstrează separat identitatea personajului și sosirea lui. Pasajul nu îi precizează explicit identitatea teologică.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Răspunsul «Nu» refuză împărțirea simplă propusă de Iosua. Identitatea exactă a personajului nu este numită explicit în pasaj.",
+      "resolutionReason": "Răspunsul refuză împărțirea propusă de Iosua și păstrează separat identitatea personajului și sosirea lui. Pasajul nu îi precizează explicit identitatea teologică.",
       "alternatives": [
-        "Nu, ci Eu sunt Căpetenia oștirii DOMNULUI"
+        "Nu. Eu am venit acum ca Căpetenie a oștirii DOMNULUI"
       ]
     },
     {
@@ -187,10 +189,10 @@
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "VDC-1924",
+        "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/191/JOS.5.VDC"
+        "referenceUrl": "https://ebible.org/ron1924/JOS05.htm"
       },
       {
         "id": "NTR",
@@ -199,10 +201,10 @@
         "referenceUrl": "https://www.bible.com/ro/bible/126/JOS.5.NTR"
       },
       {
-        "id": "BTF2015",
+        "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/903/JOS.5.BTF2015"
+        "referenceUrl": "https://ebible.org/ronbtf/JOS05.htm"
       }
     ],
     "exactTextCopied": false,
@@ -265,6 +267,20 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:5256af2e00506a147a2ca53926ce1c00f564bedd70a82887ad3d2453995e2c34"
   }
 }

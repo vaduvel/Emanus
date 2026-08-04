@@ -6,8 +6,8 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN08.htm", "license": "Public Domain" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN08.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
+    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN08.htm", "license": "Public Domain", "lockId": "WEBU-GEN" },
+    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN08.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": "WLC-GEN" }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,9 +20,9 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.8.VDC" },
+      { "id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ron1924/GEN08.htm" },
       { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.8.NTR" },
-      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.8.BTF2015" }
+      { "id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ronbtf/GEN08.htm" }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
@@ -53,7 +53,21 @@
     },
     "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
     "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 }
+    "criticalIssues": { "result": "approved", "open": 0 },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:bb04ca9efc24e7e617aa584721780fc78869a46600b5d3eff3fe556eac0d6202"
   },
   "verses": [
     { "number": 1, "text": "Dumnezeu Și-a adus aminte de Noe, de toate animalele și de toate vitele care erau cu el în arcă. Dumnezeu a făcut să treacă un vânt peste pământ, iar apele au început să scadă." },

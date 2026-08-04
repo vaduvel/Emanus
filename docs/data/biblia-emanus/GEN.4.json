@@ -9,13 +9,15 @@
     "english": {
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/GEN04.htm",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "lockId": "WEBU-GEN"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/GEN04.htm",
       "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-GEN"
     }
   },
   "review": {
@@ -30,10 +32,10 @@
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "VDC-1924",
+        "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.4.VDC"
+        "referenceUrl": "https://ebible.org/ron1924/GEN04.htm"
       },
       {
         "id": "NTR",
@@ -42,10 +44,10 @@
         "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.4.NTR"
       },
       {
-        "id": "BTF2015",
+        "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.4.BTF2015"
+        "referenceUrl": "https://ebible.org/ronbtf/GEN04.htm"
       }
     ],
     "exactTextCopied": false,
@@ -110,7 +112,21 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:f5557872f6145579a6e44447c0cfd86ee33585c42a5ce1c8615a7d67296b75c5"
   },
   "verses": [
     {
@@ -135,11 +151,11 @@
     },
     {
       "number": 6,
-      "text": "DOMNUL i-a spus lui Cain: „De ce te-ai mâniat și de ce ți s-a posomorât fața?”"
+      "text": "DOMNUL i-a spus lui Cain: „De ce te-ai mâniat și de ce ți s-a posomorât fața?"
     },
     {
       "number": 7,
-      "text": "„Dacă faci bine, nu-ți vei putea ridica fața? Dar dacă nu faci bine, păcatul stă la pândă la ușă. Dorința lui este spre tine, însă tu trebuie să stăpânești peste el.”"
+      "text": "Dacă faci bine, nu-ți vei putea ridica fața? Dar dacă nu faci bine, păcatul stă la pândă la ușă. Dorința lui este spre tine, însă tu trebuie să stăpânești peste el.”"
     },
     {
       "number": 8,
@@ -151,23 +167,23 @@
     },
     {
       "number": 10,
-      "text": "DOMNUL a spus: „Ce ai făcut? Glasul sângelui fratelui tău strigă către Mine din pământ.”"
+      "text": "DOMNUL a spus: „Ce ai făcut? Glasul sângelui fratelui tău strigă către Mine din pământ."
     },
     {
       "number": 11,
-      "text": "„Acum ești blestemat și alungat de pământul care și-a deschis gura ca să primească din mâna ta sângele fratelui tău.”"
+      "text": "Acum ești blestemat și alungat de pământul care și-a deschis gura ca să primească din mâna ta sângele fratelui tău."
     },
     {
       "number": 12,
-      "text": "„Când vei lucra pământul, el nu-ți va mai da puterea lui. Vei fi fugar și rătăcitor pe pământ.”"
+      "text": "Când vei lucra pământul, el nu-ți va mai da puterea lui. Vei fi fugar și rătăcitor pe pământ.”"
     },
     {
       "number": 13,
-      "text": "Cain I-a spus DOMNULUI: „Pedeapsa mea este prea mare ca s-o pot purta.”"
+      "text": "Cain I-a spus DOMNULUI: „Pedeapsa mea este prea mare ca s-o pot purta."
     },
     {
       "number": 14,
-      "text": "„Iată, astăzi mă izgonești de pe fața pământului și voi fi ascuns de fața Ta. Voi fi fugar și rătăcitor pe pământ, iar oricine mă va găsi mă va ucide.”"
+      "text": "Iată, astăzi mă izgonești de pe fața pământului și voi fi ascuns de fața Ta. Voi fi fugar și rătăcitor pe pământ, iar oricine mă va găsi mă va ucide.”"
     },
     {
       "number": 15,
@@ -203,11 +219,11 @@
     },
     {
       "number": 23,
-      "text": "Lameh le-a spus soțiilor sale: „Ada și Țila, ascultați glasul meu! Soțiile lui Lameh, luați aminte la cuvintele mele! Am ucis un om pentru rana mea, un tânăr pentru vânătaia mea.”"
+      "text": "Lameh le-a spus soțiilor sale: „Ada și Țila, ascultați glasul meu! Soțiile lui Lameh, luați aminte la cuvintele mele! Am ucis un om pentru rana mea, un tânăr pentru vânătaia mea."
     },
     {
       "number": 24,
-      "text": "„Dacă pentru Cain răzbunarea este de șapte ori, pentru Lameh va fi de șaptezeci și șapte de ori.”"
+      "text": "Dacă pentru Cain răzbunarea este de șapte ori, pentru Lameh va fi de șaptezeci și șapte de ori.”"
     },
     {
       "number": 25,

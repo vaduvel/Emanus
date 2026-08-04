@@ -9,13 +9,15 @@
     "english": {
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/GEN01.htm",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "lockId": "WEBU-GEN"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/GEN01.htm",
       "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-GEN"
     }
   },
   "review": {
@@ -30,10 +32,10 @@
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "VDC-1924",
+        "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.1.VDC"
+        "referenceUrl": "https://ebible.org/ron1924/GEN01.htm"
       },
       {
         "id": "NTR",
@@ -42,10 +44,10 @@
         "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.1.NTR"
       },
       {
-        "id": "BTF2015",
+        "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.1.BTF2015"
+        "referenceUrl": "https://ebible.org/ronbtf/GEN01.htm"
       }
     ],
     "exactTextCopied": false,
@@ -106,7 +108,21 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:add545f2305b3e968f91c92816772d3d13ca60e60f57fa7227716a3e09ec87b5"
   },
   "verses": [
     {
@@ -163,11 +179,11 @@
     },
     {
       "number": 14,
-      "text": "Dumnezeu a spus: „Să fie luminători în întinderea cerului, ca să despartă ziua de noapte. Ei să fie semne pentru vremuri rânduite, pentru zile și pentru ani.”"
+      "text": "Dumnezeu a spus: „Să fie luminători în întinderea cerului, ca să despartă ziua de noapte. Ei să fie semne pentru vremuri rânduite, pentru zile și pentru ani."
     },
     {
       "number": 15,
-      "text": "„Să fie luminători în întinderea cerului, ca să lumineze pământul.” Și așa a fost."
+      "text": "Să fie luminători în întinderea cerului, ca să lumineze pământul.” Și așa a fost."
     },
     {
       "number": 16,
@@ -187,7 +203,7 @@
     },
     {
       "number": 20,
-      "text": "Dumnezeu a spus: „Să mișune apele de viețuitoare, iar păsările să zboare deasupra pământului, pe întinderea cerului.”"
+      "text": "Dumnezeu a spus: „Apele să mișune de viețuitoare, iar păsările să zboare deasupra pământului, pe întinderea cerului.”"
     },
     {
       "number": 21,
@@ -223,11 +239,11 @@
     },
     {
       "number": 29,
-      "text": "Dumnezeu a spus: „Iată, v-am dat orice plantă care produce sămânță pe toată suprafața pământului și orice pom care are rod cu sămânță în el. Acestea vă vor fi hrană.”"
+      "text": "Dumnezeu a spus: „Iată, v-am dat orice plantă care produce sămânță pe toată suprafața pământului și orice pom care are rod cu sămânță în el. Acestea vă vor fi hrană."
     },
     {
       "number": 30,
-      "text": "„Tuturor animalelor pământului, tuturor păsărilor cerului și tuturor vietăților care mișună pe pământ și au viață le-am dat ca hrană orice plantă verde.” Și așa a fost."
+      "text": "Tuturor animalelor pământului, tuturor păsărilor cerului și tuturor vietăților care mișună pe pământ și au viață le-am dat ca hrană orice plantă verde.” Și așa a fost."
     },
     {
       "number": 31,
@@ -263,7 +279,7 @@
       ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Textul ebraic folosește cardinalul «unu». «Ziua întâi» păstrează particularitatea față de «ziua a doua» și este forma românească naturală în enumerarea secvenței."
+      "resolutionReason": "Textul ebraic folosește cardinalul «unu». Româna redă aici idiomatic începutul secvenței prin «ziua întâi»; diferența față de forma ebraică rămâne documentată."
     },
     {
       "verse": 6,

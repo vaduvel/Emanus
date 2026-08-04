@@ -9,13 +9,15 @@
     "english": {
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JOS02.htm",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "lockId": "WEBU-JOS"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JOS02.htm",
       "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-JOS"
     }
   },
   "review": {
@@ -30,7 +32,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Iosua, fiul lui Nun, a trimis în ascuns din Șitim doi bărbați ca iscoade, spunând: „Mergeți și cercetați țara, mai ales Ierihonul.” Ei au plecat și au intrat în casa unei prostituate pe nume Rahab și au rămas acolo."
+      "text": "Iosua, fiul lui Nun, a trimis în ascuns din Șitim doi bărbați ca iscoade, spunând: „Mergeți și cercetați țara, mai ales Ierihonul.” Ei au plecat și au intrat în casa unei prostituate pe nume Rahav și au rămas acolo."
     },
     {
       "number": 2,
@@ -38,7 +40,7 @@
     },
     {
       "number": 3,
-      "text": "Regele Ierihonului a trimis vorbă Rahabei: „Scoate-i pe bărbații care au venit la tine și au intrat în casa ta, fiindcă au venit să cerceteze toată țara.”"
+      "text": "Regele Ierihonului a trimis vorbă Rahavei: „Scoate-i pe bărbații care au venit la tine și au intrat în casa ta, fiindcă au venit să cerceteze toată țara.”"
     },
     {
       "number": 4,
@@ -58,7 +60,7 @@
     },
     {
       "number": 8,
-      "text": "Înainte ca iscoadele să se culce, Rahab s-a urcat la ele pe acoperiș"
+      "text": "Înainte ca iscoadele să se culce, Rahav s-a urcat la ele pe acoperiș"
     },
     {
       "number": 9,
@@ -199,10 +201,10 @@
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "VDC-1924",
+        "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/191/JOS.2.VDC"
+        "referenceUrl": "https://ebible.org/ron1924/JOS02.htm"
       },
       {
         "id": "NTR",
@@ -211,10 +213,10 @@
         "referenceUrl": "https://www.bible.com/ro/bible/126/JOS.2.NTR"
       },
       {
-        "id": "BTF2015",
+        "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/903/JOS.2.BTF2015"
+        "referenceUrl": "https://ebible.org/ronbtf/JOS02.htm"
       }
     ],
     "exactTextCopied": false,
@@ -245,7 +247,7 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "trimiterea iscoadelor, Rahab, mărturisirea despre DOMNUL, jurământul, hesed, firul stacojiu și întoarcerea iscoadelor"
+      "scope": "trimiterea iscoadelor, Rahav, mărturisirea despre DOMNUL, jurământul, hesed, firul stacojiu și întoarcerea iscoadelor"
     },
     "romanianLanguage": {
       "result": "approved",
@@ -260,8 +262,8 @@
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Credința și acțiunile Rahabei sunt relatate fără a transforma minciuna ei într-o poruncă morală generală.",
-        "Trecutul și statutul social al Rahabei nu sunt eufemizate și nu sunt folosite pentru a-i diminua mărturisirea.",
+        "Credința și acțiunile Rahavei sunt relatate fără a transforma minciuna ei într-o poruncă morală generală.",
+        "Trecutul și statutul social al Rahavei nu sunt eufemizate și nu sunt folosite pentru a-i diminua mărturisirea.",
         "Limbajul herem este păstrat istoric și textual, fără legitimarea violenței religioase contemporane."
       ]
     },
@@ -277,6 +279,20 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:5b720e3e303fcf9e3e63ef4567f1b38a0694b8a588525717e681173c5704eddf"
   }
 }

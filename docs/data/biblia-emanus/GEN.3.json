@@ -9,13 +9,15 @@
     "english": {
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/GEN03.htm",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "lockId": "WEBU-GEN"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/GEN03.htm",
       "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-GEN"
     }
   },
   "review": {
@@ -30,10 +32,10 @@
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "VDC-1924",
+        "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.3.VDC"
+        "referenceUrl": "https://ebible.org/ron1924/GEN03.htm"
       },
       {
         "id": "NTR",
@@ -42,10 +44,10 @@
         "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.3.NTR"
       },
       {
-        "id": "BTF2015",
+        "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.3.BTF2015"
+        "referenceUrl": "https://ebible.org/ronbtf/GEN03.htm"
       }
     ],
     "exactTextCopied": false,
@@ -111,7 +113,21 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:53cf085d100c3b06f1f54232e77da3f36b5d59beadbae3157e43fe12d006f436"
   },
   "verses": [
     {
@@ -168,11 +184,11 @@
     },
     {
       "number": 14,
-      "text": "DOMNUL Dumnezeu i-a spus șarpelui: „Pentru că ai făcut aceasta, ești blestemat mai mult decât toate animalele domestice și decât toate vietățile câmpului. Vei umbla pe pântece și vei mânca țărână în toate zilele vieții tale.”"
+      "text": "DOMNUL Dumnezeu i-a spus șarpelui: „Pentru că ai făcut aceasta, ești blestemat mai mult decât toate animalele domestice și decât toate vietățile câmpului. Vei umbla pe pântece și vei mânca țărână în toate zilele vieții tale."
     },
     {
       "number": 15,
-      "text": "„Voi pune dușmănie între tine și femeie, între sămânța ta și sămânța ei. El îți va lovi capul, iar tu îi vei lovi călcâiul.”"
+      "text": "Voi pune dușmănie între tine și femeie, între sămânța ta și sămânța ei. El îți va lovi capul, iar tu îi vei lovi călcâiul.”"
     },
     {
       "number": 16,
@@ -180,15 +196,15 @@
     },
     {
       "number": 17,
-      "text": "Lui Adam i-a spus: „Pentru că ai ascultat glasul soției tale și ai mâncat din pomul despre care îți poruncisem: «Să nu mănânci din el», blestemat este pământul din pricina ta. Cu multă trudă vei mânca din el în toate zilele vieții tale.”"
+      "text": "Lui Adam i-a spus: „Pentru că ai ascultat glasul soției tale și ai mâncat din pomul despre care îți poruncisem: «Să nu mănânci din el», blestemat este pământul din pricina ta. Cu multă trudă vei mânca din el în toate zilele vieții tale."
     },
     {
       "number": 18,
-      "text": "„El îți va da spini și mărăcini, iar tu vei mânca plantele câmpului.”"
+      "text": "El îți va da spini și mărăcini, iar tu vei mânca plantele câmpului."
     },
     {
       "number": 19,
-      "text": "„Îți vei mânca pâinea în sudoarea feței până când te vei întoarce în pământ, căci din el ai fost luat. Pentru că țărână ești și în țărână te vei întoarce.”"
+      "text": "Îți vei mânca pâinea în sudoarea feței până când te vei întoarce în pământ, căci din el ai fost luat. Pentru că țărână ești și în țărână te vei întoarce.”"
     },
     {
       "number": 20,
