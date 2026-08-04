@@ -1,0 +1,33 @@
+import { LEVITIC_TEXT_1 } from "./leviticText1.js"
+
+/*
+ * Textul biblic al cărții Levitic, adunat pe capitole.
+ *
+ * Structura rămâne aceeași chiar dacă textul se schimbă: se înlocuiesc doar
+ * șirurile din fișierele leviticTextN.ts, nu numărul intrărilor și nu cheile.
+ */
+
+const LEVITIC_TEXT: Record<number, readonly string[]> = {
+  ...LEVITIC_TEXT_1,
+}
+
+export function leviticVerseCount(chapter: number): number {
+  const verses = LEVITIC_TEXT[chapter]
+  if (!verses) {
+    throw new Error(`[Levitic ${chapter}] lipsește textul biblic în leviticText.ts.`)
+  }
+  return verses.length
+}
+
+export function leviticPassage(chapter: number, from: number, to: number): string {
+  const verses = LEVITIC_TEXT[chapter]
+  if (!verses) {
+    throw new Error(`[Levitic ${chapter}] lipsește textul biblic în leviticText.ts.`)
+  }
+  if (from < 1 || to > verses.length || to < from) {
+    throw new Error(
+      `[Levitic ${chapter}] interval cerut în afara textului: ${from}-${to}; capitolul are ${verses.length} versete.`,
+    )
+  }
+  return verses.slice(from - 1, to).join(" ")
+}
