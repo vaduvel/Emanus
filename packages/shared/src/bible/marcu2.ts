@@ -9,7 +9,7 @@ import { marcuChapter, teaching } from "./marcuHelpers.js"
  * niciunui predicator sau comentator.
  */
 
-const MARCU_2 = marcuChapter({
+export const MARCU_2 = marcuChapter({
   number: 2,
   title: "Marcu 2 — Iertarea, chemarea și vinul cel nou",
   summary:
