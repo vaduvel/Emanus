@@ -21,3 +21,9 @@ export { EXOD_3 } from "./exod3.js"
 export const EXOD: BibleBook = {
   id: "exod",
   name: "Exod",
+  testament: "vt",
+  order: 2,
+  blurb:
+    "Cartea ieșirii din robie. În ebraică se numește „Numele”, fiindcă începe cu oameni chemați pe nume. Aici Dumnezeu Se coboară în suferința unui popor, Își descoperă Numele, scoate cu mână tare, dă Legea și vine să locuiască în mijlocul alor Săi.",
+  chapters: [EXOD_1, EXOD_2, EXOD_3],
+}
