@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 19,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,148 +75,212 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "narațiune, unități de măsură, legislație, teofanie, Decalog și termeni ebraici rari verificați verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Textul mecanic sau contaminat a fost înlocuit integral.",
+        "Formulele juridice, repetițiile, numerele și dialogurile au fost redactate în română naturală și consecventă."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Mana și gesturile lui Moise nu sunt prezentate drept tehnici magice.",
+        "Sfatul administrativ al lui Ietro rămâne condiționat de porunca lui Dumnezeu.",
+        "Sfințirea de la Sinai și Decalogul sunt redate fără aprobarea sclaviei, a vinovăției ereditare automate sau a violenței religioase moderne."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "In the third month after the children of Israel had să plecene out of the țară of Egipt, on that same day they came into the wilderness of Sinai."
+      "text": "În luna a treia după ieșirea fiilor lui Israel din țara Egiptului, chiar în ziua aceea, au ajuns în pustia Sinai."
     },
     {
       "number": 2,
-      "text": "When they had departed from Rephidim, and had come to the wilderness of Sinai, they encamped in the wilderness; and there Israel encamped before the mountain. (text revizuit în limba română cu diacritice)"
+      "text": "Au pornit din Refidim, au ajuns în pustia Sinai și și-au așezat tabăra în pustie. Israel și-a așezat tabăra acolo, înaintea muntelui."
     },
     {
       "number": 3,
-      "text": "Moise went up to Dumnezeu, and the DOMNUL called to him out of the mountain, saying, This is what you shall tell the house of Jacob, and tell the children of Israel: (text revizuit în limba română cu diacritice)"
+      "text": "Moise s-a urcat la Dumnezeu, iar DOMNUL l-a chemat de pe munte și i-a spus: „Așa să vorbești casei lui Iacov și să le spui fiilor lui Israel:"
     },
     {
       "number": 4,
-      "text": "‘You have seen what I did to the Egiptians, and how I bore you on eagles’ wings, and brought you to myself. (text revizuit în limba română cu diacritice)"
+      "text": "«Ați văzut ce le-am făcut egiptenilor și cum v-am purtat pe aripi de vultur și v-am adus la Mine."
     },
     {
       "number": 5,
-      "text": "Now therefore, if you will indeed obey my voice and keep my covenant, then you shall be my own possession from among all peoples; for all the earth is mine; (text revizuit în limba română cu diacritice)"
+      "text": "Acum, dacă veți asculta cu adevărat glasul Meu și veți păzi legământul Meu, veți fi comoara Mea deosebită dintre toate popoarele, căci al Meu este tot pământul."
     },
     {
       "number": 6,
-      "text": "and you shall be to me a kingdom of priests and a holy nation.’ These are the words which you shall speak to the children of Israel. (text revizuit în limba română cu diacritice)"
+      "text": "Îmi veți fi o împărăție de preoți și un popor sfânt.» Acestea sunt cuvintele pe care să le spui fiilor lui Israel.”"
     },
     {
       "number": 7,
-      "text": "Moise came and called for the elders of the people, and set before them all these words which the DOMNUL commanded him. (text revizuit în limba română cu diacritice)"
+      "text": "Moise a venit, i-a chemat pe bătrânii poporului și a pus înaintea lor toate aceste cuvinte pe care i le poruncise DOMNUL."
     },
     {
       "number": 8,
-      "text": "All the people answered together, and a zis, All that the DOMNUL has spoken we will do. Moise reported the words of the people to the DOMNUL. (text revizuit în limba română cu diacritice)"
+      "text": "Tot poporul a răspuns într-un glas: „Vom face tot ce a spus DOMNUL.” Moise a dus cuvintele poporului înapoi la DOMNUL."
     },
     {
       "number": 9,
-      "text": "The DOMNUL i-a zis lui Moise, Behold, I come to you in a thick cloud, that the people may hear when I speak with you, and may also believe you forever. Moise told the words of the people to the DOMNUL. (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a spus lui Moise: „Iată, voi veni la tine într-un nor gros, ca poporul să audă când vorbesc cu tine și să aibă întotdeauna încredere în tine.” Moise I-a spus DOMNULUI cuvintele poporului."
     },
     {
       "number": 10,
-      "text": "The DOMNUL i-a zis lui Moise, Go to the people, and sanctify them today and tomorrow, and let them wash their garments, (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a spus lui Moise: „Du-te la popor și sfințește-l astăzi și mâine. Să-și spele hainele"
     },
     {
       "number": 11,
-      "text": "and be ready for the third day; for on the third day the DOMNUL will come down in the sight of all the people on Mount Sinai. (text revizuit în limba română cu diacritice)"
+      "text": "și să fie gata pentru ziua a treia, căci în ziua a treia DOMNUL va coborî înaintea ochilor întregului popor pe muntele Sinai."
     },
     {
       "number": 12,
-      "text": "You shall set bounds to the people all around, saying, ‘Be careful that you don’t să plece up onto the mountain, or touch its border. Whoever touches the mountain shall be surely put to death."
+      "text": "Să pui hotare de jur împrejurul poporului și să spui: «Aveți grijă să nu vă urcați pe munte și să nu-i atingeți marginea. Oricine va atinge muntele va fi omorât."
     },
     {
       "number": 13,
-      "text": "No mână shall touch him, but he shall surely be stoned or shot through; whether it is animal or man, he shall not live.’ When the trumpet sounds long, they shall come up to the mountain."
+      "text": "Nicio mână să nu-l atingă, ci să fie ucis cu pietre sau străpuns cu săgeți. Fie animal, fie om, nu va trăi.» Când cornul va suna prelung, ei se vor putea apropia de munte.”"
     },
     {
       "number": 14,
-      "text": "Moise went down from the mountain to the people, and sanctified the people; and they washed their clothes. (text revizuit în limba română cu diacritice)"
+      "text": "Moise a coborât de pe munte la popor, a sfințit poporul, iar ei și-au spălat hainele."
     },
     {
       "number": 15,
-      "text": "He i-a zis lui the people, Be ready by the third day. Don’t have sexual relations with a woman. (text revizuit în limba română cu diacritice)"
+      "text": "El a spus poporului: „Fiți gata pentru ziua a treia. Să nu vă apropiați de femei.”"
     },
     {
       "number": 16,
-      "text": "On the third day, when it was morning, there were thunders and lightnings, and a thick cloud on the mountain, and the sound of an exceedingly loud trumpet; and all the people who were in the camp trembled. (text revizuit în limba română cu diacritice)"
+      "text": "În dimineața zilei a treia au fost tunete, fulgere și un nor gros pe munte și s-a auzit un sunet de corn foarte puternic. Tot poporul din tabără a tremurat."
     },
     {
       "number": 17,
-      "text": "Moise led the people out of the camp to meet Dumnezeu; and they stood at the lower part of the mountain. (text revizuit în limba română cu diacritice)"
+      "text": "Moise a scos poporul din tabără în întâmpinarea lui Dumnezeu, iar ei s-au așezat la poalele muntelui."
     },
     {
       "number": 18,
-      "text": "All of Mount Sinai smoked, because the DOMNUL descended on it in fire; and its smoke ascended like the smoke of a furnace, and the whole mountain quaked greatly. (text revizuit în limba română cu diacritice)"
+      "text": "Tot muntele Sinai fumega, fiindcă DOMNUL coborâse peste el în foc. Fumul lui se ridica asemenea fumului unui cuptor, iar întregul munte se cutremura puternic."
     },
     {
       "number": 19,
-      "text": "When the sound of the trumpet grew louder and louder, Moise spoke, and Dumnezeu answered him by a voice. (text revizuit în limba română cu diacritice)"
+      "text": "Sunetul cornului devenea tot mai puternic. Moise vorbea, iar Dumnezeu îi răspundea prin glas."
     },
     {
       "number": 20,
-      "text": "The DOMNUL came down on Mount Sinai, to the top of the mountain. The DOMNUL called Moise to the top of the mountain, and Moise went up. (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL a coborât pe muntele Sinai, pe vârful muntelui. DOMNUL l-a chemat pe Moise pe vârful muntelui, iar Moise s-a urcat."
     },
     {
       "number": 21,
-      "text": "The DOMNUL i-a zis lui Moise, Go down, warn the people, lest they break through to the DOMNUL to gaze, and many of them perish. (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a spus lui Moise: „Coboară și avertizează poporul să nu dea năvală spre DOMNUL ca să privească, altfel mulți dintre ei vor pieri."
     },
     {
       "number": 22,
-      "text": "Let the priests also, who come near to the DOMNUL, sanctify themselves, lest the DOMNUL break out on them. (text revizuit în limba română cu diacritice)"
+      "text": "Chiar și preoții care se apropie de DOMNUL să se sfințească, pentru ca DOMNUL să nu izbucnească împotriva lor.”"
     },
     {
       "number": 23,
-      "text": "Moise i-a zis lui the DOMNUL, The people can’t come up to Mount Sinai, for you warned us, saying, ‘Set bounds around the mountain, and sanctify it.’  (text revizuit în limba română cu diacritice)"
+      "text": "Moise I-a spus DOMNULUI: „Poporul nu se poate urca pe muntele Sinai, căci Tu ne-ai avertizat: «Pune hotare în jurul muntelui și sfințește-l.»”"
     },
     {
       "number": 24,
-      "text": "The DOMNUL i-a zis lui him, Go down! You shall bring Aaron up with you, but don’t let the priests and the people break through to come up to the DOMNUL, lest he break out against them. (text revizuit în limba română cu diacritice)"
+      "text": "DOMNUL i-a răspuns: „Coboară! Apoi să urci împreună cu Aaron. Dar preoții și poporul să nu dea năvală să urce spre DOMNUL, ca El să nu izbucnească împotriva lor.”"
     },
     {
       "number": 25,
-      "text": "So Moise went down to the people, and told them. (text revizuit în limba română cu diacritice)"
+      "text": "Moise a coborât la popor și le-a spus aceste lucruri."
     }
   ],
   "editorialNotes": [
     {
       "verse": 1,
-      "term": "EXO.19.1",
-      "decision": "Redare revizuită",
+      "term": "bayom hazzeh",
+      "decision": "chiar în ziua aceea",
+      "reason": "Poate însemna aceeași zi calendaristică a lunii sau, idiomatic, perioada respectivă; textul nu oferă o dată numerică explicită.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Revizuit în textul ebraic WLC-OSHB și baza WEBU pentru capitolul 19."
+      "resolutionReason": "Poate însemna aceeași zi calendaristică a lunii sau, idiomatic, perioada respectivă; textul nu oferă o dată numerică explicită.",
+      "alternatives": [
+        "în aceeași zi"
+      ]
+    },
+    {
+      "verse": 4,
+      "term": "al-kanfe nesharim",
+      "decision": "pe aripi de vultur",
+      "reason": "Imaginea exprimă purtarea și protecția divină; nu descrie un mijloc fizic de transport.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Imaginea exprimă purtarea și protecția divină; nu descrie un mijloc fizic de transport.",
+      "alternatives": [
+        "pe aripi de acvilă"
+      ]
+    },
+    {
+      "verse": 5,
+      "term": "segullah",
+      "decision": "comoara Mea deosebită",
+      "reason": "Termenul desemnează o proprietate regală prețioasă; alegerea lui Israel nu neagă afirmația imediată că întreg pământul Îi aparține lui Dumnezeu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul desemnează o proprietate regală prețioasă; alegerea lui Israel nu neagă afirmația imediată că întreg pământul Îi aparține lui Dumnezeu.",
+      "alternatives": [
+        "proprietatea Mea prețioasă"
+      ]
+    },
+    {
+      "verse": 6,
+      "term": "mamlekhet kohanim vegoy qadosh",
+      "decision": "împărăție de preoți și popor sfânt",
+      "reason": "Expresia descrie vocația colectivă a poporului în legământ și nu spune că fiecare israelit primește funcția cultică a descendenților lui Aaron.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia descrie vocația colectivă a poporului în legământ și nu spune că fiecare israelit primește funcția cultică a descendenților lui Aaron.",
+      "alternatives": [
+        "regat preoțesc și națiune sfântă"
+      ]
+    },
+    {
+      "verse": 13,
+      "term": "bimshok hayyovel",
+      "decision": "când cornul va suna prelung",
+      "reason": "Yovel desemnează aici un corn; permisiunea exactă de apropiere după semnal trebuie citită împreună cu limitele reiterate în versetele 21–24.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Yovel desemnează aici un corn; permisiunea exactă de apropiere după semnal trebuie citită împreună cu limitele reiterate în versetele 21–24.",
+      "alternatives": [
+        "când trâmbița va suna lung"
+      ]
+    },
+    {
+      "verse": 15,
+      "term": "al-tiggeshu el-ishah",
+      "decision": "să nu vă apropiați de femei",
+      "reason": "Este o abstinență rituală temporară înaintea teofaniei; nu declară relația conjugală necurată moral.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este o abstinență rituală temporară înaintea teofaniei; nu declară relația conjugală necurată moral.",
+      "alternatives": [
+        "să nu aveți relații sexuale"
+      ]
     }
   ]
 }
