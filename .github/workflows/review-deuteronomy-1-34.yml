@@ -1,0 +1,53 @@
+name: Review Deuteronomy 1-34
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-deuteronomul
+    paths:
+      - scripts/review-deuteronomy-1-34.py
+      - .github/workflows/review-deuteronomy-1-34.yml
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-deuteronomul
+          fetch-depth: 0
+      - name: Run audit safely
+        id: audit
+        shell: bash
+        run: |
+          set +e
+          python3 scripts/review-deuteronomy-1-34.py > /tmp/deuteronomy-audit.log 2>&1
+          code=$?
+          echo "exit_code=$code" >> /tmp/deuteronomy-audit.log
+          if [ "$code" -ne 0 ]; then
+            git reset --hard HEAD
+            cp /tmp/deuteronomy-audit.log docs/data/biblia-emanus/.audit-DEU-run.log
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "failed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Commit result or diagnostic
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "${{ steps.audit.outputs.failed }}" = "true" ]; then
+            git add docs/data/biblia-emanus/.audit-DEU-run.log
+            git commit -m "Record Deuteronomy audit failure"
+            git push origin HEAD:agent/biblia-emanus-deuteronomul
+            exit 1
+          fi
+          git add -A docs/data/biblia-emanus/DEU.*.json docs/data/biblia-emanus/manifest.json docs/data/biblia-emanus/.audit-DEU-notes.txt docs/data/biblia-emanus/.audit-DEU-summary.txt docs/data/biblia-emanus/.audit-DEU-verses.txt docs/biblia-emanus/DEUTERONOMUL-AUDIT.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Audit and publish Deuteronomy 1-34"
+          git push origin HEAD:agent/biblia-emanus-deuteronomul
