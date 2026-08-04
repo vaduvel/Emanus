@@ -1,0 +1,34 @@
+name: Review Leviticus 11-15
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-leviticul
+    paths:
+      - scripts/review-leviticus-11-15.py
+      - .github/workflows/review-leviticus-11-15.yml
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-leviticul
+          fetch-depth: 0
+      - name: Audit chapters
+        run: python3 scripts/review-leviticus-11-15.py
+      - name: Commit audited chapters
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-emanus/LEV.{11,12,13,14,15}.json docs/data/biblia-emanus/manifest.json docs/biblia-emanus/LEVITICUL-AUDIT.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Audit and publish Leviticus 11-15"
+          git push origin HEAD:agent/biblia-emanus-leviticul
