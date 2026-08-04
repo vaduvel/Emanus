@@ -1,0 +1,47 @@
+name: Reset Deuteronomy to truthful review state
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-deuteronomul
+    paths:
+      - .github/workflows/tmp-reset-deuteronomy-review.yml
+
+permissions:
+  contents: write
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-deuteronomul
+          fetch-depth: 0
+      - name: Reset unverified automatic approvals
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('docs/data/biblia-emanus')
+          keys=['aiSourceLanguage','aiRomanianLanguage','aiTheologicalContext','omissionAddition','benchmarkComparison','copyrightDistance','criticalIssues']
+          for path in sorted(root.glob('DEU.*.json')):
+              d=json.loads(path.read_text(encoding='utf-8'))
+              d['status']='in_review'; d['public']=False
+              for k in keys: d['review'][k]='changes_requested'
+              for k in d.get('benchmark',{}).get('checks',{}): d['benchmark']['checks'][k]='changes_requested'
+              a=d.get('audit',{})
+              for k in ('sourceLanguage','romanianLanguage','theologicalContext','omissionAddition','copyrightDistance','criticalIssues'):
+                  if isinstance(a.get(k),dict): a[k]['result']='changes_requested'
+              if isinstance(a.get('criticalIssues'),dict): a['criticalIssues']['open']=1
+              a['pendingReason']='Aprobarea automată șablonizată a fost anulată; capitolul necesită audit editorial real verset cu verset.'
+              path.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          mpath=root/'manifest.json'; m=json.loads(mpath.read_text(encoding='utf-8'))
+          m['progress'].update(chaptersDrafted=84,versesDrafted=2492,chaptersApproved=50,chaptersPublished=50)
+          mpath.write_text(json.dumps(m,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+          PY
+          git rm .github/workflows/tmp-reset-deuteronomy-review.yml
+          git add docs/data/biblia-emanus/DEU.*.json docs/data/biblia-emanus/manifest.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Reset Deuteronomy chapters for substantive editorial audit"
+          git push origin HEAD:agent/biblia-emanus-deuteronomul
