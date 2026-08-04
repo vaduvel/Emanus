@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 5,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
-    "benchmarkComparison": "approved",
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "changes_requested",
+    "aiRomanianLanguage": "changes_requested",
+    "aiTheologicalContext": "changes_requested",
+    "omissionAddition": "changes_requested",
+    "benchmarkComparison": "changes_requested",
+    "copyrightDistance": "changes_requested",
+    "criticalIssues": "changes_requested"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "approved",
-      "additions": "approved",
-      "meaning": "approved",
-      "romanianNaturalness": "approved",
-      "theologicalNeutrality": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "changes_requested",
+      "additions": "changes_requested",
+      "meaning": "changes_requested",
+      "romanianNaturalness": "changes_requested",
+      "theologicalNeutrality": "changes_requested",
+      "copyrightSimilarity": "changes_requested"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
@@ -75,36 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "approved",
+      "result": "changes_requested",
       "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
     },
     "romanianLanguage": {
-      "result": "approved",
+      "result": "changes_requested",
       "changesApplied": [
         "Numeri 5 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
         "Numeri 5 — respectare a terminologiei onomastice și geografice biblice în română."
       ]
     },
     "theologicalContext": {
-      "result": "approved",
+      "result": "changes_requested",
       "principles": [
         "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
         "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
       ]
     },
     "omissionAddition": {
-      "result": "approved",
+      "result": "changes_requested",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "approved",
+      "result": "changes_requested",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    }
+      "result": "changes_requested",
+      "open": 1
+    },
+    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
   },
   "verses": [
     {
