@@ -14,6 +14,7 @@ import { LEVITIC_12 } from "./levitic12.js"
 import { LEVITIC_13 } from "./levitic13.js"
 import { LEVITIC_14 } from "./levitic14.js"
 import { LEVITIC_15 } from "./levitic15.js"
+import { LEVITIC_16 } from "./levitic16.js"
 
 /*
  * Cartea Levitic.
@@ -38,6 +39,7 @@ export {
   LEVITIC_13,
   LEVITIC_14,
   LEVITIC_15,
+  LEVITIC_16,
 }
 
 export const LEVITIC: BibleBook = {
@@ -63,5 +65,6 @@ export const LEVITIC: BibleBook = {
     LEVITIC_13,
     LEVITIC_14,
     LEVITIC_15,
+    LEVITIC_16,
   ],
 }
