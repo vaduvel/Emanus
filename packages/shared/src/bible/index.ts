@@ -51,6 +51,7 @@ import { GENEZA_47 } from "./geneza47.js"
 import { GENEZA_48 } from "./geneza48.js"
 import { GENEZA_49 } from "./geneza49.js"
 import { GENEZA_50 } from "./geneza50.js"
+import { EXOD } from "./exod.js"
 import { MATEI as MATEI_BASE } from "./matei.js"
 import { MATEI_2 } from "./matei2.js"
 import { MATEI_3 } from "./matei3.js"
@@ -242,8 +243,10 @@ export const MARCU: BibleBook = {
   ],
 }
 
+export { EXOD }
+
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, MATEI, IOAN, MARCU]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, EXOD, MATEI, IOAN, MARCU]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)
