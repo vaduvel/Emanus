@@ -18,7 +18,7 @@ Traducerea urmărește echilibrul dintre:
 - evitarea parafrazei doctrinare;
 - evitarea unei române rigide care reproduce mecanic sintaxa engleză.
 
-WEBU este baza de lucru și de segmentare. Pentru Vechiul Testament, sensurile importante se verifică în WLC/OSHB. Pentru Noul Testament, sensurile importante se verifică în SBLGNT. Când sursele diferă textual, diferența se notează editorial și nu este rezolvată în tăcere.
+WEB Protestant Edition este baza de lucru și de segmentare. Pentru Vechiul Testament, sensurile importante se verifică în WLC/OSHB. Pentru Noul Testament, sensurile importante se verifică în SBLGNT. Când sursele diferă textual, diferența se notează editorial și nu este rezolvată în tăcere.
 
 ## 4. Reguli pentru limba română
 

@@ -49,20 +49,28 @@ def seal_chapter(
         validator.fail("capitolul nu are audit semantic AI")
     candidate["status"] = "published"
     candidate["public"] = True
-    audit["engineVersion"] = "2.0.0"
+    if book["testament"] == "NT":
+        audit["schemaVersion"] = 2
+    audit["engineVersion"] = (
+        validator.NT_ENGINE_VERSION
+        if book["testament"] == "NT"
+        else validator.LEGACY_ENGINE_VERSION
+    )
     audit["reviewLevel"] = "ai-complete"
     audit["reviewAgent"] = {
         "type": "ai",
         "engine": engine_name,
         "method": "verse-by-verse-source-and-benchmark",
     }
-    audit["sourceSnapshotSha256"] = source_data["snapshotSha256"]
+    audit["sourceSnapshotSha256"] = source_data["snapshotSha256ByBook"][candidate["bookId"]]
     audit["benchmarkEvidence"] = {
         "pinnedBenchmarks": len(book["benchmarkLockIds"]),
         "externalBenchmarks": len(book["externalBenchmarkIds"]),
         "result": "approved",
     }
     audit["textDigest"] = validator.chapter_text_digest(candidate)
+    if book["testament"] == "NT":
+        audit["contentDigest"] = validator.chapter_content_digest(candidate)
     return candidate
 
 

@@ -12,7 +12,7 @@ Data auditului: `2026-08-04`
 
 ## Controale executate
 
-- acoperire completă WEBU, WLC, Cornilescu 1924 și BTF;
+- acoperire completă WEB Protestant Edition, WLC, Cornilescu 1924 și BTF;
 - maparea diferenței de versificație din Geneza 31:55 și 32:1–32;
 - reunirea continuărilor poetice USFM în versetul corect;
 - comparație deterministă pentru fiecare dintre cele 2.191 de versete;

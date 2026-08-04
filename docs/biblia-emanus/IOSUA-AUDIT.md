@@ -5,7 +5,7 @@ Acest document păstrează deciziile transversale folosite la auditarea traducer
 ## Surse și metodă
 
 - text principal pentru verificarea limbii-sursă: WLC-OSHB;
-- bază public-domain de lucru: World English Bible Updated, Protestant Edition;
+- bază public-domain de lucru: World English Bible, Protestant Edition;
 - Cornilescu 1924 (`CORNILESCU-1924`), NTR și Biblia Traducerea Fidela (`BTF`) sunt consultate numai `comparison-only`;
 - variantele textuale semnificative sunt înscrise în `source-ledger.json` și au note editoriale rezolvate în capitolul corespunzător;
 - relatarea cuceririi este tradusă explicit, fără atenuarea violenței și fără transformarea ei într-o autorizare a violenței religioase moderne.

@@ -4,7 +4,7 @@
 
 Snapshotul conține câte un fișier pentru fiecare carte din:
 
-- World English Bible Updated, Protestant Edition: domeniu public;
+- World English Bible, Protestant Edition: domeniu public;
 - Westminster Leningrad Codex: text în domeniul public;
 - Open Scriptures Hebrew Bible: adnotări `CC BY 4.0`;
 - Cornilescu 1924: domeniu public, script chirilic în distribuția eBible;

@@ -14,7 +14,7 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 
 ## Surse de lucru
 
-1. **Bază engleză:** World English Bible Updated / Protestant Edition (`WEBU` / `engwebp`), domeniu public. Textul rezultat nu va fi numit World English Bible.
+1. **Bază engleză:** World English Bible, Protestant Edition (`WEB Protestant Edition` / `engwebp`), domeniu public. Textul rezultat nu va fi numit World English Bible.
 2. **Vechiul Testament:** Westminster Leningrad Codex prin Open Scriptures Hebrew Bible. Textul WLC este declarat domeniu public; datele de analiză OSHB cer atribuire.
 3. **Noul Testament:** SBL Greek New Testament, licență Creative Commons Attribution 4.0.
 4. **Etaloane românești fixate:** Cornilescu 1924 și BTF, ambele distribuite de eBible ca domeniu public.

@@ -4,13 +4,13 @@ Biblia Emanus nu cere aprobarea umană a fiecărui capitol. Un capitol poate dev
 
 ## Autoritatea textului
 
-Textul ebraic sau grecesc este autoritatea principală. WEBU este baza de segmentare și prima punte de lucru. Traducerile românești sunt etaloane comparative, nu sursa formulării.
+Textul ebraic sau grecesc este autoritatea principală. WEB Protestant Edition este baza de segmentare și prima punte de lucru. Traducerile românești sunt etaloane comparative, nu sursa formulării.
 
 Un etalon mai scurt nu justifică scurtarea originalului. Toate propozițiile, repetițiile, binecuvântările, blestemele și ambiguitățile prezente în original trebuie păstrate sau explicate editorial. Motorul reunește liniile poetice și continuările USFM înainte de comparație.
 
 ## Procesul obligatoriu
 
-1. Sursele WEBU și WLC/SBLGNT sunt fixate într-un snapshot cu SHA-256.
+1. Sursele WEB Protestant Edition și WLC/SBLGNT sunt fixate într-un snapshot cu SHA-256.
 2. AI redactează independent traducerea românească.
 3. AI verifică fiecare verset în limba-sursă și documentează domeniul reviziei.
 4. AI verifică limba română, terminologia, numele și continuitatea discursului.
