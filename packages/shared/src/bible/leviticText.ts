@@ -24,6 +24,7 @@ import { LEVITIC_TEXT_23 } from "./leviticText23.js"
 import { LEVITIC_TEXT_24 } from "./leviticText24.js"
 import { LEVITIC_TEXT_25 } from "./leviticText25.js"
 import { LEVITIC_TEXT_26 } from "./leviticText26.js"
+import { LEVITIC_TEXT_27 } from "./leviticText27.js"
 
 /*
  * Textul biblic al cărții Levitic, adunat pe capitole.
@@ -59,6 +60,7 @@ const LEVITIC_TEXT: Record<number, readonly string[]> = {
   ...LEVITIC_TEXT_24,
   ...LEVITIC_TEXT_25,
   ...LEVITIC_TEXT_26,
+  ...LEVITIC_TEXT_27,
 }
 
 export function leviticVerseCount(chapter: number): number {
