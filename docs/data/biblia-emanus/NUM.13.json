@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 13,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 13 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 13 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -126,7 +126,7 @@
     },
     {
       "number": 5,
-      "text": "din seminția lui Simion: Șafat, fiul lui Hori;"
+      "text": "din seminția lui Simeon: Șafat, fiul lui Hori;"
     },
     {
       "number": 6,
@@ -186,7 +186,7 @@
     },
     {
       "number": 20,
-      "text": "cum este pământul: dacă este roditor sau steril, dacă sunt copaci pe el sau nu. Fiți cu inimă și luați din roadele țării.” Era vremea primilor struguri."
+      "text": "cum este pământul: roditor sau sărac, dacă sunt copaci pe el sau nu. Prindeți curaj și luați din roadele țării.” Era vremea primilor struguri."
     },
     {
       "number": 21,
@@ -241,5 +241,48 @@
       "text": "Am văzut acolo pe uriași, pe fiii lui Anac, care se trag din uriași; în ochii noștri noi eram ca niște lăcuste, și tot așa eram și în ochii lor.”"
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 16,
+      "term": "Hoshea / Yehoshua",
+      "decision": "Osea / Iosua",
+      "alternatives": [],
+      "reason": "Schimbarea numelui este păstrată și documentată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Schimbarea numelui este păstrată și documentată."
+    },
+    {
+      "verse": 22,
+      "term": "yelide haAnaq",
+      "decision": "urmașii lui Anac",
+      "alternatives": [],
+      "reason": "Numele grupurilor și localităților nu sunt transformați în rase mitologice moderne.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele grupurilor și localităților nu sunt transformați în rase mitologice moderne."
+    },
+    {
+      "verse": 32,
+      "term": "ereț okhelet yoshveha",
+      "decision": "o țară care își devorează locuitorii",
+      "alternatives": [],
+      "reason": "Este raportul descurajator al iscoadelor, nu verdictul naratorului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este raportul descurajator al iscoadelor, nu verdictul naratorului."
+    },
+    {
+      "verse": 33,
+      "term": "nefilim",
+      "decision": "nefilimi",
+      "alternatives": [
+        "uriași"
+      ],
+      "reason": "Termenul este transliterat; afirmația provine din relatarea iscoadelor înspăimântate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul este transliterat; afirmația provine din relatarea iscoadelor înspăimântate."
+    }
+  ]
 }

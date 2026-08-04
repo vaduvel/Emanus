@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 6,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 6 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 6 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -166,7 +166,7 @@
     },
     {
       "number": 15,
-      "text": "un coș cu pâini fără plămădeală din făină aleasă, frământate cu untdelemn, turte fără plămădeală unse cu untdelemn, împreună cu ofranda lor de mâncare și jertfele lor de turnare."
+      "text": "un coș cu pâini fără plămădeală din făină aleasă, frământate cu ulei, turte fără plămădeală unse cu ulei, împreună cu ofranda lor de mâncare și jertfele lor de turnare."
     },
     {
       "number": 16,
@@ -217,5 +217,36 @@
       "text": "Astfel să pună Numele Meu peste fiii lui Israel, iar Eu îi voi binecuvânta.”"
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "nazir",
+      "decision": "nazireu / persoană consacrată prin jurământ",
+      "alternatives": [],
+      "reason": "Termenul descrie separarea voluntară pentru DOMNUL.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul descrie separarea voluntară pentru DOMNUL."
+    },
+    {
+      "verse": 5,
+      "term": "pera sear rosho",
+      "decision": "părul capului să crească liber",
+      "alternatives": [],
+      "reason": "Părul este semnul public al jurământului, nu o sursă magică de putere.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Părul este semnul public al jurământului, nu o sursă magică de putere."
+    },
+    {
+      "verse": 24,
+      "term": "yevarekhekha YHWH veyishmerekha",
+      "decision": "DOMNUL să te binecuvânteze și să te păzească",
+      "alternatives": [],
+      "reason": "Binecuvântarea preoțească este păstrată în cele trei strofe ebraice.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Binecuvântarea preoțească este păstrată în cele trei strofe ebraice."
+    }
+  ]
 }

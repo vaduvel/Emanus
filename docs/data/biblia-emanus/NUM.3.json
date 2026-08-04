@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 3 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 3 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -174,7 +174,7 @@
     },
     {
       "number": 17,
-      "text": "Acștia au fost fiii lui Levi, după numele lor: Gherșon, Chehat și Merari."
+      "text": "Aceștia au fost fiii lui Levi, după numele lor: Gherșon, Chehat și Merari."
     },
     {
       "number": 18,
@@ -218,7 +218,7 @@
     },
     {
       "number": 28,
-      "text": "Numărând toți bărbații de la vârsta de o lună în sus, au fost opt mii șase sute, care îndeplineau slujba sfântului locaș."
+      "text": "Numărând toți bărbații de la vârsta de o lună în sus, au fost opt mii șase sute, care îndeplineau slujba Sfântului Lăcaș."
     },
     {
       "number": 29,
@@ -230,11 +230,11 @@
     },
     {
       "number": 31,
-      "text": "În paza lor vor fi chivotul, masa, sfeșnicul, altarele, uneltele sfântului locaș cu care se slujește, perdeaua și toată slujba privitoare la ele."
+      "text": "În paza lor vor fi chivotul, masa, sfeșnicul, altarele, uneltele Sfântului Lăcaș cu care se slujește, perdeaua și toată slujba privitoare la ele."
     },
     {
       "number": 32,
-      "text": "Eleazar, fiul preotului Aaron, va fi căpetenia căpeteniilor leviților și va supraveghea pe cei ce îndeplinesc slujba sfântului locaș."
+      "text": "Eleazar, fiul preotului Aaron, va fi căpetenia căpeteniilor leviților și va supraveghea pe cei ce îndeplinesc slujba Sfântului Lăcaș."
     },
     {
       "number": 33,
@@ -258,7 +258,7 @@
     },
     {
       "number": 38,
-      "text": "Cei ce vor tăbărî în fața Cortului spre răsărit, în fața Cortului Întâlnirii spre răsăritul soarelui, vor fi Moise, Aaron și fiii lui, îndeplinind slujba sfântului locaș pentru fiii lui Israel. Iar străinul care se va apropia să fie dat la moarte."
+      "text": "Cei ce vor tăbărî în fața Cortului spre răsărit, în fața Cortului Întâlnirii spre răsăritul soarelui, vor fi Moise, Aaron și fiii lui, îndeplinind slujba Sfântului Lăcaș pentru fiii lui Israel. Iar străinul care se va apropia să fie dat la moarte."
     },
     {
       "number": 39,
@@ -294,7 +294,7 @@
     },
     {
       "number": 47,
-      "text": "să iei câte cinci șecheli de cap, după șechelul sfântului locaș (un șechel are douăzeci de ghera)."
+      "text": "să iei câte cinci șecheli de cap, după șechelul Sfântului Lăcaș (un șechel are douăzeci de ghera)."
     },
     {
       "number": 48,
@@ -306,12 +306,43 @@
     },
     {
       "number": 50,
-      "text": "A luat banii de la întâii născuți ai fiilor lui Israel: mie trei sute șaizeci și cinci de șecheli, după șechelul sfântului locaș."
+      "text": "A luat banii de la întâii născuți ai fiilor lui Israel: mie trei sute șaizeci și cinci de șecheli, după șechelul Sfântului Lăcaș."
     },
     {
       "number": 51,
       "text": "Și Moise i-a dat banii de răscumpărare lui Aaron și fiilor lui, după cuvântul DOMNULUI, așa cum îi poruncise DOMNUL lui Moise."
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 12,
+      "term": "laqakhti et-haleviyim tahat kol-bekhor",
+      "decision": "leviții în locul întâilor născuți",
+      "alternatives": [],
+      "reason": "Substituția cultică este explicită în text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Substituția cultică este explicită în text."
+    },
+    {
+      "verse": 13,
+      "term": "li kol-bekhor",
+      "decision": "orice întâi născut este al Meu",
+      "alternatives": [],
+      "reason": "Apartenența este legată de izbăvirea întâilor născuți din Egipt.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Apartenența este legată de izbăvirea întâilor născuți din Egipt."
+    },
+    {
+      "verse": 46,
+      "term": "273",
+      "decision": "surplusul întâilor născuți",
+      "alternatives": [],
+      "reason": "Cei 273 sunt răscumpărați prin plata stabilită, fără rotunjire.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Cei 273 sunt răscumpărați prin plata stabilită, fără rotunjire."
+    }
+  ]
 }

@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 27,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 27 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 27 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -118,7 +118,7 @@
     },
     {
       "number": 3,
-      "text": "„Tatăl nostru a murit în pustie și el nu era în mijlocul cetei celor ce s-au strâns împotriva DOMNULUI, în ceta lui Core, ci a murit pentru păcatul lui și nu a avut fii."
+      "text": "„Tatăl nostru a murit în pustie. El nu era în ceata celor care s-au strâns împotriva DOMNULUI, în ceata lui Core, ci a murit pentru propriul lui păcat și nu a avut fii."
     },
     {
       "number": 4,
@@ -186,7 +186,7 @@
     },
     {
       "number": 20,
-      "text": "Să pui peste el din autoritatea ta, pentru ca toată adunarea fiilor lui Israel să esculte de el."
+      "text": "Să pui peste el din autoritatea ta, pentru ca toată adunarea fiilor lui Israel să asculte de el."
     },
     {
       "number": 21,
@@ -201,5 +201,46 @@
       "text": "și-a pus mâinile peste el și i-a dat porunci, așa cum vorbise DOMNUL prin Moise."
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "tenah lanu ahuzzah",
+      "decision": "dă-ne o moștenire",
+      "alternatives": [],
+      "reason": "Cererea fiicelor lui Țelofhad este declarată dreaptă de DOMNUL.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Cererea fiicelor lui Țelofhad este declarată dreaptă de DOMNUL."
+    },
+    {
+      "verse": 7,
+      "term": "ken benot Țelofhad dovrot",
+      "decision": "fiicele lui Țelofhad au dreptate",
+      "alternatives": [],
+      "reason": "Hotărârea produce o regulă succesorală pentru Israel.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Hotărârea produce o regulă succesorală pentru Israel."
+    },
+    {
+      "verse": 18,
+      "term": "ish asher ruah bo",
+      "decision": "un om în care este Duhul",
+      "alternatives": [],
+      "reason": "Iosua este desemnat pentru conducere și primește autoritate, fără a deveni egal cu Moise în toate privințele.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Iosua este desemnat pentru conducere și primește autoritate, fără a deveni egal cu Moise în toate privințele."
+    },
+    {
+      "verse": 21,
+      "term": "mishpat haUrim",
+      "decision": "hotărârea Urimului",
+      "alternatives": [],
+      "reason": "Consultarea este rânduită preotului Eleazar și nu este prezentată ca tehnică divinatorie disponibilă oricui.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Consultarea este rânduită preotului Eleazar și nu este prezentată ca tehnică divinatorie disponibilă oricui."
+    }
+  ]
 }

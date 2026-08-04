@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 18,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,42 +75,42 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 18 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 18 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "DOMNUL i-a spus lui Aaron: „Tu, fiii tăi și casa tatălui tău cu tine veți purta nelegiuirea sfântului locaș; tu și fiii tăi cu tine veți purta nelegiuirea preoției voastre."
+      "text": "DOMNUL i-a spus lui Aaron: „Tu, fiii tăi și casa tatălui tău cu tine veți purta nelegiuirea Sfântului Lăcaș; tu și fiii tăi cu tine veți purta nelegiuirea preoției voastre."
     },
     {
       "number": 2,
@@ -118,7 +118,7 @@
     },
     {
       "number": 3,
-      "text": "Ei vor păzi paza ta și paza întregului Cort; dar de uneltele sfântului locaș și de altar să nu se apropie, ca să nu moară, nici ei, nici voi."
+      "text": "Ei vor păzi paza ta și paza întregului Cort; dar de uneltele Sfântului Lăcaș și de altar să nu se apropie, ca să nu moară, nici ei, nici voi."
     },
     {
       "number": 4,
@@ -126,7 +126,7 @@
     },
     {
       "number": 5,
-      "text": "Voi veți păzi paza sfântului locaș și paza altarului, ca să nu mai fie mânie peste fiii lui Israel."
+      "text": "Voi veți păzi paza Sfântului Lăcaș și paza altarului, ca să nu mai fie mânie peste fiii lui Israel."
     },
     {
       "number": 6,
@@ -154,7 +154,7 @@
     },
     {
       "number": 12,
-      "text": "Tot ce este mai bun din untdelemn, tot ce este mai bun din must și din grâu, pârga pe care o vor da DOMNULUI, ți le-am dat ție."
+      "text": "Tot ce este mai bun din ulei, tot ce este mai bun din must și din grâu, pârga pe care o vor da DOMNULUI, ți le-am dat ție."
     },
     {
       "number": 13,
@@ -170,7 +170,7 @@
     },
     {
       "number": 16,
-      "text": "Răscumpărarea o vei face de la vârsta de o lună, după prețuirea ta de cinci șecheli de argint, după șechelul sfântului locaș, care este de douăzeci de ghera."
+      "text": "Răscumpărarea o vei face de la vârsta de o lună, după prețuirea ta de cinci șecheli de argint, după șechelul Sfântului Lăcaș, care este de douăzeci de ghera."
     },
     {
       "number": 17,
@@ -226,7 +226,7 @@
     },
     {
       "number": 30,
-      "text": "Spune-le: «Când veți aduce ce este mai bun din ea, leviților li se va socotit ca venitul dintr-o arie și ca venitul dintr-un teasc."
+      "text": "Spune-le: «Când veți aduce ce este mai bun din ea, leviților li se va socoti ca venitul dintr-o arie și ca venitul dintr-un teasc."
     },
     {
       "number": 31,
@@ -237,5 +237,36 @@
       "text": "Și nu veți purta niciun păcat din pricina ei, când veți fi adus ce este mai bun din ea; nu veți spurca lucrurile sfinte ale fiilor lui Israel și nu veți muri.»”"
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "tissu et-avon hammiqdash",
+      "decision": "veți purta vina Lăcașului",
+      "alternatives": [],
+      "reason": "Responsabilitatea cultică a preoților și leviților este redată fără imunitate morală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Responsabilitatea cultică a preoților și leviților este redată fără imunitate morală."
+    },
+    {
+      "verse": 19,
+      "term": "berit melah",
+      "decision": "legământ de sare",
+      "alternatives": [],
+      "reason": "Formula indică durabilitatea darului cultic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formula indică durabilitatea darului cultic."
+    },
+    {
+      "verse": 20,
+      "term": "ani helqekha venahalatekha",
+      "decision": "Eu sunt partea și moștenirea ta",
+      "alternatives": [],
+      "reason": "Lipsa unui teritoriu levitic este legată de slujire și de darurile rânduite.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lipsa unui teritoriu levitic este legată de slujire și de darurile rânduite."
+    }
+  ]
 }

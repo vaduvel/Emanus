@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 2 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 2 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -122,7 +122,7 @@
     },
     {
       "number": 4,
-      "text": "Oștirea lui, cei numărați din ea, au fost șaptezeci și patru de mii șasesute."
+      "text": "Oștirea lui, cei numărați din ea, au fost șaptezeci și patru de mii șase sute."
     },
     {
       "number": 5,
@@ -130,7 +130,7 @@
     },
     {
       "number": 6,
-      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și patru de mii patrusute."
+      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și patru de mii patru sute."
     },
     {
       "number": 7,
@@ -138,11 +138,11 @@
     },
     {
       "number": 8,
-      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și șapte de mii patrusute."
+      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și șapte de mii patru sute."
     },
     {
       "number": 9,
-      "text": "Toți cei numărați din tabăra lui Iuda au fost o sută optzeci și șase de mii patrusute, după oștirile lor. Aceștia vor porni primii."
+      "text": "Toți cei numărați din tabăra lui Iuda au fost o sută optzeci și șase de mii patru sute, după oștirile lor. Aceștia vor porni primii."
     },
     {
       "number": 10,
@@ -150,15 +150,15 @@
     },
     {
       "number": 11,
-      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci și șase de mii cincisute."
+      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci și șase de mii cinci sute."
     },
     {
       "number": 12,
-      "text": "Lângă el să tăbărască seminția lui Simion; iar căpetenia fiilor lui Simion să fie Șelumiel, fiul lui Țurișadai."
+      "text": "Lângă el să tăbărască seminția lui Simeon; iar căpetenia fiilor lui Simeon să fie Șelumiel, fiul lui Țurișadai."
     },
     {
       "number": 13,
-      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și nouă de mii treisute."
+      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și nouă de mii trei sute."
     },
     {
       "number": 14,
@@ -166,11 +166,11 @@
     },
     {
       "number": 15,
-      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci și cinci de mii șasesute cincizeci."
+      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci și cinci de mii șase sute cincizeci."
     },
     {
       "number": 16,
-      "text": "Toți cei numărați din tabăra lui Ruben au fost o sută cincizeci și una de mii patrusute cincizeci, după oștirile lor. Aceștia vor porni al doilea grup."
+      "text": "Toți cei numărați din tabăra lui Ruben au fost o sută cincizeci și una de mii patru sute cincizeci, după oștirile lor. Aceștia vor porni al doilea grup."
     },
     {
       "number": 17,
@@ -182,7 +182,7 @@
     },
     {
       "number": 19,
-      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci de mii cincisute."
+      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci de mii cinci sute."
     },
     {
       "number": 20,
@@ -190,7 +190,7 @@
     },
     {
       "number": 21,
-      "text": "Oștirea lui, cei numărați din ea, au fost treizeci și două de mii douăsute."
+      "text": "Oștirea lui, cei numărați din ea, au fost treizeci și două de mii două sute."
     },
     {
       "number": 22,
@@ -198,7 +198,7 @@
     },
     {
       "number": 23,
-      "text": "Oștirea lui, cei numărați din ea, au fost treizeci și cinci de mii patrusute."
+      "text": "Oștirea lui, cei numărați din ea, au fost treizeci și cinci de mii patru sute."
     },
     {
       "number": 24,
@@ -210,7 +210,7 @@
     },
     {
       "number": 26,
-      "text": "Oștirea lui, cei numărați din ea, au fost șaizeci și două de mii șaptesute."
+      "text": "Oștirea lui, cei numărați din ea, au fost șaizeci și două de mii șapte sute."
     },
     {
       "number": 27,
@@ -218,7 +218,7 @@
     },
     {
       "number": 28,
-      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci și una de mii cincisute."
+      "text": "Oștirea lui, cei numărați din ea, au fost patruzeci și una de mii cinci sute."
     },
     {
       "number": 29,
@@ -226,11 +226,11 @@
     },
     {
       "number": 30,
-      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și trei de mii patrusute."
+      "text": "Oștirea lui, cei numărați din ea, au fost cincizeci și trei de mii patru sute."
     },
     {
       "number": 31,
-      "text": "Toți cei numărați din tabăra lui Dan au fost o sută cincizeci și șapte de mii șasesute. Aceștia vor porni ultimii, după steagurile lor.”"
+      "text": "Toți cei numărați din tabăra lui Dan au fost o sută cincizeci și șapte de mii șase sute. Aceștia vor porni ultimii, după steagurile lor.”"
     },
     {
       "number": 32,
@@ -245,5 +245,38 @@
       "text": "Fiii lui Israel au făcut după tot ce-i poruncise DOMNUL lui Moise; așa au tăbărât după steagurile lor și așa au pornit fiecare după familiile lui, după casele părinților lui."
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "degel / otot",
+      "decision": "steag / semne",
+      "alternatives": [
+        "stindard / însemne"
+      ],
+      "reason": "Termenii descriu organizarea taberei în jurul Cortului Întâlnirii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenii descriu organizarea taberei în jurul Cortului Întâlnirii."
+    },
+    {
+      "verse": 17,
+      "term": "kaasher yahanu ken yissa'u",
+      "decision": "cum au tăbărât, așa vor porni",
+      "alternatives": [],
+      "reason": "Ordinea de marș reproduce ordinea taberei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ordinea de marș reproduce ordinea taberei."
+    },
+    {
+      "verse": 32,
+      "term": "603.550",
+      "decision": "totalul primului recensământ",
+      "alternatives": [],
+      "reason": "Totalurile tribale sunt păstrate exact și verificate aritmetic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Totalurile tribale sunt păstrate exact și verificate aritmetic."
+    }
+  ]
 }

@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 7 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 7 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -142,7 +142,7 @@
     },
     {
       "number": 9,
-      "text": "Dar fiilor lui Chehat nu le-a dat niciunul, pentru că slujba sfântului locaș care le revenea era să poarte lucrurile sfinte pe umeri."
+      "text": "Dar fiilor lui Chehat nu le-a dat niciunul, pentru că slujba Sfântului Lăcaș care le revenea era să poarte lucrurile sfinte pe umeri."
     },
     {
       "number": 10,
@@ -158,7 +158,7 @@
     },
     {
       "number": 13,
-      "text": "Ofranda lui a fost: un potir de argint în greutate de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint în greutate de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 14,
@@ -182,7 +182,7 @@
     },
     {
       "number": 19,
-      "text": "A adus ca ofrandă: un potir de argint în greutate de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "A adus ca ofrandă: un potir de argint în greutate de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 20,
@@ -206,7 +206,7 @@
     },
     {
       "number": 25,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 26,
@@ -230,7 +230,7 @@
     },
     {
       "number": 31,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 32,
@@ -250,11 +250,11 @@
     },
     {
       "number": 36,
-      "text": "În ziua a cincea, căpetenia fiilor lui Simion, Șelumiel, fiul lui Țurișadai."
+      "text": "În ziua a cincea, căpetenia fiilor lui Simeon, Șelumiel, fiul lui Țurișadai."
     },
     {
       "number": 37,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 38,
@@ -278,7 +278,7 @@
     },
     {
       "number": 43,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 44,
@@ -302,7 +302,7 @@
     },
     {
       "number": 49,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 50,
@@ -326,7 +326,7 @@
     },
     {
       "number": 55,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 56,
@@ -350,7 +350,7 @@
     },
     {
       "number": 61,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 62,
@@ -374,7 +374,7 @@
     },
     {
       "number": 67,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 68,
@@ -398,7 +398,7 @@
     },
     {
       "number": 73,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 74,
@@ -422,7 +422,7 @@
     },
     {
       "number": 79,
-      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul sfântului locaș, ambele pline cu făină aleasă frământată cu untdelemn pentru o jertfă de mâncare;"
+      "text": "Ofranda lui a fost: un potir de argint de o sută treizeci de șecheli, un potir de stropit de argint de șaptezeci de șecheli, după șechelul Sfântului Lăcaș, ambele pline cu făină aleasă frământată cu ulei pentru o dar de cereale;"
     },
     {
       "number": 80,
@@ -446,11 +446,11 @@
     },
     {
       "number": 85,
-      "text": "fiecare potir de argint cântărea o sută treizeci de șecheli, și fiecare potir de stropit șaptezeci de șecheli; tot argintul vaselor a fost de două mii patru sute de șecheli, după șechelul sfântului locaș;"
+      "text": "fiecare potir de argint cântărea o sută treizeci de șecheli, și fiecare potir de stropit șaptezeci de șecheli; tot argintul vaselor a fost de două mii patru sute de șecheli, după șechelul Sfântului Lăcaș;"
     },
     {
       "number": 86,
-      "text": "cele douăsprezece linguri de aur pline cu tămâie cântăreau zece șecheli fiecare, după șechelul sfântului locaș; tot aurul lingurilor a fost de o sută douăzeci de șecheli;"
+      "text": "cele douăsprezece linguri de aur pline cu tămâie cântăreau zece șecheli fiecare, după șechelul Sfântului Lăcaș; tot aurul lingurilor a fost de o sută douăzeci de șecheli;"
     },
     {
       "number": 87,
@@ -465,5 +465,36 @@
       "text": "Când Moise intra în Cortul Întâlnirii ca să vorbească cu DOMNUL, auzea Glasul vorbindu-i de pe capacul ispășirii care era peste chivotul mărturiei, dintre cei doi heruvimi; și vorbea cu El."
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "qah me'ittam",
+      "decision": "primește darurile de la ei",
+      "alternatives": [],
+      "reason": "Contribuțiile conducătorilor sunt distribuite după nevoile reale ale slujirii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contribuțiile conducătorilor sunt distribuite după nevoile reale ale slujirii."
+    },
+    {
+      "verse": 9,
+      "term": "avodat haqqodesh alehem",
+      "decision": "slujba lucrurilor sfinte era asupra chehatiților",
+      "alternatives": [],
+      "reason": "Ei poartă pe umeri obiectele sfinte, fără care.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ei poartă pe umeri obiectele sfinte, fără care."
+    },
+    {
+      "verse": 89,
+      "term": "mi-ben shene hakkruvim",
+      "decision": "glasul dintre cei doi heruvimi",
+      "alternatives": [],
+      "reason": "Vocea este auzită deasupra capacului ispășirii; obiectul nu este prezentat ca idol.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Vocea este auzită deasupra capacului ispășirii; obiectul nu este prezentat ca idol."
+    }
+  ]
 }

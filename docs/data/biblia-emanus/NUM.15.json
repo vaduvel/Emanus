@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 15,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 15 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 15 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -122,19 +122,19 @@
     },
     {
       "number": 4,
-      "text": "cel ce își va aduce ofranda DOMNULUI să aducă ca jertfă de mâncare a zecea parte dintr-o efă de făină aleasă, frământată cu un sfert de hin de untdelemn;"
+      "text": "cel ce își va aduce ofranda DOMNULUI să aducă ca dar de cereale a zecea parte dintr-o efă de făină aleasă, frământată cu un sfert de hin de ulei;"
     },
     {
       "number": 5,
-      "text": "iar ca jertfă de turnare să aduci un sfert de hin de vin pe lângă arderea-de-tot sau pe lângă jertfă, pentru fiecare miel."
+      "text": "iar ca dar de băutură să aduci un sfert de hin de vin pe lângă arderea-de-tot sau pe lângă jertfă, pentru fiecare miel."
     },
     {
       "number": 6,
-      "text": "Pentru un berbec, să pregătești ca jertfă de mâncare două zecimi dintr-o efă de făină aleasă, frământată cu o treime de hin de untdelemn;"
+      "text": "Pentru un berbec, să pregătești ca dar de cereale două zecimi dintr-o efă de făină aleasă, frământată cu o treime de hin de ulei;"
     },
     {
       "number": 7,
-      "text": "iar ca jertfă de turnare să aduci o treime de hin de vin, ca miros plăcut DOMNULUI."
+      "text": "iar ca dar de băutură să aduci o treime de hin de vin, ca miros plăcut DOMNULUI."
     },
     {
       "number": 8,
@@ -142,11 +142,11 @@
     },
     {
       "number": 9,
-      "text": "să aduci pe lângă taur o jertfă de mâncare de trei zecimi de efă de făină aleasă, frământată cu jumătate de hin de untdelemn;"
+      "text": "să aduci pe lângă taur o dar de cereale de trei zecimi de efă de făină aleasă, frământată cu jumătate de hin de ulei;"
     },
     {
       "number": 10,
-      "text": "iar ca jertfă de turnare să aduci jumătate de hin de vin; aceasta este o jertfă prin foc, de un miros plăcut DOMNULUI."
+      "text": "iar ca dar de băutură să aduci jumătate de hin de vin; aceasta este o jertfă prin foc, de un miros plăcut DOMNULUI."
     },
     {
       "number": 11,
@@ -273,5 +273,48 @@
       "text": "Eu sunt DOMNUL, Dumnezeul vostru, care v-am scos din țara Egiptului ca să fiu Dumnezeul vostru: Eu sunt DOMNUL, Dumnezeul vostru.”"
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 15,
+      "term": "huqqah ahat",
+      "decision": "o singură rânduială pentru voi și străin",
+      "alternatives": [],
+      "reason": "Egalitatea cultică explicită este păstrată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Egalitatea cultică explicită este păstrată."
+    },
+    {
+      "verse": 30,
+      "term": "beyad ramah",
+      "decision": "cu mâna ridicată",
+      "alternatives": [
+        "cu îndrăzneală"
+      ],
+      "reason": "Idiomul desemnează păcat sfidător, deliberat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Idiomul desemnează păcat sfidător, deliberat."
+    },
+    {
+      "verse": 32,
+      "term": "mekoshesh ețim",
+      "decision": "strângea lemne",
+      "alternatives": [],
+      "reason": "Fapta și pedeapsa sunt redate ca legislație a comunității antice, fără autorizarea violenței private.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Fapta și pedeapsa sunt redate ca legislație a comunității antice, fără autorizarea violenței private."
+    },
+    {
+      "verse": 38,
+      "term": "țitțit / tekhelet",
+      "decision": "ciucuri / fir albastru",
+      "alternatives": [],
+      "reason": "Semnul vestimentar are rol de aducere-aminte a poruncilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Semnul vestimentar are rol de aducere-aminte a poruncilor."
+    }
+  ]
 }

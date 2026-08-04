@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 31,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 31 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 31 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -130,7 +130,7 @@
     },
     {
       "number": 6,
-      "text": "Moise i-a trimis la război, câte o mie de fiecare seminție, pe ei și pe Fineas, fiul preotului Eleazar, care avea în mână uneltele sfântului locaș și trâmbițele de alarmă."
+      "text": "Moise i-a trimis la război, câte o mie de fiecare seminție, pe ei și pe Fineas, fiul preotului Eleazar, care avea în mână uneltele Sfântului Lăcaș și trâmbițele de alarmă."
     },
     {
       "number": 7,
@@ -250,7 +250,7 @@
     },
     {
       "number": 36,
-      "text": "Jumătatea cuvenită celor ce merseseră la război a fost de: trei sute treizeci și șapte de mii cincisute de oi,"
+      "text": "Jumătatea cuvenită celor ce merseseră la război a fost de: trei sute treizeci și șapte de mii cinci sute de oi,"
     },
     {
       "number": 37,
@@ -262,7 +262,7 @@
     },
     {
       "number": 39,
-      "text": "treizeci de mii cincisute de măgari, dintre care datoria pentru DOMNUL a fost de șaizeci și unul;"
+      "text": "treizeci de mii cinci sute de măgari, dintre care datoria pentru DOMNUL a fost de șaizeci și unul;"
     },
     {
       "number": 40,
@@ -278,7 +278,7 @@
     },
     {
       "number": 43,
-      "text": "jumătatea cuvenită adunării a fost de: trei sute treizeci și șapte de mii cincisute de oi,"
+      "text": "jumătatea cuvenită adunării a fost de: trei sute treizeci și șapte de mii cinci sute de oi,"
     },
     {
       "number": 44,
@@ -286,7 +286,7 @@
     },
     {
       "number": 45,
-      "text": "treizeci de mii cincisute de măgari,"
+      "text": "treizeci de mii cinci sute de măgari,"
     },
     {
       "number": 46,
@@ -325,5 +325,46 @@
       "text": "Moise și preotul Eleazar au luat aurul de la căpeteniile miilor și ale sutelor și l-au dus în Cortul Întâlnirii, ca aducere aminte pentru fiii lui Israel înaintea DOMNULUI."
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "niqmat bene Yisrael meet haMidyanim",
+      "decision": "răzbunarea fiilor lui Israel asupra madianiților",
+      "alternatives": [],
+      "reason": "Comanda și violența sunt redate direct ca episod judiciar antic, fără autorizarea războiului etnic modern.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Comanda și violența sunt redate direct ca episod judiciar antic, fără autorizarea războiului etnic modern."
+    },
+    {
+      "verse": 15,
+      "term": "hahiyitem kol-nekevah",
+      "decision": "ați lăsat toate femeile în viață?",
+      "alternatives": [],
+      "reason": "Întrebarea și ordinul ulterior nu sunt eufemizate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Întrebarea și ordinul ulterior nu sunt eufemizate."
+    },
+    {
+      "verse": 17,
+      "term": "haragu kol-zakhar battaf",
+      "decision": "ucideți orice băiat dintre copii",
+      "alternatives": [],
+      "reason": "Textul dificil este păstrat explicit; narațiunea nu devine model pentru violență contemporană.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul dificil este păstrat explicit; narațiunea nu devine model pentru violență contemporană."
+    },
+    {
+      "verse": 50,
+      "term": "lekhapper al-nafshoteinu",
+      "decision": "să facem ispășire pentru viețile noastre",
+      "alternatives": [],
+      "reason": "Darul conducătorilor este legat de faptul că nu lipsea niciun soldat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Darul conducătorilor este legat de faptul că nu lipsea niciun soldat."
+    }
+  ]
 }

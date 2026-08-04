@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 1 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 1 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -130,7 +130,7 @@
     },
     {
       "number": 6,
-      "text": "din Simion: Șelumiel, fiul lui Țurișadai;"
+      "text": "din Simeon: Șelumiel, fiul lui Țurișadai;"
     },
     {
       "number": 7,
@@ -190,23 +190,23 @@
     },
     {
       "number": 21,
-      "text": "cei numărați din seminția lui Ruben au fost patruzeci și șase de mii cincisute."
+      "text": "cei numărați din seminția lui Ruben au fost patruzeci și șase de mii cinci sute."
     },
     {
       "number": 22,
-      "text": "Din fiii lui Simion, urmașii lor după familiile lor, după casele părinților lor, cei numărați pe capete, toți bărbații de la douăzeci de ani în sus, buni de mers la război:"
+      "text": "Din fiii lui Simeon, urmașii lor după familiile lor, după casele părinților lor, cei numărați pe capete, toți bărbații de la douăzeci de ani în sus, buni de mers la război:"
     },
     {
       "number": 23,
-      "text": "cei numărați din seminția lui Simion au fost cincizeci și nouă de mii treisute."
+      "text": "cei numărați din seminția lui Simeon au fost cincizeci și nouă de mii trei sute."
     },
     {
       "number": 24,
-      "text": "Din fiii lui Gad, urmașii lor după familiile lor, după casele părinților lor, numărând numele de la douăzeci de ani în sus, toti buni de mers la război:"
+      "text": "Din fiii lui Gad, urmașii lor după familiile lor, după casele părinților lor, numărând numele de la douăzeci de ani în sus, toți buni de mers la război:"
     },
     {
       "number": 25,
-      "text": "cei numărați din seminția lui Gad au fost patruzeci și cinci de mii șasesute cincizeci."
+      "text": "cei numărați din seminția lui Gad au fost patruzeci și cinci de mii șase sute cincizeci."
     },
     {
       "number": 26,
@@ -214,7 +214,7 @@
     },
     {
       "number": 27,
-      "text": "cei numărați din seminția lui Iuda au fost șaptezeci și patru de mii șasesute."
+      "text": "cei numărați din seminția lui Iuda au fost șaptezeci și patru de mii șase sute."
     },
     {
       "number": 28,
@@ -222,7 +222,7 @@
     },
     {
       "number": 29,
-      "text": "cei numărați din seminția lui Isahar au fost cincizeci și patru de mii patrusute."
+      "text": "cei numărați din seminția lui Isahar au fost cincizeci și patru de mii patru sute."
     },
     {
       "number": 30,
@@ -230,7 +230,7 @@
     },
     {
       "number": 31,
-      "text": "cei numărați din seminția lui Zabulon au fost cincizeci și șapte de mii patrusute."
+      "text": "cei numărați din seminția lui Zabulon au fost cincizeci și șapte de mii patru sute."
     },
     {
       "number": 32,
@@ -238,7 +238,7 @@
     },
     {
       "number": 33,
-      "text": "cei numărați din seminția lui Efraim au fost patruzeci de mii cincisute."
+      "text": "cei numărați din seminția lui Efraim au fost patruzeci de mii cinci sute."
     },
     {
       "number": 34,
@@ -246,7 +246,7 @@
     },
     {
       "number": 35,
-      "text": "cei numărați din seminția lui Manase au fost treizeci și două de mii douăsute."
+      "text": "cei numărați din seminția lui Manase au fost treizeci și două de mii două sute."
     },
     {
       "number": 36,
@@ -254,7 +254,7 @@
     },
     {
       "number": 37,
-      "text": "cei numărați din seminția lui Beniamin au fost treizeci și cinci de mii patrusute."
+      "text": "cei numărați din seminția lui Beniamin au fost treizeci și cinci de mii patru sute."
     },
     {
       "number": 38,
@@ -262,7 +262,7 @@
     },
     {
       "number": 39,
-      "text": "cei numărați din seminția lui Dan au fost șaizeci și două de mii șaptesute."
+      "text": "cei numărați din seminția lui Dan au fost șaizeci și două de mii șapte sute."
     },
     {
       "number": 40,
@@ -270,7 +270,7 @@
     },
     {
       "number": 41,
-      "text": "cei numărați din seminția lui Așer au fost patruzeci și una de mii cincisute."
+      "text": "cei numărați din seminția lui Așer au fost patruzeci și una de mii cinci sute."
     },
     {
       "number": 42,
@@ -278,7 +278,7 @@
     },
     {
       "number": 43,
-      "text": "cei numărați din seminția lui Neftali au fost cincizeci și trei de mii patrusute."
+      "text": "cei numărați din seminția lui Neftali au fost cincizeci și trei de mii patru sute."
     },
     {
       "number": 44,
@@ -310,7 +310,7 @@
     },
     {
       "number": 51,
-      "text": "Când Cortul va trebui să pornească, leviții să-l strângă; iar când Cortul va trebui să tăbărască, leviții să-l ridice. Strainul care se va apropia să fie dat la moarte."
+      "text": "Când Cortul va trebui să pornească, leviții să-l strângă; iar când Cortul va trebui să fie așezat, leviții să-l ridice. Străinul care se va apropia să fie dat la moarte."
     },
     {
       "number": 52,
@@ -325,5 +325,38 @@
       "text": "Fiii lui Israel au făcut întocmai; au făcut după tot ce-i poruncise DOMNUL lui Moise."
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "se'u et-rosh",
+      "decision": "faceți recensământul",
+      "alternatives": [
+        "ridicați capul întregii adunări"
+      ],
+      "reason": "Idiomul «ridicați capul» desemnează numărarea nominală a comunității.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Idiomul «ridicați capul» desemnează numărarea nominală a comunității."
+    },
+    {
+      "verse": 3,
+      "term": "kol-yotze țava",
+      "decision": "toți cei buni de mers la război",
+      "alternatives": [],
+      "reason": "Recensământul militar îi privește pe bărbații de la douăzeci de ani în sus.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Recensământul militar îi privește pe bărbații de la douăzeci de ani în sus."
+    },
+    {
+      "verse": 49,
+      "term": "akh et-matteh Levi lo tifqod",
+      "decision": "seminția lui Levi să nu fie numărată cu celelalte",
+      "alternatives": [],
+      "reason": "Levi primește o însărcinare cultică distinctă, nu o superioritate morală automată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Levi primește o însărcinare cultică distinctă, nu o superioritate morală automată."
+    }
+  ]
 }

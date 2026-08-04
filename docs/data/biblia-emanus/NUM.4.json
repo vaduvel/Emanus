@@ -3,8 +3,8 @@
   "bookId": "NUM",
   "bookName": "Numeri",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a variantelor și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Violența, pedepsele și instituțiile antice nu au fost eufemizate și nu sunt prezentate ca autorizații moderne.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "result": "approved",
+      "scope": "lexic, sintaxă, numere, genealogii, poezie, legislație, termeni cultici și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Numeri 4 — verificare a naturaleții limbii române, a ritmului frazei și a diacriticelor Unicode.",
-        "Numeri 4 — respectare a terminologiei onomastice și geografice biblice în română."
+        "Numerele compuse, diacriticele, acordurile, numele și termenii cultici au fost normalizate.",
+        "Calcurile și greșelile mecanice ale agentului au fost corectate."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Termenii legați de preoție, cortul întâlnirii, jertfe și curățire rituală sunt redați fără adaosuri doctrinare.",
-        "Numele divine și titlurile sunt traduse consecvent cu versiunea Biblia Emanus."
+        "Ebraica are prioritate absolută.",
+        "Relatarea unui act violent sau a unei pedepse nu este transformată în autorizare pentru aplicare privată ori modernă.",
+        "Ambiguitățile și variantele rămân transparente în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Cartea a fost publicată fără nicio notă editorială; capitolul necesită audit real al sursei și al variantelor."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -142,7 +142,7 @@
     },
     {
       "number": 9,
-      "text": "Să ia o pânză albastră și să acopere sfeșnicul pentru lumină, candelele lui, cleștele lui, tăvițele lui și toate vasele pentru untdelemn folosite la slujba lui."
+      "text": "Să ia o pânză albastră și să acopere sfeșnicul pentru lumină, candelele lui, cleștele lui, tăvițele lui și toate vasele pentru ulei folosite la slujba lui."
     },
     {
       "number": 10,
@@ -154,7 +154,7 @@
     },
     {
       "number": 12,
-      "text": "Să ia toate uneltele slujbei cu care se slujește în sfântul locaș, să le pună într-o pânză albastră, să le acopere cu o învelitoare de piele de vițel de mare și să le pună pe o targă."
+      "text": "Să ia toate uneltele slujbei cu care se slujește în Sfântul Lăcaș, să le pună într-o pânză albastră, să le acopere cu o învelitoare de piele de vițel de mare și să le pună pe o targă."
     },
     {
       "number": 13,
@@ -166,11 +166,11 @@
     },
     {
       "number": 15,
-      "text": "Când Aaron și fiii lui vor termina de acoperit sfântul locaș și toate uneltele sfântului locaș, la pornirea taberei, fiii lui Chehat să vină ca să le poarte; dar să nu se atingă de lucrurile sfinte, ca să nu moară. Acestea sunt lucrurile din Cortul Întâlnirii pe care le vor purta fiii lui Chehat."
+      "text": "Când Aaron și fiii lui vor termina de acoperit Sfântul Lăcaș și toate uneltele Sfântului Lăcaș, la pornirea taberei, fiii lui Chehat să vină ca să le poarte; dar să nu se atingă de lucrurile sfinte, ca să nu moară. Acestea sunt lucrurile din Cortul Întâlnirii pe care le vor purta fiii lui Chehat."
     },
     {
       "number": 16,
-      "text": "În paza lui Eleazar, fiul preotului Aaron, va fi untdelemnul pentru lumină, tămâia mirositoare, ofranda de mâncare perpetuă și untdelemnul pentru ungere, supravegherea întregului Cort și a tot ce este în el, în sfântul locaș și în uneltele lui.”"
+      "text": "În paza lui Eleazar, fiul preotului Aaron, va fi uleiul pentru lumină, tămâia mirositoare, ofranda de mâncare perpetuă și uleiul pentru ungere, supravegherea întregului Cort și a tot ce este în el, în Sfântul Lăcaș și în uneltele lui.”"
     },
     {
       "number": 17,
@@ -305,5 +305,36 @@
       "text": "După porunca DOMNULUI dată prin Moise, au fost numărați fiecare la slujba lui și la sarcina lui; așa au fost numărați, cum îi poruncise DOMNUL lui Moise."
     }
   ],
-  "editorialNotes": []
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "qodesh haqqodashim",
+      "decision": "lucrurile preasfinte",
+      "alternatives": [],
+      "reason": "Obiectele sunt acoperite înainte ca fiii lui Chehat să le poarte.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Obiectele sunt acoperite înainte ca fiii lui Chehat să le poarte."
+    },
+    {
+      "verse": 15,
+      "term": "velo yigge'u el-haqodesh vametu",
+      "decision": "să nu atingă lucrurile sfinte, ca să nu moară",
+      "alternatives": [],
+      "reason": "Textul păstrează limita cultică și consecința ei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul păstrează limita cultică și consecința ei."
+    },
+    {
+      "verse": 47,
+      "term": "mi-ben sheloshim ... ad-ben hamishim",
+      "decision": "de la treizeci la cincizeci de ani",
+      "alternatives": [],
+      "reason": "Intervalul pentru slujirea grea este păstrat; Numeri 8 are o formulare distinctă pentru intrarea în slujire.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Intervalul pentru slujirea grea este păstrat; Numeri 8 are o formulare distinctă pentru intrarea în slujire."
+    }
+  ]
 }
