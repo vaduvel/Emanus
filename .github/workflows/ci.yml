@@ -117,6 +117,9 @@ jobs:
       - name: Verifica valul final NT
         run: pnpm check:nt-completion
 
+      - name: Verifica Biblia Emanus
+        run: pnpm check:biblia-emanus
+
       - name: Verifica structura sursei Bibliei
         run: pnpm check:bible-source
 
