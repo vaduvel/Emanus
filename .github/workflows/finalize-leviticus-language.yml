@@ -27,3 +27,5 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Finalize Leviticus Romanian language"
           git push origin HEAD:agent/biblia-emanus-leviticul
+
+# Triggered after the final semantic and agreement review.
