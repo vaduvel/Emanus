@@ -244,6 +244,27 @@
   line-height: 1.75;
 }
 
+.bunit__text-notes {
+  display: grid;
+  gap: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text-body);
+  font-size: var(--text-sm);
+}
+
+.bunit__text-note strong,
+.bunit__text-note p {
+  margin: 0;
+}
+
+.bunit__text-note p {
+  margin-top: 4px;
+  line-height: 1.55;
+}
+
 .bunit__teaching p {
   margin: 0 0 12px;
   line-height: 1.72;

@@ -363,6 +363,14 @@ function Unit({ unit, book, chapter, notes, saved, open, onToggle }: {
     <h3 className="bunit__heading">{unit.heading}</h3>
     <blockquote className="bunit__text">{unit.text}</blockquote>
 
+    {unit.textNotes && unit.textNotes.length > 0 && <aside className="bunit__text-notes" aria-label="Note textuale">
+      {unit.textNotes.map((note, index) => <div key={`${note.verse}-${note.kind}-${index}`} className="bunit__text-note">
+        <strong>{unit.ref.split(":")[0]}:{note.verse} · Notă textuală</strong>
+        <p>{note.note}</p>
+        {note.traditionalReading && <p><em>Lectură tradițională:</em> {note.traditionalReading}</p>}
+      </div>)}
+    </aside>}
+
     {teachingParagraphs.length > 0 && <div className="bunit__teaching">
       <p>{teachingParagraphs[0]}</p>
       <div id={bodyId} hidden={!open}>

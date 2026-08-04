@@ -15,12 +15,22 @@ export interface WordStudy {
   meaning: string
 }
 
+export interface BibleTextNote {
+  verse: number
+  kind: "absent-from-critical-main-text" | "textual-variant" | "alternate-ending"
+  note: string
+  reason?: string
+  traditionalReading?: string
+}
+
 export interface BibleUnit {
   id: string
   ref: string
   heading: string
-  /** Textul biblic RCCV; nu se modifică în tăcere de editori. */
+  /** Textul biblic BE sigilat; rămâne separat de explicația editorială. */
   text: string
+  /** Note critice provenite din corpusul Biblia Emanus, separate de text. */
+  textNotes?: BibleTextNote[]
   /** Explicația redactată în română din sursele Poonen, distinctă de Scriptură. */
   teaching: string
   words?: WordStudy[]
@@ -50,12 +60,8 @@ export interface BibleBook {
   chapters: BibleChapter[]
 }
 
-/**
- * Ediția afișată. Folosirea RCCV este supusă clarificării și permisiunii
- * titularului drepturilor; etichetele „public domain" din API-uri terțe nu sunt
- * tratate de Emanus ca dovadă suficientă pentru România.
- */
-export const BIBLE_TRANSLATION = "Cornilescu, ediția corectată (RCCV)"
+/** Ediția proprie afișată după trecerea porții automate de publicare. */
+export const BIBLE_TRANSLATION = "Biblia Emanus (BE)"
 
 /** Disponibil publicului după aprobarea finală a proprietarului. */
 export function chapterIsPublic(chapter: BibleChapter): boolean {
