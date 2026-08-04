@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 5,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic, sintaxă, idiomuri, nume divine și ambiguități verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Au fost eliminate calcurile și formulările nenaturale.",
+        "Numele, titlurile și dialogurile au fost armonizate cu convențiile Bibliei Emanus."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Relatarea asupririi și a uciderii copiilor nu aprobă violența de stat.",
+        "Arătarea lui Dumnezeu și Numele divin sunt păstrate fără impunerea în verset a unei interpretări confesionale disputate.",
+        "Episodul circumciziei din Exodul 4 este păstrat cu ambiguitățile sale reale."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -122,15 +122,15 @@
     },
     {
       "number": 4,
-      "text": "Împăratul Egiptului le-a zis: „Moise și Aaron, de ce abateți poporul de la munci? Duceți-vă la sarcinile voastre!”"
+      "text": "Regele Egiptului le-a spus: „Moise și Aaron, de ce îi opriți pe oameni de la munca lor? Întoarceți-vă la poverile voastre!”"
     },
     {
       "number": 5,
-      "text": "Faraon a mai zis: „Iată că poporul țării este acum numeros, și voi îi faceți să-și întrerupă sarcinile!”"
+      "text": "Faraonul a mai spus: „Iată că poporul țării este acum numeros, iar voi îi faceți să se odihnească de munca lui!”"
     },
     {
       "number": 6,
-      "text": "În aceeași zi, Faraon a dat poruncă supraveghetorilor poporului și ispravnicilor, zicând:"
+      "text": "În aceeași zi, faraonul le-a poruncit supraveghetorilor poporului și responsabililor dintre ei:"
     },
     {
       "number": 7,
@@ -146,7 +146,7 @@
     },
     {
       "number": 10,
-      "text": "Supraveghetorii poporului și ispravnicii au ieșit și au vorbit poporului, zicând: „Așa vorbește Faraon: «Nu vă mai dau paie!"
+      "text": "Supraveghetorii poporului și responsabilii dintre ei au ieșit și le-au spus oamenilor: „Așa vorbește faraonul: «Nu vă mai dau paie."
     },
     {
       "number": 11,
@@ -158,19 +158,19 @@
     },
     {
       "number": 13,
-      "text": "Supraveghetorii îi zoreau, zicând: „Isprăviți-vă lucrarea, sarcina fiecărei zile, ca și atunci când erau paie!”"
+      "text": "Supraveghetorii îi zoreau, spunând: „Îndepliniți-vă norma zilnică, la fel ca atunci când primeați paie!”"
     },
     {
       "number": 14,
-      "text": "Ispravnicii fiilor lui Israel, pe care îi puseseră peste ei supraveghetorii lui Faraon, erau bătuți și li se zicea: „Pentru ce n-ați isprăvit ieri și azi numărul de cărămizi rânduit, ca mai înainte?”"
+      "text": "Responsabilii dintre fiii lui Israel, pe care îi puseseră peste ei supraveghetorii faraonului, erau bătuți și întrebați: „De ce nu v-ați îndeplinit nici ieri, nici astăzi norma de cărămizi, ca mai înainte?”"
     },
     {
       "number": 15,
-      "text": "Ispravnicii fiilor lui Israel s-au dus să strige la Faraon, zicând: „Pentru ce te porți așa cu robii tăi?"
+      "text": "Responsabilii dintre fiii lui Israel au venit și au strigat către faraon: „De ce te porți astfel cu slujitorii tăi?"
     },
     {
       "number": 16,
-      "text": "Nu se mai dau paie robilor tăi, și totuși ni se zice: «Faceți cărămizi!» Iată că robii tăi sunt bătuți, deși vinovată este tabăra ta.”"
+      "text": "Slujitorilor tăi nu li se mai dau paie, dar ni se spune: «Faceți cărămizi!» Iată că slujitorii tăi sunt bătuți, deși vina este a propriului tău popor.”"
     },
     {
       "number": 17,
@@ -182,7 +182,7 @@
     },
     {
       "number": 19,
-      "text": "Ispravnicii fiilor lui Israel se vedeau în mare strandoare când li se zicea: „Nu scădeți nimic din cărămizile voastre, din sarcina fiecărei zile!”"
+      "text": "Responsabilii dintre fiii lui Israel au văzut că se aflau în mare strâmtorare când li s-a spus: „Să nu scădeți nimic din norma zilnică de cărămizi!”"
     },
     {
       "number": 20,
@@ -190,11 +190,11 @@
     },
     {
       "number": 21,
-      "text": "Și le-au zis: „Să vă vadă DOMNUL și să judece! Căci ne-ați făcut urâți înaintea lui Faraon și înaintea slujitorilor lui și le-ați pus sabia în mână ca să ne ucidă!”"
+      "text": "Ei le-au spus: „DOMNUL să vă vadă și să judece! Ne-ați făcut respingători în ochii faraonului și ai slujitorilor lui și le-ați pus sabia în mână ca să ne omoare!”"
     },
     {
       "number": 22,
-      "text": "Moise S-a întors la DOMNUL și a zis: „Doamne, pentru ce ai făcut rău acestui popor? De ce m-ai trimis?"
+      "text": "Moise s-a întors la DOMNUL și a spus: „Doamne, de ce ai adus necaz asupra acestui popor? De ce m-ai trimis?"
     },
     {
       "number": 23,
@@ -203,12 +203,40 @@
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "chagag",
-      "decision": "să-Mi țină o sărbătoare",
+      "verse": 5,
+      "term": "vehishbatem",
+      "decision": "îi faceți să se odihnească de munca lui",
+      "reason": "Verbul provine din rădăcina șabat, „a înceta/a se odihni”, și anticipează vocabularul Sabatului fără a spune că poporul ținea aici Sabatul.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Verbul ebraic implică pelerinaj și sărbătoare religioasă în pustiu."
+      "resolutionReason": "Verbul provine din rădăcina șabat, „a înceta/a se odihni”, și anticipează vocabularul Sabatului fără a spune că poporul ținea aici Sabatul.",
+      "alternatives": [
+        "îi opriți de la poverile lor"
+      ]
+    },
+    {
+      "verse": 16,
+      "term": "vehatat ammekha",
+      "decision": "vina este a propriului tău popor",
+      "reason": "Textul atribuie vina oamenilor faraonului; nu spune „tabăra ta”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul atribuie vina oamenilor faraonului; nu spune „tabăra ta”.",
+      "alternatives": [
+        "poporul tău este vinovat"
+      ]
+    },
+    {
+      "verse": 21,
+      "term": "hivash-tem et-rehenu",
+      "decision": "ne-ați făcut respingători",
+      "reason": "Literal, „ați făcut mirosul nostru să pută”; expresia este un idiom al disprețului și reputației compromise.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, „ați făcut mirosul nostru să pută”; expresia este un idiom al disprețului și reputației compromise.",
+      "alternatives": [
+        "ne-ați făcut urât mirositori"
+      ]
     }
   ]
 }

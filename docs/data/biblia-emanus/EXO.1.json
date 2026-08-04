@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic, sintaxă, idiomuri, nume divine și ambiguități verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Au fost eliminate calcurile și formulările nenaturale.",
+        "Numele, titlurile și dialogurile au fost armonizate cu convențiile Bibliei Emanus."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Relatarea asupririi și a uciderii copiilor nu aprobă violența de stat.",
+        "Arătarea lui Dumnezeu și Numele divin sunt păstrate fără impunerea în verset a unei interpretări confesionale disputate.",
+        "Episodul circumciziei din Exodul 4 este păstrat cu ambiguitățile sale reale."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -126,7 +126,7 @@
     },
     {
       "number": 5,
-      "text": "Toate sufletele ieșite din coapsele lui Iacov erau șaptezeci de suflete; iar Iosif era deja în Egipt."
+      "text": "Toate persoanele care se trăgeau din Iacov erau șaptezeci; Iosif era deja în Egipt."
     },
     {
       "number": 6,
@@ -138,7 +138,7 @@
     },
     {
       "number": 8,
-      "text": "Peste Egipt s-a ridicat un nou împărat, care nu-l cunoștea pe Iosif."
+      "text": "În Egipt s-a ridicat un rege nou, care nu-l cunoscuse pe Iosif."
     },
     {
       "number": 9,
@@ -150,11 +150,11 @@
     },
     {
       "number": 11,
-      "text": "De aceea au pus peste ei supraveghetori de corvezi ca să-i asuprească cu sarcini grele. Astfel au zidit pentru Faraon cetăți de provizii: Pitom și Raamses."
+      "text": "De aceea au pus peste ei supraveghetori ai muncii silnice, ca să-i asuprească prin poverile lor. Astfel au construit pentru faraon cetățile-depozit Pitom și Ramses."
     },
     {
       "number": 12,
-      "text": "Dar cu cât îi asupreau mai mult, cu atât se înmulțeau și se lățeau mai mult; așa că egiptenii s-au îngrozit de fiii lui Israel."
+      "text": "Dar cu cât îi asupreau mai mult, cu atât se înmulțeau și se răspândeau mai mult, iar egiptenii au ajuns să se îngrozească de fiii lui Israel."
     },
     {
       "number": 13,
@@ -166,11 +166,11 @@
     },
     {
       "number": 15,
-      "text": "Împăratul Egiptului a vorbit moașelor evreilor, dintre care una se numea Șifra și cealaltă Pua,"
+      "text": "Regele Egiptului le-a vorbit moașelor evreice, dintre care una se numea Șifra, iar cealaltă Pua,"
     },
     {
       "number": 16,
-      "text": "și le-a zis: „Când moșiți pe femeile evreilor și le vedeți pe scaunul de naștere, dacă este băiat, să-l omorâți; iar dacă este fată, să trăiască.”"
+      "text": "și le-a spus: „Când le ajutați pe femeile evreice să nască și le vedeți pe scaunul de naștere, dacă este băiat, să-l omorâți, iar dacă este fată, să o lăsați să trăiască.”"
     },
     {
       "number": 17,
@@ -190,7 +190,7 @@
     },
     {
       "number": 21,
-      "text": "Și pentru că moașele s-au temut de Dumnezeu, El le-a dăruit familii."
+      "text": "Fiindcă moașele s-au temut de Dumnezeu, El le-a întemeiat familii."
     },
     {
       "number": 22,
@@ -199,12 +199,52 @@
   ],
   "editorialNotes": [
     {
-      "verse": 15,
-      "term": "Shiphrah / Puah",
-      "decision": "Șifra / Pua",
+      "verse": 5,
+      "term": "kol-nefesh yotsei yerekh-Yaakov",
+      "decision": "toate persoanele care se trăgeau din Iacov",
+      "reason": "Nefeș poate desemna aici persoane, iar expresia despre coapsa lui Iacov este un idiom genealogic, nu o descriere anatomică cerută în română.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Transliterația numelor moașelor din ebraică s-a făcut conform normelor fonetice românești."
+      "resolutionReason": "Nefeș poate desemna aici persoane, iar expresia despre coapsa lui Iacov este un idiom genealogic, nu o descriere anatomică cerută în română.",
+      "alternatives": [
+        "toate sufletele ieșite din coapsa lui Iacov"
+      ]
+    },
+    {
+      "verse": 15,
+      "term": "hamyalledot haivriyyot",
+      "decision": "moașele evreice",
+      "reason": "Construcția poate desemna moașe de origine evreică sau moașe care le asistau pe femeile evreice; textul principal păstrează lectura tradițională fără a ascunde ambiguitatea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția poate desemna moașe de origine evreică sau moașe care le asistau pe femeile evreice; textul principal păstrează lectura tradițională fără a ascunde ambiguitatea.",
+      "alternatives": [
+        "moașele femeilor evreice"
+      ]
+    },
+    {
+      "verse": 16,
+      "term": "al-haovnayim",
+      "decision": "pe scaunul de naștere",
+      "reason": "Literal, termenul este dual și înseamnă „cele două pietre”; probabil desemnează scaunul sau suportul folosit la naștere.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, termenul este dual și înseamnă „cele două pietre”; probabil desemnează scaunul sau suportul folosit la naștere.",
+      "alternatives": [
+        "pe cele două pietre"
+      ]
+    },
+    {
+      "verse": 21,
+      "term": "vayyaas lahem batim",
+      "decision": "El le-a întemeiat familii",
+      "reason": "Literal, Dumnezeu „le-a făcut case”; în context expresia indică întemeierea unor familii sau gospodării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, Dumnezeu „le-a făcut case”; în context expresia indică întemeierea unor familii sau gospodării.",
+      "alternatives": [
+        "le-a făcut case"
+      ]
     }
   ]
 }

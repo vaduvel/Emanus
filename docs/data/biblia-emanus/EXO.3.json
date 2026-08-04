@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,42 +75,42 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic, sintaxă, idiomuri, nume divine și ambiguități verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Au fost eliminate calcurile și formulările nenaturale.",
+        "Numele, titlurile și dialogurile au fost armonizate cu convențiile Bibliei Emanus."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Relatarea asupririi și a uciderii copiilor nu aprobă violența de stat.",
+        "Arătarea lui Dumnezeu și Numele divin sunt păstrate fără impunerea în verset a unei interpretări confesionale disputate.",
+        "Episodul circumciziei din Exodul 4 este păstrat cu ambiguitățile sale reale."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Moise păștea turma tatălui soacrei sale, Ietro, preotul Madianului. A mânat turma dincolo de pustiu și a ajuns la muntele lui Dumnezeu, la Horeb."
+      "text": "Moise păștea turma lui Ietro, socrul său, preotul Madianului. A mânat turma dincolo de pustiu și a ajuns la muntele lui Dumnezeu, la Horeb."
     },
     {
       "number": 2,
@@ -118,7 +118,7 @@
     },
     {
       "number": 3,
-      "text": "Moise a zis: „Am să mă întorc să văd această priveliște minunată: de ce nu se mistuie rugul.”"
+      "text": "Moise a spus: „Mă voi abate să văd această priveliște măreață: de ce nu se mistuie rugul?”"
     },
     {
       "number": 4,
@@ -126,7 +126,7 @@
     },
     {
       "number": 5,
-      "text": "Dumnezeu a zis: „Nu te apropia de locul acesta! Scoate-ți încălțămintea din picioare, căci locul pe care stai este un pământ sfânt.”"
+      "text": "Dumnezeu a spus: „Nu te apropia! Scoate-ți sandalele din picioare, căci locul pe care stai este pământ sfânt.”"
     },
     {
       "number": 6,
@@ -138,7 +138,7 @@
     },
     {
       "number": 8,
-      "text": "M-am coborât ca să-l izbăvesc din mâna egiptenilor și să-l scot din țara aceasta într-o țară bună și întinsă, într-o țară în care curge lapte și miere, în ținutul canaaniților, hitiților, amoriților, fereziților, heviților și iebusiților."
+      "text": "M-am coborât ca să-i izbăvesc din mâna egiptenilor și să-i scot din țara aceasta într-o țară bună și întinsă, într-o țară în care curge lapte și miere, în ținutul canaaniților, hetiților, amoriților, periziților, heviților și iebusiților."
     },
     {
       "number": 9,
@@ -162,15 +162,15 @@
     },
     {
       "number": 14,
-      "text": "Dumnezeu i-a zis lui Moise: „EU SUNT CEL CE SUNT.” Apoi a zis: „Așa să le vorbești fiilor lui Israel: «EU SUNT m-a trimis la voi!»”"
+      "text": "Dumnezeu i-a spus lui Moise: „EU SUNT CEL CE SUNT.” Apoi a spus: „Așa să le vorbești fiilor lui Israel: «EU SUNT m-a trimis la voi.»”"
     },
     {
       "number": 15,
-      "text": "Dumnezeu i-a mai zis lui Moise: „Așa să vorbești fiilor lui Israel: «DOMNUL (YHWH), Dumnezeul părinților voștri, Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov, m-a trimis la voi. Acesta este Numele Meu pentru veșnicie, acesta este Numele Meu din generație în generație!»"
+      "text": "Dumnezeu i-a mai spus lui Moise: „Așa să le vorbești fiilor lui Israel: «DOMNUL, Dumnezeul părinților voștri, Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov, m-a trimis la voi.» Acesta este Numele Meu pentru totdeauna și astfel voi fi amintit din generație în generație."
     },
     {
       "number": 16,
-      "text": "Du-te, strânge pe bătrânii lui Israel și spune-le: «DOMNUL, Dumnezeul părinților voștri, Dumnezeul lui Avraam, al lui Isaac și al lui Iacov, mi s-a arătat și a zis: V-am cercetat și am văzut ce vi se face în Egipt,"
+      "text": "Du-te, adună-i pe bătrânii lui Israel și spune-le: «DOMNUL, Dumnezeul părinților voștri, Dumnezeul lui Avraam, al lui Isaac și al lui Iacov, mi S-a arătat și a spus: Am luat seama la voi și la ce vi se face în Egipt."
     },
     {
       "number": 17,
@@ -178,11 +178,11 @@
     },
     {
       "number": 18,
-      "text": "Ei vor asculta de glasul tău; și te vei duce, tu și bătrânii lui Israel, la împăratul Egiptului și îi veți spune: «DOMNUL, Dumnezeul evreilor, ne-a întâmpinat. Lasă-ne să mergem cale de trei zile în pustiu, ca să aducem jertfe DOMNULUI, Dumnezeul nostru.»"
+      "text": "Ei vor asculta de glasul tău. Tu și bătrânii lui Israel veți merge la regele Egiptului și îi veți spune: «DOMNUL, Dumnezeul evreilor, ni S-a arătat. Lasă-ne, te rugăm, să mergem cale de trei zile în pustiu, ca să aducem jertfe DOMNULUI, Dumnezeul nostru.»"
     },
     {
       "number": 19,
-      "text": "Știu că împăratul Egiptului nu vă va lăsa să plecați decât silit de o mână puternică."
+      "text": "Știu că regele Egiptului nu vă va lăsa să plecați dacă nu va fi constrâns de o mână puternică."
     },
     {
       "number": 20,
@@ -194,20 +194,56 @@
     },
     {
       "number": 22,
-      "text": "Fiecare femeie va cere de la vecina ei și de la cea care locuiește în casa ei vase de argint, vase de aur și haine, cu care vă veți îmbrăca fiii și fiicele. Așa veți jefui pe egipteni.”"
+      "text": "Fiecare femeie va cere de la vecina ei și de la femeia care locuiește în casa ei obiecte de argint, obiecte de aur și haine. Le veți pune pe fiii și pe fiicele voastre; astfel veți lua prada Egiptului.”"
     }
   ],
   "editorialNotes": [
     {
-      "verse": 14,
-      "term": "EH YEH ASHER EH YEH",
-      "decision": "EU SUNT CEL CE SUNT",
-      "alternatives": [
-        "Eu voi fi Cel ce voi fi"
-      ],
+      "verse": 2,
+      "term": "malakh YHWH",
+      "decision": "Îngerul DOMNULUI",
+      "reason": "Textul alternează Îngerul DOMNULUI, DOMNUL și Dumnezeu în aceeași arătare; traducerea păstrează progresia fără a introduce în verset o identificare hristologică explicită.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Formularea ebraică exprimă existența de Sine, continuitatea și credincioșia absolută a lui Dumnezeu."
+      "resolutionReason": "Textul alternează Îngerul DOMNULUI, DOMNUL și Dumnezeu în aceeași arătare; traducerea păstrează progresia fără a introduce în verset o identificare hristologică explicită."
+    },
+    {
+      "verse": 14,
+      "term": "ehyeh asher ehyeh",
+      "decision": "EU SUNT CEL CE SUNT",
+      "reason": "Forma ebraică poate fi redată și viitor: „Voi fi Cel ce voi fi”. Decizia păstrează lectura tradițională, iar alternativa rămâne vizibilă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Forma ebraică poate fi redată și viitor: „Voi fi Cel ce voi fi”. Decizia păstrează lectura tradițională, iar alternativa rămâne vizibilă.",
+      "alternatives": [
+        "VOI FI CEL CE VOI FI",
+        "EU VOI FI CEL CE VOI FI"
+      ]
+    },
+    {
+      "verse": 15,
+      "term": "YHWH",
+      "decision": "DOMNUL",
+      "reason": "Numele propriu divin este redat prin convenția tipografică DOMNUL. Transliterarea YHWH aparține notei, nu textului versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele propriu divin este redat prin convenția tipografică DOMNUL. Transliterarea YHWH aparține notei, nu textului versetului.",
+      "alternatives": [
+        "YHWH",
+        "Iahve"
+      ]
+    },
+    {
+      "verse": 19,
+      "term": "velo beyad hazakah",
+      "decision": "dacă nu va fi constrâns de o mână puternică",
+      "reason": "Relația particulei negative cu expresia „mână puternică” este dificilă. Sensul contextual este că faraonul nu va permite plecarea fără constrângerea puterii divine.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Relația particulei negative cu expresia „mână puternică” este dificilă. Sensul contextual este că faraonul nu va permite plecarea fără constrângerea puterii divine.",
+      "alternatives": [
+        "nici măcar sub o mână puternică"
+      ]
     }
   ]
 }

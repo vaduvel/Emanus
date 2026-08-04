@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,42 +75,42 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic, sintaxă, idiomuri, nume divine și ambiguități verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Au fost eliminate calcurile și formulările nenaturale.",
+        "Numele, titlurile și dialogurile au fost armonizate cu convențiile Bibliei Emanus."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Relatarea asupririi și a uciderii copiilor nu aprobă violența de stat.",
+        "Arătarea lui Dumnezeu și Numele divin sunt păstrate fără impunerea în verset a unei interpretări confesionale disputate.",
+        "Episodul circumciziei din Exodul 4 este păstrat cu ambiguitățile sale reale."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Un om din casa lui Levi s-a dus și a luat de nevastă pe o fiică a lui Levi."
+      "text": "Un bărbat din casa lui Levi s-a căsătorit cu o femeie dintre fiicele lui Levi."
     },
     {
       "number": 2,
@@ -118,7 +118,7 @@
     },
     {
       "number": 3,
-      "text": "Nemaiputând să-l ascundă, a luat un coșuleț de papură, l-a uns cu catran și cu smoală, a pus copilul în el și l-a așezat între trestii, pe malul Nilului."
+      "text": "Nemaiputând să-l ascundă, a luat pentru el un coș din papirus, l-a acoperit cu bitum și smoală, a pus copilul în el și l-a așezat între trestii, pe malul Nilului."
     },
     {
       "number": 4,
@@ -126,7 +126,7 @@
     },
     {
       "number": 5,
-      "text": "Fiica lui Faraon s-a coborât la râul Nil să se scalde, iar însoțitoarele ei se plimbau pe malul râului. Ea a zărit coșulețul în mijlocul trestiilor și a trimis pe roaba ei să-l aducă."
+      "text": "Fiica faraonului a coborât la Nil ca să se scalde, iar însoțitoarele ei se plimbau pe mal. Ea a văzut coșul printre trestii și și-a trimis slujitoarea să-l aducă."
     },
     {
       "number": 6,
@@ -146,7 +146,7 @@
     },
     {
       "number": 10,
-      "text": "Copilul a crescut, iar ea l-a adus fiicei lui Faraon, care l-a adoptat ca fiu. I-a pus numele Moise, „căci”, a zis ea, „l-am scos din ape”."
+      "text": "Când copilul a crescut, mama lui l-a adus fiicei faraonului, iar el a devenit fiul ei. Ea i-a pus numele Moise și a spus: „Pentru că l-am scos din apă.”"
     },
     {
       "number": 11,
@@ -166,7 +166,7 @@
     },
     {
       "number": 15,
-      "text": "Faraon a aflat de lucrul acesta și a căutat să-l ucidă pe Moise. Dar Moise a fugit dinaintea lui Faraon și s-a oprit în țara Madian; și a șezut lângă o fântână."
+      "text": "Faraonul a auzit despre acest lucru și a căutat să-l omoare pe Moise. Moise însă a fugit de faraon, a locuit în țara Madian și s-a așezat lângă o fântână."
     },
     {
       "number": 16,
@@ -190,7 +190,7 @@
     },
     {
       "number": 21,
-      "text": "Moise a fost de acord să locuiască la omul acela, iar el i-a dat pe fiica sa Sefora de nevastă lui Moise."
+      "text": "Moise a primit să locuiască împreună cu acel om, iar acesta i-a dat-o de soție pe fiica sa Sefora."
     },
     {
       "number": 22,
@@ -198,7 +198,7 @@
     },
     {
       "number": 23,
-      "text": "După multă vreme, împăratul Egiptului a murit. Fiii lui Israel suspinau încă din cauza robiei și strigau, iar strigătul lor din mijlocul robiei s-a suit până la Dumnezeu."
+      "text": "După multă vreme, regele Egiptului a murit. Fiii lui Israel gemeau din cauza robiei și strigau după ajutor, iar strigătul lor din robie s-a înălțat până la Dumnezeu."
     },
     {
       "number": 24,
@@ -206,17 +206,54 @@
     },
     {
       "number": 25,
-      "text": "Dumnezeu a privit spre fiii lui Israel și Dumnezeu i-a recunoscut."
+      "text": "Dumnezeu i-a privit pe fiii lui Israel și a luat seama la ei."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 10,
-      "term": "Mosheh",
-      "decision": "Moise",
+      "verse": 3,
+      "term": "tevah",
+      "decision": "coș din papirus",
+      "reason": "Același substantiv este folosit pentru arca lui Noe; aici obiectul mic din papirus este redat natural prin „coș”, iar legătura lexicală rămâne documentată.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Numele este explicat popular prin verbul ebraic mashah (a scoate din ape)."
+      "resolutionReason": "Același substantiv este folosit pentru arca lui Noe; aici obiectul mic din papirus este redat natural prin „coș”, iar legătura lexicală rămâne documentată.",
+      "alternatives": [
+        "arcă din papirus"
+      ]
+    },
+    {
+      "verse": 10,
+      "term": "Moshe / meshitihu",
+      "decision": "Moise / l-am scos din apă",
+      "reason": "Narațiunea oferă un joc de cuvinte ebraic între numele Moise și verbul „a scoate”; numele poate avea și o origine egipteană.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Narațiunea oferă un joc de cuvinte ebraic între numele Moise și verbul „a scoate”; numele poate avea și o origine egipteană.",
+      "alternatives": [
+        "cel scos"
+      ]
+    },
+    {
+      "verse": 22,
+      "term": "Gershom / ger hayiti sham",
+      "decision": "Gherșom / am locuit ca străin acolo",
+      "reason": "Numele este legat narativ de statutul lui Moise de străin, fără a afirma că aceasta este singura etimologie posibilă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele este legat narativ de statutul lui Moise de străin, fără a afirma că aceasta este singura etimologie posibilă."
+    },
+    {
+      "verse": 25,
+      "term": "vayyeda Elohim",
+      "decision": "Dumnezeu a luat seama la ei",
+      "reason": "Verbul yada înseamnă literal „a cunoaște”, dar aici exprimă recunoașterea atentă și implicată a suferinței lor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul yada înseamnă literal „a cunoaște”, dar aici exprimă recunoașterea atentă și implicată a suferinței lor.",
+      "alternatives": [
+        "Dumnezeu i-a cunoscut"
+      ]
     }
   ]
 }

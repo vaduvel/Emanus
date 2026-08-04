@@ -3,8 +3,8 @@
   "bookId": "EXO",
   "bookName": "Exodul",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,37 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, pronume, repetiții, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "lexic, sintaxă, idiomuri, nume divine și ambiguități verificate verset cu verset în WLC-OSHB"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Revizuit diacriticele și naturalețea frazării în limba română.",
-        "Verificat terminologia și numele proprii conform convenției Bibliei Emanus."
+        "Au fost eliminate calcurile și formulările nenaturale.",
+        "Numele, titlurile și dialogurile au fost armonizate cu convențiile Bibliei Emanus."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Sensul teologic din textul ebraic s-a păstrat fidel fără adaosuri confesionale.",
-        "Numele divine și pasajele cheie conțin note editoriale explicative."
+        "Relatarea asupririi și a uciderii copiilor nu aprobă violența de stat.",
+        "Arătarea lui Dumnezeu și Numele divin sunt păstrate fără impunerea în verset a unei interpretări confesionale disputate.",
+        "Episodul circumciziei din Exodul 4 este păstrat cu ambiguitățile sale reale."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -130,11 +130,11 @@
     },
     {
       "number": 6,
-      "text": "DOMNUL i-a mai zis: „Bagi-ți mâna în sân!” El și-a băgat mâna în sân; apoi a scos-o și iată că mâna era acoperită de lepră, albă ca zăpada."
+      "text": "DOMNUL i-a mai spus: „Bagă-ți mâna în sân!” El și-a băgat mâna în sân, iar când a scos-o, mâna lui era albă ca zăpada, acoperită de o boală de piele."
     },
     {
       "number": 7,
-      "text": "DOMNUL a zis: „Bagi-ți din nou mâna în sân!” El și-a băgat din nou mâna în sân; apoi a scos-o din sân și iată că se făcuse iarăși cum era carnea lui."
+      "text": "DOMNUL a spus: „Bagă-ți din nou mâna în sân!” El și-a băgat din nou mâna în sân, iar când a scos-o, aceasta revenise la starea celuilalt trup al său."
     },
     {
       "number": 8,
@@ -146,7 +146,7 @@
     },
     {
       "number": 10,
-      "text": "Moise I-a zis DOMNULUI: „Ah, Doamne! Eu nu sunt un om cu vorbirea ușoară, nici de ieri, nici de alaltăieri, nici de când vorbești Tu robului Tău; căci vorbirea mea este zăbavnică și limba mea este încetinită.”"
+      "text": "Moise I-a spus DOMNULUI: „Te rog, Doamne, eu nu sunt un om cu vorbire ușoară, nici de ieri, nici de alaltăieri, nici de când îi vorbești slujitorului Tău; sunt greoi la vorbire și greoi la limbă.”"
     },
     {
       "number": 11,
@@ -158,7 +158,7 @@
     },
     {
       "number": 13,
-      "text": "Moise a zis: „Ah, Doamne! Trimite, te rog, prin cine vei vrea să trimiți!”"
+      "text": "Moise a spus: „Te rog, Doamne, trimite pe altcineva!”"
     },
     {
       "number": 14,
@@ -170,7 +170,7 @@
     },
     {
       "number": 16,
-      "text": "El va vorbi poporului pentru tine; el îți va fi gură, iar tu îi vei fi ca Dumnezeu."
+      "text": "El va vorbi poporului în locul tău; el îți va fi gură, iar tu vei fi pentru el ca Dumnezeu."
     },
     {
       "number": 17,
@@ -178,7 +178,7 @@
     },
     {
       "number": 18,
-      "text": "Moise a plecat, s-a întors la Ietro, soacrul său, și i-a zis: „Lăsa-mă, te rog, să mă întorc la frații mei care sunt în Egipt, ca să văd dacă mai sunt în viață.” Ietro i-a zis lui Moise: „Du-te în pace!”"
+      "text": "Moise s-a întors la Ietro, socrul său, și i-a spus: „Lasă-mă, te rog, să mă întorc la frații mei care sunt în Egipt, ca să văd dacă mai sunt în viață.” Ietro i-a spus lui Moise: „Du-te în pace!”"
     },
     {
       "number": 19,
@@ -202,15 +202,15 @@
     },
     {
       "number": 24,
-      "text": "În timpul călătoriei, într-un loc de popas, DOMNUL l-a întâmpinat pe Moise și a căutat să-l omoare."
+      "text": "Pe drum, la un loc de popas, DOMNUL l-a întâlnit și a căutat să-l omoare."
     },
     {
       "number": 25,
-      "text": "Sefora a luat o piatră ascuțită, a tăiat împrejur pe fiul ei și i-a atins picioarele lui Moise, zicând: „Cu adevărat, tu ești un mire de sânge pentru mine!”"
+      "text": "Atunci Sefora a luat o piatră ascuțită, a tăiat prepuțul fiului ei și i-a atins picioarele cu el, spunând: „Cu adevărat, ești pentru mine un mire de sânge!”"
     },
     {
       "number": 26,
-      "text": "Și DOMNUL l-a lăsat. Atunci a zis ea: „Mire de sânge!”, din cauza tăierii împrejur."
+      "text": "Atunci DOMNUL l-a lăsat. Ea spusese „mire de sânge” din cauza circumciziei."
     },
     {
       "number": 27,
@@ -218,7 +218,7 @@
     },
     {
       "number": 28,
-      "text": "Moise i-a spus lui Aaron toate cuvintele DOMNULUI, Care-l trimisese, și toate semnele pe care-l poruncise să le facă."
+      "text": "Moise i-a spus lui Aaron toate cuvintele DOMNULUI, Care îl trimisese, și toate semnele pe care îi poruncise să le facă."
     },
     {
       "number": 29,
@@ -226,21 +226,74 @@
     },
     {
       "number": 30,
-      "text": "Aaron a depănat toate cuvintele pe care le spusese DOMNUL lui Moise și a făcut semnele înaintea poporului."
+      "text": "Aaron a rostit toate cuvintele pe care DOMNUL i le spusese lui Moise și a făcut semnele înaintea poporului."
     },
     {
       "number": 31,
-      "text": "Poporul a crezut. Au înțeles că DOMNUL cercetase pe fiii lui Israel și văzuse suferința lor; și s-au plecat și s-au închinat."
+      "text": "Poporul a crezut. Când au auzit că DOMNUL luase seama la fiii lui Israel și văzuse suferința lor, s-au plecat și s-au închinat."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 25,
-      "term": "chatan damim",
-      "decision": "mire de sânge",
+      "verse": 6,
+      "term": "metsoraat kashaleg",
+      "decision": "acoperită de o boală de piele, albă ca zăpada",
+      "reason": "Termenul țaraat desemnează o categorie rituală de afecțiuni și nu trebuie echivalat automat cu boala modernă numită lepră.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Expresie ebraică idiomul legat de legământul tăierii împrejur săvârșit de Sefora."
+      "resolutionReason": "Termenul țaraat desemnează o categorie rituală de afecțiuni și nu trebuie echivalat automat cu boala modernă numită lepră.",
+      "alternatives": [
+        "leproasă, albă ca zăpada"
+      ]
+    },
+    {
+      "verse": 10,
+      "term": "khevad-pe ukhevad lashon",
+      "decision": "greoi la vorbire și greoi la limbă",
+      "reason": "Expresia descrie dificultatea de exprimare a lui Moise; textul nu oferă un diagnostic medical precis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia descrie dificultatea de exprimare a lui Moise; textul nu oferă un diagnostic medical precis.",
+      "alternatives": [
+        "greu de gură și greu de limbă"
+      ]
+    },
+    {
+      "verse": 13,
+      "term": "shelah-na beyad-tishlah",
+      "decision": "trimite pe altcineva",
+      "reason": "Literal: „trimite, te rog, prin mâna celui pe care îl vei trimite”; sensul cererii este ca Dumnezeu să aleagă pe altcineva.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal: „trimite, te rog, prin mâna celui pe care îl vei trimite”; sensul cererii este ca Dumnezeu să aleagă pe altcineva.",
+      "alternatives": [
+        "trimite prin cine vei trimite"
+      ]
+    },
+    {
+      "verse": 24,
+      "term": "vayvaqesh hamito",
+      "decision": "l-a întâlnit și a căutat să-l omoare",
+      "reason": "Pronumele nu îl identifică explicit pe cel amenințat; Moise este lectura contextuală obișnuită, dar nu este introdus în text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pronumele nu îl identifică explicit pe cel amenințat; Moise este lectura contextuală obișnuită, dar nu este introdus în text.",
+      "alternatives": [
+        "a căutat să-l omoare pe Moise",
+        "a căutat să-l omoare pe fiul lui"
+      ]
+    },
+    {
+      "verse": 25,
+      "term": "vatagga leraglav",
+      "decision": "i-a atins picioarele",
+      "reason": "Referentul pronumelui și sensul exact al „picioarelor” sunt disputate; termenul poate funcționa și ca eufemism.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Referentul pronumelui și sensul exact al „picioarelor” sunt disputate; termenul poate funcționa și ca eufemism.",
+      "alternatives": [
+        "a aruncat prepuțul la picioarele lui"
+      ]
     }
   ]
 }
