@@ -5,11 +5,10 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 ## Stare
 
 - traducere în lucru;
-- Geneza 1–20 există numai ca ciornă editorială;
-- niciun capitol nu este publicat automat;
-- fiecare capitol rămâne `draft` sau `in_review` până la aprobarea umană;
+- Geneza 1–20 există ca ciornă editorială;
 - explicațiile Emanus sunt păstrate separat de textul biblic;
-- textul existent RCCV nu este modificat de această ramură.
+- textul existent RCCV nu este modificat de această ramură;
+- un capitol poate deveni public automat numai după trecerea integrală a porții de audit descrise în `AUTOMATED-PUBLICATION.md`.
 
 ## Surse de lucru
 
@@ -24,22 +23,29 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 - diacritice Unicode corecte: `ă`, `â`, `î`, `ș`, `ț`;
 - fără formele vechi cu sedilă: `ş`, `ţ`;
 - fără copiere din traduceri românești protejate;
-- variantele textuale și termenii ambigui sunt documentați, nu ascunși;
-- un text generat sau propus de AI este doar ciornă editorială;
-- publicarea cere revizie de limbă română, revizie biblică și aprobare finală.
+- traducerile românești existente sunt folosite numai pentru triangularea sensului;
+- comparația include minimum trei traduceri și cel puțin una din familia Cornilescu;
+- potrivirea exactă cu o traducere nu este necesară și nu reprezintă singură dovada corectitudinii;
+- variantele textuale și termenii ambigui sunt documentați și rezolvați înainte de publicare.
 
-## Flux editorial
+## Flux editorial și de publicare
 
 1. se fixează pasajul-sursă englez și pasajul ebraic sau grecesc;
 2. se redactează o traducere românească originală;
-3. se notează termenii cu mai multe interpretări;
-4. se verifică fidelitatea, limba și diacriticele;
-5. se compară cu originalul, nu se copiază formulări din ediții românești;
-6. capitolul trece din `draft` în `in_review`;
-7. doar un reviewer uman îl poate marca `approved` sau `published`.
+3. se execută independent revizia AI din limba-sursă;
+4. se execută revizia AI de limba română;
+5. se execută revizia AI teologică și canonică;
+6. se compară sensul cu minimum trei traduceri românești, fără copierea sau stocarea integrală a textelor protejate;
+7. se verifică omisiunile, adaosurile și distanța de copyright;
+8. se rezolvă toate notele și variantele textuale critice;
+9. când toate controalele sunt `approved`, capitolul poate trece direct la `published` și `public: true`, fără o aprobare umană separată.
+
+## Licență
+
+Biblia Emanus este pregătită pentru publicare sub `CC BY 4.0`, cu atribuirea proiectului și a surselor relevante.
 
 ## Progres curent
 
 `docs/data/biblia-emanus/` conține ciornele complete pentru Geneza 1–20: 20 de capitole și 514 versete. Fiecare capitol are sursele exacte, numărul canonic de versete și note editoriale pentru termenii sau variantele care cer revizie.
 
-Trecerea tuturor testelor automate confirmă structura, proveniența declarată și blocajele tehnice; nu înlocuiește revizia umană din ebraică, revizia limbii române sau aprobarea teologică finală.
+Geneza 1–20 nu este încă publicată: capitolele trebuie mai întâi migrate la noua schemă de audit, comparate și trecute prin toate controalele automate.
