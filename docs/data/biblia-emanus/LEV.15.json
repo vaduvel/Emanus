@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 15,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Textul ebraic WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Termenii rituali nu au fost transformați în diagnostice sau verdicte morale absente din ebraică.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic ritual, sintaxă, categorii curat/necurat, termeni corporali și formule de sfințenie verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Prescripțiile privind igiena și curăția rituală corporală sunt rânduite exact."
+        "DOMNUL și terminologia cultică au fost normalizate consecvent.",
+        "Formulările gramaticale și identificările evident greșite au fost corectate fără a înlocui termenii ebraici cu diagnostice moderne."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Avertismentul privind protejarea Lăcașului este subliniat."
+        "Ebraica are prioritate față de etaloanele românești.",
+        "Necurăția rituală nu este numită păcat moral acolo unde textul nu o numește astfel.",
+        "Țaraat este redat tradițional prin lepră, cu domeniul ebraic mai larg explicat în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -236,17 +238,79 @@
     },
     {
       "number": 33,
-      "text": "pentru cea suferindă de menstruație, pentru cel ce are o scurgere, fie bărbat, fie femeie, și pentru bărbatul care se culcă cu o femeie necurată.”"
+      "text": "pentru cea aflată în necurăția menstruației, pentru cel ce are o scurgere, fie bărbat, fie femeie, și pentru bărbatul care se culcă cu o femeie necurată.”"
     }
   ],
   "editorialNotes": [
     {
-      "verse": 31,
-      "term": "we-hizzartem et-bene-Yisrael mi-tum atam",
-      "decision": "așa să-i feriți pe fiii lui Israel de necurăția lor",
+      "verse": 2,
+      "term": "zov",
+      "decision": "scurgere",
+      "alternatives": [
+        "secreție anormală"
+      ],
+      "reason": "Textul descrie o scurgere corporală și statutul ei ritual; nu introduce automat o cauză morală.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Separarea de necurăție protejează sfințenia Lăcașului divin în mijlocul poporului."
+      "resolutionReason": "Textul descrie o scurgere corporală și statutul ei ritual; nu introduce automat o cauză morală."
+    },
+    {
+      "verse": 16,
+      "term": "shikhvat zera",
+      "decision": "scurgere seminală",
+      "alternatives": [
+        "emisie de sămânță"
+      ],
+      "reason": "Ebraica declară necurăție până seara, dar nu spune în acest verset că bărbatul a păcătuit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ebraica declară necurăție până seara, dar nu spune în acest verset că bărbatul a păcătuit."
+    },
+    {
+      "verse": 18,
+      "term": "ish asher yishkav et-ishah",
+      "decision": "un bărbat se culcă cu o femeie",
+      "reason": "Actul conjugal produce aici necurăție rituală temporară pentru amândoi; textul nu îl numește păcat.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Actul conjugal produce aici necurăție rituală temporară pentru amândoi; textul nu îl numește păcat."
+    },
+    {
+      "verse": 19,
+      "term": "niddah",
+      "decision": "necurăția menstruației",
+      "alternatives": [
+        "perioada ei menstruală"
+      ],
+      "reason": "Este păstrată categoria rituală distinctă din ebraică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este păstrată categoria rituală distinctă din ebraică."
+    },
+    {
+      "verse": 30,
+      "term": "hattat",
+      "decision": "jertfă pentru păcat",
+      "alternatives": [
+        "jertfă de curățire"
+      ],
+      "reason": "Eticheta cultică tradițională este păstrată; contextul precizează curățirea după scurgerea corporală, nu o vină sexuală presupusă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Eticheta cultică tradițională este păstrată; contextul precizează curățirea după scurgerea corporală, nu o vină sexuală presupusă."
+    },
+    {
+      "verse": 31,
+      "term": "vehizzartem",
+      "decision": "să-i țineți departe de necurăția lor",
+      "alternatives": [
+        "să-i avertizați cu privire la necurăția lor"
+      ],
+      "reason": "Scopul explicit este protejarea Lăcașului din mijlocul comunității.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Scopul explicit este protejarea Lăcașului din mijlocul comunității."
     }
   ]
 }

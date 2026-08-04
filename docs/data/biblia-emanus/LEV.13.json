@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 13,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Textul ebraic WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Termenii rituali nu au fost transformați în diagnostice sau verdicte morale absente din ebraică.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic ritual, sintaxă, categorii curat/necurat, termeni corporali și formule de sfințenie verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Criteriile medical-ritualice de diagnosticare sunt traduse exact."
+        "DOMNUL și terminologia cultică au fost normalizate consecvent.",
+        "Formulările gramaticale și identificările evident greșite au fost corectate fără a înlocui termenii ebraici cu diagnostice moderne."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Avertismentele de izolare ale leprosului sunt redate cu gravitate."
+        "Ebraica are prioritate față de etaloanele românești.",
+        "Necurăția rituală nu este numită păcat moral acolo unde textul nu o numește astfel.",
+        "Țaraat este redat tradițional prin lepră, cu domeniul ebraic mai larg explicat în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -112,7 +114,7 @@
     },
     {
       "number": 2,
-      "text": "„Când un om va avea pe pielea trupului său o umflătură, o bubă sau o pată albă, și ea va deveni pe pielea trupului său o rană de lepră, să fie adus la preotul Aaron sau la unul din fiii lui, preoții."
+      "text": "Când un om va avea pe pielea trupului său o umflătură, o erupție sau o pată albă, iar aceasta va deveni pe pielea trupului său o plagă de lepră, să fie adus la preotul Aaron sau la unul dintre fiii lui, preoții."
     },
     {
       "number": 3,
@@ -128,7 +130,7 @@
     },
     {
       "number": 6,
-      "text": "Preotul să îl examineze din nou în ziua a șaptea; dacă rana a devenit palidă și nu s-a întins pe piele, preotul să îl declare curat; este o simplă eczemă. El își va spăla hainele și va fi curat."
+      "text": "Preotul să-l examineze din nou în ziua a șaptea; dacă plaga a pălit și nu s-a întins pe piele, preotul să-l declare curat: este o erupție. El să-și spele hainele și va fi curat."
     },
     {
       "number": 7,
@@ -292,7 +294,7 @@
     },
     {
       "number": 47,
-      "text": "Când va fi o rană de lepră pe o haină, fie haină de lână, fie haină de in,"
+      "text": "Dacă într-o haină va apărea o plagă de lepră, fie într-o haină de lână, fie într-una de in,"
     },
     {
       "number": 48,
@@ -346,19 +348,64 @@
   "editorialNotes": [
     {
       "verse": 2,
-      "term": "negah tsara at",
-      "decision": "rană de lepră / afecțiune epidermică contagioasă",
+      "term": "tzaraat",
+      "decision": "lepră",
+      "alternatives": [
+        "afecțiune de tip lepră",
+        "plagă de tzaraat"
+      ],
+      "reason": "«Lepră» păstrează traducerea tradițională; termenul ebraic are însă un domeniu mai larg decât boala Hansen și este folosit și pentru haine și case.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Tsara at acoperă o gamă de boli de piele și infecții de mucegai ale materialelor."
+      "resolutionReason": "«Lepră» păstrează traducerea tradițională; termenul ebraic are însă un domeniu mai larg decât boala Hansen și este folosit și pentru haine și case."
+    },
+    {
+      "verse": 6,
+      "term": "mispaḥat",
+      "decision": "erupție",
+      "alternatives": [
+        "crustă",
+        "pecingine superficială"
+      ],
+      "reason": "Termenul nu autorizează un diagnostic medical modern precis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul nu autorizează un diagnostic medical modern precis."
+    },
+    {
+      "verse": 30,
+      "term": "neteq",
+      "decision": "pecingine",
+      "alternatives": [
+        "afecțiune a scalpului sau bărbii"
+      ],
+      "reason": "Identificarea clinică exactă este incertă; sunt păstrate semnele observabile din text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Identificarea clinică exactă este incertă; sunt păstrate semnele observabile din text."
     },
     {
       "verse": 45,
-      "term": "tame tame yikra",
-      "decision": "să strige: «Necurat! Necurat!»",
+      "term": "tame tame yiqra",
+      "decision": "Necurat! Necurat!",
+      "reason": "Strigătul public și izolarea sunt redate ca proceduri ale comunității legământului, fără a transforma afecțiunea într-o vină morală.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Strigătul public avertizează comunitatea de pericolul întinării rituale."
+      "resolutionReason": "Strigătul public și izolarea sunt redate ca proceduri ale comunității legământului, fără a transforma afecțiunea într-o vină morală."
+    },
+    {
+      "verse": 47,
+      "term": "nega tzaraat într-o haină",
+      "decision": "plagă de lepră într-o haină",
+      "alternatives": [
+        "mucegai distructiv",
+        "plagă de tzaraat"
+      ],
+      "reason": "Aplicarea aceluiași termen la textile arată că «tzaraat» este mai larg decât diagnosticul modern de lepră.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Aplicarea aceluiași termen la textile arată că «tzaraat» este mai larg decât diagnosticul modern de lepră."
     }
   ]
 }

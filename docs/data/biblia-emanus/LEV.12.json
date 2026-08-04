@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 12,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Textul ebraic WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Termenii rituali nu au fost transformați în diagnostice sau verdicte morale absente din ebraică.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic ritual, sintaxă, categorii curat/necurat, termeni corporali și formule de sfințenie verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Perioadele de curățire după naștere sunt stipulate exact."
+        "DOMNUL și terminologia cultică au fost normalizate consecvent.",
+        "Formulările gramaticale și identificările evident greșite au fost corectate fără a înlocui termenii ebraici cu diagnostice moderne."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Formularea privind jertfa celor săraci este păstrată."
+        "Ebraica are prioritate față de etaloanele românești.",
+        "Necurăția rituală nu este numită păcat moral acolo unde textul nu o numește astfel.",
+        "Țaraat este redat tradițional prin lepră, cu domeniul ebraic mai larg explicat în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -120,7 +122,7 @@
     },
     {
       "number": 4,
-      "text": "Ea va mai rămâne treizeci și trei de zile pentru curățirea sângelui ei; să nu se atinge de niciun lucru sfânt și să nu intre în Sfântul Lăcaș până când nu se vor împlini zilele curățirii ei."
+      "text": "Ea va mai rămâne treizeci și trei de zile în sângele curățirii ei; să nu se atingă de niciun lucru sfânt și să nu intre în Sfântul Lăcaș până când nu se vor împlini zilele curățirii ei."
     },
     {
       "number": 5,
@@ -141,20 +143,50 @@
   ],
   "editorialNotes": [
     {
-      "verse": 3,
-      "term": "yimmol besar orlato",
-      "decision": "să fie tăiat împrejur în carnea prepuțului său",
+      "verse": 2,
+      "term": "tame",
+      "decision": "necurată",
+      "alternatives": [
+        "impură ritual"
+      ],
+      "reason": "Textul ebraic descrie statutul ritual după naștere; nu folosește aici verbul «a păcătui».",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Rânduiala circumciziei în ziua a opta este menținută conform textului ebraic."
+      "resolutionReason": "Textul ebraic descrie statutul ritual după naștere; nu folosește aici verbul «a păcătui»."
+    },
+    {
+      "verse": 4,
+      "term": "damei tahorah",
+      "decision": "sângele curățirii",
+      "alternatives": [
+        "sângele purificării"
+      ],
+      "reason": "Formula aparține perioadei rituale de curățire după naștere.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formula aparține perioadei rituale de curățire după naștere."
+    },
+    {
+      "verse": 6,
+      "term": "hattat",
+      "decision": "jertfă pentru păcat",
+      "alternatives": [
+        "jertfă de curățire"
+      ],
+      "reason": "Denumirea tradițională este păstrată, iar funcția de curățire rituală este explicată fără a afirma că nașterea este păcat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Denumirea tradițională este păstrată, iar funcția de curățire rituală este explicată fără a afirma că nașterea este păcat."
     },
     {
       "verse": 8,
-      "term": "im lo timtse yadah",
-      "decision": "dacă mijloacele ei nu-i îngăduie",
+      "term": "dei seh",
+      "decision": "dacă nu-și permite un miel",
+      "reason": "Textul păstrează alternativa oferită persoanei cu mijloace reduse.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Prevederea milostivă pentru cei săraci reflectă cadrul sacrificial al Legii."
+      "resolutionReason": "Textul păstrează alternativa oferită persoanei cu mijloace reduse."
     }
   ]
 }

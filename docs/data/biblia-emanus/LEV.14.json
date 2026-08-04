@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 14,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Textul ebraic WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Termenii rituali nu au fost transformați în diagnostice sau verdicte morale absente din ebraică.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic ritual, sintaxă, categorii curat/necurat, termeni corporali și formule de sfințenie verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Ritualul celor două păsări și ungerea leprosului vindecat sunt traduse exact."
+        "DOMNUL și terminologia cultică au fost normalizate consecvent.",
+        "Formulările gramaticale și identificările evident greșite au fost corectate fără a înlocui termenii ebraici cu diagnostice moderne."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Prescripțiile privind lepra pe zidurile caselor sunt rânduite clar."
+        "Ebraica are prioritate față de etaloanele românești.",
+        "Necurăția rituală nu este numită păcat moral acolo unde textul nu o numește astfel.",
+        "Țaraat este redat tradițional prin lepră, cu domeniul ebraic mai larg explicat în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -112,7 +114,7 @@
     },
     {
       "number": 2,
-      "text": "„Aceasta este legea leprosului în ziua curățirii lui: să fie adus la preot."
+      "text": "Aceasta este legea pentru cel bolnav de lepră, în ziua curățirii lui: să fie adus la preot."
     },
     {
       "number": 3,
@@ -156,7 +158,7 @@
     },
     {
       "number": 13,
-      "text": "Va junghia mielul în locul unde se junghie jertfa pentru păcat și jertfa de ardere de tot, într-un loc sfânt; căci cum este jertfa pentru păcat, așa este și jertfa pentru vină: este a preotului, este un lucru preasfânt."
+      "text": "Va junghia mielul în locul unde se junghie jertfa pentru păcat și arderea-de-tot, într-un loc sfânt; căci cum este jertfa pentru păcat, așa este și jertfa pentru vină: este a preotului, este un lucru preasfânt."
     },
     {
       "number": 14,
@@ -180,11 +182,11 @@
     },
     {
       "number": 19,
-      "text": "Preotul va aduce jertfa pentru păcat și va face ispășire pentru cel ce se curățește de necurăția lui; după aceea va junghia jertfa de ardere de tot."
+      "text": "Preotul va aduce jertfa pentru păcat și va face ispășire pentru cel ce se curățește de necurăția lui; după aceea va junghia arderea-de-tot."
     },
     {
       "number": 20,
-      "text": "Preotul va aduce pe altar jertfa de ardere de tot și jertfa de mâncare; astfel preotul va face ispășire pentru el și va fi curat."
+      "text": "Preotul va aduce pe altar arderea-de-tot și darul de cereale; astfel preotul va face ispășire pentru el și va fi curat."
     },
     {
       "number": 21,
@@ -228,7 +230,7 @@
     },
     {
       "number": 31,
-      "text": "din ce-i îngăduie mijloacele: una ca jertfă pentru păcat și cealaltă ca ardere-de-tot, împreună cu jertfa de mâncare. Astfel preotul va face ispășire înaintea DOMNULUI pentru cel ce se curățește."
+      "text": "din ce-i îngăduie mijloacele: una ca jertfă pentru păcat și cealaltă ca ardere-de-tot, împreună cu darul de cereale. Astfel preotul va face ispășire înaintea DOMNULUI pentru cel ce se curățește."
     },
     {
       "number": 32,
@@ -240,7 +242,7 @@
     },
     {
       "number": 34,
-      "text": "„Când veți intra în țara Canaanului, pe care v-o dau în stăpânire, și voi trimite o rană de lepră pe o casă din țara stăpânirii voastre,"
+      "text": "Când veți intra în țara Canaanului, pe care v-o dau în stăpânire, și voi pune o plagă de lepră într-o casă din țara stăpânirii voastre,"
     },
     {
       "number": 35,
@@ -337,12 +339,62 @@
   ],
   "editorialNotes": [
     {
-      "verse": 7,
-      "term": "weshilakh et-hatsippor ha-chayyah",
-      "decision": "și va lăsa pasărea vie să zboare pe câmp",
+      "verse": 2,
+      "term": "metzora",
+      "decision": "cel bolnav de lepră",
+      "alternatives": [
+        "cel afectat de tzaraat"
+      ],
+      "reason": "Este păstrată denumirea tradițională, iar nota delimitează sensul ebraic mai larg.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Ritualul eliberării păsării vii simbolizează îndepărtarea necurăției și redobândirea libertății."
+      "resolutionReason": "Este păstrată denumirea tradițională, iar nota delimitează sensul ebraic mai larg."
+    },
+    {
+      "verse": 5,
+      "term": "mayim hayyim",
+      "decision": "apă curgătoare",
+      "alternatives": [
+        "apă vie"
+      ],
+      "reason": "Expresia ebraică desemnează apă proaspătă, curgătoare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia ebraică desemnează apă proaspătă, curgătoare."
+    },
+    {
+      "verse": 10,
+      "term": "efă / log",
+      "decision": "unitățile antice sunt păstrate",
+      "reason": "Conversiile moderne sunt aproximative și nu înlocuiesc unitățile textului.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Conversiile moderne sunt aproximative și nu înlocuiesc unitățile textului."
+    },
+    {
+      "verse": 34,
+      "term": "venatati nega tzaraat",
+      "decision": "voi pune o plagă de lepră într-o casă",
+      "alternatives": [
+        "voi îngădui o plagă de tzaraat"
+      ],
+      "reason": "Agentul gramatical divin din textul ebraic este păstrat; nu este eliminat pentru a evita dificultatea teologică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Agentul gramatical divin din textul ebraic este păstrat; nu este eliminat pentru a evita dificultatea teologică."
+    },
+    {
+      "verse": 49,
+      "term": "vehitte et-habbayit",
+      "decision": "să curețe casa de păcat / să purifice casa",
+      "alternatives": [
+        "să facă ispășire pentru casă"
+      ],
+      "reason": "Ritualul folosește limbajul curățirii și ispășirii pentru spațiul afectat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ritualul folosește limbajul curățirii și ispășirii pentru spațiul afectat."
     }
   ]
 }

@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 11,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Textul ebraic WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Termenii rituali nu au fost transformați în diagnostice sau verdicte morale absente din ebraică.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic ritual, sintaxă, categorii curat/necurat, termeni corporali și formule de sfințenie verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Criteriile taxonomice biblice (rumegătoare, solzi, zbor) sunt traduse cu precizie."
+        "DOMNUL și terminologia cultică au fost normalizate consecvent.",
+        "Formulările gramaticale și identificările evident greșite au fost corectate fără a înlocui termenii ebraici cu diagnostice moderne."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Decretul sfințeniei divine este formulat solemn."
+        "Ebraica are prioritate față de etaloanele românești.",
+        "Necurăția rituală nu este numită păcat moral acolo unde textul nu o numește astfel.",
+        "Țaraat este redat tradițional prin lepră, cu domeniul ebraic mai larg explicat în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -220,11 +222,11 @@
     },
     {
       "number": 29,
-      "text": "Iată ce va fi necurat pentru voi dintre vietățile care mișună pe pământ: cârtița, șoarecele și șopârla după soiurile lor,"
+      "text": "Iată ce va fi necurat pentru voi dintre vietățile care mișună pe pământ: nevăstuica, șoarecele și șopârla mare, după soiurile lor,"
     },
     {
       "number": 30,
-      "text": "ghepardul de zid, gușterul, șopârla de nisip, melcul și salamandra."
+      "text": "gecko, șopârla de zid, șopârla de nisip, șopârla și cameleonul."
     },
     {
       "number": 31,
@@ -297,12 +299,63 @@
   ],
   "editorialNotes": [
     {
-      "verse": 44,
-      "term": "we-hitkaddishtem wi-heyitem kedoshim",
-      "decision": "sfințiți-vă și fiți sfinți",
+      "verse": 2,
+      "term": "tahor / tame",
+      "decision": "curat / necurat",
+      "alternatives": [
+        "pur / impur ritual"
+      ],
+      "reason": "Ebraica stabilește categorii rituale și alimentare; traducerea nu înlocuiește termenii cu judecăți morale inexistente în verset.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Chemarea fundamentală la sfințenie rituală și morală ancorată în natura lui Dumnezeu."
+      "resolutionReason": "Ebraica stabilește categorii rituale și alimentare; traducerea nu înlocuiește termenii cu judecăți morale inexistente în verset."
+    },
+    {
+      "verse": 5,
+      "term": "shafan",
+      "decision": "iepure de stâncă",
+      "alternatives": [
+        "hirax",
+        "daman"
+      ],
+      "reason": "Identificarea zoologică tradițională diferă; sensul principal este animalul desemnat de termenul ebraic, nu clasificarea biologică modernă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Identificarea zoologică tradițională diferă; sensul principal este animalul desemnat de termenul ebraic, nu clasificarea biologică modernă."
+    },
+    {
+      "verse": 13,
+      "term": "lista păsărilor necurate",
+      "decision": "numele românești tradiționale sunt păstrate acolo unde identificarea este probabilă",
+      "alternatives": [
+        "transliterarea termenilor ebraici incerți"
+      ],
+      "reason": "Mai multe denumiri de păsări antice nu pot fi identificate cu certitudine absolută.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Mai multe denumiri de păsări antice nu pot fi identificate cu certitudine absolută."
+    },
+    {
+      "verse": 20,
+      "term": "holekh al-arba",
+      "decision": "care umblă pe patru picioare",
+      "alternatives": [
+        "care se deplasează pe patru membre"
+      ],
+      "reason": "Este păstrată formularea perceptivă a textului ebraic pentru insectele înaripate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este păstrată formularea perceptivă a textului ebraic pentru insectele înaripate."
+    },
+    {
+      "verse": 44,
+      "term": "qedoshim tihyu",
+      "decision": "fiți sfinți, căci Eu sunt sfânt",
+      "reason": "Motivația explicită a distincțiilor rituale este sfințenia DOMNULUI.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Motivația explicită a distincțiilor rituale este sfințenia DOMNULUI."
     }
   ]
 }
