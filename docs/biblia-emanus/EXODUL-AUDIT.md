@@ -8,7 +8,8 @@ Acest document păstrează deciziile transversale aplicate traducerii Biblia Ema
 - bază public-domain de lucru: World English Bible Updated, Protestant Edition;
 - VDC 1924, NTR și BTF2015: exclusiv `comparison-only`;
 - fiecare capitol publicat are acoperire continuă, cele șapte porți aprobate și note rezolvate pentru variantele obligatorii din `source-ledger.json`;
-- textul automat inițial al agentului a fost retras, iar capitolele 6–40 au fost reconstruite integral în română.
+- textul automat inițial al agentului a fost retras, iar capitolele 6–40 au fost reconstruite integral în română;
+- dialogurile și blocurile legislative au fost verificate integral pentru echilibrul ghilimelelor românești, nu doar pentru validitatea JSON.
 
 ## Terminologie stabilită
 
