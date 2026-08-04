@@ -3,6 +3,7 @@ import { EXOD_1 } from "./exod1.js"
 import { EXOD_2 } from "./exod2.js"
 import { EXOD_3 } from "./exod3.js"
 import { EXOD_4 } from "./exod4.js"
+import { EXOD_5 } from "./exod5.js"
 
 /*
  * Cartea Exod (Ieșirea).
@@ -19,6 +20,7 @@ export { EXOD_1 } from "./exod1.js"
 export { EXOD_2 } from "./exod2.js"
 export { EXOD_3 } from "./exod3.js"
 export { EXOD_4 } from "./exod4.js"
+export { EXOD_5 } from "./exod5.js"
 
 export const EXOD: BibleBook = {
   id: "exod",
@@ -27,5 +29,5 @@ export const EXOD: BibleBook = {
   order: 2,
   blurb:
     "Cartea ieșirii din robie. În ebraică se numește „Numele”, fiindcă începe cu oameni chemați pe nume. Aici Dumnezeu Se coboară în suferința unui popor, Își descoperă Numele, scoate cu mână tare, dă Legea și vine să locuiască în mijlocul alor Săi.",
-  chapters: [EXOD_1, EXOD_2, EXOD_3, EXOD_4],
+  chapters: [EXOD_1, EXOD_2, EXOD_3, EXOD_4, EXOD_5],
 }
