@@ -20,6 +20,7 @@ import { EXOD_18 } from "./exod18.js"
 import { EXOD_19 } from "./exod19.js"
 import { EXOD_20 } from "./exod20.js"
 import { EXOD_21 } from "./exod21.js"
+import { EXOD_22 } from "./exod22.js"
 
 /*
  * Cartea Exod (Ieșirea).
@@ -52,6 +53,7 @@ export { EXOD_18 } from "./exod18.js"
 export { EXOD_19 } from "./exod19.js"
 export { EXOD_20 } from "./exod20.js"
 export { EXOD_21 } from "./exod21.js"
+export { EXOD_22 } from "./exod22.js"
 
 export const EXOD: BibleBook = {
   id: "exod",
@@ -82,5 +84,6 @@ export const EXOD: BibleBook = {
     EXOD_19,
     EXOD_20,
     EXOD_21,
+    EXOD_22,
   ],
 }
