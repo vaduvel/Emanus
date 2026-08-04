@@ -12,19 +12,19 @@ export const LEVITIC_12 = leviticChapter({
   number: 12,
   title: "Levitic 12 — Zilele de după naștere",
   summary:
-    "Un capitol scurt, despre femeia care a născut. Se hotărăsc zilele ei de deosebire și zilele de curățire, se poruncesce tăierea împrejur a băiatului în ziua a opta, iar la sfârșitul zilelor se aduce un miel ca ardere de tot și o pasăre ca jertfă pentru păcat. Iar dacă femeia nu are cu ce să aducă un miel, poate aduce două turturele sau doi pui de porumbel. Este jertfa pe care a adus-o Maria, mama Domnului nostru.",
+    "Un capitol scurt, despre femeia care a născut. Se hotărăsc zilele ei de deosebire și zilele de curățire, se poruncește tăierea împrejur a băiatului în ziua a opta, iar la sfârșitul zilelor se aduce un miel ca ardere de tot și o pasăre ca jertfă pentru păcat. Iar dacă femeia nu are cu ce să aducă un miel, poate aduce două turturele sau doi pui de porumbel. Este jertfa pe care a adus-o Maria, mama Domnului nostru.",
   literaryContext:
     "Ia aminte că partea despre curat și necurat merge înainte, dar trece de la mâncare la trupul omului. Capitolul acesta stă între rânduielile despre viețuitoare și cele despre lepră, și este cel mai scurt din carte. Și vezi cum se încheie: cu un cuvânt pentru cei săraci. La fel s-a încheiat și rânduiala jertfelor din capitolele de la început. Ori încotro se întoarce cartea, nu uită pe cel care nu are.",
   historicalContext:
-    "În lumea aceea, nașterea era vremea cea mai primejdioasă din viața unei femei, iar la popoarele din jur ea era încredințată zeițelor nașterii, cu descantări și cu amulete legate de încheieturi. Aici nu se pomenește nimic din toate acestea. Femeia nu este dată în grija nici unei puteri ascunse; ea are zile de odihnă hotărâte, în care nu se atinge de lucrurile sfinte și nimeni nu are dreptul să o grăbească. Iar jertfa cea mai ieftină din tot șirul jertfelor este pomenită tocmai aici, ca să nu rămână nicio mamă afară.",
+    "În lumea aceea, nașterea era vremea cea mai primejdioasă din viața unei femei, iar la popoarele din jur ea era încredințată zeițelor nașterii, cu descântări și cu amulete legate de încheieturi. Aici nu se pomenește nimic din toate acestea. Femeia nu este dată în grija niciunei puteri ascunse; ea are zile de odihnă hotărâte, în care nu se atinge de lucrurile sfinte și nimeni nu are dreptul să o grăbească. Iar jertfa cea mai ieftină din tot șirul jertfelor este pomenită tocmai aici, ca să nu rămână nicio mamă afară.",
   units: [
     {
       verses: [1, 4],
       heading: "Zile de odihnă, nu zile de rușine",
       teaching: teaching(
         "Femeia care a născut un băiat este necurată șapte zile, iar apoi mai rămâne treizeci și trei de zile în care nu se atinge de lucrurile sfinte și nu vine la cort. Ia aminte că nu se spune nicăieri că a făcut vreun rău. Necurăția din cartea aceasta nu înseamnă păcat; înseamnă o stare a trupului care cere vreme și curățire.",
-        "Și vezi ce a făcut de fapt rânduiala aceasta pentru ea: patruzeci de zile în care nimeni nu putea să o cheme la nimic. Nu se cerea să se întoarcă îndată la muncă și la datorii. Dumnezeu i-a dat vreme de tăcere și de îndreptare a trupului, și a scris lucrul acesta în lege, ca să nu se poată lua de nimeni.",
-        "Ia seama la tăierea împrejur poruncită în ziua a opta. Semnul legământului se punea peste copil în vremea în care mama era încă în zilele ei. Copilul nu aștepta ca ea să fie gata: legământul nu atârna de starea nimeni ci de făgăduința lui Dumnezeu.",
+        "Și vezi ce a făcut de fapt rânduiala aceasta pentru ea: patruzeci de zile în care nimeni nu putea să o cheme la nimic. Nu se cerea să se întoarcă îndată la muncă și la datorii. Dumnezeu i-a dat vreme de tăcere și de îndreptare a trupului, și a scris lucrul acesta în lege, ca să nu i-l poată lua nimeni.",
+        "Ia seama la tăierea împrejur poruncită în ziua a opta. Semnul legământului se punea peste copil în vremea în care mama era încă în zilele ei. Copilul nu aștepta ca ea să fie gata: legământul nu atârna de starea nimeni, ci de făgăduința lui Dumnezeu.",
         "Se cade să spunem lămurit și ce nu învață locul acesta. Nu învață că nașterea de copii este ceva josnic și nu învață că femeia este mai păcătoasă decât bărbatul. Chiar la începutul Scripturii, nașterea de prunci este o binecuvântare dată de Dumnezeu. Cine a citit capitolul acesta ca o dovadă împotriva femeilor l-a citit împotriva Celui care l-a scris.",
       ),
       words: [
@@ -85,8 +85,7 @@ export const LEVITIC_12 = leviticChapter({
     },
     {
       verses: [6, 7],
-      heading: "La sfârșitul zilelor, o jertfă
-",
+      heading: "La sfârșitul zilelor, o jertfă",
       teaching: teaching(
         "Când se împlineau zilele, femeia aducea la ușa cortului un miel ca ardere de tot și o pasăre ca jertfă pentru păcat, iar preotul făcea ispășire pentru ea. Ia aminte că nu se întorcea singură la viața obișnuită, ca și când nimic nu s-ar fi întâmplat. Sfârșitul unei vremi grele se însemna înaintea Domnului.",
         "Și vezi ordinea jertfelor de aici: întâi arderea de tot, apoi jertfa pentru păcat. Nu se începea cu vinovăția, ci cu dăruirea. Femeia venea întâi să se dea, și abia pe urmă se făcea curățirea stării ei.",
