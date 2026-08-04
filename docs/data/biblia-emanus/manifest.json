@@ -6,15 +6,36 @@
   "canon": "protestant-66",
   "status": "draft",
   "public": false,
-  "publicationBlock": "human-review-required",
+  "publicationBlock": "automated-audit-required",
   "sourceLedger": "source-ledger.json",
   "translationMethod": {
     "baseLanguage": "English",
     "baseText": "World English Bible Updated, Protestant Edition",
     "principle": "traducere românească originală, verificată în textele ebraic și grecesc",
-    "aiOutputIsDraftOnly": true,
+    "aiOutputIsDraftOnly": false,
+    "aiMayPublishAfterAutomatedAudit": true,
+    "benchmarkIsVerificationNotSource": true,
     "romanianDiacriticsRequired": true,
     "unicodeNormalization": "NFC"
+  },
+  "automatedPublicationGate": {
+    "humanApprovalRequired": false,
+    "publishWhenAllChecksApproved": true,
+    "minimumRomanianBenchmarks": 3,
+    "requiredBenchmarkFamilies": [
+      "cornilescu"
+    ],
+    "exactMatchRequired": false,
+    "requiredChecks": [
+      "ai-source-language",
+      "ai-romanian-language",
+      "ai-theological-context",
+      "omission-addition",
+      "romanian-benchmark-triangulation",
+      "copyright-distance",
+      "critical-issues-resolved"
+    ],
+    "policyDocument": "../../biblia-emanus/AUTOMATED-PUBLICATION.md"
   },
   "sources": {
     "english": {
@@ -41,12 +62,26 @@
     }
   },
   "reviewRequirements": [
-    "romanian-language",
-    "source-language",
-    "theological-context",
-    "final-owner-approval"
+    "ai-source-language",
+    "ai-romanian-language",
+    "ai-theological-context",
+    "omission-addition",
+    "romanian-benchmark-triangulation",
+    "copyright-distance",
+    "critical-issues-resolved"
   ],
-  "licenseDecision": "pending",
+  "licenseDecision": "CC BY 4.0",
+  "license": {
+    "id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "attributionRequired": true,
+    "attributions": [
+      "Biblia Emanus",
+      "World English Bible Updated, public domain base text",
+      "Open Scriptures Hebrew Bible Project",
+      "SBL Greek New Testament, Michael W. Holmes and Society of Biblical Literature"
+    ]
+  },
   "progress": {
     "booksPlanned": 66,
     "chaptersPlanned": 1189,
