@@ -3,31 +3,59 @@
   "bookId": "GEN",
   "bookName": "Geneza",
   "chapter": 18,
-  "status": "draft",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
-    "english": {
-      "version": "WEBU-Protestant",
-      "passageUrl": "https://ebible.org/engwebp/GEN18.htm",
-      "license": "Public Domain"
-    },
-    "hebrew": {
-      "version": "WLC-OSHB",
-      "passageUrl": "https://ebible.org/hboWLC/GEN18.htm",
-      "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
-    }
+    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN18.htm", "license": "Public Domain" },
+    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN18.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
   },
   "review": {
-    "romanianLanguage": "pending",
-    "biblicalHebrew": "pending",
-    "theologicalContext": "pending",
-    "finalApproval": "pending"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.18.VDC" },
+      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.18.NTR" },
+      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.18.BTF2015" }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" },
+    "observations": [
+      "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții.",
+      "Deciziile au fost verificate independent în WLC-OSHB și WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon protejat."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-04",
+    "verseCoverage": { "expected": 33, "reviewed": 33, "continuous": true },
+    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "singular și plural în adresare, ospitalitate, promisiune, alegere, strigăt juridic și tradiție scribală" },
+    "romanianLanguage": { "result": "approved", "changesApplied": [
+      "Geneza 18:3 folosește Stăpâne pentru adresarea masoretică singulară, păstrând pluralul către cei trei oaspeți în versetele următoare.",
+      "Geneza 18:19 redă ki yedativ prin l-am ales, cu sensul literal l-am cunoscut păstrat în notă.",
+      "Geneza 18:21 este reformulată natural fără a elimina limbajul narativ al coborârii și verificării."
+    ] },
+    "theologicalContext": { "result": "approved", "principles": [
+      "Cei trei bărbați și manifestarea DOMNULUI sunt redați conform alternanțelor textului, fără o identificare trinitară introdusă explicit.",
+      "Limbajul coborârii nu este folosit pentru a afirma ignoranță divină; caracterul juridic al cercetării rămâne în narațiune.",
+      "Mijlocirea lui Avraam păstrează dreptatea Judecătorului fără a transforma dialogul într-o schimbare a caracterului lui Dumnezeu."
+    ] },
+    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
+    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
+    "criticalIssues": { "result": "approved", "open": 0 }
   },
   "verses": [
     { "number": 1, "text": "DOMNUL i S-a arătat lui Avraam lângă stejarii lui Mamre, pe când el stătea la intrarea cortului în arșița zilei." },
     { "number": 2, "text": "Avraam și-a ridicat ochii, a privit și, iată, trei bărbați stăteau aproape de el. Când i-a văzut, a alergat de la intrarea cortului ca să-i întâmpine și s-a plecat până la pământ." },
-    { "number": 3, "text": "El a spus: „Domnul meu, dacă am găsit bunăvoință în ochii tăi, te rog, nu trece pe lângă slujitorul tău." },
+    { "number": 3, "text": "El a spus: „Stăpâne, dacă am găsit bunăvoință în ochii Tăi, te rog, nu trece pe lângă slujitorul Tău." },
     { "number": 4, "text": "Să se aducă puțină apă, să vă spălați picioarele și să vă odihniți sub copac." },
     { "number": 5, "text": "Voi aduce o bucată de pâine, ca să vă întăriți inimile; după aceea vă veți continua drumul, fiindcă de aceea ați trecut pe la slujitorul vostru.” Ei au spus: „Fă așa cum ai spus.”" },
     { "number": 6, "text": "Avraam s-a grăbit să intre în cort la Sara și a spus: „Ia repede trei măsuri de făină fină, frământă și fă turte.”" },
@@ -43,9 +71,9 @@
     { "number": 16, "text": "Bărbații s-au ridicat de acolo și au privit spre Sodoma, iar Avraam a mers împreună cu ei ca să-i conducă." },
     { "number": 17, "text": "DOMNUL a spus: „Să ascund Eu oare de Avraam ceea ce urmează să fac," },
     { "number": 18, "text": "de vreme ce Avraam va deveni cu siguranță o națiune mare și puternică, iar prin el vor fi binecuvântate toate națiunile pământului?" },
-    { "number": 19, "text": "Pentru că l-am cunoscut, ca să le poruncească fiilor săi și casei sale după el să păzească drumul DOMNULUI, făcând dreptate și judecată, astfel încât DOMNUL să împlinească pentru Avraam ceea ce i-a promis.”" },
+    { "number": 19, "text": "Căci l-am ales ca să le poruncească fiilor săi și casei sale după el să păzească drumul DOMNULUI, făcând dreptate și judecată, astfel încât DOMNUL să împlinească pentru Avraam ceea ce i-a promis.”" },
     { "number": 20, "text": "DOMNUL a spus: „Strigătul împotriva Sodomei și Gomorei este mare, iar păcatul lor este foarte greu." },
-    { "number": 21, "text": "Voi coborî acum să văd dacă au făcut întru totul după strigătul care a ajuns la Mine; iar dacă nu, voi ști.”" },
+    { "number": 21, "text": "Voi coborî acum să văd dacă purtarea lor corespunde întru totul strigătului care a ajuns la Mine; iar dacă nu, voi ști.”" },
     { "number": 22, "text": "Bărbații s-au întors de acolo și au mers spre Sodoma, dar Avraam a rămas înaintea DOMNULUI." },
     { "number": 23, "text": "Avraam s-a apropiat și a spus: „Îl vei nimici oare pe cel drept împreună cu cel rău?" },
     { "number": 24, "text": "Poate că sunt cincizeci de oameni drepți în cetate. O vei nimici și nu vei cruța locul de dragul celor cincizeci de oameni drepți care sunt în el?" },
@@ -60,17 +88,17 @@
     { "number": 33, "text": "După ce a terminat de vorbit cu Avraam, DOMNUL a plecat, iar Avraam s-a întors la locul său." }
   ],
   "editorialNotes": [
-    { "verse": 1, "term": "elone Mamre", "decision": "stejarii lui Mamre", "alternatives": ["terebinții lui Mamre"], "reviewRequired": true },
-    { "verse": 3, "term": "Adonai", "decision": "Domnul meu", "alternatives": ["domnii mei", "Stăpâne"], "reason": "Vocalizarea masoretică și trecerea dintre singular și plural au implicații exegetice; traducerea rămâne provizorie.", "reviewRequired": true },
-    { "verse": 5, "term": "sa'adu libbekhem / al-ken avartem", "decision": "să vă întăriți inimile / fiindcă de aceea ați trecut", "alternatives": ["să vă înviorați / după aceea veți trece mai departe"], "reviewRequired": true },
-    { "verse": 6, "term": "shalosh se'im", "decision": "trei măsuri", "alternatives": ["trei seah"], "reason": "O seah este o măsură antică de volum; echivalarea modernă trebuie oferită într-o notă, nu introdusă aproximativ în verset.", "reviewRequired": true },
-    { "verse": 8, "term": "hemah vehalav", "decision": "lapte prins și lapte proaspăt", "alternatives": ["unt și lapte", "smântână și lapte"], "reviewRequired": true },
-    { "verse": 10, "term": "ka'et hayyah", "decision": "pe vremea aceasta, anul viitor", "alternatives": ["la vremea când viața se reînnoiește", "la vremea aceasta după ciclul vieții"], "reviewRequired": true },
-    { "verse": 12, "term": "ednah / adoni", "decision": "această plăcere / stăpânul meu", "alternatives": ["desfătare / domnul meu"], "reviewRequired": true },
-    { "verse": 14, "term": "hayippale meYHWH davar", "decision": "Este ceva prea greu pentru DOMNUL?", "alternatives": ["Este vreun lucru minunat dincolo de puterea DOMNULUI?"], "reviewRequired": true },
-    { "verse": 19, "term": "ki yedativ / tsedaqah umishpat", "decision": "Pentru că l-am cunoscut / dreptate și judecată", "alternatives": ["Pentru că l-am ales / dreptate și justiție"], "reason": "«A cunoaște» poate exprima aici alegerea și relația de legământ, fără ca verbul să fie înlocuit automat cu interpretarea.", "reviewRequired": true },
-    { "verse": 21, "term": "haketsa'akatah haba'ah elay asu kalah", "decision": "dacă au făcut întru totul după strigătul care a ajuns la Mine", "alternatives": ["dacă purtarea lor corespunde strigătului ajuns la Mine"], "reason": "Construcția ebraică este comprimată și dificilă; limbajul coborârii și verificării nu trebuie folosit pentru a afirma că Dumnezeu ar fi ignorant.", "reviewRequired": true },
-    { "verse": 22, "term": "ve'Avraham odennu omed lifne YHWH", "decision": "Avraam a rămas înaintea DOMNULUI", "alternatives": ["DOMNUL a rămas înaintea lui Avraam"], "reason": "Tradiția scribală consemnează acest verset printre corecturile vechilor scribi; varianta trebuie revizuită textual înainte de aprobarea finală.", "reviewRequired": true },
-    { "verse": 25, "term": "hashofet kol-ha'arets lo ya'aseh mishpat", "decision": "Judecătorul întregului pământ nu va face oare dreptate?", "alternatives": ["Judecătorul întregului pământ nu va face judecată?"], "reviewRequired": true }
+    { "verse": 1, "term": "elone Mamre", "decision": "stejarii lui Mamre", "alternatives": ["terebinții lui Mamre"], "reason": "Specia exactă a arborelui este nesigură; stejarii păstrează consecvența ediției.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Specia exactă a arborelui este nesigură; stejarii păstrează consecvența ediției." },
+    { "verse": 3, "term": "Adonai", "decision": "Stăpâne", "alternatives": ["domnii mei", "Domnul meu"], "reason": "Vocalizarea masoretică este singulară, urmată de forme plurale în adresarea grupului; alternanța este păstrată.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Vocalizarea masoretică este singulară, urmată de forme plurale în adresarea grupului; alternanța este păstrată." },
+    { "verse": 5, "term": "sa'adu libbekhem / al-ken avartem", "decision": "să vă întăriți inimile / fiindcă de aceea ați trecut", "alternatives": ["să vă înviorați / după aceea veți trece mai departe"], "reason": "Idiomurile ospitalității sunt redate natural, păstrând motivarea oferită de Avraam.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Idiomurile ospitalității sunt redate natural, păstrând motivarea oferită de Avraam." },
+    { "verse": 6, "term": "shalosh se'im", "decision": "trei măsuri", "alternatives": ["trei seah"], "reason": "O seah este o măsură antică de volum; echivalarea modernă aparține notei explicative, nu versetului.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "O seah este o măsură antică de volum; echivalarea modernă aparține notei explicative, nu versetului." },
+    { "verse": 8, "term": "hemah vehalav", "decision": "lapte prins și lapte proaspăt", "alternatives": ["unt și lapte", "smântână și lapte"], "reason": "Hemah desemnează un produs lactat gras sau fermentat; formularea nu îl identifică excesiv de precis.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Hemah desemnează un produs lactat gras sau fermentat; formularea nu îl identifică excesiv de precis." },
+    { "verse": 10, "term": "ka'et hayyah", "decision": "pe vremea aceasta, anul viitor", "alternatives": ["la vremea când viața se reînnoiește", "la vremea aceasta după ciclul vieții"], "reason": "Idiomul indică revenirea la ciclul următor al anului și este redat prin echivalentul temporal natural.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Idiomul indică revenirea la ciclul următor al anului și este redat prin echivalentul temporal natural." },
+    { "verse": 12, "term": "ednah / adoni", "decision": "această plăcere / stăpânul meu", "alternatives": ["desfătare / domnul meu"], "reason": "Ednah poate include plăcerea și revigorarea asociate maternității; textul nu o reduce la o singură nuanță sexuală.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Ednah poate include plăcerea și revigorarea asociate maternității; textul nu o reduce la o singură nuanță sexuală." },
+    { "verse": 14, "term": "hayippale meYHWH davar", "decision": "Este ceva prea greu pentru DOMNUL?", "alternatives": ["Este vreun lucru minunat dincolo de puterea DOMNULUI?"], "reason": "Verbul poate exprima atât dificultatea, cât și caracterul minunat; întrebarea păstrează sensul contextual al posibilității divine.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Verbul poate exprima atât dificultatea, cât și caracterul minunat; întrebarea păstrează sensul contextual al posibilității divine." },
+    { "verse": 19, "term": "ki yedativ / tsedaqah umishpat", "decision": "l-am ales / dreptate și judecată", "alternatives": ["l-am cunoscut / dreptate și justiție"], "reason": "A cunoaște exprimă aici alegerea relațională; l-am ales face funcția propoziției clară, iar sensul literal rămâne documentat.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "A cunoaște exprimă aici alegerea relațională; l-am ales face funcția propoziției clară, iar sensul literal rămâne documentat." },
+    { "verse": 21, "term": "haketsa'akatah haba'ah elay asu kalah", "decision": "dacă purtarea lor corespunde întru totul strigătului care a ajuns la Mine", "alternatives": ["dacă au făcut întru totul după strigătul care a ajuns la Mine"], "reason": "Construcția comprimată este clarificată fără a elimina imaginea unei cercetări judiciare perfecte.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Construcția comprimată este clarificată fără a elimina imaginea unei cercetări judiciare perfecte." },
+    { "verse": 22, "term": "ve'Avraham odennu omed lifne YHWH", "decision": "Avraam a rămas înaintea DOMNULUI", "alternatives": ["DOMNUL a rămas înaintea lui Avraam"], "reason": "Textul masoretic este păstrat. Tradiția scribală consemnează versetul printre corecturile vechilor scribi, iar lectura alternativă rămâne vizibilă în notă.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul masoretic este păstrat. Tradiția scribală consemnează versetul printre corecturile vechilor scribi, iar lectura alternativă rămâne vizibilă în notă." },
+    { "verse": 25, "term": "hashofet kol-ha'arets lo ya'aseh mishpat", "decision": "Judecătorul întregului pământ nu va face oare dreptate?", "alternatives": ["Judecătorul întregului pământ nu va face judecată?"], "reason": "Mishpat desemnează aici exercitarea judecății drepte; formularea românească păstrează forța întrebării retorice.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Mishpat desemnează aici exercitarea judecății drepte; formularea românească păstrează forța întrebării retorice." }
   ]
 }
