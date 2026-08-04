@@ -23,7 +23,7 @@ export const EXOD_19 = exodChapter({
       heading: "„V-am purtat pe aripi de vultur”",
       teaching: teaching(
         "Ia aminte întâi cu ce începe Dumnezeu: ați văzut ce am făcut. Nu începe cu ce trebuie să facă ei, ci cu ce a făcut El. Aceasta este ordinea întregii Scripturi, și cine o întoarce strică totul: nu ascultăm ca să fim scăpați, ci fiindcă am fost scoși.",
-        "Și mai ia seama la chipul folosit: v-am purtat pe aripi de vultur. Nu spune că i-a mânat, nici că i-a împins: i-a purtat. Iar dacă privim înapoi la drumul lor — marea, apa amară, foamea, Amalec — vedem că tot ce lor le păruse cădere fusese purtare. Multe drumuri se înțeleg abia când le povestește Dumnezeu."și,
+        "Și mai ia seama la chipul folosit: v-am purtat pe aripi de vultur. Nu spune că i-a mânat, nici că i-a împins: i-a purtat. Iar dacă privim înapoi la drumul lor — marea, apa amară, foamea, Amalec — vedem că tot ce lor le păruse cădere fusese purtare. Multe drumuri se înțeleg abia când le povestește Dumnezeu.",
         "Apoi vine chemarea: Îmi veți fi o comoară deosebită dintre toate popoarele — căci al Meu este tot pământul. Se cade citit și ce urmează după linie: alegerea nu înseamnă că Dumnezeu nu are pe nimeni altul, ci că dintre toți, aceștia sunt puși deoparte pentru o lucrare. Alegerea nu este privilegiu închis, ci slujbă încredințată.",
         "Și le spune ce fel de popor să fie: o împărăție de preoți și un neam sfânt. Un preot sta între Dumnezeu și alții; deci poporul întreg era chemat să stea așa pentru celelalte popoare. Nu erau aleși împotriva lumii, ci pentru lume. Apostolul Petru va lua cuvintele acestea și le va pune pe seama bisericii; tot ce se cere de la noi începe cu ce a făcut Dumnezeu pentru noi.",
       ),
@@ -95,7 +95,7 @@ export const EXOD_19 = exodChapter({
       heading: "Un munte care fumega și o trâmbiță tot mai tare",
       teaching: teaching(
         "A treia zi vin tunete, fulgere, un nor greu și un sunet de trâmbiță puternic, și tot poporul se cutremură. Ia aminte că aceiași oameni care spuseseră „vom face tot” tremură acum înainte să se rostească vreo poruncă. Făgăduințele se dau ușor de departe; înaintea lui Dumnezeu se văd altfel.",
-        "Și totuși, Moise îi scoate înaintea Domnului, iar ei stole la poalele muntelui. Nu fug în tabără. Frica lui Dumnezeu nu este întotdeauna semn de depărtare; poate fi întâiul pas al unei apropieri adevărate.",
+        "Și totuși, Moise îi scoate înaintea Domnului, iar ei stau la poalele muntelui. Nu fug în tabără. Frica lui Dumnezeu nu este întotdeauna semn de depărtare; poate fi întâiul pas al unei apropieri adevărate.",
         "Muntele fumega ca o topitoare, și se cutremura tot. Iar sunetul trâmbiței se făcea din ce în ce mai tare — nu se stingea, ca zgomotele lumești, ci creștea. Și în mijlocul acelui vuiet, Moise vorbește, și Dumnezeu Îi răspunde. Nici focul, nici cutremurul nu au împiedicat un cuvânt să fie spus și auzit.",
         "Se cade să spunem și pentru ce a fost așa. Dumnezeu nu Se arată înspăimântător din plăcerea de a înspăimânta. Poporul acesta ieșise dintre dumnezeii Egiptului, dintre chipuri pe care le puteai pipăi și căra. Întâlnirea de la Sinai ține într-o singură zi tot ce nu se poate spune: că Domnul nu este ca ei, că nu poate fi ținut în mână, că vorbește și că este viu.",
       ),
@@ -133,7 +133,7 @@ export const EXOD_19 = exodChapter({
         "Moise urcă, și îndată Dumnezeu îl trimite jos: coboară-te și spune-le iarăși să nu treacă hotarul. Ia aminte că acesta este singurul cuvânt spus de două ori în tot capitolul. Ce se repetă la Dumnezeu se repetă pentru că ne trebuie, nu pentru că El a uitat.",
         "Și vezi ce este în grija Lui: nu ca poporul să stea departe de silă, ci ca să nu piară. Chiar oprirea este milă. Multe hotare pe care Dumnezeu le pune în viața noastră nu ne țin de la ceva bun; ne țin în viață.",
         "Iar Moise răspunde ceea ce răspundem și noi de multe ori: poporul nu poate urca, fiindcă Tu Înșuți ai pus hotarul. Și totuși Dumnezeu îl trimite iarăși. Uneori nu ni se cere să înțelegem pentru ce trebuie spus încă o dată; ni se cere să coborâm și să spunem.",
-        "Și capitolul se încheie ciudat, cu totul deschis: Moise s-a coborât și le-a spus. Nu se încheie cu apropiere, ci cu un hotar și cu un mijlocitor care umblă între cei doi. Așa se sfârșește ziua cea mare a Sinaiului — și tocmai așa se pregătește înțelegerea a ce va veni: un Mijlocitor prin care se poate păși înaintea acelui munte fără să pierim.",
+        "Și capitolul se încheie deschis: Moise s-a coborât și le-a spus. Nu se încheie cu apropiere, ci cu un hotar și cu un mijlocitor care umblă între cei doi. Așa se sfârșește ziua cea mare a Sinaiului — și tocmai așa se pregătește înțelegerea a ce va veni: un Mijlocitor prin care se poate păși înaintea acelui munte fără să pierim.",
       ),
       words: [
         {
