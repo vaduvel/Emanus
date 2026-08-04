@@ -60,3 +60,16 @@ Acest document păstrează deciziile transversale folosite la auditarea traducer
 - `go'el haddam` este „răzbunătorul sângelui”, termen juridic și familial, nu o aprobare a răzbunării private;
 - cetățile de refugiu disting uciderea neintenționată de omorul deliberat și cer judecată publică înaintea adunării;
 - forma mai scurtă a unor tradiții grecești pentru Iosua 20:4–6 este documentată, iar textul principal urmează textul masoretic.
+
+## Încheierea cărții — Iosua 21–24
+
+- lista celor patruzeci și opt de cetăți levitice este păstrată integral, inclusiv versetele 21:36–37 omise din unele tradiții;
+- rezumatul împlinirii promisiunilor din 21:43–45 este citit împreună cu pasajele despre teritorii încă rămase;
+- altarul din Iosua 22 este martor al unității legământului, nu un altar rival pentru jertfe;
+- formula `El Elohim YHWH` din 22:22 este păstrată fără simplificare;
+- conflictul dintre seminții este oprit prin investigație, mărturie și clarificarea intenției;
+- avertismentele din Iosua 23 păstrează simultan iubirea de DOMNUL, ascultarea și consecințele idolatriei;
+- alegerea din Iosua 24:15 este răspuns la istoria legământului, nu o prezentare a tuturor religiilor ca echivalente;
+- `Nu veți putea sluji DOMNULUI` din 24:19 rămâne avertisment împotriva unui angajament superficial;
+- `chesita` este păstrată ca unitate veche cu echivalență incertă;
+- finalul extins al unor tradiții grecești după 24:33 este documentat, iar textul principal urmează încheierea masoretică.
