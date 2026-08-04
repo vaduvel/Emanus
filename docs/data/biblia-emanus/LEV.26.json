@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 26,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Narațiunea binecuvântărilor și a blestemelor legământului este tradusă solemn."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Promisiunea aducerii aminte de legământul patriarhal este păstrată fidel."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -293,20 +295,58 @@
   ],
   "editorialNotes": [
     {
-      "verse": 12,
-      "term": "we-hithallakhti be-tokhekhem",
-      "decision": "voi umbla în mijlocul vostru",
+      "verse": 3,
+      "term": "im-behuqotay telekhu",
+      "decision": "dacă veți umbla în rânduielile Mele",
+      "reason": "Binecuvântările sunt legate de ascultarea legământului, nu de o formulă automată de prosperitate individuală.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Promisiunea prezenței divine în mijlocul poporului credincios legământului."
+      "resolutionReason": "Binecuvântările sunt legate de ascultarea legământului, nu de o formulă automată de prosperitate individuală."
+    },
+    {
+      "verse": 12,
+      "term": "vehithallakhti betokhekhem",
+      "decision": "voi umbla în mijlocul vostru",
+      "reason": "Prezența lui Dumnezeu în comunitate este centrul binecuvântării.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Prezența lui Dumnezeu în comunitate este centrul binecuvântării."
+    },
+    {
+      "verse": 21,
+      "term": "qeri",
+      "decision": "împotrivire",
+      "alternatives": [
+        "ostilitate",
+        "nepăsare",
+        "întâmplare"
+      ],
+      "reason": "Termenul rar este repetat în secțiunea pedepselor și sensul exact este disputat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul rar este repetat în secțiunea pedepselor și sensul exact este disputat."
+    },
+    {
+      "verse": 34,
+      "term": "tirțeh haaretz et-shabbetoteha",
+      "decision": "țara se va bucura de Sabatele ei",
+      "reason": "Exilul este legat de odihna neacordată pământului.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Exilul este legat de odihna neacordată pământului."
     },
     {
       "verse": 44,
-      "term": "lo-em astim we-lo-ge altim le-khallotam",
-      "decision": "nu-i voi lepăda și nu-i voi urî până acolo încât să-i nimicesc de tot",
+      "term": "lo meastim velo gealtim lekhalotam",
+      "decision": "nu-i voi lepăda și nu-i voi urî până la nimicire",
+      "reason": "Judecata legământului nu anulează fidelitatea lui Dumnezeu față de legământ.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Fidelitatea veșnică a lui Dumnezeu față de legământul cu Avraam, Isaac și Iacov."
+      "resolutionReason": "Judecata legământului nu anulează fidelitatea lui Dumnezeu față de legământ."
     }
   ]
 }

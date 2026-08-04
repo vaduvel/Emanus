@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 18,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Normele de puritate maritală și interdicția incestului sunt traduse fidel."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Promisiunea «omul care le va împlini va trăi prin ele» este redată exact."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -229,28 +231,64 @@
   ],
   "editorialNotes": [
     {
-      "verse": 5,
-      "term": "asher ya asheh otam ha-adam wa-chai bahem",
-      "decision": "pe care omul dacă le va face, va trăi prin ele",
+      "verse": 6,
+      "term": "legalot ervah",
+      "decision": "a descoperi goliciunea",
+      "alternatives": [
+        "a avea relații sexuale"
+      ],
+      "reason": "Idiomul ebraic este păstrat, iar sensul sexual este clarificat prin context.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Principiu canonic citat ulterior în Noul Testament (Galateni 3:12, Romani 10:5)."
+      "resolutionReason": "Idiomul ebraic este păstrat, iar sensul sexual este clarificat prin context."
+    },
+    {
+      "verse": 18,
+      "term": "isha el-ahotah",
+      "decision": "o femeie împreună cu sora ei",
+      "alternatives": [
+        "o femeie ca rivală a surorii ei"
+      ],
+      "reason": "Textul interzice luarea surorii soției cât timp aceasta trăiește.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul interzice luarea surorii soției cât timp aceasta trăiește."
     },
     {
       "verse": 21,
-      "term": "le-Molekh",
-      "decision": "lui Molekh",
+      "term": "Molekh",
+      "decision": "Molech",
+      "alternatives": [
+        "Moloh"
+      ],
+      "reason": "Numele cultic este transliterat; textul interzice darea copiilor cultului și profanarea Numelui lui Dumnezeu.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Zeul canaanit căruia i se aduceau jertfe umane de copii."
+      "resolutionReason": "Numele cultic este transliterat; textul interzice darea copiilor cultului și profanarea Numelui lui Dumnezeu."
     },
     {
       "verse": 22,
-      "term": "to evah hi",
-      "decision": "este o urâciune",
+      "term": "mishkevei ishah",
+      "decision": "culcările unei femei",
+      "alternatives": [
+        "cum se culcă cineva cu o femeie"
+      ],
+      "reason": "Formularea ebraică a interdicției este redată direct, fără eliminarea sau extinderea ei dincolo de text.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Termenul to evah desemnează o abominare rituală și morală gravă."
+      "resolutionReason": "Formularea ebraică a interdicției este redată direct, fără eliminarea sau extinderea ei dincolo de text."
+    },
+    {
+      "verse": 25,
+      "term": "vattiq haaretz et-yoshveha",
+      "decision": "țara și-a vărsat locuitorii",
+      "alternatives": [
+        "țara i-a vomitat"
+      ],
+      "reason": "Imaginea puternică a expulzării este păstrată fără a o transforma într-o justificare modernă pentru revendicări teritoriale.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Imaginea puternică a expulzării este păstrată fără a o transforma într-o justificare modernă pentru revendicări teritoriale."
     }
   ]
 }

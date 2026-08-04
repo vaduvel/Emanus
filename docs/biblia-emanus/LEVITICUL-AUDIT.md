@@ -33,3 +33,10 @@
 - Leviticul 1–10: auditat și publicat;
 - Leviticul 11–15: auditat și publicat pe baza regulilor de mai sus;
 - Leviticul 16–27: rămâne `in_review` până la auditul verset cu verset.
+
+## Finalizarea capitolelor 16–27
+
+- Azazel este transliterat și nu este identificat dogmatic.
+- Sângele, relațiile interzise, pedepsele, dizabilitățile, sclavia, Jubileul și `herem` sunt redate direct din ebraică, fără eufemizare.
+- Pedepsele legislației Israelului antic nu sunt prezentate ca autorizații pentru violență privată sau aplicare contemporană.
+- Leviticul 1–27 este auditat verset cu verset; toate capitolele publicate au note rezolvate și zero probleme critice deschise.

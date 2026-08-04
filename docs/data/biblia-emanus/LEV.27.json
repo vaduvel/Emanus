@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 27,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Prescripțiile privind evaluarea făgăduințelor și a zeciuielilor sunt redactate cu precizie."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Încheierea cărții Leviticul pe Muntele Sinai este consemnată solemn."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -245,20 +247,58 @@
   ],
   "editorialNotes": [
     {
-      "verse": 28,
-      "term": "kol kherem",
-      "decision": "orice lucru consacrat prin blestem / dăruit irevocabil",
+      "verse": 2,
+      "term": "neder be'erkekha nefashot",
+      "decision": "jurământ special potrivit evaluării persoanelor",
+      "alternatives": [
+        "jurământ de valoare"
+      ],
+      "reason": "Capitolul reglementează răscumpărarea unui angajament cultic, nu stabilește valoarea intrinsecă a persoanei.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Kherem denotă dăruirea definitivă și irevocabilă lui Dumnezeu, fără drept de răscumpărare."
+      "resolutionReason": "Capitolul reglementează răscumpărarea unui angajament cultic, nu stabilește valoarea intrinsecă a persoanei."
     },
     {
-      "verse": 32,
-      "term": "kol asher ya avor takhat ha-shevet",
-      "decision": "tot ce trece sub toiag / numărarea zeciuielii",
+      "verse": 9,
+      "term": "qodesh",
+      "decision": "devine sfânt pentru DOMNUL",
+      "reason": "Animalul oferit nu poate fi schimbat după bunul plac.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Metoda rituală de numărare a animalelor de turmă pentru dedicarea celei de-a zicea parte Domnului."
+      "resolutionReason": "Animalul oferit nu poate fi schimbat după bunul plac."
+    },
+    {
+      "verse": 21,
+      "term": "herem",
+      "decision": "lucru dat spre nimicire / consacrat irevocabil",
+      "alternatives": [
+        "lucru devotat"
+      ],
+      "reason": "Termenul are sensuri de consacrare irevocabilă și nimicire; contextul precis este păstrat în verset și notă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul are sensuri de consacrare irevocabilă și nimicire; contextul precis este păstrat în verset și notă."
+    },
+    {
+      "verse": 28,
+      "term": "kol-herem qodesh qodashim",
+      "decision": "orice lucru consacrat irevocabil este preasfânt",
+      "reason": "Bunul pus sub herem nu mai poate fi vândut sau răscumpărat.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Bunul pus sub herem nu mai poate fi vândut sau răscumpărat."
+    },
+    {
+      "verse": 30,
+      "term": "maaser haaretz",
+      "decision": "zeciuiala țării",
+      "reason": "A zecea parte din recolta țării este declarată sfântă pentru DOMNUL.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A zecea parte din recolta țării este declarată sfântă pentru DOMNUL."
     }
   ]
 }

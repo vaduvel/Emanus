@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 25,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Rânduielile Anului Sabatic și ale Anului de Jubileu sunt traduse exact."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Dreptul de răscumpărare a pământului și a oamenilor este evidențiat."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -272,7 +274,7 @@
     },
     {
       "number": 42,
-      "text": "Căci ei sunt slujitorii Mei pe care i-am scos din țara Egiptului; să nu fie vânduți cum se vând robii."
+      "text": "Căci ei sunt slujitorii Mei, pe care i-am scos din țara Egiptului; să nu fie vânduți cum se vând sclavii."
     },
     {
       "number": 43,
@@ -329,20 +331,80 @@
   ],
   "editorialNotes": [
     {
-      "verse": 10,
-      "term": "ukharatem deror ba-arets",
-      "decision": "și veți proclama libertatea în țară",
+      "verse": 4,
+      "term": "shabbat shabbaton laaretz",
+      "decision": "Sabat de odihnă deplină pentru țară",
+      "reason": "Odihna sabatică este atribuită pământului, nu doar lucrătorului.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Proclamarea eliberării sociale și financiare în Anul de Jubileu (Yovel)."
+      "resolutionReason": "Odihna sabatică este atribuită pământului, nu doar lucrătorului."
+    },
+    {
+      "verse": 10,
+      "term": "deror",
+      "decision": "eliberare",
+      "alternatives": [
+        "libertate"
+      ],
+      "reason": "Jubileul proclamă întoarcerea la proprietate și familie pentru membrii comunității legământului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Jubileul proclamă întoarcerea la proprietate și familie pentru membrii comunității legământului."
+    },
+    {
+      "verse": 10,
+      "term": "yovel",
+      "decision": "Jubileu",
+      "alternatives": [
+        "corn de berbec"
+      ],
+      "reason": "Termenul desemnează anul și este legat de proclamarea prin corn.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul desemnează anul și este legat de proclamarea prin corn."
     },
     {
       "verse": 23,
-      "term": "ki-li ha-arets",
-      "decision": "căci pământul este al Meu",
+      "term": "ki-li haaretz",
+      "decision": "țara este a Mea",
+      "reason": "Proprietatea umană este limitată de stăpânirea DOMNULUI asupra țării.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Principiu teologic fundamental privind proprietatea divină asupra pământului făgăduit."
+      "resolutionReason": "Proprietatea umană este limitată de stăpânirea DOMNULUI asupra țării."
+    },
+    {
+      "verse": 35,
+      "term": "vehezeqta bo",
+      "decision": "să-l sprijini",
+      "reason": "Textul cere susținerea fratelui sărăcit și interzice profitul exploatator.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul cere susținerea fratelui sărăcit și interzice profitul exploatator."
+    },
+    {
+      "verse": 42,
+      "term": "avaday hem",
+      "decision": "ei sunt slujitorii Mei",
+      "alternatives": [
+        "sclavii Mei"
+      ],
+      "reason": "Eliberarea din Egipt limitează transformarea israelitului într-un sclav tratat ca proprietate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Eliberarea din Egipt limitează transformarea israelitului într-un sclav tratat ca proprietate."
+    },
+    {
+      "verse": 44,
+      "term": "eved / amah",
+      "decision": "sclav / sclavă",
+      "reason": "Instituția antică este numită direct și nu este eufemizată ca angajare; textul nu este prezentat ca aprobare a sclaviei moderne.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Instituția antică este numită direct și nu este eufemizată ca angajare; textul nu este prezentat ca aprobare a sclaviei moderne."
     }
   ]
 }

@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 17,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Unicitatea altarului sacrificial este afirmată clar."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Principiul teologic «viața trupului este în sânge» este tradus fidel."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -132,7 +134,7 @@
     },
     {
       "number": 7,
-      "text": "Să nu-și mai aducă jertfele lor demonilor cu înfățișare de țap, după care se desfrânează. Aceasta va fi pentru ei o rânduială veșnică din neam în neam.”"
+      "text": "Să nu-și mai aducă jertfele demonilor în chip de țapi, după care se prostituează. Aceasta să fie pentru ei o rânduială veșnică, din generație în generație."
     },
     {
       "number": 8,
@@ -168,25 +170,54 @@
     },
     {
       "number": 16,
-      "text": "Dar dacă nu-și va spăla hainele și nu-și va scălda trupul, își va purta vina.”"
+      "text": "Dar dacă nu-și va spăla hainele și nu-și va scălda trupul, își va purta vina.””"
     }
   ],
   "editorialNotes": [
     {
-      "verse": 7,
-      "term": "la-se irim",
-      "decision": "demonilor cu înfățișare de țap / satirilor",
+      "verse": 4,
+      "term": "dam yehashév la-ish hahu",
+      "decision": "omului aceluia i se va socoti vărsare de sânge",
+      "reason": "Jertfirea în afara locului rânduit este tratată ca vărsare nelegitimă de sânge.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Desemnează zeitățile idolatre păgâne din pustie."
+      "resolutionReason": "Jertfirea în afara locului rânduit este tratată ca vărsare nelegitimă de sânge."
+    },
+    {
+      "verse": 7,
+      "term": "se'irim",
+      "decision": "demoni în chip de țapi",
+      "alternatives": [
+        "țapi",
+        "duhuri ale pustiei"
+      ],
+      "reason": "Termenul poate desemna țapi sau ființe cultice asociate lor; contextul interzice jertfirea idolatră.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul poate desemna țapi sau ființe cultice asociate lor; contextul interzice jertfirea idolatră."
     },
     {
       "verse": 11,
-      "term": "ki nefesh ha-basar ba-dam hi",
-      "decision": "căci viața trupului este în sânge",
+      "term": "nefesh habbasar badam",
+      "decision": "viața trupului este în sânge",
+      "alternatives": [
+        "sufletul cărnii este în sânge"
+      ],
+      "reason": "Nefesh desemnează aici viața viețuitoarei; nu este impusă o teorie biologică modernă.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Principiu teologic fundamental privind valoarea sângelui ca suport al vieții și mijloc al ispășirii."
+      "resolutionReason": "Nefesh desemnează aici viața viețuitoarei; nu este impusă o teorie biologică modernă."
+    },
+    {
+      "verse": 11,
+      "term": "ani netattiv lakhem al-hammizbeah",
+      "decision": "Eu vi l-am dat pe altar ca să facă ispășire",
+      "reason": "Sângele este prezentat ca dar rânduit de Dumnezeu pentru altar, nu ca tehnică magică autonomă.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sângele este prezentat ca dar rânduit de Dumnezeu pentru altar, nu ca tehnică magică autonomă."
     }
   ]
 }

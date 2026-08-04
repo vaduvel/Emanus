@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 20,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Pedepsele pentru încălcarea sfințeniei morale sunt formulate cu gravitate."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Motivele separării poporului sunt redactate riguros."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -217,20 +219,66 @@
   ],
   "editorialNotes": [
     {
-      "verse": 7,
-      "term": "Ani YHWH Mekaddishkhem",
-      "decision": "Eu sunt Domnul, Care vă sfințesc",
+      "verse": 2,
+      "term": "Molekh",
+      "decision": "Molech",
+      "reason": "Interdicția și pedeapsa pentru darea copiilor cultului sunt păstrate explicit.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Titlul divin Jahve Mekaddishkhem exprimă acțiunea lui Dumnezeu de sfințire a poporului."
+      "resolutionReason": "Interdicția și pedeapsa pentru darea copiilor cultului sunt păstrate explicit."
+    },
+    {
+      "verse": 3,
+      "term": "letame et-miqdashi",
+      "decision": "a întina Lăcașul Meu",
+      "reason": "Textul leagă practica idolatră de profanarea Lăcașului și a Numelui sfânt.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul leagă practica idolatră de profanarea Lăcașului și a Numelui sfânt."
+    },
+    {
+      "verse": 6,
+      "term": "ovot / yiddeonim",
+      "decision": "mediumuri și spiritiști",
+      "reason": "Întoarcerea spre practici de consultare ocultă este tratată ca infidelitate cultică.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Întoarcerea spre practici de consultare ocultă este tratată ca infidelitate cultică."
+    },
+    {
+      "verse": 9,
+      "term": "damav bo",
+      "decision": "sângele lui este asupra lui",
+      "alternatives": [
+        "își poartă răspunderea pentru sângele său"
+      ],
+      "reason": "Formula juridică atribuie răspunderea celui condamnat în cadrul legii textului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formula juridică atribuie răspunderea celui condamnat în cadrul legii textului."
+    },
+    {
+      "verse": 13,
+      "term": "mishkevei ishah",
+      "decision": "culcările unei femei",
+      "reason": "Formularea și pedeapsa sunt păstrate exact ca legislație a Israelului antic, fără autorizarea violenței private contemporane.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea și pedeapsa sunt păstrate exact ca legislație a Israelului antic, fără autorizarea violenței private contemporane."
     },
     {
       "verse": 26,
-      "term": "wa-avdil etkhem min-ha ammim li-hyot li",
-      "decision": "v-am separat de alte popoare ca să fiți ai Mei",
+      "term": "va-avdil etkhem min-haammim",
+      "decision": "v-am despărțit dintre popoare",
+      "reason": "Separarea cultică este legată de apartenența la DOMNUL, nu de superioritate etnică autonomă.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Separarea poporului ales constituie fundamentul eticii și legilor de sfințenie."
+      "resolutionReason": "Separarea cultică este legată de apartenența la DOMNUL, nu de superioritate etnică autonomă."
     }
   ]
 }

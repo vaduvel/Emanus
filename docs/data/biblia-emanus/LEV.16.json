@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 16,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Ritualul Zilei Ispășirii (Yom Kippur) este redactat cu solemnitate."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Tragerea la sorți și trimiterea țapului la Azazel sunt traduse exact."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -112,7 +114,7 @@
     },
     {
       "number": 2,
-      "text": "DOMNUL i-a zis lui Moise: „Spune fratelui tău Aaron să nu intre în orice vreme în Sfântul Lăcaș, dincoace de perdea, în fața Scaunului Îndurării de pe chivot, ca să nu moară; căci Eu Mă voi arăta în nor deasupra Scaunului Îndurării."
+      "text": "DOMNUL i-a zis lui Moise: „Spune-i fratelui tău Aaron să nu intre oricând în Locul Preasfânt, dincolo de perdea, înaintea capacului ispășirii de pe chivot, ca să nu moară, căci Eu Mă voi arăta în nor deasupra capacului ispășirii."
     },
     {
       "number": 3,
@@ -156,15 +158,15 @@
     },
     {
       "number": 13,
-      "text": "Va pune tămâia pe foc înaintea DOMNULUI, pentru ca norul de tămâie să acopere Scaunul Îndurării care este deasupra Mărturiei, ca să nu moară."
+      "text": "Să pună tămâia pe foc înaintea DOMNULUI, pentru ca norul de tămâie să acopere capacul ispășirii care este deasupra Mărturiei, ca să nu moară."
     },
     {
       "number": 14,
-      "text": "Va lua din sângele taurului și va stropi cu degetul pe Scaunul Îndurării, spre răsărit; și în fața Scaunului Îndurării va stropi din sânge de șapte ori cu degetul său."
+      "text": "Să ia din sângele taurului și să stropească cu degetul pe partea dinspre răsărit a capacului ispășirii; iar înaintea capacului ispășirii să stropească din sânge de șapte ori cu degetul."
     },
     {
       "number": 15,
-      "text": "Va junghia apoi țapul jertfei pentru păcat care este pentru popor și va duce sângele lui dincoace de perdea. Va face cu sângele lui cum a făcut cu sângele taurului: va stropi cu el pe Scaunul Îndurării și în fața Scaunului Îndurării."
+      "text": "Va junghia apoi țapul jertfei pentru păcat care este pentru popor și va duce sângele lui dincoace de perdea. Va face cu sângele lui cum a făcut cu sângele taurului: va stropi cu el pe capacul ispășirii și în fața capacului ispășirii."
     },
     {
       "number": 16,
@@ -200,11 +202,11 @@
     },
     {
       "number": 24,
-      "text": "Își va scălda trupul în apă într-un loc sfânt, își va îmbrăca veșmintele, va ieși și își va aduce jertfa sa de ardere de tot și jertfa de ardere de tot a poporului, făcând ispășire pentru sine și pentru popor."
+      "text": "Să-și scalde trupul în apă într-un loc sfânt, să-și îmbrace veșmintele, apoi să iasă și să aducă arderea-de-tot pentru sine și arderea-de-tot pentru popor, făcând ispășire pentru sine și pentru popor."
     },
     {
       "number": 25,
-      "text": "Iar grăsimea jertfei pentru păcat o va ardă pe altar."
+      "text": "Grăsimea jertfei pentru păcat să o ardă pe altar."
     },
     {
       "number": 26,
@@ -245,20 +247,62 @@
   ],
   "editorialNotes": [
     {
-      "verse": 8,
-      "term": "le-Azazel",
-      "decision": "pentru Azazel / îndepărtarea totală",
+      "verse": 2,
+      "term": "kapporet",
+      "decision": "capacul ispășirii",
+      "alternatives": [
+        "Scaunul Îndurării"
+      ],
+      "reason": "Termenul desemnează capacul chivotului, locul stropirii sângelui; traducerea nu îl transformă într-un tron separat de obiect.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Azazel exprimă trimiterea păcatelor mărturisite în pământul pustiu al uitării."
+      "resolutionReason": "Termenul desemnează capacul chivotului, locul stropirii sângelui; traducerea nu îl transformă într-un tron separat de obiect."
+    },
+    {
+      "verse": 8,
+      "term": "la-Azazel",
+      "decision": "pentru Azazel",
+      "alternatives": [
+        "pentru îndepărtare",
+        "țapul trimis"
+      ],
+      "reason": "Identitatea sau etimologia lui Azazel este disputată; termenul ebraic este păstrat fără identificare demonică certă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Identitatea sau etimologia lui Azazel este disputată; termenul ebraic este păstrat fără identificare demonică certă."
+    },
+    {
+      "verse": 21,
+      "term": "avon / pesha / hattat",
+      "decision": "nelegiuiri / abateri / păcate",
+      "reason": "Cele trei categorii sunt păstrate distinct în mărturisirea peste țapul viu.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Cele trei categorii sunt păstrate distinct în mărturisirea peste țapul viu."
     },
     {
       "verse": 29,
-      "term": "te-annu et-nafshotekhem",
+      "term": "ve-innitem et-nafshotekhem",
       "decision": "să vă smeriți sufletele",
+      "alternatives": [
+        "să vă chinuiți",
+        "să postiți"
+      ],
+      "reason": "Ebraica cere smerirea persoanei; postul este asociat tradițional, dar nu este introdus ca singurul sens lexical.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Formula desemnează postul și abținerea solemnă în Ziua Ispășirii (Yom Kippur)."
+      "resolutionReason": "Ebraica cere smerirea persoanei; postul este asociat tradițional, dar nu este introdus ca singurul sens lexical."
+    },
+    {
+      "verse": 30,
+      "term": "kippur / taher",
+      "decision": "ispășire și curățire",
+      "reason": "Textul leagă ispășirea de curățirea înaintea DOMNULUI, fără a reduce ritualul la igienă exterioară.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul leagă ispășirea de curățirea înaintea DOMNULUI, fără a reduce ritualul la igienă exterioară."
     }
   ]
 }

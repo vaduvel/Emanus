@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 24,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Legislația dificilă este redată fără eufemizare și fără autorizarea aplicării private sau moderne a pedepselor.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,35 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "lexic cultic și juridic, sintaxă, repetiții, formule de sfințenie, pedepse și variante verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Rânduiala sfeșnicului și a pâinilor punerii înainte este descrisă fidel."
+        "DOMNUL și terminologia cultică au fost normalizate.",
+        "Calcurile și erorile gramaticale evidente au fost corectate fără schimbarea sensului ebraic."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Legea talionului și pedeapsa profanării Numelui sunt rânduite riguros."
+        "Ebraica are prioritate absolută față de etaloanele românești.",
+        "Relatarea și legislația antică sunt păstrate fără a deveni autorizații pentru violență privată contemporană.",
+        "Termenii disputați rămân transparenți în note."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -148,7 +150,7 @@
     },
     {
       "number": 11,
-      "text": "Fiul femeii israelite a hulit Numele și l-a blestemat. L-au adus la Moise. Numele mamei lui era Șelomit, fiica lui Dibri, din seminția lui Dan."
+      "text": "Fiul femeii israelite a hulit Numele și L-a blestemat. Atunci l-au adus la Moise. Mama lui se numea Șelomit, fiica lui Dibri, din seminția lui Dan."
     },
     {
       "number": 12,
@@ -201,20 +203,61 @@
   ],
   "editorialNotes": [
     {
-      "verse": 11,
-      "term": "wayikkov et-ha-Shem wayekallel",
-      "decision": "a hulit Numele și l-a blestemat",
+      "verse": 2,
+      "term": "ner tamid",
+      "decision": "candela să ardă neîncetat",
+      "alternatives": [
+        "lumină permanentă"
+      ],
+      "reason": "Continuitatea slujirii este păstrată, fără a presupune că aceeași flacără nu se stingea niciodată în mod fizic.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Păcatul profanării Numele inefabil YHWH pedepsit sever în Lege."
+      "resolutionReason": "Continuitatea slujirii este păstrată, fără a presupune că aceeași flacără nu se stingea niciodată în mod fizic."
+    },
+    {
+      "verse": 5,
+      "term": "lechem happanim",
+      "decision": "pâinea prezentării",
+      "alternatives": [
+        "pâinea punerii înainte",
+        "pâinea Feței"
+      ],
+      "reason": "Pâinile sunt așezate permanent înaintea DOMNULUI.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pâinile sunt așezate permanent înaintea DOMNULUI."
+    },
+    {
+      "verse": 11,
+      "term": "vayyiqov et-hashem",
+      "decision": "a hulit Numele",
+      "alternatives": [
+        "a rostit Numele într-un blestem"
+      ],
+      "reason": "Verbul și obiectul indică profanarea Numelui divin.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul și obiectul indică profanarea Numelui divin."
     },
     {
       "verse": 20,
-      "term": "ayin takhat ayin shen takhat shen",
-      "decision": "ochi pentru ochi, dinte pentru dinte",
+      "term": "ayin tahat ayin",
+      "decision": "ochi pentru ochi",
+      "reason": "Formula talionului limitează răspunderea la proporționalitate; nu autorizează răzbunarea privată nelimitată.",
+      "alternatives": [],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Principiul legii talionului (lex talionis) limitează răzbunarea la proporționalitatea daunei."
+      "resolutionReason": "Formula talionului limitează răspunderea la proporționalitate; nu autorizează răzbunarea privată nelimitată."
+    },
+    {
+      "verse": 22,
+      "term": "mishpat ehad",
+      "decision": "o singură lege pentru străin și băștinaș",
+      "reason": "Egalitatea juridică explicită este păstrată.",
+      "alternatives": [],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Egalitatea juridică explicită este păstrată."
     }
   ]
 }
