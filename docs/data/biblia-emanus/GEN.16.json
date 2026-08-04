@@ -6,8 +6,8 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN16.htm", "license": "Public Domain" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN16.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
+    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN16.htm", "license": "Public Domain", "lockId": "WEBU-GEN" },
+    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN16.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": "WLC-GEN" }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,9 +20,9 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.16.VDC" },
+      { "id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ron1924/GEN16.htm" },
       { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.16.NTR" },
-      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.16.BTF2015" }
+      { "id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ronbtf/GEN16.htm" }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
@@ -38,19 +38,39 @@
     "completedOn": "2026-08-04",
     "verseCoverage": { "expected": 16, "reviewed": 16, "continuous": true },
     "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "lexic, statut familial, verbe de asuprire, nume și jocuri de cuvinte" },
-    "romanianLanguage": { "result": "approved", "changesApplied": [
-      "Geneza 16:6 păstrează evaluarea concretă că Sarai s-a purtat aspru cu Agar.",
-      "Geneza 16:9 folosește supune-te sub mâna ei, cu limita narativă explicată în notă.",
-      "Geneza 16:13 redă întrebarea dificilă prin Cel care mă vede, fără a afirma o singură analiză gramaticală."
-    ] },
-    "theologicalContext": { "result": "approved", "principles": [
-      "Statutul acordat lui Agar și suferința ei sunt descrise fără aprobarea constrângerii sau a abuzului.",
-      "Identitatea Îngerului DOMNULUI nu este rezolvată printr-o afirmație doctrinară introdusă în traducere.",
-      "Porunca adresată lui Agar este păstrată ca element narativ și nu este formulată ca regulă generală pentru victimele abuzului."
-    ] },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 16:6 păstrează evaluarea concretă că Sarai s-a purtat aspru cu Agar.",
+        "Geneza 16:9 folosește supune-te sub mâna ei, cu limita narativă explicată în notă.",
+        "Geneza 16:13 redă întrebarea dificilă prin Cel care mă vede, fără a afirma o singură analiză gramaticală."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Statutul acordat lui Agar și suferința ei sunt descrise fără aprobarea constrângerii sau a abuzului.",
+        "Identitatea Îngerului DOMNULUI nu este rezolvată printr-o afirmație doctrinară introdusă în traducere.",
+        "Porunca adresată lui Agar este păstrată ca element narativ și nu este formulată ca regulă generală pentru victimele abuzului."
+      ]
+    },
     "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
     "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 }
+    "criticalIssues": { "result": "approved", "open": 0 },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:f4ba9d08ad341e8d86d5859f75537acd38d1f25fe4a96acc08b2a1813ac26c39"
   },
   "verses": [
     { "number": 1, "text": "Sarai, soția lui Avram, nu îi născuse copii. Ea avea o slujitoare egipteancă, al cărei nume era Agar." },

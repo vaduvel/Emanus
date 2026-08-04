@@ -5,17 +5,20 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 ## Stare
 
 - traducere în lucru;
-- **Geneza 1–50 este completă ca primă ciornă editorială**;
-- cartea are 50 de capitole și 1.533 de versete;
+- **Geneza 1–50 și Iosua 1–24 au trecut poarta automată 2.0**;
+- sunt publicate 74 de capitole și 2.191 de versete;
 - explicațiile Emanus sunt păstrate separat de textul biblic;
 - textul existent RCCV nu este modificat de această ramură;
-- un capitol poate deveni public automat numai după trecerea integrală a porții de audit descrise în `AUTOMATED-PUBLICATION.md`.
+- aprobarea umană nu este obligatorie;
+- un capitol devine public numai după auditul AI complet, fixarea surselor și trecerea porții descrise în `AUTOMATED-PUBLICATION.md`.
 
 ## Surse de lucru
 
 1. **Bază engleză:** World English Bible Updated / Protestant Edition (`WEBU` / `engwebp`), domeniu public. Textul rezultat nu va fi numit World English Bible.
 2. **Vechiul Testament:** Westminster Leningrad Codex prin Open Scriptures Hebrew Bible. Textul WLC este declarat domeniu public; datele de analiză OSHB cer atribuire.
 3. **Noul Testament:** SBL Greek New Testament, licență Creative Commons Attribution 4.0.
+4. **Etaloane românești fixate:** Cornilescu 1924 și BTF, ambele distribuite de eBible ca domeniu public.
+5. **Etalon extern:** NTR, consultat `comparison-only`, fără stocarea textului integral.
 
 ## Principii
 
@@ -39,7 +42,9 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 6. se compară sensul cu minimum trei traduceri românești, fără copierea sau stocarea integrală a textelor protejate;
 7. se verifică omisiunile, adaosurile și distanța de copyright;
 8. se rezolvă toate notele și variantele textuale critice;
-9. când toate controalele sunt `approved`, capitolul poate trece direct la `published` și `public: true`, fără o aprobare umană separată.
+9. se recalculează comparațiile deterministe din snapshoturile fixate;
+10. auditul AI este legat prin SHA-256 de textul și sursele exacte;
+11. când toate controalele sunt `approved`, capitolul trece direct la `published` și `public: true`.
 
 ## Licență
 
@@ -47,6 +52,6 @@ Biblia Emanus este pregătită pentru publicare sub `CC BY 4.0`, cu atribuirea p
 
 ## Progres curent
 
-`docs/data/biblia-emanus/` conține ciorna completă pentru **Geneza 1–50: 50 de capitole și 1.533 de versete**. Fiecare capitol are sursele exacte, numărul canonic de versete și note editoriale pentru termenii sau variantele care cer revizie.
+`docs/data/biblia-emanus/` conține **Geneza 1–50 și Iosua 1–24: 74 de capitole și 2.191 de versete**. Fiecare capitol are sursele exacte, auditul AI, etaloanele și notele editoriale pentru termenii sau variantele dificile.
 
-Geneza nu este încă publicată: următorul val este auditul automat complet al tuturor celor 50 de capitole, triangularea cu traducerile românești și rezolvarea punctelor critice. Numai după trecerea acestor controale textul va fi conectat la modulul „Geneza explicată” din aplicație.
+Geneza și Iosua sunt `published` după trecerea porții automate 2.0. Următorul val editorial este Exod–Deuteronom, aplicat numai după stabilizarea textelor livrate de agenții care lucrează la acele cărți.

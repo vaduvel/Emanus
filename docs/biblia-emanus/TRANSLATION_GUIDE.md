@@ -58,8 +58,8 @@ Comparația cu traducerile românești este o triangulare de sens, nu o sursă d
 ## 8. Statutul fiecărui capitol
 
 - `draft`: ciornă de traducere; nu apare publicului;
-- `in_review`: capitol aflat în auditul automat complet;
-- `approved`: toate controalele au fost aprobate, dar publicarea tehnică nu a fost încă aplicată;
+- `in_review`: capitol aflat în auditul AI și în verificările automate;
+- `approved`: auditul este complet și sigilat, dar publicarea tehnică nu a fost încă aplicată;
 - `published`: capitol public, cu `public: true`.
 
 Un capitol poate deveni `approved` sau `published` numai după ce toate controalele obligatorii sunt `approved`:
@@ -71,10 +71,13 @@ Un capitol poate deveni `approved` sau `published` numai după ce toate controal
 - comparația cu minimum trei traduceri românești;
 - controlul distanței de copyright;
 - confirmarea că nu există probleme critice nerezolvate.
+- verificarea snapshotului și a versificației;
+- comparația deterministă cu etaloanele românești fixate;
+- sigiliul SHA-256 al textului și al surselor exacte.
 
 Orice notă cu `reviewRequired: true` trebuie să aibă `resolutionStatus: resolved` și o motivare documentată. Orice variantă textuală înscrisă în registrul surselor trebuie să aibă o decizie editorială înainte de publicare.
 
-Aprobarea umană separată nu este obligatorie. Când toate porțile automate sunt aprobate, capitolul poate trece direct la:
+Aprobarea umană separată nu este obligatorie. Auditul semantic este executat de AI și trebuie să documenteze acoperirea verset cu verset, deciziile românești și principiile teologice. Când toate porțile sunt aprobate și sigiliul corespunde textului curent, capitolul poate trece direct la:
 
 ```json
 {
@@ -84,6 +87,8 @@ Aprobarea umană separată nu este obligatorie. Când toate porțile automate su
 ```
 
 Regula completă și schema porții sunt definite în `AUTOMATED-PUBLICATION.md` și în manifestul traducerii.
+
+Etaloanele românești nu au autoritate asupra originalului. Un pasaj nu se scurtează și nu se extinde pentru a semăna cu ele. Dacă liniile poetice sunt împărțite în USFM, toate continuările aceluiași verset sunt reunite înainte de comparație.
 
 ## 9. Licența rezultatului
 

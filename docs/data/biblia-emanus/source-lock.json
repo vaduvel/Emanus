@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 2,
+  "engineVersion": "2.0.0",
+  "translation": "BE",
+  "capturedOn": "2026-08-04",
+  "snapshot": {
+    "path": "sources/ot-gen-jos-usfm.zip",
+    "sha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931"
+  },
+  "books": {
+    "GEN": {
+      "name": "Geneza",
+      "order": 1,
+      "testament": "OT",
+      "baseLockId": "WEBU-GEN",
+      "originalLockId": "WLC-GEN",
+      "benchmarkLockIds": [
+        "CORNILESCU1924-GEN",
+        "BTF-GEN"
+      ],
+      "externalBenchmarkIds": [
+        "NTR"
+      ]
+    },
+    "JOS": {
+      "name": "Iosua",
+      "order": 6,
+      "testament": "OT",
+      "baseLockId": "WEBU-JOS",
+      "originalLockId": "WLC-JOS",
+      "benchmarkLockIds": [
+        "CORNILESCU1924-JOS",
+        "BTF-JOS"
+      ],
+      "externalBenchmarkIds": [
+        "NTR"
+      ]
+    }
+  },
+  "upstreamArtifacts": {
+    "engwebp": {
+      "url": "https://ebible.org/Scriptures/engwebp_usfm.zip",
+      "archiveDate": "2026-07-28",
+      "sha256": "9b4330ba6baf9bd5fa8ea63a8ff255c9ab326da8c843f0355c23734e61ee6276",
+      "license": "Public Domain"
+    },
+    "hboWLC": {
+      "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
+      "archiveDate": "2026-06-11",
+      "sha256": "da7b33af7a23e0e9fce8a8adf3cb5bcb035a513f44b83865b390c52dc3dd2ce3",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0"
+    },
+    "ronbtf": {
+      "url": "https://ebible.org/Scriptures/ronbtf_usfm.zip",
+      "archiveDate": "2026-06-11",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "license": "Public Domain"
+    },
+    "ron1924": {
+      "url": "https://ebible.org/Scriptures/ron1924_usfm.zip",
+      "archiveDate": "2026-06-11",
+      "sha256": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
+      "license": "Public Domain",
+      "script": "Cyrillic"
+    }
+  },
+  "files": {
+    "WEBU-GEN": {
+      "bookId": "GEN",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/02-GENengwebp.usfm",
+      "sha256": "b59378e7ced69a860392764578fe1bc2710ffb225cc49c01ce431f3e51d4a94a",
+      "sourceId": "engwebp"
+    },
+    "WEBU-JOS": {
+      "bookId": "JOS",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/07-JOSengwebp.usfm",
+      "sha256": "a81bb63cd03f3b9d05865988226464b46574fc3860fea0210bd83f8f91153bff",
+      "sourceId": "engwebp"
+    },
+    "WLC-GEN": {
+      "bookId": "GEN",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/02-GENhboWLC.usfm",
+      "sha256": "50a8c4f22eccf7a394330cfacc27fc16b263db44c578ca9c55bb80bf73a47c17",
+      "sourceId": "hboWLC"
+    },
+    "WLC-JOS": {
+      "bookId": "JOS",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/07-JOShboWLC.usfm",
+      "sha256": "b832ab8f5563e5f6c4c2bfb5d0f704523061f61563206741c6e6ba22b1fd8e6b",
+      "sourceId": "hboWLC"
+    },
+    "BTF-GEN": {
+      "bookId": "GEN",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/02-GENronbtf.usfm",
+      "sha256": "d308afc9b5facc71da666f17de899ce7d77725e47f6c7ed467497edeece55787",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela"
+    },
+    "BTF-JOS": {
+      "bookId": "JOS",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/07-JOSronbtf.usfm",
+      "sha256": "06f9c1eb5df1315fc7da254b5f332c2f996a8aee0a47a7a55f83efaadc8f1d07",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela"
+    },
+    "CORNILESCU1924-GEN": {
+      "bookId": "GEN",
+      "language": "ro-Cyrl",
+      "role": "benchmark",
+      "archivePath": "cornilescu1924/02-GENron1924.usfm",
+      "sha256": "0cb7f75c1c17e5ab8945238edc569ff1ccc011afa64e11ffd318137c23cf8758",
+      "sourceId": "ron1924",
+      "benchmarkId": "CORNILESCU-1924",
+      "family": "cornilescu"
+    },
+    "CORNILESCU1924-JOS": {
+      "bookId": "JOS",
+      "language": "ro-Cyrl",
+      "role": "benchmark",
+      "archivePath": "cornilescu1924/07-JOSron1924.usfm",
+      "sha256": "1d96b0b03e925d18caf10b5f77041fa8ee86e75d262d33d28a5ad3f33e621eb6",
+      "sourceId": "ron1924",
+      "benchmarkId": "CORNILESCU-1924",
+      "family": "cornilescu"
+    }
+  },
+  "versificationRules": [
+    {
+      "id": "WLC-GEN-31-55",
+      "sourceLockId": "WLC-GEN",
+      "bookId": "GEN",
+      "targetChapter": 31,
+      "targetStartVerse": 55,
+      "targetEndVerse": 55,
+      "sourceChapter": 32,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-GEN-32-SHIFT",
+      "sourceLockId": "WLC-GEN",
+      "bookId": "GEN",
+      "targetChapter": 32,
+      "targetStartVerse": 1,
+      "targetEndVerse": 32,
+      "sourceChapter": 32,
+      "sourceStartVerse": 2
+    }
+  ],
+  "automatedThresholds": {
+    "minimumLengthRatio": 0.35,
+    "maximumLengthRatio": 1.75,
+    "minimumWordsForTokenOverlap": 8,
+    "minimumRomanianTokenOverlap": 0.14,
+    "maximumChapterSequenceSimilarity": 0.94
+  }
+}

@@ -9,13 +9,15 @@
     "english": {
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JOS04.htm",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "lockId": "WEBU-JOS"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JOS04.htm",
       "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-JOS"
     }
   },
   "review": {
@@ -194,10 +196,10 @@
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "VDC-1924",
+        "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/191/JOS.4.VDC"
+        "referenceUrl": "https://ebible.org/ron1924/JOS04.htm"
       },
       {
         "id": "NTR",
@@ -206,10 +208,10 @@
         "referenceUrl": "https://www.bible.com/ro/bible/126/JOS.4.NTR"
       },
       {
-        "id": "BTF2015",
+        "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/903/JOS.4.BTF2015"
+        "referenceUrl": "https://ebible.org/ronbtf/JOS04.htm"
       }
     ],
     "exactTextCopied": false,
@@ -272,6 +274,20 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:f22c390d6e9d6c6e0371f45c230ce99169d2724000d7c0f6943ee1bf7dfc7c89"
   }
 }

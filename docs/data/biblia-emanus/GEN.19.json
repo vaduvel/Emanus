@@ -6,8 +6,8 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN19.htm", "license": "Public Domain" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN19.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
+    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN19.htm", "license": "Public Domain", "lockId": "WEBU-GEN" },
+    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN19.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": "WLC-GEN" }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,9 +20,9 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.19.VDC" },
+      { "id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ron1924/GEN19.htm" },
       { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.19.NTR" },
-      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.19.BTF2015" }
+      { "id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ronbtf/GEN19.htm" }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
@@ -38,19 +38,39 @@
     "completedOn": "2026-08-04",
     "verseCoverage": { "expected": 38, "reviewed": 38, "continuous": true },
     "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "violență sexuală, formule juridice, adresare singular-plural, judecată, nume și semne masoretice" },
-    "romanianLanguage": { "result": "approved", "changesApplied": [
-      "Geneza 19:5 păstrează explicit amenințarea de viol colectiv, fără eufemismul a cunoaște.",
-      "Geneza 19:15 redă ba'avon prin a pieri odată cu pedeapsa cetății, păstrând legătura dintre vină și consecință.",
-      "Geneza 19:31 folosește în țara aceasta, fără a impune ideea că fiicele credeau că întreaga omenire dispăruse."
-    ] },
-    "theologicalContext": { "result": "approved", "principles": [
-      "Oferta lui Lot de a-și da fiicele este redată ca fapt grav al narațiunii și nu este aprobată moral.",
-      "Păcatul Sodomei nu este redus în traducere la o singură categorie; capitolul prezintă răutate gravă, violență, abuz și tentativă de viol colectiv.",
-      "Incestul și intoxicarea din final sunt descrise fără justificare, recomandare sau culpabilizarea victimelor prin adaosuri editoriale."
-    ] },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 19:5 păstrează explicit amenințarea de viol colectiv, fără eufemismul a cunoaște.",
+        "Geneza 19:15 redă ba'avon prin a pieri odată cu pedeapsa cetății, păstrând legătura dintre vină și consecință.",
+        "Geneza 19:31 folosește în țara aceasta, fără a impune ideea că fiicele credeau că întreaga omenire dispăruse."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Oferta lui Lot de a-și da fiicele este redată ca fapt grav al narațiunii și nu este aprobată moral.",
+        "Păcatul Sodomei nu este redus în traducere la o singură categorie; capitolul prezintă răutate gravă, violență, abuz și tentativă de viol colectiv.",
+        "Incestul și intoxicarea din final sunt descrise fără justificare, recomandare sau culpabilizarea victimelor prin adaosuri editoriale."
+      ]
+    },
     "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
     "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 }
+    "criticalIssues": { "result": "approved", "open": 0 },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:94f54688d7165e5b84aa64cfea986ac772872c8389895487e890d2c3049c6399"
   },
   "verses": [
     { "number": 1, "text": "Cei doi îngeri au ajuns la Sodoma seara. Lot stătea la poarta Sodomei. Când i-a văzut, Lot s-a ridicat ca să-i întâmpine și s-a plecat cu fața la pământ." },

@@ -6,8 +6,8 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN17.htm", "license": "Public Domain" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN17.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
+    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN17.htm", "license": "Public Domain", "lockId": "WEBU-GEN" },
+    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN17.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": "WLC-GEN" }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,9 +20,9 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.17.VDC" },
+      { "id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ron1924/GEN17.htm" },
       { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.17.NTR" },
-      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.17.BTF2015" }
+      { "id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ronbtf/GEN17.htm" }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
@@ -38,19 +38,39 @@
     "completedOn": "2026-08-04",
     "verseCoverage": { "expected": 27, "reviewed": 27, "continuous": true },
     "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "titluri divine, formule de legământ, schimbări de nume, circumcizie și jocul Isaac/râs" },
-    "romanianLanguage": { "result": "approved", "changesApplied": [
-      "Geneza 17:14 evită acordul ambiguu și redă formula juridică prin va fi înlăturată dintre ai săi.",
-      "Geneza 17:16 elimină adaosul mama și redă direct faptul că din Sara vor veni națiuni.",
-      "Geneza 17:19 redă aval prin Într-adevăr, fără a transforma răspunsul într-o respingere a lui Ismael."
-    ] },
-    "theologicalContext": { "result": "approved", "principles": [
-      "El Shaddai este redat tradițional prin Dumnezeul Atotputernic, iar incertitudinea etimologică rămâne în notă.",
-      "Legământul cu Isaac și binecuvântarea lui Ismael sunt păstrate simultan, fără a anula vreuna dintre afirmații.",
-      "Formula legământ veșnic este tradusă, fără a adăuga în verset o teorie despre aplicarea ei ulterioară."
-    ] },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 17:14 evită acordul ambiguu și redă formula juridică prin va fi înlăturată dintre ai săi.",
+        "Geneza 17:16 elimină adaosul mama și redă direct faptul că din Sara vor veni națiuni.",
+        "Geneza 17:19 redă aval prin Într-adevăr, fără a transforma răspunsul într-o respingere a lui Ismael."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "El Shaddai este redat tradițional prin Dumnezeul Atotputernic, iar incertitudinea etimologică rămâne în notă.",
+        "Legământul cu Isaac și binecuvântarea lui Ismael sunt păstrate simultan, fără a anula vreuna dintre afirmații.",
+        "Formula legământ veșnic este tradusă, fără a adăuga în verset o teorie despre aplicarea ei ulterioară."
+      ]
+    },
     "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
     "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 }
+    "criticalIssues": { "result": "approved", "open": 0 },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex GPT-5",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:0fff586bccc4afb5d0ada6bd9599079496afe9dc6d553dde75d50b7a2b25496b"
   },
   "verses": [
     { "number": 1, "text": "Când Avram avea nouăzeci și nouă de ani, DOMNUL i S-a arătat și i-a spus: „Eu sunt Dumnezeul Atotputernic. Umblă înaintea Mea și fii integru." },
