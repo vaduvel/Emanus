@@ -36,8 +36,8 @@ BENCHMARK_CHECK_KEYS = {
     "theologicalNeutrality",
     "copyrightSimilarity",
 }
-BOOK_NAMES = {"GEN": "Geneza"}
-BOOK_ORDER = {"GEN": 1}
+BOOK_NAMES = {"GEN": "Geneza", "JOS": "Iosua"}
+BOOK_ORDER = {"GEN": 1, "JOS": 6}
 CHAPTER_ID_PATTERN = re.compile(r"^[A-Z0-9]{3}\.([1-9][0-9]*)$")
 VERSE_ID_PATTERN = re.compile(r"^([A-Z0-9]{3})\.([1-9][0-9]*)\.([1-9][0-9]*)$")
 
@@ -354,9 +354,9 @@ def validate_chapter(
     english = source.get("english")
     hebrew = source.get("hebrew")
     if not isinstance(english, dict) or not isinstance(hebrew, dict):
-        fail(f"{path.name}: Geneza cere sursele engleză și ebraică")
+        fail(f"{path.name}: Vechiul Testament cere sursele engleză și ebraică")
     if "greek" in source:
-        fail(f"{path.name}: un capitol din Geneza nu poate declara sursă greacă")
+        fail(f"{path.name}: un capitol din Vechiul Testament nu poate declara sursă greacă")
     if english.get("version") != "WEBU-Protestant" or english.get("license") != "Public Domain":
         fail(f"{path.name}: sursa engleză este invalidă")
     if english.get("passageUrl") != ledger_record.get("englishUrl"):
