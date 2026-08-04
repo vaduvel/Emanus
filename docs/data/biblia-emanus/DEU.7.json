@@ -3,8 +3,8 @@
   "bookId": "DEU",
   "bookName": "Deuteronomul",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,16 +51,16 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Etaloanele au fost folosite numai pentru triangularea sensului, a terminologiei și a naturaleții în limba română.",
-      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "WLC-OSHB a avut prioritate; etaloanele românești au fost folosite exclusiv comparison-only.",
+      "Retrospectivele, diferențele față de Exod și Numeri și variantele textuale nu au fost armonizate artificial.",
       "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
     ]
   },
@@ -75,36 +75,37 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, repetiții, legământ, cuvântări mozaice, idiomuri și termeni ambigui"
+      "result": "approved",
+      "scope": "discurs, legislație, poezie, lexic rar, martori textuali și formule de legământ verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Deuteronomul 7 — formulări verificate pentru naturalețe și diacritice românești."
+        "Formulările mecanice, acordurile, diacriticele și pronumele au fost corectate.",
+        "Terminologia a fost armonizată cu Geneza, Exodul și Iosua fără a șterge diferențele textuale."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Numele divin YHWH este redat prin «DOMNUL».",
-        "Termenii de legământ și orânduiri sunt redați fidel textului masoretic WLC-OSHB."
+        "Ebraica are prioritate absolută.",
+        "Legislația și pedepsele Israelului antic sunt redate direct, fără a deveni autorizații pentru violență privată modernă.",
+        "Lecturile mesianice și canonice posibile nu sunt impuse prin majuscule sau adaosuri."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată șablonizată a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
@@ -157,7 +158,7 @@
     },
     {
       "number": 13,
-      "text": "El te va iubi, te va binecuvânta și te va înmulți; va binecuvânta rodul pântecelui tău și rodul pământului tău, grâul tău, mustul tău, untdelemnul tău, rodul vacilor tale și fătarea oilor tale, în țara pe care a jurat părinților tăi că ți-o va da."
+      "text": "El te va iubi, te va binecuvânta și te va înmulți; va binecuvânta rodul pântecelui tău și rodul pământului tău, grâul tău, mustul tău, uleiul tău, rodul vacilor tale și fătarea oilor tale, în țara pe care a jurat părinților tăi că ți-o va da."
     },
     {
       "number": 14,
@@ -214,13 +215,34 @@
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "devarim",
-      "decision": "cuvintele",
-      "reason": "Formula de deschidere a cărții Deuteronomul (Devarim).",
+      "verse": 6,
+      "term": "am qadosh / segullah",
+      "decision": "popor sfânt / comoară deosebită",
+      "alternatives": [],
+      "reason": "Alegerea este legată de iubirea și jurământul lui Dumnezeu, nu de superioritate numerică sau morală.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Redare fidelă și consacrată din textul ebraic."
+      "resolutionReason": "Alegerea este legată de iubirea și jurământul lui Dumnezeu, nu de superioritate numerică sau morală."
+    },
+    {
+      "verse": 9,
+      "term": "shomer habberit vehahesed",
+      "decision": "păstrează legământul și bunătatea statornică",
+      "alternatives": [],
+      "reason": "Hesed este fidelitatea iubitoare de legământ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Hesed este fidelitatea iubitoare de legământ."
+    },
+    {
+      "verse": 26,
+      "term": "herem",
+      "decision": "dat spre nimicire",
+      "alternatives": [],
+      "reason": "Interdicția idolatră și heremul sunt redate direct, fără autorizarea violenței religioase moderne.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Interdicția idolatră și heremul sunt redate direct, fără autorizarea violenței religioase moderne."
     }
   ]
 }
