@@ -3,8 +3,8 @@
   "bookId": "GEN",
   "bookName": "Geneza",
   "chapter": 14,
-  "status": "draft",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,10 +19,97 @@
     }
   },
   "review": {
-    "romanianLanguage": "pending",
-    "biblicalHebrew": "pending",
-    "theologicalContext": "pending",
-    "finalApproval": "pending"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.14.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.14.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.14.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru verificarea numelor, a sintaxei și a naturaleții.",
+      "Textul a fost verificat independent în WLC-OSHB și WEBU.",
+      "Nu a fost folosită o traducere românească protejată drept sursă de formulare."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-04",
+    "verseCoverage": {
+      "expected": 24,
+      "reviewed": 24,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "nume regale și geografice, elipse narative, termenii pentru grupurile vechi, Avram ha'Ivri și titlurile lui El Elyon"
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 14:10 — a fost eliminat adaosul «unii dintre oamenii lor»; textul păstrează subiectul eliptic prin «au căzut acolo».",
+        "Geneza 14:14 — hanikhaw este redat prin «oamenii instruiți», fără a-i transforma automat în armată permanentă.",
+        "Geneza 14:15 — atacul nocturn păstrează ideea împărțirii oamenilor lui Avram.",
+        "Geneza 14:19 — qoneh este redat prin «Stăpânul», iar alternativele «Creatorul» și «Dobânditorul» sunt documentate.",
+        "Geneza 14:22 — gestul jurământului este redat prin «Mi-am ridicat mâna către DOMNUL»."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Pâinea și vinul aduse de Melchisedec sunt redate ca acțiune narativă, fără explicație sacramentală introdusă în verset.",
+        "Melchisedec este numit preot al Dumnezeului Preaînalt conform textului, fără identificări ulterioare inserate în Geneza.",
+        "Zeciuiala lui Avram este consemnată fără a fi transformată în acest capitol într-o poruncă universală.",
+        "Refuzul bunurilor Sodomei este păstrat ca jurământ al lui Avram, fără a anula dreptul aliaților săi la partea lor."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; benchmarkurile românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     { "number": 1, "text": "În zilele lui Amrafel, regele Șinearului, ale lui Arioc, regele Elasarului, ale lui Chedorlaomer, regele Elamului, și ale lui Tidal, regele Goiimului," },
@@ -34,7 +121,7 @@
     { "number": 7, "text": "Apoi s-au întors și au venit la En-Mișpat, adică Cades, și au lovit întregul ținut al amaleciților, precum și pe amoriții care locuiau în Hațațon-Tamar." },
     { "number": 8, "text": "Atunci regele Sodomei, regele Gomorei, regele Admei, regele Țeboimului și regele Belei, adică Țoar, au ieșit și s-au așezat în linie de luptă în Valea Sidim" },
     { "number": 9, "text": "împotriva lui Chedorlaomer, regele Elamului, a lui Tidal, regele Goiimului, a lui Amrafel, regele Șinearului, și a lui Arioc, regele Elasarului: patru regi împotriva a cinci." },
-    { "number": 10, "text": "Valea Sidim era plină de puțuri de bitum. Regii Sodomei și Gomorei au fugit; unii dintre oamenii lor au căzut în acele puțuri, iar cei rămași au fugit spre munți." },
+    { "number": 10, "text": "Valea Sidim era plină de puțuri de bitum. Regii Sodomei și Gomorei au fugit și au căzut acolo, iar cei rămași au fugit spre munți." },
     { "number": 11, "text": "Biruitorii au luat toate bunurile Sodomei și Gomorei, precum și toată hrana lor, și au plecat." },
     { "number": 12, "text": "L-au luat și pe Lot, fiul fratelui lui Avram, care locuia în Sodoma, împreună cu bunurile lui, și au plecat." },
     { "number": 13, "text": "Un fugar a venit și i-a dat de veste lui Avram, evreul. Avram locuia atunci lângă stejarii lui Mamre, amoritul, fratele lui Eșcol și al lui Aner. Aceștia erau aliații lui Avram." },
@@ -46,21 +133,117 @@
     { "number": 19, "text": "Melchisedec l-a binecuvântat și a spus: „Binecuvântat să fie Avram de Dumnezeul Preaînalt, Stăpânul cerurilor și al pământului!" },
     { "number": 20, "text": "Și binecuvântat să fie Dumnezeul Preaînalt, care i-a dat pe dușmanii tăi în mâna ta!” Iar Avram i-a dat a zecea parte din toate." },
     { "number": 21, "text": "Regele Sodomei i-a spus lui Avram: „Dă-mi oamenii, iar bunurile păstrează-le pentru tine.”" },
-    { "number": 22, "text": "Avram i-a spus regelui Sodomei: „Mi-am ridicat mâna înaintea DOMNULUI, Dumnezeul Preaînalt, Stăpânul cerurilor și al pământului," },
+    { "number": 22, "text": "Avram i-a spus regelui Sodomei: „Mi-am ridicat mâna către DOMNUL, Dumnezeul Preaînalt, Stăpânul cerurilor și al pământului," },
     { "number": 23, "text": "că nu voi lua nici măcar un fir, nici o curea de sandală și nimic din ce este al tău, ca să nu poți spune: «Eu l-am îmbogățit pe Avram.»" },
     { "number": 24, "text": "Nu voi lua nimic, în afară de ceea ce au mâncat tinerii și de partea bărbaților care au mers cu mine: Aner, Eșcol și Mamre. Ei să-și ia partea.”" }
   ],
   "editorialNotes": [
-    { "verse": 1, "term": "melekh Goiim", "decision": "regele Goiimului", "alternatives": ["regele națiunilor"], "reason": "Goiim poate funcționa aici ca nume geografic sau ca substantiv comun «națiuni».", "reviewRequired": true },
-    { "verse": 3, "term": "emeq haSiddim / Yam haMelah", "decision": "Valea Sidim / Marea Sărată", "alternatives": ["Valea Siddim / Marea Moartă"], "reviewRequired": true },
-    { "verse": 5, "term": "Refaim / Zuzim / Emim", "decision": "refaimi / zuzimi / emimi", "reason": "Numele grupurilor sunt transliterate fără a fi echivalate automat cu «uriași».", "reviewRequired": true },
-    { "verse": 7, "term": "sedeh ha'Amaleqi", "decision": "ținutul amaleciților", "reason": "Denumirea poate fi una geografică folosită retrospectiv; traducerea nu afirmă că Amalec trăia deja atunci.", "reviewRequired": true },
-    { "verse": 10, "term": "be'erot be'erot hemar / wayyippelu shammah", "decision": "puțuri de bitum / unii dintre oamenii lor au căzut acolo", "alternatives": ["gropi de smoală / au căzut acolo"], "reason": "Subiectul verbului «au căzut» este eliptic. Formularea evită afirmația nesigură că ambii regi ar fi căzut în puțuri.", "reviewRequired": true },
-    { "verse": 13, "term": "Avram ha'Ivri", "decision": "Avram, evreul", "alternatives": ["Avram, cel de dincolo", "Avram, ibritul"], "reviewRequired": true },
-    { "verse": 14, "term": "hanikhaw", "decision": "oameni instruiți", "alternatives": ["slujitori încercați", "oameni dedicați"], "reviewRequired": true },
-    { "verse": 15, "term": "vayyehaleq alehem laylah", "decision": "și-a împărțit oamenii împotriva lor, noaptea", "alternatives": ["s-a împărțit împotriva lor în timpul nopții"], "reviewRequired": true },
-    { "verse": 18, "term": "Malki-tsedeq / El Elyon", "decision": "Melchisedec / Dumnezeul Preaînalt", "reason": "Numele Melchisedec este păstrat tradițional; titlul divin este tradus, nu confundat cu un nume propriu separat.", "reviewRequired": true },
-    { "verse": 19, "term": "qoneh shamayim va'arets", "decision": "Stăpânul cerurilor și al pământului", "alternatives": ["Creatorul cerurilor și al pământului", "Dobânditorul cerurilor și al pământului"], "reviewRequired": true },
-    { "verse": 20, "term": "migen tsarekha", "decision": "i-a dat pe dușmanii tăi în mâna ta", "alternatives": ["i-a predat pe dușmanii tăi în mâna ta"], "reviewRequired": true }
+    {
+      "verse": 1,
+      "term": "melekh Goiim",
+      "decision": "regele Goiimului",
+      "alternatives": ["regele națiunilor"],
+      "reason": "Goiim poate funcționa aici ca nume geografic sau ca substantiv comun.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Transliterarea evită alegerea nejustificată între toponim și substantiv comun."
+    },
+    {
+      "verse": 3,
+      "term": "emeq haSiddim / Yam haMelah",
+      "decision": "Valea Sidim / Marea Sărată",
+      "alternatives": ["Valea Siddim / Marea Moartă"],
+      "reason": "Textul folosește numele antic și identificarea explicativă «Marea Sărată».",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sunt păstrate ambele niveluri ale denumirii din text."
+    },
+    {
+      "verse": 5,
+      "term": "Refaim / Zuzim / Emim",
+      "decision": "refaimi / zuzimi / emimi",
+      "reason": "Numele grupurilor sunt transliterate fără identificarea automată cu «uriași».",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Traducerea păstrează etnonimele și evită o interpretare antropologică nesigură."
+    },
+    {
+      "verse": 7,
+      "term": "sedeh ha'Amaleqi",
+      "decision": "ținutul amaleciților",
+      "reason": "Denumirea poate fi o identificare geografică retrospectivă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul nu afirmă că Amalec trăia deja în epoca evenimentului."
+    },
+    {
+      "verse": 10,
+      "term": "be'erot be'erot hemar / wayyippelu shammah",
+      "decision": "puțuri de bitum / au căzut acolo",
+      "alternatives": ["gropi de smoală / au coborât acolo"],
+      "reason": "Subiectul verbului este continuarea regilor, dar «a cădea» nu stabilește că au murit; regele Sodomei reapare în versetul 17.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul despre «unii dintre oamenii lor» a fost eliminat, iar elipsa textului este păstrată."
+    },
+    {
+      "verse": 13,
+      "term": "Avram ha'Ivri",
+      "decision": "Avram, evreul",
+      "alternatives": ["Avram, cel de dincolo", "Avram, ibritul"],
+      "reason": "Ivri este etnonimul tradițional, cu etimologie și referință discutate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este păstrată forma consacrată românească, fără explicație etimologică impusă."
+    },
+    {
+      "verse": 14,
+      "term": "hanikhaw",
+      "decision": "oameni instruiți",
+      "alternatives": ["slujitori încercați", "oameni dedicați"],
+      "reason": "Termenul rar sugerează oameni pregătiți sau încercați ai casei lui Avram.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea indică pregătirea lor fără a adăuga o structură militară absentă."
+    },
+    {
+      "verse": 15,
+      "term": "vayyehaleq alehem laylah",
+      "decision": "și-a împărțit oamenii împotriva lor, noaptea",
+      "alternatives": ["s-a împărțit împotriva lor în timpul nopții"],
+      "reason": "Verbul exprimă împărțirea forței lui Avram pentru atacul nocturn.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea face inteligibil subiectul colectiv fără a schimba strategia descrisă."
+    },
+    {
+      "verse": 18,
+      "term": "Malki-tsedeq / El Elyon",
+      "decision": "Melchisedec / Dumnezeul Preaînalt",
+      "reason": "Numele personal este păstrat tradițional, iar titlul divin este tradus.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul evită atât traducerea forțată a numelui, cât și transformarea titlului într-o divinitate separată."
+    },
+    {
+      "verse": 19,
+      "term": "qoneh shamayim va'arets",
+      "decision": "Stăpânul cerurilor și al pământului",
+      "alternatives": ["Creatorul cerurilor și al pământului", "Dobânditorul cerurilor și al pământului"],
+      "reason": "Qoneh poate exprima posesia, dobândirea sau creația.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Stăpânul» păstrează ideea de posesie suverană fără a exclude nuanța creatoare documentată."
+    },
+    {
+      "verse": 20,
+      "term": "migen tsarekha",
+      "decision": "i-a dat pe dușmanii tăi în mâna ta",
+      "alternatives": ["i-a predat pe dușmanii tăi în mâna ta"],
+      "reason": "Verbul exprimă predarea sau livrarea adversarilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea este naturală și păstrează inițiativa atribuită lui Dumnezeu."
+    }
   ]
 }
