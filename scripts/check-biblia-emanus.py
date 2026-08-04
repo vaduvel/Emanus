@@ -36,8 +36,8 @@ BENCHMARK_CHECK_KEYS = {
     "theologicalNeutrality",
     "copyrightSimilarity",
 }
-BOOK_NAMES = {"GEN": "Geneza"}
-BOOK_ORDER = {"GEN": 1}
+BOOK_NAMES = {"GEN": "Geneza", "DEU": "Deuteronomul"}
+BOOK_ORDER = {"GEN": 1, "DEU": 5}
 CHAPTER_ID_PATTERN = re.compile(r"^[A-Z0-9]{3}\.([1-9][0-9]*)$")
 VERSE_ID_PATTERN = re.compile(r"^([A-Z0-9]{3})\.([1-9][0-9]*)\.([1-9][0-9]*)$")
 
