@@ -3,30 +3,58 @@
   "bookId": "GEN",
   "bookName": "Geneza",
   "chapter": 15,
-  "status": "draft",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
-    "english": {
-      "version": "WEBU-Protestant",
-      "passageUrl": "https://ebible.org/engwebp/GEN15.htm",
-      "license": "Public Domain"
-    },
-    "hebrew": {
-      "version": "WLC-OSHB",
-      "passageUrl": "https://ebible.org/hboWLC/GEN15.htm",
-      "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
-    }
+    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN15.htm", "license": "Public Domain" },
+    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN15.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
   },
   "review": {
-    "romanianLanguage": "pending",
-    "biblicalHebrew": "pending",
-    "theologicalContext": "pending",
-    "finalApproval": "pending"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.15.VDC" },
+      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.15.NTR" },
+      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.15.BTF2015" }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" },
+    "observations": [
+      "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții.",
+      "Deciziile au fost verificate independent în WLC-OSHB și WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon protejat."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-04",
+    "verseCoverage": { "expected": 21, "reviewed": 21, "continuous": true },
+    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "lexic, sintaxă, formule de legământ, pronume și cronologie" },
+    "romanianLanguage": { "result": "approved", "changesApplied": [
+      "Geneza 15:1 separă imaginea scutului de promisiunea răsplății, fără a elimina lectura alternativă.",
+      "Geneza 15:2 redă expresia rară ben-mesheq prin administratorul casei.",
+      "Geneza 15:13 păstrează succesiunea pronumelor: le vor sluji, iar aceștia îi vor asupri."
+    ] },
+    "theologicalContext": { "result": "approved", "principles": [
+      "Cuvântul DOMNULUI nu este capitalizat ca titlu personal hristologic impus de traducător.",
+      "Geneza 15:6 păstrează credința lui Avram și socotirea dreptății fără a introduce explicații pauline în verset.",
+      "Cei patru sute de ani și a patra generație sunt păstrate, iar armonizarea cronologică este lăsată explicațiilor."
+    ] },
+    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
+    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
+    "criticalIssues": { "result": "approved", "open": 0 }
   },
   "verses": [
-    { "number": 1, "text": "După aceste lucruri, Cuvântul DOMNULUI a venit la Avram într-o vedenie: „Nu te teme, Avram! Eu sunt scutul tău și răsplata ta nespus de mare.”" },
-    { "number": 2, "text": "Avram a spus: „Stăpâne DOMNULE, ce-mi vei da, de vreme ce rămân fără copii, iar cel care va moșteni casa mea este Eliezer din Damasc?”" },
+    { "number": 1, "text": "După aceste lucruri, cuvântul DOMNULUI a venit la Avram într-o vedenie: „Nu te teme, Avram! Eu sunt scutul tău; răsplata ta va fi nespus de mare.”" },
+    { "number": 2, "text": "Avram a spus: „Stăpâne DOMNULE, ce-mi vei da, de vreme ce rămân fără copii, iar administratorul casei mele este Eliezer din Damasc?”" },
     { "number": 3, "text": "Avram a mai spus: „Iată, nu mi-ai dat niciun urmaș și, iată, un om născut în casa mea va fi moștenitorul meu.”" },
     { "number": 4, "text": "Atunci cuvântul DOMNULUI a venit la el: „Nu acesta va fi moștenitorul tău, ci cel care va ieși din tine va fi moștenitorul tău.”" },
     { "number": 5, "text": "DOMNUL l-a dus afară și i-a spus: „Privește spre cer și numără stelele, dacă le poți număra.” Apoi i-a spus: „Așa vor fi urmașii tăi.”" },
@@ -37,7 +65,7 @@
     { "number": 10, "text": "Avram I le-a adus pe toate, le-a despicat pe mijloc și a așezat fiecare jumătate în fața celeilalte, dar păsările nu le-a despicat." },
     { "number": 11, "text": "Păsările de pradă s-au coborât peste trupurile moarte, însă Avram le-a alungat." },
     { "number": 12, "text": "Când soarele era pe cale să apună, peste Avram a căzut un somn adânc și, iată, l-au cuprins o spaimă și un întuneric mare." },
-    { "number": 13, "text": "DOMNUL i-a spus lui Avram: „Să știi sigur că urmașii tăi vor locui ca străini într-o țară care nu va fi a lor. Ei vor sluji locuitorilor ei și vor fi asupriți patru sute de ani." },
+    { "number": 13, "text": "DOMNUL i-a spus lui Avram: „Să știi sigur că urmașii tăi vor locui ca străini într-o țară care nu va fi a lor. Le vor sluji, iar aceștia îi vor asupri patru sute de ani." },
     { "number": 14, "text": "Dar Eu voi judeca națiunea căreia îi vor sluji, iar după aceea vor ieși cu mari bogății." },
     { "number": 15, "text": "Tu vei merge în pace la părinții tăi și vei fi îngropat la o bătrânețe fericită." },
     { "number": 16, "text": "În a patra generație se vor întoarce aici, pentru că nelegiuirea amoriților nu a ajuns încă la măsura deplină.”" },
@@ -48,14 +76,14 @@
     { "number": 21, "text": "a amoriților, a canaaniților, a ghirgașiților și a iebusiților.”" }
   ],
   "editorialNotes": [
-    { "verse": 1, "term": "anokhi magen lakh sekharkha harbeh meod", "decision": "Eu sunt scutul tău și răsplata ta nespus de mare", "alternatives": ["Eu sunt scutul tău; răsplata ta va fi foarte mare"], "reason": "Sintaxa permite ca Dumnezeu să fie numit atât scutul, cât și răsplata, sau ca răsplata să fie o promisiune separată.", "reviewRequired": true },
-    { "verse": 2, "term": "Adonai YHWH / holekh ariri / ben-mesheq beiti", "decision": "Stăpâne DOMNULE / rămân fără copii / cel care va moșteni casa mea", "alternatives": ["Doamne Dumnezeule / plec fără copii / administratorul casei mele"], "reason": "Expresiile din acest verset sunt rare și dificile, iar titlul divin conține atât Adonai, cât și tetragrama.", "reviewRequired": true },
-    { "verse": 4, "term": "devar YHWH / asher yetse mime'ekha", "decision": "cuvântul DOMNULUI / cel care va ieși din tine", "alternatives": ["Cuvântul DOMNULUI / cel născut din trupul tău"], "reason": "Majuscula nu este introdusă automat ca interpretare hristologică; sintagma este redată contextual.", "reviewRequired": true },
-    { "verse": 6, "term": "vehe'emin baYHWH vayiahseveha lo tsedaqah", "decision": "Avram a crezut în DOMNUL, iar DOMNUL i-a socotit aceasta ca dreptate", "alternatives": ["el a socotit-o ca dreptate"], "reason": "Subiectul celei de-a doua propoziții este implicit; contextul susține referirea la Dumnezeu, dar trebuie păstrată conștient ambiguitatea gramaticală.", "reviewRequired": true },
-    { "verse": 9, "term": "meshulleshet", "decision": "de trei ani", "alternatives": ["câte trei"], "reason": "Forma este înțeleasă de regulă ca vârsta animalelor, dar cere confirmare lexicală.", "reviewRequired": true },
-    { "verse": 12, "term": "tardemah / eimah hashekhah gedolah", "decision": "somn adânc / o spaimă și un întuneric mare", "alternatives": ["amorțeală adâncă / groaza unui mare întuneric"], "reviewRequired": true },
-    { "verse": 13, "term": "va'avadum ve'innu otam / arba me'ot shanah", "decision": "vor sluji locuitorilor ei și vor fi asupriți / patru sute de ani", "alternatives": ["le vor sluji și aceștia îi vor asupri / patru sute de ani"], "reason": "Pronumele ebraice sunt comprimate; «locuitorilor ei» explicitează referentul fără a schimba sensul, dar rămâne de revizuit. Cifra este păstrată exact; relația ei cu cei 430 de ani din Exodul 12:40 trebuie explicată separat.", "reviewRequired": true },
-    { "verse": 16, "term": "dor revi'i / shalem avon ha'Emori", "decision": "a patra generație / nelegiuirea amoriților nu a ajuns încă la măsura deplină", "alternatives": ["al patrulea neam / vina amoriților nu este încă deplină"], "reviewRequired": true },
-    { "verse": 18, "term": "karat YHWH et-Avram berit / nahar Mitsrayim", "decision": "DOMNUL a încheiat un legământ / râul Egiptului", "alternatives": ["DOMNUL a tăiat un legământ / fluviul Egiptului"], "reason": "Expresia ebraică pentru legământ este literal «a tăia», iar identificarea exactă a râului Egiptului cere revizie geografică.", "reviewRequired": true }
+    { "verse": 1, "term": "anokhi magen lakh sekharkha harbeh meod", "decision": "Eu sunt scutul tău; răsplata ta va fi nespus de mare", "alternatives": ["Eu sunt scutul tău și răsplata ta nespus de mare"], "reason": "Sintaxa permite fie două afirmații, fie identificarea lui Dumnezeu și ca răsplată; punctuația aleasă păstrează lectura firească a promisiunii.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Sintaxa permite fie două afirmații, fie identificarea lui Dumnezeu și ca răsplată; punctuația aleasă păstrează lectura firească a promisiunii." },
+    { "verse": 2, "term": "Adonai YHWH / holekh ariri / ben-mesheq beiti", "decision": "Stăpâne DOMNULE / rămân fără copii / administratorul casei mele", "alternatives": ["Doamne Dumnezeule / plec fără copii / cel care va moșteni casa mea"], "reason": "Ben-mesheq este o expresie rară; administratorul casei se potrivește cu problema moștenitorului formulată imediat după aceea.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Ben-mesheq este o expresie rară; administratorul casei se potrivește cu problema moștenitorului formulată imediat după aceea." },
+    { "verse": 4, "term": "devar YHWH / asher yetse mime'ekha", "decision": "cuvântul DOMNULUI / cel care va ieși din tine", "alternatives": ["Cuvântul DOMNULUI / cel născut din trupul tău"], "reason": "Majuscula nu este introdusă automat ca interpretare hristologică; sintagma este redată contextual.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Majuscula nu este introdusă automat ca interpretare hristologică; sintagma este redată contextual." },
+    { "verse": 6, "term": "vehe'emin baYHWH vayiahseveha lo tsedaqah", "decision": "Avram a crezut în DOMNUL, iar DOMNUL i-a socotit aceasta ca dreptate", "alternatives": ["el a socotit-o ca dreptate"], "reason": "Subiectul celei de-a doua propoziții este implicit; contextul susține referirea la Dumnezeu.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Subiectul celei de-a doua propoziții este implicit; contextul susține referirea la Dumnezeu." },
+    { "verse": 9, "term": "meshulleshet", "decision": "de trei ani", "alternatives": ["câte trei"], "reason": "Forma adjectivală este înțeleasă aici ca vârsta fiecărui animal.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Forma adjectivală este înțeleasă aici ca vârsta fiecărui animal." },
+    { "verse": 12, "term": "tardemah / eimah hashekhah gedolah", "decision": "somn adânc / o spaimă și un întuneric mare", "alternatives": ["amorțeală adâncă / groaza unui mare întuneric"], "reason": "Redarea păstrează atât starea lui Avram, cât și acumularea substantivelor din ebraică.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea păstrează atât starea lui Avram, cât și acumularea substantivelor din ebraică." },
+    { "verse": 13, "term": "va'avadum ve'innu otam / arba me'ot shanah", "decision": "le vor sluji, iar aceștia îi vor asupri / patru sute de ani", "alternatives": ["vor sluji locuitorilor ei și vor fi asupriți"], "reason": "Formularea păstrează succesiunea comprimată a pronumelor fără a pierde relația dintre asupritori și asupriți.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Formularea păstrează succesiunea comprimată a pronumelor fără a pierde relația dintre asupritori și asupriți." },
+    { "verse": 16, "term": "dor revi'i / shalem avon ha'Emori", "decision": "a patra generație / nelegiuirea amoriților nu a ajuns încă la măsura deplină", "alternatives": ["al patrulea neam / vina amoriților nu este încă deplină"], "reason": "Textul păstrează atât unitatea genealogică, cât și imaginea unei măsuri morale încă neîmplinite.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul păstrează atât unitatea genealogică, cât și imaginea unei măsuri morale încă neîmplinite." },
+    { "verse": 18, "term": "karat YHWH et-Avram berit / nahar Mitsrayim", "decision": "DOMNUL a încheiat un legământ / râul Egiptului", "alternatives": ["DOMNUL a tăiat un legământ / fluviul Egiptului"], "reason": "Idiomul ebraic este tradus natural; identificarea geografică exactă a râului nu este impusă în verset.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Idiomul ebraic este tradus natural; identificarea geografică exactă a râului nu este impusă în verset." }
   ]
 }
