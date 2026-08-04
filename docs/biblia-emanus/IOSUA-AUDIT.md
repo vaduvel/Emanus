@@ -17,9 +17,11 @@ Acest document păstrează deciziile transversale folosite la auditarea traducer
 - `kohanim halewiyyim`: „preoții leviți”;
 - `sar-tseva YHWH`: „Căpetenia oștirii DOMNULUI”;
 - `Sefer hayYashar`: „Cartea celui Drept”, cu alternativa „Cartea lui Iașar” documentată;
-- `sakal`: redat prin acțiune înțeleaptă sau chibzuită, nu automat prin prosperitate materială.
+- `sakal`: redat prin acțiune înțeleaptă sau chibzuită, nu automat prin prosperitate materială;
+- `hereditate / naḥalah`: „moștenire”, păstrând rolul teritorial și familial;
+- `seranim`: „conducători” ai filistenilor, nu uniformizat cu „regi”.
 
-## Variante documentate până la Iosua 10
+## Variante documentate până la Iosua 15
 
 - Iosua 2:4 — forma neobișnuită privind ascunderea iscoadelor;
 - Iosua 4:9 — cele douăsprezece pietre din Iordan;
@@ -28,7 +30,12 @@ Acest document păstrează deciziile transversale folosite la auditarea traducer
 - Iosua 8:17 — menționarea Betelului;
 - Iosua 8:30 — poziția episodului altarului de pe Ebal;
 - Iosua 9:4 — „s-au dat drept trimiși” și lectura „și-au pregătit provizii”;
-- Iosua 10:15 — întoarcerea la Ghilgal, absentă în această poziție din unele tradiții grecești.
+- Iosua 10:15 — întoarcerea la Ghilgal, absentă în această poziție din unele tradiții grecești;
+- Iosua 12:23 — Nafat-Dor și Goiim din Ghilgal, cu toponime și lecturi concurente;
+- Iosua 15:32 — totalul declarat de douăzeci și nouă de cetăți și lista transmisă;
+- Iosua 15:47 — formularea consonantică dificilă privind marea și hotarul;
+- Iosua 15:52 — Duma/Ruma;
+- Iosua 15:59 — lista suplimentară de cetăți păstrată în Septuaginta, absentă din MT.
 
 ## Principii teologice și morale
 
@@ -36,4 +43,8 @@ Acest document păstrează deciziile transversale folosite la auditarea traducer
 - providența și intervenția lui Dumnezeu nu elimină responsabilitatea umană;
 - responsabilitatea comunitară nu anulează vina individuală;
 - jurămintele, sclavia impusă, pedepsele și actele de război sunt descrise în contextul narațiunii, nu oferite automat drept modele sociale sau juridice actuale;
-- poezia despre soare și lună din Iosua 10 este tradusă fidel fără introducerea unui mecanism astronomic absent din text.
+- poezia despre soare și lună din Iosua 10 este tradusă fidel fără introducerea unui mecanism astronomic absent din text;
+- întărirea inimii din Iosua 11 este păstrată fără eliminarea responsabilității regilor;
+- rezumatele cuceririi totale sunt citite împreună cu afirmațiile explicite despre teritorii și cetăți rămase;
+- listele de hotare și cetăți sunt păstrate integral, inclusiv neconcordanțele de numărare și variantele de nume;
+- inițiativa Acsei în cererea izvoarelor este păstrată, fără reducerea ei la un rol pasiv.
