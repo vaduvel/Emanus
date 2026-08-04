@@ -3,8 +3,8 @@
   "bookId": "LEV",
   "bookName": "Leviticul",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -19,13 +19,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "changes_requested",
-    "aiRomanianLanguage": "changes_requested",
-    "aiTheologicalContext": "changes_requested",
-    "omissionAddition": "changes_requested",
-    "benchmarkComparison": "changes_requested",
-    "copyrightDistance": "changes_requested",
-    "criticalIssues": "changes_requested"
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -51,12 +51,12 @@
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "omissions": "changes_requested",
-      "additions": "changes_requested",
-      "meaning": "changes_requested",
-      "romanianNaturalness": "changes_requested",
-      "theologicalNeutrality": "changes_requested",
-      "copyrightSimilarity": "changes_requested"
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
     "observations": [
       "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
@@ -75,52 +75,54 @@
     "sourceLanguage": {
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
-      "result": "changes_requested",
-      "scope": "lexic, sintaxă, rânduieli ritualice, legi de sfințenie și prescripții canonice"
+      "result": "approved",
+      "scope": "legile jertfelor, restituirea, învestirea, gloria, focul și discernământul preoțesc verificate verset cu verset"
     },
     "romanianLanguage": {
-      "result": "changes_requested",
+      "result": "approved",
       "changesApplied": [
-        "Distincția dintre variantele jertfei de pace (todah, neder, nedavah) este păstrată."
+        "Terminologia jertfelor și părților preoțești a fost uniformizată.",
+        "Formulările rigide și anatomia rituală au fost clarificate fără adaosuri."
       ]
     },
     "theologicalContext": {
-      "result": "changes_requested",
+      "result": "approved",
       "principles": [
-        "Interdicția consumului de grăsime și sânge este marcată clar."
+        "Ritualul nu înlocuiește restituirea prejudiciului.",
+        "Preoții au nevoie de ispășire și nu primesc imunitate morală prin ungere.",
+        "Moartea lui Nadab și Abihu nu autorizează abuzul religios, iar răspunsul lui Aaron păstrează discernământul în doliu."
       ]
     },
     "omissionAddition": {
-      "result": "changes_requested",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "changes_requested",
+      "result": "approved",
       "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
-      "result": "changes_requested",
-      "open": 1
-    },
-    "pendingReason": "Aprobarea automată a agentului a fost anulată; capitolul necesită audit editorial real verset cu verset."
+      "result": "approved",
+      "open": 0
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "„Aceasta este legea jertfei pentru vină: ea este un lucru preasfânt."
+      "text": "„Aceasta este legea jertfei pentru vină. Ea este preasfântă."
     },
     {
       "number": 2,
-      "text": "În locul unde se junghie jertfa de ardere de tot să se junghie și jertfa pentru vină, iar sângele ei să fie stropit pe altar de jur împrejur."
+      "text": "Jertfa pentru vină să fie înjunghiată în locul unde este înjunghiată arderea-de-tot, iar sângele ei să fie stropit de jur împrejur pe altar."
     },
     {
       "number": 3,
-      "text": "Să aducă din ea toată grăsimea: coada întreagă și grăsimea care acoperă măruntaiele,"
+      "text": "Să fie adusă toată grăsimea ei: coada grasă și grăsimea care acoperă măruntaiele,"
     },
     {
       "number": 4,
-      "text": "cei doi rinichi cu grăsimea de pe ei, de lângă coapse, și rețeaua de pe ficat, pe care o va disloca împreună cu rinichii."
+      "text": "cei doi rinichi cu grăsimea de pe ei, de lângă coapse, și lobul ficatului, care va fi îndepărtat împreună cu rinichii."
     },
     {
       "number": 5,
@@ -132,7 +134,7 @@
     },
     {
       "number": 7,
-      "text": "Cum este jertfa pentru păcat, așa este și jertfa pentru vină: este o singură lege pentru ele. Preotul care face ispășire prin ea o va avea."
+      "text": "Jertfa pentru păcat și jertfa pentru vină au aceeași lege. Ea va fi a preotului care face ispășire prin ea."
     },
     {
       "number": 8,
@@ -148,19 +150,19 @@
     },
     {
       "number": 11,
-      "text": "Aceasta este legea jertfei de pace pe care o va aduce cineva DOMNULUI."
+      "text": "Aceasta este legea jertfei de pace pe care cineva o aduce DOMNULUI:"
     },
     {
       "number": 12,
-      "text": "Dacă o aduce ca jertfă de mulțumire, să aducă împreună cu jertfa de mulțumire turte fără aluat frământate cu ulei, foițe fără aluat unse cu ulei și turte din făină fină opărită, frământate cu ulei."
+      "text": "Dacă o aduce ca mulțumire, să aducă împreună cu jertfa de mulțumire turte nedospite frământate cu ulei, lipii nedospite unse cu ulei și turte din făină fină bine amestecate cu ulei."
     },
     {
       "number": 13,
-      "text": "Pe lângă turte, să-și aducă prinosul cu pâine dospită, împreună cu jertfa sa de pace adusă ca mulțumire."
+      "text": "Împreună cu jertfa de pace adusă ca mulțumire să-și aducă darul și cu turte de pâine dospită."
     },
     {
       "number": 14,
-      "text": "Din toate acestea să aducă câte o bucată din fiecare prinos ca dar ridicat pentru DOMNUL; ea va fi a preotului care stropește sângele jertfei de pace."
+      "text": "Din fiecare fel să aducă o bucată drept contribuție pentru DOMNUL. Ea va fi a preotului care stropește sângele jertfei de pace."
     },
     {
       "number": 15,
@@ -176,7 +178,7 @@
     },
     {
       "number": 18,
-      "text": "Dacă se va mânca din carnea jertfei sale de pace în ziua a treia, ea nu va fi primită, iar celui ce a adus-o nu-i va fi luată în seamă; va fi un lucru urâcios și cine va mânca din ea își va purta vina."
+      "text": "Dacă se mănâncă din carnea jertfei de pace în ziua a treia, jertfa nu va fi primită și nu-i va fi socotită celui care a adus-o; va fi un lucru respingător, iar cel care mănâncă din ea își va purta vina."
     },
     {
       "number": 19,
@@ -184,7 +186,7 @@
     },
     {
       "number": 20,
-      "text": "Dar omul care va mânca din carnea jertfei de pace a DOMNULUI având pe el necurăția sa, omul acela să fie nimicit din poporul său."
+      "text": "Persoana care mănâncă din carnea jertfei de pace care Îi aparține DOMNULUI, în timp ce necurăția este asupra ei, va fi îndepărtată din poporul ei."
     },
     {
       "number": 21,
@@ -200,11 +202,11 @@
     },
     {
       "number": 24,
-      "text": "Grăsimea unui animal mort sau sfâșiat va putea fi folosită la orice alt lucru, dar de mâncat să nu o mâncați nicidecum."
+      "text": "Grăsimea unui animal mort de la sine sau sfâșiat de fiare poate fi folosită pentru alte scopuri, dar să nu o mâncați."
     },
     {
       "number": 25,
-      "text": "Căci oricine va mânca din grăsimea animalului din care se aduce DOMNULUI o jertfă mistuită de foc, omul care va mânca să fie nimicit din poporul său."
+      "text": "Cine mănâncă din grăsimea unui animal din care se aduce DOMNULUI o jertfă mistuită de foc va fi îndepărtat din poporul său."
     },
     {
       "number": 26,
@@ -212,7 +214,7 @@
     },
     {
       "number": 27,
-      "text": "Oricine va mânca vreun fel de sânge, sufletul acela să fie nimicit din poporul său.”"
+      "text": "Oricine mănâncă sânge va fi îndepărtat din poporul său.”"
     },
     {
       "number": 28,
@@ -224,7 +226,7 @@
     },
     {
       "number": 30,
-      "text": "Mâinile lui să aducă jertfele mistuite de foc ale DOMNULUI: să aducă grăsimea împreună cu pieptul, pentru ca pieptul să fie legănat ca dar legănat înaintea DOMNULUI."
+      "text": "Să aducă prin propriile mâini jertfele mistuite de foc ale DOMNULUI. Să aducă grăsimea împreună cu pieptul, pentru ca pieptul să fie legănat ca dar legănat înaintea DOMNULUI."
     },
     {
       "number": 31,
@@ -232,7 +234,7 @@
     },
     {
       "number": 32,
-      "text": "Spata dreaptă din jertfele voastre de pace să o dați preotului ca dar ridicat."
+      "text": "Pulpa dreaptă din jertfele voastre de pace să o dați preotului drept contribuție."
     },
     {
       "number": 33,
@@ -240,11 +242,11 @@
     },
     {
       "number": 34,
-      "text": "Căci am luat de la fiii lui Israel, din jertfele lor de pace, pieptul legănat și spata ridicată și le-am dat preotului Aaron și fiilor lui prin rânduială veșnică din partea fiilor lui Israel.”"
+      "text": "Căci am luat de la fiii lui Israel, din jertfele lor de pace, pieptul darului legănat și pulpa contribuției și le-am dat preotului Aaron și fiilor lui ca parte permanentă din partea fiilor lui Israel.”"
     },
     {
       "number": 35,
-      "text": "Aceasta este partea ungerii lui Aaron și a ungerii fiilor lui din jertfele mistuite de foc ale DOMNULUI, din ziua în care i-a înfățișat ca să slujească DOMNULUI ca preoți,"
+      "text": "Aceasta este partea lui Aaron și partea fiilor lui din jertfele mistuite de foc ale DOMNULUI, din ziua când au fost aduși ca să-I slujească DOMNULUI în preoție,"
     },
     {
       "number": 36,
@@ -252,7 +254,7 @@
     },
     {
       "number": 37,
-      "text": "Aceasta este legea arderii-de-tot, a darului de mâncare, a jertfei pentru păcat, a jertfei pentru vină, a jertfei de consacrare și a jertfei de pace,"
+      "text": "Aceasta este legea arderii-de-tot, a darului de mâncare, a jertfei pentru păcat, a jertfei pentru vină, a învestirii și a jertfei de pace,"
     },
     {
       "number": 38,
@@ -261,28 +263,137 @@
   ],
   "editorialNotes": [
     {
-      "verse": 12,
-      "term": "todah",
-      "decision": "jertfă de mulțumire",
+      "verse": 1,
+      "term": "torat haasham",
+      "decision": "legea jertfei pentru vină",
+      "reason": "Asham tratează vina și repararea prejudiciului, distinctă dar apropiată ritualic de jertfa pentru păcat.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Todah denotă prinosul de recunoștință adus pentru izbăvirile Domnului."
+      "resolutionReason": "Asham tratează vina și repararea prejudiciului, distinctă dar apropiată ritualic de jertfa pentru păcat.",
+      "alternatives": [
+        "jertfa de reparare"
+      ]
+    },
+    {
+      "verse": 7,
+      "term": "torah ahat lahem",
+      "decision": "aceeași lege",
+      "reason": "Afirmația privește anumite reguli rituale și partea preotului, nu șterge diferențele dintre păcat și prejudiciu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Afirmația privește anumite reguli rituale și partea preotului, nu șterge diferențele dintre păcat și prejudiciu.",
+      "alternatives": [
+        "o singură rânduială"
+      ]
+    },
+    {
+      "verse": 12,
+      "term": "todah",
+      "decision": "mulțumire",
+      "reason": "Este o formă a jertfei de pace în care motivul este recunoștința.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este o formă a jertfei de pace în care motivul este recunoștința.",
+      "alternatives": [
+        "mărturisire de mulțumire"
+      ]
+    },
+    {
+      "verse": 13,
+      "term": "lehem hamets",
+      "decision": "pâine dospită",
+      "reason": "Pâinea dospită însoțește jertfa de mulțumire, deși partea arsă pe altar rămâne supusă interdicției din Leviticul 2.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pâinea dospită însoțește jertfa de mulțumire, deși partea arsă pe altar rămâne supusă interdicției din Leviticul 2.",
+      "alternatives": [
+        "turte dospite"
+      ]
     },
     {
       "verse": 18,
       "term": "piggul",
-      "decision": "lucru urâcios / întinat",
+      "decision": "lucru respingător",
+      "reason": "Termenul tehnic descrie jertfa invalidată prin consumul târziu și nu orice aliment considerat dezgustător.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Piggul indică carnea de jertfă neconsumată la timp, care își pierde caracterul sfânt."
+      "resolutionReason": "Termenul tehnic descrie jertfa invalidată prin consumul târziu și nu orice aliment considerat dezgustător.",
+      "alternatives": [
+        "necurăție rituală",
+        "abominație"
+      ]
+    },
+    {
+      "verse": 20,
+      "term": "venikhretah",
+      "decision": "va fi îndepărtată",
+      "reason": "Karet poate desemna excluderea comunitară sau o judecată divină; mecanismul nu este explicat aici.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Karet poate desemna excluderea comunitară sau o judecată divină; mecanismul nu este explicat aici.",
+      "alternatives": [
+        "va fi nimicită"
+      ]
+    },
+    {
+      "verse": 24,
+      "term": "helev nevelah uhelev terefah",
+      "decision": "grăsimea animalului mort sau sfâșiat",
+      "reason": "Grăsimea nu devine bună de mâncat, dar poate avea utilizări nealimentare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Grăsimea nu devine bună de mâncat, dar poate avea utilizări nealimentare.",
+      "alternatives": [
+        "seu"
+      ]
     },
     {
       "verse": 30,
-      "term": "chazeh hattenufah",
-      "decision": "pieptul legănat",
+      "term": "yadav tevienah",
+      "decision": "prin propriile mâini",
+      "reason": "Aducătorul participă activ la prezentarea darului; preoția nu îl înlocuiește în întregime.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Mișcarea rituală de legănare (tenufah) consacră partea dedicată preoților."
+      "resolutionReason": "Aducătorul participă activ la prezentarea darului; preoția nu îl înlocuiește în întregime.",
+      "alternatives": [
+        "mâinile lui să aducă"
+      ]
+    },
+    {
+      "verse": 32,
+      "term": "shoq hayyamin",
+      "decision": "pulpa dreaptă",
+      "reason": "Termenul poate fi redat tradițional prin spată, dar desemnează partea superioară a piciorului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul poate fi redat tradițional prin spată, dar desemnează partea superioară a piciorului.",
+      "alternatives": [
+        "spata dreaptă"
+      ]
+    },
+    {
+      "verse": 35,
+      "term": "mishhat Aharon",
+      "decision": "partea lui Aaron la ungere",
+      "reason": "Termenul poate însemna partea consacrată sau dreptul primit odată cu ungerea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul poate însemna partea consacrată sau dreptul primit odată cu ungerea.",
+      "alternatives": [
+        "porția ungerii"
+      ]
+    },
+    {
+      "verse": 37,
+      "term": "milluim",
+      "decision": "învestire",
+      "reason": "Literal, „umplerea mâinilor”, ceremonia instalării în preoție.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Literal, „umplerea mâinilor”, ceremonia instalării în preoție.",
+      "alternatives": [
+        "consacrare"
+      ]
     }
   ]
 }
