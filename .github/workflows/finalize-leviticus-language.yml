@@ -1,0 +1,29 @@
+name: Finalize Leviticus Language
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-leviticul
+    paths:
+      - scripts/finalize-leviticus-language.py
+      - .github/workflows/finalize-leviticus-language.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-leviticul
+          fetch-depth: 0
+      - run: python3 scripts/finalize-leviticus-language.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-emanus/LEV.*.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Finalize Leviticus Romanian language"
+          git push origin HEAD:agent/biblia-emanus-leviticul
