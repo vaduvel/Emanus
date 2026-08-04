@@ -1,0 +1,36 @@
+name: Publish Genesis 40-44
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus
+    paths:
+      - scripts/publish-genesis-wave-40-44.py
+      - .github/workflows/publish-genesis-wave-40-44.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus
+          fetch-depth: 0
+      - name: Apply audited wave
+        run: python scripts/publish-genesis-wave-40-44.py
+      - name: Commit audited chapters
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-emanus/GEN.40.json \
+                  docs/data/biblia-emanus/GEN.41.json \
+                  docs/data/biblia-emanus/GEN.42.json \
+                  docs/data/biblia-emanus/GEN.43.json \
+                  docs/data/biblia-emanus/GEN.44.json \
+                  docs/data/biblia-emanus/manifest.json
+          git diff --cached --quiet && { echo "No audited changes produced"; exit 1; }
+          git commit -m "Audit and publish Genesis 40-44"
+          git push origin HEAD:agent/biblia-emanus
