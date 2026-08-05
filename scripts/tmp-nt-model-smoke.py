@@ -1,47 +1,13 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import json
-import os
-import urllib.error
-import urllib.request
+from transformers import MarianMTModel, MarianTokenizer
 
-payload = {
-    "model": "openai/gpt-4.1",
-    "temperature": 0,
-    "max_tokens": 300,
-    "messages": [
-        {
-            "role": "system",
-            "content": "Ești traducător biblic român. Răspunde exclusiv JSON valid, fără markdown.",
-        },
-        {
-            "role": "user",
-            "content": (
-                "Tradu independent în română naturală, cu diacritice, fără a copia o versiune românească. "
-                "Autoritate greacă SBLGNT: ὁ γὰρ θεὸς οὕτως ἠγάπησεν τὸν κόσμον. "
-                "Punte WEBU: For God so loved the world. "
-                "Returnează {\"text\":\"...\",\"source_check\":\"approved\"}."
-            ),
-        },
-    ],
-}
-request = urllib.request.Request(
-    "https://models.github.ai/inference/chat/completions",
-    data=json.dumps(payload).encode("utf-8"),
-    headers={
-        "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
-        "Content-Type": "application/json",
-        "Accept": "application/vnd.github+json",
-    },
-    method="POST",
-)
-try:
-    with urllib.request.urlopen(request, timeout=120) as response:
-        body = json.load(response)
-except urllib.error.HTTPError as error:
-    print(f"HTTP {error.code}: {error.read().decode('utf-8', errors='replace')}")
-    raise
-content = body["choices"][0]["message"]["content"]
-print("MODEL_OK")
-print(content)
+model_name = "Helsinki-NLP/opus-mt-en-ro"
+tokenizer = MarianTokenizer.from_pretrained(model_name)
+model = MarianMTModel.from_pretrained(model_name)
+source = "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life."
+batch = tokenizer([source], return_tensors="pt", padding=True, truncation=True)
+translated = model.generate(**batch, max_new_tokens=128, num_beams=5)
+print("OFFLINE_MODEL_OK")
+print(tokenizer.batch_decode(translated, skip_special_tokens=True)[0])
