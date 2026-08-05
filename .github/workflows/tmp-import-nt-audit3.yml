@@ -42,6 +42,9 @@ jobs:
       - name: Validate NT versification
         run: python3 scripts/check-biblia-emanus-versification.py
 
+      - name: Audit all NT benchmark anomalies
+        run: python3 scripts/tmp-audit-nt-benchmarks.py
+
       - name: Validate Biblia Emanus corpus
         run: python3 scripts/check-biblia-emanus.py
 
