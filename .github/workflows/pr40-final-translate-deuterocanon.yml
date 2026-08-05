@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/translate-pr40-deuterocanon-missing.py'
       - 'scripts/translate-pr40-deuterocanon-all-missing.py'
+      - 'scripts/translate-pr40-deuterocanon-all-v2.py'
       - '.github/workflows/pr40-final-translate-deuterocanon.yml'
   workflow_dispatch:
 
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   translate:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,7 +30,7 @@ jobs:
       - name: Install pinned translation runtime
         run: pip install --disable-pip-version-check 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1'
       - name: Generate twelve modern Romanian candidates
-        run: python3 scripts/translate-pr40-deuterocanon-all-missing.py --batch-size 24
+        run: python3 scripts/translate-pr40-deuterocanon-all-v2.py --batch-size 20
       - name: Upload candidates and audit ledger
         if: always()
         uses: actions/upload-artifact@v4
