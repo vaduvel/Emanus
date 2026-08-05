@@ -20,7 +20,7 @@ permissions:
 
 concurrency:
   group: pr40-final-early-extraction-${{ github.event_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   extract:
