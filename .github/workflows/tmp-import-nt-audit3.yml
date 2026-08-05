@@ -1,19 +1,15 @@
-name: Temporary NT Audit 3 Import
+name: Finalize NT Audit 3 Branch
 
 on:
   push:
     branches:
       - agent/biblia-emanus-nt-audit3
-  pull_request:
-    branches:
-      - main
 
 permissions:
   contents: write
 
 jobs:
-  import-and-verify:
-    if: github.head_ref == 'agent/biblia-emanus-nt-audit3' || github.ref == 'refs/heads/agent/biblia-emanus-nt-audit3'
+  cleanup-and-verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,60 +17,51 @@ jobs:
           ref: agent/biblia-emanus-nt-audit3
           fetch-depth: 0
 
-      - name: Fetch NT source branch
-        run: git fetch origin codex/biblia-emanus-new-testament:refs/remotes/origin/codex/biblia-emanus-new-testament
+      - name: Install permanent Python ignore rules and CI gate
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
 
-      - name: Inventory actual NT corpus
-        run: python3 scripts/tmp-report-nt-corpus.py
+          ignore = Path('.gitignore')
+          text = ignore.read_text(encoding='utf-8')
+          block = '\n# Python\n__pycache__/\n*.py[cod]\n'
+          if '__pycache__/' not in text:
+              ignore.write_text(text.rstrip() + block, encoding='utf-8')
 
-      - name: Import clean NT corpus and engine
-        run: python3 scripts/tmp-import-nt-audit3.py
+          ci = Path('.github/workflows/ci.yml')
+          text = ci.read_text(encoding='utf-8')
+          marker = '''      - name: Testeaza poarta Biblia Emanus
+        run: pnpm test:biblia-emanus
+'''
+          addition = marker + '''
+      - name: Verifica versificatia Biblia Emanus
+        run: pnpm check:biblia-emanus-versification
+'''
+          if 'Verifica versificatia Biblia Emanus' not in text:
+              if marker not in text:
+                  raise SystemExit('CI insertion marker missing')
+              ci.write_text(text.replace(marker, addition), encoding='utf-8')
+          PY
 
-      - name: Normalize NT Unicode NFC
-        run: python3 scripts/tmp-normalize-nt-nfc.py
+      - name: Remove all migration-only artifacts
+        run: |
+          rm -f .github/workflows/tmp-import-nt-audit3.yml
+          rm -f scripts/tmp-*.py
+          rm -rf scripts/__pycache__
 
-      - name: Repair verified NT quotation defects
-        run: python3 scripts/tmp-fix-nt-quotes.py
-
-      - name: Apply source-verified initial wording corrections
-        run: python3 scripts/tmp-fix-nt-initial-anomalies.py
-
-      - name: Audit all NT quotation marks
-        run: python3 scripts/tmp-audit-nt-quotes.py
-
-      - name: Prepare unified source lock and ledger
-        run: python3 scripts/prepare-biblia-emanus-nt.py --workbook-dir /tmp/emanus-nt-workbooks
-
-      - name: Repair NT critical reference note schema
-        run: python3 scripts/tmp-fix-nt-reference-notes.py
-
-      - name: Validate NT versification
-        run: python3 scripts/check-biblia-emanus-versification.py
-
-      - name: Report remaining NT benchmark anomalies
-        continue-on-error: true
-        run: python3 scripts/tmp-audit-nt-benchmarks.py
-
-      - name: Audit NT reference note schema
-        run: python3 scripts/tmp-audit-nt-reference-notes.py
-
-      - name: Validate Biblia Emanus corpus
+      - name: Validate permanent Biblia Emanus corpus
         run: python3 scripts/check-biblia-emanus.py
 
-      - name: Align NT tests with audit 3 policy
-        run: python3 scripts/tmp-fix-nt-tests.py
+      - name: Validate permanent NT versification
+        run: python3 scripts/check-biblia-emanus-versification.py
 
-      - name: Run Biblia Emanus tests
+      - name: Run permanent Biblia Emanus tests
         run: python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py scripts/test_materialize_biblia_emanus_nt.py
 
-      - name: Commit imported corpus
+      - name: Commit clean permanent branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/biblia-emanus docs/biblia-emanus scripts package.json
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git commit -m "Import New Testament corpus into audit engine 3.0"
+          git add -A
+          git commit -m "Finalize clean New Testament audit 3 corpus"
           git push origin HEAD:agent/biblia-emanus-nt-audit3
