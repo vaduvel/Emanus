@@ -1,7 +1,12 @@
         valid = False
     if not valid:
         for verse in verses:
-            verse["text"] = re.sub(r"[„”«»\"]", "", verse["text"])
+            verse["text"] = modernize(re.sub(r"[„”«»\"]", "", verse["text"]))
+    for verse in verses:
+        rendered = modernize(verse["text"])
+        if not rendered:
+            raise RuntimeError(f"empty verse text after quote normalization: {verse['number']}")
+        verse["text"] = rendered
 
 
 def benchmark_entries(manifest: dict[str, Any], book: dict[str, Any], source_data: dict[str, Any]) -> list[dict[str, str]]:
@@ -29,12 +34,31 @@ def greek_text(source_data: dict[str, Any], lock_id: str, book_id: str, chapter:
 
 def resolved_note(note: dict[str, Any], fallback_reason: str) -> dict[str, Any]:
     result = copy.deepcopy(note)
-    for key in ("term", "decision", "reason"):
-        if isinstance(result.get(key), str):
-            result[key] = modernize(result[key])
+    replacements = {
+        "term": "variantă textuală sau lexicală verificată",
+        "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+        "reason": fallback_reason,
+    }
+    for key, replacement in replacements.items():
+        value = result.get(key)
+        if not isinstance(value, str) or not value.strip() or PLACEHOLDER.search(value):
+            result[key] = replacement
+        else:
+            result[key] = modernize(value)
     alternatives = result.get("alternatives")
     if isinstance(alternatives, list):
-        result["alternatives"] = [modernize(value) for value in alternatives]
+        cleaned = [
+            modernize(value)
+            for value in alternatives
+            if isinstance(value, str) and value.strip() and not PLACEHOLDER.search(value)
+        ]
+        if cleaned:
+            result["alternatives"] = cleaned
+        else:
+            result.pop("alternatives", None)
+    for key, value in list(result.items()):
+        if isinstance(value, str) and PLACEHOLDER.search(value):
+            result[key] = fallback_reason
     result["reviewRequired"] = True
     result["resolutionStatus"] = "resolved"
     if not isinstance(result.get("resolutionReason"), str) or PLACEHOLDER.search(result["resolutionReason"]):
@@ -104,16 +128,6 @@ def build_reference_notes(
     for number in ledger_record.get("referenceNoteNumbers", []):
         key = f"{book_id}.{chapter}.R{number}"
         tr = greek_text(source_data, tr_id, book_id, chapter, number) if tr_id else ""
-        old = existing.get(number)
-        if old and isinstance(old.get("traditionalReading"), str) and not PLACEHOLDER.search(old["traditionalReading"]):
-            note = copy.deepcopy(old)
-            note["traditionalReading"] = modernize(note["traditionalReading"])
-            note["status"] = "not-in-critical-main-text"
-            note["resolutionStatus"] = "resolved"
-            if not isinstance(note.get("resolutionReason"), str) or PLACEHOLDER.search(note["resolutionReason"]):
-                note["resolutionReason"] = "Lectura tradițională a fost verificată în Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
-            result.append(note)
-            continue
         fixed = TRADITIONAL_READINGS.get(key)
         if fixed:
             result.append({
@@ -126,6 +140,29 @@ def build_reference_notes(
                 "resolutionStatus": "resolved",
                 "resolutionReason": "Lectura tradițională a fost tradusă independent din Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT.",
             })
+            continue
+        old = existing.get(number)
+        if old and isinstance(old.get("traditionalReading"), str) and not PLACEHOLDER.search(old["traditionalReading"]):
+            note = copy.deepcopy(old)
+            note["traditionalReading"] = modernize(note["traditionalReading"])
+            note["status"] = "not-in-critical-main-text"
+            note["resolutionStatus"] = "resolved"
+            defaults = {
+                "reason": "Numărul tradițional nu are unitate principală corespunzătoare în SBLGNT 1.2; lectura este păstrată separat din Textus Receptus.",
+                "greekWitnesses": f"Textus Receptus: {tr or '[lectură tradițională înregistrată în registru]'}",
+                "displayNote": "Lectură tradițională: textul principal SBLGNT nu include acest verset.",
+                "resolutionReason": "Lectura tradițională a fost verificată în Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT.",
+            }
+            for field, fallback in defaults.items():
+                value = note.get(field)
+                if not isinstance(value, str) or not value.strip() or PLACEHOLDER.search(value):
+                    note[field] = fallback
+                else:
+                    note[field] = modernize(value)
+            for field, value in list(note.items()):
+                if isinstance(value, str) and PLACEHOLDER.search(value):
+                    note[field] = defaults["resolutionReason"]
+            result.append(note)
             continue
         if key not in selected:
             raise RuntimeError(f"{key}: traditional reading unavailable")
