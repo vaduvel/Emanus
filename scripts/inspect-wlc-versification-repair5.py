@@ -18,7 +18,7 @@ CANONICAL = {
 
 
 def main() -> None:
-    wlc = parse_usfm_zip(DATA / "sources" / "hebwlc_usfm.zip")
+    wlc = parse_usfm_zip(DATA / "sources" / "hboWLC_usfm.zip")
     target: dict[tuple[str, int], list[int]] = defaultdict(list)
     source: dict[tuple[str, int], list[int]] = defaultdict(list)
     for path in sorted(DATA.glob("*.json")):
@@ -52,7 +52,8 @@ def main() -> None:
                 "countDifference": len(t) - len(s),
             })
     payload = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
+        "sourceId": "hboWLC",
         "differenceCount": len(differences),
         "differences": differences,
     }
