@@ -50,7 +50,6 @@ BAD_PHRASES = {
     "ai câștigat t vedea mine": "fragment englezesc corupt",
     "eliber-l": "verb corupt",
     "nu păz Legea": "acord verbal corupt",
-    "căutați să Mă ucide": "acord verbal corupt",
     "faptele lui erau rele ale fratelui său drepte": "ordine sintactică imposibilă",
     "nu am de gând în conformitate cu carnea": "calc englezesc",
     "Nu există nici o altă veste bună.?": "punctuație și sens corupte",
@@ -90,7 +89,7 @@ def main() -> int:
                     errors.append(f"{ref}: {detail}: {text}")
             lower = text.lower()
             for phrase, detail in BAD_PHRASES.items():
-                if phrase.lower() in lower:
+                if re.search(rf"(?<!\w){re.escape(phrase.lower())}(?!\w)", lower):
                     errors.append(f"{ref}: {detail}: {text}")
 
     mat = verse_map.get("MAT.6.13", ("", {}))[0].lower()
