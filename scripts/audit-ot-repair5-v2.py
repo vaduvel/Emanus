@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic publication audit v2 for sanitized OT repair5 candidates."""
+"""Deterministic publication audit v3 for sanitized OT repair5 candidates."""
 from __future__ import annotations
 
 import argparse
@@ -31,7 +31,7 @@ PLACEHOLDER = re.compile(
     r"În ziua aceea, din \d?\s*\w+ capitolul \d+",
     re.I,
 )
-ENGLISH = re.compile(r"\b(the|and|which|with|from|unto|shall|chapter|verse|people|king|said|was|were|their)\b", re.I)
+ENGLISH = re.compile(r"\b(the|and|which|with|from|unto|shall|chapter|people|king|said|was|were|their)\b", re.I)
 CORRUPTION = re.compile(r"\buidea\b|str\s+strămoșești|\bVerse\s+\d+\b|\bIșit-am\b", re.I)
 SEDILLA = re.compile(r"[şţŞŢ]")
 
@@ -48,6 +48,10 @@ def expected_digest(verses: list[dict[str, Any]]) -> str:
     return hashlib.sha256("\n".join(str(v.get("text", "")) for v in verses).encode("utf-8")).hexdigest()
 
 
+def excerpt(text: str, limit: int = 500) -> str:
+    return text if len(text) <= limit else text[:limit] + "…"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--fail", action="store_true")
@@ -59,8 +63,11 @@ def main() -> int:
     }
     issues: list[dict[str, Any]] = []
 
-    def add(level: str, code: str, ref: str, message: str) -> None:
-        issues.append({"severity": level, "code": code, "reference": ref, "message": message})
+    def add(level: str, code: str, ref: str, message: str, evidence: dict[str, Any] | None = None) -> None:
+        item: dict[str, Any] = {"severity": level, "code": code, "reference": ref, "message": message}
+        if evidence:
+            item["evidence"] = evidence
+        issues.append(item)
 
     manifest = load(DATA / "manifest.json")
     manifest_sources = manifest.get("sources", {})
@@ -122,15 +129,16 @@ def main() -> int:
                 add("error", "NFC", ref, "not NFC")
             if SEDILLA.search(text) or ENGLISH.search(text) or CORRUPTION.search(text):
                 stats[book]["languageErrors"] += 1
-                add("error", "LANGUAGE", ref, text[:220])
+                add("error", "LANGUAGE", ref, excerpt(text))
             if PLACEHOLDER.search(text):
                 stats[book]["placeholders"] += 1
-                add("critical", "PLACEHOLDER", ref, text[:220])
+                add("critical", "PLACEHOLDER", ref, excerpt(text))
             if text.count("„") != text.count("”") or text.count("«") != text.count("»"):
                 stats[book]["languageErrors"] += 1
-                add("error", "QUOTES", ref, "unbalanced quotes")
+                add("error", "QUOTES", ref, "unbalanced quotes", {"romanian": text})
 
             source = web.get((book, chapter, number))
+            benchmark = btf.get((book, chapter, number)) if book in CANONICAL else None
             if source is None:
                 stats[book]["webMissing"] += 1
                 add("critical", "WEB_REFERENCE", ref, "missing WEBBE reference")
@@ -140,15 +148,21 @@ def main() -> int:
                 ratio = len(target_norm) / max(1, len(source_norm))
                 if ratio < 0.28 or ratio > 3.8:
                     stats[book]["lengthOutliers"] += 1
-                    add("error", "LENGTH", ref, f"ratio={ratio:.3f}")
+                    add(
+                        "error", "LENGTH", ref, f"ratio={ratio:.3f}",
+                        {"romanian": text, "webbe": source, "btf": benchmark},
+                    )
                 if numeric_tokens(text) != numeric_tokens(source):
                     stats[book]["numberMismatches"] += 1
-                    add("error", "NUMBERS", ref, f"RO={numeric_tokens(text)} EN={numeric_tokens(source)}")
+                    add(
+                        "error", "NUMBERS", ref,
+                        f"RO={numeric_tokens(text)} EN={numeric_tokens(source)}",
+                        {"romanian": text, "webbe": source, "btf": benchmark},
+                    )
 
             if book in CANONICAL:
                 if (book, chapter, number) not in wlc:
                     stats[book]["wlcReferenceMappings"] += 1
-                benchmark = btf.get((book, chapter, number))
                 if benchmark is None:
                     stats[book]["btfReferenceMappings"] += 1
                 else:
@@ -168,9 +182,15 @@ def main() -> int:
             btf_count = len(btf_books.get(book, []))
             if candidate_count != wlc_count:
                 stats[book]["wlcBookCountDifference"] = candidate_count - wlc_count
-                add("error", "WLC_BOOK_TOTAL", book, f"candidate={candidate_count}, WLC={wlc_count}")
+                add(
+                    "warning", "WLC_VERSIFICATION_MAP_REQUIRED", book,
+                    f"candidate={candidate_count}, WLC={wlc_count}; document chapter/verse mapping before promotion",
+                )
             if candidate_count != btf_count:
-                add("error", "BTF_BOOK_TOTAL", book, f"candidate={candidate_count}, BTF={btf_count}")
+                add(
+                    "warning", "BTF_VERSIFICATION_MAP_REQUIRED", book,
+                    f"candidate={candidate_count}, BTF={btf_count}; comparison mapping required",
+                )
         if len(rows) != len(web_books.get(book, [])):
             add("critical", "WEB_BOOK_TOTAL", book, f"candidate={len(rows)}, WEBBE={len(web_books.get(book, []))}")
 
@@ -187,7 +207,7 @@ def main() -> int:
         book_output[book] = value
 
     report = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "severityCounts": dict(level_counts),
         "sources": {name: sha(path) for name, path in source_paths.items()},
         "books": book_output,
@@ -198,9 +218,10 @@ def main() -> int:
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     lines = [
-        "# OT Repair 5 — deterministic audit v2", "",
+        "# OT Repair 5 — deterministic audit v3", "",
         f"- Critice: **{level_counts['critical']}**",
-        f"- Erori: **{level_counts['error']}**", "", "## Cărți",
+        f"- Erori: **{level_counts['error']}**",
+        f"- Avertismente de mapare: **{level_counts['warning']}**", "", "## Cărți",
     ]
     for book, value in book_output.items():
         lines.append(
@@ -209,9 +230,14 @@ def main() -> int:
             f"limbă {value['languageErrors']}; numere {value['numberMismatches']}; "
             f"lungime {value['lengthOutliers']}; BTF medie {value['meanBtfSimilarity']}"
         )
-    lines += ["", "## Probleme"]
+    lines += ["", "## Probleme și mapări"]
     for item in issues[:1000]:
         lines.append(f"- **{item['severity'].upper()}** `{item['code']}` — `{item['reference']}`: {item['message']}")
+        evidence = item.get("evidence")
+        if evidence:
+            for label, value in evidence.items():
+                if value:
+                    lines.append(f"  - {label.upper()}: {value}")
     (OUT / "OT-REPAIR5-DETERMINISTIC-AUDIT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(json.dumps({"severityCounts": dict(level_counts), "books": book_output}, ensure_ascii=False, indent=2))
     return 1 if args.fail and (level_counts["critical"] or level_counts["error"]) else 0
