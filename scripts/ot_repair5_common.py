@@ -15,13 +15,25 @@ NON_CONTENT_PREFIXES = (
 
 
 def strip_usfm(text: str) -> str:
+    # Notes and cross references are metadata, not verse text.
     text = re.sub(r"\\f\s+.*?\\f\*", " ", text)
     text = re.sub(r"\\x\s+.*?\\x\*", " ", text)
-    text = re.sub(r"\\w\s+([^|\\]+).*?\\w\*", r"\1", text)
+
+    # Preserve the displayed word but remove lemma/Strong/morphology attributes.
+    text = re.sub(r"\\w\s+([^|\\]+)\|[^\\]*?\\w\*", r"\1", text)
+    text = re.sub(r"\\w\s+([^\\]+?)\\w\*", r"\1", text)
+    text = re.sub(r"\|(?:x-)?(?:strong|lemma|morph|occurrence|occurrences)=[^\\\s]+", " ", text, flags=re.I)
+    text = re.sub(r"\b(?:x-)?strong\s*=\s*[\"']?[HG]\d+[\"']?", " ", text, flags=re.I)
+
+    # Alignment and keyword milestones carry machine metadata only.
     text = re.sub(r"\\zaln-s\s+.*?\\\*", " ", text)
     text = re.sub(r"\\zaln-e\\\*", " ", text)
     text = re.sub(r"\\k-s\s+.*?\\\*|\\k-e\\\*", " ", text)
+
+    # Remove remaining character/paragraph markers after their visible content
+    # has already been retained on the line.
     text = re.sub(r"\\[a-z0-9+\-]+\*?(?:\s+)?", " ", text, flags=re.I)
+    text = re.sub(r"\b[HG]5542\b", " ", text)  # Strong tag for Selah leaked by some USFM exports.
     return re.sub(r"\s+", " ", text).strip()
 
 
