@@ -42,7 +42,7 @@ export const EXOD_TEXT_28: Record<number, readonly string[]> = {
     "S\u0103 aib\u0103 \u00een mijloc o deschiz\u0103tur\u0103 pentru cap, iar \u00een jurul deschiz\u0103turii s\u0103 aib\u0103 o margine \u021besut\u0103, asemenea deschiz\u0103turii unei plato\u0219e, ca s\u0103 nu se rup\u0103.",
     "Pe tivul ei s\u0103 faci rodii din fir albastru, purpuriu \u0219i stacojiu, de jur \u00eemprejurul tivului, iar \u00eentre ele clopo\u021bei de aur:",
     "un clopo\u021bel de aur \u0219i o rodie, un clopo\u021bel de aur \u0219i o rodie, de jur \u00eemprejurul tivului mantiei.",
-    "Aaron s\u0103 o poarte c\u00e2nd slujeste. Sunetul ei s\u0103 se aud\u0103 c\u00e2nd intr\u0103 \u00een Locul Sf\u00e2nt \u00eenaintea DOMNULUI \u0219i c\u00e2nd iese, ca s\u0103 nu moar\u0103.",
+    "Aaron s\u0103 o poarte c\u00e2nd sluje\u0219te. Sunetul ei s\u0103 se aud\u0103 c\u00e2nd intr\u0103 \u00een Locul Sf\u00e2nt \u00eenaintea DOMNULUI \u0219i c\u00e2nd iese, ca s\u0103 nu moar\u0103.",
     "S\u0103 faci o pl\u0103cu\u021b\u0103 din aur curat \u0219i s\u0103 gravezi pe ea, asemenea gravurii unui sigiliu: \u00abSF\u00c2NT PENTRU DOMNUL\u00bb.",
     "S\u0103 o prinzi cu un \u0219nur albastru pe turban; s\u0103 fie \u00een partea din fa\u021b\u0103 a turbanului.",
     "Ea s\u0103 fie pe fruntea lui Aaron. Aaron va purta vina legat\u0103 de lucrurile sfinte pe care fiii lui Israel le vor sfin\u021bi prin toate darurile lor sfinte. Ea s\u0103 fie permanent pe fruntea lui, pentru ca ei s\u0103 fie primi\u021bi \u00eenaintea DOMNULUI.",
