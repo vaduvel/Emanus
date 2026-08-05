@@ -9,7 +9,7 @@
 export const EXOD_TEXT_23: Record<number, readonly string[]> = {
   23: [
     "\u201eS\u0103 nu r\u0103sp\u00e2nde\u0219ti un zvon fals. S\u0103 nu-\u021bi une\u0219ti m\u00e2na cu cel r\u0103u ca s\u0103 fii martor r\u0103uvoitor.",
-    "S\u0103 nu urmezi mul\u021bimea ca s\u0103 faci r\u0103u \u0219i s\u0103 nu depui m\u0103rturie \u00eentr-un proces \u00eenclin\u00e2nd dup\u0103 majoritate ca s\u0103 pervertesti dreptatea.",
+    "S\u0103 nu urmezi mul\u021bimea ca s\u0103 faci r\u0103u \u0219i s\u0103 nu depui m\u0103rturie \u00eentr-un proces \u00eenclin\u00e2nd dup\u0103 majoritate ca s\u0103 perverte\u0219ti dreptatea.",
     "S\u0103 nu-l favorizezi nici pe s\u0103rac \u00een procesul lui.",
     "Dac\u0103 \u00eent\u00e2lne\u0219ti boul sau m\u0103garul du\u0219manului t\u0103u r\u0103t\u0103cind, s\u0103 i-l aduci \u00eenapoi.",
     "Dac\u0103 vezi m\u0103garul celui care te ur\u0103\u0219te c\u0103zut sub povara lui, s\u0103 nu-l la\u0219i acolo, ci s\u0103-l aju\u021bi s\u0103-l elibereze.",
