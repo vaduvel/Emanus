@@ -1,15 +1,70 @@
 /*
- * Textul biblic al cărții Levitic, capitolul 25.
+ * Textul biblic al c\u0103r\u021bii Levitic, capitolul 25.
  *
- * ATENȚIE, agentul care lucrează la Biblia Emanus:
- * fișierul acesta ține LOCUL textului, nu textul. Fiecare intrare din tablou
- * este un verset, în ordine, de la 1 la 55. Înlocuiește fiecare șir cu versetul
- * din Biblia Emanus (validată din trei părți) și nu schimba nimic altceva:
- * nici numărul intrărilor, nici cheia capitolului, nici numele exportului.
+ * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/LEV.25.json.
+ * Capitol cu status "published", auditat verset cu verset din WLC-OSHB,
+ * cu WEBU ca baz\u0103 public-domain. 55 de versete.
+ *
+ * Note asupra sursei (p\u0103strate ca atare, necorectate):
+ * - v. 2: "s\u0103 praznuiasc\u0103" \u2014 se a\u0219teapt\u0103 "s\u0103 pr\u0103znuiasc\u0103".
  */
 
-const PLACEHOLDER = "[textul biblic se completează din Biblia Emanus]"
-
 export const LEVITIC_TEXT_25: Record<number, readonly string[]> = {
-  25: Array.from({ length: 55 }, (_, i) => `[Levitic 25:${i + 1}] ${PLACEHOLDER}`),
+  25: [
+    "DOMNUL i-a vorbit lui Moise pe Muntele Sinai, spun\u00e2nd:",
+    "\u201eVorbe\u0219te fiilor lui Israel \u0219i spune-le: C\u00e2nd ve\u021bi intra \u00een \u021bara pe care v-o dau, p\u0103m\u00e2ntul s\u0103 praznuiasc\u0103 un Sabat pentru DOMNUL.",
+    "\u0218ase ani s\u0103-\u021bi semeni ogorul \u0219i \u0219ase ani s\u0103-\u021bi cur\u0103\u021bi via \u0219i s\u0103-i str\u00e2ngi roadele;",
+    "dar \u00een anul al \u0219aptelea va fi un Sabat de odihn\u0103 deplin\u0103 pentru p\u0103m\u00e2nt, un Sabat pentru DOMNUL: ogorul t\u0103u s\u0103 nu-l semeni \u0219i via ta s\u0103 nu o cur\u0103\u021bi.",
+    "Ce va cre\u0219te de la sine din seceri\u0219ul t\u0103u s\u0103 nu seceri \u0219i strugurii din via ta necur\u0103\u021bat\u0103 s\u0103 nu-i culegi: va fi un an de odihn\u0103 pentru p\u0103m\u00e2nt.",
+    "Ce va da p\u0103m\u00e2ntul \u00een timpul Sabatului s\u0103u v\u0103 va sluji de hran\u0103: \u021bie, slujitorului t\u0103u, slujitoarei tale, argatului t\u0103u \u0219i str\u0103inului care locuie\u0219te cu tine,",
+    "precum \u0219i animalelor tale \u0219i fiarelor din \u021bara ta; tot venitul lui va fi de hran\u0103.",
+    "Vei num\u0103ra \u0219apte s\u0103pt\u0103m\u00e2ni de ani, adic\u0103 de \u0219apte ori c\u00e2te \u0219apte ani, astfel c\u0103 timpul celor \u0219apte s\u0103pt\u0103m\u00e2ni de ani va fi de patruzeci \u0219i nou\u0103 de ani.",
+    "\u00cen luna a \u0219aptea, \u00een ziua a zecea a lunii, vei face s\u0103 sune tr\u00e2mbi\u021ba r\u0103sun\u0103toare; \u00een Ziua Isp\u0103\u0219irii ve\u021bi face s\u0103 sune tr\u00e2mbi\u021ba \u00een toat\u0103 \u021bara voastr\u0103.",
+    "S\u0103 sfin\u021bi\u021bi anul al cincizecilea \u0219i s\u0103 proclama\u021bi libertatea \u00een \u021bar\u0103 pentru to\u021bi locuitorii ei. Acesta va fi pentru voi un Jubileu: fiec\u0103ruia dintre voi i se va reda mo\u0219ia \u0219i fiecare se va \u00eentoarce la familia sa.",
+    "Anul al cincizecilea va fi pentru voi un Jubileu: s\u0103 nu sem\u0103na\u021bi, s\u0103 nu secera\u021bi ce va cre\u0219te de la sine \u0219i s\u0103 nu culege\u021bi strugurii din viile necur\u0103\u021bate.",
+    "C\u0103ci este Jubileul: va fi sf\u00e2nt pentru voi; ve\u021bi m\u00e2nca venitul crescut de pe c\u00e2mp.",
+    "\u00cen acest an de Jubileu v\u0103 ve\u021bi \u00eentoarce fiecare la mo\u0219ia sa.",
+    "Dac\u0103 vinde\u021bi ceva aproapelui t\u0103u sau cump\u0103ra\u021bi ceva din m\u00e2na aproapelui t\u0103u, s\u0103 nu v\u0103 \u00een\u0219ela\u021bi unii pe al\u021bii.",
+    "S\u0103 cump\u0103ri de la aproapele t\u0103u socotind num\u0103rul anilor de dup\u0103 Jubileu, iar el s\u0103-\u021bi v\u00e2nd\u0103 socotind num\u0103rul anilor de rod.",
+    "Cu c\u00e2t vor fi mai mul\u021bi ani, cu at\u00e2t vei m\u0103ri pre\u021bul, \u0219i cu c\u00e2t vor fi mai pu\u021bini ani, cu at\u00e2t vei mic\u0219ora pre\u021bul; c\u0103ci el \u00ee\u021bi vinde num\u0103rul seceri\u0219urilor.",
+    "S\u0103 nu v\u0103 \u00een\u0219ela\u021bi unii pe al\u021bii, ci s\u0103 te temi de Dumnezeul t\u0103u; c\u0103ci Eu sunt DOMNUL Dumnezeul vostru!",
+    "\u00cemplini\u021bi r\u00e2nduielile Mele \u0219i p\u0103zi\u021bi judec\u0103\u021bile Mele \u0219i face\u021bi-le, ca s\u0103 locui\u021bi \u00een siguran\u021b\u0103 \u00een \u021bar\u0103.",
+    "P\u0103m\u00e2ntul \u00ee\u0219i va da rodul, ve\u021bi m\u00e2nca pe s\u0103turate \u0219i ve\u021bi locui \u00een siguran\u021b\u0103 \u00een el.",
+    "Iar dac\u0103 ve\u021bi \u00eentreba: \u00abCe vom m\u00e2nca \u00een anul al \u0219aptelea, dac\u0103 nu vom sem\u0103na \u0219i nu vom str\u00e2nge roadele noastre?\u00bb,",
+    "Eu v\u0103 voi trimite binecuv\u00e2ntarea Mea \u00een anul al \u0219aselea \u0219i el va da rod pentru trei ani.",
+    "\u00cen anul al optulea ve\u021bi sem\u0103na \u0219i ve\u021bi m\u00e2nca din vechile roade; p\u00e2n\u0103 \u00een anul al nou\u0103lea, p\u00e2n\u0103 va veni rodul lui, ve\u021bi m\u00e2nca din cel vechi.",
+    "P\u0103m\u00e2ntul s\u0103 nu se v\u00e2nd\u0103 pentru totdeauna, c\u0103ci p\u0103m\u00e2ntul este al Meu; voi sunte\u021bi str\u0103ini \u0219i venetici la Mine.",
+    "\u00cen toat\u0103 \u021bara st\u0103p\u00e2nirii voastre s\u0103 acorda\u021bi dreptul de r\u0103scump\u0103rare pentru p\u0103m\u00e2nt.",
+    "Dac\u0103 fratele t\u0103u s\u0103r\u0103ce\u0219te \u0219i \u00ee\u0219i vinde o parte din mo\u0219ia lui, ruda lui cea mai apropiat\u0103 s\u0103 vin\u0103 \u0219i s\u0103 r\u0103scumpere ce a v\u00e2ndut fratele s\u0103u.",
+    "Dac\u0103 un om nu are pe cineva care s\u0103 r\u0103scumpere, dar \u00ee\u0219i spore\u0219te mijloacele \u0219i g\u0103se\u0219te c\u00e2t trebuie pentru r\u0103scump\u0103rarea sa,",
+    "s\u0103 socoteasc\u0103 anii de la v\u00e2nzare, s\u0103 restituie restul cump\u0103r\u0103torului \u0219i s\u0103 se \u00eentoarc\u0103 la mo\u0219ia sa.",
+    "Dar dac\u0103 nu g\u0103se\u0219te mijloace s\u0103-i restituie, ce a v\u00e2ndut va r\u0103m\u00e2ne \u00een m\u00e2na cump\u0103r\u0103torului p\u00e2n\u0103 la anul de Jubileu; iar la Jubileu va fi eliberat \u0219i omul se va \u00eentoarce la mo\u0219ia sa.",
+    "Dac\u0103 cineva vinde o cas\u0103 de locuit dintr-o cetate zidit\u0103, va avea drept de r\u0103scump\u0103rare p\u00e2n\u0103 la \u00eemplinirea unui an de la v\u00e2nzarea ei; dreptul lui de r\u0103scump\u0103rare va dura un an \u00eentreg.",
+    "Dar dac\u0103 nu este r\u0103scump\u0103rat\u0103 \u00eenainte de \u00eemplinirea unui an \u00eentreg, casa din cetatea zidit\u0103 va r\u0103m\u00e2ne pentru totdeauna cump\u0103r\u0103torului \u0219i urma\u0219ilor lui; nu va fi eliberat\u0103 la Jubileu.",
+    "Casele din satele nezidite de jur \u00eemprejur vor fi socotite ca ogoarele \u021b\u0103rii: vor avea drept de r\u0103scump\u0103rare \u0219i la Jubileu vor fi eliberate.",
+    "C\u00e2t despre cet\u0103\u021bile levi\u021bilor \u0219i casele din cet\u0103\u021bile st\u0103p\u00e2nirii lor, levi\u021bii vor avea un drept ve\u0219nic de r\u0103scump\u0103rare.",
+    "Dac\u0103 cineva cump\u0103r\u0103 de la levi\u021bi o cas\u0103, casa v\u00e2ndut\u0103 \u00een cetatea st\u0103p\u00e2nirii lor va fi eliberat\u0103 la Jubileu; c\u0103ci casele din cet\u0103\u021bile levi\u021bilor sunt mo\u0219ia lor \u00een mijlocul fiilor lui Israel.",
+    "Iar ogorul din jurul cet\u0103\u021bilor lor s\u0103 nu se v\u00e2nd\u0103, c\u0103ci este mo\u0219ia lor ve\u0219nic\u0103.",
+    "Dac\u0103 fratele t\u0103u s\u0103r\u0103ce\u0219te \u0219i se clatin\u0103 l\u00e2ng\u0103 tine, s\u0103-l sprijini; ca str\u0103in \u0219i venetic s\u0103 tr\u0103iasc\u0103 cu tine.",
+    "S\u0103 nu iei de la el dob\u00e2nd\u0103, nici spor, ci s\u0103 te temi de Dumnezeul t\u0103u, ca fratele t\u0103u s\u0103 tr\u0103iasc\u0103 cu tine.",
+    "S\u0103 nu-i dai banii t\u0103i cu dob\u00e2nd\u0103 \u0219i s\u0103 nu-i dai hrana ta pentru c\u00e2\u0219tig.",
+    "Eu sunt DOMNUL Dumnezeul vostru, Care v-am scos din \u021bara Egiptului ca s\u0103 v\u0103 dau \u021bara Canaanului \u0219i s\u0103 v\u0103 fiu Dumnezeu!",
+    "Dac\u0103 fratele t\u0103u s\u0103r\u0103ce\u0219te l\u00e2ng\u0103 tine \u0219i \u021bi se vinde \u021bie, s\u0103 nu-l pui la munc\u0103 de rob;",
+    "s\u0103 fie la tine ca un argat, ca un venetic; p\u00e2n\u0103 la anul de Jubileu va sluji la tine.",
+    "Atunci va pleca de la tine, el \u0219i copiii lui \u00eempreun\u0103 cu el, \u0219i se va \u00eentoarce la familia sa \u0219i la mo\u0219ia p\u0103rin\u021bilor s\u0103i.",
+    "C\u0103ci ei sunt slujitorii Mei, pe care i-am scos din \u021bara Egiptului; s\u0103 nu fie v\u00e2ndu\u021bi cum se v\u00e2nd sclavii.",
+    "S\u0103 nu-l st\u0103p\u00e2ne\u0219ti cu asprime, ci s\u0103 te temi de Dumnezeul t\u0103u.",
+    "Robii \u0219i roabele pe care le vei avea s\u0103 fie din neamurile din jurul vostru; din ele ve\u021bi cump\u0103ra robi \u0219i roabe.",
+    "Ve\u021bi putea cump\u0103ra \u0219i din copiii veneticilor care locuiesc la voi \u0219i din familiile lor care sunt la voi, n\u0103scu\u021bi \u00een \u021bara voastr\u0103; ei vor fi mo\u0219ia voastr\u0103.",
+    "\u00cei ve\u021bi l\u0103sa mo\u0219tenire fiilor vo\u0219tri dup\u0103 voi, ca mo\u0219ie de st\u0103p\u00e2nit; \u00eei ve\u021bi avea ca robi pentru totdeauna. Dar peste fra\u021bii vo\u0219tri, fiii lui Israel, niciunul s\u0103 nu st\u0103p\u00e2neasc\u0103 peste altul cu asprime.",
+    "Dac\u0103 un str\u0103in sau un venetic de la tine devine bogat, iar fratele t\u0103u s\u0103r\u0103ce\u0219te l\u00e2ng\u0103 el \u0219i se vinde str\u0103inului sau veneticului de la tine, ori vreunuia din familia str\u0103inului,",
+    "dup\u0103 ce s-a v\u00e2ndut va avea dreptul de r\u0103scump\u0103rare; unul din fra\u021bii lui \u00eel va putea r\u0103scump\u0103ra,",
+    "sau unchiul lui, sau fiul unchiului lui \u00eel va putea r\u0103scump\u0103ra, sau o rud\u0103 de s\u00e2nge din familia lui \u00eel va putea r\u0103scump\u0103ra; sau, dac\u0103 \u00ee\u0219i va spori mijloacele, se va r\u0103scump\u0103ra singur.",
+    "Va socoti cu cel ce l-a cump\u0103rat de la anul c\u00e2nd i s-a v\u00e2ndut p\u00e2n\u0103 la anul de Jubileu; pre\u021bul v\u00e2nz\u0103rii lui se va potrivi cu num\u0103rul anilor, iar zilele lui vor fi socotite ca zilele unui argat.",
+    "Dac\u0103 mai sunt mul\u021bi ani, va restitui din pre\u021bul cump\u0103r\u0103rii sale pre\u021bul r\u0103scump\u0103r\u0103rii \u00een raport cu ei;",
+    "iar dac\u0103 au mai r\u0103mas pu\u021bini ani p\u00e2n\u0103 la anul de Jubileu, va socoti cu el \u0219i \u00ee\u0219i va restitui pre\u021bul r\u0103scump\u0103r\u0103rii \u00een raport cu anii lui.",
+    "Va fi la el ca un argat tocmit de la an la an; el s\u0103 nu-l st\u0103p\u00e2neasc\u0103 cu asprime sub ochii t\u0103i.",
+    "Iar dac\u0103 nu este r\u0103scump\u0103rat prin aceste mijloace, va ie\u0219i liber la anul de Jubileu, el \u0219i copiii lui \u00eempreun\u0103 cu el.",
+    "C\u0103ci fiii lui Israel sunt slujitorii Mei; sunt slujitorii Mei pe care i-am scos din \u021bara Egiptului. Eu sunt DOMNUL Dumnezeul vostru!\u201d",
+  ],
 }
