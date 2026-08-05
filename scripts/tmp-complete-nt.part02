@@ -29,11 +29,20 @@
             index += 1
 
     selected: dict[str, str] = {}
-    selections = {"existing": 0, "primary": 0, "secondary": 0}
+    selections = {"existing": 0, "primary": 0, "secondary": 0, "fixed": 0}
     minimum_semantic = 1.0
     minimum_score = 1.0
     weak: list[dict[str, Any]] = []
     for item in items:
+        fixed_text = FIXED_TRANSLATIONS.get(item.key)
+        if fixed_text is not None:
+            text = modernize(fixed_text)
+            if not text or PLACEHOLDER.search(text):
+                raise RuntimeError(f"{item.key}: fixed translation is invalid")
+            selected[item.key] = text
+            selections["fixed"] += 1
+            continue
+
         options: list[tuple[float, float, str, str]] = []
         if item.existing and not PLACEHOLDER.search(item.existing):
             text = modernize(item.existing)
@@ -59,12 +68,18 @@
                 return False
             return True
 
-        gated_options = [option for option in options if deterministic_ok(option)]
-        if gated_options:
-            options = gated_options
+        if item.kind == "verse":
+            gated_options = [option for option in options if deterministic_ok(option)]
+            if gated_options:
+                options = gated_options
         options.sort(reverse=True, key=lambda value: value[0])
         aggregate, semantic, label, text = options[0]
-        if semantic < 0.25 or aggregate < 0.20 or not deterministic_ok(options[0]):
+        quality_ok = (
+            deterministic_ok(options[0])
+            if item.kind == "verse"
+            else bool(text.strip()) and not PLACEHOLDER.search(text)
+        )
+        if semantic < 0.25 or aggregate < 0.20 or not quality_ok:
             weak.append({"key": item.key, "semantic": semantic, "score": aggregate, "label": label, "text": text})
         selected[item.key] = text
         selections[label] += 1
