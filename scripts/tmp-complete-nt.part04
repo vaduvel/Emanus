@@ -4,18 +4,22 @@
             if isinstance(note, dict) and isinstance(note.get("number"), int)
         }
         for number in record.get("referenceNoteNumbers", []):
+            key = f"{book_id}.{chapter}.R{number}"
+            fixed = TRADITIONAL_READINGS.get(key)
             existing_note = existing_reference_notes.get(number, {})
             existing_reading = existing_note.get("traditionalReading")
             if not isinstance(existing_reading, str) or PLACEHOLDER.search(existing_reading):
-                existing_reading = None
+                existing_reading = fixed["traditionalReading"] if fixed else None
             source = source_data["texts"][base_id].get((chapter, number), "")
+            if not source and fixed:
+                source = fixed["bridge"]
             if not source and existing_reading:
                 source = existing_reading
             if not source:
-                raise RuntimeError(f"{book_id}.{chapter}.R{number}: no public-domain bridge or existing resolved reading")
+                raise RuntimeError(f"{key}: no public-domain bridge or existing resolved reading")
             benchmarks = [source_data["texts"][lock_id].get((chapter, number), existing_reading or source) for lock_id in benchmark_ids]
             items.append(Item(
-                f"{book_id}.{chapter}.R{number}",
+                key,
                 book_id,
                 chapter,
                 number,
