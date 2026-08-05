@@ -58,29 +58,45 @@
     ]
   },
   "sources": {
-    "webbe": {
-      "id": "eng-webbe",
-      "name": "World English Bible British Edition with Deuterocanon",
+    "english": {
+      "id": "engwebp",
+      "name": "World English Bible, Protestant Edition",
       "license": "Public Domain",
-      "snapshot": "sources/eng-webbe_usfm.zip",
-      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
-      "role": "public-domain bridge and versification control"
+      "snapshot": "sources/engwebp_usfm.zip",
+      "sha256": "2287d3d5b23e7badf09d81cb3a02528f8b6bd94977b1cbfb8038008b2df1f67b",
+      "role": "public-domain bridge and target versification"
     },
-    "wlc": {
-      "id": "hebwlc",
+    "hebrew": {
+      "id": "hboWLC",
       "name": "Westminster Leningrad Codex",
-      "license": "Public Domain",
-      "snapshot": "sources/hebwlc_usfm.zip",
-      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "license": "Public Domain text",
+      "snapshot": "sources/hboWLC_usfm.zip",
+      "sha256": "da7b33af7a23e0e9fce8a8adf3cb5bcb035a513f44b83865b390c52dc3dd2ce3",
       "role": "Hebrew authority for canonical Old Testament"
     },
-    "btf": {
+    "romanianBtf": {
       "id": "ronbtf",
       "name": "Biblia Traducerea Fidelă",
       "license": "Public Domain",
       "snapshot": "sources/ronbtf_usfm.zip",
       "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
-      "role": "Romanian comparison-only benchmark"
+      "role": "comparison-only benchmark"
+    },
+    "romanianCornilescu1924": {
+      "id": "ron1924",
+      "name": "Biblia Dumitru Cornilescu 1924",
+      "license": "Public Domain",
+      "snapshot": "sources/ron1924_usfm.zip",
+      "sha256": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
+      "role": "comparison-only benchmark"
+    },
+    "deuterocanonBridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "supplement research only; not used to publish the 66-book canon"
     }
   },
   "books": [
