@@ -18,6 +18,24 @@ jobs:
           ref: agent/biblia-emanus-nt-audit3
           fetch-depth: 0
 
+      - name: Align Romans 1:4 expected source text
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/tmp-approve-romans-1-4.py')
+          text = path.read_text(encoding='utf-8')
+          old_expected = 'și a fost desemnat Fiu al lui Dumnezeu cu putere, potrivit Duhului sfințeniei, prin învierea dintre cei morți: Isus Hristos, Domnul nostru.'
+          old_replacement = 'și a fost desemnat drept Fiu al lui Dumnezeu cu putere, potrivit Duhului sfințeniei, prin învierea dintre cei morți: Isus Hristos, Domnul nostru.'
+          new_expected = 'și a fost desemnat Fiu al lui Dumnezeu în putere, potrivit duhului sfințeniei, prin învierea dintre cei morți: Isus Hristos, Domnul nostru.'
+          new_replacement = 'și a fost desemnat drept Fiu al lui Dumnezeu în putere, potrivit duhului sfințeniei, prin învierea dintre cei morți: Isus Hristos, Domnul nostru.'
+          if text.count(old_expected) != 1 or text.count(old_replacement) != 1:
+              raise SystemExit('Romans 1:4 patch markers missing')
+          path.write_text(
+              text.replace(old_expected, new_expected).replace(old_replacement, new_replacement),
+              encoding='utf-8',
+          )
+          PY
+
       - name: Apply Romans 1-4 semantic audit
         run: python3 scripts/tmp-approve-romans-1-4.py
 
