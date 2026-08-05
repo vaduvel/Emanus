@@ -14,7 +14,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: pr40-exact-inventory-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   inventory:
@@ -22,6 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: agent/biblia-emanus-all-pr40-rebuild
           fetch-depth: 1
       - name: Build exact inventory
         run: python3 scripts/inventory-pr40-books.py
@@ -31,3 +36,16 @@ jobs:
           name: pr40-exact-book-inventory
           path: docs/biblia-emanus/PR40-EXACT-BOOK-INVENTORY.json
           retention-days: 7
+      - name: Persist exact inventory
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/biblia-emanus/PR40-EXACT-BOOK-INVENTORY.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'audit(bible): persist exact PR40 book inventory'
+          git pull --rebase origin agent/biblia-emanus-all-pr40-rebuild
+          git push origin HEAD:agent/biblia-emanus-all-pr40-rebuild
