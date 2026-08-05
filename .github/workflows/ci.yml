@@ -39,6 +39,7 @@ jobs:
           path.write_text(text.replace(old, new), encoding='utf-8')
           PY
           python3 scripts/upgrade-ot-audit2.py
+          python3 scripts/patch-validator-audit2.py
 
       - uses: pnpm/action-setup@v4
 
@@ -178,6 +179,7 @@ jobs:
           rm -f .github/workflows/upgrade-ot-audit2.yml
           rm -f scripts/upgrade-ot-audit2.py
           rm -f scripts/patch-audit2-integration.py
+          rm -f scripts/patch-validator-audit2.py
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
