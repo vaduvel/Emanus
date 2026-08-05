@@ -66,12 +66,24 @@ CANONICAL_TERMS: dict[str, tuple[str, ...]] = {
     "resurrection": ("învier",), "eternal": ("veșnic",), "baptiz": ("botez",),
 }
 
+FIXED_TRANSLATIONS: dict[str, str] = {
+    "MRK.14.14": "și, oriunde va intra, spuneți stăpânului casei: «Învățătorul spune: Unde este camera Mea de oaspeți, în care să mănânc Paștele împreună cu ucenicii Mei?»",
+    "LUK.18.39": "Cei care mergeau înainte îl mustrau să tacă, dar el striga și mai tare: „Fiul lui David, ai milă de mine!”",
+    "TIT.3.10": "După prima și a doua avertizare, evită-l pe omul care provoacă dezbinări,",
+}
+
 TRADITIONAL_READINGS: dict[str, dict[str, str]] = {
     "ACT.15.R34": {
         "bridge": "But it seemed good to Silas to remain there.",
         "traditionalReading": "Dar Sila a socotit de bine să rămână acolo.",
         "greekWitnesses": "Textus Receptus: ἔδοξε δὲ τῷ Σίλᾳ ἐπιμεῖναι αὐτοῦ.",
         "reason": "Fapte 15:34 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează o propoziție despre hotărârea lui Sila de a rămâne.",
+    },
+    "ACT.24.R7": {
+        "bridge": "We wanted to judge him according to our law, but the commander Lysias came and took him away from our hands with great violence, commanding his accusers to come to you.",
+        "traditionalReading": "Am vrut să-l judecăm potrivit Legii noastre, dar comandantul Lisias a venit, l-a smuls din mâinile noastre cu multă violență și le-a poruncit acuzatorilor lui să vină la tine.",
+        "greekWitnesses": "Textus Receptus: καὶ κατὰ τὸν ἡμέτερον νόμον ἠθελήσαμεν κρῖναι· παρελθὼν δὲ Λυσίας ὁ χιλίαρχος μετὰ πολλῆς βίας ἐκ τῶν χειρῶν ἡμῶν ἀπήγαγεν, κελεύσας τοὺς κατηγόρους αὐτοῦ ἔρχεσθαι ἐπὶ σέ.",
+        "reason": "Fapte 24:7 nu are unitate principală separată în SBLGNT 1.2; Textus Receptus păstrează relatarea despre intervenția comandantului Lisias.",
     },
     "ACT.28.R29": {
         "bridge": "When he had said these words, the Jews departed, having a great dispute among themselves.",
