@@ -1,15 +1,74 @@
 /*
  * Textul biblic al cărții Levitic, capitolul 13.
  *
- * ATENȚIE, agentul care lucrează la Biblia Emanus:
- * fișierul acesta ține LOCUL textului, nu textul. Fiecare intrare din tablou
- * este un verset, în ordine, de la 1 la 59. Înlocuiește fiecare șir cu versetul
- * din Biblia Emanus (validată din trei părți) și nu schimba nimic altceva:
- * nici numărul intrărilor, nici cheia capitolului, nici numele exportului.
+ * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/LEV.13.json.
+ * Capitol cu status "published", auditat verset cu verset din WLC-OSHB,
+ * cu WEBU ca bază public-domain. 59 de versete.
+ *
+ * Notă: versetul 53 păstrează forma din sursă ("preotul examina"),
+ * unde se așteaptă "preotul examinează". Nu a fost corectată tăcut.
  */
 
-const PLACEHOLDER = "[textul biblic se completează din Biblia Emanus]"
-
 export const LEVITIC_TEXT_13: Record<number, readonly string[]> = {
-  13: Array.from({ length: 59 }, (_, i) => `[Levitic 13:${i + 1}] ${PLACEHOLDER}`),
+  13: [
+    "DOMNUL le-a vorbit lui Moise și lui Aaron, spunând:",
+    "Când un om va avea pe pielea trupului său o umflătură, o erupție sau o pată albă, iar aceasta va deveni pe pielea trupului său o plagă de lepră, să fie adus la preotul Aaron sau la unul dintre fiii lui, preoții.",
+    "Preotul să examineze rana de pe pielea trupului; dacă părul de pe rană s-a făcut alb și rana pare mai adâncă decât pielea trupului, este o rană de lepră. Preotul să îl examineze și să îl declare necurat.",
+    "Dar dacă pata de pe pielea trupului său este albă și nu pare mai adâncă decât pielea, iar părul ei nu s-a făcut alb, preotul să îl izoleze pe cel cu rana timp de șapte zile.",
+    "Preotul să îl examineze în ziua a șaptea; dacă rana a rămas neschimbată în ochii lui și nu s-a întins pe piele, preotul să îl mai izoleze șapte zile.",
+    "Preotul să-l examineze din nou în ziua a șaptea; dacă plaga a pălit și nu s-a întins pe piele, preotul să-l declare curat: este o erupție. El să-și spele hainele și va fi curat.",
+    "Dar dacă eczema se va întinde pe piele după ce s-a arătat preotului pentru curățirea sa, să se arate din nou preotului.",
+    "Preotul îl va examina; dacă eczema s-a întins pe piele, preotul îl va declara necurat: este lepră.",
+    "Când va fi pe un om o rană de lepră, să fie adus la preot.",
+    "Preotul îl va examina; dacă este o umflătură albă pe piele, care a făcut părul alb și dacă este carne vie în umflătură,",
+    "este o lepră veche pe pielea trupului său. Preotul îl va declara necurat; nu îl va izola, căci este necurat.",
+    "Dar dacă lepra va izbucni pe piele și va acoperi toată pielea celui cu rana, de la cap până la picioare, pretutindeni unde privesc ochii preotului,",
+    "preotul îl va examina; dacă lepra a acoperit tot trupul lui, îl va declara curat pe cel cu rana: s-a făcut alb peste tot, este curat.",
+    "Dar în ziua când se va vedea în el carne vie, va fi necurat.",
+    "Preotul va vedea carnea vie și îl va declara necurat; carnea vie este necurată, este lepră.",
+    "Dacă însă carnea vie se va schimba și se va face iarăși albă, să vină la preot.",
+    "Preotul îl va examina; dacă rana s-a făcut albă, preotul îl va declara curat pe cel cu rana: este curat.",
+    "Când trupul va avea pe piele o bubă și ea s-a vindecat,",
+    "iar în locul bubei va fi o umflătură albă sau o pată alb-roșiatică, să se arate preotului.",
+    "Preotul o va examina; dacă pare mai lăsată decât pielea și părul ei s-a făcut alb, preotul îl va declara necurat: este o rană de lepră care a izbucnit în bubă.",
+    "Dar dacă preotul o examinează și iată că nu este păr alb pe ea, nu este mai lăsată decât pielea și este palidă, preotul să îl izoleze șapte zile.",
+    "Dacă s-a întins pe piele, preotul îl va declara necurat: este o rană de lepră.",
+    "Dar dacă pata albă a rămas în locul ei și nu s-a întins, este cicatricea bubei; preotul îl va declara curat.",
+    "Sau când trupul va avea pe piele o arsură de foc, iar locul viu al arsurii devine o pată alb-roșiatică sau albă,",
+    "preotul o va examina; dacă părul de pe pată s-a făcut alb și ea pare mai adâncă decât pielea, este lepră izbucnită în arsură. Preotul îl va declara necurat: este o rană de lepră.",
+    "Dar dacă preotul o examinează și iată că nu este păr alb pe pată, ea nu este mai adâncă decât pielea și este palidă, preotul să îl izoleze șapte zile.",
+    "Preotul îl va examina în ziua a șaptea; dacă s-a întins pe piele, preotul îl va declara necurat: este o rană de lepră.",
+    "Dar dacă pata a rămas la locul ei, nu s-a întins pe piele și este palidă, este umflătura arsurii. Preotul îl va declara curat, căci este cicatricea arsurii.",
+    "Când un bărbat sau o femeie va avea o rană pe cap sau pe barbă,",
+    "preotul va examina rana; dacă ea pare mai adâncă decât pielea și este pe ea păr galben și subțire, preotul îl va declara necurat: este râie, adică lepra capului sau a bărbii.",
+    "Dar dacă preotul examinează rana de râie și iată că ea nu pare mai adâncă decât pielea și nu este păr negru pe ea, preotul să îl izoleze pe cel cu rana de râie șapte zile.",
+    "Preotul va examina rana în ziua a șaptea; dacă râia nu s-a întins, nu este păr galben pe ea și râia nu pare mai adâncă decât pielea,",
+    "omul se va rade, dar râia nu o va rade; iar preotul îl va izola pe cel cu râia încă șapte zile.",
+    "Preotul va examina râia în ziua a șaptea; dacă râia nu s-a întins pe piele și nu pare mai adâncă decât pielea, preotul îl va declara curat. El își va spăla hainele și va fi curat.",
+    "Dar dacă râia se va întinde pe piele după curățirea lui,",
+    "preotul îl va examina; dacă râia s-a întins pe piele, preotul nu va mai căuta părul galben: este necurat.",
+    "Dar dacă în ochii lui râia a rămas neschimbată și a crescut păr negru pe ea, râia s-a vindecat: este curat și preotul îl va declara curat.",
+    "Când un bărbat sau o femeie va avea pe pielea trupului pete, adică pete albe,",
+    "preotul le va examina; dacă petele de pe pielea trupului lor sunt alb-palide, este o eczemă albă izbucnită pe piele: el este curat.",
+    "Dacă unui bărbat îi cade părul de pe cap, el este chel, dar este curat.",
+    "Dacă îi cade părul din fața capului, este chel în frunte, dar este curat.",
+    "Dar dacă pe chelie sau pe chelia din frunte va fi o rană alb-roșiatică, este lepră izbucnită pe chelia lui sau pe chelia din fruntea lui.",
+    "Preotul îl va examina; dacă umflătura ranei este alb-roșiatică pe chelia lui sau pe chelia din frunte, arătând ca lepra de pe pielea trupului,",
+    "omul acela este lepros, este necurat. Preotul îl va declara necurat; rana lui este pe cap.",
+    "Leprosul care are această rană să aibă hainele sfâșiate, capul descoperit, să-și acopere barba și să strige: «Necurat! Necurat!»",
+    "Toate zilele cât va fi rana pe el va fi necurat. Este necurat; va locui singur, locuința lui va fi afară din tabără.",
+    "Dacă într-o haină va apărea o plagă de lepră, fie într-o haină de lână, fie într-una de in,",
+    "fie pe urzeală, fie pe bătătură, de in sau de lână, fie pe o piele sau pe orice lucru de piele,",
+    "dacă rana este verzuie sau roșiatică pe haină sau pe piele, pe urzeală sau pe bătătură, sau pe orice lucru de piele, este o rană de lepră și se va arăta preotului.",
+    "Preotul va examina rana și va izola lucrul cu rana șapte zile.",
+    "Va examina rana în ziua a șaptea; dacă rana s-a întins pe haină, pe urzeală sau pe bătătură, sau pe piele, pentru orice lucrare la care se folosește pielea, rana este o lepră distrugătoare: lucrul este necurat.",
+    "Va arde haina sau urzeala, ori bătătura de lână sau de in, ori orice lucru de piele pe care se află rana, căci este o lepră distrugătoare; să fie ars în foc.",
+    "Dar dacă preotul examina și iată că rana nu s-a întins pe haină, pe urzeală sau pe bătătură, ori pe orice lucru de piele,",
+    "preotul va porunci să se spele lucrul pe care este rana și îl va mai izola șapte zile.",
+    "Preotul va examina rana după ce a fost spălată; dacă rana nu și-a schimbat înfățișarea, deși nu s-a întins, lucrul este necurat: să îl arzi în foc, este o rosătură pe fața sau pe spatele lui.",
+    "Dar dacă preotul examinează și iată că rana a devenit palidă după ce a fost spălată, o va rupe din haină sau din piele, ori din urzeală sau din bătătură.",
+    "Dacă va mai apărea pe haină, pe urzeală sau pe bătătură, ori pe orice lucru de piele, este o lepră izbucnită; să arzi în foc lucrul pe care este rana.",
+    "Dar haina, urzeala sau bătătura, ori orice lucru de piele pe care îl vei spăla și de pe care va dispărea rana, să fie spălat a doua oară și va fi curat.",
+    "Aceasta este legea ranei de lepră de pe o haină de lână sau de in, de pe urzeală sau de pe bătătură, ori de pe orice lucru de piele, pentru a o declara curată sau necurată.",
+  ],
 }
