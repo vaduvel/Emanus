@@ -28,9 +28,11 @@ jobs:
 
       - name: Reconstruct previous source/audit helper
         run: |
+          : > /tmp/old_pipeline.py
           for part in 00 01 02 03 04 05; do
-            git show 8cdc210e01c:scripts/tmp-complete-nt.part${part}
-          done > /tmp/old_pipeline.py
+            git show 8cdc210e01c:scripts/tmp-complete-nt.part${part} >> /tmp/old_pipeline.py
+            printf '\n' >> /tmp/old_pipeline.py
+          done
           python3 -m py_compile /tmp/old_pipeline.py
 
       - name: Install NLLB runtime
