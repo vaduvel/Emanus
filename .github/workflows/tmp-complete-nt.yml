@@ -95,12 +95,15 @@ jobs:
           verses = sum(item['verses'] for item in reports)
           minimum_semantic = min(item['minimumSemantic'] for item in reports)
           minimum_score = min(item['minimumScore'] for item in reports)
-          selected = {label: sum(item['selected'][label] for item in reports) for label in ('existing', 'primary', 'secondary')}
+          selected = {
+              label: sum(item['selected'].get(label, 0) for item in reports)
+              for label in ('existing', 'primary', 'secondary', 'fixed')
+          }
           lines = [
               '# Biblia Emanus — Audit Noul Testament 3.0',
               '',
               '- Data finalizării: 2026-08-05',
-              f'- Cărți: 27',
+              '- Cărți: 27',
               f'- Capitole: {chapters}',
               f'- Versete: {verses}',
               '- Autoritate: SBLGNT 1.2, cu aparat critic',
@@ -110,7 +113,7 @@ jobs:
               '- Motor: OPUS-MT en-ro + OPUS-MT TC-big en-ro + control semantic multilingual MiniLM',
               f'- Scor semantic minim acceptat: {minimum_semantic:.4f}',
               f'- Scor agregat minim acceptat: {minimum_score:.4f}',
-              f"- Selecții: text existent {selected['existing']}; OPUS principal {selected['primary']}; OPUS secundar {selected['secondary']}",
+              f"- Selecții: text existent {selected['existing']}; OPUS principal {selected['primary']}; OPUS secundar {selected['secondary']}; corecții editoriale fixate {selected['fixed']}",
               '',
               '## Porți obligatorii',
               '',
@@ -179,11 +182,19 @@ jobs:
           pnpm typecheck
           pnpm build
 
+      - name: Remove temporary NT completion machinery
+        run: |
+          rm -f .github/workflows/tmp-complete-nt.yml
+          rm -f .github/workflows/tmp-cancel-obsolete-nt-runs.yml
+          rm -f .github/workflows/tmp-scan-nt-reference-notes.yml
+          rm -f scripts/tmp-complete-nt.py
+          rm -f scripts/tmp-complete-nt.part??
+
       - name: Commit final published New Testament
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/biblia-emanus docs/biblia-emanus/NOUL-TESTAMENT-AUDIT-3.md packages/shared/src/bible/bibliaEmanusNt.generated.ts
+          git add -A .github/workflows scripts docs/data/biblia-emanus docs/biblia-emanus/NOUL-TESTAMENT-AUDIT-3.md packages/shared/src/bible/bibliaEmanusNt.generated.ts
           git diff --cached --quiet && { echo "No changes produced"; exit 1; }
           git commit -m "Publish complete Biblia Emanus New Testament with audit engine 3.0"
           git push origin HEAD:agent/biblia-emanus-nt-audit3
