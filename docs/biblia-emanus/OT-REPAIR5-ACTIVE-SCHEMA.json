@@ -1,350 +1,764 @@
 {
-  "manifestKeys": [
-    "id",
-    "name",
-    "abbreviation",
-    "language",
-    "canon",
-    "status",
-    "public",
-    "publicationBlock",
-    "sourceLedger",
-    "translationMethod",
-    "automatedPublicationGate",
-    "sources",
-    "reviewRequirements",
-    "licenseDecision",
-    "license",
-    "progress",
-    "draftedChapters",
-    "sourceLock",
-    "onomastics",
-    "newTestamentVersification",
-    "newTestament"
-  ],
-  "manifestProgress": {
-    "booksPlanned": 66,
-    "chaptersPlanned": 1189,
-    "chaptersDrafted": 471,
-    "versesDrafted": 14451,
-    "chaptersApproved": 471,
-    "chaptersPublished": 471
+  "manifestWithoutDraftedChapters": {
+    "id": "biblia-emanus",
+    "name": "Biblia Emanus",
+    "abbreviation": "BE",
+    "language": "ro",
+    "canon": "protestant-66",
+    "status": "draft",
+    "public": true,
+    "publicationBlock": "automated-audit-required",
+    "sourceLedger": "source-ledger.json",
+    "translationMethod": {
+      "baseLanguage": "English bridge; Biblical Hebrew or Greek authority",
+      "baseText": "World English Bible Updated, Protestant Edition",
+      "principle": "traducere românească nouă din baza WEBU, verificată verset cu verset în textul ebraic sau grecesc înainte de publicare",
+      "aiOutputIsDraftOnly": false,
+      "aiMayPublishAfterAutomatedAudit": true,
+      "benchmarkIsVerificationNotSource": true,
+      "romanianDiacriticsRequired": true,
+      "unicodeNormalization": "NFC"
+    },
+    "automatedPublicationGate": {
+      "humanApprovalRequired": false,
+      "publishWhenAllChecksApproved": true,
+      "minimumRomanianBenchmarks": 3,
+      "requiredBenchmarkFamilies": [
+        "cornilescu"
+      ],
+      "exactMatchRequired": false,
+      "requiredChecks": [
+        "ai-source-language",
+        "ai-romanian-language",
+        "ai-theological-context",
+        "source-snapshot-integrity",
+        "source-versification-coverage",
+        "pinned-romanian-benchmark-comparison",
+        "deterministic-verse-integrity",
+        "omission-addition",
+        "romanian-benchmark-triangulation",
+        "copyright-distance",
+        "critical-issues-resolved",
+        "audit-text-digest",
+        "nt-versification-integrity",
+        "critical-apparatus-coverage"
+      ],
+      "policyDocument": "../../biblia-emanus/AUTOMATED-PUBLICATION.md"
+    },
+    "sources": {
+      "english": {
+        "id": "engwebp",
+        "name": "World English Bible Updated, Protestant Edition",
+        "url": "https://ebible.org/engwebp/",
+        "license": "Public Domain",
+        "trademarkNotice": "Textul modificat nu va fi numit World English Bible."
+      },
+      "oldTestament": {
+        "id": "WLC-OSHB",
+        "name": "Westminster Leningrad Codex / Open Scriptures Hebrew Bible",
+        "url": "https://hb.openscriptures.org/",
+        "textLicense": "Public Domain",
+        "annotationLicense": "CC BY 4.0",
+        "attribution": "Open Scriptures Hebrew Bible Project"
+      },
+      "newTestament": {
+        "id": "SBLGNT",
+        "name": "SBL Greek New Testament",
+        "url": "https://www.sblgnt.com/",
+        "license": "CC BY 4.0",
+        "attribution": "Michael W. Holmes and the Society of Biblical Literature"
+      },
+      "romanianBenchmarks": [
+        {
+          "id": "CORNILESCU-1924",
+          "name": "Biblia Dumitru Cornilescu 1924",
+          "family": "cornilescu",
+          "url": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+          "license": "Public Domain",
+          "pinned": true,
+          "mode": "comparison-only"
+        },
+        {
+          "id": "BTF",
+          "name": "Biblia Traducerea Fidela",
+          "family": "fidela",
+          "url": "https://ebible.org/bible/details.php?id=ronbtf",
+          "license": "Public Domain",
+          "pinned": true,
+          "mode": "comparison-only"
+        },
+        {
+          "id": "BIBLIA-LIBERA",
+          "name": "Biblia Liberă",
+          "family": "libera",
+          "url": "https://ebible.org/ronbl/",
+          "license": "Public Domain",
+          "pinned": true,
+          "mode": "comparison-only"
+        },
+        {
+          "id": "NTR",
+          "name": "Noua Traducere Românească",
+          "family": "biblica",
+          "url": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+          "pinned": false,
+          "fullTextStored": false,
+          "mode": "comparison-only"
+        }
+      ]
+    },
+    "reviewRequirements": [
+      "ai-source-language",
+      "ai-romanian-language",
+      "ai-theological-context",
+      "source-snapshot-integrity",
+      "source-versification-coverage",
+      "pinned-romanian-benchmark-comparison",
+      "deterministic-verse-integrity",
+      "omission-addition",
+      "romanian-benchmark-triangulation",
+      "copyright-distance",
+      "critical-issues-resolved",
+      "audit-text-digest",
+      "nt-versification-integrity",
+      "critical-apparatus-coverage"
+    ],
+    "licenseDecision": "CC BY 4.0",
+    "license": {
+      "id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "attributions": [
+        "Biblia Emanus",
+        "World English Bible Updated, public domain base text",
+        "Open Scriptures Hebrew Bible Project",
+        "SBL Greek New Testament, Michael W. Holmes and Society of Biblical Literature",
+        "Biblia Dumitru Cornilescu 1924, etalon public domain",
+        "Biblia Traducerea Fidela, etalon public domain"
+      ]
+    },
+    "progress": {
+      "booksPlanned": 66,
+      "chaptersPlanned": 1189,
+      "chaptersDrafted": 471,
+      "versesDrafted": 14451,
+      "chaptersApproved": 471,
+      "chaptersPublished": 471
+    },
+    "sourceLock": "source-lock.json",
+    "onomastics": "onomastics.json",
+    "newTestamentVersification": "nt-versification.json",
+    "newTestament": {
+      "books": 27,
+      "chapters": 260,
+      "verses": 7941,
+      "status": "published",
+      "public": true
+    }
   },
-  "manifestNewTestament": {
-    "books": 27,
-    "chapters": 260,
-    "verses": 7941,
-    "status": "published",
-    "public": true
+  "manifestDraftedChapterCount": 471,
+  "ledgerTop": {
+    "schemaVersion": 1,
+    "translation": "BE",
+    "verifiedOn": "2026-08-04",
+    "policy": {
+      "englishBase": "World English Bible Updated, Protestant Edition",
+      "englishLicense": "Public Domain",
+      "oldTestamentBase": "Westminster Leningrad Codex",
+      "oldTestamentTextLicense": "Public Domain",
+      "requireExactChapterUrls": true,
+      "requireCanonicalVerseCount": true,
+      "sourceLanguageReviewStillRequired": true,
+      "requirePinnedSourceSnapshot": true,
+      "requireVersificationMapping": true,
+      "newTestamentBase": "SBLGNT 1.2",
+      "newTestamentSupplementalWitness": "Textus Receptus"
+    },
+    "sourceLock": "source-lock.json"
   },
-  "ledgerKeys": [
-    "schemaVersion",
-    "translation",
-    "verifiedOn",
-    "policy",
-    "chapters",
-    "sourceLock"
-  ],
-  "ledgerPolicy": {
-    "englishBase": "World English Bible Updated, Protestant Edition",
-    "englishLicense": "Public Domain",
-    "oldTestamentBase": "Westminster Leningrad Codex",
-    "oldTestamentTextLicense": "Public Domain",
-    "requireExactChapterUrls": true,
-    "requireCanonicalVerseCount": true,
-    "sourceLanguageReviewStillRequired": true,
-    "requirePinnedSourceSnapshot": true,
-    "requireVersificationMapping": true,
-    "newTestamentBase": "SBLGNT 1.2",
-    "newTestamentSupplementalWitness": "Textus Receptus"
-  },
-  "ledgerSampleGEN1": {
-    "expectedVerses": 31,
-    "englishUrl": "https://ebible.org/engwebp/GEN01.htm",
-    "hebrewUrl": "https://ebible.org/hboWLC/GEN01.htm"
-  },
-  "ledgerSampleJOS1": {
+  "ledgerJOS1": {
     "expectedVerses": 18,
     "englishUrl": "https://ebible.org/engwebp/JOS01.htm",
     "hebrewUrl": "https://ebible.org/hboWLC/JOS01.htm"
   },
-  "sourceLockKeys": [
-    "schemaVersion",
-    "engineVersion",
-    "translation",
-    "capturedOn",
-    "snapshots",
-    "books",
-    "upstreamArtifacts",
-    "files",
-    "artifacts",
-    "versificationRules",
-    "automatedThresholds"
-  ],
-  "sourceLockPolicy": null,
-  "sourceLockFiles": {
-    "WEBU-GEN": {
-      "bookId": "GEN",
-      "language": "en",
-      "role": "base",
-      "archivePath": "web/02-GENengwebp.usfm",
-      "sha256": "b59378e7ced69a860392764578fe1bc2710ffb225cc49c01ce431f3e51d4a94a",
-      "sourceId": "engwebp",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+  "lockTopWithoutCollections": {
+    "schemaVersion": 3,
+    "engineVersion": "3.0.0",
+    "translation": "BE",
+    "capturedOn": "2026-08-04",
+    "snapshots": {
+      "ot-legacy": {
+        "path": "sources/ot-gen-deu-jos-usfm.zip",
+        "sha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847"
+      },
+      "nt": {
+        "path": "sources/nt-sblgnt-1.2.zip",
+        "sha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
+      }
     },
-    "WLC-GEN": {
-      "bookId": "GEN",
-      "language": "he",
-      "role": "original",
-      "archivePath": "wlc/02-GENhboWLC.usfm",
-      "sha256": "50a8c4f22eccf7a394330cfacc27fc16b263db44c578ca9c55bb80bf73a47c17",
-      "sourceId": "hboWLC",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "upstreamArtifacts": {
+      "engwebp": {
+        "url": "https://ebible.org/Scriptures/engwebp_usfm.zip",
+        "archiveDate": "2026-07-28",
+        "sha256": "9b4330ba6baf9bd5fa8ea63a8ff255c9ab326da8c843f0355c23734e61ee6276",
+        "license": "Public Domain",
+        "language": "en",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "hboWLC": {
+        "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "da7b33af7a23e0e9fce8a8adf3cb5bcb035a513f44b83865b390c52dc3dd2ce3",
+        "textLicense": "Public Domain",
+        "annotationLicense": "CC BY 4.0",
+        "language": "he",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "ronbtf": {
+        "url": "https://ebible.org/Scriptures/ronbtf_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "license": "Public Domain",
+        "language": "ro",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "ron1924": {
+        "url": "https://ebible.org/Scriptures/ron1924_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
+        "license": "Public Domain",
+        "script": "Cyrillic",
+        "language": "ro-Cyrl",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "sblgnt": {
+        "url": "https://github.com/LogosBible/SBLGNT/archive/c4d241a9c1c479a55b989ba35a4976c1d0b8052c.tar.gz",
+        "archiveDate": "2026-08-04",
+        "sha256": "cc1715f3501a23ae68817559ef9f891cd4520cf9bb4ef6b7a6f606d1917bcf40",
+        "license": "CC BY 4.0",
+        "language": "el",
+        "version": "1.2",
+        "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/sblgnt.tar.gz"
+      },
+      "engwebp-nt": {
+        "url": "https://ebible.org/Scriptures/engwebp_usfm.zip",
+        "archiveDate": "2026-07-28",
+        "sha256": "9b4330ba6baf9bd5fa8ea63a8ff255c9ab326da8c843f0355c23734e61ee6276",
+        "license": "Public Domain",
+        "language": "en",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/engwebp_usfm.zip"
+      },
+      "grctr": {
+        "url": "https://ebible.org/Scriptures/grctr_usfm.zip",
+        "archiveDate": "2026-08-04",
+        "sha256": "9277bc7fd6ad3c78c0a99656e369ea5af294886cb3df23313822c0a34513d4ff",
+        "license": "Public Domain",
+        "language": "el",
+        "textFamily": "Textus Receptus",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/grctr_usfm.zip"
+      },
+      "ronbtf-nt": {
+        "url": "https://ebible.org/Scriptures/ronbtf_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "license": "Public Domain",
+        "language": "ro",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/ronbtf_usfm.zip"
+      },
+      "ron1924-nt": {
+        "url": "https://ebible.org/Scriptures/ron1924_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
+        "license": "Public Domain",
+        "language": "ro-Cyrl",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/ron1924_usfm.zip"
+      },
+      "ronbl": {
+        "url": "https://ebible.org/Scriptures/ronbl_usfm.zip",
+        "archiveDate": "2026-08-04",
+        "sha256": "c691fa528cdaa50db913943d0a9b011bccadb8b4d0165f5756a7706b8d575239",
+        "license": "Public Domain",
+        "language": "ro",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/ronbl_usfm.zip"
+      }
     },
-    "BTF-GEN": {
-      "bookId": "GEN",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/02-GENronbtf.usfm",
-      "sha256": "d308afc9b5facc71da666f17de899ce7d77725e47f6c7ed467497edeece55787",
-      "sourceId": "ronbtf",
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "automatedThresholds": {
+      "minimumLengthRatio": 0.35,
+      "maximumLengthRatio": 1.75,
+      "minimumWordsForTokenOverlap": 8,
+      "minimumRomanianTokenOverlap": 0.14,
+      "maximumChapterSequenceSimilarity": 0.94
+    }
+  },
+  "lockSnapshots": {
+    "ot-legacy": {
+      "path": "sources/ot-gen-deu-jos-usfm.zip",
+      "sha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847"
     },
-    "CORNILESCU1924-GEN": {
-      "bookId": "GEN",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/02-GENron1924.usfm",
-      "sha256": "0cb7f75c1c17e5ab8945238edc569ff1ccc011afa64e11ffd318137c23cf8758",
-      "sourceId": "ron1924",
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "nt": {
+      "path": "sources/nt-sblgnt-1.2.zip",
+      "sha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
+    }
+  },
+  "lockArtifacts": {
+    "NT-BIBLIA-LIBERA-1CO-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1CO.usfm",
+      "sha256": "7b2771574c70a946b8de5bf2e7b0d6c4d9a26c0008e20252db64920c46eea470"
     },
-    "WEBU-EXO": {
-      "bookId": "EXO",
-      "language": "en",
-      "role": "base",
-      "archivePath": "web/03-EXOengwebp.usfm",
-      "sha256": "d5b39790ccd47960185dcee66856388ef474acb8de571fd5cc72817583df3ac6",
-      "sourceId": "engwebp",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-1JN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1JN.usfm",
+      "sha256": "eea67b29a0d7dd106c6f868190ce6c2c67116152398ebc872dc7cdb50c41cfc6"
     },
-    "WLC-EXO": {
-      "bookId": "EXO",
-      "language": "he",
-      "role": "original",
-      "archivePath": "wlc/03-EXOhboWLC.usfm",
-      "sha256": "a94ae247f2b658deac353d31388d59e96d304db0c29d1063ccac650953505b78",
-      "sourceId": "hboWLC",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-1PE-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1PE.usfm",
+      "sha256": "c2524c90d43fbd3e09ffcb2d5801447d6ffb415feb601ad3d98c9e84ef852f22"
     },
-    "BTF-EXO": {
-      "bookId": "EXO",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/03-EXOronbtf.usfm",
-      "sha256": "2827c0625983ed6520c6470983372f9739d2694824c797b16f1f4cb7d8b1e15c",
-      "sourceId": "ronbtf",
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-1TH-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1TH.usfm",
+      "sha256": "155fa9165e5c5e8e0d98ffcc84911ab9b697418311eae39d1c94008728b0752e"
     },
-    "CORNILESCU1924-EXO": {
-      "bookId": "EXO",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/03-EXOron1924.usfm",
-      "sha256": "ffd6a62cef0827bc1485371d197bcf1ede3dd2f279b9fc2c221de40efacf0444",
-      "sourceId": "ron1924",
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-1TI-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1TI.usfm",
+      "sha256": "8ddd6cc019fd619047e109c9694552149f0d15d4498e892294f8d242a36d826d"
     },
-    "WEBU-LEV": {
-      "bookId": "LEV",
-      "language": "en",
-      "role": "base",
-      "archivePath": "web/04-LEVengwebp.usfm",
-      "sha256": "d0b928cd0f3aad24963aae59009e10f3e9ca479786a455358daddd67efce104b",
-      "sourceId": "engwebp",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-2CO-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2CO.usfm",
+      "sha256": "d45fdc3152e825fd15f8a83bd5fd5194186b153a3600fbb9c7d299ef78f35a56"
     },
-    "WLC-LEV": {
-      "bookId": "LEV",
-      "language": "he",
-      "role": "original",
-      "archivePath": "wlc/04-LEVhboWLC.usfm",
-      "sha256": "0747f72faba81c0c54ba89a71475f94a17f478044fa9f360b01bfb4ca86023af",
-      "sourceId": "hboWLC",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-2JN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2JN.usfm",
+      "sha256": "bea1eb99fbf1782ef6df866b862d250ad274556ab9bbd696f9bb58cccc230699"
     },
-    "BTF-LEV": {
-      "bookId": "LEV",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/04-LEVronbtf.usfm",
-      "sha256": "ed81c9933fec0d7525546d574f1710053587105ee4e12d5a08750c4d5712e41e",
-      "sourceId": "ronbtf",
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-2PE-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2PE.usfm",
+      "sha256": "e6e60c4f5193d3aee97df64a535d660c0fcffb99830eb7098ae03369f15d33db"
     },
-    "CORNILESCU1924-LEV": {
-      "bookId": "LEV",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/04-LEVron1924.usfm",
-      "sha256": "cebff3f8ed063ee03a518a156debc0933d24d79b6b4d30a3ee8ae2688a8210d6",
-      "sourceId": "ron1924",
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-2TH-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2TH.usfm",
+      "sha256": "e2e7bd649384fec10ef34e8e7d1fc8877e3c05dfd485f9ff9602b25145e376eb"
     },
-    "WEBU-NUM": {
-      "bookId": "NUM",
-      "language": "en",
-      "role": "base",
-      "archivePath": "web/05-NUMengwebp.usfm",
-      "sha256": "e612727287ac97ccfb0966b3a4d914b934f8a0fc3df09cc8289f30b12066e4f6",
-      "sourceId": "engwebp",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-2TI-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2TI.usfm",
+      "sha256": "32e6b1cd4d4e37db3b671043ac583c1634e7c8ef5e4676aaf1b052d39a4fdae3"
     },
-    "WLC-NUM": {
-      "bookId": "NUM",
-      "language": "he",
-      "role": "original",
-      "archivePath": "wlc/05-NUMhboWLC.usfm",
-      "sha256": "b1686bcfb0397b5042b3fd8c16a6292097a662456568282007a22e1506b4f602",
-      "sourceId": "hboWLC",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "25:19"
-      ]
+    "NT-BIBLIA-LIBERA-3JN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/3JN.usfm",
+      "sha256": "793a25d5ee4e6752bd8b55d5e3a86a7bbc1949ba591c126b9bc03e512dc866cd"
     },
-    "BTF-NUM": {
-      "bookId": "NUM",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/05-NUMronbtf.usfm",
-      "sha256": "967cfbfbf11b2cf793a43164ce8a83b868852d7bd5e25f3d687df897672c2bc9",
-      "sourceId": "ronbtf",
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-ACT-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/ACT.usfm",
+      "sha256": "05cc51ac6bf3dc9d42c9806f0fa4f1bb27b0b8a92391af08c3ea47f062983356"
     },
-    "CORNILESCU1924-NUM": {
-      "bookId": "NUM",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/05-NUMron1924.usfm",
-      "sha256": "cdeed97d931a029953c27e4ec5a08e941f3895788e6e1db14ff3ef27bc4cd802",
-      "sourceId": "ron1924",
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-COL-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/COL.usfm",
+      "sha256": "cdaf5a5fefed62485ce105d8133e9dc7d0f7dbb89cf38e851b07ef2506364eb4"
     },
-    "WEBU-DEU": {
-      "bookId": "DEU",
-      "language": "en",
-      "role": "base",
-      "archivePath": "web/06-DEUengwebp.usfm",
-      "sha256": "760a37ff8098cc26f5ffe5ade020fc1646949bf48234bf72c14e19c51728cbe2",
-      "sourceId": "engwebp",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-EPH-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/EPH.usfm",
+      "sha256": "125b7ac2648d2b059567d5860bd29f24e5c64eed6f6842f64ea18e31a02e8354"
     },
-    "WLC-DEU": {
-      "bookId": "DEU",
-      "language": "he",
-      "role": "original",
-      "archivePath": "wlc/06-DEUhboWLC.usfm",
-      "sha256": "3683b2db07de07ea12f195cea54eadf75de49bcae1b39391637c57dc554e4cf9",
-      "sourceId": "hboWLC",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-GAL-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/GAL.usfm",
+      "sha256": "dc5c6dae49c99ba988f0d14d37aa037fcb769f2f74404fd7a4b6ccd44253fc84"
     },
-    "BTF-DEU": {
-      "bookId": "DEU",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/06-DEUronbtf.usfm",
-      "sha256": "d5e65372d037fdecca5a803cd5d38b7aead60297d55d83e7459581b13dbe8b65",
-      "sourceId": "ronbtf",
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-HEB-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/HEB.usfm",
+      "sha256": "ce337d4bee1601cda5713836e68e48df8a94e9d2b02340c6882385e5aa0a2ea3"
     },
-    "CORNILESCU1924-DEU": {
-      "bookId": "DEU",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/06-DEUron1924.usfm",
-      "sha256": "a7889c94c4513a0ce66a52a5077d19ab284e0581d2b229a758c26ce2c1407b13",
-      "sourceId": "ron1924",
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
+    "NT-BIBLIA-LIBERA-JAS-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/JAS.usfm",
+      "sha256": "5cc04b54ee4984a7a82f46d2d880d4a7c762fc15bfa0ab802195b3773450caa7"
     },
+    "NT-BIBLIA-LIBERA-JUD-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/JUD.usfm",
+      "sha256": "4d60ee8f5a481176cb30ed06075f0f2cf419b583936bddef83972795e03a4f40"
+    },
+    "NT-BIBLIA-LIBERA-LUK-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/LUK.usfm",
+      "sha256": "4d6b8c70a7710f9d7cbf369ca1733d1c32730dc37fb551d44c7e7340104d8cd6"
+    },
+    "NT-BIBLIA-LIBERA-MAT-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/MAT.usfm",
+      "sha256": "5db019b86eee097f779cb2a92fd65d7f16877a60e29051ff1e1364878865a3f2"
+    },
+    "NT-BIBLIA-LIBERA-MRK-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/MRK.usfm",
+      "sha256": "9b33d65c6aa5fad3adcf9b04f99750013440a902eebb2e9151330d0e63399a41"
+    },
+    "NT-BIBLIA-LIBERA-PHM-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/PHM.usfm",
+      "sha256": "6a5268250eb6f85ca993e385276ff9b512368de373a2947a64153731dba384f0"
+    },
+    "NT-BIBLIA-LIBERA-PHP-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/PHP.usfm",
+      "sha256": "c5ec994b2c82968a90258e47bab2d5b107540a5fac6a6f769cd16ee82d113d33"
+    },
+    "NT-BIBLIA-LIBERA-REV-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/REV.usfm",
+      "sha256": "f44c512fd6930cb1e3ce6b01765b388737da5350f08caf00c0f318c8e967de03"
+    },
+    "NT-BIBLIA-LIBERA-ROM-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/ROM.usfm",
+      "sha256": "8c0f9e233a3988c8628fdb42643da273417366b8c5b4690c837edf8fb009331c"
+    },
+    "NT-BIBLIA-LIBERA-TIT-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/TIT.usfm",
+      "sha256": "68588bcc8961b33441b812807cb00246dc903a4ae75dd64eba876f27444a7c61"
+    },
+    "NT-CORNILESCU1924-JHN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "cornilescu1924/JHN.usfm",
+      "sha256": "b8d9d8172f93753f6faf82570a95d09cd85d40e02cc7af50d40b2f41d4a052fd"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1CO-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1CO.txt",
+      "sha256": "234e25b89f92d60c9327d1485dc22a78613ae5c9acc9385c69b2646944ce8d11"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1JN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1JN.txt",
+      "sha256": "0020f2e4bad2c3159c6b276bbeb72dfdef01aca4b114475077e7536ac80c23e3"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1PE-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1PE.txt",
+      "sha256": "b3db0c1116eef118a8374388f7dec0879cced9e95cd1914718f2c63b03941671"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1TH-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1TH.txt",
+      "sha256": "c766daa75320713b9ff85d14bd2118adca905eb4b1001b5f4261146b229095c2"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1TI-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1TI.txt",
+      "sha256": "7354bb371ea83f4b3863ee0766450494e39ca053d2ce9647085b3b48eb4eddff"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2CO-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2CO.txt",
+      "sha256": "643991dc4457cfe05223f7c665a57eb0eeebc4881ea732c9a14c59b77e3fbfe4"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2JN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2JN.txt",
+      "sha256": "0ed6cd567235562e69c05fa1e529a8e02ad98e0f83623b4ec2caa05d7724cbad"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2PE-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2PE.txt",
+      "sha256": "7491f64707485a117eddb6eef71eabdde112dbd5c0a5413cd6981a529a19d654"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2TH-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2TH.txt",
+      "sha256": "167f79c7cf72f6a29b391f49ec2c780a7c8fe548d134fe0f56aa16d52565a6d3"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2TI-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2TI.txt",
+      "sha256": "3ec81d2685f0b1d166f666fc0058e69abbc19f92e71062c34fc08298320796c0"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-3JN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/3JN.txt",
+      "sha256": "3f25b0daae8dcbaa3371e01f6740fc310e6580dc7b2304a340702f2bb6d5406a"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-ACT-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/ACT.txt",
+      "sha256": "acf74d492200dd46333f4cb9b245537ac0fe87e4a13504025db6ce5fe7a46411"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-COL-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/COL.txt",
+      "sha256": "eb55ef187e569766d835ccda3858136e1244c2c9c1bf19108d7a2d1f58075db2"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-EPH-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/EPH.txt",
+      "sha256": "c8390d0e2ff866f2c04fb5d1a100ec9a50e9b48a17a5d9b35702f43f862b9a10"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-GAL-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/GAL.txt",
+      "sha256": "06ee23b91157f23a684c7b0e81cec67a812e1bba0f867bbe96b07f0ece346307"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-HEB-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/HEB.txt",
+      "sha256": "be07a22bad25d8a9abc98e6fde615c0618939239b2d4980490dffe1752d7dbb5"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-JAS-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/JAS.txt",
+      "sha256": "f8e6fc3d0a06c616315522a11cbe2c9fce541ec913f2c57fe51332c02743e5db"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-JHN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/JHN.txt",
+      "sha256": "fbfb6ca71bee74da2ee7f27472bd75fd03e9894e7baa42ba4c8304913b766305"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-JUD-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/JUD.txt",
+      "sha256": "8c409545f125032f430df08070e41a644fdbb1ad2f15741dd67fd59c13fe7602"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-LUK-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/LUK.txt",
+      "sha256": "687348bf3002146877b58e425c82697e797b81edf075c42b5e4f973984c8e212"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-MAT-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/MAT.txt",
+      "sha256": "c08131305cfa3885f277a0b85d0883264d9fb33c31d4afcafb87dea7b84649fc"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-MRK-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/MRK.txt",
+      "sha256": "25f90cb6d683f4cf4e0aa3e14931cfcf514f20e5ced8e039ea913a3050b53f35"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-PHM-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/PHM.txt",
+      "sha256": "3f27f3097c9a3d3d3512575a2e2dc3ea57b956321111bc47f8ebb7ce092be74b"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-PHP-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/PHP.txt",
+      "sha256": "7b784ba0f020eb793f2dfd564e13311fd405fc581fe9776cdd5283aff7496897"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-REV-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/REV.txt",
+      "sha256": "ee291eed57ce1a0ef2bd281598ab4811d6c549b10a17f9d0d3e6b569977dba97"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-ROM-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/ROM.txt",
+      "sha256": "f9145016c0dab7607e14a7151e9b3a860c73ba7422625a3ca4ac4de7096443c1"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-TIT-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/TIT.txt",
+      "sha256": "3783146e3db9fb4e7385211cf605efdfd79682f6c98d2186e98a9d595a088a2d"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1CO-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1CO.xml",
+      "sha256": "07f4396a925927605eb1eb583aa979ecfa28866ce7a69b0346c6555a74a7f253"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1JN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1JN.xml",
+      "sha256": "d9af0024a9722dba8c61d3fc60fc44155db7bd3fb40f5f3b4230db62f8ec47ec"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1PE-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1PE.xml",
+      "sha256": "638eb96c192f70019bad44bb53b90ae62fc096886cf6a6923ba96b6fc5b50e6e"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1TH-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1TH.xml",
+      "sha256": "bdec88c3fed39c87abf01d310f8dd1cc7c6fc5bd515b8e2cc0d998a5259c5fab"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1TI-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1TI.xml",
+      "sha256": "21ef281fb93639a1b4a4772e91d986c9cc6df7355837040e57343bb6b8f38e2f"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2CO-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2CO.xml",
+      "sha256": "ef5bbfc060859968c78398abbedfe0b69b21ea4e0d4d8b21744ce6045e984b5d"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2JN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2JN.xml",
+      "sha256": "be181bbc21d25415543b9e2f809ae7e4803e44fc8709b4695481e0047eee3af3"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2PE-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2PE.xml",
+      "sha256": "015085123c3052124c8140bef4a90dc021911d155852ecb7f94ccf42305c63fa"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2TH-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2TH.xml",
+      "sha256": "fa01c818c621b62c73d88b738bbe37b4b5e70e942779b2d5dd619792fe2e664b"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2TI-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2TI.xml",
+      "sha256": "81c8c82ca62c375adcc1334483f879b9894b6bc9afc1b0dfcdd130f836bc38dc"
+    },
+    "NT-SBLGNT-APPARATUS-XML-3JN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/3JN.xml",
+      "sha256": "c269bf3705e06f96ac907fc2d81433272f4e472972d3c2de0e8ac993404f5e6b"
+    },
+    "NT-SBLGNT-APPARATUS-XML-ACT-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/ACT.xml",
+      "sha256": "d7f74cc019eecacdaf349e6a125de89dbabc713a7d444890c7598761ef261fbe"
+    },
+    "NT-SBLGNT-APPARATUS-XML-COL-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/COL.xml",
+      "sha256": "56aabef0572d4bc4481e245c2f8b42e30eadf0bd7506c39f9b559dc9a56f86cd"
+    },
+    "NT-SBLGNT-APPARATUS-XML-EPH-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/EPH.xml",
+      "sha256": "a1db24ac35b9e6594be26c0564ccf942d5703ca6aa75633af3a605ce87b696ea"
+    },
+    "NT-SBLGNT-APPARATUS-XML-GAL-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/GAL.xml",
+      "sha256": "634a02a334c8a039e5ab24311836d903ef8768eb07d086589ecc3d1fabd2d4e5"
+    },
+    "NT-SBLGNT-APPARATUS-XML-HEB-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/HEB.xml",
+      "sha256": "b4222054f4adfeca8751f927f33200cc1344c8189ba455db24053a2575129a59"
+    },
+    "NT-SBLGNT-APPARATUS-XML-JAS-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/JAS.xml",
+      "sha256": "0548050efc98e5daab506c0743f86df20bc5a3ff2dc4e241152645a6facf6dbf"
+    },
+    "NT-SBLGNT-APPARATUS-XML-JHN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/JHN.xml",
+      "sha256": "9be56ef52ab655bcb0abf8880db529232f800d592623226b322ae06d4d074baa"
+    },
+    "NT-SBLGNT-APPARATUS-XML-JUD-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/JUD.xml",
+      "sha256": "930d0f648963cb13282c14d9b1d9fae030a509016c83cfd244311eefbad45a8c"
+    },
+    "NT-SBLGNT-APPARATUS-XML-LUK-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/LUK.xml",
+      "sha256": "392b3aefbefd625f35cf437d59ab07cc139992352435e8c0dc770b3642cf27f4"
+    },
+    "NT-SBLGNT-APPARATUS-XML-MAT-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/MAT.xml",
+      "sha256": "c10a68e83f2506f974d7b5b450416fa10cc9acff3c64adee136349449881d40e"
+    },
+    "NT-SBLGNT-APPARATUS-XML-MRK-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/MRK.xml",
+      "sha256": "119360f19dfafe085c5aa11e869087eaac84d710b72520813977e25d24b1c433"
+    },
+    "NT-SBLGNT-APPARATUS-XML-PHM-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/PHM.xml",
+      "sha256": "2406a25632e7971cf0a033d1d2bca5534e343ca6f5828b99ca9cc302014c80f1"
+    },
+    "NT-SBLGNT-APPARATUS-XML-PHP-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/PHP.xml",
+      "sha256": "e75c419a71c89b9e77730875d725e4531a444bde307363b2f3fd2871b88d989a"
+    },
+    "NT-SBLGNT-APPARATUS-XML-REV-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/REV.xml",
+      "sha256": "dee80ff5c402f74c08c853431ec03c4dd101ed203e86033bbf96fd716e88ff87"
+    },
+    "NT-SBLGNT-APPARATUS-XML-ROM-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/ROM.xml",
+      "sha256": "fa7542d22d9ac14a5d94162aa1747258ccd2e957b252f013cbd871c608258140"
+    },
+    "NT-SBLGNT-APPARATUS-XML-TIT-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/TIT.xml",
+      "sha256": "d9b937f57271c59dba745d9daa316e9e8ae87dc614a6e0f0193c5f87b999a997"
+    },
+    "NT-SBLGNT-METADATA-ABOUT-MD": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/metadata/About.md",
+      "sha256": "4c7198fb57ce5f3b6572e856bd8b9439c9793c9d6b678e0e1ac123c887591765"
+    },
+    "NT-SBLGNT-METADATA-LICENSE": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/metadata/LICENSE",
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    },
+    "NT-SBLGNT-METADATA-README-MD": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/metadata/README.md",
+      "sha256": "7ae1dc2622a8dafe55cf8b17d4935c3e39a70c46636277dd0fc46fe8b7464721"
+    },
+    "NT-INTERNAL-MANIFEST": {
+      "snapshotId": "nt",
+      "archivePath": "manifest.json",
+      "sha256": "889bccc2db1ac3af69e4236fb377a1094dd1e5ef2a5a9d202e657a145f39e88a"
+    }
+  },
+  "lockBookJOS": {
+    "name": "Iosua",
+    "order": 6,
+    "testament": "OT",
+    "baseLockId": "WEBU-JOS",
+    "originalLockId": "WLC-JOS",
+    "benchmarkLockIds": [
+      "CORNILESCU1924-JOS",
+      "BTF-JOS"
+    ],
+    "externalBenchmarkIds": [
+      "NTR"
+    ]
+  },
+  "lockFilesJOS": {
     "WEBU-JOS": {
       "bookId": "JOS",
       "language": "en",
@@ -369,20 +783,6 @@
       "missingTargetReferences": [],
       "extraSourceReferences": []
     },
-    "BTF-JOS": {
-      "bookId": "JOS",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/07-JOSronbtf.usfm",
-      "sha256": "06f9c1eb5df1315fc7da254b5f332c2f996a8aee0a47a7a55f83efaadc8f1d07",
-      "sourceId": "ronbtf",
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "snapshotId": "ot-legacy",
-      "format": "usfm",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
     "CORNILESCU1924-JOS": {
       "bookId": "JOS",
       "language": "ro-Cyrl",
@@ -397,2210 +797,23 @@
       "missingTargetReferences": [],
       "extraSourceReferences": []
     },
-    "WEBP-MAT": {
-      "bookId": "MAT",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/MAT.usfm",
-      "sha256": "5fcd7dc8b52c7500d2a5504a1f05b6fb8dae640a090dcc0fe885397c08dd3545",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "17:21",
-        "18:11",
-        "23:14"
-      ]
-    },
-    "SBLGNT-MAT": {
-      "bookId": "MAT",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/MAT.txt",
-      "sha256": "4fa718540cbc6330591b233c99c68bbf52b85afc90016e4188efe5cd9719eeb0",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-MAT": {
-      "bookId": "MAT",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/MAT.usfm",
-      "sha256": "d927435817daea483757807f8f1b4df5f259131a9b21550161bc2aa758a76a4d",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "17:21",
-        "18:11",
-        "23:14"
-      ]
-    },
-    "BTF-MAT": {
-      "bookId": "MAT",
+    "BTF-JOS": {
+      "bookId": "JOS",
       "language": "ro",
       "role": "benchmark",
-      "archivePath": "btf/MAT.usfm",
-      "sha256": "de2c517ffcc62cb22f62ef4a0ed4d5b21b38603b7d7a58179a700caed7b88af0",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
+      "archivePath": "btf/07-JOSronbtf.usfm",
+      "sha256": "06f9c1eb5df1315fc7da254b5f332c2f996a8aee0a47a7a55f83efaadc8f1d07",
+      "sourceId": "ronbtf",
       "benchmarkId": "BTF",
       "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "17:21",
-        "18:11",
-        "23:14"
-      ]
-    },
-    "CORNILESCU1924-MAT": {
-      "bookId": "MAT",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/MAT.usfm",
-      "sha256": "b942f5d6606dbacd9e82b6ce08fa6123df0bd974537d3401c9b5d1854a443bc6",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
+      "snapshotId": "ot-legacy",
       "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "17:21",
-        "18:11",
-        "23:14"
-      ]
-    },
-    "WEBP-MRK": {
-      "bookId": "MRK",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/MRK.usfm",
-      "sha256": "065bd22d26d1553c4eba04155b94af5198ea565fb65083422fbab0b987d4681b",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "7:16",
-        "9:44",
-        "9:46",
-        "11:26",
-        "15:28"
-      ]
-    },
-    "SBLGNT-MRK": {
-      "bookId": "MRK",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/MRK.txt",
-      "sha256": "fe1b5a4c15db71e7e30f33fb67966ca93baffae377085ece0b88f66316729638",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-MRK": {
-      "bookId": "MRK",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/MRK.usfm",
-      "sha256": "e5cbe443ff047273bd1384bc9ba3bf061106eed438de6b2031e33ba86fc6a5ba",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "7:16",
-        "9:44",
-        "9:46",
-        "11:26",
-        "15:28"
-      ]
-    },
-    "BTF-MRK": {
-      "bookId": "MRK",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/MRK.usfm",
-      "sha256": "57fb24195119e489356b475d06a340003d648e711ce2ecd98e01cf582d74e67c",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "7:16",
-        "9:44",
-        "9:46",
-        "11:26",
-        "15:28"
-      ]
-    },
-    "CORNILESCU1924-MRK": {
-      "bookId": "MRK",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/MRK.usfm",
-      "sha256": "ecd5a0388b9d0379d73cfbc5a3a1a4cdb9068b3feac3ff0b7c2fccb1136fb51b",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "7:16",
-        "9:44",
-        "9:46",
-        "11:26",
-        "15:28"
-      ]
-    },
-    "WEBP-LUK": {
-      "bookId": "LUK",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/LUK.usfm",
-      "sha256": "9521698a562cc0bc8c5413df9e6cb73ca1273080202b2d0f05e3d1210deb66d6",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "23:17"
-      ]
-    },
-    "SBLGNT-LUK": {
-      "bookId": "LUK",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/LUK.txt",
-      "sha256": "102d65ec7a91271777115d1a605688776adfda6a1188680ccf593e27e3e876d6",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-LUK": {
-      "bookId": "LUK",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/LUK.usfm",
-      "sha256": "2796420e7e60641080f6f8093f497cccb4802159acc88cedc2a7dc1a1d363551",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "17:36",
-        "23:17"
-      ]
-    },
-    "BTF-LUK": {
-      "bookId": "LUK",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/LUK.usfm",
-      "sha256": "b78a5f24f5a08df4829d7a47a778ad9f79259accc72c237e6aa84a68a8fe477a",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "17:36",
-        "23:17"
-      ]
-    },
-    "CORNILESCU1924-LUK": {
-      "bookId": "LUK",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/LUK.usfm",
-      "sha256": "4d78c3f140ef7d3fec993715b59cd05de975828d729557eec1e76f3eb3c2fb03",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "17:36",
-        "23:17"
-      ]
-    },
-    "WEBP-JHN": {
-      "bookId": "JHN",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/JHN.usfm",
-      "sha256": "1c4b706efd99b8e9c96af6d84f15634d06f2364ca11cd8febe992b1f334fabb2",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "5:4"
-      ]
-    },
-    "SBLGNT-JHN": {
-      "bookId": "JHN",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/JHN.txt",
-      "sha256": "ada9643154a990ae2725ab847c6cfb576ce2c3bcd4945d47606e8a90c8d065f5",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-JHN": {
-      "bookId": "JHN",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/JHN.usfm",
-      "sha256": "c5bfce50a097d95d7032a88f8755b0d319cbf1d17f21671d7dedcd10d24179ab",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "5:4"
-      ]
-    },
-    "BTF-JHN": {
-      "bookId": "JHN",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/JHN.usfm",
-      "sha256": "4e7ddd514f359345add36fada26526d6aa3f4c13682bc0ac5135c87ee3fbb0ae",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "5:4"
-      ]
-    },
-    "BL-JHN": {
-      "bookId": "JHN",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "biblia-libera/JHN.usfm",
-      "sha256": "a597629409fca6f2458dfb1c439fc21a14b42e95cb94b90abd879489575f0e15",
-      "sourceId": "ronbl",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BIBLIA-LIBERA",
-      "family": "libera",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "5:4"
-      ]
-    },
-    "WEBP-ACT": {
-      "bookId": "ACT",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/ACT.usfm",
-      "sha256": "f3185f4643ff3d881236ef73f969b4ca2178a82d514e04371ded90fda826c9ff",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "28:29"
-      ]
-    },
-    "SBLGNT-ACT": {
-      "bookId": "ACT",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/ACT.txt",
-      "sha256": "199867a92d9a1ef73abe85986e4489d4799bb187bdd22845f3c168c93cafa9c8",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-ACT": {
-      "bookId": "ACT",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/ACT.usfm",
-      "sha256": "faf9bf42db242ad6d00d208cd855599ee43004b01ea5e6b991b45945d5c5ea98",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "8:37",
-        "15:34",
-        "24:7",
-        "28:29"
-      ]
-    },
-    "BTF-ACT": {
-      "bookId": "ACT",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/ACT.usfm",
-      "sha256": "761b484e6c1b08860f9d6c25fc42e8687934362a3221f503bef01cafa8d362a4",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "8:37",
-        "15:34",
-        "24:7",
-        "28:29"
-      ]
-    },
-    "CORNILESCU1924-ACT": {
-      "bookId": "ACT",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/ACT.usfm",
-      "sha256": "fc2592b61ee6d74a02dfbc0dccff0b9bf5582eb67bb718ae1fcaec2a2cd0fc55",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "8:37",
-        "15:34",
-        "24:7",
-        "28:29"
-      ]
-    },
-    "WEBP-ROM": {
-      "bookId": "ROM",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/ROM.usfm",
-      "sha256": "d8169e0f4dba68aaadabea1242757dd37cc675e905249b230d10dc794173327a",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "16:24"
-      ]
-    },
-    "SBLGNT-ROM": {
-      "bookId": "ROM",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/ROM.txt",
-      "sha256": "a919e44983ec633d541ec1084da79cfba1c1aa7f0eac6470c1ac7ec66cf774e8",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [
-        "16:25",
-        "16:26",
-        "16:27"
-      ],
-      "extraSourceReferences": [
-        "16:24"
-      ]
-    },
-    "TR-ROM": {
-      "bookId": "ROM",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/ROM.usfm",
-      "sha256": "fc7497d4b877918c0831c7f126f6524c8ce9d0cbe55c4a58269fcc1ef010ba21",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "16:24"
-      ]
-    },
-    "BTF-ROM": {
-      "bookId": "ROM",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/ROM.usfm",
-      "sha256": "113293d62a62053dd74c96a08b2a243c5b0a0a2b486a8266419b3ca161b197c6",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "16:24"
-      ]
-    },
-    "CORNILESCU1924-ROM": {
-      "bookId": "ROM",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/ROM.usfm",
-      "sha256": "f48f59a286c7307d2810240a6eb52cfc08d54080df814ed8d1d048647ed69445",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": [
-        "16:24"
-      ]
-    },
-    "WEBP-1CO": {
-      "bookId": "1CO",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/1CO.usfm",
-      "sha256": "d01d8d18ee85722c4fc30a976db3424c60ef458739a9ad4692e197907192af24",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-1CO": {
-      "bookId": "1CO",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/1CO.txt",
-      "sha256": "2a706bac29f1e34568bf6862cbc1616471511e9b915d7292adba3e93fb72c946",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-1CO": {
-      "bookId": "1CO",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/1CO.usfm",
-      "sha256": "75b7af9361c8179808526354f7cd206835c06d8c27714ca3145b9f568009084b",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-1CO": {
-      "bookId": "1CO",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/1CO.usfm",
-      "sha256": "cba5b36342277203710a729e4c396f94876f882ceb7c995404a3b437da818686",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-1CO": {
-      "bookId": "1CO",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/1CO.usfm",
-      "sha256": "636f5d0635a77117d6fa909bb50a67ef42327ed472bb14693abc6719a0a9d1d5",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-2CO": {
-      "bookId": "2CO",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/2CO.usfm",
-      "sha256": "01d64d8974fc741b4dc7fa0ea4a0636b9861a36c8bdea515188c5b63bab9af2e",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-2CO": {
-      "bookId": "2CO",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/2CO.txt",
-      "sha256": "af6a60d5f851762c7ee22be6f15975e706a55cf24bd0b890d6ee9ab2ad74bd18",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-2CO": {
-      "bookId": "2CO",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/2CO.usfm",
-      "sha256": "55f5fc9fe412020ca2bef8b14164797d4123286705631cbb65cdb147dc2bebcc",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-2CO": {
-      "bookId": "2CO",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/2CO.usfm",
-      "sha256": "1fab995193e9846b8d416f0c8f383cf906307c1ecda18d5141c88d2562f60043",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-2CO": {
-      "bookId": "2CO",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/2CO.usfm",
-      "sha256": "2507ed9e686af8c38fcaa688171b016b524ed51580601a55f4e5730a921a3136",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-GAL": {
-      "bookId": "GAL",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/GAL.usfm",
-      "sha256": "88c176826c21c39160c73237c56560b7bbab70bc959e307d2577c707c19a78da",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-GAL": {
-      "bookId": "GAL",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/GAL.txt",
-      "sha256": "cea30996850efb7a24d5be03d5d1ea052f2200e292f8bdd190c57298bd8c2fb1",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-GAL": {
-      "bookId": "GAL",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/GAL.usfm",
-      "sha256": "b74b86eed177be0bacc7e6b14dc48eda908758fbfad96b17573fe905fcfe8c36",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-GAL": {
-      "bookId": "GAL",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/GAL.usfm",
-      "sha256": "ffc59553f37fe6d02e9ebe6e2fcf0345f8eff6ea6f079266e1e71214de079065",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-GAL": {
-      "bookId": "GAL",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/GAL.usfm",
-      "sha256": "2e01c5b152bd5fb9464fda9b313c27b05638d1ea9419d018eec656b6a6965885",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-EPH": {
-      "bookId": "EPH",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/EPH.usfm",
-      "sha256": "88ec725da148c0eca05d4977cbbd99321622208961cd936bef8040dbd788a329",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-EPH": {
-      "bookId": "EPH",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/EPH.txt",
-      "sha256": "c15837d245dc849384a0be9f6c76de65590ffd496474f48c16822696ca024f6a",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-EPH": {
-      "bookId": "EPH",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/EPH.usfm",
-      "sha256": "f180f63bfffcad4b769444e71b9f7284a645b688e8b826a4e2d647a5efc5d18b",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-EPH": {
-      "bookId": "EPH",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/EPH.usfm",
-      "sha256": "c5ecbaf94ef1956f2dc1c3330e93258cae17292a54f1140ff42060a70fe73363",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-EPH": {
-      "bookId": "EPH",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/EPH.usfm",
-      "sha256": "90bc124f925a2aa836c99aa6a5cb867966da13672264904838e5bf0335560730",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-PHP": {
-      "bookId": "PHP",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/PHP.usfm",
-      "sha256": "f2d9a588262d70e9da3788f854fe9c634201eae52a8b423974a79dcf47485ac5",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-PHP": {
-      "bookId": "PHP",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/PHP.txt",
-      "sha256": "c99e25ea7856fd7a3edb1055716869117c4cba4c15f07567ea22c0269e211b85",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-PHP": {
-      "bookId": "PHP",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/PHP.usfm",
-      "sha256": "bb7658b006755c49e6500f402a3cf75663abddeb2f445c61015d320e8aa9de78",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-PHP": {
-      "bookId": "PHP",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/PHP.usfm",
-      "sha256": "7534d477c03381fd31c919a06126e48f28ecaeb327528098c59fc8a1c194e2ba",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-PHP": {
-      "bookId": "PHP",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/PHP.usfm",
-      "sha256": "7e0c80ed1b3fe7fc7472316158d15972431e42a3fe154a09d7c99a0459eb8269",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-COL": {
-      "bookId": "COL",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/COL.usfm",
-      "sha256": "efa59900605b76f13b2e2b8d6fcba8f3c144334b090b1493ed7df3e3de72c7fa",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-COL": {
-      "bookId": "COL",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/COL.txt",
-      "sha256": "665ef40dbc19bacf2b2642aa0bfc265e3cfab3f37b5757ea1ff69bdaf968bd08",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-COL": {
-      "bookId": "COL",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/COL.usfm",
-      "sha256": "a0ea21313d356f0f31e3252f221f7b5a848153ce980eb7f7803e0b97c8ac42b7",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-COL": {
-      "bookId": "COL",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/COL.usfm",
-      "sha256": "c09d067accc42ccbd7f8ec14189c8b88825d5585461ed3ac654c341a91def824",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-COL": {
-      "bookId": "COL",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/COL.usfm",
-      "sha256": "d7fe4d15b92d7a500fa014a7fd8e060b620771888db4485be44333d318a376d0",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-1TH": {
-      "bookId": "1TH",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/1TH.usfm",
-      "sha256": "7a0a17e8913bfdbf0db2666cfe6b11368ad33afb3e18ffea6d7acd696d4a8e95",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-1TH": {
-      "bookId": "1TH",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/1TH.txt",
-      "sha256": "58b57d9b87ee994757a6bd425cfb8a12cecee9b3c7d0206286fdf2b089b44ccf",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-1TH": {
-      "bookId": "1TH",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/1TH.usfm",
-      "sha256": "f9268adb1ef853cddc4f8deb4f7b1dba9f811e233bebf76d88bac38e7c16cf8b",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-1TH": {
-      "bookId": "1TH",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/1TH.usfm",
-      "sha256": "8a9007a7fced01bfe736a2df9f3544475b5e9bf077a1e76d267275092948c116",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-1TH": {
-      "bookId": "1TH",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/1TH.usfm",
-      "sha256": "38eb815ac6742bbd66da2772ec94c518c7b86e8041a5ce6fd7d6e5a58cdb2c3a",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-2TH": {
-      "bookId": "2TH",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/2TH.usfm",
-      "sha256": "86d59c57cc451009ddc5c7720c96bc3114413f9a87f77cd5b764f4939d948f53",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-2TH": {
-      "bookId": "2TH",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/2TH.txt",
-      "sha256": "c2a6922591a0282f5c07fe9fa47b8f38cd1aaf15b56eb9364aac91f5546f5822",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-2TH": {
-      "bookId": "2TH",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/2TH.usfm",
-      "sha256": "c787e0f8f837be8f77698c0858b01308487712cf8c7c7de82a3e19dad14d435a",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-2TH": {
-      "bookId": "2TH",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/2TH.usfm",
-      "sha256": "a974a0a5aa885250bc5bf847fe4e5b0d9fad87aa63ceba0af69328868ab22348",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-2TH": {
-      "bookId": "2TH",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/2TH.usfm",
-      "sha256": "56fc15cbd7f1a2955d28e1afa34d3528291d6e6a07057b3e16bee49ba1ccdc00",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-1TI": {
-      "bookId": "1TI",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/1TI.usfm",
-      "sha256": "fcd832cbac952ba29555aea1145cf65a6ca016b3cd35ea0f58ac00080a914e90",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-1TI": {
-      "bookId": "1TI",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/1TI.txt",
-      "sha256": "e4813e23b26b8b4763771b252cb41982d3af66abeead62f014e5f5f0a5323dcb",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-1TI": {
-      "bookId": "1TI",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/1TI.usfm",
-      "sha256": "257af3edcf3aed28e5c64bc326506a5547b3fd41ec4286b236717a22a8babe96",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-1TI": {
-      "bookId": "1TI",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/1TI.usfm",
-      "sha256": "37253c2c1e4b4968a04829e69fc63f33cef28101d0f31160b59265c95e865938",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-1TI": {
-      "bookId": "1TI",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/1TI.usfm",
-      "sha256": "69c0fbe94dc5eb6a91b4d4b1e502288a8bb5f4de49245c941d75d994f402406d",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-2TI": {
-      "bookId": "2TI",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/2TI.usfm",
-      "sha256": "080bf1c0d8ee7d4577f03c9a9315c8e209b8fef4758f9e20b2ab617e5e566b37",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-2TI": {
-      "bookId": "2TI",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/2TI.txt",
-      "sha256": "eecea7f17f3493bb3e0d2d5922acf2ab10dae876156e0cbc395355c05f66d2bf",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-2TI": {
-      "bookId": "2TI",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/2TI.usfm",
-      "sha256": "1e3504ef6a600b4ab710d524b6b494af1667b5943a603921c28b3893388bb31d",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-2TI": {
-      "bookId": "2TI",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/2TI.usfm",
-      "sha256": "596d71ea1070d9293eeb3ac442ec014a3f1d360a4d7c83ecbf6425b1dd307300",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-2TI": {
-      "bookId": "2TI",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/2TI.usfm",
-      "sha256": "114eb0d655f9de27c63131a951cf7fd3b86f831df1a3d5ffe5f7679dc6eb436b",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-TIT": {
-      "bookId": "TIT",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/TIT.usfm",
-      "sha256": "e7c6758b0e4335af3db5d0aaade390a25d783187f8c11992c4acdc8d0c0af9d8",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-TIT": {
-      "bookId": "TIT",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/TIT.txt",
-      "sha256": "8a7ff3511b7cbaaba481fe92b9aa716b8fd2abcc9d54829939c2fa3f836a2267",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-TIT": {
-      "bookId": "TIT",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/TIT.usfm",
-      "sha256": "1c7395e25a5a5efb2aee8572287437768820c47ea42d15737c2440e361da1058",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-TIT": {
-      "bookId": "TIT",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/TIT.usfm",
-      "sha256": "5f974156bbde087a9b8c9058f625f625545541510644cc6cfbc9670c9f53b9ea",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-TIT": {
-      "bookId": "TIT",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/TIT.usfm",
-      "sha256": "d4bbb6f1090a72b3413f2c249977cae9a59d2fda95e7767da0681b7eb9f24683",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-PHM": {
-      "bookId": "PHM",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/PHM.usfm",
-      "sha256": "407edbdc42b135d3cbc5db1b8f585eb56c6dc6f0e7dd07f750f7f92b827c49de",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-PHM": {
-      "bookId": "PHM",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/PHM.txt",
-      "sha256": "0b74d129888819be274cdcf239672f4688691ebab77c627521b5fcb185bea011",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-PHM": {
-      "bookId": "PHM",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/PHM.usfm",
-      "sha256": "f1e5732fa1ddae0928a342a2fca90f90ee1a7a5871d7af04eb2f3690d6819154",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-PHM": {
-      "bookId": "PHM",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/PHM.usfm",
-      "sha256": "4e2ada8ff9a7abe133e8490e0ff0c864e3b4799e16d1be23fe74f381701335c4",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-PHM": {
-      "bookId": "PHM",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/PHM.usfm",
-      "sha256": "e4e48b086ec0adb6fde46d5b133e0bca34f01dde532ca54a65718a91ee7ccac3",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-HEB": {
-      "bookId": "HEB",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/HEB.usfm",
-      "sha256": "bc5d4f250c17707a62b1d43e0e9239fdd5fb86e1409fc984a2321a2eb5b71d1a",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-HEB": {
-      "bookId": "HEB",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/HEB.txt",
-      "sha256": "a89fa2a3a8f04e8bf6a9c71404a9c45fa0e32cff5b6942043e663d8c1f40cc93",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-HEB": {
-      "bookId": "HEB",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/HEB.usfm",
-      "sha256": "a927163f38a39550968ce88220adea8544f50471d99f2ec41edacc4369458903",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-HEB": {
-      "bookId": "HEB",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/HEB.usfm",
-      "sha256": "4f28d87764712e2516ccf7bbd3a37b1636b50c7b58e6d3b5924a4d52a67ec188",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-HEB": {
-      "bookId": "HEB",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/HEB.usfm",
-      "sha256": "65f97a303a5120e25a6dfcaf609158cd21b1a8c32018d98d445ab5ea72b6c16f",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-JAS": {
-      "bookId": "JAS",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/JAS.usfm",
-      "sha256": "7fc5f0626f15906fae69e47af9e0462ea8d36363236d043fdb2c9925b98395cf",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-JAS": {
-      "bookId": "JAS",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/JAS.txt",
-      "sha256": "1343ea4125c64585c738a2f8bf54a077947d0a6229b2642b39a1ad845f40e153",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-JAS": {
-      "bookId": "JAS",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/JAS.usfm",
-      "sha256": "83a70809cc76b159a4279a719b8e5536ab4144ee0af988f611faae37f5cae7d3",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-JAS": {
-      "bookId": "JAS",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/JAS.usfm",
-      "sha256": "b1304e8cf9183d7d0d539f4f38273716e6dce9fe355270a9bcf484f44a8c8248",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-JAS": {
-      "bookId": "JAS",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/JAS.usfm",
-      "sha256": "7f859cfb1efbfe5b408289bebfb700fad53ac813d80fdd483e555aee598607ab",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-1PE": {
-      "bookId": "1PE",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/1PE.usfm",
-      "sha256": "3210d28eaf2ee687ae73384796d8914877dbd58583c772b7b86bd28abc797772",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-1PE": {
-      "bookId": "1PE",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/1PE.txt",
-      "sha256": "9c847143fbecfb2c5d0fc35820f973efb749c04a9badae99eb8d9ac0cf3d2a6d",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-1PE": {
-      "bookId": "1PE",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/1PE.usfm",
-      "sha256": "fcee699e94b06392a6c40ee5131fc1c39de5a1cf8fe938a3306e7afa798180f7",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-1PE": {
-      "bookId": "1PE",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/1PE.usfm",
-      "sha256": "606784ed40cd426565a1891f5b4f2d73430dcee573ff3d4a4ef298b2253cd34b",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-1PE": {
-      "bookId": "1PE",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/1PE.usfm",
-      "sha256": "b7f2bacf073da4b5f845bc15cc50f39c95ae8c9a425371e7a392464e29c31e93",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-2PE": {
-      "bookId": "2PE",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/2PE.usfm",
-      "sha256": "1ef5ad764bb1dd7b37f4ad2164a9f06705c7720b73d03dcab4cb8b572067cae8",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-2PE": {
-      "bookId": "2PE",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/2PE.txt",
-      "sha256": "7afd9df2ea451cc6b3d55984d12fcf8d8d159b5f3d40489b4ebd375dbac8aea0",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-2PE": {
-      "bookId": "2PE",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/2PE.usfm",
-      "sha256": "42b7bab222a3f51bb1f4b43a535c1405f639c4f77f6eebcabd24f64140de70e9",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-2PE": {
-      "bookId": "2PE",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/2PE.usfm",
-      "sha256": "0acefce03e686a3d9f68c480c63fd1b501d0ba30fae1d63b9733a17423325a20",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-2PE": {
-      "bookId": "2PE",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/2PE.usfm",
-      "sha256": "dfa27130c6165b25b60028d0b0edab66f0e1b00a481a175734d21099c8dea856",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-1JN": {
-      "bookId": "1JN",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/1JN.usfm",
-      "sha256": "630df854754186209cacdc3563d8e88ad9388d72a6e64e039942aa72f3c2db53",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-1JN": {
-      "bookId": "1JN",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/1JN.txt",
-      "sha256": "074201796600c23d79c0abd26621ed0046290d5f227f4aaea67ac425784094c5",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-1JN": {
-      "bookId": "1JN",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/1JN.usfm",
-      "sha256": "5fd33b302ecc45adba0e6ce2e677f9ae7a6b3b4e35653e012d4c846ce1d998bd",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-1JN": {
-      "bookId": "1JN",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/1JN.usfm",
-      "sha256": "7adf15875537045cb843bd6afefee7208f50dc768c255d7fc52fe57bc4b29d8d",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-1JN": {
-      "bookId": "1JN",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/1JN.usfm",
-      "sha256": "41a4ca353cfe7dc905dd27b49ba3488038d1c6932f4a3293e9c54b60fff171c4",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-2JN": {
-      "bookId": "2JN",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/2JN.usfm",
-      "sha256": "0d5f2e7d78908fd3baa055e6ce41e8957cf318ee948b220c48dbc888993e4104",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-2JN": {
-      "bookId": "2JN",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/2JN.txt",
-      "sha256": "b2daf832c6f88d67ae0bdf2ecfbbb42309e330dc161f5b127c8939d5cb448bc7",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-2JN": {
-      "bookId": "2JN",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/2JN.usfm",
-      "sha256": "714f38eae57199bd9f14be671ed6df0a9cb0a16c9b32c4cca35df1bb2335d877",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-2JN": {
-      "bookId": "2JN",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/2JN.usfm",
-      "sha256": "15de78694fa6becaf809dc19a110688245120c00005872ae64906fa70033aa25",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-2JN": {
-      "bookId": "2JN",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/2JN.usfm",
-      "sha256": "d11aa83e7ed5b3d88512c88cf27db23af0d4aa1896ae5f37445dc86df45e3ba9",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-3JN": {
-      "bookId": "3JN",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/3JN.usfm",
-      "sha256": "e3398c33b667a77f7b410209e6f9b711798fdee7879364f466950320f16b4cde",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-3JN": {
-      "bookId": "3JN",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/3JN.txt",
-      "sha256": "db0bfc024dfbafa4bf0c978d6f53186c35e6eb771058672ff4f1c31708db6c16",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-3JN": {
-      "bookId": "3JN",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/3JN.usfm",
-      "sha256": "e720ae873972d538a40172f24134ec8b5bb3fe6e3011dcefaba52068ef51b7c7",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-3JN": {
-      "bookId": "3JN",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/3JN.usfm",
-      "sha256": "6e196cc58be368d404385cff9ca49098ceac9b30e12b3b6c29fe89271669c80b",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-3JN": {
-      "bookId": "3JN",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/3JN.usfm",
-      "sha256": "c690d6c4d45475759c1c4b2f025b0e956ff54415f4db32afacf631df59b2332b",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-JUD": {
-      "bookId": "JUD",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/JUD.usfm",
-      "sha256": "2b400b84f00f7f0a97cfb6781bf40efb926e05549bfef85c550f52440c395eb5",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-JUD": {
-      "bookId": "JUD",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/JUD.txt",
-      "sha256": "9d80e8332848395a7af425ebf30edd21c9c43f0f446489f648b65c652630b734",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-JUD": {
-      "bookId": "JUD",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/JUD.usfm",
-      "sha256": "a4984591d46f3a27d98e3f86175326afac2b4b103b14ac7a8264151bde414449",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-JUD": {
-      "bookId": "JUD",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/JUD.usfm",
-      "sha256": "15790511db4d12f118fb34dd2e5bd9c09749a33d23c6e02274772c0abbd14c24",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-JUD": {
-      "bookId": "JUD",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/JUD.usfm",
-      "sha256": "10383cc0f292669a838321c1e5034acfb66d3369dfb6a7ec34f3c7f0a237424a",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "WEBP-REV": {
-      "bookId": "REV",
-      "language": "en",
-      "role": "base",
-      "archivePath": "webp/REV.usfm",
-      "sha256": "56b3eb48d1eafc4b6aff61f27e1106d240c9a5e449138193702cfac0139c1e36",
-      "sourceId": "engwebp-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "SBLGNT-REV": {
-      "bookId": "REV",
-      "language": "el",
-      "role": "original",
-      "archivePath": "sblgnt/text/REV.txt",
-      "sha256": "61419de7970661f8c481975c35b50e7c1df0422db0c6400d1ce2c6ade35da9f0",
-      "sourceId": "sblgnt",
-      "snapshotId": "nt",
-      "format": "sblgnt-plaintext",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "TR-REV": {
-      "bookId": "REV",
-      "language": "el",
-      "role": "original-supplement",
-      "archivePath": "tr/REV.usfm",
-      "sha256": "bcfeaf9cb4710bbfcf578940288790c29fd44c9483f969f705fd23bc774e9e6f",
-      "sourceId": "grctr",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "BTF-REV": {
-      "bookId": "REV",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/REV.usfm",
-      "sha256": "c872912d4843380c7e507a253c971d28205ffb55fd203a7bebab2ed57569d3b7",
-      "sourceId": "ronbtf-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "BTF",
-      "family": "fidela",
-      "missingTargetReferences": [],
-      "extraSourceReferences": []
-    },
-    "CORNILESCU1924-REV": {
-      "bookId": "REV",
-      "language": "ro-Cyrl",
-      "role": "benchmark",
-      "archivePath": "cornilescu1924/REV.usfm",
-      "sha256": "706bf9502fb5154fa431550e2696b594d67851b7d8e4bc744d871f38c27a36fa",
-      "sourceId": "ron1924-nt",
-      "snapshotId": "nt",
-      "format": "usfm",
-      "allowEmptyVerses": true,
-      "benchmarkId": "CORNILESCU-1924",
-      "family": "cornilescu",
       "missingTargetReferences": [],
       "extraSourceReferences": []
     }
   },
-  "sourceLockBookJOS": {
-    "name": "Iosua",
-    "order": 6,
-    "testament": "OT",
-    "baseLockId": "WEBU-JOS",
-    "originalLockId": "WLC-JOS",
-    "benchmarkLockIds": [
-      "CORNILESCU1924-JOS",
-      "BTF-JOS"
-    ],
-    "externalBenchmarkIds": [
-      "NTR"
-    ]
-  },
-  "sourceLockRules": [
-    {
-      "id": "WLC-GEN-31-55",
-      "sourceLockId": "WLC-GEN",
-      "bookId": "GEN",
-      "targetChapter": 31,
-      "targetStartVerse": 55,
-      "targetEndVerse": 55,
-      "sourceChapter": 32,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-GEN-32-SHIFT",
-      "sourceLockId": "WLC-GEN",
-      "bookId": "GEN",
-      "targetChapter": 32,
-      "targetStartVerse": 1,
-      "targetEndVerse": 32,
-      "sourceChapter": 32,
-      "sourceStartVerse": 2
-    },
-    {
-      "id": "WLC-EXO-8-1-4-S7V26",
-      "sourceLockId": "WLC-EXO",
-      "bookId": "EXO",
-      "targetChapter": 8,
-      "targetStartVerse": 1,
-      "targetEndVerse": 4,
-      "sourceChapter": 7,
-      "sourceStartVerse": 26
-    },
-    {
-      "id": "WLC-EXO-8-5-32-S8V1",
-      "sourceLockId": "WLC-EXO",
-      "bookId": "EXO",
-      "targetChapter": 8,
-      "targetStartVerse": 5,
-      "targetEndVerse": 32,
-      "sourceChapter": 8,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-EXO-22-1-1-S21V37",
-      "sourceLockId": "WLC-EXO",
-      "bookId": "EXO",
-      "targetChapter": 22,
-      "targetStartVerse": 1,
-      "targetEndVerse": 1,
-      "sourceChapter": 21,
-      "sourceStartVerse": 37
-    },
-    {
-      "id": "WLC-EXO-22-2-31-S22V1",
-      "sourceLockId": "WLC-EXO",
-      "bookId": "EXO",
-      "targetChapter": 22,
-      "targetStartVerse": 2,
-      "targetEndVerse": 31,
-      "sourceChapter": 22,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-LEV-6-1-7-S5V20",
-      "sourceLockId": "WLC-LEV",
-      "bookId": "LEV",
-      "targetChapter": 6,
-      "targetStartVerse": 1,
-      "targetEndVerse": 7,
-      "sourceChapter": 5,
-      "sourceStartVerse": 20
-    },
-    {
-      "id": "WLC-LEV-6-8-30-S6V1",
-      "sourceLockId": "WLC-LEV",
-      "bookId": "LEV",
-      "targetChapter": 6,
-      "targetStartVerse": 8,
-      "targetEndVerse": 30,
-      "sourceChapter": 6,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-NUM-16-36-50-S17V1",
-      "sourceLockId": "WLC-NUM",
-      "bookId": "NUM",
-      "targetChapter": 16,
-      "targetStartVerse": 36,
-      "targetEndVerse": 50,
-      "sourceChapter": 17,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-NUM-17-1-13-S17V16",
-      "sourceLockId": "WLC-NUM",
-      "bookId": "NUM",
-      "targetChapter": 17,
-      "targetStartVerse": 1,
-      "targetEndVerse": 13,
-      "sourceChapter": 17,
-      "sourceStartVerse": 16
-    },
-    {
-      "id": "WLC-NUM-29-40-40-S30V1",
-      "sourceLockId": "WLC-NUM",
-      "bookId": "NUM",
-      "targetChapter": 29,
-      "targetStartVerse": 40,
-      "targetEndVerse": 40,
-      "sourceChapter": 30,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-NUM-30-1-16-S30V2",
-      "sourceLockId": "WLC-NUM",
-      "bookId": "NUM",
-      "targetChapter": 30,
-      "targetStartVerse": 1,
-      "targetEndVerse": 16,
-      "sourceChapter": 30,
-      "sourceStartVerse": 2
-    },
-    {
-      "id": "WLC-DEU-12-32-32-S13V1",
-      "sourceLockId": "WLC-DEU",
-      "bookId": "DEU",
-      "targetChapter": 12,
-      "targetStartVerse": 32,
-      "targetEndVerse": 32,
-      "sourceChapter": 13,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-DEU-13-1-18-S13V2",
-      "sourceLockId": "WLC-DEU",
-      "bookId": "DEU",
-      "targetChapter": 13,
-      "targetStartVerse": 1,
-      "targetEndVerse": 18,
-      "sourceChapter": 13,
-      "sourceStartVerse": 2
-    },
-    {
-      "id": "WLC-DEU-22-30-30-S23V1",
-      "sourceLockId": "WLC-DEU",
-      "bookId": "DEU",
-      "targetChapter": 22,
-      "targetStartVerse": 30,
-      "targetEndVerse": 30,
-      "sourceChapter": 23,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "WLC-DEU-23-1-25-S23V2",
-      "sourceLockId": "WLC-DEU",
-      "bookId": "DEU",
-      "targetChapter": 23,
-      "targetStartVerse": 1,
-      "targetEndVerse": 25,
-      "sourceChapter": 23,
-      "sourceStartVerse": 2
-    },
-    {
-      "id": "WLC-DEU-29-1-1-S28V69",
-      "sourceLockId": "WLC-DEU",
-      "bookId": "DEU",
-      "targetChapter": 29,
-      "targetStartVerse": 1,
-      "targetEndVerse": 1,
-      "sourceChapter": 28,
-      "sourceStartVerse": 69
-    },
-    {
-      "id": "WLC-DEU-29-2-29-S29V1",
-      "sourceLockId": "WLC-DEU",
-      "bookId": "DEU",
-      "targetChapter": 29,
-      "targetStartVerse": 2,
-      "targetEndVerse": 29,
-      "sourceChapter": 29,
-      "sourceStartVerse": 1
-    },
-    {
-      "id": "SBL-ACT-19-40-41",
-      "sourceLockId": "SBLGNT-ACT",
-      "bookId": "ACT",
-      "mapping": "split",
-      "targetReferences": [
-        "19:40",
-        "19:41"
-      ],
-      "sourceReferences": [
-        "19:40"
-      ]
-    },
-    {
-      "id": "SBL-2CO-13-12-13",
-      "sourceLockId": "SBLGNT-2CO",
-      "bookId": "2CO",
-      "mapping": "split",
-      "targetReferences": [
-        "13:12",
-        "13:13"
-      ],
-      "sourceReferences": [
-        "13:12"
-      ]
-    },
-    {
-      "id": "SBL-2CO-13-14",
-      "sourceLockId": "SBLGNT-2CO",
-      "bookId": "2CO",
-      "mapping": "pairwise",
-      "targetReferences": [
-        "13:14"
-      ],
-      "sourceReferences": [
-        "13:13"
-      ]
-    },
-    {
-      "id": "SBL-3JN-1-14",
-      "sourceLockId": "SBLGNT-3JN",
-      "bookId": "3JN",
-      "mapping": "combine",
-      "targetReferences": [
-        "1:14"
-      ],
-      "sourceReferences": [
-        "1:14",
-        "1:15"
-      ]
-    },
-    {
-      "id": "SBL-REV-13-1",
-      "sourceLockId": "SBLGNT-REV",
-      "bookId": "REV",
-      "mapping": "combine",
-      "targetReferences": [
-        "13:1"
-      ],
-      "sourceReferences": [
-        "12:18",
-        "13:1"
-      ]
-    },
-    {
-      "id": "WEBP-ROM-DOXOLOGY",
-      "sourceLockId": "WEBP-ROM",
-      "bookId": "ROM",
-      "mapping": "pairwise",
-      "targetReferences": [
-        "16:25",
-        "16:26",
-        "16:27"
-      ],
-      "sourceReferences": [
-        "14:24",
-        "14:25",
-        "14:26"
-      ]
-    }
-  ],
-  "chapterShape": {
+  "lockRulesJOS": [],
+  "chapterJOS1": {
     "translation": "BE",
     "bookId": "JOS",
     "bookName": "Iosua",
@@ -2635,6 +848,74 @@
       {
         "number": 1,
         "text": "După moartea lui Moise, slujitorul DOMNULUI, DOMNUL i-a vorbit lui Iosua, fiul lui Nun, slujitorul lui Moise, spunând:"
+      },
+      {
+        "number": 2,
+        "text": "„Moise, slujitorul Meu, a murit. Acum ridică-te, treci Iordanul acesta, tu și tot poporul acesta, spre țara pe care le-o dau fiilor lui Israel."
+      },
+      {
+        "number": 3,
+        "text": "V-am dat orice loc pe care-l va călca talpa piciorului vostru, așa cum i-am spus lui Moise."
+      },
+      {
+        "number": 4,
+        "text": "Hotarul vostru va fi de la pustie și Libanul acesta până la râul cel mare, râul Eufrat, cuprinzând toată țara hitiților, și până la Marea cea Mare, spre apus."
+      },
+      {
+        "number": 5,
+        "text": "Nimeni nu va putea să stea înaintea ta în toate zilele vieții tale. Cum am fost cu Moise, așa voi fi și cu tine. Nu te voi lăsa și nu te voi părăsi."
+      },
+      {
+        "number": 6,
+        "text": "Fii tare și curajos, căci tu vei da acestui popor ca moștenire țara pe care am jurat părinților lor că le-o voi da."
+      },
+      {
+        "number": 7,
+        "text": "Numai fii tare și foarte curajos, având grijă să împlinești toată Legea pe care ți-a poruncit-o Moise, slujitorul Meu. Nu te abate de la ea nici la dreapta, nici la stânga, ca să lucrezi cu înțelepciune oriunde vei merge."
+      },
+      {
+        "number": 8,
+        "text": "Cartea aceasta a Legii să nu se depărteze de gura ta. Cugetă la ea zi și noapte, ca să ai grijă să împlinești tot ce este scris în ea; atunci îți vei duce calea la bun sfârșit și vei lucra cu înțelepciune."
+      },
+      {
+        "number": 9,
+        "text": "Nu ți-am poruncit Eu? Fii tare și curajos! Nu te înspăimânta și nu te descuraja, căci DOMNUL, Dumnezeul tău, este cu tine oriunde vei merge.”"
+      },
+      {
+        "number": 10,
+        "text": "Iosua le-a poruncit conducătorilor poporului:"
+      },
+      {
+        "number": 11,
+        "text": "„Treceți prin tabără și porunciți poporului: «Pregătiți-vă provizii, căci peste trei zile veți trece Iordanul acesta, ca să intrați și să luați în stăpânire țara pe care DOMNUL, Dumnezeul vostru, v-o dă s-o stăpâniți.»”"
+      },
+      {
+        "number": 12,
+        "text": "Iar rubeniților, gadiților și jumătății seminției lui Manase, Iosua le-a spus:"
+      },
+      {
+        "number": 13,
+        "text": "„Aduceți-vă aminte de cuvântul pe care vi l-a poruncit Moise, slujitorul DOMNULUI: «DOMNUL, Dumnezeul vostru, vă dă odihnă și vă dă țara aceasta."
+      },
+      {
+        "number": 14,
+        "text": "Soțiile, copiii și turmele voastre să rămână în țara pe care v-a dat-o Moise dincolo de Iordan. Dar voi, toți războinicii viteji, să treceți înarmați înaintea fraților voștri și să-i ajutați,"
+      },
+      {
+        "number": 15,
+        "text": "până când DOMNUL le va da odihnă fraților voștri, ca și vouă, și vor lua și ei în stăpânire țara pe care DOMNUL, Dumnezeul vostru, le-o dă. Apoi vă veți întoarce în țara moștenirii voastre și o veți stăpâni, țara pe care v-a dat-o Moise, slujitorul DOMNULUI, dincolo de Iordan, spre răsărit.»”"
+      },
+      {
+        "number": 16,
+        "text": "Ei i-au răspuns lui Iosua: „Vom face tot ce ne-ai poruncit și vom merge oriunde ne vei trimite."
+      },
+      {
+        "number": 17,
+        "text": "Te vom asculta în toate, așa cum l-am ascultat pe Moise. Numai DOMNUL, Dumnezeul tău, să fie cu tine, așa cum a fost cu Moise."
+      },
+      {
+        "number": 18,
+        "text": "Oricine se va răzvrăti împotriva poruncii tale și nu va asculta cuvintele tale în tot ce-i vei porunci va fi omorât. Numai fii tare și curajos!”"
       }
     ],
     "editorialNotes": [
@@ -2646,6 +927,53 @@
         "reviewRequired": true,
         "resolutionStatus": "resolved",
         "resolutionReason": "Textul distinge rolul de ajutor al lui Iosua față de Moise de titlul de slujitor al DOMNULUI atribuit lui Moise; diferența este păstrată."
+      },
+      {
+        "verse": 7,
+        "term": "lema'an taskil",
+        "decision": "ca să lucrezi cu înțelepciune",
+        "reason": "Rădăcina sakal exprimă acțiune chibzuită și reușită; nu este redusă la prosperitate materială.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Rădăcina sakal exprimă acțiune chibzuită și reușită; nu este redusă la prosperitate materială.",
+        "alternatives": [
+          "ca să izbutești",
+          "ca să ai succes"
+        ]
+      },
+      {
+        "verse": 8,
+        "term": "tatsliah / taskil",
+        "decision": "îți vei duce calea la bun sfârșit / vei lucra cu înțelepciune",
+        "reason": "Cele două verbe sunt păstrate distinct: unul descrie înaintarea reușită a căii, celălalt comportamentul chibzuit.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Cele două verbe sunt păstrate distinct: unul descrie înaintarea reușită a căii, celălalt comportamentul chibzuit.",
+        "alternatives": [
+          "îți vei face calea prosperă / vei avea succes"
+        ]
+      },
+      {
+        "verse": 14,
+        "term": "hamushim",
+        "decision": "înarmați",
+        "reason": "Termenul poate indica oameni echipați pentru luptă sau organizați în formație; textul nu precizează o formație numerică.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Termenul poate indica oameni echipați pentru luptă sau organizați în formație; textul nu precizează o formație numerică.",
+        "alternatives": [
+          "în formație de luptă",
+          "pregătiți de război"
+        ]
+      },
+      {
+        "verse": 18,
+        "term": "yumat",
+        "decision": "va fi omorât",
+        "reason": "Afirmația aparține angajamentului comunității față de conducerea lui Iosua în contextul intrării în țară; nu este transformată într-o regulă universală de pedepsire a neascultării.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Afirmația aparține angajamentului comunității față de conducerea lui Iosua în contextul intrării în țară; nu este transformată într-o regulă universală de pedepsire a neascultării."
       }
     ],
     "benchmark": {
@@ -2655,6 +983,18 @@
           "family": "cornilescu",
           "mode": "comparison-only",
           "referenceUrl": "https://ebible.org/ron1924/JOS01.htm"
+        },
+        {
+          "id": "NTR",
+          "family": "biblica",
+          "mode": "comparison-only",
+          "referenceUrl": "https://www.bible.com/ro/bible/126/JOS.1.NTR"
+        },
+        {
+          "id": "BTF",
+          "family": "fidela",
+          "mode": "comparison-only",
+          "referenceUrl": "https://ebible.org/ronbtf/JOS01.htm"
         }
       ],
       "exactTextCopied": false,
@@ -2668,7 +1008,9 @@
         "copyrightSimilarity": "approved"
       },
       "observations": [
-        "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții."
+        "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții.",
+        "Deciziile au fost verificate independent în WLC-OSHB și WEBU.",
+        "Nu a fost stocat textul integral al niciunui etalon protejat."
       ]
     },
     "audit": {
@@ -2688,13 +1030,18 @@
       "romanianLanguage": {
         "result": "approved",
         "changesApplied": [
-          "Iosua 1:1 păstrează diferența dintre slujitorul lui Moise și slujitorul DOMNULUI."
+          "Iosua 1:1 păstrează diferența dintre slujitorul lui Moise și slujitorul DOMNULUI.",
+          "Iosua 1:7–8 redă rădăcina sakal prin lucrare înțeleaptă, nu printr-o promisiune financiară.",
+          "Iosua 1:14 păstrează sensul militar al lui hamushim fără a inventa o formație precisă.",
+          "Iosua 1:18 păstrează sancțiunea în contextul juridic și militar al narațiunii."
         ]
       },
       "theologicalContext": {
         "result": "approved",
         "principles": [
-          "Prezența lui Dumnezeu îi este promisă lui Iosua în misiunea dată, fără transformarea pasajului într-o garanție că orice proiect personal va reuși."
+          "Prezența lui Dumnezeu îi este promisă lui Iosua în misiunea dată, fără transformarea pasajului într-o garanție că orice proiect personal va reuși.",
+          "Cugetarea la Lege este orientată spre ascultare și acțiune, nu spre o tehnică de prosperitate.",
+          "Cucerirea este relatată în cadrul istoric și de legământ al cărții, fără aplicarea violenței ca model pentru credincioșii de astăzi."
         ]
       },
       "omissionAddition": {
