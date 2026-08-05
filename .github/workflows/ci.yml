@@ -41,6 +41,9 @@ jobs:
           python3 scripts/upgrade-ot-audit2.py
           python3 scripts/patch-validator-audit2.py
 
+      - name: Diagnose all deterministic audit failures
+        run: python3 scripts/diagnose-audit2.py
+
       - uses: pnpm/action-setup@v4
 
       - uses: actions/setup-node@v4
@@ -180,6 +183,7 @@ jobs:
           rm -f scripts/upgrade-ot-audit2.py
           rm -f scripts/patch-audit2-integration.py
           rm -f scripts/patch-validator-audit2.py
+          rm -f scripts/diagnose-audit2.py
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
