@@ -6,7 +6,8 @@ on:
       - agent/biblia-emanus-ot-repair5
     paths:
       - 'docs/data/biblia-emanus-candidates/**'
-      - 'scripts/audit-ot-repair5-candidates.py'
+      - 'scripts/ot_repair5_common.py'
+      - 'scripts/audit-ot-repair5-v2.py'
       - 'scripts/classify-ot-repair5-candidates.py'
       - '.github/workflows/audit-ot-repair5.yml'
   workflow_dispatch:
@@ -21,17 +22,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: agent/biblia-emanus-ot-repair5
-      - name: Audit candidate corpus
-        run: python3 scripts/audit-ot-repair5-candidates.py
-      - name: Classify repeated or fabricated books
+      - name: Run complete deterministic audit
+        run: python3 scripts/audit-ot-repair5-v2.py
+      - name: Classify repetition risk
         run: python3 scripts/classify-ot-repair5-candidates.py
       - name: Upload reports
         uses: actions/upload-artifact@v4
         with:
-          name: ot-repair5-candidate-audit
+          name: ot-repair5-deterministic-audit
           path: |
-            docs/biblia-emanus/OT-REPAIR5-CANDIDATE-AUDIT.md
-            docs/biblia-emanus/OT-REPAIR5-CANDIDATE-AUDIT.json
+            docs/biblia-emanus/OT-REPAIR5-DETERMINISTIC-AUDIT.md
+            docs/biblia-emanus/OT-REPAIR5-DETERMINISTIC-AUDIT.json
             docs/biblia-emanus/OT-REPAIR5-CANDIDATE-CLASSIFICATION.md
             docs/biblia-emanus/OT-REPAIR5-CANDIDATE-CLASSIFICATION.json
           retention-days: 7
@@ -39,10 +40,10 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/biblia-emanus/OT-REPAIR5-CANDIDATE-*.md docs/biblia-emanus/OT-REPAIR5-CANDIDATE-*.json
+          git add docs/biblia-emanus/OT-REPAIR5-DETERMINISTIC-AUDIT.* docs/biblia-emanus/OT-REPAIR5-CANDIDATE-CLASSIFICATION.*
           if ! git diff --cached --quiet; then
-            git commit -m 'audit(bible): persist OT repair5 candidate reports'
+            git commit -m 'audit(bible): persist OT repair5 deterministic reports'
             git push origin HEAD:agent/biblia-emanus-ot-repair5
           fi
-      - name: Enforce candidate gate
-        run: python3 scripts/audit-ot-repair5-candidates.py --fail
+      - name: Enforce deterministic candidate gate
+        run: python3 scripts/audit-ot-repair5-v2.py --fail
