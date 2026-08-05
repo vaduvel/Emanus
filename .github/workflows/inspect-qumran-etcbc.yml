@@ -1,0 +1,38 @@
+name: Inspect authentic Qumran dataset
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-all-pr40-rebuild
+    paths:
+      - 'scripts/inspect-qumran-etcbc.py'
+      - '.github/workflows/inspect-qumran-etcbc.yml'
+  pull_request:
+    paths:
+      - 'scripts/inspect-qumran-etcbc.py'
+      - '.github/workflows/inspect-qumran-etcbc.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-qumran-inventory-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect ETCBC DSS commit and document features
+        run: python3 scripts/inspect-qumran-etcbc.py
+      - name: Upload exact inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-qumran-etcbc-inventory
+          path: docs/biblia-emanus/PR40-QUMRAN-ETCBC-INVENTORY.json
+          if-no-files-found: warn
+          retention-days: 7
