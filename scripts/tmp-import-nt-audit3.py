@@ -156,6 +156,27 @@ def patch_prepare_script() -> None:
                 old_archive.read(record["archivePath"]), lock_id, record
             )'''
     text = must_replace(text, old, new, str(path))
+    old_targets = '''    targets = {
+        book_id: {(chapter, verse) for chapter, numbers in book_chapters.items() for verse in numbers}
+        for book_id, book_chapters in chapters.items()
+    }'''
+    new_targets = '''    targets: dict[str, set[tuple[int, int]]] = {}
+    for chapter_id, ledger_record in old_ledger["chapters"].items():
+        old_book_id, old_chapter_text = chapter_id.split(".")
+        old_chapter = int(old_chapter_text)
+        old_numbers = ledger_record.get("verseNumbers") or list(
+            range(1, ledger_record["expectedVerses"] + 1)
+        )
+        targets.setdefault(old_book_id, set()).update(
+            (old_chapter, verse) for verse in old_numbers
+        )
+    for book_id, book_chapters in chapters.items():
+        targets[book_id] = {
+            (chapter, verse)
+            for chapter, numbers in book_chapters.items()
+            for verse in numbers
+        }'''
+    text = must_replace(text, old_targets, new_targets, str(path))
     text = text.replace('"WEB-Protestant"', '"WEBU-Protestant"')
     path.write_text(text, encoding="utf-8")
 
@@ -175,7 +196,7 @@ def normalize_nt_chapters(paths: list[str]) -> tuple[int, int]:
         else:
             translated += 1
         write_json(path, chapter)
-    if translated != 139 or placeholders != 121:
+    if translated != 135 or placeholders != 125:
         raise RuntimeError(
             f"Unexpected NT corpus classification: translated={translated}, placeholders={placeholders}"
         )
