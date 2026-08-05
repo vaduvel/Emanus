@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Generate source-backed Romanian candidates for four early works.
+"""Generate source-backed Romanian candidates for selected early works.
 
 The verified English source corpus must already exist. Long prose units are
 segmented by tokenizer length, translated independently, and reassembled into
-the original source unit. The output is deliberately blocked until a separate
-semantic/editorial gate reviews every detected problem.
+the original source unit. Set ``PR40_BOOKS`` for parallel CI shards.
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
+import os
 import re
 from pathlib import Path
 from typing import Any
@@ -63,7 +63,6 @@ def pack_segments(tokenizer: MarianTokenizer, text: str, limit: int = 360) -> li
         if len(tokenizer.encode(sentence, add_special_tokens=True)) <= limit:
             current = sentence
             continue
-        # Oversized sentence: split at word boundaries, never truncate silently.
         words = sentence.split()
         part = ""
         for word in words:
@@ -77,12 +76,10 @@ def pack_segments(tokenizer: MarianTokenizer, text: str, limit: int = 360) -> li
             current = part
     if current:
         segments.append(current)
-    if not segments or " ".join(segments).replace("  ", " ").strip() != " ".join(text.split()):
-        # Punctuation-space normalization may differ, but no source token may vanish.
-        source_words = text.split()
-        segment_words = " ".join(segments).split()
-        if source_words != segment_words:
-            raise RuntimeError("Tokenizer segmentation changed source words")
+    source_words = text.split()
+    segment_words = " ".join(segments).split()
+    if not segments or source_words != segment_words:
+        raise RuntimeError("Tokenizer segmentation changed source words")
     return segments
 
 
@@ -124,14 +121,26 @@ def main() -> None:
     if len(source_paths) != expected:
         raise SystemExit(f"Expected {expected} verified source chapters, found {len(source_paths)}")
 
-    source_docs = [json.loads(path.read_text(encoding="utf-8")) for path in source_paths]
+    all_source_docs = [json.loads(path.read_text(encoding="utf-8")) for path in source_paths]
     blocking_sources = [
         f"{doc.get('bookId')}.{doc.get('chapter')}"
-        for doc in source_docs
+        for doc in all_source_docs
         if doc.get("status") != "source_verified" or doc.get("audit", {}).get("blocking")
     ]
     if blocking_sources:
         raise SystemExit(f"Source extraction is not clean: {blocking_sources[:20]}")
+
+    selected_raw = os.environ.get("PR40_BOOKS", "").strip()
+    selected = {item.strip() for item in selected_raw.split(",") if item.strip()} if selected_raw else set(BOOK_NAMES)
+    unknown = sorted(selected - set(BOOK_NAMES))
+    if unknown:
+        raise SystemExit(f"Unknown PR40_BOOKS values: {unknown}")
+    source_docs = [doc for doc in all_source_docs if doc.get("bookId") in selected]
+    if not source_docs:
+        raise SystemExit("No early works selected")
+    selected_expected = sum(1 for doc in all_source_docs if doc.get("bookId") in selected)
+    if len(source_docs) != selected_expected:
+        raise SystemExit("Selected source chapter count mismatch")
 
     model_info = HfApi().model_info(MODEL_ID)
     revision = str(model_info.sha)
@@ -232,7 +241,7 @@ def main() -> None:
                 "translationModel": {
                     "id": MODEL_ID,
                     "revision": revision,
-                    "license": "Apache-2.0",
+                    "license": "CC BY 4.0",
                     "role": "first-pass candidate only",
                 },
             },
@@ -253,8 +262,9 @@ def main() -> None:
         unit_count += len(verses)
 
     report = {
-        "schemaVersion": 1,
-        "translationModel": {"id": MODEL_ID, "revision": revision, "license": "Apache-2.0"},
+        "schemaVersion": 2,
+        "selectedBooks": sorted(selected),
+        "translationModel": {"id": MODEL_ID, "revision": revision, "license": "CC BY 4.0"},
         "summary": {
             "books": len({book_id for book_id, _chapter in by_chapter}),
             "chapters": chapter_count,
