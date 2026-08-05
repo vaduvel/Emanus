@@ -1,11 +1,48 @@
 #!/usr/bin/env python3
 """Patch the temporary integrator with explicit source mappings and audited corrections."""
 from pathlib import Path
+import subprocess
+
+cache_dir = Path("/tmp/biblia-emanus-audit2")
+cache_dir.mkdir(parents=True, exist_ok=True)
+source_urls = [
+    "https://ebible.org/Scriptures/engwebp_usfm.zip",
+    "https://ebible.org/Scriptures/hboWLC_usfm.zip",
+    "https://ebible.org/Scriptures/ronbtf_usfm.zip",
+    "https://ebible.org/Scriptures/ron1924_usfm.zip",
+]
+for url in source_urls:
+    destination = cache_dir / url.rsplit("/", 1)[-1]
+    subprocess.run(
+        [
+            "curl",
+            "--fail",
+            "--location",
+            "--retry", "5",
+            "--retry-all-errors",
+            "--connect-timeout", "15",
+            "--max-time", "120",
+            "--user-agent", "Mozilla/5.0 Biblia-Emanus-Audit/2.0",
+            "--output", str(destination),
+            url,
+        ],
+        check=True,
+    )
 
 path = Path("scripts/upgrade-ot-audit2.py")
 text = path.read_text(encoding="utf-8")
 
 patches = [
+    (
+        '    print(f"[audit2] descarc {url}")\n    with urllib.request.urlopen(url, timeout=120) as response:\n        raw = response.read()\n',
+        '    print(f"[audit2] verific {url}")\n'
+        '    cached = Path("/tmp/biblia-emanus-audit2") / url.rsplit("/", 1)[-1]\n'
+        '    if cached.is_file():\n'
+        '        raw = cached.read_bytes()\n'
+        '    else:\n'
+        '        with urllib.request.urlopen(url, timeout=120) as response:\n'
+        '            raw = response.read()\n',
+    ),
     (
         '    sources = parse_refs(raw_wlc)\n    if len(targets) != len(sources):\n',
         '    sources = parse_refs(raw_wlc)\n'
