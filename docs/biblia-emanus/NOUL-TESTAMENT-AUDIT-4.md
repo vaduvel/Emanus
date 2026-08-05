@@ -30,7 +30,7 @@ Etalonul BTF nu a înlocuit automat textul principal în locurile marcate cu var
 
 ## Validarea finală
 
-Suita standard CI verifică pe fiecare head poarta permanentă de limbă română și variante textuale, validatorul corpusului, testele, versificația, sigiliul tuturor cărților publicate, typecheck și build.
+CI standard #1071 a trecut integral pe head-ul final: poarta permanentă de limbă română și variante textuale, validatorul corpusului, testele, versificația, sigiliul tuturor cărților publicate, typecheck și build.
 
 ## Domeniul verdictului
 
