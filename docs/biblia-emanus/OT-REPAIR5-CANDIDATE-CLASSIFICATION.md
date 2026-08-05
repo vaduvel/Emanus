@@ -35,7 +35,7 @@
 - `OBA` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `PRO` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `PS2` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
-- `PSA` — **plausible**; unique 0.9894; max repeat 4; repeated ratio 0.0077
+- `PSA` — **plausible**; unique 0.9898; max repeat 4; repeated ratio 0.0073
 - `RUT` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `SNG` — **plausible**; unique 0.9915; max repeat 2; repeated ratio 0.0
 - `ZEC` — **plausible**; unique 0.9953; max repeat 2; repeated ratio 0.0
