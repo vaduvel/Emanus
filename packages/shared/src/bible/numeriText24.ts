@@ -24,7 +24,7 @@ export const NUMERI_TEXT_24: Record<number, readonly string[]> = {
     "\u015ei acum iat\u0103 c\u0103 m\u0103 duc la poporul meu. Vino, \u00ee\u021bi voi vesti ce va face poporul acesta poporului t\u0103u \u00een zilele din urm\u0103.\u201d",
     "\u015ei-a rostit pilda \u0219i a zis: \u201eA\u015fa zice Balaam, fiul lui Beor, a\u015fa zice omul cu ochii deschi\u015fi,",
     "a\u015fa zice cel ce aude cuv\u00e2ntele lui Dumnezeu, cel ce cunoa\u015fte \u015ftiin\u021ba Celui Prea\u00eenalt, cel ce vede vedenia Celui Atotputernic, c\u0103z\u00e2nd la p\u0103m\u00e2nt, dar av\u00e2nd ochii deschi\u015fi:",
-    "\u00ab\u00cел v\u0103d, dar nu acum; \u00eel privesc, dar nu de aproape. O stea r\u0103sare din Iacov \u0219i un sceptru se ridic\u0103 din Israel; el va zdrobi fruntea Moabului \u0219i va nimici pe to\u021bi fiii lui \u015et.",
+    "\u00ab\u00cel v\u0103d, dar nu acum; \u00eel privesc, dar nu de aproape. O stea r\u0103sare din Iacov \u0219i un sceptru se ridic\u0103 din Israel; el va zdrobi fruntea Moabului \u0219i va nimici pe to\u021bi fiii lui \u015et.",
     "Edomul va fi o st\u0103p\u00e2nire \u0219i Seirul va fi o st\u0103p\u00e2nire pentru vr\u0103jma\u015fii lui; iar Israel va lucra cu vitejie.",
     "Din Iacov va ie\u015fi un St\u0103p\u00e2nitor care va nimici pe cei ce vor sc\u0103pa din cet\u0103\u021bi.\u00bb\u201d",
     "L-a v\u0103zut pe Amalec, \u0219i-a rostit pilda \u0219i a zis: \u201eAmalec era fruntea neamurilor, dar sf\u00e2r\u015fitul lui va fi pierz area ve\u015fnic\u0103.\u201d",
