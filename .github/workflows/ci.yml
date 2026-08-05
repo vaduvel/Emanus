@@ -5,34 +5,7 @@ on:
     branches: [main]
   pull_request:
 
-permissions:
-  contents: write
-
 jobs:
-  integrate_pentateuch:
-    if: github.event_name == 'pull_request' && github.head_ref == 'agent/biblia-emanus-pentateuh'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: agent/biblia-emanus-pentateuh
-          fetch-depth: 0
-
-      - name: Integrate audited Pentateuch books
-        run: python3 scripts/integrate-biblia-emanus-pentateuch.py
-
-      - name: Commit integrated Pentateuch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A docs/data/biblia-emanus docs/biblia-emanus scripts/check-biblia-emanus.py
-          if git diff --cached --quiet; then
-            echo "No integration changes"
-            exit 0
-          fi
-          git commit -m "Integrate audited Pentateuch books"
-          git push origin HEAD:agent/biblia-emanus-pentateuh
-
   verify:
     runs-on: ubuntu-latest
     steps:
