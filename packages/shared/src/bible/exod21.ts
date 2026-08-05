@@ -61,7 +61,7 @@ export const EXOD_21 = exodChapter({
         "Urmează rânduiala despre fata vândută de tatăl ei ca slujnică. Este printre locurile cele mai grele din carte, și nu se cade îmblânzit. În sărăcia din vremea aceea, un părinte împins la capăt Își putea da copilul într-o altă casă. Legea nu laudă lucrul acesta: îl găsește făcut și pune un zid în jurul celei mai neapărate dintre toți.",
         "Și ia aminte ce spune: ea nu iese cum ies robii, adică nu poate fi zvârlită afară când nu mai place. Dacă stăpânul nu o mai vrea, nu are dreptul să o vândă la străini. Dacă a fost dată fiului, să fie ținută ca o fiică. Iar dacă stăpânul Își ia altă femeie, celei dintâi nu are voie să-i taie trei lucruri: hrana, îmbrăcămintea și dreptul ei de soție.",
         "Se cade zăbovit asupra celor trei. Nu se vorbește doar de pâine și haine: al treilea lucru este dreptul ei de a nu fi lăsată singură și nebăgată în seamă în casa în care trăiește. În lumea veche, o femeie lăsată fără acest drept era o nimică. Dumnezeu Îl scrie în lege. Ia aminte că Dumnezeu apără nu numai viața, ci și cinstea, și chiar dragostea datorată cuiva.",
-        "Și vezi încheierea: dacă nu-i dă aceste trei lucruri, ea iese slobodă, fără plată. Cine nu Își împ‐linește datoria față de omul din casa lui pierde dreptul asupra lui. Înaintea lui Dumnezeu, stăpânirea nu se ține cu puterea, ci cu grija.",
+        "Și vezi încheierea: dacă nu-i dă aceste trei lucruri, ea iese slobodă, fără plată. Cine nu Își împlinește datoria față de omul din casa lui pierde dreptul asupra lui. Înaintea lui Dumnezeu, stăpânirea nu se ține cu puterea, ci cu grija.",
       ),
       words: [
         {
