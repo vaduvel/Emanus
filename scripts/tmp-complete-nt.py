@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bootstrap the chunked temporary NT completion pipeline."""
+"""Bootstrap the chunked temporary NT completion pipeline, revision 2."""
 from pathlib import Path
 
 root = Path(__file__).resolve().parent
