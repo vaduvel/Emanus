@@ -5,23 +5,11 @@ on:
     branches: [main]
   pull_request:
 
-permissions:
-  contents: write
-
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: agent/biblia-emanus-main-integration
-          fetch-depth: 0
-
-      - name: Fetch final audited Biblia Emanus branch
-        run: git fetch origin agent/biblia-emanus-ot-audit2:refs/remotes/origin/agent/biblia-emanus-ot-audit2
-
-      - name: Materialize only Biblia Emanus 2.0
-        run: python3 scripts/integrate-biblia-emanus-main.py
 
       - uses: pnpm/action-setup@v4
 
@@ -33,6 +21,7 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
+      # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
@@ -61,15 +50,3 @@ jobs:
 
       - name: Build
         run: pnpm build
-
-      - name: Commit clean permanent data and engine
-        run: |
-          rm -rf scripts/__pycache__
-          git rm scripts/integrate-biblia-emanus-main.py
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/biblia-emanus docs/data/biblia-emanus package.json
-          git add scripts/check-biblia-emanus.py scripts/test_biblia_emanus.py scripts/seal-biblia-emanus.py
-          git diff --cached --check
-          git commit -m "Integrate Biblia Emanus 2.0 data and engine"
-          git push origin HEAD:agent/biblia-emanus-main-integration
