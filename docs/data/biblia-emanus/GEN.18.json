@@ -6,8 +6,19 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN18.htm", "license": "Public Domain", "lockId": "WEBU-GEN" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN18.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": "WLC-GEN" }
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/GEN18.htm",
+      "license": "Public Domain",
+      "lockId": "WEBU-GEN"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/GEN18.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-GEN"
+    }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,13 +31,35 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ron1924/GEN18.htm" },
-      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.18.NTR" },
-      { "id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ronbtf/GEN18.htm" }
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ron1924/GEN18.htm"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.18.NTR"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ronbtf/GEN18.htm"
+      }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
-    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" },
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
     "observations": [
       "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții.",
       "Deciziile au fost verificate independent în WLC-OSHB și WEBU.",
@@ -35,9 +68,18 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-04",
-    "verseCoverage": { "expected": 33, "reviewed": 33, "continuous": true },
-    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "singular și plural în adresare, ospitalitate, promisiune, alegere, strigăt juridic și tradiție scribală" },
+    "completedOn": "2026-08-05",
+    "verseCoverage": {
+      "expected": 33,
+      "reviewed": 33,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "singular și plural în adresare, ospitalitate, promisiune, alegere, strigăt juridic și tradiție scribală"
+    },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
@@ -54,17 +96,27 @@
         "Mijlocirea lui Avraam păstrează dreptatea Judecătorului fără a transforma dialogul într-o schimbare a caracterului lui Dumnezeu."
       ]
     },
-    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
-    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
     "reviewLevel": "ai-complete",
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "Codex GPT-5",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
@@ -73,52 +125,286 @@
     "textDigest": "sha256:321f79ceeb782b23ec9d3e8cd611a2a46c4392041b5408c5319f34b98ff57669"
   },
   "verses": [
-    { "number": 1, "text": "DOMNUL i S-a arătat lui Avraam lângă stejarii lui Mamre, pe când el stătea la intrarea cortului în arșița zilei." },
-    { "number": 2, "text": "Avraam și-a ridicat ochii, a privit și, iată, trei bărbați stăteau aproape de el. Când i-a văzut, a alergat de la intrarea cortului ca să-i întâmpine și s-a plecat până la pământ." },
-    { "number": 3, "text": "El a spus: „Stăpâne, dacă am găsit bunăvoință în ochii Tăi, te rog, nu trece pe lângă slujitorul Tău." },
-    { "number": 4, "text": "Să se aducă puțină apă, să vă spălați picioarele și să vă odihniți sub copac." },
-    { "number": 5, "text": "Voi aduce o bucată de pâine, ca să vă întăriți inimile; după aceea vă veți continua drumul, fiindcă de aceea ați trecut pe la slujitorul vostru.” Ei au spus: „Fă așa cum ai spus.”" },
-    { "number": 6, "text": "Avraam s-a grăbit să intre în cort la Sara și a spus: „Ia repede trei măsuri de făină fină, frământă și fă turte.”" },
-    { "number": 7, "text": "Avraam a alergat la cireadă, a luat un vițel fraged și bun și l-a dat slujitorului, care s-a grăbit să-l pregătească." },
-    { "number": 8, "text": "Apoi a luat lapte prins, lapte proaspăt și vițelul pe care îl pregătise și le-a pus înaintea lor. El a stat lângă ei, sub copac, în timp ce ei mâncau." },
-    { "number": 9, "text": "Ei l-au întrebat: „Unde este Sara, soția ta?” El a răspuns: „Acolo, în cort.”" },
-    { "number": 10, "text": "Unul dintre ei a spus: „Mă voi întoarce negreșit la tine pe vremea aceasta, anul viitor, și, iată, Sara, soția ta, va avea un fiu.” Sara asculta la intrarea cortului, în spatele lui." },
-    { "number": 11, "text": "Avraam și Sara erau bătrâni și înaintați în vârstă, iar Sara trecuse de vârsta la care femeile pot avea copii." },
-    { "number": 12, "text": "Sara a râs în sinea ei și a spus: „Acum, când am îmbătrânit, voi mai avea oare această plăcere? Și stăpânul meu este bătrân.”" },
-    { "number": 13, "text": "DOMNUL i-a spus lui Avraam: „De ce a râs Sara și a spus: «Oare voi mai naște cu adevărat, acum că am îmbătrânit?»" },
-    { "number": 14, "text": "Este ceva prea greu pentru DOMNUL? La vremea stabilită Mă voi întoarce la tine, pe vremea aceasta, anul viitor, iar Sara va avea un fiu.”" },
-    { "number": 15, "text": "Sara a tăgăduit și a spus: „Nu am râs”, pentru că îi era frică. Dar El a spus: „Ba da, ai râs.”" },
-    { "number": 16, "text": "Bărbații s-au ridicat de acolo și au privit spre Sodoma, iar Avraam a mers împreună cu ei ca să-i conducă." },
-    { "number": 17, "text": "DOMNUL a spus: „Să ascund Eu oare de Avraam ceea ce urmează să fac," },
-    { "number": 18, "text": "de vreme ce Avraam va deveni cu siguranță o națiune mare și puternică, iar prin el vor fi binecuvântate toate națiunile pământului?" },
-    { "number": 19, "text": "Căci l-am ales ca să le poruncească fiilor săi și casei sale după el să păzească drumul DOMNULUI, făcând dreptate și judecată, astfel încât DOMNUL să împlinească pentru Avraam ceea ce i-a promis.”" },
-    { "number": 20, "text": "DOMNUL a spus: „Strigătul împotriva Sodomei și Gomorei este mare, iar păcatul lor este foarte greu." },
-    { "number": 21, "text": "Voi coborî acum să văd dacă purtarea lor corespunde întru totul strigătului care a ajuns la Mine; iar dacă nu, voi ști.”" },
-    { "number": 22, "text": "Bărbații s-au întors de acolo și au mers spre Sodoma, dar Avraam a rămas înaintea DOMNULUI." },
-    { "number": 23, "text": "Avraam s-a apropiat și a spus: „Îl vei nimici oare pe cel drept împreună cu cel rău?" },
-    { "number": 24, "text": "Poate că sunt cincizeci de oameni drepți în cetate. O vei nimici și nu vei cruța locul de dragul celor cincizeci de oameni drepți care sunt în el?" },
-    { "number": 25, "text": "Departe de Tine să faci un astfel de lucru: să-l omori pe cel drept împreună cu cel rău, astfel încât celui drept să-i fie ca celui rău! Departe de Tine! Judecătorul întregului pământ nu va face oare dreptate?”" },
-    { "number": 26, "text": "DOMNUL a spus: „Dacă voi găsi în Sodoma cincizeci de oameni drepți în cetate, voi cruța întregul loc de dragul lor.”" },
-    { "number": 27, "text": "Avraam a răspuns: „Iată, am îndrăznit să vorbesc Stăpânului, deși sunt pulbere și cenușă." },
-    { "number": 28, "text": "Poate că din cei cincizeci de oameni drepți vor lipsi cinci. Vei distruge întreaga cetate din cauza celor cinci?” El a spus: „Nu o voi distruge dacă voi găsi acolo patruzeci și cinci.”" },
-    { "number": 29, "text": "Avraam I-a vorbit din nou și a spus: „Poate că se vor găsi acolo patruzeci.” El a răspuns: „Nu o voi face de dragul celor patruzeci.”" },
-    { "number": 30, "text": "Avraam a spus: „Te rog, să nu Se mânie Stăpânul și voi mai vorbi. Poate că se vor găsi acolo treizeci.” El a răspuns: „Nu o voi face dacă voi găsi acolo treizeci.”" },
-    { "number": 31, "text": "Avraam a spus: „Iată, am îndrăznit să vorbesc Stăpânului. Poate că se vor găsi acolo douăzeci.” El a răspuns: „Nu o voi distruge de dragul celor douăzeci.”" },
-    { "number": 32, "text": "Avraam a spus: „Te rog, să nu Se mânie Stăpânul și voi mai vorbi numai de data aceasta. Poate că se vor găsi acolo zece.” El a răspuns: „Nu o voi distruge de dragul celor zece.”" },
-    { "number": 33, "text": "După ce a terminat de vorbit cu Avraam, DOMNUL a plecat, iar Avraam s-a întors la locul său." }
+    {
+      "number": 1,
+      "text": "DOMNUL i S-a arătat lui Avraam lângă stejarii lui Mamre, pe când el stătea la intrarea cortului în arșița zilei."
+    },
+    {
+      "number": 2,
+      "text": "Avraam și-a ridicat ochii, a privit și, iată, trei bărbați stăteau aproape de el. Când i-a văzut, a alergat de la intrarea cortului ca să-i întâmpine și s-a plecat până la pământ."
+    },
+    {
+      "number": 3,
+      "text": "El a spus: „Stăpâne, dacă am găsit bunăvoință în ochii Tăi, te rog, nu trece pe lângă slujitorul Tău."
+    },
+    {
+      "number": 4,
+      "text": "Să se aducă puțină apă, să vă spălați picioarele și să vă odihniți sub copac."
+    },
+    {
+      "number": 5,
+      "text": "Voi aduce o bucată de pâine, ca să vă întăriți inimile; după aceea vă veți continua drumul, fiindcă de aceea ați trecut pe la slujitorul vostru.” Ei au spus: „Fă așa cum ai spus.”"
+    },
+    {
+      "number": 6,
+      "text": "Avraam s-a grăbit să intre în cort la Sara și a spus: „Ia repede trei măsuri de făină fină, frământă și fă turte.”"
+    },
+    {
+      "number": 7,
+      "text": "Avraam a alergat la cireadă, a luat un vițel fraged și bun și l-a dat slujitorului, care s-a grăbit să-l pregătească."
+    },
+    {
+      "number": 8,
+      "text": "Apoi a luat lapte prins, lapte proaspăt și vițelul pe care îl pregătise și le-a pus înaintea lor. El a stat lângă ei, sub copac, în timp ce ei mâncau."
+    },
+    {
+      "number": 9,
+      "text": "Ei l-au întrebat: „Unde este Sara, soția ta?” El a răspuns: „Acolo, în cort.”"
+    },
+    {
+      "number": 10,
+      "text": "Unul dintre ei a spus: „Mă voi întoarce negreșit la tine pe vremea aceasta, anul viitor, și, iată, Sara, soția ta, va avea un fiu.” Sara asculta la intrarea cortului, în spatele lui."
+    },
+    {
+      "number": 11,
+      "text": "Avraam și Sara erau bătrâni și înaintați în vârstă, iar Sara trecuse de vârsta la care femeile pot avea copii."
+    },
+    {
+      "number": 12,
+      "text": "Sara a râs în sinea ei și a spus: „Acum, când am îmbătrânit, voi mai avea oare această plăcere? Și stăpânul meu este bătrân.”"
+    },
+    {
+      "number": 13,
+      "text": "DOMNUL i-a spus lui Avraam: „De ce a râs Sara și a spus: «Oare voi mai naște cu adevărat, acum că am îmbătrânit?»"
+    },
+    {
+      "number": 14,
+      "text": "Este ceva prea greu pentru DOMNUL? La vremea stabilită Mă voi întoarce la tine, pe vremea aceasta, anul viitor, iar Sara va avea un fiu.”"
+    },
+    {
+      "number": 15,
+      "text": "Sara a tăgăduit și a spus: „Nu am râs”, pentru că îi era frică. Dar El a spus: „Ba da, ai râs.”"
+    },
+    {
+      "number": 16,
+      "text": "Bărbații s-au ridicat de acolo și au privit spre Sodoma, iar Avraam a mers împreună cu ei ca să-i conducă."
+    },
+    {
+      "number": 17,
+      "text": "DOMNUL a spus: „Să ascund Eu oare de Avraam ceea ce urmează să fac,"
+    },
+    {
+      "number": 18,
+      "text": "de vreme ce Avraam va deveni cu siguranță o națiune mare și puternică, iar prin el vor fi binecuvântate toate națiunile pământului?"
+    },
+    {
+      "number": 19,
+      "text": "Căci l-am ales ca să le poruncească fiilor săi și casei sale după el să păzească drumul DOMNULUI, făcând dreptate și judecată, astfel încât DOMNUL să împlinească pentru Avraam ceea ce i-a promis.”"
+    },
+    {
+      "number": 20,
+      "text": "DOMNUL a spus: „Strigătul împotriva Sodomei și Gomorei este mare, iar păcatul lor este foarte greu."
+    },
+    {
+      "number": 21,
+      "text": "Voi coborî acum să văd dacă purtarea lor corespunde întru totul strigătului care a ajuns la Mine; iar dacă nu, voi ști.”"
+    },
+    {
+      "number": 22,
+      "text": "Bărbații s-au întors de acolo și au mers spre Sodoma, dar Avraam a rămas înaintea DOMNULUI."
+    },
+    {
+      "number": 23,
+      "text": "Avraam s-a apropiat și a spus: „Îl vei nimici oare pe cel drept împreună cu cel rău?"
+    },
+    {
+      "number": 24,
+      "text": "Poate că sunt cincizeci de oameni drepți în cetate. O vei nimici și nu vei cruța locul de dragul celor cincizeci de oameni drepți care sunt în el?"
+    },
+    {
+      "number": 25,
+      "text": "Departe de Tine să faci un astfel de lucru: să-l omori pe cel drept împreună cu cel rău, astfel încât celui drept să-i fie ca celui rău! Departe de Tine! Judecătorul întregului pământ nu va face oare dreptate?”"
+    },
+    {
+      "number": 26,
+      "text": "DOMNUL a spus: „Dacă voi găsi în Sodoma cincizeci de oameni drepți în cetate, voi cruța întregul loc de dragul lor.”"
+    },
+    {
+      "number": 27,
+      "text": "Avraam a răspuns: „Iată, am îndrăznit să vorbesc Stăpânului, deși sunt pulbere și cenușă."
+    },
+    {
+      "number": 28,
+      "text": "Poate că din cei cincizeci de oameni drepți vor lipsi cinci. Vei distruge întreaga cetate din cauza celor cinci?” El a spus: „Nu o voi distruge dacă voi găsi acolo patruzeci și cinci.”"
+    },
+    {
+      "number": 29,
+      "text": "Avraam I-a vorbit din nou și a spus: „Poate că se vor găsi acolo patruzeci.” El a răspuns: „Nu o voi face de dragul celor patruzeci.”"
+    },
+    {
+      "number": 30,
+      "text": "Avraam a spus: „Te rog, să nu Se mânie Stăpânul și voi mai vorbi. Poate că se vor găsi acolo treizeci.” El a răspuns: „Nu o voi face dacă voi găsi acolo treizeci.”"
+    },
+    {
+      "number": 31,
+      "text": "Avraam a spus: „Iată, am îndrăznit să vorbesc Stăpânului. Poate că se vor găsi acolo douăzeci.” El a răspuns: „Nu o voi distruge de dragul celor douăzeci.”"
+    },
+    {
+      "number": 32,
+      "text": "Avraam a spus: „Te rog, să nu Se mânie Stăpânul și voi mai vorbi numai de data aceasta. Poate că se vor găsi acolo zece.” El a răspuns: „Nu o voi distruge de dragul celor zece.”"
+    },
+    {
+      "number": 33,
+      "text": "După ce a terminat de vorbit cu Avraam, DOMNUL a plecat, iar Avraam s-a întors la locul său."
+    }
   ],
   "editorialNotes": [
-    { "verse": 1, "term": "elone Mamre", "decision": "stejarii lui Mamre", "alternatives": ["terebinții lui Mamre"], "reason": "Specia exactă a arborelui este nesigură; stejarii păstrează consecvența ediției.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Specia exactă a arborelui este nesigură; stejarii păstrează consecvența ediției." },
-    { "verse": 3, "term": "Adonai", "decision": "Stăpâne", "alternatives": ["domnii mei", "Domnul meu"], "reason": "Vocalizarea masoretică este singulară, urmată de forme plurale în adresarea grupului; alternanța este păstrată.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Vocalizarea masoretică este singulară, urmată de forme plurale în adresarea grupului; alternanța este păstrată." },
-    { "verse": 5, "term": "sa'adu libbekhem / al-ken avartem", "decision": "să vă întăriți inimile / fiindcă de aceea ați trecut", "alternatives": ["să vă înviorați / după aceea veți trece mai departe"], "reason": "Idiomurile ospitalității sunt redate natural, păstrând motivarea oferită de Avraam.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Idiomurile ospitalității sunt redate natural, păstrând motivarea oferită de Avraam." },
-    { "verse": 6, "term": "shalosh se'im", "decision": "trei măsuri", "alternatives": ["trei seah"], "reason": "O seah este o măsură antică de volum; echivalarea modernă aparține notei explicative, nu versetului.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "O seah este o măsură antică de volum; echivalarea modernă aparține notei explicative, nu versetului." },
-    { "verse": 8, "term": "hemah vehalav", "decision": "lapte prins și lapte proaspăt", "alternatives": ["unt și lapte", "smântână și lapte"], "reason": "Hemah desemnează un produs lactat gras sau fermentat; formularea nu îl identifică excesiv de precis.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Hemah desemnează un produs lactat gras sau fermentat; formularea nu îl identifică excesiv de precis." },
-    { "verse": 10, "term": "ka'et hayyah", "decision": "pe vremea aceasta, anul viitor", "alternatives": ["la vremea când viața se reînnoiește", "la vremea aceasta după ciclul vieții"], "reason": "Idiomul indică revenirea la ciclul următor al anului și este redat prin echivalentul temporal natural.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Idiomul indică revenirea la ciclul următor al anului și este redat prin echivalentul temporal natural." },
-    { "verse": 12, "term": "ednah / adoni", "decision": "această plăcere / stăpânul meu", "alternatives": ["desfătare / domnul meu"], "reason": "Ednah poate include plăcerea și revigorarea asociate maternității; textul nu o reduce la o singură nuanță sexuală.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Ednah poate include plăcerea și revigorarea asociate maternității; textul nu o reduce la o singură nuanță sexuală." },
-    { "verse": 14, "term": "hayippale meYHWH davar", "decision": "Este ceva prea greu pentru DOMNUL?", "alternatives": ["Este vreun lucru minunat dincolo de puterea DOMNULUI?"], "reason": "Verbul poate exprima atât dificultatea, cât și caracterul minunat; întrebarea păstrează sensul contextual al posibilității divine.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Verbul poate exprima atât dificultatea, cât și caracterul minunat; întrebarea păstrează sensul contextual al posibilității divine." },
-    { "verse": 19, "term": "ki yedativ / tsedaqah umishpat", "decision": "l-am ales / dreptate și judecată", "alternatives": ["l-am cunoscut / dreptate și justiție"], "reason": "A cunoaște exprimă aici alegerea relațională; l-am ales face funcția propoziției clară, iar sensul literal rămâne documentat.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "A cunoaște exprimă aici alegerea relațională; l-am ales face funcția propoziției clară, iar sensul literal rămâne documentat." },
-    { "verse": 21, "term": "haketsa'akatah haba'ah elay asu kalah", "decision": "dacă purtarea lor corespunde întru totul strigătului care a ajuns la Mine", "alternatives": ["dacă au făcut întru totul după strigătul care a ajuns la Mine"], "reason": "Construcția comprimată este clarificată fără a elimina imaginea unei cercetări judiciare perfecte.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Construcția comprimată este clarificată fără a elimina imaginea unei cercetări judiciare perfecte." },
-    { "verse": 22, "term": "ve'Avraham odennu omed lifne YHWH", "decision": "Avraam a rămas înaintea DOMNULUI", "alternatives": ["DOMNUL a rămas înaintea lui Avraam"], "reason": "Textul masoretic este păstrat. Tradiția scribală consemnează versetul printre corecturile vechilor scribi, iar lectura alternativă rămâne vizibilă în notă.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul masoretic este păstrat. Tradiția scribală consemnează versetul printre corecturile vechilor scribi, iar lectura alternativă rămâne vizibilă în notă." },
-    { "verse": 25, "term": "hashofet kol-ha'arets lo ya'aseh mishpat", "decision": "Judecătorul întregului pământ nu va face oare dreptate?", "alternatives": ["Judecătorul întregului pământ nu va face judecată?"], "reason": "Mishpat desemnează aici exercitarea judecății drepte; formularea românească păstrează forța întrebării retorice.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Mishpat desemnează aici exercitarea judecății drepte; formularea românească păstrează forța întrebării retorice." }
+    {
+      "verse": 1,
+      "term": "elone Mamre",
+      "decision": "stejarii lui Mamre",
+      "alternatives": [
+        "terebinții lui Mamre"
+      ],
+      "reason": "Specia exactă a arborelui este nesigură; stejarii păstrează consecvența ediției.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Specia exactă a arborelui este nesigură; stejarii păstrează consecvența ediției."
+    },
+    {
+      "verse": 3,
+      "term": "Adonai",
+      "decision": "Stăpâne",
+      "alternatives": [
+        "domnii mei",
+        "Domnul meu"
+      ],
+      "reason": "Vocalizarea masoretică este singulară, urmată de forme plurale în adresarea grupului; alternanța este păstrată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Vocalizarea masoretică este singulară, urmată de forme plurale în adresarea grupului; alternanța este păstrată."
+    },
+    {
+      "verse": 5,
+      "term": "sa'adu libbekhem / al-ken avartem",
+      "decision": "să vă întăriți inimile / fiindcă de aceea ați trecut",
+      "alternatives": [
+        "să vă înviorați / după aceea veți trece mai departe"
+      ],
+      "reason": "Idiomurile ospitalității sunt redate natural, păstrând motivarea oferită de Avraam.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Idiomurile ospitalității sunt redate natural, păstrând motivarea oferită de Avraam."
+    },
+    {
+      "verse": 6,
+      "term": "shalosh se'im",
+      "decision": "trei măsuri",
+      "alternatives": [
+        "trei seah"
+      ],
+      "reason": "O seah este o măsură antică de volum; echivalarea modernă aparține notei explicative, nu versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "O seah este o măsură antică de volum; echivalarea modernă aparține notei explicative, nu versetului."
+    },
+    {
+      "verse": 8,
+      "term": "hemah vehalav",
+      "decision": "lapte prins și lapte proaspăt",
+      "alternatives": [
+        "unt și lapte",
+        "smântână și lapte"
+      ],
+      "reason": "Hemah desemnează un produs lactat gras sau fermentat; formularea nu îl identifică excesiv de precis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Hemah desemnează un produs lactat gras sau fermentat; formularea nu îl identifică excesiv de precis."
+    },
+    {
+      "verse": 10,
+      "term": "ka'et hayyah",
+      "decision": "pe vremea aceasta, anul viitor",
+      "alternatives": [
+        "la vremea când viața se reînnoiește",
+        "la vremea aceasta după ciclul vieții"
+      ],
+      "reason": "Idiomul indică revenirea la ciclul următor al anului și este redat prin echivalentul temporal natural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Idiomul indică revenirea la ciclul următor al anului și este redat prin echivalentul temporal natural."
+    },
+    {
+      "verse": 12,
+      "term": "ednah / adoni",
+      "decision": "această plăcere / stăpânul meu",
+      "alternatives": [
+        "desfătare / domnul meu"
+      ],
+      "reason": "Ednah poate include plăcerea și revigorarea asociate maternității; textul nu o reduce la o singură nuanță sexuală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ednah poate include plăcerea și revigorarea asociate maternității; textul nu o reduce la o singură nuanță sexuală."
+    },
+    {
+      "verse": 14,
+      "term": "hayippale meYHWH davar",
+      "decision": "Este ceva prea greu pentru DOMNUL?",
+      "alternatives": [
+        "Este vreun lucru minunat dincolo de puterea DOMNULUI?"
+      ],
+      "reason": "Verbul poate exprima atât dificultatea, cât și caracterul minunat; întrebarea păstrează sensul contextual al posibilității divine.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul poate exprima atât dificultatea, cât și caracterul minunat; întrebarea păstrează sensul contextual al posibilității divine."
+    },
+    {
+      "verse": 19,
+      "term": "ki yedativ / tsedaqah umishpat",
+      "decision": "l-am ales / dreptate și judecată",
+      "alternatives": [
+        "l-am cunoscut / dreptate și justiție"
+      ],
+      "reason": "A cunoaște exprimă aici alegerea relațională; l-am ales face funcția propoziției clară, iar sensul literal rămâne documentat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A cunoaște exprimă aici alegerea relațională; l-am ales face funcția propoziției clară, iar sensul literal rămâne documentat."
+    },
+    {
+      "verse": 21,
+      "term": "haketsa'akatah haba'ah elay asu kalah",
+      "decision": "dacă purtarea lor corespunde întru totul strigătului care a ajuns la Mine",
+      "alternatives": [
+        "dacă au făcut întru totul după strigătul care a ajuns la Mine"
+      ],
+      "reason": "Construcția comprimată este clarificată fără a elimina imaginea unei cercetări judiciare perfecte.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția comprimată este clarificată fără a elimina imaginea unei cercetări judiciare perfecte."
+    },
+    {
+      "verse": 22,
+      "term": "ve'Avraham odennu omed lifne YHWH",
+      "decision": "Avraam a rămas înaintea DOMNULUI",
+      "alternatives": [
+        "DOMNUL a rămas înaintea lui Avraam"
+      ],
+      "reason": "Textul masoretic este păstrat. Tradiția scribală consemnează versetul printre corecturile vechilor scribi, iar lectura alternativă rămâne vizibilă în notă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul masoretic este păstrat. Tradiția scribală consemnează versetul printre corecturile vechilor scribi, iar lectura alternativă rămâne vizibilă în notă."
+    },
+    {
+      "verse": 25,
+      "term": "hashofet kol-ha'arets lo ya'aseh mishpat",
+      "decision": "Judecătorul întregului pământ nu va face oare dreptate?",
+      "alternatives": [
+        "Judecătorul întregului pământ nu va face judecată?"
+      ],
+      "reason": "Mishpat desemnează aici exercitarea judecății drepte; formularea românească păstrează forța întrebării retorice.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Mishpat desemnează aici exercitarea judecății drepte; formularea românească păstrează forța întrebării retorice."
+    }
   ]
 }

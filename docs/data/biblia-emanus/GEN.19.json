@@ -6,8 +6,19 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN19.htm", "license": "Public Domain", "lockId": "WEBU-GEN" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN19.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": "WLC-GEN" }
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/GEN19.htm",
+      "license": "Public Domain",
+      "lockId": "WEBU-GEN"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/GEN19.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-GEN"
+    }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,13 +31,35 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ron1924/GEN19.htm" },
-      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.19.NTR" },
-      { "id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ronbtf/GEN19.htm" }
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ron1924/GEN19.htm"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.19.NTR"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ronbtf/GEN19.htm"
+      }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
-    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" },
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
     "observations": [
       "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții.",
       "Deciziile au fost verificate independent în WLC-OSHB și WEBU.",
@@ -35,9 +68,18 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-04",
-    "verseCoverage": { "expected": 38, "reviewed": 38, "continuous": true },
-    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "violență sexuală, formule juridice, adresare singular-plural, judecată, nume și semne masoretice" },
+    "completedOn": "2026-08-05",
+    "verseCoverage": {
+      "expected": 38,
+      "reviewed": 38,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "violență sexuală, formule juridice, adresare singular-plural, judecată, nume și semne masoretice"
+    },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
@@ -54,17 +96,27 @@
         "Incestul și intoxicarea din final sunt descrise fără justificare, recomandare sau culpabilizarea victimelor prin adaosuri editoriale."
       ]
     },
-    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
-    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
     "reviewLevel": "ai-complete",
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "Codex GPT-5",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
@@ -73,62 +125,356 @@
     "textDigest": "sha256:94f54688d7165e5b84aa64cfea986ac772872c8389895487e890d2c3049c6399"
   },
   "verses": [
-    { "number": 1, "text": "Cei doi îngeri au ajuns la Sodoma seara. Lot stătea la poarta Sodomei. Când i-a văzut, Lot s-a ridicat ca să-i întâmpine și s-a plecat cu fața la pământ." },
-    { "number": 2, "text": "El a spus: „Vă rog, domnii mei, veniți în casa slujitorului vostru, rămâneți peste noapte și spălați-vă picioarele. Apoi vă veți scula dis-de-dimineață și vă veți continua drumul.” Ei au răspuns: „Nu, ci vom rămâne peste noapte în piață.”" },
-    { "number": 3, "text": "Dar Lot a stăruit mult, iar ei au venit cu el și au intrat în casa lui. El le-a pregătit un ospăț, a copt azime și ei au mâncat." },
-    { "number": 4, "text": "Înainte să se culce, oamenii cetății, oamenii Sodomei, au înconjurat casa, de la tânăr până la bătrân, tot poporul, din toate părțile." },
-    { "number": 5, "text": "L-au strigat pe Lot și i-au spus: „Unde sunt bărbații care au venit la tine în noaptea aceasta? Scoate-i la noi ca să avem relații sexuale cu ei.”" },
-    { "number": 6, "text": "Lot a ieșit la ei la intrare și a închis ușa în urma lui." },
-    { "number": 7, "text": "El a spus: „Vă rog, frații mei, nu faceți un asemenea rău!" },
-    { "number": 8, "text": "Iată, am două fiice care nu au avut relații cu vreun bărbat. Vă rog, lăsați-mă să vi le aduc și faceți-le ce vi se pare bine. Numai acestor bărbați să nu le faceți nimic, pentru că au intrat sub adăpostul acoperișului meu.”" },
-    { "number": 9, "text": "Ei au spus: „Dă-te la o parte!” Apoi au spus: „Omul acesta a venit să locuiască aici ca străin și acum vrea să fie judecător! Îți vom face ție mai rău decât lor.” L-au împins cu putere pe Lot și s-au apropiat ca să spargă ușa." },
-    { "number": 10, "text": "Dar bărbații și-au întins mâinile, l-au tras pe Lot în casă la ei și au închis ușa." },
-    { "number": 11, "text": "I-au lovit cu orbire pe oamenii care erau la intrarea casei, de la cel mai mic până la cel mai mare, astfel încât aceștia au obosit căutând intrarea." },
-    { "number": 12, "text": "Bărbații i-au spus lui Lot: „Mai ai pe cineva aici? Gineri, fii, fiice sau pe oricine mai ai în cetate — scoate-i din locul acesta," },
-    { "number": 13, "text": "pentru că noi vom distruge locul acesta. Strigătul împotriva locuitorilor lui a ajuns atât de mare înaintea DOMNULUI, încât DOMNUL ne-a trimis să-l distrugem.”" },
-    { "number": 14, "text": "Lot a ieșit și le-a vorbit ginerilor săi, cei care urmau să le ia de soții pe fiicele lui, și le-a spus: „Ridicați-vă și ieșiți din locul acesta, pentru că DOMNUL va distruge cetatea!” Dar ginerilor lui li s-a părut că glumește." },
-    { "number": 15, "text": "Când s-au ivit zorile, îngerii l-au grăbit pe Lot și au spus: „Ridică-te! Ia-ți soția și cele două fiice care sunt aici, ca să nu pieri odată cu pedeapsa cetății.”" },
-    { "number": 16, "text": "Dar el întârzia. Atunci bărbații l-au apucat de mână pe el, pe soția lui și pe cele două fiice ale lui, pentru că DOMNUL avea milă de el. L-au scos și l-au așezat în afara cetății." },
-    { "number": 17, "text": "După ce i-au scos afară, unul dintre ei a spus: „Fugi ca să-ți salvezi viața! Nu privi înapoi și nu te opri nicăieri în câmpie. Fugi la munte, ca să nu pieri!”" },
-    { "number": 18, "text": "Lot le-a spus: „Nu așa, te rog, Stăpâne!" },
-    { "number": 19, "text": "Iată, slujitorul Tău a găsit bunăvoință în ochii Tăi și ai arătat o mare îndurare față de mine, salvându-mi viața. Dar eu nu pot fugi la munte, ca nu cumva nenorocirea să mă ajungă și să mor." },
-    { "number": 20, "text": "Iată, cetatea aceasta este destul de aproape ca să fug acolo și este mică. Te rog, lasă-mă să fug acolo — nu este ea mică? — și voi rămâne în viață.”" },
-    { "number": 21, "text": "El i-a spus: „Iată, îți împlinesc și această cerere și nu voi răsturna cetatea despre care ai vorbit." },
-    { "number": 22, "text": "Grăbește-te și fugi acolo, pentru că nu pot face nimic până când nu ajungi.” De aceea cetatea a fost numită Țoar." },
-    { "number": 23, "text": "Soarele răsărise peste pământ când Lot a ajuns la Țoar." },
-    { "number": 24, "text": "Atunci DOMNUL a făcut să plouă peste Sodoma și Gomora sulf și foc de la DOMNUL, din cer." },
-    { "number": 25, "text": "A răsturnat cetățile acelea, întreaga câmpie, pe toți locuitorii cetăților și tot ce creștea din pământ." },
-    { "number": 26, "text": "Dar soția lui Lot, care venea în urma lui, a privit înapoi și a devenit un stâlp de sare." },
-    { "number": 27, "text": "Avraam s-a sculat dis-de-dimineață și s-a dus la locul unde stătuse înaintea DOMNULUI." },
-    { "number": 28, "text": "A privit spre Sodoma și Gomora și spre întregul ținut al câmpiei și a văzut că fumul țării se ridica asemenea fumului unui cuptor." },
-    { "number": 29, "text": "Când Dumnezeu a distrus cetățile câmpiei, Și-a adus aminte de Avraam și l-a scos pe Lot din mijlocul distrugerii, când a răsturnat cetățile în care locuise Lot." },
-    { "number": 30, "text": "Lot a urcat din Țoar și a locuit la munte împreună cu cele două fiice ale lui, pentru că se temea să locuiască în Țoar. A locuit într-o peșteră împreună cu cele două fiice ale lui." },
-    { "number": 31, "text": "Fiica întâi născută i-a spus celei mai tinere: „Tatăl nostru este bătrân și nu este niciun bărbat în țara aceasta care să intre la noi după obiceiul întregului pământ." },
-    { "number": 32, "text": "Haide să-i dăm tatălui nostru să bea vin și să ne culcăm cu el, ca să păstrăm urmași din tatăl nostru.”" },
-    { "number": 33, "text": "În noaptea aceea i-au dat tatălui lor să bea vin, iar cea întâi născută a intrat și s-a culcat cu tatăl ei. El nu a știut când s-a culcat ea, nici când s-a ridicat." },
-    { "number": 34, "text": "A doua zi, cea întâi născută i-a spus celei mai tinere: „Iată, noaptea trecută m-am culcat cu tatăl meu. Să-i dăm să bea vin și în noaptea aceasta, apoi intră și culcă-te cu el, ca să păstrăm urmași din tatăl nostru.”" },
-    { "number": 35, "text": "Și în noaptea aceea i-au dat tatălui lor să bea vin. Cea mai tânără s-a dus și s-a culcat cu el. El nu a știut când s-a culcat ea, nici când s-a ridicat." },
-    { "number": 36, "text": "Astfel, amândouă fiicele lui Lot au rămas însărcinate de la tatăl lor." },
-    { "number": 37, "text": "Cea întâi născută a născut un fiu și i-a pus numele Moab. El este strămoșul moabiților de astăzi." },
-    { "number": 38, "text": "Cea mai tânără a născut și ea un fiu și i-a pus numele Ben-Ami. El este strămoșul amoniților de astăzi." }
+    {
+      "number": 1,
+      "text": "Cei doi îngeri au ajuns la Sodoma seara. Lot stătea la poarta Sodomei. Când i-a văzut, Lot s-a ridicat ca să-i întâmpine și s-a plecat cu fața la pământ."
+    },
+    {
+      "number": 2,
+      "text": "El a spus: „Vă rog, domnii mei, veniți în casa slujitorului vostru, rămâneți peste noapte și spălați-vă picioarele. Apoi vă veți scula dis-de-dimineață și vă veți continua drumul.” Ei au răspuns: „Nu, ci vom rămâne peste noapte în piață.”"
+    },
+    {
+      "number": 3,
+      "text": "Dar Lot a stăruit mult, iar ei au venit cu el și au intrat în casa lui. El le-a pregătit un ospăț, a copt azime și ei au mâncat."
+    },
+    {
+      "number": 4,
+      "text": "Înainte să se culce, oamenii cetății, oamenii Sodomei, au înconjurat casa, de la tânăr până la bătrân, tot poporul, din toate părțile."
+    },
+    {
+      "number": 5,
+      "text": "L-au strigat pe Lot și i-au spus: „Unde sunt bărbații care au venit la tine în noaptea aceasta? Scoate-i la noi ca să avem relații sexuale cu ei.”"
+    },
+    {
+      "number": 6,
+      "text": "Lot a ieșit la ei la intrare și a închis ușa în urma lui."
+    },
+    {
+      "number": 7,
+      "text": "El a spus: „Vă rog, frații mei, nu faceți un asemenea rău!"
+    },
+    {
+      "number": 8,
+      "text": "Iată, am două fiice care nu au avut relații cu vreun bărbat. Vă rog, lăsați-mă să vi le aduc și faceți-le ce vi se pare bine. Numai acestor bărbați să nu le faceți nimic, pentru că au intrat sub adăpostul acoperișului meu.”"
+    },
+    {
+      "number": 9,
+      "text": "Ei au spus: „Dă-te la o parte!” Apoi au spus: „Omul acesta a venit să locuiască aici ca străin și acum vrea să fie judecător! Îți vom face ție mai rău decât lor.” L-au împins cu putere pe Lot și s-au apropiat ca să spargă ușa."
+    },
+    {
+      "number": 10,
+      "text": "Dar bărbații și-au întins mâinile, l-au tras pe Lot în casă la ei și au închis ușa."
+    },
+    {
+      "number": 11,
+      "text": "I-au lovit cu orbire pe oamenii care erau la intrarea casei, de la cel mai mic până la cel mai mare, astfel încât aceștia au obosit căutând intrarea."
+    },
+    {
+      "number": 12,
+      "text": "Bărbații i-au spus lui Lot: „Mai ai pe cineva aici? Gineri, fii, fiice sau pe oricine mai ai în cetate — scoate-i din locul acesta,"
+    },
+    {
+      "number": 13,
+      "text": "pentru că noi vom distruge locul acesta. Strigătul împotriva locuitorilor lui a ajuns atât de mare înaintea DOMNULUI, încât DOMNUL ne-a trimis să-l distrugem.”"
+    },
+    {
+      "number": 14,
+      "text": "Lot a ieșit și le-a vorbit ginerilor săi, cei care urmau să le ia de soții pe fiicele lui, și le-a spus: „Ridicați-vă și ieșiți din locul acesta, pentru că DOMNUL va distruge cetatea!” Dar ginerilor lui li s-a părut că glumește."
+    },
+    {
+      "number": 15,
+      "text": "Când s-au ivit zorile, îngerii l-au grăbit pe Lot și au spus: „Ridică-te! Ia-ți soția și cele două fiice care sunt aici, ca să nu pieri odată cu pedeapsa cetății.”"
+    },
+    {
+      "number": 16,
+      "text": "Dar el întârzia. Atunci bărbații l-au apucat de mână pe el, pe soția lui și pe cele două fiice ale lui, pentru că DOMNUL avea milă de el. L-au scos și l-au așezat în afara cetății."
+    },
+    {
+      "number": 17,
+      "text": "După ce i-au scos afară, unul dintre ei a spus: „Fugi ca să-ți salvezi viața! Nu privi înapoi și nu te opri nicăieri în câmpie. Fugi la munte, ca să nu pieri!”"
+    },
+    {
+      "number": 18,
+      "text": "Lot le-a spus: „Nu așa, te rog, Stăpâne!"
+    },
+    {
+      "number": 19,
+      "text": "Iată, slujitorul Tău a găsit bunăvoință în ochii Tăi și ai arătat o mare îndurare față de mine, salvându-mi viața. Dar eu nu pot fugi la munte, ca nu cumva nenorocirea să mă ajungă și să mor."
+    },
+    {
+      "number": 20,
+      "text": "Iată, cetatea aceasta este destul de aproape ca să fug acolo și este mică. Te rog, lasă-mă să fug acolo — nu este ea mică? — și voi rămâne în viață.”"
+    },
+    {
+      "number": 21,
+      "text": "El i-a spus: „Iată, îți împlinesc și această cerere și nu voi răsturna cetatea despre care ai vorbit."
+    },
+    {
+      "number": 22,
+      "text": "Grăbește-te și fugi acolo, pentru că nu pot face nimic până când nu ajungi.” De aceea cetatea a fost numită Țoar."
+    },
+    {
+      "number": 23,
+      "text": "Soarele răsărise peste pământ când Lot a ajuns la Țoar."
+    },
+    {
+      "number": 24,
+      "text": "Atunci DOMNUL a făcut să plouă peste Sodoma și Gomora sulf și foc de la DOMNUL, din cer."
+    },
+    {
+      "number": 25,
+      "text": "A răsturnat cetățile acelea, întreaga câmpie, pe toți locuitorii cetăților și tot ce creștea din pământ."
+    },
+    {
+      "number": 26,
+      "text": "Dar soția lui Lot, care venea în urma lui, a privit înapoi și a devenit un stâlp de sare."
+    },
+    {
+      "number": 27,
+      "text": "Avraam s-a sculat dis-de-dimineață și s-a dus la locul unde stătuse înaintea DOMNULUI."
+    },
+    {
+      "number": 28,
+      "text": "A privit spre Sodoma și Gomora și spre întregul ținut al câmpiei și a văzut că fumul țării se ridica asemenea fumului unui cuptor."
+    },
+    {
+      "number": 29,
+      "text": "Când Dumnezeu a distrus cetățile câmpiei, Și-a adus aminte de Avraam și l-a scos pe Lot din mijlocul distrugerii, când a răsturnat cetățile în care locuise Lot."
+    },
+    {
+      "number": 30,
+      "text": "Lot a urcat din Țoar și a locuit la munte împreună cu cele două fiice ale lui, pentru că se temea să locuiască în Țoar. A locuit într-o peșteră împreună cu cele două fiice ale lui."
+    },
+    {
+      "number": 31,
+      "text": "Fiica întâi născută i-a spus celei mai tinere: „Tatăl nostru este bătrân și nu este niciun bărbat în țara aceasta care să intre la noi după obiceiul întregului pământ."
+    },
+    {
+      "number": 32,
+      "text": "Haide să-i dăm tatălui nostru să bea vin și să ne culcăm cu el, ca să păstrăm urmași din tatăl nostru.”"
+    },
+    {
+      "number": 33,
+      "text": "În noaptea aceea i-au dat tatălui lor să bea vin, iar cea întâi născută a intrat și s-a culcat cu tatăl ei. El nu a știut când s-a culcat ea, nici când s-a ridicat."
+    },
+    {
+      "number": 34,
+      "text": "A doua zi, cea întâi născută i-a spus celei mai tinere: „Iată, noaptea trecută m-am culcat cu tatăl meu. Să-i dăm să bea vin și în noaptea aceasta, apoi intră și culcă-te cu el, ca să păstrăm urmași din tatăl nostru.”"
+    },
+    {
+      "number": 35,
+      "text": "Și în noaptea aceea i-au dat tatălui lor să bea vin. Cea mai tânără s-a dus și s-a culcat cu el. El nu a știut când s-a culcat ea, nici când s-a ridicat."
+    },
+    {
+      "number": 36,
+      "text": "Astfel, amândouă fiicele lui Lot au rămas însărcinate de la tatăl lor."
+    },
+    {
+      "number": 37,
+      "text": "Cea întâi născută a născut un fiu și i-a pus numele Moab. El este strămoșul moabiților de astăzi."
+    },
+    {
+      "number": 38,
+      "text": "Cea mai tânără a născut și ea un fiu și i-a pus numele Ben-Ami. El este strămoșul amoniților de astăzi."
+    }
   ],
   "editorialNotes": [
-    { "verse": 1, "term": "malakhim", "decision": "îngeri", "alternatives": ["mesageri"], "reason": "Contextul îi identifică drept cei doi mesageri care plecaseră de la Avraam.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Contextul îi identifică drept cei doi mesageri care plecaseră de la Avraam." },
-    { "verse": 5, "term": "vened'ah otam", "decision": "ca să avem relații sexuale cu ei", "alternatives": ["ca să-i cunoaștem"], "reason": "În context, verbul a cunoaște are sens sexual; o redare vagă ar ascunde amenințarea de viol colectiv.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "În context, verbul a cunoaște are sens sexual; o redare vagă ar ascunde amenințarea de viol colectiv." },
-    { "verse": 8, "term": "asher lo-yade'u ish / asu lahen katov be'einekhem", "decision": "nu au avut relații cu vreun bărbat / faceți-le ce vi se pare bine", "alternatives": ["nu au cunoscut bărbat / faceți-le ce este bine în ochii voștri"], "reason": "Textul consemnează oferta grav abuzivă a lui Lot; nu o aprobă și nu diminuează violența împotriva femeilor.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul consemnează oferta grav abuzivă a lui Lot; nu o aprobă și nu diminuează violența împotriva femeilor." },
-    { "verse": 11, "term": "sanverim", "decision": "orbire", "alternatives": ["orbire temporară", "o tulburare a vederii"], "reason": "Termenul rar apare și în 2 Regi 6:18 și poate indica dezorientare vizuală supranaturală.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Termenul rar apare și în 2 Regi 6:18 și poate indica dezorientare vizuală supranaturală." },
-    { "verse": 14, "term": "loqehe venotaw", "decision": "cei care urmau să le ia de soții pe fiicele lui", "alternatives": ["care le luaseră pe fiicele lui", "logodnicii fiicelor lui"], "reason": "Participiul poate descrie gineri deja angajați prin logodnă; formularea păstrează caracterul viitor fără a afirma căsătoria consumată.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Participiul poate descrie gineri deja angajați prin logodnă; formularea păstrează caracterul viitor fără a afirma căsătoria consumată." },
-    { "verse": 15, "term": "ba'avon ha'ir", "decision": "odată cu pedeapsa cetății", "alternatives": ["în nelegiuirea cetății", "din cauza vinei cetății"], "reason": "Substantivul poate indica vina sau consecința ei; contextul avertismentului cere redarea consecinței judiciare.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Substantivul poate indica vina sau consecința ei; contextul avertismentului cere redarea consecinței judiciare." },
-    { "verse": 16, "term": "behemlat YHWH alaw", "decision": "pentru că DOMNUL avea milă de el", "alternatives": ["prin îndurarea DOMNULUI față de el"], "reason": "Formularea păstrează motivul explicit al salvării lui Lot.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Formularea păstrează motivul explicit al salvării lui Lot." },
-    { "verse": 18, "term": "Adonai", "decision": "Stăpâne", "alternatives": ["domnii mei", "Doamne"], "reason": "Adresarea trece de la plural la singular; vocalizarea masoretică susține adresarea respectuoasă singulară.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Adresarea trece de la plural la singular; vocalizarea masoretică susține adresarea respectuoasă singulară." },
-    { "verse": 22, "term": "Tso'ar", "decision": "Țoar", "reason": "Numele este legat în text de adjectivul mic.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Numele este legat în text de adjectivul mic." },
-    { "verse": 24, "term": "gofrit va'esh me'et YHWH min-hashshamayim", "decision": "sulf și foc de la DOMNUL, din cer", "alternatives": ["pucioasă și foc de la DOMNUL din ceruri"], "reason": "Repetarea numelui DOMNULUI este păstrată fără a construi din ea o concluzie doctrinară suplimentară.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Repetarea numelui DOMNULUI este păstrată fără a construi din ea o concluzie doctrinară suplimentară." },
-    { "verse": 26, "term": "natsiv melah", "decision": "stâlp de sare", "alternatives": ["coloană de sare"], "reason": "Stâlp de sare păstrează imaginea concretă și uzul românesc stabil.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Stâlp de sare păstrează imaginea concretă și uzul românesc stabil." },
-    { "verse": 29, "term": "vayizkor Elohim et-Avraham", "decision": "Și-a adus aminte de Avraam", "reason": "Expresia indică acțiunea credincioasă a lui Dumnezeu în favoarea lui Avraam, nu faptul că Dumnezeu uitase.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Expresia indică acțiunea credincioasă a lui Dumnezeu în favoarea lui Avraam, nu faptul că Dumnezeu uitase." },
-    { "verse": 31, "term": "ein ish ba'arets", "decision": "nu este niciun bărbat în țara aceasta", "alternatives": ["nu este niciun bărbat pe pământ", "nu este niciun bărbat în ținutul acesta"], "reason": "Erets poate indica țara sau pământul; redarea locală se potrivește situației fără a presupune că fiicele credeau că întreaga omenire dispăruse.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Erets poate indica țara sau pământul; redarea locală se potrivește situației fără a presupune că fiicele credeau că întreaga omenire dispăruse." },
-    { "verse": 32, "term": "venehayyeh me'avinu zara", "decision": "ca să păstrăm urmași din tatăl nostru", "alternatives": ["ca să păstrăm sămânța tatălui nostru"], "reason": "Narațiunea descrie incestul și intoxicarea fără a le aproba sau prescrie.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Narațiunea descrie incestul și intoxicarea fără a le aproba sau prescrie." },
-    { "verse": 33, "term": "uvequmah — punctum extraordinarium", "decision": "când s-a ridicat", "alternatives": ["lectură păstrată cu semnul masoretic extraordinar"], "reason": "WLC păstrează un punct extraordinar asupra literei waw din expresia când s-a ridicat, atât în versetul 33, cât și în versetul 35. Textul consonantic este păstrat, iar semnul este documentat fără eliminarea propoziției.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "WLC păstrează un punct extraordinar asupra literei waw din expresia când s-a ridicat, atât în versetul 33, cât și în versetul 35. Textul consonantic este păstrat, iar semnul este documentat fără eliminarea propoziției." },
-    { "verse": 37, "term": "Mo'av", "decision": "Moab", "reason": "Numele este asociat narativ cu expresia din tată; jocul de cuvinte este explicat în notă, nu amplificat în verset.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Numele este asociat narativ cu expresia din tată; jocul de cuvinte este explicat în notă, nu amplificat în verset." },
-    { "verse": 38, "term": "Ben-Ammi", "decision": "Ben-Ami", "reason": "Numele înseamnă aproximativ fiul poporului sau rudei mele și este legat de originea narativă a amoniților.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Numele înseamnă aproximativ fiul poporului sau rudei mele și este legat de originea narativă a amoniților." }
+    {
+      "verse": 1,
+      "term": "malakhim",
+      "decision": "îngeri",
+      "alternatives": [
+        "mesageri"
+      ],
+      "reason": "Contextul îi identifică drept cei doi mesageri care plecaseră de la Avraam.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul îi identifică drept cei doi mesageri care plecaseră de la Avraam."
+    },
+    {
+      "verse": 5,
+      "term": "vened'ah otam",
+      "decision": "ca să avem relații sexuale cu ei",
+      "alternatives": [
+        "ca să-i cunoaștem"
+      ],
+      "reason": "În context, verbul a cunoaște are sens sexual; o redare vagă ar ascunde amenințarea de viol colectiv.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "În context, verbul a cunoaște are sens sexual; o redare vagă ar ascunde amenințarea de viol colectiv."
+    },
+    {
+      "verse": 8,
+      "term": "asher lo-yade'u ish / asu lahen katov be'einekhem",
+      "decision": "nu au avut relații cu vreun bărbat / faceți-le ce vi se pare bine",
+      "alternatives": [
+        "nu au cunoscut bărbat / faceți-le ce este bine în ochii voștri"
+      ],
+      "reason": "Textul consemnează oferta grav abuzivă a lui Lot; nu o aprobă și nu diminuează violența împotriva femeilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul consemnează oferta grav abuzivă a lui Lot; nu o aprobă și nu diminuează violența împotriva femeilor."
+    },
+    {
+      "verse": 11,
+      "term": "sanverim",
+      "decision": "orbire",
+      "alternatives": [
+        "orbire temporară",
+        "o tulburare a vederii"
+      ],
+      "reason": "Termenul rar apare și în 2 Regi 6:18 și poate indica dezorientare vizuală supranaturală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul rar apare și în 2 Regi 6:18 și poate indica dezorientare vizuală supranaturală."
+    },
+    {
+      "verse": 14,
+      "term": "loqehe venotaw",
+      "decision": "cei care urmau să le ia de soții pe fiicele lui",
+      "alternatives": [
+        "care le luaseră pe fiicele lui",
+        "logodnicii fiicelor lui"
+      ],
+      "reason": "Participiul poate descrie gineri deja angajați prin logodnă; formularea păstrează caracterul viitor fără a afirma căsătoria consumată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Participiul poate descrie gineri deja angajați prin logodnă; formularea păstrează caracterul viitor fără a afirma căsătoria consumată."
+    },
+    {
+      "verse": 15,
+      "term": "ba'avon ha'ir",
+      "decision": "odată cu pedeapsa cetății",
+      "alternatives": [
+        "în nelegiuirea cetății",
+        "din cauza vinei cetății"
+      ],
+      "reason": "Substantivul poate indica vina sau consecința ei; contextul avertismentului cere redarea consecinței judiciare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Substantivul poate indica vina sau consecința ei; contextul avertismentului cere redarea consecinței judiciare."
+    },
+    {
+      "verse": 16,
+      "term": "behemlat YHWH alaw",
+      "decision": "pentru că DOMNUL avea milă de el",
+      "alternatives": [
+        "prin îndurarea DOMNULUI față de el"
+      ],
+      "reason": "Formularea păstrează motivul explicit al salvării lui Lot.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea păstrează motivul explicit al salvării lui Lot."
+    },
+    {
+      "verse": 18,
+      "term": "Adonai",
+      "decision": "Stăpâne",
+      "alternatives": [
+        "domnii mei",
+        "Doamne"
+      ],
+      "reason": "Adresarea trece de la plural la singular; vocalizarea masoretică susține adresarea respectuoasă singulară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adresarea trece de la plural la singular; vocalizarea masoretică susține adresarea respectuoasă singulară."
+    },
+    {
+      "verse": 22,
+      "term": "Tso'ar",
+      "decision": "Țoar",
+      "reason": "Numele este legat în text de adjectivul mic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele este legat în text de adjectivul mic."
+    },
+    {
+      "verse": 24,
+      "term": "gofrit va'esh me'et YHWH min-hashshamayim",
+      "decision": "sulf și foc de la DOMNUL, din cer",
+      "alternatives": [
+        "pucioasă și foc de la DOMNUL din ceruri"
+      ],
+      "reason": "Repetarea numelui DOMNULUI este păstrată fără a construi din ea o concluzie doctrinară suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Repetarea numelui DOMNULUI este păstrată fără a construi din ea o concluzie doctrinară suplimentară."
+    },
+    {
+      "verse": 26,
+      "term": "natsiv melah",
+      "decision": "stâlp de sare",
+      "alternatives": [
+        "coloană de sare"
+      ],
+      "reason": "Stâlp de sare păstrează imaginea concretă și uzul românesc stabil.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Stâlp de sare păstrează imaginea concretă și uzul românesc stabil."
+    },
+    {
+      "verse": 29,
+      "term": "vayizkor Elohim et-Avraham",
+      "decision": "Și-a adus aminte de Avraam",
+      "reason": "Expresia indică acțiunea credincioasă a lui Dumnezeu în favoarea lui Avraam, nu faptul că Dumnezeu uitase.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia indică acțiunea credincioasă a lui Dumnezeu în favoarea lui Avraam, nu faptul că Dumnezeu uitase."
+    },
+    {
+      "verse": 31,
+      "term": "ein ish ba'arets",
+      "decision": "nu este niciun bărbat în țara aceasta",
+      "alternatives": [
+        "nu este niciun bărbat pe pământ",
+        "nu este niciun bărbat în ținutul acesta"
+      ],
+      "reason": "Erets poate indica țara sau pământul; redarea locală se potrivește situației fără a presupune că fiicele credeau că întreaga omenire dispăruse.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Erets poate indica țara sau pământul; redarea locală se potrivește situației fără a presupune că fiicele credeau că întreaga omenire dispăruse."
+    },
+    {
+      "verse": 32,
+      "term": "venehayyeh me'avinu zara",
+      "decision": "ca să păstrăm urmași din tatăl nostru",
+      "alternatives": [
+        "ca să păstrăm sămânța tatălui nostru"
+      ],
+      "reason": "Narațiunea descrie incestul și intoxicarea fără a le aproba sau prescrie.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Narațiunea descrie incestul și intoxicarea fără a le aproba sau prescrie."
+    },
+    {
+      "verse": 33,
+      "term": "uvequmah — punctum extraordinarium",
+      "decision": "când s-a ridicat",
+      "alternatives": [
+        "lectură păstrată cu semnul masoretic extraordinar"
+      ],
+      "reason": "WLC păstrează un punct extraordinar asupra literei waw din expresia când s-a ridicat, atât în versetul 33, cât și în versetul 35. Textul consonantic este păstrat, iar semnul este documentat fără eliminarea propoziției.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "WLC păstrează un punct extraordinar asupra literei waw din expresia când s-a ridicat, atât în versetul 33, cât și în versetul 35. Textul consonantic este păstrat, iar semnul este documentat fără eliminarea propoziției."
+    },
+    {
+      "verse": 37,
+      "term": "Mo'av",
+      "decision": "Moab",
+      "reason": "Numele este asociat narativ cu expresia din tată; jocul de cuvinte este explicat în notă, nu amplificat în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele este asociat narativ cu expresia din tată; jocul de cuvinte este explicat în notă, nu amplificat în verset."
+    },
+    {
+      "verse": 38,
+      "term": "Ben-Ammi",
+      "decision": "Ben-Ami",
+      "reason": "Numele înseamnă aproximativ fiul poporului sau rudei mele și este legat de originea narativă a amoniților.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele înseamnă aproximativ fiul poporului sau rudei mele și este legat de originea narativă a amoniților."
+    }
   ]
 }
