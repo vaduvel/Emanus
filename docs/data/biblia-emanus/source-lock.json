@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "engineVersion": "2.0.0",
   "translation": "BE",
-  "capturedOn": "2026-08-04",
+  "capturedOn": "2026-08-05",
   "snapshot": {
-    "path": "sources/ot-gen-jos-usfm.zip",
-    "sha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931"
+    "path": "sources/ot-gen-deu-jos-usfm.zip",
+    "sha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847"
   },
   "books": {
     "GEN": {
@@ -17,6 +17,62 @@
       "benchmarkLockIds": [
         "CORNILESCU1924-GEN",
         "BTF-GEN"
+      ],
+      "externalBenchmarkIds": [
+        "NTR"
+      ]
+    },
+    "EXO": {
+      "name": "Exodul",
+      "order": 2,
+      "testament": "OT",
+      "baseLockId": "WEBU-EXO",
+      "originalLockId": "WLC-EXO",
+      "benchmarkLockIds": [
+        "CORNILESCU1924-EXO",
+        "BTF-EXO"
+      ],
+      "externalBenchmarkIds": [
+        "NTR"
+      ]
+    },
+    "LEV": {
+      "name": "Leviticul",
+      "order": 3,
+      "testament": "OT",
+      "baseLockId": "WEBU-LEV",
+      "originalLockId": "WLC-LEV",
+      "benchmarkLockIds": [
+        "CORNILESCU1924-LEV",
+        "BTF-LEV"
+      ],
+      "externalBenchmarkIds": [
+        "NTR"
+      ]
+    },
+    "NUM": {
+      "name": "Numeri",
+      "order": 4,
+      "testament": "OT",
+      "baseLockId": "WEBU-NUM",
+      "originalLockId": "WLC-NUM",
+      "benchmarkLockIds": [
+        "CORNILESCU1924-NUM",
+        "BTF-NUM"
+      ],
+      "externalBenchmarkIds": [
+        "NTR"
+      ]
+    },
+    "DEU": {
+      "name": "Deuteronomul",
+      "order": 5,
+      "testament": "OT",
+      "baseLockId": "WEBU-DEU",
+      "originalLockId": "WLC-DEU",
+      "benchmarkLockIds": [
+        "CORNILESCU1924-DEU",
+        "BTF-DEU"
       ],
       "externalBenchmarkIds": [
         "NTR"
@@ -74,14 +130,6 @@
       "sha256": "b59378e7ced69a860392764578fe1bc2710ffb225cc49c01ce431f3e51d4a94a",
       "sourceId": "engwebp"
     },
-    "WEBU-JOS": {
-      "bookId": "JOS",
-      "language": "en",
-      "role": "base",
-      "archivePath": "web/07-JOSengwebp.usfm",
-      "sha256": "a81bb63cd03f3b9d05865988226464b46574fc3860fea0210bd83f8f91153bff",
-      "sourceId": "engwebp"
-    },
     "WLC-GEN": {
       "bookId": "GEN",
       "language": "he",
@@ -90,30 +138,12 @@
       "sha256": "50a8c4f22eccf7a394330cfacc27fc16b263db44c578ca9c55bb80bf73a47c17",
       "sourceId": "hboWLC"
     },
-    "WLC-JOS": {
-      "bookId": "JOS",
-      "language": "he",
-      "role": "original",
-      "archivePath": "wlc/07-JOShboWLC.usfm",
-      "sha256": "b832ab8f5563e5f6c4c2bfb5d0f704523061f61563206741c6e6ba22b1fd8e6b",
-      "sourceId": "hboWLC"
-    },
     "BTF-GEN": {
       "bookId": "GEN",
       "language": "ro",
       "role": "benchmark",
       "archivePath": "btf/02-GENronbtf.usfm",
       "sha256": "d308afc9b5facc71da666f17de899ce7d77725e47f6c7ed467497edeece55787",
-      "sourceId": "ronbtf",
-      "benchmarkId": "BTF",
-      "family": "fidela"
-    },
-    "BTF-JOS": {
-      "bookId": "JOS",
-      "language": "ro",
-      "role": "benchmark",
-      "archivePath": "btf/07-JOSronbtf.usfm",
-      "sha256": "06f9c1eb5df1315fc7da254b5f332c2f996a8aee0a47a7a55f83efaadc8f1d07",
       "sourceId": "ronbtf",
       "benchmarkId": "BTF",
       "family": "fidela"
@@ -127,6 +157,176 @@
       "sourceId": "ron1924",
       "benchmarkId": "CORNILESCU-1924",
       "family": "cornilescu"
+    },
+    "WEBU-EXO": {
+      "bookId": "EXO",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/03-EXOengwebp.usfm",
+      "sha256": "d5b39790ccd47960185dcee66856388ef474acb8de571fd5cc72817583df3ac6",
+      "sourceId": "engwebp"
+    },
+    "WLC-EXO": {
+      "bookId": "EXO",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/03-EXOhboWLC.usfm",
+      "sha256": "a94ae247f2b658deac353d31388d59e96d304db0c29d1063ccac650953505b78",
+      "sourceId": "hboWLC"
+    },
+    "BTF-EXO": {
+      "bookId": "EXO",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/03-EXOronbtf.usfm",
+      "sha256": "2827c0625983ed6520c6470983372f9739d2694824c797b16f1f4cb7d8b1e15c",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela"
+    },
+    "CORNILESCU1924-EXO": {
+      "bookId": "EXO",
+      "language": "ro-Cyrl",
+      "role": "benchmark",
+      "archivePath": "cornilescu1924/03-EXOron1924.usfm",
+      "sha256": "ffd6a62cef0827bc1485371d197bcf1ede3dd2f279b9fc2c221de40efacf0444",
+      "sourceId": "ron1924",
+      "benchmarkId": "CORNILESCU-1924",
+      "family": "cornilescu"
+    },
+    "WEBU-LEV": {
+      "bookId": "LEV",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/04-LEVengwebp.usfm",
+      "sha256": "d0b928cd0f3aad24963aae59009e10f3e9ca479786a455358daddd67efce104b",
+      "sourceId": "engwebp"
+    },
+    "WLC-LEV": {
+      "bookId": "LEV",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/04-LEVhboWLC.usfm",
+      "sha256": "0747f72faba81c0c54ba89a71475f94a17f478044fa9f360b01bfb4ca86023af",
+      "sourceId": "hboWLC"
+    },
+    "BTF-LEV": {
+      "bookId": "LEV",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/04-LEVronbtf.usfm",
+      "sha256": "ed81c9933fec0d7525546d574f1710053587105ee4e12d5a08750c4d5712e41e",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela"
+    },
+    "CORNILESCU1924-LEV": {
+      "bookId": "LEV",
+      "language": "ro-Cyrl",
+      "role": "benchmark",
+      "archivePath": "cornilescu1924/04-LEVron1924.usfm",
+      "sha256": "cebff3f8ed063ee03a518a156debc0933d24d79b6b4d30a3ee8ae2688a8210d6",
+      "sourceId": "ron1924",
+      "benchmarkId": "CORNILESCU-1924",
+      "family": "cornilescu"
+    },
+    "WEBU-NUM": {
+      "bookId": "NUM",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/05-NUMengwebp.usfm",
+      "sha256": "e612727287ac97ccfb0966b3a4d914b934f8a0fc3df09cc8289f30b12066e4f6",
+      "sourceId": "engwebp"
+    },
+    "WLC-NUM": {
+      "bookId": "NUM",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/05-NUMhboWLC.usfm",
+      "sha256": "b1686bcfb0397b5042b3fd8c16a6292097a662456568282007a22e1506b4f602",
+      "sourceId": "hboWLC"
+    },
+    "BTF-NUM": {
+      "bookId": "NUM",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/05-NUMronbtf.usfm",
+      "sha256": "967cfbfbf11b2cf793a43164ce8a83b868852d7bd5e25f3d687df897672c2bc9",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela"
+    },
+    "CORNILESCU1924-NUM": {
+      "bookId": "NUM",
+      "language": "ro-Cyrl",
+      "role": "benchmark",
+      "archivePath": "cornilescu1924/05-NUMron1924.usfm",
+      "sha256": "cdeed97d931a029953c27e4ec5a08e941f3895788e6e1db14ff3ef27bc4cd802",
+      "sourceId": "ron1924",
+      "benchmarkId": "CORNILESCU-1924",
+      "family": "cornilescu"
+    },
+    "WEBU-DEU": {
+      "bookId": "DEU",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/06-DEUengwebp.usfm",
+      "sha256": "760a37ff8098cc26f5ffe5ade020fc1646949bf48234bf72c14e19c51728cbe2",
+      "sourceId": "engwebp"
+    },
+    "WLC-DEU": {
+      "bookId": "DEU",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/06-DEUhboWLC.usfm",
+      "sha256": "3683b2db07de07ea12f195cea54eadf75de49bcae1b39391637c57dc554e4cf9",
+      "sourceId": "hboWLC"
+    },
+    "BTF-DEU": {
+      "bookId": "DEU",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/06-DEUronbtf.usfm",
+      "sha256": "d5e65372d037fdecca5a803cd5d38b7aead60297d55d83e7459581b13dbe8b65",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela"
+    },
+    "CORNILESCU1924-DEU": {
+      "bookId": "DEU",
+      "language": "ro-Cyrl",
+      "role": "benchmark",
+      "archivePath": "cornilescu1924/06-DEUron1924.usfm",
+      "sha256": "a7889c94c4513a0ce66a52a5077d19ab284e0581d2b229a758c26ce2c1407b13",
+      "sourceId": "ron1924",
+      "benchmarkId": "CORNILESCU-1924",
+      "family": "cornilescu"
+    },
+    "WEBU-JOS": {
+      "bookId": "JOS",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/07-JOSengwebp.usfm",
+      "sha256": "a81bb63cd03f3b9d05865988226464b46574fc3860fea0210bd83f8f91153bff",
+      "sourceId": "engwebp"
+    },
+    "WLC-JOS": {
+      "bookId": "JOS",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/07-JOShboWLC.usfm",
+      "sha256": "b832ab8f5563e5f6c4c2bfb5d0f704523061f61563206741c6e6ba22b1fd8e6b",
+      "sourceId": "hboWLC"
+    },
+    "BTF-JOS": {
+      "bookId": "JOS",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/07-JOSronbtf.usfm",
+      "sha256": "06f9c1eb5df1315fc7da254b5f332c2f996a8aee0a47a7a55f83efaadc8f1d07",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela"
     },
     "CORNILESCU1924-JOS": {
       "bookId": "JOS",
@@ -159,6 +359,166 @@
       "targetEndVerse": 32,
       "sourceChapter": 32,
       "sourceStartVerse": 2
+    },
+    {
+      "id": "WLC-EXO-8-1-4-S7V26",
+      "sourceLockId": "WLC-EXO",
+      "bookId": "EXO",
+      "targetChapter": 8,
+      "targetStartVerse": 1,
+      "targetEndVerse": 4,
+      "sourceChapter": 7,
+      "sourceStartVerse": 26
+    },
+    {
+      "id": "WLC-EXO-8-5-32-S8V1",
+      "sourceLockId": "WLC-EXO",
+      "bookId": "EXO",
+      "targetChapter": 8,
+      "targetStartVerse": 5,
+      "targetEndVerse": 32,
+      "sourceChapter": 8,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-EXO-22-1-1-S21V37",
+      "sourceLockId": "WLC-EXO",
+      "bookId": "EXO",
+      "targetChapter": 22,
+      "targetStartVerse": 1,
+      "targetEndVerse": 1,
+      "sourceChapter": 21,
+      "sourceStartVerse": 37
+    },
+    {
+      "id": "WLC-EXO-22-2-31-S22V1",
+      "sourceLockId": "WLC-EXO",
+      "bookId": "EXO",
+      "targetChapter": 22,
+      "targetStartVerse": 2,
+      "targetEndVerse": 31,
+      "sourceChapter": 22,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-LEV-6-1-7-S5V20",
+      "sourceLockId": "WLC-LEV",
+      "bookId": "LEV",
+      "targetChapter": 6,
+      "targetStartVerse": 1,
+      "targetEndVerse": 7,
+      "sourceChapter": 5,
+      "sourceStartVerse": 20
+    },
+    {
+      "id": "WLC-LEV-6-8-30-S6V1",
+      "sourceLockId": "WLC-LEV",
+      "bookId": "LEV",
+      "targetChapter": 6,
+      "targetStartVerse": 8,
+      "targetEndVerse": 30,
+      "sourceChapter": 6,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-NUM-16-36-50-S17V1",
+      "sourceLockId": "WLC-NUM",
+      "bookId": "NUM",
+      "targetChapter": 16,
+      "targetStartVerse": 36,
+      "targetEndVerse": 50,
+      "sourceChapter": 17,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-NUM-17-1-13-S17V16",
+      "sourceLockId": "WLC-NUM",
+      "bookId": "NUM",
+      "targetChapter": 17,
+      "targetStartVerse": 1,
+      "targetEndVerse": 13,
+      "sourceChapter": 17,
+      "sourceStartVerse": 16
+    },
+    {
+      "id": "WLC-NUM-29-40-40-S30V1",
+      "sourceLockId": "WLC-NUM",
+      "bookId": "NUM",
+      "targetChapter": 29,
+      "targetStartVerse": 40,
+      "targetEndVerse": 40,
+      "sourceChapter": 30,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-NUM-30-1-16-S30V2",
+      "sourceLockId": "WLC-NUM",
+      "bookId": "NUM",
+      "targetChapter": 30,
+      "targetStartVerse": 1,
+      "targetEndVerse": 16,
+      "sourceChapter": 30,
+      "sourceStartVerse": 2
+    },
+    {
+      "id": "WLC-DEU-12-32-32-S13V1",
+      "sourceLockId": "WLC-DEU",
+      "bookId": "DEU",
+      "targetChapter": 12,
+      "targetStartVerse": 32,
+      "targetEndVerse": 32,
+      "sourceChapter": 13,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-DEU-13-1-18-S13V2",
+      "sourceLockId": "WLC-DEU",
+      "bookId": "DEU",
+      "targetChapter": 13,
+      "targetStartVerse": 1,
+      "targetEndVerse": 18,
+      "sourceChapter": 13,
+      "sourceStartVerse": 2
+    },
+    {
+      "id": "WLC-DEU-22-30-30-S23V1",
+      "sourceLockId": "WLC-DEU",
+      "bookId": "DEU",
+      "targetChapter": 22,
+      "targetStartVerse": 30,
+      "targetEndVerse": 30,
+      "sourceChapter": 23,
+      "sourceStartVerse": 1
+    },
+    {
+      "id": "WLC-DEU-23-1-25-S23V2",
+      "sourceLockId": "WLC-DEU",
+      "bookId": "DEU",
+      "targetChapter": 23,
+      "targetStartVerse": 1,
+      "targetEndVerse": 25,
+      "sourceChapter": 23,
+      "sourceStartVerse": 2
+    },
+    {
+      "id": "WLC-DEU-29-1-1-S28V69",
+      "sourceLockId": "WLC-DEU",
+      "bookId": "DEU",
+      "targetChapter": 29,
+      "targetStartVerse": 1,
+      "targetEndVerse": 1,
+      "sourceChapter": 28,
+      "sourceStartVerse": 69
+    },
+    {
+      "id": "WLC-DEU-29-2-29-S29V1",
+      "sourceLockId": "WLC-DEU",
+      "bookId": "DEU",
+      "targetChapter": 29,
+      "targetStartVerse": 2,
+      "targetEndVerse": 29,
+      "sourceChapter": 29,
+      "sourceStartVerse": 1
     }
   ],
   "automatedThresholds": {
@@ -167,5 +527,17 @@
     "minimumWordsForTokenOverlap": 8,
     "minimumRomanianTokenOverlap": 0.14,
     "maximumChapterSequenceSimilarity": 0.94
-  }
+  },
+  "coverageExtras": [
+    {
+      "id": "WLC-NUM-25-19-INTO-26-1",
+      "sourceLockId": "WLC-NUM",
+      "bookId": "NUM",
+      "targetChapter": 26,
+      "targetVerse": 1,
+      "sourceChapter": 25,
+      "sourceVerse": 19,
+      "reason": "Propoziția numerotată 25:19 în WLC deschide Numeri 26:1 în versificația țintă."
+    }
+  ]
 }

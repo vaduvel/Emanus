@@ -5,44 +5,11 @@ on:
     branches: [main]
   pull_request:
 
-permissions:
-  contents: write
-
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: agent/biblia-emanus-ot-audit2
-          fetch-depth: 0
-
-      - name: Fetch validated source branches
-        run: |
-          git fetch origin agent/biblia-emanus-exodul:refs/remotes/origin/agent/biblia-emanus-exodul
-          git fetch origin agent/biblia-emanus-leviticul:refs/remotes/origin/agent/biblia-emanus-leviticul
-          git fetch origin agent/biblia-emanus-numeri:refs/remotes/origin/agent/biblia-emanus-numeri
-          git fetch origin agent/biblia-emanus-deuteronomul:refs/remotes/origin/agent/biblia-emanus-deuteronomul
-          git fetch origin codex/biblia-emanus-editorial-gate:refs/remotes/origin/codex/biblia-emanus-editorial-gate
-
-      - name: Build unified Biblia Emanus 2.0 snapshot
-        run: |
-          python3 scripts/patch-audit2-integration.py
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path('scripts/upgrade-ot-audit2.py')
-          text = path.read_text(encoding='utf-8')
-          old = 'with urllib.request.urlopen(url, timeout=120) as response:\n        raw = response.read()'
-          new = 'request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 Biblia-Emanus-Audit/2.0"})\n    with urllib.request.urlopen(request, timeout=120) as response:\n        raw = response.read()'
-          if old not in text:
-              raise SystemExit('download patch target missing')
-          path.write_text(text.replace(old, new), encoding='utf-8')
-          PY
-          python3 scripts/upgrade-ot-audit2.py
-          python3 scripts/patch-validator-audit2.py
-
-      - name: Diagnose all deterministic audit failures
-        run: python3 scripts/diagnose-audit2.py
 
       - uses: pnpm/action-setup@v4
 
@@ -156,11 +123,6 @@ jobs:
       - name: Testeaza poarta Biblia Emanus
         run: pnpm test:biblia-emanus
 
-      - name: Verifica sigiliul tuturor celor sase carti
-        run: >-
-          pnpm seal:biblia-emanus --check
-          --book GEN --book EXO --book LEV --book NUM --book DEU --book JOS
-
       - name: Verifica structura sursei Bibliei
         run: pnpm check:bible-source
 
@@ -175,18 +137,3 @@ jobs:
 
       - name: Verifica bundle-ul Bibliei
         run: pnpm check:bible-bundle
-
-      - name: Commit permanent audited output
-        run: |
-          git show origin/codex/biblia-emanus-editorial-gate:.github/workflows/ci.yml > .github/workflows/ci.yml
-          rm -f .github/workflows/upgrade-ot-audit2.yml
-          rm -f scripts/upgrade-ot-audit2.py
-          rm -f scripts/patch-audit2-integration.py
-          rm -f scripts/patch-validator-audit2.py
-          rm -f scripts/diagnose-audit2.py
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A docs/data/biblia-emanus docs/biblia-emanus scripts .github/workflows
-          git diff --cached --check
-          git commit -m "Upgrade audited OT books to Biblia Emanus engine 2.0"
-          git push origin HEAD:agent/biblia-emanus-ot-audit2

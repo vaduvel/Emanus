@@ -6,8 +6,19 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN09.htm", "license": "Public Domain", "lockId": "WEBU-GEN" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN09.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": "WLC-GEN" }
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/GEN09.htm",
+      "license": "Public Domain",
+      "lockId": "WEBU-GEN"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/GEN09.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-GEN"
+    }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,19 +31,50 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ron1924/GEN09.htm" },
-      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.9.NTR" },
-      { "id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/ronbtf/GEN09.htm" }
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ron1924/GEN09.htm"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.9.NTR"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ronbtf/GEN09.htm"
+      }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
-    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" }
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    }
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-04",
-    "verseCoverage": { "expected": 29, "reviewed": 29, "continuous": true },
-    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "nephesh și sângele, formularea juridică din versetul 6, semnul legământului și subiectele implicite din binecuvântarea finală" },
+    "completedOn": "2026-08-05",
+    "verseCoverage": {
+      "expected": 29,
+      "reviewed": 29,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "nephesh și sângele, formularea juridică din versetul 6, semnul legământului și subiectele implicite din binecuvântarea finală"
+    },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
@@ -51,17 +93,27 @@
         "Narațiunea despre goliciunea lui Noe este păstrată fără a identifica prin adaosuri o faptă sexuală care nu este numită explicit."
       ]
     },
-    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
-    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
     "reviewLevel": "ai-complete",
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "Codex GPT-5",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
@@ -70,44 +122,217 @@
     "textDigest": "sha256:e5c8e2e9a8f5f28b5609042c11f5d836d0487dd9ff8d072d3e401656a3100538"
   },
   "verses": [
-    { "number": 1, "text": "Dumnezeu i-a binecuvântat pe Noe și pe fiii lui și le-a spus: „Fiți roditori, înmulțiți-vă și umpleți pământul." },
-    { "number": 2, "text": "Frica și groaza de voi vor fi peste orice animal al pământului, peste orice pasăre a cerului, peste tot ce mișună pe pământ și peste toți peștii mării. Ele sunt date în mâna voastră." },
-    { "number": 3, "text": "Orice vietate care se mișcă vă va fi hrană. Așa cum v-am dat plantele verzi, acum vi le dau pe toate." },
-    { "number": 4, "text": "Dar să nu mâncați carnea împreună cu viața ei, adică sângele ei." },
-    { "number": 5, "text": "Voi cere socoteală pentru sângele vieții voastre. Îl voi cere de la orice animal și de la orice om; de la fiecare voi cere socoteală pentru viața fratelui său." },
-    { "number": 6, "text": "Cine varsă sângele omului, de către om îi va fi vărsat sângele, pentru că Dumnezeu l-a făcut pe om după chipul Său." },
-    { "number": 7, "text": "Iar voi, fiți roditori și înmulțiți-vă; răspândiți-vă din belșug pe pământ și înmulțiți-vă pe el.”" },
-    { "number": 8, "text": "Dumnezeu le-a vorbit lui Noe și fiilor lui care erau cu el:" },
-    { "number": 9, "text": "„Iată, Eu Îmi întemeiez legământul cu voi și cu urmașii voștri după voi," },
-    { "number": 10, "text": "precum și cu orice vietate care este cu voi: păsările, vitele și toate animalele pământului împreună cu voi, toate cele care au ieșit din arcă, orice animal al pământului." },
-    { "number": 11, "text": "Îmi întemeiez legământul cu voi: nicio făptură nu va mai fi nimicită de apele potopului și nu va mai fi niciodată un potop care să distrugă pământul.”" },
-    { "number": 12, "text": "Dumnezeu a spus: „Acesta este semnul legământului pe care îl pun între Mine și voi și orice vietate care este cu voi, pentru toate generațiile viitoare:" },
-    { "number": 13, "text": "Îmi așez curcubeul în nor și el va fi semnul legământului dintre Mine și pământ." },
-    { "number": 14, "text": "Când voi aduce nori peste pământ și curcubeul se va vedea în nor," },
-    { "number": 15, "text": "Îmi voi aduce aminte de legământul Meu, care este între Mine și voi și orice vietate din orice făptură; apele nu vor mai deveni un potop care să nimicească orice făptură." },
-    { "number": 16, "text": "Curcubeul va fi în nor, iar Eu îl voi privi ca să-Mi aduc aminte de legământul veșnic dintre Dumnezeu și orice vietate din orice făptură care este pe pământ.”" },
-    { "number": 17, "text": "Dumnezeu i-a spus lui Noe: „Acesta este semnul legământului pe care l-am întemeiat între Mine și orice făptură care este pe pământ.”" },
-    { "number": 18, "text": "Fiii lui Noe care au ieșit din arcă erau Sem, Ham și Iafet. Ham era tatăl lui Canaan." },
-    { "number": 19, "text": "Aceștia trei erau fiii lui Noe, iar din ei s-a răspândit populația întregului pământ." },
-    { "number": 20, "text": "Noe, lucrător al pământului, a început să sădească o vie." },
-    { "number": 21, "text": "A băut din vin, s-a îmbătat și a rămas dezgolit în cortul său." },
-    { "number": 22, "text": "Ham, tatăl lui Canaan, a văzut goliciunea tatălui său și le-a spus celor doi frați ai săi care erau afară." },
-    { "number": 23, "text": "Sem și Iafet au luat o haină, au pus-o pe umerii amândurora și au mers cu spatele ca să acopere goliciunea tatălui lor. Fețele le erau întoarse, astfel încât nu au văzut goliciunea tatălui lor." },
-    { "number": 24, "text": "Când Noe s-a trezit din vin și a aflat ce îi făcuse fiul său cel mai mic," },
-    { "number": 25, "text": "a spus: „Blestemat să fie Canaan! Să fie robul robilor fraților lui!”" },
-    { "number": 26, "text": "A mai spus: „Binecuvântat să fie DOMNUL, Dumnezeul lui Sem, iar Canaan să-i fie rob!" },
-    { "number": 27, "text": "Dumnezeu să-i lărgească hotarele lui Iafet. Să locuiască în corturile lui Sem, iar Canaan să-i fie rob!”" },
-    { "number": 28, "text": "După potop, Noe a mai trăit 350 de ani." },
-    { "number": 29, "text": "Toate zilele lui Noe au fost de 950 de ani; apoi a murit." }
+    {
+      "number": 1,
+      "text": "Dumnezeu i-a binecuvântat pe Noe și pe fiii lui și le-a spus: „Fiți roditori, înmulțiți-vă și umpleți pământul."
+    },
+    {
+      "number": 2,
+      "text": "Frica și groaza de voi vor fi peste orice animal al pământului, peste orice pasăre a cerului, peste tot ce mișună pe pământ și peste toți peștii mării. Ele sunt date în mâna voastră."
+    },
+    {
+      "number": 3,
+      "text": "Orice vietate care se mișcă vă va fi hrană. Așa cum v-am dat plantele verzi, acum vi le dau pe toate."
+    },
+    {
+      "number": 4,
+      "text": "Dar să nu mâncați carnea împreună cu viața ei, adică sângele ei."
+    },
+    {
+      "number": 5,
+      "text": "Voi cere socoteală pentru sângele vieții voastre. Îl voi cere de la orice animal și de la orice om; de la fiecare voi cere socoteală pentru viața fratelui său."
+    },
+    {
+      "number": 6,
+      "text": "Cine varsă sângele omului, de către om îi va fi vărsat sângele, pentru că Dumnezeu l-a făcut pe om după chipul Său."
+    },
+    {
+      "number": 7,
+      "text": "Iar voi, fiți roditori și înmulțiți-vă; răspândiți-vă din belșug pe pământ și înmulțiți-vă pe el.”"
+    },
+    {
+      "number": 8,
+      "text": "Dumnezeu le-a vorbit lui Noe și fiilor lui care erau cu el:"
+    },
+    {
+      "number": 9,
+      "text": "„Iată, Eu Îmi întemeiez legământul cu voi și cu urmașii voștri după voi,"
+    },
+    {
+      "number": 10,
+      "text": "precum și cu orice vietate care este cu voi: păsările, vitele și toate animalele pământului împreună cu voi, toate cele care au ieșit din arcă, orice animal al pământului."
+    },
+    {
+      "number": 11,
+      "text": "Îmi întemeiez legământul cu voi: nicio făptură nu va mai fi nimicită de apele potopului și nu va mai fi niciodată un potop care să distrugă pământul.”"
+    },
+    {
+      "number": 12,
+      "text": "Dumnezeu a spus: „Acesta este semnul legământului pe care îl pun între Mine și voi și orice vietate care este cu voi, pentru toate generațiile viitoare:"
+    },
+    {
+      "number": 13,
+      "text": "Îmi așez curcubeul în nor și el va fi semnul legământului dintre Mine și pământ."
+    },
+    {
+      "number": 14,
+      "text": "Când voi aduce nori peste pământ și curcubeul se va vedea în nor,"
+    },
+    {
+      "number": 15,
+      "text": "Îmi voi aduce aminte de legământul Meu, care este între Mine și voi și orice vietate din orice făptură; apele nu vor mai deveni un potop care să nimicească orice făptură."
+    },
+    {
+      "number": 16,
+      "text": "Curcubeul va fi în nor, iar Eu îl voi privi ca să-Mi aduc aminte de legământul veșnic dintre Dumnezeu și orice vietate din orice făptură care este pe pământ.”"
+    },
+    {
+      "number": 17,
+      "text": "Dumnezeu i-a spus lui Noe: „Acesta este semnul legământului pe care l-am întemeiat între Mine și orice făptură care este pe pământ.”"
+    },
+    {
+      "number": 18,
+      "text": "Fiii lui Noe care au ieșit din arcă erau Sem, Ham și Iafet. Ham era tatăl lui Canaan."
+    },
+    {
+      "number": 19,
+      "text": "Aceștia trei erau fiii lui Noe, iar din ei s-a răspândit populația întregului pământ."
+    },
+    {
+      "number": 20,
+      "text": "Noe, lucrător al pământului, a început să sădească o vie."
+    },
+    {
+      "number": 21,
+      "text": "A băut din vin, s-a îmbătat și a rămas dezgolit în cortul său."
+    },
+    {
+      "number": 22,
+      "text": "Ham, tatăl lui Canaan, a văzut goliciunea tatălui său și le-a spus celor doi frați ai săi care erau afară."
+    },
+    {
+      "number": 23,
+      "text": "Sem și Iafet au luat o haină, au pus-o pe umerii amândurora și au mers cu spatele ca să acopere goliciunea tatălui lor. Fețele le erau întoarse, astfel încât nu au văzut goliciunea tatălui lor."
+    },
+    {
+      "number": 24,
+      "text": "Când Noe s-a trezit din vin și a aflat ce îi făcuse fiul său cel mai mic,"
+    },
+    {
+      "number": 25,
+      "text": "a spus: „Blestemat să fie Canaan! Să fie robul robilor fraților lui!”"
+    },
+    {
+      "number": 26,
+      "text": "A mai spus: „Binecuvântat să fie DOMNUL, Dumnezeul lui Sem, iar Canaan să-i fie rob!"
+    },
+    {
+      "number": 27,
+      "text": "Dumnezeu să-i lărgească hotarele lui Iafet. Să locuiască în corturile lui Sem, iar Canaan să-i fie rob!”"
+    },
+    {
+      "number": 28,
+      "text": "După potop, Noe a mai trăit 350 de ani."
+    },
+    {
+      "number": 29,
+      "text": "Toate zilele lui Noe au fost de 950 de ani; apoi a murit."
+    }
   ],
   "editorialNotes": [
-    { "verse": 4, "term": "benafsho damo", "decision": "împreună cu viața ei, adică sângele ei", "alternatives": ["cu sufletul ei, sângele ei"], "reason": "În acest context nephesh desemnează viața trupului asociată cu sângele.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "«Viață» este echivalentul contextual și nu impune o antropologie doctrinară străină pasajului." },
-    { "verse": 5, "term": "dam nafshotekhem / ish achiv", "decision": "sângele vieții voastre / viața fratelui său", "alternatives": ["sângele sufletelor voastre / viața semenului său"], "reason": "Construcția leagă sângele de viață și responsabilitatea umană de relația cu fratele.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea păstrează atât sensul biologic, cât și dimensiunea relațională a textului." },
-    { "verse": 6, "term": "ba'adam damo yishshafekh", "decision": "de către om îi va fi vărsat sângele", "alternatives": ["prin om îi va fi vărsat sângele"], "reason": "Prepoziția ba poate marca agentul; formularea păstrează paralelismul «varsă / va fi vărsat».", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Sensul juridic este redat fără comentariu penal suplimentar în verset." },
-    { "verse": 13, "term": "qeshet", "decision": "curcubeul", "alternatives": ["arcul"], "reason": "Cuvântul înseamnă «arc», iar contextul norului indică arcul vizibil al curcubeului.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "«Curcubeu» este clar în română, iar sensul literal «arc» este păstrat în notă." },
-    { "verse": 20, "term": "vayachel Noach ish ha'adamah", "decision": "Noe, lucrător al pământului, a început să sădească o vie", "alternatives": ["Noe a început să lucreze pământul și a sădit o vie"], "reason": "Ish ha'adamah îl caracterizează pe Noe drept om sau lucrător al pământului, iar verbul următor introduce sădirea viei.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Formularea separă corect caracterizarea lui Noe de acțiunea începută." },
-    { "verse": 24, "term": "beno haqqatan", "decision": "fiul său cel mai mic", "alternatives": ["fiul său mai mic"], "reason": "Forma poate indica fiul mai tânăr sau cel mai mic; textul nu explică direct relația dintre faptă și blestemarea lui Canaan.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea tradițională este păstrată, iar dificultatea referentului rămâne documentată." },
-    { "verse": 25, "term": "arur Kena'an", "decision": "Blestemat să fie Canaan", "reason": "Obiectul explicit al blestemului este Canaan, nu Ham și nu un grup rasial modern.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Traducerea păstrează exact numele din text și exclude extinderile ideologice absente." },
-    { "verse": 27, "term": "weyishkon be'oholei-Shem", "decision": "Să locuiască în corturile lui Sem", "alternatives": ["Dumnezeu să locuiască în corturile lui Sem", "Iafet să locuiască în corturile lui Sem"], "reason": "Subiectul verbului este implicit și poate fi raportat la Dumnezeu sau la Iafet.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Subiectul rămâne neexprimat în verset, păstrând ambiguitatea sintactică a ebraicii." }
+    {
+      "verse": 4,
+      "term": "benafsho damo",
+      "decision": "împreună cu viața ei, adică sângele ei",
+      "alternatives": [
+        "cu sufletul ei, sângele ei"
+      ],
+      "reason": "În acest context nephesh desemnează viața trupului asociată cu sângele.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Viață» este echivalentul contextual și nu impune o antropologie doctrinară străină pasajului."
+    },
+    {
+      "verse": 5,
+      "term": "dam nafshotekhem / ish achiv",
+      "decision": "sângele vieții voastre / viața fratelui său",
+      "alternatives": [
+        "sângele sufletelor voastre / viața semenului său"
+      ],
+      "reason": "Construcția leagă sângele de viață și responsabilitatea umană de relația cu fratele.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează atât sensul biologic, cât și dimensiunea relațională a textului."
+    },
+    {
+      "verse": 6,
+      "term": "ba'adam damo yishshafekh",
+      "decision": "de către om îi va fi vărsat sângele",
+      "alternatives": [
+        "prin om îi va fi vărsat sângele"
+      ],
+      "reason": "Prepoziția ba poate marca agentul; formularea păstrează paralelismul «varsă / va fi vărsat».",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul juridic este redat fără comentariu penal suplimentar în verset."
+    },
+    {
+      "verse": 13,
+      "term": "qeshet",
+      "decision": "curcubeul",
+      "alternatives": [
+        "arcul"
+      ],
+      "reason": "Cuvântul înseamnă «arc», iar contextul norului indică arcul vizibil al curcubeului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Curcubeu» este clar în română, iar sensul literal «arc» este păstrat în notă."
+    },
+    {
+      "verse": 20,
+      "term": "vayachel Noach ish ha'adamah",
+      "decision": "Noe, lucrător al pământului, a început să sădească o vie",
+      "alternatives": [
+        "Noe a început să lucreze pământul și a sădit o vie"
+      ],
+      "reason": "Ish ha'adamah îl caracterizează pe Noe drept om sau lucrător al pământului, iar verbul următor introduce sădirea viei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea separă corect caracterizarea lui Noe de acțiunea începută."
+    },
+    {
+      "verse": 24,
+      "term": "beno haqqatan",
+      "decision": "fiul său cel mai mic",
+      "alternatives": [
+        "fiul său mai mic"
+      ],
+      "reason": "Forma poate indica fiul mai tânăr sau cel mai mic; textul nu explică direct relația dintre faptă și blestemarea lui Canaan.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea tradițională este păstrată, iar dificultatea referentului rămâne documentată."
+    },
+    {
+      "verse": 25,
+      "term": "arur Kena'an",
+      "decision": "Blestemat să fie Canaan",
+      "reason": "Obiectul explicit al blestemului este Canaan, nu Ham și nu un grup rasial modern.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Traducerea păstrează exact numele din text și exclude extinderile ideologice absente."
+    },
+    {
+      "verse": 27,
+      "term": "weyishkon be'oholei-Shem",
+      "decision": "Să locuiască în corturile lui Sem",
+      "alternatives": [
+        "Dumnezeu să locuiască în corturile lui Sem",
+        "Iafet să locuiască în corturile lui Sem"
+      ],
+      "reason": "Subiectul verbului este implicit și poate fi raportat la Dumnezeu sau la Iafet.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Subiectul rămâne neexprimat în verset, păstrând ambiguitatea sintactică a ebraicii."
+    }
   ]
 }

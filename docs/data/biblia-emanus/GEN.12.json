@@ -68,7 +68,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -115,10 +115,10 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "Codex GPT-5",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
@@ -127,33 +127,96 @@
     "textDigest": "sha256:05c48c2cfbbe3a5aec4007f8a4c2f99af3eff2bd5e378ef1632bd8b65d44d88c"
   },
   "verses": [
-    { "number": 1, "text": "DOMNUL i-a spus lui Avram: „Pleacă din țara ta, din rudenia ta și din casa tatălui tău și mergi în țara pe care ți-o voi arăta." },
-    { "number": 2, "text": "Voi face din tine o națiune mare, te voi binecuvânta și îți voi face numele mare. Fii o binecuvântare!" },
-    { "number": 3, "text": "Îi voi binecuvânta pe cei care te binecuvântează, iar pe cel care te disprețuiește îl voi blestema. Prin tine vor fi binecuvântate toate familiile pământului.”" },
-    { "number": 4, "text": "Avram a plecat așa cum îi spusese DOMNUL, iar Lot a mers cu el. Avram avea șaptezeci și cinci de ani când a plecat din Haran." },
-    { "number": 5, "text": "Avram a luat-o pe Sarai, soția lui, pe Lot, fiul fratelui său, toate bunurile pe care le strânseseră și oamenii pe care îi dobândiseră în Haran. Au plecat ca să meargă în țara Canaanului și au ajuns în țara Canaanului." },
-    { "number": 6, "text": "Avram a străbătut țara până la locul numit Sihem, la stejarul lui More. În vremea aceea, canaaniții erau în țară." },
-    { "number": 7, "text": "DOMNUL i S-a arătat lui Avram și a spus: „Urmașilor tăi le voi da țara aceasta.” Avram a construit acolo un altar DOMNULUI, care i Se arătase." },
-    { "number": 8, "text": "De acolo a mers spre muntele aflat la răsărit de Betel și și-a întins cortul, având Betelul la apus și Aiul la răsărit. A construit acolo un altar DOMNULUI și a chemat Numele DOMNULUI." },
-    { "number": 9, "text": "Apoi Avram și-a continuat călătoria, mergând din popas în popas spre Neghev." },
-    { "number": 10, "text": "În țară a venit o foamete. Avram a coborât în Egipt ca să locuiască acolo ca străin, pentru că foametea era grea în țară." },
-    { "number": 11, "text": "Când s-a apropiat să intre în Egipt, i-a spus soției sale, Sarai: „Iată, știu că ești o femeie frumoasă la înfățișare." },
-    { "number": 12, "text": "Când te vor vedea egiptenii, vor spune: «Aceasta este soția lui.» Atunci pe mine mă vor ucide, iar pe tine te vor lăsa în viață." },
-    { "number": 13, "text": "Te rog, spune că ești sora mea, ca să-mi fie bine datorită ție și să rămân în viață prin tine.”" },
-    { "number": 14, "text": "Când Avram a intrat în Egipt, egiptenii au văzut că femeia era foarte frumoasă." },
-    { "number": 15, "text": "Dregătorii faraonului au văzut-o și au lăudat-o înaintea faraonului, iar femeia a fost luată în casa faraonului." },
-    { "number": 16, "text": "El s-a purtat bine cu Avram datorită ei, iar Avram a primit oi, vite, măgari, slujitori, slujitoare, măgărițe și cămile." },
-    { "number": 17, "text": "Dar DOMNUL a lovit cu urgii mari pe faraon și casa lui din cauza lui Sarai, soția lui Avram." },
-    { "number": 18, "text": "Faraonul l-a chemat pe Avram și i-a spus: „Ce mi-ai făcut? De ce nu mi-ai spus că este soția ta?" },
-    { "number": 19, "text": "De ce ai spus: «Este sora mea», astfel încât am luat-o ca soție? Acum, iată-ți soția! Ia-o și pleacă!”" },
-    { "number": 20, "text": "Faraonul le-a dat oamenilor săi porunci cu privire la Avram, iar ei l-au însoțit afară împreună cu soția lui și cu tot ce avea." }
+    {
+      "number": 1,
+      "text": "DOMNUL i-a spus lui Avram: „Pleacă din țara ta, din rudenia ta și din casa tatălui tău și mergi în țara pe care ți-o voi arăta."
+    },
+    {
+      "number": 2,
+      "text": "Voi face din tine o națiune mare, te voi binecuvânta și îți voi face numele mare. Fii o binecuvântare!"
+    },
+    {
+      "number": 3,
+      "text": "Îi voi binecuvânta pe cei care te binecuvântează, iar pe cel care te disprețuiește îl voi blestema. Prin tine vor fi binecuvântate toate familiile pământului.”"
+    },
+    {
+      "number": 4,
+      "text": "Avram a plecat așa cum îi spusese DOMNUL, iar Lot a mers cu el. Avram avea șaptezeci și cinci de ani când a plecat din Haran."
+    },
+    {
+      "number": 5,
+      "text": "Avram a luat-o pe Sarai, soția lui, pe Lot, fiul fratelui său, toate bunurile pe care le strânseseră și oamenii pe care îi dobândiseră în Haran. Au plecat ca să meargă în țara Canaanului și au ajuns în țara Canaanului."
+    },
+    {
+      "number": 6,
+      "text": "Avram a străbătut țara până la locul numit Sihem, la stejarul lui More. În vremea aceea, canaaniții erau în țară."
+    },
+    {
+      "number": 7,
+      "text": "DOMNUL i S-a arătat lui Avram și a spus: „Urmașilor tăi le voi da țara aceasta.” Avram a construit acolo un altar DOMNULUI, care i Se arătase."
+    },
+    {
+      "number": 8,
+      "text": "De acolo a mers spre muntele aflat la răsărit de Betel și și-a întins cortul, având Betelul la apus și Aiul la răsărit. A construit acolo un altar DOMNULUI și a chemat Numele DOMNULUI."
+    },
+    {
+      "number": 9,
+      "text": "Apoi Avram și-a continuat călătoria, mergând din popas în popas spre Neghev."
+    },
+    {
+      "number": 10,
+      "text": "În țară a venit o foamete. Avram a coborât în Egipt ca să locuiască acolo ca străin, pentru că foametea era grea în țară."
+    },
+    {
+      "number": 11,
+      "text": "Când s-a apropiat să intre în Egipt, i-a spus soției sale, Sarai: „Iată, știu că ești o femeie frumoasă la înfățișare."
+    },
+    {
+      "number": 12,
+      "text": "Când te vor vedea egiptenii, vor spune: «Aceasta este soția lui.» Atunci pe mine mă vor ucide, iar pe tine te vor lăsa în viață."
+    },
+    {
+      "number": 13,
+      "text": "Te rog, spune că ești sora mea, ca să-mi fie bine datorită ție și să rămân în viață prin tine.”"
+    },
+    {
+      "number": 14,
+      "text": "Când Avram a intrat în Egipt, egiptenii au văzut că femeia era foarte frumoasă."
+    },
+    {
+      "number": 15,
+      "text": "Dregătorii faraonului au văzut-o și au lăudat-o înaintea faraonului, iar femeia a fost luată în casa faraonului."
+    },
+    {
+      "number": 16,
+      "text": "El s-a purtat bine cu Avram datorită ei, iar Avram a primit oi, vite, măgari, slujitori, slujitoare, măgărițe și cămile."
+    },
+    {
+      "number": 17,
+      "text": "Dar DOMNUL a lovit cu urgii mari pe faraon și casa lui din cauza lui Sarai, soția lui Avram."
+    },
+    {
+      "number": 18,
+      "text": "Faraonul l-a chemat pe Avram și i-a spus: „Ce mi-ai făcut? De ce nu mi-ai spus că este soția ta?"
+    },
+    {
+      "number": 19,
+      "text": "De ce ai spus: «Este sora mea», astfel încât am luat-o ca soție? Acum, iată-ți soția! Ia-o și pleacă!”"
+    },
+    {
+      "number": 20,
+      "text": "Faraonul le-a dat oamenilor săi porunci cu privire la Avram, iar ei l-au însoțit afară împreună cu soția lui și cu tot ce avea."
+    }
   ],
   "editorialNotes": [
     {
       "verse": 1,
       "term": "lekh lekha",
       "decision": "Pleacă",
-      "alternatives": ["Du-te pentru tine", "Ieși"],
+      "alternatives": [
+        "Du-te pentru tine",
+        "Ieși"
+      ],
       "reason": "Construcția este emfatică și personală, dar o redare literală ar fi nefirească în română.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -163,7 +226,9 @@
       "verse": 2,
       "term": "vehye berakhah",
       "decision": "Fii o binecuvântare",
-      "alternatives": ["vei fi o binecuvântare"],
+      "alternatives": [
+        "vei fi o binecuvântare"
+      ],
       "reason": "Forma hyeh este imperativă.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -173,7 +238,9 @@
       "verse": 3,
       "term": "mekallelkha a'or / venivreku",
       "decision": "pe cel care te disprețuiește îl voi blestema / vor fi binecuvântate",
-      "alternatives": ["pe cel care te tratează cu ușurătate îl voi blestema / se vor binecuvânta"],
+      "alternatives": [
+        "pe cel care te tratează cu ușurătate îl voi blestema / se vor binecuvânta"
+      ],
       "reason": "Verbul qalal indică tratarea cu lipsă de greutate, iar nifalul venivreku permite discuție între pasiv și reflexiv.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -183,7 +250,10 @@
       "verse": 5,
       "term": "hannefesh asher asu",
       "decision": "oamenii pe care îi dobândiseră",
-      "alternatives": ["sufletele pe care le câștigaseră", "slujitorii pe care îi dobândiseră"],
+      "alternatives": [
+        "sufletele pe care le câștigaseră",
+        "slujitorii pe care îi dobândiseră"
+      ],
       "reason": "Nephesh desemnează aici persoane, iar asu poate exprima dobândirea sau constituirea gospodăriei.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -193,7 +263,10 @@
       "verse": 6,
       "term": "elon Moreh",
       "decision": "stejarul lui More",
-      "alternatives": ["terebintul lui More", "copacul lui More"],
+      "alternatives": [
+        "terebintul lui More",
+        "copacul lui More"
+      ],
       "reason": "Identificarea botanică a lui elon este discutată.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -203,7 +276,9 @@
       "verse": 7,
       "term": "zera",
       "decision": "urmașilor tăi",
-      "alternatives": ["seminței tale"],
+      "alternatives": [
+        "seminței tale"
+      ],
       "reason": "Substantivul este singular colectiv și poate fi reluat ulterior atât colectiv, cât și individual.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -213,7 +288,9 @@
       "verse": 9,
       "term": "hannégbah",
       "decision": "spre Neghev",
-      "alternatives": ["spre sud"],
+      "alternatives": [
+        "spre sud"
+      ],
       "reason": "Termenul poate desemna direcția sud sau regiunea Neghev.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",

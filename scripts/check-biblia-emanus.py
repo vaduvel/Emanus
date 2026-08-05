@@ -44,7 +44,7 @@ BENCHMARK_CHECK_KEYS = {
     "copyrightSimilarity",
 }
 BOOK_NAMES = {
-    "GEN": "Geneza", "EXO": "Exod", "LEV": "Leviticul", "NUM": "Numeri",
+    "GEN": "Geneza", "EXO": "Exodul", "LEV": "Leviticul", "NUM": "Numeri",
     "DEU": "Deuteronomul", "JOS": "Iosua", "JDG": "Judecători", "RUT": "Rut",
     "1SA": "1 Samuel", "2SA": "2 Samuel", "1KI": "1 Regi", "2KI": "2 Regi",
     "1CH": "1 Cronici", "2CH": "2 Cronici", "EZR": "Ezra", "NEH": "Neemia",
@@ -310,6 +310,14 @@ def validate_ledger(
         actual_rule_ids = record.get("versificationRuleIds", [])
         if actual_rule_ids != expected_rule_ids:
             fail(f"source-ledger.json: reguli de versificație incorecte pentru {chapter_id}")
+        expected_extra_ids = [
+            extra["id"]
+            for extra in source_data["coverageExtras"]
+            if extra["bookId"] == book_id and extra["targetChapter"] == int(chapter_text)
+        ]
+        actual_extra_ids = record.get("sourceCoverageExtraIds", [])
+        if actual_extra_ids != expected_extra_ids:
+            fail(f"source-ledger.json: reguli suplimentare de acoperire incorecte pentru {chapter_id}")
         normalized[chapter_id] = record
     return normalized
 
@@ -472,6 +480,31 @@ def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
             fail(f"source-lock.json: interval invalid în regula {rule_id}")
         if rule["targetEndVerse"] < rule["targetStartVerse"]:
             fail(f"source-lock.json: interval inversat în regula {rule_id}")
+    coverage_extras = lock.get("coverageExtras", [])
+    if not isinstance(coverage_extras, list):
+        fail("source-lock.json: coverageExtras trebuie să fie listă")
+    extra_ids: set[str] = set()
+    for index, extra in enumerate(coverage_extras, start=1):
+        if not isinstance(extra, dict):
+            fail(f"source-lock.json: coverage extra {index} este invalid")
+        extra_id = extra.get("id")
+        if not isinstance(extra_id, str) or not extra_id or extra_id in extra_ids:
+            fail(f"source-lock.json: id invalid pentru coverage extra {index}")
+        extra_ids.add(extra_id)
+        lock_id = extra.get("sourceLockId")
+        if lock_id not in files or files[lock_id].get("role") != "original":
+            fail(f"source-lock.json: sursă invalidă în coverage extra {extra_id}")
+        book_id = extra.get("bookId")
+        if book_id not in books or files[lock_id].get("bookId") != book_id:
+            fail(f"source-lock.json: carte invalidă în coverage extra {extra_id}")
+        for key in ("targetChapter", "targetVerse", "sourceChapter", "sourceVerse"):
+            if not isinstance(extra.get(key), int) or extra[key] < 1:
+                fail(f"source-lock.json: {key} invalid în coverage extra {extra_id}")
+        if (extra["sourceChapter"], extra["sourceVerse"]) not in texts[lock_id]:
+            fail(f"source-lock.json: referința sursă lipsește în coverage extra {extra_id}")
+        if not isinstance(extra.get("reason"), str) or not extra["reason"].strip():
+            fail(f"source-lock.json: motivarea lipsește în coverage extra {extra_id}")
+
     for book_id, book in books.items():
         base_id = book.get("baseLockId")
         original_id = book.get("originalLockId")
@@ -509,6 +542,8 @@ def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
         "references": {lock_id: set(verses) for lock_id, verses in texts.items()},
         "rules": rules,
         "ruleIds": rule_ids,
+        "coverageExtras": coverage_extras,
+        "coverageExtraIds": extra_ids,
         "thresholds": thresholds,
         "snapshotSha256": snapshot_hash,
     }
@@ -545,6 +580,12 @@ def validate_source_coverage(
     references = source_data["references"]
     books = source_data["books"]
     rules = source_data["rules"]
+    coverage_extras = source_data["coverageExtras"]
+    extras_by_target: dict[tuple[str, int, int], list[dict[str, Any]]] = {}
+    for extra in coverage_extras:
+        extras_by_target.setdefault(
+            (extra["bookId"], extra["targetChapter"], extra["targetVerse"]), []
+        ).append(extra)
     consumed: dict[str, set[tuple[int, int]]] = {lock_id: set() for lock_id in references}
     for chapter_id, record in ledger_chapters.items():
         book_id, chapter_text = chapter_id.split(".")
@@ -569,6 +610,15 @@ def validate_source_coverage(
                     f"pentru {chapter_id}.{verse}"
                 )
             consumed[original_lock].add(original_reference)
+            for extra in extras_by_target.get((book_id, chapter, verse), []):
+                extra_lock = extra["sourceLockId"]
+                extra_reference = (extra["sourceChapter"], extra["sourceVerse"])
+                if extra_reference not in references[extra_lock]:
+                    fail(
+                        f"source-lock.json: lipsește extra {extra_lock} "
+                        f"{extra_reference[0]}:{extra_reference[1]}"
+                    )
+                consumed[extra_lock].add(extra_reference)
     for lock_id, source_references in references.items():
         if consumed[lock_id] != source_references:
             missing = sorted(source_references.difference(consumed[lock_id]))[:5]
