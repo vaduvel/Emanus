@@ -7,13 +7,17 @@ on:
     paths:
       - 'scripts/probe-pr40-qumran-textfabric.py'
       - '.github/workflows/probe-pr40-qumran-textfabric.yml'
+  pull_request:
+    paths:
+      - 'scripts/probe-pr40-qumran-textfabric.py'
+      - '.github/workflows/probe-pr40-qumran-textfabric.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pr40-final-qumran-probe
+  group: pr40-final-qumran-probe-${{ github.event_name }}
   cancel-in-progress: true
 
 jobs:
