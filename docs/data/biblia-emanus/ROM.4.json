@@ -3,7 +3,7 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 4,
-  "status": "in_review",
+  "status": "approved",
   "public": false,
   "source": {
     "english": {
@@ -75,7 +75,7 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -111,12 +111,27 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare independentă din SBLGNT 1.2 și WEBU; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "GPT-5.6 Thinking",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:313446c56de5655a17a5b4eaf682ffbb97a025a4a25e55af66ece0a35586a9b6",
+    "contentDigest": "sha256:def888674cde3826699a850eafbdace3ba76594cf080d262355f5a4c2ad91f99"
   },
   "verses": [
     {
@@ -201,7 +216,7 @@
     },
     {
       "number": 21,
-      "text": "și fiind pe deplin încredințat că El poate și să facă ceea ce a promis."
+      "text": "și fiind pe deplin încredințat că El este în stare să și împlinească ceea ce a promis."
     },
     {
       "number": 22,
@@ -213,7 +228,7 @@
     },
     {
       "number": 24,
-      "text": "ci și pentru noi, cărora urmează să ne fie socotită, nouă, celor ce credem în Cel care L-a înviat dintre cei morți pe Isus, Domnul nostru,"
+      "text": "ci și pentru noi, cărora ni se va socoti, nouă, celor ce credem în Cel care L-a înviat dintre cei morți pe Isus, Domnul nostru,"
     },
     {
       "number": 25,
@@ -229,6 +244,19 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Textul principal urmează exact sintaxa SBLGNT, iar lectura negativă receptă rămâne vizibilă în notă."
+    },
+    {
+      "verse": 25,
+      "term": "διὰ τὰ παραπτώματα / διὰ τὴν δικαίωσιν",
+      "decision": "din cauza abaterilor noastre / pentru îndreptățirea noastră",
+      "reason": "Aceeași prepoziție διὰ cu acuzativ poate exprima cauza sau scopul/rezultatul contextual; redarea diferențiată păstrează paralelismul fără a-l transforma într-o formulă doctrinară suplimentară.",
+      "alternatives": [
+        "pentru abaterile noastre și pentru îndreptățirea noastră",
+        "din cauza abaterilor noastre și din cauza îndreptățirii noastre"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Prima jumătate privește motivul predării, iar a doua exprimă orientarea învierii spre îndreptățire; nota păstrează polisemia."
     }
   ],
   "referenceNotes": [],

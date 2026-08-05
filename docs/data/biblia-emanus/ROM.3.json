@@ -3,7 +3,7 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 3,
-  "status": "in_review",
+  "status": "approved",
   "public": false,
   "source": {
     "english": {
@@ -75,7 +75,7 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
     "verseCoverage": {
       "expected": 31,
       "reviewed": 31,
@@ -111,12 +111,27 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare independentă din SBLGNT 1.2 și WEBU; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "GPT-5.6 Thinking",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:8b574e56adbf507c100e4d4370b892fc47a06836a9eecd6e6d8bc31e38242e73",
+    "contentDigest": "sha256:cfd9a0dd768bd5648404d4c9008044c217715f489f44ab5ef3296627b4bfc0c4"
   },
   "verses": [
     {
@@ -253,6 +268,18 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Alegerea contextuală este explicită, iar alternativa reală nu a fost eliminată din audit."
+    },
+    {
+      "verse": 25,
+      "term": "διὰ πίστεως ἐν τῷ αὐτοῦ αἵματι",
+      "decision": "prin credința în sângele Lui",
+      "reason": "Sintaxa permite legarea lui ἐν τῷ αἵματι de credință sau de actul ispășitor prezentat de Dumnezeu; textul urmează lectura tradițională, iar alternativa rămâne documentată.",
+      "alternatives": [
+        "prin credință, prin sângele Lui"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura aleasă este posibilă gramatical și coerentă contextual, fără a ascunde cealaltă segmentare."
     },
     {
       "verse": 25,

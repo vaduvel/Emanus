@@ -3,7 +3,7 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 2,
-  "status": "in_review",
+  "status": "approved",
   "public": false,
   "source": {
     "english": {
@@ -75,7 +75,7 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
     "verseCoverage": {
       "expected": 29,
       "reviewed": 29,
@@ -111,12 +111,27 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare independentă din SBLGNT 1.2 și WEBU; etaloanele românești au fost folosite numai pentru verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "GPT-5.6 Thinking",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:a45dd923aea4d48044157c1c00d9a08f6299e00eae2505cb3ae7a2e12789e0d0",
+    "contentDigest": "sha256:bb6b2fdff485dddfad187743ef523662c18339c775456641aa487ff4d301d988"
   },
   "verses": [
     {
@@ -189,7 +204,7 @@
     },
     {
       "number": 18,
-      "text": "cunoști voia Lui și deosebești lucrurile alese, fiind instruit din Lege,"
+      "text": "cunoști voia Lui și deosebești ce este mai bun, fiind instruit din Lege,"
     },
     {
       "number": 19,
@@ -236,7 +251,33 @@
       "text": "ci iudeu este cel care este astfel în ascuns, iar circumcizie este aceea a inimii, în duh, nu în literă. Lauda unui asemenea om nu vine de la oameni, ci de la Dumnezeu."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 13,
+      "term": "δικαιωθήσονται",
+      "decision": "vor fi îndreptățiți",
+      "reason": "Verbul δικαιόω este păstrat consecvent în familia «a îndreptăți», fără a introduce în verset o explicație confesională despre mecanismul îndreptățirii.",
+      "alternatives": [
+        "vor fi declarați drepți"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Consecvența lexicală cu Romani 3–5 permite cititorului să urmărească argumentul lui Pavel."
+    },
+    {
+      "verse": 29,
+      "term": "ἐν πνεύματι οὐ γράμματι",
+      "decision": "în duh, nu în literă",
+      "reason": "πνεῦμα poate indica duhul lăuntric sau lucrarea Duhului Sfânt; textul principal păstrează forma neutră, iar nota consemnează ambele lecturi.",
+      "alternatives": [
+        "prin Duhul, nu prin literă",
+        "în spirit, nu în literă"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lipsa articolului nu decide singură referentul; redarea neutră evită impunerea unei singure interpretări."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
