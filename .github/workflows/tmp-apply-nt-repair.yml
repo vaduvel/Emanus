@@ -44,6 +44,15 @@ jobs:
           text = path.read_text(encoding='utf-8')
           text = text.replace('audit["engineVersion"] = "4.0.0"', 'audit["engineVersion"] = validator.NT_ENGINE_VERSION')
           text = text.replace('"method": "full-corpus-adversarial-language-and-textual-repair"', '"method": "verse-by-verse-source-and-benchmark"')
+          text = text.replace(
+              '            if ref in issues_by_ref:\n',
+              '            actionable = ref in issues_by_ref and any(\n'
+              '                item["severity"] in {"critical", "high"}\n'
+              '                or item.get("detail") in {"spații în jurul cratimei", "semne de punctuație corupte", "spațiu după cratimă pronominală"}\n'
+              '                for item in issues_by_ref[ref]\n'
+              '            )\n'
+              '            if actionable:\n'
+          )
           path.write_text(text, encoding='utf-8')
           PY
 
