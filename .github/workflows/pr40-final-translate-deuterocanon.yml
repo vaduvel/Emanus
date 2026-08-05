@@ -8,13 +8,18 @@ on:
       - 'scripts/translate-pr40-deuterocanon-missing.py'
       - 'scripts/translate-pr40-deuterocanon-all-missing.py'
       - '.github/workflows/pr40-final-translate-deuterocanon.yml'
+  pull_request:
+    paths:
+      - 'scripts/translate-pr40-deuterocanon-missing.py'
+      - 'scripts/translate-pr40-deuterocanon-all-missing.py'
+      - '.github/workflows/pr40-final-translate-deuterocanon.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pr40-final-deuterocanon-translation
+  group: pr40-final-deuterocanon-translation-${{ github.event_name }}
   cancel-in-progress: true
 
 jobs:
