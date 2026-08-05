@@ -1,0 +1,23 @@
+export const DEUTERONOM_TEXT_25: Record<number, readonly string[]> = {
+  25: [
+    "„Dacă va fi o neînțelegere între doi oameni și se vor înfățișa la judecată, judecătorii să-i judece; pe cel drept să-l achite, iar pe cel vinovat să-l condamne.",
+    "Dacă cel vinovat este vrednic de lovituri, judecătorul să-l pună să se culce la pământ și să fie bătut în fața lui, cu un număr de lovituri potrivit cu vina lui.",
+    "Să nu-i dea mai mult de patruzeci de lovituri, ca nu cumva, dându-i mai multe lovituri peste acest număr, fratele tău să fie înjosit sub ochii tăi.",
+    "Să nu legi gura boului când treieră.",
+    "Când frații vor locui împreună și unul din ei va muri fără să aibă fii, nevasta celui mort să nu se mărite afară cu un străin, ci cumnatul ei să intre la ea, s-o ia de nevastă și să îplinească față de ea datoria de cumnat.",
+    "Cel dintâi fiu pe care-l va naște ea să poarte numele fratelui mort, pentru ca numele lui să nu fie șters din Israel.",
+    "Dacă omul acela nu va voi s-o ia pe cumnata sa, cumnata să se suie la poartă, la bătrâni, și să spună: «Cumnatul meu refuză să ridice fratelui său un nume în Israel, nu vrea să îplinească față de mine datoria de cumnat.»",
+    "Bătrânii cetății lui să-l cheme și să-i vorbească. Dacă el va stărui și va zice: «Nu vreau s-o iau!»,",
+    "atunci cumnata lui să se apropie de el în fața bătrânilor, să-i scoată încălțămintea din picior, să-l scuipe în față și să ia cuvântul și să zică: «Așa se face omului care nu vrea să zidească casa fratelui său!»",
+    "Și casa lui se va numi în Israel: «Casa celui descălțat».",
+    "Când doi oameni se vor bate împreună, un om și fratele său, și nevasta unuia se va mearge să-și scape bărbatul din mâna celui ce-l lovește, dacă va întinde mâna și-l va apuca de părțile rușinoase,",
+    "să-i tăieci mâna; ochiul tău să n-aibă milă de ea.",
+    "Să n-ai în sacul tău două feluri de greutăți, una mare și una mică.",
+    "Să n-ai în casa ta două feluri de efe, una mare și una mică.",
+    "Să ai o greutate exactă și dreaptă, să ai o efă exactă și dreaptă, ca să ai zile multe în țara pe care ți-o dă DOMNUL, Dumnezeul tău.",
+    "Căci oricine face aceste lucruri, oricine săvârșește o nedreptate este o urâciune înaintea DOMNULUI, Dumnezeului tău.",
+    "Adu-ți aminte ce ți-a făcut Amalec pe drum, la ieșirea voastră din Egipt,",
+    "cum te-a întâmpinat pe drum și, fără nicio frică de Dumnezeu, a lovit pe la spate pe toți cei slăbiți care veneau în urma ta, când erai obosit și istovit.",
+    "Când DOMNUL, Dumnezeul tău, îiți va da odihnă de toți vrăjmașii tăi care te înconjoară, în țara pe care ți-o dă DOMNUL, Dumnezeul tău, ca moștenire s-o stăpânești, să ștergi pomenirea lui Amalec de sub cer: să nu uiți!”",
+  ],
+}
