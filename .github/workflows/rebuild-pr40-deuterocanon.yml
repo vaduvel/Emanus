@@ -6,10 +6,12 @@ on:
       - agent/biblia-emanus-all-pr40-rebuild
     paths:
       - 'scripts/rebuild-pr40-deuterocanon.py'
+      - 'scripts/rebuild-pr40-deuterocanon-historical.py'
       - '.github/workflows/rebuild-pr40-deuterocanon.yml'
   pull_request:
     paths:
       - 'scripts/rebuild-pr40-deuterocanon.py'
+      - 'scripts/rebuild-pr40-deuterocanon-historical.py'
       - '.github/workflows/rebuild-pr40-deuterocanon.yml'
   workflow_dispatch:
 
@@ -26,8 +28,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Rebuild from authentic public-domain sources
-        run: python3 scripts/rebuild-pr40-deuterocanon.py
+      - name: Rebuild seven faithful historical Romanian works
+        run: python3 scripts/rebuild-pr40-deuterocanon-historical.py
       - name: Upload candidates and report
         if: always()
         uses: actions/upload-artifact@v4
