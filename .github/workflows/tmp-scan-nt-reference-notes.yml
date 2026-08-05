@@ -1,0 +1,52 @@
+name: Temporary Scan NT Reference Notes
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/tmp-scan-nt-reference-notes.yml
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    if: github.head_ref == 'agent/biblia-emanus-nt-audit3'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-nt-audit3
+      - name: Scan unresolved traditional readings
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          placeholder = re.compile(r'DE (?:TRADUS|DOCUMENTAT|VERIFICAT)|TODO|TBD|FIXME|<placeholder>')
+          unresolved = []
+          all_notes = []
+          for path in sorted(Path('docs/data/biblia-emanus').glob('*.json')):
+              if not re.fullmatch(r'[A-Z0-9]{3}\.[1-9][0-9]*\.json', path.name):
+                  continue
+              data = json.loads(path.read_text(encoding='utf-8'))
+              if data.get('bookId') not in {'MAT','MRK','LUK','JHN','ACT','ROM','1CO','2CO','GAL','EPH','PHP','COL','1TH','2TH','1TI','2TI','TIT','PHM','HEB','JAS','1PE','2PE','1JN','2JN','3JN','JUD','REV'}:
+                  continue
+              for note in data.get('referenceNotes', []):
+                  record = {
+                      'chapter': path.stem,
+                      'number': note.get('number'),
+                      'traditionalReading': note.get('traditionalReading'),
+                      'reason': note.get('reason'),
+                      'greekWitnesses': note.get('greekWitnesses'),
+                      'resolutionStatus': note.get('resolutionStatus'),
+                  }
+                  all_notes.append(record)
+                  if placeholder.search(json.dumps(note, ensure_ascii=False)) or note.get('resolutionStatus') != 'resolved':
+                      unresolved.append(record)
+          print('ALL_REFERENCE_NOTES=' + json.dumps(all_notes, ensure_ascii=False, indent=2))
+          print('UNRESOLVED_REFERENCE_NOTES=' + json.dumps(unresolved, ensure_ascii=False, indent=2))
+          print(f'COUNTS all={len(all_notes)} unresolved={len(unresolved)}')
+          PY
