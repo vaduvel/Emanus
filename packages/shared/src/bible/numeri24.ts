@@ -14,7 +14,7 @@ export const NUMERI_24 = numeriChapter({
   number: 24,
   title: "Numeri 24 — Steaua din Iacov și ultimele profeții ale lui Balaam",
   summary:
-    "Balaam renunță la ritualurile de ghicire și, sub Duhul lui Dumnezeu, rostește cea mai frumoasă dintre profețiile lui despre Israel. Furios, Balac îl trimite acasă, dar Balaam adaugă o ultimă profeție mesianică despre o stea și un sceptru care se vor ridica din Iacov, apoi vestiri scurte despre Amalec, cheniți și pop oarele din nord.",
+    "Balaam renunță la ritualurile de ghicire și, sub Duhul lui Dumnezeu, rostește cea mai frumoasă dintre profețiile lui despre Israel. Furios, Balac îl trimite acasă, dar Balaam adaugă o ultimă profeție mesianică despre o stea și un sceptru care se vor ridica din Iacov, apoi vestiri scurte despre Amalec, cheniți și popoarele din nord.",
   literaryContext:
     "Ultimul dintre cele patru orăcole ale lui Balaam și cel mai important din punct de vedere mesianic: „o stea răsare din Iacov și un sceptru se ridică din Israel” este citată în tradiția iudaică și creștină ca profeție despre un rege viitor, iar tradiția creștină o vede împlinită în Hristos.",
   historicalContext:
@@ -27,7 +27,7 @@ export const NUMERI_24 = numeriChapter({
       text: numeriPassage(24, 1, 2),
       teaching: teaching(
         "Balaam observă că, de două ori la rând, DOMNUL a binecuvântat Israel indiferent de ritual. Renunță la ceremoniile de descantec pe care le folosise înainte și „și-a întors fața spre pustie”, privind direct la tabăra lui Israel fără mediere rituală.",
-        "Atunci, fără pregătire ceremonială, „Duhul lui Dumnezeu a venit peste el” — aceeași expresie folosită mai târziu pentru jude jud jud jecatorii lui Israel; Dumnezeu Îl folosește pe Balaam ca instrument profetic direct, dincolo de orice tehnică de ghicire.",
+        "Atunci, fără pregătire ceremonială, „Duhul lui Dumnezeu a venit peste el” — aceeași expresie folosită mai târziu pentru judecătorii lui Israel; Dumnezeu Îl folosește pe Balaam ca instrument profetic direct, dincolo de orice tehnică de ghicire.",
       ),
       words: [],
       crossRefs: ["Judecătorii 3:10"],
@@ -56,7 +56,7 @@ export const NUMERI_24 = numeriChapter({
       text: numeriPassage(24, 10, 11),
       teaching: teaching(
         "Balac „a bătut din palme” de furie — un gest de exasperare totală. Aceasta este a treia binecuvântare pe care o aude în loc de blestem, iar el nu mai are răbdare: „fugi acum în țara ta!”, spunându-i că DOMNUL, nu el, l-a lipsit de cinstea promisă.",
-        "Fără să realizeze, Balac confirmă el Însăși suveranitatea DOMNULUI asupra situației: recunoaște că nu Balaam a decis, ci Dumnezeu a controlat totul de la început până la sfârșit.",
+        "Fără să realizeze, Balac confirmă el însuși suveranitatea DOMNULUI asupra situației: recunoaște că nu Balaam a decis, ci Dumnezeu a controlat totul de la început până la sfârșit.",
       ),
       words: [],
       crossRefs: [],
@@ -112,15 +112,15 @@ export const NUMERI_24 = numeriChapter({
       text: numeriPassage(24, 23, 25),
       teaching: teaching(
         "Ultima vestire vine cu un strigăt de groază: „Vai, cine va mai trăi când Dumnezeu va face aceste lucruri?” — corabii de pe țărmul Chitimului vor smeri Asur și Eber, dar „și ei vor pieri veșnic”. Nicio putere omenească, indiferent cât de dominantă, nu scapă în cele din urmă de judecata lui Dumnezeu.",
-        "Capitolul se încheie simplu: „Balaam s-a sculat, a plecat și s-a întors în țara lui; iar Balac s-a dus și el pe drumul lui.” Fără blestem, fără recompensă, cei doi se despart — dar profețiile rostite răman valabile mult după această despărțire, indiferent de intențiile lor originale.",
+        "Capitolul se încheie simplu: „Balaam s-a sculat, a plecat și s-a întors în țara lui; iar Balac s-a dus și el pe drumul lui.” Fără blestem, fără recompensă, cei doi se despart — dar profețiile rostite rămân valabile mult după această despărțire, indiferent de intențiile lor originale.",
       ),
       words: [],
       crossRefs: [],
       forYourHeart:
-        "Cuvintele pe care Dumnezeu le-a pus în gura unui om răman valabile mult după ce oamenii implicați își despart drumurile și îuită momentul.",
+        "Cuvintele pe care Dumnezeu le-a pus în gura unui om rămân valabile mult după ce oamenii implicați își despart drumurile și uită momentul.",
     },
   ],
   prayer:
-    "Doamne, dă-mi ochii deschiși ai lui Balaam, dar inima curată pe care el nu a avut-o întotdeauna, ca să văd frumusețea poporului Tău așa cum o vezi Tu.\n\nMulțumescu-Ţi pentru steaua care a răsărit din Iacov și sceptrul care s-a ridicat din Israel — Hristos, împlinirea acestei făgăduințe văzute de departe.\n\nÎnvață-mă să nu mă încred în puterea sau siguranța pământească, ci în judecata și în binecuvântarea Ta, care răman valabile dincolo de orice despărțire omenească. Amin.",
+    "Doamne, dă-mi ochii deschiși ai lui Balaam, dar inima curată pe care el nu a avut-o întotdeauna, ca să văd frumusețea poporului Tău așa cum o vezi Tu.\n\nMulțumescu-Ți pentru steaua care a răsărit din Iacov și sceptrul care s-a ridicat din Israel — Hristos, împlinirea acestei făgăduințe văzute de departe.\n\nÎnvață-mă să nu mă încred în puterea sau siguranța pământească, ci în judecata și în binecuvântarea Ta, care rămân valabile dincolo de orice despărțire omenească. Amin.",
   status: NUMERI_STATUSES[24],
 })
