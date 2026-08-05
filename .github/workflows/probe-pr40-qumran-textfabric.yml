@@ -18,7 +18,7 @@ permissions:
 
 concurrency:
   group: pr40-final-qumran-probe-${{ github.event_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   probe:
