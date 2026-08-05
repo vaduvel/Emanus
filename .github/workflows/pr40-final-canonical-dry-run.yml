@@ -1,0 +1,54 @@
+name: PR40 final — canonical publication dry run
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-pr40-final
+    paths:
+      - 'scripts/promote-pr40-canonical-ot.py'
+      - '.github/workflows/pr40-final-canonical-dry-run.yml'
+  pull_request:
+    paths:
+      - 'scripts/promote-pr40-canonical-ot.py'
+      - '.github/workflows/pr40-final-canonical-dry-run.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-final-canonical-dry-run-${{ github.event_name }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install workspace
+        run: pnpm install --frozen-lockfile
+      - name: Generate proposed canonical publication in workspace
+        run: python3 scripts/promote-pr40-canonical-ot.py
+      - name: Run all publication and application gates
+        run: |
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+          pnpm typecheck
+          pnpm build
+          git diff --check
+      - name: Summarize generated change set
+        if: always()
+        run: |
+          git status --short || true
+          git diff --stat || true
