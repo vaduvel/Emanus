@@ -7,18 +7,14 @@ on:
     paths:
       - 'scripts/extract-pr40-qumran-corpus.py'
       - '.github/workflows/pr40-final-extract-qumran-corpus.yml'
-  pull_request:
-    paths:
-      - 'scripts/extract-pr40-qumran-corpus.py'
-      - '.github/workflows/pr40-final-extract-qumran-corpus.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pr40-final-qumran-corpus-${{ github.event_name }}
-  cancel-in-progress: false
+  group: pr40-final-qumran-corpus
+  cancel-in-progress: true
 
 jobs:
   extract:
