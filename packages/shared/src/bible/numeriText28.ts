@@ -30,7 +30,7 @@ export const NUMERI_TEXT_28: Record<number, readonly string[]> = {
     "Jertfa lor de m\u00e2ncare din f\u0103in\u0103 aleas\u0103 fr\u0103m\u00e2ntat\u0103 cu ulei: trei zecimi de ef\u0103 pentru fiecare taur \u0219i dou\u0103 zecimi pentru berbec;",
     "s\u0103 aduci c\u00e2te o zecime de ef\u0103 pentru fiecare din cei \u015fapte miei;",
     "\u0219i un \u021bap ca jertf\u0103 pentru p\u0103cat, ca s\u0103 se fac\u0103 isp\u0103\u015fire pentru voi.",
-    "Acestea s\u0103 le aduce\u021bi pe l\u00e2ng\u0103 arderea-de-tot de diminea\u021b\u0103, care este arderea-de-tot ne\u00eencetab\u0103.",
+    "Acestea s\u0103 le aduce\u021bi pe l\u00e2ng\u0103 arderea-de-tot de diminea\u021b\u0103, care este arderea-de-tot ne\u00eencetat\u0103.",
     "A\u015fa s\u0103 aduce\u021bi \u00een fiecare zi, timp de \u015fapte zile, hrana jertfei prin foc de un miros pl\u0103cut DOMNULUI; s\u0103 fie adus\u0103 pe l\u00e2ng\u0103 arderea-de-tot perpetu\u0103 \u0219i pe l\u00e2ng\u0103 jertfa ei de turnare.",
     "\u00cen ziua a \u015faptea s\u0103 ave\u021bi o adunare sf\u00e2nt\u0103: s\u0103 nu face\u021bi nicio lucrare de slujb\u0103.",
     "\u00cen ziua primilor roduri, c\u00e2nd ve\u021bi aduce un dar de cereale nou\u0103 DOMNULUI la S\u0103rb\u0103toarea S\u0103pt\u0103m\u00e2nilor voastre, s\u0103 ave\u021bi o adunare sf\u00e2nt\u0103: s\u0103 nu face\u021bi nicio lucrare de slujb\u0103.",
