@@ -7,6 +7,10 @@ on:
     paths:
       - 'scripts/probe-ccel-jubilees-dom.py'
       - '.github/workflows/probe-ccel-jubilees-dom.yml'
+  pull_request:
+    paths:
+      - 'scripts/probe-ccel-jubilees-dom.py'
+      - '.github/workflows/probe-ccel-jubilees-dom.yml'
   workflow_dispatch:
 
 permissions:
