@@ -28,6 +28,10 @@ Etalonul BTF nu a înlocuit automat textul principal în locurile marcate cu var
 - 27 de cărți / 260 de capitole / 7.941 de versete;
 - validatoare, teste, sigiliu, typecheck și build.
 
+## Validarea finală
+
+CI standard #1069 a trecut integral pe head-ul final, inclusiv poarta permanentă de limbă română și variante textuale, validatorul corpusului, testele, versificația, sigiliul tuturor cărților publicate, typecheck și build.
+
 ## Domeniul verdictului
 
 Verdictul „gata de publicare” înseamnă că textul a trecut toate porțile automate, adversariale și editoriale implementate în repository. Nu înlocuiește o eventuală recenzie academică umană, manuscris cu manuscris, realizată de specialiști externi.
