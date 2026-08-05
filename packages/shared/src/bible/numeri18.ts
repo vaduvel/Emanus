@@ -66,7 +66,7 @@ export const NUMERI_18 = numeriChapter({
       id: "numeri-18-11-14",
       ref: "Numeri 18:11-14",
       heading: "Prinosul legănat, cele mai bune roade, lucrurile dăruite prin jurământ",
-      text: numeriPassage(18, 11, 14),ę
+      text: numeriPassage(18, 11, 14),
       teaching: teaching(
         "O a doua categorie de daruri — prinosul ridicat, jertfele legănate — este mai puțin restrictivă: „oricine este curat în casa ta va putea să mănânce din ele”, nu doar bărbații preoți. Familia întreagă a preotului beneficiază de această categorie de daruri.",
         "Cele dintâi roade din ulei, must și grâu, precum și tot ce este dăruit prin jurământ, revin de asemenea familiei preoțești. Această varietate de surse asigura că preoții, care nu aveau pământ propriu, trăiau din generozitatea continuă a întregului popor.",
@@ -87,7 +87,7 @@ export const NUMERI_18 = numeriChapter({
       ),
       words: [
         {
-          original: "בְּרִית מֶלַח עוֹלָם",
+          original: "בְּרִית מֶלַח עוֹלָם",
           transliteration: "berit melach olam",
           language: "ebraica",
           meaning:
