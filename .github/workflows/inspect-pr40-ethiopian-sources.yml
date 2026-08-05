@@ -7,18 +7,14 @@ on:
     paths:
       - 'scripts/inspect-pr40-ethiopian-sources.py'
       - '.github/workflows/inspect-pr40-ethiopian-sources.yml'
-  pull_request:
-    paths:
-      - 'scripts/inspect-pr40-ethiopian-sources.py'
-      - '.github/workflows/inspect-pr40-ethiopian-sources.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pr40-ethiopian-source-inventory-${{ github.ref }}
-  cancel-in-progress: true
+  group: pr40-ethiopian-source-inventory
+  cancel-in-progress: false
 
 jobs:
   inspect:
@@ -26,6 +22,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-all-pr40-rebuild
       - name: Pin and inspect public-domain source texts
         run: python3 scripts/inspect-pr40-ethiopian-sources.py
       - name: Upload source inventory
