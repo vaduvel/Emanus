@@ -1,0 +1,387 @@
+# Audit adversarial PR #40
+
+- Capitole reale scanate: **1450**
+- Versete reale scanate: **31594**
+- Critice: **1589**
+- Erori: **5208**
+- Avertismente: **0**
+
+## Cărți cu text-placeholder
+- `TEMP_SCR`: 1072
+- `ENO`: 1030
+- `JUB`: 500
+- `DID`: 430
+- `HODAYOT`: 320
+- `WAR_SCR`: 304
+- `HAB_COM`: 208
+- `SABB_SAC`: 208
+- `COMM_REG`: 176
+- `4BA`: 81
+- `GEN_APO`: 80
+- `ADD_PSA`: 16
+- `GIANTS`: 16
+- `GEN`: 8
+- `2KI`: 5
+- `EXO`: 4
+- `1KI`: 3
+- `2CH`: 3
+- `2SA`: 2
+- `DAN`: 2
+- `EZK`: 2
+- `JER`: 2
+- `JOB`: 2
+- `JOS`: 2
+- `NEH`: 2
+- `NUM`: 2
+- `1SA`: 1
+- `DEU`: 1
+- `EST`: 1
+- `EZR`: 1
+- `ISA`: 1
+- `JDG`: 1
+- `LEV`: 1
+- `PSA`: 1
+- `TOB`: 1
+- `ZEC`: 1
+
+## Cărți publicate fără sursă verificabilă
+- `ENO`: 108 capitole
+- `TEMP_SCR`: 67 capitole
+- `SIR`: 51 capitole
+- `JUB`: 50 capitole
+- `DID`: 43 capitole
+- `JOS`: 24 capitole
+- `HODAYOT`: 20 capitole
+- `WAR_SCR`: 19 capitole
+- `WIS`: 19 capitole
+- `1MA`: 16 capitole
+- `JDT`: 16 capitole
+- `2MA`: 15 capitole
+- `HOS`: 14 capitole
+- `TOB`: 14 capitole
+- `ZEC`: 14 capitole
+- `HAB_COM`: 13 capitole
+- `SABB_SAC`: 13 capitole
+- `COMM_REG`: 11 capitole
+- `1ES`: 9 capitole
+- `4BA`: 9 capitole
+- `AMO`: 9 capitole
+- `3MA`: 7 capitole
+- `MIC`: 7 capitole
+- `BAR`: 6 capitole
+- `ESG`: 6 capitole
+- `GEN_APO`: 5 capitole
+- `JON`: 4 capitole
+- `MAL`: 4 capitole
+- `HAB`: 3 capitole
+- `JOL`: 3 capitole
+- `NAM`: 3 capitole
+- `ZEP`: 3 capitole
+- `HAG`: 2 capitole
+- `ADD_PSA`: 1 capitole
+- `GIANTS`: 1 capitole
+- `MAN`: 1 capitole
+- `OBA`: 1 capitole
+- `PS2`: 1 capitole
+
+## Primele probleme
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:1ES`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:1MA`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:2MA`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:3MA`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:BAR`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:ESG`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:JDT`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:MAN`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:PS2`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:SIR`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:TOB`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **CRITICAL** `IMPOSSIBLE_WLC_PROVENANCE` — `source-lock:WIS`: Cartea necanonică este declarată ca verificată în WLC, deși WLC nu conține această carte.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.1.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.10.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.11.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.12.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.13.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.14.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.15.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.16.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.17.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.18.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.19.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.2.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.20.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.21.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.22.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.23.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.24.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.25.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.26.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.27.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.28.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.29.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.3.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.4.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.5.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.6.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.7.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.8.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1CH.9.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.1.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.1.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.2.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.2.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.3.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.3.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.4.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.4.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.5.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.5.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.6.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.6.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.7.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.7.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.8.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.8.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1ES.9.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1ES.9.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.1.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.10.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.11.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.12.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.13.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.14.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.15.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.16.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.17.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.18.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `1KI.19.json:3`: Ilie, când a văzut lucrul acesta, s-a sculat și a plecat, ca să-și scape viața. A ajuns la Beer-Șeba, care ține de Iuda, și și-a lăsat slujitorul acolo.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `1KI.19.json:19`: Ilie a plecat de acolo și a găsit pe Elisei, fiul lui Șafat, arând. Înaintea lui erau douăsprezece perechi de boi, și el era cu a douăsprezecea. Ilie s-a apropiat de el și și-a aruncat mantaua pe el.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.19.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `1KI.2.json:40`: Șimei s-a sculat, a pus șaua pe măgar și s-a dus la Gat, la Achiș, să-și caute slujitorii. Șimei s-a dus și și-a adus înapoi slujitorii din Gat.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.2.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.20.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.21.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.22.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.3.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.4.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.5.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.6.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.7.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.8.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1KI.9.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.1.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.1.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.10.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.10.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.11.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.11.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.12.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.12.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.13.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.13.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.14.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.14.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.15.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.15.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.16.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.16.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.2.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.2.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.3.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.3.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.4.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.4.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.5.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.5.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.6.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.6.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.7.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.7.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.8.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.8.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `1MA.9.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1MA.9.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.1.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.10.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.11.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.12.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.13.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.14.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.15.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.16.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.17.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.18.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.19.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.2.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.20.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.21.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.22.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.23.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `1SA.24.json:7`: Cu aceste cuvinte, David a oprit pe oamenii săi și i-a împiedicat să se arunce asupra lui Saul. Apoi Saul s-a sculat să iasă din peșteră și și-a văzut înainte de drum.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.24.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.25.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.26.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.27.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.28.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.29.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.3.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.30.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.31.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.4.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.5.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.6.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.7.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.8.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `1SA.9.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.1.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.10.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.11.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.12.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.13.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.14.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.15.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.16.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.17.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.18.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.19.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.2.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.20.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2CH.21.json:8`: Pe vremea sa, Edom s-a răsculat împotriva stăpânirii lui Iuda și și-a pus un împărat.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.21.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.22.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.23.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.24.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2CH.25.json:11`: Amația s-a îmbărbătat și și-a dus poporul în Valea Sării, unde a bătut zece mii de oameni din fiii lui Seir.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.25.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.26.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.27.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.28.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.29.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.3.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.30.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.31.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.32.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.33.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.34.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.35.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2CH.36.json:13`: S-a răsculat chiar împotriva împăratului Nebucadnețar, care-l pusese să jure pe Numele lui Dumnezeu. Și-a înțepenit grumazul și și-a învârtoșat inima până acolo încât nu s-a întors la DOMNUL Dumnezeul lui Israel.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.36.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.4.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.5.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.6.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.7.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.8.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2CH.9.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.1.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.10.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.11.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.12.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.13.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2KI.14.json:11`: Dar Amația nu l-a ascultat. Și Ioas, împăratul lui Israel, s-a suit; și și-au văzut fața, el și Amația, împăratul lui Iuda, la Bet-Șemeșul lui Iuda.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.14.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.15.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.16.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2KI.17.json:32`: Totodată se închinau și DOMNULUI și și-au făcut preoți ai înălțimilor, luați din tot poporul: preoții aceștia aduceau pentru ei jertfe în templele din înălțimi.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.17.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.18.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.19.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2KI.2.json:23`: De acolo s-a suit la Betel. Și pe când mergea pe drum, niște băiețași au ieșit din cetate și și-au bătut joc de el. Ei îi ziceau: „Suie-te, pleșuvule! Suie-te, pleșuvule!”
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.2.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.20.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.21.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.22.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.23.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.24.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.25.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.3.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2KI.4.json:37`: Ea s-a dus și s-a aruncat la picioarele lui și s-a închinat până la pământ. Și și-a luat fiul și a ieșit afară.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.4.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.5.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.6.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2KI.7.json:12`: Împăratul s-a sculat noaptea și a zis slujitorilor săi: „Vreau să vă spun ce ne fac sirienii. Fiindcă știu că suntem flămânzi, au părăsit tabăra ca să se ascundă în ogoare și și-au zis: „Când vor ieși din cetate, îi vom prinde vii și vom in
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.7.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.8.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2KI.9.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.1.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.1.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.10.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.10.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.11.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.11.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.12.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.12.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.13.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.13.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.14.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.14.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.15.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.15.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.2.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.2.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.3.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.3.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.4.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.4.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.5.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.5.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.6.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.6.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.7.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.7.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.8.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.8.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `2MA.9.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2MA.9.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.1.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.10.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.11.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2SA.12.json:20`: Atunci David s-a sculat de la pământ. S-a spălat, s-a uns și și-a schimbat hainele; apoi s-a dus în Casa DOMNULUI și s-a închinat. Întorcându-se acasă, a cerut să i se dea să mănânce și a mâncat.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.12.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_DOUBLE_WORD` — `2SA.13.json:19`: Tamar și-a presărat cenușă pe cap și și-a sfâșiat haina pestriță; a pus mâna în cap și a plecat țipând.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.13.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.14.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.15.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.16.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.17.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.18.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.19.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.2.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.20.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.21.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.22.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.23.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.24.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.3.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.4.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.5.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.6.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.7.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.8.json`: textDigest nu corespunde textului actual.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `2SA.9.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `3MA.1.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `3MA.1.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `3MA.2.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `3MA.2.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `3MA.3.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `3MA.3.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `3MA.4.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `3MA.4.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `3MA.5.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `3MA.5.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `3MA.6.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `3MA.6.json`: textDigest nu corespunde textului actual.
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `3MA.7.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `3MA.7.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:1`: Rămășițele cuvintelor lui Ieremia prorocul cu privire la robia Babilonului și mângâierea Sionului. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:2`: Când poporul a fost dus în robie, Ieremia a ascuns vasele sfinte ale Templului în peștera Muntelui. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:3`: Și Abimelec a adormit sub umbra smochinului și a dormit șaizeci și șase de ani fără să cunoască stricăciune. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:4`: Și când s-a trezit, smochinele erau proaspete și picurau lapte, și a cunoscut că puterea Domnului l-a păzit. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:5`: Și îngerul Domnului s-a arătat lui Ieremia și i-a zis: Întoarce pe cei ce plâng spre zidirea Ierusalimului. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:6`: Căci Domnul va aduce înapoi pe cei robiți și va înnoi cetatea Sfântă. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:7`: Și bucuria Sionului va fi veșnică înaintea Feței Celui Preaînalt. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:8`: Și neamurile vor vedea slava Domnului revărsată peste zidurile Ierusalimului. (Capitolul 1)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.1.json:9`: Binecântat să fie Dumnezeul părinților noștri care nu părăsește pe cei ce nădăjduiesc în El. (Capitolul 1)
+- **CRITICAL** `PUBLISHED_WITHOUT_SOURCE` — `4BA.1.json`: Capitol publicat fără obiect source verificabil.
+- **ERROR** `TEXT_DIGEST_MISMATCH` — `4BA.1.json`: textDigest nu corespunde textului actual.
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.2.json:1`: Rămășițele cuvintelor lui Ieremia prorocul cu privire la robia Babilonului și mângâierea Sionului. (Capitolul 2)
+- **ERROR** `PLACEHOLDER_GENERATED_CHAPTER_SUFFIX` — `4BA.2.json:2`: Când poporul a fost dus în robie, Ieremia a ascuns vasele sfinte ale Templului în peștera Muntelui. (Capitolul 2)

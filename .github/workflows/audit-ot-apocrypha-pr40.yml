@@ -1,0 +1,57 @@
+name: Audit OT and Apocrypha PR40
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-ot-and-apocrypha
+    paths:
+      - 'docs/data/biblia-emanus/**'
+      - 'scripts/audit-ot-apocrypha-pr40.py'
+      - 'scripts/check-biblia-emanus.py'
+      - '.github/workflows/audit-ot-apocrypha-pr40.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-ot-and-apocrypha
+      - name: Run adversarial corpus audit
+        run: python3 scripts/audit-ot-apocrypha-pr40.py --report-dir audit-output --exit-zero
+      - name: Upload complete audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-adversarial-audit
+          path: audit-output/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Persist audit report on branch
+        run: |
+          mkdir -p docs/biblia-emanus
+          cp audit-output/audit-pr40.md docs/biblia-emanus/PR40-ADVERSARIAL-AUDIT.md
+          cp audit-output/audit-pr40.json docs/biblia-emanus/PR40-ADVERSARIAL-AUDIT.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/biblia-emanus/PR40-ADVERSARIAL-AUDIT.md docs/biblia-emanus/PR40-ADVERSARIAL-AUDIT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'audit(bible): persist PR40 adversarial report'
+            git push origin HEAD:agent/biblia-emanus-ot-and-apocrypha
+          fi
+      - name: Enforce publication gate
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('audit-output/audit-pr40.json').read_text(encoding='utf-8'))
+          counts = report['severityCounts']
+          critical = int(counts.get('critical', 0))
+          errors = int(counts.get('error', 0))
+          print(f'critical={critical} errors={errors}')
+          if critical or errors:
+              raise SystemExit('PR #40 is not publishable; see persisted report and artifact')
+          PY

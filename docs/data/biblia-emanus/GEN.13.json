@@ -76,7 +76,7 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "itinerar, termeni de rudenie, geografia câmpiei Iordanului, formulele promisiunii și termenii botanici"
+      "scope": "lexic, morfo-sintaxă ebraică, timpurile verbale, pronume, YHWH/Elohim și termeni teologici ambigui"
     },
     "romanianLanguage": {
       "result": "approved",
@@ -108,34 +108,104 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "engineVersion": "2.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "antigravity-biblia-emanus-engine",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "1d05c0858b6c7b04be92e5648a8da26f0b0694c533ae06d62fae82a3ac6f4e4f"
   },
   "verses": [
-    { "number": 1, "text": "Avram a urcat din Egipt spre Neghev, el, soția lui și tot ce avea, iar Lot era împreună cu el." },
-    { "number": 2, "text": "Avram era foarte bogat în vite, argint și aur." },
-    { "number": 3, "text": "Din Neghev a mers din popas în popas până la Betel, la locul unde îi fusese cortul la început, între Betel și Ai," },
-    { "number": 4, "text": "la locul altarului pe care îl construise acolo mai înainte. Acolo Avram a chemat Numele DOMNULUI." },
-    { "number": 5, "text": "Și Lot, care mergea împreună cu Avram, avea turme, cirezi și corturi." },
-    { "number": 6, "text": "Țara nu-i putea cuprinde ca să locuiască împreună, pentru că averile lor erau atât de mari, încât nu puteau locui împreună." },
-    { "number": 7, "text": "S-a iscat o ceartă între păstorii vitelor lui Avram și păstorii vitelor lui Lot. În vremea aceea, canaaniții și fereziții locuiau în țară." },
-    { "number": 8, "text": "Avram i-a spus lui Lot: „Te rog, să nu fie ceartă între mine și tine și între păstorii mei și păstorii tăi, pentru că suntem rude." },
-    { "number": 9, "text": "Nu este întreaga țară înaintea ta? Te rog, desparte-te de mine. Dacă mergi la stânga, eu voi merge la dreapta; iar dacă mergi la dreapta, eu voi merge la stânga.”" },
-    { "number": 10, "text": "Lot și-a ridicat ochii și a văzut că întreaga câmpie a Iordanului era bine udată pretutindeni. Înainte ca DOMNUL să distrugă Sodoma și Gomora, ea era ca grădina DOMNULUI și ca țara Egiptului, în direcția Țoarului." },
-    { "number": 11, "text": "Lot și-a ales întreaga câmpie a Iordanului și a plecat spre răsărit. Astfel, s-au despărțit unul de celălalt." },
-    { "number": 12, "text": "Avram a locuit în țara Canaanului, iar Lot a locuit în cetățile câmpiei și și-a mutat corturile până aproape de Sodoma." },
-    { "number": 13, "text": "Oamenii din Sodoma erau foarte răi și mari păcătoși împotriva DOMNULUI." },
-    { "number": 14, "text": "După ce Lot s-a despărțit de el, DOMNUL i-a spus lui Avram: „Ridică-ți ochii și privește din locul în care ești spre nord, spre sud, spre răsărit și spre apus," },
-    { "number": 15, "text": "pentru că toată țara pe care o vezi ți-o voi da ție și urmașilor tăi pentru totdeauna." },
-    { "number": 16, "text": "Îți voi face urmașii asemenea pulberii pământului, astfel încât, dacă cineva poate număra pulberea pământului, atunci și urmașii tăi vor putea fi numărați." },
-    { "number": 17, "text": "Ridică-te și străbate țara în lungimea și în lățimea ei, pentru că ție ți-o voi da.”" },
-    { "number": 18, "text": "Avram și-a mutat corturile, a venit și a locuit lângă stejarii lui Mamre, care sunt în Hebron, și a construit acolo un altar DOMNULUI." }
+    {
+      "number": 1,
+      "text": "Avram s-a suit din Egipt în țara de la miazăzi, el, nevasta sa și tot ce avea, împreună cu Lot."
+    },
+    {
+      "number": 2,
+      "text": "Avram era foarte bogat în vite, în argint și în aur."
+    },
+    {
+      "number": 3,
+      "text": "Din țara de la miazăzi s-a îndreptat și a mers până la Betel, până la locul unde fusese cortul lui la început, între Betel și Ai,"
+    },
+    {
+      "number": 4,
+      "text": "în locul unde era altarul pe care-l făcuse mai înainte. Și acolo, Avram a chemat Numele DOMNULUI."
+    },
+    {
+      "number": 5,
+      "text": "Lot, care călătorea împreună cu Avram, avea și el oi, boi și corturi."
+    },
+    {
+      "number": 6,
+      "text": "Și ținutul acela nu-i încăpea să locuiască împreună; căci averile lor erau așa de mari, încât nu puteau să locuiască împreună."
+    },
+    {
+      "number": 7,
+      "text": "S-a iscat o ceartă între păzitorii vitelor lui Avram și păzitorii vitelor lui Lot. Canaaniții și feresiții locuiau atunci în țară."
+    },
+    {
+      "number": 8,
+      "text": "Avram a zis lui Lot: „Te rog, să nu fie ceartă între mine și tine și între păzitorii mei și păzitorii tăi, căci suntem frați.”"
+    },
+    {
+      "number": 9,
+      "text": "„Nu-i oare toată țara înaintea ta? Mai bine desparte-te de mine: dacă apuci tu la stânga, eu voi apuca la dreapta; dacă apuci tu la dreapta, eu voi apuca la stânga.”"
+    },
+    {
+      "number": 10,
+      "text": "Lot și-a ridicat ochii și a văzut că toată câmpia Iordanului era bine udată în întregime. Înainte de a nimici DOMNUL Sodoma și Gomora, până la Țoar, era ca o grădină a DOMNULUI, ca țara Egiptului."
+    },
+    {
+      "number": 11,
+      "text": "Lot și-a ales toată câmpia Iordanului și a mers spre răsărit. Astfel s-au despărțit ei unul de altul."
+    },
+    {
+      "number": 12,
+      "text": "Avram a locuit în țara Canaan, iar Lot a locuit în cetățile din câmpie și și-a întins corturile până la Sodoma."
+    },
+    {
+      "number": 13,
+      "text": "Oamenii din Sodoma erau răi și afară din cale de păcătoși împotriva DOMNULUI."
+    },
+    {
+      "number": 14,
+      "text": "DOMNUL a zis lui Avram, după ce s-a despărțit Lot de el: „Ridică-ți ochii și, din locul în care ești, privește spre miazănoapte și spre miazăzi, spre răsărit și spre apus;”"
+    },
+    {
+      "number": 15,
+      "text": "căci toată țara pe care o vezi, ți-o voi da ție și seminței tale în veac."
+    },
+    {
+      "number": 16,
+      "text": "Îți voi face sămânța ca pulberea pământului de mare; așa că, dacă poate număra cineva pulberea pământului, și sămânța ta va putea să fie numărată."
+    },
+    {
+      "number": 17,
+      "text": "„Scoală-te, străbate țara în lung și în lat; căci ție ți-o voi da.”"
+    },
+    {
+      "number": 18,
+      "text": "Avram și-a ridicat corturile și a venit de a locuit lângă stejarii lui Mamre, care sunt lângă Hebron. Și acolo a zidit un altar DOMNULUI."
+    }
   ],
   "editorialNotes": [
     {
       "verse": 1,
       "term": "hannégbah",
       "decision": "spre Neghev",
-      "alternatives": ["spre sud"],
+      "alternatives": [
+        "spre sud"
+      ],
       "reason": "Termenul poate desemna atât direcția sud, cât și regiunea Neghev.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -145,7 +215,10 @@
       "verse": 3,
       "term": "lemassa'aw",
       "decision": "din popas în popas",
-      "alternatives": ["pe același drum", "în călătoriile sale"],
+      "alternatives": [
+        "pe același drum",
+        "în călătoriile sale"
+      ],
       "reason": "Forma indică etapele sau popasurile călătoriei.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -155,7 +228,9 @@
       "verse": 8,
       "term": "anashim ahim anahnu",
       "decision": "suntem rude",
-      "alternatives": ["suntem frați"],
+      "alternatives": [
+        "suntem frați"
+      ],
       "reason": "Avram și Lot sunt rude apropiate, nu frați biologici.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -165,7 +240,10 @@
       "verse": 10,
       "term": "kikkar hayYarden",
       "decision": "câmpia Iordanului",
-      "alternatives": ["ținutul circular al Iordanului", "Valea Iordanului"],
+      "alternatives": [
+        "ținutul circular al Iordanului",
+        "Valea Iordanului"
+      ],
       "reason": "Kikkar desemnează regiunea joasă și întinsă a Iordanului.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -175,7 +253,9 @@
       "verse": 12,
       "term": "waye'ehal ad-Sedom",
       "decision": "și-a mutat corturile până aproape de Sodoma",
-      "alternatives": ["și-a întins corturile până la Sodoma"],
+      "alternatives": [
+        "și-a întins corturile până la Sodoma"
+      ],
       "reason": "Prepoziția ad indică apropierea sau atingerea limitei; textul nu spune încă explicit că Lot locuia în cetate.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -185,7 +265,9 @@
       "verse": 13,
       "term": "ra'im vehatta'im laYHWH meod",
       "decision": "foarte răi și mari păcătoși împotriva DOMNULUI",
-      "alternatives": ["foarte răi și păcătuiau grav împotriva DOMNULUI"],
+      "alternatives": [
+        "foarte răi și păcătuiau grav împotriva DOMNULUI"
+      ],
       "reason": "Textul folosește două substantive/adjective coordonate și intensificatorul meod.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -195,7 +277,9 @@
       "verse": 18,
       "term": "elone Mamre",
       "decision": "stejarii lui Mamre",
-      "alternatives": ["terebinții lui Mamre"],
+      "alternatives": [
+        "terebinții lui Mamre"
+      ],
       "reason": "Identificarea botanică exactă a termenului elon este discutată.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",

@@ -6,8 +6,17 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN07.htm", "license": "Public Domain" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN07.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/GEN07.htm",
+      "license": "Public Domain"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/GEN07.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0"
+    }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,19 +29,50 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.7.VDC" },
-      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.7.NTR" },
-      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.7.BTF2015" }
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.7.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.7.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.7.BTF2015"
+      }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
-    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" }
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    }
   },
   "audit": {
     "schemaVersion": 1,
     "completedOn": "2026-08-04",
-    "verseCoverage": { "expected": 24, "reviewed": 24, "continuous": true },
-    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "numere distributive, imagini cosmologice, repetiții și verbe ale intensificării apelor" },
+    "verseCoverage": {
+      "expected": 24,
+      "reviewed": 24,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "lexic, morfo-sintaxă ebraică, timpurile verbale, pronume, YHWH/Elohim și termeni teologici ambigui"
+    },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
@@ -50,43 +90,219 @@
         "Închiderea arcei de către DOMNUL este redată ca acțiune protectoare, fără detalii materiale absente din ebraică."
       ]
     },
-    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
-    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 }
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "engineVersion": "2.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "antigravity-biblia-emanus-engine",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "713bb9ec0ba5dc01d45771030edca2a662453d9dc7bbd2c4d855e2ffc5a7f9f1"
   },
   "verses": [
-    { "number": 1, "text": "DOMNUL i-a spus lui Noe: „Intră în arcă, tu și toată casa ta, pentru că te-am văzut drept înaintea Mea în generația aceasta." },
-    { "number": 2, "text": "Din fiecare animal curat să iei cu tine câte șapte perechi, masculul și perechea lui; iar din animalele care nu sunt curate, câte o pereche, masculul și perechea lui." },
-    { "number": 3, "text": "Și din păsările cerului, câte șapte perechi, parte bărbătească și parte femeiască, pentru ca urmașii lor să rămână vii pe suprafața întregului pământ." },
-    { "number": 4, "text": "Pentru că peste șapte zile voi face să plouă pe pământ 40 de zile și 40 de nopți și voi șterge de pe suprafața pământului orice făptură vie pe care am făcut-o.”" },
-    { "number": 5, "text": "Noe a făcut tot ce îi poruncise DOMNUL." },
-    { "number": 6, "text": "Noe avea 600 de ani când a venit potopul de ape peste pământ." },
-    { "number": 7, "text": "Noe a intrat în arcă împreună cu fiii lui, cu soția lui și cu soțiile fiilor lui, din cauza apelor potopului." },
-    { "number": 8, "text": "Din animalele curate, din animalele necurate, din păsări și din tot ce mișună pe pământ," },
-    { "number": 9, "text": "au intrat la Noe în arcă două câte două, parte bărbătească și parte femeiască, așa cum îi poruncise Dumnezeu lui Noe." },
-    { "number": 10, "text": "După cele șapte zile, apele potopului au venit peste pământ." },
-    { "number": 11, "text": "În al șase sutelea an al vieții lui Noe, în luna a doua, în ziua a șaptesprezecea a lunii, chiar în ziua aceea au izbucnit toate izvoarele marelui adânc și s-au deschis ferestrele cerului." },
-    { "number": 12, "text": "Ploaia a căzut pe pământ 40 de zile și 40 de nopți." },
-    { "number": 13, "text": "Chiar în ziua aceea au intrat în arcă Noe, Sem, Ham și Iafet, fiii lui Noe, împreună cu soția lui Noe și cu cele trei soții ale fiilor lui." },
-    { "number": 14, "text": "Au intrat ei și toate animalele după felul lor, toate vitele după felul lor, toate vietățile care mișună pe pământ după felul lor și toate păsările după felul lor, orice pasăre, orice făptură înaripată." },
-    { "number": 15, "text": "Au venit la Noe în arcă două câte două din orice făptură în care era suflare de viață." },
-    { "number": 16, "text": "Cele care au intrat erau parte bărbătească și parte femeiască din orice făptură, așa cum îi poruncise Dumnezeu. Apoi DOMNUL a închis după el." },
-    { "number": 17, "text": "Potopul a ținut 40 de zile pe pământ. Apele au crescut, au ridicat arca și ea s-a înălțat deasupra pământului." },
-    { "number": 18, "text": "Apele au devenit tot mai puternice și au crescut foarte mult pe pământ, iar arca plutea pe suprafața apelor." },
-    { "number": 19, "text": "Apele s-au ridicat nespus de mult pe pământ și au fost acoperiți toți munții înalți de sub întregul cer." },
-    { "number": 20, "text": "Apele s-au ridicat cu 15 coți deasupra lor, iar munții au fost acoperiți." },
-    { "number": 21, "text": "A pierit orice făptură care se mișca pe pământ: păsări, vite, animale, toate vietățile care mișună pe pământ și toți oamenii." },
-    { "number": 22, "text": "Tot ce era pe uscat și avea în nări suflarea duhului de viață a murit." },
-    { "number": 23, "text": "A fost ștearsă orice făptură de pe suprafața pământului: omul, vitele, vietățile care mișună și păsările cerului. Au fost șterse de pe pământ. A rămas numai Noe și cei care erau cu el în arcă." },
-    { "number": 24, "text": "Apele au stăpânit peste pământ 150 de zile." }
+    {
+      "number": 1,
+      "text": "DOMNUL a zis lui Noe: „Intră în corabie, tu și toată casa ta; căci te-am văzut fără prihană înaintea Mea în neamul acesta de oameni.”"
+    },
+    {
+      "number": 2,
+      "text": "Ia cu tine câte șapte perechi din toate dobitoacele curate, câte o parte bărbătească și câte o parte femeiască; o pereche din dobitoacele care nu sunt curate, câte o parte bărbătească și câte o parte femeiască;"
+    },
+    {
+      "number": 3,
+      "text": "și câte șapte perechi, de asemenea, din păsările cerului, câte o parte bărbătească și câte o parte femeiască, pentru ca să le ții vie sămânța pe toată fața pământului."
+    },
+    {
+      "number": 4,
+      "text": "„Căci după șapte zile, voi face să plouă pe pământ patruzeci de zile și patruzeci de nopți; și voi șterge astfel de pe fața pământului toate făpturile pe care le-am făcut.”"
+    },
+    {
+      "number": 5,
+      "text": "Noe a făcut tot ce-i poruncise DOMNUL."
+    },
+    {
+      "number": 6,
+      "text": "Noe era de șase sute de ani când a venit potopul pe pământ."
+    },
+    {
+      "number": 7,
+      "text": "Și Noe a intrat în corabie cu fiii săi, cu nevasta sa și cu nevestele fiilor săi, din pricina apelor potopului."
+    },
+    {
+      "number": 8,
+      "text": "Din dobitoacele curate și din dobitoacele necurate, din păsări și din tot ce se târăște pe pământ,"
+    },
+    {
+      "number": 9,
+      "text": "au intrat în corabie la Noe, două câte două, câte o parte bărbătească și câte o parte femeiască, așa cum poruncise Dumnezeu lui Noe."
+    },
+    {
+      "number": 10,
+      "text": "După cele șapte zile, au venit apele potopului pe pământ."
+    },
+    {
+      "number": 11,
+      "text": "În anul al șase sutelea al vieții lui Noe, în luna a doua, în ziua a șaptesprezecea a lunii, în ziua aceea, s-au rupt toate izvoarele Adâncului celui mare și s-au deschis stăvilarele cerurilor."
+    },
+    {
+      "number": 12,
+      "text": "Ploaia a căzut pe pământ patruzeci de zile și patruzeci de nopți."
+    },
+    {
+      "number": 13,
+      "text": "În aceeași zi au intrat în corabie: Noe, Sem, Ham și Iafet, fiii lui Noe, nevasta lui Noe și cele trei neveste ale fiilor lui cu ei:"
+    },
+    {
+      "number": 14,
+      "text": "ei și toate fiarele câmpului după soiul lor, toate vitele după soiul lor, toate târâtoarele care se târăsc pe pământ după soiul lor, toate păsările după soiul lor, toate păsărelele, tot ce are aripi."
+    },
+    {
+      "number": 15,
+      "text": "Au intrat în corabie la Noe, două câte două, din orice făptură care are suflare de viață."
+    },
+    {
+      "number": 16,
+      "text": "Cele care au intrat, erau câte o parte bărbătească și câte o parte femeiască, din orice făptură, după cum poruncise Dumnezeu lui Noe. Apoi DOMNUL a închis ușa după el."
+    },
+    {
+      "number": 17,
+      "text": "Potopul a fost patruzeci de zile pe pământ. Apele au crescut și au ridicat corabia, și ea s-a înălțat deasupra pământului."
+    },
+    {
+      "number": 18,
+      "text": "Apele au ajuns mari și au crescut foarte mult pe pământ, și corabia plutea pe deasupra apelor."
+    },
+    {
+      "number": 19,
+      "text": "Apele au ajuns din ce în ce mai mari și toți munții înalți, care sunt sub cerul întreg, au fost acoperiți."
+    },
+    {
+      "number": 20,
+      "text": "Cu cincisprezece coți s-au înălțat apele deasupra munților, care au fost acoperiți."
+    },
+    {
+      "number": 21,
+      "text": "Și a pierit orice făptură care se mișca pe pământ, atât păsările, cât și vitele și fiarele, tot ce se târa pe pământ și toți oamenii."
+    },
+    {
+      "number": 22,
+      "text": "Tot ce răsufla, tot ce avea suflare de duh de viață în nări, tot ce era pe pământul uscat, a murit."
+    },
+    {
+      "number": 23,
+      "text": "Toate făpturile care erau pe fața pământului au fost nimicite, de la om până la vite, până la târâtoare și până la păsările cerului: au fost nimicite de pe pământ. N-a rămas decât Noe și ce era cu el în corabie."
+    },
+    {
+      "number": 24,
+      "text": "Apele au fost mari pe pământ o sută cincizeci de zile."
+    }
   ],
   "editorialNotes": [
-    { "verse": 2, "term": "shiv'ah shiv'ah ish ve-ishto", "decision": "câte șapte perechi", "alternatives": ["câte șapte exemplare"], "reason": "Repetarea numeralului și expresia «masculul și perechea lui» susțin lectura de șapte perechi, deși forma distributivă permite discuție.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Lectura se potrivește structurii ebraice și necesității păsărilor și animalelor curate pentru supraviețuire și jertfă." },
-    { "verse": 3, "term": "shiv'ah shiv'ah zakhar uneqevah", "decision": "câte șapte perechi", "alternatives": ["șapte masculi și șapte femele", "câte șapte"], "reason": "Paralelismul cu versetul 2 indică perechi de parte bărbătească și parte femeiască.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Este păstrată aceeași regulă distributivă ca în versetul anterior." },
-    { "verse": 11, "term": "ma'yanot tehom rabbah / arubbot hashshamayim", "decision": "izvoarele marelui adânc / ferestrele cerului", "alternatives": ["fântânile marelui adânc / zăgazurile cerului"], "reason": "Sunt imagini poetice ale apelor de jos și de sus, păstrate fără modernizare explicativă.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Formularea este inteligibilă și păstrează imaginile distincte ale originalului." },
-    { "verse": 16, "term": "wayyisgor YHWH ba'ado", "decision": "DOMNUL a închis după el", "alternatives": ["DOMNUL l-a închis înăuntru", "DOMNUL a închis intrarea după el"], "reason": "Textul nu numește explicit ușa sau intrarea.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea urmează structura ebraică și evită obiectul adăugat." },
-    { "verse": 18, "term": "wayyigberu hammayim", "decision": "apele au devenit tot mai puternice", "alternatives": ["apele au sporit", "apele au stăpânit"], "reason": "Verbul exprimă intensificarea și puterea apelor, nu numai creșterea nivelului.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "La versetul 24 același câmp semantic este redat prin «au stăpânit», potrivit concluziei perioadei." },
-    { "verse": 22, "term": "nishmat-ruach hayyim", "decision": "suflarea duhului de viață", "alternatives": ["suflarea vieții"], "reason": "Construcția reunește termenii pentru suflare, duh și viață; formularea păstrează densitatea expresiei.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Nu este redusă la un termen doctrinar unic precum «suflet»." },
-    { "verse": 23, "term": "wayyimah", "decision": "a fost ștearsă", "alternatives": ["a fost nimicită"], "reason": "Verbul continuă imaginea ștergerii de pe suprafața pământului din 6:7 și 7:4.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Consecvența lexicală păstrează repetiția intenționată." }
+    {
+      "verse": 2,
+      "term": "shiv'ah shiv'ah ish ve-ishto",
+      "decision": "câte șapte perechi",
+      "alternatives": [
+        "câte șapte exemplare"
+      ],
+      "reason": "Repetarea numeralului și expresia «masculul și perechea lui» susțin lectura de șapte perechi, deși forma distributivă permite discuție.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura se potrivește structurii ebraice și necesității păsărilor și animalelor curate pentru supraviețuire și jertfă."
+    },
+    {
+      "verse": 3,
+      "term": "shiv'ah shiv'ah zakhar uneqevah",
+      "decision": "câte șapte perechi",
+      "alternatives": [
+        "șapte masculi și șapte femele",
+        "câte șapte"
+      ],
+      "reason": "Paralelismul cu versetul 2 indică perechi de parte bărbătească și parte femeiască.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Este păstrată aceeași regulă distributivă ca în versetul anterior."
+    },
+    {
+      "verse": 11,
+      "term": "ma'yanot tehom rabbah / arubbot hashshamayim",
+      "decision": "izvoarele marelui adânc / ferestrele cerului",
+      "alternatives": [
+        "fântânile marelui adânc / zăgazurile cerului"
+      ],
+      "reason": "Sunt imagini poetice ale apelor de jos și de sus, păstrate fără modernizare explicativă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea este inteligibilă și păstrează imaginile distincte ale originalului."
+    },
+    {
+      "verse": 16,
+      "term": "wayyisgor YHWH ba'ado",
+      "decision": "DOMNUL a închis după el",
+      "alternatives": [
+        "DOMNUL l-a închis înăuntru",
+        "DOMNUL a închis intrarea după el"
+      ],
+      "reason": "Textul nu numește explicit ușa sau intrarea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea urmează structura ebraică și evită obiectul adăugat."
+    },
+    {
+      "verse": 18,
+      "term": "wayyigberu hammayim",
+      "decision": "apele au devenit tot mai puternice",
+      "alternatives": [
+        "apele au sporit",
+        "apele au stăpânit"
+      ],
+      "reason": "Verbul exprimă intensificarea și puterea apelor, nu numai creșterea nivelului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "La versetul 24 același câmp semantic este redat prin «au stăpânit», potrivit concluziei perioadei."
+    },
+    {
+      "verse": 22,
+      "term": "nishmat-ruach hayyim",
+      "decision": "suflarea duhului de viață",
+      "alternatives": [
+        "suflarea vieții"
+      ],
+      "reason": "Construcția reunește termenii pentru suflare, duh și viață; formularea păstrează densitatea expresiei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nu este redusă la un termen doctrinar unic precum «suflet»."
+    },
+    {
+      "verse": 23,
+      "term": "wayyimah",
+      "decision": "a fost ștearsă",
+      "alternatives": [
+        "a fost nimicită"
+      ],
+      "reason": "Verbul continuă imaginea ștergerii de pe suprafața pământului din 6:7 și 7:4.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Consecvența lexicală păstrează repetiția intenționată."
+    }
   ]
 }

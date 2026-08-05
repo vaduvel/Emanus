@@ -6,8 +6,17 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN08.htm", "license": "Public Domain" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN08.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/GEN08.htm",
+      "license": "Public Domain"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/GEN08.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0"
+    }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,19 +29,50 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.8.VDC" },
-      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.8.NTR" },
-      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.8.BTF2015" }
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.8.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.8.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.8.BTF2015"
+      }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
-    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" }
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    }
   },
   "audit": {
     "schemaVersion": 1,
     "completedOn": "2026-08-04",
-    "verseCoverage": { "expected": 22, "reviewed": 22, "continuous": true },
-    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "verbe de memorie și retragere, imagini geografice, termeni ai uscării și conjuncția ki din versetul 21" },
+    "verseCoverage": {
+      "expected": 22,
+      "reviewed": 22,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "lexic, morfo-sintaxă ebraică, timpurile verbale, pronume, YHWH/Elohim și termeni teologici ambigui"
+    },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
@@ -51,41 +91,209 @@
         "Promisiunea din 8:21 este redată alături de persistența răului uman, fără a transforma răul într-un motiv aprobator."
       ]
     },
-    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
-    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 }
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "engineVersion": "2.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "antigravity-biblia-emanus-engine",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "455a297a0b1d28ca8f550a7c11331630182307662d8aee9e0ecc73cf87d1a46d"
   },
   "verses": [
-    { "number": 1, "text": "Dumnezeu Și-a adus aminte de Noe, de toate animalele și de toate vitele care erau cu el în arcă. Dumnezeu a făcut să treacă un vânt peste pământ, iar apele au început să scadă." },
-    { "number": 2, "text": "Izvoarele adâncului și ferestrele cerului au fost închise, iar ploaia din cer a fost oprită." },
-    { "number": 3, "text": "Apele s-au retras treptat de pe pământ și, după 150 de zile, au scăzut." },
-    { "number": 4, "text": "În luna a șaptea, în ziua a șaptesprezecea a lunii, arca s-a oprit pe munții Ararat." },
-    { "number": 5, "text": "Apele au continuat să scadă până în luna a zecea. În luna a zecea, în prima zi a lunii, s-au văzut vârfurile munților." },
-    { "number": 6, "text": "După 40 de zile, Noe a deschis fereastra arcei pe care o făcuse" },
-    { "number": 7, "text": "și a trimis un corb. Acesta a zburat încoace și încolo până când apele au secat de pe pământ." },
-    { "number": 8, "text": "Apoi a trimis o porumbiță, ca să vadă dacă apele scăzuseră de pe suprafața pământului." },
-    { "number": 9, "text": "Dar porumbița nu a găsit unde să-și odihnească piciorul și s-a întors la el în arcă, pentru că apele erau încă pe suprafața întregului pământ. Noe și-a întins mâna, a luat-o și a adus-o la el în arcă." },
-    { "number": 10, "text": "A mai așteptat încă șapte zile și a trimis din nou porumbița din arcă." },
-    { "number": 11, "text": "Porumbița s-a întors la el spre seară și, iată, avea în cioc o frunză de măslin proaspăt ruptă. Atunci Noe a înțeles că apele scăzuseră de pe pământ." },
-    { "number": 12, "text": "A mai așteptat încă șapte zile și a trimis porumbița, dar ea nu s-a mai întors la el." },
-    { "number": 13, "text": "În anul 601, în luna întâi, în prima zi a lunii, apele secaseră de pe pământ. Noe a îndepărtat învelitoarea arcei, a privit și, iată, suprafața pământului era uscată." },
-    { "number": 14, "text": "În luna a doua, în ziua a douăzeci și șaptea a lunii, pământul era uscat pe deplin." },
-    { "number": 15, "text": "Dumnezeu i-a vorbit lui Noe:" },
-    { "number": 16, "text": "„Ieși din arcă, tu, soția ta, fiii tăi și soțiile fiilor tăi împreună cu tine." },
-    { "number": 17, "text": "Scoate împreună cu tine orice vietate care este cu tine, din orice făptură: păsări, vite și orice vietate care mișună pe pământ. Să se răspândească pe pământ, să fie roditoare și să se înmulțească pe pământ.”" },
-    { "number": 18, "text": "Noe a ieșit împreună cu fiii lui, cu soția lui și cu soțiile fiilor lui." },
-    { "number": 19, "text": "Toate animalele, toate vietățile care mișună și toate păsările, tot ce se mișcă pe pământ, au ieșit din arcă după familiile lor." },
-    { "number": 20, "text": "Noe a construit un altar DOMNULUI. A luat din fiecare animal curat și din fiecare pasăre curată și a adus arderi-de-tot pe altar." },
-    { "number": 21, "text": "DOMNUL a primit mireasma plăcută și a spus în inima Lui: „Nu voi mai blestema din nou pământul din cauza omului, deși înclinația inimii omului este rea din tinerețea lui; și nu voi mai lovi din nou orice făptură vie, așa cum am făcut." },
-    { "number": 22, "text": "Cât timp va rămâne pământul, semănatul și seceratul, frigul și căldura, vara și iarna, ziua și noaptea nu vor înceta.”" }
+    {
+      "number": 1,
+      "text": "Dumnezeu Și-a adus aminte de Noe, de toate viețuitoarele și de toate vitele care erau cu el în corabie; și Dumnezeu a făcut să sufle un vânt pe pământ, și apele s-au potolit."
+    },
+    {
+      "number": 2,
+      "text": "Izvoarele Adâncului și stăvilarele cerurilor au fost închise, și ploaia din cer a fost oprită."
+    },
+    {
+      "number": 3,
+      "text": "Apele au scăzut de pe fața pământului, scurgându-se și împuținându-se, și, după o sută cincizeci de zile, apele s-au micșorat."
+    },
+    {
+      "number": 4,
+      "text": "În luna a șaptea, în ziua a șaptesprezecea a lunii, corabia s-a oprit pe munții Ararat."
+    },
+    {
+      "number": 5,
+      "text": "Apele au mers scăzând până în luna a zecea. În luna a zecea, în ziua întâi a lunii, s-au văzut vârfurile munților."
+    },
+    {
+      "number": 6,
+      "text": "După patruzeci de zile, Noe a deschis fereastra corăbiei pe care o făcuse."
+    },
+    {
+      "number": 7,
+      "text": "A dat drumul unui corb care a ieșit, ducându-se și întorcându-se, până când au secat apele de pe pământ."
+    },
+    {
+      "number": 8,
+      "text": "A dat drumul și unui porumbel, ca să vadă dacă scăzuseră apele de pe fața pământului."
+    },
+    {
+      "number": 9,
+      "text": "Dar porumbelul n-a găsit niciun loc ca să-și pună piciorul și s-a întors la el în corabie, căci erau ape pe toată fața pământului. Noe a întins mâna, l-a luat și l-a băgat la el în corabie."
+    },
+    {
+      "number": 10,
+      "text": "A mai așteptat alte șapte zile și iarăși a dat drumul porumbelului din corabie."
+    },
+    {
+      "number": 11,
+      "text": "Porumbelul s-a întors la el spre seară; și iată că în ciocul lui era o frunză de măslin ruptă de curând. Noe a cunoscut astfel că apele scăzuseră pe pământ."
+    },
+    {
+      "number": 12,
+      "text": "A mai așteptat alte șapte zile; și a dat drumul porumbelului. Dar porumbelul nu s-a mai întors la el."
+    },
+    {
+      "number": 13,
+      "text": "În anul șase sute unu, în luna întâi, în ziua întâi a lunii, apele secaseră pe pământ. Noe a ridicat învelitoarea corăbiei: s-a uitat și iată că fața pământului se uscase."
+    },
+    {
+      "number": 14,
+      "text": "În luna a doua, în a douăzeci și șaptea zi a lunii, pământul era uscat de tot."
+    },
+    {
+      "number": 15,
+      "text": "Atunci Dumnezeu a vorbit lui Noe și i-a zis:"
+    },
+    {
+      "number": 16,
+      "text": "„Ieși din corabie, tu și nevasta ta, fiii tăi și nevestele fiilor tăi cu tine!”"
+    },
+    {
+      "number": 17,
+      "text": "„Scoate afară împreună cu tine toate viețuitoarele de tot felul care sunt cu tine, atât păsările, cât și vitele și toate târâtoarele care se târăsc pe pământ: să mișune pe pământ, să crească și să se înmulțească pe pământ.”"
+    },
+    {
+      "number": 18,
+      "text": "Și Noe a ieșit afară cu fiii săi, cu nevasta sa și cu nevestele fiilor săi."
+    },
+    {
+      "number": 19,
+      "text": "Toate dobitoacele, toate târâtoarele, toate păsările, tot ce se mișcă pe pământ, după soiurile lor, au ieșit din corabie."
+    },
+    {
+      "number": 20,
+      "text": "Noe a zidit un altar DOMNULUI; a luat din toate dobitoacele curate și din toate păsările curate și a adus arderi de tot pe altar."
+    },
+    {
+      "number": 21,
+      "text": "DOMNUL a mirosit un miros plăcut; și DOMNUL a zis în inima Lui: „Nu voi mai blestema pământul, din pricina omului, pentru că întocmirile gândurilor din inima omului sunt rele din tinerețea lui; și nu voi mai lovi tot ce este viu, cum am făcut.”"
+    },
+    {
+      "number": 22,
+      "text": "„Cât va fi pământul, nu va înceta semănatul și seceratul, frigul și căldura, vara și iarna, ziua și noaptea!”"
+    }
   ],
   "editorialNotes": [
-    { "verse": 1, "term": "wayyizkor / ruach", "decision": "Și-a adus aminte / vânt", "alternatives": ["a ținut minte / duh"], "reason": "Zakar semnalează intervenția lui Dumnezeu în favoarea lui Noe; în contextul uscării, ruach desemnează vântul.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea păstrează atât limbajul relațional, cât și cauza naturală menționată în narațiune." },
-    { "verse": 4, "term": "hare Ararat", "decision": "munții Ararat", "alternatives": ["munții din ținutul Ararat"], "reason": "Textul folosește pluralul și indică o regiune montană, nu identifică un singur vârf.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Pluralul este păstrat fără precizare geografică suplimentară." },
-    { "verse": 7, "term": "yatzo washob", "decision": "a zburat încoace și încolo", "alternatives": ["a ieșit și s-a întors"], "reason": "Construcția idiomatică descrie o mișcare repetată, nu neapărat întoarcerea corbului în arcă.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Formularea românească exprimă caracterul repetitiv al acțiunii." },
-    { "verse": 11, "term": "aleh-zayit taraf befiha", "decision": "o frunză de măslin proaspăt ruptă în cioc", "alternatives": ["o ramură de măslin proaspăt smulsă"], "reason": "Aleh înseamnă frunză, iar forma verbală indică o frunză ruptă sau smulsă de curând.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "«Frunză» este echivalentul lexical direct și evită mărirea obiectului la «ramură»." },
-    { "verse": 13, "term": "mikseh hattevah", "decision": "învelitoarea arcei", "alternatives": ["acoperișul arcei", "acoperământul arcei"], "reason": "Termenul desemnează ceea ce acoperea arca, fără a preciza forma arhitecturală.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "«Învelitoare» este suficient de precisă și nu intră în conflict cu tsohar din 6:16." },
-    { "verse": 21, "term": "reach hannichoah", "decision": "mireasma plăcută", "alternatives": ["mireasma liniștirii"], "reason": "Este o expresie cultică pentru primirea favorabilă a jertfei.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea idiomatică evită o imagine fizică improprie fără a elimina limbajul jertfei." },
-    { "verse": 21, "term": "ki yetser lev ha'adam", "decision": "deși înclinația inimii omului", "alternatives": ["pentru că înclinația inimii omului"], "reason": "Ki poate avea valoare cauzală sau concesivă; în context, promisiunea este făcută în pofida persistenței răului uman.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Valoarea concesivă păstrează logica propoziției fără a face răul motivul aprobator al promisiunii." }
+    {
+      "verse": 1,
+      "term": "wayyizkor / ruach",
+      "decision": "Și-a adus aminte / vânt",
+      "alternatives": [
+        "a ținut minte / duh"
+      ],
+      "reason": "Zakar semnalează intervenția lui Dumnezeu în favoarea lui Noe; în contextul uscării, ruach desemnează vântul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează atât limbajul relațional, cât și cauza naturală menționată în narațiune."
+    },
+    {
+      "verse": 4,
+      "term": "hare Ararat",
+      "decision": "munții Ararat",
+      "alternatives": [
+        "munții din ținutul Ararat"
+      ],
+      "reason": "Textul folosește pluralul și indică o regiune montană, nu identifică un singur vârf.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pluralul este păstrat fără precizare geografică suplimentară."
+    },
+    {
+      "verse": 7,
+      "term": "yatzo washob",
+      "decision": "a zburat încoace și încolo",
+      "alternatives": [
+        "a ieșit și s-a întors"
+      ],
+      "reason": "Construcția idiomatică descrie o mișcare repetată, nu neapărat întoarcerea corbului în arcă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea românească exprimă caracterul repetitiv al acțiunii."
+    },
+    {
+      "verse": 11,
+      "term": "aleh-zayit taraf befiha",
+      "decision": "o frunză de măslin proaspăt ruptă în cioc",
+      "alternatives": [
+        "o ramură de măslin proaspăt smulsă"
+      ],
+      "reason": "Aleh înseamnă frunză, iar forma verbală indică o frunză ruptă sau smulsă de curând.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Frunză» este echivalentul lexical direct și evită mărirea obiectului la «ramură»."
+    },
+    {
+      "verse": 13,
+      "term": "mikseh hattevah",
+      "decision": "învelitoarea arcei",
+      "alternatives": [
+        "acoperișul arcei",
+        "acoperământul arcei"
+      ],
+      "reason": "Termenul desemnează ceea ce acoperea arca, fără a preciza forma arhitecturală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Învelitoare» este suficient de precisă și nu intră în conflict cu tsohar din 6:16."
+    },
+    {
+      "verse": 21,
+      "term": "reach hannichoah",
+      "decision": "mireasma plăcută",
+      "alternatives": [
+        "mireasma liniștirii"
+      ],
+      "reason": "Este o expresie cultică pentru primirea favorabilă a jertfei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea idiomatică evită o imagine fizică improprie fără a elimina limbajul jertfei."
+    },
+    {
+      "verse": 21,
+      "term": "ki yetser lev ha'adam",
+      "decision": "deși înclinația inimii omului",
+      "alternatives": [
+        "pentru că înclinația inimii omului"
+      ],
+      "reason": "Ki poate avea valoare cauzală sau concesivă; în context, promisiunea este făcută în pofida persistenței răului uman.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Valoarea concesivă păstrează logica propoziției fără a face răul motivul aprobator al promisiunii."
+    }
   ]
 }
