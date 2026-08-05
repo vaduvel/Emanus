@@ -1,15 +1,16 @@
 name: Finalize NT Audit 3 Branch
 
 on:
-  push:
+  pull_request:
     branches:
-      - agent/biblia-emanus-nt-audit3
+      - main
 
 permissions:
   contents: write
 
 jobs:
   cleanup-and-verify:
+    if: github.head_ref == 'agent/biblia-emanus-nt-audit3'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
