@@ -35,17 +35,17 @@ def get_btf(book: str, chapter: int, verse: int) -> str:
     return source_data["texts"][lock].get((chapter, verse), "")
 
 def match_data(matches):
-    return [
-        {
-            "rule": m.rule_id,
-            "category": getattr(m, "category", ""),
-            "message": m.message,
-            "offset": m.offset,
-            "length": m.error_length,
-            "replacements": m.replacements[:3],
-        }
-        for m in matches
-    ]
+    result = []
+    for m in matches:
+        result.append({
+            "rule": getattr(m, "ruleId", getattr(m, "rule_id", "")),
+            "category": str(getattr(m, "category", "")),
+            "message": str(getattr(m, "message", "")),
+            "offset": int(getattr(m, "offset", 0)),
+            "length": int(getattr(m, "errorLength", getattr(m, "error_length", 0))),
+            "replacements": list(getattr(m, "replacements", []))[:3],
+        })
+    return result
 
 tool = language_tool_python.LanguageTool("ro-RO")
 records = []
