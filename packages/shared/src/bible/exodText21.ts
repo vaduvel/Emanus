@@ -32,7 +32,7 @@ export const EXOD_TEXT_21: Record<number, readonly string[]> = {
     "Dac\u0103 ni\u0219te b\u0103rba\u021bi se bat \u0219i lovesc o femeie \u00eens\u0103rcinat\u0103, iar copilul ei se na\u0219te \u00eenainte de vreme, dar nu urmeaz\u0103 o v\u0103t\u0103mare grav\u0103, vinovatul s\u0103 pl\u0103teasc\u0103 desp\u0103gubirea cerut\u0103 de so\u021bul femeii \u0219i stabilit\u0103 de judec\u0103tori.",
     "Dar dac\u0103 urmeaz\u0103 o v\u0103t\u0103mare grav\u0103, s\u0103 dai via\u021b\u0103 pentru via\u021b\u0103,",
     "ochi pentru ochi, dinte pentru dinte, m\u00e2n\u0103 pentru m\u00e2n\u0103, picior pentru picior,",
-    "ars\u0103ur\u0103 pentru ars\u0103ur\u0103, ran\u0103 pentru ran\u0103 \u0219i v\u00e2n\u0103taie pentru v\u00e2n\u0103taie.",
+    "arsur\u0103 pentru arsur\u0103, ran\u0103 pentru ran\u0103 \u0219i v\u00e2n\u0103taie pentru v\u00e2n\u0103taie.",
     "Dac\u0103 un om love\u0219te ochiul sclavului sau al sclavei sale \u0219i \u00eel distruge, s\u0103-l lase liber ca desp\u0103gubire pentru ochi.",
     "Dac\u0103 \u00eei scoate un dinte sclavului sau sclavei sale, s\u0103-l lase liber ca desp\u0103gubire pentru dinte.",
     "Dac\u0103 un bou \u00eempunge un b\u0103rbat sau o femeie \u0219i \u00eei provoac\u0103 moartea, boul s\u0103 fie ucis cu pietre, iar carnea lui s\u0103 nu fie m\u00e2ncat\u0103. Proprietarul boului nu va fi r\u0103spunz\u0103tor.",
