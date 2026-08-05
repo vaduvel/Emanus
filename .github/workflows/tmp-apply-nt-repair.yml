@@ -43,6 +43,7 @@ jobs:
           path = Path('scripts/tmp-apply-nt-repair.py')
           text = path.read_text(encoding='utf-8')
           text = text.replace('audit["engineVersion"] = "4.0.0"', 'audit["engineVersion"] = validator.NT_ENGINE_VERSION')
+          text = text.replace('"method": "full-corpus-adversarial-language-and-textual-repair"', '"method": "verse-by-verse-source-and-benchmark"')
           path.write_text(text, encoding='utf-8')
           PY
 
