@@ -94,7 +94,7 @@ def process_group(group: str) -> int:
     validator.validate_source_coverage(ledger, source_data)
 
     items, chapters = chapter_items(GROUPS[group], manifest, ledger, source_data)
-    missing = [item for item in items if not item.existing]
-    source_list = [item.source for item in missing]
+    generation_items = [item for item in items if item.kind == "verse" or not item.existing]
+    source_list = [item.source for item in generation_items]
     primary_values = translate_batch(source_list, PRIMARY_MODEL, PRIMARY_REVISION)
     secondary_values = translate_batch(source_list, SECONDARY_MODEL, SECONDARY_REVISION, batch_size=12)
