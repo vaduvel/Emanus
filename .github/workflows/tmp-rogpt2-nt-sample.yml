@@ -1,0 +1,48 @@
+name: Temporary NT Romanian LM sample
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/tmp-rogpt2-nt-sample.yml
+      - scripts/tmp-rogpt2-nt-sample.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sample:
+    if: github.head_ref == 'agent/biblia-emanus-nt-repair'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconstruct source helper
+        run: |
+          : > scripts/tmp-old-pipeline.generated.py
+          for part in 00 01 02 03 04 05; do
+            git show 8cdc210e01c:scripts/tmp-complete-nt.part${part} >> scripts/tmp-old-pipeline.generated.py
+            printf '\n' >> scripts/tmp-old-pipeline.generated.py
+          done
+      - name: Install Romanian LM runtime
+        run: >-
+          pip install --quiet
+          "transformers==4.53.2"
+          "torch==2.7.1"
+          --extra-index-url https://download.pytorch.org/whl/cpu
+      - name: Compare fluency
+        env:
+          OLD_PIPELINE: scripts/tmp-old-pipeline.generated.py
+        run: python3 scripts/tmp-rogpt2-nt-sample.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nt-rogpt2-sample
+          path: tmp-nt-rogpt2-sample/
+          retention-days: 1
