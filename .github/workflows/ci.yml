@@ -43,10 +43,8 @@ jobs:
       - name: Verifica versificatia Noului Testament
         run: pnpm check:biblia-emanus-versification
 
-      - name: Verifica sigiliul celor sase carti publicate
-        run: >-
-          pnpm seal:biblia-emanus --check
-          --book GEN --book EXO --book LEV --book NUM --book DEU --book JOS
+      - name: Verifica sigiliul tuturor cartilor publicate
+        run: pnpm seal:biblia-emanus --check
 
       - name: Typecheck
         run: pnpm typecheck
