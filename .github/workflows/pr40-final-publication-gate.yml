@@ -1,0 +1,176 @@
+name: PR40 final publication gate
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/data/biblia-emanus-candidates/**'
+      - 'scripts/promote-pr40-canonical-ot*.py'
+      - 'scripts/translate-pr40-deuterocanon*.py'
+      - 'scripts/extract-pr40-early-works*.py'
+      - 'scripts/translate-pr40-early-works*.py'
+      - 'scripts/extract-pr40-qumran-corpus.py'
+      - 'scripts/translate-pr40-qumran-corpus.py'
+      - 'scripts/audit-pr40-*.py'
+      - '.github/workflows/pr40-final-publication-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-final-publication-gate-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  canonical-ot:
+    name: Canonical OT — source, seal and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install workspace
+        run: pnpm install --frozen-lockfile
+      - name: Generate canonical publication with official OSHB remap
+        run: python3 scripts/promote-pr40-canonical-ot-v3.py
+      - name: Run canonical publication gates
+        run: |
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+          pnpm typecheck
+          pnpm build
+          git diff --check
+      - name: Upload generated canonical corpus
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-canonical-publication
+          path: |
+            docs/data/biblia-emanus
+          retention-days: 7
+
+  deuterocanon:
+    name: Deuterocanon — translation and semantic audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install translation and audit runtime
+        run: pip install --disable-pip-version-check 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Generate all twelve modern Romanian works
+        run: python3 scripts/translate-pr40-deuterocanon-all-v2.py --batch-size 20
+      - name: Audit all units against English and Greek witnesses
+        run: python3 scripts/audit-pr40-english-romanian.py --collection deuterocanon --batch-size 64
+      - name: Upload deuterocanonical corpus and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-deuterocanon-publication
+          path: |
+            docs/data/biblia-emanus-deuterocanon-new-translation
+            docs/data/biblia-emanus-deuterocanon-audited
+            docs/biblia-emanus/PR40-DEUTEROCANON-NEW-TRANSLATION.json
+            docs/biblia-emanus/PR40-DEUTEROCANON-SEMANTIC-AUDIT.json
+          if-no-files-found: warn
+          retention-days: 7
+
+  early-works:
+    name: Early works — sources, translation and semantic audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install extraction, translation and audit runtime
+        run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Rebuild and verify all 210 source chapters
+        run: python3 scripts/extract-pr40-early-works-v2.py
+      - name: Generate modern Romanian candidates
+        run: python3 scripts/translate-pr40-early-works-v2.py --batch-size 16
+      - name: Audit every Romanian source unit
+        run: python3 scripts/audit-pr40-english-romanian.py --collection early --batch-size 64
+      - name: Upload early-work corpus and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-early-publication
+          path: |
+            docs/data/biblia-emanus-early-source-candidates
+            docs/data/biblia-emanus-early-romanian-candidates
+            docs/data/biblia-emanus-early-audited
+            docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json
+          if-no-files-found: warn
+          retention-days: 7
+
+  qumran:
+    name: Qumran — authentic fragments and parallel research edition
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Text-Fabric, translation and audit runtime
+        run: pip install --disable-pip-version-check 'text-fabric>=12,<14' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Rebuild all authentic witnesses, fragments and lines
+        run: python3 scripts/extract-pr40-qumran-corpus.py
+      - name: Generate Romanian parallel research edition
+        run: python3 scripts/translate-pr40-qumran-corpus.py --batch-size 28
+      - name: Audit line fidelity and fragment semantics
+        run: python3 scripts/audit-pr40-qumran-romanian.py
+      - name: Upload Qumran corpus and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-qumran-publication
+          path: |
+            docs/data/biblia-emanus-qumran-source
+            docs/data/biblia-emanus-qumran-romanian-candidates
+            docs/data/biblia-emanus-qumran-audited
+            docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json
+            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json
+          if-no-files-found: warn
+          retention-days: 7
+
+  publication-verdict:
+    name: All 64 works publication verdict
+    if: always()
+    needs:
+      - canonical-ot
+      - deuterocanon
+      - early-works
+      - qumran
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require every collection gate
+        env:
+          CANONICAL: ${{ needs.canonical-ot.result }}
+          DEUTEROCANON: ${{ needs.deuterocanon.result }}
+          EARLY: ${{ needs.early-works.result }}
+          QUMRAN: ${{ needs.qumran.result }}
+        run: |
+          printf 'canonical=%s\ndeuterocanon=%s\nearly=%s\nqumran=%s\n' "$CANONICAL" "$DEUTEROCANON" "$EARLY" "$QUMRAN"
+          test "$CANONICAL" = success
+          test "$DEUTEROCANON" = success
+          test "$EARLY" = success
+          test "$QUMRAN" = success
