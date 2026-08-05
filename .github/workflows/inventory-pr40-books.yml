@@ -7,6 +7,10 @@ on:
     paths:
       - 'scripts/inventory-pr40-books.py'
       - '.github/workflows/inventory-pr40-books.yml'
+  pull_request:
+    paths:
+      - 'scripts/inventory-pr40-books.py'
+      - '.github/workflows/inventory-pr40-books.yml'
   workflow_dispatch:
 
 permissions:
