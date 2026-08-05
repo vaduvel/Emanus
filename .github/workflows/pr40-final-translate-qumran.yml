@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/extract-pr40-qumran-corpus.py'
       - 'scripts/translate-pr40-qumran-corpus.py'
+      - 'scripts/audit-pr40-qumran-romanian.py'
       - '.github/workflows/pr40-final-translate-qumran.yml'
   workflow_dispatch:
 
@@ -20,18 +21,20 @@ concurrency:
 jobs:
   translate:
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install source and translation runtime
-        run: pip install --disable-pip-version-check 'text-fabric>=12,<14' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1'
+      - name: Install source, translation and audit runtime
+        run: pip install --disable-pip-version-check 'text-fabric>=12,<14' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
       - name: Rebuild authentic Qumran source corpus
         run: python3 scripts/extract-pr40-qumran-corpus.py
       - name: Generate Romanian parallel research edition
         run: python3 scripts/translate-pr40-qumran-corpus.py --batch-size 28
+      - name: Audit line fidelity and fragment semantics
+        run: python3 scripts/audit-pr40-qumran-romanian.py
       - name: Upload Romanian candidates and audit report
         if: always()
         uses: actions/upload-artifact@v4
@@ -39,7 +42,9 @@ jobs:
           name: pr40-final-qumran-romanian-drafts
           path: |
             docs/data/biblia-emanus-qumran-romanian-candidates
+            docs/data/biblia-emanus-qumran-audited
             docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json
             docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json
           if-no-files-found: warn
           retention-days: 7
