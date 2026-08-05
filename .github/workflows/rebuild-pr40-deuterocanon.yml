@@ -1,0 +1,40 @@
+name: Rebuild PR40 deuterocanon
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-all-pr40-rebuild
+    paths:
+      - 'scripts/rebuild-pr40-deuterocanon.py'
+      - '.github/workflows/rebuild-pr40-deuterocanon.yml'
+  pull_request:
+    paths:
+      - 'scripts/rebuild-pr40-deuterocanon.py'
+      - '.github/workflows/rebuild-pr40-deuterocanon.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-deuterocanon-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild from authentic public-domain sources
+        run: python3 scripts/rebuild-pr40-deuterocanon.py
+      - name: Upload candidates and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-authentic-deuterocanon
+          path: |
+            docs/data/biblia-emanus-deuterocanon-candidates
+            docs/biblia-emanus/PR40-DEUTEROCANON-REBUILD-REPORT.json
+          if-no-files-found: warn
+          retention-days: 7
