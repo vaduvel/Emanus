@@ -17,7 +17,7 @@ export const DEUTERONOM_TEXT_30: Record<number, readonly string[]> = {
     "Iată, pun astăzi înaintea ta viața și binele, moartea și răul.",
     "Căci îiți poruncesc astăzi să-L iubești pe DOMNUL, Dumnezeul tău, să umbli pe căile Lui și să păzești poruncile Lui, legile Lui și orânduirile Lui, ca să trăiți și să te înmulțești, și ca DOMNUL, Dumnezeul tău, să te binecuvânteze în țara în care intri s-o iei în stăpânire.",
     "Dar dacă inima ta se va abate, dacă n-asculti și te vei lăsa ademenit să te închini înaintea altor dumnezei și să le slujești,",
-    "vă mărturisesc astăzi că veți pieri neaăpărat și nu veți avea zile multe în țara în care treci peste Iordan s-o iei în stăpânire.",
+    "vă mărturisesc astăzi că veți pieri neapărat și nu veți avea zile multe în țara în care treci peste Iordan s-o iei în stăpânire.",
     "Iau astăzi martori împotriva voastră cerul și pământul că ți-am pus înainte viața și moartea, binecuvântarea și blestemul. Alege viața, ca să trăiești, tu și urmașii ta,",
     "iubindu-L pe DOMNUL, Dumnezeul tău, ascultând de glasul Lui și alipindu-te de El; căci aceasta este viața ta și lungimea zilelor tale, ca să locuiești în țara pe care a jurat DOMNUL părinților tăi, lui Avraam, lui Isaac și lui Iacov, că le-o va da.”",
   ],
