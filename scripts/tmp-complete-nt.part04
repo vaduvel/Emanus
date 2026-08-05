@@ -1,9 +1,29 @@
+        existing_reference_notes = {
+            note["number"]: note
+            for note in data.get("referenceNotes", [])
+            if isinstance(note, dict) and isinstance(note.get("number"), int)
+        }
         for number in record.get("referenceNoteNumbers", []):
+            existing_note = existing_reference_notes.get(number, {})
+            existing_reading = existing_note.get("traditionalReading")
+            if not isinstance(existing_reading, str) or PLACEHOLDER.search(existing_reading):
+                existing_reading = None
             source = source_data["texts"][base_id].get((chapter, number), "")
+            if not source and existing_reading:
+                source = existing_reading
             if not source:
-                source = "Traditional reading associated with this verse number."
-            benchmarks = [source_data["texts"][lock_id].get((chapter, number), source) for lock_id in benchmark_ids]
-            items.append(Item(f"{book_id}.{chapter}.R{number}", book_id, chapter, number, clean_source(source), None, benchmarks, "reference"))
+                raise RuntimeError(f"{book_id}.{chapter}.R{number}: no public-domain bridge or existing resolved reading")
+            benchmarks = [source_data["texts"][lock_id].get((chapter, number), existing_reading or source) for lock_id in benchmark_ids]
+            items.append(Item(
+                f"{book_id}.{chapter}.R{number}",
+                book_id,
+                chapter,
+                number,
+                clean_source(source),
+                existing_reading,
+                benchmarks,
+                "reference",
+            ))
     return items, chapters
 
 
@@ -78,28 +98,3 @@ def process_group(group: str) -> int:
     source_list = [item.source for item in missing]
     primary_values = translate_batch(source_list, PRIMARY_MODEL, PRIMARY_REVISION)
     secondary_values = translate_batch(source_list, SECONDARY_MODEL, SECONDARY_REVISION, batch_size=12)
-    primary = {item.key: text for item, text in zip(missing, primary_values)}
-    secondary = {item.key: text for item, text in zip(missing, secondary_values)}
-    selected, stats = choose_candidates(items, primary, secondary)
-
-    out_dir = ROOT / "out" / group / "docs" / "data" / "biblia-emanus"
-    chapter_count = 0
-    verse_count = 0
-    for chapter_id, original in chapters.items():
-        data = copy.deepcopy(original)
-        book_id = data["bookId"]
-        chapter = data["chapter"]
-        ledger_record = ledger[chapter_id]
-        expected_status: dict[int, str] = {
-            number: record["status"]
-            for record in ledger_record.get("textualStatuses", [])
-            for number in record["verseNumbers"]
-        }
-        verses: list[dict[str, Any]] = []
-        for number in ledger_record["verseNumbers"]:
-            verse: dict[str, Any] = {"number": number, "text": selected[f"{book_id}.{chapter}.{number}"]}
-            if number in expected_status:
-                verse["textualStatus"] = expected_status[number]
-            verses.append(verse)
-        normalize_chapter_quotes(verses)
-        data["verses"] = verses
