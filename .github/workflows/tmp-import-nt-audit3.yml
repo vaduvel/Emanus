@@ -4,12 +4,16 @@ on:
   push:
     branches:
       - agent/biblia-emanus-nt-audit3
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   import-and-verify:
+    if: github.head_ref == 'agent/biblia-emanus-nt-audit3' || github.ref == 'refs/heads/agent/biblia-emanus-nt-audit3'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
