@@ -9,6 +9,7 @@ import re
 import sys
 import unicodedata
 import zipfile
+from datetime import date
 from difflib import SequenceMatcher
 from pathlib import Path
 from statistics import median
@@ -70,6 +71,30 @@ USFM_VERSE_PATTERN = re.compile(r"^\\v\s+([1-9][0-9]*)(?:-[1-9][0-9]*)?\b")
 USFM_VERSE_TEXT_PATTERN = re.compile(
     r"^\\v\s+([1-9][0-9]*)(?:-[1-9][0-9]*)?\s*(.*)$"
 )
+SBLGNT_VERSE_TEXT_PATTERN = re.compile(
+    r"^[1-3]?[A-Za-z]+\s+([1-9][0-9]*):([1-9][0-9]*)\t(.+)$"
+)
+SOURCE_REFERENCE_PATTERN = re.compile(r"^([1-9][0-9]*):([1-9][0-9]*)$")
+SBLGNT_COMMIT = "c4d241a9c1c479a55b989ba35a4976c1d0b8052c"
+LEGACY_ENGINE_VERSION = "2.0.0"
+NT_ENGINE_VERSION = "3.0.0"
+NT_CHAPTER_COUNTS = {
+    "MAT": 28, "MRK": 16, "LUK": 24, "JHN": 21, "ACT": 28, "ROM": 16,
+    "1CO": 16, "2CO": 13, "GAL": 6, "EPH": 6, "PHP": 4, "COL": 4,
+    "1TH": 5, "2TH": 3, "1TI": 6, "2TI": 4, "TIT": 3, "PHM": 1,
+    "HEB": 13, "JAS": 5, "1PE": 5, "2PE": 3, "1JN": 5, "2JN": 1,
+    "3JN": 1, "JUD": 1, "REV": 22,
+}
+FIXED_AUTOMATED_THRESHOLDS = {
+    "minimumLengthRatio": 0.35,
+    "maximumLengthRatio": 1.75,
+    "minimumWordsForTokenOverlap": 8,
+    "minimumRomanianTokenOverlap": 0.14,
+    "maximumChapterSequenceSimilarity": 0.94,
+}
+FORBIDDEN_EDITORIAL_MARKERS = re.compile(
+    r"(?:\bDE (?:TRADUS|DOCUMENTAT|VERIFICAT)\b|\b(?:TODO|TBD|FIXME)\b|<placeholder>)"
+)
 
 
 class ValidationError(Exception):
@@ -78,6 +103,19 @@ class ValidationError(Exception):
 
 def fail(message: str) -> None:
     raise ValidationError(message)
+
+
+def validate_iso_date(value: Any, owner: str) -> str:
+    rendered = str(value)
+    if not ISO_DATE_PATTERN.match(rendered):
+        fail(f"{owner}: data trebuie să fie ISO YYYY-MM-DD")
+    try:
+        parsed = date.fromisoformat(rendered)
+    except ValueError:
+        fail(f"{owner}: data calendaristică este invalidă")
+    if parsed.isoformat() != rendered:
+        fail(f"{owner}: data nu este canonică")
+    return rendered
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -96,6 +134,22 @@ def load_json(path: Path) -> dict[str, Any]:
     if not isinstance(value, dict):
         fail(f"{path.name}: rădăcina trebuie să fie un obiect JSON")
     return value
+
+
+def validate_no_editorial_placeholders(value: Any, owner: str = "chapter") -> None:
+    """Reject unresolved production markers anywhere in a chapter payload."""
+    if isinstance(value, dict):
+        for key, child in value.items():
+            validate_no_editorial_placeholders(child, f"{owner}.{key}")
+        return
+    if isinstance(value, list):
+        for index, child in enumerate(value):
+            validate_no_editorial_placeholders(child, f"{owner}[{index}]")
+        return
+    if isinstance(value, str):
+        match = FORBIDDEN_EDITORIAL_MARKERS.search(value)
+        if match:
+            fail(f"{owner}: marcaj editorial nerezolvat {match.group(0)!r}")
 
 
 def sha256_bytes(value: bytes) -> str:
@@ -149,6 +203,13 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Path]:
         if manifest.get(key) != expected_name:
             fail(f"manifest.json: {key} trebuie să fie {expected_name}")
         paths[key] = validate_relative_file("manifest.json", expected_name)
+    versification_name = manifest.get("newTestamentVersification")
+    if versification_name is not None:
+        if versification_name != "nt-versification.json":
+            fail("manifest.json: newTestamentVersification trebuie să fie nt-versification.json")
+        paths["newTestamentVersification"] = validate_relative_file(
+            "manifest.json", versification_name
+        )
 
     method = manifest.get("translationMethod")
     if not isinstance(method, dict):
@@ -217,15 +278,17 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Path]:
     if new_testament.get("id") != "SBLGNT" or new_testament.get("license") != "CC BY 4.0":
         fail("manifest.json: sursa greacă trebuie să fie SBLGNT, CC BY 4.0")
     romanian_benchmarks = sources.get("romanianBenchmarks")
-    if not isinstance(romanian_benchmarks, list) or len(romanian_benchmarks) != 3:
-        fail("manifest.json: trebuie declarate exact trei etaloane românești")
+    if not isinstance(romanian_benchmarks, list) or len(romanian_benchmarks) not in {3, 4}:
+        fail("manifest.json: trebuie declarate trei sau patru etaloane românești")
     benchmark_ids = {item.get("id") for item in romanian_benchmarks if isinstance(item, dict)}
-    if benchmark_ids != {"CORNILESCU-1924", "BTF", "NTR"}:
+    if not {"CORNILESCU-1924", "BTF", "NTR"}.issubset(benchmark_ids):
         fail("manifest.json: etaloanele românești declarate sunt incorecte")
+    if benchmark_ids.difference({"CORNILESCU-1924", "BTF", "BIBLIA-LIBERA", "NTR"}):
+        fail("manifest.json: există un etalon românesc neaprobat")
     for item in romanian_benchmarks:
         if not isinstance(item, dict) or item.get("mode") != "comparison-only":
             fail("manifest.json: fiecare etalon românesc trebuie folosit comparison-only")
-        if item.get("id") in {"CORNILESCU-1924", "BTF"}:
+        if item.get("id") in {"CORNILESCU-1924", "BTF", "BIBLIA-LIBERA"}:
             if item.get("license") != "Public Domain" or item.get("pinned") is not True:
                 fail(f"manifest.json: etalonul {item.get('id')} trebuie fixat și public-domain")
         elif item.get("fullTextStored") is not False:
@@ -278,20 +341,66 @@ def validate_ledger(
             fail(f"source-ledger.json: identificator invalid {chapter_id!r}")
         if not isinstance(record, dict):
             fail(f"source-ledger.json: {chapter_id} trebuie să fie obiect")
-        expected_verses = record.get("expectedVerses")
-        if not isinstance(expected_verses, int) or expected_verses < 1:
-            fail(f"source-ledger.json: expectedVerses invalid pentru {chapter_id}")
         book_id, chapter_text = chapter_id.split(".")
         if book_id not in source_data["books"]:
             fail(f"source-ledger.json: {book_id} lipsește din source-lock.json")
+        testament = source_data["books"][book_id]["testament"]
+        verse_numbers = record.get("verseNumbers")
+        expected_verses = record.get("expectedVerses")
+        if testament == "NT":
+            if (
+                not isinstance(verse_numbers, list)
+                or not verse_numbers
+                or any(not isinstance(value, int) or value < 1 for value in verse_numbers)
+                or verse_numbers != sorted(set(verse_numbers))
+            ):
+                fail(f"source-ledger.json: verseNumbers invalid pentru {chapter_id}")
+            if expected_verses != len(verse_numbers):
+                fail(f"source-ledger.json: expectedVerses trebuie derivat din verseNumbers pentru {chapter_id}")
+            reference_note_numbers = record.get("referenceNoteNumbers", [])
+            if (
+                not isinstance(reference_note_numbers, list)
+                or any(not isinstance(value, int) or value < 1 for value in reference_note_numbers)
+                or reference_note_numbers != sorted(set(reference_note_numbers))
+                or set(reference_note_numbers).intersection(verse_numbers)
+            ):
+                fail(f"source-ledger.json: referenceNoteNumbers invalid pentru {chapter_id}")
+            textual_statuses = record.get("textualStatuses", [])
+            if not isinstance(textual_statuses, list):
+                fail(f"source-ledger.json: textualStatuses invalid pentru {chapter_id}")
+            covered_status_numbers: set[int] = set()
+            for status_index, textual_status in enumerate(textual_statuses, start=1):
+                if not isinstance(textual_status, dict):
+                    fail(f"source-ledger.json: statut textual invalid {chapter_id}#{status_index}")
+                numbers = textual_status.get("verseNumbers")
+                if (
+                    textual_status.get("status") != "double-bracketed"
+                    or not isinstance(numbers, list)
+                    or not numbers
+                    or any(number not in verse_numbers for number in numbers)
+                    or covered_status_numbers.intersection(numbers)
+                ):
+                    fail(f"source-ledger.json: interval textual invalid {chapter_id}#{status_index}")
+                covered_status_numbers.update(numbers)
+        else:
+            if not isinstance(expected_verses, int) or expected_verses < 1:
+                fail(f"source-ledger.json: expectedVerses invalid pentru {chapter_id}")
+            if verse_numbers is not None and verse_numbers != list(range(1, expected_verses + 1)):
+                fail(f"source-ledger.json: verseNumbers OT nu corespunde pentru {chapter_id}")
+            verse_numbers = list(range(1, expected_verses + 1))
+        record["verseNumbers"] = verse_numbers
         if not str(record.get("englishUrl", "")).startswith("https://ebible.org/engwebp/"):
             fail(f"source-ledger.json: englishUrl invalid pentru {chapter_id}")
-        testament = source_data["books"][book_id]["testament"]
         source_url_key = "hebrewUrl" if testament == "OT" else "greekUrl"
-        source_url_prefix = (
-            "https://ebible.org/hboWLC/" if testament == "OT" else "https://www.sblgnt.com/"
+        source_url = str(record.get(source_url_key, ""))
+        source_url_valid = (
+            source_url.startswith("https://ebible.org/hboWLC/")
+            if testament == "OT"
+            else source_url.startswith(
+                f"https://github.com/LogosBible/SBLGNT/blob/{SBLGNT_COMMIT}/"
+            )
         )
-        if not str(record.get(source_url_key, "")).startswith(source_url_prefix):
+        if not source_url_valid:
             fail(f"source-ledger.json: {source_url_key} invalid pentru {chapter_id}")
         variants = record.get("textualVariantReview", [])
         if not isinstance(variants, list):
@@ -300,24 +409,23 @@ def validate_ledger(
             match = VERSE_ID_PATTERN.match(str(verse_id))
             if not match or ".".join(match.groups()[:2]) != chapter_id:
                 fail(f"source-ledger.json: varianta {verse_id!r} nu aparține de {chapter_id}")
-            if int(match.group(3)) > expected_verses:
+            if int(match.group(3)) not in verse_numbers:
                 fail(f"source-ledger.json: verset inexistent în {verse_id}")
         expected_rule_ids = [
             rule["id"]
             for rule in source_data["rules"]
-            if rule["bookId"] == book_id and rule["targetChapter"] == int(chapter_text)
+            if rule["bookId"] == book_id
+            and (
+                rule.get("targetChapter") == int(chapter_text)
+                or any(
+                    int(reference.split(":", 1)[0]) == int(chapter_text)
+                    for reference in rule.get("targetReferences", [])
+                )
+            )
         ]
         actual_rule_ids = record.get("versificationRuleIds", [])
         if actual_rule_ids != expected_rule_ids:
             fail(f"source-ledger.json: reguli de versificație incorecte pentru {chapter_id}")
-        expected_extra_ids = [
-            extra["id"]
-            for extra in source_data["coverageExtras"]
-            if extra["bookId"] == book_id and extra["targetChapter"] == int(chapter_text)
-        ]
-        actual_extra_ids = record.get("sourceCoverageExtraIds", [])
-        if actual_extra_ids != expected_extra_ids:
-            fail(f"source-ledger.json: reguli suplimentare de acoperire incorecte pentru {chapter_id}")
         normalized[chapter_id] = record
     return normalized
 
@@ -330,7 +438,12 @@ def strip_usfm_text(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
-def parse_usfm_verses(raw: bytes, label: str) -> dict[tuple[int, int], str]:
+def parse_usfm_verses(
+    raw: bytes,
+    label: str,
+    *,
+    allow_empty: bool = False,
+) -> dict[tuple[int, int], str]:
     try:
         text = raw.decode("utf-8-sig")
     except UnicodeDecodeError:
@@ -356,6 +469,9 @@ def parse_usfm_verses(raw: bytes, label: str) -> dict[tuple[int, int], str]:
                 fail(f"source-lock.json: referință duplicată {reference} în {label}")
             verse_text = strip_usfm_text(verse_match.group(2))
             if not verse_text:
+                if allow_empty:
+                    current_reference = None
+                    continue
                 fail(f"source-lock.json: text gol la {label} {reference[0]}:{reference[1]}")
             verses[reference] = verse_text
             current_reference = reference
@@ -373,23 +489,89 @@ def parse_usfm_verses(raw: bytes, label: str) -> dict[tuple[int, int], str]:
     return verses
 
 
-def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
-    if lock.get("schemaVersion") != 2 or lock.get("translation") != "BE":
-        fail("source-lock.json: schemă sau traducere invalidă")
-    if lock.get("engineVersion") != "2.0.0":
-        fail("source-lock.json: engineVersion trebuie să fie 2.0.0")
-    if not ISO_DATE_PATTERN.match(str(lock.get("capturedOn", ""))):
-        fail("source-lock.json: capturedOn trebuie să fie o dată ISO")
+def parse_sblgnt_verses(raw: bytes, label: str) -> dict[tuple[int, int], str]:
+    try:
+        text = raw.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        fail(f"source-lock.json: {label} nu este UTF-8")
+    verses: dict[tuple[int, int], str] = {}
+    for line in text.splitlines():
+        match = SBLGNT_VERSE_TEXT_PATTERN.match(line)
+        if not match:
+            continue
+        reference = (int(match.group(1)), int(match.group(2)))
+        if reference in verses:
+            fail(f"source-lock.json: referință duplicată {reference} în {label}")
+        verse_text = match.group(3).strip()
+        if not verse_text:
+            fail(f"source-lock.json: text gol la {label} {reference[0]}:{reference[1]}")
+        verses[reference] = verse_text
+    if not verses:
+        fail(f"source-lock.json: {label} nu conține versete SBLGNT")
+    return verses
 
-    snapshot = lock.get("snapshot")
-    if not isinstance(snapshot, dict):
-        fail("source-lock.json: lipsește snapshot")
-    snapshot_path = validate_relative_file("source-lock.json", snapshot.get("path"))
-    snapshot_hash = snapshot.get("sha256")
-    if not isinstance(snapshot_hash, str) or not SHA256_PATTERN.match(snapshot_hash):
-        fail("source-lock.json: hash invalid pentru snapshot")
-    if sha256_file(snapshot_path) != snapshot_hash:
-        fail("source-lock.json: hash-ul snapshotului nu corespunde")
+
+def parse_source_references(owner: str, values: Any) -> set[tuple[int, int]]:
+    if values is None:
+        return set()
+    if not isinstance(values, list):
+        fail(f"source-lock.json: {owner} trebuie să fie listă")
+    references: set[tuple[int, int]] = set()
+    for value in values:
+        match = SOURCE_REFERENCE_PATTERN.match(str(value))
+        if not match:
+            fail(f"source-lock.json: referință invalidă {value!r} în {owner}")
+        reference = (int(match.group(1)), int(match.group(2)))
+        if reference in references:
+            fail(f"source-lock.json: referință duplicată {value!r} în {owner}")
+        references.add(reference)
+    return references
+
+
+def parse_locked_source(
+    raw: bytes,
+    label: str,
+    record: dict[str, Any],
+) -> dict[tuple[int, int], str]:
+    source_format = record.get("format", "usfm")
+    if source_format == "usfm":
+        return parse_usfm_verses(
+            raw,
+            label,
+            allow_empty=record.get("allowEmptyVerses") is True,
+        )
+    if source_format == "sblgnt-plaintext":
+        return parse_sblgnt_verses(raw, label)
+    fail(f"source-lock.json: format necunoscut pentru {label}: {source_format!r}")
+
+
+def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
+    schema_version = lock.get("schemaVersion")
+    if schema_version not in {2, 3} or lock.get("translation") != "BE":
+        fail("source-lock.json: schemă sau traducere invalidă")
+    expected_engine = NT_ENGINE_VERSION if schema_version == 3 else LEGACY_ENGINE_VERSION
+    if lock.get("engineVersion") != expected_engine:
+        fail(f"source-lock.json: engineVersion trebuie să fie {expected_engine}")
+    validate_iso_date(lock.get("capturedOn"), "source-lock.json capturedOn")
+
+    snapshots = lock.get("snapshots") if schema_version == 3 else {"legacy": lock.get("snapshot")}
+    if not isinstance(snapshots, dict) or not snapshots:
+        fail("source-lock.json: lipsesc snapshoturile")
+    snapshot_paths: dict[str, Path] = {}
+    snapshot_hashes: dict[str, str] = {}
+    for snapshot_id, snapshot in snapshots.items():
+        if not isinstance(snapshot_id, str) or not snapshot_id or not isinstance(snapshot, dict):
+            fail("source-lock.json: snapshot invalid")
+        snapshot_path = validate_relative_file(
+            f"source-lock.json snapshot {snapshot_id}", snapshot.get("path")
+        )
+        snapshot_hash = snapshot.get("sha256")
+        if not isinstance(snapshot_hash, str) or not SHA256_PATTERN.match(snapshot_hash):
+            fail(f"source-lock.json: hash invalid pentru snapshotul {snapshot_id}")
+        if sha256_file(snapshot_path) != snapshot_hash:
+            fail(f"source-lock.json: hash-ul snapshotului {snapshot_id} nu corespunde")
+        snapshot_paths[snapshot_id] = snapshot_path
+        snapshot_hashes[snapshot_id] = snapshot_hash
 
     upstream = lock.get("upstreamArtifacts")
     if not isinstance(upstream, dict) or len(upstream) < 4:
@@ -397,12 +579,25 @@ def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
     for source_id, record in upstream.items():
         if not isinstance(record, dict):
             fail(f"source-lock.json: upstream {source_id} invalid")
-        if not str(record.get("url", "")).startswith("https://ebible.org/Scriptures/"):
+        if not str(record.get("url", "")).startswith("https://"):
             fail(f"source-lock.json: URL upstream invalid pentru {source_id}")
-        if not ISO_DATE_PATTERN.match(str(record.get("archiveDate", ""))):
-            fail(f"source-lock.json: archiveDate invalid pentru {source_id}")
+        validate_iso_date(record.get("archiveDate"), f"source-lock.json {source_id}.archiveDate")
         if not SHA256_PATTERN.match(str(record.get("sha256", ""))):
             fail(f"source-lock.json: hash upstream invalid pentru {source_id}")
+        if schema_version == 3:
+            if record.get("language") not in {"en", "he", "el", "ro", "ro-Cyrl"}:
+                fail(f"source-lock.json: limba upstream este invalidă pentru {source_id}")
+            if record.get("snapshotId") not in snapshots:
+                fail(f"source-lock.json: snapshot upstream invalid pentru {source_id}")
+            embedded = record.get("archiveEmbedded")
+            if embedded not in {True, False}:
+                fail(f"source-lock.json: archiveEmbedded lipsește pentru {source_id}")
+            if embedded is False and record.get("snapshotId") != "ot-legacy":
+                fail(f"source-lock.json: numai snapshotul OT moștenit poate declara arhiva neîncorporată")
+            if embedded is True:
+                archive_path = record.get("archivePath")
+                if not isinstance(archive_path, str) or archive_path.startswith("/") or ".." in Path(archive_path).parts:
+                    fail(f"source-lock.json: archivePath upstream invalid pentru {source_id}")
 
     books = lock.get("books")
     if not isinstance(books, dict) or not books:
@@ -427,31 +622,83 @@ def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(files, dict) or not files:
         fail("source-lock.json: lista fișierelor fixate este goală")
 
+    artifacts = lock.get("artifacts", {})
+    if not isinstance(artifacts, dict):
+        fail("source-lock.json: artifacts trebuie să fie obiect")
+    expected_names_by_snapshot: dict[str, set[str]] = {
+        snapshot_id: set() for snapshot_id in snapshots
+    }
+    if schema_version == 3:
+        for source_id, record in upstream.items():
+            if record.get("archiveEmbedded") is True:
+                expected_names_by_snapshot[record["snapshotId"]].add(record["archivePath"])
+
     texts: dict[str, dict[tuple[int, int], str]] = {}
-    with zipfile.ZipFile(snapshot_path) as archive:
-        archive_names = set(archive.namelist())
-        expected_names: set[str] = set()
-        for lock_id, record in files.items():
+    for lock_id, record in files.items():
             if not isinstance(record, dict):
                 fail(f"source-lock.json: înregistrare invalidă pentru {lock_id}")
+            snapshot_id = record.get("snapshotId", "legacy")
+            if snapshot_id not in snapshots:
+                fail(f"source-lock.json: snapshotId invalid pentru {lock_id}")
             archive_path = record.get("archivePath")
             if not isinstance(archive_path, str) or archive_path.startswith("/") or ".." in Path(archive_path).parts:
                 fail(f"source-lock.json: archivePath invalid pentru {lock_id}")
-            expected_names.add(archive_path)
-            if archive_path not in archive_names:
-                fail(f"source-lock.json: {archive_path} lipsește din snapshot")
-            raw = archive.read(archive_path)
-            if sha256_bytes(raw) != record.get("sha256"):
-                fail(f"source-lock.json: hash invalid pentru {lock_id}")
+            expected_names_by_snapshot[snapshot_id].add(archive_path)
             if record.get("bookId") not in books:
                 fail(f"source-lock.json: bookId este invalid pentru {lock_id}")
             if record.get("language") not in {"en", "he", "el", "ro", "ro-Cyrl"}:
                 fail(f"source-lock.json: limba este invalidă pentru {lock_id}")
-            if record.get("role") not in {"base", "original", "benchmark"}:
+            if record.get("role") not in {"base", "original", "original-supplement", "benchmark"}:
                 fail(f"source-lock.json: rolul este invalid pentru {lock_id}")
-            texts[lock_id] = parse_usfm_verses(raw, lock_id)
-        if archive_names != expected_names:
-            fail("source-lock.json: snapshotul conține fișiere neînregistrate")
+            source_id = record.get("sourceId")
+            if source_id not in upstream:
+                fail(f"source-lock.json: sourceId invalid pentru {lock_id}")
+            if schema_version == 3 and record.get("language") != upstream[source_id].get("language"):
+                fail(f"source-lock.json: limba lui {lock_id} nu corespunde sursei upstream")
+            parse_source_references(f"{lock_id}.missingTargetReferences", record.get("missingTargetReferences"))
+            parse_source_references(f"{lock_id}.extraSourceReferences", record.get("extraSourceReferences"))
+
+    for artifact_id, record in artifacts.items():
+        if not isinstance(record, dict):
+            fail(f"source-lock.json: artifact invalid pentru {artifact_id}")
+        snapshot_id = record.get("snapshotId")
+        if snapshot_id not in snapshots:
+            fail(f"source-lock.json: snapshot invalid pentru artifactul {artifact_id}")
+        archive_path = record.get("archivePath")
+        if not isinstance(archive_path, str) or archive_path.startswith("/") or ".." in Path(archive_path).parts:
+            fail(f"source-lock.json: archivePath invalid pentru artifactul {artifact_id}")
+        if not SHA256_PATTERN.match(str(record.get("sha256", ""))):
+            fail(f"source-lock.json: hash invalid pentru artifactul {artifact_id}")
+        expected_names_by_snapshot[snapshot_id].add(archive_path)
+
+    for snapshot_id, snapshot_path in snapshot_paths.items():
+        with zipfile.ZipFile(snapshot_path) as archive:
+            archive_names = set(archive.namelist())
+            expected_names = expected_names_by_snapshot[snapshot_id]
+            if archive_names != expected_names:
+                missing = sorted(expected_names - archive_names)[:5]
+                extra = sorted(archive_names - expected_names)[:5]
+                fail(
+                    f"source-lock.json: inventar invalid în snapshotul {snapshot_id}; "
+                    f"lipsesc={missing}, extra={extra}"
+                )
+            for source_id, record in upstream.items():
+                if record.get("snapshotId") == snapshot_id and record.get("archiveEmbedded") is True:
+                    raw = archive.read(record["archivePath"])
+                    if sha256_bytes(raw) != record["sha256"]:
+                        fail(f"source-lock.json: arhiva upstream {source_id} nu corespunde hashului")
+            for lock_id, record in files.items():
+                if record.get("snapshotId", "legacy") != snapshot_id:
+                    continue
+                raw = archive.read(record["archivePath"])
+                if sha256_bytes(raw) != record.get("sha256"):
+                    fail(f"source-lock.json: hash invalid pentru {lock_id}")
+                texts[lock_id] = parse_locked_source(raw, lock_id, record)
+            for artifact_id, record in artifacts.items():
+                if record.get("snapshotId") != snapshot_id:
+                    continue
+                if sha256_bytes(archive.read(record["archivePath"])) != record["sha256"]:
+                    fail(f"source-lock.json: hash invalid pentru artifactul {artifact_id}")
 
     rules = lock.get("versificationRules")
     if not isinstance(rules, list):
@@ -465,75 +712,88 @@ def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
             fail(f"source-lock.json: id invalid pentru regula {index}")
         rule_ids.add(rule_id)
         source_lock_id = rule.get("sourceLockId")
-        if source_lock_id not in files or files[source_lock_id].get("role") != "original":
+        if source_lock_id not in files or files[source_lock_id].get("role") not in {
+            "base", "original", "original-supplement", "benchmark"
+        }:
             fail(f"source-lock.json: sursă invalidă în regula {rule_id}")
         if rule.get("bookId") not in books or files[source_lock_id].get("bookId") != rule["bookId"]:
             fail(f"source-lock.json: carte invalidă în regula {rule_id}")
-        integer_keys = (
-            "targetChapter",
-            "targetStartVerse",
-            "targetEndVerse",
-            "sourceChapter",
-            "sourceStartVerse",
-        )
-        if any(not isinstance(rule.get(key), int) or rule[key] < 1 for key in integer_keys):
-            fail(f"source-lock.json: interval invalid în regula {rule_id}")
-        if rule["targetEndVerse"] < rule["targetStartVerse"]:
-            fail(f"source-lock.json: interval inversat în regula {rule_id}")
-    coverage_extras = lock.get("coverageExtras", [])
-    if not isinstance(coverage_extras, list):
-        fail("source-lock.json: coverageExtras trebuie să fie listă")
-    extra_ids: set[str] = set()
-    for index, extra in enumerate(coverage_extras, start=1):
-        if not isinstance(extra, dict):
-            fail(f"source-lock.json: coverage extra {index} este invalid")
-        extra_id = extra.get("id")
-        if not isinstance(extra_id, str) or not extra_id or extra_id in extra_ids:
-            fail(f"source-lock.json: id invalid pentru coverage extra {index}")
-        extra_ids.add(extra_id)
-        lock_id = extra.get("sourceLockId")
-        if lock_id not in files or files[lock_id].get("role") != "original":
-            fail(f"source-lock.json: sursă invalidă în coverage extra {extra_id}")
-        book_id = extra.get("bookId")
-        if book_id not in books or files[lock_id].get("bookId") != book_id:
-            fail(f"source-lock.json: carte invalidă în coverage extra {extra_id}")
-        for key in ("targetChapter", "targetVerse", "sourceChapter", "sourceVerse"):
-            if not isinstance(extra.get(key), int) or extra[key] < 1:
-                fail(f"source-lock.json: {key} invalid în coverage extra {extra_id}")
-        if (extra["sourceChapter"], extra["sourceVerse"]) not in texts[lock_id]:
-            fail(f"source-lock.json: referința sursă lipsește în coverage extra {extra_id}")
-        if not isinstance(extra.get("reason"), str) or not extra["reason"].strip():
-            fail(f"source-lock.json: motivarea lipsește în coverage extra {extra_id}")
-
+        if "targetReferences" in rule or "sourceReferences" in rule:
+            targets = rule.get("targetReferences")
+            sources = rule.get("sourceReferences")
+            mapping = rule.get("mapping")
+            if (
+                not isinstance(targets, list)
+                or not targets
+                or not isinstance(sources, list)
+                or not sources
+                or mapping not in {"split", "combine", "pairwise"}
+            ):
+                fail(f"source-lock.json: mapare explicită invalidă în regula {rule_id}")
+            parse_source_references(f"regula {rule_id}.targetReferences", targets)
+            parse_source_references(f"regula {rule_id}.sourceReferences", sources)
+            if mapping == "split" and len(sources) != 1:
+                fail(f"source-lock.json: regula split {rule_id} cere o singură sursă")
+            if mapping == "combine" and len(targets) != 1:
+                fail(f"source-lock.json: regula combine {rule_id} cere o singură țintă")
+            if mapping == "pairwise" and len(targets) != len(sources):
+                fail(f"source-lock.json: regula pairwise {rule_id} cere liste egale")
+        else:
+            integer_keys = (
+                "targetChapter",
+                "targetStartVerse",
+                "targetEndVerse",
+                "sourceChapter",
+                "sourceStartVerse",
+            )
+            if any(not isinstance(rule.get(key), int) or rule[key] < 1 for key in integer_keys):
+                fail(f"source-lock.json: interval invalid în regula {rule_id}")
+            if rule["targetEndVerse"] < rule["targetStartVerse"]:
+                fail(f"source-lock.json: interval inversat în regula {rule_id}")
     for book_id, book in books.items():
         base_id = book.get("baseLockId")
         original_id = book.get("originalLockId")
+        supplemental_ids = book.get("supplementalOriginalLockIds", [])
         if base_id not in files or files[base_id].get("role") != "base":
             fail(f"source-lock.json: baza fixată lipsește pentru {book_id}")
         if original_id not in files or files[original_id].get("role") != "original":
             fail(f"source-lock.json: originalul fixat lipsește pentru {book_id}")
-        required_ids = [base_id, original_id, *book["benchmarkLockIds"]]
+        if not isinstance(supplemental_ids, list) or any(
+            lock_id not in files or files[lock_id].get("role") != "original-supplement"
+            for lock_id in supplemental_ids
+        ):
+            fail(f"source-lock.json: martorii greci suplimentari sunt invalizi pentru {book_id}")
+        required_ids = [base_id, original_id, *supplemental_ids, *book["benchmarkLockIds"]]
         if any(lock_id not in files for lock_id in required_ids):
             fail(f"source-lock.json: surse incomplete pentru {book_id}")
         if any(files[lock_id].get("bookId") != book_id for lock_id in required_ids):
             fail(f"source-lock.json: o sursă este legată de cartea greșită pentru {book_id}")
         if any(files[lock_id].get("role") != "benchmark" for lock_id in book["benchmarkLockIds"]):
             fail(f"source-lock.json: etalon invalid pentru {book_id}")
+        snapshot_ids = {files[lock_id].get("snapshotId", "legacy") for lock_id in required_ids}
+        if len(snapshot_ids) != 1:
+            fail(f"source-lock.json: sursele cărții {book_id} trebuie sigilate împreună")
+        if book["testament"] == "NT":
+            original_file = files[original_id]
+            original_upstream = upstream[original_file["sourceId"]]
+            if (
+                original_file.get("language") != "el"
+                or original_file.get("format") != "sblgnt-plaintext"
+                or original_upstream.get("version") != "1.2"
+                or original_upstream.get("commit") != SBLGNT_COMMIT
+                or original_upstream.get("license") != "CC BY 4.0"
+            ):
+                fail(f"source-lock.json: {book_id} cere SBLGNT 1.2 fixat la commitul oficial")
+            if not supplemental_ids or not any(
+                upstream[files[lock_id]["sourceId"]].get("textFamily") == "Textus Receptus"
+                and upstream[files[lock_id]["sourceId"]].get("license") == "Public Domain"
+                for lock_id in supplemental_ids
+            ):
+                fail(f"source-lock.json: {book_id} cere un martor grec TR public-domain")
 
     thresholds = lock.get("automatedThresholds")
-    expected_thresholds = {
-        "minimumLengthRatio": (0.1, 1.0),
-        "maximumLengthRatio": (1.0, 5.0),
-        "minimumWordsForTokenOverlap": (3, 100),
-        "minimumRomanianTokenOverlap": (0.0, 1.0),
-        "maximumChapterSequenceSimilarity": (0.5, 1.0),
-    }
-    if not isinstance(thresholds, dict):
-        fail("source-lock.json: lipsesc pragurile motorului")
-    for key, (lower, upper) in expected_thresholds.items():
-        value = thresholds.get(key)
-        if not isinstance(value, (int, float)) or not lower <= value <= upper:
-            fail(f"source-lock.json: prag invalid pentru {key}")
+    if thresholds != FIXED_AUTOMATED_THRESHOLDS:
+        fail("source-lock.json: pragurile motorului sunt fixe și nu pot fi relaxate")
 
     return {
         "books": books,
@@ -542,11 +802,65 @@ def validate_source_lock(lock: dict[str, Any]) -> dict[str, Any]:
         "references": {lock_id: set(verses) for lock_id, verses in texts.items()},
         "rules": rules,
         "ruleIds": rule_ids,
-        "coverageExtras": coverage_extras,
-        "coverageExtraIds": extra_ids,
         "thresholds": thresholds,
-        "snapshotSha256": snapshot_hash,
+        "artifacts": artifacts,
+        "snapshotSha256": next(iter(snapshot_hashes.values())) if len(snapshot_hashes) == 1 else None,
+        "snapshotSha256ByBook": {
+            book_id: snapshot_hashes[files[book["baseLockId"]].get("snapshotId", "legacy")]
+            for book_id, book in books.items()
+        },
+        "snapshotIdsByBook": {
+            book_id: files[book["baseLockId"]].get("snapshotId", "legacy")
+            for book_id, book in books.items()
+        },
     }
+
+
+def source_references_for_target(
+    source_lock_id: str,
+    book_id: str,
+    chapter: int,
+    verse: int,
+    rules: list[dict[str, Any]],
+) -> tuple[tuple[int, int], ...]:
+    matching = [
+        rule
+        for rule in rules
+        if rule["sourceLockId"] == source_lock_id
+        and rule["bookId"] == book_id
+        and (
+            (
+                "targetReferences" in rule
+                and f"{chapter}:{verse}" in rule["targetReferences"]
+            )
+            or (
+                "targetReferences" not in rule
+                and rule["targetChapter"] == chapter
+                and rule["targetStartVerse"] <= verse <= rule["targetEndVerse"]
+            )
+        )
+    ]
+    if len(matching) > 1:
+        fail(f"source-lock.json: reguli suprapuse pentru {book_id}.{chapter}.{verse}")
+    if not matching:
+        return ((chapter, verse),)
+    rule = matching[0]
+    if "targetReferences" in rule:
+        target_index = rule["targetReferences"].index(f"{chapter}:{verse}")
+        mapping = rule.get("mapping")
+        source_references = tuple(
+            tuple(map(int, reference.split(":")))
+            for reference in rule["sourceReferences"]
+        )
+        if mapping == "split":
+            return source_references
+        if mapping == "combine":
+            return source_references
+        if mapping == "pairwise":
+            return (source_references[target_index],)
+        fail(f"source-lock.json: mapping necunoscut în regula {rule['id']}")
+    offset = verse - rule["targetStartVerse"]
+    return ((rule["sourceChapter"], rule["sourceStartVerse"] + offset),)
 
 
 def source_reference_for_target(
@@ -556,21 +870,13 @@ def source_reference_for_target(
     verse: int,
     rules: list[dict[str, Any]],
 ) -> tuple[int, int]:
-    matching = [
-        rule
-        for rule in rules
-        if rule["sourceLockId"] == source_lock_id
-        and rule["bookId"] == book_id
-        and rule["targetChapter"] == chapter
-        and rule["targetStartVerse"] <= verse <= rule["targetEndVerse"]
-    ]
-    if len(matching) > 1:
-        fail(f"source-lock.json: reguli suprapuse pentru {book_id}.{chapter}.{verse}")
-    if not matching:
-        return chapter, verse
-    rule = matching[0]
-    offset = verse - rule["targetStartVerse"]
-    return rule["sourceChapter"], rule["sourceStartVerse"] + offset
+    """Compatibility helper for legacy one-to-one versification tests."""
+    references = source_references_for_target(
+        source_lock_id, book_id, chapter, verse, rules
+    )
+    if len(references) != 1:
+        fail(f"source-lock.json: maparea pentru {book_id}.{chapter}.{verse} nu este unu-la-unu")
+    return references[0]
 
 
 def validate_source_coverage(
@@ -579,55 +885,110 @@ def validate_source_coverage(
 ) -> None:
     references = source_data["references"]
     books = source_data["books"]
+    files = source_data["files"]
     rules = source_data["rules"]
-    coverage_extras = source_data["coverageExtras"]
-    extras_by_target: dict[tuple[str, int, int], list[dict[str, Any]]] = {}
-    for extra in coverage_extras:
-        extras_by_target.setdefault(
-            (extra["bookId"], extra["targetChapter"], extra["targetVerse"]), []
-        ).append(extra)
-    consumed: dict[str, set[tuple[int, int]]] = {lock_id: set() for lock_id in references}
+    targets_by_book: dict[str, set[tuple[int, int]]] = {
+        book_id: set() for book_id in books
+    }
     for chapter_id, record in ledger_chapters.items():
         book_id, chapter_text = chapter_id.split(".")
         chapter = int(chapter_text)
-        for verse in range(1, record["expectedVerses"] + 1):
-            book = books[book_id]
-            direct_reference = (chapter, verse)
-            direct_lock_ids = [book["baseLockId"], *book["benchmarkLockIds"]]
-            for lock_id in direct_lock_ids:
-                if direct_reference not in references[lock_id]:
-                    fail(f"source-lock.json: lipsește {lock_id} {chapter}:{verse}")
-                consumed[lock_id].add(direct_reference)
+        for verse in record["verseNumbers"]:
+            targets_by_book[book_id].add((chapter, verse))
 
-            original_lock = book["originalLockId"]
-            original_reference = source_reference_for_target(
-                original_lock, book_id, chapter, verse, rules
-            )
-            if original_reference not in references[original_lock]:
-                fail(
-                    f"source-lock.json: lipsește {original_lock} "
-                    f"{original_reference[0]}:{original_reference[1]} "
-                    f"pentru {chapter_id}.{verse}"
-                )
-            consumed[original_lock].add(original_reference)
-            for extra in extras_by_target.get((book_id, chapter, verse), []):
-                extra_lock = extra["sourceLockId"]
-                extra_reference = (extra["sourceChapter"], extra["sourceVerse"])
-                if extra_reference not in references[extra_lock]:
-                    fail(
-                        f"source-lock.json: lipsește extra {extra_lock} "
-                        f"{extra_reference[0]}:{extra_reference[1]}"
-                    )
-                consumed[extra_lock].add(extra_reference)
     for lock_id, source_references in references.items():
-        if consumed[lock_id] != source_references:
-            missing = sorted(source_references.difference(consumed[lock_id]))[:5]
-            extra = sorted(consumed[lock_id].difference(source_references))[:5]
-            fail(f"source-lock.json: acoperire incompletă pentru {lock_id}; nefolosite={missing}, extra={extra}")
+        record = files[lock_id]
+        book_id = record["bookId"]
+        target_references = targets_by_book[book_id]
+        mapped_references = {
+            source_reference
+            for chapter, verse in target_references
+            for source_reference in source_references_for_target(
+                lock_id, book_id, chapter, verse, rules
+            )
+        }
+        actual_missing_targets = {
+            target
+            for target in target_references
+            if not all(
+                source_reference in source_references
+                for source_reference in source_references_for_target(
+                    lock_id, book_id, *target, rules
+                )
+            )
+        }
+        actual_extra_sources = source_references - mapped_references
+        declared_missing = parse_source_references(
+            f"{lock_id}.missingTargetReferences", record.get("missingTargetReferences")
+        )
+        declared_extra = parse_source_references(
+            f"{lock_id}.extraSourceReferences", record.get("extraSourceReferences")
+        )
+        if actual_missing_targets != declared_missing:
+            fail(
+                f"source-lock.json: lipsurile declarate nu corespund pentru {lock_id}; "
+                f"calculate={sorted(actual_missing_targets)[:8]}, "
+                f"declarate={sorted(declared_missing)[:8]}"
+            )
+        if actual_extra_sources != declared_extra:
+            fail(
+                f"source-lock.json: referințele suplimentare nu corespund pentru {lock_id}; "
+                f"calculate={sorted(actual_extra_sources)[:8]}, "
+                f"declarate={sorted(declared_extra)[:8]}"
+            )
+        if record["role"] == "benchmark" and declared_missing:
+            fail(f"source-lock.json: etalonul fixat {lock_id} nu poate avea versete lipsă")
+
+    for book_id, target_references in targets_by_book.items():
+        book = books[book_id]
+        original_ids = [
+            book["originalLockId"],
+            *book.get("supplementalOriginalLockIds", []),
+        ]
+        for target in target_references:
+            if not any(
+                all(
+                    source_reference in references[lock_id]
+                    for source_reference in source_references_for_target(
+                        lock_id, book_id, *target, rules
+                    )
+                )
+                for lock_id in original_ids
+            ):
+                fail(
+                    f"source-lock.json: {book_id} {target[0]}:{target[1]} "
+                    "nu este acoperit de niciun martor în limba originală"
+                )
 
 
 def chapter_text_digest(data: dict[str, Any]) -> str:
     canonical = "\n".join(f"{verse['number']}\t{verse['text']}" for verse in data["verses"])
+    return "sha256:" + hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def chapter_content_digest(data: dict[str, Any]) -> str:
+    protected = {
+        key: data.get(key)
+        for key in (
+            "translation",
+            "bookId",
+            "bookName",
+            "chapter",
+            "source",
+            "review",
+            "benchmark",
+            "verses",
+            "editorialNotes",
+            "referenceNotes",
+            "alternateEndings",
+        )
+    }
+    canonical = json.dumps(
+        protected,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
     return "sha256:" + hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
@@ -663,16 +1024,19 @@ def validate_automated_audit(
     expected_verses: int,
     pinned_benchmark_count: int,
     external_benchmark_count: int,
+    testament: str | None = None,
+    verse_numbers: list[int] | None = None,
 ) -> None:
     if status not in {"approved", "published"}:
         return
     audit = data.get("audit")
-    if not isinstance(audit, dict) or audit.get("schemaVersion") != 1:
+    expected_schema = 2 if testament == "NT" else 1
+    if not isinstance(audit, dict) or audit.get("schemaVersion") != expected_schema:
         fail(f"{path.name}: lipsește auditul AI complet")
-    if audit.get("engineVersion") != "2.0.0" or audit.get("reviewLevel") != "ai-complete":
+    expected_engine = NT_ENGINE_VERSION if testament == "NT" else LEGACY_ENGINE_VERSION
+    if audit.get("engineVersion") != expected_engine or audit.get("reviewLevel") != "ai-complete":
         fail(f"{path.name}: auditul nu a fost încheiat de motorul curent")
-    if not ISO_DATE_PATTERN.match(str(audit.get("completedOn", ""))):
-        fail(f"{path.name}: completedOn invalid în audit")
+    validate_iso_date(audit.get("completedOn"), f"{path.name} audit.completedOn")
     reviewer = audit.get("reviewAgent")
     if not isinstance(reviewer, dict) or reviewer.get("type") != "ai":
         fail(f"{path.name}: auditul semantic trebuie executat de un agent AI")
@@ -682,21 +1046,36 @@ def validate_automated_audit(
         fail(f"{path.name}: metoda auditului AI este invalidă")
     if audit.get("textDigest") != chapter_text_digest(data):
         fail(f"{path.name}: auditul AI nu corespunde textului curent")
+    if expected_schema == 2 and audit.get("contentDigest") != chapter_content_digest(data):
+        fail(f"{path.name}: auditul AI nu corespunde notelor și deciziilor editoriale")
     if audit.get("sourceSnapshotSha256") != source_snapshot_hash:
         fail(f"{path.name}: auditul AI nu corespunde snapshotului curent")
 
-    coverage = audit.get("verseCoverage")
-    if not isinstance(coverage, dict) or coverage != {
+    expected_numbers = verse_numbers or list(range(1, expected_verses + 1))
+    expected_coverage = {
         "expected": expected_verses,
         "reviewed": expected_verses,
-        "continuous": True,
-    }:
+        "continuous": expected_numbers == list(range(1, max(expected_numbers) + 1)),
+    }
+    if testament == "NT":
+        expected_coverage["verseNumbersSha256"] = "sha256:" + hashlib.sha256(
+            ",".join(map(str, expected_numbers)).encode("ascii")
+        ).hexdigest()
+    coverage = audit.get("verseCoverage")
+    if not isinstance(coverage, dict) or coverage != expected_coverage:
         fail(f"{path.name}: acoperirea auditului verset cu verset este incompletă")
     source_review = audit.get("sourceLanguage")
     if not isinstance(source_review, dict) or source_review.get("result") != "approved":
         fail(f"{path.name}: revizia AI din limba-sursă nu este aprobată")
     if not isinstance(source_review.get("scope"), str) or not source_review["scope"].strip():
         fail(f"{path.name}: revizia limbii-sursă nu are domeniu documentat")
+    if testament == "NT" and (
+        source_review.get("language") != "greacă koine"
+        or source_review.get("text") != "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar"
+    ):
+        fail(f"{path.name}: auditul NT nu identifică exact sursele grecești")
+    if testament == "OT" and source_review.get("language") != "ebraică biblică":
+        fail(f"{path.name}: auditul OT nu identifică limba ebraică")
     romanian_review = audit.get("romanianLanguage")
     if not isinstance(romanian_review, dict) or romanian_review.get("result") != "approved":
         fail(f"{path.name}: revizia AI a limbii române nu este aprobată")
@@ -903,10 +1282,12 @@ def validate_pinned_benchmark_comparison(
 def validate_editorial_notes(
     path: Path,
     notes: Any,
-    expected_verses: int,
+    verse_numbers: list[int] | int,
     textual_variants: list[str],
     status: str,
 ) -> int:
+    if isinstance(verse_numbers, int):
+        verse_numbers = list(range(1, verse_numbers + 1))
     if not isinstance(notes, list):
         fail(f"{path.name}: editorialNotes trebuie să fie o listă")
     noted_verses: set[int] = set()
@@ -914,7 +1295,7 @@ def validate_editorial_notes(
         if not isinstance(note, dict):
             fail(f"{path.name}: nota editorială {index} nu este obiect")
         verse = note.get("verse")
-        if not isinstance(verse, int) or not 1 <= verse <= expected_verses:
+        if not isinstance(verse, int) or verse not in verse_numbers:
             fail(f"{path.name}: verset invalid în nota editorială {index}")
         if not isinstance(note.get("term"), str) or not note["term"].strip():
             fail(f"{path.name}: lipsește termenul în nota editorială {index}")
@@ -951,6 +1332,88 @@ def validate_editorial_notes(
     return len(notes)
 
 
+def validate_reference_notes(
+    path: Path,
+    notes: Any,
+    expected_numbers: list[int],
+    reference_note_numbers: list[int],
+    status: str,
+) -> int:
+    if notes is None:
+        notes = []
+    if not isinstance(notes, list):
+        fail(f"{path.name}: referenceNotes trebuie să fie o listă")
+    actual_numbers: list[int] = []
+    for index, note in enumerate(notes, start=1):
+        if not isinstance(note, dict):
+            fail(f"{path.name}: nota critică {index} nu este obiect")
+        number = note.get("number")
+        if not isinstance(number, int) or number in expected_numbers:
+            fail(f"{path.name}: referință critică invalidă la nota {index}")
+        if note.get("status") != "not-in-critical-main-text":
+            fail(f"{path.name}: statut critic invalid la referința {number}")
+        for key in ("reason", "greekWitnesses", "displayNote"):
+            if not isinstance(note.get(key), str) or not note[key].strip():
+                fail(f"{path.name}: {key} lipsește la referința critică {number}")
+        traditional = note.get("traditionalReading")
+        if traditional is not None and (
+            not isinstance(traditional, str) or not traditional.strip()
+        ):
+            fail(f"{path.name}: citirea tradițională este invalidă la referința {number}")
+        if status in {"approved", "published"} and note.get("resolutionStatus") != "resolved":
+            fail(f"{path.name}: referința critică {number} nu este rezolvată")
+        actual_numbers.append(number)
+    if actual_numbers != reference_note_numbers:
+        fail(f"{path.name}: referințele critice nu corespund registrului")
+    return len(notes)
+
+
+def validate_textual_statuses(
+    path: Path,
+    verses: list[dict[str, Any]],
+    expected_statuses: list[dict[str, Any]],
+) -> None:
+    expected: dict[int, str] = {
+        number: record["status"]
+        for record in expected_statuses
+        for number in record["verseNumbers"]
+    }
+    for verse in verses:
+        number = verse["number"]
+        actual = verse.get("textualStatus")
+        if number in expected:
+            if actual != expected[number]:
+                fail(f"{path.name}: statutul textual lipsește la versetul {number}")
+        elif actual is not None:
+            fail(f"{path.name}: statut textual neașteptat la versetul {number}")
+
+
+def validate_alternate_endings(
+    path: Path,
+    endings: Any,
+    expected: bool,
+    status: str,
+) -> int:
+    if endings is None:
+        endings = []
+    if not isinstance(endings, list):
+        fail(f"{path.name}: alternateEndings trebuie să fie listă")
+    if expected != bool(endings):
+        fail(f"{path.name}: finalul alternativ nu corespunde registrului")
+    for index, ending in enumerate(endings, start=1):
+        if not isinstance(ending, dict):
+            fail(f"{path.name}: final alternativ invalid la poziția {index}")
+        if ending.get("status") != "alternate-unnumbered":
+            fail(f"{path.name}: statut invalid pentru finalul alternativ")
+        if not isinstance(ending.get("text"), str) or not ending["text"].strip():
+            fail(f"{path.name}: finalul alternativ nu are text")
+        if not isinstance(ending.get("sourceNote"), str) or not ending["sourceNote"].strip():
+            fail(f"{path.name}: finalul alternativ nu are proveniență")
+        if status in {"approved", "published"} and ending.get("resolutionStatus") != "resolved":
+            fail(f"{path.name}: finalul alternativ nu este rezolvat")
+    return len(endings)
+
+
 def validate_chapter(
     path: Path,
     data: dict[str, Any],
@@ -959,6 +1422,9 @@ def validate_chapter(
     source_data: dict[str, Any],
     forbidden_names: list[str],
 ) -> tuple[str, int, int, str, int]:
+    status_hint = data.get("status")
+    if status_hint in {"approved", "published"}:
+        validate_no_editorial_placeholders(data, path.name)
     if data.get("translation") != "BE":
         fail(f"{path.name}: translation trebuie să fie BE")
     book_id = data.get("bookId")
@@ -999,12 +1465,17 @@ def validate_chapter(
         fail(f"{path.name}: lipsește source")
     english = source.get("english")
     hebrew = source.get("hebrew")
-    if book["testament"] == "OT" and (
-        not isinstance(english, dict) or not isinstance(hebrew, dict)
-    ):
-        fail(f"{path.name}: Vechiul Testament cere sursele engleză și ebraică")
+    greek = source.get("greek")
+    if not isinstance(english, dict):
+        fail(f"{path.name}: fiecare capitol cere sursa engleză fixată")
+    if book["testament"] == "OT" and not isinstance(hebrew, dict):
+        fail(f"{path.name}: Vechiul Testament cere sursa ebraică")
+    if book["testament"] == "NT" and not isinstance(greek, dict):
+        fail(f"{path.name}: Noul Testament cere sursa greacă SBLGNT")
     if book["testament"] == "OT" and "greek" in source:
         fail(f"{path.name}: un capitol din Vechiul Testament nu poate declara sursă greacă")
+    if book["testament"] == "NT" and "hebrew" in source:
+        fail(f"{path.name}: un capitol din Noul Testament nu poate declara sursă ebraică")
     if english.get("version") != "WEBU-Protestant" or english.get("license") != "Public Domain":
         fail(f"{path.name}: sursa engleză este invalidă")
     if english.get("lockId") != book["baseLockId"]:
@@ -1018,12 +1489,30 @@ def validate_chapter(
             fail(f"{path.name}: lockId ebraic nu corespunde snapshotului")
         if hebrew.get("passageUrl") != ledger_record.get("hebrewUrl"):
             fail(f"{path.name}: URL-ul ebraic nu corespunde registrului")
+    else:
+        if (
+            greek.get("version") != "SBLGNT-1.2"
+            or greek.get("commit") != SBLGNT_COMMIT
+            or greek.get("license") != "CC BY 4.0"
+            or greek.get("lockId") != book["originalLockId"]
+            or greek.get("passageUrl") != ledger_record.get("greekUrl")
+        ):
+            fail(f"{path.name}: sursa greacă SBLGNT nu corespunde snapshotului fixat")
+        supplemental = greek.get("supplementalWitnesses")
+        expected_supplemental = book.get("supplementalOriginalLockIds", [])
+        if not isinstance(supplemental, list) or [
+            item.get("lockId") if isinstance(item, dict) else None for item in supplemental
+        ] != expected_supplemental:
+            fail(f"{path.name}: martorii greci suplimentari nu corespund registrului")
+        for item in supplemental:
+            if item.get("language") != "greacă" or item.get("role") != "textual-witness":
+                fail(f"{path.name}: martor grec suplimentar invalid")
 
     expected_verses = ledger_record["expectedVerses"]
+    expected_numbers = ledger_record["verseNumbers"]
     verses = data.get("verses")
     if not isinstance(verses, list) or len(verses) != expected_verses:
         fail(f"{path.name}: numărul versetelor nu corespunde registrului")
-    expected_numbers = list(range(1, expected_verses + 1))
     actual_numbers: list[int] = []
     combined_text: list[str] = []
     for index, verse in enumerate(verses, start=1):
@@ -1051,41 +1540,71 @@ def validate_chapter(
         actual_numbers.append(number)
         combined_text.append(text)
     if actual_numbers != expected_numbers:
-        fail(f"{path.name}: versetele trebuie să fie continue de la 1")
+        fail(f"{path.name}: numerele versetelor nu corespund exact registrului")
+    validate_textual_statuses(
+        path,
+        verses,
+        ledger_record.get("textualStatuses", []),
+    )
 
     full_text = " ".join(combined_text)
-    if not ROMANIAN_DIACRITICS.intersection(full_text):
+    placeholder_draft = (
+        status in {"draft", "in_review"}
+        and any(FORBIDDEN_EDITORIAL_MARKERS.search(value) for value in combined_text)
+    )
+    if not placeholder_draft and not ROMANIAN_DIACRITICS.intersection(full_text):
         fail(f"{path.name}: textul nu conține diacritice românești")
     if full_text.count("„") != full_text.count("”"):
         fail(f"{path.name}: ghilimelele românești sunt neechilibrate")
     if full_text.count("«") != full_text.count("»"):
         fail(f"{path.name}: ghilimelele interioare sunt neechilibrate")
-    for opening, closing, label in (("„", "”", "românești"), ("«", "»", "interioare")):
-        balance = 0
-        for character in full_text:
-            if character == opening:
-                balance += 1
-            elif character == closing:
-                balance -= 1
-                if balance < 0:
-                    fail(f"{path.name}: ordinea ghilimelelor {label} este invalidă")
+    quote_pairs = {"„": "”", "«": "»"}
+    closing_quotes = set(quote_pairs.values())
+    quote_stack: list[str] = []
+    for character in full_text:
+        if character in quote_pairs:
+            quote_stack.append(quote_pairs[character])
+        elif character in closing_quotes:
+            if not quote_stack or quote_stack.pop() != character:
+                fail(f"{path.name}: ghilimelele sunt încrucișate sau închise greșit")
+    if quote_stack:
+        fail(f"{path.name}: ghilimelele nu sunt închise")
 
     note_count = validate_editorial_notes(
         path,
         data.get("editorialNotes"),
-        expected_verses,
+        expected_numbers,
         ledger_record.get("textualVariantReview", []),
         status,
     )
-    compared_verses = validate_pinned_benchmark_comparison(path, data, source_data)
+    note_count += validate_reference_notes(
+        path,
+        data.get("referenceNotes"),
+        expected_numbers,
+        ledger_record.get("referenceNoteNumbers", []),
+        status,
+    )
+    note_count += validate_alternate_endings(
+        path,
+        data.get("alternateEndings"),
+        ledger_record.get("alternateEnding") is True,
+        status,
+    )
+    compared_verses = (
+        0
+        if status in {"draft", "in_review"}
+        else validate_pinned_benchmark_comparison(path, data, source_data)
+    )
     validate_automated_audit(
         path,
         data,
         status,
-        source_data["snapshotSha256"],
+        source_data["snapshotSha256ByBook"][book_id],
         expected_verses,
         len(book["benchmarkLockIds"]),
         len(book["externalBenchmarkIds"]),
+        book["testament"],
+        expected_numbers,
     )
     return chapter_id, expected_verses, note_count, status, compared_verses
 
@@ -1106,7 +1625,11 @@ def main() -> int:
         ledger_chapters = validate_ledger(load_json(paths["sourceLedger"]), source_data)
         forbidden_names = validate_onomastics(load_json(paths["onomastics"]))
         validate_source_coverage(ledger_chapters, source_data)
-        excluded = {"manifest.json", *(path.name for path in paths.values())}
+        excluded = {
+            "manifest.json",
+            "nt-versification.json",
+            *(path.name for path in paths.values()),
+        }
         chapter_paths = sorted(
             (path for path in DATA_DIR.glob("*.json") if path.name not in excluded),
             key=chapter_sort_key,
@@ -1135,6 +1658,9 @@ def main() -> int:
             fail("manifest.json: lipsește progress")
         if progress.get("chaptersDrafted") != len(chapter_ids):
             fail("manifest.json: chaptersDrafted nu corespunde fișierelor")
+        total_verses = sum(item[1] for item in validated)
+        if progress.get("versesDrafted") != total_verses:
+            fail("manifest.json: versesDrafted nu corespunde fișierelor")
         approved_count = sum(
             1 for _, _, _, status, _ in validated if status in {"approved", "published"}
         )
@@ -1145,6 +1671,32 @@ def main() -> int:
             fail("manifest.json: chaptersPublished nu corespunde statusurilor")
         if manifest.get("public") != (published_count > 0):
             fail("manifest.json: public trebuie să reflecte existența capitolelor publicate")
+
+        nt_books_present = set(source_data["books"]).intersection(NT_CHAPTER_COUNTS)
+        if nt_books_present:
+            if nt_books_present != set(NT_CHAPTER_COUNTS):
+                fail("source-lock.json: Noul Testament trebuie livrat într-un singur corpus complet")
+            expected_nt_chapters = {
+                f"{book_id}.{chapter}"
+                for book_id, count in NT_CHAPTER_COUNTS.items()
+                for chapter in range(1, count + 1)
+            }
+            actual_nt = {chapter_id for chapter_id in chapter_ids if chapter_id.split(".")[0] in NT_CHAPTER_COUNTS}
+            if actual_nt != expected_nt_chapters:
+                fail("manifest.json: Noul Testament nu conține exact cele 27 de cărți și 260 de capitole")
+            nt_status = manifest.get("newTestament")
+            nt_validated = [item for item in validated if item[0] in expected_nt_chapters]
+            nt_verses = sum(item[1] for item in nt_validated)
+            nt_all_published = all(item[3] == "published" for item in nt_validated)
+            expected_nt_status = {
+                "books": 27,
+                "chapters": 260,
+                "verses": nt_verses,
+                "status": "published" if nt_all_published else "in_review",
+                "public": nt_all_published,
+            }
+            if nt_status != expected_nt_status:
+                fail("manifest.json: starea Noului Testament nu corespunde corpusului validat")
 
     except ValidationError as error:
         print(f"[biblia-emanus] EROARE: {error}", file=sys.stderr)

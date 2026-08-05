@@ -1,0 +1,362 @@
+{
+  "translation": "BE",
+  "bookId": "ROM",
+  "bookName": "Romani",
+  "chapter": 1,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/ROM01.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-ROM"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Rom.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-ROM",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-ROM",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "copyrightSimilarity": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 32,
+      "reviewed": 32,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:4c43b48b74421a04ff1596df7c90a656a9363dbd33d29804946c9e57bd6a4b94"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 32 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:8373a4edf860e9d31635b59b53738e41db8fd1c511614ca5c520cf5191a6377c",
+    "contentDigest": "sha256:6b9950fd0d81b164e20ffdfede10d6e9fa474004712bc9312f8820df51bc2100"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Pavel, rob al lui Hristos Isus, chemat să fie apostol, pus deoparte pentru Evanghelia lui Dumnezeu,"
+    },
+    {
+      "number": 2,
+      "text": "pe care El a promis-o mai dinainte prin profeții Săi în Scripturile sfinte,"
+    },
+    {
+      "number": 3,
+      "text": "despre Fiul Său, care s-a născut din sămânța lui David, după trup,"
+    },
+    {
+      "number": 4,
+      "text": "și a fost desemnat drept Fiu al lui Dumnezeu în putere, potrivit duhului sfințeniei, prin învierea dintre cei morți: Isus Hristos, Domnul nostru."
+    },
+    {
+      "number": 5,
+      "text": "Prin El am primit har și apostolie pentru ascultarea credinței între toate neamurile, de dragul Numelui Său,"
+    },
+    {
+      "number": 6,
+      "text": "între care sunteți și voi, chemați să fiți ai lui Isus Hristos."
+    },
+    {
+      "number": 7,
+      "text": "Tuturor celor din Roma, iubiți de Dumnezeu, chemați să fie sfinți: har și pace vouă de la Dumnezeu, Tatăl nostru, și de la Domnul Isus Hristos!"
+    },
+    {
+      "number": 8,
+      "text": "Mai întâi, Îi mulțumesc Dumnezeului meu prin Isus Hristos pentru voi toți, fiindcă despre credința voastră se vestește în lumea întreagă."
+    },
+    {
+      "number": 9,
+      "text": "Căci Dumnezeu, Căruia Îi slujesc în duhul meu în Evanghelia Fiului Său, îmi este martor că vă pomenesc neîncetat,"
+    },
+    {
+      "number": 10,
+      "text": "cerând întotdeauna în rugăciunile mele ca, dacă este cu putință, să-mi fie în sfârșit deschisă calea, prin voia lui Dumnezeu, să vin la voi."
+    },
+    {
+      "number": 11,
+      "text": "Căci tânjesc să vă văd, ca să vă împărtășesc vreun dar spiritual pentru întărirea voastră,"
+    },
+    {
+      "number": 12,
+      "text": "adică să fim încurajați împreună între voi prin credința pe care o împărtășim, atât a voastră, cât și a mea."
+    },
+    {
+      "number": 13,
+      "text": "Nu vreau să nu știți, fraților, că de multe ori mi-am propus să vin la voi, dar am fost împiedicat până acum, ca să am ceva rod și între voi, așa cum am și între celelalte neamuri."
+    },
+    {
+      "number": 14,
+      "text": "Le sunt dator și grecilor, și barbarilor, și celor înțelepți, și celor nepricepuți."
+    },
+    {
+      "number": 15,
+      "text": "Așadar, oricât de mult aș fi în mine, sunt nerăbdător să vă predic și vouă vestea bună care se află în Roma."
+    },
+    {
+      "number": 16,
+      "text": "Căci nu mi-e rușine de Evanghelia lui Hristos, pentru că este puterea lui Dumnezeu pentru mântuire pentru oricine crede, pentru Iudeu mai întâi, și pentru Grec."
+    },
+    {
+      "number": 17,
+      "text": "Căci în ea se descoperă dreptatea lui Dumnezeu din credință spre credință, după cum este scris: „Cel drept va trăi din credință.”"
+    },
+    {
+      "number": 18,
+      "text": "Căci mânia lui Dumnezeu se descoperă din cer împotriva oricărei lipse de evlavie și nedreptăți a oamenilor care înăbușă adevărul prin nedreptate,"
+    },
+    {
+      "number": 19,
+      "text": "fiindcă ceea ce se poate cunoaște despre Dumnezeu este limpede între ei, căci Dumnezeu le-a făcut cunoscut."
+    },
+    {
+      "number": 20,
+      "text": "Căci lucrurile nevăzute ale lui, de la crearea lumii, sunt văzute clar, fiind percepute prin lucrurile care sunt făcute, chiar și puterea veșnică și divinitatea lui, pentru ca ele să fie fără scuză."
+    },
+    {
+      "number": 21,
+      "text": "Fiindcă, deși L-au cunoscut pe Dumnezeu, nu L-au glorificat ca Dumnezeu și nici nu I-au mulțumit, ci au ajuns deșerți în gândurile lor, iar inima lor fără pricepere s-a întunecat."
+    },
+    {
+      "number": 22,
+      "text": "Pretinzând că sunt înțelepți, au înnebunit"
+    },
+    {
+      "number": 23,
+      "text": "și au schimbat gloria Dumnezeului nepieritor cu asemănarea unui chip de om pieritor, de păsări, de animale cu patru picioare și de târâtoare."
+    },
+    {
+      "number": 24,
+      "text": "De aceea, Dumnezeu i-a dat pradă necurăției, în poftele inimilor lor, ca trupurile lor să fie dezonorate între ei."
+    },
+    {
+      "number": 25,
+      "text": "care au schimbat adevărul lui Dumnezeu cu o minciună, s-au închinat și au slujit mai degrabă creaturii decât Creatorului, care este binecuvîntat pentru totdeauna. Amin."
+    },
+    {
+      "number": 26,
+      "text": "Din acest motiv, Dumnezeu le-a dat la pasiuni josnice. Pentru femeile lor a schimbat funcția naturală în ceea ce este împotriva naturii."
+    },
+    {
+      "number": 27,
+      "text": "tot astfel și bărbații, părăsind folosirea firească a femeii, s-au aprins în pofta lor unii pentru alții; bărbați cu bărbați au săvârșit ceea ce este rușinos și au primit în ei înșiși răsplata cuvenită rătăcirii lor."
+    },
+    {
+      "number": 28,
+      "text": "Și, pentru că n-au găsit de cuviință să-L păstreze pe Dumnezeu în cunoașterea lor, Dumnezeu i-a dat pradă unei minți nevrednice, ca să facă lucruri nepotrivite."
+    },
+    {
+      "number": 29,
+      "text": "fiind umplut de orice nedreptate, imoralitate sexuală, răutate, lăcomie, răutate; plin de invidie, crimă, ceartă, înșelăciune, obiceiuri rele, calomniatori secrete,"
+    },
+    {
+      "number": 30,
+      "text": "defăimători, urâtori de Dumnezeu, obraznici, trufași, lăudăroși, născocitori de rele, neascultători de părinți,"
+    },
+    {
+      "number": 31,
+      "text": "fără înțelegere, fără legământ, fără afecțiune naturală, neiertătoare, nemiloasă;"
+    },
+    {
+      "number": 32,
+      "text": "Deși cunosc hotărârea dreaptă a lui Dumnezeu, că cei care fac asemenea lucruri sunt vrednici de moarte, nu numai că le fac, ci îi și aprobă pe cei care le săvârșesc."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "ὁρισθέντος υἱοῦ θεοῦ",
+      "decision": "a fost desemnat drept Fiu al lui Dumnezeu",
+      "reason": "Verbul ὁρίζω indică desemnarea sau stabilirea publică în contextul învierii; traducerea nu afirmă că filiația lui Isus ar fi început la înviere.",
+      "alternatives": [
+        "a fost dovedit ca Fiu al lui Dumnezeu",
+        "a fost rânduit Fiu al lui Dumnezeu"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Desemnat drept» păstrează valoarea verbală și evită atât parafraza apologetică, cât și ideea unei schimbări de identitate ontologică."
+    },
+    {
+      "verse": 6,
+      "term": "κλητοὶ Ἰησοῦ Χριστοῦ",
+      "decision": "chemați să fiți ai lui Isus Hristos",
+      "reason": "Genitivul poate exprima apartenența sau chemarea venită prin Hristos; formularea aleasă este naturală și păstrează apartenența fără a adăuga o explicație doctrinară.",
+      "alternatives": [
+        "chemați ai lui Isus Hristos"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul adresării comunității susține explicitarea minimă «să fiți ai Lui»."
+    },
+    {
+      "verse": 12,
+      "term": "τῆς ἐν ἀλλήλοις πίστεως ὑμῶν τε καὶ ἐμοῦ",
+      "decision": "credința pe care o împărtășim, atât a voastră, cât și a mea",
+      "reason": "Construcția descrie credința reciproc împărtășită, nu credința pusă unii în alții.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea elimină ambiguitatea românească fără să extindă sensul grecesc."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală SBLGNT / Textus Receptus",
+      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
+      "reason": "SBLGNT are εὐαγγέλιον fără determinant, în timp ce Textus Receptus adaugă τοῦ Χριστοῦ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "alternatives": [
+        "Căci nu mi-e rușine de Evanghelia lui Hristos."
+      ],
+      "resolutionReason": "Lectura principală urmează SBLGNT; diferența față de Textus Receptus rămâne documentată și nu a fost introdusă în textul critic."
+    },
+    {
+      "verse": 29,
+      "term": "variantă textuală SBLGNT / Textus Receptus",
+      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
+      "reason": "Textus Receptus include πορνείᾳ în enumerare, termen absent din textul principal SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "alternatives": [
+        "Sunt plini de orice nedreptate, imoralitate sexuală, răutate, lăcomie și ticăloșie."
+      ],
+      "resolutionReason": "Lectura principală urmează SBLGNT; diferența față de Textus Receptus rămâne documentată și nu a fost introdusă în textul critic."
+    },
+    {
+      "verse": 31,
+      "term": "variantă textuală SBLGNT / Textus Receptus",
+      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
+      "reason": "Textus Receptus adaugă ἀσπόνδους după ἀστόργους, unitate absentă din lectura SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "alternatives": [
+        "fără afecțiune firească, neîmpăcați, fără milă."
+      ],
+      "resolutionReason": "Lectura principală urmează SBLGNT; diferența față de Textus Receptus rămâne documentată și nu a fost introdusă în textul critic."
+    },
+    {
+      "verse": 31,
+      "term": "ἀσυνθέτους",
+      "decision": "oameni care nu-și țin cuvântul",
+      "reason": "Adjectivul descrie lipsa fidelității față de înțelegeri sau angajamente; formula idiomatică românească păstrează sensul fără calc lexical.",
+      "alternatives": [
+        "călcători de înțelegeri",
+        "neloiali în înțelegeri"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea aleasă este fidelă semantic și mai naturală decât variantele nominale."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

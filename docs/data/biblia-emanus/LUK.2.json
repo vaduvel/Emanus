@@ -1,0 +1,372 @@
+{
+  "translation": "BE",
+  "bookId": "LUK",
+  "bookName": "Luca",
+  "chapter": 2,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/LUK02.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-LUK"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Luke.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-LUK",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-LUK",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 52,
+      "reviewed": 52,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:ea26e77a228c4cb88955c52b457e36135a190a95adc0202b3b4615ce86e72d03"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 52 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:6c77967baf9464ade5d15400bd2eb08997e99db886c4d750933eaba3b68af4c5",
+    "contentDigest": "sha256:1fdf4856acd5891e452b6e7561c76a2974ba9e93e6f3b51f1abd074f8892dd8e"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și s-a întâmplat în zilele acelea că a ieșit un decret de la Cezar Augustus, să fie înregistrată toată lumea locuită."
+    },
+    {
+      "number": 2,
+      "text": "Aceasta a fost prima înscriere făcută când Quirinius a fost guvernator al Siriei."
+    },
+    {
+      "number": 3,
+      "text": "Toți s-au dus să se înscrie, fiecare în orașul lui."
+    },
+    {
+      "number": 4,
+      "text": "Și Iosif s-a suit și el din Galileea, din cetatea Nazaret, în Iudeea, în cetatea lui David, care se numește Betleem, pentru că era din casa și din familia lui David,"
+    },
+    {
+      "number": 5,
+      "text": "ca să se înregistreze împreună cu Maria, cea logodită cu el, fiind însărcinată."
+    },
+    {
+      "number": 6,
+      "text": "Și, pe când erau ei acolo, s-au împlinit zilele ca ea să nască,"
+    },
+    {
+      "number": 7,
+      "text": "și L-a născut pe fiul ei, cel întâi născut, L-a înfășat și L-a culcat într-o iesle, pentru că nu era loc pentru ei în locul de găzduire."
+    },
+    {
+      "number": 8,
+      "text": "Și în același ținut erau păstori stând afară și păzind străjile nopții peste turma lor."
+    },
+    {
+      "number": 9,
+      "text": "Și iată, un înger al Domnului li s-a arătat, iar slava Domnului a strălucit în jurul lor; și s-au înfricoșat foarte tare."
+    },
+    {
+      "number": 10,
+      "text": "Și îngerul le-a spus: Nu vă temeți, căci iată, vă aduc veste bună de mare bucurie, care va fi pentru tot poporul,"
+    },
+    {
+      "number": 11,
+      "text": "că astăzi vi S-a născut un Mântuitor, care este Hristos Domnul, în cetatea lui David."
+    },
+    {
+      "number": 12,
+      "text": "Acesta vă va fi semnul: veți găsi un prunc înfășat și culcat într-o iesle."
+    },
+    {
+      "number": 13,
+      "text": "Dintr-o dată, a fost cu îngerul o mulțime de oștiri cerești lăudându-L pe Dumnezeu și spunând:"
+    },
+    {
+      "number": 14,
+      "text": "Slavă lui Dumnezeu în cele preaînalte și pe pământ pace între oamenii bunăvoinței Lui."
+    },
+    {
+      "number": 15,
+      "text": "Și s-a întâmplat că, atunci când îngerii au plecat de la ei la cer, păstorii vorbeau unii cu alții: Să trecem deci până la Betleem și să vedem lucrul acesta care s-a întâmplat, pe care Domnul ni l-a făcut cunoscut."
+    },
+    {
+      "number": 16,
+      "text": "Și au venit în grabă și i-au găsit pe Maria și pe Iosif și pruncul culcat în iesle."
+    },
+    {
+      "number": 17,
+      "text": "După ce L-au văzut, au făcut cunoscut cuvântul care le fusese spus despre Pruncul acesta."
+    },
+    {
+      "number": 18,
+      "text": "Toți cei care l-au auzit s-au întrebat ce li s-a vorbit prin păstori."
+    },
+    {
+      "number": 19,
+      "text": "iar Maria păstra toate aceste cuvinte, cumpănindu-le în inima ei."
+    },
+    {
+      "number": 20,
+      "text": "Și păstorii s-au întors, slăvindu-L și lăudându-L pe Dumnezeu pentru toate câte auziseră și văzuseră, așa cum li se spusese."
+    },
+    {
+      "number": 21,
+      "text": "Și când s-au împlinit opt zile ca El să fie circumcis, I s-a pus numele Isus, numele dat de înger înainte să fi fost zămislit în pântece."
+    },
+    {
+      "number": 22,
+      "text": "Și când s-au împlinit zilele curățirii lor, după Legea lui Moise, L-au suit la Ierusalim ca să-L înfățișeze înaintea Domnului,"
+    },
+    {
+      "number": 23,
+      "text": "după cum este scris în Legea Domnului: Orice parte bărbătească ce deschide pântecele va fi numită sfântă pentru Domnul,"
+    },
+    {
+      "number": 24,
+      "text": "și ca să aducă jertfă după ce este spus în Legea Domnului: O pereche de turturele sau doi pui de porumbel."
+    },
+    {
+      "number": 25,
+      "text": "Și iată, era în Ierusalim un om cu numele Simeon; și omul acesta era drept și evlavios, așteptând mângâierea lui Israel, și Duhul Sfânt era peste el."
+    },
+    {
+      "number": 26,
+      "text": "Și îi fusese descoperit de Duhul Sfânt că nu va vedea moartea înainte să-L vadă pe Hristosul Domnului."
+    },
+    {
+      "number": 27,
+      "text": "Și a venit în Duhul în templu; și când părinții au adus înăuntru copilul Isus, ca să facă pentru El după obiceiul Legii,"
+    },
+    {
+      "number": 28,
+      "text": "el L-a luat în brațe, L-a binecuvântat pe Dumnezeu și a spus:"
+    },
+    {
+      "number": 29,
+      "text": "Acum îl lași pe robul Tău să plece, Stăpâne, după cuvântul Tău, în pace,"
+    },
+    {
+      "number": 30,
+      "text": "căci ochii mei au văzut mântuirea Ta,"
+    },
+    {
+      "number": 31,
+      "text": "pe care ai pregătit-o înaintea feței tuturor popoarelor,"
+    },
+    {
+      "number": 32,
+      "text": "lumină spre descoperirea neamurilor și slava poporului Tău Israel."
+    },
+    {
+      "number": 33,
+      "text": "Iosif și mama lui se mirau de lucrurile care se vorbeau despre el."
+    },
+    {
+      "number": 34,
+      "text": "Și Simeon i-a binecuvântat și i-a spus Mariei, mama Lui: Iată, Acesta este pus pentru căderea și ridicarea multora în Israel și ca semn împotriva căruia se va vorbi,"
+    },
+    {
+      "number": 35,
+      "text": "iar prin sufletul tău însuți va trece o sabie, ca să fie descoperite gândurile din multe inimi."
+    },
+    {
+      "number": 36,
+      "text": "A fost o Ana, o profetesă, fiica lui Phanuel, din tribul lui Așer (Era de o vârstă mare, trăind cu un soț șapte ani de la fecioria ei,"
+    },
+    {
+      "number": 37,
+      "text": "și ea era văduvă până la vârsta de optzeci și patru de ani. Nu se depărta de templu, slujind cu posturi și rugăciuni noapte și zi."
+    },
+    {
+      "number": 38,
+      "text": "Și chiar în ceasul acela, venind și ea, Îi aducea mulțumire lui Dumnezeu și vorbea despre El tuturor celor care așteptau răscumpărarea Ierusalimului."
+    },
+    {
+      "number": 39,
+      "text": "Și după ce au împlinit toate cele după Legea Domnului, s-au întors în Galileea, în cetatea lor, Nazaret."
+    },
+    {
+      "number": 40,
+      "text": "Iar copilul creștea și se întărea, umplându-Se de înțelepciune; și harul lui Dumnezeu era peste El."
+    },
+    {
+      "number": 41,
+      "text": "Și părinții Lui mergeau în fiecare an la Ierusalim, la sărbătoarea Paștelui."
+    },
+    {
+      "number": 42,
+      "text": "Când avea doisprezece ani, s-au suit la Ierusalim, după obiceiul sărbătorii."
+    },
+    {
+      "number": 43,
+      "text": "și după ce au împlinit zilele, pe când ei se întorceau, copilul Isus a rămas în Ierusalim, iar părinții Lui nu au știut."
+    },
+    {
+      "number": 44,
+      "text": "Dar, crezând că este în alaiul de călătorie, au mers drum de o zi și Îl căutau printre rude și cunoscuți."
+    },
+    {
+      "number": 45,
+      "text": "Și negăsindu-L, s-au întors la Ierusalim, căutându-L."
+    },
+    {
+      "number": 46,
+      "text": "Și s-a întâmplat că după trei zile L-au găsit în templu, stând în mijlocul învățătorilor, ascultându-i și întrebându-i."
+    },
+    {
+      "number": 47,
+      "text": "Și toți cei ce-L auzeau erau uimiți de priceperea și răspunsurile Lui."
+    },
+    {
+      "number": 48,
+      "text": "Și când L-au văzut, au rămas uluiți; iar mama Lui I-a spus: Copile, de ce ne-ai făcut astfel? Iată, tatăl tău și eu Te căutam îndurerați."
+    },
+    {
+      "number": 49,
+      "text": "Și El le-a spus: De ce Mă căutați? Nu știați că trebuie să fiu în cele ale Tatălui Meu?"
+    },
+    {
+      "number": 50,
+      "text": "Dar ei nu au înțeles cuvântul pe care li-l spusese."
+    },
+    {
+      "number": 51,
+      "text": "Și a coborât cu ei, a venit la Nazaret și le era supus. Și mama Lui păstra toate aceste cuvinte în inima ei."
+    },
+    {
+      "number": 52,
+      "text": "Și Isus înainta în înțelepciune și în statură și în har înaintea lui Dumnezeu și a oamenilor."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 14,
+      "term": "εὐδοκίας",
+      "decision": "Textul principal urmează lectura critică «ἐν ἀνθρώποις εὐδοκίας» și redă: «pace între oamenii bunăvoinței Lui».",
+      "alternatives": [
+        "pace, bunăvoință între oameni",
+        "pace între oamenii plăcuți Lui"
+      ],
+      "reason": "SBLGNT, WH, Treg și NA28 citesc genitivul εὐδοκίας, în timp ce TR are nominativul εὐδοκία. Genitivul cere o relație de apartenență sau caracterizare, nu o a treia propoziție independentă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura critică a fost păstrată în textul principal, iar efectul semantic al variantei TR a fost documentat fără armonizare la tradiția receptă."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

@@ -1,0 +1,234 @@
+{
+  "translation": "BE",
+  "bookId": "1CO",
+  "bookName": "1 Corinteni",
+  "chapter": 4,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/1CO04.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-1CO"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/1Cor.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-1CO",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-1CO",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "copyrightSimilarity": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 21,
+      "reviewed": 21,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:bdfbed5b2e95c9b58bba7c753e5a6f8f209e4b6fd18d55b847a1bbfdf86761bb",
+    "contentDigest": "sha256:6968f93e9e6c27ebff446e3ba868c84fb5353c69fbca87a92549c8cd1875950e"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Așa să ne socotească omul: ca slujitori ai lui Hristos și administratori ai tainelor lui Dumnezeu."
+    },
+    {
+      "number": 2,
+      "text": "În cazul acesta, ceea ce se cere de la administratori este ca fiecare să fie găsit credincios."
+    },
+    {
+      "number": 3,
+      "text": "Dar cu mine este un lucru foarte mic că ar trebui să fiu judecat de tine, sau de un tribunal uman. Da, eu nu mă judec chiar și pe mine."
+    },
+    {
+      "number": 4,
+      "text": "Căci nu sunt conștient de nimic împotriva mea, dar nu prin aceasta sunt îndreptățit; Cel care mă judecă este Domnul."
+    },
+    {
+      "number": 5,
+      "text": "De aceea nu judecați nimic înainte de vreme, până va veni Domnul, care va aduce la lumină lucrurile ascunse ale întunericului și va descoperi planurile inimilor. Atunci fiecare își va primi lauda de la Dumnezeu."
+    },
+    {
+      "number": 6,
+      "text": "Aceste lucruri, fraților, le-am aplicat la mine și la Apolos, pentru voi, ca prin noi să învățați să nu treceți peste ce este scris, ca să nu vă umflați de mândrie, favorizând unul împotriva altuia."
+    },
+    {
+      "number": 7,
+      "text": "Căci cine te face deosebit? Și ce ai pe care să nu-l fi primit? Iar dacă l-ai primit, de ce te lauzi ca și cum nu l-ai fi primit?"
+    },
+    {
+      "number": 8,
+      "text": "Deja sunteți sătui! Deja v-ați îmbogățit! Ați ajuns să domniți fără noi! Și măcar de ați domni cu adevărat, ca și noi să domnim împreună cu voi!"
+    },
+    {
+      "number": 9,
+      "text": "Căci socotesc că Dumnezeu ne-a arătat pe noi, apostolii, cei din urmă, ca pe niște oameni hotărâți la moarte, fiindcă am ajuns un spectacol pentru lume, și pentru îngeri, și pentru oameni."
+    },
+    {
+      "number": 10,
+      "text": "Noi suntem nebuni pentru Hristos, dar voi sunteți înțelepți în Hristos; noi suntem slabi, dar voi sunteți tari; voi sunteți onorați, dar noi suntem disprețuiți."
+    },
+    {
+      "number": 11,
+      "text": "Până chiar în ceasul acesta flămânzim și însetăm, suntem îmbrăcați prost, suntem loviți cu pumnii și rătăcim fără locuință,"
+    },
+    {
+      "number": 12,
+      "text": "ne trudim lucrând cu propriile noastre mâini. Când suntem insultați, binecuvântăm; când suntem persecutați, răbdăm;"
+    },
+    {
+      "number": 13,
+      "text": "când suntem defăimați, răspundem blând. Am ajuns ca gunoiul lumii, ca lepădătura tuturor, până acum."
+    },
+    {
+      "number": 14,
+      "text": "Nu vă scriu acestea ca să vă fac de rușine, ci ca să vă avertizez, ca pe copiii mei iubiți."
+    },
+    {
+      "number": 15,
+      "text": "Căci, chiar dacă ați avea zece mii de pedagogi în Hristos, totuși n-aveți mulți părinți; fiindcă eu v-am născut în Hristos Isus prin Evanghelie."
+    },
+    {
+      "number": 16,
+      "text": "Vă îndemn deci: fiți imitatorii mei."
+    },
+    {
+      "number": 17,
+      "text": "De aceea l-am trimis la voi pe Timotei, care este copilul meu iubit și credincios în Domnul, și el vă va aminti căile mele în Hristos, așa cum învăț pretutindeni, în fiecare biserică."
+    },
+    {
+      "number": 18,
+      "text": "Unii s-au umflat de mândrie, ca și cum n-aș mai veni la voi."
+    },
+    {
+      "number": 19,
+      "text": "Dar voi veni curând la voi, dacă Domnul va vrea, și voi cunoaște nu vorba celor umflați, ci puterea."
+    },
+    {
+      "number": 20,
+      "text": "Căci Regatul lui Dumnezeu nu este în cuvânt, ci în putere."
+    },
+    {
+      "number": 21,
+      "text": "Ce voiți? Să vin la voi cu nuiaua sau cu dragoste și cu un duh de blândețe?"
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

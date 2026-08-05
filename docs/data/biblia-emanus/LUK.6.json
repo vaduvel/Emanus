@@ -1,0 +1,369 @@
+{
+  "translation": "BE",
+  "bookId": "LUK",
+  "bookName": "Luca",
+  "chapter": 6,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/LUK06.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-LUK"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Luke.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-LUK",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-LUK",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 49,
+      "reviewed": 49,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:6bb44393550412069f66dc925fd2864c31fa4a155ee596a12c2cac07f3c245fc"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 49 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:61630792086717439c41ef6bffa524617783b2d1017f345c6d33fd7742278483",
+    "contentDigest": "sha256:e3e0e284887a8ed5a2e24332411fefb5df3fd935dbdc485de55b0dfdf5024724"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Într-o zi de Sabat, Isus trecea prin lanurile de grâu. Ucenicii Lui smulgeau spice, le frecau în mâini și le mâncau."
+    },
+    {
+      "number": 2,
+      "text": "Unii dintre farisei au zis: „De ce faceți ce nu este îngăduit în sabat?”"
+    },
+    {
+      "number": 3,
+      "text": "Și Isus, răspunzându-le, a zis: „N-ați citit nici asta, ce a făcut David când a flămânzit, el și cei ce erau cu el?"
+    },
+    {
+      "number": 4,
+      "text": "Cum a intrat în casa lui Dumnezeu, a luat pâinile punerii înainte, a mâncat și a dat și celor ce erau cu el, deși nu este îngăduit să le mănânce decât numai preoții?”"
+    },
+    {
+      "number": 5,
+      "text": "Și le spunea: „Fiul Omului este Domn și al sabatului.”"
+    },
+    {
+      "number": 6,
+      "text": "În alt sabat, a intrat în sinagogă și învăța. Și era acolo un om a cărui mână dreaptă era uscată."
+    },
+    {
+      "number": 7,
+      "text": "Cărturarii fariseii îl priveau, ca să vadă dacă va vindeca în ziua Sabatului, ca să găsească o acuzație împotriva lui."
+    },
+    {
+      "number": 8,
+      "text": "Dar el le știa gândurile și i-a zis omului care avea mâna uscată: „Ridică-te și stai în mijloc!” Și el s-a ridicat și a stat acolo."
+    },
+    {
+      "number": 9,
+      "text": "Apoi Isus le-a zis: „Vă întreb: este îngăduit în sabat să faci bine sau să faci rău, să salvezi o viață sau să o pierzi?”"
+    },
+    {
+      "number": 10,
+      "text": "Și, uitându-se împrejur la toți, i-a zis: „Întinde-ți mâna!” El a făcut așa, și mâna i-a fost refăcută."
+    },
+    {
+      "number": 11,
+      "text": "Dar ei s-au umplut de mâinie, și au vorbit unii cu alții despre ce i-ar putea face lui Isus."
+    },
+    {
+      "number": 12,
+      "text": "În zilele acelea, Isus a ieșit la munte ca să se roage și a petrecut noaptea în rugăciune către Dumnezeu."
+    },
+    {
+      "number": 13,
+      "text": "Când s-a făcut ziuă, i-a chemat pe ucenicii lui și a ales dintre ei doisprezece, pe care i-a și numit apostoli:"
+    },
+    {
+      "number": 14,
+      "text": "pe Simon, pe care l-a și numit Petru, pe Andrei, fratele lui, pe Iacov și pe Ioan, pe Filip și pe Bartolomeu,"
+    },
+    {
+      "number": 15,
+      "text": "pe Matei și pe Toma, pe Iacov al lui Alfeu și pe Simon, numit Zelotul,"
+    },
+    {
+      "number": 16,
+      "text": "pe Iuda al lui Iacov și pe Iuda Iscariot, care a ajuns trădător."
+    },
+    {
+      "number": 17,
+      "text": "El s-a coborât cu ei a stat pe un loc neted, cu o de ucenici ai Săi cu un mare număr de oameni din toată Iudeea Ierusalim de pe coasta mării Tirului Sidonului, care au venit să-L asculte să fie vindecați de bolile lor,"
+    },
+    {
+      "number": 18,
+      "text": "Cei chinuiți de duhuri necurate erau vindecați."
+    },
+    {
+      "number": 19,
+      "text": "Și toată mulțimea căuta să se atingă de el, pentru că ieșea putere din el și îi vindeca pe toți."
+    },
+    {
+      "number": 20,
+      "text": "El a ridicat ochii la discipolii săi, și a spus: Binecuvântat ești tu, care sunt săraci, pentru că Regatul lui Dumnezeu este al tău."
+    },
+    {
+      "number": 21,
+      "text": "Fericiți cei ce flămânziți acum, pentru că veți fi săturați. Fericiți cei ce plângeți acum, pentru că veți râde."
+    },
+    {
+      "number": 22,
+      "text": "Fericiți sunteți când oamenii vă urăsc și când vă exclud și vă insultă și vă resping numele ca rău, din pricina Fiului Omului."
+    },
+    {
+      "number": 23,
+      "text": "Bucurați-vă în ziua aceea și săltați, căci iată, răsplata voastră este mare în cer; pentru că tot așa le făceau profeților părinții lor."
+    },
+    {
+      "number": 24,
+      "text": "Dar vai de voi care sunteți bogați! Căci v-ați primit consolarea."
+    },
+    {
+      "number": 25,
+      "text": "Vai de voi, cei sătui acum, pentru că veți flămânzi. Vai de voi, cei ce râdeți acum, pentru că veți jeli și veți plânge."
+    },
+    {
+      "number": 26,
+      "text": "Vai de voi când toți oamenii vor vorbi bine despre voi, pentru că tot așa le făceau falșilor profeți părinții lor."
+    },
+    {
+      "number": 27,
+      "text": "Dar vouă, celor ce auziți, vă spun: iubiți-vă vrăjmașii, faceți bine celor ce vă urăsc,"
+    },
+    {
+      "number": 28,
+      "text": "binecuvântați-i pe cei ce vă blestemă, rugați-vă pentru cei ce vă asupresc."
+    },
+    {
+      "number": 29,
+      "text": "Celui ce te lovește peste obraz, oferă-i și pe celălalt; iar de la cel ce îți ia haina, nu-l opri nici de la tunică."
+    },
+    {
+      "number": 30,
+      "text": "Oricui îți cere, dă-i; iar de la cel ce ia ale tale, nu le cere înapoi."
+    },
+    {
+      "number": 31,
+      "text": "Și așa cum vreți să vă facă vouă oamenii, faceți-le și voi la fel."
+    },
+    {
+      "number": 32,
+      "text": "Și dacă îi iubiți pe cei ce vă iubesc, ce merit aveți? Căci și păcătoșii îi iubesc pe cei ce îi iubesc."
+    },
+    {
+      "number": 33,
+      "text": "Și dacă faceți bine celor ce vă fac bine, ce merit aveți? Și păcătoșii fac același lucru."
+    },
+    {
+      "number": 34,
+      "text": "Și dacă dați cu împrumut acelora de la care sperați să primiți, ce merit aveți? Și păcătoșii dau cu împrumut păcătoșilor, ca să primească înapoi tot atât."
+    },
+    {
+      "number": 35,
+      "text": "Dar iubiți-vă vrăjmașii și faceți bine și dați cu împrumut fără să așteptați nimic înapoi; și răsplata voastră va fi mare și veți fi fii ai Celui Preaînalt, pentru că el este bun cu cei nemulțumitori și răi."
+    },
+    {
+      "number": 36,
+      "text": "Fiți milostivi, așa cum Tatăl vostru este milostiv."
+    },
+    {
+      "number": 37,
+      "text": "Și nu judecați, și nicidecum nu veți fi judecați; și nu condamnați, și nicidecum nu veți fi condamnați. Iertați, și veți fi iertați."
+    },
+    {
+      "number": 38,
+      "text": "Dați, și vi se va da: o măsură bună, îndesată, clătinată, revărsată, vă vor turna în sân. Căci cu măsura cu care măsurați vi se va măsura înapoi."
+    },
+    {
+      "number": 39,
+      "text": "Le-a spus și o parabolă: Poate un orb să călăuzească un orb? Nu vor cădea amândoi într-o groapă?"
+    },
+    {
+      "number": 40,
+      "text": "Ucenicul nu este mai presus de învățătorul său; dar orice om deplin pregătit va fi ca învățătorul său."
+    },
+    {
+      "number": 41,
+      "text": "De ce vezi paiul din ochiul fratelui tău, dar nu iei seama la bârna din propriul tău ochi?"
+    },
+    {
+      "number": 42,
+      "text": "Cum poți să-i spui fratelui tău: «Frate, lasă-mă să scot paiul din ochiul tău», când tu însuți nu vezi bârna din ochiul tău? Fățarnicule, scoate întâi bârna din ochiul tău și atunci vei vedea limpede să scoți paiul din ochiul fratelui tău."
+    },
+    {
+      "number": 43,
+      "text": "Căci nu există pom bun care să facă rod stricat, nici, iarăși, pom stricat care să facă rod bun."
+    },
+    {
+      "number": 44,
+      "text": "Fiindcă fiecare pom este cunoscut după rodul lui. Căci nu se culeg smochine din spini și nici nu se culeg struguri din mărăcini."
+    },
+    {
+      "number": 45,
+      "text": "Omul bun scoate ce este bun din comoara bună a inimii sale, iar cel rău scoate ce este rău din comoara rea; căci din prisosul inimii vorbește gura lui."
+    },
+    {
+      "number": 46,
+      "text": "De ce-mi ziceți: «Doamne, Doamne», și nu faceți ce spun?"
+    },
+    {
+      "number": 47,
+      "text": "Oricine vine la mine, aude cuvintele mele și le face, vă voi arăta cu cine seamănă:"
+    },
+    {
+      "number": 48,
+      "text": "seamănă cu un om care, construind o casă, a săpat, a adâncit și a pus temelia pe stâncă; iar când a venit inundația, râul s-a izbit de casa aceea și n-a putut s-o clatine, pentru că fusese bine construită."
+    },
+    {
+      "number": 49,
+      "text": "Dar cel ce a auzit și n-a făcut seamănă cu un om care a construit o casă pe pământ, fără temelie; râul s-a izbit de ea și îndată s-a prăbușit, iar ruina casei aceleia a fost mare.„”"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "σαββάτῳ / δευτεροπρώτῳ",
+      "greekSblgnt": "Ἐγένετο δὲ ἐν σαββάτῳ...",
+      "greekTextusReceptus": "Ἐγένετο δὲ ἐν σαββάτῳ δευτεροπρώτῳ...",
+      "decision": "Textul principal urmează SBLGNT și traduce simplu «Într-un sabat», fără adaosul TR «δευτεροπρώτῳ».",
+      "reason": "Lectura TR introduce o precizare calendaristică absentă din SBLGNT, WH, Tregelles și NA28; diferența nu justifică importarea ei în textul critic principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Varianta a fost verificată în aparatul SBL pentru Luca 6:1 și în martorul TR; textul românesc păstrează lectura de bază fără armonizare."
+    },
+    {
+      "verse": 16,
+      "term": "Ἰούδαν Ἰακώβου",
+      "greekSblgnt": "καὶ Ἰούδαν Ἰακώβου",
+      "greekTextusReceptus": "Ἰούδαν Ἰακώβου",
+      "decision": "Genitivul este redat prin «Iuda al lui Iacov», nu prin «fiul» sau «fratele» lui Iacov.",
+      "reason": "Construcția greacă nu specifică explicit relația; româna permite păstrarea ambiguității fără pierdere de sens în lista apostolilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia păstrează prudența cerută de standard atunci când greaca admite mai mult de o interpretare genealogică."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

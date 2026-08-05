@@ -1,0 +1,299 @@
+{
+  "translation": "BE",
+  "bookId": "MAT",
+  "bookName": "Matei",
+  "chapter": 6,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/MAT06.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-MAT"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Matt.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-MAT",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-MAT",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 34,
+      "reviewed": 34,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:1e519807cd80b15bfffa6b39349a8fd16bc646c968959c390ae3471133952f3d"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 34 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:8f2b0916e7ddd85f524f319abb49ce7257ceae037278ed9a78beba56c58c9bf0",
+    "contentDigest": "sha256:8df4c97f350a1ee5aa4dbc16833c54112d0b8400ddefc58ef78a5ff3aa38a131"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Aveți grijă să nu vă faceți faptele de dreptate înaintea oamenilor ca să fiți văzuți de ei; altfel, nu aveți răsplată de la Tatăl vostru care este în ceruri."
+    },
+    {
+      "number": 2,
+      "text": "Așadar, când faci milostenie, nu suna din trâmbiță înaintea ta, cum fac ipocriții în sinagogi și pe străzi, ca să fie glorificați de oameni. Adevărat vă spun: și-au primit răsplata."
+    },
+    {
+      "number": 3,
+      "text": "Dar când faci fapte milostive, nu lăsa mâna stângă să știe ce face mâna ta dreaptă,"
+    },
+    {
+      "number": 4,
+      "text": "pentru ca milostenia ta să rămână în ascuns; iar Tatăl tău, care vede în ascuns, te va răsplăti."
+    },
+    {
+      "number": 5,
+      "text": "Când vă rugați, să nu fiți ca ipocriții, căci lor le place să se roage stând în picioare în sinagogi și la colțurile piețelor, ca să fie văzuți de oameni. Adevărat vă spun: și-au primit răsplata."
+    },
+    {
+      "number": 6,
+      "text": "Dar tu, când te rogi, intră în camera ta, închide ușa și roagă-te Tatălui tău care este în ascuns; iar Tatăl tău, care vede în ascuns, te va răsplăti."
+    },
+    {
+      "number": 7,
+      "text": "Când vă rugați, nu înșirați vorbe fără rost, ca oamenii națiunilor, căci ei cred că vor fi ascultați datorită mulțimii cuvintelor lor."
+    },
+    {
+      "number": 8,
+      "text": "Să nu vă asemănați deci cu ei, căci Tatăl vostru știe de ce aveți nevoie înainte ca voi să-I cereți."
+    },
+    {
+      "number": 9,
+      "text": "Voi deci să vă rugați astfel: Tatăl nostru care ești în ceruri, sfințească-se numele Tău;"
+    },
+    {
+      "number": 10,
+      "text": "să vină Împărăția Ta; să se facă voia Ta, precum în cer, așa și pe pământ."
+    },
+    {
+      "number": 11,
+      "text": "Dă-ne astăzi pâinea noastră cea de fiecare zi."
+    },
+    {
+      "number": 12,
+      "text": "Iartă-ne nouă datoriile noastre, precum și noi iertăm datornicilor noștri."
+    },
+    {
+      "number": 13,
+      "text": "Și nu ne duce în ispită, ci izbăvește-ne de cel rău."
+    },
+    {
+      "number": 14,
+      "text": "Căci, dacă le iertați oamenilor fărădelegile lor, și Tatăl vostru ceresc vă va ierta."
+    },
+    {
+      "number": 15,
+      "text": "Dar, dacă nu-i iertați pe oameni, nici Tatăl vostru nu vă va ierta fărădelegile."
+    },
+    {
+      "number": 16,
+      "text": "Când postiți, nu fiți posomorâți ca ipocriții, căci ei își sluțesc fețele ca să le arate oamenilor că postesc. Adevărat vă spun: și-au primit răsplata."
+    },
+    {
+      "number": 17,
+      "text": "Dar tu, când postești, unge-ți capul și spală-ți fața,"
+    },
+    {
+      "number": 18,
+      "text": "ca să nu le arăți oamenilor că postești, ci Tatălui tău care este în ascuns; iar Tatăl tău, care vede în ascuns, te va răsplăti."
+    },
+    {
+      "number": 19,
+      "text": "Nu vă strângeți comori pe pământ, unde molia și rugina le distrug și unde hoții sparg și fură,"
+    },
+    {
+      "number": 20,
+      "text": "ci strângeți-vă comori în cer, unde nici molia, nici rugina nu le distrug și unde hoții nu sparg, nici nu fură."
+    },
+    {
+      "number": 21,
+      "text": "Căci unde este comoara ta, acolo va fi și inima ta."
+    },
+    {
+      "number": 22,
+      "text": "Candela trupului este ochiul. Așadar, dacă ochiul tău este sănătos, întregul tău trup va fi luminos."
+    },
+    {
+      "number": 23,
+      "text": "Dar, dacă ochiul tău este rău, întregul tău trup va fi întunecat. Deci, dacă lumina care este în tine este întuneric, cât de mare este întunericul!"
+    },
+    {
+      "number": 24,
+      "text": "Nimeni nu poate sluji la doi stăpâni, căci ori îl va urî pe unul și îl va iubi pe celălalt, ori se va alipi de unul și îl va disprețui pe celălalt. Nu puteți sluji lui Dumnezeu și lui Mamona."
+    },
+    {
+      "number": 25,
+      "text": "De aceea vă spun: nu vă îngrijorați pentru viața voastră, gândindu-vă ce veți mânca, nici pentru trupul vostru, gândindu-vă cu ce vă veți îmbrăca. Oare nu este viața mai mult decât hrana și trupul mai mult decât îmbrăcămintea?"
+    },
+    {
+      "number": 26,
+      "text": "Priviți cu atenție la păsările cerului: ele nu seamănă, nu seceră și nu strâng în hambare, și totuși Tatăl vostru ceresc le hrănește. Oare nu valorați voi mult mai mult decât ele?"
+    },
+    {
+      "number": 27,
+      "text": "Cine dintre voi, îngrijorându-se, poate adăuga un singur cot la statura lui?"
+    },
+    {
+      "number": 28,
+      "text": "Iar pentru îmbrăcăminte de ce vă îngrijorați? Priviți cu atenție cum cresc crinii câmpului: nu trudesc, nici nu torc;"
+    },
+    {
+      "number": 29,
+      "text": "și totuși vă spun că nici Solomon, în toată gloria lui, nu s-a îmbrăcat ca unul dintre ei."
+    },
+    {
+      "number": 30,
+      "text": "Dacă Dumnezeu îmbracă astfel iarba câmpului, care astăzi este, iar mâine este aruncată în cuptor, nu vă va îmbrăca El cu mult mai mult pe voi, oameni cu puțină credință?"
+    },
+    {
+      "number": 31,
+      "text": "Nu vă îngrijorați deci, spunând: Ce vom mânca? sau Ce vom bea? sau Cu ce ne vom îmbrăca?"
+    },
+    {
+      "number": 32,
+      "text": "Căci toate acestea le caută stăruitor oamenii națiunilor; Tatăl vostru ceresc știe că aveți nevoie de toate acestea."
+    },
+    {
+      "number": 33,
+      "text": "Căutați însă mai întâi Împărăția și dreptatea Lui, iar toate acestea vi se vor adăuga."
+    },
+    {
+      "number": 34,
+      "text": "Nu vă îngrijorați deci pentru ziua de mâine, căci ziua de mâine se va îngrijora de ea însăși. Ajunge fiecărei zile răul ei."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 13,
+      "term": "doxologia tradițională a Rugăciunii Domnești",
+      "decision": "Textul principal urmează forma scurtă SBLGNT și se încheie cu «izbăvește-ne de cel rău».",
+      "alternatives": [
+        "Căci a Ta este Împărăția, puterea și slava în veci. Amin."
+      ],
+      "reason": "Doxologia este păstrată în tradiția liturgică și în manuscrise ulterioare, dar nu aparține textului principal SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională este documentată în notă, nu introdusă în textul critic principal."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

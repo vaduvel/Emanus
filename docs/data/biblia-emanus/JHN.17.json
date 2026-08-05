@@ -1,0 +1,260 @@
+{
+  "translation": "BE",
+  "bookId": "JHN",
+  "bookName": "Ioan",
+  "chapter": 17,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/JHN17.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-JHN"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/John.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-JHN",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-JHN",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "BIBLIA-LIBERA",
+        "family": "libera",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ronbl/"
+      },
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 26,
+      "reviewed": 26,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:66f396c11f7d352910573cbc62ff9d62516c36d9103520f74c56e287f6d5dc27"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:2b87cf1a8559957059f2f62fd43f9333ed8afa75634a339c139ae6e2573b23ed",
+    "contentDigest": "sha256:9e03aa701a8bbf4e77002477d158a1d3e419faa6225e5e1019d5664483929f5b"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Isus a spus aceste lucruri, apoi ridicându-ochii spre cer, a spus: Tată, a venit timpul să-L glorifici pe Fiul tău, ca Fiul tău să te glorifice pe tine;"
+    },
+    {
+      "number": 2,
+      "text": "așa cum tu i-ai dat putere peste orice făptură, așa că el va da viața veșnică tuturor celor pe care i-ai dat-o."
+    },
+    {
+      "number": 3,
+      "text": "Aceasta este viața veșnică, că ei ar trebui să te cunoască, singurul Dumnezeu adevărat, și cel pe care l-ai trimis, Isus Hristos."
+    },
+    {
+      "number": 4,
+      "text": "Te-am glorificat pe pământ. Am realizat lucrarea pe care mi-ai dat-o să o fac."
+    },
+    {
+      "number": 5,
+      "text": "Acum, Tată, glorifică-mă cu sinele tău cu gloria pe care am avut-o cu tine înainte ca lumea să existe."
+    },
+    {
+      "number": 6,
+      "text": "Am dezvăluit numele Tău oamenilor pe care Mi i-ai dat din lume. Ei erau ai Tăi, și Tu mi i-ai dat. Ei au păzit cuvântul Tău."
+    },
+    {
+      "number": 7,
+      "text": "Acum au știut că toate lucrurile pe care mi le-ai dat sunt de la tine,"
+    },
+    {
+      "number": 8,
+      "text": "pentru cuvintele pe care mi le-ai dat le-am dat; și le-au primit, și știau sigur că am venit de la tine. Ei au crezut că m-ai trimis."
+    },
+    {
+      "number": 9,
+      "text": "Mă rog pentru ei. Nu mă rog pentru lume, ci pentru cei pe care mi i-ai dat, pentru că sunt ai tăi."
+    },
+    {
+      "number": 10,
+      "text": "Toate lucrurile care sunt ale mele sunt ale tale, și ale tale sunt ale mele, și eu sunt glorificat în ele."
+    },
+    {
+      "number": 11,
+      "text": "Eu nu mai sunt în lume, dar acestea sunt în lume, și eu vin la tine. Sfinte Părinte, păstrează-le prin numele tău pe care mi l-ai dat, pentru ca ele să fie una, așa cum suntem noi."
+    },
+    {
+      "number": 12,
+      "text": "Cât timp am fost cu ei în lume, i-am păstrat în numele Tău. Am păzit pe cei pe care Mi i-ai dat. Nici unul dintre ei nu este pierdut, cu excepția fiului pierzării, ca să se împlinească Scriptura."
+    },
+    {
+      "number": 13,
+      "text": "Dar acum vin la tine, și spun aceste lucruri în lume, pentru ca ei să aibă bucuria mea plină în ei înșiși."
+    },
+    {
+      "number": 14,
+      "text": "Le-am dat cuvântul tău. Lumea i-a urât pentru că nu sunt din lume, așa cum eu nu sunt din lume."
+    },
+    {
+      "number": 15,
+      "text": "Nu mă rog să-i iei din lume, ci să-i ții departe de cel rău."
+    },
+    {
+      "number": 16,
+      "text": "Ei nu sunt din lume, așa cum nici eu nu sunt din lume."
+    },
+    {
+      "number": 17,
+      "text": "Sfințește-i în adevărul Tău. Cuvântul Tău este adevărul."
+    },
+    {
+      "number": 18,
+      "text": "Așa cum m-ai trimis în lume, chiar și așa le-am trimis în lume."
+    },
+    {
+      "number": 19,
+      "text": "De dragul lor mă sfințesc pe mine însumi, pentru ca și ei înșiși să poată fi în adevăr."
+    },
+    {
+      "number": 20,
+      "text": "Nu numai pentru acestea mă rog, ci și pentru cei care vor crede în mine prin cuvântul lor,"
+    },
+    {
+      "number": 21,
+      "text": "ca toți să fie unul; așa cum și tu, Tată, ești în mine, și eu în tine, ca să fie și ei unul în noi; ca lumea să creadă că m-ai trimis."
+    },
+    {
+      "number": 22,
+      "text": "Slava pe care mi-ai dat-o, le-am dat-o lor, ca ei să fie unul, așa cum suntem noi unul,"
+    },
+    {
+      "number": 23,
+      "text": "eu în ei, și tu în mine, ca ei să fie desăvârș într-unul singur, ca lumea să că Tu m-ai trimis și i-ai iubit, cum m-ai iubit pe mine."
+    },
+    {
+      "number": 24,
+      "text": "Tată, doresc ca și cei pe care mi i-ai dat să fie cu mine unde sunt, ca să vadă gloria mea pe care mi-ai dat-o, pentru că m-ai iubit înainte de întemeierea lumii."
+    },
+    {
+      "number": 25,
+      "text": "Tată drept, lumea nu Te-a cunoscut, dar Eu Te-am cunoscut; au știut că Tu M-ai trimis."
+    },
+    {
+      "number": 26,
+      "text": "Le-am făcut cunoscut numele Tău-l voi face cunoscut; pentru ca dragostea cu care M-ai iubit să fie în ei, iar eu în ei.„”"
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

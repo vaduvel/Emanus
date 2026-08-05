@@ -49,20 +49,28 @@ def seal_chapter(
         validator.fail("capitolul nu are audit semantic AI")
     candidate["status"] = "published"
     candidate["public"] = True
-    audit["engineVersion"] = "2.0.0"
+    if book["testament"] == "NT":
+        audit["schemaVersion"] = 2
+    audit["engineVersion"] = (
+        validator.NT_ENGINE_VERSION
+        if book["testament"] == "NT"
+        else validator.LEGACY_ENGINE_VERSION
+    )
     audit["reviewLevel"] = "ai-complete"
     audit["reviewAgent"] = {
         "type": "ai",
         "engine": engine_name,
         "method": "verse-by-verse-source-and-benchmark",
     }
-    audit["sourceSnapshotSha256"] = source_data["snapshotSha256"]
+    audit["sourceSnapshotSha256"] = source_data["snapshotSha256ByBook"][candidate["bookId"]]
     audit["benchmarkEvidence"] = {
         "pinnedBenchmarks": len(book["benchmarkLockIds"]),
         "externalBenchmarks": len(book["externalBenchmarkIds"]),
         "result": "approved",
     }
     audit["textDigest"] = validator.chapter_text_digest(candidate)
+    if book["testament"] == "NT":
+        audit["contentDigest"] = validator.chapter_content_digest(candidate)
     return candidate
 
 
@@ -129,6 +137,22 @@ def main() -> int:
         candidate_manifest["public"] = published > 0
         candidate_manifest["progress"]["chaptersApproved"] = approved
         candidate_manifest["progress"]["chaptersPublished"] = published
+        nt_chapter_ids = {
+            chapter_id for chapter_id in ledger
+            if chapter_id.split(".", 1)[0] in validator.NT_CHAPTER_COUNTS
+        }
+        published_nt = {
+            item[0] for item in validated
+            if item[0] in nt_chapter_ids and item[3] == "published"
+        }
+        if published_nt == nt_chapter_ids and len(nt_chapter_ids) == 260:
+            candidate_manifest["newTestament"] = {
+                "books": 27,
+                "chapters": 260,
+                "verses": sum(item[1] for item in validated if item[0] in nt_chapter_ids),
+                "status": "published",
+                "public": True,
+            }
     except validator.ValidationError as error:
         print(f"[biblia-emanus-seal] EROARE: {error}")
         return 1

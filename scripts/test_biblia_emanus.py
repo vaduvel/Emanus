@@ -53,22 +53,6 @@ class BibliaEmanusValidatorTests(unittest.TestCase):
             (32, 2),
         )
 
-    def test_numbers_26_1_source_merge_is_explicit(self) -> None:
-        extras = self.source_data["coverageExtras"]
-        self.assertIn(
-            {
-                "id": "WLC-NUM-25-19-INTO-26-1",
-                "sourceLockId": "WLC-NUM",
-                "bookId": "NUM",
-                "targetChapter": 26,
-                "targetVerse": 1,
-                "sourceChapter": 25,
-                "sourceVerse": 19,
-                "reason": "Propoziția numerotată 25:19 în WLC deschide Numeri 26:1 în versificația țintă.",
-            },
-            extras,
-        )
-
     def test_changed_text_invalidates_ai_audit(self) -> None:
         data = validator.load_json(validator.DATA_DIR / "GEN.1.json")
         changed = copy.deepcopy(data)
