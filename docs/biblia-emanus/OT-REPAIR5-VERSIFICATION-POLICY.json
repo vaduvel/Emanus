@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "targetVersification": "WEBBE-compatible Romanian chapter and verse numbering",
+  "principles": [
+    "Diferențele de versificație nu sunt tratate ca omisiuni dacă acoperirea integrală este documentată.",
+    "Superscrierile Psalmilor sunt păstrate în textul versetului 1 atunci când corpusul românesc moștenit le-a unit cu versetul.",
+    "Excepțiile sunt enumerate exhaustiv; auditorul respinge orice abatere neînregistrată."
+  ],
+  "wlcBookCountDifferences": {
+    "1CH": -1,
+    "1KI": -1,
+    "1SA": -1,
+    "ISA": 1,
+    "NEH": 1,
+    "PSA": -66
+  },
+  "lengthExceptions": {
+    "PSA.18:1": {
+      "reason": "Hebrew psalm superscription retained together with verse 1",
+      "classification": "superscription"
+    },
+    "PSA.57:1": {
+      "reason": "Hebrew psalm superscription retained together with the restored verse 1",
+      "classification": "superscription"
+    },
+    "PSA.61:1": {
+      "reason": "Hebrew psalm superscription retained together with verse 1",
+      "classification": "superscription"
+    },
+    "PSA.102:1": {
+      "reason": "Hebrew psalm superscription retained together with verse 1",
+      "classification": "superscription"
+    },
+    "MAN.1:8": {
+      "reason": "WEBBE combines material divided across adjacent Romanian verses in another traditional numbering",
+      "classification": "supplement-verse-boundary"
+    },
+    "MAN.1:13": {
+      "reason": "WEBBE and the inherited Romanian candidate divide the closing petition at different points",
+      "classification": "supplement-verse-boundary"
+    }
+  }
+}
