@@ -1,0 +1,48 @@
+name: Temporary NT Audit 3 Import
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-nt-audit3
+
+permissions:
+  contents: write
+
+jobs:
+  import-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-nt-audit3
+          fetch-depth: 0
+
+      - name: Fetch NT source branch
+        run: git fetch origin codex/biblia-emanus-new-testament:refs/remotes/origin/codex/biblia-emanus-new-testament
+
+      - name: Import clean NT corpus and engine
+        run: python3 scripts/tmp-import-nt-audit3.py
+
+      - name: Prepare unified source lock and ledger
+        run: python3 scripts/prepare-biblia-emanus-nt.py --workbook-dir /tmp/emanus-nt-workbooks
+
+      - name: Validate NT versification
+        run: python3 scripts/check-biblia-emanus-versification.py
+
+      - name: Validate Biblia Emanus corpus
+        run: python3 scripts/check-biblia-emanus.py
+
+      - name: Run Biblia Emanus tests
+        run: python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py scripts/test_materialize_biblia_emanus_nt.py
+
+      - name: Commit imported corpus
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-emanus docs/biblia-emanus scripts package.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Import New Testament corpus into audit engine 3.0"
+          git push origin HEAD:agent/biblia-emanus-nt-audit3
