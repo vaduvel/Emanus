@@ -28,12 +28,12 @@ jobs:
 
       - name: Reconstruct previous source/audit helper
         run: |
-          : > /tmp/old_pipeline.py
+          : > scripts/tmp-old-pipeline.generated.py
           for part in 00 01 02 03 04 05; do
-            git show 8cdc210e01c:scripts/tmp-complete-nt.part${part} >> /tmp/old_pipeline.py
-            printf '\n' >> /tmp/old_pipeline.py
+            git show 8cdc210e01c:scripts/tmp-complete-nt.part${part} >> scripts/tmp-old-pipeline.generated.py
+            printf '\n' >> scripts/tmp-old-pipeline.generated.py
           done
-          python3 -m py_compile /tmp/old_pipeline.py
+          python3 -m py_compile scripts/tmp-old-pipeline.generated.py
 
       - name: Install NLLB runtime
         run: >-
@@ -46,7 +46,7 @@ jobs:
 
       - name: Translate quality sample
         env:
-          OLD_PIPELINE: /tmp/old_pipeline.py
+          OLD_PIPELINE: scripts/tmp-old-pipeline.generated.py
         run: python3 scripts/tmp-nllb-sample.py
 
       - uses: actions/upload-artifact@v4
