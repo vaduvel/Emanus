@@ -36,7 +36,7 @@ MANUAL = {
     "EPH.5.26": "ca s-o sfințească, după ce a curățit-o prin spălarea cu apă, prin Cuvânt,",
     "JHN.7.19": "Nu v-a dat Moise Legea? Și totuși niciunul dintre voi nu împlinește Legea. De ce căutați să Mă ucideți?",
     "LUK.6.1": "Într-o zi de Sabat, Isus trecea prin lanurile de grâu. Ucenicii Lui smulgeau spice, le frecau în mâini și le mâncau.",
-    "LUK.6.18": "și cei chinuiți de duhuri necurate erau vindecați.",
+    "LUK.6.18": "Cei chinuiți de duhuri necurate erau vindecați.",
     "LUK.8.25": "El le-a zis: «Unde vă este credința?» Cuprinși de teamă și uimire, își spuneau unul altuia: «Cine este Acesta, de poruncește chiar și vânturilor și apei, iar ele Îl ascultă?»",
 }
 
