@@ -1,7 +1,15 @@
 import { BibleUnit, BibleChapter } from "./types"
 
-function teaching(...paragraphs: string[]): string[] {
-  return paragraphs
+/*
+ * Ajutoarele c\u0103r\u021bii Numeri.
+ *
+ * Spre deosebire de Levitic/Exod, numeriChapter() prime\u0219te units gata
+ * construite (BibleUnit[]); fiecare fi\u0219ier numeriN.ts \u00ee\u0219i calculeaz\u0103 singur
+ * `text` cu numeriPassage() din numeriText.ts \u0219i `status` din numeriPublication.ts.
+ */
+
+function teaching(...paragraphs: string[]): string {
+  return paragraphs.join("\n\n")
 }
 
 export function numeriChapter(input: {
