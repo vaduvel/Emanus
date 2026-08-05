@@ -32,7 +32,7 @@ jobs:
           runs = [run for run in payload.get("workflow_runs", []) if run.get("head_branch") == "agent/biblia-emanus-nt-audit3"]
           runs.sort(key=lambda run: run.get("created_at", ""), reverse=True)
           for run in runs:
-              print(f"{run[\"id\"]}:{run[\"status\"]}")
+              print(str(run["id"]) + ":" + str(run["status"]))
           ')
           if [ "${#records[@]}" -eq 0 ]; then
             echo "No NT completion runs found"
