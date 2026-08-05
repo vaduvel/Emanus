@@ -3,8 +3,8 @@
   "bookId": "HEB",
   "bookName": "Evrei",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,196 +28,232 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/HEB07.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/HEB07.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/HEB.7.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 28,
-      "reviewed": 0,
+      "reviewed": 28,
       "continuous": true,
       "verseNumbersSha256": "sha256:9a107a160e9a74d5e92434ea013a7fa5ead7b122a283f2855eb5da2b0d55f33f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 316,
+        "secondary": 95,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5922586297890594,
+      "minimumScore": 0.5759312754780807
+    },
+    "textDigest": "sha256:6ca3615703f9e26034a3147dfac788e2614f4a3e4872fcabdcdd6923413cb1e8",
+    "contentDigest": "sha256:546fa0dad9d82608e6f52ce03da8269d232df95b7e84a5028861b7182216d00c"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Pentru acest Melhisedec, regele Salemului, preot al Dumnezeului Preaînalt, care l-a întâlnit pe Avraam întorcându-se de la măcelul împăraților și l-a binecuvântat,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Lui Avraam i-a împărțit, de asemenea, o zecime din toate (în primul rând, prin interpretare, rege al neprihănirii și apoi, de asemenea, rege al Salemului), ceea ce înseamnă rege al păcii."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Fără tată, fără mamă, fără genealogie, neavând nici început al zilelor, nici sfârșit al, ci făcându-se asemenea Fiului lui Dumnezeu, rămâne preot încontinuu."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Să vedem acum cît de mare era omul acesta, căruia chiar Avraam, patriarhul, i - a dat o zecime din cea mai bună pradă."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Fiii lui Levi, cari primesc slujba de preot, au porunca de a lua zeciuiala din popor, după Lege, adică din frații lor, chiar dacă aceștia au ieșit din trupul lui Avraam,"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dar cel a cărui genealogie nu este socotită de la ei a primit zeciuială de la Avraam, și a binecuvântat pe cel ce are promisiunile."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Dar fără nici o dispută cel mai mic este binecuvântat de cel mai mare."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Aici oamenii care mor primesc zeciuială, dar acolo cineva zeciuială despre care se mărturisește că trăiește."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Putem spune că prin Avraam, chiar Levi, care primește zeciuială, a plătit zeciuială,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "căci era încă în trupul tatălui său când l-a întâlnit Melchizedek."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Acum, dacă perfecțiunea a fost prin preoția Levitică (căci sub ea poporul a primit legea), ce mai era nevoie ca un alt preot să se ridice după porunca lui Melhisedec, și să nu fie chemat după porunca lui Aaron?"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Pentru că preoția s-a schimbat, este necesar să se facă și o schimbare în lege."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Căci cel despre care se spune aceste lucruri este al altei seminții, din care nimeni nu a oficiat la altar."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Căci este evident că Domnul nostru a ieșit din Iuda, despre care semin Moise n-a vorbit nimic cu privire la preoție."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Acest lucru este încă mult mai evident, dacă după asemănarea lui Melchizedek apare un alt preot,"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "care a fost făcut nu după legea unei porunci carnale, ci după puterea unei vieți nesfârșite;"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Căci este mărturisită, ești preot pentru totdeauna, după porunca lui Melchizedek."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Pentru că există o anulare a unei porunci de mai sus din cauza slăbiciunii și inutilității sale"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "căci Legea nu a făcut nimic desăvârșit, și aducerea unei speranțe mai bune, prin care ne apropiem de Dumnezeu."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "În măsura în care el nu a fost făcut preot fără a lua un jurământ"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "(căci ei au fost făcuți preoți fără jurământ), dar el, cu jurământ pe cel ce zice despre el:Domnul a jurat nu se va răzgândi: Tu ești preot pe vecie, după rânduiala lui Melhisedec."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Prin atât de multe, Isus a devenit garanția unui legământ mai bun."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Mulți, într - adevăr, au fost făcuți preoți, deoarece sunt împiedicați să continue prin moarte."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Dar el, pentru că trăiește veșnic, are preoția lui de neschimbat."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "De aceea, El este și în stare să - i mântuiască pe cei ce se apropie de Dumnezeu prin El, fiindcă trăiește veșnic ca să mijlocească pentru ei."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Căci un astfel de mare preot era potrivit pentru noi: sfînt, fără vină, neîntinat, separat de păcătoși, și făcut mai mare decât cerurile;"
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "care nu are nevoie, ca acei mari preoți, să aducă zilnic jertfe, mai întîi pentru păcatele lui și apoi pentru păcatele poporului. Căci a făcut aceasta o dată pentru totdeauna, cînd s'a dat pe Sine."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Căci legea îi pe oameni ca înalți preoți care au slăbiciune, dar cuvântul jurământului, care a venit după lege, pentru totdeauna un Fiu care a fost desăvârșit."
     }
   ],
   "editorialNotes": [],

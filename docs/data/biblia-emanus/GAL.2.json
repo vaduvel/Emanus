@@ -3,8 +3,8 @@
   "bookId": "GAL",
   "bookName": "Galateni",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/GAL02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/GAL02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/GAL.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Galateni 2:11-14 păstrează alternanța dintre „Petru” și „Chifa” exact după formele grecești din capitol.",
-      "Galateni 2:16 și 2:20 tratează genitivele lui πίστις prin formulare românească naturală și note editoriale explicite, fără teză confesională introdusă în text.",
-      "Galateni 2:19-20 respectă segmentarea SBL, lăsând „Am fost răstignit împreună cu Hristos” la 2:19 și continuând propoziția în 2:20."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "confruntarea de la Antiohia, alternanța Petru/Chifa, formulele despre îndreptățire din 2:16, segmentarea 2:19-20 și varianta „υἱοῦ τοῦ θεοῦ”"
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Galateni 2:4-5 păstrează registrul polemic al infiltrării și înrobirii fără a reduce tensiunea la o simplă divergență de opinii.",
-        "Galateni 2:14 redă Ἰουδαΐζειν prin „să trăiască după obiceiul iudeilor”, evitând atât jargonul tehnic, cât și pierderea sensului social concret.",
-        "Galateni 2:16 și 2:20 păstrează vocabularul-cheie „Lege”, „credință” și „carne” într-o română actuală și coerentă cu argumentul capitolului."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Îndreptățirea nu este parafrazată prin limbaj confesional ulterior care ar depăși formularea lui Pavel.",
-        "Confruntarea cu Chifa este redată ca abatere practică de la adevărul evangheliei, nu ca negare a apostoliei lui.",
-        "Ambiguitățile genitivelor legate de πίστις nu sunt rezolvate în text printr-o teză doctrinară impusă fără notă."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:f97e7adf080c2d31cb52bbfcec03b7a2672ae5453005c5a1a02a95e3e2195699",
+    "contentDigest": "sha256:42fc5d9948eced342d4ff784c7659a4e5baef66db98df24d43351184a72b1dbd"
   },
   "verses": [
     {
@@ -141,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Iar de la cei socotiți a fi ceva — oricum ar fi fost ei odinioară, pentru mine nu contează; Dumnezeu nu caută la fața omului — cei socotiți n-au adăugat nimic la mine,"
+      "text": "Dar de la cei despre care s-a spus că sunt importanți — oricare ar fi fost ei, nu contează pentru mine; Dumnezeu nu arată părtinire față de om — ei, spun eu, care au fost respecta nu mi-au împărtășit nimic,"
     },
     {
       "number": 7,

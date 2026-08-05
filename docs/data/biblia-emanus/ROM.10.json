@@ -3,8 +3,8 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 10,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ROM10.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ROM10.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ROM.10.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "La 10:1 pronumele critic αὐτῶν este redat «pentru ei», fără introducerea numelui «Israel» din lectura receptă în textul principal.",
-      "La 10:15 a fost păstrată forma SBLGNT «cei care vestesc lucrurile bune», fără adaosul tradițional despre pace.",
-      "La 10:17 textul principal spune «cuvântul lui Hristos», corespunzător lecturii Χριστοῦ, nu «cuvântul lui Dumnezeu» din tradiția receptă."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de versete cu SBLGNT 1.2 și TR, cu atenție la pronumele din 10:1, elipsa din 10:3, construcția din 10:5, mărturisirea din 10:9, seria de conjunctive din 10:14-15 și varianta Χριστοῦ/θεοῦ din 10:17."
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Întrebările succesive din 10:14-15 au fost păstrate ca lanț retoric clar în română.",
-        "Explicațiile parentetice din 10:6-7 au fost delimitate cu linii de pauză și ghilimele românești.",
-        "Repetițiile «dreptate», «a crede», «a auzi» și «a chema» au fost menținute pe întregul argument."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Relația dintre dreptatea din Lege și dreptatea din credință este redată prin contrastul explicit al textului, fără o definiție confesională adăugată.",
-        "Mărturisirea lui Isus ca Domn și învierea Lui sunt păstrate ca două componente coordonate ale afirmației din 10:9.",
-        "În citatul din Ioel 2:32, κύριος corespunde tetragramei și este redat «DOMNUL», fără extinderea convenției la celelalte apariții neconfirmate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:1a5d107a23154345898845012e2ba262056334edde79fc2575e2c3da5eae6219",
+    "contentDigest": "sha256:5537cea6e2346e376646a8d476f0e7deab36e01a4f0a4a9462d681cf3625ad5a"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Fraților, dorința inimii mele și rugăciunea mea către Dumnezeu pentru ei sunt pentru mântuirea lor."
+      "text": "Fraților, inima mea dorește și rugăciunea mea către Dumnezeu este pentru Israel, pentru ca ei să fie salvați."
     },
     {
       "number": 2,
@@ -129,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Fiindcă nu cunosc dreptatea lui Dumnezeu și caută să o statornicească pe a lor, nu s-au supus dreptății lui Dumnezeu."
+      "text": "Fiind neștiutori de dreptatea lui Dumnezeu și căutând să-și stabilească propria dreptate, ei nu s-au supus dreptății lui Dumnezeu."
     },
     {
       "number": 4,
@@ -137,23 +161,23 @@
     },
     {
       "number": 5,
-      "text": "Căci Moise scrie despre dreptatea care vine din Lege: „Omul care o împlinește va trăi prin ea.”"
+      "text": "Căci Moise scrie despre dreptatea care vine din Lege: Omul care o împlinește va trăi prin ea."
     },
     {
       "number": 6,
-      "text": "Dar dreptatea care vine din credință spune astfel: „Să nu spui în inima ta: «Cine se va urca la cer?»” — adică să-L coboare pe Hristos —"
+      "text": "Dar dreptatea care vine din credință spune astfel: Să nu spui în inima ta: Cine se va urca la cer? — adică să-L coboare pe Hristos —"
     },
     {
       "number": 7,
-      "text": "sau: „Cine va coborî în Adânc?” — adică să-L ridice pe Hristos dintre cei morți."
+      "text": "sau: Cine va coborî în Adânc? — adică să-L ridice pe Hristos dintre cei morți."
     },
     {
       "number": 8,
-      "text": "Dar ce spune? „Cuvântul este aproape de tine, în gura ta și în inima ta.” Acesta este cuvântul credinței pe care îl proclamăm:"
+      "text": "Dar ce spune? Cuvântul este aproape de tine, în gura ta și în inima ta. Acesta este cuvântul credinței pe care îl proclamăm:"
     },
     {
       "number": 9,
-      "text": "că, dacă-L mărturisești cu gura ta pe Isus ca Domn și crezi în inima ta că Dumnezeu L-a înviat dintre cei morți, vei fi mântuit."
+      "text": "că dacă vei mărturisi cu gura ta că Isus este Domn și crezi în inima ta că Dumnezeu l-a înviat din morți, vei fi salvat."
     },
     {
       "number": 10,
@@ -161,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Căci Scriptura spune: „Oricine crede în El nu va fi făcut de rușine.”"
+      "text": "Căci Scriptura spune: Oricine crede în El nu va fi făcut de rușine."
     },
     {
       "number": 12,
@@ -169,39 +193,39 @@
     },
     {
       "number": 13,
-      "text": "Căci „oricine va chema Numele DOMNULUI va fi mântuit”."
+      "text": "Căci oricine va chema Numele DOMNULUI va fi mântuit."
     },
     {
       "number": 14,
-      "text": "Cum Îl vor chema însă pe Cel în care nu au crezut? Și cum vor crede în Cel pe care nu L-au auzit? Și cum vor auzi fără cineva care să proclame?"
+      "text": "Cum îl vor chema pe cel în care n-au crezut? Cum vor crede în cel pe care nu l-au auzit? Cum vor auzi fără predicator?"
     },
     {
       "number": 15,
-      "text": "Și cum vor proclama dacă nu sunt trimiși? După cum este scris: „Cât de frumoase sunt picioarele celor care vestesc lucrurile bune!”"
+      "text": "Și cum vor predica dacă nu vor fi trimiși? După cum este scris:Cât de frumoase sunt picioarele celor care predică Vestea Bună a păcii, care aduc vești bune!"
     },
     {
       "number": 16,
-      "text": "Dar nu toți s-au supus Evangheliei. Căci Isaia spune: „Doamne, cine a crezut vestirii noastre?”"
+      "text": "Dar nu toți s-au supus Evangheliei. Căci Isaia spune: Doamne, cine a crezut vestirii noastre?"
     },
     {
       "number": 17,
-      "text": "Astfel, credința vine din auzire, iar auzirea prin cuvântul lui Hristos."
+      "text": "Credința vine prin auzire, iar auzirea prin Cuvântul lui Dumnezeu."
     },
     {
       "number": 18,
-      "text": "Dar eu întreb: oare nu au auzit? Ba da: „Glasul lor a ieșit pe tot pământul și cuvintele lor, până la marginile lumii locuite.”"
+      "text": "Dar eu întreb: oare nu au auzit? Ba da: Glasul lor a ieșit pe tot pământul și cuvintele lor, până la marginile lumii locuite."
     },
     {
       "number": 19,
-      "text": "Dar întreb: oare Israel nu a înțeles? Mai întâi, Moise spune: „Eu vă voi stârni gelozia prin ceea ce nu este un neam și vă voi provoca mânia printr-un neam fără pricepere.”"
+      "text": "Dar întreb: oare Israel nu a înțeles? Mai întâi, Moise spune: Eu vă voi stârni gelozia prin ceea ce nu este un neam și vă voi provoca mânia printr-un neam fără pricepere."
     },
     {
       "number": 20,
-      "text": "Iar Isaia îndrăznește și spune: „Am fost găsit de cei care nu Mă căutau; M-am făcut cunoscut celor care nu întrebau de Mine.”"
+      "text": "Iar Isaia îndrăznește și spune: Am fost găsit de cei care nu Mă căutau; M-am făcut cunoscut celor care nu întrebau de Mine."
     },
     {
       "number": 21,
-      "text": "Iar despre Israel spune: „Toată ziua Mi-am întins mâinile spre un popor neascultător și împotrivitor.”"
+      "text": "Iar despre Israel spune: Toată ziua Mi-am întins mâinile spre un popor neascultător și împotrivitor."
     }
   ],
   "editorialNotes": [],

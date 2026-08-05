@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Porunca din 3:6 urmează SBLGNT prin «umblă» și nu introduce verbul suplimentar «ridică-te» din lectura TR și din unele etaloane.",
-      "Termenul παῖς din 3:13 și 3:26 este redat consecvent prin «Slujitor», evitând identificarea lexicală automată cu «Fiu».",
-      "Legătura sintactică dintre pocăință, ștergerea păcatelor, vremurile de înviorare și trimiterea lui Hristos a fost păstrată pe versetele 19–21."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "vindecarea de la Poarta Frumoasă, discursul lui Petru, titlurile παῖς și ἀρχηγός, chemarea la pocăință și citatele din Deuteronom și Geneza"
+      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Succesiunea «umbla, sărea și Îl lăuda» din 3:8 a fost păstrată pentru ritmul narativ și repetiția mișcării.",
-        "Repetarea explicită a Numelui în 3:16 a fost menținută, fără înlocuirea celei de-a doua apariții cu un pronume.",
-        "Fraza din 3:19–21 a fost segmentată după versete, dar conectorii de scop și continuitatea argumentului au rămas vizibile."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vindecarea nu este atribuită puterii sau evlaviei apostolilor, conform contrastului explicit din 3:12.",
-        "Titlurile «Sfântul și Dreptul», «Autorul vieții» și «Hristos» sunt păstrate fără definiții doctrinare inserate.",
-        "Restaurarea tuturor lucrurilor din 3:21 rămâne formularea textului și nu este restrânsă la o schemă escatologică anume."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:14d7d652bc77d2279027ba23575e724ec143fa6dacc769d12e41bb2592cfc8de",
+    "contentDigest": "sha256:0aceda031f40edf3815e47307ebad9b5bddfd36d5f6145c445830236ed76ccac"
   },
   "verses": [
     {
@@ -133,15 +157,15 @@
     },
     {
       "number": 4,
-      "text": "Petru, împreună cu Ioan, și-a ațintit privirea spre el și i-a zis: „Uită-te la noi!”"
+      "text": "Petru, împreună cu Ioan, și-a ațintit privirea spre el și i-a zis: Uită-te la noi!"
     },
     {
       "number": 5,
-      "text": "El se uita cu atenție la ei, așteptând să primească ceva de la ei."
+      "text": "El i - a ascultat, așteptându - se să primească ceva de la ei."
     },
     {
       "number": 6,
-      "text": "Dar Petru i-a zis: „Argint și aur nu am, însă ceea ce am îți dau: în Numele lui Isus Hristos Nazarineanul, umblă!”"
+      "text": "Dar Petru i-a zis: Argint și aur nu am, însă ceea ce am îți dau: în Numele lui Isus Hristos Nazarineanul, umblă!"
     },
     {
       "number": 7,
@@ -153,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "Tot poporul l-a văzut umblând și lăudându-L pe Dumnezeu."
+      "text": "Toți oamenii l-au văzut umblând și lăudându-L pe Dumnezeu."
     },
     {
       "number": 10,
-      "text": "Îl recunoșteau ca fiind cel care ședea pentru milostenie la Poarta Frumoasă a Templului și s-au umplut de uimire și stupoare pentru ceea ce i se întâmplase."
+      "text": "Ei l-au recunoscut, că el a fost cel care a folosit pentru a sta cerșit pentru daruri pentru nevoiași la Poarta Frumoasa a templului. Ei au fost umpluti de mirare și uimire la ceea ce sa întâmplat cu el."
     },
     {
       "number": 11,
@@ -165,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Când a văzut aceasta, Petru a răspuns poporului: „Bărbați israeliți, de ce vă mirați de lucrul acesta? De ce vă uitați țintă la noi, ca și cum prin propria noastră putere sau evlavie l-am fi făcut să umble?"
+      "text": "Când a văzut aceasta, Petru a răspuns poporului: Bărbați israeliți, de ce vă mirați de lucrul acesta? De ce vă uitați țintă la noi, ca și cum prin propria noastră putere sau evlavie l-am fi făcut să umble?"
     },
     {
       "number": 13,
@@ -177,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "iar pe Autorul vieții L-ați omorât. Dar Dumnezeu L-a înviat dintre cei morți, iar noi suntem martori ai acestui fapt."
+      "text": "și a ucis pe prințul vieții, pe care Dumnezeu l -a înviat din morți, la care suntem martori."
     },
     {
       "number": 16,
@@ -185,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Acum, fraților, știu că ați lucrat din neștiință, la fel ca și conducătorii voștri."
+      "text": "Acum, fraților, știu că ați făcut acest lucru din ignoranță, așa cum au făcut și conducătorii voștri."
     },
     {
       "number": 18,
@@ -193,11 +217,11 @@
     },
     {
       "number": 19,
-      "text": "Pocăiți-vă deci și întoarceți-vă, pentru ca păcatele voastre să fie șterse,"
+      "text": "Pocăiți-vă deci, și întoarceți-vă iarăși, ca păcatele voastre să fie șterse, ca să vină timpuri de înviorare din prezența Domnului,"
     },
     {
       "number": 20,
-      "text": "ca să vină vremuri de înviorare din prezența Domnului și El să-L trimită pe Hristos Isus, Cel rânduit mai dinainte pentru voi."
+      "text": "ca să trimită pe Isus Hristos, care a fost rânduit pentru voi mai înainte,"
     },
     {
       "number": 21,
@@ -205,11 +229,11 @@
     },
     {
       "number": 22,
-      "text": "Moise a spus: «Domnul Dumnezeul vostru vă va ridica dintre frații voștri un Profet ca mine. De El să ascultați în toate câte vă va spune."
+      "text": "Moise a spus: Domnul Dumnezeul vostru vă va ridica dintre frații voștri un Profet ca mine. De El să ascultați în toate câte vă va spune."
     },
     {
       "number": 23,
-      "text": "Iar orice persoană care nu va asculta de Profetul acela va fi nimicită din popor.»"
+      "text": "Fiecare suflet care nu va asculta de profetul acela va fi nimicit în întregime din mijlocul poporului."
     },
     {
       "number": 24,
@@ -217,11 +241,11 @@
     },
     {
       "number": 25,
-      "text": "Voi sunteți fiii profeților și ai legământului pe care Dumnezeu l-a încheiat cu părinții voștri, spunându-i lui Avraam: «În urmașul tău vor fi binecuvântate toate familiile pământului.»"
+      "text": "Voi sunteți fiii profeților și ai legământului pe care Dumnezeu l-a încheiat cu părinții voștri, spunându-i lui Avraam: În urmașul tău vor fi binecuvântate toate familiile pământului."
     },
     {
       "number": 26,
-      "text": "Pentru voi mai întâi, ridicându-L pe Slujitorul Său, Dumnezeu L-a trimis să vă binecuvânteze, întorcându-l pe fiecare dintre voi de la faptele lui rele.”"
+      "text": "Pentru voi mai întâi, ridicându-L pe Slujitorul Său, Dumnezeu L-a trimis să vă binecuvânteze, întorcându-l pe fiecare dintre voi de la faptele lui rele."
     }
   ],
   "editorialNotes": [

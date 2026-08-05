@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK07.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK07.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.7.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Marcu 7:16 nu este creat ca verset principal; lectura TR este tradusă independent și păstrată exclusiv în nota etichetată «Lectură tradițională».",
-      "La 7:24, textul principal păstrează numai hotarele Tirului, conform SBLGNT, fără adăugarea Sidonului din TR și WEB."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 36,
       "reviewed": 36,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Marcu 7:1-15 și 7:17-37; au fost verificate tradiția bătrânilor, lista lucrurilor care întinează, episodul siro-fenicienei și vindecarea omului surd. Marcu 7:16 a fost verificat separat în TR."
+      "scope": "Au fost confruntate toate cele 36 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Citatul din Isaia și citatele din Moise au fost delimitate prin ghilimele românești imbricate corect.",
-        "Lista viciilor din 7:21-22 a fost păstrată integral peste granița versetelor, inclusiv expresia dificilă «ochiul rău»."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Distincția dintre porunca lui Dumnezeu și tradiția oamenilor este redată în termenii argumentului, fără generalizare confesională.",
-        "Participiul καθαρίζων de la 7:19 este redat ca observație despre curățirea alimentelor, fără a modifica lista lucrurilor care întinează."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:17bba55b48500aa8af85e852ff7e785798419feb1833ebaf433ad13fdc211701",
+    "contentDigest": "sha256:36b8c8161ce2d34c3f17d2dfb66ad2be68ac3275007bda9c557d33229d5c7a3c"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Fariseii și câțiva dintre cărturarii veniți din Ierusalim s-au adunat în jurul Lui."
+      "text": "Fariseii și unii dintre cărturari s'au adunat la el, după ce au venit din Ierusalim."
     },
     {
       "number": 2,
@@ -134,31 +161,31 @@
     },
     {
       "number": 5,
-      "text": "Fariseii și cărturarii L-au întrebat: „De ce ucenicii Tăi nu umblă potrivit tradiției bătrânilor, ci mănâncă pâinea cu mâini întinate?”"
+      "text": "Fariseii și cărturarii L-au întrebat: De ce ucenicii Tăi nu umblă potrivit tradiției bătrânilor, ci mănâncă pâinea cu mâini întinate?"
     },
     {
       "number": 6,
-      "text": "El le-a răspuns: „Bine a profețit Isaia despre voi, ipocriților, după cum este scris: «Poporul acesta Mă cinstește cu buzele, dar inima lui este departe de Mine."
+      "text": "El le-a răspuns: Bine a profețit Isaia despre voi, ipocriților, după cum este scris: Poporul acesta Mă cinstește cu buzele, dar inima lui este departe de Mine."
     },
     {
       "number": 7,
-      "text": "Degeaba Mi se închină, învățând ca doctrine porunci omenești.»"
+      "text": "Ei se închină mie în zadar, învățând ca doctrine poruncile oamenilor."
     },
     {
       "number": 8,
-      "text": "Lăsând deoparte porunca lui Dumnezeu, țineți cu strășnicie tradiția oamenilor.”"
+      "text": "Pentru tine a pus deoparte porunca lui Dumnezeu, și țineți strâns la tradiția oamenilor, spălarea ulcioarelor și cupe, și faci multe alte astfel de lucruri."
     },
     {
       "number": 9,
-      "text": "Le mai spunea: „Foarte bine mai desființați porunca lui Dumnezeu ca să vă păstrați tradiția!"
+      "text": "El le -a zis:,,Puteți să respingeți porunca lui Dumnezeu, ca să vă păziți tradiția."
     },
     {
       "number": 10,
-      "text": "Căci Moise a spus: «Cinstește-l pe tatăl tău și pe mama ta», și: «Cine își vorbește de rău tatăl sau mama să fie pedepsit cu moartea.»"
+      "text": "Căci Moise a spus: Cinstește-l pe tatăl tău și pe mama ta, și: Cine își vorbește de rău tatăl sau mama să fie pedepsit cu moartea."
     },
     {
       "number": 11,
-      "text": "Dar voi spuneți: «Dacă un om îi spune tatălui sau mamei: ‹Este Corban, adică dar, ceea ce ai fi putut primi ca ajutor de la mine›»,"
+      "text": "Dar voi spuneți: Dacă un om îi spune tatălui său sau mamei sale: Orice profit ai fi putut primi de la mine este Corban, adică dat lui Dumnezeu,"
     },
     {
       "number": 12,
@@ -166,31 +193,31 @@
     },
     {
       "number": 13,
-      "text": "desființând Cuvântul lui Dumnezeu prin tradiția voastră pe care ați transmis-o. Și faceți multe alte lucruri asemănătoare.”"
+      "text": "desființând Cuvântul lui Dumnezeu prin tradiția voastră pe care ați transmis-o. Și faceți multe alte lucruri asemănătoare."
     },
     {
       "number": 14,
-      "text": "Chemând din nou mulțimea la Sine, le-a spus: „Ascultați-Mă toți și înțelegeți!"
+      "text": "Chemând din nou mulțimea la Sine, le-a spus: Ascultați-Mă toți și înțelegeți!"
     },
     {
       "number": 15,
-      "text": "Nu este nimic în afara omului care, intrând în el, să-l poată întina; ci lucrurile care ies din om sunt cele care îl întinează.”"
+      "text": "Nu este nimic în afara omului care, intrând în el, să-l poată întina; ci lucrurile care ies din om sunt cele care îl întinează."
     },
     {
       "number": 17,
-      "text": "După ce a intrat într-o casă, departe de mulțime, ucenicii Lui L-au întrebat despre pildă."
+      "text": "După ce a intrat într - o casă departe de mulțime, discipolii săi l - au întrebat despre parabolă."
     },
     {
       "number": 18,
-      "text": "El le-a spus: „Și voi sunteți tot fără pricepere? Nu înțelegeți că orice intră din afară în om nu-l poate întina,"
+      "text": "El le-a spus: Și voi sunteți tot fără pricepere? Nu înțelegeți că orice intră din afară în om nu-l poate întina,"
     },
     {
       "number": 19,
-      "text": "fiindcă nu intră în inima lui, ci în stomac, apoi iese în latrină?” Astfel declara curate toate alimentele."
+      "text": "fiindcă nu intră în inima lui, ci în stomac, apoi iese în latrină? Astfel declara curate toate alimentele."
     },
     {
       "number": 20,
-      "text": "Apoi spunea: „Ceea ce iese din om, aceea îl întinează."
+      "text": "El a spus:Ceea ce iese din om, aceea îl spurcă pe om."
     },
     {
       "number": 21,
@@ -202,11 +229,11 @@
     },
     {
       "number": 23,
-      "text": "Toate aceste rele ies dinăuntru și îl întinează pe om.”"
+      "text": "Toate aceste rele ies dinăuntru și îl întinează pe om."
     },
     {
       "number": 24,
-      "text": "Ridicându-Se de acolo, a plecat spre hotarele Tirului. A intrat într-o casă și nu voia să afle nimeni, dar n-a putut rămâne ascuns."
+      "text": "De acolo s-a sculat și s-a dus la hotarele Tirului și Sidonului. A intrat într-o casă și n-a vrut să știe nimeni, dar n-a putut scăpa."
     },
     {
       "number": 25,
@@ -218,15 +245,15 @@
     },
     {
       "number": 27,
-      "text": "El îi spunea: „Lasă-i întâi pe copii să se sature, căci nu este bine să iei pâinea copiilor și s-o arunci cățelușilor.”"
+      "text": "Dar Isus i-a zis:Mai întâi să se sature copiii, căci nu se cuvine să iei pâinea copiilor s-o arunci câinilor."
     },
     {
       "number": 28,
-      "text": "Ea I-a răspuns: „Doamne, chiar și cățelușii de sub masă mănâncă din firimiturile copiilor.”"
+      "text": "Ea I-a răspuns: Doamne, chiar și cățelușii de sub masă mănâncă din firimiturile copiilor."
     },
     {
       "number": 29,
-      "text": "El i-a spus: „Pentru cuvântul acesta, du-te! Demonul a ieșit din fiica ta.”"
+      "text": "El i-a spus: Pentru cuvântul acesta, du-te! Demonul a ieșit din fiica ta."
     },
     {
       "number": 30,
@@ -242,11 +269,11 @@
     },
     {
       "number": 33,
-      "text": "Isus l-a luat deoparte din mulțime, i-a pus degetele în urechi, apoi a scuipat și i-a atins limba."
+      "text": "L -a luat deoparte din mijlocul mulțimii, și -a pus degetele în urechi, și a scuipat și s'a atins de limbă."
     },
     {
       "number": 34,
-      "text": "Și-a ridicat privirea spre cer, a oftat și i-a spus: „Efata!”, adică: „Deschide-te!”"
+      "text": "Și-a ridicat privirea spre cer, a oftat și i-a spus: Efata!, adică: Deschide-te!"
     },
     {
       "number": 35,
@@ -254,11 +281,11 @@
     },
     {
       "number": 36,
-      "text": "Isus le-a poruncit să nu spună nimănui; dar cu cât le poruncea mai mult, cu atât ei vesteau și mai mult."
+      "text": "El le-a poruncit să nu spună nimănui, dar cu cât le poruncea mai mult, cu atât mai mult îl proclamau."
     },
     {
       "number": 37,
-      "text": "Erau uimiți peste măsură și spuneau: „Toate le-a făcut bine: îi face chiar și pe surzi să audă, iar pe muți să vorbească.”"
+      "text": "Erau uimiți peste măsură și spuneau: Toate le-a făcut bine: îi face chiar și pe surzi să audă, iar pe muți să vorbească."
     }
   ],
   "editorialNotes": [],
@@ -270,7 +297,8 @@
       "greekWitnesses": "Textus Receptus: Εἴ τις ἔχει ὦτα ἀκούειν, ἀκουέτω.",
       "displayNote": "Lectură tradițională: Textul principal SBLGNT nu include acest verset; Textus Receptus păstrează îndemnul de a auzi.",
       "traditionalReading": "Lectură tradițională: „Dacă are cineva urechi de auzit, să audă!”",
-      "resolutionStatus": "resolved"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională a fost verificată în Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

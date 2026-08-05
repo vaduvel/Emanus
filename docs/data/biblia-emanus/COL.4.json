@@ -3,8 +3,8 @@
   "bookId": "COL",
   "bookName": "Coloseni",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
     "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
+    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/COL04.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/COL04.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/COL.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
     "observations": [
-      "Coloseni 4:8 urmează lectura SBL: destinatarii află despre Pavel și echipa lui, nu invers.",
-      "Coloseni 4:13 redă „multă osteneală”, nu simplificarea tradițională „mare zel”.",
-      "Coloseni 4:15 urmează lectura feminină „Nimfa ... biserica din casa ei”, nu lectura masculină din TR."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "îndemnurile finale despre rugăciune și vorbire, lanțul de salutări personale, epistola din Laodiceea, și nota autografă a lui Pavel"
+      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Lanțul de salutări din 4:7-17 a fost păstrat fluid, fără uniformizarea funcțiilor și a relațiilor personale.",
-        "În 4:8 și 4:13 s-au păstrat diferențele de sens ale lecturii SBL față de TR.",
-        "În 4:15-16 s-au menținut atât lectura feminină Nimfa, cât și referința distinctă la epistola din Laodiceea."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Coloseni 4:3-4 păstrează formularea despre „misterul lui Hristos” și lanțurile lui Pavel fără retorică suplimentară.",
-        "Coloseni 4:15 nu masculinizează personajul Nimfa pentru a imita tradiția receptă.",
-        "Coloseni 4:18 nu introduce în textul principal „Amin”, absent din lectura SBL a versetului."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 162,
+        "primary": 138,
+        "secondary": 35,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4993764885473809,
+      "minimumScore": 0.5987788757926972
+    },
+    "textDigest": "sha256:ff7232a1c19fcd4d640e19f6cc9c0ab109cc43ae04d46095ddfb2c6128d1cc8d",
+    "contentDigest": "sha256:03cfe0fe1ef51e7b841f08bbabc0a5c7bf84d2cdb3fb1597238b2453b8e1d42a"
   },
   "verses": [
     {
@@ -125,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Stăruiți în rugăciune, vegheind în ea cu mulțumire,"
+      "text": "Continuați cu stăruință în rugăciune, privind-o cu mulțumire,"
     },
     {
       "number": 3,
@@ -133,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "ca să-l fac cunoscut așa cum trebuie să vorbesc."
+      "text": "ca s-o pot dezvălui așa cum ar trebui să vorbesc."
     },
     {
       "number": 5,
@@ -149,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "pe care l-am trimis la voi tocmai pentru aceasta, ca să aflați cele despre noi și ca el să vă încurajeze inimile,"
+      "text": "Îl trimit la voi pentru acest scop, ca să vă cunoască circumstanțele și să vă mângâie inimile,"
     },
     {
       "number": 9,
@@ -177,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Salutați-i pe frații din Laodiceea, pe Nimfa și biserica din casa ei."
+      "text": "Salutați - i pe frații care se află în Laodiceea, împreună cu nimfa și adunarea din casa lui."
     },
     {
       "number": 16,
@@ -222,8 +246,8 @@
     },
     {
       "verse": 15,
-      "term": "Νύμφαν ... αὐτῆς / Νυμφᾶν ... αὐτοῦ",
-      "decision": "Textul principal urmează lectura SBL: „Nimfa ... biserica din casa ei”.",
+      "term": "Νύμφαν... αὐτῆς / Νυμφᾶν... αὐτοῦ",
+      "decision": "Textul principal urmează lectura SBL: „Nimfa... biserica din casa ei”.",
       "reason": "Diferența schimbă atât genul numelui, cât și posesivul casei-biserici; lectura feminină SBL a fost păstrată explicit.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",

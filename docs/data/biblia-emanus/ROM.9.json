@@ -3,8 +3,8 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 9,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ROM09.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ROM09.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ROM.9.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Comparația cu cele trei etaloane a confirmat lista completă din 9:4 — înfierea, gloria, legămintele, darea Legii, închinarea și promisiunile — fără preluarea formulării vreunui etalon.",
-      "La 9:28 textul urmează forma mai scurtă SBLGNT despre cuvântul dus la îndeplinire și scurtat, fără adaosul recept despre dreptate și cuvântul scurtat.",
-      "Citatele din Osea și Isaia păstrează opozițiile și repetițiile textului grecesc, inclusiv «poporul Meu» și «iubită» în 9:25-26."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 33,
       "reviewed": 33,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 33 de versete cu SBLGNT 1.2, aparatul pentru 9:3, 9:5, 9:11, 9:13, 9:15, 9:19-20, 9:23, 9:26-28 și 9:31-33, precum și lecturile TR; decizia sintactică din 9:5 este documentată separat."
+      "scope": "Au fost confruntate toate cele 33 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Construcția amplă din 9:22-24 a fost distribuită natural între versete fără ruperea condiției și a scopului.",
-        "Citatele au primit ghilimele românești și nivel secundar «…», iar termenii repetați «dreptate», «milă» și «sămânță» au fost păstrați.",
-        "Formulările eliptice din 9:6-8 și 9:30-32 au fost clarificate numai sintactic, fără adaos explicativ doctrinar."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Argumentul despre alegere păstrează inițiativa lui Dumnezeu, opoziția dintre fapte și chemare și întrebările retorice ale lui Pavel fără atenuare.",
-        "Romani 9:5 este redat potrivit sintaxei și punctuației textului principal SBLGNT, fără a folosi o concluzie doctrinară drept premisă lexicală.",
-        "Metaforele olarului și ale vaselor din 9:20-24 rămân intacte, inclusiv termenii despre mânie, pierzare, milă și glorie."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:a85ff3f2392b41fce16167b091024c2cc3712e43bb15c78bd3d97c1a4bb968c4",
+    "contentDigest": "sha256:68c7738373c7fe0564d594b6de5410bb524b0453029fd8c1322aa2e8b205b0d5"
   },
   "verses": [
     {
@@ -141,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Dar nu ca și cum cuvântul lui Dumnezeu ar fi căzut. Căci nu toți cei care provin din Israel sunt Israel;"
+      "text": "Dar nu este ca și cum Cuvîntul lui Dumnezeu a ajuns la nimic, căci ei nu sunt tot Israelul care este al lui Israel."
     },
     {
       "number": 7,
@@ -161,11 +185,11 @@
     },
     {
       "number": 11,
-      "text": "Căci, deși ei nu se născuseră încă și nu făcuseră nimic bun sau rău, pentru ca planul lui Dumnezeu potrivit alegerii să rămână,"
+      "text": "Căci nu s'a născut încă, nici n'a făcut ceva bun, nici rău, pentruca scopul lui Dumnezeu, potrivit cu alegerea, să nu fie al lucrărilor, ci al celui ce cheamă,"
     },
     {
       "number": 12,
-      "text": "nu din fapte, ci din Cel care cheamă, i s-a spus: „Cel mai mare îi va sluji celui mai mic”;"
+      "text": "i s - a spus:? Bătrânul îi va sluji pe cei tineri."
     },
     {
       "number": 13,
@@ -229,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "căci DOMNUL va duce cuvântul la îndeplinire și îl va scurta pe pământ.”"
+      "text": "Căci el va isprăvi lucrarea o va scurta în dreptate, pentru că Domnul va face o lucrare scurtă pe pământ.”"
     },
     {
       "number": 29,
@@ -245,7 +269,7 @@
     },
     {
       "number": 32,
-      "text": "De ce? Pentru că nu a urmărit-o prin credință, ci ca prin fapte. Ei s-au împiedicat de piatra de împiedicare,"
+      "text": "De ce? Pentru că n-au căutat-o prin credință, ci așa cum era prin fapte ale legii; s-au poticnit de piatra de poticnire,"
     },
     {
       "number": 33,

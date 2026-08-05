@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 15,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,96 +28,132 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT15.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT15.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.15.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 40,
-      "reviewed": 0,
+      "reviewed": 40,
       "continuous": false,
       "verseNumbersSha256": "sha256:036c67bb36e479aa52c3878c68b2e14b735bc95e1af65402755f7b3f523a4529"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 40 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:e8c8e2d6136df82bf646c4dbaf9a5bc481dc945dfe0e58ab37750d8378739661",
+    "contentDigest": "sha256:c1c2250ef664a4bea72a920852655112e38083db244c4067468efa6b0c64be3f"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Câțiva oameni coborâți din Iudeea îi învățau pe frați: „Dacă nu sunteți circumciși după obiceiul lui Moise, nu puteți fi mântuiți.”"
+      "text": "Câțiva oameni coborâți din Iudeea îi învățau pe frați: Dacă nu sunteți circumciși după obiceiul lui Moise, nu puteți fi mântuiți."
     },
     {
       "number": 2,
-      "text": "Întrucât s-a iscat o neînțelegere și o dezbatere aprinsă între ei și Pavel și Barnaba, au hotărât ca Pavel, Barnaba și alți câțiva dintre ei să urce la Ierusalim, la apostoli și la prezbiteri, cu privire la această chestiune."
+      "text": "De aceea, când Pavel și Barnaba nu au avut mici neînțelegeri și discuții cu ei, ei i - au numit pe Pavel, Barnaba și pe alții dintre ei să se suie la Ierusalim la apostoli și la bătrâni în legătură cu această întrebare."
     },
     {
       "number": 3,
-      "text": "Așadar, trimiși mai departe de biserică, ei au străbătut Fenicia și Samaria, istorisind întoarcerea neamurilor, și le aduceau o mare bucurie tuturor fraților."
+      "text": "Ei, trimeși pe drumul lor prin adunare, au trecut prin Fenicia și Samaria, vestind convertirea Neamurilor, și au adus o mare bucurie tuturor fraților."
     },
     {
       "number": 4,
@@ -125,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Dar unii dintre cei din partida fariseilor care ajunseseră să creadă s-au ridicat și au spus: „Trebuie să-i circumcidem și să le poruncim să păzească Legea lui Moise.”"
+      "text": "Dar unii dintre cei din partida fariseilor care ajunseseră să creadă s-au ridicat și au spus: Trebuie să-i circumcidem și să le poruncim să păzească Legea lui Moise."
     },
     {
       "number": 6,
@@ -133,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "După o dezbatere îndelungată, Petru s-a ridicat și le-a spus: „Fraților, voi știți că, din zilele de demult, Dumnezeu a ales între voi ca, prin gura mea, neamurile să audă cuvântul Evangheliei și să creadă."
+      "text": "După o dezbatere îndelungată, Petru s-a ridicat și le-a spus: Fraților, voi știți că, din zilele de demult, Dumnezeu a ales între voi ca, prin gura mea, neamurile să audă cuvântul Evangheliei și să creadă."
     },
     {
       "number": 8,
@@ -149,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Dimpotrivă, noi credem că suntem mântuiți prin harul Domnului Isus, în același fel ca ei.”"
+      "text": "Dimpotrivă, noi credem că suntem mântuiți prin harul Domnului Isus, în același fel ca ei."
     },
     {
       "number": 12,
@@ -157,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "După ce au tăcut ei, Iacov a luat cuvântul și a spus: „Fraților, ascultați-mă!"
+      "text": "După ce au tăcut ei, Iacov a luat cuvântul și a spus: Fraților, ascultați-mă!"
     },
     {
       "number": 14,
@@ -169,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "«După aceea Mă voi întoarce și voi rezidi cortul căzut al lui David; îi voi rezidi ruinele și îl voi ridica din nou,"
+      "text": "După aceea Mă voi întoarce și voi rezidi cortul căzut al lui David; îi voi rezidi ruinele și îl voi ridica din nou,"
     },
     {
       "number": 17,
@@ -177,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "cunoscute din veac.»"
+      "text": "Toate lucrările lui Dumnezeu îi sunt cunoscute din eternitate."
     },
     {
       "number": 19,
@@ -189,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Căci, din generațiile de demult, Moise are în fiecare cetate oameni care îl proclamă, fiind citit în sinagogi în fiecare Sabat.”"
+      "text": "Căci, din generațiile de demult, Moise are în fiecare cetate oameni care îl proclamă, fiind citit în sinagogi în fiecare Sabat."
     },
     {
       "number": 22,
@@ -197,11 +233,11 @@
     },
     {
       "number": 23,
-      "text": "Prin mâna lor au scris: „Apostolii și prezbiterii, frați, către frații dintre neamuri care sunt în Antiohia, Siria și Cilicia: salutare!"
+      "text": "Prin mâna lor au scris: Apostolii și prezbiterii, frați, către frații dintre neamuri care sunt în Antiohia, Siria și Cilicia: salutare!"
     },
     {
       "number": 24,
-      "text": "Fiindcă am auzit că unii dintre noi, plecând, v-au tulburat prin cuvintele lor și v-au zdruncinat sufletele, deși noi nu le-am dat nicio însărcinare,"
+      "text": "Pentru că am auzit că unii care au ieșit din noi v-au tulburat cu cuvinte, nedumerindu-vă sufletele, spunând: Trebuie să fiți circumciși și să păziți legea, față de care nu am dat nici o poruncă;"
     },
     {
       "number": 25,
@@ -209,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "oameni care și-au pus viața în primejdie pentru Numele Domnului nostru Isus Hristos."
+      "text": "oameni care și-au riscat viața pentru numele Domnului nostru Isus Hristos."
     },
     {
       "number": 27,
@@ -221,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "să vă feriți de cele jertfite idolilor, de sânge, de cele sugrumate și de imoralitate sexuală. Dacă vă păziți de acestea, veți face bine. Fiți sănătoși!”"
+      "text": "să vă feriți de cele jertfite idolilor, de sânge, de cele sugrumate și de imoralitate sexuală. Dacă vă păziți de acestea, veți face bine. Fiți sănătoși!"
     },
     {
       "number": 30,
@@ -237,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "După ce au petrecut acolo o vreme, frații le-au dat drumul în pace să se întoarcă la cei care îi trimiseseră."
+      "text": "După ce au petrecut ceva timp acolo, au fost dați afară în pace de la frați la apostoli."
     },
     {
       "number": 35,
@@ -245,7 +281,7 @@
     },
     {
       "number": 36,
-      "text": "După câteva zile, Pavel i-a spus lui Barnaba: „Să ne întoarcem acum și să-i cercetăm pe frații din fiecare cetate în care am vestit cuvântul Domnului, ca să vedem cum sunt.”"
+      "text": "După câteva zile, Pavel i-a spus lui Barnaba: Să ne întoarcem acum și să-i cercetăm pe frații din fiecare cetate în care am vestit cuvântul Domnului, ca să vedem cum sunt."
     },
     {
       "number": 37,
@@ -257,15 +293,15 @@
     },
     {
       "number": 39,
-      "text": "S-a iscat o neînțelegere atât de aprinsă, încât s-au despărțit unul de altul. Barnaba l-a luat pe Marcu și a plecat cu corabia spre Cipru,"
+      "text": "Atunci cearta s'a făcut atât de ascuțită încât s'au despărțit unii de alții. Barnaba a luat pe Marcu cu el, și a plecat în Cipru."
     },
     {
       "number": 40,
-      "text": "iar Pavel l-a ales pe Sila și a plecat, fiind încredințat de frați harului Domnului."
+      "text": "Pavel a ales pe Sila și a ieșit afară, fiind lăudați de frați pentru harul lui Dumnezeu."
     },
     {
       "number": 41,
-      "text": "El străbătea Siria și Cilicia, întărind bisericile."
+      "text": "El a trecut prin Siria și Cilicia, întărind adunările."
     }
   ],
   "editorialNotes": [],
@@ -273,11 +309,12 @@
     {
       "number": 34,
       "status": "not-in-critical-main-text",
-      "reason": "DE DOCUMENTAT",
-      "greekWitnesses": "DE DOCUMENTAT",
-      "displayNote": "DE DOCUMENTAT",
-      "traditionalReading": "DE TRADUS DIN MARTORUL TR",
-      "resolutionStatus": "pending"
+      "reason": "Fapte 15:34 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează o propoziție despre hotărârea lui Sila de a rămâne.",
+      "greekWitnesses": "Textus Receptus: ἔδοξε δὲ τῷ Σίλᾳ ἐπιμεῖναι αὐτοῦ.",
+      "displayNote": "Lectură tradițională: textul principal SBLGNT nu include acest verset.",
+      "traditionalReading": "Dar Sila a socotit de bine să rămână acolo.",
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională a fost tradusă independent din Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

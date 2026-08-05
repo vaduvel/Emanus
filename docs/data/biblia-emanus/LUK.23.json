@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 23,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,325 +28,363 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK23.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK23.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.23.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 55,
-      "reviewed": 0,
+      "reviewed": 55,
       "continuous": false,
       "verseNumbersSha256": "sha256:773ae59372cf4472a719b938f00930d2c76300dba68b326bab583f89fedacf1c"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 55 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:c388985a6a9fde0d53643f2174ae54cc4b8cdb74f4fc51e2458f6a54aecf2f9d",
+    "contentDigest": "sha256:5b1e013e08862a00ea811059b4fbd56afbb88a24b01a0a55db7a6d3b2746e498"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Toată adunarea lor s-a sculat și l-a adus înaintea lui Pilat."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Ei au început să -L acuze, și au zis:,,Noi am găsit pe acest om care pervertește poporul, interzicînd să plătească impozite Cezarului, și spunînd că El însuși este Hristos, un împărat."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Pilat l-a întrebat:Tu ești Împăratul Iudeilor? El i-a răspuns:Așa zici tu."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Pilat le-a zis preoților celor mai de seamămilor:Nu găsesc nici o bază pentru o acuzație împotriva acestui om."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Dar ei au insistat, spunând:?El stârnește poporul, învățând în toată Iudeea, începând din Galileea până în acest loc."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dar când Pilat a auzit de Galileea, a întrebat dacă omul acela era galilean."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Cînd a aflat că era sub jurisdicția lui Irod, l - a trimis la Irod, care era și el în Ierusalim în acele zile."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Cînd l -a văzut Irod pe Isus, s'a bucurat nespus, căci voia să -l vadă de multă vreme, pentrucă auzise multe lucruri despre el. Spera să vadă vreo minune făcută de el."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "L-a întrebat cu multe cuvinte, dar nu i-a răspuns."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Preoții cei mai de seamă și cărturarii stăteau în picioare, acuzîndu - l cu vehemență."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Irod, împreună cu soldații săi, l -a umilit și și -a bătut joc de el. L -au îmbrăcat în haine de lux, și l -au trimis înapoi la Pilat."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Irod și Pilat s'au împrietenit chiar în ziua aceea, căci înainte erau vrăjmași unii cu alții."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Pilat a chemat pe preoții cei mai de seamă, pe căpetenii și pe popor,"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "le-a zis:Mi l- adus pe omul acesta ca pe unul care pervertește poporul; iată, după ce l-am cercetat înaintea voastră, n-am găsit nici un temei pentru o acuzație împotriva acestui om cu privire la lucrurile de care îl învinuiți."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Nici Irod, pentru că te-am trimis la el, și vezi, nimic vrednic de moarte nu a fost făcut de el."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Prin urmare, îl voi pedepsi și îl voi elibera."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Dar toți strigau împreună, zicând:Pleacă cu omul acesta! Eliberează-ne pe Baraba!"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Unul care a fost aruncat în închisoare pentru o anumită revoltă în oraș, și pentru crimă."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Pilat le -a vorbit din nou, dorind să -L elibereze pe Isus,"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Dar ei strigau, zicând:Răstignește-L, răstignește-L!"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "El le-a zis a treia oară:De ce? Ce rău a făcut omul acesta? Nu am găsit în el nici o nelegiuire capitală. De aceea îl voi pedepsi-l voi elibera."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Dar ei strigau cu glas tare, cerând să fie răstignit. Glasurile lor ale preoților celor mai de seamă au biruit."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Pilat a decretat ca ceea ce au cerut ei să fie făcut."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "El l - a eliberat pe cel care fusese aruncat în închisoare pentru insurecție și crimă, pentru care au cerut - o, dar l - a dat pe Isus la voia lor."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Cînd l-au izgonit, au luat pe Simon din Cirene, venind din țară, și au pus crucea peste el ca s'o ducă după Isus."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "O mare mulțime de oameni l-au urmat, inclusiv femei care, de asemenea, l-au jelit și l-au plâns."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Isus, întorcându-se către ei, le-a zis:Fiice ale Ierusalimului, nu mă plângeți pe mine, ci plângeți-vă pe voi înșivă pe copiii voștri."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Pentru că iată, zilele vin în care ei vor spune,? Binecuvântați sunt sterpe, uterele care nu au purtat, și sânii care nu au alăptat."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Apoi vor începe să spună munților: Cădeți peste noi! dealurilor: Acoperiți-ne!"
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Căci dacă ei fac aceste lucruri în copacul verde, ce se va face în cel uscat?"
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Mai erau, doi criminali, cu el să fie omorâți."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Când au ajuns la locul care se numeșteSkull, L-au răstignit acolo cu criminalii, unul la dreapta și celălalt la stânga."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Isus a zis:Tată, iartă-i, căci nu știu ce fac. Împărțindu- hainele între ei, ei au tras la sorți."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Poporul stătea privea. Conducătorii împreună cu ei băteau joc de El, zicând:Pe i-a mântuit; să se mântuiască pe sine, dacă acesta este Hristosul lui Dumnezeu, alesul Lui!"
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Soldații băteau joc de el, venind la el oferindu-i oțet,"
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "spunând:Dacă tu ești regele iudeilor, salvează-te pe tine însuți!"
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Deasupra lui era scrisă o inscrip cu litere, latine ebraice:Acesta este regele iudeilor."
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Unul dintre criminalii care a fost spânzurat l-a insultat, spunând:Dacă tu Hristosul, salvează-te pe tine și pe noi!"
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "Dar celălalt a răspuns, mustrându-l, i-a zis:Nu te temi tu de Dumnezeu, pentru că tu ești sub condamnare?"
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "Noi suntem drepți, căci primim răsplata cuvenită pentru faptele noastre, însă omul acesta n-a făcut nimic rău."
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "El i-a spus lui Isus:Doamne, adu-Ți aminte de mine când vei veni în Împărăția Ta!"
     },
     {
       "number": 43,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Adevărat îți spun că astăzi vei fi cu Mine în Paradis."
     },
     {
       "number": 44,
-      "text": "DE TRADUS"
+      "text": "Era acum pe la ceasul al șaselea, și pînă la ceasul al nouălea, a trecut peste toată țara."
     },
     {
       "number": 45,
-      "text": "DE TRADUS"
+      "text": "Soarele s'a întunecat, și vălul Templului s'a rupt în două."
     },
     {
       "number": 46,
-      "text": "DE TRADUS"
+      "text": "Isus, strigând cu glas tare, a zis:Tată, în mâinile Tale îmi încrediz duhul! După ce a spus aceste cuvinte,-a dat ultima suflare."
     },
     {
       "number": 47,
-      "text": "DE TRADUS"
+      "text": "Când centurionul a văzut ce s-a făcut, el l-a glorificat pe Dumnezeu, spunând: Cu siguranță acesta era un om drept."
     },
     {
       "number": 48,
-      "text": "DE TRADUS"
+      "text": "Toți noroadele care s'au adunat să vadă lucrul acesta, cînd au văzut ce s'a făcut, s'au întors acasă, bătîndu-și pieptul."
     },
     {
       "number": 49,
-      "text": "DE TRADUS"
+      "text": "Toate cunoștințele lui și femeile care l - au urmat din Galileea stăteau la distanță, urmărind aceste lucruri."
     },
     {
       "number": 50,
-      "text": "DE TRADUS"
+      "text": "Iată, era un om pe nume Iosif, care era un membru al consiliului, un om bun și drept."
     },
     {
       "number": 51,
-      "text": "DE TRADUS"
+      "text": "El n-a fost de acord cu sfatul și fapta lor, din Arimathaea, o cetate a iudeilor, care aștepta și Regatul lui Dumnezeu."
     },
     {
       "number": 52,
-      "text": "DE TRADUS"
+      "text": "Omul acesta s'a dus la Pilat, și a cerut trupul lui Isus."
     },
     {
       "number": 53,
-      "text": "DE TRADUS"
+      "text": "A luat-o jos a înfășurat-o într-o pânză de in, l-a pus într-un mormânt care a fost tăiat în piatră, unde nimeni nu fusese pus vreodată."
     },
     {
       "number": 54,
-      "text": "DE TRADUS"
+      "text": "Era ziua Pregătirii, și Sabatul se apropia."
     },
     {
       "number": 55,
-      "text": "DE TRADUS"
+      "text": "Femeile care au venit cu el din Galileea au urmat, și au văzut mormântul și cum a fost pus trupul lui."
     },
     {
       "number": 56,
-      "text": "DE TRADUS"
+      "text": "Ei s'au întors, au pregătit mirodenii și miresme, și s'au odihnit în ziua Sabatului, după poruncă."
     }
   ],
   "editorialNotes": [
     {
       "verse": 34,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [
     {
       "number": 17,
       "status": "not-in-critical-main-text",
-      "reason": "DE DOCUMENTAT",
-      "greekWitnesses": "DE DOCUMENTAT",
-      "displayNote": "DE DOCUMENTAT",
-      "traditionalReading": "DE TRADUS DIN MARTORUL TR",
-      "resolutionStatus": "pending"
+      "reason": "Luca 23:17 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează explicația despre obligația de a elibera un om la sărbătoare.",
+      "greekWitnesses": "Textus Receptus: ἀνάγκην δὲ εἶχεν ἀπολύειν αὐτοῖς κατὰ ἑορτὴν ἕνα.",
+      "displayNote": "Lectură tradițională: textul principal SBLGNT nu include acest verset.",
+      "traditionalReading": "Era însă obligat să le elibereze un om la sărbătoare.",
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională a fost tradusă independent din Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

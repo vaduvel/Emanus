@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 6,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,60 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK06.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK06.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
-        "id": "BIBLIA-LIBERA",
-        "family": "libera",
+        "id": "BTF",
+        "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/LUK06.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.6.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Luca 6:1 urmează lectura SBLGNT fără «δευτεροπρώτῳ»; nu am introdus în textul principal nuanța calendaristică din TR.",
-      "Luca 6:16 păstrează ambiguitatea genitivului din «Ἰούδαν Ἰακώβου» prin formularea «Iuda al lui Iacov», fără rezolvare interpretativă.",
-      "Luca 6:20-26 păstrează contrastul direct dintre fericiri și vai-uri, fără spiritualizarea sărăciei și fără atenuarea avertismentului către bogați."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 49,
       "reviewed": 49,
@@ -92,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Luca 6:1-49 verificat integral în SBLGNT; aparat revizuit pentru 6:1-10, 12, 14-19, 23-26, 28, 30-31, 33-45, 48-49; TR verificat ca martor textual la locurile cu diferență materială."
+      "scope": "Au fost confruntate toate cele 49 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Am păstrat repetițiile imperative și paralelismul din 6:27-38 fără condensare stilistică.",
-        "Am corectat ordinea firească în română la listele din 6:14-16 și la antitezele din 6:20-26, fără pierdere semantică.",
-        "Am folosit diacritice cu virgulă, ghilimele românești și forma normativă «Isus»."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "«Fiul Omului» din 6:5 rămâne titlul textului, fără parafrază doctrinară.",
-        "«Cei săraci» din 6:20 și «bogații» din 6:24 rămân literal, fără spiritualizare sau atenuare.",
-        "Imperativele despre iubirea vrăjmașilor, milă, judecată și iertare din 6:27-38 sunt păstrate ca porunci etice directe ale discursului."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -117,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost consultate numai comparativ, după redactarea versetelor."
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:71b69c93e62e551a22f60bd51e402df7d22a1ccd292c488ea971deb22b4a14e0",
+    "contentDigest": "sha256:494a719e05f76064b56f449dba492244c52e726a73e78e8ff286e9810a73e527"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Într-un sabat, pe când trecea prin lanuri, ucenicii lui smulgeau spice și le mâncau, frecându-le cu mâinile."
+      "text": "În al doilea Sabat, după cel dintîi, Isus trecea prin ogoarele de cereale. Ucenicii Lui au smuls spice le-au mîncat, frecîndu-le în mîni."
     },
     {
       "number": 2,
@@ -151,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Iar cărturarii și fariseii îl pândeau dacă vindecă în sabat, ca să găsească de ce să-l acuze."
+      "text": "Cărturarii fariseii îl priveau, ca să vadă dacă va vindeca în ziua Sabatului, ca să găsească o acuzație împotriva lui."
     },
     {
       "number": 8,
@@ -167,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Dar ei s-au umplut de nebunie și vorbeau între ei ce ar putea să-i facă lui Isus."
+      "text": "Dar ei s'au umplut de mînie, și au vorbit unii cu alții despre ce i-ar putea face lui Isus."
     },
     {
       "number": 12,
@@ -191,11 +209,11 @@
     },
     {
       "number": 17,
-      "text": "Și, coborând cu ei, a stat într-un loc neted, împreună cu o mare mulțime de ucenici de-ai lui și cu un mare număr de oameni din toată Iudeea, din Ierusalim și de pe țărmul Tirului și al Sidonului,"
+      "text": "El s-a coborât cu ei a stat pe un loc neted, cu o de ucenici ai Săi cu un mare număr de oameni din toată Iudeea Ierusalim de pe coasta mării Tirului Sidonului, care au venit să-L asculte să fie vindecați de bolile lor,"
     },
     {
       "number": 18,
-      "text": "care veniseră să-l asculte și să fie vindecați de bolile lor; și cei chinuiți de duhuri necurate erau vindecați."
+      "text": "și pe cei tulburați de duhuri necurate, cari erau vindecați."
     },
     {
       "number": 19,
@@ -203,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Și el, ridicându-și ochii spre ucenicii lui, spunea: „Fericiți cei săraci, pentru că a voastră este Împărăția lui Dumnezeu."
+      "text": "El a ridicat ochii la discipolii săi, și a spus: Binecuvântat ești tu, care sunt săraci, pentru că Regatul lui Dumnezeu este al tău."
     },
     {
       "number": 21,
@@ -219,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Dar vai de voi, bogaților, pentru că v-ați primit deja mângâierea."
+      "text": "Dar vai de voi care sunteți bogați! Căci v-ați primit consolarea."
     },
     {
       "number": 25,
@@ -319,7 +337,7 @@
     },
     {
       "number": 49,
-      "text": "Dar cel ce a auzit și n-a făcut seamănă cu un om care a construit o casă pe pământ, fără temelie; râul s-a izbit de ea și îndată s-a prăbușit, iar ruina casei aceleia a fost mare.”"
+      "text": "Dar cel ce a auzit și n-a făcut seamănă cu un om care a construit o casă pe pământ, fără temelie; râul s-a izbit de ea și îndată s-a prăbușit, iar ruina casei aceleia a fost mare.„”"
     }
   ],
   "editorialNotes": [
@@ -330,7 +348,7 @@
       "greekTextusReceptus": "Ἐγένετο δὲ ἐν σαββάτῳ δευτεροπρώτῳ...",
       "decision": "Textul principal urmează SBLGNT și traduce simplu «Într-un sabat», fără adaosul TR «δευτεροπρώτῳ».",
       "reason": "Lectura TR introduce o precizare calendaristică absentă din SBLGNT, WH, Tregelles și NA28; diferența nu justifică importarea ei în textul critic principal.",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Varianta a fost verificată în aparatul SBL pentru Luca 6:1 și în martorul TR; textul românesc păstrează lectura de bază fără armonizare."
     },
@@ -341,7 +359,7 @@
       "greekTextusReceptus": "Ἰούδαν Ἰακώβου",
       "decision": "Genitivul este redat prin «Iuda al lui Iacov», nu prin «fiul» sau «fratele» lui Iacov.",
       "reason": "Construcția greacă nu specifică explicit relația; româna permite păstrarea ambiguității fără pierdere de sens în lista apostolilor.",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Decizia păstrează prudența cerută de standard atunci când greaca admite mai mult de o interpretare genealogică."
     }

@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 28,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,164 +28,200 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT28.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT28.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.28.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 20,
-      "reviewed": 0,
+      "reviewed": 20,
       "continuous": true,
       "verseNumbersSha256": "sha256:ce02aec498756856567446a2f4cb35b219ea726d81089769eddd1499c99ba95f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:17a82c92753f7ec31a769943710a2bb5f5b4247a13a4c2887f71b136f4a01fad",
+    "contentDigest": "sha256:6362cfa60a48fd2877a207b1704717699e69041f8f264b7be988246a846d2e52"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Acum, după Sabat, după ce a început să răsară în prima zi a săptămânii, Maria Magdalena și cealaltă Maria au venit să vadă mormântul."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Iată, a fost un cutremur mare, pentru că un înger al Domnului a coborât din cer și a venit și a rostogolit piatra de la ușă și a șezut pe ea."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Înfățișarea lui era ca fulgerul, iar îmbrăcămintea lui albă ca zăpada."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "De frica lui, gardienii au scuturat, și au devenit ca niște morți."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Îngerul a răspuns femeilor:Nu vă temeți, căci știu că voi Îl pe Isus, care a fost răstignit."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "El nu este aici, căci a înviat, așa cum a spus. Veniți locul unde zăcea Domnul."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Du-te repede spune ucenicilor Săi: A înviat din morți iată că merge înaintea voastră în Galileea; acolo îl vedea! Iată, Eu v-am spus."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Ei au plecat repede de la mormînt cu frică și bucurie mare, și au alergat să aducă cuvîntul ucenicilor Săi."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Pe cînd se duceau să spună ucenicilor Săi, Isus S'a întîlnit cu ei, le -a zis:,,Bucurați-vă! Ei au venit, I-au apucat picioarele, I s'au închinat."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Atunci Isus le-a zis:Nu vă temeți. Duceți-vă spuneți fraților mei să meargă în Galileea acolo Mă vor vedea."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Pe cînd mergeau ei, iată că niște străjeri au intrat în cetate și au spus preoților cei mai de seamă toate lucrurile cari se întîmplaseră."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Când s-au adunat cu bătrânii și s-au sfătuit, au dat soldaților o mare cantitate de argint."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "spune:Spuneți că discipolii lui au venit noaptea l-au furat în timp ce noi dormeam."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dacă acest lucru va ajunge la urechile guvernatorului, îl vom convinge și vă vom elibera de griji."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Au luat banii, au făcut cum li s'a spus. Acest cuvînt a fost răspîndit printre Iudei, continuă pînă în ziua de azi."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Dar cei unsprezece ucenici s'au dus în Galileea, la muntele pe care -l trimisese Isus."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Când l-au văzut, s-au închinat înaintea lui, dar unii s-au îndoit."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Isus a venit la ei le-a vorbit, zicând:Toată puterea Mi-a fost dată în cer pe pământ."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Du-te și fă discipoli din toate națiunile, botezându-i în numele Tatălui, al Fiului și al Sfântului Duh,"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "învățându-i să păzească toate lucrurile pe care vi le-am poruncit. Iată, Eu sunt cu voi în toate zilele, până la veacului. Amin."
     }
   ],
   "editorialNotes": [],

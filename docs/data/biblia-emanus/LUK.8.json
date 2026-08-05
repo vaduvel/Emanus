@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 8,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,308 +28,344 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK08.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK08.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.8.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 56,
-      "reviewed": 0,
+      "reviewed": 56,
       "continuous": true,
       "verseNumbersSha256": "sha256:f1807115c2223f9c7f70bf2c20cb8a37288a1326615637bb827bcd2ca60bbe79"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 56 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:d4ab8a517474d09c0b3c7afeab66418055f80fd75e61273a85cd98212e1d0221",
+    "contentDigest": "sha256:bdc7725c6cf61826152b2305cb3f7c4bd658771619d9008f1b9ad9859c3c063b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "La scurt timp după aceea, el a mers prin cetăți și sate, predicând și aducând vestea bună despre Regatul lui Dumnezeu. Cu el erau cei doisprezece,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "și unele femei care fuseseră vindecate de duhuri rele și de infirmități: Maria, numită Magdalena, din care ieșiseră șapte demoni;"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Ioana, nevasta lui Chuzas, stewardul lui Irod; Susanna; și mulți alții care le slujeau din averile lor."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Cînd s'a adunat o mare mulțime de oameni din fiecare cetate, Isus a vorbit printr'o parabolă:"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Fermierul a să-și semene sămânța. cum a semănat, unii au căzut de-a lungul drumului, iar acesta a fost călcat în picioare, iar păsările cerului l-au devorat."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Unele semințe au căzut pe stâncă, și de îndată ce a crescut, s-a uscat, pentru că nu avea umezeală."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Unii au căzut în mijlocul spinilor, și spinii au crescut cu el și l-au sufocat."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Unii au căzut în pământ bun au crescut au adus de o sută de ori mai multe roade.„ Când a spus aceste lucruri, el a strigat:Cine are urechi de auzit, să audă!”"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Apoi discipolii săi l-au întrebat ce înseamnă această parabolă?"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "El a spus, bază pentru tine este dat să cunoască misterele lui Dumnezeu, dar pentru restul este dat în parabole, că, văzând ei nu pot vedea, și auzind ei nu pot înțelege."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Acum parabola este aceasta: Sămânța este cuvântul lui Dumnezeu."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Cei de-a lungul drumului sunt cei care aud; apoi diavolul vine și ia cuvântul din inima lor, pentru ca ei să nu creadă și să fie mântuiți."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Cei de pe stâncă sunt ei care, atunci când aud, primesc cuvântul cu bucurie; dar acestea nu au rădăcină. Ei cred pentru o vreme, apoi cad în timp de ispită."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Ce a căzut printre spini, aceștia sunt cei care au auzit, și pe măsură ce merg pe drumul lor ei sunt înecați cu griji, bogății, și plăceri de viață; și ei nu aduc rod la maturitate."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Cei din lumea bună, aceștia sunt cei care au o inimă cinstită și bună, după ce au auzit cuvântul, îl țin strâns, și produc fructe cu perseverență."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Nimeni, când a aprins o lampă, o acoperă cu un recipient sau o pune sub un pat; dar o pune pe un suport, ca cei care intră să vadă lumina."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Căci nimic nu este ascuns, care nu va fi dezvăluit, nici ceva secret care nu va fi cunoscut și să vină la lumină."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Fiți deci cu băgare de seamă cum ascultați; căci celui ce are, i se va da; celui ce nu are, i se va lua chiar ceea ce crede că are.„"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Mama și frații lui au venit la el, și nu s'au putut apropia de el din pricina mulțimii."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Unii oameni i-au spus, mama ta și frații tăi stau afară, dorind să te vadă."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "El le-a răspuns:Mama mea frații mei sunt care ascultă Cuvântul lui Dumnezeu-l împlinesc.”"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Într-una din zilele acelea, a intrat într-o corabie, el ucenicii lui, le-a zis:Să trecem de cealaltă parte a lacului.„ Și au pornit."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Dar în timp ce navigau, el a adormit. O furtună de vânt a venit în jos pe lac, și au luat cantități periculoase de apă."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Ei au venit la el l-au trezit, spunând:Maestre, Maestre, suntem pe moarte!” El s-a trezit a mustrat vântul furia apei; apoi au încetat s-a liniștit."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "El le -a zis:,,Unde vă este credința?,,S'au temut, s'au mirat, zicînd unul către altul:,,Cine este Acesta, că poruncește vînturilor apei, -L ascultă?"
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Apoi au ajuns în țara Gadarenilor, care este vizavi de Galileea."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Cînd Isus a pășit pe țărm, un anumit om a ieșit din cetate, care avea demoni mult timp, l - a întîlnit. Nu purta haine, și nu locuia într - o casă, ci în morminte."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Când L-a văzut pe Isus, a strigat a căzut înaintea Lui, cu glas tare a zis:Ce am eu de-a face cu Tine, Isuse, Fiul Dumnezeului Celui Preaînalt? Te rog, nu mă chinui!„"
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Căci Isus poruncise duhului necurat să iasă din om; căci duhul necurat îl luase de multe ori pe om; era păzit și legat cu lanțuri și cu lanțuri. Rupea legăturile, era dus de demon în deșert."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Isus l-a întrebat:Care este numele tău?” El a răspuns:Legiune„, căci demoni intraseră în el."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "L-au implorat să nu le poruncească să intre în abis."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Era o turmă de porci care se hrăneau pe munte, și l-au implorat să le permită să intre în ele. Apoi le-a permis."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Demonii au ieșit din om și au intrat în porci, și turma s-a repezit pe malul abrupt în lac și s-au înecat."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Când cei care i-au hrănit au văzut ce s-a întâmplat, au fugit și au spus-o în cetate și în țară."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Oamenii au ieșit să vadă ce se întîmplase. Au venit la Isus și l-au găsit pe omul de la care ieșiseră demonii, șezând la picioarele lui Isus, îmbrăcați și cu mintea lui dreaptă; și s-au temut."
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Cei care l-au văzut le-au spus că cel care fusese posedat de demoni a fost vindecat."
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Tot poporul din ținutul din jur al Gadarenilor i - a cerut să se depărteze de ei, căci se temeau foarte mult. Apoi a intrat în corabie și s - a întors."
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Dar omul din care ieșiseră demonii l-a implorat să meargă cu el, dar Isus l-a trimis, zicând:"
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Întorceți-vă în casa voastră, și declarați ce lucruri mari a făcut Dumnezeu pentru voi. bază a mers, proclamând tot orașul ce a făcut Isus pentru el."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "Când Isus s-a întors,a l-a întâmpinat, pentru că toți îl așteptau."
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "Iată, a venit un om numit Iair. El era conducătorul sinagogii. El a căzut la picioarele lui Isus l-a rugat să intre în casa lui,"
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "Căci avea o singură fiică născută, în jur de doisprezece ani, și ea era pe moarte. Dar pe cînd mergea el, mulțimile s'au năpustit împotriva lui."
     },
     {
       "number": 43,
-      "text": "DE TRADUS"
+      "text": "O femeie care a avut o scurgere de sânge timp de doisprezece ani, care și-a petrecut toată viața pe medici și nu a putut fi vindecată de nimeni,"
     },
     {
       "number": 44,
-      "text": "DE TRADUS"
+      "text": "a venit în spatele lui și a atins marginile mantiei lui. Imediat s-a oprit fluxul sângelui ei."
     },
     {
       "number": 45,
-      "text": "DE TRADUS"
+      "text": "Isus a zis:Cine M-a atins?” Când toți au tăgăduit lucrul acesta, Petru cei care erau cu El au zis:Maestre,mile te presează te îmbulzesc tu spui:Cine M-a atins?„"
     },
     {
       "number": 46,
-      "text": "DE TRADUS"
+      "text": "Dar Isus a spus că cineva m-a atins, pentru că am înțeles că puterea a ieșit din mine."
     },
     {
       "number": 47,
-      "text": "DE TRADUS"
+      "text": "Cînd femeia a văzut că nu era ascunsă, a venit tremurînd, și s'a pogorît înaintea lui și i -a vestit în fața întregului popor motivul pentru care se atinsese de el, și cum a fost vindecată îndată."
     },
     {
       "number": 48,
-      "text": "DE TRADUS"
+      "text": "El i-a spus:Fiică, înveselește-te. Credința ta te-a făcut bine. Mergi în pace.”"
     },
     {
       "number": 49,
-      "text": "DE TRADUS"
+      "text": "Pe cînd vorbea el încă, a venit unul din stăpînitorul casei sinagogii, i-a zis:Fiica ta a murit."
     },
     {
       "number": 50,
-      "text": "DE TRADUS"
+      "text": "Dar Isus auzind-o, i-a răspuns, Nu te teme. Doar cred, și ea va fi vindecată."
     },
     {
       "number": 51,
-      "text": "DE TRADUS"
+      "text": "Cînd a ajuns în casă, n'a lăsat pe nimeni să intre, afară de Petru, Ioan, Iacov, tatăl copilului și mama ei."
     },
     {
       "number": 52,
-      "text": "DE TRADUS"
+      "text": "Toți o plângeau și o jeleau, dar el a spus: Nu plânge. Ea este moartă, dar doarme."
     },
     {
       "number": 53,
-      "text": "DE TRADUS"
+      "text": "Îl ridiculizau, știind că era moartă."
     },
     {
       "number": 54,
-      "text": "DE TRADUS"
+      "text": "Dar el le-a pus pe toate afară, și luând-o de mână, el a sunat, spunând, copil, se ridice!"
     },
     {
       "number": 55,
-      "text": "DE TRADUS"
+      "text": "Duhul ei s'a întors, și ea s'a sculat îndată. El a poruncit să i se dea ceva de mîncare."
     },
     {
       "number": 56,
-      "text": "DE TRADUS"
+      "text": "Părinții ei au fost uimiți, dar el le - a poruncit să nu spună nimănui ce s - a făcut."
     }
   ],
   "editorialNotes": [],

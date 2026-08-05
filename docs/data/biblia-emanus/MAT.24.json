@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 24,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT24.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT24.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.24.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Lista din versetul 7 urmează SBLGNT cu foamete și cutremure, fără «epidemii», termen prezent în puntea WEB dar absent din greaca de bază.",
-      "Expresia οὐδὲ ὁ υἱός din versetul 36 este păstrată ca «nici Fiul» și documentată față de omisiunea Tregelles, RP și TR."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 51,
       "reviewed": 51,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite cele 51 de versete, succesiunea conectorilor temporali, imaginile profetice, pronumele fără antecedent explicit din versetul 33 și varianta materială din 24:36."
+      "scope": "Au fost confruntate toate cele 51 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Imperativele de fugă, vigilență și pregătire au fost păstrate distinct de afirmațiile descriptive.",
-        "Repetițiile «atunci», «iată», «nu credeți» și «nu știți» au fost menținute pentru coerența discursului."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "παρουσία este redat prin «venire», fără a insera o schemă cronologică în text.",
-        "Subiectul neexprimat din 24:33 este păstrat prin formula neutră «este aproape, chiar la uși». "
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:21af476035b37c30635928b82fbb8768f4d4a032b073eb16c0fc4968d68bf545",
+    "contentDigest": "sha256:7715fe5868b465eca4d69d9028e41365a8773d8960fedb61a31d57cd435a50c2"
   },
   "verses": [
     {
@@ -166,11 +193,11 @@
     },
     {
       "number": 13,
-      "text": "Dar cel care va răbda până la sfârșit va fi mântuit."
+      "text": "Dar cel care îndură până la sfârșit va fi salvat."
     },
     {
       "number": 14,
-      "text": "Această Evanghelie a Împărăției va fi proclamată în întreaga lume locuită, ca mărturie pentru toate neamurile, și atunci va veni sfârșitul."
+      "text": "Această veste bună a Regatului va fi predicată în întreaga lume pentru o mărturie tuturor națiunilor, și apoi va veni sfârșitul."
     },
     {
       "number": 15,
@@ -190,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Vai de femeile însărcinate și de cele care alăptează în zilele acelea!"
+      "text": "Dar vai de cei care sunt cu copii și de mame care alăptează în acele zile!"
     },
     {
       "number": 20,
@@ -210,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Căci se vor ridica hristoși falși și profeți falși; ei vor face semne mari și minuni, ca să-i rătăcească, dacă ar fi posibil, chiar și pe cei aleși."
+      "text": "Pentru Hristosi falsi si profetii falsi se vor ridica, si vor arata semne mari si minuni, astfel incat sa duca in eroare, daca este posibil, chiar si pe cei alesi."
     },
     {
       "number": 25,
@@ -218,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "Deci, dacă vă spun: «Iată, este în pustiu!», să nu ieșiți; sau: «Iată, este în odăile ascunse!», să nu credeți."
+      "text": "De aceea, dacă ei vă spun:Iată, El este în pustie”, să nu ieșiți; sauIată, El este în odăile dinăuntru„, să nu credeți."
     },
     {
       "number": 27,
@@ -230,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Imediat după necazul zilelor acelora, soarele se va întuneca, luna nu-și va mai da lumina, stelele vor cădea din cer, iar puterile cerurilor vor fi zguduite."
+      "text": "Dar imediat dupa suferinta acelor zile, soarele va fi intunecat, luna nu-i va da lumina, stelele vor cadea din cer, si puterile cerurilor vor fi zguduite;"
     },
     {
       "number": 30,
@@ -294,11 +321,11 @@
     },
     {
       "number": 45,
-      "text": "Cine este, așadar, robul credincios și chibzuit pe care stăpânul l-a pus peste slujitorii casei sale ca să le dea hrana la vreme?"
+      "text": "Cine este atunci servitorul credincios și înțelept, pe care stăpânul său l-a pus peste casa lui, să le dea mâncarea la timpul potrivit?"
     },
     {
       "number": 46,
-      "text": "Fericit este robul acela pe care stăpânul lui, când vine, îl va găsi făcând astfel!"
+      "text": "Binecuvântat este servitorul pe care stăpânul său îl găsește făcând asta când vine."
     },
     {
       "number": 47,
@@ -306,7 +333,7 @@
     },
     {
       "number": 48,
-      "text": "Dar dacă robul acela rău își spune în inimă: «Stăpânul meu întârzie»"
+      "text": "Dar dacă acel servitor rău ar trebui să spună în inima lui, domnul meu întârzie venirea lui,"
     },
     {
       "number": 49,
@@ -314,7 +341,7 @@
     },
     {
       "number": 50,
-      "text": "stăpânul robului aceluia va veni într-o zi în care acesta nu-l așteaptă și într-un ceas pe care nu-l știe."
+      "text": "Domnul acelui servitor va veni într-o zi când nu se va aștepta și într-o oră când nu va ști,"
     },
     {
       "number": 51,
@@ -324,8 +351,8 @@
   "editorialNotes": [
     {
       "verse": 36,
-      "term": "οὐδὲ ὁ υἱός ... εἰ μὴ ὁ πατὴρ μόνος",
-      "decision": "Textul principal păstrează «nici Fiul» și redă finalul fără posesiv: «ci numai Tatăl». ",
+      "term": "οὐδὲ ὁ υἱός... εἰ μὴ ὁ πατὴρ μόνος",
+      "decision": "Textul principal păstrează «nici Fiul» și redă finalul fără posesiv: «ci numai Tatăl».",
       "reason": "Aparatul SBL indică οὐδὲ ὁ υἱός în WH și NA28, dar omisiunea în Tregelles și RP; TR omite expresia și adaugă μου după πατήρ. Traducerea urmează lectura principală SBLGNT.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",

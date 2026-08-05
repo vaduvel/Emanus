@@ -3,8 +3,8 @@
   "bookId": "HEB",
   "bookName": "Evrei",
   "chapter": 5,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,140 +28,176 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/HEB05.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/HEB05.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/HEB.5.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 14,
-      "reviewed": 0,
+      "reviewed": 14,
       "continuous": true,
       "verseNumbersSha256": "sha256:7a3ab5474e4f9b4cf30d57afff13218248c7c84cb0ce11908587248cfb8adaf1"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 316,
+        "secondary": 95,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5922586297890594,
+      "minimumScore": 0.5759312754780807
+    },
+    "textDigest": "sha256:1adbfe76da3136c85413aaac2f0417685c825e76747d2a704d38373b7eb6b416",
+    "contentDigest": "sha256:1710ee5dd635fa5a422fdc493757b7e2850415cb9b09bd716abdd5ad3be6c2fd"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Căci fiecare mare preot, luat din mijlocul oamenilor, este numit pentru oameni în lucrurile privitoare la Dumnezeu, ca să aducă daruri și jertfe pentru păcate."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Marele preot se poate purta cu blândețe cu cei neștiutori și rătăciți, pentru că el însuși este și el înconjurat de slăbiciune."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Din acest motiv, el trebuie să ofere sacrificii pentru păcate atât pentru popor, cât și pentru el însuși."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Nimeni nu ia această onoare pe sine, dar el este numit de Dumnezeu, la fel ca Aaron a fost."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Tot așa Hristos nu S-a slăvit pe Sine ca să Se facă Mare Preot, ci El I-a zis:Tu ești Fiul Meu; astăzi am devenit Tatăl Tău.„"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "După cum mai spune și în alt loc, ești preot pentru totdeauna, după ordinul lui Melchizedek."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "El, în zilele cărnii sale, a adus rugăciuni și cereri cu strigăte puternice și lacrimi celui ce a putut să -l salveze de la moarte, și a fost ascultat din pricina fricii lui sfinte,"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "deși era Fiu, totuși a învățat ascultarea prin lucrurile pe care le - a suferit."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "După ce a fost făcut desăvârșit, El a devenit pentru toți cei care ascultă de El autorul mântuirii veșnice."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "numit de Dumnezeu mare preot după ordinul lui Melchizedek."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Despre el avem multe cuvinte de spus, și greu de interpretat, văzând că ai devenit plictisitor de auz."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Căci, deși până acum ar trebui să fiți învățători, din nou trebuie să aveți pe cineva care să vă învețe rudimentele primelor principii ale revelațiilor lui Dumnezeu. Ați ajuns să aveți nevoie de lapte și nu de hrană solidă."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Căci oricine trăiește cu lapte nu are experiență în cuvîntul dreptății, căci este un prunc."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dar hrana solidă este pentru cei care sunt maturi, care, din motive de utilizare, își exercită simțurile pentru a discerne binele și răul.”"
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 18,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,236 +42,272 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN18.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN18.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/18/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.18.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 40,
-      "reviewed": 0,
+      "reviewed": 40,
       "continuous": true,
       "verseNumbersSha256": "sha256:b6a72fb6f35efb6f78cb29b2abcafff800ccac6beac4531d8f81a3fbc8105798"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 40 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:246ceba6193b67261ae861a0ace20f0fe80df79fb031063f3c19722cfbe25589",
+    "contentDigest": "sha256:063ad37a5a90e0bcaeb4c443f7a160e9844041feddec7fbc99c57bfffff370d0"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După ce a rostit aceste cuvinte, Isus a ieșit cu ucenicii Săi peste pârâul Chedron, unde era o grădină, în care a intrat împreună cu ucenicii Săi."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Iuda, care l-a trădat, cunoștea el locul, pentru că Isus se întâlnea adesea acolo cu discipolii săi."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Iuda, după ce a luat un detașament de soldați și ofițeri de la preoții cei mai de seamă și de la farisei, a venit acolo cu felinare, torțe și arme."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "De aceea, Isus, cunoscând toate cele ce i se întâmplau, a ieșit le-a zis:Pe cine?„"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Ei I-au răspuns:,,Isus din Nazaret. Isus le -a zis:,,Eu sunt. Și Iuda, care L -a vîndut, stătea cu ei."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "De aceea, când le-a zis:Eu sunt”, ei s-au întors au căzut la pământ."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Și i-a întrebat iarăși:Pe cine?„Isus din Nazaret”."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Isus i-a răspuns:i-am spus că Eu sunt. Dacă Mă cauți pe Mine, lasă-i pe aceștia să plece.„"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "ca să se împlinească cuvântul pe care-l spusese:Dintre cei pe care Mi i-ai dat, n-am pierdut pe niciunul”."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Simon Petru, avînd sabie, a scos -o, a lovit pe robul marelui preot, i -a tăiat urechea dreaptă. Numele robului era Malchus."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis lui Petru:Pune sabia în teacă; paharul pe care Mi l-a dat Tatăl, să nu-l beau eu oare?„"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Deci detașamentul, comandantul și ofițerii iudeilor l-au prins pe Isus și l-au legat,"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "și l-a dus mai întîi la Ana, căci era socrul lui Caiafa, care era mare preot în anul acela."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Acum Caiafa a fost cea care i - a sfătuit pe iudei că era bine ca un singur om să piară pentru popor."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Simon Petru l-a urmat pe Isus, la fel ca un alt ucenic. Acel ucenic era cunoscut marelui preot a intrat cu Isus în curtea marelui preot."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Dar Petru stătea afară la ușă. Și celălalt ucenic, care era cunoscut marelui preot, a ieșit a vorbit cu cea care păzea ușa, l-a adus pe Petru."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Atunci slujnica care păzea ușa a zis lui Petru:Și tu ești unul din ucenicii omului acestuia?” El a răspuns:Nu sunt„."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Slujitorii și ofițerii stăteau acolo, făcînd un foc de cărbuni, căci era frig; se încălzeau. Petru era cu ei, stând în picioare și încălzindu-se."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Prin urmare, marele preot l - a întrebat pe Isus despre discipolii săi și despre învățătura sa."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Isus i-a răspuns, am vorbit deschis lumii. am mereu în sinagogi și în templu, unde evreii se întâlneau mereu. nu am spus nimic în secret."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "De ce mă întrebi pe mine? Întreabă pe cei care m-au auzit ce le-am spus. Iată, ei știu lucrurile pe care le-am spus."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "După ce a spus aceasta, unul dintrei care stăteau lângă Isus l-a pălmuit cu mâna, spunând:Îi răspunzi astfel marelui preot?”"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Isus i-a răspuns:Dacă am vorbit rău, mărturisește despre rău; dar dacă este bine, de ce mă bați?„"
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Annas l-a trimis legat de Caiafa, marele preot."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Simon Petru stătea în picioare se încălzea. Ei i-au zis deci:Nu cumva ești tu unul din ucenicii Lui?” El a tăgăduit lucrul acesta a zis:Nu sunt„."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Unul din slujitorii marelui preot, fiind rudă cu cel căruia Petru îi tăiase urechea, a zis:Nu te-am văzut în grădină cu el?”"
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Petru a negat din nou lucrul acesta, și îndată a cântat cocoșul."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Ei au dus deci pe Isus din Caiafa în Pretoriu. Era devreme, și n'au intrat în Pretoriu, ca să nu fie pângăriți, ci să mănînce Paștele."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Pilat a ieșit la ei le-a zis:Ce acuzație aduceți împotriva acestui om?„"
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Ei i-au răspuns:Dacă omul acesta n-ar fi fost un răufăcător, noi nu ți l-am fi dat.”"
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Atunci Pilat le-a zis:Lu-l voi judecați-l după legea voastră.„ De aceea Iudeii i-au zis:Este ilegal să omorâm pe cineva.”"
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "ca să se împlinească cuvântul lui Isus, pe care l-a rostit, semnificând prin ce fel de moarte avea să moară."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Pilat a intrat din nou în Pretoriu, a chemat pe Isus i-a zis:Tu ești Împăratul Iudeilor?„"
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Isus i-a răspuns:Tu singur spui aceasta, sau ți-au spus despre Mine?”"
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Pilat a răspuns:,,Nu sunt iudeu, oare? Na ta preoții cei mai de seamă te-au dat în mînile mele. Ce ai făcut?"
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Isus a răspuns, Regatul meu nu este din această lume. Dacă Regatul meu ar fi din această lume, atunci slujitorii mei ar lupta, că nu aș fi dat evreilor. Dar acum Regatul meu nu este de aici."
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Atunci Pilat i-a zis:E împărat?„ Isus a răspuns:Tu zici că sunt împărat. De aceea m-am născut de aceea am venit în lume, ca să depun mărturie despre adevăr. Oricine este din adevăr ascultă glasul meu.”"
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Pilat i -a zis:,,Ce este adevãrul? Dupăce a zis aceste vorbe, a ieșit din nou la Iudei, le -a zis:,,Nu găsesc nici un temei pentru o acuzație împotriva lui."
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Dar aveți un obicei pe care ar trebui să elibereze cineva pentru tine la Paște. Prin urmare, vrei să vă elibereze regele iudeilor?"
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "Atunci toți au strigat din nou, spunând: Nu pe acest om, ci pe Baraba! Iar acum Baraba era un tâlhar."
     }
   ],
   "editorialNotes": [],

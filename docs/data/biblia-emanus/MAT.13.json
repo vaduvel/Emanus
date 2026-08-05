@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 13,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT13.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT13.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.13.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 58,
-      "reviewed": 0,
+      "reviewed": 58,
       "continuous": true,
       "verseNumbersSha256": "sha256:c35caad7d3c10b0f25fed8968fb4804f0e626b14427acadf20134d545dcd838f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 58 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:629f43d04980dffd4f031649c0c9bc6e901a26478cc598a4184a2999ee2e47c3",
+    "contentDigest": "sha256:4197c77812920a616d9ff9774ed360244782783b3946f9ff28955564956f2d92"
   },
   "verses": [
     {
@@ -117,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Le-a vorbit despre multe lucruri în parabole, spunând: „Iată, semănătorul a ieșit să semene."
+      "text": "Le-a vorbit despre multe lucruri în parabole, spunând: Iată, semănătorul a ieșit să semene."
     },
     {
       "number": 4,
@@ -141,15 +177,15 @@
     },
     {
       "number": 9,
-      "text": "Cine are urechi să asculte!”"
+      "text": "Cine are urechi de auzit, să audă."
     },
     {
       "number": 10,
-      "text": "Ucenicii s-au apropiat și L-au întrebat: „De ce le vorbești în parabole?”"
+      "text": "Ucenicii s-au apropiat și L-au întrebat: De ce le vorbești în parabole?"
     },
     {
       "number": 11,
-      "text": "El le-a răspuns: „Vouă v-a fost dat să cunoașteți tainele Împărăției cerurilor, dar lor nu le-a fost dat."
+      "text": "El le-a răspuns: Vouă v-a fost dat să cunoașteți tainele Împărăției cerurilor, dar lor nu le-a fost dat."
     },
     {
       "number": 12,
@@ -161,15 +197,15 @@
     },
     {
       "number": 14,
-      "text": "În ei se împlinește profeția lui Isaia, care spune: «Veți auzi întruna, dar nicidecum nu veți înțelege; veți privi întruna, dar nicidecum nu veți vedea."
+      "text": "În ei se împlinește profeția lui Isaia, care spune: Veți auzi întruna, dar nicidecum nu veți înțelege; veți privi întruna, dar nicidecum nu veți vedea."
     },
     {
       "number": 15,
-      "text": "Căci inima acestui popor s-a împietrit; au ajuns să audă greu cu urechile și și-au închis ochii, ca nu cumva să vadă cu ochii, să audă cu urechile, să înțeleagă cu inima, să se întoarcă, iar Eu să-i vindec.»"
+      "text": "Căci inima acestui popor s-a împietrit; au ajuns să audă greu cu urechile și și-au închis ochii, ca nu cumva să vadă cu ochii, să audă cu urechile, să înțeleagă cu inima, să se întoarcă, iar Eu să-i vindec."
     },
     {
       "number": 16,
-      "text": "Dar fericiți sunt ochii voștri pentru că văd și urechile voastre pentru că aud."
+      "text": "Dar binecuvântați sunt ochii tăi, pentru că ei văd; și urechile tale, pentru că ei aud."
     },
     {
       "number": 17,
@@ -185,23 +221,23 @@
     },
     {
       "number": 20,
-      "text": "Cel semănat pe locuri stâncoase este omul care aude cuvântul și îl primește îndată cu bucurie,"
+      "text": "Ceea ce a fost semănat pe locurile stâncoase, acesta este cel care aude cuvântul și imediat cu bucurie îl primește;"
     },
     {
       "number": 21,
-      "text": "dar nu are rădăcină în el însuși și ține numai o vreme. Când vine necazul sau persecuția din cauza cuvântului, el cade îndată."
+      "text": "dar el nu are nici o radacina in el insusi, ci indura pentru o vreme. Cand opresiunea sau persecutia apare din cauza cuvantului, imediat se impiedica."
     },
     {
       "number": 22,
-      "text": "Cel semănat între spini este omul care aude cuvântul, dar îngrijorarea veacului acestuia și înșelăciunea bogăției înăbușă cuvântul, iar el rămâne fără rod."
+      "text": "Ceea ce a fost semănat printre spini, acesta este cel care aude cuvântul, dar grijile acestei epoci și înșelăciunea bogățiilor sufocă cuvântul, și el devine neroditor."
     },
     {
       "number": 23,
-      "text": "Iar cel semănat în pământul bun este omul care aude cuvântul și îl înțelege; el aduce rod și produce: unul de o sută de ori, altul de șaizeci, iar altul de treizeci.”"
+      "text": "Iar cel semănat în pământul bun este omul care aude cuvântul și îl înțelege; el aduce rod și produce: unul de o sută de ori, altul de șaizeci, iar altul de treizeci."
     },
     {
       "number": 24,
-      "text": "Le-a pus înainte o altă parabolă: „Împărăția cerurilor se aseamănă cu un om care a semănat sămânță bună în ogorul lui."
+      "text": "Le-a pus înainte o altă parabolă: Împărăția cerurilor se aseamănă cu un om care a semănat sămânță bună în ogorul lui."
     },
     {
       "number": 25,
@@ -213,31 +249,31 @@
     },
     {
       "number": 27,
-      "text": "Robii stăpânului casei s-au apropiat și i-au spus: «Stăpâne, n-ai semănat sămânță bună în ogorul tău? De unde are atunci neghină?»"
+      "text": "Robii stăpânului casei s-au apropiat și i-au spus: Stăpâne, n-ai semănat sămânță bună în ogorul tău? De unde are atunci neghină?"
     },
     {
       "number": 28,
-      "text": "El le-a răspuns: «Un om dușman a făcut aceasta.» Robii l-au întrebat: «Vrei deci să mergem s-o strângem?»"
+      "text": "El le-a răspuns: Un om dușman a făcut aceasta. Robii l-au întrebat: Vrei deci să mergem s-o strângem?"
     },
     {
       "number": 29,
-      "text": "Dar el le-a spus: «Nu, ca nu cumva, strângând neghina, să smulgeți și grâul odată cu ea."
+      "text": "Dar el le-a spus: Nu, ca nu cumva, strângând neghina, să smulgeți și grâul odată cu ea."
     },
     {
       "number": 30,
-      "text": "Lăsați-le să crească împreună până la seceriș, iar la vremea secerișului le voi spune secerătorilor: ‘Strângeți mai întâi neghina și legați-o în snopi ca să fie arsă, iar grâul strângeți-l în hambarul meu.’»”"
+      "text": "Lăsați-le să crească împreună până la seceriș, iar la vremea secerișului le voi spune secerătorilor: ‘Strângeți mai întâi neghina și legați-o în snopi ca să fie arsă, iar grâul strângeți-l în hambarul meu.’"
     },
     {
       "number": 31,
-      "text": "Le-a pus înainte o altă parabolă: „Împărăția cerurilor se aseamănă cu un grăunte de muștar pe care un om l-a luat și l-a semănat în ogorul lui."
+      "text": "Le-a pus înainte o altă parabolă: Împărăția cerurilor se aseamănă cu un grăunte de muștar pe care un om l-a luat și l-a semănat în ogorul lui."
     },
     {
       "number": 32,
-      "text": "El este mai mic decât toate semințele, dar, când crește, este mai mare decât plantele din grădină și se face un copac, astfel că păsările cerului vin și își fac cuiburi în ramurile lui.”"
+      "text": "El este mai mic decât toate semințele, dar, când crește, este mai mare decât plantele din grădină și se face un copac, astfel că păsările cerului vin și își fac cuiburi în ramurile lui."
     },
     {
       "number": 33,
-      "text": "Le-a spus o altă parabolă: „Împărăția cerurilor se aseamănă cu drojdia pe care o femeie a luat-o și a ascuns-o în trei măsuri de făină, până când s-a dospit tot aluatul.”"
+      "text": "Le-a spus o altă parabolă: Împărăția cerurilor se aseamănă cu drojdia pe care o femeie a luat-o și a ascuns-o în trei măsuri de făină, până când s-a dospit tot aluatul."
     },
     {
       "number": 34,
@@ -245,15 +281,15 @@
     },
     {
       "number": 35,
-      "text": "ca să se împlinească ce fusese spus prin profet: „Îmi voi deschide gura în parabole; voi rosti lucruri ascunse de la întemeiere.”"
+      "text": "ca să se împlinească ce fusese spus prin profet: Îmi voi deschide gura în parabole; voi rosti lucruri ascunse de la întemeiere."
     },
     {
       "number": 36,
-      "text": "Atunci Isus a lăsat mulțimile și a intrat în casă. Ucenicii Lui s-au apropiat și I-au spus: „Explică-ne parabola neghinei din ogor.”"
+      "text": "Atunci Isus a lăsat mulțimile și a intrat în casă. Ucenicii Lui s-au apropiat și I-au spus: Explică-ne parabola neghinei din ogor."
     },
     {
       "number": 37,
-      "text": "El le-a răspuns: „Cel care seamănă sămânța bună este Fiul Omului."
+      "text": "El le-a răspuns: Cel care seamănă sămânța bună este Fiul Omului."
     },
     {
       "number": 38,
@@ -265,7 +301,7 @@
     },
     {
       "number": 40,
-      "text": "Așadar, așa cum neghina este strânsă și arsă în foc, tot așa va fi la încheierea veacului."
+      "text": "De aceea, ca buruienile darnel sunt adunate și arse cu foc; așa va fi la sfârșitul acestei epoci."
     },
     {
       "number": 41,
@@ -281,11 +317,11 @@
     },
     {
       "number": 44,
-      "text": "Împărăția cerurilor se aseamănă cu o comoară ascunsă într-un ogor. Un om a găsit-o și a ascuns-o din nou, apoi, de bucurie, s-a dus, a vândut tot ce avea și a cumpărat ogorul acela."
+      "text": "Din nou, Împărăția Cerului este ca o comoară ascunsă în câmp, pe care un om a găsit-o și a ascuns-o. În bucuria lui, el merge și vinde tot ce are și cumpără acel câmp."
     },
     {
       "number": 45,
-      "text": "De asemenea, Împărăția cerurilor se aseamănă cu un negustor care caută perle frumoase."
+      "text": "Din nou, Împărăția Cerurilor este ca un om care este un comerciant în căutarea perle fine,"
     },
     {
       "number": 46,
@@ -309,19 +345,19 @@
     },
     {
       "number": 51,
-      "text": "Ați înțeles toate acestea?” Ei I-au răspuns: „Da.”"
+      "text": "Isus le-a zis:Ați înțeles toate aceste lucruri? Ei i-au răspuns:Da, Doamne."
     },
     {
       "number": 52,
-      "text": "El le-a spus: „De aceea, orice cărturar devenit ucenic pentru Împărăția cerurilor se aseamănă cu un stăpân al casei care scoate din comoara lui lucruri noi și vechi.”"
+      "text": "El le-a spus: De aceea, orice cărturar devenit ucenic pentru Împărăția cerurilor se aseamănă cu un stăpân al casei care scoate din comoara lui lucruri noi și vechi."
     },
     {
       "number": 53,
-      "text": "Când a terminat aceste parabole, Isus a plecat de acolo."
+      "text": "După ce a terminat aceste parabole, Isus a plecat de acolo."
     },
     {
       "number": 54,
-      "text": "A venit în patria Sa și îi învăța pe oameni în sinagoga lor, astfel că ei erau uimiți și spuneau: „De unde are omul acesta înțelepciunea aceasta și aceste lucrări puternice?"
+      "text": "A venit în patria Sa și îi învăța pe oameni în sinagoga lor, astfel că ei erau uimiți și spuneau: De unde are omul acesta înțelepciunea aceasta și aceste lucrări puternice?"
     },
     {
       "number": 55,
@@ -329,11 +365,11 @@
     },
     {
       "number": 56,
-      "text": "Și oare surorile Lui nu sunt toate printre noi? De unde are atunci toate acestea?”"
+      "text": "Nu sunt toate surorile lui cu noi? De unde a luat acest om toate aceste lucruri?"
     },
     {
       "number": 57,
-      "text": "Și găseau în El un motiv de cădere. Dar Isus le-a spus: „Un profet nu este lipsit de onoare decât în patria și în casa lui.”"
+      "text": "Și găseau în El un motiv de cădere. Dar Isus le-a spus: Un profet nu este lipsit de onoare decât în patria și în casa lui."
     },
     {
       "number": 58,

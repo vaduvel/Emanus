@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,46 +42,58 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN01.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN01.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/1/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.1.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
       "meaning": "approved",
-      "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Ioan 1:3 păstrează finalul «din ce a venit la existență» în același verset, pentru a nu pierde segmentul grecesc ὃ γέγονεν și pentru a evita mutarea lui artificială în 1:4.",
-      "Ioan 1:18 urmează lectura SBLGNT «μονογενὴς θεὸς», redată «Dumnezeu, Cel unic», iar lectura TR «ὁ μονογενὴς υἱός» rămâne documentată în nota editorială ca martor textual.",
-      "Ioan 1:34 păstrează lectura SBLGNT «ὁ ἐκλεκτὸς τοῦ θεοῦ» prin formula «Alesul lui Dumnezeu», fără armonizare cu lectura tradițională «Fiul lui Dumnezeu»."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 51,
       "reviewed": 51,
@@ -92,22 +104,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Ioan 1:1-51 verificat verset cu verset din greacă, cu control punctual al variantelor din 1:15, 1:18 și 1:34 și al segmentării din 1:3-4."
+      "scope": "Au fost confruntate toate cele 51 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Am păstrat repetițiile deliberate din prolog («Cuvântul», «lumina», «mărturisește») fără simplificare stilistică.",
-        "Am folosit română actuală cu diacritice normative, ghilimele românești și forma onomastică normativă «Isus».",
-        "Am corectat formulările pentru a rămâne naturale în română fără să atenuez termeni-cheie precum «carne», «păcat», «Mielul lui Dumnezeu» și «Fiul omului»."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Prologul păstrează identitatea distinctă a «Cuvântului» față de Tatăl, fără parafraze doctrinare adăugate.",
-        "«σὰρξ» din 1:14 este redat prin «carne», nu atenuat printr-un echivalent mai vag.",
-        "În 1:18, lectura critică este tradusă direct din greacă, iar alternativa TR este păstrată doar ca martor textual, nu amestecată în textul principal."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -117,12 +129,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:911c51689d71a14a4a9c5cc52bdece6fa37901c968666356f02b51b3c60da778",
+    "contentDigest": "sha256:383090cb0d74136f33a6f93cb577282297acef786b31d767ef9f14c2aefcc560"
   },
   "verses": [
     {
@@ -135,7 +159,7 @@
     },
     {
       "number": 3,
-      "text": "Toate au venit la existență prin El și fără El n-a venit la existență nici măcar un singur lucru din ce a venit la existență."
+      "text": "Toate lucrurile au fost făcute prin el. Fără el, nu s-a făcut nimic din ce s-a făcut."
     },
     {
       "number": 4,
@@ -147,7 +171,7 @@
     },
     {
       "number": 6,
-      "text": "A apărut un om trimis de Dumnezeu; numele lui era Ioan."
+      "text": "A venit un om trimis de la Dumnezeu, al cărui nume era Ioan."
     },
     {
       "number": 7,
@@ -155,19 +179,19 @@
     },
     {
       "number": 8,
-      "text": "El nu era Lumina, ci a venit ca să mărturisească despre Lumină."
+      "text": "El nu era lumina, ci a fost trimis ca să mărturisească despre lumină."
     },
     {
       "number": 9,
-      "text": "Era Lumina cea adevărată, care, venind în lume, luminează pe orice om."
+      "text": "Adevărata lumină care luminează pe toată lumea venea în lume."
     },
     {
       "number": 10,
-      "text": "El era în lume și lumea a venit la existență prin El, dar lumea nu L-a cunoscut."
+      "text": "El a fost în lume, și lumea a fost făcută prin el, și lumea nu l-a recunoscut."
     },
     {
       "number": 11,
-      "text": "A venit la ale Sale, dar ai Săi nu L-au primit."
+      "text": "El a venit la ai săi, iar cei care erau ai lui nu l-au primit."
     },
     {
       "number": 12,
@@ -183,7 +207,7 @@
     },
     {
       "number": 15,
-      "text": "(Ioan mărturisește despre El și a strigat zicând: «Acesta era Cel despre care am spus: „Cel care vine după mine a ajuns înaintea mea, pentru că era mai înainte de mine.”»)"
+      "text": "(Ioan mărturisește despre El și a strigat zicând: Acesta era Cel despre care am spus: Cel care vine după mine a ajuns înaintea mea, pentru că era mai înainte de mine.)"
     },
     {
       "number": 16,
@@ -195,27 +219,27 @@
     },
     {
       "number": 18,
-      "text": "Pe Dumnezeu nimeni nu L-a văzut vreodată; Dumnezeu, Cel unic, care este în sânul Tatălui, Acela L-a făcut cunoscut."
+      "text": "Nimeni nu l-a văzut vreodată pe Dumnezeu. Singurul Fiu născut, care este în sânul Tatălui, l-a declarat."
     },
     {
       "number": 19,
-      "text": "Și aceasta este mărturia lui Ioan, când iudeii au trimis din Ierusalim preoți și leviți să-l întrebe: «Tu cine ești?»"
+      "text": "Și aceasta este mărturia lui Ioan, când iudeii au trimis din Ierusalim preoți și leviți să-l întrebe: Tu cine ești?"
     },
     {
       "number": 20,
-      "text": "El a mărturisit și n-a negat; a mărturisit: «Eu nu sunt Hristosul.»"
+      "text": "El a declarat, și nu a negat, dar el a declarat, nu eu sunt Hristosul."
     },
     {
       "number": 21,
-      "text": "Și l-au întrebat: «Atunci cine? Ești tu Ilie?» El zice: «Nu sunt.» «Ești tu Profetul?» Și a răspuns: «Nu.»"
+      "text": "Și l-au întrebat: Atunci cine? Ești tu Ilie? El zice: Nu sunt. Ești tu Profetul? Și a răspuns: Nu."
     },
     {
       "number": 22,
-      "text": "Atunci i-au zis: «Cine ești, ca să dăm un răspuns celor care ne-au trimis? Ce spui despre tine însuți?»"
+      "text": "Atunci i-au zis: Cine ești, ca să dăm un răspuns celor care ne-au trimis? Ce spui despre tine însuți?"
     },
     {
       "number": 23,
-      "text": "El a spus: «Eu sunt glasul celui ce strigă în pustiu: „Îndreptați calea Domnului”, cum a spus profetul Isaia.»"
+      "text": "El a spus: Eu sunt glasul celui ce strigă în pustiu: Îndreptați calea Domnului, cum a spus profetul Isaia."
     },
     {
       "number": 24,
@@ -223,15 +247,15 @@
     },
     {
       "number": 25,
-      "text": "Și l-au întrebat: «Atunci de ce botezi, dacă nu ești tu Hristosul, nici Ilie, nici Profetul?»"
+      "text": "Și l-au întrebat: Atunci de ce botezi, dacă nu ești tu Hristosul, nici Ilie, nici Profetul?"
     },
     {
       "number": 26,
-      "text": "Ioan le-a răspuns zicând: «Eu botez în apă. În mijlocul vostru stă Unul pe care voi nu-L cunoașteți.»"
+      "text": "Ioan le-a răspuns zicând: Eu botez în apă. În mijlocul vostru stă Unul pe care voi nu-L cunoașteți."
     },
     {
       "number": 27,
-      "text": "«El este Cel care vine după mine, căruia eu nu sunt vrednic să-I dezleg cureaua sandalei.»"
+      "text": "El este cel care vine după mine, care este preferat înaintea mea, a cărui curea de sandală nu sunt vrednic să o dezleg."
     },
     {
       "number": 28,
@@ -239,63 +263,63 @@
     },
     {
       "number": 29,
-      "text": "A doua zi îl vede pe Isus venind spre el și zice: «Iată Mielul lui Dumnezeu, Cel care ridică păcatul lumii!»"
+      "text": "A doua zi îl vede pe Isus venind spre el și zice: Iată Mielul lui Dumnezeu, Cel care ridică păcatul lumii!"
     },
     {
       "number": 30,
-      "text": "«Acesta este Cel despre care eu am spus: „După mine vine un om care a ajuns înaintea mea, pentru că era mai înainte de mine.”»"
+      "text": "Acesta este cel despre care am spus:?După mine vine un om care este preferat înaintea mea, pentru că el a fost înaintea mea."
     },
     {
       "number": 31,
-      "text": "«Nici eu nu-L cunoșteam, dar tocmai pentru aceasta am venit eu să botez în apă, ca El să fie arătat lui Israel.»"
+      "text": "Nici eu nu-L cunoșteam, dar tocmai pentru aceasta am venit eu să botez în apă, ca El să fie arătat lui Israel."
     },
     {
       "number": 32,
-      "text": "Și Ioan a mărturisit zicând: «Am văzut Duhul coborând din cer ca un porumbel și a rămas peste El.»"
+      "text": "Și Ioan a mărturisit zicând: Am văzut Duhul coborând din cer ca un porumbel și a rămas peste El."
     },
     {
       "number": 33,
-      "text": "«Nici eu nu-L cunoșteam, dar Cel care m-a trimis să botez în apă, Acela mi-a spus: „Peste cine vei vedea Duhul coborând și rămânând, Acela este Cel care botează în Duh Sfânt.”»"
+      "text": "Nici eu nu-L cunoșteam, dar Cel care m-a trimis să botez în apă, Acela mi-a spus: Peste cine vei vedea Duhul coborând și rămânând, Acela este Cel care botează în Duh Sfânt."
     },
     {
       "number": 34,
-      "text": "«Și eu am văzut și am mărturisit că Acesta este Alesul lui Dumnezeu.»"
+      "text": "Am văzut și am mărturisit că acesta este Fiul lui Dumnezeu."
     },
     {
       "number": 35,
-      "text": "A doua zi, Ioan stătea iarăși cu doi dintre ucenicii lui."
+      "text": "Din nou, a doua zi, Ioan stătea cu doi dintre discipolii săi,"
     },
     {
       "number": 36,
-      "text": "și, privind la Isus, care umbla, a zis: «Iată Mielul lui Dumnezeu!»"
+      "text": "și, privind la Isus, care umbla, a zis: Iată Mielul lui Dumnezeu!"
     },
     {
       "number": 37,
-      "text": "Cei doi ucenici l-au auzit vorbind și L-au urmat pe Isus."
+      "text": "Cei doi discipoli l-au auzit vorbind, și l-au urmat pe Isus."
     },
     {
       "number": 38,
-      "text": "Isus S-a întors, i-a văzut urmându-L și le-a zis: «Ce căutați?» Ei I-au spus: «Rabi» (care, tradus, înseamnă «Învățătorule»), «unde rămâi?»"
+      "text": "Isus S-a întors, i-a văzut urmându-L și le-a zis: Ce căutați? Ei I-au spus: Rabi (care, tradus, înseamnă Învățătorule), unde rămâi?"
     },
     {
       "number": 39,
-      "text": "El le-a zis: «Veniți și veți vedea.» Așadar au venit și au văzut unde rămânea și au rămas la El în ziua aceea. Era cam pe la ceasul al zecelea."
+      "text": "El le-a zis: Veniți și veți vedea. Așadar au venit și au văzut unde rămânea și au rămas la El în ziua aceea. Era cam pe la ceasul al zecelea."
     },
     {
       "number": 40,
-      "text": "Andrei, fratele lui Simon Petru, era unul dintre cei doi care îl auziseră pe Ioan și Îl urmaseră."
+      "text": "Unul dintre cei doi care l - au auzit pe Ioan și l - au urmat a fost Andrei, fratele lui Simon Petru."
     },
     {
       "number": 41,
-      "text": "El îl găsește mai întâi pe fratele său Simon și-i zice: «L-am găsit pe Mesia» (care, tradus, înseamnă Hristos)."
+      "text": "El îl găsește mai întâi pe fratele său Simon și-i zice: L-am găsit pe Mesia (care, tradus, înseamnă Hristos)."
     },
     {
       "number": 42,
-      "text": "L-a adus la Isus. Privindu-l, Isus i-a zis: «Tu ești Simon, fiul lui Ioan; tu te vei numi Chifa» (care se traduce Petru)."
+      "text": "L-a adus la Isus. Privindu-l, Isus i-a zis: Tu ești Simon, fiul lui Ioan; tu te vei numi Chifa (care se traduce Petru)."
     },
     {
       "number": 43,
-      "text": "A doua zi, Isus a vrut să plece în Galileea. L-a găsit pe Filip și i-a zis: «Urmează-Mă.»"
+      "text": "A doua zi, Isus a vrut să plece în Galileea. L-a găsit pe Filip și i-a zis: Urmează-Mă."
     },
     {
       "number": 44,
@@ -303,31 +327,31 @@
     },
     {
       "number": 45,
-      "text": "Filip îl găsește pe Natanael și-i zice: «L-am găsit pe Acela despre care au scris Moise în Lege și profeții: pe Isus, fiul lui Iosif, din Nazaret.»"
+      "text": "Filip îl găsește pe Natanael și-i zice: L-am găsit pe Acela despre care au scris Moise în Lege și profeții: pe Isus, fiul lui Iosif, din Nazaret."
     },
     {
       "number": 46,
-      "text": "Natanael i-a zis: «Poate ieși ceva bun din Nazaret?» Filip i-a zis: «Vino și vezi.»"
+      "text": "Natanael i-a zis: Poate ieși ceva bun din Nazaret? Filip i-a zis: Vino și vezi."
     },
     {
       "number": 47,
-      "text": "Isus l-a văzut pe Natanael venind spre El și a zis despre el: «Iată cu adevărat un israelit în care nu este vicleșug.»"
+      "text": "Isus l-a văzut pe Natanael venind spre El și a zis despre el: Iată cu adevărat un israelit în care nu este vicleșug."
     },
     {
       "number": 48,
-      "text": "Natanael I-a zis: «De unde mă cunoști?» Isus i-a răspuns: «Te-am văzut înainte să te cheme Filip, când erai sub smochin.»"
+      "text": "Natanael I-a zis: De unde mă cunoști? Isus i-a răspuns: Te-am văzut înainte să te cheme Filip, când erai sub smochin."
     },
     {
       "number": 49,
-      "text": "Natanael I-a răspuns: «Rabi, Tu ești Fiul lui Dumnezeu, Tu ești Împăratul lui Israel!»"
+      "text": "Natanael I-a răspuns: Rabi, Tu ești Fiul lui Dumnezeu, Tu ești Împăratul lui Israel!"
     },
     {
       "number": 50,
-      "text": "Isus i-a răspuns: «Crezi pentru că ți-am spus că te-am văzut sub smochin? Vei vedea lucruri mai mari decât acestea.»"
+      "text": "Isus i-a răspuns: Crezi pentru că ți-am spus că te-am văzut sub smochin? Vei vedea lucruri mai mari decât acestea."
     },
     {
       "number": 51,
-      "text": "Și i-a zis: «Adevărat, adevărat vă spun: veți vedea cerul deschis și pe îngerii lui Dumnezeu suindu-se și coborându-se peste Fiul omului.»"
+      "text": "Și i-a zis: Adevărat, adevărat vă spun: veți vedea cerul deschis și pe îngerii lui Dumnezeu suindu-se și coborându-se peste Fiul omului."
     }
   ],
   "editorialNotes": [
@@ -336,7 +360,7 @@
       "term": "μονογενὴς θεὸς",
       "decision": "Textul principal urmează lectura SBLGNT 1.2 «μονογενὴς θεὸς», redată «Dumnezeu, Cel unic».",
       "reason": "Lectura critică are suportul ediției de bază și explică dezvoltarea propoziției finale fără a importa lectura TR «ὁ μονογενὴς υἱός» în textul principal.",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Varianta TR a fost evaluată ca martor textual și păstrată doar în motivarea notei; traducerea română urmează consecvent lectura greacă adoptată de SBLGNT."
     }

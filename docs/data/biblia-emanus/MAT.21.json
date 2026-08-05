@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 21,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT21.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT21.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.21.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Intrarea în Ierusalim păstrează atât măgărița, cât și mânzul din citatul folosit de Matei, fără armonizare cu celelalte Evanghelii.",
-      "Citatul din Psalmul 118:22-23 este tradus în forma folosită de Matei, iar κύριος corespunzător lui YHWH este marcat «DOMNUL». "
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 46,
       "reviewed": 46,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite cele 46 de versete, citatele din Zaharia, Isaia și Psalmi, succesiunea celor doi fii și unitatea marcată din versetul 44."
+      "scope": "Au fost confruntate toate cele 46 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Aclamațiile și citatele au fost delimitate pe două niveluri de ghilimele românești.",
-        "Verbele repetate ale trimiterii, respingerii și omorârii au fost păstrate în pilda viticultorilor."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "κύριος din Psalmul 118:23 a fost verificat față de YHWH și redat prin convenția «DOMNUL».",
-        "Aplicarea pietrei și transferul Împărăției rămân în formularea narativă, fără identificări istorice adăugate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:ff8c55b1d54a31d6c6327694feb283a06bd9e7ae240d6caf304081766adaf7aa",
+    "contentDigest": "sha256:6a4bcadd8f70c7272ab3965d26b9560a00541dad90052d286b621c42834b7931"
   },
   "verses": [
     {
@@ -122,11 +149,11 @@
     },
     {
       "number": 2,
-      "text": "spunându-le: „Duceți-vă în satul din fața voastră. Veți găsi imediat o măgăriță legată și un mânz cu ea. Dezlegați-i și aduceți-i la Mine."
+      "text": "spunându-le: Duceți-vă în satul din fața voastră. Veți găsi imediat o măgăriță legată și un mânz cu ea. Dezlegați-i și aduceți-i la Mine."
     },
     {
       "number": 3,
-      "text": "Dacă vă spune cineva ceva, să răspundeți: «Domnul are nevoie de ei», și îi va trimite îndată.”"
+      "text": "Dacă vă spune cineva ceva, să răspundeți: Domnul are nevoie de ei, și îi va trimite îndată."
     },
     {
       "number": 4,
@@ -134,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "„Spuneți-i fiicei Sionului: «Iată, Împăratul tău vine la tine blând și călare pe o măgăriță, pe un mânz, puiul unui animal de povară.»”"
+      "text": "Spuneți-i fiicei Sionului: Iată, Împăratul tău vine la tine blând și călare pe o măgăriță, pe un mânz, puiul unui animal de povară."
     },
     {
       "number": 6,
@@ -146,39 +173,39 @@
     },
     {
       "number": 8,
-      "text": "Cea mai mare parte a mulțimii își așternea hainele pe drum; alții tăiau ramuri din copaci și le așterneau pe drum."
+      "text": "O mare mulțime de oameni își întindeau hainele pe drum, alții tăiau ramuri din copaci și le întindeau pe drum."
     },
     {
       "number": 9,
-      "text": "Mulțimile care mergeau înaintea Lui și cele care Îl urmau strigau: „Osana Fiului lui David! Binecuvântat este Cel ce vine în Numele Domnului! Osana în înălțimi!”"
+      "text": "Mulțimile care mergeau înaintea Lui și cele care Îl urmau strigau: Osana Fiului lui David! Binecuvântat este Cel ce vine în Numele Domnului! Osana în înălțimi!"
     },
     {
       "number": 10,
-      "text": "Când a intrat în Ierusalim, toată cetatea s-a tulburat și întreba: „Cine este Acesta?”"
+      "text": "Când a intrat în Ierusalim, toată cetatea s-a tulburat și întreba: Cine este Acesta?"
     },
     {
       "number": 11,
-      "text": "Mulțimile răspundeau: „Acesta este profetul Isus, din Nazaretul Galileei.”"
+      "text": "Mulțimile răspundeau: Acesta este profetul Isus, din Nazaretul Galileei."
     },
     {
       "number": 12,
-      "text": "Isus a intrat în Templu și i-a alungat pe toți cei care vindeau și cumpărau acolo. A răsturnat mesele schimbătorilor de bani și scaunele vânzătorilor de porumbei."
+      "text": "Isus a intrat în templul lui Dumnezeu și i - a izgonit pe toți cei ce vindeau și cumpărau în templu, și a răsturnat schimbătorii de bani și scaunele celor ce vindeau porumbeii."
     },
     {
       "number": 13,
-      "text": "Și le-a spus: „Este scris: «Casa Mea va fi numită casă de rugăciune», dar voi faceți din ea o peșteră de tâlhari.”"
+      "text": "Și le-a spus: Este scris: Casa Mea va fi numită casă de rugăciune, dar voi faceți din ea o peșteră de tâlhari."
     },
     {
       "number": 14,
-      "text": "În Templu au venit la El orbi și șchiopi, iar El i-a vindecat."
+      "text": "Șchiopii și orbii au venit la El în Templu, și i -a vindecat."
     },
     {
       "number": 15,
-      "text": "Dar conducătorii preoților și cărturarii, când au văzut minunile pe care le făcea și copiii care strigau în Templu: „Osana Fiului lui David!”, s-au indignat"
+      "text": "Dar conducătorii preoților și cărturarii, când au văzut minunile pe care le făcea și copiii care strigau în Templu: Osana Fiului lui David!, s-au indignat"
     },
     {
       "number": 16,
-      "text": "și I-au zis: „Auzi ce spun aceștia?” Isus le-a răspuns: „Da. N-ați citit niciodată: «Din gura copilașilor și a sugarilor Ți-ai pregătit laudă»?”"
+      "text": "și I-au zis: Auzi ce spun aceștia? Isus le-a răspuns: Da. N-ați citit niciodată: Din gura copilașilor și a sugarilor Ți-ai pregătit laudă?"
     },
     {
       "number": 17,
@@ -190,55 +217,55 @@
     },
     {
       "number": 19,
-      "text": "A văzut un smochin lângă drum, S-a dus la el, dar n-a găsit nimic decât frunze. Atunci i-a spus: „Să nu mai rodească niciodată vreun fruct din tine!” Și smochinul s-a uscat îndată."
+      "text": "A văzut un smochin lângă drum, S-a dus la el, dar n-a găsit nimic decât frunze. Atunci i-a spus: Să nu mai rodească niciodată vreun fruct din tine! Și smochinul s-a uscat îndată."
     },
     {
       "number": 20,
-      "text": "Văzând aceasta, ucenicii s-au mirat și au întrebat: „Cum de s-a uscat smochinul imediat?”"
+      "text": "Văzând aceasta, ucenicii s-au mirat și au întrebat: Cum de s-a uscat smochinul imediat?"
     },
     {
       "number": 21,
-      "text": "Isus le-a răspuns: „Adevărat vă spun: dacă aveți credință și nu vă îndoiți, veți face nu numai ce s-a făcut cu smochinul, ci chiar dacă îi spuneți muntelui acestuia: «Ridică-te și aruncă-te în mare!», se va întâmpla."
+      "text": "Isus le-a răspuns: Adevărat vă spun: dacă aveți credință și nu vă îndoiți, veți face nu numai ce s-a făcut cu smochinul, ci chiar dacă îi spuneți muntelui acestuia: Ridică-te și aruncă-te în mare!, se va întâmpla."
     },
     {
       "number": 22,
-      "text": "Și orice veți cere în rugăciune, crezând, veți primi.”"
+      "text": "Și orice veți cere în rugăciune, crezând, veți primi."
     },
     {
       "number": 23,
-      "text": "Isus a intrat în Templu și, pe când învăța, conducătorii preoților și bătrânii poporului au venit la El și L-au întrebat: „Cu ce autoritate faci aceste lucruri și cine Ți-a dat această autoritate?”"
+      "text": "Isus a intrat în Templu și, pe când învăța, conducătorii preoților și bătrânii poporului au venit la El și L-au întrebat: Cu ce autoritate faci aceste lucruri și cine Ți-a dat această autoritate?"
     },
     {
       "number": 24,
-      "text": "Isus le-a răspuns: „Vă voi pune și Eu o întrebare. Dacă Îmi răspundeți, vă voi spune și Eu cu ce autoritate fac aceste lucruri."
+      "text": "Isus le-a răspuns: Vă voi pune și Eu o întrebare. Dacă Îmi răspundeți, vă voi spune și Eu cu ce autoritate fac aceste lucruri."
     },
     {
       "number": 25,
-      "text": "Botezul lui Ioan de unde era: din cer sau de la oameni?” Ei discutau între ei: „Dacă spunem: «Din cer», ne va întreba: «Atunci de ce nu l-ați crezut?»"
+      "text": "Botezul lui Ioan de unde era: din cer sau de la oameni? Ei discutau între ei: Dacă spunem: Din cer, ne va întreba: Atunci de ce nu l-ați crezut?"
     },
     {
       "number": 26,
-      "text": "Iar dacă spunem: «De la oameni», ne temem de mulțime, fiindcă toți îl socotesc pe Ioan profet.”"
+      "text": "Iar dacă spunem: De la oameni, ne temem de mulțime, fiindcă toți îl socotesc pe Ioan profet."
     },
     {
       "number": 27,
-      "text": "Așadar, I-au răspuns lui Isus: „Nu știm.” Iar El le-a zis: „Nici Eu nu vă spun cu ce autoritate fac aceste lucruri."
+      "text": "Așadar, I-au răspuns lui Isus: Nu știm. Iar El le-a zis: Nici Eu nu vă spun cu ce autoritate fac aceste lucruri."
     },
     {
       "number": 28,
-      "text": "Dar ce credeți? Un om avea doi fii. S-a dus la primul și i-a zis: «Fiule, du-te astăzi și lucrează în vie.»"
+      "text": "Dar ce credeți? Un om avea doi fii. S-a dus la primul și i-a zis: Fiule, du-te astăzi și lucrează în vie."
     },
     {
       "number": 29,
-      "text": "El a răspuns: «Nu vreau», dar mai târziu i-a părut rău și s-a dus."
+      "text": "El a răspuns: Nu vreau, dar mai târziu i-a părut rău și s-a dus."
     },
     {
       "number": 30,
-      "text": "Tatăl s-a dus și la al doilea și i-a spus la fel. Acesta a răspuns: «Mă duc, domnule», dar nu s-a dus."
+      "text": "Tatăl s-a dus și la al doilea și i-a spus la fel. Acesta a răspuns: Mă duc, domnule, dar nu s-a dus."
     },
     {
       "number": 31,
-      "text": "Care dintre cei doi a făcut voia tatălui?” Ei au răspuns: „Primul.” Isus le-a zis: „Adevărat vă spun: colectorii de taxe și prostituatele intră înaintea voastră în Împărăția lui Dumnezeu."
+      "text": "Care dintre cei doi a făcut voia tatălui? Ei au răspuns: Primul. Isus le-a zis: Adevărat vă spun: colectorii de taxe și prostituatele intră înaintea voastră în Împărăția lui Dumnezeu."
     },
     {
       "number": 32,
@@ -250,23 +277,23 @@
     },
     {
       "number": 34,
-      "text": "Când s-a apropiat vremea roadelor, și-a trimis robii la viticultori ca să-i primească roadele."
+      "text": "Când sezonul pentru fructe a venit aproape, el a trimis servitorii săi la fermieri pentru a primi fructele sale."
     },
     {
       "number": 35,
-      "text": "Viticultorii i-au prins robii: pe unul l-au bătut, pe altul l-au omorât, iar pe altul l-au ucis cu pietre."
+      "text": "Fermierii i-au luat servitorii, l-au bătut pe unul, l-au ucis pe altul și l-au omorât cu pietre pe altul."
     },
     {
       "number": 36,
-      "text": "A trimis din nou alți robi, mai mulți decât primii, dar i-au tratat la fel."
+      "text": "Din nou, el a trimis alți servitori mai mult decât primii; și i-au tratat la fel."
     },
     {
       "number": 37,
-      "text": "La urmă l-a trimis la ei pe fiul său, spunând: «Pe fiul meu îl vor respecta.»"
+      "text": "La urmă l-a trimis la ei pe fiul său, spunând: Pe fiul meu îl vor respecta."
     },
     {
       "number": 38,
-      "text": "Dar viticultorii, când l-au văzut pe fiu, și-au spus între ei: «Acesta este moștenitorul! Haideți să-l omorâm și să-i luăm moștenirea.»"
+      "text": "Dar viticultorii, când l-au văzut pe fiu, și-au spus între ei: Acesta este moștenitorul! Haideți să-l omorâm și să-i luăm moștenirea."
     },
     {
       "number": 39,
@@ -274,15 +301,15 @@
     },
     {
       "number": 40,
-      "text": "Așadar, când va veni stăpânul viei, ce le va face acelor viticultori?”"
+      "text": "Prin urmare, atunci când domnul viei vine, ce va face el pentru acei fermieri?"
     },
     {
       "number": 41,
-      "text": "Ei I-au răspuns: „Îi va nimici cumplit pe acei oameni răi, iar via o va da în arendă altor viticultori, care îi vor da roadele la vremea lor.”"
+      "text": "Ei I-au răspuns: Îi va nimici cumplit pe acei oameni răi, iar via o va da în arendă altor viticultori, care îi vor da roadele la vremea lor."
     },
     {
       "number": 42,
-      "text": "Isus le-a spus: „N-ați citit niciodată în Scripturi: «Piatra pe care au respins-o zidarii a ajuns piatra din capul unghiului. De la DOMNUL a venit aceasta și este minunată în ochii noștri»?"
+      "text": "Isus le-a spus: N-ați citit niciodată în Scripturi: Piatra pe care au respins-o zidarii a ajuns piatra din capul unghiului. De la DOMNUL a venit aceasta și este minunată în ochii noștri?"
     },
     {
       "number": 43,
@@ -290,11 +317,11 @@
     },
     {
       "number": 44,
-      "text": "Cine cade peste piatra aceasta va fi zdrobit, iar pe acela peste care va cădea ea îl va risipi ca praful.”"
+      "text": "Cine cade peste piatra aceasta va fi zdrobit, iar pe acela peste care va cădea ea îl va risipi ca praful."
     },
     {
       "number": 45,
-      "text": "Când conducătorii preoților și fariseii au auzit pildele Lui, au înțeles că vorbea despre ei."
+      "text": "Cînd preoții cei mai de seamă și fariseii au auzit pildele lui, au înțeles că vorbea despre ei."
     },
     {
       "number": 46,

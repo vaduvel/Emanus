@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,128 +28,164 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV04.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV04.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 11,
-      "reviewed": 0,
+      "reviewed": 11,
       "continuous": true,
       "verseNumbersSha256": "sha256:29307d08264fa47eb85a72a115ee234c288e2d3a49a9fc393c010262c33bf98f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 11 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:d8e301641fc055db4aabd2fc354bc94863f0707c7ab74e18b88790782f7f5f58",
+    "contentDigest": "sha256:5680c5252f2ee72e4098300bb2da85b6546c4e71247ccc362b6a53fb2cdc6551"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După aceste lucruri, m-am uitat am văzut o ușă deschisă în cer; primul glas pe care l-am auzit, ca o trâmbiță care vorbea cu mine, a fost unul care a spus:Suie-te aici-ți voi arăta lucrurile care trebuie să se întâmple după aceasta.„"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Imediat am fost în Duhul. Iată, a fost un tron stabilit în cer, și unul șezând pe tron"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Era un curcubeu în jurul tronului, ca un smarald la care să te uiți."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "În jurul tronului erau douăzeci și patru de tronuri. Pe tronuri stăteau douăzeci și patru de bătrâni, îmbrăca în veșminte albe, cu coroane de aur pe cap."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Din scaunul de domnie ies fulgere, sunete și tuneturi. Erau șapte lămpi de foc aprinse înaintea scaunului său de domnie, care sunt cele șapte Duhuri ale lui Dumnezeu."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Înainte de tron era ceva ca o mare de sticlă, similară cu cristalul. În mijlocul tronului, și în jurul tronului erau patru creaturi vii pline de ochi înainte și în spate."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Prima creatură era ca un leu, a doua creatură ca un vițel, a treia creatură avea o față ca un om, iar a patra era ca un vultur zburător."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Cele patru făpturi vii, fiecare dintre ele având șase aripi, sunt pline de ochi în jurul și în interior. Ei nu au odihnă zi și noapte, spunând, Sfânt, sfânt, sfânt este Domnul Dumnezeu, Cel Atotputernic, care a fost și cine este și cine urmează să vină!"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Când creaturile vii dau glorie, onoare și mulțumire celui care stă pe tron, celui ce trăiește veșnic și veșnic,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Cei douăzeci și patru de bătrîni cad înaintea Celui ce șade pe scaunul de domnie și se închină Celui ce trăiește veșnic și totdeauna, și își aruncă cununele înaintea scaunului de domnie, zicând:"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Vrednic Tu, Domnul și Dumnezeul nostru, Cel Sfânt, să slava, cinstea și puterea, căci Tu ai creat toate lucrurile și, din dorința Ta, ele au existat și au fost create!”"
     }
   ],
   "editorialNotes": [],

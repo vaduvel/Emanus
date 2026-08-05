@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 15,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT15.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT15.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.15.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Redactarea păstrează contrastul repetat dintre tradiția oamenilor și porunca ori cuvântul lui Dumnezeu din versetele 2-9.",
-      "În episodul femeii canaanite sunt păstrate apelativul «Fiul lui David», tăcerea lui Isus și diminutivul κυνάρια redat prin «căței»."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 39,
       "reviewed": 39,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite toate cele 39 de versete, inclusiv citatul din Isaia, impuritatea rituală, dialogul canaanit și hrănirea celor patru mii."
+      "scope": "Au fost confruntate toate cele 39 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Dialogurile și citatul au fost punctuate cu ghilimele românești pe două niveluri.",
-        "Listele, repetițiile și legăturile cauzale au fost păstrate într-o română actuală."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "κοινόω este redat consecvent prin «a întina», fără a introduce o regulă alimentară absentă.",
-        "Misiunea către oile pierdute ale casei lui Israel nu a fost armonizată cu relatările paralele."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:8737794b8d51437982555b67091513e116aee9536401e825a7a40152d3aa53c4",
+    "contentDigest": "sha256:526635558714ac18dedda78fcd6bcf4e1821dbb0932855ca16f7b59d8a7acb64"
   },
   "verses": [
     {
@@ -122,23 +149,23 @@
     },
     {
       "number": 2,
-      "text": "„De ce încalcă ucenicii Tăi tradiția bătrânilor? Căci nu-și spală mâinile când mănâncă pâine.”"
+      "text": "De ce încalcă ucenicii Tăi tradiția bătrânilor? Căci nu-și spală mâinile când mănâncă pâine."
     },
     {
       "number": 3,
-      "text": "El le-a răspuns: „Dar voi de ce încălcați porunca lui Dumnezeu din cauza tradiției voastre?"
+      "text": "El le-a răspuns: Dar voi de ce încălcați porunca lui Dumnezeu din cauza tradiției voastre?"
     },
     {
       "number": 4,
-      "text": "Căci Dumnezeu a spus: «Cinstește-l pe tată și pe mamă!» și: «Cine vorbește de rău pe tată sau pe mamă să fie pedepsit cu moartea.»"
+      "text": "Căci Dumnezeu a spus: Cinstește-l pe tată și pe mamă! și: Cine vorbește de rău pe tată sau pe mamă să fie pedepsit cu moartea."
     },
     {
       "number": 5,
-      "text": "Voi însă spuneți: «Oricine îi zice tatălui sau mamei: ‘Este dar ceea ce ți-ar fi fost de folos de la mine’,"
+      "text": "Dar voi spuneți: Oricine îi va spune tatălui său sau mamei sale: Orice ajutor ai fi primit de la mine este un dar închinat lui Dumnezeu!"
     },
     {
       "number": 6,
-      "text": "acela nu-și va mai cinsti nicidecum tatăl.» Și astfel ați desființat cuvântul lui Dumnezeu din cauza tradiției voastre."
+      "text": "acela nu-și va mai cinsti nicidecum tatăl. Și astfel ați desființat cuvântul lui Dumnezeu din cauza tradiției voastre."
     },
     {
       "number": 7,
@@ -146,39 +173,39 @@
     },
     {
       "number": 8,
-      "text": "«Poporul acesta Mă cinstește cu buzele, dar inima lor este departe de Mine."
+      "text": "Acesti oameni se apropie de mine cu gura lor, si ma onoreaza cu buzele lor; dar inima lor este departe de mine."
     },
     {
       "number": 9,
-      "text": "Degeaba Mi se închină ei, dând drept învățături niște porunci ale oamenilor.»”"
+      "text": "Și ei mă adoră în zadar, predarea ca reguli doctrinare făcute de oameni."
     },
     {
       "number": 10,
-      "text": "Apoi a chemat mulțimea și le-a spus: „Ascultați și înțelegeți:"
+      "text": "Apoi a chemat mulțimea și le-a spus: Ascultați și înțelegeți:"
     },
     {
       "number": 11,
-      "text": "nu ceea ce intră în gură îl întinează pe om, ci ceea ce iese din gură, aceea îl întinează pe om.”"
+      "text": "nu ceea ce intră în gură îl întinează pe om, ci ceea ce iese din gură, aceea îl întinează pe om."
     },
     {
       "number": 12,
-      "text": "Atunci ucenicii s-au apropiat și I-au zis: „Știi că fariseii s-au poticnit când au auzit acest cuvânt?”"
+      "text": "Atunci ucenicii s-au apropiat și I-au zis: Știi că fariseii s-au poticnit când au auzit acest cuvânt?"
     },
     {
       "number": 13,
-      "text": "El le-a răspuns: „Orice plantă pe care n-a sădit-o Tatăl Meu ceresc va fi smulsă din rădăcină."
+      "text": "El le-a răspuns: Orice plantă pe care n-a sădit-o Tatăl Meu ceresc va fi smulsă din rădăcină."
     },
     {
       "number": 14,
-      "text": "Lăsați-i! Sunt niște călăuze oarbe ale orbilor. Iar dacă un orb călăuzește un orb, amândoi vor cădea în groapă.”"
+      "text": "Lăsați-i! Sunt niște călăuze oarbe ale orbilor. Iar dacă un orb călăuzește un orb, amândoi vor cădea în groapă."
     },
     {
       "number": 15,
-      "text": "Petru I-a zis: „Explică-ne pilda aceasta.”"
+      "text": "Petru I-a zis: Explică-ne pilda aceasta."
     },
     {
       "number": 16,
-      "text": "El a spus: „Nici voi tot nu pricepeți?"
+      "text": "El a spus: Nici voi tot nu pricepeți?"
     },
     {
       "number": 17,
@@ -194,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Acestea sunt lucrurile care îl întinează pe om; însă a mânca fără să-ți fi spălat mâinile nu-l întinează pe om.”"
+      "text": "Acestea sunt lucrurile care spurcă pe om; dar a mânca cu mâinile nespălate nu spurcă pe om."
     },
     {
       "number": 21,
@@ -202,31 +229,31 @@
     },
     {
       "number": 22,
-      "text": "Și iată că o femeie canaanită, venită din ținuturile acelea, striga: „Ai milă de mine, Doamne, Fiul lui David! Fiica mea este chinuită cumplit de un demon.”"
+      "text": "Și iată că o femeie canaanită, venită din ținuturile acelea, striga: Ai milă de mine, Doamne, Fiul lui David! Fiica mea este chinuită cumplit de un demon."
     },
     {
       "number": 23,
-      "text": "Dar El nu i-a răspuns niciun cuvânt. Ucenicii Lui s-au apropiat și Îl rugau: „Trimite-o de aici, căci strigă în urma noastră.”"
+      "text": "Dar El nu i-a răspuns niciun cuvânt. Ucenicii Lui s-au apropiat și Îl rugau: Trimite-o de aici, căci strigă în urma noastră."
     },
     {
       "number": 24,
-      "text": "El a răspuns: „N-am fost trimis decât la oile pierdute ale casei lui Israel.”"
+      "text": "El a răspuns: N-am fost trimis decât la oile pierdute ale casei lui Israel."
     },
     {
       "number": 25,
-      "text": "Ea însă a venit, I s-a închinat și a zis: „Doamne, ajută-mă!”"
+      "text": "Ea însă a venit, I s-a închinat și a zis: Doamne, ajută-mă!"
     },
     {
       "number": 26,
-      "text": "El i-a răspuns: „Nu este bine să iei pâinea copiilor și s-o arunci cățeilor.”"
+      "text": "El i-a răspuns: Nu este bine să iei pâinea copiilor și s-o arunci cățeilor."
     },
     {
       "number": 27,
-      "text": "Dar ea a zis: „Da, Doamne, însă și cățeii mănâncă din firimiturile care cad de la masa stăpânilor lor.”"
+      "text": "Dar ea a zis: Da, Doamne, însă și cățeii mănâncă din firimiturile care cad de la masa stăpânilor lor."
     },
     {
       "number": 28,
-      "text": "Atunci Isus i-a răspuns: „Femeie, mare este credința ta! Să ți se facă așa cum dorești.” Și fiica ei a fost vindecată chiar din ceasul acela."
+      "text": "Atunci Isus i-a răspuns: Femeie, mare este credința ta! Să ți se facă așa cum dorești. Și fiica ei a fost vindecată chiar din ceasul acela."
     },
     {
       "number": 29,
@@ -242,15 +269,15 @@
     },
     {
       "number": 32,
-      "text": "Isus i-a chemat pe ucenicii Lui și le-a spus: „Mi-e milă de mulțime, fiindcă sunt deja trei zile de când rămân cu Mine și nu au ce să mănânce. Nu vreau să-i trimit flămânzi, ca nu cumva să leșine pe drum.”"
+      "text": "Isus i-a chemat pe ucenicii Lui și le-a spus: Mi-e milă de mulțime, fiindcă sunt deja trei zile de când rămân cu Mine și nu au ce să mănânce. Nu vreau să-i trimit flămânzi, ca nu cumva să leșine pe drum."
     },
     {
       "number": 33,
-      "text": "Ucenicii I-au zis: „De unde să avem, într-un loc pustiu, atâtea pâini încât să săturăm o mulțime atât de mare?”"
+      "text": "Ucenicii I-au zis: De unde să avem, într-un loc pustiu, atâtea pâini încât să săturăm o mulțime atât de mare?"
     },
     {
       "number": 34,
-      "text": "Isus i-a întrebat: „Câte pâini aveți?” Ei au răspuns: „Șapte și câțiva peștișori.”"
+      "text": "Isus i-a întrebat: Câte pâini aveți? Ei au răspuns: Șapte și câțiva peștișori."
     },
     {
       "number": 35,

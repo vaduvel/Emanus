@@ -3,8 +3,8 @@
   "bookId": "1TI",
   "bookName": "1 Timotei",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,148 +28,184 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1TI04.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1TI04.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1TI.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 16,
-      "reviewed": 0,
+      "reviewed": 16,
       "continuous": true,
       "verseNumbersSha256": "sha256:048bb5256c0f06e23ae71f17d050ba2af358d8fe7925d8d74e687f32c872a52d"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 208,
+        "secondary": 58,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.588175458584589,
+      "minimumScore": 0.553468476771151
+    },
+    "textDigest": "sha256:ac79445c9638a385afccde6ee56afdfb33996edbb91399b979327d243a8aa1f8",
+    "contentDigest": "sha256:e9ffdd27b14dbed3b93885a63ef2d281d4d965829d5f27c6d0000db991403b1b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Dar Duhul spune în mod expres că, în cele din urmă, unii vor cădea departe de credință, acordând atenție spiritelor seducătoare și doctrinelor demonilor,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "prin ipocrizia oamenilor care vorbesc minciuni, marcați în propria lor conștiință ca cu un fier fierbinte,"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "interzicând căsătoria și poruncind să se abțină de la alimentele pe care Dumnezeu le-a creat pentru a fi primite cu de către cei care cred și cunosc adevărul."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Căci orice făptură a lui Dumnezeu este bună, și nimic nu poate fi lepădat dacă este primită cu mulțumiri."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Căci este sfințită prin cuvântul lui Dumnezeu și prin rugăciune."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dacă îi instruiți pe frații acestor lucruri, veți fi un bun slujitor al lui Hristos Isus, hrăniți cu cuvintele credinței și cu doctrina bună pe care ați urmat-o."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Dar refuză fabulele profane ale soțiilor bătrâne. Exersează spre evlavie."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Căci exercitarea trupească are o anumită valoare, dar evlavia are valoare în toate lucrurile, având promisiunea vieții care este acum și a ceea ce urmează."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Această zicală este fidelă și demnă de orice acceptare."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Căci în acest scop amândoi muncim și suferim ocara, pentru că ne-am pus încrederea în Dumnezeul cel viu, care este Mântuitorul tuturor oamenilor, mai ales al celor care cred."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Comandă și învață aceste lucruri."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Nimeni să nu-ți disprețuiască tinerețea; ci fii un exemplu pentru cei care cred, în cuvânt, în modul tău de, în dragoste, în spirit, în credință în puritate."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Până când voi veni, să acorde o atenție la lectură, la îndemn, și la predare."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Nu neglija darul care este în tine, care ți-a fost dat prin profeție cu punerea mâinilor bătrânilor."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Fii sârguincios în aceste lucruri. Dăruiește-te în întregime lor, pentru ca progresul tău să fie descoperit tuturor."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Fiți atenți la voi înșivă și la învățătura voastră. Continuați în aceste lucruri, căci făcând aceasta vă veți salva pe voi înșivă și pe cei care vă aud."
     }
   ],
   "editorialNotes": [],

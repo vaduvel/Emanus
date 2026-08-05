@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 22,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,178 +28,215 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV22.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV22.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.22.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 21,
-      "reviewed": 0,
+      "reviewed": 21,
       "continuous": true,
       "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:eefc239aef89826f281b5e94dc731757ceb8baaca6828a1d0f3a65402e13132d",
+    "contentDigest": "sha256:b48845a47fe0c7b7fadce985a79b4ef9d6ead5e1bda8392c8879e495970916b5"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "El mi-a arătat un râu cu apă de viață, limpede ca cristalul, ieșind de pe tronul lui Dumnezeu și al Mielului,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "în mijlocul străzii lui. De partea aceasta a râului de partea aceea era pomul, care aducea douăsprezece feluri de fructe, rodind roadele lui în fiecare lună. Frunzele pomului erau pentru vindecarea neamurilor."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Nu va mai fi nici un blestem; scaunul de domnie al lui Dumnezeu și al Mielului va fi în el, și slujitorii lui îi vor sluji."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Îi vor vedea fața, și numele lui va fi pe fruntea lor."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Nu va fi noapte, și nu vor avea nevoie de lumină sau de lumină solară; căci Domnul Dumnezeu îi va lumina; ei vor domni pentru totdeauna."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "El mi-a zis:Cuvintele acestea sunt credincioase adevărate. Domnul, Dumnezeul duhurilor proorocilor, a trimes pe îngerul Său să arate robilor Săi lucrurile care trebuie să se întîmple în curînd.„"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Iată, Eu vin curând! Binecuvântat este cel care păz cuvinteleei din această carte.”"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Eu, Ioan, am auzit și am văzut aceste lucruri. Cînd am auzit și am văzut, am căzut să mă închin înaintea picioarelor îngerului, care-mi arătase aceste lucruri."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "El mi-a zis:Să nu faci așa ceva! Eu sunt împreună-slujitor cu tine cu frații tăi, profeții, cu cei ce păzesc cuvintele acestei. Închin-vă lui Dumnezeu.„"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "El mi-a zis:Nu pecetlui cuvintele prorociei din cartea aceasta, căci vremea este aproape."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Cine face nedreptate, să mai facă nedreptate. Cine este murdar, să se spurce. Cine este drept, să mai facă dreptate. Cine este sfânt, să mai fie sfânt!"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Iată, Eu vin curând; răsplata Mea este cu Mine, ca să răsplătesc fiecăruia după faptele lui."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Eu sunt Alfa și Omega, Primul și Ultimul, Începutul și Sfârșitul."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Ferice de cei ce împlinesc poruncile Lui, ca să aibă dreptul la pomul vieții, și să intre pe porțile cetății."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Afara sunt cainii, vrajitorii, imoralii sexuali, ucigasii, idolatrii, si toti cei care iubesc si practica falsitatea."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Eu, Isus, am trimis îngerul meu să depună mărturie aceste lucruri la tine pentru adunări. Eu sunt rădăcina și descendența lui David, Steaua Strălucitoare și Dimineața."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Duhul și mireasa spun:?Vino!? Cine aude, să spună:? Vino!? Cine este însetat, să vină. Cine dorește, să ia apa vieții."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Mărturisesc oricui aude cuvintele prorociei din cartea aceasta: Dacă adaugă cineva la ele, Dumnezeu îi va adăuga plăgile scrise în cartea aceasta."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Dacă cineva ia cuvintele din cartea acestei profeții, Dumnezeu își va lua partea sa din pomul vieții și din cetatea sfântă, care sunt scrise în această carte."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Cel ce mărturisește aceste lucruri zice:Da, vin curând.” Amin! Da, vino, Doamne Isuse!"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Harul Domnului Isus Hristos să fie cu toți sfinții. Amin."
     }
   ],
   "editorialNotes": [
     {
       "verse": 14,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

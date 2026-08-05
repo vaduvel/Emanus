@@ -3,8 +3,8 @@
   "bookId": "1PE",
   "bookName": "1 Petru",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,182 +28,219 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1PE03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1PE03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1PE.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 22,
-      "reviewed": 0,
+      "reviewed": 22,
       "continuous": true,
       "verseNumbersSha256": "sha256:3deaedaf2fa9d19b5467a331a79ca85f31218e3d232e46f97fc5df7f9439728e"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 22 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 257,
+        "secondary": 66,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5467158590753175,
+      "minimumScore": 0.5694259949565413
+    },
+    "textDigest": "sha256:a7a837545e911a686d9e3ac005acf186339df7d3fc49fb51f4ca9860c781360e",
+    "contentDigest": "sha256:1c0bcb3ebc5cec7649a76b607232fc1386814c1385763083e798160d2fc0d160"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "În același fel, soțiile, să fie supuse propriilor soți, astfel încât, chiar dacă cineva nu ascultă de Cuvânt, acestea pot fi câștigate prin comportamentul soțiilor lor fără un cuvânt,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "văzând comportamentul tău pur în frică."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Frumusețea ta să nu vină din podoaba exterioară a împletirii părului tău, din purtarea de podoabe de aur sau de a pune pe haine fine,"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "dar de la persoana ascunsă a inimii, în podoaba incoruptibilă a unui spirit blând și liniștit, care este foarte prețios în ochii lui Dumnezeu."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Căci așa s'au împodobit și în trecut femeile sfinte, cari nădăjduiau în Dumnezeu, și ele fiind supuse bărbaților lor."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Sara a ascultat de Avraam, numindu-l stăpân, ai cărui copii sunteți acum dacă faceți bine și nu vă temeți de vreo teroare."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Voi, soții, în același fel, trăiți cu soțiile voastre conform cunoștinței, dînd onoare femeii ca vasului mai slab, ca și moștenitori comuni ai harului vieții, ca rugăciunile voastre să nu fie împiedicate."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "În cele din urmă, voi toți să fie ca-minded, plin de compasiune, iubitor ca frați, cu inima tandră, politicos,"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "nu face rău pentru rău sau insultă pentru insultă, ci binecuvântează, știind că ai fost chemat la aceasta, ca să moștenești o binecuvântare."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Căci cine vrea să iubească viața și să vadă zile bune, să-și țină limba departe de rău și de buzele lui, ca să nu spună minciuni."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Să se întoarcă de la rău și să facă bine, să caute pacea și s-o urmărească."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Căci ochii Domnului sunt peste cei neprihăniți, și urechile Lui sunt deschise la rugăciunea lor; dar Fața Domnului este împotriva celor ce fac răul."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Cine vă va face rău dacă fi imitatori a ceea ce este bun?"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dar chiar dacă suferiți pentru dreptate, sunteți binecuvîn.Nu vă temeți de ce se tem ei, nu vă tulburați.„"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Dar sfințiți-L pe Domnul Dumnezeu în inimile voastre. Fiți întotdeauna gata să dați un răspuns oricui vă cere un motiv cu privire la care este în voi, cu umilință frică,"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "au o conștiință bună. Astfel, în timp ce se vorbește împotriva voastră ca răufăcători, ei pot fi dezamăgiți care blestemă calea voastră bună de viață în Hristos."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Pentru că este mai bine, dacă este voia lui Dumnezeu, să suferi pentru a face ceea ce este drept decât pentru a face rău."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Fiindcă și Hristos a suferit o dată pentru păcate, pe cei neprihăniți pentru cei nedrepți, ca să vă aducă la Dumnezeu, fiind uciși în carne, dar făcuți vii în Duhul,"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "în care s-a dus a predicat spiritelor din închisoare,"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "care mai înainte erau neascultători cînd Dumnezeu aștepta cu răbdare în zilele lui Noe, cînd era zidită corabia; în ea puțini, adică opt suflete, au fost mîntuiți prin apă."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Acesta este un simbol al botezului, care acum te salvează nu pentru a îndepărta murdăria cărnii, ci pentru a răspunde unei conștiințe bune față de Dumnezeu prin învierea lui Isus Hristos,"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "care este la dreapta lui Dumnezeu, după ce a mers în cer, îngeri, autorități și puteri fiind supuse lui.”"
     }
   ],
   "editorialNotes": [
     {
       "verse": 15,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

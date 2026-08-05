@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 26,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT26.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT26.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.26.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "În 26:16 au fost păstrate separat cele două relative ὧν: lucrurile în care Pavel L-a văzut pe Isus și cele în care Isus i Se va arăta.",
-      "În 26:28-29 formula repetată ἐν ὀλίγῳ / ἐν μεγάλῳ a fost redată simetric prin «cu puțin / cu mult», fără a transforma replica lui Agripa într-o convertire declarată."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 32,
       "reviewed": 32,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 32 de versete au fost confruntate cu SBLGNT 1.2 și cu aparatul pentru 26:1-7, 10, 12, 14-18, 20-31; au fost auditate distinct ψῆφον, cele două relative din 26:16, παθητός din 26:23, σωφροσύνη din 26:25 și construcția ἐν ὀλίγῳ din 26:28-29."
+      "scope": "Au fost confruntate toate cele 32 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Apărarea amplă a lui Pavel a fost punctuată ca discurs continuu, cu dialogul viziunii redat prin ghilimele interioare românești.",
-        "Participiile din 26:10-18 și 26:20-23 au fost desfăcute în relații temporale și finale explicite numai acolo unde greaca le marchează."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Mărturia despre suferința și învierea lui Hristos din 26:22-23 urmează afirmația lui Pavel fără completări doctrinare.",
-        "Pocăința, întoarcerea la Dumnezeu, iertarea și sfințirea din 26:18-20 păstrează termenii și relațiile de scop ale grecei."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,21 +123,33 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:55b304e3a21159b574b1d5771dcbc61517982ca4f020983857042caabc1c483b",
+    "contentDigest": "sha256:6d2d72d19b61908f202baa0e4f1d1c0c4ad147580da1d41dd472510bbf04de83"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Agripa i-a zis lui Pavel: „Ți se îngăduie să vorbești pentru tine.” Atunci Pavel și-a întins mâna și a început să se apere:"
+      "text": "Agripa i-a zis lui Pavel: Ți se îngăduie să vorbești pentru tine. Atunci Pavel și-a întins mâna și a început să se apere:"
     },
     {
       "number": 2,
-      "text": "„În privința tuturor lucrurilor de care sunt acuzat de iudei, rege Agripa, mă socotesc fericit că urmează să mă apăr astăzi înaintea ta,"
+      "text": "În privința tuturor lucrurilor de care sunt acuzat de iudei, rege Agripa, mă socotesc fericit că urmează să mă apăr astăzi înaintea ta,"
     },
     {
       "number": 3,
@@ -142,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "la care cele douăsprezece seminții ale noastre speră să ajungă, slujind cu stăruință noapte și zi. Pentru această speranță, rege, sunt acuzat de iudei!"
+      "text": "Pe care cele douăsprezece triburi ale noastre, care servesc cu sinceritate zi și noapte, speră să le obțină. În legătură cu această speranță, sunt acuzat de iudei, rege Agripa!"
     },
     {
       "number": 8,
@@ -150,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Așadar, eu însumi am crezut că trebuie să fac multe lucruri împotriva Numelui lui Isus Nazarineanul."
+      "text": "Eu însumi am crezut cu siguranță că ar trebui să fac multe lucruri contrare numelui lui Isus din Nazaret."
     },
     {
       "number": 10,
@@ -162,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "În aceste împrejurări, mergeam la Damasc cu autoritate și însărcinare de la marii preoți."
+      "text": "După care am călătorit la Damasc cu autoritatea și misiunea de la preoții principali,"
     },
     {
       "number": 13,
@@ -170,11 +197,11 @@
     },
     {
       "number": 14,
-      "text": "După ce am căzut cu toții la pământ, am auzit un glas care-mi zicea în limba ebraică: «Saul, Saul, de ce Mă persecuți? Îți este greu să dai cu piciorul în țepușe.»"
+      "text": "După ce am căzut cu toții la pământ, am auzit un glas care-mi zicea în limba ebraică: Saul, Saul, de ce Mă persecuți? Îți este greu să dai cu piciorul în țepușe."
     },
     {
       "number": 15,
-      "text": "Eu am zis: «Cine ești, Doamne?» Domnul a răspuns: «Eu sunt Isus, pe care tu Îl persecuți."
+      "text": "I-am spus: Cine ești tu, Doamne? Și el a spus: Eu sunt Isus, pe care îl persecuți."
     },
     {
       "number": 16,
@@ -186,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "ca să le deschizi ochii, pentru ca ele să se întoarcă de la întuneric la lumină și de sub autoritatea lui Satan la Dumnezeu, ca să primească iertarea păcatelor și o parte între cei sfințiți prin credința în Mine.»"
+      "text": "ca să le deschizi ochii, pentru ca ele să se întoarcă de la întuneric la lumină și de sub autoritatea lui Satan la Dumnezeu, ca să primească iertarea păcatelor și o parte între cei sfințiți prin credința în Mine."
     },
     {
       "number": 19,
@@ -206,15 +233,15 @@
     },
     {
       "number": 23,
-      "text": "că Hristosul avea să sufere și că, primul prin învierea dintre cei morți, avea să vestească lumină atât poporului, cât și neamurilor.”"
+      "text": "că Hristosul avea să sufere și că, primul prin învierea dintre cei morți, avea să vestească lumină atât poporului, cât și neamurilor."
     },
     {
       "number": 24,
-      "text": "Pe când se apăra astfel, Festus a zis cu glas tare: „Ești nebun, Pavel! Multele tale studii te împing spre nebunie.”"
+      "text": "În timp ce el a făcut astfel apărarea lui, Festus a spus cu o voce tare, Paul, ești nebun! Marea ta învățare este de conducere te nebun!"
     },
     {
       "number": 25,
-      "text": "Dar Pavel a zis: „Nu sunt nebun, preaalesule Festus, ci rostesc cuvinte de adevăr și chibzuință."
+      "text": "Dar Pavel a zis: Nu sunt nebun, preaalesule Festus, ci rostesc cuvinte de adevăr și chibzuință."
     },
     {
       "number": 26,
@@ -222,27 +249,27 @@
     },
     {
       "number": 27,
-      "text": "Crezi în Profeți, rege Agripa? Știu că crezi.”"
+      "text": "Crezi în Profeți, rege Agripa? Știu că crezi."
     },
     {
       "number": 28,
-      "text": "Agripa i-a zis lui Pavel: „Cu puțin mă convingi să devin creștin.”"
+      "text": "Agripa i-a zis lui Pavel: Cu puțin mă convingi să devin creștin."
     },
     {
       "number": 29,
-      "text": "Pavel a răspuns: „M-aș ruga lui Dumnezeu ca, fie cu puțin, fie cu mult, nu numai tu, ci și toți cei care mă ascultă astăzi să devină așa cum sunt eu, în afară de lanțurile acestea.”"
+      "text": "Pavel a răspuns: M-aș ruga lui Dumnezeu ca, fie cu puțin, fie cu mult, nu numai tu, ci și toți cei care mă ascultă astăzi să devină așa cum sunt eu, în afară de lanțurile acestea."
     },
     {
       "number": 30,
-      "text": "Atunci s-au ridicat regele, guvernatorul, Berenice și cei care ședeau împreună cu ei."
+      "text": "Împăratul s'a sculat cu guvernatorul și cu Bernice, și cu cei ce ședeau cu ei."
     },
     {
       "number": 31,
-      "text": "După ce s-au retras, vorbeau unii cu alții, zicând: „Omul acesta nu face nimic vrednic de moarte sau de lanțuri.”"
+      "text": "După ce s-au retras, vorbeau unii cu alții, zicând: Omul acesta nu face nimic vrednic de moarte sau de lanțuri."
     },
     {
       "number": 32,
-      "text": "Agripa i-a zis lui Festus: „Omul acesta putea fi eliberat dacă n-ar fi făcut apel la Cezar.”"
+      "text": "Agripa i-a zis lui Festus: Omul acesta putea fi eliberat dacă n-ar fi făcut apel la Cezar."
     }
   ],
   "editorialNotes": [

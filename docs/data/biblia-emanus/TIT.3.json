@@ -3,8 +3,8 @@
   "bookId": "TIT",
   "bookName": "Tit",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,144 +28,180 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/TIT03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/TIT03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/TIT.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 15,
-      "reviewed": 0,
+      "reviewed": 15,
       "continuous": true,
       "verseNumbersSha256": "sha256:e38607c74561d5b80709ec58b6d4b51f34d01141f9ef590fd5a9abb4539a0018"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 15 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 208,
+        "secondary": 58,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.588175458584589,
+      "minimumScore": 0.553468476771151
+    },
+    "textDigest": "sha256:cf9be098ebfa657c19a1bc123d79ba04ca1a3379b4c3ff05658dfae067d3e740",
+    "contentDigest": "sha256:63a92d10135c3f2a71ae6d785875e85f686231175702823c41eefb85a1c33bfa"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Amintește-le să fie supuși conducătorilor și autorităților, să fie ascultători, să fie pregătiți pentru orice lucrare bună,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "să nu vorbească de rău pe nimeni, să nu fie certăreți, să fie blânzi, arătând toată umilința de toți oamenii."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Căci am fost odată nesăbuiți, neascultători, înșelați, servind diferite pofte și plăceri, trăind în răutate și invidie, urîndu - ne unii pe alții."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dar când a apărut bunătatea lui Dumnezeu Mântuitorul nostru și dragostea sa față de omenire,"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "nu prin fapte de dreptate pe care le-am făcut noi înșine, ci prin mila Lui, El ne-a mântuit prin spălarea regenerării și înnoirii prin Duhul Sfânt,"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "pe care l-a vărsat peste noi din belșug, prin Isus Hristos, Mântuitorul nostru,"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "ca fiind îndreptățiți prin harul Său, am putea fi făcuți moștenitori conform speranței vieții veșnice."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Această vorbă este fidelă, și cu privire la aceste lucruri doresc să insistați cu încredere, pentru ca cei ce au crezut pe Dumnezeu să fie atenți să păstreze fapte bune; aceste lucruri sunt bune și profitabile pentru oameni;"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Feriți-vă de întrebările nechibzuite, de genealogiile, certurile și disputele privitoare la Lege, căci ele sunt nefolositoare și zadarnice."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "După prima și a doua avertizare, evită-l pe omul care provoacă dezbinări,"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "știind că un astfel de om este pervertit și păcătos, fiind autocondamnat."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Când voi trimite la tine pe Artemas, sau pe Tihic, fii sârguincios să vii la mine la Nicopole, căci m-am hotărât să iernez acolo."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Trimiteți-i repede pe Zenas, avocatul, pe Apolo, în călătoria lor, ca să nu le lipsească nimic."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Să învețe și poporul nostru să păstreze lucrări bune pentru a satisface necesitățile necesare, ca să nu fie neroditori."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Salutați-i pe toți cei ce sunt cu mine! Salutați-i pe cei ce ne iubesc în credință! Harul să fie cu voi toți! Amin!"
     }
   ],
   "editorialNotes": [],

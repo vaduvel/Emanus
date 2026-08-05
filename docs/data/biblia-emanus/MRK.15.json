@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 15,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK15.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK15.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.15.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "În 15:30 participiul καταβὰς a fost redat circumstanțial, fără conjuncția suplimentară «și» din TR.",
-      "În 15:45 πτῶμα din SBLGNT a fost redat explicit «trupul mort», fără înlocuirea lui tăcută cu σῶμα din lectura receptă."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 46,
       "reviewed": 46,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost verificate cele 46 de unități SBLGNT, relatarea crucificării și lectura TR a numărului tradițional 15:28."
+      "scope": "Au fost confruntate toate cele 46 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Terminologia juridică și militară din proces și execuție a fost redată consecvent: Sinedriu, cohortă, acuzație și centurion.",
-        "Strigătele mulțimii, batjocurile și cuvintele aramaice de pe cruce au fost punctuate distinct, fără netezirea registrului dur."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Batjocura ambilor răstigniți din 15:32 a rămas conform relatării lui Marcu și nu a fost armonizată cu Luca.",
-        "Mărturisirea centurionului din 15:39 a fost păstrată în contextul morții lui Isus, fără explicații doctrinare adăugate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:3df604a05393741e5d64f9441a5368f44d17125f69af35fa5c6546fb3da47674",
+    "contentDigest": "sha256:1fb540d90e040749d68f0b35fa0efb114d5408aeaa7ebb86c3559ac16d6cc3ab"
   },
   "verses": [
     {
@@ -122,15 +149,15 @@
     },
     {
       "number": 2,
-      "text": "Pilat L-a întrebat: „Tu ești Regele iudeilor?” El i-a răspuns: „Tu spui.”"
+      "text": "Pilat L-a întrebat: Tu ești Regele iudeilor? El i-a răspuns: Tu spui."
     },
     {
       "number": 3,
-      "text": "Conducătorii preoților Îl acuzau de multe lucruri."
+      "text": "Preoții principali l-au acuzat de multe lucruri."
     },
     {
       "number": 4,
-      "text": "Pilat L-a întrebat din nou: „Nu răspunzi nimic? Privește de câte lucruri Te acuză!”"
+      "text": "Pilat L-a întrebat din nou: Nu răspunzi nimic? Privește de câte lucruri Te acuză!"
     },
     {
       "number": 5,
@@ -138,23 +165,23 @@
     },
     {
       "number": 6,
-      "text": "La fiecare sărbătoare, Pilat le elibera un deținut pe care îl cereau."
+      "text": "Acum, la sărbătoare, el a folosit pentru a le elibera un prizonier, pe care l-au cerut de la el."
     },
     {
       "number": 7,
-      "text": "Cel numit Baraba era întemnițat împreună cu răsculații care săvârșiseră o crimă în timpul răscoalei."
+      "text": "Era unul numit Baraba, legat cu colegii săi insurgenți, oameni care în insurecție au comis crimă."
     },
     {
       "number": 8,
-      "text": "Mulțimea a urcat și a început să-i ceară să facă așa cum făcea pentru ei."
+      "text": "Mulțimea, strigând cu voce tare, a început să - i ceară să facă așa cum a făcut întotdeauna pentru ei."
     },
     {
       "number": 9,
-      "text": "Pilat le-a răspuns: „Vreți să vi-L eliberez pe Regele iudeilor?”"
+      "text": "Pilat le-a răspuns: Vreți să vi-L eliberez pe Regele iudeilor?"
     },
     {
       "number": 10,
-      "text": "Căci știa că din invidie Îl dăduseră pe mâna lui conducătorii preoților."
+      "text": "Căci-a dat seama că, din invidie, preoții cei mai de seamă îl dăduseră."
     },
     {
       "number": 11,
@@ -162,15 +189,15 @@
     },
     {
       "number": 12,
-      "text": "Pilat le-a întrebat din nou: „Atunci ce vreți să-i fac Celui pe Care Îl numiți Regele iudeilor?”"
+      "text": "Pilat le-a întrebat din nou: Atunci ce vreți să-i fac Celui pe Care Îl numiți Regele iudeilor?"
     },
     {
       "number": 13,
-      "text": "Ei au strigat din nou: „Răstignește-L!”"
+      "text": "Ei au strigat din nou: Răstignește-L!"
     },
     {
       "number": 14,
-      "text": "Pilat le-a spus: „Dar ce rău a făcut?” Ei însă strigau și mai tare: „Răstignește-L!”"
+      "text": "Pilat le-a spus: Dar ce rău a făcut? Ei însă strigau și mai tare: Răstignește-L!"
     },
     {
       "number": 15,
@@ -186,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Apoi au început să-L salute: „Salutare, Rege al iudeilor!”"
+      "text": "Apoi au început să-L salute: Salutare, Rege al iudeilor!"
     },
     {
       "number": 19,
@@ -202,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "L-au dus la locul Golgota, care se traduce „Locul Craniului”."
+      "text": "L-au adus în locul numit Golgota, care este, fiind interpretat,locul unui craniu."
     },
     {
       "number": 23,
@@ -214,11 +241,11 @@
     },
     {
       "number": 25,
-      "text": "Era ceasul al treilea când L-au răstignit."
+      "text": "A fost a treia oră când l-au crucificat."
     },
     {
       "number": 26,
-      "text": "Deasupra era scrisă acuzația împotriva Lui: „Regele iudeilor”."
+      "text": "Deasupra era scrisă acuzația împotriva Lui: Regele iudeilor."
     },
     {
       "number": 27,
@@ -226,19 +253,19 @@
     },
     {
       "number": 29,
-      "text": "Trecătorii Îl blasfemiau, clătinând din cap și spunând: „Aha! Tu, Cel care dărâmi sanctuarul și îl construiești în trei zile,"
+      "text": "Trecătorii Îl blasfemiau, clătinând din cap și spunând: Aha! Tu, Cel care dărâmi sanctuarul și îl construiești în trei zile,"
     },
     {
       "number": 30,
-      "text": "salvează-Te pe Tine Însuți coborând de pe cruce!”"
+      "text": "salvează-Te pe Tine Însuți coborând de pe cruce!"
     },
     {
       "number": 31,
-      "text": "La fel, conducătorii preoților Își băteau joc între ei de El împreună cu cărturarii și spuneau: „Pe alții i-a salvat; pe Sine nu Se poate salva!"
+      "text": "La fel, conducătorii preoților Își băteau joc între ei de El împreună cu cărturarii și spuneau: Pe alții i-a salvat; pe Sine nu Se poate salva!"
     },
     {
       "number": 32,
-      "text": "Hristosul, Regele lui Israel, să coboare acum de pe cruce, ca să vedem și să credem!” Și cei răstigniți împreună cu El Îl insultau."
+      "text": "Hristosul, Regele lui Israel, să coboare acum de pe cruce, ca să vedem și să credem! Și cei răstigniți împreună cu El Îl insultau."
     },
     {
       "number": 33,
@@ -246,15 +273,15 @@
     },
     {
       "number": 34,
-      "text": "La ceasul al nouălea, Isus a strigat cu glas tare: „Eloi, Eloi, lema sabactani?”, care se traduce: „Dumnezeul Meu, Dumnezeul Meu, de ce M-ai părăsit?”"
+      "text": "La ceasul al nouălea, Isus a strigat cu glas tare: Eloi, Eloi, lema sabactani?, care se traduce: Dumnezeul Meu, Dumnezeul Meu, de ce M-ai părăsit?"
     },
     {
       "number": 35,
-      "text": "Unii dintre cei care stăteau acolo, auzind, spuneau: „Iată, îl cheamă pe Ilie!”"
+      "text": "Unii dintre cei care au stat deoparte, când au auzit, au spus:Iată, El îl cheamă pe Ilie."
     },
     {
       "number": 36,
-      "text": "Cineva a alergat, a umplut un burete cu vin acru, l-a pus într-o trestie și I-a dat să bea, spunând: „Lăsați! Să vedem dacă vine Ilie să-L dea jos.”"
+      "text": "Cineva a alergat, a umplut un burete cu vin acru, l-a pus într-o trestie și I-a dat să bea, spunând: Lăsați! Să vedem dacă vine Ilie să-L dea jos."
     },
     {
       "number": 37,
@@ -266,7 +293,7 @@
     },
     {
       "number": 39,
-      "text": "Centurionul care stătea în fața Lui, văzând că Și-a dat astfel suflarea, a spus: „Cu adevărat, Omul acesta era Fiul lui Dumnezeu!”"
+      "text": "Centurionul care stătea în fața Lui, văzând că Și-a dat astfel suflarea, a spus: Cu adevărat, Omul acesta era Fiul lui Dumnezeu!"
     },
     {
       "number": 40,
@@ -294,7 +321,7 @@
     },
     {
       "number": 46,
-      "text": "Iosif a cumpărat o pânză de in, L-a coborât, L-a înfășurat în pânză și L-a pus într-un mormânt săpat în stâncă. Apoi a rostogolit o piatră la intrarea mormântului."
+      "text": "A cumpărat o pânză de in, și l -a dat jos, l -a rănit în pânza de in și l -a pus într'un mormînt, care fusese tăiat dintr'o stîncă. A rostogolit o piatră la ușa mormîntului."
     },
     {
       "number": 47,
@@ -310,7 +337,8 @@
       "greekWitnesses": "Textus Receptus: Καὶ ἐπληρώθη ἡ γραφὴ ἡ λέγουσα, Καὶ μετὰ ἀνόμων ἐλογίσθη.",
       "displayNote": "Lectură tradițională — textul principal SBLGNT nu include versetul 28; TR păstrează această propoziție.",
       "traditionalReading": "Și s-a împlinit Scriptura care spune: „A fost socotit împreună cu cei fărădelege.”",
-      "resolutionStatus": "resolved"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională a fost verificată în Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

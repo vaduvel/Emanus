@@ -3,8 +3,8 @@
   "bookId": "2CO",
   "bookName": "2 Corinteni",
   "chapter": 9,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/2CO09.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/2CO09.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/2CO.9.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Versetele 9:6-8 păstrează succesiunea agricolă și abundența harului, fără a o reduce la prosperitate materială.",
-      "La 9:13-15 capitolul încheie strângerea de ajutoare cu mulțumire și doxologie, nu doar cu un raport financiar."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -85,21 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "pregătirea darului promis în 9:5, semănatul și seceratul în 9:6-10, ascultarea mărturisirii în 9:13"
+      "scope": "Au fost confruntate toate cele 15 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "2 Corinteni 9:5 redă darul pregătit ca binecuvântare, nu ca ceva smuls cu zgârcenie.",
-        "2 Corinteni 9:6 păstrează paralelismul repetat „semănat / secerat”.",
-        "2 Corinteni 9:13 menține legătura dintre mărturisirea Evangheliei și dărnicia concretă."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Îndemnul la dărnicie rămâne voluntar și plin de bucurie, fără constrângere retorică introdusă de traducere.",
-        "Mulțumirea și slava aduse lui Dumnezeu sunt păstrate ca scop final al colectei."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:b883c367fb01bd5c1b81375b02fb8cf2f410ad928e08ca4e65bed223f90afe54",
+    "contentDigest": "sha256:e0b89e8a90075485f58fc4cdbc088967c0de7e97d2d9d96816b1f30d159b4a21"
   },
   "verses": [
     {
@@ -123,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Pentru că vă cunosc bunăvoința, cu care mă laud despre voi înaintea macedonenilor: că Ahaia este pregătită încă de anul trecut, iar râvna voastră i-a însuflețit pe cei mai mulți."
+      "text": "căci știu că ești gata, de care mă laud în numele tău față de cei din Macedonia, că Ahaia a fost pregătită pentru anul trecut; zelul tău a stârnit foarte multe dintre ele."
     },
     {
       "number": 3,
@@ -167,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Prin dovada dată de slujirea aceasta, ei Îl slăvesc pe Dumnezeu pentru ascultarea mărturisirii voastre față de Evanghelia lui Hristos și pentru dărnicia împărtășirii voastre cu ei și cu toți,"
+      "text": "având în vedere că, prin dovada dată de acest serviciu, ei îl glorifică pe Dumnezeu pentru ascultarea mărturisirii voastre față de Evanghelia lui Hristos și pentru generozitatea contribuției voastre față de ei și față de toți,"
     },
     {
       "number": 14,

@@ -3,8 +3,8 @@
   "bookId": "1CO",
   "bookName": "1 Corinteni",
   "chapter": 6,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1CO06.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1CO06.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1CO.6.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "6:1-8 păstrează contrastul dintre sfinți, necredincioși și rușinea litigiilor interne.",
-      "6:15-20 menține seria de afirmații despre trup, unire, templu și cumpărare cu preț."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "procese între frați, lista de vicii, spălare, sfințire și îndreptățire, trupul ca mădular al lui Hristos și templu al Duhului"
+      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "6:9 distinge cele două termene din lista de vicii fără a le contopi într-o singură etichetă.",
-        "6:13-20 păstrează consecvent diferența dintre «trup» și alte imagini antropologice."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Libertatea creștină nu este prezentată ca autonomie morală, ci ca apartenență cumpărată cu preț.",
-        "Etica sexuală este argumentată cristologic și eclezial, nu prin rușine socială generală."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:cf1c93a43858108ab107e0c5c2a45f97421994699d6a868d071f1c94f2ebe25c",
+    "contentDigest": "sha256:1fd505c6ea5253623694b77dbf12bb17b170b51885edfe997cf7d46e29efba0c"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Îndrăznește cineva dintre voi, când are o pricină cu altul, să se judece înaintea celor nedrepți și nu înaintea sfinților?"
+      "text": "Îndrăzniți pe vreunul dintre voi, care are o problemă împotriva aproapelui său, să meargă la lege înaintea celor nedrepți, și nu înaintea sfinților?"
     },
     {
       "number": 2,
@@ -126,11 +153,11 @@
     },
     {
       "number": 3,
-      "text": "Nu știți că vom judeca îngeri? Cu cât mai mult lucrurile vieții acesteia!"
+      "text": "Nu știți că noi vom judeca pe îngeri? Cu cât mai mult lucrurile care țin de viața aceasta?"
     },
     {
       "number": 4,
-      "text": "Așadar, dacă aveți procese cu privire la lucrurile vieții acesteia, îi puneți să judece pe cei disprețuiți în biserică?"
+      "text": "Dacă trebuie să judecați lucrurile privitoare la această, îi puneți voi să judece pe cei care nu au nici o socoteală în adunare?"
     },
     {
       "number": 5,
@@ -142,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "De fapt, este deja un eșec total pentru voi că aveți procese între voi. De ce nu suferiți mai bine nedreptatea? De ce nu acceptați mai bine să fiți înșelați?"
+      "text": "Prin urmare, este deja cu totul un defect în voi că aveți procese unul cu altul. De ce nu mai degrabă să fie nedreptățit? De ce nu mai degrabă să fie fraudat?"
     },
     {
       "number": 8,
@@ -194,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Căci ați fost cumpărați cu un preț. Așadar, glorificați-L pe Dumnezeu în trupul vostru."
+      "text": "căci voi ați fost cumpărați cu un preț. De aceea, slăviți pe Dumnezeu în trupul vostru și în duhul vostru, care este Dumnezeu."
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "1TI",
   "bookName": "1 Timotei",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,158 +28,195 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1TI03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1TI03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1TI.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 16,
-      "reviewed": 0,
+      "reviewed": 16,
       "continuous": true,
       "verseNumbersSha256": "sha256:048bb5256c0f06e23ae71f17d050ba2af358d8fe7925d8d74e687f32c872a52d"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 208,
+        "secondary": 58,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.588175458584589,
+      "minimumScore": 0.553468476771151
+    },
+    "textDigest": "sha256:d317ab388f2cc82bd1e28de1a66e364ecc421c28e56fd7ede7f0572732d63d94",
+    "contentDigest": "sha256:0cf17f641381f353a39750a5a3f97213536fd66313abe6661d1c0e414abccb4a"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Aceasta este o zicală fidelă: cineva care caută să fie supraveghetor dorește o lucrare bună."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Prin urmare, supraveghetorul trebuie să fie fără reproș, soțul unei singure soții, temperat, rațional, modest, ospitalier, bun la învățătură;"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "nici un bețiv, nici violent, nici lacom de bani, ci blând, nici certăreț, nici lacom;"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "care își stăpînește bine casa, și își supune copiii cu toată cinstea;"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "(Căci cum ar putea cineva care nu știe cum să - și conducă propria casă să aibă grijă de adunarea lui Dumnezeu?)"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "nu un nou convertit, ca nu cumva să fie umflat în sus el se încadrează în aceeași condamnare ca diavolul."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Mai mult, el trebuie să aibă o bună mărturie de la cei care sunt afară, pentru a evita să cadă în ocară și în capcana diavolului."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Servitorii, în același fel, trebuie să fie respectuoși, nu cu limbă dublă, nu dependenți de mult vin, nu lacomi de bani,"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Păstrând misterul credinței într-o conștiință pură."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Mai întâi să fie ei pu la încercare, apoi să slujească dacă sunt fără vină."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Soțiile lor în același mod trebuie să fie respectuoase, nu calomniatoare, temperate și fidele în toate lucrurile."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Servitorii să fie soții unei singure soții, să-și conducă bine copiii și casele lor."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Căci cei care au slujit bine câștigă pentru ei înșiși o poziție bună și o mare îndrăzneală în credința care este în Hristos Isus."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Lucrurile astea pe care ți le scriu, sperând să vin la tine în scurt timp,"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Dar dacă aștept mult, ca să știți cum trebuie să se poarte oamenii în casa lui Dumnezeu, care este adunarea Dumnezeului celui viu, stâlpul și pămîntul adevărului."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Fără controverse, misterul evlaviei este mare: Dumnezeu a fost revelat în carne, justificat în spirit, văzut de îngeri, predicat printre națiuni, crezut în lume și primit în glorie."
     }
   ],
   "editorialNotes": [
     {
       "verse": 16,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

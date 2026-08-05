@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 11,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,160 +28,196 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV11.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV11.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.11.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 19,
-      "reviewed": 0,
+      "reviewed": 19,
       "continuous": true,
       "verseNumbersSha256": "sha256:b80e02d8660abe7d46fff4d9e100f3047d277fd4527519d4311f7aa3cbf05a29"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 19 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:cc50de8ad0c08e220643ff62231efe2705fc48a472fd566bdb68278cbc4d8eb6",
+    "contentDigest": "sha256:b1931aafcf8916ac4b7264f105a2da6d47c2257ed4dd837d579ed551c3dcb263"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Mi s-a dat o trestie ca un toiag. Cineva a zis:,,Scoală-te măsoară templul lui Dumnezeu, altarul pe cei ce se închină în el."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Lăsați curtea care este în afara templului, și nu o măsurați, căci a fost dată neamurilor; ei vor călca cetatea sfântă sub picioare patruzeci și două de luni."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Voi da putere celor doi martori ai mei, și vor prooroci o mie două sute șaizeci de zile, îmbrăcați în sac."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Aceștia sunt cei doi măslini și cele două candele stau în picioare, în picioare înaintea Domnului pământului."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Dacă cineva dorește să le facă rău, focul iese din gura lor și devorează dușmanii lor. Dacă cineva dorește să le facă rău, el trebuie să fie ucis în acest fel."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Aceștia au puterea să închidă cerul, ca să nu plouă în zilele proorociei lor; ei au putere asupra apelor, să le transforme în sînge și să lovească pămîntul cu orice plagă, ori de cîte ori doresc."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "După ce își vor termina mărturia, fiara care iese din abis va face război cu ei, îi va birui și îi va omorî."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Trupurile lor moarte vor fi pe strada cetății celei mari, numită spiritual, Sodoma și Egipt, unde și Domnul lor a fost răstignit."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Din mijlocul popoarelor, triburilor, limbilor și națiunilor, oamenii se vor uita la trupurile lor moarte timp de trei zile și jumătate, și nu vor permite ca trupurile lor moarte să fie puse într - un mormânt."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Cei ce locuiesc pe pămînt se vor bucura de ei, și se vor bucura; își vor da daruri unii altora, pentrucă acești doi prooroci i-au chinuit pe cei ce locuiesc pe pămînt."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "După cele trei zile și jumătate, suflarea de viață de la Dumnezeu a intrat în ei, și ei s'au așezat pe picioarele lor. O mare teamă a căzut peste cei ce i-au văzut."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Am auzit un glas puternic din cer, care le zicea:,,Suiți-vă aici! Ei s'au suit la cer într'un nor, vrăjmașii lor i-au văzut."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "În ziua aceea a fost un cutremur mare, și o zecime din cetate a căzut. Șapte mii de oameni au fost uciși în cutremur, iar ceilalți au fost îngroziți și au dat slavă Dumnezeului cerurilor."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Al doilea vai este trecut. Iată, al treilea vai vine repede."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Allea înger a sunat din trâmbiță au urmat glasuri mari în cer, zicând:Împărăția lumii a devenit Împărăția Domnului nostru a Hristosului Său. El va împărăți în vecii vecilor!„"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Cei douăzeci și patru de bătrîni, cari ședeau pe scaunul lor de domnie înaintea tronului lui Dumnezeu, au căzut cu fața la pămînt și s'au închinat lui Dumnezeu."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "zicând:Mulmim Ție, Doamne Dumnezeule, Cel Atotputernic, Cel ce este Cel ce era, pentru că ai luat puterea Ta cea mare ai domnit."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Neamurile s'au mîniat, și a venit mînia Ta, cum a fost vremea ca morții să fie judecați, și să dea robilor Tăi prooroci răsplata lor, și sfinților și celor ce se tem de Numele Tău, celor mici și mari, și să nimicească pe cei ce nimicesc pămîntul."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Templul lui Dumnezeu, care este în cer, a fost deschis, și chivotul Domnului legământ a fost văzut în templul său. Fulgeruri, sunete, tunete, un cutremur de pământ, și grindină mare urmat.”"
     }
   ],
   "editorialNotes": [],

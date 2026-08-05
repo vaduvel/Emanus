@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 18,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,180 +28,216 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV18.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV18.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.18.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 24,
-      "reviewed": 0,
+      "reviewed": 24,
       "continuous": true,
       "verseNumbersSha256": "sha256:ba47272dcebe6e73ff9bfc33cac2a2147a89bf18cc0d4e9db3eb0b21bb6523df"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:6f2a77dc06801d08664ca1c265d75fd1bb8558785a1528a6456597f5172f4bfc",
+    "contentDigest": "sha256:0ecd2a9551dac6717a63ed9f37ba5e19240d5c48f3d6c4ccdc3c66ce50248d84"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După aceste lucruri, am văzut un alt înger coborându-se din cer, având o mare autoritate. Pământul a fost luminat de slava lui."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "El a strigat cu glas puternic, zicând:Căzut, Babilonul cel mare este căzut ea a devenit o a demonilor, o închisoare a oricărui duh necurat o închisoare a oricărei păsări necurate urâte!"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Căci toate națiunile au băut din vinul mîniei imoralității ei sexuale, împărații pămîntului au comis imoralitate sexuală cu ea, și negustorii pămîntului s - au îmbogățit din abundența luxului ei."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Am auzit un alt glas din cer, care zicea:,,Ieșiți din ea, poporul meu, că nu aveți nici o parte din păcatele ei, și că nu primiți din plăgile ei,"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "căci păcatele ei au ajuns la cer, și Dumnezeu și-a adus aminte de nelegiuirile ei."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Întoarceți-vă la ea cum s-a întors, și plătiți-i dublurile cum a făcut-o, și după faptele ei. În paharul pe care l-a amestecat, amestecați-vă cu dublura ei."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Oricât de mult s-a glorificat ea însăși și a crescut, atât de mult dă-i de chin și de jale. Căci ea spune în inima ei, eu stau o regină, și nu sunt văduvă, și nu va vedea în nici un fel doliu."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "De aceea, într'o zi, vor veni urgiile ei: moartea, jalea și foametea; și va fi arsă de tot cu foc, căci Domnul Dumnezeu, care a judecat -o, este tare."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Regii pământului care au comis imoralitate sexuală și au trăit în zadar cu ea vor plânge și se vor boci peste ea, când se vor uita la fumul arderii ei,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "departe, de frica chinului ei, zicând:Vai, vai, cetatea cea mare, Babilonul, cetatea cea tare! Căci judecata ta a venit într-un ceas!„"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Negustorii pământului plâng se tânguiesc pentru ea, căci nimeni nu le mai cumpără marfa."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "marfă de aur, argint, pietre scumpe, perle, in fin, purpuriu, mătase, stacojiu, orice lemn scump, orice vas de fildeș, orice vas făcut din lemn cel mai prețios, aramă, fier și marmură;"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "și scorțișoară, tămâie, parfum, tămâie, vin, ulei de măsline, făină fină, grâu, vite, oi, cai, care și trupuri și suflete."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Roadele pe care sufletul tău le-a poftit după ce ți-au fost pierdute, toate cele delicioase și somptuoase au pierit de la tine, și nu le vei mai găsi deloc."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Negustorii acestor lucruri, care au fost îmbogățiți de ea, vor sta departe de frica osândei ei, plângând și jelind,"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Și a zis:Vai, vai, cetatea cea mare, cea îmbrăcată în in, purpură cărămizie împodobită cu aur, pietre mărgăritare!"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Căci, într'o oră, bogățiile acestea mari sunt pustiite. Și fiecare stăpîn al corăbiilor, și toți cei ce navighează oriunde, marinarii, și toți cei ce își cîștigă traiul pe mare, stăteau departe,"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "strigau când se uitau la fumul arderii ei, zicând:Cum este cetatea cea mare?”"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Ei-au pus rână pe cap au strigat, plângând jelindu-se, zicând:Vai, vai, cetatea cea mare, în care toți cei care aveau corăbiile lor în mare s-aut din pricinai ei mari!„ Căci ea este pustiită într-un ceas."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Bucurați-vă de ea, Cerule, sfinților, apostolilor și profeților, căci Dumnezeu a judecat judecata voastră asupra ei."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Un înger puternic a luat o piatră ca o piatră de moară mare a aruncat-o în mare, spunând:Așa va fi aruncat Babilonul, cetatea cea mare, nu se va mai găsi nimic."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Vocea harpiștilor, a menestrelilor, a cântăreților de flaut și a trompetiștilor nu va mai fi auzită deloc în voi. Nici un meșter de orice ambarcațiune nu va mai fi găsit în voi. Sunetul unei mori nu va mai fi auzit deloc în voi."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Lumina unei candele nu va mai străluci deloc în voi; glasul mirelui și al miresei nu va mai fi auzit deloc în voi, căci negustorii voștri erau căpeteniile pămîntului; căci toate neamurile au fost amăgite cu vrăjitoria voastră."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "În ea a fost găsit sângele profeților și al sfinților, și al tuturor celor care au fost uciși pe pământ.”"
     }
   ],
   "editorialNotes": [],

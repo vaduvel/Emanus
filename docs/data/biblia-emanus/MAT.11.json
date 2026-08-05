@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 11,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT11.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT11.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.11.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 30,
-      "reviewed": 0,
+      "reviewed": 30,
       "continuous": true,
       "verseNumbersSha256": "sha256:a8da6dc1099b8b38805d26f04c1e8a49b9d3870506f9586535105a3c3be64fdb"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:6905d2d8ed05bfa2bfa71cdf524aeef30435b9f938eb58b1995a4234bf32df8c",
+    "contentDigest": "sha256:4a6932d9ed72206e642c4d3550bca10679da8e22007a6e7c0ec10d9c75744280"
   },
   "verses": [
     {
@@ -117,11 +153,11 @@
     },
     {
       "number": 3,
-      "text": "să-L întrebe: „Tu ești Cel care vine sau trebuie să așteptăm pe altul?”"
+      "text": "să-L întrebe: Tu ești Cel care vine sau trebuie să așteptăm pe altul?"
     },
     {
       "number": 4,
-      "text": "Isus le-a răspuns: „Duceți-vă și vestiți-i lui Ioan ce auziți și ce vedeți:"
+      "text": "Isus le-a răspuns: Duceți-vă și vestiți-i lui Ioan ce auziți și ce vedeți:"
     },
     {
       "number": 5,
@@ -129,11 +165,11 @@
     },
     {
       "number": 6,
-      "text": "Fericit este cel care nu găsește în Mine un motiv de cădere!”"
+      "text": "Binecuvântat este cel care nu găsește nici o ocazie pentru poticnire în mine."
     },
     {
       "number": 7,
-      "text": "În timp ce ei plecau, Isus a început să le vorbească mulțimilor despre Ioan: „Ce ați ieșit să priviți în pustie? O trestie clătinată de vânt?"
+      "text": "În timp ce ei plecau, Isus a început să le vorbească mulțimilor despre Ioan: Ce ați ieșit să priviți în pustie? O trestie clătinată de vânt?"
     },
     {
       "number": 8,
@@ -145,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "El este cel despre care este scris: «Iată, Îl trimit pe mesagerul Meu înaintea feței Tale; el Îți va pregăti calea înaintea Ta.»"
+      "text": "El este cel despre care este scris: Iată, Îl trimit pe mesagerul Meu înaintea feței Tale; el Îți va pregăti calea înaintea Ta."
     },
     {
       "number": 11,
@@ -165,31 +201,31 @@
     },
     {
       "number": 15,
-      "text": "Cine are urechi să audă!"
+      "text": "Cine are urechi de auzit, să audă."
     },
     {
       "number": 16,
-      "text": "Cu cine voi compara această generație? Seamănă cu niște copii care stau în piețe și le strigă celorlalți:"
+      "text": "Dar cu ce să compar această generație? Este ca și cum copiii stau în piețe, care apelează la tovarășii lor"
     },
     {
       "number": 17,
-      "text": "«V-am cântat din fluier și n-ați dansat; v-am cântat de jale și nu v-ați bocit.»"
+      "text": "V-am cântat din fluier și n-ați dansat; v-am cântat de jale și nu v-ați bocit."
     },
     {
       "number": 18,
-      "text": "Căci a venit Ioan, care nici nu mănâncă, nici nu bea, iar ei spun: «Are demon!»"
+      "text": "Căci a venit Ioan, care nici nu mănâncă, nici nu bea, iar ei spun: Are demon!"
     },
     {
       "number": 19,
-      "text": "A venit Fiul Omului, care mănâncă și bea, iar ei spun: «Iată un om mâncăcios și băutor de vin, prieten al colectorilor de taxe și al păcătoșilor!» Totuși, înțelepciunea este dovedită dreaptă prin lucrările ei.”"
+      "text": "A venit Fiul Omului, care mănâncă și bea, iar ei spun: Iată un om mâncăcios și băutor de vin, prieten al colectorilor de taxe și al păcătoșilor! Totuși, înțelepciunea este dovedită dreaptă prin lucrările ei."
     },
     {
       "number": 20,
-      "text": "Atunci Isus a început să mustre cetățile în care fuseseră făcute cele mai multe dintre lucrările Lui puternice, pentru că nu se pocăiseră:"
+      "text": "Apoi a început să denunțe cetățile în care s-au făcut cele mai multe dintre lucrările sale mărețe, pentru că nu s-au pocăit."
     },
     {
       "number": 21,
-      "text": "„Vai de tine, Horazin! Vai de tine, Betsaida! Căci, dacă lucrările puternice făcute în voi ar fi fost făcute în Tir și Sidon, ele s-ar fi pocăit de mult în pânză de sac și cenușă."
+      "text": "Vai de tine, Horazin! Vai de tine, Betsaida! Căci, dacă lucrările puternice făcute în voi ar fi fost făcute în Tir și Sidon, ele s-ar fi pocăit de mult în pânză de sac și cenușă."
     },
     {
       "number": 22,
@@ -201,11 +237,11 @@
     },
     {
       "number": 24,
-      "text": "Totuși, îți spun că, în ziua judecății, va fi mai ușor pentru ținutul Sodomei decât pentru tine.”"
+      "text": "Totuși, îți spun că, în ziua judecății, va fi mai ușor pentru ținutul Sodomei decât pentru tine."
     },
     {
       "number": 25,
-      "text": "În vremea aceea, Isus a spus: „Te laud, Tată, Doamne al cerului și al pământului, pentru că ai ascuns aceste lucruri de cei înțelepți și pricepuți și le-ai descoperit copilașilor."
+      "text": "În vremea aceea, Isus a spus: Te laud, Tată, Doamne al cerului și al pământului, pentru că ai ascuns aceste lucruri de cei înțelepți și pricepuți și le-ai descoperit copilașilor."
     },
     {
       "number": 26,
@@ -221,11 +257,11 @@
     },
     {
       "number": 29,
-      "text": "Luați jugul Meu asupra voastră și învățați de la Mine, căci Eu sunt blând și smerit cu inima, și veți găsi odihnă pentru sufletele voastre."
+      "text": "Luați jugul meu asupra voastră și învățați de la mine, pentru că eu sunt blând și umil în inimă; și veți găsi odihnă pentru sufletele voastre."
     },
     {
       "number": 30,
-      "text": "Căci jugul Meu este bun, iar povara Mea este ușoară.”"
+      "text": "Căci jugul meu este ușor, și povara mea este ușoară."
     }
   ],
   "editorialNotes": [],

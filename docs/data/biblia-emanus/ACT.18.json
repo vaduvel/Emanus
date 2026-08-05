@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 18,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT18.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT18.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.18.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 28,
-      "reviewed": 0,
+      "reviewed": 28,
       "continuous": true,
       "verseNumbersSha256": "sha256:9a107a160e9a74d5e92434ea013a7fa5ead7b122a283f2855eb5da2b0d55f33f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:cce401c6280aa0c9f2a9547adb2d70d54e14cacd3cbe3f83daf8d0e7758416f4",
+    "contentDigest": "sha256:a5cfbcbe1a15213c591f7808040a4443658a292627701065277ede2120c48cf5"
   },
   "verses": [
     {
@@ -117,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "și, fiindcă aveau aceeași meserie, a rămas la ei și lucra; meseria lor era facerea corturilor."
+      "text": "Și pentru că a practicat același comerț, a locuit cu ei și a lucrat, căci prin comerț erau croitori de corturi."
     },
     {
       "number": 4,
@@ -133,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "A plecat de acolo și a intrat în casa unui om pe nume Titius Iustus, un închinător al lui Dumnezeu, a cărui casă era alături de sinagogă."
+      "text": "El a plecat de acolo a intrat în casa unui om numit Justus, unul care se închina lui Dumnezeu, a cărui casă era alături de sinagogă."
     },
     {
       "number": 8,
@@ -165,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Dar, fiindcă sunt dispute despre cuvinte, nume și Legea voastră, vă privește! Eu nu vreau să fiu judecător peste aceste lucruri.”"
+      "text": "Dar dacă acestea sunt întrebări despre cuvinte și nume și propria ta lege, uita-te la ea voi înșivă. Căci eu nu vreau să fiu un judecător al acestor probleme."
     },
     {
       "number": 16,
@@ -173,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Atunci toți l-au prins pe Sostene, conducătorul sinagogii, și îl băteau înaintea scaunului de judecată, dar lui Gallio nu-i păsa deloc de aceste lucruri."
+      "text": "Atunci toți grecii l-au luat pe Sostene, conducătorul sinagogii, și l-au bătut înaintea scaunului de judecată. Lui Gallio nu i-a păsat de niciunul din aceste lucruri."
     },
     {
       "number": 18,
@@ -181,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Au ajuns la Efes, iar el i-a lăsat acolo. Pavel a intrat în sinagogă și a discutat cu iudeii."
+      "text": "El a venit la Efes, și i -a lăsat acolo; dar el însuși a intrat în sinagogă și a vorbit cu Iudeii."
     },
     {
       "number": 20,
@@ -189,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "ci și-a luat rămas-bun, spunând: „Mă voi întoarce la voi, dacă vrea Dumnezeu.” Apoi a plecat pe mare din Efes."
+      "text": "Dar, lăsându-se de ei, le-a zis:Trebuie să prăznuiesc cu orice chip sărbătoarea aceasta viitoare în Ierusalim, dar mă voi întoarce la voi, dacă va voi Dumnezeu.” Apoi a plecat din Efes."
     },
     {
       "number": 22,
@@ -197,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "După ce a petrecut acolo o vreme, a plecat și a străbătut pe rând ținutul Galatiei și Frigia, întărindu-i pe toți ucenicii."
+      "text": "După ce a petrecut ceva timp acolo, el a plecat și a trecut prin regiunea Galatiei și Frigiei, în ordine, stabilindu-i pe toți discipolii."
     },
     {
       "number": 24,

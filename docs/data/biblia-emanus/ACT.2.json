@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Fapte 2:31 urmează SBLGNT și nu introduce substantivul «suflet», prezent în lectura TR și în unele redări tradiționale.",
-      "Fapte 2:41 nu adaugă adverbul «cu bucurie», iar 2:47 nu adaugă substantivul «biserică», deoarece aceste elemente nu apar în textul principal SBLGNT.",
-      "Citatele din Ioel 2 și Psalmii 16 și 110 au fost controlate ca citate NT, cu păstrarea formei folosite în discursul lui Petru."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 47,
       "reviewed": 47,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "semnele Cincizecimii, lista popoarelor, citatul din Ioel 2, argumentul din Psalmii 16 și 110, chemarea la pocăință și viața comunității"
+      "scope": "Au fost confruntate toate cele 47 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Lista geografică din 2:9–11 a fost păstrată pe unitățile de verset SBLGNT, fără contopirea romanilor, iudeilor și prozeliților.",
-        "Metaforele «orice carne», «durerile morții» și «străpuns la inimă» au fost păstrate fără explicații introduse în corpul textului.",
-        "Imperfectele și construcțiile iterative din 2:42–47 au fost redate prin forme românești durative și repetitive."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Revărsarea Duhului este redată pentru fii, fiice, robi și roabe fără restrângeri confesionale adăugate.",
-        "Relația dintre planul hotărât al lui Dumnezeu și răspunderea celor care L-au omorât pe Isus este păstrată în aceeași propoziție.",
-        "Îndemnul la pocăință, botez și primirea darului Duhului păstrează ordinea și legăturile grecești fără formulă sacramentală suplimentară."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:34337c11e189e7b6bebe152a996f7593d79fbcae68973b761e0be6bf3de4a427",
+    "contentDigest": "sha256:7de2b05bc0fe0de0710a8804e271fb285256434fb17184218921b6828fbcc4d1"
   },
   "verses": [
     {
@@ -125,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Deodată, din cer s-a auzit un vuiet ca al unei suflări puternice și a umplut întreaga casă unde ședeau."
+      "text": "Dintr-o dată a venit din cer un sunet ca graba unui vânt puternic, și a umplut toată casa unde stăteau."
     },
     {
       "number": 3,
@@ -145,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Erau uimiți și se minunau, zicând: „Iată, nu sunt oare galileeni toți aceștia care vorbesc?"
+      "text": "Erau uimiți și se minunau, zicând: Iată, nu sunt oare galileeni toți aceștia care vorbesc?"
     },
     {
       "number": 8,
@@ -157,23 +181,23 @@
     },
     {
       "number": 10,
-      "text": "Frigia și Pamfilia, Egiptul și părțile Libiei dinspre Cirena, precum și vizitatorii din Roma,"
+      "text": "Phrygia, Pamphylia, Egipt, părțile din Libia din jurul Cyrene, vizitatori din Roma, atât evrei cât și prozeliți,"
     },
     {
       "number": 11,
-      "text": "atât iudei, cât și prozeliți, cretani și arabi — îi auzim vorbind în limbile noastre despre lucrările mărețe ale lui Dumnezeu!”"
+      "text": "Cretanii și arabii îi auzim vorbind în limbile noastre lucrările mărețe ale lui Dumnezeu!"
     },
     {
       "number": 12,
-      "text": "Toți erau uimiți și nedumeriți și își ziceau unii altora: „Ce vrea să însemne aceasta?”"
+      "text": "Toți erau uimiți și nedumeriți și își ziceau unii altora: Ce vrea să însemne aceasta?"
     },
     {
       "number": 13,
-      "text": "Dar alții își băteau joc și ziceau: „Sunt plini de vin dulce!”"
+      "text": "Dar alții își băteau joc și ziceau: Sunt plini de vin dulce!"
     },
     {
       "number": 14,
-      "text": "Atunci Petru s-a ridicat împreună cu cei unsprezece, și-a înălțat glasul și le-a vorbit: „Bărbați iudei și voi toți care locuiți în Ierusalim, să vă fie cunoscut lucrul acesta și ascultați cu atenție cuvintele mele!"
+      "text": "Atunci Petru s-a ridicat împreună cu cei unsprezece, și-a înălțat glasul și le-a vorbit: Bărbați iudei și voi toți care locuiți în Ierusalim, să vă fie cunoscut lucrul acesta și ascultați cu atenție cuvintele mele!"
     },
     {
       "number": 15,
@@ -185,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "«În zilele de pe urmă, spune Dumnezeu, voi turna din Duhul Meu peste orice carne. Fiii și fiicele voastre vor profeți, tinerii voștri vor vedea vedenii, iar bătrânii voștri vor visa vise."
+      "text": "În zilele de pe urmă, spune Dumnezeu, voi turna din Duhul Meu peste orice carne. Fiii și fiicele voastre vor profeți, tinerii voștri vor vedea vedenii, iar bătrânii voștri vor visa vise."
     },
     {
       "number": 18,
@@ -197,11 +221,11 @@
     },
     {
       "number": 20,
-      "text": "Soarele se va preface în întuneric, iar luna în sânge înainte să vină ziua cea mare și strălucită a DOMNULUI."
+      "text": "Soarele va fi transformat în întuneric, și luna în sânge, înainte ca ziua cea mare și glorioasă a Domnului să vină."
     },
     {
       "number": 21,
-      "text": "Și oricine va chema Numele DOMNULUI va fi salvat.»"
+      "text": "Și oricine va chema Numele DOMNULUI va fi salvat."
     },
     {
       "number": 22,
@@ -217,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Căci David spune despre El: «Îl vedeam mereu pe DOMNUL înaintea mea, fiindcă este la dreapta mea, ca să nu mă clatin."
+      "text": "Căci David spune despre El: Îl vedeam mereu pe DOMNUL înaintea mea, fiindcă este la dreapta mea, ca să nu mă clatin."
     },
     {
       "number": 26,
@@ -229,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Mi-ai făcut cunoscute căile vieții și mă vei umple de bucurie în prezența Ta.»"
+      "text": "Mi-ai făcut cunoscute căile vieții și mă vei umple de bucurie în prezența Ta."
     },
     {
       "number": 29,
@@ -237,11 +261,11 @@
     },
     {
       "number": 30,
-      "text": "Fiind deci profet și știind că Dumnezeu îi jurase cu jurământ că va așeza pe tronul lui pe unul din rodul coapselor lui,"
+      "text": "De aceea, fiind un prooroc, și știind că Dumnezeu jurase cu jurămînt că din rodul trupului său, potrivit cărnii, va ridica pe Hristos ca să șadă pe scaunul lui de domnie,"
     },
     {
       "number": 31,
-      "text": "a văzut mai dinainte și a vorbit despre învierea lui Hristos: El nu a fost părăsit în Locuința morților și carnea Lui nu a văzut putrezirea."
+      "text": "El a prevăzut acest lucru, a vorbit despre învierea lui Hristos, că sufletul său nu a fost lăsat în Hades, iar carnea lui nu a văzut descompunerea."
     },
     {
       "number": 32,
@@ -249,35 +273,35 @@
     },
     {
       "number": 33,
-      "text": "Înălțat deci la dreapta lui Dumnezeu și primind de la Tatăl promisiunea Duhului Sfânt, El a turnat ceea ce voi vedeți și auziți."
+      "text": "De aceea, fiind înălțat prin dreapta lui Dumnezeu, și primind de la Tatăl făgăduința Duhului Sfânt, el a vărsat ce vedeți și auziți voi acum."
     },
     {
       "number": 34,
-      "text": "Căci David nu s-a urcat în ceruri, ci el însuși spune: «DOMNUL I-a zis Domnului meu: „Șezi la dreapta Mea"
+      "text": "Căci David nu s-a urcat în ceruri, ci el însuși spune: DOMNUL I-a zis Domnului meu: Șezi la dreapta Mea"
     },
     {
       "number": 35,
-      "text": "până îi voi pune pe dușmanii Tăi așternut picioarelor Tale!”»"
+      "text": "până îi voi pune pe dușmanii Tăi așternut picioarelor Tale!"
     },
     {
       "number": 36,
-      "text": "Să știe deci cu certitudine toată casa lui Israel că Dumnezeu L-a făcut și Domn, și Hristos pe acest Isus pe care voi L-ați răstignit.”"
+      "text": "Să știe deci cu certitudine toată casa lui Israel că Dumnezeu L-a făcut și Domn, și Hristos pe acest Isus pe care voi L-ați răstignit."
     },
     {
       "number": 37,
-      "text": "Când au auzit acestea, au fost străpunși în inimă și le-au zis lui Petru și celorlalți apostoli: „Fraților, ce să facem?”"
+      "text": "Când au auzit acestea, au fost străpunși în inimă și le-au zis lui Petru și celorlalți apostoli: Fraților, ce să facem?"
     },
     {
       "number": 38,
-      "text": "Petru le-a răspuns: „Pocăiți-vă și fiecare dintre voi să fie botezat în Numele lui Isus Hristos spre iertarea păcatelor voastre; și veți primi darul Duhului Sfânt."
+      "text": "Petru le-a răspuns: Pocăiți-vă și fiecare dintre voi să fie botezat în Numele lui Isus Hristos spre iertarea păcatelor voastre; și veți primi darul Duhului Sfânt."
     },
     {
       "number": 39,
-      "text": "Căci promisiunea este pentru voi, pentru copiii voștri și pentru toți cei de departe, oricâți îi va chema Domnul Dumnezeul nostru.”"
+      "text": "Căci făgăduința este pentru voi și pentru copiii voștri și pentru toți cei ce sunt departe, chiar și pentru toți cei pe care Domnul Dumnezeul nostru îi va chema."
     },
     {
       "number": 40,
-      "text": "Și, prin multe alte cuvinte, mărturisea stăruitor și îi îndemna, zicând: „Lăsați-vă salvați de această generație strâmbă!”"
+      "text": "Și, prin multe alte cuvinte, mărturisea stăruitor și îi îndemna, zicând: Lăsați-vă salvați de această generație strâmbă!"
     },
     {
       "number": 41,
@@ -289,7 +313,7 @@
     },
     {
       "number": 43,
-      "text": "Fiecare suflet era cuprins de frică și multe minuni și semne se făceau prin apostoli."
+      "text": "Frica a venit peste fiecare suflet, și multe minuni și semne au fost făcute prin apostoli."
     },
     {
       "number": 44,

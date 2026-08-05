@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 14,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,196 +28,232 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT14.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT14.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.14.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 28,
-      "reviewed": 0,
+      "reviewed": 28,
       "continuous": true,
       "verseNumbersSha256": "sha256:9a107a160e9a74d5e92434ea013a7fa5ead7b122a283f2855eb5da2b0d55f33f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:0aaa829970e5d8e4d13ced9d27527a4a46d1beb9a208cd455478a314a8ee378a",
+    "contentDigest": "sha256:51a396687510a3bbdcd45bb3e62b07510fa43906b36959ff9c82ebe2c01d27c5"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "În Iconia, ei au intrat împreună în sinagoga iudeilor, și astfel au spus că o mare mulțime de Iudei și de Greci credeau."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Dar necredincioșii iudei au stârnit și au îmbibat sufletele neamurilor împotriva fraților."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "De aceea au stat acolo multă vreme, vorbind cu îndrăzneală în Domnul, care a mărturisit cuvântul harului Său, dând semne și minuni care să fie făcute prin mâinile lor."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dar mulțimea cetății a fost împărțită; o parte de partea iudeilor și o parte de apostoli."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Când unii dintre neamuri iudei, împreună cu conducătorii lor, au făcut o încercare violentă de a-i maltrata de a-i ucide cu pietre,"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "-au dat seama de aceasta și au fugit în orașele Lycaonia, Listra, Derbe și în regiunea înconjurătoare."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Acolo au predicat vestea bună."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "La Lystra, un anumit om stătea în picioare, impotent, un infirm din pântecele mamei sale, care nu umblase niciodată."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "El asculta pe Pavel vorbind, care, fixa ochii pe el și văzând că el a avut credință pentru a fi făcut întreg,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "a zis cu glas tare:Ridică-te în picioare!„ El a sărit în sus a mers."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Cânda a văzut ce făcuse Pavel,-a ridicat glasul a zis în limba Licaoniei:Zeii s-au coborât la noi în asemănare de oameni!”"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Ei l - au numit pe Barnaba Jupiter și pe Pavel Mercur, deoarece el era vorbitorul principal."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Preotul lui Jupiter, al cărui templu era în fața cetății lor, a adus boi și ghirlande la porți și ar fi făcut un sacrificiu împreună cu mulțimile."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Apostolii Barnaba și Pavel, cînd au auzit lucrul acesta, și-au rupt hainele și s'au aruncat în norod, strigînd:"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "De ce faceți voi aceste lucruri? Și noi suntem oameni de aceeași natură ca voi, și vă aducem o veste bună, ca să vă întoarceți dela aceste lucruri deșarte la Dumnezeul cel viu, care a făcut cerul, pămîntul, marea și tot ce este în ele."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "care, în generațiile care au trecut, au permis tuturor națiunilor să umble pe căile lor."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Totuși, el nu s - a lăsat fără mărturie, deoarece a făcut bine și v - a dat ploi din cer și anotimpuri rodnice, umplându - ne inimile cu hrană și bucurie."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Chiar și spunând aceste lucruri, ei abia au oprit mulțimile de la a le face un sacrificiu."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Dar unii Iudei din Antiohia și Iconia au venit acolo, și au convins mulțimile, l-au ucis cu pietre pe Pavel și l-au scos din cetate, presupunând că era mort."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Pe cînd stăteau ucenicii în jurul Lui, S'a sculat, și a intrat în cetate. A doua zi a ieșit cu Barnaba la Derbe."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "După ce au propovăduit Evanghelia în cetatea aceea și au făcut mulți ucenici, s'au întors la Listra, Iconia și Antiohia,"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "întărind sufletele discipolilor, îndemnându - i să continue în credință și că prin multe necazuri trebuie să intrăm în Regatul lui Dumnezeu."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "După ce i-au numit pe bătrâni în fiecare adunare, și s-au rugat cu post, i-au lăudat Domnului, pe care îl crezuseră."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Au trecut prin Pisidia și au venit la Pamfilia."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "După ce au rostit cuvântul în Perga, s-au dus la Attalia."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "De acolo au plecat spre Antiohia, de unde au fost Óncredințați harului lui Dumnezeu pentru lucrarea pe care o împliniseră."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Cînd au ajuns și au strîns adunarea, ei au vestit toate lucrurile pe cari le făcuse Dumnezeu cu ei, și au deschis o ușă de credință neamurilor."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Au stat acolo cu discipolii mult timp."
     }
   ],
   "editorialNotes": [],

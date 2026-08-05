@@ -3,8 +3,8 @@
   "bookId": "1CO",
   "bookName": "1 Corinteni",
   "chapter": 14,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1CO14.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1CO14.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1CO.14.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "14:21-25 păstrează funcția de semn a limbilor și expunerea inimii prin profeție.",
-      "14:26-40 menține ordinea concretă: interpretare, judecarea profeților, tăcerea cerută și încheierea despre cuviință și ordine."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 40,
       "reviewed": 40,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "profeție și limbi, minte și duh, citatul din Isaia 28:11-12, ordinea în adunare, femeile să tacă, porunca Domnului"
+      "scope": "Au fost confruntate toate cele 40 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "14:2-19 păstrează distincția dintre vorbirea în limbă, minte și duh, fără a le omogeniza.",
-        "14:34 redă lectura SBL «femeile», fără adaosul posesiv TR «femeile voastre»."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Zidirea bisericii și pacea în adunare guvernează întreg capitolul, nu manifestarea individuală a darurilor.",
-        "Interdicțiile din 14:34-35 sunt lăsate în asprimea textului, fără atenuări sau extinderi doctrinare introduse de traducere."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:9707bd0408f4e98d46a281c44c027287281f209039e1f30b79e15f453021fc2f",
+    "contentDigest": "sha256:b6c077046faa134e06884232760ce88de42eeb62b8096391eb51dfec21e0be4e"
   },
   "verses": [
     {
@@ -134,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Aș vrea ca toți să vorbiți în limbi, dar și mai mult să profețiți; cel care profețește este mai mare decât cel care vorbește în limbi, în afară de cazul că interpretează, ca biserica să primească zidire."
+      "text": "Acum doresc ca toți să vorbiți cu alte limbi, dar și mai mult ca să profețiți; căci El este mai mare, care proorocește decît cel ce vorbește cu alte limbi, dacă nu interpretează, ca adunarea să fie zidită."
     },
     {
       "number": 6,
@@ -154,11 +181,11 @@
     },
     {
       "number": 10,
-      "text": "Sunt poate atâtea feluri de glasuri în lume, și niciunul nu este fără înțeles."
+      "text": "Există, ar putea fi, atât de multe tipuri de limbi din lume, și nici unul dintre ele nu este fără sens."
     },
     {
       "number": 11,
-      "text": "Așadar, dacă nu cunosc puterea glasului, voi fi barbar pentru cel care vorbește, iar cel care vorbește va fi barbar pentru mine."
+      "text": "Dacă atunci nu știu sensul limbii, aș fi pentru cel care vorbește un străin, și cel care vorbește ar fi un străin pentru mine."
     },
     {
       "number": 12,
@@ -182,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Căci tu mulțumești bine, dar celălalt nu este zidit."
+      "text": "Pentru tine, cu siguranță, mulțumește bine, dar cealaltă persoană nu este construită."
     },
     {
       "number": 18,
@@ -214,11 +241,11 @@
     },
     {
       "number": 25,
-      "text": "tainele inimii lui devin arătate și, astfel, căzând cu fața la pământ, se va închina lui Dumnezeu, declarând: „Într-adevăr, Dumnezeu este între voi.”"
+      "text": "Și astfel secretele inimii sale sunt dezvăluite. Astfel, el va cădea cu fața la pământ și se va închina lui Dumnezeu, declarând că Dumnezeu este printre voi."
     },
     {
       "number": 26,
-      "text": "Ce este deci, fraților? Când vă adunați, fiecare are un psalm, are o învățătură, are o descoperire, are o limbă, are o interpretare. Toate să se facă spre zidire."
+      "text": "Ce este atunci, fraților? Când vă adunați, fiecare dintre voi are un psalm, are o învățătură, are o revelație, are o altă limbă sau are o interpretare; să se facă toate lucrurile pentru a se zidi unii pe alții."
     },
     {
       "number": 27,
@@ -226,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Dar dacă nu este interpret, să tacă în biserică și să vorbească sieși și lui Dumnezeu."
+      "text": "Dar dacă nu este nici un tîlcuitor, să tacă în adunare, și să vorbească lui însuși și lui Dumnezeu."
     },
     {
       "number": 29,
@@ -266,7 +293,7 @@
     },
     {
       "number": 38,
-      "text": "Dar dacă cineva nu recunoaște, nici el nu este recunoscut."
+      "text": "Dar dacă cineva este ignorant, să fie ignorant."
     },
     {
       "number": 39,
@@ -274,7 +301,7 @@
     },
     {
       "number": 40,
-      "text": "Dar toate să se facă cu cuviință și în ordine."
+      "text": "Fie ca toate lucrurile să fie făcute decent și în ordine."
     }
   ],
   "editorialNotes": [

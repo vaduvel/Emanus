@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 11,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,304 +42,340 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN11.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN11.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/11/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.11.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 57,
-      "reviewed": 0,
+      "reviewed": 57,
       "continuous": true,
       "verseNumbersSha256": "sha256:d6d325fc196f7db1900458b6ccc26a918f83db7e23406affa61bcdb9d1dce801"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 57 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:9f83ef7203c181b102abc5defacc60c45804d2ee1dbcc753ee3ca4a0a47cdf4b",
+    "contentDigest": "sha256:126880dab089aaec25916b522130c8a2ea45b4e5453392f617ef3b4029971189"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Un om era bolnav, Lazăr din Betania, din satul Mariei și din sora ei, Marta."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Maria a fost aceea care a uns pe Domnul cu mir și i-a șters picioarele cu părul ei, al cărui frate Lazăr era bolnav."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Surorile au trimis deci la el i-au zis:Doamne, iată că cel pentru care ai multă dragoste este bolnav.„"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dar Isus, auzind aceasta, a zis:Boala aceasta nu este spre moarte, ci spre slava lui Dumnezeu, pentru ca Fiul lui Dumnezeu să fie proslăvit prin ea.”"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Isus a iubit -o pe Marta, pe sora ei și pe Lazăr."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Cînd a auzit că era bolnav, a stat două zile în locul unde era."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Apoi, după aceasta, el a spus discipolilor, Să mergem din nou în Iudeea."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Ucenicii l-au întrebat:Rabbi, evreii încercau doar să te ucidă cu pietre. Te duci din nou acolo?„"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Isus a răspuns:Nu sunt douăsprezece ceasuri de zi? Dacă umblă cineva ziua, nu se poticnește, pentru că vede lumina lumii acesteia."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Dar dacă un om umblă noaptea, se împiedică, pentru că lumina nu este în el.”"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "El le-a spus aceste lucruri, iar după aceea le-a spus:Prietenul nostru Lazăr a adormit, dar eu mă duc ca să-l trezesc din somn„."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Ucenicii au zis:Doamne, dacă a adormit, se va însănăto.”"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Isus vorbise acum despre moartea sa, dar ei credeau că vorbea despre odihna în somn."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Atunci Isus le-a spus clar:Lazăr a murit."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Mă bucur pentru binele vostru că nu am fost acolo, astfel încât să puteți crede. Cu toate acestea, să mergem la el."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "De aceea, Toma, care se Didim, le-a spus tovarășilor săi discipoli:Să mergem noi, ca să murim împreună cu el.„"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Când a venit Isus, a aflat că era deja de patru zile în mormânt."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Betania era aproape de Ierusalim, la vreo cincisprezece stadioane distanță."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Mulți iudei se alăturaseră femeilor din jurul Martei și al Mariei, ca să - i consoleze cu privire la fratele lor."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Marta, cînd a auzit că Isus vine, s'a dus și l -a întîlnit, dar Maria a rămas în casă."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Marta i-a zis lui Isus:Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Și acum știu că orice vei cere de la Dumnezeu, Dumnezeu îți va da.”"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Fratele tău va învia.„"
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Marta i-a zis:tiu că va învia la înviere, în ziua de apoi.”"
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Isus i -a zis:,,Eu sunt învierea și viața. Cine crede în Mine va mai trăi, chiar dacă va muri."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Cine trăiește și crede în mine nu va muri niciodată."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Ea i-a răspuns:Da, Doamne, am ajuns să cred că Tu ești Hristosul, Fiul lui Dumnezeu, Cel ce vine în lume.„"
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "După ce a spus acestea, ea s-a dus a chemat-o pe Maria, sora ei, în taină, zicând:Învățătorul este aici te cheamă”."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Când a auzit asta, s-a sculat repede și s-a dus la el."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Isus nu intrase încă în sat, ci era în locul unde l-a întâlnit Marta."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Iudeii, cari erau cu ea în casă și o consolau, cînd au văzut -o pe Maria, s'au sculat repede și au ieșit afară, au urmat -o, și au zis:,,Se duce la mormînt să plângă acolo. „"
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "De aceea, când Maria a ajuns unde era Isus l-a văzut, a căzut la picioarele lui i-a zis:Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit.”"
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Isus, văzînd-o plîngînd, pe Iudeii cari plîngeau împreună cu ea, a gemut în duh, s'a tulburat."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "i-au zis:Unde l-ai pus?„ Ei i-au zis:Doamne, vino vezi!”"
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Isus a plâns."
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Atunci iudeii au zis:Vedeți câtă avea pentru el!„"
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Unii dintre ei ziceau:Oare nu putea omul acesta, care a deschis ochii orbului, să-l păzească pe omul acesta de moarte?”"
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Isus, gemînd din nou în el, a venit la mormînt. Acum era o peșteră, și o piatră se întindea pe ea."
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Și Isus a zis:Ia piatra!„ Marta, sora celui mort, i-a zis:Doamne, de data aceasta este o duhoare, căci el este mort de patru zile”."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Nu ți-am spus că, dacă vei crede, vei vedea slava lui Dumnezeu?„"
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "Așa că au luat piatra din locul în care zăcea mortul. Isus a ridicat ochii și a spus:? Tată, îți mulțumesc că m-ai ascultat."
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "Știu că mă asculți mereu, dar din cauza mulțimii care stătea în jurul meu am spus asta, ca ei să creadă că tu m-ai trimis."
     },
     {
       "number": 43,
-      "text": "DE TRADUS"
+      "text": "După ce a spus acestea, a strigat cu glas tare:Lazăr, ieși afară!”"
     },
     {
       "number": 44,
-      "text": "DE TRADUS"
+      "text": "Cel mort a ieșit, legat de mînă de picior cu învelitoare, lui era înfășurată în jurul hainei. Isus le -a zis:,,Eliber -l, -l să plece."
     },
     {
       "number": 45,
-      "text": "DE TRADUS"
+      "text": "De aceea, mulți dintre iudeii care au venit la Maria și au văzut ce a crezut Isus în el."
     },
     {
       "number": 46,
-      "text": "DE TRADUS"
+      "text": "Dar unii dintre ei s-au dus la farisei și le-au spus ce făcuse Isus."
     },
     {
       "number": 47,
-      "text": "DE TRADUS"
+      "text": "Preoții cei mai de seamă fariseii au adunat un sobor au zis:,,Ce facem? Căci omul acesta face multe semne."
     },
     {
       "number": 48,
-      "text": "DE TRADUS"
+      "text": "Dacă îl lăsăm în pace așa, toți vor crede în el, iar romanii vor veni și ne vor lua atât locul, cât și națiunea."
     },
     {
       "number": 49,
-      "text": "DE TRADUS"
+      "text": "Dar unul din ei, Caiafa, care era mare preot în anul acela, le -a zis:,,Nu știți nimic,"
     },
     {
       "number": 50,
-      "text": "DE TRADUS"
+      "text": "Nici nu vă gândiți că este bine pentru noi ca un singur om să moară pentru popor și ca întreaga națiune să nu piară."
     },
     {
       "number": 51,
-      "text": "DE TRADUS"
+      "text": "Acum, el nu a spus acest lucru despre sine, dar fiind mare preot în acel an, el a profețit că Isus va muri pentru națiune,"
     },
     {
       "number": 52,
-      "text": "DE TRADUS"
+      "text": "și nu numai pentru neam, ci și ca să adune într'unul pe copiii lui Dumnezeu, cari sunt risipiți."
     },
     {
       "number": 53,
-      "text": "DE TRADUS"
+      "text": "Astfel, din acea zi, ei s - au sfătuit să - l omoare."
     },
     {
       "number": 54,
-      "text": "DE TRADUS"
+      "text": "Isus n'a mai umblat deschis printre Iudei, ci a plecat de acolo în țara din apropierea pustiei, într'o cetate numită Efraim, și a rămas acolo cu ucenicii Săi."
     },
     {
       "number": 55,
-      "text": "DE TRADUS"
+      "text": "Paștele iudeilor era aproape. Mulți s'au suit din țară la Ierusalim, înainte de Paște, ca să se purifice."
     },
     {
       "number": 56,
-      "text": "DE TRADUS"
+      "text": "Apoi l-au căutat pe Isus și au vorbit unii cu alții în timp ce stăteau în templu. Ce crezi că nu vine deloc la sărbătoare?"
     },
     {
       "number": 57,
-      "text": "DE TRADUS"
+      "text": "Preoții cei mai de seamă și fariseii au poruncit ca, dacă cineva ar ști unde este, să spună lucrul acesta, ca să -l prindă."
     }
   ],
   "editorialNotes": [],

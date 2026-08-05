@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 10,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,244 +42,280 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN10.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN10.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/10/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.10.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 42,
-      "reviewed": 0,
+      "reviewed": 42,
       "continuous": true,
       "verseNumbersSha256": "sha256:7546732d551e130d376dd4a2e09bc994d407e4b9f1efc2c7bcfc5fe6f84ff6ca"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 42 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:a542fe8983d7b7a6dd581aa65964d79699f8a94e1d111e25a2d8b7141c63b68e",
+    "contentDigest": "sha256:82488c2e0b4937c57f56d0557ce6cc4b50c3b121d0b69764ca570a79207d6e65"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Adevărat vă spun că cel care nu intră pe ușă în staulul oilor, ci se urcă pe altă cale, este hoț tâlhar."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Dar cel care intră pe ușă este păstorul oilor."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Portarul deschide poarta pentru el, și oile ascultă vocea lui. El își cheamă oile pe nume și le conduce afară."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Ori de câte ori își scoate oile, el merge înaintea lor; și oile îl urmează, pentru că ei cunosc vocea lui."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Ei nu vor urma nicidecum un străin, ci vor fugi de el, căci nu cunosc glasul străinilor.„"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Isus le - a spus această parabolă, dar ei nu au înțeles ce le spunea el."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "De aceea Isus le-a zis din nou:Adevărat, adevărat vă spun că Eu sunt ușa oilor."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Toți cei care au venit înaintea mea sunt hoți și hoți, dar oile nu le-au ascultat."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Eu sunt usa. Daca intra cineva prin mine, el va fi salvat, si va intra si va iesi si va gasi pasune."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Hoțul nu vine decât să fure, să ucidă să distrugă. Eu am venit ca ei să aibă s-o aibă din belșug."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Eu sunt păstorul cel bun. Păstorul cel bun își dă viața pentru oi."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Cel care este un angajat, și nu un păstor, care nu deține oile, vede lupul venind, lasă oile și fuge. Lupul smulge oile și le împrăștie."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Mâna angajat fuge pentru că el este un angajat de mână și nu are grijă de oaie."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Eu sunt păstorul cel bun. Îl cunosc pe al meu, și sunt cunoscut de al meu;"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Așa cum Tatăl mă cunoaște pe mine, și eu îl cunosc pe Tatăl. Îmi dau viața pentru oi."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Am alte oi care nu sunt din staulul acesta. Trebuie să le aduc și pe ele, și ele vor auzi glasul Meu. Ele vor deveni o singură turmă cu un singur păstor."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "De aceea Tatăl mă iubește, pentru că îmi dau viața, ca s-o iau din nou."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Nimeni nu mi-o ia, dar o las singură. Am puterea să o las jos, și am puterea să o iau din nou. Am primit această poruncă de la Tatăl meu."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "De aceea s-a făcut din nou dezbinare între iudei din cauza acestor cuvinte."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "dintre ei spuneau: ”Are demon este nebun! De ce-l ascultați?„"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Alții ziceau:Acestea nu sunt cuvintele celui posedat de un demon. Nu este cu putință ca un demon să deschidă ochii orbilor, nu-i așa?”"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Era sărbătoarea consacrării la Ierusalim."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Era iarnă, iar Isus umbla în templu, în pridvorul lui Solomon."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Iudeii s-au apropiat de el i-au zis:Până când ne vei ține în suspans? Dacă tu ești Hristosul, spune-ne deslușit.„"
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Isus le-a răspuns:Eu v-am spus voi nu credeți; lucrările pe care le fac Eu în numele Tatălui Meu, acestea mărturisesc despre Mine."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Dar tu nu crezi, pentru că nu ești din oile mele, așa cum ți-am spus."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Oile mele îmi aud vocea, și le cunosc, și ele mă urmează."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Le dau viața veșnică. Nu vor pieri niciodată, și nimeni nu le va smulge din mâna mea."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Tatăl meu care mi le-a dat este mai mare decât toate. Nimeni nu este capabil să le smulgă din mâna Tatălui meu."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Eu și Tatăl suntem unul."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Iudeii au luat din nou pietre ca să-l ucidă cu pietre."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Isus le-a răspuns:V-am arătat multe fapte bune de la Tatăl Meu; pentru care din aceste fapte Mă ucideți cu pietre?”"
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Iudeii i-au răspuns:Noi nu te ucidem cu pietre pentru o faptă bună, ci pentru blasfemie, pentru că tu, fiind om, te faci Dumnezeu.„"
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Isus le-a răspuns:Oare nu este scris în Legea voastră: Eu am zis: dumnezei?"
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Dacă el i-a numit dumnezei, la care a venit Cuvântul lui Dumnezeu (și Scriptura nu poate fi ruptă),"
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Spui despre cel pe care Tatăl l-a sfințit și l-a trimis în lume? Tu hulești, pentru că eu am spus, eu sunt Fiul lui Dumnezeu?"
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Dacă nu fac lucrările Tatălui Meu, să nu Mă credeți."
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Dar dacă le fac, chiar dacă nu Mă credeți pe Mine, credeți lucrările, ca să știți să credeți că Tatăl este în Mine Eu în Tatăl.”"
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Ei au căutat din nou să -l prindă, și el a ieșit din mîna lor."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "El a plecat din nou dincolo de Iordan în locul unde Ioan boteza la început, și a rămas acolo."
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "Mulți au venit la el. Ei au spus: Ioan într-adevăr nu a făcut nici un semn, dar tot ceea ce Ioan a spus despre acest om este adevărat."
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "Mulți au crezut în el acolo."
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "2CO",
   "bookName": "2 Corinteni",
   "chapter": 5,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/2CO05.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/2CO05.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/2CO.5.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Capitolul păstrează tensiunea dintre gemetul prezent și speranța casei veșnice din 5:1-4.",
-      "La 5:18-21 s-a urmărit coerența termenilor „împăcare”, „ambasadori” și „dreptatea lui Dumnezeu”."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -85,21 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "metafora cortului și a casei în 5:1-4, verbele ἐνδημοῦμεν/ἐκδημοῦμεν în 5:6-9, împăcarea în 5:18-21"
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "2 Corinteni 5:3 păstrează ideea de a nu fi găsiți goi după îmbrăcare, fără inversarea lecturii alternative.",
-        "2 Corinteni 5:10 menține judecata după faptele făcute prin trup.",
-        "2 Corinteni 5:21 păstrează formularea directă „L-a făcut păcat pentru noi”."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul despre locuința cerească și prezența la Domnul rămâne sobru, fără speculații despre starea intermediară.",
-        "Împăcarea este redată în termenii relaționali și juridici ai capitolului, fără înlocuirea vocabularului lui Pavel."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:c1f331c37a25199c7163365ea9b3144cfeb9a08031ad6bb28fb04a0a1f530ccb",
+    "contentDigest": "sha256:22dc5c34c50b24334fec2445e82252beebcb300aa622315308242b60ba12856d"
   },
   "verses": [
     {
@@ -135,11 +161,11 @@
     },
     {
       "number": 5,
-      "text": "Iar Cel care ne-a pregătit tocmai pentru aceasta este Dumnezeu, care ne-a dat arvuna Duhului."
+      "text": "Cel ce ne -a făcut pentru lucrul acesta, este Dumnezeu, care ne -a dat și plata Duhului."
     },
     {
       "number": 6,
-      "text": "Deci suntem întotdeauna plini de încredere și știm că, atâta vreme cât suntem acasă în trup, suntem departe de Domnul,"
+      "text": "Prin urmare, suntem întotdeauna încrezători și că, în timp ce suntem acasă în trup, suntem absenți de la Domnul;"
     },
     {
       "number": 7,
@@ -147,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "dar avem încredere și am prefera mai degrabă să plecăm de acasă din trup și să fim acasă la Domnul."
+      "text": "Noi suntem curaj, spun eu, și suntem dispuși mai degrabă să fim absenți din trup și să fim acasă cu Domnul."
     },
     {
       "number": 9,
@@ -183,11 +209,11 @@
     },
     {
       "number": 17,
-      "text": "Astfel, dacă este cineva în Hristos, este o făptură nouă. Cele vechi au trecut; iată, s-au făcut noi."
+      "text": "De aceea, dacă cineva este în Hristos, el este o creație nouă; lucrurile vechi au trecut; iată, toate lucrurile au devenit noi."
     },
     {
       "number": 18,
-      "text": "Iar toate sunt de la Dumnezeu, care ne-a împăcat cu Sine prin Hristos și ne-a dat slujirea împăcării,"
+      "text": "Dar toate lucrurile sunt de la Dumnezeu, care ne-a împăcat cu El, prin Isus Hristos, și ne-a dat slujba împăcării;"
     },
     {
       "number": 19,

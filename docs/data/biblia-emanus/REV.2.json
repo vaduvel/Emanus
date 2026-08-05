@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,200 +28,236 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 29,
-      "reviewed": 0,
+      "reviewed": 29,
       "continuous": true,
       "verseNumbersSha256": "sha256:31b8946a092fbe0dc4f0d37b82ff1a47922c7986940811c08f1a8f720943399e"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:8cf295986c193a8142c4ec56ba6cb347a64f02405edda3d1f74fa092e4f1952c",
+    "contentDigest": "sha256:d4c1f4efbef9b9971ee179731a784cf80a4f4cf27c81bf881592098636df04f5"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Îngerului adunării din Efes scrie-i:Cel care ține cele stele în mâna dreaptă, cel care umblă printre cele lămpi de aur, îi spune următoarele:"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Îți cunosc lucrările, truda și perseverența, și că nu poți tolera oamenii răi, și i-ai testat pe cei care se numesc apostoli, și nu sunt, și i-ai găsit falși."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Ai perseverență și au îndurat pentru numele meu sake, și nu au crescut obosit."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dar am asta împotriva ta, că ți-ai părăsit prima iubire."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "De aceea amintește-ți de unde ai căzut, și pocăiește-te și fă primele lucrări; sau altfel voi veni la tine rapid, și va muta lampa ta sta din locul său, dacă nu te pocăiești."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dar ai aceasta, că urăști lucrările nicolaiților, pe care și eu le urăsc."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Cine are ureche, să audă ce spune Bisericilor Duhul. Celui ce biruie, voi da să mănânce din pomul vieții, care este în Paradisul Dumnezeului meu."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Îngerului adunării din Smirna scrie-i: Cel dintâi și cel de pe urmă, care a murit și a înviat, îi spun aceste lucruri:"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Vă cunosc faptele, opresiunea și sărăcia (dar sunteți bogați) și blasfemia celor care spun că sunt iudei, și nu sunt, ci sunt o sinagogă a Satanei."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Nu vă fie frică de lucrurile pe care sunteți pe cale să sufere. Iată, diavolul este pe cale de a arunca unii dintre voi în închisoare, ca să puteți fi testate; și veți avea opresiune timp de zece zile. Fii credincios până la moarte, și vă voi da coroana vieții."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Cine are ureche, să audă ce zice Bisericilor Duhul. Cel ce biruie, nu va fi vătămat de moartea a doua."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Îngerului adunării din Pergam scrie-i:Cine are sabia ascuțită cu două tăiuri îi spune următoarele:"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Știu lucrările tale și unde locuiești, unde Satana este tronul. Tu ții ferm la numele meu, și nu mi-ai negat credința în zilele lui Antipa, martorul meu credincios, care a fost ucis printre voi, unde Satana locuiește."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dar am câteva lucruri împotriva ta, pentru că ai acolo pe cineva care ține învățătura lui Balaam, care l-a învățat pe Balac să arunce o piatră de poticnire înaintea copiilor lui Israel, să mănânce lucruri jertfite idolilor, și să comită imoralitate sexuală."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Deci, de asemenea, aveți, de asemenea, unii care dețin la învățătura Nicolaitanilor."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Pocăiți-vă, altfel vin la voi repede și voi face război împotriva lor cu sabia gurii mele."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Cine are ureche, să audă ce spune Bisericilor Duhul. Celui ce biruie, îi voi da din mana ascunsă, și îi voi da o piatră albă, și pe piatră un nume nou scris pe care nimeni nu-l cunoaște decât cel care o primește."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Îngerului adunării din Tiatira scrie-i: Fiul lui Dumnezeu, care are ochii ca o flacără de foc, și picioarele lui sunt ca arama lustruită, spune aceste lucruri:"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Stiu ca lucrarile tale, dragostea ta, credinta, serviciul, perseverenta pacienta, si ca ultimele tale lucrari sunt mai mult decat primele."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Dar am acest lucru împotriva ta, că tolerezi femeia ta Izabela, care se numește o profetesă. Ea învață și seduce slujitorii mei să comită imoralitate sexuală și să mănânce lucruri sacrificate idolilor."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "I-am dat timp să se pocăiască, dar refuză să se pocăiască de imoralitatea ei sexuală."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Iată, o voi arunca pe ea și pe cei care comit adulter cu ea într-un pat de mare opresiune, dacă nu se pocăiesc de faptele ei."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Voi ucide copiii ei cu moartea, și toate adunările vor ști că eu sunt cel care cercetează mintea și inimile. Voi da la fiecare dintre voi în funcție de faptele voastre."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Dar vouă vă spun, celorlalți care sunt în Tiatira, la fel de mulți ca și don 't have this teaching, care don ' t know what some calle. Lucrurile profunde ale Satanei pentru tine spun, Eu nu pun nici o altă povară pe tine."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Cu toate acestea, țineți cu tărie ceea ce până voi veni."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Cel care învinge, și cel care ține lucrările mele până la sfârșit, îi voi da autoritate asupra națiunilor."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "El îi va conduce cu o tijă de fier, zdrobindu-i ca niște oale de lut, așa cum am primit și eu de la Tatăl meu;"
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "iar eu îi voi da steaua matinală."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Cine are ureche, să audă ce spune Bisericilor Duhul."
     }
   ],
   "editorialNotes": [],

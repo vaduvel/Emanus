@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 16,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT16.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT16.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.16.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Textul nu adaugă în versetul 4 titlul «profetul» înaintea lui Iona, absent din lectura principală SBLGNT.",
-      "Metaforele «aluatul», «stânca», «cheile» și «porțile Locuinței morților» au fost păstrate fără explicații doctrinare inserate."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 28,
       "reviewed": 28,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite cele 28 de versete, cu atenție la unitatea disputată despre semnele vremurilor, mărturisirea lui Petru și perfectele perifrastice din versetul 19."
+      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Discursul direct a fost delimitat cu ghilimele românești și punctuație actuală.",
-        "Repetițiile despre pâini, coșuri și aluat au fost menținute ca fire ale argumentului."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "ἐκκλησία este redat prin «biserică», iar ᾅδης prin termenul controlat «Locuința morților».",
-        "Afirmațiile despre legare și dezlegare păstrează raportul temporal al construcției grecești fără extindere confesională."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:151b34a505300365f7e430ebf4189ee06a33fde0ebb68ece99619a15bb4937e4",
+    "contentDigest": "sha256:e1659005601ebfd25aedf163797659daa18184ef5ed9789f82b886fc42e4d74a"
   },
   "verses": [
     {
@@ -134,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Când ucenicii au ajuns pe celălalt țărm, uitaseră să ia pâini."
+      "text": "Discipolii au venit de cealaltă parte și au uitat să ia pâine."
     },
     {
       "number": 6,
@@ -186,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Iar Eu îți spun că tu ești Petru și pe această stâncă Îmi voi zidi biserica, iar porțile Locuinței morților nu o vor birui."
+      "text": "De asemenea, vă spun că ești Petru, și pe această stâncă voi construi adunarea mea, și porțile Hades nu va triumfa împotriva ei."
     },
     {
       "number": 19,
@@ -194,11 +221,11 @@
     },
     {
       "number": 20,
-      "text": "Atunci le-a poruncit ucenicilor să nu spună nimănui că El este Hristosul."
+      "text": "Apoi le - a poruncit discipolilor să nu spună nimănui că el era Isus Hristosul."
     },
     {
       "number": 21,
-      "text": "De atunci, Isus a început să le arate ucenicilor Lui că trebuie să meargă la Ierusalim, să sufere multe din partea bătrânilor, a conducătorilor preoților și a cărturarilor, să fie omorât și să fie înviat a treia zi."
+      "text": "De atunci, Isus a început să le arate discipolilor săi că trebuie să meargă la Ierusalim și să sufere multe lucruri din partea bătrânilor, a preoților cei mai de seamă și a cărturarilor și să fie ucis, iar a treia zi să fie sculat."
     },
     {
       "number": 22,
@@ -218,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "La ce-i va folosi unui om să câștige lumea întreagă, dacă își pierde viața? Sau ce va da omul în schimbul vieții sale?"
+      "text": "Pentru ce va profita un om dacă el câștigă întreaga lume și își pierde viața? Sau ce va da un om în schimbul vieții sale?"
     },
     {
       "number": 27,

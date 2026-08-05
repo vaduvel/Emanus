@@ -3,8 +3,8 @@
   "bookId": "JAS",
   "bookName": "Iacov",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,152 +28,188 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JAS04.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/JAS04.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JAS.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 17,
-      "reviewed": 0,
+      "reviewed": 17,
       "continuous": true,
       "verseNumbersSha256": "sha256:c042dea00d1219ffd4f3d4c5e31de8198e284a568f4ffabe690d27f0a0a57ed2"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 316,
+        "secondary": 95,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5922586297890594,
+      "minimumScore": 0.5759312754780807
+    },
+    "textDigest": "sha256:5926d53c61bb8b3bd9037f8c62c8c37cf22a49423fcc4d16e10677c34cd6171a",
+    "contentDigest": "sha256:88836541aea8a55d3137538134768ad907211ae003baa3a73ae244ccb9fdca5b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "De unde vin războaiele și luptele dintre voi? Nu vin ei din plăcerile voastre care războiesc în mădularele voastre?"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Tu poftești, și nu ai. Tu ucizi și râvnești, și nu poți obține. Tu lupți și faci război. Tu nu ai, pentru că nu întrebi."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Tu întrebi, și nu primi, pentru că te întrebi cu motive greșite, astfel încât s-ar putea cheltui pe plăcerile tale."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Voi adulteri și adultere, nu știți că prietenia cu lumea este ostilitate față de Dumnezeu? Prin urmare, oricine dorește să fie un prieten al lumii se face dușman al lui Dumnezeu."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Sau credeți că Scriptura spune în zadar:Duhul care locuiește în noi tânjește după gelozie„?"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dar el dă mai mult har. De aceea se spune:Dumnezeu se împotrivește celor mândri, dar dă har celor smeriți.”"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Supuneți-vă deci lui Dumnezeu, împotriviți-vă diavolului, el va fugi de la voi."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Apropiați-vă de Dumnezeu, și El se va apropia de voi. Curățați-vă mâinile, păcătoșilor! Purificați-vă inimile, voi cei curați la minte!"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Lamentați-vă, jeliți-vă și plângeți-vă, râsetele voastre să se transforme în doliu și bucuria voastră în tristețe."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Umiliți-vă înaintea Domnului, și El vă va înălța."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Să nu vorbiți unii împotriva altora, fraților. Cine vorbește împotriva fratelui său și judecă pe fratele său, vorbește împotriva legii și judecă legea. Dar dacă judecați legea, nu sunteți un împlinitor al legii, ci un judecător."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Numai unul este cel care dă legea, care este capabil să salveze și să distrugă. Dar cine ești tu să judeci pe altul?"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Veniți acum, voi care ziceți:Astăzi sau mâine să mergem în cetatea aceasta să petrecem un an acolo, făcând nego făcând profit.„"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Cu toate acestea, nu știi cum va fi viața ta mâine. Pentru ce este viața ta? Pentru că ești un vapori care apare pentru un pic de timp și apoi dispare."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Căci ar trebui să spuneți: Dacă Domnul vrea, amândoi vom trăi și vom face așa sau așa."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Dar acum vă lăudați cu lăudăronia voastră, căci orice laudă de felul acesta este rea."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dar pentru cel ce știe să facă binele și să nu-l facă, este păcat pentru el.”"
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 13,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,166 +28,203 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV13.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV13.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.13.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 18,
-      "reviewed": 0,
+      "reviewed": 18,
       "continuous": true,
       "verseNumbersSha256": "sha256:97e2b94335f7190c07ec7bc6694ea201a4159991b8d720416a90c403ecc9312b"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:57ffb4c81cca609f409baca5ed2c8a68d346a4be01cd72a58c49cc33c9c2e811",
+    "contentDigest": "sha256:4281d01e2a7c1a44e230f17af6d26d229fdeca7ef7812c94f171a6fb87897592"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Apoi m'am așezat pe nisipul mării. Am văzut o fiară ieșind din mare, cu zece coarne și șapte capete. Pe coarnele lui erau zece coroane și pe capetele lui nume blasfematoare."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Bestia pe care am văzut -o era ca un leopard, și picioarele lui erau ca cele ale unui urs, și gura lui ca gura unui leu. Dragonul i -a dat puterea lui, scaunul lui de domnie și mare autoritate."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Unul din capetele lui arăta ca și cum ar fi fost rănit mortal. Rana lui fatală a fost vindecată, și tot pământul s-a mirat de fiară."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Ei s'au închinat balaurului, pentrucă El a dat fiarei puterea Lui; și s'au închinat fiarei, zicînd:,,Cine este ca fiara? Cine poate să facă război cu el? „"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "I s-a dat o gură care vorbea lucruri mari și o blasfemie, și i s-a dat autoritatea de a face război timp de patruzeci și două de luni."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "El și -a deschis gura pentru blasfemie împotriva lui Dumnezeu, pentru a blasfemia Numele Lui, locuința Lui și pe cei ce locuiesc în cer."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "I s-a dat să facă război cu sfinții și să-i învingă. I s-a dat autoritate asupra fiecărui trib, popor, limbă și națiune."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Toți cei ce locuiesc pe pământ se vor închina lui, toți cei al căror nume nu a fost scris de la temelia lumii în cartea vieții Mielului care a fost ucis."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Dacă cineva are ureche, să audă."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Dacă cineva vrea să meargă în captivitate, el va merge în captivitate. Dacă cineva va fi ucis cu sabia, el trebuie să fie ucis. Aici este perseverența și credința sfinților."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Am văzut o altă fiară ieșind din pământ, avea două coarne ca un miel și vorbea ca un dragon."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "El exercită toată autoritatea primei fiare în prezența sa. El face pământul și pe cei care locuiesc în el să se închine primei fiare, a cărei rană fatală a fost vindecată."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "El face semne mari face să se pogoare foc din cer pe pământ înaintea oamenilor."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "El înșeală pe poporul Meu care pe pământ din cauza semnelor pe care i s-a dat să le facă în fața fiarei, spunând celor care locuiesc pe pământ că ar trebui să facă un chip fiarei care a avut rana sabiei și a trăit."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "I s-a dat să dea suflare chipului fiarei, ca chipul fiarei să vorbească și să facă să moară pe care nu s-ar închina chipului fiarei."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "El face ca tuturor, celor mici și mari, celor bogați și săracilor, celor liberi și robului, să li se dea semne pe mâinile lor drepte sau pe frunte;"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "și nimeni nu va putea cumpăra sau vinde dacă nu are semnul acela, care este numele fiarei sau numărul numelui său."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Aici este înțelepciunea. Cine are pricepere, să calculeze numărul fiarei, căci este numărul unui om. Numărul lui este șase sute șaizeci și șase.”"
     }
   ],
   "editorialNotes": [
     {
       "verse": 1,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

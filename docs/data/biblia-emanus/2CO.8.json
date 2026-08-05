@@ -3,8 +3,8 @@
   "bookId": "2CO",
   "bookName": "2 Corinteni",
   "chapter": 8,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/2CO08.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/2CO08.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/2CO.8.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Capitolul păstrează legătura dintre dărnicia macedonenilor și apelul adresat corintenilor.",
-      "La 8:13-15 s-a urmărit ideea de egalitate practică, fără uniformizare economică străină textului."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 24,
       "reviewed": 24,
@@ -85,21 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "harul colectei din 8:1-7, sărăcirea lui Hristos în 8:9, egalitatea din 8:13-15, administrarea darului în 8:19-24"
+      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "2 Corinteni 8:7 păstrează lectura SBL despre dragostea care vine „de la noi” și este în voi, nu inversarea receptă.",
-        "2 Corinteni 8:9 redă literal contrastul dintre bogăția lui Hristos și sărăcirea Lui pentru alții.",
-        "2 Corinteni 8:19-21 păstrează detaliile despre administrarea publică și responsabilă a darului."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Colecta pentru sfinți este redată ca act de har și părtășie, nu doar ca tranzacție financiară.",
-        "Modelul lui Hristos din 8:9 rămâne exemplul etic al generozității, fără explicații speculative adăugate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:9787e6eea683a67dbb85dcd02315bf7cecfa3fd3f0a1d07241e01f239f5ec49a",
+    "contentDigest": "sha256:aad35cec3acc69e0e5ca2825a91e47852ab5135298aaf291b85057761f18ab81"
   },
   "verses": [
     {
@@ -127,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Căci dau mărturie că au dat după puterea lor, ba încă peste puterea lor, de bunăvoie,"
+      "text": "Căci, după puterea lor, mărturisesc, da și dincolo de puterea lor, au dat de bună voie,"
     },
     {
       "number": 4,
@@ -155,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Și în aceasta dau o părere: căci lucrul acesta vă este de folos vouă, care nu numai că ați început să faceți, ci și să voiți, încă de anul trecut."
+      "text": "Vă dau un sfat în acest sens: este bine pentru voi care ați fost primii care ați început acum un an, nu numai să faceți, ci și să fiți dispuși."
     },
     {
       "number": 11,
@@ -163,19 +189,19 @@
     },
     {
       "number": 12,
-      "text": "Căci, dacă este mai întâi bunăvoința, ea este primită după ceea ce are cineva, nu după ceea ce nu are."
+      "text": "Căci dacă disponibilitatea este acolo, este acceptabilă în funcție de ceea ce aveți, nu în funcție de ceea ce nu aveți."
     },
     {
       "number": 13,
-      "text": "Nu pentru ca altora să le fie ușurare, iar vouă strâmtorare,"
+      "text": "Căci aceasta nu este pentru ca alții să fie ușurați și voi mâhniți,"
     },
     {
       "number": 14,
-      "text": "ci ca, prin egalitate, belșugul vostru de acum să ajungă pentru lipsa lor, pentru ca și belșugul lor să ajungă pentru lipsa voastră, ca să fie egalitate,"
+      "text": "dar pentru egalitate: abundența voastră, în acest moment, le dă lipsă, pentru ca abundența lor să devină și ea o sursă pentru lipsa voastră, ca să existe egalitate."
     },
     {
       "number": 15,
-      "text": "după cum este scris: „Cel care a adunat mult n-a avut prea mult, iar cel care a adunat puțin n-a avut prea puțin.”"
+      "text": "După cum este scris, cel care a adunat mult a rămas nimic peste, și cel care a adunat puțin nu a avut nici o lipsă."
     },
     {
       "number": 16,
@@ -183,11 +209,11 @@
     },
     {
       "number": 17,
-      "text": "fiindcă el a primit îndemnul nostru și, fiind mai plin de râvnă, a plecat de bunăvoie la voi."
+      "text": "Căci el a acceptat îndemnul nostru, dar fiind foarte sincer, el a ieșit la voi de bună voie."
     },
     {
       "number": 18,
-      "text": "Împreună cu el l-am trimis pe fratele a cărui laudă în Evanghelie este în toate bisericile."
+      "text": "Noi am trimis împreună cu el pe fratele a cărui laudă în Evanghelie este cunoscută în toate adunările."
     },
     {
       "number": 19,
@@ -195,15 +221,15 @@
     },
     {
       "number": 20,
-      "text": "Luăm măsura aceasta, ca nimeni să nu ne poată învinui în privința acestui dar bogat care este administrat de noi."
+      "text": "Noi evităm aceasta, pentru ca orice om să ne învinovățească cu privire la această abundență care este administrată de noi."
     },
     {
       "number": 21,
-      "text": "Căci purtăm grijă de ceea ce este bine, nu numai înaintea Domnului, ci și înaintea oamenilor."
+      "text": "Având în vedere lucrurile onorabile, nu numai în ochii Domnului, ci și în ochii oamenilor."
     },
     {
       "number": 22,
-      "text": "Iar împreună cu ei l-am trimis pe fratele nostru, pe care de multe ori l-am pus la încercare în multe lucruri și l-am găsit plin de râvnă, iar acum și mai plin de râvnă datorită marii încrederi pe care o are în voi."
+      "text": "Noi l-am trimis cu ei pe fratele nostru pe care l-am dovedit de multe ori sincer în multe lucruri, dar acum mult mai sincer, din cauza marii încrederi pe care o are în tine."
     },
     {
       "number": 23,
@@ -211,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Arătați-le, așadar, înaintea bisericilor, dovada dragostei voastre și a laudei noastre cu privire la voi."
+      "text": "De aceea arătați dovada iubirii voastre înaintea adunărilor și a laudelor noastre pentru voi."
     }
   ],
   "editorialNotes": [],

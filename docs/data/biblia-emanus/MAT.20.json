@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 20,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT20.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT20.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.20.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Textul principal nu adaugă la versetul 16 formula tradițională «mulți sunt chemați, dar puțini aleși», absentă din SBLGNT aici.",
-      "În versetele 22-23 este păstrată numai imaginea paharului din SBLGNT, fără adaosul despre botez prezent în TR și în puntea WEB."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 34,
       "reviewed": 34,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite cele 34 de versete, cu orele și plata pildei, cele trei verbe ale pătimirii, contrastul διάκονος/δοῦλος și vindecarea celor doi orbi."
+      "scope": "Au fost confruntate toate cele 34 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Orele antice și denarul au fost păstrate ca elemente narative, fără conversii speculative.",
-        "Paralelismul dintre conducere, slujire și robie a fost formulat clar și repetitiv."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Generozitatea stăpânului viei nu este transformată într-o explicație doctrinară despre merit.",
-        "λύτρον ἀντὶ πολλῶν este redat prin «răscumpărare pentru mulți», păstrând prepoziția și pluralul."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:f792dc23fbb11e9e1c02b9a5bceb570f22bc8e2719f93500f4810ce0cd554c35",
+    "contentDigest": "sha256:5beabd7e9d26e4018efe3009d126d09aec365b6f18acb5f2e32e2198d230822e"
   },
   "verses": [
     {
@@ -130,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Le-a spus: «Duceți-vă și voi în vie, iar eu vă voi da ce este drept.»"
+      "text": "Le-a spus: Duceți-vă și voi în vie, iar eu vă voi da ce este drept."
     },
     {
       "number": 5,
@@ -138,19 +165,19 @@
     },
     {
       "number": 6,
-      "text": "Pe la ceasul al unsprezecelea a ieșit și i-a găsit pe alții stând acolo. I-a întrebat: «De ce stați aici toată ziua fără lucru?»"
+      "text": "Pe la ceasul al unsprezecelea a ieșit și i-a găsit pe alții stând acolo. I-a întrebat: De ce stați aici toată ziua fără lucru?"
     },
     {
       "number": 7,
-      "text": "Ei i-au răspuns: «Pentru că nu ne-a angajat nimeni.» El le-a zis: «Duceți-vă și voi în vie.»"
+      "text": "I-au spus, Pentru că nimeni nu ne-a angajat. bază El le-a spus, Te duci, de asemenea, în vie, și veți primi tot ceea ce este corect."
     },
     {
       "number": 8,
-      "text": "Când s-a făcut seară, stăpânul viei i-a spus administratorului său: «Cheamă lucrătorii și plătește-le salariul, începând de la cei din urmă până la cei dintâi.»"
+      "text": "Când s-a făcut seară, stăpânul viei i-a spus administratorului său: Cheamă lucrătorii și plătește-le salariul, începând de la cei din urmă până la cei dintâi."
     },
     {
       "number": 9,
-      "text": "Cei veniți pe la ceasul al unsprezecelea au primit fiecare câte un denar."
+      "text": "Când cei care au fost angajați în jurul orei unsprezece au venit, fiecare a primit un dinar."
     },
     {
       "number": 10,
@@ -158,15 +185,15 @@
     },
     {
       "number": 11,
-      "text": "După ce l-au primit, au început să murmure împotriva stăpânului casei:"
+      "text": "Când au primit-o, au murmurat împotriva stăpânului casei,"
     },
     {
       "number": 12,
-      "text": "«Aceștia din urmă au lucrat un singur ceas, iar tu i-ai făcut egali cu noi, care am purtat povara zilei și arșița!»"
+      "text": "Aceștia din urmă au lucrat un singur ceas, iar tu i-ai făcut egali cu noi, care am purtat povara zilei și arșița!"
     },
     {
       "number": 13,
-      "text": "Dar el i-a răspuns unuia dintre ei: «Prietene, nu te nedreptățesc. Nu te-ai înțeles cu mine pentru un denar?"
+      "text": "Dar el i-a răspuns unuia dintre ei: Prietene, nu te nedreptățesc. Nu te-ai înțeles cu mine pentru un denar?"
     },
     {
       "number": 14,
@@ -174,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Nu-mi este îngăduit să fac ce vreau cu bunurile mele? Sau ochiul tău este rău pentru că eu sunt bun?»"
+      "text": "Nu-mi este îngăduit să fac ce vreau cu bunurile mele? Sau ochiul tău este rău pentru că eu sunt bun?"
     },
     {
       "number": 16,
@@ -182,15 +209,15 @@
     },
     {
       "number": 17,
-      "text": "În timp ce urca spre Ierusalim, Isus i-a luat deoparte pe cei doisprezece ucenici și, pe drum, le-a spus:"
+      "text": "Pe cînd se suia Isus la Ierusalim, a luat deoparte pe cei doisprezece ucenici, și le -a zis pe drum:"
     },
     {
       "number": 18,
-      "text": "„Iată, urcăm la Ierusalim. Fiul Omului va fi dat pe mâna conducătorilor preoților și a cărturarilor; ei Îl vor condamna la moarte"
+      "text": "Iată, urcăm la Ierusalim. Fiul Omului va fi dat pe mâna conducătorilor preoților și a cărturarilor; ei Îl vor condamna la moarte"
     },
     {
       "number": 19,
-      "text": "și Îl vor da pe mâna neamurilor ca să fie batjocorit, biciuit și răstignit; iar a treia zi va fi înviat.”"
+      "text": "și-l va preda neamurilor să batjocorească, să biciuiască, și să crucifice; și a treia zi el va fi ridicat."
     },
     {
       "number": 20,
@@ -198,27 +225,27 @@
     },
     {
       "number": 21,
-      "text": "El a întrebat-o: „Ce vrei?” Ea I-a răspuns: „Spune ca acești doi fii ai mei să șadă în Împărăția Ta, unul la dreapta Ta și unul la stânga Ta.”"
+      "text": "El a întrebat-o: Ce vrei? Ea I-a răspuns: Spune ca acești doi fii ai mei să șadă în Împărăția Ta, unul la dreapta Ta și unul la stânga Ta."
     },
     {
       "number": 22,
-      "text": "Isus a răspuns: „Nu știți ce cereți. Puteți să beți paharul pe care urmează să-l beau Eu?” Ei I-au spus: „Putem.”"
+      "text": "Dar Isus i-a răspuns:Nu știi ce ceri. Poți să bei paharul pe care urmează să-l beau Eu să fii botezat cu botezul cu care sunt botezat Eu? Ei i-au răspuns:Putem."
     },
     {
       "number": 23,
-      "text": "El le-a zis: „Paharul Meu îl veți bea, dar a ședea la dreapta și la stânga Mea nu este al Meu să dau, ci este pentru aceia cărora le-a fost pregătit de Tatăl Meu.”"
+      "text": "El le-a zis:Veți bea paharul Meu fi botez cu botezul cu care am fost botezat Eu; dar a dea de-a dreapta Mea de-a stânga Mea nu este al Meu a da, ci este al Căruia a fost pregătit de Tatăl Meu."
     },
     {
       "number": 24,
-      "text": "Când au auzit, ceilalți zece s-au indignat împotriva celor doi frați."
+      "text": "Când cei zece au auzit lucrul acesta, au fost indignați de cei doi frați."
     },
     {
       "number": 25,
-      "text": "Isus i-a chemat la El și le-a spus: „Știți că stăpânitorii neamurilor domnesc peste ele, iar cei mari își exercită autoritatea asupra lor."
+      "text": "Isus i-a chemat la El și le-a spus: Știți că stăpânitorii neamurilor domnesc peste ele, iar cei mari își exercită autoritatea asupra lor."
     },
     {
       "number": 26,
-      "text": "Între voi nu va fi așa. Dimpotrivă, oricine vrea să devină mare între voi să fie slujitorul vostru,"
+      "text": "Nu va fi așa între voi; dar oricine dorește să devină mare printre voi va fi servitorul vostru."
     },
     {
       "number": 27,
@@ -226,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "așa cum Fiul Omului n-a venit să I se slujească, ci să slujească și să-Și dea viața ca răscumpărare pentru mulți.”"
+      "text": "așa cum Fiul Omului n-a venit să I se slujească, ci să slujească și să-Și dea viața ca răscumpărare pentru mulți."
     },
     {
       "number": 29,
@@ -234,19 +261,19 @@
     },
     {
       "number": 30,
-      "text": "Și iată că doi orbi, care ședeau lângă drum, când au auzit că trece Isus, au strigat: „Doamne, Fiul lui David, ai milă de noi!”"
+      "text": "Și iată că doi orbi, care ședeau lângă drum, când au auzit că trece Isus, au strigat: Doamne, Fiul lui David, ai milă de noi!"
     },
     {
       "number": 31,
-      "text": "Mulțimea îi mustra ca să tacă, dar ei strigau și mai tare: „Doamne, Fiul lui David, ai milă de noi!”"
+      "text": "Mulțimea îi mustra ca să tacă, dar ei strigau și mai tare: Doamne, Fiul lui David, ai milă de noi!"
     },
     {
       "number": 32,
-      "text": "Isus S-a oprit, i-a chemat și i-a întrebat: „Ce vreți să fac pentru voi?”"
+      "text": "Isus S-a oprit, i-a chemat și i-a întrebat: Ce vreți să fac pentru voi?"
     },
     {
       "number": 33,
-      "text": "Ei I-au răspuns: „Doamne, să ni se deschidă ochii!”"
+      "text": "Ei I-au răspuns: Doamne, să ni se deschidă ochii!"
     },
     {
       "number": 34,

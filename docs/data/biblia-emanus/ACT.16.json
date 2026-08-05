@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 16,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT16.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT16.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.16.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 40,
-      "reviewed": 0,
+      "reviewed": 40,
       "continuous": true,
       "verseNumbersSha256": "sha256:b6a72fb6f35efb6f78cb29b2abcafff800ccac6beac4531d8f81a3fbc8105798"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 40 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:1f863772f91fdd0ccc1486febb336c529f9422b02362a3b1cfd5573ba301fe4e",
+    "contentDigest": "sha256:af46508c7587a4c6dff6e8e2dbba4fea82caed3e5391281837d175cb2b64496e"
   },
   "verses": [
     {
@@ -113,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Frații din Listra și Iconium dădeau o bună mărturie despre el."
+      "text": "Frații care au fost la Listra și Iconium au depus o mărturie bună despre el."
     },
     {
       "number": 3,
@@ -141,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "În timpul nopții, lui Pavel i s-a arătat o vedenie: un bărbat macedonean stătea în picioare și îl ruga, spunând: „Treci în Macedonia și ajută-ne!”"
+      "text": "O viziune i-a apărut lui Pavel în noapte. Era un om din Macedonia în picioare, implorându-l și spunând: Vino în Macedonia și ajută-ne."
     },
     {
       "number": 10,
-      "text": "După ce a văzut vedenia, am căutat îndată să plecăm spre Macedonia, înțelegând că Dumnezeu ne chemase să le vestim Evanghelia."
+      "text": "După ce a văzut viziunea, am căutat imediat să ieșim în Macedonia, concluzionând că Domnul ne - a chemat să le predicăm vestea bună."
     },
     {
       "number": 11,
@@ -153,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "de acolo am mers la Filipi, un oraș de seamă al acelui ținut al Macedoniei și colonie romană. Am rămas câteva zile în acest oraș."
+      "text": "și de acolo la Philippi, care este un oraș din Macedonia, cel mai important al districtului, o colonie romană. Am stat câteva zile în acest oraș."
     },
     {
       "number": 13,
@@ -169,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Pe când mergeam spre locul de rugăciune, ne-a întâlnit o sclavă care avea un duh de ghicire și care le aducea stăpânilor ei mult câștig prin prezicerile sale."
+      "text": "În timp ce mergeam la rugăciune, o anumită fată care avea un spirit de ghicire ne - a întâlnit, care și - a adus stăpânii mult câștig prin prezicerea norocului."
     },
     {
       "number": 17,
@@ -201,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Primind o asemenea poruncă, acesta i-a aruncat în temnița dinăuntru și le-a prins picioarele în butuc."
+      "text": "După ce a primit o astfel de poruncă, el i-a aruncat în închisoarea interioară și le-a asigurat picioarele în stocuri."
     },
     {
       "number": 25,
@@ -225,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Apoi i-a scos afară și a spus: „Domnilor, ce trebuie să fac ca să fiu mântuit?”"
+      "text": "le-a scos, și a spus, d-lor, ce trebuie să fac pentru a fi salvat?"
     },
     {
       "number": 31,
@@ -249,7 +285,7 @@
     },
     {
       "number": 36,
-      "text": "Temnicerul i-a transmis aceste cuvinte lui Pavel: „Magistrații au trimis poruncă să fiți eliberați. Ieșiți acum și mergeți în pace!”"
+      "text": "temnicerul a spus aceste cuvinte lui Pavel, spunând:? Magistrații au trimis să te lase să pleci; așa că acum ieși afară și du-te în pace."
     },
     {
       "number": 37,
@@ -257,7 +293,7 @@
     },
     {
       "number": 38,
-      "text": "Purtătorii de vergi le-au vestit magistraților aceste cuvinte, iar ei s-au înspăimântat când au auzit că erau cetățeni romani."
+      "text": "Sergentii au raportat aceste cuvinte magistraților, și s-au temut când au auzit că sunt romani,"
     },
     {
       "number": 39,

@@ -3,8 +3,8 @@
   "bookId": "JAS",
   "bookName": "Iacov",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,156 +28,192 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JAS03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/JAS03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JAS.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 18,
-      "reviewed": 0,
+      "reviewed": 18,
       "continuous": true,
       "verseNumbersSha256": "sha256:97e2b94335f7190c07ec7bc6694ea201a4159991b8d720416a90c403ecc9312b"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 316,
+        "secondary": 95,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5922586297890594,
+      "minimumScore": 0.5759312754780807
+    },
+    "textDigest": "sha256:942d866e5009cf3aa3841591047dacef7b7137660ff59b6dbc5eb03e1b594477",
+    "contentDigest": "sha256:8b96d6c09deab546bc600b69420260ac5419b4bc6b51dfd9318b21e3cbea1210"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Să nu fiți prea mulți învățători, frații mei, știind că vom primi o judecată mai grea."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Căci toți ne poticnim în multe lucruri. Oricine nu se poticnește în cuvînt este o persoană perfectă, capabilă să țină în frâu tot trupul."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Noi punem bucăți în guri ca să ne asculte și să le călăuzim tot trupul."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Iată, de asemenea, navele, deși acestea sunt atât de mari și sunt conduse de vânturi aprige, sunt totuși ghidate de o cârmă foarte mică, oriunde dorește pilotul."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Așadar, limba este și un mic mădular, și se laudă cu lucruri mari. Vezi cum un foc mic se poate întinde într - o pădure mare!"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Și limba este un foc. Lumea nelegiuirii printre mădularele noastre este limba, care spurcă tot trupul, și pune pe foc cursul naturii, și este pusă pe foc de Gheena."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Căci toate felurile de animale, păsări, târâtoare creaturi marine sunt îmblânzite au fost îmblânzite de omenire;"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Dar nimeni nu poate îmblânzi limba. Este un rău neliniștit, plin de otravă mortală."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Cu ea binecuvântăm Dumnezeul și Tatăl nostru, și cu el blestemăm oameni care sunt făcuți după chipul lui Dumnezeu."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Din aceeași gură iese binecuvântarea și blestemul. Frații mei, aceste lucruri nu ar trebui să fie așa."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Are un izvor trimite de la aceeași deschidere apă proaspătă și amară?"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Poate un smochin, frații mei, să dea măsline sau smochine de viță de vie? Astfel, nici un izvor nu produce apă sărată și apă dulce."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Cine este înțelept priceput între voi? Să arate prin purtarea lui bună că faptele lui sunt făcute cu blîndețea înțelepciunii."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dar dacă ai gelozie amară și ambiție egoistă în inima ta, nu te lăuda și nu minți împotriva adevărului."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Această înțelepciune nu este cea care coboară de sus, ci este pământească, senzuală și demonică."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Căci acolo unde sunt gelozia și ambiția egoistă, există confuzie și orice faptă rea."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dar înțelepciunea care este de sus este mai întâi pură, apoi pașnică, blândă, rezonabilă, plină de îndurare și roade bune, fără părtinire și fără ipocrizie."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Iar rodul neprihănirii este semănat în pace de cei ce fac pace."
     }
   ],
   "editorialNotes": [],

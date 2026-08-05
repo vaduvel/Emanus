@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 11,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT11.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT11.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.11.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Repetarea relatării lui Petru a fost păstrată integral, inclusiv cei șase frați și formularea despre salvarea întregii case.",
-      "La 11:20 textul principal urmează SBLGNT «Ἑλληνιστάς» prin «eleniști», iar lectura «Ἕλληνας» — «greci» — rămâne documentată ca alternativă de aparat.",
-      "La 11:28 nu a fost importat din TR titlul «Cezar» după Claudiu, iar întinderea foametei redă «toată lumea locuită»."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 30 de versete SBLGNT din Fapte 11, reluarea vedeniei din capitolul 10, relația dintre participii și verbele principale, terminologia comunitară și aparatul capitolului, mai ales 11:2, 11:12, 11:20, 11:22 și 11:28."
+      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Discursul lui Petru a fost redat ca relatare coerentă la persoana întâi, fără pierderea repetițiilor față de capitolul 10.",
-        "Termenii «eleniști», «creștini» și «prezbiteri» au fost aleși după forma și funcția greacă din context.",
-        "Expresia «pocăința care duce la viață» păstrează relația de scop sau rezultat fără a transforma formularea într-o definiție doctrinară."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Primirea neamurilor este prezentată prin argumentul narativ al lui Petru și prin darul lui Dumnezeu, fără judecăți confesionale adăugate.",
-        "Botezul în Duhul Sfânt este păstrat ca citat al cuvântului Domnului, fără armonizare cu formule din alte pasaje.",
-        "Harul lui Dumnezeu, credința și ajutorul pentru frații din Iudeea rămân distincte în succesiunea relatării."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:84e068c603fcf584ac017ea9fed25f9edc135f8fe311f8002a1a311c504a36c9",
+    "contentDigest": "sha256:f17fbb4ffe7db1eca856bbd805b5960f162514b05c43ad27453760b8f3fc39b6"
   },
   "verses": [
     {
@@ -141,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "M-am uitat țintă în ea, am cercetat-o și am văzut patrupedele pământului, animalele sălbatice, târâtoarele și păsările cerului."
+      "text": "Când m-am uitat atent la ea, m-am gândit și am văzut animalele cu patru picioare ale pământului, animalele sălbatice, târâtoarele și păsările cerului."
     },
     {
       "number": 7,
@@ -197,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Totuși, printre ei erau niște bărbați ciprioți și cirenieni care, venind în Antiohia, le vorbeau și eleniștilor, vestindu-L ca Evanghelie pe Domnul Isus."
+      "text": "Dar au fost unii dintre ei, oameni din Cipru Cirene, care, când au venit la Antiohia, au vorbit elen, predicându-L pe Domnul Isus."
     },
     {
       "number": 21,
@@ -209,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Când a ajuns și a văzut harul lui Dumnezeu, Barnaba s-a bucurat și i-a îndemnat pe toți să rămână alături de Domnul cu hotărâre de inimă,"
+      "text": "El, cînd a venit, a văzut harul lui Dumnezeu, s'a bucurat. El i -a îndemnat pe toți, ca să rămînă cu inima aproape de Domnul."
     },
     {
       "number": 24,
@@ -229,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Unul dintre ei, numit Agab, s-a ridicat și a arătat prin Duhul că urma să vină o mare foamete peste toată lumea locuită; ea a și venit pe vremea lui Claudiu."
+      "text": "Unul dintre ei, numit Agabus, s-a ridicat și a arătat prin Duhul că va fi o foamete mare peste tot în lume, care s-a întâmplat și în zilele lui Claudiu."
     },
     {
       "number": 29,

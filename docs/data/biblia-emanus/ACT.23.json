@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 23,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT23.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT23.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.23.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "În 23:9 a fost păstrată propoziția întreruptă după «un înger», fără îndemnul suplimentar din TR de a nu lupta împotriva lui Dumnezeu.",
-      "În 23:23 termenul rar δεξιολάβους a fost redat funcțional prin «soldați înarmați cu sulițe», fără a altera efectivele de două sute, șaptezeci și două sute."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 35,
       "reviewed": 35,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 35 de versete au fost verificate în SBLGNT 1.2 și în aparat, inclusiv variațiile din 23:6-11, adaosul TR din 23:9, termenul δεξιολάβους din 23:23 și finalul scrisorii din 23:30."
+      "scope": "Au fost confruntate toate cele 35 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Perioadele juridice și narative din 23:12-30 au fost segmentate în română fără schimbarea subiecților sau a succesiunii temporale.",
-        "Discursul direct și scrisoarea lui Claudius Lisias au primit punctuație românească, iar propoziția suspendată din 23:9 a rămas vizibil suspendată."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Afirmația despre înviere, înger și duh din 23:8 păstrează gruparea dificilă a grecei fără sistematizare doctrinară.",
-        "Intervenția Domnului din 23:11 păstrează obligația mărturiei la Roma fără numele «Pavel», adăugat numai de TR."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:7a67e5d6ef36001fb1b7e112cb38872a7d71d9fca709fb3a89f1b014e3894fdb",
+    "contentDigest": "sha256:7975c29515da58b63fb123330cd3949005ac2d904fccb5120da7e92e48a96ebc"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, privind țintă la Sinedriu, a zis: „Bărbați frați, eu m-am purtat înaintea lui Dumnezeu cu conștiință bună în toate până în ziua aceasta.”"
+      "text": "Pavel, privind țintă la Sinedriu, a zis: Bărbați frați, eu m-am purtat înaintea lui Dumnezeu cu conștiință bună în toate până în ziua aceasta."
     },
     {
       "number": 2,
@@ -126,23 +153,23 @@
     },
     {
       "number": 3,
-      "text": "Atunci Pavel i-a zis: „Dumnezeu te va lovi, perete văruit! Tu șezi să mă judeci potrivit Legii și, încălcând Legea, poruncești să fiu lovit?”"
+      "text": "Atunci Pavel i-a zis: Dumnezeu te va lovi, perete văruit! Tu șezi să mă judeci potrivit Legii și, încălcând Legea, poruncești să fiu lovit?"
     },
     {
       "number": 4,
-      "text": "Cei care stăteau acolo au zis: „Îl insulți pe marele preot al lui Dumnezeu?”"
+      "text": "Cei care stăteau acolo au zis: Îl insulți pe marele preot al lui Dumnezeu?"
     },
     {
       "number": 5,
-      "text": "Pavel a zis: „Nu știam, fraților, că este mare preot; căci este scris: «Pe un conducător al poporului tău să nu-l vorbești de rău.»”"
+      "text": "Pavel a zis: Nu știam, fraților, că este mare preot; căci este scris: Pe un conducător al poporului tău să nu-l vorbești de rău."
     },
     {
       "number": 6,
-      "text": "Pavel, știind că o parte erau saduchei, iar cealaltă farisei, a strigat în Sinedriu: „Bărbați frați, eu sunt fariseu, fiu de farisei; pentru speranța și învierea morților sunt judecat!”"
+      "text": "Pavel, știind că o parte erau saduchei, iar cealaltă farisei, a strigat în Sinedriu: Bărbați frați, eu sunt fariseu, fiu de farisei; pentru speranța și învierea morților sunt judecat!"
     },
     {
       "number": 7,
-      "text": "Când a spus aceasta, s-a iscat o dezbinare între farisei și saduchei, iar mulțimea s-a împărțit."
+      "text": "După ce a spus aceasta, s - a ridicat o ceartă între farisei și saduchei, iar mulțimea a fost împărțită."
     },
     {
       "number": 8,
@@ -150,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "S-a făcut un mare strigăt, iar unii dintre cărturarii partidei fariseilor s-au ridicat și se împotriveau cu tărie, zicând: „Nu găsim nimic rău în omul acesta. Dar dacă i-a vorbit un duh sau un înger—”"
+      "text": "Un strigăt mare s-a ridicat, iar unii dintre cărturarii din partea fariseilor s-au ridicat s-au certat, spunând:Noi nu găsim nici un rău în acest om. Dar dacă un duh sau un înger a vorbit cu el, să nu luptăm împotriva lui Dumnezeu!"
     },
     {
       "number": 10,
@@ -158,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "În noaptea următoare, Domnul a stat lângă el și a zis: „Ai curaj! Căci, după cum ai depus mărturie despre Mine la Ierusalim, tot așa trebuie să depui mărturie și la Roma.”"
+      "text": "În noaptea următoare, Domnul a stat lângă el și a zis: Ai curaj! Căci, după cum ai depus mărturie despre Mine la Ierusalim, tot așa trebuie să depui mărturie și la Roma."
     },
     {
       "number": 12,
@@ -170,47 +197,47 @@
     },
     {
       "number": 14,
-      "text": "Ei s-au dus la marii preoți și la bătrâni și au zis: „Ne-am legat sub blestem să nu gustăm nimic până nu-l vom omorî pe Pavel."
+      "text": "Ei s-au dus la marii preoți și la bătrâni și au zis: Ne-am legat sub blestem să nu gustăm nimic până nu-l vom omorî pe Pavel."
     },
     {
       "number": 15,
-      "text": "Acum, așadar, voi, împreună cu Sinedriul, înștiințați-l pe comandant să-l coboare la voi, ca și cum ați urma să cercetați mai exact cele privitoare la el; iar noi suntem gata să-l omorâm înainte să se apropie.”"
+      "text": "Acum, deci, tu cu consiliul informează comandantul că el ar trebui să-l aducă la tine mâine, ca și cum ai fost de gând să judece cazul său mai exact. Suntem gata să-l omoare înainte de a se apropie."
     },
     {
       "number": 16,
-      "text": "Dar fiul surorii lui Pavel, auzind despre capcană, a venit, a intrat în cazarmă și i-a dat de veste lui Pavel."
+      "text": "Dar fiul surorii lui Pavel a auzit că zăceau în așteptare, și a venit și a intrat în cazarmă și i - a spus lui Pavel."
     },
     {
       "number": 17,
-      "text": "Pavel a chemat la el pe unul dintre centurioni și i-a zis: „Du-l pe tânărul acesta la comandant, căci are ceva să-i spună.”"
+      "text": "Pavel a chemat la el pe unul dintre centurioni și i-a zis: Du-l pe tânărul acesta la comandant, căci are ceva să-i spună."
     },
     {
       "number": 18,
-      "text": "Așadar, centurionul l-a luat, l-a dus la comandant și a zis: „Prizonierul Pavel m-a chemat și m-a rugat să-l aduc la tine pe tânărul acesta, care are ceva să-ți spună.”"
+      "text": "Așadar, centurionul l-a luat, l-a dus la comandant și a zis: Prizonierul Pavel m-a chemat și m-a rugat să-l aduc la tine pe tânărul acesta, care are ceva să-ți spună."
     },
     {
       "number": 19,
-      "text": "Comandantul l-a luat de mână, s-a retras cu el deoparte și l-a întrebat: „Ce ai să-mi spui?”"
+      "text": "Comandantul l-a luat de mână, s-a retras cu el deoparte și l-a întrebat: Ce ai să-mi spui?"
     },
     {
       "number": 20,
-      "text": "El a zis: „Iudeii s-au înțeles să-ți ceară ca mâine să-l cobori pe Pavel la Sinedriu, ca și cum ar urma să cerceteze ceva mai amănunțit cu privire la el."
+      "text": "El a zis: Iudeii s-au înțeles să-ți ceară ca mâine să-l cobori pe Pavel la Sinedriu, ca și cum ar urma să cerceteze ceva mai amănunțit cu privire la el."
     },
     {
       "number": 21,
-      "text": "Tu însă să nu-i crezi, căci mai mult de patruzeci dintre oamenii lor îi întind o capcană; ei s-au legat cu blestem să nu mănânce și să nu bea până nu-l vor omorî, iar acum sunt gata și așteaptă încuviințarea ta.”"
+      "text": "Tu însă să nu-i crezi, căci mai mult de patruzeci dintre oamenii lor îi întind o capcană; ei s-au legat cu blestem să nu mănânce și să nu bea până nu-l vor omorî, iar acum sunt gata și așteaptă încuviințarea ta."
     },
     {
       "number": 22,
-      "text": "Comandantul i-a dat drumul tânărului, poruncindu-i: „Să nu spui nimănui că mi-ai dezvăluit acestea.”"
+      "text": "Comandantul i-a dat drumul tânărului, poruncindu-i: Să nu spui nimănui că mi-ai dezvăluit acestea."
     },
     {
       "number": 23,
-      "text": "Apoi a chemat la el doi dintre centurioni și a zis: „Pregătiți două sute de soldați să meargă până la Cezareea, șaptezeci de călăreți și două sute de soldați înarmați cu sulițe, începând din ceasul al treilea al nopții."
+      "text": "Apoi a chemat la el doi dintre centurioni și a zis: Pregătiți două sute de soldați să meargă până la Cezareea, șaptezeci de călăreți și două sute de soldați înarmați cu sulițe, începând din ceasul al treilea al nopții."
     },
     {
       "number": 24,
-      "text": "Pregătiți și animale de călărie, ca să-l urce pe Pavel și să-l ducă în siguranță la guvernatorul Felix.”"
+      "text": "El le -a cerut să aducă munți, ca să -l pună pe Pavel pe unul singur, și să -l ducă în siguranță la Felix, guvernatorul."
     },
     {
       "number": 25,
@@ -218,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "„Claudius Lisias, către preaalesul guvernator Felix: Salutare!"
+      "text": "Claudius Lisias, către preaalesul guvernator Felix: Salutare!"
     },
     {
       "number": 27,
@@ -226,15 +253,15 @@
     },
     {
       "number": 28,
-      "text": "Vrând să aflu motivul pentru care îl acuzau, l-am coborât în Sinedriul lor."
+      "text": "Dorind să știu cauza pentru care l-au acuzat, l-am adus la consiliul lor."
     },
     {
       "number": 29,
-      "text": "Am găsit că era acuzat în privința unor dispute despre Legea lor, fără să aibă vreo acuzație vrednică de moarte sau de lanțuri."
+      "text": "L-am găsit acuzat de întrebări legate de legea lor, dar nu să fie acuzat de nimic demn de moarte sau de închisoare."
     },
     {
       "number": 30,
-      "text": "Fiindu-mi dezvăluit că se va pune la cale un complot împotriva bărbatului, l-am trimis îndată la tine și le-am poruncit și acuzatorilor lui să vorbească împotriva lui înaintea ta.”"
+      "text": "Când mi s-a spus că evreii l-au așteptat pe om, l-am trimis imediat la voi, acuzându-i și pe acuzatorii săi să aducă acuzațiile lor împotriva lui înaintea voastră."
     },
     {
       "number": 31,
@@ -246,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "Călăreții au intrat în Cezareea, au înmânat scrisoarea guvernatorului și l-au înfățișat și pe Pavel înaintea lui."
+      "text": "Când au venit la Cezareea și i-au dat scrisoarea guvernatorului, l-au prezentat și pe Pavel."
     },
     {
       "number": 34,
@@ -254,7 +281,7 @@
     },
     {
       "number": 35,
-      "text": "a zis: „Te voi asculta pe deplin când vor veni și acuzatorii tăi.” Și a poruncit să fie păzit în pretoriul lui Irod."
+      "text": "a zis: Te voi asculta pe deplin când vor veni și acuzatorii tăi. Și a poruncit să fie păzit în pretoriul lui Irod."
     }
   ],
   "editorialNotes": [

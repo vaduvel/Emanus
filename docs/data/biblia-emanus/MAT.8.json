@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 8,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT08.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT08.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.8.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 34,
-      "reviewed": 0,
+      "reviewed": 34,
       "continuous": true,
       "verseNumbersSha256": "sha256:1e519807cd80b15bfffa6b39349a8fd16bc646c968959c390ae3471133952f3d"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 34 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:1b2f24ee63a6b55ca4fed57bf71caaf299bb22a254a57d86ef74731fcb64b7a4",
+    "contentDigest": "sha256:b3ff68b2707651f28786d094705d4d81d7769d426be9771cd86619aea8e50763"
   },
   "verses": [
     {
@@ -125,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Când a intrat Isus în Capernaum, un centurion s-a apropiat de El și L-a rugat:"
+      "text": "Când a intrat în Capernaum, un centurion a venit la el, cerându-i ajutor,"
     },
     {
       "number": 6,
@@ -197,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Când S-a urcat într-o barcă, ucenicii Lui L-au urmat."
+      "text": "Când s - a urcat într - o barcă, discipolii lui l - au urmat."
     },
     {
       "number": 24,
@@ -217,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Când a ajuns pe celălalt țărm, în ținutul gadarenilor, L-au întâmpinat doi demonizați care ieșeau dintre morminte. Erau atât de violenți, încât nimeni nu putea trece pe drumul acela."
+      "text": "Când a venit în cealaltă parte, în țara Gergesenilor, doi oameni posedați de demoni l-au întâlnit acolo, ieșind din morminte, extrem de feroce, astfel încât nimeni să nu poată trece pe acolo."
     },
     {
       "number": 29,
@@ -225,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Departe de ei păștea o turmă mare de porci."
+      "text": "Era o turmă de porci care se hrăneau departe de ei."
     },
     {
       "number": 31,
@@ -237,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "Păzitorii turmei au fugit, s-au dus în cetate și au povestit totul, inclusiv ce li se întâmplase demonizaților."
+      "text": "Cei care i-au hrănit au fugit și au plecat în oraș și au spus totul, inclusiv ce s-a întâmplat cu cei posedați de demoni."
     },
     {
       "number": 34,

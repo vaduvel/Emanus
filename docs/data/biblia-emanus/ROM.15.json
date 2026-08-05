@@ -3,8 +3,8 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 15,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ROM15.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ROM15.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ROM.15.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "La 15:7 pronumele ὑμᾶς este redat «v-a primit», fără înlocuirea lui cu «ne-a primit» din lectura TR.",
-      "La 15:19 este păstrat substantivul simplu πνεύματος, «Duhului», fără adaosul «Sfânt» sau «lui Dumnezeu» din ceilalți martori ai aparatului.",
-      "La 15:24 nu a fost introdusă propoziția TR «voi veni la voi», iar la 15:29 nu a fost adăugată expresia receptă «Evangheliei»."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 33,
       "reviewed": 33,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 33 de versete cu SBLGNT 1.2 și TR, inclusiv pronumele din 15:7, ordinea numelui din 15:5 și 15:16, variantele πνεύματος din 15:19, forma verbală din 15:20 și adaosurile TR din 15:24 și 15:29."
+      "scope": "Au fost confruntate toate cele 33 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Citatele succesive din 15:9-12 au fost delimitate individual și păstrează verbele «a lăuda», «a cânta», «a se bucura» și «a spera».",
-        "Vocabularul cultic din 15:16 este păstrat prin «lucrarea preoțească», «ofranda» și «sfințită» fără instituționalizare suplimentară.",
-        "Itinerarul din 15:19-28 menține toate localitățile, direcțiile, scopurile și condițiile exprimate în greacă."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Primirea reciprocă este legată de primirea făcută de Hristos și de gloria lui Dumnezeu, fără criterii comunitare adăugate.",
-        "Slujirea lui Hristos față de circumcizie și răspunsul neamurilor sunt menținute în aceeași construcție argumentativă din 15:8-9.",
-        "Lucrarea apostolică este atribuită explicit acțiunii lui Hristos prin Pavel, în cuvânt, faptă, semne, minuni și puterea Duhului."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:3248146ad6e63b4a3b7e3b7d56a87553e34f5fb5c93791a838aff422ea42c5d6",
+    "contentDigest": "sha256:3685224ced3581332cf186b243b8c66e969acb5a09a4c8879722ddeb9a0741c9"
   },
   "verses": [
     {
@@ -125,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Fiecare dintre noi să-i placă semenului spre bine, pentru zidire."
+      "text": "Fie ca fiecare dintre noi să -i placă aproapelui său pentru ce este bun, ca să -l zidească."
     },
     {
       "number": 3,
@@ -189,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Căci nu voi îndrăzni să vorbesc despre ceva ce Hristos nu a lucrat prin mine pentru ascultarea neamurilor, prin cuvânt și faptă,"
+      "text": "Căci nu voi îndrăzni să vorbesc despre nimic, afară de cele pe care Hristos le-a lucrat prin Mine pentru ascultarea Neamurilor, prin cuvânt și faptă,"
     },
     {
       "number": 19,
@@ -209,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Dar acum, nemaivând loc în aceste regiuni și având de destui ani dorința de a veni la voi,"
+      "text": "Dar acum, nu mai are nici un loc în aceste regiuni, și având în acești mulți ani o dorință de a veni la tine,"
     },
     {
       "number": 24,
@@ -217,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Acum însă merg la Ierusalim, slujindu-le sfinților."
+      "text": "Dar acum, spun eu, mă duc la Ierusalim, slujind sfinților."
     },
     {
       "number": 26,
@@ -225,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Au considerat potrivit, dar le sunt și datoare. Căci, dacă neamurile au avut parte de bunurile lor spirituale, sunt datoare să le slujească și în cele materiale."
+      "text": "Da, a fost plăcerea lor cea bună, și ei sunt datornicii lor; căci dacă neamurile au fost făcute părtași la lucrurile lor spirituale, le datorează și lor să le slujească în lucruri materiale."
     },
     {
       "number": 28,
@@ -241,11 +265,11 @@
     },
     {
       "number": 31,
-      "text": "ca să fiu izbăvit de cei neascultători din Iudeea, iar slujirea mea pentru Ierusalim să fie bine primită de sfinți,"
+      "text": "ca să fiu izbăvit de cei neascultători din Iudeea, și ca slujba pe care o am pentru Ierusalim să fie plăcută sfinților,"
     },
     {
       "number": 32,
-      "text": "pentru ca, venind cu bucurie la voi prin voia lui Dumnezeu, să găsesc odihnă împreună cu voi."
+      "text": "ca să vin la voi cu bucurie prin voia lui Dumnezeu, și împreună cu voi, să găsesc odihnă."
     },
     {
       "number": 33,

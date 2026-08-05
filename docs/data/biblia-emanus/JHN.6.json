@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 6,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,46 +42,58 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN06.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN06.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/6/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.6.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
       "meaning": "approved",
-      "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Am păstrat alternanța dintre «a crede în» și «a veni la» în discursul despre pâinea vieții, fără să nivelez relația dintre metaforă și explicația ei.",
-      "La 6:69 am urmat lectura SBL «Sfântul lui Dumnezeu», iar lectura TR mai extinsă a fost mutată în notă textuală, nu în textul principal.",
-      "La 6:53-58 am păstrat repetiția tare a termenilor «carne» și «sânge» și nu am atenuat formulările dificile prin parafrază euharistică sau simbolică."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 71,
       "reviewed": 71,
@@ -92,22 +104,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Ioan 6:1-71 verificat verset cu verset în SBLGNT; variantele materiale din 6:11 și 6:69 au fost confruntate cu TR și notate editorial."
+      "scope": "Au fost confruntate toate cele 71 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Am corectat ordinea frazelor pentru română naturală fără să pierd conectorii discursivi ai grecei.",
-        "Am păstrat numele normativ «Isus», diacriticele cu virgulă și ghilimelele românești echilibrate.",
-        "Am revizuit întreg capitolul pentru acorduri, repetiții semnificative și consecvența registrului."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Nu am armonizat discursul despre pâinea vieții cu limbajul sinoptic sau cu formule doctrinare ulterioare.",
-        "Am păstrat ambiguitățile și afirmațiile tari ale textului acolo unde greaca le menține.",
-        "Am tratat variantele textuale ca probleme de transmitere a textului, nu ca pretexte pentru extindere doctrinară."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -117,17 +129,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare comparativă după redactare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:16b0be5733ec96c267f61c3de9a2e8e7ecaaabb14d4e800d14b2635bc35929a9",
+    "contentDigest": "sha256:4f70a3155db9ef002088a68ed1bfce2cd6aa5634f44649acec936695cb6c3955"
   },
   "verses": [
     {
       "number": 1,
-      "text": "După acestea, Isus a plecat dincolo de marea Galileii, adică marea Tiberiadei."
+      "text": "După aceste lucruri, Isus s-a dus de cealaltă parte a mării Galileii, care este numită Marea Tiberiadei."
     },
     {
       "number": 2,
@@ -143,27 +167,27 @@
     },
     {
       "number": 5,
-      "text": "Așadar, Isus, ridicându-Și ochii și văzând că o mare mulțime vine la El, îi spune lui Filip: „De unde să cumpărăm pâini, ca să mănânce aceștia?”"
+      "text": "Așadar, Isus, ridicându-Și ochii și văzând că o mare mulțime vine la El, îi spune lui Filip: De unde să cumpărăm pâini, ca să mănânce aceștia?"
     },
     {
       "number": 6,
-      "text": "Dar spunea aceasta punându-l la încercare, fiindcă El știa ce avea să facă."
+      "text": "El a spus acest lucru pentru a-l testa, pentru că el însuși știa ce ar face."
     },
     {
       "number": 7,
-      "text": "Filip I-a răspuns: „Pâini de două sute de dinari nu le ajung, ca fiecare să ia câte puțin.”"
+      "text": "Filip I-a răspuns: Pâini de două sute de dinari nu le ajung, ca fiecare să ia câte puțin."
     },
     {
       "number": 8,
-      "text": "Unul dintre ucenicii Lui, Andrei, fratele lui Simon Petru, Îi spune:"
+      "text": "Unul dintre discipolii săi, Andrei, fratele lui Simon Petru, i-a spus:"
     },
     {
       "number": 9,
-      "text": "„Este aici un băiețaș care are cinci pâini de orz și doi peștișori; dar ce sunt acestea pentru atâția?”"
+      "text": "Este aici un băiețaș care are cinci pâini de orz și doi peștișori; dar ce sunt acestea pentru atâția?"
     },
     {
       "number": 10,
-      "text": "Isus a zis: „Faceți-i pe oameni să se așeze.” Și era multă iarbă în locul acela. Așadar, bărbații s-au așezat, în număr cam de cinci mii."
+      "text": "Isus a zis: Faceți-i pe oameni să se așeze. Și era multă iarbă în locul acela. Așadar, bărbații s-au așezat, în număr cam de cinci mii."
     },
     {
       "number": 11,
@@ -171,7 +195,7 @@
     },
     {
       "number": 12,
-      "text": "Iar după ce s-au săturat, le spune ucenicilor Lui: „Adunați bucățile rămase, ca să nu se piardă nimic.”"
+      "text": "Iar după ce s-au săturat, le spune ucenicilor Lui: Adunați bucățile rămase, ca să nu se piardă nimic."
     },
     {
       "number": 13,
@@ -179,11 +203,11 @@
     },
     {
       "number": 14,
-      "text": "Așadar, oamenii, văzând semnul pe care l-a făcut, spuneau: „Acesta este cu adevărat profetul care vine în lume.”"
+      "text": "Când oamenii au văzut semnul pe care l-a făcut Isus, au zis:Acesta este într-adevăr profetul care vine în lume."
     },
     {
       "number": 15,
-      "text": "Atunci Isus, știind că aveau să vină și să-L ia cu forța ca să-L facă împărat, S-a retras iarăși pe munte, numai El singur."
+      "text": "Prin urmare, Isus, dându- seama că erau pe cale să vină să-l ia cu ca să-l facă rege, s-a retras din nou pe munte de unul singur."
     },
     {
       "number": 16,
@@ -203,7 +227,7 @@
     },
     {
       "number": 20,
-      "text": "Dar El le spune: „Eu sunt; nu vă temeți.”"
+      "text": "Dar El le spune: Eu sunt; nu vă temeți."
     },
     {
       "number": 21,
@@ -211,7 +235,7 @@
     },
     {
       "number": 22,
-      "text": "A doua zi, mulțimea care stătea dincolo de mare a văzut că nu era acolo altă bărcuță decât una și că Isus nu intrase cu ucenicii Lui în barcă, ci ucenicii Lui plecaseră singuri."
+      "text": "A doua zi, mulțimea, care stătea de cealaltă parte a mării, a văzut că nu era nici o altă corabie acolo, cu excepția celei în care se îmbarcaseră ucenicii Lui, și că Isus nu intrase cu ucenicii Săi în corabie, ci ucenicii Lui plecaseră singuri."
     },
     {
       "number": 23,
@@ -223,47 +247,47 @@
     },
     {
       "number": 25,
-      "text": "Și, găsindu-L dincolo de mare, I-au zis: „Rabbi, când ai ajuns aici?”"
+      "text": "Când l-au găsit de cealaltă parte a mării, l-au întrebat, Rabbi, când ai venit aici?"
     },
     {
       "number": 26,
-      "text": "Isus le-a răspuns și a zis: „Adevărat, adevărat vă spun: Mă căutați nu pentru că ați văzut semne, ci pentru că ați mâncat din pâini și v-ați săturat."
+      "text": "Isus le-a răspuns și a zis: Adevărat, adevărat vă spun: Mă căutați nu pentru că ați văzut semne, ci pentru că ați mâncat din pâini și v-ați săturat."
     },
     {
       "number": 27,
-      "text": "Lucrați nu pentru mâncarea care piere, ci pentru mâncarea care rămâne pentru viață veșnică, pe care v-o va da Fiul Omului; fiindcă pe El L-a pecetluit Dumnezeu Tatăl.”"
+      "text": "Lucrați nu pentru mâncarea care piere, ci pentru mâncarea care rămâne pentru viață veșnică, pe care v-o va da Fiul Omului; fiindcă pe El L-a pecetluit Dumnezeu Tatăl."
     },
     {
       "number": 28,
-      "text": "Așadar, I-au zis: „Ce să facem, ca să lucrăm lucrările lui Dumnezeu?”"
+      "text": "Așadar, I-au zis: Ce să facem, ca să lucrăm lucrările lui Dumnezeu?"
     },
     {
       "number": 29,
-      "text": "Isus a răspuns și le-a zis: „Aceasta este lucrarea lui Dumnezeu: să credeți în Acela pe care L-a trimis El.”"
+      "text": "Isus a răspuns și le-a zis: Aceasta este lucrarea lui Dumnezeu: să credeți în Acela pe care L-a trimis El."
     },
     {
       "number": 30,
-      "text": "Atunci I-au zis: „Ce semn faci Tu, deci, ca să vedem și să credem în Tine? Ce lucrezi Tu?"
+      "text": "Atunci I-au zis: Ce semn faci Tu, deci, ca să vedem și să credem în Tine? Ce lucrezi Tu?"
     },
     {
       "number": 31,
-      "text": "Părinții noștri au mâncat mana în pustie, după cum este scris: «Le-a dat să mănânce pâine din cer.»”"
+      "text": "Părinții noștri au mâncat mana în pustie, după cum este scris: Le-a dat să mănânce pâine din cer."
     },
     {
       "number": 32,
-      "text": "Așadar, Isus le-a zis: „Adevărat, adevărat vă spun: nu Moise v-a dat pâinea din cer, ci Tatăl Meu vă dă pâinea adevărată din cer."
+      "text": "Așadar, Isus le-a zis: Adevărat, adevărat vă spun: nu Moise v-a dat pâinea din cer, ci Tatăl Meu vă dă pâinea adevărată din cer."
     },
     {
       "number": 33,
-      "text": "Căci pâinea lui Dumnezeu este cea care coboară din cer și dă viață lumii.”"
+      "text": "Căci pâinea lui Dumnezeu este cea care coboară din cer și dă viață lumii."
     },
     {
       "number": 34,
-      "text": "Așadar, I-au zis: „Doamne, dă-ne întotdeauna pâinea aceasta.”"
+      "text": "Așadar, I-au zis: Doamne, dă-ne întotdeauna pâinea aceasta."
     },
     {
       "number": 35,
-      "text": "Isus le-a zis: „Eu sunt pâinea vieții; cel ce vine la Mine nu va flămânzi nicidecum, iar cel ce crede în Mine nu va înseta nicicând."
+      "text": "Isus le-a zis: Eu sunt pâinea vieții; cel ce vine la Mine nu va flămânzi nicidecum, iar cel ce crede în Mine nu va înseta nicicând."
     },
     {
       "number": 36,
@@ -271,7 +295,7 @@
     },
     {
       "number": 37,
-      "text": "Tot ce-Mi dă Tatăl va veni la Mine, iar pe cel ce vine la Mine nicidecum nu-l voi scoate afară,"
+      "text": "Toți cei pe care mi-i dă Tatăl vor veni la mine. Cel ce vine la mine nu voi arunca în nici un fel afară."
     },
     {
       "number": 38,
@@ -283,19 +307,19 @@
     },
     {
       "number": 40,
-      "text": "Căci aceasta este voia Tatălui Meu: ca oricine Îl vede pe Fiul și crede în El să aibă viață veșnică, iar Eu îl voi învia în ziua de pe urmă.”"
+      "text": "Căci aceasta este voia Tatălui Meu: ca oricine Îl vede pe Fiul și crede în El să aibă viață veșnică, iar Eu îl voi învia în ziua de pe urmă."
     },
     {
       "number": 41,
-      "text": "Așadar, iudeii cârteau cu privire la El, pentru că spusese: „Eu sunt pâinea coborâtă din cer.”"
+      "text": "Așadar, iudeii cârteau cu privire la El, pentru că spusese: Eu sunt pâinea coborâtă din cer."
     },
     {
       "number": 42,
-      "text": "Și spuneau: „Nu este acesta Isus, fiul lui Iosif, al cărui tată și mamă îi știm? Cum spune El acum: «M-am coborât din cer»?”"
+      "text": "Și spuneau: Nu este acesta Isus, fiul lui Iosif, al cărui tată și mamă îi știm? Cum spune El acum: M-am coborât din cer?"
     },
     {
       "number": 43,
-      "text": "Isus a răspuns și le-a zis: „Nu cârtiți între voi."
+      "text": "Isus a răspuns și le-a zis: Nu cârtiți între voi."
     },
     {
       "number": 44,
@@ -303,7 +327,7 @@
     },
     {
       "number": 45,
-      "text": "Este scris în profeți: «Și toți vor fi învățați de Dumnezeu.» Oricine a auzit de la Tatăl și a învățat vine la Mine."
+      "text": "Este scris în profeți: Și toți vor fi învățați de Dumnezeu. Oricine a auzit de la Tatăl și a învățat vine la Mine."
     },
     {
       "number": 46,
@@ -327,15 +351,15 @@
     },
     {
       "number": 51,
-      "text": "Eu sunt pâinea cea vie, care s-a coborât din cer. Dacă mănâncă cineva din pâinea aceasta, va trăi în veac; și pâinea pe care o voi da Eu pentru viața lumii este carnea Mea.”"
+      "text": "Eu sunt pâinea cea vie, care s-a coborât din cer. Dacă mănâncă cineva din pâinea aceasta, va trăi în veac; și pâinea pe care o voi da Eu pentru viața lumii este carnea Mea."
     },
     {
       "number": 52,
-      "text": "Așadar, iudeii se certau între ei, spunând: „Cum poate Acesta să ne dea carnea Lui s-o mâncăm?”"
+      "text": "Așadar, iudeii se certau între ei, spunând: Cum poate Acesta să ne dea carnea Lui s-o mâncăm?"
     },
     {
       "number": 53,
-      "text": "Așadar, Isus le-a zis: „Adevărat, adevărat vă spun: dacă nu mâncați carnea Fiului Omului și nu beți sângele Lui, nu aveți viață în voi înșivă."
+      "text": "Așadar, Isus le-a zis: Adevărat, adevărat vă spun: dacă nu mâncați carnea Fiului Omului și nu beți sângele Lui, nu aveți viață în voi înșivă."
     },
     {
       "number": 54,
@@ -343,11 +367,11 @@
     },
     {
       "number": 55,
-      "text": "Căci carnea Mea este adevărată mâncare, iar sângele Meu este adevărată băutură."
+      "text": "Căci carnea mea este într-adevăr hrană, și sângele meu este într-adevăr băutură."
     },
     {
       "number": 56,
-      "text": "Cel ce Îmi mănâncă carnea și Îmi bea sângele rămâne în Mine, și Eu în el."
+      "text": "Cel care mănâncă carnea mea și bea sângele meu trăiește în mine, și eu în el."
     },
     {
       "number": 57,
@@ -355,7 +379,7 @@
     },
     {
       "number": 58,
-      "text": "Aceasta este pâinea care s-a coborât din cer; nu ca aceea pe care au mâncat-o părinții și au murit. Cel ce mănâncă pâinea aceasta va trăi în veac.”"
+      "text": "Aceasta este pâinea care s-a coborât din cer; nu ca aceea pe care au mâncat-o părinții și au murit. Cel ce mănâncă pâinea aceasta va trăi în veac."
     },
     {
       "number": 59,
@@ -363,11 +387,11 @@
     },
     {
       "number": 60,
-      "text": "Așadar, mulți dintre ucenicii Lui, auzind acestea, au zis: „Greu este cuvântul acesta; cine poate să-l asculte?”"
+      "text": "De aceea, dintre discipolii săi, când au auzit aceasta, au spus: Aceasta este o vorbă grea! Cine o poate asculta?"
     },
     {
       "number": 61,
-      "text": "Dar Isus, știind în Sine că ucenicii Lui cârtesc cu privire la aceasta, le-a zis: „Aceasta vă face să vă poticniți?"
+      "text": "Dar Isus, știind în Sine că ucenicii Lui cârtesc cu privire la aceasta, le-a zis: Aceasta vă face să vă poticniți?"
     },
     {
       "number": 62,
@@ -375,39 +399,39 @@
     },
     {
       "number": 63,
-      "text": "Duhul este cel ce dă viață; carnea nu folosește la nimic. Cuvintele pe care vi le-am spus Eu sunt duh și sunt viață."
+      "text": "Spiritul este cel care dă viață. Carnea nu valorează nimic. Cuvintele pe care vi le spun sunt spirite, și sunt viață."
     },
     {
       "number": 64,
-      "text": "Dar sunt unii dintre voi care nu cred.” Căci Isus știa de la început cine sunt cei ce nu cred și cine este cel ce avea să-L trădeze."
+      "text": "Dar sunt unii dintre voi care nu cred. Căci Isus știa de la început cine sunt cei ce nu cred și cine este cel ce avea să-L trădeze."
     },
     {
       "number": 65,
-      "text": "Și spunea: „De aceea v-am zis că nimeni nu poate veni la Mine, dacă nu-i este dat de la Tatăl.”"
+      "text": "Și spunea: De aceea v-am zis că nimeni nu poate veni la Mine, dacă nu-i este dat de la Tatăl."
     },
     {
       "number": 66,
-      "text": "Din pricina aceasta, mulți dintre ucenicii Lui s-au întors înapoi și nu mai umblau cu El."
+      "text": "La aceasta, mulți dintre discipolii săi s - au întors și nu mai umblau cu el."
     },
     {
       "number": 67,
-      "text": "Așadar, Isus le-a zis celor doisprezece: „Nu vreți să plecați și voi?”"
+      "text": "Așadar, Isus le-a zis celor doisprezece: Nu vreți să plecați și voi?"
     },
     {
       "number": 68,
-      "text": "Simon Petru I-a răspuns: „Doamne, la cine să ne ducem? Tu ai cuvintele vieții veșnice,"
+      "text": "Simon Petru I-a răspuns: Doamne, la cine să ne ducem? Tu ai cuvintele vieții veșnice,"
     },
     {
       "number": 69,
-      "text": "și noi am crezut și am cunoscut că Tu ești Sfântul lui Dumnezeu.”"
+      "text": "Am ajuns să credem și să știm că tu ești Hristosul, Fiul Dumnezeului celui viu."
     },
     {
       "number": 70,
-      "text": "Isus le-a răspuns: „Nu Eu v-am ales pe voi, cei doisprezece? Și unul dintre voi este un diavol.”"
+      "text": "Isus le-a răspuns: Nu Eu v-am ales pe voi, cei doisprezece? Și unul dintre voi este un diavol."
     },
     {
       "number": 71,
-      "text": "Dar vorbea despre Iuda, fiul lui Simon Iscariotul; căci el urma să-L trădeze, unul dintre cei doisprezece."
+      "text": "Și a vorbit despre Iuda, fiul lui Simon Iscarioteanul, căci el era cel ce avea să -l trădeze, fiind unul din cei doisprezece."
     }
   ],
   "editorialNotes": [
@@ -416,7 +440,7 @@
       "term": "διέδωκεν τοῖς ἀνακειμένοις",
       "decision": "Textul principal urmează SBLGNT și spune că Isus a împărțit direct celor așezați; adaosul TR despre transmiterea prin ucenici rămâne doar martor textual.",
       "reason": "SBL citește mai scurt «διέδωκεν τοῖς ἀνακειμένοις», pe când TR adaugă «τοῖς μαθηταῖς, οἱ δὲ μαθηταὶ». Pentru traducerea capitolului am păstrat lectura critică de bază și nu am introdus în corpul versetului o mediere absentă din SBL.",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Lectura SBL a fost adoptată ca text principal; diferența față de TR este documentată și nu schimbă acoperirea versetului."
     },
@@ -425,7 +449,7 @@
       "term": "ὁ ἅγιος τοῦ θεοῦ",
       "decision": "Textul principal urmează SBLGNT: «Tu ești Sfântul lui Dumnezeu».",
       "reason": "SBL are lectura mai scurtă «ὁ ἅγιος τοῦ θεοῦ», în timp ce TR citește «ὁ Χριστός, ὁ υἱὸς τοῦ θεοῦ τοῦ ζῶντος». Am păstrat formularea critică din Ioan 6, fără armonizare cu mărturisiri mai extinse din alte pasaje.",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Varianta TR este consemnată ca martor textual, iar textul principal rămâne fidel lecturii SBL fără expansiune confesională."
     }

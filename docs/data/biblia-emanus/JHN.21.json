@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 21,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,176 +42,212 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN21.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN21.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/21/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.21.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 25,
-      "reviewed": 0,
+      "reviewed": 25,
       "continuous": true,
       "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:5de623ca50bcdefcc33c3fe097f1c034e15008278f49c0becf177fdc09b3b744",
+    "contentDigest": "sha256:578a4d671046b2fedb22044d994e9fc4c8f289dd96d6bd29704dad2dd426b62d"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După aceste lucruri, Isus S-a arătat din nou ucenicilor la marea Tiberiadei. El S-a descoperit astfel."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Simon Petru, Toma, numit Didymus, Natanael din Cana în Galileea, și fiii lui Zebedei, și alți doi dintre discipolii săi au fost împreună."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Simon Petru le -a zis:,,Mă duc la pescuit. Ei i -au răspuns:,,Venim noi cu voi. Ei au ieșit îndată au intrat în corabie. În noaptea aceea n'au prins nimic."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dar când a venit ziua, Isus a stat pe plajă; totuși discipolii nu știau că era Isus."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Isus le -a zis:,,Copii, ceva de mîncat? Ei i -au răspuns:,,Nu."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "El le -a zis:,,Aruncați mreaja în partea dreaptă a corăbiei, găsi ceva. Ei au aruncat -o, acum n'au mai putut s'o tragă dupăa pelor."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Ucenicul acela pe care-l iubea Isus i-a zis deci lui Petru:Este Domnul!„ Și Simon Petru, auzind că este Domnul,-a înfășurat haina în jurul lui însuși (căci era gol), s-a aruncat în mare."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Dar ceilalți ucenici au venit cu o corabie mică, căci nu erau departe de țară, ci la vreo două sute de coți depărtare, trăgând plasa plină de pești."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Și când au ieșit pe pământ, au văzut un foc de cărbuni acolo, cu pește și pâine pusă pe el."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Isus le-a zis:Aduceți din peștii pe care i- prins.”"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Simon Petru s'a suit, wi a scos mreaja la uscat, plinq de o sutq cincizeci wi trei de pewti mari. Chiar dacq erau atkt de mulyi, plasa n'a fost ruptq."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Isus le-a zis:Veniți mâncați micul dejun!„ Nici unul dintre ucenici n-a îndrăznit să-L întrebe:Cine ești?”, știind că era Domnul."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Apoi Isus a venit și a luat pâinea, le -a dat -o, și peștele la fel."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Aceasta este a treia oară când Isus a fost revelat discipolilor săi după ce a înviat din morți."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "După ce-au luat dejunul, Isus i-a zis lui Simon Petru:Simone, fiul lui Iona, mă iubești tu mai mult decît?„ Și el i-a zis:Da, Doamne, știi că am pentru tine.” Și el i-a zis:Pa mieii mei.„"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "El i-a zis a doua oară:Simone, fiul lui Iona, mă iubești?” El i-a răspuns:Da, Doamne, știi că am dragoste pentru tine.„ El i-a zis:Pune-Mi oile la încercare.”"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "El i-a zis a treia oară:Simon, fiul lui Iona, ai pentru mine?„ Petru s-a întristat pentru că l-a întrebat a treia oară:Ai pentru mine?” El i-a zis:Doamne, tu știi totul. Tu știi că eu am pentru tine.„ Isus i-a zis:Pa oile mele."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Cu siguranta iti spun, cand erai tanar, te-ai imbracat si ai mers unde ai vrut. Dar cand esti batran, iti vei intinde mainile, si altul te va imbraca si te va duce unde nu vrei sa mergi."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "El a spus aceasta, semnificând prin ce fel de moarte avea să-L glorifice pe Dumnezeu. După ce a spus aceasta, i-a zis:Urmează-mă!”"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Apoi Petru, întorcându-se, a văzut un ucenic urmându-l. Acesta a fost discipolul pe care l-a iubit Isus, cel care s-a aplecat și el pe pieptul lui Isus la cină și a întrebat, Doamne, cine te va trăda?"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Petru, văzându-l, i-a zis lui Isus:Doamne, cum rămâne cu omul acesta?„"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Dacă voiesc să rămână până voi veni Eu, ce-ți pasă ție?"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Prin urmare, această zicală a ieșit printre frați că acest discipol nu va muri. Cu toate acestea, Isus nu i-a spus că nu va muri, dar, dacă doresc ca el să rămână până când voi veni, ceea ce este asta pentru tine?"
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Acesta este ucenicul care mărturisește despre aceste lucruri, a scris aceste lucruri. Noi știm că mărturia lui este adevărată."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Există, de asemenea, multe alte lucruri pe care le-a făcut Isus, care, dacă ar fi toate scrise, presupun că nici chiar lumea însăși nu ar avea loc pentru cărțile care ar fi scrise.”"
     }
   ],
   "editorialNotes": [],

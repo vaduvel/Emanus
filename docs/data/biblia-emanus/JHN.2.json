@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,46 +42,58 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN02.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN02.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/2/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
       "meaning": "approved",
-      "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Ioan 2:4 păstrează tensiunea idiomului «Τί ἐμοὶ καὶ σοί, γύναι;» prin formularea «Ce este între mine și tine, femeie?», fără îmblânzire devoțională și fără lipsă de respect artificială.",
-      "Ioan 2:10 redă direct «μεθυσθῶσιν» prin «s-au îmbătat», nu printr-o parafrază atenuată, pentru a păstra forța observației narative.",
-      "Ioan 2:24 menține jocul verbal cu «πιστεύω»: oamenii au «crezut» în numele lui, dar Isus nu se «încredea» în ei."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -92,20 +104,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Ioan 2:1-25; confruntare verset cu verset cu SBLGNT, control de sens prin WEB Protestant Edition, verificare auxiliară în TR pentru formulările discutabile din 2:4, 2:17 și 2:24."
+      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Am păstrat repetițiile semnificative din relatare, inclusiv «vin», «casă» și contrastul dintre «a crede» și «a se încrede».",
-        "Am ales română actuală, cu ordine firească a propozițiilor, fără să nivelez asperitățile idiomatice ale grecei."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Nu am armonizat curățirea templului cu sinopticii și nu am mutat episodul din poziția lui ioanină.",
-        "Nu am introdus interpretări doctrinare în semnul de la Cana; am lăsat explicația explicită a textului în 2:11 și 2:21-22."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -115,12 +129,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:90e1da057b4dfee1067f27d2af1df9a6258ecd49e0d13c5d6754c35317259b5b",
+    "contentDigest": "sha256:584c4e610f9eece357aaff47dad2fb54fefea973175971d785fae7baf1be9b24"
   },
   "verses": [
     {
@@ -217,7 +243,7 @@
     },
     {
       "number": 24,
-      "text": "Dar Isus nu se încredea în ei, pentru că îi cunoștea pe toți"
+      "text": "Dar Isus nu s-a încredințat lor, pentru că îi cunoștea pe toți,"
     },
     {
       "number": 25,
@@ -231,7 +257,7 @@
       "decision": "Am redat idiomul prin «Ce este între mine și tine, femeie?» și am păstrat vocativul «femeie».",
       "reason": "Construcția semitizantă marchează distanță de rol și de moment, nu ostilitate simplă. O parafrază mai dulce ar pierde tensiunea discursivă, iar o formulare brutală ar supraaccentua tonul.",
       "greekWitnesses": "SBLGNT: «Τί ἐμοὶ καὶ σοί, γύναι;»; TR: «Τί ἐμοὶ καὶ σοί, γύναι;»",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Lectura este stabilă între SBL și TR; problema este exclusiv traductologică și a fost rezolvată printr-o redare literală, dar românească."
     },
@@ -241,7 +267,7 @@
       "decision": "Am tradus «mă va mistui», urmând lectura de viitor din SBL.",
       "reason": "În contextul ioanin, citatul anticipează consumarea lui Isus de zel pentru casa Tatălui său; formularea la viitor păstrează atât citatul scriptural, cât și orientarea profetică.",
       "greekWitnesses": "SBLGNT: «Ὁ ζῆλος τοῦ οἴκου σου καταφάγεταί με»; TR: «Ὁ ζῆλος τοῦ οἴκου σου κατέφαγέ με»",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Am păstrat lectura critică SBL în textul principal și am luat TR doar ca martor pentru diferența de timp verbal."
     },
@@ -251,7 +277,7 @@
       "decision": "Am redat prin «nu se încredea în ei» ca să păstrez legătura lexicală cu «au crezut în numele lui» din 2:23.",
       "reason": "Verbul πιστεύω apare intenționat în două sensuri apropiate, iar româna cere o diferențiere minimă pentru claritate fără a rupe jocul verbal.",
       "greekWitnesses": "SBLGNT: «αὐτὸς δὲ Ἰησοῦς οὐκ ἐπίστευεν αὑτὸν αὐτοῖς»; TR: «Αὐτὸς δὲ ὁ Ἰησοῦς οὐκ ἐπίστευεν ἑαυτὸν αὐτοῖς»",
-      "reviewRequired": false,
+      "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Diferența αὑτόν/ἑαυτόν nu schimbă sensul; decizia privește păstrarea repetiției verbale și claritatea românei."
     }

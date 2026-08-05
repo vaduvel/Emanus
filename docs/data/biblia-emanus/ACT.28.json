@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 28,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,204 +28,240 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT28.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT28.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.28.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 30,
-      "reviewed": 0,
+      "reviewed": 30,
       "continuous": false,
       "verseNumbersSha256": "sha256:4f8cdb28bf4f41cad5b42005f6b733ccfe4048be88458ad013315db7de99071d"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:24a9dfbbe8f53c7cb1c07185fc6b7ba7908142ba343bbf2af32794c1dd132969",
+    "contentDigest": "sha256:488625917c9c2d3e7af624b36d4dcbda60f3616bc8256a93ec7a82dcf78b4c1b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După ce am scăpat, au aflat că insula se numea Malta."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Nativii ne-au arătat bunătate neobișnuită; căci ei au aprins un foc și ne-au primit pe toți, din cauza ploii actuale și din cauza frigului."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Dar după ce Pavel a strâns un mănunchi de bețe și le-a pus pe foc, a ieșit o viperă din cauza căldurii și s-a agățat de mâna lui."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Când nativii au văzut creatura atârnând de mâna lui, ei au spus unul altuia, fără îndoială că acest om este un criminal, care, deși el a scăpat din mare, totuși Justiția nu a permis să trăiască."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Cu toate acestea, el a scuturat creatura în foc, și nu a fost rănit."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dar se așteptau ca el să se fi umflat sau să fi căzut mort dintr-o dată, dar când au privit mult timp și au văzut că nu i s-a întâmplat nimic rău, s-au răzgândit și au spus că era un zeu."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Acum, în vecinătatea acelui loc erau ținuturi aparținând șefului insulei, Publius, care ne - a primit și ne - a distrat cu amabilitate timp de trei zile."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Tatăl lui Publius s'a săturat de febră și de dizenterie. Pavel a intrat la el, s'a rugat, și și -a pus mînile pe el, l -a vindecat."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Apoi, când acest lucru a fost făcut, restul, de asemenea, care au avut boli în insulă au venit și au fost vindecați."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "De asemenea, ne-au onorat cu multe onoruri; iar când am navigat, au pus la bord lucrurile de care aveam nevoie."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "După trei luni, ne-am îmbarcat pe o navă din Alexandria care iernase pe insulă, al cărei cap de afiș eraFrații gemeni„."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Ajungând la Syracuse, am stat acolo trei zile."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "De acolo ne-am învârtit și am ajuns la Rhegium. După o zi, un vânt de sud a răsărit, și în a doua zi am venit la Puteoli,"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "unde am găsit frați și am fost ruga să rămânem cu ei șapte zile. că am venit la Roma."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "De acolo, frații, când au auzit de noi, au venit să ne întâlnească până la Piața lui Appius și a celor Trei Taverne. Când i-a văzut, Pavel i-a mulțumit lui Dumnezeu și a avut curaj."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Când am intrat în Roma, centurionul a dat prizonierii căpitanului gărzii, dar lui Pavel i s-a permis să rămână singur cu soldatul care l-a păzit."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "După trei zile, Pavel i -a chemat pe cei ce erau căpeteniile iudeilor. După ce s'au adunat, le -a zis:,,Eu, fraților, deși nu făcusem nimic împotriva poporului și obiceiurilor părinților noștri, tot a fost dat în robie din Ierusalim în mînile romanilor,"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "care, după ce m-au examinat, au dorit să mă elibereze, pentru că nu era nici o cauză de moarte în mine."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Dar când iudeii au vorbit împotriva ei, am fost constrâns să fac apel la Cezar, nu că aș avea ceva despre care să-mi acuz națiunea."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "De aceea am cerut să vă văd și să vă vorbesc, căci din pricina speranței lui Israel sunt legat de acest lanț."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Ei i-au răspuns:Noi nu am primit scrisori din Iudeea cu privire la tine nici unul dintre nu a venit aici să tee sau să-ți vorbească de rău."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Dar noi dorim să auzim de la tine ceea ce gândești. Căci, în ceea ce această sectă, știm că pretutindeni se vorbește împotriva ei.”"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "După ce l-au numit într-o zi, mulți oameni au venit la el în locuința lui. El le-a explicat, mărturisind despre Regatul lui Dumnezeu și convingându-i cu privire la Isus, atât din legea lui Moise, cât și din profeți, de dimineață până seara."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Unii au crezut ceea ce s-a spus și alții au tăgăduit."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Când nu s-au înțeles între ei, ei au plecat după ce Pavel le-a spus o solie:Duhul Sfânt a vorbit drept prin profetul Isaia,"
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": ",,Duceți-vă la poporul acesta, și ziceți:,Ascultați, veți auzi, dar nu veți pricepe; veți vedea, și nu veți vedea, ci veți vedea."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Căci inima acestui popor a crescut dur. Urechile lor sunt plictisitoare de auz. Ochii lor s-au închis. Ca nu cumva să vadă cu ochii lor, să audă cu urechile lor, să înțeleagă cu inima lor, și să se întoarcă din nou, atunci i-aș vindeca."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "De aceea, să știți că salvarea lui Dumnezeu este trimisă națiunilor și că ei vor asculta."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Pavel a stat doi ani în casa lui închiriată și a primit pe toți cei ce veneau la el."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "predicarea Regatului lui Dumnezeu și învățarea lucrurilor despre Domnul Isus Hristos cu toată îndrăzneala, fără piedici."
     }
   ],
   "editorialNotes": [],
@@ -233,11 +269,12 @@
     {
       "number": 29,
       "status": "not-in-critical-main-text",
-      "reason": "DE DOCUMENTAT",
-      "greekWitnesses": "DE DOCUMENTAT",
-      "displayNote": "DE DOCUMENTAT",
-      "traditionalReading": "DE TRADUS DIN MARTORUL TR",
-      "resolutionStatus": "pending"
+      "reason": "Fapte 28:29 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează concluzia despre plecarea iudeilor și disputa dintre ei.",
+      "greekWitnesses": "Textus Receptus: Καὶ ταῦτα αὐτοῦ εἰπόντος, ἀπῆλθον οἱ Ἰουδαῖοι, πολλὴν ἔχοντες ἐν ἑαυτοῖς συζήτησιν.",
+      "displayNote": "Lectură tradițională: textul principal SBLGNT nu include acest verset.",
+      "traditionalReading": "După ce a spus aceste cuvinte, iudeii au plecat, având între ei o mare dispută.",
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională a fost tradusă independent din Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

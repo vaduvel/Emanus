@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 12,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT12.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT12.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.12.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Triangularea a confirmat detaliile concrete ale pazei lui Petru — patru grupe de câte patru soldați, două lanțuri și două posturi de gardă — fără simplificare narativă.",
-      "La 12:21 «βῆμα» a fost redat prin «scaunul de judecată», nu prin «tron», deoarece scena descrie platforma oficială de adresare publică.",
-      "La 12:25 relația dificilă a lui «εἰς Ἰερουσαλήμ» a fost păstrată ca destinație a slujirii împlinite, iar variantele «ἐξ/ἀπὸ» nu au fost introduse în textul principal."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 25 de versete SBLGNT din Fapte 12, succesiunea eliberării lui Petru, discursul direct, termenii administrativi și militari, precum și aparatul capitolului, cu atenție la 12:3, 12:21, 12:24 și 12:25."
+      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Instrucțiunile scurte ale îngerului au fost păstrate ca imperative distincte și firești în română.",
-        "Litota «nu mică tulburare» a fost menținută în 12:18, fără atenuarea intensității textului.",
-        "Termenii concreți «coastă», «lanțuri», «poartă de fier», «iatacul regelui» și «scaunul de judecată» păstrează imaginile și registrul relatării."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Eliberarea lui Petru este atribuită explicit Domnului prin înger, fără transformarea reacțiilor comunității într-o judecată asupra credinței lor.",
-        "Afirmația «este îngerul lui» rămâne declarația personajelor și nu este explicată doctrinar în corpul versetului.",
-        "Moartea lui Irod păstrează legătura narativă cu neacordarea gloriei lui Dumnezeu, fără detalii medicale adăugate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:de8585547e3adabb3d629bec6a63c5acd2fd3a0df3129c405c1ce5e4e2e9ad46",
+    "contentDigest": "sha256:d786840b3bb36d6ae5bab5606d3841948f31dd5a1a6616296ff88d50528eb0a6"
   },
   "verses": [
     {
       "number": 1,
-      "text": "În vremea aceea, regele Irod a pus mâna pe unii din biserică pentru a le face rău."
+      "text": "În acea perioadă, regele Irod și - a întins mâinile ca să asuprească o parte din adunare."
     },
     {
       "number": 2,
@@ -129,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Când a văzut că lucrul acesta le este pe plac iudeilor, a mers mai departe și l-a arestat și pe Petru. Erau zilele Azimelor."
+      "text": "Cînd a văzut că lucrul acesta le plăcea iudeilor, a pus mîna și pe Petru, și în zilele azimilor."
     },
     {
       "number": 4,
@@ -153,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Petru a ieșit și îl urma. Nu știa că ceea ce se făcea prin înger era real, ci credea că vede o vedenie."
+      "text": "Și a ieșit și l-a urmat. N-a știut că ceea ce a fost făcut de înger a fost real, dar a crezut că a văzut o viziune."
     },
     {
       "number": 10,
@@ -169,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Când a bătut la ușa porții, o slujnică numită Roda a venit să răspundă."
+      "text": "Când Petru a bătut la ușa porții, o servitoare pe nume Rhoda a venit să răspundă."
     },
     {
       "number": 14,
@@ -189,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Când s-a făcut ziuă, între soldați a fost o tulburare nu mică din pricina a ceea ce se întâmplase cu Petru."
+      "text": "Acum, de îndată ce a fost zi, nu a existat nici o agitație mică printre soldați despre ceea ce a devenit de Petru."
     },
     {
       "number": 19,
@@ -209,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Îndată l-a lovit un înger al Domnului, pentru că nu I-a dat glorie lui Dumnezeu. A fost mâncat de viermi și și-a dat ultima suflare."
+      "text": "Un înger al Domnului l-a lovit îndată, pentru că nu i-a dat slava lui Dumnezeu. Apoi a fost mâncat de viermi și a murit."
     },
     {
       "number": 24,

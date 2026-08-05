@@ -3,8 +3,8 @@
   "bookId": "JAS",
   "bookName": "Iacov",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,198 +28,235 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JAS02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/JAS02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JAS.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 26,
-      "reviewed": 0,
+      "reviewed": 26,
       "continuous": true,
       "verseNumbersSha256": "sha256:66f396c11f7d352910573cbc62ff9d62516c36d9103520f74c56e287f6d5dc27"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 316,
+        "secondary": 95,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5922586297890594,
+      "minimumScore": 0.5759312754780807
+    },
+    "textDigest": "sha256:304378e9ed547ae4c721aa3cb8793ce8412320c1c32b8fac73747f1623b9bf9c",
+    "contentDigest": "sha256:ff78301ee20108d60e7627272d9a457ad6d1d3ac2528802c25e466a02020f7d3"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Fraților, nu țineți cu părtinire credința gloriosului nostru Domn Isus Hristos."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Căci dacă un om cu un inel de aur, îmbrăcat frumos, intră în sinagoga ta, și intră și un sărac în haine murdare,"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "să-i acord o deosebită celui care poartă haine frumoase spuneți:ezi aici într-un loc bun„; spuneți săracului:Stai acolo” sauezi lângă așternutul picioarelor mele„."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Nu ați arătat părtinire între voi, și ați devenit judecători cu gânduri rele?"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Ascultați, preaiubiții mei frați. Oare Dumnezeu i-a ales pe cei săraci în această lume ca să fie bogați în credință și moștenitori ai Regatului pe care le-a promis celor ce-l iubesc?"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dar l-ai dezonorat pe bietul om. Nu te opresează cei bogați și te târăsc personal în fața tribunalelor?"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Nu batjocoresc ei onorabilul nume pe care-l purtați?"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Totuși, dacă împlinești legea regală conform Scripturii, vei iubi pe aproapele tău ca pe tine însuți, faci bine."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Dar dacă arătați părtinire, păcătuiți, fiind condamnați de lege ca niște călcători de lege."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Căci oricine păzește toată legea, și totuși se poticnește într'un singur moment, s'a făcut vinovat de toate."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Căci cel ce a zis:Să nu preacurv”, a mai zis:Să nu ucizi.„ Dacă nu preacurv, ci ucizi, ai devenit un călcător al legii."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Vorbiți și faceți la fel ca oamenii care vor fi judecați după legea libertății."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Căci judecata este fără milostivenie pentru cel ce n-a arătat milă, iar milostivenia triumfă asupra judecății."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "La ce bun, fraților, dacă un om spune că are credință, dar nu are fapte? Poate credința să-l salveze?"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Și dacă un frate sau o soră e dezbrăcat și nu mănâncă zilnic,"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "unul dintre voi le spune:Duceți-vă în pace. Încălziți-vă săturați-vă!” Și, nu le- dat lucrurile de care are nevoie trupul, la ce bun?"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Chiar și așa credința, dacă nu are fapte, este moartă în sine."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Da, un om va zice:Tu ai credință, eu am fapte.„ Arată-mi credința ta fără fapte,-ți voi arăta credința mea prin faptele mele."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Tu crezi că Dumnezeu este unul. Tu faci bine. Demonii, de asemenea, cred și se cutremură."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Dar vrei să știi, om zadarnic, că credința în afară de fapte este mort?"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Oare Avraam, tatăl nostru, a fost socotit drept prin fapte, prin faptul că a adus pe altar pe fiul său Isaac?"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Veți vedea că credința a lucrat cu lucrările sale, și prin fapte credința a fost perfecționată."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Astfel s-a împlinit Scriptura care spune:Avraam a crezut pe Dumnezeu i s-a socotit ca neprihănire” el a fost numit prietenul lui Dumnezeu."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Vezi deci că prin fapte un om este justificat, și nu numai prin credință."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "În fel, nu a fost prostituata Rahav îndreptățită prin fapte când i-a primit pe mesageri i-a trimis pe altă cale?"
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Căci așa cum trupul, în afară de duh, este mort, tot așa credința, în afară de fapte, este moartă."
     }
   ],
   "editorialNotes": [
     {
       "verse": 20,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

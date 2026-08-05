@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT07.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT07.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.7.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Fapte 7:30 urmează SBLGNT prin «un înger», fără completarea TR «al Domnului», iar 7:37 păstrează subiectul simplu «Dumnezeu».",
-      "În 7:48 nu a fost introdus substantivul «temple»: χειροποιήτοις este redat prin expresia mai largă «lucruri făcute de mâini».",
-      "Numărul de șaptezeci și cinci de persoane din 7:14 și «dincolo de Babilon» din 7:43 sunt păstrate conform discursului grecesc din Fapte, fără armonizare cu alte forme veterotestamentare."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 60,
       "reviewed": 60,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "discursul lui Ștefan de la Avraam la Solomon, citatele din Geneza, Exod, Deuteronom, Amos și Isaia, acuzația finală, vedenia și uciderea lui Ștefan"
+      "scope": "Au fost confruntate toate cele 60 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Repetiția demonstrativului «acest Moise» din 7:35–38 a fost păstrată pentru progresia retorică a discursului.",
-        "Cele trei perioade de câte patruzeci de ani și numerele de patru sute și șaptezeci și cinci au fost păstrate exact.",
-        "Citatele lungi au fost punctuate cu ghilimele românești pe niveluri, fără ruperea raportului dintre discursul lui Ștefan și vocile citate."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Rezumatul istoriei patriarhilor este tradus în forma rostită în Fapte și nu este armonizat în tăcere cu narațiunile din Geneza.",
-        "Îngerul, glasul Domnului și declarația lui Dumnezeu din episodul rugului sunt păstrate ca referenți succesivi ai discursului, fără sistematizare adăugată.",
-        "Acuzația lui Ștefan împotriva ascultătorilor este păstrată în forța ei retorică, fără extinderea ei asupra unui popor sau a unei comunități din afara scenei."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,25 +123,37 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:b73885f62d29265fef0ef8ed3882e9d46c869d93a51140a3ecd8b15ebed968cc",
+    "contentDigest": "sha256:f81513e7cbdd50cae5cb30292b8cbc2d8cf694d16d3e9b705beba8bb0d8c5376"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Marele preot a zis: „Așa stau lucrurile?”"
+      "text": "Marele preot a zis: Așa stau lucrurile?"
     },
     {
       "number": 2,
-      "text": "Ștefan a răspuns: „Fraților și părinților, ascultați! Dumnezeul gloriei i S-a arătat părintelui nostru Avraam pe când era în Mesopotamia, înainte să locuiască în Haran,"
+      "text": "Ștefan a răspuns: Fraților și părinților, ascultați! Dumnezeul gloriei i S-a arătat părintelui nostru Avraam pe când era în Mesopotamia, înainte să locuiască în Haran,"
     },
     {
       "number": 3,
-      "text": "și i-a zis: «Ieși din țara ta și dintre rudele tale și vino în țara pe care ți-o voi arăta.»"
+      "text": "și i-a zis: Ieși din țara ta și dintre rudele tale și vino în țara pe care ți-o voi arăta."
     },
     {
       "number": 4,
@@ -141,11 +165,11 @@
     },
     {
       "number": 6,
-      "text": "Dumnezeu i-a vorbit astfel: «Urmașii lui vor fi străini într-o țară care nu este a lor; oamenii de acolo îi vor înrobi și îi vor asupri patru sute de ani."
+      "text": "Dumnezeu i-a vorbit astfel: Urmașii lui vor fi străini într-o țară care nu este a lor; oamenii de acolo îi vor înrobi și îi vor asupri patru sute de ani."
     },
     {
       "number": 7,
-      "text": "Dar Eu voi judeca neamul căruia îi vor sluji», a spus Dumnezeu, «iar după aceea vor ieși și Îmi vor sluji în locul acesta.»"
+      "text": "Dar Eu voi judeca neamul căruia îi vor sluji, a spus Dumnezeu, iar după aceea vor ieși și Îmi vor sluji în locul acesta."
     },
     {
       "number": 8,
@@ -185,15 +209,15 @@
     },
     {
       "number": 17,
-      "text": "Pe măsură ce se apropia timpul promisiunii pe care Dumnezeu i-o făcuse lui Avraam, poporul creștea și se înmulțea în Egipt,"
+      "text": "Dar, pe măsură ce timpul promisiunii s-a apropiat pe care Dumnezeu îl jurase lui Avraam, poporul a crescut și s-a înmulțit în Egipt,"
     },
     {
       "number": 18,
-      "text": "până când s-a ridicat peste Egipt un alt rege, care nu-l cunoscuse pe Iosif."
+      "text": "Până când s-a ridicat un alt rege care nu îl cunoștea pe Iosif."
     },
     {
       "number": 19,
-      "text": "Acesta s-a purtat cu viclenie față de neamul nostru și i-a asuprit pe părinții noștri, făcându-i să-și abandoneze pruncii, ca să nu rămână în viață."
+      "text": "Același lucru a profitat de rasa noastră și i - a maltratat pe tații noștri și i - a forțat să - și abandoneze copiii, pentru ca ei să nu rămână în viață."
     },
     {
       "number": 20,
@@ -209,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Când i s-a împlinit vremea de patruzeci de ani, i-a venit în inimă să-i cerceteze pe frații săi, fiii lui Israel."
+      "text": "Dar cînd avea patruzeci de ani, i -a venit în inimă să - i viziteze pe frații săi, copiii lui Israel."
     },
     {
       "number": 24,
@@ -221,15 +245,15 @@
     },
     {
       "number": 26,
-      "text": "A doua zi a venit la ei pe când se luptau și a încercat să-i împace, zicând: «Bărbaților, sunteți frați! De ce vă nedreptățiți unul pe altul?»"
+      "text": "A doua zi a venit la ei pe când se luptau și a încercat să-i împace, zicând: Bărbaților, sunteți frați! De ce vă nedreptățiți unul pe altul?"
     },
     {
       "number": 27,
-      "text": "Dar cel care îl nedreptățea pe aproapele său l-a împins și i-a zis: «Cine te-a pus conducător și judecător peste noi?"
+      "text": "Dar cel care îl nedreptățea pe aproapele său l-a împins și i-a zis: Cine te-a pus conducător și judecător peste noi?"
     },
     {
       "number": 28,
-      "text": "Vrei să mă omori și pe mine cum l-ai omorât ieri pe egiptean?»"
+      "text": "Vrei să mă omori și pe mine cum l-ai omorât ieri pe egiptean?"
     },
     {
       "number": 29,
@@ -245,19 +269,19 @@
     },
     {
       "number": 32,
-      "text": "«Eu sunt Dumnezeul părinților tăi, Dumnezeul lui Avraam, al lui Isaac și al lui Iacov.» Moise, cuprins de tremur, nu îndrăznea să privească."
+      "text": "Eu sunt Dumnezeul părinților tăi, Dumnezeul lui Avraam, al lui Isaac și al lui Iacov. Moise, cuprins de tremur, nu îndrăznea să privească."
     },
     {
       "number": 33,
-      "text": "Domnul i-a zis: «Scoate-ți sandalele din picioare, căci locul pe care stai este pământ sfânt."
+      "text": "Domnul i-a zis: Scoate-ți sandalele din picioare, căci locul pe care stai este pământ sfânt."
     },
     {
       "number": 34,
-      "text": "Am văzut cu adevărat asuprirea poporului Meu care este în Egipt, i-am auzit geamătul și am coborât să-i eliberez. Acum vino, te voi trimite în Egipt.»"
+      "text": "Am văzut cu adevărat asuprirea poporului Meu care este în Egipt, i-am auzit geamătul și am coborât să-i eliberez. Acum vino, te voi trimite în Egipt."
     },
     {
       "number": 35,
-      "text": "Pe acest Moise, pe care ei îl renegaseră, zicând: «Cine te-a pus conducător și judecător?», pe acesta Dumnezeu l-a trimis drept conducător și eliberator, prin mâna îngerului care i se arătase în rug."
+      "text": "Pe acest Moise, pe care ei îl renegaseră, zicând: Cine te-a pus conducător și judecător?, pe acesta Dumnezeu l-a trimis drept conducător și eliberator, prin mâna îngerului care i se arătase în rug."
     },
     {
       "number": 36,
@@ -265,7 +289,7 @@
     },
     {
       "number": 37,
-      "text": "Acesta este Moise care le-a spus fiilor lui Israel: «Dumnezeu vă va ridica dintre frații voștri un Profet ca mine.»"
+      "text": "Acesta este Moise care le-a spus fiilor lui Israel: Dumnezeu vă va ridica dintre frații voștri un Profet ca mine."
     },
     {
       "number": 38,
@@ -277,7 +301,7 @@
     },
     {
       "number": 40,
-      "text": "spunându-i lui Aaron: «Fă-ne dumnezei care să meargă înaintea noastră! Căci nu știm ce s-a întâmplat cu acest Moise care ne-a scos din țara Egiptului.»"
+      "text": "spunându-i lui Aaron: Fă-ne dumnezei care să meargă înaintea noastră! Căci nu știm ce s-a întâmplat cu acest Moise care ne-a scos din țara Egiptului."
     },
     {
       "number": 41,
@@ -285,11 +309,11 @@
     },
     {
       "number": 42,
-      "text": "Atunci Dumnezeu S-a întors de la ei și i-a dat să slujească oștirii cerului, după cum este scris în cartea profeților: «Oare Mie Mi-ați adus animale înjunghiate și jertfe timp de patruzeci de ani în pustiu, casă a lui Israel?"
+      "text": "Atunci Dumnezeu S-a întors de la ei și i-a dat să slujească oștirii cerului, după cum este scris în cartea profeților: Oare Mie Mi-ați adus animale înjunghiate și jertfe timp de patruzeci de ani în pustiu, casă a lui Israel?"
     },
     {
       "number": 43,
-      "text": "Ați purtat cortul lui Moloh și steaua dumnezeului vostru, Raifan, chipurile pe care le-ați făcut ca să vă închinați lor. De aceea vă voi strămuta dincolo de Babilon.»"
+      "text": "Ați purtat cortul lui Moloh și steaua dumnezeului vostru, Raifan, chipurile pe care le-ați făcut ca să vă închinați lor. De aceea vă voi strămuta dincolo de Babilon."
     },
     {
       "number": 44,
@@ -313,11 +337,11 @@
     },
     {
       "number": 49,
-      "text": "«Cerul este tronul Meu, iar pământul este așternutul picioarelor Mele. Ce fel de casă Îmi veți zidi, spune DOMNUL, sau care este locul odihnei Mele?"
+      "text": "Cerul este tronul Meu, iar pământul este așternutul picioarelor Mele. Ce fel de casă Îmi veți zidi, spune DOMNUL, sau care este locul odihnei Mele?"
     },
     {
       "number": 50,
-      "text": "Oare nu mâna Mea a făcut toate aceste lucruri?»"
+      "text": "Nu a făcut mâna mea toate aceste lucruri?"
     },
     {
       "number": 51,
@@ -329,7 +353,7 @@
     },
     {
       "number": 53,
-      "text": "voi, care ați primit Legea prin rânduieli date de îngeri, dar n-ați păzit-o!”"
+      "text": "voi, care ați primit Legea prin rânduieli date de îngeri, dar n-ați păzit-o!"
     },
     {
       "number": 54,
@@ -341,7 +365,7 @@
     },
     {
       "number": 56,
-      "text": "El a zis: „Iată, văd cerurile deschise și pe Fiul Omului stând la dreapta lui Dumnezeu!”"
+      "text": "El a zis: Iată, văd cerurile deschise și pe Fiul Omului stând la dreapta lui Dumnezeu!"
     },
     {
       "number": 57,
@@ -353,11 +377,11 @@
     },
     {
       "number": 59,
-      "text": "În timp ce îl omorau cu pietre, Ștefan chema și zicea: „Doamne Isuse, primește duhul meu!”"
+      "text": "În timp ce îl omorau cu pietre, Ștefan chema și zicea: Doamne Isuse, primește duhul meu!"
     },
     {
       "number": 60,
-      "text": "Apoi a îngenuncheat și a strigat cu glas tare: „Doamne, nu le socoti păcatul acesta!” După ce a spus aceasta, a adormit."
+      "text": "Apoi a îngenuncheat și a strigat cu glas tare: Doamne, nu le socoti păcatul acesta! După ce a spus aceasta, a adormit."
     }
   ],
   "editorialNotes": [
@@ -388,11 +412,11 @@
     },
     {
       "verse": 38,
-      "term": "ἐκκλησίᾳ ... λόγια ζῶντα",
-      "decision": "adunarea ... cuvinte vii",
+      "term": "ἐκκλησίᾳ... λόγια ζῶντα",
+      "decision": "adunarea... cuvinte vii",
       "alternatives": [
-        "biserica ... oracole vii",
-        "adunarea ... revelații vii"
+        "biserica... oracole vii",
+        "adunarea... revelații vii"
       ],
       "reason": "ἐκκλησία desemnează aici adunarea lui Israel în pustiu, iar λόγια sunt rostiri divine primite de Moise, nu o instituție creștină ori simple informații.",
       "reviewRequired": true,

@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 16,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK16.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK16.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.16.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Finalul lung 16:9–20 a fost tradus integral și fiecare verset și-a păstrat textualStatus «double-bracketed».",
-      "Finalul scurt a fost tradus din greaca SBLGNT și stocat separat în alternateEndings, fără a fi lipit de textul versetului 8."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost verificate versetele 1–20, marcajul dublu pentru 16:9–20 și finalul scurt nenumerotat păstrat de SBLGNT după 16:8."
+      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Narațiunea din 16:1–8 se încheie la frica femeilor, fără alipirea artificială a finalului scurt.",
-        "Finalurile marcate au fost redactate în română actuală, păstrând repetarea necredinței și succesiunea semnelor din finalul lung."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Toate afirmațiile din 16:9–20 au fost traduse fără armonizare cu Matei, Luca, Ioan sau Fapte și fără a transforma statutul textual într-un verdict doctrinar.",
-        "În 16:6 pasivul ἠγέρθη a fost păstrat prin «a fost înviat», fără a explicita în corp agentul neexprimat."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:89768bbe7849cb5a758a8e42351411e31061526e310f33266f8da8d84b62ba62",
+    "contentDigest": "sha256:a1b06985358260bf25915d3e136bc537b266086c53d3a91d58582a6c9238c3b5"
   },
   "verses": [
     {
@@ -212,8 +239,8 @@
   "editorialNotes": [
     {
       "verse": 9,
-      "term": "⟦Ἀναστὰς δὲ πρωῒ πρώτῃ σαββάτου ... σημείων⟧",
-      "decision": "Marcu 16:9–20 este tradus integral în fluxul capitolului cu marcajul textual «double-bracketed», iar finalul scurt este păstrat separat ca lectură alternativă nenumerotată.",
+      "term": "⟦Ἀναστὰς δὲ πρωῒ πρώτῃ σαββάτου... σημείων⟧",
+      "decision": "Marcu 16:9—20 este tradus integral în fluxul capitolului cu marcajul textual «double-bracketed», iar finalul scurt este păstrat separat ca lectură alternativă nenumerotată.",
       "reason": "SBLGNT marchează atât finalul lung, cât și finalul scurt prin paranteze duble; mărturiile vechi importante diferă, iar tradiția manuscrisă păstrează mai multe finaluri și combinații.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",

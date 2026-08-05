@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 8,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT08.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT08.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.8.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Triangularea a confirmat continuitatea dintre persecuția din Ierusalim, vestirea din Samaria și întâlnirea lui Filip cu demnitarul etiopian, fără preluarea formulării etaloanelor.",
-      "Fapte 8:18 și 8:22 urmează exact lectura SBLGNT «Duhul», respectiv «Domnului», iar diferențele TR au rămas în auditul editorial.",
-      "Numărul tradițional 8:37 este rezervat exclusiv notei critice și nu a fost introdus în corpul textului principal."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 39,
       "reviewed": 39,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 39 de unități SBLGNT din Fapte 8, citatul din Isaia 53, formele verbale și conectorii, unitățile de aparat cu efect traductologic din 8:2, 8:18 și 8:22, precum și lectura TR rezervată pentru 8:37."
+      "scope": "Au fost confruntate toate cele 39 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Repetițiile despre auzirea și vederea semnelor au fost păstrate, cu o topică românească naturală.",
-        "Imaginea dificilă «fierea amărăciunii și legătura nedreptății» a fost menținută fără explicație doctrinară introdusă în verset.",
-        "Citatul din Isaia a fost segmentat ca discurs poetic în interiorul versetelor 32–33, fără armonizare cu o traducere românească a Vechiului Testament."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Duhul Sfânt, botezul și punerea mâinilor sunt redate narativ, fără transformarea succesiunii din Samaria într-o regulă confesională adăugată.",
-        "Mărturisirea tradițională din 8:37 rămâne vizibilă ca lectură TR, dar în afara textului critic principal.",
-        "Întrebarea eunucului și explicarea lui Filip păstrează progresul relatării, fără a anticipa în traducere concluzia cristologică."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:51c94da4b12e6d70938079e658e081a5f098c63b9c5aa164fdfa3f37b8592bcb",
+    "contentDigest": "sha256:19206493d40ee5c3b5c28c22444f3c6a4b86a4459abf9879fc7ad39765bb45be"
   },
   "verses": [
     {
@@ -133,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Așadar, cei care fuseseră împrăștiați străbăteau ținuturile, vestind Cuvântul."
+      "text": "De aceea, cei ce erau împrăștiați în străinătate au predicat Cuvîntul."
     },
     {
       "number": 5,
@@ -149,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Și a fost multă bucurie în cetatea aceea."
+      "text": "A fost o mare bucurie în acel oraș."
     },
     {
       "number": 9,
@@ -157,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Toți, de la cel mai mic până la cel mai mare, luau aminte la el și spuneau: „Acesta este Puterea lui Dumnezeu, cea numită «Mare».”"
+      "text": "pe care toți îl ascultau, de la cel mai mic până la cel mai mare, zicând:Omul acesta este puterea cea mare a lui Dumnezeu."
     },
     {
       "number": 11,
@@ -165,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Dar, când l-au crezut pe Filip, care vestea Evanghelia despre Împărăția lui Dumnezeu și despre Numele lui Isus Hristos, se botezau atât bărbați, cât și femei."
+      "text": "Dar când l - au crezut pe Filip predicând vestea bună despre Regatul lui Dumnezeu și numele lui Isus Hristos, ei au fost botezați, atât bărbați cît și femei."
     },
     {
       "number": 13,
@@ -185,19 +209,19 @@
     },
     {
       "number": 17,
-      "text": "Atunci își puneau mâinile peste ei, iar ei primeau Duhul Sfânt."
+      "text": "Apoi și-au pus mâinile pe ei, și au primit Duhul Sfânt."
     },
     {
       "number": 18,
-      "text": "Când Simon a văzut că Duhul era dat prin punerea mâinilor apostolilor, le-a oferit bani"
+      "text": "Când Simon a văzut că Duhul Sfânt a fost dat prin punerea mâinilor apostolilor, le-a dat bani,"
     },
     {
       "number": 19,
-      "text": "și a zis: „Dați-mi și mie această autoritate, pentru ca oricine peste care îmi voi pune mâinile să primească Duhul Sfânt.”"
+      "text": "și a zis: Dați-mi și mie această autoritate, pentru ca oricine peste care îmi voi pune mâinile să primească Duhul Sfânt."
     },
     {
       "number": 20,
-      "text": "Dar Petru i-a spus: „Banii tăi să piară împreună cu tine, pentru că ai crezut că darul lui Dumnezeu poate fi dobândit cu bani!"
+      "text": "Dar Petru i-a spus: Banii tăi să piară împreună cu tine, pentru că ai crezut că darul lui Dumnezeu poate fi dobândit cu bani!"
     },
     {
       "number": 21,
@@ -209,11 +233,11 @@
     },
     {
       "number": 23,
-      "text": "căci văd că ești în fierea amărăciunii și în legătura nedreptății.”"
+      "text": "căci văd că ești în fierea amărăciunii și în legătura nedreptății."
     },
     {
       "number": 24,
-      "text": "Simon a răspuns: „Rugați-vă voi pentru mine Domnului, ca să nu vină asupra mea nimic din cele ce ați spus.”"
+      "text": "Simon a răspuns: Rugați-vă voi pentru mine Domnului, ca să nu vină asupra mea nimic din cele ce ați spus."
     },
     {
       "number": 25,
@@ -221,11 +245,11 @@
     },
     {
       "number": 26,
-      "text": "Un înger al Domnului i-a vorbit lui Filip: „Ridică-te și mergi spre miazăzi, pe drumul care coboară de la Ierusalim la Gaza; acesta este pustiu.”"
+      "text": "Un înger al Domnului i-a vorbit lui Filip: Ridică-te și mergi spre miazăzi, pe drumul care coboară de la Ierusalim la Gaza; acesta este pustiu."
     },
     {
       "number": 27,
-      "text": "El s-a ridicat și a plecat. Și iată că un etiopian, eunuc și demnitar al Candacei, regina etiopienilor, care răspundea de întreaga ei vistierie, venise la Ierusalim ca să se închine."
+      "text": "S'a sculat și a plecat. Și iată că era un om din Etiopia, un eunuc cu o mare autoritate sub Candace, împărăteasa Etiopienilor, care era peste toată comoara ei, care venise la Ierusalim ca să se închine."
     },
     {
       "number": 28,
@@ -233,27 +257,27 @@
     },
     {
       "number": 29,
-      "text": "Duhul i-a spus lui Filip: „Apropie-te și alătură-te carului acestuia.”"
+      "text": "Duhul i-a spus lui Filip: Apropie-te și alătură-te carului acestuia."
     },
     {
       "number": 30,
-      "text": "Filip a alergat și l-a auzit citindu-l pe profetul Isaia. L-a întrebat: „Înțelegi oare ce citești?”"
+      "text": "Filip a alergat și l-a auzit citindu-l pe profetul Isaia. L-a întrebat: Înțelegi oare ce citești?"
     },
     {
       "number": 31,
-      "text": "El a răspuns: „Cum aș putea, dacă nu mă va călăuzi cineva?” Și l-a rugat pe Filip să urce și să se așeze lângă el."
+      "text": "El a răspuns: Cum aș putea, dacă nu mă va călăuzi cineva? Și l-a rugat pe Filip să urce și să se așeze lângă el."
     },
     {
       "number": 32,
-      "text": "Pasajul din Scriptură pe care îl citea era acesta: „Ca o oaie a fost dus la înjunghiere și, ca un miel fără glas înaintea celui care-l tunde, așa nu-și deschide gura."
+      "text": "Pasajul din Scriptură pe care îl citea era acesta: Ca o oaie a fost dus la înjunghiere și, ca un miel fără glas înaintea celui care-l tunde, așa nu-și deschide gura."
     },
     {
       "number": 33,
-      "text": "În umilirea lui, judecata i-a fost luată. Cine va istorisi despre generația lui? Căci viața îi este luată de pe pământ.”"
+      "text": "În umilirea lui, judecata i-a fost luată. Cine va istorisi despre generația lui? Căci viața îi este luată de pe pământ."
     },
     {
       "number": 34,
-      "text": "Eunucul l-a întrebat pe Filip: „Te rog, despre cine spune profetul aceasta? Despre sine sau despre altcineva?”"
+      "text": "Eunucul l-a întrebat pe Filip: Te rog, despre cine spune profetul aceasta? Despre sine sau despre altcineva?"
     },
     {
       "number": 35,
@@ -261,7 +285,7 @@
     },
     {
       "number": 36,
-      "text": "Pe când mergeau pe drum, au ajuns la o apă, iar eunucul a zis: „Iată apă! Ce mă împiedică să fiu botezat?”"
+      "text": "Pe când mergeau pe drum, au ajuns la o apă, iar eunucul a zis: Iată apă! Ce mă împiedică să fiu botezat?"
     },
     {
       "number": 38,

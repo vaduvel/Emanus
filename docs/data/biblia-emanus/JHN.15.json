@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 15,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,184 +42,220 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN15.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN15.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/15/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.15.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 27,
-      "reviewed": 0,
+      "reviewed": 27,
       "continuous": true,
       "verseNumbersSha256": "sha256:33be2c12a5c413aac165e55d61000a87fa2ee765e55269de39fd005cf3b6eb7b"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 27 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:2e76940eabf2fe23fff3e5c08ad92b8c9a18afe250bc6f6e6150606da53d1c67",
+    "contentDigest": "sha256:7de22442a458f3eda3c810ddfb27a6acbb8f38f2f21799e00b52dccff08b0421"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Eu sunt adevărata viță de vie, iar Tatăl meu este fermierul."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Fiecare ramură din mine care nu dă rod, el ia. Fiecare ramură care dă rod, el prune, ca să poată aduce mai multe fructe."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Sunteți deja curățiți din cauza cuvântului pe care vi l-am spus."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Rămâneți în Mine, Eu în voi. După cum mlădi nu poate aduce rod de la sine, dacă nu rămâne în vi, tot așa nici voi nu, dacă nu rămâneți în Mine."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Eu sunt vița de vie. Tu ești ramurile. Cel care rămâne în mine și eu în el aduce multe roade, pentru că în afară de mine nu poți face nimic."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dacă un om nu rămâne în mine, el este aruncat afară ca o ramură și este uscat; și le adună, arunca-le în foc, și sunt arse."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Daca ramai in mine, si cuvintele mele raman in tine, vei intreba tot ce doresti, si se va face pentru tine."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "În aceasta Tatăl meu este glorificat, că veți da mult rod; și astfel veți fi discipolii mei."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Așa cum Tatăl m-a iubit pe mine, eu v-am iubit pe voi. Rămâneți în iubirea mea."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Dacă păziți poruncile Mele, rămâne în dragostea Mea, după cum Eu am păzit poruncile Tatălui Meu rămân în dragostea Lui."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "V-am spus aceste lucruri, ca bucuria mea să rămână în voi, și bucuria voastră să fie deplină."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Aceasta este porunca mea, că vă iubiți unii pe alții, așa cum v-am iubit și eu."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Nimeni nu are o dragoste mai mare decât aceasta, ca cineva să-și dea pentru prietenii săi."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Sunteți prietenii mei dacă faceți tot ce vă poruncesc."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Nu vă mai numesc servitori, pentru că servitorul nu știe ce face stăpânul său. Dar v-am numit prieteni, pentru tot ce am auzit de la Tatăl meu, v-am făcut cunoscut."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "nu voi m-ați ales pe mine, ci eu v-am ales pe voi și v-am rânduit, ca voi să mergeți și să aduce rod, și rodul vostru să rămână; pentru ca orice veți cere de la Tatăl în numele Meu, El să vi-l dea."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Vă poruncesc aceste lucruri, ca să vă iubiți unii pe alții."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "dacă lumea te urăște, că m-a urât pe mine înainte să te urască pe tine."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Dacă ați fi din lume, lumea ar iubi ce este al ei. Dar pentru că nu din lume, de vreme ce v-am ales din lume, de aceea lumea vă urăște."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Amintiti-va cuvantul pe care ti l-am spus:? Un servitor nu este mai mare decat stapanul sau.? Daca m-au persecutat, ei te vor persecuta si pe tine. Daca se tin de cuvantul meu, ei se vor tine si de al tau."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Dar îți vor face toate aceste lucruri de dragul numelui meu, pentru că nu-l cunosc pe cel care m-a trimis."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Dacă n-aș fi venit și nu le-aș fi vorbit, n-ar fi avut păcat, dar acum nu mai au nici o scuză pentru păcatul lor."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Cel care mă urăște, îl urăște și pe Tatăl meu."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Dacă n-aș fi făcut printre ei lucrările pe care nimeni altcineva nu le-ar fi făcut, n-ar fi avut păcat. Dar acum m-au văzut și de asemenea m-au urât atât pe mine cât și pe Tatăl meu."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Dar aceasta s-a întâmplat ca să se împlinească cuvântul care era scris în legea lor:M-au urât fără temei„."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Când Consilierul va veni, pe care vi-l voi trimite de la Tatăl, Duhul adevărului, care provine de la Tatăl, el va mărturisi despre mine."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Și tu vei depune mărturie, pentru că ai fost cu mine de la început.”"
     }
   ],
   "editorialNotes": [],

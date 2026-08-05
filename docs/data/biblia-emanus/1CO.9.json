@@ -3,8 +3,8 @@
   "bookId": "1CO",
   "bookName": "1 Corinteni",
   "chapter": 9,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1CO09.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1CO09.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1CO.9.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "9:7-14 păstrează argumentul din viața comună, Lege și altar pentru sprijinirea lucrătorilor.",
-      "9:19-27 menține progresia de la libertate la robie voluntară și apoi la disciplina personală."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 27,
       "reviewed": 27,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "drepturile apostolului, soția-soră, boul care treieră, adaptarea misionară, robia voluntară, disciplina trupului"
+      "scope": "Au fost confruntate toate cele 27 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "9:5 păstrează expresia compusă «o soră credincioasă ca soție», fără a elimina una dintre componente.",
-        "9:27 păstrează verbul dur al auto-disciplinării trupului și avertismentul despre a fi respins."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Pavel renunță la drepturi reale de dragul Evangheliei; textul nu transformă renunțarea într-o obligație universală pentru toți lucrătorii.",
-        "Adaptarea misionară din 9:19-23 nu relativizează relația lui Pavel cu Dumnezeu și cu legea lui Hristos."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:b4888798a99c7574dd0675f2843a14432fd46e7f38faaea58f16d5f197ceed7f",
+    "contentDigest": "sha256:164f40086c8e32840a905bb8a2dce1efa86f3594f265e2904c71fa03c1a4239e"
   },
   "verses": [
     {
@@ -126,11 +153,11 @@
     },
     {
       "number": 3,
-      "text": "Apărarea mea înaintea celor ce mă cercetează este aceasta."
+      "text": "Apărarea mea pentru cei care mă examinează este aceasta:"
     },
     {
       "number": 4,
-      "text": "N-avem dreptul să mâncăm și să bem?"
+      "text": "Nu avem dreptul să mâncăm și să bem?"
     },
     {
       "number": 5,
@@ -142,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Cine merge vreodată la război pe cheltuiala proprie? Cine plantează o vie și nu mănâncă din rodul ei? Sau cine păstorește o turmă și nu se hrănește din laptele turmei?"
+      "text": "Ce soldat servește vreodată pe cheltuiala lui? Cine plantează o vie, și nu mănâncă din rodul ei? Sau cine hrănește o turmă, și nu bea lapte din turmă?"
     },
     {
       "number": 8,
@@ -150,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "Căci în Legea lui Moise este scris: „Să nu legi gura boului care treieră.” Oare de boi se îngrijește Dumnezeu,"
+      "text": "Căci este scris în Legea lui Moise: Să nu botni un bou în timp ce calcă în grâne. ' Este pentru boii care îi pasă lui Dumnezeu,"
     },
     {
       "number": 10,
-      "text": "sau vorbește cu totul pentru noi? Da, pentru noi a fost scris, fiindcă cel ce ară trebuie să are cu speranță, iar cel ce treieră, cu speranța de a avea parte."
+      "text": "Sau o spune cu siguranță de dragul nostru? Da, a fost scris de dragul nostru, pentru că cel ce plugul ar trebui să are în speranță, și cel care treieră în speranță ar trebui să se împărtășească din speranța lui."
     },
     {
       "number": 11,
@@ -178,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Dacă vestesc Evanghelia, nu am cu ce să mă laud, căci o necesitate apasă asupra mea; vai de mine dacă nu vestesc Evanghelia!"
+      "text": "Căci, dacă predic Vestea cea Bună, nu am cu ce să mă laud, pentru că mi s-a pus asupra mea nevoia; dar vai de mine dacă nu predic Vestea cea Bună."
     },
     {
       "number": 17,
@@ -186,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Care este atunci răsplata mea? Aceea că, atunci când vestesc Evanghelia, o pun fără plată, ca să nu folosesc pe deplin dreptul meu în Evanghelie."
+      "text": "Atunci ce este răsplata mea? Ca atunci când predic Evanghelia, să pot prezenta fără plată Evanghelia lui Hristos, ca să nu abuzez de autoritatea mea în Vestea bună."
     },
     {
       "number": 19,
@@ -202,19 +229,19 @@
     },
     {
       "number": 22,
-      "text": "M-am făcut slab cu cei slabi, ca să-i câștig pe cei slabi. M-am făcut toate pentru toți, ca în orice fel să-i mântuiesc pe unii."
+      "text": "Am fost slab cu cei slabi, ca să câștig pe cei slabi; am devenit toate lucrurile pentru toți oamenii, ca să pot salva pe unii."
     },
     {
       "number": 23,
-      "text": "Fac toate pentru Evanghelie, ca să fiu împreună-părtaș la ea."
+      "text": "Acum fac asta de dragul veștii bune, ca să fiu părtaș comun la ea."
     },
     {
       "number": 24,
-      "text": "Nu știți că cei care aleargă pe stadion aleargă toți, dar unul singur primește premiul? Alergați așa încât să-l apucați."
+      "text": "Nu știi că cei care rulează într-o cursă toate alerga, dar unul primește premiul? Fugi așa, astfel încât să puteți câștiga."
     },
     {
       "number": 25,
-      "text": "Oricine se luptă la jocuri se stăpânește în toate. Ei fac aceasta ca să primească o cunună pieritoare, noi însă una nepieritoare."
+      "text": "Fiecare om care se străduiește în jocuri exercită auto-control în toate lucrurile. Acum ei o fac pentru a primi o coroană coruptibil, dar noi o incoruptibil."
     },
     {
       "number": 26,

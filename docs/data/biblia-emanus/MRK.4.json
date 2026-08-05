@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK04.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK04.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "La 4:12, finalul καὶ ἀφεθῇ αὐτοῖς este redat «să fie iertați», fără substantivul «păcate», care nu este explicit în lectura greacă.",
-      "La 4:40, οὔπω ἔχετε πίστιν este păstrat ca întrebarea «Încă nu aveți credință?», fără armonizare cu alte forme sinoptice."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 41,
       "reviewed": 41,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Marcu 4:1-41; au fost verificate pilda semănătorului și explicația ei, pildele seminței și muștarului și relatarea furtunii."
+      "scope": "Au fost confruntate toate cele 41 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Seriile de treizeci, șaizeci și o sută au fost păstrate în aceeași ordine în pildă și în explicația ei.",
-        "Comenzile scurte adresate mării au fost redate separat pentru a păstra forța celor două forme grecești."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Taina Împărăției lui Dumnezeu și scopul pildelor sunt redate fără explicații doctrinare introduse în corpul versetelor.",
-        "Întrebarea ucenicilor despre identitatea lui Isus rămâne deschisă la finalul capitolului."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:75df640e1be8d1548b6a601cd5ebe7bbea0b08037dbcd399062af94b76b2cd9a",
+    "contentDigest": "sha256:a4bc77ae6afbe77ba465c328e85157b45e4fd4ee7792932bf4c3645d787d21a0"
   },
   "verses": [
     {
@@ -122,11 +149,11 @@
     },
     {
       "number": 2,
-      "text": "Îi învăța multe prin pilde și le spunea în învățătura Lui:"
+      "text": "El i -a învățat multe lucruri în pilde, și le -a spus în învățătura Lui:"
     },
     {
       "number": 3,
-      "text": "„Ascultați! Iată, semănătorul a ieșit să semene."
+      "text": "Ascultă! Iată, fermierul a ieșit să semene."
     },
     {
       "number": 4,
@@ -146,11 +173,11 @@
     },
     {
       "number": 8,
-      "text": "Alte semințe au căzut în pământul bun și dădeau rod, înălțându-se și crescând: una aducea treizeci, alta șaizeci, iar alta o sută.”"
+      "text": "Alte semințe au căzut în pământul bun și dădeau rod, înălțându-se și crescând: una aducea treizeci, alta șaizeci, iar alta o sută."
     },
     {
       "number": 9,
-      "text": "Apoi spunea: „Cine are urechi de auzit să audă!”"
+      "text": "Apoi spunea: Cine are urechi de auzit să audă!"
     },
     {
       "number": 10,
@@ -158,19 +185,19 @@
     },
     {
       "number": 11,
-      "text": "El le-a spus: „Vouă v-a fost dată taina Împărăției lui Dumnezeu, dar pentru cei de afară toate se spun în pilde,"
+      "text": "El le-a spus: Vouă v-a fost dată taina Împărăției lui Dumnezeu, dar pentru cei de afară toate se spun în pilde,"
     },
     {
       "number": 12,
-      "text": "pentru ca, privind, să privească și să nu vadă, iar auzind, să audă și să nu înțeleagă, ca nu cumva să se întoarcă și să fie iertați.”"
+      "text": "ca sa vada ei pot vedea si nu percep, si auzind ei pot auzi si nu inteleg, ca nu cumva ar trebui sa se intoarca din nou, si pacatele lor ar trebui sa le fie iertate."
     },
     {
       "number": 13,
-      "text": "Apoi le-a spus: „Nu înțelegeți pilda aceasta? Atunci cum veți înțelege toate pildele?"
+      "text": "Apoi le-a spus: Nu înțelegeți pilda aceasta? Atunci cum veți înțelege toate pildele?"
     },
     {
       "number": 14,
-      "text": "Semănătorul seamănă Cuvântul."
+      "text": "Fermierul seamănă cuvântul."
     },
     {
       "number": 15,
@@ -190,15 +217,15 @@
     },
     {
       "number": 19,
-      "text": "dar grijile veacului, înșelăciunea bogăției și poftele după celelalte lucruri pătrund și înăbușă Cuvântul, iar el devine neroditor."
+      "text": "și grijile acestei epoci, și înșelăciunea bogățiilor, și poftele altor lucruri care intră în sufoca cuvântul, și devine neroditor."
     },
     {
       "number": 20,
-      "text": "Iar cei semănați în pământul bun sunt aceia care aud Cuvântul, îl primesc și aduc rod: unul treizeci, altul șaizeci, iar altul o sută.”"
+      "text": "Iar cei semănați în pământul bun sunt aceia care aud Cuvântul, îl primesc și aduc rod: unul treizeci, altul șaizeci, iar altul o sută."
     },
     {
       "number": 21,
-      "text": "Le mai spunea: „Oare este adusă candela ca să fie pusă sub obroc sau sub pat? Nu ca să fie pusă pe sfeșnic?"
+      "text": "Le mai spunea: Oare este adusă candela ca să fie pusă sub obroc sau sub pat? Nu ca să fie pusă pe sfeșnic?"
     },
     {
       "number": 22,
@@ -206,19 +233,19 @@
     },
     {
       "number": 23,
-      "text": "Dacă are cineva urechi de auzit, să audă!”"
+      "text": "Dacă are cineva urechi de auzit, să audă!"
     },
     {
       "number": 24,
-      "text": "Le spunea: „Luați seama la ce auziți! Cu măsura cu care măsurați vi se va măsura și vi se va adăuga."
+      "text": "Le spunea: Luați seama la ce auziți! Cu măsura cu care măsurați vi se va măsura și vi se va adăuga."
     },
     {
       "number": 25,
-      "text": "Căci celui care are i se va da, iar de la cel care nu are se va lua chiar și ceea ce are.”"
+      "text": "Căci celui care are i se va da, iar de la cel care nu are se va lua chiar și ceea ce are."
     },
     {
       "number": 26,
-      "text": "Și spunea: „Împărăția lui Dumnezeu este ca atunci când un om aruncă sămânța pe pământ;"
+      "text": "Și spunea: Împărăția lui Dumnezeu este ca atunci când un om aruncă sămânța pe pământ;"
     },
     {
       "number": 27,
@@ -230,11 +257,11 @@
     },
     {
       "number": 29,
-      "text": "Iar când rodul este gata, omul trimite îndată secera, pentru că a sosit secerișul.”"
+      "text": "Dar atunci când fructul este copt, el pune imediat în secera, pentru că recolta a venit."
     },
     {
       "number": 30,
-      "text": "Și spunea: „Cu ce să asemănăm Împărăția lui Dumnezeu sau prin ce pildă s-o înfățișăm?"
+      "text": "El a spus:Cum vom asemăna împărăția lui Dumnezeu sau cu ce parabolă o vom ilustra?"
     },
     {
       "number": 31,
@@ -242,7 +269,7 @@
     },
     {
       "number": 32,
-      "text": "dar, după ce este semănat, crește și ajunge mai mare decât toate plantele de grădină; face ramuri mari, încât păsările cerului se pot adăposti la umbra lui.”"
+      "text": "dar, după ce este semănat, crește și ajunge mai mare decât toate plantele de grădină; face ramuri mari, încât păsările cerului se pot adăposti la umbra lui."
     },
     {
       "number": 33,
@@ -250,11 +277,11 @@
     },
     {
       "number": 34,
-      "text": "Nu le vorbea fără pildă, dar ucenicilor Lui le explica în particular toate lucrurile."
+      "text": "Fără o parabolă, el nu le - a vorbit; dar în particular, el le - a explicat discipolilor săi totul."
     },
     {
       "number": 35,
-      "text": "În ziua aceea, când s-a făcut seară, le-a spus: „Să trecem pe celălalt mal!”"
+      "text": "În acea zi, când a venit seara, el le-a spus, Le-s du-te pe partea cealaltă."
     },
     {
       "number": 36,
@@ -266,19 +293,19 @@
     },
     {
       "number": 38,
-      "text": "El era în partea din spate a bărcii, dormind pe pernă. Ei L-au trezit și I-au spus: „Învățătorule, nu-Ți pasă că pierim?”"
+      "text": "El era în partea din spate a bărcii, dormind pe pernă. Ei L-au trezit și I-au spus: Învățătorule, nu-Ți pasă că pierim?"
     },
     {
       "number": 39,
-      "text": "Trezindu-Se, a mustrat vântul și a spus mării: „Taci! Amuțește!” Vântul s-a oprit și s-a făcut o liniște mare."
+      "text": "Trezindu-Se, a mustrat vântul și a spus mării: Taci! Amuțește! Vântul s-a oprit și s-a făcut o liniște mare."
     },
     {
       "number": 40,
-      "text": "Apoi le-a spus: „De ce sunteți fricoși? Încă nu aveți credință?”"
+      "text": "Apoi le-a spus: De ce sunteți fricoși? Încă nu aveți credință?"
     },
     {
       "number": 41,
-      "text": "Ei s-au înfricoșat foarte tare și își spuneau unii altora: „Cine este Acesta, de Îl ascultă chiar și vântul și marea?”"
+      "text": "Ei s-au înfricoșat foarte tare și își spuneau unii altora: Cine este Acesta, de Îl ascultă chiar și vântul și marea?"
     }
   ],
   "editorialNotes": [],

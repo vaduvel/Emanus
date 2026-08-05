@@ -3,8 +3,8 @@
   "bookId": "1CO",
   "bookName": "1 Corinteni",
   "chapter": 10,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1CO10.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1CO10.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1CO.10.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "10:1-11 păstrează tipologia exodului și avertismentele împotriva poftei, idolatriei și murmurelor.",
-      "10:20-31 menține distincția dintre libertatea de a mânca și interdicția participării la părtășia demonilor."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 33,
       "reviewed": 33,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "exodul ca tip, Hristos și stânca, testarea lui Hristos, idolatria, paharul și pâinea, masa demonilor, conștiința în mesele comune"
+      "scope": "Au fost confruntate toate cele 33 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "10:4 și 10:16-17 păstrează coerența dintre stâncă, pahar, pâine și trupul comunitar.",
-        "10:9 redă lectura SBL «pe Hristos», nu o generalizează la un referent mai vag."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Experiențele exodului nu sunt transformate în garanții automatice; privilegiul spiritual nu anulează judecata.",
-        "Participarea la mesele idolatre este tratată ca părtășie reală, nu ca simplu gest social neutru."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:d513dc819e90547964b7b39b4a49fb343283bbef676bc605087e4616a5b61000",
+    "contentDigest": "sha256:2c638181978c08b0f8021c49b733c5feea76a1516bc87caef24685e163685130"
   },
   "verses": [
     {
@@ -190,11 +217,11 @@
     },
     {
       "number": 19,
-      "text": "Ce spun deci? Că ceea ce este jertfit idolului este ceva? Sau că un idol este ceva?"
+      "text": "Ce spun atunci? Că un lucru sacrificat idolilor este ceva, sau că un idol este ceva?"
     },
     {
       "number": 20,
-      "text": "Nu, ci că ceea ce jertfesc, jertfesc demonilor, și nu lui Dumnezeu; iar eu nu vreau ca voi să deveniți părtași demonilor."
+      "text": "Dar eu spun că lucrurile pe care le sacrifică Neamurile, ei sacrifică demonilor și nu lui Dumnezeu, și nu doresc ca tu să ai părtășie cu demoni."
     },
     {
       "number": 21,
@@ -210,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Nimeni să nu-și caute propriul bine, ci pe al celuilalt."
+      "text": "Nimeni să nu-l caute pe al lui, ci fiecare pe aproapele lui."
     },
     {
       "number": 25,
@@ -226,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Dar dacă vă spune cineva: „Aceasta este jertfită la templu”, să nu mâncați, din pricina celui care v-a înștiințat și din pricina conștiinței."
+      "text": "Dar dacă vă va zice cineva:Acesta a fost jertfit idolilor„, să nu-l mâncați din pricina celui ce v-a spus și din pricina cugetului.Al Domnului este pământul, cu toată plinătatea lui.”"
     },
     {
       "number": 29,

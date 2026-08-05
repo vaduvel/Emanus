@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 19,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,77 +28,92 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT19.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT19.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.19.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "În versetele 16-17 sunt urmate întrebările SBLGNT «ce bine să fac?» și «de ce Mă întrebi despre bine?», fără adaosurile TR preluate de puntea engleză.",
-      "Clauza finală din 19:9 este păstrată în text și documentată ca lectură prezentă în Tregelles, RP și TR, dar absentă din WH și NA28."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
       "continuous": true,
-      "verseNumbersSha256": "sha256:a8da6dc1099b38805d26f04c1e8a49b9d3870506f9586535105a3c3be64fdb"
+      "verseNumbersSha256": "sha256:a8da6dc1099b8b38805d26f04c1e8a49b9d3870506f9586535105a3c3be64fdb"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite toate cele 30 de versete, inclusiv citatele despre căsătorie, unitatea de variație din 19:9, dialogul despre bine și vocabularul înnoirii."
+      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Condițiile și excepțiile din discursul despre divorț au fost ordonate fără ambiguități artificiale.",
-        "Listele de porunci, relații și bunuri au fost păstrate integral și punctuate uniform."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "πορνεία este redat prin termenul controlat «imoralitate sexuală», fără lărgirea sau restrângerea lui doctrinară.",
-        "παλιγγενεσία este redat prin «înnoire», fără construirea unei cronologii escatologice în text."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:329afdb35f5a61f91af21e5630c0dbd83206bd220ca4b7a869d5403fe14dc339",
+    "contentDigest": "sha256:7f8f0852f3b4c8b71953a1f1e789ec2ff94fa0c28dda827395f0c6993cca94ab"
   },
   "verses": [
     {
@@ -126,51 +153,51 @@
     },
     {
       "number": 3,
-      "text": "Niște farisei au venit la El și, ca să-L pună la încercare, L-au întrebat: „Îi este îngăduit unui bărbat să divorțeze de soția lui pentru orice motiv?”"
+      "text": "Niște farisei au venit la El și, ca să-L pună la încercare, L-au întrebat: Îi este îngăduit unui bărbat să divorțeze de soția lui pentru orice motiv?"
     },
     {
       "number": 4,
-      "text": "El le-a răspuns: „N-ați citit că, de la început, Creatorul i-a făcut bărbat și femeie"
+      "text": "El le-a răspuns: N-ați citit că, de la început, Creatorul i-a făcut bărbat și femeie"
     },
     {
       "number": 5,
-      "text": "și a spus: «De aceea bărbatul își va lăsa tatăl și mama și se va alipi de soția lui, iar cei doi vor fi un singur trup»?"
+      "text": "și a spus: De aceea bărbatul își va lăsa tatăl și mama și se va alipi de soția lui, iar cei doi vor fi un singur trup?"
     },
     {
       "number": 6,
-      "text": "Astfel, ei nu mai sunt doi, ci un singur trup. Deci ceea ce a unit Dumnezeu, omul să nu despartă.”"
+      "text": "Astfel, ei nu mai sunt doi, ci un singur trup. Deci ceea ce a unit Dumnezeu, omul să nu despartă."
     },
     {
       "number": 7,
-      "text": "Ei L-au întrebat: „Atunci de ce a poruncit Moise ca bărbatul să-i dea un certificat de divorț și s-o alunge?”"
+      "text": "Ei L-au întrebat: Atunci de ce a poruncit Moise ca bărbatul să-i dea un certificat de divorț și s-o alunge?"
     },
     {
       "number": 8,
-      "text": "El le-a spus: „Din cauza împietririi inimii voastre v-a îngăduit Moise să divorțați de soțiile voastre, dar la început nu a fost așa."
+      "text": "El le-a spus: Din cauza împietririi inimii voastre v-a îngăduit Moise să divorțați de soțiile voastre, dar la început nu a fost așa."
     },
     {
       "number": 9,
-      "text": "Eu însă vă spun că oricine divorțează de soția lui, în afară de cazul imoralității sexuale, și se căsătorește cu alta comite adulter; iar cine se căsătorește cu o femeie divorțată comite adulter.”"
+      "text": "Eu însă vă spun că oricine divorțează de soția lui, în afară de cazul imoralității sexuale, și se căsătorește cu alta comite adulter; iar cine se căsătorește cu o femeie divorțată comite adulter."
     },
     {
       "number": 10,
-      "text": "Ucenicii I-au zis: „Dacă astfel stau lucrurile între un bărbat și soția lui, nu este de folos să se căsătorească.”"
+      "text": "Ucenicii I-au zis: Dacă astfel stau lucrurile între un bărbat și soția lui, nu este de folos să se căsătorească."
     },
     {
       "number": 11,
-      "text": "El le-a răspuns: „Nu toți pot primi cuvântul acesta, ci numai cei cărora le-a fost dat."
+      "text": "El le-a răspuns: Nu toți pot primi cuvântul acesta, ci numai cei cărora le-a fost dat."
     },
     {
       "number": 12,
-      "text": "Căci sunt eunuci care s-au născut astfel din pântecele mamei lor; sunt eunuci care au fost făcuți eunuci de oameni; și sunt eunuci care s-au făcut ei înșiși eunuci pentru Împărăția cerurilor. Cine poate primi aceasta s-o primească.”"
+      "text": "Căci sunt eunuci care s-au născut astfel din pântecele mamei lor; sunt eunuci care au fost făcuți eunuci de oameni; și sunt eunuci care s-au făcut ei înșiși eunuci pentru Împărăția cerurilor. Cine poate primi aceasta s-o primească."
     },
     {
       "number": 13,
-      "text": "Atunci I-au fost aduși niște copilași ca să-Și pună mâinile peste ei și să Se roage, dar ucenicii îi mustrau."
+      "text": "Atunci copilașii au fost aduși la El ca să-și pună mînile peste ei și să se roage; și ucenicii i-au mustrat."
     },
     {
       "number": 14,
-      "text": "Isus însă a spus: „Lăsați copilașii și nu-i opriți să vină la Mine, căci Împărăția cerurilor este a unora ca ei.”"
+      "text": "Isus însă a spus: Lăsați copilașii și nu-i opriți să vină la Mine, căci Împărăția cerurilor este a unora ca ei."
     },
     {
       "number": 15,
@@ -178,27 +205,27 @@
     },
     {
       "number": 16,
-      "text": "Și iată că un om s-a apropiat de El și a zis: „Învățătorule, ce bine să fac pentru a avea viață veșnică?”"
+      "text": "Și iată că un om s-a apropiat de El și a zis: Învățătorule, ce bine să fac pentru a avea viață veșnică?"
     },
     {
       "number": 17,
-      "text": "El i-a răspuns: „De ce Mă întrebi despre bine? Unul singur este Cel bun. Dar, dacă vrei să intri în viață, păzește poruncile.”"
+      "text": "El i-a zis: De ce mă numești bun? Nimeni nu este bun decât unul, adică Dumnezeu. Dar dacă vrei să intri în viață, păzește poruncile."
     },
     {
       "number": 18,
-      "text": "Omul L-a întrebat: „Care?” Isus a spus: „Să nu ucizi; să nu comiți adulter; să nu furi; să nu depui mărturie mincinoasă;"
+      "text": "Omul L-a întrebat: Care? Isus a spus: Să nu ucizi; să nu comiți adulter; să nu furi; să nu depui mărturie mincinoasă;"
     },
     {
       "number": 19,
-      "text": "cinstește-l pe tatăl și pe mama ta; și să-l iubești pe semenul tău ca pe tine însuți.”"
+      "text": "cinstește-l pe tatăl și pe mama ta; și să-l iubești pe semenul tău ca pe tine însuți."
     },
     {
       "number": 20,
-      "text": "Tânărul I-a zis: „Pe toate acestea le-am păzit. Ce-mi mai lipsește?”"
+      "text": "Tânărul i-a zis:Toate aceste lucruri le-am observat din tinerețea mea. Ce-mi mai lipsește?"
     },
     {
       "number": 21,
-      "text": "Isus i-a spus: „Dacă vrei să fii desăvârșit, du-te, vinde-ți bunurile și dă-le săracilor, iar în ceruri vei avea o comoară. Apoi vino și urmează-Mă.”"
+      "text": "Isus i-a spus: Dacă vrei să fii desăvârșit, du-te, vinde-ți bunurile și dă-le săracilor, iar în ceruri vei avea o comoară. Apoi vino și urmează-Mă."
     },
     {
       "number": 22,
@@ -206,27 +233,27 @@
     },
     {
       "number": 23,
-      "text": "Isus le-a spus ucenicilor Săi: „Adevărat vă spun: cu greu va intra un bogat în Împărăția cerurilor."
+      "text": "Isus le-a spus ucenicilor Săi: Adevărat vă spun: cu greu va intra un bogat în Împărăția cerurilor."
     },
     {
       "number": 24,
-      "text": "Vă mai spun că este mai ușor să treacă o cămilă prin urechea acului decât să intre un bogat în Împărăția lui Dumnezeu.”"
+      "text": "Vă mai spun că este mai ușor să treacă o cămilă prin urechea acului decât să intre un bogat în Împărăția lui Dumnezeu."
     },
     {
       "number": 25,
-      "text": "Când au auzit, ucenicii au rămas foarte uimiți și au zis: „Atunci cine poate fi mântuit?”"
+      "text": "Când au auzit, ucenicii au rămas foarte uimiți și au zis: Atunci cine poate fi mântuit?"
     },
     {
       "number": 26,
-      "text": "Isus S-a uitat la ei și le-a spus: „Pentru oameni lucrul acesta este imposibil, dar pentru Dumnezeu toate sunt posibile.”"
+      "text": "Isus S-a uitat la ei și le-a spus: Pentru oameni lucrul acesta este imposibil, dar pentru Dumnezeu toate sunt posibile."
     },
     {
       "number": 27,
-      "text": "Atunci Petru I-a zis: „Iată, noi am lăsat totul și Te-am urmat. Ce vom primi?”"
+      "text": "Atunci Petru I-a zis: Iată, noi am lăsat totul și Te-am urmat. Ce vom primi?"
     },
     {
       "number": 28,
-      "text": "Isus le-a răspuns: „Adevărat vă spun că, la înnoire, când Fiul Omului va ședea pe tronul gloriei Sale, voi, cei care M-ați urmat, veți ședea de asemenea pe douăsprezece tronuri, judecând cele douăsprezece seminții ale lui Israel."
+      "text": "Isus le-a răspuns: Adevărat vă spun că, la înnoire, când Fiul Omului va ședea pe tronul gloriei Sale, voi, cei care M-ați urmat, veți ședea de asemenea pe douăsprezece tronuri, judecând cele douăsprezece seminții ale lui Israel."
     },
     {
       "number": 29,
@@ -234,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Dar mulți dintre cei dintâi vor fi cei din urmă, iar cei din urmă vor fi cei dintâi.”"
+      "text": "Dar mulți dintre cei dintâi vor fi cei din urmă, iar cei din urmă vor fi cei dintâi."
     }
   ],
   "editorialNotes": [

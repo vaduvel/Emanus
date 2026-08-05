@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 17,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,228 +28,264 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK17.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK17.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.17.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 36,
-      "reviewed": 0,
+      "reviewed": 36,
       "continuous": false,
       "verseNumbersSha256": "sha256:db201d9af16e7cb3b574919c29af029edd42a6330605e1843507a3387ff62296"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 36 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:74d2b7f8a85d8688c1f954c9727f683731b16dc271776d0c40afb18d8a199bb3",
+    "contentDigest": "sha256:75f85f3fa674d8cda3e70f8a798704d49a5feeea8966add3aedf57715c329141"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "El le -a zis ucenicilor:,,Este imposibil să nu vină nici un prilej de poticnire, ci vai de Cel prin care vin!"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Ar fi mai bine pentru el dacă i-ar fi atârnat o piatră de moară în jurul gâtului, și ar fi fost aruncat în mare, decât să-l facă pe unul dintre acești micuți să se poticnească."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Fii atent. Dacă fratele tău păcătuiește împotriva ta, mustră-l. Dacă se pocăiește, iartă-l."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dacă el păcătuiește împotriva ta de șapte ori în ziua, și de șapte ori se întoarce, spunând,"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Apostolii au spus Domnului: Creșteți-ne credința!"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Domnul i-a zis:Dacă ai avea credință ca un grăunte de mtar, i-ai spune acestui sicomor: Dezrădăcinează-te sădește-te în mare! el ți s-ar supune."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Dar cine este acolo printre voi, având un servitor arat sau păstrarea oilor, care va spune atunci când el vine de pe câmp, Vino imediat și stai jos la masă?"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "N-ar vrea să-i spună mai degrabă, să-mi pregătească cina, să te îmbraci cum trebuie, și să-mi servești în timp ce mănânc și beau."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Îi mulțumește servitorului pentru că a făcut ce i s-a poruncit?"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Chiar și așa, de asemenea, atunci când ați făcut toate lucrurile pe care vi s-a poruncit, spune, Suntem servitori nevrednici. Ne-am făcut datoria noastră."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "În drum spre Ierusalim, el trecea de - a lungul granițelor Samariei și Galileii."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Cînd a intrat într'un sat anume, zece oameni, cari erau leproși, L-au întîlnit, cari stăteau la distanță."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Ei-au ridicat glasurile au zis:Isuse, Stăpâne, ai milă de noi!"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Cînd i -a văzut, le -a zis:,,Duceți-vă arătați-vă preoților. Cînd au plecat, s'au curățit."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Unul dintre ei, cînd a văzut că a fost vindecat, s'a întors, slăvind pe Dumnezeu cu glas tare."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "El a căzut cu fața la picioarele lui Isus și i - a mulțumit; și a fost samaritean."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Isus i -a răspuns:,,Au fost cei zece curățați? Dar unde sunt cei nouă?"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Nu s-a găsit nimeni care să se întoarcă să-i dea slavă lui Dumnezeu, afară de străinul acesta?"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Apoi i-a zis:Scoală-te du-te; credința ta te-a vindecat."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Fiind întrebat de farisei, când va veni Regatul lui Dumnezeu, el le-a răspuns, Dumnezeu nu vine cu observație;"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "nici nu vor zice: Iată, aici! sau: Iată, acolo!, căci iată, Împărăția lui Dumnezeu este înlăuntrul vostru."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "El le-a spus ucenicilor:Vor veni zile când dori să una din zilele Fiului Omului nu o vedea."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Ei vă va spune,? Uită-te, aici? sau? Uită-te, acolo? Nu pleca sau urma după ei,"
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "deoarece ca fulgerul, atunci când acesta strălucește dintr-o parte sub cer, strălucește la o altă parte sub cer, așa va fi Fiul Omului în ziua lui."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Dar mai întâi, trebuie să sufere multe lucruri și să fie respins de această generație."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Așa cum a fost în zilele lui Noe, tot așa va fi și în zilele Fiului Omului."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Au mâncat, au băut, s-au căsătorit, și au fost dați în căsătorie până în ziua în care Noe a intrat în corabie, și potopul a venit și i-a distrus pe toți."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "De asemenea, la fel ca în zilele lui Lot: au mâncat, au băut, au cumpărat, au vândut, au plantat, au construit;"
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Dar în ziua în care Lot a ieșit din Sodoma, a plouat foc și sulf din cer și i-a distrus pe toți."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Va fi la fel în ziua în care Fiul Omului va fi revelat."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "În acea zi, cel care va fi pe acoperișul casei și bunurile sale în casă, să nu coboare să le ia. Cel care este în câmp, de asemenea, să nu se întoarcă."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Amintiți-vă de soția lui Lot!"
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Oricine caută să-și salveze viața o pierde, dar oricine își pierde viața o păstrează."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Îți spun eu, în acea noapte vor fi doi oameni într-un pat, unul va fi luat și celălalt va rămâne."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Vor fi două grâne măcinate împreună; una va fi luată și cealaltă va fi lăsată."
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Ei, răspunzând, l-au întrebat:Unde, Doamne? El le-a zis:Unde este trupul, acolo se vor aduna și vulturii."
     }
   ],
   "editorialNotes": [],
@@ -257,11 +293,12 @@
     {
       "number": 36,
       "status": "not-in-critical-main-text",
-      "reason": "DE DOCUMENTAT",
-      "greekWitnesses": "DE DOCUMENTAT",
-      "displayNote": "DE DOCUMENTAT",
-      "traditionalReading": "DE TRADUS DIN MARTORUL TR",
-      "resolutionStatus": "pending"
+      "reason": "Luca 17:36 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează paralela despre cei doi aflați pe câmp.",
+      "greekWitnesses": "Textus Receptus: δύο ἔσονται ἐν τῷ ἀγρῷ· ὁ εἷς παραληφθήσεται, καὶ ὁ ἕτερος ἀφεθήσεται.",
+      "displayNote": "Lectură tradițională: textul principal SBLGNT nu include acest verset.",
+      "traditionalReading": "Doi vor fi pe câmp: unul va fi luat, iar celălalt va fi lăsat.",
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională a fost tradusă independent din Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

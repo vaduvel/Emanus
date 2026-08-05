@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT07.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT07.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.7.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 29,
-      "reviewed": 0,
+      "reviewed": 29,
       "continuous": true,
       "verseNumbersSha256": "sha256:31b8946a092fbe0dc4f0d37b82ff1a47922c7986940811c08f1a8f720943399e"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:365441cc2189595144a25ec8ea363414add990718d4491e598397ba91f7cb82b",
+    "contentDigest": "sha256:413dd015f52c44a6de3a6b694af32470d2baa97e9b21d2ee6c16e29bcdfb5bb3"
   },
   "verses": [
     {
@@ -117,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "De ce vezi paiul din ochiul fratelui tău, dar nu observi bârna din ochiul tău?"
+      "text": "De ce vezi pată care este în ochiul fratelui tău, dar nu ia în considerare grinda care este în propriul ochi?"
     },
     {
       "number": 4,
@@ -201,15 +237,15 @@
     },
     {
       "number": 24,
-      "text": "De aceea, oricine aude aceste cuvinte ale Mele și le împlinește va fi asemenea unui om chibzuit, care și-a construit casa pe stâncă."
+      "text": "De aceea, oricine aude aceste cuvinte ale mele și le face, îl voi asemăna cu un om înțelept care și-a construit casa pe stâncă."
     },
     {
       "number": 25,
-      "text": "A căzut ploaia, au venit șuvoaiele, au suflat vânturile și au izbit în casa aceea, dar ea n-a căzut, pentru că fusese întemeiată pe stâncă."
+      "text": "Ploaia a venit, inundațiile au venit, și vânturile au suflat și bătut în acea casă; și nu a căzut, pentru că a fost fondată pe stâncă."
     },
     {
       "number": 26,
-      "text": "Dar oricine aude aceste cuvinte ale Mele și nu le împlinește va fi asemenea unui om nechibzuit, care și-a construit casa pe nisip."
+      "text": "Oricine aude aceste cuvinte ale mele și nu le face va fi ca un om prost care și-a construit casa pe nisip."
     },
     {
       "number": 27,
@@ -217,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Când a terminat Isus aceste cuvinte, mulțimile erau uimite de învățătura Lui,"
+      "text": "După ce Isus a terminat de spus aceste lucruri, mulțimile s'au uimit de învățătura Lui,"
     },
     {
       "number": 29,

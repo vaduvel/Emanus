@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 13,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT13.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT13.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.13.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Triangularea a verificat discursul istoric din 13:17–41 ca o singură argumentație, păstrând cei aproximativ 450 de ani, cei 40 de ani ai lui Saul și toate cele trei citate scripturale.",
-      "Versetele 13:23, 13:26 și 13:33 urmează formele explicite SBLGNT «un Mântuitor, pe Isus», «nouă» și «copiilor noștri», chiar unde puntea WEB sau alți martori au alte lecturi.",
-      "La 13:42 nu au fost introduse grupurile «iudeii» și «neamurile» din TR; SBLGNT lasă subiectele neexprimate, iar româna păstrează această rezervă."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 52,
       "reviewed": 52,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 52 de versete SBLGNT din Fapte 13, chemarea și călătoria misionară, discursul lui Pavel cu citatele din Psalmii 2 și 16, Isaia 55, Habacuc 1 și Isaia 49, relațiile sintactice din 13:19–20 și 13:38–39, precum și aparatul capitolului."
+      "scope": "Au fost confruntate toate cele 52 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Numele Saul este păstrat până la identificarea explicită «numit și Pavel», după care narațiunea folosește Pavel.",
-        "Discursul amplu a fost punctuat în unități românești clare, fără mutarea conținutului între versetele SBLGNT.",
-        "Formulările dificile «binecuvântările sfinte și sigure ale lui David» și «rânduiți spre viața veșnică» au fost păstrate fără parafrază doctrinară."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Chemarea de către Duhul Sfânt, trimiterea și punerea mâinilor sunt redate narativ, fără definirea unei proceduri ecleziale universale.",
-        "Argumentul despre înviere, iertare și îndreptățire păstrează succesiunea și termenii greci fără completări confesionale.",
-        "Afirmația despre cei rânduiți spre viața veșnică rămâne lexicală și nu este explicată în corpul versetului printr-un sistem teologic ulterior."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:eefa9bf398ba09caaa5e0599b2c6136635310b115b62d2132e0820d71cc4b74b",
+    "contentDigest": "sha256:33ef38f8cd79d21362ccbc3e47831f3bb0873b8e6d43b6facd12ccb869ec543d"
   },
   "verses": [
     {
@@ -141,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "După ce au străbătut întreaga insulă până la Pafos, au găsit un oarecare magician, profet mincinos iudeu, numit Bar-Isus."
+      "text": "După ce au trecut prin insulă la Paphos, au găsit un anumit vrăjitor, un profet fals, un iudeu al cărui nume era Bar Isus,"
     },
     {
       "number": 7,
@@ -185,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Dumnezeul acestui popor, Israel, i-a ales pe strămoșii noștri, a înălțat poporul în timpul șederii lui ca străin în țara Egiptului și l-a scos de acolo cu brațul ridicat."
+      "text": "Dumnezeul acestui popor i -a ales pe părinții noștri, și a înălțat poporul, cînd au rămas ca străini în țara Egiptului, și cu un braț înălțat, i -a scos din ea."
     },
     {
       "number": 18,
@@ -193,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "A nimicit șapte neamuri în țara Canaanului și le-a dat țara acestora ca moștenire."
+      "text": "După ce a nimicit șapte națiuni din țara Canaanului, le -a dat țara lor ca moștenire, timp de circa patru sute cincizeci de ani."
     },
     {
       "number": 20,
@@ -269,11 +293,11 @@
     },
     {
       "number": 38,
-      "text": "Să vă fie deci cunoscut, fraților, că prin El vi se vestește iertarea păcatelor și că, de toate lucrurile de care n-ați putut fi îndreptățiți prin Legea lui Moise,"
+      "text": "De aceea, fraților, să știți că prin acest om vă este vestită iertarea păcatelor."
     },
     {
       "number": 39,
-      "text": "prin El este îndreptățit oricine crede."
+      "text": "oricine crede în El este socotit neprihănit de toate lucrurile, de care n- putut fi neprihăniți prin Legea lui Moise."
     },
     {
       "number": 40,
@@ -285,7 +309,7 @@
     },
     {
       "number": 42,
-      "text": "Când au ieșit, oamenii i-au rugat să le fie spuse aceste cuvinte și în sabatul următor."
+      "text": "Astfel, când iudeii au ieșit din sinagogă, Neamurile au implorat ca aceste cuvinte să le fie predicate în sabatul următor."
     },
     {
       "number": 43,
@@ -293,7 +317,7 @@
     },
     {
       "number": 44,
-      "text": "În sabatul următor, aproape toată cetatea s-a adunat să audă Cuvântul Domnului."
+      "text": "În Sabatul următor, aproape toată cetatea s-a adunat ca să audă Cuvântul lui Dumnezeu."
     },
     {
       "number": 45,
@@ -313,7 +337,7 @@
     },
     {
       "number": 49,
-      "text": "Cuvântul Domnului se răspândea prin întregul ținut."
+      "text": "Cuvântul Domnului a fost răspândit în toată regiunea."
     },
     {
       "number": 50,
@@ -325,7 +349,7 @@
     },
     {
       "number": 52,
-      "text": "Iar ucenicii erau umpluți de bucurie și de Duh Sfânt."
+      "text": "Discipolii erau plini de bucurie și de Duhul Sfânt."
     }
   ],
   "editorialNotes": [

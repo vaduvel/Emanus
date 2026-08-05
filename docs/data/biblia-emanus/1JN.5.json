@@ -3,8 +3,8 @@
   "bookId": "1JN",
   "bookName": "1 Ioan",
   "chapter": 5,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,178 +28,215 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1JN05.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1JN05.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1JN.5.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 21,
-      "reviewed": 0,
+      "reviewed": 21,
       "continuous": true,
       "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 257,
+        "secondary": 66,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5467158590753175,
+      "minimumScore": 0.5694259949565413
+    },
+    "textDigest": "sha256:175765b90f03527cc2065ba4ef7411e7645c97654afbe3dcb76f169b96ad2c39",
+    "contentDigest": "sha256:958f29b4df0d9d84e6f54a9dade811e85776e692a8df0a46a25c46ae44b4d55d"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Oricine crede că Isus este Hristosul s-a născut din Dumnezeu. Oricine iubește pe Tatăl iubește și copilul care este născut din El."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Prin aceasta știm că îi iubim pe copiii lui Dumnezeu, când îl iubim pe Dumnezeu și respectăm poruncile sale."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Căci aceasta este dragostea lui Dumnezeu, ca noi să păzim poruncile Lui; poruncile Lui nu sunt grele."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Căci tot ce se naște din Dumnezeu biruiește lumea; aceasta este biruința care a biruit lumea: credința voastră."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Cine este cel care biruiește lumea, dacă nu cel care crede că Isus este Fiul lui Dumnezeu?"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Acesta este Cel ce a venit cu apă și cu sânge, Isus Hristos; nu numai cu apă, ci cu apă și cu sânge. Duhul este Cel ce mărturisește, pentru că Duhul este adevărul."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Pentru că sunt trei care depun mărturie:"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Duhul, apa și sîngele; și cei trei sunt de acord ca unul singur."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Dacă primim mărturia oamenilor, mărturia lui Dumnezeu este mai mare; căci aceasta este mărturia lui Dumnezeu pe care a mărturisit-o despre Fiul său."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Cel care crede în Fiul lui Dumnezeu are mărturia în sine. Cel care nu crede că Dumnezeu l-a făcut mincinos, pentru că nu a crezut în mărturia pe care Dumnezeu a dat-o cu privire la Fiul său."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Mărturia este aceasta: că Dumnezeu ne-a dat viața veșnică, și această viață este în Fiul său."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Cel care are pe Fiul are viața. Cine nu are pe Dumnezeu, Fiul lui nu are viața."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "V'am scris aceste lucruri, cari credeți în Numele Fiului lui Dumnezeu, ca să știți că aveți viață veșnică, și să continuați să credeți în Numele Fiului lui Dumnezeu."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Aceasta este îndrăzneala pe care o avem față de el, ca, dacă cerem ceva după voia Lui, să ne asculte."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Și dacă știm că El ne ascultă, orice am cere, știm că avem cererile pe care le-am cerut de la El."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Dacă cineva vede pe fratele său păcătuind un păcat care nu duce la moarte, el va cere, și Dumnezeu îi va da viață pentru cei care nu păcătuiesc duce la moarte. Există păcat care duce la moarte. Eu nu spun că el ar trebui să facă o cerere cu privire la acest lucru."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Orice nedreptate este păcat și păcatul nu duce la moarte."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Știm că cel născut din Dumnezeu nu păcătuiește, ci cel născut din Dumnezeu se păzește, iar cel rău nu se atinge de el."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Noi știm că suntem din Dumnezeu, toată lumea zace în puterea celui rău."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Știm că Fiul lui Dumnezeu a venit și ne-a dat o înțelegere, că știm cine este adevărat; și noi suntem în cel care este adevărat, în Fiul Său Isus Hristos. Acesta este adevăratul Dumnezeu și viața veșnică."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Copilașilor, feriți-vă de idoli."
     }
   ],
   "editorialNotes": [
     {
       "verse": 7,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

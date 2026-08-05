@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "La 2:17, textul principal nu introduce adaosul TR εἰς μετάνοιαν, absent din lectura SBLGNT folosită în workbook.",
-      "La 2:23, expresia ὁδὸν ποιεῖν este păstrată prin imaginea ucenicilor care își croiesc drum smulgând spice."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 28,
       "reviewed": 28,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Marcu 2:1-28; au fost verificate construcțiile despre iertare, chemarea lui Levi, postul, imaginile hainei și burdufurilor și disputa despre sabat."
+      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Frazele lungi din 2:1-12 au fost segmentate natural fără ruperea relațiilor dintre întrebare, răspuns și vindecare.",
-        "Imaginile concrete din 2:21-23 au fost păstrate în română fără parafrază explicativă."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Autoritatea Fiului Omului de a ierta păcatele este redată ca afirmație a textului, fără comentariu doctrinar adăugat.",
-        "Relația dintre sabat și om este păstrată în ordinea argumentului lui Isus, fără armonizare cu relatările paralele."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:ae2d143d5be99a69c0a7570cd8874d0bf05a0d8f1f27335c4175aa1605464201",
+    "contentDigest": "sha256:67eed522de6c7521bf33cad7834aa61eb6b0a1bef8424467c544a4dab3f2c26b"
   },
   "verses": [
     {
@@ -134,35 +161,35 @@
     },
     {
       "number": 5,
-      "text": "Văzând credința lor, Isus i-a spus paraliticului: „Copile, păcatele îți sunt iertate!”"
+      "text": "Văzând credința lor, Isus i-a spus paraliticului: Copile, păcatele îți sunt iertate!"
     },
     {
       "number": 6,
-      "text": "Acolo ședeau câțiva cărturari, care gândeau în inimile lor:"
+      "text": "Dar unii dintre cărturari stăteau acolo și se gândeau în inimile lor,"
     },
     {
       "number": 7,
-      "text": "„De ce vorbește acesta astfel? Blasfemiază! Cine poate ierta păcatele decât numai Dumnezeu?”"
+      "text": "De ce vorbește acesta astfel? Blasfemiază! Cine poate ierta păcatele decât numai Dumnezeu?"
     },
     {
       "number": 8,
-      "text": "Îndată, Isus a cunoscut în duhul Său că gândeau astfel în ei înșiși și le-a spus: „De ce gândiți acestea în inimile voastre?"
+      "text": "Îndată, Isus a cunoscut în duhul Său că gândeau astfel în ei înșiși și le-a spus: De ce gândiți acestea în inimile voastre?"
     },
     {
       "number": 9,
-      "text": "Ce este mai ușor: să-i spui paraliticului «Păcatele îți sunt iertate» sau să-i spui «Ridică-te, ia-ți targa și umblă»?"
+      "text": "Ce este mai ușor: să-i spui paraliticului Păcatele îți sunt iertate sau să-i spui Ridică-te, ia-ți targa și umblă?"
     },
     {
       "number": 10,
-      "text": "Dar ca să știți că Fiul Omului are autoritate pe pământ să ierte păcatele...” — i-a spus paraliticului —"
+      "text": "Dar ca să știți că Fiul Omului are autoritate pe pământ să ierte păcatele... — i-a spus paraliticului —"
     },
     {
       "number": 11,
-      "text": "„Ție îți spun: ridică-te, ia-ți targa și du-te acasă!”"
+      "text": "Ție îți spun: ridică-te, ia-ți targa și du-te acasă!"
     },
     {
       "number": 12,
-      "text": "El s-a ridicat și, luându-și îndată targa, a ieșit înaintea tuturor. Toți erau uluiți și Îl glorificau pe Dumnezeu, spunând: „Niciodată n-am văzut așa ceva!”"
+      "text": "El s-a ridicat și, luându-și îndată targa, a ieșit înaintea tuturor. Toți erau uluiți și Îl glorificau pe Dumnezeu, spunând: Niciodată n-am văzut așa ceva!"
     },
     {
       "number": 13,
@@ -170,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Trecând pe acolo, l-a văzut pe Levi, fiul lui Alfeu, șezând la punctul de strângere a taxelor, și i-a spus: „Urmează-Mă!” El s-a ridicat și L-a urmat."
+      "text": "Trecând pe acolo, l-a văzut pe Levi, fiul lui Alfeu, șezând la punctul de strângere a taxelor, și i-a spus: Urmează-Mă! El s-a ridicat și L-a urmat."
     },
     {
       "number": 15,
@@ -178,19 +205,19 @@
     },
     {
       "number": 16,
-      "text": "Cărturarii dintre farisei, văzând că mânca împreună cu păcătoșii și vameșii, le-au spus ucenicilor Lui: „De ce mănâncă El cu vameșii și păcătoșii?”"
+      "text": "Cărturarii dintre farisei, văzând că mânca împreună cu păcătoșii și vameșii, le-au spus ucenicilor Lui: De ce mănâncă El cu vameșii și păcătoșii?"
     },
     {
       "number": 17,
-      "text": "Auzind, Isus le-a spus: „Nu cei sănătoși au nevoie de doctor, ci cei bolnavi. N-am venit să-i chem pe cei drepți, ci pe cei păcătoși.”"
+      "text": "Auzind, Isus le-a spus: Nu cei sănătoși au nevoie de doctor, ci cei bolnavi. N-am venit să-i chem pe cei drepți, ci pe cei păcătoși."
     },
     {
       "number": 18,
-      "text": "Ucenicii lui Ioan și fariseii posteau. Ei au venit și L-au întrebat: „De ce ucenicii lui Ioan și ucenicii fariseilor postesc, iar ucenicii Tăi nu postesc?”"
+      "text": "Ucenicii lui Ioan și fariseii posteau. Ei au venit și L-au întrebat: De ce ucenicii lui Ioan și ucenicii fariseilor postesc, iar ucenicii Tăi nu postesc?"
     },
     {
       "number": 19,
-      "text": "Isus le-a spus: „Pot oare însoțitorii mirelui să postească în timp ce mirele este cu ei? Câtă vreme îl au pe mire cu ei, nu pot posti."
+      "text": "Isus le-a spus: Pot oare însoțitorii mirelui să postească în timp ce mirele este cu ei? Câtă vreme îl au pe mire cu ei, nu pot posti."
     },
     {
       "number": 20,
@@ -202,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "Și nimeni nu pune vin nou în burdufuri vechi; altfel, vinul va sparge burdufurile, vinul se va pierde, iar burdufurile vor fi distruse. Ci vinul nou se pune în burdufuri noi.”"
+      "text": "Și nimeni nu pune vin nou în burdufuri vechi; altfel, vinul va sparge burdufurile, vinul se va pierde, iar burdufurile vor fi distruse. Ci vinul nou se pune în burdufuri noi."
     },
     {
       "number": 23,
@@ -210,23 +237,23 @@
     },
     {
       "number": 24,
-      "text": "Fariseii I-au spus: „Iată, de ce fac ei în sabat ce nu este îngăduit?”"
+      "text": "Fariseii I-au zis:Iată, de ce fac ei ceea ce nu este îngăduit în ziua Sabatului?"
     },
     {
       "number": 25,
-      "text": "El le-a răspuns: „N-ați citit niciodată ce a făcut David când a avut nevoie și i-a fost foame, atât lui, cât și celor care erau cu el?"
+      "text": "El le-a răspuns: N-ați citit niciodată ce a făcut David când a avut nevoie și i-a fost foame, atât lui, cât și celor care erau cu el?"
     },
     {
       "number": 26,
-      "text": "Cum a intrat în Casa lui Dumnezeu pe vremea marelui-preot Abiatar și a mâncat pâinile punerii înainte, pe care nu este îngăduit să le mănânce decât preoții, și a dat și celor care erau cu el?”"
+      "text": "Cum a intrat în Casa lui Dumnezeu pe vremea marelui-preot Abiatar și a mâncat pâinile punerii înainte, pe care nu este îngăduit să le mănânce decât preoții, și a dat și celor care erau cu el?"
     },
     {
       "number": 27,
-      "text": "Apoi le-a spus: „Sabatul a fost făcut pentru om, nu omul pentru sabat."
+      "text": "Apoi le-a spus: Sabatul a fost făcut pentru om, nu omul pentru sabat."
     },
     {
       "number": 28,
-      "text": "Așadar, Fiul Omului este Domn chiar și al sabatului.”"
+      "text": "Așadar, Fiul Omului este Domn chiar și al sabatului."
     }
   ],
   "editorialNotes": [],

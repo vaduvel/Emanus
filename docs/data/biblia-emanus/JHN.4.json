@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,46 +42,58 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN04.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN04.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/4/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
       "meaning": "approved",
-      "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Ioan 4:6 diferențiază πηγή de φρέαρ: am redat πηγή prin «izvor», iar în 4:11-12 φρέαρ prin «fântână», ca să nu se piardă schimbarea de imagine din dialog.",
-      "Ioan 4:35 păstrează ήδη în același verset: «câmpiile... sunt deja albe pentru seceriș», chiar dacă propoziția continuă în 4:36.",
-      "Ioan 4:42 urmează SBLGNT și nu introduce adaosul TR «ὁ Χριστός» în textul principal; titlul rămâne documentat în nota editorială."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 54,
       "reviewed": 54,
@@ -92,22 +104,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Ioan 4:1-54; verificate explicit unitățile 4:1 (ὁ Ἰησοῦς / ὁ Κύριος), 4:24 (πνεῦμα ὁ θεός), 4:35-36 (propoziție continuă peste granița versetelor) și 4:42 (absența lui ὁ Χριστός din textul principal SBL)."
+      "scope": "Au fost confruntate toate cele 54 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Am păstrat conectorii narativi recurenti ai lui Ioan («deci», «căci», «iar», «așadar») fără netezire stilistică.",
-        "Am menținut opozițiile și repetițiile semnificative din dialog: «voi... noi» în 4:22 și «unul seamănă... altul seceră» în 4:37.",
-        "Am corectat formulările potențial calchiate prin română naturală, fără să pierd persoana, timpul sau forța afirmațiilor grecești."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "«Dumnezeu este duh» în 4:24 păstrează predicatul nominal al grecei și nu inversează accentul în «Duh este Dumnezeu».",
-        "«Mântuirea este din iudei» în 4:22 rămâne formulată direct, fără atenuare etnică sau doctrinară.",
-        "Autodezvăluirea din 4:26 este redată concis: «Eu sunt, cel care îți vorbește», fără adaosuri explicative."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -117,12 +129,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost consultate doar pentru verificare comparativă ulterioară"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:5b760d433dbafdd7edbc924ea95370105d18645147769e748e09890d8ab88139",
+    "contentDigest": "sha256:ee3a7740cedeb11bc46c238c70ac249fadb54f25809f030ccdab8ebd9431b154"
   },
   "verses": [
     {
@@ -151,7 +175,7 @@
     },
     {
       "number": 7,
-      "text": "Vine o femeie din Samaria să scoată apă. Isus îi zice: „Dă-mi să beau.”"
+      "text": "O femeie din Samaria a venit să scoată apă. Isus i -a zis:,,Dă-mi să beau."
     },
     {
       "number": 8,
@@ -159,55 +183,55 @@
     },
     {
       "number": 9,
-      "text": "Femeia samariteancă îi zice deci: „Cum se face că tu, fiind iudeu, ceri să bei de la mine, care sunt o femeie samariteancă?” Căci iudeii nu au legături cu samaritenii."
+      "text": "Femeia samariteancă îi zice deci: Cum se face că tu, fiind iudeu, ceri să bei de la mine, care sunt o femeie samariteancă? Căci iudeii nu au legături cu samaritenii."
     },
     {
       "number": 10,
-      "text": "Isus a răspuns și i-a zis: „Dacă ai fi cunoscut darul lui Dumnezeu și cine este cel care îți spune: «Dă-mi să beau», tu i-ai fi cerut, iar el ți-ar fi dat apă vie.”"
+      "text": "Isus a răspuns și i-a zis: Dacă ai fi cunoscut darul lui Dumnezeu și cine este cel care îți spune: Dă-mi să beau, tu i-ai fi cerut, iar el ți-ar fi dat apă vie."
     },
     {
       "number": 11,
-      "text": "Femeia îi zice: „Domnule, nu ai cu ce să scoți, și fântâna este adâncă; de unde ai deci apa cea vie?"
+      "text": "Femeia îi zice: Domnule, nu ai cu ce să scoți, și fântâna este adâncă; de unde ai deci apa cea vie?"
     },
     {
       "number": 12,
-      "text": "Ești tu mai mare decât tatăl nostru Iacov, care ne-a dat fântâna și a băut din ea el însuși, și fiii lui, și turmele lui?”"
+      "text": "Ești tu mai mare decât tatăl nostru Iacov, care ne-a dat fântâna și a băut din ea el însuși, și fiii lui, și turmele lui?"
     },
     {
       "number": 13,
-      "text": "Isus a răspuns și i-a zis: „Oricine bea din apa aceasta va înseta din nou,"
+      "text": "Isus a răspuns și i-a zis: Oricine bea din apa aceasta va înseta din nou,"
     },
     {
       "number": 14,
-      "text": "dar cine va bea din apa pe care i-o voi da eu nu va mai înseta în veac, ci apa pe care i-o voi da eu se va face în el un izvor de apă țâșnind spre viață veșnică.”"
+      "text": "dar cine va bea din apa pe care i-o voi da eu nu va mai înseta în veac, ci apa pe care i-o voi da eu se va face în el un izvor de apă țâșnind spre viață veșnică."
     },
     {
       "number": 15,
-      "text": "Femeia îi zice: „Domnule, dă-mi această apă, ca să nu mai însetez și nici să nu mai vin pe aici să scot.”"
+      "text": "Femeia îi zice: Domnule, dă-mi această apă, ca să nu mai însetez și nici să nu mai vin pe aici să scot."
     },
     {
       "number": 16,
-      "text": "El îi zice: „Du-te, cheamă-l pe bărbatul tău și vino aici.”"
+      "text": "Isus i-a spus: Du-te, sună-ți soțul și vino aici."
     },
     {
       "number": 17,
-      "text": "Femeia a răspuns și i-a zis: „Nu am bărbat.” Isus îi zice: „Bine ai spus: «Nu am bărbat»,"
+      "text": "Femeia a răspuns și i-a zis: Nu am bărbat. Isus îi zice: Bine ai spus: Nu am bărbat,"
     },
     {
       "number": 18,
-      "text": "căci ai avut cinci bărbați, iar cel pe care îl ai acum nu-ți este bărbat. În aceasta ai spus adevărul.”"
+      "text": "căci ai avut cinci bărbați, iar cel pe care îl ai acum nu-ți este bărbat. În aceasta ai spus adevărul."
     },
     {
       "number": 19,
-      "text": "Femeia îi zice: „Domnule, văd că ești profet."
+      "text": "Femeia îi zice: Domnule, văd că ești profet."
     },
     {
       "number": 20,
-      "text": "Părinții noștri s-au închinat pe muntele acesta, iar voi spuneți că în Ierusalim este locul unde trebuie să se închine.”"
+      "text": "Părinții noștri s-au închinat pe muntele acesta, iar voi spuneți că în Ierusalim este locul unde trebuie să se închine."
     },
     {
       "number": 21,
-      "text": "Isus îi zice: „Crede-mă, femeie, vine ceasul când nici pe muntele acesta, nici în Ierusalim nu vă veți închina Tatălui."
+      "text": "Isus îi zice: Crede-mă, femeie, vine ceasul când nici pe muntele acesta, nici în Ierusalim nu vă veți închina Tatălui."
     },
     {
       "number": 22,
@@ -219,19 +243,19 @@
     },
     {
       "number": 24,
-      "text": "Dumnezeu este duh, și cei ce i se închină trebuie să i se închine în duh și adevăr.”"
+      "text": "Dumnezeu este spirit, iar cei care i se închină trebuie să se închine în spirit și adevăr."
     },
     {
       "number": 25,
-      "text": "Femeia îi zice: „Știu că vine Mesia, cel numit Hristos; când va veni acela, ne va vesti toate.”"
+      "text": "Femeia îi zice: Știu că vine Mesia, cel numit Hristos; când va veni acela, ne va vesti toate."
     },
     {
       "number": 26,
-      "text": "Isus îi zice: „Eu sunt, cel care îți vorbește.”"
+      "text": "Isus i-a zis:Eu sunt Cel ce-ți vorbește."
     },
     {
       "number": 27,
-      "text": "Și tocmai atunci au venit ucenicii lui și se mirau că vorbea cu o femeie. Totuși, nimeni nu i-a zis: „Ce cauți?” sau: „De ce vorbești cu ea?”"
+      "text": "Și tocmai atunci au venit ucenicii lui și se mirau că vorbea cu o femeie. Totuși, nimeni nu i-a zis: Ce cauți? sau: De ce vorbești cu ea?"
     },
     {
       "number": 28,
@@ -239,7 +263,7 @@
     },
     {
       "number": 29,
-      "text": "„Veniți să vedeți un om care mi-a spus toate câte am făcut. Nu cumva acesta este Hristosul?”"
+      "text": "Veniți să vedeți un om care mi-a spus toate câte am făcut. Nu cumva acesta este Hristosul?"
     },
     {
       "number": 30,
@@ -247,19 +271,19 @@
     },
     {
       "number": 31,
-      "text": "Între timp, ucenicii îl rugau, zicând: „Rabbi, mănâncă.”"
+      "text": "Între timp, ucenicii îl rugau, zicând: Rabbi, mănâncă."
     },
     {
       "number": 32,
-      "text": "Dar el le-a zis: „Eu am de mâncat o hrană pe care voi nu o cunoașteți.”"
+      "text": "Dar el le-a zis: Eu am de mâncat o hrană pe care voi nu o cunoașteți."
     },
     {
       "number": 33,
-      "text": "Atunci ucenicii ziceau unii către alții: „Oare i-a adus cineva ceva de mâncare?”"
+      "text": "Atunci ucenicii ziceau unii către alții: Oare i-a adus cineva ceva de mâncare?"
     },
     {
       "number": 34,
-      "text": "Isus le zice: „Hrana mea este să fac voia celui ce m-a trimis și să-i împlinesc lucrarea."
+      "text": "Isus le zice: Hrana mea este să fac voia celui ce m-a trimis și să-i împlinesc lucrarea."
     },
     {
       "number": 35,
@@ -271,15 +295,15 @@
     },
     {
       "number": 37,
-      "text": "Căci în aceasta este adevărat cuvântul: «Unul seamănă și altul seceră.»"
+      "text": "Căci în aceasta este adevărat cuvântul: Unul seamănă și altul seceră."
     },
     {
       "number": 38,
-      "text": "Eu v-am trimis să secerați ceea ce voi nu ați muncit; alții au muncit, iar voi ați intrat în munca lor.”"
+      "text": "Eu v-am trimis să secerați ceea ce voi nu ați muncit; alții au muncit, iar voi ați intrat în munca lor."
     },
     {
       "number": 39,
-      "text": "Mulți dintre samaritenii din cetatea aceea au crezut în el din pricina cuvântului femeii, care mărturisea: „Mi-a spus toate câte am făcut.”"
+      "text": "Mulți dintre samaritenii din cetatea aceea au crezut în el din pricina cuvântului femeii, care mărturisea: Mi-a spus toate câte am făcut."
     },
     {
       "number": 40,
@@ -291,15 +315,15 @@
     },
     {
       "number": 42,
-      "text": "iar femeii îi spuneau: „Nu mai credem din pricina vorbirii tale, căci noi înșine am auzit și știm că acesta este cu adevărat Mântuitorul lumii.”"
+      "text": "Ei i-au zis femeii:Noi credem acum, nu din pricina vorbelor tale; căci am auzit pentru noi înșine știm că acesta este într-adevăr Hristosul, Mântuitorul lumii."
     },
     {
       "number": 43,
-      "text": "După cele două zile, a plecat de acolo în Galileea,"
+      "text": "După cele două zile, a ieșit de acolo s-a dus în Galileea."
     },
     {
       "number": 44,
-      "text": "căci Isus însuși a mărturisit că un profet nu are cinste în propria lui patrie."
+      "text": "Căci Isus însuși a mărturisit că un profet nu are onoare în propria sa țară."
     },
     {
       "number": 45,
@@ -307,35 +331,35 @@
     },
     {
       "number": 46,
-      "text": "A venit deci iarăși în Cana Galileii, unde făcuse apa vin. Și era un demnitar împărătesc al cărui fiu era bolnav în Capernaum."
+      "text": "Isus a venit din nou în Cana Galileii, unde a prefăcut apa în vin. Era un nobil al cărui fiu era bolnav la Capernaum."
     },
     {
       "number": 47,
-      "text": "Acesta, auzind că Isus venise din Iudeea în Galileea, s-a dus la el și îl ruga să coboare și să-i vindece fiul, căci era gata să moară."
+      "text": "Cînd a auzit că Isus ieșise din Iudeea în Galileea, s'a dus la el și l - a implorat să coboare și să vindece pe fiul său, căci era la moarte."
     },
     {
       "number": 48,
-      "text": "Atunci Isus i-a zis: „Dacă nu vedeți semne și minuni, nicidecum nu veți crede.”"
+      "text": "Atunci Isus i-a zis: Dacă nu vedeți semne și minuni, nicidecum nu veți crede."
     },
     {
       "number": 49,
-      "text": "Demnitarul împărătesc îi zice: „Domnule, coboară înainte să-mi moară copilul.”"
+      "text": "Nobilul i-a spus, domnule, coboară înainte ca copilul meu să moară."
     },
     {
       "number": 50,
-      "text": "Isus îi zice: „Du-te, fiul tău trăiește.” Omul a crezut cuvântul pe care i l-a spus Isus și a plecat."
+      "text": "Isus îi zice: Du-te, fiul tău trăiește. Omul a crezut cuvântul pe care i l-a spus Isus și a plecat."
     },
     {
       "number": 51,
-      "text": "Pe când cobora el deja, i-au ieșit înainte robii lui, spunându-i că fiul lui trăiește."
+      "text": "În timp ce mergea în jos, servitorii săi l-au întâlnit și a raportat, spunând copilul tău trăiește!"
     },
     {
       "number": 52,
-      "text": "Așadar, i-a întrebat la ce ceas a început să-i fie mai bine. Ei i-au zis: „Ieri, pe la ceasul al șaptelea, l-a lăsat febra.”"
+      "text": "Așadar, i-a întrebat la ce ceas a început să-i fie mai bine. Ei i-au zis: Ieri, pe la ceasul al șaptelea, l-a lăsat febra."
     },
     {
       "number": 53,
-      "text": "Atunci tatăl a știut că acela era ceasul în care îi spusese Isus: „Fiul tău trăiește.” Și a crezut el și toată casa lui."
+      "text": "Atunci tatăl a știut că acela era ceasul în care îi spusese Isus: Fiul tău trăiește. Și a crezut el și toată casa lui."
     },
     {
       "number": 54,

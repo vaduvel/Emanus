@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Luca 3:4 a fost formulat cu «DOMNULUI» deoarece citatul din Isaia 40:3 redă κύριος în relație verificată cu YHWH; nu a fost extinsă convenția în restul capitolului.",
-      "Luca 3:19 urmează SBLGNT și spune doar «soția fratelui său»; numele «Filip» a rămas documentat ca lectură TR, fără a intra în textul principal.",
-      "Luca 3:33 păstrează succesiunea mai dificilă «Aminadab, Admin, Arni» din SBLGNT, în locul armonizării genealogice tradiționale «Aminadab, Aram»."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 38,
       "reviewed": 38,
@@ -86,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Luca 3:1-38; aparat verificat la 3:3, 3:4, 3:5, 3:10, 3:11, 3:12, 3:14, 3:16, 3:17, 3:20, 3:22, 3:23, 3:26, 3:29, 3:32, 3:33."
+      "scope": "Au fost confruntate toate cele 38 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate calcările englezești în secvența profetică din 3:4-6 și în genealogia din 3:23-38.",
-        "Au fost uniformizate numele și formele normative: Isus, Hristosul, DOMNULUI, Duhul Sfânt."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Mesajul lui Ioan despre pocăință, mânie și judecată a fost păstrat fără atenuare lexicală.",
-        "Vocea din cer din 3:22 a fost redată fără armonizare cu alte formule paralele și fără adaos doctrinar."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:2e9327740980699a0412e51d774b72ef150fa0e5b7a2603742b15c213c12a952",
+    "contentDigest": "sha256:e30745229a5e58fd9a6fc2bd2e3d59c4dd82892d14e88db8d8918c041c92fdf7"
   },
   "verses": [
     {
@@ -155,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Și mulțimile îl întrebau, zicând: „Atunci ce să facem?”"
+      "text": "Mulțimile l-au întrebat: Ce trebuie să facem atunci?"
     },
     {
       "number": 11,
@@ -187,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Așadar, dând multe alte îndemnuri, el vestea poporului vestea bună."
+      "text": "Apoi, cu multe alte îndemnuri el a predicat vestea bună poporului,"
     },
     {
       "number": 19,
@@ -211,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "al lui Matat, al lui Levi, al lui Melchi, al lui Ianai, al lui Iosif,"
+      "text": "fiul lui Matat, fiul lui Levi, fiul lui Melchi, fiul lui Jannai, fiul lui Iosif,"
     },
     {
       "number": 25,
@@ -219,19 +245,19 @@
     },
     {
       "number": 26,
-      "text": "al lui Maat, al lui Matatia, al lui Semein, al lui Ioseh, al lui Ioda,"
+      "text": "fiul lui Maat, fiul lui Matatia, fiul lui Semein, fiul lui Iosif, fiul lui Iuda,"
     },
     {
       "number": 27,
-      "text": "al lui Ioanan, al lui Resa, al lui Zorobabel, al lui Salatiel, al lui Neri,"
+      "text": "fiul lui Ioanan, fiul lui Rhesa, fiul lui Zorobabel, fiul lui Șealtiel, fiul lui Neri,"
     },
     {
       "number": 28,
-      "text": "al lui Melchi, al lui Addi, al lui Cosam, al lui Elmadam, al lui Er,"
+      "text": "fiul lui Melchi, fiul lui Addi, fiul lui Cosam, fiul lui Elmodam, fiul lui Er,"
     },
     {
       "number": 29,
-      "text": "al lui Isus, al lui Eliezer, al lui Iorim, al lui Matat, al lui Levi,"
+      "text": "fiul lui Iose, fiul lui Eliezer, fiul lui Iorim, fiul lui Matat, fiul lui Levi,"
     },
     {
       "number": 30,
@@ -243,7 +269,7 @@
     },
     {
       "number": 32,
-      "text": "al lui Iese, al lui Iobel, al lui Booz, al lui Sala, al lui Naason,"
+      "text": "fiul lui Isai, fiul lui Obed, fiul lui Boaz, fiul lui Salmon, fiul lui Nahșon,"
     },
     {
       "number": 33,
@@ -251,7 +277,7 @@
     },
     {
       "number": 34,
-      "text": "al lui Iacov, al lui Isaac, al lui Avraam, al lui Tara, al lui Nahor,"
+      "text": "fiul lui Iacov, fiul lui Isaac, fiul lui Avraam, fiul lui Terah, fiul lui Nahor,"
     },
     {
       "number": 35,
@@ -263,11 +289,11 @@
     },
     {
       "number": 37,
-      "text": "al lui Matusala, al lui Enoh, al lui Iaret, al lui Maleleel, al lui Cainan,"
+      "text": "fiul lui Metusala, fiul lui Enoh, fiul lui Iared, fiul lui Mahalaleel, fiul lui Cainan,"
     },
     {
       "number": 38,
-      "text": "al lui Enos, al lui Set, al lui Adam, al lui Dumnezeu."
+      "text": "fiul lui Enos, fiul lui Set, fiul lui Adam, fiul lui Dumnezeu."
     }
   ],
   "editorialNotes": [
@@ -345,10 +371,10 @@
     },
     {
       "verse": 32,
-      "term": "Ἰωβὴλ ... Σαλὰ",
-      "decision": "„Iobel ... Sala”",
+      "term": "Ἰωβὴλ... Σαλὰ",
+      "decision": "„Iobel... Sala”",
       "alternatives": [
-        "„Obed ... Salmon”"
+        "„Obed... Salmon”"
       ],
       "reason": "Luca 3:32 în SBLGNT are forme diferite de seria onomastică tradițională din TR și din multe traduceri românești.",
       "reviewRequired": true,

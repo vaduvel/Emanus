@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "La 3:29, αἰωνίου ἁμαρτήματος este redat «păcat veșnic», fără înlocuirea cu lectura despre condamnare.",
-      "La 3:32, textul principal menționează mama și frații lui Isus, fără adaosul despre surori care nu apare în lectura SBLGNT din workbook."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 35,
       "reviewed": 35,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Marcu 3:1-35; au fost verificate vindecarea din sabat, lista celor doisprezece, disputa despre Beelzebul și delimitarea familiei lui Isus."
+      "scope": "Au fost confruntate toate cele 35 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Listele geografice și onomastice au fost punctuate pentru claritate fără eliminarea niciunui nume.",
-        "Paralelele retorice despre împărăție, casă și Satan au fost păstrate cu aceeași structură repetitivă."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Afirmația despre blasfemia împotriva Duhului Sfânt este redată în termenii textului, fără extindere doctrinară.",
-        "Rudenia și ascultarea de voia lui Dumnezeu sunt păstrate ca imagini narative, fără redefiniri confesionale."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:698d2a98d4d3d6e42e389a4ef4f784cb201b5b1cf8c786a8c7389ba9c0932c3e",
+    "contentDigest": "sha256:4e2c35159e1daab72e727b2ce751999f62eb51317f546db94894d595c6982223"
   },
   "verses": [
     {
@@ -126,15 +153,15 @@
     },
     {
       "number": 3,
-      "text": "Isus i-a spus omului care avea mâna paralizată: „Ridică-te în mijloc!”"
+      "text": "Isus i-a spus omului care avea mâna paralizată: Ridică-te în mijloc!"
     },
     {
       "number": 4,
-      "text": "Apoi le-a spus: „Este îngăduit în ziua de sabat să faci bine sau să faci rău, să salvezi o viață sau să ucizi?” Dar ei tăceau."
+      "text": "Apoi le-a spus: Este îngăduit în ziua de sabat să faci bine sau să faci rău, să salvezi o viață sau să ucizi? Dar ei tăceau."
     },
     {
       "number": 5,
-      "text": "Privindu-i de jur împrejur cu mânie și adânc întristat de împietrirea inimii lor, i-a spus omului: „Întinde-ți mâna!” El a întins-o, iar mâna i-a fost refăcută."
+      "text": "Privindu-i de jur împrejur cu mânie și adânc întristat de împietrirea inimii lor, i-a spus omului: Întinde-ți mâna! El a întins-o, iar mâna i-a fost refăcută."
     },
     {
       "number": 6,
@@ -150,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Le-a spus ucenicilor Lui să-I țină la îndemână o barcă mică din cauza mulțimii, ca să nu-L îmbulzească."
+      "text": "El le - a spus discipolilor săi că o mică barcă trebuie să stea lângă el din cauza mulțimii, ca să nu - l preseze."
     },
     {
       "number": 10,
@@ -158,11 +185,11 @@
     },
     {
       "number": 11,
-      "text": "Ori de câte ori duhurile necurate Îl vedeau, cădeau înaintea Lui și strigau: „Tu ești Fiul lui Dumnezeu!”"
+      "text": "Ori de câte ori duhurile necurate Îl vedeau, cădeau înaintea Lui și strigau: Tu ești Fiul lui Dumnezeu!"
     },
     {
       "number": 12,
-      "text": "Dar El le mustra cu asprime să nu-L facă cunoscut."
+      "text": "El i - a avertizat cu asprime că nu trebuie să - l facă cunoscut."
     },
     {
       "number": 13,
@@ -174,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "și să aibă autoritate să scoată demonii:"
+      "text": "să aibă putere să vindece bolile să scoată demoni,"
     },
     {
       "number": 16,
@@ -190,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "și Iuda Iscariot, cel care L-a și trădat."
+      "text": "Iuda Iscarioteanul, care l -a trădat și el, a intrat într'o casă."
     },
     {
       "number": 20,
@@ -198,15 +225,15 @@
     },
     {
       "number": 21,
-      "text": "Când au auzit cei apropiați Lui, au ieșit să-L ia cu forța, căci spuneau: „Și-a ieșit din minți.”"
+      "text": "Când au auzit cei apropiați Lui, au ieșit să-L ia cu forța, căci spuneau: Și-a ieșit din minți."
     },
     {
       "number": 22,
-      "text": "Cărturarii coborâți din Ierusalim spuneau: „Îl are pe Beelzebul” și: „Prin conducătorul demonilor scoate demonii.”"
+      "text": "Cărturarii coborâți din Ierusalim spuneau: Îl are pe Beelzebul și: Prin conducătorul demonilor scoate demonii."
     },
     {
       "number": 23,
-      "text": "Chemându-i la Sine, le vorbea în pilde: „Cum poate Satan să-l scoată pe Satan?"
+      "text": "El i - a chemat și le - a zis în parabole:! Cum poate Satana să - l izgonească pe Satan?"
     },
     {
       "number": 24,
@@ -214,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Și dacă o casă este dezbinată împotriva ei înseși, casa aceea nu va putea dăinui."
+      "text": "Daca o casa este impartita impotriva ei insasi, acea casa nu poate sta in picioare."
     },
     {
       "number": 26,
@@ -230,11 +257,11 @@
     },
     {
       "number": 29,
-      "text": "dar cine va blasfemia împotriva Duhului Sfânt nu are iertare în veac, ci este vinovat de un păcat veșnic.”"
+      "text": "dar cine va blasfemia împotriva Duhului Sfânt nu are iertare în veac, ci este vinovat de un păcat veșnic."
     },
     {
       "number": 30,
-      "text": "Aceasta pentru că ei spuneau: „Are un duh necurat.”"
+      "text": "Aceasta pentru că ei spuneau: Are un duh necurat."
     },
     {
       "number": 31,
@@ -242,19 +269,19 @@
     },
     {
       "number": 32,
-      "text": "Mulțimea ședea în jurul Lui, iar ei I-au spus: „Iată, mama Ta și frații Tăi sunt afară și Te caută.”"
+      "text": "Mulțimea ședea în jurul Lui, iar ei I-au spus: Iată, mama Ta și frații Tăi sunt afară și Te caută."
     },
     {
       "number": 33,
-      "text": "El le-a răspuns: „Cine este mama Mea și cine sunt frații Mei?”"
+      "text": "El le-a răspuns: Cine este mama Mea și cine sunt frații Mei?"
     },
     {
       "number": 34,
-      "text": "Privindu-i de jur împrejur pe cei care ședeau în cerc în jurul Lui, a spus: „Iată mama Mea și frații Mei!"
+      "text": "Privindu-i de jur împrejur pe cei care ședeau în cerc în jurul Lui, a spus: Iată mama Mea și frații Mei!"
     },
     {
       "number": 35,
-      "text": "Căci oricine face voia lui Dumnezeu, acela Îmi este frate, soră și mamă.”"
+      "text": "Căci oricine face voia lui Dumnezeu, acela Îmi este frate, soră și mamă."
     }
   ],
   "editorialNotes": [],

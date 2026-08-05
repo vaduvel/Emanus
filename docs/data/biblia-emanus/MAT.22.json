@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 22,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT22.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT22.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.22.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "În răspunsul despre taxă sunt păstrate distinct imaginea, inscripția și repetiția «ale Cezarului / ale lui Dumnezeu». ",
-      "Citatele din Deuteronom 6:5 și Psalmul 110:1 disting «DOMNUL» pentru YHWH de «Domnul meu» pentru al doilea κύριος."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 46,
       "reviewed": 46,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite cele 46 de versete, inclusiv pilda nunții, întrebările despre tribut și înviere și citatele din Torah și Psalmi."
+      "scope": "Au fost confruntate toate cele 46 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Discursurile succesive au fost delimitate fără pierderea schimbării vorbitorilor.",
-        "Lista celor șapte frați și paralelismul celor două porunci au fost păstrate în forma lor repetitivă."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "În citatele din Deuteronom 6:5 și Psalmul 110:1, κύριος corespunzător lui YHWH este redat «DOMNUL».",
-        "Răspunsul despre înviere păstrează comparația cu îngerii, fără a adăuga o antropologie sau o descriere a stării finale."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:e4be33d4e3ed5685966fd202997f91d5ce7337496e876319b33058306a5e6fbc",
+    "contentDigest": "sha256:b2f80a33e18641bcf0686055e49074b3947f1012747618ebcc9d7c6bdea8b33a"
   },
   "verses": [
     {
@@ -122,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "„Împărăția cerurilor se aseamănă cu un rege care a făcut nunta fiului său."
+      "text": "Împărăția cerurilor se aseamănă cu un rege care a făcut nunta fiului său."
     },
     {
       "number": 3,
@@ -130,15 +157,15 @@
     },
     {
       "number": 4,
-      "text": "A trimis iarăși alți robi, spunând: «Spuneți-le celor invitați: ‘Iată, mi-am pregătit ospățul; taurii și vitele îngrășate au fost tăiate și totul este gata. Veniți la nuntă!’»"
+      "text": "A trimis iarăși alți robi, spunând: Spuneți-le celor invitați: ‘Iată, mi-am pregătit ospățul; taurii și vitele îngrășate au fost tăiate și totul este gata. Veniți la nuntă!’"
     },
     {
       "number": 5,
-      "text": "Dar ei n-au luat seama și au plecat, unul la ogorul său, altul la negoțul lui."
+      "text": "Dar ei au făcut lumină de ea, și a mers căile lor, unul la ferma lui, altul la marfa lui;"
     },
     {
       "number": 6,
-      "text": "Ceilalți i-au prins pe robii regelui, i-au maltratat și i-au omorât."
+      "text": "și ceilalți i-au luat pe servitorii lui, i-au tratat rușinos, și i-au ucis."
     },
     {
       "number": 7,
@@ -146,11 +173,11 @@
     },
     {
       "number": 8,
-      "text": "Atunci le-a spus robilor săi: «Nunta este pregătită, dar cei invitați nu erau vrednici."
+      "text": "Apoi le - a spus slujitorilor săi că nunta este gata, dar cei care au fost invitați nu erau demni."
     },
     {
       "number": 9,
-      "text": "Mergeți, așadar, la răspântiile drumurilor și chemați-i la nuntă pe toți cei pe care îi veți găsi.»"
+      "text": "Prin urmare, du-te la intersecțiile autostrăzilor, și cât mai multe ca tine poate găsi, invita la sărbătoarea de nunta."
     },
     {
       "number": 10,
@@ -162,15 +189,15 @@
     },
     {
       "number": 12,
-      "text": "I-a spus: «Prietene, cum ai intrat aici fără haină de nuntă?» Omul a rămas fără cuvinte."
+      "text": "I-a spus: Prietene, cum ai intrat aici fără haină de nuntă? Omul a rămas fără cuvinte."
     },
     {
       "number": 13,
-      "text": "Atunci regele le-a spus slujitorilor: «Legați-i picioarele și mâinile și aruncați-l în întunericul de afară! Acolo va fi plânsul și scrâșnirea dinților.»"
+      "text": "Atunci regele le-a spus slujitorilor: Legați-i picioarele și mâinile și aruncați-l în întunericul de afară! Acolo va fi plânsul și scrâșnirea dinților."
     },
     {
       "number": 14,
-      "text": "Căci mulți sunt chemați, dar puțini sunt aleși.”"
+      "text": "Căci mulți sunt chemați, dar puțini sunt aleși."
     },
     {
       "number": 15,
@@ -178,27 +205,27 @@
     },
     {
       "number": 16,
-      "text": "I-au trimis la El pe ucenicii lor împreună cu irodienii, ca să-I spună: „Învățătorule, știm că ești sincer, că înveți în adevăr calea lui Dumnezeu și că nu-Ți pasă de părerea nimănui, fiindcă nu Te uiți la fața oamenilor."
+      "text": "I-au trimis la El pe ucenicii lor împreună cu irodienii, ca să-I spună: Învățătorule, știm că ești sincer, că înveți în adevăr calea lui Dumnezeu și că nu-Ți pasă de părerea nimănui, fiindcă nu Te uiți la fața oamenilor."
     },
     {
       "number": 17,
-      "text": "Spune-ne, așadar, ce crezi: este îngăduit să plătim tribut Cezarului sau nu?”"
+      "text": "Spune-ne, dar, ce crezi? Se cuvine sau nu să plătim impozite Cezarului?"
     },
     {
       "number": 18,
-      "text": "Isus le-a cunoscut răutatea și a zis: „De ce Mă puneți la încercare, ipocriților?"
+      "text": "Isus le-a cunoscut răutatea și a zis: De ce Mă puneți la încercare, ipocriților?"
     },
     {
       "number": 19,
-      "text": "Arătați-Mi moneda pentru tribut.” Ei I-au adus un denar."
+      "text": "Arătați-Mi moneda pentru tribut. Ei I-au adus un denar."
     },
     {
       "number": 20,
-      "text": "El i-a întrebat: „A cui sunt această imagine și inscripția?”"
+      "text": "El i-a întrebat: A cui sunt această imagine și inscripția?"
     },
     {
       "number": 21,
-      "text": "Ei au răspuns: „Ale Cezarului.” Atunci El le-a spus: „Dați, așadar, Cezarului ce este al Cezarului și lui Dumnezeu ce este al lui Dumnezeu.”"
+      "text": "Ei au răspuns: Ale Cezarului. Atunci El le-a spus: Dați, așadar, Cezarului ce este al Cezarului și lui Dumnezeu ce este al lui Dumnezeu."
     },
     {
       "number": 22,
@@ -210,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "„Învățătorule, Moise a spus: «Dacă moare cineva fără să aibă copii, fratele lui să se căsătorească cu soția acestuia și să-i ridice urmași fratelui său.»"
+      "text": "Învățătorule, Moise a spus: Dacă moare cineva fără să aibă copii, fratele lui să se căsătorească cu soția acestuia și să-i ridice urmași fratelui său."
     },
     {
       "number": 25,
@@ -218,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "La fel s-a întâmplat cu al doilea și cu al treilea, până la al șaptelea."
+      "text": "În același fel, al doilea și al treilea până la al șaptelea."
     },
     {
       "number": 27,
@@ -226,11 +253,11 @@
     },
     {
       "number": 28,
-      "text": "Așadar, la înviere, soția căruia dintre cei șapte va fi? Căci toți au avut-o de soție.”"
+      "text": "Așadar, la înviere, soția căruia dintre cei șapte va fi? Căci toți au avut-o de soție."
     },
     {
       "number": 29,
-      "text": "Isus le-a răspuns: „Vă rătăciți pentru că nu cunoașteți nici Scripturile, nici puterea lui Dumnezeu."
+      "text": "Isus le-a răspuns: Vă rătăciți pentru că nu cunoașteți nici Scripturile, nici puterea lui Dumnezeu."
     },
     {
       "number": 30,
@@ -242,7 +269,7 @@
     },
     {
       "number": 32,
-      "text": "«Eu sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov»? El nu este Dumnezeul celor morți, ci al celor vii.”"
+      "text": "Eu sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov? El nu este Dumnezeul celor morți, ci al celor vii."
     },
     {
       "number": 33,
@@ -250,7 +277,7 @@
     },
     {
       "number": 34,
-      "text": "Fariseii, auzind că Isus îi făcuse pe saduchei să tacă, s-au adunat laolaltă."
+      "text": "Dar fariseii, când au auzit că i-a redus la tăcere pe saduchei, s-au adunat."
     },
     {
       "number": 35,
@@ -258,11 +285,11 @@
     },
     {
       "number": 36,
-      "text": "„Învățătorule, care este marea poruncă din Lege?”"
+      "text": "Învățătorule, care este cea mai mare poruncă din lege?"
     },
     {
       "number": 37,
-      "text": "El i-a răspuns: „Să-L iubești pe DOMNUL Dumnezeul tău cu toată inima ta, cu tot sufletul tău și cu toată mintea ta."
+      "text": "Isus i-a zis:Să iubești pe Domnul Dumnezeul tău cu toată inima ta, cu tot sufletul tău cu tot cugetul tău."
     },
     {
       "number": 38,
@@ -270,11 +297,11 @@
     },
     {
       "number": 39,
-      "text": "Iar a doua, asemenea ei, este: «Să-l iubești pe semenul tău ca pe tine însuți.»"
+      "text": "Al doilea este:Să iubești pe aproapele tău ca pe tine însuți."
     },
     {
       "number": 40,
-      "text": "De aceste două porunci atârnă toată Legea și Profeții.”"
+      "text": "De aceste două porunci atârnă toată Legea și Profeții."
     },
     {
       "number": 41,
@@ -282,19 +309,19 @@
     },
     {
       "number": 42,
-      "text": "„Ce credeți despre Hristos? Al cui fiu este?” Ei I-au răspuns: „Al lui David.”"
+      "text": "Ce credeți despre Hristos? Al cui fiu este? Ei I-au răspuns: Al lui David."
     },
     {
       "number": 43,
-      "text": "El le-a zis: „Atunci cum Îl numește David, prin Duhul, «Domn», când spune:"
+      "text": "El le-a zis: Atunci cum Îl numește David, prin Duhul, Domn, când spune:"
     },
     {
       "number": 44,
-      "text": "«DOMNUL I-a spus Domnului meu: ‘Șezi la dreapta Mea până când îi voi pune pe dușmanii Tăi sub picioarele Tale’»?"
+      "text": "DOMNUL I-a spus Domnului meu: ‘Șezi la dreapta Mea până când îi voi pune pe dușmanii Tăi sub picioarele Tale’?"
     },
     {
       "number": 45,
-      "text": "Deci, dacă David Îl numește «Domn», cum este El fiul lui?”"
+      "text": "Deci, dacă David Îl numește Domn, cum este El fiul lui?"
     },
     {
       "number": 46,

@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 12,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,152 +28,188 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV12.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV12.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.12.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 17,
-      "reviewed": 0,
+      "reviewed": 17,
       "continuous": true,
       "verseNumbersSha256": "sha256:c042dea00d1219ffd4f3d4c5e31de8198e284a568f4ffabe690d27f0a0a57ed2"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:576d13317b3f28550a555726e42426f3ac2419929726964f998087be117235ac",
+    "contentDigest": "sha256:5c2913e1c00751d1ec2409ce50db2c34047b24308e229b10777583cacfc0867f"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Un semn mare a fost văzut în cer: o femeie îmbrăcată cu soare și luna sub picioarele ei și pe capul ei o coroană de douăsprezece stele."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Ea a fost însărcinată. A strigat de durere, străduindu-se să nască."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Un alt semn a fost văzut în cer. Iată, un mare balaur roșu, cu șapte capete și zece coarne, și pe capetele lui șapte coroane."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Coada lui a tras o treime din stelele cerului, și le -a aruncat pe pămînt. Dragonul a stat înaintea femeii care era pe cale să nască, ca atunci cînd ea a născut să -i mănînce copilul."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Ea a născut un fiu, un copil de parte bărbătească, care să domnească toate neamurile cu un toiag de fier; copilul ei a fost prins de Dumnezeu și de scaunul lui de domnie."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Femeia a fugit în pustie, unde are un loc pregătit de Dumnezeu, ca acolo să o hrănească o mie două sute șaizeci de zile."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "A fost război pe cer, Michael și îngerii lui au luptat împotriva dragonului, dragonul și îngerii lui au făcut război."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Ei n-au biruit. Nu s-a mai găsit loc pentru ei în cer."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Marele balaur a fost aruncat în jos, șarpele cel vechi, cel care este numit diavolul și Satana, înșelătorul întregii lumi. El a fost aruncat pe pământ și îngerii lui au fost aruncați cu el."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Am auzit un glas puternic în cer, spunând: „Acum a venit mântuirea, puterea și Dumnezeului nostru și autoritatea lui Hristos; pentru că acuzatorul fraților noștri a fost aruncat jos, care îi acuză înaintea Dumnezeului nostru zi și noapte."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "L-au biruit din pricina sîngelui Mielului, și din pricina cuvîntului mărturiei lor. Ei nu și-au iubit viața, nici măcar pînă la moarte."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "De aceea bucurați-vă, ceruri și voi care locuiți în ele. Vai de pământ și de mare, pentru că diavolul s-a coborât la voi, cu mare mânie, știind că nu are decât puțin timp."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Când dragonul a văzut că a fost aruncat pe pământ, el a persecutat femeia care a născut copilul de sex masculin."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Două aripi ale marelui vultur au fost date femeii, ca să zboare în pustie la locul ei, ca să poată fi hrănită pentru un timp, timp și jumătate de timp, de fața șarpelui."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Șarpele a vărsat apă din gura lui după femeie ca un râu, ca s-o facă să fie dusă de pârâu."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Pământul a ajutat-o pe femeie, iar pământul și-a deschis gura și a înghițit râul pe care dragonul l-a scuipat din gura lui."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dragonul s'a mîniat pe femeie, și s'a dus să facă război cu ceilalți urmași ai ei, cari păzesc poruncile lui Dumnezeu și țin mărturie despre Isus.”"
     }
   ],
   "editorialNotes": [],

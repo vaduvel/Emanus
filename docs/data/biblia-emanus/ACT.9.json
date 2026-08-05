@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 9,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT09.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT09.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.9.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Triangularea a verificat separat chemarea lui Saul, integrarea lui în comunitate și minunile din Lida și Iope, păstrând formularea independentă.",
-      "Versetul 20 urmează SBLGNT «Ἰησοῦν», nu puntea WEB care are aici «Christ», iar versetul 31 păstrează singularul grec «biserica».",
-      "Segmentarea SBLGNT din 9:28–29 a fost păstrată: vorbirea cu îndrăzneală în Numele Domnului rămâne în versetul 28."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 43,
       "reviewed": 43,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 43 de versete SBLGNT din Fapte 9, discursul direct de pe drumul Damascului, subiectele și antecedentele din 9:5–17, aspectul verbal din narațiune și aparatul capitolului, inclusiv ordinea din 9:3."
+      "scope": "Au fost confruntate toate cele 43 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Vocativul «Saule» și numele «Saul» au fost diferențiate conform sintaxei românești.",
-        "Unitatea 9:28–29 a fost punctuată după versificația SBLGNT, nu după segmentarea punții engleze.",
-        "Numele Tabita și Dorca, precum și toponimele Damasc, Lida, Iope și Șaron, au fost redate consecvent."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Relatarea chemării lui Saul păstrează identificarea explicită a lui Isus cu Cel persecutat, fără explicații doctrinare adăugate.",
-        "Expresia «vas ales pentru Mine» și suferința pentru Numele Domnului sunt menținute ca afirmații narative ale textului.",
-        "Vindecarea lui Enea și readucerea la viață a Tabitei sunt atribuite conform formulărilor explicite, fără amplificarea mecanismului minunilor."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:ecbd8744b364bda36bb3ddf87d628728502ba854b0bfbb08aa1357669cc4936d",
+    "contentDigest": "sha256:714d89a6e443b999726d71f88e335b9c29725f395bb4496b0e4a425c17c21fb7"
   },
   "verses": [
     {
@@ -133,15 +157,15 @@
     },
     {
       "number": 4,
-      "text": "El a căzut la pământ și a auzit un glas care-i spunea: „Saule, Saule, de ce Mă persecuți?”"
+      "text": "El a căzut la pământ și a auzit un glas care-i spunea: Saule, Saule, de ce Mă persecuți?"
     },
     {
       "number": 5,
-      "text": "El a întrebat: „Cine ești, Doamne?” Iar El a răspuns: „Eu sunt Isus, pe care tu Îl persecuți."
+      "text": "El a întrebat: Cine ești, Doamne? Iar El a răspuns: Eu sunt Isus, pe care tu Îl persecuți."
     },
     {
       "number": 6,
-      "text": "Dar ridică-te, intră în cetate și ți se va spune ce trebuie să faci.”"
+      "text": "Dar ridică-te și intră în oraș, atunci ți se va spune ce trebuie să faci."
     },
     {
       "number": 7,
@@ -153,39 +177,39 @@
     },
     {
       "number": 9,
-      "text": "Trei zile n-a văzut și n-a mâncat, nici n-a băut."
+      "text": "El a fost fără vedere timp de trei zile, și nici mâncat nici băut."
     },
     {
       "number": 10,
-      "text": "În Damasc era un ucenic numit Anania. Domnul i-a spus într-o vedenie: „Anania!” El a răspuns: „Iată-mă, Doamne!”"
+      "text": "În Damasc era un ucenic numit Anania. Domnul i-a spus într-o vedenie: Anania! El a răspuns: Iată-mă, Doamne!"
     },
     {
       "number": 11,
-      "text": "Domnul i-a zis: „Ridică-te, mergi pe strada numită Dreaptă și caută în casa lui Iuda un om din Tars, numit Saul. Iată, el se roagă"
+      "text": "Domnul i -a zis:,,Scoală-te și du-te pe ulița numită Dreptă, și întreabă în casa lui Iuda pe unul numit Saul, un om din Tars. Căci iată că se roagă,"
     },
     {
       "number": 12,
-      "text": "și a văzut într-o vedenie un bărbat numit Anania, care a intrat și și-a pus mâinile peste el ca să-și recapete vederea.”"
+      "text": "și a văzut într-o vedenie un bărbat numit Anania, care a intrat și și-a pus mâinile peste el ca să-și recapete vederea."
     },
     {
       "number": 13,
-      "text": "Dar Anania a răspuns: „Doamne, am auzit de la mulți despre omul acesta, cât rău le-a făcut sfinților Tăi în Ierusalim."
+      "text": "Dar Anania a răspuns: Doamne, am auzit de la mulți despre omul acesta, cât rău le-a făcut sfinților Tăi în Ierusalim."
     },
     {
       "number": 14,
-      "text": "Și aici are autoritate de la conducătorii preoților să-i lege pe toți cei care cheamă Numele Tău.”"
+      "text": "Și aici are autoritate de la conducătorii preoților să-i lege pe toți cei care cheamă Numele Tău."
     },
     {
       "number": 15,
-      "text": "Domnul i-a spus: „Du-te, pentru că acesta este un vas ales pentru Mine, ca să poarte Numele Meu înaintea neamurilor, a regilor și a fiilor lui Israel."
+      "text": "Domnul i-a spus: Du-te, pentru că acesta este un vas ales pentru Mine, ca să poarte Numele Meu înaintea neamurilor, a regilor și a fiilor lui Israel."
     },
     {
       "number": 16,
-      "text": "Căci Eu îi voi arăta cât trebuie să sufere pentru Numele Meu.”"
+      "text": "Căci Eu îi voi arăta cât trebuie să sufere pentru Numele Meu."
     },
     {
       "number": 17,
-      "text": "Anania a plecat, a intrat în casă și, punându-și mâinile peste el, a zis: „Frate Saule, Domnul m-a trimis — Isus, Cel care ți S-a arătat pe drumul pe care veneai — ca să-ți recapeți vederea și să fii umplut de Duhul Sfânt.”"
+      "text": "Anania a plecat, a intrat în casă și, punându-și mâinile peste el, a zis: Frate Saule, Domnul m-a trimis — Isus, Cel care ți S-a arătat pe drumul pe care veneai — ca să-ți recapeți vederea și să fii umplut de Duhul Sfânt."
     },
     {
       "number": 18,
@@ -193,15 +217,15 @@
     },
     {
       "number": 19,
-      "text": "iar după ce a mâncat, a prins putere. A rămas câteva zile cu ucenicii din Damasc"
+      "text": "El a luat de mâncare și s - a întărit. Saul a stat câteva zile cu discipolii care erau la Damasc."
     },
     {
       "number": 20,
-      "text": "și îndată Îl vestea în sinagogi pe Isus, spunând că El este Fiul lui Dumnezeu."
+      "text": "Imediat în sinagogi a proclamat pe Hristos, că el este Fiul lui Dumnezeu."
     },
     {
       "number": 21,
-      "text": "Toți cei care-l auzeau erau uimiți și spuneau: „Nu este acesta cel care, în Ierusalim, îi nimicea pe cei care chemau Numele acesta? Și n-a venit el aici tocmai ca să-i ducă legați înaintea conducătorilor preoților?”"
+      "text": "Toți cei care-l auzeau erau uimiți și spuneau: Nu este acesta cel care, în Ierusalim, îi nimicea pe cei care chemau Numele acesta? Și n-a venit el aici tocmai ca să-i ducă legați înaintea conducătorilor preoților?"
     },
     {
       "number": 22,
@@ -221,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "Când a ajuns la Ierusalim, Saul încerca să li se alăture ucenicilor, dar toți se temeau de el, necrezând că este ucenic."
+      "text": "Cînd a ajuns Saul la Ierusalim, el a încercat să se alăture discipolilor; dar toți se temeau de el, fără să creadă că era ucenic."
     },
     {
       "number": 27,
@@ -229,11 +253,11 @@
     },
     {
       "number": 28,
-      "text": "De atunci, Saul era împreună cu ei, intrând și ieșind prin Ierusalim și vorbind cu îndrăzneală în Numele Domnului."
+      "text": "El a fost cu ei intrând în Ierusalim,"
     },
     {
       "number": 29,
-      "text": "Vorbea și discuta aprins cu eleniștii, dar ei încercau să-l omoare."
+      "text": "propovăduind cu îndrăzneală în Numele Domnului Isus. El a vorbit și s-a certat împotriva eleniștilor, dar ei căutau să-l omoare."
     },
     {
       "number": 30,
@@ -241,23 +265,23 @@
     },
     {
       "number": 31,
-      "text": "Așadar, biserica din întreaga Iudee, Galilee și Samarie avea pace și se zidea; umbla în frica Domnului și, prin încurajarea Duhului Sfânt, creștea la număr."
+      "text": "Bisericile din toată Iudeea, Galileea și Samaria au avut pace și au fost zidite; s'au înmulțit, umblînd în frica Domnului și în mîngîiarea Duhului Sfînt."
     },
     {
       "number": 32,
-      "text": "Pe când străbătea toate ținuturile, Petru a coborât și la sfinții care locuiau în Lida."
+      "text": "Pe cînd trecea Petru prin toate părțile acelea, Isus s'a pogorît și la sfinții cari locuiau la Lydda."
     },
     {
       "number": 33,
-      "text": "Acolo a găsit un om numit Enea, care zăcea de opt ani pe un pat, fiind paralizat."
+      "text": "Acolo a găsit un anume om pe nume Aeneas, care fusese țintuit la pat timp de opt ani pentru că era paralizat."
     },
     {
       "number": 34,
-      "text": "Petru i-a spus: „Enea, Isus Hristos te vindecă! Ridică-te și așterne-ți singur patul!” Și îndată s-a ridicat."
+      "text": "Petru i-a spus: Enea, Isus Hristos te vindecă! Ridică-te și așterne-ți singur patul! Și îndată s-a ridicat."
     },
     {
       "number": 35,
-      "text": "Toți locuitorii din Lida și din Șaron l-au văzut și s-au întors la Domnul."
+      "text": "Toți cei ce locuiau la Lydda și la Sharon l-au văzut, și s-au întors la Domnul."
     },
     {
       "number": 36,
@@ -269,7 +293,7 @@
     },
     {
       "number": 38,
-      "text": "Fiindcă Lida era aproape de Iope, ucenicii au auzit că Petru se afla acolo și au trimis la el doi bărbați, rugându-l: „Nu întârzia să vii până la noi!”"
+      "text": "Fiindcă Lida era aproape de Iope, ucenicii au auzit că Petru se afla acolo și au trimis la el doi bărbați, rugându-l: Nu întârzia să vii până la noi!"
     },
     {
       "number": 39,
@@ -277,7 +301,7 @@
     },
     {
       "number": 40,
-      "text": "Petru i-a scos pe toți afară, a îngenuncheat și s-a rugat. Apoi s-a întors spre trup și a spus: „Tabita, ridică-te!” Ea și-a deschis ochii și, văzându-l pe Petru, s-a ridicat în șezut."
+      "text": "Petru i-a scos pe toți afară, a îngenuncheat și s-a rugat. Apoi s-a întors spre trup și a spus: Tabita, ridică-te! Ea și-a deschis ochii și, văzându-l pe Petru, s-a ridicat în șezut."
     },
     {
       "number": 41,

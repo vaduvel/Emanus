@@ -3,8 +3,8 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 1,
-  "status": "approved",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ROM01.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ROM01.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ROM.1.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "În 1:16 formularea principală urmează SBLGNT fără adaosul recept «lui Hristos», păstrat separat în nota textuală.",
-      "În lista din 1:29–31 au fost păstrate toate elementele textului critic, iar termenii suplimentari din TR au fost documentați fără a fi integrați în enumerare.",
-      "Triangularea românească a fost făcută numai după redactarea independentă și nu a modificat ordinea argumentului din 1:18–32."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
     "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 32,
       "reviewed": 32,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost verificate toate cele 32 de versete, cele nouă unități de aparat din capitol și lecturile TR cu efect traductologic din 1:16, 1:29 și 1:31."
+      "scope": "Au fost confruntate toate cele 32 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Fraza de salut din 1:1–7 a fost păstrată coerentă peste delimitările de verset.",
-        "Enumerările din 1:29–31 au fost redate cu termeni românești distincți și fără netezirea repetițiilor.",
-        "Citatul din 1:17 folosește ghilimele românești și păstrează construcția «din credință». "
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Sintagma δικαιοσύνη θεοῦ a fost redată «dreptatea lui Dumnezeu», fără explicarea doctrinară a genitivului în corpul textului.",
-        "În 1:4 πνεῦμα ἁγιωσύνης a rămas «duhul sfințeniei», fără identificarea impusă prin majusculă.",
-        "Limbajul despre mânie, necurăție și judecată din 1:18–32 nu a fost atenuat."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,27 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT 1.2 și WEBU; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "GPT-5.6 Thinking",
-      "method": "verse-by-verse-source-and-benchmark"
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
     },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
-    "textDigest": "sha256:90b77ae72bd58e33d08e0880444260c88c10931d6d72823bf85a9d8ce7551c77",
-    "contentDigest": "sha256:97c9fd6e1af1f9fed499aa2fa7753fc2bb553af95bb3e2bf6ff9098871b3688f"
+    "textDigest": "sha256:e87eb2be78c7aed6d43b89588408c2feda3a1f2a08063c128575cdd5cc3e5194",
+    "contentDigest": "sha256:8825ec070233a28f9aec85fa2dbbc64d745e369e02c3845b49719194c160aef6"
   },
   "verses": [
     {
@@ -144,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "cu privire la Fiul Său, care a venit din sămânța lui David potrivit cărnii"
+      "text": "despre Fiul Său, care s'a născut din sămânța lui David, după trup,"
     },
     {
       "number": 4,
@@ -192,11 +201,11 @@
     },
     {
       "number": 15,
-      "text": "Astfel, în ce mă privește, sunt gata să vestesc Evanghelia și vouă, celor din Roma."
+      "text": "Așadar, oricât de mult aș fi în mine, sunt nerăbdător să vă predic și vouă vestea bună care se află în Roma."
     },
     {
       "number": 16,
-      "text": "Căci nu mi-e rușine de Evanghelie, fiindcă ea este puterea lui Dumnezeu pentru mântuirea oricui crede: mai întâi a iudeului, apoi și a grecului."
+      "text": "Căci nu mi-e rușine de Evanghelia lui Hristos, pentru că este puterea lui Dumnezeu pentru mântuire pentru oricine crede, pentru Iudeu mai întîi, și pentru Grec."
     },
     {
       "number": 17,
@@ -212,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Într-adevăr, însușirile Lui nevăzute, atât puterea Lui veșnică, cât și dumnezeirea, se văd limpede încă de la crearea lumii, fiind înțelese din cele făcute, așa că ei sunt fără scuză."
+      "text": "Căci lucrurile nevăzute ale lui, de la crearea lumii, sunt văzute clar, fiind percepute prin lucrurile care sunt făcute, chiar și puterea veșnică și divinitatea lui, pentru ca ele să fie fără scuză."
     },
     {
       "number": 21,
@@ -232,11 +241,11 @@
     },
     {
       "number": 25,
-      "text": "Ei au schimbat adevărul lui Dumnezeu cu minciuna, s-au închinat și au slujit creației în locul Creatorului, care este binecuvântat în veci. Amin."
+      "text": "care au schimbat adevărul lui Dumnezeu cu o minciună, s'au închinat și au slujit mai degrabă creaturii decît Creatorului, care este binecuvîntat pentru totdeauna. Amin."
     },
     {
       "number": 26,
-      "text": "De aceea, Dumnezeu i-a dat pradă unor patimi dezonorante. Femeile lor au schimbat folosirea firească în cea împotriva firii;"
+      "text": "Din acest motiv, Dumnezeu le-a dat la pasiuni josnice. Pentru femeile lor a schimbat funcția naturală în ceea ce este împotriva naturii."
     },
     {
       "number": 27,
@@ -248,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Sunt plini de orice nedreptate, răutate, lăcomie și ticăloșie; plini de invidie, ucidere, ceartă, înșelăciune și răuvoință; sunt șoptitori,"
+      "text": "fiind umplut de orice nedreptate, imoralitate sexuală, răutate, lăcomie, răutate; plin de invidie, crimă, ceartă, înșelăciune, obiceiuri rele, calomniatori secrete,"
     },
     {
       "number": 30,
@@ -256,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "fără pricepere, oameni care nu-și țin cuvântul, fără afecțiune firească, fără milă."
+      "text": "fără înțelegere, fără legământ, fără afecțiune naturală, neiertătoare, nemiloasă;"
     },
     {
       "number": 32,

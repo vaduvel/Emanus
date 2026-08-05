@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 11,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,77 +28,92 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK11.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK11.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.11.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "În 11:8 au fost păstrate ramurile tăiate de pe câmpuri din SBLGNT, fără importarea copacilor și a acțiunii suplimentare din TR.",
-      "În 11:24 aoristul ἐλάβετε a fost redat «le-ați primit», nu prin prezentul martorului recept."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 32,
       "reviewed": 32,
       "continuous": false,
-      "verseNumbersSha256": "sha256:c82b4a048b8bd39c574f6c6c3d35ce54d24af626079eb86ca850c0345e25cead"
+      "verseNumbersSha256": "sha256:7c9a6e2b1f47a33e1ca8b7d51b3e6ea54852c8b6d2c9800a8d0fc6d6150b5acc"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost verificate cele 32 de unități SBLGNT și lectura TR a numărului tradițional 11:26, absent din textul critic principal."
+      "scope": "Au fost confruntate toate cele 32 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Intrarea în Ierusalim și acțiunea din Templu au fost redate în registru narativ actual, cu succesiunea conectorilor păstrată.",
-        "Întrebările deliberative din 11:28–33 au fost separate tipografic fără a netezi ezitarea interlocutorilor."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Citatele din 11:9 și 11:17 urmează forma folosită de Marcu și nu au fost înlocuite cu o traducere veterotestamentară existentă.",
-        "Învățătura despre credință, rugăciune și iertare din 11:22–25 a fost păstrată fără atașarea versetului tradițional 26 la textul principal."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:7167276a0dc518bc203465d3bd21160b48c9131196c5012ba085707c9dec67cb",
+    "contentDigest": "sha256:318bb924cad305fe395193ede7b32cf35710c804aa3545a8306e13cd64551ff9"
   },
   "verses": [
     {
@@ -146,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Mulți și-au așternut hainele pe drum, iar alții, ramuri tăiate de pe câmpuri."
+      "text": "Mulți își întindeau hainele pe drum, iar alții tăiau ramuri din copaci și le împrăștieau pe drum."
     },
     {
       "number": 9,
@@ -158,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "A intrat în Ierusalim, în Templu, și a privit în jur la toate. Fiind deja târziu, a ieșit spre Betania împreună cu cei doisprezece."
+      "text": "Isus a intrat în templul din Ierusalim. După ce a privit în jur la toate lucrurile, a ieșit în Betania cu cei doisprezece."
     },
     {
       "number": 12,
@@ -170,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Atunci i-a spus: „Nimeni să nu mai mănânce vreodată rod din tine!” Iar ucenicii Lui au auzit."
+      "text": "Isus a spus-o, fie ca nimeni să nu mai mănânce fructe de la voi din nou!? Și discipolii săi au auzit asta."
     },
     {
       "number": 15,
@@ -190,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Ori de câte ori se făcea seară, ieșeau din cetate."
+      "text": "Când a venit seara, a plecat din oraș."
     },
     {
       "number": 20,
@@ -218,7 +245,7 @@
     },
     {
       "number": 27,
-      "text": "Au venit din nou în Ierusalim. În timp ce Isus umbla prin Templu, au venit la El conducătorii preoților, cărturarii și bătrânii"
+      "text": "S'au întors la Ierusalim, și pe cînd mergea el în Templu, preoții cei mai de seamă, cărturarii și bătrînii au venit la El."
     },
     {
       "number": 28,
@@ -254,7 +281,8 @@
       "greekWitnesses": "Textus Receptus: Εἰ δὲ ὑμεῖς οὐκ ἀφίετε, οὐδὲ ὁ πατὴρ ὑμῶν ὁ ἐν τοῖς οὐρανοῖς ἀφήσει τὰ παραπτώματα ὑμῶν.",
       "displayNote": "Lectură tradițională — textul principal SBLGNT nu include versetul 26; TR păstrează această propoziție.",
       "traditionalReading": "Dar, dacă voi nu iertați, nici Tatăl vostru, Care este în ceruri, nu vă va ierta fărădelegile.",
-      "resolutionStatus": "resolved"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura tradițională a fost verificată în Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

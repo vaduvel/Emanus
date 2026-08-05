@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 14,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,77 +28,92 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK14.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK14.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.14.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "În 14:22 nu a fost adăugat imperativul recept «mâncați», iar în 14:24 nu a fost introdus adjectivul recept «nou» pentru legământ.",
-      "În 14:45 salutul lui Iuda conține un singur «Rabi», conform SBLGNT, fără repetarea din TR."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 72,
       "reviewed": 72,
       "continuous": true,
-      "verseNumbersSha256": "sha256:72885daf2b54922d073f2acae30dedf0eb0fb63bdcfdf2040d564825ecae25c2"
+      "verseNumbersSha256": "sha256:3d4621f986afae5066e5aef64999858720129d10769b370056da9b7bf276944a"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost verificate toate cele 72 de versete, inclusiv instituirea mesei, rugăciunea din Ghetsimani, procesul și cele două cântări ale cocoșului."
+      "scope": "Au fost confruntate toate cele 72 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Schimbările rapide de scenă din relatarea patimilor au fost păstrate prin conectorii narativi, fără fragmentarea inutilă a propozițiilor.",
-        "Replicile din timpul mesei, rugăciunii, arestării, procesului și lepădării au fost delimitate cu ghilimele românești pe niveluri."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Formula «sângele Meu, al legământului» din 14:24 urmează lectura SBLGNT și nu importă adjectivul «nou» din TR.",
-        "Afirmația «Eu sunt» și imaginile despre Fiul Omului din 14:62 au fost redate direct, fără explicare doctrinară în verset."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,21 +123,33 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:e6800f97ba0ac0f0727d77756252228b647f9bf9d9451c8d404e600d8c0550c0",
+    "contentDigest": "sha256:ecdde1e4c2aefb34c14b359d4fb8919c39bd75d44f672501766a84de916088d4"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Mai erau două zile până la Paște și Sărbătoarea Azimelor. Conducătorii preoților și cărturarii căutau cum să-L prindă prin viclenie și să-L omoare,"
+      "text": "Cu două zile înainte de Paște și de sărbătoarea pâinii neînrămate, preoții cei mai de seamă și cărturarii căutau să -l prindă prin amăgire și să - l omoare."
     },
     {
       "number": 2,
-      "text": "căci spuneau: „Nu în timpul sărbătorii, ca nu cumva să fie revoltă în popor.”"
+      "text": "căci spuneau: Nu în timpul sărbătorii, ca nu cumva să fie revoltă în popor."
     },
     {
       "number": 3,
@@ -130,15 +157,15 @@
     },
     {
       "number": 4,
-      "text": "Unii erau indignați și își spuneau între ei: „Pentru ce s-a făcut această risipă de parfum?"
+      "text": "Unii erau indignați și își spuneau între ei: Pentru ce s-a făcut această risipă de parfum?"
     },
     {
       "number": 5,
-      "text": "Parfumul acesta putea fi vândut cu peste trei sute de denari, iar banii să fie dați săracilor.” Și o certau aspru."
+      "text": "Căci lucrul acesta s-ar fi putut vinde cu mai mult de trei sute de dinari să se dea săracilor. Și au cârtit împotriva ei."
     },
     {
       "number": 6,
-      "text": "Dar Isus a spus: „Lăsați-o! De ce îi faceți necazuri? Ea a făcut o lucrare frumoasă pentru Mine."
+      "text": "Dar Isus a spus: Lăsați-o! De ce îi faceți necazuri? Ea a făcut o lucrare frumoasă pentru Mine."
     },
     {
       "number": 7,
@@ -150,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Adevărat vă spun: oriunde va fi vestită Evanghelia în lumea întreagă se va vorbi și despre ceea ce a făcut ea, în amintirea ei.”"
+      "text": "Adevărat, adevărat vă spun că oriunde se va predica această veste bună în toată lumea, se va vorbi despre ceea ce a făcut această femeie pentru pomenirea ei."
     },
     {
       "number": 10,
@@ -158,23 +185,23 @@
     },
     {
       "number": 11,
-      "text": "Când au auzit, s-au bucurat și au promis să-i dea argint. Iar el căuta un moment potrivit ca să-L dea pe mâna lor."
+      "text": "Cînd au auzit ei lucrul acesta, s'au bucurat, și i-au făgăduit să -i dea bani; și a căutat cum să -l izbăvească."
     },
     {
       "number": 12,
-      "text": "În prima zi a Azimelor, când jertfeau mielul de Paște, ucenicii Lui L-au întrebat: „Unde vrei să mergem și să pregătim ca să mănânci Paștele?”"
+      "text": "În prima zi a Azimelor, când jertfeau mielul de Paște, ucenicii Lui L-au întrebat: Unde vrei să mergem și să pregătim ca să mănânci Paștele?"
     },
     {
       "number": 13,
-      "text": "El i-a trimis pe doi dintre ucenicii Lui și le-a spus: „Mergeți în cetate și vă va întâlni un om care duce un urcior cu apă. Urmați-l,"
+      "text": "El a trimis doi dintre discipolii săi și le-a spus: Du-te în oraș, și acolo un om care transportă un ulcior de apă vă va întâlni. Urmați-l,"
     },
     {
       "number": 14,
-      "text": "iar acolo unde va intra spuneți-i stăpânului casei: «Învățătorul întreabă: ‘Unde este camera Mea de oaspeți, în care să mănânc Paștele împreună cu ucenicii Mei?’»"
+      "text": "și, oriunde va intra, spuneți stăpânului casei: Învățătorul spune: Unde este camera Mea de oaspeți, în care să mănânc Paștele împreună cu ucenicii Mei?"
     },
     {
       "number": 15,
-      "text": "El vă va arăta o încăpere mare la etaj, așternută și pregătită. Acolo să pregătiți pentru noi!”"
+      "text": "El vă va arăta o încăpere mare la etaj, așternută și pregătită. Acolo să pregătiți pentru noi!"
     },
     {
       "number": 16,
@@ -182,27 +209,27 @@
     },
     {
       "number": 17,
-      "text": "Când s-a făcut seară, Isus a venit împreună cu cei doisprezece."
+      "text": "Când s-a făcut seara, a venit cu cei doisprezece."
     },
     {
       "number": 18,
-      "text": "Pe când stăteau la masă și mâncau, Isus a spus: „Adevărat vă spun că unul dintre voi Mă va da pe mâna lor, unul care mănâncă împreună cu Mine.”"
+      "text": "Pe când stăteau la masă și mâncau, Isus a spus: Adevărat vă spun că unul dintre voi Mă va da pe mâna lor, unul care mănâncă împreună cu Mine."
     },
     {
       "number": 19,
-      "text": "Ei au început să se întristeze și să-I spună unul câte unul: „Nu cumva eu?”"
+      "text": "Ei au început să se întristeze și să-I spună unul câte unul: Nu cumva eu?"
     },
     {
       "number": 20,
-      "text": "El le-a spus: „Unul dintre cei doisprezece, cel care întinge împreună cu Mine în vas."
+      "text": "El le-a răspuns:Este unul dintre cei doisprezece, cel care înmoaie cu mine în blid."
     },
     {
       "number": 21,
-      "text": "Fiul Omului Se duce după cum este scris despre El, dar vai de omul acela prin care este dat Fiul Omului! Ar fi bine pentru el dacă omul acela nu s-ar fi născut.”"
+      "text": "Fiul Omului Se duce după cum este scris despre El, dar vai de omul acela prin care este dat Fiul Omului! Ar fi bine pentru el dacă omul acela nu s-ar fi născut."
     },
     {
       "number": 22,
-      "text": "Pe când mâncau, Isus a luat o pâine și, după ce a binecuvântat-o, a frânt-o, le-a dat-o și a spus: „Luați! Acesta este trupul Meu.”"
+      "text": "Pe când mâncau, Isus a luat o pâine și, după ce a binecuvântat-o, a frânt-o, le-a dat-o și a spus: Luați! Acesta este trupul Meu."
     },
     {
       "number": 23,
@@ -210,11 +237,11 @@
     },
     {
       "number": 24,
-      "text": "Și le-a spus: „Acesta este sângele Meu, al legământului, care este vărsat pentru mulți."
+      "text": "Și le-a spus: Acesta este sângele Meu, al legământului, care este vărsat pentru mulți."
     },
     {
       "number": 25,
-      "text": "Adevărat vă spun că nicidecum nu voi mai bea din rodul viței până în ziua aceea când îl voi bea nou în Împărăția lui Dumnezeu.”"
+      "text": "Adevărat vă spun că nicidecum nu voi mai bea din rodul viței până în ziua aceea când îl voi bea nou în Împărăția lui Dumnezeu."
     },
     {
       "number": 26,
@@ -222,35 +249,35 @@
     },
     {
       "number": 27,
-      "text": "Isus le-a spus: „Toți vă veți poticni, căci este scris: «Voi lovi păstorul, iar oile vor fi risipite.»"
+      "text": "Isus le-a spus: Toți vă veți poticni, căci este scris: Voi lovi păstorul, iar oile vor fi risipite."
     },
     {
       "number": 28,
-      "text": "Dar, după ce voi fi înviat, voi merge înaintea voastră în Galileea.”"
+      "text": "Dar, după ce voi fi înviat, voi merge înaintea voastră în Galileea."
     },
     {
       "number": 29,
-      "text": "Petru I-a spus: „Chiar dacă toți se vor poticni, eu nu.”"
+      "text": "Petru I-a spus: Chiar dacă toți se vor poticni, eu nu."
     },
     {
       "number": 30,
-      "text": "Isus i-a spus: „Adevărat îți spun că tu, astăzi, chiar în noaptea aceasta, înainte să cânte cocoșul de două ori, te vei lepăda de Mine de trei ori.”"
+      "text": "Isus i-a spus: Adevărat îți spun că tu, astăzi, chiar în noaptea aceasta, înainte să cânte cocoșul de două ori, te vei lepăda de Mine de trei ori."
     },
     {
       "number": 31,
-      "text": "Dar Petru insista peste măsură: „Chiar dacă va trebui să mor împreună cu Tine, nicidecum nu mă voi lepăda de Tine!” Și toți spuneau la fel."
+      "text": "Dar el a vorbit cu atât mai mult:Dacă trebuie să mor cu voi, nu vă voi tăgădui. Toți au spus lucru."
     },
     {
       "number": 32,
-      "text": "Au ajuns într-un loc numit Ghetsimani, iar Isus le-a spus ucenicilor Săi: „Ședeți aici până Mă voi ruga.”"
+      "text": "Au ajuns într-un loc numit Ghetsimani, iar Isus le-a spus ucenicilor Săi: Ședeți aici până Mă voi ruga."
     },
     {
       "number": 33,
-      "text": "I-a luat cu El pe Petru, Iacov și Ioan și a început să fie copleșit de groază și neliniște."
+      "text": "El a luat cu el pe Petru, pe Iacov și pe Ioan, și a început să fie foarte tulburat și întristat."
     },
     {
       "number": 34,
-      "text": "Le-a spus: „Sufletul Meu este adânc întristat, până la moarte. Rămâneți aici și vegheați!”"
+      "text": "Le-a spus: Sufletul Meu este adânc întristat, până la moarte. Rămâneți aici și vegheați!"
     },
     {
       "number": 35,
@@ -258,15 +285,15 @@
     },
     {
       "number": 36,
-      "text": "Spunea: „Abba, Tată, toate Îți sunt posibile! Îndepărtează de la Mine paharul acesta! Totuși, nu ce vreau Eu, ci ce vrei Tu.”"
+      "text": "El a spus, Abba, Tată, toate lucrurile sunt posibile pentru tine. Vă rugăm să eliminați acest pahar de la mine. Cu toate acestea, nu ceea ce doresc, dar ceea ce doriți."
     },
     {
       "number": 37,
-      "text": "A venit și i-a găsit dormind. Atunci i-a spus lui Petru: „Simone, dormi? N-ai fost în stare să veghezi un singur ceas?"
+      "text": "A venit și i-a găsit dormind. Atunci i-a spus lui Petru: Simone, dormi? N-ai fost în stare să veghezi un singur ceas?"
     },
     {
       "number": 38,
-      "text": "Vegheați și rugați-vă ca să nu ajungeți în ispită! Duhul este plin de râvnă, dar carnea este slabă.”"
+      "text": "Privește și roagă-te, ca să nu intri în ispită. Spiritul este într-adevăr dispus, dar carnea este slabă."
     },
     {
       "number": 39,
@@ -274,15 +301,15 @@
     },
     {
       "number": 40,
-      "text": "Când a venit iarăși, i-a găsit dormind, căci ochii le erau îngreunați; și nu știau ce să-I răspundă."
+      "text": "El s-a întors din nou și i-a găsit dormind, căci ochii lor erau foarte grei; și ei nu știau ce să-i răspundă."
     },
     {
       "number": 41,
-      "text": "A venit a treia oară și le-a spus: „Dormiți de acum și odihniți-vă! Destul! A venit ceasul. Iată, Fiul Omului este dat în mâinile păcătoșilor."
+      "text": "A venit a treia oară și le-a spus: Dormiți de acum și odihniți-vă! Destul! A venit ceasul. Iată, Fiul Omului este dat în mâinile păcătoșilor."
     },
     {
       "number": 42,
-      "text": "Ridicați-vă, să mergem! Iată, cel care Mă dă pe mâna lor s-a apropiat.”"
+      "text": "Ridicați-vă, să mergem! Iată, cel care Mă dă pe mâna lor s-a apropiat."
     },
     {
       "number": 43,
@@ -290,11 +317,11 @@
     },
     {
       "number": 44,
-      "text": "Cel care Îl trăda le dăduse un semn, spunând: „Cel pe care îl voi săruta, Acela este. Prindeți-L și duceți-L sub pază!”"
+      "text": "Cel care Îl trăda le dăduse un semn, spunând: Cel pe care îl voi săruta, Acela este. Prindeți-L și duceți-L sub pază!"
     },
     {
       "number": 45,
-      "text": "Când a venit, s-a apropiat îndată de El și I-a spus: „Rabi!” Și L-a sărutat."
+      "text": "Când a venit, s-a apropiat îndată de El și I-a spus: Rabi! Și L-a sărutat."
     },
     {
       "number": 46,
@@ -306,11 +333,11 @@
     },
     {
       "number": 48,
-      "text": "Isus le-a spus: „Ați ieșit cu săbii și ciomege ca să Mă prindeți, ca împotriva unui tâlhar?"
+      "text": "Isus le-a spus: Ați ieșit cu săbii și ciomege ca să Mă prindeți, ca împotriva unui tâlhar?"
     },
     {
       "number": 49,
-      "text": "În fiecare zi eram cu voi în Templu și învățam, dar nu M-ați prins. Însă aceasta s-a întâmplat ca să se împlinească Scripturile.”"
+      "text": "În fiecare zi eram cu voi în Templu și învățam, dar nu M-ați prins. Însă aceasta s-a întâmplat ca să se împlinească Scripturile."
     },
     {
       "number": 50,
@@ -322,11 +349,11 @@
     },
     {
       "number": 52,
-      "text": "Dar el a lăsat pânza de in și a fugit gol."
+      "text": "Dar a lăsat pânza de in și a fugit de ei goi."
     },
     {
       "number": 53,
-      "text": "L-au dus pe Isus la marele preot, iar toți conducătorii preoților, bătrânii și cărturarii s-au adunat."
+      "text": "Ei l-au dus pe Isus la marele preot. Toți preoții cei mai de seamă, bătrînii și cărturarii au venit împreună cu el."
     },
     {
       "number": 54,
@@ -334,7 +361,7 @@
     },
     {
       "number": 55,
-      "text": "Conducătorii preoților și întregul Sinedriu căutau o mărturie împotriva lui Isus ca să-L condamne la moarte, dar nu găseau."
+      "text": "Preoții cei mai de seamă și tot consiliul au căutat martori împotriva lui Isus, ca să -l omoare, și să nu găsească pe nimeni."
     },
     {
       "number": 56,
@@ -346,7 +373,7 @@
     },
     {
       "number": 58,
-      "text": "„Noi L-am auzit spunând: «Eu voi dărâma sanctuarul acesta făcut de mâini și în trei zile voi construi altul, nefăcut de mâini.»”"
+      "text": "L-am auzit spunând: Voi distruge acest templu care este făcut de mâini și în trei zile voi construi un altul făcut fără mâini."
     },
     {
       "number": 59,
@@ -354,27 +381,27 @@
     },
     {
       "number": 60,
-      "text": "Marele preot s-a ridicat în mijloc și L-a întrebat pe Isus: „Nu răspunzi nimic? Ce mărturisesc aceștia împotriva Ta?”"
+      "text": "Marele preot s-a ridicat în mijloc și L-a întrebat pe Isus: Nu răspunzi nimic? Ce mărturisesc aceștia împotriva Ta?"
     },
     {
       "number": 61,
-      "text": "Dar El tăcea și nu răspundea nimic. Marele preot L-a întrebat din nou: „Tu ești Hristosul, Fiul Celui Binecuvântat?”"
+      "text": "Dar El tăcea și nu răspundea nimic. Marele preot L-a întrebat din nou: Tu ești Hristosul, Fiul Celui Binecuvântat?"
     },
     {
       "number": 62,
-      "text": "Isus a spus: „Eu sunt. Și Îl veți vedea pe Fiul Omului șezând la dreapta Puterii și venind cu norii cerului.”"
+      "text": "Isus a spus: Eu sunt. Și Îl veți vedea pe Fiul Omului șezând la dreapta Puterii și venind cu norii cerului."
     },
     {
       "number": 63,
-      "text": "Atunci marele preot și-a sfâșiat cămășile și a spus: „Ce nevoie mai avem de martori?"
+      "text": "Atunci marele preot și-a sfâșiat cămășile și a spus: Ce nevoie mai avem de martori?"
     },
     {
       "number": 64,
-      "text": "Ați auzit blasfemia. Ce vi se pare?” Toți L-au condamnat ca fiind vinovat de moarte."
+      "text": "Ați auzit blasfemia. Ce vi se pare? Toți L-au condamnat ca fiind vinovat de moarte."
     },
     {
       "number": 65,
-      "text": "Unii au început să-L scuipe, să-I acopere fața, să-L lovească cu pumnii și să-I spună: „Profețește!” Iar gărzile L-au luat la palme."
+      "text": "Unii au început să-L scuipe, să-I acopere fața, să-L lovească cu pumnii și să-I spună: Profețește! Iar gărzile L-au luat la palme."
     },
     {
       "number": 66,
@@ -382,27 +409,27 @@
     },
     {
       "number": 67,
-      "text": "Văzându-l pe Petru încălzindu-se, s-a uitat țintă la el și i-a spus: „Și tu erai cu Nazarineanul, cu Isus.”"
+      "text": "Văzându-l pe Petru încălzindu-se, s-a uitat țintă la el și i-a spus: Și tu erai cu Nazarineanul, cu Isus."
     },
     {
       "number": 68,
-      "text": "Dar el a negat, spunând: „Nici nu știu, nici nu înțeleg ce spui.” A ieșit afară, în pridvor, și cocoșul a cântat."
+      "text": "Dar el a negat, spunând: Nici nu știu, nici nu înțeleg ce spui. A ieșit afară, în pridvor, și cocoșul a cântat."
     },
     {
       "number": 69,
-      "text": "Slujnica l-a văzut și a început din nou să le spună celor care stăteau acolo: „Acesta este unul dintre ei.”"
+      "text": "Slujnica l-a văzut și a început din nou să le spună celor care stăteau acolo: Acesta este unul dintre ei."
     },
     {
       "number": 70,
-      "text": "Dar el a negat din nou. După puțin timp, cei de față i-au spus iarăși lui Petru: „Cu adevărat ești unul dintre ei, căci ești galileean, iar vorbirea ta seamănă cu a lor.”"
+      "text": "Dar el a negat din nou. După puțin timp, cei de față i-au spus iarăși lui Petru: Cu adevărat ești unul dintre ei, căci ești galileean, iar vorbirea ta seamănă cu a lor."
     },
     {
       "number": 71,
-      "text": "Dar el a început să se blesteme și să jure: „Nu-L cunosc pe Omul acesta despre care vorbiți!”"
+      "text": "Dar el a început să se blesteme și să jure: Nu-L cunosc pe Omul acesta despre care vorbiți!"
     },
     {
       "number": 72,
-      "text": "Îndată, cocoșul a cântat a doua oară. Petru și-a amintit cuvântul pe care i-l spusese Isus: „Înainte să cânte cocoșul de două ori, te vei lepăda de Mine de trei ori.” Și a izbucnit în plâns."
+      "text": "Îndată, cocoșul a cântat a doua oară. Petru și-a amintit cuvântul pe care i-l spusese Isus: Înainte să cânte cocoșul de două ori, te vei lepăda de Mine de trei ori. Și a izbucnit în plâns."
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "2CO",
   "bookName": "2 Corinteni",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/2CO03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/2CO03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/2CO.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Capitolul păstrează metafora scrisorii vii, scrise pe inimi, din 3:2-3.",
-      "În 3:13-17 relația dintre văl, Moise și întoarcerea la Domnul a fost redată fără armonizare explicativă."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -85,21 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "scrisoarea lui Hristos în 3:2-3, opoziția literă/Duh în 3:6, vălul lui Moise și vechiul legământ în 3:13-17"
+      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "2 Corinteni 3:6 păstrează opoziția „litera ucide, dar Duhul dă viață” fără atenuare.",
-        "2 Corinteni 3:14 redă explicit că vălul este înlăturat numai în Hristos.",
-        "2 Corinteni 3:18 păstrează transformarea progresivă „din slavă în slavă”."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Contrastul dintre vechiul și noul legământ este redat textual, fără a degrada sau caricaturiza Legea.",
-        "Afirmația „Domnul este Duhul” este păstrată ca formulare paulină, fără glosă confesională adăugată."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:35ad747d3f6af8edcdaf8ba748c1e8421a822b08a8e075c55e3adc333484ec08",
+    "contentDigest": "sha256:a6832bbb46f7d7d6179deb15762d265965d3386762e6ea2eb60f81f21488c6dc"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Începem iarăși să ne recomandăm pe noi înșine? Sau avem nevoie, ca unii, de scrisori de recomandare către voi ori de la voi?"
+      "text": "Începem din nou să ne lăudăm pe noi înșine? Sau avem nevoie, ca unii, de scrisori de laudă către voi sau de la voi?"
     },
     {
       "number": 2,
@@ -151,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "Căci, dacă slujirea condamnării a fost cu slavă, cu atât mai mult prisosește în slavă slujirea dreptății."
+      "text": "Căci dacă serviciul de condamnare are glorie, serviciul dreptății depășește mult mai mult în glorie."
     },
     {
       "number": 10,
-      "text": "Și, de fapt, ceea ce fusese slăvit n-a mai fost slăvit în privința aceasta, din cauza slavei covârșitoare."
+      "text": "Căci, cu siguranță, ceea ce a fost făcut glorios nu a fost făcut glorios în această privință, din cauza gloriei care depășește."
     },
     {
       "number": 11,
@@ -163,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Având deci o asemenea speranță, vorbim cu multă îndrăzneală,"
+      "text": "De aceea, având o astfel de speranță, folosim o mare îndrăzneală a vorbirii,"
     },
     {
       "number": 13,

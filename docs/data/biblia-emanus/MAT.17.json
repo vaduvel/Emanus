@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 17,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT17.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT17.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.17.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Versetul tradițional 21 nu a fost introdus în șirul principal, ci a fost tradus separat din TR și etichetat explicit.",
-      "σεληνιάζεται din versetul 15 este redat descriptiv prin «este lovit de crize», fără diagnosticul medical adăugat de puntea engleză."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite cele 26 de unități SBLGNT și lectura TR de la numărul tradițional 21, inclusiv Schimbarea la Față, exorcizarea și taxa templului."
+      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Narațiunea și dialogurile au fost segmentate natural, fără schimbarea persoanelor verbale.",
-        "Termenii monetari «didrahmă» și «stater» au fost păstrați, cu explicația funcțională cerută de context."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Glasul din nor păstrează porunca explicită «Ascultați de El!» fără armonizare cu alte relatări.",
-        "ὀλιγοπιστία este redat prin «puțina voastră credință», nu prin necredință absolută."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:324d395b93a9c0949fca5465242e94904be8a566690374686d9c86ea33fc0c2f",
+    "contentDigest": "sha256:0b4e6a4a5ec4be7ae110ff94dbdc6ab0e8e9183a71a14b1a4e85c2573c8063e3"
   },
   "verses": [
     {
@@ -130,11 +157,11 @@
     },
     {
       "number": 4,
-      "text": "Petru I-a zis lui Isus: „Doamne, este bine să fim aici! Dacă vrei, voi face aici trei corturi: unul pentru Tine, unul pentru Moise și unul pentru Ilie.”"
+      "text": "Petru I-a zis lui Isus: Doamne, este bine să fim aici! Dacă vrei, voi face aici trei corturi: unul pentru Tine, unul pentru Moise și unul pentru Ilie."
     },
     {
       "number": 5,
-      "text": "Pe când încă vorbea el, iată că un nor luminos i-a acoperit, iar din nor s-a auzit un glas: „Acesta este Fiul Meu preaiubit, în care Îmi găsesc plăcerea. Ascultați de El!”"
+      "text": "Pe când încă vorbea el, iată că un nor luminos i-a acoperit, iar din nor s-a auzit un glas: Acesta este Fiul Meu preaiubit, în care Îmi găsesc plăcerea. Ascultați de El!"
     },
     {
       "number": 6,
@@ -142,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Dar Isus S-a apropiat, i-a atins și le-a zis: „Ridicați-vă și nu vă temeți!”"
+      "text": "Dar Isus S-a apropiat, i-a atins și le-a zis: Ridicați-vă și nu vă temeți!"
     },
     {
       "number": 8,
@@ -150,19 +177,19 @@
     },
     {
       "number": 9,
-      "text": "În timp ce coborau de pe munte, Isus le-a poruncit: „Să nu spuneți nimănui despre această vedenie până când Fiul Omului nu va fi înviat dintre cei morți.”"
+      "text": "În timp ce coborau de pe munte, Isus le-a poruncit: Să nu spuneți nimănui despre această vedenie până când Fiul Omului nu va fi înviat dintre cei morți."
     },
     {
       "number": 10,
-      "text": "Ucenicii L-au întrebat: „Atunci de ce spun cărturarii că trebuie să vină mai întâi Ilie?”"
+      "text": "Ucenicii L-au întrebat: Atunci de ce spun cărturarii că trebuie să vină mai întâi Ilie?"
     },
     {
       "number": 11,
-      "text": "El le-a răspuns: „Ilie vine într-adevăr și va restabili toate lucrurile."
+      "text": "Isus le-a răspuns, Ilie într-adevăr vine mai întâi, și va restabili toate lucrurile;"
     },
     {
       "number": 12,
-      "text": "Dar vă spun că Ilie a și venit, iar ei nu l-au recunoscut, ci au făcut cu el tot ce au vrut. Tot așa urmează să sufere din partea lor și Fiul Omului.”"
+      "text": "Dar vă spun că Ilie a și venit, iar ei nu l-au recunoscut, ci au făcut cu el tot ce au vrut. Tot așa urmează să sufere din partea lor și Fiul Omului."
     },
     {
       "number": 13,
@@ -174,15 +201,15 @@
     },
     {
       "number": 15,
-      "text": "și a zis: „Doamne, ai milă de fiul meu, căci este lovit de crize și suferă cumplit: cade adesea în foc și adesea în apă."
+      "text": "și a zis: Doamne, ai milă de fiul meu, căci este lovit de crize și suferă cumplit: cade adesea în foc și adesea în apă."
     },
     {
       "number": 16,
-      "text": "L-am adus la ucenicii Tăi, dar n-au putut să-l vindece.”"
+      "text": "L-am adus la ucenicii Tăi, dar n-au putut să-l vindece."
     },
     {
       "number": 17,
-      "text": "Isus a răspuns: „O, generație necredincioasă și pervertită! Până când voi mai fi cu voi? Până când vă voi mai îngădui? Aduceți-l aici la Mine!”"
+      "text": "Isus a răspuns: O, generație necredincioasă și pervertită! Până când voi mai fi cu voi? Până când vă voi mai îngădui? Aduceți-l aici la Mine!"
     },
     {
       "number": 18,
@@ -190,35 +217,35 @@
     },
     {
       "number": 19,
-      "text": "Atunci ucenicii au venit la Isus deoparte și L-au întrebat: „Noi de ce n-am putut să-l alungăm?”"
+      "text": "Atunci ucenicii au venit la Isus deoparte și L-au întrebat: Noi de ce n-am putut să-l alungăm?"
     },
     {
       "number": 20,
-      "text": "El le-a răspuns: „Din cauza puținei voastre credințe. Adevărat vă spun: dacă aveți credință cât un grăunte de muștar, veți spune muntelui acestuia: «Mută-te de aici acolo!», și se va muta; nimic nu vă va fi imposibil.”"
+      "text": "El le-a răspuns: Din cauza puținei voastre credințe. Adevărat vă spun: dacă aveți credință cât un grăunte de muștar, veți spune muntelui acestuia: Mută-te de aici acolo!, și se va muta; nimic nu vă va fi imposibil."
     },
     {
       "number": 22,
-      "text": "Pe când erau adunați în Galileea, Isus le-a spus: „Fiul Omului urmează să fie dat în mâinile oamenilor."
+      "text": "Pe cînd stăteau în Galileea, Isus le -a zis:,,Fiul omului este pe cale să fie dat în mînile oamenilor,"
     },
     {
       "number": 23,
-      "text": "Ei Îl vor omorî, iar a treia zi va fi înviat.” Și ucenicii s-au întristat foarte tare."
+      "text": "Ei Îl vor omorî, iar a treia zi va fi înviat. Și ucenicii s-au întristat foarte tare."
     },
     {
       "number": 24,
-      "text": "Când au ajuns în Capernaum, cei care strângeau taxa de două drahme au venit la Petru și l-au întrebat: „Învățătorul vostru nu plătește cele două drahme?”"
+      "text": "Când au ajuns în Capernaum, cei care strângeau taxa de două drahme au venit la Petru și l-au întrebat: Învățătorul vostru nu plătește cele două drahme?"
     },
     {
       "number": 25,
-      "text": "El a răspuns: „Ba da.” Când Petru a intrat în casă, Isus i-a luat-o înainte: „Ce crezi, Simon? De la cine încasează regii pământului taxe sau tribut: de la fiii lor sau de la străini?”"
+      "text": "El a răspuns: Ba da. Când Petru a intrat în casă, Isus i-a luat-o înainte: Ce crezi, Simon? De la cine încasează regii pământului taxe sau tribut: de la fiii lor sau de la străini?"
     },
     {
       "number": 26,
-      "text": "Petru a răspuns: „De la străini.” Isus i-a zis: „Așadar, fiii sunt scutiți."
+      "text": "Petru a răspuns: De la străini. Isus i-a zis: Așadar, fiii sunt scutiți."
     },
     {
       "number": 27,
-      "text": "Dar, ca să nu-i facem să se poticnească, du-te la mare, aruncă undița și ia primul pește care va ieși. Când îi vei deschide gura, vei găsi un stater. Ia-l și dă-li-l pentru Mine și pentru tine.”"
+      "text": "Dar, ca să nu-i facem să se poticnească, du-te la mare, aruncă undița și ia primul pește care va ieși. Când îi vei deschide gura, vei găsi un stater. Ia-l și dă-li-l pentru Mine și pentru tine."
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 24,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT24.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT24.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.24.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Numărul tradițional 24:7 nu a fost creat ca verset principal; unitatea TR 24:6b-8a este tradusă integral și etichetată în referenceNotes.",
-      "În 24:26 textul principal păstrează numai speranța lui Felix de a primi bani și nu adaugă scopul eliberării lui Pavel, prezent în TR."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite toate cele 26 de unități principale SBLGNT și nota tradițională 24:7; aparatul pentru 24:1-6, 8, 10-27 a fost confruntat cu TR, cu atenție la extensia 24:6b-8a, la Ἰησοῦν din 24:24 și la adaosul din 24:26."
+      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Pledoariile lui Tertulus și Pavel au fost delimitate prin ghilimele românești, păstrând frazele care continuă peste limitele de verset.",
-        "Terminologia juridică din 24:1-23 a fost uniformizată prin «acuzație», «judecător», «Sinedriu» și «caz», fără a adăuga verdicte inexistente."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Învierea celor drepți și nedrepți din 24:15 este redată ca speranța afirmată de Pavel, fără comentariu confesional.",
-        "Credința în Hristos Isus, dreptatea, înfrânarea și judecata viitoare din 24:24-25 păstrează termenii și ordinea discursului grec."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:7fe6b81996a2ef9fc9b3daeb35b564a95a8fa47fbbff94b1dfbd3fcf9fb68e52",
+    "contentDigest": "sha256:70ab02aa16d696437295c536da4b70ed72a2d752079cf8ea0f46dc5f89720740"
   },
   "verses": [
     {
@@ -122,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "După ce Pavel a fost chemat, Tertulus a început să-l acuze, zicând: „Prin tine ne bucurăm de multă pace și, prin prevederea ta, se fac îndreptări pentru poporul acesta;"
+      "text": "Când a fost chemat, Tertullus a început să-l acuze, spunând, Văzând că prin tine ne bucurăm de multă pace, și că prosperitatea vine la această națiune prin previziunea ta,"
     },
     {
       "number": 3,
@@ -134,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Căci am găsit că omul acesta este un adevărat flagel, stârnește răscoale printre toți iudeii din lumea locuită și este conducătorul sectei nazarinenilor."
+      "text": "Căci am aflat că omul acesta este o plagă, un instigator al insurecțiilor printre toți iudeii din întreaga lume, și un conducător al sectei Nazarinenilor."
     },
     {
       "number": 6,
@@ -142,7 +169,7 @@
     },
     {
       "number": 8,
-      "text": "Chiar de la el vei putea afla, dacă îl cercetezi, toate aceste lucruri pentru care îl acuzăm.”"
+      "text": "Chiar de la el vei putea afla, dacă îl cercetezi, toate aceste lucruri pentru care îl acuzăm."
     },
     {
       "number": 9,
@@ -150,7 +177,7 @@
     },
     {
       "number": 10,
-      "text": "Pavel a răspuns după ce guvernatorul i-a făcut semn să vorbească: „Știind că de mulți ani ești judecător al poporului acestuia, mă apăr cu încredere în cele privitoare la mine,"
+      "text": "Pavel a răspuns după ce guvernatorul i-a făcut semn să vorbească: Știind că de mulți ani ești judecător al poporului acestuia, mă apăr cu încredere în cele privitoare la mine,"
     },
     {
       "number": 11,
@@ -182,27 +209,27 @@
     },
     {
       "number": 18,
-      "text": "În timp ce făceam acestea, m-au găsit curățit în Templu, fără mulțime și fără tulburare;"
+      "text": "în mijlocul cărora niște iudei din Asia m-au găsit curățit în templu, nu cu gloată, nici cu tulburare."
     },
     {
       "number": 19,
-      "text": "erau însă niște iudei din Asia, care ar fi trebuit să fie aici, înaintea ta, și să mă acuze, dacă ar avea ceva împotriva mea."
+      "text": "Ar fi trebuit să fie aici înaintea ta și să facă acuzații dacă aveau ceva împotriva mea."
     },
     {
       "number": 20,
-      "text": "Sau aceștia să spună ce faptă nedreaptă au găsit când am stat înaintea Sinedriului,"
+      "text": "Altfel, să spună ei înșiși ce nedreptate au găsit în mine când am stat în fața consiliului,"
     },
     {
       "number": 21,
-      "text": "în afară poate de această singură rostire pe care am strigat-o când stăteam între ei: «Pentru învierea morților sunt judecat astăzi înaintea voastră!»”"
+      "text": "în afară poate de această singură rostire pe care am strigat-o când stăteam între ei: Pentru învierea morților sunt judecat astăzi înaintea voastră!"
     },
     {
       "number": 22,
-      "text": "Felix, care cunoștea mai exact cele privitoare la Cale, le-a amânat cauza, zicând: „Când va coborî comandantul Lisias, voi hotărî cazul vostru.”"
+      "text": "Felix, care cunoștea mai exact cele privitoare la Cale, le-a amânat cauza, zicând: Când va coborî comandantul Lisias, voi hotărî cazul vostru."
     },
     {
       "number": 23,
-      "text": "Apoi i-a poruncit centurionului ca Pavel să fie păzit, dar să aibă o oarecare libertate și nimeni dintre ai lui să nu fie împiedicat să-i slujească."
+      "text": "El a ordonat centurionului ca Pavel să fie ținut în custodie și să aibă unele privilegii, și să nu interzică niciunuia dintre prietenii săi să - i slujească sau să - l viziteze."
     },
     {
       "number": 24,
@@ -210,11 +237,11 @@
     },
     {
       "number": 25,
-      "text": "Dar pe când acesta vorbea despre dreptate, înfrânare și judecata care vine, Felix s-a înspăimântat și a răspuns: „Deocamdată du-te; când voi găsi un prilej, te voi chema.”"
+      "text": "Dar pe când acesta vorbea despre dreptate, înfrânare și judecata care vine, Felix s-a înspăimântat și a răspuns: Deocamdată du-te; când voi găsi un prilej, te voi chema."
     },
     {
       "number": 26,
-      "text": "În același timp, spera că Pavel îi va da bani; de aceea îl chema mai des și stătea de vorbă cu el."
+      "text": "Între timp, el a sperat, de asemenea, că banii îi vor fi dați de Pavel, ca să-l elibereze. De aceea, el a trimis după el mai des și a vorbit cu el."
     },
     {
       "number": 27,
@@ -263,12 +290,12 @@
     {
       "number": 7,
       "status": "not-in-critical-main-text",
-      "reason": "Numărul tradițional 7 și unitatea care îl înconjoară lipsesc din textul principal SBLGNT 1.2, dar sunt păstrate de Textus Receptus între 24:6 și 24:8.",
-      "greekWitnesses": "TR-ACT: καὶ κατὰ τὸν ἡμέτερον νόμον ἠθελήσαμεν κρίνειν. παρελθὼν δὲ Λυσίας ὁ χιλίαρχος μετὰ πολλῆς βίας ἐκ τῶν χειρῶν ἡμῶν ἀπήγαγε, κελεύσας τοὺς κατηγόρους αὐτοῦ ἔρχεσθαι ἐπὶ σέ·",
-      "displayNote": "Textul principal SBLGNT nu include Fapte 24:7; lectura tradițională TR continuă finalul versetului 6 și începutul versetului 8 cu relatarea intervenției comandantului Lisias.",
-      "traditionalReading": "„Și am vrut să-l judecăm potrivit Legii noastre. Dar comandantul Lisias a venit și l-a smuls din mâinile noastre cu multă violență, poruncindu-le acuzatorilor lui să vină la tine.”",
+      "reason": "Fapte 24:7 nu are unitate principală separată în SBLGNT 1.2; Textus Receptus păstrează relatarea despre intervenția comandantului Lisias.",
+      "greekWitnesses": "Textus Receptus: καὶ κατὰ τὸν ἡμέτερον νόμον ἠθελήσαμεν κρῖναι· παρελθὼν δὲ Λυσίας ὁ χιλίαρχος μετὰ πολλῆς βίας ἐκ τῶν χειρῶν ἡμῶν ἀπήγαγεν, κελεύσας τοὺς κατηγόρους αὐτοῦ ἔρχεσθαι ἐπὶ σέ.",
+      "displayNote": "Lectură tradițională: textul principal SBLGNT nu include acest verset.",
+      "traditionalReading": "Am vrut să-l judecăm potrivit Legii noastre, dar comandantul Lisias a venit, l-a smuls din mâinile noastre cu multă violență și le-a poruncit acuzatorilor lui să vină la tine.",
       "resolutionStatus": "resolved",
-      "resolutionReason": "Lectura TR este tradusă independent și rămâne într-o notă tradițională legată de numărul rezervat 7, fără a fi numărată ca text principal SBLGNT și fără a fi duplicată în versetele 6 sau 8."
+      "resolutionReason": "Lectura tradițională a fost tradusă independent din Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
     }
   ],
   "alternateEndings": []

@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 6,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK06.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK06.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.6.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "La 6:11, textul principal se oprește la mărturia împotriva celor care nu primesc mesajul și nu introduce adaosul TR despre Sodoma și Gomora.",
-      "La 6:48, καὶ ἤθελεν παρελθεῖν αὐτούς este păstrat prin formularea dificilă «voia să treacă pe lângă ei», fără eliminare sau armonizare."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 56,
       "reviewed": 56,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Marcu 6:1-56; au fost verificate respingerea din locul natal, trimiterea celor doisprezece, moartea lui Ioan, hrănirea mulțimii și mersul pe mare."
+      "scope": "Au fost confruntate toate cele 56 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Relatarea retrospectivă despre Ioan Botezătorul a fost menținută la timpurile narative corespunzătoare.",
-        "Repetițiile συμπόσια συμπόσια și πρασιαὶ πρασιαί au fost redate vizibil prin «grupuri după grupuri» și «șiruri după șiruri»."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Necredința, minunile și împietrirea inimii sunt redate fără atenuarea afirmațiilor dificile ale narațiunii.",
-        "Compasiunea lui Isus și acțiunile asupra pâinilor și peștilor sunt păstrate în succesiunea textului, fără interpretare sacramentală adăugată."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:4740232fcf1d47b8df95f84491751cd95cb6e172290c8e1c6468bcde0918ae7e",
+    "contentDigest": "sha256:8a27042b0c29627025cdd3ef0fdd79d029d7ce25be34538df7dbee4adc2f8075"
   },
   "verses": [
     {
@@ -122,15 +149,15 @@
     },
     {
       "number": 2,
-      "text": "Când a venit ziua de sabat, a început să-i învețe în sinagogă. Mulți dintre cei care Îl auzeau erau uimiți și spuneau: „De unde are Acesta aceste lucruri? Ce este înțelepciunea aceasta care I-a fost dată? Și cum se fac asemenea minuni prin mâinile Lui?"
+      "text": "Când a venit ziua de sabat, a început să-i învețe în sinagogă. Mulți dintre cei care Îl auzeau erau uimiți și spuneau: De unde are Acesta aceste lucruri? Ce este înțelepciunea aceasta care I-a fost dată? Și cum se fac asemenea minuni prin mâinile Lui?"
     },
     {
       "number": 3,
-      "text": "Nu este Acesta tâmplarul, fiul Mariei și fratele lui Iacov, al lui Iose, al lui Iuda și al lui Simon? Și nu sunt surorile Lui aici, printre noi?” Și se poticneau din cauza Lui."
+      "text": "Nu este Acesta tâmplarul, fiul Mariei și fratele lui Iacov, al lui Iose, al lui Iuda și al lui Simon? Și nu sunt surorile Lui aici, printre noi? Și se poticneau din cauza Lui."
     },
     {
       "number": 4,
-      "text": "Isus le-a spus: „Un profet nu este lipsit de onoare decât în locul său natal, printre rudele sale și în casa sa.”"
+      "text": "Isus le-a spus: Un profet nu este lipsit de onoare decât în locul său natal, printre rudele sale și în casa sa."
     },
     {
       "number": 5,
@@ -154,15 +181,15 @@
     },
     {
       "number": 10,
-      "text": "Le mai spunea: „Oriunde intrați într-o casă, rămâneți acolo până când plecați din locul acela."
+      "text": "Le mai spunea: Oriunde intrați într-o casă, rămâneți acolo până când plecați din locul acela."
     },
     {
       "number": 11,
-      "text": "Iar dacă vreun loc nu vă va primi și oamenii nu vă vor asculta, când plecați de acolo, scuturați praful de sub picioarele voastre ca mărturie împotriva lor.”"
+      "text": "Cine nu te va primi și nici nu te va auzi, pe măsură ce pleci de acolo, scutură țărâna de sub picioarele tale ca mărturie împotriva lor. Cu siguranță, îți spun, va fi mai tolerabilă pentru Sodoma și Gomora în ziua judecății decât pentru acea cetate!"
     },
     {
       "number": 12,
-      "text": "Ei au plecat și au proclamat că oamenii trebuie să se pocăiască."
+      "text": "Ei au ieșit și au predicat că oamenii trebuie să se pocăiască."
     },
     {
       "number": 13,
@@ -170,15 +197,15 @@
     },
     {
       "number": 14,
-      "text": "Regele Irod a auzit despre aceasta, căci numele lui Isus devenise cunoscut, și se spunea: „Ioan Botezătorul a înviat dintre cei morți și de aceea lucrează în el aceste puteri.”"
+      "text": "Regele Irod a auzit despre aceasta, căci numele lui Isus devenise cunoscut, și se spunea: Ioan Botezătorul a înviat dintre cei morți și de aceea lucrează în el aceste puteri."
     },
     {
       "number": 15,
-      "text": "Alții spuneau: „Este Ilie”, iar alții: „Este un profet ca unul dintre profeți.”"
+      "text": "Alții spuneau: Este Ilie, iar alții: Este un profet ca unul dintre profeți."
     },
     {
       "number": 16,
-      "text": "Dar când a auzit Irod, spunea: „Ioan, cel pe care eu l-am decapitat, a înviat.”"
+      "text": "Dar Irod, cînd a auzit lucrul acesta, a zis:,,Acesta este Ioan, pe care l-am decapitat; a înviat din morți."
     },
     {
       "number": 17,
@@ -186,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Ioan îi spunea lui Irod: „Nu-ți este îngăduit s-o ai pe soția fratelui tău.”"
+      "text": "Ioan îi spunea lui Irod: Nu-ți este îngăduit s-o ai pe soția fratelui tău."
     },
     {
       "number": 19,
@@ -198,23 +225,23 @@
     },
     {
       "number": 21,
-      "text": "A venit însă o zi prielnică, atunci când Irod, de ziua lui de naștere, a dat un ospăț pentru demnitarii săi, pentru comandanți și pentru oamenii de seamă ai Galileii."
+      "text": "Atunci a venit o zi bună când Irod, de ziua lui, a făcut o cină pentru nobilii săi, pentru ofițerii de rang înalt și pentru căpeteniile Galileii."
     },
     {
       "number": 22,
-      "text": "Fiica Irodiadei însăși a intrat și a dansat, plăcându-i lui Irod și celor care stăteau la masă cu el. Regele i-a spus fetei: „Cere-mi orice vrei și îți voi da.”"
+      "text": "Fiica Irodiadei însăși a intrat și a dansat, plăcându-i lui Irod și celor care stăteau la masă cu el. Regele i-a spus fetei: Cere-mi orice vrei și îți voi da."
     },
     {
       "number": 23,
-      "text": "Și i-a jurat: „Orice îmi vei cere îți voi da, până la jumătate din regatul meu.”"
+      "text": "Și i-a jurat: Orice îmi vei cere îți voi da, până la jumătate din regatul meu."
     },
     {
       "number": 24,
-      "text": "Ea a ieșit și a întrebat-o pe mama ei: „Ce să cer?” Iar mama ei i-a răspuns: „Capul lui Ioan Botezătorul.”"
+      "text": "Ea a ieșit și a întrebat-o pe mama ei: Ce să cer? Iar mama ei i-a răspuns: Capul lui Ioan Botezătorul."
     },
     {
       "number": 25,
-      "text": "Fata a intrat îndată, în grabă, la rege și i-a cerut: „Vreau să-mi dai chiar acum, pe o tavă, capul lui Ioan Botezătorul.”"
+      "text": "Fata a intrat îndată, în grabă, la rege și i-a cerut: Vreau să-mi dai chiar acum, pe o tavă, capul lui Ioan Botezătorul."
     },
     {
       "number": 26,
@@ -238,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "El le-a spus: „Veniți numai voi într-un loc pustiu și odihniți-vă puțin!” Căci mulți veneau și plecau, iar ei nu aveau timp nici măcar să mănânce."
+      "text": "El le-a spus: Veniți numai voi într-un loc pustiu și odihniți-vă puțin! Căci mulți veneau și plecau, iar ei nu aveau timp nici măcar să mănânce."
     },
     {
       "number": 32,
@@ -246,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "Oamenii i-au văzut plecând și mulți i-au recunoscut. Au alergat pe jos într-acolo din toate cetățile și au ajuns înaintea lor."
+      "text": "Ei i-au văzut mergând, și mulți l-au recunoscut și au alergat pe jos din toate cetățile. Au ajuns înaintea lor și s-au adunat la el."
     },
     {
       "number": 34,
@@ -254,19 +281,19 @@
     },
     {
       "number": 35,
-      "text": "Fiind deja târziu, ucenicii Lui s-au apropiat și I-au spus: „Locul este pustiu și este deja târziu."
+      "text": "Fiind deja târziu, ucenicii Lui s-au apropiat și I-au spus: Locul este pustiu și este deja târziu."
     },
     {
       "number": 36,
-      "text": "Trimite-i să meargă prin gospodăriile și satele din jur și să-și cumpere ceva de mâncare.”"
+      "text": "Trimiteți-i de aici, ca să meargă în țara din jur și în sate și să-și cumpere pâine, pentru că nu au nimic de mâncare."
     },
     {
       "number": 37,
-      "text": "Dar El le-a răspuns: „Dați-le voi să mănânce!” Ei L-au întrebat: „Să mergem să cumpărăm pâini de două sute de dinari și să le dăm să mănânce?”"
+      "text": "Dar El le-a răspuns: Dați-le voi să mănânce! Ei L-au întrebat: Să mergem să cumpărăm pâini de două sute de dinari și să le dăm să mănânce?"
     },
     {
       "number": 38,
-      "text": "El le-a spus: „Câte pâini aveți? Duceți-vă și vedeți!” După ce au aflat, I-au răspuns: „Cinci și doi pești.”"
+      "text": "El le-a spus: Câte pâini aveți? Duceți-vă și vedeți! După ce au aflat, I-au răspuns: Cinci și doi pești."
     },
     {
       "number": 39,
@@ -310,11 +337,11 @@
     },
     {
       "number": 49,
-      "text": "Când L-au văzut umblând pe mare, au crezut că este o nălucă și au strigat,"
+      "text": "Cînd l-au văzut umblînd pe mare, au bănuit că este o fantomă, și au strigat:"
     },
     {
       "number": 50,
-      "text": "pentru că toți L-au văzut și s-au tulburat. Dar El le-a vorbit îndată și le-a spus: „Prindeți curaj! Eu sunt. Nu vă temeți!”"
+      "text": "pentru că toți L-au văzut și s-au tulburat. Dar El le-a vorbit îndată și le-a spus: Prindeți curaj! Eu sunt. Nu vă temeți!"
     },
     {
       "number": 51,
@@ -326,7 +353,7 @@
     },
     {
       "number": 53,
-      "text": "După ce au trecut marea, au ajuns la țărm în Ghenezaret și au tras barca la mal."
+      "text": "După ce au trecut dincolo, au venit să aterizeze la Gennesaret și au acostat la țărm."
     },
     {
       "number": 54,

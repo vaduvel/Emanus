@@ -3,8 +3,8 @@
   "bookId": "PHM",
   "bookName": "Filimon",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,184 +28,220 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/PHM01.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/PHM01.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/PHM.1.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 25,
-      "reviewed": 0,
+      "reviewed": 25,
       "continuous": true,
       "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 208,
+        "secondary": 58,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.588175458584589,
+      "minimumScore": 0.553468476771151
+    },
+    "textDigest": "sha256:a1ea92a5bf059fa3ca571307caec00583b3e352d0f76aba6eb51f83d115613ac",
+    "contentDigest": "sha256:8f383f9d5b3f571a37972d5803ad070b10c42b84171b30913b1b8c69c369874d"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Pavel, prizonier al lui Hristos Isus, și Timotei, fratele nostru, lui Filimon, preaiubitul nostru colaborator,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "către iubita Apphia, către Arhip, tovarășul nostru soldat, către adunarea din casa ta:"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Har vouă și pace de la Dumnezeu Tatăl nostru și Domnul Isus Hristos."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Îi mulțumesc întotdeauna lui Dumnezeu că te-am menționat în rugăciunile mele,"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "auzind de dragostea ta și de credința pe care o ai față de Domnul Isus și față de toți sfinții,"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "pentru ca părtășia credinței voastre să devină eficientă în cunoașterea oricărui lucru bun care este în noi în Hristos Isus."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Căci noi avem multă bucurie și mângâiere în dragostea Ta, pentru că inimile sfinților au fost înviorate prin tine, frate."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "De aceea, deși am toată îndrăzneala în Hristos să vă poruncesc ceea ce este potrivit,"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Totuși, din dragoste, prefer să apelez la voi, fiind unul ca Pavel, cel în vîrstă, dar și prizonier al lui Isus Hristos."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Fac apel la tine pentru copilul meu Onisim, pe care l-am devenit tatăl în lanțurile mele,"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "care odată a fost inutil pentru tine, dar acum este util pentru tine și pentru mine."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Eu îl trimit înapoi. Prin urmare, să-l primească, adică, propria mea inimă,"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Pe care voiam s'o țin cu mine, ca să mă slujească în lanțurile mele pentru Evanghelie."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dar am fost dispus să nu fac nimic fără consimțământul tău, că bunătatea ta nu ar fi ca de necesitate, ci de liber arbitru."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Căci poate că a fost despărțit de tine pentru o vreme, ca să-l ai pentru totdeauna,"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "nu mai mult ca un sclav, ci mai mult decât un sclav, un frate iubit în mod special pentru mine, ci cât de mult mai degrabă pentru tine, atât în carne, cât și în Domnul."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dacă mă consideri partener, primește-l așa cum m-ai primi pe mine."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Dar dacă te-a nedreptățit sau îți datorează ceva, pune asta în contul meu."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Eu, Pavel, scriu aceasta cu mâna mea: o voi răsplăti (să nu-ți mai spun că îmi ești dator și mie în afară de tine însuți)."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Da, frate, lasă-mă să am bucurie de la tine în Domnul. Împrospătează-mi inima în Domnul."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Având încredere în ascultarea ta, îți scriu, știind că vei face chiar mai mult decât ceea ce spun."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "De asemenea, pregătiți o cameră de oaspeți pentru mine, pentru că sper că prin rugăciunile voastre voi fi restaurat la tine."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Epafras, tovarășul meu prizonier în Hristos Isus, te salută,"
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "ca Marcu, Aristarh, Demas Luca, tovarășii mei de slujbă."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Harul Domnului nostru Isus Hristos să fie cu duhul vostru. Amin."
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 14,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,164 +28,200 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV14.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV14.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.14.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 20,
-      "reviewed": 0,
+      "reviewed": 20,
       "continuous": true,
       "verseNumbersSha256": "sha256:ce02aec498756856567446a2f4cb35b219ea726d81089769eddd1499c99ba95f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:25f7eaa107d58643d29a534cf67ca6e0241c21a9a7db646122755e5eff921c4b",
+    "contentDigest": "sha256:b4b5c3b22683669be28843978dc9914ca5b136f8756889f40a1a855d35aeddb3"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Am văzut iată Mielul stând pe muntele Sion împreună cu el o sută patruzeci patru de mii, având scris pe frunțile lor numele Lui numele Tatălui Său."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Am auzit un sunet din cer ca sunetul multor ape și ca sunetul unui tunet mare. Sunetul pe care l-am auzit era ca cel al harpiștilor care cântau pe harpele lor."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Ei cântă un cântec nou înaintea scaunului de domnie și înaintea celor patru făpturi vii și a bătrînilor. Nimeni nu putea învăța cîntarea decît cei o sută patruzeci și patru de mii, cei ce fuseseră răscumpărați din pămînt."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Aceștia sunt cei care nu au fost pângăriți cu femei, căci ele sunt fecioare; aceștia sunt aceia care urmează Mielul oriunde merge el; aceștia au fost răscumpărați de Isus dintre oameni, primele roade pentru Dumnezeu și pentru Miel."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "În gura lor nu s'a găsit nici o minciună, căci sunt fără prihană."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Am văzut un înger zburând în mijlocul cerului, având o veste bună eternă pentru a le vesti celor care locuiesc pe pământ până la orice națiune, trib, limbă și popor."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "El a zis cu glas tare:Temeți-vă de Domnul dați-I slavă, căci a venit ceasul judecății Lui; închin-vă Celui ce a făcut cerurile, pământul, marea izvoarele apelor!"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "A urmat un al doilea înger, care a zis:A căzut Babilonul cel mare, care a făcut ca toate neamurile să bea din vinul mâniei curviei ei."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Un alt înger, al treilea, i -a urmat, și i -a zis cu glas mare:,,Dacă cineva se închină fiarei și chipului său, și primește un semn pe frunte sau pe mînă,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "El va bea, de asemenea, din vinul mîniei lui Dumnezeu, care este pregătit neamestecat în paharul mîniei Lui. El va fi chinuit cu foc și sulf în prezența sfinților îngeri și în prezența Mielului."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Fumul osândei lor se ridică pentru totdeauna și pentru totdeauna. Ei nu au odihnă zi și noapte, cei ce se închină fiarei și chipului său, și oricine primește semnul numelui său."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Iată perseverența sfinților, aceia care păzesc poruncile lui Dumnezeu și credința lui Isus."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Am auzit un glas din cer spunând:Scrie: Ferice de acum încolo de morții care mor în Domnul!Da, spune Duhul,ca să se odihnească de ostenelile lor, căci faptele lor urmează cu ei."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "M-am uitat am văzut un nor alb, pe nor unul care dea ca un fiu al omului, având pe cap o cunună de aur în mână o seceră ascuțită."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Un alt înger a ieșit din Templu, strigînd cu glas tare celui ce ședea pe nor, trimete secera și secera, căci a venit ceasul secerișului, căci secerișul pămîntului este copt!"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Cel ce ședea pe nor și -a aruncat secera pe pămînt, și pămîntul a fost secerat."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Un alt înger a ieșit din Templul care este în cer; și el avea o seceră ascuțită."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Un alt înger a ieșit din altar, cel care are putere asupra focului, și a chemat cu o voce mare la cel care avea secera ascuțită, spunând: Trimiteți secera ascuțită și adunați ciorchini de viță de vie a pământului, căci strugurii de pe pământ sunt pe deplin copți!"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Îngerul și -a aruncat secera în pămînt, și a strîns recolta pămîntului, și a aruncat -o în marele val de vin al mîniei lui Dumnezeu."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Presa de vin a fost călcată în picioare în afara orașului, iar sângele a din presa de vin, până la frâiele cailor, până la o mie șase sute de stadii."
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 19,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,244 +42,280 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN19.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN19.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/19/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.19.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 42,
-      "reviewed": 0,
+      "reviewed": 42,
       "continuous": true,
       "verseNumbersSha256": "sha256:7546732d551e130d376dd4a2e09bc994d407e4b9f1efc2c7bcfc5fe6f84ff6ca"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 42 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:16e67dbf54ee02b29918c9b40ff9982cdc33498e26e0234c693ab8042f9f9f51",
+    "contentDigest": "sha256:cc0c54cc81c0ce8542174895d9238cc88bdc11cf5ac89ba61bb9325962761325"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Atunci Pilat l - a luat pe Isus și l - a biciuit."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Solda au răsucit spini într-o coroană și i-au pus-o pe cap și l-au îmbrăcat într-un veșmânt purpuriu."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Ei au continuat să spună:Bucură-te, regele iudeilor!„ l-au tot pălmuit."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Atunci Pilat a ieșit din nou afară le-a zis:Iată, vi-l aduc afară, ca să știți că nu găsesc nici un temei pentru o acuzație împotriva lui.”"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Isus a ieșit deci, purtând cununa de spini haina de purpură. Pilat le -a zis:,,Iată omul!"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Preoții cei mai de seamă slujbașii l-au văzut, au strigat:Răstignește! Răstignește!„ Pilat le-a zis:Lu-l voi răstigniți-l, căci nu găsesc nici o bază pentru o acuzație împotriva lui.”"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Iudeii i-au răspuns:Noi avem o lege după legea noastră El trebuie să moară, pentru că S-a făcut pe Sine Fiul lui Dumnezeu.„"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "De aceea, când Pilat a auzit aceste cuvinte, s-a temut mai mult."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "A intrat din nou în pretoriu i-a zis lui Isus:De unde ești?” Dar Isus nu i-a răspuns nimic."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Pilat i -a zis:,,Nu-mi vorbești? Nu știi că am putere să te eliberez să te răstignesc?"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Isus i-a răspuns:N-ai avea nici o putere împotriva Mea, dacă nu ți-ar fi dată de sus; de aceea, cine M-a dat pe Mine are un păcat mai mare.„"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "La aceasta, Pilat a fost în căutarea să-l elibereze, dar evreii au strigat, spunând, Dacă eliberați acest om, sunteți Cezareus! Oricine se face un rege vorbește împotriva Cezarului!"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Când Pilat a auzit aceste cuvinte, l-a scos pe Isus afară s-a pe scaunul de judecată într-un loc numitPăvălia”, dar în ebraică,Gabbata„."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Acum era Ziua Pregătiriilui, cam pe la ceasul allea. El le-a zis iudeilor:Iată-l pe Împăratul vostru!”"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Ei au strigat:Pleacă cu el! Pleacă cu el! Răstignește-l!„ Pilat le-a zis:Să-l răstignesc pe regele vostru?” Preoții cei mai de seamă au răspuns:Nu avem alt împărat în afară de Cezar!„"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Așa că l-a dat lor să fie răstignit, așa că l-au luat pe Isus și l-au dus departe."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "El a, purtându-și crucea, în locul numitLocul unui craniu”, care este numit în ebraicăGolgota„,"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "unde L-au răstignit, și împreună cu El, alți doi, de o parte și de alta, și Isus la mijloc."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Pilat a scris el un titlu l-a pus pe cruce. Acolo era scris:Isus din Nazaret, împăratul iudeilor.”"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "De aceea, mulți iudei au citit acest titlu, căci locul unde a fost răstignit Isus era aproape de cetate; și a fost scris în ebraică, în latină și în greacă."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Preoții principali ai iudeilor i-au spus lui Pilat:?Don?t scrie,? Regele iudeilor, dar,? El a spus:? Eu sunt regele iudeilor."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Pilat a răspuns:Ceea ce am scris, am scris.„"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Cînd au răstignit pe Isus, ostașii și-au luat hainele, și-au făcut cîte patru părți la fiecare ostaș; și tunica. Acum tunica era fără cusătură, țesută din vârf."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Și au zis unul către altul:,,Să nu -l rupem, ci să tragem la sorți, ca să hotărască al cui va fi! Ca să se împlinească Scriptura, care zice:,,Mi-au hainele între ei, au tras la sorți pentru hainele mele. De aceeai au făcut aceste lucruri."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Dar în picioare de cruce Isus au fost mama lui, mama lui, sora lui, Maria, soția lui Clopas, și Maria Magdalena."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "De aceea, când Isus a văzut pe mama Sa pe ucenicul pe care îl iubea stând acolo, i-a zis mamei Sale:Femeie, iată fiul tău!”"
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Apoi i-a zis ucenicului:Iată mama ta!„ Din ceasul acela, ucenicul a luat-o acasă."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "După aceasta, Isus, văzând că toate lucrurile s-au terminat acum, pentru ca Scriptura să se împlinească, a spus, Mi-e sete!"
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Acolo era pus un vas plin cu oțet; așa că au pus un burete plin cu oțet pe isop, și l-au ținut la gura lui."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "După ce a primit oțetul, Isus a zis:S-a isprăvit!” Apoi-a plecat capul-a dat duhul."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "De aceea Iudeii, pentru că era Ziua Pregătirii, astfel încât trupurile să nu rămână pe cruce în ziua Sabatului (căci Sabatul acela era unul special), au cerut lui Pilat să li se rupă picioarele și să li se ia."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Soldații au venit au rupt picioarele celui dintâi ale celuilalt care a fost răstignit împreună cu el."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Dar când au venit la Isus și au văzut că el era deja mort, nu i-au rupt picioarele."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Totuși, unul dintre soldați i - a străpuns partea cu o suliță, și imediat a ieșit afară sânge și apă."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Cel care a văzut a mărturisit și mărturia lui este adevărată. El știe că spune adevărul, ca voi să credeți."
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Căci aceste lucruri s-au întâmplat ca Scriptura să se împlinească, nu se va rupe nici un os din el."
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Din nou o altă Scriptură spune, ei se vor uita la cel pe care l-au străpuns."
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "După aceste lucruri, Iosif din Arimataea, fiind ucenic al lui Isus, dar în taină de frica iudeilor, a cerut lui Pilat să ia trupul lui Isus. Pilat i -a dat îngăduința; a venit deci și i - a luat trupul."
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Nicodim, care la început a venit la Isus noaptea, a venit, de asemenea, aducând un amestec de smirnă și aloe, aproximativ o sută de lire sterline romane."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "Au luat deci trupul lui Isus și l-au legat în haine de in cu miresme, cum este obiceiul iudeilor de a-l îngropa."
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "În locul unde a fost răstignit era o grădină, în grădină era un mormânt nou în care nimeni nu fusese pus vreodată."
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "Atunci, din pricina Iudeilor, au pus acolo pe Isus Ziua Pregătirii, căci mormântul era aproape."
     }
   ],
   "editorialNotes": [],

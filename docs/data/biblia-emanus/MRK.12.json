@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 12,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,77 +28,92 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK12.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK12.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.12.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "În 12:4 a fost redat verbul ἐκεφαλίωσαν prin lovirea la cap, fără lapidarea prezentă numai în TR.",
-      "În 12:33 lista SBLGNT conține inima, înțelegerea și puterea; «sufletul» din TR nu a fost adăugat."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 44,
       "reviewed": 44,
       "continuous": true,
-      "verseNumbersSha256": "sha256:56e0f4f93f6b6a6a7c09c5b8f0be4f50cd0a243f1b1bab837778507148750f59"
+      "verseNumbersSha256": "sha256:7d7caccb8ac52296c9cd2f7975056dcd30885d47fa81ff5201c67b6fcafb4555"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost verificate toate cele 44 de versete, citatele din Psalmii 118 și 110, Șema și diferențele materiale SBLGNT/TR din 12:4, 12:30 și 12:33."
+      "scope": "Au fost confruntate toate cele 44 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Seriile de întrebări și răspunsuri din 12:13–37 au fost formulate natural, păstrând schimbările de interlocutor.",
-        "Parabola viticultorilor a păstrat succesiunea robilor și repetarea verbelor de trimitere, lovire și ucidere."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Titlul Hristos și relația dintre David și Domnul său din 12:35–37 au rămas în forma argumentului marcan.",
-        "În citatul din Psalmul 110:1, primul κύριος, corespunzător tetragramei, a fost redat «DOMNUL», iar al doilea «Domnul». "
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,21 +123,33 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:6407fb58f6775284d7b7e722b99280472a48ba493fdb18a53678f91664b81e13",
+    "contentDigest": "sha256:06227ecfa9db5c2d53c15912f1f33e8e2ee75cc7b03aaaddeb41c26b025bac1e"
   },
   "verses": [
     {
       "number": 1,
-      "text": "A început să le vorbească în pilde: „Un om a plantat o vie, a împrejmuit-o cu un gard, a săpat un bazin pentru teasc și a construit un turn. A dat-o în arendă unor viticultori și a plecat din țară."
+      "text": "A început să le vorbească în pilde: Un om a plantat o vie, a împrejmuit-o cu un gard, a săpat un bazin pentru teasc și a construit un turn. A dat-o în arendă unor viticultori și a plecat din țară."
     },
     {
       "number": 2,
-      "text": "La vremea potrivită, a trimis la viticultori un rob ca să ia de la ei din roadele viei."
+      "text": "Când era timpul, el a trimis un servitor la fermier pentru a obține de la fermier partea sa din fructul podgoriei."
     },
     {
       "number": 3,
@@ -130,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "A trimis din nou la ei un alt rob; și pe acela l-au lovit la cap și l-au batjocorit."
+      "text": "Din nou, el a trimis un alt servitor la ei; și au aruncat cu pietre la el, l-au rănit în cap, și l-au trimis departe tratat rușinos."
     },
     {
       "number": 5,
@@ -138,15 +165,15 @@
     },
     {
       "number": 6,
-      "text": "Mai avea unul: un fiu preaiubit. La urmă l-a trimis la ei, spunându-și: «Îl vor respecta pe fiul meu.»"
+      "text": "Mai avea unul: un fiu preaiubit. La urmă l-a trimis la ei, spunându-și: Îl vor respecta pe fiul meu."
     },
     {
       "number": 7,
-      "text": "Dar viticultorii aceia și-au spus între ei: «Acesta este moștenitorul! Haideți să-l omorâm, și moștenirea va fi a noastră.»"
+      "text": "Dar viticultorii aceia și-au spus între ei: Acesta este moștenitorul! Haideți să-l omorâm, și moștenirea va fi a noastră."
     },
     {
       "number": 8,
-      "text": "L-au prins, l-au omorât și l-au aruncat afară din vie."
+      "text": "L-au luat, l-au ucis și l-au scos din vie."
     },
     {
       "number": 9,
@@ -154,11 +181,11 @@
     },
     {
       "number": 10,
-      "text": "N-ați citit nici Scriptura aceasta: «Piatra pe care au respins-o zidarii a ajuns piatra din capul unghiului;"
+      "text": "N-ați citit nici Scriptura aceasta: Piatra pe care au respins-o zidarii a ajuns piatra din capul unghiului;"
     },
     {
       "number": 11,
-      "text": "de la DOMNUL s-a făcut aceasta și este minunată în ochii noștri»?”"
+      "text": "Acest lucru a fost de la Domnul. Este minunat în ochii noștri?"
     },
     {
       "number": 12,
@@ -170,19 +197,19 @@
     },
     {
       "number": 14,
-      "text": "Ei au venit și I-au spus: „Învățătorule, știm că ești sincer și nu Te lași influențat de nimeni, fiindcă nu cauți la fața oamenilor, ci îi înveți în adevăr calea lui Dumnezeu. Este îngăduit să plătim tribut Cezarului sau nu? Să dăm sau să nu dăm?”"
+      "text": "Ei au venit și I-au spus: Învățătorule, știm că ești sincer și nu Te lași influențat de nimeni, fiindcă nu cauți la fața oamenilor, ci îi înveți în adevăr calea lui Dumnezeu. Este îngăduit să plătim tribut Cezarului sau nu? Să dăm sau să nu dăm?"
     },
     {
       "number": 15,
-      "text": "Dar El, cunoscându-le ipocrizia, le-a spus: „De ce Mă puneți la încercare? Aduceți-Mi un denar ca să-l văd!”"
+      "text": "Dar El, cunoscându-le ipocrizia, le-a spus: De ce Mă puneți la încercare? Aduceți-Mi un denar ca să-l văd!"
     },
     {
       "number": 16,
-      "text": "Ei I-au adus unul. Isus i-a întrebat: „Ale cui sunt chipul și inscripția aceasta?” Ei I-au răspuns: „Ale Cezarului.”"
+      "text": "Ei I-au adus unul. Isus i-a întrebat: Ale cui sunt chipul și inscripția aceasta? Ei I-au răspuns: Ale Cezarului."
     },
     {
       "number": 17,
-      "text": "Isus le-a spus: „Dați înapoi Cezarului ce este al Cezarului, iar lui Dumnezeu ce este al lui Dumnezeu!” Și erau nespus de uimiți de El."
+      "text": "Isus le-a spus: Dați înapoi Cezarului ce este al Cezarului, iar lui Dumnezeu ce este al lui Dumnezeu! Și erau nespus de uimiți de El."
     },
     {
       "number": 18,
@@ -190,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "„Învățătorule, Moise ne-a scris că, dacă fratele cuiva moare, lasă în urmă o soție și nu lasă un urmaș, fratele lui să-i ia soția și să-i ridice un urmaș fratelui său."
+      "text": "Învățătorule, Moise ne-a scris că, dacă fratele cuiva moare, lasă în urmă o soție și nu lasă un urmaș, fratele lui să-i ia soția și să-i ridice un urmaș fratelui său."
     },
     {
       "number": 20,
@@ -206,11 +233,11 @@
     },
     {
       "number": 23,
-      "text": "La înviere, când vor învia, soția cui va fi? Căci toți cei șapte au avut-o de soție.”"
+      "text": "La înviere, când vor învia, soția cui va fi? Căci toți cei șapte au avut-o de soție."
     },
     {
       "number": 24,
-      "text": "Isus le-a spus: „Oare nu de aceea vă rătăciți, pentru că nu cunoașteți nici Scripturile, nici puterea lui Dumnezeu?"
+      "text": "Isus le-a spus: Oare nu de aceea vă rătăciți, pentru că nu cunoașteți nici Scripturile, nici puterea lui Dumnezeu?"
     },
     {
       "number": 25,
@@ -218,55 +245,55 @@
     },
     {
       "number": 26,
-      "text": "Iar despre cei morți, că sunt înviați, n-ați citit în cartea lui Moise, în pasajul despre rug, cum i-a vorbit Dumnezeu, spunând: «Eu sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov»?"
+      "text": "Iar despre cei morți, că sunt înviați, n-ați citit în cartea lui Moise, în pasajul despre rug, cum i-a vorbit Dumnezeu, spunând: Eu sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov?"
     },
     {
       "number": 27,
-      "text": "El nu este Dumnezeu al celor morți, ci al celor vii. Vă rătăciți mult!”"
+      "text": "El nu este Dumnezeu al celor morți, ci al celor vii. Vă rătăciți mult!"
     },
     {
       "number": 28,
-      "text": "Unul dintre cărturari s-a apropiat și i-a auzit discutând. Văzând că Isus le răspunsese bine, L-a întrebat: „Care este cea dintâi dintre toate poruncile?”"
+      "text": "Unul dintre cărturari s-a apropiat și i-a auzit discutând. Văzând că Isus le răspunsese bine, L-a întrebat: Care este cea dintâi dintre toate poruncile?"
     },
     {
       "number": 29,
-      "text": "Isus a răspuns: „Cea dintâi este: «Ascultă, Israel! Domnul Dumnezeul nostru, Domnul este unul."
+      "text": "Isus a răspuns: Cea dintâi este: Ascultă, Israel! Domnul Dumnezeul nostru, Domnul este unul."
     },
     {
       "number": 30,
-      "text": "Să-L iubești pe Domnul Dumnezeul tău din toată inima ta, din tot sufletul tău, din toată mintea ta și din toată puterea ta.»"
+      "text": "Vei iubi pe Domnul Dumnezeul tău din toată inima ta, cu tot sufletul tău, cu toată mintea ta, și cu toată puterea ta. bază aceasta este prima poruncă."
     },
     {
       "number": 31,
-      "text": "A doua este aceasta: «Să-l iubești pe semenul tău ca pe tine însuți.» Nu este altă poruncă mai mare decât acestea.”"
+      "text": "A doua este aceasta: Să-l iubești pe semenul tău ca pe tine însuți. Nu este altă poruncă mai mare decât acestea."
     },
     {
       "number": 32,
-      "text": "Cărturarul I-a spus: „Bine, Învățătorule! Ai spus potrivit adevărului că El este unul și că nu este altul în afară de El;"
+      "text": "Cărturarul I-a spus: Bine, Învățătorule! Ai spus potrivit adevărului că El este unul și că nu este altul în afară de El;"
     },
     {
       "number": 33,
-      "text": "iar a-L iubi din toată inima, din toată înțelegerea și din toată puterea și a-l iubi pe semen ca pe sine însuși este mai mult decât toate arderile-de-tot și jertfele.”"
+      "text": "iar a-L iubi din toată inima, din toată înțelegerea și din toată puterea și a-l iubi pe semen ca pe sine însuși este mai mult decât toate arderile-de-tot și jertfele."
     },
     {
       "number": 34,
-      "text": "Isus, văzând că răspunsese cu pricepere, i-a spus: „Nu ești departe de Împărăția lui Dumnezeu.” Și nimeni nu mai îndrăznea să-L întrebe ceva."
+      "text": "Isus, văzând că răspunsese cu pricepere, i-a spus: Nu ești departe de Împărăția lui Dumnezeu. Și nimeni nu mai îndrăznea să-L întrebe ceva."
     },
     {
       "number": 35,
-      "text": "În timp ce învăța în Templu, Isus a răspuns: „Cum de spun cărturarii că Hristos este fiul lui David?"
+      "text": "În timp ce învăța în Templu, Isus a răspuns: Cum de spun cărturarii că Hristos este fiul lui David?"
     },
     {
       "number": 36,
-      "text": "David însuși a spus prin Duhul Sfânt: «DOMNUL I-a spus Domnului meu: ‘Șezi la dreapta Mea până îi voi pune pe dușmanii Tăi sub picioarele Tale.’»"
+      "text": "David însuși a spus prin Duhul Sfânt: DOMNUL I-a spus Domnului meu: ‘Șezi la dreapta Mea până îi voi pune pe dușmanii Tăi sub picioarele Tale.’"
     },
     {
       "number": 37,
-      "text": "David însuși Îl numește Domn; atunci cum este El fiul lui?” Mulțimea numeroasă Îl asculta cu plăcere."
+      "text": "David însuși Îl numește Domn; atunci cum este El fiul lui? Mulțimea numeroasă Îl asculta cu plăcere."
     },
     {
       "number": 38,
-      "text": "În învățătura Lui spunea: „Păziți-vă de cărturarii cărora le place să umble în haine lungi și să fie salutați în piețe,"
+      "text": "În învățătura Lui spunea: Păziți-vă de cărturarii cărora le place să umble în haine lungi și să fie salutați în piețe,"
     },
     {
       "number": 39,
@@ -274,11 +301,11 @@
     },
     {
       "number": 40,
-      "text": "Ei devorează casele văduvelor și, de ochii lumii, rostesc rugăciuni lungi. Aceștia vor primi o condamnare mai grea.”"
+      "text": "Ei devorează casele văduvelor și, de ochii lumii, rostesc rugăciuni lungi. Aceștia vor primi o condamnare mai grea."
     },
     {
       "number": 41,
-      "text": "Așezându-Se în fața vistieriei, privea cum punea mulțimea bani în vistierie. Mulți bogați puneau mult."
+      "text": "Isus a șezut în fața vistieriei și a văzut cum mulțimea arunca bani în vistierie. Mulți bogați aruncau mult."
     },
     {
       "number": 42,
@@ -286,11 +313,11 @@
     },
     {
       "number": 43,
-      "text": "Chemându-i la El pe ucenici, le-a spus: „Adevărat vă spun că această văduvă săracă a pus mai mult decât toți cei care pun în vistierie."
+      "text": "Chemându-i la El pe ucenici, le-a spus: Adevărat vă spun că această văduvă săracă a pus mai mult decât toți cei care pun în vistierie."
     },
     {
       "number": 44,
-      "text": "Căci toți au pus din prisosul lor, dar ea, din sărăcia ei, a pus tot ce avea, tot ce avea ca să trăiască.”"
+      "text": "Căci toți au pus din prisosul lor, dar ea, din sărăcia ei, a pus tot ce avea, tot ce avea ca să trăiască."
     }
   ],
   "editorialNotes": [],

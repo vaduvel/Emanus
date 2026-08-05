@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 8,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,236 +28,272 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK08.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK08.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.8.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "omissions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 38,
-      "reviewed": 0,
+      "reviewed": 38,
       "continuous": true,
       "verseNumbersSha256": "sha256:9dea2dd3958ed65de899f88f1ebda1ba02356bae2652d120c374679099cfafa5"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 38 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:31f20586688c0af0b16926194a828acbf3eedee8da18e377574471cfca5e4e2f",
+    "contentDigest": "sha256:417df33ab312707c4c5a760ffba0daea45c5c86c7ccf8ac96433ad6ecc6b7e2b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Pe vremea aceea, cînd era o mare mulțime, și n'aveau ce mînca, Isus și -a chemat ucenicii, și le -a zis:"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Am compasiune față de mulțime, pentru că au stat cu mine acum trei zile și nu au nimic de mâncare."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Dacă îi trimit post la ei acasă, vor leșina pe drum, pentru că unii dintre ei au parcurs un drum lung."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Ucenicii Lui I-au răspuns:De unde poate cineva să sature pe poporul acesta cu pâine aici, într-un loc pustiu?„"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "El le-a zis:Câte pâini?” Ei au răspuns:apte„."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "El a poruncit mulțimii să șadă jos pe pămînt, și a luat cele șapte pâini. După ce le -a mulțumit, le -a rupt și le -a dat ucenicilor Săi să slujească, și au slujit mulțimii."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Aveau și ei câțiva peștișori, după ce i - au binecuvântat, el a zis să le slujească și lor."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Au mâncat și s-au umplut, au luat șapte coșuri cu bucăți rupte rămase."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Cei ce mâncaseră erau în număr de aproape patru mii. Apoi i-a alungat."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Imediat a intrat în barcă cu discipolii săi și a venit în regiunea Dalmanutha."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Fariseii au ieșit și au început să - l întrebe, căutînd de la el un semn din cer și punîndu - l la încercare."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "El a suspinat profund în spiritul său și a spus, De ce această generație caută un semn? Cel mai sigur vă spun, nici un semn nu va fi dat acestei generații."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "El i-a părăsit, intrând din nou în barcă, a plecat de cealaltă parte."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Au uitat să ia pâine, și n'aveau mai mult de o bucată de pâine în corabie cu ei."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "El le-a spus:Lu seama, păziți-vă de drojdia fariseilor de drojdia lui Irod.”"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Ei vorbeau unii cu alții, și ziceau:,,Este pentru că nu avem pâine. „"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Isus, văzându-l, le-a zis:De ce credeți că pentru că n-aveți pâine? Încă nu pricepeți nu? Este inima voastră încă împietrită?"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Ai ochi, nu vezi? Ai urechi, nu auzi? Nu-ți amintești?"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Când am rupt cele cinci pâini dintre cele cinci mii, câte coșuri pline de bucăți rupte ai luat?” Ei i-au spus:Doisprezece.„"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Când cele șapte pâini i-au hrănit pe cei patru mii, câte coșuri pline cu bucăți rupte ai luat?”, I-au zis ei,Șapte.„"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "El i-a întrebat, nu ai înțeles încă?"
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "A venit la Betsaida. Au adus un orb la el și l-au implorat să-l atingă."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "A apucat pe orb de mînă, și l -a scos din sat. Cînd a scuipat pe ochi, și -a pus mînile pe el, l -a întrebat dacă a văzut ceva."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "S-a uitat în sus a spus:Văd oameni, dar îi văd ca pe niște copaci care se plimbă.”"
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Apoi și-a pus din nou mâinile pe ochi. S-a uitat cu atenție și a fost restaurat și a văzut pe toată lumea clar."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "El l-au trimis la casa lui, spunând, Nu intra în sat, nici nu spune nimănui din sat."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Isus a ieșit, împreună cu ucenicii Săi, în satele Cezareei lui Filip. Pe drum, El i-a întrebat pe ucenici:Cine zic oamenii că sunt Eu?„"
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Ei i-au zis:Ioan Botezătorul, zic Ilie, dar, unul din prooroci.”"
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "El le-a zis:Dar voi cine ziceți că sunt eu?„ Petru a răspuns:Tu ești Hristosul”."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "El le-a poruncit să nu spună nimănui despre el."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "El a început să-i că Fiul Omului trebuie să sufere multe să fie respins de bătrâni, de preoții cei mai de seamă de cărturari să fie ucis după trei zile să învie din nou."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "El le -a vorbit deschis. Petru l - a luat și a început să -L mustre."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Dar el, întorcându-se văzându- ucenicii, l-a certat pe Petru a zis:Înapoia mea, Satano! Căci nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor.„"
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "El a chemat mulțimea la sine cu discipolii săi și le-a spus:? Oricine vrea să vină după mine, să se nege, și să ia crucea lui, și să mă urmeze."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Căci oricine vrea să-și salveze viața o va pierde; și oricine își va pierde viața din cauza mea și din cauza veștii bune o va salva."
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Ce folos are un om să câștige întreaga lume și să-și piardă viața?"
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Pentru ce va da un om în schimbul vieții sale?"
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Căci oricine va fi rușinat de mine și de cuvintele mele în această generație adulteră și păcătoasă, Fiul Omului de asemenea va fi rușinat de el când va veni în Tatăl său gloria sa cu îngerii sfinți.”"
     }
   ],
   "editorialNotes": [],

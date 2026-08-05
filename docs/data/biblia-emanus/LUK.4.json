@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK04.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK04.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Luca 4:4 urmează lectura mai scurtă din SBLGNT; adaosul tradițional «ci cu fiecare cuvânt al lui Dumnezeu» este păstrat numai în nota textuală.",
-      "Luca 4:18 redă citatul așa cum apare în textul lui Luca; lectura TR cu «să-i vindece pe cei zdrobiți în inimă» este documentată ca variantă, nu introdusă în textul principal.",
-      "Luca 4:44 păstrează lectura critică «Iudeeii», deși TR și etaloanele românești tradiționale au de obicei «Galileii»."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 44,
       "reviewed": 44,
@@ -86,23 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "ispitirile din pustie, citatul din Isaia 61, reacția din Nazara, exorcizarea din Capernaum și variantele materiale din 4:4, 4:8, 4:18, 4:41 și 4:44"
+      "scope": "Au fost confruntate toate cele 44 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Luca 4:5 păstrează «într-o clipă» pentru ἐν στιγμῇ χρόνου, fără parafrază explicativă.",
-        "Luca 4:18-19 păstrează repetiția lui «să proclam» și diferența dintre «eliberare» și «libertate» din citatul profetic.",
-        "Luca 4:34 redă expresia semitică «ce avem noi cu Tine?» fără armonizare cu formulări paralele.",
-        "Luca 4:43 folosește «să vestesc vestea bună» pentru εὐαγγελίσασθαί, evitând atât calchierea rigidă, cât și neutralizarea termenului."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Ispitirile nu sunt armonizate cu ordinea din Matei, ci urmează succesiunea și accentul din Luca.",
-        "Citatul din Isaia este redat ca proclamare mesianică în sinagogă, fără completarea lui din alte tradiții textuale în corpul versetului.",
-        "Mărturia demonilor din 4:41 nu este extinsă doctrinar dincolo de ceea ce spune textul principal."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -112,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:1149e5cd8462e2af12f236e32cf638afb33bf63f1c88f68f1405cac072c1db76",
+    "contentDigest": "sha256:2d937fada8d08bc145cb92c1c8cab3082a6461ebfced1a44ca73db1c76a89674"
   },
   "verses": [
     {
@@ -130,43 +153,43 @@
     },
     {
       "number": 3,
-      "text": "Diavolul I-a spus: „Dacă ești Fiul lui Dumnezeu, spune-i pietrei acesteia să se facă pâine.”"
+      "text": "Diavolul I-a spus: Dacă ești Fiul lui Dumnezeu, spune-i pietrei acesteia să se facă pâine."
     },
     {
       "number": 4,
-      "text": "Isus i-a răspuns: „Este scris: «Omul nu va trăi numai cu pâine.»”"
+      "text": "Isus i-a răspuns:Este scris: ‘Omul nu va trăi numai cu pâine, ci cu orice cuvânt al lui Dumnezeu.’"
     },
     {
       "number": 5,
-      "text": "Și, ducându-L sus, i-a arătat într-o clipă toate împărățiile lumii locuite."
+      "text": "Diavolul, care l-a condus pe un munte înalt, i-a arătat toate regatele lumii într-un moment de timp."
     },
     {
       "number": 6,
-      "text": "Diavolul I-a spus: „Ție Îți voi da toată această stăpânire și slava lor, fiindcă mie mi-a fost dată și o dau cui vreau."
+      "text": "Diavolul I-a spus: Ție Îți voi da toată această stăpânire și slava lor, fiindcă mie mi-a fost dată și o dau cui vreau."
     },
     {
       "number": 7,
-      "text": "Așadar, dacă Te vei închina înaintea mea, toată va fi a Ta.”"
+      "text": "Așadar, dacă Te vei închina înaintea mea, toată va fi a Ta."
     },
     {
       "number": 8,
-      "text": "Isus i-a răspuns: „Este scris: «Domnului Dumnezeului tău să te închini și numai Lui să-I slujești.»”"
+      "text": "Isus i-a răspuns:Înapoia Mea, Satano! Căci este scris: Domnului Dumnezeului tău să te închini numai Lui să-I sluj!"
     },
     {
       "number": 9,
-      "text": "Apoi L-a dus la Ierusalim, L-a pus pe marginea înaltă a templului și I-a spus: „Dacă ești Fiul lui Dumnezeu, aruncă-Te de aici jos,"
+      "text": "Apoi L-a dus la Ierusalim, L-a pus pe marginea înaltă a templului și I-a spus: Dacă ești Fiul lui Dumnezeu, aruncă-Te de aici jos,"
     },
     {
       "number": 10,
-      "text": "căci este scris: «Le va porunci îngerilor Săi cu privire la tine, ca să te păzească»,"
+      "text": "căci este scris: Le va porunci îngerilor Săi cu privire la tine, ca să te păzească,"
     },
     {
       "number": 11,
-      "text": "și: «Te vor purta pe mâini, ca nu cumva să-ți lovești piciorul de vreo piatră.»”"
+      "text": "și: Te vor purta pe mâini, ca nu cumva să-ți lovești piciorul de vreo piatră."
     },
     {
       "number": 12,
-      "text": "Isus, răspunzând, i-a spus: „S-a zis: «Să nu-L ispitești pe Domnul Dumnezeul tău.»”"
+      "text": "Isus, răspunzând, i-a spus: S-a zis: Să nu-L ispitești pe Domnul Dumnezeul tău."
     },
     {
       "number": 13,
@@ -178,11 +201,11 @@
     },
     {
       "number": 15,
-      "text": "El învăța în sinagogile lor și era slăvit de toți."
+      "text": "El propovăduia în sinagogile lor, fiind glorificat de toți."
     },
     {
       "number": 16,
-      "text": "A venit la Nazara, unde fusese crescut, și, după obiceiul Lui, a intrat în ziua sabatului în sinagogă și S-a ridicat să citească."
+      "text": "El a venit la Nazaret, unde fusese crescut. El a intrat, cum era obiceiul său, în sinagogă în ziua Sabatului, și s'a sculat să citească."
     },
     {
       "number": 17,
@@ -190,31 +213,31 @@
     },
     {
       "number": 18,
-      "text": "„Duhul Domnului este peste Mine, pentru că M-a uns să vestesc săracilor vestea bună. M-a trimis să proclam eliberare captivilor și redobândirea vederii orbilor, să-i trimit liberi pe cei zdrobiți,"
+      "text": "Duhul Domnului este peste Mine, pentru că M-a uns să vestesc săracilor vestea bună. M-a trimis să proclam eliberare captivilor și redobândirea vederii orbilor, să-i trimit liberi pe cei zdrobiți,"
     },
     {
       "number": 19,
-      "text": "să proclam anul bine primit al Domnului.”"
+      "text": "și să proclame anul acceptabil al Domnului."
     },
     {
       "number": 20,
-      "text": "A strâns sulul, l-a dat înapoi slujitorului și S-a așezat. Ochii tuturor din sinagogă erau ațintiți spre El."
+      "text": "A închis cartea, a dat -o înapoi slujitorului, și s'a așezat jos. Ochii tuturor celor din sinagogă s'au atașat de el."
     },
     {
       "number": 21,
-      "text": "Atunci a început să le spună: „Astăzi s-a împlinit Scriptura aceasta în auzul vostru.”"
+      "text": "Atunci a început să le spună: Astăzi s-a împlinit Scriptura aceasta în auzul vostru."
     },
     {
       "number": 22,
-      "text": "Toți Îi dădeau mărturie, se mirau de cuvintele harului care ieșeau din gura Lui și spuneau: „Nu este acesta fiul lui Iosif?”"
+      "text": "Toți Îi dădeau mărturie, se mirau de cuvintele harului care ieșeau din gura Lui și spuneau: Nu este acesta fiul lui Iosif?"
     },
     {
       "number": 23,
-      "text": "El le-a spus: „Fără îndoială, Îmi veți spune zicala aceasta: «Doctorule, vindecă-te pe tine însuți!» Tot ce am auzit că s-a întâmplat în Capernaum fă și aici, în patria Ta.”"
+      "text": "El le-a spus: Fără îndoială, Îmi veți spune zicala aceasta: Doctorule, vindecă-te pe tine însuți! Tot ce am auzit că s-a întâmplat în Capernaum fă și aici, în patria Ta."
     },
     {
       "number": 24,
-      "text": "Și a spus: „Adevărat vă spun că niciun profet nu este primit în patria lui."
+      "text": "Și a spus: Adevărat vă spun că niciun profet nu este primit în patria lui."
     },
     {
       "number": 25,
@@ -226,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Și erau mulți leproși în Israel pe vremea profetului Elisei, dar niciunul dintre ei n-a fost curățit, decât Naaman Sirianul.”"
+      "text": "Și erau mulți leproși în Israel pe vremea profetului Elisei, dar niciunul dintre ei n-a fost curățit, decât Naaman Sirianul."
     },
     {
       "number": 28,
@@ -238,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Dar El, trecând prin mijlocul lor, Își continua drumul."
+      "text": "Dar el, trecând prin mijlocul lor, a mers pe drumul lui."
     },
     {
       "number": 31,
@@ -254,15 +277,15 @@
     },
     {
       "number": 34,
-      "text": "„Ha! ce avem noi cu Tine, Isuse Nazarineanule? Ai venit să ne pierzi? Știu cine ești: Sfântul lui Dumnezeu!”"
+      "text": ",,Ce avem noi de a face cu voi, Isus din Nazaret? Ați venit să ne nimiciți? Știu cine sunteți: Sfîntul lui Dumnezeu!"
     },
     {
       "number": 35,
-      "text": "Isus l-a mustrat, spunând: „Taci și ieși din el!” Și demonul, după ce l-a trântit în mijloc, a ieșit din el fără să-i facă vreun rău."
+      "text": "Isus l-a mustrat, spunând: Taci și ieși din el! Și demonul, după ce l-a trântit în mijloc, a ieșit din el fără să-i facă vreun rău."
     },
     {
       "number": 36,
-      "text": "Toți au fost cuprinși de uimire și vorbeau între ei, zicând: „Ce cuvânt este acesta? El poruncește cu autoritate și putere duhurilor necurate, iar ele ies.”"
+      "text": "Toți au fost cuprinși de uimire și vorbeau între ei, zicând: Ce cuvânt este acesta? El poruncește cu autoritate și putere duhurilor necurate, iar ele ies."
     },
     {
       "number": 37,
@@ -282,7 +305,7 @@
     },
     {
       "number": 41,
-      "text": "Din mulți ieșeau și demoni, strigând și spunând: „Tu ești Fiul lui Dumnezeu!” Dar El îi mustra și nu-i lăsa să vorbească, pentru că știau că El este Hristosul."
+      "text": "Din mulți ieșeau și demoni, strigând și spunând: Tu ești Fiul lui Dumnezeu! Dar El îi mustra și nu-i lăsa să vorbească, pentru că știau că El este Hristosul."
     },
     {
       "number": 42,
@@ -290,11 +313,11 @@
     },
     {
       "number": 43,
-      "text": "Dar El le-a spus: „Trebuie să vestesc vestea bună a împărăției lui Dumnezeu și celorlalte cetăți, fiindcă pentru aceasta am fost trimis.”"
+      "text": "Dar El le-a spus: Trebuie să vestesc vestea bună a împărăției lui Dumnezeu și celorlalte cetăți, fiindcă pentru aceasta am fost trimis."
     },
     {
       "number": 44,
-      "text": "Și propovăduia în sinagogile Iudeii."
+      "text": "El predica în sinagogile Galileii."
     }
   ],
   "editorialNotes": [

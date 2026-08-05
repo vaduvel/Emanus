@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 22,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT22.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT22.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.22.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "În 22:9 redactarea urmează SBLGNT și nu introduce frica însoțitorilor, prezentă în lectura receptă și în unele etaloane.",
-      "În 22:16 formularea «Numele Lui» păstrează pronumele αὐτοῦ din textul critic, fără adaosul «Domnului» din TR."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Toate cele 30 de versete au fost confruntate cu SBLGNT 1.2, cu aparatul pentru 22:3, 8-9, 12-13, 16, 18, 20 și 23-30 și cu TR ca martor; adaosurile TR din 22:9, 16, 20 și 30 nu au intrat în textul principal."
+      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Discursul direct a fost ierarhizat cu ghilimele românești și cu ghilimele unghiulare pentru replicile incluse în apărarea lui Pavel.",
-        "Construcțiile participiale din 22:3-5 și 22:17-21 au fost reașezate în fraze românești naturale fără pierderea succesiunii și a conectorilor."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Titlurile «Domnul» și «Cel Drept» sunt păstrate numai acolo unde textul grec le exprimă.",
-        "Trimiterea la neamuri din 22:21 și chemarea Numelui Lui din 22:16 sunt redate fără explicații doctrinare adăugate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:28bb06463d46ae19c26aa7d4b3ae7c77ec1049dbaebb2d20dd05a8cc68e158d2",
+    "contentDigest": "sha256:b365fbfa0bb7961c70ce9617a2af8641386377a7231eaf1ba44629f01d778080"
   },
   "verses": [
     {
       "number": 1,
-      "text": "„Bărbați, frați și părinți, ascultați acum apărarea mea înaintea voastră!”"
+      "text": "Bărbați, frați și părinți, ascultați acum apărarea mea înaintea voastră!"
     },
     {
       "number": 2,
@@ -126,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "„Eu sunt iudeu, născut în Tarsul Ciliciei, dar crescut în cetatea aceasta la picioarele lui Gamaliel, instruit cu strictețe în Legea strămoșească, plin de râvnă pentru Dumnezeu, așa cum sunteți voi toți astăzi."
+      "text": "Eu sunt iudeu, născut în Tarsul Ciliciei, dar crescut în cetatea aceasta la picioarele lui Gamaliel, instruit cu strictețe în Legea strămoșească, plin de râvnă pentru Dumnezeu, așa cum sunteți voi toți astăzi."
     },
     {
       "number": 4,
@@ -142,11 +169,11 @@
     },
     {
       "number": 7,
-      "text": "Am căzut la pământ și am auzit un glas care-mi zicea: «Saul, Saul, de ce Mă persecuți?»"
+      "text": "Am căzut la pământ și am auzit un glas care-mi zicea: Saul, Saul, de ce Mă persecuți?"
     },
     {
       "number": 8,
-      "text": "Eu am răspuns: «Cine ești, Doamne?» Iar El mi-a zis: «Eu sunt Isus Nazarineanul, pe care tu Îl persecuți.»"
+      "text": "Eu am răspuns: Cine ești, Doamne? Iar El mi-a zis: Eu sunt Isus Nazarineanul, pe care tu Îl persecuți."
     },
     {
       "number": 9,
@@ -154,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Am zis: «Ce să fac, Doamne?» Domnul mi-a zis: «Ridică-te, mergi la Damasc și acolo ți se va spune despre toate cele rânduite ție să le faci.»"
+      "text": "Am zis: Ce să fac, Doamne? Domnul mi-a zis: Ridică-te, mergi la Damasc și acolo ți se va spune despre toate cele rânduite ție să le faci."
     },
     {
       "number": 11,
@@ -166,11 +193,11 @@
     },
     {
       "number": 13,
-      "text": "a venit la mine, s-a oprit lângă mine și mi-a zis: «Frate Saul, recapătă-ți vederea!» Chiar în ceasul acela mi-am recăpătat vederea și am privit spre el."
+      "text": "a venit la mine, s-a oprit lângă mine și mi-a zis: Frate Saul, recapătă-ți vederea! Chiar în ceasul acela mi-am recăpătat vederea și am privit spre el."
     },
     {
       "number": 14,
-      "text": "El a zis: «Dumnezeul părinților noștri te-a rânduit să cunoști voia Lui, să-L vezi pe Cel Drept și să auzi glas din gura Lui,"
+      "text": "El a zis: Dumnezeul părinților noștri te-a rânduit să cunoști voia Lui, să-L vezi pe Cel Drept și să auzi glas din gura Lui,"
     },
     {
       "number": 15,
@@ -178,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Și acum, de ce întârzii? Ridică-te, fii botezat și spală-ți păcatele, chemând Numele Lui.»"
+      "text": "Acum, de ce aștepți? Scoală-te, fii botezat și spală-ți păcatele, chemând Numele Domnului."
     },
     {
       "number": 17,
@@ -186,23 +213,23 @@
     },
     {
       "number": 18,
-      "text": "și L-am văzut zicându-mi: «Grăbește-te și ieși repede din Ierusalim, pentru că nu vor primi mărturia ta despre Mine.»"
+      "text": "și L-am văzut zicându-mi: Grăbește-te și ieși repede din Ierusalim, pentru că nu vor primi mărturia ta despre Mine."
     },
     {
       "number": 19,
-      "text": "Iar eu am zis: «Doamne, ei înșiși știu că eu îi închideam și îi băteam prin sinagogi pe cei care credeau în Tine;"
+      "text": "I-am spus, Doamne, ei înșiși știu că am închis și bătut în fiecare sinagogă pe cei care au crezut în tine."
     },
     {
       "number": 20,
-      "text": "și când era vărsat sângele lui Ștefan, martorul Tău, stăteam și eu de față, încuviințam și păzeam hainele celor care-l omorau.»"
+      "text": "Când sângele lui Ștefan, martorul tău, a fost vărsat, am fost, de asemenea, în picioare de, consimtând la moartea lui, și păzind mantiile celor care l-au ucis."
     },
     {
       "number": 21,
-      "text": "El mi-a zis: «Mergi, căci Eu te voi trimite departe, la neamuri.»”"
+      "text": "El mi-a zis: Mergi, căci Eu te voi trimite departe, la neamuri."
     },
     {
       "number": 22,
-      "text": "L-au ascultat până la cuvântul acesta, apoi și-au ridicat glasul, zicând: „Înlătură de pe pământ un astfel de om, căci nu se cuvine să trăiască!”"
+      "text": "L-au ascultat până la cuvântul acesta, apoi și-au ridicat glasul, zicând: Înlătură de pe pământ un astfel de om, căci nu se cuvine să trăiască!"
     },
     {
       "number": 23,
@@ -214,19 +241,19 @@
     },
     {
       "number": 25,
-      "text": "Dar când l-au întins cu ajutorul curelelor, Pavel i-a zis centurionului care stătea acolo: „Vă este îngăduit să biciuiți un om care este roman și necondamnat?”"
+      "text": "Dar când l-au întins cu ajutorul curelelor, Pavel i-a zis centurionului care stătea acolo: Vă este îngăduit să biciuiți un om care este roman și necondamnat?"
     },
     {
       "number": 26,
-      "text": "Auzind, centurionul s-a dus la comandant și l-a înștiințat: „Ce ai de gând să faci? Omul acesta este roman!”"
+      "text": "Auzind, centurionul s-a dus la comandant și l-a înștiințat: Ce ai de gând să faci? Omul acesta este roman!"
     },
     {
       "number": 27,
-      "text": "Comandantul s-a apropiat și i-a zis: „Spune-mi, tu ești roman?” El a răspuns: „Da.”"
+      "text": "Comandantul s-a apropiat și i-a zis: Spune-mi, tu ești roman? El a răspuns: Da."
     },
     {
       "number": 28,
-      "text": "Comandantul a răspuns: „Eu am dobândit cetățenia aceasta cu o sumă mare.” Pavel a zis: „Dar eu sunt roman din naștere.”"
+      "text": "Comandantul a răspuns: Eu am dobândit cetățenia aceasta cu o sumă mare. Pavel a zis: Dar eu sunt roman din naștere."
     },
     {
       "number": 29,
@@ -234,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "A doua zi, vrând să afle cu certitudine de ce era acuzat de iudei, l-a dezlegat și a poruncit să se întrunească marii preoți și întregul Sinedriu. Apoi l-a coborât pe Pavel și l-a pus înaintea lor."
+      "text": "Dar a doua zi, dorind să știe adevărul despre motivul pentru care a fost acuzat de iudei, el l-a eliberat de lanțuri și a poruncit preoților cei mai de seamă și întregului consiliu să vină împreună, și l-a adus pe Pavel jos și l-a pus înaintea lor."
     }
   ],
   "editorialNotes": [

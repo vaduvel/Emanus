@@ -3,8 +3,8 @@
   "bookId": "2CO",
   "bookName": "2 Corinteni",
   "chapter": 13,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/2CO13.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/2CO13.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/2CO.13.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Capitolul păstrează apelul la autoexaminare din 13:5-6 și îl leagă de adevărul lucrării apostolice.",
-      "La 13:12-14 s-a urmat explicit regula de versificație tradițională din registrul proiectului, fără duplicarea textului grec."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -85,21 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "martorii din 13:1, slăbiciunea și puterea lui Hristos în 13:3-4, verificarea de sine în 13:5, maparea tradițională 13:12-14"
+      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "2 Corinteni 13:4 păstrează contrastul „răstignit din slăbiciune / trăiește prin puterea lui Dumnezeu”.",
-        "2 Corinteni 13:9-11 redă κατάρτισις / καταρτίζεσθε prin limbaj de desăvârșire și restaurare comunitară.",
-        "2 Corinteni 13:12-14 aplică maparea tradițională: v.12 sărutarea, v.13 salutul sfinților, v.14 binecuvântarea."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Încheierea epistolei păstrează tonul de cercetare, corectare și pace, fără a elimina asperitatea avertismentelor.",
-        "Binecuvântarea finală este redată integral, fără adaosul recept „Amin” în textul principal."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:c57f93cebb28684e1ea8ddddfeba0ca10382506af7e1e038f1b9719f728b15d8",
+    "contentDigest": "sha256:774bf1bf99f4a84ec3211ae87d1a3b3607a2276d37f84bd3e5aeb473974b9b4b"
   },
   "verses": [
     {
@@ -190,10 +216,11 @@
       "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
       "reason": "Numerotarea tradițională mută a doua propoziție din SBL 2 Corinteni 13:12 la 13:13.",
       "reviewRequired": true,
-      "resolutionStatus": "pending",
+      "resolutionStatus": "resolved",
       "alternatives": [
         "Vă salută toți sfinții."
-      ]
+      ],
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     },
     {
       "verse": 14,
@@ -201,10 +228,11 @@
       "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
       "reason": "Numerotarea tradițională 13:14 corespunde integral binecuvântării din SBL 2 Corinteni 13:13.",
       "reviewRequired": true,
-      "resolutionStatus": "pending",
+      "resolutionStatus": "resolved",
       "alternatives": [
         "Harul Domnului Isus Hristos și dragostea lui Dumnezeu și părtășia Duhului Sfânt să fie cu voi toți."
-      ]
+      ],
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

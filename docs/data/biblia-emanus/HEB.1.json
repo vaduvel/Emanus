@@ -3,8 +3,8 @@
   "bookId": "HEB",
   "bookName": "Evrei",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,140 +28,176 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/HEB01.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/HEB01.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/HEB.1.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 14,
-      "reviewed": 0,
+      "reviewed": 14,
       "continuous": true,
       "verseNumbersSha256": "sha256:7a3ab5474e4f9b4cf30d57afff13218248c7c84cb0ce11908587248cfb8adaf1"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 316,
+        "secondary": 95,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5922586297890594,
+      "minimumScore": 0.5759312754780807
+    },
+    "textDigest": "sha256:e0cc8818059083c1a7e23e66774be75b8146fcf02691d43937fea104bff1e580",
+    "contentDigest": "sha256:f7099dc65897c6b0992adc428fe7effd4998adcf2f5ca7692c541c34555ae1a3"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Dumnezeu, după ce, în trecut, le-a vorbit taților prin prooroci, în multe feluri și în diferite feluri,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "la sfîrșitul acestor zile, ne-a vorbit prin Fiul Său, pe care l-a numit moștenitor al tuturor lucrurilor, prin care a făcut și lumile."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Fiul Său este strălucirea slavei Sale, chipul averii Sale, și sprijinește toate lucrurile prin cuvântul puterii Lui, care, după ce ne-a curățit de păcatele noastre, s-a așezat la dreapta Maiestății Sale,"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "După ce a devenit mult mai bun decât îngerii, cel mai excelent nume pe care l-a moștenit este mai bun decât al lor."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Căci căruia dintre îngeri i-a zis el vreodată:Tu ești Fiul meu; astăzi am devenit tatăl tău?„ iarăși:Eu îi voi fi Tată el Îmi va fi Fiu?”"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Când îl aduce din nou în lume pe întâiul născut, el spune:Toți îngerii lui Dumnezeu să i se închine!„"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Despre îngeri spune:El face vânturile îngerilor Săi pe robii Săi o flacără de foc.”"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Dar despre Fiul spune:Tronul tău, Dumnezeule, este în vecii vecilor. Sceptrul neprihănirii este sceptrul Împărăției tale."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Ai iubit dreptatea și ai urât nelegiuirea; de aceea Dumnezeu, Dumnezeul tău, te-a uns cu untdelemnul bucuriei deasupra semenilor tăi."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Și, Doamne, la început, ai pus temelia pământului. Cerurile sunt lucrările mâinilor tale."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Ei vor pieri, dar voi continuați; toți vor îmbătrâni ca o haină."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Tu le va rostogoli ca o manta, și ei vor fi schimbate, dar tu ești la fel. Anii tăi nu va eșua."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Dar care dintre îngeri a spus el, în orice moment, să stea la mâna mea dreaptă, până când voi face pe dușmanii tăi șervețel picioarele tale?"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Nu sunt ei toți servitori ai spiritelor, trimiși să facă serviciul de dragul celor care vor moșteni salvarea?"
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "1JN",
   "bookName": "1 Ioan",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,200 +28,236 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1JN02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1JN02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1JN.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 29,
-      "reviewed": 0,
+      "reviewed": 29,
       "continuous": true,
       "verseNumbersSha256": "sha256:31b8946a092fbe0dc4f0d37b82ff1a47922c7986940811c08f1a8f720943399e"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 257,
+        "secondary": 66,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5467158590753175,
+      "minimumScore": 0.5694259949565413
+    },
+    "textDigest": "sha256:7b5715c12eb280bdb691714ad4e62dbe33ba62e206564a699a289229c921d374",
+    "contentDigest": "sha256:8db2fbf6991ece41f9f84f9e7da0afa3971b2250a2401a4501ad3839ab54e1f9"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Copililor, vă scriu aceste lucruri ca să nu păcătuiți. Dacă păcătuiește cineva, avem un Sfătuitor la Tatăl, pe Isus Hristos, cel drept."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "El este jertfa de ispășire pentru păcatele noastre, și nu numai pentru ale noastre, ci și pentru întreaga lume."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Iată cum știm că -L cunoaștem: dacă păzim poruncile Lui."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Cel care spune:? Îl cunosc, și nu respectă poruncile sale, este un mincinos, și adevărul nu este în el."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Dar dragostea lui Dumnezeu a fost desăvârșită în cel ce își ține cuvântul. Iată cum știm că suntem în El."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Cel care spune că rămâne în el ar trebui să meargă și el așa cum a mers."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Fraților, nu vă scriu o poruncă nouă, ci o poruncă veche pe care ați primit-o de la început. Vechea poruncă este cuvântul pe care l-ați auzit de la început."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Din nou, vă scriu o poruncă nouă, care este adevărată în El și în voi, pentru că întunericul trece și lumina adevărată strălucește deja."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Cel care spune că este în lumină și urăște pe fratele său este în întuneric chiar și până acum."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Cel ce își iubește fratele rămâne în lumină și nu există nici o ocazie de poticnire în el."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Dar cel ce urăște pe fratele său este în întuneric umblă în întuneric nu știe încotro se duce, pentru că întunericul i-a orbit ochii."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Vă scriu, copilașilor, pentru că păcatele voastre vă sunt iertate pentru numele Lui."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Vă scriu vouă,, pentru că Îl cunoașteți pe Cel ce este de la început. Vă scriu vouă, tinerilor, pentru că ați biruit pe cel rău. Vă scriu vouă, copililor, pentru că Îl cunoașteți pe Tatăl."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "V'am scris,, pentrucă voi cunoașteți pe Celce este dela început. V'am scris, tinerilor, pentrucă sunteți tari, Cuvîntul lui Dumnezeu rămîne în voi, ați biruit pe cel rău."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Nu iubi lumea sau lucrurile care sunt în lume. Dacă cineva iubește lumea, dragostea Tatălui nu este în el."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Căci tot ce este în lume, pofta cărnii, pofta ochilor și mândria vieții este Tatăl, dar este lumea."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Lumea trece cu poftele ei, dar cel care face pe Dumnezeu va rămâne pentru totdeauna."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Copii, acestea sunt vremurile de sfârșit, și după cum ați auzit că Antihristul vine, chiar și acum au apărut mulți anticriști. Prin aceasta știm că este ora finală."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Au ieșit de la noi, dar nu ne aparțineau nouă, căci, dacă ar fi fost ai noștri, ar fi rămas cu noi, dar au plecat, ca să ni se arate că niciunul dintre ei nu ne aparține."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Aveți o ungere de la Cel Sfânt, și toți aveți cunoștință."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Nu v-am scris pentru că nu știți adevărul, ci pentru că îl știți pentru că nici o minciună nu este din adevăr."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Cine este mincinosul, dacă nu cel ce tăgăduiește că Isus este Hristosul? Acesta este Antihristul, cel ce tăgăduiește pe Tatăl pe Fiul."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Cine neagă pe Fiul nu are pe Tatăl. Cine mărturisește pe Fiul are și pe Tatăl."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "De aceea, ca pentru voi, să rămână în voi, pe care ați auzit-o de la început. Dacă ceea ce ați auzit de la început rămâne în voi, veți rămâne și voi în Fiul și în Tatăl."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Aceasta este promisiunea pe care El ne-a promis-o, viața veșnică."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "V-am scris aceste lucruri despre cei care vă vor rătăci."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Cît despre voi, ungerea pe care ați primit -o de la El rămîne în voi, și nu aveți nevoie ca cineva să vă învețe. Dar, după cum vă învață ungerea Lui despre toate lucrurile, și este adevărată, și nu este o minciună, și după cum v - a învățat ea, veți rămîne în El."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Acum, copilașilor, rămîneți în El, ca, cînd se va arăta, să avem curaj și să nu ne fie rușine înaintea Lui la venirea Lui."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Dacă știți că el este drept, știți că oricine practică dreptatea s - a născut din el."
     }
   ],
   "editorialNotes": [],

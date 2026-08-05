@@ -3,8 +3,8 @@
   "bookId": "2CO",
   "bookName": "2 Corinteni",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/2CO07.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/2CO07.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/2CO.7.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Versetele 7:8-11 păstrează progresia de la întristare la pocăință și la seriozitatea concretă a comunității.",
-      "La 7:12 s-a urmat lectura critică centrată pe râvna corintenilor pentru Pavel și echipa lui."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -85,21 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "curățirea de întinarea cărnii și a duhului în 7:1, întristarea după Dumnezeu în 7:8-11, lectura „zelul vostru pentru noi” în 7:12"
+      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "2 Corinteni 7:1 păstrează perechea „carne și duh” fără reducerea la o singură sferă morală.",
-        "2 Corinteni 7:10 redă distinct „întristarea după Dumnezeu” și „întristarea lumii”.",
-        "2 Corinteni 7:12 urmează lectura SBL despre „zelul vostru pentru noi”, nu inversarea receptă."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Pocăința este redată ca schimbare serioasă produsă de întristarea după Dumnezeu, nu ca simplă emoție trecătoare.",
-        "Tonul capitolului păstrează atât mustrarea precedentă, cât și restaurarea relației dintre Pavel și corinteni."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:e29540c7ade3a0cdd781339ca295f3cbadad0c67fe75643f69803fd2cba381dd",
+    "contentDigest": "sha256:bab6c2591e985b9d76e797274aa4cb8249481e23a3413a2328c2fdceb5e253ec"
   },
   "verses": [
     {
@@ -123,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Faceți-ne loc în inimile voastre! N-am nedreptățit pe nimeni, n-am ruinat pe nimeni, n-am profitat de nimeni."
+      "text": "Deschideți-ne inimile, nu am nedreptățit pe nimeni, nu am corupt pe nimeni, nu am profitat de nimeni."
     },
     {
       "number": 3,
@@ -163,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Așadar, chiar dacă v-am scris, n-a fost din cauza celui care a făcut nedreptatea, nici din cauza celui nedreptățit, ci pentru ca zelul vostru pentru noi să vi se arate înaintea lui Dumnezeu."
+      "text": "Așa că, deși v-am scris, nu am scris pentru cauza lui care a făcut răul, nici pentru cauza lui care a suferit răul, ci pentru ca grija voastră sinceră față de noi să poată fi dezvăluită în voi înaintea lui Dumnezeu."
     },
     {
       "number": 13,

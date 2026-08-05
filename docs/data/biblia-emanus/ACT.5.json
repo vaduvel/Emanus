@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 5,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
     "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT05.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT05.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.5.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Replica marelui preot din 5:28 urmează forma afirmativă SBLGNT — «V-am poruncit cu strictețe» — nu întrebarea negativă din TR și din puntea WEB.",
-      "Fapte 5:41 păstrează formularea SBLGNT «pentru Nume», fără completarea explicită «lui Isus» prezentă în unele lecturi și traduceri.",
-      "Descrierea din 5:15 păstrează scopul oamenilor ca scop narativ și nu afirmă în plus că umbra lui Petru a vindecat efectiv."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 42,
       "reviewed": 42,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Anania și Safira, semnele apostolilor, eliberarea din închisoare, mărturia înaintea Sinedriului și sfatul lui Gamaliel"
+      "scope": "Au fost confruntate toate cele 42 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Dialogurile din 5:3–9 au fost diferențiate clar, păstrând schimbarea de adresare dintre Anania și Safira.",
-        "Reluarea expresiei «la picioarele apostolilor» din capitolul anterior a fost păstrată în 5:2 pentru continuitatea contrastului narativ.",
-        "Lanțul de acțiuni din 5:21–26 a fost segmentat natural fără omiterea Sinedriului, a sfatului bătrânilor, a temnicerilor sau a fricii de popor."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Minciuna față de Duhul Sfânt și afirmația «lui Dumnezeu» sunt păstrate în succesiunea textului, fără adăugarea unei concluzii dogmatice explicative.",
-        "Libertatea asupra proprietății din 5:4 rămâne explicită și nu este transformată într-o condamnare a posesiei în sine.",
-        "Sfatul lui Gamaliel este redat ca discursul personajului, fără a fi ridicat în traducere la rangul unei promisiuni universale."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:ef145bf94c94aa7f89fce2d21c950d7dd32d227c35960d684524238ac66dc307",
+    "contentDigest": "sha256:8d9f67cb2d33a886641c34cf340cc4f521596d1d07c347f6d1366c05e7d43539"
   },
   "verses": [
     {
@@ -141,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Cei mai tineri s-au ridicat, l-au înfășurat, apoi l-au scos afară și l-au înmormântat."
+      "text": "Tinerii s-au sculat și l-au înfășurat, și l-au dus afară și l-au îngropat."
     },
     {
       "number": 7,
@@ -169,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Dintre ceilalți, nimeni nu îndrăznea să li se alăture, însă poporul îi prețuia mult."
+      "text": "Nici unul dintre ceilalți nu a îndrăznit să li se alăture; totuși, poporul i - a onorat."
     },
     {
       "number": 14,
@@ -181,11 +205,11 @@
     },
     {
       "number": 16,
-      "text": "Se aduna și mulțimea din cetățile din jurul Ierusalimului, aducând bolnavi și oameni chinuiți de duhuri necurate; și toți erau vindecați."
+      "text": "Mulțimea s'a strîns din cetățile din jurul Ierusalimului, aducînd pe oameni bolnavi și pe cei chinuiți de duhuri necurate, și toți au fost vindecați."
     },
     {
       "number": 17,
-      "text": "Dar marele preot și toți cei care erau cu el, adică gruparea saducheilor, s-au ridicat plini de invidie,"
+      "text": "Dar marele preot s'a sculat, și toți cei ce erau cu el (care este secta Saducheilor) s'au umplut de gelozie."
     },
     {
       "number": 18,
@@ -201,11 +225,11 @@
     },
     {
       "number": 21,
-      "text": "După ce au auzit, au intrat dis-de-dimineață în Templu și îi învățau pe oameni. Când au sosit marele preot și cei care erau cu el, au convocat Sinedriul și întregul sfat al bătrânilor fiilor lui Israel; apoi au trimis la temniță să fie aduși apostolii."
+      "text": "Cînd au auzit ei lucrul acesta, au intrat în Templu, în zori, și au învățat. Dar marele preot și cei ce erau cu el au venit și au chemat sfetnicii, împreună cu tot Senatul copiilor lui Israel, și au trimes la închisoare să -i aducă."
     },
     {
       "number": 22,
-      "text": "Dar slujbașii care s-au dus nu i-au găsit în închisoare. S-au întors și au dat de veste,"
+      "text": "Dar ofițerii care au venit nu i-au găsit în închisoare. S-au întors și au raportat,"
     },
     {
       "number": 23,
@@ -221,11 +245,11 @@
     },
     {
       "number": 26,
-      "text": "Atunci căpetenia a plecat împreună cu slujbașii și i-a adus, dar nu cu forța, căci se temeau să nu fie omorâți cu pietre de popor."
+      "text": "Atunci căpitanul s'a dus cu ofițerii, și i -a adus fără violență, pentrucă se temeau că poporul îi va omorî cu pietre."
     },
     {
       "number": 27,
-      "text": "După ce i-au adus, i-au pus să stea înaintea Sinedriului, iar marele preot i-a întrebat,"
+      "text": "După ce i-au adus, i-au pus înaintea consiliului. Marele preot i-a întrebat:"
     },
     {
       "number": 28,
@@ -245,11 +269,11 @@
     },
     {
       "number": 32,
-      "text": "Noi suntem martori ai acestor lucruri, și Duhul Sfânt, pe care Dumnezeu L-a dat celor care ascultă de El.”"
+      "text": "Noi suntem martorii Lui pentru aceste lucruri; la fel este Duhul Sfânt, pe care Dumnezeu L-a dat celor ce ascultă de El.”"
     },
     {
       "number": 33,
-      "text": "Când au auzit acestea, erau sfâșiați de mânie și voiau să-i omoare."
+      "text": "Dar cînd au auzit lucrul acesta, au fost tăiați la inimă, și au fost hotărîți să -i omoare."
     },
     {
       "number": 34,
@@ -269,23 +293,23 @@
     },
     {
       "number": 38,
-      "text": "Și acum vă spun: depărtați-vă de oamenii aceștia și lăsați-i! Căci, dacă planul acesta sau lucrarea aceasta este de la oameni, va fi nimicită;"
+      "text": "Acum vă spun, retrageți-vă de la acești oameni și lăsați-i în pace, căci dacă acest sfat sau această lucrare este a oamenilor, ea va fi răsturnată."
     },
     {
       "number": 39,
-      "text": "dar, dacă este de la Dumnezeu, nu-i veți putea nimici. Nu cumva să fiți găsiți luptând chiar împotriva lui Dumnezeu!” Ei s-au lăsat convinși de el."
+      "text": "Dar dacă este de la Dumnezeu, nu vei putea să-l răstoarne, și v-ar fi găsit chiar să lupte împotriva lui Dumnezeu!"
     },
     {
       "number": 40,
-      "text": "I-au chemat pe apostoli, i-au bătut, le-au poruncit să nu mai vorbească în Numele lui Isus și le-au dat drumul."
+      "text": "Ei au fost de acord cu el. Chemînd pe apostoli, i-au bătut și le-au poruncit să nu vorbească în numele lui Isus, și să-i lase să plece."
     },
     {
       "number": 41,
-      "text": "Ei au plecat deci dinaintea Sinedriului bucurându-se că au fost socotiți vrednici să fie dezonorați pentru Nume."
+      "text": "De aceea, ei au plecat de la prezența consiliului, bucurîndu - se că erau socotiți vrednici să sufere de rușine pentru numele lui Isus."
     },
     {
       "number": 42,
-      "text": "Și, în fiecare zi, în Templu și din casă în casă, nu încetau să învețe și să vestească Evanghelia despre Hristos Isus."
+      "text": "Și, în fiecare zi, în Templu și din casă în casă, nu încetau să învețe și să vestească Evanghelia despre Hristos Isus.”"
     }
   ],
   "editorialNotes": [

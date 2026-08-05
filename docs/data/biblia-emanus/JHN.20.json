@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 20,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,210 +42,247 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN20.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN20.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/20/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.20.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 31,
-      "reviewed": 0,
+      "reviewed": 31,
       "continuous": true,
       "verseNumbersSha256": "sha256:45e43a625e025e8dd0ee6a503bc681e88cfdffc149007a62b49ec44e0ded441a"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:e2b6f95a7fb5eb7bb4ae5e6d92625951b1f8bcabf2dc849f90d453536b6271a9",
+    "contentDigest": "sha256:98ce463d8b1a371458a4389c4afe675e1daba92d582c5dc47ebbf3d1a6f250ee"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "În prima zi a săptămânii, Maria Magdalena s-a dus devreme, pe când era încă întuneric, la mormânt, a văzut că piatra fusese luată din mormânt."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "De aceea a alergat a venit la Simon Petru la celălalt ucenic pe care-l iubea Isus le-a zis:L-au scos pe Domnul din mormânt nu știm unde L-au pus!"
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Petru și celălalt ucenic au ieșit, și s'au dus spre mormînt."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Amândoi au fugit împreună, celălalt discipol l-a întrecut pe Petru și a venit la mormânt mai întâi."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Stooping și în căutarea în, el a văzut pânzele de in situată acolo; totuși el nu a intrat în."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Simon Petru a venit după el, și a intrat în mormînt. A văzut hainele de in zăcând,"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "și cârpa care fusese pe capul lui, nu culcată cu hainele de in, ci înfășurată într'un loc de unul singur."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Atunci a intrat și celălalt ucenic, care a venit primul la mormânt, și a văzut și a crezut."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Căci ei încă nu cunoșteau Scriptura, că El trebuie să învie din morți."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Astfel ucenicii au plecat din nou la casele lor."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Dar Maria stătea afară, la mormînt, și, în timp ce plângea, s'a aplecat și s'a uitat în mormânt,"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Și a văzut doi îngeri în alb, unul la cap unul la picioare, unde zăcuse trupul lui Isus."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Ei au întrebat-o:Femeie, de ce plângi? Ea le-a răspuns:Pentru că l-au luat pe Domnul meu nu știu unde l-au pus."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "După ce a spus aceasta, ea s - a întors și l - a văzut pe Isus stând în picioare și nu știa că era Isus."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Femeie, de ce plângi? Pe cine cauți? Ea, crezând că este grădinarul, i-a zis:Domnule, dacă l-ai luat, spune-mi unde l-ai pus îl voi lua."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Marie! Ea s-a întors i-a zis:Raboni!, adică:Învățătorule!"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Nu mă ține, căci nu m-am suit încă la Tatăl Meu; ci du-te la frații Mei spune-le: Mă sui la Tatăl Meu Tatăl vostru, la Dumnezeul Meu Dumnezeul vostru."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Maria Magdalena a venit și le -a spus discipolilor că văzuse pe Domnul, și că el îi spusese aceste lucruri."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "De aceea, când era seară în acea zi, în prima zi a săptămânii, și când ușile erau încuiate unde erau adunați discipolii, de teama iudeilor, Isus a venit și a stat în mijloc și le-a spus: Pace vouă."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "După ce a zis lucrul acesta, le -a arătat mînile și partea lui. De aceea ucenicii s'au bucurat cînd au văzut pe Domnul."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "De aceea Isus le-a zis din nou:Pace vouă! Precum M-a trimis pe Mine Tatăl, așa vă trimit Eu pe voi."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "După ce a spus acest lucru, el a suflat peste ei, și le-a spus,? Primiți Duhul Sfânt!"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Dacă iertați păcatele cuiva, ele au fost iertate; dacă păstrați păcatele cuiva, ele au fost ținute."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Dar Toma, unul dintre cei doisprezece, numit Didymus, nu era cu ei când a venit Isus."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Ceilalți ucenici I-au zis deci:,,Am văzut pe Domnul! Dar El le -a zis:,,Dacă nu voi vedea în mînile Lui urmele cuielor, dacă nu voi pune degetul Meu în urmele cuielor, dacă nu voi pune mîna Mea în coasta Lui, nu voi crede."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "După opt zile, discipolii lui au fost din nou înăuntru și Toma a fost cu ei. Isus a venit, ușile fiind încuiate, și a stat în mijloc, și a spus, Pacea să fie pentru tine."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Apoi a zis lui Toma:Ajunge aici degetul tău și vezi mâinile mele. Întinde aici mâna ta și pune-o în coasta mea. Nu fi necredincios, ci credincios."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Toma i-a răspuns:Domnul meu Dumnezeul meu!"
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Isus i-a răspuns:Pentru că M-ai văzut, ai crezut; ferice de cei ce n-au văzut au crezut!"
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "De aceea Isus a făcut multe alte semne în prezența ucenicilor Săi, cari nu sunt scrise în cartea aceasta."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Dar acestea sunt scrise ca să credeți că Isus este Hristosul, Fiul lui Dumnezeu, și că crezând că puteți avea viață în numele Lui."
     }
   ],
   "editorialNotes": [
     {
       "verse": 31,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

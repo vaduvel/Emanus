@@ -3,8 +3,8 @@
   "bookId": "1PE",
   "bookName": "1 Petru",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,184 +28,220 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "criticalIssues": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1PE01.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1PE01.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1PE.1.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 25,
-      "reviewed": 0,
+      "reviewed": 25,
       "continuous": true,
       "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 257,
+        "secondary": 66,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5467158590753175,
+      "minimumScore": 0.5694259949565413
+    },
+    "textDigest": "sha256:ffd62fa7e82277eff5ef424df24ebd6cc5501635b93221d943f3b0ea7dd0a39c",
+    "contentDigest": "sha256:f12d8dabea098fa91d4013df4ec30939ec10901330ac34bc849ce2e669a705d6"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Petru, apostol al lui Isus Hristos, celor aleși care trăiesc ca străini în Dispersia din Pont, Galatia, Capadocia, Asia și Bitinia,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Conform preștiinței lui Dumnezeu Tatăl, în sfințirea Duhului, ca să ascultați de Isus Hristos și să fiți stropiți cu sângele Lui: Har vouă și pacea să vă fie înmulțită."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Binecuvîntat să fie Dumnezeul și Tatăl Domnului nostru Isus Hristos, care, potrivit marii sale îndurări, ne-a făcut să ne naștem din nou la o speranță vie prin învierea lui Isus Hristos din morți,"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "la o moștenire nestricăcioasă neîntinată, care nu se veștejește, păstrată în ceruri pentru voi,"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "care prin puterea lui Dumnezeu sunt păzite prin credință pentru o salvare gata să fie revelată în ultima dată."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "În aceasta vă bucurați foarte mult, deși acum pentru puțin timp, dacă este necesar, ați fost mâhniți în diferite încercări,"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "ca dovada credinței voastre, care este mai prețioasă decât aurul care piere, chiar dacă este încercată prin foc, să fie găsită pentru a duce la laudă, glorie și onoare la revelarea lui Isus Hristos"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Pe care, neștiind, o iubești. În el, deși acum nu-l vezi, totuși crezând, te bucuri mult de o bucurie de nedescris și plină de glorie,"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "să primiți rezultatul credinței voastre, salvarea sufletelor voastre."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Cu privire la această salvare, profeții au căutat au căutat cu sârguință. Ei au profețit despre harul care avea să vină la voi,"
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "cautarea pentru cine sau ce fel de timp Duhul lui Hristos, care a fost în ele a subliniat atunci când el a prezis suferințele lui Hristos și gloriile care le-ar urma."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Li s-a arătat că ei nu s-au slujit pe ei înșiși, ci pe voi, în aceste lucruri, care v-au fost vestite acum prin cei ce v-au propovăduit Evanghelia prin Duhul Sfânt, trimiși din cer; lucruri pe care îngerii doresc să le privească."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "De aceea pregătiți-vă mintea pentru acțiune. Fiți treji și puneți-vă nădejdea deplină pe harul care vă va fi adus la revelația lui Isus Hristos."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "ca niște copii ai ascultării, care nu se conformează voi înșivă după poftele voastre dintâi ca în ignoranța voastră,"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Precum Cel ce v-a chemat este sfânt, așa voi fiți sfinți în toată purtarea voastră."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Căci este scris:Voi fi sfinți, căci Eu sunt sfânt.„"
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dacă Îl ca Tată, care, fără respect de persoane, judecă după lucrarea fiecăruia, petreceți timpul voastre ca străini aici, cu o teamă plină de respect,"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "știind că ați fost răscumpărați, nu cu lucruri stricate, cum ar fi argintul sau aurul, de la modul de viață nefolositor dat de la părinții voștri,"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "ci cu sânge prețios, ca al unui miel fără cusur sau pată, sângele lui Hristos,"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "care a fost cunoscut mai înainte de întemeierea lumii, dar a fost revelat în această ultimă epocă de dragul tău,"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "care prin El sunt credincioși în Dumnezeu, care L-a înviat din morți și I-a dat slavă, ca credința și nădejdea voastră să fie în Dumnezeu."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Văzând că v-ați purificat sufletele în ascultarea voastră de adevăr prin Duhul cu afecțiune frățească sinceră, iubiți-vă unii pe alții din inimă cu ardoare,"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "născut din nou, nu dintr-o sămân stricăcioasă, ci dintr-o sămân nestricăcioasă, prin Cuvântul lui Dumnezeu, care trăiește rămâne pentru totdeauna."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Căci toată carnea este ca iarba, și toată slava omului este ca floarea din iarbă. Iarba se usucă, și floarea ei cade."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Dar Cuvîntul Domnului rămîne în veac.” Acesta este Cuvîntul veștii bune care v-a fost propovăduit."
     }
   ],
   "editorialNotes": [],

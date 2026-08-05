@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 26,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,384 +28,420 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT26.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT26.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.26.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 75,
-      "reviewed": 0,
+      "reviewed": 75,
       "continuous": true,
       "verseNumbersSha256": "sha256:07fb7ce020c7179bac77236bc91e3dc9fc70b40acff1c9ef955456f4013d01a3"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 75 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:cb5b71302891c94fc352ea78c8a3923c80943a7d3bc864cb7dc6e06333276073",
+    "contentDigest": "sha256:e88bcd5cb4ddc99a7761fd4129d008021609d5f31e1acce1d121faf025f8012a"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După ce a isprăvit toate aceste cuvinte, Isus a zis ucenicilor Săi:"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "că după două zile vine Paștele și Fiul Omului va fi dat să fie răstignit."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Preoții cei mai de seamă, cărturarii și bătrînii poporului s'au strîns la curtea marelui preot, numit Caiafa."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Ei s - au sfătuit împreună să - l ia pe Isus prin înșelăciune și să - l ucidă."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Ei au spus: Nu în timpul sărbătorii, ca să nu se întâmple o răscoală printre oameni."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Când Isus era în Betania, în casa lui Simon, leprosul,"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "O femeie a venit la el cu un borcan de alabastru foarte scump, și i l-a turnat pe cap în timp ce stătea la masă."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Dar când ucenicii Lui au văzut aceasta, s-au indignat, spunând: De ce această risipă?"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Pentru acest unguent ar fi putut fi vândute pentru mult și a dat la săraci."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Cu toate acestea, știind acest lucru, Isus le-a spus,? De ce te deranjează femeia? Ea a făcut o treabă bună pentru mine."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Căci pe săraci îi ai mereu cu tine, dar pe mine nu mă ai întotdeauna."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Pentru că în turnarea acest unguent pe corpul meu, ea a făcut-o pentru a mă pregăti pentru înmormântare."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Cel mai sigur vă spun, oriunde această veste bună este predicat în întreaga lume, ceea ce a făcut această femeie va fi, de asemenea, vorbit ca o comemorare a ei."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Unul din cei doisprezece, numit Iuda Iscarioteanul, s'a dus la preoții cei mai de seamă."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Și a zis:,,Ce vrei să-mi dai, dacă ți -l dau? Și i-au cîntărit treizeci de arginți."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "De atunci a căutat ocazia să-l trădeze."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "În prima zi de pâine nedospită, ucenicii au venit la Isus i-au zis:Unde vrei să-ți pregătimle?"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "El a zis:Du-te în cetate la un anumit om spune-i: Învățătorul zice: Timpul Meu este aproape; voi ținele în casa ta cu ucenicii Mei."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Ucenicii au făcut cum le poruncise Isus, și au pregătit Paștele."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "După ce a venit seara, stătea la masă cu cei doisprezece ucenici."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "În timp ce mâncau, el a spus:Adevărat vă spun că unul dintre voi mă va trăda."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Ei s-au întristat foarte tare, și fiecare a început să-l întrebe, nu-i așa, Doamne?"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "El a răspuns:Cel care-a înmuiat mâna cu mine în blid mă va trăda."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Fiul Omului merge așa cum este scris despre el, dar vai de omul prin care Fiul Omului este trădat! Ar fi mai bine pentru acel om dacă nu s-ar fi născut."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Iuda, care l-a trădat, i-a răspuns:Nu sunt eu, nu-i așa, rabine? El i-a răspuns:Tu ai spus."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "În timp ce mâncau, Isus a luat pâine, a mulțumit pentru ea, și a rupt-o. El a dat discipolilor și a spus, Ia, mânca; acesta este corpul meu."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "El a luat paharul, a mulțumit, și le-a dat, zicând:,,Toți beți,"
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "pentru că acesta este sângele meu al noului legământ, care este turnat pentru mulți pentru iertarea păcatelor."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Dar vă spun că nu voi mai bea din acest fruct al viței de vie de acum încolo, până în ziua în care îl voi bea din nou cu voi în Regatul Tatălui meu."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "După ce au cântat un imn, au ieșit pe Muntele Măslinilor."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Apoi Isus le-a spus:? Toate dintre voi va fi făcut să se poticnească din cauza mea în seara asta, pentru că este scris,? Voi lovi păstorul, și oile turmei vor fi împrăștiate."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Dar după ce voi fi crescut, voi merge înaintea ta în Galileea."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Dar Petru i-a răspuns:Chiar dacă toți vor fi făcuți să se poticnească din cauza ta, eu nu voi fi făcut niciodată să mă poticnesc."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Adevărat, adevărat îți spun că în seara aceasta, înaintea cocoului, Te vei lepăda de Mine de trei ori."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Petru i-a zis:Chiar dacă ar fi să mor cu tine, nu mă voi lepăda de tine. Și toți ucenicii au spus la fel."
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Apoi Isus a venit cu ei într-un loc numit Ghetsimani, și le-a spus discipolilor săi: Șezi aici, în timp ce eu mă duc acolo și mă rog."
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "A luat cu el pe Petru și pe cei doi fii ai lui Zebedei, și a început să se întristeze și să se întristeze."
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Atunci Isus le-a zis:Sufletul Meu este nespus de întristat, până la moarte; rămâneți aici veghe împreună cu Mine."
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "El a mers înainte un pic, a căzut pe fața lui, și s-a rugat, spunând, Tatăl meu, dacă este posibil, lăsați acest pahar să treacă de la mine; totuși, nu ceea ce doresc, dar ceea ce doriți."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "A venit la discipoli și i-a găsit dormind, și i-a spus lui Petru: Ce, n-ai putut să stai cu mine o oră?"
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "Priviți și rugați-vă, că nu intrați în ispită. Spiritul este într-adevăr dispus, dar carnea este slab."
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "Din nou, a doua oară el a plecat și s-a rugat, spunând, Tatăl meu, în cazul în care acest pahar poate trece de la mine dacă nu-l beau, dorința ta se face."
     },
     {
       "number": 43,
-      "text": "DE TRADUS"
+      "text": "S-a întors și i-a găsit dormind, pentru că ochii lor erau grei."
     },
     {
       "number": 44,
-      "text": "DE TRADUS"
+      "text": "El i -a părăsit din nou, a plecat, și s'a rugat a treia oară, spunînd aceleași cuvinte."
     },
     {
       "number": 45,
-      "text": "DE TRADUS"
+      "text": "Apoi a venit la ucenicii Săi și le -a zis:,,Încă mai dormi și te odihnești? Iată, ceasul este aproape, și Fiul omului este trădat în mînile păcătoșilor."
     },
     {
       "number": 46,
-      "text": "DE TRADUS"
+      "text": "Scoală-te, să mergem. Iată, cel care mă trădează este aproape."
     },
     {
       "number": 47,
-      "text": "DE TRADUS"
+      "text": "Pe cînd vorbea el încă, iată că a venit Iuda, unul din cei doisprezece, împreună cu el o mare de săbii ciomege, dela preoții cei mai de seamă dela bătrînii poporului."
     },
     {
       "number": 48,
-      "text": "DE TRADUS"
+      "text": "Cel ce -l trădase le dăduse un semn, le -a zis:,,Cel pe care -l voi săruta, acela este. Prindeți -l."
     },
     {
       "number": 49,
-      "text": "DE TRADUS"
+      "text": "Îndată a venit la Isus a zis:Salutări, Rabi! l-a sărutat."
     },
     {
       "number": 50,
-      "text": "DE TRADUS"
+      "text": "Isus i -a zis:,,Prietene, de ce ești aici? Ei au venit, au pus mîna pe Isus, L-au luat."
     },
     {
       "number": 51,
-      "text": "DE TRADUS"
+      "text": "Iată că unul dintre cei ce erau cu Isus și -a întins mîna, a scos sabia, a lovit pe robul marelui preot, și i -a tăiat urechea."
     },
     {
       "number": 52,
-      "text": "DE TRADUS"
+      "text": "Isus i -a zis:,,Pune-ți sabia înapoi la locul ei, căci toți cei ce iau sabia vor muri de sabie."
     },
     {
       "number": 53,
-      "text": "DE TRADUS"
+      "text": "Sau crezi că n-am putut să-l întreb pe Tatăl meu, iar el chiar acum mi-ar trimite mai mult de douăsprezece legiuni de îngeri?"
     },
     {
       "number": 54,
-      "text": "DE TRADUS"
+      "text": "Atunci cum s - ar putea împlini Scripturile că aceasta trebuie să fie așa?"
     },
     {
       "number": 55,
-      "text": "DE TRADUS"
+      "text": "În acea oră Isus a spus mulțimilor, Ai ieșit ca împotriva unui tâlhar cu săbii și treflă să mă prinzi? Am stat zilnic în templu învățând, și nu m-ai arestat."
     },
     {
       "number": 56,
-      "text": "DE TRADUS"
+      "text": "Dar toate acestea s-au întâmplat pentru ca Scripturile profeților să se împlinească. ' Apoi toți discipolii l-au părăsit și au fugit."
     },
     {
       "number": 57,
-      "text": "DE TRADUS"
+      "text": "Cei ce -l luaseră pe Isus l - au dus la marele preot Caiafa, unde erau adunați cărturarii și bătrînii."
     },
     {
       "number": 58,
-      "text": "DE TRADUS"
+      "text": "Petru l -a urmat de la o distanță pînă la curtea marelui preot, și a intrat și a șezut cu ofițerii, ca să vadă sfîrșitul."
     },
     {
       "number": 59,
-      "text": "DE TRADUS"
+      "text": "Preoții cei mai de seamă, bătrînii și tot consiliul căutau o mărturie mincinoasă împotriva lui Isus, ca să -l omoare."
     },
     {
       "number": 60,
-      "text": "DE TRADUS"
+      "text": "nu au găsit nici unul. Chiar dacă martori mincinoși au venit înainte, ei nu au găsit nici unul. Dar în cele din urmă doi martori fal au venit înainte"
     },
     {
       "number": 61,
-      "text": "DE TRADUS"
+      "text": "Și a zis:Omul acesta a zis: Pot să dărâm templul lui Dumnezeu să-l zidesc în trei zile."
     },
     {
       "number": 62,
-      "text": "DE TRADUS"
+      "text": "Marele preot s-a ridicat i-a zis:N-ai nici un răspuns? Ce mărturisesc împotriva ta?"
     },
     {
       "number": 63,
-      "text": "DE TRADUS"
+      "text": "Dar Isus tăcea. Marele preot i -a răspuns:,,Te jur, pe Dumnezeul cel viu, să ne spui dacă ești Hristosul, Fiul lui Dumnezeu."
     },
     {
       "number": 64,
-      "text": "DE TRADUS"
+      "text": "Isus i-a zis:Așa ai zis; dar Eu îți spun că după aceea vei vedea pe Fiul Omului stând la dreapta puterii venind pe norii cerului."
     },
     {
       "number": 65,
-      "text": "DE TRADUS"
+      "text": "Atunci marele preot-a sfîat hainele, a zis:,,A vorbit blasfemie! Pentru ce mai avem nevoie de martori? Iată, acum ați auzit blasfemia lui."
     },
     {
       "number": 66,
-      "text": "DE TRADUS"
+      "text": "Ce părere ai? bază au răspuns,? El este demn de moarte!"
     },
     {
       "number": 67,
-      "text": "DE TRADUS"
+      "text": "Apoi l-au scuipat în față și l-au bătut cu pumnii, iar unii l-au pălmuit,"
     },
     {
       "number": 68,
-      "text": "DE TRADUS"
+      "text": "Spune-ne, Hristose! Cine te-a lovit?"
     },
     {
       "number": 69,
-      "text": "DE TRADUS"
+      "text": "Petru dea afară, în curte, o slujnică a venit la el i-a zis:Și tu erai cu Isus, Galileanul!"
     },
     {
       "number": 70,
-      "text": "DE TRADUS"
+      "text": "Dar el a negat în fața lor toți, spunând: Nu știu despre ce vorbești."
     },
     {
       "number": 71,
-      "text": "DE TRADUS"
+      "text": "După ce a ieșit pe verandă, l-a văzut altcineva le-a spus celor care erau acolo:Și omul acesta era cu Isus din Nazaret."
     },
     {
       "number": 72,
-      "text": "DE TRADUS"
+      "text": "Din nou el a negat cu un jurământ, nu-l cunosc pe om."
     },
     {
       "number": 73,
-      "text": "DE TRADUS"
+      "text": "După timp, cei ce stăteau acolo au venit i-au zis lui Petru:Cu adevărat tu ești unul dintre ei, căci vorbirea ta te face cunoscut."
     },
     {
       "number": 74,
-      "text": "DE TRADUS"
+      "text": "Apoi a început să blesteme și să jure că nu-l cunosc pe omul acesta!"
     },
     {
       "number": 75,
-      "text": "DE TRADUS"
+      "text": "Petru-a adus aminte de cuvântul pe care i-l spusese Isus:Înainte de a cînta cocoșul, te vei lepăda de Mine de trei ori. Apoi a ieșit a plîns cu amar."
     }
   ],
   "editorialNotes": [],

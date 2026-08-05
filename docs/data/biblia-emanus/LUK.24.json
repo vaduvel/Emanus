@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 24,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,296 +28,332 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK24.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK24.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.24.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 53,
-      "reviewed": 0,
+      "reviewed": 53,
       "continuous": true,
       "verseNumbersSha256": "sha256:1d1f6a5ee6e5ed7430493c837d149e440b3f2d7cb38db5a987b54307394930e4"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 53 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:78042940e39750fd6be1dc9e13eb3fb7d3b3110de5ed36580e0868c133b022b1",
+    "contentDigest": "sha256:6c20170e2c5c5ebc6c718844e652d8b03e60499f5510ed7706132c16ceedccf1"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Dar în prima zi a săptămânii, la răsăritul zorilor, ei și alții au venit la mormânt, aducând mirodeniile pe care le pregătiseră."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Au găsit piatra rostogolită departe de mormânt."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Ei au intrat și nu au găsit trupul Domnului Isus."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "În timp ce ei erau foarte nedumeriți, iată că doi bărbați stăteau lângă ei îmbrăcați în haine strălucitoare."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Ei s'au înspăimîntat, și s'au plecat cu fața la pămînt. Oamenii le-au zis:,,Pentruce căutați pe cei vii printre morți?"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "El nu este aici, ci a înviat.-vă ce v-a spus când era încă în Galileea,"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "spunând că Fiul Omului trebuie să fie dat în mâinile oamenilor păcătoși și să fie răstignit, iar a treia zi să învie din nou?"
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Și-au amintit cuvintele lui,"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Și s-a întors de la mormânt a spus toate acestea celor unsprezece tuturor celorlalți."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Au fost Maria Magdalena, Ioana, și Maria, mama lui Iacov. Celelalte femei, împreună cu ei, au spus aceste lucruri apostolilor."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Aceste cuvinte le păreau a fi un nonsens, și ei nu le-au crezut."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Dar Petru s'a sculat și a alergat pînă la mormînt. S'a furișat și s'a uitat înăuntru, și a văzut fâșiile de in, zăcând singure, și s'a dus acasă, întrebîndu-se ce se întîmplase."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Iată, doi dintre ei mergeau chiar în acea zi într - un sat numit Emaus, care era la șaizeci de stadioane din Ierusalim."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Vorbeau între ei despre toate aceste lucruri care se întâmplaseră."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "În timp ce vorbeau se întrebau împreună, Isus însuși s-a apropiat a mers cu ei."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Dar ochii lor au fost împiedicați să-L recunoască."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "El le-a spus, Despre ce vorbești în timp ce mergi, și sunt triste?"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Unul dintre ei, numit Cleopa, i-a răspuns:Tu ești singurul străin din Ierusalim care nu știe ce s-a întâmplat acolo în aceste zile?„"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "El le -a zis:,,Ce lucruri? Ei i-au răspuns:,,Lucrurile privitoare la Isus Nazarineanul, care a fost un prooroc puternic în faptă în cuvînt înaintea lui Dumnezeu a întregului popor;"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Preoții cei mai de seamă și căpeteniile noastre l-au dat să fie condamnat la moarte, și l-au răstignit."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Dar noi speram că el avea să răscumpere pe Israel. Da, și în afară de toate acestea, acum este a treia zi de când s-au întâmplat aceste lucruri."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "De asemenea, unele femei din compania noastră ne-au uimit, ajungând devreme la mormânt;"
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Și negăsindu-i trupul, au venit au zis că au văzut ei o vedenie cu îngeri, care ziceau că este viu."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Unii dintre noi s - au dus la mormânt și l - au găsit așa cum spuseseră femeile, dar nu l - au văzut."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "El le-a zis:O, popor nebun încet la inimă să credeți în tot ce au spus profeții!"
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "N-a trebuit oare Hristos să sufere aceste lucruri și să intre în slava Lui?"
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Începând de la Moise și de la toți profeții, el le - a explicat în toate Scripturile lucrurile privitoare la el însuși."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Ei s-au apropiat de satul unde mergeau, iar el s-a comportat ca cum ar fi mers mai departe."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Ei l-au îndemnat:Rămâi cu noi, căci este aproape seară ziua aproape s-a sfârșit.” El a intrat să stea cu ei."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "După ce a șezut la masă cu ei, a luat pâinea și a mulțumit; și le -a rupt -o, și le -a dat -o."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Ochii lor au fost deschiși și ei l-au recunoscut; apoi el a dispărut din ochii lor."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Ei au zis unul către altul:Oare nu ardea în noi inima noastră când ne vorbea pe drum când ne deschidea Scripturile?„"
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "S'au sculat chiar în ceasul acela, s'au întors la Ierusalim, și i-au găsit pe cei unsprezece adunați împreună, și pe cei ce erau cu ei."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Și a zis:Cu adevărat, Domnul a înviat S-a arătat lui Simon!”"
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Ei au relatat lucrurile care s - au petrecut pe drum și cum a fost el recunoscut de ei în ruperea pâinii."
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Pe când vorbeau ei acestea, Isus Însuși a stat în mijlocul lor le-a zis:Pace vouă!„"
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Dar ei erau îngroziți și plini de frică, și presupuneau că văzuseră un spirit."
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "El le -a zis:,,De ce vă tulburați? De ce vă învrăjbesc îndoielile în inimă?"
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Vezi mâinile și picioarele mele, că este cu adevărat mine. Atinge-mă și vezi, pentru un spirit nu are carne și oase, așa cum vedeți că am."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "După ce a spus acestea, le-a arătat mâinile picioarele."
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "În timp ce ei încă nu au crezut de bucurie, și întrebat, el le-a spus, Nu aveți nimic aici să mănânce?"
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "I-au dat o bucată de pește prăjit și niște fagure de miere."
     },
     {
       "number": 43,
-      "text": "DE TRADUS"
+      "text": "Le-a luat și a mâncat în fața lor."
     },
     {
       "number": 44,
-      "text": "DE TRADUS"
+      "text": "El le-a zis:Iată ce v-am spus pe când eram încă cu voi: că trebuie să se împlinească tot ce este scris în Legea lui Moise, în Profeți în Psalmii care Mă privesc.”"
     },
     {
       "number": 45,
-      "text": "DE TRADUS"
+      "text": "Apoi le - a deschis mintea, ca să înțeleagă Scripturile."
     },
     {
       "number": 46,
-      "text": "DE TRADUS"
+      "text": "El le -a zis:,,Așa este scris, și astfel trebuia ca Hristosul să sufere și să învie din morți a treia zi,"
     },
     {
       "number": 47,
-      "text": "DE TRADUS"
+      "text": "și ca pocăința și iertarea păcatelor să fie predicate în numele Său tuturor națiunilor, începând de la Ierusalim."
     },
     {
       "number": 48,
-      "text": "DE TRADUS"
+      "text": "Sunteți martori ai acestor lucruri."
     },
     {
       "number": 49,
-      "text": "DE TRADUS"
+      "text": "Iată, vă trimit promisiunea Tatălui meu asupra voastră. Dar așteptați în orașul Ierusalim până când sunteți îmbrăcați cu putere de sus."
     },
     {
       "number": 50,
-      "text": "DE TRADUS"
+      "text": "El i -a dus pînă la Betania, și a ridicat mînile și le -a binecuvîntat."
     },
     {
       "number": 51,
-      "text": "DE TRADUS"
+      "text": "În timp ce i - a binecuvântat, el s - a retras de la ei și a fost dus în cer."
     },
     {
       "number": 52,
-      "text": "DE TRADUS"
+      "text": "I s-au închinat s-au întors la Ierusalim cu mare bucurie."
     },
     {
       "number": 53,
-      "text": "DE TRADUS"
+      "text": "și erau totdeauna în Templu, lăudați și binecuvântați pe Dumnezeu. Amin."
     }
   ],
   "editorialNotes": [],

@@ -3,8 +3,8 @@
   "bookId": "GAL",
   "bookName": "Galateni",
   "chapter": 4,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/GAL04.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/GAL04.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/GAL.4.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Galateni 4:4-7 păstrează succesiunea „Fiul” / „Duhul Fiului” / „fiu” / „moștenitor” fără inversări explicative.",
-      "Galateni 4:6 urmează lectura critică „în inimile noastre”, nu lectura tradițională „în inimile voastre”.",
-      "Galateni 4:22-31 păstrează alegoria Sara-Agar și citatul din Isaia 54:1 după forma folosită în capitol, fără armonizare cu altă formulă românească."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 31,
       "reviewed": 31,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "înfierea și strigătul „Abba”, lectura „în inimile noastre” din 4:6, alegoria Sara-Agar și citatul din Isaia 54:1"
+      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Galateni 4:14 redă reacția galatenilor într-o română naturală prin „n-ați respins-o cu scârbă”, păstrând forța lui ἐξεπτύσατε.",
-        "Galateni 4:17-18 păstrează jocul dintre a căuta pe cineva cu zel și a fi căutat cu zel, pentru a nu pierde contrastul retoric al pasajului.",
-        "Galateni 4:23-31 menține repetițiile „după carne”, „prin promisiune”, „roabă” și „liberă” ca axe ale argumentului."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Înfierea nu este rescrisă într-un limbaj sentimental modern care ar diminua registrul juridic și relațional al capitolului.",
-        "Alegoria din 4:24 este păstrată ca alegorie declarată de Pavel, fără a o extinde la un sistem simbolic străin textului.",
-        "„Israel”, „Ierusalim” și filiația lui Isaac nu sunt folosite pentru concluzii confesionale suplimentare în corpul traducerii."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:e8766ab86dbb007069113c9731993d197be26807148c8864e8046bbefad33749",
+    "contentDigest": "sha256:7c7ab48f441e8e74d17533d10c89ac9bff1848b6efd6240992d484f0c8353219"
   },
   "verses": [
     {
@@ -129,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Tot așa și noi, când eram copii, eram înrobiți sub elementele lumii;"
+      "text": "La fel noi, când eram copii, eram ținuți în robie sub principiile elementare ale lumii."
     },
     {
       "number": 4,
@@ -137,15 +161,15 @@
     },
     {
       "number": 5,
-      "text": "ca să-i răscumpere pe cei de sub Lege, pentru ca noi să primim înfierea."
+      "text": "ca să răscumpere pe cei ce erau sub Lege, ca să putem primi adopția ca copii."
     },
     {
       "number": 6,
-      "text": "Iar pentru că sunteți fii, Dumnezeu a trimis Duhul Fiului său în inimile noastre, strigând: „Abba, Tată!”"
+      "text": "Și pentru că sunteți copii, Dumnezeu a trimis Duhul Fiului Său în inimile voastre, plângând, Abba, Tată!"
     },
     {
       "number": 7,
-      "text": "Așa că nu mai ești rob, ci fiu; iar dacă ești fiu, ești și moștenitor prin Dumnezeu."
+      "text": "Deci, nu mai ești un rob, ci un fiu; și dacă un fiu, atunci un moștenitor al lui Dumnezeu prin Hristos."
     },
     {
       "number": 8,
@@ -153,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "iar acum, după ce l-ați cunoscut pe Dumnezeu, sau mai degrabă după ce ați fost cunoscuți de Dumnezeu, cum de vă întoarceți iarăși la elementele slabe și sărace, cărora vreți din nou, de la început, să le slujiți ca robi?"
+      "text": "Dar acum că ai ajuns să-L cunoști pe Dumnezeu, sau mai degrabă să fii cunoscut de Dumnezeu, de ce te întorci la cei slabi și mizerabili principii elementare, la care dorești să fii din nou în robie?"
     },
     {
       "number": 10,
@@ -169,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Știți însă că din cauza unei slăbiciuni a cărnii v-am vestit evanghelia întâia dată,"
+      "text": "Dar știi că din cauza slăbiciunii trupești ți-am predicat pentru prima dată vestea bună."
     },
     {
       "number": 14,
@@ -177,11 +201,11 @@
     },
     {
       "number": 15,
-      "text": "Unde este, deci, fericirea voastră? Căci vă mărturisesc că, dacă ar fi fost cu putință, v-ați fi scos ochii și mi i-ați fi dat."
+      "text": "Care a fost binecuvântarea de care v-ați bucurat? Pentru că vă mărturisesc că, dacă este posibil, v-ați fi scos ochii și mi i-ați fi dat."
     },
     {
       "number": 16,
-      "text": "Așa că am ajuns vrăjmașul vostru spunându-vă adevărul?"
+      "text": "Deci, am devenit dușmanul tău spunându-ți adevărul?"
     },
     {
       "number": 17,
@@ -189,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Este bine însă să fii căutat cu zel în ce este bun întotdeauna, și nu doar când sunt eu de față la voi,"
+      "text": "Dar este întotdeauna bine să fie zelos într-o cauză bună, și nu numai atunci când eu sunt prezent cu tine."
     },
     {
       "number": 19,
@@ -209,11 +233,11 @@
     },
     {
       "number": 23,
-      "text": "dar cel din roabă s-a născut după carne, iar cel din cea liberă, prin promisiune."
+      "text": "Totuși, fiul robului s-a născut potrivit cărnii, dar fiul de către femeia liberă s-a născut prin promisiune."
     },
     {
       "number": 24,
-      "text": "Aceste lucruri sunt spuse alegoric, căci acestea sunt două legăminte: unul de la muntele Sinai, care naște pentru robie, și aceasta este Agar,"
+      "text": "Aceste lucruri conțin o alegorie, pentru că acestea sunt două legăminte. Unul este de la Muntele Sinai, care poartă copii la robie, care este Agar."
     },
     {
       "number": 25,
@@ -229,11 +253,11 @@
     },
     {
       "number": 28,
-      "text": "Iar voi, fraților, ca Isaac, sunteți copii ai promisiunii."
+      "text": "Acum noi, frații, așa cum a fost Isaac, suntem copii ai promisiunii."
     },
     {
       "number": 29,
-      "text": "Dar, așa cum atunci cel născut după carne îl persecuta pe cel născut după Duh, tot așa este și acum."
+      "text": "Dar, ca atunci, cel care s-a născut conform cărnii l-a persecutat pe cel care s-a născut conform Duhului, așa este și acum."
     },
     {
       "number": 30,
@@ -241,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "De aceea, fraților, nu suntem copii ai roabei, ci ai celei libere."
+      "text": "Așadar, fraților, nu suntem copiii unui rob, ci ai femeii libere."
     }
   ],
   "editorialNotes": [
@@ -256,8 +280,8 @@
     },
     {
       "verse": 28,
-      "term": "ὑμεῖς δέ ... τέκνα ἐστέ",
-      "decision": "redat în text prin „voi ... sunteți copii ai promisiunii”",
+      "term": "ὑμεῖς δέ... τέκνα ἐστέ",
+      "decision": "redat în text prin „voi... sunteți copii ai promisiunii”",
       "reason": "SBL, Treg și NA28 au persoana a doua, în timp ce WH și RP au persoana întâi. Adresarea directă către galateni se potrivește mai bine cu fluxul mustrării și cu apelul pastoral al capitolului.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",

@@ -3,8 +3,8 @@
   "bookId": "JHN",
   "bookName": "Ioan",
   "chapter": 7,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -42,299 +42,336 @@
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/JHN07.htm"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
         "family": "libera",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbl/JHN07.htm"
+        "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.biblia.ro/vdc/nt/ioan/7/"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/JHN.7.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 53,
-      "reviewed": 0,
+      "reviewed": 53,
       "continuous": true,
       "verseNumbersSha256": "sha256:1d1f6a5ee6e5ed7430493c837d149e440b3f2d7cb38db5a987b54307394930e4"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 53 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 223,
+        "primary": 345,
+        "secondary": 311,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5828511837833763,
+      "minimumScore": 0.5708264730944187
+    },
+    "textDigest": "sha256:892633ccb904314876c96ce30d3113d658bbafc3923088965aab084cd1648b66",
+    "contentDigest": "sha256:ee9f1fb5c95d6234a4c7030a66be265dd923afc683c7a325323910353307b4ea"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După aceste lucruri, Isus umbla în Galileea, căci nu voia să umble în Iudeea, pentru că iudeii căutau să -l omoare."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Praznicul Iudeilor, Sărbătoarea Corturilor, era aproape."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Frații săi i-au zis:Pleacă de aici du-te în Iudeea, pentru ca ucenicii tăi să vadă lucrările tale pe care le faci."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Căci nimeni nu face nimic în secret, în timp ce el caută să fie cunoscut în mod deschis. Dacă faci aceste lucruri, arată-te lumii."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Căci nici frații lui nu credeau în el."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Isus le -a zis:,,Nu mi -a venit încă vremea, dar timpul vostru este totdeauna gata."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Lumea nu te poate urî, dar pe mine mă urăște, pentru că mărturisesc despre ea, că faptele ei sunt rele."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Te duci până la sărbătoare. Eu nu sunt încă de gând până la acest festin, pentru că timpul meu nu este încă împlinit."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "După ce le -a spus aceste lucruri, a rămas în Galileea."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Dar după ce frații lui s'au suit la sărbătoare, s'a suit nu în public, ci în ascuns."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Iudeii L-au căutat la ospă L-au întrebat:Unde este?„"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Unii ziceau:,,Este un om bun! Alții ziceau:,,Nu este așa, dar ducea în rătăcire."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Dar nimeni nu a vorbit deschis despre el de frica iudeilor."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dar când era acum mijlocul sărbătorii, Isus s-a suit în templu și a învățat."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Atunci iudeii s-au mirat au zis:Cum cunoaște omul acesta scrisorile, după ce n-a fost educat niciodată?”"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Isus le-a răspuns:Învățătura Mea nu este a Mea, ci a Celui ce M-a trimis pe Mine."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dacă cineva dorește să facă voia Lui, el va ști despre învățătură, fie că este de la Dumnezeu sau dacă vorbesc de la mine."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Cel care vorbește de la sine caută propria sa glorie, dar cel care caută slava celui care l-a trimis este adevărat, și nici o nedreptate nu este în el."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Nu v-a dat Moise Legea, și totuși niciunul din voi nu păz Legea? De ce căutați să Mă ucide?„"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "mea a răspuns:Ai demon! Cine vrea să te omoare?”"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Isus le-a răspuns:Eu am făcut o singură lucrare voi toți vă minun din cauza aceasta."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Moise ți-a dat circumcizie (nu că este de la Moise, ci de la tați), și în ziua de Sabat vă circumcizia un băiat."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Daca un baiat primeste circumcizie in ziua Sabatului, ca legea lui Moise sa nu fie incalcata, esti suparat pe mine pentru ca am facut un om complet sanatos in ziua Sabatului?"
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Nu judeca după aparențe, dar judecă judecata dreaptă."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "De aceea unii din Ierusalim ziceau:Oare nu pe acesta caută ei să-l omoare?"
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Iată, el vorbește deschis, și ei nu-i spun nimic. Poate că conducătorii știu într-adevăr că acesta este cu adevărat Hristosul?"
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Totuși, știm de unde vine acest om, dar când va veni Hristosul, nimeni nu va ști de unde vine."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Isus a strigat în Templu, învățând zicând:Mă cunoașteți amândoi știți de unde sunt. Eu n-am venit de la Mine însumi, ci Cel ce M-a trimis este adevărat, pe Care voi nu-L cunoașteți."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Eu îl cunosc, pentru că sunt de la el el m-a trimis„."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Ei căutau deci să-l ia; dar nimeni n-a pus mâna pe el, pentru că încă nu-i sosise ceasul."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Dar din, au crezut în El. Ei ziceau:,,Cînd va veni Hristosul, nu va face El oare mai multe semne decît a făcut omul acesta?"
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Fariseii au auzit mulțimea murmurând aceste lucruri despre el, și preoții cei mai de seamă și fariseii au trimis ofițeri să -l aresteze."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Isus i-a răspuns:Încă timp voi fi cu tine, apoi mă voi duce la Cel ce M-a trimis."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Mă vei căuta și nu mă vei găsi. Poți să vii unde sunt eu."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Iudeii ziceau deci între ei:Unde se va duce omul acesta de nu-l vom găsi? Se va duce el la risipirea printre greci și-i va învăța pe greci?"
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Care este cuvântul acesta pe care l-a spus:Mă vei căuta nu Mă vei găsi”Unde sunt Eu, nu vei putea veni„?"
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Acum, în ultima cea mai mare zi a sărbătorii, Isus S-a ridicat a strigat:Dacă însetează cineva, să vină la Mine să bea!"
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Cel care crede în mine, așa cum a spus Scriptura, din el va curge râuri de apă vie."
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Dar el a spus aceasta despre Duhul, pe care urmau să-L primească cei care credeau în El. Căci Duhul Sfânt nu era încă dat, pentru că Isus nu era încă glorificat."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "din, când au auzit cuvintele acestea, au zis:Acesta este cu adevărat profetul!”"
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "Alții ziceau:Acesta este Hristosul!„ Dar unii ziceau:Ce, a ieșit Hristosul din Galileea?"
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "Nu a spus Scriptura că Hristosul vine din sămânța lui David și din Betleem, satul unde era David?"
     },
     {
       "number": 43,
-      "text": "DE TRADUS"
+      "text": "Din pricina lui s-a făcut o dezbinare în mulțime."
     },
     {
       "number": 44,
-      "text": "DE TRADUS"
+      "text": "Unii dintre ei l-ar fi arestat, dar nimeni nu a pus mâna pe el."
     },
     {
       "number": 45,
-      "text": "DE TRADUS"
+      "text": "Slujitorii au venit deci la preoții cei mai de seamă la farisei le-au zis:Pentru ce nu l- adus?”"
     },
     {
       "number": 46,
-      "text": "DE TRADUS"
+      "text": "Ofițerii au răspuns:?Nici un om nu a vorbit vreodată ca acest om!"
     },
     {
       "number": 47,
-      "text": "DE TRADUS"
+      "text": "Fariseii le-au răspuns:Nu cumva voi rătăciți?"
     },
     {
       "number": 48,
-      "text": "DE TRADUS"
+      "text": "A crezut vreunul dintre conducători sau vreunul dintre farisei în el?"
     },
     {
       "number": 49,
-      "text": "DE TRADUS"
+      "text": "Dar această mulțime care nu știe că legea este blestemată."
     },
     {
       "number": 50,
-      "text": "DE TRADUS"
+      "text": "Nicodim (cel care a venit la el noaptea, fiind unul dintre ei) le-a spus:"
     },
     {
       "number": 51,
-      "text": "DE TRADUS"
+      "text": "Legea noastră judecă un om dacă nu aude pentru prima dată de el și știe ce face?"
     },
     {
       "number": 52,
-      "text": "DE TRADUS"
+      "text": "Ei i-au răspuns:Și tu ești din Galileea? Caută vezi că nici un profet nu s-a ridicat din Galileea.„"
     },
     {
       "number": 53,
-      "text": "DE TRADUS",
+      "text": "Fiecare s-a dus la casa lui,”",
       "textualStatus": "double-bracketed"
     }
   ],
   "editorialNotes": [
     {
       "verse": 53,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

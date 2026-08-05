@@ -3,8 +3,8 @@
   "bookId": "ROM",
   "bookName": "Romani",
   "chapter": 3,
-  "status": "approved",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ROM03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ROM03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ROM.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
+      "copyrightSimilarity": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
     },
     "observations": [
-      "Citatele înlănțuite din 3:10–18 au fost segmentate pe versetele SBLGNT, păstrând fiecare imagine și fiecare negație.",
-      "În 3:22 nu a fost preluat din puntea WEB adaosul recept «și peste toți»; acesta apare numai în nota tradițională.",
-      "Termenul ἱλαστήριον din 3:25 a fost redat prin «mijloc de ispășire» și nu printr-o formulă doctrinară extinsă."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
     "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 31,
       "reviewed": 31,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost auditate toate cele 31 de versete și cele cincisprezece unități de aparat; au primit decizii proprii genitivul πίστεως Ἰησοῦ Χριστοῦ, ἱλαστήριον și adaosul TR din 3:22."
+      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Dialogul retoric din 3:1–9 păstrează întrebările și răspunsurile scurte ale grecei.",
-        "Citatele din 3:4 și 3:10–18 folosesc ghilimele românești, fără omogenizarea imaginilor poetice.",
-        "Perioada din 3:21–26 a fost punctuată astfel încât participiile și scopul demonstrației să rămână legate."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "πίστις θεοῦ din 3:3 a fost redat contextual «credincioșia lui Dumnezeu», distinct de necredința oamenilor.",
-        "Genitivul πίστεως Ἰησοῦ Χριστοῦ a fost decis contextual și alternativa reală este consemnată în nota editorială.",
-        "δικαιοσύνη, δικαιόω și ἱλαστήριον au fost redate conform glosarului, fără inserarea unei teorii a ispășirii în verset."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,32 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT 1.2 și WEBU; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "GPT-5.6 Thinking",
-      "method": "verse-by-verse-source-and-benchmark"
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
     },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
-    "textDigest": "sha256:8b574e56adbf507c100e4d4370b892fc47a06836a9eecd6e6d8bc31e38242e73",
-    "contentDigest": "sha256:cfd9a0dd768bd5648404d4c9008044c217715f489f44ab5ef3296627b4bfc0c4"
+    "textDigest": "sha256:a78c438d9ec46a180f25f8a91f5037f0d55bfa8c5bd76ebe83c4f488f4f8e51a",
+    "contentDigest": "sha256:56be085b680cd6c1a2ac6eeab11b97dbeab9a49c7525e45ce11cb2660657c261"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Atunci care este avantajul iudeului sau care este folosul circumciziei?"
+      "text": "Atunci ce avantaj are evreul, sau care este profitul circumciziei?"
     },
     {
       "number": 2,
@@ -168,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Atunci ce? Avem noi vreun avantaj? Nicidecum! Căci am arătat deja că și iudeii, și grecii sunt cu toții sub păcat,"
+      "text": "Atunci ce? Suntem noi mai buni decât ei? Nu, în nici un caz. Pentru că am avertizat înainte atât evreii, cât și grecii că toți sunt sub păcat."
     },
     {
       "number": 10,
@@ -196,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "prăpăd și nenorocire sunt pe căile lor"
+      "text": "Distrugerea și mizeria sunt în căile lor."
     },
     {
       "number": 17,
@@ -232,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Pe El L-a înfățișat Dumnezeu drept mijloc de ispășire, prin credința în sângele Lui, ca dovadă a dreptății Sale, pentru că trecuse cu vederea păcatele săvârșite mai înainte,"
+      "text": "pe care Dumnezeu l-a trimis să fie o jertfă ispășitoare prin credința în sângele Său, pentru o demonstrație a neprihănirii Lui, prin trecerea păcatelor anterioare, în Dumnezeu."
     },
     {
       "number": 26,

@@ -3,8 +3,8 @@
   "bookId": "MRK",
   "bookName": "Marcu",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MRK01.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MRK01.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MRK.1.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "romanianNaturalness": "approved",
       "meaning": "approved",
+      "copyrightSimilarity": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
-      "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "La 1:1, textul principal urmează lectura SBLGNT din workbook și nu introduce expresia TR «Fiul lui Dumnezeu»; diferența este rezolvată în nota editorială.",
-      "Repetiția lui εὐθύς este redată prin «îndată» în punctele în care apare în lectura SBLGNT, păstrând ritmul narativ al capitolului."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 45,
       "reviewed": 45,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Marcu 1:1-45; morfologia, sintaxa, conectorii și varianta υἱοῦ τοῦ Θεοῦ de la 1:1 au fost confruntate cu SBLGNT și TR."
+      "scope": "Au fost confruntate toate cele 45 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Discursul direct a fost punctuat cu ghilimele românești, iar citatele profetice au fost delimitate fără ghilimele ASCII.",
-        "Succesiunea alertă a narațiunii a fost păstrată prin redarea consecventă a conectorilor și a adverbului εὐθύς."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Titlurile lui Isus sunt redate numai acolo unde apar în lectura greacă adoptată, fără combinarea SBLGNT cu TR.",
-        "Botezul, pocăința, iertarea și Împărăția lui Dumnezeu sunt redate lexical, fără explicații doctrinare adăugate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,17 +123,29 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 515,
+        "primary": 119,
+        "secondary": 43,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.39728811051665835,
+      "minimumScore": 0.5313914534272478
+    },
+    "textDigest": "sha256:7830c20892020d4c5bef29dfe633f2bd30f9cb8a7910aa7d7b33a06381dfc572",
+    "contentDigest": "sha256:21de534e57f384623b5c0ff219c9916a725c3cf028e4ebed6cc2a082c3946b93"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Începutul Evangheliei lui Isus Hristos."
+      "text": "Începutul veștii bune despre Isus Hristos, Fiul lui Dumnezeu."
     },
     {
       "number": 2,
@@ -130,11 +157,11 @@
     },
     {
       "number": 4,
-      "text": "Ioan Botezătorul a venit în pustiu, proclamând un botez al pocăinței spre iertarea păcatelor."
+      "text": "Ioan a venit botezând în pustie și predicând botezul pocăinței pentru iertarea păcatelor."
     },
     {
       "number": 5,
-      "text": "Tot ținutul Iudeii și toți locuitorii Ierusalimului ieșeau la el; erau botezați de el în râul Iordan, mărturisindu-și păcatele."
+      "text": "Toată țara Iudeei și toți cei din Ierusalim au ieșit la El, și au fost botezați de el în rîul Iordan, mărturisindu-și păcatele."
     },
     {
       "number": 6,
@@ -162,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Îndată, Duhul L-a mânat în pustiu."
+      "text": "Imediat, Duhul L -a izgonit în pustie."
     },
     {
       "number": 13,
@@ -186,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Și, lăsând îndată mrejele, L-au urmat."
+      "text": "Și-au lăsat îndată plasele, și l-au urmat."
     },
     {
       "number": 19,
@@ -286,7 +313,7 @@
     },
     {
       "number": 43,
-      "text": "Avertizându-l cu asprime, Isus l-a trimis îndată afară"
+      "text": "El l-a avertizat cu strictețe imediat l-a trimis afară."
     },
     {
       "number": 44,

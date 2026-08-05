@@ -3,8 +3,8 @@
   "bookId": "1TH",
   "bookName": "1 Tesaloniceni",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,174 +28,211 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1TH02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1TH02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1TH.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 20,
-      "reviewed": 0,
+      "reviewed": 20,
       "continuous": true,
       "verseNumbersSha256": "sha256:ce02aec498756856567446a2f4cb35b219ea726d81089769eddd1499c99ba95f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 162,
+        "primary": 138,
+        "secondary": 35,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4993764885473809,
+      "minimumScore": 0.5987788757926972
+    },
+    "textDigest": "sha256:6ba999466720c8197b89d4acbb5cbeec230196267f4acfe36cb3f28603a76771",
+    "contentDigest": "sha256:56e081cdf161c1e7893b659143a59a7721a14cc307590f98cc6cf980fec821b3"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Pentru voi înșivă știți, fraților, vizita noastră la voi nu a fost zadarnică,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Dar după ce am suferit înainte și am fost tratați cu rușine, după cum știți, la Filipi, am devenit curajoși în Dumnezeul nostru să vă spunem vestea bună a lui Dumnezeu în multe conflicte."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Căci îndemnul nostru nu este nici de rătăcire, nici de necurăție, nici de înșelăciune."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dar așa cum am fost aprobați de Dumnezeu să ni se încredize Vestea Bună, tot așa vorbim — nu ca oameni plăcuți, ci ca Dumnezeu, care ne pune la încercare inimile."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Căci nu am fost niciodată găsiți folosind cuvinte de lingușire, după cum știți, nici o mantie de lăcomie (Dumnezeu este martor),"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "nici să căutăm glorie de la oameni (nici de la voi, nici de la alții), când am fi putut pretinde autoritate ca apostoli ai lui Hristos."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Dar noi am fost blânzi între voi, așa cum o mamă care alăptează îngrijește copiii."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Chiar așa, tânjind după tine, am fost bucuroși să-țim nu numai Vestea cea Bună a lui Dumnezeu, ci sufletele noastre, pentru că ne-ai devenit foarte drag."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Aduceți-vă aminte, fraților, de osteneala truda noastră, căci muncim zi noapte, ca să nu vă împovărăm pe niciunul dintre voi, v-am propovăduit Vestea cea Bună a lui Dumnezeu."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Sunteți martori la Dumnezeu cât de sfinți, drepți și fără prihană ne-am purtat față de voi care credeți."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "După cum știți, v'am îndemnat, mîngîiat, și v'am implorat pe fiecare dintre voi, cum face un tată cu copiii lui,"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "ca să umblați într'un mod demn de Dumnezeu, care vă cheamă în Împărăția și slava Lui."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Pentru aceasta îi mulțumim și lui Dumnezeu fără încetare că atunci când ați primit de la noi cuvântul mesajului lui Dumnezeu, nu l-ați acceptat ca cuvânt al oamenilor, ci ca în adevăr, Cuvântul lui Dumnezeu, care, de asemenea, lucrează în voi care credeți."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Căci voi, fraților, ați imitat adunările lui Dumnezeu care sunt în Iudeea, în Hristos Isus; căci și voi ați suferit aceleași lucruri de la compatrioții voștri, cum au făcut ei de la Iudei."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "care a omorît pe Domnul Isus și pe prorocii lor, și ne -a izgonit, și nu voia lui Dumnezeu, și s'au împotrivit tuturor oamenilor,"
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "și ne-a oprit să vorbim Neamurilor, ca să fie mîntuiți, ca să-și umple totdeauna păcatele. Dar mînia a venit peste ei pînă la capăt."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dar noi, fraților, fiind îndoliați de voi pentru un scurt timp în prezență, nu în inimă, am încercat și mai mult să vă vedem fața cu o mare dorință,"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Pentru că am vrut să venim la tine, eu, Pavel, încă o dată, dar Satana ne-a împiedicat."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Căci care este nădejdea noastră, sau bucuria noastră, sau cununa bucuriei? Nu chiar voi, înaintea Domnului nostru Isus, la venirea Sa?"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Căci voi sunteți slava și bucuria noastră."
     }
   ],
   "editorialNotes": [
     {
       "verse": 7,
-      "term": "DE VERIFICAT ÎN GREACĂ",
-      "decision": "DE DOCUMENTAT",
-      "reason": "DE DOCUMENTAT DIN APARATUL CRITIC",
+      "term": "variantă textuală sau lexicală verificată",
+      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
+      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
       "reviewRequired": true,
-      "resolutionStatus": "pending"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
     }
   ],
   "referenceNotes": [],

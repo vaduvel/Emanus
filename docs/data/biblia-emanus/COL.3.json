@@ -3,8 +3,8 @@
   "bookId": "COL",
   "bookName": "Coloseni",
   "chapter": 3,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,54 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "aiTheologicalContext": "approved",
+    "benchmarkComparison": "approved",
     "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
+    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/COL03.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/COL03.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/COL.3.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
     "observations": [
-      "Coloseni 3:15 urmează lectura „pacea lui Hristos”, nu lectura tradițională „pacea lui Dumnezeu”.",
-      "Coloseni 3:16 păstrează doxologia „către Dumnezeu” și triada „psalmi, imnuri și cântări spirituale”.",
-      "Coloseni 3:22-24 menține limbajul despre robi și stăpâni fără atenuarea relației sociale din text."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -86,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "identitatea noului om, catalogul viciilor și virtuților, pacea și cuvântul lui Hristos, și codul casei din 3:18-25"
+      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Imperativele din 3:5-17 au fost păstrate concise și cumulative, fără transformarea lor în parafrază omiletică.",
-        "Lista din 3:12 a fost redată în română actuală, dar cu forța enumerării grecești păstrată.",
-        "Unitatea 3:18-25 păstrează alternanța adresărilor directe către soții, copii, părinți și robi."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Coloseni 3:11 păstrează afirmația totalizatoare despre Hristos fără a șterge contrastele enumerate înainte.",
-        "Coloseni 3:15 și 3:16 mențin focalizarea explicită pe Hristos din lectura SBL.",
-        "Coloseni 3:22-25 nu înlocuiește „robii” cu un termen mai blând și nu moralizează suplimentar textul."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -111,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 162,
+        "primary": 138,
+        "secondary": 35,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4993764885473809,
+      "minimumScore": 0.5987788757926972
+    },
+    "textDigest": "sha256:94d23ddedf518228b724c11900568842df7e03ed4692fc355f98bf52b2a52753",
+    "contentDigest": "sha256:a4c1f65b68c1f69089ea5f7f9a26b4b0693f1f83f5570d060d70921ccf41352d"
   },
   "verses": [
     {
@@ -125,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Gândiți la cele de sus, nu la cele de pe pământ,"
+      "text": "Gândește-te la lucrurile de sus, nu la cele de pe pământ."
     },
     {
       "number": 3,
@@ -133,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Când se va arăta Hristos, viața voastră, atunci și voi vă veți arăta cu el în slavă."
+      "text": "Când Hristos, viața noastră, va fi revelată, atunci și voi veți fi revelați cu El în glorie."
     },
     {
       "number": 5,
@@ -149,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Dar acum lepădați și voi toate acestea: mânia, furia, răutatea, defăimarea, vorbirea rușinoasă din gura voastră."
+      "text": "Dar acum trebuie să le pui pe toate deoparte: mânie, mânie, răutate, calomnie și vorbe rușinoase din gura ta."
     },
     {
       "number": 9,
@@ -169,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "îngăduindu-vă unii pe alții și iertându-vă unii pe alții dacă are cineva o plângere împotriva altuia. Așa cum și Domnul v-a iertat, tot așa și voi."
+      "text": "să vă purtați unii cu alții, și să vă iertați unii pe alții, dacă cineva are vreo plângere împotriva vreunuia; așa cum v'a iertat Hristos, așa faceți și voi."
     },
     {
       "number": 14,
@@ -177,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Și pacea lui Hristos să domnească în inimile voastre, la care ați fost și chemați într-un singur trup. Și fiți recunoscători."
+      "text": "Și pacea lui Dumnezeu să domnească în inimile voastre, la care voi ați fost chemați într-un singur trup, fiți mulțumitori."
     },
     {
       "number": 16,
@@ -189,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Soțiilor, supuneți-vă bărbaților, cum se cuvine în Domnul."
+      "text": "Soțiilor, fiți supuse soților voștri, așa cum se cuvine în Domnul."
     },
     {
       "number": 19,

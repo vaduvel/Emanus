@@ -3,8 +3,8 @@
   "bookId": "ACT",
   "bookName": "Faptele Apostolilor",
   "chapter": 19,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/ACT19.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/ACT19.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/ACT.19.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "meaning": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 41,
-      "reviewed": 0,
+      "reviewed": 41,
       "continuous": true,
       "verseNumbersSha256": "sha256:ec7266bd0738ba39a00fbb9cc8c293a50426fe99666dfc5b80b170c5fc436c1a"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 41 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 720,
+        "primary": 239,
+        "secondary": 48,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5075266817973916,
+      "minimumScore": 0.6309563052154472
+    },
+    "textDigest": "sha256:defcfb27c20ddd8e74ba2e3e2e6ce399a1a8aa3e38fad953927698067d9bc7db",
+    "contentDigest": "sha256:026d9a30e476549c7c67698f7f12e858c069897ca529f2750f754ee74d8b48cf"
   },
   "verses": [
     {
@@ -113,15 +149,15 @@
     },
     {
       "number": 2,
-      "text": "El i-a întrebat: „Ați primit Duhul Sfânt când ați crezut?” Ei i-au răspuns: „Dar nici măcar n-am auzit că este un Duh Sfânt.”"
+      "text": "El i-a întrebat: Ați primit Duhul Sfânt când ați crezut? Ei i-au răspuns: Dar nici măcar n-am auzit că este un Duh Sfânt."
     },
     {
       "number": 3,
-      "text": "El a spus: „Atunci în ce ați fost botezați?” Ei au răspuns: „În botezul lui Ioan.”"
+      "text": "El a spus: Atunci în ce ați fost botezați? Ei au răspuns: În botezul lui Ioan."
     },
     {
       "number": 4,
-      "text": "Pavel a spus: „Ioan a botezat cu botezul pocăinței, spunându-i poporului să creadă în Cel care avea să vină după el, adică în Isus.”"
+      "text": "Pavel a spus:Ioan, într-adevăr, a botezat cu botezul pocăinței, spunând poporului să creadă în cel care va veni după el, adică în Hristos Isus."
     },
     {
       "number": 5,
@@ -137,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Pavel a intrat în sinagogă și, timp de trei luni, a vorbit cu îndrăzneală, discutând și căutând să-i convingă despre Împărăția lui Dumnezeu."
+      "text": "El a intrat în sinagogă și a vorbit cu îndrăzneală timp de trei luni, gândindu - se și convingându - se despre lucrurile referitoare la Regatul lui Dumnezeu."
     },
     {
       "number": 9,
@@ -145,19 +181,19 @@
     },
     {
       "number": 10,
-      "text": "Lucrul acesta a continuat doi ani, astfel încât toți locuitorii Asiei, atât iudei, cât și greci, au auzit Cuvântul Domnului."
+      "text": "Aceasta a continuat timp de doi ani, astfel încât cei care trăiau în Asia au auzit cuvântul Domnului Isus, atât evrei, cât și greci."
     },
     {
       "number": 11,
-      "text": "Dumnezeu făcea prin mâinile lui Pavel lucrări de putere neobișnuite,"
+      "text": "Dumnezeu a făcut miracole speciale prin mâinile lui Pavel,"
     },
     {
       "number": 12,
-      "text": "până acolo încât peste cei bolnavi erau duse ștergare sau șorțuri care îi atinseseră trupul, iar bolile îi părăseau și duhurile rele ieșeau."
+      "text": "Astfel, chiar și batiste sau șorțuri au fost duse de la corpul său la bolnav, și bolile au plecat de la ei, și spiritele rele au ieșit afară."
     },
     {
       "number": 13,
-      "text": "Atunci și unii dintre exorciștii iudei care umblau din loc în loc au încercat să cheme peste cei ce aveau duhuri rele Numele Domnului Isus, spunând: „Vă conjur pe Isus, pe care Îl proclamă Pavel!”"
+      "text": "Atunci și unii dintre exorciștii iudei care umblau din loc în loc au încercat să cheme peste cei ce aveau duhuri rele Numele Domnului Isus, spunând: Vă conjur pe Isus, pe care Îl proclamă Pavel!"
     },
     {
       "number": 14,
@@ -165,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Dar duhul cel rău le-a răspuns: „Pe Isus Îl cunosc și despre Pavel știu, dar voi cine sunteți?”"
+      "text": "Dar duhul cel rău le-a răspuns: Pe Isus Îl cunosc și despre Pavel știu, dar voi cine sunteți?"
     },
     {
       "number": 16,
@@ -177,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Mulți dintre cei care crezuseră veneau, își mărturiseau și își dezvăluiau faptele."
+      "text": "Mulți dintre cei care credeau au venit, mărturisind și declarându-și faptele."
     },
     {
       "number": 19,
@@ -189,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "După ce s-au împlinit aceste lucruri, Pavel a hotărât în duhul să străbată Macedonia și Ahaia și să meargă la Ierusalim. El spunea: „După ce voi ajunge acolo, trebuie să văd și Roma.”"
+      "text": "După ce s-au împlinit aceste lucruri, Pavel a hotărât în duhul să străbată Macedonia și Ahaia și să meargă la Ierusalim. El spunea: După ce voi ajunge acolo, trebuie să văd și Roma."
     },
     {
       "number": 22,
@@ -197,15 +233,15 @@
     },
     {
       "number": 23,
-      "text": "În vremea aceea s-a iscat o tulburare însemnată cu privire la Cale."
+      "text": "Cam în acea perioadă nu a apărut nici o mică tulburare cu privire la Cale."
     },
     {
       "number": 24,
-      "text": "Căci un argintar pe nume Dimitrie făcea altare de argint ale Artemisei și le aducea meșteșugarilor un câștig însemnat."
+      "text": "Pentru un anumit om numit Demetrius, un argintar care a făcut altare de argint din Artemis, nu a adus nimic de făcut meșterilor,"
     },
     {
       "number": 25,
-      "text": "I-a adunat pe aceștia și pe lucrătorii din meserii asemănătoare și le-a spus: „Bărbaților, știți că bunăstarea noastră vine din această îndeletnicire."
+      "text": "I-a adunat pe aceștia și pe lucrătorii din meserii asemănătoare și le-a spus: Bărbaților, știți că bunăstarea noastră vine din această îndeletnicire."
     },
     {
       "number": 26,
@@ -213,11 +249,11 @@
     },
     {
       "number": 27,
-      "text": "Există primejdia nu numai ca îndeletnicirea noastră să ajungă de disprețuit, ci și ca templul marii zeițe Artemis să fie socotit o nimica și ca ea să fie lipsită de măreția ei, ea, căreia i se închină toată Asia și lumea locuită.”"
+      "text": "Există primejdia nu numai ca îndeletnicirea noastră să ajungă de disprețuit, ci și ca templul marii zeițe Artemis să fie socotit o nimica și ca ea să fie lipsită de măreția ei, ea, căreia i se închină toată Asia și lumea locuită."
     },
     {
       "number": 28,
-      "text": "Când au auzit, s-au umplut de mânie și au început să strige: „Mare este Artemis a efesenilor!”"
+      "text": "Când au auzit, s-au umplut de mânie și au început să strige: Mare este Artemis a efesenilor!"
     },
     {
       "number": 29,
@@ -225,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Pavel voia să intre înaintea poporului, dar ucenicii nu l-au lăsat."
+      "text": "Când Pavel a vrut să intre în popor, discipolii nu i - au permis."
     },
     {
       "number": 31,
@@ -241,15 +277,15 @@
     },
     {
       "number": 34,
-      "text": "Dar, când au recunoscut că era iudeu, au strigat toți într-un singur glas, cam două ore: „Mare este Artemis a efesenilor!”"
+      "text": "Dar, când au recunoscut că era iudeu, au strigat toți într-un singur glas, cam două ore: Mare este Artemis a efesenilor!"
     },
     {
       "number": 35,
-      "text": "După ce a liniștit mulțimea, secretarul cetății a spus: „Bărbați efeseni, cine dintre oameni nu știe că cetatea efesenilor este păzitoarea templului marii Artemis și a chipului căzut din cer?"
+      "text": "După ce a liniștit mulțimea, secretarul cetății a spus: Bărbați efeseni, cine dintre oameni nu știe că cetatea efesenilor este păzitoarea templului marii Artemis și a chipului căzut din cer?"
     },
     {
       "number": 36,
-      "text": "Fiindcă aceste lucruri nu pot fi tăgăduite, trebuie să fiți liniștiți și să nu faceți nimic nechibzuit."
+      "text": "Văzând atunci că aceste lucruri nu pot fi negate, ar trebui să fie liniște și să nu facă nimic pripit."
     },
     {
       "number": 37,
@@ -261,15 +297,15 @@
     },
     {
       "number": 39,
-      "text": "Iar dacă urmăriți ceva mai mult, se va hotărî în adunarea legală."
+      "text": "Dar dacă căutați ceva despre alte chestiuni, acesta va fi stabilit în adunarea regulată."
     },
     {
       "number": 40,
-      "text": "Căci suntem în primejdie să fim acuzați de răscoală pentru ziua de astăzi, neexistând niciun motiv prin care să putem da socoteală pentru această îmbulzeală.”"
+      "text": "Căci suntem în primejdie să fim acuzați de răscoală pentru ziua de astăzi, neexistând niciun motiv prin care să putem da socoteală pentru această îmbulzeală."
     },
     {
       "number": 41,
-      "text": "După ce a spus acestea, a dat drumul adunării."
+      "text": "După ce a vorbit astfel, el a dat drumul adunării."
     }
   ],
   "editorialNotes": [

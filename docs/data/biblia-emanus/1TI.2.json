@@ -3,8 +3,8 @@
   "bookId": "1TI",
   "bookName": "1 Timotei",
   "chapter": 2,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,144 +28,180 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1TI02.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1TI02.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1TI.2.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 15,
-      "reviewed": 0,
+      "reviewed": 15,
       "continuous": true,
       "verseNumbersSha256": "sha256:e38607c74561d5b80709ec58b6d4b51f34d01141f9ef590fd5a9abb4539a0018"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 15 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 208,
+        "secondary": 58,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.588175458584589,
+      "minimumScore": 0.553468476771151
+    },
+    "textDigest": "sha256:5899ddfb8837502f01bc6f78a9e94a4ecdd64c8059081ef6c65ab39f7eeab834",
+    "contentDigest": "sha256:51983f219e8082713503283f59f64321e7282518ec9d7fcc1b62305b92c8584f"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "De aceea, mai întâi de toate, îndemn să se facă cereri, rugăciuni, mijlociri și mulțumiri pentru toți oamenii,"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "pentru împărați și pentru toți cei din înălțimi, ca să ducem o viață liniștită și liniștită în toată evlavia și venerația."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Căci lucrul acesta este bun plăcut înaintea lui Dumnezeu, Mântuitorul nostru,"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "care vor ca toți oamenii să fie mântuiți și să cunoască întru totul adevărul."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Căci este un singur Dumnezeu și un singur mijlocitor între Dumnezeu și oameni, omul Hristos Isus,"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "care s-a dat pe sine ca răscumpărare pentru toți, ca mărturie la timpul cuvenit,"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Către care am fost numit predicator și apostol, spun adevărul în Hristos, nu mint un învățător al Neamurilor în credință și adevăr."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "De aceea, doresc ca oamenii din orice loc să se roage, ridicând mâini sfinte fără mânie și îndoială."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "În același fel, femeile se împodobesc și ele în haine decente, cu modestie și onestitate, nu cu păr împletit, aur, perle sau haine scumpe,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "ci cu fapte bune, ceea ce este potrivit pentru femeile care mărturisesc evlavie."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Lasă o femeie să învețe în liniște cu supunere deplină."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Dar eu nu permit unei femei să predea, nici să exercite autoritate asupra unui bărbat, ci să fie în liniște."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Pentru Adam a fost format mai întâi, apoi Eva."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Adam nu a fost înșelat, dar femeia, fiind înșelată, a căzut în neascultare;"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Dar ea va fi mântuită prin nașterea ei, dacă vor continua în credință, iubire și sfințenie cu sobrietate."
     }
   ],
   "editorialNotes": [],

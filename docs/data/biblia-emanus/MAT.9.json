@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 9,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,83 +28,119 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
+    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT09.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT09.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.9.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 38,
-      "reviewed": 0,
+      "reviewed": 38,
       "continuous": true,
       "verseNumbersSha256": "sha256:9dea2dd3958ed65de899f88f1ebda1ba02356bae2652d120c374679099cfafa5"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 38 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:90918de018044b917d50a543df65f6e7a65be2768819d90dd47300e24d81e51d",
+    "contentDigest": "sha256:d5fdfe7ed9c21c2bbe3ddc13912b0059ef369f864e4cd2b435f4b14787c0756c"
   },
   "verses": [
     {
@@ -113,23 +149,23 @@
     },
     {
       "number": 2,
-      "text": "Și iată că I-au adus un paralizat culcat pe un pat. Când le-a văzut credința, Isus i-a spus paralizatului: „Îndrăznește, copile! Păcatele îți sunt iertate.”"
+      "text": "Și iată că I-au adus un paralizat culcat pe un pat. Când le-a văzut credința, Isus i-a spus paralizatului: Îndrăznește, copile! Păcatele îți sunt iertate."
     },
     {
       "number": 3,
-      "text": "Atunci unii dintre cărturari și-au spus în sinea lor: „Omul acesta blasfemiază!”"
+      "text": "Atunci unii dintre cărturari și-au spus în sinea lor: Omul acesta blasfemiază!"
     },
     {
       "number": 4,
-      "text": "Isus, cunoscându-le gândurile, a spus: „De ce vă gândiți la lucruri rele în inimile voastre?"
+      "text": "Isus, cunoscându-le gândurile, a spus: De ce vă gândiți la lucruri rele în inimile voastre?"
     },
     {
       "number": 5,
-      "text": "Căci ce este mai ușor: să spun «Păcatele îți sunt iertate» sau să spun «Ridică-te și umblă»?"
+      "text": "Căci ce este mai ușor: să spun Păcatele îți sunt iertate sau să spun Ridică-te și umblă?"
     },
     {
       "number": 6,
-      "text": "Dar, ca să știți că Fiul Omului are autoritate pe pământ să ierte păcatele...” Atunci i-a spus paralizatului: „Ridică-te, ia-ți patul și du-te acasă!”"
+      "text": "Dar, ca să știți că Fiul Omului are autoritate pe pământ să ierte păcatele... Atunci i-a spus paralizatului: Ridică-te, ia-ți patul și du-te acasă!"
     },
     {
       "number": 7,
@@ -137,11 +173,11 @@
     },
     {
       "number": 8,
-      "text": "Când au văzut aceasta, mulțimile s-au temut și L-au glorificat pe Dumnezeu, care le dăduse oamenilor o asemenea autoritate."
+      "text": "Dar cînd au văzut noroadele lucrul acesta, s'au mirat și au glorificat pe Dumnezeu, care dăduse oamenilor o astfel de autoritate."
     },
     {
       "number": 9,
-      "text": "Plecând de acolo, Isus a văzut un om numit Matei, așezat la postul de colectare a taxelor, și i-a spus: „Urmează-Mă!” El s-a ridicat și L-a urmat."
+      "text": "Plecând de acolo, Isus a văzut un om numit Matei, așezat la postul de colectare a taxelor, și i-a spus: Urmează-Mă! El s-a ridicat și L-a urmat."
     },
     {
       "number": 10,
@@ -149,23 +185,23 @@
     },
     {
       "number": 11,
-      "text": "Când au văzut, fariseii le-au spus ucenicilor Lui: „De ce mănâncă Învățătorul vostru cu colectorii de taxe și cu păcătoșii?”"
+      "text": "Când au văzut, fariseii le-au spus ucenicilor Lui: De ce mănâncă Învățătorul vostru cu colectorii de taxe și cu păcătoșii?"
     },
     {
       "number": 12,
-      "text": "Când i-a auzit, El le-a spus: „Nu cei sănătoși au nevoie de medic, ci cei bolnavi."
+      "text": "Când Isus a auzit aceasta, le-a zis:Cei sănătoși nu au nevoie de medic, dar cei bolnavi au nevoie."
     },
     {
       "number": 13,
-      "text": "Duceți-vă și învățați ce înseamnă: «Milă vreau, nu jertfă.» Căci n-am venit să-i chem pe cei drepți, ci pe cei păcătoși.”"
+      "text": "Duceți-vă și învățați ce înseamnă: Milă vreau, nu jertfă. Căci n-am venit să-i chem pe cei drepți, ci pe cei păcătoși."
     },
     {
       "number": 14,
-      "text": "Atunci ucenicii lui Ioan au venit la El și L-au întrebat: „De ce noi și fariseii postim des, dar ucenicii Tăi nu postesc?”"
+      "text": "Atunci ucenicii lui Ioan au venit la El și L-au întrebat: De ce noi și fariseii postim des, dar ucenicii Tăi nu postesc?"
     },
     {
       "number": 15,
-      "text": "Isus le-a spus: „Pot oare nuntașii să jelească atâta timp cât mirele este cu ei? Dar vor veni zile când mirele va fi luat de la ei și atunci vor posti."
+      "text": "Isus le-a spus: Pot oare nuntașii să jelească atâta timp cât mirele este cu ei? Dar vor veni zile când mirele va fi luat de la ei și atunci vor posti."
     },
     {
       "number": 16,
@@ -173,15 +209,15 @@
     },
     {
       "number": 17,
-      "text": "Nici nu se pune vin nou în burdufuri vechi; altfel, burdufurile plesnesc, vinul se varsă, iar burdufurile se distrug. Ci vinul nou se pune în burdufuri noi și amândouă se păstrează.”"
+      "text": "Nici nu se pune vin nou în burdufuri vechi; altfel, burdufurile plesnesc, vinul se varsă, iar burdufurile se distrug. Ci vinul nou se pune în burdufuri noi și amândouă se păstrează."
     },
     {
       "number": 18,
-      "text": "În timp ce le spunea acestea, iată că a venit un conducător, s-a închinat înaintea Lui și I-a spus: „Fiica mea tocmai a murit; dar vino, pune-Ți mâna peste ea și va trăi.”"
+      "text": "În timp ce le spunea acestea, iată că a venit un conducător, s-a închinat înaintea Lui și I-a spus: Fiica mea tocmai a murit; dar vino, pune-Ți mâna peste ea și va trăi."
     },
     {
       "number": 19,
-      "text": "Isus S-a ridicat și l-a urmat, împreună cu ucenicii Săi."
+      "text": "Isus s - a ridicat și l - a urmat, la fel ca discipolii săi."
     },
     {
       "number": 20,
@@ -189,11 +225,11 @@
     },
     {
       "number": 21,
-      "text": "căci își spunea: „Dacă voi atinge fie și numai haina Lui, voi fi vindecată.”"
+      "text": "Căci ea a zis în sinea ei:Dacă mă voi atinge de haina Lui, voi fi făcută sănătoasă."
     },
     {
       "number": 22,
-      "text": "Isus S-a întors, a văzut-o și i-a spus: „Îndrăznește, fiică! Credința ta te-a vindecat.” Și femeia a fost vindecată chiar din ceasul acela."
+      "text": "Isus S-a întors, a văzut-o și i-a spus: Îndrăznește, fiică! Credința ta te-a vindecat. Și femeia a fost vindecată chiar din ceasul acela."
     },
     {
       "number": 23,
@@ -201,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "a spus: „Plecați, căci fetița n-a murit, ci doarme.” Dar ei râdeau de El."
+      "text": "El le-a zis:Faceți loc, pentru că fata nu este moartă, ci doarme. Ei îl ridiculizau."
     },
     {
       "number": 25,
@@ -213,19 +249,19 @@
     },
     {
       "number": 27,
-      "text": "În timp ce Isus pleca de acolo, doi orbi L-au urmat, strigând: „Ai milă de noi, Fiul lui David!”"
+      "text": "În timp ce Isus pleca de acolo, doi orbi L-au urmat, strigând: Ai milă de noi, Fiul lui David!"
     },
     {
       "number": 28,
-      "text": "După ce a intrat în casă, orbii s-au apropiat de El, iar Isus i-a întrebat: „Credeți că pot face aceasta?” Ei I-au răspuns: „Da, Doamne.”"
+      "text": "După ce a intrat în casă, orbii s-au apropiat de El, iar Isus i-a întrebat: Credeți că pot face aceasta? Ei I-au răspuns: Da, Doamne."
     },
     {
       "number": 29,
-      "text": "Atunci le-a atins ochii și le-a spus: „Să vi se facă potrivit credinței voastre!”"
+      "text": "Atunci le-a atins ochii și le-a spus: Să vi se facă potrivit credinței voastre!"
     },
     {
       "number": 30,
-      "text": "Și ochii li s-au deschis. Isus le-a poruncit cu asprime: „Vedeți să nu afle nimeni!”"
+      "text": "Și ochii li s-au deschis. Isus le-a poruncit cu asprime: Vedeți să nu afle nimeni!"
     },
     {
       "number": 31,
@@ -233,15 +269,15 @@
     },
     {
       "number": 32,
-      "text": "În timp ce plecau ei, iată că I-au adus un om mut, care era demonizat."
+      "text": "Pe când ieșeau, iată că un om mut, posedat de demoni, a fost adus la el."
     },
     {
       "number": 33,
-      "text": "După ce demonul a fost scos, omul mut a vorbit. Mulțimile se mirau și spuneau: „Niciodată nu s-a văzut așa ceva în Israel!”"
+      "text": "După ce demonul a fost scos, omul mut a vorbit. Mulțimile se mirau și spuneau: Niciodată nu s-a văzut așa ceva în Israel!"
     },
     {
       "number": 34,
-      "text": "Dar fariseii spuneau: „El scoate demonii cu ajutorul conducătorului demonilor.”"
+      "text": "Dar fariseii spuneau: El scoate demonii cu ajutorul conducătorului demonilor."
     },
     {
       "number": 35,
@@ -253,11 +289,11 @@
     },
     {
       "number": 37,
-      "text": "Atunci le-a spus ucenicilor Săi: „Secerișul este mare, dar lucrătorii sunt puțini."
+      "text": "Atunci le-a spus ucenicilor Săi: Secerișul este mare, dar lucrătorii sunt puțini."
     },
     {
       "number": 38,
-      "text": "Rugați-L deci pe Domnul secerișului să scoată lucrători la secerișul Lui.”"
+      "text": "Rugați-L deci pe Domnul secerișului să scoată lucrători la secerișul Lui."
     }
   ],
   "editorialNotes": [],

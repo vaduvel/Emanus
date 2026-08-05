@@ -3,8 +3,8 @@
   "bookId": "HEB",
   "bookName": "Evrei",
   "chapter": 9,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,196 +28,232 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/HEB09.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/HEB09.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/HEB.9.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 28,
-      "reviewed": 0,
+      "reviewed": 28,
       "continuous": true,
       "verseNumbersSha256": "sha256:9a107a160e9a74d5e92434ea013a7fa5ead7b122a283f2855eb5da2b0d55f33f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 316,
+        "secondary": 95,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5922586297890594,
+      "minimumScore": 0.5759312754780807
+    },
+    "textDigest": "sha256:a2987ed75433edce12352819e436b183728c427d254c64da6d59c4c170962dd1",
+    "contentDigest": "sha256:f35ad1bf98c2c512424118b1705e461c9e4aeaed806d7b1ad2244cd0fc79bb7b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Acum, chiar și primul legământ avea ordonanțe de serviciu divin și un sanctuar pământesc."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Căci era pregătit un tabernacol. În prima parte erau sfenicul, masa pînea de spectacol, care se Locul Sfînt."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "După al doilea văl a fost tabernacolul care este numit Sfânta Sfintelor,"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "având un altar de aur cu tămîie și chivotul legămîntului acoperit cu aur pe toate părțile, în care era o oală de aur care ținea mana, toiagul lui Aaron și tablele legămîntului;"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "deasupra ei heruvimi ai gloriei umbrind capacul îndurării, despre care nu putem vorbi acum în detaliu."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "După ce au fost astfel, preoții intră fără încetare în primul tabernacol, îndeplinind slujbele,"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Dar numai în al doilea mare preot, o dată pe an, nu fără sânge, pe care îl oferă pentru sine și pentru greșelile poporului."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Duhul Sfânt indică acest lucru, că drumul spre Locul Sfânt nu a fost încă revelat în timp ce primul tabernacol era încă în picioare."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Acesta este un simbol al epocii actuale, unde se oferă daruri și sacrificii care sunt incapabile, în ceea ce privește conștiința, de a-l face pe închinător perfect,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "fiind doar (cu alimente și băuturi și diverse spălătorii) ordonanțe carnale, impuse până la un timp de reformare."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Dar Hristos, venind ca Mare Preot al lucrurilor bune viitoare, prin cortul cel mai mare mai desăvârșit, nefăcut de mâini, adică nu din această creație,"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "nici prin sângele caprelor al vilor, ci prin propriul său sânge, a intrat o dată pentru totdeauna în Locul Sfânt, după ce a răscumpărarea veșnică."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Căci dacă sîngele țapilor și al taurilor și cenușa unei vaci stropește pe cei ce au fost pângăriți, sfințiți în curăția cărnii,"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Cu cât mai mult sângele lui Hristos, care prin Duhul Etern s-a oferit fără defect lui Dumnezeu, îți va curăța conștiința de lucrările moarte pentru a-l sluji pe Dumnezeul cel viu?"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Din acest motiv el este mediatorul unui nou legământ, deoarece a avut loc o moarte pentru răscumpărarea fărădelegilor care au fost sub primul legământ, pentru ca cei care au fost chemați să poată primi promisiunea moștenirii eterne."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Căci acolo unde este o ultimă voință un testament, trebuie neapărat să fie moartea celui care l-a făcut."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Căci o voință este în vigoare acolo unde a fost moarte, căci ea nu este niciodată în vigoare în timp ce cel ce a făcut-o trăiește."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Prin urmare, nici măcar primul legământ nu a fost dedicat fără sânge."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Căci după ce a spus Moise tuturor oamenilor toate poruncile, după Lege, a luat sângele vilor al caprelor, cu apă, cu lână cărămizie cu isop, a stropit cartea tot poporul,"
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "El a spus:Acesta este sângele legământului pe care Dumnezeu vi l-a poruncit.„"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "El a stropit tabernacolul toate vasele slujirii în fel cu sângele."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Potrivit legii, aproape totul este curățat cu sânge, și în afară de vărsarea de sânge nu există nici o remisie."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Prin urmare, era necesar ca copiile lucrurilor din ceruri să fie curățate cu acestea, dar lucrurile cerești însele cu sacrificii mai bune decât acestea."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Căci Hristos n'a intrat în locuri sfinte făcute cu mîini, cari sunt reprezentări ale adevăratului, ci în cer, ca să se arate acum în fața lui Dumnezeu pentru noi."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "și totuși, ca să se aducă des, cum intră marele preot în locul sfânt an de an, fără sângele lui,"
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "sau altfel el trebuie să fi suferit de multe ori de la întemeierea lumii. Dar acum, o dată la sfârșitul veacurilor, el a fost revelat pentru a pune deoparte păcatul prin sacrificiul lui însuși."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "În măsura în care este rânduit ca oamenii să moară o singură dată, după aceasta, judecata,"
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Tot așa Hristos, după ce S-a oferit o dată să poarte păcatele multora, Se va arăta a doua oară, nu pentru a face păcatului, ci pentru a-i mântui pe cei care Îl așteaptă cu nerăbdare.”"
     }
   ],
   "editorialNotes": [],

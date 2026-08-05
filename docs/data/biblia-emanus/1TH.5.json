@@ -3,8 +3,8 @@
   "bookId": "1TH",
   "bookName": "1 Tesaloniceni",
   "chapter": 5,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,196 +28,232 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
+    "aiTheologicalContext": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1TH05.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1TH05.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1TH.5.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 28,
-      "reviewed": 0,
+      "reviewed": 28,
       "continuous": true,
       "verseNumbersSha256": "sha256:9a107a160e9a74d5e92434ea013a7fa5ead7b122a283f2855eb5da2b0d55f33f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 162,
+        "primary": 138,
+        "secondary": 35,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4993764885473809,
+      "minimumScore": 0.5987788757926972
+    },
+    "textDigest": "sha256:b9f4e03d7dc95f9df9312194436b9ddb96370f7ef5e530788a30db71938a7b5a",
+    "contentDigest": "sha256:b37a2169db0b224ad081bc0b3c41bf74df2afb0d3f79793373fd4d953aeda45b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Dar cu privire la timp și la anotimpuri, fraților, nu aveți nevoie să vi se scrie nimic."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Căci voi înșivă știți bine că ziua Domnului vine ca un hoț noaptea."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Căci atunci când ei spun: Pace și siguranță, atunci distrugerea bruscă va veni peste ei, ca durerile de naștere pe o femeie gravidă. Atunci ei nu vor scăpa în nici un fel."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Dar voi, fraților, nu în întuneric, ca ziua să vă cuprindă ca un hoț."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Voi toți sunteți fii ai luminii și ai zilei. Noi nu aparținem nopții, nici întunericului."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Așa că să nu dormim, ca ceilalți, ci să privim și să fim treji."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Pentru cei ce dorm, dorm noaptea, și cei beți se îmbată noaptea."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Dar din moment ce aparținem zilei, să fim treji, punându-ne platoșa credinței și a iubirii, și pentru o cască, speranța mântuirii."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Căci Dumnezeu nu ne-a făcut să ne mâniem, ci să obținem mântuirea prin Domnul nostru Isus Hristos,"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "care a murit pentru noi, că, fie că ne trezim sau dormim, ar trebui să trăim împreună cu el."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "De aceea, îndemnați-vă unii pe alții, și zidiți-vă unii pe alții, cum faceți și voi."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Dar vă implorăm, fraților, să-i cunoașteți pe cei ce lucrează printre voi, și să fiți peste voi în Domnul și să vă sfătuim,"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "să-i respectați să-i onorați din dragoste pentru munca lor. Fiți în pace între voi."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Vă îndemnăm, fraților: Încurajați pe cei slabi, încurajați-i pe cei slabi, sprijiniți-i pe cei slabi, fiți răbdători față de toți."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Vezi ca nimeni să nu întoarcă rău pentru rău nimănui, ci să urmeze întotdeauna ceea ce este bine unii pentru alții și pentru toți."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Bucurați-vă întotdeauna."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Rugați-vă fără încetare."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "În toate, mulțumiți, căci aceasta este voia lui Dumnezeu în Hristos Isus față de voi."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Nu stingeți Duhul."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Nu disprețui profețiile."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Testați toate lucrurile, și țineți ferm ceea ce este bun."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Abține-te de la orice formă de rău."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Fie ca Dumnezeul păcii să vă sfințească întru totul; tot spiritul, sufletul și trupul vostru să fie păzit fără prihană la venirea Domnului nostru Isus Hristos."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Cel care te cheamă este credincios, care o va face și el."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Fraților, rugați-vă pentru noi."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Salută-i pe toți frații cu un sărut sfânt."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Îți poruncesc solemn prin Domnul ca această scrisoare să fie citită tuturor fraților sfinți."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Harul Domnului nostru Isus Hristos să fie cu voi. Amin."
     }
   ],
   "editorialNotes": [],

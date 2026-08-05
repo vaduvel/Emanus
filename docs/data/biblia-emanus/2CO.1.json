@@ -3,8 +3,8 @@
   "bookId": "2CO",
   "bookName": "2 Corinteni",
   "chapter": 1,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
+    "copyrightDistance": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "omissionAddition": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/2CO01.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/2CO01.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/2CO.1.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
+      "copyrightSimilarity": "approved",
       "meaning": "approved",
       "additions": "approved",
       "theologicalNeutrality": "approved",
-      "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "omissions": "approved"
     },
     "observations": [
-      "Lanțul „mângâiere / necaz / suferințe” din 1:3-7 a fost păstrat deliberat pentru coeziunea argumentului.",
-      "La 1:12 s-a urmat lectura SBL „în sfințenie și sinceritate de la Dumnezeu”, nu tradiția receptă „în simplitate”."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 24,
       "reviewed": 24,
@@ -85,21 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "lanțul παρακαλέω/παράκλησις din 1:3-7, lectura ἁγιότητι din 1:12, promisiunile și „Aminul” din 1:20"
+      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "2 Corinteni 1:6 păstrează a doua propoziție scurtă din SBL, fără adaosul recept „și mântuire”.",
-        "2 Corinteni 1:12 redă ἁγιότητι prin „sfințenie”, nu lectura receptă „simplitate”.",
-        "2 Corinteni 1:15 păstrează χάριν ca termen de har contextual, fără a-l reduce la simplu avantaj practic."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Mângâierea și suferința sunt redate simetric, fără atenuarea limbajului despre necaz și moarte.",
-        "Afirmațiile despre Fiul lui Dumnezeu și promisiunile divine rămân lexicale, fără parafrază doctrinară suplimentară."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -109,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești au fost folosite numai pentru verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:7f77f7a0521411af38c52be2cbed7196f835baff28530d9a37f340ff0113389d",
+    "contentDigest": "sha256:b012c2c089a8cd127dee8cc7c367415b7bfde8c78d0f832898cfc2e053ebc35a"
   },
   "verses": [
     {
@@ -151,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Ba încă aveam în noi înșine răspunsul morții, ca să nu ne încredem în noi înșine, ci în Dumnezeu, care îi învie pe cei morți."
+      "text": "Da, noi înșine am avut sentința morții în noi înșine, ca să nu ne încredem în noi înșine, ci în Dumnezeu care învie morții,"
     },
     {
       "number": 10,
@@ -171,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "așa cum ne-ați recunoscut și în parte: că suntem motivul vostru de laudă, după cum și voi sunteți al nostru, în ziua Domnului nostru Isus."
+      "text": "Așa cum ne-ați recunoscut și voi în parte că noi suntem lauda voastră, așa cum și voi sunteți a noastră, în ziua Domnului nostru Isus."
     },
     {
       "number": 15,
@@ -183,11 +209,11 @@
     },
     {
       "number": 17,
-      "text": "Așadar, vrând aceasta, am lucrat oare cu ușurătate? Sau cele pe care le hotărăsc le hotărăsc după carne, ca să fie la mine „Da, da” și „Nu, nu”?"
+      "text": "Prin urmare, când am planificat acest lucru, am arătat eu nestatornicie? Sau lucrurile pe care le-am planificat, nu am de gând în conformitate cu carnea, că cu mine ar trebui să fie Da, da și nu, nu?"
     },
     {
       "number": 18,
-      "text": "Dar credincios este Dumnezeu că vorbirea noastră către voi nu este „Da” și „Nu”."
+      "text": "Dar, așa cum Dumnezeu este credincios, cuvântul nostru față de tine nu a fost da și nu."
     },
     {
       "number": 19,

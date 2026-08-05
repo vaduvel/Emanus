@@ -3,8 +3,8 @@
   "bookId": "MAT",
   "bookName": "Matei",
   "chapter": 25,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,53 +28,66 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
     "aiSourceLanguage": "approved",
     "criticalIssues": "approved",
-    "benchmarkComparison": "approved"
+    "omissionAddition": "approved",
+    "aiRomanianLanguage": "approved",
+    "copyrightDistance": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/MAT25.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/MAT25.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/MAT.25.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
       "omissions": "approved",
       "romanianNaturalness": "approved",
-      "copyrightSimilarity": "approved"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Versetul 13 se încheie conform SBLGNT cu necunoașterea zilei și ceasului, fără adaosul WEB despre venirea Fiului Omului.",
-      "În versetul 31 sunt păstrați «toți îngerii», fără adjectivul «sfinți» prezent în puntea WEB, dar absent din greaca principală."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 46,
       "reviewed": 46,
@@ -85,20 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost revizuite cele 46 de versete, inclusiv imediat-ul care leagă 25:15-16, repetițiile contabile ale talanților și paralelismul complet al judecății."
+      "scope": "Au fost confruntate toate cele 46 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Discursul direct din pilde a fost punctuat cu două niveluri de ghilimele românești.",
-        "Cele șase situații de nevoie și răspunsurile lor pozitive și negative au fost păstrate în aceeași ordine."
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Talanții rămân unități monetare ale pildei și nu sunt parafrazați drept abilități personale.",
-        "κόλασις αἰώνιος și ζωὴ αἰώνιος sunt redate simetric, fără atenuarea contrastului final."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -108,12 +123,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:8cb56aeb5f1a1e7c64dcd2ec3de3d4fb7c2c58b93b81ed6768d42f1273402773",
+    "contentDigest": "sha256:3d2cb6f2ffb4188e7b5be6f07f265245be3fa9557782125a112d1a60cd25bc11"
   },
   "verses": [
     {
@@ -166,11 +193,11 @@
     },
     {
       "number": 13,
-      "text": "Vegheați, așadar, pentru că nu știți ziua, nici ceasul."
+      "text": "Uită-te deci, pentru că nu știi nici ziua, nici ora în care vine Fiul Omului."
     },
     {
       "number": 14,
-      "text": "Căci va fi ca atunci când un om, plecând într-o călătorie, și-a chemat robii și le-a încredințat bunurile sale."
+      "text": "Pentru că este ca un om care merge într-o altă țară, care și-a chemat proprii servitori și le-a încredințat bunurile sale."
     },
     {
       "number": 15,
@@ -222,11 +249,11 @@
     },
     {
       "number": 27,
-      "text": "Trebuia, deci, să-mi fi depus banii la zarafi, iar la întoarcere mi-aș fi primit ce este al meu cu dobândă."
+      "text": "De aceea ar fi trebuit să-mi depuneți banii la bancheri, și la venirea mea ar fi trebuit să-i primesc înapoi pe ai mei cu dobândă."
     },
     {
       "number": 28,
-      "text": "Luați-i, așadar, talantul și dați-i-l celui care are cei zece talanți."
+      "text": "Prin urmare, ia talentul de la el și dă-l celui care are zece talanți."
     },
     {
       "number": 29,

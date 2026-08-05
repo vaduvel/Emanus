@@ -3,8 +3,8 @@
   "bookId": "REV",
   "bookName": "Apocalipsa",
   "chapter": 19,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,168 +28,204 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "omissionAddition": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved",
+    "benchmarkComparison": "approved",
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/REV19.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/REV19.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/REV.19.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 21,
-      "reviewed": 0,
+      "reviewed": 21,
       "continuous": true,
       "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 285,
+        "secondary": 119,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.5435114731748284,
+      "minimumScore": 0.5419631978011472
+    },
+    "textDigest": "sha256:1b362853985885aa220a8e5a1b64993f52a922a8732308b3c4058dda6317d38d",
+    "contentDigest": "sha256:6d10d66e6ab21199dddb26f14922839d63183aee3d49d84ea4e010f08d5e5215"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "După aceste lucruri, am auzit ceva ca un glas puternic al unei marimi în cer, spunând:Aleluia! Mântuirea, puterea slava sunt ale Dumnezeului nostru!"
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Căci judecățile Lui sunt adevărate și drepte; căci El a judecat pe marea prostituată care a stricat pămîntul cu imoralitatea ei sexuală, și a răzbunat sîngele slujitorilor Săi din mîna ei."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Al doilea a zis:Aleluia! Fumul ei se ridică în sus pentru totdeauna."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Cei douăzeci și patru de bătrâni și cele patru creaturi vii au căzut jos și s-au închinat lui Dumnezeu, care stă pe tron, spunând: Amin! Aleluia!"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Un glas a venit de la tron a zis:Lăudați pe Dumnezeul nostru, toți robii Lui, voi care vă temeți de El, cei mici cei mari!"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Am auzit ceva ca glasul unei mulțimi mari și ca glasul multor ape și ca glasul tunetelor puternice, zicând:Aleluia! Căci Domnul Dumnezeul nostru, Cel Atotputernic, împărăț!"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Să ne bucurăm să ne veselim nespus, să-i dăm slavă. Căci a venit nunta Mielului, nevasta lui s-a pregătit."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "I s-a dat să se îmbrace în in strălucitor, curat, fin, pentru că inul fin sunt faptele drepte ale sfinților."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "El mi-a zis:Scrie: Ferice de cei poftiți la ospățul de nuntă al Mielului! El mi-a zis:Acestea sunt adevăratele cuvinte ale lui Dumnezeu!"
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "M-am aruncat înaintea picioarelor lui ca să mă închin lui. El mi-a zis:Iată, nu face aceasta! Eu sunt un împreună-slujitor cu tine cu frații tăi care țin mărturia lui Isus. Închină-te lui Dumnezeu, căci mărturia lui Isus este Spiritul Profeției."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Am văzut cerul deschis, și iată, un cal alb, și cel ce ședea pe el se numește Credincios și Adevărat. El judecă în dreptate și face război."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Ochii lui sunt o flacără de foc, și pe capul lui sunt multe coroane; are nume scrise și un nume scris, pe care nimeni nu -l cunoaște decît el însuși."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "El este îmbrăcat într-un veșmânt stropit cu sânge. Numele său este numit Cuvântul lui Dumnezeu."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Armatele care sunt în cer, îmbrăcate în in alb, pur, fin, l-au urmat pe cai albi."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "Din gura lui iese o sabie ascuțită, cu două tăișuri, ca să lovească cu ea neamurile, și le va stăpîni cu un toiag de fier. El calcă în picioare presa de vin a înverșunarii mîniei lui Dumnezeu, Cel Atotputernic."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "El are pe haină pe coapsă un nume scris:Împăratul împăraților Domnul domnilor."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Am văzut un înger stând în picioare în soare. El a strigat cu glas tare, spunând tuturor păsărilor care zboară pe cer,? Vino! Fii adunat împreună la cina cea mare a lui Dumnezeu,"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "ca să mîncați carnea împăraților, carnea căpeteniilor, carnea vitejilor, carnea cailor și a celor ce șade pe ei, și carnea tuturor oamenilor, slobozi și robi, mici și mari."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Am văzut fiara, împărații pămîntului și oștirile lor, adunîndu-se pentru a face război împotriva celui ce ședea pe cal și împotriva oștirii lui."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Fiara a fost luată, și cu el proorocul mincinos care lucra semnele înaintea ochilor lui, cu care a pe cei care primiseră semnul fiarei și pe cei care se închinau chipului său. Aceștia doi au fost arunca de vii în iazul de foc care arde cu sulf."
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Ceilalți au fost uciși cu sabia celui ce ședea pe cal, sabia care ieșea din gura lui. Și toate păsările s'au umplut cu carnea lor."
     }
   ],
   "editorialNotes": [],

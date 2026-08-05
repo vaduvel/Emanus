@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 12,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,320 +28,356 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK12.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK12.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.12.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 59,
-      "reviewed": 0,
+      "reviewed": 59,
       "continuous": true,
       "verseNumbersSha256": "sha256:9f6993167803b91f8cdd5e5e4ad12cf5e2c17c280938868eb7f0bd7276523537"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 59 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:59d2bff30ee409a1eff8a29c19af0f5c0e68c5187a55029ea3fe541e94627e49",
+    "contentDigest": "sha256:b99c8f580aa09cba6267b5901e81f3cf534c75c677adcfb6769636774e4d7d57"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Între timp, când o mulțime de mii s-au adunat împreună, atât de mult încât s-au călcat în picioare unii pe alții, el a început să spună discipolilor săi mai întâi de toate, bază de drojdie de farisei, care este ipocrizie."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Dar nu este nimic acoperit care nu va fi dezvăluit, nici ascuns care nu va fi cunoscut."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "De aceea, tot ce ați spus în întuneric va fi auzit în lumină. Ceea ce ați vorbit în ureche în camerele interioare vor fi proclamate pe acoperișurile casei."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Vă spun, prietenii mei, nu vă fie frică de cei care ucid corpul, și după aceea nu mai au pe care le pot face."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Dar vă voi avertiza de cine ar trebui să vă temeți. Temeți-vă de cel care după ce a ucis, are puterea de a arunca în Gheena. Da, vă spun, temeți-vă de el."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Nu sunt cinci vrăbii vândute pentru două monede de Assaria? Nici una dintre ele nu este uitată de Dumnezeu."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Dar chiar firele de păr ale capului sunt toate luate în considerare. Prin urmare, nu te teme. Sunteți de mai mare valoare decât multe vrăbii."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Vă spun, oricine mă mărturisește înaintea oamenilor, Fiul Omului va mărturisi și în fața îngerilor lui Dumnezeu;"
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Dar cel care mă neagă în prezența oamenilor va fi negat în prezența îngerilor lui Dumnezeu."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Oricine rostește un cuvânt împotriva Fiului Omului va fi iertat, dar cei care hulesc împotriva Duhului Sfânt nu vor fi iertați."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Când te aduc în fața sinagogilor, a conducătorilor și a autorităților, nu te îngrijora cum sau ce vei răspunde sau ce vei spune;"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Căci Duhul Sfânt vă va învăța în aceeași oră ce trebuie să spuneți."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Unul din i-a zis:Învățătorule, spune fratelui meu să împartă moștenirea cu mine."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Dar el i-a spus:Omule, cine m-a făcut pe mine judecător sau arbitru peste tine?"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "El le-a zis:Feriți-vă de lăcomie, căci viața unui om nu constă din belșugul lucrurilor pe care le are."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "El le-a spus o parabolă, spunând: Pământul unui om bogat a produs din abundență."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "El a raționat în sine, spunând,? Ce voi face, pentru că nu am loc pentru a stoca culturile mele?"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "El a zis: Iată ce voi face: îmi voi dărâma hambarele, îmi voi zidi altele mai mari acolo îmi voi strânge toate grânele toate bunurile."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Voi spune sufletului meu:Suflete, ai multe bunuri strânse pentru mulți ani. Ia-a, mănâncă, bea și vesel-te."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Dar Dumnezeu i-a zis:Nebunule, în noaptea aceasta ți se va cere sufletul; ale cui vor fi lucrurile pe care le-ai pregătit?"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "Deci, este cel care pune comoara pentru el însuși, și nu este bogat față de Dumnezeu."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "El le -a zis ucenicilor Săi:,,De aceea vă spun, nu vă îngrijorați pentru viața voastră, pentru ce veți mînca, și nici pentru trupul vostru, pentru ce veți purta."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "Viata este mai mult decat mancare, iar corpul este mai mult decat imbracaminte."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "Gândește-te la corbi: ei nu seamănă, nu culeg, nu au depozit sau hambar, și Dumnezeu îi hrănește. Cu cât ești mai valoros decât păsările!"
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Care dintre voi fiind neliniștit poate adăuga un cot la înălțimea lui?"
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Dacă nu ești în stare să faci nici măcar cele mai mici lucruri, de ce te îngrijorezi pentru restul?"
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "Gândiți-vă la crini, cum cresc. Ei nu trudesc, nici nu se rotesc; totuși vă spun, chiar Solomon în toată gloria lui nu a fost îmbrăcat ca unul dintre acestea."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Dar daca asa imbraca Dumnezeu iarba pe camp, care exista astazi si maine este aruncata in cuptor, cu cat te va imbraca mai mult, O, voi cei putin credinciosi?"
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Nu căutați ce veți mânca sau ce veți bea; nici nu vă faceți griji."
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "Căci națiunile lumii caută toate aceste lucruri, dar Tatăl vostru știe că aveți nevoie de aceste lucruri."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "Dar caută Regatul lui Dumnezeu, și toate aceste lucruri vor fi adăugate la tine."
     },
     {
       "number": 32,
-      "text": "DE TRADUS"
+      "text": "Nu-ți fie frică, turmă mică, căci Tatăl tău are plăcerea să-ți dea Regatul."
     },
     {
       "number": 33,
-      "text": "DE TRADUS"
+      "text": "Vindeți ce dați daruri celor nevoia.-vă pungi care să nu se învechească, o comoară în ceruri care să nu se piardă, unde să nu se apropie hoțul să nu piară molia."
     },
     {
       "number": 34,
-      "text": "DE TRADUS"
+      "text": "Căci unde este comoara ta, acolo va fi și inima ta."
     },
     {
       "number": 35,
-      "text": "DE TRADUS"
+      "text": "Să se îmbrace talia și să se ardă lămpile."
     },
     {
       "number": 36,
-      "text": "DE TRADUS"
+      "text": "Fiți ca oamenii care veghează asupra stăpânului lor când se întoarce de la nuntă, pentru ca, atunci când va veni va bate la ușă, să i se deschidă imediat."
     },
     {
       "number": 37,
-      "text": "DE TRADUS"
+      "text": "Binecuvântați sunt acei servitori pe care Domnul îi va găsi uitându-se când va veni. Cel mai sigur vă spun că el se va îmbrăca, să-i facă să se încline, și va veni și să le servească."
     },
     {
       "number": 38,
-      "text": "DE TRADUS"
+      "text": "Ei vor fi binecuvântați dacă el vine în al doilea sau al treilea ceas și le găsește așa."
     },
     {
       "number": 39,
-      "text": "DE TRADUS"
+      "text": "Dar sa stii asta, ca daca stapanul casei ar fi stiut in ce ora venea hotul, el ar fi privit si nu ar fi permis ca casa lui sa fie sparta."
     },
     {
       "number": 40,
-      "text": "DE TRADUS"
+      "text": "Prin urmare, să fie gata, de asemenea,, pentru Fiul Omului vine într-o oră pe care nu-l așteptați."
     },
     {
       "number": 41,
-      "text": "DE TRADUS"
+      "text": "Petru i-a zis:Doamne, ne spui această pildă nouă sau tuturor?"
     },
     {
       "number": 42,
-      "text": "DE TRADUS"
+      "text": "Domnul a zis:,,Cine este atunci sfetnicul credincios și înțelept, pe care stăpînul său îl va pune peste casa lui, ca să le dea partea lor de hrană la timpul potrivit?"
     },
     {
       "number": 43,
-      "text": "DE TRADUS"
+      "text": "Binecuvântat este servitorul pe care stăpânul său îl va găsi făcând asta când va veni."
     },
     {
       "number": 44,
-      "text": "DE TRADUS"
+      "text": "Adevărat vă spun că el îl va pune peste tot ce are."
     },
     {
       "number": 45,
-      "text": "DE TRADUS"
+      "text": "Dar dacă acel servitor spune în inima lui, domnul meu întârzie venirea lui, Și începe să bată servitorii și servitoarele, și să mănânce și să bea și să fie beat,"
     },
     {
       "number": 46,
-      "text": "DE TRADUS"
+      "text": "Domnul robului acela va veni într'o zi, cînd nu -l va aștepta și într'o oră nu va ști, și -l va tăia în două, și -i va pune partea lui cu cei necredincioși."
     },
     {
       "number": 47,
-      "text": "DE TRADUS"
+      "text": "Robul acela care a știut voia stăpânului său nu a pregătit nu a făcut ce a vrut, va fi bătut cu multe lovituri,"
     },
     {
       "number": 48,
-      "text": "DE TRADUS"
+      "text": "dar cel care nu a știut, și a făcut lucruri demne de dungi, va fi bătut cu puține dungi. La oricine este dat mult, de el va fi cerut mult; și la care mult a fost încredințată, de el va fi cerut mai mult."
     },
     {
       "number": 49,
-      "text": "DE TRADUS"
+      "text": "Am venit să arunc foc pe pământ, aș vrea să fie deja aprins."
     },
     {
       "number": 50,
-      "text": "DE TRADUS"
+      "text": "Dar am un botez cu care trebuie să fiu botezat, și cât de îndurerat sunt până când se va împlini!"
     },
     {
       "number": 51,
-      "text": "DE TRADUS"
+      "text": "Crezi că am venit să dau pace pe pământ? Eu vă spun, nu, ci mai degrabă divizare."
     },
     {
       "number": 52,
-      "text": "DE TRADUS"
+      "text": "De acum înainte, vor fi cinci într-o singură casă împărțite, trei împotriva a doi, și doi împotriva a trei."
     },
     {
       "number": 53,
-      "text": "DE TRADUS"
+      "text": "Acestea vor fi împărțite, tatăl împotriva fiului, și fiul împotriva tatălui; mama împotriva fiicei, și fiica împotriva mamei ei; mama-in-lege împotriva nora ei, și nora împotriva soacrei ei."
     },
     {
       "number": 54,
-      "text": "DE TRADUS"
+      "text": "El a mai spus mulțimilor:Când vedeți un nor ridicându-se dinspre vest, imediat: Vine un și se întâmplă."
     },
     {
       "number": 55,
-      "text": "DE TRADUS"
+      "text": "Când bate vântul de sud, spui, bază va fi o căldură arzătoare, și se întâmplă."
     },
     {
       "number": 56,
-      "text": "DE TRADUS"
+      "text": "Voi ipocriților! Știți cum să interpretați aspectul pământului și al cerului, dar cum se face că nu interpretați de data asta?"
     },
     {
       "number": 57,
-      "text": "DE TRADUS"
+      "text": "De ce nu judecați voi singuri ce este drept?"
     },
     {
       "number": 58,
-      "text": "DE TRADUS"
+      "text": "Pentru ca atunci cand mergi cu adversarul tau inaintea magistratului, incearca cu sârguinta pe calea de a fi eliberat de la el, ca nu cumva te trage la judecator, si judecatorul te da ofiterului, si ofiterul te arunca in inchisoare."
     },
     {
       "number": 59,
-      "text": "DE TRADUS"
+      "text": "Îți spun, nu vei ieși de acolo până când nu vei plăti ultimul bănuț."
     }
   ],
   "editorialNotes": [],

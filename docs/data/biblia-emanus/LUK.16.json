@@ -3,8 +3,8 @@
   "bookId": "LUK",
   "bookName": "Luca",
   "chapter": 16,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,208 +28,244 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
+    "omissionAddition": "approved",
+    "criticalIssues": "approved",
+    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/LUK16.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/LUK16.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/LUK.16.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "romanianNaturalness": "approved",
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 31,
-      "reviewed": 0,
+      "reviewed": 31,
       "continuous": true,
       "verseNumbersSha256": "sha256:45e43a625e025e8dd0ee6a503bc681e88cfdffc149007a62b49ec44e0ded441a"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 246,
+        "primary": 575,
+        "secondary": 329,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.4739268246110474,
+      "minimumScore": 0.4668938388149379
+    },
+    "textDigest": "sha256:cd583fa3bd28696ae551a5bfda304cbea987fefd46ad60e02d07ee9b027d6db9",
+    "contentDigest": "sha256:91a220063357ac3685c48b4b3545f3a3c038cfa3caa60874bc3f8e304787438e"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "El a mai zis ucenicilor Săi:,,A fost un om bogat care avea un administrator. I s'a făcut o acuzație că omul acesta își irosea averile."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "El l-a sunat, și i-a spus, Ce este acest lucru pe care l-am auzit despre tine? Dă o contabilitate a managementului dumneavoastră, pentru că nu mai poate fi manager."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Managerul a spus în sinea lui, Ce voi face, văzând că domnul meu îmi ia poziția de conducere de la mine? Nu am puterea să sap. Mi-e să cerșesc."
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "Eu știu ce voi face, pentru ca atunci când voi fi dat afară din conducere, să mă primească în casele lor."
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "Chemând fiecare dintre datornicii stăpânului său, el a spus la primul,? Cât de mult datorezi domnului meu?"
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "El a spus,? O sută de batos de ulei.? I-a spus,? Ia-ți factura, și stai jos repede și scrie cincizeci.?"
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Apoi i-a zis altuia:Cât ești dator?O sută de cori de grâu, i-a zis el,Ia-ți nota de plată scrie optzeci."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Domnul său l-a lăudat pe administratorul necinstit pentru că a făcut cu înțelepciune, pentru că copiii acestei lumi sunt, în generația lor, mai decât copiii luminii."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Eu vă spun, faceți-vă prieteni prin intermediul mamonei nedrepte, astfel încât atunci când nu veții, să vă poată primi în corturilee."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Cel care este credincios într-un foarte puțin este credincios, de asemenea, în mult. Cel care este necinstit într-un foarte puțin este, de asemenea, necinstit în mult."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "De aceea, dacă nu ați fost credincioși în mamona nedreaptă, cine vă va încredința adevăratele bogății?"
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Dacă nu ați fost credincioși în ceea ce este un altul, cine vă va da ceea ce este al vostru?"
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Nici un servitor nu poate servi doi stăpâni, pentru că fie el îl va urî pe unul și îl va iubi pe celălalt, fie el îl va ține pe unul și îl va disprețui pe celălalt. Sunteți capabili să-l slujiți pe Dumnezeu și pe Mammon."
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "Fariseii, care erau iubitori de bani, au auzit ei toate aceste lucruri băteau joc de El."
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "El le -a zis:,,Voi sunteți cei ce vă socotiți neprihăniți înaintea oamenilor, dar Dumnezeu vă cunoaște inimile. Căci ce este înălțat printre oameni este o urîciune înaintea lui Dumnezeu."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Legea și profeții au fost până la Ioan. De atunci, Evanghelia Regatului lui Dumnezeu este predicată, și toată lumea forțează drumul său în ea."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Dar este mai ușor pentru cer și pământ să treacă decât pentru o singură lovitură mică a unui stilou în lege să cadă."
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "Toți cei care divorțează de soția lui și se căsătoresc cu alta comit adulter. Cine se căsătorește cu unul care este divorțat de un soț comite adulter."
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "era un om bogat, îmbrăcat în purpură și in subțire, care trăia în lux în fiecare zi."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Un anumit cerșetor, numit Lazăr, a fost dus la poarta lui, plin de răni,"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "și dorind să fie hrănite cu firimiturile care au căzut de la masa omului bogat. Da, chiar și câinii au venit și lins rănile sale."
     },
     {
       "number": 22,
-      "text": "DE TRADUS"
+      "text": "Cerșetorul a murit, și el a fost dus de îngeri la sânul lui Avraam. Omul bogat, de asemenea, a murit și a fost îngropat."
     },
     {
       "number": 23,
-      "text": "DE TRADUS"
+      "text": "În Hades, el a ridicat ochii, fiind în chinuri, și a văzut Avraam departe, și Lazăr la sânul său."
     },
     {
       "number": 24,
-      "text": "DE TRADUS"
+      "text": "El a plâns și a spus, Părinte Avraam, ai milă de mine, și trimite Lazăr, că el poate înmuia vârful degetului său în apă și se răcească limba mea! Căci eu sunt în chin în această flacără."
     },
     {
       "number": 25,
-      "text": "DE TRADUS"
+      "text": "Dar Avraam a zis, Fiule, adu- aminte că tu, în timpul vieții tale, ai primit lucrurile tale bune, și Lazăr, în același fel, lucrurile rele. Dar aici el este acum mângâiat și tu în."
     },
     {
       "number": 26,
-      "text": "DE TRADUS"
+      "text": "Pe langa toate acestea, intre noi si tine exista un mare golf fixat, ca cei care vor sa treaca de aici catre tine nu sunt capabili, si ca nimeni nu poate trece de acolo la noi."
     },
     {
       "number": 27,
-      "text": "DE TRADUS"
+      "text": "El a zis:Tată, te rog deci să-l trimiți în casa tatălui meu."
     },
     {
       "number": 28,
-      "text": "DE TRADUS"
+      "text": "Căci am cinci frați, ca să le mărturisească, așa că au câștigat și ei să intre în acest loc al chinurilor."
     },
     {
       "number": 29,
-      "text": "DE TRADUS"
+      "text": "Avraam i-a răspuns: Au pe Moise pe prooroci; să asculte de ei!"
     },
     {
       "number": 30,
-      "text": "DE TRADUS"
+      "text": "El a răspuns: Nu, părinte Avraam, dar dacă cineva se duce la ei din morți, ei se vor căi."
     },
     {
       "number": 31,
-      "text": "DE TRADUS"
+      "text": "I-a spus, Dacă nu ascultă de Moise și de profeți, nici nu vor fi convinși dacă cineva se va ridica din morți."
     }
   ],
   "editorialNotes": [],

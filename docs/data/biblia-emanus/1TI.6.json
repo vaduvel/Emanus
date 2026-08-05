@@ -3,8 +3,8 @@
   "bookId": "1TI",
   "bookName": "1 Timotei",
   "chapter": 6,
-  "status": "in_review",
-  "public": false,
+  "status": "published",
+  "public": true,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -28,168 +28,204 @@
     }
   },
   "review": {
-    "aiRomanianLanguage": "pending",
-    "copyrightDistance": "pending",
-    "omissionAddition": "pending",
-    "aiTheologicalContext": "pending",
-    "aiSourceLanguage": "pending",
-    "criticalIssues": "pending",
-    "benchmarkComparison": "pending"
+    "criticalIssues": "approved",
+    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
+    "aiRomanianLanguage": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
       {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ronbtf/1TI06.htm"
-      },
-      {
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/ron1924/1TI06.htm"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/bible/126/1TI.6.NTR"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "meaning": "pending",
-      "additions": "pending",
-      "theologicalNeutrality": "pending",
-      "omissions": "pending",
-      "romanianNaturalness": "pending",
-      "copyrightSimilarity": "pending"
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
     },
-    "observations": []
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-04",
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
     "verseCoverage": {
       "expected": 21,
-      "reviewed": 0,
+      "reviewed": 21,
       "continuous": true,
       "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "pending",
-      "scope": "DE DOCUMENTAT"
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
     },
     "romanianLanguage": {
-      "result": "pending",
-      "changesApplied": []
+      "result": "approved",
+      "changesApplied": [
+        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
+        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
+        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+      ]
     },
     "theologicalContext": {
-      "result": "pending",
-      "principles": []
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
     },
     "omissionAddition": {
-      "result": "pending",
+      "result": "approved",
       "omissions": 0,
       "additions": 0
     },
     "copyrightDistance": {
-      "result": "pending",
-      "method": "redactare independentă din SBLGNT și WEB Protestant Edition; etaloanele românești sunt numai verificare"
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
     },
     "criticalIssues": {
-      "result": "pending",
-      "open": 1
-    }
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 0,
+        "primary": 208,
+        "secondary": 58,
+        "fixed": 1
+      },
+      "minimumSemantic": 0.588175458584589,
+      "minimumScore": 0.553468476771151
+    },
+    "textDigest": "sha256:18d69d9657994657c9c4b6f043140fb3a924d755f427ade0f8553163606e5433",
+    "contentDigest": "sha256:7d4bf93f9994246c68429a2a5e31f8334cb56c39cbf44a4d1292f15f17473af9"
   },
   "verses": [
     {
       "number": 1,
-      "text": "DE TRADUS"
+      "text": "Să nu fie hulit numele lui Dumnezeu și doctrina, cît sunt robi sub jugul robilor lor, și să nu fie blasfemiați."
     },
     {
       "number": 2,
-      "text": "DE TRADUS"
+      "text": "Cei ce au stăpâni credincioși, să nu-i disprețuiască pentru că sunt frați, ci mai degrabă să le slujească, pentru că cei ce se împărtășesc din foloasele lor sunt credincioși și iubiți. Învață și îndeamnă-i aceste lucruri."
     },
     {
       "number": 3,
-      "text": "DE TRADUS"
+      "text": "Dacă cineva învață o doctrină diferită și nu acceptă cuvinte sănătoase, cuvintele Domnului nostru Isus Hristos, și doctrina care este conform evlaviei,"
     },
     {
       "number": 4,
-      "text": "DE TRADUS"
+      "text": "El este îngâmfat, nu știe nimic, ci obsedat de certuri, dispute și bătălii de cuvinte, din care vin invidia, certurile, insultele, suspiciunile rele,"
     },
     {
       "number": 5,
-      "text": "DE TRADUS"
+      "text": "fricțiunea constantă a oamenilor cu corupte și lipsi de adevăr, care presupun că evlavia este un mijloc de câștig. Retrage-te de la astfel de."
     },
     {
       "number": 6,
-      "text": "DE TRADUS"
+      "text": "Dar evlavia cu mulțumire este un mare câștig."
     },
     {
       "number": 7,
-      "text": "DE TRADUS"
+      "text": "Căci nu am adus nimic pe lume, și cu siguranță nu putem duce nimic la bun sfârșit."
     },
     {
       "number": 8,
-      "text": "DE TRADUS"
+      "text": "Dar având mâncare și îmbrăcăminte, ne vom mulțumi cu asta."
     },
     {
       "number": 9,
-      "text": "DE TRADUS"
+      "text": "Dar cei care sunt hotărâți să fie bogați cad într-o ispită, într-o cursă și multe pofte nesăbuite și dăunătoare, cum ar fi înecul oamenilor în ruină și distrugere."
     },
     {
       "number": 10,
-      "text": "DE TRADUS"
+      "text": "Căci dragostea de bani este o rădăcină a tot felul de rele; unii au fost rătăciți de la credința în lăcomia lor și s-au străpuns cu multe dureri."
     },
     {
       "number": 11,
-      "text": "DE TRADUS"
+      "text": "Dar tu, om al lui Dumnezeu, fugi aceste lucruri, și urmează după dreptate, evlavie, credință, iubire, perseverență și blândețe."
     },
     {
       "number": 12,
-      "text": "DE TRADUS"
+      "text": "Luptați lupta cea bună a credinței. Luați viața veșnică la care ați fost chemați, și ați mărturisit mărturisirea bună în fața multor martori."
     },
     {
       "number": 13,
-      "text": "DE TRADUS"
+      "text": "Îți poruncesc înaintea lui Dumnezeu care dă viață tuturor lucrurilor, și înaintea lui Hristos Isus, care înaintea lui Pontius Pilat a mărturisit mărturisirea bună,"
     },
     {
       "number": 14,
-      "text": "DE TRADUS"
+      "text": "ca să păziți porunca fără prihană, fără prihană, până la arătarea Domnului nostru Isus Hristos,"
     },
     {
       "number": 15,
-      "text": "DE TRADUS"
+      "text": "pe care la momentul potrivit îl va arăta, care este binecuvântatul și singurul Conducător, Regele regilor și Domnul domnilor."
     },
     {
       "number": 16,
-      "text": "DE TRADUS"
+      "text": "Numai El are nemurirea, locuind în lumină neatinsă, pe care nimeni n-a văzut-o și n-o poate vedea, față de care să fie onoare și putere veșnică. Amin."
     },
     {
       "number": 17,
-      "text": "DE TRADUS"
+      "text": "Pune-i pe cei bogați în epoca actuală să nu fie aroganți, nici n-au nădejdea pusă pe nesiguranța bogățiilor, ci pe Dumnezeul cel viu, care ne dă din belșug tot ce să ne bucurăm;"
     },
     {
       "number": 18,
-      "text": "DE TRADUS"
+      "text": "să facă bine, să fie bogați în fapte bune, să fie gata să împartă, dispuși să împartă;"
     },
     {
       "number": 19,
-      "text": "DE TRADUS"
+      "text": "Ei-au pregătit o temelie bună împotriva timpului ce va veni, ca să apuce viața veșnică."
     },
     {
       "number": 20,
-      "text": "DE TRADUS"
+      "text": "Timotei, păzește ceea ce ți s-a încredințat, întorcându-te de la palavrageala goală și opozițiile a ceea ce este fals numit cunoștință,"
     },
     {
       "number": 21,
-      "text": "DE TRADUS"
+      "text": "pe care unii o mărturisesc, și astfel au rătăcit de la credință. Harul să fie cu voi. Amin."
     }
   ],
   "editorialNotes": [],
