@@ -2,7 +2,9 @@
   "name": "emanus",
   "private": true,
   "packageManager": "pnpm@9.7.0",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "pnpm -r build",
     "build:shared": "pnpm --filter @emanus/shared build",
@@ -13,6 +15,9 @@
     "check:quotes": "python3 scripts/fix-quotes.py --check",
     "check:typos": "python3 scripts/fix-known-typos.py --check",
     "check:content": "python3 scripts/audit-content.py",
-    "check:bible-publication": "python3 scripts/publica-geneza.py --check"
+    "check:bible-publication": "python3 scripts/publica-geneza.py --check",
+    "check:biblia-emanus": "python3 scripts/check-biblia-emanus.py",
+    "test:biblia-emanus": "python3 -m unittest scripts/test_biblia_emanus.py",
+    "seal:biblia-emanus": "python3 scripts/seal-biblia-emanus.py"
   }
 }
