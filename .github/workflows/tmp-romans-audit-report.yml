@@ -1,0 +1,19 @@
+name: Temporary Romans Semantic Audit Reports
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  report:
+    if: github.head_ref == 'agent/biblia-emanus-nt-audit3'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        chapter: [1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Romans chapter report
+        run: python3 scripts/tmp-report-romans-audit.py ${{ matrix.chapter }}
