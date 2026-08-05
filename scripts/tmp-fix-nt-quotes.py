@@ -73,7 +73,7 @@ def main() -> int:
         30,
         replace_many(
             ("“Strângeți", "‘Strângeți"),
-            ("hambarul meu.”»," , "hambarul meu.’»"),
+            ("hambarul meu.”»”", "hambarul meu.’»”"),
         ),
     )
     change("MAT.20", 16, remove_final_outer())
