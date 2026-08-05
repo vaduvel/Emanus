@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "data" / "biblia-emanus-early-source-candidates"
 REPORT = ROOT / "docs" / "biblia-emanus" / "PR40-EARLY-WORKS-EXTRACTION.json"
 USER_AGENT = "EmanusSourceAudit/4.0 (+https://github.com/vaduvel/Emanus)"
+WIKISOURCE_API = "https://en.wikisource.org/w/api.php"
 
 WORKS: dict[str, dict[str, Any]] = {
     "ENO": {
@@ -66,12 +67,18 @@ WORKS: dict[str, dict[str, Any]] = {
     },
 }
 
+# The Kraft–Purintun numbering exposed by the source page has no unit numbered
+# 3:9; the text moves from 3:8 to 3:10. This is preserved and declared instead
+# of silently renumbering the edition.
+DOCUMENTED_SOURCE_GAPS: dict[tuple[str, int], set[int]] = {("4BA", 3): {9}}
+
 STOP_MARKERS = {
     "books", "ethiopian canon", "built from public-domain sources.",
     "send feedback or error reports", "previous chapter", "next chapter",
 }
 VERSE_RE = re.compile(r"^([1-9][0-9]{0,2})\s*[.)]?\s+(.+)$", re.S)
 BARE_NUMBER_RE = re.compile(r"^([1-9][0-9]{0,2})$")
+INLINE_VERSE_RE = re.compile(r"(?<![0-9])([1-9][0-9]{0,2})\.\s+")
 
 
 def clean(value: str) -> str:
@@ -105,11 +112,16 @@ def visible_lines(html: str) -> list[str]:
     return [line for raw in root.get_text("\n").splitlines() if (line := clean(raw))]
 
 
+def heading_chapter(line: str) -> int | None:
+    folded = clean(line).casefold().strip("[](){} ")
+    match = re.fullmatch(r"chapter\s+([0-9]+)\.?", folded)
+    return int(match.group(1)) if match else None
+
+
 def find_text_start(lines: list[str], chapter: int) -> int:
-    exact = f"chapter {chapter}"
-    candidates = [index for index, line in enumerate(lines) if line.casefold() == exact]
+    candidates = [index for index, line in enumerate(lines) if heading_chapter(line) == chapter]
     if not candidates:
-        raise RuntimeError(f"exact heading {exact!r} not found")
+        raise RuntimeError(f"chapter heading {chapter!r} not found")
     # Mirrors may repeat the title in breadcrumbs; the last exact heading is body.
     return candidates[-1] + 1
 
@@ -122,7 +134,7 @@ def trim_body(lines: list[str], start: int) -> list[str]:
             break
         if folded.startswith("chapter:") or folded.startswith("from the apocrypha"):
             break
-        if re.fullmatch(r"chapter\s+[0-9]+", folded):
+        if heading_chapter(line) is not None:
             break
         if line in {"* * *", "***"}:
             break
@@ -162,7 +174,6 @@ def parse_numbered(lines: list[str]) -> list[dict[str, Any]]:
         current = {"number": number, "text": text}
     if current is not None:
         verses.append(current)
-    # Drop leading synopsis accidentally parsed as prose before verse 1.
     first_one = next((i for i, verse in enumerate(verses) if verse["number"] == 1), None)
     if first_one is not None:
         verses = verses[first_one:]
@@ -175,12 +186,78 @@ def parse_single(lines: list[str]) -> list[dict[str, Any]]:
     return [{"number": 1, "text": body}] if body else []
 
 
+def parse_inline_numbered(text: str) -> list[dict[str, Any]]:
+    """Parse an edition where multiple numbered units share one paragraph.
+
+    Chapter 90 of the Charles Enoch transcription contains parallel doublets
+    printed out of numerical order. Each marker is therefore captured first,
+    then the units are sorted by their own edition number.
+    """
+    start_marker = re.search(r"CHAPTER\s+XC\.", text, re.I)
+    if start_marker:
+        text = text[start_marker.end():]
+    text = text.split("Retrieved from", 1)[0]
+    matches = list(INLINE_VERSE_RE.finditer(text))
+    by_number: dict[int, str] = {}
+    for index, match in enumerate(matches):
+        number = int(match.group(1))
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        value = clean(text[match.end():end])
+        value = re.sub(r"^\|\s*", "", value)
+        if not value:
+            continue
+        # Prefer the longest occurrence when navigation or a heading duplicates a number.
+        if len(value) > len(by_number.get(number, "")):
+            by_number[number] = value
+    return [{"number": number, "text": by_number[number]} for number in sorted(by_number)]
+
+
+def enoch_wikisource_chapter_90() -> tuple[list[dict[str, Any]], str, str]:
+    title = "The Book of Enoch (Charles)/Chapter 90"
+    response = requests.get(
+        WIKISOURCE_API,
+        params={
+            "action": "query",
+            "format": "json",
+            "formatversion": "2",
+            "titles": title,
+            "prop": "extracts|revisions",
+            "explaintext": "1",
+            "rvprop": "ids",
+            "rvlimit": "1",
+        },
+        headers={"User-Agent": USER_AGENT},
+        timeout=60,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    pages = payload.get("query", {}).get("pages", [])
+    if not pages or pages[0].get("missing"):
+        raise RuntimeError("Wikisource Charles chapter 90 is unavailable")
+    extract = str(pages[0].get("extract", ""))
+    verses = parse_inline_numbered(extract)
+    if [item["number"] for item in verses] != list(range(1, 43)):
+        raise RuntimeError("Wikisource Charles chapter 90 did not yield units 1–42")
+    revision = pages[0].get("revisions", [{}])[0].get("revid")
+    url = "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)/Chapter_90"
+    if revision:
+        url += f"?oldid={revision}"
+    return verses, url, hashlib.sha256(extract.encode("utf-8")).hexdigest()
+
+
+def expected_numbers(book_id: str, chapter: int, verses: list[dict[str, Any]]) -> list[int]:
+    if not verses:
+        return []
+    gaps = DOCUMENTED_SOURCE_GAPS.get((book_id, chapter), set())
+    return [number for number in range(1, max(v["number"] for v in verses) + 1) if number not in gaps]
+
+
 def validate_verses(book_id: str, chapter: int, verses: list[dict[str, Any]]) -> list[str]:
     issues: list[str] = []
     if not verses:
         return ["NO_TEXT"]
     numbers = [verse["number"] for verse in verses]
-    if numbers != list(range(1, len(numbers) + 1)):
+    if numbers != expected_numbers(book_id, chapter, verses):
         issues.append("NON_CONTINUOUS_VERSE_NUMBERS")
     if any(not verse["text"].strip() for verse in verses):
         issues.append("EMPTY_VERSE")
@@ -198,7 +275,15 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     for path in OUT.glob("*.json"):
         path.unlink()
-    report: dict[str, Any] = {"schemaVersion": 1, "works": {}, "blocking": []}
+    report: dict[str, Any] = {
+        "schemaVersion": 2,
+        "documentedSourceGaps": {
+            f"{book_id}.{chapter}": sorted(gaps)
+            for (book_id, chapter), gaps in DOCUMENTED_SOURCE_GAPS.items()
+        },
+        "works": {},
+        "blocking": [],
+    }
     for book_id, metadata in WORKS.items():
         work_record: dict[str, Any] = {
             "name": metadata["name"],
@@ -215,6 +300,8 @@ def main() -> None:
                 start = find_text_start(lines, chapter)
                 body = trim_body(lines, start)
                 verses = parse_single(body) if metadata["mode"] == "single-prose-unit" else parse_numbered(body)
+                if book_id == "ENO" and chapter == 90 and [v["number"] for v in verses] != list(range(1, 43)):
+                    verses, url, page_hash = enoch_wikisource_chapter_90()
                 issues = validate_verses(book_id, chapter, verses)
             except Exception as error:  # noqa: BLE001
                 page_hash = ""
@@ -223,6 +310,8 @@ def main() -> None:
             work_record["sourcePages"][str(chapter)] = {"url": url, "sha256": page_hash}
             work_record["chapters"][str(chapter)] = {
                 "verseCount": len(verses),
+                "numbers": [verse["number"] for verse in verses],
+                "documentedGaps": sorted(DOCUMENTED_SOURCE_GAPS.get((book_id, chapter), set())),
                 "issues": issues,
             }
             if issues:
@@ -242,6 +331,7 @@ def main() -> None:
                     "underlyingLicense": metadata["underlyingLicense"],
                     "transcriptionRole": metadata["transcriptionRole"],
                     "publicationLicense": metadata["publicationLicense"],
+                    "documentedNumberingGaps": sorted(DOCUMENTED_SOURCE_GAPS.get((book_id, chapter), set())),
                 },
                 "verses": verses,
                 "audit": {"blocking": issues},
