@@ -1,0 +1,173 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 9,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.9.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.9.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.9.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "cd54021e70c3eacca006aefba9f824af80782394e0e7139c6f02849413989540",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Înțelepciunea și-a zidit casa, și-a tăiat cei șapte stâlpi."
+    },
+    {
+      "number": 2,
+      "text": "Și-a înjunghiat vitele, și-a amestecat vinul, și-a pus masa."
+    },
+    {
+      "number": 3,
+      "text": "Și-a trimis slujnicele și strigă, de pe vârful înălțimilor cetății:"
+    },
+    {
+      "number": 4,
+      "text": "„Cine este prost, să vină încoace!”"
+    },
+    {
+      "number": 5,
+      "text": "„Veniți de mâncați din pâinea mea și beți din vinul pe care l-am amestecat!”"
+    },
+    {
+      "number": 6,
+      "text": "„Lăsați prostia și veți trăi, și umblați pe calea priceperii!”"
+    },
+    {
+      "number": 7,
+      "text": "Cel ce mustră pe un batjocoritor își trage dispreț și cel ce caută să îndrepte pe cel rău se alege cu ocară."
+    },
+    {
+      "number": 8,
+      "text": "Nu mustra pe cel batjocoritor, ca să nu te urască; mustră pe cel înțelept, și el te va iubi!"
+    },
+    {
+      "number": 9,
+      "text": "Dă înțeleptului, și se va face și mai înțelept; învață pe cel neprihănit, și va învăța și mai mult!"
+    },
+    {
+      "number": 10,
+      "text": "Începutul înțelepciunii este frica de DOMNUL; și știința sfinților este priceperea."
+    },
+    {
+      "number": 11,
+      "text": "Prin mine ți se vor înmulți zilele și ți se vor mări anii vieții tale."
+    },
+    {
+      "number": 12,
+      "text": "Dacă ești înțelept, pentru tine ești înțelept; dacă ești batjocoritor, tu singur vei suferi."
+    },
+    {
+      "number": 13,
+      "text": "Nebunia este o femeie gălăgioasă, proastă și care nu știe nimic."
+    },
+    {
+      "number": 14,
+      "text": "Ea șade totuși la ușa casei sale, pe un scaun, pe înălțimile cetății,"
+    },
+    {
+      "number": 15,
+      "text": "ca să strige la trecătorii care merg pe calea cea dreaptă:"
+    },
+    {
+      "number": 16,
+      "text": "„Cine este prost, să vină aici!”"
+    },
+    {
+      "number": 17,
+      "text": "„Apele furate sunt dulci, și pâinea luată pe ascuns este plăcută!”"
+    },
+    {
+      "number": 18,
+      "text": "El nu știe că acolo sunt morții și că oaspeții ei sunt în văile Locuinței morților."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

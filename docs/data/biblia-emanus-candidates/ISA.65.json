@@ -1,0 +1,217 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 65,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.65.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.65.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.65.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "b4eb5f7a0dbc558828893ef8b84741d2a38009de2b186c7cf5fcdabe3003e84b",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„Eram gata să răspund celor ce nu întrebau de Mine, eram gata să fiu găsit de cei ce nu Mă căutau; am zis: „Iată-Mă, iată-Mă!””"
+    },
+    {
+      "number": 2,
+      "text": "Mi-am întins mâinile toată ziua spre un popor răzvrătit care umblă pe o cale rea, în voia gândurilor lui!"
+    },
+    {
+      "number": 3,
+      "text": "Spre un popor care nu contenește să Mă mânie în față aducând jertfe în grădini și arzând tămâie pe cărămizile de pe acoperiș;"
+    },
+    {
+      "number": 4,
+      "text": "care locuiește în morminte și petrece noaptea în peșteri mâncând carne de porc și având în străchini bucate necurate,"
+    },
+    {
+      "number": 5,
+      "text": "Ei spun: «Stai deoparte! Nu te apropia de mine, fiindcă sunt mai sfânt decât tine!» Aceștia sunt fum în nările Mele, un foc care arde toată ziua."
+    },
+    {
+      "number": 6,
+      "text": "Iată ce am hotărât în Mine: Nici gând să tac, ci îi voi pedepsi; da, îi voi pedepsi."
+    },
+    {
+      "number": 7,
+      "text": "„Pentru nelegiuirile voastre – zice DOMNUL – și pentru nelegiuirile părinților voștri care au ars tămâie pe munți și M-au batjocorit pe înălțimi, de aceea, le voi măsura plata pentru faptele lor din trecut.”"
+    },
+    {
+      "number": 8,
+      "text": "Așa vorbește DOMNUL: „După cum, când se găsește zeamă într-un strugure, se zice: „Nu-l nimici, căci este o binecuvântare în el!””"
+    },
+    {
+      "number": 9,
+      "text": "Voi scoate o sămânță din Iacov, și din Iuda, un moștenitor al munților Mei; aleșii Mei vor stăpâni țara, și robii Mei vor locui în ea."
+    },
+    {
+      "number": 10,
+      "text": "Saronul va sluji ca loc de pășune oilor, și valea Acor va sluji de culcuș boilor, pentru poporul Meu care Mă va căuta."
+    },
+    {
+      "number": 11,
+      "text": "Dar pe voi care părăsiți pe DOMNUL, care uitați muntele Meu cel sfânt, care puneți o masă „norocului” și umpleți un pahar în cinstea „sorții”"
+    },
+    {
+      "number": 12,
+      "text": "„vă sortesc sabiei, și toți veți pleca genunchiul ca să fiți înjunghiați; căci Eu am chemat, și n-ați răspuns, am vorbit, și n-ați ascultat, ci ați făcut ce este rău înaintea Mea și ați ales ce nu-Mi place.”"
+    },
+    {
+      "number": 13,
+      "text": "De aceea, așa vorbește DOMNUL Dumnezeu: „Iată că robii Mei vor mânca, iar voi veți fi flămânzi; iată că robii Mei vor bea, iar vouă vă va fi sete; iată că robii Mei se vor bucura, și voi vă veți rușina;”"
+    },
+    {
+      "number": 14,
+      "text": "iată că robii Mei vor cânta de veselă ce la va fi inima, dar voi veți striga de durerea pe care o veți avea în suflet și vă veți boci de mâhnit ce vă va fi duhul."
+    },
+    {
+      "number": 15,
+      "text": "Veți lăsa numele vostru ca blestem aleșilor Mei; și anume: „DOMNUL Dumnezeu vă va omorî”"
+    },
+    {
+      "number": 16,
+      "text": "Așa că, cine se va binecuvânta în țară se va binecuvânta în Dumnezeul adevărului, și cine va jura în țară va jura pe Dumnezeul adevărului, căci vechile suferințe vor fi uitate, vor fi ascunse de ochii Mei."
+    },
+    {
+      "number": 17,
+      "text": "Căci iată, Eu fac ceruri noi și un pământ nou; așa că nimeni nu-și va mai aduce aminte de lucrurile trecute și nimănui nu-i vor mai veni în minte."
+    },
+    {
+      "number": 18,
+      "text": "Ci vă veți bucura și vă veți înveseli pe vecie pentru cele ce voi face. Căci voi preface Ierusalimul în veselie, și pe poporul lui, în bucurie."
+    },
+    {
+      "number": 19,
+      "text": "Eu însumi Mă voi înveseli asupra Ierusalimului și Mă voi bucura de poporul Meu; nu se va mai auzi în el de acum nici glasul plânsetelor, nici glasul țipetelor."
+    },
+    {
+      "number": 20,
+      "text": "Nu vor mai fi în el nici copii cu zile puține, nici bătrâni care să nu-și împlinească zilele. Căci cine va muri la vârsta de o sută de ani va fi încă tânăr, și cel ce va muri în vârstă de o sută de ani va fi blestemat ca păcătos."
+    },
+    {
+      "number": 21,
+      "text": "Vor zidi case și le vor locui; vor sădii vii și le vor mânca rodul."
+    },
+    {
+      "number": 22,
+      "text": "Nu vor zidi case, ca altul să locuiască în ele; nu vor sădi vii, pentru ca altul să le mănânce rodul; căci zilele poporului Meu vor fi ca zilele copacilor, și aleșii Mei se vor bucura de lucrul mâinilor lor."
+    },
+    {
+      "number": 23,
+      "text": "Nu vor munci degeaba și nu vor avea copii ca să-i vadă pierind, căci vor alcătui o sămânță binecuvântată de DOMNUL, și copiii lor vor fi împreună cu ei."
+    },
+    {
+      "number": 24,
+      "text": "Înainte ca să Mă cheme, le voi răspunde; înainte ca să isprăvească vorba, îi voi asculta!"
+    },
+    {
+      "number": 25,
+      "text": "„Lupul și mielul vor paște împreună, leul va mânca paie ca boul, și șarpele se va hrăni cu țărână. Niciun rău, nicio vătămare nu se va face pe tot muntele Meu cel sfânt, zice DOMNUL.”"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau evaluarea divină și imaginile fumului și focului continuu.",
+      "previousTextDigest": "870526a0c6029afe73db9ff19af43cabf54d74984f1001ab0243151a2f7618a2",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

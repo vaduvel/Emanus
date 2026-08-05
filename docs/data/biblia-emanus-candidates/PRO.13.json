@@ -1,0 +1,201 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 13,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.13.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.13.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.13.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "b3aed8c30bd9a7c4fe16ac3253e13b14c6968a8277c52d74b2e8c5853291792b",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Un fiu înțelept ascultă învățătura tatălui său, dar batjocoritorul n-ascultă mustrarea. –"
+    },
+    {
+      "number": 2,
+      "text": "Prin rodul gurii ai parte de bine, dar cei stricați au parte de silnicie. –"
+    },
+    {
+      "number": 3,
+      "text": "Cine-și păzește gura, își păzește sufletul; cine-și deschide buzele mari aleargă spre pieirea lui. –"
+    },
+    {
+      "number": 4,
+      "text": "Leneșul dorește mult, și totuși, n-are nimic, dar cei harnici se satură. –"
+    },
+    {
+      "number": 5,
+      "text": "Cel neprihănit urăște cuvintele mincinoase, dar cel rău se face urât și se acoperă de rușine. –"
+    },
+    {
+      "number": 6,
+      "text": "Neprihănirea păzește pe cel nevinovat, dar răutatea aduce pierzarea păcătosului. –"
+    },
+    {
+      "number": 7,
+      "text": "Unul face pe bogatul, și n-are nimic, altul face pe săracul, și are totuși mari avuții. –"
+    },
+    {
+      "number": 8,
+      "text": "Omul cu bogăția lui își răscumpără viața, dar săracul n-ascultă mustrarea. –"
+    },
+    {
+      "number": 9,
+      "text": "Lumina celor neprihăniți arde voioasă, dar candela celor răi se stinge. –"
+    },
+    {
+      "number": 10,
+      "text": "Prin mândrie se ațâță numai certuri, dar înțelepciunea este cu cel ce ascultă sfaturile. –"
+    },
+    {
+      "number": 11,
+      "text": "Bogăția câștigată fără trudă scade, dar ce se strânge încetul cu încetul, crește. –"
+    },
+    {
+      "number": 12,
+      "text": "O nădejde amânată îmbolnăvește inima, dar o dorință împlinită este un pom de viață. –"
+    },
+    {
+      "number": 13,
+      "text": "Cine nesocotește Cuvântul DOMNULUI se pierde, dar cine se teme de poruncă este răsplătit. –"
+    },
+    {
+      "number": 14,
+      "text": "Învățătura înțeleptului este un izvor de viață, ca să abată pe om din cursele morții. –"
+    },
+    {
+      "number": 15,
+      "text": "O minte sănătoasă câștigă bunăvoință, dar calea celor stricați este pietroasă. –"
+    },
+    {
+      "number": 16,
+      "text": "Orice om chibzuit lucrează cu cunoștință, dar nebunul își dă la iveală nebunia. –"
+    },
+    {
+      "number": 17,
+      "text": "Un sol rău cade în nenorocire, dar un sol credincios aduce tămăduire. –"
+    },
+    {
+      "number": 18,
+      "text": "Sărăcia și rușinea sunt partea celui ce leapădă certarea, dar cel ce ia seama la mustrare este pus în cinste. –"
+    },
+    {
+      "number": 19,
+      "text": "Împlinirea unei dorințe este dulce sufletului, dar celor nebuni le este urât să se lase de rău. –"
+    },
+    {
+      "number": 20,
+      "text": "Cine umblă cu înțelepții se face înțelept, dar cui îi place să se însoțească cu nebunii o duce rău. –"
+    },
+    {
+      "number": 21,
+      "text": "Nenorocirea urmărește pe cei ce păcătuiesc, dar cei neprihăniți vor fi răsplătiți cu fericire. –"
+    },
+    {
+      "number": 22,
+      "text": "Omul de bine lasă moștenitori pe copiii copiilor săi, dar bogățiile păcătosului sunt păstrate pentru cel neprihănit. –"
+    },
+    {
+      "number": 23,
+      "text": "Ogorul pe care-l desțelenește săracul dă o hrană îmbelșugată, dar mulți pier din pricina nedreptății lor. –"
+    },
+    {
+      "number": 24,
+      "text": "Cine cruță nuiaua, urăște pe fiul său, dar cine-l iubește, îl pedepsește îndată. –"
+    },
+    {
+      "number": 25,
+      "text": "Cel neprihănit mănâncă până se satură, dar pântecele celor răi duce lipsă. –"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

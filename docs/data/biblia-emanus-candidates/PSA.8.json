@@ -1,0 +1,137 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 8,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.8.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.8.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.8.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "f0b50628e6b61b124e107bbaeeca51b1f85d0c168bec224c8d6394fdb50c710c",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Către mai marele cântăreților. De cântat pe ghitit. Un psalm al lui David.) DOAMNE Dumnezeul nostru, cât de minunat este Numele Tău pe tot pământul! Slava Ta se înalță mai presus de ceruri."
+    },
+    {
+      "number": 2,
+      "text": "Din gura copiilor și a celor ce sug la țâță, Ți-ai scos o întăritură de apărare împotriva potrivnicilor tăi, ca să astupi gura vrăjmașului și omului cu dor de răzbunare."
+    },
+    {
+      "number": 3,
+      "text": "Când privesc cerurile – lucrarea mâinilor Tale – luna și stelele pe care le-ai făcut,"
+    },
+    {
+      "number": 4,
+      "text": "îmi zic: Ce este omul, ca să Te gândești la el? Și fiul omului, ca să-l bagi în seamă?"
+    },
+    {
+      "number": 5,
+      "text": "L-ai făcut cu puțin mai prejos decât Dumnezeu și l-ai încununat cu slavă și cu cinste."
+    },
+    {
+      "number": 6,
+      "text": "I-ai dat stăpânire peste lucrurile mâinilor Tale, toate le-ai pus sub picioarele lui:"
+    },
+    {
+      "number": 7,
+      "text": "oile și boii laolaltă, fiarele câmpului,"
+    },
+    {
+      "number": 8,
+      "text": "păsările cerului și peștii mării, tot ce străbate cărările mărilor."
+    },
+    {
+      "number": 9,
+      "text": "DOAMNE Dumnezeul nostru, cât de minunat este Numele Tău pe tot pământul!"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

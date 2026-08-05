@@ -1,0 +1,213 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 28,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.28.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.28.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.28.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "4456c9923a5dfeba526dbdead44ec23e63130dd10c4b5771e538dba207edcd56",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Cel rău fuge fără să fie urmărit, dar cel neprihănit îndrăznește ca un leu tânăr. –"
+    },
+    {
+      "number": 2,
+      "text": "Când este răscoală într-o țară, sunt mulți capi, dar cu un om priceput și încercat, domnia dăinuie. –"
+    },
+    {
+      "number": 3,
+      "text": "Un om sărac care apasă pe cei obijduiți este ca o rupere de nori care aduce lipsă de pâine. –"
+    },
+    {
+      "number": 4,
+      "text": "Cei ce părăsesc Legea laudă pe cel rău, dar cei ce păzesc Legea se mânie pe el. –"
+    },
+    {
+      "number": 5,
+      "text": "Oamenii dedați la rău nu înțeleg ce este drept, dar cei ce caută pe DOMNUL înțeleg totul. –"
+    },
+    {
+      "number": 6,
+      "text": "Mai mult prețuiește săracul care umblă în neprihănirea lui, decât bogatul care umblă pe căi sucite. –"
+    },
+    {
+      "number": 7,
+      "text": "Cel ce păzește Legea este un fiu priceput, dar cel ce umblă cu cei desfrânați face rușine tatălui său. –"
+    },
+    {
+      "number": 8,
+      "text": "Cine își înmulțește avuțiile prin dobândă și camătă le strânge pentru cel ce are milă de săraci. –"
+    },
+    {
+      "number": 9,
+      "text": "Dacă cineva își întoarce urechea ca să n-asculte Legea, chiar și rugăciunea lui este o scârbă. –"
+    },
+    {
+      "number": 10,
+      "text": "Cine rătăcește pe oamenii fără prihană pe calea cea rea cade în groapa pe care a săpat-o, dar oamenii fără prihană moștenesc fericirea. –"
+    },
+    {
+      "number": 11,
+      "text": "Omul bogat se crede înțelept, dar săracul care este priceput îl cercetează. –"
+    },
+    {
+      "number": 12,
+      "text": "Când biruie cei neprihăniți, este o mare slavă, dar când se înalță cei răi, fiecare se ascunde. –"
+    },
+    {
+      "number": 13,
+      "text": "Cine își ascunde fărădelegile nu propășește, dar cine le mărturisește și se lasă de ele capătă îndurare. –"
+    },
+    {
+      "number": 14,
+      "text": "Ferice de omul care se teme necontenit, dar cel ce-și împietrește inima cade în nenorocire. –"
+    },
+    {
+      "number": 15,
+      "text": "Ca un leu care răcnește și ca un urs flămând, așa este cel rău care stăpânește peste un popor sărac. –"
+    },
+    {
+      "number": 16,
+      "text": "Un voievod fără pricepere își înmulțește faptele de asuprire, dar cel ce urăște lăcomia își lungește zilele. –"
+    },
+    {
+      "number": 17,
+      "text": "Un om al cărui cuget este încărcat cu sângele altuia, fuge până la groapă: nimeni să nu-l oprească. –"
+    },
+    {
+      "number": 18,
+      "text": "Cine umblă în neprihănire găsește mântuirea, dar cine umblă pe două căi strâmbe cade într-o groapă. –"
+    },
+    {
+      "number": 19,
+      "text": "Cine își lucrează câmpul are belșug de pâine, dar cine aleargă după lucruri de nimic are belșug de sărăcie. –"
+    },
+    {
+      "number": 20,
+      "text": "Un om credincios este năpădit de binecuvântări, dar cel ce vrea să se îmbogățească repede nu rămâne nepedepsit. –"
+    },
+    {
+      "number": 21,
+      "text": "Nu este bine să cauți la fața oamenilor; chiar pentru o bucată de pâine poate un om să se dedea la păcat. –"
+    },
+    {
+      "number": 22,
+      "text": "Un om pizmaș se grăbește să se îmbogățească, și nu știe că lipsa va veni peste el. –"
+    },
+    {
+      "number": 23,
+      "text": "Cine mustră pe alții găsește mai multă bunăvoință pe urmă, decât cel cu limba lingușitoare. –"
+    },
+    {
+      "number": 24,
+      "text": "Cine fură pe tatăl său și pe mama sa și zice că nu este un păcat, este tovarăș cu nimicitorul. –"
+    },
+    {
+      "number": 25,
+      "text": "Cel lacom stârnește certuri, dar cel ce se încrede în DOMNUL este săturat din belșug. –"
+    },
+    {
+      "number": 26,
+      "text": "Cine se încrede în inima lui este un nebun, dar cine umblă în înțelepciune va fi mântuit. –"
+    },
+    {
+      "number": 27,
+      "text": "Cine dă săracului nu duce lipsă, dar cine închide ochii este încărcat cu blesteme. –"
+    },
+    {
+      "number": 28,
+      "text": "Când se înalță cei răi, fiecare se ascunde, dar când pier ei, cei buni se înmulțesc. –"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

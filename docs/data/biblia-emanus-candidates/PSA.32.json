@@ -1,0 +1,145 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 32,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.32.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.32.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.32.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "91d6d37eb2ccd5a5d92ec314b86514bfc944566db8dcc5a03cea060f64b338f2",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Un psalm al lui David. O cântare.) Ferice de cel cu fărădelegea iertată și de cel cu păcatul acoperit!"
+    },
+    {
+      "number": 2,
+      "text": "Ferice de omul căruia nu-i ține în seamă DOMNUL nelegiuirea și în duhul căruia nu este viclenie!"
+    },
+    {
+      "number": 3,
+      "text": "Câtă vreme am tăcut, mi se topeau oasele de gemetele mele necurmate."
+    },
+    {
+      "number": 4,
+      "text": "Căci zi și noapte mâna Ta apăsa asupra mea; mi se usca vlaga cum se usucă pământul de seceta verii. (Oprire)"
+    },
+    {
+      "number": 5,
+      "text": "Atunci Ți-am mărturisit păcatul meu și nu mi-am ascuns fărădelegea. Am zis: „Îmi voi mărturisi DOMNULUI fărădelegile!”"
+    },
+    {
+      "number": 6,
+      "text": "De aceea orice om evlavios să se roage Ție la vreme potrivită! Și, chiar de s-ar vărsa ape mari, pe el nu-l vor atinge deloc."
+    },
+    {
+      "number": 7,
+      "text": "Tu ești ocrotirea mea, Tu mă scoți din necaz, Tu mă înconjori cu cântări de izbăvire. (Oprire)"
+    },
+    {
+      "number": 8,
+      "text": "„Eu – zice DOMNUL – te voi învăța și-ți voi arăta calea pe care trebuie s-o urmezi, te voi sfătui și voi avea privirea îndreptată asupra ta.”"
+    },
+    {
+      "number": 9,
+      "text": "Nu fiți ca un cal sau ca un catâr fără pricepere, pe care-i strunești cu un frâu și o zăbală cu care-i legi, ca să nu se apropie de tine."
+    },
+    {
+      "number": 10,
+      "text": "De multe dureri are parte cel rău, dar cel ce se încrede în DOMNUL este înconjurat cu îndurarea Lui."
+    },
+    {
+      "number": 11,
+      "text": "Neprihăniților, bucurați-vă în DOMNUL și înveseliți-vă! Scoateți strigăte de bucurie, toți cei cu inima fără prihană!"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

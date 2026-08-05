@@ -1,0 +1,149 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 5,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.5.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.5.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.5.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "51909b5755eeb07b9f2759592132b4cb4e3a4a941819b22dd8e7e8b41949647e",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Către mai marele cântăreților. De cântat cu flautele. Un psalm al lui David.) Pleacă-Ți urechea la cuvintele mele, DOAMNE! Ascultă suspinele mele!"
+    },
+    {
+      "number": 2,
+      "text": "Ia aminte la strigătele mele, Împăratul meu și Dumnezeul meu, căci către Tine mă rog!"
+    },
+    {
+      "number": 3,
+      "text": "DOAMNE, auzi-mi glasul dimineața! Dimineața eu îmi îndrept rugăciunea spre Tine și aștept."
+    },
+    {
+      "number": 4,
+      "text": "Căci Tu nu ești un Dumnezeu căruia să-I placă răul; cel rău nu poate locui lângă Tine."
+    },
+    {
+      "number": 5,
+      "text": "Nebunii nu pot să stea în preajma ochilor Tăi; Tu urăști pe cei ce fac fărădelegea"
+    },
+    {
+      "number": 6,
+      "text": "și pierzi pe cei mincinoși; DOMNUL urăște pe oamenii care varsă sânge și înșală."
+    },
+    {
+      "number": 7,
+      "text": "Dar eu, prin îndurarea Ta cea mare, pot să intru în Casa Ta și să mă închin cu frică în Templul Tău cel sfânt."
+    },
+    {
+      "number": 8,
+      "text": "DOAMNE, călăuzește-mă pe calea plăcută Ție, din pricina vrăjmașilor mei! Netezește calea Ta sub pașii mei."
+    },
+    {
+      "number": 9,
+      "text": "Căci nu este nimic adevărat în gura lor; inima le este plină de răutate, gâtlejul le este un mormânt deschis, și pe limbă au vorbe lingușitoare."
+    },
+    {
+      "number": 10,
+      "text": "Lovește-i ca pe niște vinovați, Dumnezeule! Fă-i să cadă prin înseși sfaturile lor. Prăbușește-i în mijlocul păcatelor lor fără număr! Căci se răzvrătesc împotriva Ta."
+    },
+    {
+      "number": 11,
+      "text": "Atunci toți cei ce se încred în Tine se vor bucura, se vor înveseli totdeauna, căci Tu îi vei ocroti. Tu vei fi bucuria celor ce iubesc Numele Tău."
+    },
+    {
+      "number": 12,
+      "text": "Căci Tu binecuvântezi pe cel neprihănit, DOAMNE, și-l înconjori cu bunăvoința Ta, cum l-ai înconjura cu un scut."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

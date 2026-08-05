@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "canonicalThreshold": 0.3,
+  "scope": "canonical-old-testament-candidates-only",
+  "principle": "Un scor mic este numai un semnal. Orice referință canonică sub prag trebuie reparată sau justificată explicit aici, cu sensul verificat în sursele fixate.",
+  "reviewedExceptions": {
+    "PSA.106:31": {
+      "reason": "«i-a fost socotit ca neprihănire» redă corect «was credited to him for righteousness»; diferența lexicală română–engleză produce un scor artificial mic.",
+      "decision": "accept"
+    },
+    "1CH.1:12": {
+      "reason": "Verset genealogic compus aproape exclusiv din nume proprii transliterate; embeddings multilingve nu sunt relevante pentru aceste forme onomastice.",
+      "decision": "accept"
+    },
+    "JOB.37:8": {
+      "reason": "«fiarele se retrag în peșteri și rămân în vizuini» păstrează integral sensul adăpostirii animalelor în culcușurile lor.",
+      "decision": "accept"
+    },
+    "JER.3:9": {
+      "reason": "Referentul pronominal feminin este Israelul personificat; explicitarea numelui și formularea «a tratat ușor desfrânarea»/«necurăția strigătoare» păstrează sensul poluării țării și adulterului cu piatra și lemnul.",
+      "decision": "accept"
+    },
+    "JOB.32:22": {
+      "reason": "«nu știu să lingușesc; altfel Ziditorul m-ar lua repede» păstrează ambele propoziții și relația lor cauzală.",
+      "decision": "accept"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 107,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.107.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.107.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.107.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "403dab550f19d7129a106a3f7a3c2d34078c5c3e9769e675d9a8d79c9b0de564",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„Lăudați pe DOMNUL, căci este bun, căci în veac ține îndurarea Lui!”"
+    },
+    {
+      "number": 2,
+      "text": "Așa să zică cei răscumpărați de DOMNUL, pe care i-a izbăvit El din mâna vrăjmașului,"
+    },
+    {
+      "number": 3,
+      "text": "și pe care i-a strâns din toate țările: de la răsărit și de la apus, de la miazănoapte și de la mare."
+    },
+    {
+      "number": 4,
+      "text": "Ei pribegeau prin pustiu, umblau pe căi neumblate, și nu găseau nicio cetate, unde să poată locui."
+    },
+    {
+      "number": 5,
+      "text": "Sufereau de foame și de sete; le tânjea sufletul în ei."
+    },
+    {
+      "number": 6,
+      "text": "Atunci, în strâmtorarea lor au strigat către DOMNUL, și El i-a izbăvit din necazurile lor;"
+    },
+    {
+      "number": 7,
+      "text": "i-a călăuzit pe drumul cel drept, ca să ajungă într-o cetate de locuit."
+    },
+    {
+      "number": 8,
+      "text": "O, de ar lăuda oamenii pe DOMNUL pentru bunătatea Lui și pentru minunile Lui față de fiii oamenilor!"
+    },
+    {
+      "number": 9,
+      "text": "Căci El a potolit setea sufletului însetat și a umplut de bunătăți sufletul flămând."
+    },
+    {
+      "number": 10,
+      "text": "Cei ce ședeau în întuneric și umbra morții trăiau legați în ticăloșie și în fiare,"
+    },
+    {
+      "number": 11,
+      "text": "pentru că se răzvrătiseră împotriva cuvintelor lui Dumnezeu, pentru că nesocotiseră sfatul Celui Preaînalt."
+    },
+    {
+      "number": 12,
+      "text": "El le-a smerit inima prin suferință: au căzut, și nimeni nu i-a ajutat."
+    },
+    {
+      "number": 13,
+      "text": "Atunci, în strâmtorarea lor, au strigat către DOMNUL, și El i-a izbăvit din necazurile lor."
+    },
+    {
+      "number": 14,
+      "text": "I-a scos din întuneric și de umbra morții și le-a rupt legăturile."
+    },
+    {
+      "number": 15,
+      "text": "O, de ar lăuda oamenii pe DOMNUL pentru bunătatea Lui și pentru minunile Lui față de fiii oamenilor!"
+    },
+    {
+      "number": 16,
+      "text": "Căci El a sfărâmat porți din aramă și a rupt zăvoare din fier."
+    },
+    {
+      "number": 17,
+      "text": "Nebunii, prin purtarea lor vinovată și prin nelegiuirile lor, ajunseseră nenorociți."
+    },
+    {
+      "number": 18,
+      "text": "Sufletul lor se dezgustase de orice hrană, și erau lângă porțile morții."
+    },
+    {
+      "number": 19,
+      "text": "Atunci, în strâmtorarea lor, au strigat către DOMNUL, și El i-a izbăvit din necazurile lor;"
+    },
+    {
+      "number": 20,
+      "text": "a trimis cuvântul Său și i-a tămăduit și i-a scăpat de groapă."
+    },
+    {
+      "number": 21,
+      "text": "O, de ar lăuda oamenii pe DOMNUL pentru bunătatea Lui și pentru minunile Lui față de fiii oamenilor!"
+    },
+    {
+      "number": 22,
+      "text": "Să-I aducă jertfe de mulțumiri și să vestească lucrările Lui cu strigăte de bucurie."
+    },
+    {
+      "number": 23,
+      "text": "Cei ce se coborâseră pe mare în corăbii și făceau negoț pe apele cele mari,"
+    },
+    {
+      "number": 24,
+      "text": "aceia au văzut lucrările DOMNULUI și minunile Lui în mijlocul adâncului."
+    },
+    {
+      "number": 25,
+      "text": "El a zis și a pus să sufle furtuna, care a ridicat valurile mării."
+    },
+    {
+      "number": 26,
+      "text": "Se suiau spre ceruri, se coborau în adânc; sufletul le era pierdut în fața primejdiei."
+    },
+    {
+      "number": 27,
+      "text": "Apucați de amețeală, se clătinau ca un om beat, și zadarnică le era toată iscusința."
+    },
+    {
+      "number": 28,
+      "text": "Atunci, în strâmtorarea lor, au strigat către DOMNUL, și El i-a izbăvit din necazurile lor."
+    },
+    {
+      "number": 29,
+      "text": "A oprit furtuna, a adus liniștea, și valurile s-au potolit."
+    },
+    {
+      "number": 30,
+      "text": "Ei s-au bucurat că valurile s-au liniștit, și DOMNUL i-a dus în limanul dorit."
+    },
+    {
+      "number": 31,
+      "text": "O, de ar lăuda oamenii pe DOMNUL pentru bunătatea Lui și pentru minunile Lui față de fiii oamenilor!"
+    },
+    {
+      "number": 32,
+      "text": "Să-L înalțe în adunarea poporului și să-L laude în adunarea bătrânilor!"
+    },
+    {
+      "number": 33,
+      "text": "El preface râurile în pustiu, și izvoarele de apă, în pământ uscat,"
+    },
+    {
+      "number": 34,
+      "text": "țara roditoare în țară sărată, din pricina răutății locuitorilor ei."
+    },
+    {
+      "number": 35,
+      "text": "Tot El preface pustiul în iaz, și pământul uscat, în izvoare de ape."
+    },
+    {
+      "number": 36,
+      "text": "Așază acolo pe cei flămânzi, și ei întemeiază o cetate ca să locuiască în ea;"
+    },
+    {
+      "number": 37,
+      "text": "însămânțează ogoare, sădesc vii și-i culeg roadele."
+    },
+    {
+      "number": 38,
+      "text": "El îi binecuvântă, și se înmulțesc nespus, și nu le împuținează vitele."
+    },
+    {
+      "number": 39,
+      "text": "Dacă sunt împuținați și apăsați prin asuprire, nenorocire și suferință,"
+    },
+    {
+      "number": 40,
+      "text": "El varsă disprețul peste cei mari și-i face să pribegească prin pustiuri fără drum,"
+    },
+    {
+      "number": 41,
+      "text": "dar ridică pe cel lipsit, izbăvește pe cel nevoiaș și înmulțește familiile ca pe niște turme."
+    },
+    {
+      "number": 42,
+      "text": "„Oamenii fără prihană văd lucrul acesta și se bucură, și orice nelegiuire își închide gura!”"
+    },
+    {
+      "number": 43,
+      "text": "Cine este înțelept să ia seama la aceste lucruri și să fie cu luare aminte la bunătățile DOMNULUI."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

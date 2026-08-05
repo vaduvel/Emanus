@@ -1,0 +1,153 @@
+{
+  "translation": "BE",
+  "bookId": "SNG",
+  "bookName": "Cântarea Cântărilor",
+  "chapter": 6,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/SNG.6.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/SNG.6.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/SNG.6.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "5748e097fe2bb46105bec878cb50bdf45a84258c47e8d38805c7efa9abccadbb",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Unde s-a dus iubitul tău, cea mai frumoasă dintre femei? Încotro a apucat iubitul tău, ca să-l căutăm și noi împreună cu tine? –"
+    },
+    {
+      "number": 2,
+      "text": "Iubitul meu s-a coborât la grădina lui, la stratul de miresme, ca să-și pască turma în grădini și să culeagă crini."
+    },
+    {
+      "number": 3,
+      "text": "Eu sunt a iubitului meu, și iubitul meu este al meu; el își paște turma între crini. –"
+    },
+    {
+      "number": 4,
+      "text": "Frumoasă ești, iubito, ca Tirța, plăcută ca Ierusalimul, dar cumplită ca niște oști sub steagurile lor."
+    },
+    {
+      "number": 5,
+      "text": "Întoarce-ți ochii de la mine, căci mă tulbură. Perii tăi sunt ca o turmă de capre care poposesc pe coama Galaadului."
+    },
+    {
+      "number": 6,
+      "text": "Dinții tăi sunt ca o turmă de oi care ies din scăldătoare, toate cu gemeni, și niciuna din ele nu este stearpă."
+    },
+    {
+      "number": 7,
+      "text": "Obrazul tău este ca o jumătate de rodie, sub marama ta…"
+    },
+    {
+      "number": 8,
+      "text": "Am șaizeci de împărătese, optzeci de țiitoare, și fete fără număr,"
+    },
+    {
+      "number": 9,
+      "text": "dar numai una singură este porumbița mea, neprihănita mea; ea este singură la mama sa, cea mai aleasă a celei ce a născut-o. Fetele o văd și o numesc fericită; împărătesele și țiitoarele de asemenea o laudă. –"
+    },
+    {
+      "number": 10,
+      "text": "„Cine este aceea care se ivește ca zorile, frumoasă ca luna, curată ca soarele, dar cumplită ca niște oști sub steagurile lor?”"
+    },
+    {
+      "number": 11,
+      "text": "M-am coborât în grădina cu nuci, să văd verdeața din vale, să văd dacă a înmugurit via și dacă au înflorit rodiile."
+    },
+    {
+      "number": 12,
+      "text": "Dar fără să bag de seamă, dorința mea m-a dus la carele poporului unui om ales. –"
+    },
+    {
+      "number": 13,
+      "text": "Întoarce-te, întoarce-te, Sulamito! Întoarce-te, întoarce-te, ca să te privim. – Ce aveți voi să vă uitați la Sulamita ca la niște fete ce joacă în cor?"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

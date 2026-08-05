@@ -1,0 +1,189 @@
+{
+  "translation": "BE",
+  "bookId": "2CH",
+  "bookName": "2 Cronici",
+  "chapter": 4,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/2CH.4.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/2CH.4.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/2CH.4.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "6ac29e85bff4613b89d8e5a7f18b601b15242cb88395325d48b6210130d537f2",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "A făcut un altar de aramă, lung de douăzeci de coți, lat de douăzeci de coți și înalt de zece coți."
+    },
+    {
+      "number": 2,
+      "text": "A făcut marea turnată. Ea avea zece coți de la o margine la alta, era rotundă de tot, înaltă de cinci coți, și un fir de treizeci de coți ar fi înconjurat-o."
+    },
+    {
+      "number": 3,
+      "text": "Sub marginea ei, de jur împrejur, erau niște chipuri de boi, câte zece de fiecare cot, de jur împrejurul mării; boii, așezați pe două rânduri, erau turnați dintr-o singură bucată cu ea."
+    },
+    {
+      "number": 4,
+      "text": "Era așezată pe doisprezece boi, dintre care trei, întorși spre miazănoapte, trei, întorși spre apus, trei, întorși spre miazăzi și trei, întorși spre răsărit; marea era așezată pe ei, și toată partea dinapoi a trupurilor lor era înăuntru."
+    },
+    {
+      "number": 5,
+      "text": "Grosimea ei era de un lat de mână, și marginea, ca marginea unui pahar, era făcută în felul unei flori de crin. Puteau să încapă în ea trei mii de bați."
+    },
+    {
+      "number": 6,
+      "text": "A făcut zece lighene și a pus cinci la dreapta și cinci, la stânga, ca să slujească la curățări: în ele se spălau feluritele părți ale arderilor de tot. Marea era pentru spălarea preoților."
+    },
+    {
+      "number": 7,
+      "text": "A mai făcut zece sfeșnice de aur, după porunca privitoare la ele, și le-a așezat în Templu, cinci, la dreapta și cinci la stânga."
+    },
+    {
+      "number": 8,
+      "text": "A mai făcut zece mese și le-a așezat în Templu, cinci, la dreapta și cinci, la stânga. A mai făcut o sută de potire de aur."
+    },
+    {
+      "number": 9,
+      "text": "A mai făcut curtea preoților și curtea cea mare, cu porțile ei, ale căror aripi le-a acoperit cu aramă."
+    },
+    {
+      "number": 10,
+      "text": "A așezat marea în partea dreaptă, la miazăzi-răsărit."
+    },
+    {
+      "number": 11,
+      "text": "Hiram a făcut cenușarele, lopețile și potirele. Astfel a isprăvit Hiram lucrarea pe care i-a dat-o împăratul Solomon s-o facă pentru Casa lui Dumnezeu:"
+    },
+    {
+      "number": 12,
+      "text": "doi stâlpi, cu cele două capete și acoperișurile lor cu cununi, de pe vârful stâlpilor; cele două rețele pentru acoperirea celor două acoperișuri ale capetelor de pe vârful stâlpilor;"
+    },
+    {
+      "number": 13,
+      "text": "cele patru sute de rodii pentru cele două rețele, câte două șiruri de rodii pentru fiecare rețea, pentru acoperirea celor două acoperișuri cu cununi ale capetelor de pe vârful stâlpilor;"
+    },
+    {
+      "number": 14,
+      "text": "cele zece temelii și cele zece lighene de pe temelii;"
+    },
+    {
+      "number": 15,
+      "text": "marea și cei doisprezece boi de sub ea;"
+    },
+    {
+      "number": 16,
+      "text": "cenușarele, lopețile și furculițele. Toate aceste unelte, pe care le-a dat împăratul Solomon lui Huram-Abi să le facă pentru Casa DOMNULUI, erau de aramă lustruită."
+    },
+    {
+      "number": 17,
+      "text": "Împăratul a pus să le toarne în câmpia Iordanului, într-un pământ cleios, între Sucot și Țereda."
+    },
+    {
+      "number": 18,
+      "text": "Solomon a făcut toate aceste unelte în număr atât de mare, încât nu s-a putut cerceta greutatea aramei."
+    },
+    {
+      "number": 19,
+      "text": "Solomon a mai făcut toate celelalte unelte pentru Casa lui Dumnezeu: altarul de aur, mesele pe care se puneau pâinile pentru punerea înaintea DOMNULUI;"
+    },
+    {
+      "number": 20,
+      "text": "sfeșnicele și candelele lor de aur curat, care trebuiau aprinse, după poruncă, înaintea Locului Preasfânt,"
+    },
+    {
+      "number": 21,
+      "text": "florile, candelele și mucările de aur, de aur foarte curat;"
+    },
+    {
+      "number": 22,
+      "text": "cuțitele, potirele, ceștile și cățuile de aur curat; și aripile de aur pentru ușa dinăuntru a Casei de la intrarea Locului Preasfânt, și pentru ușa Casei de la intrarea Templului."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

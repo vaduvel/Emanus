@@ -1,0 +1,165 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 81,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.81.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.81.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.81.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "0dfb1c3ecb90e389e96fdbe3d5eed17244a4435bb9eae39f21b8eeb037578fc2",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Către mai marele cântăreților. De cântat pe ghitit. Un psalm al lui Asaf.) Cântați cu veselie lui Dumnezeu, care este tăria noastră! Înălțați strigăte de bucurie Dumnezeului lui Iacov!"
+    },
+    {
+      "number": 2,
+      "text": "Cântați o cântare, sunați din tobă, din harpa cea plăcută și din lăută!"
+    },
+    {
+      "number": 3,
+      "text": "Sunați din trâmbiță la luna nouă, la luna plină, în ziua sărbătorii noastre!"
+    },
+    {
+      "number": 4,
+      "text": "Căci aceasta este o Lege pentru Israel, o poruncă a Dumnezeului lui Iacov."
+    },
+    {
+      "number": 5,
+      "text": "El a rânduit sărbătoarea aceasta pentru Iosif, când a mers împotriva țării Egiptului… Atunci am auzit un glas pe care nu l-am cunoscut: –"
+    },
+    {
+      "number": 6,
+      "text": "„I-am descărcat povara de pe umăr, și mâinile lui nu mai țin coșul.”"
+    },
+    {
+      "number": 7,
+      "text": "Ai strigat în necaz, și te-am izbăvit; ți-am răspuns în locul tainic al tunetului și te-am încercat la apele Meriba. – (Oprire)"
+    },
+    {
+      "number": 8,
+      "text": "Ascultă, poporul Meu, și te voi sfătui; Israele, de M-ai asculta!"
+    },
+    {
+      "number": 9,
+      "text": "Niciun dumnezeu străin să nu fie în mijlocul tău și să nu te închini înaintea dumnezeilor străini!"
+    },
+    {
+      "number": 10,
+      "text": "„Eu sunt DOMNUL Dumnezeul tău care te-am scos din țara Egiptului; deschide-ți gura larg, și ți-o voi umple!”"
+    },
+    {
+      "number": 11,
+      "text": "Dar poporul Meu n-a ascultat glasul Meu, Israel nu M-a ascultat."
+    },
+    {
+      "number": 12,
+      "text": "Atunci i-am lăsat în voia pornirilor inimii lor, și au urmat sfaturile lor."
+    },
+    {
+      "number": 13,
+      "text": "O! de M-ar asculta poporul Meu, de ar umbla Israel în căile Mele!"
+    },
+    {
+      "number": 14,
+      "text": "Într-o clipă aș înfrunta pe vrăjmașii lor, Mi-aș întoarce mâna împotriva potrivnicilor lor;"
+    },
+    {
+      "number": 15,
+      "text": "cei ce urăsc pe DOMNUL L-ar linguși, și fericirea lui Israel ar dăinui în veci."
+    },
+    {
+      "number": 16,
+      "text": "L-aș hrăni cu cel mai bun grâu și l-aș sătura cu miere din stâncă."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

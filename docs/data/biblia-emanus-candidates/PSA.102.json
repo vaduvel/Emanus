@@ -1,0 +1,213 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 102,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.102.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.102.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.102.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "f25577b31a4c83312a70f0a39585cc32895ada1d2f12fde39bccfcfc01bcf8b8",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(O rugăciune a unui nenorocit, când este doborât de întristare și își varsă plângerea înaintea DOMNULUI.) DOAMNE, ascultă-mi rugăciunea și s-ajungă strigătul meu până la Tine!"
+    },
+    {
+      "number": 2,
+      "text": "Nu-mi ascunde fața Ta în ziua necazului meu! Pleacă-Ți urechea spre mine, când strig! Ascultă-mă degrabă!"
+    },
+    {
+      "number": 3,
+      "text": "Căci zilele mele pier ca fumul, și oasele îmi ard ca un tăciune."
+    },
+    {
+      "number": 4,
+      "text": "Inima îmi este lovită și mi se usucă întocmai ca iarba; până și pâinea uit să mi-o mănânc."
+    },
+    {
+      "number": 5,
+      "text": "Așa de mari îmi sunt gemetele, că mi se lipesc oasele de carne."
+    },
+    {
+      "number": 6,
+      "text": "Semăn cu pelicanul din pustiu, sunt ca o cucuvea din dărâmături;"
+    },
+    {
+      "number": 7,
+      "text": "nu mai pot dormi și sunt ca pasărea singuratică pe un acoperiș."
+    },
+    {
+      "number": 8,
+      "text": "În fiecare zi mă batjocoresc vrăjmașii mei, și potrivnicii mei jură pe mine în mânia lor."
+    },
+    {
+      "number": 9,
+      "text": "Mănânc țărână în loc de pâine și îmi amestec lacrimile cu băutura,"
+    },
+    {
+      "number": 10,
+      "text": "din pricina mâniei și urgiei Tale; căci Tu m-ai ridicat și m-ai aruncat departe."
+    },
+    {
+      "number": 11,
+      "text": "Zilele mele sunt ca o umbră gata să treacă, și mă usuc ca iarba."
+    },
+    {
+      "number": 12,
+      "text": "Dar Tu, DOAMNE, Tu împărățești pe vecie, și pomenirea Ta ține din neam în neam."
+    },
+    {
+      "number": 13,
+      "text": "Tu Te vei scula și vei avea milă de Sion; căci este vremea să Te înduri de el, a venit vremea hotărâtă pentru el."
+    },
+    {
+      "number": 14,
+      "text": "Căci robii Tăi iubesc pietrele Sionului și le e milă de țărâna lui."
+    },
+    {
+      "number": 15,
+      "text": "Atunci se vor teme neamurile de Numele DOMNULUI, și toți împărații pământului, de slava Ta."
+    },
+    {
+      "number": 16,
+      "text": "Da, DOMNUL va zidi iarăși Sionul și Se va arăta în slava Sa."
+    },
+    {
+      "number": 17,
+      "text": "El ia aminte la rugăciunea nevoiașului și nu-i nesocotește rugăciunea."
+    },
+    {
+      "number": 18,
+      "text": "Să se scrie lucrul acesta pentru neamul de oameni care va veni, și poporul care se va naște să laude pe DOMNUL!"
+    },
+    {
+      "number": 19,
+      "text": "Căci El privește din înălțimea sfințeniei Lui; DOMNUL privește din ceruri pe pământ,"
+    },
+    {
+      "number": 20,
+      "text": "ca să audă gemetele prinșilor de război și să izbăvească pe cei ce sunt pe moarte;"
+    },
+    {
+      "number": 21,
+      "text": "pentru ca ei să vestească în Sion Numele DOMNULUI, și laudele Lui, în Ierusalim,"
+    },
+    {
+      "number": 22,
+      "text": "când se vor strânge toate popoarele și toate împărățiile ca să slujească DOMNULUI."
+    },
+    {
+      "number": 23,
+      "text": "El mi-a frânt puterea în drum și mi-a scurtat zilele."
+    },
+    {
+      "number": 24,
+      "text": "Eu zic: „Dumnezeule, nu mă lua la jumătatea zilelor mele, Tu, ai cărui ani țin veșnic!”"
+    },
+    {
+      "number": 25,
+      "text": "Tu ai întemeiat în vechime pământul, și cerurile sunt lucrarea mâinilor Tale."
+    },
+    {
+      "number": 26,
+      "text": "Ele vor pieri, dar Tu vei rămâne; toate se vor învechi ca o haină; le vei schimba ca pe un veșmânt, și se vor schimba."
+    },
+    {
+      "number": 27,
+      "text": "Dar Tu rămâi Același, și anii Tăi nu se vor sfârși."
+    },
+    {
+      "number": 28,
+      "text": "Fiii robilor Tăi își vor locui țara, și sămânța lor va rămâne înaintea Ta."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

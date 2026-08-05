@@ -1,0 +1,237 @@
+{
+  "translation": "BE",
+  "bookId": "JOB",
+  "bookName": "Iov",
+  "chapter": 41,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/JOB.41.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/JOB.41.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/JOB.41.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "16089777897619219d80ce96a389f2ae732d959dcff0266c3fa2e3521194358f",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„Poți tu să prinzi Leviatanul cu undița? Sau să-i legi limba cu o funie?”"
+    },
+    {
+      "number": 2,
+      "text": "Îi vei putea petrece papura prin nări? Sau să-i străpungi cu un cârlig falca?"
+    },
+    {
+      "number": 3,
+      "text": "Îți va face el multe rugăminți? Îți va vorbi el cu un glas dulce?"
+    },
+    {
+      "number": 4,
+      "text": "Va face el un legământ cu tine ca să-ți fie rob pe vecie?"
+    },
+    {
+      "number": 5,
+      "text": "Te vei juca tu cu el ca și cu o pasăre? Îl vei lega tu, ca să-ți înveselești fetele?"
+    },
+    {
+      "number": 6,
+      "text": "Fac pescarii negoț cu el? Îl împart ei între negustori?"
+    },
+    {
+      "number": 7,
+      "text": "Îi vei acoperi pielea cu țepușe și capul cu căngi?"
+    },
+    {
+      "number": 8,
+      "text": "Ridică-ți numai mâna împotriva lui și nu-ți va mai veni gust să-l lovești."
+    },
+    {
+      "number": 9,
+      "text": "Iată că ești înșelat în așteptarea ta de a-l prinde: numai să-l vezi și cazi la pământ!"
+    },
+    {
+      "number": 10,
+      "text": "Nimeni nu este atât de îndrăzneț ca să-l întărâte. Cine Mi s-ar împotrivi în față?"
+    },
+    {
+      "number": 11,
+      "text": "Cui sunt dator, ca să-i plătesc? Sub cer totul este al Meu."
+    },
+    {
+      "number": 12,
+      "text": "Vreau să mai vorbesc iarăși de mădularele lui și de tăria lui, și de frumusețea întocmirii lui."
+    },
+    {
+      "number": 13,
+      "text": "Cine-i va putea ridica veșmântul? Cine va putea pătrunde între fălcile lui?"
+    },
+    {
+      "number": 14,
+      "text": "Cine va putea deschide porțile gurii lui? Șirurile dinților lui cât sunt de înspăimântătoare!"
+    },
+    {
+      "number": 15,
+      "text": "Scuturile lui mărețe și puternice, sunt unite împreună ca printr-o pecete;"
+    },
+    {
+      "number": 16,
+      "text": "se țin unul de altul, și nici aerul n-ar putea trece printre ele."
+    },
+    {
+      "number": 17,
+      "text": "Sunt ca niște frați care se îmbrățișează, se apucă și rămân nedespărțiți."
+    },
+    {
+      "number": 18,
+      "text": "Strănuturile lui fac să strălucească lumina; ochii lui sunt ca geana zorilor."
+    },
+    {
+      "number": 19,
+      "text": "Din gura lui țâșnesc flăcări, scapără scântei de foc din ea."
+    },
+    {
+      "number": 20,
+      "text": "Din nările lui iese fum, ca dintr-un vas care fierbe, ca dintr-o căldare fierbinte."
+    },
+    {
+      "number": 21,
+      "text": "Suflarea lui aprinde cărbunii, și gura lui aruncă flăcări."
+    },
+    {
+      "number": 22,
+      "text": "Tăria lui stă în grumaz, și înaintea lui sare groaza."
+    },
+    {
+      "number": 23,
+      "text": "Părțile lui cele cărnoase se țin împreună, ca turnate pe el, neclintite."
+    },
+    {
+      "number": 24,
+      "text": "Inima lui este tare ca piatra, tare ca piatra de moară care stă dedesubt."
+    },
+    {
+      "number": 25,
+      "text": "Când se scoală el, tremură vitejii, și spaima îi pune pe fugă."
+    },
+    {
+      "number": 26,
+      "text": "Degeaba este lovit cu sabia; căci sulița, săgeata și pavăza nu folosesc la nimic."
+    },
+    {
+      "number": 27,
+      "text": "Pentru el fierul este ca paiul, arama, ca lemnul putred."
+    },
+    {
+      "number": 28,
+      "text": "Săgeata nu-l pune pe fugă, pietrele din praștie sunt ca pleava pentru el."
+    },
+    {
+      "number": 29,
+      "text": "Nu vede în ghioagă decât un fir de pai și râde la șuieratul săgeților."
+    },
+    {
+      "number": 30,
+      "text": "Sub pântecele lui sunt țepi ascuțiți: ai zice că este o grapă întinsă peste noroi."
+    },
+    {
+      "number": 31,
+      "text": "Face să clocotească fundul mării ca un cazan și-l clatină ca pe un vas plin cu mir."
+    },
+    {
+      "number": 32,
+      "text": "În urmă el lasă o cărare luminoasă; și adâncul pare ca pletele unui bătrân."
+    },
+    {
+      "number": 33,
+      "text": "Pe pământ nimic nu-i este stăpân; este făcut ca să nu se teamă de nimic."
+    },
+    {
+      "number": 34,
+      "text": "„Privește cu dispreț tot ce este înălțat, este împăratul celor mai mândre dobitoace.”"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

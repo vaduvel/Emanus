@@ -1,0 +1,205 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 44,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.44.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.44.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.44.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "4f5f300dd03d54ffc899377355158c9b89b2c4123c39158d328c0296db10482f",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Către mai marele cântăreților. Un psalm al fiilor lui Core. O cântare.) Dumnezeule, am auzit cu urechile noastre, și părinții noștri ne-au povestit lucrările pe care le-ai făcut pe vremea lor, în zilele de odinioară."
+    },
+    {
+      "number": 2,
+      "text": "Cu mâna Ta ai izgonit neamuri, ca să-i sădești pe ei, ai lovit popoare, ca să-i întinzi pe ei."
+    },
+    {
+      "number": 3,
+      "text": "Căci nu prin sabia lor au pus mâna pe țară, nu brațul lor i-a mântuit, ci dreapta Ta, brațul Tău, lumina feței Tale, pentru că îi iubeai."
+    },
+    {
+      "number": 4,
+      "text": "Dumnezeule, Tu ești Împăratul meu: poruncește izbăvirea lui Iacov!"
+    },
+    {
+      "number": 5,
+      "text": "Cu Tine doborâm pe vrăjmașii noștri, cu Numele Tău zdrobim pe potrivnicii noștri."
+    },
+    {
+      "number": 6,
+      "text": "Căci nu în arcul meu mă încred, nu sabia mea mă va scăpa;"
+    },
+    {
+      "number": 7,
+      "text": "ci Tu ne izbăvești de vrăjmașii noștri și dai de rușine pe cei ce ne urăsc."
+    },
+    {
+      "number": 8,
+      "text": "Noi, în fiecare zi, ne lăudăm cu Dumnezeu și pururi slăvim Numele Tău. (Oprire)"
+    },
+    {
+      "number": 9,
+      "text": "Dar Tu ne lepezi, ne acoperi de rușine, nu mai ieși cu oștirile noastre;"
+    },
+    {
+      "number": 10,
+      "text": "ne faci să dăm dosul înaintea vrăjmașului, și cei ce ne urăsc ridică prăzi luate de la noi."
+    },
+    {
+      "number": 11,
+      "text": "Ne dai ca pe niște oi de mâncat și ne risipești printre neamuri."
+    },
+    {
+      "number": 12,
+      "text": "Vinzi pe poporul Tău pe nimic și nu-l socotești de mare preț."
+    },
+    {
+      "number": 13,
+      "text": "Ne faci de ocara vecinilor noștri, de batjocura și de râsul celor ce ne înconjoară."
+    },
+    {
+      "number": 14,
+      "text": "Ne faci de pomină printre neamuri și pricină de clătinare din cap printre popoare."
+    },
+    {
+      "number": 15,
+      "text": "Ocara mea este totdeauna înaintea mea, și rușinea îmi acoperă fața,"
+    },
+    {
+      "number": 16,
+      "text": "la glasul celui ce mă batjocorește și mă ocărăște, la vederea vrăjmașului și răzbunătorului."
+    },
+    {
+      "number": 17,
+      "text": "Toate acestea ni se întâmplă fără ca noi să Te fi uitat, fără să fi călcat legământul Tău:"
+    },
+    {
+      "number": 18,
+      "text": "da, inima nu ni s-a abătut, pașii nu ni s-au depărtat de pe cărarea Ta,"
+    },
+    {
+      "number": 19,
+      "text": "ca să ne zdrobești în locuința șacalilor și să ne acoperi cu umbra morții."
+    },
+    {
+      "number": 20,
+      "text": "Dacă am fi uitat Numele Dumnezeului nostru și ne-am fi întins mâinile spre un dumnezeu străin,"
+    },
+    {
+      "number": 21,
+      "text": "n-ar ști Dumnezeu lucrul acesta, El, care cunoaște tainele inimii?"
+    },
+    {
+      "number": 22,
+      "text": "Dar din pricina Ta suntem înjunghiați în toate zilele, suntem priviți ca niște oi sortite pentru măcelărie."
+    },
+    {
+      "number": 23,
+      "text": "Trezește-Te! Pentru ce dormi, DOAMNE? Trezește-Te! Nu ne lepăda pe vecie!"
+    },
+    {
+      "number": 24,
+      "text": "Pentru ce Îți ascunzi fața? Pentru ce uiți de nenorocirea și apăsarea noastră?"
+    },
+    {
+      "number": 25,
+      "text": "Căci sufletul ne este doborât în țărână de mâhnire, trupul nostru este lipit de pământ."
+    },
+    {
+      "number": 26,
+      "text": "Scoală-Te, ca să ne ajuți! Izbăvește-ne, pentru bunătatea Ta!"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

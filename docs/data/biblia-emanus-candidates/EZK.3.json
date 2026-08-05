@@ -1,0 +1,218 @@
+{
+  "translation": "BE",
+  "bookId": "EZK",
+  "bookName": "Ezechiel",
+  "chapter": 3,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/EZK.3.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/EZK.3.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/EZK.3.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "651c60b6cffbadeddfe933e4722e5a19f136dd595951acb143e35f914e469cac",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "El mi-a zis: „Fiul omului, mănâncă ce vei găsi înaintea ta, mănâncă sulul acesta și du-te de vorbește casei lui Israel!”"
+    },
+    {
+      "number": 2,
+      "text": "Am deschis gura, și mi-a dat să mănânc sulul acesta."
+    },
+    {
+      "number": 3,
+      "text": "El mi-a zis: „Fiul omului, hrănește-ți trupul și umple-ți măruntaiele cu sulul acesta pe care ți-l dau!”"
+    },
+    {
+      "number": 4,
+      "text": "El mi-a zis: „Fiul omului, du-te la casa lui Israel și spune-le cuvintele Mele!”"
+    },
+    {
+      "number": 5,
+      "text": "Căci nu ești trimis la un popor cu o vorbire încurcată și cu o limbă greoaie, ci la casa lui Israel;"
+    },
+    {
+      "number": 6,
+      "text": "nu la niște popoare mari cu o vorbire încurcată și cu o limbă greoaie, ale căror cuvinte să nu le poți pricepe. Negreșit, dacă te-aș trimite la ele, te-ar asculta!"
+    },
+    {
+      "number": 7,
+      "text": "Dar casa lui Israel nu va voi să te asculte, pentru că nu vrea să M-asculte; căci toată casa lui Israel are fruntea încruntată și inima împietrită."
+    },
+    {
+      "number": 8,
+      "text": "Iată, îți voi face fața tot așa de aspră ca și fețele lor, și fruntea, tot așa de aspră ca fruntea lor."
+    },
+    {
+      "number": 9,
+      "text": "„Îți voi face fruntea ca un diamant, mai aspră decât stânca. Nu te teme și nu te speria de ei, căci sunt o casă de îndărătnici!”"
+    },
+    {
+      "number": 10,
+      "text": "El mi-a zis: „Fiul omului, primește în inima ta și ascultă cu urechile tale toate cuvintele pe care ți le spun!”"
+    },
+    {
+      "number": 11,
+      "text": "Du-te la prinșii de război, la copiii poporului tău: vorbește-le și, fie că vor asculta, fie că nu vor asculta, să le spui: „Așa vorbește DOMNUL Dumnezeu!”"
+    },
+    {
+      "number": 12,
+      "text": "Și Duhul m-a răpit și am auzit înapoia mea dârdâitul unui mare cutremur de pământ: slava DOMNULUI s-a ridicat din locul ei."
+    },
+    {
+      "number": 13,
+      "text": "Am auzit și vâjâitul aripilor făpturilor vii care se loveau una de alta, uruitul roților de lângă ele și dârdâitul unui mare cutremur de pământ."
+    },
+    {
+      "number": 14,
+      "text": "Când m-a răpit Duhul și m-a luat, mergeam amărât și mânios, și mâna DOMNULUI apăsa tare peste mine."
+    },
+    {
+      "number": 15,
+      "text": "Am ajuns la Tel-Abib, la robii de război care locuiau la râul Chebar, în locul unde se aflau; și am rămas acolo, înmărmurit în mijlocul lor, șapte zile."
+    },
+    {
+      "number": 16,
+      "text": "După șapte zile, cuvântul DOMNULUI mi-a vorbit astfel:"
+    },
+    {
+      "number": 17,
+      "text": "„Fiul omului, te pun păzitor peste casa lui Israel. Când vei auzi un cuvânt care va ieși din gura Mea, să-i înștiințezi din partea Mea!”"
+    },
+    {
+      "number": 18,
+      "text": "Când îi voi spune celui rău: „Vei muri negreșit”, iar tu nu-l vei avertiza și nu-i vei vorbi ca să-l întorci de la calea lui rea și să-i salvezi viața, acel om rău va muri în nelegiuirea lui, dar sângele lui îl voi cere din mâna ta."
+    },
+    {
+      "number": 19,
+      "text": "Dar dacă vei înștiința pe cel rău, și el tot nu se va întoarce de la răutatea lui și de la calea cea rea, va muri prin nelegiuirea lui, dar tu îți vei mântui sufletul!"
+    },
+    {
+      "number": 20,
+      "text": "Dacă un om neprihănit se va abate de la neprihănirea lui și va face ce este rău, îi voi pune un laț înainte, și va muri. Dacă nu l-ai înștiințat, va muri prin păcatul lui și nu i se va mai pomeni neprihănirea în care a trăit, dar îi voi cere sângele din mâna ta!"
+    },
+    {
+      "number": 21,
+      "text": "„Dar dacă vei înștiința pe cel neprihănit să nu păcătuiască, și nu va păcătui, va trăi, pentru că a primit înștiințarea, iar tu îți vei mântui sufletul!”"
+    },
+    {
+      "number": 22,
+      "text": "Și mâna DOMNULUI a venit peste mine acolo și mi-a zis: „Scoală-te, du-te în vale, și acolo îți voi vorbi!”"
+    },
+    {
+      "number": 23,
+      "text": "M-am sculat și m-am dus în vale; și iată că slava DOMNULUI s-a arătat acolo așa cum o văzusem la râul Chebar. Atunci am căzut cu fața la pământ."
+    },
+    {
+      "number": 24,
+      "text": "Duhul a intrat în mine și m-a făcut să stau pe picioare. Și DOMNUL mi-a vorbit și mi-a zis: „Du-te și închide-te în casă!”"
+    },
+    {
+      "number": 25,
+      "text": "Căci iată, fiul omului, vor pune peste tine funii, cu care te vor lega ca să nu mai poți ieși în mijlocul lor."
+    },
+    {
+      "number": 26,
+      "text": "Îți voi lipi limba de cerul gurii, ca să rămâi mut și să nu-i poți mustra, căci sunt o casă de îndărătnici!"
+    },
+    {
+      "number": 27,
+      "text": "„„Dar când îți voi vorbi, îți voi deschide gura ca să le spui: „Așa vorbește DOMNUL Dumnezeu: „Cine vrea să asculte să asculte; cine nu vrea, să n-asculte!” Căci sunt o casă de îndărătnici!”””"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 18,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "24ca2a61ac69dda75334c4317e64eebd5bb8663c04a95d834f4462691fe59af3",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

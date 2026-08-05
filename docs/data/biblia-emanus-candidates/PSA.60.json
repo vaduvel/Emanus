@@ -1,0 +1,167 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 60,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.60:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.60.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.60.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.60.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "3821ee051edc465e58ba0e8a9997b905acd9b43cb4202ca2239994d2f6002a2f",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Dumnezeule, ne-ai lepădat, ne-ai împrăștiat, ai fost nemulțumit; întoarce-te din nou spre noi."
+    },
+    {
+      "number": 2,
+      "text": "Ai cutremurat pământul, l-ai despicat; drege-i spărturile, căci se clatină!"
+    },
+    {
+      "number": 3,
+      "text": "Ai făcut pe poporul Tău să treacă prin lucruri grele, ne-ai adăpat cu un vin de amorțire."
+    },
+    {
+      "number": 4,
+      "text": "Ai dat celor ce se tem de Tine un steag, ca să-l înalțe spre biruința adevărului. – (Oprire)"
+    },
+    {
+      "number": 5,
+      "text": "Pentru ca preaiubiții Tăi să fie izbăviți, scapă-ne prin dreapta Ta și ascultă-ne!"
+    },
+    {
+      "number": 6,
+      "text": "Dumnezeu a zis în sfințenia Lui: „Voi ieși biruitor, voi împărți Sihemul și voi măsura valea Sucot.”"
+    },
+    {
+      "number": 7,
+      "text": "Al Meu este Galaadul, al Meu este Manase; Efraim este tăria capului Meu, iar Iuda, toiagul Meu de cârmuire."
+    },
+    {
+      "number": 8,
+      "text": "„Moab este ligheanul în care Mă spăl; peste Edom Îmi arunc încălțămintea; țara filistenilor strigă de bucurie din pricina Mea!”"
+    },
+    {
+      "number": 9,
+      "text": "Cine mă va duce în cetatea întărită? Cine mă va duce la Edom?"
+    },
+    {
+      "number": 10,
+      "text": "Oare nu Tu, Dumnezeule, care ne-ai lepădat și nu mai ieși, Dumnezeule, cu oștirile noastre?"
+    },
+    {
+      "number": 11,
+      "text": "Dă-ne ajutor, ca să scăpăm din necaz! Căci ajutorul omului este zadarnic."
+    },
+    {
+      "number": 12,
+      "text": "Cu Dumnezeu vom face isprăvi mari, și El va zdrobi pe vrăjmașii noștri."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. Se cântă ca și „Crinul mărturiei”)"
+}

@@ -1,0 +1,249 @@
+{
+  "translation": "BE",
+  "bookId": "DAN",
+  "bookName": "Daniel",
+  "chapter": 4,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/DAN.4.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/DAN.4.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/DAN.4.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "e051f11dbf3c730db915eab2409d7000127a902e844d6c509ab6aaf2ab860c97",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„Nebucadnețar, împăratul, către toate popoarele, neamurile, oamenii de toate limbile care locuiesc pe tot pământul: Să aveți multă pace!”"
+    },
+    {
+      "number": 2,
+      "text": "Am găsit cu cale să fac cunoscut semnele și minunile pe care le-a făcut Dumnezeul cel Preaînalt față de mine."
+    },
+    {
+      "number": 3,
+      "text": "Cât de mari sunt semnele Lui și cât de puternice sunt minunile Lui! Împărăția Lui este o împărăție veșnică, și stăpânirea Lui dăinuie din neam în neam!"
+    },
+    {
+      "number": 4,
+      "text": "Eu, Nebucadnețar, trăiam liniștit în casa mea și fericit în palatul meu."
+    },
+    {
+      "number": 5,
+      "text": "Am visat un vis care m-a înspăimântat; gândurile de care eram urmărit în patul meu și vedeniile duhului meu mă umpleau de groază."
+    },
+    {
+      "number": 6,
+      "text": "Am poruncit atunci să aducă înaintea mea pe toți înțelepții Babilonului ca să-mi tâlcuiască visul."
+    },
+    {
+      "number": 7,
+      "text": "Îndată au venit vrăjitorii, cititorii în stele, haldeii și ghicitorii. Le-am spus visul, și nu mi l-au putut tâlcui."
+    },
+    {
+      "number": 8,
+      "text": "La urmă de tot, s-a înfățișat înaintea mea Daniel, numit Beltșațar, după numele dumnezeului meu, și care are în el duhul dumnezeilor celor sfinți. I-am spus visul și am zis:"
+    },
+    {
+      "number": 9,
+      "text": "„Beltșațare, căpetenia vrăjitorilor, știu că ai în tine duhul dumnezeilor sfinți și că pentru tine nicio taină nu este grea; deci tâlcuiește-mi vedeniile pe care le-am avut în vis.”"
+    },
+    {
+      "number": 10,
+      "text": "Iată vedeniile care mi-au trecut prin cap când eram în pat. Mă uitam și iată că în mijlocul pământului era un copac foarte înalt."
+    },
+    {
+      "number": 11,
+      "text": "Copacul acesta s-a făcut mare și puternic, vârful lui se înălța până la ceruri și se vedea de la marginile întregului pământ."
+    },
+    {
+      "number": 12,
+      "text": "Frunza lui era frumoasă și avea roade multe; în el se găsea hrană pentru toți; fiarele câmpului se adăposteau sub umbra lui, păsările cerului își făceau cuibul în ramurile lui și orice făptură vie se hrănea din el."
+    },
+    {
+      "number": 13,
+      "text": "În vedeniile care-mi treceau prin cap în patul meu, mă uitam și iată că s-a coborât din ceruri un străjer sfânt."
+    },
+    {
+      "number": 14,
+      "text": "El a strigat cu putere și a vorbit așa: „Tăiați copacul și rupeți ramurile; scuturați-i frunza și risipiți roadele; fugăriți fiarele de sub el și păsările din ramurile lui!”"
+    },
+    {
+      "number": 15,
+      "text": "Dar trunchiul cu rădăcinile lui lăsați-l în pământ și legați-l cu lanțuri de fier și de aramă în iarba de pe câmp, ca să fie udat de roua cerului și să fie la un loc cu fiarele în iarba pământului."
+    },
+    {
+      "number": 16,
+      "text": "Inima lui de om i se va preface într-o inimă de fiară și vor trece șapte vremuri peste el."
+    },
+    {
+      "number": 17,
+      "text": "„Hotărârea aceasta a fost luată în sfatul străjerilor și pusă la cale înaintea sfinților, ca să știe cei vii că Cel Preaînalt stăpânește peste împărăția oamenilor, că o dă cui Îi place și înalță pe ea pe cel mai de jos dintre oameni!”"
+    },
+    {
+      "number": 18,
+      "text": "„Iată visul pe care l-am visat eu, împăratul Nebucadnețar. Tu, Beltșațar, tâlcuiește-l, fiindcă toți înțelepții din împărăția mea nu pot să mi-l tâlcuiască; tu însă poți, căci ai în tine duhul dumnezeilor sfinți.”"
+    },
+    {
+      "number": 19,
+      "text": "Atunci Daniel, numit Beltșațar, a rămas uimit o clipă, și gândurile lui îl tulburau. Împăratul a luat din nou cuvântul și a zis: „Beltșațare, să nu te tulbure visul și tâlcuirea!” Și Beltșațar a răspuns: „DOMNUL meu, visul acesta să fie pentru vrăjmașii tăi, și tâlcuirea lui, pentru potrivnicii tăi!”"
+    },
+    {
+      "number": 20,
+      "text": "Copacul pe care l-ai văzut, care se făcuse atât de mare și puternic, încât i se înălța vârful până la ceruri și se vedea de la toate capetele pământului;"
+    },
+    {
+      "number": 21,
+      "text": "copacul acesta a cărui frunză era așa de frumoasă și care avea roade atât de multe, și în care era hrană pentru toți, sub care se adăposteau fiarele câmpului și în ramurile căruia își făceau cuibul păsările cerului,"
+    },
+    {
+      "number": 22,
+      "text": "ești tu, împărate, care ai ajuns mare și puternic, a cărui mărime a crescut și s-a înălțat până la ceruri și a cărui stăpânire se întinde până la marginile pământului."
+    },
+    {
+      "number": 23,
+      "text": "Împăratul a văzut pe un străjer sfânt coborându-se și zicând: „Tăiați copacul și nimiciți-l; dar trunchiul cu rădăcinile lui lăsați-l în pământ și legați-l cu lanțuri de fier și de aramă în iarba de pe câmp, ca să fie udat de roua cerului și să stea la un loc cu fiarele câmpului, până vor trece șapte vremuri peste el.”"
+    },
+    {
+      "number": 24,
+      "text": "Iată tâlcuirea acestui fapt, împărate, iată hotărârea Celui Preaînalt care se va împlini asupra domnului meu, împăratul."
+    },
+    {
+      "number": 25,
+      "text": "Te vor izgoni din mijlocul oamenilor, vei locui la un loc cu fiarele câmpului și îți vor da să mănânci iarbă ca la boi; vei fi udat de roua cerului și șapte vremuri vor trece peste tine, până vei cunoaște că Cel Preaînalt stăpânește peste împărăția oamenilor și o dă cui vrea."
+    },
+    {
+      "number": 26,
+      "text": "Porunca, să lase trunchiul cu rădăcinile copacului, înseamnă că împărăția ta îți va rămâne ție îndată ce vei recunoaște stăpânirea Celui ce este în ceruri."
+    },
+    {
+      "number": 27,
+      "text": "„De aceea, împărate, placă-ți sfatul meu! Pune capăt păcatelor tale și trăiește în neprihănire, rupe-o cu nelegiuirile tale și ai milă de cei nenorociți, și poate că ți se va prelungi fericirea!”"
+    },
+    {
+      "number": 28,
+      "text": "Toate aceste lucruri s-au împlinit asupra împăratului Nebucadnețar."
+    },
+    {
+      "number": 29,
+      "text": "După douăsprezece luni, pe când se plimba pe acoperișul palatului împărătesc din Babilon,"
+    },
+    {
+      "number": 30,
+      "text": "împăratul a luat cuvântul și a zis: „Oare nu este acesta Babilonul cel mare pe care mi l-am zidit eu ca loc de ședere împărătească, prin puterea bogăției mele și spre slava măreției mele?”"
+    },
+    {
+      "number": 31,
+      "text": "Nu se sfârșise încă vorba aceasta a împăratului, și un glas s-a coborât din cer și a zis: „Află, împărate Nebucadnețar, că ți s-a luat împărăția!”"
+    },
+    {
+      "number": 32,
+      "text": "„Te vor izgoni din mijlocul oamenilor, și vei locui la un loc cu fiarele câmpului, îți vor da să mănânci iarbă ca la boi, și vor trece peste tine șapte vremuri, până vei recunoaște că Cel Preaînalt stăpânește peste împărăția oamenilor și că o dă cui vrea!”"
+    },
+    {
+      "number": 33,
+      "text": "Chiar în clipa aceea s-a împlinit cuvântul acela asupra lui Nebucadnețar. A fost izgonit din mijlocul oamenilor, a mâncat iarbă ca boii, trupul i-a fost udat de roua cerului, până i-a crescut părul ca penele vulturului și unghiile, ca ghearele păsărilor."
+    },
+    {
+      "number": 34,
+      "text": "După trecerea vremii sorocite, eu, Nebucadnețar, am ridicat ochii spre cer și mi-a venit iarăși mintea la loc. Am binecuvântat pe Cel Preaînalt, am lăudat și slăvit pe Cel ce trăiește veșnic, Acela a cărui stăpânire este veșnică și a cărui Împărăție dăinuie din neam în neam."
+    },
+    {
+      "number": 35,
+      "text": "Toți locuitorii pământului sunt o nimica înaintea Lui; El face ce vrea cu oastea cerurilor și cu locuitorii pământului, și nimeni nu poate să stea împotriva mâinii Lui, nici să-I zică: „Ce faci?”"
+    },
+    {
+      "number": 36,
+      "text": "În vremea aceea mi-a venit mintea înapoi; slava împărăției mele, măreția și strălucirea mea mi s-au dat înapoi; sfetnicii și mai marii mei din nou m-au căutat; am fost pus iarăși peste împărăția mea, și puterea mea a crescut."
+    },
+    {
+      "number": 37,
+      "text": "„Acum, eu, Nebucadnețar, laud, înalț și slăvesc pe Împăratul cerurilor, căci toate lucrările Lui sunt adevărate, toate căile Lui sunt drepte, și El poate să smerească pe cei ce umblă cu mândrie!”"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

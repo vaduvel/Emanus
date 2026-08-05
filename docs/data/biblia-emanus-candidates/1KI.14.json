@@ -1,0 +1,225 @@
+{
+  "translation": "BE",
+  "bookId": "1KI",
+  "bookName": "1 Împărați",
+  "chapter": 14,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/1KI.14.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/1KI.14.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/1KI.14.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "80cb833829336b4066fece86ab395e711e7b77ab41a3741300982ff78381af92",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "În vremea aceea, s-a îmbolnăvit Abiia, fiul lui Ieroboam."
+    },
+    {
+      "number": 2,
+      "text": "Și Ieroboam a zis nevestei sale: „Scoală-te, te rog, și schimbă-ți hainele, ca să nu se știe că ești nevasta lui Ieroboam, și du-te la Silo. Iată că acolo este Ahia, prorocul; el mi-a spus că voi fi împăratul poporului acestuia.”"
+    },
+    {
+      "number": 3,
+      "text": "„Ia cu tine zece pâini, turte și un vas cu miere și intră la el: el îți va spune ce va fi cu copilul.”"
+    },
+    {
+      "number": 4,
+      "text": "Nevasta lui Ieroboam a făcut așa; s-a sculat, s-a dus la Silo și a intrat în casa lui Ahia. Ahia nu mai putea să vadă, căci ochii i se întunecaseră de bătrânețe."
+    },
+    {
+      "number": 5,
+      "text": "DOMNUL spusese lui Ahia: „Nevasta lui Ieroboam are să vină să te întrebe de fiul ei, pentru că este bolnav. Să vorbești așa și așa. Ea, când va veni, se va da drept alta.”"
+    },
+    {
+      "number": 6,
+      "text": "Când a auzit Ahia vuietul pașilor ei, în clipa când intra pe ușă, a zis: „Intră nevasta lui Ieroboam; pentru ce vrei să te dai drept alta? Sunt însărcinat să-ți vestesc lucruri aspre.”"
+    },
+    {
+      "number": 7,
+      "text": "Du-te și spune lui Ieroboam: „Așa vorbește DOMNUL Dumnezeul lui Israel: „Te-am ridicat din mijlocul poporului, te-am pus căpetenie peste poporul Meu, Israel,””"
+    },
+    {
+      "number": 8,
+      "text": "am rupt împărăția de la casa lui David și ți-am dat-o ție, și n-ai fost ca robul Meu David, care a păzit poruncile Mele și a umblat după Mine din toată inima lui, nefăcând decât ce este drept înaintea Mea."
+    },
+    {
+      "number": 9,
+      "text": "Tu ai făcut mai rău decât toți cei ce au fost înaintea ta: te-ai dus să-ți faci alți dumnezei și chipuri turnate ca să Mă mânii și M-ai lepădat înapoia ta!"
+    },
+    {
+      "number": 10,
+      "text": "De aceea, voi trimite nenorocirea peste casa lui Ieroboam, voi nimici pe oricine este al lui Ieroboam, fie rob, fie slobod în Israel, și voi mătura casa lui Ieroboam, cum se mătură murdăriile, până va pieri."
+    },
+    {
+      "number": 11,
+      "text": "Cel ce va muri în cetate din casa lui Ieroboam va fi mâncat de câini, și cel ce va muri pe câmp va fi mâncat de păsările cerului. Căci DOMNUL a vorbit."
+    },
+    {
+      "number": 12,
+      "text": "Tu, scoală-te și du-te acasă. Și cum îți vor păși picioarele în cetate, copilul va muri."
+    },
+    {
+      "number": 13,
+      "text": "Tot Israelul îl va plânge și-l vor îngropa; căci el este singurul din casa lui Ieroboam care va fi pus într-un mormânt, pentru că este singurul din casa lui Ieroboam în care s-a găsit ceva bun înaintea DOMNULUI Dumnezeului lui Israel."
+    },
+    {
+      "number": 14,
+      "text": "DOMNUL va pune peste Israel un împărat, care va nimici casa lui Ieroboam în ziua aceea. Și nu se întâmplă oare chiar acum lucrul acesta?"
+    },
+    {
+      "number": 15,
+      "text": "DOMNUL va lovi pe Israel, și Israel va fi ca trestia clătinată în ape; va smulge pe Israel din această țară bună, pe care o dăduse părinților lor, și-i va împrăștia dincolo de Râu, pentru că și-au făcut idoli, mâniind pe DOMNUL."
+    },
+    {
+      "number": 16,
+      "text": "„Va părăsi pe Israel, din pricina păcatelor pe care le-a făcut Ieroboam și în care a târât și pe Israel.”"
+    },
+    {
+      "number": 17,
+      "text": "Nevasta lui Ieroboam s-a sculat și a plecat. A ajuns la Tirța; și cum a atins pragul casei, copilul a murit."
+    },
+    {
+      "number": 18,
+      "text": "L-au îngropat, și tot Israelul l-a plâns, după cuvântul DOMNULUI, pe care-l spusese prin robul Său Ahia, prorocul."
+    },
+    {
+      "number": 19,
+      "text": "Celelalte fapte ale lui Ieroboam, cum a făcut război și cum a domnit, sunt scrise în cartea Cronicilor împăraților lui Israel."
+    },
+    {
+      "number": 20,
+      "text": "Ieroboam a împărățit douăzeci și doi de ani; apoi a adormit cu părinții săi. Și în locul lui a împărățit fiul său Nadab."
+    },
+    {
+      "number": 21,
+      "text": "Roboam, fiul lui Solomon, a împărățit peste Iuda. Avea patruzeci și unu de ani când s-a făcut împărat și a împărățit șaptesprezece ani la Ierusalim, cetatea pe care o alesese DOMNUL din toate semințiile lui Israel, ca să-Și pună Numele în ea. Mama sa se chema Naama, amonita."
+    },
+    {
+      "number": 22,
+      "text": "Iuda a făcut ce este rău înaintea DOMNULUI; și, prin păcatele pe care le-au săvârșit, I-au stârnit gelozia mai mult decât părinții lor."
+    },
+    {
+      "number": 23,
+      "text": "Și-au zidit și ei înălțimi cu stâlpi închinați idolilor și Astartei pe orice deal înalt și sub orice copac verde."
+    },
+    {
+      "number": 24,
+      "text": "Au fost chiar și sodomiți în țară. Au făcut de toate urâciunile neamurilor pe care le izgonise DOMNUL dinaintea copiilor lui Israel."
+    },
+    {
+      "number": 25,
+      "text": "În al cincilea an al împărățirii lui Roboam, Șișac, împăratul Egiptului, s-a suit împotriva Ierusalimului."
+    },
+    {
+      "number": 26,
+      "text": "A luat vistieriile Casei DOMNULUI și vistieriile casei împăratului, a luat tot. A luat toate scuturile de aur pe care le făcuse Solomon."
+    },
+    {
+      "number": 27,
+      "text": "Împăratul Roboam a făcut în locul lor niște scuturi de aramă și le-a dat în grija căpeteniilor alergătorilor, care păzeau intrarea casei împăratului."
+    },
+    {
+      "number": 28,
+      "text": "Ori de câte ori se ducea împăratul la Casa DOMNULUI, alergătorii le purtau; apoi le aduceau iarăși în odaia alergătorilor."
+    },
+    {
+      "number": 29,
+      "text": "Celelalte fapte ale lui Roboam și tot ce a făcut el nu sunt scrise oare în cartea Cronicilor împăraților lui Iuda?"
+    },
+    {
+      "number": 30,
+      "text": "Totdeauna a fost război între Roboam și Ieroboam."
+    },
+    {
+      "number": 31,
+      "text": "„„Roboam a adormit cu părinții lui și a fost îngropat cu părinții lui în cetatea lui David. Mama sa se numea Naama, amonita. Și în locul lui a împărățit fiul său Abiam.””"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

@@ -1,0 +1,145 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 46,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.46.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.46.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.46.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "481e14621a87e6fb575cadb273bc4efc00578516ef54c5ec6ff6daf98b69feaf",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Către mai marele cântăreților. Un psalm al fiilor lui Core. De cântat pe alamot. O cântare.) Dumnezeu este adăpostul și sprijinul nostru, un ajutor care nu lipsește niciodată în nevoi."
+    },
+    {
+      "number": 2,
+      "text": "De aceea nu ne temem, chiar dacă s-ar zgudui pământul și s-ar clătina munții în inima mărilor."
+    },
+    {
+      "number": 3,
+      "text": "Chiar dacă ar urla și ar spumega valurile mării și s-ar ridica până acolo de să se cutremure munții. – (Oprire)"
+    },
+    {
+      "number": 4,
+      "text": "Este un râu, ale cărui izvoare înveselesc cetatea lui Dumnezeu, sfântul locaș al locuințelor Celui Preaînalt."
+    },
+    {
+      "number": 5,
+      "text": "Dumnezeu este în mijlocul ei: ea nu se clatină; Dumnezeu o ajută în revărsatul zorilor."
+    },
+    {
+      "number": 6,
+      "text": "Neamurile se frământă, împărățiile se clatină, dar glasul Lui răsună, și pământul se topește de groază."
+    },
+    {
+      "number": 7,
+      "text": "DOMNUL oștirilor este cu noi, Dumnezeul lui Iacov este un turn de scăpare pentru noi. – (Oprire)"
+    },
+    {
+      "number": 8,
+      "text": "Veniți și priviți lucrările DOMNULUI, pustiirile pe care le-a făcut El pe pământ."
+    },
+    {
+      "number": 9,
+      "text": "El a pus capăt războaielor până la marginea pământului; El a sfărâmat arcul și a rupt sulița, a ars cu foc carele de război. –"
+    },
+    {
+      "number": 10,
+      "text": "„Opriți-vă și să știți că Eu sunt Dumnezeu: Eu stăpânesc peste neamuri, Eu stăpânesc pe pământ.”"
+    },
+    {
+      "number": 11,
+      "text": "DOMNUL oștirilor este cu noi. Dumnezeul lui Iacov este un turn de scăpare pentru noi. – (Oprire)"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

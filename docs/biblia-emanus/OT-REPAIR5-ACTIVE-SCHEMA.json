@@ -1,0 +1,1076 @@
+{
+  "manifestWithoutDraftedChapters": {
+    "id": "biblia-emanus",
+    "name": "Biblia Emanus",
+    "abbreviation": "BE",
+    "language": "ro",
+    "canon": "protestant-66",
+    "status": "draft",
+    "public": true,
+    "publicationBlock": "automated-audit-required",
+    "sourceLedger": "source-ledger.json",
+    "translationMethod": {
+      "baseLanguage": "English bridge; Biblical Hebrew or Greek authority",
+      "baseText": "World English Bible Updated, Protestant Edition",
+      "principle": "traducere românească nouă din baza WEBU, verificată verset cu verset în textul ebraic sau grecesc înainte de publicare",
+      "aiOutputIsDraftOnly": false,
+      "aiMayPublishAfterAutomatedAudit": true,
+      "benchmarkIsVerificationNotSource": true,
+      "romanianDiacriticsRequired": true,
+      "unicodeNormalization": "NFC"
+    },
+    "automatedPublicationGate": {
+      "humanApprovalRequired": false,
+      "publishWhenAllChecksApproved": true,
+      "minimumRomanianBenchmarks": 3,
+      "requiredBenchmarkFamilies": [
+        "cornilescu"
+      ],
+      "exactMatchRequired": false,
+      "requiredChecks": [
+        "ai-source-language",
+        "ai-romanian-language",
+        "ai-theological-context",
+        "source-snapshot-integrity",
+        "source-versification-coverage",
+        "pinned-romanian-benchmark-comparison",
+        "deterministic-verse-integrity",
+        "omission-addition",
+        "romanian-benchmark-triangulation",
+        "copyright-distance",
+        "critical-issues-resolved",
+        "audit-text-digest",
+        "nt-versification-integrity",
+        "critical-apparatus-coverage"
+      ],
+      "policyDocument": "../../biblia-emanus/AUTOMATED-PUBLICATION.md"
+    },
+    "sources": {
+      "english": {
+        "id": "engwebp",
+        "name": "World English Bible Updated, Protestant Edition",
+        "url": "https://ebible.org/engwebp/",
+        "license": "Public Domain",
+        "trademarkNotice": "Textul modificat nu va fi numit World English Bible."
+      },
+      "oldTestament": {
+        "id": "WLC-OSHB",
+        "name": "Westminster Leningrad Codex / Open Scriptures Hebrew Bible",
+        "url": "https://hb.openscriptures.org/",
+        "textLicense": "Public Domain",
+        "annotationLicense": "CC BY 4.0",
+        "attribution": "Open Scriptures Hebrew Bible Project"
+      },
+      "newTestament": {
+        "id": "SBLGNT",
+        "name": "SBL Greek New Testament",
+        "url": "https://www.sblgnt.com/",
+        "license": "CC BY 4.0",
+        "attribution": "Michael W. Holmes and the Society of Biblical Literature"
+      },
+      "romanianBenchmarks": [
+        {
+          "id": "CORNILESCU-1924",
+          "name": "Biblia Dumitru Cornilescu 1924",
+          "family": "cornilescu",
+          "url": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+          "license": "Public Domain",
+          "pinned": true,
+          "mode": "comparison-only"
+        },
+        {
+          "id": "BTF",
+          "name": "Biblia Traducerea Fidela",
+          "family": "fidela",
+          "url": "https://ebible.org/bible/details.php?id=ronbtf",
+          "license": "Public Domain",
+          "pinned": true,
+          "mode": "comparison-only"
+        },
+        {
+          "id": "BIBLIA-LIBERA",
+          "name": "Biblia Liberă",
+          "family": "libera",
+          "url": "https://ebible.org/ronbl/",
+          "license": "Public Domain",
+          "pinned": true,
+          "mode": "comparison-only"
+        },
+        {
+          "id": "NTR",
+          "name": "Noua Traducere Românească",
+          "family": "biblica",
+          "url": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+          "pinned": false,
+          "fullTextStored": false,
+          "mode": "comparison-only"
+        }
+      ]
+    },
+    "reviewRequirements": [
+      "ai-source-language",
+      "ai-romanian-language",
+      "ai-theological-context",
+      "source-snapshot-integrity",
+      "source-versification-coverage",
+      "pinned-romanian-benchmark-comparison",
+      "deterministic-verse-integrity",
+      "omission-addition",
+      "romanian-benchmark-triangulation",
+      "copyright-distance",
+      "critical-issues-resolved",
+      "audit-text-digest",
+      "nt-versification-integrity",
+      "critical-apparatus-coverage"
+    ],
+    "licenseDecision": "CC BY 4.0",
+    "license": {
+      "id": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "attributionRequired": true,
+      "attributions": [
+        "Biblia Emanus",
+        "World English Bible Updated, public domain base text",
+        "Open Scriptures Hebrew Bible Project",
+        "SBL Greek New Testament, Michael W. Holmes and Society of Biblical Literature",
+        "Biblia Dumitru Cornilescu 1924, etalon public domain",
+        "Biblia Traducerea Fidela, etalon public domain"
+      ]
+    },
+    "progress": {
+      "booksPlanned": 66,
+      "chaptersPlanned": 1189,
+      "chaptersDrafted": 471,
+      "versesDrafted": 14451,
+      "chaptersApproved": 471,
+      "chaptersPublished": 471
+    },
+    "sourceLock": "source-lock.json",
+    "onomastics": "onomastics.json",
+    "newTestamentVersification": "nt-versification.json",
+    "newTestament": {
+      "books": 27,
+      "chapters": 260,
+      "verses": 7941,
+      "status": "published",
+      "public": true
+    }
+  },
+  "manifestDraftedChapterCount": 471,
+  "ledgerTop": {
+    "schemaVersion": 1,
+    "translation": "BE",
+    "verifiedOn": "2026-08-04",
+    "policy": {
+      "englishBase": "World English Bible Updated, Protestant Edition",
+      "englishLicense": "Public Domain",
+      "oldTestamentBase": "Westminster Leningrad Codex",
+      "oldTestamentTextLicense": "Public Domain",
+      "requireExactChapterUrls": true,
+      "requireCanonicalVerseCount": true,
+      "sourceLanguageReviewStillRequired": true,
+      "requirePinnedSourceSnapshot": true,
+      "requireVersificationMapping": true,
+      "newTestamentBase": "SBLGNT 1.2",
+      "newTestamentSupplementalWitness": "Textus Receptus"
+    },
+    "sourceLock": "source-lock.json"
+  },
+  "ledgerJOS1": {
+    "expectedVerses": 18,
+    "englishUrl": "https://ebible.org/engwebp/JOS01.htm",
+    "hebrewUrl": "https://ebible.org/hboWLC/JOS01.htm"
+  },
+  "lockTopWithoutCollections": {
+    "schemaVersion": 3,
+    "engineVersion": "3.0.0",
+    "translation": "BE",
+    "capturedOn": "2026-08-04",
+    "snapshots": {
+      "ot-legacy": {
+        "path": "sources/ot-gen-deu-jos-usfm.zip",
+        "sha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847"
+      },
+      "nt": {
+        "path": "sources/nt-sblgnt-1.2.zip",
+        "sha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
+      }
+    },
+    "upstreamArtifacts": {
+      "engwebp": {
+        "url": "https://ebible.org/Scriptures/engwebp_usfm.zip",
+        "archiveDate": "2026-07-28",
+        "sha256": "9b4330ba6baf9bd5fa8ea63a8ff255c9ab326da8c843f0355c23734e61ee6276",
+        "license": "Public Domain",
+        "language": "en",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "hboWLC": {
+        "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "da7b33af7a23e0e9fce8a8adf3cb5bcb035a513f44b83865b390c52dc3dd2ce3",
+        "textLicense": "Public Domain",
+        "annotationLicense": "CC BY 4.0",
+        "language": "he",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "ronbtf": {
+        "url": "https://ebible.org/Scriptures/ronbtf_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "license": "Public Domain",
+        "language": "ro",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "ron1924": {
+        "url": "https://ebible.org/Scriptures/ron1924_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
+        "license": "Public Domain",
+        "script": "Cyrillic",
+        "language": "ro-Cyrl",
+        "snapshotId": "ot-legacy",
+        "archiveEmbedded": false
+      },
+      "sblgnt": {
+        "url": "https://github.com/LogosBible/SBLGNT/archive/c4d241a9c1c479a55b989ba35a4976c1d0b8052c.tar.gz",
+        "archiveDate": "2026-08-04",
+        "sha256": "cc1715f3501a23ae68817559ef9f891cd4520cf9bb4ef6b7a6f606d1917bcf40",
+        "license": "CC BY 4.0",
+        "language": "el",
+        "version": "1.2",
+        "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/sblgnt.tar.gz"
+      },
+      "engwebp-nt": {
+        "url": "https://ebible.org/Scriptures/engwebp_usfm.zip",
+        "archiveDate": "2026-07-28",
+        "sha256": "9b4330ba6baf9bd5fa8ea63a8ff255c9ab326da8c843f0355c23734e61ee6276",
+        "license": "Public Domain",
+        "language": "en",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/engwebp_usfm.zip"
+      },
+      "grctr": {
+        "url": "https://ebible.org/Scriptures/grctr_usfm.zip",
+        "archiveDate": "2026-08-04",
+        "sha256": "9277bc7fd6ad3c78c0a99656e369ea5af294886cb3df23313822c0a34513d4ff",
+        "license": "Public Domain",
+        "language": "el",
+        "textFamily": "Textus Receptus",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/grctr_usfm.zip"
+      },
+      "ronbtf-nt": {
+        "url": "https://ebible.org/Scriptures/ronbtf_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "license": "Public Domain",
+        "language": "ro",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/ronbtf_usfm.zip"
+      },
+      "ron1924-nt": {
+        "url": "https://ebible.org/Scriptures/ron1924_usfm.zip",
+        "archiveDate": "2026-06-11",
+        "sha256": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
+        "license": "Public Domain",
+        "language": "ro-Cyrl",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/ron1924_usfm.zip"
+      },
+      "ronbl": {
+        "url": "https://ebible.org/Scriptures/ronbl_usfm.zip",
+        "archiveDate": "2026-08-04",
+        "sha256": "c691fa528cdaa50db913943d0a9b011bccadb8b4d0165f5756a7706b8d575239",
+        "license": "Public Domain",
+        "language": "ro",
+        "snapshotId": "nt",
+        "archiveEmbedded": true,
+        "archivePath": "upstream/ronbl_usfm.zip"
+      }
+    },
+    "automatedThresholds": {
+      "minimumLengthRatio": 0.35,
+      "maximumLengthRatio": 1.75,
+      "minimumWordsForTokenOverlap": 8,
+      "minimumRomanianTokenOverlap": 0.14,
+      "maximumChapterSequenceSimilarity": 0.94
+    }
+  },
+  "lockSnapshots": {
+    "ot-legacy": {
+      "path": "sources/ot-gen-deu-jos-usfm.zip",
+      "sha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847"
+    },
+    "nt": {
+      "path": "sources/nt-sblgnt-1.2.zip",
+      "sha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
+    }
+  },
+  "lockArtifacts": {
+    "NT-BIBLIA-LIBERA-1CO-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1CO.usfm",
+      "sha256": "7b2771574c70a946b8de5bf2e7b0d6c4d9a26c0008e20252db64920c46eea470"
+    },
+    "NT-BIBLIA-LIBERA-1JN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1JN.usfm",
+      "sha256": "eea67b29a0d7dd106c6f868190ce6c2c67116152398ebc872dc7cdb50c41cfc6"
+    },
+    "NT-BIBLIA-LIBERA-1PE-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1PE.usfm",
+      "sha256": "c2524c90d43fbd3e09ffcb2d5801447d6ffb415feb601ad3d98c9e84ef852f22"
+    },
+    "NT-BIBLIA-LIBERA-1TH-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1TH.usfm",
+      "sha256": "155fa9165e5c5e8e0d98ffcc84911ab9b697418311eae39d1c94008728b0752e"
+    },
+    "NT-BIBLIA-LIBERA-1TI-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/1TI.usfm",
+      "sha256": "8ddd6cc019fd619047e109c9694552149f0d15d4498e892294f8d242a36d826d"
+    },
+    "NT-BIBLIA-LIBERA-2CO-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2CO.usfm",
+      "sha256": "d45fdc3152e825fd15f8a83bd5fd5194186b153a3600fbb9c7d299ef78f35a56"
+    },
+    "NT-BIBLIA-LIBERA-2JN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2JN.usfm",
+      "sha256": "bea1eb99fbf1782ef6df866b862d250ad274556ab9bbd696f9bb58cccc230699"
+    },
+    "NT-BIBLIA-LIBERA-2PE-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2PE.usfm",
+      "sha256": "e6e60c4f5193d3aee97df64a535d660c0fcffb99830eb7098ae03369f15d33db"
+    },
+    "NT-BIBLIA-LIBERA-2TH-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2TH.usfm",
+      "sha256": "e2e7bd649384fec10ef34e8e7d1fc8877e3c05dfd485f9ff9602b25145e376eb"
+    },
+    "NT-BIBLIA-LIBERA-2TI-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/2TI.usfm",
+      "sha256": "32e6b1cd4d4e37db3b671043ac583c1634e7c8ef5e4676aaf1b052d39a4fdae3"
+    },
+    "NT-BIBLIA-LIBERA-3JN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/3JN.usfm",
+      "sha256": "793a25d5ee4e6752bd8b55d5e3a86a7bbc1949ba591c126b9bc03e512dc866cd"
+    },
+    "NT-BIBLIA-LIBERA-ACT-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/ACT.usfm",
+      "sha256": "05cc51ac6bf3dc9d42c9806f0fa4f1bb27b0b8a92391af08c3ea47f062983356"
+    },
+    "NT-BIBLIA-LIBERA-COL-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/COL.usfm",
+      "sha256": "cdaf5a5fefed62485ce105d8133e9dc7d0f7dbb89cf38e851b07ef2506364eb4"
+    },
+    "NT-BIBLIA-LIBERA-EPH-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/EPH.usfm",
+      "sha256": "125b7ac2648d2b059567d5860bd29f24e5c64eed6f6842f64ea18e31a02e8354"
+    },
+    "NT-BIBLIA-LIBERA-GAL-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/GAL.usfm",
+      "sha256": "dc5c6dae49c99ba988f0d14d37aa037fcb769f2f74404fd7a4b6ccd44253fc84"
+    },
+    "NT-BIBLIA-LIBERA-HEB-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/HEB.usfm",
+      "sha256": "ce337d4bee1601cda5713836e68e48df8a94e9d2b02340c6882385e5aa0a2ea3"
+    },
+    "NT-BIBLIA-LIBERA-JAS-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/JAS.usfm",
+      "sha256": "5cc04b54ee4984a7a82f46d2d880d4a7c762fc15bfa0ab802195b3773450caa7"
+    },
+    "NT-BIBLIA-LIBERA-JUD-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/JUD.usfm",
+      "sha256": "4d60ee8f5a481176cb30ed06075f0f2cf419b583936bddef83972795e03a4f40"
+    },
+    "NT-BIBLIA-LIBERA-LUK-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/LUK.usfm",
+      "sha256": "4d6b8c70a7710f9d7cbf369ca1733d1c32730dc37fb551d44c7e7340104d8cd6"
+    },
+    "NT-BIBLIA-LIBERA-MAT-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/MAT.usfm",
+      "sha256": "5db019b86eee097f779cb2a92fd65d7f16877a60e29051ff1e1364878865a3f2"
+    },
+    "NT-BIBLIA-LIBERA-MRK-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/MRK.usfm",
+      "sha256": "9b33d65c6aa5fad3adcf9b04f99750013440a902eebb2e9151330d0e63399a41"
+    },
+    "NT-BIBLIA-LIBERA-PHM-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/PHM.usfm",
+      "sha256": "6a5268250eb6f85ca993e385276ff9b512368de373a2947a64153731dba384f0"
+    },
+    "NT-BIBLIA-LIBERA-PHP-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/PHP.usfm",
+      "sha256": "c5ec994b2c82968a90258e47bab2d5b107540a5fac6a6f769cd16ee82d113d33"
+    },
+    "NT-BIBLIA-LIBERA-REV-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/REV.usfm",
+      "sha256": "f44c512fd6930cb1e3ce6b01765b388737da5350f08caf00c0f318c8e967de03"
+    },
+    "NT-BIBLIA-LIBERA-ROM-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/ROM.usfm",
+      "sha256": "8c0f9e233a3988c8628fdb42643da273417366b8c5b4690c837edf8fb009331c"
+    },
+    "NT-BIBLIA-LIBERA-TIT-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "biblia-libera/TIT.usfm",
+      "sha256": "68588bcc8961b33441b812807cb00246dc903a4ae75dd64eba876f27444a7c61"
+    },
+    "NT-CORNILESCU1924-JHN-USFM": {
+      "snapshotId": "nt",
+      "archivePath": "cornilescu1924/JHN.usfm",
+      "sha256": "b8d9d8172f93753f6faf82570a95d09cd85d40e02cc7af50d40b2f41d4a052fd"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1CO-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1CO.txt",
+      "sha256": "234e25b89f92d60c9327d1485dc22a78613ae5c9acc9385c69b2646944ce8d11"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1JN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1JN.txt",
+      "sha256": "0020f2e4bad2c3159c6b276bbeb72dfdef01aca4b114475077e7536ac80c23e3"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1PE-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1PE.txt",
+      "sha256": "b3db0c1116eef118a8374388f7dec0879cced9e95cd1914718f2c63b03941671"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1TH-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1TH.txt",
+      "sha256": "c766daa75320713b9ff85d14bd2118adca905eb4b1001b5f4261146b229095c2"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-1TI-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/1TI.txt",
+      "sha256": "7354bb371ea83f4b3863ee0766450494e39ca053d2ce9647085b3b48eb4eddff"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2CO-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2CO.txt",
+      "sha256": "643991dc4457cfe05223f7c665a57eb0eeebc4881ea732c9a14c59b77e3fbfe4"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2JN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2JN.txt",
+      "sha256": "0ed6cd567235562e69c05fa1e529a8e02ad98e0f83623b4ec2caa05d7724cbad"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2PE-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2PE.txt",
+      "sha256": "7491f64707485a117eddb6eef71eabdde112dbd5c0a5413cd6981a529a19d654"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2TH-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2TH.txt",
+      "sha256": "167f79c7cf72f6a29b391f49ec2c780a7c8fe548d134fe0f56aa16d52565a6d3"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-2TI-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/2TI.txt",
+      "sha256": "3ec81d2685f0b1d166f666fc0058e69abbc19f92e71062c34fc08298320796c0"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-3JN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/3JN.txt",
+      "sha256": "3f25b0daae8dcbaa3371e01f6740fc310e6580dc7b2304a340702f2bb6d5406a"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-ACT-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/ACT.txt",
+      "sha256": "acf74d492200dd46333f4cb9b245537ac0fe87e4a13504025db6ce5fe7a46411"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-COL-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/COL.txt",
+      "sha256": "eb55ef187e569766d835ccda3858136e1244c2c9c1bf19108d7a2d1f58075db2"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-EPH-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/EPH.txt",
+      "sha256": "c8390d0e2ff866f2c04fb5d1a100ec9a50e9b48a17a5d9b35702f43f862b9a10"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-GAL-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/GAL.txt",
+      "sha256": "06ee23b91157f23a684c7b0e81cec67a812e1bba0f867bbe96b07f0ece346307"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-HEB-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/HEB.txt",
+      "sha256": "be07a22bad25d8a9abc98e6fde615c0618939239b2d4980490dffe1752d7dbb5"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-JAS-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/JAS.txt",
+      "sha256": "f8e6fc3d0a06c616315522a11cbe2c9fce541ec913f2c57fe51332c02743e5db"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-JHN-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/JHN.txt",
+      "sha256": "fbfb6ca71bee74da2ee7f27472bd75fd03e9894e7baa42ba4c8304913b766305"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-JUD-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/JUD.txt",
+      "sha256": "8c409545f125032f430df08070e41a644fdbb1ad2f15741dd67fd59c13fe7602"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-LUK-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/LUK.txt",
+      "sha256": "687348bf3002146877b58e425c82697e797b81edf075c42b5e4f973984c8e212"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-MAT-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/MAT.txt",
+      "sha256": "c08131305cfa3885f277a0b85d0883264d9fb33c31d4afcafb87dea7b84649fc"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-MRK-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/MRK.txt",
+      "sha256": "25f90cb6d683f4cf4e0aa3e14931cfcf514f20e5ced8e039ea913a3050b53f35"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-PHM-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/PHM.txt",
+      "sha256": "3f27f3097c9a3d3d3512575a2e2dc3ea57b956321111bc47f8ebb7ce092be74b"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-PHP-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/PHP.txt",
+      "sha256": "7b784ba0f020eb793f2dfd564e13311fd405fc581fe9776cdd5283aff7496897"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-REV-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/REV.txt",
+      "sha256": "ee291eed57ce1a0ef2bd281598ab4811d6c549b10a17f9d0d3e6b569977dba97"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-ROM-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/ROM.txt",
+      "sha256": "f9145016c0dab7607e14a7151e9b3a860c73ba7422625a3ca4ac4de7096443c1"
+    },
+    "NT-SBLGNT-APPARATUS-TEXT-TIT-TXT": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/text/TIT.txt",
+      "sha256": "3783146e3db9fb4e7385211cf605efdfd79682f6c98d2186e98a9d595a088a2d"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1CO-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1CO.xml",
+      "sha256": "07f4396a925927605eb1eb583aa979ecfa28866ce7a69b0346c6555a74a7f253"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1JN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1JN.xml",
+      "sha256": "d9af0024a9722dba8c61d3fc60fc44155db7bd3fb40f5f3b4230db62f8ec47ec"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1PE-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1PE.xml",
+      "sha256": "638eb96c192f70019bad44bb53b90ae62fc096886cf6a6923ba96b6fc5b50e6e"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1TH-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1TH.xml",
+      "sha256": "bdec88c3fed39c87abf01d310f8dd1cc7c6fc5bd515b8e2cc0d998a5259c5fab"
+    },
+    "NT-SBLGNT-APPARATUS-XML-1TI-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/1TI.xml",
+      "sha256": "21ef281fb93639a1b4a4772e91d986c9cc6df7355837040e57343bb6b8f38e2f"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2CO-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2CO.xml",
+      "sha256": "ef5bbfc060859968c78398abbedfe0b69b21ea4e0d4d8b21744ce6045e984b5d"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2JN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2JN.xml",
+      "sha256": "be181bbc21d25415543b9e2f809ae7e4803e44fc8709b4695481e0047eee3af3"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2PE-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2PE.xml",
+      "sha256": "015085123c3052124c8140bef4a90dc021911d155852ecb7f94ccf42305c63fa"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2TH-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2TH.xml",
+      "sha256": "fa01c818c621b62c73d88b738bbe37b4b5e70e942779b2d5dd619792fe2e664b"
+    },
+    "NT-SBLGNT-APPARATUS-XML-2TI-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/2TI.xml",
+      "sha256": "81c8c82ca62c375adcc1334483f879b9894b6bc9afc1b0dfcdd130f836bc38dc"
+    },
+    "NT-SBLGNT-APPARATUS-XML-3JN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/3JN.xml",
+      "sha256": "c269bf3705e06f96ac907fc2d81433272f4e472972d3c2de0e8ac993404f5e6b"
+    },
+    "NT-SBLGNT-APPARATUS-XML-ACT-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/ACT.xml",
+      "sha256": "d7f74cc019eecacdaf349e6a125de89dbabc713a7d444890c7598761ef261fbe"
+    },
+    "NT-SBLGNT-APPARATUS-XML-COL-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/COL.xml",
+      "sha256": "56aabef0572d4bc4481e245c2f8b42e30eadf0bd7506c39f9b559dc9a56f86cd"
+    },
+    "NT-SBLGNT-APPARATUS-XML-EPH-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/EPH.xml",
+      "sha256": "a1db24ac35b9e6594be26c0564ccf942d5703ca6aa75633af3a605ce87b696ea"
+    },
+    "NT-SBLGNT-APPARATUS-XML-GAL-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/GAL.xml",
+      "sha256": "634a02a334c8a039e5ab24311836d903ef8768eb07d086589ecc3d1fabd2d4e5"
+    },
+    "NT-SBLGNT-APPARATUS-XML-HEB-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/HEB.xml",
+      "sha256": "b4222054f4adfeca8751f927f33200cc1344c8189ba455db24053a2575129a59"
+    },
+    "NT-SBLGNT-APPARATUS-XML-JAS-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/JAS.xml",
+      "sha256": "0548050efc98e5daab506c0743f86df20bc5a3ff2dc4e241152645a6facf6dbf"
+    },
+    "NT-SBLGNT-APPARATUS-XML-JHN-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/JHN.xml",
+      "sha256": "9be56ef52ab655bcb0abf8880db529232f800d592623226b322ae06d4d074baa"
+    },
+    "NT-SBLGNT-APPARATUS-XML-JUD-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/JUD.xml",
+      "sha256": "930d0f648963cb13282c14d9b1d9fae030a509016c83cfd244311eefbad45a8c"
+    },
+    "NT-SBLGNT-APPARATUS-XML-LUK-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/LUK.xml",
+      "sha256": "392b3aefbefd625f35cf437d59ab07cc139992352435e8c0dc770b3642cf27f4"
+    },
+    "NT-SBLGNT-APPARATUS-XML-MAT-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/MAT.xml",
+      "sha256": "c10a68e83f2506f974d7b5b450416fa10cc9acff3c64adee136349449881d40e"
+    },
+    "NT-SBLGNT-APPARATUS-XML-MRK-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/MRK.xml",
+      "sha256": "119360f19dfafe085c5aa11e869087eaac84d710b72520813977e25d24b1c433"
+    },
+    "NT-SBLGNT-APPARATUS-XML-PHM-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/PHM.xml",
+      "sha256": "2406a25632e7971cf0a033d1d2bca5534e343ca6f5828b99ca9cc302014c80f1"
+    },
+    "NT-SBLGNT-APPARATUS-XML-PHP-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/PHP.xml",
+      "sha256": "e75c419a71c89b9e77730875d725e4531a444bde307363b2f3fd2871b88d989a"
+    },
+    "NT-SBLGNT-APPARATUS-XML-REV-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/REV.xml",
+      "sha256": "dee80ff5c402f74c08c853431ec03c4dd101ed203e86033bbf96fd716e88ff87"
+    },
+    "NT-SBLGNT-APPARATUS-XML-ROM-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/ROM.xml",
+      "sha256": "fa7542d22d9ac14a5d94162aa1747258ccd2e957b252f013cbd871c608258140"
+    },
+    "NT-SBLGNT-APPARATUS-XML-TIT-XML": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/apparatus/xml/TIT.xml",
+      "sha256": "d9b937f57271c59dba745d9daa316e9e8ae87dc614a6e0f0193c5f87b999a997"
+    },
+    "NT-SBLGNT-METADATA-ABOUT-MD": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/metadata/About.md",
+      "sha256": "4c7198fb57ce5f3b6572e856bd8b9439c9793c9d6b678e0e1ac123c887591765"
+    },
+    "NT-SBLGNT-METADATA-LICENSE": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/metadata/LICENSE",
+      "sha256": "7e7170e3cebf88a9f60c7b8421418323c09304da1af4d5e90f4da1dc1c8a2661"
+    },
+    "NT-SBLGNT-METADATA-README-MD": {
+      "snapshotId": "nt",
+      "archivePath": "sblgnt/metadata/README.md",
+      "sha256": "7ae1dc2622a8dafe55cf8b17d4935c3e39a70c46636277dd0fc46fe8b7464721"
+    },
+    "NT-INTERNAL-MANIFEST": {
+      "snapshotId": "nt",
+      "archivePath": "manifest.json",
+      "sha256": "889bccc2db1ac3af69e4236fb377a1094dd1e5ef2a5a9d202e657a145f39e88a"
+    }
+  },
+  "lockBookJOS": {
+    "name": "Iosua",
+    "order": 6,
+    "testament": "OT",
+    "baseLockId": "WEBU-JOS",
+    "originalLockId": "WLC-JOS",
+    "benchmarkLockIds": [
+      "CORNILESCU1924-JOS",
+      "BTF-JOS"
+    ],
+    "externalBenchmarkIds": [
+      "NTR"
+    ]
+  },
+  "lockFilesJOS": {
+    "WEBU-JOS": {
+      "bookId": "JOS",
+      "language": "en",
+      "role": "base",
+      "archivePath": "web/07-JOSengwebp.usfm",
+      "sha256": "a81bb63cd03f3b9d05865988226464b46574fc3860fea0210bd83f8f91153bff",
+      "sourceId": "engwebp",
+      "snapshotId": "ot-legacy",
+      "format": "usfm",
+      "missingTargetReferences": [],
+      "extraSourceReferences": []
+    },
+    "WLC-JOS": {
+      "bookId": "JOS",
+      "language": "he",
+      "role": "original",
+      "archivePath": "wlc/07-JOShboWLC.usfm",
+      "sha256": "b832ab8f5563e5f6c4c2bfb5d0f704523061f61563206741c6e6ba22b1fd8e6b",
+      "sourceId": "hboWLC",
+      "snapshotId": "ot-legacy",
+      "format": "usfm",
+      "missingTargetReferences": [],
+      "extraSourceReferences": []
+    },
+    "CORNILESCU1924-JOS": {
+      "bookId": "JOS",
+      "language": "ro-Cyrl",
+      "role": "benchmark",
+      "archivePath": "cornilescu1924/07-JOSron1924.usfm",
+      "sha256": "1d96b0b03e925d18caf10b5f77041fa8ee86e75d262d33d28a5ad3f33e621eb6",
+      "sourceId": "ron1924",
+      "benchmarkId": "CORNILESCU-1924",
+      "family": "cornilescu",
+      "snapshotId": "ot-legacy",
+      "format": "usfm",
+      "missingTargetReferences": [],
+      "extraSourceReferences": []
+    },
+    "BTF-JOS": {
+      "bookId": "JOS",
+      "language": "ro",
+      "role": "benchmark",
+      "archivePath": "btf/07-JOSronbtf.usfm",
+      "sha256": "06f9c1eb5df1315fc7da254b5f332c2f996a8aee0a47a7a55f83efaadc8f1d07",
+      "sourceId": "ronbtf",
+      "benchmarkId": "BTF",
+      "family": "fidela",
+      "snapshotId": "ot-legacy",
+      "format": "usfm",
+      "missingTargetReferences": [],
+      "extraSourceReferences": []
+    }
+  },
+  "lockRulesJOS": [],
+  "chapterJOS1": {
+    "translation": "BE",
+    "bookId": "JOS",
+    "bookName": "Iosua",
+    "chapter": 1,
+    "status": "published",
+    "public": true,
+    "source": {
+      "english": {
+        "version": "WEBU-Protestant",
+        "passageUrl": "https://ebible.org/engwebp/JOS01.htm",
+        "license": "Public Domain",
+        "lockId": "WEBU-JOS"
+      },
+      "hebrew": {
+        "version": "WLC-OSHB",
+        "passageUrl": "https://ebible.org/hboWLC/JOS01.htm",
+        "textLicense": "Public Domain",
+        "annotationLicense": "CC BY 4.0",
+        "lockId": "WLC-JOS"
+      }
+    },
+    "review": {
+      "aiSourceLanguage": "approved",
+      "aiRomanianLanguage": "approved",
+      "aiTheologicalContext": "approved",
+      "omissionAddition": "approved",
+      "benchmarkComparison": "approved",
+      "copyrightDistance": "approved",
+      "criticalIssues": "approved"
+    },
+    "verses": [
+      {
+        "number": 1,
+        "text": "După moartea lui Moise, slujitorul DOMNULUI, DOMNUL i-a vorbit lui Iosua, fiul lui Nun, slujitorul lui Moise, spunând:"
+      },
+      {
+        "number": 2,
+        "text": "„Moise, slujitorul Meu, a murit. Acum ridică-te, treci Iordanul acesta, tu și tot poporul acesta, spre țara pe care le-o dau fiilor lui Israel."
+      },
+      {
+        "number": 3,
+        "text": "V-am dat orice loc pe care-l va călca talpa piciorului vostru, așa cum i-am spus lui Moise."
+      },
+      {
+        "number": 4,
+        "text": "Hotarul vostru va fi de la pustie și Libanul acesta până la râul cel mare, râul Eufrat, cuprinzând toată țara hitiților, și până la Marea cea Mare, spre apus."
+      },
+      {
+        "number": 5,
+        "text": "Nimeni nu va putea să stea înaintea ta în toate zilele vieții tale. Cum am fost cu Moise, așa voi fi și cu tine. Nu te voi lăsa și nu te voi părăsi."
+      },
+      {
+        "number": 6,
+        "text": "Fii tare și curajos, căci tu vei da acestui popor ca moștenire țara pe care am jurat părinților lor că le-o voi da."
+      },
+      {
+        "number": 7,
+        "text": "Numai fii tare și foarte curajos, având grijă să împlinești toată Legea pe care ți-a poruncit-o Moise, slujitorul Meu. Nu te abate de la ea nici la dreapta, nici la stânga, ca să lucrezi cu înțelepciune oriunde vei merge."
+      },
+      {
+        "number": 8,
+        "text": "Cartea aceasta a Legii să nu se depărteze de gura ta. Cugetă la ea zi și noapte, ca să ai grijă să împlinești tot ce este scris în ea; atunci îți vei duce calea la bun sfârșit și vei lucra cu înțelepciune."
+      },
+      {
+        "number": 9,
+        "text": "Nu ți-am poruncit Eu? Fii tare și curajos! Nu te înspăimânta și nu te descuraja, căci DOMNUL, Dumnezeul tău, este cu tine oriunde vei merge.”"
+      },
+      {
+        "number": 10,
+        "text": "Iosua le-a poruncit conducătorilor poporului:"
+      },
+      {
+        "number": 11,
+        "text": "„Treceți prin tabără și porunciți poporului: «Pregătiți-vă provizii, căci peste trei zile veți trece Iordanul acesta, ca să intrați și să luați în stăpânire țara pe care DOMNUL, Dumnezeul vostru, v-o dă s-o stăpâniți.»”"
+      },
+      {
+        "number": 12,
+        "text": "Iar rubeniților, gadiților și jumătății seminției lui Manase, Iosua le-a spus:"
+      },
+      {
+        "number": 13,
+        "text": "„Aduceți-vă aminte de cuvântul pe care vi l-a poruncit Moise, slujitorul DOMNULUI: «DOMNUL, Dumnezeul vostru, vă dă odihnă și vă dă țara aceasta."
+      },
+      {
+        "number": 14,
+        "text": "Soțiile, copiii și turmele voastre să rămână în țara pe care v-a dat-o Moise dincolo de Iordan. Dar voi, toți războinicii viteji, să treceți înarmați înaintea fraților voștri și să-i ajutați,"
+      },
+      {
+        "number": 15,
+        "text": "până când DOMNUL le va da odihnă fraților voștri, ca și vouă, și vor lua și ei în stăpânire țara pe care DOMNUL, Dumnezeul vostru, le-o dă. Apoi vă veți întoarce în țara moștenirii voastre și o veți stăpâni, țara pe care v-a dat-o Moise, slujitorul DOMNULUI, dincolo de Iordan, spre răsărit.»”"
+      },
+      {
+        "number": 16,
+        "text": "Ei i-au răspuns lui Iosua: „Vom face tot ce ne-ai poruncit și vom merge oriunde ne vei trimite."
+      },
+      {
+        "number": 17,
+        "text": "Te vom asculta în toate, așa cum l-am ascultat pe Moise. Numai DOMNUL, Dumnezeul tău, să fie cu tine, așa cum a fost cu Moise."
+      },
+      {
+        "number": 18,
+        "text": "Oricine se va răzvrăti împotriva poruncii tale și nu va asculta cuvintele tale în tot ce-i vei porunci va fi omorât. Numai fii tare și curajos!”"
+      }
+    ],
+    "editorialNotes": [
+      {
+        "verse": 1,
+        "term": "mesaret Moshe / eved YHWH",
+        "decision": "slujitorul lui Moise / slujitorul DOMNULUI",
+        "reason": "Textul distinge rolul de ajutor al lui Iosua față de Moise de titlul de slujitor al DOMNULUI atribuit lui Moise; diferența este păstrată.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Textul distinge rolul de ajutor al lui Iosua față de Moise de titlul de slujitor al DOMNULUI atribuit lui Moise; diferența este păstrată."
+      },
+      {
+        "verse": 7,
+        "term": "lema'an taskil",
+        "decision": "ca să lucrezi cu înțelepciune",
+        "reason": "Rădăcina sakal exprimă acțiune chibzuită și reușită; nu este redusă la prosperitate materială.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Rădăcina sakal exprimă acțiune chibzuită și reușită; nu este redusă la prosperitate materială.",
+        "alternatives": [
+          "ca să izbutești",
+          "ca să ai succes"
+        ]
+      },
+      {
+        "verse": 8,
+        "term": "tatsliah / taskil",
+        "decision": "îți vei duce calea la bun sfârșit / vei lucra cu înțelepciune",
+        "reason": "Cele două verbe sunt păstrate distinct: unul descrie înaintarea reușită a căii, celălalt comportamentul chibzuit.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Cele două verbe sunt păstrate distinct: unul descrie înaintarea reușită a căii, celălalt comportamentul chibzuit.",
+        "alternatives": [
+          "îți vei face calea prosperă / vei avea succes"
+        ]
+      },
+      {
+        "verse": 14,
+        "term": "hamushim",
+        "decision": "înarmați",
+        "reason": "Termenul poate indica oameni echipați pentru luptă sau organizați în formație; textul nu precizează o formație numerică.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Termenul poate indica oameni echipați pentru luptă sau organizați în formație; textul nu precizează o formație numerică.",
+        "alternatives": [
+          "în formație de luptă",
+          "pregătiți de război"
+        ]
+      },
+      {
+        "verse": 18,
+        "term": "yumat",
+        "decision": "va fi omorât",
+        "reason": "Afirmația aparține angajamentului comunității față de conducerea lui Iosua în contextul intrării în țară; nu este transformată într-o regulă universală de pedepsire a neascultării.",
+        "reviewRequired": true,
+        "resolutionStatus": "resolved",
+        "resolutionReason": "Afirmația aparține angajamentului comunității față de conducerea lui Iosua în contextul intrării în țară; nu este transformată într-o regulă universală de pedepsire a neascultării."
+      }
+    ],
+    "benchmark": {
+      "translationsConsulted": [
+        {
+          "id": "CORNILESCU-1924",
+          "family": "cornilescu",
+          "mode": "comparison-only",
+          "referenceUrl": "https://ebible.org/ron1924/JOS01.htm"
+        },
+        {
+          "id": "NTR",
+          "family": "biblica",
+          "mode": "comparison-only",
+          "referenceUrl": "https://www.bible.com/ro/bible/126/JOS.1.NTR"
+        },
+        {
+          "id": "BTF",
+          "family": "fidela",
+          "mode": "comparison-only",
+          "referenceUrl": "https://ebible.org/ronbtf/JOS01.htm"
+        }
+      ],
+      "exactTextCopied": false,
+      "fullProtectedTextsStored": false,
+      "checks": {
+        "omissions": "approved",
+        "additions": "approved",
+        "meaning": "approved",
+        "romanianNaturalness": "approved",
+        "theologicalNeutrality": "approved",
+        "copyrightSimilarity": "approved"
+      },
+      "observations": [
+        "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții.",
+        "Deciziile au fost verificate independent în WLC-OSHB și WEBU.",
+        "Nu a fost stocat textul integral al niciunui etalon protejat."
+      ]
+    },
+    "audit": {
+      "schemaVersion": 1,
+      "completedOn": "2026-08-05",
+      "verseCoverage": {
+        "expected": 18,
+        "reviewed": 18,
+        "continuous": true
+      },
+      "sourceLanguage": {
+        "language": "ebraică biblică",
+        "text": "WLC-OSHB",
+        "result": "approved",
+        "scope": "chemarea lui Iosua, promisiunea prezenței lui Dumnezeu, Legea, curajul, pregătirea trecerii Iordanului și angajamentul semințiilor răsăritene"
+      },
+      "romanianLanguage": {
+        "result": "approved",
+        "changesApplied": [
+          "Iosua 1:1 păstrează diferența dintre slujitorul lui Moise și slujitorul DOMNULUI.",
+          "Iosua 1:7–8 redă rădăcina sakal prin lucrare înțeleaptă, nu printr-o promisiune financiară.",
+          "Iosua 1:14 păstrează sensul militar al lui hamushim fără a inventa o formație precisă.",
+          "Iosua 1:18 păstrează sancțiunea în contextul juridic și militar al narațiunii."
+        ]
+      },
+      "theologicalContext": {
+        "result": "approved",
+        "principles": [
+          "Prezența lui Dumnezeu îi este promisă lui Iosua în misiunea dată, fără transformarea pasajului într-o garanție că orice proiect personal va reuși.",
+          "Cugetarea la Lege este orientată spre ascultare și acțiune, nu spre o tehnică de prosperitate.",
+          "Cucerirea este relatată în cadrul istoric și de legământ al cărții, fără aplicarea violenței ca model pentru credincioșii de astăzi."
+        ]
+      },
+      "omissionAddition": {
+        "result": "approved",
+        "omissions": 0,
+        "additions": 0
+      },
+      "copyrightDistance": {
+        "result": "approved",
+        "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+      },
+      "criticalIssues": {
+        "result": "approved",
+        "open": 0
+      },
+      "reviewLevel": "ai-complete",
+      "engineVersion": "2.0.0",
+      "reviewAgent": {
+        "type": "ai",
+        "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
+        "method": "verse-by-verse-source-and-benchmark"
+      },
+      "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
+      "benchmarkEvidence": {
+        "pinnedBenchmarks": 2,
+        "externalBenchmarks": 1,
+        "result": "approved"
+      },
+      "textDigest": "sha256:a79c160f7b61ca441a403f9cbd66f5419305ef593b9743996acedf18bfac15e1"
+    }
+  }
+}

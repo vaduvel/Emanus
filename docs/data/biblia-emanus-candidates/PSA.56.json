@@ -1,0 +1,171 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 56,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.56:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.56.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.56.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.56.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "763aaecd9d59c26b6f0eb12fdb154f819bfd84171a26c4268d54c92dae4bf3bb",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Fii milostiv cu mine, Dumnezeule, căci omul m-ar înghiți; el mă oprimă, luptând zilnic."
+    },
+    {
+      "number": 2,
+      "text": "Toată ziua mă hărțuiesc potrivnicii mei; sunt mulți, și se războiesc cu mine ca niște trufași."
+    },
+    {
+      "number": 3,
+      "text": "Ori de câte ori mă tem, eu mă încred în Tine."
+    },
+    {
+      "number": 4,
+      "text": "Eu mă voi lăuda cu Dumnezeu, cu cuvântul Lui. Mă încred în Dumnezeu și nu mă tem de nimic: ce pot să-mi facă niște oameni?"
+    },
+    {
+      "number": 5,
+      "text": "Întruna ei îmi ating drepturile și n-au decât gânduri rele față de mine."
+    },
+    {
+      "number": 6,
+      "text": "Uneltesc, pândesc și îmi urmăresc pașii, pentru că vor să-mi ia viața."
+    },
+    {
+      "number": 7,
+      "text": "Ei trag nădejde să scape prin nelegiuirea lor: doboară popoarele, Dumnezeule, în mânia Ta!"
+    },
+    {
+      "number": 8,
+      "text": "Tu numeri pașii vieții mele de pribeag; pune-mi lacrimile în burduful Tău: nu sunt ele scrise în cartea Ta?"
+    },
+    {
+      "number": 9,
+      "text": "Vrăjmașii mei dau înapoi în ziua când Te strig: știu că Dumnezeu este de partea mea."
+    },
+    {
+      "number": 10,
+      "text": "Eu mă voi lăuda cu Dumnezeu, cu cuvântul Lui, da, mă voi lăuda cu DOMNUL, cu cuvântul Lui."
+    },
+    {
+      "number": 11,
+      "text": "Mă încred în Dumnezeu și nu mă tem de nimic: ce pot să-mi facă niște oameni?"
+    },
+    {
+      "number": 12,
+      "text": "Dumnezeule, trebuie să împlinesc juruințele pe care Ți le-am făcut; Îți voi aduce jertfe de mulțumire."
+    },
+    {
+      "number": 13,
+      "text": "Căci mi-ai izbăvit sufletul de la moarte, mi-ai ferit picioarele de cădere, ca să umblu înaintea lui Dumnezeu, în lumina celor vii."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. Se cântă ca „Porumbel din stejari depărtați”)"
+}

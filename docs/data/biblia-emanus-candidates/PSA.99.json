@@ -1,0 +1,137 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 99,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.99.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.99.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.99.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "6d570ac7eafa5f0a2173576d0c7ea64fe62878ec2ca141793c20397d7e3a04ef",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "DOMNUL împărățește: popoarele tremură; El șade pe heruvimi: pământul se clatină."
+    },
+    {
+      "number": 2,
+      "text": "DOMNUL este mare în Sion și înălțat peste toate popoarele."
+    },
+    {
+      "number": 3,
+      "text": "Să laude oamenii Numele Tău cel mare și înfricoșat, căci este sfânt!"
+    },
+    {
+      "number": 4,
+      "text": "Să laude oamenii tăria împăratului, căci iubește dreptatea! Tu întărești dreptatea, Tu faci dreptate și judecată în Iacov."
+    },
+    {
+      "number": 5,
+      "text": "Înălțați pe DOMNUL Dumnezeul nostru și închinați-vă înaintea așternutului picioarelor Lui, căci este sfânt!"
+    },
+    {
+      "number": 6,
+      "text": "Moise și Aaron, dintre preoții Lui, și Samuel, dintre cei ce chemau Numele Lui, au chemat pe DOMNUL, și El i-a ascultat."
+    },
+    {
+      "number": 7,
+      "text": "El le-a vorbit din stâlpul de nor; ei au păzit poruncile Lui și Legea pe care le-a dat-o El."
+    },
+    {
+      "number": 8,
+      "text": "DOAMNE Dumnezeul nostru, Tu i-ai ascultat; ai fost pentru ei un Dumnezeu iertător, dar i-ai pedepsit pentru greșelile lor."
+    },
+    {
+      "number": 9,
+      "text": "Înălțați pe DOMNUL Dumnezeul nostru și închinați-vă pe muntele Lui cel sfânt! Căci DOMNUL Dumnezeul nostru este sfânt!"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

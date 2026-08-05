@@ -1,0 +1,137 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 31,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.31.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.31.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.31.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "930d4b9c7e574cbb8323f6683361d8d3dded7637be1379bf6dbef805eb491412",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Vai de cei ce se coboară în Egipt după ajutor, se bizuie pe cai și se încred în mulțimea carelor și în puterea călăreților, dar nu privesc spre Sfântul lui Israel și nu caută pe DOMNUL!"
+    },
+    {
+      "number": 2,
+      "text": "Dar și El este înțelept și aduce nenorocirea, și nu Își ia vorbele înapoi, ci Se ridică împotriva casei celor răi și împotriva ajutorului celor ce săvârșesc nelegiuirea."
+    },
+    {
+      "number": 3,
+      "text": "Căci egipteanul este om, nu Dumnezeu, și caii lui sunt carne, nu duh. Doar mâna să-Și întindă DOMNUL, și ocrotitorul se va clătina, iar cel ocrotit va cădea, și vor pieri cu toții."
+    },
+    {
+      "number": 4,
+      "text": "Căci așa mi-a vorbit DOMNUL: „Cum mugește leul și puiul de leu asupra prăzii, în ciuda tuturor păstorilor strânși împotriva lui, și nu se înspăimântă de glasul lor, nici nu se sperie de numărul lor, așa Se va coborî și DOMNUL oștirilor să lupte pe muntele Sionului și pe dealul lui.”"
+    },
+    {
+      "number": 5,
+      "text": "„Cum își întind păsările aripile peste puii lor, așa va ocroti DOMNUL oștirilor Ierusalimul, îl va ocroti și-l va izbăvi, îl va cruța și-l va mântui.”"
+    },
+    {
+      "number": 6,
+      "text": "Întoarceți-vă la Acela de la care v-ați abătut mult, copii ai lui Israel!"
+    },
+    {
+      "number": 7,
+      "text": "Căci în ziua aceea, fiecare își va lepăda idolii de argint și de aur, pe care vi i-ați făcut cu mâinile voastre nelegiuite."
+    },
+    {
+      "number": 8,
+      "text": "„Și asirianul va cădea ucis de o sabie, dar nu a unui om; îl va nimici o sabie, dar nu este a unui om; va fugi de sabie, și tinerii lui războinici vor fi robiți.”"
+    },
+    {
+      "number": 9,
+      "text": "„Stânca lui se va topi de groază, și căpeteniile lui vor tremura înaintea steagului – zice DOMNUL, care Își are focul în Sion, și cuptorul, în Ierusalim.”"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

@@ -8,6 +8,7 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -48,6 +49,46 @@ jobs:
 
       - name: Verifica sigiliul tuturor cartilor publicate
         run: pnpm seal:biblia-emanus --check
+
+      - name: Genereaza auditul determinist al candidatilor VT
+        if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
+        run: python3 scripts/audit-ot-repair5-v2.py
+
+      - name: Aplica politica explicita de versificatie VT
+        if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
+        run: python3 scripts/enforce-ot-repair5-audit.py
+
+      - uses: actions/setup-python@v5
+        if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
+        with:
+          python-version: '3.11'
+
+      - name: Instaleaza auditul semantic VT
+        if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
+        run: pip install --disable-pip-version-check 'sentence-transformers>=3,<4' numpy
+
+      - name: Audit semantic candidati VT
+        if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
+        run: python3 scripts/semantic-audit-ot-repair5-v2.py --batch-size 128
+
+      - name: Blocheaza alinierile semantice mici nerevizuite
+        if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
+        run: python3 scripts/enforce-ot-repair5-semantic.py
+
+      - name: Publica rapoartele auditului VT ca artefact
+        if: ${{ always() && hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ot-repair5-ci-audit
+          path: |
+            docs/biblia-emanus/OT-REPAIR5-DETERMINISTIC-AUDIT.md
+            docs/biblia-emanus/OT-REPAIR5-DETERMINISTIC-AUDIT.json
+            docs/biblia-emanus/OT-REPAIR5-DETERMINISTIC-RESOLVED.json
+            docs/biblia-emanus/OT-REPAIR5-SEMANTIC-AUDIT.md
+            docs/biblia-emanus/OT-REPAIR5-SEMANTIC-AUDIT.json
+            docs/biblia-emanus/OT-REPAIR5-SEMANTIC-RESOLVED.json
+          if-no-files-found: warn
+          retention-days: 7
 
       - name: Typecheck
         run: pnpm typecheck

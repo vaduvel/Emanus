@@ -1,0 +1,187 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 59,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.59:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.59.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.59.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.59.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "6c14ddd39ccc3d22425d2f9d7e2b6518e24a3c7337836b246b77b945dc7908d1",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Eliberează-mă de dușmanii mei, Dumnezeul meu; apără-mă de cei ce se ridică împotriva mea."
+    },
+    {
+      "number": 2,
+      "text": "Scapă-mă de răufăcători, izbăvește-mă de oamenii setoși de sânge!"
+    },
+    {
+      "number": 3,
+      "text": "Căci iată-i că stau la pândă să-mi ia viața; niște oameni porniți la rău urzesc lucruri rele împotriva mea, fără să fiu vinovat, fără să fi păcătuit, DOAMNE!"
+    },
+    {
+      "number": 4,
+      "text": "Cu toată nevinovăția mea, ei aleargă, se pregătesc: trezește-Te, ieși înaintea mea și privește!"
+    },
+    {
+      "number": 5,
+      "text": "DOAMNE Dumnezeul oștirilor, Dumnezeul lui Israel, scoală-Te, ca să pedepsești toate neamurile! N-avea milă de niciunul din acești vânzători nelegiuiți. – (Oprire)"
+    },
+    {
+      "number": 6,
+      "text": "Se întorc în fiecare seară, urlă ca niște câini și dau ocol cetății."
+    },
+    {
+      "number": 7,
+      "text": "Da, din gura lor țâșnește răul, pe buzele lor sunt săbii; căci zic: „Cine aude?”"
+    },
+    {
+      "number": 8,
+      "text": "Dar Tu, DOAMNE, râzi de ei, Tu Îți bați joc de toate neamurile."
+    },
+    {
+      "number": 9,
+      "text": "Oricare le-ar fi puterea, eu în Tine nădăjduiesc, căci Dumnezeu este scăparea mea."
+    },
+    {
+      "number": 10,
+      "text": "Dumnezeul meu, în bunătatea Lui, îmi iese înainte; Dumnezeu mă face să-mi văd împlinită dorința față de cei ce mă prigonesc."
+    },
+    {
+      "number": 11,
+      "text": "Nu-i ucide, ca să nu uite lucrul acesta poporul meu, ci fă-i să pribegească, prin puterea Ta, și doboară-i, DOAMNE, scutul nostru!"
+    },
+    {
+      "number": 12,
+      "text": "Gura lor păcătuiește la fiecare vorbă care le iese de pe buze: să se prindă în însăși mândria lor, căci nu spun decât blesteme și minciuni."
+    },
+    {
+      "number": 13,
+      "text": "Nimicește-i, în mânia Ta, prăpădește-i, ca să nu mai fie! Fă-i să știe că împărățește Dumnezeu peste Iacov, până la marginile pământului. – (Oprire)"
+    },
+    {
+      "number": 14,
+      "text": "Se întorc în fiecare seară, urlă ca niște câini și dau ocol cetății."
+    },
+    {
+      "number": 15,
+      "text": "Umblă încoace și încolo după hrană și petrec noaptea nesătui."
+    },
+    {
+      "number": 16,
+      "text": "Dar eu voi cânta puterea Ta; dis-de-dimineață voi lăuda bunătatea Ta. Căci Tu ești un turn de scăpare pentru mine, un loc de adăpost în ziua necazului meu."
+    },
+    {
+      "number": 17,
+      "text": "O, tăria mea! Pe Tine Te voi lăuda, căci Dumnezeu, Dumnezeul meu cel preabun, este turnul meu de scăpare."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. „Nu nimici.”)"
+}

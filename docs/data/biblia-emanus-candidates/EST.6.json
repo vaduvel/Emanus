@@ -1,0 +1,166 @@
+{
+  "translation": "BE",
+  "bookId": "EST",
+  "bookName": "Estera",
+  "chapter": 6,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/EST.6.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/EST.6.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/EST.6.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "c8c6965841cd306d5bc57b6124198c80dc89cea47be5eb07d07b9254b38a6b8a",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "În noaptea aceea, împăratul n-a putut să doarmă și a poruncit să-i aducă lângă el cartea aducerilor aminte, Cronicile. Le-au citit înaintea împăratului,"
+    },
+    {
+      "number": 2,
+      "text": "și s-a găsit scris ce descoperise Mardoheu cu privire la Bigtan și Tereș, cei doi fameni ai împăratului, păzitorii pragului, care voiseră să întindă mâna asupra împăratului Ahașveroș."
+    },
+    {
+      "number": 3,
+      "text": "Împăratul a zis: „Ce cinste și mărire i s-a făcut lui Mardoheu pentru aceasta?” – „Nu i s-a făcut nimic”"
+    },
+    {
+      "number": 4,
+      "text": "Împăratul a întrebat: „Cine este în curte?” Haman tocmai intrase în curtea exterioară a palatului, ca să-i ceară împăratului să-l spânzure pe Mardoheu pe spânzurătoarea pregătită pentru el."
+    },
+    {
+      "number": 5,
+      "text": "Slujitorii împăratului i-au răspuns: „Haman este în curte.” Și împăratul a zis: „Să intre.”"
+    },
+    {
+      "number": 6,
+      "text": "Haman a intrat, și împăratul i-a zis: „Ce trebuie făcut pentru un om pe care vrea să-l cinstească împăratul?” Haman și-a zis în sine: „Pe cine altul decât pe mine ar vrea împăratul să-l cinstească?”"
+    },
+    {
+      "number": 7,
+      "text": "Și Haman a răspuns împăratului: „Omului pe care vrea împăratul să-l cinstească”"
+    },
+    {
+      "number": 8,
+      "text": "trebuie să i se aducă haina împărătească, aceea cu care se îmbracă împăratul, și calul pe care călărește împăratul și să i se pună cununa împărătească pe cap."
+    },
+    {
+      "number": 9,
+      "text": "Să se dea haina și calul uneia din căpeteniile de seamă ale împăratului, apoi să îmbrace cu haina pe omul acela pe care vrea să-l cinstească împăratul, să-l plimbe călare pe cal prin locul deschis al cetății și să se strige înaintea lui: „Așa se face omului pe care vrea împăratul să-l cinstească!”"
+    },
+    {
+      "number": 10,
+      "text": "Împăratul a zis lui Haman: „Ia îndată haina și calul, cum ai zis, și fă așa iudeului Mardoheu, care șade la poarta împăratului. Nu lăsa nefăcut nimic din ce ai spus.”"
+    },
+    {
+      "number": 11,
+      "text": "Și Haman a luat haina și calul, a îmbrăcat pe Mardoheu, l-a plimbat călare pe cal prin locul deschis al cetății și a strigat înaintea lui: „Așa se face omului pe care vrea împăratul să-l cinstească!”"
+    },
+    {
+      "number": 12,
+      "text": "Mardoheu s-a întors la poarta împăratului, și Haman s-a dus în grabă acasă, mâhnit și cu capul acoperit."
+    },
+    {
+      "number": 13,
+      "text": "Haman a istorisit nevestei sale, Zereș, și tuturor prietenilor săi tot ce i se întâmplase. Și înțelepții lui și nevasta sa, Zereș, i-au zis: „Dacă Mardoheu, înaintea căruia ai început să cazi, este din neamul iudeilor, nu vei putea face nimic împotriva lui, ci vei cădea înaintea lui.”"
+    },
+    {
+      "number": 14,
+      "text": "„Pe când îi vorbeau ei încă, au venit famenii împăratului și au luat îndată pe Haman la ospățul pe care-l pregătise Estera.”"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "4f3ebf0b2b79b0696cc6633a06ddd5f95f46e265568dffaa2ad14d12977a5d28",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

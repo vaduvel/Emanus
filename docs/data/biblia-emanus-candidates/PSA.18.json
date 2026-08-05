@@ -1,0 +1,317 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 18,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.18.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.18.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.18.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "eb6e9a38be73fb97c1352dbfb97091006ef31355aa13a90fa13fe92629cc8c2e",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Către mai marele cântăreților. Un psalm al lui David, robul DOMNULUI. El a spus DOMNULUI cuvintele cântării acesteia când l-a scăpat DOMNUL din mâna tuturor vrăjmașilor săi și din mâna lui Saul. El a zis: ) „Te iubesc din inimă, DOAMNE, tăria mea!”"
+    },
+    {
+      "number": 2,
+      "text": "DOAMNE, Tu ești stânca mea, cetățuia mea, izbăvitorul meu! Dumnezeule, Tu ești stânca mea în care mă ascund, scutul meu, tăria care mă scapă și întăritura mea!"
+    },
+    {
+      "number": 3,
+      "text": "Îl chem pe DOMNUL, care este vrednic de laudă, și sunt izbăvit de vrăjmașii mei."
+    },
+    {
+      "number": 4,
+      "text": "Mă înconjuraseră legăturile morții și mă îngroziseră râurile pieirii;"
+    },
+    {
+      "number": 5,
+      "text": "mă înfășuraseră legăturile mormântului și mă prinseseră lațurile morții."
+    },
+    {
+      "number": 6,
+      "text": "Dar, în strâmtorarea mea, am chemat pe DOMNUL și am strigat către Dumnezeul meu: din locașul Lui, El mi-a auzit glasul, și strigătul meu a ajuns până la El, până la urechile Lui."
+    },
+    {
+      "number": 7,
+      "text": "Atunci s-a zguduit pământul și s-a cutremurat, temeliile munților s-au mișcat și s-au clătinat, pentru că El Se mâniase."
+    },
+    {
+      "number": 8,
+      "text": "Din nările Lui se ridica fum, și un foc mistuitor ieșea din gura Lui: cărbuni aprinși țâșneau din ea."
+    },
+    {
+      "number": 9,
+      "text": "A plecat cerurile și S-a coborât: un nor gros era sub picioarele Lui."
+    },
+    {
+      "number": 10,
+      "text": "Călărea pe un heruvim și zbura, venea plutind pe aripile vântului."
+    },
+    {
+      "number": 11,
+      "text": "Întunericul Și-l făcuse învelitoare, iar cortul Lui, împrejurul Lui, erau niște ape întunecoase și nori negri."
+    },
+    {
+      "number": 12,
+      "text": "Din strălucirea care se răsfrângea înaintea Lui ieșeau nori care aruncau grindină și cărbuni de foc."
+    },
+    {
+      "number": 13,
+      "text": "DOMNUL a tunat în ceruri, Cel Preaînalt a făcut să-I răsune glasul cu grindină și cărbuni de foc."
+    },
+    {
+      "number": 14,
+      "text": "A aruncat săgeți și a risipit pe vrăjmașii mei, a înmulțit loviturile trăsnetului și i-a pus pe fugă."
+    },
+    {
+      "number": 15,
+      "text": "Atunci s-a văzut albia apelor și s-au descoperit temeliile lumii, la mustrarea Ta, DOAMNE, la vuietul suflării nărilor Tale."
+    },
+    {
+      "number": 16,
+      "text": "El Și-a întins mâna de sus, m-a apucat, m-a scos din apele cele mari;"
+    },
+    {
+      "number": 17,
+      "text": "m-a izbăvit de potrivnicul meu cel puternic, de vrăjmașii mei, care erau mai tari decât mine."
+    },
+    {
+      "number": 18,
+      "text": "Ei năvăliseră deodată peste mine în ziua strâmtorării mele; dar DOMNUL a fost sprijinul meu."
+    },
+    {
+      "number": 19,
+      "text": "El m-a scos la loc larg și m-a scăpat, pentru că mă iubește."
+    },
+    {
+      "number": 20,
+      "text": "DOMNUL mi-a făcut după neprihănirea mea, mi-a răsplătit după curăția mâinilor mele:"
+    },
+    {
+      "number": 21,
+      "text": "căci am păzit căile DOMNULUI și n-am păcătuit împotriva Dumnezeului meu."
+    },
+    {
+      "number": 22,
+      "text": "Toate poruncile Lui au fost înaintea mea și nu m-am depărtat de la legile Lui."
+    },
+    {
+      "number": 23,
+      "text": "Am fost fără vină față de El și m-am păzit de fărădelegea mea."
+    },
+    {
+      "number": 24,
+      "text": "De aceea, DOMNUL mi-a răsplătit după neprihănirea mea, după curăția mâinilor mele înaintea ochilor Lui."
+    },
+    {
+      "number": 25,
+      "text": "Cu cel bun Tu Te arăți bun, cu omul neprihănit Te arăți neprihănit;"
+    },
+    {
+      "number": 26,
+      "text": "cu cel curat Te arăți curat, și cu cel stricat Te porți după stricăciunea lui."
+    },
+    {
+      "number": 27,
+      "text": "Tu mântuiești pe poporul care se smerește și smerești privirile trufașe."
+    },
+    {
+      "number": 28,
+      "text": "Da, Tu îmi aprinzi lumina mea. DOMNUL Dumnezeul meu îmi luminează întunericul meu."
+    },
+    {
+      "number": 29,
+      "text": "Cu Tine mă năpustesc asupra unei oști înarmate, cu Dumnezeul meu sar peste un zid întărit."
+    },
+    {
+      "number": 30,
+      "text": "Căile lui Dumnezeu sunt desăvârșite, cuvântul DOMNULUI este încercat: El este un scut pentru toți cei ce aleargă la El."
+    },
+    {
+      "number": 31,
+      "text": "Căci cine este Dumnezeu, afară de DOMNUL, și cine este o stâncă, afară de Dumnezeul nostru?"
+    },
+    {
+      "number": 32,
+      "text": "Dumnezeu mă încinge cu putere și mă povățuiește pe calea cea dreaptă."
+    },
+    {
+      "number": 33,
+      "text": "El îmi face picioarele ca ale cerboaicelor și mă așază pe înălțimile mele."
+    },
+    {
+      "number": 34,
+      "text": "El îmi deprinde mâinile la luptă, așa că brațele mele întind arcul de aramă."
+    },
+    {
+      "number": 35,
+      "text": "Tu îmi dai scutul mântuirii Tale, dreapta Ta mă sprijină, și îndurarea Ta mă face mare."
+    },
+    {
+      "number": 36,
+      "text": "Tu lărgești drumul sub pașii mei, și nu-mi alunecă gleznele."
+    },
+    {
+      "number": 37,
+      "text": "Urmăresc pe vrăjmașii mei, îi ajung și nu mă întorc până nu-i nimicesc."
+    },
+    {
+      "number": 38,
+      "text": "Îi zdrobesc, de nu pot să se mai ridice: ei cad sub picioarele mele."
+    },
+    {
+      "number": 39,
+      "text": "Tu mă încingi cu putere pentru luptă și răpui pe potrivnicii mei sub picioarele mele."
+    },
+    {
+      "number": 40,
+      "text": "Tu faci pe vrăjmașii mei să dea dosul înaintea mea, și eu nimicesc pe cei ce mă urăsc."
+    },
+    {
+      "number": 41,
+      "text": "Ei strigă, dar n-are cine să-i scape! Strigă către DOMNUL, dar nu le răspunde!"
+    },
+    {
+      "number": 42,
+      "text": "Îi pisez ca praful pe care-l ia vântul, îi calc în picioare ca noroiul de pe ulițe."
+    },
+    {
+      "number": 43,
+      "text": "Tu mă scapi din neînțelegerile poporului; mă pui în fruntea neamurilor; un popor pe care nu-l cunoșteam îmi este supus."
+    },
+    {
+      "number": 44,
+      "text": "El ascultă de mine la cea dintâi poruncă, fiii străinului mă lingușesc."
+    },
+    {
+      "number": 45,
+      "text": "Fiilor străinului li se înmoaie inima de mine și ies tremurând din cetățuile lor."
+    },
+    {
+      "number": 46,
+      "text": "Trăiască DOMNUL și binecuvântată să fie Stânca mea! Mărit să fie Dumnezeul mântuirii mele,"
+    },
+    {
+      "number": 47,
+      "text": "Dumnezeu, Răzbunătorul meu, care îmi supune popoarele"
+    },
+    {
+      "number": 48,
+      "text": "și mă izbăvește de vrăjmașii mei! Tu mă înalți mai presus de potrivnicii mei, mă scapi de omul asupritor."
+    },
+    {
+      "number": 49,
+      "text": "De aceea, DOAMNE, Te voi lăuda printre neamuri, voi cânta spre slava Numelui Tău."
+    },
+    {
+      "number": 50,
+      "text": "„El dă mari izbăviri împăratului Său și dă îndurare unsului Său: lui David și seminței lui pe vecie.”"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau chemarea DOMNULUI și izbăvirea de vrăjmași.",
+      "previousTextDigest": "bbbb3db92bbf4526587d97bf4147b2b5b593690c9990299b64f695b5bd2681d1",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}
