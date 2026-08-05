@@ -1,0 +1,29 @@
+name: Probe CCEL Jubilees HTML
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-pr40-final
+    paths:
+      - 'scripts/probe-ccel-jubilees-html.py'
+      - '.github/workflows/probe-ccel-jubilees-html.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5'
+      - run: python3 scripts/probe-ccel-jubilees-html.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ccel-jubilees-html-probe
+          path: docs/biblia-emanus/CCEL-JUBILEES-HTML-PROBE.json
+          retention-days: 7
