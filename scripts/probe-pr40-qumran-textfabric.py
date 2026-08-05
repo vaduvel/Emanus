@@ -55,6 +55,39 @@ def safe_text(T: Any, node: int, formats: list[str]) -> dict[str, str]:
     return rendered
 
 
+def node_type_inventory(F: Any) -> tuple[dict[str, dict[str, Any]], str]:
+    """Normalize Text-Fabric metadata across API versions.
+
+    Older releases exposed tuples in ``F.otype.all`` while current releases
+    expose node-type names. Publication must not depend on one library shape.
+    """
+    raw = F.otype.all
+    inventory: dict[str, dict[str, Any]] = {}
+    iterable = raw.keys() if isinstance(raw, dict) else raw
+    for item in iterable:
+        record: dict[str, Any] = {}
+        if isinstance(item, (tuple, list)) and item:
+            name = str(item[0])
+            if len(item) > 1:
+                record["averageSlots"] = item[1]
+            if len(item) > 2:
+                record["firstNode"] = item[2]
+            if len(item) > 3:
+                record["lastNode"] = item[3]
+        else:
+            name = str(item)
+        try:
+            nodes = F.otype.s(name)
+            record["count"] = len(nodes)
+            if nodes:
+                record.setdefault("firstNode", nodes[0])
+                record.setdefault("lastNode", nodes[-1])
+        except Exception as error:  # noqa: BLE001
+            record["countError"] = f"{type(error).__name__}: {error}"
+        inventory[name] = record
+    return inventory, repr(raw)[:4000]
+
+
 def main() -> None:
     tf_dir = clone()
     TF = Fabric(locations=str(tf_dir), silent="deep")
@@ -65,10 +98,7 @@ def main() -> None:
     if api is None:
         raise SystemExit("Text-Fabric could not load the DSS features")
     F, L, T = api.F, api.L, api.T
-    node_types = {
-        level[0]: {"averageSlots": level[1], "firstNode": level[2], "lastNode": level[3]}
-        for level in F.otype.all
-    }
+    node_types, raw_node_type_metadata = node_type_inventory(F)
     formats = sorted(T.formats)
     scroll_nodes = list(F.otype.s("scroll"))
     by_name = {F.scroll.v(node): node for node in scroll_nodes if F.scroll.v(node)}
@@ -111,10 +141,11 @@ def main() -> None:
         }
 
     payload = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "repository": REPO,
         "commit": COMMIT,
         "tfDirectory": str(tf_dir.relative_to(CACHE)),
+        "rawNodeTypeMetadata": raw_node_type_metadata,
         "nodeTypes": node_types,
         "textFormats": formats,
         "scrollCount": len(scroll_nodes),
