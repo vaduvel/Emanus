@@ -62,12 +62,14 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Commit clean permanent integration
+      - name: Commit clean permanent data and engine
         run: |
-          rm scripts/integrate-biblia-emanus-main.py
+          rm -rf scripts/__pycache__
+          git rm scripts/integrate-biblia-emanus-main.py
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A docs/biblia-emanus docs/data/biblia-emanus scripts package.json .github/workflows/ci.yml
+          git add docs/biblia-emanus docs/data/biblia-emanus package.json
+          git add scripts/check-biblia-emanus.py scripts/test_biblia_emanus.py scripts/seal-biblia-emanus.py
           git diff --cached --check
-          git commit -m "Integrate Biblia Emanus 2.0 into main line"
+          git commit -m "Integrate Biblia Emanus 2.0 data and engine"
           git push origin HEAD:agent/biblia-emanus-main-integration
