@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs" / "biblia-emanus" / "OT-REPAIR5-DETERMINISTIC-AUDIT.json"
-POLICY = ROOT / "docs" / "data" / "biblia-emanus-candidates" / "versification-policy.json"
+POLICY = ROOT / "docs" / "biblia-emanus" / "OT-REPAIR5-VERSIFICATION-POLICY.json"
 RESOLVED = ROOT / "docs" / "biblia-emanus" / "OT-REPAIR5-DETERMINISTIC-RESOLVED.json"
 
 
