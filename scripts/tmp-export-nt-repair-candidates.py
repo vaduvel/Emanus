@@ -44,8 +44,13 @@ def branch_candidate(path: str, verse: int):
         return None
     return None
 
+
+def ref_sort_key(value: str):
+    book_id, chapter, verse = value.split(".")
+    return (old.validator.BOOK_ORDER[book_id], int(chapter), int(verse))
+
 records = []
-for ref in sorted(selected_refs, key=lambda value: old.validator.verse_id_sort_key(value)):
+for ref in sorted(selected_refs, key=ref_sort_key):
     book_id, chapter_s, verse_s = ref.split(".")
     chapter = int(chapter_s)
     verse = int(verse_s)
