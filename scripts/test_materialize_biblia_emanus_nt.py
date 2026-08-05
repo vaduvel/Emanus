@@ -41,6 +41,26 @@ class BibliaEmanusNtMaterializerTests(unittest.TestCase):
         self.assertIn("absent-from-critical-main-text", rendered)
         self.assertNotIn("DE TRADUS", rendered)
 
+    def test_rendered_typescript_handles_cross_verse_quotes_without_phantom_import(self) -> None:
+        payload = {
+            "MAT": {
+                "1": {
+                    "verses": {
+                        "1": "El a spus: „Citatul începe aici,",
+                        "2": "iar aici se încheie.”",
+                    },
+                    "textualStatuses": {},
+                    "notes": [],
+                    "alternateEndings": [],
+                }
+            }
+        }
+        rendered = materializer.render_typescript(payload)
+        self.assertIn("\\u{201e}Citatul începe aici", rendered)
+        self.assertIn("aici se încheie.\\u{201d}", rendered)
+        self.assertIn("type BibliaEmanusCorpus =", rendered)
+        self.assertNotIn("./bibliaEmanus.js", rendered)
+
     def test_unpublished_chapter_cannot_be_materialized(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
