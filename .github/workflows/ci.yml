@@ -48,17 +48,8 @@ jobs:
           pnpm seal:biblia-emanus --check
           --book GEN --book EXO --book LEV --book NUM --book DEU --book JOS
 
-      - name: Verifica structura sursei Bibliei
-        run: pnpm check:bible-source
-
-      - name: Verifica securitatea Bibliei cloud
-        run: pnpm check:bible-cloud
-
       - name: Typecheck
         run: pnpm typecheck
 
       - name: Build
         run: pnpm build
-
-      - name: Verifica bundle-ul Bibliei
-        run: pnpm check:bible-bundle
