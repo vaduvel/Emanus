@@ -8,7 +8,8 @@ Acest branch unește numai livrările auditate și validate individual pentru Ge
 - manifestul și source ledger-ul au fost reconstruite ca uniune canonică;
 - validatorul recunoaște ordinea GEN, EXO, LEV, NUM, DEU;
 - traducerile românești de control rămân exclusiv comparison-only;
-- niciun PR-sursă nu a fost merguit.
+- niciun PR-sursă nu a fost merguit;
+- workflow-ul standard CI a fost restaurat, iar scriptul temporar de integrare a fost eliminat înaintea verificării finale.
 
 ## Commituri-sursă
 
