@@ -61,6 +61,9 @@ jobs:
       - name: Validate Biblia Emanus corpus
         run: python3 scripts/check-biblia-emanus.py
 
+      - name: Align NT tests with audit 3 policy
+        run: python3 scripts/tmp-fix-nt-tests.py
+
       - name: Run Biblia Emanus tests
         run: python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py scripts/test_materialize_biblia_emanus_nt.py
 
