@@ -26,7 +26,18 @@ jobs:
           git fetch origin codex/biblia-emanus-editorial-gate:refs/remotes/origin/codex/biblia-emanus-editorial-gate
 
       - name: Build unified Biblia Emanus 2.0 snapshot
-        run: python3 scripts/upgrade-ot-audit2.py
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/upgrade-ot-audit2.py')
+          text = path.read_text(encoding='utf-8')
+          old = 'with urllib.request.urlopen(url, timeout=120) as response:\n        raw = response.read()'
+          new = 'request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 Biblia-Emanus-Audit/2.0"})\n    with urllib.request.urlopen(request, timeout=120) as response:\n        raw = response.read()'
+          if old not in text:
+              raise SystemExit('download patch target missing')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+          python3 scripts/upgrade-ot-audit2.py
 
       - uses: pnpm/action-setup@v4
 
