@@ -98,3 +98,28 @@ def process_group(group: str) -> int:
     source_list = [item.source for item in generation_items]
     primary_values = translate_batch(source_list, PRIMARY_MODEL, PRIMARY_REVISION)
     secondary_values = translate_batch(source_list, SECONDARY_MODEL, SECONDARY_REVISION, batch_size=12)
+    primary = {item.key: text for item, text in zip(generation_items, primary_values)}
+    secondary = {item.key: text for item, text in zip(generation_items, secondary_values)}
+    selected, stats = choose_candidates(items, primary, secondary)
+
+    out_dir = ROOT / "out" / group / "docs" / "data" / "biblia-emanus"
+    chapter_count = 0
+    verse_count = 0
+    for chapter_id, original in chapters.items():
+        data = copy.deepcopy(original)
+        book_id = data["bookId"]
+        chapter = data["chapter"]
+        ledger_record = ledger[chapter_id]
+        expected_status: dict[int, str] = {
+            number: record["status"]
+            for record in ledger_record.get("textualStatuses", [])
+            for number in record["verseNumbers"]
+        }
+        verses: list[dict[str, Any]] = []
+        for number in ledger_record["verseNumbers"]:
+            verse: dict[str, Any] = {"number": number, "text": selected[f"{book_id}.{chapter}.{number}"]}
+            if number in expected_status:
+                verse["textualStatus"] = expected_status[number]
+            verses.append(verse)
+        normalize_chapter_quotes(verses)
+        data["verses"] = verses
