@@ -1,0 +1,29 @@
+name: Inventory PR40 books
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-all-pr40-rebuild
+    paths:
+      - 'scripts/inventory-pr40-books.py'
+      - '.github/workflows/inventory-pr40-books.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build exact inventory
+        run: python3 scripts/inventory-pr40-books.py
+      - name: Upload inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-exact-book-inventory
+          path: docs/biblia-emanus/PR40-EXACT-BOOK-INVENTORY.json
+          retention-days: 7
