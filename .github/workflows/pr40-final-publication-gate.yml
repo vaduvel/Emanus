@@ -11,7 +11,7 @@ on:
       - 'scripts/extract-pr40-early-works*.py'
       - 'scripts/translate-pr40-early-works*.py'
       - 'scripts/extract-pr40-qumran-corpus.py'
-      - 'scripts/translate-pr40-qumran-corpus.py'
+      - 'scripts/translate-pr40-qumran*.py'
       - 'scripts/audit-pr40-*.py'
       - '.github/workflows/pr40-final-publication-gate.yml'
   workflow_dispatch:
@@ -35,10 +35,9 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
-      - name: Install workspace
-        run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
       - name: Generate canonical publication with official OSHB remap
-        run: python3 scripts/promote-pr40-canonical-ot-v3.py
+        run: python3 scripts/promote-pr40-canonical-ot-v4.py
       - name: Run canonical publication gates
         run: |
           pnpm check:quotes
@@ -56,14 +55,20 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pr40-final-canonical-publication
-          path: |
-            docs/data/biblia-emanus
+          path: docs/data/biblia-emanus
           retention-days: 7
 
   deuterocanon:
-    name: Deuterocanon — translation and semantic audit
+    name: Deuterocanon — ${{ matrix.book }}
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        book: [1ES, 1MA, 2MA, 3MA, BAR, ESG, JDT, MAN, PS2, SIR, TOB, WIS]
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 150
+    env:
+      PR40_BOOKS: ${{ matrix.book }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -71,15 +76,15 @@ jobs:
           python-version: '3.11'
       - name: Install translation and audit runtime
         run: pip install --disable-pip-version-check 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Generate all twelve modern Romanian works
+      - name: Generate Romanian candidate
         run: python3 scripts/translate-pr40-deuterocanon-all-v2.py --batch-size 20
-      - name: Audit all units against English and Greek witnesses
+      - name: Audit every unit against English and Greek witnesses
         run: python3 scripts/audit-pr40-english-romanian.py --collection deuterocanon --batch-size 64
-      - name: Upload deuterocanonical corpus and reports
+      - name: Upload book corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pr40-final-deuterocanon-publication
+          name: pr40-deuterocanon-${{ matrix.book }}
           path: |
             docs/data/biblia-emanus-deuterocanon-new-translation
             docs/data/biblia-emanus-deuterocanon-audited
@@ -89,9 +94,16 @@ jobs:
           retention-days: 7
 
   early-works:
-    name: Early works — sources, translation and semantic audit
+    name: Early work — ${{ matrix.book }}
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        book: [ENO, JUB, DID, 4BA]
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 180
+    env:
+      PR40_BOOKS: ${{ matrix.book }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -99,17 +111,17 @@ jobs:
           python-version: '3.11'
       - name: Install extraction, translation and audit runtime
         run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Rebuild and verify all 210 source chapters
-        run: python3 scripts/extract-pr40-early-works-v2.py
-      - name: Generate modern Romanian candidates
+      - name: Rebuild and verify all source chapters
+        run: python3 scripts/extract-pr40-early-works-v3.py
+      - name: Generate Romanian candidate
         run: python3 scripts/translate-pr40-early-works-v2.py --batch-size 16
       - name: Audit every Romanian source unit
         run: python3 scripts/audit-pr40-english-romanian.py --collection early --batch-size 64
-      - name: Upload early-work corpus and reports
+      - name: Upload work corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pr40-final-early-publication
+          name: pr40-early-${{ matrix.book }}
           path: |
             docs/data/biblia-emanus-early-source-candidates
             docs/data/biblia-emanus-early-romanian-candidates
@@ -121,9 +133,34 @@ jobs:
           retention-days: 7
 
   qumran:
-    name: Qumran — authentic fragments and parallel research edition
+    name: Qumran — ${{ matrix.id }}
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include:
+          - id: COMM_REG
+            witnesses: 1QS,1QSa,1QSb
+          - id: GEN_APO
+            witnesses: 1Q20
+          - id: GIANTS
+            witnesses: 1Q23,2Q26,4Q203,4Q206,4Q530,4Q531,4Q532,4Q533,6Q8
+          - id: HAB_COM
+            witnesses: 1QpHab
+          - id: HODAYOT
+            witnesses: 1QHa
+          - id: SABB_SAC
+            witnesses: 4Q400
+          - id: TEMP_SCR
+            witnesses: 11Q19
+          - id: WAR_SCR
+            witnesses: 1QM
+          - id: ADD_PSA
+            witnesses: 11Q5,4Q381
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 210
+    env:
+      PR40_WITNESSES: ${{ matrix.witnesses }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -131,17 +168,17 @@ jobs:
           python-version: '3.11'
       - name: Install Text-Fabric, translation and audit runtime
         run: pip install --disable-pip-version-check 'text-fabric>=12,<14' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Rebuild all authentic witnesses, fragments and lines
+      - name: Rebuild authentic source corpus
         run: python3 scripts/extract-pr40-qumran-corpus.py
-      - name: Generate Romanian parallel research edition
-        run: python3 scripts/translate-pr40-qumran-corpus.py --batch-size 28
+      - name: Generate Romanian parallel research shard
+        run: python3 scripts/translate-pr40-qumran-shard.py --batch-size 28
       - name: Audit line fidelity and fragment semantics
-        run: python3 scripts/audit-pr40-qumran-romanian.py
-      - name: Upload Qumran corpus and reports
+        run: python3 scripts/audit-pr40-qumran-shard.py
+      - name: Upload collection corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pr40-final-qumran-publication
+          name: pr40-qumran-${{ matrix.id }}
           path: |
             docs/data/biblia-emanus-qumran-source
             docs/data/biblia-emanus-qumran-romanian-candidates
@@ -155,11 +192,7 @@ jobs:
   publication-verdict:
     name: All 64 works publication verdict
     if: always()
-    needs:
-      - canonical-ot
-      - deuterocanon
-      - early-works
-      - qumran
+    needs: [canonical-ot, deuterocanon, early-works, qumran]
     runs-on: ubuntu-latest
     steps:
       - name: Require every collection gate
