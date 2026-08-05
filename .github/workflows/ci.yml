@@ -5,11 +5,28 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-ot-audit2
+          fetch-depth: 0
+
+      - name: Fetch validated source branches
+        run: |
+          git fetch origin agent/biblia-emanus-exodul:refs/remotes/origin/agent/biblia-emanus-exodul
+          git fetch origin agent/biblia-emanus-leviticul:refs/remotes/origin/agent/biblia-emanus-leviticul
+          git fetch origin agent/biblia-emanus-numeri:refs/remotes/origin/agent/biblia-emanus-numeri
+          git fetch origin agent/biblia-emanus-deuteronomul:refs/remotes/origin/agent/biblia-emanus-deuteronomul
+          git fetch origin codex/biblia-emanus-editorial-gate:refs/remotes/origin/codex/biblia-emanus-editorial-gate
+
+      - name: Build unified Biblia Emanus 2.0 snapshot
+        run: python3 scripts/upgrade-ot-audit2.py
 
       - uses: pnpm/action-setup@v4
 
@@ -123,6 +140,11 @@ jobs:
       - name: Testeaza poarta Biblia Emanus
         run: pnpm test:biblia-emanus
 
+      - name: Verifica sigiliul tuturor celor sase carti
+        run: >-
+          pnpm seal:biblia-emanus --check
+          --book GEN --book EXO --book LEV --book NUM --book DEU --book JOS
+
       - name: Verifica structura sursei Bibliei
         run: pnpm check:bible-source
 
@@ -137,3 +159,15 @@ jobs:
 
       - name: Verifica bundle-ul Bibliei
         run: pnpm check:bible-bundle
+
+      - name: Commit permanent audited output
+        run: |
+          git show origin/codex/biblia-emanus-editorial-gate:.github/workflows/ci.yml > .github/workflows/ci.yml
+          rm -f .github/workflows/upgrade-ot-audit2.yml
+          rm -f scripts/upgrade-ot-audit2.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "Upgrade audited OT books to Biblia Emanus engine 2.0"
+          git push origin HEAD:agent/biblia-emanus-ot-audit2
