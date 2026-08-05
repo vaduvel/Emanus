@@ -15,7 +15,6 @@ import hashlib
 import json
 import shutil
 import subprocess
-from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
@@ -128,7 +127,7 @@ def main() -> None:
         raise SystemExit(f"Pinned DSS dataset lacks required witnesses: {missing}")
 
     report: dict[str, Any] = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "source": {
             "repository": REPOSITORY,
             "commit": COMMIT,
@@ -137,6 +136,7 @@ def main() -> None:
         },
         "collections": {},
         "witnesses": {},
+        "totalLacunae": [],
         "blocking": [],
     }
 
@@ -158,6 +158,7 @@ def main() -> None:
         diplomatic_parts: list[str] = []
         normalized_parts: list[str] = []
         line_total = 0
+        total_lacunae = 0
 
         for fragment_node in fragment_nodes:
             fragment_id = str(F.fragment.v(fragment_node) or fragment_node)
@@ -178,35 +179,57 @@ def main() -> None:
                 transliteration = clean_text(T.text(line_node, fmt="text-source-extra"))
                 normalized_transliteration = clean_text(T.text(line_node, fmt="text-source-full"))
                 language = first_feature(F, words, "lang")
-                if not diplomatic and not normalized:
+
+                is_total_lacuna = not diplomatic and not normalized and bool(normalized_transliteration)
+                if not diplomatic and not normalized and not normalized_transliteration:
                     report["blocking"].append(
-                        {"witness": witness, "fragment": fragment_id, "line": line_id, "code": "EMPTY_SOURCE_LINE"}
+                        {"witness": witness, "fragment": fragment_id, "line": line_id, "code": "UNEXPLAINED_EMPTY_SOURCE_LINE"}
                     )
-                lines.append(
-                    {
-                        "line": line_id,
-                        "language": language,
-                        "diplomatic": diplomatic,
-                        "normalized": normalized,
-                        "transliterationDiplomatic": transliteration,
-                        "transliterationNormalized": normalized_transliteration,
-                        "wordCount": len(words),
-                        "hasLacunae": diplomatic != normalized,
-                    }
-                )
-                diplomatic_parts.append(diplomatic)
-                normalized_parts.append(normalized)
+                if is_total_lacuna:
+                    total_lacunae += 1
+                    report["totalLacunae"].append(
+                        {
+                            "witness": witness,
+                            "fragment": fragment_id,
+                            "line": line_id,
+                            "sourceMarker": normalized_transliteration,
+                            "translationPolicy": "Do not reconstruct or translate; display as a completely lost line.",
+                        }
+                    )
+
+                line_record = {
+                    "line": line_id,
+                    "language": language,
+                    "diplomatic": diplomatic,
+                    "normalized": normalized,
+                    "transliterationDiplomatic": transliteration,
+                    "transliterationNormalized": normalized_transliteration,
+                    "wordCount": len(words),
+                    "hasLacunae": is_total_lacuna or diplomatic != normalized,
+                    "isTotalLacuna": is_total_lacuna,
+                    "translationAllowed": not is_total_lacuna,
+                }
+                if is_total_lacuna:
+                    line_record["displayPlaceholder"] = "[…]"
+                    line_record["editorialNote"] = "Linie complet pierdută în manuscris; nu se reconstituie text."
+                lines.append(line_record)
+
+                structural_marker = diplomatic or (f"<TOTAL-LACUNA:{normalized_transliteration}>" if is_total_lacuna else "<EMPTY>")
+                normalized_marker = normalized or (f"<TOTAL-LACUNA:{normalized_transliteration}>" if is_total_lacuna else "<EMPTY>")
+                diplomatic_parts.append(f"{fragment_id}:{line_id}\t{structural_marker}")
+                normalized_parts.append(f"{fragment_id}:{line_id}\t{normalized_marker}")
                 line_total += 1
             fragments.append(
                 {
                     "fragment": fragment_id,
                     "lineCount": len(lines),
+                    "totalLacunaCount": sum(1 for line in lines if line["isTotalLacuna"]),
                     "lines": lines,
                 }
             )
 
         witness_document = {
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "collectionId": witness_to_collection[witness],
             "witness": witness,
             "status": "source_verified",
@@ -221,6 +244,7 @@ def main() -> None:
             },
             "fragmentCount": len(fragments),
             "lineCount": line_total,
+            "totalLacunaCount": total_lacunae,
             "sourceDigest": sha_text("\n".join(diplomatic_parts)),
             "normalizedDigest": sha_text("\n".join(normalized_parts)),
             "fragments": fragments,
@@ -233,6 +257,7 @@ def main() -> None:
             "collectionId": witness_to_collection[witness],
             "fragmentCount": len(fragments),
             "lineCount": line_total,
+            "totalLacunaCount": total_lacunae,
             "sourceDigest": witness_document["sourceDigest"],
             "normalizedDigest": witness_document["normalizedDigest"],
         }
@@ -240,7 +265,7 @@ def main() -> None:
     for collection_id, metadata in COLLECTIONS.items():
         resolved = [witness for witness in metadata["witnesses"] if witness in report["witnesses"]]
         collection_doc = {
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "id": collection_id,
             "name": metadata["name"],
             "description": metadata["description"],
@@ -252,6 +277,7 @@ def main() -> None:
             "license": "CC BY-NC 4.0 for derived Romanian research edition",
             "witnesses": resolved,
             "warning": "Lacunele și reconstrucțiile editoriale sunt păstrate; colecția nu reprezintă un text continuu complet.",
+            "totalLacunaPolicy": "Linia este afișată ca […] și nu primește traducere inventată.",
         }
         (OUT / f"{collection_id}.manifest.json").write_text(
             json.dumps(collection_doc, ensure_ascii=False, indent=2) + "\n",
@@ -272,6 +298,7 @@ def main() -> None:
         "resolvedWitnesses": len(report["witnesses"]),
         "fragments": sum(item["fragmentCount"] for item in report["witnesses"].values()),
         "lines": sum(item["lineCount"] for item in report["witnesses"].values()),
+        "totalLacunae": len(report["totalLacunae"]),
         "blockingIssues": len(report["blocking"]),
         "sourceCorpusReady": not report["blocking"],
     }
