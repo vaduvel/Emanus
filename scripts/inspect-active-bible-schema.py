@@ -14,33 +14,28 @@ def load(name: str) -> dict[str, Any]:
     return json.loads((DATA / name).read_text(encoding="utf-8"))
 
 
-def sample_dict(value: Any) -> Any:
-    if isinstance(value, dict):
-        return {k: sample_dict(v) for k, v in value.items()}
-    if isinstance(value, list):
-        return [sample_dict(value[0])] if value else []
-    return value
-
-
 def main() -> None:
     manifest = load("manifest.json")
     ledger = load("source-ledger.json")
     lock = load("source-lock.json")
-    chapter = load("JOS.1.json")
+    jos = load("JOS.1.json")
+    jos_book = lock["books"]["JOS"]
+    ids = [jos_book["baseLockId"], jos_book["originalLockId"], *jos_book.get("benchmarkLockIds", [])]
     payload = {
-        "manifestKeys": list(manifest.keys()),
-        "manifestProgress": manifest.get("progress"),
-        "manifestNewTestament": manifest.get("newTestament"),
-        "ledgerKeys": list(ledger.keys()),
-        "ledgerPolicy": ledger.get("policy"),
-        "ledgerSampleGEN1": ledger.get("chapters", {}).get("GEN.1"),
-        "ledgerSampleJOS1": ledger.get("chapters", {}).get("JOS.1"),
-        "sourceLockKeys": list(lock.keys()),
-        "sourceLockPolicy": lock.get("policy"),
-        "sourceLockFiles": lock.get("files"),
-        "sourceLockBookJOS": lock.get("books", {}).get("JOS"),
-        "sourceLockRules": lock.get("versificationRules"),
-        "chapterShape": sample_dict(chapter),
+        "manifestWithoutDraftedChapters": {k: v for k, v in manifest.items() if k != "draftedChapters"},
+        "manifestDraftedChapterCount": len(manifest.get("draftedChapters", [])),
+        "ledgerTop": {k: v for k, v in ledger.items() if k != "chapters"},
+        "ledgerJOS1": ledger["chapters"]["JOS.1"],
+        "lockTopWithoutCollections": {
+            k: v for k, v in lock.items()
+            if k not in {"files", "books", "versificationRules", "artifacts"}
+        },
+        "lockSnapshots": lock.get("snapshots"),
+        "lockArtifacts": lock.get("artifacts"),
+        "lockBookJOS": jos_book,
+        "lockFilesJOS": {lock_id: lock["files"][lock_id] for lock_id in ids},
+        "lockRulesJOS": [r for r in lock.get("versificationRules", []) if r.get("bookId") == "JOS"],
+        "chapterJOS1": jos,
     }
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(payload, ensure_ascii=False, indent=2))
