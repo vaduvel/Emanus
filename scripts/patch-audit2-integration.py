@@ -39,9 +39,12 @@ patches = [
         '    cached = Path("/tmp/biblia-emanus-audit2") / url.rsplit("/", 1)[-1]\n'
         '    if cached.is_file():\n'
         '        raw = cached.read_bytes()\n'
-        '    else:\n'
-        '        with urllib.request.urlopen(url, timeout=120) as response:\n'
-        '            raw = response.read()\n',
+        '        actual = sha256(raw)\n'
+        '        if actual != expected:\n'
+        '            raise RuntimeError(f"hash upstream diferit pentru {url}: {actual} != {expected}")\n'
+        '        return raw\n'
+        '    with urllib.request.urlopen(url, timeout=120) as response:\n'
+        '        raw = response.read()\n',
     ),
     (
         '    sources = parse_refs(raw_wlc)\n    if len(targets) != len(sources):\n',
