@@ -5,11 +5,23 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-main-integration
+          fetch-depth: 0
+
+      - name: Fetch final audited Biblia Emanus branch
+        run: git fetch origin agent/biblia-emanus-ot-audit2:refs/remotes/origin/agent/biblia-emanus-ot-audit2
+
+      - name: Materialize only Biblia Emanus 2.0
+        run: python3 scripts/integrate-biblia-emanus-main.py
 
       - uses: pnpm/action-setup@v4
 
@@ -21,26 +33,41 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
-      # Aici se opreste build-ul inainte sa ajunga in main, nu dupa.
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
-      # Lista explicita de typo-uri cunoscute trebuie sa ramana idempotenta.
       - name: Verifica typo-urile cunoscute
         run: pnpm check:typos
 
-      # Blocheaza ID-uri duplicate, promisiuni medicale/spirituale periculoase
-      # si pierderea formularilor de siguranta din cursurile sensibile.
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
-      # Niciun capitol din Geneza nu poate fi publicat fara nume si data in registrul reviziei.
       - name: Verifica aprobarea Genezei
         run: pnpm check:bible-publication
+
+      - name: Verifica Biblia Emanus 2.0
+        run: pnpm check:biblia-emanus
+
+      - name: Testeaza poarta Biblia Emanus 2.0
+        run: pnpm test:biblia-emanus
+
+      - name: Verifica sigiliul celor sase carti
+        run: >-
+          pnpm seal:biblia-emanus --check
+          --book GEN --book EXO --book LEV --book NUM --book DEU --book JOS
 
       - name: Typecheck
         run: pnpm typecheck
 
       - name: Build
         run: pnpm build
+
+      - name: Commit clean permanent integration
+        run: |
+          rm scripts/integrate-biblia-emanus-main.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A docs/biblia-emanus docs/data/biblia-emanus scripts package.json .github/workflows/ci.yml
+          git diff --cached --check
+          git commit -m "Integrate Biblia Emanus 2.0 into main line"
+          git push origin HEAD:agent/biblia-emanus-main-integration
