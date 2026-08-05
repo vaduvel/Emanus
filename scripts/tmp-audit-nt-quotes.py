@@ -14,20 +14,35 @@ NT_IDS = {
 }
 CHAPTER = re.compile(r"^([A-Z0-9]{3})\.([1-9][0-9]*)\.json$")
 PAIRS = {"„": "”", "«": "»"}
+CLOSERS = set(PAIRS.values())
 
 
-def inspect(text: str) -> tuple[int, list[str], bool]:
-    stack: list[str] = []
-    negative = False
-    for char in text:
-        if char in PAIRS:
-            stack.append(PAIRS[char])
-        elif char in {"”", "»"}:
-            if not stack or stack[-1] != char:
-                negative = True
-            else:
-                stack.pop()
-    return len(stack), stack, negative
+def inspect(verses: list[dict]) -> tuple[list[dict], list[dict]]:
+    stack: list[dict] = []
+    invalid: list[dict] = []
+    for verse in verses:
+        text = verse["text"]
+        for offset, char in enumerate(text):
+            if char in PAIRS:
+                stack.append({
+                    "expected": PAIRS[char],
+                    "opening": char,
+                    "verse": verse["number"],
+                    "offset": offset,
+                    "text": text,
+                })
+            elif char in CLOSERS:
+                if not stack or stack[-1]["expected"] != char:
+                    invalid.append({
+                        "closing": char,
+                        "verse": verse["number"],
+                        "offset": offset,
+                        "expectedAtTop": stack[-1]["expected"] if stack else None,
+                        "text": text,
+                    })
+                else:
+                    stack.pop()
+    return invalid, stack
 
 
 def main() -> int:
@@ -38,25 +53,24 @@ def main() -> int:
         if not match or match.group(1) not in NT_IDS:
             continue
         data = json.loads(path.read_text(encoding="utf-8"))
-        texts = [item["text"] for item in data.get("verses", [])]
+        verses = data.get("verses", [])
+        texts = [item["text"] for item in verses]
         if not texts or all(text == "DE TRADUS" for text in texts):
             continue
         checked += 1
         full = " ".join(texts)
-        depth, stack, negative = inspect(full)
-        if depth or negative or full.count("„") != full.count("”") or full.count("«") != full.count("»"):
-            quote_verses = [
-                item["number"] for item in data["verses"]
-                if any(char in item["text"] for char in "„”«»")
-            ]
+        invalid, unclosed = inspect(verses)
+        count_mismatch = (
+            full.count("„") != full.count("”")
+            or full.count("«") != full.count("»")
+        )
+        if invalid or unclosed or count_mismatch:
             issues.append({
                 "chapter": path.stem,
                 "outer": [full.count("„"), full.count("”")],
                 "inner": [full.count("«"), full.count("»")],
-                "unclosed": stack,
-                "invalidClosingOrder": negative,
-                "quoteVerseRange": [min(quote_verses), max(quote_verses)] if quote_verses else [],
-                "lastVerse": data["verses"][-1]["text"],
+                "invalidClosings": invalid,
+                "unclosedOpenings": unclosed,
             })
     print(json.dumps({"checked": checked, "issues": issues}, ensure_ascii=False, indent=2))
     return 1 if issues else 0
