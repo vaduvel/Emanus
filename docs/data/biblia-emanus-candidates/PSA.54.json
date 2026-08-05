@@ -31,7 +31,16 @@
       "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
       "role": "Romanian comparison-only benchmark"
     },
-    "exactTextCopied": false
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.54:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
   },
   "review": {
     "sourceCoverage": "pending",
@@ -87,17 +96,18 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "9dcb6a97810885cf27f7c1cb86914ae7431af5ab548e94f0b423702f8bd0c9a0",
+    "textDigest": "88efdaa99cc906cff893a815241c3ef13cd3c9a97dc22a58b885f638dfbd31e8",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
   },
   "verses": [
     {
       "number": 1,
-      "text": "(Către mai marele cântăreților. De cântat cu instrumente cu corzi. O cântare a lui David. Făcută când au venit zifiții să spună lui Saul: „Știți că David șade ascuns printre noi?”"
+      "text": "Salvează-mă, Dumnezeule, prin numele tău și judecă-mă prin puterea ta."
     },
     {
       "number": 2,
@@ -124,6 +134,14 @@
       "text": "căci El mă izbăvește din toate necazurile, și cu ochii mei îmi văd împlinită dorința privitoare la vrăjmașii mei."
     }
   ],
-  "editorialNotes": [],
-  "category": "Vechiul Testament Protocanonic"
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. De cântat cu instrumente cu corzi. O cântare a lui David. Făcută când au venit zifiții să spună lui Saul: „Știți că David șade ascuns printre noi?”)"
 }

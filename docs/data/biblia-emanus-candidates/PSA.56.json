@@ -31,7 +31,16 @@
       "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
       "role": "Romanian comparison-only benchmark"
     },
-    "exactTextCopied": false
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.56:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
   },
   "review": {
     "sourceCoverage": "pending",
@@ -87,17 +96,18 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "a43bbcb6669f55b5f5b28c689889c8b79a845c57988f7b865976bfc45d856562",
+    "textDigest": "763aaecd9d59c26b6f0eb12fdb154f819bfd84171a26c4268d54c92dae4bf3bb",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
   },
   "verses": [
     {
       "number": 1,
-      "text": "(Către mai marele cântăreților. Se cântă ca „Porumbel din stejari depărtați”"
+      "text": "Fii milostiv cu mine, Dumnezeule, căci omul m-ar înghiți; el mă oprimă, luptând zilnic."
     },
     {
       "number": 2,
@@ -148,6 +158,14 @@
       "text": "Căci mi-ai izbăvit sufletul de la moarte, mi-ai ferit picioarele de cădere, ca să umblu înaintea lui Dumnezeu, în lumina celor vii."
     }
   ],
-  "editorialNotes": [],
-  "category": "Vechiul Testament Protocanonic"
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. Se cântă ca „Porumbel din stejari depărtați”)"
 }

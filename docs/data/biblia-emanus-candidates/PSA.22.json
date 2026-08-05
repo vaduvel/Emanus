@@ -31,7 +31,16 @@
       "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
       "role": "Romanian comparison-only benchmark"
     },
-    "exactTextCopied": false
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.22:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
   },
   "review": {
     "sourceCoverage": "pending",
@@ -87,17 +96,18 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "2c253da6333cf5c242dc7198ebd21677bec1b79100895b23b3db363f4bb1dc46",
+    "textDigest": "4eb3294b8cca59c1746335f4d5c5cb2a3edba6b21744d56f4a9273db1b0bf79a",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
   },
   "verses": [
     {
       "number": 1,
-      "text": "(Către mai marele cântăreților. Se cântă ca „Cerboaica zorilor”"
+      "text": "Dumnezeul meu, Dumnezeul meu, de ce m-ai părăsit? De ce ești așa departe de a mă ajuta și de cuvintele răcnetului meu?"
     },
     {
       "number": 2,
@@ -220,6 +230,14 @@
       "text": "Aceștia vor veni și vor vesti dreptatea Lui, vor vesti lucrarea Lui poporului care se va naște."
     }
   ],
-  "editorialNotes": [],
-  "category": "Vechiul Testament Protocanonic"
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. Se cântă ca „Cerboaica zorilor”)"
 }

@@ -31,7 +31,16 @@
       "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
       "role": "Romanian comparison-only benchmark"
     },
-    "exactTextCopied": false
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.69:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
   },
   "review": {
     "sourceCoverage": "pending",
@@ -87,17 +96,18 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "c2886565a0bbea9b7624482e4dcab3a4ef97f145f8c7bb49c29944deebf9245e",
+    "textDigest": "d39cbc31b530f4720904141a685db75231b628d0c67bcc02a48e0a7d2d220d53",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
   },
   "verses": [
     {
       "number": 1,
-      "text": "(Către mai marele cântăreților. De cântat ca și „Crinii”"
+      "text": "Salvează-mă, Dumnezeule, căci apele mi-au intrat până la suflet."
     },
     {
       "number": 2,
@@ -240,6 +250,14 @@
       "text": "sămânța robilor Lui le va moșteni, și cei ce iubesc Numele Lui vor locui în ele."
     }
   ],
-  "editorialNotes": [],
-  "category": "Vechiul Testament Protocanonic"
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. De cântat ca și „Crinii”)"
 }

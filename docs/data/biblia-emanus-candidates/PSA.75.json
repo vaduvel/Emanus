@@ -31,7 +31,16 @@
       "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
       "role": "Romanian comparison-only benchmark"
     },
-    "exactTextCopied": false
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.75:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
   },
   "review": {
     "sourceCoverage": "pending",
@@ -87,17 +96,18 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "b81ca58929f542d53417a85b6f8cf4ab62882857e92a5d347af99cda1c5faa56",
+    "textDigest": "1a110f0754bf51ad08b3700717586560e8fae6766ad1f143c1b93d9e9b86de64",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
   },
   "verses": [
     {
       "number": 1,
-      "text": "(Către mai marele cântăreților. „Nu nimici.”"
+      "text": "Ție Dumnezeule, îți aducem mulțumiri, ție îți aducem mulțumiri; lucrările tale minunate vestesc că numele tău este aproape."
     },
     {
       "number": 2,
@@ -136,6 +146,14 @@
       "text": "Și voi doborî toate puterile celor răi: puterile celui neprihănit însă se vor înălța."
     }
   ],
-  "editorialNotes": [],
-  "category": "Vechiul Testament Protocanonic"
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. „Nu nimici.”)"
 }
