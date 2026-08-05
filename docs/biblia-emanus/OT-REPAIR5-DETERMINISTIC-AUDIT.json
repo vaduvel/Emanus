@@ -1,7 +1,8 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "severityCounts": {
-    "error": 52
+    "error": 38,
+    "warning": 6
   },
   "sources": {
     "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
@@ -177,7 +178,7 @@
       "wlcBookCountDifference": 0,
       "btfReferenceMappings": 0,
       "placeholders": 0,
-      "languageErrors": 2,
+      "languageErrors": 0,
       "numberMismatches": 0,
       "lengthOutliers": 4,
       "maxRepeat": 32,
@@ -257,7 +258,7 @@
       "wlcBookCountDifference": 1,
       "btfReferenceMappings": 0,
       "placeholders": 0,
-      "languageErrors": 1,
+      "languageErrors": 0,
       "numberMismatches": 0,
       "lengthOutliers": 2,
       "maxRepeat": 1,
@@ -305,7 +306,7 @@
       "wlcBookCountDifference": 0,
       "btfReferenceMappings": 0,
       "placeholders": 0,
-      "languageErrors": 1,
+      "languageErrors": 0,
       "numberMismatches": 0,
       "lengthOutliers": 1,
       "maxRepeat": 8,
@@ -401,7 +402,7 @@
       "wlcBookCountDifference": 0,
       "btfReferenceMappings": 0,
       "placeholders": 0,
-      "languageErrors": 1,
+      "languageErrors": 0,
       "numberMismatches": 0,
       "lengthOutliers": 0,
       "maxRepeat": 1,
@@ -465,7 +466,7 @@
       "wlcBookCountDifference": 0,
       "btfReferenceMappings": 0,
       "placeholders": 0,
-      "languageErrors": 3,
+      "languageErrors": 0,
       "numberMismatches": 0,
       "lengthOutliers": 2,
       "maxRepeat": 1,
@@ -575,313 +576,455 @@
       "severity": "error",
       "code": "LENGTH",
       "reference": "1KI.13:12",
-      "message": "ratio=0.265"
+      "message": "ratio=0.265",
+      "evidence": {
+        "romanian": "el le-a zis: „Pe ce drum a plecat?”",
+        "webbe": "Their father said to them, “Which way did he go?” Now his sons had seen which way the man of God went, who came from Judah.",
+        "btf": "Şi tatăl lor le-a spus: Pe ce cale a mers el? Şi fiii săi văzuseră pe ce cale mersese omul lui Dumnezeu, care venise din Iuda."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "1KI.19:11",
-      "message": "ratio=0.189"
+      "message": "ratio=0.189",
+      "evidence": {
+        "romanian": "DOMNUL i-a zis: „Ieși și stai pe munte înaintea DOMNULUI!”",
+        "webbe": "He said, “Go out and stand on the mountain before the LORD.” Behold, the LORD passed by, and a great and strong wind tore the mountains and broke in pieces the rocks before the LORD; but the LORD was not in the wind. After the wind there was an earthquake; but the LORD was not in the earthquake.",
+        "btf": "Iar el a spus: Ieşi şi stai în picioare pe munte înaintea DOMNULUI. Şi, iată, DOMNUL a trecut şi un vânt mare şi puternic a despicat munţii şi a sfărâmat în bucăţi stâncile înaintea DOMNULUI, dar DOMNUL nu era în vânt; şi după vânt, un cutremur, dar DOMNUL nu era în cutremur."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "1KI.22:37",
-      "message": "ratio=0.278"
+      "message": "ratio=0.278",
+      "evidence": {
+        "romanian": "„căci a murit împăratul.”",
+        "webbe": "So the king died, and was brought to Samaria; and they buried the king in Samaria.",
+        "btf": "Astfel împăratul a murit şi a fost adus la Samaria; şi l-au îngropat pe împărat în Samaria."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "1SA.20:7",
-      "message": "ratio=0.180"
+      "message": "ratio=0.180",
+      "evidence": {
+        "romanian": "Și dacă va zice: „Bine!”",
+        "webbe": "If he says, ‘It is well,’ your servant shall have peace; but if he is angry, then know that evil is determined by him.",
+        "btf": "Dacă el spune astfel: Este bine; servitorul tău va avea pace; dar dacă se va înfuria, atunci fii sigur că răul este hotărât de el."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "1SA.28:23",
-      "message": "ratio=0.233"
+      "message": "ratio=0.233",
+      "evidence": {
+        "romanian": "Dar el n-a vrut, și a zis: „Nu mănânc nimic!”",
+        "webbe": "But he refused, and said, “I will not eat.” But his servants, together with the woman, constrained him; and he listened to their voice. So he arose from the earth and sat on the bed.",
+        "btf": "Dar el a refuzat și a spus: Nu voi mânca. Dar servitorii săi, împreună cu femeia, l-au constrâns; și el a dat ascultare vocii lor. Astfel s-a ridicat de la pământ și a șezut pe pat."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "2KI.10:14",
-      "message": "ratio=0.200"
+      "message": "ratio=0.200",
+      "evidence": {
+        "romanian": "Iehu a zis: „Prindeți-i de vii.”",
+        "webbe": "He said, “Take them alive!” They took them alive, and killed them at the pit of the shearing house, even forty-two men. He didn’t leave any of them.",
+        "btf": "Și el a spus: Prindeți-i vii. Și i-au prins vii și i-au ucis la groapa tunzătorii oilor, patruzeci și doi de oameni; nu au lăsat pe niciunul dintre ei."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "2KI.5:23",
-      "message": "ratio=0.227"
+      "message": "ratio=0.227",
+      "evidence": {
+        "romanian": "Naaman a zis: „Fă-mi plăcerea și ia doi talanți.”",
+        "webbe": "Naaman said, “Be pleased to take two talents.” He urged him, and bound two talents of silver in two bags, with two changes of clothing, and laid them on two of his servants; and they carried them before him.",
+        "btf": "Și Naaman a spus: Binevoiește și ia doi talanți. Și l-a constrâns și a legat doi talanți de argint în doi saci, cu două schimburi de haine și le-a pus pe doi dintre servitorii săi; și ei le-au purtat înaintea lui."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "2KI.9:21",
-      "message": "ratio=0.122"
+      "message": "ratio=0.122",
+      "evidence": {
+        "romanian": "Atunci Ioram a zis: „Înhamă!”",
+        "webbe": "Joram said, “Get ready!” They got his chariot ready. Then Joram king of Israel and Ahaziah king of Judah went out, each in his chariot; and they went out to meet Jehu, and found him on Naboth the Jezreelite’s land.",
+        "btf": "Și Ioram a spus: Pregătiți! Și carul său a fost pregătit. Și Ioram, împăratul lui Israel, și Ahazia, împăratul lui Iuda, au ieșit fiecare în carul său și au mers să întâmpine pe Iehu și l-au întâlnit la câmpul lui Nabot izreelitul."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "2KI.9:33",
-      "message": "ratio=0.161"
+      "message": "ratio=0.161",
+      "evidence": {
+        "romanian": "El a zis: „Aruncați-o jos!”",
+        "webbe": "He said, “Throw her down!” So they threw her down; and some of her blood was sprinkled on the wall, and on the horses. Then he trampled her under foot.",
+        "btf": "Și el a spus: Aruncați-o jos. Astfel, ei au aruncat-o jos; și din sângele ei a fost stropit pe zid și pe cai; și el a călcat-o în picioare."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "2SA.18:14",
-      "message": "ratio=0.215"
+      "message": "ratio=0.215",
+      "evidence": {
+        "romanian": "Ioab a zis: „Nu voi zăbovi atâta cu tine!”",
+        "webbe": "Then Joab said, “I’m not going to wait like this with you.” He took three darts in his hand and thrust them through Absalom’s heart while he was still alive in the middle of the oak.",
+        "btf": "Atunci a spus Ioab: Nu o să stau astfel cu tine. Și a luat trei săgeți în mână și le-a înfipt în inima lui Absalom, în timp ce el era încă viu în mijlocul stejarului."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "EST.6:4",
-      "message": "ratio=0.227"
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "EZK.22:6",
-      "message": "Iată că în tine, toți voievozii lui Israel își întrebuințează puterea ca să verse sânge."
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "EZK.22:9",
-      "message": "În tine sunt bârfitori, ca să verse sânge; în tine se mănâncă jertfe idolești pe munți; în mijlocul tău se fac desfrânări."
+      "message": "ratio=0.227",
+      "evidence": {
+        "romanian": "Atunci împăratul a zis: „Cine este în curte?”",
+        "webbe": "The king said, “Who is in the court?” Now Haman had come into the outer court of the king’s house, to speak to the king about hanging Mordecai on the gallows that he had prepared for him.",
+        "btf": "Şi împăratul a spus: Cine este în curte? Iar Haman intrase în curtea dinafară a casei împăratului, pentru a vorbi cu împăratul să îl spânzure pe Mardoheu de spânzurătoarea pregătită pentru el."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "EZK.3:18",
-      "message": "ratio=0.187"
+      "message": "ratio=0.187",
+      "evidence": {
+        "romanian": "Când voi zice celui rău: „Vei muri negreșit!”",
+        "webbe": "When I tell the wicked, ‘You will surely die;’ and you give him no warning, nor speak to warn the wicked from his wicked way, to save his life, that wicked man will die in his iniquity; but I will require his blood at your hand.",
+        "btf": "Când spun celui stricat: Vei muri negreșit; și tu nu îl avertizezi, nici nu vorbești ca să îl avertizezi pe cel stricat de calea lui stricată, pentru a-și salva viața; acel om stricat va muri în nelegiuirea lui; dar sângele lui îl voi cere din mâna ta."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "EZK.33:8",
-      "message": "ratio=0.221"
+      "message": "ratio=0.221",
+      "evidence": {
+        "romanian": "Când zic celui rău: „Răule, vei muri negreșit!”",
+        "webbe": "When I tell the wicked, ‘O wicked man, you will surely die,’ and you don’t speak to warn the wicked from his way, that wicked man will die in his iniquity, but I will require his blood at your hand.",
+        "btf": "Când spun celui stricat: Tu cel stricat, vei muri negreșit; dacă nu vorbești să îl avertizezi pe cel stricat de calea lui, acel stricat va muri în nelegiuirea lui; dar sângele lui îl voi cere din mâna ta."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "EZK.36:4",
-      "message": "ratio=0.216"
+      "message": "ratio=0.216",
+      "evidence": {
+        "romanian": "„de aceea, munți ai lui Israel, ascultați cuvântul DOMNULUI Dumnezeu!”",
+        "webbe": "therefore, you mountains of Israel, hear the word of the Lord GOD: The Lord GOD says to the mountains and to the hills, to the watercourses and to the valleys, to the desolate wastes and to the cities that are forsaken, which have become a prey and derision to the residue of the nations that are all around;",
+        "btf": "De aceea munți ai lui Israel, ascultați cuvântul Domnului DUMNEZEU; Astfel spune Domnul DUMNEZEU munților și dealurilor, râurilor și văilor, risipirilor pustiite și cetăților părăsite, care au devenit o pradă și derâdere pentru rămășița păgânilor de jur împrejur;"
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "EZK.8:5",
-      "message": "ratio=0.273"
+      "message": "ratio=0.273",
+      "evidence": {
+        "romanian": "El mi-a zis: „Fiul omului, ia ridică ochii spre miazănoapte!”",
+        "webbe": "Then he said to me, “Son of man, lift up your eyes now the way towards the north.” So I lifted up my eyes the way towards the north, and saw, northward of the gate of the altar this image of jealousy in the entry.",
+        "btf": "Atunci el mi-a spus: Fiu al omului, ridică-ți acum ochii spre calea dinspre nord. Astfel mi-am ridicat ochii spre calea dinspre nord și iată, spre nord la poarta altarului acest chip al geloziei la intrare."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "ISA.57:10",
-      "message": "ratio=0.243"
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "ISA.59:7",
-      "message": "Picioarele lor aleargă spre rău și se grăbesc să verse sânge nevinovat; gândurile lor sunt gânduri nelegiuite, prăpădul și nimicirea sunt pe drumul lor."
+      "message": "ratio=0.243",
+      "evidence": {
+        "romanian": "Obosești mergând, și nu zici: „Încetez!”",
+        "webbe": "You were wearied with the length of your ways; yet you didn’t say, ‘It is in vain.’ You found a reviving of your strength; therefore you weren’t faint.",
+        "btf": "Ai obosit de măreția căilor tale; totuşi nu ai spus: Nu este speranţă; ai găsit viaţa mâinii tale; de aceea nu te-ai mâhnit."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "ISA.8:20",
-      "message": "ratio=0.193"
+      "message": "ratio=0.193",
+      "evidence": {
+        "romanian": "„La Lege și la mărturie!”",
+        "webbe": "Turn to the law and to the covenant! If they don’t speak according to this word, surely there is no morning for them.",
+        "btf": "La lege şi la mărturie; dacă ei nu vorbesc conform acestui cuvânt, este pentru că nu au lumină în ei."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JDG.11:38",
-      "message": "ratio=0.144"
+      "message": "ratio=0.144",
+      "evidence": {
+        "romanian": "El a răspuns: „Du-te!”",
+        "webbe": "He said, “Go.” He sent her away for two months; and she departed, she and her companions, and mourned her virginity on the mountains.",
+        "btf": "Iar el a spus: Du-te. Și a trimis-o pentru două luni, și ea a mers cu însoțitoarele ei și și-a plâns fecioria pe munți."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JDG.12:6",
-      "message": "ratio=0.248"
+      "message": "ratio=0.248",
+      "evidence": {
+        "romanian": "atunci îi ziceau: „Ei bine, zi: Șibolet.” Și el zicea: „Sibolet”",
+        "webbe": "then they said to him, “Now say ‘Shibboleth;’” and he said “Sibboleth”; for he couldn’t manage to pronounce it correctly, then they seized him and killed him at the fords of the Jordan. At that time, forty-two thousand of Ephraim fell.",
+        "btf": "Atunci ei îi ziceau: Spune acum Șibolet, iar el zicea: Sibolet, pentru că nu putea să pronunțe bine. Atunci îl luau și îl înjunghiau la trecerile Iordanului; și au căzut atunci patruzeci și două de mii dintre efraimiți."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JDG.16:30",
-      "message": "ratio=0.179"
+      "message": "ratio=0.179",
+      "evidence": {
+        "romanian": "Samson a zis: „Să mor împreună cu filistenii!”",
+        "webbe": "Samson said, “Let me die with the Philistines!” He bowed himself with all his might; and the house fell on the lords, and on all the people who were in it. So the dead that he killed at his death were more than those who he killed in his life.",
+        "btf": "Și Samson a spus: Să mor împreună cu filistenii. Și s-a plecat cu toată puterea lui; și casa a căzut peste domni și peste tot poporul care era în ea. Astfel că morții pe care i-a ucis la moartea sa au fost mai mulți decât aceia pe care îi ucisese în viața sa."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JDG.8:25",
-      "message": "ratio=0.277"
+      "message": "ratio=0.277",
+      "evidence": {
+        "romanian": "Ei au zis: „Ți le vom da cu plăcere.”",
+        "webbe": "They answered, “We will willingly give them.” They spread a garment, and every man threw the earrings of his plunder into it.",
+        "btf": "Iar ei au răspuns: Ți-i vom da de bunăvoie. Și au întins o haină și au aruncat pe ea fiecare cerceii prăzii sale."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JER.2:8",
-      "message": "ratio=0.191"
+      "message": "ratio=0.191",
+      "evidence": {
+        "romanian": "Preoții n-au întrebat: „Unde este DOMNUL?”",
+        "webbe": "The priests didn’t say, ‘Where is the LORD?’ and those who handle the law didn’t know me. The rulers also transgressed against me, and the prophets prophesied by Baal and followed things that do not profit.",
+        "btf": "Preoții nu au spus: Unde este DOMNUL? Și cei care mânuiau legea nu m-au cunoscut; păstorii de asemenea au încălcat legea împotriva mea și profeții au profețit prin Baal și au umblat după lucruri care nu sunt de folos."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JER.23:36",
-      "message": "ratio=0.246"
+      "message": "ratio=0.246",
+      "evidence": {
+        "romanian": "Dar să nu mai ziceți: „O amenințare a DOMNULUI”",
+        "webbe": "You will mention the message from the LORD no more, for every man’s own word has become his message; for you have perverted the words of the living God, of the LORD of Armies, our God.",
+        "btf": "Și povara DOMNULUI să nu o mai amintiți; căci cuvântul fiecărui om va fi povara lui, pentru că voi ați pervertit cuvintele Dumnezeului cel viu, ale DOMNULUI oștirilor Dumnezeul nostru."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JER.4:2",
-      "message": "ratio=0.200"
+      "message": "ratio=0.200",
+      "evidence": {
+        "romanian": "Dacă vei jura: „Viu este DOMNUL!”",
+        "webbe": "and you will swear, ‘As the LORD lives,’ in truth, in justice, and in righteousness. The nations will bless themselves in him, and they will glory in him.”",
+        "btf": "Și vei jura: DOMNUL trăiește, în adevăr, în judecată și în dreptate; și națiunile se vor binecuvânta în el și în el se vor făli."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JOB.37:6",
-      "message": "ratio=0.273"
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "JOB.38:37",
-      "message": "Cine poate să numere norii cu înțelepciune și să verse burdufurile cerurilor,"
+      "message": "ratio=0.273",
+      "evidence": {
+        "romanian": "El zice zăpezii: „Cazi pe pământ!”",
+        "webbe": "For he says to the snow, ‘Fall on the earth,’ likewise to the shower of rain, and to the showers of his mighty rain.",
+        "btf": "Pentru că el spune zăpezii: Fii pe pământ; la fel ploii mărunte și ploii mari a tăriei sale."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "JOL.1:15",
-      "message": "ratio=0.089"
+      "message": "ratio=0.089",
+      "evidence": {
+        "romanian": "„Vai! ce zi!”",
+        "webbe": "Alas for the day! For the day of the LORD is at hand, and it will come as destruction from the Almighty.",
+        "btf": "Vai de această zi! pentru că ziua DOMNULUI este aproape şi va veni ca o nimicire de la cel Atotputernic."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "MAL.1:13",
-      "message": "ratio=0.110"
+      "message": "ratio=0.110",
+      "evidence": {
+        "romanian": "Voi ziceți: „Ce mai osteneală!”",
+        "webbe": "You say also, ‘Behold, what a weariness it is!’ And you have sniffed at it”, says the LORD of Armies; “and you have brought that which was taken by violence, the lame, and the sick; thus you bring the offering. Should I accept this at your hand?” says the LORD.",
+        "btf": "Aţi spus de asemenea: Iată, ce obositor este! Şi aţi suflat dispreţuitor asupra ei, spune DOMNUL oştirilor; şi aţi adus ceea ce a fost sfâşiat şi pe cea şchioapă şi pe cea bolnavă; astfel aţi adus ofrandă, să o accept din mâna voastră? spune DOMNUL."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "MAL.2:14",
-      "message": "ratio=0.143"
+      "message": "ratio=0.143",
+      "evidence": {
+        "romanian": "Și dacă întrebați: „Pentru ce?”",
+        "webbe": "Yet you say, ‘Why?’ Because the LORD has been witness between you and the wife of your youth, against whom you have dealt treacherously, though she is your companion and the wife of your covenant.",
+        "btf": "Totuşi spuneţi: Pentru ce? Pentru că DOMNUL a fost martor între tine şi soţia tinereţii tale, împotriva căreia te-ai purtat cu perfidie, totuşi ea este tovarăşa ta şi soţia legământului tău."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "MAN.1:8",
-      "message": "ratio=0.226"
+      "message": "ratio=0.226",
+      "evidence": {
+        "romanian": "Tu, Doamne, după mulțimea bunătății Tale, ai făgăduit pocăință și iertare celor ce au greșit Ție.",
+        "webbe": "You, O Lord, according to your great goodness have promised repentance and forgiveness to those who have sinned against you. Of your infinite mercies, you have appointed repentance to sinners, that they may be saved. You therefore, O Lord, who are the God of the just, have not appointed repentance to the just, to Abraham, Isaac, and Jacob, which have not sinned against you, but you have appointed repentance to me, a sinner.",
+        "btf": null
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "MAN.1:13",
-      "message": "ratio=0.232"
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "MIC.7:2",
-      "message": "S-a dus omul de bine din țară și nu mai este niciun om cinstit printre oameni; toți stau la pândă ca să verse sânge, fiecare întinde o cursă fratelui său."
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "PRO.1:16",
-      "message": "Căci picioarele lor aleargă la rău și se grăbesc să verse sânge."
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "PRO.12:6",
-      "message": "Cuvintele celor răi sunt niște curse ca să verse sânge, dar gura celor fără prihană îi izbăvește. –"
+      "message": "ratio=0.232",
+      "evidence": {
+        "romanian": "Și acum îmi plec genunchii inimii mele, rugând bunătatea Ta.",
+        "webbe": "but, I humbly ask you, forgive me, O Lord, forgive me, and please don’t destroy me with my iniquities. Don’t be angry with me forever, by reserving evil for me. Don’t condemn me into the lower parts of the earth. For you, O Lord, are the God of those who repent.",
+        "btf": null
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "PRO.20:14",
-      "message": "ratio=0.084"
+      "message": "ratio=0.084",
+      "evidence": {
+        "romanian": "„Rău! Rău!”",
+        "webbe": "“It’s no good, it’s no good,” says the buyer; but when he is gone his way, then he boasts.",
+        "btf": "Rău! Rău! spune cumpărătorul, dar după ce pleacă pe calea sa, atunci se fălește."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "PRO.24:12",
-      "message": "ratio=0.130"
-    },
-    {
-      "severity": "error",
-      "code": "LANGUAGE",
-      "reference": "PRO.5:16",
-      "message": "Ce, vrei să ți se verse izvoarele afară? Și să-ți curgă râurile pe piețele de obște?"
+      "message": "ratio=0.130",
+      "evidence": {
+        "romanian": "Dacă zici: „Ah! N-am știut!”",
+        "webbe": "If you say, “Behold, we didn’t know this,” doesn’t he who weighs the hearts consider it? He who keeps your soul, doesn’t he know it? Shall he not give to every man according to his work?",
+        "btf": "Dacă spui: Iată, noi nu am știut aceasta; nu ia aminte el, cel ce cumpănește inimile? Și cel ce îți păzește sufletul, nu știe aceasta? Și nu va întoarce fiecărui om conform faptelor sale?"
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "PSA.102:1",
-      "message": "ratio=4.024"
+      "message": "ratio=4.024",
+      "evidence": {
+        "romanian": "(O rugăciune a unui nenorocit, când este doborât de întristare și își varsă plângerea înaintea DOMNULUI.) DOAMNE, ascultă-mi rugăciunea și s-ajungă strigătul meu până la Tine!",
+        "webbe": "Hear my prayer, LORD! Let my cry come to you.",
+        "btf": "Ascultă-mi rugăciunea, DOAMNE, și să ajungă strigătul meu până la tine."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "PSA.18:1",
-      "message": "ratio=8.741"
+      "message": "ratio=8.741",
+      "evidence": {
+        "romanian": "(Către mai marele cântăreților. Un psalm al lui David, robul DOMNULUI. El a spus DOMNULUI cuvintele cântării acesteia când l-a scăpat DOMNUL din mâna tuturor vrăjmașilor săi și din mâna lui Saul. El a zis: ) „Te iubesc din inimă, DOAMNE, tăria mea!”",
+        "webbe": "I love you, LORD, my strength.",
+        "btf": "Te voi iubi, DOAMNE, tăria mea."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "PSA.57:1",
-      "message": "ratio=0.264"
+      "message": "ratio=0.264",
+      "evidence": {
+        "romanian": "(Către mai marele cântăreților. „Nu nimici.”",
+        "webbe": "Be merciful to me, God, be merciful to me, for my soul takes refuge in you. Yes, in the shadow of your wings, I will take refuge, until disaster has passed.",
+        "btf": "Fii milostiv cu mine, Dumnezeule, fii milostiv cu mine, căci sufletul meu se încrede în tine, da, la umbra aripilor tale îmi voi face locul de scăpare, până când vor trece aceste nenorociri."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "PSA.61:1",
-      "message": "ratio=4.229"
+      "message": "ratio=4.229",
+      "evidence": {
+        "romanian": "(Către mai marele cântăreților. De cântat pe instrumente cu corzi. Un psalm al lui David.) Ascultă, Dumnezeule, strigătele mele, ia aminte la rugăciunea mea!",
+        "webbe": "Hear my cry, God. Listen to my prayer.",
+        "btf": "Ascultă strigătul meu, Dumnezeule; dă atenție la rugăciunea mea."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "ZEC.11:10",
-      "message": "ratio=0.252"
+      "message": "ratio=0.252",
+      "evidence": {
+        "romanian": "Mi-am luat toiagul „Îndurare”",
+        "webbe": "I took my staff Favour and cut it apart, that I might break my covenant that I had made with all the peoples.",
+        "btf": "Şi mi-am luat toiagul, Frumuseţe, şi l-am tăiat în două, ca să rup legământul meu pe care l-am făcut cu toate popoarele."
+      }
     },
     {
       "severity": "error",
       "code": "LENGTH",
       "reference": "ZEC.5:8",
-      "message": "ratio=0.262"
+      "message": "ratio=0.262",
+      "evidence": {
+        "romanian": "El a zis: „Aceasta este nelegiuirea!”",
+        "webbe": "He said, “This is Wickedness;” and he threw her down into the middle of the ephah basket; and he threw the lead weight on its mouth.",
+        "btf": "Şi el a spus: Aceasta este stricăciune. Şi a aruncat-o în mijlocul efei; şi a aruncat greutatea de plumb peste gura ei."
+      }
     },
     {
-      "severity": "error",
-      "code": "WLC_BOOK_TOTAL",
+      "severity": "warning",
+      "code": "WLC_VERSIFICATION_MAP_REQUIRED",
       "reference": "1CH",
-      "message": "candidate=942, WLC=943"
+      "message": "candidate=942, WLC=943; document chapter/verse mapping before promotion"
     },
     {
-      "severity": "error",
-      "code": "WLC_BOOK_TOTAL",
+      "severity": "warning",
+      "code": "WLC_VERSIFICATION_MAP_REQUIRED",
       "reference": "1KI",
-      "message": "candidate=816, WLC=817"
+      "message": "candidate=816, WLC=817; document chapter/verse mapping before promotion"
     },
     {
-      "severity": "error",
-      "code": "WLC_BOOK_TOTAL",
+      "severity": "warning",
+      "code": "WLC_VERSIFICATION_MAP_REQUIRED",
       "reference": "1SA",
-      "message": "candidate=810, WLC=811"
+      "message": "candidate=810, WLC=811; document chapter/verse mapping before promotion"
     },
     {
-      "severity": "error",
-      "code": "WLC_BOOK_TOTAL",
+      "severity": "warning",
+      "code": "WLC_VERSIFICATION_MAP_REQUIRED",
       "reference": "ISA",
-      "message": "candidate=1292, WLC=1291"
+      "message": "candidate=1292, WLC=1291; document chapter/verse mapping before promotion"
     },
     {
-      "severity": "error",
-      "code": "WLC_BOOK_TOTAL",
+      "severity": "warning",
+      "code": "WLC_VERSIFICATION_MAP_REQUIRED",
       "reference": "NEH",
-      "message": "candidate=406, WLC=405"
+      "message": "candidate=406, WLC=405; document chapter/verse mapping before promotion"
     },
     {
-      "severity": "error",
-      "code": "WLC_BOOK_TOTAL",
+      "severity": "warning",
+      "code": "WLC_VERSIFICATION_MAP_REQUIRED",
       "reference": "PSA",
-      "message": "candidate=2461, WLC=2527"
+      "message": "candidate=2461, WLC=2527; document chapter/verse mapping before promotion"
     }
   ]
 }

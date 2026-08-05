@@ -1,7 +1,8 @@
-# OT Repair 5 — deterministic audit v2
+# OT Repair 5 — deterministic audit v3
 
 - Critice: **0**
-- Erori: **52**
+- Erori: **38**
+- Avertismente de mapare: **6**
 
 ## Cărți
 - `1CH` — 29 cap. / 942 vers.; WEB lipsă 0; mapări WLC 15; limbă 0; numere 0; lungime 0; BTF medie 0.7128
@@ -14,25 +15,25 @@
 - `DAN` — 12 cap. / 357 vers.; WEB lipsă 0; mapări WLC 4; limbă 0; numere 0; lungime 0; BTF medie 0.5135
 - `ECC` — 12 cap. / 222 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.5642
 - `EST` — 10 cap. / 167 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 1; BTF medie 0.5171
-- `EZK` — 48 cap. / 1273 vers.; WEB lipsă 0; mapări WLC 5; limbă 2; numere 0; lungime 4; BTF medie 0.5656
+- `EZK` — 48 cap. / 1273 vers.; WEB lipsă 0; mapări WLC 5; limbă 0; numere 0; lungime 4; BTF medie 0.5656
 - `EZR` — 10 cap. / 280 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.6411
 - `HAB` — 3 cap. / 56 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5569
 - `HAG` — 2 cap. / 38 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.648
 - `HOS` — 14 cap. / 197 vers.; WEB lipsă 0; mapări WLC 4; limbă 0; numere 0; lungime 0; BTF medie 0.6134
-- `ISA` — 66 cap. / 1292 vers.; WEB lipsă 0; mapări WLC 2; limbă 1; numere 0; lungime 2; BTF medie 0.5787
+- `ISA` — 66 cap. / 1292 vers.; WEB lipsă 0; mapări WLC 2; limbă 0; numere 0; lungime 2; BTF medie 0.5787
 - `JDG` — 21 cap. / 618 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 4; BTF medie 0.6191
 - `JER` — 52 cap. / 1364 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 3; BTF medie 0.5656
-- `JOB` — 42 cap. / 1070 vers.; WEB lipsă 0; mapări WLC 8; limbă 1; numere 0; lungime 1; BTF medie 0.5605
+- `JOB` — 42 cap. / 1070 vers.; WEB lipsă 0; mapări WLC 8; limbă 0; numere 0; lungime 1; BTF medie 0.5605
 - `JOL` — 3 cap. / 73 vers.; WEB lipsă 0; mapări WLC 21; limbă 0; numere 0; lungime 1; BTF medie 0.594
 - `JON` — 4 cap. / 48 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.6031
 - `LAM` — 5 cap. / 154 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5878
 - `MAL` — 4 cap. / 55 vers.; WEB lipsă 0; mapări WLC 6; limbă 0; numere 0; lungime 2; BTF medie 0.5064
 - `MAN` — 1 cap. / 15 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 2; BTF medie None
-- `MIC` — 7 cap. / 105 vers.; WEB lipsă 0; mapări WLC 1; limbă 1; numere 0; lungime 0; BTF medie 0.5902
+- `MIC` — 7 cap. / 105 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.5902
 - `NAM` — 3 cap. / 47 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.5683
 - `NEH` — 13 cap. / 406 vers.; WEB lipsă 0; mapări WLC 8; limbă 0; numere 0; lungime 0; BTF medie 0.652
 - `OBA` — 1 cap. / 21 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5651
-- `PRO` — 31 cap. / 915 vers.; WEB lipsă 0; mapări WLC 0; limbă 3; numere 0; lungime 2; BTF medie 0.6135
+- `PRO` — 31 cap. / 915 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 2; BTF medie 0.6135
 - `PS2` — 1 cap. / 7 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie None
 - `PSA` — 150 cap. / 2461 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 4; BTF medie 0.6343
 - `RUT` — 4 cap. / 85 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5929
@@ -40,56 +41,160 @@
 - `ZEC` — 14 cap. / 211 vers.; WEB lipsă 0; mapări WLC 4; limbă 0; numere 0; lungime 2; BTF medie 0.5903
 - `ZEP` — 3 cap. / 53 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5585
 
-## Probleme
+## Probleme și mapări
 - **ERROR** `LENGTH` — `1KI.13:12`: ratio=0.265
+  - ROMANIAN: el le-a zis: „Pe ce drum a plecat?”
+  - WEBBE: Their father said to them, “Which way did he go?” Now his sons had seen which way the man of God went, who came from Judah.
+  - BTF: Şi tatăl lor le-a spus: Pe ce cale a mers el? Şi fiii săi văzuseră pe ce cale mersese omul lui Dumnezeu, care venise din Iuda.
 - **ERROR** `LENGTH` — `1KI.19:11`: ratio=0.189
+  - ROMANIAN: DOMNUL i-a zis: „Ieși și stai pe munte înaintea DOMNULUI!”
+  - WEBBE: He said, “Go out and stand on the mountain before the LORD.” Behold, the LORD passed by, and a great and strong wind tore the mountains and broke in pieces the rocks before the LORD; but the LORD was not in the wind. After the wind there was an earthquake; but the LORD was not in the earthquake.
+  - BTF: Iar el a spus: Ieşi şi stai în picioare pe munte înaintea DOMNULUI. Şi, iată, DOMNUL a trecut şi un vânt mare şi puternic a despicat munţii şi a sfărâmat în bucăţi stâncile înaintea DOMNULUI, dar DOMNUL nu era în vânt; şi după vânt, un cutremur, dar DOMNUL nu era în cutremur.
 - **ERROR** `LENGTH` — `1KI.22:37`: ratio=0.278
+  - ROMANIAN: „căci a murit împăratul.”
+  - WEBBE: So the king died, and was brought to Samaria; and they buried the king in Samaria.
+  - BTF: Astfel împăratul a murit şi a fost adus la Samaria; şi l-au îngropat pe împărat în Samaria.
 - **ERROR** `LENGTH` — `1SA.20:7`: ratio=0.180
+  - ROMANIAN: Și dacă va zice: „Bine!”
+  - WEBBE: If he says, ‘It is well,’ your servant shall have peace; but if he is angry, then know that evil is determined by him.
+  - BTF: Dacă el spune astfel: Este bine; servitorul tău va avea pace; dar dacă se va înfuria, atunci fii sigur că răul este hotărât de el.
 - **ERROR** `LENGTH` — `1SA.28:23`: ratio=0.233
+  - ROMANIAN: Dar el n-a vrut, și a zis: „Nu mănânc nimic!”
+  - WEBBE: But he refused, and said, “I will not eat.” But his servants, together with the woman, constrained him; and he listened to their voice. So he arose from the earth and sat on the bed.
+  - BTF: Dar el a refuzat și a spus: Nu voi mânca. Dar servitorii săi, împreună cu femeia, l-au constrâns; și el a dat ascultare vocii lor. Astfel s-a ridicat de la pământ și a șezut pe pat.
 - **ERROR** `LENGTH` — `2KI.10:14`: ratio=0.200
+  - ROMANIAN: Iehu a zis: „Prindeți-i de vii.”
+  - WEBBE: He said, “Take them alive!” They took them alive, and killed them at the pit of the shearing house, even forty-two men. He didn’t leave any of them.
+  - BTF: Și el a spus: Prindeți-i vii. Și i-au prins vii și i-au ucis la groapa tunzătorii oilor, patruzeci și doi de oameni; nu au lăsat pe niciunul dintre ei.
 - **ERROR** `LENGTH` — `2KI.5:23`: ratio=0.227
+  - ROMANIAN: Naaman a zis: „Fă-mi plăcerea și ia doi talanți.”
+  - WEBBE: Naaman said, “Be pleased to take two talents.” He urged him, and bound two talents of silver in two bags, with two changes of clothing, and laid them on two of his servants; and they carried them before him.
+  - BTF: Și Naaman a spus: Binevoiește și ia doi talanți. Și l-a constrâns și a legat doi talanți de argint în doi saci, cu două schimburi de haine și le-a pus pe doi dintre servitorii săi; și ei le-au purtat înaintea lui.
 - **ERROR** `LENGTH` — `2KI.9:21`: ratio=0.122
+  - ROMANIAN: Atunci Ioram a zis: „Înhamă!”
+  - WEBBE: Joram said, “Get ready!” They got his chariot ready. Then Joram king of Israel and Ahaziah king of Judah went out, each in his chariot; and they went out to meet Jehu, and found him on Naboth the Jezreelite’s land.
+  - BTF: Și Ioram a spus: Pregătiți! Și carul său a fost pregătit. Și Ioram, împăratul lui Israel, și Ahazia, împăratul lui Iuda, au ieșit fiecare în carul său și au mers să întâmpine pe Iehu și l-au întâlnit la câmpul lui Nabot izreelitul.
 - **ERROR** `LENGTH` — `2KI.9:33`: ratio=0.161
+  - ROMANIAN: El a zis: „Aruncați-o jos!”
+  - WEBBE: He said, “Throw her down!” So they threw her down; and some of her blood was sprinkled on the wall, and on the horses. Then he trampled her under foot.
+  - BTF: Și el a spus: Aruncați-o jos. Astfel, ei au aruncat-o jos; și din sângele ei a fost stropit pe zid și pe cai; și el a călcat-o în picioare.
 - **ERROR** `LENGTH` — `2SA.18:14`: ratio=0.215
+  - ROMANIAN: Ioab a zis: „Nu voi zăbovi atâta cu tine!”
+  - WEBBE: Then Joab said, “I’m not going to wait like this with you.” He took three darts in his hand and thrust them through Absalom’s heart while he was still alive in the middle of the oak.
+  - BTF: Atunci a spus Ioab: Nu o să stau astfel cu tine. Și a luat trei săgeți în mână și le-a înfipt în inima lui Absalom, în timp ce el era încă viu în mijlocul stejarului.
 - **ERROR** `LENGTH` — `EST.6:4`: ratio=0.227
-- **ERROR** `LANGUAGE` — `EZK.22:6`: Iată că în tine, toți voievozii lui Israel își întrebuințează puterea ca să verse sânge.
-- **ERROR** `LANGUAGE` — `EZK.22:9`: În tine sunt bârfitori, ca să verse sânge; în tine se mănâncă jertfe idolești pe munți; în mijlocul tău se fac desfrânări.
+  - ROMANIAN: Atunci împăratul a zis: „Cine este în curte?”
+  - WEBBE: The king said, “Who is in the court?” Now Haman had come into the outer court of the king’s house, to speak to the king about hanging Mordecai on the gallows that he had prepared for him.
+  - BTF: Şi împăratul a spus: Cine este în curte? Iar Haman intrase în curtea dinafară a casei împăratului, pentru a vorbi cu împăratul să îl spânzure pe Mardoheu de spânzurătoarea pregătită pentru el.
 - **ERROR** `LENGTH` — `EZK.3:18`: ratio=0.187
+  - ROMANIAN: Când voi zice celui rău: „Vei muri negreșit!”
+  - WEBBE: When I tell the wicked, ‘You will surely die;’ and you give him no warning, nor speak to warn the wicked from his wicked way, to save his life, that wicked man will die in his iniquity; but I will require his blood at your hand.
+  - BTF: Când spun celui stricat: Vei muri negreșit; și tu nu îl avertizezi, nici nu vorbești ca să îl avertizezi pe cel stricat de calea lui stricată, pentru a-și salva viața; acel om stricat va muri în nelegiuirea lui; dar sângele lui îl voi cere din mâna ta.
 - **ERROR** `LENGTH` — `EZK.33:8`: ratio=0.221
+  - ROMANIAN: Când zic celui rău: „Răule, vei muri negreșit!”
+  - WEBBE: When I tell the wicked, ‘O wicked man, you will surely die,’ and you don’t speak to warn the wicked from his way, that wicked man will die in his iniquity, but I will require his blood at your hand.
+  - BTF: Când spun celui stricat: Tu cel stricat, vei muri negreșit; dacă nu vorbești să îl avertizezi pe cel stricat de calea lui, acel stricat va muri în nelegiuirea lui; dar sângele lui îl voi cere din mâna ta.
 - **ERROR** `LENGTH` — `EZK.36:4`: ratio=0.216
+  - ROMANIAN: „de aceea, munți ai lui Israel, ascultați cuvântul DOMNULUI Dumnezeu!”
+  - WEBBE: therefore, you mountains of Israel, hear the word of the Lord GOD: The Lord GOD says to the mountains and to the hills, to the watercourses and to the valleys, to the desolate wastes and to the cities that are forsaken, which have become a prey and derision to the residue of the nations that are all around;
+  - BTF: De aceea munți ai lui Israel, ascultați cuvântul Domnului DUMNEZEU; Astfel spune Domnul DUMNEZEU munților și dealurilor, râurilor și văilor, risipirilor pustiite și cetăților părăsite, care au devenit o pradă și derâdere pentru rămășița păgânilor de jur împrejur;
 - **ERROR** `LENGTH` — `EZK.8:5`: ratio=0.273
+  - ROMANIAN: El mi-a zis: „Fiul omului, ia ridică ochii spre miazănoapte!”
+  - WEBBE: Then he said to me, “Son of man, lift up your eyes now the way towards the north.” So I lifted up my eyes the way towards the north, and saw, northward of the gate of the altar this image of jealousy in the entry.
+  - BTF: Atunci el mi-a spus: Fiu al omului, ridică-ți acum ochii spre calea dinspre nord. Astfel mi-am ridicat ochii spre calea dinspre nord și iată, spre nord la poarta altarului acest chip al geloziei la intrare.
 - **ERROR** `LENGTH` — `ISA.57:10`: ratio=0.243
-- **ERROR** `LANGUAGE` — `ISA.59:7`: Picioarele lor aleargă spre rău și se grăbesc să verse sânge nevinovat; gândurile lor sunt gânduri nelegiuite, prăpădul și nimicirea sunt pe drumul lor.
+  - ROMANIAN: Obosești mergând, și nu zici: „Încetez!”
+  - WEBBE: You were wearied with the length of your ways; yet you didn’t say, ‘It is in vain.’ You found a reviving of your strength; therefore you weren’t faint.
+  - BTF: Ai obosit de măreția căilor tale; totuşi nu ai spus: Nu este speranţă; ai găsit viaţa mâinii tale; de aceea nu te-ai mâhnit.
 - **ERROR** `LENGTH` — `ISA.8:20`: ratio=0.193
+  - ROMANIAN: „La Lege și la mărturie!”
+  - WEBBE: Turn to the law and to the covenant! If they don’t speak according to this word, surely there is no morning for them.
+  - BTF: La lege şi la mărturie; dacă ei nu vorbesc conform acestui cuvânt, este pentru că nu au lumină în ei.
 - **ERROR** `LENGTH` — `JDG.11:38`: ratio=0.144
+  - ROMANIAN: El a răspuns: „Du-te!”
+  - WEBBE: He said, “Go.” He sent her away for two months; and she departed, she and her companions, and mourned her virginity on the mountains.
+  - BTF: Iar el a spus: Du-te. Și a trimis-o pentru două luni, și ea a mers cu însoțitoarele ei și și-a plâns fecioria pe munți.
 - **ERROR** `LENGTH` — `JDG.12:6`: ratio=0.248
+  - ROMANIAN: atunci îi ziceau: „Ei bine, zi: Șibolet.” Și el zicea: „Sibolet”
+  - WEBBE: then they said to him, “Now say ‘Shibboleth;’” and he said “Sibboleth”; for he couldn’t manage to pronounce it correctly, then they seized him and killed him at the fords of the Jordan. At that time, forty-two thousand of Ephraim fell.
+  - BTF: Atunci ei îi ziceau: Spune acum Șibolet, iar el zicea: Sibolet, pentru că nu putea să pronunțe bine. Atunci îl luau și îl înjunghiau la trecerile Iordanului; și au căzut atunci patruzeci și două de mii dintre efraimiți.
 - **ERROR** `LENGTH` — `JDG.16:30`: ratio=0.179
+  - ROMANIAN: Samson a zis: „Să mor împreună cu filistenii!”
+  - WEBBE: Samson said, “Let me die with the Philistines!” He bowed himself with all his might; and the house fell on the lords, and on all the people who were in it. So the dead that he killed at his death were more than those who he killed in his life.
+  - BTF: Și Samson a spus: Să mor împreună cu filistenii. Și s-a plecat cu toată puterea lui; și casa a căzut peste domni și peste tot poporul care era în ea. Astfel că morții pe care i-a ucis la moartea sa au fost mai mulți decât aceia pe care îi ucisese în viața sa.
 - **ERROR** `LENGTH` — `JDG.8:25`: ratio=0.277
+  - ROMANIAN: Ei au zis: „Ți le vom da cu plăcere.”
+  - WEBBE: They answered, “We will willingly give them.” They spread a garment, and every man threw the earrings of his plunder into it.
+  - BTF: Iar ei au răspuns: Ți-i vom da de bunăvoie. Și au întins o haină și au aruncat pe ea fiecare cerceii prăzii sale.
 - **ERROR** `LENGTH` — `JER.2:8`: ratio=0.191
+  - ROMANIAN: Preoții n-au întrebat: „Unde este DOMNUL?”
+  - WEBBE: The priests didn’t say, ‘Where is the LORD?’ and those who handle the law didn’t know me. The rulers also transgressed against me, and the prophets prophesied by Baal and followed things that do not profit.
+  - BTF: Preoții nu au spus: Unde este DOMNUL? Și cei care mânuiau legea nu m-au cunoscut; păstorii de asemenea au încălcat legea împotriva mea și profeții au profețit prin Baal și au umblat după lucruri care nu sunt de folos.
 - **ERROR** `LENGTH` — `JER.23:36`: ratio=0.246
+  - ROMANIAN: Dar să nu mai ziceți: „O amenințare a DOMNULUI”
+  - WEBBE: You will mention the message from the LORD no more, for every man’s own word has become his message; for you have perverted the words of the living God, of the LORD of Armies, our God.
+  - BTF: Și povara DOMNULUI să nu o mai amintiți; căci cuvântul fiecărui om va fi povara lui, pentru că voi ați pervertit cuvintele Dumnezeului cel viu, ale DOMNULUI oștirilor Dumnezeul nostru.
 - **ERROR** `LENGTH` — `JER.4:2`: ratio=0.200
+  - ROMANIAN: Dacă vei jura: „Viu este DOMNUL!”
+  - WEBBE: and you will swear, ‘As the LORD lives,’ in truth, in justice, and in righteousness. The nations will bless themselves in him, and they will glory in him.”
+  - BTF: Și vei jura: DOMNUL trăiește, în adevăr, în judecată și în dreptate; și națiunile se vor binecuvânta în el și în el se vor făli.
 - **ERROR** `LENGTH` — `JOB.37:6`: ratio=0.273
-- **ERROR** `LANGUAGE` — `JOB.38:37`: Cine poate să numere norii cu înțelepciune și să verse burdufurile cerurilor,
+  - ROMANIAN: El zice zăpezii: „Cazi pe pământ!”
+  - WEBBE: For he says to the snow, ‘Fall on the earth,’ likewise to the shower of rain, and to the showers of his mighty rain.
+  - BTF: Pentru că el spune zăpezii: Fii pe pământ; la fel ploii mărunte și ploii mari a tăriei sale.
 - **ERROR** `LENGTH` — `JOL.1:15`: ratio=0.089
+  - ROMANIAN: „Vai! ce zi!”
+  - WEBBE: Alas for the day! For the day of the LORD is at hand, and it will come as destruction from the Almighty.
+  - BTF: Vai de această zi! pentru că ziua DOMNULUI este aproape şi va veni ca o nimicire de la cel Atotputernic.
 - **ERROR** `LENGTH` — `MAL.1:13`: ratio=0.110
+  - ROMANIAN: Voi ziceți: „Ce mai osteneală!”
+  - WEBBE: You say also, ‘Behold, what a weariness it is!’ And you have sniffed at it”, says the LORD of Armies; “and you have brought that which was taken by violence, the lame, and the sick; thus you bring the offering. Should I accept this at your hand?” says the LORD.
+  - BTF: Aţi spus de asemenea: Iată, ce obositor este! Şi aţi suflat dispreţuitor asupra ei, spune DOMNUL oştirilor; şi aţi adus ceea ce a fost sfâşiat şi pe cea şchioapă şi pe cea bolnavă; astfel aţi adus ofrandă, să o accept din mâna voastră? spune DOMNUL.
 - **ERROR** `LENGTH` — `MAL.2:14`: ratio=0.143
+  - ROMANIAN: Și dacă întrebați: „Pentru ce?”
+  - WEBBE: Yet you say, ‘Why?’ Because the LORD has been witness between you and the wife of your youth, against whom you have dealt treacherously, though she is your companion and the wife of your covenant.
+  - BTF: Totuşi spuneţi: Pentru ce? Pentru că DOMNUL a fost martor între tine şi soţia tinereţii tale, împotriva căreia te-ai purtat cu perfidie, totuşi ea este tovarăşa ta şi soţia legământului tău.
 - **ERROR** `LENGTH` — `MAN.1:8`: ratio=0.226
+  - ROMANIAN: Tu, Doamne, după mulțimea bunătății Tale, ai făgăduit pocăință și iertare celor ce au greșit Ție.
+  - WEBBE: You, O Lord, according to your great goodness have promised repentance and forgiveness to those who have sinned against you. Of your infinite mercies, you have appointed repentance to sinners, that they may be saved. You therefore, O Lord, who are the God of the just, have not appointed repentance to the just, to Abraham, Isaac, and Jacob, which have not sinned against you, but you have appointed repentance to me, a sinner.
 - **ERROR** `LENGTH` — `MAN.1:13`: ratio=0.232
-- **ERROR** `LANGUAGE` — `MIC.7:2`: S-a dus omul de bine din țară și nu mai este niciun om cinstit printre oameni; toți stau la pândă ca să verse sânge, fiecare întinde o cursă fratelui său.
-- **ERROR** `LANGUAGE` — `PRO.1:16`: Căci picioarele lor aleargă la rău și se grăbesc să verse sânge.
-- **ERROR** `LANGUAGE` — `PRO.12:6`: Cuvintele celor răi sunt niște curse ca să verse sânge, dar gura celor fără prihană îi izbăvește. –
+  - ROMANIAN: Și acum îmi plec genunchii inimii mele, rugând bunătatea Ta.
+  - WEBBE: but, I humbly ask you, forgive me, O Lord, forgive me, and please don’t destroy me with my iniquities. Don’t be angry with me forever, by reserving evil for me. Don’t condemn me into the lower parts of the earth. For you, O Lord, are the God of those who repent.
 - **ERROR** `LENGTH` — `PRO.20:14`: ratio=0.084
+  - ROMANIAN: „Rău! Rău!”
+  - WEBBE: “It’s no good, it’s no good,” says the buyer; but when he is gone his way, then he boasts.
+  - BTF: Rău! Rău! spune cumpărătorul, dar după ce pleacă pe calea sa, atunci se fălește.
 - **ERROR** `LENGTH` — `PRO.24:12`: ratio=0.130
-- **ERROR** `LANGUAGE` — `PRO.5:16`: Ce, vrei să ți se verse izvoarele afară? Și să-ți curgă râurile pe piețele de obște?
+  - ROMANIAN: Dacă zici: „Ah! N-am știut!”
+  - WEBBE: If you say, “Behold, we didn’t know this,” doesn’t he who weighs the hearts consider it? He who keeps your soul, doesn’t he know it? Shall he not give to every man according to his work?
+  - BTF: Dacă spui: Iată, noi nu am știut aceasta; nu ia aminte el, cel ce cumpănește inimile? Și cel ce îți păzește sufletul, nu știe aceasta? Și nu va întoarce fiecărui om conform faptelor sale?
 - **ERROR** `LENGTH` — `PSA.102:1`: ratio=4.024
+  - ROMANIAN: (O rugăciune a unui nenorocit, când este doborât de întristare și își varsă plângerea înaintea DOMNULUI.) DOAMNE, ascultă-mi rugăciunea și s-ajungă strigătul meu până la Tine!
+  - WEBBE: Hear my prayer, LORD! Let my cry come to you.
+  - BTF: Ascultă-mi rugăciunea, DOAMNE, și să ajungă strigătul meu până la tine.
 - **ERROR** `LENGTH` — `PSA.18:1`: ratio=8.741
+  - ROMANIAN: (Către mai marele cântăreților. Un psalm al lui David, robul DOMNULUI. El a spus DOMNULUI cuvintele cântării acesteia când l-a scăpat DOMNUL din mâna tuturor vrăjmașilor săi și din mâna lui Saul. El a zis: ) „Te iubesc din inimă, DOAMNE, tăria mea!”
+  - WEBBE: I love you, LORD, my strength.
+  - BTF: Te voi iubi, DOAMNE, tăria mea.
 - **ERROR** `LENGTH` — `PSA.57:1`: ratio=0.264
+  - ROMANIAN: (Către mai marele cântăreților. „Nu nimici.”
+  - WEBBE: Be merciful to me, God, be merciful to me, for my soul takes refuge in you. Yes, in the shadow of your wings, I will take refuge, until disaster has passed.
+  - BTF: Fii milostiv cu mine, Dumnezeule, fii milostiv cu mine, căci sufletul meu se încrede în tine, da, la umbra aripilor tale îmi voi face locul de scăpare, până când vor trece aceste nenorociri.
 - **ERROR** `LENGTH` — `PSA.61:1`: ratio=4.229
+  - ROMANIAN: (Către mai marele cântăreților. De cântat pe instrumente cu corzi. Un psalm al lui David.) Ascultă, Dumnezeule, strigătele mele, ia aminte la rugăciunea mea!
+  - WEBBE: Hear my cry, God. Listen to my prayer.
+  - BTF: Ascultă strigătul meu, Dumnezeule; dă atenție la rugăciunea mea.
 - **ERROR** `LENGTH` — `ZEC.11:10`: ratio=0.252
+  - ROMANIAN: Mi-am luat toiagul „Îndurare”
+  - WEBBE: I took my staff Favour and cut it apart, that I might break my covenant that I had made with all the peoples.
+  - BTF: Şi mi-am luat toiagul, Frumuseţe, şi l-am tăiat în două, ca să rup legământul meu pe care l-am făcut cu toate popoarele.
 - **ERROR** `LENGTH` — `ZEC.5:8`: ratio=0.262
-- **ERROR** `WLC_BOOK_TOTAL` — `1CH`: candidate=942, WLC=943
-- **ERROR** `WLC_BOOK_TOTAL` — `1KI`: candidate=816, WLC=817
-- **ERROR** `WLC_BOOK_TOTAL` — `1SA`: candidate=810, WLC=811
-- **ERROR** `WLC_BOOK_TOTAL` — `ISA`: candidate=1292, WLC=1291
-- **ERROR** `WLC_BOOK_TOTAL` — `NEH`: candidate=406, WLC=405
-- **ERROR** `WLC_BOOK_TOTAL` — `PSA`: candidate=2461, WLC=2527
+  - ROMANIAN: El a zis: „Aceasta este nelegiuirea!”
+  - WEBBE: He said, “This is Wickedness;” and he threw her down into the middle of the ephah basket; and he threw the lead weight on its mouth.
+  - BTF: Şi el a spus: Aceasta este stricăciune. Şi a aruncat-o în mijlocul efei; şi a aruncat greutatea de plumb peste gura ei.
+- **WARNING** `WLC_VERSIFICATION_MAP_REQUIRED` — `1CH`: candidate=942, WLC=943; document chapter/verse mapping before promotion
+- **WARNING** `WLC_VERSIFICATION_MAP_REQUIRED` — `1KI`: candidate=816, WLC=817; document chapter/verse mapping before promotion
+- **WARNING** `WLC_VERSIFICATION_MAP_REQUIRED` — `1SA`: candidate=810, WLC=811; document chapter/verse mapping before promotion
+- **WARNING** `WLC_VERSIFICATION_MAP_REQUIRED` — `ISA`: candidate=1292, WLC=1291; document chapter/verse mapping before promotion
+- **WARNING** `WLC_VERSIFICATION_MAP_REQUIRED` — `NEH`: candidate=406, WLC=405; document chapter/verse mapping before promotion
+- **WARNING** `WLC_VERSIFICATION_MAP_REQUIRED` — `PSA`: candidate=2461, WLC=2527; document chapter/verse mapping before promotion
