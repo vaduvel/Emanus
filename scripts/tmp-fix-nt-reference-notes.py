@@ -81,8 +81,8 @@ def main() -> int:
         f"[nt-reference-notes] removed={removed} createdEditorial={created} "
         f"chapters={','.join(touched)}"
     )
-    if removed != 20:
-        raise RuntimeError(f"expected 20 invalid reference notes, found {removed}")
+    if removed != 19:
+        raise RuntimeError(f"expected 19 invalid reference notes, found {removed}")
     return 0
 
 
