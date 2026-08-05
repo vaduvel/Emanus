@@ -92,8 +92,16 @@ def modernize(value: str) -> str:
     value = value.replace("–", "—")
     for old, new in MODERN_WORDS.items():
         value = re.sub(rf"\b{re.escape(old)}\b", new, value)
-    value = re.sub(r"\bIsus\s+Cristos\b", "Isus Hristos", value)
-    value = re.sub(r"\bCristos\s+Isus\b", "Hristos Isus", value)
+    for old, new in (
+        ("Cristos", "Hristos"),
+        ("Iisus", "Isus"),
+        ("Iacob", "Iacov"),
+        ("Rahab", "Rahav"),
+        ("Ghilad", "Galaad"),
+    ):
+        value = value.replace(old, new).replace(old.lower(), new.lower())
+    value = re.sub(r"\bIsus\s+Hristos\b", "Isus Hristos", value)
+    value = re.sub(r"\bHristos\s+Isus\b", "Hristos Isus", value)
     value = value.replace("singurul și unicul Său Fiu", "singurul Său Fiu")
     value = value.replace("singurul şi unicul Său Fiu", "singurul Său Fiu")
     value = normalize_space(value)
