@@ -32,4 +32,8 @@ Motorul păstrează 18 mapări explicite între versificația țintă și WLC. P
 
 Scanarea tuturor celor 6.510 versete a găsit o singură formulare sub pragul lexical: Exodul 37:14. Textul a fost corectat după ebraică la „locașuri pentru drugi”, iar scanarea completă nu mai raportează nicio abatere deterministă.
 
+## Regula verdictului final
+
+Rezultatul poate fi propus pentru integrare numai dacă CI-ul standard rulează pe un commit normal al branchului final, după eliminarea tuturor executorilor temporari. Un run `action_required`, un run fără joburi sau o validare executată numai înaintea commitului final nu este considerată dovadă suficientă.
+
 Instrumentele și workflow-urile temporare au fost eliminate. Ramura păstrează numai datele, snapshotul, documentația, validatorul și testele permanente.
