@@ -1,0 +1,57 @@
+/*
+ * Textul biblic al c\u0103r\u021bii Numeri, capitolul 14.
+ *
+ * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/NUM.14.json.
+ * Capitol cu status "published", auditat verset cu verset din WLC-OSHB,
+ * cu WEBU ca baz\u0103 public-domain. 45 de versete.
+ */
+
+export const NUMERI_TEXT_14: Record<number, readonly string[]> = {
+  14: [
+    "Toat\u0103 adunarea a ridicat glasul \u0219i a strigat; \u0219i poporul a pl\u00e2ns \u00een noaptea aceea.",
+    "To\u021bi fiii lui Israel au c\u00e2rtit \u00eempotriva lui Moise \u0219i a lui Aaron; \u0219i toat\u0103 adunarea le-a zis: \u201eO, de am fi murit \u00een \u021bara Egiptului sau de am fi murit \u00een pustia aceasta!",
+    "De ce ne duce DOMNUL \u00een \u021bara aceasta ca s\u0103 c\u0103dem uci\u015fi de sabie, iar so\u021biile \u0219i copiii no\u015ftri s\u0103 ajung\u0103 o prad\u0103? Nu ar fi oare mai bine pentru noi s\u0103 ne \u00eentoarcem \u00een Egipt?\u201d",
+    "\u015ei-\u015fi ziceau unii altora: \u201eS\u0103 ne alegem o c\u0103petenie \u0219i s\u0103 ne \u00eentoarcem \u00een Egipt!\u201d",
+    "Moise \u0219i Aaron au c\u0103zut cu fa\u021ba la p\u0103m\u00e2nt \u00eenaintea \u00eentregii adun\u0103ri a fiilor lui Israel.",
+    "\u015ei Iosua, fiul lui Nun, \u0219i Caleb, fiul lui Iefune, dintre cei ce iscodiser\u0103 \u021bara, \u0219i-au sf\u00e2\u015fiat hainele",
+    "\u0219i au vorbit \u00eentregii adun\u0103ri a fiilor lui Israel, zic\u00e2nd: \u201e\u0162ara pe care am str\u0103b\u0103tut-o ca s\u0103 o iscodim este o \u021bar\u0103 foarte, foarte bun\u0103.",
+    "Dac\u0103 DOMNUL \u00ce\u015fi g\u0103se\u015fte pl\u0103cerea \u00een noi, ne va duce \u00een \u021bara aceasta \u0219i ne-o va da \u2014 o \u021bar\u0103 \u00een care curge lapte \u0219i miere.",
+    "Numai nu v\u0103 r\u0103zvr\u0103ti\u021bi \u00eempotriva DOMNULUI \u0219i nu v\u0103 teme\u021bi de poporul \u021b\u0103rii aceleia, c\u0103ci \u00eei vom m\u00e2nca ca pe o p\u00e2ine! Ocrotirea lor s-a dep\u0103rtat de la ei, iar DOMNUL este cu noi; nu v\u0103 teme\u021bi de ei!\u201d",
+    "Dar toat\u0103 adunarea vorbea s\u0103-i ucid\u0103 cu pietre, c\u00e2nd slava DOMNULUI S-a ar\u0103tat peste Cortul \u00cent\u00e2lnirii \u00eenaintea tuturor fiilor lui Israel.",
+    "DOMNUL i-a spus lui Moise: \u201eP\u00e2n\u0103 c\u00e2nd M\u0103 va disprtu i poporul acesta \u0219i p\u00e2n\u0103 c\u00e2nd nu va crede \u00een Mine, cu toate semnele pe care le-am f\u0103cut \u00een mijlocul lui?",
+    "\u00cel voi lovi cu ciuma \u0219i-l voi nimici; dar pe tine te voi face un neam mai mare \u0219i mai puternic dec\u00e2t el!\u201d",
+    "Moise I-a zis DOMNULUI: \u201eEgiptenii vor auzi de aceasta, c\u0103ci Tu ai scos prin puterea Ta pe poporul acesta din mijlocul lor;",
+    "\u0219i le vor spune locuitorilor \u021b\u0103rii acesteia. Ei au auzit c\u0103 Tu, DOMNULE, e\u015fti \u00een mijlocul acestui popor, c\u0103 Te ari fa\u021b\u0103 \u00een fa\u021b\u0103, c\u0103 norul T\u0103u st\u0103 peste ei \u0219i c\u0103 Tu mergi \u00eenaintea lor \u00eentr-un st\u00e2lp de nor ziua \u0219i \u00eentr-un st\u00e2lp de foc noaptea.",
+    "Dac\u0103 vei ucide pe poporul acesta ca pe un singur om, neamurile care au auzit de faima Ta vor zice:",
+    "\u00abPentru c\u0103 DOMNUL nu a putut s\u0103 duc\u0103 pe poporul acesta \u00een \u021bara pe care jurase c\u0103 le-o va da, de aceea i-a m\u0103cel\u0103rit \u00een pustie!\u00bb",
+    "Acum, Te rog, s\u0103 se arate puterea St\u0103p\u00e2nului conform cuv\u00e2ntului pe care l-ai spus, zic\u00e2nd:",
+    "\u00abDOMNUL este \u00eencet la m\u00e2nie \u0219i bogat \u00een \u00eendurare, iart\u0103 nelegiuirea \u0219i f\u0103r\u0103delegea, dar nu las\u0103 pe cel vinovat nepedepsit, pedepsind nelegiuirea p\u0103rin\u021bilor \u00een fii p\u00e2n\u0103 la al treilea \u0219i al patrulea neam.\u00bb",
+    "Iart\u0103, Te rog, nelegiuirea acestui popor, dup\u0103 m\u0103rimea \u00eendur\u0103rii Tale, a\u015fa cum ai iertat pe poporul acesta din Egipt \u0219i p\u00e2n\u0103 aici!\u201d",
+    "DOMNUL a zis: \u201eIert, dup\u0103 cuv\u00e2ntul t\u0103u.",
+    "Dar, precum este adev\u0103rat c\u0103 Eu tr\u0103iesc \u0219i c\u0103 tot p\u0103m\u00e2ntul se va umple de slava DOMNULUI,",
+    "to\u021bi b\u0103rba\u021bii care au v\u0103zut slava Mea \u0219i semnele pe care le-am f\u0103cut \u00een Egipt \u0219i \u00een pustie, \u0219i care M-au ispitit deja de zece ori \u0219i nu au ascultat de glasul Meu,",
+    "nu vor vedea \u021bara pe care am jurat c\u0103 o voi da p\u0103rin\u021bilor lor! Niciunul din cei ce M-au disprtu it nu o va vedea.",
+    "Dar pentru c\u0103 robul Meu Caleb a fost st\u0103p\u00e2nit de un alt duh \u0219i Mi-a urmat cu credincioas \u021bie, pe el \u00eel voi duce \u00een \u021bara \u00een care s-a dus, \u0219i urma\u015fii lui o vor mo\u015fteni.",
+    "Amaleci\u021bii \u0219i canaani\u021bii locuiesc \u00een vale: m\u00e2ine \u00eentoarce\u021bi-v\u0103 \u0219i porni\u021bi spre pustie, pe drumul M\u0103rii Ro\u015fii.\u201d",
+    "DOMNUL le-a vorbit lui Moise \u0219i lui Aaron, spun\u00e2nd:",
+    "\u201eP\u00e2n\u0103 c\u00e2nd voi r\u0103bda aceast\u0103 adunare rea care c\u00e2rte\u015fte \u00eempotriva Mea? Am auzit c\u00e2rtirile fiilor lui Israel, pe care le rostesc \u00eempotriva Mea.",
+    "Spune-le: \u00abPrecum este adev\u0103rat c\u0103 Eu tr\u0103iesc, zice DOMNUL, v\u0103 voi face \u00eentocmai cum a\u021bi vorbit la urechile Mele:",
+    "trupurile voastre moarte vor c\u0103dea \u00een pustia aceasta! To\u021bi cei num\u0103ra\u021bi dintre voi, de la v\u00e2rsta de dou\u0103zeci de ani \u00een sus, care a\u021bi c\u00e2rtit \u00eempotriva Mea,",
+    "nu ve\u021bi intra \u00een \u021bara \u00een care am jurat c\u0103 v\u0103 voi a\u015feza s\u0103 locui\u021bi, afar\u0103 de Caleb, fiul lui Iefune, \u0219i Iosua, fiul lui Nun.",
+    "Iar pe copiii vo\u015ftri, despre care a\u021bi zis c\u0103 vor fi de prad\u0103, pe ei \u00eei voi duce \u00een ea \u0219i ei vor cunoa\u015fte \u021bara pe care voi a\u021bi dispre\u021buit-o.",
+    "Dar c\u00e2t despre voi, trupurile voastre moarte vor c\u0103dea \u00een pustia aceasta.",
+    "\u015ei copiii vo\u015ftri vor r\u0103t\u0103ci \u00een pustie patruzeci de ani \u0219i vor purta pedeapsa infidelit\u0103\u021bii voastre, p\u00e2n\u0103 ce trupurile voastre moarte vor fi mistuite \u00een pustie.",
+    "Dup\u0103 num\u0103rul celor patruzeci de zile \u00een care a\u021bi iscodit \u021bara, socotind un an de fiecare zi, patruzeci de ani ve\u021bi purta pedeapsa nelegiuirilor voastre \u0219i ve\u021bi cunoa\u015fte ce \u00eenseamn\u0103 \u00eempotrivirea Mea!\u00bb",
+    "Eu, DOMNUL, am vorbit; a\u015fa voi face \u00eentregii acestei adun\u0103ri rele care s-a str\u00e2ns \u00eempotriva Mea: \u00een pustia aceasta vor fi mistuite \u0219i \u00een ea vor muri!\u201d",
+    "B\u0103rba\u021bii pe care \u00eei trimisese Moise s\u0103 iscodeasc\u0103 \u021bara \u0219i care, \u00eentorce\u021bundu-se, f\u0103cuser\u0103 toat\u0103 adunarea s\u0103 c\u00e2rteasc\u0103 \u00eempotriva lui, scot\u00e2nd un zvon r\u0103u despre \u021bar\u0103,",
+    "oamenii aceia care scotea zvonuri rele despre \u021bar\u0103 au murit lovi\u021bi de o urgie \u00eenaintea DOMNULUI.",
+    "Dar Iosua, fiul lui Nun, \u0219i Caleb, fiul lui Iefune, au r\u0103mas vii dintre b\u0103rba\u021bii care merseser\u0103 s\u0103 iscodeasc\u0103 \u021bara.",
+    "Moise le-a spus aceste cuvinte tuturor fiilor lui Israel; \u0219i poporul s-a \u00eentristat foarte mult.",
+    "S-au sculat dis-de-diminea\u021b\u0103 \u0219i s-au suit spre v\u00e2rful muntelui, zic\u00e2nd: \u201eIat\u0103-ne, suntem gata s\u0103 ne suim la locul despre care a vorbit DOMNUL, c\u0103ci am p\u0103c\u0103tuit.\u201d",
+    "Moise a zis: \u201eDe ce c\u0103lca\u021bi porunca DOMNULUI? Lucrul acesta nu va izb\u00e2ndi!",
+    "Nu v\u0103 sui\u021bi, c\u0103ci DOMNUL nu este \u00een mijlocul vostru; s\u0103 nu fi\u021bi \u00eenfr\u00e2n\u021bi de vr\u0103jma\u015fii vo\u015ftri.",
+    "C\u0103ci amaleci\u021bii \u0219i canaani\u021bii sunt acolo \u00eenaintea voastr\u0103 \u0219i ve\u021bi c\u0103dea uci\u015fi de sabie; pentru c\u0103 v-a\u021bi \u00eentors de la DOMNUL, DOMNUL nu va fi cu voi.\u201d",
+    "Cu toate acestea, s-au \u00eenc\u0103p\u0103\u021b\u00e2nat s\u0103 se suie spre v\u00e2rful muntelui; dar chivotul leg\u0103m\u00e2ntului DOMNULUI \u0219i Moise nu au p\u0103r\u0103sit mijlocul taberei.",
+    "Atunci amaleci\u021bii \u0219i canaani\u021bii care locuiau pe muntele acela s-au cobor\u00e2t, i-au lovit \u0219i i-au zdrobit p\u00e2n\u0103 la Horma.",
+  ],
+}
