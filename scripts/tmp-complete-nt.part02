@@ -44,9 +44,27 @@
                 text = mapping[item.key]
                 semantic = cosine(source_vectors[item.key], candidate_vectors[(item.key, label)])
                 options.append((candidate_score(item, text, semantic, label), semantic, label, text))
+
+        def deterministic_ok(option: tuple[float, float, str, str]) -> bool:
+            text = option[3]
+            normalized = validator.normalize_for_comparison(text)
+            word_count = len(normalized.split())
+            lengths = sorted(len(validator.normalize_for_comparison(value).split()) for value in item.benchmarks)
+            middle = len(lengths) // 2
+            expected = lengths[middle] if len(lengths) % 2 else (lengths[middle - 1] + lengths[middle]) / 2
+            ratio = word_count / max(1, expected)
+            if not 0.35 <= ratio <= 1.75:
+                return False
+            if word_count >= 8 and lexical_overlap(text, item.benchmarks) < 0.14:
+                return False
+            return True
+
+        gated_options = [option for option in options if deterministic_ok(option)]
+        if gated_options:
+            options = gated_options
         options.sort(reverse=True, key=lambda value: value[0])
         aggregate, semantic, label, text = options[0]
-        if semantic < 0.25 or aggregate < 0.20:
+        if semantic < 0.25 or aggregate < 0.20 or not deterministic_ok(options[0]):
             weak.append({"key": item.key, "semantic": semantic, "score": aggregate, "label": label, "text": text})
         selected[item.key] = text
         selections[label] += 1
