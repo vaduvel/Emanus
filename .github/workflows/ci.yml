@@ -34,6 +34,9 @@ jobs:
       - name: Verifica aprobarea Genezei
         run: pnpm check:bible-publication
 
+      - name: Verifica limba romana si variantele textuale NT
+        run: python3 scripts/check-biblia-emanus-romanian-quality.py
+
       - name: Verifica Biblia Emanus 3.0
         run: pnpm check:biblia-emanus
 
