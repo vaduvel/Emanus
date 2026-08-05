@@ -8,19 +8,14 @@ on:
       - 'scripts/rebuild-pr40-deuterocanon.py'
       - 'scripts/rebuild-pr40-deuterocanon-historical.py'
       - '.github/workflows/rebuild-pr40-deuterocanon.yml'
-  pull_request:
-    paths:
-      - 'scripts/rebuild-pr40-deuterocanon.py'
-      - 'scripts/rebuild-pr40-deuterocanon-historical.py'
-      - '.github/workflows/rebuild-pr40-deuterocanon.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: pr40-deuterocanon-${{ github.ref }}
-  cancel-in-progress: true
+  group: pr40-deuterocanon-historical
+  cancel-in-progress: false
 
 jobs:
   rebuild:
@@ -28,15 +23,29 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-all-pr40-rebuild
       - name: Rebuild seven faithful historical Romanian works
         run: python3 scripts/rebuild-pr40-deuterocanon-historical.py
       - name: Upload candidates and report
-        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: pr40-authentic-deuterocanon
           path: |
             docs/data/biblia-emanus-deuterocanon-candidates
             docs/biblia-emanus/PR40-DEUTEROCANON-REBUILD-REPORT.json
-          if-no-files-found: warn
           retention-days: 7
+      - name: Persist verified candidates
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus-deuterocanon-candidates docs/biblia-emanus/PR40-DEUTEROCANON-REBUILD-REPORT.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'feat(bible): persist seven verified historical deuterocanonical works'
+          for attempt in 1 2 3; do
+            git pull --rebase origin agent/biblia-emanus-all-pr40-rebuild
+            if git push origin HEAD:agent/biblia-emanus-all-pr40-rebuild; then exit 0; fi
+            sleep $((attempt * 3))
+          done
+          exit 1
