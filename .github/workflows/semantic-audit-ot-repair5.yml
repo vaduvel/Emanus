@@ -6,7 +6,8 @@ on:
       - agent/biblia-emanus-ot-repair5
     paths:
       - 'docs/data/biblia-emanus-candidates/**'
-      - 'scripts/semantic-audit-ot-repair5.py'
+      - 'scripts/ot_repair5_common.py'
+      - 'scripts/semantic-audit-ot-repair5-v2.py'
       - '.github/workflows/semantic-audit-ot-repair5.yml'
   workflow_dispatch:
 
@@ -27,12 +28,12 @@ jobs:
           cache: pip
       - name: Install semantic audit dependencies
         run: pip install --disable-pip-version-check 'sentence-transformers>=3,<4' numpy
-      - name: Run semantic screening
-        run: python3 scripts/semantic-audit-ot-repair5.py --batch-size 128
+      - name: Run semantic screening v2
+        run: python3 scripts/semantic-audit-ot-repair5-v2.py --batch-size 128
       - name: Upload semantic report
         uses: actions/upload-artifact@v4
         with:
-          name: ot-repair5-semantic-audit
+          name: ot-repair5-semantic-audit-v2
           path: |
             docs/biblia-emanus/OT-REPAIR5-SEMANTIC-AUDIT.md
             docs/biblia-emanus/OT-REPAIR5-SEMANTIC-AUDIT.json
@@ -43,6 +44,6 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/biblia-emanus/OT-REPAIR5-SEMANTIC-AUDIT.md docs/biblia-emanus/OT-REPAIR5-SEMANTIC-AUDIT.json
           if ! git diff --cached --quiet; then
-            git commit -m 'audit(bible): persist OT repair5 semantic report'
+            git commit -m 'audit(bible): persist OT repair5 semantic report v2'
             git push origin HEAD:agent/biblia-emanus-ot-repair5
           fi
