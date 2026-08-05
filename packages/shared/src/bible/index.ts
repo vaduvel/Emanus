@@ -54,6 +54,7 @@ import { GENEZA_50 } from "./geneza50.js"
 import { EXOD } from "./exod.js"
 import { LEVITIC } from "./levitic.js"
 import { NUMERI } from "./numeri.js"
+import { DEUTERONOM } from "./deuteronom.js"
 import { MATEI as MATEI_BASE } from "./matei.js"
 import { MATEI_2 } from "./matei2.js"
 import { MATEI_3 } from "./matei3.js"
@@ -166,7 +167,7 @@ export const GENEZA: BibleBook = {
   ],
 }
 
-/** Evanghelia după Matei, cu toate cele 28 de capitole în revizie. */
+/** Evanghelia dupa Matei, cu toate cele 28 de capitole in revizie. */
 export const MATEI: BibleBook = {
   ...MATEI_BASE,
   chapters: [
@@ -229,9 +230,9 @@ export const IOAN: BibleBook = {
 }
 
 /**
- * Marcu: capitolele scrise și cablate sunt 1-5 și 8.
- * Capitolele 6, 7 și 9-16 nu există încă ca fișiere.
- * Toate sunt in_review, deci nu se deschid încă cititorului.
+ * Marcu: capitolele scrise si cablate sunt 1-5 si 8.
+ * Capitolele 6, 7 si 9-16 nu exista inca ca fisiere.
+ * Toate sunt in_review, deci nu se deschid inca cititorului.
  */
 export const MARCU: BibleBook = {
   ...MARCU_BASE,
@@ -245,10 +246,10 @@ export const MARCU: BibleBook = {
   ],
 }
 
-export { EXOD, LEVITIC, NUMERI }
+export { EXOD, LEVITIC, NUMERI, DEUTERONOM }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, EXOD, LEVITIC, NUMERI, MATEI, IOAN, MARCU]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, EXOD, LEVITIC, NUMERI, DEUTERONOM, MATEI, IOAN, MARCU]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)
