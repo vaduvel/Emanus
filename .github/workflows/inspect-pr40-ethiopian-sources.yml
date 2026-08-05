@@ -1,0 +1,38 @@
+name: Inspect PR40 Ethiopian sources
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-all-pr40-rebuild
+    paths:
+      - 'scripts/inspect-pr40-ethiopian-sources.py'
+      - '.github/workflows/inspect-pr40-ethiopian-sources.yml'
+  pull_request:
+    paths:
+      - 'scripts/inspect-pr40-ethiopian-sources.py'
+      - '.github/workflows/inspect-pr40-ethiopian-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-ethiopian-source-inventory-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pin and inspect public-domain source texts
+        run: python3 scripts/inspect-pr40-ethiopian-sources.py
+      - name: Upload source inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-ethiopian-source-inventory
+          path: docs/biblia-emanus/PR40-ETHIOPIAN-SOURCE-INVENTORY.json
+          if-no-files-found: warn
+          retention-days: 7
