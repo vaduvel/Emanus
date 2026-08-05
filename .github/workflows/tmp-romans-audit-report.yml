@@ -18,7 +18,7 @@ jobs:
           ref: agent/biblia-emanus-nt-audit3
           fetch-depth: 0
 
-      - name: Align correction inputs with current Romans text
+      - name: Align approval script with current Romans corpus
         run: |
           python3 - <<'PY'
           from pathlib import Path
@@ -35,6 +35,8 @@ jobs:
                   'între care sunteți și voi, chemați să fiți ai lui Isus Hristos.',
               'adică să fim încurajați împreună între voi prin credința pe care o avem unii în alții, atât a voastră, cât și a mea.':
                   'adică să fim încurajați împreună între voi, prin credința pe care o avem unii în alții, și voi, și eu.',
+              'source_data["snapshotSha256"]':
+                  'source_data["snapshotSha256ByBook"]["ROM"]',
           }
           for old, new in replacements.items():
               if text.count(old) != 1:
