@@ -3,18 +3,18 @@ name: Probe Qumran Text-Fabric extraction
 on:
   push:
     branches:
-      - agent/biblia-emanus-all-pr40-rebuild
+      - agent/biblia-emanus-pr40-final
     paths:
       - 'scripts/probe-pr40-qumran-textfabric.py'
       - '.github/workflows/probe-pr40-qumran-textfabric.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: pr40-qumran-textfabric-probe
-  cancel-in-progress: false
+  group: pr40-final-qumran-probe
+  cancel-in-progress: true
 
 jobs:
   probe:
@@ -22,8 +22,6 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: agent/biblia-emanus-all-pr40-rebuild
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -35,21 +33,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pr40-qumran-textfabric-probe
+          name: pr40-final-qumran-textfabric-probe
           path: docs/biblia-emanus/PR40-QUMRAN-TEXTFABRIC-PROBE.json
           if-no-files-found: warn
           retention-days: 7
-      - name: Persist successful probe
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/biblia-emanus/PR40-QUMRAN-TEXTFABRIC-PROBE.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'audit(bible): persist reproducible Qumran extraction probe'
-          for attempt in 1 2 3; do
-            git pull --rebase origin agent/biblia-emanus-all-pr40-rebuild
-            if git push origin HEAD:agent/biblia-emanus-all-pr40-rebuild; then exit 0; fi
-            sleep $((attempt * 3))
-          done
-          exit 1
