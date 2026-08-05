@@ -1,0 +1,43 @@
+name: Translate missing PR40 deuterocanon
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-all-pr40-rebuild
+    paths:
+      - 'scripts/translate-pr40-deuterocanon-missing.py'
+      - '.github/workflows/translate-pr40-deuterocanon-missing.yml'
+  pull_request:
+    paths:
+      - 'scripts/translate-pr40-deuterocanon-missing.py'
+      - '.github/workflows/translate-pr40-deuterocanon-missing.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-deuterocanon-translation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned translation runtime
+        run: pip install --disable-pip-version-check 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1'
+      - name: Translate public-domain source witnesses
+        run: python3 scripts/translate-pr40-deuterocanon-missing.py --batch-size 24
+      - name: Upload candidates and audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-deuterocanon-new-translation
+          path: |
+            docs/data/biblia-emanus-deuterocanon-new-translation
+            docs/biblia-emanus/PR40-DEUTEROCANON-NEW-TRANSLATION.json
+          retention-days: 7
