@@ -6,10 +6,12 @@ on:
       - agent/biblia-emanus-pr40-final
     paths:
       - 'scripts/promote-pr40-canonical-ot.py'
+      - 'scripts/promote-pr40-canonical-ot-v2.py'
       - '.github/workflows/pr40-final-canonical-dry-run.yml'
   pull_request:
     paths:
       - 'scripts/promote-pr40-canonical-ot.py'
+      - 'scripts/promote-pr40-canonical-ot-v2.py'
       - '.github/workflows/pr40-final-canonical-dry-run.yml'
   workflow_dispatch:
 
@@ -18,7 +20,7 @@ permissions:
 
 concurrency:
   group: pr40-final-canonical-dry-run-${{ github.event_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   verify:
@@ -34,7 +36,7 @@ jobs:
       - name: Install workspace
         run: pnpm install --frozen-lockfile
       - name: Generate proposed canonical publication in workspace
-        run: python3 scripts/promote-pr40-canonical-ot.py
+        run: python3 scripts/promote-pr40-canonical-ot-v2.py
       - name: Run all publication and application gates
         run: |
           pnpm check:quotes
