@@ -1,15 +1,55 @@
 /*
- * Textul biblic al cărții Exod, capitolul 39.
+ * Textul biblic al c\u0103r\u021bii Exodul, capitolul 39.
  *
- * ATENȚIE, agentul care lucrează la Biblia Emanus:
- * fișierul acesta ține LOCUL textului, nu textul. Fiecare intrare din tablou
- * este un verset, în ordine, de la 1 la 43. Înlocuiește fiecare șir cu versetul
- * din Biblia Emanus (validată din trei părți) și nu schimba nimic altceva:
- * nici numărul intrărilor, nici cheia capitolului, nici numele exportului.
+ * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/EXO.39.json.
+ * Capitol cu status "published", auditat verset cu verset din WLC-OSHB,
+ * cu WEBU ca baz\u0103 public-domain. 43 de versete.
  */
 
-const PLACEHOLDER = "[textul biblic se completează din Biblia Emanus]"
-
 export const EXOD_TEXT_39: Record<number, readonly string[]> = {
-  39: Array.from({ length: 43 }, (_, i) => `[Exod 39:${i + 1}] ${PLACEHOLDER}`),
+  39: [
+    "Din fir albastru, purpuriu \u0219i stacojiu au f\u0103cut ve\u0219mintele lucrate pentru slujirea \u00een Locul Sf\u00e2nt \u0219i au f\u0103cut ve\u0219mintele sfinte pentru Aaron, a\u0219a cum \u00eei poruncise DOMNUL lui Moise.",
+    "Au f\u0103cut efodul din aur, fir albastru, purpuriu \u0219i stacojiu \u0219i din in fin r\u0103sucit.",
+    "Au b\u0103tut aurul \u00een foi sub\u021biri \u0219i l-au t\u0103iat \u00een fire, ca s\u0103-l lucreze \u00eempreun\u0103 cu firul albastru, purpuriu \u0219i stacojiu \u0219i cu inul fin, prin lucrare artistic\u0103.",
+    "I-au f\u0103cut dou\u0103 bretele unite la cele dou\u0103 capete.",
+    "Br\u00e2ul \u021besut al efodului era dintr-o singur\u0103 bucat\u0103 cu el \u0219i lucrat la fel, din aur, fir albastru, purpuriu \u0219i stacojiu \u0219i din in fin r\u0103sucit, a\u0219a cum \u00eei poruncise DOMNUL lui Moise.",
+    "Au prelucrat pietrele de onix, le-au montat \u00een monturi de aur \u0219i au gravat pe ele, asemenea gravurii unui sigiliu, numele fiilor lui Israel.",
+    "Le-au pus pe bretelele efodului, ca pietre de aducere-aminte pentru fiii lui Israel, a\u0219a cum \u00eei poruncise DOMNUL lui Moise.",
+    "Au f\u0103cut pieptarul prin lucrare artistic\u0103, la fel ca efodul, din aur, fir albastru, purpuriu \u0219i stacojiu \u0219i din in fin r\u0103sucit.",
+    "Era p\u0103trat \u0219i \u00eendoit \u00een dou\u0103, lung de o palm\u0103 \u0219i lat de o palm\u0103.",
+    "Au montat \u00een el patru r\u00e2nduri de pietre. \u00cen primul r\u00e2nd: un rubin, un topaz \u0219i un smarald;",
+    "\u00een al doilea r\u00e2nd: un turcoaz, un safir \u0219i un diamant;",
+    "\u00een al treilea r\u00e2nd: un opal, un agat \u0219i un ametist;",
+    "iar \u00een al patrulea r\u00e2nd: un crisolit, un onix \u0219i un jasp. Pietrele erau fixate \u00een monturi de aur.",
+    "Pietrele erau dou\u0103sprezece, dup\u0103 numele fiilor lui Israel, c\u00e2te una pentru fiecare nume. Fiecare era gravat\u0103 asemenea unui sigiliu, cu numele uneia dintre cele dou\u0103sprezece semin\u021bii.",
+    "Au f\u0103cut pentru pieptar l\u0103n\u021bi\u0219oare din aur curat, ca ni\u0219te \u0219nururi \u00eempletite.",
+    "Au f\u0103cut dou\u0103 monturi de aur \u0219i dou\u0103 verigi de aur \u0219i au pus cele dou\u0103 verigi la cele dou\u0103 capete ale pieptarului.",
+    "Au introdus cele dou\u0103 l\u0103n\u021bi\u0219oare \u00eempletite din aur \u00een cele dou\u0103 verigi de la capetele pieptarului.",
+    "Celelalte dou\u0103 capete ale l\u0103n\u021bi\u0219oarelor le-au prins de cele dou\u0103 monturi \u0219i le-au fixat pe bretelele efodului, \u00een partea din fa\u021b\u0103.",
+    "Au f\u0103cut dou\u0103 verigi de aur \u0219i le-au pus la celelalte dou\u0103 capete ale pieptarului, pe marginea lui dinspre partea interioar\u0103 a efodului.",
+    "Au mai f\u0103cut dou\u0103 verigi de aur \u0219i le-au pus pe cele dou\u0103 bretele ale efodului, \u00een partea de jos \u0219i din fa\u021b\u0103, aproape de locul unde se unesc, deasupra br\u00e2ului \u021besut al efodului.",
+    "Au legat pieptarul prin verigile lui de verigile efodului cu un \u0219nur albastru, ca s\u0103 r\u0103m\u00e2n\u0103 deasupra br\u00e2ului \u021besut al efodului \u0219i s\u0103 nu se desprind\u0103 de efod, a\u0219a cum \u00eei poruncise DOMNUL lui Moise.",
+    "Au f\u0103cut mantia efodului, \u021besut\u0103 \u00een \u00eentregime din fir albastru.",
+    "Deschiz\u0103tura pentru cap era \u00een mijlocul ei, asemenea deschiz\u0103turii unei plato\u0219e, cu o margine \u021besut\u0103 \u00een jur, ca s\u0103 nu se rup\u0103.",
+    "Pe tivul mantiei au f\u0103cut rodii din fir albastru, purpuriu \u0219i stacojiu \u0219i din in r\u0103sucit.",
+    "Au f\u0103cut clopo\u021bei din aur curat \u0219i au pus clopo\u021beii \u00eentre rodii, de jur \u00eemprejurul tivului mantiei:",
+    "un clopo\u021bel \u0219i o rodie, un clopo\u021bel \u0219i o rodie, de jur \u00eemprejurul tivului mantiei pentru slujire, a\u0219a cum \u00eei poruncise DOMNUL lui Moise.",
+    "Au f\u0103cut tunicile din in fin \u021besut pentru Aaron \u0219i pentru fiii lui,",
+    "turbanul din in fin, bonetele din in fin, pantalonii din in fin r\u0103sucit",
+    "\u0219i br\u00e2ul din in fin r\u0103sucit \u0219i din fir albastru, purpuriu \u0219i stacojiu, lucrat prin broderie, a\u0219a cum \u00eei poruncise DOMNUL lui Moise.",
+    "Au f\u0103cut pl\u0103cu\u021ba coroanei sfinte din aur curat \u0219i au gravat pe ea, asemenea gravurii unui sigiliu: \u201eSF\u00c2NT PENTRU DOMNUL\u201d.",
+    "Au prins de ea un \u0219nur albastru pentru a o fixa sus, pe turban, a\u0219a cum \u00eei poruncise DOMNUL lui Moise.",
+    "Astfel a fost terminat\u0103 \u00eentreaga lucrare a Cortului \u00cent\u00e2lnirii. Fiii lui Israel au f\u0103cut totul dup\u0103 cum \u00eei poruncise DOMNUL lui Moise; a\u0219a au f\u0103cut.",
+    "Au adus Cortul la Moise: cortul cu toate obiectele lui, copcile, sc\u00e2ndurile, drugii, st\u00e2lpii \u0219i soclurile,",
+    "\u00eenveli\u0219ul din piei de berbec vopsite \u00een ro\u0219u, \u00eenveli\u0219ul din piei fine \u0219i perdeaua desp\u0103r\u021bitoare,",
+    "chivotul M\u0103rturiei cu drugii lui \u0219i capacul isp\u0103\u0219irii,",
+    "masa cu toate obiectele ei \u0219i p\u00e2inea Prezen\u021bei,",
+    "sfe\u0219nicul curat cu candelele lui a\u0219ezate \u00een ordine, toate obiectele lui \u0219i uleiul pentru lumin\u0103,",
+    "altarul de aur, untdelemnul ungerii, t\u0103m\u00e2ia parfumat\u0103 \u0219i paravanul de la intrarea cortului,",
+    "altarul de bronz cu gr\u0103tarul lui de bronz, drugii \u0219i toate uneltele lui, ligheanul \u0219i suportul lui,",
+    "p\u00e2nzele cur\u021bii, st\u00e2lpii, soclurile, paravanul de la intrarea cur\u021bii, funiile \u0219i \u021b\u0103ru\u0219ii ei \u0219i toate uneltele pentru slujirea Cortului \u00cent\u00e2lnirii,",
+    "ve\u0219mintele lucrate pentru slujirea \u00een Locul Sf\u00e2nt, ve\u0219mintele sfinte ale preotului Aaron \u0219i ve\u0219mintele fiilor lui pentru slujirea preo\u021beasc\u0103.",
+    "Fiii lui Israel au f\u0103cut \u00eentreaga lucrare dup\u0103 tot ce \u00eei poruncise DOMNUL lui Moise.",
+    "Moise a cercetat \u00eentreaga lucrare \u0219i iat\u0103 c\u0103 o f\u0103cuser\u0103 a\u0219a cum poruncise DOMNUL. O f\u0103cuser\u0103 \u00eentocmai, iar Moise i-a binecuv\u00e2ntat.",
+  ],
 }
