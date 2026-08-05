@@ -2,10 +2,10 @@
 """Calibrate early-work extraction without hiding source lacunae.
 
 Jubilees uses bracketed chapter headings on CCEL. The selected Charles/Kraft
-transcriptions also contain explicit numbering gaps (Enoch 90:16-18 and
-4 Baruch 3:9). We preserve and report those gaps rather than renumbering or
-inventing text. Duplicates, reversed numbering, empty text, navigation leaks,
-and implausibly short chapters remain blocking.
+transcriptions also contain explicit numbering gaps. We preserve and report
+those gaps rather than renumbering or inventing text. Duplicates, reversed
+numbering, empty text, navigation leaks, and implausibly short chapters remain
+blocking.
 """
 from __future__ import annotations
 
@@ -26,6 +26,7 @@ module.BARE_NUMBER_RE = re.compile(r"^([1-9][0-9]{0,2})\s*[.)]?$", re.S)
 
 
 def find_text_start(lines: list[str], chapter: int) -> int:
+    """Choose the real chapter body, never the repeated CCEL navigation label."""
     candidates: list[int] = []
     pattern = re.compile(rf"^chapter\s+{chapter}$", re.I)
     for index, line in enumerate(lines):
@@ -34,17 +35,26 @@ def find_text_start(lines: list[str], chapter: int) -> int:
             candidates.append(index)
     if not candidates:
         samples = [line for line in lines if "chapter" in line.casefold()][:20]
-        raise RuntimeError(
-            f"chapter heading {chapter!r} not found; samples={samples!r}"
-        )
-    return candidates[-1] + 1
+        raise RuntimeError(f"chapter heading {chapter!r} not found; samples={samples!r}")
+
+    # The true heading is followed by verse 1. The navigation occurrence is
+    # followed by a list of chapter links and must never be selected.
+    for index in candidates:
+        for probe in lines[index + 1 : index + 20]:
+            if module.heading_chapter(probe) is not None:
+                break
+            verse_match = module.VERSE_RE.match(probe)
+            bare_match = module.BARE_NUMBER_RE.fullmatch(probe)
+            if verse_match and int(verse_match.group(1)) == 1:
+                return index + 1
+            if bare_match and int(bare_match.group(1)) == 1:
+                return index + 1
+    raise RuntimeError(
+        f"chapter heading {chapter!r} found but no following verse 1; candidates={candidates!r}"
+    )
 
 
-def validate_verses(
-    book_id: str,
-    chapter: int,
-    verses: list[dict[str, Any]],
-) -> list[str]:
+def validate_verses(book_id: str, chapter: int, verses: list[dict[str, Any]]) -> list[str]:
     issues: list[str] = []
     if not verses:
         return ["NO_TEXT"]
@@ -110,10 +120,7 @@ module.REPORT.write_text(
 )
 print(
     json.dumps(
-        {
-            "summary": report["summary"],
-            "sourceNumberingGaps": source_gaps,
-        },
+        {"summary": report["summary"], "sourceNumberingGaps": source_gaps},
         ensure_ascii=False,
         indent=2,
     )
