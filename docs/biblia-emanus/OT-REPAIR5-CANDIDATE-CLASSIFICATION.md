@@ -1,35 +1,19 @@
 # OT Repair 5 — candidate classification
 
 ## Cărți clasificate ca fabricate
-- `1ES` — uniqueRatio=0.002, maxExactRepeat=448, repeatedRatio=1.000
-- `1MA` — uniqueRatio=0.001, maxExactRepeat=924, repeatedRatio=1.000
-- `2MA` — uniqueRatio=0.002, maxExactRepeat=535, repeatedRatio=1.000
-- `3MA` — uniqueRatio=0.004, maxExactRepeat=227, repeatedRatio=1.000
-- `BAR` — uniqueRatio=0.005, maxExactRepeat=213, repeatedRatio=1.000
-- `ESG` — uniqueRatio=0.010, maxExactRepeat=102, repeatedRatio=1.000
 - `EZK` — maxExactRepeat=32
-- `JDT` — uniqueRatio=0.003, maxExactRepeat=340, repeatedRatio=1.000
 - `JOB` — maxExactRepeat=8
-- `SIR` — uniqueRatio=0.022, maxExactRepeat=1362, repeatedRatio=0.978
-- `TOB` — uniqueRatio=0.093, maxExactRepeat=224, repeatedRatio=0.911
-- `WIS` — uniqueRatio=0.039, maxExactRepeat=420, repeatedRatio=0.963
 
 ## Toate cărțile
 - `1CH` — **plausible**; unique 0.9947; max repeat 2; repeated ratio 0.0
-- `1ES` — **fabricated**; unique 0.0022; max repeat 448; repeated ratio 1.0
 - `1KI` — **plausible**; unique 0.9975; max repeat 2; repeated ratio 0.0
-- `1MA` — **fabricated**; unique 0.0011; max repeat 924; repeated ratio 1.0
 - `1SA` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `2CH` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `2KI` — **plausible**; unique 0.9972; max repeat 2; repeated ratio 0.0
-- `2MA` — **fabricated**; unique 0.0019; max repeat 535; repeated ratio 1.0
 - `2SA` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
-- `3MA` — **fabricated**; unique 0.0044; max repeat 227; repeated ratio 1.0
 - `AMO` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
-- `BAR` — **fabricated**; unique 0.0047; max repeat 213; repeated ratio 1.0
 - `DAN` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `ECC` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
-- `ESG` — **fabricated**; unique 0.0098; max repeat 102; repeated ratio 1.0
 - `EST` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `EZK` — **fabricated**; unique 0.9725; max repeat 32; repeated ratio 0.0283
 - `EZR` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
@@ -38,7 +22,6 @@
 - `HOS` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `ISA` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `JDG` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
-- `JDT` — **fabricated**; unique 0.0029; max repeat 340; repeated ratio 1.0
 - `JER` — **plausible**; unique 0.9934; max repeat 5; repeated ratio 0.0037
 - `JOB` — **fabricated**; unique 0.9832; max repeat 8; repeated ratio 0.0131
 - `JOL` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
@@ -54,9 +37,6 @@
 - `PS2` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
 - `PSA` — **plausible**; unique 0.9894; max repeat 4; repeated ratio 0.0077
 - `RUT` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0
-- `SIR` — **fabricated**; unique 0.0223; max repeat 1362; repeated ratio 0.9784
 - `SNG` — **plausible**; unique 0.9915; max repeat 2; repeated ratio 0.0
-- `TOB` — **fabricated**; unique 0.0935; max repeat 224; repeated ratio 0.9106
-- `WIS` — **fabricated**; unique 0.039; max repeat 420; repeated ratio 0.9633
 - `ZEC` — **plausible**; unique 0.9953; max repeat 2; repeated ratio 0.0
 - `ZEP` — **plausible**; unique 1.0; max repeat 1; repeated ratio 0.0

@@ -1,0 +1,95 @@
+# OT Repair 5 — deterministic audit v2
+
+- Critice: **0**
+- Erori: **52**
+
+## Cărți
+- `1CH` — 29 cap. / 942 vers.; WEB lipsă 0; mapări WLC 15; limbă 0; numere 0; lungime 0; BTF medie 0.7128
+- `1KI` — 22 cap. / 816 vers.; WEB lipsă 0; mapări WLC 14; limbă 0; numere 0; lungime 3; BTF medie 0.6001
+- `1SA` — 31 cap. / 810 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 2; BTF medie 0.5987
+- `2CH` — 36 cap. / 822 vers.; WEB lipsă 0; mapări WLC 2; limbă 0; numere 0; lungime 0; BTF medie 0.5922
+- `2KI` — 25 cap. / 719 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 4; BTF medie 0.6014
+- `2SA` — 24 cap. / 695 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 1; BTF medie 0.5992
+- `AMO` — 9 cap. / 146 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.6162
+- `DAN` — 12 cap. / 357 vers.; WEB lipsă 0; mapări WLC 4; limbă 0; numere 0; lungime 0; BTF medie 0.5135
+- `ECC` — 12 cap. / 222 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.5642
+- `EST` — 10 cap. / 167 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 1; BTF medie 0.5171
+- `EZK` — 48 cap. / 1273 vers.; WEB lipsă 0; mapări WLC 5; limbă 2; numere 0; lungime 4; BTF medie 0.5656
+- `EZR` — 10 cap. / 280 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.6411
+- `HAB` — 3 cap. / 56 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5569
+- `HAG` — 2 cap. / 38 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.648
+- `HOS` — 14 cap. / 197 vers.; WEB lipsă 0; mapări WLC 4; limbă 0; numere 0; lungime 0; BTF medie 0.6134
+- `ISA` — 66 cap. / 1292 vers.; WEB lipsă 0; mapări WLC 2; limbă 1; numere 0; lungime 2; BTF medie 0.5787
+- `JDG` — 21 cap. / 618 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 4; BTF medie 0.6191
+- `JER` — 52 cap. / 1364 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 3; BTF medie 0.5656
+- `JOB` — 42 cap. / 1070 vers.; WEB lipsă 0; mapări WLC 8; limbă 1; numere 0; lungime 1; BTF medie 0.5605
+- `JOL` — 3 cap. / 73 vers.; WEB lipsă 0; mapări WLC 21; limbă 0; numere 0; lungime 1; BTF medie 0.594
+- `JON` — 4 cap. / 48 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.6031
+- `LAM` — 5 cap. / 154 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5878
+- `MAL` — 4 cap. / 55 vers.; WEB lipsă 0; mapări WLC 6; limbă 0; numere 0; lungime 2; BTF medie 0.5064
+- `MAN` — 1 cap. / 15 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 2; BTF medie None
+- `MIC` — 7 cap. / 105 vers.; WEB lipsă 0; mapări WLC 1; limbă 1; numere 0; lungime 0; BTF medie 0.5902
+- `NAM` — 3 cap. / 47 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.5683
+- `NEH` — 13 cap. / 406 vers.; WEB lipsă 0; mapări WLC 8; limbă 0; numere 0; lungime 0; BTF medie 0.652
+- `OBA` — 1 cap. / 21 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5651
+- `PRO` — 31 cap. / 915 vers.; WEB lipsă 0; mapări WLC 0; limbă 3; numere 0; lungime 2; BTF medie 0.6135
+- `PS2` — 1 cap. / 7 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie None
+- `PSA` — 150 cap. / 2461 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 4; BTF medie 0.6343
+- `RUT` — 4 cap. / 85 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5929
+- `SNG` — 8 cap. / 117 vers.; WEB lipsă 0; mapări WLC 1; limbă 0; numere 0; lungime 0; BTF medie 0.6525
+- `ZEC` — 14 cap. / 211 vers.; WEB lipsă 0; mapări WLC 4; limbă 0; numere 0; lungime 2; BTF medie 0.5903
+- `ZEP` — 3 cap. / 53 vers.; WEB lipsă 0; mapări WLC 0; limbă 0; numere 0; lungime 0; BTF medie 0.5585
+
+## Probleme
+- **ERROR** `LENGTH` — `1KI.13:12`: ratio=0.265
+- **ERROR** `LENGTH` — `1KI.19:11`: ratio=0.189
+- **ERROR** `LENGTH` — `1KI.22:37`: ratio=0.278
+- **ERROR** `LENGTH` — `1SA.20:7`: ratio=0.180
+- **ERROR** `LENGTH` — `1SA.28:23`: ratio=0.233
+- **ERROR** `LENGTH` — `2KI.10:14`: ratio=0.200
+- **ERROR** `LENGTH` — `2KI.5:23`: ratio=0.227
+- **ERROR** `LENGTH` — `2KI.9:21`: ratio=0.122
+- **ERROR** `LENGTH` — `2KI.9:33`: ratio=0.161
+- **ERROR** `LENGTH` — `2SA.18:14`: ratio=0.215
+- **ERROR** `LENGTH` — `EST.6:4`: ratio=0.227
+- **ERROR** `LANGUAGE` — `EZK.22:6`: Iată că în tine, toți voievozii lui Israel își întrebuințează puterea ca să verse sânge.
+- **ERROR** `LANGUAGE` — `EZK.22:9`: În tine sunt bârfitori, ca să verse sânge; în tine se mănâncă jertfe idolești pe munți; în mijlocul tău se fac desfrânări.
+- **ERROR** `LENGTH` — `EZK.3:18`: ratio=0.187
+- **ERROR** `LENGTH` — `EZK.33:8`: ratio=0.221
+- **ERROR** `LENGTH` — `EZK.36:4`: ratio=0.216
+- **ERROR** `LENGTH` — `EZK.8:5`: ratio=0.273
+- **ERROR** `LENGTH` — `ISA.57:10`: ratio=0.243
+- **ERROR** `LANGUAGE` — `ISA.59:7`: Picioarele lor aleargă spre rău și se grăbesc să verse sânge nevinovat; gândurile lor sunt gânduri nelegiuite, prăpădul și nimicirea sunt pe drumul lor.
+- **ERROR** `LENGTH` — `ISA.8:20`: ratio=0.193
+- **ERROR** `LENGTH` — `JDG.11:38`: ratio=0.144
+- **ERROR** `LENGTH` — `JDG.12:6`: ratio=0.248
+- **ERROR** `LENGTH` — `JDG.16:30`: ratio=0.179
+- **ERROR** `LENGTH` — `JDG.8:25`: ratio=0.277
+- **ERROR** `LENGTH` — `JER.2:8`: ratio=0.191
+- **ERROR** `LENGTH` — `JER.23:36`: ratio=0.246
+- **ERROR** `LENGTH` — `JER.4:2`: ratio=0.200
+- **ERROR** `LENGTH` — `JOB.37:6`: ratio=0.273
+- **ERROR** `LANGUAGE` — `JOB.38:37`: Cine poate să numere norii cu înțelepciune și să verse burdufurile cerurilor,
+- **ERROR** `LENGTH` — `JOL.1:15`: ratio=0.089
+- **ERROR** `LENGTH` — `MAL.1:13`: ratio=0.110
+- **ERROR** `LENGTH` — `MAL.2:14`: ratio=0.143
+- **ERROR** `LENGTH` — `MAN.1:8`: ratio=0.226
+- **ERROR** `LENGTH` — `MAN.1:13`: ratio=0.232
+- **ERROR** `LANGUAGE` — `MIC.7:2`: S-a dus omul de bine din țară și nu mai este niciun om cinstit printre oameni; toți stau la pândă ca să verse sânge, fiecare întinde o cursă fratelui său.
+- **ERROR** `LANGUAGE` — `PRO.1:16`: Căci picioarele lor aleargă la rău și se grăbesc să verse sânge.
+- **ERROR** `LANGUAGE` — `PRO.12:6`: Cuvintele celor răi sunt niște curse ca să verse sânge, dar gura celor fără prihană îi izbăvește. –
+- **ERROR** `LENGTH` — `PRO.20:14`: ratio=0.084
+- **ERROR** `LENGTH` — `PRO.24:12`: ratio=0.130
+- **ERROR** `LANGUAGE` — `PRO.5:16`: Ce, vrei să ți se verse izvoarele afară? Și să-ți curgă râurile pe piețele de obște?
+- **ERROR** `LENGTH` — `PSA.102:1`: ratio=4.024
+- **ERROR** `LENGTH` — `PSA.18:1`: ratio=8.741
+- **ERROR** `LENGTH` — `PSA.57:1`: ratio=0.264
+- **ERROR** `LENGTH` — `PSA.61:1`: ratio=4.229
+- **ERROR** `LENGTH` — `ZEC.11:10`: ratio=0.252
+- **ERROR** `LENGTH` — `ZEC.5:8`: ratio=0.262
+- **ERROR** `WLC_BOOK_TOTAL` — `1CH`: candidate=942, WLC=943
+- **ERROR** `WLC_BOOK_TOTAL` — `1KI`: candidate=816, WLC=817
+- **ERROR** `WLC_BOOK_TOTAL` — `1SA`: candidate=810, WLC=811
+- **ERROR** `WLC_BOOK_TOTAL` — `ISA`: candidate=1292, WLC=1291
+- **ERROR** `WLC_BOOK_TOTAL` — `NEH`: candidate=406, WLC=405
+- **ERROR** `WLC_BOOK_TOTAL` — `PSA`: candidate=2461, WLC=2527
