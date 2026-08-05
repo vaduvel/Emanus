@@ -45,6 +45,9 @@ jobs:
       - name: Prepare unified source lock and ledger
         run: python3 scripts/prepare-biblia-emanus-nt.py --workbook-dir /tmp/emanus-nt-workbooks
 
+      - name: Repair NT critical reference note schema
+        run: python3 scripts/tmp-fix-nt-reference-notes.py
+
       - name: Validate NT versification
         run: python3 scripts/check-biblia-emanus-versification.py
 
@@ -52,8 +55,7 @@ jobs:
         continue-on-error: true
         run: python3 scripts/tmp-audit-nt-benchmarks.py
 
-      - name: Report NT reference note schema defects
-        continue-on-error: true
+      - name: Audit NT reference note schema
         run: python3 scripts/tmp-audit-nt-reference-notes.py
 
       - name: Validate Biblia Emanus corpus
