@@ -1,0 +1,45 @@
+name: Bootstrap OT repair 5
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-ot-repair5
+    paths:
+      - 'scripts/bootstrap-ot-repair5.py'
+      - '.github/workflows/bootstrap-ot-repair5.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-ot-repair5
+          fetch-depth: 1
+      - name: Fetch quarantined PR40 source
+        run: |
+          git fetch --depth=1 origin agent/biblia-emanus-ot-and-apocrypha
+          git worktree add --detach .repair-source FETCH_HEAD
+      - name: Import isolated candidates
+        run: python3 scripts/bootstrap-ot-repair5.py
+      - name: Pin public-domain deuterocanon bridge source
+        run: |
+          mkdir -p docs/data/biblia-emanus-candidates/sources
+          curl --fail --location --retry 3 \
+            https://ebible.org/Scriptures/eng-webbe_usfm.zip \
+            --output docs/data/biblia-emanus-candidates/sources/eng-webbe_usfm.zip
+          sha256sum docs/data/biblia-emanus-candidates/sources/eng-webbe_usfm.zip \
+            > docs/data/biblia-emanus-candidates/sources/eng-webbe_usfm.zip.sha256
+      - name: Commit isolated candidate corpus
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus-candidates docs/biblia-emanus/PR40-QUARANTINED-CATALOG.json docs/biblia-emanus/OT-REPAIR5-BOOTSTRAP.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'feat(bible): import quarantined OT and deuterocanon candidates'
+            git push origin HEAD:agent/biblia-emanus-ot-repair5
+          fi
