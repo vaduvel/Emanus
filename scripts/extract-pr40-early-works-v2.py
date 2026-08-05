@@ -26,32 +26,25 @@ module.BARE_NUMBER_RE = re.compile(r"^([1-9][0-9]{0,2})\s*[.)]?$", re.S)
 
 
 def find_text_start(lines: list[str], chapter: int) -> int:
-    """Choose the real chapter body, never the repeated CCEL navigation label."""
-    candidates: list[int] = []
-    pattern = re.compile(rf"^chapter\s+{chapter}$", re.I)
-    for index, line in enumerate(lines):
-        normalized = module.clean(line).strip("[]#* ")
-        if pattern.fullmatch(normalized):
-            candidates.append(index)
-    if not candidates:
-        samples = [line for line in lines if "chapter" in line.casefold()][:20]
-        raise RuntimeError(f"chapter heading {chapter!r} not found; samples={samples!r}")
+    """Select the unique exact ``[Chapter N]`` body heading on CCEL.
 
-    # The true heading is followed by verse 1. The navigation occurrence is
-    # followed by a list of chapter links and must never be selected.
-    for index in candidates:
-        for probe in lines[index + 1 : index + 20]:
-            if module.heading_chapter(probe) is not None:
-                break
-            verse_match = module.VERSE_RE.match(probe)
-            bare_match = module.BARE_NUMBER_RE.fullmatch(probe)
-            if verse_match and int(verse_match.group(1)) == 1:
-                return index + 1
-            if bare_match and int(bare_match.group(1)) == 1:
-                return index + 1
-    raise RuntimeError(
-        f"chapter heading {chapter!r} found but no following verse 1; candidates={candidates!r}"
-    )
+    The navigation footer is rendered as ``Chapter: 1 | 2 | ...`` and therefore
+    is not an exact heading. Requiring verse 1 to occur within an arbitrary
+    number of BeautifulSoup text nodes was brittle and rejected valid pages.
+    """
+    pattern = re.compile(rf"^chapter\s+{chapter}$", re.I)
+    candidates = [
+        index
+        for index, line in enumerate(lines)
+        if pattern.fullmatch(module.clean(line).strip("[]#* "))
+    ]
+    if len(candidates) != 1:
+        samples = [line for line in lines if "chapter" in line.casefold()][:20]
+        raise RuntimeError(
+            f"expected one exact chapter heading {chapter!r}; "
+            f"candidates={candidates!r}; samples={samples!r}"
+        )
+    return candidates[0] + 1
 
 
 def validate_verses(book_id: str, chapter: int, verses: list[dict[str, Any]]) -> list[str]:
