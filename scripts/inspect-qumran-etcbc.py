@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Inspect the ETCBC DSS dataset and map PR40 Qumran titles to real documents.
+"""Map every fabricated PR40 Qumran title to authentic manuscript sigla.
 
-This stage does not copy publication text. It records the exact dataset commit,
-license, TF features, document names and likely matches for the nine fabricated
-PR40 works.
+This stage inventories only. It records the ETCBC DSS commit, dataset policy,
+Text-Fabric features and the exact scroll families that will replace PR40's
+invented chapter payloads. No publication text is copied here.
 """
 from __future__ import annotations
 
+import hashlib
 import json
-import re
 import subprocess
 from pathlib import Path
 from typing import Any
@@ -18,16 +18,52 @@ CACHE = ROOT / ".cache" / "etcbc-dss"
 OUT = ROOT / "docs" / "biblia-emanus" / "PR40-QUMRAN-ETCBC-INVENTORY.json"
 REPO = "https://github.com/ETCBC/dss.git"
 
-TARGETS: dict[str, list[str]] = {
-    "ADD_PSA": ["additional psalm", "apocryphal psalm", "psalm"],
-    "COMM_REG": ["community rule", "serekh hayahad", "1qs"],
-    "GEN_APO": ["genesis apocryphon", "1qapgen"],
-    "GIANTS": ["book of giants", "giants"],
-    "HAB_COM": ["habakkuk pesher", "commentary on habakkuk", "1qpha"],
-    "HODAYOT": ["hodayot", "thanksgiving hymns", "1qh"],
-    "SABB_SAC": ["songs of the sabbath sacrifice", "sabbath sacrifice", "4q400"],
-    "TEMP_SCR": ["temple scroll", "11q19", "11qta"],
-    "WAR_SCR": ["war scroll", "1qm"],
+TARGET_SCROLLS: dict[str, dict[str, Any]] = {
+    "ADD_PSA": {
+        "name": "Psalmi și compoziții poetice suplimentare",
+        "scrolls": ["11Q5", "11Q6", "4Q88", "4Q380", "4Q381"],
+        "publicationForm": "multi-scroll-fragment-edition",
+    },
+    "COMM_REG": {
+        "name": "Regula Comunității",
+        "scrolls": ["1QS", "1QSa", "1QSb"],
+        "publicationForm": "multi-scroll-fragment-edition",
+    },
+    "GEN_APO": {
+        "name": "Apocriful Genezei",
+        "scrolls": ["1Q20"],
+        "publicationForm": "single-scroll-fragment-edition",
+    },
+    "GIANTS": {
+        "name": "Cartea Uriașilor",
+        "scrolls": ["1Q23", "2Q26", "4Q203", "4Q206", "4Q530", "4Q531", "4Q532", "4Q533", "6Q8"],
+        "publicationForm": "reconstructed-multi-scroll-fragment-edition",
+    },
+    "HAB_COM": {
+        "name": "Comentariul la Habacuc",
+        "scrolls": ["1QpHab"],
+        "publicationForm": "single-scroll-fragment-edition",
+    },
+    "HODAYOT": {
+        "name": "Imnurile de mulțumire / Hodayot",
+        "scrolls": ["1QHa"],
+        "publicationForm": "single-scroll-fragment-edition",
+    },
+    "SABB_SAC": {
+        "name": "Cântările jertfei de Sabat",
+        "scrolls": ["4Q400", "4Q401", "4Q402", "4Q403", "4Q404", "4Q405", "4Q406", "4Q407", "11Q17"],
+        "publicationForm": "reconstructed-multi-scroll-fragment-edition",
+    },
+    "TEMP_SCR": {
+        "name": "Sulul Templului",
+        "scrolls": ["11Q19", "11Q20"],
+        "publicationForm": "multi-scroll-fragment-edition",
+    },
+    "WAR_SCR": {
+        "name": "Sulul Războiului",
+        "scrolls": ["1QM", "4Q491", "4Q492", "4Q493", "4Q494", "4Q495", "4Q496", "4Q497"],
+        "publicationForm": "reconstructed-multi-scroll-fragment-edition",
+    },
 }
 
 
@@ -35,21 +71,16 @@ def run(*args: str, cwd: Path | None = None) -> str:
     return subprocess.check_output(list(args), cwd=cwd, text=True, stderr=subprocess.STDOUT)
 
 
-def normalize(value: str) -> str:
-    return " ".join(re.findall(r"[a-z0-9]+", value.lower()))
-
-
 def parse_tf_values(path: Path) -> dict[int, str]:
-    """Read a simple node feature from TF; supports slot ranges and single nodes."""
     values: dict[int, str] = {}
     if not path.exists():
         return values
     node = 0
-    in_data = False
+    data_started = False
     for raw in path.read_text(encoding="utf-8").splitlines():
-        if not in_data:
+        if not data_started:
             if raw == "":
-                in_data = True
+                data_started = True
             continue
         if not raw or raw.startswith("@"):
             continue
@@ -58,12 +89,12 @@ def parse_tf_values(path: Path) -> dict[int, str]:
             node += 1
             values[node] = parts[0]
             continue
-        spec, value = parts
-        if spec.isdigit():
-            node = int(spec)
+        specification, value = parts
+        if specification.isdigit():
+            node = int(specification)
             values[node] = value
-        elif "-" in spec and all(piece.isdigit() for piece in spec.split("-", 1)):
-            start, end = map(int, spec.split("-", 1))
+        elif "-" in specification and all(piece.isdigit() for piece in specification.split("-", 1)):
+            start, end = map(int, specification.split("-", 1))
             for current in range(start, end + 1):
                 values[current] = value
             node = end
@@ -78,77 +109,59 @@ def main() -> None:
     commit = run("git", "rev-parse", "HEAD", cwd=CACHE).strip()
     license_text = (CACHE / "LICENSE").read_text(encoding="utf-8", errors="replace")
 
-    tf_dirs = sorted(path for path in (CACHE / "tf").glob("*") if path.is_dir())
-    selected = tf_dirs[-1] if tf_dirs else None
-    features: list[str] = []
-    document_candidates: list[str] = []
-    feature_samples: dict[str, list[str]] = {}
-    if selected:
-        features = sorted(path.stem for path in selected.glob("*.tf"))
-        for likely in ("book", "document", "scroll", "manuscript", "name", "chapter", "column", "fragment"):
-            path = selected / f"{likely}.tf"
-            values = parse_tf_values(path)
-            if values:
-                distinct = list(dict.fromkeys(value for value in values.values() if value))
-                feature_samples[likely] = distinct[:2000]
-                if likely in {"book", "document", "scroll", "manuscript", "name"}:
-                    document_candidates.extend(distinct)
+    tf_directories = sorted(path for path in (CACHE / "tf").glob("*") if path.is_dir())
+    selected = tf_directories[-1] if tf_directories else None
+    if selected is None:
+        raise SystemExit("ETCBC DSS has no Text-Fabric directory")
 
-    unique_documents = list(dict.fromkeys(document_candidates))
+    features = sorted(path.stem for path in selected.glob("*.tf"))
+    scroll_values = list(dict.fromkeys(parse_tf_values(selected / "scroll.tf").values()))
+    scroll_set = set(scroll_values)
     mappings: dict[str, dict[str, Any]] = {}
-    for target, aliases in TARGETS.items():
-        scored: list[tuple[int, str]] = []
-        for document in unique_documents:
-            key = normalize(document)
-            score = 0
-            for alias in aliases:
-                alias_key = normalize(alias)
-                if alias_key == key:
-                    score = max(score, 1000 + len(alias_key))
-                elif alias_key in key:
-                    score = max(score, 500 + len(alias_key))
-                elif all(token in key for token in alias_key.split()):
-                    score = max(score, 100 + len(alias_key))
-            if score:
-                scored.append((score, document))
-        scored.sort(reverse=True)
+    missing: list[dict[str, str]] = []
+    for target, metadata in TARGET_SCROLLS.items():
+        present = [scroll for scroll in metadata["scrolls"] if scroll in scroll_set]
+        absent = [scroll for scroll in metadata["scrolls"] if scroll not in scroll_set]
         mappings[target] = {
-            "aliases": aliases,
-            "matches": [document for _score, document in scored[:50]],
-            "resolved": bool(scored),
+            **metadata,
+            "presentScrolls": present,
+            "absentScrolls": absent,
+            "resolved": not absent,
         }
+        missing.extend({"bookId": target, "scroll": scroll} for scroll in absent)
 
     payload = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "repository": REPO,
         "commit": commit,
-        "repositoryLicenseFileSha256": __import__("hashlib").sha256(license_text.encode("utf-8")).hexdigest(),
+        "repositoryLicenseFileSha256": hashlib.sha256(license_text.encode("utf-8")).hexdigest(),
         "datasetPolicy": {
             "publicationCollection": "qumran-research",
-            "license": "CC BY-NC 4.0 for the DSS text/morphology data based on Abegg; MIT applies to repository software",
+            "license": "CC BY-NC 4.0 for DSS text/morphology data based on Abegg; MIT for repository software",
             "commercialUseAllowed": False,
             "attributionRequired": True,
             "fragmentaryTextMustRemainFragmentary": True,
+            "reconstructedOrderMustBeMarked": True,
         },
-        "tfVersionDirectory": str(selected.relative_to(CACHE)) if selected else None,
+        "tfVersionDirectory": str(selected.relative_to(CACHE)),
         "features": features,
-        "featureSamples": feature_samples,
-        "documentCandidateCount": len(unique_documents),
-        "documentCandidates": unique_documents,
+        "scrollCount": len(scroll_values),
+        "scrolls": scroll_values,
         "targetMappings": mappings,
-        "allTargetsResolved": all(record["resolved"] for record in mappings.values()),
+        "missingExpectedScrolls": missing,
+        "allTargetsResolved": not missing,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({
         "commit": commit,
         "tfVersionDirectory": payload["tfVersionDirectory"],
-        "featureCount": len(features),
-        "documentCandidateCount": len(unique_documents),
+        "scrollCount": len(scroll_values),
         "resolved": {target: record["resolved"] for target, record in mappings.items()},
+        "missing": missing,
     }, ensure_ascii=False, indent=2))
-    if not selected or not unique_documents:
-        raise SystemExit("Could not locate document names in ETCBC DSS TF data")
+    if missing:
+        raise SystemExit("One or more expected Qumran scroll sigla are absent; inspect inventory")
 
 
 if __name__ == "__main__":
