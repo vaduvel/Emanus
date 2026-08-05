@@ -52,6 +52,10 @@ jobs:
         continue-on-error: true
         run: python3 scripts/tmp-audit-nt-benchmarks.py
 
+      - name: Report NT reference note schema defects
+        continue-on-error: true
+        run: python3 scripts/tmp-audit-nt-reference-notes.py
+
       - name: Validate Biblia Emanus corpus
         run: python3 scripts/check-biblia-emanus.py
 
