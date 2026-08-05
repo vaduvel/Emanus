@@ -112,7 +112,7 @@ def patch_validator() -> None:
     text = must_replace(
         text,
         '    compared_verses = validate_pinned_benchmark_comparison(path, data, source_data)',
-        '    compared_verses = (\n        0 if placeholder_draft else validate_pinned_benchmark_comparison(path, data, source_data)\n    )',
+        '    compared_verses = (\n        0\n        if status in {"draft", "in_review"}\n        else validate_pinned_benchmark_comparison(path, data, source_data)\n    )',
         str(path),
     )
     old_nt_gate = '''            if nt_status != {
