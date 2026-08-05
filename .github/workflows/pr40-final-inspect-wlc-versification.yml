@@ -1,0 +1,37 @@
+name: PR40 final — inspect WLC versification
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-pr40-final
+    paths:
+      - 'scripts/inspect-wlc-alternate-versification.py'
+      - '.github/workflows/pr40-final-inspect-wlc-versification.yml'
+  pull_request:
+    paths:
+      - 'scripts/inspect-wlc-alternate-versification.py'
+      - '.github/workflows/pr40-final-inspect-wlc-versification.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-final-wlc-versification-${{ github.event_name }}
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect alternate chapter and verse markers
+        run: python3 scripts/inspect-wlc-alternate-versification.py
+      - name: Upload versification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-wlc-versification
+          path: docs/biblia-emanus/PR40-WLC-ALTERNATE-VERSIFICATION.json
+          if-no-files-found: error
+          retention-days: 7
