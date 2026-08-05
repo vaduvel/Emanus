@@ -1,0 +1,1617 @@
+{
+  "schemaVersion": 1,
+  "sourceSnapshots": {
+    "eng-webbe": {
+      "url": "https://ebible.org/Scriptures/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257"
+    },
+    "grcbrent": {
+      "url": "https://ebible.org/Scriptures/grcbrent_usfm.zip",
+      "sha256": "7c3d95d05b542bbf67348e6c28430b7cedfc83858b9125d3d05c574a423c28c6"
+    },
+    "grclxx": {
+      "url": "https://ebible.org/Scriptures/grclxx_usfm.zip",
+      "sha256": "2b0fc204f6a2e5283a4ef1654b25b76cf23c32a910f5534c4e076c9e85380b7e"
+    }
+  },
+  "translationModel": {
+    "id": "Helsinki-NLP/opus-mt-en-ro",
+    "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9",
+    "license": "Apache-2.0"
+  },
+  "books": {
+    "1ES": {
+      "chapters": 9,
+      "verses": 448
+    },
+    "1MA": {
+      "chapters": 16,
+      "verses": 924
+    },
+    "2MA": {
+      "chapters": 15,
+      "verses": 555
+    },
+    "3MA": {
+      "chapters": 7,
+      "verses": 228
+    },
+    "BAR": {
+      "chapters": 6,
+      "verses": 213
+    },
+    "ESG": {
+      "chapters": 10,
+      "verses": 205
+    },
+    "JDT": {
+      "chapters": 16,
+      "verses": 339
+    },
+    "MAN": {
+      "chapters": 1,
+      "verses": 15
+    },
+    "PS2": {
+      "chapters": 1,
+      "verses": 7
+    },
+    "SIR": {
+      "chapters": 51,
+      "verses": 1359
+    },
+    "TOB": {
+      "chapters": 14,
+      "verses": 244
+    },
+    "WIS": {
+      "chapters": 19,
+      "verses": 436
+    }
+  },
+  "summary": {
+    "books": 12,
+    "chapters": 165,
+    "verses": 4973,
+    "firstPassIssues": 128,
+    "publicationReady": false
+  },
+  "issues": [
+    {
+      "reference": "1ES.2:24",
+      "codes": [
+        "ENGLISH_RESIDUE"
+      ],
+      "english": "Therefore now we do declare to you, O lord the king, that if this city is built again, and its walls set up again, you will from then on have no passage into Coelesyria and Phoenicia.”",
+      "romanian": "De aceea, acum vă declarăm, o, lord regele, că dacă această cetate va fi construită din nou şi zidurile ei vor fi ridicate din nou, de atunci nu veţi mai avea trecere spre Coelesyria şi până la Păşune.",
+      "greekCoverage": {
+        "grcbrent": true,
+        "grclxx": true
+      }
+    },
+    {
+      "reference": "1ES.4:14",
+      "codes": [
+        "ENGLISH_RESIDUE"
+      ],
+      "english": "“O sirs, isn’t the king great, and men are many, and isn’t wine strong? Who is it then who rules them, or has the lordship over them? Aren’t they women?",
+      "romanian": "O, voi domnilor, nu este regele mare, și bărbații sunt mulți, și nu este vin puternic? Cine este atunci cine le conduce, sau are lord peste ei? Sunt ele femei?",
+      "greekCoverage": {
+        "grcbrent": true,
+        "grclxx": true
+      }
+    },
+    {
+      "reference": "1MA.10:67",
+      "codes": [
+        "NUMBER_TOKEN_CHANGE"
+      ],
+      "english": "In the one hundred and sixty-fifth year, Demetrius, son of Demetrius, came out of Crete into the land of his ancestors.",
+      "romanian": "În al 65-lea an, Demetrius, fiul lui Demetrius, a ieşit din Creta în ţara strămoşilor săi.",
+      "greekCoverage": {
+        "grcbrent": true,
+        "grclxx": true
+      }
+    },
+    {
+      "reference": "1MA.14:1",
+      "codes": [
+        "NUMBER_TOKEN_CHANGE"
+      ],
+      "english": "In the one hundred and seventy-second year, King Demetrius gathered his forces together, and went into Media to get help, that he might fight against Tryphon.",
+      "romanian": "În cel de-al 70-lea an, regele Demetrius și-a adunat forțele și a intrat în mass-media pentru a obține ajutor, ca să lupte împotriva lui Tryphon.",
+      "greekCoverage": {
+        "grcbrent": true,
+        "grclxx": true
+      }
+    },
+    {
+      "reference": "2MA.10:31",
+      "codes": [
+        "NUMBER_TOKEN_CHANGE"
+      ],
+      "english": "Twenty thousand and five hundred were slain, beside six hundred cavalry.",
+      "romanian": "2 500 de oameni au fost ucişi, afară de şase sute de cavaleri.",
+      "greekCoverage": {
+        "grcbrent": true,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:1",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "A copy of a letter that Jeremy sent to those who were to be led captives into Babylon by the king of the Babylonians, to give them the message that God commanded him.",
+      "romanian": "O copie a unei scrisori pe care Jeremy le - a trimis - o celor care urmau să fie duşi captivi în Babilon de către regele babilonienilor, pentru a le transmite mesajul pe care i l - a poruncit Dumnezeu.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:2",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Because of the sins which you have committed before God, you will be led away captives to Babylon by Nabuchodonosor king of the Babylonians.",
+      "romanian": "Datorită păcatelor pe care le - aţi comis înaintea lui Dumnezeu, veţi fi duşi captivi în Babilon de Nabuchodonosor, regele babilonienilor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:3",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "So when you come to Babylon, you will remain there many years, and for a long season, even for seven generations. After that, I will bring you out peacefully from there.",
+      "romanian": "Cînd veţi veni în Babilon, veţi rămînea acolo mulţi ani, şi pentru o lungă perioadă de timp, chiar şi pentru şapte generaţii. După aceea, vă voi scoate în pace de acolo.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:4",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "But now you will see in Babylon gods of silver, gold, and wood carried on shoulders, which cause the nations to fear.",
+      "romanian": "Dar acum veţi vedea în Babilon dumnezei de argint, aur şi lemn purtate pe umeri, care fac neamurile să se teamă.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:5",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Beware therefore that you in no way become like these foreigners. Don’t let fear take hold of you because of them when you see the multitude before them and behind them, worshipping them.",
+      "romanian": "Feriţi-vă să nu vă asemănaţi cu străinii aceştia. Să nu vă apuce frica din pricina lor, când veţi vedea mulţimea dinaintea lor şi în spatele lor, închinându-vă lor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:6",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "But say in your hearts, “O Lord, we must worship you.”",
+      "romanian": "Dar spune în inimile voastre, Doamne, trebuie să vă închinăm.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:7",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For my angel is with you, and I myself care for your souls.",
+      "romanian": "Căci îngerul meu este cu voi, şi mie îmi pasă de sufletele voastre.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:8",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For their tongue is polished by the workman, and they themselves are overlaid with gold and with silver; yet they are only fake, and can’t speak.",
+      "romanian": "Căci limba lor este lustruită de muncitor, şi ei înşişi sunt acoperiţi cu aur şi argint; totuşi ei sunt doar falşi şi nu pot vorbi.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:9",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And taking gold, as if it were for a virgin who loves to be happy, they make crowns for the heads of their gods.",
+      "romanian": "Şi luând aur, ca şi cum ar fi fost pentru o virgină care iubeşte să fie fericită, ei fac coroane pentru capetele zeilor lor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:10",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Sometimes also the priests take gold and silver from their gods, and spend it on themselves.",
+      "romanian": "Uneori, preoţii iau aur şi argint de la dumnezeii lor, şi îl cheltuiesc pe ei înşişi.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:11",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They will even give some of it to the common prostitutes. They dress them like men with garments, even the gods of silver, gods of gold, and gods of wood.",
+      "romanian": "Ei vor da chiar şi o parte din ea prostituatelor obişnuite; le vor îmbrăca ca nişte oameni cu haine, chiar şi zeii argintului, zeii aurului şi dumnezeii lemnului.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:12",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Yet these gods can’t save themselves from rust and moths, even though they are covered with purple garments.",
+      "romanian": "Totuşi aceşti zei nu se pot salva de rugină şi molii, chiar dacă sunt acoperiţi cu haine purpurii.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:13",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They wipe their faces because of the dust of the temple, which is thick upon them.",
+      "romanian": "Ei îşi şterg feţele din cauza ţărînii Templului, care este gros peste ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:14",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And he who can’t put to death one who offends against him holds a sceptre, as though he were judge of a country.",
+      "romanian": "Şi cel care nu poate să-l omoare pe cel care îl jigneşte deţine un sceptr, ca şi cum ar judeca o ţară.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:15",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "He has also a dagger in his right hand, and an axe, but can’t deliver himself from war and robbers.",
+      "romanian": "El are, de asemenea, un pumnal în mâna dreaptă, și un topor, dar nu se poate elibera de război și hoți.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:16",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "By this they are known not to be gods. Therefore don’t fear them.",
+      "romanian": "Prin aceasta ei nu sunt cunoscuti ca fiind zei, de aceea nu te teme de ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:17",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For like a vessel that a man uses is worth nothing when it is broken, even so it is with their gods. When they are set up in the temples, their eyes are full of dust through the feet of those who come in.",
+      "romanian": "Căci ca un vas pe care omul îl foloseşte nu valorează nimic cînd este zdrobit, aşa este şi cu dumnezeii lor. Cînd sînt aşezaţi în temple, ochii lor sînt plini de ţărînă prin picioarele celor ce intră.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:18",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "As the courts are secured on every side upon him who offends the king, as being committed to suffer death, even so the priests secure their temples with doors, with locks, and bars, lest they be carried off by robbers.",
+      "romanian": "În timp ce curţile sînt păzite de fiecare parte a celui ce -l jigneşte pe împărat, ca şi cum s'ar fi încredinţat morţii, tot aşa preoţii îşi încuie templele cu uşi, cu încuietori şi zăvoare, ca să nu fie luaţi de tâlhari.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:19",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They light candles for them, yes, more than for themselves, even though they can’t see one.",
+      "romanian": "Ei aprind lumânări pentru ei, da, mai mult decât pentru ei înșiși, chiar dacă ei nu pot vedea unul.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:20",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They are like one of the beams of the temple. Men say their hearts are eaten out when things creeping out of the earth devour both them and their clothing. They don’t feel it",
+      "romanian": "Ele sunt ca una dintre grinzile templului. Oamenii spun că inimile lor sunt mâncate atunci când lucruri care se strecoară din pământ le mănâncă atât ei cât şi hainele lor. Ei nu simt asta.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:21",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "when their faces are blackened through the smoke that comes out of the temple.",
+      "romanian": "când li se întunecă feţele prin fumul care iese din templu.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:22",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Bats, swallows, and birds land on their bodies and heads. So do the cats.",
+      "romanian": "Liliecii, rândunelele şi păsările aterizează pe trupurile şi capetele lor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:23",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "By this you may know that they are no gods. Therefore don’t fear them.",
+      "romanian": "Prin aceasta s-ar putea ști că ei nu sunt zei. Prin urmare, nu te teme de ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:24",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Notwithstanding the gold with which they are covered to make them beautiful, unless someone wipes off the tarnish, they won’t shine; for they didn’t even feel it when they were molten.",
+      "romanian": "În ciuda aurului cu care sunt acoperiţi ca să-i facă frumoşi, dacă cineva nu şterge murdăria, ei nu vor străluci, pentru că nici măcar nu l-au simţit când au fost topite.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:25",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Things in which there is no breath are bought at any cost.",
+      "romanian": "Lucrurile în care nu există nici o respirație sunt cumpărate cu orice preț.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:26",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Having no feet, they are carried upon shoulders. By this, they declare to men that they are worth nothing.",
+      "romanian": "Neavând picioare, ei sînt purtaţi pe umeri; prin aceasta, ei declară oamenilor că nu valorează nimic.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:27",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Those who serve them are also ashamed, for if they fall to the ground at any time, they can’t rise up again by themselves. If they are bowed down, they can’t make themselves straight; but the offerings are set before them, as if they were dead men.",
+      "romanian": "Şi celor ce le slujesc le este ruşine, căci dacă cad la pămînt în orice moment, ei se pot scula din nou singuri. Dacă sînt aplecaţi, nu se pot îndrepta; dar jertfele sînt puse înaintea lor, ca şi cum ar fi morţi.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:28",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And the things that are sacrificed to them, their priests sell and spend. In like manner, their wives also lay up part of it in salt; but to the poor and to the impotent they give none of it.",
+      "romanian": "Şi lucrurile jertfite lor, preoţii lor vindeau şi cheltuiau; şi nevestele lor puneau o parte din ele în sare; dar săracilor şi neputincioşilor nu le dădeau nimic din ele.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:29",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "The menstruous woman and the woman in childbed touch their sacrifices, knowing therefore by these things that they are no gods. Don’t fear them.",
+      "romanian": "Femeia cu menstruaţie şi femeia în pat de copil îşi ating jertfele, ştiind deci prin aceste lucruri că ei nu sunt dumnezei. Nu te teme de ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:30",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For how can they be called gods? Because women set food before the gods of silver, gold, and wood.",
+      "romanian": "Căci cum pot fi numiţi dumnezei? Pentru că femeile pun hrană înaintea zeilor argintului, aurului şi lemnului.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:31",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And in their temples the priests sit on seats, having their clothes torn and their heads and beards shaven, and nothing on their heads.",
+      "romanian": "În templele lor, preoţii stau pe scaune, cu hainele rupte, cu capetele şi bărbile rase, şi nimic pe cap.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:32",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They roar and cry before their gods, as men do at the feast when one is dead.",
+      "romanian": "Ei răcnesc şi strigă înaintea dumnezeilor lor, aşa cum fac oamenii la sărbătoare când unul este mort.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:33",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "The priests also take off garments from them and clothe their wives and children with them.",
+      "romanian": "Preoţii îşi scot hainele de la ei şi îşi îmbracă nevestele şi copiii cu ele.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:34",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Whether it is evil or good what one does to them, they are not able to repay it. They can’t set up a king or put him down.",
+      "romanian": "Fie că este rău sau bine ceea ce le face cineva, ei nu sunt în măsură să-l răsplătească. Ei nu pot stabili un rege sau pune-l jos.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:35",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "In like manner, they can neither give riches nor money. Though a man make a vow to them and doesn’t keep it, they will never exact it.",
+      "romanian": "În acelaşi mod, ei nu pot nici să dea bogăţii, nici bani, deşi un om le face un jurământ şi nu-l ţine, ei nu-l vor împlini niciodată.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:36",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They can save no man from death. They can’t deliver the weak from the mighty.",
+      "romanian": "Ei nu pot scăpa pe nimeni de moarte, şi nu pot scăpa pe cei slabi de cei puternici.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:37",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They can’t restore a blind man to his sight, or deliver anyone who is in distress.",
+      "romanian": "Ei nu pot restabili un orb la vederea lui, sau să elibereze pe oricine este în primejdie.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:38",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They can show no mercy to the widow, or do good to the fatherless.",
+      "romanian": "Ei nu pot arăta îndurare văduvei, nici nu pot face bine orfanului.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:39",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They are like the stones that are cut out of the mountain, these gods of wood that are overlaid with gold and with silver. Those who minister to them will be confounded.",
+      "romanian": "Ei sînt ca pietrele cari sînt smulse din munte, aceşti dumnezei din lemn, cari sînt acoperiţi cu aur şi cu argint; cei ce le slujesc, vor fi uimiţi.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:40",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "How could a man then think or say that they are gods, when even the Chaldeans themselves dishonour them?",
+      "romanian": "Cum ar putea atunci un om să creadă sau să spună că sunt dumnezei, când chiar şi Haldeii înşişi îi dezonorează?",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:41",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "If they shall see one mute who can’t speak, they bring him and ask him to call upon Bel, as though he were able to understand.",
+      "romanian": "Dacă vor vedea un mut care nu poate vorbi, îl vor aduce şi-l vor ruga să-l cheme pe Bel, ca şi cum ar putea înţelege.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:42",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Yet they can’t perceive this themselves, and forsake them; for they have no understanding.",
+      "romanian": "Ei pot însă să-şi dea seama şi să-i părăsească, căci ei nu pricep nimic.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:43",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "The women also with cords around them sit in the ways, burning bran for incense; but if any of them, drawn by someone who passes by, lies with him, she reproaches her fellow, that she was not thought as worthy as herself and her cord wasn’t broken.",
+      "romanian": "Femeile, de asemenea, cu funii în jurul lor stau pe căi, arzând tărâţe pentru tămâie; dar dacă vreunul dintre ele, atras de cineva care trece pe lângă el, se află cu el, ea reproşează pe aproapele ei, că ea nu a fost considerat la fel de vrednic ca ea însăşi şi cordonul ei nu a fost rupt.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:44",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Whatever is done amongst them is false. How could a man then think or say that they are gods?",
+      "romanian": "Ceea ce se face printre ei este fals. Cum ar putea un om să gândească sau să spună că sunt zei?",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:45",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They are fashioned by carpenters and goldsmiths. They can be nothing else than what the workmen make them to be.",
+      "romanian": "Sunt modelaţi de tâmplari şi de aurari, nu pot fi altceva decât ceea ce îi fac muncitorii să fie.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:46",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And they themselves who fashioned them can never continue long. How then should the things that are fashioned by them?",
+      "romanian": "Şi cei care i-au modelat nu mai pot continua mult. Cum ar trebui atunci lucrurile care sunt modelate de ei?",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:47",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For they have left lies and reproaches to those who come after.",
+      "romanian": "Căci au lăsat minciuni şi ocară celor care vin după ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:48",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For when there comes any war or plague upon them, the priests consult with themselves, where they may be hidden with them.",
+      "romanian": "Căci, cînd vine vreun război sau vreo plagă peste ei, preoţii se consultă cu ei înşişi, unde pot fi ascunşi împreună cu ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:49",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "How then can’t men understand that they are no gods, which can’t save themselves from war or from plague?",
+      "romanian": "Atunci cum pot oamenii să înţeleagă că ei nu sunt zei, care nu se pot salva de război sau de ciumă?",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:50",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For seeing they are only wood and overlaid with gold and silver, it will be known hereafter that they are false.",
+      "romanian": "Căci văzând că sunt numai lemne şi căptuşite cu aur şi argint, se va şti în continuare că sunt mincinoase.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:51",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "It will be manifest to all nations and kings that they are no gods, but the works of men’s hands, and that there is no work of God in them.",
+      "romanian": "Se va arăta tuturor naţiunilor şi regilor că ei nu sunt dumnezei, ci faptele oamenilor şi că nu este nici o lucrare a lui Dumnezeu în ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:52",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Who then may not know that they are not gods?",
+      "romanian": "Cine poate atunci să nu ştie că ei nu sunt zei?",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:53",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For they can’t set up a king in a land or give rain to men.",
+      "romanian": "Căci ei nu pot ridica un rege într-o ţară sau să dea ploaie oamenilor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:54",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They can’t judge their own cause, or redress a wrong, being unable; for they are like crows between heaven and earth.",
+      "romanian": "Ei nu pot judeca propria lor cauză, sau să îndrepte o nedreptate, fiind incapabili, pentru că ei sunt ca ciori între cer şi pământ.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:55",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For even when fire falls upon the house of gods of wood overlaid with gold or with silver, their priests will flee away, and escape, but they themselves will be burnt apart like beams.",
+      "romanian": "Căci, cînd va cădea foc peste casa dumnezeilor din lemn acoperit cu aur sau cu argint, preoţii lor vor fugi şi vor scăpa, dar ei înşişi vor fi arşi ca nişte grinzi.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:56",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Moreover they can’t withstand any king or enemies. How could a man then admit or think that they are gods?",
+      "romanian": "Mai mult decât atât, ei nu se pot împotrivi oricărui rege sau duşman. Cum ar putea un om să recunoască sau să creadă că sunt zei?",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:57",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Those gods of wood overlaid with silver or with gold aren’t able to escape from thieves or robbers.",
+      "romanian": "Acei zei din lemn acoperiti cu argint sau cu aur nu sunt capabili sa scape de hoti sau hoti.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:58",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "The gold, silver, and garments with which they are clothed—those who are strong will take from them, and go away with them. They won’t be able to help themselves.",
+      "romanian": "Aurul, argintul şi veşmintele cu care sunt îmbrăcaţi vor lua de la ei pe cei tari şi vor pleca împreună cu ei; nu vor putea să se ajute singuri.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:59",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Therefore it is better to be a king who shows his manhood, or else a vessel in a house profitable for whatever the owner needs, than such false gods—or even a door in a house, to keep the things safe that are in it, than such false gods; or better to be a pillar of wood in a palace than such false gods.",
+      "romanian": "De aceea este mai bine să fii un rege care-şi arată bărbăţia, sau un vas într-o casă profitabilă pentru orice are nevoie proprietarul, decât aceşti dumnezei falşi sau chiar o uşă într-o casă, pentru a păstra lucrurile care sunt în siguranţă în ea, decât aceşti dumnezei falşi; sau mai bine să fii un stâlp de lemn într-un palat decât aceşti dumnezei falşi.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:60",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For sun, moon, and stars, being bright and sent to do their jobs, are obedient.",
+      "romanian": "Căci soarele, luna şi stelele, fiind strălucitoare şi trimise să-şi facă treaba, sunt ascultători.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:61",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Likewise also the lightning when it flashes is beautiful to see. In the same way, the wind also blows in every country.",
+      "romanian": "De asemenea, de asemenea, fulgerul atunci când se flash-uri este frumos pentru a vedea. În același fel, vântul suflă, de asemenea, în fiecare țară.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:62",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And when God commands the clouds to go over the whole world, they do as they are told.",
+      "romanian": "Când Dumnezeu porunceşte norilor să străbată întreaga lume, ei fac cum li se spune.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:63",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And the fire sent from above to consume mountains and woods does as it is commanded; but these are to be compared to them neither in show nor power.",
+      "romanian": "Focul trimis de sus ca să consume munţii şi pădurile face cum li se porunceşte; dar acestea nu vor fi comparate cu ele nici în chip, nici în putere.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:64",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Therefore a man shouldn’t think or say that they are gods, seeing they aren’t able to judge causes or to do good to men.",
+      "romanian": "Prin urmare, un om nu ar trebui să gândească sau să spună că sunt zei, văzând că nu sunt capabili să judece cauze sau să facă bine oamenilor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:65",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Knowing therefore that they are no gods, don’t fear them.",
+      "romanian": "Ştiind deci că nu sunt dumnezei, nu te teme de ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:66",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For they can neither curse nor bless kings.",
+      "romanian": "Căci ei nu pot nici să blesteme, nici să binecuvânteze regi.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:67",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They can’t show signs in the heavens amongst the nations, or shine as the sun, or give light as the moon.",
+      "romanian": "Ei nu pot să arate semne în ceruri printre neamuri, nici să strălucească ca soarele, sau să dea lumină ca luna.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:68",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "The beasts are better than they; for they can get under a covert, and help themselves.",
+      "romanian": "Fiarele sînt mai bune decît ele, căci pot să se ascundă şi să se ajute singure.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:69",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "In no way then is it manifest to us that they are gods. Therefore don’t fear them.",
+      "romanian": "Atunci nu ni se arată oare că ei sunt dumnezei? De aceea nu vă temeţi de ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:70",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For as a scarecrow in a garden of cucumbers that keeps nothing, so are their gods of wood overlaid with gold and silver.",
+      "romanian": "Căci ca o sperietoare de ciori într-o grădină de castraveţi care nu păstrează nimic, la fel şi dumnezeii lor din lemn, acoperiţi cu aur şi argint.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:71",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Likewise also their gods of wood overlaid with gold and with silver are like a white thorn in an orchard that every bird sits upon. They are also like a dead body that is thrown out into the dark.",
+      "romanian": "De asemenea, dumnezeii lor din lemn acoperiti cu aur si argint sunt ca un spin alb intr-o livada pe care sta fiecare pasare. Ei sunt, de asemenea, ca un trup mort, care este aruncat in intuneric.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:72",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "You will know them to be no gods by the bright purple that rots upon them. They themselves will be consumed afterwards, and will be a reproach in the country.",
+      "romanian": "Voi veţi şti că nu vor fi dumnezei prin purpura strălucitoare care putrezeşte peste ei. Ei înşişi vor fi mistuiţi după aceea, şi vor fi ocară în ţară.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "BAR.6:73",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Better therefore is the just man who has no idols; for he will be far from reproach.",
+      "romanian": "De aceea mai bine este omul drept, care nu are idoli, căci el va fi departe de ocară.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:18",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "[He prayed to the Lord, making mention of all the works of the Lord.",
+      "romanian": "El s-a rugat Domnului, aducând aminte de toate lucrările Domnului.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:19",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "He said, “Lord God, you are king ruling over all, for all things are in your power, and there is no one who can oppose you in your purpose to save Israel;",
+      "romanian": "El a zis: ,,Doamne Dumnezeule, Tu domneşti peste toate, căci toate lucrurile sînt în puterea ta, şi nu este nimeni care să ţi se împotrivească în scopul tău de a salva pe Israel;",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:20",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "for you have made the sky and the earth and every wonderful thing under the sky.",
+      "romanian": "căci voi aţi făcut cerul, pământul şi tot ce este minunat sub cer.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:21",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "You are Lord of all, and there is no one who can resist you, Lord.",
+      "romanian": "Tu eşti Domnul tuturor, şi nimeni nu-ţi poate rezista, Doamne.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:22",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "You know all things. You know, Lord, that it is not in insolence, nor arrogance, nor love of glory, that I have done this, to refuse to bow down to the arrogant Haman.",
+      "romanian": "Tu ştii toate lucrurile. Doamne, ştii că nu este cu insolenţă, nici aroganţă, nici iubire de glorie, că am făcut acest lucru, să refuz să mă înclin în faţa arogantului Haman.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:23",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For I would gladly have kissed the soles of his feet for the safety of Israel.",
+      "romanian": "Căci aş fi sărutat cu bucurie tălpile picioarelor lui pentru siguranţa lui Israel.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:24",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "But I have done this that I might not set the glory of man above the glory of God. I will not worship anyone except you, my Lord, and I will not do these things in arrogance.",
+      "romanian": "Dar am făcut aceasta ca să nu pun slava omului mai presus de slava lui Dumnezeu. Nu mă voi închina decât ţie, Domnul meu, şi nu voi face aceste lucruri cu aroganţă.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:25",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And now, O Lord God, the King, the God of Abraham, spare your people, for our enemies are planning our destruction, and they have desired to destroy your ancient inheritance.",
+      "romanian": "Şi acum, Doamne Dumnezeule, Regele, Dumnezeul lui Avraam, cruţă-ţi poporul, căci duşmanii noştri plănuiesc distrugerea noastră, şi ei au dorit să distrugă moştenirea ta antică.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:26",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Do not overlook your people, whom you have redeemed for yourself out of the land of Egypt.",
+      "romanian": "Nu uita pe poporul tău, pe care l-ai răscumpărat pentru tine însuţi din ţara Egiptului.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:27",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Listen to my prayer. Have mercy on your inheritance and turn our mourning into gladness, that we may live and sing praise to your name, O Lord. Don’t utterly destroy the mouth of those who praise you, O Lord.”",
+      "romanian": "Ascultă rugăciunea mea. Ai milă de moştenirea ta şi transformă jalea noastră în bucurie, ca să trăim şi să cântăm lauda numelui tău, Doamne. Nu distruge cu desăvârşire gura celor care te laudă, Doamne.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:28",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "All Israel cried with all their might, for death was before their eyes.",
+      "romanian": "Tot Israelul a strigat cu toată puterea lor, căci moartea era înaintea ochilor lor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:29",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And queen Esther took refuge in the Lord, being taken as it were in the agony of death.",
+      "romanian": "Œmpărăteasa Estera s-a refugiat Ón Domnul, şi a fost luată cum era Ón agonia morţii.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:30",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Having taken off her glorious apparel, she put on garments of distress and mourning. Instead of grand perfumes she filled her head with ashes and dung. She greatly humbled her body, and she filled every place of her glad adorning with her tangled hair.",
+      "romanian": "După ce şi -a scos hainele ei glorioase, şi -a pus haine de întristare şi de jale; în loc de mari parfumuri, şi -a umplut capul cu cenuşă şi bălegar; şi s'a smerit foarte mult, şi şi -a umplut fiecare loc al ei plin de veselie, împodobindu - se cu părul încâlcit.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:31",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "She implored the Lord God of Israel, and said, “O my Lord, you alone are our king. Help me. I am destitute, and have no helper but you,",
+      "romanian": "Ea a implorat pe Domnul, Dumnezeul lui Israel, şi a zis: ,,Domnul meu! Numai Tu eşti împăratul nostru! Ajută-mă! Eu sînt fără prihană, şi nu am nici un ajutor afară de tine!",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:32",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "for my danger is near at hand .",
+      "romanian": "Pentru pericolul meu este aproape la îndemână.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:33",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "I have heard from my birth in the tribe of my kindred that you, Lord, took Israel out of all the nations, and our fathers out of all their kindred for a perpetual inheritance, and have done for them all that you have said.",
+      "romanian": "Am auzit de la naşterea mea în seminţia familiei mele că tu, Doamne, ai luat pe Israel din toate neamurile, şi pe părinţii noştri din toate rudele lor, ca moştenire veşnică, şi ai făcut pentru ei tot ce ai spus.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:34",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And now we have sinned before you, and you have delivered us into the hands of our enemies,",
+      "romanian": "Şi acum am păcătuit înaintea ta, şi ne-ai dat în mâinile duşmanilor noştri,",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:35",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "because we honoured their gods. You are righteous, O Lord.",
+      "romanian": "pentru că le-am onorat zeii.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:36",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "But now they have not been content with the bitterness of our slavery, but have laid their hands on the hands of their idols",
+      "romanian": "Dar acum nu s-au mulţumit cu amărăciunea sclaviei noastre, ci şi-au pus mâinile pe mâinile idolilor lor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:37",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "to abolish the decree of your mouth, and utterly to destroy your inheritance, and to stop the mouth of those who praise you, and to extinguish the glory of your house and your altar,",
+      "romanian": "ca să nimicească hotărîrea gurii Tale, să nimicească cu desăvîrşire moştenirea Ta, să oprească gura celor ce Te laudă, şi să stingă slava Casei Tale şi altarului Tău,",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:38",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "and to open the mouth of the Gentiles to speak the praises of vanities, and that a mortal king should be admired forever.",
+      "romanian": "şi să deschidă gura neamurilor ca să spună laude deşertăciunilor, şi ca un împărat muritor să fie admirat pentru totdeauna.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:39",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "O Lord, don’t surrender your sceptre to those who don’t exist, and don’t let them laugh at our fall, but turn their counsel against themselves, and make an example of him who has begun to injure us.",
+      "romanian": "O Doamne, nu preda sceptrul tău celor care nu există, şi nu-i lăsa să râdă de căderea noastră, ci întoarce-le sfatul împotriva lor înşişi, şi fă un exemplu despre cel care a început să ne rănească.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:40",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Remember us, O Lord! Manifest yourself in the time of our affliction. Encourage me, O King of gods, and ruler of all dominion!",
+      "romanian": "Aminteşte-ţi de noi, Doamne! Manifestă-te în timpul necazului nostru! Încurajează-mă, Împărate al dumnezeilor şi stăpân al întregii împărăţii!",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:41",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Put harmonious speech into my mouth before the lion, and turn his heart to hate him who fights against us, to the utter destruction of those who agree with him.",
+      "romanian": "ÑPune-mi Ónaintea leului o vorbă Ónaintea leului, şi Óntoarce-i inima să urască pe cel ce luptă Ómpotriva noastră, spre nimicirea totală a celor ce sunt de acord cu el.î",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:42",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "But deliver us by your hand, and help me who am alone and have no one but you, O Lord.",
+      "romanian": "Dar izbăveşte-ne prin mîna Ta, şi ajută-mă singur şi nu ai pe nimeni afară de tine, Doamne.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:43",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "You know all things, and know that I hate the glory of transgressors, and that I abhor the bed of the uncircumcised and of every stranger.",
+      "romanian": "Tu ştii toate lucrurile, şi să ştii că urăsc slava călcătorilor de lege, şi că urăsc patul celor netăiaţi împrejur şi al oricărui străin.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:44",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "You know my necessity, for I abhor the symbol of my proud station, which is upon my head in the days of my splendour. I abhor it as a menstruous cloth, and I don’t wear it in the days of my tranquillity.",
+      "romanian": "Îmi cunoaşteţi necesitatea, căci urăsc simbolul staţiei mele mândre, care este pe capul meu în zilele splendoarei mele. O urăsc ca pe o cârpă menstruală şi nu o port în zilele liniştii mele.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:45",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Your handmaid has not eaten at Haman’s table, and I have not honoured the banquet of the king, neither have I drunk wine of libations.",
+      "romanian": "Slujitoarea ta n-a mâncat la masa lui, şi n-am cinstit ospăţul împăratului, nici n-am băut vin din libaţii.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:46",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Neither has your handmaid rejoiced since the day of my promotion until now, except in you, O Lord God of Abraham.",
+      "romanian": "Nici roaba ta nu s-a bucurat de ziua în care am fost promovat până acum, cu excepţia ta, Doamne, Dumnezeul lui Avraam.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.4:47",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "O god, who has power over all, listen to the voice of the desperate, and deliver us from the hand of those who devise mischief. Deliver me from my fear.]",
+      "romanian": "O, Dumnezeule, care ai putere asupra tuturor, ascultă glasul celor disperaţi şi scapă-ne din mâna celor ce urzesc răul, scapă-mă de frica mea.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:4",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "[Mordecai said, “These things have come from God.",
+      "romanian": "Mordecai spuse: \"Aceste lucruri au venit de la Dumnezeu.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:5",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "For I remember the dream which I had concerning these matters; for not one detail of them has failed.",
+      "romanian": "Îmi amintesc visul pe care l-am avut cu privire la aceste lucruri, pentru că nici un detaliu dintre ele nu a eşuat.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:6",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "There was the little spring which became a river, and there was light, and the sun and much water. The river is Esther, whom the king married and made queen.",
+      "romanian": "A fost un izvor mic, care a devenit un râu, şi a fost lumină, şi soarele şi multă apă. Râul este Estera, cu care regele s-a căsătorit şi a făcut regină.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:7",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "The two serpents are Haman and me.",
+      "romanian": "Cei doi şerpi sunt Haman şi eu.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:8",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "The nations are those which combined to destroy the name of the Jews.",
+      "romanian": "Naţiunile sunt cele care se combină pentru a distruge numele iudeilor.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:9",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "But as for my nation, this is Israel, even those who cried to God and were delivered; for the Lord delivered his people. The Lord rescued us out of all these calamities; and God worked such signs and great wonders as have not been done amongst the nations.",
+      "romanian": "Dar poporul Meu, acesta este Israel, cei ce strigau către Dumnezeu şi erau izbăviţi; căci Domnul a izbăvit pe poporul Său. Domnul ne -a izbăvit din toate aceste nenorociri, şi Dumnezeu a făcut semne şi minuni mari, cum nu s'au făcut printre neamuri.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:10",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Therefore he ordained two lots. One for the people of God, and one for all the other nations.",
+      "romanian": "De aceea a rânduit două sorţi: una pentru poporul lui Dumnezeu şi alta pentru toate celelalte neamuri.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:11",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "And these two lots came for an appointed season, and for a day of judgement, before God, and for all the nations.",
+      "romanian": "Aceste două sorţi au venit pentru un anumit sorţi, pentru o zi de judecată înaintea lui Dumnezeu şi pentru toate neamurile.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:12",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "God remembered his people and vindicated his inheritance.",
+      "romanian": "Dumnezeu şi - a amintit de poporul său şi şi - a justificat moştenirea.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:13",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "They shall observe these days in the month Adar, on the fourteenth and on the fifteenth day of the month, with an assembly, joy, and gladness before God, throughout the generations forever amongst his people Israel.",
+      "romanian": "Ei vor păzi aceste zile în luna Adar, în ziua a paisprezecea şi în ziua a cincisprezecea a lunii, cu o adunare, bucurie şi bucurie înaintea lui Dumnezeu, din neamurile veşnice ale poporului Său Israel.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "ESG.10:14",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "In the fourth year of the reign of Ptolemeus and Cleopatra, Dositheus, who said he was a priest and Levite, and Ptolemeus his son brought this letter of Purim, which they said was authentic, and that Lysimachus the son of Ptolemeus, who was in Jerusalem, had interpreted.]",
+      "romanian": "În al patrulea an al domniei lui Ptolemeu şi Cleopatra, Dositheus, care a spus că era preot şi levit, şi Ptolemeu, fiul său, a adus această scrisoare de Purim, despre care se spunea că este autentică, şi că Lisimachus, fiul lui Ptolemeu, care era în Ierusalim, a interpretat.]",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "JDT.5:24",
+      "codes": [
+        "ENGLISH_RESIDUE"
+      ],
+      "english": "Therefore now we will go up, and they will be a prey to be devoured by all your army, Lord Holofernes.”",
+      "romanian": "De aceea acum ne vom sui, şi vor fi o pradă devorată de toată oştirea ta, Lord Holofernes.",
+      "greekCoverage": {
+        "grcbrent": true,
+        "grclxx": true
+      }
+    },
+    {
+      "reference": "PS2.1:1",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "I was small amongst my brothers, and youngest in my father’s house. I tended my father’s sheep.",
+      "romanian": "Am fost mic printre fraţii mei, şi mai tânăr în casa tatălui meu. Am avut grijă de oile tatălui meu.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "PS2.1:2",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "My hands formed a musical instrument, and my fingers tuned a lyre.",
+      "romanian": "Mâinile mele au format un instrument muzical, iar degetele mi-au acordat o liră.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "PS2.1:3",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "Who shall tell my Lord? The Lord himself, he himself hears.",
+      "romanian": "Cine-i va spune Domnului meu? Domnul însuşi aude.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "PS2.1:4",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "He sent forth his angel and took me from my father’s sheep, and he anointed me with his anointing oil.",
+      "romanian": "El şi - a trimis îngerul şi m - a luat de la oile tatălui meu şi m - a uns cu untdelemnul lui de ungere.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "PS2.1:5",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "My brothers were handsome and tall; but the Lord didn’t take pleasure in them.",
+      "romanian": "Fraţii mei erau frumoşi şi înalţi, dar Domnul n-a găsit plăcere în ei.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "PS2.1:6",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "I went out to meet the Philistine, and he cursed me by his idols.",
+      "romanian": "M-am dus să-l întâlnesc pe Filistean, iar el m-a blestemat de idolii lui.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "PS2.1:7",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "But I drew his own sword and beheaded him, and removed reproach from the children of Israel.",
+      "romanian": "Dar am scos sabia lui şi l-am decapitat, şi am îndepărtat ocara de la copiii lui Israel.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    },
+    {
+      "reference": "SIR.3:25",
+      "codes": [
+        "NO_GREEK_REFERENCE_COVERAGE"
+      ],
+      "english": "There is no light without eyes. There is no wisdom without knowledge.",
+      "romanian": "Nu este lumină fără ochi, nu este înţelepciune fără cunoştinţă.",
+      "greekCoverage": {
+        "grcbrent": false,
+        "grclxx": false
+      }
+    }
+  ]
+}
