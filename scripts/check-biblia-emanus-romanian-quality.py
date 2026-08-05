@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import json
 import re
-import sys
 import unicodedata
 from pathlib import Path
 
@@ -12,15 +11,15 @@ DATA = ROOT / "docs" / "data" / "biblia-emanus"
 NT = {"MAT","MRK","LUK","JHN","ACT","ROM","1CO","2CO","GAL","EPH","PHP","COL","1TH","2TH","1TI","2TI","TIT","PHM","HEB","JAS","1PE","2PE","1JN","2JN","3JN","JUD","REV"}
 
 FORBIDDEN = [
-    (re.compile(r"\b(?:s|n|l|i|v|m|a)['’](?:a|au|am|ai|ar|as|ati)\b", re.I), "apostrof în loc de cratimă"),
-    (re.compile(r"\b(?:cînd|pămînt|mormînt|sînge|sîngele|strîns|mîna|întîi|bătrîni|cuvînt)\b", re.I), "ortografie veche cu î în interior"),
-    (re.compile(r"\b(?:cari|pentrucă|dela|Celce|V['’]am)\b", re.I), "formă arhaică sau lipită"),
+    (re.compile(r"\b(?:s|n|l|i|v|m|a)['’](?:a|au|am|ai|ar|as|ați|ati)\b", re.I), "apostrof în loc de cratimă"),
+    (re.compile(r"\b(?:cînd|cîmp|pămînt(?:ul|ului)?|mormînt|sînge(?:le)?|strîns|mîn(?:ă|a|i)|întîi|dintîi|bătrîni|cuvînt(?:ul)?|blîndețea|pînă|decît|sfîrșit|rămîne|vînturilor)\b", re.I), "ortografie veche cu î în interior"),
+    (re.compile(r"\b(?:cari|pentrucă|dela|Celce|V['’]am|Dupăce)\b", re.I), "formă arhaică sau lipită"),
     (re.compile(r"\s+-\s+|\s+-[a-zăâîșț]|[a-zăâîșț]-\s+", re.I), "spațiere coruptă în jurul cratimei"),
-    (re.compile(r"\?\s*[A-Za-zĂÂÎȘȚăâîșț]"), "lipsește delimitarea după semnul întrebării"),
-    (re.compile(r":\?"), "punctuație coruptă :?"),
+    (re.compile(r"(?:[:,.]\?|\?\s*t\b|Don\?\s*t|won\?\s*t|can\?\s*t)", re.I), "punctuație/OCR englezesc corupt"),
     (re.compile(r",,"), "ghilimele corupte cu două virgule"),
     (re.compile(r"\b(?:daca|Daca|tau|Tau|intuneric|Intuneric|fara|Fara|pana|Pana|inainte|Inainte|imparatie|Imparatie)\b"), "cuvânt românesc fără diacritice"),
-    (re.compile(r"\b(?:like-minded|sound|feeding trough|publicized|baby)\b", re.I), "fragment sau calc englezesc"),
+    (re.compile(r"\b(?:like-minded|sound|feeding trough|publicized|baby|Don|won)\b", re.I), "fragment sau calc englezesc"),
+    (re.compile(r"[ãõ]", re.I), "caracter corupt/ne-românesc"),
 ]
 
 BAD_PHRASES = {
@@ -37,6 +36,24 @@ BAD_PHRASES = {
     "durere dureroasă și dureroasă": "repetiție mecanică",
     "castronul pe pământ": "termen impropriu pentru vasul apocaliptic",
     "într-un cartof": "halucinație lexicală",
+    "cei care rulează într-o cursă toate alerga": "traducere mecanică neinteligibilă",
+    "cel ce plugul ar trebui": "traducere mecanică neinteligibilă",
+    "un vapori care apare": "acord și calc englezesc",
+    "de te la el": "propoziție coruptă",
+    "de-pasă de el": "propoziție coruptă",
+    "de la cel mai mic la cel mai mare lor": "acord corupt",
+    "mă de păcat": "verb lipsă",
+    "Pa mieii mei": "verb corupt",
+    "Pa oile mele": "verb corupt",
+    "Pune-Mi oile la încercare": "sens corupt",
+    "Na ta preoții": "fragment corupt",
+    "ai câștigat t vedea mine": "fragment englezesc corupt",
+    "eliber-l": "verb corupt",
+    "nu păz Legea": "acord verbal corupt",
+    "căutați să Mă ucide": "acord verbal corupt",
+    "faptele lui erau rele ale fratelui său drepte": "ordine sintactică imposibilă",
+    "nu am de gând în conformitate cu carnea": "calc englezesc",
+    "Nu există nici o altă veste bună.?": "punctuație și sens corupte",
 }
 
 
@@ -54,7 +71,7 @@ def main() -> int:
     errors: list[str] = []
     verse_map = {}
     chapter_count = verse_count = 0
-    for path, data in chapters():
+    for _, data in chapters():
         chapter_count += 1
         for verse in data["verses"]:
             verse_count += 1
@@ -81,7 +98,7 @@ def main() -> int:
         errors.append("MAT.6.13: doxologia tradițională este în textul principal, contrar SBLGNT")
     jhn = verse_map.get("JHN.1.18", ("", {}))[0].lower()
     if "dumnezeu, cel unic" not in jhn:
-        errors.append("JHN.1.18: textul principal nu corespunde notei și lecturii μονογενὴς θεός")
+        errors.append("JHN.1.18: textul principal nu corespunde lecturii μονογενὴς θεός")
     one7 = verse_map.get("1JN.5.7", ("", {}))[0].lower()
     one8 = verse_map.get("1JN.5.8", ("", {}))[0].lower()
     if any(x in one7 + " " + one8 for x in ("tatăl, cuvântul", "în cer", "acești trei una sunt")):
@@ -92,10 +109,10 @@ def main() -> int:
             errors.append(f"MRK.16.{number}: finalul lung nu este marcat double-bracketed")
 
     print(f"[romanian-quality] {chapter_count} capitole / {verse_count} versete / {len(errors)} probleme")
-    for error in errors[:200]:
+    for error in errors[:250]:
         print("-", error)
-    if len(errors) > 200:
-        print(f"... încă {len(errors)-200} probleme")
+    if len(errors) > 250:
+        print(f"... încă {len(errors)-250} probleme")
     return 1 if errors else 0
 
 
