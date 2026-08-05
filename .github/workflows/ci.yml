@@ -184,10 +184,9 @@ jobs:
           rm -f scripts/patch-audit2-integration.py
           rm -f scripts/patch-validator-audit2.py
           rm -f scripts/diagnose-audit2.py
-          git restore packages/shared/src/bible
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add -A docs/data/biblia-emanus docs/biblia-emanus scripts .github/workflows
           git diff --cached --check
           git commit -m "Upgrade audited OT books to Biblia Emanus engine 2.0"
           git push origin HEAD:agent/biblia-emanus-ot-audit2
