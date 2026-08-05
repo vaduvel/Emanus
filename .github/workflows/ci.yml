@@ -62,7 +62,6 @@ jobs:
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         with:
           python-version: '3.11'
-          cache: pip
 
       - name: Instaleaza auditul semantic VT
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
