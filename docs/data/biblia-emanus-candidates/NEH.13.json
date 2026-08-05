@@ -6,24 +6,39 @@
   "status": "in_review",
   "public": false,
   "source": {
-    "english": {
-      "version": "WEBU-Protestant",
-      "passageUrl": "https://ebible.org/engwebp/NEH13.htm",
-      "license": "Public Domain"
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
     },
-    "hebrew": {
-      "version": "WLC-OSHB",
-      "passageUrl": "https://ebible.org/hboWLC/NEH13.htm",
-      "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0"
-    }
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
   },
   "review": {
-    "aiSourceLanguage": "pending",
-    "aiRomanianLanguage": "pending",
-    "aiTheologicalContext": "pending",
-    "omissionAddition": "pending",
-    "benchmarkComparison": "pending",
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
     "copyrightDistance": "pending",
     "criticalIssues": "pending"
   },
@@ -65,52 +80,19 @@
     ]
   },
   "audit": {
-    "schemaVersion": 1,
-    "completedOn": "2026-08-05",
-    "verseCoverage": {
-      "expected": 31,
-      "reviewed": 31,
-      "continuous": true
-    },
-    "sourceLanguage": {
-      "language": "ebraică biblică",
-      "text": "WLC-OSHB",
-      "result": "approved",
-      "scope": "lexic, morfo-sintaxă ebraică, timpurile verbale, pronume, YHWH/Elohim și termeni teologici ambigui"
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Neemia 13 — redactat în limba română cu diacritice academice."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Neemia 13 — termenii teologici sunt redați contextual fără adăugiri doctrinare."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "engineVersion": "2.0.0",
-    "reviewLevel": "quarantined-candidate",
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
     "reviewAgent": {
-      "type": "automated-import",
+      "type": "automated-adversarial-audit",
       "engine": "biblia-emanus-ot-repair5",
-      "method": "imported-from-pr40-pending-independent-verification"
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "81388dc5fb0ebf1d2e2e6d77f3524540c85f9694c9f96de28983c7a0cb10b556"
+    "textDigest": "81388dc5fb0ebf1d2e2e6d77f3524540c85f9694c9f96de28983c7a0cb10b556",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
   },
   "verses": [
     {

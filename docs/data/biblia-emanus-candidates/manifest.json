@@ -1,9 +1,88 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "sourcePr": 40,
   "baseBranch": "main",
   "runtimeEnabled": false,
   "publicationAllowed": false,
+  "scope": {
+    "canonicalOldTestamentRemaining": [
+      "1CH",
+      "1KI",
+      "1SA",
+      "2CH",
+      "2KI",
+      "2SA",
+      "AMO",
+      "DAN",
+      "ECC",
+      "EST",
+      "EZK",
+      "EZR",
+      "HAB",
+      "HAG",
+      "HOS",
+      "ISA",
+      "JDG",
+      "JER",
+      "JOB",
+      "JOL",
+      "JON",
+      "LAM",
+      "MAL",
+      "MIC",
+      "NAM",
+      "NEH",
+      "OBA",
+      "PRO",
+      "PSA",
+      "RUT",
+      "SNG",
+      "ZEC",
+      "ZEP"
+    ],
+    "historicalSupplements": [
+      "MAN",
+      "PS2"
+    ],
+    "excludedFabricatedBooks": [
+      "1ES",
+      "1MA",
+      "2MA",
+      "3MA",
+      "BAR",
+      "ESG",
+      "JDT",
+      "SIR",
+      "TOB",
+      "WIS"
+    ]
+  },
+  "sources": {
+    "webbe": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "wlc": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "btf": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    }
+  },
   "books": [
     {
       "bookId": "1CH",
@@ -15,29 +94,11 @@
       "public": false
     },
     {
-      "bookId": "1ES",
-      "bookName": "3 Ezdra",
-      "group": "deuterocanon",
-      "chapters": 9,
-      "verses": 448,
-      "status": "in_review",
-      "public": false
-    },
-    {
       "bookId": "1KI",
       "bookName": "1 Împărați",
       "group": "canonical",
       "chapters": 22,
       "verses": 816,
-      "status": "in_review",
-      "public": false
-    },
-    {
-      "bookId": "1MA",
-      "bookName": "1 Macabei",
-      "group": "deuterocanon",
-      "chapters": 16,
-      "verses": 924,
       "status": "in_review",
       "public": false
     },
@@ -69,15 +130,6 @@
       "public": false
     },
     {
-      "bookId": "2MA",
-      "bookName": "2 Macabei",
-      "group": "deuterocanon",
-      "chapters": 15,
-      "verses": 535,
-      "status": "in_review",
-      "public": false
-    },
-    {
       "bookId": "2SA",
       "bookName": "2 Samuel",
       "group": "canonical",
@@ -87,29 +139,11 @@
       "public": false
     },
     {
-      "bookId": "3MA",
-      "bookName": "3 Macabei",
-      "group": "deuterocanon",
-      "chapters": 7,
-      "verses": 227,
-      "status": "in_review",
-      "public": false
-    },
-    {
       "bookId": "AMO",
       "bookName": "Amos",
       "group": "canonical",
       "chapters": 9,
       "verses": 146,
-      "status": "in_review",
-      "public": false
-    },
-    {
-      "bookId": "BAR",
-      "bookName": "Baruh",
-      "group": "deuterocanon",
-      "chapters": 6,
-      "verses": 213,
       "status": "in_review",
       "public": false
     },
@@ -128,15 +162,6 @@
       "group": "canonical",
       "chapters": 12,
       "verses": 222,
-      "status": "in_review",
-      "public": false
-    },
-    {
-      "bookId": "ESG",
-      "bookName": "Estera (Adăugirile grecești)",
-      "group": "deuterocanon",
-      "chapters": 6,
-      "verses": 102,
       "status": "in_review",
       "public": false
     },
@@ -213,15 +238,6 @@
       "public": false
     },
     {
-      "bookId": "JDT",
-      "bookName": "Iudita",
-      "group": "deuterocanon",
-      "chapters": 16,
-      "verses": 340,
-      "status": "in_review",
-      "public": false
-    },
-    {
       "bookId": "JER",
       "bookName": "Ieremia",
       "group": "canonical",
@@ -278,7 +294,7 @@
     {
       "bookId": "MAN",
       "bookName": "Rugăciunea lui Manase",
-      "group": "deuterocanon",
+      "group": "supplement",
       "chapters": 1,
       "verses": 15,
       "status": "in_review",
@@ -332,7 +348,7 @@
     {
       "bookId": "PS2",
       "bookName": "Psalmul 151",
-      "group": "deuterocanon",
+      "group": "supplement",
       "chapters": 1,
       "verses": 7,
       "status": "in_review",
@@ -357,38 +373,11 @@
       "public": false
     },
     {
-      "bookId": "SIR",
-      "bookName": "Înțelepciunea lui Isus, fiul lui Sirah",
-      "group": "deuterocanon",
-      "chapters": 51,
-      "verses": 1392,
-      "status": "in_review",
-      "public": false
-    },
-    {
       "bookId": "SNG",
       "bookName": "Cântarea Cântărilor",
       "group": "canonical",
       "chapters": 8,
       "verses": 117,
-      "status": "in_review",
-      "public": false
-    },
-    {
-      "bookId": "TOB",
-      "bookName": "Tobit",
-      "group": "deuterocanon",
-      "chapters": 14,
-      "verses": 246,
-      "status": "in_review",
-      "public": false
-    },
-    {
-      "bookId": "WIS",
-      "bookName": "Înțelepciunea lui Solomon",
-      "group": "deuterocanon",
-      "chapters": 19,
-      "verses": 436,
       "status": "in_review",
       "public": false
     },
@@ -413,7 +402,7 @@
   ],
   "progress": {
     "canonicalChapters": 718,
-    "deuterocanonChapters": 161,
-    "quarantinedChapters": 351
+    "supplementChapters": 2,
+    "verses": 16657
   }
 }

@@ -29,7 +29,7 @@
     },
     {
       "number": 6,
-      "text": "Ișit-am în întâmpinarea filisteanului și m-a blestemat cu idolii lui."
+      "text": "Ieșit-am în întâmpinarea filisteanului și m-a blestemat cu idolii lui."
     },
     {
       "number": 7,
@@ -37,44 +37,45 @@
     }
   ],
   "review": {
-    "aiSourceLanguage": "pending",
-    "aiRomanianLanguage": "pending",
-    "aiTheologicalContext": "pending",
-    "omissionAddition": "pending",
-    "benchmarkComparison": "pending",
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
     "copyrightDistance": "pending",
     "criticalIssues": "pending"
   },
   "audit": {
-    "engineVersion": "2.0.0",
-    "reviewLevel": "quarantined-candidate",
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
     "reviewAgent": {
-      "type": "automated-import",
+      "type": "automated-adversarial-audit",
       "engine": "biblia-emanus-ot-repair5",
-      "method": "imported-from-pr40-pending-independent-verification"
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "verseCoverage": {
-      "expected": 7,
-      "reviewed": 7,
-      "coveragePercent": 100
-    },
-    "sourceLanguage": {
-      "language": "greacă (Septuaginta LXX)",
-      "text": "LXX / Rahlfs-Hanhart",
-      "result": "approved",
-      "scope": "lexic, morfo-sintaxă greacă, reprezentare teologică și ebraisme"
-    },
-    "textDigest": "672484a0ea8577d5e4d4da42687733ec109b853b01214be05d20a5bfd24843f8"
-  },
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "LXX / BOR",
-      "decision": "redare fidelă din limba greacă a Septuagintei",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Conformitatea cu Septuaginta (LXX) și tradiția manuscriptică răsăriteană."
+    "textDigest": "e2a7a179f80550c3be6ade4104244ca5853d1ca4806740ea6cf0e65a12409a93",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c"
     }
-  ],
-  "category": "Deuterocanon / Apocrife istorice"
+  },
+  "editorialNotes": [],
+  "category": "Suplimente istorice necanonice",
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "septuagint-derived-tradition",
+      "name": "Greek textual tradition; exact critical edition not stored",
+      "role": "external textual authority pending specialist apparatus"
+    },
+    "exactTextCopied": false
+  }
 }

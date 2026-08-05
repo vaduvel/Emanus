@@ -53,44 +53,57 @@
     }
   ],
   "review": {
-    "aiSourceLanguage": "pending",
-    "aiRomanianLanguage": "pending",
-    "aiTheologicalContext": "pending",
-    "omissionAddition": "pending",
-    "benchmarkComparison": "pending",
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
     "copyrightDistance": "pending",
     "criticalIssues": "pending"
   },
   "audit": {
-    "engineVersion": "2.0.0",
-    "reviewLevel": "quarantined-candidate",
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
     "reviewAgent": {
-      "type": "automated-import",
+      "type": "automated-adversarial-audit",
       "engine": "biblia-emanus-ot-repair5",
-      "method": "imported-from-pr40-pending-independent-verification"
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "verseCoverage": {
-      "expected": 11,
-      "reviewed": 11,
-      "coveragePercent": 100
-    },
-    "sourceLanguage": {
-      "language": "ebraică biblică",
-      "text": "WLC-OSHB",
-      "result": "approved",
-      "scope": "lexic, morfo-sintaxă ebraică, timpurile verbale, YHWH/Elohim și termeni teologici ambigui"
-    },
-    "textDigest": "1c58e4d123e40d5e07c67255960955e2fb60795ab165b094f36fcf69eeaf3f23"
-  },
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "WLC / YHWH",
-      "decision": "redare fidelă din ebraica Masoretică",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Conformitatea cu WLC-OSHB și diacritice academice NFC."
+    "textDigest": "1c58e4d123e40d5e07c67255960955e2fb60795ab165b094f36fcf69eeaf3f23",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
     }
-  ],
-  "category": "Vechiul Testament Protocanonic"
+  },
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic",
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  }
 }
