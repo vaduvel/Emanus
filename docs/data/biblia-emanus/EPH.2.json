@@ -30,10 +30,10 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "omissionAddition": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:e07fbe2aa0f2ae7da561d156618d8a22ffa94dfcfe943652ae2a05f0326004e7",
-    "contentDigest": "sha256:557f8f177e6c8eb62f31560cb65a16b310612427ccde5b32b2bda03240afbdb9"
+    "textDigest": "sha256:01894a2884923d68b65f9bdbefe9dd5449afe5777f643626d792f0a3fd7d0a3e",
+    "contentDigest": "sha256:eeb68594da6bca563d478aaf1f42ec173067fa2db2ece6eca7b7b1379be66b0b"
   },
   "verses": [
     {
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Căci noi suntem lucrarea Lui, creați în Hristos Isus pentru fapte bune, pe care Dumnezeu le -a pregătit înainte ca noi să umblăm în ele."
+      "text": "Căci noi suntem lucrarea Lui, creați în Hristos Isus pentru fapte bune, pe care Dumnezeu le-a pregătit înainte ca noi să umblăm în ele."
     },
     {
       "number": 11,

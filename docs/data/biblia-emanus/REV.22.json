@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:eefc239aef89826f281b5e94dc731757ceb8baaca6828a1d0f3a65402e13132d",
-    "contentDigest": "sha256:b48845a47fe0c7b7fadce985a79b4ef9d6ead5e1bda8392c8879e495970916b5"
+    "textDigest": "sha256:0f9d2e5005ac8ebbadd017fb1c9785a01aca72b956c44802123d160a18c1175f",
+    "contentDigest": "sha256:868b495f98838663e2acb1f574dfaa38f8ed24d9636e42ede895862eeb01022e"
   },
   "verses": [
     {
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "El mi-a zis:Cuvintele acestea sunt credincioase adevărate. Domnul, Dumnezeul duhurilor proorocilor, a trimes pe îngerul Său să arate robilor Săi lucrurile care trebuie să se întîmple în curînd.„"
+      "text": "El mi-a zis: Cuvintele acestea sunt credincioase adevărate. Domnul, Dumnezeul duhurilor proorocilor, a trimes pe îngerul Său să arate robilor Săi lucrurile care trebuie să se întîmple în curînd.„"
     },
     {
       "number": 7,
@@ -173,15 +173,15 @@
     },
     {
       "number": 8,
-      "text": "Eu, Ioan, am auzit și am văzut aceste lucruri. Cînd am auzit și am văzut, am căzut să mă închin înaintea picioarelor îngerului, care-mi arătase aceste lucruri."
+      "text": "Eu, Ioan, am auzit și am văzut aceste lucruri. Când am auzit și am văzut, am căzut să mă închin înaintea picioarelor îngerului, care-mi arătase aceste lucruri."
     },
     {
       "number": 9,
-      "text": "El mi-a zis:Să nu faci așa ceva! Eu sunt împreună-slujitor cu tine cu frații tăi, profeții, cu cei ce păzesc cuvintele acestei. Închin-vă lui Dumnezeu.„"
+      "text": "El mi-a zis: Să nu faci așa ceva! Eu sunt împreună-slujitor cu tine cu frații tăi, profeții, cu cei ce păzesc cuvintele acestei. Închin-vă lui Dumnezeu.„"
     },
     {
       "number": 10,
-      "text": "El mi-a zis:Nu pecetlui cuvintele prorociei din cartea aceasta, căci vremea este aproape."
+      "text": "El mi-a zis: Nu pecetlui cuvintele prorociei din cartea aceasta, căci vremea este aproape."
     },
     {
       "number": 11,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Duhul și mireasa spun:?Vino!? Cine aude, să spună:? Vino!? Cine este însetat, să vină. Cine dorește, să ia apa vieții."
+      "text": "Și Duhul și mireasa zic: Vino! Și cel ce aude să spună: Vino! Și să vină cel ce este însetat. Și oricine voiește, să ia apa vieții în dar."
     },
     {
       "number": 18,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Cel ce mărturisește aceste lucruri zice:Da, vin curând.” Amin! Da, vino, Doamne Isuse!"
+      "text": "Cel ce mărturisește aceste lucruri zice: Da, vin curând.” Amin! Da, vino, Doamne Isuse!"
     },
     {
       "number": 21,

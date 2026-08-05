@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "copyrightDistance": "approved",
     "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:cade092975328b020c64b3531ec98df7a28ae063182a018cfd3275f5ef8e1956",
-    "contentDigest": "sha256:ec2e86b973774549337471cc3e923fdfccb70c68f80a627917bddb4fb8db7061"
+    "textDigest": "sha256:5e2a33f85ce91ecaa2b2185329fb8c4de9c813caaf0f2d69de4b3e315b27ffdb",
+    "contentDigest": "sha256:7087791d12c8cfd5604d493c8eb20198284118ef2ffde5df183da32f73d754db"
   },
   "verses": [
     {
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "Dar tu știi că el s-a dovedit a fi un tată, așa cum un copil slujește un tată, așa a slujit cu mine în promovarea veștii bune."
+      "text": "Dar îi cunoașteți caracterul încercat, căci, ca un fiu alături de tatăl său, a slujit împreună cu mine pentru înaintarea Evangheliei."
     },
     {
       "number": 23,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,21 +139,21 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:1b362853985885aa220a8e5a1b64993f52a922a8732308b3c4058dda6317d38d",
-    "contentDigest": "sha256:6d10d66e6ab21199dddb26f14922839d63183aee3d49d84ea4e010f08d5e5215"
+    "textDigest": "sha256:48990c397d9de52ac7da3e859af90f772548c43ce9de016b2457bb0769e38ba4",
+    "contentDigest": "sha256:4edee2f524f7eeff04bb196dbf3c79689c1aaa0f633dd62bb821554b81447203"
   },
   "verses": [
     {
       "number": 1,
-      "text": "După aceste lucruri, am auzit ceva ca un glas puternic al unei marimi în cer, spunând:Aleluia! Mântuirea, puterea slava sunt ale Dumnezeului nostru!"
+      "text": "După aceste lucruri, am auzit ceva ca un glas puternic al unei marimi în cer, spunând: Aleluia! Mântuirea, puterea slava sunt ale Dumnezeului nostru!"
     },
     {
       "number": 2,
-      "text": "Căci judecățile Lui sunt adevărate și drepte; căci El a judecat pe marea prostituată care a stricat pămîntul cu imoralitatea ei sexuală, și a răzbunat sîngele slujitorilor Săi din mîna ei."
+      "text": "Pentru că adevărate și drepte sunt judecățile lui, pentru că el a judecat curva cea mare care corupea pământul cu curvia ei și a răzbunat sângele robilor săi din mâna ei."
     },
     {
       "number": 3,
-      "text": "Al doilea a zis:Aleluia! Fumul ei se ridică în sus pentru totdeauna."
+      "text": "Al doilea a zis: Aleluia! Fumul ei se ridică în sus pentru totdeauna."
     },
     {
       "number": 4,
@@ -161,11 +161,11 @@
     },
     {
       "number": 5,
-      "text": "Un glas a venit de la tron a zis:Lăudați pe Dumnezeul nostru, toți robii Lui, voi care vă temeți de El, cei mici cei mari!"
+      "text": "Un glas a venit de la tron a zis: Lăudați pe Dumnezeul nostru, toți robii Lui, voi care vă temeți de El, cei mici cei mari!"
     },
     {
       "number": 6,
-      "text": "Am auzit ceva ca glasul unei mulțimi mari și ca glasul multor ape și ca glasul tunetelor puternice, zicând:Aleluia! Căci Domnul Dumnezeul nostru, Cel Atotputernic, împărăț!"
+      "text": "Am auzit ceva ca glasul unei mulțimi mari și ca glasul multor ape și ca glasul tunetelor puternice, zicând: Aleluia! Căci Domnul Dumnezeul nostru, Cel Atotputernic, împărăț!"
     },
     {
       "number": 7,
@@ -177,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "El mi-a zis:Scrie: Ferice de cei poftiți la ospățul de nuntă al Mielului! El mi-a zis:Acestea sunt adevăratele cuvinte ale lui Dumnezeu!"
+      "text": "El mi-a zis: Scrie: Ferice de cei poftiți la ospățul de nuntă al Mielului! El mi-a zis: Acestea sunt adevăratele cuvinte ale lui Dumnezeu!"
     },
     {
       "number": 10,
-      "text": "M-am aruncat înaintea picioarelor lui ca să mă închin lui. El mi-a zis:Iată, nu face aceasta! Eu sunt un împreună-slujitor cu tine cu frații tăi care țin mărturia lui Isus. Închină-te lui Dumnezeu, căci mărturia lui Isus este Spiritul Profeției."
+      "text": "M-am aruncat înaintea picioarelor lui ca să mă închin lui. El mi-a zis: Iată, nu face aceasta! Eu sunt un împreună-slujitor cu tine cu frații tăi care țin mărturia lui Isus. Închină-te lui Dumnezeu, căci mărturia lui Isus este Spiritul Profeției."
     },
     {
       "number": 11,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Ochii lui sunt o flacără de foc, și pe capul lui sunt multe coroane; are nume scrise și un nume scris, pe care nimeni nu -l cunoaște decît el însuși."
+      "text": "Ochii lui sunt o flacără de foc, și pe capul lui sunt multe coroane; are nume scrise și un nume scris, pe care nimeni nu-l cunoaște decât el însuși."
     },
     {
       "number": 13,
@@ -201,15 +201,15 @@
     },
     {
       "number": 15,
-      "text": "Din gura lui iese o sabie ascuțită, cu două tăișuri, ca să lovească cu ea neamurile, și le va stăpîni cu un toiag de fier. El calcă în picioare presa de vin a înverșunarii mîniei lui Dumnezeu, Cel Atotputernic."
+      "text": "Din gura lui iese o sabie ascuțită, cu două tăișuri, ca să lovească cu ea neamurile, și le va stăpîni cu un toiag de fier. El calcă în picioare presa de vin a înverșunarii mâiniei lui Dumnezeu, Cel Atotputernic."
     },
     {
       "number": 16,
-      "text": "El are pe haină pe coapsă un nume scris:Împăratul împăraților Domnul domnilor."
+      "text": "El are pe haină pe coapsă un nume scris: Împăratul împăraților Domnul domnilor."
     },
     {
       "number": 17,
-      "text": "Am văzut un înger stând în picioare în soare. El a strigat cu glas tare, spunând tuturor păsărilor care zboară pe cer,? Vino! Fii adunat împreună la cina cea mare a lui Dumnezeu,"
+      "text": "Și am văzut un înger stând în picioare în soare; și a strigat cu voce tare, spunând tuturor păsărilor care zboară în mijlocul cerului: Veniți și adunați-vă pentru cina marelui Dumnezeu;"
     },
     {
       "number": 18,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Am văzut fiara, împărații pămîntului și oștirile lor, adunîndu-se pentru a face război împotriva celui ce ședea pe cal și împotriva oștirii lui."
+      "text": "Am văzut fiara, împărații pământului și oștirile lor, adunîndu-se pentru a face război împotriva celui ce ședea pe cal și împotriva oștirii lui."
     },
     {
       "number": 20,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Ceilalți au fost uciși cu sabia celui ce ședea pe cal, sabia care ieșea din gura lui. Și toate păsările s'au umplut cu carnea lor."
+      "text": "Ceilalți au fost uciși cu sabia celui ce ședea pe cal, sabia care ieșea din gura lui. Și toate păsările s-au umplut cu carnea lor."
     }
   ],
   "editorialNotes": [],

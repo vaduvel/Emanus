@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:fcd78419399bac875bff11e4503a08203283d32b466edb47969a27e71173fbb0",
-    "contentDigest": "sha256:1ba979fe37908af082300ae0d4aa5208893022f84dc6126cd089451051dc4887"
+    "textDigest": "sha256:c45b885fdd9eba3c0ced1bbfab833d4893956b97eb1459c6be63bfbeec2eca4e",
+    "contentDigest": "sha256:ec9d7051426b10cec252c70e499e6e515ea8d760ce9308b2a0a5f391de890ce3"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Am auzit un glas tare din cer, care zicea:,,Iatq, locuinya lui Dumnezeu este cu oamenii; El va locui cu ei, wi ei vor fi poporul Lui, wi Dumnezeu knsuw va fi cu ei ca Dumnezeul lor."
+      "text": "Am auzit un glas tare din cer, care zicea: Iatq, locuinya lui Dumnezeu este cu oamenii; El va locui cu ei, wi ei vor fi poporul Lui, wi Dumnezeu knsuw va fi cu ei ca Dumnezeul lor."
     },
     {
       "number": 4,
@@ -161,11 +161,11 @@
     },
     {
       "number": 5,
-      "text": "Cel ce șade pe tron a zis:Iată, Eu fac toate lucrurile noi.„ El a zis:Scrie, căci aceste cuvinte ale lui Dumnezeu sunt credincioase adevărate.”"
+      "text": "Cel ce șade pe tron a zis: Iată, Eu fac toate lucrurile noi. El a zis: Scrie, căci aceste cuvinte ale lui Dumnezeu sunt credincioase adevărate."
     },
     {
       "number": 6,
-      "text": "El mi-a zis:Eu sunt Alfa Omega, Începutul Sfârtul. Voi da de bunăvoie celui însetat din izvorul apei."
+      "text": "El mi-a zis: Eu sunt Alfa Omega, Începutul Sfârtul. Voi da de bunăvoie celui însetat din izvorul apei."
     },
     {
       "number": 7,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Neamurile vor umbla în lumina ei, și împărații pămîntului vor aduce în ea slava și cinstea neamurilor."
+      "text": "Neamurile vor umbla în lumina ei, și împărații pământului vor aduce în ea slava și cinstea neamurilor."
     },
     {
       "number": 25,

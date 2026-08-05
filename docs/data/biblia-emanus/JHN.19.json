@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,13 +145,13 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:16e67dbf54ee02b29918c9b40ff9982cdc33498e26e0234c693ab8042f9f9f51",
-    "contentDigest": "sha256:cc0c54cc81c0ce8542174895d9238cc88bdc11cf5ac89ba61bb9325962761325"
+    "textDigest": "sha256:8813859aad63da8b800b9739da37d64a8107b9d7b17977a27cc59ff755c69980",
+    "contentDigest": "sha256:260a8b074e5eb22dbc92d493db147ced761d3d57d0975a2b21458c6de5e1ebc3"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Atunci Pilat l - a luat pe Isus și l - a biciuit."
+      "text": "Atunci Pilat l-a luat pe Isus și l-a biciuit."
     },
     {
       "number": 2,
@@ -159,23 +159,23 @@
     },
     {
       "number": 3,
-      "text": "Ei au continuat să spună:Bucură-te, regele iudeilor!„ l-au tot pălmuit."
+      "text": "Ei au continuat să spună: Bucură-te, regele iudeilor! l-au tot pălmuit."
     },
     {
       "number": 4,
-      "text": "Atunci Pilat a ieșit din nou afară le-a zis:Iată, vi-l aduc afară, ca să știți că nu găsesc nici un temei pentru o acuzație împotriva lui.”"
+      "text": "Atunci Pilat a ieșit din nou afară le-a zis: Iată, vi-l aduc afară, ca să știți că nu găsesc nici un temei pentru o acuzație împotriva lui."
     },
     {
       "number": 5,
-      "text": "Isus a ieșit deci, purtând cununa de spini haina de purpură. Pilat le -a zis:,,Iată omul!"
+      "text": "Isus a ieșit deci, purtând cununa de spini haina de purpură. Pilat le-a zis: Iată omul!"
     },
     {
       "number": 6,
-      "text": "Preoții cei mai de seamă slujbașii l-au văzut, au strigat:Răstignește! Răstignește!„ Pilat le-a zis:Lu-l voi răstigniți-l, căci nu găsesc nici o bază pentru o acuzație împotriva lui.”"
+      "text": "Preoții cei mai de seamă slujbașii l-au văzut, au strigat: Răstignește! Răstignește! Pilat le-a zis: Lu-l voi răstigniți-l, căci nu găsesc nici o bază pentru o acuzație împotriva lui."
     },
     {
       "number": 7,
-      "text": "Iudeii i-au răspuns:Noi avem o lege după legea noastră El trebuie să moară, pentru că S-a făcut pe Sine Fiul lui Dumnezeu.„"
+      "text": "Iudeii i-au răspuns: Noi avem o lege după legea noastră El trebuie să moară, pentru că S-a făcut pe Sine Fiul lui Dumnezeu."
     },
     {
       "number": 8,
@@ -183,15 +183,15 @@
     },
     {
       "number": 9,
-      "text": "A intrat din nou în pretoriu i-a zis lui Isus:De unde ești?” Dar Isus nu i-a răspuns nimic."
+      "text": "A intrat din nou în pretoriu i-a zis lui Isus: De unde ești? Dar Isus nu i-a răspuns nimic."
     },
     {
       "number": 10,
-      "text": "Pilat i -a zis:,,Nu-mi vorbești? Nu știi că am putere să te eliberez să te răstignesc?"
+      "text": "Pilat i-a zis: Nu-mi vorbești? Nu știi că am putere să te eliberez să te răstignesc?"
     },
     {
       "number": 11,
-      "text": "Isus i-a răspuns:N-ai avea nici o putere împotriva Mea, dacă nu ți-ar fi dată de sus; de aceea, cine M-a dat pe Mine are un păcat mai mare.„"
+      "text": "Isus i-a răspuns: N-ai avea nici o putere împotriva Mea, dacă nu ți-ar fi dată de sus; de aceea, cine M-a dat pe Mine are un păcat mai mare."
     },
     {
       "number": 12,
@@ -199,15 +199,15 @@
     },
     {
       "number": 13,
-      "text": "Când Pilat a auzit aceste cuvinte, l-a scos pe Isus afară s-a pe scaunul de judecată într-un loc numitPăvălia”, dar în ebraică,Gabbata„."
+      "text": "Când Pilat a auzit aceste cuvinte, l-a scos pe Isus afară s-a pe scaunul de judecată într-un loc numitPăvălia, dar în ebraică, Gabbata."
     },
     {
       "number": 14,
-      "text": "Acum era Ziua Pregătiriilui, cam pe la ceasul allea. El le-a zis iudeilor:Iată-l pe Împăratul vostru!”"
+      "text": "Acum era Ziua Pregătiriilui, cam pe la ceasul allea. El le-a zis iudeilor: Iată-l pe Împăratul vostru!"
     },
     {
       "number": 15,
-      "text": "Ei au strigat:Pleacă cu el! Pleacă cu el! Răstignește-l!„ Pilat le-a zis:Să-l răstignesc pe regele vostru?” Preoții cei mai de seamă au răspuns:Nu avem alt împărat în afară de Cezar!„"
+      "text": "Ei au strigat: Pleacă cu el! Pleacă cu el! Răstignește-l! Pilat le-a zis: Să-l răstignesc pe regele vostru? Preoții cei mai de seamă au răspuns: Nu avem alt împărat în afară de Cezar!"
     },
     {
       "number": 16,
@@ -215,7 +215,7 @@
     },
     {
       "number": 17,
-      "text": "El a, purtându-și crucea, în locul numitLocul unui craniu”, care este numit în ebraicăGolgota„,"
+      "text": "El a, purtându-și crucea, în locul numitLocul unui craniu, care este numit în ebraicăGolgota,"
     },
     {
       "number": 18,
@@ -223,7 +223,7 @@
     },
     {
       "number": 19,
-      "text": "Pilat a scris el un titlu l-a pus pe cruce. Acolo era scris:Isus din Nazaret, împăratul iudeilor.”"
+      "text": "Pilat a scris el un titlu l-a pus pe cruce. Acolo era scris: Isus din Nazaret, împăratul iudeilor."
     },
     {
       "number": 20,
@@ -231,19 +231,19 @@
     },
     {
       "number": 21,
-      "text": "Preoții principali ai iudeilor i-au spus lui Pilat:?Don?t scrie,? Regele iudeilor, dar,? El a spus:? Eu sunt regele iudeilor."
+      "text": "Atunci preoții de seamă ai iudeilor i-au spus lui Pilat: Nu scrie: Împăratul iudeilor, ci scrie că el a spus: Sunt Împărat al iudeilor."
     },
     {
       "number": 22,
-      "text": "Pilat a răspuns:Ceea ce am scris, am scris.„"
+      "text": "Pilat a răspuns: Ceea ce am scris, am scris."
     },
     {
       "number": 23,
-      "text": "Cînd au răstignit pe Isus, ostașii și-au luat hainele, și-au făcut cîte patru părți la fiecare ostaș; și tunica. Acum tunica era fără cusătură, țesută din vârf."
+      "text": "Când au răstignit pe Isus, ostașii și-au luat hainele, și-au făcut cîte patru părți la fiecare ostaș; și tunica. Acum tunica era fără cusătură, țesută din vârf."
     },
     {
       "number": 24,
-      "text": "Și au zis unul către altul:,,Să nu -l rupem, ci să tragem la sorți, ca să hotărască al cui va fi! Ca să se împlinească Scriptura, care zice:,,Mi-au hainele între ei, au tras la sorți pentru hainele mele. De aceeai au făcut aceste lucruri."
+      "text": "Și au zis unul către altul: Să nu-l rupem, ci să tragem la sorți, ca să hotărască al cui va fi! Ca să se împlinească Scriptura, care zice: Mi-au hainele între ei, au tras la sorți pentru hainele mele. De aceeai au făcut aceste lucruri."
     },
     {
       "number": 25,
@@ -251,11 +251,11 @@
     },
     {
       "number": 26,
-      "text": "De aceea, când Isus a văzut pe mama Sa pe ucenicul pe care îl iubea stând acolo, i-a zis mamei Sale:Femeie, iată fiul tău!”"
+      "text": "De aceea, când Isus a văzut pe mama Sa pe ucenicul pe care îl iubea stând acolo, i-a zis mamei Sale: Femeie, iată fiul tău!"
     },
     {
       "number": 27,
-      "text": "Apoi i-a zis ucenicului:Iată mama ta!„ Din ceasul acela, ucenicul a luat-o acasă."
+      "text": "Apoi i-a zis ucenicului: Iată mama ta! Din ceasul acela, ucenicul a luat-o acasă."
     },
     {
       "number": 28,
@@ -267,7 +267,7 @@
     },
     {
       "number": 30,
-      "text": "După ce a primit oțetul, Isus a zis:S-a isprăvit!” Apoi-a plecat capul-a dat duhul."
+      "text": "După ce a primit oțetul, Isus a zis: S-a isprăvit! Apoi-a plecat capul-a dat duhul."
     },
     {
       "number": 31,
@@ -283,7 +283,7 @@
     },
     {
       "number": 34,
-      "text": "Totuși, unul dintre soldați i - a străpuns partea cu o suliță, și imediat a ieșit afară sânge și apă."
+      "text": "Totuși, unul dintre soldați i-a străpuns partea cu o suliță, și imediat a ieșit afară sânge și apă."
     },
     {
       "number": 35,
@@ -299,7 +299,7 @@
     },
     {
       "number": 38,
-      "text": "După aceste lucruri, Iosif din Arimataea, fiind ucenic al lui Isus, dar în taină de frica iudeilor, a cerut lui Pilat să ia trupul lui Isus. Pilat i -a dat îngăduința; a venit deci și i - a luat trupul."
+      "text": "După aceste lucruri, Iosif din Arimataea, fiind ucenic al lui Isus, dar în taină de frica iudeilor, a cerut lui Pilat să ia trupul lui Isus. Pilat i-a dat îngăduința; a venit deci și i-a luat trupul."
     },
     {
       "number": 39,

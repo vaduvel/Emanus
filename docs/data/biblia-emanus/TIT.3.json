@@ -28,12 +28,12 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:cf9be098ebfa657c19a1bc123d79ba04ca1a3379b4c3ff05658dfae067d3e740",
-    "contentDigest": "sha256:63a92d10135c3f2a71ae6d785875e85f686231175702823c41eefb85a1c33bfa"
+    "textDigest": "sha256:5fe97ad1b7a501d4461214077d1e80cc2ccd9c8332069cc7b4a5d702823ee430",
+    "contentDigest": "sha256:b5afc70c538a784902bd9baaa4d0169c52683327ca71f124d649f10228866174"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Căci am fost odată nesăbuiți, neascultători, înșelați, servind diferite pofte și plăceri, trăind în răutate și invidie, urîndu - ne unii pe alții."
+      "text": "Căci am fost odată nesăbuiți, neascultători, înșelați, servind diferite pofte și plăceri, trăind în răutate și invidie, urîndu-ne unii pe alții."
     },
     {
       "number": 4,

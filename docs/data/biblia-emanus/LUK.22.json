@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:053f201cc99e4746bcb781b1bcdc4a93625a4a1765f1ed999a2df8bdd71ccecd",
-    "contentDigest": "sha256:643c8e9b0183136a27c6d567be4d367398a05e4604f70b42e7f94e70c631fd03"
+    "textDigest": "sha256:70e3f189779adcfd0f782753f12712f4ba3c53ab9875c063a292f27f441e4d0e",
+    "contentDigest": "sha256:076a58f283c682d792b351f100c4156bb7669c98c932eb1776d7dd6f20214b01"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Preoții cei mai de seamă și cărturarii căutau să -l omoare, căci se temeau de popor."
+      "text": "Preoții cei mai de seamă și cărturarii căutau să-l omoare, căci se temeau de popor."
     },
     {
       "number": 3,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "El a fost de acord și a căutat ocazia să - l dea lor în absența mulțimii."
+      "text": "El a fost de acord și a căutat ocazia să-l dea lor în absența mulțimii."
     },
     {
       "number": 7,
@@ -173,15 +173,15 @@
     },
     {
       "number": 8,
-      "text": "Isus i-a trimis pe Petru pe Ioan, zicând:Du-tele pentru noi, ca să mâncăm."
+      "text": "Isus i-a trimis pe Petru pe Ioan, zicând: Du-tele pentru noi, ca să mâncăm."
     },
     {
       "number": 9,
-      "text": "Ei i-au zis:Unde vrei să pregătim?"
+      "text": "Ei i-au zis: Unde vrei să pregătim?"
     },
     {
       "number": 10,
-      "text": "El le-a zis:Iată, când intra în cetate, vă va întâmpina un om care duce un ulcior cu apă. Urmați-l în casa în care va intra."
+      "text": "El le-a zis: Iată, când intra în cetate, vă va întâmpina un om care duce un ulcior cu apă. Urmați-l în casa în care va intra."
     },
     {
       "number": 11,
@@ -193,15 +193,15 @@
     },
     {
       "number": 13,
-      "text": "S'au dus, și au găsit ce le spusese Isus, și au pregătit Paștele."
+      "text": "S-au dus, și au găsit ce le spusese Isus, și au pregătit Paștele."
     },
     {
       "number": 14,
-      "text": "Cînd a venit ceasul, a șezut la masă cu cei doisprezece apostoli."
+      "text": "Când a venit ceasul, a șezut la masă cu cei doisprezece apostoli."
     },
     {
       "number": 15,
-      "text": "El le-a spus:Am dorit cu ardoare să mănânc acest cu voi înainte de a suferi,"
+      "text": "El le-a spus: Am dorit cu ardoare să mănânc acest cu voi înainte de a suferi,"
     },
     {
       "number": 16,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "El le-a zis:Împăr neamurilor domnesc peste ei, iar cei care au autoritate asupra lor sunt binefăcători."
+      "text": "El le-a zis: Împăr neamurilor domnesc peste ei, iar cei care au autoritate asupra lor sunt binefăcători."
     },
     {
       "number": 26,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "Domnul a spus:? Simon, Simon, iată, Satana a cerut să aibă voi toți, ca el să vă cerne ca grâu,"
+      "text": "Iar Domnul a spus: Simone, Simone, iată, Satan a dorit să vă aibă ca să vă cearnă ca grâul."
     },
     {
       "number": 32,
@@ -273,19 +273,19 @@
     },
     {
       "number": 33,
-      "text": "El i-a răspuns:Doamne, sunt gata să merg cu tine atât la închisoare, cât la moarte!"
+      "text": "El i-a răspuns: Doamne, sunt gata să merg cu tine atât la închisoare, cât la moarte!"
     },
     {
       "number": 34,
-      "text": "El a zis:Petre, îți spun, cocoșul nu va cînta azi pînă nu vei nega că mă cunoști de trei ori."
+      "text": "El a zis: Petre, îți spun, cocoșul nu va cînta azi până nu vei nega că mă cunoști de trei ori."
     },
     {
       "number": 35,
-      "text": "El le-a zis:Când v-am trimis fără pungă, pungă sandale, v-a lipsit ceva? Ei au răspuns:Nimic."
+      "text": "El le-a zis: Când v-am trimis fără pungă, pungă sandale, v-a lipsit ceva? Ei au răspuns: Nimic."
     },
     {
       "number": 36,
-      "text": "Apoi le -a zis:,,Dar acum, oricine are o poșetă, să -l ia, și, de asemenea, un sac. Oricine nu are pe nimeni, să -l vândă mantaua lui, și să cumpere o sabie."
+      "text": "Apoi le-a zis:„ Dar acum, oricine are o poșetă, să-l ia, și, de asemenea, un sac. Oricine nu are pe nimeni, să-l vândă mantaua lui, și să cumpere o sabie."
     },
     {
       "number": 37,
@@ -293,7 +293,7 @@
     },
     {
       "number": 38,
-      "text": "Ei au zis:Doamne, iată aici două săbii! El le-a zis:Destul!"
+      "text": "Ei au zis: Doamne, iată aici două săbii! El le-a zis: Destul!"
     },
     {
       "number": 39,
@@ -301,7 +301,7 @@
     },
     {
       "number": 40,
-      "text": "Când era în locul acela, le-a zis:Rugați-vă ca să nu cădeți în ispită."
+      "text": "Când era în locul acela, le-a zis: Rugați-vă ca să nu cădeți în ispită."
     },
     {
       "number": 41,
@@ -309,15 +309,15 @@
     },
     {
       "number": 42,
-      "text": "spunând,? Tată, dacă sunteți dispus, scoate acest pahar de la mine. Cu toate acestea, nu voința mea, dar a ta, se face."
+      "text": "Spunând: Tată, dacă voiești, depărtează acest pahar de la mine; totuși nu voia mea, ci a ta să se facă."
     },
     {
       "number": 43,
-      "text": "I s - a arătat un înger din cer, întărindu - l."
+      "text": "I s-a arătat un înger din cer, întărindu-l."
     },
     {
       "number": 44,
-      "text": "Fiind în agonie, el s - a rugat mai sincer. Transpirația lui a devenit ca niște picături mari de sânge care cădeau pe pământ."
+      "text": "Fiind în agonie, el s-a rugat mai sincer. Transpirația lui a devenit ca niște picături mari de sânge care cădeau pe pământ."
     },
     {
       "number": 45,
@@ -325,7 +325,7 @@
     },
     {
       "number": 46,
-      "text": "le-a zis:Pentru ce dormiți? Scoală-te roagă-te ca să nu intri în ispită."
+      "text": "le-a zis: Pentru ce dormiți? Scoală-te roagă-te ca să nu intri în ispită."
     },
     {
       "number": 47,
@@ -333,19 +333,19 @@
     },
     {
       "number": 48,
-      "text": "Dar Isus i-a zis:Iuda, îl trădezi tu pe Fiul Omului printr-o sărutare?"
+      "text": "Dar Isus i-a zis: Iuda, îl trădezi tu pe Fiul Omului printr-o sărutare?"
     },
     {
       "number": 49,
-      "text": "Când cei din jurul lui au văzut ce urma să se întâmple, i-au spus:Doamne, să lovim cu sabia?"
+      "text": "Când cei din jurul lui au văzut ce urma să se întâmple, i-au spus: Doamne, să lovim cu sabia?"
     },
     {
       "number": 50,
-      "text": "Unul dintre ei a lovit pe robul marelui preot, și i -a tăiat urechea dreaptă."
+      "text": "Unul dintre ei a lovit pe robul marelui preot, și i-a tăiat urechea dreaptă."
     },
     {
       "number": 51,
-      "text": "Dar Isus i-a răspuns:Lasă-mă măcar pe mine să fac aceasta — el s-a atins de urechea lui l-a vindecat."
+      "text": "Dar Isus i-a răspuns: Lasă-mă măcar pe mine să fac aceasta — el s-a atins de urechea lui l-a vindecat."
     },
     {
       "number": 52,
@@ -365,15 +365,15 @@
     },
     {
       "number": 56,
-      "text": "O servitoare l-a văzut în timp ce stătea în lumină, privindu-l cu, a spus:Și omul acesta era cu el."
+      "text": "O servitoare l-a văzut în timp ce stătea în lumină, privindu-l cu, a spus: Și omul acesta era cu el."
     },
     {
       "number": 57,
-      "text": "El s-a lepădat de Isus, zicând:Femeie, nu-L cunosc."
+      "text": "El s-a lepădat de Isus, zicând: Femeie, nu-L cunosc."
     },
     {
       "number": 58,
-      "text": "După timp, cineva l-a văzut a zis:Și tu ești unul dintre ei! Dar Petru a răspuns:Omule, eu nu sunt!"
+      "text": "După timp, cineva l-a văzut a zis: Și tu ești unul dintre ei! Dar Petru a răspuns: Omule, eu nu sunt!"
     },
     {
       "number": 59,
@@ -381,11 +381,11 @@
     },
     {
       "number": 60,
-      "text": "Dar Petru a spus,? Omule, nu știu despre ce vorbești!? Imediat, în timp ce el încă vorbea, un cocoș cântat."
+      "text": "Iar Petru a spus: Omule, nu știu ce spui. Și imediat, pe când el încă vorbea, a cântat cocoșul."
     },
     {
       "number": 61,
-      "text": "Domnul s-a întors și s-a uitat la Petru. Apoi Petru și-a amintit cuvântul Domnului, cum i-a spus el, Inainte ca cocoșul să cânte, îmi vei nega de trei ori."
+      "text": "Domnul s-a întors și s-a uitat la Petru. Apoi Petru și-a amintit cuvântul Domnului, cum i-a spus el, Înainte ca cocoșul să cânte, îmi vei nega de trei ori."
     },
     {
       "number": 62,
@@ -405,7 +405,7 @@
     },
     {
       "number": 66,
-      "text": "De îndată ce a fost ziuă, adunarea bătrînilor poporului s'a strîns, preoții cei mai de seamă și cărturarii, și l-au dus în adunarea lor, și au zis:"
+      "text": "De îndată ce a fost ziuă, adunarea bătrînilor poporului s-a strâns, preoții cei mai de seamă și cărturarii, și l-au dus în adunarea lor, și au zis:"
     },
     {
       "number": 67,
@@ -421,11 +421,11 @@
     },
     {
       "number": 70,
-      "text": "Toți au zis:Tu ești deci Fiul lui Dumnezeu? El le-a zis:Voi spuneți aceasta, pentru că Eu sunt."
+      "text": "Toți au zis: Tu ești deci Fiul lui Dumnezeu? El le-a zis: Voi spuneți aceasta, pentru că Eu sunt."
     },
     {
       "number": 71,
-      "text": "Ei au zis:Pentru ce mai avem nevoie de mărturie, căci noi înșine am auzit din gura lui!"
+      "text": "Ei au zis: Pentru ce mai avem nevoie de mărturie, căci noi înșine am auzit din gura lui!”"
     }
   ],
   "editorialNotes": [

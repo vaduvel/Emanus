@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:7fe6b81996a2ef9fc9b3daeb35b564a95a8fa47fbbff94b1dfbd3fcf9fb68e52",
-    "contentDigest": "sha256:70ab02aa16d696437295c536da4b70ed72a2d752079cf8ea0f46dc5f89720740"
+    "textDigest": "sha256:db51528c776de39d7f1f0b73ddc6ec0763849d374bca880507346d7d8cf682f7",
+    "contentDigest": "sha256:c2f6184d76307e6ba06ab691e6bac43629fde9abbab0a0f08dc94fd2644d99af"
   },
   "verses": [
     {
@@ -229,7 +229,7 @@
     },
     {
       "number": 23,
-      "text": "El a ordonat centurionului ca Pavel să fie ținut în custodie și să aibă unele privilegii, și să nu interzică niciunuia dintre prietenii săi să - i slujească sau să - l viziteze."
+      "text": "El a ordonat centurionului ca Pavel să fie ținut în custodie și să aibă unele privilegii, și să nu interzică niciunuia dintre prietenii săi să-i slujească sau să-l viziteze."
     },
     {
       "number": 24,

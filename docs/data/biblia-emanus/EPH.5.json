@@ -30,10 +30,10 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "omissionAddition": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:d3b9033437d0e9ade21eef42446a79c3018e98e72eb356eb925c61d26459e142",
-    "contentDigest": "sha256:0c2ba373e0df4fc132eac676f663542d91e0c960692f702eed75dddf5a51be79"
+    "textDigest": "sha256:749a24f7b975bcf8e03dbcfe354054f704a26f73a48a7407ef4d97ade132407b",
+    "contentDigest": "sha256:b150ddb0bfd09830410afb908273e81d572c607302f92f87cc48d970ba4f0272"
   },
   "verses": [
     {
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Nimeni să nu vă înșele cu vorbe goale, căci din pricina acestor lucruri vine mînia lui Dumnezeu peste copiii neascultării."
+      "text": "Nimeni să nu vă înșele cu vorbe goale, căci din pricina acestor lucruri vine mâinia lui Dumnezeu peste copiii neascultării."
     },
     {
       "number": 7,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "De aceea zice:Deșteaptă-te tu, care dormi înviezi din morți, Hristos va străluci peste tine.„"
+      "text": "De aceea zice: Deșteaptă-te tu, care dormi înviezi din morți, Hristos va străluci peste tine.„"
     },
     {
       "number": 15,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "ca s'o sfințească, dupăce a curățit -o cu Cuvîntul, prin spălarea apei."
+      "text": "ca s-o sfințească, după ce a curățit-o prin spălarea cu apă, prin Cuvânt,"
     },
     {
       "number": 27,

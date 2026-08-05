@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:f61f64d49b32d15d7afe1bf457d09da648a26fc42504117e388fd27667a5b0d3",
-    "contentDigest": "sha256:cc10e4125cea90004afb8ed6be19c68bcd652ae5b0db7d1034c31fd14d9f9a3c"
+    "textDigest": "sha256:aab0a3b0c2a9287c0787a61740cb05e88b89fe3771bf9a9fb0ae4c9f138a51cf",
+    "contentDigest": "sha256:3b363763ac6774630bef60db38e1a00b43cb969f039330620c998f4ffd79af27"
   },
   "verses": [
     {
@@ -163,7 +163,7 @@
     },
     {
       "number": 4,
-      "text": "Iuda Iscarioteanul, fiul lui Simon, unul din ucenicii Lui, care avea să -L trădeze, a zis:"
+      "text": "Iuda Iscarioteanul, fiul lui Simon, unul din ucenicii Lui, care avea să-L trădeze, a zis:"
     },
     {
       "number": 5,
@@ -175,7 +175,7 @@
     },
     {
       "number": 7,
-      "text": "Dar Isus a zis:Lăs-o în pace, căci a păstrat-o pentru ziua îngropării mele."
+      "text": "Dar Isus a zis: Lăs-o în pace, căci a păstrat-o pentru ziua îngropării mele."
     },
     {
       "number": 8,
@@ -183,7 +183,7 @@
     },
     {
       "number": 9,
-      "text": "De aceea, o mare mulțime de Iudei au aflat că el era acolo; și au venit nu numai din cauza lui Isus, ci și ca să vadă pe Lazăr, pe care -l înviase din morți."
+      "text": "De aceea, o mare mulțime de Iudei au aflat că el era acolo; și au venit nu numai din cauza lui Isus, ci și ca să vadă pe Lazăr, pe care-l înviase din morți."
     },
     {
       "number": 10,
@@ -195,11 +195,11 @@
     },
     {
       "number": 12,
-      "text": "A doua zi, o mare mulțime venise la sărbătoare. Cînd au auzit că Isus venea la Ierusalim,"
+      "text": "A doua zi, o mare mulțime venise la sărbătoare. Când au auzit că Isus venea la Ierusalim,"
     },
     {
       "number": 13,
-      "text": "Ei au luat ramurile finicilor, au ieșit înaintea lui au strigat:Osana! Binecuvântat este Cel ce vine în Numele Domnului, Împăratul lui Israel!"
+      "text": "Ei au luat ramurile finicilor, au ieșit înaintea lui au strigat: Osana! Binecuvântat este Cel ce vine în Numele Domnului, Împăratul lui Israel!"
     },
     {
       "number": 14,
@@ -215,15 +215,15 @@
     },
     {
       "number": 17,
-      "text": "De aceea, mulțimea care era cu el cînd l - a chemat pe Lazăr din mormânt și l - a înviat din morți a mărturisit despre aceasta."
+      "text": "De aceea, mulțimea care era cu el când l-a chemat pe Lazăr din mormânt și l-a înviat din morți a mărturisit despre aceasta."
     },
     {
       "number": 18,
-      "text": "Din pricina aceasta, mulțimea s'a dus și L -a întîlnit, pentrucă au auzit că făcuse semnul acesta."
+      "text": "Din pricina aceasta, mulțimea s-a dus și L-a întîlnit, pentru că au auzit că făcuse semnul acesta."
     },
     {
       "number": 19,
-      "text": "Fariseii au zis deci între ei:Vedeți cum nu nimic; iată că lumea s-a dus după el."
+      "text": "Fariseii au zis deci între ei: Vedeți cum nu nimic; iată că lumea s-a dus după el."
     },
     {
       "number": 20,
@@ -231,7 +231,7 @@
     },
     {
       "number": 21,
-      "text": "au venit la Filip, care era din Betsaida Galileii, l-au întrebat, zicând:Domnule, vrem să-L vedem pe Isus."
+      "text": "au venit la Filip, care era din Betsaida Galileii, l-au întrebat, zicând: Domnule, vrem să-L vedem pe Isus."
     },
     {
       "number": 22,
@@ -239,7 +239,7 @@
     },
     {
       "number": 23,
-      "text": "Isus le-a răspuns:A venit timpul ca Fiul Omului să fie glorificat."
+      "text": "Isus le-a răspuns: A venit timpul ca Fiul Omului să fie glorificat."
     },
     {
       "number": 24,
@@ -251,7 +251,7 @@
     },
     {
       "number": 26,
-      "text": "Daca cineva ma serveste, lasa-l sa ma urmeze. Unde sunt, acolo va fi si servitorul meu. Daca cineva imi va servi, Tatal il va onora."
+      "text": "Dacă îmi servește cineva, să mă urmeze; și unde sunt eu, acolo va fi și servitorul meu; dacă îmi servește cineva, Tatăl meu îl va onora."
     },
     {
       "number": 27,
@@ -259,15 +259,15 @@
     },
     {
       "number": 28,
-      "text": "Tată, proslăvește Numele Tău! Atunci un glas a ieșit din cer a zis:L-am proslăvit iarăși îl voi proslăvi."
+      "text": "Tată, proslăvește Numele Tău! Atunci un glas a ieșit din cer a zis: L-am proslăvit iarăși îl voi proslăvi."
     },
     {
       "number": 29,
-      "text": "De aceea,a care stătea lângă el-l auzea, a spus că a tunat. Alții ziceau:Un înger i-a vorbit."
+      "text": "De aceea, a care stătea lângă el-l auzea, a spus că a tunat. Alții ziceau: Un înger i-a vorbit."
     },
     {
       "number": 30,
-      "text": "Isus a răspuns:Glasul acesta n-a venit pentru Mine, ci pentru voi."
+      "text": "Isus a răspuns: Glasul acesta n-a venit pentru Mine, ci pentru voi."
     },
     {
       "number": 31,
@@ -283,11 +283,11 @@
     },
     {
       "number": 34,
-      "text": "mea i-a răspuns:Am auzit din Lege că Hristosul rămâne în veac. Cum zici tu: Fiul Omului trebuie înălțat? Cine este Fiul Omului?"
+      "text": "mea i-a răspuns: Am auzit din Lege că Hristosul rămâne în veac. Cum zici tu: Fiul Omului trebuie înălțat? Cine este Fiul Omului?"
     },
     {
       "number": 35,
-      "text": "De aceea Isus le-a zis:Încă puțină vreme lumina este cu voi; umblați cât lumina, pentru ca întunericul să nu vă ajungă; cel ce umblă în întuneric nu știe unde se duce."
+      "text": "De aceea Isus le-a zis: Încă puțină vreme lumina este cu voi; umblați cât lumina, pentru ca întunericul să nu vă ajungă; cel ce umblă în întuneric nu știe unde se duce."
     },
     {
       "number": 36,
@@ -299,7 +299,7 @@
     },
     {
       "number": 38,
-      "text": "ca să se împlinească cuvîntul proorocului Isaia, pe care -l spusese:,,Doamne, cine a crezut raportul nostru? Cui i -a fost descoperit brațul Domnului?"
+      "text": "ca să se împlinească cuvântul proorocului Isaia, pe care-l spusese:„ Doamne, cine a crezut raportul nostru? Cui i-a fost descoperit brațul Domnului?"
     },
     {
       "number": 39,
@@ -311,7 +311,7 @@
     },
     {
       "number": 41,
-      "text": "Isaia a spus aceste lucruri cînd a văzut slava Lui, și a vorbit despre El."
+      "text": "Isaia a spus aceste lucruri când a văzut slava Lui, și a vorbit despre El."
     },
     {
       "number": 42,
@@ -323,7 +323,7 @@
     },
     {
       "number": 44,
-      "text": "Isus a strigat a zis:Cine crede în Mine, nu crede în Mine, ci în Cel ce M-a trimis pe Mine."
+      "text": "Isus a strigat a zis: Cine crede în Mine, nu crede în Mine, ci în Cel ce M-a trimis pe Mine."
     },
     {
       "number": 45,
@@ -347,7 +347,7 @@
     },
     {
       "number": 50,
-      "text": "Știu că porunca lui este viața veșnică. Prin urmare, lucrurile pe care le vorbesc, așa cum Tatăl mi-a spus, așa că vorbesc."
+      "text": "Știu că porunca lui este viața veșnică. Prin urmare, lucrurile pe care le vorbesc, așa cum Tatăl mi-a spus, așa că vorbesc.”"
     }
   ],
   "editorialNotes": [],

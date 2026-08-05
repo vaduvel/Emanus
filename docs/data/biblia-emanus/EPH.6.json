@@ -30,10 +30,10 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "omissionAddition": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:b49643b9ee03bf7caae5e276570f361180c823eaac270a2c80abf57f29a36172",
-    "contentDigest": "sha256:cc695130b21e419332f5f11747be3601c27e4f7aaa6b711e44545cc541caa98b"
+    "textDigest": "sha256:eb1380b89aa62ff878c2deb34346cb934d7da53d278b44d23a65b7dfd852d4db",
+    "contentDigest": "sha256:3fa9803b738070019993c2baf149990b95e0c1b93406c756d5ec94549760798e"
   },
   "verses": [
     {
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "nu numai pe calea serviciului, cînd sunt cu ochii pe voi, cum plac oamenilor, ci ca slujitori ai lui Hristos, care fac voia lui Dumnezeu din inimă,"
+      "text": "nu numai pe calea serviciului, când sunt cu ochii pe voi, cum plac oamenilor, ci ca slujitori ai lui Hristos, care fac voia lui Dumnezeu din inimă,"
     },
     {
       "number": 7,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Luați coiful mîntuirii, și sabia Duhului, care este Cuvîntul lui Dumnezeu."
+      "text": "Luați coiful mântuirii, și sabia Duhului, care este Cuvântul lui Dumnezeu."
     },
     {
       "number": 18,

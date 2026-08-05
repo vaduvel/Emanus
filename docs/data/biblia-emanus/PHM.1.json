@@ -28,12 +28,12 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:a1ea92a5bf059fa3ca571307caec00583b3e352d0f76aba6eb51f83d115613ac",
-    "contentDigest": "sha256:8f383f9d5b3f571a37972d5803ad070b10c42b84171b30913b1b8c69c369874d"
+    "textDigest": "sha256:d441bcec74fcc64df84625d5622c5224a4518f1848bf992fcca2063144304df4",
+    "contentDigest": "sha256:acb5ff2c34da1b9f20a2c4f160434fea1fe6b8a28807952d58bb28402dac64b8"
   },
   "verses": [
     {
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Pe care voiam s'o țin cu mine, ca să mă slujească în lanțurile mele pentru Evanghelie."
+      "text": "Pe care voiam s-o țin cu mine, ca să mă slujească în lanțurile mele pentru Evanghelie."
     },
     {
       "number": 14,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:1b2f24ee63a6b55ca4fed57bf71caaf299bb22a254a57d86ef74731fcb64b7a4",
-    "contentDigest": "sha256:b3ff68b2707651f28786d094705d4d81d7769d426be9771cd86619aea8e50763"
+    "textDigest": "sha256:da69e9d15e0c9eef4d455c348e3d8cc62b4d593e506d0ca92ac389f63f13f5c6",
+    "contentDigest": "sha256:98576eca884f13d13cf8ca32cb95a7cd5531f1b1b71ba891ff6b972356dc6ad3"
   },
   "verses": [
     {
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Când s - a urcat într - o barcă, discipolii lui l - au urmat."
+      "text": "Când s-a urcat într-o barcă, discipolii lui l-au urmat."
     },
     {
       "number": 24,

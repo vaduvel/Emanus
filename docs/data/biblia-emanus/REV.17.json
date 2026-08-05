@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:3b08990bc40ec5c498b18cfd65d1d4528eb85e130dd3c3260b2b4031ccdd2a29",
-    "contentDigest": "sha256:a87b0566cc8abce591c7a485a67994b0ea8244b9c444a0f0189e76651a77890e"
+    "textDigest": "sha256:b11db76a63faa184496684bde951a147c988ccb60a5793b37e73ecf213ec65d1",
+    "contentDigest": "sha256:64067e5abef30fe0722aa1ec751f18bdc2be309cbb36ce82866a8ff86817b8fa"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Unul din cei șapte îngeri, cari aveau cele șapte boluri, a venit și a vorbit cu mine, și mi -a zis:,,Vino aici. Îți voi arăta judecata marii prostituate care șade pe multe ape,"
+      "text": "Și a venit unul dintre cei șapte îngeri care aveau cele șapte potire și a vorbit cu mine, spunându-mi: Vino aici; îți voi arăta judecata curvei cea mare ce șade pe multe ape;"
     },
     {
       "number": 2,
@@ -157,11 +157,11 @@
     },
     {
       "number": 4,
-      "text": "Femeia era îmbrăcată în purpuriu și stacojiu, îmbrăcată cu aur și pietre prețioase și perle, având în mînă un pahar de aur plin de urîciuni și de impuritățile imoralității sexuale a pămîntului."
+      "text": "Femeia era îmbrăcată în purpuriu și stacojiu, îmbrăcată cu aur și pietre prețioase și perle, având în mână un pahar de aur plin de urîciuni și de impuritățile imoralității sexuale a pământului."
     },
     {
       "number": 5,
-      "text": "Și pe fruntea ei era scris un nume:Mystery, Babylon the Great, the Mother of the Prostitutes and of the Abominations of the Earth.”"
+      "text": "Și pe fruntea ei era scris un nume: Mystery, Babylon the Great, the Mother of the Prostitutes and of the Abominations of the Earth.”"
     },
     {
       "number": 6,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Îngerul mi-a zis:De ce te miri? Îți voi spune taina femeii a fiarei care o poartă, care are cele capete cele zece coarne."
+      "text": "Îngerul mi-a zis: De ce te miri? Îți voi spune taina femeii a fiarei care o poartă, care are cele capete cele zece coarne."
     },
     {
       "number": 8,
@@ -177,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "Iată mintea care are înțelepciune: cele șapte capete sunt șapte munți pe cari șade femeia."
+      "text": "Și aici este mintea care are înțelepciune. Cele șapte capete sunt șapte munți pe care șade femeia."
     },
     {
       "number": 10,
-      "text": "Ei sunt șapte împărați. Cinci au căzut, unul este, iar celălalt nu a venit încă; cînd vine el, trebuie să mai continue puțin."
+      "text": "Ei sunt șapte împărați. Cinci au căzut, unul este, iar celălalt nu a venit încă; când vine el, trebuie să mai continue puțin."
     },
     {
       "number": 11,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "El mi-a zis:Apele pe care le-ai văzut, unde stă prostituata, sunt popoare,mi, neamuri limbi."
+      "text": "El mi-a zis: Apele pe care le-ai văzut, unde stă prostituata, sunt popoare, mi, neamuri limbi."
     },
     {
       "number": 16,

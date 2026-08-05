@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:e4be33d4e3ed5685966fd202997f91d5ce7337496e876319b33058306a5e6fbc",
-    "contentDigest": "sha256:b2f80a33e18641bcf0686055e49074b3947f1012747618ebcc9d7c6bdea8b33a"
+    "textDigest": "sha256:722004c7be29fbbdaedc90aaf48a5677869241421094336e4c31fcadd4d10822",
+    "contentDigest": "sha256:9aec845284f114c91e4c8b1acefbf9c424eba1f5f6f0b3008d1ae9842b03ea1f"
   },
   "verses": [
     {
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Apoi le - a spus slujitorilor săi că nunta este gata, dar cei care au fost invitați nu erau demni."
+      "text": "Apoi le-a spus slujitorilor săi că nunta este gata, dar cei care au fost invitați nu erau demni."
     },
     {
       "number": 9,
@@ -289,7 +289,7 @@
     },
     {
       "number": 37,
-      "text": "Isus i-a zis:Să iubești pe Domnul Dumnezeul tău cu toată inima ta, cu tot sufletul tău cu tot cugetul tău."
+      "text": "Isus i-a zis: Să iubești pe Domnul Dumnezeul tău cu toată inima ta, cu tot sufletul tău cu tot cugetul tău."
     },
     {
       "number": 38,
@@ -297,7 +297,7 @@
     },
     {
       "number": 39,
-      "text": "Al doilea este:Să iubești pe aproapele tău ca pe tine însuți."
+      "text": "Al doilea este: Să iubești pe aproapele tău ca pe tine însuți."
     },
     {
       "number": 40,

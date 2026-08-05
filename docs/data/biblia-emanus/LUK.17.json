@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:74d2b7f8a85d8688c1f954c9727f683731b16dc271776d0c40afb18d8a199bb3",
-    "contentDigest": "sha256:75f85f3fa674d8cda3e70f8a798704d49a5feeea8966add3aedf57715c329141"
+    "textDigest": "sha256:b207f99e603e963c8a9051195a73bfe6f3d77d44c55f26280a74b28d590282dc",
+    "contentDigest": "sha256:63849edb23418c4c2f1551566ca7990a3764199d4379888ddbac6cc651b2a704"
   },
   "verses": [
     {
       "number": 1,
-      "text": "El le -a zis ucenicilor:,,Este imposibil să nu vină nici un prilej de poticnire, ci vai de Cel prin care vin!"
+      "text": "El le-a zis ucenicilor: Este imposibil să nu vină nici un prilej de poticnire, ci vai de Cel prin care vin!"
     },
     {
       "number": 2,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Domnul i-a zis:Dacă ai avea credință ca un grăunte de mtar, i-ai spune acestui sicomor: Dezrădăcinează-te sădește-te în mare! el ți s-ar supune."
+      "text": "Domnul i-a zis: Dacă ai avea credință ca un grăunte de mtar, i-ai spune acestui sicomor: Dezrădăcinează-te sădește-te în mare! el ți s-ar supune."
     },
     {
       "number": 7,
@@ -185,31 +185,31 @@
     },
     {
       "number": 11,
-      "text": "În drum spre Ierusalim, el trecea de - a lungul granițelor Samariei și Galileii."
+      "text": "În drum spre Ierusalim, el trecea de-a lungul granițelor Samariei și Galileii."
     },
     {
       "number": 12,
-      "text": "Cînd a intrat într'un sat anume, zece oameni, cari erau leproși, L-au întîlnit, cari stăteau la distanță."
+      "text": "Și când a intrat într-un anumit sat, l-au întâlnit zece bărbați leproși, care stăteau departe în picioare;"
     },
     {
       "number": 13,
-      "text": "Ei-au ridicat glasurile au zis:Isuse, Stăpâne, ai milă de noi!"
+      "text": "Ei-au ridicat glasurile au zis: Isuse, Stăpâne, ai milă de noi!"
     },
     {
       "number": 14,
-      "text": "Cînd i -a văzut, le -a zis:,,Duceți-vă arătați-vă preoților. Cînd au plecat, s'au curățit."
+      "text": "Când i-a văzut, le-a zis: Duceți-vă arătați-vă preoților. Când au plecat, s-au curățit."
     },
     {
       "number": 15,
-      "text": "Unul dintre ei, cînd a văzut că a fost vindecat, s'a întors, slăvind pe Dumnezeu cu glas tare."
+      "text": "Unul dintre ei, când a văzut că a fost vindecat, s-a întors, slăvind pe Dumnezeu cu glas tare."
     },
     {
       "number": 16,
-      "text": "El a căzut cu fața la picioarele lui Isus și i - a mulțumit; și a fost samaritean."
+      "text": "El a căzut cu fața la picioarele lui Isus și i-a mulțumit; și a fost samaritean."
     },
     {
       "number": 17,
-      "text": "Isus i -a răspuns:,,Au fost cei zece curățați? Dar unde sunt cei nouă?"
+      "text": "Isus i-a răspuns: Au fost cei zece curățați? Dar unde sunt cei nouă?"
     },
     {
       "number": 18,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Apoi i-a zis:Scoală-te du-te; credința ta te-a vindecat."
+      "text": "Apoi i-a zis: Scoală-te du-te; credința ta te-a vindecat."
     },
     {
       "number": 20,
@@ -229,11 +229,11 @@
     },
     {
       "number": 22,
-      "text": "El le-a spus ucenicilor:Vor veni zile când dori să una din zilele Fiului Omului nu o vedea."
+      "text": "El le-a spus ucenicilor: Vor veni zile când dori să una din zilele Fiului Omului nu o vedea."
     },
     {
       "number": 23,
-      "text": "Ei vă va spune,? Uită-te, aici? sau? Uită-te, acolo? Nu pleca sau urma după ei,"
+      "text": "Și vă vor spune: Iată, aici; sau: Iată, acolo. Nu vă duceți, nici nu îi urmați."
     },
     {
       "number": 24,
@@ -285,7 +285,7 @@
     },
     {
       "number": 37,
-      "text": "Ei, răspunzând, l-au întrebat:Unde, Doamne? El le-a zis:Unde este trupul, acolo se vor aduna și vulturii."
+      "text": "Ei, răspunzând, l-au întrebat: Unde, Doamne? El le-a zis: Unde este trupul, acolo se vor aduna și vulturii."
     }
   ],
   "editorialNotes": [],

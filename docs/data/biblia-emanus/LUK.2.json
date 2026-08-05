@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:0b30bab113121d4788266e7c2b101b408c891ac4d707e30c1b9f173fd1a8cc33",
-    "contentDigest": "sha256:7bb4c53aa44df9e67a04913acf2058b365d0bdd35c4854cef61cce052e406770"
+    "textDigest": "sha256:6c77967baf9464ade5d15400bd2eb08997e99db886c4d750933eaba3b68af4c5",
+    "contentDigest": "sha256:1fdf4856acd5891e452b6e7561c76a2974ba9e93e6f3b51f1abd074f8892dd8e"
   },
   "verses": [
     {
@@ -173,11 +173,11 @@
     },
     {
       "number": 8,
-      "text": "Erau păstori în aceeași țară care stăteau pe cîmp și vegheau noaptea asupra turmei lor."
+      "text": "Și în același ținut erau păstori stând afară și păzind străjile nopții peste turma lor."
     },
     {
       "number": 9,
-      "text": "Și un înger al Domnului a stat lângă ei și slava Domnului a strălucit împrejurul lor, iar ei s-au temut cu mare teamă."
+      "text": "Și iată, un înger al Domnului li s-a arătat, iar slava Domnului a strălucit în jurul lor; și s-au înfricoșat foarte tare."
     },
     {
       "number": 10,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Acesta este semnul pentru tine: veți găsi un copil înfășurat în benzi de pânză, situată într-un jgheab de hrănire."
+      "text": "Acesta vă va fi semnul: veți găsi un prunc înfășat și culcat într-o iesle."
     },
     {
       "number": 13,
@@ -209,11 +209,11 @@
     },
     {
       "number": 17,
-      "text": "Când au văzut-o, au mediatizat pe larg zicala care li s-a spus despre acest copil."
+      "text": "După ce L-au văzut, au făcut cunoscut cuvântul care le fusese spus despre Pruncul acesta."
     },
     {
       "number": 18,
-      "text": "Toți cei care l - au auzit s - au întrebat ce li s - a vorbit prin păstori."
+      "text": "Toți cei care l-au auzit s-au întrebat ce li s-a vorbit prin păstori."
     },
     {
       "number": 19,

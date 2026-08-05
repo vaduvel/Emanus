@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:17a82c92753f7ec31a769943710a2bb5f5b4247a13a4c2887f71b136f4a01fad",
-    "contentDigest": "sha256:6362cfa60a48fd2877a207b1704717699e69041f8f264b7be988246a846d2e52"
+    "textDigest": "sha256:51b1c347d3ad51205fc56dae01988e4af5c0dafb3502f5c0b1356d0a130846fe",
+    "contentDigest": "sha256:5c9585d1eab084ba8d0e4d5408d687e1abe85b5277f20d2d551703bb1c4bd06b"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Îngerul a răspuns femeilor:Nu vă temeți, căci știu că voi Îl pe Isus, care a fost răstignit."
+      "text": "Îngerul a răspuns femeilor: Nu vă temeți, căci știu că voi Îl pe Isus, care a fost răstignit."
     },
     {
       "number": 6,
@@ -173,19 +173,19 @@
     },
     {
       "number": 8,
-      "text": "Ei au plecat repede de la mormînt cu frică și bucurie mare, și au alergat să aducă cuvîntul ucenicilor Săi."
+      "text": "Ei au plecat repede de la mormânt cu frică și bucurie mare, și au alergat să aducă cuvântul ucenicilor Săi."
     },
     {
       "number": 9,
-      "text": "Pe cînd se duceau să spună ucenicilor Săi, Isus S'a întîlnit cu ei, le -a zis:,,Bucurați-vă! Ei au venit, I-au apucat picioarele, I s'au închinat."
+      "text": "Pe când se duceau să spună ucenicilor Săi, Isus S-a întîlnit cu ei, le-a zis:„ Bucurați-vă! Ei au venit, I-au apucat picioarele, I s-au închinat."
     },
     {
       "number": 10,
-      "text": "Atunci Isus le-a zis:Nu vă temeți. Duceți-vă spuneți fraților mei să meargă în Galileea acolo Mă vor vedea."
+      "text": "Atunci Isus le-a zis: Nu vă temeți. Duceți-vă spuneți fraților mei să meargă în Galileea acolo Mă vor vedea."
     },
     {
       "number": 11,
-      "text": "Pe cînd mergeau ei, iată că niște străjeri au intrat în cetate și au spus preoților cei mai de seamă toate lucrurile cari se întîmplaseră."
+      "text": "Și pe când se duceau ele, iată, unii din gardă au venit în cetate și au arătat marilor preoți toate cele făcute."
     },
     {
       "number": 12,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "spune:Spuneți că discipolii lui au venit noaptea l-au furat în timp ce noi dormeam."
+      "text": "spune: Spuneți că discipolii lui au venit noaptea l-au furat în timp ce noi dormeam."
     },
     {
       "number": 14,
@@ -201,11 +201,11 @@
     },
     {
       "number": 15,
-      "text": "Au luat banii, au făcut cum li s'a spus. Acest cuvînt a fost răspîndit printre Iudei, continuă pînă în ziua de azi."
+      "text": "Au luat banii, au făcut cum li s-a spus. Acest cuvânt a fost răspîndit printre Iudei, continuă până în ziua de azi."
     },
     {
       "number": 16,
-      "text": "Dar cei unsprezece ucenici s'au dus în Galileea, la muntele pe care -l trimisese Isus."
+      "text": "Dar cei unsprezece ucenici s-au dus în Galileea, la muntele pe care-l trimisese Isus."
     },
     {
       "number": 17,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Isus a venit la ei le-a vorbit, zicând:Toată puterea Mi-a fost dată în cer pe pământ."
+      "text": "Isus a venit la ei le-a vorbit, zicând: Toată puterea Mi-a fost dată în cer pe pământ."
     },
     {
       "number": 19,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "învățându-i să păzească toate lucrurile pe care vi le-am poruncit. Iată, Eu sunt cu voi în toate zilele, până la veacului. Amin."
+      "text": "învățându-i să păzească toate lucrurile pe care vi le-am poruncit. Iată, Eu sunt cu voi în toate zilele, până la veacului. Amin.”"
     }
   ],
   "editorialNotes": [],

@@ -30,10 +30,10 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "omissionAddition": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:f089e3ee7ec7b7cd922417413cbd5a967c8e7db10da3ba1e0fb4876417e3316e",
-    "contentDigest": "sha256:bbdf8364506c8e8920a4a6fb56b15cd213f1c441695819f2ec254d5afb2b5a99"
+    "textDigest": "sha256:b7834987fcfd7bc60cff175ef79c80ca62934be25bedc9b760862f23c9ed1fc7",
+    "contentDigest": "sha256:d7f278b7f506be8a7b3522b28a311bf09dafa7a67cdaf31cf17d334fd1112a3a"
   },
   "verses": [
     {
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "De aceea spune:Când s-a înălțat la cer, a luat captivi a dat daruri oamenilor„."
+      "text": "De aceea spune: Când s-a înălțat la cer, a luat captivi a dat daruri oamenilor„."
     },
     {
       "number": 9,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "El a dat pe unii să fie apostoli; și unii, prooroci; și alții, evangheliști; și unii, păstori și învățători;"
+      "text": "El a dat pe unii să fie apostoli; și unii, profeți; și alții, evangheliști; și unii, păstori și învățători;"
     },
     {
       "number": 12,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Ei, dupăce au ajuns nemiloși, s'au dat pradă poftei, ca să facă orice necurăție cu lăcomie."
+      "text": "Ei au ajuns insensibili și s-au dedat desfrânării, ca să practice cu lăcomie orice fel de necurăție."
     },
     {
       "number": 20,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "Orice amărăciune, mînie, mînie, strigăt și calomnie să fie înlăturate de la voi, cu toată răutatea."
+      "text": "Orice amărăciune, mâinie, mâinie, strigăt și calomnie să fie înlăturate de la voi, cu toată răutatea."
     },
     {
       "number": 32,

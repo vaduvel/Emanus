@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:90918de018044b917d50a543df65f6e7a65be2768819d90dd47300e24d81e51d",
-    "contentDigest": "sha256:d5fdfe7ed9c21c2bbe3ddc13912b0059ef369f864e4cd2b435f4b14787c0756c"
+    "textDigest": "sha256:673be0d2aceb77be85b3a8c76a54529ad90e771a38b26dfb5a5ba1d4f3c116e8",
+    "contentDigest": "sha256:5562f074d9369afaa0c4729db9b2bf4821ca8200f67909874f4b726ccdfc6ec8"
   },
   "verses": [
     {
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Dar cînd au văzut noroadele lucrul acesta, s'au mirat și au glorificat pe Dumnezeu, care dăduse oamenilor o astfel de autoritate."
+      "text": "Dar când au văzut noroadele lucrul acesta, s-au mirat și au glorificat pe Dumnezeu, care dăduse oamenilor o astfel de autoritate."
     },
     {
       "number": 9,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Când Isus a auzit aceasta, le-a zis:Cei sănătoși nu au nevoie de medic, dar cei bolnavi au nevoie."
+      "text": "Când Isus a auzit aceasta, le-a zis: Cei sănătoși nu au nevoie de medic, dar cei bolnavi au nevoie."
     },
     {
       "number": 13,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Isus s - a ridicat și l - a urmat, la fel ca discipolii săi."
+      "text": "Isus s-a ridicat și l-a urmat, la fel ca discipolii săi."
     },
     {
       "number": 20,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Căci ea a zis în sinea ei:Dacă mă voi atinge de haina Lui, voi fi făcută sănătoasă."
+      "text": "Căci ea a zis în sinea ei: Dacă mă voi atinge de haina Lui, voi fi făcută sănătoasă."
     },
     {
       "number": 22,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "El le-a zis:Faceți loc, pentru că fata nu este moartă, ci doarme. Ei îl ridiculizau."
+      "text": "El le-a zis: Faceți loc, pentru că fata nu este moartă, ci doarme. Ei îl ridiculizau."
     },
     {
       "number": 25,

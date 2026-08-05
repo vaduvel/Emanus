@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:e5f0cb908c8e63b70d17caae3d9e38490c61ef5eadd806d22eab55f590f3f4ac",
-    "contentDigest": "sha256:ce1092dc63fcdbf975cd65e672156b557ef01d27a63ca7a8ce1bb0d92e6a1605"
+    "textDigest": "sha256:8a1556bdb20be4c801f3a2d0ce84957dc6fd818e4ba434f6c87a9887823aa615",
+    "contentDigest": "sha256:e6ebd3666d1ddf1f401e26e2d62aad9bb58d376b8f0089ce6d09c73869308ace"
   },
   "verses": [
     {
@@ -199,7 +199,7 @@
     },
     {
       "number": 13,
-      "text": "Dar cînd va veni El, Duhul adevărului, vă va povăi în tot adevărul, căci nu va vorbi dela El, ci va vorbi tot ce va auzi, vă va vesti ce va veni."
+      "text": "Dar când va veni El, Duhul adevărului, vă va povăi în tot adevărul, căci nu va vorbi de la El, ci va vorbi tot ce va auzi, vă va vesti ce va veni."
     },
     {
       "number": 14,
@@ -211,19 +211,19 @@
     },
     {
       "number": 16,
-      "text": "Încă puțin și nu Mă veți mai vedea.Încă puțin și Mă veți vedea."
+      "text": "Încă puțin și nu Mă veți mai vedea. Încă puțin și Mă veți vedea."
     },
     {
       "number": 17,
-      "text": "Prin urmare, unii dintre discipolii săi au spus unul altuia, Ce este acest lucru pe care ni-l spune,? Un pic de timp, și ai câștigat t vedea mine, și din nou puțin timp, și mă vei vedea; și,? Pentru că merg la Tatăl?"
+      "text": "Atunci unii dintre discipolii lui au spus între ei: Ce este aceasta ce ne spune: Puțin timp și nu mă veți vedea și din nou, puțin timp și mă veți vedea? Și: Pentru că eu mă duc la Tatăl?"
     },
     {
       "number": 18,
-      "text": "Ei au zis deci:Ce este aceasta ce zice el: Încă puțină vreme? Nu știm ce zice el."
+      "text": "Ei au zis deci: Ce este aceasta ce zice el: Încă puțină vreme? Nu știm ce zice el."
     },
     {
       "number": 19,
-      "text": "De aceea, Isus a înțeles că voiau să-L întrebe le-a zis:Întrebați între voi despre aceasta, că Eu am zis:Puțin nu Mă mai vedea, iarăși Mă vedea?"
+      "text": "De aceea, Isus a înțeles că voiau să-L întrebe le-a zis: Întrebați între voi despre aceasta, că Eu am zis: Puțin nu Mă mai vedea, iarăși Mă vedea?"
     },
     {
       "number": 20,
@@ -263,7 +263,7 @@
     },
     {
       "number": 29,
-      "text": "Ucenicii Lui I-au zis:Iată, acum vorbești deslușit nu folosești nici o figură de stil."
+      "text": "Ucenicii Lui I-au zis: Iată, acum vorbești deslușit nu folosești nici o figură de stil."
     },
     {
       "number": 30,
@@ -271,7 +271,7 @@
     },
     {
       "number": 31,
-      "text": "Isus le-a răspuns:Credeți acum?"
+      "text": "Isus le-a răspuns: Credeți acum?"
     },
     {
       "number": 32,

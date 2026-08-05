@@ -28,12 +28,12 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:1d08c4d8796f611aebbdb134b8069d44f8addd63b6ca5a1fe0bc9857e6bcb5b2",
-    "contentDigest": "sha256:ddb551e4b003c5c180d1664bcedd817ff6618ee643a90e2a64e96b9683459b46"
+    "textDigest": "sha256:7c7484b32a3d0ffbe6eaa08798ba374b8a19bbc78db74316311b3aaf48e55ec0",
+    "contentDigest": "sha256:30baf1419a01dab0f082004f33f1541b3433d02a5298851ed13c9a174fa0647b"
   },
   "verses": [
     {
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Totuși, temelia tare a lui Dumnezeu stă în picioare, având pecetea aceasta:Domnul cunoaște pe cei ce sunt ai Lui„Oricine rostește Numele Domnului să se abată de la nedreptate”."
+      "text": "Totuși, temelia tare a lui Dumnezeu stă în picioare, având pecetea aceasta: Domnul cunoaște pe cei ce sunt ai Lui„Oricine rostește Numele Domnului să se abată de la nedreptate”."
     },
     {
       "number": 20,

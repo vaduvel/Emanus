@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:3df604a05393741e5d64f9441a5368f44d17125f69af35fa5c6546fb3da47674",
-    "contentDigest": "sha256:1fb540d90e040749d68f0b35fa0efb114d5408aeaa7ebb86c3559ac16d6cc3ab"
+    "textDigest": "sha256:f166069dfdf5fea7ed0397381d1c25242c9dfb2c1f228d98cb3e820c2843c845",
+    "contentDigest": "sha256:2eadee9c47f38b15b156228bd05295482200be69673d35e424d53838f5edb4e7"
   },
   "verses": [
     {
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Mulțimea, strigând cu voce tare, a început să - i ceară să facă așa cum a făcut întotdeauna pentru ei."
+      "text": "Mulțimea, strigând cu voce tare, a început să-i ceară să facă așa cum a făcut întotdeauna pentru ei."
     },
     {
       "number": 9,
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "L-au adus în locul numit Golgota, care este, fiind interpretat,locul unui craniu."
+      "text": "L-au adus în locul numit Golgota, care este, fiind interpretat, locul unui craniu."
     },
     {
       "number": 23,
@@ -277,7 +277,7 @@
     },
     {
       "number": 35,
-      "text": "Unii dintre cei care au stat deoparte, când au auzit, au spus:Iată, El îl cheamă pe Ilie."
+      "text": "Unii dintre cei care au stat deoparte, când au auzit, au spus: Iată, El îl cheamă pe Ilie."
     },
     {
       "number": 36,
@@ -321,7 +321,7 @@
     },
     {
       "number": 46,
-      "text": "A cumpărat o pânză de in, și l -a dat jos, l -a rănit în pânza de in și l -a pus într'un mormînt, care fusese tăiat dintr'o stîncă. A rostogolit o piatră la ușa mormîntului."
+      "text": "A cumpărat o pânză de in, și l-a dat jos, l-a rănit în pânza de in și l-a pus într-un mormânt, care fusese tăiat dintr'o stîncă. A rostogolit o piatră la ușa mormîntului."
     },
     {
       "number": 47,

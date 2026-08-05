@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:5f0d87a5473b1b66d7694fcdad4b23af1554d3f267e49e2b60312ae97d5fb1b6",
-    "contentDigest": "sha256:f9554baa522ef13137af2565d771a66d7a8d02a3b691e698c3a9139e79d4b140"
+    "textDigest": "sha256:53e6520091d81f9333af80a1a3001435bbd773094fe7785bb6fda8f6922c1e51",
+    "contentDigest": "sha256:0c8ca920c632669a2aa91cddc7caac60d95621224a15a085d58c95f65610796f"
   },
   "verses": [
     {
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Pentru că este în Scriptură:Iată, pun în Sion o piatră unghiulară de căpetenie, aleasă scumpă; cel ce crede în El nu va fi dezamăgit.„"
+      "text": "Pentru că este în Scriptură: Iată, pun în Sion o piatră unghiulară de căpetenie, aleasă scumpă; cel ce crede în El nu va fi dezamăgit.„"
     },
     {
       "number": 7,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Căci voi ați fost chemați la aceasta, pentrucă și Hristos a suferit pentru noi, și v'a lăsat un exemplu, ca să urmați pașii Lui,"
+      "text": "Căci voi ați fost chemați la aceasta, pentru că și Hristos a suferit pentru noi, și v-a lăsat un exemplu, ca să urmați pașii Lui,"
     },
     {
       "number": 22,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Căci v'ați rătăcit ca niște oi, dar acum v'ați întors la Păstorul și Văzătorul sufletelor voastre.”"
+      "text": "Căci v-ați rătăcit ca niște oi, dar acum v-ați întors la Păstorul și Văzătorul sufletelor voastre.”"
     }
   ],
   "editorialNotes": [],

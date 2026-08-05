@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:ff8c55b1d54a31d6c6327694feb283a06bd9e7ae240d6caf304081766adaf7aa",
-    "contentDigest": "sha256:6a4bcadd8f70c7272ab3965d26b9560a00541dad90052d286b621c42834b7931"
+    "textDigest": "sha256:1e5d8ee5174c20da4f54edb31c609ce78c5ae7ad7afe6396c9a46771f9c9d582",
+    "contentDigest": "sha256:1b738fb114030b9ef6b64a7dccbd4b62053faf35b24d10c6543a8d44738a1e96"
   },
   "verses": [
     {
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Isus a intrat în templul lui Dumnezeu și i - a izgonit pe toți cei ce vindeau și cumpărau în templu, și a răsturnat schimbătorii de bani și scaunele celor ce vindeau porumbeii."
+      "text": "Isus a intrat în templul lui Dumnezeu și i-a izgonit pe toți cei ce vindeau și cumpărau în templu, și a răsturnat schimbătorii de bani și scaunele celor ce vindeau porumbeii."
     },
     {
       "number": 13,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Șchiopii și orbii au venit la El în Templu, și i -a vindecat."
+      "text": "Șchiopii și orbii au venit la El în Templu, și i-a vindecat."
     },
     {
       "number": 15,
@@ -321,7 +321,7 @@
     },
     {
       "number": 45,
-      "text": "Cînd preoții cei mai de seamă și fariseii au auzit pildele lui, au înțeles că vorbea despre ei."
+      "text": "Când preoții cei mai de seamă și fariseii au auzit pildele lui, au înțeles că vorbea despre ei."
     },
     {
       "number": 46,

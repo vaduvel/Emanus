@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:4740232fcf1d47b8df95f84491751cd95cb6e172290c8e1c6468bcde0918ae7e",
-    "contentDigest": "sha256:8a27042b0c29627025cdd3ef0fdd79d029d7ce25be34538df7dbee4adc2f8075"
+    "textDigest": "sha256:81358834367abd8498ec2fcbc8a8a8c7c8325ec9952c0ccf470fc2ad8e59e73d",
+    "contentDigest": "sha256:ed658f9e1e330317a12bec0ac2a1caae2a6c4a290280eb3ff99242b5c5d8336c"
   },
   "verses": [
     {
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Dar Irod, cînd a auzit lucrul acesta, a zis:,,Acesta este Ioan, pe care l-am decapitat; a înviat din morți."
+      "text": "Dar Irod, când a auzit lucrul acesta, a zis:„ Acesta este Ioan, pe care l-am decapitat; a înviat din morți."
     },
     {
       "number": 17,
@@ -337,7 +337,7 @@
     },
     {
       "number": 49,
-      "text": "Cînd l-au văzut umblînd pe mare, au bănuit că este o fantomă, și au strigat:"
+      "text": "Când l-au văzut umblînd pe mare, au bănuit că este o fantomă, și au strigat:"
     },
     {
       "number": 50,
@@ -365,7 +365,7 @@
     },
     {
       "number": 56,
-      "text": "Oriunde intra, în sate, în cetăți sau în așezări rurale, îi puneau pe cei bolnavi în piețe și Îl rugau să-i lase să atingă măcar marginea hainei Lui; și toți cei care Îl atingeau erau vindecați."
+      "text": "Oriunde intra, în sate, în cetăți sau în așezări rurale, îi puneau pe cei bolnavi în piețe și Îl rugau să-i lase să atingă măcar marginea hainei Lui; și toți cei care Îl atingeau erau vindecați.”"
     }
   ],
   "editorialNotes": [],

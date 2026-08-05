@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:7167276a0dc518bc203465d3bd21160b48c9131196c5012ba085707c9dec67cb",
-    "contentDigest": "sha256:318bb924cad305fe395193ede7b32cf35710c804aa3545a8306e13cd64551ff9"
+    "textDigest": "sha256:cb9abe1f9bd219b683d9fd0d6eb55eeb0233ac563124942bbfd685745e7db788",
+    "contentDigest": "sha256:e6a9669daf9b6664e0ffb7d141446caa949f878bec863fbf6ad4232399c8ecaa"
   },
   "verses": [
     {
@@ -245,7 +245,7 @@
     },
     {
       "number": 27,
-      "text": "S'au întors la Ierusalim, și pe cînd mergea el în Templu, preoții cei mai de seamă, cărturarii și bătrînii au venit la El."
+      "text": "S-au întors la Ierusalim, și pe când mergea el în Templu, preoții cei mai de seamă, cărturarii și bătrânii au venit la El."
     },
     {
       "number": 28,

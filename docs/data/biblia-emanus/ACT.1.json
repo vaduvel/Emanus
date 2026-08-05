@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:946c9c876524a212fb965a4179634ed3b89bd0fa06000c726317149ba2823948",
-    "contentDigest": "sha256:bbb5b74037e03f17af260e7e863f8c14b5ee06f89c97ab2ef5dbfbd8d8661383"
+    "textDigest": "sha256:0091772cd6fb05fae752604ac25779db40aa4787b265171b874a724fb4ea39a6",
+    "contentDigest": "sha256:f89b341c1b8308aad99bcf537c686b06eccca9fa35559ae0aa36e69b352ace00"
   },
   "verses": [
     {
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Omul acesta a căpătat un ogor cu răsplata pentru răutatea lui, și i -a căzut cu capul înainte, i s'a deschis trupul și toate intestinele i s'au spart."
+      "text": "Omul acesta a căpătat un ogor cu răsplata pentru răutatea lui, și i-a căzut cu capul înainte, i s-a deschis trupul și toate intestinele i s-au spart."
     },
     {
       "number": 19,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Ei au înaintat doi: Iosif i - a numit pe Barsaba, care se numea și Iust și Matthias."
+      "text": "Ei au înaintat doi: Iosif i-a numit pe Barsaba, care se numea și Iust și Matthias."
     },
     {
       "number": 24,

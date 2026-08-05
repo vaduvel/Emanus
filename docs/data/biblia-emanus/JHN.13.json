@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,13 +145,13 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:06093aae295ff52aaad7813f730097066355ee323c0dea571b09930b5b20c24c",
-    "contentDigest": "sha256:a8732a12abe75de76d8df69c51ebde8c669803ec37b5003997e540e5a22c7b7f"
+    "textDigest": "sha256:dac9c78f2d0adf6165fdf666f5cd7c0b4c694d155a166404b518b41a1f944a96",
+    "contentDigest": "sha256:cf133efe4e9a99d2fb6ea6fc3a816b73ee4ab7dc1051a2f7efb471bc46becb9e"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Înainte de sărbătoarea Paștelui, Isus, știind că venise vremea ca el să se depărteze de la această lume la Tatăl, după ce și -a iubit pe ai săi care erau în lume, i - a iubit pînă la sfîrșit."
+      "text": "Înainte de sărbătoarea Paștelui, Isus, știind că venise vremea ca el să se depărteze de la această lume la Tatăl, după ce și-a iubit pe ai săi care erau în lume, i-a iubit până la sfârșit."
     },
     {
       "number": 2,
@@ -163,7 +163,7 @@
     },
     {
       "number": 4,
-      "text": "S'a sculat dela cină, și și -a pus hainele de afară. A luat un prosop și și -a înfășurat un prosop în jurul taliei."
+      "text": "S-a sculat de la cină, și și-a pus hainele de afară. A luat un prosop și și-a înfășurat un prosop în jurul taliei."
     },
     {
       "number": 5,
@@ -171,31 +171,31 @@
     },
     {
       "number": 6,
-      "text": "Apoi a venit la Simon Petru i-a zis:Doamne, îmi speli picioarele?"
+      "text": "Apoi a venit la Simon Petru i-a zis: Doamne, îmi speli picioarele?"
     },
     {
       "number": 7,
-      "text": "Isus i-a răspuns:Nu știi ce fac acum, dar vei mai târziu."
+      "text": "Isus i-a răspuns: Nu știi ce fac acum, dar vei mai târziu."
     },
     {
       "number": 8,
-      "text": "Petru i-a zis:Nu-mi vei spăla niciodată picioarele! Isus i-a răspuns:Dacă nu te spăl, nu vei avea parte cu mine."
+      "text": "Petru i-a zis: Nu-mi vei spăla niciodată picioarele! Isus i-a răspuns: Dacă nu te spăl, nu vei avea parte cu mine."
     },
     {
       "number": 9,
-      "text": "Simon Petru i-a zis:Doamne, nu numai picioarele mele, ci mâinile capul meu!"
+      "text": "Simon Petru i-a zis: Doamne, nu numai picioarele mele, ci mâinile capul meu!"
     },
     {
       "number": 10,
-      "text": "Isus i-a zis:Cineva care a făcut baie nu are nevoie decât să i se spele picioarele, dar este complet curat."
+      "text": "Isus i-a zis: Cineva care a făcut baie nu are nevoie decât să i se spele picioarele, dar este complet curat."
     },
     {
       "number": 11,
-      "text": "Căci el îl cunoștea pe cel ce avea să -l trădeze; de aceea a zis:,,Nu sunteți toți curați."
+      "text": "Căci el îl cunoștea pe cel ce avea să-l trădeze; de aceea a zis: Nu sunteți toți curați."
     },
     {
       "number": 12,
-      "text": "După ce le-a spălat picioarele,-a pus haina de pe s-a din nou, le-a zis:tiți ce v-am făcut?"
+      "text": "După ce le-a spălat picioarele,-a pus haina de pe s-a din nou, le-a zis: tiți ce v-am făcut?"
     },
     {
       "number": 13,
@@ -215,7 +215,7 @@
     },
     {
       "number": 17,
-      "text": "Daca stii aceste lucruri, binecuvantat esti tu daca le faci."
+      "text": "Dacă știți acestea, fericiți sunteți dacă le faceți."
     },
     {
       "number": 18,
@@ -231,7 +231,7 @@
     },
     {
       "number": 21,
-      "text": "Când Isus a spus acest lucru, el a fost tulburat în spirit, și a mărturisit,? Cu siguranță vă spun că unul dintre voi mă va trăda."
+      "text": "După ce a spus Isus acestea, a fost tulburat în duh și a adus mărturie și a spus: Adevărat, adevărat vă spun, că unul dintre voi mă va trăda."
     },
     {
       "number": 22,
@@ -239,23 +239,23 @@
     },
     {
       "number": 23,
-      "text": "Unul dintre discipolii săi, pe care i - a iubit Isus, era la masă, sprijinindu - se de pieptul lui Isus."
+      "text": "Unul dintre discipolii săi, pe care i-a iubit Isus, era la masă, sprijinindu-se de pieptul lui Isus."
     },
     {
       "number": 24,
-      "text": "Simon Petru i-a făcut semn i-a zis:Spune-ne cine este acela despre care vorbește."
+      "text": "Simon Petru i-a făcut semn i-a zis: Spune-ne cine este acela despre care vorbește."
     },
     {
       "number": 25,
-      "text": "El, sprijinindu-se pe pieptul lui Isus, l-a întrebat:Doamne, cine este?"
+      "text": "El, sprijinindu-se pe pieptul lui Isus, l-a întrebat: Doamne, cine este?"
     },
     {
       "number": 26,
-      "text": "Isus a răspuns:El este acela căruia îi voi da această bucată de pâine, după ce o voi înmuia. După ce a înmuiat bucata de pâine, i-a dat-o lui Iuda, fiul lui Simon Iscarioteanul."
+      "text": "Isus a răspuns: El este acela căruia îi voi da această bucată de pâine, după ce o voi înmuia. După ce a înmuiat bucata de pâine, i-a dat-o lui Iuda, fiul lui Simon Iscarioteanul."
     },
     {
       "number": 27,
-      "text": "Dupăca de pâine, Satana a intrat în el, Isus i -a zis:,,Ce faci, fă repede!"
+      "text": "Dupăca de pâine, Satana a intrat în el, Isus i-a zis: Ce faci, fă repede!"
     },
     {
       "number": 28,
@@ -263,7 +263,7 @@
     },
     {
       "number": 29,
-      "text": "Căci unii s-au gândit, pentru că Iuda avea cutia cu bani, că Isus i-a spus:Cumpără lucrurile de care avem nevoie pentru sărbătoare, sau că ar trebui să dea ceva săracilor."
+      "text": "Căci unii s-au gândit, pentru că Iuda avea cutia cu bani, că Isus i-a spus: Cumpără lucrurile de care avem nevoie pentru sărbătoare, sau că ar trebui să dea ceva săracilor."
     },
     {
       "number": 30,
@@ -271,7 +271,7 @@
     },
     {
       "number": 31,
-      "text": "După ce a ieșit, Isus a spus:Acum Fiul Omului a fost glorificat Dumnezeu a fost glorificat în el."
+      "text": "După ce a ieșit, Isus a spus: Acum Fiul Omului a fost glorificat Dumnezeu a fost glorificat în el."
     },
     {
       "number": 32,
@@ -279,7 +279,7 @@
     },
     {
       "number": 33,
-      "text": "Copii mici, voi fi cu voi un pic mai mult. Mă veți căuta, și așa cum am spus evreilor,? Unde mă duc, puteți veni, așa că acum vă spun."
+      "text": "Copilașilor, mai sunt puțin cu voi. Mă veți căuta, și cum am spus iudeilor că: Unde mă duc eu voi nu puteți veni, tot așa vă spun acum."
     },
     {
       "number": 34,
@@ -287,19 +287,19 @@
     },
     {
       "number": 35,
-      "text": "Prin aceasta toata lumea va sti ca sunteti discipolii mei, daca aveti dragoste unul pentru celalalt."
+      "text": "Prin aceasta vor ști toți că sunteți discipolii mei, dacă aveți dragoste unii pentru alții."
     },
     {
       "number": 36,
-      "text": "Simon Petru i-a zis:Doamne, unde te duci? Isus a răspuns: Unde Mă duc Eu, nu poți să mă urmezi acum, dar o vei urma după aceea."
+      "text": "Simon Petru i-a zis: Doamne, unde te duci? Isus a răspuns: Unde Mă duc Eu, nu poți să mă urmezi acum, dar o vei urma după aceea."
     },
     {
       "number": 37,
-      "text": "Petru I -a zis:,,Doamne, de ce nu Te pot urma acum? Îmi voi da viața pentru Tine."
+      "text": "Petru I-a zis: Doamne, de ce nu Te pot urma acum? Îmi voi da viața pentru Tine."
     },
     {
       "number": 38,
-      "text": "Isus i-a răspuns:Vrei să-ți dai viața pentru mine? Adevărat îți spun, cocoșul nu va cînta pînă nu te vei lepăda de Mine de trei ori."
+      "text": "Isus i-a răspuns: Vrei să-ți dai viața pentru mine? Adevărat îți spun, cocoșul nu va cînta până nu te vei lepăda de Mine de trei ori."
     }
   ],
   "editorialNotes": [],

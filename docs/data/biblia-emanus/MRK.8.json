@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:31f20586688c0af0b16926194a828acbf3eedee8da18e377574471cfca5e4e2f",
-    "contentDigest": "sha256:417df33ab312707c4c5a760ffba0daea45c5c86c7ccf8ac96433ad6ecc6b7e2b"
+    "textDigest": "sha256:25fb01828b6d51e1822ca3f4e6375071cabf90adf338e0a10ec368663f03754a",
+    "contentDigest": "sha256:796348449cca1e88b2be1a849286e7b7c4ee3d30be4bcfaa52980675694dc6fa"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pe vremea aceea, cînd era o mare mulțime, și n'aveau ce mînca, Isus și -a chemat ucenicii, și le -a zis:"
+      "text": "Pe vremea aceea, când era o mare mulțime, și n-aveau ce mînca, Isus și-a chemat ucenicii, și le-a zis:"
     },
     {
       "number": 2,
@@ -157,19 +157,19 @@
     },
     {
       "number": 4,
-      "text": "Ucenicii Lui I-au răspuns:De unde poate cineva să sature pe poporul acesta cu pâine aici, într-un loc pustiu?„"
+      "text": "Ucenicii Lui I-au răspuns: De unde poate cineva să sature pe poporul acesta cu pâine aici, într-un loc pustiu?"
     },
     {
       "number": 5,
-      "text": "El le-a zis:Câte pâini?” Ei au răspuns:apte„."
+      "text": "El le-a zis: Câte pâini? Ei au răspuns: apte."
     },
     {
       "number": 6,
-      "text": "El a poruncit mulțimii să șadă jos pe pămînt, și a luat cele șapte pâini. După ce le -a mulțumit, le -a rupt și le -a dat ucenicilor Săi să slujească, și au slujit mulțimii."
+      "text": "El a poruncit mulțimii să șadă jos pe pământ, și a luat cele șapte pâini. După ce le-a mulțumit, le-a rupt și le-a dat ucenicilor Săi să slujească, și au slujit mulțimii."
     },
     {
       "number": 7,
-      "text": "Aveau și ei câțiva peștișori, după ce i - au binecuvântat, el a zis să le slujească și lor."
+      "text": "Aveau și ei câțiva peștișori, după ce i-au binecuvântat, el a zis să le slujească și lor."
     },
     {
       "number": 8,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Fariseii au ieșit și au început să - l întrebe, căutînd de la el un semn din cer și punîndu - l la încercare."
+      "text": "Fariseii au ieșit și au început să-l întrebe, căutînd de la el un semn din cer și punîndu-l la încercare."
     },
     {
       "number": 12,
@@ -197,19 +197,19 @@
     },
     {
       "number": 14,
-      "text": "Au uitat să ia pâine, și n'aveau mai mult de o bucată de pâine în corabie cu ei."
+      "text": "Au uitat să ia pâine, și n-aveau mai mult de o bucată de pâine în corabie cu ei."
     },
     {
       "number": 15,
-      "text": "El le-a spus:Lu seama, păziți-vă de drojdia fariseilor de drojdia lui Irod.”"
+      "text": "El le-a spus: Lu seama, păziți-vă de drojdia fariseilor de drojdia lui Irod."
     },
     {
       "number": 16,
-      "text": "Ei vorbeau unii cu alții, și ziceau:,,Este pentru că nu avem pâine. „"
+      "text": "Ei vorbeau unii cu alții, și ziceau: Este pentru că nu avem pâine."
     },
     {
       "number": 17,
-      "text": "Isus, văzându-l, le-a zis:De ce credeți că pentru că n-aveți pâine? Încă nu pricepeți nu? Este inima voastră încă împietrită?"
+      "text": "Isus, văzându-l, le-a zis: De ce credeți că pentru că n-aveți pâine? Încă nu pricepeți nu? Este inima voastră încă împietrită?"
     },
     {
       "number": 18,
@@ -217,11 +217,11 @@
     },
     {
       "number": 19,
-      "text": "Când am rupt cele cinci pâini dintre cele cinci mii, câte coșuri pline de bucăți rupte ai luat?” Ei i-au spus:Doisprezece.„"
+      "text": "Când am rupt cele cinci pâini dintre cele cinci mii, câte coșuri pline de bucăți rupte ai luat? Ei i-au spus: Doisprezece."
     },
     {
       "number": 20,
-      "text": "Când cele șapte pâini i-au hrănit pe cei patru mii, câte coșuri pline cu bucăți rupte ai luat?”, I-au zis ei,Șapte.„"
+      "text": "Când cele șapte pâini i-au hrănit pe cei patru mii, câte coșuri pline cu bucăți rupte ai luat?, I-au zis ei, Șapte."
     },
     {
       "number": 21,
@@ -233,11 +233,11 @@
     },
     {
       "number": 23,
-      "text": "A apucat pe orb de mînă, și l -a scos din sat. Cînd a scuipat pe ochi, și -a pus mînile pe el, l -a întrebat dacă a văzut ceva."
+      "text": "A apucat pe orb de mână, și l-a scos din sat. Când a scuipat pe ochi, și-a pus mâinile pe el, l-a întrebat dacă a văzut ceva."
     },
     {
       "number": 24,
-      "text": "S-a uitat în sus a spus:Văd oameni, dar îi văd ca pe niște copaci care se plimbă.”"
+      "text": "S-a uitat în sus a spus: Văd oameni, dar îi văd ca pe niște copaci care se plimbă."
     },
     {
       "number": 25,
@@ -249,15 +249,15 @@
     },
     {
       "number": 27,
-      "text": "Isus a ieșit, împreună cu ucenicii Săi, în satele Cezareei lui Filip. Pe drum, El i-a întrebat pe ucenici:Cine zic oamenii că sunt Eu?„"
+      "text": "Isus a ieșit, împreună cu ucenicii Săi, în satele Cezareei lui Filip. Pe drum, El i-a întrebat pe ucenici: Cine zic oamenii că sunt Eu?"
     },
     {
       "number": 28,
-      "text": "Ei i-au zis:Ioan Botezătorul, zic Ilie, dar, unul din prooroci.”"
+      "text": "Ei i-au zis: Ioan Botezătorul, zic Ilie, dar, unul din profeți."
     },
     {
       "number": 29,
-      "text": "El le-a zis:Dar voi cine ziceți că sunt eu?„ Petru a răspuns:Tu ești Hristosul”."
+      "text": "El le-a zis: Dar voi cine ziceți că sunt eu? Petru a răspuns: Tu ești Hristosul."
     },
     {
       "number": 30,
@@ -269,15 +269,15 @@
     },
     {
       "number": 32,
-      "text": "El le -a vorbit deschis. Petru l - a luat și a început să -L mustre."
+      "text": "El le-a vorbit deschis. Petru l-a luat și a început să-L mustre."
     },
     {
       "number": 33,
-      "text": "Dar el, întorcându-se văzându- ucenicii, l-a certat pe Petru a zis:Înapoia mea, Satano! Căci nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor.„"
+      "text": "Dar el, întorcându-se văzându-ucenicii, l-a certat pe Petru a zis: Înapoia mea, Satano! Căci nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor."
     },
     {
       "number": 34,
-      "text": "El a chemat mulțimea la sine cu discipolii săi și le-a spus:? Oricine vrea să vină după mine, să se nege, și să ia crucea lui, și să mă urmeze."
+      "text": "Și chemând la el mulțimea, împreună cu discipolii săi, le-a spus: Oricine voiește să vină după mine, să se dezică de el însuși și să își ridice crucea și să mă urmeze."
     },
     {
       "number": 35,
@@ -293,7 +293,7 @@
     },
     {
       "number": 38,
-      "text": "Căci oricine va fi rușinat de mine și de cuvintele mele în această generație adulteră și păcătoasă, Fiul Omului de asemenea va fi rușinat de el când va veni în Tatăl său gloria sa cu îngerii sfinți.”"
+      "text": "Căci oricine va fi rușinat de mine și de cuvintele mele în această generație adulteră și păcătoasă, Fiul Omului de asemenea va fi rușinat de el când va veni în Tatăl său gloria sa cu îngerii sfinți."
     }
   ],
   "editorialNotes": [],

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:69521feee52db6b76ae6c34b87d123fcc2a5d9bf9e9f3b8f863304f708af12fc",
-    "contentDigest": "sha256:a86551b42298cfa0d8e108e2b5a442aec7fa5a1c6a26255b93e23c738f5607d7"
+    "textDigest": "sha256:72a40e8858dfb8c4b827d6b461e2820078c455ec358c5b90f276e074ffa153b4",
+    "contentDigest": "sha256:f398113bf7be58060983e30dfc1c151313da5a22c1c8c0ab0dec2fd07bb345f5"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Cînd au trecut zilele acelea, am plecat și am plecat în călătoria noastră. Toți, cu nevestele și copiii, ne-au adus pe drumul nostru pînă cînd am ieșit din cetate. Îngenuncheam pe plajă, ne-am rugat."
+      "text": "Când au trecut zilele acelea, am plecat și am plecat în călătoria noastră. Toți, cu nevestele și copiii, ne-au adus pe drumul nostru până când am ieșit din cetate. Îngenuncheam pe plajă, ne-am rugat."
     },
     {
       "number": 6,
@@ -281,7 +281,7 @@
     },
     {
       "number": 35,
-      "text": "Cînd a ajuns pe scări, a fost dus de soldați din pricina violenței mulțimii;"
+      "text": "Când a ajuns pe scări, a fost dus de soldați din pricina violenței mulțimii;"
     },
     {
       "number": 36,

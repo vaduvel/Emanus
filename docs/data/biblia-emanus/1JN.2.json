@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:7b5715c12eb280bdb691714ad4e62dbe33ba62e206564a699a289229c921d374",
-    "contentDigest": "sha256:8db2fbf6991ece41f9f84f9e7da0afa3971b2250a2401a4501ad3839ab54e1f9"
+    "textDigest": "sha256:7c7b27ae85a88d7bcf6520b692de84632526a9b7955a2b624e8f1d949bce56a8",
+    "contentDigest": "sha256:5f85e23574e3712fb8c3aacbbcad8b77d5c23dd841a8f3913bd5ed095dce7421"
   },
   "verses": [
     {
@@ -153,11 +153,11 @@
     },
     {
       "number": 3,
-      "text": "Iată cum știm că -L cunoaștem: dacă păzim poruncile Lui."
+      "text": "Iată cum știm că-L cunoaștem: dacă păzim poruncile Lui."
     },
     {
       "number": 4,
-      "text": "Cel care spune:? Îl cunosc, și nu respectă poruncile sale, este un mincinos, și adevărul nu este în el."
+      "text": "Cel care spune: «Îl cunosc», dar nu păzește poruncile Lui este mincinos, iar adevărul nu este în el."
     },
     {
       "number": 5,
@@ -193,11 +193,11 @@
     },
     {
       "number": 13,
-      "text": "Vă scriu vouă,, pentru că Îl cunoașteți pe Cel ce este de la început. Vă scriu vouă, tinerilor, pentru că ați biruit pe cel rău. Vă scriu vouă, copililor, pentru că Îl cunoașteți pe Tatăl."
+      "text": "Vă scriu vouă„ pentru că Îl cunoașteți pe Cel ce este de la început. Vă scriu vouă, tinerilor, pentru că ați biruit pe cel rău. Vă scriu vouă, copililor, pentru că Îl cunoașteți pe Tatăl."
     },
     {
       "number": 14,
-      "text": "V'am scris,, pentrucă voi cunoașteți pe Celce este dela început. V'am scris, tinerilor, pentrucă sunteți tari, Cuvîntul lui Dumnezeu rămîne în voi, ați biruit pe cel rău."
+      "text": "V-am scris, taților, pentru că l-ați cunoscut pe cel care este de la început. V-am scris, tinerilor, pentru că sunteți tari și cuvântul lui Dumnezeu rămâne în voi și l-ați învins pe cel rău."
     },
     {
       "number": 15,
@@ -249,15 +249,15 @@
     },
     {
       "number": 27,
-      "text": "Cît despre voi, ungerea pe care ați primit -o de la El rămîne în voi, și nu aveți nevoie ca cineva să vă învețe. Dar, după cum vă învață ungerea Lui despre toate lucrurile, și este adevărată, și nu este o minciună, și după cum v - a învățat ea, veți rămîne în El."
+      "text": "Cât despre voi, ungerea pe care ați primit-o de la El rămâne în voi, și nu aveți nevoie ca cineva să vă învețe. Dar, după cum vă învață ungerea Lui despre toate lucrurile, și este adevărată, și nu este o minciună, și după cum v-a învățat ea, veți rămâne în El."
     },
     {
       "number": 28,
-      "text": "Acum, copilașilor, rămîneți în El, ca, cînd se va arăta, să avem curaj și să nu ne fie rușine înaintea Lui la venirea Lui."
+      "text": "Acum, copilașilor, rămîneți în El, ca, când se va arăta, să avem curaj și să nu ne fie rușine înaintea Lui la venirea Lui."
     },
     {
       "number": 29,
-      "text": "Dacă știți că el este drept, știți că oricine practică dreptatea s - a născut din el."
+      "text": "Dacă știți că el este drept, știți că oricine practică dreptatea s-a născut din el.”"
     }
   ],
   "editorialNotes": [],

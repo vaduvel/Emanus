@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:37432403cb8fc6b5dff05bca1476efd6b969347d9187e061eee54738ec2bfdfb",
-    "contentDigest": "sha256:7de1ae2715ff42c5fa5c0487ad6acf7618670b6c91fc5c57614a8db506f85a24"
+    "textDigest": "sha256:18b9c9539d7fe604db417549d7758bf2b6f6a65ffb4bab7937f9f36d9b0d509e",
+    "contentDigest": "sha256:3b4ef71bde9cb1ed8f15a8157087fc35875738c24608e71b4165e3bcd1258e68"
   },
   "verses": [
     {
@@ -149,11 +149,11 @@
     },
     {
       "number": 2,
-      "text": "zicând:Într-o cetate era un judecător care nu se temea de Dumnezeu și nu respecta pe om."
+      "text": "zicând: Într-o cetate era un judecător care nu se temea de Dumnezeu și nu respecta pe om."
     },
     {
       "number": 3,
-      "text": "O văduvă a fost în acel oraș, și ea a venit de multe ori la el, spunând,? Apără-mă de adversarul meu!"
+      "text": "Și era o văduvă în acea cetate; și a venit la el, spunând: Fă-mi dreptate față de potrivnicul meu."
     },
     {
       "number": 4,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Won t Dumnezeu răzbuna pe aleșii săi care strigă la el zi și noapte, și totuși el exercită răbdare cu ei?"
+      "text": "Și nu va face Dumnezeu dreptate aleșilor lui, care strigă zi și noapte către el, deși rabdă îndelung în ce îi privește?"
     },
     {
       "number": 8,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Fariseul a stat s-a rugat singur astfel:Doamne, îți mulțumesc că nu sunt ca ceilalți oameni: extorcatori, nedrepți, adulteri sau chiar ca acest perceptor."
+      "text": "Fariseul a stat s-a rugat singur astfel: Doamne, îți mulțumesc că nu sunt ca ceilalți oameni: extorcatori, nedrepți, adulteri sau chiar ca acest perceptor."
     },
     {
       "number": 12,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Î aduceau copiii la el, ca să se atingă de ei. Dar ucenicii, cînd au văzut lucrul acesta, i-au mustrat."
+      "text": "Î aduceau copiii la el, ca să se atingă de ei. Dar ucenicii, când au văzut lucrul acesta, i-au mustrat."
     },
     {
       "number": 16,
@@ -209,11 +209,11 @@
     },
     {
       "number": 17,
-      "text": "Adevărat, adevărat vă spun că oricine nu va primi Împărăția lui Dumnezeu ca un copil, nicidecum nu va intra în ea."
+      "text": "Adevărat vă spun: cine nu primește Împărăția lui Dumnezeu asemenea unui copilaș nicidecum nu va intra în ea."
     },
     {
       "number": 18,
-      "text": "Un conducător l-a întrebat:Bunule Învățător, ce să fac ca sătenesc viața veșnică?"
+      "text": "Un conducător l-a întrebat: Bunule Învățător, ce să fac ca sătenesc viața veșnică?"
     },
     {
       "number": 19,
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "Când a auzit aceste lucruri, Isus i-a zis:Îți mai lipsește un lucru: vinde tot ce ai împarte-l săracilor; atunci vei avea comoară în cer; apoi vino urmează-Mă."
+      "text": "Când a auzit aceste lucruri, Isus i-a zis: Îți mai lipsește un lucru: vinde tot ce ai împarte-l săracilor; atunci vei avea comoară în cer; apoi vino urmează-Mă."
     },
     {
       "number": 23,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Isus, văzând că el a devenit foarte trist, a spus,? Cât de greu este pentru cei care au bogății să intre în Regatul lui Dumnezeu!"
+      "text": "Iar Isus, când a văzut că el s-a întristat foarte mult, a spus: Cât de greu vor intra în împărăția lui Dumnezeu cei ce au bogății!"
     },
     {
       "number": 25,
@@ -245,19 +245,19 @@
     },
     {
       "number": 26,
-      "text": "Cei care l-au auzit au spus:?Atunci cine poate fi salvat?"
+      "text": "Iar cei ce au auzit, au spus: Atunci cine poate fi salvat?"
     },
     {
       "number": 27,
-      "text": "El a spus:Lucrurile care sunt imposibile la oameni sunt posibile la Dumnezeu."
+      "text": "El a spus: Lucrurile care sunt imposibile la oameni sunt posibile la Dumnezeu."
     },
     {
       "number": 28,
-      "text": "Petru a zis:Iată, noi am lăsat totul Te-am urmat."
+      "text": "Petru a zis: Iată, noi am lăsat totul Te-am urmat."
     },
     {
       "number": 29,
-      "text": "El le-a zis:Adevărat, adevărat vă spun că nu este nimeni care să fi lăsat casă, sau nevastă, sau frați, sau părinți, sau copii, pentru numele lui Dumnezeu,"
+      "text": "El le-a zis: Adevărat, adevărat vă spun că nu este nimeni care să fi lăsat casă, sau nevastă, sau frați, sau părinți, sau copii, pentru numele lui Dumnezeu,"
     },
     {
       "number": 30,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "El i-a luat pe cei doisprezece deoparte le-a zis:Iată, noi urcăm la Ierusalim toate lucrurile scrise prin profeți cu privire la Fiul Omului vor fi împlinite."
+      "text": "El i-a luat pe cei doisprezece deoparte le-a zis: Iată, noi urcăm la Ierusalim toate lucrurile scrise prin profeți cu privire la Fiul Omului vor fi împlinite."
     },
     {
       "number": 32,
@@ -277,7 +277,7 @@
     },
     {
       "number": 34,
-      "text": "Ei n'au înțeles nimic din aceste lucruri, și cuvintele acestea le erau ascunse, și n'au înțeles ce li se spusese."
+      "text": "Ei n-au înțeles nimic din aceste lucruri, și cuvintele acestea le erau ascunse, și n-au înțeles ce li se spusese."
     },
     {
       "number": 35,
@@ -289,11 +289,11 @@
     },
     {
       "number": 37,
-      "text": "Ei i - au spus că Isus din Nazaret era în trecere."
+      "text": "Ei i-au spus că Isus din Nazaret era în trecere."
     },
     {
       "number": 38,
-      "text": "El a strigat:Isuse, fiul lui David, ai milă de mine!"
+      "text": "El a strigat: Isuse, fiul lui David, ai milă de mine!"
     },
     {
       "number": 39,
@@ -301,19 +301,19 @@
     },
     {
       "number": 40,
-      "text": "Stînd nemișcat, Isus i -a poruncit să fie adus la el. Cînd s'a apropiat, l -a întrebat:"
+      "text": "Stînd nemișcat, Isus i-a poruncit să fie adus la el. Când s-a apropiat, l-a întrebat:"
     },
     {
       "number": 41,
-      "text": "Ce vrei să fac? El a zis:Doamne, ca să văd din nou."
+      "text": "Ce vrei să fac? El a zis: Doamne, ca să văd din nou."
     },
     {
       "number": 42,
-      "text": "Isus i-a zis:Primește-ți vederea; credința ta te-a vindecat."
+      "text": "Isus i-a zis: Primește-ți vederea; credința ta te-a vindecat."
     },
     {
       "number": 43,
-      "text": "El și -a primit îndată vederea și l -a urmat, slăvindu -L pe Dumnezeu. Tot poporul, cînd a văzut -o, l -a lăudat pe Dumnezeu."
+      "text": "El și-a primit îndată vederea și l-a urmat, slăvindu-L pe Dumnezeu. Tot poporul, când a văzut-o, l-a lăudat pe Dumnezeu."
     }
   ],
   "editorialNotes": [],

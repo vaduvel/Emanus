@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:cb33098b99f833480e43f830b9967e12cb9dcb0bae1efc742e1d95458c46461f",
-    "contentDigest": "sha256:dbbc6a703c33518362ec44a1eedcab893aef03a2dadac89bbd3a2f11b7158345"
+    "textDigest": "sha256:043e717d937d10d31505dce0a6b45e413d3eabc2a5d81c19f0dbdc780eb48fc2",
+    "contentDigest": "sha256:83eccbf9a43cff5e945ec0743713a178941eee7b4e83b2679c906f17318a4cc1"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Când au venit la Isus, L-au rugat stăruitor, zicând:Este vrednic pentru tine să faci aceasta pentru El,"
+      "text": "Când au venit la Isus, L-au rugat stăruitor, zicând: Este vrednic pentru tine să faci aceasta pentru El,"
     },
     {
       "number": 5,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Isus a mers cu ei. Când nu era departe de casă, sutașul a trimis la el prieteni, spunându-i:Doamne, nu te necăji, căci nu sunt vrednic să intri subul meu."
+      "text": "Isus a mers cu ei. Când nu era departe de casă, sutașul a trimis la el prieteni, spunându-i: Doamne, nu te necăji, căci nu sunt vrednic să intri subul meu."
     },
     {
       "number": 7,
@@ -185,15 +185,15 @@
     },
     {
       "number": 11,
-      "text": "La scurt timp după aceea, el s - a dus într - o cetate numită Nain. Mulți dintre discipolii săi, împreună cu o mare mulțime, au mers cu el."
+      "text": "La scurt timp după aceea, el s-a dus într-o cetate numită Nain. Mulți dintre discipolii săi, împreună cu o mare mulțime, au mers cu el."
     },
     {
       "number": 12,
-      "text": "Cînd s'a apropiat de poarta ce, iată că unul din cei morți era ucis, singurul născut al mamei lui, ea era văduvă. Și oameni din cetate erau cu ea."
+      "text": "Când s-a apropiat de poarta ce, iată că unul din cei morți era ucis, singurul născut al mamei lui, ea era văduvă. Și oameni din cetate erau cu ea."
     },
     {
       "number": 13,
-      "text": "Când Domnul a văzut-o, i s-a făcut milă de ea i-a zis:Nu plânge!"
+      "text": "Când Domnul a văzut-o, i s-a făcut milă de ea i-a zis: Nu plânge!"
     },
     {
       "number": 14,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Cel mort s'a sculat și a început să vorbească. Apoi l -a dat mamei lui."
+      "text": "Cel mort s-a sculat și a început să vorbească. Apoi l-a dat mamei lui."
     },
     {
       "number": 16,
@@ -217,11 +217,11 @@
     },
     {
       "number": 19,
-      "text": "Ioan, chemând la Sine pe doi dintre ucenicii Săi, i-a trimis la Isus, zicând:Tu ești Cel ce vine, sau să căutăm pe altul?"
+      "text": "Ioan, chemând la Sine pe doi dintre ucenicii Săi, i-a trimis la Isus, zicând: Tu ești Cel ce vine, sau să căutăm pe altul?"
     },
     {
       "number": 20,
-      "text": "Când oamenii au venit la el, au zis:Ioan Botezătorul ne-a trimis la tine ți-a zis: Tu ești Cel ce vine, sau să căutăm pe altul?"
+      "text": "Când oamenii au venit la el, au zis: Ioan Botezătorul ne-a trimis la tine ți-a zis: Tu ești Cel ce vine, sau să căutăm pe altul?"
     },
     {
       "number": 21,
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "Isus le -a răspuns:,,Du-te și spune lui Ioan lucrurile pe care le-ai văzut și auzit: că orbii își primesc vederea, șchiopii umblă, leproșii sunt curățiți, surzii aud, morții sunt sculați, și săracii le predică o veste bună."
+      "text": "Isus le-a răspuns:„ Du-te și spune lui Ioan lucrurile pe care le-ai văzut și auzit: că orbii își primesc vederea, șchiopii umblă, leproșii sunt curățiți, surzii aud, morții sunt sculați, și săracii le predică o veste bună."
     },
     {
       "number": 23,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Când trimișii lui Ioan au plecat, el a început să spunămilor despre Ioan:Ce ați ieșit în pustie să? O trestie clătinată de vânt?"
+      "text": "Când trimișii lui Ioan au plecat, el a început să spunămilor despre Ioan: Ce ați ieșit în pustie să? O trestie clătinată de vânt?"
     },
     {
       "number": 25,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Acesta este cel despre care este scris:Iată, trimit pe trimisul Meu înaintea feței Tale, care va pregăti calea înaintea Ta."
+      "text": "Acesta este cel despre care este scris: Iată, trimit pe trimisul Meu înaintea feței Tale, care va pregăti calea înaintea Ta."
     },
     {
       "number": 28,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Când tot poporul și perceptorii au auzit acest lucru, ei l - au declarat drept pe Dumnezeu, fiind botezați cu botezul lui Ioan."
+      "text": "Când tot poporul și perceptorii au auzit acest lucru, ei l-au declarat drept pe Dumnezeu, fiind botezați cu botezul lui Ioan."
     },
     {
       "number": 30,
@@ -269,7 +269,7 @@
     },
     {
       "number": 32,
-      "text": "Ei sunt ca niște copii care stau în piață și se cheamă unii pe alții, spunând,? Am pipăit la tine, și nu ai dansat. Ne-am jelit, și ai făcut-o plângă."
+      "text": "Sunt asemenea unor copii, șezând în piață și strigând unii la alții și spunând: V-am cântat din fluier și nu ați dansat; v-am cântat de jale și nu ați plâns."
     },
     {
       "number": 33,
@@ -285,7 +285,7 @@
     },
     {
       "number": 36,
-      "text": "Unul dintre farisei l - a invitat să mănînce cu el. El a intrat în casa lui și a șezut la masă."
+      "text": "Unul dintre farisei l-a invitat să mănînce cu el. El a intrat în casa lui și a șezut la masă."
     },
     {
       "number": 37,
@@ -297,11 +297,11 @@
     },
     {
       "number": 39,
-      "text": "Când fariseul, care îl poftise, a văzut lucrul acesta,-a spus:Omul acesta, dacă ar fi fost profet, ar fi înțeles cine ce fel de femeie este aceea care se atinge de el, că este o păcătoasă."
+      "text": "Când fariseul, care îl poftise, a văzut lucrul acesta,-a spus: Omul acesta, dacă ar fi fost profet, ar fi înțeles cine ce fel de femeie este aceea care se atinge de el, că este o păcătoasă."
     },
     {
       "number": 40,
-      "text": "Isus i-a răspuns: Simone, am să-ți spun ceva. El a zis:Învățătorule, spune mai departe."
+      "text": "Isus i-a răspuns: Simone, am să-ți spun ceva. El a zis: Învățătorule, spune mai departe."
     },
     {
       "number": 41,
@@ -313,7 +313,7 @@
     },
     {
       "number": 43,
-      "text": "Simon a răspuns:Acela, cred, căruia i-a iertat cel mai mult. El i-a zis:Ai judecat bine."
+      "text": "Simon a răspuns: Acela, cred, căruia i-a iertat cel mai mult. El i-a zis: Ai judecat bine."
     },
     {
       "number": 44,
@@ -333,15 +333,15 @@
     },
     {
       "number": 48,
-      "text": "El i-a spus:Păcatele îți sunt iertate."
+      "text": "El i-a spus: Păcatele îți sunt iertate."
     },
     {
       "number": 49,
-      "text": "Cei care deau la masă cu el au început să- spună:Cine este acesta care iartă chiar păcatele?"
+      "text": "Cei care deau la masă cu el au început să-spună: Cine este acesta care iartă chiar păcatele?"
     },
     {
       "number": 50,
-      "text": "El i-a zis femeii:Credința ta te-a mântuit; mergi în pace!"
+      "text": "El i-a zis femeii: Credința ta te-a mântuit; mergi în pace!”"
     }
   ],
   "editorialNotes": [],

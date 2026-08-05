@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:cd583fa3bd28696ae551a5bfda304cbea987fefd46ad60e02d07ee9b027d6db9",
-    "contentDigest": "sha256:91a220063357ac3685c48b4b3545f3a3c038cfa3caa60874bc3f8e304787438e"
+    "textDigest": "sha256:2c4d5414ff7e61cfbaa5797e1475e7246ab71ddb6c5913d36d07fbe0eb89c6ab",
+    "contentDigest": "sha256:872a9508bb618d51f8f2d1213cc5a543e82437434929d701986e0bbd50d320d7"
   },
   "verses": [
     {
       "number": 1,
-      "text": "El a mai zis ucenicilor Săi:,,A fost un om bogat care avea un administrator. I s'a făcut o acuzație că omul acesta își irosea averile."
+      "text": "El a mai zis ucenicilor Săi: A fost un om bogat care avea un administrator. I s-a făcut o acuzație că omul acesta își irosea averile."
     },
     {
       "number": 2,
@@ -161,15 +161,15 @@
     },
     {
       "number": 5,
-      "text": "Chemând fiecare dintre datornicii stăpânului său, el a spus la primul,? Cât de mult datorezi domnului meu?"
+      "text": "Și a chemat pe fiecare dintre datornicii domnului său și a spus primului: Cât datorezi domnului meu?"
     },
     {
       "number": 6,
-      "text": "El a spus,? O sută de batos de ulei.? I-a spus,? Ia-ți factura, și stai jos repede și scrie cincizeci.?"
+      "text": "Iar el a spus: O sută de bați de untdelemn. Iar el i-a spus: Ia înscrisul tău și șezi degrabă și scrie cincizeci."
     },
     {
       "number": 7,
-      "text": "Apoi i-a zis altuia:Cât ești dator?O sută de cori de grâu, i-a zis el,Ia-ți nota de plată scrie optzeci."
+      "text": "Apoi i-a zis altuia: Cât ești dator? O sută de cori de grâu, i-a zis el, Ia-ți nota de plată scrie optzeci."
     },
     {
       "number": 8,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "El le -a zis:,,Voi sunteți cei ce vă socotiți neprihăniți înaintea oamenilor, dar Dumnezeu vă cunoaște inimile. Căci ce este înălțat printre oameni este o urîciune înaintea lui Dumnezeu."
+      "text": "El le-a zis: Voi sunteți cei ce vă socotiți neprihăniți înaintea oamenilor, dar Dumnezeu vă cunoaște inimile. Căci ce este înălțat printre oameni este o urîciune înaintea lui Dumnezeu."
     },
     {
       "number": 16,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Dar Avraam a zis, Fiule, adu- aminte că tu, în timpul vieții tale, ai primit lucrurile tale bune, și Lazăr, în același fel, lucrurile rele. Dar aici el este acum mângâiat și tu în."
+      "text": "Dar Avraam a zis, Fiule, adu-aminte că tu, în timpul vieții tale, ai primit lucrurile tale bune, și Lazăr, în același fel, lucrurile rele. Dar aici el este acum mângâiat și tu în."
     },
     {
       "number": 26,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "El a zis:Tată, te rog deci să-l trimiți în casa tatălui meu."
+      "text": "El a zis: Tată, te rog deci să-l trimiți în casa tatălui meu."
     },
     {
       "number": 28,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Avraam i-a răspuns: Au pe Moise pe prooroci; să asculte de ei!"
+      "text": "Avraam i-a răspuns: Au pe Moise pe profeți; să asculte de ei!"
     },
     {
       "number": 30,

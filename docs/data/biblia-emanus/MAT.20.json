@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:f792dc23fbb11e9e1c02b9a5bceb570f22bc8e2719f93500f4810ce0cd554c35",
-    "contentDigest": "sha256:5beabd7e9d26e4018efe3009d126d09aec365b6f18acb5f2e32e2198d230822e"
+    "textDigest": "sha256:deeefffef8ec48532be20b51bf8af8fc6c0e1e485b7036a17c80e6345386a654",
+    "contentDigest": "sha256:445e2f1191ea10a2ca9505e8774865156f9f87bbe688fd320220535c42f00f3d"
   },
   "verses": [
     {
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Pe cînd se suia Isus la Ierusalim, a luat deoparte pe cei doisprezece ucenici, și le -a zis pe drum:"
+      "text": "Pe când se suia Isus la Ierusalim, a luat deoparte pe cei doisprezece ucenici, și le-a zis pe drum:"
     },
     {
       "number": 18,
@@ -229,11 +229,11 @@
     },
     {
       "number": 22,
-      "text": "Dar Isus i-a răspuns:Nu știi ce ceri. Poți să bei paharul pe care urmează să-l beau Eu să fii botezat cu botezul cu care sunt botezat Eu? Ei i-au răspuns:Putem."
+      "text": "Dar Isus i-a răspuns: Nu știi ce ceri. Poți să bei paharul pe care urmează să-l beau Eu să fii botezat cu botezul cu care sunt botezat Eu? Ei i-au răspuns: Putem."
     },
     {
       "number": 23,
-      "text": "El le-a zis:Veți bea paharul Meu fi botez cu botezul cu care am fost botezat Eu; dar a dea de-a dreapta Mea de-a stânga Mea nu este al Meu a da, ci este al Căruia a fost pregătit de Tatăl Meu."
+      "text": "El le-a zis: Veți bea paharul Meu fi botez cu botezul cu care am fost botezat Eu; dar a dea de-a dreapta Mea de-a stânga Mea nu este al Meu a da, ci este al Căruia a fost pregătit de Tatăl Meu."
     },
     {
       "number": 24,

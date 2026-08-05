@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,17 +145,17 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:ba7fa93dc638e7008bd6d94270f856cd07238e57b0a1a4eab360871cf91c91cb",
-    "contentDigest": "sha256:efcd0d6cfffd74ad51c0f94d4d277cd8220910c194f5412a81bbc1a39aad9537"
+    "textDigest": "sha256:68f6ac9e55fbd0b9868c51648fb310c4185e6b3bafe6d760d397874415e28785",
+    "contentDigest": "sha256:ca3965b6e9e41ddeb44385dc1d0e4ceeed3f3f29bc8459661545d21f2a0a2f65"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Nu lăsa inima ta să fie tulburată.Crede în Dumnezeu.Crede, de asemenea, în mine."
+      "text": "Nu lăsa inima ta să fie tulburată. Crede în Dumnezeu. Crede, de asemenea, în mine."
     },
     {
       "number": 2,
-      "text": "În casa Tatălui meu sunt multe case. Dacă n-ar fi fost așa, v- fi spus. Am de gând să vă pregătesc un loc."
+      "text": "În casa Tatălui meu sunt multe case. Dacă n-ar fi fost așa, v-fi spus. Am de gând să vă pregătesc un loc."
     },
     {
       "number": 3,
@@ -167,11 +167,11 @@
     },
     {
       "number": 5,
-      "text": "Toma i-a zis:Doamne, nu știm încotro te îndrepți. Cum putem cunoaște calea?"
+      "text": "Toma i-a zis: Doamne, nu știm încotro te îndrepți. Cum putem cunoaște calea?"
     },
     {
       "number": 6,
-      "text": "Isus i -a zis:,,Eu sunt calea, adevărul și viața. Nimeni nu vine la Tatăl decît prin Mine."
+      "text": "Isus i-a zis: Eu sunt calea, adevărul și viața. Nimeni nu vine la Tatăl decât prin Mine."
     },
     {
       "number": 7,
@@ -179,11 +179,11 @@
     },
     {
       "number": 8,
-      "text": "Filip i-a zis:Doamne, arată-ne pe Tatăl ne va fi de ajuns."
+      "text": "Filip i-a zis: Doamne, arată-ne pe Tatăl ne va fi de ajuns."
     },
     {
       "number": 9,
-      "text": "Isus i-a zis:De atâta vreme sunt cu tine nu mă cunoști, Filipe? Cel ce m-a văzut pe mine l-a văzut pe Tatăl. Cum zici tu: Arată-ne pe Tatăl!?"
+      "text": "Isus i-a zis: De atâta vreme sunt cu tine nu mă cunoști, Filipe? Cel ce m-a văzut pe mine l-a văzut pe Tatăl. Cum zici tu: Arată-ne pe Tatăl!?"
     },
     {
       "number": 10,
@@ -235,11 +235,11 @@
     },
     {
       "number": 22,
-      "text": "Iuda (nu Iscarioteanul) i-a zis:Doamne, ce s-a întâmplat de ești pe cale să ni te descoperi nouă nu lumii?"
+      "text": "Iuda (nu Iscarioteanul) i-a zis: Doamne, ce s-a întâmplat de ești pe cale să ni te descoperi nouă nu lumii?"
     },
     {
       "number": 23,
-      "text": "Isus i -a răspuns:,,Dacă un om mă iubește, el se va ține de cuvîntul Meu. Tatăl Meu îl va iubi, și noi vom veni la El și ne vom face casa împreună cu El."
+      "text": "Isus i-a răspuns: Dacă un om mă iubește, el se va ține de cuvântul Meu. Tatăl Meu îl va iubi, și noi vom veni la El și ne vom face casa împreună cu El."
     },
     {
       "number": 24,
@@ -259,7 +259,7 @@
     },
     {
       "number": 28,
-      "text": "Ați auzit cum v-am spus: Mă duc mă voi întoarce la voi. Dacă m- fi iubit, v- fi bucurat pentru că am spus: Mă duc la Tatăl meu, pentru că Tatăl este mai mare decât mine."
+      "text": "Ați auzit cum v-am spus: Mă duc mă voi întoarce la voi. Dacă m-fi iubit, v-fi bucurat pentru că am spus: Mă duc la Tatăl meu, pentru că Tatăl este mai mare decât mine."
     },
     {
       "number": 29,

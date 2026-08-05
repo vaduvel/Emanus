@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:380a08ac366b7fada05010512224c8b22f03f3f68009cdb22c5732a8b1bde870",
-    "contentDigest": "sha256:05611e3df8298024909b2a29894045738097becf596900f6bbc7bd80c2c45445"
+    "textDigest": "sha256:82f9e54322e38506c6d820814ad65305af82ea70e07a9768b97c95c875b93e70",
+    "contentDigest": "sha256:2243ebb92963ad5352a9029f5fadb531b25e329358d94eaa2399fabd7382a34c"
   },
   "verses": [
     {
@@ -253,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "După ce a intrat, îngerul i-a zis:Bucură-te, preaiubitule! Domnul este cu tine. Binecuvântată ești tu între femei!"
+      "text": "După ce a intrat, îngerul i-a zis: Bucură-te, preaiubitule! Domnul este cu tine. Binecuvântată ești tu între femei!"
     },
     {
       "number": 29,
@@ -273,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "El va domni peste casa lui Iacov pentru totdeauna, și Împărăția Lui nu va avea sfîrșit."
+      "text": "El va domni peste casa lui Iacov pentru totdeauna, și Împărăția Lui nu va avea sfârșit."
     },
     {
       "number": 34,
@@ -361,7 +361,7 @@
     },
     {
       "number": 55,
-      "text": "El le -a vorbit părinților noștri, lui Avraam și urmașilor săi pentru totdeauna."
+      "text": "El le-a vorbit părinților noștri, lui Avraam și urmașilor săi pentru totdeauna."
     },
     {
       "number": 56,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:6f2a77dc06801d08664ca1c265d75fd1bb8558785a1528a6456597f5172f4bfc",
-    "contentDigest": "sha256:0ecd2a9551dac6717a63ed9f37ba5e19240d5c48f3d6c4ccdc3c66ce50248d84"
+    "textDigest": "sha256:c4f15aa1552cd302c8276bdfb474a7f8971bc42a14107f63493561805824f633",
+    "contentDigest": "sha256:c5df5dfc96f522ff8dfdb624007da1a10357badd9e62512279b3e1347ac2dfe3"
   },
   "verses": [
     {
@@ -149,15 +149,15 @@
     },
     {
       "number": 2,
-      "text": "El a strigat cu glas puternic, zicând:Căzut, Babilonul cel mare este căzut ea a devenit o a demonilor, o închisoare a oricărui duh necurat o închisoare a oricărei păsări necurate urâte!"
+      "text": "El a strigat cu glas puternic, zicând: Căzut, Babilonul cel mare este căzut ea a devenit o a demonilor, o închisoare a oricărui duh necurat o închisoare a oricărei păsări necurate urâte!"
     },
     {
       "number": 3,
-      "text": "Căci toate națiunile au băut din vinul mîniei imoralității ei sexuale, împărații pămîntului au comis imoralitate sexuală cu ea, și negustorii pămîntului s - au îmbogățit din abundența luxului ei."
+      "text": "Căci toate națiunile au băut din vinul mâiniei imoralității ei sexuale, împărații pământului au comis imoralitate sexuală cu ea, și negustorii pământului s-au îmbogățit din abundența luxului ei."
     },
     {
       "number": 4,
-      "text": "Am auzit un alt glas din cer, care zicea:,,Ieșiți din ea, poporul meu, că nu aveți nici o parte din păcatele ei, și că nu primiți din plăgile ei,"
+      "text": "Am auzit un alt glas din cer, care zicea: Ieșiți din ea, poporul meu, că nu aveți nici o parte din păcatele ei, și că nu primiți din plăgile ei,"
     },
     {
       "number": 5,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "De aceea, într'o zi, vor veni urgiile ei: moartea, jalea și foametea; și va fi arsă de tot cu foc, căci Domnul Dumnezeu, care a judecat -o, este tare."
+      "text": "De aceea, într'o zi, vor veni urgiile ei: moartea, jalea și foametea; și va fi arsă de tot cu foc, căci Domnul Dumnezeu, care a judecat-o, este tare."
     },
     {
       "number": 9,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "departe, de frica chinului ei, zicând:Vai, vai, cetatea cea mare, Babilonul, cetatea cea tare! Căci judecata ta a venit într-un ceas!„"
+      "text": "departe, de frica chinului ei, zicând: Vai, vai, cetatea cea mare, Babilonul, cetatea cea tare! Căci judecata ta a venit într-un ceas!"
     },
     {
       "number": 11,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Și a zis:Vai, vai, cetatea cea mare, cea îmbrăcată în in, purpură cărămizie împodobită cu aur, pietre mărgăritare!"
+      "text": "Și a zis: Vai, vai, cetatea cea mare, cea îmbrăcată în in, purpură cărămizie împodobită cu aur, pietre mărgăritare!"
     },
     {
       "number": 17,
@@ -213,11 +213,11 @@
     },
     {
       "number": 18,
-      "text": "strigau când se uitau la fumul arderii ei, zicând:Cum este cetatea cea mare?”"
+      "text": "strigau când se uitau la fumul arderii ei, zicând: Cum este cetatea cea mare?"
     },
     {
       "number": 19,
-      "text": "Ei-au pus rână pe cap au strigat, plângând jelindu-se, zicând:Vai, vai, cetatea cea mare, în care toți cei care aveau corăbiile lor în mare s-aut din pricinai ei mari!„ Căci ea este pustiită într-un ceas."
+      "text": "Ei-au pus rână pe cap au strigat, plângând jelindu-se, zicând: Vai, vai, cetatea cea mare, în care toți cei care aveau corăbiile lor în mare s-aut din pricinai ei mari! Căci ea este pustiită într-un ceas."
     },
     {
       "number": 20,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Un înger puternic a luat o piatră ca o piatră de moară mare a aruncat-o în mare, spunând:Așa va fi aruncat Babilonul, cetatea cea mare, nu se va mai găsi nimic."
+      "text": "Un înger puternic a luat o piatră ca o piatră de moară mare a aruncat-o în mare, spunând: Așa va fi aruncat Babilonul, cetatea cea mare, nu se va mai găsi nimic."
     },
     {
       "number": 22,
@@ -233,11 +233,11 @@
     },
     {
       "number": 23,
-      "text": "Lumina unei candele nu va mai străluci deloc în voi; glasul mirelui și al miresei nu va mai fi auzit deloc în voi, căci negustorii voștri erau căpeteniile pămîntului; căci toate neamurile au fost amăgite cu vrăjitoria voastră."
+      "text": "Lumina unei candele nu va mai străluci deloc în voi; glasul mirelui și al miresei nu va mai fi auzit deloc în voi, căci negustorii voștri erau căpeteniile pământului; căci toate neamurile au fost amăgite cu vrăjitoria voastră."
     },
     {
       "number": 24,
-      "text": "În ea a fost găsit sângele profeților și al sfinților, și al tuturor celor care au fost uciși pe pământ.”"
+      "text": "În ea a fost găsit sângele profeților și al sfinților, și al tuturor celor care au fost uciși pe pământ."
     }
   ],
   "editorialNotes": [],

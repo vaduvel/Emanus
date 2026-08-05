@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:64280f10de0cccb6321e64122d8d67b4bfc98f3947d468a3116526b57102c718",
-    "contentDigest": "sha256:88a2158c8e24c7b87e9824224a85d57afcc1b2851e3b7151405fd5a90504d58d"
+    "textDigest": "sha256:6f4ab74572d3160940b79c6e9ef03043e1665c14fd3cd4853da1407381f32db5",
+    "contentDigest": "sha256:ada285acd9fbae63c27dca062deb765430f550f78744ebbe6883fbfc9e9d84d5"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Căci dacă cuvîntul rostit prin îngeri s'a dovedit statornic, și orice fărădelege și neascultare a primit o pedeapsă dreaptă,"
+      "text": "Căci dacă cuvântul rostit prin îngeri s-a dovedit statornic, și orice fărădelege și neascultare a primit o pedeapsă dreaptă,"
     },
     {
       "number": 3,
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Dumnezeu mărturisind cu ei, atât prin semne, cît și prin minuni, prin diferite lucrări de putere și prin daruri ale Duhului Sfînt, după voia Lui?"
+      "text": "Dumnezeu mărturisind cu ei, atât prin semne, cât și prin minuni, prin diferite lucrări de putere și prin daruri ale Duhului Sfînt, după voia Lui?"
     },
     {
       "number": 5,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Dar cineva a mărturisit undeva, zicând:Ce este omul, de te la el? Sau fiul omului, de- pasă de el?"
+      "text": "Dar cineva a mărturisit undeva: «Ce este omul, ca să-Ți amintești de el, sau fiul omului, ca să-l cercetezi?"
     },
     {
       "number": 7,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Tu ai supus toate lucrurile sub picioarele Lui, căci El i -a supus toate lucrurile, și n'a lăsat nimic care să nu -I fie supus. Dar acum încă nu vedem toate lucrurile supuse lui."
+      "text": "Tu ai supus toate lucrurile sub picioarele Lui, căci El i-a supus toate lucrurile, și n-a lăsat nimic care să nu-I fie supus. Dar acum încă nu vedem toate lucrurile supuse lui."
     },
     {
       "number": 9,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Căci El a devenit, pentru cine sunt toate lucrurile și prin cine sunt toate lucrurile, pentru a aduce pe mulți copii la slavă, ca să facă pe autorul mîntuirii lor desăvârșit prin suferințe."
+      "text": "Căci El a devenit, pentru cine sunt toate lucrurile și prin cine sunt toate lucrurile, pentru a aduce pe mulți copii la slavă, ca să facă pe autorul mântuirii lor desăvârșit prin suferințe."
     },
     {
       "number": 11,
@@ -189,15 +189,15 @@
     },
     {
       "number": 12,
-      "text": "zicând:Voi vesti numele tău fraților mei; voi cânta laudele tale în mijlocul adunării„."
+      "text": "zicând: Voi vesti numele tău fraților mei; voi cânta laudele tale în mijlocul adunării„."
     },
     {
       "number": 13,
-      "text": "Iară:Îmi voi pune încrederea în El.” Iară:Iată, sunt cu copiii pe care mi i-a dat Dumnezeu„."
+      "text": "Iară: Îmi voi pune încrederea în El.” Iară: Iată, sunt cu copiii pe care mi i-a dat Dumnezeu„."
     },
     {
       "number": 14,
-      "text": "De atunci, copiii au luat parte la carne și la sînge, și el a luat parte la același lucru, ca prin moarte să nu aducă la nimic pe cel ce avea puterea morții, adică diavolul,"
+      "text": "Fiindcă, după cum copiii sunt părtași cărnii și sângelui, în același fel și el s-a împărtășit din aceleași, pentru ca prin moarte să nimicească pe cel ce avea puterea morții, care este diavolul,"
     },
     {
       "number": 15,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Căci prin faptul că el însuși a suferit fiind ispitit, el este în stare să-i ajute pe cei ispitiți.”"
+      "text": "Căci prin faptul că el însuși a suferit fiind ispitit, el este în stare să-i ajute pe cei ispitiți.”»"
     }
   ],
   "editorialNotes": [

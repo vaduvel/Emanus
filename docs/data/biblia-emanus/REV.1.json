@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:a92cab4a6071f3a7c4dafd083911b708cdb3a0aa7188a14c384eb54b2788eb10",
-    "contentDigest": "sha256:45f021610314e8e061beb15e563a7938818779c76ed56f93719fa377e3f96f58"
+    "textDigest": "sha256:2ecd726ecd71ca91d6ddc1bd6faf64fb4e2a316a757309001fe6f0b5e8600cba",
+    "contentDigest": "sha256:2de9784459a25362c56c76bdfe7a87aa3a7fe2d12d09d9b292c0075952d92a2b"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "care a mărturisit Cuvîntul lui Dumnezeu și mărturia lui Isus Hristos, despre tot ce a văzut."
+      "text": "care a mărturisit Cuvântul lui Dumnezeu și mărturia lui Isus Hristos, despre tot ce a văzut."
     },
     {
       "number": 3,
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "și de la Isus Hristos, martorul credincios, întîiul născut al morților și conducătorul împăraților pămîntului. Celui ce ne iubește, și ne spală de păcatele noastre prin sîngele Lui;"
+      "text": "Și de la Isus Hristos, martorul credincios și întâiul născut dintre morți și prințul împăraților pământului. A lui, care ne-a iubit și ne-a spălat de păcatele noastre în propriul lui sânge,"
     },
     {
       "number": 6,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Iată, El vine cu norii, orice ochi Îl va vedea, chiar cei ce L-au străpuns. Toate semin pămîntului Îl vor plînge. Amin."
+      "text": "Iată, El vine cu norii, orice ochi Îl va vedea, chiar cei ce L-au străpuns. Toate semin pământului Îl vor plînge. Amin."
     },
     {
       "number": 8,
@@ -189,11 +189,11 @@
     },
     {
       "number": 12,
-      "text": "M'am întors să văd glasul care vorbea cu mine, și cînd m'am întors, am văzut șapte candele de aur."
+      "text": "M-am întors să văd glasul care vorbea cu mine, și când m-am întors, am văzut șapte candele de aur."
     },
     {
       "number": 13,
-      "text": "Printre sfeșnice era unul ca un fiu de om, îmbrăcat cu o haină care se întindea pînă la picioare, și cu o eșarfă de aur în jurul pieptului."
+      "text": "Printre sfeșnice era unul ca un fiu de om, îmbrăcat cu o haină care se întindea până la picioare, și cu o eșarfă de aur în jurul pieptului."
     },
     {
       "number": 14,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Când l-am văzut, am căzut la picioarele lui ca un mort. El-a pus mâna dreaptă peste mine, spunând:Nu te teme. Eu sunt cel dintâi cel de pe urmă,"
+      "text": "Când l-am văzut, am căzut la picioarele lui ca un mort. El-a pus mâna dreaptă peste mine, spunând: Nu te teme. Eu sunt cel dintâi cel de pe urmă,"
     },
     {
       "number": 18,

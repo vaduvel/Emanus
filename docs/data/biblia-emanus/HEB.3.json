@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:52d700491f1a0aace7fc4da4fc95e6bf74cfb9d306d9bfdfc5d000d0a077f594",
-    "contentDigest": "sha256:52c7845ca9078d7d50356d8927b1390815734b3242598f0e183ab7c14d647636"
+    "textDigest": "sha256:5a4c830f6642c2def8794487e6f46523c831cb2ba2b6355a28b052d92711106a",
+    "contentDigest": "sha256:924d9a49bb229feb720e9fb79b3137fa7f8cda3f6c288146344509f1a5c5ec31"
   },
   "verses": [
     {
@@ -149,11 +149,11 @@
     },
     {
       "number": 2,
-      "text": "care a fost credincios celui ce l -a numit, cum a fost și Moise în toată casa lui."
+      "text": "care a fost credincios celui ce l-a numit, cum a fost și Moise în toată casa lui."
     },
     {
       "number": 3,
-      "text": "Căci a fost socotit vrednic de mai multă slavă decît Moise, pentrucă cel ce a zidit casa are mai multă cinste decît casa."
+      "text": "Căci a fost socotit vrednic de mai multă slavă decât Moise, pentru că cel ce a zidit casa are mai multă cinste decât casa."
     },
     {
       "number": 4,
@@ -177,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "unde părinții voștri m'au pus la încercare, m'au pus la încercare, și au văzut faptele mele patruzeci de ani."
+      "text": "unde părinții voștri m-au pus la încercare, m-au pus la încercare, și au văzut faptele mele patruzeci de ani."
     },
     {
       "number": 10,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Căci am ajuns părtași ai lui Hristos, dacă ținem pînă la sfîrșit începutul încrederii noastre,"
+      "text": "Căci am ajuns părtași ai lui Hristos, dacă ținem până la sfârșit începutul încrederii noastre,"
     },
     {
       "number": 15,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Căci cine, cînd au auzit ei, s'a răzvrătit? Oare toți cei ce au ieșit din Egipt au fost călăuziți de Moise?"
+      "text": "Căci cine, când au auzit ei, s-a răzvrătit? Oare toți cei ce au ieșit din Egipt au fost călăuziți de Moise?"
     },
     {
       "number": 17,

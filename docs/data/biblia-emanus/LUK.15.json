@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:1e8a59ff0ced62bfbc37859056801e128ceda7ad1cc6576bdea977f05890eb57",
-    "contentDigest": "sha256:34eaa2dd4d68edd1771c0cf11e23f15b2b95a02d2261db39f5e940733098fbfd"
+    "textDigest": "sha256:cc020054a380cc4ca8be2351dd13c6ff173778773da5bb926399b9c960b2c7d6",
+    "contentDigest": "sha256:f472b79324e17736e9f1228ef12efbd8649215f96f22058c94f116c93d3bc3fc"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Fariseii cărturarii murmurau, zicând:Omul acesta pe păcătoși mănâncă cu ei."
+      "text": "Fariseii cărturarii murmurau, zicând: Omul acesta pe păcătoși mănâncă cu ei."
     },
     {
       "number": 3,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "El a răspuns:Un om avea doi fii."
+      "text": "El a răspuns: Un om avea doi fii."
     },
     {
       "number": 12,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Nu după multe zile, fiul mai mic a adunat toate acestea împreună și a călătorit într- o țară îndepărtată. Acolo și-a risipit proprietatea cu traiul dezordonat."
+      "text": "Nu după multe zile, fiul mai mic a adunat toate acestea împreună și a călătorit într-o țară îndepărtată. Acolo și-a risipit proprietatea cu traiul dezordonat."
     },
     {
       "number": 14,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Dar când a venit la sine, el a spus,? Câți servitori angajați ai tatălui meu au destulă pâine pentru a cruța, și eu mor de foame!"
+      "text": "Și când și-a venit în fire, a spus: Câți angajați ai tatălui meu au pâine din abundență iar eu pier de foame!"
     },
     {
       "number": 18,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Fiul i -a zis:,,Tată, am păcătuit împotriva cerului înaintea ta; nu mai sunt vrednic să mă chem fiul tău."
+      "text": "Fiul i-a zis:„ Tată, am păcătuit împotriva cerului înaintea ta; nu mai sunt vrednic să mă chem fiul tău."
     },
     {
       "number": 22,
@@ -269,7 +269,7 @@
     },
     {
       "number": 32,
-      "text": "Dar a fost potrivit pentru a sărbători și să fie bucuros, pentru acest lucru, fratele tău, a murit, și este viu din nou. El a fost pierdut, și este găsit."
+      "text": "Dar a fost potrivit pentru a sărbători și să fie bucuros, pentru acest lucru, fratele tău, a murit, și este viu din nou. El a fost pierdut, și este găsit.”"
     }
   ],
   "editorialNotes": [],

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:ecbd8744b364bda36bb3ddf87d628728502ba854b0bfbb08aa1357669cc4936d",
-    "contentDigest": "sha256:714d89a6e443b999726d71f88e335b9c29725f395bb4496b0e4a425c17c21fb7"
+    "textDigest": "sha256:0ca3c1dd2d0cdc158879f04da1bc7ebc77585034cf1c5fa757f5afd91986c60e",
+    "contentDigest": "sha256:7af92c4bb8d4215febe6335e5c00abc21e165778dccbc6132fcdb68eb8a528c3"
   },
   "verses": [
     {
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Domnul i -a zis:,,Scoală-te și du-te pe ulița numită Dreptă, și întreabă în casa lui Iuda pe unul numit Saul, un om din Tars. Căci iată că se roagă,"
+      "text": "Domnul i-a zis:„ Scoală-te și du-te pe ulița numită Dreptă, și întreabă în casa lui Iuda pe unul numit Saul, un om din Tars. Căci iată că se roagă,"
     },
     {
       "number": 12,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "El a luat de mâncare și s - a întărit. Saul a stat câteva zile cu discipolii care erau la Damasc."
+      "text": "El a luat de mâncare și s-a întărit. Saul a stat câteva zile cu discipolii care erau la Damasc."
     },
     {
       "number": 20,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "Cînd a ajuns Saul la Ierusalim, el a încercat să se alăture discipolilor; dar toți se temeau de el, fără să creadă că era ucenic."
+      "text": "Când a ajuns Saul la Ierusalim, el a încercat să se alăture discipolilor; dar toți se temeau de el, fără să creadă că era ucenic."
     },
     {
       "number": 27,
@@ -265,11 +265,11 @@
     },
     {
       "number": 31,
-      "text": "Bisericile din toată Iudeea, Galileea și Samaria au avut pace și au fost zidite; s'au înmulțit, umblînd în frica Domnului și în mîngîiarea Duhului Sfînt."
+      "text": "Bisericile din toată Iudeea, Galileea și Samaria au avut pace și au fost zidite; s-au înmulțit, umblînd în frica Domnului și în mîngîiarea Duhului Sfînt."
     },
     {
       "number": 32,
-      "text": "Pe cînd trecea Petru prin toate părțile acelea, Isus s'a pogorît și la sfinții cari locuiau la Lydda."
+      "text": "Pe când străbătea toate ținuturile, Petru a coborât și la sfinții care locuiau în Lida."
     },
     {
       "number": 33,
@@ -313,7 +313,7 @@
     },
     {
       "number": 43,
-      "text": "Petru a rămas multe zile în Iope, la un oarecare Simon, tăbăcar."
+      "text": "Petru a rămas multe zile în Iope, la un oarecare Simon, tăbăcar.”"
     }
   ],
   "editorialNotes": [

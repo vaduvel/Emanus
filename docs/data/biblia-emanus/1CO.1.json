@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:449f20acecf5e0409f37eb8a39feecc4ae2678976944e7ed338d1d3fc946280c",
-    "contentDigest": "sha256:5827c195a99ca347deeddb35fb7f7684b861cb424d4a22b79f30f0cfbd08a79c"
+    "textDigest": "sha256:d47829f7300ec5798623875ac3ca28196b2dad83d2d3c7c4452ef07522ac5739",
+    "contentDigest": "sha256:a6e606db7270f503a4a5ada36883475f878b159747349d088038d5391a623ed3"
   },
   "verses": [
     {
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "căci nebunia lui Dumnezeu este mai înțeleaptă decît oamenii, și slăbiciunea lui Dumnezeu este mai puternică decît oamenii."
+      "text": "căci nebunia lui Dumnezeu este mai înțeleaptă decât oamenii, și slăbiciunea lui Dumnezeu este mai puternică decât oamenii."
     },
     {
       "number": 26,

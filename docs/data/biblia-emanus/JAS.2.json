@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:304378e9ed547ae4c721aa3cb8793ce8412320c1c32b8fac73747f1623b9bf9c",
-    "contentDigest": "sha256:ff78301ee20108d60e7627272d9a457ad6d1d3ac2528802c25e466a02020f7d3"
+    "textDigest": "sha256:4dab06731386e068c95ec917a74e3836b62bc0194ee1539a7834e1c22949941d",
+    "contentDigest": "sha256:5d4191a267f4a179b5991cc96922a42e5b4498dcc41d5606968bed3a4c6de13f"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "să-i acord o deosebită celui care poartă haine frumoase spuneți:ezi aici într-un loc bun„; spuneți săracului:Stai acolo” sauezi lângă așternutul picioarelor mele„."
+      "text": "să-i acord o deosebită celui care poartă haine frumoase spuneți: ezi aici într-un loc bun„; spuneți săracului: Stai acolo” sauezi lângă așternutul picioarelor mele„."
     },
     {
       "number": 4,
@@ -181,11 +181,11 @@
     },
     {
       "number": 10,
-      "text": "Căci oricine păzește toată legea, și totuși se poticnește într'un singur moment, s'a făcut vinovat de toate."
+      "text": "Căci oricine păzește toată legea, și totuși se poticnește într-un singur moment, s-a făcut vinovat de toate."
     },
     {
       "number": 11,
-      "text": "Căci cel ce a zis:Să nu preacurv”, a mai zis:Să nu ucizi.„ Dacă nu preacurv, ci ucizi, ai devenit un călcător al legii."
+      "text": "Căci cel ce a zis: Să nu preacurv”, a mai zis: Să nu ucizi.„ Dacă nu preacurv, ci ucizi, ai devenit un călcător al legii."
     },
     {
       "number": 12,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "unul dintre voi le spune:Duceți-vă în pace. Încălziți-vă săturați-vă!” Și, nu le- dat lucrurile de care are nevoie trupul, la ce bun?"
+      "text": "unul dintre voi le spune: Duceți-vă în pace. Încălziți-vă săturați-vă!” Și, nu le-dat lucrurile de care are nevoie trupul, la ce bun?"
     },
     {
       "number": 17,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Da, un om va zice:Tu ai credință, eu am fapte.„ Arată-mi credința ta fără fapte,-ți voi arăta credința mea prin faptele mele."
+      "text": "Da, un om va zice: Tu ai credință, eu am fapte.„ Arată-mi credința ta fără fapte,-ți voi arăta credința mea prin faptele mele."
     },
     {
       "number": 19,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Astfel s-a împlinit Scriptura care spune:Avraam a crezut pe Dumnezeu i s-a socotit ca neprihănire” el a fost numit prietenul lui Dumnezeu."
+      "text": "Astfel s-a împlinit Scriptura care spune: Avraam a crezut pe Dumnezeu i s-a socotit ca neprihănire” el a fost numit prietenul lui Dumnezeu."
     },
     {
       "number": 24,

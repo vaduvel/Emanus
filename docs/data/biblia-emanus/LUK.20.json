@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,17 +139,17 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:f4dec850f8a7df4233b5d40fa5b2f08fe682358142fd2cf9f50ff9577966fb03",
-    "contentDigest": "sha256:4821b631c617ba4b4cbabf5955e525760835f93ccd97542ae8fd4c6afc585f37"
+    "textDigest": "sha256:4f9443fa121b1e147a57f1d45b629bb054a7d12b6ad90a31b92690134f126375",
+    "contentDigest": "sha256:3df50f11e2a9509115e6699306029e4dec914c952c5ccea9a37f9b877a3e3a11"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Într - una din acele zile, în timp ce învăța pe oameni în templu și predica vestea bună, preoții și cărturarii au venit la el împreună cu bătrânii."
+      "text": "Într-una din acele zile, în timp ce învăța pe oameni în templu și predica vestea bună, preoții și cărturarii au venit la el împreună cu bătrânii."
     },
     {
       "number": 2,
-      "text": "Ei i-au zis:,,Spune-ne: cu ce putere faci aceste lucruri? Sau cine îți dă puterea aceasta?"
+      "text": "Ei i-au zis: Spune-ne: cu ce putere faci aceste lucruri? Sau cine îți dă puterea aceasta?"
     },
     {
       "number": 3,
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Ei s-au certat între ei au zis:Dacă vom zice: Din cer, va zice: De ce nu l- crezut?"
+      "text": "Ei s-au certat între ei au zis: Dacă vom zice: Din cer, va zice: De ce nu l-crezut?"
     },
     {
       "number": 6,
@@ -173,11 +173,11 @@
     },
     {
       "number": 8,
-      "text": "Isus le-a zis:Nici Eu nu vă voi spune cu ce putere fac aceste lucruri."
+      "text": "Isus le-a zis: Nici Eu nu vă voi spune cu ce putere fac aceste lucruri."
     },
     {
       "number": 9,
-      "text": "El a început să spună poporului această pildă:Un om a plantat o vie și a închiriat-o unor fermieri și a plecat într-o altă țară pentru o lungă perioadă de timp."
+      "text": "El a început să spună poporului această pildă: Un om a plantat o vie și a închiriat-o unor fermieri și a plecat într-o altă țară pentru o lungă perioadă de timp."
     },
     {
       "number": 10,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Stăpânul viei a zis:Ce să fac? Îl voi trimite pe fiul meu preaiubit. Poate că, văzându-l, îl vor respecta."
+      "text": "Stăpânul viei a zis: Ce să fac? Îl voi trimite pe fiul meu preaiubit. Poate că, văzându-l, îl vor respecta."
     },
     {
       "number": 14,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Dar el s-a uitat la ei le-a zis:Atunci ce este scris: Piatra pe care au lepădat-o zidarii a fost pusă în capul unghiului?"
+      "text": "Dar el s-a uitat la ei le-a zis: Atunci ce este scris: Piatra pe care au lepădat-o zidarii a fost pusă în capul unghiului?"
     },
     {
       "number": 18,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Preoții cei mai de seamă și cărturarii căutau să pună mîna pe el chiar în ceasul acela, dar se temeau de popor, căci știau că spusese această parabolă împotriva lor."
+      "text": "Preoții cei mai de seamă și cărturarii căutau să pună mâna pe el chiar în ceasul acela, dar se temeau de popor, căci știau că spusese această parabolă împotriva lor."
     },
     {
       "number": 20,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Ei i-au zis:Învățătorule, știm că tu spui înveți ce este drept nu ești părtinitor cu nimeni, ci înveți cu adevărat calea lui Dumnezeu."
+      "text": "Ei i-au zis: Învățătorule, știm că tu spui înveți ce este drept nu ești părtinitor cu nimeni, ci înveți cu adevărat calea lui Dumnezeu."
     },
     {
       "number": 22,
@@ -237,15 +237,15 @@
     },
     {
       "number": 24,
-      "text": "Arăt-mi un dinar. A cui este imaginea inscripția de pe el? Ei au răspuns:A Cezarului."
+      "text": "Arăt-mi un dinar. A cui este imaginea inscripția de pe el? Ei au răspuns: A Cezarului."
     },
     {
       "number": 25,
-      "text": "El le-a zis:D Cezarului cele ce sunt ale Cezarului lui Dumnezeu cele ce sunt ale lui Dumnezeu."
+      "text": "El le-a zis: D Cezarului cele ce sunt ale Cezarului lui Dumnezeu cele ce sunt ale lui Dumnezeu."
     },
     {
       "number": 26,
-      "text": "Ei nu au reușit să - l prindă în capcana cuvintelor sale înaintea poporului, ci s - au mirat de răspunsul său și au tăcut."
+      "text": "Ei nu au reușit să-l prindă în capcana cuvintelor sale înaintea poporului, ci s-au mirat de răspunsul său și au tăcut."
     },
     {
       "number": 27,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Au fost deci șapte frați: cel dintîi a luat o nevastă, și a murit fără copii."
+      "text": "Au fost deci șapte frați: cel dintâi a luat o nevastă, și a murit fără copii."
     },
     {
       "number": 30,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "Al treilea a luat -o, și toți șapte n'au lăsat copii, și au murit."
+      "text": "Al treilea a luat-o, și toți șapte n-au lăsat copii, și au murit."
     },
     {
       "number": 32,
@@ -273,11 +273,11 @@
     },
     {
       "number": 33,
-      "text": "De aceea, la înviere, a cărei soție dintre ei va fi ea? Căci cei șapte au avut -o ca soție."
+      "text": "De aceea, la înviere, a cărei soție dintre ei va fi ea? Căci cei șapte au avut-o ca soție."
     },
     {
       "number": 34,
-      "text": "Isus le -a zis:,,Copii de vârsta aceasta se căsătoresc și sunt dați în căsătorie."
+      "text": "Isus le-a zis: Copii de vârsta aceasta se căsătoresc și sunt dați în căsătorie."
     },
     {
       "number": 35,
@@ -297,7 +297,7 @@
     },
     {
       "number": 39,
-      "text": "Unii dintre cărturari au răspuns:Învățătorule, tu vorbești bine."
+      "text": "Unii dintre cărturari au răspuns: Învățătorule, tu vorbești bine."
     },
     {
       "number": 40,
@@ -305,11 +305,11 @@
     },
     {
       "number": 41,
-      "text": "El le-a zis:De ce spun ei că Hristos este fiul lui David?"
+      "text": "El le-a zis: De ce spun ei că Hristos este fiul lui David?"
     },
     {
       "number": 42,
-      "text": "David însuși spune în cartea Psalmilor:Domnul a zis Domnului meu:ezi de-a dreapta Mea!"
+      "text": "David însuși spune în cartea Psalmilor: Domnul a zis Domnului meu: ezi de-a dreapta Mea!"
     },
     {
       "number": 43,

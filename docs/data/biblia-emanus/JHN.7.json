@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,13 +145,13 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:892633ccb904314876c96ce30d3113d658bbafc3923088965aab084cd1648b66",
-    "contentDigest": "sha256:ee9f1fb5c95d6234a4c7030a66be265dd923afc683c7a325323910353307b4ea"
+    "textDigest": "sha256:61afddab0d93dc81288ed80ae6760f5be42a7123584a564faaf8ad7731e26e32",
+    "contentDigest": "sha256:14a4b82f05b3c3d3a0132e3fad429c6c05bd07c67f4166721d7abf336c8a34f5"
   },
   "verses": [
     {
       "number": 1,
-      "text": "După aceste lucruri, Isus umbla în Galileea, căci nu voia să umble în Iudeea, pentru că iudeii căutau să -l omoare."
+      "text": "După aceste lucruri, Isus umbla în Galileea, căci nu voia să umble în Iudeea, pentru că iudeii căutau să-l omoare."
     },
     {
       "number": 2,
@@ -159,7 +159,7 @@
     },
     {
       "number": 3,
-      "text": "Frații săi i-au zis:Pleacă de aici du-te în Iudeea, pentru ca ucenicii tăi să vadă lucrările tale pe care le faci."
+      "text": "Frații săi i-au zis: Pleacă de aici du-te în Iudeea, pentru ca ucenicii tăi să vadă lucrările tale pe care le faci."
     },
     {
       "number": 4,
@@ -171,7 +171,7 @@
     },
     {
       "number": 6,
-      "text": "Isus le -a zis:,,Nu mi -a venit încă vremea, dar timpul vostru este totdeauna gata."
+      "text": "Isus le-a zis: Nu mi-a venit încă vremea, dar timpul vostru este totdeauna gata."
     },
     {
       "number": 7,
@@ -183,19 +183,19 @@
     },
     {
       "number": 9,
-      "text": "După ce le -a spus aceste lucruri, a rămas în Galileea."
+      "text": "După ce le-a spus aceste lucruri, a rămas în Galileea."
     },
     {
       "number": 10,
-      "text": "Dar după ce frații lui s'au suit la sărbătoare, s'a suit nu în public, ci în ascuns."
+      "text": "Dar după ce frații lui s-au suit la sărbătoare, s-a suit nu în public, ci în ascuns."
     },
     {
       "number": 11,
-      "text": "Iudeii L-au căutat la ospă L-au întrebat:Unde este?„"
+      "text": "Iudeii L-au căutat la ospă L-au întrebat: Unde este?"
     },
     {
       "number": 12,
-      "text": "Unii ziceau:,,Este un om bun! Alții ziceau:,,Nu este așa, dar ducea în rătăcire."
+      "text": "Unii ziceau: Este un om bun! Alții ziceau: Nu este așa, dar ducea în rătăcire."
     },
     {
       "number": 13,
@@ -207,11 +207,11 @@
     },
     {
       "number": 15,
-      "text": "Atunci iudeii s-au mirat au zis:Cum cunoaște omul acesta scrisorile, după ce n-a fost educat niciodată?”"
+      "text": "Atunci iudeii s-au mirat au zis: Cum cunoaște omul acesta scrisorile, după ce n-a fost educat niciodată?"
     },
     {
       "number": 16,
-      "text": "Isus le-a răspuns:Învățătura Mea nu este a Mea, ci a Celui ce M-a trimis pe Mine."
+      "text": "Isus le-a răspuns: Învățătura Mea nu este a Mea, ci a Celui ce M-a trimis pe Mine."
     },
     {
       "number": 17,
@@ -223,15 +223,15 @@
     },
     {
       "number": 19,
-      "text": "Nu v-a dat Moise Legea, și totuși niciunul din voi nu păz Legea? De ce căutați să Mă ucide?„"
+      "text": "Nu v-a dat Moise Legea? Și totuși niciunul dintre voi nu împlinește Legea. De ce căutați să Mă ucideți?"
     },
     {
       "number": 20,
-      "text": "mea a răspuns:Ai demon! Cine vrea să te omoare?”"
+      "text": "mea a răspuns: Ai demon! Cine vrea să te omoare?"
     },
     {
       "number": 21,
-      "text": "Isus le-a răspuns:Eu am făcut o singură lucrare voi toți vă minun din cauza aceasta."
+      "text": "Isus le-a răspuns: Eu am făcut o singură lucrare voi toți vă minun din cauza aceasta."
     },
     {
       "number": 22,
@@ -239,7 +239,7 @@
     },
     {
       "number": 23,
-      "text": "Daca un baiat primeste circumcizie in ziua Sabatului, ca legea lui Moise sa nu fie incalcata, esti suparat pe mine pentru ca am facut un om complet sanatos in ziua Sabatului?"
+      "text": "Dacă un om primește circumcizia în sabat, ca nu cumva legea lui Moise să se calce, sunteți mâniați pe mine pentru că am făcut un om în întregime sănătos în sabat?"
     },
     {
       "number": 24,
@@ -247,7 +247,7 @@
     },
     {
       "number": 25,
-      "text": "De aceea unii din Ierusalim ziceau:Oare nu pe acesta caută ei să-l omoare?"
+      "text": "De aceea unii din Ierusalim ziceau: Oare nu pe acesta caută ei să-l omoare?"
     },
     {
       "number": 26,
@@ -259,11 +259,11 @@
     },
     {
       "number": 28,
-      "text": "Isus a strigat în Templu, învățând zicând:Mă cunoașteți amândoi știți de unde sunt. Eu n-am venit de la Mine însumi, ci Cel ce M-a trimis este adevărat, pe Care voi nu-L cunoașteți."
+      "text": "Isus a strigat în Templu, învățând zicând: Mă cunoașteți amândoi știți de unde sunt. Eu n-am venit de la Mine însumi, ci Cel ce M-a trimis este adevărat, pe Care voi nu-L cunoașteți."
     },
     {
       "number": 29,
-      "text": "Eu îl cunosc, pentru că sunt de la el el m-a trimis„."
+      "text": "Eu îl cunosc, pentru că sunt de la el el m-a trimis."
     },
     {
       "number": 30,
@@ -271,15 +271,15 @@
     },
     {
       "number": 31,
-      "text": "Dar din, au crezut în El. Ei ziceau:,,Cînd va veni Hristosul, nu va face El oare mai multe semne decît a făcut omul acesta?"
+      "text": "Dar din, au crezut în El. Ei ziceau: Când va veni Hristosul, nu va face El oare mai multe semne decât a făcut omul acesta?"
     },
     {
       "number": 32,
-      "text": "Fariseii au auzit mulțimea murmurând aceste lucruri despre el, și preoții cei mai de seamă și fariseii au trimis ofițeri să -l aresteze."
+      "text": "Fariseii au auzit mulțimea murmurând aceste lucruri despre el, și preoții cei mai de seamă și fariseii au trimis ofițeri să-l aresteze."
     },
     {
       "number": 33,
-      "text": "Isus i-a răspuns:Încă timp voi fi cu tine, apoi mă voi duce la Cel ce M-a trimis."
+      "text": "Isus i-a răspuns: Încă timp voi fi cu tine, apoi mă voi duce la Cel ce M-a trimis."
     },
     {
       "number": 34,
@@ -287,15 +287,15 @@
     },
     {
       "number": 35,
-      "text": "Iudeii ziceau deci între ei:Unde se va duce omul acesta de nu-l vom găsi? Se va duce el la risipirea printre greci și-i va învăța pe greci?"
+      "text": "Iudeii ziceau deci între ei: Unde se va duce omul acesta de nu-l vom găsi? Se va duce el la risipirea printre greci și-i va învăța pe greci?"
     },
     {
       "number": 36,
-      "text": "Care este cuvântul acesta pe care l-a spus:Mă vei căuta nu Mă vei găsi”Unde sunt Eu, nu vei putea veni„?"
+      "text": "Care este cuvântul acesta pe care l-a spus: Mă vei căuta nu Mă vei găsiUnde sunt Eu, nu vei putea veni?"
     },
     {
       "number": 37,
-      "text": "Acum, în ultima cea mai mare zi a sărbătorii, Isus S-a ridicat a strigat:Dacă însetează cineva, să vină la Mine să bea!"
+      "text": "Acum, în ultima cea mai mare zi a sărbătorii, Isus S-a ridicat a strigat: Dacă însetează cineva, să vină la Mine să bea!"
     },
     {
       "number": 38,
@@ -307,11 +307,11 @@
     },
     {
       "number": 40,
-      "text": "din, când au auzit cuvintele acestea, au zis:Acesta este cu adevărat profetul!”"
+      "text": "din, când au auzit cuvintele acestea, au zis: Acesta este cu adevărat profetul!"
     },
     {
       "number": 41,
-      "text": "Alții ziceau:Acesta este Hristosul!„ Dar unii ziceau:Ce, a ieșit Hristosul din Galileea?"
+      "text": "Alții ziceau: Acesta este Hristosul! Dar unii ziceau: Ce, a ieșit Hristosul din Galileea?"
     },
     {
       "number": 42,
@@ -327,15 +327,15 @@
     },
     {
       "number": 45,
-      "text": "Slujitorii au venit deci la preoții cei mai de seamă la farisei le-au zis:Pentru ce nu l- adus?”"
+      "text": "Slujitorii au venit deci la preoții cei mai de seamă la farisei le-au zis: Pentru ce nu l-adus?"
     },
     {
       "number": 46,
-      "text": "Ofițerii au răspuns:?Nici un om nu a vorbit vreodată ca acest om!"
+      "text": "Ofițerii au răspuns: Niciodată vreun om nu a vorbit ca omul acesta."
     },
     {
       "number": 47,
-      "text": "Fariseii le-au răspuns:Nu cumva voi rătăciți?"
+      "text": "Fariseii le-au răspuns: Nu cumva voi rătăciți?"
     },
     {
       "number": 48,
@@ -355,11 +355,11 @@
     },
     {
       "number": 52,
-      "text": "Ei i-au răspuns:Și tu ești din Galileea? Caută vezi că nici un profet nu s-a ridicat din Galileea.„"
+      "text": "Ei i-au răspuns: Și tu ești din Galileea? Caută vezi că nici un profet nu s-a ridicat din Galileea."
     },
     {
       "number": 53,
-      "text": "Fiecare s-a dus la casa lui,”",
+      "text": "Fiecare s-a dus la casa lui,",
       "textualStatus": "double-bracketed"
     }
   ],

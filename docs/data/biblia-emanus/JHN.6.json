@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:16b0be5733ec96c267f61c3de9a2e8e7ecaaabb14d4e800d14b2635bc35929a9",
-    "contentDigest": "sha256:4f70a3155db9ef002088a68ed1bfce2cd6aa5634f44649acec936695cb6c3955"
+    "textDigest": "sha256:7db230530b640ebd1dc7114ad88a41461f06740a25d3ec1ee6346b7cfd8c0460",
+    "contentDigest": "sha256:660b8bf24bd3e2dbc6c81a316396d197454f1a0eb2bb21cfc550d6550f72c372"
   },
   "verses": [
     {
@@ -203,11 +203,11 @@
     },
     {
       "number": 14,
-      "text": "Când oamenii au văzut semnul pe care l-a făcut Isus, au zis:Acesta este într-adevăr profetul care vine în lume."
+      "text": "Când oamenii au văzut semnul pe care l-a făcut Isus, au zis: Acesta este într-adevăr profetul care vine în lume."
     },
     {
       "number": 15,
-      "text": "Prin urmare, Isus, dându- seama că erau pe cale să vină să-l ia cu ca să-l facă rege, s-a retras din nou pe munte de unul singur."
+      "text": "Prin urmare, Isus, dându-seama că erau pe cale să vină să-l ia cu ca să-l facă rege, s-a retras din nou pe munte de unul singur."
     },
     {
       "number": 16,
@@ -411,7 +411,7 @@
     },
     {
       "number": 66,
-      "text": "La aceasta, mulți dintre discipolii săi s - au întors și nu mai umblau cu el."
+      "text": "La aceasta, mulți dintre discipolii săi s-au întors și nu mai umblau cu el."
     },
     {
       "number": 67,
@@ -431,7 +431,7 @@
     },
     {
       "number": 71,
-      "text": "Și a vorbit despre Iuda, fiul lui Simon Iscarioteanul, căci el era cel ce avea să -l trădeze, fiind unul din cei doisprezece."
+      "text": "Și a vorbit despre Iuda, fiul lui Simon Iscarioteanul, căci el era cel ce avea să-l trădeze, fiind unul din cei doisprezece."
     }
   ],
   "editorialNotes": [

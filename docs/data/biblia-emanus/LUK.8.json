@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:d4ab8a517474d09c0b3c7afeab66418055f80fd75e61273a85cd98212e1d0221",
-    "contentDigest": "sha256:bdc7725c6cf61826152b2305cb3f7c4bd658771619d9008f1b9ad9859c3c063b"
+    "textDigest": "sha256:ab323e50291562a09474b0fb77e043355ad2756e21995f717e4a8284795c83b4",
+    "contentDigest": "sha256:7bd3543a9f5f0e556d6d47be0a1cd4ff112045d79c57bc576ff517d5c859e57b"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Cînd s'a adunat o mare mulțime de oameni din fiecare cetate, Isus a vorbit printr'o parabolă:"
+      "text": "Când s-a adunat o mare mulțime de oameni din fiecare cetate, Isus a vorbit printr'o parabolă:"
     },
     {
       "number": 5,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Unii au căzut în pământ bun au crescut au adus de o sută de ori mai multe roade.„ Când a spus aceste lucruri, el a strigat:Cine are urechi de auzit, să audă!”"
+      "text": "Unii au căzut în pământ bun au crescut au adus de o sută de ori mai multe roade. Când a spus aceste lucruri, el a strigat: Cine are urechi de auzit, să audă!"
     },
     {
       "number": 9,
@@ -213,11 +213,11 @@
     },
     {
       "number": 18,
-      "text": "Fiți deci cu băgare de seamă cum ascultați; căci celui ce are, i se va da; celui ce nu are, i se va lua chiar ceea ce crede că are.„"
+      "text": "Fiți deci cu băgare de seamă cum ascultați; căci celui ce are, i se va da; celui ce nu are, i se va lua chiar ceea ce crede că are."
     },
     {
       "number": 19,
-      "text": "Mama și frații lui au venit la el, și nu s'au putut apropia de el din pricina mulțimii."
+      "text": "Mama și frații lui au venit la el, și nu s-au putut apropia de el din pricina mulțimii."
     },
     {
       "number": 20,
@@ -225,11 +225,11 @@
     },
     {
       "number": 21,
-      "text": "El le-a răspuns:Mama mea frații mei sunt care ascultă Cuvântul lui Dumnezeu-l împlinesc.”"
+      "text": "El le-a răspuns: Mama mea frații mei sunt care ascultă Cuvântul lui Dumnezeu-l împlinesc."
     },
     {
       "number": 22,
-      "text": "Într-una din zilele acelea, a intrat într-o corabie, el ucenicii lui, le-a zis:Să trecem de cealaltă parte a lacului.„ Și au pornit."
+      "text": "Într-una din zilele acelea, a intrat într-o corabie, el ucenicii lui, le-a zis: Să trecem de cealaltă parte a lacului. Și au pornit."
     },
     {
       "number": 23,
@@ -237,11 +237,11 @@
     },
     {
       "number": 24,
-      "text": "Ei au venit la el l-au trezit, spunând:Maestre, Maestre, suntem pe moarte!” El s-a trezit a mustrat vântul furia apei; apoi au încetat s-a liniștit."
+      "text": "Ei au venit la el l-au trezit, spunând: Maestre, Maestre, suntem pe moarte! El s-a trezit a mustrat vântul furia apei; apoi au încetat s-a liniștit."
     },
     {
       "number": 25,
-      "text": "El le -a zis:,,Unde vă este credința?,,S'au temut, s'au mirat, zicînd unul către altul:,,Cine este Acesta, că poruncește vînturilor apei, -L ascultă?"
+      "text": "El le-a zis: «Unde vă este credința?» Cuprinși de teamă și uimire, își spuneau unul altuia: «Cine este Acesta, de poruncește chiar și vânturilor și apei, iar ele Îl ascultă?»"
     },
     {
       "number": 26,
@@ -249,11 +249,11 @@
     },
     {
       "number": 27,
-      "text": "Cînd Isus a pășit pe țărm, un anumit om a ieșit din cetate, care avea demoni mult timp, l - a întîlnit. Nu purta haine, și nu locuia într - o casă, ci în morminte."
+      "text": "Când Isus a pășit pe țărm, un anumit om a ieșit din cetate, care avea demoni mult timp, l-a întîlnit. Nu purta haine, și nu locuia într-o casă, ci în morminte."
     },
     {
       "number": 28,
-      "text": "Când L-a văzut pe Isus, a strigat a căzut înaintea Lui, cu glas tare a zis:Ce am eu de-a face cu Tine, Isuse, Fiul Dumnezeului Celui Preaînalt? Te rog, nu mă chinui!„"
+      "text": "Când L-a văzut pe Isus, a strigat a căzut înaintea Lui, cu glas tare a zis: Ce am eu de-a face cu Tine, Isuse, Fiul Dumnezeului Celui Preaînalt? Te rog, nu mă chinui!"
     },
     {
       "number": 29,
@@ -261,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Isus l-a întrebat:Care este numele tău?” El a răspuns:Legiune„, căci demoni intraseră în el."
+      "text": "Isus l-a întrebat: Care este numele tău? El a răspuns: Legiune, căci demoni intraseră în el."
     },
     {
       "number": 31,
@@ -289,7 +289,7 @@
     },
     {
       "number": 37,
-      "text": "Tot poporul din ținutul din jur al Gadarenilor i - a cerut să se depărteze de ei, căci se temeau foarte mult. Apoi a intrat în corabie și s - a întors."
+      "text": "Tot poporul din ținutul din jur al Gadarenilor i-a cerut să se depărteze de ei, căci se temeau foarte mult. Apoi a intrat în corabie și s-a întors."
     },
     {
       "number": 38,
@@ -301,7 +301,7 @@
     },
     {
       "number": 40,
-      "text": "Când Isus s-a întors,a l-a întâmpinat, pentru că toți îl așteptau."
+      "text": "Când Isus s-a întors, a l-a întâmpinat, pentru că toți îl așteptau."
     },
     {
       "number": 41,
@@ -309,7 +309,7 @@
     },
     {
       "number": 42,
-      "text": "Căci avea o singură fiică născută, în jur de doisprezece ani, și ea era pe moarte. Dar pe cînd mergea el, mulțimile s'au năpustit împotriva lui."
+      "text": "Căci avea o singură fiică născută, în jur de doisprezece ani, și ea era pe moarte. Dar pe când mergea el, mulțimile s-au năpustit împotriva lui."
     },
     {
       "number": 43,
@@ -321,7 +321,7 @@
     },
     {
       "number": 45,
-      "text": "Isus a zis:Cine M-a atins?” Când toți au tăgăduit lucrul acesta, Petru cei care erau cu El au zis:Maestre,mile te presează te îmbulzesc tu spui:Cine M-a atins?„"
+      "text": "Isus a zis: Cine M-a atins? Când toți au tăgăduit lucrul acesta, Petru cei care erau cu El au zis: Maestre, mile te presează te îmbulzesc tu spui: Cine M-a atins?"
     },
     {
       "number": 46,
@@ -329,15 +329,15 @@
     },
     {
       "number": 47,
-      "text": "Cînd femeia a văzut că nu era ascunsă, a venit tremurînd, și s'a pogorît înaintea lui și i -a vestit în fața întregului popor motivul pentru care se atinsese de el, și cum a fost vindecată îndată."
+      "text": "Când femeia a văzut că nu era ascunsă, a venit tremurînd, și s-a pogorît înaintea lui și i-a vestit în fața întregului popor motivul pentru care se atinsese de el, și cum a fost vindecată îndată."
     },
     {
       "number": 48,
-      "text": "El i-a spus:Fiică, înveselește-te. Credința ta te-a făcut bine. Mergi în pace.”"
+      "text": "El i-a spus: Fiică, înveselește-te. Credința ta te-a făcut bine. Mergi în pace."
     },
     {
       "number": 49,
-      "text": "Pe cînd vorbea el încă, a venit unul din stăpînitorul casei sinagogii, i-a zis:Fiica ta a murit."
+      "text": "Pe când vorbea el încă, a venit unul din stăpînitorul casei sinagogii, i-a zis: Fiica ta a murit."
     },
     {
       "number": 50,
@@ -345,7 +345,7 @@
     },
     {
       "number": 51,
-      "text": "Cînd a ajuns în casă, n'a lăsat pe nimeni să intre, afară de Petru, Ioan, Iacov, tatăl copilului și mama ei."
+      "text": "Când a ajuns în casă, n-a lăsat pe nimeni să intre, afară de Petru, Ioan, Iacov, tatăl copilului și mama ei."
     },
     {
       "number": 52,
@@ -361,11 +361,11 @@
     },
     {
       "number": 55,
-      "text": "Duhul ei s'a întors, și ea s'a sculat îndată. El a poruncit să i se dea ceva de mîncare."
+      "text": "Duhul ei s-a întors, și ea s-a sculat îndată. El a poruncit să i se dea ceva de mîncare."
     },
     {
       "number": 56,
-      "text": "Părinții ei au fost uimiți, dar el le - a poruncit să nu spună nimănui ce s - a făcut."
+      "text": "Părinții ei au fost uimiți, dar el le-a poruncit să nu spună nimănui ce s-a făcut."
     }
   ],
   "editorialNotes": [],

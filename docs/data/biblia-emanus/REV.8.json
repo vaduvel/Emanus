@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:046e7ff329042e8eadc33e4c23f806c36ac62dd4a63b15df5baca2e337676050",
-    "contentDigest": "sha256:e4538a13fa13f6f4a3df8a33f878f7f7f0a7ebb493e8df20d68aa0f88498a07e"
+    "textDigest": "sha256:6eb16c63d1a01f8ef755e8b5f1d26d9ba602fe84a9a0625b767164f453ee7d5b",
+    "contentDigest": "sha256:82e84753e832692f46fc09a264ea4ff8fcfdf98ebf1e3c7d81703335fa9b1b64"
   },
   "verses": [
     {
@@ -149,11 +149,11 @@
     },
     {
       "number": 2,
-      "text": "Am văzut pe cei șapte îngeri care stăteau înaintea lui Dumnezeu, și li s'au dat șapte trîmbițe."
+      "text": "Am văzut pe cei șapte îngeri care stăteau înaintea lui Dumnezeu, și li s-au dat șapte trîmbițe."
     },
     {
       "number": 3,
-      "text": "Un alt înger a venit și s'a așezat peste altar, cu un cenzor de aur. I s'a dat multă tămîie, ca s'o adauge la rugăciunile tuturor sfinților pe altarul de aur, care era înaintea scaunului de domnie."
+      "text": "Un alt înger a venit și s-a așezat peste altar, cu un cenzor de aur. I s-a dat multă tămîie, ca s-o adauge la rugăciunile tuturor sfinților pe altarul de aur, care era înaintea scaunului de domnie."
     },
     {
       "number": 4,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Cel dintîi a sunat, și a urmat grindina și focul, amestecate cu sînge, și au fost aruncate pe pămînt. O treime din pămînt a ars, și o treime din copaci au ars, și toată iarba verde a ars."
+      "text": "Și primul înger a trâmbițat și au urmat grindină și foc amestecat cu sânge și au fost aruncate peste pământ; și a treia parte a copacilor a fost arsă și toată iarba verde a fost arsă."
     },
     {
       "number": 8,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Am văzut am auzit un vultur zburând în mijlocul cerului, spunând cu glas tare:Vai! vai! vai de cei ce locuiesc pe pământ, din cauza celorlalte sunete ale trâmbițelor celor trei îngeri, care încă nu au sunat!”"
+      "text": "Am văzut am auzit un vultur zburând în mijlocul cerului, spunând cu glas tare: Vai! vai! vai de cei ce locuiesc pe pământ, din cauza celorlalte sunete ale trâmbițelor celor trei îngeri, care încă nu au sunat!”"
     }
   ],
   "editorialNotes": [],

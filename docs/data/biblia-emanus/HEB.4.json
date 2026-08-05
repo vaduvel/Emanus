@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:88eabfbc092951f598e0b15f90813c22b097c0abac3c7907355eff0b1422598f",
-    "contentDigest": "sha256:c67bb25a75e5ede31a0d58a579bd63de8220e30ed5fc655a839c0384578751e5"
+    "textDigest": "sha256:24c9c268dada597343bda66554a580802ba6e4aa7acdcc0e6954c14a71cd98bd",
+    "contentDigest": "sha256:73c411a0c85d5729f028a2a642486d40ef677c25547186d118959e595048cf91"
   },
   "verses": [
     {
@@ -149,11 +149,11 @@
     },
     {
       "number": 2,
-      "text": "Căci într'adevăr ni s'a propovăduit și nouă o veste bună, cum au făcut și ei, dar cuvîntul pe care l-au auzit nu le-a fost de folos, pentrucă n'a fost amestecat cu credința celor ce l-au auzit."
+      "text": "Căci într'adevăr ni s-a propovăduit și nouă o veste bună, cum au făcut și ei, dar cuvântul pe care l-au auzit nu le-a fost de folos, pentru că n-a fost amestecat cu credința celor ce l-au auzit."
     },
     {
       "number": 3,
-      "text": "Căci noi, care am crezut, intrăm în această odihnă, după cum a spus:După cum am jurat în mânia Mea, ei nu vor intra în odihna Mea„; deși lucrările au fost terminate de la întemeierea lumii."
+      "text": "Căci noi, care am crezut, intrăm în această odihnă, după cum a spus: După cum am jurat în mânia Mea, ei nu vor intra în odihna Mea„; deși lucrările au fost terminate de la întemeierea lumii."
     },
     {
       "number": 4,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Căci dacă Iosua le -ar fi dat odihnă, nu ar mai fi vorbit după aceea despre o altă zi."
+      "text": "Căci dacă Iosua le-ar fi dat odihnă, nu ar mai fi vorbit după aceea despre o altă zi."
     },
     {
       "number": 9,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Căci cine a intrat în odihna Lui s'a odihnit și el de lucrările Lui, cum a făcut Dumnezeu dela lucrările Lui."
+      "text": "Căci cine a intrat în odihna Lui s-a odihnit și el de lucrările Lui, cum a făcut Dumnezeu de la lucrările Lui."
     },
     {
       "number": 11,

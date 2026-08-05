@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:5de623ca50bcdefcc33c3fe097f1c034e15008278f49c0becf177fdc09b3b744",
-    "contentDigest": "sha256:578a4d671046b2fedb22044d994e9fc4c8f289dd96d6bd29704dad2dd426b62d"
+    "textDigest": "sha256:28523078e884a69d3999a2abbae05c7dd9de71b7480264d8469e7905a7dedf54",
+    "contentDigest": "sha256:62ba8dae00de1a1c94f910db768c3e76788fe03fc128d44e746444b4fb9dc547"
   },
   "verses": [
     {
@@ -159,7 +159,7 @@
     },
     {
       "number": 3,
-      "text": "Simon Petru le -a zis:,,Mă duc la pescuit. Ei i -au răspuns:,,Venim noi cu voi. Ei au ieșit îndată au intrat în corabie. În noaptea aceea n'au prins nimic."
+      "text": "Simon Petru le-a zis: Mă duc la pescuit. Ei i-au răspuns: Venim noi cu voi. Ei au ieșit îndată au intrat în corabie. În noaptea aceea n-au prins nimic."
     },
     {
       "number": 4,
@@ -167,15 +167,15 @@
     },
     {
       "number": 5,
-      "text": "Isus le -a zis:,,Copii, ceva de mîncat? Ei i -au răspuns:,,Nu."
+      "text": "Isus le-a zis: Copii, ceva de mâncat? Ei i-au răspuns: Nu."
     },
     {
       "number": 6,
-      "text": "El le -a zis:,,Aruncați mreaja în partea dreaptă a corăbiei, găsi ceva. Ei au aruncat -o, acum n'au mai putut s'o tragă dupăa pelor."
+      "text": "El le-a zis: Aruncați mreaja în partea dreaptă a corăbiei, găsi ceva. Ei au aruncat-o, acum n-au mai putut s-o tragă dupăa pelor."
     },
     {
       "number": 7,
-      "text": "Ucenicul acela pe care-l iubea Isus i-a zis deci lui Petru:Este Domnul!„ Și Simon Petru, auzind că este Domnul,-a înfășurat haina în jurul lui însuși (căci era gol), s-a aruncat în mare."
+      "text": "Ucenicul acela pe care-l iubea Isus i-a zis deci lui Petru: Este Domnul! Și Simon Petru, auzind că este Domnul,-a înfășurat haina în jurul lui însuși (căci era gol), s-a aruncat în mare."
     },
     {
       "number": 8,
@@ -187,19 +187,19 @@
     },
     {
       "number": 10,
-      "text": "Isus le-a zis:Aduceți din peștii pe care i- prins.”"
+      "text": "Isus le-a zis: Aduceți din peștii pe care i-prins."
     },
     {
       "number": 11,
-      "text": "Simon Petru s'a suit, wi a scos mreaja la uscat, plinq de o sutq cincizeci wi trei de pewti mari. Chiar dacq erau atkt de mulyi, plasa n'a fost ruptq."
+      "text": "Simon Petru s-a suit, wi a scos mreaja la uscat, plinq de o sutq cincizeci wi trei de pewti mari. Chiar dacq erau atkt de mulyi, plasa n-a fost ruptq."
     },
     {
       "number": 12,
-      "text": "Isus le-a zis:Veniți mâncați micul dejun!„ Nici unul dintre ucenici n-a îndrăznit să-L întrebe:Cine ești?”, știind că era Domnul."
+      "text": "Isus le-a zis: Veniți mâncați micul dejun! Nici unul dintre ucenici n-a îndrăznit să-L întrebe: Cine ești?, știind că era Domnul."
     },
     {
       "number": 13,
-      "text": "Apoi Isus a venit și a luat pâinea, le -a dat -o, și peștele la fel."
+      "text": "Apoi Isus a venit și a luat pâinea, le-a dat-o, și peștele la fel."
     },
     {
       "number": 14,
@@ -207,15 +207,15 @@
     },
     {
       "number": 15,
-      "text": "După ce-au luat dejunul, Isus i-a zis lui Simon Petru:Simone, fiul lui Iona, mă iubești tu mai mult decît?„ Și el i-a zis:Da, Doamne, știi că am pentru tine.” Și el i-a zis:Pa mieii mei.„"
+      "text": "Și după ce au mâncat, Isus i-a spus lui Simon Petru: Simone, fiul lui Iona, mă iubești tu mai mult decât aceștia? El i-a spus: Da, Doamne; tu știi că te iubesc. Isus i-a spus: Paște mielușeii mei."
     },
     {
       "number": 16,
-      "text": "El i-a zis a doua oară:Simone, fiul lui Iona, mă iubești?” El i-a răspuns:Da, Doamne, știi că am dragoste pentru tine.„ El i-a zis:Pune-Mi oile la încercare.”"
+      "text": "I-a spus din nou a doua oară: Simone, fiul lui Iona, mă iubești? El i-a spus: Da, Doamne; știi că te iubesc. El i-a spus: Paște oile mele."
     },
     {
       "number": 17,
-      "text": "El i-a zis a treia oară:Simon, fiul lui Iona, ai pentru mine?„ Petru s-a întristat pentru că l-a întrebat a treia oară:Ai pentru mine?” El i-a zis:Doamne, tu știi totul. Tu știi că eu am pentru tine.„ Isus i-a zis:Pa oile mele."
+      "text": "El i-a spus a treia oară: Simone, fiul lui Iona, mă iubești tu? Petru s-a mâhnit că îi spusese a treia oară: Mă iubești? Și i-a spus: Doamne, tu toate le știi; tu știi că te iubesc. Isus i-a spus: Paște oile mele."
     },
     {
       "number": 18,
@@ -223,7 +223,7 @@
     },
     {
       "number": 19,
-      "text": "El a spus aceasta, semnificând prin ce fel de moarte avea să-L glorifice pe Dumnezeu. După ce a spus aceasta, i-a zis:Urmează-mă!”"
+      "text": "El a spus aceasta, semnificând prin ce fel de moarte avea să-L glorifice pe Dumnezeu. După ce a spus aceasta, i-a zis: Urmează-mă!"
     },
     {
       "number": 20,
@@ -231,11 +231,11 @@
     },
     {
       "number": 21,
-      "text": "Petru, văzându-l, i-a zis lui Isus:Doamne, cum rămâne cu omul acesta?„"
+      "text": "Petru, văzându-l, i-a zis lui Isus: Doamne, cum rămâne cu omul acesta?"
     },
     {
       "number": 22,
-      "text": "Isus i-a zis:Dacă voiesc să rămână până voi veni Eu, ce-ți pasă ție?"
+      "text": "Isus i-a zis: Dacă voiesc să rămână până voi veni Eu, ce-ți pasă ție?"
     },
     {
       "number": 23,
@@ -247,7 +247,7 @@
     },
     {
       "number": 25,
-      "text": "Există, de asemenea, multe alte lucruri pe care le-a făcut Isus, care, dacă ar fi toate scrise, presupun că nici chiar lumea însăși nu ar avea loc pentru cărțile care ar fi scrise.”"
+      "text": "Există, de asemenea, multe alte lucruri pe care le-a făcut Isus, care, dacă ar fi toate scrise, presupun că nici chiar lumea însăși nu ar avea loc pentru cărțile care ar fi scrise."
     }
   ],
   "editorialNotes": [],

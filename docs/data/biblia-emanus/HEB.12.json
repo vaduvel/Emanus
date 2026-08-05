@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:995ab33bc5195c0599b17d0697588ba612db84fba520a42efe4ac77844bc873f",
-    "contentDigest": "sha256:6343001ea4674e7bd4a1d24af4e8476619b5ed06f9d5684446c49d985b1dd6ff"
+    "textDigest": "sha256:cb37f02e64eb1baf61c5aaf77871a80f420961e729ca8f9c3c765df82fc1d187",
+    "contentDigest": "sha256:35899ccd51a8f137098766763a1c6d295d48b59bc475286655b90312a49acd95"
   },
   "verses": [
     {
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Dumnezeu se poartă cu voi ca cu copiii, căci ce fiu este acolo, pe care tatăl său nu - l disciplinează?"
+      "text": "Dumnezeu se poartă cu voi ca cu copiii, căci ce fiu este acolo, pe care tatăl său nu-l disciplinează?"
     },
     {
       "number": 8,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Căci știți că, după aceea, cînd a vrut să moștenească binecuvîntarea, a fost respins, căci n'a găsit loc să se răzgândească, deși a căutat - o cu sîrguință cu lacrimi."
+      "text": "Căci știți că, după aceea, când a vrut să moștenească binecuvîntarea, a fost respins, căci n-a găsit loc să se răzgândească, deși a căutat-o cu sîrguință cu lacrimi."
     },
     {
       "number": 18,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Căci nu puteau suporta ceea ce li se poruncise:Dacă un animal se va atinge de munte, va fi omorât cu pietre”."
+      "text": "Căci nu puteau suporta ceea ce li se poruncise: Dacă un animal se va atinge de munte, va fi omorât cu pietre”."
     },
     {
       "number": 21,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Această expresie,încă o dată„ înseamnă înlăturarea acelor lucruri care sunt zguduite, ca și a lucrurilor care au fost făcute, pentru ca acele lucruri care nu sunt zguduite să rămână."
+      "text": "Această expresie, încă o dată„ înseamnă înlăturarea acelor lucruri care sunt zguduite, ca și a lucrurilor care au fost făcute, pentru ca acele lucruri care nu sunt zguduite să rămână."
     },
     {
       "number": 28,

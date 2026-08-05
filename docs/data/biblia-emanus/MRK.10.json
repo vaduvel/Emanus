@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:a4d5d5eca380840b6447243a4f2920da04699a70afeb7a1fa83464b8eb2b6055",
-    "contentDigest": "sha256:3e95d0594b76ce27a901fa1cbdb0e3416878e3bd817e54e5646b7cb6832ae378"
+    "textDigest": "sha256:dbf6bc259ada0c1a7d4d00aa458d11bdeb4426822be7e4aad9b8e1fbe254b901",
+    "contentDigest": "sha256:b7395fed87a7883b459f4b8755cf1ea7e59903f12ab94f4b9b2cd50c1777312c"
   },
   "verses": [
     {
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "În casă, discipolii săi l - au întrebat din nou despre aceeași problemă."
+      "text": "În casă, discipolii săi l-au întrebat din nou despre aceeași problemă."
     },
     {
       "number": 11,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "I-au adus copilași, ca să se atingă de ei, dar ucenicii i-au mustrat pe cei ce -i aduceau."
+      "text": "I-au adus copilași, ca să se atingă de ei, dar ucenicii i-au mustrat pe cei ce-i aduceau."
     },
     {
       "number": 14,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Adevărat, adevărat vă spun că oricine nu va primi Împărăția lui Dumnezeu ca un copil, nicidecum nu va intra în ea."
+      "text": "Adevărat vă spun: cine nu primește Împărăția lui Dumnezeu asemenea unui copilaș nicidecum nu va intra în ea."
     },
     {
       "number": 16,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Discipolii au fost uimiți de cuvintele sale. Dar Isus a răspuns din nou,? Copii, cât de greu este pentru cei care au încredere în bogății să intre în Regatul lui Dumnezeu!"
+      "text": "Ucenicii erau uimiți de cuvintele Lui. Isus le-a spus din nou: Copii, cât de greu este să intri în Împărăția lui Dumnezeu!"
     },
     {
       "number": 25,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Isus a zis:Adevărat, adevărat vă spun că nu este nimeni care să fi lăsat casă, sau frați, sau surori, sau tată, sau mamă, sau, sau copii, sau pământ, pentru mine și pentru vestea cea bună,"
+      "text": "Isus a zis: Adevărat, adevărat vă spun că nu este nimeni care să fi lăsat casă, sau frați, sau surori, sau tată, sau mamă, sau, sau copii, sau pământ, pentru mine și pentru vestea cea bună,"
     },
     {
       "number": 30,
@@ -325,7 +325,7 @@
     },
     {
       "number": 46,
-      "text": "Ei au venit la Ierihon. Pe cînd ieșea din Ierihon cu ucenicii Săi și cu o mare mulțime de oameni, fiul lui Timaeus, Bartimaeus, un cerșetor orb, ședea la drum."
+      "text": "Ei au venit la Ierihon. Pe când ieșea din Ierihon cu ucenicii Săi și cu o mare mulțime de oameni, fiul lui Timaeus, Bartimaeus, un cerșetor orb, ședea la drum."
     },
     {
       "number": 47,
@@ -349,7 +349,7 @@
     },
     {
       "number": 52,
-      "text": "Isus i-a zis:Du-te, căci credința ta te-a făcut sănătos. Și-a căpătat îndată vederea L-a urmat pe Isus pe drum."
+      "text": "Isus i-a zis: Du-te, căci credința ta te-a făcut sănătos. Și-a căpătat îndată vederea L-a urmat pe Isus pe drum."
     }
   ],
   "editorialNotes": [],

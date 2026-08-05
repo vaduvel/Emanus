@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:8615fbfabb83d729da4c68f8296813b0abc486455069031622cf19bf95edfb73",
-    "contentDigest": "sha256:32c2886fd20e2615208b8439a9344ef8f4dc2941c4674cca117633a27bec3447"
+    "textDigest": "sha256:0fad08d3584d6249d398fad2ce9f085e9192e63e9df7ef9b21c5676eb8d77b6e",
+    "contentDigest": "sha256:db0a70874b91b7f39f01a3b57be4535de8e537af20649c665554c1ecd5ec809b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Când s - a stabilit că trebuie să navigăm spre Italia, ei i - au dat pe Pavel și pe alți deținuți unui centurion pe nume Julius, din formația Augustan."
+      "text": "Când s-a stabilit că trebuie să navigăm spre Italia, ei i-au dat pe Pavel și pe alți deținuți unui centurion pe nume Julius, din formația Augustan."
     },
     {
       "number": 2,
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "A doua zi ne - am atins de Sidon. Julius l - a tratat cu amabilitate pe Pavel și i - a dat permisiunea să meargă la prietenii săi și să se împrospăteze."
+      "text": "A doua zi ne-am atins de Sidon. Julius l-a tratat cu amabilitate pe Pavel și i-a dat permisiunea să meargă la prietenii săi și să se împrospăteze."
     },
     {
       "number": 4,
@@ -177,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "Când a trecut mult timp și călătoria era acum periculoasă pentru că postul trecuse deja, Pavel i - a avertizat"
+      "text": "Când a trecut mult timp și călătoria era acum periculoasă pentru că postul trecuse deja, Pavel i-a avertizat"
     },
     {
       "number": 10,
-      "text": "le-a zis:Domnilor, îmi dau seama că această călătorie va fi cu multă pagubă pierdere, nu numai a încărcăturii a navei, ci a noastre.„"
+      "text": "le-a zis: Domnilor, îmi dau seama că această călătorie va fi cu multă pagubă pierdere, nu numai a încărcăturii a navei, ci a noastre.„"
     },
     {
       "number": 11,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Când vântul de sud sufla încet, presupunând că și - au atins scopul, ei au cântărit ancora și au navigat de - a lungul Cretei, aproape de țărm."
+      "text": "Când vântul de sud sufla încet, presupunând că și-au atins scopul, ei au cântărit ancora și au navigat de-a lungul Cretei, aproape de țărm."
     },
     {
       "number": 14,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "În a treia zi, au aruncat nava și au atacat - o cu propriile mâini."
+      "text": "În a treia zi, au aruncat nava și au atacat-o cu propriile mâini."
     },
     {
       "number": 20,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Pavele, nu te teme, ci stai înaintea Cezarului, iată că Dumnezeu ți -a dat pe toți cei ce navighează cu tine."
+      "text": "Pavele, nu te teme, ci stai înaintea Cezarului, iată că Dumnezeu ți-a dat pe toți cei ce navighează cu tine."
     },
     {
       "number": 25,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Dar cînd a venit noaptea a paisprezecea, cînd am fost duși înainte și înapoi în Marea Adriatică, pe la miezul nopții marinarii au bănuit că se apropiau de o țară."
+      "text": "Dar când a venit noaptea a paisprezecea, când am fost duși înainte și înapoi în Marea Adriatică, pe la miezul nopții marinarii au bănuit că se apropiau de o țară."
     },
     {
       "number": 28,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "Pavel a spus centurionului și soldaților:?Dacă acestea nu rămân în navă, nu puteți fi salvați."
+      "text": "Pavel a spus centurionului și soldaților: Dacă aceștia nu rămân în corabie, voi nu puteți fi salvați."
     },
     {
       "number": 32,
@@ -273,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "În timp ce ziua se apropia, Pavel i-a rugat pe să ia ceva de mâncare, spunând:Astăzi este a paisprezecea zi în care așteptați și continua să post, neluând nimic."
+      "text": "În timp ce ziua se apropia, Pavel i-a rugat pe să ia ceva de mâncare, spunând: Astăzi este a paisprezecea zi în care așteptați și continua să post, neluând nimic."
     },
     {
       "number": 34,
@@ -309,11 +309,11 @@
     },
     {
       "number": 42,
-      "text": "Sfatul soldaților era să - i omoare pe prizonieri, astfel încât nici unul dintre ei să nu înoate și să scape."
+      "text": "Sfatul soldaților era să-i omoare pe prizonieri, astfel încât nici unul dintre ei să nu înoate și să scape."
     },
     {
       "number": 43,
-      "text": "Dar centurionul, dorind să -l salveze pe Pavel, i -a oprit de la scopul lor, și a poruncit ca cei ce puteau să înoate să se arunce mai întîi peste bord, ca să meargă spre țară."
+      "text": "Dar centurionul, dorind să-l salveze pe Pavel, i-a oprit de la scopul lor, și a poruncit ca cei ce puteau să înoate să se arunce mai întâi peste bord, ca să meargă spre țară."
     },
     {
       "number": 44,

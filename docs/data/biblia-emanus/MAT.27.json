@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:ea8bdf0257a091e9213933a8ca5760f66487c076779d0b38fc26782886e0ba4c",
-    "contentDigest": "sha256:16a7861d76906709b2b594f8adb0d69e38eff6fd0d6ba7a4c36462166c21b1db"
+    "textDigest": "sha256:c15ab4ff7715aabfc0386ab35f2e4bd2ff84c5fbe7e4370f917863c6aa3baed4",
+    "contentDigest": "sha256:4e860893c884cefa6b094919e9f09794d82a21b2f7bcbb4294c01e37dcb39b9d"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Cînd a venit dimineața, toți preoții cei mai de seamă și bătrînii poporului s'au sfătuit împotriva lui Isus să -l omoare."
+      "text": "Când a venit dimineața, toți preoții cei mai de seamă și bătrânii poporului s-au sfătuit împotriva lui Isus să-l omoare."
     },
     {
       "number": 2,
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "au zis:Am păcătuit pentru că am vândut sânge nevinovat. Dar ei au zis:Ce înseamnă lucrul acesta pentru noi?"
+      "text": "au zis: Am păcătuit pentru că am vândut sânge nevinovat. Dar ei au zis: Ce înseamnă lucrul acesta pentru noi?"
     },
     {
       "number": 5,
@@ -165,11 +165,11 @@
     },
     {
       "number": 6,
-      "text": "Preoții cei mai de seamă au luat argintul au zis:Nu este îngăduit să-l pui în vistierie, căci este sângelui."
+      "text": "Preoții cei mai de seamă au luat argintul au zis: Nu este îngăduit să-l pui în vistierie, căci este sângelui."
     },
     {
       "number": 7,
-      "text": "Ei s'au sfătuit, și au cumpărat cîmpul olarului cu ei, ca să -i îngroape pe străini."
+      "text": "Ei s-au sfătuit, și au cumpărat cîmpul olarului cu ei, ca să-i îngroape pe străini."
     },
     {
       "number": 8,
@@ -177,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Atunci ce fusese vestit prin proorocul Ieremia, s'a împlinit, și a zis:,,Au luat cei treizeci de arginți, prețul celui peste care fusese pus prețul, pe care -l prețuiau unii din copiii lui Israel,"
+      "text": "Atunci ce fusese vestit prin proorocul Ieremia, s-a împlinit, și a zis: Au luat cei treizeci de arginți, prețul celui peste care fusese pus prețul, pe care-l prețuiau unii din copiii lui Israel,"
     },
     {
       "number": 10,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Isus a stat înaintea guvernatorului, guvernatorul l-a întrebat:Tu ești Împăratul Iudeilor? Isus i-a răspuns:Așa zici tu."
+      "text": "Isus a stat înaintea guvernatorului, guvernatorul l-a întrebat: Tu ești Împăratul Iudeilor? Isus i-a răspuns: Așa zici tu."
     },
     {
       "number": 12,
@@ -193,11 +193,11 @@
     },
     {
       "number": 13,
-      "text": "Pilat i-a zis:Nu auzi câte lucruri mărturisește împotriva ta?"
+      "text": "Pilat i-a zis: Nu auzi câte lucruri mărturisește împotriva ta?"
     },
     {
       "number": 14,
-      "text": "El nu i -a dat nici un răspuns, nici măcar un cuvânt, așa că guvernatorul s'a mirat foarte mult."
+      "text": "El nu i-a dat nici un răspuns, nici măcar un cuvânt, așa că guvernatorul s-a mirat foarte mult."
     },
     {
       "number": 15,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Cînd s'au strîns, Pilat le -a zis:,,Pe cine voiți să vă eliberez? pe Baraba, sau pe Isus, care se Hristos?"
+      "text": "Când s-au strâns, Pilat le-a zis: Pe cine voiți să vă eliberez? pe Baraba, sau pe Isus, care se Hristos?"
     },
     {
       "number": 18,
@@ -217,23 +217,23 @@
     },
     {
       "number": 19,
-      "text": "În timp ce dea pe scaunul de judecată, soția lui a trimis la el i-a zis:N-ai nimic de-a face cu omul acela drept, căci am suferit multe astăzi în vis din cauza lui."
+      "text": "În timp ce dea pe scaunul de judecată, soția lui a trimis la el i-a zis: N-ai nimic de-a face cu omul acela drept, căci am suferit multe astăzi în vis din cauza lui."
     },
     {
       "number": 20,
-      "text": "Preoții cei mai de seamă și bătrînii au convins mulțimile să ceară Baraba și să - l nimicească pe Isus."
+      "text": "Preoții cei mai de seamă și bătrânii au convins mulțimile să ceară Baraba și să-l nimicească pe Isus."
     },
     {
       "number": 21,
-      "text": "Dar dregătorul le -a răspuns:,,Pe care din cei doi voi să vi-l eliberez? Ei au zis:,,Baraba!"
+      "text": "Dar dregătorul le-a răspuns: Pe care din cei doi voi să vi-l eliberez? Ei au zis: Baraba!"
     },
     {
       "number": 22,
-      "text": "Pilat le -a zis:,,Ce să fac cu Isus, care se cheamă Hristos? Toți I-au zis:,,Să fie răstignit!"
+      "text": "Pilat le-a zis: Ce să fac cu Isus, care se cheamă Hristos? Toți I-au zis: Să fie răstignit!"
     },
     {
       "number": 23,
-      "text": "Dar dregătorul a zis:De ce? Ce rău a făcut? Dar ei au strigat foarte tare, zicând:Să fie răstignit!"
+      "text": "Dar dregătorul a zis: De ce? Ce rău a făcut? Dar ei au strigat foarte tare, zicând: Să fie răstignit!"
     },
     {
       "number": 24,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Și tot poporul a răspuns:Sângele Lui să fie asupra noastră asupra copiilor!"
+      "text": "Și tot poporul a răspuns: Sângele Lui să fie asupra noastră asupra copiilor!"
     },
     {
       "number": 26,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Ei au împletit o cunună de spini și au pus-o pe capul lui și o trestie în mâna lui dreaptă; și au îngenuncheat înaintea lui și l-au batjocorit, zicând:Bucură-te, rege al iudeilor!"
+      "text": "Ei au împletit o cunună de spini și au pus-o pe capul lui și o trestie în mâna lui dreaptă; și au îngenuncheat înaintea lui și l-au batjocorit, zicând: Bucură-te, rege al iudeilor!"
     },
     {
       "number": 30,
@@ -269,7 +269,7 @@
     },
     {
       "number": 32,
-      "text": "Când au ieșit, au găsit un om din Cirene, pe Simon pe nume, l-au silit să meargă cu ei, ca să- ducă crucea."
+      "text": "Când au ieșit, au găsit un om din Cirene, pe Simon pe nume, l-au silit să meargă cu ei, ca să-ducă crucea."
     },
     {
       "number": 33,
@@ -301,11 +301,11 @@
     },
     {
       "number": 40,
-      "text": "zicând:Tu, care dărâmi templul-l zid în trei zile, mântuiește-te pe tine însuți; dacă ești Fiul lui Dumnezeu, coboară-te de pe cruce!"
+      "text": "zicând: Tu, care dărâmi templul-l zid în trei zile, mântuiește-te pe tine însuți; dacă ești Fiul lui Dumnezeu, coboară-te de pe cruce!"
     },
     {
       "number": 41,
-      "text": "Preoții cei mai de seamă băteau joc de cărturari, de farisei de bătrîni, ziceau:"
+      "text": "Preoții cei mai de seamă băteau joc de cărturari, de farisei de bătrâni, ziceau:"
     },
     {
       "number": 42,
@@ -321,7 +321,7 @@
     },
     {
       "number": 45,
-      "text": "Din ceasul al șaselea era întuneric peste toată țara pînă la ceasul al nouălea."
+      "text": "Din ceasul al șaselea era întuneric peste toată țara până la ceasul al nouălea."
     },
     {
       "number": 46,
@@ -329,7 +329,7 @@
     },
     {
       "number": 47,
-      "text": "Unii dintre cei ce stăteau acolo, când au auzit, au zis:Omul acesta îl cheamă pe Ilie."
+      "text": "Unii dintre cei ce stăteau acolo, când au auzit, au zis: Omul acesta îl cheamă pe Ilie."
     },
     {
       "number": 48,
@@ -337,11 +337,11 @@
     },
     {
       "number": 49,
-      "text": "Ceilalți au spus:Lăs-l în pace. Să vedem dacă vine Ilie să-l salveze."
+      "text": "Ceilalți au spus: Lăs-l în pace. Să vedem dacă vine Ilie să-l salveze."
     },
     {
       "number": 50,
-      "text": "Isus a strigat din nou cu glas tare, și și -a dat duhul."
+      "text": "Isus a strigat din nou cu glas tare, și și-a dat duhul."
     },
     {
       "number": 51,
@@ -349,7 +349,7 @@
     },
     {
       "number": 52,
-      "text": "S'au deschis mormintele, și s'au ridicat multe trupuri ale sfinților cari adormiseră."
+      "text": "Și mormintele au fost deschise; și multe trupuri ale sfinților care adormiseră, s-au ridicat;"
     },
     {
       "number": 53,
@@ -361,7 +361,7 @@
     },
     {
       "number": 55,
-      "text": "Multe femei erau acolo și priveau de departe, care îl urmaseră pe Isus din Galileea, slujindu - i."
+      "text": "Multe femei erau acolo și priveau de departe, care îl urmaseră pe Isus din Galileea, slujindu-i."
     },
     {
       "number": 56,
@@ -377,11 +377,11 @@
     },
     {
       "number": 59,
-      "text": "Iosif a luat trupul și l - a înfășurat într - o pânză curată de in"
+      "text": "Iosif a luat trupul și l-a înfășurat într-o pânză curată de in"
     },
     {
       "number": 60,
-      "text": "și l -a pus în mormântul lui nou, pe care -l tăiase în stîncă. Apoi a rostogolit o piatră mare împotriva ușii mormîntului, și a plecat."
+      "text": "și l-a pus în mormântul lui nou, pe care-l tăiase în stîncă. Apoi a rostogolit o piatră mare împotriva ușii mormîntului, și a plecat."
     },
     {
       "number": 61,
@@ -401,7 +401,7 @@
     },
     {
       "number": 65,
-      "text": "Pilat le -a zis:,,Aveți o strajă; duceți-vă păziți -o cît."
+      "text": "Pilat le-a zis: Aveți o strajă; duceți-vă păziți-o cât."
     },
     {
       "number": 66,

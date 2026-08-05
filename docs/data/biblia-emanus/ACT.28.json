@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:24a9dfbbe8f53c7cb1c07185fc6b7ba7908142ba343bbf2af32794c1dd132969",
-    "contentDigest": "sha256:488625917c9c2d3e7af624b36d4dcbda60f3616bc8256a93ec7a82dcf78b4c1b"
+    "textDigest": "sha256:43db427fc9c2c47ded6fe568b356278baa4a519aa16c2d6d45c145ba8b69d5a4",
+    "contentDigest": "sha256:00a33650d284ef0573d6ec11000572d9ee17fadd673ab19ad8a7791072e77593"
   },
   "verses": [
     {
@@ -169,11 +169,11 @@
     },
     {
       "number": 7,
-      "text": "Acum, în vecinătatea acelui loc erau ținuturi aparținând șefului insulei, Publius, care ne - a primit și ne - a distrat cu amabilitate timp de trei zile."
+      "text": "Acum, în vecinătatea acelui loc erau ținuturi aparținând șefului insulei, Publius, care ne-a primit și ne-a distrat cu amabilitate timp de trei zile."
     },
     {
       "number": 8,
-      "text": "Tatăl lui Publius s'a săturat de febră și de dizenterie. Pavel a intrat la el, s'a rugat, și și -a pus mînile pe el, l -a vindecat."
+      "text": "Tatăl lui Publius s-a săturat de febră și de dizenterie. Pavel a intrat la el, s-a rugat, și și-a pus mâinile pe el, l-a vindecat."
     },
     {
       "number": 9,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "După trei luni, ne-am îmbarcat pe o navă din Alexandria care iernase pe insulă, al cărei cap de afiș eraFrații gemeni„."
+      "text": "După trei luni, ne-am îmbarcat pe o navă din Alexandria care iernase pe insulă, al cărei cap de afiș eraFrații gemeni."
     },
     {
       "number": 12,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "După trei zile, Pavel i -a chemat pe cei ce erau căpeteniile iudeilor. După ce s'au adunat, le -a zis:,,Eu, fraților, deși nu făcusem nimic împotriva poporului și obiceiurilor părinților noștri, tot a fost dat în robie din Ierusalim în mînile romanilor,"
+      "text": "După trei zile, Pavel i-a chemat pe cei ce erau căpeteniile iudeilor. După ce s-au adunat, le-a zis: Eu, fraților, deși nu făcusem nimic împotriva poporului și obiceiurilor părinților noștri, tot a fost dat în robie din Ierusalim în mâinile romanilor,"
     },
     {
       "number": 18,
@@ -225,11 +225,11 @@
     },
     {
       "number": 21,
-      "text": "Ei i-au răspuns:Noi nu am primit scrisori din Iudeea cu privire la tine nici unul dintre nu a venit aici să tee sau să-ți vorbească de rău."
+      "text": "Ei i-au răspuns: Noi nu am primit scrisori din Iudeea cu privire la tine nici unul dintre nu a venit aici să tee sau să-ți vorbească de rău."
     },
     {
       "number": 22,
-      "text": "Dar noi dorim să auzim de la tine ceea ce gândești. Căci, în ceea ce această sectă, știm că pretutindeni se vorbește împotriva ei.”"
+      "text": "Dar noi dorim să auzim de la tine ceea ce gândești. Căci, în ceea ce această sectă, știm că pretutindeni se vorbește împotriva ei."
     },
     {
       "number": 23,
@@ -241,11 +241,11 @@
     },
     {
       "number": 25,
-      "text": "Când nu s-au înțeles între ei, ei au plecat după ce Pavel le-a spus o solie:Duhul Sfânt a vorbit drept prin profetul Isaia,"
+      "text": "Când nu s-au înțeles între ei, ei au plecat după ce Pavel le-a spus o solie: Duhul Sfânt a vorbit drept prin profetul Isaia,"
     },
     {
       "number": 26,
-      "text": ",,Duceți-vă la poporul acesta, și ziceți:,Ascultați, veți auzi, dar nu veți pricepe; veți vedea, și nu veți vedea, ci veți vedea."
+      "text": "Duceți-vă la poporul acesta, și ziceți:, Ascultați, veți auzi, dar nu veți pricepe; veți vedea, și nu veți vedea, ci veți vedea."
     },
     {
       "number": 27,

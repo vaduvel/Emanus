@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:fbcbbbfb82eec44929c319ff573be8a2be2a936d6e56ff96dd3616c1b1a6df03",
-    "contentDigest": "sha256:ad4025df647cdc4ab84f93170c0120109ac5d0b8baea0dae1d6e5aece9bcd477"
+    "textDigest": "sha256:2c429a0076608341f39c297f0b3dce61db58af9527b34fed405acd870008a547",
+    "contentDigest": "sha256:702e2019ccde7f74dbf90f1b953563d24f2991486ee513b0f06ad31acf219489"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Voi sunteți din Dumnezeu, copilașilor, și i-ați biruit, pentru că mai mare este Cel ce este în voi decît cel ce este în lume."
+      "text": "Voi sunteți din Dumnezeu, copilașilor, și i-ați biruit, pentru că mai mare este Cel ce este în voi decât cel ce este în lume."
     },
     {
       "number": 5,
@@ -221,11 +221,11 @@
     },
     {
       "number": 20,
-      "text": "Dacă un om zice:Eu iubesc pe Dumnezeu„, urăște pe fratele său, este un mincinos; căci cine nu iubește pe fratele său, pe care l-a văzut, cum poate să iubească pe Dumnezeu, pe Care nu L-a văzut?"
+      "text": "Dacă un om zice: Eu iubesc pe Dumnezeu„, urăște pe fratele său, este un mincinos; căci cine nu iubește pe fratele său, pe care l-a văzut, cum poate să iubească pe Dumnezeu, pe Care nu L-a văzut?"
     },
     {
       "number": 21,
-      "text": "Avem de la El această poruncă, ca cel ce -L iubește pe Dumnezeu să -L iubească și pe fratele său.”"
+      "text": "Avem de la El această poruncă, ca cel ce-L iubește pe Dumnezeu să-L iubească și pe fratele său.”"
     }
   ],
   "editorialNotes": [],

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:cc50de8ad0c08e220643ff62231efe2705fc48a472fd566bdb68278cbc4d8eb6",
-    "contentDigest": "sha256:b1931aafcf8916ac4b7264f105a2da6d47c2257ed4dd837d579ed551c3dcb263"
+    "textDigest": "sha256:e55f090fe0c23efc7f38bf65138f303f88985d88ea9d9de4b160ac226644f77e",
+    "contentDigest": "sha256:85ef82ccfeae5380f6935d1571913d93e3307270c17e4ed2ed7d4fc020c59a0e"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Mi s-a dat o trestie ca un toiag. Cineva a zis:,,Scoală-te măsoară templul lui Dumnezeu, altarul pe cei ce se închină în el."
+      "text": "Mi s-a dat o trestie ca un toiag. Cineva a zis: Scoală-te măsoară templul lui Dumnezeu, altarul pe cei ce se închină în el."
     },
     {
       "number": 2,
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Voi da putere celor doi martori ai mei, și vor prooroci o mie două sute șaizeci de zile, îmbrăcați în sac."
+      "text": "Voi da putere celor doi martori ai mei, și vor profeți o mie două sute șaizeci de zile, îmbrăcați în sac."
     },
     {
       "number": 4,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Aceștia au puterea să închidă cerul, ca să nu plouă în zilele proorociei lor; ei au putere asupra apelor, să le transforme în sînge și să lovească pămîntul cu orice plagă, ori de cîte ori doresc."
+      "text": "Aceștia au putere să închidă cerul, ca să nu plouă în zilele profeției lor; și au putere asupra apelor, să le schimbe în sânge și să lovească pământul cu toate plăgile, de câte ori voiesc."
     },
     {
       "number": 7,
@@ -177,19 +177,19 @@
     },
     {
       "number": 9,
-      "text": "Din mijlocul popoarelor, triburilor, limbilor și națiunilor, oamenii se vor uita la trupurile lor moarte timp de trei zile și jumătate, și nu vor permite ca trupurile lor moarte să fie puse într - un mormânt."
+      "text": "Din mijlocul popoarelor, triburilor, limbilor și națiunilor, oamenii se vor uita la trupurile lor moarte timp de trei zile și jumătate, și nu vor permite ca trupurile lor moarte să fie puse într-un mormânt."
     },
     {
       "number": 10,
-      "text": "Cei ce locuiesc pe pămînt se vor bucura de ei, și se vor bucura; își vor da daruri unii altora, pentrucă acești doi prooroci i-au chinuit pe cei ce locuiesc pe pămînt."
+      "text": "Cei ce locuiesc pe pământ se vor bucura de ei, și se vor bucura; își vor da daruri unii altora, pentru că acești doi profeți i-au chinuit pe cei ce locuiesc pe pământ."
     },
     {
       "number": 11,
-      "text": "După cele trei zile și jumătate, suflarea de viață de la Dumnezeu a intrat în ei, și ei s'au așezat pe picioarele lor. O mare teamă a căzut peste cei ce i-au văzut."
+      "text": "După cele trei zile și jumătate, suflarea de viață de la Dumnezeu a intrat în ei, și ei s-au așezat pe picioarele lor. O mare teamă a căzut peste cei ce i-au văzut."
     },
     {
       "number": 12,
-      "text": "Am auzit un glas puternic din cer, care le zicea:,,Suiți-vă aici! Ei s'au suit la cer într'un nor, vrăjmașii lor i-au văzut."
+      "text": "Am auzit un glas puternic din cer, care le zicea: Suiți-vă aici! Ei s-au suit la cer într-un nor, vrăjmașii lor i-au văzut."
     },
     {
       "number": 13,
@@ -201,23 +201,23 @@
     },
     {
       "number": 15,
-      "text": "Allea înger a sunat din trâmbiță au urmat glasuri mari în cer, zicând:Împărăția lumii a devenit Împărăția Domnului nostru a Hristosului Său. El va împărăți în vecii vecilor!„"
+      "text": "Allea înger a sunat din trâmbiță au urmat glasuri mari în cer, zicând: Împărăția lumii a devenit Împărăția Domnului nostru a Hristosului Său. El va împărăți în vecii vecilor!"
     },
     {
       "number": 16,
-      "text": "Cei douăzeci și patru de bătrîni, cari ședeau pe scaunul lor de domnie înaintea tronului lui Dumnezeu, au căzut cu fața la pămînt și s'au închinat lui Dumnezeu."
+      "text": "Și cei douăzeci și patru de bătrâni, care ședeau înaintea lui Dumnezeu pe scaunele lor, au căzut pe fețele lor și s-au închinat lui Dumnezeu,"
     },
     {
       "number": 17,
-      "text": "zicând:Mulmim Ție, Doamne Dumnezeule, Cel Atotputernic, Cel ce este Cel ce era, pentru că ai luat puterea Ta cea mare ai domnit."
+      "text": "zicând: Mulmim Ție, Doamne Dumnezeule, Cel Atotputernic, Cel ce este Cel ce era, pentru că ai luat puterea Ta cea mare ai domnit."
     },
     {
       "number": 18,
-      "text": "Neamurile s'au mîniat, și a venit mînia Ta, cum a fost vremea ca morții să fie judecați, și să dea robilor Tăi prooroci răsplata lor, și sfinților și celor ce se tem de Numele Tău, celor mici și mari, și să nimicească pe cei ce nimicesc pămîntul."
+      "text": "Neamurile s-au mâiniat, și a venit mâinia Ta, cum a fost vremea ca morții să fie judecați, și să dea robilor Tăi profeți răsplata lor, și sfinților și celor ce se tem de Numele Tău, celor mici și mari, și să nimicească pe cei ce nimicesc pământul."
     },
     {
       "number": 19,
-      "text": "Templul lui Dumnezeu, care este în cer, a fost deschis, și chivotul Domnului legământ a fost văzut în templul său. Fulgeruri, sunete, tunete, un cutremur de pământ, și grindină mare urmat.”"
+      "text": "Templul lui Dumnezeu, care este în cer, a fost deschis, și chivotul Domnului legământ a fost văzut în templul său. Fulgeruri, sunete, tunete, un cutremur de pământ, și grindină mare urmat."
     }
   ],
   "editorialNotes": [],

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "copyrightDistance": "approved",
     "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:7b2bd3cae2b0475bfef9259e3989ee1ea5d01a31c2a1dba001d1c6bde0172cba",
-    "contentDigest": "sha256:df7d75b555e2ed16c88c68e43f1a6a4ed5e3e36657fe13ed1d2dd3899a5f1682"
+    "textDigest": "sha256:9b9e92c2e241d724b700bc939dc99da85e071d12d414c23e236e148e57b38600",
+    "contentDigest": "sha256:aa04a83e3c9862acdf9e67666d884c1f37a3ee40049d3a38b731a1594b8f9ae2"
   },
   "verses": [
     {
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "El v'a chemat prin Evanghelia noastră, ca să capete slava Domnului nostru Isus Hristos."
+      "text": "El v-a chemat prin Evanghelia noastră, ca să capete slava Domnului nostru Isus Hristos."
     },
     {
       "number": 15,

@@ -28,12 +28,12 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:92a25171de572a88ca35c11d3cc86a593fbde7e1ea0093245ce915c4b6185258",
-    "contentDigest": "sha256:ae4e29249ce90bf8cde8dfb9671de784db9e757d7354ed36df5c96434b1d60d0"
+    "textDigest": "sha256:e2d4e01179160b318ac168d0b9c2ceb34d99f7acddcd631f7490f1a9485526ce",
+    "contentDigest": "sha256:89d12447b7994f348efe9f35c95fc78fcb100f781b22c6e085dba4613b576689"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Căci va veni vremea cînd nu vor asculta de învățătura sănătoasă, ci vor avea urechi pline de mâncărime, vor strînge pentru ei învățători, după poftele lor,"
+      "text": "Căci va veni vremea când nu vor asculta de învățătura sănătoasă, ci vor avea urechi pline de mâncărime, vor strânge pentru ei învățători, după poftele lor,"
     },
     {
       "number": 4,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "De acum înainte, cununa neprihănirii este păstrată pentru mine, pe care Domnul, judecătorul cel drept, mi -o va da în ziua aceea; și nu numai mie, ci și tuturor celor ce iubesc înfățișarea Lui."
+      "text": "De acum înainte, cununa neprihănirii este păstrată pentru mine, pe care Domnul, judecătorul cel drept, mi-o va da în ziua aceea; și nu numai mie, ci și tuturor celor ce iubesc înfățișarea Lui."
     },
     {
       "number": 9,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Alexandru, arămarul, mi -a făcut mult rău, Domnul îi va răsplăti după faptele lui."
+      "text": "Alexandru, arămarul, mi-a făcut mult rău, Domnul îi va răsplăti după faptele lui."
     },
     {
       "number": 15,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Dar Domnul a stat lîngă mine și m'a întărit, ca prin mine să se vestească pe deplin mesajul, și ca toți Neamurile să audă. Astfel, am fost izbăvit din gura leului."
+      "text": "Dar Domnul a stat lîngă mine și m-a întărit, ca prin mine să se vestească pe deplin mesajul, și ca toți Neamurile să audă. Astfel, am fost izbăvit din gura leului."
     },
     {
       "number": 18,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:2e76940eabf2fe23fff3e5c08ad92b8c9a18afe250bc6f6e6150606da53d1c67",
-    "contentDigest": "sha256:7de22442a458f3eda3c810ddfb27a6acbb8f38f2f21799e00b52dccff08b0421"
+    "textDigest": "sha256:63f377a8fb16d3a8dd18225ef820c29bec037a62190fd13a9b596d8218d4d6b8",
+    "contentDigest": "sha256:3cea8d9c3ee1c0fc32af0e408abc27290cc4c08f075dd3df4fdc0593bcbb405a"
   },
   "verses": [
     {
@@ -175,7 +175,7 @@
     },
     {
       "number": 7,
-      "text": "Daca ramai in mine, si cuvintele mele raman in tine, vei intreba tot ce doresti, si se va face pentru tine."
+      "text": "Dacă rămâneți în mine și cuvintele mele trăiesc în voi, cereți orice doriți și vi se va face."
     },
     {
       "number": 8,
@@ -227,7 +227,7 @@
     },
     {
       "number": 20,
-      "text": "Amintiti-va cuvantul pe care ti l-am spus:? Un servitor nu este mai mare decat stapanul sau.? Daca m-au persecutat, ei te vor persecuta si pe tine. Daca se tin de cuvantul meu, ei se vor tine si de al tau."
+      "text": "Amintiți-vă cuvântul pe care eu vi l-am spus: Robul nu este mai mare decât domnul său. Dacă m-au persecutat pe mine și pe voi vă vor persecuta; dacă au ținut cuvântul meu și pe al vostru îl vor ține."
     },
     {
       "number": 21,
@@ -247,7 +247,7 @@
     },
     {
       "number": 25,
-      "text": "Dar aceasta s-a întâmplat ca să se împlinească cuvântul care era scris în legea lor:M-au urât fără temei„."
+      "text": "Dar aceasta s-a întâmplat ca să se împlinească cuvântul care era scris în legea lor: M-au urât fără temei„."
     },
     {
       "number": 26,

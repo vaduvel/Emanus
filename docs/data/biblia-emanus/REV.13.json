@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,17 +139,17 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:57ffb4c81cca609f409baca5ed2c8a68d346a4be01cd72a58c49cc33c9c2e811",
-    "contentDigest": "sha256:4281d01e2a7c1a44e230f17af6d26d229fdeca7ef7812c94f171a6fb87897592"
+    "textDigest": "sha256:28e6b4c7767e9020bea15593fbd30c7a08daeb19be90dfd1836ed581e07a99b7",
+    "contentDigest": "sha256:39b4d6253ad84c748af4d79b25c049d3111bb44ce7a8f7c599f3cff290ea3717"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Apoi m'am așezat pe nisipul mării. Am văzut o fiară ieșind din mare, cu zece coarne și șapte capete. Pe coarnele lui erau zece coroane și pe capetele lui nume blasfematoare."
+      "text": "Apoi m-am așezat pe nisipul mării. Am văzut o fiară ieșind din mare, cu zece coarne și șapte capete. Pe coarnele lui erau zece coroane și pe capetele lui nume blasfematoare."
     },
     {
       "number": 2,
-      "text": "Bestia pe care am văzut -o era ca un leopard, și picioarele lui erau ca cele ale unui urs, și gura lui ca gura unui leu. Dragonul i -a dat puterea lui, scaunul lui de domnie și mare autoritate."
+      "text": "Bestia pe care am văzut-o era ca un leopard, și picioarele lui erau ca cele ale unui urs, și gura lui ca gura unui leu. Dragonul i-a dat puterea lui, scaunul lui de domnie și mare autoritate."
     },
     {
       "number": 3,
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Ei s'au închinat balaurului, pentrucă El a dat fiarei puterea Lui; și s'au închinat fiarei, zicînd:,,Cine este ca fiara? Cine poate să facă război cu el? „"
+      "text": "Ei s-au închinat balaurului, pentru că El a dat fiarei puterea Lui; și s-au închinat fiarei, zicând: Cine este ca fiara? Cine poate să facă război cu el?"
     },
     {
       "number": 5,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "El și -a deschis gura pentru blasfemie împotriva lui Dumnezeu, pentru a blasfemia Numele Lui, locuința Lui și pe cei ce locuiesc în cer."
+      "text": "El și-a deschis gura pentru blasfemie împotriva lui Dumnezeu, pentru a blasfemia Numele Lui, locuința Lui și pe cei ce locuiesc în cer."
     },
     {
       "number": 7,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Aici este înțelepciunea. Cine are pricepere, să calculeze numărul fiarei, căci este numărul unui om. Numărul lui este șase sute șaizeci și șase.”"
+      "text": "Aici este înțelepciunea. Cine are pricepere, să calculeze numărul fiarei, căci este numărul unui om. Numărul lui este șase sute șaizeci și șase."
     }
   ],
   "editorialNotes": [

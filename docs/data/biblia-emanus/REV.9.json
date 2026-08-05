@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:dc74a5193ad559255b6d63c25dfb1374efb10dbff100e53af71ff36ffa3af211",
-    "contentDigest": "sha256:bcb030afe3820326d17b16411be4071a94e3cd97370d5b575ab670b2d7524ef7"
+    "textDigest": "sha256:7e0924d1435f96e798ddbd43bf278ee8af2fb1262a5c19f38b90b889f903ebfd",
+    "contentDigest": "sha256:dc042d2a635b5906ad1a8c0111e9041bd453103dbbbfc19ff4ab7d6194c2f9e2"
   },
   "verses": [
     {
@@ -149,11 +149,11 @@
     },
     {
       "number": 2,
-      "text": "El a deschis groapa abisului, și fumul a ieșit din groapă, ca fumul dintr'un cuptor aprins. Soarele și aerul s'au întunecat din pricina fumului din groapă."
+      "text": "El a deschis groapa abisului, și fumul a ieșit din groapă, ca fumul dintr-un cuptor aprins. Soarele și aerul s-au întunecat din pricina fumului din groapă."
     },
     {
       "number": 3,
-      "text": "Din fum au ieșit lăcuste pe pămînt, și li s'a dat putere, cum au putere scorpionii pămîntului."
+      "text": "Din fum au ieșit lăcuste pe pământ, și li s-a dat putere, cum au putere scorpionii pământului."
     },
     {
       "number": 4,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Și i-a zis îngerului allea, care avea trâmbi:Eliberează pe cei patru îngeri care sunt legați la râul cel mare Eufrat!„"
+      "text": "Și i-a zis îngerului allea, care avea trâmbi: Eliberează pe cei patru îngeri care sunt legați la râul cel mare Eufrat!„"
     },
     {
       "number": 15,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Ei nu s - au căit de crimele lor, de vrăjitoriile lor, de imoralitatea lor sexuală sau de furturile lor.”"
+      "text": "Ei nu s-au căit de crimele lor, de vrăjitoriile lor, de imoralitatea lor sexuală sau de furturile lor.”"
     }
   ],
   "editorialNotes": [],

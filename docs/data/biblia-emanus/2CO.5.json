@@ -30,10 +30,10 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "omissionAddition": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:c1f331c37a25199c7163365ea9b3144cfeb9a08031ad6bb28fb04a0a1f530ccb",
-    "contentDigest": "sha256:22dc5c34c50b24334fec2445e82252beebcb300aa622315308242b60ba12856d"
+    "textDigest": "sha256:56ba7446cfa016d48546f330ece11715e7e9cf7f4b8e2586ec3e1b7fb6fc4caf",
+    "contentDigest": "sha256:02d67b33ce76bce7a858ad61abd4f628069bc5e37a5208637a22712ee6994441"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Cel ce ne -a făcut pentru lucrul acesta, este Dumnezeu, care ne -a dat și plata Duhului."
+      "text": "Cel ce ne-a făcut pentru lucrul acesta, este Dumnezeu, care ne-a dat și plata Duhului."
     },
     {
       "number": 6,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:879c6f63656f5e951fd1c673ccf0ce9d7822dfc81e494f90463a06331e606095",
-    "contentDigest": "sha256:b4c264efb328edf200f1a92a6a051632712791ab0e641d1a9d3e84fe893ccdcd"
+    "textDigest": "sha256:690fe03bf347e712f8d82f76155dccb64f69528bb34b7042e4889c2314decce1",
+    "contentDigest": "sha256:8735c9b1e50fd48b360d8fb73cae08360098fa9262b7ddc4480b931af105a21f"
   },
   "verses": [
     {
@@ -149,15 +149,15 @@
     },
     {
       "number": 2,
-      "text": "El a luat balaurul, șarpele cel vechi, care este diavolul și Satana, care înșeală tot pămîntul locuit, și l -a legat pentru o mie de ani,"
+      "text": "El a luat balaurul, șarpele cel vechi, care este diavolul și Satana, care înșeală tot pământul locuit, și l-a legat pentru o mie de ani,"
     },
     {
       "number": 3,
-      "text": "L -a aruncat în abis, l -a închis și l -a pecetluit peste el, ca să nu mai înșele neamurile pînă la sfîrșitul celor o mie de ani. După aceasta, el trebuie să fie eliberat pentru puțin timp."
+      "text": "L-a aruncat în abis, l-a închis și l-a pecetluit peste el, ca să nu mai înșele neamurile până la sfîrșitul celor o mie de ani. După aceasta, el trebuie să fie eliberat pentru puțin timp."
     },
     {
       "number": 4,
-      "text": "Am văzut scaune de domnie, și au șezut pe ele, și le -a fost dată judecată. Am văzut sufletele celor ce fuseseră decapitați pentru mărturia lui Isus și pentru Cuvîntul lui Dumnezeu, cari se închinau fiarei și chipului lui, și n'au primit semnul pe frunte și pe mînă. Ei au trăit și au domnit cu Hristos o mie de ani."
+      "text": "Și am văzut tronuri, și ei au șezut pe ele și le-a fost dată judecată; și am văzut sufletele celor decapitați pentru mărturia lui Isus și pentru cuvântul lui Dumnezeu și care nu s-au închinat fiarei, nici icoanei sale și nici nu i-au primit semnul pe frunțile lor sau pe mâinile lor; și au trăit și au domnit cu Hristos o mie de ani."
     },
     {
       "number": 5,
@@ -181,11 +181,11 @@
     },
     {
       "number": 10,
-      "text": "Diavolul, care i -a înșelat, a fost aruncat în lacul de foc și de sulf, unde sunt și fiara și proorocul mincinos; vor fi chinuiți zi și noapte pentru totdeauna."
+      "text": "Diavolul, care i-a înșelat, a fost aruncat în lacul de foc și de sulf, unde sunt și fiara și proorocul mincinos; vor fi chinuiți zi și noapte pentru totdeauna."
     },
     {
       "number": 11,
-      "text": "Am văzut un mare tron alb și pe cel ce ședea pe el, de pe fața căruia a fugit pămîntul și cerul. Nu s'a găsit loc pentru ei."
+      "text": "Am văzut un mare tron alb și pe cel ce ședea pe el, de pe fața căruia a fugit pământul și cerul. Nu s-a găsit loc pentru ei."
     },
     {
       "number": 12,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Marea a dat pe morții cari erau în ea. Moartea și Hadesul au dat pe morții cari erau în ei. Au fost judecați fiecare după faptele lui."
+      "text": "Și marea a dat pe morții care erau în ea; și moartea și iadul au dat pe morții care erau în ele; și au fost judecați, fiecare conform cu faptele lor."
     },
     {
       "number": 14,

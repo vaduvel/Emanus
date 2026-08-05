@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:c388985a6a9fde0d53643f2174ae54cc4b8cdb74f4fc51e2458f6a54aecf2f9d",
-    "contentDigest": "sha256:5b1e013e08862a00ea811059b4fbd56afbb88a24b01a0a55db7a6d3b2746e498"
+    "textDigest": "sha256:a9cf92b28c4d610531e2b9413b4d9b405ac5d92d39c3bb8c2827a84c2fbb7f7c",
+    "contentDigest": "sha256:fb3636c4798c62b3d0a062035f6482941e99b03b7e26c06117a529d93a411d51"
   },
   "verses": [
     {
@@ -149,19 +149,19 @@
     },
     {
       "number": 2,
-      "text": "Ei au început să -L acuze, și au zis:,,Noi am găsit pe acest om care pervertește poporul, interzicînd să plătească impozite Cezarului, și spunînd că El însuși este Hristos, un împărat."
+      "text": "Ei au început să-L acuze, și au zis:„ Noi am găsit pe acest om care pervertește poporul, interzicând să plătească impozite Cezarului, și spunînd că El însuși este Hristos, un împărat."
     },
     {
       "number": 3,
-      "text": "Pilat l-a întrebat:Tu ești Împăratul Iudeilor? El i-a răspuns:Așa zici tu."
+      "text": "Pilat l-a întrebat: Tu ești Împăratul Iudeilor? El i-a răspuns: Așa zici tu."
     },
     {
       "number": 4,
-      "text": "Pilat le-a zis preoților celor mai de seamămilor:Nu găsesc nici o bază pentru o acuzație împotriva acestui om."
+      "text": "Pilat le-a zis preoților celor mai de seamămilor: Nu găsesc nici o bază pentru o acuzație împotriva acestui om."
     },
     {
       "number": 5,
-      "text": "Dar ei au insistat, spunând:?El stârnește poporul, învățând în toată Iudeea, începând din Galileea până în acest loc."
+      "text": "Dar erau și mai insistenți, spunând: Întărâtă poporul, învățând prin toată Iudeea, începând din Galileea, până în acest loc."
     },
     {
       "number": 6,
@@ -169,11 +169,11 @@
     },
     {
       "number": 7,
-      "text": "Cînd a aflat că era sub jurisdicția lui Irod, l - a trimis la Irod, care era și el în Ierusalim în acele zile."
+      "text": "Când a aflat că era sub jurisdicția lui Irod, l-a trimis la Irod, care era și el în Ierusalim în acele zile."
     },
     {
       "number": 8,
-      "text": "Cînd l -a văzut Irod pe Isus, s'a bucurat nespus, căci voia să -l vadă de multă vreme, pentrucă auzise multe lucruri despre el. Spera să vadă vreo minune făcută de el."
+      "text": "Când l-a văzut Irod pe Isus, s-a bucurat nespus, căci voia să-l vadă de multă vreme, pentru că auzise multe lucruri despre el. Spera să vadă vreo minune făcută de el."
     },
     {
       "number": 9,
@@ -181,15 +181,15 @@
     },
     {
       "number": 10,
-      "text": "Preoții cei mai de seamă și cărturarii stăteau în picioare, acuzîndu - l cu vehemență."
+      "text": "Preoții cei mai de seamă și cărturarii stăteau în picioare, acuzîndu-l cu vehemență."
     },
     {
       "number": 11,
-      "text": "Irod, împreună cu soldații săi, l -a umilit și și -a bătut joc de el. L -au îmbrăcat în haine de lux, și l -au trimis înapoi la Pilat."
+      "text": "Irod, împreună cu soldații săi, l-a umilit și și-a bătut joc de el. L-au îmbrăcat în haine de lux, și l-au trimis înapoi la Pilat."
     },
     {
       "number": 12,
-      "text": "Irod și Pilat s'au împrietenit chiar în ziua aceea, căci înainte erau vrăjmași unii cu alții."
+      "text": "Irod și Pilat s-au împrietenit chiar în ziua aceea, căci înainte erau vrăjmași unii cu alții."
     },
     {
       "number": 13,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "le-a zis:Mi l- adus pe omul acesta ca pe unul care pervertește poporul; iată, după ce l-am cercetat înaintea voastră, n-am găsit nici un temei pentru o acuzație împotriva acestui om cu privire la lucrurile de care îl învinuiți."
+      "text": "le-a zis: Mi l-adus pe omul acesta ca pe unul care pervertește poporul; iată, după ce l-am cercetat înaintea voastră, n-am găsit nici un temei pentru o acuzație împotriva acestui om cu privire la lucrurile de care îl învinuiți."
     },
     {
       "number": 15,
@@ -209,7 +209,7 @@
     },
     {
       "number": 18,
-      "text": "Dar toți strigau împreună, zicând:Pleacă cu omul acesta! Eliberează-ne pe Baraba!"
+      "text": "Dar toți strigau împreună, zicând: Pleacă cu omul acesta! Eliberează-ne pe Baraba!"
     },
     {
       "number": 19,
@@ -217,15 +217,15 @@
     },
     {
       "number": 20,
-      "text": "Pilat le -a vorbit din nou, dorind să -L elibereze pe Isus,"
+      "text": "Pilat le-a vorbit din nou, dorind să-L elibereze pe Isus,"
     },
     {
       "number": 21,
-      "text": "Dar ei strigau, zicând:Răstignește-L, răstignește-L!"
+      "text": "Dar ei strigau, zicând: Răstignește-L, răstignește-L!"
     },
     {
       "number": 22,
-      "text": "El le-a zis a treia oară:De ce? Ce rău a făcut omul acesta? Nu am găsit în el nici o nelegiuire capitală. De aceea îl voi pedepsi-l voi elibera."
+      "text": "El le-a zis a treia oară: De ce? Ce rău a făcut omul acesta? Nu am găsit în el nici o nelegiuire capitală. De aceea îl voi pedepsi-l voi elibera."
     },
     {
       "number": 23,
@@ -237,11 +237,11 @@
     },
     {
       "number": 25,
-      "text": "El l - a eliberat pe cel care fusese aruncat în închisoare pentru insurecție și crimă, pentru care au cerut - o, dar l - a dat pe Isus la voia lor."
+      "text": "El l-a eliberat pe cel care fusese aruncat în închisoare pentru insurecție și crimă, pentru care au cerut-o, dar l-a dat pe Isus la voia lor."
     },
     {
       "number": 26,
-      "text": "Cînd l-au izgonit, au luat pe Simon din Cirene, venind din țară, și au pus crucea peste el ca s'o ducă după Isus."
+      "text": "Când l-au izgonit, au luat pe Simon din Cirene, venind din țară, și au pus crucea peste el ca s-o ducă după Isus."
     },
     {
       "number": 27,
@@ -249,11 +249,11 @@
     },
     {
       "number": 28,
-      "text": "Isus, întorcându-se către ei, le-a zis:Fiice ale Ierusalimului, nu mă plângeți pe mine, ci plângeți-vă pe voi înșivă pe copiii voștri."
+      "text": "Isus, întorcându-se către ei, le-a zis: Fiice ale Ierusalimului, nu mă plângeți pe mine, ci plângeți-vă pe voi înșivă pe copiii voștri."
     },
     {
       "number": 29,
-      "text": "Pentru că iată, zilele vin în care ei vor spune,? Binecuvântați sunt sterpe, uterele care nu au purtat, și sânii care nu au alăptat."
+      "text": "Pentru că iată, vin zilele în care vor spune: Binecuvântate sunt cele sterpe și pântecele care nu au născut și sânii care nu au alăptat."
     },
     {
       "number": 30,
@@ -273,11 +273,11 @@
     },
     {
       "number": 34,
-      "text": "Isus a zis:Tată, iartă-i, căci nu știu ce fac. Împărțindu- hainele între ei, ei au tras la sorți."
+      "text": "Isus a zis: Tată, iartă-i, căci nu știu ce fac. Împărțindu-hainele între ei, ei au tras la sorți."
     },
     {
       "number": 35,
-      "text": "Poporul stătea privea. Conducătorii împreună cu ei băteau joc de El, zicând:Pe i-a mântuit; să se mântuiască pe sine, dacă acesta este Hristosul lui Dumnezeu, alesul Lui!"
+      "text": "Poporul stătea privea. Conducătorii împreună cu ei băteau joc de El, zicând: Pe i-a mântuit; să se mântuiască pe sine, dacă acesta este Hristosul lui Dumnezeu, alesul Lui!"
     },
     {
       "number": 36,
@@ -285,19 +285,19 @@
     },
     {
       "number": 37,
-      "text": "spunând:Dacă tu ești regele iudeilor, salvează-te pe tine însuți!"
+      "text": "spunând: Dacă tu ești regele iudeilor, salvează-te pe tine însuți!"
     },
     {
       "number": 38,
-      "text": "Deasupra lui era scrisă o inscrip cu litere, latine ebraice:Acesta este regele iudeilor."
+      "text": "Deasupra lui era scrisă o inscrip cu litere, latine ebraice: Acesta este regele iudeilor."
     },
     {
       "number": 39,
-      "text": "Unul dintre criminalii care a fost spânzurat l-a insultat, spunând:Dacă tu Hristosul, salvează-te pe tine și pe noi!"
+      "text": "Unul dintre criminalii care a fost spânzurat l-a insultat, spunând: Dacă tu Hristosul, salvează-te pe tine și pe noi!"
     },
     {
       "number": 40,
-      "text": "Dar celălalt a răspuns, mustrându-l, i-a zis:Nu te temi tu de Dumnezeu, pentru că tu ești sub condamnare?"
+      "text": "Dar celălalt a răspuns, mustrându-l, i-a zis: Nu te temi tu de Dumnezeu, pentru că tu ești sub condamnare?"
     },
     {
       "number": 41,
@@ -305,23 +305,23 @@
     },
     {
       "number": 42,
-      "text": "El i-a spus lui Isus:Doamne, adu-Ți aminte de mine când vei veni în Împărăția Ta!"
+      "text": "El i-a spus lui Isus: Doamne, adu-Ți aminte de mine când vei veni în Împărăția Ta!"
     },
     {
       "number": 43,
-      "text": "Isus i-a zis:Adevărat îți spun că astăzi vei fi cu Mine în Paradis."
+      "text": "Isus i-a zis: Adevărat îți spun că astăzi vei fi cu Mine în Paradis."
     },
     {
       "number": 44,
-      "text": "Era acum pe la ceasul al șaselea, și pînă la ceasul al nouălea, a trecut peste toată țara."
+      "text": "Era acum pe la ceasul al șaselea, și până la ceasul al nouălea, a trecut peste toată țara."
     },
     {
       "number": 45,
-      "text": "Soarele s'a întunecat, și vălul Templului s'a rupt în două."
+      "text": "Soarele s-a întunecat, și vălul Templului s-a rupt în două."
     },
     {
       "number": 46,
-      "text": "Isus, strigând cu glas tare, a zis:Tată, în mâinile Tale îmi încrediz duhul! După ce a spus aceste cuvinte,-a dat ultima suflare."
+      "text": "Isus, strigând cu glas tare, a zis: Tată, în mâinile Tale îmi încrediz duhul! După ce a spus aceste cuvinte,-a dat ultima suflare."
     },
     {
       "number": 47,
@@ -329,11 +329,11 @@
     },
     {
       "number": 48,
-      "text": "Toți noroadele care s'au adunat să vadă lucrul acesta, cînd au văzut ce s'a făcut, s'au întors acasă, bătîndu-și pieptul."
+      "text": "Toți noroadele care s-au adunat să vadă lucrul acesta, când au văzut ce s-a făcut, s-au întors acasă, bătîndu-și pieptul."
     },
     {
       "number": 49,
-      "text": "Toate cunoștințele lui și femeile care l - au urmat din Galileea stăteau la distanță, urmărind aceste lucruri."
+      "text": "Toate cunoștințele lui și femeile care l-au urmat din Galileea stăteau la distanță, urmărind aceste lucruri."
     },
     {
       "number": 50,
@@ -345,7 +345,7 @@
     },
     {
       "number": 52,
-      "text": "Omul acesta s'a dus la Pilat, și a cerut trupul lui Isus."
+      "text": "Omul acesta s-a dus la Pilat, și a cerut trupul lui Isus."
     },
     {
       "number": 53,
@@ -361,7 +361,7 @@
     },
     {
       "number": 56,
-      "text": "Ei s'au întors, au pregătit mirodenii și miresme, și s'au odihnit în ziua Sabatului, după poruncă."
+      "text": "Ei s-au întors, au pregătit mirodenii și miresme, și s-au odihnit în ziua Sabatului, după poruncă.”"
     }
   ],
   "editorialNotes": [

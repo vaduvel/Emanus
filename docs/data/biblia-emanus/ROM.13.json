@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:d0502f0064dfdfe6646cd0f8af79a89932a96fccc3cf98201577377903a856d2",
-    "contentDigest": "sha256:3d324824dfc6395cf144682bcf8c20c6a891c22d89b29ded971730aec5c73b19"
+    "textDigest": "sha256:f6faa18ce15b5349acac8e2e7e4f08c30dd4023d71eaa9bcc4700d8ecc1d6766",
+    "contentDigest": "sha256:2df68070b504393465b63f1d95efd504aaa12077988c7794dc761c73a1923907"
   },
   "verses": [
     {
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Nu datorați nimănui nimic decît să vă iubiți unii pe alții, căci cine iubește pe aproapele său a împlinit Legea."
+      "text": "Nu datorați nimănui nimic decât să vă iubiți unii pe alții, căci cine iubește pe aproapele său a împlinit Legea."
     },
     {
       "number": 9,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Noaptea s'a dus de departe, și ziua este aproape. Să nimicească, așadar, faptele întunericului, și să se îmbrace cu armura luminii."
+      "text": "Noaptea s-a dus de departe, și ziua este aproape. Să nimicească, așadar, faptele întunericului, și să se îmbrace cu armura luminii."
     },
     {
       "number": 13,

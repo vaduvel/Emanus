@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:21af476035b37c30635928b82fbb8768f4d4a032b073eb16c0fc4968d68bf545",
-    "contentDigest": "sha256:7715fe5868b465eca4d69d9028e41365a8773d8960fedb61a31d57cd435a50c2"
+    "textDigest": "sha256:35f8b7fe32e52f318476d0884c8f07c99e01ed12db6c85fb98b72212bf01d7f5",
+    "contentDigest": "sha256:d0d9721d5cd1e43ddf88c45a4dd36e65e7ea9032959b6bafab8c9f075b8d04e8"
   },
   "verses": [
     {
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Pentru Hristosi falsi si profetii falsi se vor ridica, si vor arata semne mari si minuni, astfel incat sa duca in eroare, daca este posibil, chiar si pe cei alesi."
+      "text": "Căci se vor ridica hristoși falși și profeți falși; ei vor face semne mari și minuni, ca să-i rătăcească, dacă ar fi posibil, chiar și pe cei aleși."
     },
     {
       "number": 25,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "De aceea, dacă ei vă spun:Iată, El este în pustie”, să nu ieșiți; sauIată, El este în odăile dinăuntru„, să nu credeți."
+      "text": "De aceea, dacă ei vă spun: Iată, El este în pustie”, să nu ieșiți; sauIată, El este în odăile dinăuntru„, să nu credeți."
     },
     {
       "number": 27,

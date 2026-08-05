@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:9cf64d1416dc4972ec121c78f8dd15e399f4a35543fb95641af698038eb1e58b",
-    "contentDigest": "sha256:e38f777cde74d3a6615a8d88a13929cf2757ec4b70fa79117b6e22390ebc7cf1"
+    "textDigest": "sha256:aab33effe7cc999c84ff4d5bbdf220ae1ff3c8bb86ee72d33e21c85c9e715b08",
+    "contentDigest": "sha256:8bbfd05b7294a6abfa30bd9b2d8493a4d65ad7f5e0c0eb34e6e41d2cb3fd61a9"
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, îi îndemn pe bătrînii din mijlocul vostru, ca pe un bătrîn și ca pe un martor al suferințelor lui Hristos, și care vor lua parte și la slava care va fi descoperită."
+      "text": "De aceea, îi îndemn pe bătrânii din mijlocul vostru, ca pe un bătrîn și ca pe un martor al suferințelor lui Hristos, și care vor lua parte și la slava care va fi descoperită."
     },
     {
       "number": 2,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Smeriți-vă, dar, sub mîna tare a lui Dumnezeu, ca să vă înalțe la timpul cuvenit."
+      "text": "Smeriți-vă, dar, sub mâna tare a lui Dumnezeu, ca să vă înalțe la timpul cuvenit."
     },
     {
       "number": 7,

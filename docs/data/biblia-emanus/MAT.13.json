@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:629f43d04980dffd4f031649c0c9bc6e901a26478cc598a4184a2999ee2e47c3",
-    "contentDigest": "sha256:4197c77812920a616d9ff9774ed360244782783b3946f9ff28955564956f2d92"
+    "textDigest": "sha256:2416ae1c31132640f2145cc79c547937903a4253e05b034a5082436e3a809f2b",
+    "contentDigest": "sha256:f2a8db081dad8bcf6c31e44e009baa091642fd79c07c0d2d08643fe08987888d"
   },
   "verses": [
     {
@@ -345,7 +345,7 @@
     },
     {
       "number": 51,
-      "text": "Isus le-a zis:Ați înțeles toate aceste lucruri? Ei i-au răspuns:Da, Doamne."
+      "text": "Isus le-a zis: Ați înțeles toate aceste lucruri? Ei i-au răspuns: Da, Doamne."
     },
     {
       "number": 52,

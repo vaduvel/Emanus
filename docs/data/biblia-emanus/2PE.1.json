@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:99e8a06876bd3225f3b95a4b2c9b5873c48197a71a1bb99d228bee12c0f8b023",
-    "contentDigest": "sha256:48c73fac085871e1de12f0352e9dcd0461820244749f4564122a4e1f793ea35b"
+    "textDigest": "sha256:aab7efdcdc0b42dc999c71756ebb68047e769a0645c224f08ab898c3910a1c09",
+    "contentDigest": "sha256:07d238e10c62bdb9429eea489b5b67da5b06e4080a8f166b1a8f09a9aa655325"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "prin care ne -a dat făgăduințele Lui cele mari și prețioase, pentruca, prin acestea, să fiți părtași naturii divine, după ce ați scăpat de stricăciunea care este în lume prin pofte."
+      "text": "prin care ne-a dat făgăduințele Lui cele mari și prețioase, pentruca, prin acestea, să fiți părtași naturii divine, după ce ați scăpat de stricăciunea care este în lume prin pofte."
     },
     {
       "number": 5,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Noi avem cuvântul cel mai sigur al profeției; bine că l- luat în seamă ca pe o lampă care strălucește într-un loc întunecos, până când se va crăpa de ziuă va răsări steaua dimineții în inimile voastre,"
+      "text": "Noi avem cuvântul cel mai sigur al profeției; bine că l-luat în seamă ca pe o lampă care strălucește într-un loc întunecos, până când se va crăpa de ziuă va răsări steaua dimineții în inimile voastre,"
     },
     {
       "number": 20,

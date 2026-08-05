@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:4e3d4f90f8248a6ff973c79d957d86127f7f3e1a707a004f7ff5d672ecb7308b",
-    "contentDigest": "sha256:b2e67df76395b16f3ef61703151afc0e4c38765668b2d28b103c32a2cb870df1"
+    "textDigest": "sha256:eed16f4ce7f29327aa408329c65d157ab52deb421730abd2ceab6a58a9cb29d3",
+    "contentDigest": "sha256:c70f6248bb539aad64722142e7b54d510771a10fabeef2873a453e06ca22fb3e"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Veniți acum,lor, plângeți url pentru nenorocirile care vin peste voi."
+      "text": "Veniți acum, lor, plângeți url pentru nenorocirile care vin peste voi."
     },
     {
       "number": 2,
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Iată, plata muncitorilor care v'au tăiat ogoarele, pe cari le-ați păzit prin înșelătorie, strigați, și strigătele celor ce secerau au intrat în urechile Domnului oștirilor."
+      "text": "Iată, plata lucrătorilor care v-au secerat câmpurile, plată care a fost oprită de voi prin înșelăciune, strigă; și strigătele secerătorilor au intrat în urechile Domnului sabaot."
     },
     {
       "number": 5,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Fiți deci răbdători, fraților, pînă la venirea Domnului. Iată că fermierul așteaptă rodul prețios al pămîntului, fiind răbdători peste el, pînă cînd primește ploaia timpurie și târzie."
+      "text": "Fiți deci răbdători, fraților, până la venirea Domnului. Iată că fermierul așteaptă rodul prețios al pământului, fiind răbdători peste el, până când primește ploaia timpurie și târzie."
     },
     {
       "number": 8,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Dar mai presus de toate, frații mei, să nu jur nici pe cer, nici pe pământ, nici prin orice alt jurământ; cida„-ul vostru să fieda”nu„-ul vostru,nu”, ca să nu cădeți în ipocrizie."
+      "text": "Dar mai presus de toate, frații mei, să nu jur nici pe cer, nici pe pământ, nici prin orice alt jurământ; cida„-ul vostru să fieda”nu„-ul vostru, nu”, ca să nu cădeți în ipocrizie."
     },
     {
       "number": 13,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Este vreunul dintre voi bolnav? Să cheme pe bătrînii adunării, și să se roage pentru el, ungîndu -l cu untdelemn în Numele Domnului."
+      "text": "Este vreunul dintre voi bolnav? Să cheme pe bătrânii adunării, și să se roage pentru el, ungîndu-l cu untdelemn în Numele Domnului."
     },
     {
       "number": 15,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "El s'a rugat din nou, și cerul a dat ploaie, și pămîntul i -a dat rodul."
+      "text": "El s-a rugat din nou, și cerul a dat ploaie, și pământul i-a dat rodul."
     },
     {
       "number": 19,

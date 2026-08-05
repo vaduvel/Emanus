@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:1f863772f91fdd0ccc1486febb336c529f9422b02362a3b1cfd5573ba301fe4e",
-    "contentDigest": "sha256:af46508c7587a4c6dff6e8e2dbba4fea82caed3e5391281837d175cb2b64496e"
+    "textDigest": "sha256:e613f169c77da2134de2f3d31119f936dcb1a733ed890b29871989ea1b26bb92",
+    "contentDigest": "sha256:5ed607f976b45af67632de78019608a691abcf1956f226475d700291d84a6f61"
   },
   "verses": [
     {
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "După ce a văzut viziunea, am căutat imediat să ieșim în Macedonia, concluzionând că Domnul ne - a chemat să le predicăm vestea bună."
+      "text": "După ce a văzut viziunea, am căutat imediat să ieșim în Macedonia, concluzionând că Domnul ne-a chemat să le predicăm vestea bună."
     },
     {
       "number": 11,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "În timp ce mergeam la rugăciune, o anumită fată care avea un spirit de ghicire ne - a întâlnit, care și - a adus stăpânii mult câștig prin prezicerea norocului."
+      "text": "În timp ce mergeam la rugăciune, o anumită fată care avea un spirit de ghicire ne-a întâlnit, care și-a adus stăpânii mult câștig prin prezicerea norocului."
     },
     {
       "number": 17,
@@ -285,7 +285,7 @@
     },
     {
       "number": 36,
-      "text": "temnicerul a spus aceste cuvinte lui Pavel, spunând:? Magistrații au trimis să te lase să pleci; așa că acum ieși afară și du-te în pace."
+      "text": "Temnicerul i-a transmis aceste cuvinte lui Pavel: „Magistrații au trimis poruncă să fiți eliberați. Ieșiți acum și mergeți în pace!”"
     },
     {
       "number": 37,

@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:ae653e07b901fe43b8367ce47c486bf2f9360c5bf0e449a56b8a5e3527528935",
-    "contentDigest": "sha256:32faeece172944cd13b4a96b1d8c6fb04538cba8d45327776ddc3176f21c48ce"
+    "textDigest": "sha256:f01f58b4f4a6f00cc5ed552a126ab9bf871c0d2786b6c9dfe723f4a28970d4bb",
+    "contentDigest": "sha256:7e30d1e4181a1d085f88a772391c57e44c1050107d1216e62dcaad2c43f4b76d"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Dar proorocii mincinoși s'au sculat și ei în mijlocul poporului, cum și învățătorii falși vor fi printre voi, cari vor aduce în taină erezii distrugătoare, negând chiar și pe Învățătorul care i -a cumpărat, aducîndu - și o distrugere grabnică."
+      "text": "Dar au fost și falși profeți în popor, așa cum vor fi falși învățători printre voi, care vor introduce în ascuns erezii damnabile, negând chiar pe Domnul care i-a răscumpărat, și își aduc asupra lor o nimicire grabnică."
     },
     {
       "number": 2,
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Căci dacă Dumnezeu n'a cruțat pe îngeri cînd au păcătuit, ci i -a aruncat la Tartar, și i -a pus în gropile întunericului, ca să fie păstrați pentru judecată,"
+      "text": "Căci dacă Dumnezeu n-a cruțat pe îngeri când au păcătuit, ci i-a aruncat la Tartar, și i-a pus în gropile întunericului, ca să fie păstrați pentru judecată,"
     },
     {
       "number": 5,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Promițîndu-le libertate, în timp ce ei înșiși sunt robi ai stricăciunii, căci omul este adus în robie de cel ce -l biruiește."
+      "text": "Promițîndu-le libertate, în timp ce ei înșiși sunt robi ai stricăciunii, căci omul este adus în robie de cel ce-l biruiește."
     },
     {
       "number": 20,

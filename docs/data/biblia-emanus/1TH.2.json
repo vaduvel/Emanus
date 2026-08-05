@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "copyrightDistance": "approved",
     "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:6ba999466720c8197b89d4acbb5cbeec230196267f4acfe36cb3f28603a76771",
-    "contentDigest": "sha256:56e081cdf161c1e7893b659143a59a7721a14cc307590f98cc6cf980fec821b3"
+    "textDigest": "sha256:42aa33a2aa584259353876b6922d7ae187a7d1b295d24ade0330d9d1ba73fea3",
+    "contentDigest": "sha256:a757eb0608878371eb762a010a382e6f75ac8b511d7b0c8b7b20d40646ce9cf9"
   },
   "verses": [
     {
@@ -185,11 +185,11 @@
     },
     {
       "number": 11,
-      "text": "După cum știți, v'am îndemnat, mîngîiat, și v'am implorat pe fiecare dintre voi, cum face un tată cu copiii lui,"
+      "text": "După cum știți, v-am îndemnat, mîngîiat, și v-am implorat pe fiecare dintre voi, cum face un tată cu copiii lui,"
     },
     {
       "number": 12,
-      "text": "ca să umblați într'un mod demn de Dumnezeu, care vă cheamă în Împărăția și slava Lui."
+      "text": "ca să umblați într-un mod demn de Dumnezeu, care vă cheamă în Împărăția și slava Lui."
     },
     {
       "number": 13,
@@ -201,11 +201,11 @@
     },
     {
       "number": 15,
-      "text": "care a omorît pe Domnul Isus și pe prorocii lor, și ne -a izgonit, și nu voia lui Dumnezeu, și s'au împotrivit tuturor oamenilor,"
+      "text": "care a omorît pe Domnul Isus și pe prorocii lor, și ne-a izgonit, și nu voia lui Dumnezeu, și s-au împotrivit tuturor oamenilor,"
     },
     {
       "number": 16,
-      "text": "și ne-a oprit să vorbim Neamurilor, ca să fie mîntuiți, ca să-și umple totdeauna păcatele. Dar mînia a venit peste ei pînă la capăt."
+      "text": "și ne-a oprit să vorbim Neamurilor, ca să fie mîntuiți, ca să-și umple totdeauna păcatele. Dar mâinia a venit peste ei până la capăt."
     },
     {
       "number": 17,

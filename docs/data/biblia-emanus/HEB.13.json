@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:26e7ff55fc8f98517c54ae3f24e7b64ccbefaebfa6270477025567e58efc6c85",
-    "contentDigest": "sha256:1bcfa4fb9618fbd00d3a5f92254f5afadc460e6002c112320e0c17398a3b741d"
+    "textDigest": "sha256:ee55c4d250a94f79a72a7f52d19b3c597c8bfa954d8a4ec199c606739a8a868c",
+    "contentDigest": "sha256:51f7e85b5106251152fd5e092d095db5a41979990875b514caf7bcd352ef515e"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Nu uita să le arăți ospitalitate străinilor, căci în felul acesta, unii i - au distrat pe îngeri fără să știe."
+      "text": "Nu uita să le arăți ospitalitate străinilor, căci în felul acesta, unii i-au distrat pe îngeri fără să știe."
     },
     {
       "number": 3,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Amintiți - vă de conducătorii voștri, de oamenii care v - au vorbit cuvântul lui Dumnezeu și luând în considerare rezultatele conduitei lor, imitați - le credința."
+      "text": "Amintiți-vă de conducătorii voștri, de oamenii care v-au vorbit cuvântul lui Dumnezeu și luând în considerare rezultatele conduitei lor, imitați-le credința."
     },
     {
       "number": 8,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Rugați - vă pentru noi, căci suntem convinși că avem o conștiință bună, dorind să trăim onorabil în toate lucrurile."
+      "text": "Rugați-vă pentru noi, căci suntem convinși că avem o conștiință bună, dorind să trăim onorabil în toate lucrurile."
     },
     {
       "number": 19,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Dumnezeul păcii, care a adus din nou din morți pe marele păstor al oilor cu sîngele unui legămînt veșnic, Domnul nostru Isus,"
+      "text": "Iar Dumnezeul păcii, care l-a adus înapoi dintre morți pe Domnul nostru Isus, marele păstor al oilor, prin sângele legământului veșnic,"
     },
     {
       "number": 21,
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "Dar vă îndemn, fraților, să îndurați cuvîntul îndemnului, căci v'am scris în puține cuvinte."
+      "text": "Dar vă îndemn, fraților, să îndurați cuvântul îndemnului, căci v-am scris în puține cuvinte."
     },
     {
       "number": 23,

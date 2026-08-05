@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:e50679dc9ab59688b1c97254dbc68a3785655db4b2202a129f48b8306e78551c",
-    "contentDigest": "sha256:c69d8a38b9349c862c59f12dbe3380d76246ef79857253c28e94d2c5e13aafe6"
+    "textDigest": "sha256:e1cb32998ad61bd7444da719c038991797bb36be4164d7425b997d795d9b0cb9",
+    "contentDigest": "sha256:eccdca78f0407170506f04e867fec9cae21ed9dc15cfb5d480fe2f4c16e31246"
   },
   "verses": [
     {
@@ -169,15 +169,15 @@
     },
     {
       "number": 7,
-      "text": "Când au văzut lucrul acesta, toți au murmurat, zicând:A intrat să locuiască la un om păcătos."
+      "text": "Când au văzut lucrul acesta, toți au murmurat, zicând: A intrat să locuiască la un om păcătos."
     },
     {
       "number": 8,
-      "text": "Zaheu a stat în picioare a zis Domnului:Iată, Doamne, jumătate din bunurile mele le dau săracilor; dacă am cerut ceva pe nedrept cuiva, îi dau înapoi de patru ori mai mult."
+      "text": "Zaheu a stat în picioare a zis Domnului: Iată, Doamne, jumătate din bunurile mele le dau săracilor; dacă am cerut ceva pe nedrept cuiva, îi dau înapoi de patru ori mai mult."
     },
     {
       "number": 9,
-      "text": "Isus i -a zis:,,Astăzi, mîntuirea a venit în casa aceasta, pentrucă și el este fiul lui Avraam."
+      "text": "Isus i-a zis:„ Astăzi, mîntuirea a venit în casa aceasta, pentru că și el este fiul lui Avraam."
     },
     {
       "number": 10,
@@ -189,11 +189,11 @@
     },
     {
       "number": 12,
-      "text": "El a spus:Un nobil a mers într-o țară îndepărtată pentru a-și lua o împărăție și pentru a se întoarce."
+      "text": "El a spus: Un nobil a mers într-o țară îndepărtată pentru a-și lua o împărăție și pentru a se întoarce."
     },
     {
       "number": 13,
-      "text": "A chemat zece slujitori ai săi le-a dat zece monede de mină le-a zis:Duceți-vă la lucru până voi veni."
+      "text": "A chemat zece slujitori ai săi le-a dat zece monede de mină le-a zis: Duceți-vă la lucru până voi veni."
     },
     {
       "number": 14,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Și el i-a zis:Și tu vei fi peste cinci cetăți."
+      "text": "Și el i-a zis: Și tu vei fi peste cinci cetăți."
     },
     {
       "number": 20,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "El le-a spus celor care stăteau lângă el:Lu mina de la el dați-o celui care are zece mine."
+      "text": "El le-a spus celor care stăteau lângă el: Lu mina de la el dați-o celui care are zece mine."
     },
     {
       "number": 25,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "Dacă te întreabă cineva:De ce îl dezlegi?, spune-i:Domnul are nevoie de el!"
+      "text": "Dacă te întreabă cineva: De ce îl dezlegi?, spune-i: Domnul are nevoie de el!"
     },
     {
       "number": 32,
@@ -277,7 +277,7 @@
     },
     {
       "number": 34,
-      "text": "Ei au spus:Domnul are nevoie de aceasta."
+      "text": "Ei au spus: Domnul are nevoie de aceasta."
     },
     {
       "number": 35,
@@ -289,15 +289,15 @@
     },
     {
       "number": 37,
-      "text": "Pe cînd se apropia el acum, la poalele Muntelui Măslinilor, toată mulțimea ucenicilor a început să se bucure și să laude pe Dumnezeu cu glas tare pentru toate lucrările puternice pe cari le văzuseră,"
+      "text": "Și pe când se apropia, chiar la coborâșul muntelui Măslinilor, toată mulțimea discipolilor a început să se bucure și să laude pe Dumnezeu cu voce tare din cauza tuturor faptelor puternice pe care le văzuseră,"
     },
     {
       "number": 38,
-      "text": "spune:Binecuvântat este Împăratul care vine în Numele Domnului! Pace în cer slavă întru cei de sus!"
+      "text": "spune: Binecuvântat este Împăratul care vine în Numele Domnului! Pace în cer slavă întru cei de sus!"
     },
     {
       "number": 39,
-      "text": "Unii dintre fariseii din I-au zis:Învățătorule, mustră-i pe ucenicii Tăi!"
+      "text": "Unii dintre fariseii din I-au zis: Învățătorule, mustră-i pe ucenicii Tăi!"
     },
     {
       "number": 40,
@@ -321,19 +321,19 @@
     },
     {
       "number": 45,
-      "text": "El a intrat în templu și a început să -i izgonească pe cei ce cumpărau și vindeau în el."
+      "text": "El a intrat în templu și a început să-i izgonească pe cei ce cumpărau și vindeau în el."
     },
     {
       "number": 46,
-      "text": "le-a zis:Este scris: Casa Mea este o casă de rugăciune, dar voi ați făcut-o oră de tâlhari!"
+      "text": "le-a zis: Este scris: Casa Mea este o casă de rugăciune, dar voi ați făcut-o oră de tâlhari!"
     },
     {
       "number": 47,
-      "text": "El propovăduia zilnic în Templu, dar preoții cei mai de seamă, cărturarii și oamenii de frunte din popor căutau să - l nimicească."
+      "text": "El propovăduia zilnic în Templu, dar preoții cei mai de seamă, cărturarii și oamenii de frunte din popor căutau să-l nimicească."
     },
     {
       "number": 48,
-      "text": "Ei nu au putut găsi ceea ce ar putea face, pentru toți oamenii agățat pe fiecare cuvânt pe care el a spus."
+      "text": "Ei nu au putut găsi ceea ce ar putea face, pentru toți oamenii agățat pe fiecare cuvânt pe care el a spus.”"
     }
   ],
   "editorialNotes": [],

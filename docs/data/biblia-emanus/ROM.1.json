@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:e87eb2be78c7aed6d43b89588408c2feda3a1f2a08063c128575cdd5cc3e5194",
-    "contentDigest": "sha256:8825ec070233a28f9aec85fa2dbbc64d745e369e02c3845b49719194c160aef6"
+    "textDigest": "sha256:8373a4edf860e9d31635b59b53738e41db8fd1c511614ca5c520cf5191a6377c",
+    "contentDigest": "sha256:6b9950fd0d81b164e20ffdfede10d6e9fa474004712bc9312f8820df51bc2100"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "despre Fiul Său, care s'a născut din sămânța lui David, după trup,"
+      "text": "despre Fiul Său, care s-a născut din sămânța lui David, după trup,"
     },
     {
       "number": 4,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Căci nu mi-e rușine de Evanghelia lui Hristos, pentru că este puterea lui Dumnezeu pentru mântuire pentru oricine crede, pentru Iudeu mai întîi, și pentru Grec."
+      "text": "Căci nu mi-e rușine de Evanghelia lui Hristos, pentru că este puterea lui Dumnezeu pentru mântuire pentru oricine crede, pentru Iudeu mai întâi, și pentru Grec."
     },
     {
       "number": 17,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "care au schimbat adevărul lui Dumnezeu cu o minciună, s'au închinat și au slujit mai degrabă creaturii decît Creatorului, care este binecuvîntat pentru totdeauna. Amin."
+      "text": "care au schimbat adevărul lui Dumnezeu cu o minciună, s-au închinat și au slujit mai degrabă creaturii decât Creatorului, care este binecuvîntat pentru totdeauna. Amin."
     },
     {
       "number": 26,

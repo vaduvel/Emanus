@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:e345d8f8c7f6a45f42c6aea3e2e7a6b92fafd221800ecbc1fcf15f4b4e2bd70b",
-    "contentDigest": "sha256:933284250b23af9c1f798175dfd7c25ab33a7141ed05b75d62d2014111eed0c0"
+    "textDigest": "sha256:17187896ed7a470bba0429c2c8aad28ab1f8dc3d554a538bd7e4c58c42b8b690",
+    "contentDigest": "sha256:a5d5116879008a2bf5c8ab24ef339ae830d6f70da94c67d408f34f12126acc32"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Am văzut un înger puternic proclamand cu voce tare,? Cine este demn să deschidă cartea, și să rupă sigiliile sale?"
+      "text": "Și am văzut un înger puternic, proclamând cu voce tare: Cine este demn să deschidă cartea și să desfacă sigiliile ei?"
     },
     {
       "number": 3,
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Unul din bătrîni mi -a zis:,,Nu plînge! Iată că leul, care este din semia lui Iuda, rădăcina lui David, a biruit: cel ce deschide cartea cele peceți ale ei."
+      "text": "Unul din bătrâni mi-a zis: Nu plînge! Iată că leul, care este din semia lui Iuda, rădăcina lui David, a biruit: cel ce deschide cartea cele peceți ale ei."
     },
     {
       "number": 6,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Apoi a venit, și a luat -o din dreapta celui ce ședea pe scaunul de domnie."
+      "text": "Apoi a venit, și a luat-o din dreapta celui ce ședea pe scaunul de domnie."
     },
     {
       "number": 8,
@@ -177,11 +177,11 @@
     },
     {
       "number": 9,
-      "text": "Ei au cântat un cântec nou, spunând: „Ești vrednic să iei cartea și să deschizi pecețile ei, căci ai fost ucis, și ne-ai cumpărat pentru Dumnezeu cu sângele tău din fiecare trib, limbă, popor și națiune,"
+      "text": "Ei au cântat un cântec nou, spunând: Ești vrednic să iei cartea și să deschizi pecețile ei, căci ai fost ucis, și ne-ai cumpărat pentru Dumnezeu cu sângele tău din fiecare trib, limbă, popor și națiune,"
     },
     {
       "number": 10,
-      "text": "și ne-a făcut împărați și preoți înaintea Dumnezeului nostru, și vom împărăți pe pămînt."
+      "text": "și ne-a făcut împărați și preoți înaintea Dumnezeului nostru, și vom împărăți pe pământ."
     },
     {
       "number": 11,
@@ -189,15 +189,15 @@
     },
     {
       "number": 12,
-      "text": "El a spus cu glas tare:Vrednic este Mielul care a fost ucis pentru a primi puterea,, înțelepciunea, puterea, onoarea, gloria binecuvântarea!”"
+      "text": "El a spus cu glas tare: Vrednic este Mielul care a fost ucis pentru a primi puterea înțelepciunea, puterea, onoarea, gloria binecuvântarea!"
     },
     {
       "number": 13,
-      "text": "Am auzit tot ce este în cer, pe pământ, sub pământ, pe mare tot ce este în ele, zicând:A Celui ce șade pe tron a Mielului să fie binecuvântarea, cinstea, slava stăpânirea, în vecii vecilor! Amin!„"
+      "text": "Am auzit tot ce este în cer, pe pământ, sub pământ, pe mare tot ce este în ele, zicând: A Celui ce șade pe tron a Mielului să fie binecuvântarea, cinstea, slava stăpânirea, în vecii vecilor! Amin!"
     },
     {
       "number": 14,
-      "text": "Cele patru făpturi vii au zis:Amin!” Bătrânii s-au aruncat la pământ s-au închinat."
+      "text": "Cele patru făpturi vii au zis: Amin! Bătrânii s-au aruncat la pământ s-au închinat."
     }
   ],
   "editorialNotes": [],

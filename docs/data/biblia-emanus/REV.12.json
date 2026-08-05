@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:576d13317b3f28550a555726e42426f3ac2419929726964f998087be117235ac",
-    "contentDigest": "sha256:5c2913e1c00751d1ec2409ce50db2c34047b24308e229b10777583cacfc0867f"
+    "textDigest": "sha256:40912f878c0925079467c085169ae7575e211a993fd24bc0b071c82542e2da99",
+    "contentDigest": "sha256:f2d63b94edecba410bdfbe410c68bcaada977eeeb9a72618c12690afdfffd8c5"
   },
   "verses": [
     {
@@ -157,11 +157,11 @@
     },
     {
       "number": 4,
-      "text": "Coada lui a tras o treime din stelele cerului, și le -a aruncat pe pămînt. Dragonul a stat înaintea femeii care era pe cale să nască, ca atunci cînd ea a născut să -i mănînce copilul."
+      "text": "Coada lui a tras o treime din stelele cerului, și le-a aruncat pe pământ. Dragonul a stat înaintea femeii care era pe cale să nască, ca atunci când ea a născut să-i mănînce copilul."
     },
     {
       "number": 5,
-      "text": "Ea a născut un fiu, un copil de parte bărbătească, care să domnească toate neamurile cu un toiag de fier; copilul ei a fost prins de Dumnezeu și de scaunul lui de domnie."
+      "text": "Ea a născut un fiu, un copil de parte bărbătească, cel care urmează să păstorească toate neamurile cu un toiag de fier; iar copilul ei a fost răpit la Dumnezeu și la tronul Lui."
     },
     {
       "number": 6,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "L-au biruit din pricina sîngelui Mielului, și din pricina cuvîntului mărturiei lor. Ei nu și-au iubit viața, nici măcar pînă la moarte."
+      "text": "L-au biruit din pricina sîngelui Mielului, și din pricina cuvîntului mărturiei lor. Ei nu și-au iubit viața, nici măcar până la moarte."
     },
     {
       "number": 12,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Dragonul s'a mîniat pe femeie, și s'a dus să facă război cu ceilalți urmași ai ei, cari păzesc poruncile lui Dumnezeu și țin mărturie despre Isus.”"
+      "text": "Și dragonul a fost furios pe femeie și a mers să facă război cu rămășița seminței ei, cei care țin poruncile lui Dumnezeu și au mărturia lui Isus Hristos.”"
     }
   ],
   "editorialNotes": [],

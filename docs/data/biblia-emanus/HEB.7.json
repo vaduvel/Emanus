@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:6ca3615703f9e26034a3147dfac788e2614f4a3e4872fcabdcdd6923413cb1e8",
-    "contentDigest": "sha256:546fa0dad9d82608e6f52ce03da8269d232df95b7e84a5028861b7182216d00c"
+    "textDigest": "sha256:47a64eed1a8f1c0d8d3745c170ee4313cb75b1412ade7838502c358cf3d316bc",
+    "contentDigest": "sha256:cc3d08917e4bc8112ae6269bc05812d93b80e0f2c734149d4f3e29995c923809"
   },
   "verses": [
     {
@@ -157,11 +157,11 @@
     },
     {
       "number": 4,
-      "text": "Să vedem acum cît de mare era omul acesta, căruia chiar Avraam, patriarhul, i - a dat o zecime din cea mai bună pradă."
+      "text": "Să vedem acum cât de mare era omul acesta, căruia chiar Avraam, patriarhul, i-a dat o zecime din cea mai bună pradă."
     },
     {
       "number": 5,
-      "text": "Fiii lui Levi, cari primesc slujba de preot, au porunca de a lua zeciuiala din popor, după Lege, adică din frații lor, chiar dacă aceștia au ieșit din trupul lui Avraam,"
+      "text": "Și, într-adevăr, cei dintre fiii lui Levi, care primesc serviciul preoției, conform legii au poruncă să ia zeciuieli de la popor, adică de la frații lor, cu toate că au ieșit din coapsele lui Avraam."
     },
     {
       "number": 6,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "(căci ei au fost făcuți preoți fără jurământ), dar el, cu jurământ pe cel ce zice despre el:Domnul a jurat nu se va răzgândi: Tu ești preot pe vecie, după rânduiala lui Melhisedec."
+      "text": "(căci ei au fost făcuți preoți fără jurământ), dar el, cu jurământ pe cel ce zice despre el: Domnul a jurat nu se va răzgândi: Tu ești preot pe vecie, după rânduiala lui Melhisedec."
     },
     {
       "number": 22,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Mulți, într - adevăr, au fost făcuți preoți, deoarece sunt împiedicați să continue prin moarte."
+      "text": "Mulți, într-adevăr, au fost făcuți preoți, deoarece sunt împiedicați să continue prin moarte."
     },
     {
       "number": 24,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "De aceea, El este și în stare să - i mântuiască pe cei ce se apropie de Dumnezeu prin El, fiindcă trăiește veșnic ca să mijlocească pentru ei."
+      "text": "De aceea, El este și în stare să-i mântuiască pe cei ce se apropie de Dumnezeu prin El, fiindcă trăiește veșnic ca să mijlocească pentru ei."
     },
     {
       "number": 26,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "care nu are nevoie, ca acei mari preoți, să aducă zilnic jertfe, mai întîi pentru păcatele lui și apoi pentru păcatele poporului. Căci a făcut aceasta o dată pentru totdeauna, cînd s'a dat pe Sine."
+      "text": "care nu are nevoie, ca acei mari preoți, să aducă zilnic jertfe, mai întâi pentru păcatele lui și apoi pentru păcatele poporului. Căci a făcut aceasta o dată pentru totdeauna, când s-a dat pe Sine."
     },
     {
       "number": 28,

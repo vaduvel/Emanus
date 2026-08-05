@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:34337c11e189e7b6bebe152a996f7593d79fbcae68973b761e0be6bf3de4a427",
-    "contentDigest": "sha256:7de2b05bc0fe0de0710a8804e271fb285256434fb17184218921b6828fbcc4d1"
+    "textDigest": "sha256:1c3f451d42dd866e74e82b70ed90ca779de2ba781201666b4ad67673477cff36",
+    "contentDigest": "sha256:d497b68dd3b0de455bd47ed619bbc3a181806b204abc672e1445bbbebc500f7b"
   },
   "verses": [
     {
@@ -261,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "De aceea, fiind un prooroc, și știind că Dumnezeu jurase cu jurămînt că din rodul trupului său, potrivit cărnii, va ridica pe Hristos ca să șadă pe scaunul lui de domnie,"
+      "text": "De aceea, fiind un profet, și știind că Dumnezeu jurase cu jurămînt că din rodul trupului său, potrivit cărnii, va ridica pe Hristos ca să șadă pe scaunul lui de domnie,"
     },
     {
       "number": 31,

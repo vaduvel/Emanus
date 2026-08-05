@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:59d2bff30ee409a1eff8a29c19af0f5c0e68c5187a55029ea3fe541e94627e49",
-    "contentDigest": "sha256:b99c8f580aa09cba6267b5901e81f3cf534c75c677adcfb6769636774e4d7d57"
+    "textDigest": "sha256:f774e8180a52d6f3276398368ee74098049adeeb5cb056565f213be763ee916d",
+    "contentDigest": "sha256:545b672a13422610ebd40178c59a62bbe5551e246c31e3e7fd0192c77064c232"
   },
   "verses": [
     {
@@ -193,15 +193,15 @@
     },
     {
       "number": 13,
-      "text": "Unul din i-a zis:Învățătorule, spune fratelui meu să împartă moștenirea cu mine."
+      "text": "Unul din i-a zis: Învățătorule, spune fratelui meu să împartă moștenirea cu mine."
     },
     {
       "number": 14,
-      "text": "Dar el i-a spus:Omule, cine m-a făcut pe mine judecător sau arbitru peste tine?"
+      "text": "Dar el i-a spus: Omule, cine m-a făcut pe mine judecător sau arbitru peste tine?"
     },
     {
       "number": 15,
-      "text": "El le-a zis:Feriți-vă de lăcomie, căci viața unui om nu constă din belșugul lucrurilor pe care le are."
+      "text": "El le-a zis: Feriți-vă de lăcomie, căci viața unui om nu constă din belșugul lucrurilor pe care le are."
     },
     {
       "number": 16,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "El a raționat în sine, spunând,? Ce voi face, pentru că nu am loc pentru a stoca culturile mele?"
+      "text": "Și se gândea în el însuși, spunând: Ce voi face, pentru că nu mai am loc unde să îmi adun roadele?"
     },
     {
       "number": 18,
@@ -217,11 +217,11 @@
     },
     {
       "number": 19,
-      "text": "Voi spune sufletului meu:Suflete, ai multe bunuri strânse pentru mulți ani. Ia-a, mănâncă, bea și vesel-te."
+      "text": "Voi spune sufletului meu: Suflete, ai multe bunuri strânse pentru mulți ani. Ia-a, mănâncă, bea și vesel-te."
     },
     {
       "number": 20,
-      "text": "Dar Dumnezeu i-a zis:Nebunule, în noaptea aceasta ți se va cere sufletul; ale cui vor fi lucrurile pe care le-ai pregătit?"
+      "text": "Dar Dumnezeu i-a zis: Nebunule, în noaptea aceasta ți se va cere sufletul; ale cui vor fi lucrurile pe care le-ai pregătit?"
     },
     {
       "number": 21,
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "El le -a zis ucenicilor Săi:,,De aceea vă spun, nu vă îngrijorați pentru viața voastră, pentru ce veți mînca, și nici pentru trupul vostru, pentru ce veți purta."
+      "text": "El le-a zis ucenicilor Săi: De aceea vă spun, nu vă îngrijorați pentru viața voastră, pentru ce veți mînca, și nici pentru trupul vostru, pentru ce veți purta."
     },
     {
       "number": 23,
@@ -253,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Dar daca asa imbraca Dumnezeu iarba pe camp, care exista astazi si maine este aruncata in cuptor, cu cat te va imbraca mai mult, O, voi cei putin credinciosi?"
+      "text": "Și dacă astfel îmbracă Dumnezeu iarba din câmp, care astăzi este și mâine este aruncată în cuptor, cu cât mai mult vă va îmbrăca pe voi, puțin credincioșilor."
     },
     {
       "number": 29,
@@ -297,19 +297,19 @@
     },
     {
       "number": 39,
-      "text": "Dar sa stii asta, ca daca stapanul casei ar fi stiut in ce ora venea hotul, el ar fi privit si nu ar fi permis ca casa lui sa fie sparta."
+      "text": "Dar să știți aceasta, că dacă ar fi știut stăpânul casei la ce oră ar veni hoțul, ar fi vegheat și nu ar fi lăsat să îi fie spartă casa."
     },
     {
       "number": 40,
-      "text": "Prin urmare, să fie gata, de asemenea,, pentru Fiul Omului vine într-o oră pe care nu-l așteptați."
+      "text": "Prin urmare, să fie gata, de asemenea pentru Fiul Omului vine într-o oră pe care nu-l așteptați."
     },
     {
       "number": 41,
-      "text": "Petru i-a zis:Doamne, ne spui această pildă nouă sau tuturor?"
+      "text": "Petru i-a zis: Doamne, ne spui această pildă nouă sau tuturor?"
     },
     {
       "number": 42,
-      "text": "Domnul a zis:,,Cine este atunci sfetnicul credincios și înțelept, pe care stăpînul său îl va pune peste casa lui, ca să le dea partea lor de hrană la timpul potrivit?"
+      "text": "Domnul a zis: Cine este atunci sfetnicul credincios și înțelept, pe care stăpînul său îl va pune peste casa lui, ca să le dea partea lor de hrană la timpul potrivit?"
     },
     {
       "number": 43,
@@ -325,7 +325,7 @@
     },
     {
       "number": 46,
-      "text": "Domnul robului acela va veni într'o zi, cînd nu -l va aștepta și într'o oră nu va ști, și -l va tăia în două, și -i va pune partea lui cu cei necredincioși."
+      "text": "Domnul robului acela va veni într'o zi, când nu-l va aștepta și într'o oră nu va ști, și-l va tăia în două, și-i va pune partea lui cu cei necredincioși."
     },
     {
       "number": 47,
@@ -357,7 +357,7 @@
     },
     {
       "number": 54,
-      "text": "El a mai spus mulțimilor:Când vedeți un nor ridicându-se dinspre vest, imediat: Vine un și se întâmplă."
+      "text": "El a mai spus mulțimilor: Când vedeți un nor ridicându-se dinspre vest, imediat: Vine un și se întâmplă."
     },
     {
       "number": 55,
@@ -373,7 +373,7 @@
     },
     {
       "number": 58,
-      "text": "Pentru ca atunci cand mergi cu adversarul tau inaintea magistratului, incearca cu sârguinta pe calea de a fi eliberat de la el, ca nu cumva te trage la judecator, si judecatorul te da ofiterului, si ofiterul te arunca in inchisoare."
+      "text": "Dar când te duci cu potrivnicul tău la magistrat, pe drum, dă-ți silința să fii eliberat de el; ca nu cumva să te târască la judecător și judecătorul să te predea executorului și executorul să te arunce în închisoare."
     },
     {
       "number": 59,

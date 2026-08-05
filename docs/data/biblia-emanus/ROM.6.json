@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:0e2e4756060fb9f0ffc89aa0d841862db40660673a5c490ab0b9d727563a4255",
-    "contentDigest": "sha256:b8ae792ebf275d1df8363ba9abf46bb4e4205c859e677bd33600df6440a35dc1"
+    "textDigest": "sha256:31df3f88ed4462d52f93b2f517230eac1710c5b072c3017d8bac5f8972d6d02a",
+    "contentDigest": "sha256:b3f9d763ab5cca6e7a15db3bfb2737e0c455d44d27a35f4cd3228f6e6c374d03"
   },
   "verses": [
     {
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Eu vorbesc în termeni umani, din pricina slăbiciunii cărnii voastre; căci așa cum v'ați prezentat pe mădularele voastre ca slujitori ai necurăției și ai răutății asupra răutății, tot așa și acum prezentați - vă mădularele voastre ca slujitori ai dreptății pentru sfințire."
+      "text": "Eu vorbesc în termeni umani, din pricina slăbiciunii cărnii voastre; căci așa cum v-ați prezentat pe mădularele voastre ca slujitori ai necurăției și ai răutății asupra răutății, tot așa și acum prezentați-vă mădularele voastre ca slujitori ai dreptății pentru sfințire."
     },
     {
       "number": 20,

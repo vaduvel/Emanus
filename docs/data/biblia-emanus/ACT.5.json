@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:ef145bf94c94aa7f89fce2d21c950d7dd32d227c35960d684524238ac66dc307",
-    "contentDigest": "sha256:8d9f67cb2d33a886641c34cf340cc4f521596d1d07c347f6d1366c05e7d43539"
+    "textDigest": "sha256:464c2432e2c71852ffacc434755fb087e1fc04526b80d7fc5130b84329895afb",
+    "contentDigest": "sha256:9a655e64f5cff5a8f19a11e25ae4dc94c1c48978a9e61c45df92022f988ef146"
   },
   "verses": [
     {
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Nici unul dintre ceilalți nu a îndrăznit să li se alăture; totuși, poporul i - a onorat."
+      "text": "Nici unul dintre ceilalți nu a îndrăznit să li se alăture; totuși, poporul i-a onorat."
     },
     {
       "number": 14,
@@ -205,11 +205,11 @@
     },
     {
       "number": 16,
-      "text": "Mulțimea s'a strîns din cetățile din jurul Ierusalimului, aducînd pe oameni bolnavi și pe cei chinuiți de duhuri necurate, și toți au fost vindecați."
+      "text": "Mulțimea s-a strâns din cetățile din jurul Ierusalimului, aducînd pe oameni bolnavi și pe cei chinuiți de duhuri necurate, și toți au fost vindecați."
     },
     {
       "number": 17,
-      "text": "Dar marele preot s'a sculat, și toți cei ce erau cu el (care este secta Saducheilor) s'au umplut de gelozie."
+      "text": "Dar marele preot s-a sculat, și toți cei ce erau cu el (care este secta Saducheilor) s-au umplut de gelozie."
     },
     {
       "number": 18,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Cînd au auzit ei lucrul acesta, au intrat în Templu, în zori, și au învățat. Dar marele preot și cei ce erau cu el au venit și au chemat sfetnicii, împreună cu tot Senatul copiilor lui Israel, și au trimes la închisoare să -i aducă."
+      "text": "Când au auzit ei lucrul acesta, au intrat în Templu, în zori, și au învățat. Dar marele preot și cei ce erau cu el au venit și au chemat sfetnicii, împreună cu tot Senatul copiilor lui Israel, și au trimes la închisoare să-i aducă."
     },
     {
       "number": 22,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "Atunci căpitanul s'a dus cu ofițerii, și i -a adus fără violență, pentrucă se temeau că poporul îi va omorî cu pietre."
+      "text": "Atunci căpitanul s-a dus cu ofițerii, și i-a adus fără violență, pentru că se temeau că poporul îi va omorî cu pietre."
     },
     {
       "number": 27,
@@ -273,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "Dar cînd au auzit lucrul acesta, au fost tăiați la inimă, și au fost hotărîți să -i omoare."
+      "text": "Dar când au auzit lucrul acesta, au fost tăiați la inimă, și au fost hotărîți să-i omoare."
     },
     {
       "number": 34,
@@ -305,7 +305,7 @@
     },
     {
       "number": 41,
-      "text": "De aceea, ei au plecat de la prezența consiliului, bucurîndu - se că erau socotiți vrednici să sufere de rușine pentru numele lui Isus."
+      "text": "De aceea, ei au plecat de la prezența consiliului, bucurîndu-se că erau socotiți vrednici să sufere de rușine pentru numele lui Isus."
     },
     {
       "number": 42,

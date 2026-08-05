@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:8de9f984cb1aaac964417cc48accc1f9c820dad664c957d45f941e72e2fead40",
-    "contentDigest": "sha256:53bf7a6edc5c025bcde7b96f0a25596be6053773b94a55b204ec93367b09645c"
+    "textDigest": "sha256:62452a6da66bc6f201c427f0b67c28b27b0926a956888ddbdfbec906413c7457",
+    "contentDigest": "sha256:928533e4e01030400b97fc81cdd5d004cae3e97da31a4ae8bece29468fca8099"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "El a zis:Adevărat vă spun că această văduvă săracă a pus mai mult decât toți,"
+      "text": "El a zis: Adevărat vă spun că această văduvă săracă a pus mai mult decât toți,"
     },
     {
       "number": 4,
@@ -169,11 +169,11 @@
     },
     {
       "number": 7,
-      "text": "Ei l-au întrebat:Învățătorule, când se vor întâmpla aceste lucruri? Care este semnul că aceste lucruri sunt pe cale să se întâmple?"
+      "text": "Ei l-au întrebat: Învățătorule, când se vor întâmpla aceste lucruri? Care este semnul că aceste lucruri sunt pe cale să se întâmple?"
     },
     {
       "number": 8,
-      "text": "El a zis:Veghe să nu vă rătăciți, căci vor veni în Numele Meu, zicând: Eu sunt!: Timpul este aproape. De aceea, nu-i urmați."
+      "text": "El a zis: Veghe să nu vă rătăciți, căci vor veni în Numele Meu, zicând: Eu sunt!: Timpul este aproape. De aceea, nu-i urmați."
     },
     {
       "number": 9,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Apoi le-a zis:Națiune se va ridica împotrivai și împărăție împotriva împără."
+      "text": "Apoi le-a zis: Națiune se va ridica împotrivai și împărăție împotriva împără."
     },
     {
       "number": 11,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "El le - a spus o parabolă.? Vezi smochinul și toți copacii."
+      "text": "Și le-a spus o parabolă: Priviți smochinul și toți copacii."
     },
     {
       "number": 30,
@@ -293,7 +293,7 @@
     },
     {
       "number": 38,
-      "text": "Toți oamenii veneau dis - de - dimineață la el în templu ca să - l asculte."
+      "text": "Toți oamenii veneau dis-de-dimineață la el în templu ca să-l asculte."
     }
   ],
   "editorialNotes": [],

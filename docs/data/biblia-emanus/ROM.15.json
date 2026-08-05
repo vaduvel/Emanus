@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:3248146ad6e63b4a3b7e3b7d56a87553e34f5fb5c93791a838aff422ea42c5d6",
-    "contentDigest": "sha256:3685224ced3581332cf186b243b8c66e969acb5a09a4c8879722ddeb9a0741c9"
+    "textDigest": "sha256:8b8aaf5a1dd62d37b9780f4b61d0ea2ff5ef03cd27fe02a4330771f6363ba88c",
+    "contentDigest": "sha256:34e422ee21eaacd836939e895ca5d3bc5f76e890ec90291ee81838e6dfdabcc6"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Fie ca fiecare dintre noi să -i placă aproapelui său pentru ce este bun, ca să -l zidească."
+      "text": "Fie ca fiecare dintre noi să-i placă aproapelui său pentru ce este bun, ca să-l zidească."
     },
     {
       "number": 3,

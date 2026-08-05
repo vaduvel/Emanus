@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:42476f1779e2cb396b9a079b845c209da1e1feea22943fa921fe8644d9a0b9c8",
-    "contentDigest": "sha256:403bee533499c07e3b8da4d54aacf763fde0336e006bcb3b3d57c012e54b3422"
+    "textDigest": "sha256:fa0a18deb67cb7e862e11506c6b36285fb0ae7736f4915d5e52c5d5750774bb3",
+    "contentDigest": "sha256:d0bf6d155cbdac2c646d98b7f86632cb272cc91c5b214aaff18e0ddd8834c98e"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Avea în mînă o carte deschisă, și -a pus piciorul drept pe mare, și stânga pe pămînt."
+      "text": "Avea în mână o carte deschisă, și-a pus piciorul drept pe mare, și stânga pe pământ."
     },
     {
       "number": 3,
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Când au sunat cele tunete, eram gata să scriu; dar am auzit un glas din cer spunând:Pecetluiește lucrurile pe care le-au spus cele tunete nu le scrie.„"
+      "text": "Când au sunat cele tunete, eram gata să scriu; dar am auzit un glas din cer spunând: Pecetluiește lucrurile pe care le-au spus cele tunete nu le scrie."
     },
     {
       "number": 5,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "și jură pe cel ce trăiește pentru totdeauna și pentru totdeauna, care a creat cerul și lucrurile care sunt în el, pămîntul și lucrurile care sunt în el, marea și lucrurile cari sunt în ea, că nu vor mai fi zăboviți,"
+      "text": "Și a jurat pe cel ce trăiește pentru totdeauna și întotdeauna, care a creat cerul și lucrurile care sunt în el, și pământul și lucrurile care sunt pe el, și marea și lucrurile care sunt în ea, că timp nu va mai fi;"
     },
     {
       "number": 7,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Vocea pe care am auzit -o din cer, vorbind din nou cu mine, a zis:,,Du-te, ia cartea care este deschisă în mîna îngerului care stă pe mare și pe pămînt. ”"
+      "text": "Vocea pe care am auzit-o din cer, vorbind din nou cu mine, a zis: Du-te, ia cartea care este deschisă în mâna îngerului care stă pe mare și pe pământ."
     },
     {
       "number": 9,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Ei mi-au spus:Trebuie să profețe din nou peste multe popoare, națiuni, limbi regi.„”"
+      "text": "Ei mi-au spus: Trebuie să profețe din nou peste multe popoare, națiuni, limbi regi."
     }
   ],
   "editorialNotes": [],

@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:e0cc8818059083c1a7e23e66774be75b8146fcf02691d43937fea104bff1e580",
-    "contentDigest": "sha256:f7099dc65897c6b0992adc428fe7effd4998adcf2f5ca7692c541c34555ae1a3"
+    "textDigest": "sha256:92a1184509b998cdb1fb41fbfd89da3f38303866d46d2a0770e131d305c55898",
+    "contentDigest": "sha256:1041fd95410aece02e1c5ccbdcdac623053ee120888b73937b5111a19bbbf1d4"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Dumnezeu, după ce, în trecut, le-a vorbit taților prin prooroci, în multe feluri și în diferite feluri,"
+      "text": "Dumnezeu, după ce, în trecut, le-a vorbit taților prin profeți, în multe feluri și în diferite feluri,"
     },
     {
       "number": 2,
@@ -161,19 +161,19 @@
     },
     {
       "number": 5,
-      "text": "Căci căruia dintre îngeri i-a zis el vreodată:Tu ești Fiul meu; astăzi am devenit tatăl tău?„ iarăși:Eu îi voi fi Tată el Îmi va fi Fiu?”"
+      "text": "Căci căruia dintre îngeri i-a zis el vreodată: Tu ești Fiul meu; astăzi am devenit tatăl tău?„ iarăși: Eu îi voi fi Tată el Îmi va fi Fiu?”"
     },
     {
       "number": 6,
-      "text": "Când îl aduce din nou în lume pe întâiul născut, el spune:Toți îngerii lui Dumnezeu să i se închine!„"
+      "text": "Când îl aduce din nou în lume pe întâiul născut, el spune: Toți îngerii lui Dumnezeu să i se închine!„"
     },
     {
       "number": 7,
-      "text": "Despre îngeri spune:El face vânturile îngerilor Săi pe robii Săi o flacără de foc.”"
+      "text": "Despre îngeri spune: El face vânturile îngerilor Săi pe robii Săi o flacără de foc.”"
     },
     {
       "number": 8,
-      "text": "Dar despre Fiul spune:Tronul tău, Dumnezeule, este în vecii vecilor. Sceptrul neprihănirii este sceptrul Împărăției tale."
+      "text": "Dar despre Fiul spune: Tronul tău, Dumnezeule, este în vecii vecilor. Sceptrul neprihănirii este sceptrul Împărăției tale."
     },
     {
       "number": 9,

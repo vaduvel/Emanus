@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:7a67e5d6ef36001fb1b7e112cb38872a7d71d9fca709fb3a89f1b014e3894fdb",
-    "contentDigest": "sha256:7975c29515da58b63fb123330cd3949005ac2d904fccb5120da7e92e48a96ebc"
+    "textDigest": "sha256:36d02aadc33d3cec8ef67c434ab119b7cedc80b27e056a148d072f6cc57eab39",
+    "contentDigest": "sha256:61b80d1f7e2f273656cd5f0921712727e65139140e34628aaf9fdd2b060e296f"
   },
   "verses": [
     {
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "După ce a spus aceasta, s - a ridicat o ceartă între farisei și saduchei, iar mulțimea a fost împărțită."
+      "text": "După ce a spus aceasta, s-a ridicat o ceartă între farisei și saduchei, iar mulțimea a fost împărțită."
     },
     {
       "number": 8,
@@ -177,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Un strigăt mare s-a ridicat, iar unii dintre cărturarii din partea fariseilor s-au ridicat s-au certat, spunând:Noi nu găsim nici un rău în acest om. Dar dacă un duh sau un înger a vorbit cu el, să nu luptăm împotriva lui Dumnezeu!"
+      "text": "Un strigăt mare s-a ridicat, iar unii dintre cărturarii din partea fariseilor s-au ridicat s-au certat, spunând: Noi nu găsim nici un rău în acest om. Dar dacă un duh sau un înger a vorbit cu el, să nu luptăm împotriva lui Dumnezeu!"
     },
     {
       "number": 10,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Dar fiul surorii lui Pavel a auzit că zăceau în așteptare, și a venit și a intrat în cazarmă și i - a spus lui Pavel."
+      "text": "Dar fiul surorii lui Pavel a auzit că zăceau în așteptare, și a venit și a intrat în cazarmă și i-a spus lui Pavel."
     },
     {
       "number": 17,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "El le -a cerut să aducă munți, ca să -l pună pe Pavel pe unul singur, și să -l ducă în siguranță la Felix, guvernatorul."
+      "text": "El le-a cerut să aducă munți, ca să-l pună pe Pavel pe unul singur, și să-l ducă în siguranță la Felix, guvernatorul."
     },
     {
       "number": 25,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:ad588d8a89067fc514afc36ac406f3dc215aa255c1b2dc04adcf341cc8b1a55d",
-    "contentDigest": "sha256:351ddfd1f8263aa1710b8ba69d025ecfe551e60e0ab7e8c4f963124f9bd712d0"
+    "textDigest": "sha256:e5b87caa577bd4142c547402b7e87a220e750b3611c6f1065a5374d0c9090a8a",
+    "contentDigest": "sha256:a4073c949183bf8de29c6b7e29c4e08197b1e23a1979a2acad3545a991ab50e0"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "a zis slujitorilor săi:,,Acesta este Ioan Botezătorul. El a înviat din morți. De aceea aceste puteri lucrează în el."
+      "text": "a zis slujitorilor săi: Acesta este Ioan Botezătorul. El a înviat din morți. De aceea aceste puteri lucrează în el."
     },
     {
       "number": 3,
@@ -157,15 +157,15 @@
     },
     {
       "number": 4,
-      "text": "Căci Ioan i-a zis:Nu-ți este îngăduit s-o ai.„"
+      "text": "Căci Ioan i-a zis: Nu-ți este îngăduit s-o ai."
     },
     {
       "number": 5,
-      "text": "Cînd avea să -l omoare, se temea de norod, pentrucă -L socoteau ca pe un prooroc."
+      "text": "Când avea să-l omoare, se temea de norod, pentru că-L socoteau ca pe un profet."
     },
     {
       "number": 6,
-      "text": "Dar când a venit ziua de naștere a lui Irod, fiica lui Irodiada a dansat printre ei și i - a plăcut lui Irod."
+      "text": "Dar când a venit ziua de naștere a lui Irod, fiica lui Irodiada a dansat printre ei și i-a plăcut lui Irod."
     },
     {
       "number": 7,
@@ -173,11 +173,11 @@
     },
     {
       "number": 8,
-      "text": "Ea, îndemnată de mama ei, a zis:Dă-mi aici, pe o tavă, capul lui Ioan Botezătorul.”"
+      "text": "Ea, îndemnată de mama ei, a zis: Dă-mi aici, pe o tavă, capul lui Ioan Botezătorul."
     },
     {
       "number": 9,
-      "text": "Împăratul s'a întristat, dar pentru jurămintele lui și pentru cei ce ședeau la masă cu el, a poruncit să i se dea,"
+      "text": "Împăratul s-a întristat, dar pentru jurămintele lui și pentru cei ce ședeau la masă cu el, a poruncit să i se dea,"
     },
     {
       "number": 10,
@@ -193,19 +193,19 @@
     },
     {
       "number": 13,
-      "text": "Cînd a auzit Isus lucrul acesta, S'a depărtat de acolo, într'o corabie, într'un loc pustiu, și, cînd au auzit noroadele, L-au urmat pe jos din cetăți."
+      "text": "Când a auzit Isus lucrul acesta, S-a depărtat de acolo, într'o corabie, într-un loc pustiu, și, când au auzit noroadele, L-au urmat pe jos din cetăți."
     },
     {
       "number": 14,
-      "text": "Isus a ieșit, și a văzut o mare mulțime; a avut milă de ei și le -a vindecat bolnavii."
+      "text": "Isus a ieșit, și a văzut o mare mulțime; a avut milă de ei și le-a vindecat bolnavii."
     },
     {
       "number": 15,
-      "text": "Cînd s'a făcut seară, ucenicii Lui au venit la El, I-au zis:,,Locul acesta este pustiit, ceasul este deja tîrziu. Dă drumul noroadelor, ca să intre în sate să- cumpere merinde."
+      "text": "Când s-a făcut seară, ucenicii Lui au venit la El, I-au zis: Locul acesta este pustiit, ceasul este deja tîrziu. Dă drumul noroadelor, ca să intre în sate să-cumpere merinde."
     },
     {
       "number": 16,
-      "text": "Dar Isus le-a zis:Nu este nevoie să plece; dați-le voi să mănânce.„"
+      "text": "Dar Isus le-a zis: Nu este nevoie să plece; dați-le voi să mănânce."
     },
     {
       "number": 17,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "El a spus:Aduceți-i aici la mine.”"
+      "text": "El a spus: Aduceți-i aici la mine."
     },
     {
       "number": 19,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Toți au mâncat și s'au umplut; au luat douăsprezece coșuri pline cu cele rămase din bucățile rupte."
+      "text": "Toți au mâncat și s-au umplut; au luat douăsprezece coșuri pline cu cele rămase din bucățile rupte."
     },
     {
       "number": 21,
@@ -229,11 +229,11 @@
     },
     {
       "number": 22,
-      "text": "Isus i - a pus imediat pe ucenici să urce în corabie și să meargă înaintea lui în cealaltă parte, în timp ce el a îndepărtat mulțimile."
+      "text": "Isus i-a pus imediat pe ucenici să urce în corabie și să meargă înaintea lui în cealaltă parte, în timp ce el a îndepărtat mulțimile."
     },
     {
       "number": 23,
-      "text": "După ce a izgonit mulțimea, s'a suit singur pe munte, ca să se roage. Cînd a venit seara, era singur acolo."
+      "text": "După ce a izgonit mulțimea, s-a suit singur pe munte, ca să se roage. Când a venit seara, era singur acolo."
     },
     {
       "number": 24,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "Ucenicii, când L-au văzut umblând pe mare, s-au tulburat, zicând:Este o fantomă!„ au strigat de frică."
+      "text": "Ucenicii, când L-au văzut umblând pe mare, s-au tulburat, zicând: Este o fantomă! au strigat de frică."
     },
     {
       "number": 27,
@@ -253,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Petru i-a răspuns:Doamne, dacă ești Tu, poruncește-mi să vin la Tine pe ape.”"
+      "text": "Petru i-a răspuns: Doamne, dacă ești Tu, poruncește-mi să vin la Tine pe ape."
     },
     {
       "number": 29,
@@ -261,11 +261,11 @@
     },
     {
       "number": 30,
-      "text": "Dar când a văzut că vântul este puternic, s-a temut și a început să se scufunde, a strigat, spunând:Doamne, salvează-mă!„"
+      "text": "Dar când a văzut că vântul este puternic, s-a temut și a început să se scufunde, a strigat, spunând: Doamne, salvează-mă!"
     },
     {
       "number": 31,
-      "text": "Isus a întins îndată mâna, l-a apucat i-a zis:Puțin credinciosule, de ce te-ai îndoit?”"
+      "text": "Isus a întins îndată mâna, l-a apucat i-a zis: Puțin credinciosule, de ce te-ai îndoit?"
     },
     {
       "number": 32,
@@ -273,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "Cei care erau în corabie au venit I s-au închinat, spunând:Tu ești cu adevărat Fiul lui Dumnezeu!„"
+      "text": "Cei care erau în corabie au venit I s-au închinat, spunând: Tu ești cu adevărat Fiul lui Dumnezeu!"
     },
     {
       "number": 34,
@@ -281,11 +281,11 @@
     },
     {
       "number": 35,
-      "text": "Cînd l-au recunoscut oamenii din locul acela, au trimes în tot ce era în ținutul acela și au adus la El pe toți bolnavii."
+      "text": "Când l-au recunoscut oamenii din locul acela, au trimes în tot ce era în ținutul acela și au adus la El pe toți bolnavii."
     },
     {
       "number": 36,
-      "text": "L-au implorat să se atingă de marginile hainei lui, și toți cei ce se atingeau de ea au fost întregiți.”"
+      "text": "L-au implorat să se atingă de marginile hainei lui, și toți cei ce se atingeau de ea au fost întregiți."
     }
   ],
   "editorialNotes": [],

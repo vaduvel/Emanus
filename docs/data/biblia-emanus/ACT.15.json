@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:e8c8e2d6136df82bf646c4dbaf9a5bc481dc945dfe0e58ab37750d8378739661",
-    "contentDigest": "sha256:c1c2250ef664a4bea72a920852655112e38083db244c4067468efa6b0c64be3f"
+    "textDigest": "sha256:0036f0668a21967d79f2c40f9769e00774fb8ed507c0fb1f08cce26a90b3d494",
+    "contentDigest": "sha256:954ba60c91924b83bd3cc8b07929ac1cdbcb64864da808c02c7210676858e233"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "De aceea, când Pavel și Barnaba nu au avut mici neînțelegeri și discuții cu ei, ei i - au numit pe Pavel, Barnaba și pe alții dintre ei să se suie la Ierusalim la apostoli și la bătrâni în legătură cu această întrebare."
+      "text": "De aceea, când Pavel și Barnaba nu au avut mici neînțelegeri și discuții cu ei, ei i-au numit pe Pavel, Barnaba și pe alții dintre ei să se suie la Ierusalim la apostoli și la bătrâni în legătură cu această întrebare."
     },
     {
       "number": 3,
@@ -293,7 +293,7 @@
     },
     {
       "number": 39,
-      "text": "Atunci cearta s'a făcut atât de ascuțită încât s'au despărțit unii de alții. Barnaba a luat pe Marcu cu el, și a plecat în Cipru."
+      "text": "Atunci cearta s-a făcut atât de ascuțită încât s-au despărțit unii de alții. Barnaba a luat pe Marcu cu el, și a plecat în Cipru."
     },
     {
       "number": 40,

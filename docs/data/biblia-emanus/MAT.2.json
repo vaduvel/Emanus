@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:311f100351db7753b40b5d1c29db9e3606e9eacfad356acc7779e4036dc15953",
-    "contentDigest": "sha256:99f428cb6aa61dbd99c3b3083c9d34873ce8a0ba96b917dd3b10c2bbd981eb1f"
+    "textDigest": "sha256:a741584c80294cbbeaff3133626bcf1e8e0d6552f44dd44f53d1b0274f724dd4",
+    "contentDigest": "sha256:17bb893fe5ee4c393b7d5b2369bc31447fe387f4172f880725cc6ea9c8c83b12"
   },
   "verses": [
     {
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Fiind avertizați într - un vis de a nu se mai întoarce la Irod, ei s - au întors în țara lor într - un alt mod."
+      "text": "Fiind avertizați într-un vis de a nu se mai întoarce la Irod, ei s-au întors în țara lor într-un alt mod."
     },
     {
       "number": 13,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "S'a sculat, a luat pe copil și pe mama lui noaptea, și a plecat în Egipt."
+      "text": "S-a sculat, a luat pe copil și pe mama lui noaptea, și a plecat în Egipt."
     },
     {
       "number": 15,

@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:a2987ed75433edce12352819e436b183728c427d254c64da6d59c4c170962dd1",
-    "contentDigest": "sha256:f35ad1bf98c2c512424118b1705e461c9e4aeaed806d7b1ad2244cd0fc79bb7b"
+    "textDigest": "sha256:768d244dd5e4ac013041d567d96f95e28941f17ff304e9402038e9e827d8421a",
+    "contentDigest": "sha256:6f808036c110d96d4a337eae67593da84d9179cf7692580afea7d6a79ebc1c72"
   },
   "verses": [
     {
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Căci dacă sîngele țapilor și al taurilor și cenușa unei vaci stropește pe cei ce au fost pângăriți, sfințiți în curăția cărnii,"
+      "text": "Căci dacă sângele taurilor și țapilor și cenușa unei vițele stropind pe cei întinați sfințește spre curățirea cărnii,"
     },
     {
       "number": 14,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "El a spus:Acesta este sângele legământului pe care Dumnezeu vi l-a poruncit.„"
+      "text": "El a spus: Acesta este sângele legământului pe care Dumnezeu vi l-a poruncit.„"
     },
     {
       "number": 21,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Căci Hristos n'a intrat în locuri sfinte făcute cu mîini, cari sunt reprezentări ale adevăratului, ci în cer, ca să se arate acum în fața lui Dumnezeu pentru noi."
+      "text": "Căci Hristos nu a intrat în locurile sfinte făcute de mâini, care sunt prefigurările celor adevărate, ci chiar în cer, pentru a se arăta acum în prezența lui Dumnezeu pentru noi;"
     },
     {
       "number": 25,

@@ -28,12 +28,12 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:cb5e99eee8c227e1a14f1acf2f9965c1d495f623378c08c6cf67a6800d47690b",
-    "contentDigest": "sha256:388b1b4bf9a8b401e96aa6c3845a9244a3fab5db7d02fe1d6f16b07a1c2dac9b"
+    "textDigest": "sha256:96968595ed1602b39efc8a1c4cece90d01cf7904f002f4f7aad8b206d8b9c82c",
+    "contentDigest": "sha256:1a82c987e1a8a9fe5a233ec0cd1049900d05211daf665074e78693c288f63cf5"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Dar, dacă o văduvă are copii sau nepoți, să învețe mai întâi să manifeste evlavie față de propria familie și să - și răsplătească părinții, deoarece acest lucru este acceptabil în ochii lui Dumnezeu."
+      "text": "Dar, dacă o văduvă are copii sau nepoți, să învețe mai întâi să manifeste evlavie față de propria familie și să-și răsplătească părinții, deoarece acest lucru este acceptabil în ochii lui Dumnezeu."
     },
     {
       "number": 5,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "fiind aprobata prin fapte bune, daca a crescut copii, daca a fost ospitaliera cu strainii, daca a spalat picioarele sfintilor, daca i-a eliberat pe cei suferinzi, si daca a urmat cu sârguinta orice lucrare buna."
+      "text": "Fiind adeverită pentru fapte bune; dacă a crescut copii, dacă a găzduit pe străini, dacă a spălat picioarele sfinților, dacă a ușurat pe cei nenorociți, dacă a urmat fiecare lucrare bună."
     },
     {
       "number": 11,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "De asemenea, ei învață să fie leneși, mergînd din casă în casă, și nu numai leneși, ci și bârfe și trufași, spunând lucruri pe care n'ar trebui să le spună."
+      "text": "De asemenea, ei învață să fie leneși, mergînd din casă în casă, și nu numai leneși, ci și bârfe și trufași, spunând lucruri pe care n-ar trebui să le spună."
     },
     {
       "number": 14,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Căci Scriptura spune:Să nu legi botniță boului când calcă în picioare grânele.„ Și:Vrednic este lucrătorul de plata lui.”"
+      "text": "Căci Scriptura spune: Să nu legi botniță boului când calcă în picioare grânele.„ Și: Vrednic este lucrătorul de plata lui.”"
     },
     {
       "number": 19,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Unele păcate ale oamenilor sunt evidente, precedîndu - le la judecată, iar altele urmează și mai tîrziu."
+      "text": "Unele păcate ale oamenilor sunt evidente, precedîndu-le la judecată, iar altele urmează și mai tîrziu."
     },
     {
       "number": 25,

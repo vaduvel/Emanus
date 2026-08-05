@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:ace1960d5323493bc473acf66dab90f9583a4a7bd488f7ce9228e14d7afa4607",
-    "contentDigest": "sha256:77e4edbfcdf6412b38a0e0152e05d03ca485dd8e3ffd36a0c7ee568b1548a535"
+    "textDigest": "sha256:e8ccb1bfd538047ec76dbdecb4c5e12ad9edb847807b989c473587b7cfc28290",
+    "contentDigest": "sha256:83af4924ba8fdf41c42a31e78303bc51d2d307116e11066407f334731962f6f1"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Isus le-a răspuns:Credeți că acești galileeni au fost mai păcătoși decât toți ceilalți galileeni, pentru că au suferit astfel de lucruri?"
+      "text": "Isus le-a răspuns: Credeți că acești galileeni au fost mai păcătoși decât toți ceilalți galileeni, pentru că au suferit astfel de lucruri?"
     },
     {
       "number": 3,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "El a spus această parabolă.Un om avea un smochin sădit în via lui, a venit să caute fructe pe el nu a găsit nici unul."
+      "text": "El a spus această parabolă. Un om avea un smochin sădit în via lui, a venit să caute fructe pe el nu a găsit nici unul."
     },
     {
       "number": 7,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "El a raspuns, Doamne, lasa-l in pace si in acest an, pana cand am sapat in jurul ei si fertilizeaza-l."
+      "text": "El a raspuns, Doamne, lasa-l in pace si in acest an, până cand am sapat in jurul ei si fertilizeaza-l."
     },
     {
       "number": 9,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "El preda într - una dintre sinagogi în ziua Sabatului."
+      "text": "El preda într-una dintre sinagogi în ziua Sabatului."
     },
     {
       "number": 11,
@@ -189,19 +189,19 @@
     },
     {
       "number": 12,
-      "text": "Când Isus a văzut-o, a chemat-o i-a zis:Femeie, ești eliberată de infirmitatea ta."
+      "text": "Când Isus a văzut-o, a chemat-o i-a zis: Femeie, ești eliberată de infirmitatea ta."
     },
     {
       "number": 13,
-      "text": "El și -a pus mînile pe ea, și îndată ea s'a sculat și a glorificat pe Dumnezeu."
+      "text": "El și-a pus mâinile pe ea, și îndată ea s-a sculat și a glorificat pe Dumnezeu."
     },
     {
       "number": 14,
-      "text": "Conducătorul sinagogii, indignat pentru că Isus vindecase în Sabat, a zismii:Sunt zile în care trebuie să lucreze oamenii. De aceea, veniți în acele zile fiți vindecați, nu în ziua Sabatului!"
+      "text": "Conducătorul sinagogii, indignat pentru că Isus vindecase în Sabat, a zismii: Sunt zile în care trebuie să lucreze oamenii. De aceea, veniți în acele zile fiți vindecați, nu în ziua Sabatului!"
     },
     {
       "number": 15,
-      "text": "De aceea Domnul i -a răspuns:,,Voi, fățarnicilor! Oare fiecare dintre voi va elibera boul sau măgarul lui din grajd, în ziua Sabatului, și -l va duce la apă?"
+      "text": "De aceea Domnul i-a răspuns: Voi, fățarnicilor! Oare fiecare dintre voi va elibera boul sau măgarul lui din grajd, în ziua Sabatului, și-l va duce la apă?"
     },
     {
       "number": 16,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "El a zis:Cum este împărăția lui Dumnezeu? Cu ce o voi asemăna?"
+      "text": "El a zis: Cum este împărăția lui Dumnezeu? Cu ce o voi asemăna?"
     },
     {
       "number": 19,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Unul dintre ei i-a zis:Doamne, sunti cei mântuiți? El le-a zis:"
+      "text": "Unul dintre ei i-a zis: Doamne, sunti cei mântuiți? El le-a zis:"
     },
     {
       "number": 24,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Când stăpânul casei se va ridica va închide ușa, iar tu vei începe să stai afară să bați la ușă, spunând:Doamne, Doamne, deschide-ne!, atunci el va răspunde îți va spune:Nu te cunosc nici de unde vii."
+      "text": "Când stăpânul casei se va ridica va închide ușa, iar tu vei începe să stai afară să bați la ușă, spunând: Doamne, Doamne, deschide-ne!, atunci el va răspunde îți va spune: Nu te cunosc nici de unde vii."
     },
     {
       "number": 26,
@@ -265,11 +265,11 @@
     },
     {
       "number": 31,
-      "text": "În zi au venit niște farisei i-au zis:Pleacă de aici pleacă, căci Irod vrea să te omoare."
+      "text": "În zi au venit niște farisei i-au zis: Pleacă de aici pleacă, căci Irod vrea să te omoare."
     },
     {
       "number": 32,
-      "text": "El le -a zis:,,Du-te și spune -i vulpii că am izgonit demoni și am făcut vindecări azi și mîine, și a treia zi mi - am îndeplinit misiunea."
+      "text": "El le-a zis: Du-te și spune-i vulpii că am izgonit demoni și am făcut vindecări azi și mîine, și a treia zi mi-am îndeplinit misiunea."
     },
     {
       "number": 33,

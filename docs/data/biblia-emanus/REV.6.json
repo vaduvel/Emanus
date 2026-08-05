@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,17 +139,17 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:2d00bfb07589e8e088a5a131f73c74635257fdd7c625a15801e5e074832951a9",
-    "contentDigest": "sha256:330841f2bfe10b5cff30ac44ac7cca32b3655e45d17206bfa4e96ccacf6a07db"
+    "textDigest": "sha256:231e41e89f87a46dc7183e9595cd516646838525b77da2b9dcf66c7cbba7cd3e",
+    "contentDigest": "sha256:f5c5b4955b57d2a9629fdbc832d20a31a9404b813d79757971e8daf0b786d294"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Am văzut că Mielul a deschis una din cele peceți am auzit pe una din cele patru făpturi vii zicând, ca cu glas de tunet:Vino vezi!„"
+      "text": "Am văzut că Mielul a deschis una din cele peceți am auzit pe una din cele patru făpturi vii zicând, ca cu glas de tunet: Vino vezi!"
     },
     {
       "number": 2,
-      "text": "Apoi a apărut un cal alb, și cel ce ședea pe el avea un arc. I s'a dat o coroană, și a ieșit biruitor, și a biruit."
+      "text": "Apoi a apărut un cal alb, și cel ce ședea pe el avea un arc. I s-a dat o coroană, și a ieșit biruitor, și a biruit."
     },
     {
       "number": 3,
@@ -157,19 +157,19 @@
     },
     {
       "number": 4,
-      "text": "Un altul a ieșit, un cal roșu. Celui ce ședea pe el i s'a dat puterea să ia pacea de pe pămînt, și să se omoare unii pe alții. I s'a dat o sabie mare."
+      "text": "Un altul a ieșit, un cal roșu. Celui ce ședea pe el i s-a dat puterea să ia pacea de pe pământ, și să se omoare unii pe alții. I s-a dat o sabie mare."
     },
     {
       "number": 5,
-      "text": "Cînd a deschis pecetea a treia, am auzit pe a treia făptură vie zicînd:,,Vino vezi! Și iată că un cal negru, cel ce dea pe el, avea un echilibru în mînă."
+      "text": "Când a deschis pecetea a treia, am auzit pe a treia făptură vie zicând: Vino vezi! Și iată că un cal negru, cel ce dea pe el, avea un echilibru în mână."
     },
     {
       "number": 6,
-      "text": "Am auzit o voce în mijlocul celor patru creaturi vii spunând:?Un choenix de grâu pentru un dinar, și trei choenix de orz pentru un dinar! Nu strica uleiul și vinul!"
+      "text": "Și am auzit o voce în mijlocul celor patru ființe vii, spunând: O măsură de grâu pentru un dinar și trei măsuri de orz pentru un dinar; și vezi să nu vatămi untdelemnul și vinul."
     },
     {
       "number": 7,
-      "text": "Când a deschis cea de-a patra pecete, am auzit-o pe cea de-a patra viețuitoare spunând:Vino și vezi!”"
+      "text": "Când a deschis cea de-a patra pecete, am auzit-o pe cea de-a patra viețuitoare spunând: Vino și vezi!"
     },
     {
       "number": 8,
@@ -177,23 +177,23 @@
     },
     {
       "number": 9,
-      "text": "Cînd a deschis pecetea a cincea, am văzut sub altar sufletele celor ce fuseseră uciși pentru Cuvîntul lui Dumnezeu și pentru mărturia Mielului pe care -l aveau."
+      "text": "Când a deschis pecetea a cincea, am văzut sub altar sufletele celor ce fuseseră uciși pentru Cuvântul lui Dumnezeu și pentru mărturia Mielului pe care-l aveau."
     },
     {
       "number": 10,
-      "text": "Ei strigau cu glas tare, zicând:Până când, Stăpâne, cel sfânt și adevărat, până când vei judeca și vei răzbuna sângele nostru asupra celor ce locuiesc pe pământ?„"
+      "text": "Ei strigau cu glas tare, zicând: Până când, Stăpâne, cel sfânt și adevărat, până când vei judeca și vei răzbuna sângele nostru asupra celor ce locuiesc pe pământ?"
     },
     {
       "number": 11,
-      "text": "Fiecăruia dintre ei i s-a dat o robă albă lungă. Li s-a spus că trebuie să se odihnească încă o vreme, până când tovarășii lor de slujbă frații lor, care aveau să fie ei ca ei, aveau să- termine alergarea."
+      "text": "Fiecăruia dintre ei i s-a dat o robă albă lungă. Li s-a spus că trebuie să se odihnească încă o vreme, până când tovarășii lor de slujbă frații lor, care aveau să fie ei ca ei, aveau să-termine alergarea."
     },
     {
       "number": 12,
-      "text": "Am văzut cînd a deschis pecetea a șasea, și a fost un mare cutremur de pămînt. Soarele s'a făcut negru ca un sac de păr, și toată luna s'a făcut ca sîngele."
+      "text": "Și m-am uitat când a deschis al șaselea sigiliu și, iată, a fost un cutremur mare; și soarele a devenit negru ca o pânză de sac din păr și luna a devenit ca sângele;"
     },
     {
       "number": 13,
-      "text": "Stelele cerului cădeau pe pământ, ca un smochin care- scapă smochinele necoapte când este scuturat de un vânt puternic."
+      "text": "Stelele cerului cădeau pe pământ, ca un smochin care-scapă smochinele necoapte când este scuturat de un vânt puternic."
     },
     {
       "number": 14,
@@ -205,11 +205,11 @@
     },
     {
       "number": 16,
-      "text": "Ei au spus munților stâncilor:Cădeți peste noi ascundeți-ne de Celui ce șade pe tron de mânia Mielului,"
+      "text": "Ei au spus munților stâncilor: Cădeți peste noi ascundeți-ne de Celui ce șade pe tron de mânia Mielului,"
     },
     {
       "number": 17,
-      "text": "Căci a venit ziua cea mare a mâniei Lui cine poate să stea în picioare?”"
+      "text": "Căci a venit ziua cea mare a mâniei Lui cine poate să stea în picioare?"
     }
   ],
   "editorialNotes": [],

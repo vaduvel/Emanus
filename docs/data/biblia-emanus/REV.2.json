@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:8cf295986c193a8142c4ec56ba6cb347a64f02405edda3d1f74fa092e4f1952c",
-    "contentDigest": "sha256:d4c1f4efbef9b9971ee179731a784cf80a4f4cf27c81bf881592098636df04f5"
+    "textDigest": "sha256:fed18c35705c13bccdfc2602c483b9cd7ebeb6bda0dd3139c31d92d555ba1847",
+    "contentDigest": "sha256:15eea6c7cd9e5ec580dbb90d51ca6db3ebdfa7dbe1e1d404cdebe93c0e3b2c79"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Îngerului adunării din Efes scrie-i:Cel care ține cele stele în mâna dreaptă, cel care umblă printre cele lămpi de aur, îi spune următoarele:"
+      "text": "Îngerului adunării din Efes scrie-i: Cel care ține cele stele în mâna dreaptă, cel care umblă printre cele lămpi de aur, îi spune următoarele:"
     },
     {
       "number": 2,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Îngerului adunării din Pergam scrie-i:Cine are sabia ascuțită cu două tăiuri îi spune următoarele:"
+      "text": "Îngerului adunării din Pergam scrie-i: Cine are sabia ascuțită cu două tăiuri îi spune următoarele:"
     },
     {
       "number": 13,
@@ -237,7 +237,7 @@
     },
     {
       "number": 24,
-      "text": "Dar vouă vă spun, celorlalți care sunt în Tiatira, la fel de mulți ca și don 't have this teaching, care don ' t know what some calle. Lucrurile profunde ale Satanei pentru tine spun, Eu nu pun nici o altă povară pe tine."
+      "text": "Dar vă spun vouă și celorlalți în Tiatira, atâția câți nu au această doctrină și care nu au cunoscut adâncimile lui Satan, precum spun ei, nu voi pune peste voi nicio altă povară."
     },
     {
       "number": 25,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:f7fb3c7c9843f194d202d4744c2d045d60dc49eba61f4635a9a072e7ed86bea0",
-    "contentDigest": "sha256:6942ec7a874463c75283a6342f03199ad643131efd9310543e92216641062c46"
+    "textDigest": "sha256:7632efb67b74527e724f9965a62d3f7fd262df1232be365ad24d8559937c61db",
+    "contentDigest": "sha256:1fa513415911cc409c086963a2495474e1f953e2ed3ac6b79f798502f9619f72"
   },
   "verses": [
     {
@@ -187,7 +187,7 @@
     },
     {
       "number": 10,
-      "text": "Isus i -a răspuns:,,Ești învățătorul lui Israel, și nu înțelegi aceste lucruri?"
+      "text": "Isus i-a răspuns:„ Ești învățătorul lui Israel, și nu înțelegi aceste lucruri?"
     },
     {
       "number": 11,
@@ -247,7 +247,7 @@
     },
     {
       "number": 25,
-      "text": "De aceea s - a ridicat o dispută din partea discipolilor lui Ioan cu unii iudei cu privire la purificare."
+      "text": "De aceea s-a ridicat o dispută din partea discipolilor lui Ioan cu unii iudei cu privire la purificare."
     },
     {
       "number": 26,
@@ -255,7 +255,7 @@
     },
     {
       "number": 27,
-      "text": "Ioan a răspuns:Omul nu poate primi nimic dacă nu i-a fost dat din cer."
+      "text": "Ioan a răspuns: Omul nu poate primi nimic dacă nu i-a fost dat din cer."
     },
     {
       "number": 28,
@@ -291,7 +291,7 @@
     },
     {
       "number": 36,
-      "text": "Cine crede în Fiul are viață veșnică; dar cine nu ascultă de Fiul nu va vedea viața, ci mânia lui Dumnezeu rămâne peste el."
+      "text": "Cine crede în Fiul are viață veșnică; dar cine nu ascultă de Fiul nu va vedea viața, ci mânia lui Dumnezeu rămâne peste el.”"
     }
   ],
   "editorialNotes": [

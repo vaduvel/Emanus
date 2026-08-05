@@ -30,10 +30,10 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "omissionAddition": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:1d3c72004c7e6e2cb39022ba7df54d223fffc55b4aac1f579fa58cf70e4efe10",
-    "contentDigest": "sha256:2f3410f6743854c27e926b45b6bf2d6bab74a5f68635ea21c431dfccfc58f964"
+    "textDigest": "sha256:8b667007a938dedb4baef495944fadd2acf22da0357467c1d7e40cb2fd381161",
+    "contentDigest": "sha256:e71265117f962f96d26c9503f35a8a028c8f00e315939627abf5e02a1e3476b9"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, apostol al lui Hristos Isus, prin voia lui Dumnezeu, către sfinții cari sunt în Efes și credincioșii în Hristos Isus;"
+      "text": "Pavel, apostol al lui Hristos Isus, prin voia lui Dumnezeu, către sfinții care sunt în Efes și credincioșii în Hristos Isus;"
     },
     {
       "number": 2,
@@ -185,11 +185,11 @@
     },
     {
       "number": 11,
-      "text": "Ni s'a încredințat și o moștenire în el, care fusese prevestită potrivit scopului celui ce face toate lucrurile după sfatul voinței sale,"
+      "text": "Ni s-a încredințat și o moștenire în el, care fusese prevestită potrivit scopului celui ce face toate lucrurile după sfatul voinței sale,"
     },
     {
       "number": 12,
-      "text": "ca să fim spre slava Lui, noi, cari am nădăjduit mai înainte în Hristos."
+      "text": "Pentru lauda gloriei sale, noi, care întâi ne-am încrezut în Hristos."
     },
     {
       "number": 13,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "pe care a lucrat -o în Hristos, cînd L -a înviat din morți, și L -a pus să șadă la dreapta Lui, în locurile cerești,"
+      "text": "pe care a lucrat-o în Hristos, când L-a înviat din morți, și L-a pus să șadă la dreapta Lui, în locurile cerești,"
     },
     {
       "number": 21,
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "El a supus toate lucrurile supt picioarele lui, și l -a pus să fie cap peste toate lucrurile pentru adunare,"
+      "text": "El a supus toate lucrurile supt picioarele lui, și l-a pus să fie cap peste toate lucrurile pentru adunare,"
     },
     {
       "number": 23,

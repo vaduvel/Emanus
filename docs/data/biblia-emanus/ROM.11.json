@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:db8f83a7a4fca163ba6520ee6498b117471aa939ca77617899f595e0acd89c97",
-    "contentDigest": "sha256:db833c2ef712f6bb885f5313717f934e22c6d1e1f4707d79bf4e453f6281fde4"
+    "textDigest": "sha256:623191835bcbb3fde04d98a5e56892c0a75cabbdb82a6535b07e891a1d08cb4d",
+    "contentDigest": "sha256:09e4f23452049172adf3d06d4092550993056df48aa7abfe42f414eff581875f"
   },
   "verses": [
     {
@@ -237,11 +237,11 @@
     },
     {
       "number": 24,
-      "text": "Căci dacă ați fost tăiați din ceea ce este prin natură un măslin sălbatic, și ați fost altoiți împotriva naturii într'un măslin bun, cu cît mai mult vor fi altoiți aceștia, care sunt ramurile naturale, în măslinul lor?"
+      "text": "Căci dacă ați fost tăiați din ceea ce este prin natură un măslin sălbatic, și ați fost altoiți împotriva naturii într-un măslin bun, cu cât mai mult vor fi altoiți aceștia, care sunt ramurile naturale, în măslinul lor?"
     },
     {
       "number": 25,
-      "text": "Căci nu vreau să fiți neștiutori, fraților, de acest mister, ca să nu fiți înțelepți în propriile voastre îngâmfări, că s'a întîmplat o împietrire parțială pentru Israel, pînă cînd va veni plinătatea neamurilor,"
+      "text": "Căci nu vreau să fiți neștiutori, fraților, de acest mister, ca să nu fiți înțelepți în propriile voastre îngâmfări, că s-a întîmplat o împietrire parțială pentru Israel, până când va veni plinătatea neamurilor,"
     },
     {
       "number": 26,

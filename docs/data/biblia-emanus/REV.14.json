@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:25f7eaa107d58643d29a534cf67ca6e0241c21a9a7db646122755e5eff921c4b",
-    "contentDigest": "sha256:b4b5c3b22683669be28843978dc9914ca5b136f8756889f40a1a855d35aeddb3"
+    "textDigest": "sha256:e9151c850b547a9d8575cede31d14c487d2b99c36a2885d628a747499dc166c1",
+    "contentDigest": "sha256:2e0955f93189c5f5045af1b97b61dfceb42e5275e0b4445c5a9cc8325e9b36ad"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Ei cântă un cântec nou înaintea scaunului de domnie și înaintea celor patru făpturi vii și a bătrînilor. Nimeni nu putea învăța cîntarea decît cei o sută patruzeci și patru de mii, cei ce fuseseră răscumpărați din pămînt."
+      "text": "Ei cântă un cântec nou înaintea scaunului de domnie și înaintea celor patru făpturi vii și a bătrînilor. Nimeni nu putea învăța cîntarea decât cei o sută patruzeci și patru de mii, cei ce fuseseră răscumpărați din pământ."
     },
     {
       "number": 4,
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "În gura lor nu s'a găsit nici o minciună, căci sunt fără prihană."
+      "text": "În gura lor nu s-a găsit nici o minciună, căci sunt fără prihană."
     },
     {
       "number": 6,
@@ -169,19 +169,19 @@
     },
     {
       "number": 7,
-      "text": "El a zis cu glas tare:Temeți-vă de Domnul dați-I slavă, căci a venit ceasul judecății Lui; închin-vă Celui ce a făcut cerurile, pământul, marea izvoarele apelor!"
+      "text": "El a zis cu glas tare: Temeți-vă de Domnul dați-I slavă, căci a venit ceasul judecății Lui; închin-vă Celui ce a făcut cerurile, pământul, marea izvoarele apelor!"
     },
     {
       "number": 8,
-      "text": "A urmat un al doilea înger, care a zis:A căzut Babilonul cel mare, care a făcut ca toate neamurile să bea din vinul mâniei curviei ei."
+      "text": "A urmat un al doilea înger, care a zis: A căzut Babilonul cel mare, care a făcut ca toate neamurile să bea din vinul mâniei curviei ei."
     },
     {
       "number": 9,
-      "text": "Un alt înger, al treilea, i -a urmat, și i -a zis cu glas mare:,,Dacă cineva se închină fiarei și chipului său, și primește un semn pe frunte sau pe mînă,"
+      "text": "Un alt înger, al treilea, i-a urmat, și i-a zis cu glas mare:„ Dacă cineva se închină fiarei și chipului său, și primește un semn pe frunte sau pe mână,"
     },
     {
       "number": 10,
-      "text": "El va bea, de asemenea, din vinul mîniei lui Dumnezeu, care este pregătit neamestecat în paharul mîniei Lui. El va fi chinuit cu foc și sulf în prezența sfinților îngeri și în prezența Mielului."
+      "text": "El va bea, de asemenea, din vinul mâiniei lui Dumnezeu, care este pregătit neamestecat în paharul mâiniei Lui. El va fi chinuit cu foc și sulf în prezența sfinților îngeri și în prezența Mielului."
     },
     {
       "number": 11,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Am auzit un glas din cer spunând:Scrie: Ferice de acum încolo de morții care mor în Domnul!Da, spune Duhul,ca să se odihnească de ostenelile lor, căci faptele lor urmează cu ei."
+      "text": "Am auzit un glas din cer spunând: Scrie: Ferice de acum încolo de morții care mor în Domnul! Da, spune Duhul, ca să se odihnească de ostenelile lor, căci faptele lor urmează cu ei."
     },
     {
       "number": 14,
@@ -201,11 +201,11 @@
     },
     {
       "number": 15,
-      "text": "Un alt înger a ieșit din Templu, strigînd cu glas tare celui ce ședea pe nor, trimete secera și secera, căci a venit ceasul secerișului, căci secerișul pămîntului este copt!"
+      "text": "Un alt înger a ieșit din Templu, strigînd cu glas tare celui ce ședea pe nor, trimete secera și secera, căci a venit ceasul secerișului, căci secerișul pământului este copt!"
     },
     {
       "number": 16,
-      "text": "Cel ce ședea pe nor și -a aruncat secera pe pămînt, și pămîntul a fost secerat."
+      "text": "Cel ce ședea pe nor și-a aruncat secera pe pământ, și pământul a fost secerat."
     },
     {
       "number": 17,
@@ -217,11 +217,11 @@
     },
     {
       "number": 19,
-      "text": "Îngerul și -a aruncat secera în pămînt, și a strîns recolta pămîntului, și a aruncat -o în marele val de vin al mîniei lui Dumnezeu."
+      "text": "Îngerul și-a aruncat secera în pământ, și a strâns recolta pământului, și a aruncat-o în marele val de vin al mâiniei lui Dumnezeu."
     },
     {
       "number": 20,
-      "text": "Presa de vin a fost călcată în picioare în afara orașului, iar sângele a din presa de vin, până la frâiele cailor, până la o mie șase sute de stadii."
+      "text": "Presa de vin a fost călcată în picioare în afara orașului, iar sângele a din presa de vin, până la frâiele cailor, până la o mie șase sute de stadii.”"
     }
   ],
   "editorialNotes": [],

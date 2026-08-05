@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:9f83ef7203c181b102abc5defacc60c45804d2ee1dbcc753ee3ca4a0a47cdf4b",
-    "contentDigest": "sha256:126880dab089aaec25916b522130c8a2ea45b4e5453392f617ef3b4029971189"
+    "textDigest": "sha256:c2a5f9f4c1777213b94ab9ca8577db6e7a60af17ba851e67d7565b9bbc5a4ad2",
+    "contentDigest": "sha256:3cbcc847886b33d6500ff75127ec15446d3d4443319ce83361ed2ae559ea00f5"
   },
   "verses": [
     {
@@ -159,19 +159,19 @@
     },
     {
       "number": 3,
-      "text": "Surorile au trimis deci la el i-au zis:Doamne, iată că cel pentru care ai multă dragoste este bolnav.„"
+      "text": "Surorile au trimis deci la el i-au zis: Doamne, iată că cel pentru care ai multă dragoste este bolnav."
     },
     {
       "number": 4,
-      "text": "Dar Isus, auzind aceasta, a zis:Boala aceasta nu este spre moarte, ci spre slava lui Dumnezeu, pentru ca Fiul lui Dumnezeu să fie proslăvit prin ea.”"
+      "text": "Dar Isus, auzind aceasta, a zis: Boala aceasta nu este spre moarte, ci spre slava lui Dumnezeu, pentru ca Fiul lui Dumnezeu să fie proslăvit prin ea."
     },
     {
       "number": 5,
-      "text": "Isus a iubit -o pe Marta, pe sora ei și pe Lazăr."
+      "text": "Isus a iubit-o pe Marta, pe sora ei și pe Lazăr."
     },
     {
       "number": 6,
-      "text": "Cînd a auzit că era bolnav, a stat două zile în locul unde era."
+      "text": "Când a auzit că era bolnav, a stat două zile în locul unde era."
     },
     {
       "number": 7,
@@ -179,23 +179,23 @@
     },
     {
       "number": 8,
-      "text": "Ucenicii l-au întrebat:Rabbi, evreii încercau doar să te ucidă cu pietre. Te duci din nou acolo?„"
+      "text": "Ucenicii l-au întrebat: Rabbi, evreii încercau doar să te ucidă cu pietre. Te duci din nou acolo?"
     },
     {
       "number": 9,
-      "text": "Isus a răspuns:Nu sunt douăsprezece ceasuri de zi? Dacă umblă cineva ziua, nu se poticnește, pentru că vede lumina lumii acesteia."
+      "text": "Isus a răspuns: Nu sunt douăsprezece ceasuri de zi? Dacă umblă cineva ziua, nu se poticnește, pentru că vede lumina lumii acesteia."
     },
     {
       "number": 10,
-      "text": "Dar dacă un om umblă noaptea, se împiedică, pentru că lumina nu este în el.”"
+      "text": "Dar dacă un om umblă noaptea, se împiedică, pentru că lumina nu este în el."
     },
     {
       "number": 11,
-      "text": "El le-a spus aceste lucruri, iar după aceea le-a spus:Prietenul nostru Lazăr a adormit, dar eu mă duc ca să-l trezesc din somn„."
+      "text": "El le-a spus aceste lucruri, iar după aceea le-a spus: Prietenul nostru Lazăr a adormit, dar eu mă duc ca să-l trezesc din somn."
     },
     {
       "number": 12,
-      "text": "Ucenicii au zis:Doamne, dacă a adormit, se va însănăto.”"
+      "text": "Ucenicii au zis: Doamne, dacă a adormit, se va însănăto."
     },
     {
       "number": 13,
@@ -203,7 +203,7 @@
     },
     {
       "number": 14,
-      "text": "Atunci Isus le-a spus clar:Lazăr a murit."
+      "text": "Atunci Isus le-a spus clar: Lazăr a murit."
     },
     {
       "number": 15,
@@ -211,7 +211,7 @@
     },
     {
       "number": 16,
-      "text": "De aceea, Toma, care se Didim, le-a spus tovarășilor săi discipoli:Să mergem noi, ca să murim împreună cu el.„"
+      "text": "De aceea, Toma, care se Didim, le-a spus tovarășilor săi discipoli: Să mergem noi, ca să murim împreună cu el."
     },
     {
       "number": 17,
@@ -223,31 +223,31 @@
     },
     {
       "number": 19,
-      "text": "Mulți iudei se alăturaseră femeilor din jurul Martei și al Mariei, ca să - i consoleze cu privire la fratele lor."
+      "text": "Mulți iudei se alăturaseră femeilor din jurul Martei și al Mariei, ca să-i consoleze cu privire la fratele lor."
     },
     {
       "number": 20,
-      "text": "Marta, cînd a auzit că Isus vine, s'a dus și l -a întîlnit, dar Maria a rămas în casă."
+      "text": "Marta, când a auzit că Isus vine, s-a dus și l-a întîlnit, dar Maria a rămas în casă."
     },
     {
       "number": 21,
-      "text": "Marta i-a zis lui Isus:Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit."
+      "text": "Marta i-a zis lui Isus: Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit."
     },
     {
       "number": 22,
-      "text": "Și acum știu că orice vei cere de la Dumnezeu, Dumnezeu îți va da.”"
+      "text": "Și acum știu că orice vei cere de la Dumnezeu, Dumnezeu îți va da."
     },
     {
       "number": 23,
-      "text": "Isus i-a zis:Fratele tău va învia.„"
+      "text": "Isus i-a zis: Fratele tău va învia."
     },
     {
       "number": 24,
-      "text": "Marta i-a zis:tiu că va învia la înviere, în ziua de apoi.”"
+      "text": "Marta i-a zis: tiu că va învia la înviere, în ziua de apoi."
     },
     {
       "number": 25,
-      "text": "Isus i -a zis:,,Eu sunt învierea și viața. Cine crede în Mine va mai trăi, chiar dacă va muri."
+      "text": "Isus i-a zis: Eu sunt învierea și viața. Cine crede în Mine va mai trăi, chiar dacă va muri."
     },
     {
       "number": 26,
@@ -255,11 +255,11 @@
     },
     {
       "number": 27,
-      "text": "Ea i-a răspuns:Da, Doamne, am ajuns să cred că Tu ești Hristosul, Fiul lui Dumnezeu, Cel ce vine în lume.„"
+      "text": "Ea i-a răspuns: Da, Doamne, am ajuns să cred că Tu ești Hristosul, Fiul lui Dumnezeu, Cel ce vine în lume."
     },
     {
       "number": 28,
-      "text": "După ce a spus acestea, ea s-a dus a chemat-o pe Maria, sora ei, în taină, zicând:Învățătorul este aici te cheamă”."
+      "text": "După ce a spus acestea, ea s-a dus a chemat-o pe Maria, sora ei, în taină, zicând: Învățătorul este aici te cheamă."
     },
     {
       "number": 29,
@@ -271,19 +271,19 @@
     },
     {
       "number": 31,
-      "text": "Iudeii, cari erau cu ea în casă și o consolau, cînd au văzut -o pe Maria, s'au sculat repede și au ieșit afară, au urmat -o, și au zis:,,Se duce la mormînt să plângă acolo. „"
+      "text": "Atunci iudeii, care erau cu ea în casă și o mângâiau, văzând-o pe Maria că s-a ridicat în grabă și a ieșit, au urmat-o, spunând: Se duce la mormânt ca să plângă acolo."
     },
     {
       "number": 32,
-      "text": "De aceea, când Maria a ajuns unde era Isus l-a văzut, a căzut la picioarele lui i-a zis:Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit.”"
+      "text": "De aceea, când Maria a ajuns unde era Isus l-a văzut, a căzut la picioarele lui i-a zis: Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit."
     },
     {
       "number": 33,
-      "text": "Isus, văzînd-o plîngînd, pe Iudeii cari plîngeau împreună cu ea, a gemut în duh, s'a tulburat."
+      "text": "De aceea Isus, când a văzut-o plângând, și pe iudeii care veniseră cu ea plângând, a gemut în duhul lui și s-a tulburat."
     },
     {
       "number": 34,
-      "text": "i-au zis:Unde l-ai pus?„ Ei i-au zis:Doamne, vino vezi!”"
+      "text": "i-au zis: Unde l-ai pus? Ei i-au zis: Doamne, vino vezi!"
     },
     {
       "number": 35,
@@ -291,27 +291,27 @@
     },
     {
       "number": 36,
-      "text": "Atunci iudeii au zis:Vedeți câtă avea pentru el!„"
+      "text": "Atunci iudeii au zis: Vedeți câtă avea pentru el!"
     },
     {
       "number": 37,
-      "text": "Unii dintre ei ziceau:Oare nu putea omul acesta, care a deschis ochii orbului, să-l păzească pe omul acesta de moarte?”"
+      "text": "Unii dintre ei ziceau: Oare nu putea omul acesta, care a deschis ochii orbului, să-l păzească pe omul acesta de moarte?"
     },
     {
       "number": 38,
-      "text": "Isus, gemînd din nou în el, a venit la mormînt. Acum era o peșteră, și o piatră se întindea pe ea."
+      "text": "Isus, gemînd din nou în el, a venit la mormânt. Acum era o peșteră, și o piatră se întindea pe ea."
     },
     {
       "number": 39,
-      "text": "Și Isus a zis:Ia piatra!„ Marta, sora celui mort, i-a zis:Doamne, de data aceasta este o duhoare, căci el este mort de patru zile”."
+      "text": "Și Isus a zis: Ia piatra! Marta, sora celui mort, i-a zis: Doamne, de data aceasta este o duhoare, căci el este mort de patru zile."
     },
     {
       "number": 40,
-      "text": "Isus i-a zis:Nu ți-am spus că, dacă vei crede, vei vedea slava lui Dumnezeu?„"
+      "text": "Isus i-a zis: Nu ți-am spus că, dacă vei crede, vei vedea slava lui Dumnezeu?"
     },
     {
       "number": 41,
-      "text": "Așa că au luat piatra din locul în care zăcea mortul. Isus a ridicat ochii și a spus:? Tată, îți mulțumesc că m-ai ascultat."
+      "text": "Atunci au luat piatra de unde era pus mortul. Și Isus a ridicat ochii în sus și a spus: Tată, îți mulțumesc că m-ai auzit."
     },
     {
       "number": 42,
@@ -319,11 +319,11 @@
     },
     {
       "number": 43,
-      "text": "După ce a spus acestea, a strigat cu glas tare:Lazăr, ieși afară!”"
+      "text": "După ce a spus acestea, a strigat cu glas tare: Lazăr, ieși afară!"
     },
     {
       "number": 44,
-      "text": "Cel mort a ieșit, legat de mînă de picior cu învelitoare, lui era înfășurată în jurul hainei. Isus le -a zis:,,Eliber -l, -l să plece."
+      "text": "Și mortul a ieșit cu mâinile și picioarele legate cu fâșii de pânză, și fața îi era înfășurată cu un ștergar. Isus le-a spus: Dezlegați-l și lăsați-l să meargă."
     },
     {
       "number": 45,
@@ -335,7 +335,7 @@
     },
     {
       "number": 47,
-      "text": "Preoții cei mai de seamă fariseii au adunat un sobor au zis:,,Ce facem? Căci omul acesta face multe semne."
+      "text": "Preoții cei mai de seamă fariseii au adunat un sobor au zis: Ce facem? Căci omul acesta face multe semne."
     },
     {
       "number": 48,
@@ -343,7 +343,7 @@
     },
     {
       "number": 49,
-      "text": "Dar unul din ei, Caiafa, care era mare preot în anul acela, le -a zis:,,Nu știți nimic,"
+      "text": "Dar unul din ei, Caiafa, care era mare preot în anul acela, le-a zis: Nu știți nimic,"
     },
     {
       "number": 50,
@@ -355,19 +355,19 @@
     },
     {
       "number": 52,
-      "text": "și nu numai pentru neam, ci și ca să adune într'unul pe copiii lui Dumnezeu, cari sunt risipiți."
+      "text": "Și nu numai pentru acea națiune, ci și ca să adune într-unul singur pe copiii lui Dumnezeu, cei risipiți."
     },
     {
       "number": 53,
-      "text": "Astfel, din acea zi, ei s - au sfătuit să - l omoare."
+      "text": "Astfel, din acea zi, ei s-au sfătuit să-l omoare."
     },
     {
       "number": 54,
-      "text": "Isus n'a mai umblat deschis printre Iudei, ci a plecat de acolo în țara din apropierea pustiei, într'o cetate numită Efraim, și a rămas acolo cu ucenicii Săi."
+      "text": "Isus n-a mai umblat deschis printre Iudei, ci a plecat de acolo în țara din apropierea pustiei, într'o cetate numită Efraim, și a rămas acolo cu ucenicii Săi."
     },
     {
       "number": 55,
-      "text": "Paștele iudeilor era aproape. Mulți s'au suit din țară la Ierusalim, înainte de Paște, ca să se purifice."
+      "text": "Paștele iudeilor era aproape. Mulți s-au suit din țară la Ierusalim, înainte de Paște, ca să se purifice."
     },
     {
       "number": 56,
@@ -375,7 +375,7 @@
     },
     {
       "number": 57,
-      "text": "Preoții cei mai de seamă și fariseii au poruncit ca, dacă cineva ar ști unde este, să spună lucrul acesta, ca să -l prindă."
+      "text": "Preoții cei mai de seamă și fariseii au poruncit ca, dacă cineva ar ști unde este, să spună lucrul acesta, ca să-l prindă."
     }
   ],
   "editorialNotes": [],

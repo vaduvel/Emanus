@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:64a33e1d447c7f3b8ae548f259eb0aabdce327af5ad0d21de38928039b06360c",
-    "contentDigest": "sha256:e051cf9d5134cde6437a861772b664e55e52f2c24b6308bb32069f0c613bfe42"
+    "textDigest": "sha256:6cf0583917c7e645f9891a2df9617bdba83bebdb93371c67588fae251a47c85f",
+    "contentDigest": "sha256:f4639dd3d52294acadbe3a987b08fc6a7a51b874caf57017cfac205e5cdb1ac2"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "De aceea, când vine în lume, el spune:Tu n-ai voit jertfă jertfă, ci Mi-ai pregătit un trup."
+      "text": "De aceea, când vine în lume, el spune: Tu n-ai voit jertfă jertfă, ci Mi-ai pregătit un trup."
     },
     {
       "number": 6,
@@ -173,11 +173,11 @@
     },
     {
       "number": 8,
-      "text": "Anterior, spunând:Sacrificii și ofrande și arderi de tot și jertfe pentru păcat nu ai dorit, nici nu au avut plăcere în ele (cele care sunt oferite conform legii),"
+      "text": "Anterior, spunând: Sacrificii și ofrande și arderi de tot și jertfe pentru păcat nu ai dorit, nici nu au avut plăcere în ele (cele care sunt oferite conform legii),"
     },
     {
       "number": 9,
-      "text": "apoi a zis:Iată, am venit să fac voia ta. El îl ia pe primul, ca să-l întemeieze pe al doilea,"
+      "text": "apoi a zis: Iată, am venit să fac voia ta. El îl ia pe primul, ca să-l întemeieze pe al doilea,"
     },
     {
       "number": 10,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Dar El, după ce a adus o jertfă pentru păcate pentru totdeauna, S'a așezat la dreapta lui Dumnezeu,"
+      "text": "Dar El, după ce a adus o jertfă pentru păcate pentru totdeauna, S-a așezat la dreapta lui Dumnezeu,"
     },
     {
       "number": 13,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Iată legământul pe care-l voi face cu ei după acele zile, zice Domnul,voi pune legile Mele în inima lor le voi scrie în mintea lor, apoi spune:"
+      "text": "Iată legământul pe care-l voi face cu ei după acele zile, zice Domnul, voi pune legile Mele în inima lor le voi scrie în mintea lor, apoi spune:"
     },
     {
       "number": 17,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "pe calea pe care ne -a închinat -o, o cale nouă și vie, prin văl, adică carnea lui,"
+      "text": "pe calea pe care ne-a închinat-o, o cale nouă și vie, prin văl, adică carnea lui,"
     },
     {
       "number": 21,
@@ -261,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Căci cunoaștem pe Cel ce a zis:,A Mea este răzbunarea, Eu voi răsplăti, zice Domnul. Și iarăși:,Domnul va judeca pe poporul Său."
+      "text": "Căci cunoaștem pe Cel ce a zis:, A Mea este răzbunarea, Eu voi răsplăti, zice Domnul. Și iarăși:, Domnul va judeca pe poporul Său."
     },
     {
       "number": 31,

@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:1adbfe76da3136c85413aaac2f0417685c825e76747d2a704d38373b7eb6b416",
-    "contentDigest": "sha256:1710ee5dd635fa5a422fdc493757b7e2850415cb9b09bd716abdd5ad3be6c2fd"
+    "textDigest": "sha256:838905caa0cadcf6a617af9a31fb9c58e5534e151ec7e5015b1a71f493038a26",
+    "contentDigest": "sha256:fd2241afd74dda29b0ab0d956e48f106e316dfc585194e12c0c8e193474ab542"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Tot așa Hristos nu S-a slăvit pe Sine ca să Se facă Mare Preot, ci El I-a zis:Tu ești Fiul Meu; astăzi am devenit Tatăl Tău.„"
+      "text": "Tot așa Hristos nu S-a slăvit pe Sine ca să Se facă Mare Preot, ci El I-a zis: Tu ești Fiul Meu; astăzi am devenit Tatăl Tău.„"
     },
     {
       "number": 6,
@@ -169,11 +169,11 @@
     },
     {
       "number": 7,
-      "text": "El, în zilele cărnii sale, a adus rugăciuni și cereri cu strigăte puternice și lacrimi celui ce a putut să -l salveze de la moarte, și a fost ascultat din pricina fricii lui sfinte,"
+      "text": "El, în zilele cărnii sale, a adus rugăciuni și cereri cu strigăte puternice și lacrimi celui ce a putut să-l salveze de la moarte, și a fost ascultat din pricina fricii lui sfinte,"
     },
     {
       "number": 8,
-      "text": "deși era Fiu, totuși a învățat ascultarea prin lucrurile pe care le - a suferit."
+      "text": "deși era Fiu, totuși a învățat ascultarea prin lucrurile pe care le-a suferit."
     },
     {
       "number": 9,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Căci oricine trăiește cu lapte nu are experiență în cuvîntul dreptății, căci este un prunc."
+      "text": "Căci oricine trăiește cu lapte nu are experiență în cuvântul dreptății, căci este un prunc."
     },
     {
       "number": 14,

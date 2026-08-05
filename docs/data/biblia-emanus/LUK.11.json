@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,17 +139,17 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:a4bf8f50e5570a7715694e5b6f7f5028f32688837afb7e097a75eb091fa5ebfd",
-    "contentDigest": "sha256:9ded1c1fcbb562f0336f9c86af035a5ec3a4e33b568fa625b7cd1a6983a6753c"
+    "textDigest": "sha256:a154c0c576755d544f0d2b9cc856f29fecec1bd8f0c5ee4a1066f9a135032308",
+    "contentDigest": "sha256:460d760fa0f17bf60c49d81374eb602493573b629163c91b7311c0a259678c2c"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Când-a terminat rugăciunea într-un anumit loc, unul dintre discipolii săi i-a spus:Doamne,-ne să ne rugăm, așa cum Ioan i-a învățat pe discipolii săi."
+      "text": "Când-a terminat rugăciunea într-un anumit loc, unul dintre discipolii săi i-a spus: Doamne,-ne să ne rugăm, așa cum Ioan i-a învățat pe discipolii săi."
     },
     {
       "number": 2,
-      "text": "El le-a zis:Când vă rugați, să ziceți: Tatăl nostru care ești în ceruri, fie ca numele tău să fie sfințit!"
+      "text": "El le-a zis: Când vă rugați, să ziceți: Tatăl nostru care ești în ceruri, fie ca numele tău să fie sfințit!"
     },
     {
       "number": 3,
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "El le-a zis:Care dintre voi, dacă vă duceți la un prieten la miezul-i spuneți: Prietene, împrumută-mi trei pâini,"
+      "text": "El le-a zis: Care dintre voi, dacă vă duceți la un prieten la miezul-i spuneți: Prietene, împrumută-mi trei pâini,"
     },
     {
       "number": 6,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Care dintre voi, tati, daca fiul vostru cere paine, ii va da o piatra? Sau daca cere un peste, nu ii va da un sarpe in loc de un peste, nu-i asa?"
+      "text": "Dacă un fiu va cere pâine de la vreunul dintre voi care este tată, îi va da o piatră? Sau, dacă cere un pește, îi va da în loc de pește un șarpe?"
     },
     {
       "number": 12,
@@ -197,11 +197,11 @@
     },
     {
       "number": 14,
-      "text": "A izgonit un demon, și era mut. Cînd a ieșit demonul, omul mut a vorbit, și noroadele s'au mirat."
+      "text": "A izgonit un demon, și era mut. Când a ieșit demonul, omul mut a vorbit, și noroadele s-au mirat."
     },
     {
       "number": 15,
-      "text": "Dar unii dintre ei ziceau:El scoate dracii cu Beelzebul, căpetenia dracilor."
+      "text": "Dar unii dintre ei ziceau: El scoate dracii cu Beelzebul, căpetenia dracilor."
     },
     {
       "number": 16,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Dar el, cunoscînd gîndurile lor, le -a zis:,,Orice împărăție dezbinată împotriva ei înse este nimicită; o casă dezbinată împotriva ei înse cade."
+      "text": "Dar el, cunoscînd gîndurile lor, le-a zis: Orice împărăție dezbinată împotriva ei înse este nimicită; o casă dezbinată împotriva ei înse cade."
     },
     {
       "number": 18,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Când a spus aceste lucruri, o femeie din-a ridicat glasul i-a zis:Binecuvântat este pântecele care te-a născut sânii care te-au alăptat!"
+      "text": "Când a spus aceste lucruri, o femeie din-a ridicat glasul i-a zis: Binecuvântat este pântecele care te-a născut sânii care te-au alăptat!"
     },
     {
       "number": 28,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Cînd s'au strînsmile la El, El a început să zică:,,Aceasta este o rea, care caută un semn. Nu i se va da alt semn decît semnul proorocului Iona."
+      "text": "Când s-au strînsmile la El, El a început să zică: Aceasta este o rea, care caută un semn. Nu i se va da alt semn decât semnul proorocului Iona."
     },
     {
       "number": 30,
@@ -285,19 +285,19 @@
     },
     {
       "number": 36,
-      "text": "De aceea, daca tot corpul tau este plin de lumina, fara sa ai parte de intuneric, acesta va fi in intregime plin de lumina, ca atunci cand lampa cu stralucirea ei stralucitoare iti da lumina."
+      "text": "De aceea dacă întreg trupul tău este plin de lumină, neavând o parte întunecată, totul va fi plin de lumină, ca atunci când lumina strălucitoare a unei candele îți dă lumină."
     },
     {
       "number": 37,
-      "text": "În timp ce vorbea, un fariseu i -a cerut să ia masa cu el. S'a dus și s'a așezat la masă."
+      "text": "În timp ce vorbea, un fariseu i-a cerut să ia masa cu el. S-a dus și s-a așezat la masă."
     },
     {
       "number": 38,
-      "text": "Când fariseu a văzut - o, s - a mirat că nu se spălase mai întâi înainte de cină."
+      "text": "Când fariseu a văzut-o, s-a mirat că nu se spălase mai întâi înainte de cină."
     },
     {
       "number": 39,
-      "text": "Domnul i -a zis:,,Acum voi, fariseii, curățiți afară paharul și platoul, dar partea voastră lăuntrică este plină de șantaj și răutate."
+      "text": "Domnul i-a zis: Acum voi, fariseii, curățiți afară paharul și platoul, dar partea voastră lăuntrică este plină de șantaj și răutate."
     },
     {
       "number": 40,
@@ -325,7 +325,7 @@
     },
     {
       "number": 46,
-      "text": "El a zis:Vai de voi,lor! Căci voi încărcați pe oameni cu poveri greu de purtat, iar voi înșivă nu ridicați nici măcar un deget ca să ajutați la ducerea acestor poveri."
+      "text": "El a zis: Vai de voi, lor! Căci voi încărcați pe oameni cu poveri greu de purtat, iar voi înșivă nu ridicați nici măcar un deget ca să ajutați la ducerea acestor poveri."
     },
     {
       "number": 47,

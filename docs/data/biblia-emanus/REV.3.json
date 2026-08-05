@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:cacf08e5261881b7685af5cd45133216bec326b6385185f06f17f2312306dd2d",
-    "contentDigest": "sha256:a865835c1fd4fd45b3689940604c2e4cbc8659f2e3bf17641a77aaeea228c685"
+    "textDigest": "sha256:ca8c230fcde3020223c3b120e8f2d49642f6f9aea44d37a46d569aeaa6065e59",
+    "contentDigest": "sha256:71ed55fa69f1d5eac79487ddaf50e562ced2dec6862695bddf142ad868cc398e"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Și îngerului adunării din Sardes scrie:? Cel care are cele șapte Spirite ale lui Dumnezeu și cele șapte stele spune aceste lucruri:? Știu lucrările tale, că ai reputația de a fi viu, dar ești mort."
+      "text": "Și îngerului bisericii din Sardes, scrie-i: Acestea le spune cel ce are cele șapte Duhuri ale lui Dumnezeu și cele șapte stele: Știu faptele tale, că ai numele că trăiești și ești mort."
     },
     {
       "number": 2,
@@ -169,7 +169,7 @@
     },
     {
       "number": 7,
-      "text": "Îngerului adunării din Filadelfia scrie-i:Cine este sfânt, cine este adevărat, cine are cheia lui David, cine deschide nimeni nu poate închide, cine închide nimeni nu deschide, spune aceste lucruri:"
+      "text": "Îngerului adunării din Filadelfia scrie-i: Cine este sfânt, cine este adevărat, cine are cheia lui David, cine deschide nimeni nu poate închide, cine închide nimeni nu deschide, spune aceste lucruri:"
     },
     {
       "number": 8,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Îngerului adunării din Laodicea scrie-i:Amin, Martorul Credincios Adevărat, Începutul creației lui Dumnezeu, spune aceste lucruri:"
+      "text": "Îngerului adunării din Laodicea scrie-i: Amin, Martorul Credincios Adevărat, Începutul creației lui Dumnezeu, spune aceste lucruri:"
     },
     {
       "number": 15,

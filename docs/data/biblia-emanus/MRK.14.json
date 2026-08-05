@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:e6800f97ba0ac0f0727d77756252228b647f9bf9d9451c8d404e600d8c0550c0",
-    "contentDigest": "sha256:ecdde1e4c2aefb34c14b359d4fb8919c39bd75d44f672501766a84de916088d4"
+    "textDigest": "sha256:4f926df82445b18773f8d13eb58a2e0349e6db09bb64a2f0ae204851a90d254f",
+    "contentDigest": "sha256:483e488c16aa8a45dd3bef672438da85000f21a30161cc81abaabdca72507d74"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Cu două zile înainte de Paște și de sărbătoarea pâinii neînrămate, preoții cei mai de seamă și cărturarii căutau să -l prindă prin amăgire și să - l omoare."
+      "text": "Cu două zile înainte de Paște și de sărbătoarea pâinii neînrămate, preoții cei mai de seamă și cărturarii căutau să-l prindă prin amăgire și să-l omoare."
     },
     {
       "number": 2,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Cînd au auzit ei lucrul acesta, s'au bucurat, și i-au făgăduit să -i dea bani; și a căutat cum să -l izbăvească."
+      "text": "Când au auzit ei lucrul acesta, s-au bucurat, și i-au făgăduit să-i dea bani; și a căutat cum să-l izbăvească."
     },
     {
       "number": 12,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "El le-a răspuns:Este unul dintre cei doisprezece, cel care înmoaie cu mine în blid."
+      "text": "El le-a răspuns: Este unul dintre cei doisprezece, cel care înmoaie cu mine în blid."
     },
     {
       "number": 21,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "Dar el a vorbit cu atât mai mult:Dacă trebuie să mor cu voi, nu vă voi tăgădui. Toți au spus lucru."
+      "text": "Dar el a vorbit cu atât mai mult: Dacă trebuie să mor cu voi, nu vă voi tăgădui. Toți au spus lucru."
     },
     {
       "number": 32,
@@ -353,7 +353,7 @@
     },
     {
       "number": 53,
-      "text": "Ei l-au dus pe Isus la marele preot. Toți preoții cei mai de seamă, bătrînii și cărturarii au venit împreună cu el."
+      "text": "Ei l-au dus pe Isus la marele preot. Toți preoții cei mai de seamă, bătrânii și cărturarii au venit împreună cu el."
     },
     {
       "number": 54,
@@ -361,7 +361,7 @@
     },
     {
       "number": 55,
-      "text": "Preoții cei mai de seamă și tot consiliul au căutat martori împotriva lui Isus, ca să -l omoare, și să nu găsească pe nimeni."
+      "text": "Preoții cei mai de seamă și tot consiliul au căutat martori împotriva lui Isus, ca să-l omoare, și să nu găsească pe nimeni."
     },
     {
       "number": 56,

@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:942d866e5009cf3aa3841591047dacef7b7137660ff59b6dbc5eb03e1b594477",
-    "contentDigest": "sha256:8b96d6c09deab546bc600b69420260ac5419b4bc6b51dfd9318b21e3cbea1210"
+    "textDigest": "sha256:9d8abc2aba806c6513fa80a60efc6c831dd80b59fb72580ba7a6ef6b7d1b87a8",
+    "contentDigest": "sha256:013dab39380f52afa22fde9cde156f9f2c7f89daa146766fe88eddd997075638"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Căci toți ne poticnim în multe lucruri. Oricine nu se poticnește în cuvînt este o persoană perfectă, capabilă să țină în frâu tot trupul."
+      "text": "Căci toți ne poticnim în multe lucruri. Oricine nu se poticnește în cuvânt este o persoană perfectă, capabilă să țină în frâu tot trupul."
     },
     {
       "number": 3,
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Așadar, limba este și un mic mădular, și se laudă cu lucruri mari. Vezi cum un foc mic se poate întinde într - o pădure mare!"
+      "text": "Așadar, limba este și un mic mădular, și se laudă cu lucruri mari. Vezi cum un foc mic se poate întinde într-o pădure mare!"
     },
     {
       "number": 6,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Cine este înțelept priceput între voi? Să arate prin purtarea lui bună că faptele lui sunt făcute cu blîndețea înțelepciunii."
+      "text": "Cine este înțelept priceput între voi? Să arate prin purtarea lui bună că faptele lui sunt făcute cu blândețea înțelepciunii."
     },
     {
       "number": 14,

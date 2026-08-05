@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:75df640e1be8d1548b6a601cd5ebe7bbea0b08037dbcd399062af94b76b2cd9a",
-    "contentDigest": "sha256:a4bc77ae6afbe77ba465c328e85157b45e4fd4ee7792932bf4c3645d787d21a0"
+    "textDigest": "sha256:32d5fe4d79325f8e034420925336d5d8e8a9fb4e4c8ce5b7fd9776b2c0fef741",
+    "contentDigest": "sha256:e0f7194dbbb54524c305042b16992ae1a96e37c215ecf5a1ff7311f179380467"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "El i -a învățat multe lucruri în pilde, și le -a spus în învățătura Lui:"
+      "text": "El i-a învățat multe lucruri în pilde, și le-a spus în învățătura Lui:"
     },
     {
       "number": 3,
@@ -261,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "El a spus:Cum vom asemăna împărăția lui Dumnezeu sau cu ce parabolă o vom ilustra?"
+      "text": "El a spus: Cum vom asemăna împărăția lui Dumnezeu sau cu ce parabolă o vom ilustra?"
     },
     {
       "number": 31,
@@ -277,7 +277,7 @@
     },
     {
       "number": 34,
-      "text": "Fără o parabolă, el nu le - a vorbit; dar în particular, el le - a explicat discipolilor săi totul."
+      "text": "Fără o parabolă, el nu le-a vorbit; dar în particular, el le-a explicat discipolilor săi totul."
     },
     {
       "number": 35,

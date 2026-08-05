@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:51c94da4b12e6d70938079e658e081a5f098c63b9c5aa164fdfa3f37b8592bcb",
-    "contentDigest": "sha256:19206493d40ee5c3b5c28c22444f3c6a4b86a4459abf9879fc7ad39765bb45be"
+    "textDigest": "sha256:cf4b04ca864a8184f87667aaa856b3faf1f92be47fa851ea40baa7021b795561",
+    "contentDigest": "sha256:7b713ed3a3e64a4fd45a327d70c79c5074e80f783b80f498a3ff151101b11c52"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "De aceea, cei ce erau împrăștiați în străinătate au predicat Cuvîntul."
+      "text": "De aceea, cei ce erau împrăștiați în străinătate au predicat Cuvântul."
     },
     {
       "number": 5,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "pe care toți îl ascultau, de la cel mai mic până la cel mai mare, zicând:Omul acesta este puterea cea mare a lui Dumnezeu."
+      "text": "pe care toți îl ascultau, de la cel mai mic până la cel mai mare, zicând: Omul acesta este puterea cea mare a lui Dumnezeu."
     },
     {
       "number": 11,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Dar când l - au crezut pe Filip predicând vestea bună despre Regatul lui Dumnezeu și numele lui Isus Hristos, ei au fost botezați, atât bărbați cît și femei."
+      "text": "Dar când l-au crezut pe Filip predicând vestea bună despre Regatul lui Dumnezeu și numele lui Isus Hristos, ei au fost botezați, atât bărbați cât și femei."
     },
     {
       "number": 13,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "S'a sculat și a plecat. Și iată că era un om din Etiopia, un eunuc cu o mare autoritate sub Candace, împărăteasa Etiopienilor, care era peste toată comoara ei, care venise la Ierusalim ca să se închine."
+      "text": "S-a sculat și a plecat. Și iată că era un om din Etiopia, un eunuc cu o mare autoritate sub Candace, împărăteasa Etiopienilor, care era peste toată comoara ei, care venise la Ierusalim ca să se închine."
     },
     {
       "number": 28,

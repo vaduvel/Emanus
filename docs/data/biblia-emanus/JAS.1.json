@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:c8db9b7105b5a63b81a8ce21672a55997689b5064e6cb28303d564ec95482071",
-    "contentDigest": "sha256:cbe55d87e55570c88bfef97aef4cc6c0dec1ee28036ea7343c83c128c1d18157"
+    "textDigest": "sha256:918692a8f21ef7acc5539eb9eecdc318cd891b117f329b086b0c91d28ba5299c",
+    "contentDigest": "sha256:e297485881081855aedecb746e9e8f8cd0a44646c81ee2d4fd42aa1d81b8beea"
   },
   "verses": [
     {
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "El ne -a născut din voia Lui, prin cuvîntul adevărului, ca să fim un fel de prime roade ale făpturilor Lui."
+      "text": "El ne-a născut din voia Lui, prin cuvântul adevărului, ca să fim un fel de prime roade ale făpturilor Lui."
     },
     {
       "number": 19,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Căci dacă cineva ascultă Cuvîntul și nu face, este ca un om care se uită la fața lui naturală în oglindă;"
+      "text": "Căci dacă cineva ascultă Cuvântul și nu face, este ca un om care se uită la fața lui naturală în oglindă;"
     },
     {
       "number": 24,

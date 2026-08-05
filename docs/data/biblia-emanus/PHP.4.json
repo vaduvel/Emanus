@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "copyrightDistance": "approved",
     "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:25b5ff1668c78e10268cfa6c28227a66bea40052eb2c8b5750afa89ea56f6bbd",
-    "contentDigest": "sha256:3b426066f3d4b14139ef3252be59746e8dd1578e21818409448d60008eea6781"
+    "textDigest": "sha256:75dafb4761978afea518b8f38d33e6ad3f528046dbdfbe6f35178822002ad97a",
+    "contentDigest": "sha256:3b95e95669f6b52b219933ebba89a1c57a9732a83a6a777e53699434f6acb51e"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Bucurați-vă în Domnul întotdeauna! Din nou voi spune,? Bucurați-vă!"
+      "text": "Bucurați-vă în Domnul întotdeauna; iarăși voi spune: Bucurați-vă."
     },
     {
       "number": 5,

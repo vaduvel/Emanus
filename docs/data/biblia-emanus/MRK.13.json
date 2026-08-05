@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:17e5b5b7e009925ac42ee4a985f6376ba5c7ead7597fa0b54f64a758ebe0b991",
-    "contentDigest": "sha256:bd672eac07351da021e3c59ef2e97016e00f63085d52580426e798a0fe7fa798"
+    "textDigest": "sha256:af06ec6f189603cd4fd3475de8e605e21b3b3b58af441ecf2adccd5aff7bc123",
+    "contentDigest": "sha256:4027839e8cd472fa9df3f271a1a917fe0b9cb9bb15a6575dfb99111a7bda48ab"
   },
   "verses": [
     {
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Dar voi priviți.Iată, v-am spus mai dinainte toate lucrurile."
+      "text": "Dar voi priviți. Iată, v-am spus mai dinainte toate lucrurile."
     },
     {
       "number": 24,
@@ -273,7 +273,7 @@
     },
     {
       "number": 33,
-      "text": "Privește, fii atent și roagă - te; căci nu știi cînd este timpul."
+      "text": "Privește, fii atent și roagă-te; căci nu știi când este timpul."
     },
     {
       "number": 34,

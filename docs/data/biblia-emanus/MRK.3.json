@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:698d2a98d4d3d6e42e389a4ef4f784cb201b5b1cf8c786a8c7389ba9c0932c3e",
-    "contentDigest": "sha256:4e2c35159e1daab72e727b2ce751999f62eb51317f546db94894d595c6982223"
+    "textDigest": "sha256:00557f57317b3256f97b88022c8691726ac89e056b4638e9328520ea766cc4b7",
+    "contentDigest": "sha256:51f1017b6b800314f04745abd7323864386cc011929dd3f627a60ee0dc9b882d"
   },
   "verses": [
     {
@@ -177,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "El le - a spus discipolilor săi că o mică barcă trebuie să stea lângă el din cauza mulțimii, ca să nu - l preseze."
+      "text": "El le-a spus discipolilor săi că o mică barcă trebuie să stea lângă el din cauza mulțimii, ca să nu-l preseze."
     },
     {
       "number": 10,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "El i - a avertizat cu asprime că nu trebuie să - l facă cunoscut."
+      "text": "El i-a avertizat cu asprime că nu trebuie să-l facă cunoscut."
     },
     {
       "number": 13,
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Iuda Iscarioteanul, care l -a trădat și el, a intrat într'o casă."
+      "text": "Iuda Iscarioteanul, care l-a trădat și el, a intrat într'o casă."
     },
     {
       "number": 20,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "El i - a chemat și le - a zis în parabole:! Cum poate Satana să - l izgonească pe Satan?"
+      "text": "El i-a chemat și le-a zis în parabole:! Cum poate Satana să-l izgonească pe Satan?"
     },
     {
       "number": 24,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Daca o casa este impartita impotriva ei insasi, acea casa nu poate sta in picioare."
+      "text": "Și dacă o casă este dezbinată împotriva ei înseși, casa aceea nu va putea dăinui."
     },
     {
       "number": 26,

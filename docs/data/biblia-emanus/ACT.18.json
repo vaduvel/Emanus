@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:cce401c6280aa0c9f2a9547adb2d70d54e14cacd3cbe3f83daf8d0e7758416f4",
-    "contentDigest": "sha256:a5cfbcbe1a15213c591f7808040a4443658a292627701065277ede2120c48cf5"
+    "textDigest": "sha256:86ba42db5448f5ebec360a6b021b46911dc5226f324f367ecc42f18a02e88def",
+    "contentDigest": "sha256:2ba659c02296cafd6ee61a2e664dc36270bd17842175a47b933a5c25022fbf41"
   },
   "verses": [
     {
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "El a venit la Efes, și i -a lăsat acolo; dar el însuși a intrat în sinagogă și a vorbit cu Iudeii."
+      "text": "El a venit la Efes, și i-a lăsat acolo; dar el însuși a intrat în sinagogă și a vorbit cu Iudeii."
     },
     {
       "number": 20,
@@ -225,7 +225,7 @@
     },
     {
       "number": 21,
-      "text": "Dar, lăsându-se de ei, le-a zis:Trebuie să prăznuiesc cu orice chip sărbătoarea aceasta viitoare în Ierusalim, dar mă voi întoarce la voi, dacă va voi Dumnezeu.” Apoi a plecat din Efes."
+      "text": "Dar, lăsându-se de ei, le-a zis: Trebuie să prăznuiesc cu orice chip sărbătoarea aceasta viitoare în Ierusalim, dar mă voi întoarce la voi, dacă va voi Dumnezeu.” Apoi a plecat din Efes."
     },
     {
       "number": 22,

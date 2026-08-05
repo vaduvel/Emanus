@@ -30,11 +30,11 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.39728811051665835,
       "minimumScore": 0.5313914534272478
     },
-    "textDigest": "sha256:15912e8c25d391ddcc614d4f7db22c8a257d16947be873745526ae2c25beed57",
-    "contentDigest": "sha256:ef314578c077b641f21c4eb8615c149dcad7e907330398764c48cc97b32afbe9"
+    "textDigest": "sha256:9da390d5e8a9b84572f695fbe211f969e3af8ae628a3bfbdfeddc0b55f9fabce",
+    "contentDigest": "sha256:f1aa9f76b7cf6b570ccadc88a020fc7eb419c0be31410c22734874b6eda4525c"
   },
   "verses": [
     {
@@ -149,7 +149,7 @@
     },
     {
       "number": 2,
-      "text": "Cînd a ieșit din corabie, îndată un om cu un duh necurat l -a întîlnit din morminte."
+      "text": "Când a ieșit din corabie, îndată un om cu un duh necurat l-a întîlnit din morminte."
     },
     {
       "number": 3,
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "căci era adesea legat cu lanțuri și lanțuri, și lanțurile fuseseră sfâșiate de el, și cătușele rupte în bucăți. Nimeni nu avea puterea să -l îmblînzească."
+      "text": "căci era adesea legat cu lanțuri și lanțuri, și lanțurile fuseseră sfâșiate de el, și cătușele rupte în bucăți. Nimeni nu avea puterea să-l îmblînzească."
     },
     {
       "number": 5,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "El l - a implorat mult să nu - i trimită afară din țară."
+      "text": "El l-a implorat mult să nu-i trimită afară din țară."
     },
     {
       "number": 11,
@@ -189,15 +189,15 @@
     },
     {
       "number": 12,
-      "text": "Toți dracii L-au rugat I-au zis:Trimite-ne în porci, ca să intrăm în ei."
+      "text": "Toți dracii L-au rugat I-au zis: Trimite-ne în porci, ca să intrăm în ei."
     },
     {
       "number": 13,
-      "text": "Isus le -a dat îndată îngăduința; duhurile necurate au ieșit și au intrat în porci. Turma de circa două mii s'a repezit pe malul abrupt în mare, și s'au înecat în mare."
+      "text": "Isus le-a dat îndată îngăduința; duhurile necurate au ieșit și au intrat în porci. Turma de circa două mii s-a repezit pe malul abrupt în mare, și s-au înecat în mare."
     },
     {
       "number": 14,
-      "text": "Cei ce hrăneau porcii au fugit, și au spus -o în cetate și în țară. Poporul a venit să vadă ce s'a întîmplat."
+      "text": "Cei ce hrăneau porcii au fugit, și au spus-o în cetate și în țară. Poporul a venit să vadă ce s-a întîmplat."
     },
     {
       "number": 15,
@@ -209,11 +209,11 @@
     },
     {
       "number": 17,
-      "text": "Ei au început să - l implore să plece din regiunea lor."
+      "text": "Ei au început să-l implore să plece din regiunea lor."
     },
     {
       "number": 18,
-      "text": "În timp ce intra în barcă, cel care fusese posedat de demoni l - a implorat să fie cu el."
+      "text": "În timp ce intra în barcă, cel care fusese posedat de demoni l-a implorat să fie cu el."
     },
     {
       "number": 19,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "a suferit multe lucruri de mulți doctori, a cheltuit tot ce avea, și nu a fost mai bine, ci mai degrabă s'a înrăutățit,"
+      "text": "a suferit multe lucruri de mulți doctori, a cheltuit tot ce avea, și nu a fost mai bine, ci mai degrabă s-a înrăutățit,"
     },
     {
       "number": 27,
@@ -253,7 +253,7 @@
     },
     {
       "number": 28,
-      "text": "Pentru că ea a spus:Dacă mă ating de hainele lui, voi fi făcută bine."
+      "text": "Pentru că ea a spus: Dacă mă ating de hainele lui, voi fi făcută bine."
     },
     {
       "number": 29,
@@ -313,7 +313,7 @@
     },
     {
       "number": 43,
-      "text": "El le -a poruncit cu strictețe să nu știe nimeni lucrul acesta, și a poruncit să i se dea ceva de mâncare."
+      "text": "El le-a poruncit cu strictețe să nu știe nimeni lucrul acesta, și a poruncit să i se dea ceva de mâncare."
     }
   ],
   "editorialNotes": [],

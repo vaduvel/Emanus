@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:76365594808fec9dbe26510887233c37882b2666937d92ce8c709629e23e5fc1",
-    "contentDigest": "sha256:1a86ee015f0b5a1f970443002bf92f0a50d3a07b91ec725f15ed575551b93562"
+    "textDigest": "sha256:abb1d5d82c50e6d0c1c003e3ff2854939bc3d91c5fa6d6dbb9f86049a1ebfca0",
+    "contentDigest": "sha256:1f3f6e730a6e72f49616d9832d8af39f1c6e5b450bca6c65feba69e2e3137c66"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Prin credință Abel i - a oferit lui Dumnezeu o jertfă mai bună decît Cain, prin care i - a mărturisit că era drept, Dumnezeu mărturisind cu privire la darurile sale; și prin ea, el, fiind mort, încă vorbește."
+      "text": "Prin credință Abel i-a oferit lui Dumnezeu o jertfă mai bună decât Cain, prin care i-a mărturisit că era drept, Dumnezeu mărturisind cu privire la darurile sale; și prin ea, el, fiind mort, încă vorbește."
     },
     {
       "number": 5,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Fără credință este imposibil să - i fii plăcut, căci cel care vine la Dumnezeu trebuie să creadă că el există și că este un răsplătitor al celor care îl caută."
+      "text": "Fără credință este imposibil să-i fii plăcut, căci cel care vine la Dumnezeu trebuie să creadă că el există și că este un răsplătitor al celor care îl caută."
     },
     {
       "number": 7,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Prin credință Avraam, cînd a fost chemat, a ascultat să meargă la locul pe care trebuia să -l primească ca moștenire; și a ieșit, fără să știe unde s'a dus."
+      "text": "Prin credință Avraam, când a fost chemat, a ascultat să meargă la locul pe care trebuia să-l primească ca moștenire; și a ieșit, fără să știe unde s-a dus."
     },
     {
       "number": 9,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Prin credință, chiar Sara însăși a primit puterea de a concepe, și a născut un copil când a împlinit vârsta, deoarece l - a numărat pe fidelul care promisese."
+      "text": "Prin credință, chiar Sara a primit puterea de a zămisli, deși trecuse de vârsta potrivită, fiindcă L-a socotit credincios pe Cel care făgăduise."
     },
     {
       "number": 12,
@@ -205,11 +205,11 @@
     },
     {
       "number": 16,
-      "text": "Dar acum ei doresc o țară mai bună, adică una cerească; de aceea lui Dumnezeu nu -i este rușine de ei, ca să fie numiți Dumnezeul lor, căci El le -a pregătit o cetate."
+      "text": "Dar acum ei doresc o țară mai bună, adică una cerească; de aceea lui Dumnezeu nu-i este rușine de ei, ca să fie numiți Dumnezeul lor, căci El le-a pregătit o cetate."
     },
     {
       "number": 17,
-      "text": "Prin credință, Avraam, pus la încercare, l -a oferit pe Isaac. Da, cel ce primise cu bucurie promisiunile, aducea pe singurul său fiu născut,"
+      "text": "Prin credință, Avraam, pus la încercare, l-a oferit pe Isaac. Da, cel ce primise cu bucurie promisiunile, aducea pe singurul său fiu născut,"
     },
     {
       "number": 18,
@@ -217,23 +217,23 @@
     },
     {
       "number": 19,
-      "text": "Concluzionând că Dumnezeu este capabil să învie chiar și din morți. La figurat, el l - a primit și el din morți."
+      "text": "Concluzionând că Dumnezeu este capabil să învie chiar și din morți. La figurat, el l-a primit și el din morți."
     },
     {
       "number": 20,
-      "text": "Prin credință Isaac i - a binecuvântat pe Iacov și pe Esau, ba chiar cu privire la lucrurile viitoare."
+      "text": "Prin credință Isaac i-a binecuvântat pe Iacov și pe Esau, ba chiar cu privire la lucrurile viitoare."
     },
     {
       "number": 21,
-      "text": "Prin credință Iacov, cînd a murit, a binecuvîntat pe fiecare din fiii lui Iosif, s'a închinat, sprijinindu-se pe vîrful toiagului său."
+      "text": "Prin credință Iacov, când a murit, a binecuvîntat pe fiecare din fiii lui Iosif, s-a închinat, sprijinindu-se pe vîrful toiagului său."
     },
     {
       "number": 22,
-      "text": "Prin credință Iosif, cînd sfîrșitul lui era aproape, a adus aminte de plecarea copiilor lui Israel, și a dat instrucțiuni cu privire la oasele lui."
+      "text": "Prin credință Iosif, când sfîrșitul lui era aproape, a adus aminte de plecarea copiilor lui Israel, și a dat instrucțiuni cu privire la oasele lui."
     },
     {
       "number": 23,
-      "text": "Prin credință, Moise, cînd s'a născut, a fost ascuns trei luni de părinții săi, pentrucă au văzut că era un copil frumos; și nu s'au temut de porunca împăratului."
+      "text": "Prin credință, Moise, după ce s-a născut, a fost ascuns trei luni de părinții lui, fiindcă au văzut că pruncul era frumos și nu s-au temut de porunca împăratului."
     },
     {
       "number": 24,
@@ -245,11 +245,11 @@
     },
     {
       "number": 26,
-      "text": "El s'a uitat la ocara lui Hristos, mai mare decît comorile Egiptului; căci a privit spre răsplată."
+      "text": "El s-a uitat la ocara lui Hristos, mai mare decât comorile Egiptului; căci a privit spre răsplată."
     },
     {
       "number": 27,
-      "text": "Prin credință a părăsit Egiptul, fără să se teamă de mânia împăratului, căci a perseverat, ca și cum l -ar fi văzut pe cel nevăzut."
+      "text": "Prin credință a părăsit Egiptul, fără să se teamă de mânia împăratului, căci a perseverat, ca și cum l-ar fi văzut pe cel nevăzut."
     },
     {
       "number": 28,
@@ -257,7 +257,7 @@
     },
     {
       "number": 29,
-      "text": "Prin credință, ei au trecut prin Marea Roșie ca pe uscat; cînd Egiptenii au încercat să facă aceasta, au fost înghițiți."
+      "text": "Prin credință, ei au trecut prin Marea Roșie ca pe uscat; când Egiptenii au încercat să facă aceasta, au fost înghițiți."
     },
     {
       "number": 30,
@@ -297,7 +297,7 @@
     },
     {
       "number": 39,
-      "text": "Toți aceștia, după ce au fost lăudați pentru credința lor, n'au primit făgăduința,"
+      "text": "Toți aceștia, după ce au fost lăudați pentru credința lor, n-au primit făgăduința,"
     },
     {
       "number": 40,

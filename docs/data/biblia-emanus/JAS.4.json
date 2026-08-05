@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:5926d53c61bb8b3bd9037f8c62c8c37cf22a49423fcc4d16e10677c34cd6171a",
-    "contentDigest": "sha256:88836541aea8a55d3137538134768ad907211ae003baa3a73ae244ccb9fdca5b"
+    "textDigest": "sha256:667d3a1be39f6f78adbcfa7b1277bbc61ed2b71c170ad5bdf3416a7db30e5336",
+    "contentDigest": "sha256:db9864e72d2d2e426645b16a29ceabc3caca29db7508f00322addecd8e872289"
   },
   "verses": [
     {
@@ -161,11 +161,11 @@
     },
     {
       "number": 5,
-      "text": "Sau credeți că Scriptura spune în zadar:Duhul care locuiește în noi tânjește după gelozie„?"
+      "text": "Sau credeți că Scriptura spune în zadar: Duhul care locuiește în noi tânjește după gelozie„?"
     },
     {
       "number": 6,
-      "text": "Dar el dă mai mult har. De aceea se spune:Dumnezeu se împotrivește celor mândri, dar dă har celor smeriți.”"
+      "text": "Dar el dă mai mult har. De aceea se spune: Dumnezeu se împotrivește celor mândri, dar dă har celor smeriți.”"
     },
     {
       "number": 7,
@@ -193,11 +193,11 @@
     },
     {
       "number": 13,
-      "text": "Veniți acum, voi care ziceți:Astăzi sau mâine să mergem în cetatea aceasta să petrecem un an acolo, făcând nego făcând profit.„"
+      "text": "Veniți acum, voi care ziceți: Astăzi sau mâine să mergem în cetatea aceasta să petrecem un an acolo, făcând nego făcând profit.„"
     },
     {
       "number": 14,
-      "text": "Cu toate acestea, nu știi cum va fi viața ta mâine. Pentru ce este viața ta? Pentru că ești un vapori care apare pentru un pic de timp și apoi dispare."
+      "text": "Voi nici măcar nu știți ce va fi mâine. Ce este viața voastră? Sunteți un abur care se arată pentru puțin timp și apoi dispare."
     },
     {
       "number": 15,

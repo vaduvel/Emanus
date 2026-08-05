@@ -28,12 +28,12 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:d317ab388f2cc82bd1e28de1a66e364ecc421c28e56fd7ede7f0572732d63d94",
-    "contentDigest": "sha256:0cf17f641381f353a39750a5a3f97213536fd66313abe6661d1c0e414abccb4a"
+    "textDigest": "sha256:0152008e4b83717a1e2d837e88c129b679409a341d0bc253e8e5d2c2b57c4cd3",
+    "contentDigest": "sha256:964654a2d782defcd580900469c99c03f05236b1a289008cd68a37447992fc8c"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "(Căci cum ar putea cineva care nu știe cum să - și conducă propria casă să aibă grijă de adunarea lui Dumnezeu?)"
+      "text": "(Căci cum ar putea cineva care nu știe cum să-și conducă propria casă să aibă grijă de adunarea lui Dumnezeu?)"
     },
     {
       "number": 6,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Dar dacă aștept mult, ca să știți cum trebuie să se poarte oamenii în casa lui Dumnezeu, care este adunarea Dumnezeului celui viu, stâlpul și pămîntul adevărului."
+      "text": "Dar dacă aștept mult, ca să știți cum trebuie să se poarte oamenii în casa lui Dumnezeu, care este adunarea Dumnezeului celui viu, stâlpul și pământul adevărului."
     },
     {
       "number": 16,

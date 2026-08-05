@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:a542fe8983d7b7a6dd581aa65964d79699f8a94e1d111e25a2d8b7141c63b68e",
-    "contentDigest": "sha256:82488c2e0b4937c57f56d0557ce6cc4b50c3b121d0b69764ca570a79207d6e65"
+    "textDigest": "sha256:fbd16c3b5a3f149d78adad745b9f4e27a24b84edd8336426e15c49f9f0280579",
+    "contentDigest": "sha256:3fd744cd4e1732d9316ebc0eafd1a708f5992845401a5ce49cb74226d56f15cd"
   },
   "verses": [
     {
@@ -171,11 +171,11 @@
     },
     {
       "number": 6,
-      "text": "Isus le - a spus această parabolă, dar ei nu au înțeles ce le spunea el."
+      "text": "Isus le-a spus această parabolă, dar ei nu au înțeles ce le spunea el."
     },
     {
       "number": 7,
-      "text": "De aceea Isus le-a zis din nou:Adevărat, adevărat vă spun că Eu sunt ușa oilor."
+      "text": "De aceea Isus le-a zis din nou: Adevărat, adevărat vă spun că Eu sunt ușa oilor."
     },
     {
       "number": 8,
@@ -183,7 +183,7 @@
     },
     {
       "number": 9,
-      "text": "Eu sunt usa. Daca intra cineva prin mine, el va fi salvat, si va intra si va iesi si va gasi pasune."
+      "text": "Eu sunt ușa; dacă intră cineva prin mine va fi salvat și va intra și va ieși și va găsi pășune."
     },
     {
       "number": 10,
@@ -231,7 +231,7 @@
     },
     {
       "number": 21,
-      "text": "Alții ziceau:Acestea nu sunt cuvintele celui posedat de un demon. Nu este cu putință ca un demon să deschidă ochii orbilor, nu-i așa?”"
+      "text": "Alții ziceau: Acestea nu sunt cuvintele celui posedat de un demon. Nu este cu putință ca un demon să deschidă ochii orbilor, nu-i așa?”"
     },
     {
       "number": 22,
@@ -243,11 +243,11 @@
     },
     {
       "number": 24,
-      "text": "Iudeii s-au apropiat de el i-au zis:Până când ne vei ține în suspans? Dacă tu ești Hristosul, spune-ne deslușit.„"
+      "text": "Iudeii s-au apropiat de el i-au zis: Până când ne vei ține în suspans? Dacă tu ești Hristosul, spune-ne deslușit.„"
     },
     {
       "number": 25,
-      "text": "Isus le-a răspuns:Eu v-am spus voi nu credeți; lucrările pe care le fac Eu în numele Tatălui Meu, acestea mărturisesc despre Mine."
+      "text": "Isus le-a răspuns: Eu v-am spus voi nu credeți; lucrările pe care le fac Eu în numele Tatălui Meu, acestea mărturisesc despre Mine."
     },
     {
       "number": 26,
@@ -275,15 +275,15 @@
     },
     {
       "number": 32,
-      "text": "Isus le-a răspuns:V-am arătat multe fapte bune de la Tatăl Meu; pentru care din aceste fapte Mă ucideți cu pietre?”"
+      "text": "Isus le-a răspuns: V-am arătat multe fapte bune de la Tatăl Meu; pentru care din aceste fapte Mă ucideți cu pietre?”"
     },
     {
       "number": 33,
-      "text": "Iudeii i-au răspuns:Noi nu te ucidem cu pietre pentru o faptă bună, ci pentru blasfemie, pentru că tu, fiind om, te faci Dumnezeu.„"
+      "text": "Iudeii i-au răspuns: Noi nu te ucidem cu pietre pentru o faptă bună, ci pentru blasfemie, pentru că tu, fiind om, te faci Dumnezeu.„"
     },
     {
       "number": 34,
-      "text": "Isus le-a răspuns:Oare nu este scris în Legea voastră: Eu am zis: dumnezei?"
+      "text": "Isus le-a răspuns: Oare nu este scris în Legea voastră: Eu am zis: dumnezei?"
     },
     {
       "number": 35,
@@ -303,7 +303,7 @@
     },
     {
       "number": 39,
-      "text": "Ei au căutat din nou să -l prindă, și el a ieșit din mîna lor."
+      "text": "Ei au căutat din nou să-l prindă, și el a ieșit din mâna lor."
     },
     {
       "number": 40,

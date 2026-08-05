@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:eb021308a3953acc933b1d21198bfc989d8bea24d9abb98d719ed5d254599b25",
-    "contentDigest": "sha256:6599563c8e961d14a5c469ecbc93c7acd4212464154e2fd8c8f42e03e2a49a74"
+    "textDigest": "sha256:eeb168f43d641ded9fb6dd558b3326ae933b93ea0a455df9b8464cd1fc0aca17",
+    "contentDigest": "sha256:ada99c3d97e50119160ec7fc1984fba4ccbba7bdec2f75d714bf0e6cc5d8273e"
   },
   "verses": [
     {
@@ -157,19 +157,19 @@
     },
     {
       "number": 4,
-      "text": "Dar ei tăceau. El l -a luat, l -a vindecat, și l -a lăsat să plece."
+      "text": "Dar ei tăceau. El l-a luat, l-a vindecat, și l-a lăsat să plece."
     },
     {
       "number": 5,
-      "text": "El le-a răspuns:Care dintre voi, dacă fiul vostru sau un bou ar cădea într-o fântână, nu l-ar scoate îndată într-o zi de Sabat?"
+      "text": "El le-a răspuns: Care dintre voi, dacă fiul vostru sau un bou ar cădea într-o fântână, nu l-ar scoate îndată într-o zi de Sabat?"
     },
     {
       "number": 6,
-      "text": "Ei nu au putut să - i răspundă cu privire la aceste lucruri."
+      "text": "Ei nu au putut să-i răspundă cu privire la aceste lucruri."
     },
     {
       "number": 7,
-      "text": "El le -a spus o pildă celor invitați, cînd a văzut cum au ales locurile cele mai bune, și le -a zis:"
+      "text": "El le-a spus o pildă celor invitați, când a văzut cum au ales locurile cele mai bune, și le-a zis:"
     },
     {
       "number": 8,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "El a spus, de asemenea, la cel care l-au invitat,? Atunci când vă face o cină sau o cină, nu suna prietenii tăi, nici frații tăi, nici rudele tale, nici vecinii bogați, sau poate că s-ar putea întoarce, de asemenea, favoarea, și să vă plătească înapoi."
+      "text": "Atunci a spus și celui ce l-a invitat: Când faci un prânz sau o cină, nu chema prietenii tăi, nici frații tăi, nici rudele tale, nici vecini bogați; ca nu cumva și ei să te cheme în schimb și să ai o răsplată."
     },
     {
       "number": 13,
@@ -201,11 +201,11 @@
     },
     {
       "number": 15,
-      "text": "Când unul dintre cei ce deau la masă cu el a auzit aceste lucruri, i-a zis:Binecuvântat să fie cel ce se va ospăta în Împărăția lui Dumnezeu!"
+      "text": "Când unul dintre cei ce deau la masă cu el a auzit aceste lucruri, i-a zis: Binecuvântat să fie cel ce se va ospăta în Împărăția lui Dumnezeu!"
     },
     {
       "number": 16,
-      "text": "Dar el i-a zis:,,Un om a făcut o cină mare, și a invitat mulți oameni."
+      "text": "Dar el i-a zis:„ Un om a făcut o cină mare, și a invitat mulți oameni."
     },
     {
       "number": 17,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Toate acestea ca unul a început să găsească scuze.? Primul a spus să-l,? Am cumpărat un câmp, și trebuie să merg și să-l văd. Vă rugăm să mă scuzați."
+      "text": "Dar toți, ca unul, au început să se scuze. Primul i-a spus: Am cumpărat o bucată de pământ și trebuie să mă duc și să o văd; te rog să mă scuzi."
     },
     {
       "number": 19,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Un altul a spus:M-am căsătorit cu o și de aceea nu pot veni."
+      "text": "Un altul a spus: M-am căsătorit cu o și de aceea nu pot veni."
     },
     {
       "number": 21,
@@ -229,7 +229,7 @@
     },
     {
       "number": 22,
-      "text": "Slujitorul a zis:Doamne, s-a făcut cum ai poruncit și mai este loc."
+      "text": "Slujitorul a zis: Doamne, s-a făcut cum ai poruncit și mai este loc."
     },
     {
       "number": 23,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Mulțimea mergea cu el. S'a întors și le -a zis:"
+      "text": "Mulțimea mergea cu el. S-a întors și le-a zis:"
     },
     {
       "number": 26,
@@ -261,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "spunând,? Acest om a început să construiască și nu a fost capabil de a termina."
+      "text": "Spunând: Acest om a început să zidească și nu a fost în stare să termine."
     },
     {
       "number": 31,
@@ -277,11 +277,11 @@
     },
     {
       "number": 34,
-      "text": "Salt este bun, dar daca sarea devine plata si lipsita de gust, cu ce il sezonezi?"
+      "text": "Sarea este bună, dar dacă sarea își pierde gustul, cu ce va fi dreasă;"
     },
     {
       "number": 35,
-      "text": "Nu este potrivit nici pentru pământ, nici pentru grămada de gunoi de grajd; este aruncat afară; cine are urechi de auzit, să audă."
+      "text": "Nu este potrivit nici pentru pământ, nici pentru grămada de gunoi de grajd; este aruncat afară; cine are urechi de auzit, să audă.”"
     }
   ],
   "editorialNotes": [],

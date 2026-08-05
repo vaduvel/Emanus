@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:71d17eb99eca4f8a1742bb25d803902a15e9f80f3e1406118a46c884585de23e",
-    "contentDigest": "sha256:c121d02e91cc81e41c432129fb27af7341e8d7a98b2010526ea0b875b3c8060c"
+    "textDigest": "sha256:f620f1504dc86ec55ed6c3c4fe411571b866420c506cb3a0d75952e2690ff94d",
+    "contentDigest": "sha256:77804d03df5695386b9ec7cbfa6a9565f68b779884da35335eeae0e873cd30a0"
   },
   "verses": [
     {
@@ -157,11 +157,11 @@
     },
     {
       "number": 4,
-      "text": "Căci dacă ar fi pe pămînt, n'ar mai fi preot, pentrucă sunt preoți cari aduc darurile după Lege,"
+      "text": "Căci dacă ar fi pe pământ, nu ar fi preot, văzând că sunt preoți ce oferă daruri conform legii,"
     },
     {
       "number": 5,
-      "text": "care slujesc o copie o umbră a lucrurilor ce, așa cum Moise a fost avertizat de Dumnezeu când era pe punctul de a face cortul, pentru că el a spus:Iată, vei face totul după modelul care ți-a fost arătat pe munte.„"
+      "text": "care slujesc o copie o umbră a lucrurilor ce, așa cum Moise a fost avertizat de Dumnezeu când era pe punctul de a face cortul, pentru că el a spus: Iată, vei face totul după modelul care ți-a fost arătat pe munte."
     },
     {
       "number": 6,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Cqci le -a fqcut rqu, a zis:,,Oare vor veni zilele, zice Domnul, cq voi face un legqmknt nou cu casa lui Israel wi cu casa lui Iuda;"
+      "text": "Cqci le-a fqcut rqu, a zis: Oare vor veni zilele, zice Domnul, cq voi face un legqmknt nou cu casa lui Israel wi cu casa lui Iuda;"
     },
     {
       "number": 9,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Ei nu vor învăța pe fiecare pe aproapele său și pe fiecare pe fratele său, spunând:?Cunoaște pe Domnul, căci toți mă vor cunoaște, de la cel mai mic la cel mai mare lor."
+      "text": "Niciunul nu-l va mai învăța pe aproapele său și niciunul pe fratele său, zicând: Cunoaște-L pe Domnul!, căci toți Mă vor cunoaște, de la cel mai mic până la cel mai mare dintre ei."
     },
     {
       "number": 12,
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Prin faptul că spune el, un nou legământ, el a făcut primul învechit. Dar ceea ce devine învechit și crește în vârstă este aproape de a dispărea.”"
+      "text": "Prin faptul că spune el, un nou legământ, el a făcut primul învechit. Dar ceea ce devine învechit și crește în vârstă este aproape de a dispărea."
     }
   ],
   "editorialNotes": [],

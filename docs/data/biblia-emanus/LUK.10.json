@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,17 +139,17 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:402508bf9c39642319f6ffe6fc8208ffd9135ab0e10674fc08b41947504d5051",
-    "contentDigest": "sha256:41d4403ec0ddf4593564d71c1bb8f2171431fa7684fdca3db23760f8092fbc36"
+    "textDigest": "sha256:85c6c5738abaa612de011d287331b77de79d3c92675cb9dc13c1e87d8ac73604",
+    "contentDigest": "sha256:74f4a15d7911cac84af51efc51c4d6c72ceaefaaffd377d559185a3fcb9940c5"
   },
   "verses": [
     {
       "number": 1,
-      "text": "După aceste lucruri, Domnul a pus și alți șaptezeci de oameni, și i -a trimes doi cîte doi înaintea lui în fiecare cetate și loc în care urma să vină."
+      "text": "După aceste lucruri, Domnul a pus și alți șaptezeci de oameni, și i-a trimes doi cîte doi înaintea lui în fiecare cetate și loc în care urma să vină."
     },
     {
       "number": 2,
-      "text": "Apoi le -a zis:,,Secerișul este din belșug, dar muncitorii sunt puțini. Rugați - vă deci Domnului secerișului, ca să -i poată trimite pe lucrători la secerișul lui."
+      "text": "Apoi le-a zis: Secerișul este din belșug, dar muncitorii sunt puțini. Rugați-vă deci Domnului secerișului, ca să-i poată trimite pe lucrători la secerișul lui."
     },
     {
       "number": 3,
@@ -177,7 +177,7 @@
     },
     {
       "number": 9,
-      "text": "Vindecă-i pe bolnavii care sunt acolo spune-le:Împărăția lui Dumnezeu s-a apropiat de voi.„"
+      "text": "Vindecă-i pe bolnavii care sunt acolo spune-le: Împărăția lui Dumnezeu s-a apropiat de voi."
     },
     {
       "number": 10,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Chiar și praful din orașul tău care se agață de noi, noi ștergem împotriva ta. Cu toate acestea, știu acest lucru, că Dumnezeu Regatul lui s-a apropiat de tine."
+      "text": "Chiar și praful cetății voastre, care s-a lipit de noi, îl ștergem împotriva voastră. Totuși să știți că Împărăția lui Dumnezeu s-a apropiat de voi."
     },
     {
       "number": 12,
@@ -205,15 +205,15 @@
     },
     {
       "number": 16,
-      "text": "Cine vă ascultă pe voi pe Mine Mă ascultă; cine vă respinge pe voi pe Mine Mă respinge; cine Mă respinge pe Mine Îl respinge pe Cel ce M-a trimis pe Mine.”"
+      "text": "Cine vă ascultă pe voi pe Mine Mă ascultă; cine vă respinge pe voi pe Mine Mă respinge; cine Mă respinge pe Mine Îl respinge pe Cel ce M-a trimis pe Mine."
     },
     {
       "number": 17,
-      "text": "Ceizeci s-au întors plini de bucurie au zis:Doamne, chiar dracii ne sunt supuși în Numele Tău!„"
+      "text": "Ceizeci s-au întors plini de bucurie au zis: Doamne, chiar dracii ne sunt supuși în Numele Tău!"
     },
     {
       "number": 18,
-      "text": "El le -a zis:,,Am văzut pe Satana căzând ca un fulger din cer."
+      "text": "El le-a zis: Am văzut pe Satana căzând ca un fulger din cer."
     },
     {
       "number": 19,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Întorcându-se către ucenici, le-a spus în particular:Ferice de ochii care văd lucrurile pe care le voi!"
+      "text": "Întorcându-se către ucenici, le-a spus în particular: Ferice de ochii care văd lucrurile pe care le voi!"
     },
     {
       "number": 24,
@@ -241,27 +241,27 @@
     },
     {
       "number": 25,
-      "text": "Iată, un anumit avocat s-a ridicat l-a pus la încercare, zicând:Învățătorule, ce să fac ca sătenesc viața veșnică?”"
+      "text": "Iată, un anumit avocat s-a ridicat l-a pus la încercare, zicând: Învățătorule, ce să fac ca sătenesc viața veșnică?"
     },
     {
       "number": 26,
-      "text": "El i-a zis:Ce este scris în Lege? Cum citești?„"
+      "text": "El i-a zis: Ce este scris în Lege? Cum citești?"
     },
     {
       "number": 27,
-      "text": "El a răspuns:Să iubești pe Domnul Dumnezeul tău cu toată inima ta, cu tot sufletul tău, cu toată puterea ta cu tot cugetul tău; pe aproapele tău ca pe tine însuți.”"
+      "text": "El a răspuns: Să iubești pe Domnul Dumnezeul tău cu toată inima ta, cu tot sufletul tău, cu toată puterea ta cu tot cugetul tău; pe aproapele tău ca pe tine însuți."
     },
     {
       "number": 28,
-      "text": "El i-a răspuns:Ai răspuns bine; fă aceasta vei trăi.„"
+      "text": "El i-a răspuns: Ai răspuns bine; fă aceasta vei trăi."
     },
     {
       "number": 29,
-      "text": "Dar el, dorind să se justifice, l - a întrebat pe Isus:? Cine este aproapele meu?"
+      "text": "Dar el, voind să se declare drept, i-a spus lui Isus: Și cine este aproapele meu?"
     },
     {
       "number": 30,
-      "text": "Isus i -a răspuns:,,Un om se pogoară din Ierusalim la Ierihon, și a căzut printre tâlhari, cari l -au dezbrăcat și l -au bătut, și au plecat, lăsându -l pe jumătate mort."
+      "text": "Și Isus, răspunzând, a zis: Un anumit om s-a coborât din Ierusalim la Ierihon și a căzut printre tâlhari, care l-au dezbrăcat și l-au rănit și au plecat lăsându-l aproape mort."
     },
     {
       "number": 31,
@@ -281,7 +281,7 @@
     },
     {
       "number": 35,
-      "text": "A doua zi, când a plecat, a scos doi dinari, i-a dat gazdei și i-a zis: Ai grijă de el. Orice vei cheltui dincolo de asta, voi răsplăti când mă voi întoarce. ”"
+      "text": "A doua zi, când a plecat, a scos doi dinari, i-a dat gazdei și i-a zis: Ai grijă de el. Orice vei cheltui dincolo de asta, voi răsplăti când mă voi întoarce."
     },
     {
       "number": 36,
@@ -289,11 +289,11 @@
     },
     {
       "number": 37,
-      "text": "El a zis:Cel ce a avut milă de el.„ Atunci Isus i-a zis:Du-te fă tu la fel.”"
+      "text": "El a zis: Cel ce a avut milă de el. Atunci Isus i-a zis: Du-te fă tu la fel."
     },
     {
       "number": 38,
-      "text": "Pe drum, Isus a intrat într'un sat, și o femeie pe nume Marta l -a primit în casa ei."
+      "text": "Pe drum, Isus a intrat într-un sat, și o femeie pe nume Marta l-a primit în casa ei."
     },
     {
       "number": 39,
@@ -301,15 +301,15 @@
     },
     {
       "number": 40,
-      "text": "Dar Marta a fost distrasă de multă slujire a venit la el i-a zis:Doamne, nu-ți pasă că sora mea m-a lăsat să slujesc singură? Cere-i deci să mă ajute„."
+      "text": "Dar Marta a fost distrasă de multă slujire a venit la el i-a zis: Doamne, nu-ți pasă că sora mea m-a lăsat să slujesc singură? Cere-i deci să mă ajute."
     },
     {
       "number": 41,
-      "text": "Isus i -a răspuns:,,Martha, Marta, ești neliniștită și tulburată de multe lucruri,"
+      "text": "Isus i-a răspuns: Martha, Marta, ești neliniștită și tulburată de multe lucruri,"
     },
     {
       "number": 42,
-      "text": "dar un lucru este necesar. Maria a ales partea cea bună, care nu va fi luată de la ea. ”"
+      "text": "dar un lucru este necesar. Maria a ales partea cea bună, care nu va fi luată de la ea."
     }
   ],
   "editorialNotes": [],

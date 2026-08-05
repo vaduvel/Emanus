@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:d8e301641fc055db4aabd2fc354bc94863f0707c7ab74e18b88790782f7f5f58",
-    "contentDigest": "sha256:5680c5252f2ee72e4098300bb2da85b6546c4e71247ccc362b6a53fb2cdc6551"
+    "textDigest": "sha256:f6a99295e770ce20f400af128eb6cc995e294757e2dda0bc594aa41bf786d8c0",
+    "contentDigest": "sha256:42cca2d27af86deba03c6b16f91983db256d443cc9d55517cecab939091a96fc"
   },
   "verses": [
     {
       "number": 1,
-      "text": "După aceste lucruri, m-am uitat am văzut o ușă deschisă în cer; primul glas pe care l-am auzit, ca o trâmbiță care vorbea cu mine, a fost unul care a spus:Suie-te aici-ți voi arăta lucrurile care trebuie să se întâmple după aceasta.„"
+      "text": "După aceste lucruri, m-am uitat am văzut o ușă deschisă în cer; primul glas pe care l-am auzit, ca o trâmbiță care vorbea cu mine, a fost unul care a spus: Suie-te aici-ți voi arăta lucrurile care trebuie să se întâmple după aceasta.„"
     },
     {
       "number": 2,
@@ -181,7 +181,7 @@
     },
     {
       "number": 10,
-      "text": "Cei douăzeci și patru de bătrîni cad înaintea Celui ce șade pe scaunul de domnie și se închină Celui ce trăiește veșnic și totdeauna, și își aruncă cununele înaintea scaunului de domnie, zicând:"
+      "text": "Cei douăzeci și patru de bătrâni cad înaintea Celui ce șade pe scaunul de domnie și se închină Celui ce trăiește veșnic și totdeauna, și își aruncă cununele înaintea scaunului de domnie, zicând:"
     },
     {
       "number": 11,

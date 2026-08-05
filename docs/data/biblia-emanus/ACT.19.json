@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:defcfb27c20ddd8e74ba2e3e2e6ce399a1a8aa3e38fad953927698067d9bc7db",
-    "contentDigest": "sha256:026d9a30e476549c7c67698f7f12e858c069897ca529f2750f754ee74d8b48cf"
+    "textDigest": "sha256:c2babb9ff693fa367775d8b1f77b5030a6b44dc0e79af03529154fe6812b3b92",
+    "contentDigest": "sha256:833b490e0cb407308018986ac79be276bdcecd5e3b143d31da7816c44ead3ea2"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Pavel a spus:Ioan, într-adevăr, a botezat cu botezul pocăinței, spunând poporului să creadă în cel care va veni după el, adică în Hristos Isus."
+      "text": "Pavel a spus: Ioan, într-adevăr, a botezat cu botezul pocăinței, spunând poporului să creadă în cel care va veni după el, adică în Hristos Isus."
     },
     {
       "number": 5,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "El a intrat în sinagogă și a vorbit cu îndrăzneală timp de trei luni, gândindu - se și convingându - se despre lucrurile referitoare la Regatul lui Dumnezeu."
+      "text": "El a intrat în sinagogă și a vorbit cu îndrăzneală timp de trei luni, gândindu-se și convingându-se despre lucrurile referitoare la Regatul lui Dumnezeu."
     },
     {
       "number": 9,
@@ -261,7 +261,7 @@
     },
     {
       "number": 30,
-      "text": "Când Pavel a vrut să intre în popor, discipolii nu i - au permis."
+      "text": "Când Pavel a vrut să intre în popor, discipolii nu i-au permis."
     },
     {
       "number": 31,

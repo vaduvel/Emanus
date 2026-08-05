@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:9707bd0408f4e98d46a281c44c027287281f209039e1f30b79e15f453021fc2f",
-    "contentDigest": "sha256:b6c077046faa134e06884232760ce88de42eeb62b8096391eb51dfec21e0be4e"
+    "textDigest": "sha256:b538bc620c03c2c2c13b4330144aa6ffb971496e1b29df09860a4039a65499c5",
+    "contentDigest": "sha256:c2564ad94e4b6534904c3ac18704ab96d377a5eacb39052cda2d2638e94b4164"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Acum doresc ca toți să vorbiți cu alte limbi, dar și mai mult ca să profețiți; căci El este mai mare, care proorocește decît cel ce vorbește cu alte limbi, dacă nu interpretează, ca adunarea să fie zidită."
+      "text": "Acum doresc ca toți să vorbiți cu alte limbi, dar și mai mult ca să profețiți; căci El este mai mare, care proorocește decât cel ce vorbește cu alte limbi, dacă nu interpretează, ca adunarea să fie zidită."
     },
     {
       "number": 6,

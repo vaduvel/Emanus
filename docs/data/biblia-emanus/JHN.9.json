@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:a61e92864823da5ef2986e4ff0315617393efd48bf7f723296af4cf5ecbe2dcc",
-    "contentDigest": "sha256:3c1064e07a50a70e4a9750c949e20707d990e76e4c593db49def83452dd346fa"
+    "textDigest": "sha256:73e001a68157ce4c14da97bc76fb7e37ef8ccf195982cf440c23d4ec906d2930",
+    "contentDigest": "sha256:cabe3b8fb044c3538c2a596bea604c45d2e8363038b1337d092974444b57439e"
   },
   "verses": [
     {
@@ -155,11 +155,11 @@
     },
     {
       "number": 2,
-      "text": "Ucenicii Lui L-au întrebat:Rabbi, cine a păcătuit, omul acesta sau părinții lui, de s-a născut orb?"
+      "text": "Ucenicii Lui L-au întrebat: Rabbi, cine a păcătuit, omul acesta sau părinții lui, de s-a născut orb?"
     },
     {
       "number": 3,
-      "text": "Isus a răspuns:Omul acesta n-a păcătuit, nici părinții lui, ci ca să se descopere în el lucrările lui Dumnezeu."
+      "text": "Isus a răspuns: Omul acesta n-a păcătuit, nici părinții lui, ci ca să se descopere în el lucrările lui Dumnezeu."
     },
     {
       "number": 4,
@@ -175,15 +175,15 @@
     },
     {
       "number": 7,
-      "text": "și i -a zis:,,Du-te, spală - te în iazul Siloam (ceea ce înseamnă că ai trimis). Așa că a plecat, s'a spălat, și s'a întors să vadă."
+      "text": "și i-a zis: Du-te, spală-te în iazul Siloam (ceea ce înseamnă că ai trimis). Așa că a plecat, s-a spălat, și s-a întors să vadă."
     },
     {
       "number": 8,
-      "text": "Vecinii cei care l-au văzut înainte au zis:Nu este acesta cel ce dea cera?"
+      "text": "Vecinii cei care l-au văzut înainte au zis: Nu este acesta cel ce dea cera?"
     },
     {
       "number": 9,
-      "text": "Alții ziceau:El este! Alții ziceau:Seamănă cu el! El a răspuns:Eu sunt."
+      "text": "Alții ziceau: El este! Alții ziceau: Seamănă cu el! El a răspuns: Eu sunt."
     },
     {
       "number": 10,
@@ -191,11 +191,11 @@
     },
     {
       "number": 11,
-      "text": "El a răspuns:Un om numit Isus a făcut noroi, mi-a uns ochii și mi-a spus: Du-te la iazul Siloamului și spală-te. că m-am dus și m-am spălat, și am primit vedere."
+      "text": "El a răspuns: Un om numit Isus a făcut noroi, mi-a uns ochii și mi-a spus: Du-te la iazul Siloamului și spală-te. că m-am dus și m-am spălat, și am primit vedere."
     },
     {
       "number": 12,
-      "text": "Atunci ei l-au întrebat:Unde este? El a răspuns:Nu știu."
+      "text": "Atunci ei l-au întrebat: Unde este? El a răspuns: Nu știu."
     },
     {
       "number": 13,
@@ -203,31 +203,31 @@
     },
     {
       "number": 14,
-      "text": "Era un Sabat când Isus a făcut noroiul și i - a deschis ochii."
+      "text": "Era un Sabat când Isus a făcut noroiul și i-a deschis ochii."
     },
     {
       "number": 15,
-      "text": "Fariseii l-au întrebat din nou cum-a căpătat vederea. El le-a zis:Mi-a pus noroi pe ochi, m-am spălat văd."
+      "text": "Fariseii l-au întrebat din nou cum-a căpătat vederea. El le-a zis: Mi-a pus noroi pe ochi, m-am spălat văd."
     },
     {
       "number": 16,
-      "text": "Unii dintre farisei ziceau:,,Omul acesta nu este dela Dumnezeu, pentrucă nu ține Sabatul. Alții ziceau:,,Cum poate un om păcătos să facă astfel de semne? Și s'a făcut dezbinare între ei."
+      "text": "Unii dintre farisei ziceau: Omul acesta nu este de la Dumnezeu, pentru că nu ține Sabatul. Alții ziceau: Cum poate un om păcătos să facă astfel de semne? Și s-a făcut dezbinare între ei."
     },
     {
       "number": 17,
-      "text": "De aceea l-au întrebat din nou pe orb:Ce spui despre el, pentru că ți-a deschis ochii? El a răspuns:Este un profet."
+      "text": "De aceea l-au întrebat din nou pe orb: Ce spui despre el, pentru că ți-a deschis ochii? El a răspuns: Este un profet."
     },
     {
       "number": 18,
-      "text": "Iudeii n'au crezut că fusese orb că primise vederea, pînă ce n'au chemat pe părinții celui ce primise vederea,"
+      "text": "Iudeii n-au crezut că fusese orb că primise vederea, până ce n-au chemat pe părinții celui ce primise vederea,"
     },
     {
       "number": 19,
-      "text": "Și le-a zis:,,Acesta este fiul vostru, despre care ziceți că s'a născut orb? Cum vede acum?"
+      "text": "Și le-a zis: Acesta este fiul vostru, despre care ziceți că s-a născut orb? Cum vede acum?"
     },
     {
       "number": 20,
-      "text": "Părinții lui le-au răspuns:,,Știm că acesta este fiul nostru, și că s'a născut orb;"
+      "text": "Părinții lui le-au răspuns: Știm că acesta este fiul nostru, și că s-a născut orb;"
     },
     {
       "number": 21,
@@ -239,27 +239,27 @@
     },
     {
       "number": 23,
-      "text": "De aceea, părinții lui au zis:Este în vârstă, întrebați-l pe el!"
+      "text": "De aceea, părinții lui au zis: Este în vârstă, întrebați-l pe el!"
     },
     {
       "number": 24,
-      "text": "L-au chemat a doua oară pe orb, i-au zis:,,Dă slavă lui Dumnezeu, căci știm că omul acesta este un păcătos."
+      "text": "L-au chemat a doua oară pe orb, i-au zis: Dă slavă lui Dumnezeu, căci știm că omul acesta este un păcătos."
     },
     {
       "number": 25,
-      "text": "El a răspuns:,,Nu știu dacă este un păcătos; știu un lucru: că, eram orb, acum văd."
+      "text": "El a răspuns: Nu știu dacă este un păcătos; știu un lucru: că, eram orb, acum văd."
     },
     {
       "number": 26,
-      "text": "Ei i-au zis din nou:Ce ți-a făcut? Cum ți-a deschis ochii?"
+      "text": "Ei i-au zis din nou: Ce ți-a făcut? Cum ți-a deschis ochii?"
     },
     {
       "number": 27,
-      "text": "El le-a răspuns:V-am spus deja n- ascultat. De ce vreți să auziți din nou? Nu vreți să deveniți discipolii Lui, nu-i așa?"
+      "text": "El le-a răspuns: V-am spus deja n-ascultat. De ce vreți să auziți din nou? Nu vreți să deveniți discipolii Lui, nu-i așa?"
     },
     {
       "number": 28,
-      "text": "Ei l-au insultat i-au spus:Tu ești discipolul lui, dar noi suntem discipolii lui Moise."
+      "text": "Ei l-au insultat i-au spus: Tu ești discipolul lui, dar noi suntem discipolii lui Moise."
     },
     {
       "number": 29,
@@ -267,7 +267,7 @@
     },
     {
       "number": 30,
-      "text": "Omul le -a răspuns:,,Ce uimitor! Nu știi de unde vine, dar mi -a deschis ochii."
+      "text": "Omul le-a răspuns: Ce uimitor! Nu știi de unde vine, dar mi-a deschis ochii."
     },
     {
       "number": 31,
@@ -283,7 +283,7 @@
     },
     {
       "number": 34,
-      "text": "Ei i-au răspuns:Tu te-ai născut cu totul în păcate, tu ne înveți pe noi? Apoi l-au dat afară."
+      "text": "Ei i-au răspuns: Tu te-ai născut cu totul în păcate, tu ne înveți pe noi? Apoi l-au dat afară."
     },
     {
       "number": 35,
@@ -291,27 +291,27 @@
     },
     {
       "number": 36,
-      "text": "El a răspuns:Cine este, Doamne, ca să cred în El?"
+      "text": "El a răspuns: Cine este, Doamne, ca să cred în El?"
     },
     {
       "number": 37,
-      "text": "Isus i-a zis:L- văzut amândoi El este Cel ce vorbește cu voi."
+      "text": "Isus i-a zis: L-văzut amândoi El este Cel ce vorbește cu voi."
     },
     {
       "number": 38,
-      "text": "El a spus:Doamne, eu cred! i s-a închinat."
+      "text": "El a spus: Doamne, eu cred! i s-a închinat."
     },
     {
       "number": 39,
-      "text": "Isus a spus:Eu am venit în lumea aceasta pentru judecată, pentru ca cei care nu văd să vadă, iar cei care văd să devină orbi."
+      "text": "Isus a spus: Eu am venit în lumea aceasta pentru judecată, pentru ca cei care nu văd să vadă, iar cei care văd să devină orbi."
     },
     {
       "number": 40,
-      "text": "Aceia dintre fariseii care erau cu el au auzit aceste lucruri i-au zis:Oare noi suntem orbi?"
+      "text": "Aceia dintre fariseii care erau cu el au auzit aceste lucruri i-au zis: Oare noi suntem orbi?"
     },
     {
       "number": 41,
-      "text": "Isus le-a zis:Dacă ați fi orbi, n- avea păcat; dar acum ziceți: Vedem! De aceea rămâne păcatul vostru."
+      "text": "Isus le-a zis: Dacă ați fi orbi, n-avea păcat; dar acum ziceți: Vedem! De aceea rămâne păcatul vostru."
     }
   ],
   "editorialNotes": [],

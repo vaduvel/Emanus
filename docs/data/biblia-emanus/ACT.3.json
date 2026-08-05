@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:14d7d652bc77d2279027ba23575e724ec143fa6dacc769d12e41bb2592cfc8de",
-    "contentDigest": "sha256:0aceda031f40edf3815e47307ebad9b5bddfd36d5f6145c445830236ed76ccac"
+    "textDigest": "sha256:c74b9df579c766fbd8cadba1447827558c790dc3f62c66f5f8e25851b3f9c9cb",
+    "contentDigest": "sha256:2e75c0cc54a63e0c3236b40552a2600941e0a0aba7244cc485efdfc5987c7c7f"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "El i - a ascultat, așteptându - se să primească ceva de la ei."
+      "text": "El i-a ascultat, așteptându-se să primească ceva de la ei."
     },
     {
       "number": 6,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "și a ucis pe prințul vieții, pe care Dumnezeu l -a înviat din morți, la care suntem martori."
+      "text": "și a ucis pe prințul vieții, pe care Dumnezeu l-a înviat din morți, la care suntem martori."
     },
     {
       "number": 16,

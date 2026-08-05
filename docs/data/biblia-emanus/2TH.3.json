@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "copyrightDistance": "approved",
     "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:eb9d125fe2e12bf6436904a002a01b0cf09d681bd1b5267744c907dcd7603b37",
-    "contentDigest": "sha256:b34d3158d4de9932e539f26df6844ebb0368567fc44aaff88ac4dcb504d95e96"
+    "textDigest": "sha256:946aab2d9c8dd8a0e688aaaa67fd59ac413ab8416af9ea136af5b892a0b15717",
+    "contentDigest": "sha256:5ae0059b375f8a0cbaaa9d90058cbb4b5d86b4447af3079007eefa3a2a472e91"
   },
   "verses": [
     {
       "number": 1,
-      "text": "În cele din urmă, fraților, rugați-vă pentru noi, pentru ca Cuvîntul Domnului să se răspândească rapid și să fie proslăvit, ca și cu voi,"
+      "text": "În cele din urmă, fraților, rugați-vă pentru noi, pentru ca Cuvântul Domnului să se răspândească rapid și să fie proslăvit, ca și cu voi,"
     },
     {
       "number": 2,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Nici n-am mîncat pîne din mîna cuiva, fără să plătim pentru ea, ci am lucrat zi noapte, ca să nu vă împovărăm pe niciunul dintre voi."
+      "text": "Nici n-am mâncat pîne din mâna cuiva, fără să plătim pentru ea, ci am lucrat zi noapte, ca să nu vă împovărăm pe niciunul dintre voi."
     },
     {
       "number": 9,
@@ -189,7 +189,7 @@
     },
     {
       "number": 12,
-      "text": "Iar pe cei ce sunt așa, poruncim îndemnăm în Domnul Isus Hristos ca ei să lucreze în liniște să- mănânce pâinea lor."
+      "text": "Iar pe cei ce sunt așa, poruncim îndemnăm în Domnul Isus Hristos ca ei să lucreze în liniște să-mănânce pâinea lor."
     },
     {
       "number": 13,

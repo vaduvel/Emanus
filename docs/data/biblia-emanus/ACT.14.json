@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:0aaa829970e5d8e4d13ced9d27527a4a46d1beb9a208cd455478a314a8ee378a",
-    "contentDigest": "sha256:51a396687510a3bbdcd45bb3e62b07510fa43906b36959ff9c82ebe2c01d27c5"
+    "textDigest": "sha256:be130496d1606d0b0c33b9160ed3198468855922c301b38649dd7269657399ed",
+    "contentDigest": "sha256:2548229e608c94e2fe03b15019ac1f37470bf7374268199e8b574b7b1d979f4b"
   },
   "verses": [
     {
@@ -181,15 +181,15 @@
     },
     {
       "number": 10,
-      "text": "a zis cu glas tare:Ridică-te în picioare!„ El a sărit în sus a mers."
+      "text": "a zis cu glas tare: Ridică-te în picioare!„ El a sărit în sus a mers."
     },
     {
       "number": 11,
-      "text": "Cânda a văzut ce făcuse Pavel,-a ridicat glasul a zis în limba Licaoniei:Zeii s-au coborât la noi în asemănare de oameni!”"
+      "text": "Cânda a văzut ce făcuse Pavel,-a ridicat glasul a zis în limba Licaoniei: Zeii s-au coborât la noi în asemănare de oameni!”"
     },
     {
       "number": 12,
-      "text": "Ei l - au numit pe Barnaba Jupiter și pe Pavel Mercur, deoarece el era vorbitorul principal."
+      "text": "Ei l-au numit pe Barnaba Jupiter și pe Pavel Mercur, deoarece el era vorbitorul principal."
     },
     {
       "number": 13,
@@ -197,11 +197,11 @@
     },
     {
       "number": 14,
-      "text": "Apostolii Barnaba și Pavel, cînd au auzit lucrul acesta, și-au rupt hainele și s'au aruncat în norod, strigînd:"
+      "text": "Apostolii Barnaba și Pavel, când au auzit lucrul acesta, și-au rupt hainele și s-au aruncat în norod, strigînd:"
     },
     {
       "number": 15,
-      "text": "De ce faceți voi aceste lucruri? Și noi suntem oameni de aceeași natură ca voi, și vă aducem o veste bună, ca să vă întoarceți dela aceste lucruri deșarte la Dumnezeul cel viu, care a făcut cerul, pămîntul, marea și tot ce este în ele."
+      "text": "De ce faceți voi aceste lucruri? Și noi suntem oameni de aceeași natură ca voi, și vă aducem o veste bună, ca să vă întoarceți de la aceste lucruri deșarte la Dumnezeul cel viu, care a făcut cerul, pământul, marea și tot ce este în ele."
     },
     {
       "number": 16,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Totuși, el nu s - a lăsat fără mărturie, deoarece a făcut bine și v - a dat ploi din cer și anotimpuri rodnice, umplându - ne inimile cu hrană și bucurie."
+      "text": "Totuși, el nu s-a lăsat fără mărturie, deoarece a făcut bine și v-a dat ploi din cer și anotimpuri rodnice, umplându-ne inimile cu hrană și bucurie."
     },
     {
       "number": 18,
@@ -221,15 +221,15 @@
     },
     {
       "number": 20,
-      "text": "Pe cînd stăteau ucenicii în jurul Lui, S'a sculat, și a intrat în cetate. A doua zi a ieșit cu Barnaba la Derbe."
+      "text": "Pe când stăteau ucenicii în jurul Lui, S-a sculat, și a intrat în cetate. A doua zi a ieșit cu Barnaba la Derbe."
     },
     {
       "number": 21,
-      "text": "După ce au propovăduit Evanghelia în cetatea aceea și au făcut mulți ucenici, s'au întors la Listra, Iconia și Antiohia,"
+      "text": "După ce au propovăduit Evanghelia în cetatea aceea și au făcut mulți ucenici, s-au întors la Listra, Iconia și Antiohia,"
     },
     {
       "number": 22,
-      "text": "întărind sufletele discipolilor, îndemnându - i să continue în credință și că prin multe necazuri trebuie să intrăm în Regatul lui Dumnezeu."
+      "text": "întărind sufletele discipolilor, îndemnându-i să continue în credință și că prin multe necazuri trebuie să intrăm în Regatul lui Dumnezeu."
     },
     {
       "number": 23,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Cînd au ajuns și au strîns adunarea, ei au vestit toate lucrurile pe cari le făcuse Dumnezeu cu ei, și au deschis o ușă de credință neamurilor."
+      "text": "Și după ce au venit și au adunat biserica, le-au istorisit tot ce făcuse Dumnezeu cu ei și cum a deschis neamurilor ușa credinței."
     },
     {
       "number": 28,

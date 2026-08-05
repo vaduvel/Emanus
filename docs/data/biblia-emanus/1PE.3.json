@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:a7a837545e911a686d9e3ac005acf186339df7d3fc49fb51f4ca9860c781360e",
-    "contentDigest": "sha256:1c0bcb3ebc5cec7649a76b607232fc1386814c1385763083e798160d2fc0d160"
+    "textDigest": "sha256:ce29175265d702d26dab2311ad4fc3a3e3646eed37b4fbf0c59eececb8be6e00",
+    "contentDigest": "sha256:0ee90cb2c45ed294a121cc740634ecd23a9980580446893a136d1dbf804eb206"
   },
   "verses": [
     {
@@ -161,7 +161,7 @@
     },
     {
       "number": 5,
-      "text": "Căci așa s'au împodobit și în trecut femeile sfinte, cari nădăjduiau în Dumnezeu, și ele fiind supuse bărbaților lor."
+      "text": "Căci astfel și în vechime sfintele femei care se încredeau în Dumnezeu, se înfrumusețau, fiind în supunere propriilor soți."
     },
     {
       "number": 6,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "În cele din urmă, voi toți să fie ca-minded, plin de compasiune, iubitor ca frați, cu inima tandră, politicos,"
+      "text": "În cele din urmă, fiți toți uniți în gândire, plini de compasiune, iubindu-vă ca frații, miloși și smeriți."
     },
     {
       "number": 9,
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Dar chiar dacă suferiți pentru dreptate, sunteți binecuvîn.Nu vă temeți de ce se tem ei, nu vă tulburați.„"
+      "text": "Dar chiar dacă suferiți pentru dreptate, sunteți binecuvîn. Nu vă temeți de ce se tem ei, nu vă tulburați.„"
     },
     {
       "number": 15,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "care mai înainte erau neascultători cînd Dumnezeu aștepta cu răbdare în zilele lui Noe, cînd era zidită corabia; în ea puțini, adică opt suflete, au fost mîntuiți prin apă."
+      "text": "care mai înainte erau neascultători când Dumnezeu aștepta cu răbdare în zilele lui Noe, când era zidită corabia; în ea puțini, adică opt suflete, au fost mîntuiți prin apă."
     },
     {
       "number": 21,

@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:964f568c2c58d89463fe981875aaa07d77ef8ba730335a5227783214ab6ed801",
-    "contentDigest": "sha256:2c6233d21899dd402757a4bfff9ac88877b8f5331a7945745254993cd3f63c40"
+    "textDigest": "sha256:e67c053bb843d648035bba8a23de6127a9279d611c303c544a99d884b5d8fe79",
+    "contentDigest": "sha256:4de1a770e1659defbe304a6ab3a8cf56b2121e41dc65a27b11f5c10e25bd4e69"
   },
   "verses": [
     {
@@ -153,11 +153,11 @@
     },
     {
       "number": 3,
-      "text": "Căci m'am bucurat foarte mult cînd au venit frații și au mărturisit despre adevărul vostru, cum umblați voi în adevăr."
+      "text": "Căci m-am bucurat foarte mult când au venit frații și au mărturisit despre adevărul vostru, cum umblați voi în adevăr."
     },
     {
       "number": 4,
-      "text": "Nu am o bucurie mai mare decît aceasta: să aud despre copiii mei umblînd în adevăr."
+      "text": "Nu am o bucurie mai mare decât aceasta: să aud despre copiii mei umblînd în adevăr."
     },
     {
       "number": 5,
@@ -165,7 +165,7 @@
     },
     {
       "number": 6,
-      "text": "Ei au mărturisit despre dragostea voastră înaintea adunării, și veți face bine să -i trimiteți în călătorie pe un drum vrednic de Dumnezeu."
+      "text": "Ei au mărturisit despre dragostea voastră înaintea adunării, și veți face bine să-i trimiteți în călătorie pe un drum vrednic de Dumnezeu."
     },
     {
       "number": 7,

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "copyrightDistance": "approved",
     "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:ff7232a1c19fcd4d640e19f6cc9c0ab109cc43ae04d46095ddfb2c6128d1cc8d",
-    "contentDigest": "sha256:03cfe0fe1ef51e7b841f08bbabc0a5c7bf84d2cdb3fb1597238b2453b8e1d42a"
+    "textDigest": "sha256:749a6eab9ee18d46b49b85f7529e3ea54ede7723ccaab4b7645f0414e73a946e",
+    "contentDigest": "sha256:1560059d4397f6b527701f8ce2769d3a62432a011e5d1ffd96bb3204d814d84a"
   },
   "verses": [
     {
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Salutați - i pe frații care se află în Laodiceea, împreună cu nimfa și adunarea din casa lui."
+      "text": "Salutați-i pe frații care se află în Laodiceea, împreună cu nimfa și adunarea din casa lui."
     },
     {
       "number": 16,

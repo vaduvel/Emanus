@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
     "aiTheologicalContext": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -85,7 +85,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -109,9 +109,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -145,8 +145,8 @@
       "minimumSemantic": 0.5828511837833763,
       "minimumScore": 0.5708264730944187
     },
-    "textDigest": "sha256:5b760d433dbafdd7edbc924ea95370105d18645147769e748e09890d8ab88139",
-    "contentDigest": "sha256:ee3a7740cedeb11bc46c238c70ac249fadb54f25809f030ccdab8ebd9431b154"
+    "textDigest": "sha256:25e3e4ed54f18df482e415d67b1db19413876653adfc84d90aa5b694cc5d3bd8",
+    "contentDigest": "sha256:827ff95240a3c38fd6933fdfe20c6ccf69701b9b600aa72a0ad3bcc1ab5dd1c2"
   },
   "verses": [
     {
@@ -175,7 +175,7 @@
     },
     {
       "number": 7,
-      "text": "O femeie din Samaria a venit să scoată apă. Isus i -a zis:,,Dă-mi să beau."
+      "text": "O femeie din Samaria a venit să scoată apă. Isus i-a zis:„ Dă-mi să beau."
     },
     {
       "number": 8,
@@ -251,7 +251,7 @@
     },
     {
       "number": 26,
-      "text": "Isus i-a zis:Eu sunt Cel ce-ți vorbește."
+      "text": "Isus i-a zis: Eu sunt Cel ce-ți vorbește."
     },
     {
       "number": 27,
@@ -315,7 +315,7 @@
     },
     {
       "number": 42,
-      "text": "Ei i-au zis femeii:Noi credem acum, nu din pricina vorbelor tale; căci am auzit pentru noi înșine știm că acesta este într-adevăr Hristosul, Mântuitorul lumii."
+      "text": "Ei i-au zis femeii: Noi credem acum, nu din pricina vorbelor tale; căci am auzit pentru noi înșine știm că acesta este într-adevăr Hristosul, Mântuitorul lumii."
     },
     {
       "number": 43,
@@ -335,7 +335,7 @@
     },
     {
       "number": 47,
-      "text": "Cînd a auzit că Isus ieșise din Iudeea în Galileea, s'a dus la el și l - a implorat să coboare și să vindece pe fiul său, căci era la moarte."
+      "text": "Când a auzit că Isus ieșise din Iudeea în Galileea, s-a dus la el și l-a implorat să coboare și să vindece pe fiul său, căci era la moarte."
     },
     {
       "number": 48,
@@ -363,7 +363,7 @@
     },
     {
       "number": 54,
-      "text": "Acesta a fost iarăși al doilea semn pe care l-a făcut Isus după ce a venit din Iudeea în Galileea."
+      "text": "Acesta a fost iarăși al doilea semn pe care l-a făcut Isus după ce a venit din Iudeea în Galileea.”"
     }
   ],
   "editorialNotes": [

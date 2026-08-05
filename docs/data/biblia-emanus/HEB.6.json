@@ -28,12 +28,12 @@
     }
   },
   "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved",
     "criticalIssues": "approved",
-    "copyrightDistance": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5922586297890594,
       "minimumScore": 0.5759312754780807
     },
-    "textDigest": "sha256:2831d735d2e3eb1c2eff26ce1a8c03acbb4544001706bff9e6a4ea6c4a038afe",
-    "contentDigest": "sha256:a986e55ff71250e1752e285efc550e27258bd86e19d10aac36c70b3fe1ce21e9"
+    "textDigest": "sha256:670b7a8964876dbbd7c2343165ffe9524704c53086346a41f386d72df33640c0",
+    "contentDigest": "sha256:2569009cc5b8665a4dd6d10275aec43b0e23c4dad8364f61d66b91f2172dbc62"
   },
   "verses": [
     {
@@ -197,7 +197,7 @@
     },
     {
       "number": 14,
-      "text": "Și a zis:Binecuvântat să te binecuvântez înmulțit să te înmulțesc!„"
+      "text": "Și a zis: Binecuvântat să te binecuvântez înmulțit să te înmulțesc!„"
     },
     {
       "number": 15,

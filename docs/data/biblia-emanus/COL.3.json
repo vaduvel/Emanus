@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
-    "copyrightDistance": "approved",
     "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "omissionAddition": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:94d23ddedf518228b724c11900568842df7e03ed4692fc355f98bf52b2a52753",
-    "contentDigest": "sha256:a4c1f65b68c1f69089ea5f7f9a26b4b0693f1f83f5570d060d70921ccf41352d"
+    "textDigest": "sha256:93a6bf91b62b8e34df42329f450085e48614e1942741364bfad28d3f780cc0cd",
+    "contentDigest": "sha256:d3d2e53c5032a1091bd071b0e51cf17f7ad09d504884bde92bda58393f00879d"
   },
   "verses": [
     {
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "să vă purtați unii cu alții, și să vă iertați unii pe alții, dacă cineva are vreo plângere împotriva vreunuia; așa cum v'a iertat Hristos, așa faceți și voi."
+      "text": "să vă purtați unii cu alții, și să vă iertați unii pe alții, dacă cineva are vreo plângere împotriva vreunuia; așa cum v-a iertat Hristos, așa faceți și voi."
     },
     {
       "number": 14,

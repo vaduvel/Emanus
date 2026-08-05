@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "aiSourceLanguage": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
     "omissionAddition": "approved",
-    "criticalIssues": "approved",
     "benchmarkComparison": "approved",
-    "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved"
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:1a5d107a23154345898845012e2ba262056334edde79fc2575e2c3da5eae6219",
-    "contentDigest": "sha256:5537cea6e2346e376646a8d476f0e7deab36e01a4f0a4a9462d681cf3625ad5a"
+    "textDigest": "sha256:1939243fa93bc395f3bfee8f337386b6966f9623be0824110a83cd7bb69c3e05",
+    "contentDigest": "sha256:1b29b3fe6d26c8e40686bb0fef20367e38298937bf92f130cb54e763a783af34"
   },
   "verses": [
     {
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Și cum vor predica dacă nu vor fi trimiși? După cum este scris:Cât de frumoase sunt picioarele celor care predică Vestea Bună a păcii, care aduc vești bune!"
+      "text": "Și cum vor predica dacă nu vor fi trimiși? După cum este scris: Cât de frumoase sunt picioarele celor care predică Vestea Bună a păcii, care aduc vești bune!"
     },
     {
       "number": 16,

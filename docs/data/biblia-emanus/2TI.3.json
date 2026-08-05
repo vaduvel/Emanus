@@ -28,12 +28,12 @@
     }
   },
   "review": {
-    "criticalIssues": "approved",
-    "omissionAddition": "approved",
     "aiTheologicalContext": "approved",
-    "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:18f946f080e1c19392b023d4f45911d498526916ad9b71a6f79bb7bc62310806",
-    "contentDigest": "sha256:8c7e031e19f14ab62a965f92f9d72a5abecc0854828728ceb80fad02cccfcc41"
+    "textDigest": "sha256:9128b5cab618ff6098d94ed68e53b5a740051aaa853da0d59f2f90f8abd79867",
+    "contentDigest": "sha256:e2b1e1814657fb9a1f60914853ed9bb60bc37fb45a3af5cf3034866dd2885cee"
   },
   "verses": [
     {
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "prigonirile și suferințele acelea care mi s'au întîmplat la Antiohia, Iconia și Listra. Am îndurat aceste prigoniri. Domnul m'a izbăvit de toate."
+      "text": "prigonirile și suferințele acelea care mi s-au întîmplat la Antiohia, Iconia și Listra. Am îndurat aceste prigoniri. Domnul m-a izbăvit de toate."
     },
     {
       "number": 12,

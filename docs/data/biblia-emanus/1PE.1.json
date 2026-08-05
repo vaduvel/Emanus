@@ -29,12 +29,12 @@
   },
   "review": {
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved",
     "copyrightDistance": "approved",
-    "aiSourceLanguage": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "criticalIssues": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:ffd62fa7e82277eff5ef424df24ebd6cc5501635b93221d943f3b0ea7dd0a39c",
-    "contentDigest": "sha256:f12d8dabea098fa91d4013df4ec30939ec10901330ac34bc849ce2e669a705d6"
+    "textDigest": "sha256:23f2aaf77ddbcd202770c2bb760bbb4d58e5a9d936e1f5fa69f51498fe3313ec",
+    "contentDigest": "sha256:8f01c4f107bd790784c241363d41139d0466fa003f1570620a1dcc3bc44649ba"
   },
   "verses": [
     {
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "Căci este scris:Voi fi sfinți, căci Eu sunt sfânt.„"
+      "text": "Căci este scris: Voi fi sfinți, căci Eu sunt sfânt.„"
     },
     {
       "number": 17,
@@ -241,7 +241,7 @@
     },
     {
       "number": 25,
-      "text": "Dar Cuvîntul Domnului rămîne în veac.” Acesta este Cuvîntul veștii bune care v-a fost propovăduit."
+      "text": "Dar Cuvântul Domnului rămâne în veac.” Acesta este Cuvântul veștii bune care v-a fost propovăduit."
     }
   ],
   "editorialNotes": [],

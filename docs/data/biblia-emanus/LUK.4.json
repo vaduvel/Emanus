@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "aiRomanianLanguage": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4739268246110474,
       "minimumScore": 0.4668938388149379
     },
-    "textDigest": "sha256:1149e5cd8462e2af12f236e32cf638afb33bf63f1c88f68f1405cac072c1db76",
-    "contentDigest": "sha256:2d937fada8d08bc145cb92c1c8cab3082a6461ebfced1a44ca73db1c76a89674"
+    "textDigest": "sha256:31c62b990b3c013dfa8ebc7656dd72952017018ce3390e64056a9cc5cd11cec7",
+    "contentDigest": "sha256:bdac9c83e6ef47194d165d25076159fc50a5215e3826719ad67aff1e85ed183e"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 4,
-      "text": "Isus i-a răspuns:Este scris: ‘Omul nu va trăi numai cu pâine, ci cu orice cuvânt al lui Dumnezeu.’"
+      "text": "Isus i-a răspuns: Este scris: ‘Omul nu va trăi numai cu pâine, ci cu orice cuvânt al lui Dumnezeu.’"
     },
     {
       "number": 5,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Isus i-a răspuns:Înapoia Mea, Satano! Căci este scris: Domnului Dumnezeului tău să te închini numai Lui să-I sluj!"
+      "text": "Isus i-a răspuns: Înapoia Mea, Satano! Căci este scris: Domnului Dumnezeului tău să te închini numai Lui să-I sluj!"
     },
     {
       "number": 9,
@@ -205,7 +205,7 @@
     },
     {
       "number": 16,
-      "text": "El a venit la Nazaret, unde fusese crescut. El a intrat, cum era obiceiul său, în sinagogă în ziua Sabatului, și s'a sculat să citească."
+      "text": "El a venit la Nazaret, unde fusese crescut. El a intrat, cum era obiceiul său, în sinagogă în ziua Sabatului, și s-a sculat să citească."
     },
     {
       "number": 17,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "A închis cartea, a dat -o înapoi slujitorului, și s'a așezat jos. Ochii tuturor celor din sinagogă s'au atașat de el."
+      "text": "A închis cartea, a dat-o înapoi slujitorului, și s-a așezat jos. Ochii tuturor celor din sinagogă s-au atașat de el."
     },
     {
       "number": 21,
@@ -277,7 +277,7 @@
     },
     {
       "number": 34,
-      "text": ",,Ce avem noi de a face cu voi, Isus din Nazaret? Ați venit să ne nimiciți? Știu cine sunteți: Sfîntul lui Dumnezeu!"
+      "text": "„ Ce avem noi de a face cu voi, Isus din Nazaret? Ați venit să ne nimiciți? Știu cine sunteți: Sfîntul lui Dumnezeu!"
     },
     {
       "number": 35,
@@ -317,7 +317,7 @@
     },
     {
       "number": 44,
-      "text": "El predica în sinagogile Galileii."
+      "text": "El predica în sinagogile Galileii.”"
     }
   ],
   "editorialNotes": [

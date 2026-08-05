@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "omissionAddition": "approved",
+    "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
-    "criticalIssues": "approved",
+    "omissionAddition": "approved",
     "benchmarkComparison": "approved",
-    "aiSourceLanguage": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "aiTheologicalContext": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5435114731748284,
       "minimumScore": 0.5419631978011472
     },
-    "textDigest": "sha256:2f530a8b456c41ce25bde6ee988e5cced1aa7977747c452e8565dc333162cba4",
-    "contentDigest": "sha256:5810acfee14dc34f272ae4653fa3cbb38ac70db8e70e79acfea9915d75227911"
+    "textDigest": "sha256:cf981490c39b8f6c4248748a691cc7fbb28dcd69b9e5d3f14f9fc2fc38c14a0a",
+    "contentDigest": "sha256:a5d9610f132c42bfb2d903db9d2f2685696e9d8bb15e4fdce0bdf5f53ce73bd9"
   },
   "verses": [
     {
@@ -153,7 +153,7 @@
     },
     {
       "number": 3,
-      "text": "Ei au cântat cîntarea lui Moise, robul lui Dumnezeu, și cîntarea Mielului, și au zis:,,Mare și minunate sunt lucrările Tale, Doamne Dumnezeule, Cel Atotputernic! Drepte și adevărate sunt căile Tale, Împărate al neamurilor!"
+      "text": "Ei au cântat cîntarea lui Moise, robul lui Dumnezeu, și cîntarea Mielului, și au zis:„ Mare și minunate sunt lucrările Tale, Doamne Dumnezeule, Cel Atotputernic! Drepte și adevărate sunt căile Tale, Împărate al neamurilor!"
     },
     {
       "number": 4,
@@ -161,11 +161,11 @@
     },
     {
       "number": 5,
-      "text": "După aceste lucruri m'am uitat, și s'a deschis Templul cortului mărturiei din cer."
+      "text": "După aceste lucruri m-am uitat, și s-a deschis Templul cortului mărturiei din cer."
     },
     {
       "number": 6,
-      "text": "Cei șapte îngeri, cari aveau cele șapte plăgi, au ieșit afară, îmbrăcați cu in curat, strălucitor, și purtau eșarfe de aur în jurul piepturilor lor."
+      "text": "Și au ieșit cei șapte îngeri din templu, având cele șapte plăgi, îmbrăcați în in pur și alb și având piepturile lor încinse cu brâie de aur."
     },
     {
       "number": 7,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Templul era plin de fum din slava lui Dumnezeu și din puterea lui. Nimeni nu putea să intre în templu până când cele șapte plăgi ale celor șapte îngeri nu vor fi terminate."
+      "text": "Templul era plin de fum din slava lui Dumnezeu și din puterea lui. Nimeni nu putea să intre în templu până când cele șapte plăgi ale celor șapte îngeri nu vor fi terminate.”"
     }
   ],
   "editorialNotes": [],

@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "copyrightDistance": "approved",
-    "criticalIssues": "approved",
-    "aiSourceLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "aiRomanianLanguage": "approved",
     "aiTheologicalContext": "approved",
-    "omissionAddition": "approved"
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5075266817973916,
       "minimumScore": 0.6309563052154472
     },
-    "textDigest": "sha256:b73885f62d29265fef0ef8ed3882e9d46c869d93a51140a3ecd8b15ebed968cc",
-    "contentDigest": "sha256:f81513e7cbdd50cae5cb30292b8cbc2d8cf694d16d3e9b705beba8bb0d8c5376"
+    "textDigest": "sha256:2bdd36907949780c66ef79c78eb69bbbbbc505416f96d0e89c928a5df642d290",
+    "contentDigest": "sha256:69a43e1669fe6e4e3245b85b138a607636fe772185b7df45a36bf3aac1f136a1"
   },
   "verses": [
     {
@@ -217,7 +217,7 @@
     },
     {
       "number": 19,
-      "text": "Același lucru a profitat de rasa noastră și i - a maltratat pe tații noștri și i - a forțat să - și abandoneze copiii, pentru ca ei să nu rămână în viață."
+      "text": "Același lucru a profitat de rasa noastră și i-a maltratat pe tații noștri și i-a forțat să-și abandoneze copiii, pentru ca ei să nu rămână în viață."
     },
     {
       "number": 20,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Dar cînd avea patruzeci de ani, i -a venit în inimă să - i viziteze pe frații săi, copiii lui Israel."
+      "text": "Dar când avea patruzeci de ani, i-a venit în inimă să-i viziteze pe frații săi, copiii lui Israel."
     },
     {
       "number": 24,

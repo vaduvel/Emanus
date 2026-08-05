@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:329afdb35f5a61f91af21e5630c0dbd83206bd220ca4b7a869d5403fe14dc339",
-    "contentDigest": "sha256:7f8f0852f3b4c8b71953a1f1e789ec2ff94fa0c28dda827395f0c6993cca94ab"
+    "textDigest": "sha256:22538d67a700d2d1a817d8d9429cbd60a50a78a3f29de5b67b67c47b8816fa9d",
+    "contentDigest": "sha256:f04d682e8d6f1b4a23dec70846016963f244a2945604885fe86b807d243e69ca"
   },
   "verses": [
     {
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Atunci copilașii au fost aduși la El ca să-și pună mînile peste ei și să se roage; și ucenicii i-au mustrat."
+      "text": "Atunci copilașii au fost aduși la El ca să-și pună mâinile peste ei și să se roage; și ucenicii i-au mustrat."
     },
     {
       "number": 14,
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Tânărul i-a zis:Toate aceste lucruri le-am observat din tinerețea mea. Ce-mi mai lipsește?"
+      "text": "Tânărul i-a zis: Toate aceste lucruri le-am observat din tinerețea mea. Ce-mi mai lipsește?"
     },
     {
       "number": 21,

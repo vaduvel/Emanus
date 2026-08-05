@@ -30,10 +30,10 @@
   "review": {
     "aiTheologicalContext": "approved",
     "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
     "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "benchmarkComparison": "approved",
-    "omissionAddition": "approved",
     "aiSourceLanguage": "approved"
   },
   "benchmark": {
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:7f77f7a0521411af38c52be2cbed7196f835baff28530d9a37f340ff0113389d",
-    "contentDigest": "sha256:b012c2c089a8cd127dee8cc7c367415b7bfde8c78d0f832898cfc2e053ebc35a"
+    "textDigest": "sha256:72c5e3730dccbd069a5172829091b05bdb0dc6f86ce5461163b497a041293c47",
+    "contentDigest": "sha256:487d2f287e31094d59a8c8042f2aa9fe309981336381a5927e5a559c21c05f65"
   },
   "verses": [
     {
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Prin urmare, când am planificat acest lucru, am arătat eu nestatornicie? Sau lucrurile pe care le-am planificat, nu am de gând în conformitate cu carnea, că cu mine ar trebui să fie Da, da și nu, nu?"
+      "text": "Așadar, vrând aceasta, am lucrat oare cu ușurătate? Sau cele pe care le hotărăsc le hotărăsc după carne, ca să fie la mine „Da, da” și „Nu, nu”?"
     },
     {
       "number": 18,

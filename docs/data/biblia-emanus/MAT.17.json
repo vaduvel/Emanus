@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:324d395b93a9c0949fca5465242e94904be8a566690374686d9c86ea33fc0c2f",
-    "contentDigest": "sha256:0b4e6a4a5ec4be7ae110ff94dbdc6ab0e8e9183a71a14b1a4e85c2573c8063e3"
+    "textDigest": "sha256:b8bec2d80a22927cbc7763facd87cee64e479b436ec64e32ae448b1ca53b12e2",
+    "contentDigest": "sha256:023190a7bb3b6ac6c2970c175b7143de4e145a1cd057a98c3aaa6ed4dd100019"
   },
   "verses": [
     {
@@ -225,7 +225,7 @@
     },
     {
       "number": 22,
-      "text": "Pe cînd stăteau în Galileea, Isus le -a zis:,,Fiul omului este pe cale să fie dat în mînile oamenilor,"
+      "text": "Pe când stăteau în Galileea, Isus le-a zis:„ Fiul omului este pe cale să fie dat în mâinile oamenilor,"
     },
     {
       "number": 23,
@@ -245,7 +245,7 @@
     },
     {
       "number": 27,
-      "text": "Dar, ca să nu-i facem să se poticnească, du-te la mare, aruncă undița și ia primul pește care va ieși. Când îi vei deschide gura, vei găsi un stater. Ia-l și dă-li-l pentru Mine și pentru tine."
+      "text": "Dar, ca să nu-i facem să se poticnească, du-te la mare, aruncă undița și ia primul pește care va ieși. Când îi vei deschide gura, vei găsi un stater. Ia-l și dă-li-l pentru Mine și pentru tine.”"
     }
   ],
   "editorialNotes": [],

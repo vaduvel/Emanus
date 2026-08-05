@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:151b34a505300365f7e430ebf4189ee06a33fde0ebb68ece99619a15bb4937e4",
-    "contentDigest": "sha256:e1659005601ebfd25aedf163797659daa18184ef5ed9789f82b886fc42e4d74a"
+    "textDigest": "sha256:e62531eb9d3863d1a603b3a88b11648d8fb1556bc34c4f65edc697398f6f9a32",
+    "contentDigest": "sha256:1c5afa061301b46ff04adfc1bc5c84dda2a8616a25c7275c9dd4b32bdfe0c8d4"
   },
   "verses": [
     {
@@ -221,7 +221,7 @@
     },
     {
       "number": 20,
-      "text": "Apoi le - a poruncit discipolilor să nu spună nimănui că el era Isus Hristosul."
+      "text": "Apoi le-a poruncit discipolilor să nu spună nimănui că el era Isus Hristosul."
     },
     {
       "number": 21,

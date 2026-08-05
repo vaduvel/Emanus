@@ -28,13 +28,13 @@
     }
   },
   "review": {
-    "benchmarkComparison": "approved",
     "aiTheologicalContext": "approved",
-    "aiSourceLanguage": "approved",
-    "criticalIssues": "approved",
+    "copyrightDistance": "approved",
     "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
     "aiRomanianLanguage": "approved",
-    "copyrightDistance": "approved"
+    "aiSourceLanguage": "approved"
   },
   "benchmark": {
     "translationsConsulted": [
@@ -79,7 +79,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-ensemble-3.0/opus-en-ro+opus-tc-big+multilingual-minilm",
+      "engine": "biblia-emanus-nt-repair-4.0",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,9 +103,9 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Textul a fost normalizat Unicode NFC și folosește diacriticele românești cu virgulă.",
-        "Formele onomastice canonice Isus, Hristos și Iacov au fost aplicate consecvent.",
-        "Candidatul final a fost ales prin comparație semantică independentă și control lexical cu etaloanele fixate."
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.4037089233135842,
       "minimumScore": 0.5165308313030281
     },
-    "textDigest": "sha256:1b3ea27105f973fdd6823289c0ce9d0c54579d01e50c571f79968c4a92ceb86e",
-    "contentDigest": "sha256:1edc19ed3cfa526acabcf00186a475721428cfa2c92467f30b62467309e17c2b"
+    "textDigest": "sha256:8f2b0916e7ddd85f524f319abb49ce7257ceae037278ed9a78beba56c58c9bf0",
+    "contentDigest": "sha256:8df4c97f350a1ee5aa4dbc16833c54112d0b8400ddefc58ef78a5ff3aa38a131"
   },
   "verses": [
     {
@@ -193,7 +193,7 @@
     },
     {
       "number": 13,
-      "text": "Nu ne aduce în ispită, ci ne izbăvește de cel rău. Căci a ta este Împărăția, puterea și slava pentru totdeauna. Amin."
+      "text": "Și nu ne duce în ispită, ci izbăvește-ne de cel rău."
     },
     {
       "number": 14,
@@ -229,11 +229,11 @@
     },
     {
       "number": 22,
-      "text": "Lampa trupului este ochiul. dacă ochiul tău este sunet, tot corpul tău va fi plin de lumină."
+      "text": "Candela trupului este ochiul. Așadar, dacă ochiul tău este sănătos, întregul tău trup va fi luminos."
     },
     {
       "number": 23,
-      "text": "Dar daca ochiul tau este rau, tot corpul tau va fi plin de intuneric. Daca de aceea lumina care este in tine este intuneric, cat de mare este intunericul!"
+      "text": "Dar, dacă ochiul tău este rău, întregul tău trup va fi întunecat. Deci, dacă lumina care este în tine este întuneric, cât de mare este întunericul!"
     },
     {
       "number": 24,
@@ -249,7 +249,7 @@
     },
     {
       "number": 27,
-      "text": "Care dintre voi, fiind anxios, poate adăuga un moment la durata lui de viață?"
+      "text": "Cine dintre voi, îngrijorându-se, poate adăuga un singur cot la statura lui?"
     },
     {
       "number": 28,
@@ -273,22 +273,25 @@
     },
     {
       "number": 33,
-      "text": "Dar caută mai întâi pe Dumnezeu Regatul și dreptatea lui; și toate aceste lucruri vor fi date și ție."
+      "text": "Căutați însă mai întâi Împărăția și dreptatea Lui, iar toate acestea vi se vor adăuga."
     },
     {
       "number": 34,
-      "text": "Prin urmare, nu te îngrijora pentru ziua de mâine, pentru că mâine va fi nerăbdător pentru sine. Fiecare zi propriul rău este suficient."
+      "text": "Nu vă îngrijorați deci pentru ziua de mâine, căci ziua de mâine se va îngrijora de ea însăși. Ajunge fiecărei zile răul ei."
     }
   ],
   "editorialNotes": [
     {
       "verse": 13,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "term": "doxologia tradițională a Rugăciunii Domnești",
+      "decision": "Textul principal urmează forma scurtă SBLGNT și se încheie cu «izbăvește-ne de cel rău».",
+      "alternatives": [
+        "Căci a Ta este Împărăția, puterea și slava în veci. Amin."
+      ],
+      "reason": "Doxologia este păstrată în tradiția liturgică și în manuscrise ulterioare, dar nu aparține textului principal SBLGNT.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "Lectura tradițională este documentată în notă, nu introdusă în textul critic principal."
     }
   ],
   "referenceNotes": [],
