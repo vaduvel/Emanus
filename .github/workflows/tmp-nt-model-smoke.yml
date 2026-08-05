@@ -1,0 +1,21 @@
+name: Temporary NT GitHub Models Smoke Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  models: read
+
+jobs:
+  smoke:
+    if: github.head_ref == 'agent/biblia-emanus-nt-audit3'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Call GitHub Models
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/tmp-nt-model-smoke.py
