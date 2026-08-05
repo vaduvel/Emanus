@@ -87,13 +87,16 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "f4219f0a91547ba9a6c5b4219d9e23778202e3750e0e1bc1fe3a65a4ef9319c6",
+    "textDigest": "2d051c274a529a76a28ebe978708ebaaa2f23a9cc9647fe6345384628dd1a8ba",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
     },
-    "repairPass": "ot-repair5-truncation-1"
+    "repairPass": "ot-repair5-truncation-1",
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -134,7 +137,7 @@
     },
     {
       "number": 10,
-      "text": "„Câinii vor mânca pe Izabela în ogorul din Izreel și nu va fi cine s-o îngroape.”"
+      "text": "Câinii o vor mânca pe Izabela pe ogorul din Izreel și nu va fi nimeni care s-o îngroape.» Apoi tânărul a deschis ușa și a fugit."
     },
     {
       "number": 11,
@@ -242,7 +245,7 @@
     },
     {
       "number": 37,
-      "text": "„„„„„„„„și hoitul Izabelei va fi ca gunoiul pe fața ogoarelor, în ogorul din Izreel, așa încât nu se va mai putea zice: „Aceasta este Izabela!”””””””””"
+      "text": "Hoita Izabelei va fi ca gunoiul pe fața câmpului, pe ogorul din Izreel, astfel încât nimeni nu va mai putea spune: «Aceasta este Izabela.»"
     }
   ],
   "editorialNotes": [
@@ -258,6 +261,30 @@
       "term": "repair5-truncation",
       "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
       "previousTextDigest": "2d7b4693e99e257f3f7417d4d412faa36db736b9c96a995eb5d530abd58db687",
+      "resolutionStatus": "resolved"
+    },
+    {
+      "verse": 10,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau lipsa îngropării și fuga mesagerului după rostirea profeției.",
+      "previousTextDigest": "73578a7859a2413c751de50de36f797f9f6674ac7701955db660da3651ea9c91",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    },
+    {
+      "verse": 37,
+      "term": "repair5-semantic-finding",
+      "decision": "Textul avea ghilimele multiplicate mecanic și era nepublicabil.",
+      "previousTextDigest": "02f86ffdc266f39b37b03c8e81003d711d8f164558a813457a82a1596cbd2964",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
       "resolutionStatus": "resolved"
     }
   ],

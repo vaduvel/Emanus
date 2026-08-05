@@ -77,7 +77,7 @@
     },
     {
       "number": 18,
-      "text": "Vai de cei ce doresc „ziua DOMNULui”"
+      "text": "Vai de cei care doresc ziua DOMNULUI! La ce vă va folosi ziua DOMNULUI? Ea va fi întuneric, nu lumină."
     },
     {
       "number": 19,
@@ -133,14 +133,30 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "c8ea3c500828b99acde8373767a6d7679a7bbb02050c1de564fbf896431f69bd",
+    "textDigest": "1ac67838f3940fbd22df1494de8253a61e1418352f055347fe4c907baa1fd2f1",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 18,
+      "term": "repair5-semantic-finding",
+      "decision": "Versetul era tăiat după exclamația introductivă și pierdea contrastul întuneric–lumină.",
+      "previousTextDigest": "edf6531f72cab76e2a46051c4a59cb0362614bdccf6b88d3618a6e67ff70c5b9",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic",
   "source": {
     "policy": "independent-verification-of-inherited-romanian-candidate",

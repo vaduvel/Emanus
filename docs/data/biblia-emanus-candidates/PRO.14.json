@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "753debcfd708e8eee797cf2dd60ab98be49c64cbb7fa3ea492930a709136fe23",
+    "textDigest": "4bb8258996f6328c0bd2e8b4aca87657fe825395dc76a3bfa29ccd483c819942",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -109,7 +112,7 @@
     },
     {
       "number": 4,
-      "text": "Unde nu sunt boi, ieslea rămâne goală, dar puterea boilor aduce belșug de roade. –"
+      "text": "Unde nu sunt boi, ieslea este curată, dar puterea boului aduce belșug de roade."
     },
     {
       "number": 5,
@@ -236,6 +239,19 @@
       "text": "Un împărat are plăcere de un slujitor chibzuit, dar pe cel de ocară îl atinge mânia lui."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "repair5-semantic-finding",
+      "decision": "Ieslea fără boi este curată, nu doar goală; antiteza privește curățenia și productivitatea.",
+      "previousTextDigest": "bdd41625494351fba1b5deed20a5798a4638f6b631f0ee16d44efc189939c783",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

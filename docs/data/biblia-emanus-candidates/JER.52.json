@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "54bcb11d8f22ee3e0ea9bb51930758f6cf6c36840b7d7dbe73ca2871b5bb6d82",
+    "textDigest": "8f8f9d8f968e83c6b7392939b64ead78439175dd1365c6398a1c23d02ac77882",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -181,7 +184,7 @@
     },
     {
       "number": 22,
-      "text": "deasupra lui era un acoperiș de aramă, și înălțimea unui acoperiș era de cinci coți; împrejurul acoperișului era o rețea și rodii, toate de aramă; tot așa era și al doilea stâlp și avea și el rodii."
+      "text": "Deasupra lui era un capitel de bronz, înalt de cinci coți. Împrejurul capitelului erau o rețea și rodii, toate de bronz. Al doilea stâlp avea aceeași înfățișare, cu rodii."
     },
     {
       "number": 23,
@@ -232,6 +235,19 @@
       "text": "Împăratul Babilonului a purtat grijă necontenit de hrana lui zilnică, până în ziua morții lui, în tot timpul vieții sale."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 22,
+      "term": "repair5-semantic-finding",
+      "decision": "Termenul arhitectural este capitel, nu acoperiș.",
+      "previousTextDigest": "9f9e4f0280f9853f82b390d350037d663194c54002e1de8923a7991ce0ad7ade",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

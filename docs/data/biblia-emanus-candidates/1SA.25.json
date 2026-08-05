@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "8cbb921995aa376c838a948fa91a21c158346bb90928298e2568bd5ad28452fd",
+    "textDigest": "83cc7151fb9ff2e807b781becfd9f53fe78dcbac6043d130ae3722fb159d4868",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -169,7 +172,7 @@
     },
     {
       "number": 19,
-      "text": "și a zis slujitorilor săi: „Luați-o înaintea mea, și eu voi veni după voi.”"
+      "text": "Ea le-a spus slujitorilor săi: «Mergeți înaintea mea; eu vin după voi.» Dar nu i-a spus nimic soțului ei, Nabal."
     },
     {
       "number": 20,
@@ -272,6 +275,19 @@
       "text": "„Și Saul dăduse pe fiica sa Mical, nevasta lui David, lui Palti din Galim, fiul lui Laiș.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 19,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau instrucțiunea către slujitori și faptul că Abigail nu i-a spus lui Nabal.",
+      "previousTextDigest": "b412f95d014fc6086029128167e141686088309b6171a810607e94d1f6c3fc76",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

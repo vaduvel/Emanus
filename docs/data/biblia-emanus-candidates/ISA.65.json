@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "4b1d6a2adc038c9f600707b11bebc9d71d1f3a92ce860e1816803f4ad32ee4d5",
+    "textDigest": "b4eb5f7a0dbc558828893ef8b84741d2a38009de2b186c7cf5fcdabe3003e84b",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -113,7 +116,7 @@
     },
     {
       "number": 5,
-      "text": "și care totuși zice: „Dă-te înapoi, nu te apropia de mine, căci sunt sfânt!”"
+      "text": "Ei spun: «Stai deoparte! Nu te apropia de mine, fiindcă sunt mai sfânt decât tine!» Aceștia sunt fum în nările Mele, un foc care arde toată ziua."
     },
     {
       "number": 6,
@@ -196,6 +199,19 @@
       "text": "„Lupul și mielul vor paște împreună, leul va mânca paie ca boul, și șarpele se va hrăni cu țărână. Niciun rău, nicio vătămare nu se va face pe tot muntele Meu cel sfânt, zice DOMNUL.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau evaluarea divină și imaginile fumului și focului continuu.",
+      "previousTextDigest": "870526a0c6029afe73db9ff19af43cabf54d74984f1001ab0243151a2f7618a2",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

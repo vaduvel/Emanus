@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "17bb67eab7cb0752bf8424cb4c6000525f738d5e39a4ff39f9fe16a0e3c2b382",
+    "textDigest": "6f26f0054df47ca47019dae3fe0ea285a8b05bd240ad2094d61cfabe2356a476",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -189,7 +192,7 @@
     },
     {
       "number": 24,
-      "text": "„DOMNUL este partea mea de moștenire”"
+      "text": "«DOMNUL este partea mea», spune sufletul meu; de aceea voi nădăjdui în El."
     },
     {
       "number": 25,
@@ -360,6 +363,19 @@
       "text": "„Urmărește-i în mânia Ta și șterge-i de sub ceruri, DOAMNE!”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 24,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau vorbitorul, sufletul, și concluzia nădejdii.",
+      "previousTextDigest": "aafec66becc24f748bbe4ba825d2ac7e6db1ee8c38448cf1bfcd1cd1353f8c2b",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

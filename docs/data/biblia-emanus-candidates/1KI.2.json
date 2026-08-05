@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "b1eea1d6df2ae42f7221e843e2f8604154474f28a46248f8267602a107c117e1",
+    "textDigest": "c0c0e00a93a62df017b6ef1a44515469a698a3e774d01028384a238d02c088c4",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -245,7 +248,7 @@
     },
     {
       "number": 38,
-      "text": "Șimei a răspuns împăratului: „Bine! Robul tău va face cum spune domnul meu, împăratul.”"
+      "text": "Șimei i-a spus împăratului: «Cuvântul este bun. Slujitorul tău va face așa cum a spus domnul meu, împăratul.» Șimei a locuit multe zile la Ierusalim."
     },
     {
       "number": 39,
@@ -280,6 +283,19 @@
       "text": "„Și împăratul a poruncit lui Benaia, fiul lui Iehoiada, care a ieșit și a lovit pe Șimei; și Șimei a murit. Astfel, împărăția s-a întărit în mâinile lui Solomon.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 38,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau acceptarea ordinului și șederea îndelungată a lui Șimei la Ierusalim.",
+      "previousTextDigest": "8146c19f7ac9fe9da2aadea2596a98907718dcbd4bc5b32132fccf7a2f2dad1f",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

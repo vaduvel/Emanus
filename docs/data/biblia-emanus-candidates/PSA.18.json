@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "f51815b2ae15fae9c049a64a40bb31e068786f254660522b96d118b8e46257ce",
+    "textDigest": "eb6e9a38be73fb97c1352dbfb97091006ef31355aa13a90fa13fe92629cc8c2e",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -105,7 +108,7 @@
     },
     {
       "number": 3,
-      "text": "Eu strig: „Lăudat să fie DOMNUL!”"
+      "text": "Îl chem pe DOMNUL, care este vrednic de laudă, și sunt izbăvit de vrăjmașii mei."
     },
     {
       "number": 4,
@@ -296,6 +299,19 @@
       "text": "„El dă mari izbăviri împăratului Său și dă îndurare unsului Său: lui David și seminței lui pe vecie.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau chemarea DOMNULUI și izbăvirea de vrăjmași.",
+      "previousTextDigest": "bbbb3db92bbf4526587d97bf4147b2b5b593690c9990299b64f695b5bd2681d1",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "9492dc34c03ae838d365f014ee4f7b0f090a2db3c2d4d5a9613e8523f4aedeb0",
+    "textDigest": "263664727ae69f8ba70322f6cd88762c7158659ad709c503a977050eb332f09d",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -193,7 +196,7 @@
     },
     {
       "number": 25,
-      "text": "Voi ziceți: „Calea DOMNULUI nu este dreaptă!”"
+      "text": "Dar voi spuneți: «Calea Stăpânului nu este dreaptă.» Ascultă, casă a lui Israel! Oare calea Mea nu este dreaptă? Nu sunt mai degrabă căile voastre nedrepte?"
     },
     {
       "number": 26,
@@ -224,6 +227,19 @@
       "text": "„Căci Eu nu doresc moartea celui ce moare, zice DOMNUL Dumnezeu. Întoarceți-vă, dar, la Dumnezeu și veți trăi.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 25,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau răspunsul lui Dumnezeu și întoarcerea acuzației asupra căilor lui Israel.",
+      "previousTextDigest": "f60c81c438c9452101beacc4edec438a001834da2433a6a1a5d877239872669c",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

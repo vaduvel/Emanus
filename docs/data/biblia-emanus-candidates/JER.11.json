@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "8500a9eba77050327390965e45184eee34b2f768c2b73791bd805da945edfbb4",
+    "textDigest": "fcf0dfa53363c0fadf8926bec987e18af31b2ad15185309e073eab18327871d2",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -157,7 +160,7 @@
     },
     {
       "number": 16,
-      "text": "„Măslin verde, gras și cu roade frumoase și plăcute”"
+      "text": "DOMNUL te numise «măslin verde, frumos, cu rod bun». Dar, în vuietul unei mari furtuni, a aprins focul asupra lui, iar ramurile lui au fost frânte."
     },
     {
       "number": 17,
@@ -188,6 +191,19 @@
       "text": "„„„„„Și niciunul din ei nu va scăpa, căci voi aduce nenorocirea peste oamenii din Anatot în anul când îi voi pedepsi.”””””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 16,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau focul, vuietul și ruperea ramurilor.",
+      "previousTextDigest": "ba9ccd61396ab4ed06b4192a75a98cb566932d74ad9a4c1b793b906fd56b4f03",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "406780beb7febd9c5541be42baa3b516b7c9c63010f5d2031db6ba980d0b71c2",
+    "textDigest": "637318d5959318593556f9d0a1017c14b86e12d528c8fbcf7cdc47cb8a48598a",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -177,7 +180,7 @@
     },
     {
       "number": 21,
-      "text": "Pârâul Chison i-a luat, pârâul din vremurile străvechi, pârâul Chison! Suflete, calcă-n picioare pe viteji!"
+      "text": "Pârâul Chișon i-a luat, pârâul străvechi, pârâul Chișon. Suflete al meu, înaintează cu putere!"
     },
     {
       "number": 22,
@@ -220,6 +223,19 @@
       "text": "„Așa să piară toți vrăjmașii Tăi, DOAMNE! Dar cei ce-L iubesc sunt ca soarele, când se arată în puterea lui.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 21,
+      "term": "repair5-semantic-finding",
+      "decision": "Imperativul final înseamnă înaintare cu putere, nu călcarea vitejilor în picioare.",
+      "previousTextDigest": "6310e2b7e43594291441c5b1e3071193df2e1668b5e6bc5863cbfddb6d39827a",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

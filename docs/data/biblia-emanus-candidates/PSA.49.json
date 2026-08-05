@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "3948864b32713230eafc23bd21035c2e1e0c463e00a6773dcd0b11607b024f64",
+    "textDigest": "2b444d4b5f5db680b5bf3c19b8987efd5dc35b218d081afbe698835e1f2bda1a",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -129,7 +132,7 @@
     },
     {
       "number": 9,
-      "text": "Nu vor trăi pe vecie, nu pot să nu vadă mormântul."
+      "text": "ca să trăiască pe vecie și să nu vadă groapa."
     },
     {
       "number": 10,
@@ -176,6 +179,19 @@
       "text": "Omul pus în cinste, și fără pricepere, este ca dobitoacele pe care le tai."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 9,
+      "term": "repair5-semantic-finding",
+      "decision": "Dubla negație românească răsturna sensul dorit al vieții fără vedere a gropii.",
+      "previousTextDigest": "bde2ccea7432ddcfdf2e3c71f39e8c1166df4fb91069a4807a1ecfad6f307e74",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

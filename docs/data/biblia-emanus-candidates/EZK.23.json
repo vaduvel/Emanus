@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "722b0e7485c1b26fe0bc6c6a6d9d2ac24320fedeca7335528218b6932f264643",
+    "textDigest": "f4318718cc9fc956964609cbf1fbfec52fc00a5aedf68f5f6c0f97c464055f03",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -157,7 +160,7 @@
     },
     {
       "number": 16,
-      "text": "la cea dintâi privire, și le-a trimis soli în Haldeea."
+      "text": "De îndată ce i-a văzut, s-a aprins de dorință după ei și le-a trimis soli în Haldeea."
     },
     {
       "number": 17,
@@ -292,6 +295,19 @@
       "text": "„„Vi se va răsplăti astfel nelegiuirea și veți purta păcatele săvârșite cu idolii voștri, și veți ști că Eu sunt DOMNUL Dumnezeu!””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 16,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipsea verbul semantic central: femeia s-a aprins de dorință după chipurile văzute.",
+      "previousTextDigest": "6a46d1e017b123e3b9d89dc8eea3d3c6959031d0cb128d586a207bd6365070a9",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

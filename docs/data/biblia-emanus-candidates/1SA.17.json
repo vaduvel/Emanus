@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "e429aad55989aa9f374a72261d377eb1341a80b93c6c62090d06c0bd01de3c87",
+    "textDigest": "c92a43bb0960d8fe0ce2df4a12e0eb2bb68ae2e21ef6e4524de2b686170ec6df",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -117,7 +120,7 @@
     },
     {
       "number": 6,
-      "text": "Avea niște turetci de aramă peste fluierele picioarelor și o pavăză de aramă între umeri."
+      "text": "Avea jambiere de bronz pe picioare și o suliță de bronz între umeri."
     },
     {
       "number": 7,
@@ -328,6 +331,19 @@
       "text": "Saul i-a zis: „Al cui fiu ești, tinere?” Și David a răspuns: „Sunt fiul robului tău Isai, betleemitul.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "repair5-semantic-finding",
+      "decision": "Obiectul dintre umeri este o suliță de bronz, nu un scut.",
+      "previousTextDigest": "e41f3429bec0b271118a6ef6fd3ca64d0ddd5c29029cd3505e4ca1b3acecd95b",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "1bdd75d5909923e750d5badc9c883c7ca87c7bbe03ea78b6d08d678b075113b7",
+    "textDigest": "067e29fc16d78abd84dd47660c1c301717a2c6a6c8893416ba1824f76215f5fd",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -117,7 +120,7 @@
     },
     {
       "number": 6,
-      "text": "Taie nutrețul care a mai rămas pe câmp, culeg ciorchinii rămași pe urma culegătorilor în via celui nelegiuit."
+      "text": "Ei își strâng hrana de pe câmp și culeg ce a rămas în via celui nelegiuit."
     },
     {
       "number": 7,
@@ -196,6 +199,19 @@
       "text": "„Nu este așa? Cine mă va dovedi de minciună, cine-mi va nimici cuvintele mele?”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "repair5-semantic-finding",
+      "decision": "«Nutreț» introducea hrană pentru animale; contextul este hrana secerată de oameni săraci.",
+      "previousTextDigest": "7aea70d7523e7e512e2aeb7ff2b393af15824ddb9d16b09c5e2995c2a6193898",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

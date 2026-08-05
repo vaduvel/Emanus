@@ -87,12 +87,15 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "c3bb32d16f55a6ee9c7863446122dabee2850d87cfda5f060dbaf5b541799409",
+    "textDigest": "a7cfda77ba20eddf40ba70f88121758dc8585907d78b08a7a9b5175f3054d1fd",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
   },
   "verses": [
     {
@@ -201,7 +204,7 @@
     },
     {
       "number": 27,
-      "text": "Voi năpăstuiți pe orfan, prigoniți pe prietenul vostru."
+      "text": "Voi ați arunca sorții chiar și pentru un orfan și v-ați târgui pentru prietenul vostru."
     },
     {
       "number": 28,
@@ -216,6 +219,19 @@
       "text": "„Este vreo nelegiuire pe limba mea, și nu deosebește gura mea ce este rău?”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 27,
+      "term": "repair5-semantic-finding",
+      "decision": "Acțiunile sunt tragerea la sorți pentru orfan și comercializarea prietenului, nu persecutarea generică.",
+      "previousTextDigest": "157adf61462f9b87f5e73eac9d066697122bcc1b3bf48f03b4b925aacfe520a5",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }
