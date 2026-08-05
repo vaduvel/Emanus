@@ -17,6 +17,64 @@ SPEC.loader.exec_module(validator)
 NT_IDS = set(validator.NT_CHAPTER_COUNTS)
 
 
+def source_evidence(
+    data: dict,
+    verse_number: int,
+    source_data: dict,
+) -> dict:
+    book_id = data["bookId"]
+    chapter = data["chapter"]
+    book = source_data["books"][book_id]
+    rules = source_data["rules"]
+    base_id = book["baseLockId"]
+    original_id = book["originalLockId"]
+    target = (chapter, verse_number)
+    original_references = validator.source_references_for_target(
+        original_id, book_id, chapter, verse_number, rules
+    )
+    verse_map = {item["number"]: item["text"] for item in data["verses"]}
+    context = {
+        str(number): verse_map[number]
+        for number in range(max(1, verse_number - 1), verse_number + 2)
+        if number in verse_map
+    }
+    supplemental = {}
+    for lock_id in book.get("supplementalOriginalLockIds", []):
+        supplemental_references = validator.source_references_for_target(
+            lock_id, book_id, chapter, verse_number, rules
+        )
+        supplemental[lock_id] = [
+            {
+                "reference": f"{source_chapter}:{source_verse}",
+                "text": source_data["texts"][lock_id].get(
+                    (source_chapter, source_verse)
+                ),
+            }
+            for source_chapter, source_verse in supplemental_references
+        ]
+    return {
+        "context": context,
+        "base": {
+            "lockId": base_id,
+            "reference": f"{chapter}:{verse_number}",
+            "text": source_data["texts"][base_id].get(target),
+        },
+        "original": {
+            "lockId": original_id,
+            "references": [
+                {
+                    "reference": f"{source_chapter}:{source_verse}",
+                    "text": source_data["texts"][original_id].get(
+                        (source_chapter, source_verse)
+                    ),
+                }
+                for source_chapter, source_verse in original_references
+            ],
+        },
+        "supplementalOriginals": supplemental,
+    }
+
+
 def main() -> int:
     manifest = validator.load_json(validator.MANIFEST_PATH)
     paths = validator.validate_manifest(manifest)
@@ -79,6 +137,9 @@ def main() -> int:
                         lock_id: source_data["texts"][lock_id][reference]
                         for lock_id in lock_ids
                     },
+                    "sourceEvidence": source_evidence(
+                        data, verse["number"], source_data
+                    ),
                 })
             emanus_chapter.append(emanus)
             for lock_id, benchmark_text in zip(lock_ids, benchmark_texts):
