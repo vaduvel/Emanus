@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import urllib.error
 import urllib.request
 
 payload = {
@@ -32,12 +33,15 @@ request = urllib.request.Request(
         "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
         "Content-Type": "application/json",
         "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2026-03-10",
     },
     method="POST",
 )
-with urllib.request.urlopen(request, timeout=120) as response:
-    body = json.load(response)
+try:
+    with urllib.request.urlopen(request, timeout=120) as response:
+        body = json.load(response)
+except urllib.error.HTTPError as error:
+    print(f"HTTP {error.code}: {error.read().decode('utf-8', errors='replace')}")
+    raise
 content = body["choices"][0]["message"]["content"]
 print("MODEL_OK")
 print(content)
