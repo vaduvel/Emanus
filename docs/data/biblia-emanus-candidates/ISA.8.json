@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "4e7377034f88c0a170c44c8d7e1edd30e2187f2d160e65453412c3010961b5de",
+    "textDigest": "de83578a9530cb2ec862cb063d84842d58861c7f2ec71fbcbd26a7648f7ad284",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -173,7 +174,7 @@
     },
     {
       "number": 20,
-      "text": "„La Lege și la mărturie!”"
+      "text": "Întoarceți-vă la Lege și la mărturie! Dacă nu vor vorbi potrivit acestui cuvânt, nu va exista nicio lumină a dimineții pentru ei."
     },
     {
       "number": 21,
@@ -184,6 +185,14 @@
       "text": "fie că se va uita spre pământ, iată, nu va fi decât necaz, negură, nevoie neagră, și se va vedea izgonit în întuneric beznă."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 20,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "7c7099f4f356f4c3f36d341b756a92299bfe8e4264cd31d1eea860ab0a3966ed",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

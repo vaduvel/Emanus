@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "846bbc167d58e4a671f1678c6af05c1f1a5d1c67fe7e033f8401b4abf3daa207",
+    "textDigest": "651c60b6cffbadeddfe933e4722e5a19f136dd595951acb143e35f914e469cac",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -165,7 +166,7 @@
     },
     {
       "number": 18,
-      "text": "Când voi zice celui rău: „Vei muri negreșit!”"
+      "text": "Când îi voi spune celui rău: „Vei muri negreșit”, iar tu nu-l vei avertiza și nu-i vei vorbi ca să-l întorci de la calea lui rea și să-i salvezi viața, acel om rău va muri în nelegiuirea lui, dar sângele lui îl voi cere din mâna ta."
     },
     {
       "number": 19,
@@ -204,6 +205,14 @@
       "text": "„„Dar când îți voi vorbi, îți voi deschide gura ca să le spui: „Așa vorbește DOMNUL Dumnezeu: „Cine vrea să asculte să asculte; cine nu vrea, să n-asculte!” Căci sunt o casă de îndărătnici!”””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 18,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "24ca2a61ac69dda75334c4317e64eebd5bb8663c04a95d834f4462691fe59af3",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

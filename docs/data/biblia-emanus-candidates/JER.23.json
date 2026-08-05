@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "8fd260ac80fb83951ab332cbafef8a96c5488fbf5681b8c6d3053e26e38d821b",
+    "textDigest": "959aa07e227d5568c5f65404cdb101a908cef8c6ed331d03bb910fb617b88a56",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -237,7 +238,7 @@
     },
     {
       "number": 36,
-      "text": "Dar să nu mai ziceți: „O amenințare a DOMNULUI”"
+      "text": "Să nu mai spuneți: „Povara DOMNULUI”, căci cuvântul fiecăruia va ajunge propria lui povară; voi răstălmăciți cuvintele Dumnezeului celui viu, ale DOMNULUI Oștirilor, Dumnezeul nostru."
     },
     {
       "number": 37,
@@ -256,6 +257,14 @@
       "text": "„„„„și voi pune peste voi o veșnică ocară și o veșnică necinste, care nu se va uita.””””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 36,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "e1258890088239de967acc01e7de26df51ee56657d1d8ad26ecfa1440020ee91",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

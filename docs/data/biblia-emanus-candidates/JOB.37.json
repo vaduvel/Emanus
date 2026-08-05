@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "3d7ec35f795db3ba9587ef59cfe3fcc856ed67bff638817b70e9e4610ec9d7fb",
+    "textDigest": "7a3c65e6a6146d103a4e1287665f8337c21fbe88bfb1bd2c7f81e677a01cc147",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -117,7 +118,7 @@
     },
     {
       "number": 6,
-      "text": "El zice zăpezii: „Cazi pe pământ!”"
+      "text": "El îi spune zăpezii: „Cazi pe pământ”, și la fel ploii, atât aversei ușoare, cât și ploii Sale puternice."
     },
     {
       "number": 7,
@@ -192,6 +193,14 @@
       "text": "„De aceea oamenii trebuie să se teamă de El; El nu-Și îndreaptă privirile spre cei ce se cred înțelepți.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "dbf5677dcb7229e8aa364bd9c501477fbb41c8098e2c2c4d27888cf3fe299c93",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "9c54faf9abf746006b1de1d20aed949d033269ffb002c8c05a050e3ed40345af",
+    "textDigest": "d7160a89b5ccb440d5347aca2e6214598808357ea88e1b720c5bc3a209ac115a",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -137,7 +138,7 @@
     },
     {
       "number": 11,
-      "text": "DOMNUL i-a zis: „Ieși și stai pe munte înaintea DOMNULUI!”"
+      "text": "El i-a spus: „Ieși și stai pe munte înaintea DOMNULUI!” Și iată, DOMNUL a trecut. Un vânt mare și puternic despica munții și sfărâma stâncile înaintea DOMNULUI, dar DOMNUL nu era în vânt. După vânt a venit un cutremur, dar DOMNUL nu era în cutremur."
     },
     {
       "number": 12,
@@ -180,6 +181,14 @@
       "text": "După ce s-a depărtat de Ilie, s-a întors și a luat o pereche de boi pe care i-a adus jertfă; cu uneltele boilor le-a fiert carnea și a dat-o oamenilor s-o mănânce. Apoi s-a sculat, a urmat pe Ilie și a fost în slujba lui."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 11,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "b5fbae3a051243e79fc01ea00d423d686f3206fe83be8a3cf30c65dcd0a090af",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "efd69fd212675673ce891f02df628fd90b5c65299f96ec00fc03a3b56380af0f",
+    "textDigest": "b1cd4deebc1b6ff9a0d68a9697ff8c118ba23c0f4ffaacaa68cf2bdaff48a123",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -113,7 +114,7 @@
     },
     {
       "number": 5,
-      "text": "El mi-a zis: „Fiul omului, ia ridică ochii spre miazănoapte!”"
+      "text": "El mi-a spus: „Fiul omului, ridică-ți ochii spre nord.” Mi-am ridicat ochii spre nord și iată, la nord de poarta altarului, la intrare, era acel chip care stârnea gelozia."
     },
     {
       "number": 6,
@@ -168,6 +169,14 @@
       "text": "„„De aceea și Eu voi lucra cu urgie; ochiul Meu va fi fără milă și nu Mă voi îndura; chiar dacă vor striga în gura mare la urechile Mele, tot nu-i voi asculta.””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "7554d4e16fa26ca148ab678ff52c442762a2228e49c790d36bbfaa5339335957",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "d49f581a35389a1e8d9226e28a93f0a4f14a1bc6acc465ce5c4399a206e8ed73",
+    "textDigest": "f4219f0a91547ba9a6c5b4219d9e23778202e3750e0e1bc1fe3a65a4ef9319c6",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -177,7 +178,7 @@
     },
     {
       "number": 21,
-      "text": "Atunci Ioram a zis: „Înhamă!”"
+      "text": "Ioram a poruncit: „Pregătiți carul!” I-au pregătit carul, iar Ioram, împăratul lui Israel, și Ahazia, împăratul lui Iuda, au ieșit fiecare în carul său. Au mers în întâmpinarea lui Iehu și l-au găsit pe ogorul lui Nabot din Izreel."
     },
     {
       "number": 22,
@@ -225,7 +226,7 @@
     },
     {
       "number": 33,
-      "text": "El a zis: „Aruncați-o jos!”"
+      "text": "El a spus: „Aruncați-o jos!” Ei au aruncat-o, iar sângele ei a stropit zidul și caii. Apoi Iehu a călcat-o în picioare."
     },
     {
       "number": 34,
@@ -244,6 +245,21 @@
       "text": "„„„„„„„„și hoitul Izabelei va fi ca gunoiul pe fața ogoarelor, în ogorul din Izreel, așa încât nu se va mai putea zice: „Aceasta este Izabela!”””””””””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 21,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "70c61ccd8a15cb2fbb30138a4fd0fd5961569edcd0bb943b8289720f1acc7d90",
+      "resolutionStatus": "resolved"
+    },
+    {
+      "verse": 33,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "2d7b4693e99e257f3f7417d4d412faa36db736b9c96a995eb5d530abd58db687",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

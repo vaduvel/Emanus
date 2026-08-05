@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "b9fb81a212606b0402c4d9336b8608edb8acb958678165c9b675539ff566d150",
+    "textDigest": "c7499f2410933f2474b3a40359384a9f2126b16648261c39e8cfdb502aaba31c",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -141,7 +142,7 @@
     },
     {
       "number": 12,
-      "text": "el le-a zis: „Pe ce drum a plecat?”"
+      "text": "Tatăl lor i-a întrebat: „Pe ce drum a plecat?” Fiii lui văzuseră drumul pe care mersese omul lui Dumnezeu venit din Iuda."
     },
     {
       "number": 13,
@@ -232,6 +233,14 @@
       "text": "„„„„„Și fapta aceasta a fost un prilej de păcătuire pentru casa lui Ieroboam, și pentru aceasta a fost nimicită ea și ștearsă de pe fața pământului.”””””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 12,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "d0e7c883968358562e8a5d824994239df9eea712766a581d90c074bcbd615491",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

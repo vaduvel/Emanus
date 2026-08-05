@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "cf7157dbec99f5c9ed7a99ead8b204bc626320bcf4f1f04b178a313c89fe66cb",
+    "textDigest": "ad228309d7f9d1280ac33f57aa4174e17a9414672bd9836604aa95941d49bbb8",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -149,7 +150,7 @@
     },
     {
       "number": 14,
-      "text": "Ioab a zis: „Nu voi zăbovi atâta cu tine!”"
+      "text": "Ioab a spus: „Nu voi mai pierde vremea cu tine!” A luat trei sulițe în mână și le-a înfipt în inima lui Absalom, care era încă viu în mijlocul stejarului."
     },
     {
       "number": 15,
@@ -228,6 +229,14 @@
       "text": "Atunci împăratul, cutremurându-se, s-a suit în odaia de sus a porții și a plâns. Pe când mergea, zicea: „Fiul meu Absalom! Fiul meu, fiul meu Absalom! Cum n-am murit eu în locul tău! Absalom, fiul meu, fiul meu!”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 14,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "9659d03a77a4fcd5151f2e46f67848d01a170b47d3f0752bd722617bfc9c6d1a",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

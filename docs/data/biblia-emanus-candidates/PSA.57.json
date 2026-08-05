@@ -87,17 +87,18 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "4cfe6c0ec3b1b241b8e0ebe2eadec765d7cf0539390cb3918d6f2c2e4e7aa5a1",
+    "textDigest": "83a44cdb0624c5f2fcafe2ae01657f70acb1841a402f102ecf7c7eb1be32367e",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
       "number": 1,
-      "text": "(Către mai marele cântăreților. „Nu nimici.”"
+      "text": "(Pentru dirijor. Pe melodia „Nu nimici”. Un miktam al lui David, când a fugit de Saul în peșteră.) Dumnezeule, ai milă de mine, ai milă de mine, căci sufletul meu se adăpostește în Tine; la umbra aripilor Tale mă voi refugia până va trece nenorocirea."
     },
     {
       "number": 2,
@@ -140,6 +141,14 @@
       "text": "Înalță-Te peste ceruri, Dumnezeule, peste tot pământul să se întindă slava Ta!"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "d75aa5a9a9333a884192e68787ef79b5bdd8fca11ad287418ef98e245b882b2a",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "5f8f354aad141efaf38be274280052991d3938bdfeb6e911f6701aa17d8acb85",
+    "textDigest": "fbea9349b688bae74360baa05835484760d9975ac66d4dccfee7c575f45f3efc",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -213,13 +214,21 @@
     },
     {
       "number": 30,
-      "text": "Samson a zis: „Să mor împreună cu filistenii!”"
+      "text": "Samson a spus: „Să mor împreună cu filistenii!” S-a încordat cu toată puterea, iar casa s-a prăbușit peste conducători și peste tot poporul dinăuntru. Astfel, cei pe care i-a ucis la moartea sa au fost mai mulți decât cei pe care îi ucisese în timpul vieții."
     },
     {
       "number": 31,
       "text": "Frații lui și toată casa tatălui său s-au coborât și l-au luat. Când s-au suit înapoi, l-au îngropat între Țorea și Eștaol, în mormântul tatălui său Manoah. El fusese judecător în Israel douăzeci de ani."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 30,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "359afbef2a78679034d7c977f291aba445864d62c0abc228e7bb3b5eb6d29cbc",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

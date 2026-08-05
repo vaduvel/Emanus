@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "0d674276746eb0066c8da279ca5dbf62681ad792e1607fd2d7e01606c9beb867",
+    "textDigest": "86d8742f1aae397dab2d315a940b68d52d02349e8868d68995a9701c881500ac",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -117,7 +118,7 @@
     },
     {
       "number": 6,
-      "text": "atunci îi ziceau: „Ei bine, zi: Șibolet.” Și el zicea: „Sibolet”"
+      "text": "atunci îi spuneau: „Spune «Șibolet».” El zicea: „Sibolet”, fiindcă nu putea rosti corect. Atunci îl prindeau și îl ucideau la vadurile Iordanului. În vremea aceea au căzut patruzeci și două de mii de efraimiți."
     },
     {
       "number": 7,
@@ -156,6 +157,14 @@
       "text": "apoi Abdon, fiul lui Hilel, piratonitul, a murit și a fost îngropat la Piraton, în țara lui Efraim, pe muntele amaleciților."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "308cbb1a75bb820b64b556069981dabbf7aaa9fd116f9f4c76b3260be75e957d",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

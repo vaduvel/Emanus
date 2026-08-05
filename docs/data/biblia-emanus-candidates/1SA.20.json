@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "1d21e787bdf3e11e723d88b1acd9b39f4ac65793b0efbcec16574ed884135bd5",
+    "textDigest": "08446876443e8b597edebb80c647230c316ab633eb22d2e6930f428c7055efd8",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -121,7 +122,7 @@
     },
     {
       "number": 7,
-      "text": "Și dacă va zice: „Bine!”"
+      "text": "Dacă va spune: „Bine”, slujitorul tău va fi în pace; dar dacă se va mânia, să știi că a hotărât răul."
     },
     {
       "number": 8,
@@ -264,6 +265,14 @@
       "text": "Și Ionatan a zis lui David: „Du-te în pace, acum când am jurat amândoi în Numele DOMNULUI, zicând: „DOMNUL să fie pe vecie între mine și tine, între sămânța mea și sămânța ta!” David s-a sculat și a plecat, iar Ionatan s-a întors în cetate.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 7,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "17a2f31b3ac45e5a2eb013e0e33a26534cbd9390bc78f38958e0caaa5bea617a",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

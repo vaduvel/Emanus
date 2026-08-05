@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "11189d53d1e5c78f4daefe357d888399d4a95cef9d559c6d0c2faacc060cb963",
+    "textDigest": "c8c6965841cd306d5bc57b6124198c80dc89cea47be5eb07d07b9254b38a6b8a",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -109,7 +110,7 @@
     },
     {
       "number": 4,
-      "text": "Atunci împăratul a zis: „Cine este în curte?”"
+      "text": "Împăratul a întrebat: „Cine este în curte?” Haman tocmai intrase în curtea exterioară a palatului, ca să-i ceară împăratului să-l spânzure pe Mardoheu pe spânzurătoarea pregătită pentru el."
     },
     {
       "number": 5,
@@ -152,6 +153,14 @@
       "text": "„Pe când îi vorbeau ei încă, au venit famenii împăratului și au luat îndată pe Haman la ospățul pe care-l pregătise Estera.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "4f3ebf0b2b79b0696cc6633a06ddd5f95f46e265568dffaa2ad14d12977a5d28",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

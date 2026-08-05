@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "b832d1256a2bba0dad38c6880f97ca22536fc29dd23dc82a0bbbb59bcc570e6d",
+    "textDigest": "75776276653958a65a1d8568edda34af7a0a3e24182a73aef59acb5401f6daaa",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -185,7 +186,7 @@
     },
     {
       "number": 23,
-      "text": "Naaman a zis: „Fă-mi plăcerea și ia doi talanți.”"
+      "text": "Naaman a spus: „Te rog, ia doi talanți.” A stăruit de el, a legat doi talanți de argint în doi saci, împreună cu două schimburi de haine, și le-a dat la doi dintre slujitorii săi, care le-au purtat înaintea lui."
     },
     {
       "number": 24,
@@ -204,6 +205,14 @@
       "text": "„„„Lepra lui Naaman se va lipi de tine și de sămânța ta pentru totdeauna.” Și Ghehazi a ieșit dinaintea lui Elisei plin de lepră, alb ca zăpada.””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 23,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "489c56931eea2e4697f0a3437c14d88b09e40b8c1e5bc30be4928018640a5672",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

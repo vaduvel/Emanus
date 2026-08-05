@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "1e46fdbe0272175683d83f61c792b7281870653b01892c296d20532478154fb9",
+    "textDigest": "fa6e94adcb5116ba3294bb821214ad3e5329c2ed5a20bfd5ec587b66ef9dedb7",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -241,7 +242,7 @@
     },
     {
       "number": 37,
-      "text": "„căci a murit împăratul.”"
+      "text": "Astfel, împăratul a murit. A fost adus la Samaria și a fost înmormântat acolo."
     },
     {
       "number": 38,
@@ -308,6 +309,14 @@
       "text": "„„„„A slujit lui Baal și s-a închinat înaintea lui și a mâniat pe DOMNUL Dumnezeu lui Israel, cum făcuse și tatăl său.””””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 37,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "0d877b9a21166f3ebfedbb4f5f254278f08ccf7035f94458447cbbf843e155be",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

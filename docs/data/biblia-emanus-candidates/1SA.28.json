@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "2f1fc633ec22893ea75013380db81869b49076c5d6b83006632442c7cacdcd1e",
+    "textDigest": "59e748d049a37462212c4d92b017b697b24e3fb0305aabb6f2465ade8975e5f1",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -185,7 +186,7 @@
     },
     {
       "number": 23,
-      "text": "Dar el n-a vrut, și a zis: „Nu mănânc nimic!”"
+      "text": "Dar el a refuzat și a spus: „Nu voi mânca.” Slujitorii lui și femeia au stăruit, iar el i-a ascultat. S-a ridicat de la pământ și s-a așezat pe pat."
     },
     {
       "number": 24,
@@ -196,6 +197,14 @@
       "text": "Le-a pus înaintea lui Saul și înaintea slujitorilor lui, și au mâncat. Apoi s-au sculat și au plecat chiar în noaptea aceea."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 23,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "5f7ed4a16df239e4f00798a8cc4cd65e8bd4a61e280145eb66bc968514eb9c31",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

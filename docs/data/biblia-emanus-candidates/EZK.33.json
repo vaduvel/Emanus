@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "84cd5a4009c7f98837f165d7636ebfb616eda1757e3edd899c117e01d2a0668e",
+    "textDigest": "29410c2e2f4da5213e3264a0363186116530e1d5721ad3d21456cc56beca6750",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -125,7 +126,7 @@
     },
     {
       "number": 8,
-      "text": "Când zic celui rău: „Răule, vei muri negreșit!”"
+      "text": "Când îi voi spune celui rău: „Om rău, vei muri negreșit”, iar tu nu vei vorbi ca să-l avertizezi să se întoarcă de la calea lui, acel om rău va muri în nelegiuirea lui, dar sângele lui îl voi cere din mâna ta."
     },
     {
       "number": 9,
@@ -228,6 +229,14 @@
       "text": "„„„„„Când se vor întâmpla însă aceste lucruri – și iată că se întâmplă! – vor ști că era un proroc în mijlocul lor.”””””"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 8,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "f5ae8fdf8dbdc0eb77d00d74a5a921719430920843d1d25bd214c7ab945c85d0",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

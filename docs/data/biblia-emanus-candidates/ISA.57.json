@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "75f60d17e12fce95d1ed6c85276ac4c3c8c9b214f990b63dfd533f37af6a41fa",
+    "textDigest": "6698671b7fdec7ad7da991350a4d936d570fe4f3e05b303d42fcca6e9db1b900",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -133,7 +134,7 @@
     },
     {
       "number": 10,
-      "text": "Obosești mergând, și nu zici: „Încetez!”"
+      "text": "Ai obosit de lungimea drumurilor tale, dar n-ai spus: „Este zadarnic.” Ai găsit o reînnoire a puterii tale și de aceea n-ai slăbit."
     },
     {
       "number": 11,
@@ -180,6 +181,14 @@
       "text": "„Cei răi n-au pace, zice Dumnezeul meu. –”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 10,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "cba4c67a16f255dfa808e32593cb4e34cd496546c88a3e17cd7389f5e659d2bd",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

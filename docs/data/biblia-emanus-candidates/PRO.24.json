@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "c0ca93de7730aa8f1563aef455c61d4e3914197ee91f8f6e6c9a96eb63ee081f",
+    "textDigest": "b700a6731beec78bf7638a775c855aeb647ae70d7f53d04b4b91a0513a8d824a",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -141,7 +142,7 @@
     },
     {
       "number": 12,
-      "text": "Dacă zici: „Ah! N-am știut!”"
+      "text": "Dacă spui: „Iată, n-am știut”, oare Cel care cântărește inimile nu vede? Cel care îți păzește sufletul nu știe? Nu va răsplăti El fiecăruia după faptele lui?"
     },
     {
       "number": 13,
@@ -232,6 +233,14 @@
       "text": "Și sărăcia vine peste tine pe neașteptate, ca un hoț, și lipsa, ca un om înarmat."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 12,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "78206594b36abee9a17028a1c2c12bdc414649fee2382ee6f89a01cb3b76be65",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }

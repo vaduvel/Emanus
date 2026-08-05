@@ -87,12 +87,13 @@
       "engine": "biblia-emanus-ot-repair5",
       "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
     },
-    "textDigest": "d3b2fb9f9b6fa37ddd6b2ef4321783a91def1a537cf8ccfa17053b28aa72190e",
+    "textDigest": "8737ed13ec14f61555527d814cc70c94f0b0a89e83683f674a2595ceb76ef6bb",
     "sourceSnapshots": {
       "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
       "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
       "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
-    }
+    },
+    "repairPass": "ot-repair5-truncation-1"
   },
   "verses": [
     {
@@ -193,7 +194,7 @@
     },
     {
       "number": 25,
-      "text": "Ei au zis: „Ți le vom da cu plăcere.”"
+      "text": "Ei au răspuns: „Ți-i vom da cu plăcere.” Au întins o haină și fiecare a aruncat pe ea cerceii luați ca pradă."
     },
     {
       "number": 26,
@@ -236,6 +237,14 @@
       "text": "„Și n-au ținut la casa lui Ierubaal, a lui Ghedeon, după tot binele pe care-l făcuse el lui Israel.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 25,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "840ee90e832fddae44ad0c0cc651229e6056a55d4788df7dc914d1d2001d2258",
+      "resolutionStatus": "resolved"
+    }
+  ],
   "category": "Vechiul Testament Protocanonic"
 }
