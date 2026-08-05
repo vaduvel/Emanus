@@ -1,0 +1,148 @@
+name: Unified Biblia Emanus NT repair
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/tmp-unified-nt-repair.yml
+      - scripts/tmp-repair-nt-corpus.py
+      - scripts/check-biblia-emanus-romanian-quality.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: biblia-emanus-nt-repair
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    if: github.head_ref == 'agent/biblia-emanus-nt-repair'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-nt-repair
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Reconstruct pinned source helper
+        run: |
+          : > scripts/tmp-old-pipeline.generated.py
+          for part in 00 01 02 03 04 05; do
+            git show 8cdc210e01c:scripts/tmp-complete-nt.part${part} >> scripts/tmp-old-pipeline.generated.py
+            printf '\n' >> scripts/tmp-old-pipeline.generated.py
+          done
+          python3 -m py_compile scripts/tmp-old-pipeline.generated.py
+          git fetch origin codex/biblia-emanus-new-testament:refs/remotes/origin/codex/biblia-emanus-new-testament || true
+
+      - name: Build full pre-repair report
+        run: python3 scripts/tmp-audit-nt-human-quality.py
+
+      - name: Apply source-backed repair
+        env:
+          OLD_PIPELINE: scripts/tmp-old-pipeline.generated.py
+        run: python3 scripts/tmp-repair-nt-corpus.py
+
+      - name: Enforce Romanian and textual quality
+        run: python3 scripts/check-biblia-emanus-romanian-quality.py
+
+      - name: Seal all 260 NT chapters atomically
+        run: >-
+          python3 scripts/seal-biblia-emanus.py
+          --engine biblia-emanus-nt-repair-4.0
+          --book MAT --book MRK --book LUK --book JHN --book ACT --book ROM
+          --book 1CO --book 2CO --book GAL --book EPH --book PHP --book COL
+          --book 1TH --book 2TH --book 1TI --book 2TI --book TIT --book PHM
+          --book HEB --book JAS --book 1PE --book 2PE --book 1JN --book 2JN
+          --book 3JN --book JUD --book REV
+
+      - name: Materialize and validate corpus
+        run: |
+          python3 scripts/materialize-biblia-emanus-nt.py
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          python3 scripts/check-biblia-emanus.py
+          python3 scripts/check-biblia-emanus-versification.py
+          python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py scripts/test_materialize_biblia_emanus_nt.py
+
+      - name: Write permanent audit 4.0
+        run: |
+          python3 - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          decisions = json.loads(Path('tmp-nt-repair/decisions.json').read_text(encoding='utf-8'))
+          methods = Counter(item['method'] for item in decisions)
+          lines = [
+            '# Biblia Emanus — Audit și reparație Noul Testament 4.0', '',
+            '- Data: 2026-08-05', '- Cărți: 27', '- Capitole: 260', '- Versete: 7.941',
+            f'- Versete modificate: {len(decisions)}',
+            '- Text principal: SBLGNT 1.2',
+            '- Punte public-domain: WEBU Protestant Edition',
+            '- Textus Receptus: martor suplimentar, nu sursă automată a textului principal', '',
+            '## Proveniența reparațiilor', ''
+          ]
+          lines += [f'- {name}: {count}' for name, count in sorted(methods.items())]
+          lines += ['', '## Porți trecute', '',
+            '- limbă română și coruperi mecanice;',
+            '- concordanța Matei 6:13 și Ioan 1:18 cu politica textuală;',
+            '- absența Comma Johanneum din textul principal;',
+            '- marcarea finalului lung Marcu 16:9–20;',
+            '- 27 de cărți / 260 de capitole / 7.941 de versete;',
+            '- validatoare, teste, sigiliu, typecheck și build.', '']
+          Path('docs/biblia-emanus/NOUL-TESTAMENT-AUDIT-4.md').write_text('\n'.join(lines), encoding='utf-8')
+          PY
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run full permanent publication suite
+        run: |
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:bible-publication
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+          pnpm typecheck
+          pnpm build
+
+      - name: Remove all temporary NT audit machinery
+        run: |
+          rm -f .github/workflows/tmp-unified-nt-repair.yml
+          rm -f .github/workflows/tmp-audit-nt-human-quality.yml
+          rm -f .github/workflows/tmp-export-nt-repair-candidates.yml
+          rm -f .github/workflows/tmp-languagetool-nt-sample.yml
+          rm -f .github/workflows/tmp-nllb-sample.yml
+          rm -f scripts/tmp-apply-nt-repair.py
+          rm -f scripts/tmp-audit-nt-human-quality.py
+          rm -f scripts/tmp-export-nt-repair-candidates.py
+          rm -f scripts/tmp-languagetool-nt-sample.py
+          rm -f scripts/tmp-nllb-sample.py
+          rm -f scripts/tmp-repair-nt-corpus.py
+          rm -f scripts/tmp-rogpt2-nt-sample.py
+          rm -f scripts/tmp-old-pipeline.generated.py
+          rm -rf tmp-nt-human-quality tmp-nt-repair tmp-nt-repair-candidates tmp-nt-nllb-sample
+
+      - name: Commit final repaired NT
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && { echo "No changes produced"; exit 1; }
+          git commit -m "Repair and seal Biblia Emanus New Testament audit 4.0"
+          git push origin HEAD:agent/biblia-emanus-nt-repair
