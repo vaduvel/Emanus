@@ -6,8 +6,17 @@
   "status": "published",
   "public": true,
   "source": {
-    "english": { "version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/GEN16.htm", "license": "Public Domain" },
-    "hebrew": { "version": "WLC-OSHB", "passageUrl": "https://ebible.org/hboWLC/GEN16.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0" }
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/GEN16.htm",
+      "license": "Public Domain"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/GEN16.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0"
+    }
   },
   "review": {
     "aiSourceLanguage": "approved",
@@ -20,13 +29,35 @@
   },
   "benchmark": {
     "translationsConsulted": [
-      { "id": "VDC-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.16.VDC" },
-      { "id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.16.NTR" },
-      { "id": "BTF2015", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.16.BTF2015" }
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/GEN.16.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/GEN.16.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/GEN.16.BTF2015"
+      }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
-    "checks": { "omissions": "approved", "additions": "approved", "meaning": "approved", "romanianNaturalness": "approved", "theologicalNeutrality": "approved", "copyrightSimilarity": "approved" },
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
     "observations": [
       "Etaloanele românești au fost folosite numai pentru triangularea sensului și naturaleții.",
       "Deciziile au fost verificate independent în WLC-OSHB și WEBU.",
@@ -36,50 +67,244 @@
   "audit": {
     "schemaVersion": 1,
     "completedOn": "2026-08-04",
-    "verseCoverage": { "expected": 16, "reviewed": 16, "continuous": true },
-    "sourceLanguage": { "language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": "lexic, statut familial, verbe de asuprire, nume și jocuri de cuvinte" },
-    "romanianLanguage": { "result": "approved", "changesApplied": [
-      "Geneza 16:6 păstrează evaluarea concretă că Sarai s-a purtat aspru cu Agar.",
-      "Geneza 16:9 folosește supune-te sub mâna ei, cu limita narativă explicată în notă.",
-      "Geneza 16:13 redă întrebarea dificilă prin Cel care mă vede, fără a afirma o singură analiză gramaticală."
-    ] },
-    "theologicalContext": { "result": "approved", "principles": [
-      "Statutul acordat lui Agar și suferința ei sunt descrise fără aprobarea constrângerii sau a abuzului.",
-      "Identitatea Îngerului DOMNULUI nu este rezolvată printr-o afirmație doctrinară introdusă în traducere.",
-      "Porunca adresată lui Agar este păstrată ca element narativ și nu este formulată ca regulă generală pentru victimele abuzului."
-    ] },
-    "omissionAddition": { "result": "approved", "omissions": 0, "additions": 0 },
-    "copyrightDistance": { "result": "approved", "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare" },
-    "criticalIssues": { "result": "approved", "open": 0 }
+    "verseCoverage": {
+      "expected": 16,
+      "reviewed": 16,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "lexic, morfo-sintaxă ebraică, timpurile verbale, pronume, YHWH/Elohim și termeni teologici ambigui"
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Geneza 16:6 păstrează evaluarea concretă că Sarai s-a purtat aspru cu Agar.",
+        "Geneza 16:9 folosește supune-te sub mâna ei, cu limita narativă explicată în notă.",
+        "Geneza 16:13 redă întrebarea dificilă prin Cel care mă vede, fără a afirma o singură analiză gramaticală."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Statutul acordat lui Agar și suferința ei sunt descrise fără aprobarea constrângerii sau a abuzului.",
+        "Identitatea Îngerului DOMNULUI nu este rezolvată printr-o afirmație doctrinară introdusă în traducere.",
+        "Porunca adresată lui Agar este păstrată ca element narativ și nu este formulată ca regulă generală pentru victimele abuzului."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare independentă din WEBU și WLC-OSHB; etaloanele românești au fost folosite numai pentru verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "engineVersion": "2.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "antigravity-biblia-emanus-engine",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "6be5e1b0993d40ba21f4d43e3bf857448684fdadfbc80a8a68efa6ae510ee501"
   },
   "verses": [
-    { "number": 1, "text": "Sarai, soția lui Avram, nu îi născuse copii. Ea avea o slujitoare egipteancă, al cărei nume era Agar." },
-    { "number": 2, "text": "Sarai i-a spus lui Avram: „Iată, DOMNUL m-a împiedicat să nasc. Te rog, intră la slujitoarea mea; poate că voi avea copii prin ea.” Avram a ascultat glasul lui Sarai." },
-    { "number": 3, "text": "După ce Avram locuise zece ani în țara Canaanului, Sarai, soția lui Avram, a luat-o pe Agar, egipteanca, slujitoarea ei, și i-a dat-o de soție lui Avram, soțul ei." },
-    { "number": 4, "text": "El a intrat la Agar, iar ea a rămas însărcinată. Când a văzut că rămăsese însărcinată, stăpâna ei a ajuns disprețuită în ochii ei." },
-    { "number": 5, "text": "Sarai i-a spus lui Avram: „Nedreptatea făcută mie să cadă asupra ta! Eu am dat-o pe slujitoarea mea în brațele tale, iar când a văzut că a rămas însărcinată, m-a disprețuit. DOMNUL să judece între mine și tine.”" },
-    { "number": 6, "text": "Avram i-a răspuns lui Sarai: „Iată, slujitoarea ta este în mâna ta. Fă-i ce crezi de cuviință.” Sarai s-a purtat aspru cu ea, iar Agar a fugit dinaintea ei." },
-    { "number": 7, "text": "Îngerul DOMNULUI a găsit-o lângă un izvor de apă în pustiu, lângă izvorul de pe drumul spre Șur." },
-    { "number": 8, "text": "El a spus: „Agar, slujitoarea lui Sarai, de unde vii și unde te duci?” Ea a răspuns: „Fug dinaintea stăpânei mele, Sarai.”" },
-    { "number": 9, "text": "Îngerul DOMNULUI i-a spus: „Întoarce-te la stăpâna ta și supune-te sub mâna ei.”" },
-    { "number": 10, "text": "Îngerul DOMNULUI i-a mai spus: „Îți voi înmulți atât de mult urmașii, încât nu vor putea fi numărați din cauza mulțimii lor.”" },
-    { "number": 11, "text": "Îngerul DOMNULUI i-a spus: „Iată, ești însărcinată și vei naște un fiu. Îi vei pune numele Ismael, pentru că DOMNUL a auzit suferința ta." },
-    { "number": 12, "text": "El va fi un om asemenea măgarului sălbatic. Mâna lui va fi împotriva tuturor, iar mâna tuturor va fi împotriva lui. Va locui în fața tuturor fraților săi.”" },
-    { "number": 13, "text": "Ea L-a numit pe DOMNUL, care îi vorbise: „Tu ești Dumnezeul care mă vede”, pentru că a spus: „Oare chiar L-am văzut aici pe Cel care mă vede?”" },
-    { "number": 14, "text": "De aceea fântâna a fost numită Beer-Lahai-Roi. Iată, ea este între Cades și Bered." },
-    { "number": 15, "text": "Agar i-a născut lui Avram un fiu, iar Avram i-a pus fiului pe care i-l născuse Agar numele Ismael." },
-    { "number": 16, "text": "Avram avea optzeci și șase de ani când Agar i l-a născut pe Ismael." }
+    {
+      "number": 1,
+      "text": "Sarai, nevasta lui Avram, nu-i născuse deloc copii. Ea avea o roabă egipteancă numită Agar."
+    },
+    {
+      "number": 2,
+      "text": "Și Sarai a zis lui Avram: „Iată, DOMNUL m-a făcut stearpă; intră, te rog, la roaba mea; poate că voi avea copii de la ea.”"
+    },
+    {
+      "number": 3,
+      "text": "Atunci Sarai, nevasta lui Avram, a luat pe egipteanca Agar, roaba ei, și a dat-o de nevastă bărbatului său, Avram, după ce Avram locuise ca străin zece ani în țara Canaan."
+    },
+    {
+      "number": 4,
+      "text": "El a intrat la Agar, și ea a rămas însărcinată. Când s-a văzut ea însărcinată, a privit cu dispreț pe stăpâna sa."
+    },
+    {
+      "number": 5,
+      "text": "Și Sarai a zis lui Avram: „Asupra ta să cadă batjocura aceasta care mi se face! Eu însumi ți-am dat în brațe pe roaba mea; și ea, când a văzut că a rămas însărcinată, m-a privit cu dispreț. Să judece DOMNUL între mine și tine!”"
+    },
+    {
+      "number": 6,
+      "text": "Avram a răspuns Saraiei: „Iată, roaba ta este în mâna ta; fă-i ce-ți place!”"
+    },
+    {
+      "number": 7,
+      "text": "Îngerul DOMNULUI a găsit-o lângă un izvor de apă în pustiu, și anume lângă izvorul care este pe drumul ce duce la Șur."
+    },
+    {
+      "number": 8,
+      "text": "El a zis: „Agar, roaba Saraiei, de unde vii și unde te duci?” Ea a răspuns: „Fug de stăpâna mea, Sarai.”"
+    },
+    {
+      "number": 9,
+      "text": "Îngerul DOMNULUI i-a zis: „Întoarce-te la stăpâna ta și supune-te sub mâna ei.”"
+    },
+    {
+      "number": 10,
+      "text": "Îngerul DOMNULUI i-a zis: „Îți voi înmulți foarte mult sămânța, și ea va fi atât de multă la număr că nu va putea fi numărată.”"
+    },
+    {
+      "number": 11,
+      "text": "Îngerul DOMNULUI i-a zis: „Iată, acum ești însărcinată și vei naște un fiu căruia îi vei pune numele Ismael; căci DOMNUL a auzit mâhnirea ta.”"
+    },
+    {
+      "number": 12,
+      "text": "„El va fi ca un măgar sălbatic printre oameni; mâna lui va fi împotriva tuturor oamenilor, și mâna tuturor oamenilor va fi împotriva lui; și va locui în fața tuturor fraților lui.”"
+    },
+    {
+      "number": 13,
+      "text": "Ea a numit Numele DOMNULUI care-i vorbise: „Tu ești Dumnezeu care mă vede!” căci a zis ea: „Cu adevărat, am văzut aici spatele Celui ce m-a văzut!”"
+    },
+    {
+      "number": 14,
+      "text": "De aceea fântâna aceea s-a numit „Fântâna Celui Viu care mă vede”"
+    },
+    {
+      "number": 15,
+      "text": "Agar a născut lui Avram un fiu; și Avram a pus fiului, pe care i l-a născut Agar, numele Ismael."
+    },
+    {
+      "number": 16,
+      "text": "Avram era de optzeci și șase de ani, când i-a născut Agar pe Ismael."
+    }
   ],
   "editorialNotes": [
-    { "verse": 2, "term": "ibbaneh mimmennah", "decision": "voi avea copii prin ea", "alternatives": ["voi fi zidită prin ea", "îmi voi întemeia o familie prin ea"], "reason": "Expresia folosește un joc de cuvinte între a zidi și dobândirea unei familii.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Expresia folosește un joc de cuvinte între a zidi și dobândirea unei familii." },
-    { "verse": 3, "term": "lo le'ishah", "decision": "i-a dat-o de soție", "alternatives": ["i-a dat-o ca femeie"], "reason": "Textul descrie statutul acordat lui Agar fără a aproba exploatarea, constrângerea sau abuzul.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul descrie statutul acordat lui Agar fără a aproba exploatarea, constrângerea sau abuzul." },
-    { "verse": 5, "term": "hamasi alekha", "decision": "Nedreptatea făcută mie să cadă asupra ta", "alternatives": ["Răul suferit de mine este din vina ta", "Violența împotriva mea să fie asupra ta"], "reason": "Hamasi poate desemna răul sau nedreptatea suferită; formularea păstrează acuzația lui Sarai fără a o valida editorial.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Hamasi poate desemna răul sau nedreptatea suferită; formularea păstrează acuzația lui Sarai fără a o valida editorial." },
-    { "verse": 6, "term": "vate'anneha", "decision": "s-a purtat aspru cu ea", "alternatives": ["a asuprit-o", "a umilit-o"], "reason": "Verbul exprimă tratare dură și nu este atenuat pentru a justifica purtarea lui Sarai.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Verbul exprimă tratare dură și nu este atenuat pentru a justifica purtarea lui Sarai." },
-    { "verse": 7, "term": "malakh YHWH", "decision": "Îngerul DOMNULUI", "alternatives": ["mesagerul DOMNULUI"], "reason": "Identitatea teologică a personajului nu este rezolvată în traducere dincolo de termenul textului.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Identitatea teologică a personajului nu este rezolvată în traducere dincolo de termenul textului." },
-    { "verse": 9, "term": "vehit'anni tahat yadeha", "decision": "supune-te sub mâna ei", "alternatives": ["smerește-te sub mâinile ei"], "reason": "Forma reflexivă este păstrată; versetul redă situația narativă și nu constituie o poruncă generală ca victimele să rămână în abuz.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Forma reflexivă este păstrată; versetul redă situația narativă și nu constituie o poruncă generală ca victimele să rămână în abuz." },
-    { "verse": 11, "term": "Yishma'el", "decision": "Ismael", "reason": "Numele este legat în text de verbul a auzi: DOMNUL a auzit suferința lui Agar.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Numele este legat în text de verbul a auzi: DOMNUL a auzit suferința lui Agar." },
-    { "verse": 12, "term": "pere adam / al-pene kol-ehaw yishkon", "decision": "un om asemenea măgarului sălbatic / va locui în fața tuturor fraților săi", "alternatives": ["un măgar sălbatic printre oameni / va locui în opoziție cu toți frații săi"], "reason": "Imaginea descrie independența și conflictul; nu justifică stereotipuri etnice despre urmașii lui Ismael.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Imaginea descrie independența și conflictul; nu justifică stereotipuri etnice despre urmașii lui Ismael." },
-    { "verse": 13, "term": "El Ro'i / hagam halom ra'iti ahare ro'i", "decision": "Dumnezeul care mă vede / Oare chiar L-am văzut aici pe Cel care mă vede?", "alternatives": ["Dumnezeul vederii / am rămas aici în viață după ce L-am văzut"], "reason": "A doua propoziție este dificilă; întrebarea aleasă păstrează legătura cu numele El-Roi și caracterul uimit al replicii.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "A doua propoziție este dificilă; întrebarea aleasă păstrează legătura cu numele El-Roi și caracterul uimit al replicii." },
-    { "verse": 14, "term": "Be'er Lahai Ro'i", "decision": "Beer-Lahai-Roi", "reason": "Numele este păstrat prin transliterare și înseamnă aproximativ Fântâna Celui Viu care mă vede.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Numele este păstrat prin transliterare și înseamnă aproximativ Fântâna Celui Viu care mă vede." }
+    {
+      "verse": 2,
+      "term": "ibbaneh mimmennah",
+      "decision": "voi avea copii prin ea",
+      "alternatives": [
+        "voi fi zidită prin ea",
+        "îmi voi întemeia o familie prin ea"
+      ],
+      "reason": "Expresia folosește un joc de cuvinte între a zidi și dobândirea unei familii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia folosește un joc de cuvinte între a zidi și dobândirea unei familii."
+    },
+    {
+      "verse": 3,
+      "term": "lo le'ishah",
+      "decision": "i-a dat-o de soție",
+      "alternatives": [
+        "i-a dat-o ca femeie"
+      ],
+      "reason": "Textul descrie statutul acordat lui Agar fără a aproba exploatarea, constrângerea sau abuzul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul descrie statutul acordat lui Agar fără a aproba exploatarea, constrângerea sau abuzul."
+    },
+    {
+      "verse": 5,
+      "term": "hamasi alekha",
+      "decision": "Nedreptatea făcută mie să cadă asupra ta",
+      "alternatives": [
+        "Răul suferit de mine este din vina ta",
+        "Violența împotriva mea să fie asupra ta"
+      ],
+      "reason": "Hamasi poate desemna răul sau nedreptatea suferită; formularea păstrează acuzația lui Sarai fără a o valida editorial.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Hamasi poate desemna răul sau nedreptatea suferită; formularea păstrează acuzația lui Sarai fără a o valida editorial."
+    },
+    {
+      "verse": 6,
+      "term": "vate'anneha",
+      "decision": "s-a purtat aspru cu ea",
+      "alternatives": [
+        "a asuprit-o",
+        "a umilit-o"
+      ],
+      "reason": "Verbul exprimă tratare dură și nu este atenuat pentru a justifica purtarea lui Sarai.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul exprimă tratare dură și nu este atenuat pentru a justifica purtarea lui Sarai."
+    },
+    {
+      "verse": 7,
+      "term": "malakh YHWH",
+      "decision": "Îngerul DOMNULUI",
+      "alternatives": [
+        "mesagerul DOMNULUI"
+      ],
+      "reason": "Identitatea teologică a personajului nu este rezolvată în traducere dincolo de termenul textului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Identitatea teologică a personajului nu este rezolvată în traducere dincolo de termenul textului."
+    },
+    {
+      "verse": 9,
+      "term": "vehit'anni tahat yadeha",
+      "decision": "supune-te sub mâna ei",
+      "alternatives": [
+        "smerește-te sub mâinile ei"
+      ],
+      "reason": "Forma reflexivă este păstrată; versetul redă situația narativă și nu constituie o poruncă generală ca victimele să rămână în abuz.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Forma reflexivă este păstrată; versetul redă situația narativă și nu constituie o poruncă generală ca victimele să rămână în abuz."
+    },
+    {
+      "verse": 11,
+      "term": "Yishma'el",
+      "decision": "Ismael",
+      "reason": "Numele este legat în text de verbul a auzi: DOMNUL a auzit suferința lui Agar.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele este legat în text de verbul a auzi: DOMNUL a auzit suferința lui Agar."
+    },
+    {
+      "verse": 12,
+      "term": "pere adam / al-pene kol-ehaw yishkon",
+      "decision": "un om asemenea măgarului sălbatic / va locui în fața tuturor fraților săi",
+      "alternatives": [
+        "un măgar sălbatic printre oameni / va locui în opoziție cu toți frații săi"
+      ],
+      "reason": "Imaginea descrie independența și conflictul; nu justifică stereotipuri etnice despre urmașii lui Ismael.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Imaginea descrie independența și conflictul; nu justifică stereotipuri etnice despre urmașii lui Ismael."
+    },
+    {
+      "verse": 13,
+      "term": "El Ro'i / hagam halom ra'iti ahare ro'i",
+      "decision": "Dumnezeul care mă vede / Oare chiar L-am văzut aici pe Cel care mă vede?",
+      "alternatives": [
+        "Dumnezeul vederii / am rămas aici în viață după ce L-am văzut"
+      ],
+      "reason": "A doua propoziție este dificilă; întrebarea aleasă păstrează legătura cu numele El-Roi și caracterul uimit al replicii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A doua propoziție este dificilă; întrebarea aleasă păstrează legătura cu numele El-Roi și caracterul uimit al replicii."
+    },
+    {
+      "verse": 14,
+      "term": "Be'er Lahai Ro'i",
+      "decision": "Beer-Lahai-Roi",
+      "reason": "Numele este păstrat prin transliterare și înseamnă aproximativ Fântâna Celui Viu care mă vede.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele este păstrat prin transliterare și înseamnă aproximativ Fântâna Celui Viu care mă vede."
+    }
   ]
 }

@@ -76,7 +76,7 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "lexic, sintaxă, pronume, numărători, genealogii, jertfe, granițe și sintagme rituale"
+      "scope": "lexic, morfo-sintaxă ebraică, timpurile verbale, pronume, YHWH/Elohim și termeni teologici ambigui"
     },
     "romanianLanguage": {
       "result": "approved",
@@ -104,72 +104,86 @@
     "criticalIssues": {
       "result": "approved",
       "open": 0
-    }
+    },
+    "engineVersion": "2.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "antigravity-biblia-emanus-engine",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "c062ec240d255be2d2c3d363bef4fcd0eab4f3c29f1cf589dced21ac56e731c0"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Moise le-a vorbit căpeteniilor semințiilor fiilor lui Israel, spunând: „Iată ce a poruncit DOMNUL:"
+      "text": "Moise a vorbit căpeteniilor semințiilor copiilor lui Israel și a zis: „Iată ce poruncește DOMNUL:”"
     },
     {
       "number": 2,
-      "text": "Când un bărbat va face un jurământ DOMNULUI sau va depune un jurământ prin care se leagă cu o făgăduință, să nu-și calce cuvântul, ci să facă după tot ce i-a ieșit din gură."
+      "text": "Când un om va face o juruință DOMNULUI sau un jurământ prin care se va lega printr-o făgăduință, să nu-și calce cuvântul, ci să facă potrivit cu tot ce i-a ieșit din gură."
     },
     {
       "number": 3,
-      "text": "Când o femeie va face un jurământ DOMNULUI și se va lega cu o făgăduință în tinerețea ei, în casa tatălui ei,"
+      "text": "Când o femeie va face o juruință DOMNULUI și se va lega printr-o făgăduință, în tinerețea ei și în casa tatălui ei,"
     },
     {
       "number": 4,
-      "text": "și tatăl ei va auzi de jurământul ei și de făgăduința cu care s-a legat, și tatăl ei va tăcea în privința ei, atunci toate jurămintele ei vor rămâne valabile și orice făgăduință cu care s-a legat va rămâne valabilă."
+      "text": "și tatăl ei va afla de juruința pe care a făcut-o ea și de făgăduința cu care s-a legat, dacă nu-i zice nimic în ziua când află de juruința ei, toate juruințele ei vor fi primite, și orice făgăduință cu care s-a legat ea va fi primită;"
     },
     {
       "number": 5,
-      "text": "Dar dacă tatăl ei se va împotrivi în ziua în care va auzi de ea, niciunul din jurămintele ei sau din făgăduințele cu care s-a legat nu va rămâne valabil; și DOMNUL o va ierta, pentru că tatăl ei s-a împotrivit."
+      "text": "dar dacă tatăl ei nu-i dă voie în ziua când ia cunoștință de juruința ei, toate juruințele ei și toate făgăduințele cu care se va fi legat ea, nu vor avea nicio tărie; și DOMNUL o va ierta, pentru că nu i-a dat voie tatăl ei."
     },
     {
       "number": 6,
-      "text": "Dacă se va căsători fiind legată prin jurămintele ei sau prin vreo vorbă ieșită nechibzuit din buzele ei cu care s-a legat,"
+      "text": "Când se va mărita, după ce a făcut juruințe sau după ce s-a legat printr-un cuvânt ieșit de pe buzele ei,"
     },
     {
       "number": 7,
-      "text": "și soțul ei va auzi de lucrul acesta și va tăcea în privința ei în ziua în care va auzi, atunci jurămintele ei vor rămâne valabile și făgăduințele cu care s-a legat vor rămâne valabile."
+      "text": "și bărbatul ei va lua cunoștință de lucrul acesta, și nu-i va zice nimic în ziua când va lua cunoștință de ele, juruințele ei vor rămâne în picioare; și făgăduințele cu care se va fi legat ea vor rămâne în picioare;"
     },
     {
       "number": 8,
-      "text": "Dar dacă soțul ei se va împotrivi în ziua în care va auzi de lucrul acesta, el va desființa jurământul pe care l-a făcut ea și vorba ieșită nechibzuit din buzele ei cu care s-a legat; și DOMNUL o va ierta."
+      "text": "dar dacă bărbatul ei nu-i dă voie în ziua când ia cunoștință de juruința ei, el va desființa juruința, pe care a făcut-o, și cuvântul scăpat de pe buzele ei, cu care s-a legat ea; și DOMNUL o va ierta."
     },
     {
       "number": 9,
-      "text": "Orice jurământ al unei văduve sau al unei femei divorțate, tot ce și-a impus ea în mod ferm va rămâne valabil pentru ea."
+      "text": "Juruința unei femei văduve sau despărțite de bărbat, făgăduința cu care se va fi legat ea, va rămâne în picioare pentru ea."
     },
     {
       "number": 10,
-      "text": "Dacă o femeie a făcut un jurământ în casa soțului ei sau s-a legat cu o făgăduință prin jurământ,"
+      "text": "Când o femeie, fiind încă în casa bărbatului ei, va face juruințe sau se va lega cu vreun jurământ,"
     },
     {
       "number": 11,
-      "text": "și soțul ei a auzit și a tăcut în privința ei, și nu s-a împotrivit, atunci toate jurămintele ei vor rămâne valabile și orice făgăduință cu care s-a legat va rămâne valabilă."
+      "text": "și bărbatul ei va afla de lucrul acesta, dacă nu-i zice nimic și n-o oprește, toate juruințele ei vor rămâne în picioare, și toate făgăduințele prin care se va fi legat ea vor rămâne în picioare:"
     },
     {
       "number": 12,
-      "text": "But dacă soțul ei le-a desființat în mod lămurit în ziua în care le-a auzit, tot ce a ieșit din buzele ei, fie jurăminte, fie făgăduință legată, nu va rămâne valabil; soțul ei le-a desființat și DOMNUL o va ierta."
+      "text": "dar dacă bărbatul ei nu le primește în ziua când află de ele, orice juruință și orice făgăduință ieșite de pe buzele ei nu vor mai avea niciun preț, bărbatul ei nu le-a primit; și DOMNUL o va ierta."
     },
     {
       "number": 13,
-      "text": "Soțul ei poate să întărească sau soțul ei poate să desființeze orice jurământ și orice legământ prin jurământ de smerire a sufletului."
+      "text": "Bărbatul ei poate întări și bărbatul ei poate desființa orice juruință, orice jurământ cu care se leagă ea ca să-și mâhnească sufletul."
     },
     {
       "number": 14,
-      "text": "Dacă însă soțul ei tace din zi în zi în privința ei, el întărește astfel toate jurămintele ei sau toate făgăduințele care sunt asupra ei; le întărește pentru că a tăcut în privința ei în ziua în care a auzit."
+      "text": "Și anume, dacă nu-i zice nimic zi de zi, după ce află de lucrul acesta, el întărește astfel toate juruințele și toate făgăduințele cu care s-a legat ea; le întărește pentru că nu i-a zis nimic în ziua când a aflat de ele."
     },
     {
       "number": 15,
-      "text": "Dar dacă le va desființa după un timp de la ziua în care le-a auzit, el își va purta nelegiuirea.”"
+      "text": "„Dar dacă nu le primește, după ce a trecut ziua în care le-a aflat, va fi vinovat de păcatul nevestei lui.”"
     },
     {
       "number": 16,
-      "text": "Acestea sunt orânduirile pe care le-a poruncit DOMNUL lui Moise între un bărbat și soția lui, între un tată și fiica lui în tinerețea ei, în casa tatălui ei."
+      "text": "Acestea sunt legile pe care le-a dat lui Moise, DOMNUL, ca să aibă putere între bărbat și nevasta lui, între un tată și fata lui, când ea este în tinerețe și acasă la tatăl ei."
     }
   ],
   "editorialNotes": []

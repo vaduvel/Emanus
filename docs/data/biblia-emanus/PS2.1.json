@@ -1,0 +1,85 @@
+{
+  "id": "PS2.1",
+  "bookId": "PS2",
+  "bookName": "Psalmul 151",
+  "chapter": 1,
+  "chapterNumber": 1,
+  "status": "published",
+  "public": true,
+  "verses": [
+    {
+      "number": 1,
+      "text": "Mic eram între frații mei și cel mai tânăr în casa tatălui meu; pășteam oile tatălui meu."
+    },
+    {
+      "number": 2,
+      "text": "Mâinile mele au făcut fluierul și degetele mele au întocmit alăuta."
+    },
+    {
+      "number": 3,
+      "text": "Și cine va vesti Domnului meu? Însuși Domnul, Însuși aude."
+    },
+    {
+      "number": 4,
+      "text": "El a trimis pe îngerul Său și m-a luat de la oile tatălui meu și m-a uns cu untdelemnul ungerii Sale."
+    },
+    {
+      "number": 5,
+      "text": "Frații mei erau frumoși și mari, dar Domnul nu a binevoit întru ei."
+    },
+    {
+      "number": 6,
+      "text": "Ișit-am în întâmpinarea filisteanului și m-a blestemat cu idolii lui."
+    },
+    {
+      "number": 7,
+      "text": "Iar eu, smulgându-i sabia, i-am tăiat capul și am ridicat ocara de pe fiii lui Israel."
+    }
+  ],
+  "review": {
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "audit": {
+    "engineVersion": "2.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "antigravity-biblia-emanus-engine",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 7,
+      "reviewed": 7,
+      "coveragePercent": 100
+    },
+    "sourceLanguage": {
+      "language": "greacă (Septuaginta LXX)",
+      "text": "LXX / Rahlfs-Hanhart",
+      "result": "approved",
+      "scope": "lexic, morfo-sintaxă greacă, reprezentare teologică și ebraisme"
+    },
+    "textDigest": "c820ce12e2ac1d950cfc61db3cfd0b69e5f24a3ba554195efc1056c62e579599"
+  },
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "LXX / BOR",
+      "decision": "redare fidelă din limba greacă a Septuagintei",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Conformitatea cu Septuaginta (LXX) și tradiția manuscriptică răsăriteană."
+    }
+  ]
+}

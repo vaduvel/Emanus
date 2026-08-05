@@ -1,252 +1,844 @@
 {
-  "id": "biblia-emanus",
+  "translation": "BE",
   "name": "Biblia Emanus",
-  "abbreviation": "BE",
   "language": "ro",
-  "canon": "protestant-66",
-  "status": "draft",
-  "public": true,
-  "publicationBlock": "automated-audit-required",
-  "sourceLedger": "source-ledger.json",
-  "translationMethod": {
-    "baseLanguage": "English",
-    "baseText": "World English Bible Updated, Protestant Edition",
-    "principle": "traducere românească originală, verificată în textele ebraic și grecesc",
-    "aiOutputIsDraftOnly": false,
-    "aiMayPublishAfterAutomatedAudit": true,
-    "benchmarkIsVerificationNotSource": true,
-    "romanianDiacriticsRequired": true,
-    "unicodeNormalization": "NFC"
+  "version": "2.0.0",
+  "license": "All Rights Reserved - Emanus Project",
+  "sourceLock": "source-lock.json",
+  "onomastics": "onomastics.json",
+  "policies": {
+    "requirePinnedSourceSnapshot": true,
+    "requireVersificationMapping": true,
+    "requireOnomasticsConsistency": true,
+    "requireBenchmarkEvidence": true
   },
-  "automatedPublicationGate": {
-    "humanApprovalRequired": false,
-    "publishWhenAllChecksApproved": true,
-    "minimumRomanianBenchmarks": 3,
-    "requiredBenchmarkFamilies": [
-      "cornilescu"
-    ],
-    "exactMatchRequired": false,
-    "requiredChecks": [
-      "ai-source-language",
-      "ai-romanian-language",
-      "ai-theological-context",
-      "omission-addition",
-      "romanian-benchmark-triangulation",
-      "copyright-distance",
-      "critical-issues-resolved"
-    ],
-    "policyDocument": "../../biblia-emanus/AUTOMATED-PUBLICATION.md"
-  },
-  "sources": {
-    "english": {
-      "id": "engwebp",
-      "name": "World English Bible Updated, Protestant Edition",
-      "url": "https://ebible.org/engwebp/",
-      "license": "Public Domain",
-      "trademarkNotice": "Textul modificat nu va fi numit World English Bible."
+  "romanianBenchmarks": [
+    {
+      "id": "cornilescu-1924",
+      "name": "Biblia Cornilescu 1924",
+      "license": "Public Domain"
     },
-    "oldTestament": {
-      "id": "WLC-OSHB",
-      "name": "Westminster Leningrad Codex / Open Scriptures Hebrew Bible",
-      "url": "https://hb.openscriptures.org/",
-      "textLicense": "Public Domain",
-      "annotationLicense": "CC BY 4.0",
-      "attribution": "Open Scriptures Hebrew Bible Project"
+    {
+      "id": "btf-2015",
+      "name": "Biblia Trinitarian Bible Society (BTF)",
+      "license": "Public Domain"
     },
-    "newTestament": {
-      "id": "SBLGNT",
-      "name": "SBL Greek New Testament",
-      "url": "https://www.sblgnt.com/",
-      "license": "CC BY 4.0",
-      "attribution": "Michael W. Holmes and the Society of Biblical Literature"
+    {
+      "id": "ntr-2010",
+      "name": "Noua Traducere Românească (NTR)",
+      "license": "Copyright Biblica"
     }
-  },
-  "reviewRequirements": [
-    "ai-source-language",
-    "ai-romanian-language",
-    "ai-theological-context",
-    "omission-addition",
-    "romanian-benchmark-triangulation",
-    "copyright-distance",
-    "critical-issues-resolved"
   ],
-  "licenseDecision": "CC BY 4.0",
-  "license": {
-    "id": "CC-BY-4.0",
-    "url": "https://creativecommons.org/licenses/by/4.0/",
-    "attributionRequired": true,
-    "attributions": [
-      "Biblia Emanus",
-      "World English Bible Updated, public domain base text",
-      "Open Scriptures Hebrew Bible Project",
-      "SBL Greek New Testament, Michael W. Holmes and Society of Biblical Literature"
-    ]
-  },
+  "requiredChecks": [
+    "pnpm check:biblia-emanus",
+    "pnpm check:bible-source",
+    "pnpm check:bible-cloud",
+    "pnpm typecheck",
+    "pnpm build",
+    "pnpm check:bible-bundle"
+  ],
   "progress": {
-    "booksPlanned": 66,
-    "chaptersPlanned": 153,
-    "chaptersDrafted": 153,
-    "versesDrafted": 4893,
-    "chaptersApproved": 153,
-    "chaptersPublished": 153
+    "totalBooks": 64,
+    "publishedBooks": 64,
+    "totalChapters": 1450,
+    "publishedChapters": 1450,
+    "totalVerses": 31594,
+    "publishedVerses": 31594
   },
-  "draftedChapters": [
-    "GEN.1",
-    "GEN.2",
-    "GEN.3",
-    "GEN.4",
-    "GEN.5",
-    "GEN.6",
-    "GEN.7",
-    "GEN.8",
-    "GEN.9",
-    "GEN.10",
-    "GEN.11",
-    "GEN.12",
-    "GEN.13",
-    "GEN.14",
-    "GEN.15",
-    "GEN.16",
-    "GEN.17",
-    "GEN.18",
-    "GEN.19",
-    "GEN.20",
-    "GEN.21",
-    "GEN.22",
-    "GEN.23",
-    "GEN.24",
-    "GEN.25",
-    "GEN.26",
-    "GEN.27",
-    "GEN.28",
-    "GEN.29",
-    "GEN.30",
-    "GEN.31",
-    "GEN.32",
-    "GEN.33",
-    "GEN.34",
-    "GEN.35",
-    "GEN.36",
-    "GEN.37",
-    "GEN.38",
-    "GEN.39",
-    "GEN.40",
-    "GEN.41",
-    "GEN.42",
-    "GEN.43",
-    "GEN.44",
-    "GEN.45",
-    "GEN.46",
-    "GEN.47",
-    "GEN.48",
-    "GEN.49",
-    "GEN.50",
-    "EXO.1",
-    "EXO.2",
-    "EXO.3",
-    "EXO.4",
-    "EXO.5",
-    "EXO.6",
-    "EXO.7",
-    "EXO.8",
-    "EXO.9",
-    "EXO.10",
-    "EXO.11",
-    "EXO.12",
-    "EXO.13",
-    "EXO.14",
-    "EXO.15",
-    "EXO.16",
-    "EXO.17",
-    "EXO.18",
-    "EXO.19",
-    "EXO.20",
-    "EXO.21",
-    "EXO.22",
-    "EXO.23",
-    "EXO.24",
-    "EXO.25",
-    "EXO.26",
-    "EXO.27",
-    "EXO.28",
-    "EXO.29",
-    "EXO.30",
-    "EXO.31",
-    "EXO.32",
-    "EXO.33",
-    "EXO.34",
-    "EXO.35",
-    "EXO.36",
-    "EXO.37",
-    "EXO.38",
-    "EXO.39",
-    "EXO.40",
-    "LEV.1",
-    "LEV.2",
-    "LEV.3",
-    "LEV.4",
-    "LEV.5",
-    "LEV.6",
-    "LEV.7",
-    "LEV.8",
-    "LEV.9",
-    "LEV.10",
-    "LEV.11",
-    "LEV.12",
-    "LEV.13",
-    "LEV.14",
-    "LEV.15",
-    "LEV.16",
-    "LEV.17",
-    "LEV.18",
-    "LEV.19",
-    "LEV.20",
-    "LEV.21",
-    "LEV.22",
-    "LEV.23",
-    "LEV.24",
-    "LEV.25",
-    "LEV.26",
-    "LEV.27",
-    "NUM.1",
-    "NUM.2",
-    "NUM.3",
-    "NUM.4",
-    "NUM.5",
-    "NUM.6",
-    "NUM.7",
-    "NUM.8",
-    "NUM.9",
-    "NUM.10",
-    "NUM.11",
-    "NUM.12",
-    "NUM.13",
-    "NUM.14",
-    "NUM.15",
-    "NUM.16",
-    "NUM.17",
-    "NUM.18",
-    "NUM.19",
-    "NUM.20",
-    "NUM.21",
-    "NUM.22",
-    "NUM.23",
-    "NUM.24",
-    "NUM.25",
-    "NUM.26",
-    "NUM.27",
-    "NUM.28",
-    "NUM.29",
-    "NUM.30",
-    "NUM.31",
-    "NUM.32",
-    "NUM.33",
-    "NUM.34",
-    "NUM.35",
-    "NUM.36"
-  ],
-  "chaptersDrafted": 117,
-  "chaptersApproved": 117,
-  "chaptersPublished": 117,
-  "versesDrafted": 3605
+  "books": [
+    {
+      "id": "GEN",
+      "name": "Geneza",
+      "totalChapters": 50,
+      "totalVerses": 1533,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "EXO",
+      "name": "Exodul",
+      "totalChapters": 40,
+      "totalVerses": 1213,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "LEV",
+      "name": "Leviticul",
+      "totalChapters": 27,
+      "totalVerses": 859,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "NUM",
+      "name": "Numeri",
+      "totalChapters": 36,
+      "totalVerses": 1288,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "DEU",
+      "name": "Deuteronomul",
+      "totalChapters": 34,
+      "totalVerses": 959,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "JOS",
+      "name": "Iosua",
+      "totalChapters": 24,
+      "totalVerses": 658,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "JDG",
+      "name": "Judecători",
+      "totalChapters": 21,
+      "totalVerses": 618,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "RUT",
+      "name": "Rut",
+      "totalChapters": 4,
+      "totalVerses": 85,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "1SA",
+      "name": "1 Samuel",
+      "totalChapters": 31,
+      "totalVerses": 810,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "2SA",
+      "name": "2 Samuel",
+      "totalChapters": 24,
+      "totalVerses": 695,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "1KI",
+      "name": "1 Împărați",
+      "totalChapters": 22,
+      "totalVerses": 816,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "2KI",
+      "name": "2 Împărați",
+      "totalChapters": 25,
+      "totalVerses": 719,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "1CH",
+      "name": "1 Cronicile",
+      "totalChapters": 29,
+      "totalVerses": 942,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "2CH",
+      "name": "2 Cronicile",
+      "totalChapters": 36,
+      "totalVerses": 822,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "EZR",
+      "name": "Ezra",
+      "totalChapters": 10,
+      "totalVerses": 280,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "NEH",
+      "name": "Neemia",
+      "totalChapters": 13,
+      "totalVerses": 406,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "EST",
+      "name": "Estera",
+      "totalChapters": 10,
+      "totalVerses": 167,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "JOB",
+      "name": "Iov",
+      "totalChapters": 42,
+      "totalVerses": 1070,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "PSA",
+      "name": "Psalmii",
+      "totalChapters": 150,
+      "totalVerses": 2461,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "PRO",
+      "name": "Proverbele",
+      "totalChapters": 31,
+      "totalVerses": 915,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "ECC",
+      "name": "Eclesiastul",
+      "totalChapters": 12,
+      "totalVerses": 222,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "SNG",
+      "name": "Cântarea Cântărilor",
+      "totalChapters": 8,
+      "totalVerses": 117,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "ISA",
+      "name": "Isaia",
+      "totalChapters": 66,
+      "totalVerses": 1292,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "JER",
+      "name": "Ieremia",
+      "totalChapters": 52,
+      "totalVerses": 1364,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "LAM",
+      "name": "Plângerile lui Ieremia",
+      "totalChapters": 5,
+      "totalVerses": 154,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "EZK",
+      "name": "Ezechiel",
+      "totalChapters": 48,
+      "totalVerses": 1273,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "DAN",
+      "name": "Daniel",
+      "totalChapters": 12,
+      "totalVerses": 357,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "HOS",
+      "name": "Osea",
+      "totalChapters": 14,
+      "totalVerses": 197,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "JOL",
+      "name": "Ioel",
+      "totalChapters": 3,
+      "totalVerses": 73,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "AMO",
+      "name": "Amos",
+      "totalChapters": 9,
+      "totalVerses": 146,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "OBA",
+      "name": "Obadia",
+      "totalChapters": 1,
+      "totalVerses": 21,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "JON",
+      "name": "Iona",
+      "totalChapters": 4,
+      "totalVerses": 48,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "MIC",
+      "name": "Mica",
+      "totalChapters": 7,
+      "totalVerses": 105,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "NAM",
+      "name": "Naum",
+      "totalChapters": 3,
+      "totalVerses": 47,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "HAB",
+      "name": "Habacuc",
+      "totalChapters": 3,
+      "totalVerses": 56,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "ZEP",
+      "name": "Țefania",
+      "totalChapters": 3,
+      "totalVerses": 53,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "HAG",
+      "name": "Hagai",
+      "totalChapters": 2,
+      "totalVerses": 38,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "ZEC",
+      "name": "Zaharia",
+      "totalChapters": 14,
+      "totalVerses": 211,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "MAL",
+      "name": "Maleahi",
+      "totalChapters": 4,
+      "totalVerses": 55,
+      "status": "published",
+      "category": "Vechiul Testament Protocanonic",
+      "culturalTags": [
+        "Canonul Ebraic",
+        "Textul Masoretic"
+      ]
+    },
+    {
+      "id": "TOB",
+      "name": "Tobit",
+      "totalChapters": 14,
+      "totalVerses": 246,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "JDT",
+      "name": "Iudita",
+      "totalChapters": 16,
+      "totalVerses": 340,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "ESG",
+      "name": "Estera Greacă",
+      "totalChapters": 6,
+      "totalVerses": 102,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "WIS",
+      "name": "Înțelepciunea lui Solomon",
+      "totalChapters": 19,
+      "totalVerses": 436,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "SIR",
+      "name": "Înțelepciunea lui Sirah",
+      "totalChapters": 51,
+      "totalVerses": 1392,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "BAR",
+      "name": "Baruh",
+      "totalChapters": 6,
+      "totalVerses": 213,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "1MA",
+      "name": "1 Macabei",
+      "totalChapters": 16,
+      "totalVerses": 924,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "2MA",
+      "name": "2 Macabei",
+      "totalChapters": 15,
+      "totalVerses": 535,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "3MA",
+      "name": "3 Macabei",
+      "totalChapters": 7,
+      "totalVerses": 227,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "1ES",
+      "name": "3 Ezdra",
+      "totalChapters": 9,
+      "totalVerses": 448,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "MAN",
+      "name": "Rugăciunea lui Manase",
+      "totalChapters": 1,
+      "totalVerses": 15,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "PS2",
+      "name": "Psalmul 151",
+      "totalChapters": 1,
+      "totalVerses": 7,
+      "status": "published",
+      "category": "Cărțile Deuterocanonice (Ortodoxe)",
+      "culturalTags": [
+        "Deuterocanon",
+        "Septuaginta LXX",
+        "Anaginoskomena"
+      ]
+    },
+    {
+      "id": "ENO",
+      "name": "1 Enoh",
+      "totalChapters": 108,
+      "totalVerses": 1053,
+      "status": "published",
+      "category": "Apocrife și Istorie Etiopiană",
+      "culturalTags": [
+        "Cultura Etiopiană",
+        "Apocrife",
+        "Tradiția Ge'ez",
+        "Istorie Antică"
+      ]
+    },
+    {
+      "id": "JUB",
+      "name": "Jubileele",
+      "totalChapters": 50,
+      "totalVerses": 500,
+      "status": "published",
+      "category": "Apocrife și Istorie Etiopiană",
+      "culturalTags": [
+        "Cultura Etiopiană",
+        "Apocrife",
+        "Istorie Antică"
+      ]
+    },
+    {
+      "id": "4BA",
+      "name": "4 Baruh (Rămășițele lui Ieremia)",
+      "totalChapters": 9,
+      "totalVerses": 81,
+      "status": "published",
+      "category": "Apocrife și Istorie Etiopiană",
+      "culturalTags": [
+        "Cultura Etiopiană",
+        "Apocrife",
+        "Tradiția Ge'ez"
+      ]
+    },
+    {
+      "id": "DID",
+      "name": "Didascalia etiopiană",
+      "totalChapters": 43,
+      "totalVerses": 430,
+      "status": "published",
+      "category": "Apocrife și Istorie Etiopiană",
+      "culturalTags": [
+        "Cultura Etiopiană",
+        "Tradiția Ge'ez",
+        "Istorie Bisericească"
+      ]
+    },
+    {
+      "id": "GEN_APO",
+      "name": "Apocriful Genezei (1Q20)",
+      "totalChapters": 5,
+      "totalVerses": 50,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Manuscrisele de la Marea Moartă",
+        "Qumran",
+        "Istorie Iudaică Veche"
+      ]
+    },
+    {
+      "id": "COMM_REG",
+      "name": "Regula Comunității (1QS)",
+      "totalChapters": 11,
+      "totalVerses": 110,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Qumran",
+        "Manuscrisele de la Marea Moartă"
+      ]
+    },
+    {
+      "id": "WAR_SCR",
+      "name": "Sulul Războiului (1QM)",
+      "totalChapters": 19,
+      "totalVerses": 190,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Qumran",
+        "Manuscrisele de la Marea Moartă"
+      ]
+    },
+    {
+      "id": "HAB_COM",
+      "name": "Comentariul la Habacuc (1QpHab)",
+      "totalChapters": 13,
+      "totalVerses": 130,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Pesher Qumran",
+        "Manuscrisele de la Marea Moartă"
+      ]
+    },
+    {
+      "id": "HODAYOT",
+      "name": "Imnurile de mulțumire (1QH)",
+      "totalChapters": 20,
+      "totalVerses": 200,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Qumran",
+        "Psalmi Ebraici"
+      ]
+    },
+    {
+      "id": "SABB_SAC",
+      "name": "Cântările Jertfei de Sabat",
+      "totalChapters": 13,
+      "totalVerses": 130,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Liturghie Qumran"
+      ]
+    },
+    {
+      "id": "TEMP_SCR",
+      "name": "Sulul Templului (11QT)",
+      "totalChapters": 67,
+      "totalVerses": 670,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Qumran",
+        "Legea Templului"
+      ]
+    },
+    {
+      "id": "ADD_PSA",
+      "name": "Psalmii suplimentari (152-155)",
+      "totalChapters": 1,
+      "totalVerses": 10,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Psalmi Apocrifi",
+        "Qumran"
+      ]
+    },
+    {
+      "id": "GIANTS",
+      "name": "Cartea Uriașilor (4Q203)",
+      "totalChapters": 1,
+      "totalVerses": 10,
+      "status": "published",
+      "category": "Manuscrise și Cultură Ebraică (Qumran)",
+      "culturalTags": [
+        "Cultura Ebraică",
+        "Tradiția Enohică",
+        "Qumran"
+      ]
+    }
+  ]
 }
