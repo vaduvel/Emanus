@@ -114,6 +114,19 @@ def build_reference_notes(
                 note["resolutionReason"] = "Lectura tradițională a fost verificată în Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT."
             result.append(note)
             continue
+        fixed = TRADITIONAL_READINGS.get(key)
+        if fixed:
+            result.append({
+                "number": number,
+                "status": "not-in-critical-main-text",
+                "reason": fixed["reason"],
+                "greekWitnesses": fixed["greekWitnesses"],
+                "displayNote": "Lectură tradițională: textul principal SBLGNT nu include acest verset.",
+                "traditionalReading": fixed["traditionalReading"],
+                "resolutionStatus": "resolved",
+                "resolutionReason": "Lectura tradițională a fost tradusă independent din Textus Receptus și păstrată exclusiv în nota critică, în afara textului principal SBLGNT.",
+            })
+            continue
         if key not in selected:
             raise RuntimeError(f"{key}: traditional reading unavailable")
         result.append({
