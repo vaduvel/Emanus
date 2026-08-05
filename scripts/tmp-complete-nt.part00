@@ -66,6 +66,33 @@ CANONICAL_TERMS: dict[str, tuple[str, ...]] = {
     "resurrection": ("învier",), "eternal": ("veșnic",), "baptiz": ("botez",),
 }
 
+TRADITIONAL_READINGS: dict[str, dict[str, str]] = {
+    "ACT.15.R34": {
+        "bridge": "But it seemed good to Silas to remain there.",
+        "traditionalReading": "Dar Sila a socotit de bine să rămână acolo.",
+        "greekWitnesses": "Textus Receptus: ἔδοξε δὲ τῷ Σίλᾳ ἐπιμεῖναι αὐτοῦ.",
+        "reason": "Fapte 15:34 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează o propoziție despre hotărârea lui Sila de a rămâne.",
+    },
+    "ACT.28.R29": {
+        "bridge": "When he had said these words, the Jews departed, having a great dispute among themselves.",
+        "traditionalReading": "După ce a spus aceste cuvinte, iudeii au plecat, având între ei o mare dispută.",
+        "greekWitnesses": "Textus Receptus: Καὶ ταῦτα αὐτοῦ εἰπόντος, ἀπῆλθον οἱ Ἰουδαῖοι, πολλὴν ἔχοντες ἐν ἑαυτοῖς συζήτησιν.",
+        "reason": "Fapte 28:29 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează concluzia despre plecarea iudeilor și disputa dintre ei.",
+    },
+    "LUK.17.R36": {
+        "bridge": "Two will be in the field: one will be taken, and the other left.",
+        "traditionalReading": "Doi vor fi pe câmp: unul va fi luat, iar celălalt va fi lăsat.",
+        "greekWitnesses": "Textus Receptus: δύο ἔσονται ἐν τῷ ἀγρῷ· ὁ εἷς παραληφθήσεται, καὶ ὁ ἕτερος ἀφεθήσεται.",
+        "reason": "Luca 17:36 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează paralela despre cei doi aflați pe câmp.",
+    },
+    "LUK.23.R17": {
+        "bridge": "Now he was obliged to release one person to them at the feast.",
+        "traditionalReading": "Era însă obligat să le elibereze un om la sărbătoare.",
+        "greekWitnesses": "Textus Receptus: ἀνάγκην δὲ εἶχεν ἀπολύειν αὐτοῖς κατὰ ἑορτὴν ἕνα.",
+        "reason": "Luca 23:17 este absent din textul principal SBLGNT 1.2; Textus Receptus păstrează explicația despre obligația de a elibera un om la sărbătoare.",
+    },
+}
+
 @dataclass
 class Item:
     key: str
