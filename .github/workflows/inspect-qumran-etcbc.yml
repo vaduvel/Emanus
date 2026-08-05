@@ -7,18 +7,14 @@ on:
     paths:
       - 'scripts/inspect-qumran-etcbc.py'
       - '.github/workflows/inspect-qumran-etcbc.yml'
-  pull_request:
-    paths:
-      - 'scripts/inspect-qumran-etcbc.py'
-      - '.github/workflows/inspect-qumran-etcbc.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pr40-qumran-inventory-${{ github.ref }}
-  cancel-in-progress: true
+  group: pr40-qumran-inventory
+  cancel-in-progress: false
 
 jobs:
   inspect:
@@ -26,6 +22,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-all-pr40-rebuild
       - name: Inspect ETCBC DSS commit and document features
         run: python3 scripts/inspect-qumran-etcbc.py
       - name: Upload exact inventory
