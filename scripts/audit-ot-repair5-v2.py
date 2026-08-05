@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic publication audit v3 for sanitized OT repair5 candidates."""
+"""Deterministic publication audit v4 for the canonical OT candidates."""
 from __future__ import annotations
 
 import argparse
@@ -24,7 +24,6 @@ CANONICAL = {
     "PSA","PRO","ECC","SNG","ISA","JER","LAM","EZK","DAN","HOS","JOL","AMO",
     "OBA","JON","MIC","NAM","HAB","ZEP","HAG","ZEC","MAL",
 }
-SUPPLEMENTS = {"MAN", "PS2"}
 PLACEHOLDER = re.compile(
     r"Text istoric din manuscrisele vechi|Păstrat în sulurile|Martor istoric al credinței|"
     r"Mărturie despre rânduiala|Scriere păstrată și studiată|text revizuit în limba română|"
@@ -57,9 +56,10 @@ def main() -> int:
     parser.add_argument("--fail", action="store_true")
     args = parser.parse_args()
     source_paths = {
-        "webbe": SOURCES / "eng-webbe_usfm.zip",
-        "wlc": SOURCES / "hebwlc_usfm.zip",
-        "btf": SOURCES / "ronbtf_usfm.zip",
+        "english": SOURCES / "engwebp_usfm.zip",
+        "hebrew": SOURCES / "hboWLC_usfm.zip",
+        "romanianBtf": SOURCES / "ronbtf_usfm.zip",
+        "romanianCornilescu1924": SOURCES / "ron1924_usfm.zip",
     }
     issues: list[dict[str, Any]] = []
 
@@ -83,18 +83,20 @@ def main() -> int:
     if any(item["code"] == "SOURCE_MISSING" for item in issues):
         raise SystemExit("Pinned source missing")
 
-    web = parse_usfm_zip(source_paths["webbe"])
-    wlc = parse_usfm_zip(source_paths["wlc"])
-    btf = parse_usfm_zip(source_paths["btf"])
+    web = parse_usfm_zip(source_paths["english"])
+    wlc = parse_usfm_zip(source_paths["hebrew"])
+    btf = parse_usfm_zip(source_paths["romanianBtf"])
+    cornilescu = parse_usfm_zip(source_paths["romanianCornilescu1924"])
     web_books = book_sequences(web)
     wlc_books = book_sequences(wlc)
     btf_books = book_sequences(btf)
+    corn_books = book_sequences(cornilescu)
 
     stats: dict[str, dict[str, Any]] = defaultdict(lambda: {
         "chapters": 0, "verses": 0, "webMissing": 0, "wlcReferenceMappings": 0,
-        "wlcBookCountDifference": 0, "btfReferenceMappings": 0, "placeholders": 0,
-        "languageErrors": 0, "numberMismatches": 0, "lengthOutliers": 0,
-        "btfSimilarity": [], "uniqueTexts": set(), "maxRepeat": 0,
+        "wlcBookCountDifference": 0, "btfReferenceMappings": 0, "cornilescuReferenceMappings": 0,
+        "placeholders": 0, "languageErrors": 0, "numberMismatches": 0, "lengthOutliers": 0,
+        "btfSimilarity": [], "cornilescuSimilarity": [], "uniqueTexts": set(), "maxRepeat": 0,
     })
     candidate_by_book: dict[str, list[tuple[str, str]]] = defaultdict(list)
 
@@ -103,8 +105,7 @@ def main() -> int:
             continue
         doc = load(path)
         book = str(doc.get("bookId", ""))
-        if book not in CANONICAL | SUPPLEMENTS:
-            add("critical", "UNEXPECTED_BOOK", path.name, book)
+        if book not in CANONICAL:
             continue
         chapter = int(doc.get("chapter", doc.get("chapterNumber", 0)))
         verses = doc.get("verses", [])
@@ -138,10 +139,11 @@ def main() -> int:
                 add("error", "QUOTES", ref, "unbalanced quotes", {"romanian": text})
 
             source = web.get((book, chapter, number))
-            benchmark = btf.get((book, chapter, number)) if book in CANONICAL else None
+            benchmark = btf.get((book, chapter, number))
+            corn = cornilescu.get((book, chapter, number))
             if source is None:
                 stats[book]["webMissing"] += 1
-                add("critical", "WEB_REFERENCE", ref, "missing WEBBE reference")
+                add("critical", "WEB_REFERENCE", ref, "missing engwebp reference")
             else:
                 target_norm = normalize_text(text)
                 source_norm = normalize_text(source)
@@ -150,25 +152,30 @@ def main() -> int:
                     stats[book]["lengthOutliers"] += 1
                     add(
                         "error", "LENGTH", ref, f"ratio={ratio:.3f}",
-                        {"romanian": text, "webbe": source, "btf": benchmark},
+                        {"romanian": text, "engwebp": source, "btf": benchmark, "cornilescu1924": corn},
                     )
                 if numeric_tokens(text) != numeric_tokens(source):
                     stats[book]["numberMismatches"] += 1
                     add(
                         "error", "NUMBERS", ref,
                         f"RO={numeric_tokens(text)} EN={numeric_tokens(source)}",
-                        {"romanian": text, "webbe": source, "btf": benchmark},
+                        {"romanian": text, "engwebp": source, "btf": benchmark, "cornilescu1924": corn},
                     )
 
-            if book in CANONICAL:
-                if (book, chapter, number) not in wlc:
-                    stats[book]["wlcReferenceMappings"] += 1
-                if benchmark is None:
-                    stats[book]["btfReferenceMappings"] += 1
-                else:
-                    stats[book]["btfSimilarity"].append(
-                        SequenceMatcher(None, normalize_text(text), normalize_text(benchmark)).ratio()
-                    )
+            if (book, chapter, number) not in wlc:
+                stats[book]["wlcReferenceMappings"] += 1
+            if benchmark is None:
+                stats[book]["btfReferenceMappings"] += 1
+            else:
+                stats[book]["btfSimilarity"].append(
+                    SequenceMatcher(None, normalize_text(text), normalize_text(benchmark)).ratio()
+                )
+            if corn is None:
+                stats[book]["cornilescuReferenceMappings"] += 1
+            else:
+                stats[book]["cornilescuSimilarity"].append(
+                    SequenceMatcher(None, normalize_text(text), normalize_text(corn)).ratio()
+                )
 
     for book, rows in candidate_by_book.items():
         counts = Counter(normalize_text(text) for _, text in rows if text)
@@ -176,38 +183,43 @@ def main() -> int:
         stats[book]["maxRepeat"] = counts.most_common(1)[0][1] if counts else 0
         if len(counts) / max(1, len(rows)) < 0.90:
             add("critical", "MASS_REPETITION", book, f"unique={len(counts)}, verses={len(rows)}")
-        if book in CANONICAL:
-            candidate_count = len(rows)
-            wlc_count = len(wlc_books.get(book, []))
-            btf_count = len(btf_books.get(book, []))
-            if candidate_count != wlc_count:
-                stats[book]["wlcBookCountDifference"] = candidate_count - wlc_count
-                add(
-                    "warning", "WLC_VERSIFICATION_MAP_REQUIRED", book,
-                    f"candidate={candidate_count}, WLC={wlc_count}; document chapter/verse mapping before promotion",
-                )
-            if candidate_count != btf_count:
-                add(
-                    "warning", "BTF_VERSIFICATION_MAP_REQUIRED", book,
-                    f"candidate={candidate_count}, BTF={btf_count}; comparison mapping required",
-                )
-        if len(rows) != len(web_books.get(book, [])):
-            add("critical", "WEB_BOOK_TOTAL", book, f"candidate={len(rows)}, WEBBE={len(web_books.get(book, []))}")
+        candidate_count = len(rows)
+        wlc_count = len(wlc_books.get(book, []))
+        btf_count = len(btf_books.get(book, []))
+        corn_count = len(corn_books.get(book, []))
+        if candidate_count != wlc_count:
+            stats[book]["wlcBookCountDifference"] = candidate_count - wlc_count
+            add(
+                "warning", "WLC_VERSIFICATION_MAP_REQUIRED", book,
+                f"candidate={candidate_count}, WLC={wlc_count}; document chapter/verse mapping before promotion",
+            )
+        if candidate_count != btf_count:
+            add("error", "BTF_BOOK_TOTAL", book, f"candidate={candidate_count}, BTF={btf_count}")
+        if candidate_count != corn_count:
+            add("error", "CORNILESCU_BOOK_TOTAL", book, f"candidate={candidate_count}, Cornilescu={corn_count}")
+        if candidate_count != len(web_books.get(book, [])):
+            add("critical", "WEB_BOOK_TOTAL", book, f"candidate={candidate_count}, engwebp={len(web_books.get(book, []))}")
 
     level_counts = Counter(item["severity"] for item in issues)
     book_output: dict[str, Any] = {}
     for book, value in sorted(stats.items()):
-        similarities = value.pop("btfSimilarity")
+        btf_scores = value.pop("btfSimilarity")
+        corn_scores = value.pop("cornilescuSimilarity")
         unique = value.pop("uniqueTexts")
         value["uniqueTexts"] = unique
-        value["meanBtfSimilarity"] = round(mean(similarities), 4) if similarities else None
+        value["meanBtfSimilarity"] = round(mean(btf_scores), 4) if btf_scores else None
         value["highBtfSimilarityPercent"] = round(
-            100 * sum(score >= 0.965 for score in similarities) / max(1, len(similarities)), 2
-        ) if similarities else None
+            100 * sum(score >= 0.965 for score in btf_scores) / max(1, len(btf_scores)), 2
+        ) if btf_scores else None
+        value["meanCornilescuSimilarity"] = round(mean(corn_scores), 4) if corn_scores else None
+        value["highCornilescuSimilarityPercent"] = round(
+            100 * sum(score >= 0.965 for score in corn_scores) / max(1, len(corn_scores)), 2
+        ) if corn_scores else None
         book_output[book] = value
 
     report = {
-        "schemaVersion": 3,
+        "schemaVersion": 4,
+        "scope": "33 remaining canonical Old Testament books",
         "severityCounts": dict(level_counts),
         "sources": {name: sha(path) for name, path in source_paths.items()},
         "books": book_output,
@@ -218,7 +230,7 @@ def main() -> int:
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     lines = [
-        "# OT Repair 5 — deterministic audit v3", "",
+        "# OT Repair 5 — deterministic audit v4", "",
         f"- Critice: **{level_counts['critical']}**",
         f"- Erori: **{level_counts['error']}**",
         f"- Avertismente de mapare: **{level_counts['warning']}**", "", "## Cărți",
@@ -228,10 +240,11 @@ def main() -> int:
             f"- `{book}` — {value['chapters']} cap. / {value['verses']} vers.; "
             f"WEB lipsă {value['webMissing']}; mapări WLC {value['wlcReferenceMappings']}; "
             f"limbă {value['languageErrors']}; numere {value['numberMismatches']}; "
-            f"lungime {value['lengthOutliers']}; BTF medie {value['meanBtfSimilarity']}"
+            f"lungime {value['lengthOutliers']}; BTF {value['meanBtfSimilarity']}; "
+            f"Cornilescu {value['meanCornilescuSimilarity']}"
         )
     lines += ["", "## Probleme și mapări"]
-    for item in issues[:1000]:
+    for item in issues[:1200]:
         lines.append(f"- **{item['severity'].upper()}** `{item['code']}` — `{item['reference']}`: {item['message']}")
         evidence = item.get("evidence")
         if evidence:
