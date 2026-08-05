@@ -30,6 +30,9 @@ jobs:
       - name: Import clean NT corpus and engine
         run: python3 scripts/tmp-import-nt-audit3.py
 
+      - name: Repair verified NT quotation defects
+        run: python3 scripts/tmp-fix-nt-quotes.py
+
       - name: Audit all NT quotation marks
         run: python3 scripts/tmp-audit-nt-quotes.py
 
