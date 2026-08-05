@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Patch the temporary integrator with the explicit Numbers source merge."""
+"""Patch the temporary integrator with explicit source mappings and audited corrections."""
 from pathlib import Path
 
 path = Path("scripts/upgrade-ot-audit2.py")
@@ -46,6 +46,18 @@ patches = [
         '        extra_ids = [extra["id"] for extra in coverage_extras if extra["bookId"] == book and extra["targetChapter"] == chapter]\n'
         '        if extra_ids:\n'
         '            record["sourceCoverageExtraIds"] = extra_ids\n',
+    ),
+    (
+        '            data = json.loads(path.read_text(encoding="utf-8"))\n'
+        '            normalize_chapter(data, snapshot_hash)\n',
+        '            data = json.loads(path.read_text(encoding="utf-8"))\n'
+        '            if cid == "EXO.37":\n'
+        '                verse = next(item for item in data["verses"] if item["number"] == 14)\n'
+        '                verse["text"] = "Verigile erau lângă margine, ca locașuri pentru drugii cu care se purta masa."\n'
+        '                data["audit"]["romanianLanguage"]["changesApplied"].append(\n'
+        '                    "Exodul 37:14 — funcția verigilor este redată mai aproape de ebraicul «locașuri pentru drugi»."\n'
+        '                )\n'
+        '            normalize_chapter(data, snapshot_hash)\n',
     ),
 ]
 
