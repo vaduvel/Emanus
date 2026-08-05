@@ -1,0 +1,43 @@
+name: Audit OT repair 5 candidates
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-ot-repair5
+    paths:
+      - 'docs/data/biblia-emanus-candidates/**'
+      - 'scripts/audit-ot-repair5-candidates.py'
+      - '.github/workflows/audit-ot-repair5.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-ot-repair5
+      - name: Audit candidate corpus
+        run: python3 scripts/audit-ot-repair5-candidates.py
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ot-repair5-candidate-audit
+          path: |
+            docs/biblia-emanus/OT-REPAIR5-CANDIDATE-AUDIT.md
+            docs/biblia-emanus/OT-REPAIR5-CANDIDATE-AUDIT.json
+          retention-days: 7
+      - name: Persist report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/biblia-emanus/OT-REPAIR5-CANDIDATE-AUDIT.md docs/biblia-emanus/OT-REPAIR5-CANDIDATE-AUDIT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'audit(bible): persist OT repair5 candidate report'
+            git push origin HEAD:agent/biblia-emanus-ot-repair5
+          fi
+      - name: Enforce candidate gate
+        run: python3 scripts/audit-ot-repair5-candidates.py --fail
