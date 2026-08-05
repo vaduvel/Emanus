@@ -8,19 +8,14 @@ on:
       - 'scripts/translate-pr40-deuterocanon-missing.py'
       - 'scripts/translate-pr40-deuterocanon-all-missing.py'
       - '.github/workflows/translate-pr40-deuterocanon-missing.yml'
-  pull_request:
-    paths:
-      - 'scripts/translate-pr40-deuterocanon-missing.py'
-      - 'scripts/translate-pr40-deuterocanon-all-missing.py'
-      - '.github/workflows/translate-pr40-deuterocanon-missing.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pr40-deuterocanon-translation-${{ github.ref }}
-  cancel-in-progress: true
+  group: pr40-deuterocanon-translation
+  cancel-in-progress: false
 
 jobs:
   translate:
@@ -28,6 +23,8 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-all-pr40-rebuild
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
