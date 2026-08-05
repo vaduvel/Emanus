@@ -27,19 +27,6 @@ jobs:
       - name: Inventory actual NT corpus
         run: python3 scripts/tmp-report-nt-corpus.py
 
-      - name: Use the actual remote classification
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path('scripts/tmp-import-nt-audit3.py')
-          text = path.read_text(encoding='utf-8')
-          old = '    if translated != 139 or placeholders != 121:\n        raise RuntimeError(\n            f"Unexpected NT corpus classification: translated={translated}, placeholders={placeholders}"\n        )'
-          new = '    if translated + placeholders != 260:\n        raise RuntimeError(\n            f"Unexpected NT corpus total: translated={translated}, placeholders={placeholders}"\n        )'
-          if old not in text:
-              raise SystemExit('classification patch marker missing')
-          path.write_text(text.replace(old, new), encoding='utf-8')
-          PY
-
       - name: Import clean NT corpus and engine
         run: python3 scripts/tmp-import-nt-audit3.py
 
