@@ -14,6 +14,7 @@ import json
 import re
 import runpy
 import shutil
+import tempfile
 import zipfile
 from pathlib import Path
 from types import ModuleType
@@ -108,6 +109,37 @@ def build_remapped_usfm(output: Path):
     return result
 
 
+def embed_archive_in_snapshot(snapshot_path: Path, archive_path: Path, member_name: str) -> None:
+    """Rebuild a snapshot ZIP deterministically with one additional member."""
+    with zipfile.ZipFile(snapshot_path, "r") as source:
+        existing = set(source.namelist())
+        if member_name in existing:
+            if source.read(member_name) != archive_path.read_bytes():
+                raise RuntimeError(f"Snapshot already contains different bytes for {member_name}")
+            return
+        entries = [(info, source.read(info.filename)) for info in source.infolist()]
+
+    with tempfile.NamedTemporaryFile(
+        dir=snapshot_path.parent,
+        prefix=f".{snapshot_path.name}.",
+        suffix=".tmp",
+        delete=False,
+    ) as handle:
+        temporary = Path(handle.name)
+    try:
+        with zipfile.ZipFile(temporary, "w") as destination:
+            for info, payload in entries:
+                destination.writestr(info, payload)
+            added = zipfile.ZipInfo(member_name, date_time=(1980, 1, 1, 0, 0, 0))
+            added.compress_type = zipfile.ZIP_DEFLATED
+            added.external_attr = 0o100644 << 16
+            added.create_system = 3
+            destination.writestr(added, archive_path.read_bytes())
+        temporary.replace(snapshot_path)
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
 def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None:
     _original_postprocess(base, provenance)
     raw_archive = module.SOURCES / "hboWLC_usfm.zip"
@@ -117,11 +149,19 @@ def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None
     upstream_dir = module.ACTIVE / "upstream"
     upstream_dir.mkdir(parents=True, exist_ok=True)
     embedded_name = "hboWLC-raw_usfm.zip"
+    embedded_member = f"upstream/{embedded_name}"
     embedded_archive = upstream_dir / embedded_name
     shutil.copyfile(raw_archive, embedded_archive)
 
     lock_path = module.ACTIVE / "source-lock.json"
     lock = json.loads(lock_path.read_text(encoding="utf-8"))
+    snapshot = lock.get("snapshots", {}).get(base.SNAPSHOT_ID)
+    if not isinstance(snapshot, dict):
+        raise RuntimeError(f"Missing snapshot metadata for {base.SNAPSHOT_ID}")
+    snapshot_path = module.ACTIVE / str(snapshot["path"])
+    embed_archive_in_snapshot(snapshot_path, embedded_archive, embedded_member)
+    snapshot["sha256"] = hashlib.sha256(snapshot_path.read_bytes()).hexdigest()
+
     lock.setdefault("upstreamArtifacts", {})["hboWLC-raw-r5"] = {
         "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
         "archiveDate": base.TODAY,
@@ -131,7 +171,7 @@ def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None
         "annotationLicense": "CC BY 4.0",
         "snapshotId": base.SNAPSHOT_ID,
         "archiveEmbedded": True,
-        "archivePath": f"upstream/{embedded_name}",
+        "archivePath": embedded_member,
         "role": "raw-input-to-official-remap",
     }
     lock_path.write_text(
