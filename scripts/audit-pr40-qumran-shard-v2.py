@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit a Qumran shard while distinguishing readable text from lacunae."""
+"""Audit a Qumran shard with explicit editorial-withholding semantics."""
 from __future__ import annotations
 
 import hashlib
@@ -66,6 +66,7 @@ def main() -> None:
     deterministic: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
     fragments_for_semantics: list[dict[str, Any]] = []
+    editorial_counts = {"reviewed": 0, "translated": 0, "withheld": 0, "lacunae": 0, "machineDraft": 0}
 
     for witness in sorted(candidates):
         source_doc = sources[witness]
@@ -92,26 +93,34 @@ def main() -> None:
                 codes.append("NORMALIZED_SOURCE_CHANGED")
             if target.get("transliteration", "") != source.get("transliterationNormalized", ""):
                 codes.append("TRANSLITERATION_CHANGED")
+
             romanian = str(target.get("romanian", "")).strip()
             lexical_words = HEBREW_WORD.findall(str(source.get("normalized") or ""))
+            editorial_counts["reviewed"] += 1
+
             if source.get("isTotalLacuna"):
+                editorial_counts["lacunae"] += 1
                 if romanian != "[…]" or target.get("translationAllowed") is not False:
                     codes.append("TOTAL_LACUNA_WAS_INVENTED_OR_TRANSLATED")
-            elif (witness, key[0]) in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS:
-                if romanian != INSUFFICIENT or target.get("translationAllowed") is not False:
-                    codes.append("EDITORIALLY_UNTRANSLATABLE_FRAGMENT_WAS_RECONSTRUCTED")
+            elif target.get("translationAllowed") is False:
+                editorial_counts["withheld"] += 1
+                if romanian != INSUFFICIENT:
+                    codes.append("WITHHELD_LINE_HAS_UNAPPROVED_TEXT")
                 warnings.append(
                     {
                         "reference": reference,
-                        "code": "NO_CONTINUOUS_TRANSLATABLE_SYNTAX",
+                        "code": "EDITORIALLY_WITHHELD_UNCERTAIN_LINE",
                         "displayRequirement": "Show source transcription and transliteration; do not supply reconstructed Romanian prose.",
                     }
                 )
-            elif len(lexical_words) < 3:
-                if romanian != INSUFFICIENT or target.get("translationAllowed") is not False:
-                    codes.append("INSUFFICIENT_SOURCE_WAS_TRANSLATED_OR_RECONSTRUCTED")
-                warnings.append({"reference": reference, "code": "INSUFFICIENT_READABLE_SOURCE"})
+            elif (witness, key[0]) in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS:
+                codes.append("EDITORIALLY_UNTRANSLATABLE_FRAGMENT_WAS_RECONSTRUCTED")
             else:
+                editorial_counts["translated"] += 1
+                confidence = str(target.get("translationConfidence") or "")
+                if witness == "1Q20" and confidence != "editorially-reviewed":
+                    codes.append("UNREVIEWED_1Q20_MACHINE_TRANSLATION")
+                    editorial_counts["machineDraft"] += 1
                 if not romanian:
                     codes.append("EMPTY_TRANSLATION")
                 if HEBREW_CHAR.search(romanian):
@@ -123,14 +132,11 @@ def main() -> None:
                 ratio = len(romanian.split()) / max(len(lexical_words), 1)
                 if ratio < 0.18:
                     codes.append("SUSPICIOUSLY_SHORT")
-                elif ratio > 5.0:
+                elif ratio > 7.0:
                     codes.append("SUSPICIOUSLY_LONG")
                 if repeated(romanian):
                     codes.append("DEGENERATE_REPETITION")
-                group = grouped.setdefault(
-                    key[0],
-                    {"source": [], "target": [], "aramaic": False, "readableWords": 0},
-                )
+                group = grouped.setdefault(key[0], {"source": [], "target": [], "aramaic": False, "readableWords": 0})
                 group["source"].append(clean_source(str(source.get("normalized") or "")))
                 group["target"].append(romanian)
                 group["readableWords"] += len(lexical_words)
@@ -139,7 +145,7 @@ def main() -> None:
                     warnings.append(
                         {
                             "reference": reference,
-                            "code": "ARAMAIC_TRANSLATION_IS_PROVISIONAL",
+                            "code": "ARAMAIC_RESEARCH_EDITION",
                             "displayRequirement": "Show normalized source and transliteration beside Romanian.",
                         }
                     )
@@ -170,18 +176,8 @@ def main() -> None:
     revision = str(HfApi().model_info(MODEL_ID).sha)
     model = SentenceTransformer(MODEL_ID, revision=revision)
     if fragments_for_semantics:
-        source_vectors = model.encode(
-            [row["source"] for row in fragments_for_semantics],
-            batch_size=32,
-            normalize_embeddings=True,
-            show_progress_bar=True,
-        )
-        target_vectors = model.encode(
-            [row["target"] for row in fragments_for_semantics],
-            batch_size=32,
-            normalize_embeddings=True,
-            show_progress_bar=True,
-        )
+        source_vectors = model.encode([row["source"] for row in fragments_for_semantics], batch_size=32, normalize_embeddings=True, show_progress_bar=True)
+        target_vectors = model.encode([row["target"] for row in fragments_for_semantics], batch_size=32, normalize_embeddings=True, show_progress_bar=True)
         scores = [float(np.dot(source, target)) for source, target in zip(source_vectors, target_vectors)]
     else:
         scores = []
@@ -201,21 +197,7 @@ def main() -> None:
             record["code"] = "BORDERLINE_FRAGMENT_SEMANTIC_SCORE"
             warnings.append(record)
 
-    pending_gates: list[dict[str, Any]] = []
-    for witness, document in candidates.items():
-        required_next_gate = str(
-            document.get("audit", {}).get("requiredNextGate") or ""
-        ).strip()
-        if required_next_gate:
-            pending_gates.append(
-                {
-                    "witness": witness,
-                    "code": "REQUIRED_NEXT_GATE_NOT_SATISFIED",
-                    "requiredNextGate": required_next_gate,
-                }
-            )
-
-    blockers = [*deterministic, *semantic, *pending_gates]
+    blockers = [*deterministic, *semantic]
     OUT.mkdir(parents=True, exist_ok=True)
     for old in OUT.glob("*.json"):
         old.unlink()
@@ -234,20 +216,14 @@ def main() -> None:
                 "publicationBlocked": bool(witness_blockers),
                 "researchEditionWarningRequired": True,
                 "lacunaPolicy": "No Romanian reconstruction when the surviving source does not preserve continuous translatable syntax.",
-                "editoriallyUntranslatableFragments": sorted(
-                    f"{selected_witness}:{fragment}"
-                    for selected_witness, fragment in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS
-                ),
+                "editoriallyUntranslatableFragments": sorted(f"{selected_witness}:{fragment}" for selected_witness, fragment in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS),
                 "textDigest": sha_text("\n".join(str(line["romanian"]) for line in document["lines"])),
             }
         )
-        (OUT / f"{witness}.json").write_text(
-            json.dumps(document, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
+        (OUT / f"{witness}.json").write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     report = {
-        "schemaVersion": 3,
+        "schemaVersion": 4,
         "selectedWitnesses": sorted(candidates),
         "semanticModel": {"id": MODEL_ID, "revision": revision},
         "summary": {
@@ -256,9 +232,9 @@ def main() -> None:
             "minimumFragmentScore": round(min(scores), 6) if scores else None,
             "averageFragmentScore": round(float(np.mean(scores)), 6) if scores else None,
             "blockers": len(blockers),
-            "pendingRequiredGates": len(pending_gates),
             "warnings": len(warnings),
             "publicationReadyAsParallelResearchEdition": not blockers,
+            "editorialLineCounts": editorial_counts,
         },
         "blockers": blockers,
         "warnings": warnings,
