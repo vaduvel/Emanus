@@ -10,7 +10,7 @@ export const DEUTERONOM_TEXT_20: Record<number, readonly string[]> = {
     "Supraveghetorii să vorbească mai departe poporului și să zică: «Cine este fricos și slăbit la inimă? Să plece și să se întoarcă acasă, ca să nu înmoaie inima fraților lui cum s-a înmuiat a lui.»",
     "După ce supraveghetorii vor fi terminat de vorbit poporului, să pună căpetenii de oaste în fruntea poporului.",
     "Când te vei apropia de o cetate ca s-o bați, să-i oferi mai întâi pacea.",
-    "Dacă îți va răspunde cu pace și îți va deschide porțile, tot poporul care se va afla în ea să-ți fie supus la bir și să-ți slujăească.",
+    "Dacă îți va răspunde cu pace și îți va deschide porțile, tot poporul care se va afla în ea să-ți fie supus la bir și să-ți slujească.",
     "Dar dacă nu va face pace cu tine și va voi să se lupte cu tine, atunci s-o împresori.",
     "Și când DOMNUL, Dumnezeul tău, ți-o va da în mână, să treci prin ascuțișul sabiei pe toți cei de parte bărbătească.",
     "Numai femeile, pruncii, vitele și tot ce va fi în cetate, toată prada ei, să le iei ca pradă pentru tine; și vei mânca din prada vrăjmașilor tăi pe care ți i-a dat DOMNUL, Dumnezeul tău.",
