@@ -80,7 +80,7 @@ jobs:
       - name: Generate and refine Romanian candidate
         run: python3 scripts/translate-pr40-deuterocanon-all-v2.py --batch-size 20
       - name: Audit every unit against English and Greek witnesses
-        run: python3 scripts/audit-pr40-english-romanian-v2.py --collection deuterocanon --batch-size 64
+        run: python3 scripts/audit-pr40-english-romanian-v3.py --collection deuterocanon --batch-size 64
       - name: Upload book corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -117,7 +117,7 @@ jobs:
       - name: Generate and refine Romanian candidate
         run: python3 scripts/translate-pr40-early-works-v2.py --batch-size 16
       - name: Audit every Romanian source unit
-        run: python3 scripts/audit-pr40-english-romanian-v2.py --collection early --batch-size 64
+        run: python3 scripts/audit-pr40-english-romanian-v3.py --collection early --batch-size 64
       - name: Upload work corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
