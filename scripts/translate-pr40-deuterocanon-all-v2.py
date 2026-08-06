@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
-"""Generate selected deuterocanonical candidates with OPUS-MT tc-big.
+"""Generate and refine selected deuterocanonical Romanian candidates.
 
-Set ``PR40_BOOKS`` to a comma-separated list for parallel CI shards. Without
-it, all twelve works are processed.
+The first pass uses OPUS-MT tc-big. A second independent OPUS-MT candidate,
+a pinned public-domain historical candidate where available, and the same
+multilingual semantic model used by the publication audit are then used for
+best-candidate selection. Set ``PR40_BOOKS`` for parallel CI shards.
 """
 from __future__ import annotations
 
 import importlib.util
 import os
+import subprocess
+import sys
 from pathlib import Path
 
 SCRIPT = Path(__file__).with_name("translate-pr40-deuterocanon-missing.py")
@@ -41,3 +45,19 @@ module.TARGETS.update({book_id: all_targets[book_id] for book_id in all_targets 
 if not module.TARGETS:
     raise SystemExit("No deuterocanonical books selected")
 module.main()
+
+batch_size = "20"
+for index, argument in enumerate(sys.argv):
+    if argument == "--batch-size" and index + 1 < len(sys.argv):
+        batch_size = sys.argv[index + 1]
+subprocess.run(
+    [
+        sys.executable,
+        str(Path(__file__).with_name("refine-pr40-translation-candidates.py")),
+        "--collection",
+        "deuterocanon",
+        "--batch-size",
+        batch_size,
+    ],
+    check=True,
+)
