@@ -21,7 +21,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: pr40-final-publication-gate-${{ github.event.pull_request.number || github.ref }}
+  group: pr40-final-publication-gate-${{ github.event.pull_request.number || github.ref }}-${{ github.sha }}
   cancel-in-progress: true
 
 jobs:
