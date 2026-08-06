@@ -16,18 +16,18 @@ concurrency:
 
 jobs:
   cancel-superseded:
-    runs-on: ubuntu-22.04
+    runs-on: windows-2022
     timeout-minutes: 15
     steps:
       - name: Cancel older runs for this PR branch through the REST API
+        shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
           CURRENT_RUN_ID: ${{ github.run_id }}
           CURRENT_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
           CURRENT_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
         run: |
-          set -euo pipefail
-          python3 - <<'PY'
+          @'
           import json, os, time, urllib.error, urllib.request
 
           repo = os.environ['GITHUB_REPOSITORY']
@@ -81,4 +81,4 @@ jobs:
                           continue
                       print(f"Could not cancel run {run['id']}: HTTP {error.code}")
                       break
-          PY
+          '@ | python -
