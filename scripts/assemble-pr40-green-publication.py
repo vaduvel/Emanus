@@ -38,7 +38,34 @@ base.QUMRAN_WITNESSES = {
 }
 
 
-def expected_chapters() -> dict[str, int]:
+def audited_chapter_count(prior: Path, collection: str, id_: str) -> int:
+    """Return the authoritative chapter count from a green audited artifact."""
+    artifact = base.final_artifact(prior, prior, collection, id_)
+    if collection == "deuterocanon":
+        audited = artifact / "data" / "biblia-emanus-deuterocanon-audited"
+    elif collection == "early":
+        audited = artifact / "data" / "biblia-emanus-early-audited"
+    else:
+        raise ValueError(f"Unsupported chapter collection: {collection}")
+
+    paths = sorted(audited.glob(f"{id_}.*.json"))
+    chapters: list[int] = []
+    for path in paths:
+        suffix = path.stem.rsplit(".", 1)[-1]
+        if suffix.isdigit():
+            chapters.append(int(suffix))
+    chapters.sort()
+    if not chapters:
+        raise RuntimeError(f"{id_}: audited artifact contains no chapter files")
+    expected_sequence = list(range(1, len(chapters) + 1))
+    if chapters != expected_sequence:
+        raise RuntimeError(
+            f"{id_}: audited chapter sequence is not contiguous: {chapters}"
+        )
+    return len(chapters)
+
+
+def expected_chapters(prior: Path) -> dict[str, int]:
     inventory = base.read_json(base.INVENTORY_PATH)
     if int(inventory.get("bookCount", 0)) != 64:
         raise RuntimeError("Historical PR40 inventory no longer contains exactly 64 works")
@@ -48,11 +75,15 @@ def expected_chapters() -> dict[str, int]:
         if str(item["bookId"]) not in EXCLUDED
     }
 
-    # The historical PR40 inventory recorded only six placeholder-era ESG
-    # divisions. The individually audited publication artifact contains ten
-    # real chapters (ESG.1–ESG.10), and its semantic audit reports 10 files,
-    # 205 units and zero blockers. Publication must follow that audited corpus.
-    expected["ESG"] = 10
+    # The historical inventory describes the placeholder-era scope. For every
+    # noncanonical work being published, the green audited artifact is the
+    # authoritative source of chapter boundaries. This corrects ESG (10 audited
+    # chapters rather than the historical 6) and prevents equivalent drift in
+    # any other deuterocanonical or early work.
+    for id_ in sorted(base.DEUTEROCANON):
+        expected[id_] = audited_chapter_count(prior, "deuterocanon", id_)
+    for id_ in sorted(base.EARLY):
+        expected[id_] = audited_chapter_count(prior, "early", id_)
     return expected
 
 
@@ -93,7 +124,7 @@ def main() -> None:
     args = parser.parse_args()
     prior = args.prior.resolve()
 
-    expected = expected_chapters()
+    expected = expected_chapters(prior)
     expected_ids = base.CANONICAL | base.DEUTEROCANON | base.EARLY | set(base.QUMRAN_WITNESSES)
     if set(expected) != expected_ids:
         raise RuntimeError(
