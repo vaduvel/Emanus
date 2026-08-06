@@ -26,6 +26,7 @@ APPROVED_EDITORIAL_OVERRIDES = {
     "3MA.7:2": "Și noi, și copiii noștri suntem bine. Dumnezeu ne-a îndreptat treburile așa cum am dorit.",
     "BAR.1:16": "regilor noștri, conducătorilor noștri, preoților noștri, profeților noștri și părinților noștri,",
     "SIR.3:25": "Nu există lumină fără ochi și nu există înțelepciune fără cunoaștere.",
+    "SIR.28:20": "Căci jugul ei este un jug de fier, iar legăturile ei sunt legături de aramă.",
     "TOB.4:8": "Dă milostenie potrivit cu ceea ce ai și cu belșugul tău. Dacă ai puțin, nu te teme să dai milostenie chiar și din acel puțin;",
 }
 
