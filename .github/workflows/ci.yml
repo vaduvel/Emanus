@@ -56,6 +56,7 @@ jobs:
           python3 scripts/apply-pr40-canonical-content-fixes.py
           python3 scripts/apply-pr40-canonical-content-fixes-wave2.py
           python3 scripts/apply-pr40-canonical-content-fixes-wave3.py
+          python3 scripts/apply-pr40-canonical-content-fixes-wave4.py
 
       - name: Genereaza auditul determinist al candidatilor VT
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
