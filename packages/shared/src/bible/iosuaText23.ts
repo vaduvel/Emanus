@@ -1,0 +1,20 @@
+export const IOSUA_TEXT_23: Record<number, readonly string[]> = {
+  23: [
+    "După multe zile, după ce DOMNUL îi dăduse lui Israel odihnă de toți dușmanii din jur, iar Iosua îmbătrânise și era înaintat în vârstă,",
+    "Iosua a chemat tot Israelul, pe bătrânii lui, pe căpeteniile lui, pe judecătorii lui și pe supraveghetorii lui, și le-a spus: „Eu am îmbătrânit și sunt înaintat în vârstă.",
+    "Voi ați văzut tot ce a făcut DOMNUL, Dumnezeul vostru, tuturor acestor națiuni din cauza voastră, căci DOMNUL, Dumnezeul vostru, este Cel care a luptat pentru voi.",
+    "Iată, v-am împărțit prin sorți ca moștenire pentru semințiile voastre aceste națiuni care au rămas, de la Iordan până la Marea cea Mare, spre apus, împreună cu toate națiunile pe care le-am nimicit.",
+    "DOMNUL, Dumnezeul vostru, le va alunga dinaintea voastră și le va izgoni din fața voastră, iar voi le veți lua țara în stăpânire, așa cum v-a spus DOMNUL, Dumnezeul vostru.",
+    "Fiți deci foarte tari ca să păziți și să împliniți tot ce este scris în Cartea Legii lui Moise, fără să vă abateți de la ea nici la dreapta, nici la stânga.",
+    "Să nu vă amestecați cu aceste națiuni care au rămas printre voi. Să nu pomeniți numele dumnezeilor lor, să nu puneți pe nimeni să jure pe ei, să nu le slujiți și să nu vă plecați înaintea lor.",
+    "Ci alipiți-vă de DOMNUL, Dumnezeul vostru, așa cum ați făcut până în ziua aceasta.",
+    "DOMNUL a izgonit dinaintea voastră națiuni mari și puternice, iar înaintea voastră nimeni nu a putut sta până în ziua aceasta.",
+    "Un singur om dintre voi va urmări o mie, pentru că DOMNUL, Dumnezeul vostru, este Cel care luptă pentru voi, așa cum v-a spus.",
+    "Vegheazați cu mare grijă asupra sufletelor voastre, ca să-L iubiți pe DOMNUL, Dumnezeul vostru.",
+    "Dar dacă vă întoarceți și vă alipiți de rămășița acestor națiuni care au rămas printre voi, dacă vă înrudiți cu ele prin căsătorie și intrați în legături cu ele, iar ele cu voi,",
+    "să știți sigur că DOMNUL, Dumnezeul vostru, nu va mai izgoni aceste națiuni dinaintea voastră. Ele vor fi pentru voi o cursă și un laț, un bici pe coaste și spini în ochi, până când veți pieri din această țară bună pe care v-a dat-o DOMNUL, Dumnezeul vostru.",
+    "Iată, astăzi merg pe calea întregului pământ. Voi știți din toată inima și din tot sufletul vostru că niciunul dintre toate lucrurile bune pe care vi le-a spus DOMNUL, Dumnezeul vostru, nu a rămas neîmplinit. Toate s-au împlinit pentru voi; niciunul nu a rămas neîmplinit.",
+    "Dar, după cum au venit peste voi toate lucrurile bune pe care vi le-a spus DOMNUL, Dumnezeul vostru, tot așa DOMNUL va aduce peste voi toate lucrurile rele, până când vă va nimici din această țară bună pe care v-a dat-o DOMNUL, Dumnezeul vostru.",
+    "Dacă încălcați legământul DOMNULUI, Dumnezeul vostru, pe care vi l-a poruncit, și mergeți să slujiți altor dumnezei și să vă plecați înaintea lor, mânia DOMNULUI se va aprinde împotriva voastră și veți pieri repede din țara bună pe care v-a dat-o.”",
+  ],
+}
