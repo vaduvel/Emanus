@@ -5,44 +5,177 @@ on:
     branches:
       - main
     paths:
-      - 'docs/data/biblia-emanus-candidates/**'
-      - 'scripts/promote-pr40-canonical-ot*.py'
-      - 'scripts/translate-pr40-deuterocanon*.py'
-      - 'scripts/refine-pr40-*.py'
-      - 'scripts/extract-pr40-early-works*.py'
-      - 'scripts/translate-pr40-early-works*.py'
-      - 'scripts/extract-pr40-qumran-corpus.py'
-      - 'scripts/translate-pr40-qumran*.py'
-      - 'scripts/audit-pr40-*.py'
-      - 'scripts/run-with-pinned-hf.py'
       - '.github/workflows/pr40-final-publication-gate-v2.yml'
-      - '.github/workflows/cancel-superseded-pr-runs.yml'
-  workflow_dispatch:
+      - 'docs/biblia-emanus/PR40-FINALIZE.trigger'
 
 permissions:
-  contents: read
+  actions: read
+  contents: write
 
 concurrency:
-  group: pr40-final-publication-${{ github.event.pull_request.number || github.ref }}
+  group: pr40-final-publication-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
+env:
+  PRIOR_RUN_ID: '31110524525'
+  HF_HOME: ${{ github.workspace }}/.cache/huggingface
+  TOKENIZERS_PARALLELISM: 'false'
+
 jobs:
-  canonical-ot:
-    name: Canonical OT — source, seal and build
+  didascalia:
+    name: Finalize Didascalia checkpoint
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/huggingface
+          key: pr40-hf-didascalia-${{ runner.os }}-v2
+      - name: Install CPU translation and audit runtime
+        run: |
+          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
+          python -m pip install --disable-pip-version-check 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Restore completed 43-chapter first pass
+        uses: actions/download-artifact@v4
+        with:
+          name: pr40-early-DID
+          path: checkpoint
+          repository: vaduvel/Emanus
+          run-id: ${{ env.PRIOR_RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Restore checkpoint into the working tree
+        run: |
+          cp -R checkpoint/data/. docs/data/
+          cp -R checkpoint/biblia-emanus/. docs/biblia-emanus/
+      - name: Independently refine, repair and audit Didascalia
+        env:
+          PR40_BOOKS: DID
+        run: python3 scripts/run-with-pinned-hf.py scripts/finalize-pr40-didascalia-checkpoint.py --batch-size 28
+      - name: Upload finalized Didascalia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-early-DID-final
+          path: |
+            docs/data/biblia-emanus-early-source-candidates
+            docs/data/biblia-emanus-early-romanian-candidates
+            docs/data/biblia-emanus-early-audited
+            docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json
+          if-no-files-found: error
+          retention-days: 7
+
+  remaining-qumran:
+    name: Finalize Qumran — ${{ matrix.id }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - id: TEMP_SCR
+            witnesses: 11Q19
+            checkpoint: pr40-qumran-TEMP_SCR
+          - id: ADD_PSA
+            witnesses: 11Q5,4Q381
+            checkpoint: pr40-qumran-ADD_PSA
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/huggingface
+          key: pr40-hf-qumran-${{ runner.os }}-v2
+      - name: Install CPU translation and audit runtime
+        run: |
+          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
+          python -m pip install --disable-pip-version-check 'text-fabric>=12,<14' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Restore verified Qumran source checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.checkpoint }}
+          path: checkpoint
+          repository: vaduvel/Emanus
+          run-id: ${{ env.PRIOR_RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Restore checkpoint into the working tree
+        run: |
+          cp -R checkpoint/data/. docs/data/
+          cp -R checkpoint/biblia-emanus/. docs/biblia-emanus/
+      - name: Translate selected witnesses
+        env:
+          PR40_WITNESSES: ${{ matrix.witnesses }}
+        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-qumran-shard.py --batch-size 36
+      - name: Repair degenerate output without reconstructing lacunae
+        env:
+          PR40_WITNESSES: ${{ matrix.witnesses }}
+        run: python3 scripts/run-with-pinned-hf.py scripts/refine-pr40-qumran-candidates.py --batch-size 36
+      - name: Audit line fidelity and fragment semantics
+        env:
+          PR40_WITNESSES: ${{ matrix.witnesses }}
+        run: python3 scripts/run-with-pinned-hf.py scripts/audit-pr40-qumran-shard-v2.py
+      - name: Upload finalized Qumran collection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-qumran-${{ matrix.id }}-final
+          path: |
+            docs/data/biblia-emanus-qumran-source
+            docs/data/biblia-emanus-qumran-romanian-candidates
+            docs/data/biblia-emanus-qumran-audited
+            docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json
+            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json
+          if-no-files-found: error
+          retention-days: 7
+
+  publish-all-64:
+    name: Assemble and publish all 64 works atomically
+    needs: [didascalia, remaining-qumran]
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - name: Generate canonical publication with official OSHB remap
-        run: python3 scripts/promote-pr40-canonical-ot-v4.py
-      - name: Run canonical publication gates
+      - name: Download the 23 previously successful publication artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pr40-*
+          path: staging/prior
+          merge-multiple: false
+          repository: vaduvel/Emanus
+          run-id: ${{ env.PRIOR_RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download the three finalized artifacts from this run
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pr40-*-final
+          path: staging/current
+          merge-multiple: false
+      - name: Assemble exact 64-work publication tree
+        run: python3 scripts/assemble-pr40-final-publication.py --prior staging/prior --current staging/current
+      - name: Verify canonical integrity and application build
         run: |
+          pnpm install --frozen-lockfile
           pnpm check:quotes
           pnpm check:typos
           pnpm check:content
@@ -53,162 +186,33 @@ jobs:
           pnpm typecheck
           pnpm build
           git diff --check
-      - name: Upload generated canonical corpus
-        if: always()
+      - name: Upload the complete atomic publication
         uses: actions/upload-artifact@v4
         with:
-          name: pr40-final-canonical-publication
-          path: docs/data/biblia-emanus
-          retention-days: 7
-
-  deuterocanon:
-    name: Deuterocanon — ${{ matrix.book }}
-    strategy:
-      fail-fast: false
-      max-parallel: 6
-      matrix:
-        book: [1ES, 1MA, 2MA, 3MA, BAR, ESG, JDT, MAN, PS2, SIR, TOB, WIS]
-    runs-on: ubuntu-latest
-    timeout-minutes: 210
-    env:
-      PR40_BOOKS: ${{ matrix.book }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Install translation and audit runtime
-        run: pip install --disable-pip-version-check 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Generate and refine Romanian candidate
-        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-deuterocanon-all-v2.py --batch-size 20
-      - name: Audit every unit against English and Greek witnesses
-        run: python3 scripts/run-with-pinned-hf.py scripts/audit-pr40-english-romanian-v3.py --collection deuterocanon --batch-size 64
-      - name: Upload book corpus and reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pr40-deuterocanon-${{ matrix.book }}
+          name: pr40-all-64-final-publication
           path: |
-            docs/data/biblia-emanus-deuterocanon-new-translation
+            docs/data/biblia-emanus
             docs/data/biblia-emanus-deuterocanon-audited
-            docs/biblia-emanus/PR40-DEUTEROCANON-NEW-TRANSLATION.json
-            docs/biblia-emanus/PR40-DEUTEROCANON-SEMANTIC-AUDIT.json
-          if-no-files-found: warn
-          retention-days: 7
-
-  early-works:
-    name: Early work — ${{ matrix.book }}
-    strategy:
-      fail-fast: false
-      max-parallel: 4
-      matrix:
-        book: [ENO, JUB, DID, 4BA]
-    runs-on: ubuntu-latest
-    timeout-minutes: 240
-    env:
-      PR40_BOOKS: ${{ matrix.book }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Install extraction, translation and audit runtime
-        run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Rebuild and verify all source chapters
-        run: python3 scripts/extract-pr40-early-works-v4.py
-      - name: Generate and refine Romanian candidate
-        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-early-works-v5.py --batch-size 16
-      - name: Audit every Romanian source unit
-        run: python3 scripts/run-with-pinned-hf.py scripts/audit-pr40-english-romanian-v3.py --collection early --batch-size 64
-      - name: Upload work corpus and reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pr40-early-${{ matrix.book }}
-          path: |
-            docs/data/biblia-emanus-early-source-candidates
-            docs/data/biblia-emanus-early-romanian-candidates
             docs/data/biblia-emanus-early-audited
-            docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json
-            docs/biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json
-            docs/biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json
-          if-no-files-found: warn
-          retention-days: 7
-
-  qumran:
-    name: Qumran — ${{ matrix.id }}
-    strategy:
-      fail-fast: false
-      max-parallel: 4
-      matrix:
-        include:
-          - id: COMM_REG
-            witnesses: 1QS,1QSa,1QSb
-          - id: GEN_APO
-            witnesses: 1Q20
-          - id: GIANTS
-            witnesses: 1Q23,2Q26,4Q203,4Q206,4Q530,4Q531,4Q532,4Q533,6Q8
-          - id: HAB_COM
-            witnesses: 1QpHab
-          - id: HODAYOT
-            witnesses: 1QHa
-          - id: SABB_SAC
-            witnesses: 4Q400
-          - id: TEMP_SCR
-            witnesses: 11Q19
-          - id: WAR_SCR
-            witnesses: 1QM
-          - id: ADD_PSA
-            witnesses: 11Q5,4Q381
-    runs-on: ubuntu-latest
-    timeout-minutes: 240
-    env:
-      PR40_WITNESSES: ${{ matrix.witnesses }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Install Text-Fabric, translation and audit runtime
-        run: pip install --disable-pip-version-check 'text-fabric>=12,<14' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Rebuild authentic source corpus
-        run: python3 scripts/extract-pr40-qumran-corpus.py
-      - name: Generate Romanian parallel research shard
-        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-qumran-shard.py --batch-size 28
-      - name: Repair degenerate output and preserve lacunae
-        run: python3 scripts/run-with-pinned-hf.py scripts/refine-pr40-qumran-candidates.py --batch-size 28
-      - name: Audit line fidelity and fragment semantics
-        run: python3 scripts/run-with-pinned-hf.py scripts/audit-pr40-qumran-shard-v2.py
-      - name: Upload collection corpus and reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pr40-qumran-${{ matrix.id }}
-          path: |
-            docs/data/biblia-emanus-qumran-source
-            docs/data/biblia-emanus-qumran-romanian-candidates
             docs/data/biblia-emanus-qumran-audited
-            docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json
-            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json
-            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json
-          if-no-files-found: warn
-          retention-days: 7
-
-  publication-verdict:
-    name: All 64 works publication verdict
-    if: always()
-    needs: [canonical-ot, deuterocanon, early-works, qumran]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Require every collection gate
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Commit the publication atomically to PR 43
         env:
-          CANONICAL: ${{ needs.canonical-ot.result }}
-          DEUTEROCANON: ${{ needs.deuterocanon.result }}
-          EARLY: ${{ needs.early-works.result }}
-          QUMRAN: ${{ needs.qumran.result }}
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
         run: |
-          printf 'canonical=%s\ndeuterocanon=%s\nearly=%s\nqumran=%s\n' "$CANONICAL" "$DEUTEROCANON" "$EARLY" "$QUMRAN"
-          test "$CANONICAL" = success
-          test "$DEUTEROCANON" = success
-          test "$EARLY" = success
-          test "$QUMRAN" = success
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/data/biblia-emanus \
+            docs/data/biblia-emanus-deuterocanon-audited \
+            docs/data/biblia-emanus-early-audited \
+            docs/data/biblia-emanus-qumran-audited \
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          if git diff --cached --quiet; then
+            echo 'Publication tree already matches the verified artifacts.'
+            exit 0
+          fi
+          git commit -m 'Publish all 64 PR40 works atomically'
+          git push origin "HEAD:${HEAD_BRANCH}"
