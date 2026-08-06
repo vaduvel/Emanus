@@ -1,16 +1,9 @@
 #!/usr/bin/env python3
-"""Run canonical promotion with all OSHB remap fixes composed.
+"""Run canonical promotion with all source and content fixes composed.
 
-Two independent upstream conditions are handled together:
-
-* the official remapper may leave empty *trailing* chapter containers when a
-  Hebrew chapter is folded into the preceding English-versification chapter;
-* eBible archives contain front matter such as ``FRT`` with no verses.
-
-Only trailing empty remap containers are removed. Interior empty chapters are
-fatal. Archive loading accepts only exact canonical book identifiers. The raw
-WLC archive is recorded once as upstream provenance; only the official remap is
-registered as each book's original text lock.
+The inherited candidates first receive the audited omission repairs and Psalm
+superscription normalization. The official OSHB remap then supplies Hebrew
+verse boundaries, while archive loading excludes non-canonical front matter.
 """
 from __future__ import annotations
 
@@ -18,10 +11,14 @@ import hashlib
 import importlib.util
 import json
 import re
+import runpy
 import zipfile
 from pathlib import Path
 from types import ModuleType
 from typing import Any
+
+CONTENT_FIXES = Path(__file__).with_name("apply-pr40-canonical-content-fixes.py")
+runpy.run_path(str(CONTENT_FIXES), run_name="__main__")
 
 SCRIPT = Path(__file__).with_name("promote-pr40-canonical-ot-v3.py")
 spec = importlib.util.spec_from_file_location("canonical_v3", SCRIPT)
