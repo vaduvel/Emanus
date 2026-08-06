@@ -140,6 +140,41 @@ def embed_archive_in_snapshot(snapshot_path: Path, archive_path: Path, member_na
         temporary.unlink(missing_ok=True)
 
 
+def normalize_promoted_hebrew_sources(base: ModuleType, snapshot_hash: str) -> None:
+    """Keep chapter source metadata aligned with the validator and source ledger."""
+    ledger_path = module.ACTIVE / "source-ledger.json"
+    ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+    chapters = ledger.get("chapters")
+    if not isinstance(chapters, dict):
+        raise RuntimeError("source-ledger.json lacks chapter records")
+
+    normalized = 0
+    for path in sorted(module.ACTIVE.glob("*.json")):
+        parts = path.stem.split(".")
+        if len(parts) != 2 or not parts[1].isdigit() or parts[0] not in base.CANONICAL:
+            continue
+        document = json.loads(path.read_text(encoding="utf-8"))
+        reference = f"{document.get('bookId')}.{document.get('chapter')}"
+        ledger_record = chapters.get(reference)
+        if not isinstance(ledger_record, dict) or not ledger_record.get("hebrewUrl"):
+            raise RuntimeError(f"Missing Hebrew ledger URL for {reference}")
+        hebrew = document.get("source", {}).get("hebrew")
+        if not isinstance(hebrew, dict):
+            raise RuntimeError(f"Missing Hebrew source metadata for {reference}")
+
+        hebrew["version"] = "WLC-OSHB"
+        hebrew["passageUrl"] = str(ledger_record["hebrewUrl"])
+        document.setdefault("audit", {})["sourceSnapshotSha256"] = snapshot_hash
+        path.write_text(
+            json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        normalized += 1
+
+    if normalized == 0:
+        raise RuntimeError("No promoted canonical chapters were normalized")
+
+
 def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None:
     _original_postprocess(base, provenance)
     raw_archive = module.SOURCES / "hboWLC_usfm.zip"
@@ -160,7 +195,8 @@ def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None
         raise RuntimeError(f"Missing snapshot metadata for {base.SNAPSHOT_ID}")
     snapshot_path = module.ACTIVE / str(snapshot["path"])
     embed_archive_in_snapshot(snapshot_path, embedded_archive, embedded_member)
-    snapshot["sha256"] = hashlib.sha256(snapshot_path.read_bytes()).hexdigest()
+    snapshot_hash = hashlib.sha256(snapshot_path.read_bytes()).hexdigest()
+    snapshot["sha256"] = snapshot_hash
 
     lock.setdefault("upstreamArtifacts", {})["hboWLC-raw-r5"] = {
         "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
@@ -178,6 +214,7 @@ def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None
         json.dumps(lock, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    normalize_promoted_hebrew_sources(base, snapshot_hash)
 
 
 module.load_base = load_base
