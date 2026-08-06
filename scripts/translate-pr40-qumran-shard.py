@@ -7,10 +7,11 @@ import importlib.util
 import json
 import os
 import re
+import sys
+import time
 from pathlib import Path
 from typing import Any
 
-from huggingface_hub import HfApi
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 BASE = Path(__file__).with_name("translate-pr40-qumran-corpus.py")
@@ -19,6 +20,40 @@ if spec is None or spec.loader is None:
     raise SystemExit(f"Cannot load {BASE}")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
+
+MODEL_REVISION = "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+RETRYABLE_DOWNLOAD_MARKERS = (
+    "429",
+    "Too Many Requests",
+    "ConnectionError",
+    "ReadTimeout",
+    "timed out",
+    "502",
+    "503",
+    "504",
+)
+
+
+def load_pinned_component(factory: Any, **kwargs: Any) -> Any:
+    """Load the exact audited model revision with bounded transient retries."""
+    for attempt in range(6):
+        try:
+            return factory.from_pretrained(
+                base.MODEL_ID,
+                revision=MODEL_REVISION,
+                **kwargs,
+            )
+        except Exception as error:  # noqa: BLE001
+            retryable = any(marker in str(error) for marker in RETRYABLE_DOWNLOAD_MARKERS)
+            if not retryable or attempt == 5:
+                raise
+            delay = min(60, 5 * (2**attempt))
+            print(
+                f"Transient Hugging Face download failure; retrying in {delay}s: {error}",
+                file=sys.stderr,
+            )
+            time.sleep(delay)
+    raise AssertionError("unreachable")
 
 
 def main() -> None:
@@ -45,13 +80,12 @@ def main() -> None:
     if any(doc.get("status") != "source_verified" for doc in source_docs):
         raise SystemExit("Selected Qumran source corpus is not fully verified")
 
-    revision = str(HfApi().model_info(base.MODEL_ID).sha)
-    tokenizer = AutoTokenizer.from_pretrained(
-        base.MODEL_ID,
-        revision=revision,
+    revision = MODEL_REVISION
+    tokenizer = load_pinned_component(
+        AutoTokenizer,
         src_lang=base.SOURCE_LANGUAGE,
     )
-    model = AutoModelForSeq2SeqLM.from_pretrained(base.MODEL_ID, revision=revision)
+    model = load_pinned_component(AutoModelForSeq2SeqLM)
     model.eval()
 
     rows: list[dict[str, Any]] = []
