@@ -2,14 +2,13 @@
 """Extract all four early works with exact CCEL Jubilees unit boundaries.
 
 CCEL's Charles transcription encodes Jubilees as one ordered list per chapter.
-The HTML is old and leaves ``<li>`` tags unclosed, so ordinary ``get_text``
-flattens all units into one stream. This wrapper converts each list item into a
-synthetic numbered paragraph before the common extractor runs. The original
-page bytes remain the hashed source; only the parsing representation changes.
+The old HTML uses different wrapper tags across pages and leaves ``<li>`` tags
+unclosed. This wrapper locates the exact ``[Chapter N]`` text node regardless
+of its tag, converts each list item into a synthetic numbered paragraph, and
+keeps the original page bytes as the hashed source.
 """
 from __future__ import annotations
 
-import hashlib
 import html as html_module
 import importlib.util
 import re
@@ -57,17 +56,17 @@ def fetch(url: str) -> tuple[str, str]:
     chapter = int(chapter_match.group(1))
 
     soup = BeautifulSoup(raw_html, "html.parser")
-    heading = next(
+    heading_text = next(
         (
             node
-            for node in soup.find_all(re.compile(r"^h[1-6]$"))
-            if module.heading_chapter(node.get_text(" ", strip=True)) == chapter
+            for node in soup.find_all(string=True)
+            if module.heading_chapter(module.clean(str(node))) == chapter
         ),
         None,
     )
-    if not isinstance(heading, Tag):
+    if heading_text is None or not isinstance(heading_text.parent, Tag):
         raise RuntimeError(f"Jubilees {chapter}: exact chapter heading not found")
-    ordered = heading.find_next("ol")
+    ordered = heading_text.parent.find_next("ol")
     if not isinstance(ordered, Tag):
         raise RuntimeError(f"Jubilees {chapter}: ordered verse list not found")
 
