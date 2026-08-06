@@ -52,7 +52,9 @@ jobs:
 
       - name: Aplica reparatiile canonice auditate
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
-        run: python3 scripts/apply-pr40-canonical-content-fixes.py
+        run: |
+          python3 scripts/apply-pr40-canonical-content-fixes.py
+          python3 scripts/apply-pr40-canonical-content-fixes-wave2.py
 
       - name: Genereaza auditul determinist al candidatilor VT
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
