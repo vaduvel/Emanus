@@ -55,6 +55,7 @@ import { EXOD } from "./exod.js"
 import { LEVITIC } from "./levitic.js"
 import { NUMERI } from "./numeri.js"
 import { DEUTERONOM } from "./deuteronom.js"
+import { IOSUA } from "./iosua.js"
 import { MATEI as MATEI_BASE } from "./matei.js"
 import { MATEI_2 } from "./matei2.js"
 import { MATEI_3 } from "./matei3.js"
@@ -246,10 +247,10 @@ export const MARCU: BibleBook = {
   ],
 }
 
-export { EXOD, LEVITIC, NUMERI, DEUTERONOM }
+export { EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA, EXOD, LEVITIC, NUMERI, DEUTERONOM, MATEI, IOAN, MARCU]
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA, MATEI, IOAN, MARCU]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)
