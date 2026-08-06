@@ -1,0 +1,230 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 20,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.20.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.20.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.20.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "384bde8f0918ec20894c64fefd8154d71aa614d0a1d1a367ecfea349d3eab107",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Vinul este batjocoritor, băuturile tari sunt gălăgioase; oricine se îmbată cu ele nu este înțelept. –"
+    },
+    {
+      "number": 2,
+      "text": "Frica pe care o insuflă împăratul este ca răcnetul unui leu, cine îl supără, păcătuiește împotriva sa însuși. –"
+    },
+    {
+      "number": 3,
+      "text": "Este o cinste pentru om să se ferească de certuri; dar orice nebun se lasă stăpânit de aprindere. –"
+    },
+    {
+      "number": 4,
+      "text": "Toamna, leneșul nu ară; la secerat, ar vrea să strângă roade, dar nu este nimic! –"
+    },
+    {
+      "number": 5,
+      "text": "Sfaturile în inima omului sunt ca niște ape adânci, dar omul priceput știe să scoată din ele. –"
+    },
+    {
+      "number": 6,
+      "text": "Mulți oameni își trâmbițează bunătatea; dar cine poate găsi un om credincios? –"
+    },
+    {
+      "number": 7,
+      "text": "Cel neprihănit umblă în neprihănirea lui; ferice de copiii lui după el! –"
+    },
+    {
+      "number": 8,
+      "text": "Împăratul, care șade pe scaunul de domnie al dreptății, risipește orice rău cu privirea lui. –"
+    },
+    {
+      "number": 9,
+      "text": "Cine poate zice: „Mi-am curățat inima, sunt curat de păcatul meu”"
+    },
+    {
+      "number": 10,
+      "text": "Două feluri de greutăți și două feluri de măsuri sunt o scârbă înaintea DOMNULUI. –"
+    },
+    {
+      "number": 11,
+      "text": "Copilul lasă să se vadă încă din faptele lui dacă purtarea lui va fi curată și fără prihană. –"
+    },
+    {
+      "number": 12,
+      "text": "Urechea care aude și ochiul care vede, și pe una și pe celălalt, DOMNUL le-a făcut. –"
+    },
+    {
+      "number": 13,
+      "text": "Nu iubi somnul, căci vei ajunge sărac; deschide ochii și te vei sătura de pâine. –"
+    },
+    {
+      "number": 14,
+      "text": "„Nu este bun, nu este bun”, spune cumpărătorul; dar după ce pleacă, se laudă cu târgul făcut."
+    },
+    {
+      "number": 15,
+      "text": "Este aur și sunt multe mărgăritare; dar buzele înțelepte sunt un lucru scump. –"
+    },
+    {
+      "number": 16,
+      "text": "Ia-i haina, căci s-a pus chezaș pentru altul; și ține-l zălog pentru alții. –"
+    },
+    {
+      "number": 17,
+      "text": "Pâinea minciunii este dulce omului, dar mai pe urmă gura îi este plină de pietriș. –"
+    },
+    {
+      "number": 18,
+      "text": "Planurile se pun la cale prin sfat! Fă războiul cu chibzuință. –"
+    },
+    {
+      "number": 19,
+      "text": "Cine umblă cu bârfe dă pe față lucrurile ascunse; și cu cel ce nu-și poate ține gura să nu te amesteci. –"
+    },
+    {
+      "number": 20,
+      "text": "Dacă cineva blestemă pe tatăl său și pe mama sa, i se va stinge lumina în mijlocul întunericului. –"
+    },
+    {
+      "number": 21,
+      "text": "O moștenire repede câștigată de la început, nu va fi binecuvântată la sfârșit. –"
+    },
+    {
+      "number": 22,
+      "text": "Nu zice: „Îi voi întoarce eu răul!”"
+    },
+    {
+      "number": 23,
+      "text": "DOMNUL urăște două feluri de greutăți, și cântarul mincinos nu este un lucru bun. –"
+    },
+    {
+      "number": 24,
+      "text": "DOMNUL îndreaptă pașii omului, dar ce înțelege omul din calea sa?"
+    },
+    {
+      "number": 25,
+      "text": "Este o cursă pentru om să facă în pripă o făgăduință sfântă, și abia după ce a făcut juruința să se gândească. –"
+    },
+    {
+      "number": 26,
+      "text": "Un împărat înțelept vântură pe cei răi și trece cu roata peste ei. –"
+    },
+    {
+      "number": 27,
+      "text": "Suflarea omului este o lumină a DOMNULUI, care pătrunde până în fundul măruntaielor. –"
+    },
+    {
+      "number": 28,
+      "text": "Bunătatea și credincioșia păzesc pe împărat, și el își întărește scaunul de domnie prin bunătate. –"
+    },
+    {
+      "number": 29,
+      "text": "Slava tinerilor este tăria, dar podoaba bătrânilor sunt perii albi. –"
+    },
+    {
+      "number": 30,
+      "text": "Mijloacele de vindecare pentru cel rău sunt bătăile și vânătăile până la rană. –"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 14,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "a7b4520da462820b0271f21f286e839825622bd10fe7b55ae38df5593f5343bc",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

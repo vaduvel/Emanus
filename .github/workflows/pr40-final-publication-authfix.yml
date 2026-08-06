@@ -1,0 +1,109 @@
+name: PR40 publish 61 green works
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/pr40-final-publication-authfix.yml'
+      - 'scripts/assemble-pr40-green-publication.py'
+      - 'scripts/download-pr40-run-artifacts.py'
+      - 'docs/biblia-emanus/PR40-FINALIZE.trigger'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: pr40-publish-green-61-main
+  cancel-in-progress: false
+
+env:
+  PRIOR_RUN_ID: '31110524525'
+
+jobs:
+  publish-green-corpus:
+    name: Publish the 61 already-green works to main
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    steps:
+      - name: Checkout main with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+
+      - name: Download the already-green artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 scripts/download-pr40-run-artifacts.py \
+            --run-id "$PRIOR_RUN_ID" \
+            --output staging/prior \
+            --require pr40-final-canonical-publication \
+            --require pr40-early-4BA \
+            --require pr40-early-ENO \
+            --require pr40-early-JUB \
+            --require pr40-qumran-COMM_REG \
+            --require pr40-qumran-GEN_APO \
+            --require pr40-qumran-GIANTS \
+            --require pr40-qumran-HAB_COM \
+            --require pr40-qumran-HODAYOT \
+            --require pr40-qumran-SABB_SAC \
+            --require pr40-qumran-WAR_SCR
+
+      - name: Assemble exactly the 61 green works
+        run: |
+          set -euo pipefail
+          python3 scripts/assemble-pr40-green-publication.py --prior staging/prior
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json').read_text(encoding='utf-8'))
+          assert report['status'] == 'published'
+          assert report['counts']['works'] == 61
+          assert set(report['excludedWorks']) == {'DID', 'TEMP_SCR', 'ADD_PSA'}
+          assert report['blockingIssues'] == 0
+          print('Verified 61 green works with exactly 3 explicit exclusions.')
+          PY
+
+      - name: Verify corpus and application build
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:bible-publication
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+          pnpm typecheck
+          pnpm build
+          git diff --check
+
+      - name: Commit the 61 green works directly to main
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/data/biblia-emanus \
+            docs/data/biblia-emanus-deuterocanon-audited \
+            docs/data/biblia-emanus-early-audited \
+            docs/data/biblia-emanus-qumran-audited \
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          git diff --cached --quiet && { echo 'The 61-work publication tree is already committed.'; exit 0; }
+          git commit -m 'Publish the 61 verified PR40 works'
+          git push origin HEAD:main

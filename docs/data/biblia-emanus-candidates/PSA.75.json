@@ -1,0 +1,159 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 75,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.75:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.75.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.75.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.75.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "1a110f0754bf51ad08b3700717586560e8fae6766ad1f143c1b93d9e9b86de64",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Ție Dumnezeule, îți aducem mulțumiri, ție îți aducem mulțumiri; lucrările tale minunate vestesc că numele tău este aproape."
+    },
+    {
+      "number": 2,
+      "text": "„Atunci când va veni vremea hotărâtă”, zice DOMNUL, „voi judeca fără părtinire.”"
+    },
+    {
+      "number": 3,
+      "text": "„Poate să se cutremure pământul cu locuitorii lui: căci Eu îi întăresc stâlpii.”"
+    },
+    {
+      "number": 4,
+      "text": "Eu zic celor ce se fălesc: „Nu vă făliți!”, și celor răi: „Nu ridicați capul sus!”"
+    },
+    {
+      "number": 5,
+      "text": "Nu vă ridicați capul așa de sus, nu vorbiți cu atâta trufie!"
+    },
+    {
+      "number": 6,
+      "text": "Căci nici de la Răsărit, nici de la Apus, nici din pustiu nu vine înălțarea."
+    },
+    {
+      "number": 7,
+      "text": "Ci Dumnezeu este Cel ce judecă: El coboară pe unul, și înalță pe altul."
+    },
+    {
+      "number": 8,
+      "text": "În mâna DOMNULUI este un potir, în care fierbe un vin plin de amestecătură. Când îl varsă, toți cei răi de pe pământ sug, îl sorb și-l beau până în fund!"
+    },
+    {
+      "number": 9,
+      "text": "Eu însă voi vesti pururi aceste lucruri; voi cânta laude în cinstea Dumnezeului lui Iacov."
+    },
+    {
+      "number": 10,
+      "text": "Și voi doborî toate puterile celor răi: puterile celui neprihănit însă se vor înălța."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. „Nu nimici.”)"
+}

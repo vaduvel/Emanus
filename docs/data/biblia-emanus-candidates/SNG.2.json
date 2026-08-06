@@ -1,0 +1,169 @@
+{
+  "translation": "BE",
+  "bookId": "SNG",
+  "bookName": "Cântarea Cântărilor",
+  "chapter": 2,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/SNG.2.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/SNG.2.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/SNG.2.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "26c75b858b63fd19f2e79037a16295c179b4db7ad6e8331e5466cdebaf107295",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Eu sunt un trandafir din Saron, un crin din văi. –"
+    },
+    {
+      "number": 2,
+      "text": "Ca un crin în mijlocul spinilor așa este iubita mea între fete. –"
+    },
+    {
+      "number": 3,
+      "text": "Ca un măr între copacii pădurii așa este preaiubitul meu între tineri. Cu așa drag stau la umbra lui, și rodul lui este dulce pentru cerul gurii mele."
+    },
+    {
+      "number": 4,
+      "text": "El m-a dus în casa de ospăț, și dragostea era steagul fluturat peste mine."
+    },
+    {
+      "number": 5,
+      "text": "Întăriți-mă cu turte de struguri, înviorați-mă cu mere, căci sunt bolnavă de dragostea lui."
+    },
+    {
+      "number": 6,
+      "text": "Să-și pună mâna stângă sub capul meu și să mă îmbrățișeze cu dreapta lui! –"
+    },
+    {
+      "number": 7,
+      "text": "Vă jur, fiice ale Ierusalimului, pe căprioarele și cerboaicele de pe câmp: nu stârniți, nu treziți dragostea până nu vine ea! –"
+    },
+    {
+      "number": 8,
+      "text": "Aud glasul preaiubitului meu! Iată-l că vine, sărind peste munți, săltând pe dealuri."
+    },
+    {
+      "number": 9,
+      "text": "Preaiubitul meu seamănă cu o căprioară sau cu puiul de cerboaică. Iată-l că este după zidul nostru, se uită pe fereastră, privește printre zăbrele."
+    },
+    {
+      "number": 10,
+      "text": "Preaiubitul meu vorbește și-mi zice: „Scoală-te, iubito, și vino, frumoaso!”"
+    },
+    {
+      "number": 11,
+      "text": "Căci iată că a trecut iarna; a încetat ploaia și s-a dus."
+    },
+    {
+      "number": 12,
+      "text": "Se arată florile pe câmp, a venit vremea cântării și se aude glasul turturelei în câmpiile noastre."
+    },
+    {
+      "number": 13,
+      "text": "Se pârguiesc roadele în smochin, și viile înflorite își răspândesc mirosul. Scoală-te, iubito, și vino, frumoaso!"
+    },
+    {
+      "number": 14,
+      "text": "„Porumbiță din crăpăturile stâncii, ascunsă în scobiturile prăpăstiilor, arată-mi fața ta și fă-mă să-ți aud glasul! Căci glasul tău este dulce, și fața ta, plăcută.”"
+    },
+    {
+      "number": 15,
+      "text": "Prindeți-ne vulpile, vulpile cele mici care strică viile; căci viile noastre sunt în floare."
+    },
+    {
+      "number": 16,
+      "text": "Preaiubitul meu este al meu, și eu sunt a lui; el își paște turma între crini."
+    },
+    {
+      "number": 17,
+      "text": "Până la răcoarea zilei și până la lungirea umbrelor, întoarce-te!… Iubitule, sari ca o căprioară sau ca puiul de cerb peste munții ce ne despart."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

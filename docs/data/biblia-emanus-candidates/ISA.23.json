@@ -1,0 +1,173 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 23,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.23.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.23.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.23.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "82968038635ac33a4d4b428b755441e2d9be7a5ef81500b35d3622dc6644f988",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Prorocie împotriva Tirului. Bociți-vă, corăbii din Tarsis! Căci Tirul a fost nimicit: nu mai are nici case, nici intrare! Din țara Chitim le-a venit vestea aceasta. –"
+    },
+    {
+      "number": 2,
+      "text": "Amuțiți de groază, locuitori ai țărmului pe care îl umpleau odată negustorii din Sidon care străbăteau marea!"
+    },
+    {
+      "number": 3,
+      "text": "Veniturile lui erau grâul Nilului și secerișul Râului, aduse pe ape mari, așa că el era târgul neamurilor. –"
+    },
+    {
+      "number": 4,
+      "text": "Rușinează-te, Sidoane! Căci așa vorbește marea, cetățuia mării: „Eu n-am avut durerile facerii, nici n-am născut, n-am hrănit tineri, nici n-am crescut fete.”"
+    },
+    {
+      "number": 5,
+      "text": "Când vor afla egiptenii vestea aceasta, vor tremura auzind de căderea Tirului"
+    },
+    {
+      "number": 6,
+      "text": "și vor zice: „Treceți la Tarsis, bociți-vă, locuitori ai țărmului!”"
+    },
+    {
+      "number": 7,
+      "text": "Aceasta este cetatea voastră cea veselă, care avea o obârșie veche și ale cărei picioare o duceau să locuiască departe."
+    },
+    {
+      "number": 8,
+      "text": "„Cine a luat această hotărâre împotriva Tirului, împărțitorul cununilor, el, ai cărui negustori erau niște voievozi și ai cărui târgoveți erau cei mai bogați de pe pământ?”"
+    },
+    {
+      "number": 9,
+      "text": "DOMNUL oștirilor a luat această hotărâre, ca să rușineze mândria a tot ce strălucește și să smerească pe toți cei mari ai pământului:"
+    },
+    {
+      "number": 10,
+      "text": "Străbateți țara, ca Nilul, niciun brâu nu te mai strânge, fiica Tarsisului! Nu mai este niciun jug!"
+    },
+    {
+      "number": 11,
+      "text": "DOMNUL Și-a întins mâna asupra mării; a făcut să tremure împărății; a poruncit nimicirea cetățuilor Canaanului"
+    },
+    {
+      "number": 12,
+      "text": "și a zis: „De acum nu te vei mai bucura, fecioară necinstită, fiica Sidonului! Scoală-te și treci în țara Chitim; dar nici acolo nu vei avea odihnă.”"
+    },
+    {
+      "number": 13,
+      "text": "Iată pe haldei, care nu erau un popor, locuitorii aceștia ai pustiului, cărora asirianul le-a întemeiat o țară; ei înalță turnuri, surpă casele împărătești ale Tirului, le prefac în dărâmături."
+    },
+    {
+      "number": 14,
+      "text": "Bociți-vă, corăbii din Tarsis! Căci cetățuia voastră este nimicită."
+    },
+    {
+      "number": 15,
+      "text": "În vremea aceea, Tirul va fi dat uitării șaptezeci de ani, cât ține viața unui împărat, dar după șaptezeci de ani, se va întâmpla Tirului ca și curvei despre care vorbește cântecul:"
+    },
+    {
+      "number": 16,
+      "text": "„Ia harpa și străbate cetatea, curvă dată uitării; cântă bine, cântă-ți cântecele de mai multe ori, ca iarăși să-și aducă lumea aminte de tine.”"
+    },
+    {
+      "number": 17,
+      "text": "Tot așa, după șaptezeci de ani, DOMNUL va cerceta Tirul, și se va întoarce iarăși la câștigul lui; va avea legături cu toate împărățiile lumii de pe fața pământului;"
+    },
+    {
+      "number": 18,
+      "text": "dar câștigul și plata lui vor fi închinate DOMNULUI, nu vor fi nici strânse, nici păstrate; ci câștigul lui va aduce celor ce locuiesc înaintea DOMNULUI o hrană îmbelșugată și haine strălucite."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

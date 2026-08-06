@@ -1,0 +1,147 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 54,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.54:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.54.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.54.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.54.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "88efdaa99cc906cff893a815241c3ef13cd3c9a97dc22a58b885f638dfbd31e8",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Salvează-mă, Dumnezeule, prin numele tău și judecă-mă prin puterea ta."
+    },
+    {
+      "number": 2,
+      "text": "Ascultă-mi rugăciunea, Dumnezeule, ia aminte la cuvintele gurii mele."
+    },
+    {
+      "number": 3,
+      "text": "Căci niște străini s-au sculat împotriva mea, niște oameni asupritori vor să-mi ia viața; ei nu se gândesc la Dumnezeu. – (Oprire)"
+    },
+    {
+      "number": 4,
+      "text": "Da, Dumnezeu este ajutorul meu, DOMNUL este sprijinul sufletului meu!"
+    },
+    {
+      "number": 5,
+      "text": "Răul se va întoarce asupra potrivnicilor mei; nimicește-i în credincioșia Ta!"
+    },
+    {
+      "number": 6,
+      "text": "Atunci Îți voi aduce jertfe de bunăvoie, voi lăuda Numele Tău, DOAMNE, căci este binevoitor;"
+    },
+    {
+      "number": 7,
+      "text": "căci El mă izbăvește din toate necazurile, și cu ochii mei îmi văd împlinită dorința privitoare la vrăjmașii mei."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. De cântat cu instrumente cu corzi. O cântare a lui David. Făcută când au venit zifiții să spună lui Saul: „Știți că David șade ascuns printre noi?”)"
+}

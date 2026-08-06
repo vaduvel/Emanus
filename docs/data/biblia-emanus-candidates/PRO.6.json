@@ -1,0 +1,241 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 6,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.6.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.6.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.6.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "a33e41776cd0719a3e323ab22469a9d1e431d02c49670dfad6ba0931ad5ccd9b",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Fiule, dacă te-ai pus chezaș pentru aproapele tău, dacă te-ai prins pentru altul,"
+    },
+    {
+      "number": 2,
+      "text": "dacă ești legat prin făgăduința gurii tale, dacă ești prins de cuvintele gurii tale,"
+    },
+    {
+      "number": 3,
+      "text": "fă totuși lucrul acesta, fiule: dezleagă-te, căci ai căzut în mâna aproapelui tău! De aceea du-te, aruncă-te cu fața la pământ și stăruie de el."
+    },
+    {
+      "number": 4,
+      "text": "Nu da somn ochilor tăi, nici ațipire pleoapelor tale!"
+    },
+    {
+      "number": 5,
+      "text": "Scapă din mâna lui cum scapă căprioara din mâna vânătorului și ca pasărea din mâna păsărarului…"
+    },
+    {
+      "number": 6,
+      "text": "Du-te la furnică, leneșule; uită-te cu băgare de seamă la căile ei și înțelepțește-te!"
+    },
+    {
+      "number": 7,
+      "text": "Ea n-are nici căpetenie, nici priveghetor, nici stăpân;"
+    },
+    {
+      "number": 8,
+      "text": "totuși își pregătește hrana vara și strânge de ale mâncării în timpul secerișului."
+    },
+    {
+      "number": 9,
+      "text": "Până când vei sta culcat, leneșule? Când te vei scula din somnul tău?"
+    },
+    {
+      "number": 10,
+      "text": "Să mai dormi puțin, să mai ațipești puțin, să mai încrucișezi puțin mâinile ca să dormi!…"
+    },
+    {
+      "number": 11,
+      "text": "Și sărăcia vine peste tine ca un hoț, și lipsa, ca un om înarmat."
+    },
+    {
+      "number": 12,
+      "text": "Omul de nimic, omul nelegiuit, umblă cu neadevărul în gură,"
+    },
+    {
+      "number": 13,
+      "text": "clipește din ochi, dă din picior și face semne cu degetele."
+    },
+    {
+      "number": 14,
+      "text": "Răutatea este în inima lui, urzește lucruri rele întruna și stârnește certuri."
+    },
+    {
+      "number": 15,
+      "text": "De aceea nimicirea îi va veni pe neașteptate; va fi zdrobit deodată și fără leac."
+    },
+    {
+      "number": 16,
+      "text": "Șase lucruri urăște DOMNUL și chiar șapte Îi sunt urâte:"
+    },
+    {
+      "number": 17,
+      "text": "ochii trufași, limba mincinoasă, mâinile care varsă sânge nevinovat,"
+    },
+    {
+      "number": 18,
+      "text": "inima care urzește planuri nelegiuite, picioarele care aleargă repede la rău,"
+    },
+    {
+      "number": 19,
+      "text": "martorul mincinos, care spune minciuni, și cel ce stârnește certuri între frați."
+    },
+    {
+      "number": 20,
+      "text": "Fiule, păzește sfaturile tatălui tău și nu lepăda învățătura mamei tale:"
+    },
+    {
+      "number": 21,
+      "text": "leagă-le necurmat la inimă, atârnă-le de gât."
+    },
+    {
+      "number": 22,
+      "text": "Ele te vor însoți în mersul tău, te vor păzi în pat și îți vor vorbi la deșteptare!"
+    },
+    {
+      "number": 23,
+      "text": "Căci sfatul este o candelă, învățătura este o lumină, iar îndemnul și mustrarea sunt calea vieții."
+    },
+    {
+      "number": 24,
+      "text": "Ele te vor feri de femeia stricată, de limba ademenitoare a celei străine."
+    },
+    {
+      "number": 25,
+      "text": "N-o pofti în inima ta pentru frumusețea ei și nu te lăsa ademenit de pleoapele ei."
+    },
+    {
+      "number": 26,
+      "text": "Căci pentru o femeie curvă, omul ajunge de nu mai rămâne decât cu o bucată de pâine, și femeia măritată întinde o cursă unui suflet scump."
+    },
+    {
+      "number": 27,
+      "text": "Poate cineva să ia foc în sân, fără să i se aprindă hainele?"
+    },
+    {
+      "number": 28,
+      "text": "Sau poate merge cineva pe cărbuni aprinși, fără să-i ardă picioarele?"
+    },
+    {
+      "number": 29,
+      "text": "Tot așa este și cu cel ce se duce la nevasta aproapelui său: oricine se atinge de ea nu va rămâne nepedepsit."
+    },
+    {
+      "number": 30,
+      "text": "Hoțul nu este urgisit când fură ca să-și potolească foamea, căci îi este foame;"
+    },
+    {
+      "number": 31,
+      "text": "și dacă este prins, trebuie să dea înapoi înșeptit, să dea chiar tot ce are în casă."
+    },
+    {
+      "number": 32,
+      "text": "Dar cel ce preacurvește cu o femeie este un om fără minte, singur își pierde viața cine face așa."
+    },
+    {
+      "number": 33,
+      "text": "Nu va avea decât rană și rușine, și ocara nu i se va șterge."
+    },
+    {
+      "number": 34,
+      "text": "Căci gelozia înfurie pe un bărbat, și n-are milă în ziua răzbunării;"
+    },
+    {
+      "number": 35,
+      "text": "nu se uită la niciun preț de răscumpărare și nu se lasă înduplecat nici chiar de cel mai mare dar."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

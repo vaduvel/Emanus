@@ -1,0 +1,201 @@
+{
+  "translation": "BE",
+  "bookId": "JOB",
+  "bookName": "Iov",
+  "chapter": 12,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/JOB.12.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/JOB.12.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/JOB.12.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "84ef42808640b11f22fa746d1622e529260cf6a6a5662b507ce77e846a80e849",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Iov a luat cuvântul și a zis:"
+    },
+    {
+      "number": 2,
+      "text": "„S-ar putea zice, în adevăr, că neamul omenesc sunteți voi și că odată cu voi va muri și înțelepciunea!”"
+    },
+    {
+      "number": 3,
+      "text": "Am și eu minte ca voi, nu sunt mai prejos decât voi. Și cine nu știe lucrurile pe care le spuneți voi?"
+    },
+    {
+      "number": 4,
+      "text": "Eu sunt de batjocura prietenilor mei, când cer ajutorul lui Dumnezeu: dreptul, nevinovatul, de batjocură!"
+    },
+    {
+      "number": 5,
+      "text": "Dispreț în nenorocire! – iată zicerea celor fericiți: dă brânci cui alunecă cu piciorul!"
+    },
+    {
+      "number": 6,
+      "text": "Jefuitorilor li se lasă corturile în pace, celor ce mânie pe Dumnezeu le merge bine, măcar că dumnezeul lor este în pumn."
+    },
+    {
+      "number": 7,
+      "text": "Întreabă dobitoacele, și te vor învăța, păsările cerului, și îți vor spune;"
+    },
+    {
+      "number": 8,
+      "text": "vorbește pământului, și te va învăța; și peștii mării îți vor povesti."
+    },
+    {
+      "number": 9,
+      "text": "Cine nu vede în toate acestea dovada că mâna DOMNULUI a făcut asemenea lucruri?"
+    },
+    {
+      "number": 10,
+      "text": "El ține în mână sufletul a tot ce trăiește, suflarea oricărui trup omenesc."
+    },
+    {
+      "number": 11,
+      "text": "Nu deosebește urechea cuvintele, cum gustă cerul gurii mâncărurile?"
+    },
+    {
+      "number": 12,
+      "text": "La bătrâni se găsește înțelepciunea, și într-o viață lungă e priceperea."
+    },
+    {
+      "number": 13,
+      "text": "La Dumnezeu este înțelepciunea și puterea; sfatul și priceperea ale Lui sunt."
+    },
+    {
+      "number": 14,
+      "text": "Ce dărâmă El, nu va fi zidit din nou; pe cine-l închide El, nimeni nu-l va scăpa."
+    },
+    {
+      "number": 15,
+      "text": "El oprește apele și totul se usucă; El le dă drumul, și pustiesc pământul."
+    },
+    {
+      "number": 16,
+      "text": "El are puterea și înțelepciunea; El stăpânește pe cel ce se rătăcește sau rătăcește pe alții."
+    },
+    {
+      "number": 17,
+      "text": "El ia robi pe sfetnici și tulbură mintea judecătorilor."
+    },
+    {
+      "number": 18,
+      "text": "El dezleagă legătura împăraților și le pune o frânghie în jurul coapselor."
+    },
+    {
+      "number": 19,
+      "text": "El ia robi pe preoți; El răstoarnă pe cei puternici."
+    },
+    {
+      "number": 20,
+      "text": "El taie vorba celor meșteri la vorbă; El ia mintea celor bătrâni."
+    },
+    {
+      "number": 21,
+      "text": "El varsă disprețul asupra celor mari; El dezleagă brâul celor tari."
+    },
+    {
+      "number": 22,
+      "text": "El descoperă ce este ascuns în întuneric, El aduce la lumină umbra morții."
+    },
+    {
+      "number": 23,
+      "text": "El face pe neamuri să crească și El le nimicește; El le întinde până departe și El le aduce înapoi în hotarele lor."
+    },
+    {
+      "number": 24,
+      "text": "El ia mintea căpeteniilor poporului, El îi face să rătăcească în pustiuri fără drum,"
+    },
+    {
+      "number": 25,
+      "text": "„unde bâjbâie prin întuneric și nu văd deslușit; El îi face să se clatine ca niște oameni beți.”"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

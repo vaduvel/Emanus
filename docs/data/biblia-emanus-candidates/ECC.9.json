@@ -1,0 +1,173 @@
+{
+  "translation": "BE",
+  "bookId": "ECC",
+  "bookName": "Ecleziastul",
+  "chapter": 9,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ECC.9.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ECC.9.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ECC.9.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "721f87a03414142fbb98d1a7c1b8b0df6e450d42fa1437ad7384e4fc2fc51f10",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Da, mi-am pus inima în căutarea tuturor acestor lucruri, am cercetat toate aceste lucruri și am văzut că cei neprihăniți și înțelepți, și faptele lor sunt în mâna lui Dumnezeu, atât dragostea, cât și ura. Oamenii nu știu nimic mai dinainte; totul este înaintea lor în viitor."
+    },
+    {
+      "number": 2,
+      "text": "Tuturor li se întâmplă toate deopotrivă: aceeași soartă are cel neprihănit și cel rău, cel bun și curat ca și cel necurat, cel ce aduce jertfă ca și cel ce n-aduce jertfă; cel bun ca și cel păcătos, cel ce jură ca și cel ce se teme să jure!"
+    },
+    {
+      "number": 3,
+      "text": "Iată cel mai mare rău în tot ce se face sub soare: anume că aceeași soartă au toți. De aceea și este plină inima oamenilor de răutate și de aceea este atâta nebunie în inima lor tot timpul cât trăiesc. Și după aceea? Se duc la cei morți."
+    },
+    {
+      "number": 4,
+      "text": "Căci cine este scutit? Oricine trăiește tot mai trage nădejde; căci un câine viu face mai mult decât un leu mort."
+    },
+    {
+      "number": 5,
+      "text": "Cei vii, în adevăr, măcar știu că vor muri; dar cei morți nu știu nimic și nu mai au nicio răsplată, fiindcă până și pomenirea li se uită."
+    },
+    {
+      "number": 6,
+      "text": "Și dragostea lor, și ura lor, și pizma lor demult au și pierit, și niciodată nu vor mai avea parte de tot ce se face sub soare."
+    },
+    {
+      "number": 7,
+      "text": "Du-te, dar, de mănâncă-ți pâinea cu bucurie și bea-ți cu inimă bună vinul; căci demult a găsit Dumnezeu plăcere în ce faci tu acum."
+    },
+    {
+      "number": 8,
+      "text": "Hainele să-ți fie albe în orice vreme, și untdelemnul să nu-ți lipsească de pe cap."
+    },
+    {
+      "number": 9,
+      "text": "Gustă viața cu nevasta pe care o iubești, în tot timpul vieții tale deșarte pe care ți-a dat-o Dumnezeu sub soare, în această vreme trecătoare; căci aceasta îți este partea în viață în mijlocul trudei cu care te ostenești sub soare."
+    },
+    {
+      "number": 10,
+      "text": "Tot ce găsește mâna ta să facă, fă cu toată puterea ta! Căci, în Locuința morților în care mergi, nu mai este nici lucrare, nici chibzuială, nici știință, nici înțelepciune!"
+    },
+    {
+      "number": 11,
+      "text": "Am mai văzut apoi sub soare că nu cei iuți aleargă, că nu cei viteji câștigă războiul, că nu cei înțelepți câștigă pâinea, nici cei pricepuți, bogăția, nici cei învățați, bunăvoința, ci toate atârnă de vreme și de împrejurări."
+    },
+    {
+      "number": 12,
+      "text": "Căci omul nu-și cunoaște nici măcar ceasul, întocmai ca peștii prinși în mreaja nimicitoare și ca păsările prinse în laț; ca și ei sunt prinși și fiii oamenilor în vremea nenorocirii, când vine fără veste nenorocirea peste ei."
+    },
+    {
+      "number": 13,
+      "text": "Am mai văzut următoarea înțelepciune sub soare și mi s-a părut mare."
+    },
+    {
+      "number": 14,
+      "text": "Era o mică cetate, cu puțini oameni în ea; și a venit asupra ei un împărat puternic, a împresurat-o și a ridicat mari întărituri împotriva ei."
+    },
+    {
+      "number": 15,
+      "text": "În ea se afla un om sărac, dar înțelept, care a scăpat cetatea cu înțelepciunea lui. Și nimeni nu se gândise la omul acela sărac."
+    },
+    {
+      "number": 16,
+      "text": "Atunci am zis: „Mai bună este înțelepciunea decât tăria!”"
+    },
+    {
+      "number": 17,
+      "text": "Cuvintele înțelepților, ascultate în liniște, sunt mai de preț decât strigătele unuia care stăpânește între nebuni."
+    },
+    {
+      "number": 18,
+      "text": "Înțelepciunea este mai de preț decât sculele de război; dar un singur păcătos nimicește mult bine."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

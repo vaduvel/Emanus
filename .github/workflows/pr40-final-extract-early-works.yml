@@ -1,0 +1,42 @@
+name: PR40 final — extract early works
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-pr40-final
+    paths:
+      - 'scripts/extract-pr40-early-works.py'
+      - 'scripts/extract-pr40-early-works-v2.py'
+      - '.github/workflows/pr40-final-extract-early-works.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-final-early-extraction
+  cancel-in-progress: true
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install extraction runtime
+        run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5'
+      - name: Extract and structurally validate source chapters
+        run: python3 scripts/extract-pr40-early-works-v2.py
+      - name: Upload source corpus and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-early-source-corpus-v2
+          path: |
+            docs/data/biblia-emanus-early-source-candidates
+            docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json
+          if-no-files-found: warn
+          retention-days: 7

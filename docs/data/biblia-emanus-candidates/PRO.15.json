@@ -1,0 +1,233 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 15,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.15.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.15.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.15.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "b65a89a6b773586ed7059cc624d3f9de48736cacb974fa0dbec70061e0a25500",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„Un răspuns blând potolește mânia, dar o vorbă aspră ațâță mânia.”"
+    },
+    {
+      "number": 2,
+      "text": "Limba înțelepților dă știință plăcută, dar gura nesocotiților împroașcă nebunie. –"
+    },
+    {
+      "number": 3,
+      "text": "Ochii DOMNULUI sunt în orice loc, ei văd pe cei răi și pe cei buni. –"
+    },
+    {
+      "number": 4,
+      "text": "Limba dulce este un pom de viață, dar limba stricată zdrobește sufletul. –"
+    },
+    {
+      "number": 5,
+      "text": "Nesocotitul disprețuiește învățătura tatălui său, dar cine ia seama la mustrare ajunge înțelept. –"
+    },
+    {
+      "number": 6,
+      "text": "În casa celui neprihănit este mare belșug, dar în câștigurile celui rău este tulburare. –"
+    },
+    {
+      "number": 7,
+      "text": "Buzele înțelepților seamănă știința, dar inima celor nesocotiți este stricată. –"
+    },
+    {
+      "number": 8,
+      "text": "Jertfa celor răi este o scârbă înaintea DOMNULUI, dar rugăciunea celor fără prihană Îi este plăcută. –"
+    },
+    {
+      "number": 9,
+      "text": "Calea celui rău este urâtă DOMNULUI, dar El iubește pe cel ce umblă după neprihănire. –"
+    },
+    {
+      "number": 10,
+      "text": "Cine părăsește cărarea este aspru pedepsit, și cine urăște mustrarea va muri. –"
+    },
+    {
+      "number": 11,
+      "text": "Locuința morților și Adâncul sunt cunoscute DOMNULUI, cu cât mai mult inimile oamenilor! –"
+    },
+    {
+      "number": 12,
+      "text": "Batjocoritorului nu-i place să fie mustrat, de aceea nu se duce la cei înțelepți. –"
+    },
+    {
+      "number": 13,
+      "text": "O inimă veselă înseninează fața; dar când inima este tristă, duhul este mâhnit. –"
+    },
+    {
+      "number": 14,
+      "text": "Inima celor pricepuți caută știința, dar gura nesocotiților găsește plăcere în nebunie. –"
+    },
+    {
+      "number": 15,
+      "text": "Toate zilele celui nenorocit sunt rele, dar cel cu inima mulțumită are un ospăț necurmat. –"
+    },
+    {
+      "number": 16,
+      "text": "Mai bine puțin, cu frică de DOMNUL, decât o mare bogăție, cu tulburare! –"
+    },
+    {
+      "number": 17,
+      "text": "Mai bine un prânz de verdețuri și dragoste, decât un bou îngrășat și ură. –"
+    },
+    {
+      "number": 18,
+      "text": "Un om iute la mânie stârnește certuri, dar cine este încet la mânie potolește neînțelegerile."
+    },
+    {
+      "number": 19,
+      "text": "Drumul leneșului este ca un hățiș de spini, dar cărarea celor fără prihană este netezită. –"
+    },
+    {
+      "number": 20,
+      "text": "Un fiu înțelept este bucuria tatălui său, dar un om nesocotit disprețuiește pe mama sa. –"
+    },
+    {
+      "number": 21,
+      "text": "Nebunia este o bucurie pentru cel fără minte, dar un om priceput merge pe drumul cel drept. –"
+    },
+    {
+      "number": 22,
+      "text": "„Planurile nu izbutesc, când lipsește o adunare care să chibzuiască, dar izbutesc când sunt mulți sfetnici.”"
+    },
+    {
+      "number": 23,
+      "text": "Omul are bucurie să dea un răspuns cu gura lui, și ce bună este o vorbă spusă la vreme potrivită! –"
+    },
+    {
+      "number": 24,
+      "text": "Pentru cel înțelept, cărarea vieții duce în sus, ca să-l abată de la Locuința morților, care este jos. –"
+    },
+    {
+      "number": 25,
+      "text": "DOMNUL surpă casa celor mândri, dar întărește hotarele văduvei. –"
+    },
+    {
+      "number": 26,
+      "text": "Gândurile rele sunt urâte DOMNULUI, dar cuvintele prietenoase sunt curate înaintea Lui. –"
+    },
+    {
+      "number": 27,
+      "text": "Cel lacom de câștig își tulbură casa, dar cel ce urăște mita va trăi. –"
+    },
+    {
+      "number": 28,
+      "text": "Inima celui neprihănit se gândește ce să răspundă, dar gura celor răi împroașcă răutăți. –"
+    },
+    {
+      "number": 29,
+      "text": "DOMNUL Se depărtează de cei răi, dar ascultă rugăciunea celor neprihăniți. –"
+    },
+    {
+      "number": 30,
+      "text": "O privire prietenoasă înveselește inima, o veste bună întărește oasele. –"
+    },
+    {
+      "number": 31,
+      "text": "Urechea care ia aminte la învățăturile care duc la viață locuiește în mijlocul înțelepților. –"
+    },
+    {
+      "number": 32,
+      "text": "Cel ce leapădă certarea își disprețuiește sufletul, dar cel ce ascultă mustrarea capătă pricepere. –"
+    },
+    {
+      "number": 33,
+      "text": "Frica de DOMNUL este școala înțelepciunii, și smerenia merge înaintea slavei. –"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

@@ -1,0 +1,193 @@
+{
+  "translation": "BE",
+  "bookId": "1SA",
+  "bookName": "1 Samuel",
+  "chapter": 13,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/1SA.13.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/1SA.13.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/1SA.13.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "44176a04e790c8e5c01908ed460665e181054b9c846e648bdde24d290395b4cf",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Saul era în vârstă de treizeci de ani când a ajuns împărat și a domnit doi ani peste Israel."
+    },
+    {
+      "number": 2,
+      "text": "Saul și-a ales trei mii de bărbați din Israel: două mii erau cu el la Micmaș și pe muntele Betel, iar o mie erau cu Ionatan la Ghibeea lui Beniamin. Pe ceilalți din popor i-a trimis pe fiecare la cortul lui."
+    },
+    {
+      "number": 3,
+      "text": "Ionatan a bătut tabăra filistenilor care era la Gheba, și filistenii au auzit lucrul acesta. Saul a pus să sune cu trâmbița prin toată țara, zicând: „Să audă evreii lucrul acesta!”"
+    },
+    {
+      "number": 4,
+      "text": "Tot Israelul a auzit zicându-se: „Saul a bătut tabăra filistenilor, și Israel s-a făcut urât filistenilor.”"
+    },
+    {
+      "number": 5,
+      "text": "Filistenii s-au strâns să lupte cu Israel. Aveau o mie de care și șase mii de călăreți; și poporul acesta era fără număr: ca nisipul de pe țărmul mării. Au venit și au tăbărât la Micmaș, la răsărit de Bet-Aven."
+    },
+    {
+      "number": 6,
+      "text": "Bărbații lui Israel s-au văzut la strâmtorare, căci erau strânși de aproape, și s-au ascuns în peșteri, în tufișuri, în stânci, în turnuri și în gropile pentru apă."
+    },
+    {
+      "number": 7,
+      "text": "Unii evrei au trecut Iordanul, ca să se ducă în țara lui Gad și Galaad. Saul era tot la Ghilgal, și tot poporul de lângă el tremura."
+    },
+    {
+      "number": 8,
+      "text": "A așteptat șapte zile, după timpul hotărât de Samuel. Dar Samuel nu venea la Ghilgal, și poporul se împrăștia de lângă Saul."
+    },
+    {
+      "number": 9,
+      "text": "Atunci Saul a zis: „Aduceți-mi arderea de tot și jertfele de mulțumire.”"
+    },
+    {
+      "number": 10,
+      "text": "Pe când sfârșea de adus arderea de tot, a venit Samuel, și Saul i-a ieșit înainte să-i ureze de bine."
+    },
+    {
+      "number": 11,
+      "text": "Samuel a zis: „Ce-ai făcut?” Saul a răspuns: „Când am văzut că poporul se împrăștie de lângă mine, că nu vii la timpul hotărât și că filistenii sunt strânși la Micmaș,”"
+    },
+    {
+      "number": 12,
+      "text": "„mi-am zis: „Filistenii se vor coborî împotriva mea la Ghilgal, și eu nu m-am rugat DOMNULUI!” Atunci am îndrăznit și am adus arderea de tot.”"
+    },
+    {
+      "number": 13,
+      "text": "Samuel a zis lui Saul: „Ai lucrat ca un nebun și n-ai păzit porunca pe care ți-o dăduse DOMNUL Dumnezeul tău. DOMNUL ar fi întărit pe vecie domnia ta peste Israel;”"
+    },
+    {
+      "number": 14,
+      "text": "„dar acum, domnia ta nu va dăinui. DOMNUL Și-a ales un om după inima Lui și DOMNUL l-a rânduit să fie căpetenia poporului Său, pentru că n-ai păzit ce-ți poruncise DOMNUL.”"
+    },
+    {
+      "number": 15,
+      "text": "Apoi Samuel s-a sculat și s-a suit din Ghilgal la Ghibeea lui Beniamin. Saul a făcut numărătoarea poporului care se afla cu el: erau aproape șase sute de oameni."
+    },
+    {
+      "number": 16,
+      "text": "Saul, fiul său Ionatan și poporul care se afla cu ei se așezaseră la Gheba lui Beniamin, și filistenii tăbărau la Micmaș."
+    },
+    {
+      "number": 17,
+      "text": "Din tabăra filistenilor au ieșit trei cete ca să pustiască: una a luat drumul spre Ofra, spre țara Șual;"
+    },
+    {
+      "number": 18,
+      "text": "alta a luat drumul spre Bet-Horon; și a treia a luat drumul spre hotarul care caută spre valea Țeboim, înspre pustiu."
+    },
+    {
+      "number": 19,
+      "text": "În toată țara lui Israel nu se găsea niciun fierar; căci filistenii ziseseră: „Să împiedicăm pe evrei să-și facă săbii sau sulițe.”"
+    },
+    {
+      "number": 20,
+      "text": "Și fiecare om din Israel se cobora la filisteni, ca să-și ascută fierul plugului, coasa, securea și sapa,"
+    },
+    {
+      "number": 21,
+      "text": "când se tocea sapa, coasa, furca cu trei coarne și securea, și ca să facă vârf țepușului cu care mâna boii."
+    },
+    {
+      "number": 22,
+      "text": "Și așa s-a întâmplat că în ziua luptei nu era nici sabie, nici suliță în mâinile întregului popor care era cu Saul și Ionatan: nu avea decât Saul și fiul său Ionatan."
+    },
+    {
+      "number": 23,
+      "text": "O ceată de filisteni a venit și s-a așezat la trecătoarea Micmașului."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

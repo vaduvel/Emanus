@@ -1,0 +1,52 @@
+name: PR40 final — translate early works
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-pr40-final
+    paths:
+      - 'scripts/extract-pr40-early-works.py'
+      - 'scripts/extract-pr40-early-works-v2.py'
+      - 'scripts/translate-pr40-early-works.py'
+      - 'scripts/translate-pr40-early-works-v2.py'
+      - 'scripts/audit-pr40-english-romanian.py'
+      - '.github/workflows/pr40-final-translate-early-works.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-final-early-translation
+  cancel-in-progress: true
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install extraction, translation and audit runtime
+        run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Rebuild and verify source corpus
+        run: python3 scripts/extract-pr40-early-works-v2.py
+      - name: Generate Romanian candidates
+        run: python3 scripts/translate-pr40-early-works-v2.py --batch-size 16
+      - name: Audit every Romanian unit against its source
+        run: python3 scripts/audit-pr40-english-romanian.py --collection early --batch-size 64
+      - name: Upload Romanian candidates and audit ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-early-romanian-drafts
+          path: |
+            docs/data/biblia-emanus-early-romanian-candidates
+            docs/data/biblia-emanus-early-audited
+            docs/biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json
+          if-no-files-found: warn
+          retention-days: 7

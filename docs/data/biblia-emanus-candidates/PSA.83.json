@@ -1,0 +1,173 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 83,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.83.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.83.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.83.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "e44f2cc4ccbd88e94b3c4128e90274c301fa8f44790865db3437eed8dfdbd028",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(O cântare. Un psalm al lui Asaf.) Dumnezeule, nu tăcea! Nu tăcea și nu Te odihni, Dumnezeule!"
+    },
+    {
+      "number": 2,
+      "text": "Căci iată că vrăjmașii Tăi se frământă, și cei ce Te urăsc înalță capul."
+    },
+    {
+      "number": 3,
+      "text": "Fac planuri pline de vicleșug împotriva poporului Tău și se sfătuiesc împotriva celor ocrotiți de Tine."
+    },
+    {
+      "number": 4,
+      "text": "„Veniți”, zic ei, „să-i nimicim din mijlocul neamurilor, ca să nu se mai pomenească numele lui Israel!”"
+    },
+    {
+      "number": 5,
+      "text": "Se strâng toți cu o inimă, fac un legământ împotriva Ta:"
+    },
+    {
+      "number": 6,
+      "text": "corturile lui Edom și ismaeliții, Moabul și hagareniții,"
+    },
+    {
+      "number": 7,
+      "text": "Ghebal, Amon, Amalec, filistenii cu locuitorii Tirului."
+    },
+    {
+      "number": 8,
+      "text": "Asiria se unește și ea cu ei și își împrumută brațul ei copiilor lui Lot. (Oprire)"
+    },
+    {
+      "number": 9,
+      "text": "Fă-le ca lui Madian, ca lui Sisera, ca lui Iabin la pârâul Chison,"
+    },
+    {
+      "number": 10,
+      "text": "care au fost nimiciți la En-Dor, și au ajuns un gunoi pentru îngrășarea pământului."
+    },
+    {
+      "number": 11,
+      "text": "Căpeteniilor lor fă-le ca lui Oreb și Zeeb, și tuturor domnilor lor ca lui Zebah și Țalmuna!"
+    },
+    {
+      "number": 12,
+      "text": "Căci ei zic: „Să punem mâna pe locuințele lui Dumnezeu!”"
+    },
+    {
+      "number": 13,
+      "text": "Dumnezeule, fă-i ca vârtejul de praf, ca paiul luat de vânt,"
+    },
+    {
+      "number": 14,
+      "text": "ca focul care arde pădurea și ca flacăra care aprinde munții!"
+    },
+    {
+      "number": 15,
+      "text": "Urmărește-i astfel cu furtuna Ta și bagă groaza în ei cu vijelia Ta!"
+    },
+    {
+      "number": 16,
+      "text": "Acoperă-le fața de rușine, ca să caute Numele Tău, DOAMNE!"
+    },
+    {
+      "number": 17,
+      "text": "Să fie rușinați și îngroziți pe vecie, să le roșească obrazul de rușine și să piară!"
+    },
+    {
+      "number": 18,
+      "text": "Ca să știe că numai Tu, al cărui nume este DOMNUL, Tu ești Cel Preaînalt pe tot pământul."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

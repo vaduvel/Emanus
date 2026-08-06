@@ -1,0 +1,217 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 19,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.19.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.19.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.19.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "af569486885f380ea7bfed6fbdd2ebf1494320275eecb33552a28717d57195e7",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„Mai mult prețuiește săracul care umblă în neprihănirea lui, decât un bogat cu buze stricate și nebun. –”"
+    },
+    {
+      "number": 2,
+      "text": "Lipsa de știință este o pagubă pentru cineva, și cine aleargă neghiobește înainte o nimerește rău. –"
+    },
+    {
+      "number": 3,
+      "text": "Nebunia omului îi sucește calea, și apoi cârtește împotriva DOMNULUI cu inima lui. –"
+    },
+    {
+      "number": 4,
+      "text": "Bogăția aduce un mare număr de prieteni, dar săracul este părăsit de prietenul lui. –"
+    },
+    {
+      "number": 5,
+      "text": "Martorul mincinos nu rămâne nepedepsit, și cel ce spune minciuni nu va scăpa. –"
+    },
+    {
+      "number": 6,
+      "text": "Omul darnic are mulți lingușitori și toți sunt prieteni cu cel ce dă daruri. –"
+    },
+    {
+      "number": 7,
+      "text": "Toți frații săracului îl urăsc; cu cât mai mult se depărtează prietenii lui de el! El se îndreaptă spre ei cu vorbe rugătoare, dar ei se fac nevăzuți. –"
+    },
+    {
+      "number": 8,
+      "text": "Cine capătă înțelepciune, își iubește sufletul; cine păstrează priceperea, găsește fericirea. –"
+    },
+    {
+      "number": 9,
+      "text": "Martorul mincinos nu rămâne nepedepsit, și cel ce spune minciuni va pieri. –"
+    },
+    {
+      "number": 10,
+      "text": "Unui nebun nu-i șade bine să trăiască în desfătări, cu atât mai puțin unui rob să stăpânească peste voievozi. –"
+    },
+    {
+      "number": 11,
+      "text": "Înțelepciunea face pe om răbdător și este o cinste pentru el să uite greșelile. –"
+    },
+    {
+      "number": 12,
+      "text": "Mânia împăratului este ca răcnetul unui leu, și bunăvoința lui este ca roua pe iarbă. –"
+    },
+    {
+      "number": 13,
+      "text": "Un fiu nebun este o nenorocire pentru tatăl său, și o nevastă gâlcevitoare este ca o streașină de pe care picură întruna. –"
+    },
+    {
+      "number": 14,
+      "text": "Casa și averea le moștenim de la părinți, dar o nevastă pricepută este un dar de la DOMNUL. –"
+    },
+    {
+      "number": 15,
+      "text": "„Lenea te cufundă într-un somn adânc, și sufletul molatic suferă de foame.”"
+    },
+    {
+      "number": 16,
+      "text": "Cine păzește porunca, își păzește sufletul; cine nu veghează asupra căii sale, va muri. –"
+    },
+    {
+      "number": 17,
+      "text": "Cine are milă de sărac, împrumută pe DOMNUL, și El îi va răsplăti binefacerea. –"
+    },
+    {
+      "number": 18,
+      "text": "Pedepsește-ți fiul, căci tot mai este nădejde, dar nu dori să-l omori. –"
+    },
+    {
+      "number": 19,
+      "text": "Cel pe care-l apucă mânia trebuie să-și ia pedeapsa; căci, dacă-l scoți din ea, va trebui să mai faci o dată lucrul acesta. –"
+    },
+    {
+      "number": 20,
+      "text": "Ascultă sfaturile și primește învățătura ca să fii înțelept pe viitor! –"
+    },
+    {
+      "number": 21,
+      "text": "Omul face multe planuri în inima lui, dar hotărârea DOMNULUI, aceea se împlinește. –"
+    },
+    {
+      "number": 22,
+      "text": "Ceea ce face farmecul unui om este bunătatea lui; și mai mult prețuiește un sărac decât un mincinos. –"
+    },
+    {
+      "number": 23,
+      "text": "Frica de DOMNUL duce la viață, și cel ce o are petrece noaptea sătul, fără să fie cercetat de nenorocire. –"
+    },
+    {
+      "number": 24,
+      "text": "Leneșul își vâră mâna în strachină și n-o duce înapoi la gură. –"
+    },
+    {
+      "number": 25,
+      "text": "Lovește pe batjocoritor, și prostul se va face înțelept; mustră pe omul priceput, și va înțelege știința. –"
+    },
+    {
+      "number": 26,
+      "text": "Cine jefuiește pe tatăl său și izgonește pe mama sa, este un fiu care aduce rușine și ocară. –"
+    },
+    {
+      "number": 27,
+      "text": "Încetează, fiule, să mai asculți învățătura, dacă ea te depărtează de învățăturile înțelepte. –"
+    },
+    {
+      "number": 28,
+      "text": "Un martor stricat își bate joc de dreptate, și gura celor răi înghite nelegiuirea. –"
+    },
+    {
+      "number": 29,
+      "text": "Pedepsele sunt pregătite pentru batjocoritori, și loviturile pentru spinările nebunilor. –"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

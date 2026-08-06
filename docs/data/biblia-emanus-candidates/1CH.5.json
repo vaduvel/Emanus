@@ -1,0 +1,205 @@
+{
+  "translation": "BE",
+  "bookId": "1CH",
+  "bookName": "1 Cronici",
+  "chapter": 5,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/1CH.5.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/1CH.5.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/1CH.5.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "dcaec094527473b5b50d065bf1ab5fc4a5b1cba463cda9acea45bf39a8522b58",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Fiii lui Ruben, întâiul născut al lui Israel. – Căci el era întâiul născut, dar, pentru că a spurcat patul tatălui său, dreptul lui de întâi născut a fost dat fiilor lui Iosif, fiul lui Israel; totuși Iosif n-a fost scris în spițele de neam ca întâi născut."
+    },
+    {
+      "number": 2,
+      "text": "Iuda a fost în adevăr puternic printre frații săi, și din el a ieșit un domnitor; dar dreptul de întâi născut este al lui Iosif."
+    },
+    {
+      "number": 3,
+      "text": "Fiii lui Ruben, întâiul născut al lui Israel: Enoh, Palu, Hețron și Carmi."
+    },
+    {
+      "number": 4,
+      "text": "Fiii lui Ioel: Șemaia, fiul său; Gog, fiul său; Șimei, fiul său;"
+    },
+    {
+      "number": 5,
+      "text": "Mica, fiul său; Reaia, fiul său; Baal, fiul său;"
+    },
+    {
+      "number": 6,
+      "text": "Beera, fiul său, pe care l-a luat rob Tiglat-Pilneser, împăratul Asiriei; el era domnul rubeniților. –"
+    },
+    {
+      "number": 7,
+      "text": "Frații lui Beera, după familiile lor, așa cum sunt scriși în spițele neamului după neamurile lor: cel dintâi, Ieiel; Zaharia;"
+    },
+    {
+      "number": 8,
+      "text": "Bela, fiul lui Azaz, fiul lui Șema, fiul lui Ioel. Bela locuia la Aroer și până la Nebo și la Baal-Meon;"
+    },
+    {
+      "number": 9,
+      "text": "la răsărit, locuia până la intrarea pustiului de la râul Eufrat, căci turmele lor erau în mare număr în țara Galaadului."
+    },
+    {
+      "number": 10,
+      "text": "Pe vremea lui Saul au făcut război cu hagareniții, care au căzut în mâinile lor, și au locuit în corturile lor pe toată partea de răsărit a Galaadului."
+    },
+    {
+      "number": 11,
+      "text": "Fiii lui Gad locuiau în fața lor, în țara Basanului, până la Salca."
+    },
+    {
+      "number": 12,
+      "text": "Ioel, cel dintâi; Șafam, al doilea; Iaenai și Șafat, în Basan."
+    },
+    {
+      "number": 13,
+      "text": "Frații lor, după casele părinților lor: Micael, Meșulam, Șeba, Iorai, Iaecan, Zia și Eber, șapte."
+    },
+    {
+      "number": 14,
+      "text": "Iată fiii lui Abihail, fiul lui Huri, fiul lui Iaroah, fiul lui Galaad, fiul lui Micael, fiul lui Ieșișai, fiul lui Iahdo, fiul lui Buz;"
+    },
+    {
+      "number": 15,
+      "text": "Ahi, fiul lui Abdiel, fiul lui Guni, era căpetenia caselor părinților lor."
+    },
+    {
+      "number": 16,
+      "text": "Ei locuiau în Galaad, în Basan și în cetățile lor și în toate împrejurimile Saronului până la marginile lor."
+    },
+    {
+      "number": 17,
+      "text": "Toți au fost scriși în spițele de neamuri pe vremea lui Iotam, împăratul lui Iuda, și pe vremea lui Ieroboam, împăratul lui Israel."
+    },
+    {
+      "number": 18,
+      "text": "Fiii lui Ruben, gadiții și jumătate din seminția lui Manase aveau oameni viteji, care purtau scut și sabie, trăgeau cu arcul și erau deprinși cu războiul, în număr de patruzeci și patru de mii șapte sute șaizeci, în stare să meargă la oaste."
+    },
+    {
+      "number": 19,
+      "text": "Au făcut război cu hagareniții, cu Ietur, cu Nafiș și cu Nodab."
+    },
+    {
+      "number": 20,
+      "text": "Au primit ajutor împotriva lor, și hagareniții și toți cei ce erau cu ei au fost dați în mâinile lor. Căci, în timpul luptei, strigaseră către Dumnezeu, care i-a ascultat, pentru că se încrezuseră în El."
+    },
+    {
+      "number": 21,
+      "text": "Și le-au luat turmele, cincizeci de mii de cămile, două sute cincizeci de mii de oi, două mii de măgari și o sută de mii de inși;"
+    },
+    {
+      "number": 22,
+      "text": "căci au fost mulți morți, pentru că lupta venea de la Dumnezeu. Și s-au așezat în locul lor până în vremea când au fost luați în robie."
+    },
+    {
+      "number": 23,
+      "text": "Fiii jumătății seminției lui Manase locuiau în țară, de la Basan până la Baal-Hermon și Senir, și pe muntele Hermon; erau mulți la număr."
+    },
+    {
+      "number": 24,
+      "text": "Iată căpeteniile caselor părinților lor: Efer, Ișei, Eliel, Azriel, Ieremia, Hodavia și Iahdiel, oameni viteji, oameni vestiți, căpeteniile caselor părinților lor."
+    },
+    {
+      "number": 25,
+      "text": "Dar au păcătuit împotriva Dumnezeului părinților lor și au curvit după dumnezeii popoarelor țării, pe care Dumnezeu le nimicise dinaintea lor."
+    },
+    {
+      "number": 26,
+      "text": "Dumnezeul lui Israel a ațâțat duhul lui Pul, împăratul Asiriei, și duhul lui Tiglat-Pilneser, împăratul Asiriei; și Tiglat-Pilneser a luat robi pe rubeniți, gadiți și jumătate din seminția lui Manase și i-a dus la Halah, la Habor, la Hara și la râul Gozan, unde au rămas până în ziua de azi."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

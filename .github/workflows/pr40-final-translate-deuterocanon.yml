@@ -1,0 +1,48 @@
+name: PR40 final — translate deuterocanon
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-pr40-final
+    paths:
+      - 'scripts/translate-pr40-deuterocanon-missing.py'
+      - 'scripts/translate-pr40-deuterocanon-all-missing.py'
+      - 'scripts/translate-pr40-deuterocanon-all-v2.py'
+      - 'scripts/audit-pr40-english-romanian.py'
+      - '.github/workflows/pr40-final-translate-deuterocanon.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr40-final-deuterocanon-translation
+  cancel-in-progress: true
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned translation and audit runtime
+        run: pip install --disable-pip-version-check 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Generate twelve modern Romanian candidates
+        run: python3 scripts/translate-pr40-deuterocanon-all-v2.py --batch-size 20
+      - name: Audit every Romanian unit against English and Greek witnesses
+        run: python3 scripts/audit-pr40-english-romanian.py --collection deuterocanon --batch-size 64
+      - name: Upload candidates and audit ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-deuterocanon-drafts
+          path: |
+            docs/data/biblia-emanus-deuterocanon-new-translation
+            docs/data/biblia-emanus-deuterocanon-audited
+            docs/biblia-emanus/PR40-DEUTEROCANON-NEW-TRANSLATION.json
+            docs/biblia-emanus/PR40-DEUTEROCANON-SEMANTIC-AUDIT.json
+          if-no-files-found: warn
+          retention-days: 7

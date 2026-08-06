@@ -1,0 +1,198 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 8,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.8.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.8.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.8.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "de83578a9530cb2ec862cb063d84842d58861c7f2ec71fbcbd26a7648f7ad284",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "DOMNUL mi-a zis: „Ia o tablă mare și scrie pe ea, așa ca să se înțeleagă: „Grăbește-te de pradă, aruncă-te asupra prăzii.””"
+    },
+    {
+      "number": 2,
+      "text": "Am luat cu mine niște martori vrednici de credință: pe preotul Urie și pe Zaharia, fiul lui Berechia."
+    },
+    {
+      "number": 3,
+      "text": "M-am apropiat de prorociță. Ea a zămislit, și a născut un fiu. Apoi DOMNUL mi-a zis: „Pune-i numele Maher-Șalal-Haș-Baz”"
+    },
+    {
+      "number": 4,
+      "text": "„Căci, înainte ca să știe copilul să spună „tată” și „mamă”, se vor lua dinaintea împăratului Asiriei bogățiile Damascului și prada Samariei.”"
+    },
+    {
+      "number": 5,
+      "text": "DOMNUL mi-a vorbit iarăși și mi-a zis:"
+    },
+    {
+      "number": 6,
+      "text": "„Pentru că poporul acesta a disprețuit apele din Siloe, care curg lin, și s-a bucurat de Rețin și de fiul lui Remalia,”"
+    },
+    {
+      "number": 7,
+      "text": "iată, DOMNUL va trimite împotriva lor apele puternice și mari ale Râului (Eufrat), adică pe împăratul Asiriei cu toată puterea lui; pretutindeni el va ieși din albia lui și se va vărsa peste malurile lui;"
+    },
+    {
+      "number": 8,
+      "text": "„va pătrunde în Iuda, va da peste maluri, va năvăli și va ajunge până la gât. Iar aripile întinse ale oștii lui vor umple întinderea țării tale, Emanuele!”"
+    },
+    {
+      "number": 9,
+      "text": "Scoateți strigăte de război cât voiți, popoare, căci tot veți fi zdrobite; luați aminte, toți cei ce locuiți departe! Pregătiți-vă oricât de luptă, căci tot veți fi zdrobiți. Pregătiți-vă oricât de luptă, căci tot veți fi zdrobiți."
+    },
+    {
+      "number": 10,
+      "text": "Faceți la planuri cât voiți, căci nu se va alege nimic de ele! Luați la hotărâri cât voiți, căci vor fi fără urmări! Căci Dumnezeu este cu noi (Emanuel)."
+    },
+    {
+      "number": 11,
+      "text": "Așa mi-a vorbit DOMNUL, când m-a apucat mâna Lui și m-a înștiințat să nu umblu pe calea poporului acestuia:"
+    },
+    {
+      "number": 12,
+      "text": "„Nu numiți uneltire tot ce numește poporul acesta uneltire; și nu vă temeți de ce se teme el, nici nu vă speriați!”"
+    },
+    {
+      "number": 13,
+      "text": "Sfințiți însă pe DOMNUL oștirilor. De El să vă temeți și să vă înfricoșați."
+    },
+    {
+      "number": 14,
+      "text": "Și atunci El va fi un locaș sfânt, dar și o piatră de poticnire, o stâncă de păcătuire pentru cele două case ale lui Israel, un laț și o cursă pentru locuitorii Ierusalimului!"
+    },
+    {
+      "number": 15,
+      "text": "„Mulți se vor poticni, vor cădea și se vor sfărâma, vor da în laț și vor fi prinși.”"
+    },
+    {
+      "number": 16,
+      "text": "Învelește această mărturie, pecetluiește această descoperire, între ucenicii Mei. –"
+    },
+    {
+      "number": 17,
+      "text": "Eu nădăjduiesc în DOMNUL, care Își ascunde fața de casa lui Iacov. În El îmi pun încrederea."
+    },
+    {
+      "number": 18,
+      "text": "Iată, eu și copiii pe care mi i-a dat DOMNUL suntem niște semne și niște minuni în Israel, din partea DOMNULUI oștirilor care locuiește pe muntele Sionului."
+    },
+    {
+      "number": 19,
+      "text": "Dacă vi se zice însă: „Întrebați pe cei ce cheamă morții și pe cei ce spun viitorul, care șoptesc și bolborosesc”, răspundeți: „Nu va întreba oare un popor pe Dumnezeul său? Va întreba el pe cei morți pentru cei vii?”"
+    },
+    {
+      "number": 20,
+      "text": "Întoarceți-vă la Lege și la mărturie! Dacă nu vor vorbi potrivit acestui cuvânt, nu va exista nicio lumină a dimineții pentru ei."
+    },
+    {
+      "number": 21,
+      "text": "El va pribegi prin țară, apăsat și flămând, și, când îi va fi foame, se va mânia și va huli pe Împăratul și Dumnezeul lui, apoi, fie că va ridica ochii în sus,"
+    },
+    {
+      "number": 22,
+      "text": "fie că se va uita spre pământ, iată, nu va fi decât necaz, negură, nevoie neagră, și se va vedea izgonit în întuneric beznă."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 20,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "7c7099f4f356f4c3f36d341b756a92299bfe8e4264cd31d1eea860ab0a3966ed",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

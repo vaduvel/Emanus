@@ -1,0 +1,25 @@
+name: Probe CCEL Jubilees DOM
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5'
+      - run: python3 scripts/probe-ccel-jubilees-dom.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ccel-jubilees-dom-probe
+          path: |
+            docs/biblia-emanus/CCEL-JUBILEES-DOM-PROBE.json
+            docs/biblia-emanus/CCEL-JUBILEES-CHAPTER1.html
+          retention-days: 7

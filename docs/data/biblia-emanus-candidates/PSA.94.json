@@ -1,0 +1,193 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 94,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.94.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.94.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.94.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "87eeebf25d8524a34b247f0769cb9b8fc78ec4154fbd71a428c06221e5558768",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "DOAMNE Dumnezeul răzbunărilor, Tu, Dumnezeul răzbunărilor, arată-Te!"
+    },
+    {
+      "number": 2,
+      "text": "Scoală-Te, Judecătorul pământului, și răsplătește celor mândri după faptele lor!"
+    },
+    {
+      "number": 3,
+      "text": "Până când vor birui cei răi, DOAMNE, până când vor birui cei răi?"
+    },
+    {
+      "number": 4,
+      "text": "Ei țin cuvântări puternice, vorbesc cu trufie, și toți cei ce fac răul se fălesc."
+    },
+    {
+      "number": 5,
+      "text": "Ei zdrobesc pe poporul Tău, DOAMNE, și asupresc moștenirea Ta."
+    },
+    {
+      "number": 6,
+      "text": "Înjunghie pe văduvă și pe străin, ucid pe orfani"
+    },
+    {
+      "number": 7,
+      "text": "și zic: „Nu vede DOMNUL, și Dumnezeul lui Iacov nu ia aminte!”"
+    },
+    {
+      "number": 8,
+      "text": "Totuși învățați-vă minte, oameni fără minte! Când vă veți înțelepți, nebunilor?"
+    },
+    {
+      "number": 9,
+      "text": "Cel ce a sădit urechea s-ar putea să n-audă? Cel ce a întocmit ochiul s-ar putea să nu vadă?"
+    },
+    {
+      "number": 10,
+      "text": "Cel ce pedepsește neamurile s-ar putea să nu pedepsească, El, care a dat omului pricepere?"
+    },
+    {
+      "number": 11,
+      "text": "DOMNUL cunoaște gândurile omului: știe că sunt deșarte."
+    },
+    {
+      "number": 12,
+      "text": "Ferice de omul pe care-l pedepsești Tu, DOAMNE, și pe care-l înveți din legea Ta,"
+    },
+    {
+      "number": 13,
+      "text": "ca să-l liniștești în zilele nenorocirii, până se va săpa groapa celui rău!"
+    },
+    {
+      "number": 14,
+      "text": "Căci DOMNUL nu lasă pe poporul Său și nu-Și părăsește moștenirea."
+    },
+    {
+      "number": 15,
+      "text": "Ci se va face odată judecată după dreptate, și toți cei cu inima curată o vor găsi bună."
+    },
+    {
+      "number": 16,
+      "text": "Cine mă va ajuta împotriva celor răi? Cine mă va sprijini împotriva celor ce fac răul?"
+    },
+    {
+      "number": 17,
+      "text": "De n-ar fi DOMNUL ajutorul meu, cât de curând ar fi sufletul meu în tăcerea morții!"
+    },
+    {
+      "number": 18,
+      "text": "Ori de câte ori zic: „Mi se clatină piciorul!”"
+    },
+    {
+      "number": 19,
+      "text": "Când gânduri negre se frământă cu grămada înăuntrul meu, mângâierile Tale îmi înviorează sufletul."
+    },
+    {
+      "number": 20,
+      "text": "Te vor pune cei răi să șezi pe scaunul lor de domnie, ei care pregătesc nenorocirea la adăpostul Legii?"
+    },
+    {
+      "number": 21,
+      "text": "Ei se strâng împotriva vieții celui neprihănit și osândesc sânge nevinovat."
+    },
+    {
+      "number": 22,
+      "text": "Dar DOMNUL este turnul meu de scăpare, Dumnezeul meu este stânca mea de adăpost."
+    },
+    {
+      "number": 23,
+      "text": "El va face să cadă asupra lor nelegiuirea, El îi va nimici prin răutatea lor; DOMNUL Dumnezeul nostru îi va nimici."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

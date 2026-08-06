@@ -1,0 +1,89 @@
+{
+  "id": "MAL.4",
+  "bookId": "MAL",
+  "bookName": "Maleahi",
+  "chapter": 4,
+  "chapterNumber": 4,
+  "status": "in_review",
+  "public": false,
+  "verses": [
+    {
+      "number": 1,
+      "text": "Căci iată, vine ziua care va arde ca un cuptor! Toți cei trufași și toți cei răi vor fi ca miriștea; ziua care vine îi va arde, zice DOMNUL oștirilor, și nu le va lăsa nici rădăcină, nici ramură."
+    },
+    {
+      "number": 2,
+      "text": "Dar pentru voi, care vă temeți de Numele Meu, va răsări Soarele neprihănirii, și tămăduirea va fi sub aripile Lui; veți ieși și veți sări ca vițeii din grajd."
+    },
+    {
+      "number": 3,
+      "text": "Și veți călca în picioare pe cei răi, căci ei vor fi ca cenușa sub talpa picioarelor voastre, în ziua pe care o pregătesc Eu, zice DOMNUL oștirilor."
+    },
+    {
+      "number": 4,
+      "text": "Aduceți-vă aminte de Legea lui Moise, robul Meu, căruia i-am dat în Horeb rânduieli și porunci pentru tot Israelul!"
+    },
+    {
+      "number": 5,
+      "text": "Iată, vă voi trimite pe prorocul Ilie înainte de a veni ziua DOMNULui, ziua aceea mare și înfricoșată."
+    },
+    {
+      "number": 6,
+      "text": "„El va întoarce inima părinților spre copii și inima copiilor spre părinții lor, ca nu cumva, la venirea Mea, să lovesc țara cu blestem!”"
+    }
+  ],
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "71ad56533734f861e978fa5a2e1ecfea0b66a3604d8cbf9b427f37e074eeb96b",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic",
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  }
+}

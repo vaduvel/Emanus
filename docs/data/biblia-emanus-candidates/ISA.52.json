@@ -1,0 +1,161 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 52,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.52.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.52.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.52.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "35ea2663d74d434f22c99797087f6fb36c3caf2212a9c35ef2429059a1e85f7b",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Trezește-te, trezește-te! Îmbracă-te în podoaba ta, Sioane! Pune-ți hainele de sărbătoare, Ierusalime, cetate sfântă! Căci nu va mai intra în tine niciun om netăiat împrejur sau necurat."
+    },
+    {
+      "number": 2,
+      "text": "Scutură-ți țărâna de pe tine, scoală-te și șezi în capul oaselor, Ierusalime! Dezleagă-ți legăturile de la gât, fiică, roabă a Sionului!"
+    },
+    {
+      "number": 3,
+      "text": "Căci așa vorbește DOMNUL: „Fără plată ați fost vânduți și nu veți fi răscumpărați cu preț de argint.”"
+    },
+    {
+      "number": 4,
+      "text": "Căci așa vorbește DOMNUL Dumnezeu: „Odinioară, poporul Meu s-a coborât să locuiască pentru o vreme în Egipt; apoi asirianul l-a asuprit fără temei.”"
+    },
+    {
+      "number": 5,
+      "text": "Și acum, ce am să fac aici – zice DOMNUL – când poporul Meu a fost luat pe nimic? Asupritorii lui strigă de bucurie – zice DOMNUL – și cât e ziulica de mare este batjocorit Numele Meu."
+    },
+    {
+      "number": 6,
+      "text": "De aceea poporul Meu va cunoaște Numele Meu; de aceea va ști în ziua aceea că Eu vorbesc și zic: „Iată-Mă!”"
+    },
+    {
+      "number": 7,
+      "text": "Ce frumoase sunt pe munți picioarele celui ce aduce vești bune, care vestește pacea, picioarele celui ce aduce vești bune, care vestește mântuirea, picioarele celui ce zice Sionului: „Dumnezeul tău împărățește!”"
+    },
+    {
+      "number": 8,
+      "text": "Iată glasul străjerilor tăi răsună; ei înalță glasul și strigă toți de veselie, căci văd cu ochii lor cum Se întoarce DOMNUL în Sion."
+    },
+    {
+      "number": 9,
+      "text": "Izbucniți cu toate în strigăte de bucurie, dărâmături ale Ierusalimului! Căci DOMNUL mângâie pe poporul Său și răscumpără Ierusalimul."
+    },
+    {
+      "number": 10,
+      "text": "DOMNUL Își descoperă brațul Său cel sfânt înaintea tuturor neamurilor; și toate marginile pământului vor vedea mântuirea Dumnezeului nostru. –"
+    },
+    {
+      "number": 11,
+      "text": "Plecați, plecați, ieșiți din Babilon! Nu vă atingeți de nimic necurat! Ieșiți din mijlocul lui! Curățați-vă, cei ce purtați vasele DOMNULUI!"
+    },
+    {
+      "number": 12,
+      "text": "Nu ieșiți cu grabă, nu plecați în fugă, căci DOMNUL vă va ieși înainte și Dumnezeul lui Israel vă va tăia calea. –"
+    },
+    {
+      "number": 13,
+      "text": "„Iată, Robul Meu va propăși; Se va sui, Se va ridica, Se va înălța foarte sus.”"
+    },
+    {
+      "number": 14,
+      "text": "După cum pentru mulți a fost o pricină de groază – atât de schimonosită Îi era fața și atât de mult se deosebea înfățișarea Lui de a fiilor oamenilor –"
+    },
+    {
+      "number": 15,
+      "text": "„„tot așa, pentru multe popoare va fi o pricină de bucurie; înaintea Lui împărații vor închide gura, căci vor vedea ce nu li se mai istorisise și vor auzi ce nu mai auziseră.””"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

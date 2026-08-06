@@ -1,0 +1,201 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 42,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.42.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.42.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.42.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "7f1f5d3f5f8b3ae7a68bb9d004c43c0668c32b51c9099cd700a8376ff514a609",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„Iată Robul Meu, pe care-L sprijin, Alesul Meu, în care Își găsește plăcere sufletul Meu. Am pus Duhul Meu peste El; El va vesti neamurilor judecata.”"
+    },
+    {
+      "number": 2,
+      "text": "El nu va striga, nu-Și va ridica glasul și nu-l va face să se audă pe ulițe."
+    },
+    {
+      "number": 3,
+      "text": "Trestia frântă n-o va zdrobi, și mucul care mai arde încă nu-l va stinge. Va vesti judecata după adevăr."
+    },
+    {
+      "number": 4,
+      "text": "„El nu va slăbi, nici nu Se va lăsa, până va așeza dreptatea pe pământ; și ostroavele vor nădăjdui în legea Lui.”"
+    },
+    {
+      "number": 5,
+      "text": "Așa vorbește DOMNUL Dumnezeu care a făcut cerurile și le-a întins, care a întins pământul și cele de pe el, care a dat suflare celor ce-l locuiesc, și suflet, celor ce merg pe el."
+    },
+    {
+      "number": 6,
+      "text": "„Eu, DOMNUL, Te-am chemat ca să dai mântuire și Te voi lua de mână, Te voi păzi și Te voi pune ca legământ al poporului, ca să fii Lumina neamurilor,”"
+    },
+    {
+      "number": 7,
+      "text": "să deschizi ochii orbilor, să scoți din temniță pe cei legați și din prinsoare pe cei ce locuiesc în întuneric."
+    },
+    {
+      "number": 8,
+      "text": "Eu sunt DOMNUL, acesta este Numele Meu; și slava Mea n-o voi da altuia, nici cinstea Mea, idolilor."
+    },
+    {
+      "number": 9,
+      "text": "„Iată că cele dintâi lucruri s-au împlinit, și vă vestesc altele noi; vi le spun mai înainte ca să se întâmple.”"
+    },
+    {
+      "number": 10,
+      "text": "Cântați DOMNULUI o cântare nouă, cântați laudele Lui până la marginile pământului, voi care mergeți pe mare și cei ce locuiți în ea, ostroave și locuitorii lor!"
+    },
+    {
+      "number": 11,
+      "text": "Pustiul și cetățile lui să înalțe glasul! Satele locuite de Chedar să-și înalțe glasul! Locuitorii stâncilor să sară de veselie: să strige de bucurie din vârful munților!"
+    },
+    {
+      "number": 12,
+      "text": "„Să dea slavă DOMNULUI și să vestească laudele Lui în ostroave!”"
+    },
+    {
+      "number": 13,
+      "text": "DOMNUL înaintează ca un viteaz, Își stârnește râvna ca un om de război; înalță glasul, strigă, Își arată puterea împotriva vrăjmașilor Săi. –"
+    },
+    {
+      "number": 14,
+      "text": "„Am tăcut multă vreme – zice DOMNUL – am tăcut și M-am ținut. Dar acum voi striga ca o femeie în durerile nașterii, voi gâfâi și voi răsufla.”"
+    },
+    {
+      "number": 15,
+      "text": "Voi pustii munți și dealuri, le voi usca toată verdeața; voi preface râurile în ostroave, și iazurile le voi usca."
+    },
+    {
+      "number": 16,
+      "text": "Voi duce pe orbi pe un drum necunoscut de ei, îi voi povățui pe cărări neștiute de ei; voi preface întunericul în lumină înaintea lor, și locurile strâmbe, în locuri netede: iată ce voi face și nu-i voi părăsi."
+    },
+    {
+      "number": 17,
+      "text": "Vor da înapoi, vor fi acoperiți de rușine cei ce se încred în idoli ciopliți și zic idolilor turnați: „Voi sunteți dumnezeii noștri!”"
+    },
+    {
+      "number": 18,
+      "text": "„Ascultați, surzilor; priviți și vedeți, orbilor!”"
+    },
+    {
+      "number": 19,
+      "text": "Cine este orb, dacă nu robul Meu, și surd ca solul Meu pe care îl trimit? Cine este orb ca prietenul lui Dumnezeu, și orb ca robul DOMNULUI?"
+    },
+    {
+      "number": 20,
+      "text": "„Ai văzut multe, dar n-ai luat seama la ele; ai deschis urechile, dar n-ai auzit.”"
+    },
+    {
+      "number": 21,
+      "text": "DOMNUL a voit, pentru dreptatea Lui, să vestească o lege mare și minunată."
+    },
+    {
+      "number": 22,
+      "text": "Și totuși poporul acesta este un popor prădat și jefuit! Toți zac înlănțuiți în peșteri și înfundați în temnițe. Sunt lăsați de pradă, și nimeni nu-i scapă! Jefuiți, și nimeni nu zice: „Dă înapoi!”"
+    },
+    {
+      "number": 23,
+      "text": "Cine dintre voi însă pleacă urechea la aceste lucruri? Cine vrea să ia aminte la ele și să asculte pe viitor?"
+    },
+    {
+      "number": 24,
+      "text": "Cine a dat pe Iacov pradă jafului, și pe Israel, în mâinile jefuitorilor? Oare nu DOMNUL, împotriva căruia am păcătuit? Ei n-au voit să umble pe căile Lui și n-au ascultat legea Lui."
+    },
+    {
+      "number": 25,
+      "text": "De aceea a vărsat El peste Israel văpaia mâniei Lui și grozăviile războiului: războiul l-a aprins din toate părțile, și n-a înțeles; l-a ars, și n-a luat seama."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

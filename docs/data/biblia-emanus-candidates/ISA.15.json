@@ -1,0 +1,137 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 15,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.15.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.15.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.15.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "e339b4585ac4997f1784033e9fc002a7293a54e710b13f3c7ca421ec84465519",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Prorocie împotriva Moabului. Chiar în noaptea când este pustiit, Ar-Moabul este nimicit! Chiar în noaptea când este pustiit, Chir-Moabul este nimicit!…"
+    },
+    {
+      "number": 2,
+      "text": "Poporul se suie la templu și la Dibon, pe înălțimi, ca să plângă; Moabul se bocește: pe Nebo și pe Medeba toate capetele sunt rase, și toate bărbile sunt tăiate."
+    },
+    {
+      "number": 3,
+      "text": "Pe ulițe sunt încinși cu saci, pe acoperișuri și în piețe totul geme, și se topesc plângând."
+    },
+    {
+      "number": 4,
+      "text": "Hesbonul și Eleale țipă de li se aude glasul până la Iahaț, chiar și războinicii Moabului se bocesc cu sufletul plin de groază."
+    },
+    {
+      "number": 5,
+      "text": "„Îmi plânge inima pentru Moab, ai cărui fugari aleargă până la Țoar, până la Eglat-Șelișia; căci suie plângând suișul Luhitului și scot țipete de durere pe drumul Horonaimului.”"
+    },
+    {
+      "number": 6,
+      "text": "Căci apele Nimrim sunt pustiite, s-a uscat iarba, s-a dus verdeața și nu mai este niciun fir verde."
+    },
+    {
+      "number": 7,
+      "text": "De aceea strâng ce le mai rămâne și își strămută averile dincolo de pârâul sălciilor."
+    },
+    {
+      "number": 8,
+      "text": "Căci țipetele înconjoară hotarele Moabului; bocetele lui răsună până la Eglaim, și urletele lui răsună până la Beer-Elim."
+    },
+    {
+      "number": 9,
+      "text": "„Apele Dimonului sunt pline de sânge, și voi trimite peste Dimon noi nenorociri; un leu va veni împotriva celor scăpați ai Moabului, împotriva rămășiței din țară.”"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

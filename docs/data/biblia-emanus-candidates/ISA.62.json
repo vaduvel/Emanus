@@ -1,0 +1,149 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 62,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.62.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.62.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.62.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "a45ae45ada4fc2f9e398e4fce110a24faf4014d14d578251e35d58f2c01315eb",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„De dragostea Sionului nu voi tăcea, de dragostea Ierusalimului nu voi înceta, până nu se va arăta mântuirea lui, lumina soarelui și izbăvirea lui, ca o făclie care s-aprinde.”"
+    },
+    {
+      "number": 2,
+      "text": "Atunci neamurile vor vedea mântuirea ta, și toți împărații, slava ta; și-ți vor pune un nume nou pe care-l va hotărî gura DOMNULUI."
+    },
+    {
+      "number": 3,
+      "text": "Vei fi o cunună strălucitoare în mâna DOMNULUI, o legătură împărătească în mâna Dumnezeului tău."
+    },
+    {
+      "number": 4,
+      "text": "Nu te vor mai numi „Părăsită” și nu-ți vor mai numi pământul un pustiu, ci te vor numi: „Plăcerea Mea este în ea”, și țara ta o vor numi „Beula”, „Măritată”"
+    },
+    {
+      "number": 5,
+      "text": "Cum se unește un tânăr cu o fecioară, așa se vor uni fiii tăi cu tine; și cum se bucură mirele de mireasa lui, așa Se va bucura Dumnezeul tău de tine."
+    },
+    {
+      "number": 6,
+      "text": "Pe zidurile tale, Ierusalime, am pus niște străjeri care nu vor tăcea niciodată, nici zi, nici noapte! Voi care aduceți aminte DOMNULUI de el, nu vă odihniți deloc!"
+    },
+    {
+      "number": 7,
+      "text": "Și nu-I dați răgaz, până nu va așeza din nou Ierusalimul și-l va face o laudă pe pământ."
+    },
+    {
+      "number": 8,
+      "text": "DOMNUL a jurat pe dreapta Lui și pe brațul Lui cel puternic, zicând: „Nu voi mai da grâul tău hrană vrăjmașilor tăi, și fiii străinului nu vor mai bea vinul tău pentru care tu te-ai ostenit.”"
+    },
+    {
+      "number": 9,
+      "text": "„Ci cei ce vor strânge grâul, aceia îl vor mânca și vor lăuda pe DOMNUL, și cei ce vor face vinul, aceia îl vor bea în curțile Locașului Meu celui Sfânt.”"
+    },
+    {
+      "number": 10,
+      "text": "Treceți, treceți pe porți! Pregătiți o cale poporului! Croiți, croiți drum, dați pietrele la o parte! Ridicați un steag peste popoare!"
+    },
+    {
+      "number": 11,
+      "text": "Iată ce vestește DOMNUL până la marginile pământului: „Spuneți fiicei Sionului: „Iată, Mântuitorul tău vine; iată, plata este cu El, și răsplătirile merg înaintea Lui.””"
+    },
+    {
+      "number": 12,
+      "text": "„„Ei vor fi numiți „Popor sfânt”, „Răscumpărați ai DOMNULUI”. Iar pe tine te vor numi „Cetate căutată și nepărăsită”.””"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

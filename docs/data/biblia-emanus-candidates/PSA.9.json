@@ -1,0 +1,199 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 9,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.9:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.9.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.9.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.9.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "999b7138a369c1c175bc872ede62a91f2b647ce9500ec0b0c7e68ed937715c12",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Te voi lăuda, DOAMNE, cu întreaga mea inimă; voi istorisi toate lucrările tale minunate."
+    },
+    {
+      "number": 2,
+      "text": "Voi face din Tine bucuria și veselia mea, voi cânta Numele Tău, Dumnezeule preaînalt,"
+    },
+    {
+      "number": 3,
+      "text": "pentru că vrăjmașii mei dau înapoi, se clatină și pier dinaintea Ta."
+    },
+    {
+      "number": 4,
+      "text": "Căci Tu îmi sprijini dreptatea și pricina mea și stai pe scaunul Tău de domnie ca un judecător drept."
+    },
+    {
+      "number": 5,
+      "text": "Tu pedepsești neamurile, nimicești pe cel rău, le ștergi numele pentru totdeauna și pe vecie."
+    },
+    {
+      "number": 6,
+      "text": "S-au dus vrăjmașii! N-au rămas din ei decât niște dărâmături veșnice! Niște cetăți dărâmate de Tine! Li s-a șters pomenirea!"
+    },
+    {
+      "number": 7,
+      "text": "Ei s-au dus, dar DOMNUL împărățește în veac și Și-a pregătit scaunul de domnie pentru judecată."
+    },
+    {
+      "number": 8,
+      "text": "El judecă lumea cu dreptate, judecă popoarele cu nepărtinire."
+    },
+    {
+      "number": 9,
+      "text": "DOMNUL este scăparea celui asuprit, scăpare la vreme de necaz."
+    },
+    {
+      "number": 10,
+      "text": "Cei ce cunosc Numele Tău se încred în Tine, căci Tu nu părăsești pe cei ce Te caută, DOAMNE!"
+    },
+    {
+      "number": 11,
+      "text": "Cântați DOMNULUI, care împărățește în Sion, vestiți printre popoare isprăvile Lui!"
+    },
+    {
+      "number": 12,
+      "text": "Căci El răzbună sângele vărsat și Își aduce aminte de cei nenorociți, nu uită strigătele lor."
+    },
+    {
+      "number": 13,
+      "text": "Ai milă de mine, DOAMNE! Vezi ticăloșia în care mă aduc vrăjmașii mei și ridică-mă din porțile morții,"
+    },
+    {
+      "number": 14,
+      "text": "ca să vestesc toate laudele Tale în porțile fiicei Sionului și să mă bucur de mântuirea Ta."
+    },
+    {
+      "number": 15,
+      "text": "Neamurile cad în groapa pe care au făcut-o și li se prinde piciorul în lațul pe care l-au ascuns."
+    },
+    {
+      "number": 16,
+      "text": "DOMNUL Se arată, face dreptate și prinde pe cel rău în lucrul mâinilor lui. (Joc de instrumente. Oprire)"
+    },
+    {
+      "number": 17,
+      "text": "Cei răi se întorc la Locuința morților: toate neamurile care uită pe Dumnezeu."
+    },
+    {
+      "number": 18,
+      "text": "Căci cel nenorocit nu este uitat pe vecie, nădejdea celor sărmani nu piere pe vecie."
+    },
+    {
+      "number": 19,
+      "text": "Scoală-Te, DOAMNE, ca să nu biruie omul; neamurile să fie judecate înaintea Ta!"
+    },
+    {
+      "number": 20,
+      "text": "Aruncă groaza în ei, DOAMNE, ca să știe popoarele că nu sunt decât oameni! (Oprire)"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. Se cântă ca și „Mori pentru fiul”)"
+}
