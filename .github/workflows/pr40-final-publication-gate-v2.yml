@@ -26,51 +26,82 @@ jobs:
     name: Finalize Didascalia checkpoint
     runs-on: ubuntu-latest
     timeout-minutes: 240
+    env:
+      ARTIFACT_NAME: pr40-early-DID
+      OUTPUT_BRANCH: ci/pr40-${{ github.run_id }}-DID
+      OUTPUT_ARCHIVE: pr40-early-DID-final.tar.gz
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - uses: actions/cache@v4
-        with:
-          path: .cache/huggingface
-          key: pr40-hf-didascalia-${{ runner.os }}-v2
+      - name: Checkout PR head with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+          if command -v python3.11 >/dev/null 2>&1; then echo 'PYTHON_BIN=python3.11' >> "$GITHUB_ENV"; else echo 'PYTHON_BIN=python3' >> "$GITHUB_ENV"; fi
       - name: Install CPU translation and audit runtime
         run: |
-          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
-          python -m pip install --disable-pip-version-check 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Restore completed 43-chapter first pass
-        uses: actions/download-artifact@v4
-        with:
-          name: pr40-early-DID
-          path: checkpoint
-          repository: vaduvel/Emanus
-          run-id: ${{ env.PRIOR_RUN_ID }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Restore checkpoint into the working tree
+          set -euo pipefail
+          "$PYTHON_BIN" -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
+          "$PYTHON_BIN" -m pip install --disable-pip-version-check 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Restore completed 43-chapter first pass through the API
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
+          "$PYTHON_BIN" - <<'PY'
+          import json, os, shutil, urllib.request, zipfile
+          from pathlib import Path
+          repo = os.environ['GITHUB_REPOSITORY']
+          run_id = os.environ['PRIOR_RUN_ID']
+          wanted = os.environ['ARTIFACT_NAME']
+          token = os.environ['GH_TOKEN']
+          headers = {'Authorization': f'Bearer {token}', 'Accept': 'application/vnd.github+json', 'User-Agent': 'emanus-pr40'}
+          request = urllib.request.Request(f'https://api.github.com/repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100', headers=headers)
+          with urllib.request.urlopen(request) as response:
+              artifacts = json.load(response)['artifacts']
+          artifact = next((item for item in artifacts if item['name'] == wanted and not item['expired']), None)
+          if artifact is None:
+              raise SystemExit(f'Missing prior artifact: {wanted}')
+          archive = Path('checkpoint.zip')
+          request = urllib.request.Request(artifact['archive_download_url'], headers=headers)
+          with urllib.request.urlopen(request) as response, archive.open('wb') as output:
+              shutil.copyfileobj(response, output)
+          Path('checkpoint').mkdir()
+          with zipfile.ZipFile(archive) as bundle:
+              bundle.extractall('checkpoint')
+          PY
           cp -R checkpoint/data/. docs/data/
           cp -R checkpoint/biblia-emanus/. docs/biblia-emanus/
       - name: Independently refine, repair and audit Didascalia
         env:
           PR40_BOOKS: DID
-        run: python3 scripts/run-with-pinned-hf.py scripts/finalize-pr40-didascalia-checkpoint.py --batch-size 28
-      - name: Upload finalized Didascalia
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pr40-early-DID-final
-          path: |
-            docs/data/biblia-emanus-early-source-candidates
-            docs/data/biblia-emanus-early-romanian-candidates
-            docs/data/biblia-emanus-early-audited
-            docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json
-            docs/biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json
-            docs/biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json
-          if-no-files-found: error
-          retention-days: 7
+        run: "$PYTHON_BIN scripts/run-with-pinned-hf.py scripts/finalize-pr40-didascalia-checkpoint.py --batch-size 28"
+      - name: Publish finalized Didascalia checkpoint branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tar -czf "/tmp/${OUTPUT_ARCHIVE}" -C docs \
+            data/biblia-emanus-early-source-candidates \
+            data/biblia-emanus-early-romanian-candidates \
+            data/biblia-emanus-early-audited \
+            biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json \
+            biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json \
+            biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout --orphan artifact-output
+          git rm -rf . || true
+          git clean -fdx
+          mkdir -p ci-artifacts
+          cp "/tmp/${OUTPUT_ARCHIVE}" "ci-artifacts/${OUTPUT_ARCHIVE}"
+          git add ci-artifacts
+          git commit -m "Store ${OUTPUT_ARCHIVE}"
+          git push --force origin "HEAD:refs/heads/${OUTPUT_BRANCH}"
 
   remaining-qumran:
     name: Finalize Qumran — ${{ matrix.id }}
@@ -87,94 +118,164 @@ jobs:
           - id: ADD_PSA
             witnesses: 11Q5,4Q381
             checkpoint: pr40-qumran-ADD_PSA
+    env:
+      ARTIFACT_NAME: ${{ matrix.checkpoint }}
+      OUTPUT_BRANCH: ci/pr40-${{ github.run_id }}-${{ matrix.id }}
+      OUTPUT_ARCHIVE: pr40-qumran-${{ matrix.id }}-final.tar.gz
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - uses: actions/cache@v4
-        with:
-          path: .cache/huggingface
-          key: pr40-hf-qumran-${{ runner.os }}-v2
+      - name: Checkout PR head with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+          if command -v python3.11 >/dev/null 2>&1; then echo 'PYTHON_BIN=python3.11' >> "$GITHUB_ENV"; else echo 'PYTHON_BIN=python3' >> "$GITHUB_ENV"; fi
       - name: Install CPU translation and audit runtime
         run: |
-          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
-          python -m pip install --disable-pip-version-check 'text-fabric>=12,<14' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Restore verified Qumran source checkpoint
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ matrix.checkpoint }}
-          path: checkpoint
-          repository: vaduvel/Emanus
-          run-id: ${{ env.PRIOR_RUN_ID }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Restore checkpoint into the working tree
+          set -euo pipefail
+          "$PYTHON_BIN" -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
+          "$PYTHON_BIN" -m pip install --disable-pip-version-check 'text-fabric>=12,<14' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
+      - name: Restore verified Qumran source checkpoint through the API
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
+          "$PYTHON_BIN" - <<'PY'
+          import json, os, shutil, urllib.request, zipfile
+          from pathlib import Path
+          repo = os.environ['GITHUB_REPOSITORY']
+          run_id = os.environ['PRIOR_RUN_ID']
+          wanted = os.environ['ARTIFACT_NAME']
+          token = os.environ['GH_TOKEN']
+          headers = {'Authorization': f'Bearer {token}', 'Accept': 'application/vnd.github+json', 'User-Agent': 'emanus-pr40'}
+          request = urllib.request.Request(f'https://api.github.com/repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100', headers=headers)
+          with urllib.request.urlopen(request) as response:
+              artifacts = json.load(response)['artifacts']
+          artifact = next((item for item in artifacts if item['name'] == wanted and not item['expired']), None)
+          if artifact is None:
+              raise SystemExit(f'Missing prior artifact: {wanted}')
+          archive = Path('checkpoint.zip')
+          request = urllib.request.Request(artifact['archive_download_url'], headers=headers)
+          with urllib.request.urlopen(request) as response, archive.open('wb') as output:
+              shutil.copyfileobj(response, output)
+          Path('checkpoint').mkdir()
+          with zipfile.ZipFile(archive) as bundle:
+              bundle.extractall('checkpoint')
+          PY
           cp -R checkpoint/data/. docs/data/
           cp -R checkpoint/biblia-emanus/. docs/biblia-emanus/
       - name: Translate selected witnesses
         env:
           PR40_WITNESSES: ${{ matrix.witnesses }}
-        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-qumran-shard.py --batch-size 36
+        run: "$PYTHON_BIN scripts/run-with-pinned-hf.py scripts/translate-pr40-qumran-shard.py --batch-size 36"
       - name: Repair degenerate output without reconstructing lacunae
         env:
           PR40_WITNESSES: ${{ matrix.witnesses }}
-        run: python3 scripts/run-with-pinned-hf.py scripts/refine-pr40-qumran-candidates.py --batch-size 36
+        run: "$PYTHON_BIN scripts/run-with-pinned-hf.py scripts/refine-pr40-qumran-candidates.py --batch-size 36"
       - name: Audit line fidelity and fragment semantics
         env:
           PR40_WITNESSES: ${{ matrix.witnesses }}
-        run: python3 scripts/run-with-pinned-hf.py scripts/audit-pr40-qumran-shard-v2.py
-      - name: Upload finalized Qumran collection
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pr40-qumran-${{ matrix.id }}-final
-          path: |
-            docs/data/biblia-emanus-qumran-source
-            docs/data/biblia-emanus-qumran-romanian-candidates
-            docs/data/biblia-emanus-qumran-audited
-            docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json
-            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json
-            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json
-          if-no-files-found: error
-          retention-days: 7
+        run: "$PYTHON_BIN scripts/run-with-pinned-hf.py scripts/audit-pr40-qumran-shard-v2.py"
+      - name: Publish finalized Qumran checkpoint branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tar -czf "/tmp/${OUTPUT_ARCHIVE}" -C docs \
+            data/biblia-emanus-qumran-source \
+            data/biblia-emanus-qumran-romanian-candidates \
+            data/biblia-emanus-qumran-audited \
+            biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json \
+            biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json \
+            biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout --orphan artifact-output
+          git rm -rf . || true
+          git clean -fdx
+          mkdir -p ci-artifacts
+          cp "/tmp/${OUTPUT_ARCHIVE}" "ci-artifacts/${OUTPUT_ARCHIVE}"
+          git add ci-artifacts
+          git commit -m "Store ${OUTPUT_ARCHIVE}"
+          git push --force origin "HEAD:refs/heads/${OUTPUT_BRANCH}"
 
   publish-all-64:
     name: Assemble and publish all 64 works atomically
     needs: [didascalia, remaining-qumran]
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 0
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-      - name: Download the 23 previously successful publication artifacts
-        uses: actions/download-artifact@v4
-        with:
-          pattern: pr40-*
-          path: staging/prior
-          merge-multiple: false
-          repository: vaduvel/Emanus
-          run-id: ${{ env.PRIOR_RUN_ID }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Download the three finalized artifacts from this run
-        uses: actions/download-artifact@v4
-        with:
-          pattern: pr40-*-final
-          path: staging/current
-          merge-multiple: false
+      - name: Checkout PR head with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+          if command -v python3.11 >/dev/null 2>&1; then echo 'PYTHON_BIN=python3.11' >> "$GITHUB_ENV"; else echo 'PYTHON_BIN=python3' >> "$GITHUB_ENV"; fi
+      - name: Download prior successful artifacts through the API
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          "$PYTHON_BIN" - <<'PY'
+          import json, os, shutil, urllib.request, zipfile
+          from pathlib import Path
+          repo = os.environ['GITHUB_REPOSITORY']
+          run_id = os.environ['PRIOR_RUN_ID']
+          token = os.environ['GH_TOKEN']
+          headers = {'Authorization': f'Bearer {token}', 'Accept': 'application/vnd.github+json', 'User-Agent': 'emanus-pr40'}
+          request = urllib.request.Request(f'https://api.github.com/repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100', headers=headers)
+          with urllib.request.urlopen(request) as response:
+              artifacts = json.load(response)['artifacts']
+          root = Path('staging/prior')
+          root.mkdir(parents=True)
+          for artifact in artifacts:
+              if artifact['expired'] or not artifact['name'].startswith('pr40-'):
+                  continue
+              destination = root / artifact['name']
+              destination.mkdir()
+              archive = root / f"{artifact['name']}.zip"
+              request = urllib.request.Request(artifact['archive_download_url'], headers=headers)
+              with urllib.request.urlopen(request) as response, archive.open('wb') as output:
+                  shutil.copyfileobj(response, output)
+              with zipfile.ZipFile(archive) as bundle:
+                  bundle.extractall(destination)
+              archive.unlink()
+          PY
+      - name: Restore three finalized branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p staging/current
+          restore_branch() {
+            local id="$1"
+            local artifact="$2"
+            local archive="$3"
+            local branch="ci/pr40-${GITHUB_RUN_ID}-${id}"
+            git fetch origin "refs/heads/${branch}:refs/remotes/origin/${branch}"
+            mkdir -p "staging/current/${artifact}"
+            git show "refs/remotes/origin/${branch}:ci-artifacts/${archive}" > "/tmp/${archive}"
+            tar -xzf "/tmp/${archive}" -C "staging/current/${artifact}"
+          }
+          restore_branch DID pr40-early-DID-final pr40-early-DID-final.tar.gz
+          restore_branch TEMP_SCR pr40-qumran-TEMP_SCR-final pr40-qumran-TEMP_SCR-final.tar.gz
+          restore_branch ADD_PSA pr40-qumran-ADD_PSA-final pr40-qumran-ADD_PSA-final.tar.gz
       - name: Assemble exact 64-work publication tree
-        run: python3 scripts/assemble-pr40-final-publication.py --prior staging/prior --current staging/current
+        run: "$PYTHON_BIN scripts/assemble-pr40-final-publication.py --prior staging/prior --current staging/current"
       - name: Verify canonical integrity and application build
         run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
           pnpm check:quotes
           pnpm check:typos
@@ -186,22 +287,12 @@ jobs:
           pnpm typecheck
           pnpm build
           git diff --check
-      - name: Upload the complete atomic publication
-        uses: actions/upload-artifact@v4
-        with:
-          name: pr40-all-64-final-publication
-          path: |
-            docs/data/biblia-emanus
-            docs/data/biblia-emanus-deuterocanon-audited
-            docs/data/biblia-emanus-early-audited
-            docs/data/biblia-emanus-qumran-audited
-            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
-          if-no-files-found: error
-          retention-days: 14
       - name: Commit the publication atomically to PR 43
         env:
+          GH_TOKEN: ${{ github.token }}
           HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
