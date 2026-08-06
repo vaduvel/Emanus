@@ -17,7 +17,7 @@ export const DEUTERONOM_TEXT_8: Record<number, readonly string[]> = {
     "Care te-a călăuzit prin această pustie mare și înfricoșătoare, plină de șerpi arzători și scorpii, un pământ uscat și fără apă; Care a făcut să țâșnească pentru tine apă din stânca de cremene;",
     "Care te-a hrănit în pustie cu mană pe care n-o cunoșteau părinții tăi, ca să te smerească și să te încerce, pentru ca mai pe urmă să-ți facă bine.",
     "Vezi să nu zici în inima ta: «Puterea mea și tăria mâinii mele mi-au adus aceste bogății!»",
-    "Ci adu-ți aminte de DOMNUL, Dumnezeul tău, căci El îiți dă putere să câștigi bogății, ca să confirme legământul Său pe care l-a jurat părinților tăi, așa cum se vede astăzi.",
+    "Ci adu-ți aminte de DOMNUL, Dumnezeul tău, căci El îți dă putere să câștigi bogății, ca să confirme legământul Său pe care l-a jurat părinților tăi, așa cum se vede astăzi.",
     "Dacă Îl vei uita pe DOMNUL, Dumnezeul tău, și vei merge după alți dumnezei, dacă le vei sluji și te vei închina înaintea lor, vă mărturisesc astăzi că veți pieri cu desăvârșire.",
     "Cum au pierit neamurile pe care le pierde DOMNUL dinaintea voastră, așa veți pieri și voi, pentru că nu veți fi ascultat de glasul DOMNULUI, Dumnezeul vostru.”",
   ],
