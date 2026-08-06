@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Run canonical promotion with all source and content fixes composed.
 
-The inherited candidates first receive both audited omission-repair waves and
-Psalm superscription normalization. The official OSHB remap then supplies
-Hebrew verse boundaries, while archive loading excludes non-canonical front
-matter.
+The inherited candidates first receive all audited omission repairs, Psalm
+superscription normalization, and the independent Esther 10 rewrite required
+by the similarity gate. The official OSHB remap then supplies Hebrew verse
+boundaries, while archive loading excludes non-canonical front matter.
 """
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ from typing import Any
 for repair_name in (
     "apply-pr40-canonical-content-fixes.py",
     "apply-pr40-canonical-content-fixes-wave2.py",
+    "apply-pr40-canonical-content-fixes-wave3.py",
 ):
     runpy.run_path(str(Path(__file__).with_name(repair_name)), run_name="__main__")
 
@@ -35,8 +36,6 @@ _original_postprocess = module.postprocess_provenance
 
 
 class _SourceSpecsWithoutRawBookLocks(dict[str, dict[str, Any]]):
-    """Ignore v3's per-book raw-WLC spec while retaining normal specs."""
-
     def __setitem__(self, key: str, value: dict[str, Any]) -> None:
         if key == "hebrewRaw":
             return
@@ -44,10 +43,7 @@ class _SourceSpecsWithoutRawBookLocks(dict[str, dict[str, Any]]):
 
 
 def load_base() -> ModuleType:
-    base_spec = importlib.util.spec_from_file_location(
-        "canonical_promotion_base_filtered",
-        module.BASE_SCRIPT,
-    )
+    base_spec = importlib.util.spec_from_file_location("canonical_promotion_base_filtered", module.BASE_SCRIPT)
     if base_spec is None or base_spec.loader is None:
         raise RuntimeError(f"Cannot load {module.BASE_SCRIPT}")
     base = importlib.util.module_from_spec(base_spec)
@@ -89,7 +85,6 @@ def build_remapped_usfm(output: Path):
             continue
         if any(not isinstance(chapter, list) for chapter in chapters):
             raise RuntimeError(f"{path.name}: malformed chapter container")
-
         removed_here: list[int] = []
         while chapters and chapters[-1] == []:
             removed_here.append(len(chapters))
@@ -99,7 +94,6 @@ def build_remapped_usfm(output: Path):
         if removed_here:
             removed[path.name] = sorted(removed_here)
             path.write_text(json.dumps(chapters, ensure_ascii=False), encoding="utf-8")
-
     result = _original_build(output)
     result["removedTrailingEmptyChapterContainers"] = removed
     return result
@@ -123,10 +117,7 @@ def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None
         "archiveEmbedded": False,
         "role": "raw-input-to-official-remap",
     }
-    lock_path.write_text(
-        json.dumps(lock, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    lock_path.write_text(json.dumps(lock, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 module.load_base = load_base
