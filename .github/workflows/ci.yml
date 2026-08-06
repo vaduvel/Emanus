@@ -11,76 +11,56 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
-
       - uses: pnpm/action-setup@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-
       - name: Install
         run: pnpm install --frozen-lockfile
-
-      # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
       - name: Verifica ghilimelele
         run: pnpm check:quotes
-
       - name: Verifica typo-urile cunoscute
         run: pnpm check:typos
-
       - name: Verifica siguranta continutului
         run: pnpm check:content
-
       - name: Verifica aprobarea Genezei
         run: pnpm check:bible-publication
-
       - name: Verifica limba romana si variantele textuale NT
         run: python3 scripts/check-biblia-emanus-romanian-quality.py
-
       - name: Verifica Biblia Emanus 3.0
         run: pnpm check:biblia-emanus
-
       - name: Testeaza poarta Biblia Emanus 3.0
         run: pnpm test:biblia-emanus
-
       - name: Verifica versificatia Noului Testament
         run: pnpm check:biblia-emanus-versification
-
       - name: Verifica sigiliul tuturor cartilor publicate
         run: pnpm seal:biblia-emanus --check
-
       - name: Aplica reparatiile canonice auditate
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         run: |
           python3 scripts/apply-pr40-canonical-content-fixes.py
           python3 scripts/apply-pr40-canonical-content-fixes-wave2.py
-
+          python3 scripts/apply-pr40-canonical-content-fixes-wave3.py
       - name: Genereaza auditul determinist al candidatilor VT
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         run: python3 scripts/audit-ot-repair5-v2.py
-
       - name: Aplica politica explicita de versificatie VT
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         run: python3 scripts/enforce-ot-repair5-audit.py
-
       - uses: actions/setup-python@v5
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         with:
           python-version: '3.11'
-
       - name: Instaleaza auditul semantic VT
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         run: pip install --disable-pip-version-check 'sentence-transformers>=3,<4' numpy
-
       - name: Audit semantic candidati VT
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         run: python3 scripts/semantic-audit-ot-repair5-v2.py --batch-size 128
-
       - name: Blocheaza alinierile semantice mici nerevizuite
         if: ${{ hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         run: python3 scripts/enforce-ot-repair5-semantic.py
-
       - name: Publica rapoartele auditului VT ca artefact
         if: ${{ always() && hashFiles('docs/data/biblia-emanus-candidates/manifest.json') != '' }}
         uses: actions/upload-artifact@v4
@@ -95,9 +75,7 @@ jobs:
             docs/biblia-emanus/OT-REPAIR5-SEMANTIC-RESOLVED.json
           if-no-files-found: warn
           retention-days: 7
-
       - name: Typecheck
         run: pnpm typecheck
-
       - name: Build
         run: pnpm build
