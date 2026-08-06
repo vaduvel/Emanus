@@ -8,6 +8,7 @@ on:
       - 'docs/data/biblia-emanus-candidates/**'
       - 'scripts/promote-pr40-canonical-ot*.py'
       - 'scripts/translate-pr40-deuterocanon*.py'
+      - 'scripts/refine-pr40-*.py'
       - 'scripts/extract-pr40-early-works*.py'
       - 'scripts/translate-pr40-early-works*.py'
       - 'scripts/extract-pr40-qumran-corpus.py'
@@ -66,7 +67,7 @@ jobs:
       matrix:
         book: [1ES, 1MA, 2MA, 3MA, BAR, ESG, JDT, MAN, PS2, SIR, TOB, WIS]
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 210
     env:
       PR40_BOOKS: ${{ matrix.book }}
     steps:
@@ -76,10 +77,10 @@ jobs:
           python-version: '3.11'
       - name: Install translation and audit runtime
         run: pip install --disable-pip-version-check 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
-      - name: Generate Romanian candidate
+      - name: Generate and refine Romanian candidate
         run: python3 scripts/translate-pr40-deuterocanon-all-v2.py --batch-size 20
       - name: Audit every unit against English and Greek witnesses
-        run: python3 scripts/audit-pr40-english-romanian.py --collection deuterocanon --batch-size 64
+        run: python3 scripts/audit-pr40-english-romanian-v2.py --collection deuterocanon --batch-size 64
       - name: Upload book corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -101,7 +102,7 @@ jobs:
       matrix:
         book: [ENO, JUB, DID, 4BA]
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
     env:
       PR40_BOOKS: ${{ matrix.book }}
     steps:
@@ -113,10 +114,10 @@ jobs:
         run: pip install --disable-pip-version-check 'requests>=2.32,<3' 'beautifulsoup4>=4.12,<5' 'torch>=2.5,<3' 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3'
       - name: Rebuild and verify all source chapters
         run: python3 scripts/extract-pr40-early-works-v3.py
-      - name: Generate Romanian candidate
+      - name: Generate and refine Romanian candidate
         run: python3 scripts/translate-pr40-early-works-v2.py --batch-size 16
       - name: Audit every Romanian source unit
-        run: python3 scripts/audit-pr40-english-romanian.py --collection early --batch-size 64
+        run: python3 scripts/audit-pr40-english-romanian-v2.py --collection early --batch-size 64
       - name: Upload work corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -158,7 +159,7 @@ jobs:
           - id: ADD_PSA
             witnesses: 11Q5,4Q381
     runs-on: ubuntu-latest
-    timeout-minutes: 210
+    timeout-minutes: 240
     env:
       PR40_WITNESSES: ${{ matrix.witnesses }}
     steps:
@@ -172,8 +173,10 @@ jobs:
         run: python3 scripts/extract-pr40-qumran-corpus.py
       - name: Generate Romanian parallel research shard
         run: python3 scripts/translate-pr40-qumran-shard.py --batch-size 28
+      - name: Repair degenerate output and preserve lacunae
+        run: python3 scripts/refine-pr40-qumran-candidates.py --batch-size 28
       - name: Audit line fidelity and fragment semantics
-        run: python3 scripts/audit-pr40-qumran-shard.py
+        run: python3 scripts/audit-pr40-qumran-shard-v2.py
       - name: Upload collection corpus and reports
         if: always()
         uses: actions/upload-artifact@v4
