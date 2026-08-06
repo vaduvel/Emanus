@@ -9,3 +9,5 @@ Rules:
 - preserve diplomatic text, normalized source, transliteration, lacunae and coordinates;
 - publish only after every repaired document reports zero blocking issues;
 - assemble and validate the complete 64-work corpus atomically.
+
+Trigger generation: 2 — emitted after the workflow was indexed on main.
