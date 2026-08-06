@@ -8,6 +8,8 @@
 - Versete Biblia Emanus: **618 / 618**
 - Unități explicate: **78**
 - Stare editorială: toate capitolele `in_review`
+- Ramură: `agent/biblia-explicata-vt-continuare`
+- Pull request: `#46`, către `agent/transcrieri-poonen-VT`
 - Catalog: cartea este introdusă în `BIBLE_BOOKS` numai după completarea tuturor capitolelor
 
 ## Surse
