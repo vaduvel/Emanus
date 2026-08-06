@@ -1,16 +1,6 @@
 name: Probe CCEL Jubilees DOM
 
 on:
-  push:
-    branches:
-      - agent/biblia-emanus-pr40-final
-    paths:
-      - 'scripts/probe-ccel-jubilees-dom.py'
-      - '.github/workflows/probe-ccel-jubilees-dom.yml'
-  pull_request:
-    paths:
-      - 'scripts/probe-ccel-jubilees-dom.py'
-      - '.github/workflows/probe-ccel-jubilees-dom.yml'
   workflow_dispatch:
 
 permissions:
