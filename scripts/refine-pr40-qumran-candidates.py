@@ -22,6 +22,14 @@ TARGET_LANGUAGE = "ron_Latn"
 INSUFFICIENT = "[… fragment prea deteriorat pentru o traducere sigură …]"
 HEBREW_WORD = re.compile(r"[\u0590-\u05ff]+")
 
+# These fragments preserve isolated Aramaic words but not enough continuous
+# syntax for a defensible Romanian rendering. The transcription stays visible;
+# no reconstruction is attempted.
+EDITORIALLY_UNTRANSLATABLE_FRAGMENTS = {
+    ("4Q531", "f6"),
+    ("4Q531", "f18"),
+}
+
 OVERRIDES = {
     "1Q20:5:25": "Și cu Lameh, fiul său, a vorbit în taină […].",
     "1Q20:10:15": "[…] am vărsat sângele lor la temelia altarului, am ars toată carnea lor pe altar și am dat a treia parte fiilor lui Șepanina.",
@@ -61,6 +69,13 @@ def batches(values: list[str], size: int) -> list[list[str]]:
     return [values[index:index + size] for index in range(0, len(values), size)]
 
 
+def mark_untranslatable(line: dict[str, Any], reason: str) -> None:
+    line["romanian"] = INSUFFICIENT
+    line["translationAllowed"] = False
+    line["translationMethod"] = reason
+    line["translationConfidence"] = "not-translatable"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch-size", type=int, default=24)
@@ -80,7 +95,8 @@ def main() -> None:
     for path in candidate_paths:
         document = json.loads(path.read_text(encoding="utf-8"))
         documents[path.name] = document
-        source_doc = source_docs[document["witness"]]
+        witness = str(document["witness"])
+        source_doc = source_docs[witness]
         source_lines = {
             (str(fragment["fragment"]), str(line["line"])): line
             for fragment in source_doc["fragments"]
@@ -89,20 +105,24 @@ def main() -> None:
         for line in document["lines"]:
             key = (str(line["fragment"]), str(line["line"]))
             source = source_lines[key]
-            reference = f"{document['witness']}:{key[0]}:{key[1]}"
+            reference = f"{witness}:{key[0]}:{key[1]}"
             if source.get("isTotalLacuna"):
+                continue
+            if (witness, key[0]) in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS:
+                mark_untranslatable(
+                    line,
+                    "editorial fragment-level decision: isolated words do not preserve continuous translatable syntax",
+                )
                 continue
             lexical = recoverable_words(str(source.get("normalized") or ""))
             if reference in OVERRIDES:
                 line["romanian"] = OVERRIDES[reference]
+                line["translationAllowed"] = True
                 line["translationMethod"] = "source-confirmed editorial correction"
                 line["translationConfidence"] = "editorially-corrected"
                 continue
             if lexical < 3:
-                line["romanian"] = INSUFFICIENT
-                line["translationAllowed"] = False
-                line["translationMethod"] = "insufficient readable source; no reconstruction attempted"
-                line["translationConfidence"] = "not-translatable"
+                mark_untranslatable(line, "insufficient readable source; no reconstruction attempted")
                 continue
             target = str(line.get("romanian") or "").strip()
             if needs_repair(str(source.get("normalized") or ""), target):
@@ -139,6 +159,7 @@ def main() -> None:
             )
         for row, translation in zip(rows, translations):
             row["line"]["romanian"] = translation
+            row["line"]["translationAllowed"] = True
             row["line"]["translationMethod"] = "NLLB cleaned-source corrective pass"
             row["line"]["translationConfidence"] = "machine-draft-corrected"
         del model, tokenizer
@@ -171,7 +192,11 @@ def main() -> None:
                 "correctivePass": {
                     "model": {"id": MODEL_ID, "revision": revision},
                     "insufficientTextMarker": INSUFFICIENT,
-                    "policy": "translate only recoverable source; never reconstruct lacunae",
+                    "editoriallyUntranslatableFragments": sorted(
+                        f"{witness}:{fragment}"
+                        for witness, fragment in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS
+                    ),
+                    "policy": "translate only recoverable continuous source; never reconstruct lacunae",
                 }
             }
         )
