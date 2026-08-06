@@ -117,7 +117,7 @@ jobs:
       - name: Rebuild and verify all source chapters
         run: python3 scripts/extract-pr40-early-works-v4.py
       - name: Generate and refine Romanian candidate
-        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-early-works-v4.py --batch-size 16
+        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-early-works-v5.py --batch-size 16
       - name: Audit every Romanian source unit
         run: python3 scripts/run-with-pinned-hf.py scripts/audit-pr40-english-romanian-v3.py --collection early --batch-size 64
       - name: Upload work corpus and reports
