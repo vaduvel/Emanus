@@ -201,7 +201,21 @@ def main() -> None:
             record["code"] = "BORDERLINE_FRAGMENT_SEMANTIC_SCORE"
             warnings.append(record)
 
-    blockers = [*deterministic, *semantic]
+    pending_gates: list[dict[str, Any]] = []
+    for witness, document in candidates.items():
+        required_next_gate = str(
+            document.get("audit", {}).get("requiredNextGate") or ""
+        ).strip()
+        if required_next_gate:
+            pending_gates.append(
+                {
+                    "witness": witness,
+                    "code": "REQUIRED_NEXT_GATE_NOT_SATISFIED",
+                    "requiredNextGate": required_next_gate,
+                }
+            )
+
+    blockers = [*deterministic, *semantic, *pending_gates]
     OUT.mkdir(parents=True, exist_ok=True)
     for old in OUT.glob("*.json"):
         old.unlink()
@@ -242,6 +256,7 @@ def main() -> None:
             "minimumFragmentScore": round(min(scores), 6) if scores else None,
             "averageFragmentScore": round(float(np.mean(scores)), 6) if scores else None,
             "blockers": len(blockers),
+            "pendingRequiredGates": len(pending_gates),
             "warnings": len(warnings),
             "publicationReadyAsParallelResearchEdition": not blockers,
         },
