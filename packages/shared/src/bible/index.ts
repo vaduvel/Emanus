@@ -58,6 +58,7 @@ import { DEUTERONOM } from "./deuteronom.js"
 import { IOSUA } from "./iosua.js"
 import { RUT } from "./rut.js"
 import { SAMUEL1 } from "./samuel1.js"
+import { SAMUEL2 } from "./samuel2.js"
 import { MATEI as MATEI_BASE } from "./matei.js"
 import { MATEI_2 } from "./matei2.js"
 import { MATEI_3 } from "./matei3.js"
@@ -249,7 +250,7 @@ export const MARCU: BibleBook = {
   ],
 }
 
-export { EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA, RUT, SAMUEL1 }
+export { EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA, RUT, SAMUEL1, SAMUEL2 }
 
 /** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
 export const BIBLE_BOOKS: BibleBook[] = [
@@ -261,6 +262,7 @@ export const BIBLE_BOOKS: BibleBook[] = [
   IOSUA,
   RUT,
   SAMUEL1,
+  SAMUEL2,
   MATEI,
   IOAN,
   MARCU,
