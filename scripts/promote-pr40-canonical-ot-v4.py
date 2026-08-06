@@ -2,9 +2,9 @@
 """Run canonical promotion with all source and content fixes composed.
 
 The inherited candidates first receive all audited omission-repair waves,
-independent Psalm redrafts, and Psalm superscription normalization. The
-official OSHB remap then supplies Hebrew verse boundaries, while archive
-loading excludes non-canonical front matter.
+independent Psalm redrafts, quote-stack normalization, and Psalm
+superscription normalization. The official OSHB remap then supplies Hebrew
+verse boundaries, while archive loading excludes non-canonical front matter.
 """
 from __future__ import annotations
 
@@ -22,6 +22,7 @@ for repair_name in (
     "apply-pr40-canonical-content-fixes.py",
     "apply-pr40-canonical-content-fixes-wave2.py",
     "apply-pr40-canonical-content-fixes-wave3.py",
+    "apply-pr40-canonical-content-fixes-wave4.py",
 ):
     runpy.run_path(str(Path(__file__).with_name(repair_name)), run_name="__main__")
 
