@@ -3,6 +3,11 @@ name: PR40 emergency publish 61 green works
 on:
   issue_comment:
     types: [created]
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/biblia-emanus/PR40-PUBLISH-61.trigger'
   workflow_dispatch:
 
 permissions:
@@ -20,6 +25,7 @@ jobs:
   publish:
     if: >-
       github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'pull_request' ||
       (github.event.issue.number == 43 && github.event.comment.body == '/publish-pr40-green-61')
     name: Publish 61 green works directly to main
     runs-on: windows-2022
