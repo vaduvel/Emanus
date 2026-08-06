@@ -1,16 +1,6 @@
 name: PR40 final — inspect WLC versification
 
 on:
-  push:
-    branches:
-      - agent/biblia-emanus-pr40-final
-    paths:
-      - 'scripts/inspect-wlc-alternate-versification.py'
-      - '.github/workflows/pr40-final-inspect-wlc-versification.yml'
-  pull_request:
-    paths:
-      - 'scripts/inspect-wlc-alternate-versification.py'
-      - '.github/workflows/pr40-final-inspect-wlc-versification.yml'
   workflow_dispatch:
 
 permissions:
@@ -18,7 +8,7 @@ permissions:
 
 concurrency:
   group: pr40-final-wlc-versification-${{ github.event_name }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   inspect:
