@@ -12,3 +12,5 @@ Explicitly exclude from this publication:
 - ADD_PSA — Additional Psalms
 
 The excluded works may return only in a future independently audited change. They must not block this publication.
+
+Direct main trigger: 2026-08-06T20:37:00+03:00
