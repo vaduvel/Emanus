@@ -2,7 +2,7 @@
 """Run canonical promotion with all source and content fixes composed.
 
 The inherited candidates first receive all audited omission-repair waves,
-independent Psalm redrafts, quote-stack normalization, and Psalm
+independent Psalm redrafts, per-verse quote normalization, and Psalm
 superscription normalization. The official OSHB remap then supplies Hebrew
 verse boundaries, while archive loading excludes non-canonical front matter.
 """
