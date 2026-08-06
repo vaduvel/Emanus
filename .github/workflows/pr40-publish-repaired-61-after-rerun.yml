@@ -1,0 +1,111 @@
+name: PR40 publish repaired 61 works
+
+on:
+  workflow_run:
+    workflows:
+      - PR40 publish 61 green works
+    types:
+      - completed
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: pr40-publish-repaired-61-main
+  cancel-in-progress: true
+
+env:
+  PRIOR_RUN_ID: '31110524525'
+  SOURCE_TRIGGER_RUN_ID: '31124265098'
+
+jobs:
+  publish:
+    if: github.event.workflow_run.id == 31124265098
+    name: Publish repaired 61-work corpus to main
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout current main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin main
+          git checkout --detach FETCH_HEAD
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Download the already-green artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 scripts/download-pr40-run-artifacts.py \
+            --run-id "$PRIOR_RUN_ID" \
+            --output staging/prior \
+            --require pr40-final-canonical-publication \
+            --require pr40-early-4BA \
+            --require pr40-early-ENO \
+            --require pr40-early-JUB \
+            --require pr40-qumran-COMM_REG \
+            --require pr40-qumran-GEN_APO \
+            --require pr40-qumran-GIANTS \
+            --require pr40-qumran-HAB_COM \
+            --require pr40-qumran-HODAYOT \
+            --require pr40-qumran-SABB_SAC \
+            --require pr40-qumran-WAR_SCR
+
+      - name: Assemble and validate the repaired corpus
+        run: |
+          set -euo pipefail
+          python3 scripts/assemble-pr40-green-publication.py --prior staging/prior
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(
+              Path('docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json').read_text(encoding='utf-8')
+          )
+          assert report['status'] == 'published'
+          assert report['counts']['works'] == 61
+          assert report['blockingIssues'] == 0
+          assert set(report['excludedWorks']) == {'DID', 'TEMP_SCR', 'ADD_PSA'}
+
+          esg = sorted(Path('docs/data/biblia-emanus-deuterocanon-audited').glob('ESG.*.json'))
+          assert len(esg) == 10, f'Expected 10 audited ESG chapters, found {len(esg)}'
+
+          status = {
+              'status': 'published',
+              'stage': 'complete',
+              'works': 61,
+              'esgChapters': 10,
+              'excluded': ['DID', 'TEMP_SCR', 'ADD_PSA'],
+              'sourceArtifactRun': 31110524525,
+              'triggerWorkflowRun': 31124265098,
+          }
+          Path('docs/biblia-emanus/PR40-PUBLICATION-STATUS.json').write_text(
+              json.dumps(status, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
+          print(json.dumps(status, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit the 61 verified works to main
+        run: |
+          set -euo pipefail
+          git add \
+            docs/data/biblia-emanus \
+            docs/data/biblia-emanus-deuterocanon-audited \
+            docs/data/biblia-emanus-early-audited \
+            docs/data/biblia-emanus-qumran-audited \
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json \
+            docs/biblia-emanus/PR40-PUBLICATION-STATUS.json
+          if git diff --cached --quiet; then
+            echo 'The repaired 61-work corpus is already present in main.'
+            exit 0
+          fi
+          git commit -m 'Publish the repaired 61-work PR40 corpus'
+          git push origin HEAD:main
