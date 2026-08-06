@@ -1,0 +1,22 @@
+export const IOSUA_TEXT_17: Record<number, readonly string[]> = {
+  17: [
+    "Sorțul a ieșit și pentru seminția lui Manase, fiindcă el era întâiul născut al lui Iosif. Lui Machir, întâiul născut al lui Manase și tatăl lui Galaad, i-au revenit Galaadul și Bașanul, pentru că era un om de război.",
+    "Au primit o parte și ceilalți fii ai lui Manase, potrivit familiilor lor: fiii lui Abiezer, fiii lui Helec, fiii lui Asriel, fiii lui Sihem, fiii lui Hefer și fiii lui Șemida. Aceștia erau urmașii de parte bărbătească ai lui Manase, fiul lui Iosif, potrivit familiilor lor.",
+    "Țelofhad, fiul lui Hefer, fiul lui Galaad, fiul lui Machir, fiul lui Manase, nu a avut fii, ci numai fiice. Numele fiicelor lui erau: Mahla, Noa, Hogla, Milca și Tirța.",
+    "Ele s-au înfățișat înaintea preotului Eleazar, înaintea lui Iosua, fiul lui Nun, și înaintea conducătorilor și au spus: „DOMNUL i-a poruncit lui Moise să ne dea o moștenire printre rudele noastre.” Atunci, potrivit poruncii DOMNULUI, Iosua le-a dat o moștenire printre frații tatălui lor.",
+    "Astfel lui Manase i-au revenit zece părți, în afară de țara Galaadului și a Bașanului, aflată dincolo de Iordan,",
+    "pentru că fiicele lui Manase au primit o moștenire printre fiii lui, iar țara Galaadului le-a revenit celorlalți fii ai lui Manase.",
+    "Hotarul lui Manase mergea de la Așer până la Micmetat, aflat în fața Sihemului, apoi continua spre sud, către locuitorii din En-Tapuah.",
+    "Ținutul Tapuahului îi aparținea lui Manase, dar cetatea Tapuah, aflată la hotarul lui Manase, le aparținea fiilor lui Efraim.",
+    "Hotarul cobora la pârâul Cana, pe partea de sud a pârâului. Cetățile acestea ale lui Efraim se aflau în mijlocul cetăților lui Manase. Hotarul lui Manase era pe partea de nord a pârâului și se termina la mare.",
+    "La sud era teritoriul lui Efraim, iar la nord, cel al lui Manase; marea era hotarul lor. Spre nord se învecinau cu Așer, iar spre răsărit, cu Isahar.",
+    "Manase avea în Isahar și în Așer: Bet-Șean și satele lui, Ibleam și satele lui, locuitorii Dorului și satele lui, locuitorii din En-Dor și satele lui, locuitorii din Taanac și satele lui și locuitorii din Meghido și satele lui — cele trei înălțimi.",
+    "Fiii lui Manase nu au putut să-i izgonească pe locuitorii acestor cetăți, iar canaaniții au stăruit să locuiască în ținutul acela.",
+    "Când fiii lui Israel au ajuns puternici, i-au supus pe canaaniți la muncă silnică, dar nu i-au izgonit cu totul.",
+    "Fiii lui Iosif i-au spus lui Iosua: „De ce ne-ai dat ca moștenire numai un sorț și o singură parte, deși suntem un popor numeros, fiindcă DOMNUL ne-a binecuvântat până acum?”",
+    "Iosua le-a răspuns: „Dacă sunteți un popor numeros și regiunea muntoasă a lui Efraim este prea strâmtă pentru voi, urcați în pădure și curățați-vă acolo un loc în țara fereziților și a refaimilor.”",
+    "Fiii lui Iosif au spus: „Regiunea muntoasă nu ne este de ajuns, iar toți canaaniții care locuiesc în ținutul văii au care de fier: atât cei din Bet-Șean și din satele lui, cât și cei din valea Izreel.”",
+    "Iosua i-a spus casei lui Iosif, adică lui Efraim și lui Manase: „Sunteți un popor numeros și aveți o mare putere. Nu veți avea numai un singur sorț,",
+    "ci regiunea muntoasă va fi a voastră. Chiar dacă este împădurită, o veți curăța, iar hotarele ei îndepărtate vor fi ale voastre. Îi veți izgoni pe canaaniți, deși au care de fier și sunt puternici.”",
+  ],
+}
