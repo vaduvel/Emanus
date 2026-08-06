@@ -15,10 +15,15 @@ on:
       - 'scripts/translate-pr40-qumran*.py'
       - 'scripts/audit-pr40-*.py'
       - '.github/workflows/pr40-final-publication-gate-v2.yml'
+      - '.github/workflows/cancel-superseded-pr-runs.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: pr40-final-publication-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   canonical-ot:
