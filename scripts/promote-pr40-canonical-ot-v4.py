@@ -13,6 +13,7 @@ import importlib.util
 import json
 import re
 import runpy
+import shutil
 import zipfile
 from pathlib import Path
 from types import ModuleType
@@ -112,17 +113,25 @@ def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None
     raw_archive = module.SOURCES / "hboWLC_usfm.zip"
     if not raw_archive.is_file():
         raise RuntimeError(f"Missing raw WLC provenance archive {raw_archive}")
+
+    upstream_dir = module.ACTIVE / "upstream"
+    upstream_dir.mkdir(parents=True, exist_ok=True)
+    embedded_name = "hboWLC-raw_usfm.zip"
+    embedded_archive = upstream_dir / embedded_name
+    shutil.copyfile(raw_archive, embedded_archive)
+
     lock_path = module.ACTIVE / "source-lock.json"
     lock = json.loads(lock_path.read_text(encoding="utf-8"))
     lock.setdefault("upstreamArtifacts", {})["hboWLC-raw-r5"] = {
         "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
         "archiveDate": base.TODAY,
-        "sha256": hashlib.sha256(raw_archive.read_bytes()).hexdigest(),
+        "sha256": hashlib.sha256(embedded_archive.read_bytes()).hexdigest(),
         "language": "he",
         "textLicense": "Public Domain",
         "annotationLicense": "CC BY 4.0",
         "snapshotId": base.SNAPSHOT_ID,
-        "archiveEmbedded": False,
+        "archiveEmbedded": True,
+        "archivePath": f"upstream/{embedded_name}",
         "role": "raw-input-to-official-remap",
     }
     lock_path.write_text(
