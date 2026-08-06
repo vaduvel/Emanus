@@ -22,29 +22,128 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
-      # Aici se opreste build-ul inainte sa ajunga in main, nu dupa.
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
-      # Lista explicita de typo-uri cunoscute trebuie sa ramana idempotenta.
       - name: Verifica typo-urile cunoscute
         run: pnpm check:typos
 
-      # Blocheaza ID-uri duplicate, promisiuni medicale/spirituale periculoase
-      # si pierderea formularilor de siguranta din cursurile sensibile.
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
-      # Niciun capitol biblic nu poate fi publicat fara nume si data in registrul cartii.
+      - name: Verifica continutul activ
+        run: pnpm check:active-content
+
       - name: Verifica aprobarea Bibliei explicate
         run: pnpm check:bible-publication
 
-      # Matei trebuie sa ramana complet, ordonat si cu protectiile editoriale intacte.
+      - name: Verifica limba romana si variantele textuale NT
+        run: python3 scripts/check-biblia-emanus-romanian-quality.py
+
+      - name: Verifica Biblia Emanus 3.0
+        run: pnpm check:biblia-emanus
+
+      - name: Testeaza poarta Biblia Emanus 3.0
+        run: pnpm test:biblia-emanus
+
+      - name: Verifica versificatia Noului Testament
+        run: pnpm check:biblia-emanus-versification
+
+      - name: Verifica sigiliul tuturor cartilor publicate
+        run: pnpm seal:biblia-emanus --check
+
       - name: Verifica Biblia explicata Matei
         run: pnpm check:matei
+
+      - name: Verifica Biblia explicata Marcu
+        run: pnpm check:marcu
+
+      - name: Verifica Biblia explicata Luca
+        run: pnpm check:luca
+
+      - name: Verifica Biblia explicata Fapte
+        run: pnpm check:fapte
+
+      - name: Verifica Biblia explicata Romani
+        run: pnpm check:romani
+
+      - name: Verifica Biblia explicata 1 Corinteni
+        run: pnpm check:1-corinteni
+
+      - name: Verifica Biblia explicata 2 Corinteni
+        run: pnpm check:2-corinteni
+
+      - name: Verifica Biblia explicata Galateni
+        run: pnpm check:galateni
+
+      - name: Verifica Biblia explicata Efeseni
+        run: pnpm check:efeseni
+
+      - name: Verifica Biblia explicata Filipeni
+        run: pnpm check:filipeni
+
+      - name: Verifica Biblia explicata Coloseni
+        run: pnpm check:coloseni
+
+      - name: Verifica Biblia explicata 1 Tesaloniceni
+        run: pnpm check:1-tesaloniceni
+
+      - name: Verifica Biblia explicata 2 Tesaloniceni
+        run: pnpm check:2-tesaloniceni
+
+      - name: Verifica Biblia explicata 1 Timotei
+        run: pnpm check:1-timotei
+
+      - name: Verifica Biblia explicata 2 Timotei
+        run: pnpm check:2-timotei
+
+      - name: Verifica Biblia explicata Tit
+        run: pnpm check:tit
+
+      - name: Verifica Biblia explicata Filimon
+        run: pnpm check:filimon
+
+      - name: Verifica Biblia explicata Evrei
+        run: pnpm check:evrei
+
+      - name: Verifica Biblia explicata Iacov
+        run: pnpm check:iacov
+
+      - name: Verifica Biblia explicata 1 Petru
+        run: pnpm check:1-petru
+
+      - name: Verifica Biblia explicata 2 Petru
+        run: pnpm check:2-petru
+
+      - name: Verifica Biblia explicata 1 Ioan
+        run: pnpm check:1-ioan
+
+      - name: Verifica Biblia explicata 2 Ioan
+        run: pnpm check:2-ioan
+
+      - name: Verifica Biblia explicata 3 Ioan
+        run: pnpm check:3-ioan
+
+      - name: Verifica Biblia explicata Iuda
+        run: pnpm check:iuda
+
+      - name: Verifica Biblia explicata Apocalipsa
+        run: pnpm check:apocalipsa
+
+      - name: Verifica valul final NT
+        run: pnpm check:nt-completion
+
+      - name: Verifica structura sursei Bibliei
+        run: pnpm check:bible-source
+
+      - name: Verifica securitatea Bibliei cloud
+        run: pnpm check:bible-cloud
 
       - name: Typecheck
         run: pnpm typecheck
 
       - name: Build
         run: pnpm build
+
+      - name: Verifica bundle-ul Bibliei
+        run: pnpm check:bible-bundle
