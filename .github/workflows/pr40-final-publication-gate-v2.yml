@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - '.github/workflows/pr40-final-publication-gate-v2.yml'
+      - 'scripts/download-pr40-run-artifacts.py'
       - 'docs/biblia-emanus/PR40-FINALIZE.trigger'
 
 permissions:
@@ -44,64 +45,24 @@ jobs:
           set -euo pipefail
           "$PYTHON_BIN" -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
           "$PYTHON_BIN" -m pip install --disable-pip-version-check \
-            'text-fabric>=12,<14' \
             'transformers>=4.45,<5' \
             'sentencepiece>=0.2,<1' \
             'huggingface-hub>=0.26,<1' \
             'sentence-transformers>=3,<4' \
             'numpy>=2,<3'
 
-      - name: Download every prior successful checkpoint through GitHub REST
+      - name: Download every prior successful checkpoint safely
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          "$PYTHON_BIN" - <<'PY'
-          import json, os, shutil, urllib.request, zipfile
-          from pathlib import Path
-
-          repo = os.environ['GITHUB_REPOSITORY']
-          run_id = os.environ['PRIOR_RUN_ID']
-          token = os.environ['GH_TOKEN']
-          headers = {
-              'Authorization': f'Bearer {token}',
-              'Accept': 'application/vnd.github+json',
-              'User-Agent': 'emanus-pr40-finalizer',
-          }
-          request = urllib.request.Request(
-              f'https://api.github.com/repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100',
-              headers=headers,
-          )
-          with urllib.request.urlopen(request) as response:
-              artifacts = json.load(response)['artifacts']
-          root = Path('staging/prior')
-          root.mkdir(parents=True)
-          downloaded = []
-          for artifact in artifacts:
-              name = artifact['name']
-              if artifact['expired'] or not name.startswith('pr40-'):
-                  continue
-              destination = root / name
-              destination.mkdir()
-              archive = root / f'{name}.zip'
-              request = urllib.request.Request(artifact['archive_download_url'], headers=headers)
-              with urllib.request.urlopen(request) as response, archive.open('wb') as output:
-                  shutil.copyfileobj(response, output)
-              with zipfile.ZipFile(archive) as bundle:
-                  bundle.extractall(destination)
-              archive.unlink()
-              downloaded.append(name)
-          required = {
-              'pr40-final-canonical-publication',
-              'pr40-early-DID',
-              'pr40-qumran-TEMP_SCR',
-              'pr40-qumran-ADD_PSA',
-          }
-          missing = required.difference(downloaded)
-          if missing:
-              raise SystemExit(f'Missing required checkpoints: {sorted(missing)}')
-          print(f'Downloaded {len(downloaded)} PR40 checkpoints')
-          PY
+          "$PYTHON_BIN" scripts/download-pr40-run-artifacts.py \
+            --run-id "$PRIOR_RUN_ID" \
+            --output staging/prior \
+            --require pr40-final-canonical-publication \
+            --require pr40-early-DID \
+            --require pr40-qumran-TEMP_SCR \
+            --require pr40-qumran-ADD_PSA
 
       - name: Finalize Didascalia from its completed 43-chapter checkpoint
         env:
