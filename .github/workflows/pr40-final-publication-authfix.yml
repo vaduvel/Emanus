@@ -1,0 +1,230 @@
+name: PR40 final publication gate authfix
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/pr40-final-publication-authfix.yml'
+      - 'scripts/download-pr40-run-artifacts.py'
+      - 'docs/biblia-emanus/PR40-FINALIZE.trigger'
+
+permissions:
+  actions: write
+  contents: write
+
+concurrency:
+  group: pr40-final-publication-authfix-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  PRIOR_RUN_ID: '31110524525'
+  HF_HOME: ${{ github.workspace }}/.cache/huggingface
+  TOKENIZERS_PARALLELISM: 'false'
+
+jobs:
+  publish-all-64:
+    name: Finalize and publish all 64 works atomically
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    steps:
+      - name: Cancel every obsolete publication run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CURRENT_RUN_ID: ${{ github.run_id }}
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, time, urllib.error, urllib.request
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          token = os.environ['GH_TOKEN']
+          current = int(os.environ['CURRENT_RUN_ID'])
+          branch = os.environ['HEAD_BRANCH']
+          active = {'queued', 'in_progress', 'waiting', 'pending', 'requested'}
+          headers = {
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github+json',
+              'User-Agent': 'emanus-pr40-authfix',
+              'X-GitHub-Api-Version': '2022-11-28',
+          }
+          request = urllib.request.Request(
+              f'https://api.github.com/repos/{repo}/actions/runs?event=pull_request&per_page=100',
+              headers=headers,
+          )
+          with urllib.request.urlopen(request, timeout=60) as response:
+              runs = json.load(response)['workflow_runs']
+          obsolete = [
+              run for run in runs
+              if int(run['id']) != current
+              and run.get('head_branch') == branch
+              and run.get('status') in active
+              and str(run.get('name', '')).startswith('PR40 final publication gate')
+          ]
+          print(f'Obsolete publication runs: {len(obsolete)}')
+          for run in obsolete:
+              url = f"https://api.github.com/repos/{repo}/actions/runs/{run['id']}/cancel"
+              for attempt in range(1, 7):
+                  try:
+                      req = urllib.request.Request(url, data=b'', method='POST', headers=headers)
+                      with urllib.request.urlopen(req, timeout=60) as response:
+                          response.read()
+                      print(f"Cancelled {run['name']} #{run['run_number']} ({run['id']})")
+                      break
+                  except urllib.error.HTTPError as error:
+                      if error.code in {409, 422}:
+                          break
+                      if error.code in {502, 503, 504} and attempt < 6:
+                          time.sleep(min(30, 2 ** attempt))
+                          continue
+                      raise
+          PY
+
+      - name: Checkout PR head with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+          if command -v python3.11 >/dev/null 2>&1; then echo 'PYTHON_BIN=python3.11' >> "$GITHUB_ENV"; else echo 'PYTHON_BIN=python3' >> "$GITHUB_ENV"; fi
+
+      - name: Install CPU translation and audit runtime once
+        run: |
+          set -euo pipefail
+          "$PYTHON_BIN" -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
+          "$PYTHON_BIN" -m pip install --disable-pip-version-check \
+            'transformers>=4.45,<5' \
+            'sentencepiece>=0.2,<1' \
+            'huggingface-hub>=0.26,<1' \
+            'sentence-transformers>=3,<4' \
+            'numpy>=2,<3'
+
+      - name: Download every prior successful checkpoint safely
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          "$PYTHON_BIN" scripts/download-pr40-run-artifacts.py \
+            --run-id "$PRIOR_RUN_ID" \
+            --output staging/prior \
+            --require pr40-final-canonical-publication \
+            --require pr40-early-DID \
+            --require pr40-qumran-TEMP_SCR \
+            --require pr40-qumran-ADD_PSA
+
+      - name: Finalize Didascalia from its completed 43-chapter checkpoint
+        env:
+          PR40_BOOKS: DID
+        run: |
+          set -euo pipefail
+          cp -R staging/prior/pr40-early-DID/data/. docs/data/
+          cp -R staging/prior/pr40-early-DID/biblia-emanus/. docs/biblia-emanus/
+          "$PYTHON_BIN" scripts/run-with-pinned-hf.py scripts/finalize-pr40-didascalia-checkpoint.py --batch-size 28
+          destination=staging/current/pr40-early-DID-final
+          mkdir -p "$destination/data" "$destination/biblia-emanus"
+          cp -R docs/data/biblia-emanus-early-source-candidates "$destination/data/"
+          cp -R docs/data/biblia-emanus-early-romanian-candidates "$destination/data/"
+          cp -R docs/data/biblia-emanus-early-audited "$destination/data/"
+          cp docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json "$destination/biblia-emanus/"
+          cp docs/biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json "$destination/biblia-emanus/"
+          cp docs/biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json "$destination/biblia-emanus/"
+
+      - name: Finalize the Temple Scroll
+        env:
+          PR40_WITNESSES: 11Q19
+        run: |
+          set -euo pipefail
+          rm -rf \
+            docs/data/biblia-emanus-qumran-source \
+            docs/data/biblia-emanus-qumran-romanian-candidates \
+            docs/data/biblia-emanus-qumran-audited
+          cp -R staging/prior/pr40-qumran-TEMP_SCR/data/. docs/data/
+          cp -R staging/prior/pr40-qumran-TEMP_SCR/biblia-emanus/. docs/biblia-emanus/
+          "$PYTHON_BIN" scripts/run-with-pinned-hf.py scripts/translate-pr40-qumran-shard.py --batch-size 36
+          "$PYTHON_BIN" scripts/run-with-pinned-hf.py scripts/refine-pr40-qumran-candidates.py --batch-size 36
+          "$PYTHON_BIN" scripts/run-with-pinned-hf.py scripts/audit-pr40-qumran-shard-v2.py
+          destination=staging/current/pr40-qumran-TEMP_SCR-final
+          mkdir -p "$destination/data" "$destination/biblia-emanus"
+          cp -R docs/data/biblia-emanus-qumran-source "$destination/data/"
+          cp -R docs/data/biblia-emanus-qumran-romanian-candidates "$destination/data/"
+          mkdir -p "$destination/data/biblia-emanus-qumran-audited"
+          cp docs/data/biblia-emanus-qumran-audited/11Q19.json "$destination/data/biblia-emanus-qumran-audited/"
+          cp docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json "$destination/biblia-emanus/"
+          cp docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json "$destination/biblia-emanus/"
+          cp docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json "$destination/biblia-emanus/"
+
+      - name: Finalize the Additional Psalms
+        env:
+          PR40_WITNESSES: 11Q5,4Q381
+        run: |
+          set -euo pipefail
+          rm -rf \
+            docs/data/biblia-emanus-qumran-source \
+            docs/data/biblia-emanus-qumran-romanian-candidates \
+            docs/data/biblia-emanus-qumran-audited
+          cp -R staging/prior/pr40-qumran-ADD_PSA/data/. docs/data/
+          cp -R staging/prior/pr40-qumran-ADD_PSA/biblia-emanus/. docs/biblia-emanus/
+          "$PYTHON_BIN" scripts/run-with-pinned-hf.py scripts/translate-pr40-qumran-shard.py --batch-size 36
+          "$PYTHON_BIN" scripts/run-with-pinned-hf.py scripts/refine-pr40-qumran-candidates.py --batch-size 36
+          "$PYTHON_BIN" scripts/run-with-pinned-hf.py scripts/audit-pr40-qumran-shard-v2.py
+          destination=staging/current/pr40-qumran-ADD_PSA-final
+          mkdir -p "$destination/data" "$destination/biblia-emanus"
+          cp -R docs/data/biblia-emanus-qumran-source "$destination/data/"
+          cp -R docs/data/biblia-emanus-qumran-romanian-candidates "$destination/data/"
+          mkdir -p "$destination/data/biblia-emanus-qumran-audited"
+          cp docs/data/biblia-emanus-qumran-audited/11Q5.json "$destination/data/biblia-emanus-qumran-audited/"
+          cp docs/data/biblia-emanus-qumran-audited/4Q381.json "$destination/data/biblia-emanus-qumran-audited/"
+          cp docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json "$destination/biblia-emanus/"
+          cp docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json "$destination/biblia-emanus/"
+          cp docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json "$destination/biblia-emanus/"
+
+      - name: Assemble and require exactly 64 publication-ready works
+        run: |
+          set -euo pipefail
+          "$PYTHON_BIN" scripts/assemble-pr40-final-publication.py \
+            --prior staging/prior \
+            --current staging/current
+
+      - name: Verify the complete corpus and application build
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:bible-publication
+          "$PYTHON_BIN" scripts/check-biblia-emanus-romanian-quality.py
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+          pnpm typecheck
+          pnpm build
+          git diff --check
+
+      - name: Commit the 64 works atomically to PR 43
+        env:
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/data/biblia-emanus \
+            docs/data/biblia-emanus-deuterocanon-audited \
+            docs/data/biblia-emanus-early-audited \
+            docs/data/biblia-emanus-qumran-audited \
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          if git diff --cached --quiet; then
+            echo 'Publication tree already matches the verified artifacts.'
+            exit 0
+          fi
+          git commit -m 'Publish all 64 PR40 works atomically'
+          git push origin "HEAD:${HEAD_BRANCH}"
