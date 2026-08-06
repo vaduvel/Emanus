@@ -22,6 +22,10 @@ INSUFFICIENT = "[… fragment prea deteriorat pentru o traducere sigură …]"
 HEBREW_CHAR = re.compile(r"[\u0590-\u05ff]")
 HEBREW_WORD = re.compile(r"[\u0590-\u05ff]+")
 ENGLISH_TOKEN = re.compile(r"\b(?:the|and|that|which|with|from|unto|shall|lord|god|king|people)\b", re.I)
+EDITORIALLY_UNTRANSLATABLE_FRAGMENTS = {
+    ("4Q531", "f6"),
+    ("4Q531", "f18"),
+}
 
 
 def sha_text(value: str) -> str:
@@ -93,6 +97,16 @@ def main() -> None:
             if source.get("isTotalLacuna"):
                 if romanian != "[…]" or target.get("translationAllowed") is not False:
                     codes.append("TOTAL_LACUNA_WAS_INVENTED_OR_TRANSLATED")
+            elif (witness, key[0]) in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS:
+                if romanian != INSUFFICIENT or target.get("translationAllowed") is not False:
+                    codes.append("EDITORIALLY_UNTRANSLATABLE_FRAGMENT_WAS_RECONSTRUCTED")
+                warnings.append(
+                    {
+                        "reference": reference,
+                        "code": "NO_CONTINUOUS_TRANSLATABLE_SYNTAX",
+                        "displayRequirement": "Show source transcription and transliteration; do not supply reconstructed Romanian prose.",
+                    }
+                )
             elif len(lexical_words) < 3:
                 if romanian != INSUFFICIENT or target.get("translationAllowed") is not False:
                     codes.append("INSUFFICIENT_SOURCE_WAS_TRANSLATED_OR_RECONSTRUCTED")
@@ -205,7 +219,11 @@ def main() -> None:
                 "blockingIssueCount": len(witness_blockers),
                 "publicationBlocked": bool(witness_blockers),
                 "researchEditionWarningRequired": True,
-                "lacunaPolicy": "No Romanian reconstruction when fewer than three readable source words survive.",
+                "lacunaPolicy": "No Romanian reconstruction when the surviving source does not preserve continuous translatable syntax.",
+                "editoriallyUntranslatableFragments": sorted(
+                    f"{selected_witness}:{fragment}"
+                    for selected_witness, fragment in EDITORIALLY_UNTRANSLATABLE_FRAGMENTS
+                ),
                 "textDigest": sha_text("\n".join(str(line["romanian"]) for line in document["lines"])),
             }
         )
