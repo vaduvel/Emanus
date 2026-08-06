@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
-"""Extract all four early works with exact CCEL Jubilees unit boundaries.
+"""Extract all four early works with robust CCEL Jubilees unit boundaries.
 
-CCEL's Charles transcription encodes Jubilees as one ordered list per chapter.
-The HTML is old and leaves ``<li>`` tags unclosed, so ordinary ``get_text``
-flattens all units into one stream. This wrapper converts each list item into a
-synthetic numbered paragraph before the common extractor runs. The original
-page bytes remain the hashed source; only the parsing representation changes.
+CCEL's Charles transcription encodes each Jubilees chapter as an ordered list.
+Some pages expose a malformed or differently nested chapter heading, so the
+chapter-specific URL is authoritative and the first non-empty ordered list is
+used as a verified fallback. Source bytes and hashes remain unchanged.
 """
 from __future__ import annotations
 
-import hashlib
 import html as html_module
 import importlib.util
 import re
@@ -31,7 +29,6 @@ _original_fetch = module.fetch
 
 
 def _own_text(item: Tag) -> str:
-    """Return one malformed CCEL list item's text without nested sibling items."""
     clone_soup = BeautifulSoup(str(item), "html.parser")
     clone = clone_soup.find("li")
     if not isinstance(clone, Tag):
@@ -44,6 +41,15 @@ def _own_text(item: Tag) -> str:
         if isinstance(node, NavigableString):
             parts.append(str(node))
     return module.clean(" ".join(parts))
+
+
+def _list_units(ordered: Tag) -> list[str]:
+    units: list[str] = []
+    for item in ordered.find_all("li"):
+        text = _own_text(item)
+        if text:
+            units.append(text)
+    return units
 
 
 def fetch(url: str) -> tuple[str, str]:
@@ -65,19 +71,21 @@ def fetch(url: str) -> tuple[str, str]:
         ),
         None,
     )
-    if not isinstance(heading, Tag):
-        raise RuntimeError(f"Jubilees {chapter}: exact chapter heading not found")
-    ordered = heading.find_next("ol")
-    if not isinstance(ordered, Tag):
-        raise RuntimeError(f"Jubilees {chapter}: ordered verse list not found")
+    ordered = heading.find_next("ol") if isinstance(heading, Tag) else None
+    units = _list_units(ordered) if isinstance(ordered, Tag) else []
 
-    units: list[str] = []
-    for item in ordered.find_all("li"):
-        text = _own_text(item)
-        if text:
-            units.append(text)
     if not units:
-        raise RuntimeError(f"Jubilees {chapter}: ordered list contains no units")
+        candidates = [node for node in soup.find_all("ol") if isinstance(node, Tag)]
+        ranked = sorted(
+            ((_list_units(node), node) for node in candidates),
+            key=lambda pair: len(pair[0]),
+            reverse=True,
+        )
+        if ranked and ranked[0][0]:
+            units = ranked[0][0]
+
+    if not units:
+        raise RuntimeError(f"Jubilees {chapter}: ordered verse list contains no units")
 
     synthetic = ["<html><body>", f"<h1>Chapter {chapter}</h1>"]
     synthetic.extend(
