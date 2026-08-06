@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""Run canonical promotion with both OSHB remap fixes composed.
+"""Run canonical promotion with all OSHB remap fixes composed.
 
-Two independent upstream conditions must be handled together:
+Two independent upstream conditions are handled together:
 
 * the official remapper may leave empty *trailing* chapter containers when a
   Hebrew chapter is folded into the preceding English-versification chapter;
 * eBible archives contain front matter such as ``FRT`` with no verses.
 
 Only trailing empty remap containers are removed. Interior empty chapters are
-fatal. Archive loading accepts only the exact canonical book identifiers and
-therefore never attempts to parse front matter as Scripture.
+fatal. Archive loading accepts only exact canonical book identifiers. The raw
+WLC archive is recorded once as upstream provenance; only the official remap is
+registered as each book's original text lock.
 """
 from __future__ import annotations
 
+import hashlib
 import importlib.util
 import json
 import re
@@ -28,6 +30,16 @@ if spec is None or spec.loader is None:
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)
 _original_build = module.build_remapped_usfm
+_original_postprocess = module.postprocess_provenance
+
+
+class _SourceSpecsWithoutRawBookLocks(dict[str, dict[str, Any]]):
+    """Ignore v3's per-book raw-WLC spec while retaining normal specs."""
+
+    def __setitem__(self, key: str, value: dict[str, Any]) -> None:
+        if key == "hebrewRaw":
+            return
+        super().__setitem__(key, value)
 
 
 def load_base() -> ModuleType:
@@ -64,6 +76,7 @@ def load_base() -> ModuleType:
         return books
 
     base.archive_books = archive_books
+    base.SOURCE_SPECS = _SourceSpecsWithoutRawBookLocks(base.SOURCE_SPECS)
     return base
 
 
@@ -91,6 +104,31 @@ def build_remapped_usfm(output: Path):
     return result
 
 
+def postprocess_provenance(base: ModuleType, provenance: dict[str, Any]) -> None:
+    _original_postprocess(base, provenance)
+    raw_archive = module.SOURCES / "hboWLC_usfm.zip"
+    if not raw_archive.is_file():
+        raise RuntimeError(f"Missing raw WLC provenance archive {raw_archive}")
+    lock_path = module.ACTIVE / "source-lock.json"
+    lock = json.loads(lock_path.read_text(encoding="utf-8"))
+    lock.setdefault("upstreamArtifacts", {})["hboWLC-raw-r5"] = {
+        "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
+        "archiveDate": base.TODAY,
+        "sha256": hashlib.sha256(raw_archive.read_bytes()).hexdigest(),
+        "language": "he",
+        "textLicense": "Public Domain",
+        "annotationLicense": "CC BY 4.0",
+        "snapshotId": base.SNAPSHOT_ID,
+        "archiveEmbedded": False,
+        "role": "raw-input-to-official-remap",
+    }
+    lock_path.write_text(
+        json.dumps(lock, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
 module.load_base = load_base
 module.build_remapped_usfm = build_remapped_usfm
+module.postprocess_provenance = postprocess_provenance
 module.main()
