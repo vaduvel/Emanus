@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows:
       - PR40 publish 61 green works
+      - PR40 final publication gate authfix
     types:
       - completed
 
@@ -17,11 +18,12 @@ concurrency:
 
 env:
   PRIOR_RUN_ID: '31110524525'
-  SOURCE_TRIGGER_RUN_ID: '31124265098'
 
 jobs:
   publish:
-    if: github.event.workflow_run.id == 31124265098
+    if: >-
+      github.event.workflow_run.id == 31124265098 ||
+      github.event.workflow_run.id == 31121608060
     name: Publish repaired 61-work corpus to main
     runs-on: ubuntu-22.04
     timeout-minutes: 60
@@ -64,6 +66,7 @@ jobs:
           python3 scripts/assemble-pr40-green-publication.py --prior staging/prior
           python3 - <<'PY'
           import json
+          import os
           from pathlib import Path
 
           report = json.loads(
@@ -84,7 +87,7 @@ jobs:
               'esgChapters': 10,
               'excluded': ['DID', 'TEMP_SCR', 'ADD_PSA'],
               'sourceArtifactRun': 31110524525,
-              'triggerWorkflowRun': 31124265098,
+              'triggerWorkflowRun': int(os.environ['GITHUB_RUN_ID']),
           }
           Path('docs/biblia-emanus/PR40-PUBLICATION-STATUS.json').write_text(
               json.dumps(status, ensure_ascii=False, indent=2) + '\n',
