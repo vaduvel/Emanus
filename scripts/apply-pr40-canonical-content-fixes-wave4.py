@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Repair the sole remaining canonical quote-stack defect in Jeremiah 3.
+"""Repair the sole remaining canonical quote defects in Jeremiah 3.
 
-The changes are punctuation-only and assert the inherited candidate text
-exactly before rewriting. The digest follows the candidate corpus policy:
-sha256 of newline-joined verse texts.
+The changes are punctuation-only, keep every verse independently balanced,
+and assert the inherited candidate text exactly before rewriting. The digest
+follows the candidate corpus policy: sha256 of newline-joined verse texts.
 """
 from __future__ import annotations
 
@@ -23,11 +23,11 @@ REPLACEMENTS = {
     ),
     22: (
         "Întoarceți-vă, copii răzvrătiți, și vă voi ierta abaterile.” – „Iată-ne, venim la Tine, căci Tu ești DOMNUL Dumnezeul nostru.",
-        "„Întoarceți-vă, copii răzvrătiți, și vă voi ierta abaterile.” – „Iată-ne, venim la Tine, căci Tu ești DOMNUL Dumnezeul nostru.",
+        "„Întoarceți-vă, copii răzvrătiți, și vă voi ierta abaterile.” – Iată-ne, venim la Tine, căci Tu ești DOMNUL Dumnezeul nostru.",
     ),
     25: (
         "„„Să ne culcăm în rușinea noastră și să ne învelim cu ocara noastră, căci am păcătuit împotriva DOMNULUI Dumnezeului nostru, noi și părinții noștri, din tinerețea noastră și până în ziua de azi, și n-am ascultat glasul DOMNULUI Dumnezeului nostru.””",
-        "Să ne culcăm în rușinea noastră și să ne învelim cu ocara noastră, căci am păcătuit împotriva DOMNULUI Dumnezeului nostru, noi și părinții noștri, din tinerețea noastră și până în ziua de azi, și n-am ascultat glasul DOMNULUI Dumnezeului nostru.”",
+        "„Să ne culcăm în rușinea noastră și să ne învelim cu ocara noastră, căci am păcătuit împotriva DOMNULUI Dumnezeului nostru, noi și părinții noștri, din tinerețea noastră și până în ziua de azi, și n-am ascultat glasul DOMNULUI Dumnezeului nostru.”",
     ),
 }
 
