@@ -1,16 +1,6 @@
 name: Probe Qumran Text-Fabric extraction
 
 on:
-  push:
-    branches:
-      - agent/biblia-emanus-pr40-final
-    paths:
-      - 'scripts/probe-pr40-qumran-textfabric.py'
-      - '.github/workflows/probe-pr40-qumran-textfabric.yml'
-  pull_request:
-    paths:
-      - 'scripts/probe-pr40-qumran-textfabric.py'
-      - '.github/workflows/probe-pr40-qumran-textfabric.yml'
   workflow_dispatch:
 
 permissions:
@@ -18,7 +8,7 @@ permissions:
 
 concurrency:
   group: pr40-final-qumran-probe-${{ github.event_name }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   probe:
