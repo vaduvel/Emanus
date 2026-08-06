@@ -42,11 +42,18 @@ def expected_chapters() -> dict[str, int]:
     inventory = base.read_json(base.INVENTORY_PATH)
     if int(inventory.get("bookCount", 0)) != 64:
         raise RuntimeError("Historical PR40 inventory no longer contains exactly 64 works")
-    return {
+    expected = {
         str(item["bookId"]): int(item["chapterCount"])
         for item in inventory["books"]
         if str(item["bookId"]) not in EXCLUDED
     }
+
+    # The historical PR40 inventory recorded only six placeholder-era ESG
+    # divisions. The individually audited publication artifact contains ten
+    # real chapters (ESG.1–ESG.10), and its semantic audit reports 10 files,
+    # 205 units and zero blockers. Publication must follow that audited corpus.
+    expected["ESG"] = 10
+    return expected
 
 
 def copy_canonical(prior: Path, expected: dict[str, int]) -> dict[str, Any]:
