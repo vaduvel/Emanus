@@ -9,10 +9,44 @@ best-candidate selection. Set ``PR40_BOOKS`` for parallel CI shards.
 from __future__ import annotations
 
 import importlib.util
+import json
 import os
 import subprocess
 import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+CANDIDATES = ROOT / "docs" / "data" / "biblia-emanus-deuterocanon-new-translation"
+EXACT_SOURCE_CONFIRMED_WORDING = {
+    "SIR.28:20": "Căci jugul ei este un jug de fier, iar legăturile ei sunt legături de aramă.",
+}
+
+
+def apply_exact_source_confirmed_wording() -> list[str]:
+    """Apply reviewed wording after model selection, before the semantic audit."""
+    applied: list[str] = []
+    for reference, wording in EXACT_SOURCE_CONFIRMED_WORDING.items():
+        chapter_id, verse_raw = reference.split(":", 1)
+        path = CANDIDATES / f"{chapter_id}.json"
+        if not path.is_file():
+            continue
+        verse_number = int(verse_raw)
+        document = json.loads(path.read_text(encoding="utf-8"))
+        matched = False
+        for verse in document.get("verses", []):
+            if verse.get("number") == verse_number:
+                verse["text"] = wording
+                matched = True
+                break
+        if not matched:
+            raise RuntimeError(f"{reference}: verse missing from generated candidate")
+        path.write_text(
+            json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        applied.append(reference)
+    return applied
+
 
 SCRIPT = Path(__file__).with_name("translate-pr40-deuterocanon-missing.py")
 spec = importlib.util.spec_from_file_location("pr40_deuterocanon_big", SCRIPT)
@@ -60,4 +94,10 @@ subprocess.run(
         batch_size,
     ],
     check=True,
+)
+print(
+    json.dumps(
+        {"sourceConfirmedWordings": apply_exact_source_confirmed_wording()},
+        ensure_ascii=False,
+    )
 )
