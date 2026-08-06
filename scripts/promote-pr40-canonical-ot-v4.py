@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Run canonical promotion with all source and content fixes composed.
 
-The inherited candidates first receive the audited omission repairs and Psalm
-superscription normalization. The official OSHB remap then supplies Hebrew
-verse boundaries, while archive loading excludes non-canonical front matter.
+The inherited candidates first receive both audited omission-repair waves and
+Psalm superscription normalization. The official OSHB remap then supplies
+Hebrew verse boundaries, while archive loading excludes non-canonical front
+matter.
 """
 from __future__ import annotations
 
@@ -17,8 +18,11 @@ from pathlib import Path
 from types import ModuleType
 from typing import Any
 
-CONTENT_FIXES = Path(__file__).with_name("apply-pr40-canonical-content-fixes.py")
-runpy.run_path(str(CONTENT_FIXES), run_name="__main__")
+for repair_name in (
+    "apply-pr40-canonical-content-fixes.py",
+    "apply-pr40-canonical-content-fixes-wave2.py",
+):
+    runpy.run_path(str(Path(__file__).with_name(repair_name)), run_name="__main__")
 
 SCRIPT = Path(__file__).with_name("promote-pr40-canonical-ot-v3.py")
 spec = importlib.util.spec_from_file_location("canonical_v3", SCRIPT)
