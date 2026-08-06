@@ -2,7 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - "agent/biblia-explicata-vt-*"
   pull_request:
 
 jobs:
