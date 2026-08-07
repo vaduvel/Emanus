@@ -10,4 +10,4 @@ Rules:
 - publish only after every repaired document reports zero blocking issues;
 - assemble and validate the complete 64-work corpus atomically.
 
-Trigger generation: 2 — emitted after the workflow was indexed on main.
+Trigger generation: 3 — emitted after the ESG chapter-count fix (audited artifacts are authoritative for noncanonical works) — emitted after the workflow was indexed on main.
