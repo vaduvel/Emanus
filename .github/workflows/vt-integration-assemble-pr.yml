@@ -1,0 +1,107 @@
+name: VT Clean Integration PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  assemble-validate:
+    if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+
+      - name: Fetch main and final VT source
+        run: |
+          git fetch origin main:refs/remotes/origin/main
+          git fetch origin agent/biblia-explicata-vt-complet:refs/remotes/origin/agent/biblia-explicata-vt-complet
+
+      - name: Assemble VT-only tree
+        run: python3 scripts/assemble-vt-clean.py
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify 39/39 and publication runtime
+        run: |
+          pnpm check:vt-explained
+          pnpm check:vt-publication
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Production build
+        run: pnpm build
+
+      - name: Guard clean VT scope
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+
+          changed = subprocess.check_output(['git', 'diff', '--name-only', 'origin/main'], text=True).splitlines()
+          tokens = (
+              'matei', 'marcu', 'luca', 'ioan', 'fapte', 'romani', 'corinteni',
+              'galateni', 'efeseni', 'filipeni', 'coloseni', 'tesaloniceni',
+              'timotei', 'filimon', 'evrei', 'iacov', 'petru', 'apocalipsa',
+          )
+          forbidden = []
+          for path in changed:
+              low = path.lower()
+              name = Path(low).name
+              if low.startswith('.research/marcu-poonen/'):
+                  forbidden.append(path)
+              elif (
+                  low.startswith('packages/shared/src/bible/')
+                  or low.startswith('.research/')
+                  or low.startswith('docs/biblia-explicata/')
+              ) and any(name.startswith(token) for token in tokens):
+                  forbidden.append(path)
+
+          if forbidden:
+              raise SystemExit('Fișiere NT detectate în integrarea VT:\n' + '\n'.join(forbidden))
+
+          print(f'Guard VT OK: {len(changed)} fișiere față de main; zero fișiere NT interzise.')
+          PY
+          git diff --check
+
+      - name: Commit only after all gates pass
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            .research/poonen-through-the-bible-OT \
+            docs/biblia-explicata \
+            packages/shared/src/bible \
+            packages/shared/package.json \
+            package.json \
+            scripts/check-vt-explained-coverage.py \
+            scripts/check-vt-publication-runtime.mjs \
+            scripts/materialize-vt-overlay-texts.py \
+            scripts/check-overlay-book.py \
+            scripts/check-rut.py \
+            scripts/check-1-samuel.py \
+            scripts/check-2-samuel.py \
+            scripts/check-1-imparati.py \
+            scripts/check-1-imparati-book.py \
+            scripts/check-2-imparati-overlay.py
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'Arborele VT curat este deja asamblat.'
+            exit 0
+          fi
+          git commit -m "feat(bible): assemble clean explained OT integration"
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
