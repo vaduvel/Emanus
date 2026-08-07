@@ -2,13 +2,26 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 import re
+import sys
 import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "data" / "biblia-emanus"
 NT = {"MAT","MRK","LUK","JHN","ACT","ROM","1CO","2CO","GAL","EPH","PHP","COL","1TH","2TH","1TI","2TI","TIT","PHM","HEB","JAS","1PE","2PE","1JN","2JN","3JN","JUD","REV"}
+
+
+def load_editorial_gate():
+    path = ROOT / "scripts" / "nt_editorial_gate.py"
+    spec = importlib.util.spec_from_file_location("nt_editorial_gate", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("Nu pot încărca poarta editorială NT")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
 
 FORBIDDEN = [
     (re.compile(r"\b(?:s|n|l|i|v|m|a)['’](?:a|au|am|ai|ar|as|ați|ati)\b", re.I), "apostrof în loc de cratimă"),
@@ -69,9 +82,11 @@ def chapters():
 def main() -> int:
     errors: list[str] = []
     verse_map = {}
+    chapter_map = {}
     chapter_count = verse_count = 0
     for _, data in chapters():
         chapter_count += 1
+        chapter_map[f"{data['bookId']}.{data['chapter']}"] = data
         for verse in data["verses"]:
             verse_count += 1
             ref = f"{data['bookId']}.{data['chapter']}.{verse['number']}"
@@ -91,6 +106,11 @@ def main() -> int:
             for phrase, detail in BAD_PHRASES.items():
                 if re.search(rf"(?<!\w){re.escape(phrase.lower())}(?!\w)", lower):
                     errors.append(f"{ref}: {detail}: {text}")
+
+    gate = load_editorial_gate()
+    for issue in gate.scan_nt_quality(chapter_map):
+        text = verse_map.get(issue.reference, ("", {}))[0]
+        errors.append(f"{issue.reference}: [{issue.code}] {issue.detail}: {text}")
 
     mat = verse_map.get("MAT.6.13", ("", {}))[0].lower()
     if any(x in mat for x in ("căci a ta este împărăția", "puterea și slava", "amin")):

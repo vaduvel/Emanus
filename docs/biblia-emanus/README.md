@@ -9,8 +9,9 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 - sunt publicate 74 de capitole și 2.191 de versete;
 - explicațiile Emanus sunt păstrate separat de textul biblic;
 - textul existent RCCV nu este modificat de această ramură;
-- aprobarea umană nu este obligatorie;
-- un capitol devine public numai după auditul AI complet, fixarea surselor și trecerea porții descrise în `AUTOMATED-PUBLICATION.md`.
+- aprobarea AI la nivel de capitol nu este suficientă pentru Noul Testament;
+- Noul Testament rămâne nepublicabil până când toate cele 7.941 de versete au dovezi editoriale individuale în `NT-EDITORIAL-APPROVAL.json`;
+- un capitol NT devine public numai după fixarea surselor, revizia editorială umană per-verset și trecerea porții descrise în `AUTOMATED-PUBLICATION.md`.
 
 ## Surse de lucru
 
@@ -43,15 +44,18 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 7. se verifică omisiunile, adaosurile și distanța de copyright;
 8. se rezolvă toate notele și variantele textuale critice;
 9. se recalculează comparațiile deterministe din snapshoturile fixate;
-10. auditul AI este legat prin SHA-256 de textul și sursele exacte;
-11. când toate controalele sunt `approved`, capitolul trece direct la `published` și `public: true`.
+10. auditul AI este legat prin SHA-256 de textul și sursele exacte, dar rămâne dovadă de proces, nu de corectitudine semantică;
+11. pentru NT, un reviewer editorial uman completează registrul per-verset: digesturi ale surselor, ancore grecești/românești și justificarea individuală;
+12. numai când registrul complet și toate controalele sunt `approved`, capitolul NT poate trece la `published` și `public: true`.
 
 ## Licență
 
 Biblia Emanus este pregătită pentru publicare sub `CC BY 4.0`, cu atribuirea proiectului și a surselor relevante.
 
+Trecerea porții demonstrează trasabilitatea procesului editorial declarat; nu este o certificare a infailibilității textuale, teologice sau confesionale.
+
 ## Progres curent
 
-`docs/data/biblia-emanus/` conține **Geneza 1–50 și Iosua 1–24: 74 de capitole și 2.191 de versete**. Fiecare capitol are sursele exacte, auditul AI, etaloanele și notele editoriale pentru termenii sau variantele dificile.
+`docs/data/biblia-emanus/` conține 471 de capitole înregistrate, inclusiv corpusul NT de 27 de cărți, 260 de capitole și 7.941 de versete. Prezența sa în repository nu înseamnă publicare: până la repararea textului și la registrul editorial complet, NT este doar un corpus în revizie, chiar dacă metadate istorice îl marchează altfel.
 
-Geneza și Iosua sunt `published` după trecerea porții automate 2.0. Următorul val editorial este Exod–Deuteronom, aplicat numai după stabilizarea textelor livrate de agenții care lucrează la acele cărți.
+Geneza și Iosua sunt `published` după trecerea porții automate 2.0. Orice extindere a publicării NT se face numai după stabilizarea textului, evidența per-verset și verificarea tuturor porților.

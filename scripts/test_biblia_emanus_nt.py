@@ -620,6 +620,16 @@ class BibliaEmanusNewTestamentTests(unittest.TestCase):
                 {"GEN": expected_hashes["ot"], "MAT": expected_hashes["nt"]},
             )
 
+            with self.assertRaisesRegex(
+                validator.ValidationError, "registrul editorial per-verset aprobat"
+            ):
+                seal.seal_chapter(
+                    validator,
+                    {"bookId": "MAT", "audit": {}},
+                    source_data,
+                    "fixture-engine",
+                )
+
             sealed = seal.seal_chapter(
                 validator,
                 {
@@ -638,6 +648,7 @@ class BibliaEmanusNewTestamentTests(unittest.TestCase):
                 },
                 source_data,
                 "fixture-engine",
+                editorial_approved=True,
             )
             self.assertEqual(sealed["audit"]["schemaVersion"], 2)
             self.assertEqual(sealed["audit"]["sourceSnapshotSha256"], expected_hashes["nt"])
@@ -853,6 +864,7 @@ class BibliaEmanusNewTestamentTests(unittest.TestCase):
                 patch.object(validator, "validate_onomastics", return_value=[]),
                 patch.object(validator, "validate_source_coverage", return_value=None),
                 patch.object(validator, "validate_chapter", side_effect=fake_validate_chapter),
+                patch.object(validator, "validate_new_testament_editorial_gate", return_value=None),
                 redirect_stdout(stdout),
                 redirect_stderr(stderr),
             ):

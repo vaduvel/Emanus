@@ -1,6 +1,8 @@
 # Poarta automată de publicare — Biblia Emanus
 
-Biblia Emanus nu cere aprobarea umană a fiecărui capitol. Un capitol poate deveni `published` numai după un audit AI complet și după verificările deterministe executate din surse fixate.
+Un audit AI la nivel de capitol nu este, singur, dovada unei revizii semantice verset-cu-verset. Pentru Noul Testament, un capitol nu poate deveni `published` numai pe baza unor metadate AI sau a unor declarații repetate între capitole.
+
+Noul Testament cere registrul `NT-EDITORIAL-APPROVAL.json`: o dovadă individuală pentru fiecare verset cu text principal, legată de textul românesc exact, de SBLGNT, WEBU și etaloanele românești fixate. Registrul trebuie aprobat de un reviewer editorial uman identificat. Lipsa, incompletitudinea, un digest inconsistent sau justificările șablonate blochează validatorul, sigilarea și materializarea pentru aplicație.
 
 ## Autoritatea textului
 
@@ -12,14 +14,15 @@ Un etalon mai scurt nu justifică scurtarea originalului. Toate propozițiile, r
 
 1. Sursele WEBU și WLC/SBLGNT sunt fixate într-un snapshot cu SHA-256.
 2. AI redactează independent traducerea românească.
-3. AI verifică fiecare verset în limba-sursă și documentează domeniul reviziei.
+3. AI poate propune și verifica fiecare verset în limba-sursă, dar rezultatul rămâne ciornă până la revizia editorială individuală.
 4. AI verifică limba română, terminologia, numele și continuitatea discursului.
 5. AI verifică implicațiile teologice și canonice fără a elimina ambiguitățile reale.
 6. Sensul este triangulat cu minimum trei etaloane românești, inclusiv unul din familia Cornilescu.
 7. Motorul recalculează acoperirea, versificația, raporturile de lungime, convergența lexicală, omisiunile evidente și riscul de copiere sistematică.
 8. Toate variantele și notele `reviewRequired` trebuie să fie `resolved` cu motivare.
-9. Auditul este legat de textul exact și de snapshotul exact prin SHA-256.
-10. CI reexecută toate controalele la fiecare schimbare.
+9. Pentru fiecare verset NT, registrul editorial fixează referințele și digesturile SBLGNT/WEBU/etaloanelor, ancorele grecești și românești, plus justificarea individuală a deciziei.
+10. Registrul este legat de textul exact și de snapshoturile exacte prin SHA-256; o modificare a textului invalidează aprobarea.
+11. CI reexecută toate controalele la fiecare schimbare.
 
 ## Etaloane
 
@@ -43,6 +46,8 @@ Un capitol `approved` sau `published` trebuie să conțină:
 - hashul snapshotului-sursă;
 - identificarea agentului AI și a metodei de audit.
 
+Pentru Noul Testament, acestea sunt condiții necesare, nu suficiente. În plus, trebuie să existe exact o intrare de aprobare editorială pentru fiecare verset cu text principal. O intrare conține digestul textului publicat, maparea și digesturile surselor fixate, consultația externă NTR, ancorele verificabile și justificări individuale. Justificările duplicate sau declarațiile generale nu sunt acceptate ca substitut.
+
 Schimbarea unui singur caracter din text invalidează sigiliul și blochează CI până la refacerea auditului.
 
 ## Comenzi
@@ -58,16 +63,19 @@ Utilitarul de sigilare nu inventează revizia semantică. El publică numai capi
 
 ## Regula de publicare
 
-Manifestul păstrează:
+Manifestul păstrează pentru Noul Testament:
 
 ```json
 {
-  "humanApprovalRequired": false,
-  "publishWhenAllChecksApproved": true
+  "newTestamentEditorialApproval": {
+    "required": true,
+    "reviewerType": "human",
+    "method": "verse-by-verse-source-and-romanian-benchmark"
+  }
 }
 ```
 
-După trecerea tuturor porților, capitolul devine:
+După trecerea tuturor porților, inclusiv registrul editorial individual, capitolul devine:
 
 ```json
 {
@@ -75,6 +83,8 @@ După trecerea tuturor porților, capitolul devine:
   "public": true
 }
 ```
+
+Poarta nu pretinde că demonstrează infailibilitatea teologică a unei traduceri. Ea demonstrează doar trasabilitatea și completitudinea procesului editorial declarat; evaluarea academică sau confesională externă rămâne distinctă.
 
 ## Licență
 

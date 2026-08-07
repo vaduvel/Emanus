@@ -120,6 +120,13 @@ class BibliaEmanusNtMaterializerTests(unittest.TestCase):
             ):
                 materializer.build_payload(root, versification)
 
+    def test_current_nt_cannot_be_materialized_without_editorial_register(self) -> None:
+        with self.assertRaisesRegex(
+            materializer.MaterializationError,
+            "registrul de aprobare per-verset",
+        ):
+            materializer.build_payload()
+
 
 if __name__ == "__main__":
     unittest.main()

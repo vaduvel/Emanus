@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import re
 import sys
@@ -248,6 +249,7 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Path]:
         "pinned-romanian-benchmark-comparison",
         "deterministic-verse-integrity",
         "audit-text-digest",
+        "nt-editorial-evidence-register",
     }
     if not isinstance(required_checks, list) or not mandatory_checks.issubset(required_checks):
         fail("manifest.json: lista requiredChecks este incompletă")
@@ -256,6 +258,24 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Path]:
         fail("manifest.json: policyDocument nu corespunde politicii aprobate")
     if not (DATA_DIR / policy_document).resolve().is_file():
         fail("manifest.json: documentul politicii de publicare lipsește")
+    nt_editorial_gate = gate.get("newTestamentEditorialApproval")
+    if not isinstance(nt_editorial_gate, dict):
+        fail("manifest.json: lipsește poarta editorială individuală pentru Noul Testament")
+    expected_nt_editorial_gate = {
+        "required": True,
+        "registry": "../../biblia-emanus/NT-EDITORIAL-APPROVAL.json",
+        "schema": "../../biblia-emanus/NT-EDITORIAL-APPROVAL.schema.json",
+        "reviewerType": "human",
+        "method": "verse-by-verse-source-and-romanian-benchmark",
+    }
+    for key, value in expected_nt_editorial_gate.items():
+        if nt_editorial_gate.get(key) != value:
+            fail(
+                "manifest.json: newTestamentEditorialApproval."
+                f"{key} trebuie să fie {value!r}"
+            )
+    if not (DATA_DIR / nt_editorial_gate["schema"]).resolve().is_file():
+        fail("manifest.json: schema registrului editorial NT lipsește")
 
     sources = manifest.get("sources")
     if not isinstance(sources, dict):
@@ -1609,6 +1629,40 @@ def validate_chapter(
     return chapter_id, expected_verses, note_count, status, compared_verses
 
 
+def validate_new_testament_editorial_gate(
+    source_data: dict[str, Any],
+    ledger_chapters: dict[str, dict[str, Any]],
+) -> None:
+    """Require individual editorial evidence before any NT can be approved.
+
+    Chapter-level AI metadata is deliberately not passed as semantic evidence:
+    it can describe a process, but cannot establish that the 7,941 individual
+    translations were inspected.  The dedicated gate verifies a source-bound
+    record for every verse instead.
+    """
+    path = ROOT / "scripts" / "nt_editorial_gate.py"
+    spec = importlib.util.spec_from_file_location("nt_editorial_gate", path)
+    if spec is None or spec.loader is None:
+        fail("nu pot încărca poarta editorială a Noului Testament")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    bound_source_data = module.bind_source_reference_mapper(
+        source_data,
+        lambda lock_id, book_id, chapter, verse: source_references_for_target(
+            lock_id, book_id, chapter, verse, source_data["rules"]
+        ),
+    )
+    try:
+        module.validate_nt_editorial_approval(
+            DATA_DIR,
+            bound_source_data,
+            ledger_chapters,
+        )
+    except module.EditorialGateError as error:
+        fail(str(error))
+
+
 def chapter_sort_key(path: Path) -> tuple[int, int]:
     try:
         book_id, chapter_text = path.stem.rsplit(".", 1)
@@ -1697,6 +1751,8 @@ def main() -> int:
             }
             if nt_status != expected_nt_status:
                 fail("manifest.json: starea Noului Testament nu corespunde corpusului validat")
+            if any(item[3] in {"approved", "published"} for item in nt_validated):
+                validate_new_testament_editorial_gate(source_data, ledger_chapters)
 
     except ValidationError as error:
         print(f"[biblia-emanus] EROARE: {error}", file=sys.stderr)

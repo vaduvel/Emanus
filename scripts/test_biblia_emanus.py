@@ -99,6 +99,15 @@ class BibliaEmanusValidatorTests(unittest.TestCase):
                 "agent-test",
             )
 
+    def test_published_nt_requires_individual_editorial_register(self) -> None:
+        with self.assertRaisesRegex(
+            validator.ValidationError, "metadatele de audit AI la nivel de capitol nu sunt suficiente"
+        ):
+            validator.validate_new_testament_editorial_gate(
+                self.source_data,
+                self.ledger,
+            )
+
     def test_seal_preserves_compact_json_style(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "chapter.json"
