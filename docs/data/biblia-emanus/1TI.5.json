@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1TI.5.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1TI",
+        "biblia-libera/1TI.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,23 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1ti-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 25 de versete pentru a elimina trunchierile, acordurile defectuoase, calcurile englezești și formulările care modificau sensul.",
+        "În 5:4–16 au fost refăcute relațiile familiale, condițiile de înscriere și succesiunea logică a îndemnurilor.",
+        "În 5:17–25 au fost distinse prezbiterii de persoanele în vârstă și s-au corectat citatele, persoanele și construcțiile gramaticale."
       ]
     },
     "theologicalContext": {
@@ -123,128 +137,203 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație, fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:96968595ed1602b39efc8a1c4cece90d01cf7904f002f4f7aad8b206d8b9c82c",
-    "contentDigest": "sha256:1a82c987e1a8a9fe5a233ec0cd1049900d05211daf665074e78693c288f63cf5"
+    "textDigest": "sha256:056501188e317b9f19bd692ca1ec073fe89f2520dc80c05af34cfc2967090c8c",
+    "contentDigest": "sha256:daf49aea8f114b9e1f21ee07ca9e2b23cd0baabf82dd2b100f7d0adcfc66ef83"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Nu mustra pe un om mai în vârstă, ci sfătuiește-l ca pe un tată; pe cei mai tineri ca pe;"
+      "text": "Nu-l dojeni aspru pe un bărbat mai în vârstă, ci îndeamnă-l ca pe un tată; pe cei mai tineri, ca pe frați;"
     },
     {
       "number": 2,
-      "text": "femeile mai în vârstă ca mame; cele mai tinere ca surori, cu toată puritatea."
+      "text": "pe femeile mai în vârstă, ca pe mame; pe cele mai tinere, ca pe surori, cu deplină curăție."
     },
     {
       "number": 3,
-      "text": "Onorează văduvele care sunt într-adevăr văduve."
+      "text": "Acordă cinste văduvelor care sunt cu adevărat văduve."
     },
     {
       "number": 4,
-      "text": "Dar, dacă o văduvă are copii sau nepoți, să învețe mai întâi să manifeste evlavie față de propria familie și să-și răsplătească părinții, deoarece acest lucru este acceptabil în ochii lui Dumnezeu."
+      "text": "Dar, dacă vreo văduvă are copii sau nepoți, aceștia să învețe mai întâi să-și dovedească evlavia față de propria familie și să-și răsplătească părinții, căci aceasta este plăcut înaintea lui Dumnezeu."
     },
     {
       "number": 5,
-      "text": "Acum, ea, care este văduvă într-adevăr și pustie, are speranța ei stabilit pe Dumnezeu și continuă în cereri și rugăciuni noapte și zi."
+      "text": "Iar cea care este cu adevărat văduvă și a rămas singură și-a pus nădejdea în Dumnezeu și stăruie în cereri și rugăciuni zi și noapte."
     },
     {
       "number": 6,
-      "text": "Dar cea care se dăruiește plăcerii este moartă cât trăiește."
+      "text": "Dar cea care se dedă plăcerilor este moartă, deși trăiește."
     },
     {
       "number": 7,
-      "text": "Poruncește aceste lucruri, ca să fie fără repro."
+      "text": "Poruncește și aceste lucruri, ca să fie fără reproș."
     },
     {
       "number": 8,
-      "text": "Dacă cineva nu se îngrijește de ai săi și mai ales de ai săi, atunci el tăgăduiește credința și este mai rău decât un necredincios."
+      "text": "Dacă cineva nu se îngrijește de cei ai lui, mai ales de membrii casei sale, a tăgăduit credința și este mai rău decât un necredincios."
     },
     {
       "number": 9,
-      "text": "Nimeni să nu se înroleze ca văduvă sub șaizeci de ani, după ce a fost soția unui singur om,"
+      "text": "O văduvă să fie trecută pe listă numai dacă are cel puțin șaizeci de ani și a fost soția unui singur bărbat,"
     },
     {
       "number": 10,
-      "text": "Fiind adeverită pentru fapte bune; dacă a crescut copii, dacă a găzduit pe străini, dacă a spălat picioarele sfinților, dacă a ușurat pe cei nenorociți, dacă a urmat fiecare lucrare bună."
+      "text": "fiind cunoscută pentru fapte bune: dacă a crescut copii, dacă a primit străini, dacă a spălat picioarele sfinților, dacă i-a ajutat pe cei aflați în necaz și dacă s-a devotat oricărei lucrări bune."
     },
     {
       "number": 11,
-      "text": "Dar refuză văduvele mai tinere, pentru că, atunci când au crescut desfrânate împotriva lui Hristos, ei doresc să se căsătorească,"
+      "text": "Dar refuză să înscrii văduvele mai tinere, fiindcă, atunci când dorințele lor le îndepărtează de Hristos, vor să se căsătorească,"
     },
     {
       "number": 12,
-      "text": "condamn, pentru că ei au respins prima lor făgăduință."
+      "text": "atrăgându-și judecata, fiindcă și-au încălcat primul angajament."
     },
     {
       "number": 13,
-      "text": "De asemenea, ei învață să fie leneși, mergînd din casă în casă, și nu numai leneși, ci și bârfe și trufași, spunând lucruri pe care n-ar trebui să le spună."
+      "text": "În același timp, deprind și lenea, umblând din casă în casă; nu sunt doar leneșe, ci și vorbărețe și iscoditoare, spunând lucruri care nu se cuvin."
     },
     {
       "number": 14,
-      "text": "De aceea doresc ca văduvele mai tinere să se căsătorească, să aibă copii, să conducă casa și să nu dea prilej adversarului pentru insulte."
+      "text": "Așadar, doresc ca văduvele mai tinere să se căsătorească, să nască copii, să conducă gospodăria și să nu dea potrivnicului niciun prilej de defăimare."
     },
     {
       "number": 15,
-      "text": "Căci unii s-au întors deja după Satana."
+      "text": "Căci unele s-au abătut deja, urmându-l pe Satana."
     },
     {
       "number": 16,
-      "text": "Dacă un bărbat sau o femeie care crede are văduve, să le ușureze și să nu fie împovărată adunarea, ca să-i ușureze pe cei ce sunt văduve."
+      "text": "Dacă o credincioasă are văduve, să le ajute, iar adunarea să nu fie împovărată, ca să le poată ajuta pe cele care sunt cu adevărat văduve."
     },
     {
       "number": 17,
-      "text": "Bătrânii care guvernează bine să fie socotiți demni de dublă onoare, în special cei care lucrează în cuvânt și în învățătură."
+      "text": "Prezbiterii care conduc bine să fie socotiți vrednici de o cinste dublă, mai ales cei care se ostenesc în cuvânt și în învățătură."
     },
     {
       "number": 18,
-      "text": "Căci Scriptura spune: Să nu legi botniță boului când calcă în picioare grânele.„ Și: Vrednic este lucrătorul de plata lui.”"
+      "text": "Căci Scriptura spune: „Să nu pui botniță boului când treieră.” Și: „Vrednic este lucrătorul de plata lui.”"
     },
     {
       "number": 19,
-      "text": "Nu primi o acuzație împotriva unui bătrân, cu excepția a doi sau trei martori."
+      "text": "Nu primi o acuzație împotriva unui prezbiter decât pe baza a doi sau trei martori."
     },
     {
       "number": 20,
-      "text": "Cei ce păcătuiesc, mustră înaintea tuturor, ca și ceilalți să se teamă."
+      "text": "Pe cei care păcătuiesc, mustră-i înaintea tuturor, ca și ceilalți să se teamă."
     },
     {
       "number": 21,
-      "text": "Îți poruncesc înaintea lui Dumnezeu, a Domnului Isus Hristos și a îngerilor aleși să păzești aceste lucruri fără prejudecăți, fără să faci nimic prin părtinire."
+      "text": "Te însărcinez solemn, înaintea lui Dumnezeu, a lui Hristos Isus și a îngerilor aleși, să păzești aceste lucruri fără prejudecată, nefăcând nimic din părtinire."
     },
     {
       "number": 22,
-      "text": "Nu pune mâna pe nimeni în grabă. Nu fi un participant la păcatele altor oameni. Păstrează-te curat."
+      "text": "Nu pune mâinile peste nimeni în grabă și nu fi părtaș la păcatele altora; păstrează-te curat."
     },
     {
       "number": 23,
-      "text": "Nu mai bea doar apă, ci folosește puțin vin de dragul stomacului și al infirmităților tale frecvente."
+      "text": "Nu mai bea numai apă, ci folosește puțin vin pentru stomac și pentru desele tale îmbolnăviri."
     },
     {
       "number": 24,
-      "text": "Unele păcate ale oamenilor sunt evidente, precedîndu-le la judecată, iar altele urmează și mai tîrziu."
+      "text": "Păcatele unor oameni sunt evidente, mergând înaintea lor la judecată, iar pe alții îi urmează."
     },
     {
       "number": 25,
-      "text": "În același mod, există, de asemenea, lucrări bune care sunt evidente, și cele care sunt altfel nu pot fi ascunse."
+      "text": "Tot astfel, și faptele bune sunt evidente, iar cele care sunt altfel nu pot rămâne ascunse."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: ἀπόδεκτον / καλὸν καὶ ἀπόδεκτον",
+      "decision": "„căci aceasta este plăcut înaintea lui Dumnezeu”",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă καλὸν («bun») înainte de «acceptabil/plăcut»."
+      ],
+      "reason": "SBLGNT are numai ἀπόδεκτον; româna nu introduce adjectivul suplimentar al TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "καταστρηνιάσωσιν τοῦ Χριστοῦ",
+      "decision": "„când dorințele lor le îndepărtează de Hristos”",
+      "alternatives": [
+        "O redare literalistă de tipul «devin desfrânate împotriva lui Hristos» este nefirească în română și restrânge nejustificat sensul verbului."
+      ],
+      "reason": "Verbul descrie dorințe care intră în tensiune cu legătura lor față de Hristos; redarea păstrează această tensiune fără o explicație doctrinară suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul a fost verificat direct în SBLGNT-1TI și comparativ cu WEBP, BTF, Cornilescu 1924 și Biblia Liberă."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală SBLGNT/TR: εἴ τις πιστὴ / εἴ τις πιστὸς ἢ πιστὴ",
+      "decision": "„Dacă o credincioasă are văduve”",
+      "alternatives": [
+        "TR-1TI din snapshot extinde formula la «dacă vreun credincios sau vreo credincioasă»."
+      ],
+      "reason": "SBLGNT are forma feminină πιστὴ; textul principal păstrează destinatara la feminin și nu importă extensia TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 17,
+      "term": "πρεσβύτεροι",
+      "decision": "„Prezbiterii care conduc bine”",
+      "alternatives": [
+        "În 5:1 termenul înrudit desemnează un bărbat mai în vârstă; aici conducerea și lucrarea în cuvânt și învățătură indică rolul comunitar."
+      ],
+      "reason": "«Prezbiterii» distinge rolul comunitar din 5:17–19 de persoanele mai în vârstă din 5:1–2, fără a adăuga o structură instituțională modernă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa și contextul SBLGNT-1TI au fost confruntate direct; termenul rămâne consecvent cu 1TI.4 și TIT.1 din corpus."
+    },
+    {
+      "verse": 21,
+      "term": "variantă textuală SBLGNT/TR: Χριστοῦ Ἰησοῦ / κυρίου Ἰησοῦ Χριστοῦ",
+      "decision": "„a lui Hristos Isus”",
+      "alternatives": [
+        "TR-1TI din snapshot are «a Domnului Isus Hristos»."
+      ],
+      "reason": "SBLGNT numește «Hristos Isus» fără titlul κυρίου; româna urmează această lectură și păstrează formula solemnă a însărcinării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 23,
+      "term": "variantă textuală SBLGNT/TR: τὸν στόμαχον / τὸν στόμαχόν σου",
+      "decision": "„pentru stomac și pentru desele tale îmbolnăviri”",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă σου («tău») după «stomac»."
+      ],
+      "reason": "SBLGNT nu are pronumele posesiv după στόμαχον; formularea românească păstrează diferența fără a forța o construcție nefirească.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 25,
+      "term": "variantă textuală SBLGNT/TR: ἔργα τὰ καλὰ … πρόδηλα / καλὰ ἔργα … πρόδηλά ἐστιν",
+      "decision": "„faptele bune sunt evidente”",
+      "alternatives": [
+        "TR-1TI din snapshot inversează ordinea substantivului și adjectivului și adaugă ἐστίν («sunt»)."
+      ],
+      "reason": "Ordinea greacă nu produce o diferență de sens în română; verbul copulativ este necesar idiomatic, fără a reproduce adaosul TR ca variantă distinctă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
