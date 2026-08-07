@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă: Biblia Emanus SNG, 8 capitole; nu edita manual.
+// Sursă de lucru: Biblia Emanus; SNG, 8 capitole; nu edita manual.
 
 export const CANTAREA_CANTARILOR_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [

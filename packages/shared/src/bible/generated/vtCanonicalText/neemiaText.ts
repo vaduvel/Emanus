@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă: Biblia Emanus NEH, 13 capitole; nu edita manual.
+// Sursă de lucru: Biblia Emanus; NEH, 13 capitole; nu edita manual.
 
 export const NEEMIA_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [

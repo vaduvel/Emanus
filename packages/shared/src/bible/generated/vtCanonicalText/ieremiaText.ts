@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă: Biblia Emanus JER, 52 capitole; nu edita manual.
+// Sursă de lucru: Biblia Emanus; JER, 52 capitole; nu edita manual.
 
 export const IEREMIA_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [

@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă: Biblia Emanus JDG, 21 capitole; nu edita manual.
+// Sursă de lucru: Biblia Emanus; JDG, 21 capitole; nu edita manual.
 
 export const JUDECATORI_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [

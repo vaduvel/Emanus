@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă: Biblia Emanus EST, 10 capitole; nu edita manual.
+// Sursă de lucru: Biblia Emanus; EST, 10 capitole; nu edita manual.
 
 export const ESTERA_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [

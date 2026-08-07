@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă: Biblia Emanus LAM, 5 capitole; nu edita manual.
+// Sursă de lucru: Biblia Emanus; LAM, 5 capitole; nu edita manual.
 
 export const PLANGERILE_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [
