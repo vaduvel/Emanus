@@ -9,7 +9,7 @@
 - fiecare carte este prezentă;
 - fiecare capitol este prezent;
 - fiecare interval de versete al celor 29 de cărți overlay este acoperit de cel puțin o explicație;
-- **niciun capitol overlay nu mai poate intra în registry-ul final cu `units: []`; poarta de runtime îl respinge înainte de compoziție**;
+- niciun capitol overlay nu mai poate intra în registry-ul final cu `units: []`; poarta de runtime îl respinge înainte de compoziție;
 - unitățile doctrinare existente din Zac Poonen/CFC sunt păstrate;
 - intervalele pe care Poonen nu le dezvoltă suficient primesc numai un overview textual/narativ, fără doctrină, tipologie sau aplicație inventată;
 - toate materialele noi rămân `in_review` până la revizia editorială finală și integrarea în `main`.
@@ -142,7 +142,7 @@ Materialul Emanus este formulat în propriile cuvinte și păstrează trasabilit
 
 ### 3. Explicație textuală de completare — Emanus
 
-Când Poonen nu dezvoltă separat un capitol sau un interval, sistemul **nu inventează doctrina care lipsește**.
+Când Poonen nu dezvoltă separat un capitol sau un interval, sistemul nu inventează doctrina care lipsește.
 
 Intervalul primește un overview textual care spune ce se întâmplă sau ce afirmă pasajul însuși. Aceste unități au:
 
@@ -247,7 +247,7 @@ Porțile verifică:
 - cele 10 cărți `legacy-full`;
 - 29 de overlay-uri complete;
 - 637/637 capitole overlay;
-- **zero capitole fără explicație directă înainte de completarea intervalelor**;
+- zero capitole fără explicație directă înainte de completarea intervalelor;
 - acoperirea intervalelor de versete;
 - toate materialele overlay `in_review`;
 - sursa fiecărei unități și separarea `exposition` / `textual-overview`;
@@ -272,7 +272,7 @@ Pe head-ul release candidate, următoarele fluxuri trebuie să fie simultan verz
 
 ## Ce nu înseamnă „terminat”
 
-`39/39 full` descrie **acoperirea conținutului Bibliei explicate**, nu aprobarea finală de publicare.
+`39/39 full` descrie acoperirea conținutului Bibliei explicate, nu aprobarea finală de publicare.
 
 Înainte de publicarea efectivă în produs rămân deliberat:
 
