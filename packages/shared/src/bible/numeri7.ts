@@ -111,7 +111,7 @@ export const NUMERI_7 = numeriChapter({
       teaching: teaching(
         "Ultimul verset al celui mai lung capitol din Numeri este și unul dintre cele mai intime din toată Scriptura: „când Moise intra în Cortul Întâlnirii ca să vorbească cu DOMNUL, auzea Glasul vorbindu-i de pe capacul ispășirii... dintre cei doi heruvimi”.",
         "Toate darurile, toate jertfele, toate rânduielile capitolelor anterioare duc spre acest singur lucru: un loc în care Dumnezeu vorbește cu omul, față către față, de pe locul acoperirii păcatului. Nu de pe un tron depărtat, ci de pe chiar capacul care acoperea Mărturia, dintre cei doi heruvimi care străjuiau sfințenia Lui.",
-        "Acest verset încheie întreg parcursul de la Exod 25:22, unde DOMNUL făgăduise pentru întâia dată: „acolo Mă voi întâlni cu tine și îiți voi vorbi”. După tot ce a fost construit, uns, sfințit, numit și rânduit, făgăduința s-a împlinit întocmai: Dumnezeu vorbește cu adevărat cu poporul Său, prin Moise, din chiar mijlocul taberei.",
+        "Acest verset încheie întreg parcursul de la Exod 25:22, unde DOMNUL făgăduise pentru întâia dată: „acolo Mă voi întâlni cu tine și îți voi vorbi”. După tot ce a fost construit, uns, sfințit, numit și rânduit, făgăduința s-a împlinit întocmai: Dumnezeu vorbește cu adevărat cu poporul Său, prin Moise, din chiar mijlocul taberei.",
       ),
       words: [
         {
@@ -128,6 +128,6 @@ export const NUMERI_7 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să aduc darul meu cu aceeași credincioșie cu care l-a adus Efraim, cel mai mic, ca și Iuda, cel mai mare.\n\nDă-mi răbdarea de a primi darul altuia fără să-l compar cu al meu și fără să mă grăbesc să trec la următorul.\n\nȚine-mă aproape de locul ispășirii, unde Glasul Tău vorbește însotit de mila Ta, nu de judecata pe care o merit.\n\nȘi mulțumescu-Ți că vrei să vorbești cu poporul Tău, așa cum ai vorbit cu Moise, din mijlocul taberei. Amin.",
+    "Doamne, învață-mă să aduc darul meu cu aceeași credincioșie cu care l-a adus Efraim, cel mai mic, ca și Iuda, cel mai mare.\n\nDă-mi răbdarea de a primi darul altuia fără să-l compar cu al meu și fără să mă grăbesc să trec la următorul.\n\nȚine-mă aproape de locul ispășirii, unde Glasul Tău vorbește însoțit de mila Ta, nu de judecata pe care o merit.\n\nȘi mulțumesc-Ți că vrei să vorbești cu poporul Tău, așa cum ai vorbit cu Moise, din mijlocul taberei. Amin.",
   status: NUMERI_STATUSES[7],
 })

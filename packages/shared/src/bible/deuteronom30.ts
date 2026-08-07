@@ -14,7 +14,7 @@ export const DEUTERONOM_30 = deuteronomChapter({
   literaryContext:
     "Acest capitol încheie secțiunea de legământ începută în 27-29, transformând avertismentul sumbru al blestemelor într-o speranță concretă de restaurare și într-un apel personal direct, pregătind trecerea către desemnarea lui Iosua din capitolul 31.",
   historicalContext:
-    "Promisiunea tăierii împrejur a inimii (v.6) anticipează tema legământului nou din Ieremia 31 și Ezechiel 36 — restaurarea nu depinde doar de efortul uman de asculatare, ci de o lucrare transformatoare pe care DOMNUL însuși o înfăptuiește în inima poporului.",
+    "Promisiunea tăierii împrejur a inimii (v.6) anticipează tema legământului nou din Ieremia 31 și Ezechiel 36 — restaurarea nu depinde doar de efortul uman de ascultare, ci de o lucrare transformatoare pe care DOMNUL însuși o înfăptuiește în inima poporului.",
   units: [
     {
       id: "deuteronom-30-1-5",
@@ -45,7 +45,7 @@ export const DEUTERONOM_30 = deuteronomChapter({
       text: deuteronomPassage(30, 6, 10),
       teaching: teaching(
         "Promisiunea remarcabilă este că „DOMNUL... îți va tăia împrejur inima ta... ca să-L iubești pe DOMNUL... din toată inima ta și din tot sufletul tău, ca să trăiești”. Restaurarea nu este doar externă, ci implică o transformare internă făcută de Dumnezeu însuși.",
-        "Acest verset anticipează legământul nou din profeții mai târzii — asculatarea adevărată nu vine doar din efort uman, ci din lucrarea lui Dumnezeu care schimbă dorințele inimii însăși, făcând iubirea de DOMNUL posibilă și deplină.",
+        "Acest verset anticipează legământul nou din profeții mai târzii — ascultarea adevărată nu vine doar din efort uman, ci din lucrarea lui Dumnezeu care schimbă dorințele inimii însăși, făcând iubirea de DOMNUL posibilă și deplină.",
       ),
       words: [
         {
@@ -67,7 +67,7 @@ export const DEUTERONOM_30 = deuteronomChapter({
       text: deuteronomPassage(30, 11, 14),
       teaching: teaching(
         "Porunca lui Dumnezeu nu este „prea înaltă” sau inaccesibilă: „nu este în cer... nu este nici dincolo de mare”, ca să necesite o călătorie extraordinară sau un mediator special ca s-o obții.",
-        "Concluzia surprinzătoare este intimitatea accesibilității: „cuvântul este foarte aproape de tine, în gura ta și în inima ta, ca să-l împlinesti”. Voia lui Dumnezeu nu este un secret ascuns rezervat unei elite spirituale, ci este dată deschis, la îndemâna fiecărui om.",
+        "Concluzia surprinzătoare este intimitatea accesibilității: „cuvântul este foarte aproape de tine, în gura ta și în inima ta, ca să-l împlinești”. Voia lui Dumnezeu nu este un secret ascuns rezervat unei elite spirituale, ci este dată deschis, la îndemâna fiecărui om.",
       ),
       words: [
         {
@@ -89,7 +89,7 @@ export const DEUTERONOM_30 = deuteronomChapter({
       text: deuteronomPassage(30, 15, 20),
       teaching: teaching(
         "Moise pune înainte cea mai clară alegere posibilă: „viața și binele, moartea și răul”, cu cerul și pământul chemați ca martori solemni. Nu este loc pentru neutralitate — fiecare zi este o reafirmare a acestei alegeri fundamentale.",
-        "Apelul final rezumă întreaga carte: „alege viața, ca să trăiești... iubindu-L pe DOMNUL, Dumnezeul tău, ascultând de glasul Lui și alipindu-te de El; căci aceasta este viața ta”. A alege viața nu este doar o decizie de supraviețuire, ci o direcție întreagă a iubirii, asculatării și lipirii de Dumnezeu.",
+        "Apelul final rezumă întreaga carte: „alege viața, ca să trăiești... iubindu-L pe DOMNUL, Dumnezeul tău, ascultând de glasul Lui și alipindu-te de El; căci aceasta este viața ta”. A alege viața nu este doar o decizie de supraviețuire, ci o direcție întreagă a iubirii, ascultării și lipirii de Dumnezeu.",
       ),
       words: [
         {
@@ -97,7 +97,7 @@ export const DEUTERONOM_30 = deuteronomChapter({
           transliteration: "uvacharta bachayyim",
           language: "ebraica",
           meaning:
-            "și să alegi viața. Imperativul final al întregii cărți — o chemare activă, personală, la o alegere care nu se face o singură dată, ci se reafirmă continuu prin iubire, asculatare și lipire de DOMNUL.",
+            "și să alegi viața. Imperativul final al întregii cărți — o chemare activă, personală, la o alegere care nu se face o singură dată, ci se reafirmă continuu prin iubire, ascultare și lipire de DOMNUL.",
         },
       ],
       crossRefs: ["Ieremia 21:8", "Iosua 24:15", "Matei 7:13-14"],

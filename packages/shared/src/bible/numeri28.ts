@@ -54,7 +54,7 @@ export const NUMERI_28 = numeriChapter({
       heading: "Jertfa dublă a Sabatului",
       text: numeriPassage(28, 9, 10),
       teaching: teaching(
-        "În ziua Sabatului, jertfa se dubleaă: doi miei suplimentari, pe lângă arderea-de-tot perpetuă zilnică, și două zecimi de efa de făină aleasă, tot dublu față de restul săptămânii — o cinstire proporională a zilei de odihnă sfântulțite de DOMNUL.",
+        "În ziua Sabatului, jertfa se dublează: doi miei suplimentari, pe lângă arderea-de-tot perpetuă zilnică, și două zecimi de efa de făină aleasă, tot dublu față de restul săptămânii — o cinstire proporională a zilei de odihnă sfințite de DOMNUL.",
       ),
       words: [],
       crossRefs: ["Exod 20:8-11"],

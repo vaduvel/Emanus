@@ -26,7 +26,7 @@ export const NUMERI_24 = numeriChapter({
       heading: "Duhul lui Dumnezeu vine peste Balaam",
       text: numeriPassage(24, 1, 2),
       teaching: teaching(
-        "Balaam observă că, de două ori la rând, DOMNUL a binecuvântat Israel indiferent de ritual. Renunță la ceremoniile de descantec pe care le folosise înainte și „și-a întors fața spre pustie”, privind direct la tabăra lui Israel fără mediere rituală.",
+        "Balaam observă că, de două ori la rând, DOMNUL a binecuvântat Israel indiferent de ritual. Renunță la ceremoniile de descântec pe care le folosise înainte și „și-a întors fața spre pustie”, privind direct la tabăra lui Israel fără mediere rituală.",
         "Atunci, fără pregătire ceremonială, „Duhul lui Dumnezeu a venit peste el” — aceeași expresie folosită mai târziu pentru judecătorii lui Israel; Dumnezeu Îl folosește pe Balaam ca instrument profetic direct, dincolo de orice tehnică de ghicire.",
       ),
       words: [],

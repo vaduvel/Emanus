@@ -33,7 +33,7 @@ export const NUMERI_16 = numeriChapter({
       words: [],
       crossRefs: ["Iuda 1:11", "Evrei 5:4", "1 Petru 5:5-6"],
       forYourHeart:
-        "Nemulțumirea față de rolul primit poate mbrăca un limbaj aparent spiritual — „toți sunteți sfinți” — dar rădăcina ei este adesea lăcomia pentru o poziție care nu ți-a fost dată.",
+        "Nemulțumirea față de rolul primit poate îmbrăca un limbaj aparent spiritual — „toți sunteți sfinți” — dar rădăcina ei este adesea lăcomia pentru o poziție care nu ți-a fost dată.",
     },
     {
       id: "numeri-16-12-15",
@@ -55,7 +55,7 @@ export const NUMERI_16 = numeriChapter({
       heading: "Slava DOMNULUI și mijlocirea lui Moise și Aaron",
       text: numeriPassage(16, 16, 22),
       teaching: teaching(
-        "Testul cu cădelnițele are loc: Core adună „toată adunarea” împotriva lui Moise și Aaron la intrarea Cortului Întâlnirii, și „slava DOMNULUI S-a arătat întregii adunări” — nu ca să confirme pretințiile lui Core, ci ca introducere a judecății.",
+        "Testul cu cădelnițele are loc: Core adună „toată adunarea” împotriva lui Moise și Aaron la intrarea Cortului Întâlnirii, și „slava DOMNULUI S-a arătat întregii adunări” — nu ca să confirme pretențiile lui Core, ci ca introducere a judecății.",
         "DOMNUL propune să-i mistuie „într-o clipă” pe toți cei din adunare, dar Moise și Aaron cad din nou cu fața la pământ și mijlocesc: „un singur om a păcătuit și Te-ai mâniat pe toată adunarea?” Această mijlocire pentru cei care tocmai îi atacaseră arată același caracter pe care Moise îl arătase deja de două ori la Sinai și la Cadeș.",
       ),
       words: [],
@@ -111,7 +111,7 @@ export const NUMERI_16 = numeriChapter({
       heading: "Cârtirea repetată și mijlocirea grăbită a lui Aaron",
       text: numeriPassage(16, 41, 50),
       teaching: teaching(
-        "Incredibil, chiar a doua zi după această judecată fără precedent, „toată adunarea fiilor lui Israel a cârtit împotriva lui Moise și împotriva lui Aaron, zicând: voi ați omorît poporul DOMNULUI!” Poporul răstoarnă complet judecata dreaptă a DOMNULUI, atribuindu-i-o lui Moise și Aaron ca pe o crimă.",
+        "Incredibil, chiar a doua zi după această judecată fără precedent, „toată adunarea fiilor lui Israel a cârtit împotriva lui Moise și împotriva lui Aaron, zicând: voi ați omorât poporul DOMNULUI!” Poporul răstoarnă complet judecata dreaptă a DOMNULUI, atribuindu-i-o lui Moise și Aaron ca pe o crimă.",
         "O urgie începe imediat printre popor, dar Moise acționează fără întârziere: „ia cădelnița, pune foc în ea de pe altar, pune tămâie pe ea și du-te repede la adunare și fă ispășire pentru ei”. Aaron aleargă „în mijlocul adunării” și „a stat între cei morți și cei vii, și urgia s-a oprit”.",
         "Imaginea lui Aaron stând „între cei morți și cei vii”, cu tămâia arzând în mână, este una dintre cele mai puternice imagini de mijlocire din Vechiul Testament: chiar preotul care fusese ținta unei răzvrătiri devine cel care și-a pus viața între popor și moarte, pentru a-l opri urgia. Paisprezece mii șapte sute au murit înainte de a se opri, un număr care arată gravitatea acestei noi răzvrătiri.",
       ),

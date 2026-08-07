@@ -39,7 +39,7 @@ export const NUMERI_31 = numeriChapter({
       heading: "Mobilizarea celor 12.000",
       text: numeriPassage(31, 3, 6),
       teaching: teaching(
-        "Moise transmite porunca DOMNULUI cu limbaj de război sfânt: „să îplinească răzbunarea DOMNULUI împotriva Madianului”. Câte o mie de bărbați din fiecare seminție — 12.000 în total, număr egal din toate cele douăsprezece seminții — asigură că această acțiune era a întregului Israel, nu doar a unei seminții afectate direct.",
+        "Moise transmite porunca DOMNULUI cu limbaj de război sfânt: „să împlinească răzbunarea DOMNULUI împotriva Madianului”. Câte o mie de bărbați din fiecare seminție — 12.000 în total, număr egal din toate cele douăsprezece seminții — asigură că această acțiune era a întregului Israel, nu doar a unei seminții afectate direct.",
         "Fineas, fiul preotului Eleazar — același care a oprit urgia la Baal-Peor — merge cu ei, avand „uneltele Sfântului Lăcaș și trâmbițele de alarmă”, semnalând că acest război era condus sub autoritate și binecuvântare preoțească, nu doar militară.",
       ),
       words: [],
@@ -53,7 +53,7 @@ export const NUMERI_31 = numeriChapter({
       heading: "Victoria și prada",
       text: numeriPassage(31, 7, 12),
       teaching: teaching(
-        "Victoria este totală: toți cei cinci împărați ai Madianului — Evi, Rekem, Ţur, Hur, Reba — sunt uciși, iar Balaam Însăși „a fost ucis cu sabia”, primind în final judecata pe care blestemele lui nu au putut-o împiedica; profețiile lui despre distrugerea vrăjmașilor lui Israel s-au împlinit chiar asupra propriei sale vieți.",
+        "Victoria este totală: toți cei cinci împărați ai Madianului — Evi, Rekem, Țur, Hur, Reba — sunt uciși, iar Balaam Însăși „a fost ucis cu sabia”, primind în final judecata pe care blestemele lui nu au putut-o împiedica; profețiile lui despre distrugerea vrăjmașilor lui Israel s-au împlinit chiar asupra propriei sale vieți.",
         "Femeile, copiii și toate averile sunt luate ca pradă, iar cetățile și taberele madianite sunt arse cu foc — o distrugere completă a infrastructurii după modelul războiului sfânt, care va fi urmat mai târziu și în cucerirea Canaanului.",
       ),
       words: [],

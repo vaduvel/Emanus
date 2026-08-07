@@ -49,7 +49,7 @@ export const NUMERI_4 = numeriChapter({
       text: numeriPassage(4, 5, 14),
       teaching: teaching(
         "Înainte ca oricine altcineva să se apropie, Aaron și fiii lui trebuie să intre primii și să acopere fiecare lucru sfânt: chivotul, sub perdeaua de despărțire și o învelitoare de piele, apoi masa pâinilor, sfeșnicul, altarul de aur și, la urmă, altarul de arama de la curte. Fiecare are pânza și învelitoarea ei proprie: albastră pentru cele din Lăcaș, purpurie pentru altarul de jertfă.",
-        "Ordinea aceasta arată o rânduială strănsă: nimeni nu ajunge la lucrurile sfinte direct. Între lucrul sfânt și cel ce-l poartă stă întotdeauna o acoperire pusă de mâna preotului. Această acoperire nu ascunde sfințenia din dispreț, ci o ocrotește pentru cel care nu ar putea sta înaintea ei direct.",
+        "Ordinea aceasta arată o rânduială strânsă: nimeni nu ajunge la lucrurile sfinte direct. Între lucrul sfânt și cel ce-l poartă stă întotdeauna o acoperire pusă de mâna preotului. Această acoperire nu ascunde sfințenia din dispreț, ci o ocrotește pentru cel care nu ar putea sta înaintea ei direct.",
         "Chiar și grija cea mai mică — curițarea cenușii altarului înainte de a-l acoperi — este scrisă în text. Nimic din ce privește apropierea de sfințenie nu este lăsat la voia întâmplării sau a grăbii.",
       ),
       words: [
@@ -176,7 +176,7 @@ export const NUMERI_4 = numeriChapter({
       text: numeriPassage(4, 46, 49),
       teaching: teaching(
         "Capitolul se încheie cu totalul general al celor numărați între treizeci și cincizeci de ani, din toate cele trei familii ale lui Levi: opt mii cinci sute optzeci de bărbați, toți „la slujire și la purtarea sarcinilor în Cortul Întâlnirii”.",
-        "Ultima propoziție a capitolului este și cea mai importantă: „au fost numărați fiecare la slujba lui și la sarcina lui”. Numărul mare nu înseamnă o masă uniformă de oameni; înseamnă opt mii cinci sute optzeci de slăjitori, fiecare cu o slujbă anume, cu un loc anume, cu o răspundere anume.",
+        "Ultima propoziție a capitolului este și cea mai importantă: „au fost numărați fiecare la slujba lui și la sarcina lui”. Numărul mare nu înseamnă o masă uniformă de oameni; înseamnă opt mii cinci sute optzeci de slujitori, fiecare cu o slujbă anume, cu un loc anume, cu o răspundere anume.",
         "Când tabăra pornea la drum, nu se mișca o mulțime dezorganizată, ci un întreg trup rânduit, în care fiecare mădular știa exact ce poartă, cum poartă și cui răspunde. Capitolul acesta, atât de plin de amănunte, este de fapt o pildă despre cum arată o slujire ordonată în jurul sfințeniei lui Dumnezeu.",
       ),
       words: [

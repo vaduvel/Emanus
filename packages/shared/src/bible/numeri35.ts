@@ -40,7 +40,7 @@ export const NUMERI_35 = numeriChapter({
       heading: "Institurea cetăților de scăpare",
       text: numeriPassage(35, 9, 15),
       teaching: teaching(
-        "Şase dintre cele patruzeci și opt de cetăți levitice devin cetăți de scăpare — trei dincolo de Iordan, trei în Canaan — unde „să poată fugi ucigașul care a ucis pe cineva din greșeală”, protejat de „răzbunătorul sângelui” până la o judecată dreaptă înaintea adunării.",
+        "Șase dintre cele patruzeci și opt de cetăți levitice devin cetăți de scăpare — trei dincolo de Iordan, trei în Canaan — unde „să poată fugi ucigașul care a ucis pe cineva din greșeală”, protejat de „răzbunătorul sângelui” până la o judecată dreaptă înaintea adunării.",
         "Aceste cetăți erau disponibile „pentru fiii lui Israel, pentru străin și pentru cel ce locuiește printre ei” — protecția legală nu era limitată doar la israeliți, arătând o dreptate fără discriminare etnică într-un principiu legal remarcabil pentru epoca lui.",
       ),
       words: [],
@@ -82,7 +82,7 @@ export const NUMERI_35 = numeriChapter({
       heading: "Limitele protecției cetății de scăpare",
       text: numeriPassage(35, 26, 29),
       teaching: teaching(
-        "Protecția cetății de scăpare are o condiție strictă: ucigașul trebuie să rămână înăuntrul hotarelor ei. Dacă iese și răzbunătorul sângelui îl găsește afară, îl poate ucide fără a fi vinovat de sânge — scăparea nu era o eliberare necondiționată, ci un legământ de rămânere sub protecție până la momentul stăbilit.",
+        "Protecția cetății de scăpare are o condiție strictă: ucigașul trebuie să rămână înăuntrul hotarelor ei. Dacă iese și răzbunătorul sângelui îl găsește afară, îl poate ucide fără a fi vinovat de sânge — scăparea nu era o eliberare necondiționată, ci un legământ de rămânere sub protecție până la momentul stabilit.",
         "După moartea marelui preot, însă, ucigașul se poate întoarce liber „în țara moștenirii sale” — un moment de eliberare completă și definitivă, legat simbolic de moartea celui care mijlocea între Dumnezeu și popor.",
       ),
       words: [],
@@ -106,6 +106,6 @@ export const NUMERI_35 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, mulțumescu-Ți că Te îngrijești concret de cei care își dedică viața slujirii Tale, chiar când ei nu au o moștenire proprie precum ceilalți.\n\nÎnvață-mă să văd dincolo de fapta exterioară, direct în intenția inimii, și dă-mi înțelepciunea de a face diferența între greșeală și rău premeditat.\n\nAjută-mă să rămân sub protecția Ta, fără să ies din locul de scăpare pe care mi l-ai dat, și să trăiesc cu sfințenie în prezența Ta. Amin.",
+    "Doamne, mulțumesc-Ți că Te îngrijești concret de cei care își dedică viața slujirii Tale, chiar când ei nu au o moștenire proprie precum ceilalți.\n\nÎnvață-mă să văd dincolo de fapta exterioară, direct în intenția inimii, și dă-mi înțelepciunea de a face diferența între greșeală și rău premeditat.\n\nAjută-mă să rămân sub protecția Ta, fără să ies din locul de scăpare pe care mi l-ai dat, și să trăiesc cu sfințenie în prezența Ta. Amin.",
   status: NUMERI_STATUSES[35],
 })

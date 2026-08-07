@@ -41,7 +41,7 @@ export const NUMERI_13 = numeriChapter({
       text: numeriPassage(13, 4, 16),
       teaching: teaching(
         "Textul înregistrează cu grijă numele fiecărui fruntaș, seminție cu seminție. Printre ei apar două nume care vor deveni esențiale pentru restul cărții: „din seminția lui Iuda: Caleb, fiul lui Iefune” și „din seminția lui Efraim: Osea, fiul lui Nun”.",
-        "Ultimul verset al unității cuprinde o schimbare mică, dar plină de sens: „lui Osea, fiul lui Nun, Moise i-a pus numele Iosua”. Numele Osea („izbăvire”) devine Iosua („DOMNUL izbăvește”) — o schimbare care leagă direct persoana lui de lucrarea pe care avea s-o împlineă mai târziu, conducând poporul în țara făgăduită.",
+        "Ultimul verset al unității cuprinde o schimbare mică, dar plină de sens: „lui Osea, fiul lui Nun, Moise i-a pus numele Iosua”. Numele Osea („izbăvire”) devine Iosua („DOMNUL izbăvește”) — o schimbare care leagă direct persoana lui de lucrarea pe care avea s-o împlinea mai târziu, conducând poporul în țara făgăduită.",
       ),
       words: [
         {
@@ -105,7 +105,7 @@ export const NUMERI_13 = numeriChapter({
       words: [],
       crossRefs: ["Exod 3:8", "Deuteronom 1:24-28"],
       forYourHeart:
-        "Același fapt poate fi spus în așa fel încât să zămislescă credință sau teamă. Fii atent cum îți alegi cuvintele când împartșești vești cu alții.",
+        "Același fapt poate fi spus în așa fel încât să zămislească credință sau teamă. Fii atent cum îți alegi cuvintele când împărtășești vești cu alții.",
     },
     {
       id: "numeri-13-30",
@@ -142,7 +142,7 @@ export const NUMERI_13 = numeriChapter({
       ],
       crossRefs: ["Numeri 14:36-37", "Evrei 3:19", "Proverbe 29:25"],
       forYourHeart:
-        "Frica exagerează mereu; întreabă-te dacă ceea ce te întâmpăni ca „imposibil” este chiar așa, sau doar imaginea pe care teamă ți-o construiește.",
+        "Frica exagerează mereu; întreabă-te dacă ceea ce te întâmpina ca „imposibil” este chiar așa, sau doar imaginea pe care teamă ți-o construiește.",
     },
   ],
   prayer:

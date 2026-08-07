@@ -18,7 +18,7 @@ export const NUMERI_2 = numeriChapter({
   literaryContext:
     "Dacă primul capitol număra oamenii, cel de-al doilea îi așază în spațiu. Cele două recensăminte din capitolul întâi (oștirea) și din capitolul al treilea (leviții) sunt legate acum de o geografie: patru tabere a câte trei seminții, așezate în cruce în jurul unui singur centru. Structura aceasta, repetată identic mai târziu la ordinea de marș (Numeri 10:14-28), arată că nu este o întâmplare de o zi, ci rânduiala pe care Israel o va purta prin toată pustia.",
   historicalContext:
-    "O tabără de război cu steaguri și cu ordine de marș era cunoscută și în alte armate ale lumii vechi; ce este cu totul altfel aici este centrul tăberei. În armatele vecine, mijlocul taberei era locul comandantului sau al zeului purtat în război. La Israel, mijlocul este ocupat de Cortul Întâlnirii, locul de locuire al DOMNULUI însuși. Șase sute trei mii de bărbați și familiile lor își așează corturile privind spre același punct, la fiecare popas, pe tot cuprinsul pustiei.",
+    "O tabără de război cu steaguri și cu ordine de marș era cunoscută și în alte armate ale lumii vechi; ce este cu totul altfel aici este centrul taberei. În armatele vecine, mijlocul taberei era locul comandantului sau al zeului purtat în război. La Israel, mijlocul este ocupat de Cortul Întâlnirii, locul de locuire al DOMNULUI însuși. Șase sute trei mii de bărbați și familiile lor își așează corturile privind spre același punct, la fiecare popas, pe tot cuprinsul pustiei.",
   units: [
     {
       id: "numeri-2-1-2",
@@ -57,7 +57,7 @@ export const NUMERI_2 = numeriChapter({
       text: numeriPassage(2, 3, 9),
       teaching: teaching(
         "La răsărit, spre răsăritul soarelui, stă tabăra lui Iuda, cu Isahar și Zabulon alături. Locul acesta nu este întâmplător: răsăritul este partea dinspre care se vede soarele răsărind, iar tabăra așezată acolo va fi și cea dintâi care pornește la drum: „Aceștia vor porni primii”.",
-        "Cu o sută optzeci și șase de mii patru sute de bărbați, tabăra lui Iuda este cea mai mare din toate cele patru. Și căpetenia ei, Nahşon, fiul lui Amminadab, deja întâlnit în capitolul întâi, va rămâne în genealogia care duce spre David și spre Domnul Iisus. Fără ca poporul să știe încă, seminția care deschide marșul este chiar seminția din care avea să vină Regele.",
+        "Cu o sută optzeci și șase de mii patru sute de bărbați, tabăra lui Iuda este cea mai mare din toate cele patru. Și căpetenia ei, Nahșon, fiul lui Amminadab, deja întâlnit în capitolul întâi, va rămâne în genealogia care duce spre David și spre Domnul Iisus. Fără ca poporul să știe încă, seminția care deschide marșul este chiar seminția din care avea să vină Regele.",
         "Alături de Iuda stă Isahar, iar apoi Zabulon — amintirea binecuvântării pe care Iacov o dăduse fiecăruia (Geneza 49:13-15) se împlinește acum într-o așezare de tabără. Cuvintele rostite peste niște copii, cu generații în urmă, Înși găsesc locul în viața unui popor întreg.",
       ),
       words: [
@@ -99,7 +99,7 @@ export const NUMERI_2 = numeriChapter({
     {
       id: "numeri-2-17",
       ref: "Numeri 2:17",
-      heading: "În mijlocul tăberei: Cortul și leviții",
+      heading: "În mijlocul taberei: Cortul și leviții",
       text: numeriPassage(2, 17, 17),
       teaching: teaching(
         "Un singur verset, dar el este balamaua întregului capitol: „Apoi va porni Cortul Întâlnirii, cu tabăra leviților în mijlocul celorlalte tabere”. Toate cele patru tabere sunt așezate în jurul unui centru care nu se mișcă din locul lui rostuit: Cortul În care locuiește DOMNUL.",

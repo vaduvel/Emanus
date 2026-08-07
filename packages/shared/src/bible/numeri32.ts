@@ -110,7 +110,7 @@ export const NUMERI_32 = numeriChapter({
       heading: "Cetățile zidite de Gad și Ruben",
       text: numeriPassage(32, 34, 38),
       teaching: teaching(
-        "Fiii lui Gad zidesc Dibonul, Atarotul, Aroerul, Atrot-Şofanul, Iazerul, Iogbeha, Bet-Nimra și Bet-Haran ca cetăți fortificate cu ocoluri pentru turme; fiii lui Ruben zidesc Heșbonul, Eleale, Chiriat-Aimul, Nebo și Baal-Meon, ale cărui nume păgâne au fost schimbate.",
+        "Fiii lui Gad zidesc Dibonul, Atarotul, Aroerul, Atrot-Șofanul, Iazerul, Iogbeha, Bet-Nimra și Bet-Haran ca cetăți fortificate cu ocoluri pentru turme; fiii lui Ruben zidesc Heșbonul, Eleale, Chiriat-Aimul, Nebo și Baal-Meon, ale cărui nume păgâne au fost schimbate.",
         "Această schimbare a numelor cetăților legate de zeități păgâne (precum Baal-Meon) arată o intenție de a purifica identitatea locurilor cucerite, integrându-le în noua stăpânire a lui Israel fără să păstreze amintirea zeilor canaaniți.",
       ),
       words: [],

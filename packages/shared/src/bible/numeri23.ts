@@ -18,7 +18,7 @@ export const NUMERI_23 = numeriChapter({
   literaryContext:
     "Cele patru profeții ale lui Balaam (două în acest capitol, două în cel următor) sunt scrise în formă poetică solemnă, deosebit de restul cărții. Structura repetitivă — ceremonie, cuvânt de la DOMNUL, pildă, reacția lui Balac — subliniază prin repetiție ideea centrală: indiferent de loc sau de numărul de încercări, răspunsul lui Dumnezeu rămâne același.",
   historicalContext:
-    "Ţapte altare și câte un taur și un berbec pe fiecare erau o jertfă masivă, tipică pentru un rege care voia să impresioneze zeitățile invocate de ghicitorul său. Practica lui Balac de a schimba locul de observație reflectă o credință păgână comună în Orientul Apropiat antic: puterea unui zeu sau spirit era considerată legată de un teritoriu geografic anume.",
+    "Țapte altare și câte un taur și un berbec pe fiecare erau o jertfă masivă, tipică pentru un rege care voia să impresioneze zeitățile invocate de ghicitorul său. Practica lui Balac de a schimba locul de observație reflectă o credință păgână comună în Orientul Apropiat antic: puterea unui zeu sau spirit era considerată legată de un teritoriu geografic anume.",
   units: [
     {
       id: "numeri-23-1-6",
@@ -32,7 +32,7 @@ export const NUMERI_23 = numeriChapter({
       words: [],
       crossRefs: [],
       forYourHeart:
-        "Ritualul și pregătirea nu forțează mana Dumnezeu să vorbească cum vrem noi; El vine când și cum vrea El, iar cuvântul rămane în controlul Său până în ultima clipă.",
+        "Ritualul și pregătirea nu forțează mana Dumnezeu să vorbească cum vrem noi; El vine când și cum vrea El, iar cuvântul rămâne în controlul Său până în ultima clipă.",
     },
     {
       id: "numeri-23-7-10",
@@ -55,7 +55,7 @@ export const NUMERI_23 = numeriChapter({
       text: numeriPassage(23, 11, 12),
       teaching: teaching(
         "Balac se enervează imediat: „Ce mi-ai făcut? Te-am luat ca să-mi blestemi vrăjmașii, și iată că tu i-ai binecuvântat cu desăvârșire!” El nu înțelege că nu Balaam decisese conținutul, ci DOMNUL.",
-        "Răspunsul lui Balaam este simplu și rămane consecvent pe tot parcursul capitolelor: „nu trebuie oare să am grijă să rostesc ce pune DOMNUL în gura mea?” Chiar dacă inima lui, după cum se va vedea mai târziu în Numeri 31:16, nu era curată, gura lui a fost ținută sub control divin absolut.",
+        "Răspunsul lui Balaam este simplu și rămâne consecvent pe tot parcursul capitolelor: „nu trebuie oare să am grijă să rostesc ce pune DOMNUL în gura mea?” Chiar dacă inima lui, după cum se va vedea mai târziu în Numeri 31:16, nu era curată, gura lui a fost ținută sub control divin absolut.",
       ),
       words: [],
       crossRefs: ["Numeri 31:16"],
@@ -65,7 +65,7 @@ export const NUMERI_23 = numeriChapter({
     {
       id: "numeri-23-13-17",
       ref: "Numeri 23:13-17",
-      heading: "A doua ceremonie: câmpul Ţofim",
+      heading: "A doua ceremonie: câmpul Țofim",
       text: numeriPassage(23, 13, 17),
       teaching: teaching(
         "Balac schimbă locul, crezând că o perspectivă diferită — „il vei vedea numai o parte din el” — ar putea produce un rezultat diferit. Această logică trădează gândirea păgână: crede că puterea spirituală a lui Balaam ar fi legată de un loc sau de o perspectivă vizuală anume.",
@@ -119,6 +119,6 @@ export const NUMERI_23 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să cred cu toată ființa că Tu nu ești un om ca să minți, nici un fiu al omului ca să-Ţi pară rău de făgăduințele Tale.\n\nMulțumescu-Ţi că nicio putere din afară, oricât de insistentă, nu poate blestema ceea ce Tu ai binecuvântat.\n\nDă-mi o gură supusă Cuvântului Tău, ca a lui Balaam în aceste două profeții, chiar dacă inima are încă lupte de dus.\n\nȘi păzește-mi inima de a căuta o cale de mijloc când Tu ai vorbit deja limpede. Amin.",
+    "Doamne, învață-mă să cred cu toată ființa că Tu nu ești un om ca să minți, nici un fiu al omului ca să-Ți pară rău de făgăduințele Tale.\n\nMulțumescu-Ți că nicio putere din afară, oricât de insistentă, nu poate blestema ceea ce Tu ai binecuvântat.\n\nDă-mi o gură supusă Cuvântului Tău, ca a lui Balaam în aceste două profeții, chiar dacă inima are încă lupte de dus.\n\nȘi păzește-mi inima de a căuta o cale de mijloc când Tu ai vorbit deja limpede. Amin.",
   status: NUMERI_STATUSES[23],
 })

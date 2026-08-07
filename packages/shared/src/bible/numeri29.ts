@@ -64,7 +64,7 @@ export const NUMERI_29 = numeriChapter({
     {
       id: "numeri-29-17-34",
       ref: "Numeri 29:17-34",
-      heading: "Zilele a doua până a șaptea: numărul tourilor descrește",
+      heading: "Zilele a doua până a șaptea: numărul taurilor descrește",
       text: numeriPassage(29, 17, 34),
       teaching: teaching(
         "În fiecare din următoarele șase zile, numărul taurilor jertfiți scade cu exact unul — doisprezece, unsprezece, zece, nouă, opt, șapte — în timp ce numărul berbecilor (doi) și mieilor (paisprezece) rămâne constant. Această descreștere precisă, zi de zi, nu este întâmplătoare și arată o grijă minuțioasă pentru detaliu în porunca DOMNULUI.",
@@ -94,7 +94,7 @@ export const NUMERI_29 = numeriChapter({
       heading: "Încheierea calendarului și ascultarea lui Moise",
       text: numeriPassage(29, 39, 40),
       teaching: teaching(
-        "Capitolul se încheie precizand că aceste jertfe randuite se adaugă la orice alte jertfe de bunăvoie sau pentru împlinirea unui jurământ, arătând că randuiala fixă nu înlocuiește devoțiunea personală spontană, ci o completează.",
+        "Capitolul se încheie precizând că aceste jertfe randuite se adaugă la orice alte jertfe de bunăvoie sau pentru împlinirea unui jurământ, arătând că rânduiala fixă nu înlocuiește devoțiunea personală spontană, ci o completează.",
         "Ultimul verset simplu — „Moise le-a spus fiilor lui Israel tot ce-i poruncise DOMNUL” — confirmă fidelitatea deplină a lui Moise ca mijlocitor: nu a adăugat, nu a omis, ci a transmis exact ce a primit.",
       ),
       words: [],

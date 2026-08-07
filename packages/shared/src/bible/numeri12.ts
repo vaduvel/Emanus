@@ -27,7 +27,7 @@ export const NUMERI_12 = numeriChapter({
       text: numeriPassage(12, 1, 3),
       teaching: teaching(
         "Maria și Aaron „au vorbit împotriva lui Moise din pricina femeii cușite”, dar chiar versetul următor dezvăluie adevărata lor nemulțumire: „oare numai prin Moise vorbește DOMNUL? Nu vorbește El oare și prin noi?” Pretextul familial ascundea o râvnă pentru autoritate egală cu a lui Moise.",
-        "În ebraică, verbul folosit pentru „au vorbit” este la forma feminină, sugeratând că Maria a fost inițiatoarea, cu Aaron urând-o. Numele ei apare întotdeauna înaintea lui Aaron în acest capitol, o inversare a ordinii obișnuite care sprijină această observație.",
+        "În ebraică, verbul folosit pentru „au vorbit” este la forma feminină, sugerând că Maria a fost inițiatoarea, cu Aaron urând-o. Numele ei apare întotdeauna înaintea lui Aaron în acest capitol, o inversare a ordinii obișnuite care sprijină această observație.",
         "Versetul trei întrerupe firul narativ cu o observație despre Moise: „era un om foarte blând, mai blând decât orice om de pe fața pământului”. Această note explică de ce Moise nu răspunde el însuși acuzației; lăsa întreaga apărare în mâna DOMNULUI.",
       ),
       words: [
@@ -64,7 +64,7 @@ export const NUMERI_12 = numeriChapter({
       ],
       crossRefs: ["Exod 33:11", "Deuteronom 34:10", "Evrei 3:1-6"],
       forYourHeart:
-        "Rolul pe care Dumnezeu ți-l dă nu este întotdeauna identic cu al altcuiva; a-l contesta pe celălalt din invidie înseamnă a contesta înșuși pe Cel care a rânduit rolurile.",
+        "Rolul pe care Dumnezeu ți-l dă nu este întotdeauna identic cu al altcuiva; a-l contesta pe celălalt din invidie înseamnă a contesta însuși pe Cel care a rânduit rolurile.",
     },
     {
       id: "numeri-12-10-13",

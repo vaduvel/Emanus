@@ -49,7 +49,7 @@ export const NUMERI_17 = numeriChapter({
           transliteration: "shqedim",
           language: "ebraica",
           meaning:
-            "migdale. Cuvântul ebraic pentru migdal este înrudit cu verbul „a vegea, a fi treaz”, migdalul fiind primul copac care înflorește primăvara în Israel — un simbol potrivit pentru alegerea promptă și vie a DOMNULUI.",
+            "migdale. Cuvântul ebraic pentru migdal este înrudit cu verbul „a veghea, a fi treaz”, migdalul fiind primul copac care înflorește primăvara în Israel — un simbol potrivit pentru alegerea promptă și vie a DOMNULUI.",
         },
       ],
       crossRefs: ["Ieremia 1:11-12", "Evrei 9:4"],
@@ -86,6 +86,6 @@ export const NUMERI_17 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, mulțumescu-Ți că nu încetezi să confirmi chemarea celor pe care i-ai ales, printr-un semn de viață, nu doar prin judecată.\n\nÎnvață-mă ascultarea exactă a lui Moise, fără adăugiri și fără omisiuni față de porunca Ta.\n\nDă-mi o înțelegere sănătoasă a sfințeniei Tale, care să nu mă paralizeze de frică, ci să mă facă să prețuiesc mijlocirea pe care Tu Însăți ai rânduit-o. Amin.",
+    "Doamne, mulțumesc-Ți că nu încetezi să confirmi chemarea celor pe care i-ai ales, printr-un semn de viață, nu doar prin judecată.\n\nÎnvață-mă ascultarea exactă a lui Moise, fără adăugiri și fără omisiuni față de porunca Ta.\n\nDă-mi o înțelegere sănătoasă a sfințeniei Tale, care să nu mă paralizeze de frică, ci să mă facă să prețuiesc mijlocirea pe care Tu Însăți ai rânduit-o. Amin.",
   status: NUMERI_STATUSES[17],
 })

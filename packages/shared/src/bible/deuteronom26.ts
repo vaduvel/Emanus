@@ -45,7 +45,7 @@ export const DEUTERONOM_26 = deuteronomChapter({
       text: deuteronomPassage(26, 12, 15),
       teaching: teaching(
         "Zeciuiala anului al treilea este destinată explicit levitului, străinului, orfanului și văduvei, „și ei vor mânca în porțile tale și se vor sătura”. Mărturisirea care o însoțește insistă că nimic nu a fost ținut pentru sine, nici folosit necurat, nici dat pentru un mort.",
-        "Rugăciunea finală — „privește din locașul Tău cel sfânt... și binecuvântează pe poporul Tău Israel” — arată că asculatarea în zeciuială nu este doar procedură legală, ci dă celui care ascultă încrederea de a cere deschis binecuvântarea lui Dumnezeu.",
+        "Rugăciunea finală — „privește din locașul Tău cel sfânt... și binecuvântează pe poporul Tău Israel” — arată că ascultarea în zeciuială nu este doar procedură legală, ci dă celui care ascultă încrederea de a cere deschis binecuvântarea lui Dumnezeu.",
       ),
       words: [
         {
@@ -58,7 +58,7 @@ export const DEUTERONOM_26 = deuteronomChapter({
       ],
       crossRefs: ["Deuteronom 14:28-29", "Numeri 18:21-24", "Maleahi 3:10"],
       forYourHeart:
-        "Asculatarea materială făcută cu integritate îți dă dreptul să vii înaintea lui Dumnezeu cu încredere și să-I ceri deschis binecuvântarea.",
+        "Ascultarea materială făcută cu integritate îți dă dreptul să vii înaintea lui Dumnezeu cu încredere și să-I ceri deschis binecuvântarea.",
     },
     {
       id: "deuteronom-26-16-19",
@@ -66,8 +66,8 @@ export const DEUTERONOM_26 = deuteronomChapter({
       heading: "Legământul reciproc, declarat de amândouă părțile",
       text: deuteronomPassage(26, 16, 19),
       teaching: teaching(
-        "Capitolul se încheie cu o formulă remarcabilă de legământ mutual: „astăzi ai făcut pe DOMNUL să-ți declare că El va fi Dumnezeul tău” și „astăzi DOMNUL te-a făcut să-I declari că vei fi un popor al Lui”. Ambele părți se angașează reciproc, printr-un act verbal solemn.",
-        "Scopul declarat al acestui legământ este poziția unică a lui Israel: „să-ți dea întâietate în slavă, în nume și în cinste mai presus de toate popoarele” și să fie „un popor sfânt pentru DOMNUL”. Aleasa nu este un privilegiu gratuit, ci vine cu asculatarea deplină din inimă și suflet.",
+        "Capitolul se încheie cu o formulă remarcabilă de legământ mutual: „astăzi ai făcut pe DOMNUL să-ți declare că El va fi Dumnezeul tău” și „astăzi DOMNUL te-a făcut să-I declari că vei fi un popor al Lui”. Ambele părți se angajează reciproc, printr-un act verbal solemn.",
+        "Scopul declarat al acestui legământ este poziția unică a lui Israel: „să-ți dea întâietate în slavă, în nume și în cinste mai presus de toate popoarele” și să fie „un popor sfânt pentru DOMNUL”. Aleasa nu este un privilegiu gratuit, ci vine cu ascultarea deplină din inimă și suflet.",
       ),
       words: [
         {
@@ -80,10 +80,10 @@ export const DEUTERONOM_26 = deuteronomChapter({
       ],
       crossRefs: ["Exod 19:5-6", "1 Petru 2:9", "Ieremia 31:33"],
       forYourHeart:
-        "Legământul cu Dumnezeu nu este unilateral; El se angașează față de tine la fel de solemn cum te angaęezi și tu față de El.",
+        "Legământul cu Dumnezeu nu este unilateral; El se angajează față de tine la fel de solemn cum te angajezi și tu față de El.",
     },
   ],
   prayer:
-    "Doamne, învață-ne să spunem cu voce tare povestea răscumpărării Tale în viața noastră, nu să o ținem tăcută.\n\nDă-ne integritate în asculatarea materială, ca să venim înaintea Ta cu încredere.\n\nAjută-ne să înțeleagem că legământul cu Tine este reciproc, și Tu Te angaęezi față de noi la fel cum ne ceri să ne angaęăm față de Tine.\n\nȘi fă-ne un popor sfânt, din inimă și suflet, nu doar din procedură. Amin.",
+    "Doamne, învață-ne să spunem cu voce tare povestea răscumpărării Tale în viața noastră, nu să o ținem tăcută.\n\nDă-ne integritate în ascultarea materială, ca să venim înaintea Ta cu încredere.\n\nAjută-ne să înțelegem că legământul cu Tine este reciproc, și Tu Te angajezi față de noi la fel cum ne ceri să ne angajăm față de Tine.\n\nȘi fă-ne un popor sfânt, din inimă și suflet, nu doar din procedură. Amin.",
   status: DEUTERONOM_STATUSES[26],
 })

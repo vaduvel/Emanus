@@ -160,6 +160,6 @@ export const NUMERI_5 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, Tu locuiești în mijlocul poporului Tău și ceri o curăție pe măsura prezenței Tale; curăță tabăra inimii mele de tot ce ar spurca-o.\n\nÎnvață-mă să nu amân mărturisirea și restituirea unei nedreptăți, ci să întorc mai mult decât am luat.\n\nEliberează-mă de bănuiala neîntemeiată și de gelozia care mă face să judec pripit pe cei din jurul meu.\n\nȘi mulțumescu-Ți pentru Cel care a purtat, nevinovat, nelegiuirea mea, ca eu să ies neapărat scutit de blestemul pe care îl meritam. Amin.",
+    "Doamne, Tu locuiești în mijlocul poporului Tău și ceri o curăție pe măsura prezenței Tale; curăță tabăra inimii mele de tot ce ar spurca-o.\n\nÎnvață-mă să nu amân mărturisirea și restituirea unei nedreptăți, ci să întorc mai mult decât am luat.\n\nEliberează-mă de bănuiala neîntemeiată și de gelozia care mă face să judec pripit pe cei din jurul meu.\n\nȘi mulțumesc-Ți pentru Cel care a purtat, nevinovat, nelegiuirea mea, ca eu să ies neapărat scutit de blestemul pe care îl meritam. Amin.",
   status: NUMERI_STATUSES[5],
 })

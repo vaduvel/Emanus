@@ -32,7 +32,7 @@ export const NUMERI_19 = numeriChapter({
       words: [],
       crossRefs: ["Evrei 9:13"],
       forYourHeart:
-        "Puritatea cerută pentru lucrurile rânduite de Dumnezeu întrece adesea așteptările firești; El caută desavârșire, nu doar performanță obișnuită.",
+        "Puritatea cerută pentru lucrurile rânduite de Dumnezeu întrece adesea așteptările firești; El caută desăvârșire, nu doar performanță obișnuită.",
     },
     {
       id: "numeri-19-3-6",
@@ -54,7 +54,7 @@ export const NUMERI_19 = numeriChapter({
       heading: "Cei implicați devin necurați până seara",
       text: numeriPassage(19, 7, 10),
       teaching: teaching(
-        "Paradoxal, atât preotul care conducea ritualul, cât și cel care a ars vaca, devin ei îșiși necurați până seara și trebuie să-și spele hainele și trupurile. Chiar producătorul unui mijloc de curățire este atins de necurăția pe care o tratează — nimeni nu iese neatins din contactul cu moartea.",
+        "Paradoxal, atât preotul care conducea ritualul, cât și cel care a ars vaca, devin ei își necurați până seara și trebuie să-și spele hainele și trupurile. Chiar producătorul unui mijloc de curățire este atins de necurăția pe care o tratează — nimeni nu iese neatins din contactul cu moartea.",
         "Cenușa rezultată este „păstrată pentru adunarea fiilor lui Israel ca apă de curățire” — o singură vacă aducea provizii pentru multă vreme, pentru întregul popor, un simbol al ispășirii ample care ajunge pentru mulți din puțin.",
       ),
       words: [],
@@ -124,10 +124,10 @@ export const NUMERI_19 = numeriChapter({
       words: [],
       crossRefs: ["Evrei 9:13-14", "1 Ioan 1:7"],
       forYourHeart:
-        "Nicio persoană sau ritual omenesc nu este izvorul curatăției absolute; toate arătau spre nevoia unei curățiri mai mari, aduse într-o singură dată pentru totdeauna prin Hristos.",
+        "Nicio persoană sau ritual omenesc nu este izvorul curăției absolute; toate arătau spre nevoia unei curățiri mai mari, aduse într-o singură dată pentru totdeauna prin Hristos.",
     },
   ],
   prayer:
-    "Doamne, mulțumescu-Ți că ai rânduit întotdeauna o cale de curățire pentru poporul Tău, chiar și pentru cea mai grea necurăție a morții.\n\nÎnvață-mă să caut curățirea Ta cu răbdare și ascultare, fără să caut soluții rapide sau formale.\n\nMulțumescu-Ți că sângele lui Hristos curăță conștiința mea de faptele moarte, mai mult decât putea cenușa vacii roșii să curețe trupul.\n\nȘi păzește-mă de a spurca cu nepăsare lucrurile sfinte pe care Tu le-ai rânduit. Amin.",
+    "Doamne, mulțumesc-Ți că ai rânduit întotdeauna o cale de curățire pentru poporul Tău, chiar și pentru cea mai grea necurăție a morții.\n\nÎnvață-mă să caut curățirea Ta cu răbdare și ascultare, fără să caut soluții rapide sau formale.\n\nMulțumescu-Ți că sângele lui Hristos curăță conștiința mea de faptele moarte, mai mult decât putea cenușa vacii roșii să curețe trupul.\n\nȘi păzește-mă de a spurca cu nepăsare lucrurile sfinte pe care Tu le-ai rânduit. Amin.",
   status: NUMERI_STATUSES[19],
 })

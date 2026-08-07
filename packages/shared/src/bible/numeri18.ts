@@ -128,6 +128,6 @@ export const NUMERI_18 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, mulțumescu-Ți că orice chemare pe care mi-o dai vine împreună cu partea de care am nevoie ca să o împlinesc.\n\nÎnvață-mă să privesc slujirea mea ca pe un dar primit, nu ca pe un drept câștigat.\n\nFii Tu Însăți partea și moștenirea mea, ca să nu trăiesc pentru câștig pământesc, ci pentru părtia cu Tine.\n\nȘi învață-mă să dau mai departe partea cea mai bună din ce am primit, așa cum ai rânduit pentru leviti și preoți. Amin.",
+    "Doamne, mulțumesc-Ți că orice chemare pe care mi-o dai vine împreună cu partea de care am nevoie ca să o împlinesc.\n\nÎnvață-mă să privesc slujirea mea ca pe un dar primit, nu ca pe un drept câștigat.\n\nFii Tu Însăți partea și moștenirea mea, ca să nu trăiesc pentru câștig pământesc, ci pentru părtia cu Tine.\n\nȘi învață-mă să dau mai departe partea cea mai bună din ce am primit, așa cum ai rânduit pentru leviti și preoți. Amin.",
   status: NUMERI_STATUSES[18],
 })

@@ -65,10 +65,10 @@ export const NUMERI_26 = numeriChapter({
     {
       id: "numeri-26-28-37",
       ref: "Numeri 26:28-37",
-      heading: "Manase, Efraim și fiicele lui Ţelofhad",
+      heading: "Manase, Efraim și fiicele lui Țelofhad",
       text: numeriPassage(26, 28, 37),
       teaching: teaching(
-        "În mijlocul genealogiei lui Manase apare un detaliu care va deveni foarte important în capitolul 27: „Ţelofhad, fiul lui Hefer, nu a avut fii, ci numai fiice; iar numele fiicelor lui Ţelofhad erau Mahla, Noa, Hogla, Milca și Ţirța.” Această mențiune, plasată discret în mijlocul unei liste tehnice, pregătește cererea lor pentru moștenire.",
+        "În mijlocul genealogiei lui Manase apare un detaliu care va deveni foarte important în capitolul 27: „Țelofhad, fiul lui Hefer, nu a avut fii, ci numai fiice; iar numele fiicelor lui Țelofhad erau Mahla, Noa, Hogla, Milca și Țirța.” Această mențiune, plasată discret în mijlocul unei liste tehnice, pregătește cererea lor pentru moștenire.",
         "Manase (52.700) și Efraim (32.500), cei doi fii ai lui Iosif, sunt numărați separat ca seminții depline, împlinind binecuvântarea lui Iacov din Geneza 48, prin care fiecare a primit statutul unei seminții în sine.",
       ),
       words: [],
@@ -83,7 +83,7 @@ export const NUMERI_26 = numeriChapter({
       text: numeriPassage(26, 38, 50),
       teaching: teaching(
         "Ultimele patru seminții sunt numărate: Beniamin (45.600), Dan (64.400, printr-o singură familie mare, șuhamiiții), Așer (53.400, cu mențiunea unei fiice, Serah) și Neftali (45.400). Fiecare familie și-a păstrat identitatea distinctă după patruzeci de ani de călătorie prin pustie.",
-        "Faptul că numele Serah, fiica lui Așer, este păstrat, ca și cel al fiicelor lui Ţelofhad, arată că recensământul, deși concentrat pe bărbații buni de război, nu ignoră identitățile femeilor importante din istoria familiilor.",
+        "Faptul că numele Serah, fiica lui Așer, este păstrat, ca și cel al fiicelor lui Țelofhad, arată că recensământul, deși concentrat pe bărbații buni de război, nu ignoră identitățile femeilor importante din istoria familiilor.",
       ),
       words: [],
       crossRefs: ["Geneza 46:17"],
@@ -115,7 +115,7 @@ export const NUMERI_26 = numeriChapter({
       words: [],
       crossRefs: ["Iosua 14:1-2", "Proverbe 16:33"],
       forYourHeart:
-        "Când împreună proporționalitatea dreptății și suveranitatea lui Dumnezeu decid o moștenire, nu mai rămane loc pentru dispută sau invidie între frați.",
+        "Când împreună proporționalitatea dreptății și suveranitatea lui Dumnezeu decid o moștenire, nu mai rămâne loc pentru dispută sau invidie între frați.",
     },
     {
       id: "numeri-26-57-62",
@@ -124,7 +124,7 @@ export const NUMERI_26 = numeriChapter({
       text: numeriPassage(26, 57, 62),
       teaching: teaching(
         "Leviții sunt numărați separat, după cele trei familii principale: Gherșon, Chehat, Merari. Textul reamintește legătura de familie a lui Moise și Aaron: mama lor, Iochebed, era „fiica lui Levi, care i se născuse lui Levi în Egipt”, iar dintre fiii lui Aaron, Nadab și Abihu „au murit când au adus foc străin înaintea DOMNULUI”.",
-        "Leviții, numărați 23.000 de la o lună în sus, „nu au fost numărați în mijlocul fiilor lui Israel, pentru că nu li s-a dat nicio moștenire în mijlocul fiilor lui Israel” — statutul lor rămane special, separat de împărțirea teritorială generală, pentru că moștenirea lor este slujirea la Cortul Întâlnirii.",
+        "Leviții, numărați 23.000 de la o lună în sus, „nu au fost numărați în mijlocul fiilor lui Israel, pentru că nu li s-a dat nicio moștenire în mijlocul fiilor lui Israel” — statutul lor rămâne special, separat de împărțirea teritorială generală, pentru că moștenirea lor este slujirea la Cortul Întâlnirii.",
       ),
       words: [],
       crossRefs: ["Numeri 3:14-39", "Levitic 10:1-2"],
@@ -134,7 +134,7 @@ export const NUMERI_26 = numeriChapter({
     {
       id: "numeri-26-63-65",
       ref: "Numeri 26:63-65",
-      heading: "Nicio generație veche, exceptand Caleb și Iosua",
+      heading: "Nicio generație veche, exceptând Caleb și Iosua",
       text: numeriPassage(26, 63, 65),
       teaching: teaching(
         "Concluzia recensământului confirmă solemn împlinirea sentinței de la Cadeș-Barnea: „printre aceștia nu a fost niciunul din bărbații numărați... în pustia Sinai”. DOMNUL zisese că vor muri în pustie, „și nu a rămas niciunul din ei, afară de Caleb, fiul lui Iefune, și Iosua, fiul lui Nun”.",
@@ -147,6 +147,6 @@ export const NUMERI_26 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, mulțumescu-Ţi că, după orice judecată, pregătești întotdeauna un pas înainte pentru poporul Tău, spre moștenirea făgăduită.\n\nDă-mi înțelepciunea să văd că judecata Ta este precisă asupra vinovaților și nu se prelungește la nesfârșit asupra generațiilor nevinovate.\n\nÎnvață-mă să trăiesc precum Caleb și Iosua, cu o credință care rămane statornică chiar dacă făgăduința întârzie decenii întregi.\n\nȘi mulțumescu-Ţi că nicio persoană, nici măcar o fiică într-o genealogie tehnică, nu este uitată de Tine. Amin.",
+    "Doamne, mulțumesc-Ți că, după orice judecată, pregătești întotdeauna un pas înainte pentru poporul Tău, spre moștenirea făgăduită.\n\nDă-mi înțelepciunea să văd că judecata Ta este precisă asupra vinovaților și nu se prelungește la nesfârșit asupra generațiilor nevinovate.\n\nÎnvață-mă să trăiesc precum Caleb și Iosua, cu o credință care rămâne statornică chiar dacă făgăduința întârzie decenii întregi.\n\nȘi mulțumesc-Ți că nicio persoană, nici măcar o fiică într-o genealogie tehnică, nu este uitată de Tine. Amin.",
   status: NUMERI_STATUSES[26],
 })

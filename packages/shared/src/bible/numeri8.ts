@@ -16,7 +16,7 @@ export const NUMERI_8 = numeriChapter({
   summary:
     "Un capitol scurt, cu trei părți: așezarea celor șapte candele ale sfeșnicului în fața lui, apoi ceremonia amănunțită prin care leviții sunt curățiți, legănați ca jertfă și puși deoparte pentru slujba Cortului, și în final vârstele între care un levit slujea activ: de la douăzeci și cinci până la cincizeci de ani.",
   literaryContext:
-    "După capitolul șapte, dedicat dăruirii căpeteniilor și încheiat cu Glasul de pe capacul ispășirii, capitolul opt revine la înăuntrul Cortului — lumina lui statornică — și apoi la punerea deoparte a slujitorilor care îl vor înțreine, încheind astfel secțiunea de organizare a Cortului și a leviților începută în capitolul trei.",
+    "După capitolul șapte, dedicat dăruirii căpeteniilor și încheiat cu Glasul de pe capacul ispășirii, capitolul opt revine la înăuntrul Cortului — lumina lui statornică — și apoi la punerea deoparte a slujitorilor care îl vor întreține, încheind astfel secțiunea de organizare a Cortului și a leviților începută în capitolul trei.",
   historicalContext:
     "Ceremonia de curățire a leviților — apa de curățire, briciul peste tot trupul, spălarea hainelor, punerea mâinilor și legănarea ca jertfă — se aseamănă mult cu rânduiala de curățire a leprosului din Levitic 14, dar cu o deosebire: aici nu este vorba de o boală, ci de o consacrare. Întregul popor participă, punându-și mâinile pe leviți, ca semn că îi dă pe aceștia din mijlocul lui, întocmai cum legănau o jertfă înaintea DOMNULUI.",
   units: [
@@ -70,7 +70,7 @@ export const NUMERI_8 = numeriChapter({
       heading: "Întregul popor pune mâinile pe leviți",
       text: numeriPassage(8, 8, 14),
       teaching: teaching(
-        "Ceremonia continuă cu doi tauri: unul cu darul de cereale, celălalt ca jertfă pentru păcat. Toată adunarea este strânsă înaintea Cortului, iar „fiii lui Israel să-și pună mâinile peste leviți” — nu doar Moise sau Aaron, ci întregul popor, ca semn că leviii sunt dați din mijlocul lor, cu deplina lor încuviințare.",
+        "Ceremonia continuă cu doi tauri: unul cu darul de cereale, celălalt ca jertfă pentru păcat. Toată adunarea este strânsă înaintea Cortului, iar „fiii lui Israel să-și pună mâinile peste leviți” — nu doar Moise sau Aaron, ci întregul popor, ca semn că leviții sunt dați din mijlocul lor, cu deplina lor încuviințare.",
         "Aaron își legeală pe leviți „ca o jertfă legănată înaintea DOMNULUI din partea fiilor lui Israel”. Este o imagine străină pentru cititorul modern: oamenii își sunt legănați ca o jertfă, nu în sensul distrugerii, ci al dăruirii depline către DOMNUL, înălțați și coborâți înaintea Lui ca semn că aparțin acum în întregime slujbei.",
         "Leviii își pun și ei mâinile pe capul taurilor, iar unul devine jertfă pentru păcat, celălalt ardere-de-tot, „ca să facă ispășire pentru leviți”. Chiar cei chemați să facă ispășire pentru alții au nevoie, mai întâi, de ispășire pentru ei înșiși.",
       ),
@@ -85,7 +85,7 @@ export const NUMERI_8 = numeriChapter({
       ],
       crossRefs: ["Levitic 8:14-17", "Romani 12:1", "Exod 29:24"],
       forYourHeart:
-        "A fi pus deoparte pentru slujba lui Dumnezeu începe cu ispășire, nu cu mândrie. Chiar cei chemați să slujească alții au nevoie întâi de curatirea proprie.",
+        "A fi pus deoparte pentru slujba lui Dumnezeu începe cu ispășire, nu cu mândrie. Chiar cei chemați să slujească alții au nevoie întâi de curățirea proprie.",
     },
     {
       id: "numeri-8-15-19",
@@ -130,7 +130,7 @@ export const NUMERI_8 = numeriChapter({
       heading: "Slujba activă, de la douăzeci și cinci la cincizeci de ani",
       text: numeriPassage(8, 23, 26),
       teaching: teaching(
-        "Aici apare o a treia vârstă de numărare pentru leviți, diferită de cea de la o lună (capitolul trei) și de cea de treizeci de ani (capitolul patru): slujba activă începe la douăzeci și cinci de ani. Comentatorii evreiesti observă de mult timp că diferența dintre douăzeci și cinci și treizeci ar putea fi anii de ucenicie și pregătire înainte de slujba deplină.",
+        "Aici apare o a treia vârstă de numărare pentru leviți, diferită de cea de la o lună (capitolul trei) și de cea de treizeci de ani (capitolul patru): slujba activă începe la douăzeci și cinci de ani. Comentatorii evreiești observă de mult timp că diferența dintre douăzeci și cinci și treizeci ar putea fi anii de ucenicie și pregătire înainte de slujba deplină.",
         "La cincizeci de ani, levitul „iese din slujba lucrării și nu va mai sluji” — dar textul nu îl lasă fără rost: „vor putea ajuta pe frații lor... să păzească paza, dar nu vor mai face slujbă activă”. Retragerea din munca grea nu înseamnă îndepărtare din Cort; înseamnă o schimbare de rol, de la purtarea sarcinilor la sprijinirea celor mai tineri.",
         "Capitolul se încheie astfel cu o învățătură tăcută despre înaintarea în vârstă înaintea lui Dumnezeu: puterea trupească se pierde, dar locul în familia slujitorilor rămâne, și experiența unui levit bătrân devine, la rândul ei, un fel de slujbă.",
       ),

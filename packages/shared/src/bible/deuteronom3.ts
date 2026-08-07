@@ -10,7 +10,7 @@ export const DEUTERONOM_3 = deuteronomChapter({
   number: 3,
   title: "Deuteronom 3 — Og cel uriaș, țara împărțită, și o rugăciune neascultată",
   summary:
-    "Israel biruiește pe Og, împăratul Basanului, ultimul dintre uriașii refaimiți. Ȝara cucerită la răsărit de Iordan este împărțită semințiilor lui Ruben, Gad și jumătății seminției lui Manase. Moise îl încurajează pe Iosua pentru drumul care vine și îoi amintește că, după ce a cerut să vadă țara bună, DOMNUL i-a refuzat cererea, îngăduindu-i doar să o privească de pe munte.",
+    "Israel biruiește pe Og, împăratul Basanului, ultimul dintre uriașii refaimiți. Țara cucerită la răsărit de Iordan este împărțită semințiilor lui Ruben, Gad și jumătății seminției lui Manase. Moise îl încurajează pe Iosua pentru drumul care vine și îoi amintește că, după ce a cerut să vadă țara bună, DOMNUL i-a refuzat cererea, îngăduindu-i doar să o privească de pe munte.",
   literaryContext:
     "Capitolul acesta încheie recapitularea cuceririlor de la răsărit de Iordan, începută în capitolul 2. Vine apoi o schimbare de ton: de la istoria cuceririi la o mărturisire personală a lui Moise, singurul loc din carte în care el vorbește direct despre propria lui durere și dorință neascultată.",
   historicalContext:
@@ -42,11 +42,11 @@ export const DEUTERONOM_3 = deuteronomChapter({
     {
       id: "deuteronom-3-12-17",
       ref: "Deuteronom 3:12-17",
-      heading: "Ȝara împărțită înainte de a fi cucerită pe deplin",
+      heading: "Țara împărțită înainte de a fi cucerită pe deplin",
       text: deuteronomPassage(3, 12, 17),
       teaching: teaching(
         "Pământul cucerit de la Arnon la Hermon este împărțit deja: rubeniților și gadiților, partea de sud; jumătății seminției lui Manase, Basanul, numit și „țara refaimiților”. Israel împarte țara ca pe o moștenire sigură, chiar înainte să fi trecut mărunțit și restul Iordanului.",
-        "Marea Iordanului este numită aici „Marea Câmpiei”, și munții Hermon primesc numele lor localnic dublu — Sirion pentru sidoniți, Senir pentru amoriți. Textul întțelege că aceeași geografie era numită diferit de neamuri diferite, fără să încurce cititorii.",
+        "Marea Iordanului este numită aici „Marea Câmpiei”, și munții Hermon primesc numele lor localnic dublu — Sirion pentru sidoniți, Senir pentru amoriți. Textul înțelege că aceeași geografie era numită diferit de neamuri diferite, fără să încurce cititorii.",
       ),
       words: [
         {
@@ -67,8 +67,8 @@ export const DEUTERONOM_3 = deuteronomChapter({
       heading: "Frații care luptă pentru frații lor",
       text: deuteronomPassage(3, 18, 22),
       teaching: teaching(
-        "Deși au primit deja țara lor la răsărit de Iordan, rubeniții, gadiții și cei din Manase primesc porunca să treacă „Înarmați” Înaintea celorlalți frați ai lor, până când și aceștia îiși vor primi odihna și moștenirea. Binecuvântarea primită nu-i scutește de răspunderea față de frații care nu au primit-o încă.",
-        "Lui Iosua i se spune, În fața întregii lucrări care Îrmează: „Ochii tăi au văzut tot ce a făcut DOMNUL, Dumnezeul vostru, acestor doi Împarați; DOMNUL va face la fel tuturor Împarățiilor pe unde vei trece”. Biruințele trecute nu sunt doar istorie; sunt temei pentru Încredere În ce urmează.",
+        "Deși au primit deja țara lor la răsărit de Iordan, rubeniții, gadiții și cei din Manase primesc porunca să treacă „Înarmați” Înaintea celorlalți frați ai lor, până când și aceștia își vor primi odihna și moștenirea. Binecuvântarea primită nu-i scutește de răspunderea față de frații care nu au primit-o încă.",
+        "Lui Iosua i se spune, În fața întregii lucrări care urmează: „Ochii tăi au văzut tot ce a făcut DOMNUL, Dumnezeul vostru, acestor doi Împărați; DOMNUL va face la fel tuturor împărățiilor pe unde vei trece”. Biruințele trecute nu sunt doar istorie; sunt temei pentru Încredere În ce urmează.",
       ),
       words: [
         {
@@ -91,7 +91,7 @@ export const DEUTERONOM_3 = deuteronomChapter({
       teaching: teaching(
         "Moise Îi destinuie poporului chiar propria lui rugăciune: „Lasă-mă să trec și să văd țara cea bună de dincolo de Iordan”. Cel care a purtat poporul patruzeci de ani cere pentru sine un singur lucru — să vadă ÎmplÎnirea a ceea ce a așteptat toată viața.",
         "Răspunsul DOMNULUI este limpede și fără loc de Îndoială: „Nu te ruga de mine În această privință”. Nici Moise, cel mai mare proroc al Vechiului Legământ, nu primește tot ce cere; cuvântul jurat la Meriba (Numeri 20:12) rămâne În picioare, oricât de mare ar fi cel care se roagă.",
-        "DOMNUL Însă nu Îl lasă pe Moise fără nimic: „Suie-te pe vÎrful Pisga și privește cu ochii tăi”. Vedeea de la distanță nu este ÎmplÎnirea deplină, dar este o Îndurare reală — și este și clipa În care Iosua primește public porunca de a duce lucrarea la bun sfârșit: „Încurajează-l, Întărește-l, căci el va trece Înaintea acestui popor”.",
+        "DOMNUL Însă nu Îl lasă pe Moise fără nimic: „Suie-te pe vÎrful Pisga și privește cu ochii tăi”. Vederea de la distanță nu este ÎmplÎnirea deplină, dar este o Îndurare reală — și este și clipa În care Iosua primește public porunca de a duce lucrarea la bun sfârșit: „Încurajează-l, Întărește-l, căci el va trece Înaintea acestui popor”.",
       ),
       words: [
         {

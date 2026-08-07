@@ -14,7 +14,7 @@ export const NUMERI_25 = numeriChapter({
   number: 25,
   title: "Numeri 25 — Baal-Peor și râvna lui Fineas",
   summary:
-    "După patru capitole în care Balaam nu a putut blâstema Israel din afară, poporul cade singur în păcat prin curvia cu fiicele Moabului și idolatria la Baal-Peor. Mânia DOMNULUI se aprinde și o urgie ucide 24.000 de israeliți, până când Fineas, plin de râvnă, oprește judecata printr-o intervenție directă, primind un legământ de pace și preoție veșnică.",
+    "După patru capitole în care Balaam nu a putut blestema Israel din afară, poporul cade singur în păcat prin curvia cu fiicele Moabului și idolatria la Baal-Peor. Mânia DOMNULUI se aprinde și o urgie ucide 24.000 de israeliți, până când Fineas, plin de râvnă, oprește judecata printr-o intervenție directă, primind un legământ de pace și preoție veșnică.",
   literaryContext:
     "Acest capitol încheie tragic secțiunea Balaam: ceea ce niciun blestem extern nu putuse face — să aducă pierzarea asupra lui Israel — se întâmplă prin păcatul intern al poporului Însăși. Numeri 31:16 va confirma mai târziu că această cursă fusese chiar sfătuită de Balaam Însăși, arătând că el a găsit o cale indirectă de a face rău lui Israel, deși nu putuse să-l blesteme direct.",
   historicalContext:
@@ -55,7 +55,7 @@ export const NUMERI_25 = numeriChapter({
       text: numeriPassage(25, 6, 9),
       teaching: teaching(
         "În mijlocul unei adunări care plângea la intrarea Cortului Întâlnirii, un bărbat din Israel aduce sfidător o madianită chiar sub ochii lui Moise și ai întregii adunări — un act de răzvrătire deschisă în fața judecății deja declarate.",
-        "Fineas, fiul lui Eleazar, se scoală fără poruncă explicită, ia o suliță și îi străpunge pe amândoi deodată. Acțiunea lui, deși violentă, oprește imediat urgia care ucisese deja 24.000 de oameni — răvna lui pentru sfințenia DOMNULUI a făcut ceea ce judecata formală încă nu apâta pe deplin.",
+        "Fineas, fiul lui Eleazar, se scoală fără poruncă explicită, ia o suliță și îi străpunge pe amândoi deodată. Acțiunea lui, deși violentă, oprește imediat urgia care ucisese deja 24.000 de oameni — râvna lui pentru sfințenia DOMNULUI a făcut ceea ce judecata formală încă nu apâta pe deplin.",
       ),
       words: [],
       crossRefs: ["Psalmul 106:29-31", "1 Corinteni 10:8"],
@@ -82,12 +82,12 @@ export const NUMERI_25 = numeriChapter({
       heading: "Numele celor uciși: Zimri și Cozbi",
       text: numeriPassage(25, 14, 15),
       teaching: teaching(
-        "Textul reține numele exacte ale celor doi vinovați: Zimri, fiul lui Salu, căpetenie a unei case părintești a simeoniților, și Cozbi, fiica lui Ţur, cap al unor neamuri madianite. Faptul că ambii proveneau din familii cu funcții de conducere arată că păcatul nu venise doar de la oamenii de rând, ci ajunsese până la căpetenii.",
+        "Textul reține numele exacte ale celor doi vinovați: Zimri, fiul lui Salu, căpetenie a unei case părintești a simeoniților, și Cozbi, fiica lui Țur, cap al unor neamuri madianite. Faptul că ambii proveneau din familii cu funcții de conducere arată că păcatul nu venise doar de la oamenii de rând, ci ajunsese până la căpetenii.",
       ),
       words: [],
       crossRefs: [],
       forYourHeart:
-        "Păcatul nu ale bine numai pe cei simpli; cănd atinge și pe cei puși în funcții de conducere, consecințele afectează întregul popor.",
+        "Păcatul nu ale bine numai pe cei simpli; când atinge și pe cei puși în funcții de conducere, consecințele afectează întregul popor.",
     },
     {
       id: "numeri-25-16-18",
@@ -105,6 +105,6 @@ export const NUMERI_25 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, păzește-mi inima de ademenirea treptată spre compromis, care este adesea mai periculoasă decât un atac deschis împotriva credinței mele.\n\nDă-mi râvna lui Fineas — nu pentru răzbunare personală, ci pentru sfințenia Ta și pentru binele celor din jurul meu.\n\nÎnvață-mă să văd legătura dintre idolatrie și necurăție, și să fug de amb ele cu toată seriozitatea.\n\nȘi mulțumescu-Ţi că o râvnă curată pentru Tine poate opri judecata și aduce ispășire pentru alții. Amin.",
+    "Doamne, păzește-mi inima de ademenirea treptată spre compromis, care este adesea mai periculoasă decât un atac deschis împotriva credinței mele.\n\nDă-mi râvna lui Fineas — nu pentru răzbunare personală, ci pentru sfințenia Ta și pentru binele celor din jurul meu.\n\nÎnvață-mă să văd legătura dintre idolatrie și necurăție, și să fug de amb ele cu toată seriozitatea.\n\nȘi mulțumesc-Ți că o râvnă curată pentru Tine poate opri judecata și aduce ispășire pentru alții. Amin.",
   status: NUMERI_STATUSES[25],
 })

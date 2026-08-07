@@ -12,21 +12,21 @@ import { NUMERI_STATUSES } from "./numeriPublication.js"
 
 export const NUMERI_27 = numeriChapter({
   number: 27,
-  title: "Numeri 27 — Fiicele lui Ţelofhad și numirea lui Iosua",
+  title: "Numeri 27 — Fiicele lui Țelofhad și numirea lui Iosua",
   summary:
     "Cinci fiice curajoase cer o moștenire pentru familia tatălui lor mort fără fii, iar DOMNUL le dă dreptate și stabilește o lege permanentă a moștenirii. Apoi DOMNUL îi anunță lui Moise moartea sa viitoare pe muntele Abarim și îl îndrumă să-l numească solemn pe Iosua drept urmașul său înaintea întregii adunări.",
   literaryContext:
-    "Acest capitol împleteaște două teme aparent separate — dreptatea pentru fiicele lui Ţelofhad și pregătirea succesiunii conducerii — dar amândouă privesc spre viitorul lui Israel în țara făgăduită: cine va moșteni pământul și cine va conduce poporul când Moise nu va mai fi.",
+    "Acest capitol împleteaște două teme aparent separate — dreptatea pentru fiicele lui Țelofhad și pregătirea succesiunii conducerii — dar amândouă privesc spre viitorul lui Israel în țara făgăduită: cine va moșteni pământul și cine va conduce poporul când Moise nu va mai fi.",
   historicalContext:
-    "Dreptul de moștenire prin linia bărbătească era norma în lumea antică din Orientul Apropiat; cererea fiicelor lui Ţelofhad și răspunsul pozitiv al DOMNULUI reprezintă o ajustare notabilă a acestei norme, motivată explicit de dreptate față de o familie fără fii, nu de o schimbare generală a ordinii sociale.",
+    "Dreptul de moștenire prin linia bărbătească era norma în lumea antică din Orientul Apropiat; cererea fiicelor lui Țelofhad și răspunsul pozitiv al DOMNULUI reprezintă o ajustare notabilă a acestei norme, motivată explicit de dreptate față de o familie fără fii, nu de o schimbare generală a ordinii sociale.",
   units: [
     {
       id: "numeri-27-1-4",
       ref: "Numeri 27:1-4",
-      heading: "Fiicele lui Ţelofhad cer o moștenire",
+      heading: "Fiicele lui Țelofhad cer o moștenire",
       text: numeriPassage(27, 1, 4),
       teaching: teaching(
-        "Mahla, Noa, Hogla, Milca și Ţirța se înfățișează curajos „înaintea lui Moise, înaintea preotului Eleazar, înaintea căpeteniilor și înaintea întregii adunări” — o acțiune publică, nu o cerere ascunsă, într-o societate în care femeile nu aveau de obicei dreptul de a cere moștenire.",
+        "Mahla, Noa, Hogla, Milca și Țirța se înfățișează curajos „înaintea lui Moise, înaintea preotului Eleazar, înaintea căpeteniilor și înaintea întregii adunări” — o acțiune publică, nu o cerere ascunsă, într-o societate în care femeile nu aveau de obicei dreptul de a cere moștenire.",
         "Argumentul lor este simplu și drept: tatăl lor „a murit pentru propriul lui păcat” (probabil ca alți din generația pustiei), nu ca răzvrătit al lui Core, și nu a avut fii. Cererea lor nu este pentru privilegiu, ci pentru păstrarea numelui tatălui lor în mijlocul familiei: „de ce să piară numele tatălui nostru?”",
       ),
       words: [],
@@ -40,7 +40,7 @@ export const NUMERI_27 = numeriChapter({
       heading: "DOMNUL le dă dreptate",
       text: numeriPassage(27, 5, 7),
       teaching: teaching(
-        "Moise nu decide de la sine, ci „a adus cauza lor înaintea DOMNULUI” — un exemplu de conducere care recunoaște limita propriei autorități și caută hotărârea finală la DOMNUL. Răspunsul este imediat și clar: „fiicele lui Ţelofhad au dreptate.”",
+        "Moise nu decide de la sine, ci „a adus cauza lor înaintea DOMNULUI” — un exemplu de conducere care recunoaște limita propriei autorități și caută hotărârea finală la DOMNUL. Răspunsul este imediat și clar: „fiicele lui Țelofhad au dreptate.”",
         "DOMNUL nu doar aprobă cererea, ci poruncește acțiunea concretă: „să le dai neapărat o moștenire” și „să le strămuți moștenirea tatălui lor” — o transferare legală formală, nu doar o îngăduință verbală.",
       ),
       words: [],
@@ -54,7 +54,7 @@ export const NUMERI_27 = numeriChapter({
       heading: "Legea permanentă a moștenirii",
       text: numeriPassage(27, 8, 11),
       teaching: teaching(
-        "Cazul particular al fiicelor lui Ţelofhad devine ocazia unei legi generale, permanente: o „orânduială de drept pentru fiii lui Israel” care stabilește ordinea succesiunii în absența fiilor — mai întâi fiicele, apoi frații, apoi frații tatălui, apoi ruda cea mai apropiată.",
+        "Cazul particular al fiicelor lui Țelofhad devine ocazia unei legi generale, permanente: o „orânduială de drept pentru fiii lui Israel” care stabilește ordinea succesiunii în absența fiilor — mai întâi fiicele, apoi frații, apoi frații tatălui, apoi ruda cea mai apropiată.",
         "Această lege arată că dreptatea individuală făcută pentru cinci femei anume a devenit un principiu care va proteja mulți alții în viitor — un exemplu de justiție particulară care se transformă în lege generală.",
       ),
       words: [],
@@ -69,7 +69,7 @@ export const NUMERI_27 = numeriChapter({
       text: numeriPassage(27, 12, 14),
       teaching: teaching(
         "DOMNUL îi spune direct lui Moise să se sui pe muntele Abarim și să privească țara făgăduită — dar doar să o privească, pentru că „după ce o vei privi, vei fi adăugat și tu la poporul tău, cum a fost adăugat fratele tău Aaron”.",
-        "Motivul este reamintit fără înconjur: răzvrătirea de la Meriba, în pustia Ţin (Numeri 20:1-13), când Moise nu a sfințit pe DOMNUL prin apă înaintea poporului. Consecința, anunțată cu ani înainte, se împlinește acum fără amânare sau schimbare.",
+        "Motivul este reamintit fără înconjur: răzvrătirea de la Meriba, în pustia Țin (Numeri 20:1-13), când Moise nu a sfințit pe DOMNUL prin apă înaintea poporului. Consecința, anunțată cu ani înainte, se împlinește acum fără amânare sau schimbare.",
       ),
       words: [],
       crossRefs: ["Numeri 20:1-13", "Deuteronom 32:48-52", "Deuteronom 34:1-5"],
@@ -120,6 +120,6 @@ export const NUMERI_27 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, dă-mi curajul fiicelor lui Ţelofhad de a cere dreptate înaintea Ta, indiferent de convențiile lumii din jurul meu.\n\nÎnvață-mă să accept, ca Moise, consecințele propriilor mele greșeli fără cârtire, și totuși să continui să mă îngrijesc de cei din jurul meu până în ultima clipă.\n\nMulțumescu-Ţi că nu lași niciodată poporul Tău fără păstor și că pregătești mereu urmașul potrivit la timpul potrivit. Amin.",
+    "Doamne, dă-mi curajul fiicelor lui Țelofhad de a cere dreptate înaintea Ta, indiferent de convențiile lumii din jurul meu.\n\nÎnvață-mă să accept, ca Moise, consecințele propriilor mele greșeli fără cârtire, și totuși să continui să mă îngrijesc de cei din jurul meu până în ultima clipă.\n\nMulțumescu-Ți că nu lași niciodată poporul Tău fără păstor și că pregătești mereu urmașul potrivit la timpul potrivit. Amin.",
   status: NUMERI_STATUSES[27],
 })

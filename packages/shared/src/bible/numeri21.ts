@@ -18,7 +18,7 @@ export const NUMERI_21 = numeriChapter({
   literaryContext:
     "Capitolul marchează trecerea de la rătăcire la cucerire: pentru prima dată de la Cadeș, Israel câștigă bătălii și ocupă teritorii — la Horma, apoi împotriva lui Sihon și Og. Generația nouă, născută în pustie, începe să vadă împlinirea făgăduinței pentru care părinții lor muriseră în necredință.",
   historicalContext:
-    "Șarpele de aramă ridicat de Moise a fost păstrat de israeliți până pe vremea regelui Ezechia, care l-a sfărâmat pentru că poporul începuse să-i aducă tămâie ca unui idol (2 Împarați 18:4). Isus Hristos Însăși folosește această imagine în Ioan 3:14-15 ca prefigurare directă a Înălțării Sale pe cruce.",
+    "Șarpele de aramă ridicat de Moise a fost păstrat de israeliți până pe vremea regelui Ezechia, care l-a sfărâmat pentru că poporul începuse să-i aducă tămâie ca unui idol (2 Împărați 18:4). Isus Hristos Însăși folosește această imagine în Ioan 3:14-15 ca prefigurare directă a Înălțării Sale pe cruce.",
   units: [
     {
       id: "numeri-21-1-3",
@@ -27,7 +27,7 @@ export const NUMERI_21 = numeriChapter({
       text: numeriPassage(21, 1, 3),
       teaching: teaching(
         "Canaanitul din Arad atacă și ia câțiva prinși de război. Răspunsul lui Israel este remarcabil: în loc să cârtească, face un jurământ către DOMNUL, promițând să nimicească total cetățile dacă va primi victoria — nu spre câștig personal, ci ca jertfă de recunoștință.",
-        "DOMNUL ascultă și răspunde imediat, iar Israel împlinește jurământul. Numele locului, Horma, „nimicire”, este același cu locul înșfrângerii lor de la sfârșitul capitolului paisprezece — dar de data aceasta în sens invers, ca loc de victorie, nu de eșec.",
+        "DOMNUL ascultă și răspunde imediat, iar Israel împlinește jurământul. Numele locului, Horma, „nimicire”, este același cu locul înfrângerii lor de la sfârșitul capitolului paisprezece — dar de data aceasta în sens invers, ca loc de victorie, nu de eșec.",
       ),
       words: [],
       crossRefs: ["Numeri 14:45", "Judecătorii 1:17"],
@@ -40,7 +40,7 @@ export const NUMERI_21 = numeriChapter({
       heading: "Șerpii arzători și șarpele de aramă",
       text: numeriPassage(21, 4, 9),
       teaching: teaching(
-        "Ocolînd țara Edomului, „poporul și-a pierdut răbdarea pe drum”, repetând cârtirea veche despre lipsa hranei și apei, și numind mană „hrana mizerabilă”. DOMNUL trimite șerpi arzători a căror mușcătură ucide mult popor.",
+        "Ocolind țara Edomului, „poporul și-a pierdut răbdarea pe drum”, repetând cârtirea veche despre lipsa hranei și apei, și numind mană „hrana mizerabilă”. DOMNUL trimite șerpi arzători a căror mușcătură ucide mult popor.",
         "Poporul recunoaște imediat păcatul — „am păcătuit, căci am vorbit împotriva DOMNULUI și împotriva ta” — și cere mijlocirea lui Moise. DOMNUL nu îndepărtează șerpii, ci oferă o cale de vindecare: un șarpe de aramă pe un stâlp, la care oricine mușcat privea și trăia.",
         "Vindecarea nu cerea efort, ci doar privire cu credință: „oricine va fi mușcat și va privi spre el va trăi”. Isus Însăși avea să explice această scenă ca prefigurare a morții Sale pe cruce: „precum a înălțat Moise șarpele în pustie, tot așa trebuie să fie înălțat și Fiul omului”.",
       ),

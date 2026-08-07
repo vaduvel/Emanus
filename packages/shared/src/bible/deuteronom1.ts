@@ -28,7 +28,7 @@ export const DEUTERONOM_1 = deuteronomChapter({
       teaching: teaching(
         "Cartea se deschide cu o însemnare geografică și cronologică aproape banală: locul, timpul, și faptul că Moise a vorbit „după tot ce-i poruncise DOMNUL să-i spună”. Nimic din ce va urma în această carte lungă nu este inițiativă personală a lui Moise; el rostea ce i se poruncise.",
         "Textul însemnează că de la Horeb la Cades-Barnea era un drum de unsprezece zile — și totuși Israel a petrecut patruzeci de ani între aceste două puncte. Distanța scurtă față de anii lungi de rătăcire arată limpede: nu geografia a fost problema, ci necredința.",
-        "DOMNUL rennoiește aici porunca inițială din Horeb: „Intrați în stăpânirea țării pe care am jurat-o părinților voștri”. Cuvântul acesta era valabil de patruzeci de ani; nu s-a schimbat. Ceea ce s-a schimbat este generația care îl ascultă.",
+        "DOMNUL reînnoiește aici porunca inițială din Horeb: „Intrați în stăpânirea țării pe care am jurat-o părinților voștri”. Cuvântul acesta era valabil de patruzeci de ani; nu s-a schimbat. Ceea ce s-a schimbat este generația care îl ascultă.",
       ),
       words: [
         {
@@ -49,8 +49,8 @@ export const DEUTERONOM_1 = deuteronomChapter({
       heading: "Judecători puși în fruntea unui popor înmulțit",
       text: deuteronomPassage(1, 9, 18),
       teaching: teaching(
-        "Moise începe amintirea lui cu o povară, nu cu o victorie: „n-am putut singur să vă duc”. Recunoașterea neputinței personale este pragul de la care se ridică o rânduială nouă. Un popor înmulțit „ca stelele cerului” — făgăduința lui Avraam împlânită sub ochii lui — nu mai poate fi călăuzit de un singur om.",
-        "Alegerea judecătorilor cere calități limpezi: „ințelepți, pricepuți și cunoscuți”, aleși chiar de către semințiile lor. Rânduiala nu este impusă de la Moise în jos, ci recunoscută din mijlocul poporului însuși — aceeași structură văzută deja în Exod 18:21-26.",
+        "Moise începe amintirea lui cu o povară, nu cu o victorie: „n-am putut singur să vă duc”. Recunoașterea neputinței personale este pragul de la care se ridică o rânduială nouă. Un popor înmulțit „ca stelele cerului” — făgăduința lui Avraam împlinită sub ochii lui — nu mai poate fi călăuzit de un singur om.",
+        "Alegerea judecătorilor cere calități limpezi: „înțelepți, pricepuți și cunoscuți”, aleși chiar de către semințiile lor. Rânduiala nu este impusă de la Moise în jos, ci recunoscută din mijlocul poporului însuși — aceeași structură văzută deja în Exod 18:21-26.",
         "Porunca dată judecătorilor este fără echivoc: „să nu vă uitați la fața omului la judecată”, mic sau mare, străin sau băștinaș. Judecata este a lui Dumnezeu, iar cazurile prea grele se aduc înaintea lui Moise — nu ca pe o scăpare din răspundere, ci ca pe o rezervă pentru ce trece peste puterea omenească de înțelegere.",
       ),
       words: [
@@ -59,7 +59,7 @@ export const DEUTERONOM_1 = deuteronomChapter({
           transliteration: "lo-takiru fanim",
           language: "ebraica",
           meaning:
-            "să nu cunoașteți/prtișniți fața — să nu aveți părtinire. Formula standard pentru nepărtinirea cerută judecătorilor din Israel.",
+            "să nu cunoașteți/părtiniți fața — să nu aveți părtinire. Formula standard pentru nepărtinirea cerută judecătorilor din Israel.",
         },
       ],
       crossRefs: ["Exod 18:21-26", "Geneza 15:5", "Numeri 11:16-17"],
@@ -73,7 +73,7 @@ export const DEUTERONOM_1 = deuteronomChapter({
       text: deuteronomPassage(1, 19, 33),
       teaching: teaching(
         "Ajunși la Cades-Barnea, poporul însuși cere iscoade: „Să trimitem înainte pe unii care să cerceteze țara”. Cei doisprezece se întorc și aduc din roadele țării, mărturisind că este bună — și totuși, chiar din raportul lor bun se naște frica și cârteala.",
-        "Moise îi amintește poporului chiar propriile lui cuvinte de încurajare: „DOMNUL, Dumnezeul tău, care merge înaintea ta, se va lupta El Îsuși pentru voi”, așa cum a făcut în Egipt. Dar cuvintele bune nu au fost de-ajuns împotriva unei inimi care îndoia.",
+        "Moise îi amintește poporului chiar propriile lui cuvinte de încurajare: „DOMNUL, Dumnezeul tău, care merge înaintea ta, se va lupta El însuși pentru voi”, așa cum a făcut în Egipt. Dar cuvintele bune nu au fost de-ajuns împotriva unei inimi care îndoia.",
         "Cârteala poporului este aspră și răstălmăcitoare: acuză pe DOMNUL că îi urăște, că i-a scos din Egipt ca să-i dea în mâna amoriților. Necredința nu este niciodată tăcută; ea preface iubirea lui Dumnezeu în ură, și izbăvirea în trădare.",
         "Versetul 32 spune totul în cinci cuvinte: „n-ați crezut pe DOMNUL, Dumnezeul vostru”. Păcatul de la Cades-Barnea nu a fost, la rădăcină, frică de război, ci necredință față de făgăduință.",
       ),
@@ -121,7 +121,7 @@ export const DEUTERONOM_1 = deuteronomChapter({
       teaching: teaching(
         "Poporul încearcă să repare greșeala prin proprii puteri: „Vom sui și vom lupta”, spun ei, după ce refuzaseră să facă exact acest lucru când DOMNUL le poruncise. DOMNUL însă nu mai este cu ei în această luptă inițiată din propria voință, și sunt bătuți de amoriți la Horma.",
         "Cuvântul lui Moise este limpede: „DOMNUL nu este în mijlocul vostru”. Pocăința adevărată nu înseamnă doar a încerca din nou aceeași faptă pe care ai refuzat-o mai înainte, ci a te întoarce la ascultarea de cuvântul care este dat în prezent, nu la cel care s-a închis deja.",
-        "Capitolul se încheie cu poporul șezând la Cades „multe zile”, ca o imăgine a anilor pierduți în pustie. Ceea ce ar fi putut fi un scurt drum de unsprezece zile s-a preschimbat, prin necredință, într-o ședere lungă, fără progres, înainte ca o generație nouă să fie pregătită să asculte altfel.",
+        "Capitolul se încheie cu poporul șezând la Cades „multe zile”, ca o imagine a anilor pierduți în pustie. Ceea ce ar fi putut fi un scurt drum de unsprezece zile s-a preschimbat, prin necredință, într-o ședere lungă, fără progres, înainte ca o generație nouă să fie pregătită să asculte altfel.",
       ),
       words: [
         {

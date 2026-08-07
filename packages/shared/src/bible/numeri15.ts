@@ -65,7 +65,7 @@ export const NUMERI_15 = numeriChapter({
           transliteration: "bishgagah",
           language: "ebraica",
           meaning:
-            "din neștiință, din greșeală nein tencionată. Termenul acoperea o greșeală făcută fără cunoștință sau intenție, spre deosebire de păcatul cu „mână înaltă” din unitatea următoare.",
+            "din neștiință, din greșeală nein intenționată. Termenul acoperea o greșeală făcută fără cunoștință sau intenție, spre deosebire de păcatul cu „mână înaltă” din unitatea următoare.",
         },
       ],
       crossRefs: ["Levitic 4:1-3", "Luca 23:34", "1 Timotei 1:13"],
@@ -100,7 +100,7 @@ export const NUMERI_15 = numeriChapter({
       heading: "Omul care a strâns lemne în Sabat",
       text: numeriPassage(15, 32, 36),
       teaching: teaching(
-        "Imediat după legea despre păcatul cu voință sfidătoare, textul plasează un caz concret: un om este găsit „strângând lemne în ziua Sabatului”. Sabatul fusese deja poruncit limpede în Exod 20 și 31; acest om nu putea pretenți neștiință.",
+        "Imediat după legea despre păcatul cu voință sfidătoare, textul plasează un caz concret: un om este găsit „strângând lemne în ziua Sabatului”. Sabatul fusese deja poruncit limpede în Exod 20 și 31; acest om nu putea pretenții neștiință.",
         "Chiar Moise și Aaron nu știu ce să facă imediat — „l-au pus sub pază, pentru că nu se hotărâse încă ce trebuia să i se facă” — și așteaptă cuvântul direct al DOMNULUI. Chiar și cei mai mari conducători nu improvizează o pedeapsă fără poruncă clară.",
         "Răspunsul DOMNULUI este definitiv: „omul acesta să fie dat la moarte”, iar „toată adunarea” execută sentința împreună, nu doar câțiva. Severitatea acestei aplicări arată cât de serios era considerat un act deschis de dispreț față de o poruncă deja limpede rostită.",
       ),
@@ -134,6 +134,6 @@ export const NUMERI_15 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, mulțumescu-Ți că Făgăduința Ta rămâne sigură chiar și după eșecul meu; ea așteaptă doar generația care Te va urma cu credință.\n\nÎnvață-mă să deosebesc greșeala din neștiință de răzvrătirea conștientă, și dă-mi smerenia de a căuta ispășire când greșesc fără să știu.\n\nPăzește-mă de a urma poftele inimii și ochilor mei în locul cuvântului Tău.\n\nȘi dă-mi un semn statornic, ca ciucurii de altădată, care să-mi aducă mereu aminte de poruncile Tale. Amin.",
+    "Doamne, mulțumesc-Ți că Făgăduința Ta rămâne sigură chiar și după eșecul meu; ea așteaptă doar generația care Te va urma cu credință.\n\nÎnvață-mă să deosebesc greșeala din neștiință de răzvrătirea conștientă, și dă-mi smerenia de a căuta ispășire când greșesc fără să știu.\n\nPăzește-mă de a urma poftele inimii și ochilor mei în locul cuvântului Tău.\n\nȘi dă-mi un semn statornic, ca ciucurii de altădată, care să-mi aducă mereu aminte de poruncile Tale. Amin.",
   status: NUMERI_STATUSES[15],
 })

@@ -14,16 +14,16 @@ export const DEUTERONOM_5 = deuteronomChapter({
   literaryContext:
     "Aceasta este a doua rostire a Decalogului din Scriptură, după cea din Exod 20. Deosebirile mici dintre cele două versiuni — mai ales la porunca Sabatului — arată că aceeași lege este predicată din nou, cu accente potrivite unei generații care se pregătește să intre în țară, nu doar copiată mecanic.",
   historicalContext:
-    "Generația căreia i se adresează Moise nu era, În mare parte, prezentă la Horeb ca adulți; mulți erau copii sau nu se născuseră Încă. Totuși Moise le spune: „DOMNUL a făcut acest legămînt cu noi, cu toți cei care sunt aici astăzi”, arătînd că legămîntul se Împropriază de fiecare generație, nu doar de cea care l-a văzut cu ochii.",
+    "Generația căreia i se adresează Moise nu era, În mare parte, prezentă la Horeb ca adulți; mulți erau copii sau nu se născuseră Încă. Totuși Moise le spune: „DOMNUL a făcut acest legământ cu noi, cu toți cei care sunt aici astăzi”, arătând că legământul se Împropriază de fiecare generație, nu doar de cea care l-a văzut cu ochii.",
   units: [
     {
       id: "deuteronom-5-1-5",
       ref: "Deuteronom 5:1-5",
-      heading: "Un legămînt însușit, nu doar auzit",
+      heading: "Un legământ însușit, nu doar auzit",
       text: deuteronomPassage(5, 1, 5),
       teaching: teaching(
         "Moise deschide capitolul cu o chemare la atenție deplină: „Ascultă, Israel, Învățăturile și poruncile pe care vi le spun astăzi, ca să le Învățați și să le păziți și să le faceți”. Trei verbe În șir — a Învăța, a păzi, a face — arată că ascultarea adevărată trece dincolo de cunoaștere spre păzire și Înfăptuire.",
-        "Versetul 3 este surprinzător de direct: „DOMNUL n-a făcut acest legămînt numai cu părinții noștri, ci cu noi toți care suntem aici astăzi și suntem În viață”. Legămîntul de la Horeb nu este o istorie Îndepărtată pentru generația nouă; este propriul lor legămînt, la fel cum rămîne și pentru cei ce citesc acum aceste cuvinte.",
+        "Versetul 3 este surprinzător de direct: „DOMNUL n-a făcut acest legământ numai cu părinții noștri, ci cu noi toți care suntem aici astăzi și suntem În viață”. Legământul de la Horeb nu este o istorie Îndepărtată pentru generația nouă; este propriul lor legământ, la fel cum rămâne și pentru cei ce citesc acum aceste cuvinte.",
       ),
       words: [
         {
@@ -36,7 +36,7 @@ export const DEUTERONOM_5 = deuteronomChapter({
       ],
       crossRefs: ["Exod 19:5-6", "Deuteronom 6:4", "Evrei 8:8-10"],
       forYourHeart:
-        "Legămîntul lui Dumnezeu nu este o poveste veche pentru tine; este chiar legămîntul tău, astăzi.",
+        "Legământul lui Dumnezeu nu este o poveste veche pentru tine; este chiar legământul tău, astăzi.",
     },
     {
       id: "deuteronom-5-6-10",
@@ -44,8 +44,8 @@ export const DEUTERONOM_5 = deuteronomChapter({
       heading: "Niciun alt dumnezeu, niciun chip cioplit",
       text: deuteronomPassage(5, 6, 10),
       teaching: teaching(
-        "Prima poruncă se întemeiază pe un fapt istoric, nu pe o cerere abstractă: „Eu sunt DOMNUL, Dumnezeul tău, care te-am scos din țara Egiptului, din casa robiei”. Ascultarea nu este cerută de un stăpîn necunoscut, ci de Cel care a izbăvit deja poporul.",
-        "Interzicerea chipurilor cioplite este direct legată de gelozia lui Dumnezeu, deja explicată În capitolul precedent. Pedeapsa se Întinde „pînă la al treilea și al patrulea neam”, dar mila „pînă la al miilea neam” celor ce iubesc pe Dumnezeu și păzesc poruncile Lui — disproportia arată că mila DOMNULUI Întrece cu mult mînia Lui.",
+        "Prima poruncă se întemeiază pe un fapt istoric, nu pe o cerere abstractă: „Eu sunt DOMNUL, Dumnezeul tău, care te-am scos din țara Egiptului, din casa robiei”. Ascultarea nu este cerută de un stăpân necunoscut, ci de Cel care a izbăvit deja poporul.",
+        "Interzicerea chipurilor cioplite este direct legată de gelozia lui Dumnezeu, deja explicată În capitolul precedent. Pedeapsa se Întinde „până la al treilea și al patrulea neam”, dar mila „până la al miilea neam” celor ce iubesc pe Dumnezeu și păzesc poruncile Lui — disproporția arată că mila DOMNULUI Întrece cu mult mânia Lui.",
       ),
       words: [
         {
@@ -53,7 +53,7 @@ export const DEUTERONOM_5 = deuteronomChapter({
           transliteration: "El qana",
           language: "ebraica",
           meaning:
-            "Dumnezeu gelos. Aceeași rădăcină ca În Deuteronom 4:24; gelozia lui Dumnezeu este rîvna dreaptă a unui legămînt exclusiv, nu o pornire omenească.",
+            "Dumnezeu gelos. Aceeași rădăcină ca În Deuteronom 4:24; gelozia lui Dumnezeu este râvna dreaptă a unui legământ exclusiv, nu o pornire omenească.",
         },
       ],
       crossRefs: ["Exod 20:2-6", "Deuteronom 4:23-24", "Ioan 14:15"],
@@ -68,7 +68,7 @@ export const DEUTERONOM_5 = deuteronomChapter({
       teaching: teaching(
         "Porunca despre Numele DOMNULUI oprește folosirea lui în deșert, „căci DOMNUL nu va lăsa nepedepsit pe cel ce va lua în deșert Numele Lui”. Numele lui Dumnezeu nu este o formulă magică sau o expresie oarecare; el poartă aceeași sfințenie ca și Persoana pe care o numește.",
         "Porunca Sabatului aici are un temei diferit de cel din Exod 20:11 (odihna lui Dumnezeu la creație): „amintește-ți că ai fost rob În țara Egiptului și DOMNUL... te-a scos de acolo”. Sabatul din Deuteronom este învățat ca amintire a eliberării din robie — odihna dată unui popor de sclavi care nu avea niciodată odihnă.",
-        "Porunca include expres „robul tău, roaba ta... ca și tine” și vitele: odihna Sabatului nu este un privilegiu al stăpînilor, ci un dar care se întinde peste toată casa și peste toți cei care muncesc În ea.",
+        "Porunca include expres „robul tău, roaba ta... ca și tine” și vitele: odihna Sabatului nu este un privilegiu al stăpânilor, ci un dar care se întinde peste toată casa și peste toți cei care muncesc În ea.",
       ),
       words: [
         {
@@ -76,7 +76,7 @@ export const DEUTERONOM_5 = deuteronomChapter({
           transliteration: "vezakharta ki-eved hayita",
           language: "ebraica",
           meaning:
-            "și îamintește-ți că ai fost rob. Temeiul special al Sabatului În Deuteronom: odihna ca amintire practică a eliberării din robie.",
+            "și amintește-ți că ai fost rob. Temeiul special al Sabatului În Deuteronom: odihna ca amintire practică a eliberării din robie.",
         },
       ],
       crossRefs: ["Exod 20:8-11", "Exod 20:2", "Deuteronom 15:15"],
@@ -86,11 +86,11 @@ export const DEUTERONOM_5 = deuteronomChapter({
     {
       id: "deuteronom-5-16-21",
       ref: "Deuteronom 5:16-21",
-      heading: "De la cinstirea părinților la stăpînirea poftei",
+      heading: "De la cinstirea părinților la stăpânirea poftei",
       text: deuteronomPassage(5, 16, 21),
       teaching: teaching(
         "Poruncile despre om În legătură cu semenul lui Încep chiar În casă: „Cinstește pe tatăl tău și pe mama ta... ca să-ți fie bine și să trăiești multă vreme”. Aceasta este singura poruncă din Decalog legată direct de o făgăduință, semn al importanței ei pentru Întreaga structură socială.",
-        "Interzicerile care urmează — crima, adulterul, furtul, mărturia mincinoasă — protejează viața, căsnicia, avutul și adevărul În ordinea socială a legămîntului. Ultima poruncă, Împotriva poftei, se întinde În interiorul omului Însăși: nu doar fapta, ci dorința nesăturată este oprită.",
+        "Interzicerile care urmează — crima, adulterul, furtul, mărturia mincinoasă — protejează viața, căsnicia, avutul și adevărul În ordinea socială a legământului. Ultima poruncă, Împotriva poftei, se întinde În interiorul omului Însăși: nu doar fapta, ci dorința nesăturată este oprită.",
       ),
       words: [
         {
@@ -111,8 +111,8 @@ export const DEUTERONOM_5 = deuteronomChapter({
       heading: "O frică care cere un mijlocitor",
       text: deuteronomPassage(5, 22, 27),
       teaching: teaching(
-        "Poporul Îiși amintește propria lor spaimă la Horeb: „DOMNUL, Dumnezeul nostru, ne-a arătat mărirea Lui... noi am auzit glasul Lui din mijlocul focului”, și au tras concluzia „cine dintre oameni... ar putea să trăiască?”. Prezența nemijlocită a lui Dumnezeu era prea înfricoșătoare de îndurat.",
-        "De aceea poporul cere: „Du-te tu și ascultă tot ce-ți va spune DOMNUL, Dumnezeul nostru, și spune-ne-l tu înapoi”. Nevoia unui mijlocitor Între un Dumnezeu sfînt și un popor care nu poate purta prezența Lui directă este recunoscută chiar de popor, și pregătește calea pentru întărirea slujbei preoțești și, mai tîrziu, pentru Mijlocitorul deplin.",
+        "Poporul își amintește propria lor spaimă la Horeb: „DOMNUL, Dumnezeul nostru, ne-a arătat mărirea Lui... noi am auzit glasul Lui din mijlocul focului”, și au tras concluzia „cine dintre oameni... ar putea să trăiască?”. Prezența nemijlocită a lui Dumnezeu era prea înfricoșătoare de îndurat.",
+        "De aceea poporul cere: „Du-te tu și ascultă tot ce-ți va spune DOMNUL, Dumnezeul nostru, și spune-ne-l tu înapoi”. Nevoia unui mijlocitor Între un Dumnezeu sfânt și un popor care nu poate purta prezența Lui directă este recunoscută chiar de popor, și pregătește calea pentru întărirea slujbei preoțești și, mai târziu, pentru Mijlocitorul deplin.",
       ),
       words: [
         {
@@ -133,8 +133,8 @@ export const DEUTERONOM_5 = deuteronomChapter({
       heading: "O inimă dorită, și o cale de urmat",
       text: deuteronomPassage(5, 28, 33),
       teaching: teaching(
-        "DOMNUL primește cererea poporului și o numește bună: „Au spus bine tot ce ți-au spus”. Dar apoi rostirea Lui deschide o dorință mai profundă, spusă aproape ca un suspin: „O, de-ar avea ei mereu o inimă ca aceasta, ca să se teamă de Mine și să păzească poruncile Mele!”. Frica sfîntă de la Horeb era autentică, dar Dumnezeu știa deja că nu va ține.",
-        "Capitolul se Încheie cu o chemare simplă și hotărîtoare: „să meargă pe toată calea pe care v-a poruncit-o DOMNUL, Dumnezeul vostru, ca să trăiți și să vă fie bine”. Nu există abatere în dreapta sau În stînga; calea legămîntului este una singură, dată pentru binele celor care o urmează.",
+        "DOMNUL primește cererea poporului și o numește bună: „Au spus bine tot ce ți-au spus”. Dar apoi rostirea Lui deschide o dorință mai profundă, spusă aproape ca un suspin: „O, de-ar avea ei mereu o inimă ca aceasta, ca să se teamă de Mine și să păzească poruncile Mele!”. Frica sfântă de la Horeb era autentică, dar Dumnezeu știa deja că nu va ține.",
+        "Capitolul se Încheie cu o chemare simplă și hotărîtoare: „să meargă pe toată calea pe care v-a poruncit-o DOMNUL, Dumnezeul vostru, ca să trăiți și să vă fie bine”. Nu există abatere în dreapta sau În stînga; calea legământului este una singură, dată pentru binele celor care o urmează.",
       ),
       words: [
         {
@@ -142,7 +142,7 @@ export const DEUTERONOM_5 = deuteronomChapter({
           transliteration: "mi-yiten vehaya levavam ze",
           language: "ebraica",
           meaning:
-            "o, de-ar fi/de-ar da cineva ca inima lor să fie aceasta. Expresie de dorință profundă, arătînd că statornicia inimii, nu doar frica de o clipă, este ceea ce dorește Dumnezeu.",
+            "o, de-ar fi/de-ar da cineva ca inima lor să fie aceasta. Expresie de dorință profundă, arătând că statornicia inimii, nu doar frica de o clipă, este ceea ce dorește Dumnezeu.",
         },
       ],
       crossRefs: ["Deuteronom 29:4", "Ieremia 31:33", "Ezechiel 36:26-27"],

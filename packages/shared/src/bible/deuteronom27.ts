@@ -31,7 +31,7 @@ export const DEUTERONOM_27 = deuteronomChapter({
           transliteration: "be'er heitev",
           language: "ebraica",
           meaning:
-            "foarte deslșit/clar. Cerința explicită ca legea scrisă să fie lizibilă și clară pentru întregul popor, nu ascunsă sau accesibilă doar unei elite.",
+            "foarte deslușit/clar. Cerința explicită ca legea scrisă să fie lizibilă și clară pentru întregul popor, nu ascunsă sau accesibilă doar unei elite.",
         },
       ],
       crossRefs: ["Iosua 8:30-32", "Exod 20:25", "2 Regi 22:8-11"],
@@ -45,7 +45,7 @@ export const DEUTERONOM_27 = deuteronomChapter({
       text: deuteronomPassage(27, 9, 10),
       teaching: teaching(
         "Moise și preoții leviți declară solemn întregului Israel: „Taci și ascultă, Israele! Astăzi ai ajuns poporul DOMNULUI, Dumnezeului tău”. Acest moment de tranziție — la marginea intrării în țară — este marcat ca o naștere de identitate colectivă.",
-        "Cerința imediată urmează identitatea: „să asculți de glasul DOMNULUI... și să împlinească poruncile”. Identitatea de popor al DOMNULUI nu este separată de asculatare; ele sunt legate indisolubil.",
+        "Cerința imediată urmează identitatea: „să asculți de glasul DOMNULUI... și să împlinească poruncile”. Identitatea de popor al DOMNULUI nu este separată de ascultare; ele sunt legate indisolubil.",
       ),
       words: [
         {
@@ -58,7 +58,7 @@ export const DEUTERONOM_27 = deuteronomChapter({
       ],
       crossRefs: ["Exod 19:5-6", "Deuteronom 26:18", "1 Petru 2:9-10"],
       forYourHeart:
-        "Identitatea ta ca popor al lui Dumnezeu vine mereu legată de chemarea la asculatare activă, nu doar de un statut pasiv.",
+        "Identitatea ta ca popor al lui Dumnezeu vine mereu legată de chemarea la ascultare activă, nu doar de un statut pasiv.",
     },
     {
       id: "deuteronom-27-11-13",
@@ -89,7 +89,7 @@ export const DEUTERONOM_27 = deuteronomChapter({
       text: deuteronomPassage(27, 14, 26),
       teaching: teaching(
         "Leviții rostesc cu glas tare doisprezece blesteme, majoritatea vizate păcatele ascunse — chipul cioplit pus într-un loc ascuns, mutatul hotarului, rătăcirea orbului, culcatul în taină cu diverse rude, lovirea aproapelui în ascuns, mituirea pentru a ucide un nevinovat — fapte pe care nimeni altul nu le-ar putea vedea sau pedepsi legal.",
-        "La fiecare blestem, „tot poporul să răspundă și să zică: Amin!” — o confirmare publică repetată de doisprezece ori, care arată că fiecare israelit se angaęează personal că aceste păcate secrete, invizibile ochiului uman, rămân vizibile pentru DOMNUL și supuse judecății Lui.",
+        "La fiecare blestem, „tot poporul să răspundă și să zică: Amin!” — o confirmare publică repetată de doisprezece ori, care arată că fiecare israelit se angajează personal că aceste păcate secrete, invizibile ochiului uman, rămân vizibile pentru DOMNUL și supuse judecății Lui.",
       ),
       words: [
         {
@@ -106,6 +106,6 @@ export const DEUTERONOM_27 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, învață-ne să prețuim Cuvântul Tău ca fiind clar și accesibil, nu ascuns sau complicat fără rost.\n\nAjută-ne să trăim identitatea de popor al Tău legată de asculatare reală, nu doar de un titlu.\n\nDă-ne discernământ în fața alegerii dintre binecuvântare și blestem, și curaj să alegem bine.\n\nȘi amintește-ne mereu că nimic din ce facem în taină nu îți este ascuns Tie. Amin.",
+    "Doamne, învață-ne să prețuim Cuvântul Tău ca fiind clar și accesibil, nu ascuns sau complicat fără rost.\n\nAjută-ne să trăim identitatea de popor al Tău legată de ascultare reală, nu doar de un titlu.\n\nDă-ne discernământ în fața alegerii dintre binecuvântare și blestem, și curaj să alegem bine.\n\nȘi amintește-ne mereu că nimic din ce facem în taină nu îți este ascuns Tie. Amin.",
   status: DEUTERONOM_STATUSES[27],
 })

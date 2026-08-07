@@ -8,9 +8,9 @@ import { DEUTERONOM_STATUSES } from "./deuteronomPublication.js"
 
 export const DEUTERONOM_2 = deuteronomChapter({
   number: 2,
-  title: "Deuteronom 2 — Drumuri pe care Dumnezeu nu ngăduie războiul",
+  title: "Deuteronom 2 — Drumuri pe care Dumnezeu nu îngăduie războiul",
   summary:
-    "Moise îontinuă recapitularea drumului: cei treizeci și opt de ani de învârtire în jurul muntelui Seir, până ce toată generația care se răzvrătise a murit. Israel trece pe lângă Edom, Moab și Amon fără să se lupte cu ei, fiindcă DOMNUL nu le-a dat aceste țări, apoi înfrânge cu putere pe Sihon, împăratul amoriților de la Hesbon.",
+    "Moise continuă recapitularea drumului: cei treizeci și opt de ani de învârtire în jurul muntelui Seir, până ce toată generația care se răzvrătise a murit. Israel trece pe lângă Edom, Moab și Amon fără să se lupte cu ei, fiindcă DOMNUL nu le-a dat aceste țări, apoi înfrânge cu putere pe Sihon, împăratul amoriților de la Hesbon.",
   literaryContext:
     "Capitolul acesta arată o latură rar amintită a călăuzirii lui Dumnezeu: nu doar cucerire, ci răbdare față de vecini pe care DOMNUL i-a așezat deja în pământurile lor. Israel nu este chemat să lupte oriunde întâlnește un vrăjmaș posibil, ci doar unde și când DOMNUL a hotărât dăruirea unei țări.",
   historicalContext:

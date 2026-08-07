@@ -8,18 +8,18 @@ import { DEUTERONOM_STATUSES } from "./deuteronomPublication.js"
 
 export const DEUTERONOM_28 = deuteronomChapter({
   number: 28,
-  title: "Deuteronom 28 — Binecuvântările asculatării, blestemele nesocotirii",
+  title: "Deuteronom 28 — Binecuvântările ascultării, blestemele nesocotirii",
   summary:
-    "Moise expune în detaliu binecuvântările care vin din asculatare deplină și, în oglindă mult mai extinsă, blestemele care vin din nesocotirea legământului — boală, înfrângere, împresurare, exil — culminând cu inversarea completă a Exodului: întoarcerea în robie în Egipt.",
+    "Moise expune în detaliu binecuvântările care vin din ascultare deplină și, în oglindă mult mai extinsă, blestemele care vin din nesocotirea legământului — boală, înfrângere, împresurare, exil — culminând cu inversarea completă a Exodului: întoarcerea în robie în Egipt.",
   literaryContext:
-    "Acest capitol este punctul culminant al structurii de legământ din Deuteronom, urmând tiparul antic al tratatelor suzerane, unde binecuvântările și blestemele detaliate confirmau consecințele asculatării sau nesocotirii unui legământ. Proporția — 14 versete de binecuvântare față de peste 50 de versete de blestem — subliniază gravitatea avertismentului.",
+    "Acest capitol este punctul culminant al structurii de legământ din Deuteronom, urmând tiparul antic al tratatelor suzerane, unde binecuvântările și blestemele detaliate confirmau consecințele ascultării sau nesocotirii unui legământ. Proporția — 14 versete de binecuvântare față de peste 50 de versete de blestem — subliniază gravitatea avertismentului.",
   historicalContext:
     "Limbajul și structura acestui capitol au paralele directe cu tratatele de vasalitate ale imperiilor din Orientul Apropiat antic (hitite, asiriene), unde împărații își legau vasalii prin liste similare de binecuvântări și blesteme, dar aici suveranul este DOMNUL însuși, nu un împărat pământesc.",
   units: [
     {
       id: "deuteronom-28-1-14",
       ref: "Deuteronom 28:1-14",
-      heading: "Binecuvântările asculatării depline",
+      heading: "Binecuvântările ascultării depline",
       text: deuteronomPassage(28, 1, 14),
       teaching: teaching(
         "Ascultarea de glasul DOMNULUI aduce binecuvântare în tot: „în cetate... la câmp... la intrarea ta... la ieșirea ta” — fiecare aspect al vieții zilnice este cuprins. Israel va fi „cap, nu coadă” și va da cu împrumut, nu va lua, într-o poziție de supremație morală și materială printre neamuri.",
@@ -31,7 +31,7 @@ export const DEUTERONOM_28 = deuteronomChapter({
           transliteration: "lerosh velo lezanav",
           language: "ebraica",
           meaning:
-            "drept cap, nu drept coadă. Imagine de supremație și conducere față de subordonare și urmare — poziția pe care asculatarea o aduce lui Israel printre neamuri.",
+            "drept cap, nu drept coadă. Imagine de supremație și conducere față de subordonare și urmare — poziția pe care ascultarea o aduce lui Israel printre neamuri.",
         },
       ],
       crossRefs: ["Deuteronom 26:19", "Ieremia 29:11", "Iacov 1:25"],
@@ -45,7 +45,7 @@ export const DEUTERONOM_28 = deuteronomChapter({
       text: deuteronomPassage(28, 15, 19),
       teaching: teaching(
         "Structura blestemelor oglindește exact structura binecuvântărilor — „în cetate... la câmp... coșul... covata... la intrarea ta... la ieșirea ta” — aceeași viață zilnică, dar sub blestem în loc de binecuvântare. Nu există domeniu neutru: fiecare aspect este ori blând, ori întors împotrivă.",
-        "Această simetrie deliberată arată că rezultatul nu este arbitrar, ci consecința directă a alegerii — asculatare sau nesocotire — aplicată exact peste aceleași domenii ale vieții.",
+        "Această simetrie deliberată arată că rezultatul nu este arbitrar, ci consecința directă a alegerii — ascultare sau nesocotire — aplicată exact peste aceleași domenii ale vieții.",
       ),
       words: [
         {
@@ -89,7 +89,7 @@ export const DEUTERONOM_28 = deuteronomChapter({
       text: deuteronomPassage(28, 38, 46),
       teaching: teaching(
         "Lăcustele, viermii, măslinele care cad, străinul care se înalță tot mai sus deasupra ta — fiecare efort agricol este zadărnicit sistematic. Concluzia dată este directă: „pentru că n-ai ascultat de glasul DOMNULUI, Dumnezeului tău”.",
-        "Un motiv aparte este dat pentru severitatea blestemului: „pentru că n-ai slujit DOMNULUI... cu bucurie și cu inimă bună în mijlocul belșugului”. Nu doar nesocotirea, ci mai ales lipsa bucuriei recunoștoare în vremuri bune este identificată ca rădăcină a problemei.",
+        "Un motiv aparte este dat pentru severitatea blestemului: „pentru că n-ai slujit DOMNULUI... cu bucurie și cu inimă bună în mijlocul belșugului”. Nu doar nesocotirea, ci mai ales lipsa bucuriei recunoscătoare în vremuri bune este identificată ca rădăcină a problemei.",
       ),
       words: [
         {
@@ -97,12 +97,12 @@ export const DEUTERONOM_28 = deuteronomChapter({
           transliteration: "tachat asher lo-avadta et-YHWH besimchah",
           language: "ebraica",
           meaning:
-            "pentru că n-ai slujit DOMNULUI cu bucurie. Formula-cheie care identifică lipsa bucuriei recunoștoare în mijlocul belșugului ca rădăcina profundă a nesocotirii legământului.",
+            "pentru că n-ai slujit DOMNULUI cu bucurie. Formula-cheie care identifică lipsa bucuriei recunoscătoare în mijlocul belșugului ca rădăcina profundă a nesocotirii legământului.",
         },
       ],
       crossRefs: ["Filipeni 4:4", "Neemia 8:10", "Deuteronom 26:11"],
       forYourHeart:
-        "Bucuria recunoștoare în vremuri de belșug nu este opțională; absența ei este ea însăși o formă de nesocotire.",
+        "Bucuria recunoscătoare în vremuri de belșug nu este opțională; absența ei este ea însăși o formă de nesocotire.",
     },
     {
       id: "deuteronom-28-47-57",
@@ -150,6 +150,6 @@ export const DEUTERONOM_28 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, învață-ne să Te ascultăm cu bucurie în mijlocul belșugului, nu doar din obligație.\n\nDă-ne o inimă recunoștoare care nu ia niciodată binecuvântarea Ta ca firească sau merită.\n\nPăzește-ne de nesocotirea care duce spre pustiire, și înmoaie-ne inima la cel mai mic semn de îndepărtare.\n\nȘi amintește-ne mereu că libertatea pe care ne-ai dat-o merită prețuită și păzită prin asculatare statornică. Amin.",
+    "Doamne, învață-ne să Te ascultăm cu bucurie în mijlocul belșugului, nu doar din obligație.\n\nDă-ne o inimă recunoscătoare care nu ia niciodată binecuvântarea Ta ca firească sau merită.\n\nPăzește-ne de nesocotirea care duce spre pustiire, și înmoaie-ne inima la cel mai mic semn de îndepărtare.\n\nȘi amintește-ne mereu că libertatea pe care ne-ai dat-o merită prețuită și păzită prin ascultare statornică. Amin.",
   status: DEUTERONOM_STATUSES[28],
 })

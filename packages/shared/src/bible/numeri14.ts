@@ -14,7 +14,7 @@ export const NUMERI_14 = numeriChapter({
   number: 14,
   title: "Numeri 14 — Răscoala taberei și mijlocirea lui Moise",
   summary:
-    "Raportul celor zece iscoade aruncă toată tabăra în răscoală deschisă: poporul vrea o căpetenie nouă care să-i ducă înapoi în Egipt și vrea să-i ucidă cu pietre pe Iosua și Caleb. Moise mijlocește din nou pentru popor, DOMNUL iartă vinovăția, dar rostiește sentința: generatia aceasta va rătăci patruzeci de ani în pustie, un an pentru fiecare zi de iscodire, până va muri în ea.",
+    "Raportul celor zece iscoade aruncă toată tabăra în răscoală deschisă: poporul vrea o căpetenie nouă care să-i ducă înapoi în Egipt și vrea să-i ucidă cu pietre pe Iosua și Caleb. Moise mijlocește din nou pentru popor, DOMNUL iartă vinovăția, dar rostiește sentința: generația aceasta va rătăci patruzeci de ani în pustie, un an pentru fiecare zi de iscodire, până va muri în ea.",
   literaryContext:
     "Acesta este punctul de cotitură al întregii cărți Numeri: momentul în care o generație care ar fi putut intra aproape imediat în țara făgăduită își pierde dreptul de a o vedea. Restul cărții — de la capitolul cincisprezece înainte — se desfășoară sub umbra acestei sentințe, până când o generație nouă va ajunge, în sfârșit, la marginea țării.",
   historicalContext:
@@ -37,10 +37,10 @@ export const NUMERI_14 = numeriChapter({
     {
       id: "numeri-14-5-10",
       ref: "Numeri 14:5-10",
-      heading: "Iosua și Caleb sfașie hainele; slava DOMNULUI apare",
+      heading: "Iosua și Caleb sfâșie hainele; slava DOMNULUI apare",
       text: numeriPassage(14, 5, 10),
       teaching: teaching(
-        "Moise și Aaron cad cu fața la pământ înaintea întregii adunări, iar Iosua și Caleb își sfașie hainele — gest de doliu și groază înaintea unui păcat de proporții uriașe. Cei doi repetă cu și mai multă tărie ce spusese Caleb înainte: „țara... este foarte, foarte bună”.",
+        "Moise și Aaron cad cu fața la pământ înaintea întregii adunări, iar Iosua și Caleb își sfâșie hainele — gest de doliu și groază înaintea unui păcat de proporții uriașe. Cei doi repetă cu și mai multă tărie ce spusese Caleb înainte: „țara... este foarte, foarte bună”.",
         "Argumentul lor este pur teologic: „nu vă răzvrătiți împotriva DOMNULUI... căci îi vom mânca ca pe o pâine! Ocrotirea lor s-a depărtat de la ei, iar DOMNUL este cu noi”. Nu neagă puterea locuitorilor țării; susțin doar că puterea DOMNULUI este mai mare decât orice ocrotire păgână.",
         "Răspunsul poporului este cel mai grav până acum: „toată adunarea vorbea să-i ucidă cu pietre” pe Iosua și Caleb, pe Moise și pe Aaron. Exact în acest moment de criză maximă, „slava DOMNULUI S-a arătat peste Cortul Întâlnirii înaintea tuturor” — o intervenție directă care oprește lapidarea.",
       ),
@@ -136,7 +136,7 @@ export const NUMERI_14 = numeriChapter({
       words: [],
       crossRefs: ["Numeri 26:65", "Iosua 14:10"],
       forYourHeart:
-        "A vedea aceleași fapte ca toți ceilalți nu te scutește de răspunderea felului în care le împartșești mai departe. Cuvintele tale pot fi viață sau moarte pentru cei care te ascultă.",
+        "A vedea aceleași fapte ca toți ceilalți nu te scutește de răspunderea felului în care le împărtășești mai departe. Cuvintele tale pot fi viață sau moarte pentru cei care te ascultă.",
     },
     {
       id: "numeri-14-39-45",

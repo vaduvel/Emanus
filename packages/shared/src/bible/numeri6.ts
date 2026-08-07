@@ -16,7 +16,7 @@ export const NUMERI_6 = numeriChapter({
   summary:
     "Capitolul dă legea nazireatului — o închinare de sine liber asumată, cu trei semne: fără vin sau struguri, fără briciul pe cap, fără atingere de trup mort — apoi jertfele de încheiere ale jurământului. Se încheie cu una din cele mai cunoscute binecuvântări din toată Scriptura, rostită de Aaron și de fiii lui peste popor.",
   literaryContext:
-    "După capitolul curăției obștești și al dreptății între oameni, capitolul șase arată o curăție asumată de bunăvoie, personal, de orice bărbat sau femeie din Israel — nu doar de preoți sau de leviți. Iar capitolul se încheie potrivit: după legile de desparțire și de restituire, vine cuvântul de binecuvântare care pune Numele DOMNULUI însuși peste tot poporul, încheind secțiunea legilor de curăție înainte de dăruirile căpeteniilor din capitolul șapte.",
+    "După capitolul curăției obștești și al dreptății între oameni, capitolul șase arată o curăție asumată de bunăvoie, personal, de orice bărbat sau femeie din Israel — nu doar de preoți sau de leviți. Iar capitolul se încheie potrivit: după legile de despărțire și de restituire, vine cuvântul de binecuvântare care pune Numele DOMNULUI însuși peste tot poporul, încheind secțiunea legilor de curăție înainte de dăruirile căpeteniilor din capitolul șapte.",
   historicalContext:
     "Nazireatul nu era o slujbă rezervată unei caste, ca preoția leviților, ci un jurământ liber, deschis oricărui israelit, pentru o perioadă hotărâtă de el însuși. Cunoaștem câțiva nazirei pe viață în Scriptură: Samson (Judecători 13), Samuel (1 Samuel 1) și, după mărturia lui Luca, Ioan Botezătorul (Luca 1:15). Binecuvântarea preoțească de la sfârșitul capitolului este cea mai veche binecuvântare scrisă din Israel găsită arheologic: pe două plăcuțe de argint de la Ketef Hinnom, din secolul al șaptelea înainte de Hristos, s-au găsit tocmai aceste cuvinte.",
   units: [
@@ -41,7 +41,7 @@ export const NUMERI_6 = numeriChapter({
       ],
       crossRefs: ["Judecători 13:4-5", "Luca 1:15", "1 Samuel 1:11"],
       forYourHeart:
-        "Consacrarea adevărată nu se vede doar în cuvinte, ci în lucrurile la care aleți să renunți, pentru o vreme sau pentru totdeauna, de dragul lui Dumnezeu.",
+        "Consacrarea adevărată nu se vede doar în cuvinte, ci în lucrurile la care aleși să renunți, pentru o vreme sau pentru totdeauna, de dragul lui Dumnezeu.",
     },
     {
       id: "numeri-6-6-8",
@@ -49,7 +49,7 @@ export const NUMERI_6 = numeriChapter({
       heading: "Al treilea semn: nicio apropiere de moarte",
       text: numeriPassage(6, 6, 8),
       teaching: teaching(
-        "Al treilea semn al nazireatului este cel mai greu de purtat: „să nu se apropie de niciun trup mort”, nici măcar pentru tatăl, mama, fratele sau sora lui. În orice altă împreljurare, participarea la înmormântarea unui părinte era o datorie sfântă în Israel; pentru nazireu, ea este suspendată pe toată durata jurământului.",
+        "Al treilea semn al nazireatului este cel mai greu de purtat: „să nu se apropie de niciun trup mort”, nici măcar pentru tatăl, mama, fratele sau sora lui. În orice altă împrejurare, participarea la înmormântarea unui părinte era o datorie sfântă în Israel; pentru nazireu, ea este suspendată pe toată durata jurământului.",
         "Motivul este rostit direct: „purtarea închinării lui Dumnezeu este pe capul lui”. Părul necreșcut nu este doar un semn exterior; el arată că întreaga persoană a nazireului, până și legăturile de familie cele mai firești, sunt puse sub o singură stăpânire, pentru vremea aceasta.",
         "Această cerință aspră apropie nazireul de rânduiala marelui preot, care de asemenea nu se putea apropia de un mort, nici de părinții lui (Levitic 21:10-12). Un om obișnuit din Israel putea alege, pentru o vreme, să trăiască după o măsură de sfințenie apropiată de cea a preoției.",
       ),
@@ -74,7 +74,7 @@ export const NUMERI_6 = numeriChapter({
       teaching: teaching(
         "Legea prevede și cazul în care cineva moare pe neașteptate chiar lângă nazireu, fără voia lui, și îi spurcă astfel consacrarea. Nu este vina lui, și totuși consacrarea este întreruptă: „zilele dinainte vor fi pierdute, pentru că nazireul lui a fost spurcat”.",
         "Refacerea cere ras capul în ziua a șaptea, două păsări aduse ca jertfă pentru păcat și ardere-de-tot, și un miel adus ca jertfă pentru vină, iar apoi „să-I închine din nou DOMNULUI zilele nazirelui său”. Totul începe iar de la zero.",
-        "Ia aminte cât de serios tratează Dumnezeu o întrerupere care nu vine din nesocotința omului, ci din împreljurarea neașteptată a morții. Sfințenia nu se măsoară după intentție, ci după starea reală; și totuși, calea de refacere este deschisă imediat, fără respingere.",
+        "Ia aminte cât de serios tratează Dumnezeu o întrerupere care nu vine din nesocotința omului, ci din împrejurarea neașteptată a morții. Sfințenia nu se măsoară după intenție, ci după starea reală; și totuși, calea de refacere este deschisă imediat, fără respingere.",
       ),
       words: [
         {

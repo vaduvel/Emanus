@@ -18,7 +18,7 @@ export const NUMERI_34 = numeriChapter({
   literaryContext:
     "Acest capitol închide întrebările despre teritoriu care au fost deschise în Numeri 32 (moștenirea de la est de Iordan) și în Numeri 26 (împărțirea prin sorți). Hotarele descrise aici corespund în mare cu țara pe care Iosua o va cuceri și o va împărți în cartea care îi porta numele.",
   historicalContext:
-    "Hotarele menționate — pustia Ţin și Edom la sud, Marea cea Mare (Mediterana) la apus, muntele Hor și intrarea Hamatului la nord, Iordanul și Marea Sărată la răsărit — defineau un teritoriu concret, cunoscut geografic, nu o promisiune abstractă.",
+    "Hotarele menționate — pustia Țin și Edom la sud, Marea cea Mare (Mediterana) la apus, muntele Hor și intrarea Hamatului la nord, Iordanul și Marea Sărată la răsărit — defineau un teritoriu concret, cunoscut geografic, nu o promisiune abstractă.",
   units: [
     {
       id: "numeri-34-1-2",
@@ -39,7 +39,7 @@ export const NUMERI_34 = numeriChapter({
       heading: "Hotarul de sud",
       text: numeriPassage(34, 3, 5),
       teaching: teaching(
-        "Hotarul de sud începe de la pustia Ţin, de-a lungul Edomului, de la capătul Mării Sărate, trece prin urcușul Acrabim, Cadeș-Barnea, Hațar-Adar, Ațmon și se termină la pârâul Egiptului — același Cadeș-Barnea de unde iscoadele au fost trimise 38 de ani înainte, devenit acum doar un punct de rutină pe hotarul unei țări pe care Israel este pregătit să o intre.",
+        "Hotarul de sud începe de la pustia Țin, de-a lungul Edomului, de la capătul Mării Sărate, trece prin urcușul Acrabim, Cadeș-Barnea, Hațar-Adar, Ațmon și se termină la pârâul Egiptului — același Cadeș-Barnea de unde iscoadele au fost trimise 38 de ani înainte, devenit acum doar un punct de rutină pe hotarul unei țări pe care Israel este pregătit să o intre.",
       ),
       words: [],
       crossRefs: ["Numeri 13:26"],
@@ -65,7 +65,7 @@ export const NUMERI_34 = numeriChapter({
       heading: "Hotarul de nord",
       text: numeriPassage(34, 7, 9),
       teaching: teaching(
-        "Hotarul de nord trece de la Marea cea Mare spre muntele Hor, intrarea Hamatului, Ţedad, Zifron, până la Hațar-Enan — un traseu care marca limita nordică a teritoriului promis, extinzându-se mult mai la nord decât va fi vreodată controlat efectiv de regatele lui Israel și Iuda.",
+        "Hotarul de nord trece de la Marea cea Mare spre muntele Hor, intrarea Hamatului, Țedad, Zifron, până la Hațar-Enan — un traseu care marca limita nordică a teritoriului promis, extinzându-se mult mai la nord decât va fi vreodată controlat efectiv de regatele lui Israel și Iuda.",
       ),
       words: [],
       crossRefs: [],
@@ -78,7 +78,7 @@ export const NUMERI_34 = numeriChapter({
       heading: "Hotarul de răsărit și concluzia",
       text: numeriPassage(34, 10, 12),
       teaching: teaching(
-        "Hotarul de răsărit se trasează de la Hațar-Enan la Şefam, se coboară spre Ribla, atinge coasta mării Chineret (Galileea) și se coboară pe Iordan până la Marea Sărată, închizând cercul complet: „Aceasta va fi țara voastră după hotarele ei de jur împrejur.”",
+        "Hotarul de răsărit se trasează de la Hațar-Enan la Șefam, se coboară spre Ribla, atinge coasta mării Chineret (Galileea) și se coboară pe Iordan până la Marea Sărată, închizând cercul complet: „Aceasta va fi țara voastră după hotarele ei de jur împrejur.”",
       ),
       words: [],
       crossRefs: [],
@@ -118,7 +118,7 @@ export const NUMERI_34 = numeriChapter({
       heading: "Numele celor zece căpetenii",
       text: numeriPassage(34, 19, 29),
       teaching: teaching(
-        "Zece căpetenii sunt numite prin nume, una din fiecare seminție rămasă fără moștenire deja stabilită: Caleb din Iuda, Şemuel din Simeon, Elidad din Beniamin, Buki din Dan, Haniel din Manase, Kemuel din Efraim, Elițafan din Zabulon, Paltiel din Isahar, Ahihud din Așer și Pedahel din Neftali.",
+        "Zece căpetenii sunt numite prin nume, una din fiecare seminție rămasă fără moștenire deja stabilită: Caleb din Iuda, Șemuel din Simeon, Elidad din Beniamin, Buki din Dan, Haniel din Manase, Kemuel din Efraim, Elițafan din Zabulon, Paltiel din Isahar, Ahihud din Așer și Pedahel din Neftali.",
         "Menționarea numelor concrete, exact ca la numărătorile din Numeri 1 și 26, arată din nou grija Scripturii pentru identitățile individuale: fiecare familie și seminție avea un reprezentant cu nume, nu doar o cifră statistică, la momentul împărțirii moștenirii finale.",
       ),
       words: [],

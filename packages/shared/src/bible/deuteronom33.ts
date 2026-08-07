@@ -14,7 +14,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
   literaryContext:
     "Aceasta binecuvantare paraleleaza binecuvantarea lui Iacov din Geneza 49, dar vine dupa patruzeci de ani de calatorie prin pustie, chiar in pragul intrarii in tara promisa, ca ultim cuvant al lui Moise catre popor inainte de moartea sa pe muntele Nebo.",
   historicalContext:
-    "Ordinea si continutul binecuvantarilor tribale reflecta pozitia geografica si istorica pe care fiecare seminatie o va avea in tara Canaanului, unele accente (precum absenta explicita a lui Simeon) fiind pastrate exact asa cum apar in text, fara armonizare artificiala cu Geneza 49.",
+    "Ordinea si continutul binecuvantarilor tribale reflecta pozitia geografica si istorica pe care fiecare seminție o va avea in tara Canaanului, unele accente (precum absenta explicita a lui Simeon) fiind pastrate exact asa cum apar in text, fara armonizare artificiala cu Geneza 49.",
   units: [
     {
       id: "deuteronom-33-1-5",
@@ -22,8 +22,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "DOMNUL vine din Sinai, Moise imparat in Iesurun",
       text: deuteronomPassage(33, 1, 5),
       teaching: teaching(
-        "Binecuvantarea se deschide cu o imagine teofanica: „DOMNUL a venit din Sinai... a stralucit din muntele Paran si a venit cu zeci de mii de sfinti; din mana Lui dreapta le venea o lege de foc.” Legea nu este prezentata ca o povara birocratica, ci ca stralucirea insasi a prezentei divine.",
-        "Moise este numit cel care „a dat Legea, mostenirea adunarii lui Iacov”, iar rolul sau de conducator este descris ca cel al unui „imparat in Iesurun” - o autoritate care nu vine din ambitie personala, ci din slujirea directa a poruncilor DOMNULUI.",
+        "Binecuvantarea se deschide cu o imagine teofanică: „DOMNUL a venit din Sinai... a stralucit din muntele Paran si a venit cu zeci de mii de sfinți; din mana Lui dreapta le venea o lege de foc.” Legea nu este prezentata ca o povara birocratica, ci ca stralucirea însăși a prezentei divine.",
+        "Moise este numit cel care „a dat Legea, moștenirea adunarii lui Iacov”, iar rolul sau de conducător este descris ca cel al unui „imparat in Iesurun” - o autoritate care nu vine din ambiție personala, ci din slujirea directa a poruncilor DOMNULUI.",
       ),
       words: [
         {
@@ -44,8 +44,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Ruben, Iuda si Levi - viata, ajutorul in lupta, devotamentul absolut",
       text: deuteronomPassage(33, 6, 11),
       teaching: teaching(
-        "Binecuvantarea lui Ruben este simpla si esentiala: „sa traiasca... si sa nu moara”, iar pentru Iuda, Moise cere ajutor direct in lupta: „mainile lui sa se lupte pentru el si sa-i fii ajutor impotriva vrajmasilor lui”.",
-        "Levi este descris prin devotamentul sau radical fata de DOMNUL, mai presus de legaturile de familie: „cel ce zice despre tatal sau si despre mama sa: Nu i-am vazut... caci ei pazesc cuvantul Tau”. Slujirea preoteasca cere o loialitate care trece dincolo de afectiunile naturale, cand acestea vin in conflict cu ascultarea de DOMNUL.",
+        "Binecuvantarea lui Ruben este simpla si esențială: „sa traiasca... si sa nu moara”, iar pentru Iuda, Moise cere ajutor direct in lupta: „mâinile lui sa se lupte pentru el si sa-i fii ajutor impotriva vrăjmașilor lui”.",
+        "Levi este descris prin devotamentul sau radical fata de DOMNUL, mai presus de legaturile de familie: „cel ce zice despre tatăl sau si despre mama sa: Nu i-am văzut... căci ei pazesc cuvântul Tau”. Slujirea preoteasca cere o loialitate care trece dincolo de afecțiunile naturale, când acestea vin in conflict cu ascultarea de DOMNUL.",
       ),
       words: [
         {
@@ -66,7 +66,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Beniamin si Iosif - siguranta si belsugul cel mai deplin",
       text: deuteronomPassage(33, 12, 17),
       teaching: teaching(
-        "Beniamin este descris cu tandrete rara: „preaiubitul DOMNULUI va locui in siguranta langa El... si va locui intre umerii lui” - imagine de proximitate si ocrotire intima.",
+        "Beniamin este descris cu tandrețe rara: „preaiubitul DOMNULUI va locui in siguranta langa El... si va locui intre umerii lui” - imagine de proximitate si ocrotire intima.",
         "Binecuvantarea lui Iosif este cea mai extinsa si mai generoasa: „cu cele mai bune daruri ale cerului... cu frunatile muntilor stravechi” - un belsug complet, material si topografic, incoronat de imaginea puterii: „coarnele lui sunt coarne de bivol; cu ele va impunge popoarele pana la marginile pamantului”.",
       ),
       words: [
@@ -88,8 +88,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Zabulon, Isahar, Gad, Dan, Neftali si Aser - daruri diferite, aceeasi binecuvantare",
       text: deuteronomPassage(33, 18, 25),
       teaching: teaching(
-        "Fiecare seminatie primeste o binecuvantare adaptata caracterului si pozitiei sale viitoare: Zabulon si Isahar se bucura in iesirile si corturile lor, Gad este descris ca o leoaica curajoasa care implineste dreptatea DOMNULUI, iar Dan este „un pui de leu, care sare din Basan”.",
-        "Neftali este „saturat de bunavointa”, iar Aser primeste o imagine plina de bogatie senzoriala: „sa-si moaie piciorul in ulei... zavoarele tale sa fie de fier si de arama” - simbol de abundenta si de aparare puternica deopotriva.",
+        "Fiecare seminție primeste o binecuvantare adaptata caracterului si pozitiei sale viitoare: Zabulon si Isahar se bucura in iesirile si corturile lor, Gad este descris ca o leoaica curajoasa care împlinește dreptatea DOMNULUI, iar Dan este „un pui de leu, care sare din Basan”.",
+        "Neftali este „saturat de bunăvoința”, iar Aser primeste o imagine plina de bogăție senzoriala: „sa-si moaie piciorul in ulei... zăvoarele tale sa fie de fier si de arama” - simbol de abundenta si de aparare puternica deopotriva.",
       ),
       words: [
         {
@@ -110,8 +110,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Dumnezeul lui Iesurun, bratele vesnice, Israel fericit",
       text: deuteronomPassage(33, 26, 29),
       teaching: teaching(
-        "Binecuvantarea se incheie cu afirmatia unicitatii absolute a Dumnezeului lui Israel: „nimeni nu este ca Dumnezeul lui Iesurun, Care trece pe ceruri ca sa-ti vina in ajutor”, urmata de una dintre cele mai calduroase imagini din tot Deuteronomul: „sub tine sunt bratele vesnice”.",
-        "Concluzia finala este o exclamatie de fericire: „Ferice de tine, Israele! Cine este ca tine, un popor mantuit de DOMNUL”. Toata cartea Deuteronomul, cu legile, avertismentele si blestemele ei, se incheie pe aceasta nota de siguranta si bucurie intemeiata pe caracterul lui Dumnezeu, nu pe meritul poporului.",
+        "Binecuvantarea se incheie cu afirmația unicitatii absolute a Dumnezeului lui Israel: „nimeni nu este ca Dumnezeul lui Iesurun, Care trece pe ceruri ca sa-ti vina in ajutor”, urmata de una dintre cele mai calduroase imagini din tot Deuteronomul: „sub tine sunt bratele veșnice”.",
+        "Concluzia finala este o exclamație de fericire: „Ferice de tine, Israele! Cine este ca tine, un popor mântuit de DOMNUL”. Toata cartea Deuteronomul, cu legile, avertismentele si blestemele ei, se incheie pe aceasta nota de siguranta si bucurie întemeiată pe caracterul lui Dumnezeu, nu pe meritul poporului.",
       ),
       words: [
         {
@@ -128,6 +128,6 @@ export const DEUTERONOM_33 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, multumim ca Cuvantul Tau straluceste cu insasi prezenta Ta, nu este o povara seaca.\n\nAjuta-ne sa Te punem inaintea oricarei legaturi care s-ar opune ascultarii de Tine.\n\nMultumim ca binecuvantarea Ta se adapteaza fiecaruia dintre noi, dupa chemarea pe care ne-ai dat-o.\n\nSi lasa-ne sa ne odihnim increzatori, caci sub noi sunt bratele Tale vesnice. Amin.",
+    "Doamne, multumim ca Cuvântul Tau strălucește cu însăși prezenta Ta, nu este o povara seaca.\n\nAjuta-ne sa Te punem înaintea oricărei legaturi care s-ar opune ascultarii de Tine.\n\nMultumim ca binecuvantarea Ta se adaptează fiecaruia dintre noi, dupa chemarea pe care ne-ai dat-o.\n\nSi lasa-ne sa ne odihnim încrezători, căci sub noi sunt bratele Tale veșnice. Amin.",
   status: DEUTERONOM_STATUSES[33],
 })
