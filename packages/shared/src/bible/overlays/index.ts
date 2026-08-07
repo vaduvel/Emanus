@@ -1,3 +1,4 @@
+// Overlay-urile de bază rămân exportate pentru trasabilitate editorială și audit Poonen.
 export { JUDECATORI_EXPLAINED } from "./judecatoriOverlay.js"
 export { IMPARATI2_EXPLAINED } from "./imparati2Overlay.js"
 export { CRONICI1_EXPLAINED } from "./cronici1Overlay.js"
@@ -28,68 +29,50 @@ export { HAGAI_EXPLAINED } from "./hagaiOverlay.js"
 export { ZAHARIA_EXPLAINED } from "./zahariaOverlay.js"
 export { MALEAHI_EXPLAINED } from "./maleahiOverlay.js"
 
-import { JUDECATORI_EXPLAINED } from "./judecatoriOverlay.js"
-import { IMPARATI2_EXPLAINED } from "./imparati2Overlay.js"
-import { CRONICI1_EXPLAINED } from "./cronici1Overlay.js"
-import { CRONICI2_EXPLAINED } from "./cronici2Overlay.js"
-import { EZRA_EXPLAINED } from "./ezraOverlay.js"
-import { NEEMIA_EXPLAINED } from "./neemiaOverlay.js"
-import { ESTERA_EXPLAINED } from "./esteraOverlay.js"
-import { IOV_EXPLAINED } from "./iovOverlay.js"
-import { PSALMI_EXPLAINED } from "./psalmiOverlay.js"
-import { PROVERBE_EXPLAINED } from "./proverbeOverlay.js"
-import { ECLESIASTUL_EXPLAINED } from "./eclesiastulOverlay.js"
-import { CANTAREA_CANTARILOR_EXPLAINED } from "./cantareaCantarilorOverlay.js"
-import { ISAIA_EXPLAINED } from "./isaiaOverlay.js"
-import { IEREMIA_EXPLAINED } from "./ieremiaOverlay.js"
-import { PLANGERILE_EXPLAINED } from "./plangerileOverlay.js"
-import { EZECHIEL_EXPLAINED } from "./ezechielOverlay.js"
-import { DANIEL_EXPLAINED } from "./danielOverlay.js"
-import { OSEA_EXPLAINED } from "./oseaOverlay.js"
-import { IOEL_EXPLAINED } from "./ioelOverlay.js"
-import { AMOS_EXPLAINED } from "./amosOverlay.js"
-import { OBADIA_EXPLAINED } from "./obadiaOverlay.js"
-import { IONA_EXPLAINED } from "./ionaOverlay.js"
-import { MICA_EXPLAINED } from "./micaOverlay.js"
-import { NAUM_EXPLAINED } from "./naumOverlay.js"
-import { HABACUC_EXPLAINED } from "./habacucOverlay.js"
-import { TEFANIA_EXPLAINED } from "./tefaniaOverlay.js"
-import { HAGAI_EXPLAINED } from "./hagaiOverlay.js"
-import { ZAHARIA_EXPLAINED } from "./zahariaOverlay.js"
-import { MALEAHI_EXPLAINED } from "./maleahiOverlay.js"
+// Variantele complete păstrează unitățile doctrinare Poonen și completează strict
+// intervalele rămase cu explicație textuală din Biblia Emanus, fără doctrină nouă.
+export {
+  JUDECATORI_FULL,
+  IMPARATI2_FULL,
+  CRONICI1_FULL,
+  CRONICI2_FULL,
+  EZRA_FULL,
+  NEEMIA_FULL,
+  ESTERA_FULL,
+  IOV_FULL,
+  PSALMI_FULL,
+  PROVERBE_FULL,
+  ECLESIASTUL_FULL,
+  CANTAREA_CANTARILOR_FULL,
+  ISAIA_FULL,
+  IEREMIA_FULL,
+  PLANGERILE_FULL,
+  EZECHIEL_FULL,
+  DANIEL_FULL,
+  OSEA_FULL,
+  IOEL_FULL,
+  AMOS_FULL,
+  OBADIA_FULL,
+  IONA_FULL,
+  MICA_FULL,
+  NAUM_FULL,
+  HABACUC_FULL,
+  TEFANIA_FULL,
+  HAGAI_FULL,
+  ZAHARIA_FULL,
+  MALEAHI_FULL,
+  VT_EXPLAINED_FULL_OVERLAYS,
+} from "./fullCoverage.js"
 
-export const VT_EXPLAINED_OVERLAYS = [
-  JUDECATORI_EXPLAINED,
-  IMPARATI2_EXPLAINED,
-  CRONICI1_EXPLAINED,
-  CRONICI2_EXPLAINED,
-  EZRA_EXPLAINED,
-  NEEMIA_EXPLAINED,
-  ESTERA_EXPLAINED,
-  IOV_EXPLAINED,
-  PSALMI_EXPLAINED,
-  PROVERBE_EXPLAINED,
-  ECLESIASTUL_EXPLAINED,
-  CANTAREA_CANTARILOR_EXPLAINED,
-  ISAIA_EXPLAINED,
-  IEREMIA_EXPLAINED,
-  PLANGERILE_EXPLAINED,
-  EZECHIEL_EXPLAINED,
-  DANIEL_EXPLAINED,
-  OSEA_EXPLAINED,
-  IOEL_EXPLAINED,
-  AMOS_EXPLAINED,
-  OBADIA_EXPLAINED,
-  IONA_EXPLAINED,
-  MICA_EXPLAINED,
-  NAUM_EXPLAINED,
-  HABACUC_EXPLAINED,
-  TEFANIA_EXPLAINED,
-  HAGAI_EXPLAINED,
-  ZAHARIA_EXPLAINED,
-  MALEAHI_EXPLAINED,
-] as const
+import { VT_EXPLAINED_FULL_OVERLAYS } from "./fullCoverage.js"
+
+/**
+ * Registry canonic pentru Biblia explicată VT.
+ * Toate cele 29 de cărți care folosesc overlay au acoperire completă a
+ * intervalelor de versete. Cele 10 cărți legacy-full sunt validate separat.
+ */
+export const VT_EXPLAINED_OVERLAYS = VT_EXPLAINED_FULL_OVERLAYS
 
 if (VT_EXPLAINED_OVERLAYS.length !== 29) {
-  throw new Error(`[Biblia explicată VT] se așteptau 29 de cărți overlay, găsite ${VT_EXPLAINED_OVERLAYS.length}.`)
+  throw new Error(`[Biblia explicată VT] se așteptau 29 de cărți overlay complete, găsite ${VT_EXPLAINED_OVERLAYS.length}.`)
 }
