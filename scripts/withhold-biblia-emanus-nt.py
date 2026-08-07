@@ -42,7 +42,12 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def write_json(path: Path, value: dict[str, Any]) -> None:
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    existing = path.read_text(encoding="utf-8") if path.exists() else ""
+    if existing.count("\n") <= 1:
+        rendered = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
+    else:
+        rendered = json.dumps(value, ensure_ascii=False, indent=2)
+    path.write_text(rendered + "\n", encoding="utf-8")
 
 
 def chapter_records(data_dir: Path) -> list[tuple[Path, dict[str, Any]]]:
