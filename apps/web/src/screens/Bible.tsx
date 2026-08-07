@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, HelpCircle, Search, Send } from "lucide-react"
-import type { BibleBook, BibleChapter, BibleUnit } from "@emanus/shared/bible"
-import { BIBLE_BOOKS, BIBLE_TRANSLATION, findChapter } from "@emanus/shared/bible"
+import type { BibleBook, BibleChapter, BibleTextualNote, BibleUnit, BibleVerse } from "@emanus/shared/bible"
+import { BIBLE_BOOKS, BIBLE_TRANSLATION, findChapter, translationForBook } from "@emanus/shared/bible"
 import { navigate } from "../router"
 import "../bible.css"
 import "../needs.css"
@@ -103,6 +103,17 @@ function cauta(nevoie: Nevoie): Gasit[] {
           out.push({ bookId: book.id, bookName: book.name, chapter: ch.number, ref: u.ref, heading: u.heading })
         }
       }
+      for (const verse of ch.verses ?? []) {
+        if (nevoie.cuvinte.some((c) => plat(verse.text).includes(plat(c)))) {
+          out.push({
+            bookId: book.id,
+            bookName: book.name,
+            chapter: ch.number,
+            ref: `${book.name} ${ch.number}:${verse.number}`,
+            heading: `Versetul ${verse.number}`,
+          })
+        }
+      }
     }
   }
   return out.slice(0, 12)
@@ -167,6 +178,7 @@ function Book({ book, query }: { book: BibleBook; query: string }) {
       const hay = plat(`${c.number} ${c.title} ${c.summary}`)
       if (hay.includes(plat(q))) return true
       return c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
+        || (c.verses ?? []).some((verse) => plat(`${verse.number} ${verse.text}`).includes(plat(q)))
     })
   }, [book, q])
 
@@ -185,6 +197,7 @@ function Book({ book, query }: { book: BibleBook; query: string }) {
 export function Bible() {
   const [query, setQuery] = useState("")
   const last = readLast()
+  const translations = [...new Set(BIBLE_BOOKS.map(translationForBook))]
 
   return <section className="bible">
     <button type="button" className="ghost bible__back" onClick={() => navigate("/")}><ArrowLeft size={16} aria-hidden /> Azi</button>
@@ -216,7 +229,7 @@ export function Bible() {
 
     {BIBLE_BOOKS.map((b) => <Book key={b.id} book={b} query={query} />)}
 
-    <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explicaţiile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Traducere: {translations.join(" · ")}. Explicaţiile sunt scrise pentru Emanus.</p>
   </section>
 }
 
@@ -284,9 +297,46 @@ function Unit({ unit }: { unit: BibleUnit }) {
   </article>
 }
 
+function TextualNote({ note }: { note: BibleTextualNote }) {
+  return <aside className="bverse__note">
+    <p><strong>Notă textuală.</strong> {note.note}</p>
+    {note.traditionalReading && <p><strong>Lectură tradiţională:</strong> {note.traditionalReading}</p>}
+    {note.reason && <p>{note.reason}</p>}
+  </aside>
+}
+
+function ScriptureVerse({ verse, notes }: { verse: BibleVerse; notes: BibleTextualNote[] }) {
+  return <article className="bverse">
+    <p className="bverse__text"><sup>{verse.number}</sup>{verse.text}</p>
+    {verse.textualStatus && <p className="bverse__status">Statut textual: {verse.textualStatus}</p>}
+    {notes.map((note) => <TextualNote key={`${note.kind}-${note.verse}-${note.note}`} note={note} />)}
+  </article>
+}
+
+function ScriptureChapter({ chapter }: { chapter: BibleChapter }) {
+  const notes = chapter.textualNotes ?? []
+  const verses = chapter.verses ?? []
+
+  return <>
+    <section className="bverses" aria-label="Text biblic">
+      {verses.map((verse) => <ScriptureVerse
+        key={verse.number}
+        verse={verse}
+        notes={notes.filter((note) => note.verse === verse.number)}
+      />)}
+    </section>
+    {(chapter.alternateEndings ?? []).map((ending, index) => <aside key={`${ending.status}-${index}`} className="balt">
+      <p className="today__kicker">Lectură alternativă</p>
+      <p>{ending.text}</p>
+      {ending.sourceNote && <p className="muted">{ending.sourceNote}</p>}
+    </aside>)}
+  </>
+}
+
 export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapter: number }) {
   const found = findChapter(bookId, chapter)
   const book = BIBLE_BOOKS.find((b) => b.id === bookId)
+  const translation = book ? translationForBook(book) : BIBLE_TRANSLATION
 
   useEffect(() => {
     if (found) writeLast({ bookId, chapter, title: found.title })
@@ -314,21 +364,23 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greşit, spune-ne.</p>}
     </header>
 
-    <details className="bctx">
+    {found.literaryContext && <details className="bctx">
       <summary>Unde suntem în carte</summary>
       <p>{found.literaryContext}</p>
-    </details>
-    <details className="bctx">
+    </details>}
+    {found.historicalContext && <details className="bctx">
       <summary>Cum era pe atunci</summary>
       <p>{found.historicalContext}</p>
-    </details>
+    </details>}
 
-    {found.units.map((u) => <Unit key={u.id} unit={u} />)}
+    {found.verses && found.verses.length > 0
+      ? <ScriptureChapter chapter={found} />
+      : found.units.map((u) => <Unit key={u.id} unit={u} />)}
 
-    <div className="bprayer">
+    {found.prayer && <div className="bprayer">
       <p className="today__kicker">Rugăciune</p>
       {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}
-    </div>
+    </div>}
 
     <nav className="bnav" aria-label="Capitole">
       {prev !== undefined
@@ -339,6 +391,6 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
         : <span />}
     </nav>
 
-    <p className="muted bible__note">{BIBLE_TRANSLATION}</p>
+    <p className="muted bible__note">{translation}</p>
   </section>
 }

@@ -51,6 +51,9 @@ import { GENEZA_47 } from "./geneza47.js"
 import { GENEZA_48 } from "./geneza48.js"
 import { GENEZA_49 } from "./geneza49.js"
 import { GENEZA_50 } from "./geneza50.js"
+import { BIBLIA_EMANUS_NT_BOOKS } from "./bibliaEmanusNtCatalog.generated.js"
+
+export { BIBLIA_EMANUS_NT_RUNTIME_GATE } from "./bibliaEmanusNtCatalog.generated.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -109,8 +112,11 @@ export const GENEZA: BibleBook = {
   ],
 }
 
-/** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA]
+/**
+ * Catalogul public. Corpusul NT este adăugat numai de artefactul generat din
+ * poarta editorială; cât timp poarta este `withheld`, lista rămâne goală.
+ */
+export const BIBLE_BOOKS: BibleBook[] = [GENEZA, ...BIBLIA_EMANUS_NT_BOOKS]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)
