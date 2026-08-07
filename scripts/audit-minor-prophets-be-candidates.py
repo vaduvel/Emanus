@@ -1,0 +1,246 @@
+#!/usr/bin/env python3
+"""Audit de migrare pentru Osea–Maleahi din schema BE v2 veche.
+
+Nu promovează nimic. Verifică 67/67 capitole, egalitatea cu textul editorial
+materializat și reconstruiește proveniența surselor din arhivele pin-uite WEBU/WLC.
+"""
+
+from __future__ import annotations
+
+import argparse
+import ast
+import hashlib
+import json
+import re
+import subprocess
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+GENERATED = ROOT / "packages/shared/src/bible/generated/vtCanonicalText"
+
+BOOKS = [
+    ("osea", "HOS", "Osea", 14),
+    ("ioel", "JOL", "Ioel", 3),
+    ("amos", "AMO", "Amos", 9),
+    ("obadia", "OBA", "Obadia", 1),
+    ("iona", "JON", "Iona", 4),
+    ("mica", "MIC", "Mica", 7),
+    ("naum", "NAM", "Naum", 3),
+    ("habacuc", "HAB", "Habacuc", 3),
+    ("tefania", "ZEP", "Țefania", 3),
+    ("hagai", "HAG", "Hagai", 2),
+    ("zaharia", "ZEC", "Zaharia", 14),
+    ("maleahi", "MAL", "Maleahi", 4),
+]
+
+APPROVED_FIELDS = (
+    "aiSourceLanguage",
+    "aiRomanianLanguage",
+    "aiTheologicalContext",
+    "omissionAddition",
+    "benchmarkComparison",
+    "copyrightDistance",
+    "criticalIssues",
+)
+
+HEX64 = re.compile(r"^[0-9a-f]{64}$")
+TS_ARRAY = re.compile(r"^\s*(\d+): \[$")
+TS_STRING = re.compile(r"^\s*(\"(?:\\.|[^\"\\])*\"),$")
+
+
+def git_show(ref: str, path: str) -> str:
+    proc = subprocess.run(
+        ["git", "show", f"{ref}:{path}"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if proc.returncode != 0:
+        raise SystemExit(f"Nu pot citi {ref}:{path}\n{proc.stderr}")
+    return proc.stdout
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def parse_generated(path: Path) -> dict[int, list[str]]:
+    chapters: dict[int, list[str]] = {}
+    current: int | None = None
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        start = TS_ARRAY.match(raw_line)
+        if start:
+            current = int(start.group(1))
+            chapters[current] = []
+            continue
+        if current is not None and raw_line.strip() == "],":
+            current = None
+            continue
+        if current is not None:
+            match = TS_STRING.match(raw_line)
+            if not match:
+                raise SystemExit(f"{path}: linie TS neașteptată în capitolul {current}: {raw_line!r}")
+            chapters[current].append(ast.literal_eval(match.group(1)))
+    return chapters
+
+
+def find_usfm_member(archive: zipfile.ZipFile, code: str) -> str:
+    candidates = []
+    for member in archive.namelist():
+        base = Path(member).name
+        if not base.lower().endswith((".usfm", ".sfm")):
+            continue
+        stem = re.sub(r"^\d+[-_]?", "", base)
+        if stem.upper().startswith(code):
+            candidates.append(member)
+    if len(candidates) != 1:
+        raise SystemExit(f"{code}: așteptam exact un USFM în arhivă, găsite {candidates}")
+    return candidates[0]
+
+
+def member_sha256(archive: zipfile.ZipFile, member: str) -> str:
+    return hashlib.sha256(archive.read(member)).hexdigest()
+
+
+def validate_candidate(raw: dict, code: str, chapter: int) -> list[str]:
+    raw_chapter = raw.get("chapter", raw.get("chapterNumber"))
+    if raw.get("bookId") != code or raw_chapter != chapter:
+        raise SystemExit(f"{code}.{chapter}: identificare invalidă")
+    if raw.get("status") != "published" or raw.get("public") is not True:
+        raise SystemExit(f"{code}.{chapter}: nu este published/public")
+
+    review = raw.get("review") or {}
+    missing = [field for field in APPROVED_FIELDS if review.get(field) != "approved"]
+    if missing:
+        raise SystemExit(f"{code}.{chapter}: review neaprobat: {', '.join(missing)}")
+
+    audit = raw.get("audit") or {}
+    if audit.get("reviewLevel") != "ai-complete":
+        raise SystemExit(f"{code}.{chapter}: reviewLevel != ai-complete")
+    source_language = audit.get("sourceLanguage") or {}
+    if source_language.get("text") != "WLC-OSHB" or source_language.get("result") != "approved":
+        raise SystemExit(f"{code}.{chapter}: audit WLC-OSHB incomplet")
+    benchmark = audit.get("benchmarkEvidence") or {}
+    if benchmark.get("result") != "approved" or benchmark.get("pinnedBenchmarks", 0) < 2:
+        raise SystemExit(f"{code}.{chapter}: benchmark evidence incomplet")
+    digest = audit.get("textDigest")
+    if not isinstance(digest, str) or not HEX64.fullmatch(digest):
+        raise SystemExit(f"{code}.{chapter}: textDigest invalid")
+
+    verses = raw.get("verses")
+    if not isinstance(verses, list) or not verses:
+        raise SystemExit(f"{code}.{chapter}: lipsesc versetele")
+    texts: list[str] = []
+    for expected, verse in enumerate(verses, start=1):
+        if verse.get("number") != expected:
+            raise SystemExit(f"{code}.{chapter}:{expected}: numerotare discontinuă")
+        text = verse.get("text")
+        if not isinstance(text, str) or not text.strip():
+            raise SystemExit(f"{code}.{chapter}:{expected}: text gol")
+        texts.append(text.strip())
+
+    coverage = audit.get("verseCoverage") or {}
+    if coverage.get("expected") != len(texts) or coverage.get("reviewed") != len(texts) or coverage.get("coveragePercent") != 100:
+        raise SystemExit(f"{code}.{chapter}: coverage audit nu corespunde textului")
+    return texts
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source-ref", required=True)
+    parser.add_argument("--webu-zip", type=Path, required=True)
+    parser.add_argument("--wlc-zip", type=Path, required=True)
+    args = parser.parse_args()
+
+    manifest = json.loads(git_show(args.source_ref, "docs/data/biblia-emanus/manifest.json"))
+    lock = json.loads(git_show(args.source_ref, "docs/data/biblia-emanus/source-lock.json"))
+
+    if manifest.get("translation") != "BE" or manifest.get("name") != "Biblia Emanus":
+        raise SystemExit("Manifestul sursă nu declară Biblia Emanus / BE")
+    if lock.get("translation") != "BE":
+        raise SystemExit("source-lock nu declară translation=BE")
+
+    upstream = lock.get("upstreamArtifacts") or {}
+    expected_web = (upstream.get("engwebp") or {}).get("sha256")
+    expected_wlc = (upstream.get("hboWLC") or {}).get("sha256")
+    if not HEX64.fullmatch(expected_web or "") or not HEX64.fullmatch(expected_wlc or ""):
+        raise SystemExit("source-lock: lipsesc hash-urile arhivelor WEBU/WLC")
+    actual_web = sha256_file(args.webu_zip)
+    actual_wlc = sha256_file(args.wlc_zip)
+    if actual_web != expected_web:
+        raise SystemExit(f"WEBU archive SHA mismatch: {actual_web} != {expected_web}")
+    if actual_wlc != expected_wlc:
+        raise SystemExit(f"WLC archive SHA mismatch: {actual_wlc} != {expected_wlc}")
+
+    manifest_books = {book["id"]: book for book in manifest.get("books", []) if isinstance(book, dict) and "id" in book}
+    report = {
+        "translation": "BE",
+        "sourceBranch": args.source_ref,
+        "archiveSha256": {"WEBU": actual_web, "WLC": actual_wlc},
+        "books": [],
+    }
+
+    total_chapters = 0
+    total_verses = 0
+    with zipfile.ZipFile(args.webu_zip) as web_zip, zipfile.ZipFile(args.wlc_zip) as wlc_zip:
+        for file_id, code, name, chapter_count in BOOKS:
+            manifest_book = manifest_books.get(code)
+            if not manifest_book:
+                raise SystemExit(f"{code}: lipsește din manifest")
+            if manifest_book.get("status") != "published" or manifest_book.get("category") != "Vechiul Testament Protocanonic":
+                raise SystemExit(f"{code}: manifestul nu îl marchează protocanonic/published")
+            if manifest_book.get("totalChapters") != chapter_count:
+                raise SystemExit(f"{code}: număr capitole manifest invalid")
+
+            generated = parse_generated(GENERATED / f"{file_id}Text.ts")
+            if sorted(generated) != list(range(1, chapter_count + 1)):
+                raise SystemExit(f"{code}: fișierul materializat nu are toate capitolele")
+
+            book_verses = 0
+            snapshots = set()
+            digests = []
+            for chapter in range(1, chapter_count + 1):
+                raw = json.loads(git_show(args.source_ref, f"docs/data/biblia-emanus/{code}.{chapter}.json"))
+                texts = validate_candidate(raw, code, chapter)
+                if generated[chapter] != texts:
+                    raise SystemExit(f"{code}.{chapter}: textul materializat diferă de JSON-ul BE revizuit")
+                snapshots.add((raw.get("audit") or {}).get("sourceSnapshotSha256"))
+                digests.append((raw.get("audit") or {}).get("textDigest"))
+                book_verses += len(texts)
+
+            if book_verses != manifest_book.get("totalVerses"):
+                raise SystemExit(f"{code}: total versete {book_verses} != manifest {manifest_book.get('totalVerses')}")
+
+            web_member = find_usfm_member(web_zip, code)
+            wlc_member = find_usfm_member(wlc_zip, code)
+            report["books"].append({
+                "bookId": code,
+                "name": name,
+                "chapters": chapter_count,
+                "verses": book_verses,
+                "legacyAuditSnapshots": sorted(x for x in snapshots if isinstance(x, str)),
+                "chapterTextDigests": digests,
+                "WEBU": {"member": web_member, "sha256": member_sha256(web_zip, web_member)},
+                "WLC": {"member": wlc_member, "sha256": member_sha256(wlc_zip, wlc_member)},
+            })
+            total_chapters += chapter_count
+            total_verses += book_verses
+            print(f"OK {code}: {chapter_count} capitole / {book_verses} versete / text identic / WEBU+WLC găsite")
+
+    if total_chapters != 67:
+        raise SystemExit(f"Așteptam 67 capitole, găsite {total_chapters}")
+    report["totals"] = {"books": 12, "chapters": total_chapters, "verses": total_verses}
+
+    out = ROOT / "docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"AUDIT OK: 12/12 cărți, 67/67 capitole, {total_verses} versete. Raport: {out}")
+
+
+if __name__ == "__main__":
+    main()
