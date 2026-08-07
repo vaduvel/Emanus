@@ -39,11 +39,9 @@ def read(path: Path) -> str:
 
 
 def main() -> None:
-    # Cele 10 cărți deja existente în formatul complet anterior.
     for filename in LEGACY:
         need((BIBLE / filename).exists(), f"lipsește cartea legacy {filename}")
 
-    # Baza doctrinară / Poonen a celor 29 de overlay-uri trebuie să rămână disponibilă.
     for filename in BASE_OVERLAY_FILES:
         text = read(OVERLAYS / filename)
         need('status: "in_review"' in text, f"{filename} nu este in_review")
@@ -55,7 +53,6 @@ def main() -> None:
     need("assertVerseCompleteOverlay" in helper, "lipsește aserția de acoperire a versetelor")
     need("rezumat narativ fără doctrină adăugată" in helper, "lipsește truth-guard pentru explicația textuală")
 
-    # Fiecare capitol overlay trebuie să aibă un rezumat textual propriu și un număr de versete.
     total_titles = 0
     total_summaries = 0
     total_verse_counts = 0
@@ -63,7 +60,9 @@ def main() -> None:
         text = read(BIBLE / filename)
         titles = len(re.findall(r"\btitle:\s*\"", text))
         summaries = len(re.findall(r"\bsummary:\s*\"", text))
-        verse_counts = len(re.findall(r"(?:^|[,\{])\s*\d+\s*:\s*\d+\s*(?:,|\})", text))
+        # Intrările verseCounts au forma 1:22, 2:13 etc. Nu consumăm virgula
+        # separator, altfel o expresie regex non-overlapping ar număra doar fiecare a doua intrare.
+        verse_counts = len(re.findall(r"\b\d+\s*:\s*\d+\b", text))
         need(titles == expected_chapters, f"{filename}: {titles}/{expected_chapters} titluri de capitol")
         need(summaries == expected_chapters, f"{filename}: {summaries}/{expected_chapters} explicații de capitol")
         need(verse_counts == expected_chapters, f"{filename}: {verse_counts}/{expected_chapters} numărări de versete")
@@ -89,8 +88,6 @@ def main() -> None:
     overlay_entries = re.findall(r"^\s*overlay\((\d+),", coverage, flags=re.MULTILINE)
     need(len(legacy_entries) == 10, f"manifestul are {len(legacy_entries)}/10 legacy-full")
     need(len(overlay_entries) == 29, f"manifestul are {len(overlay_entries)}/29 full-overlay")
-    orders = [int(x) for x in legacy_entries + overlay_entries]
-    # Intrările sunt intercalate (Judecători este overlay între legacy), deci extragem toate apelurile în ordinea sursei.
     ordered = [int(x) for x in re.findall(r"^\s*(?:legacy|overlay)\((\d+),", coverage, flags=re.MULTILINE)]
     need(ordered == list(range(1, 40)), f"ordine invalidă în manifest: {ordered}")
     need('coverage: "full"' in coverage, "manifestul nu declară acoperire full")
