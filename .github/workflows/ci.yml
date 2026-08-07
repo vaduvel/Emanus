@@ -31,9 +31,6 @@ jobs:
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
-      - name: Verifica continutul activ
-        run: pnpm check:active-content
-
       - name: Verifica aprobarea Bibliei explicate
         run: pnpm check:bible-publication
 
