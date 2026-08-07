@@ -40,10 +40,10 @@ jobs:
             --webu-zip /tmp/engwebp_current.zip \
             --wlc-zip /tmp/hboWLC_current.zip
 
-      - name: Build Osea fresh-source re-audit packet
-        run: python3 scripts/prepare-minor-prophet-reaudit.py --book HOS
+      - name: Build Osea fresh-source re-audit diagnostic packet
+        run: python3 scripts/prepare-minor-prophet-reaudit.py --book HOS --allow-alignment-issues
 
-      - name: Commit fresh source lock and Osea packet
+      - name: Commit fresh source lock and Osea diagnostic packet
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -54,8 +54,8 @@ jobs:
             docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json
           git diff --cached --check
           if git diff --cached --quiet; then
-            echo 'Snapshotul, lock-ul și pachetul Osea sunt deja actuale.'
+            echo 'Snapshotul, lock-ul și diagnosticul Osea sunt deja actuale.'
             exit 0
           fi
-          git commit -m "audit(bible): prepare Osea fresh-source re-audit"
+          git commit -m "audit(bible): diagnose Osea fresh-source versification"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
