@@ -27,8 +27,8 @@ jobs:
       - name: Normalize legacy VT source in workspace
         run: python3 scripts/fix-vt-release-source.py --write
 
-      - name: Correct Romanian language in explanations only
-        run: python3 scripts/fix-vt-explanation-language.py --write
+      - name: Correct Romanian language in explanation strings only
+        run: python3 scripts/fix-vt-explanation-language-safe.py --write
 
       - name: Show cleanup footprint
         run: |
