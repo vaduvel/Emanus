@@ -52,16 +52,16 @@ export const VT_CANONICAL_TEXT_BY_BOOK = new Map(
 )
 
 export const VT_CANONICAL_TEXT_BLOCKED = [
-  { bookId: "osea", bibleEmanusBookId: "HOS", name: "Osea", order: 28, chapterCount: 14, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "ioel", bibleEmanusBookId: "JOL", name: "Ioel", order: 29, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "amos", bibleEmanusBookId: "AMO", name: "Amos", order: 30, chapterCount: 9, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "obadia", bibleEmanusBookId: "OBA", name: "Obadia", order: 31, chapterCount: 1, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "iona", bibleEmanusBookId: "JON", name: "Iona", order: 32, chapterCount: 4, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "mica", bibleEmanusBookId: "MIC", name: "Mica", order: 33, chapterCount: 7, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "naum", bibleEmanusBookId: "NAM", name: "Naum", order: 34, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "habacuc", bibleEmanusBookId: "HAB", name: "Habacuc", order: 35, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "tefania", bibleEmanusBookId: "ZEP", name: "Țefania", order: 36, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "hagai", bibleEmanusBookId: "HAG", name: "Hagai", order: 37, chapterCount: 2, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "zaharia", bibleEmanusBookId: "ZEC", name: "Zaharia", order: 38, chapterCount: 14, reason: "Biblia Emanus translation not yet available/approved" }},
-  { bookId: "maleahi", bibleEmanusBookId: "MAL", name: "Maleahi", order: 39, chapterCount: 4, reason: "Biblia Emanus translation not yet available/approved" }},
+  { bookId: "osea", bibleEmanusBookId: "HOS", name: "Osea", order: 28, chapterCount: 14, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "ioel", bibleEmanusBookId: "JOL", name: "Ioel", order: 29, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "amos", bibleEmanusBookId: "AMO", name: "Amos", order: 30, chapterCount: 9, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "obadia", bibleEmanusBookId: "OBA", name: "Obadia", order: 31, chapterCount: 1, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "iona", bibleEmanusBookId: "JON", name: "Iona", order: 32, chapterCount: 4, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "mica", bibleEmanusBookId: "MIC", name: "Mica", order: 33, chapterCount: 7, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "naum", bibleEmanusBookId: "NAM", name: "Naum", order: 34, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "habacuc", bibleEmanusBookId: "HAB", name: "Habacuc", order: 35, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "tefania", bibleEmanusBookId: "ZEP", name: "Țefania", order: 36, chapterCount: 3, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "hagai", bibleEmanusBookId: "HAG", name: "Hagai", order: 37, chapterCount: 2, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "zaharia", bibleEmanusBookId: "ZEC", name: "Zaharia", order: 38, chapterCount: 14, reason: "Biblia Emanus translation not yet available/approved" },
+  { bookId: "maleahi", bibleEmanusBookId: "MAL", name: "Maleahi", order: 39, chapterCount: 4, reason: "Biblia Emanus translation not yet available/approved" },
 ] as const
