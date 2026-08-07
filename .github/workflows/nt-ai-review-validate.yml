@@ -48,6 +48,17 @@ jobs:
             fi
             echo "=== Editorial review EPH.${ch} ==="
             CHAPTER="$ch" python3 .github/nt-ai-review/eph_all.py
+            JSON_PATH="$json" JOURNAL_PATH="$journal" python3 - <<'PY'
+          import os
+          import unicodedata
+          from pathlib import Path
+
+          for key in ('JSON_PATH', 'JOURNAL_PATH'):
+              path = Path(os.environ[key])
+              text = path.read_text()
+              normalized = unicodedata.normalize('NFC', text)
+              path.write_text(normalized)
+          PY
             git diff --check
             pnpm check:biblia-emanus
             python3 scripts/check-biblia-emanus-romanian-quality.py
