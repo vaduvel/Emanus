@@ -39,7 +39,7 @@ jobs:
       - name: Commit audited generated text
         shell: bash
         run: |
-          if git diff --quiet -- packages/shared/src/bible/generated/vtCanonicalText; then
+          if [ -z "$(git status --porcelain -- packages/shared/src/bible/generated/vtCanonicalText)" ]; then
             echo 'Textele BE validate sunt deja materializate.'
             exit 0
           fi
