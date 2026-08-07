@@ -9,6 +9,7 @@
 - fiecare carte este prezentă;
 - fiecare capitol este prezent;
 - fiecare interval de versete al celor 29 de cărți overlay este acoperit de cel puțin o explicație;
+- **niciun capitol overlay nu mai poate intra în registry-ul final cu `units: []`; poarta de runtime îl respinge înainte de compoziție**;
 - unitățile doctrinare existente din Zac Poonen/CFC sunt păstrate;
 - intervalele pe care Poonen nu le dezvoltă suficient primesc numai un overview textual/narativ, fără doctrină, tipologie sau aplicație inventată;
 - toate materialele noi rămân `in_review` până la revizia editorială finală și integrarea în `main`.
@@ -65,6 +66,29 @@ Acestea folosesc formatul complet existent. Geneza păstrează fluxul editorial 
 **Total overlay: 637 capitole.**
 
 Explicația și textul biblic sunt două straturi independente. Overlay-ul nu încorporează o anumită traducere în explicație; textul este rezolvat prin `bibleEmanusBookId` și catalogul de text materializat. Asta permite înlocuirea traducerii fără rescrierea explicației.
+
+### Trecerea editorială de profunzime
+
+Înainte de închiderea release candidate-ului, cărțile care aveau capitole goale în overlay și se bazau exclusiv pe fallback generic au fost materializate explicit. În această trecere au fost ridicate în special:
+
+- Judecători — 21/21 direct;
+- 1 Cronici — 29/29 direct;
+- 2 Cronici — 36/36 direct;
+- Neemia — 13/13 direct;
+- Estera — 10/10 direct;
+- Iov — 42/42 compus din expunerea Poonen + capitole textuale explicite;
+- Psalmii — 150/150 compus din expunerea Poonen + explicații textuale explicite;
+- Proverbele — 31/31;
+- Eclesiastul — 12/12;
+- Cântarea Cântărilor — 8/8;
+- Isaia — 66/66;
+- Ieremia — 52/52;
+- Plângerile — 5/5;
+- Ezechiel — 48/48;
+- Daniel — 12/12;
+- profeții mici — toate capitolele prezente direct în overlay-ul final.
+
+Expunerea Poonen/CFC are prioritate acolo unde există. Materializarea textuală nu este etichetată drept Poonen și nu primește automat aplicații pastorale sau studii lexicale.
 
 ## Text biblic de lucru
 
@@ -171,6 +195,19 @@ Compoziția finală:
 
 `packages/shared/src/bible/overlays/fullCoverage.ts`
 
+Compozitoarele editoriale care păstrează Poonen și materializează explicit restul includ:
+
+- `iovEditorialOverlay.ts`;
+- `psalmiEditorialOverlay.ts`;
+- `proverbeEditorialOverlay.ts`;
+- `eclesiastulEditorialOverlay.ts`;
+- `cantareaEditorialOverlay.ts`;
+- `isaiaEditorialOverlay.ts`;
+- `ieremiaEditorialOverlay.ts`;
+- `plangerileEditorialOverlay.ts`;
+- `ezechielEditorialOverlay.ts`;
+- `danielEditorialOverlay.ts`.
+
 Registry-ul explicațiilor:
 
 `packages/shared/src/bible/overlays/index.ts`
@@ -210,6 +247,7 @@ Porțile verifică:
 - cele 10 cărți `legacy-full`;
 - 29 de overlay-uri complete;
 - 637/637 capitole overlay;
+- **zero capitole fără explicație directă înainte de completarea intervalelor**;
 - acoperirea intervalelor de versete;
 - toate materialele overlay `in_review`;
 - sursa fiecărei unități și separarea `exposition` / `textual-overview`;
@@ -218,17 +256,17 @@ Porțile verifică:
 - exact 12 cărți cu text provizoriu marcat explicit;
 - imposibilitatea de a pune aplicație pastorală sau studiu lexical inventat pe overview-ul textual.
 
-La runtime, `assertVerseCompleteOverlay()` refuză o carte dacă după compoziție rămâne vreun interval de versete neacoperit.
+La runtime, `assertVerseCompleteOverlay()` refuză o carte dacă după compoziție rămâne vreun interval de versete neacoperit. `fullCoverage.ts` refuză acum și orice carte care ajunge la compoziție cu un capitol având `units: []`.
 
 ## Ce nu înseamnă „terminat”
 
 `39/39 full` descrie **acoperirea conținutului Bibliei explicate**, nu aprobarea finală de publicare.
 
-Înainte de publicare rămân:
+Înainte de publicarea efectivă în produs rămân deliberat:
 
 - înlocuirea textelor Osea–Maleahi cu Biblia Emanus finală;
 - revizia editorială umană;
 - schimbarea controlată a statusurilor din `in_review` în `published`;
-- merge-ul în ramura de produs după CI verde.
+- merge-ul în ramura de produs după aprobarea editorială.
 
 Cărțile deuterocanonice/ortodoxe, extensiile etiopiene și textele selectate de la Marea Moartă sunt un corpus separat și nu intră în acest 39/39.
