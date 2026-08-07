@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1ti-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 15 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,88 +123,151 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:5899ddfb8837502f01bc6f78a9e94a4ecdd64c8059081ef6c65ab39f7eeab834",
-    "contentDigest": "sha256:51983f219e8082713503283f59f64321e7282518ec9d7fcc1b62305b92c8584f"
+    "textDigest": "sha256:63695d1916da68d21aa4779dd7efd7d3bfa977c3a77019d5cbb32b0734c3c7c1",
+    "contentDigest": "sha256:907658b53f88f526b3983a2b3e1cbe9f68fce3569bcc62eb5ef0657360442b6c"
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, mai întâi de toate, îndemn să se facă cereri, rugăciuni, mijlociri și mulțumiri pentru toți oamenii,"
+      "text": "Așadar, înainte de toate, îndemn să se facă cereri, rugăciuni, mijlociri și mulțumiri pentru toți oamenii,"
     },
     {
       "number": 2,
-      "text": "pentru împărați și pentru toți cei din înălțimi, ca să ducem o viață liniștită și liniștită în toată evlavia și venerația."
+      "text": "pentru împărați și pentru toți cei aflați în poziții înalte, ca să ducem o viață liniștită și pașnică, în toată evlavia și demnitatea."
     },
     {
       "number": 3,
-      "text": "Căci lucrul acesta este bun plăcut înaintea lui Dumnezeu, Mântuitorul nostru,"
+      "text": "Acest lucru este bun și primit înaintea lui Dumnezeu, Mântuitorul nostru,"
     },
     {
       "number": 4,
-      "text": "care vor ca toți oamenii să fie mântuiți și să cunoască întru totul adevărul."
+      "text": "care dorește ca toți oamenii să fie mântuiți și să ajungă la cunoașterea adevărului."
     },
     {
       "number": 5,
-      "text": "Căci este un singur Dumnezeu și un singur mijlocitor între Dumnezeu și oameni, omul Hristos Isus,"
+      "text": "Căci este un singur Dumnezeu și un singur mijlocitor între Dumnezeu și oameni: omul Hristos Isus,"
     },
     {
       "number": 6,
-      "text": "care s-a dat pe sine ca răscumpărare pentru toți, ca mărturie la timpul cuvenit,"
+      "text": "care S-a dat pe Sine ca preț de răscumpărare pentru toți, mărturie dată la timpul potrivit,"
     },
     {
       "number": 7,
-      "text": "Către care am fost numit predicator și apostol, spun adevărul în Hristos, nu mint un învățător al Neamurilor în credință și adevăr."
+      "text": "Pentru aceasta am fost rânduit predicator și apostol — spun adevărul, nu mint — învățător al neamurilor în credință și adevăr."
     },
     {
       "number": 8,
-      "text": "De aceea, doresc ca oamenii din orice loc să se roage, ridicând mâini sfinte fără mânie și îndoială."
+      "text": "Așadar, doresc ca bărbații să se roage în orice loc, ridicând mâini sfinte, fără mânie și fără certuri."
     },
     {
       "number": 9,
-      "text": "În același fel, femeile se împodobesc și ele în haine decente, cu modestie și onestitate, nu cu păr împletit, aur, perle sau haine scumpe,"
+      "text": "Tot astfel, femeile să se împodobească în ținută cuviincioasă, cu decență și stăpânire de sine, nu cu împletituri de păr, aur, perle ori haine costisitoare,"
     },
     {
       "number": 10,
-      "text": "ci cu fapte bune, ceea ce este potrivit pentru femeile care mărturisesc evlavie."
+      "text": "ci, așa cum se cuvine femeilor care mărturisesc evlavia, prin fapte bune."
     },
     {
       "number": 11,
-      "text": "Lasă o femeie să învețe în liniște cu supunere deplină."
+      "text": "O femeie să învețe în liniște, cu deplină supunere."
     },
     {
       "number": 12,
-      "text": "Dar eu nu permit unei femei să predea, nici să exercite autoritate asupra unui bărbat, ci să fie în liniște."
+      "text": "Nu îngădui unei femei să dea învățătură, nici să exercite autoritate asupra unui bărbat, ci să fie în liniște."
     },
     {
       "number": 13,
-      "text": "Pentru Adam a fost format mai întâi, apoi Eva."
+      "text": "Căci Adam a fost întocmit mai întâi, apoi Eva;"
     },
     {
       "number": 14,
-      "text": "Adam nu a fost înșelat, dar femeia, fiind înșelată, a căzut în neascultare;"
+      "text": "Și Adam nu a fost înșelat, ci femeia, fiind pe deplin amăgită, a ajuns în neascultare."
     },
     {
       "number": 15,
-      "text": "Dar ea va fi mântuită prin nașterea ei, dacă vor continua în credință, iubire și sfințenie cu sobrietate."
+      "text": "Dar ea va fi mântuită prin nașterea de copii, dacă ele vor rămâne în credință, dragoste și sfințenie, cu stăpânire de sine."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "variantă textuală SBLGNT/TR: τοῦτο / τοῦτο γάρ",
+      "decision": "„Acest lucru este bun și primit”",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă γάρ („căci”)."
+      ],
+      "reason": "SBLGNT începe direct cu τοῦτο; româna păstrează legătura logică din context fără a introduce conectorul suplimentar al TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: ἀλήθειαν λέγω / ἀλήθειαν λέγω ἐν Χριστῷ",
+      "decision": "„spun adevărul, nu mint”",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă „în Hristos” după „spun adevărul”."
+      ],
+      "reason": "SBLGNT nu are sintagma ἐν Χριστῷ; afirmația adevărului este păstrată fără adaosul TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "variante textuale SBLGNT/TR: γυναῖκας / τὰς γυναῖκας; καὶ / ἤ; χρυσίῳ / χρυσῷ",
+      "decision": "enumerarea în ținută cuviincioasă, fără articolul și alternativa textuală adăugate",
+      "alternatives": [
+        "TR-1TI din snapshot are articolul τὰς, leagă aurul prin ἤ și are forma χρυσῷ."
+      ],
+      "reason": "SBLGNT are γυναῖκας, καὶ și χρυσίῳ; diferențele de articol, conjuncție și formă nu schimbă enumerarea românească a ornamentelor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 12,
+      "term": "γυναικί / ἀνδρός; αὐθεντεῖν",
+      "decision": "„unei femei … asupra unui bărbat” și „să exercite autoritate”",
+      "alternatives": [
+        "Termenii pot desemna, după context, femeie/bărbat sau soție/soț; αὐθεντεῖν are un câmp semantic de autoritate sau dominare."
+      ],
+      "reason": "Textul redă termenii generici ai SBLGNT fără a restrânge contextul la o interpretare instituțională ori matrimonială care nu este explicită în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI și aparatul au fost confruntate direct; alegerea românească păstrează ambiguitatea de domeniu a termenilor grecești."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: ἐξαπατηθεῖσα / ἀπατηθεῖσα",
+      "decision": "„fiind pe deplin amăgită”",
+      "alternatives": [
+        "TR-1TI din snapshot are forma fără prefix intensificator: „fiind amăgită”."
+      ],
+      "reason": "SBLGNT are ἐξαπατηθεῖσα; româna redă prefixul intensificator prin „pe deplin”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "σωθήσεται … τῆς τεκνογονίας / μείνωσιν",
+      "decision": "„ea va fi mântuită prin nașterea de copii, dacă ele vor rămâne”",
+      "alternatives": [
+        "Textul trece de la singularul σωθήσεται la pluralul μείνωσιν; referentul exact și sensul expresiei τῆς τεκνογονίας sunt discutate în interpretare."
+      ],
+      "reason": "Româna păstrează schimbarea gramaticală și nu transformă expresia despre naștere într-o explicație doctrinară suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI a fost confruntat direct; traducerea păstrează formularea și ambiguitatea sintactică a textului principal."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
