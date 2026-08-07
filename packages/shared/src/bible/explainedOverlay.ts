@@ -45,7 +45,27 @@ export interface ExplainedBookOverlay {
   order: number
   transcript: string
   status: "draft" | "in_review" | "published"
+  coverageMode?: "full" | "transcript-focused"
   chapters: ExplainedOverlayChapter[]
+}
+
+export function transcriptFocusedChapters(
+  bookName: string,
+  count: number,
+  focused: Record<number, ExplainedOverlayChapter>,
+): ExplainedOverlayChapter[] {
+  return Array.from({ length: count }, (_, index) => {
+    const number = index + 1
+    return (
+      focused[number] ?? {
+        number,
+        title: `${bookName} ${number}`,
+        summary:
+          "Capitol păstrat în overlay pentru continuitatea cărții. Transcriptul Poonen nu îl dezvoltă separat; textul și sensul narativ rămân în Biblia Emanus, fără completare doctrinară generată.",
+        units: [],
+      }
+    )
+  })
 }
 
 export function assertCompleteOverlay(
