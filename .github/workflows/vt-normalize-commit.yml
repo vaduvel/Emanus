@@ -1,0 +1,70 @@
+name: VT Normalize Commit
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-complet
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vt-normalize-commit
+  cancel-in-progress: true
+
+jobs:
+  normalize-validate-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-complet
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Normalize legacy Numeri and Deuteronom sources
+        run: python3 scripts/fix-vt-release-source.py --write
+
+      - name: Reject malformed Unicode remnants
+        run: |
+          if grep -R -n -E '\\u[0-9A-Za-z]{1,7}([^0-9A-Fa-f]|$)' packages/shared/src/bible/deuteronom*.ts packages/shared/src/bible/numeri*.ts; then
+            echo 'Au rămas escape-uri Unicode malformate.'
+            exit 1
+          fi
+
+      - name: Verify VT coverage
+        run: pnpm check:vt-explained
+
+      - name: Verify VT publication runtime
+        run: pnpm check:vt-publication
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Production build
+        run: pnpm build
+
+      - name: Verify patch hygiene
+        run: git diff --check
+
+      - name: Commit normalized sources
+        shell: bash
+        run: |
+          if git diff --quiet -- packages/shared/src/bible/deuteronom*.ts packages/shared/src/bible/numeri*.ts; then
+            echo 'Sursele sunt deja normalizate; nu este necesar un commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add packages/shared/src/bible/deuteronom*.ts packages/shared/src/bible/numeri*.ts
+          git commit -m 'fix(bible): normalize legacy Numeri and Deuteronom sources'
+          git push origin HEAD:agent/biblia-explicata-vt-complet
