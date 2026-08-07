@@ -1,0 +1,299 @@
+name: VT Clean Integration Assemble
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-integration-clean
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+
+      - name: Fetch source and main
+        run: |
+          git fetch origin main:refs/remotes/origin/main
+          git fetch origin agent/biblia-explicata-vt-complet:refs/remotes/origin/agent/biblia-explicata-vt-complet
+
+      - name: Copy VT-only corpus and dependency closure
+        run: |
+          python3 - <<'PY'
+          import posixpath
+          import re
+          import subprocess
+          from pathlib import Path
+
+          SOURCE = 'origin/agent/biblia-explicata-vt-complet'
+          MAIN = 'origin/main'
+
+          exact_infra = {
+              'packages/shared/src/bible/completeOverlay.ts',
+              'packages/shared/src/bible/explainedOverlay.ts',
+              'packages/shared/src/bible/overlayBibleBooks.ts',
+              'packages/shared/src/bible/publicationBible.ts',
+              'packages/shared/src/bible/vtExplainedCoverage.ts',
+              'packages/shared/src/bible/vtFullNarrativesHistorical.ts',
+              'packages/shared/src/bible/vtFullNarrativesWisdom.ts',
+              'packages/shared/src/bible/vtFullNarrativesMajorProphets.ts',
+              'packages/shared/src/bible/vtFullNarrativesMinorProphets.ts',
+          }
+          safe_scripts = {
+              'scripts/check-vt-explained-coverage.py',
+              'scripts/check-vt-publication-runtime.mjs',
+              'scripts/materialize-vt-overlay-texts.py',
+              'scripts/check-overlay-book.py',
+              'scripts/check-rut.py',
+              'scripts/check-1-samuel.py',
+              'scripts/check-2-samuel.py',
+              'scripts/check-1-imparati.py',
+              'scripts/check-1-imparati-book.py',
+              'scripts/check-2-imparati-overlay.py',
+          }
+          safe_docs = {
+              'docs/biblia-explicata/VT-COVERAGE-FINAL.md',
+              'docs/biblia-explicata/RUT-SOURCE-RULES.md',
+              'docs/biblia-explicata/1-SAMUEL-SOURCE-RULES.md',
+              'docs/biblia-explicata/2-SAMUEL-SOURCE-RULES.md',
+              'docs/biblia-explicata/1-IMPARATI-SOURCE-RULES.md',
+          }
+          legacy_prefixes = (
+              'exod', 'levitic', 'numeri', 'deuteronom', 'iosua',
+              'rut', 'samuel1', 'samuel2', 'imparati1',
+          )
+          forbidden_tokens = (
+              'matei', 'marcu', 'luca', 'ioan', 'fapte', 'romani', 'corinteni',
+              'galateni', 'efeseni', 'filipeni', 'coloseni', 'tesaloniceni',
+              'timotei', 'filimon', 'evrei', 'iacov', 'petru', 'apocalipsa',
+          )
+
+          changed = subprocess.check_output(
+              ['git', 'diff', '--name-only', f'{MAIN}...{SOURCE}'], text=True
+          ).splitlines()
+
+          selected = []
+          for path in changed:
+              low = path.lower()
+              name = Path(path).name.lower()
+              if path.startswith('.research/poonen-through-the-bible-OT/'):
+                  selected.append(path)
+              elif path.startswith('packages/shared/src/bible/generated/vtCanonicalText/'):
+                  selected.append(path)
+              elif path.startswith('packages/shared/src/bible/overlays/'):
+                  selected.append(path)
+              elif path in exact_infra or path in safe_scripts or path in safe_docs:
+                  selected.append(path)
+              elif path.startswith('packages/shared/src/bible/') and name.startswith(legacy_prefixes):
+                  selected.append(path)
+
+          def source_has(path: str) -> bool:
+              return subprocess.run(
+                  ['git', 'cat-file', '-e', f'{SOURCE}:{path}'],
+                  stdout=subprocess.DEVNULL,
+                  stderr=subprocess.DEVNULL,
+              ).returncode == 0
+
+          copied = set()
+          def copy_from_source(path: str) -> None:
+              low = path.lower()
+              if any(f'/{tok}' in low or Path(low).name.startswith(tok) for tok in forbidden_tokens):
+                  raise SystemExit(f'REFUZ dependență NT în integrarea VT: {path}')
+              subprocess.check_call(['git', 'checkout', SOURCE, '--', path])
+              copied.add(path)
+
+          for path in sorted(set(selected)):
+              copy_from_source(path)
+
+          # Închide numai importurile relative lipsă din packages/shared/src/bible.
+          import_re = re.compile(r'from\s+["\'](\.[^"\']+)["\']')
+          changed_any = True
+          while changed_any:
+              changed_any = False
+              ts_files = [Path(p) for p in copied if p.endswith('.ts') and Path(p).exists()]
+              for file_path in ts_files:
+                  text = file_path.read_text(encoding='utf-8')
+                  for rel in import_re.findall(text):
+                      target = posixpath.normpath(posixpath.join(file_path.parent.as_posix(), rel))
+                      if target.endswith('.js'):
+                          target = target[:-3] + '.ts'
+                      if not target.startswith('packages/shared/src/bible/'):
+                          continue
+                      if Path(target).exists():
+                          continue
+                      if not source_has(target):
+                          raise SystemExit(f'Dependență lipsă și inexistentă în sursă: {file_path} -> {target}')
+                      copy_from_source(target)
+                      changed_any = True
+
+          print(f'Copiate {len(copied)} fișiere VT/dependențe sigure.')
+          Path('/tmp/vt-copied.txt').write_text('\n'.join(sorted(copied)) + '\n', encoding='utf-8')
+          PY
+
+      - name: Patch shared Bible types minimally over main
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('packages/shared/src/bible/types.ts')
+          s = p.read_text(encoding='utf-8')
+
+          old = 'export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"\n'
+          new = old + '\nexport type BibleExplanationKind = "exposition" | "textual-overview"\n'
+          if 'export type BibleExplanationKind' not in s:
+              if old not in s: raise SystemExit('types.ts: OriginalLanguage anchor missing')
+              s = s.replace(old, new, 1)
+
+          s = s.replace(
+              '/** Textul biblic, nemodificat. Cornilescu 1924, editia originala. */',
+              '/** Textul biblic al traducerii asociate cărții, păstrat separat de explicație. */',
+              1,
+          )
+
+          anchor = '  /** Invatatura Emanus. Markdown. */\n  teaching: string\n'
+          fields = anchor + '  /** Tipul explicației: expunere din sursa editorială sau overview textual de completare. */\n  explanationKind?: BibleExplanationKind\n  /** Eticheta scurtă a provenienței explicației, folosită de cititor. */\n  explanationSource?: string\n'
+          if 'explanationKind?: BibleExplanationKind' not in s:
+              if anchor not in s: raise SystemExit('types.ts: BibleUnit teaching anchor missing')
+              s = s.replace(anchor, fields, 1)
+
+          anchor = '  blurb: string\n  chapters: BibleChapter[]\n'
+          repl = '  blurb: string\n  /** Eticheta traducerii biblice folosite de această carte în cititor. */\n  translation?: string\n  chapters: BibleChapter[]\n'
+          if 'translation?: string' not in s:
+              if anchor not in s: raise SystemExit('types.ts: BibleBook anchor missing')
+              s = s.replace(anchor, repl, 1)
+
+          anchor = '/** Traducerea afisata. Editia originala 1924 este in domeniul public. */\nexport const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"\n'
+          repl = 'export const BIBLIA_EMANUS_TRANSLATION = "Biblia Emanus"\n\n' + anchor
+          if 'BIBLIA_EMANUS_TRANSLATION' not in s:
+              if anchor not in s: raise SystemExit('types.ts: BIBLE_TRANSLATION anchor missing')
+              s = s.replace(anchor, repl, 1)
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Patch legacy VT catalog without NT
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('packages/shared/src/bible/index.ts')
+          s = p.read_text(encoding='utf-8')
+
+          import_anchor = 'import { GENEZA_50 } from "./geneza50.js"\n'
+          imports = import_anchor + '''import { EXOD } from "./exod.js"\nimport { LEVITIC } from "./levitic.js"\nimport { NUMERI } from "./numeri.js"\nimport { DEUTERONOM } from "./deuteronom.js"\nimport { IOSUA } from "./iosua.js"\nimport { RUT } from "./rut.js"\nimport { SAMUEL1 } from "./samuel1.js"\nimport { SAMUEL2 } from "./samuel2.js"\n'''
+          if 'import { EXOD } from "./exod.js"' not in s:
+              if import_anchor not in s: raise SystemExit('bible/index.ts: import anchor missing')
+              s = s.replace(import_anchor, imports, 1)
+
+          old = '/** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */\nexport const BIBLE_BOOKS: BibleBook[] = [GENEZA]\n'
+          new = '''export { EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA, RUT, SAMUEL1, SAMUEL2 }\n\n/** Cărțile legacy VT integrate; 1 Împărați este adăugată separat în publicationBible. */\nexport const BIBLE_BOOKS: BibleBook[] = [\n  GENEZA,\n  EXOD,\n  LEVITIC,\n  NUMERI,\n  DEUTERONOM,\n  IOSUA,\n  RUT,\n  SAMUEL1,\n  SAMUEL2,\n]\n'''
+          if old not in s:
+              raise SystemExit('bible/index.ts: BIBLE_BOOKS main anchor missing')
+          s = s.replace(old, new, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Add clean shared exports and root scripts
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path('packages/shared/package.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          exports = data['exports']
+          exports['./bible-explained'] = {
+              'types': './dist/bible/overlays/index.d.ts',
+              'default': './dist/bible/overlays/index.js',
+          }
+          exports['./bible-publication'] = {
+              'types': './dist/bible/publicationBible.d.ts',
+              'default': './dist/bible/publicationBible.js',
+          }
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          p = Path('package.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          scripts = data['scripts']
+          scripts['check:vt-explained'] = 'python3 scripts/check-vt-explained-coverage.py'
+          scripts['check:vt-publication'] = 'pnpm build:shared && node scripts/check-vt-publication-runtime.mjs'
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify VT content and publication runtime
+        run: |
+          pnpm check:vt-explained
+          pnpm check:vt-publication
+
+      - name: Typecheck and production build
+        run: |
+          pnpm typecheck
+          pnpm build
+
+      - name: Guard against NT or unrelated content
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+
+          changed = subprocess.check_output(['git', 'diff', '--name-only', 'origin/main'], text=True).splitlines()
+          forbidden = []
+          tokens = (
+              'matei', 'marcu', 'luca', 'ioan', 'fapte', 'romani', 'corinteni',
+              'galateni', 'efeseni', 'filipeni', 'coloseni', 'tesaloniceni',
+              'timotei', 'filimon', 'evrei', 'iacov', 'petru', 'apocalipsa',
+          )
+          for p in changed:
+              low = p.lower()
+              if p.startswith('.research/marcu-poonen/'):
+                  forbidden.append(p)
+                  continue
+              if p.startswith('packages/shared/src/bible/') or p.startswith('.research/') or p.startswith('docs/biblia-explicata/'):
+                  if any(Path(low).name.startswith(tok) for tok in tokens):
+                      forbidden.append(p)
+          if forbidden:
+              raise SystemExit('Integrarea curată a tras fișiere NT:\n' + '\n'.join(forbidden))
+          print(f'Guard OK: {len(changed)} fișiere diferă față de main; niciun fișier NT interzis.')
+          PY
+          git diff --check
+
+      - name: Commit validated clean VT integration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            .research/poonen-through-the-bible-OT \
+            docs/biblia-explicata \
+            packages/shared/src/bible \
+            packages/shared/package.json \
+            package.json \
+            scripts/check-vt-explained-coverage.py \
+            scripts/check-vt-publication-runtime.mjs \
+            scripts/materialize-vt-overlay-texts.py \
+            scripts/check-overlay-book.py \
+            scripts/check-rut.py \
+            scripts/check-1-samuel.py \
+            scripts/check-2-samuel.py \
+            scripts/check-1-imparati.py \
+            scripts/check-1-imparati-book.py \
+            scripts/check-2-imparati-overlay.py
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'Nu există modificări de asamblat.'
+            exit 0
+          fi
+          git commit -m "feat(bible): assemble clean explained OT integration"
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
