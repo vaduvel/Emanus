@@ -1,0 +1,73 @@
+name: NT AI Review Validate
+
+on:
+  push:
+    branches:
+      - codex/nt-ai-review-handoff
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  php1-candidate:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout branch commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+
+      - name: Verify pinned PHP source bundle
+        run: |
+          set -euo pipefail
+          ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
+          test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
+          unzip -t "$ZIP" >/dev/null
+          for entry in sblgnt/text/PHP.txt sblgnt/apparatus/text/PHP.txt tr/PHP.usfm webp/PHP.usfm btf/PHP.usfm cornilescu1924/PHP.usfm biblia-libera/PHP.usfm; do
+            unzip -p "$ZIP" "$entry" >/dev/null
+          done
+
+      - name: Materialize reviewed PHP 1 candidate in worktree
+        run: python3 .github/nt-ai-review/php1.py
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.9'
+
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Run required post-batch gates before commit
+        run: |
+          set -euo pipefail
+          pnpm check:biblia-emanus
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          pnpm check:biblia-emanus-nt-withheld
+          python3 scripts/withhold-biblia-emanus-nt.py --check
+          pnpm check:biblia-emanus-nt-runtime
+          pnpm test:biblia-emanus
+          git diff --check
+
+      - name: Assert isolated candidate diff
+        run: |
+          set -euo pipefail
+          mapfile -t changed < <(git status --short | awk '{print $2}' | grep -v '^.github/' | sort)
+          printf '%s\n' "${changed[@]}"
+          test "${#changed[@]}" -eq 2
+          test "${changed[0]}" = "docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.1.md"
+          test "${changed[1]}" = "docs/data/biblia-emanus/PHP.1.json"
