@@ -4,7 +4,7 @@
 Nu schimbă doctrina și nu rescrie explicațiile. Repară exclusiv:
 - escape-uri Unicode literale/defecte rămase în Deuteronom/Numeri;
 - ghilimele ASCII neescape-uite aflate în interiorul stringurilor textuale;
-- câteva artefacte mecanice produse de serializarea veche a diacriticelor.
+- artefacte mecanice produse de serializarea veche a diacriticelor.
 
 Utilizare:
   python3 scripts/fix-vt-release-source.py --check
@@ -20,15 +20,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BIBLE = ROOT / "packages" / "shared" / "src" / "bible"
 
-TARGET_GLOBS = (
-    "deuteronom*.ts",
-    "numeri*.ts",
-)
+TARGET_GLOBS = ("deuteronom*.ts", "numeri*.ts")
 
 UNICODE_ESCAPE = re.compile(r"\\u([0-9a-fA-F]{4})")
-# Generatorul vechi a lăsat uneori prefixul lui î ca \u00c... sau \u00e...
-# fără a patra cifră hex. Ambele forme sunt mecanice, nu conținut editorial.
 MALFORMED_ROMANIAN_I = re.compile(r"\\u00[ce](?=[^0-9a-fA-F])")
+MALFORMED_ROMANIAN_A_OR_I = re.compile(r"\\u00(?=[A-Za-zĂÂÎȘȚăâîșț])")
 
 MECHANICAL_ESCAPE_FIXES = {
     r"\u015s": "ș",
@@ -36,105 +32,55 @@ MECHANICAL_ESCAPE_FIXES = {
     r"\u103": "ă",
 }
 
-# Artefacte mecanice observate după decodarea unui \u00ce accidental.
-# Înlocuirile sunt limitate la forme imposibile în română produse de serializare.
 TOKEN_FIXES = {
-    "Îltreag": "întreag",
-    "îltreag": "întreag",
-    "Îlocu": "înlocu",
-    "îlocu": "înlocu",
-    "Îllocu": "înlocu",
-    "îllocu": "înlocu",
-    "Îlseamn": "înseamn",
-    "îlseamn": "înseamn",
-    "Îlsemna": "însemna",
-    "îlsemna": "însemna",
-    "Îlche": "înche",
-    "îlche": "înche",
-    "Îlceput": "început",
-    "îlceput": "început",
-    "Îlcepe": "începe",
-    "îlcepe": "începe",
-    "Îlvăț": "învăț",
-    "îlvăț": "învăț",
-    "Îlveț": "înveț",
-    "îlveț": "înveț",
-    "Îlvaț": "învaț",
-    "îlvaț": "învaț",
-    "Îlchin": "închin",
-    "îlchin": "închin",
-    "Îlcred": "încred",
-    "îlcred": "încred",
-    "Îlfrunt": "înfrunt",
-    "îlfrunt": "înfrunt",
-    "Îlfrico": "înfrico",
-    "îlfrico": "înfrico",
-    "Îlving": "înving",
-    "îlving": "înving",
-    "Îlvi": "învi",
-    "îlvi": "învi",
-    "Îlmulț": "înmulț",
-    "îlmulț": "înmulț",
-    "Îldepărt": "îndepărt",
-    "îldepărt": "îndepărt",
-    "Îldreapt": "îndreapt",
-    "îldreapt": "îndreapt",
-    "Îldurat": "îndurat",
-    "îldurat": "îndurat",
-    "Îldurare": "îndurare",
-    "îldurare": "îndurare",
-    "Îldoial": "îndoial",
-    "îldoial": "îndoial",
-    "Îltoarc": "întoarc",
-    "îltoarc": "întoarc",
-    "Îltors": "întors",
-    "îltors": "întors",
-    "Îltorc": "întorc",
-    "îltorc": "întorc",
-    "Îltâi": "întâi",
-    "îltâi": "întâi",
-    "Îltăi": "întăi",
-    "îltăi": "întăi",
-    "Îltind": "întind",
-    "îltind": "întind",
-    "Îltăr": "întăr",
-    "îltăr": "întăr",
-    "Îltr": "într",
-    "îltr": "într",
-    "Îlainte": "înainte",
-    "îlainte": "înainte",
-    "Îllături": "înlături",
-    "îllături": "înlături",
-    "Îllătur": "înlătur",
-    "îllătur": "înlătur",
-    "Îlcerc": "încerc",
-    "îlcerc": "încerc",
-    "Îlfrumuseț": "înfrumuseț",
-    "îlfrumuseț": "înfrumuseț",
-    "Îlpărț": "împărț",
-    "îlpărț": "împărț",
-    "Îlvoial": "învoial",
-    "îlvoial": "învoial",
-    "Îleleas": "înțeleas",
-    "îleleas": "înțeleas",
-    "Îleleag": "înțeleag",
-    "îleleag": "înțeleag",
-    "Îlalț": "înălț",
-    "îlalț": "înălț",
-    "Îlsuș": "însuș",
-    "îlsuș": "însuș",
-    "Îlsăș": "însăș",
-    "îlsăș": "însăș",
+    "Îltreag": "întreag", "îltreag": "întreag",
+    "Îlocu": "înlocu", "îlocu": "înlocu", "Îllocu": "înlocu", "îllocu": "înlocu",
+    "Îlseamn": "înseamn", "îlseamn": "înseamn", "Îlsemna": "însemna", "îlsemna": "însemna",
+    "Îlche": "înche", "îlche": "înche", "Îlceput": "început", "îlceput": "început",
+    "Îlcepe": "începe", "îlcepe": "începe", "Îlvăț": "învăț", "îlvăț": "învăț",
+    "Îlveț": "înveț", "îlveț": "înveț", "Îlvaț": "învaț", "îlvaț": "învaț",
+    "Îlchin": "închin", "îlchin": "închin", "Îlcred": "încred", "îlcred": "încred",
+    "Îlfrunt": "înfrunt", "îlfrunt": "înfrunt", "Îlfrico": "înfrico", "îlfrico": "înfrico",
+    "Îlving": "înving", "îlving": "înving", "Îlvi": "învi", "îlvi": "învi",
+    "Îlmulț": "înmulț", "îlmulț": "înmulț", "Îldepărt": "îndepărt", "îldepărt": "îndepărt",
+    "Îldreapt": "îndreapt", "îldreapt": "îndreapt", "Îldurat": "îndurat", "îldurat": "îndurat",
+    "Îldurare": "îndurare", "îldurare": "îndurare", "Îldoial": "îndoial", "îldoial": "îndoial",
+    "Îltoarc": "întoarc", "îltoarc": "întoarc", "Îltors": "întors", "îltors": "întors",
+    "Îltorc": "întorc", "îltorc": "întorc", "Îltâi": "întâi", "îltâi": "întâi",
+    "Îltăi": "întăi", "îltăi": "întăi", "Îltind": "întind", "îltind": "întind",
+    "Îltăr": "întăr", "îltăr": "întăr", "Îltr": "într", "îltr": "într",
+    "Îlainte": "înainte", "îlainte": "înainte", "Îllături": "înlături", "îllături": "înlături",
+    "Îllătur": "înlătur", "îllătur": "înlătur", "Îlcerc": "încerc", "îlcerc": "încerc",
+    "Îlcă": "încă", "îlcă": "încă", "Îlfrumuseț": "înfrumuseț", "îlfrumuseț": "înfrumuseț",
+    "Îlpărț": "împărț", "îlpărț": "împărț", "Îlvoial": "învoial", "îlvoial": "învoial",
+    "Îleleas": "înțeleas", "îleleas": "înțeleas", "Îleleag": "înțeleag", "îleleag": "înțeleag",
+    "Îlalț": "înălț", "îlalț": "înălț", "Îlsuș": "însuș", "îlsuș": "însuș",
+    "Îlsăș": "însăș", "îlsăș": "însăș", "Îltemeiaz": "întemeiaz", "îltemeiaz": "întemeiaz",
+    "Îltîmpl": "întâmpl", "îltîmpl": "întâmpl", "Îlți": "înți", "îlți": "înți",
 }
 
 
+def malformed_a_or_i(text: str) -> str:
+    """Recuperează un \u00 trunchiat folosind poziția în cuvânt.
+
+    În ortografia română modernă, sunetul se scrie în mod normal cu „â” în
+    interiorul cuvântului și cu „î” la început. Este exact tiparul defectului
+    de serializare observat (cuv\u00nt -> cuvânt, \u00nchinare -> închinare).
+    """
+    def repl(match: re.Match[str]) -> str:
+        pos = match.start()
+        previous = text[pos - 1] if pos > 0 else ""
+        return "â" if previous.isalpha() else "î"
+
+    return MALFORMED_ROMANIAN_A_OR_I.sub(repl, text)
+
+
 def decode_unicode_escapes(text: str) -> str:
-    # Decodăm numai forma explicită \uXXXX. Nu folosim unicode_escape peste
-    # întregul fișier, ca să nu alterăm backslash-uri legitime precum \n.
     text = UNICODE_ESCAPE.sub(lambda m: chr(int(m.group(1), 16)), text)
     for bad, good in MECHANICAL_ESCAPE_FIXES.items():
         text = text.replace(bad, good)
     text = MALFORMED_ROMANIAN_I.sub("î", text)
+    text = malformed_a_or_i(text)
     for bad, good in TOKEN_FIXES.items():
         text = text.replace(bad, good)
     return text
@@ -154,19 +100,15 @@ def unescaped_quote_positions(line: str) -> list[int]:
 
 
 def fix_inner_quotes(line: str) -> str:
-    """Transformă doar ghilimelele INTERIOARE ale unui string pe o singură linie."""
     stripped = line.lstrip()
     if not stripped.startswith('"'):
         return line
-
     positions = unescaped_quote_positions(line)
     if len(positions) <= 2:
         return line
-
-    inner = positions[1:-1]
     chars = list(line)
     opening = True
-    for pos in inner:
+    for pos in positions[1:-1]:
         chars[pos] = "„" if opening else "”"
         opening = not opening
     return "".join(chars)
@@ -215,8 +157,7 @@ def main() -> None:
     if suspicious:
         print("Tokeni care merită inspecție editorială după normalizare:")
         for path, tokens in suspicious.items():
-            rel = path.relative_to(ROOT)
-            print(f"  {rel}: {', '.join(sorted(tokens))}")
+            print(f"  {path.relative_to(ROOT)}: {', '.join(sorted(tokens))}")
 
     if args.check and changed:
         print(f"Sunt {len(changed)} fișiere VT legacy care necesită normalizare:")
