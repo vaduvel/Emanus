@@ -24,7 +24,7 @@ Au fost revizuite toate cele 25 de versete Emanus din `PHM.1`. Lectura principal
 | PHM.1.8 | `ἐπιτάσσειν σοι τὸ ἀνῆκον` | Porunca potențială este adresată lui Filimon la singular și este limitată la ceea ce se cuvine. |
 | PHM.1.9 | `παρακαλῶ … Παῦλος πρεσβύτης … δέσμιος Χριστοῦ Ἰησοῦ` | Tonul rămâne o rugăminte din dragoste; `πρεσβύτης` este redat ca vârstă, nu ca funcție eclezială, iar ordinea SBLGNT este „Hristos Isus”. |
 | PHM.1.10 | `ὃν ἐγέννησα ἐν τοῖς δεσμοῖς Ὀνήσιμον` | Onisim este „fiul” născut de Pavel pe când era în lanțuri. SBLGNT nu are pronumele „mele” după `δεσμοῖς`; româna nu îl introduce. |
-| PHM.1.11 | `ἄχρηστον … εὔχρηστον` | Antiteza și jocul de cuvinte legat de numele Onisim sunt păstrate prin „nefolositor” și „folositor”. |
+| PHM.1.11 | `ἄχρηστον … εὔχρηστον` | Antiteza și jocul de cuvinte legat de numele Onisim sunt păstrate prin „nefolositor” și „folositor”; complementul rămâne explicit „atât ție, cât și mie”. |
 | PHM.1.12 | `ὃν ἀνέπεμψά σοι αὐτόν, τοῦτʼ ἔστιν τὰ ἐμὰ σπλάγχνα` | SBLGNT spune că Pavel l-a trimis înapoi pe Onisim, „propria mea inimă”; nu se introduce porunca de a-l primi din lectura TR. |
 | PHM.1.13 | `ὑπὲρ σοῦ μοι διακονῇ … τοῦ εὐαγγελίου` | Onisim ar fi slujit în locul lui Filimon, cât Pavel este în lanțuri pentru Evanghelie; relația de reprezentare nu devine o însărcinare eclezială suplimentară. |
 | PHM.1.14 | `χωρὶς … τῆς σῆς γνώμης … κατὰ ἑκούσιον` | Pavel nu acționează fără consimțământul lui Filimon, pentru ca binele făcut să fie liber ales, nu impus. |
