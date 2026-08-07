@@ -7,21 +7,20 @@ import {
 
 const transcript = ".research/poonen-through-the-bible-OT/transcripts/nehemiah-esther.txt"
 const p = (anchor: string) => ({ kind: "poonen" as const, transcript, anchor })
+const n = { kind: "biblia-emanus" as const, note: "rezumat narativ fără doctrină adăugată" as const }
 
 const focused: Record<number, ExplainedOverlayChapter> = {
   1: {
     number: 1,
     title: "Neemia întreabă de Ierusalim, plânge, postește și se roagă",
     summary: "Neemia trăiește într-o poziție de încredere la curtea persană, dar poartă în inimă starea Ierusalimului. Când află că zidurile sunt dărâmate, răspunsul lui este jale, post și rugăciune.",
-    units: [
-      {
-        from: 1, to: 11,
-        heading: "Lucrarea începe cu o povară, nu cu o funcție",
-        teaching: "Poonen insistă asupra preocupării lui Neemia. Hanani nu îi impune subiectul; Neemia întreabă cum este Ierusalimul. Când află starea cetății, plânge pentru ceva ce nu privește confortul lui personal, ci onoarea Numelui lui Dumnezeu. Transcriptul contrastează postul pentru propriile nevoi cu postul născut din dorința ca Dumnezeu să fie onorat în poporul Său. Neemia nu era un «lucrător cu normă întreagă», ci un om credincios într-o slujbă seculară.",
-        source: p("Nehemiah ... has a concern ... sat down and wept ... fasted and prayed"),
-        forYourHeart: "Înainte să întrebi ce rol ai putea primi, întreabă ce stare a poporului lui Dumnezeu te face să te rogi chiar dacă nu îți aduce niciun avantaj personal.",
-      },
-    ],
+    units: [{
+      from: 1, to: 11,
+      heading: "Lucrarea începe cu o povară, nu cu o funcție",
+      teaching: "Poonen insistă asupra preocupării lui Neemia. Hanani nu îi impune subiectul; Neemia întreabă cum este Ierusalimul. Când află starea cetății, plânge pentru ceva ce nu privește confortul lui personal, ci onoarea Numelui lui Dumnezeu. Transcriptul contrastează postul pentru propriile nevoi cu postul născut din dorința ca Dumnezeu să fie onorat în poporul Său. Neemia nu era un «lucrător cu normă întreagă», ci un om credincios într-o slujbă seculară.",
+      source: p("Nehemiah ... has a concern ... sat down and wept ... fasted and prayed"),
+      forYourHeart: "Înainte să întrebi ce rol ai putea primi, întreabă ce stare a poporului lui Dumnezeu te face să te rogi chiar dacă nu îți aduce niciun avantaj personal.",
+    }],
   },
   2: {
     number: 2,
@@ -47,29 +46,25 @@ const focused: Record<number, ExplainedOverlayChapter> = {
     number: 3,
     title: "Zidul este împărțit în porțiuni: «lângă el», fără goluri",
     summary: "Neemia organizează refacerea zidului pe familii și grupuri, astfel încât fiecare să lucreze la o porțiune concretă.",
-    units: [
-      {
-        from: 1, to: 32,
-        heading: "Liderii și oamenii lucrează cu mâinile lor",
-        teaching: "Poonen citește capitolul 3 ca dovadă a capacității lui Neemia de a organiza și motiva fără să se ridice deasupra lucrătorilor. Marele preot lucrează, familiile lucrează, apar și fiicele lui Șalum. Transcriptul observă repetarea «lângă el / lângă ei»: lucrarea este distribuită astfel încât zidul să nu rămână cu goluri. Conducerea nu este doar supraveghere de pe scaun, ci participare și coordonare.",
-        source: p("chapter 3 ... everybody's got their job ... next to him ... without a gap"),
-        forYourHeart: "O comunitate nu se zidește numai prin câțiva oameni vizibili. Întrebarea sănătoasă este: care este porțiunea mea și cu cine lucrez umăr la umăr?",
-      },
-    ],
+    units: [{
+      from: 1, to: 32,
+      heading: "Liderii și oamenii lucrează cu mâinile lor",
+      teaching: "Poonen citește capitolul 3 ca dovadă a capacității lui Neemia de a organiza și motiva fără să se ridice deasupra lucrătorilor. Marele preot lucrează, familiile lucrează, apar și fiicele lui Șalum. Transcriptul observă repetarea «lângă el / lângă ei»: lucrarea este distribuită astfel încât zidul să nu rămână cu goluri. Conducerea nu este doar supraveghere de pe scaun, ci participare și coordonare.",
+      source: p("chapter 3 ... everybody's got their job ... next to him ... without a gap"),
+      forYourHeart: "O comunitate nu se zidește numai prin câțiva oameni vizibili. Întrebarea sănătoasă este: care este porțiunea mea și cu cine lucrez umăr la umăr?",
+    }],
   },
   4: {
     number: 4,
     title: "Batjocura și amenințarea cresc, dar zidul continuă",
     summary: "Sanbalat și aliații lui ridiculizează lucrarea și apoi pregătesc atacul. Oamenii se roagă, pun strajă și continuă să zidească pregătiți pentru apărare.",
-    units: [
-      {
-        from: 1, to: 23,
-        heading: "Rugăciune, vigilență și muncă în același timp",
-        teaching: "Poonen prezintă opoziția ca parte repetată a restaurării Ierusalimului: batjocură, descurajare, amenințare și încercarea de a opri. Neemia nu răspunde prin abandon și nici prin spiritualitate pasivă; poporul se roagă și pune strajă. Lucrarea continuă în timp ce pericolul este luat în serios. Opoziția nu dovedește singură că o lucrare este de la Dumnezeu, dar nici nu este motiv suficient pentru a o abandona când mandatul este clar.",
-        source: p("opposition ... devil ... hinder me and harass me"),
-        forYourHeart: "Nu pune rugăciunea împotriva responsabilității practice. Uneori credința înseamnă să te rogi și să pui strajă.",
-      },
-    ],
+    units: [{
+      from: 1, to: 23,
+      heading: "Rugăciune, vigilență și muncă în același timp",
+      teaching: "Poonen prezintă opoziția ca parte repetată a restaurării Ierusalimului: batjocură, descurajare, amenințare și încercarea de a opri. Neemia nu răspunde prin abandon și nici prin spiritualitate pasivă; poporul se roagă și pune strajă. Lucrarea continuă în timp ce pericolul este luat în serios. Opoziția nu dovedește singură că o lucrare este de la Dumnezeu, dar nici nu este motiv suficient pentru a o abandona când mandatul este clar.",
+      source: p("opposition ... devil ... hinder me and harass me"),
+      forYourHeart: "Nu pune rugăciunea împotriva responsabilității practice. Uneori credința înseamnă să te rogi și să pui strajă.",
+    }],
   },
   5: {
     number: 5,
@@ -80,7 +75,7 @@ const focused: Record<number, ExplainedOverlayChapter> = {
         from: 1, to: 13,
         heading: "Nu poți zidi zidul lui Dumnezeu în timp ce îți exploatezi fratele",
         teaching: "Textul arată că o lucrare publică de restaurare poate ascunde nedreptate economică în interior. Neemia îi confruntă pe dregători și cere restituirea. Transcriptul nu permite ca lupta împotriva adversarilor externi să devină scuză pentru a ignora felul în care oamenii vulnerabili sunt tratați în comunitate.",
-        source: { kind: "biblia-emanus", note: "rezumat narativ fără doctrină adăugată" },
+        source: n,
       },
       {
         from: 14, to: 19,
@@ -111,31 +106,69 @@ const focused: Record<number, ExplainedOverlayChapter> = {
       },
     ],
   },
+  7: {
+    number: 7,
+    title: "După zid, Neemia organizează porțile și verifică cine aparține comunității întoarse",
+    summary: "Zidul este terminat, dar cetatea este încă slab populată. Neemia pune păzitori și conducători, apoi găsește registrul primei întoarceri din exil și îl folosește pentru a așeza comunitatea în continuitatea ei istorică.",
+    units: [
+      { from: 1, to: 4, heading: "Porțile, straja și o cetate încă aproape goală", teaching: "După terminarea zidului, Neemia îi pune pe Hanani și Hanania peste Ierusalim, iar porțile nu trebuie deschise fără măsuri de pază. Textul adaugă problema următoare: cetatea era largă, dar oamenii erau puțini și casele încă nu erau reconstruite suficient.", source: n },
+      { from: 5, to: 65, heading: "Registrul primei întoarceri păstrează familiile și verifică slujirea preoțească", teaching: "Neemia spune că Dumnezeu îi pune în inimă să adune conducătorii și poporul după genealogii și găsește registrul celor care se întorseseră mai întâi cu Zorobabel. Lista păstrează familiile, cetățile, preoții, leviții și slujitorii templului. Unele familii preoțești nu își pot dovedi genealogia și sunt oprite de la lucrurile preasfinte până la o clarificare autorizată.", source: n },
+      { from: 66, to: 72, heading: "Numărul comunității și darurile pentru lucrare", teaching: "După liste, textul oferă totalul adunării, al slujitorilor și al animalelor și consemnează darurile oferite pentru lucrare de dregător, capii familiilor și restul poporului. Registrul nu este doar statistică, ci include și contribuția comunității restaurate.", source: n },
+      { from: 73, to: 73, heading: "Fiecare grup se așază în cetățile sale", teaching: "Capitolul se încheie spunând că preoții, leviții, păzitorii, cântăreții, slujitorii templului și restul lui Israel se așază în cetățile lor. Această propoziție pregătește adunarea din luna a șaptea și citirea Legii din capitolul următor.", source: n },
+    ],
+  },
   8: {
     number: 8,
     title: "Ezra citește Cartea, iar poporul înțelege",
     summary: "După zidire, atenția comunității se mută spre Cuvânt. Ezra citește Legea, leviții o explică, iar oamenii răspund prin închinare, înțelegere și sărbătoare.",
-    units: [
-      {
-        from: 1, to: 18,
-        heading: "Zidurile nu sunt finalul: comunitatea trebuie formată de Cuvânt",
-        teaching: "Poonen face trecerea rapidă la Ezra din capitolul 8. După organizarea cetății, restaurarea nu este completă fără Cuvântul lui Dumnezeu. Textul subliniază nu numai citirea, ci și explicarea astfel încât poporul să înțeleagă. «Bucuria DOMNULUI este tăria voastră» apare într-un context de auzire a Legii și de chemare de la plâns la o zi sfântă de bucurie.",
-        source: p("we read about Ezra in chapter 8"),
-      },
-    ],
+    units: [{
+      from: 1, to: 18,
+      heading: "Zidurile nu sunt finalul: comunitatea trebuie formată de Cuvânt",
+      teaching: "Poonen face trecerea rapidă la Ezra din capitolul 8. După organizarea cetății, restaurarea nu este completă fără Cuvântul lui Dumnezeu. Textul subliniază nu numai citirea, ci și explicarea astfel încât poporul să înțeleagă. «Bucuria DOMNULUI este tăria voastră» apare într-un context de auzire a Legii și de chemare de la plâns la o zi sfântă de bucurie.",
+      source: p("we read about Ezra in chapter 8"),
+    }],
   },
   9: {
     number: 9,
     title: "Poporul își mărturisește păcatul în lumina istoriei harului lui Dumnezeu",
     summary: "Legea este citită, poporul postește și își mărturisește păcatele. Rugăciunea lungă trece prin istoria lui Israel și contrastează fidelitatea lui Dumnezeu cu repetatele răzvrătiri ale poporului.",
+    units: [{
+      from: 1, to: 38,
+      heading: "Mărturisirea nu ascunde istoria și nu uită mila",
+      teaching: "Transcriptul menționează în mod direct mărturisirea din capitolul 9. Rugăciunea nu rescrie trecutul pentru a proteja reputația poporului: numește răzvrătirea și încăpățânarea, dar repetă și mila, răbdarea și purtarea de grijă a lui Dumnezeu. Pocăința sănătoasă vede ambele lucruri.",
+      source: p("Nehemiah and the people confessing their sin in chapter 9"),
+      forYourHeart: "Mărturisirea nu înseamnă să spui că totul a fost rău și nici să minimalizezi răul. Spune adevărul despre păcat în lumina adevărului despre mila lui Dumnezeu.",
+    }],
+  },
+  10: {
+    number: 10,
+    title: "Legământul mărturisit în capitolul 9 primește nume, semnături și obligații concrete",
+    summary: "Conducătorii, leviții și preoții pecetluiesc legământul, iar restul poporului se alătură jurământului. Angajamentele privesc fidelitatea față de Lege, ritmul sabatic și susținerea regulată a Casei lui Dumnezeu.",
     units: [
-      {
-        from: 1, to: 38,
-        heading: "Mărturisirea nu ascunde istoria și nu uită mila",
-        teaching: "Transcriptul menționează în mod direct mărturisirea din capitolul 9. Rugăciunea nu rescrie trecutul pentru a proteja reputația poporului: numește răzvrătirea și încăpățânarea, dar repetă și mila, răbdarea și purtarea de grijă a lui Dumnezeu. Pocăința sănătoasă vede ambele lucruri.",
-        source: p("Nehemiah and the people confessing their sin in chapter 9"),
-        forYourHeart: "Mărturisirea nu înseamnă să spui că totul a fost rău și nici să minimalizezi răul. Spune adevărul despre păcat în lumina adevărului despre mila lui Dumnezeu.",
-      },
+      { from: 1, to: 27, heading: "Numele celor care pecetluiesc legământul", teaching: "Capitolul începe cu Neemia și continuă prin preoți, leviți și conducători care își pun numele pe legământ. După rugăciunea colectivă din capitolul 9, comunitatea nu rămâne la o mărturisire anonimă: textul păstrează persoanele care asumă public hotărârea.", source: n },
+      { from: 28, to: 31, heading: "Poporul se alătură jurământului și numește domenii concrete de ascultare", teaching: "Restul poporului — inclusiv familiile și cei care se separaseră de practicile popoarelor din jur pentru Legea lui Dumnezeu — se alătură jurământului. Sunt numite concret ascultarea de porunci, căsătoriile în cadrul identității legământului și refuzul comerțului în Sabat și în zilele sfinte. Contextul post-exilic al căsătoriilor nu devine o regulă rasială sau o comandă creștină generală de divorț.", source: n },
+      { from: 32, to: 39, heading: "Casa lui Dumnezeu primește o susținere regulată, nu numai entuziasm ocazional", teaching: "Ultima parte stabilește contribuții pentru slujirea templului, lemnul altarului, primele roade, întâii născuți și zeciuieli. Preoții și leviții primesc responsabilități de colectare și păstrare, iar concluzia rezumă intenția comunității: să nu părăsească Casa Dumnezeului lor.", source: n },
+    ],
+  },
+  11: {
+    number: 11,
+    title: "Ierusalimul este repopulat prin conducători, sorți și oameni care se oferă de bunăvoie",
+    summary: "După refacerea zidului și reînnoirea legământului, cetatea are nevoie de locuitori. O parte din popor este așezată în Ierusalim, iar capitolul enumeră familiile din cetate și apoi satele în care rămân celelalte comunități.",
+    units: [
+      { from: 1, to: 2, heading: "Unul din zece este așezat în Ierusalim, iar voluntarii sunt binecuvântați", teaching: "Conducătorii locuiesc în Ierusalim, iar pentru restul poporului sunt trași sorți astfel încât unul din zece să locuiască în cetatea sfântă. Textul notează separat pe cei care se oferă de bunăvoie și spune că poporul îi binecuvântează.", source: n },
+      { from: 3, to: 24, heading: "Familiile, preoții, leviții și slujitorii care locuiesc în cetate", teaching: "O listă amplă păstrează locuitori din Iuda și Beniamin, preoți, leviți, păzitori și slujitori ai templului. Sunt menționate și responsabilități concrete, inclusiv conducerea slujirii din Casă, rugăciunea și cântarea, astfel încât repopularea cetății este și o reorganizare a vieții comunitare.", source: n },
+      { from: 25, to: 36, heading: "Restul lui Iuda și Beniamin locuiește în cetăți și sate", teaching: "Finalul mută privirea în afara Ierusalimului și enumeră așezările lui Iuda și Beniamin. Comunitatea restaurată nu se reduce la capitală; cronicarul păstrează și distribuția familiilor în teritoriul din jur.", source: n },
+    ],
+  },
+  12: {
+    number: 12,
+    title: "Preoții și leviții sunt numiți, iar zidul este dedicat cu două coruri și mare bucurie",
+    summary: "Capitolul leagă memoria generațiilor de preoți și leviți de momentul public al dedicării zidului. Două procesiuni merg pe zid, se întâlnesc la Casa lui Dumnezeu, iar apoi sunt organizate contribuțiile pentru slujirea continuă.",
+    units: [
+      { from: 1, to: 26, heading: "Familiile preoțești și levitice păstrează continuitatea slujirii", teaching: "Prima jumătate a capitolului enumeră preoții și leviții din generația întoarcerii cu Zorobabel și din generațiile următoare. Listele includ capi de familie și oameni responsabili de laudă și pază, legând dedicarea zidului de continuitatea comunității care slujește.", source: n },
+      { from: 27, to: 30, heading: "Pentru dedicare sunt adunați leviții și cântăreții, iar comunitatea se curăță", teaching: "La dedicarea zidului, leviții sunt căutați în locurile lor și aduși la Ierusalim pentru o sărbătoare cu mulțumiri, cântări și instrumente. Preoții și leviții se curăță și curățesc poporul, porțile și zidul înaintea procesiunii.", source: n },
+      { from: 31, to: 43, heading: "Două coruri merg pe zid și bucuria Ierusalimului se aude de departe", teaching: "Neemia urcă pe zid conducătorii și organizează două mari coruri de mulțumire care merg în direcții opuse pe zid împreună cu conducători, preoți și instrumentiști. Ele ajung la Casa lui Dumnezeu, sunt aduse jertfe, iar textul spune că Dumnezeu le dăduse o mare bucurie și că veselia Ierusalimului se auzea de departe.", source: n },
+      { from: 44, to: 47, heading: "După sărbătoare, slujirea este susținută prin contribuții și părți rânduite", teaching: "În aceeași zi sunt puși oameni peste încăperile pentru daruri, prime roade și zeciuieli. Poporul se bucură de preoți și leviți și le dă părțile rânduite, iar cântăreții și păzitorii își păstrează slujbele după rânduielile stabilite.", source: n },
     ],
   },
   13: {
