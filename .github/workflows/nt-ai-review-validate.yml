@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  php2-candidate:
+  php3-candidate:
     runs-on: ubuntu-22.04
     timeout-minutes: 60
     steps:
@@ -19,7 +19,6 @@ jobs:
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-
       - name: Verify pinned PHP source bundle
         run: |
           set -euo pipefail
@@ -27,22 +26,18 @@ jobs:
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
           unzip -t "$ZIP" >/dev/null
           for entry in sblgnt/text/PHP.txt sblgnt/apparatus/text/PHP.txt tr/PHP.usfm webp/PHP.usfm btf/PHP.usfm cornilescu1924/PHP.usfm biblia-libera/PHP.usfm; do unzip -p "$ZIP" "$entry" >/dev/null; done
-
-      - name: Materialize reviewed PHP 2 candidate in worktree
-        run: python3 .github/nt-ai-review/php2.py
-
+      - name: Materialize reviewed PHP 3 candidate in worktree
+        run: python3 .github/nt-ai-review/php3.py
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11.9'
-
       - name: Install JavaScript dependencies
         run: |
           set -euo pipefail
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
-
       - name: Run required post-batch gates before commit
         run: |
           set -euo pipefail
@@ -53,12 +48,11 @@ jobs:
           pnpm check:biblia-emanus-nt-runtime
           pnpm test:biblia-emanus
           git diff --check
-
       - name: Assert isolated candidate diff
         run: |
           set -euo pipefail
           mapfile -t changed < <(git status --short | awk '{print $2}' | grep -v '^.github/' | sort)
           printf '%s\n' "${changed[@]}"
           test "${#changed[@]}" -eq 2
-          test "${changed[0]}" = "docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.2.md"
-          test "${changed[1]}" = "docs/data/biblia-emanus/PHP.2.json"
+          test "${changed[0]}" = "docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.3.md"
+          test "${changed[1]}" = "docs/data/biblia-emanus/PHP.3.json"
