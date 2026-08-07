@@ -1,54 +1,62 @@
-export type VtExplainedFormat = "legacy-full" | "transcript-overlay"
+export type VtExplainedFormat = "legacy-full" | "full-overlay"
 
 export interface VtExplainedCoverageEntry {
   order: number
   id: string
   name: string
   format: VtExplainedFormat
+  coverage: "full"
   status: "in_review"
   sourceFamily: "allen-nolan" | "poonen-transcript" | "poonen-official"
 }
 
+const legacy = (order: number, id: string, name: string, sourceFamily: VtExplainedCoverageEntry["sourceFamily"]): VtExplainedCoverageEntry => ({
+  order, id, name, format: "legacy-full", coverage: "full", status: "in_review", sourceFamily,
+})
+const overlay = (order: number, id: string, name: string, sourceFamily: VtExplainedCoverageEntry["sourceFamily"]): VtExplainedCoverageEntry => ({
+  order, id, name, format: "full-overlay", coverage: "full", status: "in_review", sourceFamily,
+})
+
 export const VT_EXPLAINED_COVERAGE: readonly VtExplainedCoverageEntry[] = [
-  { order: 1, id: "geneza", name: "Geneza", format: "legacy-full", status: "in_review", sourceFamily: "allen-nolan" },
-  { order: 2, id: "exod", name: "Exodul", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 3, id: "levitic", name: "Leviticul", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 4, id: "numeri", name: "Numeri", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 5, id: "deuteronom", name: "Deuteronomul", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 6, id: "iosua", name: "Iosua", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 7, id: "judecatori", name: "Judecători", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 8, id: "rut", name: "Rut", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 9, id: "1-samuel", name: "1 Samuel", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 10, id: "2-samuel", name: "2 Samuel", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 11, id: "1-imparati", name: "1 Împărați", format: "legacy-full", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 12, id: "2-imparati", name: "2 Împărați", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 13, id: "1-cronici", name: "1 Cronici", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 14, id: "2-cronici", name: "2 Cronici", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 15, id: "ezra", name: "Ezra", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 16, id: "neemia", name: "Neemia", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 17, id: "estera", name: "Estera", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 18, id: "iov", name: "Iov", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 19, id: "psalmi", name: "Psalmii", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 20, id: "proverbe", name: "Proverbele", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 21, id: "eclesiastul", name: "Eclesiastul", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 22, id: "cantarea-cantarilor", name: "Cântarea Cântărilor", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 23, id: "isaia", name: "Isaia", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 24, id: "ieremia", name: "Ieremia", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 25, id: "plangerile", name: "Plângerile lui Ieremia", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 26, id: "ezechiel", name: "Ezechiel", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 27, id: "daniel", name: "Daniel", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-transcript" },
-  { order: 28, id: "osea", name: "Osea", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 29, id: "ioel", name: "Ioel", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 30, id: "amos", name: "Amos", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 31, id: "obadia", name: "Obadia", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 32, id: "iona", name: "Iona", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 33, id: "mica", name: "Mica", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 34, id: "naum", name: "Naum", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 35, id: "habacuc", name: "Habacuc", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 36, id: "tefania", name: "Țefania", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 37, id: "hagai", name: "Hagai", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 38, id: "zaharia", name: "Zaharia", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
-  { order: 39, id: "maleahi", name: "Maleahi", format: "transcript-overlay", status: "in_review", sourceFamily: "poonen-official" },
+  legacy(1, "geneza", "Geneza", "allen-nolan"),
+  legacy(2, "exod", "Exodul", "poonen-transcript"),
+  legacy(3, "levitic", "Leviticul", "poonen-transcript"),
+  legacy(4, "numeri", "Numeri", "poonen-transcript"),
+  legacy(5, "deuteronom", "Deuteronomul", "poonen-transcript"),
+  legacy(6, "iosua", "Iosua", "poonen-transcript"),
+  overlay(7, "judecatori", "Judecători", "poonen-transcript"),
+  legacy(8, "rut", "Rut", "poonen-transcript"),
+  legacy(9, "1-samuel", "1 Samuel", "poonen-transcript"),
+  legacy(10, "2-samuel", "2 Samuel", "poonen-transcript"),
+  legacy(11, "1-imparati", "1 Împărați", "poonen-transcript"),
+  overlay(12, "2-imparati", "2 Împărați", "poonen-transcript"),
+  overlay(13, "1-cronici", "1 Cronici", "poonen-transcript"),
+  overlay(14, "2-cronici", "2 Cronici", "poonen-transcript"),
+  overlay(15, "ezra", "Ezra", "poonen-transcript"),
+  overlay(16, "neemia", "Neemia", "poonen-transcript"),
+  overlay(17, "estera", "Estera", "poonen-transcript"),
+  overlay(18, "iov", "Iov", "poonen-transcript"),
+  overlay(19, "psalmi", "Psalmii", "poonen-transcript"),
+  overlay(20, "proverbe", "Proverbele", "poonen-transcript"),
+  overlay(21, "eclesiastul", "Eclesiastul", "poonen-transcript"),
+  overlay(22, "cantarea-cantarilor", "Cântarea Cântărilor", "poonen-transcript"),
+  overlay(23, "isaia", "Isaia", "poonen-transcript"),
+  overlay(24, "ieremia", "Ieremia", "poonen-transcript"),
+  overlay(25, "plangerile", "Plângerile lui Ieremia", "poonen-transcript"),
+  overlay(26, "ezechiel", "Ezechiel", "poonen-transcript"),
+  overlay(27, "daniel", "Daniel", "poonen-transcript"),
+  overlay(28, "osea", "Osea", "poonen-official"),
+  overlay(29, "ioel", "Ioel", "poonen-official"),
+  overlay(30, "amos", "Amos", "poonen-official"),
+  overlay(31, "obadia", "Obadia", "poonen-official"),
+  overlay(32, "iona", "Iona", "poonen-official"),
+  overlay(33, "mica", "Mica", "poonen-official"),
+  overlay(34, "naum", "Naum", "poonen-official"),
+  overlay(35, "habacuc", "Habacuc", "poonen-official"),
+  overlay(36, "tefania", "Țefania", "poonen-official"),
+  overlay(37, "hagai", "Hagai", "poonen-official"),
+  overlay(38, "zaharia", "Zaharia", "poonen-official"),
+  overlay(39, "maleahi", "Maleahi", "poonen-official"),
 ]
 
 if (VT_EXPLAINED_COVERAGE.length !== 39) {
@@ -58,5 +66,8 @@ if (VT_EXPLAINED_COVERAGE.length !== 39) {
 VT_EXPLAINED_COVERAGE.forEach((book, index) => {
   if (book.order !== index + 1) {
     throw new Error(`[Biblia explicată VT] ordine invalidă la ${book.name}.`)
+  }
+  if (book.coverage !== "full") {
+    throw new Error(`[Biblia explicată VT] ${book.name} nu are acoperire completă.`)
   }
 })
