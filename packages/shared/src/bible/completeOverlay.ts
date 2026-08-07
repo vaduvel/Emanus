@@ -29,11 +29,19 @@ function uncoveredRanges(lastVerse: number, units: readonly ExplainedOverlayUnit
 }
 
 function materializeSourceKind(unit: ExplainedOverlayUnit): ExplainedOverlayUnit {
+  if (unit.source.kind === "biblia-emanus") {
+    // Truth guard pentru registry-ul publicabil: un overview textual nu poate
+    // moșteni accidental aplicații pastorale sau studii lexicale dintr-un draft.
+    const { forYourHeart: _forYourHeart, words: _words, ...textual } = unit
+    return {
+      ...textual,
+      explanationKind: "textual-overview",
+    }
+  }
+
   return {
     ...unit,
-    explanationKind:
-      unit.explanationKind ??
-      (unit.source.kind === "biblia-emanus" ? "textual-overview" : "exposition"),
+    explanationKind: "exposition",
   }
 }
 
@@ -41,6 +49,7 @@ function materializeSourceKind(unit: ExplainedOverlayUnit): ExplainedOverlayUnit
  * Completează numai golurile lăsate de transcript.
  * - unitățile Poonen existente rămân neschimbate semantic și sunt etichetate `exposition`;
  * - golurile primesc doar explicație textuală din Biblia Emanus și sunt etichetate `textual-overview`;
+ * - aplicațiile pastorale și studiile lexicale nu pot trece în stratul textual;
  * - nu introduce doctrină, tipologie sau aplicații în golurile sursei;
  * - fiecare verset al fiecărui capitol ajunge acoperit de cel puțin o unitate.
  */
@@ -105,12 +114,18 @@ export function assertVerseCompleteOverlay(
           `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] lipsește tipul explicației.`,
         )
       }
-      if (unit.source.kind === "biblia-emanus" && unit.explanationKind !== "textual-overview") {
-        throw new Error(
-          `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] sursa Biblia Emanus trebuie marcată textual-overview.`,
-        )
-      }
-      if (unit.source.kind !== "biblia-emanus" && unit.explanationKind !== "exposition") {
+      if (unit.source.kind === "biblia-emanus") {
+        if (unit.explanationKind !== "textual-overview") {
+          throw new Error(
+            `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] sursa Biblia Emanus trebuie marcată textual-overview.`,
+          )
+        }
+        if (unit.forYourHeart || unit.words?.length) {
+          throw new Error(
+            `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] overview-ul textual conține aplicație sau studiu lexical nesusținut.`,
+          )
+        }
+      } else if (unit.explanationKind !== "exposition") {
         throw new Error(
           `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] sursa doctrinară trebuie marcată exposition.`,
         )
