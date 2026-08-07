@@ -16,6 +16,10 @@ import { suferintaL1, suferintaL2, suferintaL3 } from "./suferintaA.js"
  * Nicio practica nu cere omului sa numeasca pierderea un bine, sa ierte un
  * agresor care nu exista in situatia lui, sa opreasca un tratament sau sa
  * astepte vindecarea pana la o data anume.
+ *
+ * CORECTURI FATA DE PRIMA SCRIERE
+ * 1 Regi 19:5-6 spune "un inger", nu "Ingerul Domnului", si "ulcior", nu
+ * "urcior". Galateni 6:2 scrie "Legea lui Hristos" cu majuscula la Cornilescu.
  */
 
 export const suferintaL4: Lesson = {
@@ -237,14 +241,14 @@ export const suferintaL5: Lesson = {
       type: "scripture",
       order: 2,
       scripture: {
-        text: "Purtați-vă sarcinile unii altora și veți împlini astfel legea lui Hristos.",
+        text: "Purtați-vă sarcinile unii altora și veți împlini astfel Legea lui Hristos.",
         ref: "Galateni 6:2",
       },
       bubbles: [
         {
           from: "guide",
           text:
-            "Porunca presupune că există sarcini pe care omul nu trebuie să le poarte singur. A cere ajutor nu încalcă maturitatea; îmsemnează că împlinesti textul.",
+            "Porunca presupune că există sarcini pe care omul nu trebuie să le poarte singur. A cere ajutor nu încalcă maturitatea, ci împlinește textul.",
         },
       ],
     },
@@ -286,7 +290,7 @@ export const suferintaL5: Lesson = {
       order: 5,
       scripture: {
         text:
-          "Îngerul Domnului l-a atins și i-a zis: «Scoală-te și mănâncă». El s-a uitat și la căpătâiul lui era o turtă coaptă și un urcior cu apă.",
+          "Iată, l-a atins un înger și i-a zis: «Scoală-te și mănâncă.» El s-a uitat și la căpătâiul lui era o turtă coaptă și un ulcior cu apă.",
         ref: "1 Regi 19:5-6",
       },
       bubbles: [
@@ -306,7 +310,7 @@ export const suferintaL5: Lesson = {
         options: [
           { text: "Să oprești tratamentul ca să dovedești credință", correct: false },
           { text: "Să te rogi și să primești ajutorul medical și omenesc potrivit", correct: true },
-          { text: "Să ascunzi starea ca să nu împovarezi pe nimeni", correct: false },
+          { text: "Să ascunzi starea ca să nu împovărezi pe nimeni", correct: false },
         ],
         explanation:
           "Credința nu cere negarea corpului. Dumnezeu l-a îngrijit pe Ilie trupește și poruncește comunității să poarte sarcinile.",
@@ -690,7 +694,7 @@ export const SUFERINTA_LESSONS: Lesson[] = [
 export const SUFERINTA_PRACTICES: string[] = [
   "Azi spune o singură propoziție, cu voce tare, și nu o corecta după: «Am pierdut...». Fără explicații și fără să o închei mai frumos decât este.",
   "Azi, când vine gândul «e din vina mea», întreabă-l o singură dată: «asta mi-a spus Dumnezeu prin Scriptură, sau mi-a spus frica?». Atât. Nu te certa cu el mai mult.",
-  "Azi citește Ioan 11, de la versetul 32 la 36. Cinci versete. Uită-te doar la ce face Iisus înainte să chemepe cineva afară din mormânt.",
+  "Azi citește Ioan 11, de la versetul 32 la 36. Cinci versete. Uită-te doar la ce face Iisus înainte să cheme pe cineva afară din mormânt.",
   "Azi nu căuta explicația. Spune-I o dată «până când?» și lasă întrebarea la El, în loc să pleci cu ea de lângă El.",
   "Lucrul pe care l-ai bifat ieri — fă-l azi. Dacă e o programare, trimite cererea. Dacă e un om, scrie-i mesajul acum, nu diseară.",
   "Azi cere ce ai de cerut, o singură dată și simplu, fără să-I dictezi răspunsul și fără să-ți pui singur un termen.",
