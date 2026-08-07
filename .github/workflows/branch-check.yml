@@ -1,0 +1,67 @@
+name: Branch check
+
+# Verificare rapidă pentru ramurile de lucru.
+#
+# DE CE EXISTĂ SEPARAT DE ci.yml:
+# `ci.yml` pornește doar la push pe main și rulează tot pipeline-ul Bibliei —
+# audituri semantice, sentence-transformers, `timeout-minutes: 120`. E potrivit
+# pentru textul biblic sigilat, dar prea greu ca să-ți spună în două minute dacă
+# o lecție nouă compilează.
+#
+# Fișierul ăsta rulează doar ce e relevant pentru conținut și cod de aplicație:
+# typecheck, build și cele trei verificări de conținut care există deja în repo.
+#
+# Declanșatorul `pull_request` e intenționat: rezultatele unui run pornit de push
+# nu pot fi citite prin conexiunea MCP (nu există unelte de Actions), dar
+# check-run-urile unui pull request pot. Un PR draft devine astfel bancul de
+# test, nu o cerere de merge.
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: branch-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+      - name: Typecheck and build
+        run: |
+          set -euo pipefail
+          pnpm typecheck
+          pnpm build
+      - name: Content checks
+        run: |
+          set -euo pipefail
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+      - name: Whitespace check
+        run: |
+          set -euo pipefail
+          git diff --check
