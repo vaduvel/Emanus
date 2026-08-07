@@ -1,0 +1,71 @@
+name: NT AI Review Runner
+
+on:
+  push:
+    branches:
+      - codex/nt-ai-review-handoff
+
+permissions:
+  contents: read
+
+jobs:
+  source-and-gates:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout branch commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+
+      - name: Verify pinned source archive and print PHP source bundle
+        run: |
+          set -euo pipefail
+          ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
+          test -f "$ZIP"
+          sha256sum "$ZIP"
+          unzip -t "$ZIP" >/dev/null
+          for entry in \
+            sblgnt/text/PHP.txt \
+            sblgnt/apparatus/text/PHP.txt \
+            tr/PHP.usfm \
+            webp/PHP.usfm \
+            btf/PHP.usfm \
+            cornilescu1924/PHP.usfm \
+            biblia-libera/PHP.usfm
+          do
+            echo "===== BEGIN $entry ====="
+            unzip -p "$ZIP" "$entry"
+            echo
+            echo "===== END $entry ====="
+          done
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.9'
+
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Run NT editorial handoff gates
+        run: |
+          set -euo pipefail
+          pnpm check:biblia-emanus
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          pnpm check:biblia-emanus-nt-withheld
+          python3 scripts/withhold-biblia-emanus-nt.py --check
+          pnpm check:biblia-emanus-nt-runtime
+          pnpm test:biblia-emanus
+          python3 scripts/build-nt-editorial-review-queue.py --check
+          git diff --check
