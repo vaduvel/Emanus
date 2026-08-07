@@ -114,3 +114,45 @@ jobs:
           print(f'FOREIGN_OR_NT={len(groups["nt_or_foreign"])}')
           print(f'UNCLASSIFIED={len(groups["unclassified"])}')
           PY
+
+      - name: Focused dependency diffs
+        run: |
+          source=origin/agent/biblia-explicata-vt-complet
+          paths=(
+            package.json
+            packages/shared/package.json
+            packages/shared/src/index.ts
+            packages/shared/src/bible/index.ts
+            packages/shared/src/bible/types.ts
+            apps/web/src/screens/Bible.tsx
+            apps/web/src/bible.css
+            .github/workflows/ci.yml
+            docs/21-biblia-explicata.md
+            docs/23-inlocuirea-textului.md
+            scripts/check-overlay-book.py
+            scripts/check-1-imparati-book.py
+            scripts/check-1-imparati.py
+            scripts/check-1-samuel.py
+            scripts/check-2-imparati-overlay.py
+            scripts/check-2-samuel.py
+            scripts/check-rut.py
+            scripts/fetch-poonen.py
+            scripts/make-poonen-playlist.py
+          )
+          for p in "${paths[@]}"; do
+            echo
+            echo "===== $p ====="
+            git diff --unified=3 origin/main..."$source" -- "$p" | sed -n '1,260p'
+          done
+
+      - name: Check final VT dependency references
+        run: |
+          source=origin/agent/biblia-explicata-vt-complet
+          echo '===== imports from VT infra/overlays that escape expected folders ====='
+          git grep -nE 'from "(\.\./|\.\/)' "$source" -- \
+            packages/shared/src/bible/overlays \
+            packages/shared/src/bible/completeOverlay.ts \
+            packages/shared/src/bible/overlayBibleBooks.ts \
+            packages/shared/src/bible/publicationBible.ts \
+            packages/shared/src/bible/vtExplainedCoverage.ts \
+            | sed -n '1,500p' || true
