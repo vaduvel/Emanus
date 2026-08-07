@@ -34,8 +34,8 @@ jobs:
       - name: Normalize legacy Numeri and Deuteronom sources
         run: python3 scripts/fix-vt-release-source.py --write
 
-      - name: Correct Romanian language in explanations only
-        run: python3 scripts/fix-vt-explanation-language.py --write
+      - name: Correct Romanian language in explanation strings only
+        run: python3 scripts/fix-vt-explanation-language-safe.py --write
 
       - name: Reject malformed Unicode remnants
         run: |
