@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1JN.4.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1JN",
+        "biblia-libera/1JN.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,23 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1jn-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -98,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Toate cele 21 de versete au fost rescrise pentru a elimina acordurile defectuoase, semnele de citare rătăcite, calcurile englezești și frazele care pierdeau relațiile sintactice.",
+        "În 4:3, 4:19 și 4:20 sunt urmate lecturile SBLGNT, fără a importa formula extinsă ori obiectul suplimentar din Textus Receptus și fără a transforma o afirmație în întrebare retorică.",
+        "În 4:5–18 au fost clarificate raporturile de origine, aspectul verbal, subiectele și legăturile dintre dragoste, adevăr, frică și judecată."
       ]
     },
     "theologicalContext": {
@@ -123,112 +137,177 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație, fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:2c429a0076608341f39c297f0b3dce61db58af9527b34fed405acd870008a547",
-    "contentDigest": "sha256:702e2019ccde7f74dbf90f1b953563d24f2991486ee513b0f06ad31acf219489"
+    "textDigest": "sha256:296c1475ab85b0edfe94b0422448abda104848754ea090b7c3e06b6e4ffcd18a",
+    "contentDigest": "sha256:327d4d3f87b9ea76b10fdf8c619f300cd0b08e814999cc9b4f91e7bee73e44c4"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Iubito, nu crede orice duh, ci pune la încercare duhurile, fie că sunt de la Dumnezeu, pentru că mulți profeți falși au ieșit în lume."
+      "text": "Preaiubiților, nu credeți orice duh, ci puneți la încercare duhurile, ca să vedeți dacă sunt de la Dumnezeu, fiindcă mulți profeți falși au ieșit în lume."
     },
     {
       "number": 2,
-      "text": "Prin aceasta cunoașteți Duhul lui Dumnezeu: orice duh care mărturisește că Isus Hristos a venit în trup este al lui Dumnezeu,"
+      "text": "Prin aceasta cunoașteți Duhul lui Dumnezeu: orice duh care mărturisește că Isus Hristos a venit în trup este de la Dumnezeu,"
     },
     {
       "number": 3,
-      "text": "și orice duh care nu mărturisește că Isus Hristos a venit în trup nu este de la Dumnezeu; și acesta este spiritul Anticristului, despre care ați auzit că vine. Acum este deja în lume."
+      "text": "iar orice duh care nu-L mărturisește pe Isus nu este de la Dumnezeu. Acesta este duhul anticristului, despre care ați auzit că vine și care este deja în lume."
     },
     {
       "number": 4,
-      "text": "Voi sunteți din Dumnezeu, copilașilor, și i-ați biruit, pentru că mai mare este Cel ce este în voi decât cel ce este în lume."
+      "text": "Voi sunteți din Dumnezeu, copilașilor, și i-ați biruit, fiindcă cel care este în voi este mai mare decât cel care este în lume."
     },
     {
       "number": 5,
-      "text": "Ei sunt din lume. De aceea ei vorbesc despre lume, iar lumea îi ascultă."
+      "text": "Ei sunt din lume; de aceea vorbesc din lume, iar lumea îi ascultă."
     },
     {
       "number": 6,
-      "text": "Noi suntem de la Dumnezeu, și cine cunoaște pe Dumnezeu ascultă de noi. Cine nu este de la Dumnezeu, nu ne ascultă. Prin aceasta cunoaștem spiritul adevărului și spiritul erorii."
+      "text": "Noi suntem din Dumnezeu. Cine îl cunoaște pe Dumnezeu ne ascultă; cine nu este din Dumnezeu nu ne ascultă. Prin aceasta cunoaștem duhul adevărului și duhul rătăcirii."
     },
     {
       "number": 7,
-      "text": "Preaiubiților, să ne iubim unii pe alții, căci dragostea este de la Dumnezeu; și oricine iubește s-a născut din Dumnezeu și îl cunoaște pe Dumnezeu."
+      "text": "Preaiubiților, să ne iubim unii pe alții, căci dragostea este de la Dumnezeu; oricine iubește s-a născut din Dumnezeu și îl cunoaște pe Dumnezeu."
     },
     {
       "number": 8,
-      "text": "Cine nu iubește nu-L cunoaște pe Dumnezeu, pentru că Dumnezeu este iubire."
+      "text": "Cel care nu iubește nu L-a cunoscut pe Dumnezeu, căci Dumnezeu este iubire."
     },
     {
       "number": 9,
-      "text": "Prin aceasta s-a descoperit dragostea lui Dumnezeu în noi, că Dumnezeu L-a trimis în lume pe singurul Său Fiu născut, pentru ca noi să putem trăi prin El."
+      "text": "Prin aceasta s-a arătat dragostea lui Dumnezeu în noi: Dumnezeu l-a trimis în lume pe unicul său Fiu, ca noi să trăim prin el."
     },
     {
       "number": 10,
-      "text": "În aceasta este dragostea, nu că noi L-am iubit pe Dumnezeu, ci că El ne-a iubit pe noi L-a trimis pe Fiul Său ca jertfă de ispășire pentru păcatele noastre."
+      "text": "În aceasta este dragostea: nu că noi l-am iubit pe Dumnezeu, ci că el ne-a iubit și l-a trimis pe Fiul său ca mijloc de ispășire pentru păcatele noastre."
     },
     {
       "number": 11,
-      "text": "Preaiubiților, dacă Dumnezeu ne-a iubit în felul acesta, și noi trebuie să ne iubim unii pe alții."
+      "text": "Preaiubiților, dacă Dumnezeu ne-a iubit astfel, și noi suntem datori să ne iubim unii pe alții."
     },
     {
       "number": 12,
-      "text": "Nimeni nu l-a văzut vreodată pe Dumnezeu. Dacă ne iubim unii pe alții, Dumnezeu rămâne în noi, iar iubirea lui a fost desăvârșită în noi."
+      "text": "Nimeni nu l-a văzut vreodată pe Dumnezeu. Dacă ne iubim unii pe alții, Dumnezeu rămâne în noi, iar dragostea lui a ajuns la desăvârșire în noi."
     },
     {
       "number": 13,
-      "text": "Prin aceasta știm că noi rămânem în El și El în noi, pentru că El ne-a dat din Duhul Său."
+      "text": "Prin aceasta știm că rămânem în el și el în noi, fiindcă ne-a dat din Duhul său."
     },
     {
       "number": 14,
-      "text": "Am văzut și mărturisim că Tatăl l-a trimis pe Fiul ca Mântuitor al lumii."
+      "text": "Noi am văzut și mărturisim că Tatăl l-a trimis pe Fiul ca Mântuitor al lumii."
     },
     {
       "number": 15,
-      "text": "Oricine mărturisește că Isus este Fiul lui Dumnezeu, Dumnezeu rămâne în el și el în Dumnezeu."
+      "text": "Oricine mărturisește că Isus este Fiul lui Dumnezeu, Dumnezeu rămâne în el, iar el în Dumnezeu."
     },
     {
       "number": 16,
-      "text": "Noi știm și am crezut dragostea pe care Dumnezeu o are pentru noi. Dumnezeu este dragoste, și cel care rămâne în dragoste rămâne în Dumnezeu, și Dumnezeu rămâne în el."
+      "text": "Noi am cunoscut și am crezut dragostea pe care Dumnezeu o are pentru noi. Dumnezeu este iubire, iar cel care rămâne în dragoste rămâne în Dumnezeu, iar Dumnezeu rămâne în el."
     },
     {
       "number": 17,
-      "text": "În aceasta, dragostea a fost făcută perfectă printre noi, ca să avem îndrăzneală în ziua judecății, pentru că așa cum este el, așa suntem și noi în această lume."
+      "text": "Prin aceasta dragostea a ajuns la desăvârșire între noi, ca să avem îndrăzneală în ziua judecății, fiindcă, așa cum este el, așa suntem și noi în această lume."
     },
     {
       "number": 18,
-      "text": "Nu este nici o teamă în dragoste; dar dragostea desăvârșită scoate frica, pentru că frica are pedeapsă. Cine se teme nu este făcut perfect în dragoste."
+      "text": "În dragoste nu este frică, ci dragostea desăvârșită alungă frica, fiindcă frica implică pedeapsă. Cel care se teme nu a ajuns la desăvârșire în dragoste."
     },
     {
       "number": 19,
-      "text": "Îl iubim pentru că El ne-a iubit mai întâi."
+      "text": "Noi iubim, fiindcă el ne-a iubit întâi."
     },
     {
       "number": 20,
-      "text": "Dacă un om zice: Eu iubesc pe Dumnezeu„, urăște pe fratele său, este un mincinos; căci cine nu iubește pe fratele său, pe care l-a văzut, cum poate să iubească pe Dumnezeu, pe Care nu L-a văzut?"
+      "text": "Dacă cineva spune: „Îl iubesc pe Dumnezeu”, dar își urăște fratele, este mincinos; căci cel care nu-și iubește fratele, pe care l-a văzut, nu-L poate iubi pe Dumnezeu, pe care nu L-a văzut."
     },
     {
       "number": 21,
-      "text": "Avem de la El această poruncă, ca cel ce-L iubește pe Dumnezeu să-L iubească și pe fratele său.”"
+      "text": "Și aceasta este porunca pe care o avem de la el: cel care îl iubește pe Dumnezeu să-și iubească și fratele."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: γινώσκετε / γινώσκεται",
+      "decision": "„Prin aceasta cunoașteți Duhul lui Dumnezeu”",
+      "alternatives": [
+        "TR-1JN din snapshot citește forma γινώσκεται: „prin aceasta se cunoaște Duhul lui Dumnezeu”."
+      ],
+      "reason": "SBLGNT are forma de persoana a doua plural și păstrează adresarea directă către cititori; româna nu o transformă într-o formulă impersonală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 3,
+      "term": "variantă textuală SBLGNT/TR: τὸν Ἰησοῦν / τὸν Ἰησοῦν Χριστὸν ἐν σαρκὶ ἐληλυθότα",
+      "decision": "„orice duh care nu-L mărturisește pe Isus”",
+      "alternatives": [
+        "TR-1JN din snapshot repetă formula extinsă: „care nu mărturisește că Isus Hristos a venit în trup”."
+      ],
+      "reason": "SBLGNT nu repetă în acest verset numele „Hristos” și expresia „a venit în trup” din versetul precedent; textul românesc nu le importă din martorul TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "μονογενῆ",
+      "decision": "„unicul său Fiu”",
+      "alternatives": [
+        "singurul său Fiu",
+        "singurul său Fiu născut"
+      ],
+      "reason": "Termenul exprimă unicitatea Fiului în context; redarea prin „unicul” păstrează această valoare fără a forța în română o explicație despre modul nașterii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată în SBLGNT, WEBP și etaloanele auxiliare, fără a transforma termenul într-o explicație doctrinară suplimentară."
+    },
+    {
+      "verse": 17,
+      "term": "μεθʼ ἡμῶν",
+      "decision": "„dragostea a ajuns la desăvârșire între noi”",
+      "alternatives": [
+        "dragostea a ajuns la desăvârșire în noi",
+        "dragostea a ajuns la desăvârșire cu noi"
+      ],
+      "reason": "Prepoziția μετά cu genitivul exprimă relația dragostei cu comunitatea; „între noi” redă natural această relație fără a insera o explicație doctrinară în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția a fost verificată direct în SBLGNT și în contextul imediat al capitolului."
+    },
+    {
+      "verse": 19,
+      "term": "variantă textuală SBLGNT/TR: ἡμεῖς ἀγαπῶμεν / ἡμεῖς ἀγαπῶμεν αὐτόν",
+      "decision": "„Noi iubim”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă obiectul αὐτόν: „Îl iubim”."
+      ],
+      "reason": "SBLGNT lasă verbul fără obiect exprimat; româna păstrează afirmația generală despre iubire și nu adaugă „pe el” din martorul TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 20,
+      "term": "variantă textuală SBLGNT/TR: οὐ δύναται ἀγαπᾶν / πῶς δύναται ἀγαπᾷν",
+      "decision": "„nu-L poate iubi pe Dumnezeu”",
+      "alternatives": [
+        "TR-1JN din snapshot formulează o întrebare retorică: „cum poate să-L iubească pe Dumnezeu?”."
+      ],
+      "reason": "Lectura SBLGNT este o negație explicită, nu o întrebare; româna păstrează forma enunțiativă fără a importa πῶς din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
