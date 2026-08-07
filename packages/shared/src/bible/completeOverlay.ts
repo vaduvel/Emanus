@@ -9,7 +9,7 @@ export type VerseCounts = Readonly<Record<number, number>>
 
 const narrativeSource = {
   kind: "biblia-emanus" as const,
-  note: "explicație textuală a capitolului, fără doctrină adăugată" as const,
+  note: "rezumat narativ fără doctrină adăugată" as const,
 }
 
 function uncoveredRanges(lastVerse: number, units: readonly ExplainedOverlayUnit[]): Array<[number, number]> {
