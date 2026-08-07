@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Cablare deterministă a catalogului VT publicabil în ecranul Biblia."""
 
+from __future__ import annotations
+
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +19,15 @@ def replace_once(text: str, old: str, new: str, label: str) -> str:
     return text.replace(old, new, 1)
 
 
+def regex_once(text: str, pattern: str, replacement: str, label: str) -> str:
+    if replacement in text:
+        return text
+    result, count = re.subn(pattern, lambda _m: replacement, text, count=1, flags=re.S)
+    if count != 1:
+        raise SystemExit(f"Nu găsesc ancora regex pentru {label}")
+    return result
+
+
 def main() -> None:
     text = SCREEN.read_text(encoding="utf-8")
 
@@ -29,31 +41,31 @@ def main() -> None:
     text = text.replace("BIBLE_BOOKS", "PUBLICATION_BIBLE_BOOKS")
     text = text.replace("findChapter(", "findPublicationChapter(")
 
-    text = replace_once(
+    text = regex_once(
         text,
-        '<p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explicațiile sunt scrise pentru Emanus.</p>',
+        r'<p className="muted bible__note">Traducere:\s*\{BIBLE_TRANSLATION\}\..*?</p>',
         '<p className="muted bible__note">Traducerea textului biblic este afișată pentru fiecare carte. Explicația rămâne separată de Scriptură.</p>',
         "footer traducere",
     )
 
-    text = replace_once(
+    text = regex_once(
         text,
-        '    <h3 className="bunit__heading">{unit.heading}</h3>\n\n    <blockquote className="bunit__text">{unit.text}</blockquote>',
+        r'(?P<heading>\s*<h3 className="bunit__heading">\{unit\.heading\}</h3>)\s*(?P<quote><blockquote className="bunit__text">\{unit\.text\}</blockquote>)',
         '    <h3 className="bunit__heading">{unit.heading}</h3>\n    {unit.explanationSource && <p className="bunit__source">{unit.explanationSource}</p>}\n\n    <blockquote className="bunit__text">{unit.text}</blockquote>',
         "sursa explicației",
     )
 
-    text = replace_once(
+    text = regex_once(
         text,
-        '    <details className="bctx">\n      <summary>Unde suntem în carte</summary>\n      <p>{found.literaryContext}</p>\n    </details>\n    <details className="bctx">\n      <summary>Cum era pe atunci</summary>\n      <p>{found.historicalContext}</p>\n    </details>',
-        '    {found.literaryContext && <details className="bctx">\n      <summary>Unde suntem în carte</summary>\n      <p>{found.literaryContext}</p>\n    </details>}\n    {found.historicalContext && <details className="bctx">\n      <summary>Cum era pe atunci</summary>\n      <p>{found.historicalContext}</p>\n    </details>}',
+        r'\s*<details className="bctx">\s*<summary>.*?</summary>\s*<p>\{found\.literaryContext\}</p>\s*</details>\s*<details className="bctx">\s*<summary>.*?</summary>\s*<p>\{found\.historicalContext\}</p>\s*</details>',
+        '\n    {found.literaryContext && <details className="bctx">\n      <summary>Unde suntem în carte</summary>\n      <p>{found.literaryContext}</p>\n    </details>}\n    {found.historicalContext && <details className="bctx">\n      <summary>Cum era pe atunci</summary>\n      <p>{found.historicalContext}</p>\n    </details>}',
         "context condițional",
     )
 
-    text = replace_once(
+    text = regex_once(
         text,
-        '    <div className="bprayer">\n      <p className="today__kicker">Rugăciune</p>\n      {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}\n    </div>',
-        '    {found.prayer && <div className="bprayer">\n      <p className="today__kicker">Rugăciune</p>\n      {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}\n    </div>}',
+        r'\s*<div className="bprayer">\s*<p className="today__kicker">.*?</p>\s*\{paragraphs\(found\.prayer\)\.map\(\(p, i\) => <p key=\{i\}>\{p\}</p>\)\}\s*</div>',
+        '\n    {found.prayer && <div className="bprayer">\n      <p className="today__kicker">Rugăciune</p>\n      {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}\n    </div>}',
         "rugăciune condițională",
     )
 
