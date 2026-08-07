@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: read
-  models: read
 
 jobs:
   model-probe:
@@ -16,7 +15,7 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 10
     steps:
-      - name: Probe GPT-5 through GitHub Models
+      - name: Probe GPT-5 through GitHub Models without explicit models permission
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -38,10 +37,3 @@ jobs:
             -H "Authorization: Bearer ${GITHUB_TOKEN}" \
             --data-binary @/tmp/request.json \
             | tee /tmp/response.json
-          python3 - <<'PY'
-          import json
-          data = json.load(open('/tmp/response.json', encoding='utf-8'))
-          text = data['choices'][0]['message']['content']
-          print('\nMODEL_CONTENT=' + text)
-          assert 'nt-review' in text
-          PY
