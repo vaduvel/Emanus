@@ -24,7 +24,9 @@ jobs:
           git fetch origin agent/biblia-explicata-vt-complet:refs/remotes/origin/agent/biblia-explicata-vt-complet
 
       - name: Assemble VT-only tree
-        run: python3 scripts/assemble-vt-clean.py
+        run: |
+          python3 scripts/assemble-vt-clean.py
+          python3 scripts/patch-vt-bundle.py
 
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
@@ -86,7 +88,9 @@ jobs:
             .research/poonen-through-the-bible-OT \
             docs/biblia-explicata \
             packages/shared/src/bible \
+            packages/shared/src/index.ts \
             packages/shared/package.json \
+            apps/web/vite.config.ts \
             package.json \
             scripts/check-vt-explained-coverage.py \
             scripts/check-vt-publication-runtime.mjs \
