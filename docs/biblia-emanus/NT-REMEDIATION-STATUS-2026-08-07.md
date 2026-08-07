@@ -1,0 +1,98 @@
+# Statusul remedierii NT — 2026-08-07
+
+## Verdict
+
+Noul Testament a primit remedieri punctuale pentru toate cele 54 de locuri
+P0 enumerate în inventarul de bază, dar **nu este aprobat și nu este
+publicabil**. Remedierile sunt loturi confirmate de schimbări de text, nu
+dovada unei revizii semantice complete sau a unei aprobări editoriale.
+
+Revizia editorială identificată, care urmează să fie efectuată de AI-ul
+desemnat, și registrul per-verset aferent sunt încă nefinalizate.
+
+## Baza verificării
+
+- Comparație: `origin/main` la `2260149cd078d4442a1111e33e74d02567bb6a45`
+  față de `HEAD` la `c3d5238876fdc2f14482c2933ad904f6040e8295`.
+- Domeniu: cele 27 de cărți, 260 de capitole și 7.941 de versete NT.
+- Inventar de bază: `NT-CORPUS-INVENTORY-AUDIT-2026-08-07.md`.
+
+Compararea versetelor enumerate în inventarul de bază arată că textul s-a
+schimbat pentru **54 din 54** de referințe: 38 de cazuri de
+lipire/trunchiere, 6 de engleză/transliterare și 10 de sens greșit. Această
+constatare confirmă numai că toate referințele au fost remediate în loturi
+urmăribile în istoric; nu afirmă că fiecare formulare nouă este definitivă
+sau aprobată.
+
+## Starea actuală de publicare
+
+| Element | Stare verificată |
+| --- | --- |
+| Capitole NT | 260 din 260 sunt `in_review` |
+| Vizibilitate capitole NT | 260 din 260 au `public: false` |
+| Versete NT | 7.941 |
+| Coada editorială | 7.941 intrări, toate `pending` |
+| Registru de aprobare per-verset | lipsește; există numai schema |
+| Catalog runtime | `withheld`, cu `approval: null` |
+| Cărți NT expuse de catalogul runtime | listă goală |
+
+Starea este verificată de `withhold-biblia-emanus-nt.py --check` și de
+generatorul catalogului runtime. Corpusul brut poate rămâne în repository,
+dar aplicația nu îl expune cât timp catalogul este `withheld`.
+
+## Reexecutarea inventarului de triere
+
+S-a rulat de două ori, cu rezultate identice:
+
+```sh
+python3 scripts/audit-nt-corpus-inventory.py \
+  --out /private/tmp/nt-remediation-status-inventory.json \
+  --markdown /private/tmp/nt-remediation-status-inventory.md
+```
+
+Pentru baza de mai sus, rezultatul actual este:
+
+| Măsură | Rezultat |
+| --- | ---: |
+| Versete active analizate | 7.941 |
+| Versete semnalate pentru triere | 837 |
+| Tokenuri probabile `î → â` | 138 |
+| Token rar/neacceptat | 334 semnale |
+| Token posibil concatenat | 15 semnale |
+| Final cu cuvânt funcțional | 227 semnale |
+| Ghilimele românești dezechilibrate | 287 semnale |
+| Lipsă spațiu după virgulă/punct și virgulă/două puncte | 19 semnale |
+| Suprapunere lexicală foarte mică cu toate etaloanele RO | 1 semnal |
+
+Rândurile de mai sus se pot suprapune: cele 883 de semnale pe categorii nu
+reprezintă 883 de versete distincte. Inventarul folosește instantaneul fixat
+SBLGNT/WEBP și etaloanele românești disponibile numai ca instrumente de
+triagere și comparație.
+
+Un semnal nu este, singur, verdict de eroare: numele proprii, compușii,
+citatele care trec granița dintre versete și alegerile stilistice pot produce
+semnale legitime. Invers, lipsa unui semnal nu dovedește corectitudinea
+semantică a unui verset. Prin urmare, aceste cifre nu dovedesc că toate cele
+837 de locuri sunt defecte și nici că restul corpusului este curat.
+
+## Ce rămâne de făcut
+
+1. AI-ul desemnat efectuează revizia de sursă și de română pentru **fiecare
+   dintre cele 7.941 de versete**, nu numai pentru cele 837 de locuri de
+   triere. Se începe cu semnalele cu risc mare și cu variantele textuale.
+2. Se creează registrul per-verset legat de textul exact: referința, digestul
+   BE, referințele/digesturile SBLGNT și WEBP, etaloanele românești consultate,
+   ancorele relevante, decizia editorială și justificarea individuală.
+3. AI-ul desemnat rezolvă și notează explicit variantele textuale, omisiunile,
+   registrele românești și orice diferență semantică descoperită. O formulare
+   repetată la nivel de capitol nu înlocuiește această dovadă individuală.
+4. Se validează registrul complet împotriva corpusului și a snapshoturilor
+   fixate; orice schimbare ulterioară a textului invalidează intrările afectate
+   și cere reexaminare.
+5. Numai după finalizarea acestor pași se poate lua separat o decizie de
+   aprobare și de publicare; până atunci capitolele rămân `in_review`, iar
+   catalogul runtime rămâne `withheld`.
+
+Acest raport documentează starea de remediere și de blocare a publicării. Nu
+este un registru de aprobare, nu substituie revizia per-verset și nu declară
+Noul Testament gata de publicare.
