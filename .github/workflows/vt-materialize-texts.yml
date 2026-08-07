@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/biblia-explicata-vt-complet
+  pull_request:
+    branches:
+      - agent/biblia-explicata-vt-maleahi
 
 permissions:
   contents: write
@@ -34,6 +37,7 @@ jobs:
           git diff --check -- packages/shared/src/bible/generated/vtCanonicalText
 
       - name: Commit audited generated text
+        if: github.event_name == 'push'
         shell: bash
         run: |
           if git diff --quiet -- packages/shared/src/bible/generated/vtCanonicalText; then
