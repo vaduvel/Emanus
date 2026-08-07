@@ -55,11 +55,11 @@ jobs:
             python3 scripts/withhold-biblia-emanus-nt.py --check
             pnpm check:biblia-emanus-nt-runtime
             pnpm test:biblia-emanus
-            changed="$(git diff --name-only)"
+            git add "$json" "$journal"
+            changed="$(git diff --cached --name-only)"
             test "$(printf '%s\n' "$changed" | sed '/^$/d' | wc -l)" -eq 2
             printf '%s\n' "$changed" | grep -Fx "$json"
             printf '%s\n' "$changed" | grep -Fx "$journal"
-            git add "$json" "$journal"
             git diff --cached --check
             git commit -m "review(biblia): audit Ephesians ${ch} verse by verse"
           done
