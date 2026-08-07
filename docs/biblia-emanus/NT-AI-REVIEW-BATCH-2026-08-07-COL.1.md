@@ -43,7 +43,7 @@ promovează niciun verset ori capitol.
 | COL.1.16 | `ἐν αὐτῷ ἐκτίσθη τὰ πάντα … διʼ αὐτοῦ καὶ εἰς αὐτόν` | Toate cele create — văzute, nevăzute, tronuri, domnii, stăpâniri și autorități — sunt create în El, prin El și pentru El. |
 | COL.1.17 | `πρὸ πάντων … ἐν αὐτῷ συνέστηκεν` | El este mai înainte de toate, iar toate se țin împreună în El. |
 | COL.1.18 | `κεφαλὴ τοῦ σώματος τῆς ἐκκλησίας … πρωτεύων` | El este capul trupului, al bisericii, începutul și întâiul născut dintre cei morți, pentru a avea întâietatea în toate. |
-| COL.1.19 | `πᾶν τὸ πλήρωμα κατοικῆσαι` | Toată plinătatea a binevoit să locuiască în El; nu se adaugă un subiect explicit care nu apare în verset. |
+| COL.1.19 | `ἐν αὐτῷ εὐδόκησεν πᾶν τὸ πλήρωμα κατοικῆσαι` | Dumnezeu este redat ca subiectul subînțeles al lui `εὐδόκησεν`: El a binevoit ca toată plinătatea să locuiască în Hristos. |
 | COL.1.20 | `ἀποκαταλλάξαι τὰ πάντα … εἰρηνοποιήσας διὰ τοῦ αἵματος … [διʼ αὐτοῦ]` | Prin El, toate sunt împăcate cu Sine; pacea este făcută prin sângele crucii, iar repetarea încadrată „prin El” este păstrată ca în textul SBLGNT. |
 | COL.1.21 | `ὑμᾶς … ἀπηλλοτριωμένους καὶ ἐχθροὺς` | Destinatarii, odinioară înstrăinați și vrăjmași în minte prin fapte rele, sunt subiectul continuat în versetul 22. |
 | COL.1.22 | `ἀποκατηλλάγητε … σώματι τῆς σαρκὸς … διὰ τοῦ θανάτου` | SBLGNT are pasivul „ați fost împăcați”, prin moarte în trupul cărnii Lui, pentru înfățișarea lor sfinți, fără pată și fără vină. |
