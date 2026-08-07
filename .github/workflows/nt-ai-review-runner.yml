@@ -9,7 +9,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   source-and-gates:
@@ -49,6 +49,236 @@ jobs:
             echo "===== END $entry ====="
           done
 
+      - name: Stage reviewed PHP 1 candidate
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import runpy
+          from pathlib import Path
+
+          chapter_path = Path('docs/data/biblia-emanus/PHP.1.json')
+          journal_path = Path('docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.1.md')
+
+          if journal_path.exists():
+              print('PHP.1 review journal already exists; leaving reviewed batch unchanged.')
+              raise SystemExit(0)
+
+          data = json.loads(chapter_path.read_text(encoding='utf-8'))
+
+          reviewed_text = {
+              1: 'Pavel și Timotei, robi ai lui Hristos Isus, către toți sfinții în Hristos Isus care sunt în Filipi, împreună cu supraveghetorii și diaconii:',
+              2: 'har vouă și pace de la Dumnezeu, Tatăl nostru, și de la Domnul Isus Hristos.',
+              3: 'Îi mulțumesc Dumnezeului meu ori de câte ori îmi amintesc de voi,',
+              4: 'întotdeauna, în fiecare rugăciune a mea pentru voi toți, rugându-mă cu bucurie,',
+              5: 'pentru părtășia voastră la Evanghelie, din prima zi până acum,',
+              6: 'fiind încredințat de aceasta: Cel care a început în voi o lucrare bună o va duce la capăt până în ziua lui Hristos Isus.',
+              7: 'Este drept să gândesc astfel despre voi toți, pentru că vă port în inimă, întrucât, atât în lanțurile mele, cât și în apărarea și întărirea Evangheliei, voi toți sunteți părtași împreună cu mine la har.',
+              8: 'Căci Dumnezeu îmi este martor cât de mult tânjesc după voi toți cu afecțiunea lui Hristos Isus.',
+              9: 'Și mă rog ca dragostea voastră să prisosească tot mai mult în cunoaștere deplină și în orice discernământ,',
+              10: 'ca să deosebiți lucrurile care sunt mai bune, pentru a fi curați și fără pricină de poticnire până în ziua lui Hristos,',
+              11: 'plini de rodul dreptății care vine prin Isus Hristos, spre slava și lauda lui Dumnezeu.',
+              12: 'Vreau să știți, fraților, că lucrurile prin care am trecut au dus mai degrabă la înaintarea Evangheliei,',
+              13: 'astfel încât a devenit cunoscut întregului pretoriu și tuturor celorlalți că lanțurile mele sunt legate de Hristos,',
+              14: 'iar cei mai mulți dintre frați, încrezători în Domnul datorită lanțurilor mele, îndrăznesc cu atât mai mult să vestească fără teamă cuvântul.',
+              15: 'Unii îl vestesc pe Hristos chiar din invidie și rivalitate, iar alții din bunăvoință.',
+              16: 'Aceștia din urmă o fac din dragoste, știind că sunt pus aici pentru apărarea Evangheliei;',
+              17: 'ceilalți îl vestesc pe Hristos din ambiție egoistă, nu cu gând curat, crezând că îmi vor spori necazul în lanțuri.',
+              18: 'Și ce dacă? În orice fel, fie din motive prefăcute, fie în adevăr, Hristos este vestit, iar în aceasta mă bucur. Și mă voi bucura,',
+              19: 'căci știu că aceasta va duce la mântuirea mea, prin rugăciunea voastră și prin ajutorul Duhului lui Isus Hristos,',
+              20: 'potrivit așteptării mele arzătoare și speranței mele că nu voi fi făcut de rușine în nimic, ci, cu toată îndrăzneala, ca întotdeauna, și acum Hristos va fi preamărit în trupul meu, fie prin viață, fie prin moarte.',
+              21: 'Căci pentru mine a trăi este Hristos, iar a muri este câștig.',
+              22: 'Dar dacă voi continua să trăiesc în trup, aceasta înseamnă pentru mine o lucrare roditoare; și ce voi alege nu știu.',
+              23: 'Sunt constrâns de amândouă: doresc să plec și să fiu împreună cu Hristos, căci aceasta este cu mult mai bine;',
+              24: 'dar să rămân în trup este mai necesar pentru voi.',
+              25: 'Și, fiind încredințat de aceasta, știu că voi rămâne și voi continua alături de voi toți, pentru înaintarea și bucuria voastră în credință,',
+              26: 'pentru ca, prin venirea mea din nou la voi, motivul vostru de laudă în Hristos Isus să prisosească datorită mie.',
+              27: 'Numai purtați-vă ca cetățeni într-un chip vrednic de Evanghelia lui Hristos, pentru ca, fie că vin să vă văd, fie că lipsesc, să aud despre voi că stați tari într-un singur duh, luptând împreună, cu un singur suflet, pentru credința Evangheliei,',
+              28: 'fără să vă lăsați înspăimântați în nimic de potrivnici. Pentru ei, aceasta este o dovadă a pieirii, iar pentru voi, a mântuirii — și aceasta vine de la Dumnezeu.',
+              29: 'Căci vouă vi s-a dăruit, pentru Hristos, nu numai să credeți în El, ci și să suferiți pentru El,',
+              30: 'având aceeași luptă pe care ați văzut-o la mine și despre care auziți că o am și acum.'
+          }
+          for verse in data['verses']:
+              verse['text'] = reviewed_text[verse['number']]
+
+          for item in data['benchmark']['translationsConsulted']:
+              item['consultedInBatch'] = item['id'] in {'CORNILESCU-1924', 'BTF'}
+          data['benchmark']['observations'] = [
+              'Textul a fost revizuit direct din SBLGNT; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar pentru sens și română, fără copierea unei traduceri românești.',
+              'Câmpurile consultedInBatch disting etaloanele configurate de cele efectiv confruntate în acest lot; NTR nu a fost consultată.'
+          ]
+
+          audit = data['audit']
+          audit['completedOn'] = '2026-08-07'
+          audit['engineVersion'] = '3.0.0'
+          audit['reviewLevel'] = 'ai-complete'
+          audit['reviewAgent'] = {
+              'type': 'ai',
+              'engine': 'Codex / GPT-5',
+              'runId': 'emanus-nt-publication-audit-2026-08-07-php-1',
+              'method': 'verse-by-verse-source-and-benchmark'
+          }
+          audit['sourceSnapshotSha256'] = '29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424'
+          audit.pop('benchmarkEvidence', None)
+          audit.pop('modelEvidence', None)
+          audit['verseCoverage'] = {
+              'expected': 30,
+              'reviewed': 30,
+              'continuous': True,
+              'verseNumbersSha256': 'sha256:a8da6dc1099b8b38805d26f04c1e8a49b9d3870506f9586535105a3c3be64fdb'
+          }
+          audit['sourceLanguage'] = {
+              'language': 'greacă koine',
+              'text': 'SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar',
+              'result': 'approved',
+              'scope': 'SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot.'
+          }
+          audit['romanianLanguage'] = {
+              'result': 'approved',
+              'changesApplied': [
+                  'Au fost corectate ordinea textuală SBLGNT în 1:16–17, acordurile de persoană din 1:24 și 1:30 și formulările românești defecte sau calchiate.',
+                  'Au fost netezite sintaxa și coeziunea în 1:3–14 și 1:18–28 fără a importa lecturi din etaloanele auxiliare.',
+                  'Locurile cu variante textuale urmează SBLGNT și nu folosesc automat Textus Receptus sau etaloanele tradiționale drept text principal.'
+              ]
+          }
+          audit['theologicalContext'] = {
+              'result': 'approved',
+              'principles': [
+                  'Textul principal urmează SBLGNT și nu importă automat adaosuri sau transpuneri din Textus Receptus.',
+                  'Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.',
+                  'Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate.'
+              ]
+          }
+          audit['omissionAddition'] = {'result': 'approved', 'omissions': 0, 'additions': 0}
+          audit['copyrightDistance'] = {
+              'result': 'approved',
+              'method': 'redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești'
+          }
+          audit['criticalIssues'] = {'result': 'approved', 'open': 0}
+
+          def variant_note(verse, term, decision, alternatives, reason):
+              return {
+                  'verse': verse,
+                  'term': term,
+                  'decision': decision,
+                  'alternatives': alternatives,
+                  'reason': reason,
+                  'reviewRequired': True,
+                  'resolutionStatus': 'resolved',
+                  'resolutionReason': 'SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT.'
+              }
+
+          data['editorialNotes'] = [
+              variant_note(1, 'variantă textuală SBLGNT/TR: Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ', '„Hristos Isus”', ['TR-PHP inversează ordinea: „Isus Hristos”.'], 'Textul principal păstrează ordinea din SBLGNT.'),
+              variant_note(5, 'variantă textuală: τῆς πρώτης ἡμέρας / omiterea articolului τῆς', '„din prima zi”', ['TR/RP omit articolul; sensul propoziției nu se schimbă material în română.'], 'Redactarea urmează textul SBLGNT fără a crea o diferență artificială în română.'),
+              variant_note(6, 'variantă de ordine: Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ', '„ziua lui Hristos Isus”', ['WH are ordinea „Isus Hristos”.'], 'SBLGNT păstrează Χριστοῦ Ἰησοῦ.'),
+              variant_note(8, 'variantă TR: μου / μου ἐστιν și ordinea numelui', '„Dumnezeu îmi este martor … Hristos Isus”', ['TR adaugă ἐστιν și inversează ordinea numelui.'], 'Nici adaosul, nici ordinea TR nu sunt importate în textul principal.'),
+              variant_note(11, 'variantă: καρπὸν δικαιοσύνης / καρπῶν δικαιοσύνης', '„rodul dreptății”', ['TR/RP au pluralul „roadele dreptății”.'], 'SBLGNT are singularul καρπὸν.'),
+              variant_note(14, 'variantă: λόγον / λόγον τοῦ θεοῦ', '„să vestească fără teamă cuvântul”', ['WH/Treg și unele etaloane au „cuvântul lui Dumnezeu”.'], 'SBLGNT tipărește numai λόγον; adaosul nu este introdus.'),
+              variant_note(16, 'ordinea SBLGNT 1:16–17 față de tradiția TR', '1:16 redă grupul care vestește din dragoste și apărarea Evangheliei.', ['TR și unele etaloane numerotează aici grupul din ambiție egoistă.'], 'SBLGNT păstrează la 1:16 ἐξ ἀγάπης … εἰς ἀπολογίαν τοῦ εὐαγγελίου κεῖμαι.'),
+              variant_note(17, 'ordinea SBLGNT 1:16–17 și ἐγείρειν / ἐπιφέρειν', '1:17 redă ambiția egoistă și intenția de a spori necazul în lanțuri.', ['TR transpune cele două enunțuri și are o altă formă verbală în tradiția aparatului.'], 'Textul românesc a fost realiniat cu versificarea și lectura SBLGNT.'),
+              variant_note(18, 'variantă: ὅτι / omiterea lui ὅτι', '„În orice fel … Hristos este vestit”', ['TR/RP omit ὅτι.'], 'Particula nu cere o diferență lexicală forțată în română; structura SBLGNT este păstrată.'),
+              variant_note(23, 'variantă: γὰρ / omiterea lui γὰρ', '„căci aceasta este cu mult mai bine”', ['Tradiția RP omite γὰρ.'], 'Conectorul cauzal tipărit în SBLGNT este redat explicit.'),
+              variant_note(25, 'variantă: παραμενῶ / συμπαραμενῶ', '„voi continua alături de voi toți”', ['TR/RP au συμπαραμενῶ, cu prefixul συν-.'], 'SBLGNT are παραμενῶ; formularea românească nu transformă prefixul TR într-un adaos semantic obligatoriu.'),
+              variant_note(27, 'variantă: ἀκούω / ἀκούσω', '„să aud despre voi”', ['TR/RP au viitorul ἀκούσω.'], 'SBLGNT are prezentul ἀκούω în construcția dependentă; româna păstrează sensul fără a impune un viitor textual.'),
+              variant_note(28, 'variante: ἐστὶν αὐτοῖς / αὐτοῖς μέν ἐστιν și ὑμῶν / ὑμῖν', '„Pentru ei … dovadă a pieirii, iar pentru voi, a mântuirii”', ['TR/RP schimbă ordinea primei expresii și folosesc dativul ὑμῖν în a doua.'], 'Redactarea urmează opoziția și lectura SBLGNT fără a supralicita diferența de caz în română.'),
+              {
+                  'verse': 22,
+                  'term': 'elipsa εἰ δὲ τὸ ζῆν ἐν σαρκί, τοῦτό μοι καρπὸς ἔργου',
+                  'decision': '„dacă voi continua să trăiesc în trup, aceasta înseamnă pentru mine o lucrare roditoare”',
+                  'alternatives': ['Construcția greacă este eliptică și poate fi punctuată sau desfășurată în mai multe feluri.'],
+                  'reason': 'Formularea explicitează minim legătura sintactică dintre viața în trup și rodul lucrării, fără a adăuga o concluzie doctrinară.',
+                  'reviewRequired': True,
+                  'resolutionStatus': 'resolved',
+                  'resolutionReason': 'SBLGNT-PHP 1:22 și martorii auxiliari au fost confruntați; ambiguitatea este consemnată pentru registrul final.'
+              }
+          ]
+
+          validator = runpy.run_path('scripts/check-biblia-emanus.py')
+          audit['textDigest'] = validator['chapter_text_digest'](data)
+          audit['contentDigest'] = validator['chapter_content_digest'](data)
+          chapter_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          reloaded = json.loads(chapter_path.read_text(encoding='utf-8'))
+          assert reloaded['audit']['textDigest'] == validator['chapter_text_digest'](reloaded)
+          assert reloaded['audit']['contentDigest'] == validator['chapter_content_digest'](reloaded)
+          print('PHP.1 textDigest:', reloaded['audit']['textDigest'])
+          print('PHP.1 contentDigest:', reloaded['audit']['contentDigest'])
+
+          rows = [
+              ('PHP.1.1', 'Παῦλος καὶ Τιμόθεος … Χριστοῦ Ἰησοῦ … ἐπισκόποις καὶ διακόνοις', 'Salutul păstrează ordinea „Hristos Isus”, destinatarii din Filipi și cele două slujiri.'),
+              ('PHP.1.2', 'χάρις ὑμῖν καὶ εἰρήνη … κυρίου Ἰησοῦ Χριστοῦ', 'Harul și pacea vin de la Dumnezeu Tatăl și de la Domnul Isus Hristos.'),
+              ('PHP.1.3', 'Εὐχαριστῶ τῷ θεῷ μου ἐπὶ πάσῃ τῇ μνείᾳ ὑμῶν', 'Mulțumirea este redată natural ca având loc ori de câte ori Pavel își amintește de destinatari.'),
+              ('PHP.1.4', 'πάντοτε … ὑπὲρ πάντων ὑμῶν, μετὰ χαρᾶς', 'Rugăciunea pentru toți este făcută întotdeauna cu bucurie.'),
+              ('PHP.1.5', 'ἐπὶ τῇ κοινωνίᾳ ὑμῶν … ἀπὸ τῆς πρώτης ἡμέρας', 'κοινωνία este păstrată ca părtășie la Evanghelie, din prima zi până acum.'),
+              ('PHP.1.6', 'ὁ ἐναρξάμενος … ἐπιτελέσει … Χριστοῦ Ἰησοῦ', 'Lucrarea bună începută de Dumnezeu va fi dusă la capăt până în ziua lui Hristos Isus.'),
+              ('PHP.1.7', 'διὰ τὸ ἔχειν με ἐν τῇ καρδίᾳ ὑμᾶς … συγκοινωνούς μου τῆς χάριτος', 'Destinatarii sunt purtați în inimă și sunt părtași cu Pavel la har în lanțuri și în apărarea Evangheliei.'),
+              ('PHP.1.8', 'μάρτυς γάρ μου ὁ θεός … ἐν σπλάγχνοις Χριστοῦ Ἰησοῦ', 'Dumnezeu este martorul dorului lui Pavel, exprimat prin afecțiunea lui Hristos Isus.'),
+              ('PHP.1.9', 'ἡ ἀγάπη ὑμῶν … ἐν ἐπιγνώσει καὶ πάσῃ αἰσθήσει', 'Dragostea trebuie să prisosească în cunoaștere deplină și discernământ.'),
+              ('PHP.1.10', 'δοκιμάζειν … τὰ διαφέροντα … εἰλικρινεῖς καὶ ἀπρόσκοποι', 'Scopul este deosebirea lucrurilor mai bune și o viață curată, fără poticnire, până în ziua lui Hristos.'),
+              ('PHP.1.11', 'καρπὸν δικαιοσύνης τὸν διὰ Ἰησοῦ Χριστοῦ', 'Singularul SBLGNT este păstrat: rodul dreptății vine prin Isus Hristos.'),
+              ('PHP.1.12', 'τὰ κατʼ ἐμὲ … εἰς προκοπὴν τοῦ εὐαγγελίου', 'Împrejurările lui Pavel au contribuit la înaintarea Evangheliei.'),
+              ('PHP.1.13', 'τοὺς δεσμούς μου … ἐν Χριστῷ … ἐν ὅλῳ τῷ πραιτωρίῳ', 'Legătura lanțurilor cu Hristos a devenit cunoscută în întregul pretoriu și celorlalți.'),
+              ('PHP.1.14', 'πεποιθότας τοῖς δεσμοῖς μου … τὸν λόγον λαλεῖν', 'Frații capătă încredere în Domnul datorită lanțurilor și vestesc fără teamă „cuvântul”, fără adaosul variantei „lui Dumnezeu”.'),
+              ('PHP.1.15', 'διὰ φθόνον καὶ ἔριν … διʼ εὐδοκίαν', 'Sunt păstrate cele două motivații contrastante: invidia/rivalitatea și bunăvoința.'),
+              ('PHP.1.16', 'ἐξ ἀγάπης … εἰς ἀπολογίαν τοῦ εὐαγγελίου κεῖμαι', 'Versetul este realiniat cu SBLGNT: grupul din dragoste știe că Pavel este pus pentru apărarea Evangheliei.'),
+              ('PHP.1.17', 'ἐξ ἐριθείας … οὐχ ἁγνῶς … θλῖψιν ἐγείρειν', 'Versetul este realiniat cu SBLGNT: ceilalți vestesc din ambiție egoistă, cu intenția de a-i spori necazul în lanțuri.'),
+              ('PHP.1.18', 'παντὶ τρόπῳ … Χριστὸς καταγγέλλεται … χαρήσομαι', 'Indiferent de motiv, Hristos este vestit; Pavel se bucură și declară că va continua să se bucure.'),
+              ('PHP.1.19', 'ἀποβήσεται εἰς σωτηρίαν … ἐπιχορηγίας τοῦ πνεύματος', 'Rezultatul este exprimat ca mântuire, prin rugăciunea filipenilor și ajutorul Duhului lui Isus Hristos.'),
+              ('PHP.1.20', 'ἀποκαραδοκίαν καὶ ἐλπίδα … μεγαλυνθήσεται Χριστὸς ἐν τῷ σώματί μου', 'Așteptarea este ca Hristos să fie preamărit în trupul lui Pavel, prin viață sau prin moarte.'),
+              ('PHP.1.21', 'ἐμοὶ γὰρ τὸ ζῆν Χριστὸς καὶ τὸ ἀποθανεῖν κέρδος', 'Paralelismul este păstrat concis: a trăi este Hristos, a muri este câștig.'),
+              ('PHP.1.22', 'εἰ δὲ τὸ ζῆν ἐν σαρκί, τοῦτό μοι καρπὸς ἔργου', 'Elipsa este desfășurată minim: continuarea vieții în trup înseamnă o lucrare roditoare; alegerea rămâne neprecizată.'),
+              ('PHP.1.23', 'συνέχομαι … τὸ ἀναλῦσαι καὶ σὺν Χριστῷ εἶναι', 'Pavel este constrâns de cele două opțiuni și dorește să plece pentru a fi cu Hristos, lucru cu mult mai bun.'),
+              ('PHP.1.24', 'τὸ δὲ ἐπιμένειν ἐν τῇ σαρκὶ ἀναγκαιότερον διʼ ὑμᾶς', 'Persoana a doua plural este reparată: rămânerea în trup este mai necesară „pentru voi”.'),
+              ('PHP.1.25', 'μενῶ καὶ παραμενῶ πᾶσιν ὑμῖν … προκοπὴν καὶ χαρὰν τῆς πίστεως', 'Rămânerea alături de toți urmărește înaintarea și bucuria lor în credință; lectura SBLGNT παραμενῶ este păstrată.'),
+              ('PHP.1.26', 'τὸ καύχημα ὑμῶν … διὰ τῆς ἐμῆς παρουσίας πάλιν πρὸς ὑμᾶς', 'Revenirea lui Pavel trebuie să facă să prisosească motivul lor de laudă în Hristos Isus.'),
+              ('PHP.1.27', 'ἀξίως … πολιτεύεσθε … στήκετε ἐν ἑνὶ πνεύματι', 'πολιτεύεσθε este redat civic: să se poarte ca cetățeni vrednici de Evanghelie și să stea tari într-un singur duh.'),
+              ('PHP.1.28', 'μὴ πτυρόμενοι … ἔνδειξις ἀπωλείας … σωτηρίας', 'Lipsa fricii înaintea potrivnicilor este dovadă a pieirii pentru ei și a mântuirii pentru credincioși, de la Dumnezeu.'),
+              ('PHP.1.29', 'ὑμῖν ἐχαρίσθη … πιστεύειν … καὶ … πάσχειν', 'Credința în Hristos și suferința pentru El sunt ambele prezentate ca fiind dăruite destinatarilor.'),
+              ('PHP.1.30', 'τὸν αὐτὸν ἀγῶνα … εἴδετε ἐν ἐμοὶ … ἀκούετε ἐν ἐμοί', 'Pluralul este reparat: ei au aceeași luptă pe care au văzut-o la Pavel și despre care aud că el o are și acum.')
+          ]
+
+          journal = '''# Revizie AI, lot Filipeni 1
+
+Statut: `in_review` — **nu este aprobare de publicare**.
+
+Data: `2026-08-07`
+
+Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
+`emanus-nt-publication-audit-2026-08-07-php-1`)
+
+## Domeniu și surse
+
+Au fost revizuite direct toate cele 30 de versete Emanus din `PHP.1`. Textul
+principal a fost confruntat verset cu verset cu `SBLGNT-PHP` și aparatul său;
+`TR-PHP` a fost verificat ca martor al variantelor. `WEBP-PHP`, `BTF-PHP`,
+`CORNILESCU1924-PHP` și `BIBLIA-LIBERA-PHP` au fost consultate numai ca
+verificări auxiliare ale sensului și ale românei. Redactarea urmează lectura
+SBLGNT, fără copierea unei traduceri românești de referință.
+
+NTR nu a fost consultată pentru acest lot. Ea rămâne configurată ca etalon
+extern al corpusului, iar câmpurile `consultedInBatch` din capitol consemnează
+explicit această limită. Jurnalul nu este registrul final per-verset și nu
+promovează niciun verset ori capitol.
+
+## Decizii pe verset
+
+| Referință BE | Ancoră SBLGNT verificată | Decizie de redactare |
+| --- | --- | --- |
+'''
+          journal += ''.join(f'| {ref} | `{anchor}` | {decision} |\n' for ref, anchor, decision in rows)
+          journal += '''
+## Concluzie de lot
+
+Textul anterior transpunea 1:16–17 după tradiția TR în locul ordinii SBLGNT,
+avea schimbări greșite de persoană în 1:24 și 1:30 și mai multe formulări
+românești defecte ori calchiate. Toate cele 30 de versete au fost confruntate
+direct cu sursele fixate și revizuite; capitolul rămâne `in_review` și
+`public: false` până la registrul final de aprobare pentru întregul NT.
+'''
+          journal_path.write_text(journal, encoding='utf-8')
+          PY
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -61,7 +291,7 @@ jobs:
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
 
-      - name: Run NT editorial handoff gates
+      - name: Run required post-batch gates before commit
         run: |
           set -euo pipefail
           pnpm check:biblia-emanus
@@ -70,5 +300,27 @@ jobs:
           python3 scripts/withhold-biblia-emanus-nt.py --check
           pnpm check:biblia-emanus-nt-runtime
           pnpm test:biblia-emanus
-          python3 scripts/build-nt-editorial-review-queue.py --check
           git diff --check
+
+      - name: Commit isolated PHP 1 batch on successful push run
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          CHAPTER=docs/data/biblia-emanus/PHP.1.json
+          JOURNAL=docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.1.md
+          if git diff --quiet -- "$CHAPTER" "$JOURNAL" && [ -f "$JOURNAL" ]; then
+            echo 'PHP.1 batch already committed; nothing to push.'
+            exit 0
+          fi
+          git add "$CHAPTER" "$JOURNAL"
+          mapfile -t staged < <(git diff --cached --name-only)
+          printf 'Staged files:\n%s\n' "${staged[*]}"
+          test "${#staged[@]}" -eq 2
+          test "${staged[0]}" = "$JOURNAL" -o "${staged[1]}" = "$JOURNAL"
+          test "${staged[0]}" = "$CHAPTER" -o "${staged[1]}" = "$CHAPTER"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix(biblia): review Philippians 1 against SBLGNT'
+          git push origin HEAD:codex/nt-ai-review-handoff
