@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,23 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat prin revizie directă din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2ti-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 17,
       "reviewed": 17,
@@ -98,14 +98,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 17 versete pentru a elimina acordurile greșite, persoanele verbale eronate, fragmentele rupte și calcurile englezești.",
+        "Lista de vicii din 3:2–5, participiile care descriu femeile din 3:6–7 și adresarea la singular din 3:14–15 au fost restabilite după sintaxa greacă.",
+        "Afirmația despre Scriptură din 3:16–17 a fost redată complet, fără a introduce o glosă confesională în corpul versetului."
       ]
     },
     "theologicalContext": {
@@ -123,96 +123,136 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:9128b5cab618ff6098d94ed68e53b5a740051aaa853da0d59f2f90f8abd79867",
-    "contentDigest": "sha256:e2b1e1814657fb9a1f60914853ed9bb60bc37fb45a3af5cf3034866dd2885cee"
+    "textDigest": "sha256:51ebe976069f09f8f37b49a7fdbcdd213e776496711c00d6c6855af50069835e",
+    "contentDigest": "sha256:b95c00eeb4f58b5605df8700c1b0c02e8bb62d3c709cad9374bd2c202ee39295"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Dar să știi că în zilele din urmă vor veni vremuri grele."
+      "text": "Să știi însă aceasta: în zilele din urmă vor veni vremuri grele."
     },
     {
       "number": 2,
-      "text": "Căci oamenii vor fi iubitori de sine, iubitori de bani, lăudăroși, aroganți, blasfematori, neascultători de părinți, nerecunoscători, nesfinte,"
+      "text": "Căci oamenii vor fi iubitori de sine, iubitori de bani, lăudăroși, aroganți, hulitori, neascultători de părinți, nerecunoscători, lipsiți de sfințenie,"
     },
     {
       "number": 3,
-      "text": "fără afecțiune naturală, neiertători, calomniatori, fără stăpânire de sine, feroce, nu iubitori de bine,"
+      "text": "fără afecțiune firească, neîmpăciuitori, calomniatori, fără stăpânire de sine, cruzi, lipsiți de dragoste pentru bine,"
     },
     {
       "number": 4,
-      "text": "trădători, încăpățân, îngâmfați, iubitori de plăceri, mai degrabă decât iubitori de Dumnezeu,"
+      "text": "trădători, nechibzuiți, îngâmfați, iubitori de plăceri mai degrabă decât iubitori de Dumnezeu,"
     },
     {
       "number": 5,
-      "text": "care ținea o formă de evlavie, dar care îi lepădaseră puterea. Îndepărtează-te și de acestea."
+      "text": "având o formă de evlavie, dar negându-i puterea. Îndepărtează-te și de aceștia."
     },
     {
       "number": 6,
-      "text": "Căci unii dintre aceștia sunt oameni care se strecoară în case și răpesc femei credule captive, pline de păcate, conduși de diferite pofte,"
+      "text": "Căci dintre aceștia sunt cei care se strecoară în case și le iau captive pe niște femei naive, încărcate cu păcate și mânate de felurite pofte,"
     },
     {
       "number": 7,
-      "text": "Învățând mereu și neputând niciodată să ajungă la cunoașterea adevărului."
+      "text": "învățând mereu, dar neputând niciodată să ajungă la cunoașterea adevărului."
     },
     {
       "number": 8,
-      "text": "Așa cum Jannes și Iambres s-au împotrivit lui Moise, tot așa și aceștia se opun adevărului, oamenii corupți în minte, care cu privire la credință sunt respinși."
+      "text": "După cum Ianes și Iambres i s-au împotrivit lui Moise, tot așa și aceștia se împotrivesc adevărului: oameni cu mintea coruptă, respinși în ce privește credința."
     },
     {
       "number": 9,
-      "text": "Dar ei nu vor merge mai departe, căci nebunia lor va fi evidentă pentru toți oamenii, așa cum au fost și ei."
+      "text": "Dar nu vor mai înainta, căci nebunia lor va deveni vădită tuturor, așa cum a devenit și nebunia acelora."
     },
     {
       "number": 10,
-      "text": "Dar tu ai urmat învățătura mea, conduita mea, scopul, credința, răbdarea, dragostea, fermitatea,"
+      "text": "Tu însă ai urmărit îndeaproape învățătura mea, purtarea mea, scopul meu, credința mea, îndelunga mea răbdare, dragostea mea și perseverența mea,"
     },
     {
       "number": 11,
-      "text": "prigonirile și suferințele acelea care mi s-au întîmplat la Antiohia, Iconia și Listra. Am îndurat aceste prigoniri. Domnul m-a izbăvit de toate."
+      "text": "persecuțiile și suferințele care mi s-au întâmplat în Antiohia, în Iconia și în Listra — ce persecuții am îndurat! — și din toate m-a izbăvit Domnul."
     },
     {
       "number": 12,
-      "text": "Da, și toți cei care doresc să trăiască în Hristos Isus vor fi persecutați."
+      "text": "De altfel, toți cei care vor să trăiască evlavios în Hristos Isus vor fi persecutați."
     },
     {
       "number": 13,
-      "text": "Dar oamenii răi și impostorii vor deveni din ce în ce mai răi, înșelând și fiind înșelați."
+      "text": "Dar oamenii răi și impostorii vor deveni tot mai răi, înșelând și fiind înșelați."
     },
     {
       "number": 14,
-      "text": "Dar voi rămâneți în lucrurile pe care le-ați învățat și ați fost siguri, știind de la cine le-ați învățat."
+      "text": "Tu însă rămâi statornic în cele pe care le-ai învățat și de care ai fost convins, știind cine sunt cei de la care ai învățat acestea,"
     },
     {
       "number": 15,
-      "text": "Încă din copilărie, ați cunoscut Sfintele Scripturi care vă pot face înțelepți pentru mântuire prin credința care este în Hristos Isus."
+      "text": "și că, încă din copilărie, cunoști scrierile sfinte, care pot să te facă înțelept pentru mântuire prin credința în Hristos Isus."
     },
     {
       "number": 16,
-      "text": "Fiecare Scriptură este inspirată de Dumnezeu de folos ca să, să mustre, să îndrepte să instruiască în dreptate,"
+      "text": "Orice Scriptură este insuflată de Dumnezeu și folositoare pentru învățătură, pentru mustrare, pentru îndreptare și pentru instruirea în dreptate,"
     },
     {
       "number": 17,
-      "text": "ca fiecare persoană care aparține lui Dumnezeu să fie completă, complet echipată pentru orice lucrare bună."
+      "text": "pentru ca omul lui Dumnezeu să fie desăvârșit, pe deplin pregătit pentru orice lucrare bună."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "γυναικάρια",
+      "decision": "„niște femei naive”",
+      "alternatives": [
+        "„femei vulnerabile”",
+        "„femei slabe”"
+      ],
+      "reason": "Diminutivul are o nuanță depreciativă în context; redarea arată vulnerabilitatea exploatată de învățătorii falși fără a introduce o acuzație care nu apare explicit în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lexicul SBLGNT-2TI, contextul versetelor 6–7 și sursele auxiliare au fost confruntate direct."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: τίνων / τίνος",
+      "decision": "„știind cine sunt cei de la care ai învățat acestea”",
+      "alternatives": [
+        "TR-2TI din snapshot are singularul τίνος, „de la cine”."
+      ],
+      "reason": "SBLGNT are pluralul τίνων și trimite la mai multe persoane de la care Timotei a primit învățătura; româna face pluralul explicit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "πᾶσα γραφὴ θεόπνευστος καὶ ὠφέλιμος",
+      "decision": "„Orice Scriptură este insuflată de Dumnezeu și folositoare”",
+      "alternatives": [
+        "„Orice scriere insuflată de Dumnezeu este și folositoare”"
+      ],
+      "reason": "Greaca nu exprimă copula; redactarea păstrează construcția coordonată a celor două predicate și nu introduce în corpul versetului o explicație doctrinară suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT-2TI și contextul imediat au fost verificate direct."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală SBLGNT/TR: ἐλεγμόν / ἔλεγχον",
+      "decision": "„mustrare”",
+      "alternatives": [
+        "TR-2TI din snapshot citește ἔλεγχον, un termen înrudit pentru reprobarea sau dovedirea greșelii."
+      ],
+      "reason": "SBLGNT are ἐλεγμόν; „mustrare” redă nucleul semantic al corectării unei greșeli fără a transforma diferența lexicală într-o afirmație nouă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
