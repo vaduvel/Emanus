@@ -2,7 +2,8 @@
 """Audit de migrare pentru Osea–Maleahi din schema BE v2 veche.
 
 Nu promovează nimic. Verifică 67/67 capitole, egalitatea cu textul editorial
-materializat și reconstruiește proveniența surselor din arhivele pin-uite WEBU/WLC.
+materializat și inspectează proveniența WEBU/WLC. Un hash upstream schimbat nu
+este ascuns: auditul continuă, dar raportul devine neeligibil pentru promovare.
 """
 
 from __future__ import annotations
@@ -170,18 +171,25 @@ def main() -> None:
     expected_wlc = (upstream.get("hboWLC") or {}).get("sha256")
     if not HEX64.fullmatch(expected_web or "") or not HEX64.fullmatch(expected_wlc or ""):
         raise SystemExit("source-lock: lipsesc hash-urile arhivelor WEBU/WLC")
+
     actual_web = sha256_file(args.webu_zip)
     actual_wlc = sha256_file(args.wlc_zip)
-    if actual_web != expected_web:
-        raise SystemExit(f"WEBU archive SHA mismatch: {actual_web} != {expected_web}")
-    if actual_wlc != expected_wlc:
-        raise SystemExit(f"WLC archive SHA mismatch: {actual_wlc} != {expected_wlc}")
+    web_pin_match = actual_web == expected_web
+    wlc_pin_match = actual_wlc == expected_wlc
+    if not web_pin_match:
+        print(f"BLOCKER WEBU: hash curent {actual_web} != hash pin-uit {expected_web}")
+    if not wlc_pin_match:
+        print(f"BLOCKER WLC: hash curent {actual_wlc} != hash pin-uit {expected_wlc}")
 
     manifest_books = {book["id"]: book for book in manifest.get("books", []) if isinstance(book, dict) and "id" in book}
     report = {
         "translation": "BE",
         "sourceBranch": args.source_ref,
-        "archiveSha256": {"WEBU": actual_web, "WLC": actual_wlc},
+        "promotionEligible": False,
+        "archivePins": {
+            "WEBU": {"expectedSha256": expected_web, "actualSha256": actual_web, "matches": web_pin_match},
+            "WLC": {"expectedSha256": expected_wlc, "actualSha256": actual_wlc, "matches": wlc_pin_match},
+        },
         "books": [],
     }
 
@@ -225,21 +233,26 @@ def main() -> None:
                 "verses": book_verses,
                 "legacyAuditSnapshots": sorted(x for x in snapshots if isinstance(x, str)),
                 "chapterTextDigests": digests,
-                "WEBU": {"member": web_member, "sha256": member_sha256(web_zip, web_member)},
-                "WLC": {"member": wlc_member, "sha256": member_sha256(wlc_zip, wlc_member)},
+                "currentWEBU": {"member": web_member, "sha256": member_sha256(web_zip, web_member)},
+                "currentWLC": {"member": wlc_member, "sha256": member_sha256(wlc_zip, wlc_member)},
             })
             total_chapters += chapter_count
             total_verses += book_verses
-            print(f"OK {code}: {chapter_count} capitole / {book_verses} versete / text identic / WEBU+WLC găsite")
+            print(f"OK {code}: {chapter_count} capitole / {book_verses} versete / text identic / audit complet / surse curente găsite")
 
     if total_chapters != 67:
         raise SystemExit(f"Așteptam 67 capitole, găsite {total_chapters}")
+
     report["totals"] = {"books": 12, "chapters": total_chapters, "verses": total_verses}
+    report["promotionEligible"] = web_pin_match and wlc_pin_match
+    report["blockingReason"] = None if report["promotionEligible"] else "Arhivele upstream curente nu reproduc toate hash-urile istorice pin-uite; textul rămâne temporary-editorial până la recapturare/re-audit controlat."
 
     out = ROOT / "docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"AUDIT OK: 12/12 cărți, 67/67 capitole, {total_verses} versete. Raport: {out}")
+
+    status = "ELIGIBIL" if report["promotionEligible"] else "BLOCAT DE SOURCE-LOCK"
+    print(f"AUDIT CONTENT OK: 12/12 cărți, 67/67 capitole, {total_verses} versete; promovare: {status}. Raport: {out}")
 
 
 if __name__ == "__main__":
