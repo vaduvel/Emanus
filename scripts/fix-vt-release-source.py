@@ -19,18 +19,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BIBLE = ROOT / "packages" / "shared" / "src" / "bible"
-
 TARGET_GLOBS = ("deuteronom*.ts", "numeri*.ts")
 
 UNICODE_ESCAPE = re.compile(r"\\u([0-9a-fA-F]{4})")
 MALFORMED_ROMANIAN_I = re.compile(r"\\u00[ce](?=[^0-9a-fA-F])")
 MALFORMED_ROMANIAN_A_OR_I = re.compile(r"\\u00(?=[A-Za-zĂÂÎȘȚăâîșț])")
 
-MECHANICAL_ESCAPE_FIXES = {
-    r"\u015s": "ș",
-    r"\u015S": "Ș",
-    r"\u103": "ă",
-}
+MECHANICAL_ESCAPE_FIXES = {r"\u015s": "ș", r"\u015S": "Ș", r"\u103": "ă"}
 
 TOKEN_FIXES = {
     "Îltreag": "întreag", "îltreag": "întreag",
@@ -61,17 +56,12 @@ TOKEN_FIXES = {
 
 
 def malformed_a_or_i(text: str) -> str:
-    """Recuperează un \u00 trunchiat folosind poziția în cuvânt.
-
-    În ortografia română modernă, sunetul se scrie în mod normal cu „â” în
-    interiorul cuvântului și cu „î” la început. Este exact tiparul defectului
-    de serializare observat (cuv\u00nt -> cuvânt, \u00nchinare -> închinare).
-    """
+    # Recuperează un prefix Unicode trunchiat după poziția în cuvânt:
+    # în interior -> â; la început -> î.
     def repl(match: re.Match[str]) -> str:
         pos = match.start()
         previous = text[pos - 1] if pos > 0 else ""
         return "â" if previous.isalpha() else "î"
-
     return MALFORMED_ROMANIAN_A_OR_I.sub(repl, text)
 
 
@@ -100,8 +90,7 @@ def unescaped_quote_positions(line: str) -> list[int]:
 
 
 def fix_inner_quotes(line: str) -> str:
-    stripped = line.lstrip()
-    if not stripped.startswith('"'):
+    if not line.lstrip().startswith('"'):
         return line
     positions = unescaped_quote_positions(line)
     if len(positions) <= 2:
@@ -143,8 +132,8 @@ def main() -> None:
 
     changed: list[Path] = []
     suspicious: dict[Path, set[str]] = {}
-
-    for path in targets():
+    all_targets = targets()
+    for path in all_targets:
         before, after = normalize(path)
         if before != after:
             changed.append(path)
@@ -166,7 +155,7 @@ def main() -> None:
         raise SystemExit(1)
 
     action = "normalizate" if args.write else "verificate"
-    print(f"VT legacy: {len(targets())} fișiere {action}; {len(changed)} au avut modificări.")
+    print(f"VT legacy: {len(all_targets)} fișiere {action}; {len(changed)} au avut modificări.")
 
 
 if __name__ == "__main__":
