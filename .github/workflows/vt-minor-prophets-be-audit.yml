@@ -21,17 +21,97 @@ jobs:
       - name: Fetch legacy BE source branch
         run: git fetch origin agent/biblia-emanus-ot-and-apocrypha:refs/remotes/origin/agent/biblia-emanus-ot-and-apocrypha
 
-      - name: Download pinned source archives
+      - name: Download current source archives
         run: |
           set -euo pipefail
-          curl --fail --location --retry 3 --output /tmp/engwebp_usfm.zip https://ebible.org/Scriptures/engwebp_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
           curl --fail --location --retry 3 --output /tmp/hboWLC_usfm.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
+
+      - name: Recover exact pinned WEBU snapshot when possible
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import shutil
+          import urllib.parse
+          import urllib.request
+          from pathlib import Path
+
+          expected = '9b4330ba6baf9bd5fa8ea63a8ff255c9ab326da8c843f0355c23734e61ee6276'
+          current = Path('/tmp/engwebp_current.zip')
+          target = Path('/tmp/engwebp_for_audit.zip')
+
+          def digest(path):
+              return hashlib.sha256(path.read_bytes()).hexdigest()
+
+          current_sha = digest(current)
+          print(f'WEBU current SHA256: {current_sha}')
+          if current_sha == expected:
+              shutil.copyfile(current, target)
+              print('Arhiva curentă reproduce pin-ul istoric.')
+              raise SystemExit(0)
+
+          captures = []
+          queries = [
+              'https://ebible.org/Scriptures/engwebp_usfm.zip',
+              'http://ebible.org/Scriptures/engwebp_usfm.zip',
+          ]
+          for original_url in queries:
+              params = urllib.parse.urlencode({
+                  'url': original_url,
+                  'from': '20260720',
+                  'to': '20260804',
+                  'output': 'json',
+                  'filter': 'statuscode:200',
+                  'collapse': 'digest',
+              })
+              cdx = 'https://web.archive.org/cdx/search/cdx?' + params
+              try:
+                  req = urllib.request.Request(cdx, headers={'User-Agent': 'Emanus-BE-source-recovery/1.0'})
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      rows = json.load(response)
+              except Exception as exc:
+                  print(f'Wayback CDX indisponibil pentru {original_url}: {exc}')
+                  continue
+              if not rows:
+                  continue
+              header = rows[0]
+              for row in rows[1:]:
+                  item = dict(zip(header, row))
+                  captures.append((item.get('timestamp', ''), item.get('original', original_url), item.get('digest', '')))
+
+          seen = set()
+          for timestamp, original, wayback_digest in sorted(captures):
+              if not timestamp or timestamp in seen:
+                  continue
+              seen.add(timestamp)
+              archived = f'https://web.archive.org/web/{timestamp}id_/{original}'
+              tmp = Path(f'/tmp/engwebp_wayback_{timestamp}.zip')
+              try:
+                  req = urllib.request.Request(archived, headers={'User-Agent': 'Emanus-BE-source-recovery/1.0'})
+                  with urllib.request.urlopen(req, timeout=60) as response, tmp.open('wb') as out:
+                      shutil.copyfileobj(response, out)
+              except Exception as exc:
+                  print(f'Nu pot descărca captura {timestamp}: {exc}')
+                  continue
+              sha = digest(tmp)
+              print(f'Wayback {timestamp}: sha256={sha} digest={wayback_digest}')
+              if sha == expected:
+                  shutil.copyfile(tmp, target)
+                  print(f'RECUPERAT exact snapshotul WEBU pin-uit din captura {timestamp}.')
+                  raise SystemExit(0)
+
+          # Auditul de conținut continuă cu arhiva curentă, dar raportul va rămâne
+          # promotionEligible=false deoarece hash-ul istoric nu a fost recuperat.
+          shutil.copyfile(current, target)
+          print('Snapshotul WEBU istoric nu a fost recuperat; folosesc current numai pentru auditul structural, nu pentru promovare.')
+          PY
 
       - name: Audit 12 books / 67 chapters
         run: |
           python3 scripts/audit-minor-prophets-be-candidates.py \
             --source-ref origin/agent/biblia-emanus-ot-and-apocrypha \
-            --webu-zip /tmp/engwebp_usfm.zip \
+            --webu-zip /tmp/engwebp_for_audit.zip \
             --wlc-zip /tmp/hboWLC_usfm.zip
 
       - name: Commit evidence only after audit passes
