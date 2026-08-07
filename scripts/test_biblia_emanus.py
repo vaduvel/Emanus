@@ -108,6 +108,14 @@ class BibliaEmanusValidatorTests(unittest.TestCase):
                 self.ledger,
             )
 
+    def test_manifest_allows_a_traced_ai_nt_reviewer_type(self) -> None:
+        self.assertEqual(
+            self.manifest["automatedPublicationGate"]["newTestamentEditorialApproval"]["reviewerType"],
+            "ai",
+        )
+        paths = validator.validate_manifest(self.manifest)
+        self.assertEqual(paths["sourceLock"], validator.DATA_DIR / "source-lock.json")
+
     def test_seal_preserves_compact_json_style(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "chapter.json"

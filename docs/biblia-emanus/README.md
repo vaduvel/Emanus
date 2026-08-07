@@ -11,7 +11,7 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 - textul existent RCCV nu este modificat de această ramură;
 - aprobarea AI la nivel de capitol nu este suficientă pentru Noul Testament;
 - Noul Testament rămâne nepublicabil până când toate cele 7.941 de versete au dovezi editoriale individuale în `NT-EDITORIAL-APPROVAL.json`;
-- un capitol NT devine public numai după fixarea surselor, revizia editorială umană per-verset și trecerea porții descrise în `AUTOMATED-PUBLICATION.md`.
+- un capitol NT devine public numai după fixarea surselor, revizia editorială per-verset identificată (umană sau AI trasabilă) și trecerea porții descrise în `AUTOMATED-PUBLICATION.md`.
 
 ## Surse de lucru
 
@@ -45,7 +45,7 @@ Biblia Emanus este o traducere românească nouă, deschisă și redactată cu d
 8. se rezolvă toate notele și variantele textuale critice;
 9. se recalculează comparațiile deterministe din snapshoturile fixate;
 10. auditul AI este legat prin SHA-256 de textul și sursele exacte, dar rămâne dovadă de proces, nu de corectitudine semantică;
-11. pentru NT, un reviewer editorial uman completează registrul per-verset: digesturi ale surselor, ancore grecești/românești și justificarea individuală;
+11. pentru NT, un reviewer editorial identificat completează registrul per-verset: digesturi ale surselor, ancore grecești/românești și justificarea individuală; un reviewer AI declară și sistemul, plus identificatorul rulării;
 12. numai când registrul complet și toate controalele sunt `approved`, capitolul NT poate trece la `published` și `public: true`.
 
 ## Licență

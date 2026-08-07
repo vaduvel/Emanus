@@ -35,6 +35,9 @@ NT_BOOK_IDS = {
 APPROVAL_FILENAME = "NT-EDITORIAL-APPROVAL.json"
 APPROVAL_METHOD = "verse-by-verse-source-and-romanian-benchmark"
 APPROVAL_ROLE = "editorial-reviewer"
+APPROVAL_REVIEWER_TYPES = {"human", "ai"}
+MISSING_PINNED_SOURCE_AVAILABILITY = "missing-in-pinned-source"
+REQUIRED_PINNED_BENCHMARK_ID = "BTF"
 ISO_DATE_PATTERN = re.compile(r"^20[0-9]{2}-[01][0-9]-[0-3][0-9]$")
 GREEK_LETTER = re.compile(r"[\u0370-\u03ff\u1f00-\u1fff]")
 WORD = re.compile(r"[^\W\d_]+", re.UNICODE)
@@ -77,6 +80,29 @@ def _chapter_id(book_id: str, chapter: int) -> str:
 
 def _as_reference_strings(references: Iterable[tuple[int, int]]) -> list[str]:
     return [f"{chapter}:{verse}" for chapter, verse in references]
+
+
+def _allows_missing_pinned_benchmark(
+    source_data: Mapping[str, Any],
+    lock_id: str,
+) -> bool:
+    """Return whether a declared lacuna can be recorded for this lock.
+
+    A missing benchmark is an editorial fact, not a way to downgrade the
+    source evidence.  The Greek source, WEBU, and BTF must always be present;
+    a non-BTF benchmark can be lacunar only when the already-validated source
+    lock identifies it as such.
+    """
+    files = source_data.get("files")
+    if not isinstance(files, Mapping):
+        return False
+    record = files.get(lock_id)
+    return bool(
+        isinstance(record, Mapping)
+        and record.get("role") == "benchmark"
+        and isinstance(record.get("benchmarkId"), str)
+        and record["benchmarkId"] != REQUIRED_PINNED_BENCHMARK_ID
+    )
 
 
 def approval_path_for(data_dir: Path) -> Path:
@@ -257,7 +283,9 @@ def _expected_locked_evidence(
     book_id: str,
     chapter: int,
     verse: int,
-) -> tuple[list[str], str]:
+    *,
+    allow_missing_pinned_benchmark: bool = False,
+) -> tuple[list[str], str | None, list[str]]:
     try:
         source_references = source_data["source_references_for_target"](
             lock_id, book_id, chapter, verse
@@ -271,15 +299,37 @@ def _expected_locked_evidence(
     if not isinstance(texts, Mapping):
         fail(f"{book_id}.{chapter}.{verse}: textul sursei fixate {lock_id} lipsește")
     values: list[str] = []
+    missing: list[tuple[int, int]] = []
     for source_reference in source_references:
         value = texts.get(source_reference)
         if not isinstance(value, str) or not value:
-            fail(
-                f"{book_id}.{chapter}.{verse}: referința sursei {lock_id} "
-                f"{source_reference[0]}:{source_reference[1]} lipsește"
-            )
+            missing.append(source_reference)
+            continue
         values.append(value)
-    return _as_reference_strings(source_references), sha256_text("\n".join(values))
+    expected_references = _as_reference_strings(source_references)
+    if not missing:
+        return expected_references, sha256_text("\n".join(values)), []
+
+    if not (
+        allow_missing_pinned_benchmark
+        and _allows_missing_pinned_benchmark(source_data, lock_id)
+    ):
+        first = missing[0]
+        fail(
+            f"{book_id}.{chapter}.{verse}: referința sursei {lock_id} "
+            f"{first[0]}:{first[1]} lipsește; această sursă trebuie să aibă text fixat"
+        )
+
+    files = source_data.get("files")
+    record = files.get(lock_id) if isinstance(files, Mapping) else None
+    declared = record.get("missingTargetReferences") if isinstance(record, Mapping) else None
+    target_reference = f"{chapter}:{verse}"
+    if not isinstance(declared, list) or target_reference not in declared:
+        fail(
+            f"{book_id}.{chapter}.{verse}: lacuna etalonului {lock_id} nu este declarată "
+            "în snapshotul fixat"
+        )
+    return expected_references, None, _as_reference_strings(missing)
 
 
 def _validate_locked_source_evidence(
@@ -290,35 +340,61 @@ def _validate_locked_source_evidence(
     book_id: str,
     chapter: int,
     verse: int,
+    *,
+    allow_missing_pinned_benchmark: bool = False,
 ) -> None:
     if not isinstance(entry, Mapping):
         fail(f"{owner}: dovada pentru {lock_id} trebuie să fie obiect")
-    expected_references, expected_digest = _expected_locked_evidence(
-        source_data, lock_id, book_id, chapter, verse
+    expected_references, expected_digest, missing_references = _expected_locked_evidence(
+        source_data,
+        lock_id,
+        book_id,
+        chapter,
+        verse,
+        allow_missing_pinned_benchmark=allow_missing_pinned_benchmark,
     )
     if entry.get("lockId") != lock_id:
         fail(f"{owner}: lockId nu corespunde sursei fixate {lock_id}")
     if entry.get("references") != expected_references:
         fail(f"{owner}: referințele nu corespund mapării fixate pentru {lock_id}")
+    if missing_references:
+        expected_keys = {"lockId", "references", "availability", "missingReferences"}
+        if set(entry) != expected_keys:
+            fail(f"{owner}: dovada unei lacune trebuie să conțină exact availability și missingReferences")
+        if entry.get("availability") != MISSING_PINNED_SOURCE_AVAILABILITY:
+            fail(f"{owner}: availability trebuie să declare {MISSING_PINNED_SOURCE_AVAILABILITY}")
+        if entry.get("missingReferences") != missing_references:
+            fail(f"{owner}: missingReferences nu corespunde lacunei din snapshotul fixat")
+        return
+    if entry.get("availability") == MISSING_PINNED_SOURCE_AVAILABILITY:
+        fail(
+            f"{owner}: nu poate declara {MISSING_PINNED_SOURCE_AVAILABILITY} "
+            "când snapshotul fixat conține text"
+        )
+    if set(entry) != {"lockId", "references", "textDigest"}:
+        fail(f"{owner}: dovada sursei disponibile trebuie să conțină exact textDigest")
     if entry.get("textDigest") != expected_digest:
         fail(f"{owner}: digestul textului nu corespunde sursei fixate {lock_id}")
 
 
-def _validate_external_ntr_evidence(
+def _validate_external_benchmark_evidence(
     entry: Any,
     owner: str,
+    benchmark_id: str,
     chapter: int,
     verse: int,
 ) -> None:
     if not isinstance(entry, Mapping):
-        fail(f"{owner}: dovada NTR externă trebuie să fie obiect")
+        fail(f"{owner}: dovada externă pentru {benchmark_id} trebuie să fie obiect")
+    if set(entry) != {"references", "mode", "referenceUrl", "consultedOn"}:
+        fail(f"{owner}: dovada externă pentru {benchmark_id} are câmpuri invalide")
     if entry.get("references") != [f"{chapter}:{verse}"]:
-        fail(f"{owner}: referința NTR trebuie să indice versetul public curent")
+        fail(f"{owner}: referința externă trebuie să indice versetul public curent")
     if entry.get("mode") != "external-comparison-only":
-        fail(f"{owner}: NTR poate fi folosit doar external-comparison-only")
+        fail(f"{owner}: {benchmark_id} poate fi folosit doar external-comparison-only")
     url = entry.get("referenceUrl")
     if not isinstance(url, str) or not url.startswith("https://"):
-        fail(f"{owner}: URL-ul NTR trebuie să fie HTTPS")
+        fail(f"{owner}: URL-ul extern trebuie să fie HTTPS")
     _parse_iso_date(entry.get("consultedOn"), f"{owner}.consultedOn")
 
 
@@ -452,8 +528,13 @@ def validate_nt_editorial_approval(
     else:
         if not isinstance(approval_meta.get("reviewerId"), str) or not approval_meta["reviewerId"].strip():
             errors.append("aprobarea editorială trebuie să identifice reviewerId")
-        if approval_meta.get("reviewerType") != "human":
-            errors.append("aprobarea editorială NT trebuie emisă de un reviewer uman identificat")
+        reviewer_type = approval_meta.get("reviewerType")
+        if reviewer_type not in APPROVAL_REVIEWER_TYPES:
+            errors.append("aprobarea editorială NT trebuie să declare reviewerType human sau ai")
+        elif reviewer_type == "ai":
+            for key in ("reviewerSystem", "reviewerRunId"):
+                if not isinstance(approval_meta.get(key), str) or not approval_meta[key].strip():
+                    errors.append(f"aprobarea AI trebuie să declare {key} trasabil")
         if approval_meta.get("reviewerRole") != APPROVAL_ROLE:
             errors.append(f"aprobarea editorială trebuie să aibă reviewerRole {APPROVAL_ROLE}")
         if approval_meta.get("method") != APPROVAL_METHOD:
@@ -519,20 +600,33 @@ def validate_nt_editorial_approval(
                 source_data["files"][lock_id]["benchmarkId"]: lock_id
                 for lock_id in book["benchmarkLockIds"]
             }
-            if set(benchmarks) != set(expected_benchmark_ids).union({"NTR"}):
+            if REQUIRED_PINNED_BENCHMARK_ID not in expected_benchmark_ids:
+                fail(f"{owner}.sources.benchmarks: etalonul fixat BTF este obligatoriu")
+            external_benchmark_ids = set(book.get("externalBenchmarkIds", []))
+            if set(benchmarks) != set(expected_benchmark_ids).union(external_benchmark_ids):
                 fail(f"{owner}.sources.benchmarks: etaloanele nu corespund surselor fixate")
             for benchmark_id, lock_id in expected_benchmark_ids.items():
                 _validate_locked_source_evidence(
                     benchmarks.get(benchmark_id),
                     f"{owner}.sources.benchmarks.{benchmark_id}",
                     source_data, lock_id, book_id, chapter, verse,
+                    allow_missing_pinned_benchmark=_allows_missing_pinned_benchmark(
+                        source_data, lock_id
+                    ),
                 )
-            _validate_external_ntr_evidence(
-                benchmarks.get("NTR"), f"{owner}.sources.benchmarks.NTR", chapter, verse
-            )
-            greek_refs, _ = _expected_locked_evidence(
+            for benchmark_id in external_benchmark_ids:
+                _validate_external_benchmark_evidence(
+                    benchmarks.get(benchmark_id),
+                    f"{owner}.sources.benchmarks.{benchmark_id}",
+                    benchmark_id,
+                    chapter,
+                    verse,
+                )
+            greek_refs, greek_digest, greek_missing = _expected_locked_evidence(
                 source_data, book["originalLockId"], book_id, chapter, verse
             )
+            if greek_digest is None or greek_missing:
+                fail(f"{owner}.sources.sblgnt: textul grecesc fixat lipsește")
             greek_text = "\n".join(
                 source_data["texts"][book["originalLockId"]][tuple(map(int, item.split(":")))]
                 for item in greek_refs

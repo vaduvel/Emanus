@@ -339,7 +339,7 @@ Motorul NU POATE demonstra singur:
 - că un text este pastoral adecvat în toate situațiile;
 - că trecerea unui prag statistic înseamnă fidelitate.
 
-Aceste aspecte cer justificare editorială. Pentru Noul Testament, politica repository-ului cere și o aprobare editorială umană identificată, fără a confunda aprobarea cu o garanție teologică sau academică absolută.
+Aceste aspecte cer justificare editorială. Pentru Noul Testament, politica repository-ului cere o aprobare editorială identificată, umană sau AI trasabilă; această identificare nu se confundă cu o garanție teologică sau academică absolută.
 
 ### 11.4 Registrul obligatoriu de aprobare editorială per-verset
 
@@ -348,10 +348,11 @@ Pentru NT, `NT-EDITORIAL-APPROVAL.json` este artefact obligatoriu. El TREBUIE s�
 Fiecare intrare TREBUIE să conțină:
 
 - digestul textului românesc publicat;
-- referințele și digesturile SBLGNT, WEBU, Cornilescu 1924 și BTF, conform mapării fixate;
-- dovada consultației NTR externe, fără a stoca textul protejat;
+- referințele și digesturile SBLGNT, WEBU, BTF și ale fiecărui etalon fixat disponibil, conform mapării fixate;
+- pentru un etalon fixat non-BTF cu lacună declarată, `availability: "missing-in-pinned-source"` și exact referințele lipsă din snapshot, fără un digest inventat;
+- dovada fiecărui etalon extern cerut de `source-lock.json`, fără a stoca text protejat;
 - o ancoră grecească din SBLGNT, o ancoră din redarea românească și justificări individuale;
-- aprobarea unui reviewer uman cu rol editorial.
+- aprobarea unui reviewer cu rol editorial; dacă este AI, `reviewerSystem` și `reviewerRunId` trebuie să identifice rularea.
 
 Justificările duplicate sau frazele generale repetate între capitole NU sunt audit semantic. AI poate asista procesul, dar metadatele sale de capitol nu înlocuiesc acest registru. Lipsa, acoperirea incompletă, un digest inconsistent sau un șablon detectat blochează `approved`, `published`, sigilarea și materializarea aplicației.
 
@@ -363,7 +364,7 @@ Oricare dintre următoarele stări este blocantă:
 - notă `reviewRequired` nerezolvată;
 - omisiune sau adaos neexplicat;
 - contradicție între text și motivarea deciziei;
-- etalon lipsă sau folosit în alt mod decât `comparison-only`;
+- SBLGNT, WEBU sau BTF lipsă; ori o lacună de etalon non-BTF nedeclarată, cu referințe greșite sau prezentată fals ca text disponibil;
 - digest învechit;
 - abatere de la glosar sau onomastică fără justificare;
 - afirmație doctrinară introdusă în traducere fără suport lexical și sintactic.

@@ -796,6 +796,7 @@ class BibliaEmanusNewTestamentTests(unittest.TestCase):
                 "BTF-MAT": {
                     "bookId": "MAT",
                     "role": "benchmark",
+                    "benchmarkId": "BTF",
                     "missingTargetReferences": ["1:2"],
                 },
             },
@@ -812,6 +813,83 @@ class BibliaEmanusNewTestamentTests(unittest.TestCase):
             validator.validate_source_coverage(
                 {"MAT.1": {"expectedVerses": 2, "verseNumbers": [1, 2]}}, source_data
             )
+
+    def test_declared_non_btf_pinned_benchmark_gap_can_be_covered_by_the_register(self) -> None:
+        source_data = {
+            "books": {
+                "MAT": {
+                    "originalLockId": "SBLGNT-MAT",
+                    "supplementalOriginalLockIds": ["TR-MAT"],
+                }
+            },
+            "files": {
+                "SBLGNT-MAT": {"bookId": "MAT", "role": "original"},
+                "TR-MAT": {"bookId": "MAT", "role": "original-supplement"},
+                "BTF-MAT": {
+                    "bookId": "MAT",
+                    "role": "benchmark",
+                    "benchmarkId": "BTF",
+                    "missingTargetReferences": [],
+                },
+                "CORNILESCU1924-MAT": {
+                    "bookId": "MAT",
+                    "role": "benchmark",
+                    "benchmarkId": "CORNILESCU-1924",
+                    "missingTargetReferences": ["1:2"],
+                },
+            },
+            "references": {
+                "SBLGNT-MAT": {(1, 1), (1, 2)},
+                "TR-MAT": {(1, 1), (1, 2)},
+                "BTF-MAT": {(1, 1), (1, 2)},
+                "CORNILESCU1924-MAT": {(1, 1)},
+            },
+            "rules": [],
+        }
+        validator.validate_source_coverage(
+            {"MAT.1": {"expectedVerses": 2, "verseNumbers": [1, 2]}}, source_data
+        )
+
+    def test_pinned_benchmark_comparison_skips_declared_non_btf_lacuna(self) -> None:
+        source_data = {
+            "books": {"MAT": {"benchmarkLockIds": ["BTF-MAT", "CORNILESCU1924-MAT"]}},
+            "files": {
+                "BTF-MAT": {
+                    "role": "benchmark",
+                    "benchmarkId": "BTF",
+                    "missingTargetReferences": [],
+                },
+                "CORNILESCU1924-MAT": {
+                    "role": "benchmark",
+                    "benchmarkId": "CORNILESCU-1924",
+                    "missingTargetReferences": ["1:2"],
+                },
+            },
+            "texts": {
+                "BTF-MAT": {(1, 1): "Text românesc complet.", (1, 2): "Alt text românesc."},
+                "CORNILESCU1924-MAT": {(1, 1): "Text românesc complet."},
+            },
+            "rules": [],
+            "thresholds": {
+                "minimumLengthRatio": 0.1,
+                "maximumLengthRatio": 10.0,
+                "minimumWordsForTokenOverlap": 99,
+                "minimumRomanianTokenOverlap": 0.0,
+                "maximumChapterSequenceSimilarity": 1.1,
+            },
+        }
+        data = {
+            "bookId": "MAT",
+            "chapter": 1,
+            "verses": [
+                {"number": 1, "text": "Text românesc complet."},
+                {"number": 2, "text": "Alt text românesc."},
+            ],
+        }
+        self.assertEqual(
+            validator.validate_pinned_benchmark_comparison(Path("MAT.1.json"), data, source_data),
+            2,
+        )
 
     def run_synthetic_nt(self, chapter_ids: list[str]) -> tuple[int, str, str]:
         with tempfile.TemporaryDirectory() as directory:

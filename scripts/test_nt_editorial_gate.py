@@ -60,8 +60,16 @@ def fixture_context() -> tuple[dict, dict, dict]:
             }
         },
         "files": {
-            "CORNILESCU1924-MAT": {"benchmarkId": "CORNILESCU-1924"},
-            "BTF-MAT": {"benchmarkId": "BTF"},
+            "CORNILESCU1924-MAT": {
+                "role": "benchmark",
+                "benchmarkId": "CORNILESCU-1924",
+                "missingTargetReferences": [],
+            },
+            "BTF-MAT": {
+                "role": "benchmark",
+                "benchmarkId": "BTF",
+                "missingTargetReferences": [],
+            },
         },
         "texts": {
             "SBLGNT-MAT": {
@@ -91,16 +99,39 @@ def fixture_context() -> tuple[dict, dict, dict]:
 
 
 def locked_evidence(source_data: dict, lock_id: str, verse: int) -> dict:
-    text = source_data["texts"][lock_id][(1, verse)]
-    return {
+    references = source_data["source_references_for_target"](lock_id, "MAT", 1, verse)
+    rendered_references = [f"{chapter}:{number}" for chapter, number in references]
+    missing = [
+        f"{chapter}:{number}"
+        for chapter, number in references
+        if not source_data["texts"][lock_id].get((chapter, number))
+    ]
+    evidence = {
         "lockId": lock_id,
+        "references": rendered_references,
+    }
+    if missing:
+        return {
+            **evidence,
+            "availability": "missing-in-pinned-source",
+            "missingReferences": missing,
+        }
+    text = "\n".join(source_data["texts"][lock_id][reference] for reference in references)
+    return {**evidence, "textDigest": gate.sha256_text(text)}
+
+
+def external_evidence(benchmark_id: str, verse: int) -> dict:
+    return {
         "references": [f"1:{verse}"],
-        "textDigest": gate.sha256_text(text),
+        "mode": "external-comparison-only",
+        "referenceUrl": f"https://example.test/{benchmark_id}/MAT/1",
+        "consultedOn": "2026-08-07",
     }
 
 
-def valid_approval(chapters: dict, source_data: dict) -> dict:
+def valid_approval(chapters: dict, source_data: dict, reviewer_type: str = "human") -> dict:
     entries = []
+    book = source_data["books"]["MAT"]
     for verse_data in chapters["MAT.1"]["verses"]:
         verse = verse_data["number"]
         target = verse_data["text"]
@@ -115,16 +146,13 @@ def valid_approval(chapters: dict, source_data: dict) -> dict:
                     "sblgnt": locked_evidence(source_data, "SBLGNT-MAT", verse),
                     "webu": locked_evidence(source_data, "WEBP-MAT", verse),
                     "benchmarks": {
-                        "CORNILESCU-1924": locked_evidence(
-                            source_data, "CORNILESCU1924-MAT", verse
-                        ),
-                        "BTF": locked_evidence(source_data, "BTF-MAT", verse),
-                        "NTR": {
-                            "references": [f"1:{verse}"],
-                            "mode": "external-comparison-only",
-                            "referenceUrl": "https://example.test/ntr/MAT/1",
-                            "consultedOn": "2026-08-07",
-                        },
+                        source_data["files"][lock_id]["benchmarkId"]: locked_evidence(
+                            source_data, lock_id, verse
+                        )
+                        for lock_id in book["benchmarkLockIds"]
+                    } | {
+                        benchmark_id: external_evidence(benchmark_id, verse)
+                        for benchmark_id in book["externalBenchmarkIds"]
                     },
                 },
                 "decisions": {
@@ -157,23 +185,57 @@ def valid_approval(chapters: dict, source_data: dict) -> dict:
         f"MAT.1.{item['number']}": item["text"]
         for item in chapters["MAT.1"]["verses"]
     }
+    approval_meta = {
+        "reviewerId": "editorial-fixture",
+        "reviewerType": reviewer_type,
+        "reviewerRole": "editorial-reviewer",
+        "method": "verse-by-verse-source-and-romanian-benchmark",
+        "declaration": (
+            "Am revizuit individual fiecare verset din acest fixture în sursele "
+            "fixate și am verificat justificările atașate fiecărei decizii."
+        ),
+    }
+    if reviewer_type == "ai":
+        approval_meta.update(
+            {
+                "reviewerSystem": "codex-fixture",
+                "reviewerRunId": "fixture-run-2026-08-07",
+            }
+        )
     return {
         "schemaVersion": 1,
         "status": "approved",
         "approvedOn": "2026-08-07",
         "corpusDigest": gate.nt_corpus_digest(texts, source_data),
-        "approval": {
-            "reviewerId": "editorial-fixture",
-            "reviewerType": "human",
-            "reviewerRole": "editorial-reviewer",
-            "method": "verse-by-verse-source-and-romanian-benchmark",
-            "declaration": (
-                "Am revizuit individual fiecare verset din acest fixture în sursele "
-                "fixate și am verificat justificările atașate fiecărei decizii."
-            ),
-        },
+        "approval": approval_meta,
         "verses": entries,
     }
+
+
+def lacunary_pinned_benchmark_context() -> tuple[dict, dict, dict]:
+    chapters, source_data, ledger = fixture_context()
+    source_data = copy.deepcopy(source_data)
+    source_data["texts"]["CORNILESCU1924-MAT"].pop((1, 2))
+    source_data["files"]["CORNILESCU1924-MAT"]["missingTargetReferences"] = ["1:2"]
+    return chapters, source_data, ledger
+
+
+def external_cornilescu_benchmark_context() -> tuple[dict, dict, dict]:
+    """Mirror the JHN source-lock arrangement without using live corpus text."""
+    chapters, source_data, ledger = fixture_context()
+    source_data = copy.deepcopy(source_data)
+    source_data["books"]["MAT"]["benchmarkLockIds"] = ["BTF-MAT", "BL-MAT"]
+    source_data["books"]["MAT"]["externalBenchmarkIds"] = ["CORNILESCU-1924", "NTR"]
+    source_data["files"]["BL-MAT"] = {
+        "role": "benchmark",
+        "benchmarkId": "BIBLIA-LIBERA",
+        "missingTargetReferences": [],
+    }
+    source_data["texts"]["BL-MAT"] = {
+        (1, 1): "Cartea despre Isus este aici.",
+        (1, 2): "Iacov l-a născut pe Iosif, fiul său.",
+    }
+    return chapters, source_data, ledger
 
 
 def confirmed_corruption_fixture() -> dict[str, dict]:
@@ -240,6 +302,24 @@ class NewTestamentEditorialGateTests(unittest.TestCase):
         )
         self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema")
         self.assertEqual(schema["properties"]["verses"]["minItems"], 7941)
+        approval = schema["$defs"]["approval"]
+        self.assertEqual(approval["properties"]["reviewerType"]["enum"], ["human", "ai"])
+        self.assertIn("reviewerRunId", approval["allOf"][0]["then"]["required"])
+        locked_source = schema["$defs"]["lockedSource"]
+        self.assertIn({"$ref": "#/$defs/missingLockedSource"}, locked_source["oneOf"])
+        missing = schema["$defs"]["missingLockedSource"]
+        self.assertEqual(missing["properties"]["availability"]["const"], "missing-in-pinned-source")
+        benchmarks = schema["$defs"]["verseEvidence"]["properties"]["sources"]["properties"]["benchmarks"]
+        self.assertIn("additionalProperties", benchmarks)
+        self.assertNotIn("CORNILESCU-1924", benchmarks.get("properties", {}))
+        self.assertEqual(benchmarks["required"], ["BTF"])
+        self.assertEqual(
+            benchmarks["properties"]["BTF"]["$ref"],
+            "#/$defs/availableLockedSource",
+        )
+        sources = schema["$defs"]["verseEvidence"]["properties"]["sources"]["properties"]
+        self.assertEqual(sources["sblgnt"]["$ref"], "#/$defs/availableLockedSource")
+        self.assertEqual(sources["webu"]["$ref"], "#/$defs/availableLockedSource")
 
     def test_known_publication_corruptions_are_regressions(self) -> None:
         findings = {
@@ -302,6 +382,37 @@ class NewTestamentEditorialGateTests(unittest.TestCase):
         self.assertEqual(summary.verses, 2)
         self.assertTrue(summary.corpus_digest.startswith("sha256:"))
 
+    def test_traced_ai_reviewer_is_accepted(self) -> None:
+        chapters, source_data, ledger = fixture_context()
+        approval = valid_approval(chapters, source_data, reviewer_type="ai")
+        with tempfile.TemporaryDirectory() as directory:
+            approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
+            summary = gate.validate_nt_editorial_approval(
+                Path(directory) / "docs" / "data" / "biblia-emanus",
+                source_data,
+                ledger,
+                chapters,
+                approval_path,
+            )
+        self.assertEqual(summary.verses, 2)
+
+    def test_ai_reviewer_requires_trace_identifiers(self) -> None:
+        chapters, source_data, ledger = fixture_context()
+        approval = valid_approval(chapters, source_data)
+        approval["approval"]["reviewerType"] = "ai"
+        with tempfile.TemporaryDirectory() as directory:
+            approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
+            with self.assertRaisesRegex(gate.EditorialGateError, "reviewerSystem trasabil"):
+                gate.validate_nt_editorial_approval(
+                    Path(directory) / "docs" / "data" / "biblia-emanus",
+                    source_data,
+                    ledger,
+                    chapters,
+                    approval_path,
+                )
+
     def test_source_digest_mismatch_blocks_approval(self) -> None:
         chapters, source_data, ledger = fixture_context()
         approval = valid_approval(chapters, source_data)
@@ -310,6 +421,99 @@ class NewTestamentEditorialGateTests(unittest.TestCase):
             approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
             approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
             with self.assertRaisesRegex(gate.EditorialGateError, "digestul textului nu corespunde"):
+                gate.validate_nt_editorial_approval(
+                    Path(directory) / "docs" / "data" / "biblia-emanus",
+                    source_data,
+                    ledger,
+                    chapters,
+                    approval_path,
+                )
+
+    def test_declared_lacunary_non_btf_benchmark_is_source_bound(self) -> None:
+        chapters, source_data, ledger = lacunary_pinned_benchmark_context()
+        approval = valid_approval(chapters, source_data)
+        evidence = approval["verses"][1]["sources"]["benchmarks"]["CORNILESCU-1924"]
+        self.assertEqual(evidence["availability"], "missing-in-pinned-source")
+        self.assertEqual(evidence["missingReferences"], ["1:2"])
+        self.assertNotIn("textDigest", evidence)
+        with tempfile.TemporaryDirectory() as directory:
+            approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
+            summary = gate.validate_nt_editorial_approval(
+                Path(directory) / "docs" / "data" / "biblia-emanus",
+                source_data,
+                ledger,
+                chapters,
+                approval_path,
+            )
+        self.assertEqual(summary.verses, 2)
+
+    def test_dynamic_benchmark_set_accepts_external_cornilescu_and_pinned_biblia_libera(self) -> None:
+        chapters, source_data, ledger = external_cornilescu_benchmark_context()
+        approval = valid_approval(chapters, source_data)
+        benchmarks = approval["verses"][0]["sources"]["benchmarks"]
+        self.assertEqual(set(benchmarks), {"BTF", "BIBLIA-LIBERA", "CORNILESCU-1924", "NTR"})
+        self.assertNotIn("lockId", benchmarks["CORNILESCU-1924"])
+        self.assertIn("lockId", benchmarks["BIBLIA-LIBERA"])
+        with tempfile.TemporaryDirectory() as directory:
+            approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
+            summary = gate.validate_nt_editorial_approval(
+                Path(directory) / "docs" / "data" / "biblia-emanus",
+                source_data,
+                ledger,
+                chapters,
+                approval_path,
+            )
+        self.assertEqual(summary.verses, 2)
+
+    def test_missing_pinned_source_cannot_be_claimed_when_snapshot_has_text(self) -> None:
+        chapters, source_data, ledger = fixture_context()
+        approval = valid_approval(chapters, source_data)
+        approval["verses"][0]["sources"]["benchmarks"]["CORNILESCU-1924"] = {
+            "lockId": "CORNILESCU1924-MAT",
+            "references": ["1:1"],
+            "availability": "missing-in-pinned-source",
+            "missingReferences": ["1:1"],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
+            with self.assertRaisesRegex(gate.EditorialGateError, "nu poate declara missing-in-pinned-source"):
+                gate.validate_nt_editorial_approval(
+                    Path(directory) / "docs" / "data" / "biblia-emanus",
+                    source_data,
+                    ledger,
+                    chapters,
+                    approval_path,
+                )
+
+    def test_btf_lacuna_cannot_use_missing_pinned_source_evidence(self) -> None:
+        chapters, source_data, ledger = fixture_context()
+        source_data = copy.deepcopy(source_data)
+        source_data["texts"]["BTF-MAT"].pop((1, 2))
+        source_data["files"]["BTF-MAT"]["missingTargetReferences"] = ["1:2"]
+        approval = valid_approval(chapters, source_data)
+        with tempfile.TemporaryDirectory() as directory:
+            approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
+            with self.assertRaisesRegex(gate.EditorialGateError, "BTF-MAT 1:2 lipsește"):
+                gate.validate_nt_editorial_approval(
+                    Path(directory) / "docs" / "data" / "biblia-emanus",
+                    source_data,
+                    ledger,
+                    chapters,
+                    approval_path,
+                )
+
+    def test_lacunary_evidence_must_list_exact_missing_snapshot_references(self) -> None:
+        chapters, source_data, ledger = lacunary_pinned_benchmark_context()
+        approval = valid_approval(chapters, source_data)
+        approval["verses"][1]["sources"]["benchmarks"]["CORNILESCU-1924"]["missingReferences"] = ["1:1"]
+        with tempfile.TemporaryDirectory() as directory:
+            approval_path = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            approval_path.write_text(json.dumps(approval, ensure_ascii=False), encoding="utf-8")
+            with self.assertRaisesRegex(gate.EditorialGateError, "missingReferences nu corespunde"):
                 gate.validate_nt_editorial_approval(
                     Path(directory) / "docs" / "data" / "biblia-emanus",
                     source_data,
