@@ -54,7 +54,7 @@ export const NUMERI_20 = numeriChapter({
       heading: "Moise lovește stânca de două ori, cu mânie",
       text: numeriPassage(20, 9, 11),
       teaching: teaching(
-        "Moise ia toiagul cum i se poruncise, dar cuvintele lui către popor trădează deja o schimbare față de poruncă: „ascultati, răzvrătiților! Vom putea NOI oare să vă scoatem apă din stânca aceasta?” Moise își atribuie sieși și lui Aaron puterea de a scoate apa, nu DOMNULUI.",
+        "Moise ia toiagul cum i se poruncise, dar cuvintele lui către popor trădează deja o schimbare față de poruncă: „ascultați, răzvrătiților! Vom putea NOI oare să vă scoatem apă din stânca aceasta?” Moise își atribuie sieși și lui Aaron puterea de a scoate apa, nu DOMNULUI.",
         "Apoi, în loc să vorbească stâncii cum i se poruncise, „a lovit stânca de două ori cu toiagul său”. Apa iese oricum, din harul DOMNULUI care nu lasă poporul să sufere pentru greșeala conducătorilor, dar neascultarea lui Moise este deja săvârșită.",
       ),
       words: [],
@@ -119,7 +119,7 @@ export const NUMERI_20 = numeriChapter({
       text: numeriPassage(20, 22, 26),
       teaching: teaching(
         "Toată adunarea pornind din Cadeș ajunge la muntele Hor, la hotarul Edomului, unde DOMNUL vorbește din nou lui Moise și lui Aaron împreună. Vestea este directă: „Aaron va fi adăugat la poporul său”, aceeași pedeapsă din cauza răzvrătirii de la apele Meriba, la fel ca a lui Moise.",
-        "Instrucțiunea DOMNULUI este simbolică și solemnă: hainele preoțești ale lui Aaron trec direct pe fiul său Eleazar, chiar înainte de moartea lui Aaron, arătând continuitatea neabatută a preoției, indiferent de moartea persoanei care o poartă.",
+        "Instrucțiunea DOMNULUI este simbolică și solemnă: hainele preoțești ale lui Aaron trec direct pe fiul său Eleazar, chiar înainte de moartea lui Aaron, arătând continuitatea neabătută a preoției, indiferent de moartea persoanei care o poartă.",
       ),
       words: [],
       crossRefs: ["Exod 29:29-30", "Evrei 7:23-24"],
@@ -142,6 +142,6 @@ export const NUMERI_20 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, iartă-mă pentru fiecare dată când am încercat să-mi atribui mie însumi ce se cuvenea numai Numelui Tău.\n\nPăzește-mă de mânia acumulată în ani de slujire grea, ca să nu cad exact când viața mea de credincioșie pare aproape împlinită.\n\nÎnvață-mă înțelepciunea de a mă abăte uneori dintr-o confruntare, încredințându-țiție dreptatea finală.\n\nMulțumescu-Ți că slujirea Ta continuă statornică dincolo de viața fiecărui slujitor pe care îl chemi la Tine. Amin.",
+    "Doamne, iartă-mă pentru fiecare dată când am încercat să-mi atribui mie însumi ce se cuvenea numai Numelui Tău.\n\nPăzește-mă de mânia acumulată în ani de slujire grea, ca să nu cad exact când viața mea de credincioșie pare aproape împlinită.\n\nÎnvață-mă înțelepciunea de a mă abăte uneori dintr-o confruntare, încredințându-ție dreptatea finală.\n\nÎți mulțumesc că slujirea Ta continuă statornică dincolo de viața fiecărui slujitor pe care îl chemi la Tine. Amin.",
   status: NUMERI_STATUSES[20],
 })

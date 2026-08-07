@@ -16,7 +16,7 @@ export const NUMERI_16 = numeriChapter({
   summary:
     "Core, un levit, se ridică împotriva preoției lui Aaron, împreună cu Datan și Abiram din seminția lui Ruben și două sute cincizeci de fruntași. DOMNUL desparte judecata în două forme: pământul își deschide gura și-i înghite pe Core, Datan și Abiram cu tot ce este al lor, iar un foc mistuie pe cei două sute cincizeci de bărbați. A doua zi, poporul cârtește din nou, iar o urgie ucide paisprezece mii șapte sute, oprită doar prin ispășirea grăbită a lui Aaron.",
   literaryContext:
-    "După răzvrătirea poporului împotriva conducerii lui Moise în capitolul paisprezece, aceasta este o răzvrătire mai întâi religioasă decât politică — o contestare a distincției rânduite de DOMNUL între leviti și preoți. Faptul că poporul cârtește din nou imediat după judecata asupra lui Core arată cât de superficială fusese pocăința lor de la Horma.",
+    "După răzvrătirea poporului împotriva conducerii lui Moise în capitolul paisprezece, aceasta este o răzvrătire mai întâi religioasă decât politică — o contestare a distincției rânduite de DOMNUL între leviți și preoți. Faptul că poporul cârtește din nou imediat după judecata asupra lui Core arată cât de superficială fusese pocăința lor de la Horma.",
   historicalContext:
     "Răzvrătirea lui Core este citată în Iuda 11 ca exemplu al celor care pier în „răzvrătirea lui Core”, iar cadelnițele bătute în foițe pentru îmbrăcarea altarului au rămas un semn vizibil permanent, amintind fiecărui închinător viitor de prețul acestei încălcări a granițelor rânduite de DOMNUL.",
   units: [
@@ -98,7 +98,7 @@ export const NUMERI_16 = numeriChapter({
       text: numeriPassage(16, 36, 40),
       teaching: teaching(
         "Cădelnițele de aramă folosite de cei două sute cincizeci de bărbați nu sunt aruncate, ci bătute în foițe pentru îmbrăcarea altarului, „ca aducere aminte pentru fiii lui Israel”. Sfințenia acestor cădelnițe — pentru că fuseseră aduse înaintea DOMNULUI, chiar dacă nelegitim — le făcea potrivite doar pentru un scop de avertisment permanent.",
-        "Scopul explicit al acestui semn era prevenirea: „ca niciun străin care nu este din neamul lui Aaron să nu se apropie să ardă tămâie înaintea DOMNULUI, ca să nu ajungă ca Core și ca ceta lui”. Fiecare închinător viitor, privind altarul, avea înaintea ochilor prețul plătit pentru încălcarea granițelor rânduite de DOMNUL.",
+        "Scopul explicit al acestui semn era prevenirea: „ca niciun străin care nu este din neamul lui Aaron să nu se apropie să ardă tămâie înaintea DOMNULUI, ca să nu ajungă ca Core și ca ceata lui”. Fiecare închinător viitor, privind altarul, avea înaintea ochilor prețul plătit pentru încălcarea granițelor rânduite de DOMNUL.",
       ),
       words: [],
       crossRefs: ["Numeri 3:10", "Evrei 5:4"],
@@ -122,6 +122,6 @@ export const NUMERI_16 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, păzește-mă de a căuta o poziție sau o cinste pe care nu mi-ai dat-o, sub masca unui limbaj aparent spiritual.\n\nÎnvață-mă să mijlocesc, ca Moise și Aaron, chiar pentru cei care mi se împotrivesc, deosebind vinovăția reală de mânia grabă.\n\nMulțumescu-Ți că ai pus între mine și moarte un Mijlocitor mai mare decât Aaron, care stă mereu „între cei morți și cei vii” pentru mine.\n\nPăzește-mi inima de a aluneca înapoi la cârtire imediat după ce am văzut dovada limpede a lucrării Tale. Amin.",
+    "Doamne, păzește-mă de a căuta o poziție sau o cinste pe care nu mi-ai dat-o, sub masca unui limbaj aparent spiritual.\n\nÎnvață-mă să mijlocesc, ca Moise și Aaron, chiar pentru cei care mi se împotrivesc, deosebind vinovăția reală de mânia grabă.\n\nÎți mulțumesc că ai pus între mine și moarte un Mijlocitor mai mare decât Aaron, care stă mereu „între cei morți și cei vii” pentru mine.\n\nPăzește-mi inima de a aluneca înapoi la cârtire imediat după ce am văzut dovada limpede a lucrării Tale. Amin.",
   status: NUMERI_STATUSES[16],
 })

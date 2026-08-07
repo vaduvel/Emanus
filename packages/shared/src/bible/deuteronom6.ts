@@ -10,20 +10,20 @@ export const DEUTERONOM_6 = deuteronomChapter({
   number: 6,
   title: "Deuteronom 6 — Ascultă, Israel: iubirea care naște ascultare",
   summary:
-    "Moise rostesc Shema, mărturisirea centrală a credinței lui Israel: DOMNUL este unul singur, și El trebuie iubit cu toată inima, cu tot sufletul și cu toată puterea. Poporul este chemat să nu-L uite pe Dumnezeu În belșugul țării făgăduite, să nu-L ispitească și să Învețe pe copiii lor tot ce a făcut DOMNUL pentru ei.",
+    "Moise rostește Shema, mărturisirea centrală a credinței lui Israel: DOMNUL este unul singur, și El trebuie iubit cu toată inima, cu tot sufletul și cu toată puterea. Poporul este chemat să nu-L uite pe Dumnezeu în belșugul țării făgăduite, să nu-L ispitească și să Învețe pe copiii lor tot ce a făcut DOMNUL pentru ei.",
   literaryContext:
-    "Versetul 4 al acestui capitol — Shema Yisrael — va deveni cea mai rostită confesiune de credință din întreaga istorie a lui Israel, spusă dimineața și seara, pănă În ziua de astăzi. Domnul Iisus Însăși o citează ca cea mai mare poruncă (Marcu 12:29-30).",
+    "Versetul 4 al acestui capitol — Shema Yisrael — va deveni cea mai rostită confesiune de credință din întreaga istorie a lui Israel, spusă dimineața și seara, până în ziua de astăzi. Domnul Iisus Însăși o citează ca cea mai mare poruncă (Marcu 12:29-30).",
   historicalContext:
-    "Popoarele canaanite din țara pe care Israel o va cuceri Închinau mai mulți dumnezei, fiecare cu rolul lui În agricultură, război sau fertilitate. Declarația „DOMNUL este una” nu era doar o formulă religioasă abstractă, ci o respingere radicală a întregului sistem religios pe care Israel avea să-l Întâlnească În Canaan.",
+    "Popoarele canaanite din țara pe care Israel o va cuceri Închinau mai mulți dumnezei, fiecare cu rolul lui în agricultură, război sau fertilitate. Declarația „DOMNUL este una” nu era doar o formulă religioasă abstractă, ci o respingere radicală a întregului sistem religios pe care Israel avea să-l Întâlnească în Canaan.",
   units: [
     {
       id: "deuteronom-6-1-3",
       ref: "Deuteronom 6:1-3",
-      heading: "Porunci date pentru zile lungi În țara făgăduită",
+      heading: "Porunci date pentru zile lungi în țara făgăduită",
       text: deuteronomPassage(6, 1, 3),
       teaching: teaching(
-        "Scopul poruncilor este spus limpede la început: „ca să trăiți multă vreme În țara pe care o veți lua În stăpânire”. Legea nu este dată pentru Îngreunarea vieții, ci pentru prelungirea ei, și pentru belșugul „În țara În care curge lapte și miere”.",
-        "Formula „să ascultați și să paziți cu grijă”, repetată aici, arată din nou că ascultarea biblică este mai mult decît acord intelectual; este păzire activă În viața de zi cu zi.",
+        "Scopul poruncilor este spus limpede la început: „ca să trăiți multă vreme în țara pe care o veți lua în stăpânire”. Legea nu este dată pentru Îngreunarea vieții, ci pentru prelungirea ei, și pentru belșugul „în țara în care curge lapte și miere”.",
+        "Formula „să ascultați și să paziți cu grijă”, repetată aici, arată din nou că ascultarea biblică este mai mult decât acord intelectual; este păzire activă în viața de zi cu zi.",
       ),
       words: [
         {
@@ -31,7 +31,7 @@ export const DEUTERONOM_6 = deuteronomChapter({
           transliteration: "eretz zavat chalav udevash",
           language: "ebraica",
           meaning:
-            "țară În care curge lapte și miere. Expresia clasică pentru belșugul țării făgăduite, repetată de multe ori În Pentateuh.",
+            "țară în care curge lapte și miere. Expresia clasică pentru belșugul țării făgăduite, repetată de multe ori în Pentateuh.",
         },
       ],
       crossRefs: ["Exod 3:8", "Deuteronom 4:40"],
@@ -46,7 +46,7 @@ export const DEUTERONOM_6 = deuteronomChapter({
       teaching: teaching(
         "„Ascultă, Israel! DOMNUL, Dumnezeul nostru, este singurul DOMN” — această declarație scurtă este piatra de temelie a monoteismului biblic. Într-o lume plină de alți zei, Israel mărturisește un singur Dumnezeu, o singură loialitate.",
         "Din această unicitate decurge porunca cea mai mare: „să iubești pe DOMNUL, Dumnezeul tău, cu toată inima ta, cu tot sufletul tău și cu toată puterea ta”. Domnul Iisus va numi aceasta cea mai mare poruncă din toată Legea (Marcu 12:29-30), și pe ea se întemeiază toată celelalte.",
-        "Iubirea aceasta nu rămâne teoretică: cuvintele trebuie să fie „În inima ta”, învățate copiilor, vorbite „acasă... pe drum... când te culci... când te scoli”, purtate pe mnă și pe frunte, scrise pe ușile casei. întreaga viață, În fiecare clipă și fiecare loc, este chemată să fie Împregnată de cuvântul lui Dumnezeu.",
+        "Iubirea aceasta nu rămâne teoretică: cuvintele trebuie să fie „în inima ta”, învățate copiilor, vorbite „acasă... pe drum... când te culci... când te scoli”, purtate pe mână și pe frunte, scrise pe ușile casei. întreaga viață, în fiecare clipă și fiecare loc, este chemată să fie impregnată de cuvântul lui Dumnezeu.",
       ),
       words: [
         {
@@ -67,8 +67,8 @@ export const DEUTERONOM_6 = deuteronomChapter({
       heading: "Belșugul care poate naște uitare",
       text: deuteronomPassage(6, 10, 15),
       teaching: teaching(
-        "Moise avertizează despre un pericol care nu vine din pustie sau război, ci din belșug: cetăți pe care nu le-ai zidit, vii pe care nu le-ai sădit, fântâni pe care nu le-ai săpat. „Socotește-te săul, ca nu cumva... să-L uiți pe DOMNUL”. Prosperitatea nemeritată poate naște o amnezie spirituală mai periculoasă decît suferința.",
-        "Alergarea după alți dumnezei „dintre dumnezeii popoarelor Înconjurătoare” este numită direct ca provocare a mâniei lui Dumnezeu: „căci DOMNUL, Dumnezeul tău, este un Dumnezeu gelos În mijlocul tău”. Aceeași gelozie amintită În Decalog rămâne temeiul avertismentului.",
+        "Moise avertizează despre un pericol care nu vine din pustie sau război, ci din belșug: cetăți pe care nu le-ai zidit, vii pe care nu le-ai sădit, fântâni pe care nu le-ai săpat. „După ce te vei sătura, ca nu cumva... să-L uiți pe DOMNUL”. Prosperitatea nemeritată poate naște o amnezie spirituală mai periculoasă decât suferința.",
+        "Alergarea după alți dumnezei „dintre dumnezeii popoarelor Înconjurătoare” este numită direct ca provocare a mâniei lui Dumnezeu: „căci DOMNUL, Dumnezeul tău, este un Dumnezeu gelos în mijlocul tău”. Aceeași gelozie amintită în Decalog rămâne temeiul avertismentului.",
       ),
       words: [
         {
@@ -76,7 +76,7 @@ export const DEUTERONOM_6 = deuteronomChapter({
           transliteration: "pen-tishkach",
           language: "ebraica",
           meaning:
-            "ca nu cumva să uiți. Formulă de avertisment repetată de multe ori În Deuteronom, legată mai ales de pericolul belșugului.",
+            "ca nu cumva să uiți. Formulă de avertisment repetată de multe ori în Deuteronom, legată mai ales de pericolul belșugului.",
         },
       ],
       crossRefs: ["Deuteronom 8:11-14", "Proverbe 30:8-9", "Osea 13:6"],
@@ -89,8 +89,8 @@ export const DEUTERONOM_6 = deuteronomChapter({
       heading: "Nu ispiti pe DOMNUL, ci faț ce este drept",
       text: deuteronomPassage(6, 16, 19),
       teaching: teaching(
-        "„Să nu ispitiți pe DOMNUL, Dumnezeul vostru, cum L-ați ispitit la Masa” — aducere directă aminte de cîrteala de la Masa (Exod 17:1-7), când poporul a cerut apă punând la îndoială prezența lui Dumnezeu. Domnul Iisus Însăși va cita acest verset În ispitirea din pustie (Matei 4:7).",
-        "Răspunsul cerut este simplu și cuprinzător: „să faceți ce este bine și plăcut Înaintea DOMNULUI”. Nu este suficient să evitați ispitirea lui Dumnezeu; trebuie trăită activ dreptatea Lui, ca să fie luată În stăpânire țara făgăduită.",
+        "„Să nu ispitiți pe DOMNUL, Dumnezeul vostru, cum L-ați ispitit la Masa” — aducere directă aminte de cârteala de la Masa (Exod 17:1-7), când poporul a cerut apă punând la îndoială prezența lui Dumnezeu. Domnul Iisus Însăși va cita acest verset în ispitirea din pustie (Matei 4:7).",
+        "Răspunsul cerut este simplu și cuprinzător: „să faceți ce este bine și plăcut Înaintea DOMNULUI”. Nu este suficient să evitați ispitirea lui Dumnezeu; trebuie trăită activ dreptatea Lui, ca să fie luată în stăpânire țara făgăduită.",
       ),
       words: [
         {
@@ -98,7 +98,7 @@ export const DEUTERONOM_6 = deuteronomChapter({
           transliteration: "lo tenasu et-YHWH",
           language: "ebraica",
           meaning:
-            "să nu ispitiți pe DOMNUL. Citat de Domnul Iisus În Matei 4:7 când a respins ispita diavolului de a se arunca de pe Templu.",
+            "să nu ispitiți pe DOMNUL. Citat de Domnul Iisus în Matei 4:7 când a respins ispita diavolului de a se arunca de pe Templu.",
         },
       ],
       crossRefs: ["Exod 17:1-7", "Matei 4:7", "1 Corinteni 10:9"],
@@ -111,8 +111,8 @@ export const DEUTERONOM_6 = deuteronomChapter({
       heading: "Ce vei răspunde fiului tău",
       text: deuteronomPassage(6, 20, 25),
       teaching: teaching(
-        "Capitolul se Încheie cu o întrebă pe care Moise o pune În gura copiilor viitori: „Ce înseamnă aceste învățături, legi și porunci pe care vi le-a dat DOMNUL, Dumnezeul nostru?”. Legea nu este dată pentru a fi ținută secretă; este menită să trezească curiozitate și întrebări În generația care vine.",
-        "Răspunsul părinților trebuie să fie povestea izbăvirii: „Eram robi ai lui Faraon În Egipt, și DOMNUL ne-a scos din Egipt cu putere”. Legea nu se învăță În abstract, ci ca și răspuns la ceea ce Dumnezeu a făcut deja pentru eliberarea poporului Lui.",
+        "Capitolul se Încheie cu o întrebare pe care Moise o pune în gura copiilor viitori: „Ce înseamnă aceste învățături, legi și porunci pe care vi le-a dat DOMNUL, Dumnezeul nostru?”. Legea nu este dată pentru a fi ținută secretă; este menită să trezească curiozitate și întrebări în generația care vine.",
+        "Răspunsul părinților trebuie să fie povestea izbăvirii: „Eram robi ai lui Faraon în Egipt, și DOMNUL ne-a scos din Egipt cu putere”. Legea nu se învăță în abstract, ci ca și răspuns la ceea ce Dumnezeu a făcut deja pentru eliberarea poporului Lui.",
       ),
       words: [
         {
@@ -129,6 +129,6 @@ export const DEUTERONOM_6 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, Tu ești unul, și noi învățăm să Te iubim cu toată inima, cu tot sufletul și cu toată puterea.\n\nPăzește-ne de uitarea pe care belșugul o poate naște În inimile noastre.\n\nDă-ne Învățătura care să treacă la copiii noștri, prin poveste, nu doar prin regulă.\n\nȘi ajută-ne să facem ce este bine și plăcut Înaintea Ta, fără să Te ispitim. Amin.",
+    "Doamne, Tu ești unul, și noi învățăm să Te iubim cu toată inima, cu tot sufletul și cu toată puterea.\n\nPăzește-ne de uitarea pe care belșugul o poate naște în inimile noastre.\n\nDă-ne Învățătura care să treacă la copiii noștri, prin poveste, nu doar prin regulă.\n\nȘi ajută-ne să facem ce este bine și plăcut Înaintea Ta, fără să Te ispitim. Amin.",
   status: DEUTERONOM_STATUSES[6],
 })

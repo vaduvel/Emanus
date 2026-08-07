@@ -10,11 +10,11 @@ export const DEUTERONOM_34 = deuteronomChapter({
   number: 34,
   title: "Deuteronom 34 - Moartea lui Moise pe muntele Nebo, un proroc fara asemanare",
   summary:
-    "Moise vede tara promisa de pe muntele Nebo, moare acolo fara sa treaca Iordanul, este jelit treizeci de zile, iar cartea se incheie cu o evaluare finala unica: in Israel nu s-a mai ridicat un proroc ca el, pe care DOMNUL sa-l fi cunoscut fata in fata.",
+    "Moise vede tara promisa de pe muntele Nebo, moare acolo fara sa treaca Iordanul, este jelit treizeci de zile, iar cartea se încheie cu o evaluare finala unica: in Israel nu s-a mai ridicat un proroc ca el, pe care DOMNUL sa-l fi cunoscut fata in fata.",
   literaryContext:
-    "Acest capitol final, scris probabil de o alta mana dupa moartea lui Moise, incheie nu doar Deuteronomul, ci intregul Pentateuh, facand trecerea de la conducerea lui Moise la cea a lui Iosua si pregatind cartea Iosua pentru cucerirea tarii promise.",
+    "Acest capitol final, scris probabil de o alta mana dupa moartea lui Moise, încheie nu doar Deuteronomul, ci intregul Pentateuh, facand trecerea de la conducerea lui Moise la cea a lui Iosua si pregatind cartea Iosua pentru cucerirea tarii promise.",
   historicalContext:
-    "Necunoașterea locului mormantului lui Moise (v.6) a fost inteleasa traditional ca o masura providențială impotriva transformarii locului in obiect de cult sau pelerinaj, păstrând centrul atentiei pe DOMNUL, nu pe conducătorul care L-a slujit.",
+    "Necunoașterea locului mormantului lui Moise (v.6) a fost inteleasa tradițional ca o masura providențială impotriva transformarii locului in obiect de cult sau pelerinaj, păstrând centrul atentiei pe DOMNUL, nu pe conducătorul care L-a slujit.",
   units: [
     {
       id: "deuteronom-34-1-4",
@@ -31,7 +31,7 @@ export const DEUTERONOM_34 = deuteronomChapter({
           transliteration: "herithika be'einekha veshamah lo ta'avor",
           language: "ebraica",
           meaning:
-            "ti-am aratat-o cu ochii tai, dar acolo nu vei trece. Formula finala si directa care confirma limita ramasa asupra lui Moise, imblanzita de privilegiul de a vedea implinirea promisiunii inainte de moarte.",
+            "ti-am aratat-o cu ochii tai, dar acolo nu vei trece. Formula finala si directa care confirma limita rămasă asupra lui Moise, imblanzita de privilegiul de a vedea implinirea promisiunii înainte de moarte.",
         },
       ],
       crossRefs: ["Numeri 27:12-14", "Evrei 11:13", "Geneza 15:18-21"],
@@ -53,12 +53,12 @@ export const DEUTERONOM_34 = deuteronomChapter({
           transliteration: "velo yada ish et-qevurato",
           language: "ebraica",
           meaning:
-            "si nimeni nu-i cunoaste mormantul. Detaliu remarcabil care a prevenit crearea unui cult al locului, indreptand cinstirea poporului spre DOMNUL care l-a folosit pe Moise, nu spre ramasitele lui.",
+            "si nimeni nu-i cunoaste mormantul. Detaliu remarcabil care a prevenit crearea unui cult al locului, îndreptând cinstirea poporului spre DOMNUL care l-a folosit pe Moise, nu spre ramasitele lui.",
         },
       ],
       crossRefs: ["Iuda 1:9", "Numeri 20:29", "2 Regi 13:20-21"],
       forYourHeart:
-        "Cinstea adevarata pentru cei care ne-au slujit bine nu are nevoie de un loc fizic de pelerinaj; ea se arata prin recunostinta si ascultare fata de mostenirea lor.",
+        "Cinstea adevarata pentru cei care ne-au slujit bine nu are nevoie de un loc fizic de pelerinaj; ea se arata prin recunoștința si ascultare fata de moștenirea lor.",
     },
     {
       id: "deuteronom-34-9-12",
@@ -67,7 +67,7 @@ export const DEUTERONOM_34 = deuteronomChapter({
       text: deuteronomPassage(34, 9, 12),
       teaching: teaching(
         "Iosua este descris ca fiind „plin de duhul înțelepciunii, căci Moise isi pusese mâinile peste el” - transmiterea autoritatii nu este lăsată la intamplare, ci este confirmata printr-un act deliberat de investire, iar poporul raspunde cu ascultare.",
-        "Cartea se incheie cu o evaluare finala fara egal: „in Israel nu s-a mai ridicat un proroc ca Moise, pe care DOMNUL sa-l fi cunoscut fata in fata”. Aceasta afirmatie, scrisa probabil mult mai târziu, lasa deschisa așteptarea canonica a unui proroc viitor asemenea lui Moise, dar mai mare - așteptare pe care Noul Testament o va identifica cu Hristos.",
+        "Cartea se încheie cu o evaluare finala fara egal: „in Israel nu s-a mai ridicat un proroc ca Moise, pe care DOMNUL sa-l fi cunoscut fata in fata”. Aceasta afirmatie, scrisa probabil mult mai târziu, lasa deschisa așteptarea canonica a unui proroc viitor asemenea lui Moise, dar mai mare - așteptare pe care Noul Testament o va identifica cu Hristos.",
       ),
       words: [
         {
@@ -75,12 +75,12 @@ export const DEUTERONOM_34 = deuteronomChapter({
           transliteration: "lo-qam navi od beYisrael keMoshe",
           language: "ebraica",
           meaning:
-            "nu s-a mai ridicat un proroc in Israel ca Moise. Evaluarea finala care pastreaza unicitatea relatiei fata in fata a lui Moise cu DOMNUL, lasand deschisa o asteptare canonica implinita mai tarziu in mod suprem in Hristos.",
+            "nu s-a mai ridicat un proroc in Israel ca Moise. Evaluarea finala care pastreaza unicitatea relatiei fata in fata a lui Moise cu DOMNUL, lăsând deschisa o așteptare canonica împlinită mai târziu in mod suprem in Hristos.",
         },
       ],
       crossRefs: ["Deuteronom 18:15-18", "Faptele Apostolilor 3:22-23", "Ioan 1:17-18"],
       forYourHeart:
-        "Mostenirea unui slujitor credincios continua prin cei pregatiti sa-i urmeze, dar cea mai mare asteptare a poporului lui Dumnezeu ramane implinita deplin doar in Hristos.",
+        "Moștenirea unui slujitor credincios continua prin cei pregătiți sa-i urmeze, dar cea mai mare așteptare a poporului lui Dumnezeu rămâne împlinită deplin doar in Hristos.",
     },
   ],
   prayer:

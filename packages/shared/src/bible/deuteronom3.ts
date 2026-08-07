@@ -14,7 +14,7 @@ export const DEUTERONOM_3 = deuteronomChapter({
   literaryContext:
     "Capitolul acesta încheie recapitularea cuceririlor de la răsărit de Iordan, începută în capitolul 2. Vine apoi o schimbare de ton: de la istoria cuceririi la o mărturisire personală a lui Moise, singurul loc din carte în care el vorbește direct despre propria lui durere și dorință neascultată.",
   historicalContext:
-    "Basanul, Înutul lui Og, era cunoscut pentru cetăți întărite, cu porți de aramă, și pentru statura uriașă a locuitorilor lui. Patul de fier al lui Og, păstrat la Raba amoniților, era o dovadă vizibilă pentru generațiile viitoare că nu era o legendă, ci un fapt istoric verificabil.",
+    "Basanul, ținutul lui Og, era cunoscut pentru cetăți întărite, cu porți de aramă, și pentru statura uriașă a locuitorilor lui. Patul de fier al lui Og, păstrat la Raba amoniților, era o dovadă vizibilă pentru generațiile viitoare că nu era o legendă, ci un fapt istoric verificabil.",
   units: [
     {
       id: "deuteronom-3-1-11",
@@ -59,7 +59,7 @@ export const DEUTERONOM_3 = deuteronomChapter({
       ],
       crossRefs: ["Numeri 32:33-42", "Iosua 13:8-13"],
       forYourHeart:
-        "Dumnezeu împartășește uneori moștenirea înainte ca ea să fie deplin cucerită În fapt. Făgăduința precede stăpânirea deplină.",
+        "Dumnezeu împărtășește uneori moștenirea înainte ca ea să fie deplin cucerită în fapt. Făgăduința precede stăpânirea deplină.",
     },
     {
       id: "deuteronom-3-18-22",
@@ -68,7 +68,7 @@ export const DEUTERONOM_3 = deuteronomChapter({
       text: deuteronomPassage(3, 18, 22),
       teaching: teaching(
         "Deși au primit deja țara lor la răsărit de Iordan, rubeniții, gadiții și cei din Manase primesc porunca să treacă „Înarmați” Înaintea celorlalți frați ai lor, până când și aceștia își vor primi odihna și moștenirea. Binecuvântarea primită nu-i scutește de răspunderea față de frații care nu au primit-o încă.",
-        "Lui Iosua i se spune, În fața întregii lucrări care urmează: „Ochii tăi au văzut tot ce a făcut DOMNUL, Dumnezeul vostru, acestor doi Împărați; DOMNUL va face la fel tuturor împărățiilor pe unde vei trece”. Biruințele trecute nu sunt doar istorie; sunt temei pentru Încredere În ce urmează.",
+        "Lui Iosua i se spune, în fața întregii lucrări care urmează: „Ochii tăi au văzut tot ce a făcut DOMNUL, Dumnezeul vostru, acestor doi Împărați; DOMNUL va face la fel tuturor împărățiilor pe unde vei trece”. Biruințele trecute nu sunt doar istorie; sunt temei pentru Încredere în ce urmează.",
       ),
       words: [
         {
@@ -76,7 +76,7 @@ export const DEUTERONOM_3 = deuteronomChapter({
           transliteration: "chalutzim",
           language: "ebraica",
           meaning:
-            "Înarmați, Înșirăți de război, cei care merg În fruntea oștirii; termenul descrie frații chemați să lupte pentru alții Înainte de a se așeza În odihnă.",
+            "Înarmați, Înșirăți de război, cei care merg în fruntea oștirii; termenul descrie frații chemați să lupte pentru alții Înainte de a se așeza în odihnă.",
         },
       ],
       crossRefs: ["Numeri 32:16-32", "Iosua 1:12-15", "Iosua 22:1-4"],
@@ -90,8 +90,8 @@ export const DEUTERONOM_3 = deuteronomChapter({
       text: deuteronomPassage(3, 23, 29),
       teaching: teaching(
         "Moise Îi destinuie poporului chiar propria lui rugăciune: „Lasă-mă să trec și să văd țara cea bună de dincolo de Iordan”. Cel care a purtat poporul patruzeci de ani cere pentru sine un singur lucru — să vadă ÎmplÎnirea a ceea ce a așteptat toată viața.",
-        "Răspunsul DOMNULUI este limpede și fără loc de Îndoială: „Nu te ruga de mine În această privință”. Nici Moise, cel mai mare proroc al Vechiului Legământ, nu primește tot ce cere; cuvântul jurat la Meriba (Numeri 20:12) rămâne În picioare, oricât de mare ar fi cel care se roagă.",
-        "DOMNUL Însă nu Îl lasă pe Moise fără nimic: „Suie-te pe vÎrful Pisga și privește cu ochii tăi”. Vederea de la distanță nu este ÎmplÎnirea deplină, dar este o Îndurare reală — și este și clipa În care Iosua primește public porunca de a duce lucrarea la bun sfârșit: „Încurajează-l, Întărește-l, căci el va trece Înaintea acestui popor”.",
+        "Răspunsul DOMNULUI este limpede și fără loc de Îndoială: „Nu te ruga de mine în această privință”. Nici Moise, cel mai mare proroc al Vechiului Legământ, nu primește tot ce cere; cuvântul jurat la Meriba (Numeri 20:12) rămâne în picioare, oricât de mare ar fi cel care se roagă.",
+        "DOMNUL Însă nu Îl lasă pe Moise fără nimic: „Suie-te pe vÎrful Pisga și privește cu ochii tăi”. Vederea de la distanță nu este ÎmplÎnirea deplină, dar este o Îndurare reală — și este și clipa în care Iosua primește public porunca de a duce lucrarea la bun sfârșit: „Încurajează-l, Întărește-l, căci el va trece Înaintea acestui popor”.",
       ),
       words: [
         {
@@ -99,7 +99,7 @@ export const DEUTERONOM_3 = deuteronomChapter({
           transliteration: "al-tosef daber elai",
           language: "ebraica",
           meaning:
-            "nu mai continua să vorbești către Mine În privința aceasta. Răspunsul definitiv al DOMNULUI, care Încheie o cerere repetată, dar nu întoarce iubirea Lui față de Moise.",
+            "nu mai continua să vorbești către Mine în privința aceasta. Răspunsul definitiv al DOMNULUI, care Încheie o cerere repetată, dar nu întoarce iubirea Lui față de Moise.",
         },
       ],
       crossRefs: ["Numeri 20:7-12", "Deuteronom 34:1-4", "Deuteronom 31:7-8"],
@@ -108,6 +108,6 @@ export const DEUTERONOM_3 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, Tu înlături frica noastră înainte de a intra În luptă, oricât de mare ar fi vrăjmașul.\n\nÎnvață-ne să luptăm pentru frații noștri, chiar după ce am primit deja binecuvântarea noastră.\n\nȘi când răspunzi „nu” la o rugăciune a noastră, dă-ne încredere că pregătești totuși o îndurare și o lucrare pentru altcineva. Amin.",
+    "Doamne, Tu înlături frica noastră înainte de a intra în luptă, oricât de mare ar fi vrăjmașul.\n\nÎnvață-ne să luptăm pentru frații noștri, chiar după ce am primit deja binecuvântarea noastră.\n\nȘi când răspunzi „nu” la o rugăciune a noastră, dă-ne încredere că pregătești totuși o îndurare și o lucrare pentru altcineva. Amin.",
   status: DEUTERONOM_STATUSES[3],
 })

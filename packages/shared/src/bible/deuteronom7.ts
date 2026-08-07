@@ -23,7 +23,7 @@ export const DEUTERONOM_7 = deuteronomChapter({
       text: deuteronomPassage(7, 1, 6),
       teaching: teaching(
         "Porunca este radicală: „să le nimicești cu desăvârșire; să nu faci nicio învoială cu ele și să nu ai milă de ele”. Această asprime nu este cruzime fără rost, ci un zid de apărare Împotriva unei religii care ar fi corupt total legământul lui Israel cu Dumnezeu.",
-        "Interzicerea căsătoriilor mixte are un motiv teologic clar: „căci ar abate pe fiii tăi de la Mine și i-ar face să slujească altor dumnezei”. Nu este xenofobie; este protecția unei loialități exclusive, într-un context În care căsătoria însemna și împărțea religiei.",
+        "Interzicerea căsătoriilor mixte are un motiv teologic clar: „căci ar abate pe fiii tăi de la Mine și i-ar face să slujească altor dumnezei”. Nu este xenofobie; este protecția unei loialități exclusive, într-un context în care căsătoria însemna și împărțea religiei.",
         "Temeiul deplin este numit direct: „tu ești un popor sfânt pentru DOMNUL, Dumnezeul tău; DOMNUL, Dumnezeul tău, te-a ales... ca să fii un popor al Lui deosebit”. Sfințenia lui Israel nu vine din merit, ci din alegerea suverană a lui Dumnezeu.",
       ),
       words: [
@@ -45,9 +45,9 @@ export const DEUTERONOM_7 = deuteronomChapter({
       heading: "Nu pentru că erau mai mulți, ci pentru că i-a iubit",
       text: deuteronomPassage(7, 7, 11),
       teaching: teaching(
-        "Motivul alegerii lui Israel este spus fără nicio urmă de măgulire: „DOMNUL nu v-a ales și nu v-a iubit pentru că ați fi mai la număr decît toate celelalte popoare, căci erati cel mai mic dintre toate popoarele”. Israel nu avea nimic care să-l facă vrednic de alegere.",
-        "Cauza este numai în Dumnezeu însuși: „DOMNUL v-a iubit și a voit să țină jurămîntul pe care l-a făcut părinților voștri”. Iubirea aceasta nu are cauză exterioară; este statornică pentru că vine din caracterul și credincioșia lui Dumnezeu.",
-        "Din această credincioșie decurge o răspundere: „El ține legământul... față de cei care Îl iubesc și păzesc poruncile Lui... dar răsplătește părilor săi, În față, celor ce-L urăsc”. Statornicia lui Dumnezeu În legământ nu este pasivă față de răzvrătire.",
+        "Motivul alegerii lui Israel este spus fără nicio urmă de măgulire: „DOMNUL nu v-a ales și nu v-a iubit pentru că ați fi mai la număr decât toate celelalte popoare, căci erați cel mai mic dintre toate popoarele”. Israel nu avea nimic care să-l facă vrednic de alegere.",
+        "Cauza este numai în Dumnezeu însuși: „DOMNUL v-a iubit și a voit să țină jurământul pe care l-a făcut părinților voștri”. Iubirea aceasta nu are cauză exterioară; este statornică pentru că vine din caracterul și credincioșia lui Dumnezeu.",
+        "Din această credincioșie decurge o răspundere: „El ține legământul... față de cei care Îl iubesc și păzesc poruncile Lui... dar răsplătește părilor săi, în față, celor ce-L urăsc”. Statornicia lui Dumnezeu în legământ nu este pasivă față de răzvrătire.",
       ),
       words: [
         {
@@ -68,7 +68,7 @@ export const DEUTERONOM_7 = deuteronomChapter({
       heading: "Binecuvântarea celui care ascultă",
       text: deuteronomPassage(7, 12, 16),
       teaching: teaching(
-        "Ascultarea legământului atrage o binecuvântare cuprinzătoare: rodul pântecelui, rodul ogorului, grînele, vinul, untdelemnul, turmele — „vei fi binecuvântat mai mult decît toate popoarele”. Nimic din viața fizică a poporului nu este exclus din grija legământului.",
+        "Ascultarea legământului atrage o binecuvântare cuprinzătoare: rodul pântecelui, rodul ogorului, grânele, vinul, untdelemnul, turmele — „vei fi binecuvântat mai mult decât toate popoarele”. Nimic din viața fizică a poporului nu este exclus din grija legământului.",
         "Promisiunea se întinde și la sănătate: „DOMNUL va îndepărta de la tine orice boală”, și include amintirea directă a „relelor Egiptului, pe care le cunoști” — făgăduința este contrastată explicit cu suferințele robiei din care au fost scoși.",
       ),
       words: [
@@ -77,7 +77,7 @@ export const DEUTERONOM_7 = deuteronomChapter({
           transliteration: "barukh tihye mikol-ha-amim",
           language: "ebraica",
           meaning:
-            "binecuvântat vei fi mai mult decît toate popoarele. Făgăduință de belșug și favoare condiționată de ascultarea de legământ.",
+            "binecuvântat vei fi mai mult decât toate popoarele. Făgăduință de belșug și favoare condiționată de ascultarea de legământ.",
         },
       ],
       crossRefs: ["Deuteronom 28:1-14", "Exod 15:26", "Psalmul 103:3"],
@@ -87,11 +87,11 @@ export const DEUTERONOM_7 = deuteronomChapter({
     {
       id: "deuteronom-7-17-21",
       ref: "Deuteronom 7:17-21",
-      heading: "Nu te teme; amintește-ți ce a făcut DOMNUL În Egipt",
+      heading: "Nu te teme; amintește-ți ce a făcut DOMNUL în Egipt",
       text: deuteronomPassage(7, 17, 21),
       teaching: teaching(
-        "Moise anticipează obiecția firească: „poate vei zice În inima ta: aceste neamuri sunt mai mari decît mine; cum le voi putea izgoni?”. Frica față de o forță mai mare este înțeleasă și nu condamnată, dar nu este lăsată să aibă ultimul cuvânt.",
-        "Remediul cerut este memoria activă: „amintește-ți bine ce a făcut DOMNUL, Dumnezeul tău, lui Faraon și întregului Egipt”. Biruințele trecute nu sunt doar istorie de păstrat, ci temei practic pentru încredere În fața fricii viitoare.",
+        "Moise anticipează obiecția firească: „poate vei zice în inima ta: aceste neamuri sunt mai mari decât mine; cum le voi putea izgoni?”. Frica față de o forță mai mare este înțeleasă și nu condamnată, dar nu este lăsată să aibă ultimul cuvânt.",
+        "Remediul cerut este memoria activă: „amintește-ți bine ce a făcut DOMNUL, Dumnezeul tău, lui Faraon și întregului Egipt”. Biruințele trecute nu sunt doar istorie de păstrat, ci temei practic pentru încredere în fața fricii viitoare.",
       ),
       words: [
         {
@@ -99,7 +99,7 @@ export const DEUTERONOM_7 = deuteronomChapter({
           transliteration: "zakhor tizkor",
           language: "ebraica",
           meaning:
-            "să-ți amintești bine (repetare a verbului pentru intensitate). Aducerea aminte activă este remediul biblic pentru frica În fața unui vrăjmaș mai mare.",
+            "să-ți amintești bine (repetare a verbului pentru intensitate). Aducerea aminte activă este remediul biblic pentru frica în fața unui vrăjmaș mai mare.",
         },
       ],
       crossRefs: ["Exod 14:13-14", "1 Samuel 17:36-37", "Filipeni 4:6-7"],
@@ -112,8 +112,8 @@ export const DEUTERONOM_7 = deuteronomChapter({
       heading: "Nimicire treptată, și idoli care nu trebuie poftiți",
       text: deuteronomPassage(7, 22, 26),
       teaching: teaching(
-        "DOMNUL Se angajează să nimicească neamurile „puțin câte puțin”, nu deodată, „ca să nu te înmulțească fiarele câmpului”. Câteodată mila lui Dumnezeu se arată chiar În ritmul întârziat al biruinței, nu numai În viteza ei.",
-        "Capitolul se Încheie cu o poruncă practică: chipurile cioplite ale zeilor lor să fie arse În foc, iar argintul și aurul lor să nu fie poftite și luate acasă, „ca să nu cazi În cursă”. Comoara obținută dintr-un idol poartă cu ea puterea de a corupe pe cel care o râvnește.",
+        "DOMNUL Se angajează să nimicească neamurile „puțin câte puțin”, nu deodată, „ca să nu te înmulțească fiarele câmpului”. Câteodată mila lui Dumnezeu se arată chiar în ritmul întârziat al biruinței, nu numai în viteza ei.",
+        "Capitolul se Încheie cu o poruncă practică: chipurile cioplite ale zeilor lor să fie arse în foc, iar argintul și aurul lor să nu fie poftite și luate acasă, „ca să nu cazi în cursă”. Comoara obținută dintr-un idol poartă cu ea puterea de a corupe pe cel care o râvnește.",
       ),
       words: [
         {

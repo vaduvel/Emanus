@@ -18,7 +18,7 @@ export const NUMERI_23 = numeriChapter({
   literaryContext:
     "Cele patru profeții ale lui Balaam (două în acest capitol, două în cel următor) sunt scrise în formă poetică solemnă, deosebit de restul cărții. Structura repetitivă — ceremonie, cuvânt de la DOMNUL, pildă, reacția lui Balac — subliniază prin repetiție ideea centrală: indiferent de loc sau de numărul de încercări, răspunsul lui Dumnezeu rămâne același.",
   historicalContext:
-    "Țapte altare și câte un taur și un berbec pe fiecare erau o jertfă masivă, tipică pentru un rege care voia să impresioneze zeitățile invocate de ghicitorul său. Practica lui Balac de a schimba locul de observație reflectă o credință păgână comună în Orientul Apropiat antic: puterea unui zeu sau spirit era considerată legată de un teritoriu geografic anume.",
+    "Șapte altare și câte un taur și un berbec pe fiecare erau o jertfă masivă, tipică pentru un rege care voia să impresioneze zeitățile invocate de ghicitorul său. Practica lui Balac de a schimba locul de observație reflectă o credință păgână comună în Orientul Apropiat antic: puterea unui zeu sau spirit era considerată legată de un teritoriu geografic anume.",
   units: [
     {
       id: "numeri-23-1-6",
@@ -119,6 +119,6 @@ export const NUMERI_23 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să cred cu toată ființa că Tu nu ești un om ca să minți, nici un fiu al omului ca să-Ți pară rău de făgăduințele Tale.\n\nMulțumescu-Ți că nicio putere din afară, oricât de insistentă, nu poate blestema ceea ce Tu ai binecuvântat.\n\nDă-mi o gură supusă Cuvântului Tău, ca a lui Balaam în aceste două profeții, chiar dacă inima are încă lupte de dus.\n\nȘi păzește-mi inima de a căuta o cale de mijloc când Tu ai vorbit deja limpede. Amin.",
+    "Doamne, învață-mă să cred cu toată ființa că Tu nu ești un om ca să minți, nici un fiu al omului ca să-Ți pară rău de făgăduințele Tale.\n\nÎți mulțumesc că nicio putere din afară, oricât de insistentă, nu poate blestema ceea ce Tu ai binecuvântat.\n\nDă-mi o gură supusă Cuvântului Tău, ca a lui Balaam în aceste două profeții, chiar dacă inima are încă lupte de dus.\n\nȘi păzește-mi inima de a căuta o cale de mijloc când Tu ai vorbit deja limpede. Amin.",
   status: NUMERI_STATUSES[23],
 })

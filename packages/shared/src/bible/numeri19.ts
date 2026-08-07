@@ -18,7 +18,7 @@ export const NUMERI_19 = numeriChapter({
   literaryContext:
     "Acest capitol vine imediat după secțiunea despre preoție și înainte de moartea Mariei și a lui Aaron în capitolul următor, pregătind literalmente poporul pentru multele morți care vor urma în timpul rătăcirii de patruzeci de ani — fără această lege, contactul repetat cu moartea ar fi spurcat continuu tabăra și Cortul din mijlocul ei.",
   historicalContext:
-    "Această lege este numită de răbini un „chok” — o poruncă fără explicație rațională evidentă — și era ultima jertfă de vacă roșie despre care există tradiții, folosită până la distrugerea celui de-al doilea Templu. Evrei 9:13-14 folosește această imagine pentru a explica superioritatea curățirii aduse prin sângele lui Hristos.",
+    "Această lege este numită de rabini un „chok” — o poruncă fără explicație rațională evidentă — și era ultima jertfă de vacă roșie despre care există tradiții, folosită până la distrugerea celui de-al doilea Templu. Evrei 9:13-14 folosește această imagine pentru a explica superioritatea curățirii aduse prin sângele lui Hristos.",
   units: [
     {
       id: "numeri-19-1-2",
@@ -82,7 +82,7 @@ export const NUMERI_19 = numeriChapter({
       heading: "Legea corturilor, vaselor și câmpului",
       text: numeriPassage(19, 14, 16),
       teaching: teaching(
-        "Necurăția se extinde dincolo de cel care atinge direct trupul: „oricine intră în cort și tot ce este în cort va fi necurat șapte zile”. Un vas deschis, fără capac legat, devine și el necurat — aratând cât de larg se răspândește influența morții într-un spațiu închis.",
+        "Necurăția se extinde dincolo de cel care atinge direct trupul: „oricine intră în cort și tot ce este în cort va fi necurat șapte zile”. Un vas deschis, fără capac legat, devine și el necurat — arătând cât de larg se răspândește influența morții într-un spațiu închis.",
         "Chiar întâlnirea întâmplătoare cu un os de om sau un mormânt pe câmp aduce aceeași necurăție de șapte zile. Legea nu făcea deosebire între contactul căutat și cel neintenționat — toate cereau aceeași curățire.",
       ),
       words: [],
@@ -128,6 +128,6 @@ export const NUMERI_19 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, mulțumesc-Ți că ai rânduit întotdeauna o cale de curățire pentru poporul Tău, chiar și pentru cea mai grea necurăție a morții.\n\nÎnvață-mă să caut curățirea Ta cu răbdare și ascultare, fără să caut soluții rapide sau formale.\n\nMulțumescu-Ți că sângele lui Hristos curăță conștiința mea de faptele moarte, mai mult decât putea cenușa vacii roșii să curețe trupul.\n\nȘi păzește-mă de a spurca cu nepăsare lucrurile sfinte pe care Tu le-ai rânduit. Amin.",
+    "Doamne, mulțumesc-Ți că ai rânduit întotdeauna o cale de curățire pentru poporul Tău, chiar și pentru cea mai grea necurăție a morții.\n\nÎnvață-mă să caut curățirea Ta cu răbdare și ascultare, fără să caut soluții rapide sau formale.\n\nÎți mulțumesc că sângele lui Hristos curăță conștiința mea de faptele moarte, mai mult decât putea cenușa vacii roșii să curețe trupul.\n\nȘi păzește-mă de a spurca cu nepăsare lucrurile sfinte pe care Tu le-ai rânduit. Amin.",
   status: NUMERI_STATUSES[19],
 })

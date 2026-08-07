@@ -120,6 +120,6 @@ export const NUMERI_33 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să țin minte cu recunoștință fiecare etapă a călăuzirii Tale în viața mea, chiar și cele care par obișnuite și lipsite de însemnătate.\n\nDă-mi curajul să nu las nimic din vechea idolatrie sau compromis în viața mea, ca nu cumva să devină mai târziu spini în ochi și ghimpi în coaste.\n\nMulțumescu-Ți pentru fiecare slujitor credincios pe care l-ai pus în viața mea și învață-mă să continui înainte cu încredere, chiar după ce ei nu mai sunt cu mine. Amin.",
+    "Doamne, învață-mă să țin minte cu recunoștință fiecare etapă a călăuzirii Tale în viața mea, chiar și cele care par obișnuite și lipsite de însemnătate.\n\nDă-mi curajul să nu las nimic din vechea idolatrie sau compromis în viața mea, ca nu cumva să devină mai târziu spini în ochi și ghimpi în coaste.\n\nÎți mulțumesc pentru fiecare slujitor credincios pe care l-ai pus în viața mea și învață-mă să continui înainte cu încredere, chiar după ce ei nu mai sunt cu mine. Amin.",
   status: NUMERI_STATUSES[33],
 })

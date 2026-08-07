@@ -28,7 +28,7 @@ export const NUMERI_2 = numeriChapter({
       teaching: teaching(
         "Porunca este scurtă, dar cuprinde tot ce va urma în capitol: „Fiii lui Israel să tăbărască fiecare lângă steagul lui... în jurul Cortului Întâlnirii”. Două lucruri se împletesc aici: fiecare familie își are locul ei propriu, sub semnul casei ei, și totuși toate privesc către același centru.",
         "Nu există în tabăra aceasta un loc întâmplător. Rânduiala nu vine din obiceiul oamenilor, ci din porunca DOMNULUI, rostită lui Moise și lui Aaron împreună. Și totuși, rânduiala nu șterge deosebirile dintre seminții: fiecare își păstrează steagul, semnul casei părinților ei. Unitatea poporului nu se face prin ștergerea neamurilor, ci prin așezarea lor împreună, în jurul aceluiași Dumnezeu.",
-        "Vezi și măsura pusă în text: taberele stăteau „la o oarecare depărtare” de Cort. Nu se îngrămădeau peste sfințenia lui Dumnezeu, dar nici nu se depărtau de ea. Aproprierea de Dumnezeu În Scriptură cere întotdeauna această măsură: nici obrăznicie, nici fugă.",
+        "Vezi și măsura pusă în text: taberele stăteau „la o oarecare depărtare” de Cort. Nu se îngrămădeau peste sfințenia lui Dumnezeu, dar nici nu se depărtau de ea. Apropierea de Dumnezeu în Scriptură cere întotdeauna această măsură: nici obrăznicie, nici fugă.",
       ),
       words: [
         {
@@ -102,7 +102,7 @@ export const NUMERI_2 = numeriChapter({
       heading: "În mijlocul taberei: Cortul și leviții",
       text: numeriPassage(2, 17, 17),
       teaching: teaching(
-        "Un singur verset, dar el este balamaua întregului capitol: „Apoi va porni Cortul Întâlnirii, cu tabăra leviților în mijlocul celorlalte tabere”. Toate cele patru tabere sunt așezate în jurul unui centru care nu se mișcă din locul lui rostuit: Cortul În care locuiește DOMNUL.",
+        "Un singur verset, dar el este balamaua întregului capitol: „Apoi va porni Cortul Întâlnirii, cu tabăra leviților în mijlocul celorlalte tabere”. Toate cele patru tabere sunt așezate în jurul unui centru care nu se mișcă din locul lui rostuit: Cortul în care locuiește DOMNUL.",
         "Și mai spune ceva textul: „cum au tăbărât, așa vor și porni”. Ordinea nu este doar pentru odihnă, ci și pentru drum. Israel nu se mișcă haotic prin pustie; se mișcă într-o formă care păstrează, și în mers, același centru și aceeași rânduială.",
         "Ia aminte la locul leviților: nu într-o tabără anume dintre cele patru, ci în chiar mijloc, lângă Cort. Capitolele următoare vor spune de ce: ei sunt cei chemați să-l poarte și să-l păzească. Locul cel mai aproape de sfințenie nu este cel mai onorific după măsura lumii, ci cel mai încărcat de răspundere.",
       ),

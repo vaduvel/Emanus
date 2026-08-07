@@ -44,8 +44,8 @@ export const DEUTERONOM_29 = deuteronomChapter({
       heading: "Legământul, extins asupra celor prezenți și asupra celor viitori",
       text: deuteronomPassage(29, 9, 15),
       teaching: teaching(
-        "Toți sunt incluși în reînnoirea legământului — căpeteniile, bătrânii, pruncii, nevestele, străinul, „de la tăietorul tău de lemne până la scoțătorul tău de apă”. Nici o categorie socială nu este exclusă din angajamentul cu DOMNUL.",
-        "Cel mai remarcabil este extensia temporală: „atat cu cel ce este astăzi aici cu noi... cât și cu cel ce nu este astăzi aici cu noi”. Legământul îi obligă pe generațiile viitoare, care nu erau fizic prezente, dar sunt totuși parte a acordului încheiat în numele lor.",
+        "Toți sunt incluși în reînnoirea legământului — căpeteniile, bătrânii, pruncii, nevestele, străinul, „de la tăietorul tău de lemne până la scoaterea tău de apă”. Nici o categorie socială nu este exclusă din angajamentul cu DOMNUL.",
+        "Cel mai remarcabil este extensia temporală: „atât cu cel ce este astăzi aici cu noi... cât și cu cel ce nu este astăzi aici cu noi”. Legământul îi obligă pe generațiile viitoare, care nu erau fizic prezente, dar sunt totuși parte a acordului încheiat în numele lor.",
       ),
       words: [
         {

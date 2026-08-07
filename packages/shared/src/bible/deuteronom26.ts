@@ -41,7 +41,7 @@ export const DEUTERONOM_26 = deuteronomChapter({
     {
       id: "deuteronom-26-12-15",
       ref: "Deuteronom 26:12-15",
-      heading: "Zeciuiala celui de-al treilea an, mărturisită fără abătere",
+      heading: "Zeciuiala celui de-al treilea an, mărturisită fără abatere",
       text: deuteronomPassage(26, 12, 15),
       teaching: teaching(
         "Zeciuiala anului al treilea este destinată explicit levitului, străinului, orfanului și văduvei, „și ei vor mânca în porțile tale și se vor sătura”. Mărturisirea care o însoțește insistă că nimic nu a fost ținut pentru sine, nici folosit necurat, nici dat pentru un mort.",

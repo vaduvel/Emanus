@@ -55,7 +55,7 @@ export const NUMERI_25 = numeriChapter({
       text: numeriPassage(25, 6, 9),
       teaching: teaching(
         "În mijlocul unei adunări care plângea la intrarea Cortului Întâlnirii, un bărbat din Israel aduce sfidător o madianită chiar sub ochii lui Moise și ai întregii adunări — un act de răzvrătire deschisă în fața judecății deja declarate.",
-        "Fineas, fiul lui Eleazar, se scoală fără poruncă explicită, ia o suliță și îi străpunge pe amândoi deodată. Acțiunea lui, deși violentă, oprește imediat urgia care ucisese deja 24.000 de oameni — râvna lui pentru sfințenia DOMNULUI a făcut ceea ce judecata formală încă nu apâta pe deplin.",
+        "Fineas, fiul lui Eleazar, se scoală fără poruncă explicită, ia o suliță și îi străpunge pe amândoi deodată. Acțiunea lui, deși violentă, oprește imediat urgia care ucisese deja 24.000 de oameni — râvna lui pentru sfințenia DOMNULUI a făcut ceea ce judecata formală încă nu ațâța pe deplin.",
       ),
       words: [],
       crossRefs: ["Psalmul 106:29-31", "1 Corinteni 10:8"],

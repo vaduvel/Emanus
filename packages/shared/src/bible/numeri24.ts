@@ -121,6 +121,6 @@ export const NUMERI_24 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, dă-mi ochii deschiși ai lui Balaam, dar inima curată pe care el nu a avut-o întotdeauna, ca să văd frumusețea poporului Tău așa cum o vezi Tu.\n\nMulțumescu-Ți pentru steaua care a răsărit din Iacov și sceptrul care s-a ridicat din Israel — Hristos, împlinirea acestei făgăduințe văzute de departe.\n\nÎnvață-mă să nu mă încred în puterea sau siguranța pământească, ci în judecata și în binecuvântarea Ta, care rămân valabile dincolo de orice despărțire omenească. Amin.",
+    "Doamne, dă-mi ochii deschiși ai lui Balaam, dar inima curată pe care el nu a avut-o întotdeauna, ca să văd frumusețea poporului Tău așa cum o vezi Tu.\n\nÎți mulțumesc pentru steaua care a răsărit din Iacov și sceptrul care s-a ridicat din Israel — Hristos, împlinirea acestei făgăduințe văzute de departe.\n\nÎnvață-mă să nu mă încred în puterea sau siguranța pământească, ci în judecata și în binecuvântarea Ta, care rămân valabile dincolo de orice despărțire omenească. Amin.",
   status: NUMERI_STATUSES[24],
 })

@@ -128,6 +128,6 @@ export const DEUTERONOM_22 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, învață-ne să nu ne prefacem că nu vedem nevoia aproapelui, ci să intervenîm cu grijă activă.\n\nAjută-ne să respectăm ordinea pe care ai pus-o în creație, fără să o amestecăm nesăbuit.\n\nDă-ne înțelepciune să cercetăm temeinic acuzațiile grave, și milă față de cei victimizați fără vină.\n\nȘi păzește-ne familiile de trădare, în cele mai intime legături de încredere. Amin.",
+    "Doamne, învață-ne să nu ne prefacem că nu vedem nevoia aproapelui, ci să intervenim cu grijă activă.\n\nAjută-ne să respectăm ordinea pe care ai pus-o în creație, fără să o amestecăm nesăbuit.\n\nDă-ne înțelepciune să cercetăm temeinic acuzațiile grave, și milă față de cei victimizați fără vină.\n\nȘi păzește-ne familiile de trădare, în cele mai intime legături de încredere. Amin.",
   status: DEUTERONOM_STATUSES[22],
 })

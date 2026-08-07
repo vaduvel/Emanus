@@ -121,6 +121,6 @@ export const NUMERI_21 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să răspund cu recunoștință și cântare, nu cu cârtire, când îmi arăți darurile Tale.\n\nMulțumescu-Ți pentru șarpele de aramă înălțat, care mă duce cu gândul la Hristos, Înălțat pe cruce pentru vindecarea mea; învață-mă să privesc spre El cu credință simplă.\n\nDă-mi ascultare față de granițele pe care le rânduiști și curaj atunci când îmi ceri să lupt.\n\nȘi învață-mă să nu mă tem de niciun vrăjmaș, oricât de mare, pentru că Tu ai spus: „l-am dat în mâinile tale”. Amin.",
+    "Doamne, învață-mă să răspund cu recunoștință și cântare, nu cu cârtire, când îmi arăți darurile Tale.\n\nÎți mulțumesc pentru șarpele de aramă înălțat, care mă duce cu gândul la Hristos, Înălțat pe cruce pentru vindecarea mea; învață-mă să privesc spre El cu credință simplă.\n\nDă-mi ascultare față de granițele pe care le rânduiști și curaj atunci când îmi ceri să lupt.\n\nȘi învață-mă să nu mă tem de niciun vrăjmaș, oricât de mare, pentru că Tu ai spus: „l-am dat în mâinile tale”. Amin.",
   status: NUMERI_STATUSES[21],
 })

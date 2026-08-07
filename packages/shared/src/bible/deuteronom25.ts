@@ -53,7 +53,7 @@ export const DEUTERONOM_25 = deuteronomChapter({
           transliteration: "lo tachsom shor bedisho",
           language: "ebraica",
           meaning:
-            "să nu legți gura boului când treieră. Interdicția lipsirii forțată a celui care muncește de rodul propriei munci, aplicată aici la animal, dar cu implicații mai largi.",
+            "să nu legi gura boului când treieră. Interdicția lipsirii forțată a celui care muncește de rodul propriei munci, aplicată aici la animal, dar cu implicații mai largi.",
         },
       ],
       crossRefs: ["1 Corinteni 9:9-10", "1 Timotei 5:18", "Proverbe 12:10"],

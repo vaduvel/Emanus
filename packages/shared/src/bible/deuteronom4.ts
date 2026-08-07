@@ -69,7 +69,7 @@ export const DEUTERONOM_4 = deuteronomChapter({
       teaching: teaching(
         "Porunca împotriva idolatriei se întinde în amănunt: nici chip de om, nici de femeie, nici de animal, pasăre, târâtoare sau pește, nici măcar de soare, lună sau stele. Orice lucru creat, oricât de măreț, devine idol în clipa în care omul îl închină în locul Creatorului lui.",
         "Motivul este direct: „DOMNUL, Dumnezeul tău, este un foc mistuitor, un Dumnezeu gelos”. Gelozia aceasta nu este o slăbiciune, ci râvna dreaptă a unui soț credincios față de un legământ exclusiv; Dumnezeu nu împarte cinstea cuvenită Lui cu niciun chip cioplit.",
-        "Amenințarea capitolului este limpede din timp: dacă se vor strica făcând chipuri cioplite, „vă veți pierde cu totul și nu veți mai trăi multă vreme în țară”. Avertismentul de aici anticipează direct exilul care va fi descris În capitolul următor.",
+        "Amenințarea capitolului este limpede din timp: dacă se vor strica făcând chipuri cioplite, „vă veți pierde cu totul și nu veți mai trăi multă vreme în țară”. Avertismentul de aici anticipează direct exilul care va fi descris în capitolul următor.",
       ),
       words: [
         {
@@ -82,7 +82,7 @@ export const DEUTERONOM_4 = deuteronomChapter({
       ],
       crossRefs: ["Exod 20:4-6", "Deuteronom 5:8-9", "Evrei 12:29"],
       forYourHeart:
-        "Nu doar statuile sunt idoli; orice lucru creat pe care îl închini În locul lui Dumnezeu Îi ia locul cuvenit numai Lui.",
+        "Nu doar statuile sunt idoli; orice lucru creat pe care îl închini în locul lui Dumnezeu Îi ia locul cuvenit numai Lui.",
     },
     {
       id: "deuteronom-4-25-31",
@@ -90,8 +90,8 @@ export const DEUTERONOM_4 = deuteronomChapter({
       heading: "Exilul prorocit, și mila care Îl urmează",
       text: deuteronomPassage(4, 25, 31),
       teaching: teaching(
-        "Cu generații Înainte de a se ÎntÎmpla, Moise prorocește exact ce va urma: „veți fi nimiciți de grabă din țara pe care o veți lua În stăpÎnire... DOMNUL vă va Împrăștia Între neamuri”. Aceasta nu este o presupunere, ci o cunoaștere dinainte a inconstanței omenești, scrisă În text Înainte de întreaga istorie a împărățiilor de mai târziu.",
-        "Chiar În mijlocul acestei amenințări grave stă o făgăduință mai mare: „Vei căuta pe DOMNUL, Dumnezeul tău, și-L vei găsi, dacă Îl vei căuta cu toată inima ta”. Exilul nu este cuvântul final; căutarea sinceră duce mereu Înapoi la un Dumnezeu Îndurător, care „nu te va părăsi, nici nu te va nimici, și nu va uita legământul”.",
+        "Cu generații Înainte de a se ÎntÎmpla, Moise prorocește exact ce va urma: „veți fi nimiciți de grabă din țara pe care o veți lua în stăpÎnire... DOMNUL vă va Împrăștia Între neamuri”. Aceasta nu este o presupunere, ci o cunoaștere dinainte a inconstanței omenești, scrisă în text Înainte de întreaga istorie a împărățiilor de mai târziu.",
+        "Chiar în mijlocul acestei amenințări grave stă o făgăduință mai mare: „Vei căuta pe DOMNUL, Dumnezeul tău, și-L vei găsi, dacă Îl vei căuta cu toată inima ta”. Exilul nu este cuvântul final; căutarea sinceră duce mereu Înapoi la un Dumnezeu Îndurător, care „nu te va părăsi, nici nu te va nimici, și nu va uita legământul”.",
       ),
       words: [
         {
@@ -99,22 +99,22 @@ export const DEUTERONOM_4 = deuteronomChapter({
           transliteration: "biqashtem misham",
           language: "ebraica",
           meaning:
-            "vei căuta de acolo (din exil). Căutarea lui Dumnezeu În mijlocul consecințelor păcatului rămâne mereu posibilă, oricât de Îndepărtată este țara În care te afli.",
+            "vei căuta de acolo (din exil). Căutarea lui Dumnezeu în mijlocul consecințelor păcatului rămâne mereu posibilă, oricât de Îndepărtată este țara în care te afli.",
         },
       ],
       crossRefs: ["2 Cronici 36:15-21", "Ieremia 29:12-14", "Neemia 1:8-9"],
       forYourHeart:
-        "Nici cea mai grea consecință a păcatului tău nu este mai mare decît mila lui Dumnezeu pentru cel care Îl caută cu toată inima.",
+        "Nici cea mai grea consecință a păcatului tău nu este mai mare decât mila lui Dumnezeu pentru cel care Îl caută cu toată inima.",
     },
     {
       id: "deuteronom-4-32-40",
       ref: "Deuteronom 4:32-40",
-      heading: "Fără seamăn În istoria lumii",
+      heading: "Fără seamăn în istoria lumii",
       text: deuteronomPassage(4, 32, 40),
       teaching: teaching(
-        "Moise cere poporului să cerceteze toată istoria omenirii, „din ziua când a făcut Dumnezeu pe om pe pământ”, și să găsească vreun alt neam care a auzit glasul lui Dumnezeu vorbind din mijlocul focului și a trăit. Experiența lor la Horeb nu are asemănare În istoria omenirii.",
-        "Concluzia teologică este rostită fără echivoc: „DOMNUL este Dumnezeu, În cer și pe pământ, și nu este altul”. Această declarație de monoteism absolut, rar exprimată așa de răspicat În restul Vechiului Legământ, este piatra de temelie a întregii teologii biblice.",
-        "Din această unicitate decurge porunca practică: „să păzești poruncile Lui... ca să-ți fie bine, ție și copiilor tăi”. Cunoașterea corectă a lui Dumnezeu nu este scop În sine, ci temei pentru o ascultare care duce la bine.",
+        "Moise cere poporului să cerceteze toată istoria omenirii, „din ziua când a făcut Dumnezeu pe om pe pământ”, și să găsească vreun alt neam care a auzit glasul lui Dumnezeu vorbind din mijlocul focului și a trăit. Experiența lor la Horeb nu are asemănare în istoria omenirii.",
+        "Concluzia teologică este rostită fără echivoc: „DOMNUL este Dumnezeu, în cer și pe pământ, și nu este altul”. Această declarație de monoteism absolut, rar exprimată așa de răspicat în restul Vechiului Legământ, este piatra de temelie a întregii teologii biblice.",
+        "Din această unicitate decurge porunca practică: „să păzești poruncile Lui... ca să-ți fie bine, ție și copiilor tăi”. Cunoașterea corectă a lui Dumnezeu nu este scop în sine, ci temei pentru o ascultare care duce la bine.",
       ),
       words: [
         {
@@ -122,12 +122,12 @@ export const DEUTERONOM_4 = deuteronomChapter({
           transliteration: "YHWH hu ha-Elohim",
           language: "ebraica",
           meaning:
-            "DOMNUL, El este Dumnezeu. Formula de credință fundamentală a monoteismului biblic, repetată mai târziu În 1 Împărați 18:39 la Cara Carmel.",
+            "DOMNUL, El este Dumnezeu. Formula de credință fundamentală a monoteismului biblic, repetată mai târziu în 1 Împărați 18:39 la Cara Carmel.",
         },
       ],
       crossRefs: ["1 Împarați 18:36-39", "Isaia 45:5-6", "Deuteronom 6:4"],
       forYourHeart:
-        "Nicio experiență spirituală, oricât de măreță, are valoare În sine; valoarea ei este În ascultarea pe care o naște.",
+        "Nicio experiență spirituală, oricât de măreață, are valoare în sine; valoarea ei este în ascultarea pe care o naște.",
     },
     {
       id: "deuteronom-4-41-49",
@@ -136,7 +136,7 @@ export const DEUTERONOM_4 = deuteronomChapter({
       text: deuteronomPassage(4, 41, 49),
       teaching: teaching(
         "Înainte de a rosti legile din inima cărții, Moise așază trei cetăți de scăpare la răsărit de Iordan: Beser, Ramot și Golan. Chiar din primele pagini ale legislației sale, mila pentru cel ce ucide fără voie este pregătită practic, nu doar promisă teoretic.",
-        "Capitolul se încheie cu o însemnare care marchează o răsucire literară: „Iată legea pe care a pus-o Moise înaintea fiilor lui Israel”, urmată de o reamintire geografică a locului — țara lui Sihon, cucerită deja. Recapitularea istorică se încheie aici, și îoi face loc rostirii legii însăși, care va înceoe în capitolul 5 cu Decalogul.",
+        "Capitolul se încheie cu o însemnare care marchează o răsucire literară: „Iată legea pe care a pus-o Moise înaintea fiilor lui Israel”, urmată de o reamintire geografică a locului — țara lui Sihon, cucerită deja. Recapitularea istorică se încheie aici, și îoi face loc rostirii legii însăși, care va începe în capitolul 5 cu Decalogul.",
       ),
       words: [
         {
@@ -144,7 +144,7 @@ export const DEUTERONOM_4 = deuteronomChapter({
           transliteration: "arei miqlat",
           language: "ebraica",
           meaning:
-            "cetăți de scăpare, refugiu pentru cel care a ucis fără voie, pănă la judecată. Rânduiala este dezvoltată pe larg În Numeri 35 și Deuteronom 19.",
+            "cetăți de scăpare, refugiu pentru cel care a ucis fără voie, până la judecată. Rânduiala este dezvoltată pe larg în Numeri 35 și Deuteronom 19.",
         },
       ],
       crossRefs: ["Numeri 35:9-15", "Deuteronom 19:1-13", "Iosua 20:8"],
@@ -153,6 +153,6 @@ export const DEUTERONOM_4 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, Tu ne-ai vorbit prin cuvântul Tău, nu printr-un chip pe care să-l vedem și să-l stăpÎnim.\n\nPăzește-ne de orice idol, oricât de măreț ar fi lucrul creat pe care Îl punem În locul Tău.\n\nÎn ziua când vom cădea, amintește-ne că căutarea Ta cu toată inima ne va afla mereu pe Tine.\n\nȘi Învață-ne să trăim ca un neam fără asemănare, nu pentru slava noastră, ci pentru că Tu, DOMNUL, ești Dumnezeu, și nu este altul. Amin.",
+    "Doamne, Tu ne-ai vorbit prin cuvântul Tău, nu printr-un chip pe care să-l vedem și să-l stăpÎnim.\n\nPăzește-ne de orice idol, oricât de măreț ar fi lucrul creat pe care Îl punem în locul Tău.\n\nÎn ziua când vom cădea, amintește-ne că căutarea Ta cu toată inima ne va afla mereu pe Tine.\n\nȘi Învață-ne să trăim ca un neam fără asemănare, nu pentru slava noastră, ci pentru că Tu, DOMNUL, ești Dumnezeu, și nu este altul. Amin.",
   status: DEUTERONOM_STATUSES[4],
 })

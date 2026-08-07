@@ -134,6 +134,6 @@ export const NUMERI_32 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să cercetez cu grijă motivele din spatele cererilor mele, ca să nu pun în pericol angajamentul față de comunitate din pricina intereselor mele personale.\n\nDă-mi curajul de a-mi ține promisiunile făcute ție și celor din jurul meu, chiar când împlinirea lor cere timp și sacrificiu.\n\nMulțumescu-Ți că poți extinde binecuvântarea Ta dincolo de cererea mea inițială, pentru toți cei care se alătură cu o inimă credincioasă. Amin.",
+    "Doamne, învață-mă să cercetez cu grijă motivele din spatele cererilor mele, ca să nu pun în pericol angajamentul față de comunitate din pricina intereselor mele personale.\n\nDă-mi curajul de a-mi ține promisiunile făcute ție și celor din jurul meu, chiar când împlinirea lor cere timp și sacrificiu.\n\nÎți mulțumesc că poți extinde binecuvântarea Ta dincolo de cererea mea inițială, pentru toți cei care se alătură cu o inimă credincioasă. Amin.",
   status: NUMERI_STATUSES[32],
 })

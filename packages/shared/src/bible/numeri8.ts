@@ -149,6 +149,6 @@ export const NUMERI_8 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să primesc curățirea Ta înainte de orice slujbă pe care o caut, așa cum leviții au fost spălați și ispășiți înainte să intre în Cort.\n\nDă-mi să fiu ca lumina sfeșnicului, îndreptată cu un scop și o direcție, după modelul pe care Tu mi l-ai arătat.\n\nMulțumescu-Ți pentru mijlocitorii pe care i-ai rânduit între mine și sfințenia Ta, ca să pot trăi aproape de Tine fără primejdie.\n\nȘi învață-mă că slujba mea nu se încheie odată cu puterea tinereții; dă-mi înțelepciunea de a sprijini pe cei tineri la vremea bătrâneții. Amin.",
+    "Doamne, învață-mă să primesc curățirea Ta înainte de orice slujbă pe care o caut, așa cum leviții au fost spălați și ispășiți înainte să intre în Cort.\n\nDă-mi să fiu ca lumina sfeșnicului, îndreptată cu un scop și o direcție, după modelul pe care Tu mi l-ai arătat.\n\nÎți mulțumesc pentru mijlocitorii pe care i-ai rânduit între mine și sfințenia Ta, ca să pot trăi aproape de Tine fără primejdie.\n\nȘi învață-mă că slujba mea nu se încheie odată cu puterea tinereții; dă-mi înțelepciunea de a sprijini pe cei tineri la vremea bătrâneții. Amin.",
   status: NUMERI_STATUSES[8],
 })

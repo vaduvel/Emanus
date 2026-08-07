@@ -55,7 +55,7 @@ export const NUMERI_14 = numeriChapter({
       heading: "Propunerea DOMNULUI de nimicire",
       text: numeriPassage(14, 11, 12),
       teaching: teaching(
-        "DOMNUL pune întrebarea direct lui Moise: „până când Mă va disprtu i poporul acesta și până când nu va crede în Mine, cu toate semnele pe care le-am făcut?” Necredința nu este ignoranță; e refuzul de a crede în fața dovezilor deja multiple.",
+        "DOMNUL pune întrebarea direct lui Moise: „până când Mă va disprețul i poporul acesta și până când nu va crede în Mine, cu toate semnele pe care le-am făcut?” Necredința nu este ignoranță; e refuzul de a crede în fața dovezilor deja multiple.",
         "Propunerea DOMNULUI reia tiparul din Exod 32, după vițelul de aur: nimicirea poporului și începerea unui neam nou din urmașii lui Moise. Încă o dată, DOMNUL oferă această posibilitate exact în momentul în care mijlocitorul Său are cel mai mult motiv să accepte, după tot ce a suferit de la acest popor nerecunoscător.",
       ),
       words: [],
@@ -146,7 +146,7 @@ export const NUMERI_14 = numeriChapter({
       teaching: teaching(
         "Auzind sentința, „poporul s-a întristat foarte mult” și, a doua zi dimineața, decid brusc să facă exact ce refuzaseră să facă cu o zi înainte: „iată-ne, suntem gata să ne suim... căci am păcătuit”. Recunoașterea păcatului vine prea târziu și din motivul greșit: nu din pocăință față de necredință, ci din dorința de a evita consecința.",
         "Moise le spune limpede: „de ce călcați porunca DOMNULUI?... nu vă suiți, căci DOMNUL nu este în mijlocul vostru”. Vremea de a asculta trecuse; a încerca acum, din propria voință, să repari o neascultare cu o altă formă de neascultare nu putea izbândi.",
-        "„Chivotul legământului DOMNULUI și Moise nu au părăsit mijlocul taberei” — cel mai clar semn că această încercare era fără binecuvântarea DOMNULUI. Cei care s-au suit oricum „au fost loviți și zdrobiți până la Horma”, o înfrângere care încheie capitolul cu aceeași lecție amară: nici tecăpațina zadarnică, nici fuga temută, ci ascultarea la timpul potrivit era singura cale.",
+        "„Chivotul legământului DOMNULUI și Moise nu au părăsit mijlocul taberei” — cel mai clar semn că această încercare era fără binecuvântarea DOMNULUI. Cei care s-au suit oricum „au fost loviți și zdrobiți până la Horma”, o înfrângere care încheie capitolul cu aceeași lecție amară: nici încăpățânarea zadarnică, nici fuga temută, ci ascultarea la timpul potrivit era singura cale.",
       ),
       words: [
         {

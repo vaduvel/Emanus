@@ -54,7 +54,7 @@ export const NUMERI_17 = numeriChapter({
       ],
       crossRefs: ["Ieremia 1:11-12", "Evrei 9:4"],
       forYourHeart:
-        "Când DOMNUL confirmă o chemare, o face fără ambiguitate; rodul viu și complet este semnul Său, nu o dovadă parțială sau ambălăieșe.",
+        "Când DOMNUL confirmă o chemare, o face fără ambiguitate; rodul viu și complet este semnul Său, nu o dovadă parțială sau ambiguă.",
     },
     {
       id: "numeri-17-10-11",

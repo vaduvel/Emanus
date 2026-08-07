@@ -78,7 +78,7 @@ export const NUMERI_15 = numeriChapter({
       heading: "Voința sfidătoare: hulă fără iertare",
       text: numeriPassage(15, 30, 31),
       teaching: teaching(
-        "În contrast direct cu neștiința, legea numește păcatul „cu voință sfidătoare” ca fiind o hulă directă la adresa DOMNULUI: „persoana aceea Îli hultește pe DOMNUL”. Nu este vorba doar de încălcarea unei reguli, ci de un dispreț conștient față de Cel care a dat regula.",
+        "În contrast direct cu neștiința, legea numește păcatul „cu voință sfidătoare” ca fiind o hulă directă la adresa DOMNULUI: „persoana aceea Îl hulește pe DOMNUL”. Nu este vorba doar de încălcarea unei reguli, ci de un dispreț conștient față de Cel care a dat regula.",
         "Pedeapsa — „persoana aceea va fi nimicită din mijlocul poporului său” — nu are alternativă de jertfă sau ispășire ca în cazul greșelii din neștiință. Cazul care urmează imediat, al omului prins strângând lemne în Sabat, va ilustra concret această categorie de păcat.",
       ),
       words: [

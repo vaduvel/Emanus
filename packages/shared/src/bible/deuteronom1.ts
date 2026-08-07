@@ -106,7 +106,7 @@ export const DEUTERONOM_1 = deuteronomChapter({
           transliteration: "mile’ aharei YHWH",
           language: "ebraica",
           meaning:
-            "a urmat În totul pe DOMNUL, literal „a umplut după DOMNUL”. Expresia descrie o statornicie deplină, nedivizată, folosită anume pentru Caleb.",
+            "a urmat în totul pe DOMNUL, literal „a umplut după DOMNUL”. Expresia descrie o statornicie deplină, nedivizată, folosită anume pentru Caleb.",
         },
       ],
       crossRefs: ["Numeri 14:20-35", "Numeri 32:11-12", "Iosua 14:6-14"],

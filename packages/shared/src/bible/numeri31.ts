@@ -160,6 +160,6 @@ export const NUMERI_31 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, dă-mi înțelepciunea să recunosc că sfatul care a cauzat o dată pierzarea trebuie tratat cu seriozitate deplină, nu cu îngăduință repetată.\n\nÎnvață-mă să gestionez cu precizie și corectitudine binecuvântările pe care mi le dăruiești, fără să uit partea rezervată slujirii Tale.\n\nMulțumescu-Ți pentru fiecare biruință fără pierdere pe care mi-ai dăruit-o și învață-mă să răspund cu recunoștință generoasă, nu doar cu ascultare formală. Amin.",
+    "Doamne, dă-mi înțelepciunea să recunosc că sfatul care a cauzat o dată pierzarea trebuie tratat cu seriozitate deplină, nu cu îngăduință repetată.\n\nÎnvață-mă să gestionez cu precizie și corectitudine binecuvântările pe care mi le dăruiești, fără să uit partea rezervată slujirii Tale.\n\nÎți mulțumesc pentru fiecare biruință fără pierdere pe care mi-ai dăruit-o și învață-mă să răspund cu recunoștință generoasă, nu doar cu ascultare formală. Amin.",
   status: NUMERI_STATUSES[31],
 })

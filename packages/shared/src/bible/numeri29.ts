@@ -68,7 +68,7 @@ export const NUMERI_29 = numeriChapter({
       text: numeriPassage(29, 17, 34),
       teaching: teaching(
         "În fiecare din următoarele șase zile, numărul taurilor jertfiți scade cu exact unul — doisprezece, unsprezece, zece, nouă, opt, șapte — în timp ce numărul berbecilor (doi) și mieilor (paisprezece) rămâne constant. Această descreștere precisă, zi de zi, nu este întâmplătoare și arată o grijă minuțioasă pentru detaliu în porunca DOMNULUI.",
-        "Tradiția iudaică a văzut în această descreștere o imagine a diminuării treptate: În ziua întâi, 13; în ultima zi a săptămânii, 7 — un total de 70 de tauri de-a lungul șaptelui zile, număr simbolic legat de cele șaptezeci de neamuri ale lumii în gândirea iudaică tradițională, sugerand o mijlocire care se extinde dincolo de Israel.",
+        "Tradiția iudaică a văzut în această descreștere o imagine a diminuării treptate: în ziua întâi, 13; în ultima zi a săptămânii, 7 — un total de 70 de tauri de-a lungul șaptelui zile, număr simbolic legat de cele șaptezeci de neamuri ale lumii în gândirea iudaică tradițională, sugerand o mijlocire care se extinde dincolo de Israel.",
       ),
       words: [],
       crossRefs: ["Geneza 10:1-32"],

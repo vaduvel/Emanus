@@ -128,6 +128,6 @@ export const NUMERI_34 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, înțeleg că făgăduințele Tale au hotare precise și sigure, la fel de clare ca o coastă de mare, și învață-mă să le primesc cu încredere deplină.\n\nDă-mi înțelepciunea de a păstra cu grijă înțelegerile făcute cu alții și de a le integra armonios în planurile mai mari pe care le ai pentru noi.\n\nMulțumescu-Ți că mă vezi cu nume și identitate proprie, nu doar ca pe o cifră într-un plan mare al lucrării Tale. Amin.",
+    "Doamne, înțeleg că făgăduințele Tale au hotare precise și sigure, la fel de clare ca o coastă de mare, și învață-mă să le primesc cu încredere deplină.\n\nDă-mi înțelepciunea de a păstra cu grijă înțelegerile făcute cu alții și de a le integra armonios în planurile mai mari pe care le ai pentru noi.\n\nÎți mulțumesc că mă vezi cu nume și identitate proprie, nu doar ca pe o cifră într-un plan mare al lucrării Tale. Amin.",
   status: NUMERI_STATUSES[34],
 })

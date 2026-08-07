@@ -8,11 +8,11 @@ import { DEUTERONOM_STATUSES } from "./deuteronomPublication.js"
 
 export const DEUTERONOM_33 = deuteronomChapter({
   number: 33,
-  title: "Deuteronom 33 - Binecuvantarea finala a lui Moise pentru cele douasprezece seminatii",
+  title: "Deuteronom 33 - Binecuvantarea finala a lui Moise pentru cele douasprezece seminții",
   summary:
-    "Moise, inainte de moarte, binecuvanteaza fiecare seminatie a lui Israel in parte, incheind cu o descriere unica a Dumnezeului lui Iesurun, ale carui brate vesnice sustin poporul.",
+    "Moise, înainte de moarte, binecuvanteaza fiecare seminție a lui Israel in parte, încheind cu o descriere unica a Dumnezeului lui Iesurun, ale cărui brațe veșnice sustin poporul.",
   literaryContext:
-    "Aceasta binecuvantare paraleleaza binecuvantarea lui Iacov din Geneza 49, dar vine dupa patruzeci de ani de calatorie prin pustie, chiar in pragul intrarii in tara promisa, ca ultim cuvant al lui Moise catre popor inainte de moartea sa pe muntele Nebo.",
+    "Aceasta binecuvantare paraleleaza binecuvantarea lui Iacov din Geneza 49, dar vine dupa patruzeci de ani de calatorie prin pustie, chiar in pragul intrarii in tara promisa, ca ultim cuvant al lui Moise catre popor înainte de moartea sa pe muntele Nebo.",
   historicalContext:
     "Ordinea si continutul binecuvantarilor tribale reflecta pozitia geografica si istorica pe care fiecare seminție o va avea in tara Canaanului, unele accente (precum absenta explicita a lui Simeon) fiind pastrate exact asa cum apar in text, fara armonizare artificiala cu Geneza 49.",
   units: [
@@ -31,7 +31,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
           transliteration: "esh dat lamo",
           language: "ebraica",
           meaning:
-            "o lege de foc pentru ei. Expresie dificila si rara, care leaga direct primirea Legii de imaginea focului teofanic vazut la Sinai, subliniind natura ei sacra si arzatoare.",
+            "o lege de foc pentru ei. Expresie dificila si rara, care leagă direct primirea Legii de imaginea focului teofanic vazut la Sinai, subliniind natura ei sacra si arzatoare.",
         },
       ],
       crossRefs: ["Exodul 19:18", "Evrei 12:29", "Geneza 49:1-2"],
@@ -45,7 +45,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
       text: deuteronomPassage(33, 6, 11),
       teaching: teaching(
         "Binecuvantarea lui Ruben este simpla si esențială: „sa traiasca... si sa nu moara”, iar pentru Iuda, Moise cere ajutor direct in lupta: „mâinile lui sa se lupte pentru el si sa-i fii ajutor impotriva vrăjmașilor lui”.",
-        "Levi este descris prin devotamentul sau radical fata de DOMNUL, mai presus de legaturile de familie: „cel ce zice despre tatăl sau si despre mama sa: Nu i-am văzut... căci ei pazesc cuvântul Tau”. Slujirea preoteasca cere o loialitate care trece dincolo de afecțiunile naturale, când acestea vin in conflict cu ascultarea de DOMNUL.",
+        "Levi este descris prin devotamentul sau radical fata de DOMNUL, mai presus de legaturile de familie: „cel ce zice despre tatăl sau si despre mama sa: Nu i-am văzut... căci ei păzesc cuvântul Tau”. Slujirea preoteasca cere o loialitate care trece dincolo de afecțiunile naturale, când acestea vin in conflict cu ascultarea de DOMNUL.",
       ),
       words: [
         {
@@ -53,7 +53,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
           transliteration: "ki shameru imratekha",
           language: "ebraica",
           meaning:
-            "caci ei pazesc cuvantul Tau. Motivul dat pentru loialitatea radicala a lui Levi - nu duritate de caracter, ci pastrarea cu sfintenie a Cuvantului lui Dumnezeu, chiar cu pretul relatiilor de familie compromise de idolatrie.",
+            "caci ei păzesc cuvantul Tau. Motivul dat pentru loialitatea radicala a lui Levi - nu duritate de caracter, ci pastrarea cu sfintenie a Cuvantului lui Dumnezeu, chiar cu pretul relatiilor de familie compromise de idolatrie.",
         },
       ],
       crossRefs: ["Exodul 32:25-29", "Matei 10:37", "Maleahi 2:5-7"],
@@ -67,7 +67,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
       text: deuteronomPassage(33, 12, 17),
       teaching: teaching(
         "Beniamin este descris cu tandrețe rara: „preaiubitul DOMNULUI va locui in siguranta langa El... si va locui intre umerii lui” - imagine de proximitate si ocrotire intima.",
-        "Binecuvantarea lui Iosif este cea mai extinsa si mai generoasa: „cu cele mai bune daruri ale cerului... cu frunatile muntilor stravechi” - un belsug complet, material si topografic, incoronat de imaginea puterii: „coarnele lui sunt coarne de bivol; cu ele va impunge popoarele pana la marginile pamantului”.",
+        "Binecuvantarea lui Iosif este cea mai extinsa si mai generoasa: „cu cele mai bune daruri ale cerului... cu frunțile muntilor stravechi” - un belsug complet, material si topografic, incoronat de imaginea puterii: „coarnele lui sunt coarne de bivol; cu ele va împunge popoarele pana la marginile pamantului”.",
       ),
       words: [
         {
@@ -107,11 +107,11 @@ export const DEUTERONOM_33 = deuteronomChapter({
     {
       id: "deuteronom-33-26-29",
       ref: "Deuteronom 33:26-29",
-      heading: "Dumnezeul lui Iesurun, bratele vesnice, Israel fericit",
+      heading: "Dumnezeul lui Iesurun, bratele veșnice, Israel fericit",
       text: deuteronomPassage(33, 26, 29),
       teaching: teaching(
-        "Binecuvantarea se incheie cu afirmația unicitatii absolute a Dumnezeului lui Israel: „nimeni nu este ca Dumnezeul lui Iesurun, Care trece pe ceruri ca sa-ti vina in ajutor”, urmata de una dintre cele mai calduroase imagini din tot Deuteronomul: „sub tine sunt bratele veșnice”.",
-        "Concluzia finala este o exclamație de fericire: „Ferice de tine, Israele! Cine este ca tine, un popor mântuit de DOMNUL”. Toata cartea Deuteronomul, cu legile, avertismentele si blestemele ei, se incheie pe aceasta nota de siguranta si bucurie întemeiată pe caracterul lui Dumnezeu, nu pe meritul poporului.",
+        "Binecuvantarea se încheie cu afirmația unicitatii absolute a Dumnezeului lui Israel: „nimeni nu este ca Dumnezeul lui Iesurun, Care trece pe ceruri ca sa-ti vina in ajutor”, urmata de una dintre cele mai calduroase imagini din tot Deuteronomul: „sub tine sunt bratele veșnice”.",
+        "Concluzia finala este o exclamație de fericire: „Ferice de tine, Israele! Cine este ca tine, un popor mântuit de DOMNUL”. Toata cartea Deuteronomul, cu legile, avertismentele si blestemele ei, se încheie pe aceasta nota de siguranta si bucurie întemeiată pe caracterul lui Dumnezeu, nu pe meritul poporului.",
       ),
       words: [
         {
@@ -119,12 +119,12 @@ export const DEUTERONOM_33 = deuteronomChapter({
           transliteration: "umitachat zero'ot olam",
           language: "ebraica",
           meaning:
-            "si sub tine bratele vesnice. Una dintre cele mai calduroase imagini biblice de siguranta - nu o promisiune abstracta, ci sprijinul concret si permanent al puterii lui Dumnezeu sub poporul Sau.",
+            "si sub tine bratele veșnice. Una dintre cele mai calduroase imagini biblice de siguranta - nu o promisiune abstracta, ci sprijinul concret si permanent al puterii lui Dumnezeu sub poporul Sau.",
         },
       ],
       crossRefs: ["Psalmul 46:1", "Isaia 40:28-29", "Romani 8:38-39"],
       forYourHeart:
-        "Fericirea ta reala nu vine din meritul propriu, ci din faptul ca sub tine sunt bratele vesnice ale unui Dumnezeu care nu obosseste sa te sustina.",
+        "Fericirea ta reala nu vine din meritul propriu, ci din faptul ca sub tine sunt bratele veșnice ale unui Dumnezeu care nu obosește sa te sustina.",
     },
   ],
   prayer:

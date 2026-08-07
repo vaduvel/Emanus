@@ -16,14 +16,14 @@ export const NUMERI_1 = numeriChapter({
   summary:
     "La un an după ieșirea din Egipt, în pustia Sinai, DOMNUL poruncește un recensământ al tuturor bărbaților de la douăzeci de ani în sus, buni de mers la război. Sunt aleși pe nume doisprezece căpetenii, câte una din fiecare seminție, iar numărătoarea scoate la iveală o oștire de șase sute trei mii cinci sute cincizeci de bărbați. Leviții rămân în afara numărătorii de război, fiindcă sunt păstrați pentru o altă slujbă: paza și purtarea Cortului Întâlnirii.",
   literaryContext:
-    "În ebraică, cartea aceasta nu se numește „Numeri”, ci Bemidbar — „În pustie” — după al cincilea cuvânt al capitolului întâi. Numele grecesc, luat de Septuaginta și moștenit de traducerile noastre, vine de la cele două recensăminte care deschid și, după treizeci și opt de ani de rătăcire, închid cartea în capitolul douăzeci și șase. Ambele nume spun ceva adevărat: cartea este așezată în pustie, și este țesută din numere. Dar numărătoarea nu este răceală de arhivă; ia aminte cum începe capitolul întâi — nu cu o cifră, ci cu nume, unul câte unul, seminție cu seminție. Cartea Numeri va povesti căderea unei generații întregi în pustie, dar începe prin a spune că fiecare din cei care vor cădea a fost mai întâi numit pe nume.",
+    "În ebraică, cartea aceasta nu se numește „Numeri”, ci Bemidbar — „în pustie” — după al cincilea cuvânt al capitolului întâi. Numele grecesc, luat de Septuaginta și moștenit de traducerile noastre, vine de la cele două recensăminte care deschid și, după treizeci și opt de ani de rătăcire, închid cartea în capitolul douăzeci și șase. Ambele nume spun ceva adevărat: cartea este așezată în pustie, și este țesută din numere. Dar numărătoarea nu este răceală de arhivă; ia aminte cum începe capitolul întâi — nu cu o cifră, ci cu nume, unul câte unul, seminție cu seminție. Cartea Numeri va povesti căderea unei generații întregi în pustie, dar începe prin a spune că fiecare din cei care vor cădea a fost mai întâi numit pe nume.",
   historicalContext:
     "Recensământul se face în prima zi a lunii a doua din al doilea an după ieșirea din Egipt — la doar o lună după ce Cortul fusese ridicat (Exod 40:17) și la aproape un an de la Sinai. Popoarele vecine își numărau și ele oștirile, dar aici recensământul nu se face pentru slava unui împărat, ci la porunca DOMNULUI, prin Moise și Aaron, cu câte o căpetenie din fiecare seminție de față. Numărul șase sute trei mii cinci sute cincizeci se apropie de cel din Exod 12:37 („ca la șase sute de mii de bărbați”) și de jumătatea de siclu plătită la numărătoarea din Exod 30:11-16. Leviții sunt lăsați deoparte de această numărătoare fiindcă nu aparțin oștirii de război, ci slujbei Cortului — lucru pe care capitolele următoare îl vor lămuri pe larg.",
   units: [
     {
       id: "numeri-1-1-4",
       ref: "Numeri 1:1-4",
-      heading: "Porunca de a număra În mijlocul pustiei",
+      heading: "Porunca de a număra în mijlocul pustiei",
       text: numeriPassage(1, 1, 4),
       teaching: teaching(
         "Cartea Numeri se deschide cu un glas care vorbește „în pustia Sinai, în Cortul Întâlnirii”. Ia aminte la locul acesta: nu un templu de piatră, nu o cetate, ci un cort într-un pustiu fără hotare. Dumnezeu nu a așteptat ca poporul Său să ajungă undeva anume ca să-i vorbească; a venit să locuiască în mijlocul lor chiar în pustie, și de acolo dă cea dintâi poruncă a cărții.",
@@ -37,7 +37,7 @@ export const NUMERI_1 = numeriChapter({
           transliteration: "midbar",
           language: "ebraica",
           meaning:
-            "pustie, loc nelocuit. Dă numele ebraic al cărții, Bemidbar („În pustie”): Dumnezeu vorbește și lucrează tocmai acolo unde nu este nimic omenesc de care să se sprijine poporul.",
+            "pustie, loc nelocuit. Dă numele ebraic al cărții, Bemidbar („în pustie”): Dumnezeu vorbește și lucrează tocmai acolo unde nu este nimic omenesc de care să se sprijine poporul.",
         },
         {
           original: "שאו צבא",
@@ -145,7 +145,7 @@ export const NUMERI_1 = numeriChapter({
         "La capătul numărătorii vine o lămurire: leviții nu au fost numărați împreună cu restul semințiilor. Nu pentru că ar fi mai puțin însemnați, ci pentru că li s-a dat o altă chemare: „rânduiește-i pe leviți peste Cortul Mărturiei”. Nu orice slujbă pentru Dumnezeu intră în aceleași măsuri ca celelalte; unii sunt chemați la război, alții la pază și slujire în preajma lucrurilor sfinte.",
         "Ia aminte cum se descrie slujba lor: „vor purta Cortul și toate uneltele lui, vor sluji în el și vor tăbărî în jurul Cortului”. Leviții nu trăiesc răsfirați printre celelalte seminții; locul lor este chiar în preajma Cortului, mai aproape de el decât oricine altcineva în tabără. Apropierea aceasta nu este o răsplătire căutată, ci o răspundere: „stăinul care se va apropia să fie dat la moarte”.",
         "Iar această apropiere înseamnă și o pază care apară întregul popor: „Leviții vor avea paza Cortului Mărturiei... ca să nu vină mânia peste adunarea fiilor lui Israel”. Sfințenia lui Dumnezeu, dacă este apropiată fără rânduială, nu aduce viață, ci mânie; leviții sunt așezați tocmai ca zid de ocrotire între poporul de rând și sfințenia din mijlocul lor. Capitolele următoare vor arăta cu de-amănuntul cum se face aceasta.",
-        "Capitolul se încheie cu un singur rând, dar hotărâtor: „Fiii lui Israel au făcut întocmai; au făcut după tot ce-i poruncise DOMNUL lui Moise”. La fel se va încheia și capitolul următor, și multe altele din carte. Ascultarea deplină, fără abătere, este piatra de temelie pe care stă tot ce va urma — chiar dacă, după puțină vreme, această ascultare va începe să se clatine.",
+        "Capitolul se încheie cu un singur rând, dar hotărâtor: „Fiii lui Israel au făcut întocmai; au făcut după tot ce-i poruncise DOMNUL lui Moise”. La fel se va încheia și capitolul următor, și multe altele din carte. Ascultarea deplină, fără abatere, este piatra de temelie pe care stă tot ce va urma — chiar dacă, după puțină vreme, această ascultare va începe să se clatine.",
       ),
       words: [
         {

@@ -120,6 +120,6 @@ export const NUMERI_27 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, dă-mi curajul fiicelor lui Țelofhad de a cere dreptate înaintea Ta, indiferent de convențiile lumii din jurul meu.\n\nÎnvață-mă să accept, ca Moise, consecințele propriilor mele greșeli fără cârtire, și totuși să continui să mă îngrijesc de cei din jurul meu până în ultima clipă.\n\nMulțumescu-Ți că nu lași niciodată poporul Tău fără păstor și că pregătești mereu urmașul potrivit la timpul potrivit. Amin.",
+    "Doamne, dă-mi curajul fiicelor lui Țelofhad de a cere dreptate înaintea Ta, indiferent de convențiile lumii din jurul meu.\n\nÎnvață-mă să accept, ca Moise, consecințele propriilor mele greșeli fără cârtire, și totuși să continui să mă îngrijesc de cei din jurul meu până în ultima clipă.\n\nÎți mulțumesc că nu lași niciodată poporul Tău fără păstor și că pregătești mereu urmașul potrivit la timpul potrivit. Amin.",
   status: NUMERI_STATUSES[27],
 })

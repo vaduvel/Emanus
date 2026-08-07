@@ -23,7 +23,7 @@ export const DEUTERONOM_11 = deuteronomChapter({
       text: deuteronomPassage(11, 1, 7),
       teaching: teaching(
         "Moise se adresează acum generației care a văzut cu propriii ochi minunile din Egipt și pustie — nu prin poveste transmisă, ci prin experiență directă: „ochii voștri au văzut toate lucrările mari pe care le-a făcut DOMNUL”.",
-        "Amintirea includ și judecata asupra lui Dathan și Abiram, care „s-au deschis și i-a înghițit pământul, cu casele lor” — o judecată văzută de Întregul Israel (Numeri 16), martor la ce se întâmplă celor care se răscoală Împotriva slujitorului aleas al lui Dumnezeu.",
+        "Amintirea includ și judecata asupra lui Dathan și Abiram, care „s-au deschis și i-a înghițit pământul, cu casele lor” — o judecată văzută de Întregul Israel (Numeri 16), martor la ce se întâmplă celor care se răscoală Împotriva slujitorului ales al lui Dumnezeu.",
       ),
       words: [
         {
@@ -44,7 +44,7 @@ export const DEUTERONOM_11 = deuteronomChapter({
       heading: "O țară pe care o Îngrijește DOMNUL, nu o irigare omenească",
       text: deuteronomPassage(11, 8, 12),
       teaching: teaching(
-        "Contrastul dintre Egipt și țara făgăduită este făcut expres: „țara În care intri... nu este ca țara Egiptului... unde semănai sămînta și o udai cu mâna ta, ca pe o grădină de legume”. Canaanul nu poate fi controlat prin munca omenească singură; el depinde de cer.",
+        "Contrastul dintre Egipt și țara făgăduită este făcut expres: „țara în care intri... nu este ca țara Egiptului... unde semănai sămânța și o udai cu mâna ta, ca pe o grădină de legume”. Canaanul nu poate fi controlat prin munca omenească singură; el depinde de cer.",
         "Descrierea culminează într-o afirmație plină de intimitate: „este o țară de care Îngrijește DOMNUL, Dumnezeul tău; ochii DOMNULUI, Dumnezeului tău, sunt necurmat asupra ei, de la începutul până la sfârșitul anului”. Această grijă continuă, nu punctuală, este Însăși viața țării făgăduite.",
       ),
       words: [

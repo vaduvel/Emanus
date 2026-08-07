@@ -78,6 +78,6 @@ export const NUMERI_36 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să recunosc că dreptatea și binele comunității nu trebuie să se afle în conflict, ci Tu ai înțelepciunea să le împaci pe amândouă.\n\nDă-mi curajul să cer ceea ce este drept, dar și înțelepciunea de a asculta de rânduielile care păstrează armonia în jurul meu.\n\nMulțumescu-Ți că, după fiecare încercare a drumului cu Tine, mă aduci la un loc de pregătire deplină pentru pasul următor în făgăduință. Amin.",
+    "Doamne, învață-mă să recunosc că dreptatea și binele comunității nu trebuie să se afle în conflict, ci Tu ai înțelepciunea să le împaci pe amândouă.\n\nDă-mi curajul să cer ceea ce este drept, dar și înțelepciunea de a asculta de rânduielile care păstrează armonia în jurul meu.\n\nÎți mulțumesc că, după fiecare încercare a drumului cu Tine, mă aduci la un loc de pregătire deplină pentru pasul următor în făgăduință. Amin.",
   status: NUMERI_STATUSES[36],
 })
