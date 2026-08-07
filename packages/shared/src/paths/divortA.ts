@@ -138,7 +138,7 @@ export const divortL1: Lesson = {
         },
       ],
       scripture: {
-        text: "Căci Domnul te chemă înapoi ca pe o femeie părăsită și cu inima întristată, ca pe o nevastă din tinerețe, care a fost alungată, zice Dumnezeul tău.",
+        text: "Căci Domnul te chemă înapoi ca pe o femeie părăsită și cu inima întristată, ca pe o nevastă din tinerețe care a fost alungată, zice Dumnezeul tău.",
         ref: "Isaia 54:6",
       },
     },
@@ -219,7 +219,7 @@ export const divortL1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "«Nu Știu ce să-Ți cer. Știu doar că s-a rupt ceva și că nu pot să-l lipesc la loc. Stai aici cu mine.»",
+          text: "«Nu știu ce să-Ți cer. Știu doar că s-a rupt ceva și că nu pot să-l lipesc la loc. Stai aici cu mine.»",
         },
       ],
     },
@@ -302,7 +302,10 @@ export const divortL2: Lesson = {
       order: 4,
       bubbles: [
         { from: "guide", text: "Trei lucruri, care schimbă tot înțelesul." },
-        { from: "guide", text: "Întâi: textul spune limpede că întrebarea era o capcană. «Ca să-L ispitească.» Nu voiau un răspuns pastoral, voiau un motiv de acuzare." },
+        {
+          from: "guide",
+          text: "Întâi: textul spune limpede că întrebarea era o capcană. «Ca să-L ispitească.» Nu voiau un răspuns pastoral, voiau un motiv de acuzare.",
+        },
         {
           from: "guide",
           text: "Al doilea: «pentru orice pricină» era un termen tehnic. Era o dispută aprinsă între școlile rabinice, iar cea permisivă accepta motive ca mâncarea arsă sau o femeie mai frumoasă văzută în piață.",
@@ -318,7 +321,7 @@ export const divortL2: Lesson = {
       type: "scripture",
       order: 5,
       scripture: {
-        text: "Iisus le-a răspuns: «Din pricina împătrierii inimilor voastre a îngăduit Moise să vă lăsați nevestele; dar de la început n-a fost așa.»",
+        text: "Iisus le-a răspuns: «Din pricina împietririi inimilor voastre a îngăduit Moise să vă lăsați nevestele; dar de la început n-a fost așa.»",
         ref: "Matei 19:8",
       },
     },
@@ -329,7 +332,7 @@ export const divortL2: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "«Din pricina împătririi inimilor voastre.» Legea lui Moise cerea un act scris. Nu ca să facă divorțul ușor — ca femeia să aibă o hârtie în mână și să nu poată fi acuzată mai târziu.",
+          text: "«Din pricina împietririi inimilor voastre.» Legea lui Moise cerea un act scris. Nu ca să facă divorțul ușor — ca femeia să aibă o hârtie în mână și să nu poată fi acuzată mai târziu.",
         },
         {
           from: "guide",
@@ -347,7 +350,7 @@ export const divortL2: Lesson = {
       order: 7,
       bubbles: [{ from: "guide", text: "Al doilea text. Se citește de obicei doar jumătate din el:" }],
       scripture: {
-        text: "Domnul a fost martor între tine și nevasta din tinerețea ta, căreia acum nu-i ești credincios... Căci Eu urăsc desprțirea, zice Domnul, Dumnezeul lui Israel, și pe cel ce își acoperă haina cu silnicie.",
+        text: "Domnul a fost martor între tine și nevasta din tinerețea ta, căreia acum nu-i ești credincios... Căci Eu urăsc despărțirea, zice Domnul, Dumnezeul lui Israel, și pe cel ce își acoperă haina cu silnicie.",
         ref: "Maleahi 2:14-16",
       },
     },
@@ -437,7 +440,7 @@ export const divortL2: Lesson = {
       type: "memory_verse",
       order: 13,
       scripture: {
-        text: "«Din pricina împătririi inimilor voastre a îngăduit Moise... dar de la început n-a fost așa.»",
+        text: "«Din pricina împietririi inimilor voastre a îngăduit Moise... dar de la început n-a fost așa.»",
         ref: "Matei 19:8",
       },
     },
