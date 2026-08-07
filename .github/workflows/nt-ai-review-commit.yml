@@ -7,35 +7,71 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  php-source-dump:
+  php4-commit:
     runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    timeout-minutes: 60
     steps:
-      - name: Checkout review branch
+      - name: Checkout exact review branch
         uses: actions/checkout@v4
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-      - name: Verify and print pinned Philippians source bundle
+
+      - name: Verify pinned Philippians sources
         run: |
           set -euo pipefail
           ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
           unzip -t "$ZIP" >/dev/null
-          for entry in \
-            sblgnt/text/PHP.txt \
-            sblgnt/apparatus/text/PHP.txt \
-            tr/PHP.usfm \
-            webp/PHP.usfm \
-            btf/PHP.usfm \
-            cornilescu1924/PHP.usfm \
-            biblia-libera/PHP.usfm
-          do
-            echo "===== BEGIN $entry ====="
-            unzip -p "$ZIP" "$entry"
-            echo
-            echo "===== END $entry ====="
+          for entry in sblgnt/text/PHP.txt sblgnt/apparatus/text/PHP.txt tr/PHP.usfm webp/PHP.usfm btf/PHP.usfm cornilescu1924/PHP.usfm biblia-libera/PHP.usfm; do
+            unzip -p "$ZIP" "$entry" >/dev/null
           done
+
+      - name: Materialize reviewed PHP 4 batch
+        run: python3 .github/nt-ai-review/php4.py
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.9'
+
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Run required post-batch gates before commit
+        run: |
+          set -euo pipefail
+          pnpm check:biblia-emanus
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          pnpm check:biblia-emanus-nt-withheld
+          python3 scripts/withhold-biblia-emanus-nt.py --check
+          pnpm check:biblia-emanus-nt-runtime
+          pnpm test:biblia-emanus
+          git diff --check
+
+      - name: Assert isolated candidate and commit
+        run: |
+          set -euo pipefail
+          CHAPTER=docs/data/biblia-emanus/PHP.4.json
+          JOURNAL=docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.4.md
+          mapfile -t changed < <(git status --short | awk '{print $2}' | sort)
+          printf '%s\n' "${changed[@]}"
+          test "${#changed[@]}" -eq 2
+          test "${changed[0]}" = "$JOURNAL"
+          test "${changed[1]}" = "$CHAPTER"
+          git add "$CHAPTER" "$JOURNAL"
+          mapfile -t staged < <(git diff --cached --name-only | sort)
+          test "${#staged[@]}" -eq 2
+          test "${staged[0]}" = "$JOURNAL"
+          test "${staged[1]}" = "$CHAPTER"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'fix(biblia): review Philippians 4 against SBLGNT'
+          git push origin HEAD:codex/nt-ai-review-handoff
