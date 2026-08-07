@@ -28,7 +28,9 @@ jobs:
         run: python3 scripts/fix-vt-release-source.py --write
 
       - name: Correct Romanian language in explanation strings only
-        run: python3 scripts/fix-vt-explanation-language-safe.py --write
+        run: |
+          python3 scripts/fix-vt-explanation-language-safe.py --write
+          python3 scripts/fix-vt-explanation-language-phase2.py --write
 
       - name: Show cleanup footprint
         run: |
