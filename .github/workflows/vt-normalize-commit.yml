@@ -35,7 +35,9 @@ jobs:
         run: python3 scripts/fix-vt-release-source.py --write
 
       - name: Correct Romanian language in explanation strings only
-        run: python3 scripts/fix-vt-explanation-language-safe.py --write
+        run: |
+          python3 scripts/fix-vt-explanation-language-safe.py --write
+          python3 scripts/fix-vt-explanation-language-phase2.py --write
 
       - name: Reject malformed Unicode remnants
         run: |
@@ -69,5 +71,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add packages/shared/src/bible/deuteronom*.ts packages/shared/src/bible/numeri*.ts
-          git commit -m 'fix(bible): clean Romanian in legacy VT explanations'
+          git commit -m 'fix(bible): finish Romanian cleanup in legacy VT explanations'
           git push origin HEAD:agent/biblia-explicata-vt-complet
