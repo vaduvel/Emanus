@@ -43,7 +43,10 @@ jobs:
       - name: Build Osea fresh-source re-audit packet with explicit WLC mapping
         run: python3 scripts/prepare-minor-prophet-reaudit.py --book HOS
 
-      - name: Commit fresh source lock and Osea re-audit packet
+      - name: Extract compact Osea boundary review
+        run: python3 scripts/extract-hosea-versification-boundaries.py
+
+      - name: Commit fresh source lock and Osea re-audit evidence
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -51,11 +54,12 @@ jobs:
             docs/data/biblia-emanus/sources/ot-minor-prophets-2026-08-07-usfm.zip \
             docs/data/biblia-emanus/minor-prophets-source-lock.json \
             docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json \
-            docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json
+            docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json \
+            docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-BOUNDARIES.json
           git diff --cached --check
           if git diff --cached --quiet; then
             echo 'Snapshotul, lock-ul și pachetul Osea sunt deja actuale.'
             exit 0
           fi
-          git commit -m "audit(bible): align Osea fresh WEBU and WLC sources"
+          git commit -m "audit(bible): prepare Osea versification boundary review"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
