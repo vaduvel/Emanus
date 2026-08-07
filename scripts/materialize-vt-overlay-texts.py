@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Materializează textul canonic Biblia Emanus pentru overlay-urile publicabile.
+"""Materializează textul biblic de lucru pentru toate cele 29 de cărți overlay VT.
 
-Sursa este ramura Git cu JSON-urile canonice auditate. Sunt materializate numai
-cărțile care declară explicit `translation: BE`, `published`, `public: true` și
-review complet aprobat. În starea actuală acestea acoperă Judecători–Daniel.
+Judecători–Daniel folosesc numai capitole validate explicit ca Biblia Emanus
+(`translation: BE`, published/public și review complet aprobat).
 
-Osea–Maleahi rămân într-un manifest de blocare: explicațiile există, dar nu pot
-fi publicate ca „Biblia Emanus” până când textul lor biblic nu este tradus și
-aprobat în format BE. Nu se folosesc fallback-uri RCCV/legacy sub eticheta BE.
+Osea–Maleahi folosesc temporar textul biblic existent în corpusul de lucru.
+Acest text NU este etichetat Biblia Emanus și NU este release text: este păstrat
+strict ca suport editorial pentru ca explicațiile să poată fi finalizate fără a
+bloca lucrul după traducerea BE. Când Biblia Emanus este gata, se înlocuiește
+numai matricea de versete; explicațiile nu trebuie rescrise.
+
+Nu materializează deuterocanonice, texte etiopiene sau Qumran.
 """
 
 from __future__ import annotations
@@ -40,7 +43,7 @@ BE_BOOKS = [
     ("daniel", "DAN", "Daniel", 27, 12),
 ]
 
-BLOCKED_BOOKS = [
+TEMP_BOOKS = [
     ("osea", "HOS", "Osea", 28, 14),
     ("ioel", "JOL", "Ioel", 29, 3),
     ("amos", "AMO", "Amos", 30, 9),
@@ -56,23 +59,54 @@ BLOCKED_BOOKS = [
 ]
 
 APPROVED_FIELDS = (
-    "aiSourceLanguage", "aiRomanianLanguage", "aiTheologicalContext",
-    "omissionAddition", "benchmarkComparison", "copyrightDistance", "criticalIssues",
+    "aiSourceLanguage",
+    "aiRomanianLanguage",
+    "aiTheologicalContext",
+    "omissionAddition",
+    "benchmarkComparison",
+    "copyrightDistance",
+    "criticalIssues",
 )
+
+TEMP_LABEL = "Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus"
+BE_LABEL = "Biblia Emanus"
 
 
 def git_show(ref: str, path: str) -> str:
-    proc = subprocess.run(["git", "show", f"{ref}:{path}"], cwd=ROOT, text=True, capture_output=True)
+    proc = subprocess.run(
+        ["git", "show", f"{ref}:{path}"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
     if proc.returncode != 0:
         raise SystemExit(f"Nu pot citi {ref}:{path}\n{proc.stderr}")
     return proc.stdout
 
 
-def validate(raw: dict, code: str, chapter: int) -> list[str]:
+def read_verses(raw: dict, code: str, chapter: int) -> list[str]:
+    raw_chapter = raw.get("chapter", raw.get("chapterNumber"))
+    if raw.get("bookId") != code or raw_chapter != chapter:
+        raise SystemExit(f"{code}.{chapter}: identificare invalidă")
+
+    verses = raw.get("verses")
+    if not isinstance(verses, list) or not verses:
+        raise SystemExit(f"{code}.{chapter}: lipsesc versetele")
+
+    texts: list[str] = []
+    for expected, verse in enumerate(verses, start=1):
+        if verse.get("number") != expected:
+            raise SystemExit(f"{code}.{chapter}:{expected}: numerotare discontinuă")
+        text = verse.get("text")
+        if not isinstance(text, str) or not text.strip():
+            raise SystemExit(f"{code}.{chapter}:{expected}: text gol")
+        texts.append(text.strip())
+    return texts
+
+
+def validate_be(raw: dict, code: str, chapter: int) -> list[str]:
     if raw.get("translation") != "BE":
         raise SystemExit(f"{code}.{chapter}: translation != BE")
-    if raw.get("bookId") != code or raw.get("chapter") != chapter:
-        raise SystemExit(f"{code}.{chapter}: identificare invalidă")
     if raw.get("status") != "published" or raw.get("public") is not True:
         raise SystemExit(f"{code}.{chapter}: nu este published/public")
 
@@ -87,19 +121,15 @@ def validate(raw: dict, code: str, chapter: int) -> list[str]:
     if (source.get("hebrew") or {}).get("version") != "WLC-OSHB":
         raise SystemExit(f"{code}.{chapter}: sursa ebraică nu este WLC-OSHB")
 
-    verses = raw.get("verses")
-    if not isinstance(verses, list) or not verses:
-        raise SystemExit(f"{code}.{chapter}: lipsesc versetele")
+    return read_verses(raw, code, chapter)
 
-    texts: list[str] = []
-    for expected, verse in enumerate(verses, start=1):
-        if verse.get("number") != expected:
-            raise SystemExit(f"{code}.{chapter}:{expected}: numerotare discontinuă")
-        text = verse.get("text")
-        if not isinstance(text, str) or not text.strip():
-            raise SystemExit(f"{code}.{chapter}:{expected}: text gol")
-        texts.append(text)
-    return texts
+
+def validate_temp(raw: dict, code: str, chapter: int) -> list[str]:
+    # Pentru textul de lucru cerem numai integritate structurală. Nu pretindem
+    # că este Biblia Emanus și nu îl lăsăm să poarte eticheta BE.
+    if raw.get("status") not in (None, "draft", "in_review", "published"):
+        raise SystemExit(f"{code}.{chapter}: status necunoscut pentru textul provizoriu")
+    return read_verses(raw, code, chapter)
 
 
 def ts_string(value: str) -> str:
@@ -110,18 +140,31 @@ def symbol(book_id: str) -> str:
     return book_id.upper().replace("-", "_") + "_TEXT"
 
 
-def write_book(ref: str, book_id: str, code: str, name: str, order: int, chapters: int) -> int:
+def write_book(
+    ref: str,
+    book_id: str,
+    code: str,
+    name: str,
+    order: int,
+    chapters: int,
+    *,
+    temporary: bool,
+) -> int:
+    del name, order
     chapter_texts: dict[int, list[str]] = {}
     total = 0
+    validator = validate_temp if temporary else validate_be
+
     for chapter in range(1, chapters + 1):
         raw = json.loads(git_show(ref, f"docs/data/biblia-emanus/{code}.{chapter}.json"))
-        texts = validate(raw, code, chapter)
+        texts = validator(raw, code, chapter)
         chapter_texts[chapter] = texts
         total += len(texts)
 
+    source_label = TEMP_LABEL if temporary else BE_LABEL
     lines = [
         "// GENERATED de scripts/materialize-vt-overlay-texts.py.",
-        f"// Sursă: Biblia Emanus {code}, {chapters} capitole; nu edita manual.",
+        f"// Sursă de lucru: {source_label}; {code}, {chapters} capitole; nu edita manual.",
         "",
         f"export const {symbol(book_id)}: Readonly<Record<number, readonly string[]>> = {{",
     ]
@@ -136,11 +179,13 @@ def write_book(ref: str, book_id: str, code: str, name: str, order: int, chapter
     return total
 
 
-def write_index(entries: list[tuple[str, str, str, int, int, int]]) -> None:
+def write_index(entries: list[tuple[str, str, str, int, int, int, bool]]) -> None:
     lines = ["// GENERATED de scripts/materialize-vt-overlay-texts.py."]
     for book_id, *_ in entries:
         lines.append(f'import {{ {symbol(book_id)} }} from "./{book_id}Text.js"')
     lines += [
+        "",
+        'export type OverlayTextStage = "biblia-emanus" | "temporary-editorial"',
         "",
         "export interface CanonicalOverlayTextBook {",
         "  bookId: string",
@@ -150,16 +195,23 @@ def write_index(entries: list[tuple[str, str, str, int, int, int]]) -> None:
         "  chapterCount: number",
         "  verseCount: number",
         "  chapters: Readonly<Record<number, readonly string[]>>",
+        "  textStage: OverlayTextStage",
+        "  translationLabel: string",
         "}",
         "",
         "export const VT_CANONICAL_TEXT_BOOKS: readonly CanonicalOverlayTextBook[] = [",
     ]
-    for book_id, code, name, order, chapters, verses in entries:
+
+    for book_id, code, name, order, chapters, verses, temporary in entries:
+        stage = "temporary-editorial" if temporary else "biblia-emanus"
+        label = TEMP_LABEL if temporary else BE_LABEL
         lines.append(
             f"  {{ bookId: {ts_string(book_id)}, bibleEmanusBookId: {ts_string(code)}, "
             f"name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, "
-            f"verseCount: {verses}, chapters: {symbol(book_id)} }},"
+            f"verseCount: {verses}, chapters: {symbol(book_id)}, "
+            f"textStage: {ts_string(stage)}, translationLabel: {ts_string(label)} }},"
         )
+
     lines += [
         "] as const",
         "",
@@ -167,15 +219,14 @@ def write_index(entries: list[tuple[str, str, str, int, int, int]]) -> None:
         "  VT_CANONICAL_TEXT_BOOKS.map((book) => [book.bookId, book] as const),",
         ")",
         "",
-        "export const VT_CANONICAL_TEXT_BLOCKED = [",
+        "export const VT_TEMPORARY_TEXT_BOOKS = VT_CANONICAL_TEXT_BOOKS.filter(",
+        '  (book) => book.textStage === "temporary-editorial",',
+        ")",
+        "",
+        "// Compatibilitate cu consumatorii vechi: nu mai există blocaje de lucru.",
+        "export const VT_CANONICAL_TEXT_BLOCKED = [] as const",
+        "",
     ]
-    for book_id, code, name, order, chapters in BLOCKED_BOOKS:
-        lines.append(
-            f"  {{ bookId: {ts_string(book_id)}, bibleEmanusBookId: {ts_string(code)}, "
-            f"name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, "
-            'reason: "Biblia Emanus translation not yet available/approved" },'
-        )
-    lines += ["] as const", ""]
     (OUT / "index.ts").write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -184,22 +235,32 @@ def main() -> None:
     parser.add_argument("--source-ref", required=True)
     args = parser.parse_args()
 
-    entries = []
+    entries: list[tuple[str, str, str, int, int, int, bool]] = []
     total_chapters = 0
     total_verses = 0
+
     for book in BE_BOOKS:
-        verses = write_book(args.source_ref, *book)
-        entries.append((*book, verses))
+        verses = write_book(args.source_ref, *book, temporary=False)
+        entries.append((*book, verses, False))
         total_chapters += book[4]
         total_verses += verses
+
+    for book in TEMP_BOOKS:
+        verses = write_book(args.source_ref, *book, temporary=True)
+        entries.append((*book, verses, True))
+        total_chapters += book[4]
+        total_verses += verses
+
     write_index(entries)
 
-    if len(entries) != 17 or total_chapters != 570:
-        raise SystemExit(f"Materializare invalidă: {len(entries)} cărți / {total_chapters} capitole")
+    if len(entries) != 29 or total_chapters != 637:
+        raise SystemExit(
+            f"Materializare invalidă: {len(entries)}/29 cărți / {total_chapters}/637 capitole"
+        )
 
     print(
-        f"Biblia Emanus overlay text OK: 17/17 cărți BE, {total_chapters}/570 capitole, "
-        f"{total_verses} versete auditate. Osea–Maleahi: 12 cărți blocate până la traducerea BE."
+        f"VT work text OK: 29/29 cărți, {total_chapters}/637 capitole, {total_verses} versete; "
+        "17 cărți Biblia Emanus validate + 12 cărți cu text editorial provizoriu."
     )
 
 
