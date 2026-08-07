@@ -25,6 +25,7 @@ need(
   `texte Biblia Emanus trebuie să fie ${EXPECTED_BE_TEXT_BOOKS}`,
 )
 
+const textByBook = new Map(VT_CANONICAL_TEXT_BOOKS.map((book) => [book.bookId, book]))
 let textChapters = 0
 for (const textBook of VT_CANONICAL_TEXT_BOOKS) {
   textChapters += textBook.chapterCount
@@ -51,6 +52,10 @@ for (const book of VT_EXPLAINED_OVERLAYS) {
   need(book.bibleEmanusBookId?.trim(), `${book.name}: lipsește bibleEmanusBookId`)
   need(book.chapters.length > 0, `${book.name}: fără capitole`)
 
+  const textBook = textByBook.get(book.bookId)
+  need(textBook, `${book.name}: nu există text de lucru asociat`)
+  need(textBook.chapterCount === book.chapters.length, `${book.name}: numărul de capitole text/explicație diferă`)
+
   let bookExposition = 0
 
   book.chapters.forEach((chapter, index) => {
@@ -62,6 +67,14 @@ for (const book of VT_EXPLAINED_OVERLAYS) {
     need(chapter.units.length > 0, `${book.name} ${chapter.number}: fără unități explicative`)
 
     const sorted = [...chapter.units].sort((a, b) => a.from - b.from || a.to - b.to)
+    const expectedVerseCount = Math.max(...sorted.map((unit) => unit.to))
+    const verseTexts = textBook.chapters[chapter.number]
+    need(verseTexts, `${book.name} ${chapter.number}: lipsește capitolul din textul de lucru`)
+    need(
+      verseTexts.length === expectedVerseCount,
+      `${book.name} ${chapter.number}: versificația textului de lucru are ${verseTexts.length} versete, explicația așteaptă ${expectedVerseCount}`,
+    )
+
     let cursor = 1
     for (const unit of sorted) {
       units += 1
@@ -118,5 +131,5 @@ console.log(
   `VT publication runtime OK: ${EXPECTED_BOOKS}/29 overlay-uri, ${chapters}/637 capitole, ` +
   `${EXPECTED_BE_TEXT_BOOKS} cărți cu text Biblia Emanus + ${EXPECTED_TEMP_TEXT_BOOKS} cu text provizoriu marcat, ` +
   `${units} unități (${expositionUnits} expuneri Poonen/CFC + ${overviewUnits} overview-uri editoriale), ` +
-  `${hebrewNotes} note ebraice WLC-OSHB. Fără placeholder-e și fără doctrină introdusă în overview-uri.`,
+  `${hebrewNotes} note ebraice WLC-OSHB. Versificația textului de lucru corespunde exact explicațiilor.`,
 )
