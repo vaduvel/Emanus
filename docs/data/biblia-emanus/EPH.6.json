@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset-cu-verset din SBLGNT 1.2 și aparat, cu Textus Receptus numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost repere auxiliare de sens și limbă; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-eph-6",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 24,
       "reviewed": 24,
@@ -98,22 +97,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 24 versete din EPH.6 au fost confruntate direct cu SBLGNT și aparatul fixat; TR a fost folosit numai ca martor de variante."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile, acordurile greșite, fragmentele corupte și formulările nenaturale.",
+        "Persoana, numărul, relațiile sintactice și termenii teologici au fost reașezați după textul grec.",
+        "Lecturile TR/RP absente din textul principal SBLGNT nu au fost importate automat."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT la variantele consemnate în aparat.",
+        "Ambiguitățile lexicale sunt redate cât mai direct, fără glosare confesională în corpul versetului."
       ]
     },
     "omissionAddition": {
@@ -123,124 +121,247 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:eb1380b89aa62ff878c2deb34346cb934d7da53d278b44d23a65b7dfd852d4db",
-    "contentDigest": "sha256:3fa9803b738070019993c2baf149990b95e0c1b93406c756d5ec94549760798e"
+    "textDigest": "sha256:2508eaf0eee5bd965bdb835b3014327b0c02ad1fa2c3b022eeaac83d6d1c0331",
+    "contentDigest": "sha256:83870d74ea54239f7fa925373d8ee3bf8018cd653ff46705da649393d5187dd9"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Copii, ascultați de părinții voștri în Domnul, căci așa este drept."
+      "text": "Copii, ascultați de părinții voștri în Domnul, căci aceasta este drept."
     },
     {
       "number": 2,
-      "text": "Cinstește pe tatăl tău pe mama ta„, care este prima poruncă cu o promisiune:"
+      "text": "„Cinstește pe tatăl tău și pe mama ta” — aceasta este cea dintâi poruncă însoțită de o promisiune —"
     },
     {
       "number": 3,
-      "text": "Ca să vă fie bine și să trăiți mult pe pământ."
+      "text": "„ca să-ți fie bine și să trăiești mult pe pământ.”"
     },
     {
       "number": 4,
-      "text": "Voi, taților, nu vă mâniați copiii, ci hrăniți-i în disciplina și învățătura Domnului."
+      "text": "Iar voi, taților, nu-i provocați la mânie pe copiii voștri, ci creșteți-i în disciplina și învățătura Domnului."
     },
     {
       "number": 5,
-      "text": "Slujitori, fiți ascultători de cei care, după trup, sunt stăpânii voștri, cu frică cutremur, în singurătatea inimii voastre, ca de Hristos,"
+      "text": "Robi, ascultați de stăpânii voștri după trup cu frică și cutremur, în sinceritatea inimii voastre, ca de Hristos,"
     },
     {
       "number": 6,
-      "text": "nu numai pe calea serviciului, când sunt cu ochii pe voi, cum plac oamenilor, ci ca slujitori ai lui Hristos, care fac voia lui Dumnezeu din inimă,"
+      "text": "nu doar când sunteți văzuți, ca să plăceți oamenilor, ci ca robi ai lui Hristos, făcând din suflet voia lui Dumnezeu,"
     },
     {
       "number": 7,
-      "text": "cu bunăvoința de a sluji Domnului și nu oamenilor,"
+      "text": "slujind cu bunăvoință, ca Domnului și nu oamenilor,"
     },
     {
       "number": 8,
-      "text": "știind că orice lucru bun face fiecare, el va primi din nou același bine de la Domnul, fie că este legat sau liber."
+      "text": "știind că fiecare va primi de la Domnul binele pe care îl va face, fie rob, fie liber."
     },
     {
       "number": 9,
-      "text": "Voi, stăpânii, faceți-le aceleași lucruri, și renunțați la amenințare, știind că cel care este atât Stăpânul lor, cât și al vostru este în cer, și nu există părtinire cu el."
+      "text": "Iar voi, stăpânilor, purtați-vă la fel cu ei și renunțați la amenințări, știind că Stăpânul lor și al vostru este în ceruri și la El nu este părtinire."
     },
     {
       "number": 10,
-      "text": "În cele din urmă, fiți tari în Domnul în puterea tăriei Lui."
+      "text": "În sfârșit, întăriți-vă în Domnul și în puterea tăriei Lui."
     },
     {
       "number": 11,
-      "text": "Îmbrăcați-vă cu toată armura lui Dumnezeu, ca să puteți sta împotriva vicleniilor diavolului."
+      "text": "Îmbrăcați-vă cu toată armura lui Dumnezeu, ca să puteți sta împotriva uneltirilor diavolului."
     },
     {
       "number": 12,
-      "text": "Căci lupta noastră nu este împotriva cărnii și sângelui, ci împotriva principatelor, împotriva puterilor, împotriva lumii, împotriva conducătorilor întunericului din această epocă, și împotriva forțelor spirituale ale răutății din locurile cerești."
+      "text": "Căci lupta noastră nu este împotriva sângelui și cărnii, ci împotriva domniilor, împotriva autorităților, împotriva stăpânitorilor lumii acestui întuneric, împotriva duhurilor răutății din cele cerești."
     },
     {
       "number": 13,
-      "text": "De aceea, îmbrăcați-vă cu toată armătura lui Dumnezeu, ca să vă împotrivi în ziua cea rea să stați în picioare, după ce ați făcut totul."
+      "text": "De aceea luați toată armura lui Dumnezeu, ca să puteți rezista în ziua cea rea și, după ce ați făcut totul, să rămâneți în picioare."
     },
     {
       "number": 14,
-      "text": "Sta deci, având centura de utilitate a adevărului înfășurată în jurul taliei voastre și după ce pus platoșa dreptă,"
+      "text": "Stați deci tari, având mijlocul încins cu adevărul și fiind îmbrăcați cu platoșa dreptății,"
     },
     {
       "number": 15,
-      "text": "după ce v-ați pregătit picioarele cu Evanghelia păcii,"
+      "text": "având picioarele încălțate cu pregătirea dată de Evanghelia păcii,"
     },
     {
       "number": 16,
-      "text": "Mai presus de toate, luând scutul credinței, cu care veți putea stinge toate săgețile de foc ale celui rău."
+      "text": "în toate, luând scutul credinței, cu care veți putea stinge toate săgețile aprinse ale celui rău;"
     },
     {
       "number": 17,
-      "text": "Luați coiful mântuirii, și sabia Duhului, care este Cuvântul lui Dumnezeu."
+      "text": "luați și coiful mântuirii și sabia Duhului, care este cuvântul lui Dumnezeu,"
     },
     {
       "number": 18,
-      "text": "cu toate rugăciunile și cererile, rugându-se în orice moment în Duhul, și fiind vigilent în acest scop în toată perseverența și cererile pentru toți sfinții."
+      "text": "rugându-vă în orice vreme în Duhul, cu orice rugăciune și cerere, și vegheând la aceasta cu toată stăruința și cu cerere pentru toți sfinții,"
     },
     {
       "number": 19,
-      "text": "Rugați-vă pentru mine, ca să-mi fie dată declarația în deschiderea gurii mele, pentru a face cunoscut cu îndrăzneală taina veștii bune,"
+      "text": "și pentru mine, ca, atunci când îmi deschid gura, să-mi fie dat cuvântul ca să fac cunoscută cu îndrăzneală taina Evangheliei,"
     },
     {
       "number": 20,
-      "text": "pentru care sunt ambasador în lanțuri, ca să vorbesc cu îndrăzneală în ea, cum trebuie să vorbesc."
+      "text": "pentru care sunt ambasador în lanț, ca în ea să vorbesc cu îndrăzneală, așa cum trebuie să vorbesc."
     },
     {
       "number": 21,
-      "text": "Dar ca să știți și voi ce fac Eu, Tihic, fratele preaiubit și robul credincios al Domnului, vă vor face cunoscute toate lucrurile."
+      "text": "Iar ca să știți și voi cele despre mine, ce fac, Tihic, fratele iubit și slujitor credincios în Domnul, vă va face cunoscut totul."
     },
     {
       "number": 22,
-      "text": "L-am trimis la voi pentru acest scop, ca să cunoașteți starea noastră și să vă mângâie inimile."
+      "text": "L-am trimis la voi tocmai pentru aceasta, ca să aflați cele despre noi și să vă încurajeze inimile."
     },
     {
       "number": 23,
-      "text": "Pace fraților, și dragoste cu credință, de la Dumnezeu Tatăl și Domnul Isus Hristos."
+      "text": "Pace fraților și dragoste cu credință de la Dumnezeu Tatăl și de la Domnul Isus Hristos."
     },
     {
       "number": 24,
-      "text": "Harul să fie cu toți cei ce Îl iubesc pe Domnul nostru Isus Hristos cu dragoste necruțătoare. Amin.”"
+      "text": "Harul să fie cu toți cei care Îl iubesc pe Domnul nostru Isus Hristos cu o dragoste nepieritoare."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Robi, ascultați de stăpânii voștri după trup cu frică și cutremur, în sinceritatea inimii voastre, ca de Hristos,",
+      "alternatives": [
+        "6:5 κατὰ σάρκα κυρίοις WH Treg NA28 ] κυρίοις κατὰ σάρκα RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 6,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "nu doar când sunteți văzuți, ca să plăceți oamenilor, ci ca robi ai lui Hristos, făcând din suflet voia lui Dumnezeu,",
+      "alternatives": [
+        "6 δοῦλοι WH Treg NA28 ] + τοῦ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "știind că fiecare va primi de la Domnul binele pe care îl va face, fie rob, fie liber.",
+      "alternatives": [
+        "8 ἕκαστος ὃ ἂν Treg ] ἕκαστος ἐάν τι WH NA28; ὃ ἐάν τι ἕκαστος RP / • κομίσεται WH Treg NA28 ] κομιεῖται RP / • παρὰ WH Treg NA28 ] + τοῦ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Iar voi, stăpânilor, purtați-vă la fel cu ei și renunțați la amenințări, știind că Stăpânul lor și al vostru este în ceruri și la El nu este părtinire.",
+      "alternatives": [
+        "9 αὐτῶν καὶ ὑμῶν WH Treg NA28 ] ὑμῶν αὐτῶν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 10,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "În sfârșit, întăriți-vă în Domnul și în puterea tăriei Lui.",
+      "alternatives": [
+        "10 Τοῦ λοιποῦ WH Treg NA28 ] Τὸ λοιπόν ἀδελφοί μου RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Căci lupta noastră nu este împotriva sângelui și cărnii, ci împotriva domniilor, împotriva autorităților, împotriva stăpânitorilor lumii acestui întuneric, împotriva duhurilor răutății din cele cerești.",
+      "alternatives": [
+        "12 σκότους WH Treg NA28 ] + τοῦ αἰῶνος RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "în toate, luând scutul credinței, cu care veți putea stinge toate săgețile aprinse ale celui rău;",
+      "alternatives": [
+        "16 ἐν WH Treg NA28 ] ἐπὶ RP / • πονηροῦ Holmes WHmarg Tregmarg ] + τὰ WH Treg NA28 RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 17,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "luați și coiful mântuirii și sabia Duhului, care este cuvântul lui Dumnezeu,",
+      "alternatives": [
+        "17 δέξασθε WH Treg NA28 ] δέξασθαι RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 18,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "rugându-vă în orice vreme în Duhul, cu orice rugăciune și cerere, și vegheând la aceasta cu toată stăruința și cu cerere pentru toți sfinții,",
+      "alternatives": [
+        "18 αὐτὸ WH Treg NA28 ] + τοῦτο RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 21,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Iar ca să știți și voi cele despre mine, ce fac, Tihic, fratele iubit și slujitor credincios în Domnul, vă va face cunoscut totul.",
+      "alternatives": [
+        "21 εἰδῆτε καὶ ὑμεῖς WH NA28 RP ] καὶ ὑμεῖς εἰδῆτε Treg / • γνωρίσει ὑμῖν WH Treg NA28 ] ὑμῖν γνωρίσει RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 24,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Harul să fie cu toți cei care Îl iubesc pe Domnul nostru Isus Hristos cu o dragoste nepieritoare.",
+      "alternatives": [
+        "24 ἀφθαρσίᾳ WH Treg NA28 ] + Ἀμήν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
