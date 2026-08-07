@@ -40,18 +40,22 @@ jobs:
             --webu-zip /tmp/engwebp_current.zip \
             --wlc-zip /tmp/hboWLC_current.zip
 
-      - name: Commit fresh source lock and evidence
+      - name: Build Osea fresh-source re-audit packet
+        run: python3 scripts/prepare-minor-prophet-reaudit.py --book HOS
+
+      - name: Commit fresh source lock and Osea packet
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             docs/data/biblia-emanus/sources/ot-minor-prophets-2026-08-07-usfm.zip \
             docs/data/biblia-emanus/minor-prophets-source-lock.json \
-            docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json
+            docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json \
+            docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json
           git diff --cached --check
           if git diff --cached --quiet; then
-            echo 'Snapshotul și lock-ul nou sunt deja actuale.'
+            echo 'Snapshotul, lock-ul și pachetul Osea sunt deja actuale.'
             exit 0
           fi
-          git commit -m "audit(bible): lock fresh HOS-MAL WEBU and WLC sources"
+          git commit -m "audit(bible): prepare Osea fresh-source re-audit"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
