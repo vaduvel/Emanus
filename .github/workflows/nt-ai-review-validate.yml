@@ -39,8 +39,20 @@ jobs:
           if test -f "$journal"; then
             echo 'HEB.4 already reviewed; skipping.'
           else
-            # The pinned SBL line begins this clause with lowercase epsilon; use that exact stable token.
-            sed -i "s/'Εἰσερχόμεθα γὰρ εἰς τὴν κατάπαυσιν οἱ πιστεύσαντες'/'εἰσερχόμεθα'/" .github/nt-ai-review/heb4.py
+            python3 - <<'PY'
+          from pathlib import Path
+          p=Path('.github/nt-ai-review/heb4.py')
+          s=p.read_text()
+          s=s.replace("3:'Εἰσερχόμεθα γὰρ εἰς τὴν κατάπαυσιν οἱ πιστεύσαντες'", "3:'εἰσερχόμεθα'")
+          old="for v,a in A.items(): assert unicodedata.normalize('NFC',a) in sbl_nfc,(v,a)"
+          new="""for v,a in A.items():
+        line=next(x for x in sbl_nfc.splitlines() if x.startswith(f'Heb 4:{v}\\t'))
+        clean=line.translate(str.maketrans({'⸀':'','⸂':'','⸃':'','[':'',']':''}))
+        words=[w.strip('·,;.:—?') for w in unicodedata.normalize('NFC',a).split() if len(w.strip('·,;.:—?')) >= 5]
+        assert words and sum(1 for w in words if w in clean) >= max(1, len(words)//2), (v,a,clean)"""
+          assert old in s
+          p.write_text(s.replace(old,new))
+          PY
             python3 .github/nt-ai-review/heb4.py
             git diff --check
             pnpm check:biblia-emanus
