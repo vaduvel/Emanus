@@ -18,6 +18,12 @@ import { divortL1, divortL2, divortL3 } from "./divortA.js"
  * INTERDICȚIE SUPLIMENTARĂ, proprie drumului: nu-i spunem niciodată unui om deja
  * recăsătorit că trebuie să-și rupă a doua căsnicie. Sfatul ăsta a distrus
  * familii reale, iar noi nu îl putem da de la distanță, printr-un ecran.
+ *
+ * CORECTURI: Romani 12:18 («întrucât atârnă de voi» — d6_7, d6_8, d6_13) și
+ * Ioan 8:10-11 («osândit»/«osândesc» — d7_2, d7_3) fuseseră transcrise greșit,
+ * inclusiv în versetul de memorat. REGULĂ de aici înainte: fiecare
+ * `scripture.text` se verifică față de Cornilescu ÎNAINTE de commit, nu după.
+ * Un verset greșit citat e un defect mai grav decât o lecție lipsă.
  */
 
 export const divortL4: Lesson = {
@@ -126,7 +132,7 @@ export const divortL4: Lesson = {
         { from: "guide", text: "Ce se spune: «e nevoie de doi ca să se rupă o căsnicie»." },
         {
           from: "guide",
-          text: "Ce scrie: da, dar socoteala se face separat. «Ai făcut și tu» nu e un argument, e o metodă de a încurca. Dumnezeu nu cere de la nimeni plăti pentru fapta altuia.",
+          text: "Ce scrie: da, dar socoteala se face separat. «Ai făcut și tu» nu e un argument, e o metodă de a încurca. Dumnezeu nu cere de la nimeni plată pentru fapta altuia.",
         },
       ],
     },
@@ -336,7 +342,7 @@ export const divortL5: Lesson = {
         { from: "guide", text: "PRIMA CITIRE, cea mai răspândită în bisericile evanghelice." },
         {
           from: "guide",
-          text: "«Afară de pricină de curvie» e o excepție pusă chiar de Iisus. Unde a fost infidelitate, legământul a fost deja rupt de cel care a trădat, iar cel nevinovat e liber să se recasătorească.",
+          text: "«Afară de pricină de curvie» e o excepție pusă chiar de Iisus. Unde a fost infidelitate, legământul a fost deja rupt de cel care a trădat, iar cel nevinovat e liber să se recăsătorească.",
         },
       ],
     },
@@ -599,7 +605,7 @@ export const divortL6: Lesson = {
       type: "scripture",
       order: 7,
       scripture: {
-        text: "Dacă este cu putință, întâmplu atârnă de voi, trăiți în pace cu toți oamenii.",
+        text: "Dacă este cu putință, întrucât atârnă de voi, trăiți în pace cu toți oamenii.",
         ref: "Romani 12:18",
       },
     },
@@ -610,7 +616,7 @@ export const divortL6: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Uită-te câte limitări pune Pavel într-un singur verset: «dacă este cu putință» și îîntât atârnă de voi».",
+          text: "Uită-te câte limitări pune Pavel într-un singur verset: «dacă este cu putință» și «întrucât atârnă de voi».",
         },
         {
           from: "guide",
@@ -683,7 +689,7 @@ export const divortL6: Lesson = {
       type: "memory_verse",
       order: 13,
       scripture: {
-        text: "Dacă este cu putință, întâmplu atârnă de voi, trăiți în pace cu toți oamenii.",
+        text: "Dacă este cu putință, întrucât atârnă de voi, trăiți în pace cu toți oamenii.",
         ref: "Romani 12:18",
       },
     },
@@ -741,7 +747,7 @@ export const divortL7: Lesson = {
         },
       ],
       scripture: {
-        text: "«Femeie, unde sunt pârâșii tăi? Nimeni nu te-a osdit?» «Nimeni, Doamne», I-a răspuns ea. Și Iisus i-a zis: «Nici Eu nu te osndesc. Du-te și să nu mai păcătuiești.»",
+        text: "«Femeie, unde sunt pârâșii tăi? Nimeni nu te-a osândit?» «Nimeni, Doamne», I-a răspuns ea. Și Iisus i-a zis: «Nici Eu nu te osândesc. Du-te și să nu mai păcătuiești.»",
         ref: "Ioan 8:10-11",
       },
     },
@@ -753,7 +759,7 @@ export const divortL7: Lesson = {
         { from: "guide", text: "Două propoziții, în aceeași respirație, și nu se anulează una pe alta." },
         {
           from: "guide",
-          text: "«Nici Eu nu te osndesc» — deci nu e nevoie să mai plătești în fiecare dimineață. «Du-te și să nu mai păcătuiești» — deci nu se preface că nu s-a întâmplat nimic.",
+          text: "«Nici Eu nu te osândesc» — deci nu e nevoie să mai plătești în fiecare dimineață. «Du-te și să nu mai păcătuiești» — deci nu se preface că nu s-a întâmplat nimic.",
         },
         {
           from: "guide",
@@ -777,7 +783,7 @@ export const divortL7: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "«Nu vă gândiți la ce a fost» nu înseamnă «prefa-te că n-a fost». Textul e spus unui popor dus în robie, care pierduse tot. Nu li se cere să uite.",
+          text: "«Nu vă gândiți la ce a fost» nu înseamnă «prefă-te că n-a fost». Textul e spus unui popor dus în robie, care pierduse tot. Nu li se cere să uite.",
         },
         {
           from: "guide",
