@@ -27,12 +27,12 @@ jobs:
       - name: Fetch audited Biblia Emanus canonical source
         run: git fetch origin agent/biblia-emanus-ot-and-apocrypha:refs/remotes/origin/agent/biblia-emanus-ot-and-apocrypha
 
-      - name: Materialize only the 29 canonical overlay books
+      - name: Materialize BE-validated overlay books
         run: python3 scripts/materialize-vt-overlay-texts.py --source-ref origin/agent/biblia-emanus-ot-and-apocrypha
 
       - name: Verify generated footprint
         run: |
-          test "$(find packages/shared/src/bible/generated/vtCanonicalText -maxdepth 1 -name '*Text.ts' | wc -l)" -eq 29
+          test "$(find packages/shared/src/bible/generated/vtCanonicalText -maxdepth 1 -name '*Text.ts' | wc -l)" -eq 17
           test -f packages/shared/src/bible/generated/vtCanonicalText/index.ts
           git diff --check -- packages/shared/src/bible/generated/vtCanonicalText
 
@@ -41,11 +41,11 @@ jobs:
         shell: bash
         run: |
           if git diff --quiet -- packages/shared/src/bible/generated/vtCanonicalText; then
-            echo 'Textele canonice sunt deja materializate.'
+            echo 'Textele BE validate sunt deja materializate.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add packages/shared/src/bible/generated/vtCanonicalText
-          git commit -m 'feat(bible): materialize audited Biblia Emanus text for VT overlays'
+          git commit -m 'feat(bible): materialize audited Biblia Emanus text through Daniel'
           git push origin HEAD:agent/biblia-explicata-vt-complet
