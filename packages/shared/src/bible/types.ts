@@ -47,8 +47,8 @@ export interface BibleAlternateEnding {
  * Poarta de publicare a corpusului NT Biblia Emanus.
  *
  * Nu este suficient ca fişierele sursă să pretindă `published`: catalogul
- * runtime acceptă corpusul numai după un sign-off explicit, legat de digestul
- * artefactului care va fi livrat.
+ * runtime acceptă corpusul numai după ce registrul canonic per-verset trece
+ * din nou şi artefactul livrat corespunde exact materializării acelui corpus.
  */
 export type BibliaEmanusNtRuntimeGate =
   | {
@@ -64,6 +64,8 @@ export type BibliaEmanusNtRuntimeGate =
         approvedAt: string
         approvedBy: string[]
         corpusSha256: string
+        /** Digestul per-verset validat de NT-EDITORIAL-APPROVAL.json. */
+        editorialCorpusDigest: string
         evidence: Array<{ kind: string; path: string; sha256: string }>
         reviewScope: { books: 27; chapters: 260; verses: 7941 }
       }

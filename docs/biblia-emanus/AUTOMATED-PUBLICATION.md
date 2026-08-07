@@ -123,6 +123,24 @@ După trecerea tuturor porților, inclusiv registrul editorial individual, capit
 }
 ```
 
+## Catalogul runtime al Noului Testament
+
+`NT-RUNTIME-CATALOG.json` este doar comutatorul de livrare către aplicație; nu
+este un al doilea registru de aprobare. Un catalog cu `status: "approved"`
+este valid numai dacă, în checkoutul curent:
+
+- registrul canonic `NT-EDITORIAL-APPROVAL.json` trece din nou
+  `validate_nt_editorial_approval` cu `source-lock.json`, ledgerul și toate
+  capitolele NT curente;
+- `approval.editorialCorpusDigest` din catalog este identic cu digestul
+  per-verset calculat de acel registru canonic;
+- `approval.corpusSha256` fixează fișierul TypeScript care va fi importat, iar
+  acel fișier este exact materializarea actuală a capitolelor validate.
+
+Astfel, editarea directă a catalogului runtime sau a fișierului TypeScript nu
+poate ocoli registrul per-verset. Starea `withheld` nu rulează această poartă
+de publicare și continuă să exporte o listă NT goală.
+
 Poarta nu pretinde că demonstrează infailibilitatea teologică a unei traduceri. Ea demonstrează doar trasabilitatea și completitudinea procesului editorial declarat; evaluarea academică sau confesională externă rămâne distinctă.
 
 ## Licență

@@ -2,7 +2,8 @@
 """Generate the runtime catalog for Biblia Emanus NT behind an editorial gate.
 
 The raw NT materialization is deliberately not imported by the application until
-an explicit, digest-bound editorial approval exists in NT-RUNTIME-CATALOG.json.
+the canonical per-verse editorial approval passes again and binds the exact
+current materialization through independent digests.
 """
 
 from __future__ import annotations
@@ -10,7 +11,9 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import hashlib
+import importlib.util
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +30,16 @@ HEX_DIGEST_LENGTH = 64
 
 class RuntimeCatalogError(Exception):
     pass
+
+
+class CanonicalEditorialApproval:
+    """Facts the runtime gate receives from the canonical review."""
+
+    __slots__ = ("corpus_digest", "approval_path")
+
+    def __init__(self, corpus_digest: str, approval_path: Path) -> None:
+        self.corpus_digest = corpus_digest
+        self.approval_path = approval_path
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -57,6 +70,15 @@ def require_sha256(value: object, label: str) -> str:
     if len(digest) != HEX_DIGEST_LENGTH or any(char not in "0123456789abcdef" for char in digest.lower()):
         raise RuntimeCatalogError(f"{label}: trebuie să fie un SHA-256 hexazecimal")
     return digest.lower()
+
+
+def require_editorial_corpus_digest(value: object, label: str) -> str:
+    """Validate the ``sha256:<hex>`` digest emitted by the editorial gate."""
+    digest = require_string(value, label)
+    prefix = "sha256:"
+    if not digest.startswith(prefix):
+        raise RuntimeCatalogError(f"{label}: trebuie să fie un digest sha256:<hex>")
+    return prefix + require_sha256(digest[len(prefix):], label)
 
 
 def evidence_path(root: Path, relative_path: str) -> Path:
@@ -112,6 +134,9 @@ def validate_approval(
         raise RuntimeCatalogError(
             "approval.corpusSha256 nu corespunde corpusului materializat; aprobarea nu poate fi reutilizată"
         )
+    editorial_corpus_digest = require_editorial_corpus_digest(
+        approval.get("editorialCorpusDigest"), "approval.editorialCorpusDigest"
+    )
 
     scope = validate_review_scope(approval.get("reviewScope"))
 
@@ -141,9 +166,105 @@ def validate_approval(
         "approvedAt": approved_at,
         "approvedBy": approved_by,
         "corpusSha256": declared_digest,
+        "editorialCorpusDigest": editorial_corpus_digest,
         "evidence": normalized_evidence,
         "reviewScope": scope,
     }
+
+
+def load_python_module(name: str, path: Path) -> Any:
+    spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None or spec.loader is None:
+        raise RuntimeCatalogError(f"Nu pot încărca {path.name}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def validate_canonical_nt_editorial_approval(
+    root: Path = ROOT,
+) -> CanonicalEditorialApproval:
+    """Run the sole NT editorial authority against the current source corpus.
+
+    ``NT-RUNTIME-CATALOG.json`` is only a delivery switch.  It is not allowed
+    to become an alternate approval registry: a future approved switch must
+    re-run the canonical per-verse validator with the source lock, ledger and
+    chapter files that are present in this checkout.
+    """
+    validator = load_python_module(
+        "biblia_emanus_validator_for_runtime_catalog",
+        root / "scripts" / "check-biblia-emanus.py",
+    )
+    gate = load_python_module(
+        "nt_editorial_gate_for_runtime_catalog",
+        root / "scripts" / "nt_editorial_gate.py",
+    )
+    data_dir = root / "docs" / "data" / "biblia-emanus"
+    approval_path = root / "docs" / "biblia-emanus" / "NT-EDITORIAL-APPROVAL.json"
+    original_data_dir = validator.DATA_DIR
+    original_manifest_path = validator.MANIFEST_PATH
+    validator.DATA_DIR = data_dir
+    validator.MANIFEST_PATH = data_dir / "manifest.json"
+    try:
+        manifest = validator.load_json(validator.MANIFEST_PATH)
+        paths = validator.validate_manifest(manifest)
+        source_data = validator.validate_source_lock(validator.load_json(paths["sourceLock"]))
+        ledger = validator.validate_ledger(validator.load_json(paths["sourceLedger"]), source_data)
+        validator.validate_source_coverage(ledger, source_data)
+        bound_source_data = gate.bind_source_reference_mapper(
+            source_data,
+            lambda lock_id, book_id, chapter, verse: validator.source_references_for_target(
+                lock_id, book_id, chapter, verse, source_data["rules"]
+            ),
+        )
+        summary = gate.validate_nt_editorial_approval(
+            data_dir,
+            bound_source_data,
+            ledger,
+            approval_path=approval_path,
+        )
+    except (validator.ValidationError, gate.EditorialGateError) as error:
+        raise RuntimeCatalogError(
+            "poarta editorială canonică NT nu permite catalogul runtime: " + str(error)
+        ) from error
+    finally:
+        validator.DATA_DIR = original_data_dir
+        validator.MANIFEST_PATH = original_manifest_path
+
+    if summary.approval_path.resolve() != approval_path.resolve():
+        raise RuntimeCatalogError(
+            "catalogul runtime trebuie să valideze registrul canonic NT-EDITORIAL-APPROVAL.json"
+        )
+    return CanonicalEditorialApproval(summary.corpus_digest, summary.approval_path)
+
+
+def validate_materialized_nt_corpus(corpus_path: Path, *, root: Path = ROOT) -> None:
+    """Require the imported TypeScript corpus to be today's gated materialization.
+
+    A matching file hash in the runtime manifest is not enough: it could bind
+    a manually altered generated file.  Re-rendering from the current chapter
+    files links the actual imported bytes to the same canonical editorial gate.
+    """
+    materializer = load_python_module(
+        "materialize_biblia_emanus_nt_for_runtime_catalog",
+        root / "scripts" / "materialize-biblia-emanus-nt.py",
+    )
+    try:
+        expected = materializer.render_typescript(materializer.build_payload())
+    except materializer.MaterializationError as error:
+        raise RuntimeCatalogError(
+            "corpusul runtime nu poate fi legat de materializarea editorială canonică: "
+            + str(error)
+        ) from error
+    try:
+        actual = corpus_path.read_text(encoding="utf-8")
+    except OSError as error:
+        raise RuntimeCatalogError(f"Nu pot citi corpusul runtime {corpus_path}: {error}") from error
+    if actual != expected:
+        raise RuntimeCatalogError(
+            "corpusul runtime nu este materializarea exactă a corpusului editorial aprobat"
+        )
 
 
 def validate_manifest(
@@ -170,10 +291,17 @@ def validate_manifest(
     if status != "approved":
         raise RuntimeCatalogError("runtimeCatalog.status trebuie să fie withheld sau approved")
 
+    approval = validate_approval(runtime_catalog.get("approval"), root=root, corpus_path=corpus_path)
+    canonical_approval = validate_canonical_nt_editorial_approval(root)
+    if approval["editorialCorpusDigest"] != canonical_approval.corpus_digest:
+        raise RuntimeCatalogError(
+            "approval.editorialCorpusDigest nu corespunde registrului editorial canonic curent"
+        )
+    validate_materialized_nt_corpus(corpus_path, root=root)
     return {
         "status": "approved",
         "reason": reason,
-        "approval": validate_approval(runtime_catalog.get("approval"), root=root, corpus_path=corpus_path),
+        "approval": approval,
     }
 
 
@@ -191,7 +319,7 @@ def render_typescript(gate: dict[str, Any]) -> str:
         books = "export const BIBLIA_EMANUS_NT_BOOKS: BibleBook[] = []\n"
     return (
         "// Generated by scripts/materialize-biblia-emanus-nt-runtime-catalog.py. Do not edit.\n"
-        "// The raw corpus is imported only when the digest-bound editorial gate is approved.\n"
+        "// The raw corpus is imported only after canonical per-verse approval and exact materialization checks.\n"
         + imports
         + "\n"
         + "export const BIBLIA_EMANUS_NT_RUNTIME_GATE: BibliaEmanusNtRuntimeGate = "
