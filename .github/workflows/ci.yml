@@ -37,6 +37,9 @@ jobs:
       - name: Verifica aprobarea Bibliei explicate
         run: pnpm check:bible-publication
 
+      - name: Verifica Biblia explicata VT 39/39
+        run: pnpm check:vt-explained
+
       - name: Verifica limba romana si variantele textuale NT
         run: python3 scripts/check-biblia-emanus-romanian-quality.py
 
