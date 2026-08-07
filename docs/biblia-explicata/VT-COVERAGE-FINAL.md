@@ -268,7 +268,7 @@ Pe head-ul release candidate, următoarele fluxuri trebuie să fie simultan verz
 - `VT Materialize Work Texts`;
 - `VT Wire Publication Reader`: catalogul editorial, runtime, typecheck și production build.
 
-Ultima trecere validată a avut toate aceste fluxuri verzi simultan.
+**Ultima trecere verificată pe release candidate a avut toate cele cinci fluxuri verzi simultan.**
 
 ## Ce nu înseamnă „terminat”
 
