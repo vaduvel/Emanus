@@ -24,6 +24,9 @@ export type LessonStepType =
   | "check_in"
   | "hook"
   | "choice"
+  | "multi_choice"
+  | "reflection"
+  | "declaration"
   | "name_struggle"
   | "world_vs_truth"
   | "scripture"
@@ -37,6 +40,16 @@ export type LessonStepType =
   | "reward"
 
 export type MediaKind = "chat" | "video" | "audio" | "animation"
+
+export type LessonSafetyTopic =
+  | "abuse"
+  | "violence"
+  | "dependency"
+  | "self_harm"
+  | "mental_health"
+  | "sexual_violence"
+  | "pregnancy_loss"
+  | "suicide_loss"
 
 export interface CategoryConfig {
   tone: string
@@ -86,6 +99,10 @@ export interface Lesson {
   anchorRefs: string[]
   memoryVerseRef: string
   badgeId?: string
+  safety?: {
+    topic: LessonSafetyTopic
+    notice: string
+  }
   steps: LessonStep[]
 }
 
@@ -93,6 +110,7 @@ export interface ChoiceOption {
   id: string
   label: string
   branchStepId?: string
+  feedback?: string
 }
 
 export interface LessonStep {
@@ -101,10 +119,30 @@ export interface LessonStep {
   order: number
   bubbles?: { from: "guide"; text: string }[]
   choice?: { prompt: string; options: ChoiceOption[] }
+  multiChoice?: {
+    prompt: string
+    options: ChoiceOption[]
+    minSelections?: number
+    maxSelections?: number
+  }
+  response?: {
+    prompt: string
+    placeholder?: string
+    required?: boolean
+    minLength?: number
+  }
   quiz?: { question: string; options: { text: string; correct: boolean }[]; explanation: string }
   scripture?: { text: string; ref: string }
   journalPrompt?: string
   reward?: Reward
+}
+
+export interface LessonAnswers {
+  choicesMade: Record<string, string>
+  multiChoicesMade: Record<string, string[]>
+  checkIns: Record<string, string>
+  quizAnswers: Record<string, number>
+  textResponses: Record<string, string>
 }
 
 export interface Reward {
@@ -197,6 +235,9 @@ export const LESSON_STEP_ORDER: LessonStepType[] = [
   "check_in",
   "hook",
   "choice",
+  "multi_choice",
+  "reflection",
+  "declaration",
   "name_struggle",
   "world_vs_truth",
   "scripture",
