@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1th-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 10,
       "reviewed": 10,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 10 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,68 +123,119 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:6a6a7b66f442e8365daad5dd00236ecf8fbd60df0362952de5401e9a98c25a2d",
-    "contentDigest": "sha256:83a97251b476e7ab219f37df17718f5a56f5f75a27735ae6720b71372d7f9ab7"
+    "textDigest": "sha256:1964f0edc216b7408bb3580e97af68341c9ba8502e26af0c923fe389bc017074",
+    "contentDigest": "sha256:5d29f4e6bcc662c865406ca2dc62919bd2820a2f3476d155933e3974366c9326"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, Silvan și Timotei, către adunarea Tesalonicenilor în Dumnezeu Tatăl și Domnul Isus Hristos: Har vouă și pace de la Dumnezeu Tatăl nostru și Domnul Isus Hristos."
+      "text": "Pavel, Silvanus și Timotei, către adunarea tesalonicenilor în Dumnezeu Tatăl și în Domnul Isus Hristos: Har vouă și pace."
     },
     {
       "number": 2,
-      "text": "Îi mulțumim întotdeauna lui Dumnezeu pentru voi toți, menționându-vă în rugăciunile noastre,"
+      "text": "Îi mulțumim întotdeauna lui Dumnezeu pentru voi toți, pomenindu-vă în rugăciunile noastre,"
     },
     {
       "number": 3,
-      "text": "amintindu-vă fără încetare lucrarea voastră de credință și de muncă a iubirii și perseverenței speranței în Domnul nostru Isus Hristos, înaintea Dumnezeului și Tatălui nostru."
+      "text": "amintindu-ne fără încetare, înaintea Dumnezeului și Tatălui nostru, de lucrarea credinței voastre, de osteneala dragostei voastre și de statornicia speranței voastre în Domnul nostru Isus Hristos,"
     },
     {
       "number": 4,
-      "text": "Știm, frați iubiți de Dumnezeu, că sunteți aleși,"
+      "text": "căci știm, frați iubiți de Dumnezeu, că sunteți aleși,"
     },
     {
       "number": 5,
-      "text": "că Vestea cea Bună a venit la voi nu numai prin cuvânt, ci prin putere, prin Duhul Sfânt cu multă. Știți ce fel de oameni ne-am arătat a fi printre voi pentru voi."
+      "text": "fiindcă evanghelia noastră nu a venit la voi numai în cuvânt, ci și în putere, în Duhul Sfânt și cu multă certitudine, după cum știți ce fel de oameni am fost printre voi, pentru voi."
     },
     {
       "number": 6,
-      "text": "Voi ați devenit imitatori ai noștri și ai Domnului, după ce ați primit cuvântul într-o mare nenorocire, cu bucuria Duhului Sfânt,"
+      "text": "Și voi ați devenit imitatori ai noștri și ai Domnului, primind cuvântul în mult necaz, cu bucuria Duhului Sfânt,"
     },
     {
       "number": 7,
-      "text": "astfel încât ați devenit un exemplu pentru toți cei care cred în Macedonia și în Ahaia."
+      "text": "astfel încât ați devenit un exemplu pentru toți cei ce cred în Macedonia și Ahaia."
     },
     {
       "number": 8,
-      "text": "Căci de la voi cuvântul Domnului a fost declarat, nu numai în Macedonia și Ahaia, ci și în toate locurile credința voastră față de Dumnezeu a ieșit, ca să nu spunem nimic."
+      "text": "Căci de la voi a răsunat cuvântul Domnului nu numai în Macedonia și Ahaia, ci credința voastră în Dumnezeu s-a răspândit în orice loc, așa încât nu mai avem nevoie să spunem nimic."
     },
     {
       "number": 9,
-      "text": "Căci ei înșiși spun despre noi ce fel de primire am avut de la voi și cum v-ați întors la Dumnezeu de la idoli pentru a sluji unui Dumnezeu viu și adevărat,"
+      "text": "Ei înșiși vorbesc despre noi, spunând ce primire ne-ați făcut și cum v-ați întors de la idoli spre Dumnezeu, ca să slujiți Dumnezeului viu și adevărat,"
     },
     {
       "number": 10,
-      "text": "să pe Fiul Său din cer, pe care L-a înviat din morți: pe Isus, care ne izbăvește de mânia viitoare."
+      "text": "și să-L așteptați din ceruri pe Fiul său, pe care l-a înviat dintre cei morți, pe Isus, cel care ne izbăvește de mânia care vine."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: εἰρήνη / εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ",
+      "decision": "„Har vouă și pace.”",
+      "alternatives": [
+        "TR-1TH din snapshot adaugă formula „de la Dumnezeu Tatăl nostru și Domnul Isus Hristos”."
+      ],
+      "reason": "SBLGNT se oprește după „pace”; completarea tradiției receptă este consemnată, nu introdusă în salutul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: μνείαν ποιούμενοι / μνείαν ὑμῶν ποιούμενοι",
+      "decision": "„pomenindu-vă în rugăciunile noastre”",
+      "alternatives": [
+        "TR-1TH din snapshot repetă explicit „de voi” după μνείαν."
+      ],
+      "reason": "SBLGNT are deja complementul „pentru voi toți”; româna îl reia firesc pentru a lega participiul de destinatari, fără a pretinde un adaos lexical în greacă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; diferența de repetiție nu schimbă sensul românesc al versetului."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: τύπον / τύπους",
+      "decision": "„ați devenit un exemplu”",
+      "alternatives": [
+        "TR-1TH din snapshot are pluralul „exemple”."
+      ],
+      "reason": "SBLGNT folosește singularul τύπον; textul principal nu îl schimbă în pluralul TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; formularea urmează numărul SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală SBLGNT/TR: ἔσχομεν / ἔχομεν",
+      "decision": "„ce primire ne-ați făcut”",
+      "alternatives": [
+        "TR-1TH din snapshot are prezentul „avem”."
+      ],
+      "reason": "SBLGNT are aoristul ἔσχομεν; româna redă primirea ca eveniment trecut, fără a o schimba în prezent.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează timpul SBLGNT."
+    },
+    {
+      "verse": 10,
+      "term": "variantă textuală SBLGNT/TR: ἐκ / ἀπό",
+      "decision": "„ne izbăvește de mânia care vine”",
+      "alternatives": [
+        "TR-1TH din snapshot are ἀπό în loc de ἐκ."
+      ],
+      "reason": "Ambele prepoziții indică eliberarea de mânie în română; formularea păstrează prezentul participiului SBLGNT „cel care izbăvește”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; nu se introduce o diferență semantică artificială în română."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
