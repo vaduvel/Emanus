@@ -14,39 +14,44 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Extract Romanian prose from Numeri and Deuteronom
+      - name: Extract explanation prose only
         run: |
           python3 - <<'PY'
           import ast
           import re
           from pathlib import Path
 
-          out = []
           root = Path('packages/shared/src/bible')
-          paths = sorted(root.glob('deuteronom*.ts')) + sorted(root.glob('numeri*.ts'))
+          paths = sorted(root.glob('deuteronom[0-9]*.ts')) + sorted(root.glob('numeri[0-9]*.ts'))
+          paths = [p for p in paths if 'Text' not in p.name]
           string_re = re.compile(r'"(?:\\.|[^"\\])*"')
+          out = []
+          mapped = []
           for path in paths:
               text = path.read_text(encoding='utf-8')
               for m in string_re.finditer(text):
+                  raw = m.group(0)
                   try:
-                      value = ast.literal_eval(m.group(0))
+                      value = ast.literal_eval(raw)
                   except Exception:
                       continue
-                  if not isinstance(value, str):
+                  if not isinstance(value, str) or len(value) < 20:
                       continue
-                  if value.startswith('./') or value.startswith('../'):
+                  if value.startswith('./') or value.startswith('../') or value.startswith('http'):
                       continue
+                  # Excludem referințe/identificatori; păstrăm proza și explicațiile lexicale.
                   if re.fullmatch(r'[A-Za-z0-9_.:/-]+', value):
                       continue
-                  if len(value) < 20:
-                      continue
+                  line = text.count('\n', 0, m.start()) + 1
                   out.append(value)
+                  mapped.append(f'{path}:{line}\t{value}')
 
           Path('/tmp/vt-ro.txt').write_text('\n'.join(out), encoding='utf-8')
-          print(f'Extrase {len(out)} fragmente românești din {len(paths)} fișiere.')
+          Path('/tmp/vt-ro-context.txt').write_text('\n'.join(mapped), encoding='utf-8')
+          print(f'Extrase {len(out)} fragmente de explicație din {len(paths)} fișiere.')
           PY
 
-      - name: Install spell checker and Romanian dictionary
+      - name: Install Romanian spell checker
         run: |
           mkdir -p /tmp/vt-spell
           cd /tmp/vt-spell
@@ -63,7 +68,7 @@ jobs:
           }
           JSON
 
-      - name: Sanity-check Romanian dictionary
+      - name: Sanity-check dictionary
         run: |
           cd /tmp/vt-spell
           printf 'prtișniți\nrennoiește\nîmplânită\n' >/tmp/known-bad-ro.txt
@@ -80,6 +85,8 @@ jobs:
       - name: Report unique spelling suspects
         run: |
           cd /tmp/vt-spell
-          npx cspell /tmp/vt-ro.txt \
-            --config ./cspell.json \
-            --words-only --unique --no-progress --no-summary || true
+          npx cspell /tmp/vt-ro.txt --config ./cspell.json --words-only --unique --no-progress --no-summary || true
+
+      - name: Report conversion-pattern contexts
+        run: |
+          grep -n -E 'Împreună|\bÎn\b|\bdecît\b|salcîm|\bÎl\b|\bÎli\b|\bÎlși\b|\bÎiși\b|preoțease|Tăiește|\bti dă\b' /tmp/vt-ro-context.txt || true
