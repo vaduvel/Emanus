@@ -21,6 +21,7 @@ import { rusineL1, rusineL2, rusineL3, rusineL4 } from "./rusineA.js"
 import { rusineL5, rusineL6, rusineL7 } from "./rusineB.js"
 import { schimbareL1, schimbareL2, schimbareL3, schimbareL4 } from "./schimbareA.js"
 import { schimbareL5, schimbareL6, schimbareL7 } from "./schimbareB.js"
+import { SUFERINTA_LESSONS, SUFERINTA_PRACTICES } from "./suferinta.js"
 import { TEMELIE_LESSONS, TEMELIE_PRACTICES } from "./temelie.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
@@ -36,6 +37,7 @@ export * from "./rusineA.js"
 export * from "./rusineB.js"
 export * from "./schimbareA.js"
 export * from "./schimbareB.js"
+export * from "./suferinta.js"
 export * from "./temelie.js"
 export * from "./umblareA.js"
 export * from "./umblareB.js"
@@ -76,9 +78,10 @@ export * from "./umblareB.js"
  *   3. vine să-și întărească relația → path_umblare
  *
  * DRUMURI FĂRĂ CAMERĂ: pe lângă cele opt camere există `path_umblare` (a treia
- * intrare) și `path_divort` (ușă din camera 2 care a primit drum propriu, vezi
- * comentariul de deasupra lui `pathDivort`). Se ajunge la ele prin `pathId` pus
- * direct pe ușă, pe care `resolveDoorPath` îl citește înaintea camerei.
+ * intrare) și două drumuri născute din uși ale camerei 2 cărora răspunsul
+ * camerei nu li se potrivea: `path_divort` și `path_suferinta`. Se ajunge la ele
+ * prin `pathId` pus direct pe ușă, pe care `resolveDoorPath` îl citește
+ * înaintea camerei.
  *
  * STARE: toate cele opt camere au parcurs scris. `FALLBACK_PATH_ID` rămâne în
  * cod ca plasă de siguranță, nu ca soluție pentru camere goale.
@@ -164,7 +167,10 @@ export interface Door {
    * Se folosește în două feluri:
    *   - ușile fără cameră (`inceput`, `umblare`, `nu_stiu`);
    *   - ușile care stau într-o cameră, dar au primit drum propriu pentru că
-   *     răspunsul camerei nu li se potrivea. `divort` e prima de felul ăsta.
+   *     răspunsul camerei nu li se potrivea. Sunt patru, toate din camera 2:
+   *     `divort` către `path_divort`, iar `doliu`, `boala` și `de_ce_permis`
+   *     către `path_suferinta`. `roomId` le rămâne "c2", pentru că tiparul
+   *     spiritual chiar acela e; se schimbă doar răspunsul primit.
    */
   pathId?: string
   /** True pentru cele 10 propoziții arătate înainte de "Arată-mi tot". */
@@ -187,7 +193,13 @@ export const DOORS: Door[] = [
   { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4", common: true },
   { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5", common: true },
   { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c8", common: true },
-  { id: "doliu", label: "Am pierdut pe cineva", roomId: "c2", common: true },
+  {
+    id: "doliu",
+    label: "Am pierdut pe cineva",
+    roomId: "c2",
+    pathId: "path_suferinta",
+    common: true,
+  },
   { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6", common: true },
   { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7", common: true },
   { id: "nu_inteleg", label: "Sunt creștin, dar nu înțeleg ce citesc", roomId: "c3", common: true },
@@ -197,12 +209,22 @@ export const DOORS: Door[] = [
   { id: "recadere", label: "Am promis de o sută de ori și tot cad", roomId: "c5" },
   { id: "uscaciune", label: "Nu mai simt nimic când mă rog", roomId: "c4" },
   { id: "familie_respinge", label: "Familia mea nu mă înțelege", roomId: "c7" },
-  { id: "boala", label: "Sunt bolnav sau e bolnav cineva drag", roomId: "c2" },
+  {
+    id: "boala",
+    label: "Sunt bolnav sau e bolnav cineva drag",
+    roomId: "c2",
+    pathId: "path_suferinta",
+  },
   { id: "infidelitate", label: "Mi-am înșelat soțul sau soția", roomId: "c1" },
   { id: "flacara", label: "Am fost aproape de Dumnezeu cândva", roomId: "c4" },
   { id: "frica_pedeapsa", label: "Mi-e frică să nu mă pedepsească", roomId: "c6" },
   { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7" },
-  { id: "de_ce_permis", label: "Nu înțeleg de ce a permis Dumnezeu asta", roomId: "c2" },
+  {
+    id: "de_ce_permis",
+    label: "Nu înțeleg de ce a permis Dumnezeu asta",
+    roomId: "c2",
+    pathId: "path_suferinta",
+  },
   { id: "pornografie", label: "Mă lupt cu pornografia", roomId: "c1" },
   { id: "tristete", label: "Nu mai am chef de nimic", roomId: "c8" },
   { id: "alte_credinte", label: "Am crezut alte lucruri înainte (energii, karma, univers)", roomId: "c3" },
@@ -312,7 +334,7 @@ export const pathAcasa: PathDef = {
     "Azi doar observă: de câte ori spui «sunt» în loc de «am făcut». Nu te certa cu gândul — tradu-l într-o faptă anume.",
     "Azi, când îți revine fapta în minte, spune cu voce tare, o singură dată: «s-a plătit». Nu de zece ori.",
     "Azi ascultă cum te numești tu pe tine. Când vine eticheta, răspunde-i: «asta am făcut, nu asta sunt».",
-    "Ieri ai spus cu voce tare ce ascundeai. Azi nu adaugă nimic. Dacă vrei să spui și unui om, gândește-te o zi — nu e obligatoriu și nu e o condiție.",
+    "Ieri ai spus cu voce tare ce ascundeai. Azi nu adăuga nimic. Dacă vrei să spui și unui om, gândește-te o zi — nu e obligatoriu și nu e o condiție.",
     "Azi citește singur Romani 8, primele patru versete. Încet. Dacă gândul te ține treaz nopțile, sună 116 123 — nu e lipsă de credință.",
     "Ai terminat drumul. Azi caută omul căruia îi poți spune «m-am întors» când se întâmplă. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
@@ -320,7 +342,8 @@ export const pathAcasa: PathDef = {
 
 /*
  * Camera 2: "Nu e bun / m-a lăsat".
- * Intră aici doliul, boala, nedreptatea, neiertarea, "unde era El?".
+ * Intră aici nedreptatea și neiertarea. Doliul, boala și "unde era El?" pornesc
+ * tot de aici ca tipar, dar primesc alt răspuns — vezi mai jos.
  *
  * ORDINEA CONTEAZĂ (docs/21 §2): camera începe cu cele două lecții despre cine e
  * Dumnezeu, spuse PRIN rana asta — "nu El ți-a făcut asta" (Iacov 1:17) și
@@ -333,15 +356,14 @@ export const pathAcasa: PathDef = {
  * acum se face în `neiertare_o1`. De curățat la o trecere separată; ordinea
  * reală a drumului e array-ul `lessons`, nu `order`.
  *
- * PARȚIAL REZOLVAT (docs/23 §3, defectul D2): ușa `divort` cădea și ea aici,
- * adică omul care tocmai își pierduse casa primea un drum despre iertare. A
- * primit drum propriu, `path_divort`, prin `pathId` pus direct pe ușă.
+ * REZOLVAT (docs/23 §3, defectul D2): patru uși cădeau aici și primeau un drum
+ * despre iertare, deși nu aveau pe cine ierta. `divort` a primit `path_divort`,
+ * iar `doliu`, `boala` și `de_ce_permis` au primit `path_suferinta`. Camera
+ * rămâne cu ușa pentru care a fost scrisă: `neiertare`.
  *
- * A RĂMAS: `doliu`, `boala` și `de_ce_permis` ajung tot aici. Omul în doliu
- * primește în continuare un drum despre iertare. Au nevoie de camera lor,
- * "Cred că sunt pedepsit". Conținutul lor există deja scris pe ramura
- * `codex/nolan-short-courses`, în `suferinta.ts` — se aduce cu git, nu se
- * rescrie de la zero.
+ * DE CE NU AU FOST MUTATE ÎN ALTĂ CAMERĂ: tiparul spiritual e chiar cel de aici
+ * — "dacă era bun, nu s-ar fi întâmplat". Nu tiparul era greșit, ci răspunsul.
+ * De aceea `roomId` le rămâne "c2" și doar `pathId` diferă.
  */
 export const pathNeiertare: PathDef = {
   id: "path_neiertare",
@@ -416,6 +438,53 @@ export const pathDivort: PathDef = {
     "Șapte lecții, una la două zile. Nu îți spunem noi dacă ai voie să te recăsătorești și nu îți cerem să spui cine a fost de vină.",
   lessons: DIVORT_LESSONS,
   practices: DIVORT_PRACTICES,
+}
+
+/*
+ * SUFERINȚA. Trei uși din camera 2, cu drum propriu: `doliu`, `boala`,
+ * `de_ce_permis`.
+ *
+ * DE CE ARE DRUM PROPRIU (docs/23 §3, defectul D2): toate trei cădeau în
+ * `path_neiertare`. Adică omul care tocmai își îngropase un părinte primea un
+ * drum despre cum să ierte pe cineva. De cele mai multe ori nu există niciun
+ * agresor de iertat. Moartea nu e o nedreptate făcută de o persoană, boala nu
+ * are pe cine să ierte, iar "de ce a permis Dumnezeu?" nu e o rană de la un om.
+ * `doliu` e ușă `common`, deci stătea în primele zece de pe ecran — era cel mai
+ * vizibil răspuns greșit din toată aplicația.
+ *
+ * PROVENIENȚĂ: lecțiile sunt aduse de pe ramura `codex/nolan-short-courses`
+ * (`suferinta.ts`, blob d0e68097), împărțite în `suferintaA.ts` și
+ * `suferintaB.ts`. Practicile nu existau acolo și au fost scrise pentru drumul
+ * ăsta.
+ *
+ * ORDINEA: pierderea e reală și are voie să fie numită (Psalmul 34:18) → e
+ * pedeapsă sau e o lume ruptă? (Ioan 9:1-3) → Iisus a plâns (Ioan 11:35) → când
+ * nu vine explicația (Iov 42:7; Psalmul 13) → ascultarea de astăzi, inclusiv
+ * medicul și oamenii (Galateni 6:2; 1 Regi 19) → speranță fără promisiuni false
+ * (Romani 8:22-25; Apocalipsa 21:4) → mergi mai departe fără să negi ce a fost
+ * (Plângerile 3:22-23).
+ *
+ * REGULA DOCTRINARĂ CARE NU SE SCHIMBĂ: Scriptura arată cazuri în care suferința
+ * e consecință sau disciplinare (1 Corinteni 11:29-32; Ioan 5:14), dar refuză
+ * transformarea lor în diagnostic universal (Iov 42:7; Ioan 9:1-3; Luca 13:1-5).
+ * Lecția 2 ține ambele capete și nu îi pune omului o vină în plus.
+ *
+ * SIGURANȚĂ (docs/22 §1): lecțiile 1 și 5 au `safety.topic: "mental_health"`.
+ * Nicio lecție nu promite vindecarea în viața aceasta, niciuna nu prezintă
+ * consultul medical ca lipsă de credință și niciuna nu cere iertare acolo unde
+ * nu există agresor.
+ *
+ * NU E FUNDĂTURĂ (docs/21 §7 pct. 5): ultima practică trimite omul către ușa
+ * rănii rămase, dacă a rămas una.
+ */
+export const pathSuferinta: PathDef = {
+  id: "path_suferinta",
+  roomId: null,
+  title: "Când doare și nu știi de ce",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți promitem că se vindecă și nu îți spunem că suferi pentru că ai greșit undeva.",
+  lessons: SUFERINTA_LESSONS,
+  practices: SUFERINTA_PRACTICES,
 }
 
 /*
@@ -674,6 +743,7 @@ export const PATHS: PathDef[] = [
   pathAcasa,
   pathNeiertare,
   pathDivort,
+  pathSuferinta,
   pathTemelie,
   pathAproape,
   pathSchimbare,
