@@ -10,6 +10,8 @@ export type BibleStatus = "draft" | "in_review" | "published"
 
 export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
 
+export type BibleExplanationKind = "exposition" | "textual-overview"
+
 /** Un cuvant din limba originala, explicat pe intelesul cititorului. */
 export interface WordStudy {
   original: string
@@ -24,10 +26,14 @@ export interface BibleUnit {
   /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
   ref: string
   heading: string
-  /** Textul biblic, nemodificat. Cornilescu 1924, editia originala. */
+  /** Textul biblic al traducerii asociate cărții, păstrat separat de explicație. */
   text: string
   /** Invatatura Emanus. Markdown. */
   teaching: string
+  /** Tipul explicației: expunere din sursa editorială sau overview textual de completare. */
+  explanationKind?: BibleExplanationKind
+  /** Eticheta scurtă a provenienței explicației, folosită de cititor. */
+  explanationSource?: string
   words?: WordStudy[]
   crossRefs?: string[]
   /** Aplicatia pastorala, adresata direct cititorului. */
@@ -53,8 +59,12 @@ export interface BibleBook {
   testament: Testament
   order: number
   blurb: string
+  /** Eticheta traducerii biblice folosite de această carte în cititor. */
+  translation?: string
   chapters: BibleChapter[]
 }
+
+export const BIBLIA_EMANUS_TRANSLATION = "Biblia Emanus"
 
 /** Traducerea afisata. Editia originala 1924 este in domeniul public. */
 export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"

@@ -51,6 +51,14 @@ import { GENEZA_47 } from "./geneza47.js"
 import { GENEZA_48 } from "./geneza48.js"
 import { GENEZA_49 } from "./geneza49.js"
 import { GENEZA_50 } from "./geneza50.js"
+import { EXOD } from "./exod.js"
+import { LEVITIC } from "./levitic.js"
+import { NUMERI } from "./numeri.js"
+import { DEUTERONOM } from "./deuteronom.js"
+import { IOSUA } from "./iosua.js"
+import { RUT } from "./rut.js"
+import { SAMUEL1 } from "./samuel1.js"
+import { SAMUEL2 } from "./samuel2.js"
 
 /** Geneza, cu toate cele 50 de capitole. */
 export const GENEZA: BibleBook = {
@@ -109,8 +117,20 @@ export const GENEZA: BibleBook = {
   ],
 }
 
-/** Cartile scrise pana acum. Se adauga pe rand, dupa revizie. */
-export const BIBLE_BOOKS: BibleBook[] = [GENEZA]
+export { EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA, RUT, SAMUEL1, SAMUEL2 }
+
+/** Cărțile legacy VT integrate; 1 Împărați este adăugată separat în publicationBible. */
+export const BIBLE_BOOKS: BibleBook[] = [
+  GENEZA,
+  EXOD,
+  LEVITIC,
+  NUMERI,
+  DEUTERONOM,
+  IOSUA,
+  RUT,
+  SAMUEL1,
+  SAMUEL2,
+]
 
 export function findBook(id: string): BibleBook | undefined {
   return BIBLE_BOOKS.find((b) => b.id === id)

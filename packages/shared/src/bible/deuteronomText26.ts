@@ -1,0 +1,23 @@
+export const DEUTERONOM_TEXT_26: Record<number, readonly string[]> = {
+  26: [
+    "„Când vei intra în țara pe care ți-o dă DOMNUL, Dumnezeul tău, ca moștenire, când o vei stăpâni și vei locui în ea,",
+    "să iei primele din toate roadele pământului pe care le vei strânge din țara pe care ți-o dă DOMNUL, Dumnezeul tău, să le pui într-un coș și să te duci la locul pe care-l va alege DOMNUL, Dumnezeul tău, ca să facă să locuiască Numele Lui acolo.",
+    "Să te duci la preotul care va fi în vremea aceea și să-i spui: «Mărturisesc astăzi înaintea DOMNULUI, Dumnezeului tău, că am intrat în țara pe care DOMNUL a jurat părinților noștri că ne-o va da.»",
+    "Preotul să ia coșul din mâna ta și să-l pună înaintea altarului DOMNULUI, Dumnezeului tău.",
+    "Apoi să iei cuvântul și să spui înaintea DOMNULUI, Dumnezeului tău: «Tatăl meu era un aramean rătăcitor; s-a coborat în Egipt cu puțini oameni și a locuit acolo ca străin; acolo a ajuns un neam mare, puternic și numeros.",
+    "Egiptenii ne-au chinuit, ne-au asuprit și ne-au pus la grele munci.",
+    "Noi am strigat către DOMNUL, Dumnezeul părinților noștri. DOMNUL a auzit glasul nostru și a văzut întristarea noastră, munca noastră și asuprirea noastră.",
+    "Și DOMNUL ne-a scos din Egipt cu mână tare și cu braț întins, cu mari înfricoșări, cu semne și cu minuni.",
+    "El ne-a dus în locul acesta și ne-a dat țara aceasta, o țară în care curge lapte și miere.",
+    "Acum iată, aduc cele dintâi roade din rodul pământului pe care mi l-ai dat Tu, DOMNE!» Să le pui înaintea DOMNULUI, Dumnezeului tău, și să te închini înaintea DOMNULUI, Dumnezeului tău.",
+    "Apoi să te bucuri, tu, levitul și străinul care este în mijlocul tău, de toate bunătățile pe care ți le-a dat DOMNUL, Dumnezeul tău, ție și casei tale.",
+    "După ce vei isprăvi de luat toată zeciuiala din roadele tale, în anul al treilea, anul zeciuielii, s-o dai levitului, străinului, orfanului și văduvei; și ei vor mânca în porțile tale și se vor sătura.",
+    "Să spui înaintea DOMNULUI, Dumnezeului tău: «Am scos din casa mea ce este sfințit și l-am dat levitului, străinului, orfanului și văduvei, după toate poruncile pe care mi le-ai dat; n-am călcat niciuna din poruncile Tale și nu le-am uitat.",
+    "N-am mâncat nimic din ele în timpul meu de jale, n-am curățit nimic din ele pentru o întrebuințare necurată și n-am dat nimic din ele pentru un mort; am ascultat de glasul DOMNULUI, Dumnezeului meu, am făcut potrivit cu tot ce mi-ai poruncit.",
+    "Privește din locașul Tău cel sfânt, din ceruri, și binecuvântează pe poporul Tău Israel și pământul pe care ni l-ai dat, așa cum ai jurat părinților noștri, o țară în care curge lapte și miere.»",
+    "Astăzi DOMNUL, Dumnezeul tău, îiți poruncește să îplinesti aceste legi și orânduiri; să le păzești și să le îplinesti din toată inima ta și din tot sufletul tău.",
+    "Astăzi ai făcut pe DOMNUL să-ți declare că El va fi Dumnezeul tău, că vei umbla pe căile Lui, că vei păzi legile, poruncile și orânduirile Lui și că vei asculta de glasul Lui.",
+    "Și astăzi DOMNUL te-a făcut să-I declari că vei fi un popor al Lui, un popor deosebit, așa cum ți-a spus, și că vei păzi toate poruncile Lui,",
+    "ca să-ți dea întâietate în slavă, în nume și în cinste mai presus de toate popoarele pe care le-a făcut, și ca să fii un popor sfânt pentru DOMNUL, Dumnezeul tău, așa cum a vorbit El.”",
+  ],
+}

@@ -1,0 +1,22 @@
+export const DEUTERONOM_TEXT_13: Record<number, readonly string[]> = {
+  13: [
+    "„Dacă se va ridica în mijlocul tău un proroc sau un visător de visuri și îiți va vesti un semn sau o minune,",
+    "și se va îplini semnul sau minunea despre care ți-a vorbit, zicând: «Haidem după alți dumnezei pe care nu i-ai cunoscut și să le slujiți!»,",
+    "să nu asculți cuvintele acelui proroc sau ale acelui visător de visuri, căci DOMNUL, Dumnezeul vostru, vă pune la încercare ca să afle dacă Îli iubiți pe DOMNUL, Dumnezeul vostru, din toată inima și din tot sufletul vostru.",
+    "După DOMNUL, Dumnezeul vostru, să umblați, de El să vă temeți, poruncile Lui să le păziți, de glasul Lui să ascultați, Lui să-I slujiți și de El să vă alipiți.",
+    "Iar acel proroc sau acel visător de visuri să fie dat la moarte, pentru că a îndemnat la răzvrătire împotriva DOMNULUI, Dumnezeul vostru, Care v-a scos din țara Egiptului și te-a răscumpărat din casa robiei, ca să te abată de la calea pe care ți-a poruncit DOMNUL, Dumnezeul tău, să umbli. Astfel să îndepărtezi răul din mijlocul tău.",
+    "Dacă fratele tău, fiul mamei tale, sau fiul tău, sau fiica ta, sau nevasta care se odihnește la sânul tău, sau prietenul tău care este ca sufletul tău te va ațâța în ascuns, zicând: «Haidem să slujim altor dumnezei!», pe care nu i-ai cunoscut nici tu, nici părinții tăi,",
+    "dintre dumnezeii popoarelor care vă înconjoară, aproape de tine sau departe de tine, de la o margine a pământului până la cealaltă,",
+    "să nu te învoiești cu el și să nu-l asculți; ochiul tău să nu aibă milă de el, să nu-l cruți și să nu-l acoperi,",
+    "ci să-l ucizi neapărat: mâna ta să fie cea dintâi asupra lui ca să-l pui la moarte, și apoi mâna întregului popor.",
+    "Să-l ucizi cu pietre până va muri, pentru că a căutat să te abată de la DOMNUL, Dumnezeul tău, Care te-a scos din țara Egiptului, din casa robiei.",
+    "Tot Israelul va auzi și se va teme, și nu se va mai face o astfel de faptă rea în mijlocul tău.",
+    "Dacă vei auzi spunându-se despre una din cetățile tale pe care ți le-a dat DOMNUL, Dumnezeul tău, ca să locuiești în ele,",
+    "că niște oameni stricați au ieșit din mijlocul tău și i-au ademenit pe locuitorii cetății lor, zicând: «Haidem să slujim altor dumnezei!», pe care nu i-ați cunoscut,",
+    "să cercetezi, să cauți și să întrebi cu grijă. Dacă se adeverește și este sigur că urâciunea aceasta a fost săvârșită în mijlocul tău,",
+    "atunci să treci prin ascuțișul sabiei pe locuitorii acelei cetăți, dând-o spre nimicire cu tot ce este în ea și cu vitele ei, prin ascuțișul sabiei.",
+    "Să strângi toată prada ei în mijlocul pieței și să arzi complet cu foc cetatea și toată prada ei, ca o ardere de tot pentru DOMNUL, Dumnezeul tău; ea să rămână o grămadă de dărâmături pentru totdeauna și să nu mai fie zidită niciodată.",
+    "Nimic din ce va fi fost dat spre nimicire să nu se lipească de mâna ta, pentru ca DOMNUL să Se întoarcă din iuțimea mâniei Lui, să-ți arate îndurare, să se îndure de tine și să te înmulțească, așa cum a jurat părinților tăi,",
+    "dacă vei asculta de glasul DOMNULUI, Dumnezeul tău, păzind toate poruncile Lui pe care ți le dau astăzi și făcând ce este drept în ochii DOMNULUI, Dumnezeul tău.”",
+  ],
+}

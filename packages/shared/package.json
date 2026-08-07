@@ -5,16 +5,44 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
-    "./domain": { "types": "./dist/domain.d.ts", "default": "./dist/domain.js" },
-    "./paths": { "types": "./dist/paths/index.d.ts", "default": "./dist/paths/index.js" },
-    "./library": { "types": "./dist/library/current.d.ts", "default": "./dist/library/current.js" },
-    "./bible": { "types": "./dist/bible/index.d.ts", "default": "./dist/bible/index.js" },
-    "./lesson-mohler": { "types": "./dist/lessonMohler.d.ts", "default": "./dist/lessonMohler.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./domain": {
+      "types": "./dist/domain.d.ts",
+      "default": "./dist/domain.js"
+    },
+    "./paths": {
+      "types": "./dist/paths/index.d.ts",
+      "default": "./dist/paths/index.js"
+    },
+    "./library": {
+      "types": "./dist/library/current.d.ts",
+      "default": "./dist/library/current.js"
+    },
+    "./bible": {
+      "types": "./dist/bible/index.d.ts",
+      "default": "./dist/bible/index.js"
+    },
+    "./lesson-mohler": {
+      "types": "./dist/lessonMohler.d.ts",
+      "default": "./dist/lessonMohler.js"
+    },
+    "./bible-explained": {
+      "types": "./dist/bible/overlays/index.d.ts",
+      "default": "./dist/bible/overlays/index.js"
+    },
+    "./bible-publication": {
+      "types": "./dist/bible/publicationBible.d.ts",
+      "default": "./dist/bible/publicationBible.js"
+    }
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "devDependencies": { "typescript": "^5.5.4" }
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
 }

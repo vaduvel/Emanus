@@ -1,6 +1,70 @@
 import react from "@vitejs/plugin-react"
+import path from "node:path"
 import { defineConfig } from "vite"
 import { VitePWA } from "vite-plugin-pwa"
+
+function bibleChunk(id: string): string | undefined {
+  if (!id.includes("packages/shared/dist/bible/")) return undefined
+
+  const file = path.basename(id).replace(/\.js$/, "")
+
+  // Fiecare carte VT rămâne sub limita standard Workbox de 2 MiB, astfel
+  // Biblia poate fi precached offline fără să devină un monolit în bundle.
+  const books: Array<[RegExp, string]> = [
+    [/^geneza/i, "bible-geneza"],
+    [/^exod/i, "bible-exod"],
+    [/^levitic/i, "bible-levitic"],
+    [/^numeri/i, "bible-numeri"],
+    [/^deuteronom/i, "bible-deuteronom"],
+    [/^iosua/i, "bible-iosua"],
+    [/^judecatori/i, "bible-judecatori"],
+    [/^rut/i, "bible-rut"],
+    [/^samuel/i, "bible-samuel"],
+    [/^imparati/i, "bible-imparati"],
+    [/^cronici/i, "bible-cronici"],
+    [/^ezra/i, "bible-ezra"],
+    [/^neemia/i, "bible-neemia"],
+    [/^estera/i, "bible-estera"],
+    [/^iov/i, "bible-iov"],
+    [/^psalm/i, "bible-psalmi"],
+    [/^proverbe/i, "bible-proverbe"],
+    [/^eclesiast/i, "bible-eclesiastul"],
+    [/^cantarea/i, "bible-cantarea"],
+    [/^isaia/i, "bible-isaia"],
+    [/^ieremia/i, "bible-ieremia"],
+    [/^planger/i, "bible-plangerile"],
+    [/^ezechiel/i, "bible-ezechiel"],
+    [/^daniel/i, "bible-daniel"],
+    [/^osea/i, "bible-osea"],
+    [/^ioel/i, "bible-ioel"],
+    [/^amos/i, "bible-amos"],
+    [/^obadia/i, "bible-obadia"],
+    [/^iona/i, "bible-iona"],
+    [/^mica/i, "bible-mica"],
+    [/^naum/i, "bible-naum"],
+    [/^habacuc/i, "bible-habacuc"],
+    [/^tefania/i, "bible-tefania"],
+    [/^hagai/i, "bible-hagai"],
+    [/^zaharia/i, "bible-zaharia"],
+    [/^maleahi/i, "bible-maleahi"],
+  ]
+
+  for (const [pattern, chunk] of books) {
+    if (pattern.test(file)) return chunk
+  }
+
+  if (
+    id.includes("/bible/overlays/") ||
+    file.startsWith("vtFullNarratives") ||
+    file === "completeOverlay" ||
+    file === "explainedOverlay" ||
+    file === "vtExplainedCoverage"
+  ) {
+    return "bible-vt-explanations"
+  }
+
+  return "bible-core"
+}
 
 export default defineConfig({
   plugins: [
@@ -41,7 +105,7 @@ export default defineConfig({
           if (id.includes("node_modules/react") || id.includes("node_modules/lucide-react")) return "vendor-react"
           if (id.includes("packages/shared/dist/library/")) return "content-library"
           if (id.includes("packages/shared/dist/paths/")) return "content-paths"
-          return undefined
+          return bibleChunk(id)
         },
       },
     },
