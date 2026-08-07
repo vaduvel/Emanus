@@ -54,8 +54,8 @@ export const NUMERI_33 = numeriChapter({
       heading: "De la Sinai la Machilot",
       text: numeriPassage(33, 15, 26),
       teaching: teaching(
-        "După popasul lung la Sinai — locul legământului și al primirii Legii — călătoria continuă printr-o serie de locuri care nu mai apar în alte pasaje biblice: Chibrot-Hataava, Hațerot, Ritma, Rimon-Pereț, Libna, Risa, Kehelata, muntele Şefer, Harada, Machilot.",
-        "Această lungă listă de nume necunoscute cititorului modern ne amintește că marea majoritate a celor patruzeci de ani în pustie a fost formată din etape obșnuite, fără evenimente dramatice consemnate, dar totuși sub călăuzirea continuă a DOMNULUI.",
+        "După popasul lung la Sinai — locul legământului și al primirii Legii — călătoria continuă printr-o serie de locuri care nu mai apar în alte pasaje biblice: Chibrot-Hataava, Hațerot, Ritma, Rimon-Pereț, Libna, Risa, Kehelata, muntele Șefer, Harada, Machilot.",
+        "Această lungă listă de nume necunoscute cititorului modern ne amintește că marea majoritate a celor patruzeci de ani în pustie a fost formată din etape obișnuite, fără evenimente dramatice consemnate, dar totuși sub călăuzirea continuă a DOMNULUI.",
       ),
       words: [],
       crossRefs: ["Exod 19:1-2"],
@@ -68,7 +68,7 @@ export const NUMERI_33 = numeriChapter({
       heading: "De la Tahat la muntele Hor",
       text: numeriPassage(33, 27, 37),
       teaching: teaching(
-        "Lista continuă prin Tahat, Terah, Mitca, Hașmona, Moserot, Bene-Iaacan, Hor-Hagidgad, Iotbata, Abrona, Ețion-Geber, până la pustia Ţin, adică Cadeș — locul unde iscoadele fuseseră trimise și unde generația necredincioasă a fost condamnată la patruzeci de ani de umblărie.",
+        "Lista continuă prin Tahat, Terah, Mitca, Hașmona, Moserot, Bene-Iaacan, Hor-Hagidgad, Iotbata, Abrona, Ețion-Geber, până la pustia Țin, adică Cadeș — locul unde iscoadele fuseseră trimise și unde generația necredincioasă a fost condamnată la patruzeci de ani de umblărie.",
         "De la Cadeș, poporul ajunge la muntele Hor, la marginea țării Edomului — loc care va deveni scena unui alt eveniment solemn, moartea marelui preot Aaron.",
       ),
       words: [],
@@ -93,11 +93,11 @@ export const NUMERI_33 = numeriChapter({
     {
       id: "numeri-33-41-49",
       ref: "Numeri 33:41-49",
-      heading: "De la Ţalmona la câmpiile Moabului",
+      heading: "De la Țalmona la câmpiile Moabului",
       text: numeriPassage(33, 41, 49),
       teaching: teaching(
-        "Ultimele popasuri — Ţalmona, Punon, Obot, Iie-Abarim la hotarul Moabului, Dibon-Gad, Almon-Diblataim, munții Abarim — duc poporul până în câmpiile Moabului, „lângă Iordan, în fața Ierihonului”, chiar locul unde se află acum întreaga carte Numeri în momentul ei final.",
-        "Această ultimă tabără, „de la Bet-Ieșimot până la Abel-Şitim”, este și locul de unde va începe cartea Deuteronom, unde Moise își va ține ultimele cuvântări înainte de moartea sa. Textul notează, fără explicație, o schimbare a numelui locului Iie-Abarim în „Iim” la trecerea de la un verset la altul — o particularitate a textului sursă pe care o semnalăm, fără să o corectăm.",
+        "Ultimele popasuri — Țalmona, Punon, Obot, Iie-Abarim la hotarul Moabului, Dibon-Gad, Almon-Diblataim, munții Abarim — duc poporul până în câmpiile Moabului, „lângă Iordan, în fața Ierihonului”, chiar locul unde se află acum întreaga carte Numeri în momentul ei final.",
+        "Această ultimă tabără, „de la Bet-Ieșimot până la Abel-Șitim”, este și locul de unde va începe cartea Deuteronom, unde Moise își va ține ultimele cuvântări înainte de moartea sa. Textul notează, fără explicație, o schimbare a numelui locului Iie-Abarim în „Iim” la trecerea de la un verset la altul — o particularitate a textului sursă pe care o semnalăm, fără să o corectăm.",
       ),
       words: [],
       crossRefs: ["Deuteronom 1:1-5"],
@@ -120,6 +120,6 @@ export const NUMERI_33 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să țin minte cu recunoștință fiecare etapă a călăuzirii Tale în viața mea, chiar și cele care par obișnuite și lipsite de însemnătate.\n\nDă-mi curajul să nu las nimic din vechea idolatrie sau compromis în viața mea, ca nu cumva să devină mai târziu spini în ochi și ghimpi în coaste.\n\nMulțumescu-Ți pentru fiecare slujitor credincios pe care l-ai pus în viața mea și învață-mă să continui înainte cu încredere, chiar după ce ei nu mai sunt cu mine. Amin.",
+    "Doamne, învață-mă să țin minte cu recunoștință fiecare etapă a călăuzirii Tale în viața mea, chiar și cele care par obișnuite și lipsite de însemnătate.\n\nDă-mi curajul să nu las nimic din vechea idolatrie sau compromis în viața mea, ca nu cumva să devină mai târziu spini în ochi și ghimpi în coaste.\n\nÎți mulțumesc pentru fiecare slujitor credincios pe care l-ai pus în viața mea și învață-mă să continui înainte cu încredere, chiar după ce ei nu mai sunt cu mine. Amin.",
   status: NUMERI_STATUSES[33],
 })

@@ -147,7 +147,7 @@ export const EXOD_39 = exodChapter({
       verses: [32, 43],
       heading: "Lucrarea sfârșită, cercetată și binecuvântată",
       teaching: teaching(
-        "Toată lucrarea cortului s-a sfârșit, și au făcut întocmai cum poruncise Domnul. Apoi aduc totul înaintea lui Moise, și se înșiră bucată cu bucată, de la chivot până la țăruși. Ia aminte că nu s-a spus doar „au isprvit”: s-a spus „au făcut așa cum poruncise”. Se poate isprvi o lucrare și să nu fie ce s-a cerut.",
+        "Toată lucrarea cortului s-a sfârșit, și au făcut întocmai cum poruncise Domnul. Apoi aduc totul înaintea lui Moise, și se înșiră bucată cu bucată, de la chivot până la țăruși. Ia aminte că nu s-a spus doar „au isprăvit”: s-a spus „au făcut așa cum poruncise”. Se poate isprăvi o lucrare și să nu fie ce s-a cerut.",
         "Și vezi că Moise cercetează lucrarea. Nu a primit-o nevăzută, și nici nu a socotit că se cade să se încreadă fără să se uite. Iar meșterii nu s-au supărat că se uită cineva peste ce au făcut. Cine lucrează curat nu se teme să fie cercetat.",
         "Și ia seama la încheiere: și Moise i-a binecuvântat. Nu i-a plătit și nu i-a lăudat pe cel mai iscusit înaintea celorlalți. A binecuvântat pe toți. Iată lucrul cel mai bun pe care îl poate face un om pus mai mare peste alții — să vadă ce s-a făcut și să spună un cuvânt bun.",
         "Și să nu trecem peste ce s-a schimbat în cartea aceasta. La început, un popor de robi fără nimic; în treizeci și doi, un popor care Își făcea dumnezei din capul lui; iar aici, un popor care nu a mai născocit nimic și a făcut întocmai. Pocăința nu se vede în lacrimi, se vede în ascultare.",

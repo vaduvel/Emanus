@@ -27,7 +27,7 @@ export const NUMERI_10 = numeriChapter({
       text: numeriPassage(10, 1, 10),
       teaching: teaching(
         "Fiecare sunet avea un înțeles precis: amândouă trâmbițele chemau întreaga adunare la intrarea Cortului; una singură chema doar căpeteniile; semnalele de alarmă anunțau pornirea, pe rând, a taberelor așezate la răsărit, apoi la sud. Un singur instrument putea transmite mesaje diferite, după numărul de trâmbițe folosite și felul în care sunau.",
-        "Sunetul trâmbițelor nu era rezervat doar mișcării taberei: el însotea și războiul — „vă veți aduce aminte înaintea DOMNULUI și veți fi izbăviți de vrăjmașii voștri” — și bucuria sărbătorilor și a lunilor noi. Același sunet putea însemna chemare la adunare, semnal de plecare, strigăt de război sau cântare de sărbătoare, după momentul în care era folosit.",
+        "Sunetul trâmbițelor nu era rezervat doar mișcării taberei: el însoțea și războiul — „vă veți aduce aminte înaintea DOMNULUI și veți fi izbăviți de vrăjmașii voștri” — și bucuria sărbătorilor și a lunilor noi. Același sunet putea însemna chemare la adunare, semnal de plecare, strigăt de război sau cântare de sărbătoare, după momentul în care era folosit.",
         "Fraza care încheie unitatea explică rostul adânc al trâmbițelor: „ele vor fi o aducere aminte de voi înaintea Dumnezeului vostru”. Nu erau doar semnale practice pentru organizarea taberei, ci un mijloc prin care poporul își amintea că DOMNUL își amintea de el.",
       ),
       words: [
@@ -50,7 +50,7 @@ export const NUMERI_10 = numeriChapter({
       text: numeriPassage(10, 11, 13),
       teaching: teaching(
         "După aproape un an de ședere la Sinai — timp în care s-a construit Cortul, s-a făcut recensământul, s-au sfințit leviții și s-a serbat Paștele — norul se ridică în sfârșit „în al doilea an, în luna a doua, în ziua a douăzecea”. Data precisă marchează sfârșitul unei etape lungi de pregătire și începutul călătoriei propriu-zise.",
-        "Textul notează simplu: „astfel au pornit pentru prima dată, după porunca DOMNULUI dată prin Moise”. Toată pregătirea din capitolele anterioare — tabăra așezată, ordinea de marș stabilită, leviții împarțiți pe sarcini — nu a fost teorie; a fost exact ce s-a întâmplat în această clipă.",
+        "Textul notează simplu: „astfel au pornit pentru prima dată, după porunca DOMNULUI dată prin Moise”. Toată pregătirea din capitolele anterioare — tabăra așezată, ordinea de marș stabilită, leviții împărțiți pe sarcini — nu a fost teorie; a fost exact ce s-a întâmplat în această clipă.",
       ),
       words: [],
       crossRefs: ["Exod 40:36-37", "Numeri 9:17-18"],
@@ -65,7 +65,7 @@ export const NUMERI_10 = numeriChapter({
       teaching: teaching(
         "Ordinea de marș urmează exact tiparul stabilit în capitolul doi: întâi steagul lui Iuda, cu Isahar și Zabulon; apoi gherșoniții și merariții purtând Cortul coborât; apoi steagul lui Ruben, cu Simeon și Gad; apoi chehatiții purtând Sfântul Lăcaș pe umeri; apoi steagul lui Efraim, cu Manase și Beniamin; și în final steagul lui Dan, strângând toate taberele, cu Așer și Neftali.",
         "Merită observată poziția chehatiților: ei poartă „Sfântul Lăcaș” — lucrurile cele mai sfinte — dar înaintea sosirii lor, „celelalte lucruri ale Cortului se ridicau până la sosirea lor”. Cortul propriu-zis era deja ridicat înainte ca ei să ajungă cu obiectele cele mai sfinte, astfel încât acestea să fie așezate direct în locul lor rânduit, fără să stea expuse în așteptare.",
-        "O ordine stabilită cu mult timp înainte, în liniștea capitolului doi, se dovedește acum întocmai respectată în mijlocul mișcării și al mulțimii. Planificarea din vreme a taberei devine, la pornire, singura garanție a ordinei.",
+        "O ordine stabilită cu mult timp înainte, în liniștea capitolului doi, se dovedește acum întocmai respectată în mijlocul mișcării și al mulțimii. Planificarea din vreme a taberei devine, la pornire, singura garanție a ordinii.",
       ),
       words: [],
       crossRefs: ["Numeri 2:1-31", "Numeri 4:15", "1 Corinteni 14:40"],

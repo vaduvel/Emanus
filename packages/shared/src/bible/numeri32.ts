@@ -110,7 +110,7 @@ export const NUMERI_32 = numeriChapter({
       heading: "Cetățile zidite de Gad și Ruben",
       text: numeriPassage(32, 34, 38),
       teaching: teaching(
-        "Fiii lui Gad zidesc Dibonul, Atarotul, Aroerul, Atrot-Şofanul, Iazerul, Iogbeha, Bet-Nimra și Bet-Haran ca cetăți fortificate cu ocoluri pentru turme; fiii lui Ruben zidesc Heșbonul, Eleale, Chiriat-Aimul, Nebo și Baal-Meon, ale cărui nume păgâne au fost schimbate.",
+        "Fiii lui Gad zidesc Dibonul, Atarotul, Aroerul, Atrot-Șofanul, Iazerul, Iogbeha, Bet-Nimra și Bet-Haran ca cetăți fortificate cu ocoluri pentru turme; fiii lui Ruben zidesc Heșbonul, Eleale, Chiriat-Aimul, Nebo și Baal-Meon, ale cărui nume păgâne au fost schimbate.",
         "Această schimbare a numelor cetăților legate de zeități păgâne (precum Baal-Meon) arată o intenție de a purifica identitatea locurilor cucerite, integrându-le în noua stăpânire a lui Israel fără să păstreze amintirea zeilor canaaniți.",
       ),
       words: [],
@@ -134,6 +134,6 @@ export const NUMERI_32 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să cercetez cu grijă motivele din spatele cererilor mele, ca să nu pun în pericol angajamentul față de comunitate din pricina intereselor mele personale.\n\nDă-mi curajul de a-mi ține promisiunile făcute ție și celor din jurul meu, chiar când împlinirea lor cere timp și sacrificiu.\n\nMulțumescu-Ți că poți extinde binecuvântarea Ta dincolo de cererea mea inițială, pentru toți cei care se alătură cu o inimă credincioasă. Amin.",
+    "Doamne, învață-mă să cercetez cu grijă motivele din spatele cererilor mele, ca să nu pun în pericol angajamentul față de comunitate din pricina intereselor mele personale.\n\nDă-mi curajul de a-mi ține promisiunile făcute ție și celor din jurul meu, chiar când împlinirea lor cere timp și sacrificiu.\n\nÎți mulțumesc că poți extinde binecuvântarea Ta dincolo de cererea mea inițială, pentru toți cei care se alătură cu o inimă credincioasă. Amin.",
   status: NUMERI_STATUSES[32],
 })

@@ -10,6 +10,8 @@ export type BibleStatus = "draft" | "in_review" | "published"
 
 export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
 
+export type BibleExplanationKind = "exposition" | "textual-overview"
+
 /** Un cuvant din limba originala, explicat pe intelesul cititorului. */
 export interface WordStudy {
   original: string
@@ -24,7 +26,7 @@ export interface BibleUnit {
   /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
   ref: string
   heading: string
-  /** Textul biblic, nemodificat. RCCV, ortografie moderna. */
+  /** Textul biblic, nemodificat, din traducerea declarata de carte. */
   text: string
   /** Invatatura Emanus. Markdown. */
   teaching: string
@@ -32,6 +34,10 @@ export interface BibleUnit {
   crossRefs?: string[]
   /** Aplicatia pastorala, adresata direct cititorului. */
   forYourHeart?: string
+  /** Provenienta explicatiei; optional pentru continutul legacy. */
+  explanationKind?: BibleExplanationKind
+  /** Eticheta scurta afisabila: de ex. „Zac Poonen” / „Emanus — text”. */
+  explanationSource?: string
 }
 
 export interface BibleChapter {
@@ -54,10 +60,14 @@ export interface BibleBook {
   order: number
   blurb: string
   chapters: BibleChapter[]
+  /** Traducerea textului biblic din aceasta carte. */
+  translation?: string
 }
 
-/** Traducerea afisata. RCCV este in domeniul public. */
+/** Fallback pentru continutul legacy care nu declara traducerea per carte. */
 export const BIBLE_TRANSLATION = "Cornilescu, editia corectata (RCCV)"
+
+export const BIBLIA_EMANUS_TRANSLATION = "Biblia Emanus"
 
 /** Un capitol se deschide cititorului doar dupa revizie umana. */
 export function chapterIsOpen(chapter: BibleChapter): boolean {

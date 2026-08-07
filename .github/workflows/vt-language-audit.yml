@@ -1,0 +1,92 @@
+name: VT Romanian Language Audit
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-complet
+  pull_request:
+    branches:
+      - agent/biblia-explicata-vt-maleahi
+
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract explanation prose only
+        run: |
+          python3 - <<'PY'
+          import ast
+          import re
+          from pathlib import Path
+
+          root = Path('packages/shared/src/bible')
+          paths = sorted(root.glob('deuteronom[0-9]*.ts')) + sorted(root.glob('numeri[0-9]*.ts'))
+          paths = [p for p in paths if 'Text' not in p.name]
+          string_re = re.compile(r'"(?:\\.|[^"\\])*"')
+          out = []
+          mapped = []
+          for path in paths:
+              text = path.read_text(encoding='utf-8')
+              for m in string_re.finditer(text):
+                  raw = m.group(0)
+                  try:
+                      value = ast.literal_eval(raw)
+                  except Exception:
+                      continue
+                  if not isinstance(value, str) or len(value) < 20:
+                      continue
+                  if value.startswith('./') or value.startswith('../') or value.startswith('http'):
+                      continue
+                  # Excludem referințe/identificatori; păstrăm proza și explicațiile lexicale.
+                  if re.fullmatch(r'[A-Za-z0-9_.:/-]+', value):
+                      continue
+                  line = text.count('\n', 0, m.start()) + 1
+                  out.append(value)
+                  mapped.append(f'{path}:{line}\t{value}')
+
+          Path('/tmp/vt-ro.txt').write_text('\n'.join(out), encoding='utf-8')
+          Path('/tmp/vt-ro-context.txt').write_text('\n'.join(mapped), encoding='utf-8')
+          print(f'Extrase {len(out)} fragmente de explicație din {len(paths)} fișiere.')
+          PY
+
+      - name: Install Romanian spell checker
+        run: |
+          mkdir -p /tmp/vt-spell
+          cd /tmp/vt-spell
+          npm init -y >/dev/null
+          npm install --silent cspell@9.2.1 @cspell/dict-ro-ro@2.0.6
+          cat >cspell.json <<'JSON'
+          {
+            "version": "0.2",
+            "language": "ro-RO",
+            "useGitignore": false,
+            "caseSensitive": true,
+            "allowCompoundWords": true,
+            "import": ["@cspell/dict-ro-ro/cspell-ext.json"]
+          }
+          JSON
+
+      - name: Sanity-check dictionary
+        run: |
+          cd /tmp/vt-spell
+          printf 'prtișniți\nrennoiește\nîmplânită\n' >/tmp/known-bad-ro.txt
+          set +e
+          output=$(npx cspell /tmp/known-bad-ro.txt --config ./cspell.json --words-only --unique --no-progress --no-summary 2>&1)
+          status=$?
+          set -e
+          printf '%s\n' "$output"
+          if [ "$status" -eq 0 ] || ! printf '%s\n' "$output" | grep -q 'prtișniți'; then
+            echo 'Dicționarul românesc nu a detectat typo-ul de control.'
+            exit 1
+          fi
+
+      - name: Report unique spelling suspects
+        run: |
+          cd /tmp/vt-spell
+          npx cspell /tmp/vt-ro.txt --config ./cspell.json --words-only --unique --no-progress --no-summary || true
+
+      - name: Report conversion-pattern contexts
+        run: |
+          grep -n -E 'Împreună|\bÎn\b|\bdecît\b|salcîm|\bÎl\b|\bÎli\b|\bÎlși\b|\bÎiși\b|preoțease|Tăiește|\bti dă\b' /tmp/vt-ro-context.txt || true

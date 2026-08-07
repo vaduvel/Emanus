@@ -16,7 +16,7 @@ export const NUMERI_8 = numeriChapter({
   summary:
     "Un capitol scurt, cu trei părți: așezarea celor șapte candele ale sfeșnicului în fața lui, apoi ceremonia amănunțită prin care leviții sunt curățiți, legănați ca jertfă și puși deoparte pentru slujba Cortului, și în final vârstele între care un levit slujea activ: de la douăzeci și cinci până la cincizeci de ani.",
   literaryContext:
-    "După capitolul șapte, dedicat dăruirii căpeteniilor și încheiat cu Glasul de pe capacul ispășirii, capitolul opt revine la înăuntrul Cortului — lumina lui statornică — și apoi la punerea deoparte a slujitorilor care îl vor înțreine, încheind astfel secțiunea de organizare a Cortului și a leviților începută în capitolul trei.",
+    "După capitolul șapte, dedicat dăruirii căpeteniilor și încheiat cu Glasul de pe capacul ispășirii, capitolul opt revine la înăuntrul Cortului — lumina lui statornică — și apoi la punerea deoparte a slujitorilor care îl vor întreține, încheind astfel secțiunea de organizare a Cortului și a leviților începută în capitolul trei.",
   historicalContext:
     "Ceremonia de curățire a leviților — apa de curățire, briciul peste tot trupul, spălarea hainelor, punerea mâinilor și legănarea ca jertfă — se aseamănă mult cu rânduiala de curățire a leprosului din Levitic 14, dar cu o deosebire: aici nu este vorba de o boală, ci de o consacrare. Întregul popor participă, punându-și mâinile pe leviți, ca semn că îi dă pe aceștia din mijlocul lui, întocmai cum legănau o jertfă înaintea DOMNULUI.",
   units: [
@@ -26,8 +26,8 @@ export const NUMERI_8 = numeriChapter({
       heading: "Șapte candele care luminează în fața sfeșnicului",
       text: numeriPassage(8, 1, 4),
       teaching: teaching(
-        "Porunca este simplă: cele șapte candele ale sfeșnicului trebuie să lumineze "în fața sfeșnicului", nu împrăștiate în toate direcțiile. Lumina lor era îndreptată spre înainte, spre masa pâinilor prezentării, arătând o rată anume, nu doar o luminozitate generală în încăpere.",
-        "Textul amintește că întregul sfeșnic era "lucrătură de aur bătut... după modelul pe care i-l arătase DOMNUL lui Moise". Nici măcar forma lucrurilor de aur nu venea din închipuirea vreunui meșter, ci dintr-un model arătat de sus. Ascultarea lui Aaron — "a făcut așa" — este notată la fel de simplu ca ascultarea lui Moise la ridicarea Cortului.",
+        "Porunca este simplă: cele șapte candele ale sfeșnicului trebuie să lumineze „în fața sfeșnicului”, nu împrăștiate în toate direcțiile. Lumina lor era îndreptată spre înainte, spre masa pâinilor prezentării, arătând o rată anume, nu doar o luminozitate generală în încăpere.",
+        "Textul amintește că întregul sfeșnic era „lucrătură de aur bătut... după modelul pe care i-l arătase DOMNUL lui Moise”. Nici măcar forma lucrurilor de aur nu venea din închipuirea vreunui meșter, ci dintr-un model arătat de sus. Ascultarea lui Aaron — „a făcut așa” — este notată la fel de simplu ca ascultarea lui Moise la ridicarea Cortului.",
       ),
       words: [
         {
@@ -70,9 +70,9 @@ export const NUMERI_8 = numeriChapter({
       heading: "Întregul popor pune mâinile pe leviți",
       text: numeriPassage(8, 8, 14),
       teaching: teaching(
-        "Ceremonia continuă cu doi tauri: unul cu darul de cereale, celălalt ca jertfă pentru păcat. Toată adunarea este strânsă înaintea Cortului, iar "fiii lui Israel să-și pună mâinile peste leviți" — nu doar Moise sau Aaron, ci întregul popor, ca semn că leviii sunt dați din mijlocul lor, cu deplina lor încuviințare.",
-        "Aaron își legeală pe leviți "ca o jertfă legănată înaintea DOMNULUI din partea fiilor lui Israel". Este o imagine străină pentru cititorul modern: oamenii își sunt legănați ca o jertfă, nu în sensul distrugerii, ci al dăruirii depline către DOMNUL, înălțați și coborâți înaintea Lui ca semn că aparțin acum în întregime slujbei.",
-        "Leviii își pun și ei mâinile pe capul taurilor, iar unul devine jertfă pentru păcat, celălalt ardere-de-tot, "ca să facă ispășire pentru leviți". Chiar cei chemați să facă ispășire pentru alții au nevoie, mai întâi, de ispășire pentru ei înșiși.",
+        "Ceremonia continuă cu doi tauri: unul cu darul de cereale, celălalt ca jertfă pentru păcat. Toată adunarea este strânsă înaintea Cortului, iar „fiii lui Israel să-și pună mâinile peste leviți” — nu doar Moise sau Aaron, ci întregul popor, ca semn că leviții sunt dați din mijlocul lor, cu deplina lor încuviințare.",
+        "Aaron își legeală pe leviți „ca o jertfă legănată înaintea DOMNULUI din partea fiilor lui Israel”. Este o imagine străină pentru cititorul modern: oamenii își sunt legănați ca o jertfă, nu în sensul distrugerii, ci al dăruirii depline către DOMNUL, înălțați și coborâți înaintea Lui ca semn că aparțin acum în întregime slujbei.",
+        "Leviii își pun și ei mâinile pe capul taurilor, iar unul devine jertfă pentru păcat, celălalt ardere-de-tot, „ca să facă ispășire pentru leviți”. Chiar cei chemați să facă ispășire pentru alții au nevoie, mai întâi, de ispășire pentru ei înșiși.",
       ),
       words: [
         {
@@ -85,7 +85,7 @@ export const NUMERI_8 = numeriChapter({
       ],
       crossRefs: ["Levitic 8:14-17", "Romani 12:1", "Exod 29:24"],
       forYourHeart:
-        "A fi pus deoparte pentru slujba lui Dumnezeu începe cu ispășire, nu cu mândrie. Chiar cei chemați să slujească alții au nevoie întâi de curatirea proprie.",
+        "A fi pus deoparte pentru slujba lui Dumnezeu începe cu ispășire, nu cu mândrie. Chiar cei chemați să slujească alții au nevoie întâi de curățirea proprie.",
     },
     {
       id: "numeri-8-15-19",
@@ -93,8 +93,8 @@ export const NUMERI_8 = numeriChapter({
       heading: "Dați cu totul, ca să nu fie nicio urgie în popor",
       text: numeriPassage(8, 15, 19),
       teaching: teaching(
-        "Textul reia, cu alte cuvinte, temeiul deja rostit în capitolul trei: leviții sunt luați "în locul tuturor întâilor născuți", pentru că toți întâii născuți ai lui Israel au devenit ai DOMNULUI în noaptea în care Egiptul și-a pierdut pe ai săi.",
-        "Dar aici apare un motiv nou, spus limpede: leviții sunt dați lui Aaron "ca să facă ispășire pentru fiii lui Israel, ca să nu existe nicio urgie printre fiii lui Israel când fiii lui Israel se vor apropia de Sfântul Lăcaș". Leviții nu sunt doar o forță de muncă pentru Cort; sunt o măsură de protecție pentru întreg poporul, o barieră vie între sfințenia periculoasă și mulțimea neinstruită.",
+        "Textul reia, cu alte cuvinte, temeiul deja rostit în capitolul trei: leviții sunt luați „în locul tuturor întâilor născuți”, pentru că toți întâii născuți ai lui Israel au devenit ai DOMNULUI în noaptea în care Egiptul și-a pierdut pe ai săi.",
+        "Dar aici apare un motiv nou, spus limpede: leviții sunt dați lui Aaron „ca să facă ispășire pentru fiii lui Israel, ca să nu existe nicio urgie printre fiii lui Israel când fiii lui Israel se vor apropia de Sfântul Lăcaș”. Leviții nu sunt doar o forță de muncă pentru Cort; sunt o măsură de protecție pentru întreg poporul, o barieră vie între sfințenia periculoasă și mulțimea neinstruită.",
         "Ia aminte cum se împletesc mila și rânduiala: dacă fiecare israelit s-ar apropia direct de Cort, fără mijlocitorii rânduiți, urgia ar veni. Leviții, puși între popor și sfințenie, fac posibil ca poporul să se apropie de DOMNUL și să trăiască.",
       ),
       words: [
@@ -103,7 +103,7 @@ export const NUMERI_8 = numeriChapter({
           transliteration: "velo-ihie bivnei Israel negef",
           language: "ebraica",
           meaning:
-            "și să nu fie o urgie între fiii lui Israel. Cuvântul "negef" denumește o lovitură aducată direct de DOMNUL, nu o boală obișnuită; rânduiala leviților era menită exact să oprească o astfel de lovitură.",
+            "și să nu fie o urgie între fiii lui Israel. Cuvântul „negef” denumește o lovitură aducată direct de DOMNUL, nu o boală obișnuită; rânduiala leviților era menită exact să oprească o astfel de lovitură.",
         },
       ],
       crossRefs: ["Numeri 1:53", "Numeri 18:5", "1 Timotei 2:5"],
@@ -116,7 +116,7 @@ export const NUMERI_8 = numeriChapter({
       heading: "Făcut întocmai",
       text: numeriPassage(8, 20, 22),
       teaching: teaching(
-        "Ascultarea este descrisă de două ori în această unitate scurtă: "le-au făcut leviților după tot ce-i poruncise DOMNUL" și, la final, "cum îi poruncise DOMNUL lui Moise... așa le-au făcut". Între cele două formule stă fapta însăși: leviții "s-au curățit de păcat și și-au spălat hainele", au fost legănați ca jertfă, și abia după aceea au intrat în slujbă.",
+        "Ascultarea este descrisă de două ori în această unitate scurtă: „le-au făcut leviților după tot ce-i poruncise DOMNUL” și, la final, „cum îi poruncise DOMNUL lui Moise... așa le-au făcut”. Între cele două formule stă fapta însăși: leviții „s-au curățit de păcat și și-au spălat hainele”, au fost legănați ca jertfă, și abia după aceea au intrat în slujbă.",
         "Ordinea nu poate fi inversată: curățirea înainte de slujire, ispășirea înainte de lucrare. Niciun levit nu a intrat în Cort înainte de a fi trecut prin toată ceremonia rânduită.",
       ),
       words: [],
@@ -130,8 +130,8 @@ export const NUMERI_8 = numeriChapter({
       heading: "Slujba activă, de la douăzeci și cinci la cincizeci de ani",
       text: numeriPassage(8, 23, 26),
       teaching: teaching(
-        "Aici apare o a treia vârstă de numărare pentru leviți, diferită de cea de la o lună (capitolul trei) și de cea de treizeci de ani (capitolul patru): slujba activă începe la douăzeci și cinci de ani. Comentatorii evreiesti observă de mult timp că diferența dintre douăzeci și cinci și treizeci ar putea fi anii de ucenicie și pregătire înainte de slujba deplină.",
-        "La cincizeci de ani, levitul "iese din slujba lucrării și nu va mai sluji" — dar textul nu îl lasă fără rost: "vor putea ajuta pe frații lor... să păzească paza, dar nu vor mai face slujbă activă". Retragerea din munca grea nu înseamnă îndepărtare din Cort; înseamnă o schimbare de rol, de la purtarea sarcinilor la sprijinirea celor mai tineri.",
+        "Aici apare o a treia vârstă de numărare pentru leviți, diferită de cea de la o lună (capitolul trei) și de cea de treizeci de ani (capitolul patru): slujba activă începe la douăzeci și cinci de ani. Comentatorii evreiești observă de mult timp că diferența dintre douăzeci și cinci și treizeci ar putea fi anii de ucenicie și pregătire înainte de slujba deplină.",
+        "La cincizeci de ani, levitul „iese din slujba lucrării și nu va mai sluji” — dar textul nu îl lasă fără rost: „vor putea ajuta pe frații lor... să păzească paza, dar nu vor mai face slujbă activă”. Retragerea din munca grea nu înseamnă îndepărtare din Cort; înseamnă o schimbare de rol, de la purtarea sarcinilor la sprijinirea celor mai tineri.",
         "Capitolul se încheie astfel cu o învățătură tăcută despre înaintarea în vârstă înaintea lui Dumnezeu: puterea trupească se pierde, dar locul în familia slujitorilor rămâne, și experiența unui levit bătrân devine, la rândul ei, un fel de slujbă.",
       ),
       words: [
@@ -149,6 +149,6 @@ export const NUMERI_8 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să primesc curățirea Ta înainte de orice slujbă pe care o caut, așa cum leviții au fost spălați și ispășiți înainte să intre în Cort.\n\nDă-mi să fiu ca lumina sfeșnicului, îndreptată cu un scop și o direcție, după modelul pe care Tu mi l-ai arătat.\n\nMulțumescu-Ți pentru mijlocitorii pe care i-ai rânduit între mine și sfințenia Ta, ca să pot trăi aproape de Tine fără primejdie.\n\nȘi învață-mă că slujba mea nu se încheie odată cu puterea tinereții; dă-mi înțelepciunea de a sprijini pe cei tineri la vremea bătrâneții. Amin.",
+    "Doamne, învață-mă să primesc curățirea Ta înainte de orice slujbă pe care o caut, așa cum leviții au fost spălați și ispășiți înainte să intre în Cort.\n\nDă-mi să fiu ca lumina sfeșnicului, îndreptată cu un scop și o direcție, după modelul pe care Tu mi l-ai arătat.\n\nÎți mulțumesc pentru mijlocitorii pe care i-ai rânduit între mine și sfințenia Ta, ca să pot trăi aproape de Tine fără primejdie.\n\nȘi învață-mă că slujba mea nu se încheie odată cu puterea tinereții; dă-mi înțelepciunea de a sprijini pe cei tineri la vremea bătrâneții. Amin.",
   status: NUMERI_STATUSES[8],
 })

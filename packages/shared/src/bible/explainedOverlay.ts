@@ -16,6 +16,8 @@ export type ExplainedSource =
       note: "rezumat narativ fără doctrină adăugată"
     }
 
+export type ExplanationKind = "exposition" | "textual-overview"
+
 export interface OverlayWordStudy {
   original: string
   transliteration: string
@@ -31,6 +33,15 @@ export interface ExplainedOverlayUnit {
   heading: string
   teaching: string
   source: ExplainedSource
+  /**
+   * `exposition` = explicație susținută de Poonen / sursa doctrinară stabilită.
+   * `textual-overview` = descriere strictă a ceea ce spune Biblia Emanus,
+   * fără doctrină, tipologie sau aplicație adăugată în golul transcriptului.
+   *
+   * Câmpul rămâne opțional în overlay-urile de bază pentru compatibilitate;
+   * registry-ul final îl materializează obligatoriu pentru fiecare unitate.
+   */
+  explanationKind?: ExplanationKind
   words?: OverlayWordStudy[]
   forYourHeart?: string
 }

@@ -10,11 +10,11 @@ export const DEUTERONOM_23 = deuteronomChapter({
   number: 23,
   title: "Deuteronom 23 — O tabără sfântă, un legământ de cuvânt ținut",
   summary:
-    "Moise reglementează cine poate face parte din adunarea DOMNULUI, cere sfințenie în igiena taberei, interzice returnarea robului fugit și prostituția de templu, interzice camata între frați, și cere ținerea cuvântului dat prin făgăduințe.",
+    "Moise reglementează cine poate face parte din adunarea DOMNULUI, cere sfințenie în igiena taberei, interzice returnarea robului fugit și prostituția de templu, interzice camăta între frați, și cere ținerea cuvântului dat prin făgăduințe.",
   literaryContext:
     "Acest capitol continuă seria de legi de ordine socială din capitolul 22, extinzându-le la identitatea comunitară a lui Israel — cine aparține adunării, cum se păzește sfințenia taberei, și cum se păstrează integritatea cuvântului dat.",
   historicalContext:
-    "Amoniții și moabiții au ostilitate istorică directă cu Israel — refuzul de a le oferi pâine și apa la Exod și tocmirea lui Balaam pentru blestem. În contrast, edomiții și egiptenii sunt tratați cu blandețe, ca rude sau ca gazde din trecut.",
+    "Amoniții și moabiții au ostilitate istorică directă cu Israel — refuzul de a le oferi pâine și apa la Exod și tocmirea lui Balaam pentru blestem. În contrast, edomiții și egiptenii sunt tratați cu blândețe, ca rude sau ca gazde din trecut.",
   units: [
     {
       id: "deuteronom-23-1-8",
@@ -88,7 +88,7 @@ export const DEUTERONOM_23 = deuteronomChapter({
       heading: "Fără camată între frați, cuvântul dat este sfânt",
       text: deuteronomPassage(23, 19, 23),
       teaching: teaching(
-        "Camata este interzisă explicit între israeliți — „de la fratele tău să nu iei dobândă” — dar permisă față de străini, distingând între relațiile de legământ intern și tranzacțiile comerciale externe. Scopul dat este direct legat de binecuvântare: „ca DOMNUL... să te binecuvânteze în tot ce vei pune mâna”.",
+        "Camăta este interzisă explicit între israeliți — „de la fratele tău să nu iei dobândă” — dar permisă față de străini, distingând între relațiile de legământ intern și tranzacțiile comerciale externe. Scopul dat este direct legat de binecuvântare: „ca DOMNUL... să te binecuvânteze în tot ce vei pune mâna”.",
         "Făgăduințele făcute DOMNULUI trebuie ținute fără întârziere: „DOMNUL, Dumnezeul tău, ți-ar cere socoteală de ea și te-ai încărca cu un păcat”. Interesant, a nu face o făgăduință nu este păcat — dar a o face și a n-o ține, da.",
       ),
       words: [
@@ -110,7 +110,7 @@ export const DEUTERONOM_23 = deuteronomChapter({
       heading: "Foamea aproapelui, potolită fără furt",
       text: deuteronomPassage(23, 24, 25),
       teaching: teaching(
-        "Legea permite trecătorului flămând să mânce direct din vie sau din grâul aproapelui „până te vei sătura”, dar interzice să pună în vas sau să folosească secera — diferența dintre a te hrăni cu ce ai nevoie și a te îmbogăți din munca altuia.",
+        "Legea permite trecătorului flămând să mănânce direct din vie sau din grâul aproapelui „până te vei sătura”, dar interzice să pună în vas sau să folosească secera — diferența dintre a te hrăni cu ce ai nevoie și a te îmbogăți din munca altuia.",
         "Această lege echilibrează cu grijă dreptul proprietății și nevoia celui flămând, permițând o formă de generozitate obligatorie față de trecător, dar fără să legitimeze recolta comercială făcută pe cheltuiala altuia.",
       ),
       words: [
@@ -119,7 +119,7 @@ export const DEUTERONOM_23 = deuteronomChapter({
           transliteration: "ve'akhalta anavim kenafshekha sova'ekha",
           language: "ebraica",
           meaning:
-            "să mânci struguri, după dorința ta, până te vei sătura. Formula care definește limita corectă: hrana pentru nevoia imediată, nu recolta pentru câștig personal din munca altuia.",
+            "să mănânci struguri, după dorința ta, până te vei sătura. Formula care definește limita corectă: hrana pentru nevoia imediată, nu recolta pentru câștig personal din munca altuia.",
         },
       ],
       crossRefs: ["Matei 12:1", "Leviticul 19:9-10", "Rut 2:2-3"],

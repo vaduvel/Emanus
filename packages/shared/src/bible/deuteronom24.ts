@@ -10,7 +10,7 @@ export const DEUTERONOM_24 = deuteronomChapter({
   number: 24,
   title: "Deuteronom 24 — Demnitatea celui vulnerabil, în familie și în viața de fiecare zi",
   summary:
-    "Moise reglementează divorțul deja existent, protejează căsătoria proaspătă, interzice răpirea de oameni, cere grijă față de cel sărac în luarea zcălogului și plata lucrătorului, respinge pedeapsa colectivă, și cere dreptate și generozitate față de străin, orfan și văduvă.",
+    "Moise reglementează divorțul deja existent, protejează căsătoria proaspătă, interzice răpirea de oameni, cere grijă față de cel sărac în luarea zălogului și plata lucrătorului, respinge pedeapsa colectivă, și cere dreptate și generozitate față de străin, orfan și văduvă.",
   literaryContext:
     "Acest capitol continuă legile de ordine socială din 22-23, extinzându-le către protecția demnității celui vulnerabil — femeia divorțată, robul răpit, lucrătorul sărac, străinul, orfanul și văduva — într-un fir unitar de compasiune practică.",
   historicalContext:
@@ -107,7 +107,7 @@ export const DEUTERONOM_24 = deuteronomChapter({
     {
       id: "deuteronom-24-19-22",
       ref: "Deuteronom 24:19-22",
-      heading: "Recolta împarțită cu străinul, orfanul și văduva",
+      heading: "Recolta împărțită cu străinul, orfanul și văduva",
       text: deuteronomPassage(24, 19, 22),
       teaching: teaching(
         "Snopul uitat pe ogor, măslinele rămase pe ramuri, ciorchinele rămase în vie — toate acestea nu se recuperează, ci se lasă pentru străin, orfan și văduvă. Această generozitate obligatorie face parte structurală din economia agricolă a lui Israel, nu o opțiune de caritate.",
@@ -124,7 +124,7 @@ export const DEUTERONOM_24 = deuteronomChapter({
       ],
       crossRefs: ["Rut 2:2-3", "Leviticul 19:9-10", "Deuteronom 15:15"],
       forYourHeart:
-        "Amintirea propriei elibetări ar trebui să se transforme în generozitate concretă, nu doar în recunoștință abstractă.",
+        "Amintirea propriei eliberări ar trebui să se transforme în generozitate concretă, nu doar în recunoștință abstractă.",
     },
   ],
   prayer:

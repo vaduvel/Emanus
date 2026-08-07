@@ -7,6 +7,10 @@ import {
 
 const sourceUrl = "https://www.cfcindia.com/through-the-bible/jonah-micah"
 const p = (section: string) => ({ kind: "poonen-official" as const, sourceUrl, section })
+const n = {
+  kind: "biblia-emanus" as const,
+  note: "rezumat narativ fără doctrină adăugată" as const,
+}
 
 const focused: Record<number, ExplainedOverlayChapter> = {
   1: {
@@ -19,6 +23,31 @@ const focused: Record<number, ExplainedOverlayChapter> = {
       teaching: "Prima secțiune oficială Poonen este judecata asupra Samariei și Iudei. Privilegiul religios al celor două regate nu îi scoate de sub evaluarea lui Dumnezeu. Textul numește idolatria și consecințele ei; narațiunea profetică nu autorizează comunități moderne să identifice fiecare catastrofă ca judecată directă fără o revelație explicită comparabilă.",
       source: p("Judgment on Samaria and Judah"),
     }],
+  },
+  2: {
+    number: 2,
+    title: "Ogoarele sunt răpite, adevărul este redus la tăcere, dar rămășița este adunată",
+    summary: "Mica confruntă oameni care transformă puterea economică în mijloc de a lua case și moșteniri. Când profeția devine incomodă, mesajul cerut este unul plăcut; capitolul se încheie însă cu imaginea adunării rămășiței.",
+    units: [
+      {
+        from: 1, to: 5,
+        heading: "Răul planificat noaptea devine confiscare dimineața",
+        teaching: "Primele versete descriu nelegiuirea ca plan deliberat: oamenii o gândesc în așternut și o execută când se face ziuă pentru că au puterea s-o facă. Exemplele sunt concrete — poftesc ogoare și case, apoi le iau, apăsând omul împreună cu moștenirea lui. Judecata anunțată răspunde chiar acestei folosiri a puterii pentru confiscare.",
+        source: n,
+      },
+      {
+        from: 6, to: 11,
+        heading: "«Nu prorociți» — mesajul incomod este respins, iar minciuna devine preferată",
+        teaching: "Când profetul numește răul și consecința lui, răspunsul este cererea de a nu mai proroci astfel de lucruri. Textul continuă cu alte forme de exploatare: haina este luată de la omul pașnic, femeile sunt izgonite din case, iar copiii pierd ceea ce le fusese dat. Contrastul final este tăios: un profet care ar vorbi despre vin și băutură ar fi exact mesagerul pe care un asemenea popor l-ar prefera.",
+        source: n,
+      },
+      {
+        from: 12, to: 13,
+        heading: "Rămășița este strânsă, iar Împăratul merge înaintea ei",
+        teaching: "După acuzațiile și amenințările capitolului, ultimele două versete schimbă imaginea: Iacov este strâns, rămășița lui Israel este adunată ca o turmă, iar drumul este deschis înaintea ei. Textul încheie cu Împăratul mergând înainte și cu DOMNUL în frunte, astfel încât verdictul asupra exploatării nu este ultimul tablou al capitolului.",
+        source: n,
+      },
+    ],
   },
   3: {
     number: 3,

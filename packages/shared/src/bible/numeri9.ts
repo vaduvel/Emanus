@@ -112,6 +112,6 @@ export const NUMERI_9 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să țin amintirea izbăvirii Tale chiar și în mijlocul pustiei mele, fără să aștept vremuri mai ușoare.\n\nCând o piedică reală mă oprește de la părtășia cu Tine, dă-mi îndrăzneala celor necurați care au cerut o cale, nu tăcerea resemnării.\n\nÎnvață-mă să veghez norul Tău în fiecare zi, gata să pornesc sau să rămân, după cum hotărăști Tu, nu după planul meu dinainte stabilit.\n\nȘi mulțumescu-Ți că faci loc pentru cel oprit fără voia lui, așa cum ai rânduit Paștele al doilea pentru cei care doreau cu adevărat să se apropie de Tine. Amin.",
+    "Doamne, învață-mă să țin amintirea izbăvirii Tale chiar și în mijlocul pustiei mele, fără să aștept vremuri mai ușoare.\n\nCând o piedică reală mă oprește de la părtășia cu Tine, dă-mi îndrăzneala celor necurați care au cerut o cale, nu tăcerea resemnării.\n\nÎnvață-mă să veghez norul Tău în fiecare zi, gata să pornesc sau să rămân, după cum hotărăști Tu, nu după planul meu dinainte stabilit.\n\nȘi mulțumesc-Ți că faci loc pentru cel oprit fără voia lui, așa cum ai rânduit Paștele al doilea pentru cei care doreau cu adevărat să se apropie de Tine. Amin.",
   status: NUMERI_STATUSES[9],
 })

@@ -26,9 +26,9 @@ export const NUMERI_3 = numeriChapter({
       heading: "Patru fii, doi morți pentru foc străin",
       text: numeriPassage(3, 1, 4),
       teaching: teaching(
-        "Capitolul începe cu o genealogie scurtă, dar ea ascunde una din cele mai grele povești din cartea Levitic: Nadab și Abihu "au murit înaintea DOMNULUI când au adus foc străin înaintea DOMNULUI". Textul nu se oprește să repete întreaga întâmplare din Levitic 10, dar nici nu o ascunde: o pune chiar în capul listei preoților, ca o piatră de aducere-aminte pentru tot ce va urma.",
-        "Ia aminte ce înseamnă a fi "preoți unși, învestiți ca să slujească": nu este o slujbă pe care oricine o poate lua după plac. Nadab și Abihu fuseseră ei înșiși unși și învestiți, și tot au pierit pentru o apropiere neascultătoare. Rânduiala aceasta nu este împotriva preoției, ci temeiul pentru care preoția are nevoie de o rânduială atât de strictă.",
-        "Și totuși capitolul nu se oprește în întuneric: "Eleazar și Itamar au slujit ca preoți în fața tatălui lor, Aaron". Căderea a doi fii nu a stins slujba; ceilalți doi au continuat-o. Dumnezeu nu lasă slujba Lui să se piardă din pricina păcatului unora, dar nici nu îngăduie ca păcatul să fie trecut cu vederea de dragul continuității.",
+        "Capitolul începe cu o genealogie scurtă, dar ea ascunde una din cele mai grele povești din cartea Levitic: Nadab și Abihu „au murit înaintea DOMNULUI când au adus foc străin înaintea DOMNULUI”. Textul nu se oprește să repete întreaga întâmplare din Levitic 10, dar nici nu o ascunde: o pune chiar în capul listei preoților, ca o piatră de aducere-aminte pentru tot ce va urma.",
+        "Ia aminte ce înseamnă a fi „preoți unși, învestiți ca să slujească”: nu este o slujbă pe care oricine o poate lua după plac. Nadab și Abihu fuseseră ei înșiși unși și învestiți, și tot au pierit pentru o apropiere neascultătoare. Rânduiala aceasta nu este împotriva preoției, ci temeiul pentru care preoția are nevoie de o rânduială atât de strictă.",
+        "Și totuși capitolul nu se oprește în întuneric: „Eleazar și Itamar au slujit ca preoți în fața tatălui lor, Aaron”. Căderea a doi fii nu a stins slujba; ceilalți doi au continuat-o. Dumnezeu nu lasă slujba Lui să se piardă din pricina păcatului unora, dar nici nu îngăduie ca păcatul să fie trecut cu vederea de dragul continuității.",
       ),
       words: [
         {
@@ -49,9 +49,9 @@ export const NUMERI_3 = numeriChapter({
       heading: "Leviții, dați cu totul lui Aaron",
       text: numeriPassage(3, 5, 10),
       teaching: teaching(
-        "DOMNUL poruncește ca semința lui Levi să fie apropiată de Aaron, "ca să-i slujească". Nu se apropie de la sine, nu-și aleg singuri locul; sunt puși într-o rânduială de slujire care începe de la Aaron și coboară spre toată adunarea.",
-        "De două ori se repetă cuvântul "pază": leviții "vor păzi toate uneltele Cortului" și vor "îndeplini slujba". Slujba lor este mai ales o veghe, o grijă neîntreruptă pentru lucrurile sfinte, nu doar o muncă de o clipă. Cine păzește ceva sfânt trebuie să rămână treaz la datoria lui multă vreme, nu doar în ziua în care se vede lucrul.",
-        "Cel mai greu de primit este poate rândul: "ei îi sunt dați cu totul din mijlocul fiilor lui Israel". Nu sunt împrumutați, nu sunt angajați pentru o vreme; sunt dăruiți întreg, fără rest. Iar la capătul unității stă din nou avertismentul cunoscut deja din capitolul întâi: "străinul care se va apropia să fie dat la moarte". Sfințenia Cortului cere o rânduială care nu se lasă înmuiată de bunăvoința nimănui.",
+        "DOMNUL poruncește ca semința lui Levi să fie apropiată de Aaron, „ca să-i slujească”. Nu se apropie de la sine, nu-și aleg singuri locul; sunt puși într-o rânduială de slujire care începe de la Aaron și coboară spre toată adunarea.",
+        "De două ori se repetă cuvântul „pază”: leviții „vor păzi toate uneltele Cortului” și vor „îndeplini slujba”. Slujba lor este mai ales o veghe, o grijă neîntreruptă pentru lucrurile sfinte, nu doar o muncă de o clipă. Cine păzește ceva sfânt trebuie să rămână treaz la datoria lui multă vreme, nu doar în ziua în care se vede lucrul.",
+        "Cel mai greu de primit este poate rândul: „ei îi sunt dați cu totul din mijlocul fiilor lui Israel”. Nu sunt împrumutați, nu sunt angajați pentru o vreme; sunt dăruiți întreg, fără rest. Iar la capătul unității stă din nou avertismentul cunoscut deja din capitolul întâi: „străinul care se va apropia să fie dat la moarte”. Sfințenia Cortului cere o rânduială care nu se lasă înmuiată de bunăvoința nimănui.",
       ),
       words: [
         {
@@ -72,9 +72,9 @@ export const NUMERI_3 = numeriChapter({
       heading: "În locul tuturor întâilor născuți",
       text: numeriPassage(3, 11, 13),
       teaching: teaching(
-        "Aici stă temeiul teologic al întregului capitol: "Eu i-am luat pe leviți din mijlocul fiilor lui Israel în locul tuturor întâilor născuți". Nu este doar o organizare de trib pentru o muncă; este un schimb pe care DOMNUL Însuși îl rânduiește, cu leviții stând acum acolo unde ar fi trebuit să stea, prin drept de întâi-născut, un băiat din fiecare familie a lui Israel.",
-        "Motivul acestui drept este amintit direct: "în ziua în care i-am lovit pe toți întâii născuți în țara Egiptului, Mi-am sfințit toți întâii născuți din Israel". Este noaptea Paștelui. Când moartea a trecut prin Egipt și a cruțat pe cei acoperiți de sânge, viața cruțată a fiecărui întâi-născut a devenit, din clipa aceea, proprietatea DOMNULUI. Nu se poate uita cui i se datorează viața.",
-        "Vezi cât de departe merge cuvântul "ai Mei": "toți întâii născuți sunt ai Mei... de la om până la animal". Cruțarea din noaptea aceea nu s-a oprit la marginea vieții omenești, ci a cuprins tot ce trăia. Iar acum, ca semn văzut al acestei apartenențe, o singură semințe — Levi — stă în locul tuturor celorlalte.",
+        "Aici stă temeiul teologic al întregului capitol: „Eu i-am luat pe leviți din mijlocul fiilor lui Israel în locul tuturor întâilor născuți”. Nu este doar o organizare de trib pentru o muncă; este un schimb pe care DOMNUL Însuși îl rânduiește, cu leviții stând acum acolo unde ar fi trebuit să stea, prin drept de întâi-născut, un băiat din fiecare familie a lui Israel.",
+        "Motivul acestui drept este amintit direct: „în ziua în care i-am lovit pe toți întâii născuți în țara Egiptului, Mi-am sfințit toți întâii născuți din Israel”. Este noaptea Paștelui. Când moartea a trecut prin Egipt și a cruțat pe cei acoperiți de sânge, viața cruțată a fiecărui întâi-născut a devenit, din clipa aceea, proprietatea DOMNULUI. Nu se poate uita cui i se datorează viața.",
+        "Vezi cât de departe merge cuvântul „ai Mei”: „toți întâii născuți sunt ai Mei... de la om până la animal”. Cruțarea din noaptea aceea nu s-a oprit la marginea vieții omenești, ci a cuprins tot ce trăia. Iar acum, ca semn văzut al acestei apartenențe, o singură semințe — Levi — stă în locul tuturor celorlalte.",
       ),
       words: [
         {
@@ -95,7 +95,7 @@ export const NUMERI_3 = numeriChapter({
       heading: "Numărătoarea din pustia Sinai: trei fii, trei familii",
       text: numeriPassage(3, 14, 20),
       teaching: teaching(
-        "Numărătoarea leviților este altfel decât cea din capitolul întâi: nu se numără doar bărbații buni de război, ci "toți bărbații de la vârsta de o lună în sus". Apartenența lor la DOMNUL nu ține de puterea trupului, ci de faptul că s-au născut în semnția aleasă. Un prunc de o lună este numărat la fel de îndreptățit ca un bărbat în putere.",
+        "Numărătoarea leviților este altfel decât cea din capitolul întâi: nu se numără doar bărbații buni de război, ci „toți bărbații de la vârsta de o lună în sus”. Apartenența lor la DOMNUL nu ține de puterea trupului, ci de faptul că s-au născut în semnția aleasă. Un prunc de o lună este numărat la fel de îndreptățit ca un bărbat în putere.",
         "Cei trei fii ai lui Levi — Gherșon, Chehat și Merari — dau numele celor trei familii mari care vor purta întreaga slujbă a Cortului. Fiecare are locul lui rostuit: casele lor, familiile lor, numele capilor lor sunt scrise cu aceeași grijă cu care fuseseră scrise numele căpeteniilor de trib în capitolele anterioare.",
         "Ia aminte că genealogia aceasta nu este doar administrativă: din Chehat, prin Amram, se va naște Moise însuși, iar prin el Aaron. Cel care scrie această carte face parte din familia pe care o numără; nu privește lucrarea leviților din afară, ci din chiar mijlocul ei.",
       ),
@@ -142,7 +142,7 @@ export const NUMERI_3 = numeriChapter({
       text: numeriPassage(3, 27, 32),
       teaching: teaching(
         "Familia lui Chehat, cea mai numeroasă dintre cele trei — opt mii șase sute de bărbați — tăbărăște pe partea de sud a Cortului. În paza lor stau lucrurile cele mai sfinte dintre toate: chivotul, masa, sfeșnicul, altarele, uneltele Sfântului Lăcaș.",
-        "Ia aminte cine este pus căpetenie peste toate căpeteniile leviților: Eleazar, fiul preotului Aaron, "va supraveghea pe cei ce îndeplinesc slujba Sfântului Lăcaș". Cu cât slujba este mai apropiată de lucrurile cele mai sfinte, cu atât rânduiala de supraveghere este mai strânsă. Nu există apropiere de sfințenie fără o răspundere pe măsură.",
+        "Ia aminte cine este pus căpetenie peste toate căpeteniile leviților: Eleazar, fiul preotului Aaron, „va supraveghea pe cei ce îndeplinesc slujba Sfântului Lăcaș”. Cu cât slujba este mai apropiată de lucrurile cele mai sfinte, cu atât rânduiala de supraveghere este mai strânsă. Nu există apropiere de sfințenie fără o răspundere pe măsură.",
         "Capitolul următor va arăta cu de-amănuntul cum se acoperă și se poartă chiar aceste lucruri, ca nimeni din familia lui Chehat să nu le atingă direct și să nu piară; deocamdată, textul se mulțumește să spună cine poartă răspunderea pentru ele.",
       ),
       words: [
@@ -166,7 +166,7 @@ export const NUMERI_3 = numeriChapter({
       teaching: teaching(
         "Familia lui Merari, șase mii două sute de bărbați, tăbărăște la nordul Cortului, cu grija celor mai grele și mai puțin luminoase părți ale lui: scândurile, drugii, stâlpii, picioarele — scheletul de lemn și de bronz care ținea în picioare toată clădirea Cortului și curtea din jurul lui.",
         "Cu numărătoarea celor trei familii ale lui Levi se încheie douăzeci și două de mii de bărbați, iar textul ține să arate un ultim loc: chiar în fața Cortului, spre răsărit, tăbărăsc Moise, Aaron și fiii lui. Locul cel mai apropiat de intrarea Cortului nu este dat celei mai mari familii, ci celui pus să poarte întreaga răspundere a preoției.",
-        "Și din nou revine avertismentul: "străinul care se va apropia să fie dat la moarte". De trei ori în capitolul acesta se repetă acest cuvânt greu — la predarea leviților către Aaron, și acum la locul lui Moise și al preoților. Sfințenia lui Dumnezeu nu este o idee frumoasă; este o realitate care cere o rânduială pe măsura ei.",
+        "Și din nou revine avertismentul: „străinul care se va apropia să fie dat la moarte”. De trei ori în capitolul acesta se repetă acest cuvânt greu — la predarea leviților către Aaron, și acum la locul lui Moise și al preoților. Sfințenia lui Dumnezeu nu este o idee frumoasă; este o realitate care cere o rânduială pe măsura ei.",
       ),
       words: [
         {
@@ -189,8 +189,8 @@ export const NUMERI_3 = numeriChapter({
       teaching: teaching(
         "Vine acum socoteala din urmă a capitolului. Întâii născuți ai lui Israel, numărați de la o lună în sus, au fost douăzeci și două de mii două sute șaptezeci și trei. Leviții, numărați cu aceeași măsură, au fost exact douăzeci și două de mii. Diferența — două sute șaptezeci și trei de suflete — nu are un levit care s-o înlocuiască.",
         "Ia aminte cât de exactă este socoteala aceasta înaintea lui Dumnezeu: nu s-a rotunjit, nu s-a trecut cu vederea. Fiecare din cei două sute șaptezeci și trei rămași fără schimb trebuie răscumpărat aparte, cu câte cinci sicli de argint de cap, după sichelul Sfântului Lăcaș.",
-        "Argintul acesta nu se pierde nicăieri: "să-i dai banii lui Aaron și fiilor lui". Răscumpărarea celui care nu are un înlocuitor viu se face tot prin preoție, tot legată de Cort. Nu există cale de a fi socotit înaintea lui Dumnezeu în afara rânduielii pe care El Însuși a așezat-o.",
-        "Capitolul se încheie cu aceeași formulă de ascultare pe care am întâlnit-o deja de două ori: Moise a făcut "după cuvântul DOMNULUI, așa cum îi poruncise DOMNUL lui Moise". O socoteală atât de amănunțită, până la ultimul suflet și ultimul siclu, a fost împlinită întocmai. Pentru cititorul care va ajunge, peste veacuri, să înțeleagă cum s-a răscumpărat sufletul lui, capitolul acesta rămâne o icoană: nimeni nu se apropie de Dumnezeu fără preț plătit, și niciun suflet nu este uitat din socoteală.",
+        "Argintul acesta nu se pierde nicăieri: „să-i dai banii lui Aaron și fiilor lui”. Răscumpărarea celui care nu are un înlocuitor viu se face tot prin preoție, tot legată de Cort. Nu există cale de a fi socotit înaintea lui Dumnezeu în afara rânduielii pe care El Însuși a așezat-o.",
+        "Capitolul se încheie cu aceeași formulă de ascultare pe care am întâlnit-o deja de două ori: Moise a făcut „după cuvântul DOMNULUI, așa cum îi poruncise DOMNUL lui Moise”. O socoteală atât de amănunțită, până la ultimul suflet și ultimul siclu, a fost împlinită întocmai. Pentru cititorul care va ajunge, peste veacuri, să înțeleagă cum s-a răscumpărat sufletul lui, capitolul acesta rămâne o icoană: nimeni nu se apropie de Dumnezeu fără preț plătit, și niciun suflet nu este uitat din socoteală.",
       ),
       words: [
         {

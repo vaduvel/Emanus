@@ -66,8 +66,8 @@ export const DEUTERONOM_14 = deuteronomChapter({
       heading: "Pești, păsări, și o hrană fără mizerie",
       text: deuteronomPassage(14, 9, 21),
       teaching: teaching(
-        "Regula pentru vietuitoarele de apă este simplă: cele cu solzi și înotătoare sunt curate, restul necurate. Lista păsărilor necurate cuprinde în special răpitoarele și necroforagele — vulturul, uliul, corbul, bufnița — păsări care se hrănesc din stricăciune sau cadavre.",
-        "Trei porunci finale înnoiesc principiul separării: nu se mâncă nimic din stârvuri (dar se pot da străinului sau vânde străinului, care nu are aceeași chemare la sfințenie), și „să nu fierbi un ied în laptele mamei lui” — o interzicere care pregătește și separarea mai largă dintre carne și lapte în tradiția iudaică.",
+        "Regula pentru vietuitoarele de apă este simplă: cele cu solzi și înotătoare sunt curate, restul necurate. Lista păsărilor necurate cuprinde în special răpitoarele și necrofagele — vulturul, uliul, corbul, bufnița — păsări care se hrănesc din stricăciune sau cadavre.",
+        "Trei porunci finale înnoiesc principiul separării: nu se mâncă nimic din stârvuri (dar se pot da străinului sau vinde străinului, care nu are aceeași chemare la sfințenie), și „să nu fierbi un ied în laptele mamei lui” — o interzicere care pregătește și separarea mai largă dintre carne și lapte în tradiția iudaică.",
       ),
       words: [
         {
@@ -89,7 +89,7 @@ export const DEUTERONOM_14 = deuteronomChapter({
       text: deuteronomPassage(14, 22, 29),
       teaching: teaching(
         "Prima zeciuială anuală este mâncată chiar de dăruitor, în prezența DOMNULUI: „ca să înveți să te temi întotdeauna de DOMNUL, Dumnezeul tău”. Cei care locuiesc prea departe de locul ales pot converti zeciuiala în bani, și să cumpere acolo tot ce le place inima — „boi, oi, vin, băuturi tari” — pentru un ospăț de bucurie sfântă.",
-        "La fiecare trei ani, această zeciuială este păstrată acasă, „ca să vină Levitul... orfanul... văduva” și să mănce până se satură. Sistemul de zeciuieli îmbină bucuria de a te bucura în fața DOMNULUI cu grija concretă pentru cei fără susținere proprie.",
+        "La fiecare trei ani, această zeciuială este păstrată acasă, „ca să vină Levitul... orfanul... văduva” și să mănânce până se satură. Sistemul de zeciuieli îmbină bucuria de a te bucura în fața DOMNULUI cu grija concretă pentru cei fără susținere proprie.",
       ),
       words: [
         {

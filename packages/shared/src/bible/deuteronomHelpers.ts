@@ -1,4 +1,4 @@
-import { BibleUnit, BibleChapter } from "./types"
+import { BibleUnit, BibleChapter } from "./types.js"
 
 function teaching(...paragraphs: string[]): string {
   return paragraphs.join("\n\n")

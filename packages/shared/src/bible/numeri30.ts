@@ -60,7 +60,7 @@ export const NUMERI_30 = numeriChapter({
       words: [],
       crossRefs: [],
       forYourHeart:
-        "Tranzițiile importante ale vieții vin adesea cu o schimbare a responsabilităților și angajamentelor pe care le porțiăm; înțelepciunea este să le înțelegem, nu să le ignorăm.",
+        "Tranzițiile importante ale vieții vin adesea cu o schimbare a responsabilităților și angajamentelor pe care le porționăm; înțelepciunea este să le înțelegem, nu să le ignorăm.",
     },
     {
       id: "numeri-30-9",
@@ -104,6 +104,6 @@ export const NUMERI_30 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă sfințenia cuvântului dat ţie, ca să nu-mi calc niciodată făgăduințele făcute în fața Ta.\n\nDă-mi înțelepciune să-mi asum responsabilitatea deplină pentru cuvintele mele, mai ales atunci când am autoritate asupra deciziilor altora.\n\nMulțumescu-Ți că iubești dreptatea în structurile de familie și că ești întotdeauna dispus să ierți când un jurământ este anulat pe cale dreaptă. Amin.",
+    "Doamne, învață-mă sfințenia cuvântului dat ție, ca să nu-mi calc niciodată făgăduințele făcute în fața Ta.\n\nDă-mi înțelepciune să-mi asum responsabilitatea deplină pentru cuvintele mele, mai ales atunci când am autoritate asupra deciziilor altora.\n\nÎți mulțumesc că iubești dreptatea în structurile de familie și că ești întotdeauna dispus să ierți când un jurământ este anulat pe cale dreaptă. Amin.",
   status: NUMERI_STATUSES[30],
 })

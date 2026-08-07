@@ -44,8 +44,8 @@ export const DEUTERONOM_29 = deuteronomChapter({
       heading: "Legământul, extins asupra celor prezenți și asupra celor viitori",
       text: deuteronomPassage(29, 9, 15),
       teaching: teaching(
-        "Toți sunt incluși în reînnoirea legământului — căpeteniile, bătrânii, pruncii, nevestele, străinul, „de la tăietorul tău de lemne până la scoțătorul tău de apă”. Nici o categorie socială nu este exclusă din angajamentul cu DOMNUL.",
-        "Cel mai remarcabil este extensia temporală: „atat cu cel ce este astăzi aici cu noi... cât și cu cel ce nu este astăzi aici cu noi”. Legământul îi obligă pe generațiile viitoare, care nu erau fizic prezente, dar sunt totuși parte a acordului încheiat în numele lor.",
+        "Toți sunt incluși în reînnoirea legământului — căpeteniile, bătrânii, pruncii, nevestele, străinul, „de la tăietorul tău de lemne până la scoaterea tău de apă”. Nici o categorie socială nu este exclusă din angajamentul cu DOMNUL.",
+        "Cel mai remarcabil este extensia temporală: „atât cu cel ce este astăzi aici cu noi... cât și cu cel ce nu este astăzi aici cu noi”. Legământul îi obligă pe generațiile viitoare, care nu erau fizic prezente, dar sunt totuși parte a acordului încheiat în numele lor.",
       ),
       words: [
         {
@@ -53,7 +53,7 @@ export const DEUTERONOM_29 = deuteronomChapter({
           transliteration: "ve'et asher einenu poh imanu hayom",
           language: "ebraica",
           meaning:
-            "și cu cel ce nu este astăzi aici cu noi. Formula care extinde legământul către generațiile viitoare, incluzându-le în obligația de asculatare stabilită în acest moment istoric.",
+            "și cu cel ce nu este astăzi aici cu noi. Formula care extinde legământul către generațiile viitoare, incluzându-le în obligația de ascultare stabilită în acest moment istoric.",
         },
       ],
       crossRefs: ["Faptele Apostolilor 2:39", "Ieremia 31:31-33", "Deuteronom 5:2-3"],
@@ -97,7 +97,7 @@ export const DEUTERONOM_29 = deuteronomChapter({
           transliteration: "hannistarot ... vehanniglot",
           language: "ebraica",
           meaning:
-            "lucrurile ascunse... și cele descoperite. Distincția care limitează responsabilitatea lui Israel la ce a fost revelat clar, fără a autoriza speculatia teologică asupra tainelor nedescoperite.",
+            "lucrurile ascunse... și cele descoperite. Distincția care limitează responsabilitatea lui Israel la ce a fost revelat clar, fără a autoriza speculația teologică asupra tainelor nedescoperite.",
         },
       ],
       crossRefs: ["Geneza 19:24-25", "Romani 11:33", "1 Corinteni 4:6"],
@@ -106,6 +106,6 @@ export const DEUTERONOM_29 = deuteronomChapter({
     },
   ],
   prayer:
-    "Doamne, dă-ne o inimă care să priceapă cu adevărat, nu doar ochi care văd minunile Tale fără înțelegere.\n\nAjută-ne să înețelegem că legământul Tău ne ține legat de generațiile viitoare, nu doar de noi însine.\n\nPăzește-ne de rădăcinile ascunse de îndepărtare, și de încăpățânarea care crede că va scăpa nepedepsită.\n\nȘi învață-ne să ne mulțumim cu ce ne-ai descoperit clar, împlinindu-l cu credincioșie. Amin.",
+    "Doamne, dă-ne o inimă care să priceapă cu adevărat, nu doar ochi care văd minunile Tale fără înțelegere.\n\nAjută-ne să înțelegem că legământul Tău ne ține legat de generațiile viitoare, nu doar de noi însine.\n\nPăzește-ne de rădăcinile ascunse de îndepărtare, și de încăpățânarea care crede că va scăpa nepedepsită.\n\nȘi învață-ne să ne mulțumim cu ce ne-ai descoperit clar, împlinindu-l cu credincioșie. Amin.",
   status: DEUTERONOM_STATUSES[29],
 })

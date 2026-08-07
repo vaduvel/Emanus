@@ -1,0 +1,64 @@
+name: VT Wire Publication Reader
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-complet
+  pull_request:
+    branches:
+      - agent/biblia-explicata-vt-maleahi
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vt-wire-publication-reader
+  cancel-in-progress: true
+
+jobs:
+  wire-validate-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-complet
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Wire publication catalog into Bible reader
+        run: python3 scripts/wire-vt-publication-reader.py
+
+      - name: Verify publication content
+        run: |
+          pnpm check:vt-explained
+          pnpm check:vt-publication
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Production build
+        run: pnpm build
+
+      - name: Verify patch
+        run: git diff --check
+
+      - name: Commit validated reader wiring
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- apps/web/src/screens/Bible.tsx apps/web/src/bible.css)" ]; then
+            echo 'Cititorul este deja cablat.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add apps/web/src/screens/Bible.tsx apps/web/src/bible.css
+          git commit -m 'feat(web): expose publication-ready VT books in Bible reader'
+          git push origin HEAD:agent/biblia-explicata-vt-complet

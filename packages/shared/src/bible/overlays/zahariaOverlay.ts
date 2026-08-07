@@ -7,6 +7,10 @@ import {
 
 const sourceUrl = "https://www.cfcindia.com/through-the-bible/zechariah"
 const p = (section: string) => ({ kind: "poonen-official" as const, sourceUrl, section })
+const n = {
+  kind: "biblia-emanus" as const,
+  note: "rezumat narativ fără doctrină adăugată" as const,
+}
 
 const focused: Record<number, ExplainedOverlayChapter> = {
   1: {
@@ -24,6 +28,31 @@ const focused: Record<number, ExplainedOverlayChapter> = {
       teaching: "De la 1:7 începe seria celor opt vedenii. Imaginile despre călăreți și coarne comunică faptul că puterile care au risipit poporul nu sunt în afara stăpânirii lui Dumnezeu. Overlay-ul nu transformă simbolurile într-o hartă geopolitică modernă fără o ancoră explicită în text.",
       source: p("Eight Visions"),
     }],
+  },
+  2: {
+    number: 2,
+    title: "Ierusalimul măsurat, protejat și chemat să se bucure de prezența DOMNULUI",
+    summary: "Vedenia funiei de măsurat trece de la dimensiunile cetății la promisiunea că Dumnezeu Însuși va fi protecția și slava ei. Cei rămași în Babilon sunt chemați să iasă, iar finalul privește spre neamuri care se alipesc de DOMNUL.",
+    units: [
+      {
+        from: 1, to: 5,
+        heading: "Funia de măsurat și cetatea pe care Dumnezeu o înconjoară",
+        teaching: "Zaharia vede un om cu o funie de măsurat care merge să măsoare Ierusalimul. Mesajul vedeniei depășește însă limitele zidurilor: cetatea este descrisă ca ajungând prea plină pentru vechile granițe, iar DOMNUL declară că El Însuși va fi un zid de foc în jurul ei și slava din mijlocul ei. Pasajul ține împreună restaurarea concretă a cetății și prezența protectoare a lui Dumnezeu.",
+        source: n,
+      },
+      {
+        from: 6, to: 9,
+        heading: "Ieșiți din țara de la miazănoapte; puterile care au jefuit nu rămân stăpâne",
+        teaching: "Chemarea se îndreaptă spre cei încă aflați în țara din care fuseseră împrăștiați: Sionul este chemat să scape din Babilon. Textul afirmă că neamurile care au jefuit poporul vor fi la rândul lor răsturnate și folosește imaginea sensibilă a celui care se atinge de lumina ochilor lui Dumnezeu. Accentul pasajului este pe recuperarea și protejarea poporului risipit, nu pe autorizarea răzbunării personale.",
+        source: n,
+      },
+      {
+        from: 10, to: 13,
+        heading: "DOMNUL vine să locuiască în Sion și multe neamuri se alipesc de El",
+        teaching: "Finalul cheamă fiica Sionului la bucurie pentru că DOMNUL spune că vine să locuiască în mijlocul ei. Viziunea se lărgește dincolo de Iuda: multe neamuri se vor alipi de DOMNUL și vor fi numite poporul Lui. Ultimul verset cere tăcere înaintea lui Dumnezeu, pentru că acțiunea decisivă Îi aparține Lui.",
+        source: n,
+      },
+    ],
   },
   3: {
     number: 3,
@@ -55,6 +84,25 @@ const focused: Record<number, ExplainedOverlayChapter> = {
       source: p("Eight Visions"),
       forYourHeart: "Lucrează serios, dar nu confunda instrumentele tale cu sursa vieții și puterii spirituale.",
     }],
+  },
+  5: {
+    number: 5,
+    title: "Sulul care zboară și nelegiuirea închisă în efă",
+    summary: "Două vedenii scurte descriu îndepărtarea răului din țară. Prima confruntă furtul și jurământul mincinos, iar a doua personifică nelegiuirea într-o efă care este dusă în Șinear.",
+    units: [
+      {
+        from: 1, to: 4,
+        heading: "Sulul zburător intră în casa hoțului și a celui ce jură strâmb",
+        teaching: "Prima vedenie arată un sul de dimensiuni neobișnuite care poartă un blestem împotriva furtului și a jurământului mincinos. Mesajul nu rămâne abstract: sulul este descris intrând în casa celui vinovat și mistuind-o. În cadrul seriei de vedenii, restaurarea comunității nu înseamnă doar reconstruirea cetății și templului, ci și confruntarea răului care ar corupe din nou viața ei.",
+        source: n,
+      },
+      {
+        from: 5, to: 11,
+        heading: "Efa cu nelegiuirea este ridicată și dusă în Șinear",
+        teaching: "A doua vedenie folosește o efă, o greutate de plumb și o femeie identificată în text cu nelegiuirea. Ea este închisă în recipient, apoi efa este ridicată și dusă în țara Șinear pentru a fi așezată acolo. Explicația rămâne la imaginile oferite de pasaj: nelegiuirea este personificată, limitată și îndepărtată din locul pe care vedenia îl are în vedere; textul nu cere identificarea simbolului cu o persoană sau mișcare modernă.",
+        source: n,
+      },
+    ],
   },
   6: {
     number: 6,
@@ -104,6 +152,31 @@ const focused: Record<number, ExplainedOverlayChapter> = {
       teaching: "Secțiunea oficială Poonen pentru capitolele 9–14 este despre Împăratul care vine. Zaharia 9:9 Îl descrie drept drept, aducător de mântuire și smerit, călare pe un măgar. Evangheliile aplică explicit textul lui Iisus. Modelul împărăției prezentat aici contrastează cu ostentația puterii și nu autorizează conducerea religioasă dominatoare.",
       source: p("Messages Concerning the Coming King"),
     }],
+  },
+  10: {
+    number: 10,
+    title: "Cereți ploaie de la DOMNUL; păstorii falși sunt confruntați, iar turma este adunată",
+    summary: "Zaharia contrastează darul pe care numai DOMNUL îl poate da cu promisiunile goale ale idolilor și ghicitorilor. Apoi Dumnezeu confruntă păstorii, întărește Iuda și descrie adunarea celor risipiți.",
+    units: [
+      {
+        from: 1, to: 2,
+        heading: "Ploaia vine de la DOMNUL, nu de la terafimi și ghicitori",
+        teaching: "Capitolul începe chemând poporul să ceară ploaia de primăvară de la DOMNUL și Îl prezintă ca pe Cel care dă ploaia și verdeața. Versetul următor pune în contrast această sursă cu terafimii, ghicitorii și visele mincinoase, care oferă mângâieri deșarte. Rezultatul descris este o turmă rătăcită și fără păstor.",
+        source: n,
+      },
+      {
+        from: 3, to: 5,
+        heading: "Păstorii sunt cercetați, iar Iuda este făcut ca un cal de slavă",
+        teaching: "Mânia este îndreptată împotriva păstorilor care nu și-au împlinit rolul, în timp ce DOMNUL spune că Își cercetează propria turmă, casa lui Iuda. Din Iuda sunt enumerate piatra din capul unghiului, țărușul, arcul și căpeteniile, iar poporul este descris luptând cu putere pentru că DOMNUL este cu el. Pasajul aparține limbajului restaurării și conflictului profetic al cărții, nu unui mandat contemporan de violență religioasă.",
+        source: n,
+      },
+      {
+        from: 6, to: 12,
+        heading: "Iuda și Iosif sunt întăriți, răscumpărați și adunați din depărtare",
+        teaching: "Ultima parte repetă verbe ale restaurării: Dumnezeu întărește, izbăvește, aduce înapoi, ascultă, fluieră pentru a aduna și răscumpără. Cei risipiți printre popoare își vor aduce aminte de El și se vor întoarce din locurile depărtării. Capitolul se încheie nu cu puterea lor autonomă, ci cu declarația că vor fi întăriți în DOMNUL și vor umbla în Numele Lui.",
+        source: n,
+      },
+    ],
   },
   11: {
     number: 11,

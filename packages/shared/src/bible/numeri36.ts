@@ -12,11 +12,11 @@ import { NUMERI_STATUSES } from "./numeriPublication.js"
 
 export const NUMERI_36 = numeriChapter({
   number: 36,
-  title: "Numeri 36 — Fiicele lui Ţelofhad și păstrarea moștenirii",
+  title: "Numeri 36 — Fiicele lui Țelofhad și păstrarea moștenirii",
   summary:
-    "Capitolul final al Cărții Numeri rezolvă o îngrijorare practică ridicată de căpeteniile seminției lui Manase: dacă fiicele lui Ţelofhad se căsătoresc în afara seminției, moștenirea lor s-ar pierde pentru Manase. DOMNUL dă o soluție care păstrează deopotrivă dreptul lor la moștenire și integritatea teritorială a semințiilor.",
+    "Capitolul final al Cărții Numeri rezolvă o îngrijorare practică ridicată de căpeteniile seminției lui Manase: dacă fiicele lui Țelofhad se căsătoresc în afara seminției, moștenirea lor s-ar pierde pentru Manase. DOMNUL dă o soluție care păstrează deopotrivă dreptul lor la moștenire și integritatea teritorială a semințiilor.",
   literaryContext:
-    "Acest capitol închide Cărtea Numeri revenind la cazul fiicelor lui Ţelofhad, deschis în Numeri 27:1-11, formand un cadru narativ care începe și se termină cu aceeași familie — o închidere elegantă care arată că fiecare lege dată în pustie avea consecințe practice concrete pentru viața reală a oamenilor.",
+    "Acest capitol închide Cărtea Numeri revenind la cazul fiicelor lui Țelofhad, deschis în Numeri 27:1-11, formând un cadru narativ care începe și se termină cu aceeași familie — o închidere elegantă care arată că fiecare lege dată în pustie avea consecințe practice concrete pentru viața reală a oamenilor.",
   historicalContext:
     "Ultimul verset localizează din nou toate aceste porunci „în câmpiile Moabului, lângă Iordan, în fața Ierihonului” — același loc final unde Israel se află pregătit să treacă în țara făgăduită, cu toate legile de moștenire deja clarificate.",
   units: [
@@ -26,7 +26,7 @@ export const NUMERI_36 = numeriChapter({
       heading: "Îngrijorarea căpeteniilor lui Manase",
       text: numeriPassage(36, 1, 4),
       teaching: teaching(
-        "Căpeteniile familiei lui Galaad, din seminția lui Manase, aduc înaintea lui Moise o îngrijorare legitimă: dacă fiicele lui Ţelofhad — care au primit deja moștenire în Numeri 27 — se căsătoresc cu bărbați din alte seminții, moștenirea lor „va fi luată din moștenirea părinților noștri și adăugată la moștenirea seminției în care vor fi primite”.",
+        "Căpeteniile familiei lui Galaad, din seminția lui Manase, aduc înaintea lui Moise o îngrijorare legitimă: dacă fiicele lui Țelofhad — care au primit deja moștenire în Numeri 27 — se căsătoresc cu bărbați din alte seminții, moștenirea lor „va fi luată din moștenirea părinților noștri și adăugată la moștenirea seminției în care vor fi primite”.",
         "Această îngrijorare arată că dreptul nou dat femeilor de a moșteni, oricât de necesar și drept în sine, crea o consecință practică neașteptată care putea eroda teritoriul original al fiecărei seminții de-a lungul generațiilor.",
       ),
       words: [],
@@ -51,10 +51,10 @@ export const NUMERI_36 = numeriChapter({
     {
       id: "numeri-36-10-12",
       ref: "Numeri 36:10-12",
-      heading: "Ascultarea fiicelor lui Ţelofhad",
+      heading: "Ascultarea fiicelor lui Țelofhad",
       text: numeriPassage(36, 10, 12),
       teaching: teaching(
-        "„Fiicele lui Ţelofhad au făcut cum îi poruncise DOMNUL lui Moise” — Mahla, Ţirța, Hogla, Milca și Noa se căsătoresc cu fiii fraților tatălui lor, din propria lor seminție, și moștenirea lor rămâne în familia tatălui.",
+        "„Fiicele lui Țelofhad au făcut cum îi poruncise DOMNUL lui Moise” — Mahla, Țirța, Hogla, Milca și Noa se căsătoresc cu fiii fraților tatălui lor, din propria lor seminție, și moștenirea lor rămâne în familia tatălui.",
         "Această încheiere pașnică arată că cele cinci femei, care au avut curajul în Numeri 27 să ceară dreptate înaintea lui Moise, au arătat aceeași credincioșie și în ascultarea de porunca finală a DOMNULUI, fără protest și fără să-și piardă dreptul câștigat.",
       ),
       words: [],
@@ -78,6 +78,6 @@ export const NUMERI_36 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, învață-mă să recunosc că dreptatea și binele comunității nu trebuie să se afle în conflict, ci Tu ai înțelepciunea să le împaci pe amândouă.\n\nDă-mi curajul să cer ceea ce este drept, dar și înțelepciunea de a asculta de rânduielile care păstrează armonia în jurul meu.\n\nMulțumescu-Ți că, după fiecare încercare a drumului cu Tine, mă aduci la un loc de pregătire deplină pentru pasul următor în făgăduință. Amin.",
+    "Doamne, învață-mă să recunosc că dreptatea și binele comunității nu trebuie să se afle în conflict, ci Tu ai înțelepciunea să le împaci pe amândouă.\n\nDă-mi curajul să cer ceea ce este drept, dar și înțelepciunea de a asculta de rânduielile care păstrează armonia în jurul meu.\n\nÎți mulțumesc că, după fiecare încercare a drumului cu Tine, mă aduci la un loc de pregătire deplină pentru pasul următor în făgăduință. Amin.",
   status: NUMERI_STATUSES[36],
 })

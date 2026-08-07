@@ -57,7 +57,7 @@ export const NUMERI_22 = numeriChapter({
       teaching: teaching(
         "Balaam refuză corect prima cerere, dar Balac nu se dă bătut și trimite „mai mulți și mai cu vază” fruntași, cu promisiunea unor „mari cinste”. Răspunsul lui Balaam sună nobil: „dacă mi-ar da Balac casa lui plină cu argint și aur, tot nu aș putea să calc porunca DOMNULUI”.",
         "Totuși, în loc să trimită solii înapoi definitiv, Balaam îi invită să rămână peste noapte din nou — un semn subtil că vrea să vadă dacă DOMNUL îi va schimba răspunsul. De data aceasta, Dumnezeu îi permite să meargă, dar cu o condiție strictă: „să faci numai ce-ți voi spune!”",
-        "Îngaduința lui Dumnezeu nu este o răzgândire despre Israel, ci o permisiune de a merge fizic, în timp ce cuvântul rămane sub control divin absolut. Textul arată pericolul de a insista pentru un răspuns diferit de cel deja primit clar.",
+        "Îngăduința lui Dumnezeu nu este o răzgândire despre Israel, ci o permisiune de a merge fizic, în timp ce cuvântul rămâne sub control divin absolut. Textul arată pericolul de a insista pentru un răspuns diferit de cel deja primit clar.",
       ),
       words: [],
       crossRefs: ["2 Petru 2:15-16", "Iuda 1:11"],
@@ -70,7 +70,7 @@ export const NUMERI_22 = numeriChapter({
       heading: "Măgărița și îngerul cu sabia",
       text: numeriPassage(22, 21, 27),
       teaching: teaching(
-        "Balaam pleacă cu fruntasii Moabului, dar „mânia lui Dumnezeu S-a aprins pentru că plecase” — semn că motivația lui interioară, dincolo de permisiunea formală, nu era curată. Îngeru l DOMNULUI Se așează pe drum cu sabia scoasă, vizibil doar măgăriței.",
+        "Balaam pleacă cu fruntașii Moabului, dar „mânia lui Dumnezeu S-a aprins pentru că plecase” — semn că motivația lui interioară, dincolo de permisiunea formală, nu era curată. Îngeru l DOMNULUI Se așează pe drum cu sabia scoasă, vizibil doar măgăriței.",
         "De trei ori animalul vede pericolul și se abate — pe câmp, lipindu-se de un zid și strângând piciorul lui Balaam, apoi culcându-se complet sub el — și de fiecare dată Balaam o bate, orb la realitatea spirituală pe care doar animalul o percepea.",
         "Contrastul este tăios: un ghicitor renumit, chemat să vadă și să vestească viitorul, este mai orb decât propria lui măgăriță față de prezența reală a îngerului DOMNULUI.",
       ),
@@ -124,6 +124,6 @@ export const NUMERI_22 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, dă-mi ochi care să Te vadă când îmi stai împotriva în drumul greșit, chiar dacă la început nu înțeleg de ce.\n\nPăzește-mă de a insista pentru un răspuns diferit de cel pe care mi l-ai dat deja clar, chiar dacă primesc apoi o îngăduință formală.\n\nÎnvață-mă să recunosc greșeala imediat, ca Balaam, dar să nu mă opresc acolo, ci să merg înainte sub ascultare mai strictă de Cuvântul Tău.\n\nȘi învață-mă că niciun cuvânt pe care îl rostesc nu este cu adevărat al meu, ci al Tău, dacă sunt slujînt Cuvântul Tău. Amin.",
+    "Doamne, dă-mi ochi care să Te vadă când îmi stai împotriva în drumul greșit, chiar dacă la început nu înțeleg de ce.\n\nPăzește-mă de a insista pentru un răspuns diferit de cel pe care mi l-ai dat deja clar, chiar dacă primesc apoi o îngăduință formală.\n\nÎnvață-mă să recunosc greșeala imediat, ca Balaam, dar să nu mă opresc acolo, ci să merg înainte sub ascultare mai strictă de Cuvântul Tău.\n\nȘi învață-mă că niciun cuvânt pe care îl rostesc nu este cu adevărat al meu, ci al Tău, dacă sunt slujind Cuvântul Tău. Amin.",
   status: NUMERI_STATUSES[22],
 })

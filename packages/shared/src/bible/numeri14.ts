@@ -14,7 +14,7 @@ export const NUMERI_14 = numeriChapter({
   number: 14,
   title: "Numeri 14 — Răscoala taberei și mijlocirea lui Moise",
   summary:
-    "Raportul celor zece iscoade aruncă toată tabăra în răscoală deschisă: poporul vrea o căpetenie nouă care să-i ducă înapoi în Egipt și vrea să-i ucidă cu pietre pe Iosua și Caleb. Moise mijlocește din nou pentru popor, DOMNUL iartă vinovăția, dar rostiește sentința: generatia aceasta va rătăci patruzeci de ani în pustie, un an pentru fiecare zi de iscodire, până va muri în ea.",
+    "Raportul celor zece iscoade aruncă toată tabăra în răscoală deschisă: poporul vrea o căpetenie nouă care să-i ducă înapoi în Egipt și vrea să-i ucidă cu pietre pe Iosua și Caleb. Moise mijlocește din nou pentru popor, DOMNUL iartă vinovăția, dar rostiește sentința: generația aceasta va rătăci patruzeci de ani în pustie, un an pentru fiecare zi de iscodire, până va muri în ea.",
   literaryContext:
     "Acesta este punctul de cotitură al întregii cărți Numeri: momentul în care o generație care ar fi putut intra aproape imediat în țara făgăduită își pierde dreptul de a o vedea. Restul cărții — de la capitolul cincisprezece înainte — se desfășoară sub umbra acestei sentințe, până când o generație nouă va ajunge, în sfârșit, la marginea țării.",
   historicalContext:
@@ -37,10 +37,10 @@ export const NUMERI_14 = numeriChapter({
     {
       id: "numeri-14-5-10",
       ref: "Numeri 14:5-10",
-      heading: "Iosua și Caleb sfașie hainele; slava DOMNULUI apare",
+      heading: "Iosua și Caleb sfâșie hainele; slava DOMNULUI apare",
       text: numeriPassage(14, 5, 10),
       teaching: teaching(
-        "Moise și Aaron cad cu fața la pământ înaintea întregii adunări, iar Iosua și Caleb își sfașie hainele — gest de doliu și groază înaintea unui păcat de proporții uriașe. Cei doi repetă cu și mai multă tărie ce spusese Caleb înainte: „țara... este foarte, foarte bună”.",
+        "Moise și Aaron cad cu fața la pământ înaintea întregii adunări, iar Iosua și Caleb își sfâșie hainele — gest de doliu și groază înaintea unui păcat de proporții uriașe. Cei doi repetă cu și mai multă tărie ce spusese Caleb înainte: „țara... este foarte, foarte bună”.",
         "Argumentul lor este pur teologic: „nu vă răzvrătiți împotriva DOMNULUI... căci îi vom mânca ca pe o pâine! Ocrotirea lor s-a depărtat de la ei, iar DOMNUL este cu noi”. Nu neagă puterea locuitorilor țării; susțin doar că puterea DOMNULUI este mai mare decât orice ocrotire păgână.",
         "Răspunsul poporului este cel mai grav până acum: „toată adunarea vorbea să-i ucidă cu pietre” pe Iosua și Caleb, pe Moise și pe Aaron. Exact în acest moment de criză maximă, „slava DOMNULUI S-a arătat peste Cortul Întâlnirii înaintea tuturor” — o intervenție directă care oprește lapidarea.",
       ),
@@ -55,7 +55,7 @@ export const NUMERI_14 = numeriChapter({
       heading: "Propunerea DOMNULUI de nimicire",
       text: numeriPassage(14, 11, 12),
       teaching: teaching(
-        "DOMNUL pune întrebarea direct lui Moise: „până când Mă va disprtu i poporul acesta și până când nu va crede în Mine, cu toate semnele pe care le-am făcut?” Necredința nu este ignoranță; e refuzul de a crede în fața dovezilor deja multiple.",
+        "DOMNUL pune întrebarea direct lui Moise: „până când Mă va disprețul i poporul acesta și până când nu va crede în Mine, cu toate semnele pe care le-am făcut?” Necredința nu este ignoranță; e refuzul de a crede în fața dovezilor deja multiple.",
         "Propunerea DOMNULUI reia tiparul din Exod 32, după vițelul de aur: nimicirea poporului și începerea unui neam nou din urmașii lui Moise. Încă o dată, DOMNUL oferă această posibilitate exact în momentul în care mijlocitorul Său are cel mai mult motiv să accepte, după tot ce a suferit de la acest popor nerecunoscător.",
       ),
       words: [],
@@ -136,7 +136,7 @@ export const NUMERI_14 = numeriChapter({
       words: [],
       crossRefs: ["Numeri 26:65", "Iosua 14:10"],
       forYourHeart:
-        "A vedea aceleași fapte ca toți ceilalți nu te scutește de răspunderea felului în care le împartșești mai departe. Cuvintele tale pot fi viață sau moarte pentru cei care te ascultă.",
+        "A vedea aceleași fapte ca toți ceilalți nu te scutește de răspunderea felului în care le împărtășești mai departe. Cuvintele tale pot fi viață sau moarte pentru cei care te ascultă.",
     },
     {
       id: "numeri-14-39-45",
@@ -146,7 +146,7 @@ export const NUMERI_14 = numeriChapter({
       teaching: teaching(
         "Auzind sentința, „poporul s-a întristat foarte mult” și, a doua zi dimineața, decid brusc să facă exact ce refuzaseră să facă cu o zi înainte: „iată-ne, suntem gata să ne suim... căci am păcătuit”. Recunoașterea păcatului vine prea târziu și din motivul greșit: nu din pocăință față de necredință, ci din dorința de a evita consecința.",
         "Moise le spune limpede: „de ce călcați porunca DOMNULUI?... nu vă suiți, căci DOMNUL nu este în mijlocul vostru”. Vremea de a asculta trecuse; a încerca acum, din propria voință, să repari o neascultare cu o altă formă de neascultare nu putea izbândi.",
-        "„Chivotul legământului DOMNULUI și Moise nu au părăsit mijlocul taberei” — cel mai clar semn că această încercare era fără binecuvântarea DOMNULUI. Cei care s-au suit oricum „au fost loviți și zdrobiți până la Horma”, o înfrângere care încheie capitolul cu aceeași lecție amară: nici tecăpațina zadarnică, nici fuga temută, ci ascultarea la timpul potrivit era singura cale.",
+        "„Chivotul legământului DOMNULUI și Moise nu au părăsit mijlocul taberei” — cel mai clar semn că această încercare era fără binecuvântarea DOMNULUI. Cei care s-au suit oricum „au fost loviți și zdrobiți până la Horma”, o înfrângere care încheie capitolul cu aceeași lecție amară: nici încăpățânarea zadarnică, nici fuga temută, ci ascultarea la timpul potrivit era singura cale.",
       ),
       words: [
         {

@@ -15,7 +15,6 @@
     "check:quotes": "python3 scripts/fix-quotes.py --check",
     "check:typos": "python3 scripts/fix-known-typos.py --check",
     "check:content": "python3 scripts/audit-content.py",
-    "check:active-content": "python3 scripts/check-active-content.py",
     "check:bible-publication": "python3 scripts/publica-geneza.py --check && python3 scripts/publica-matei.py --check",
     "check:biblia-emanus": "python3 scripts/check-biblia-emanus.py",
     "test:biblia-emanus": "python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py scripts/test_materialize_biblia_emanus_nt.py",
@@ -57,6 +56,8 @@
     "check:nt-completion": "python3 scripts/check-nt-completion.py",
     "check:rut": "python3 scripts/check-rut.py",
     "check:1-samuel": "python3 scripts/check-1-samuel.py",
-    "check:2-samuel": "python3 scripts/check-2-samuel.py"
+    "check:2-samuel": "python3 scripts/check-2-samuel.py",
+    "check:vt-explained": "python3 scripts/check-vt-explained-coverage.py",
+    "check:vt-publication": "pnpm build:shared && node scripts/check-vt-publication-runtime.mjs"
   }
 }

@@ -18,7 +18,7 @@ export const NUMERI_20 = numeriChapter({
   literaryContext:
     "Marchează sfârșitul celor patruzeci de ani de rătăcire: aproape toată generația condamnată la Cadeș în capitolul paisprezece a murit, iar textul trece direct la moartea celor doi lideri principali ai exodului — Maria și Aaron — marcând o schimbare de gardă la marginea intrării în Canaan.",
   historicalContext:
-    "Apele Meriba de aici, la finalul rătăcirii, poartă același nume ca locul din Exod 17, la începutul călătoriei — un ecou care arată cât de puțin se schimbase inima poporului în patruzeci de ani. Psalmul 106:32-33 explică faptul că poporul „L-au amărît duhul, iar Moise a vorbit în pripa buzelor lui”, arătând că provocarea poporului a fost cea care l-a dus pe Moise la păcat.",
+    "Apele Meriba de aici, la finalul rătăcirii, poartă același nume ca locul din Exod 17, la începutul călătoriei — un ecou care arată cât de puțin se schimbase inima poporului în patruzeci de ani. Psalmul 106:32-33 explică faptul că poporul „L-au amărât duhul, iar Moise a vorbit în pripa buzelor lui”, arătând că provocarea poporului a fost cea care l-a dus pe Moise la păcat.",
   units: [
     {
       id: "numeri-20-1-5",
@@ -26,7 +26,7 @@ export const NUMERI_20 = numeriChapter({
       heading: "Moartea Mariei și cârtirea veche pentru lipsa apei",
       text: numeriPassage(20, 1, 5),
       teaching: teaching(
-        "Textul trece direct de la sfârșitul rătăcirii la sosirea în pustia Ţin, la Cadeș, cu o singură propoziție scurtă, aproape rece: „acolo a murit Maria și a fost îngropată acolo”. Prima dintre cei trei conducători principali ai exodului își încheie viața chiar la marginea rătăcirii, fără să vadă țara făgăduită.",
+        "Textul trece direct de la sfârșitul rătăcirii la sosirea în pustia Țin, la Cadeș, cu o singură propoziție scurtă, aproape rece: „acolo a murit Maria și a fost îngropată acolo”. Prima dintre cei trei conducători principali ai exodului își încheie viața chiar la marginea rătăcirii, fără să vadă țara făgăduită.",
         "Lipsa apei aduce imediat aceeași cârtire veche, aproape cuvânt cu cuvânt ca cea de la Refidim, patruzeci de ani înainte: „o, de am fi murit când au murit frații noștri înaintea DOMNULUI!” O generație întreagă murise în pustie tocmai din pricina necredinței, dar copiii lor repetă acum aceeași cârtire.",
       ),
       words: [],
@@ -54,7 +54,7 @@ export const NUMERI_20 = numeriChapter({
       heading: "Moise lovește stânca de două ori, cu mânie",
       text: numeriPassage(20, 9, 11),
       teaching: teaching(
-        "Moise ia toiagul cum i se poruncise, dar cuvintele lui către popor trădează deja o schimbare față de poruncă: „ascultati, răzvrătiților! Vom putea NOI oare să vă scoatem apă din stânca aceasta?” Moise își atribuie sieși și lui Aaron puterea de a scoate apa, nu DOMNULUI.",
+        "Moise ia toiagul cum i se poruncise, dar cuvintele lui către popor trădează deja o schimbare față de poruncă: „ascultați, răzvrătiților! Vom putea NOI oare să vă scoatem apă din stânca aceasta?” Moise își atribuie sieși și lui Aaron puterea de a scoate apa, nu DOMNULUI.",
         "Apoi, în loc să vorbească stâncii cum i se poruncise, „a lovit stânca de două ori cu toiagul său”. Apa iese oricum, din harul DOMNULUI care nu lasă poporul să sufere pentru greșeala conducătorilor, dar neascultarea lui Moise este deja săvârșită.",
       ),
       words: [],
@@ -69,7 +69,7 @@ export const NUMERI_20 = numeriChapter({
       text: numeriPassage(20, 12, 13),
       teaching: teaching(
         "Sentința DOMNULUI este directă și grea: „pentru că nu ați avut credință în Mine ca să Mă sfințiți în ochii fiilor lui Israel, de aceea nu veți duce această adunare în țara pe care le-o dau!” Același Moise care mijlocise pentru popor de atâtea ori nu va vedea el însuși țara făgăduită.",
-        "Păcatul nu era doar nesupunerea la o instrucțiune tehnică, ci ceva mai profund: Moise nu L-a „sfințit” pe DOMNUL înaintea poporului, atribuindu-și lui și lui Aaron acțiunea care aparținea numai DOMNULUI. Locul acesta a purtat de acum numele Meriba, „cecearta”, aceeași denumire de la Refidim.",
+        "Păcatul nu era doar nesupunerea la o instrucțiune tehnică, ci ceva mai profund: Moise nu L-a „sfințit” pe DOMNUL înaintea poporului, atribuindu-și lui și lui Aaron acțiunea care aparținea numai DOMNULUI. Locul acesta a purtat de acum numele Meriba, „cearta”, aceeași denumire de la Refidim.",
       ),
       words: [
         {
@@ -96,7 +96,7 @@ export const NUMERI_20 = numeriChapter({
       words: [],
       crossRefs: ["Geneza 25:23-26", "Deuteronom 2:4-6"],
       forYourHeart:
-        "O cerere făcută cu respect și cu smerenie — recunoscând relația și cerand doar ce este necesar — nu garantează întotdeauna un răspuns bun din partea celor din jur.",
+        "O cerere făcută cu respect și cu smerenie — recunoscând relația și cerând doar ce este necesar — nu garantează întotdeauna un răspuns bun din partea celor din jur.",
     },
     {
       id: "numeri-20-18-21",
@@ -119,12 +119,12 @@ export const NUMERI_20 = numeriChapter({
       text: numeriPassage(20, 22, 26),
       teaching: teaching(
         "Toată adunarea pornind din Cadeș ajunge la muntele Hor, la hotarul Edomului, unde DOMNUL vorbește din nou lui Moise și lui Aaron împreună. Vestea este directă: „Aaron va fi adăugat la poporul său”, aceeași pedeapsă din cauza răzvrătirii de la apele Meriba, la fel ca a lui Moise.",
-        "Instrucțiunea DOMNULUI este simbolică și solemnă: hainele preoțești ale lui Aaron trec direct pe fiul său Eleazar, chiar înainte de moartea lui Aaron, arătând continuitatea neabatută a preoției, indiferent de moartea persoanei care o poartă.",
+        "Instrucțiunea DOMNULUI este simbolică și solemnă: hainele preoțești ale lui Aaron trec direct pe fiul său Eleazar, chiar înainte de moartea lui Aaron, arătând continuitatea neabătută a preoției, indiferent de moartea persoanei care o poartă.",
       ),
       words: [],
       crossRefs: ["Exod 29:29-30", "Evrei 7:23-24"],
       forYourHeart:
-        "O slujire consacrată lui Dumnezeu continuă dincolo de viața unei singure persoane; instituția râmane statornică, chiar când purtătorii ei trec.",
+        "O slujire consacrată lui Dumnezeu continuă dincolo de viața unei singure persoane; instituția rămâne statornică, chiar când purtătorii ei trec.",
     },
     {
       id: "numeri-20-27-29",
@@ -142,6 +142,6 @@ export const NUMERI_20 = numeriChapter({
     },
   ],
   prayer:
-    "Doamne, iartă-mă pentru fiecare dată când am încercat să-mi atribui mie însumi ce se cuvenea numai Numelui Tău.\n\nPăzește-mă de mânia acumulată în ani de slujire grea, ca să nu cad exact când viața mea de credincioșie pare aproape împlinită.\n\nÎnvață-mă înțelepciunea de a mă abăte uneori dintr-o confruntare, încredințându-țiție dreptatea finală.\n\nMulțumescu-Ți că slujirea Ta continuă statornică dincolo de viața fiecărui slujitor pe care îl chemi la Tine. Amin.",
+    "Doamne, iartă-mă pentru fiecare dată când am încercat să-mi atribui mie însumi ce se cuvenea numai Numelui Tău.\n\nPăzește-mă de mânia acumulată în ani de slujire grea, ca să nu cad exact când viața mea de credincioșie pare aproape împlinită.\n\nÎnvață-mă înțelepciunea de a mă abăte uneori dintr-o confruntare, încredințându-ție dreptatea finală.\n\nÎți mulțumesc că slujirea Ta continuă statornică dincolo de viața fiecărui slujitor pe care îl chemi la Tine. Amin.",
   status: NUMERI_STATUSES[20],
 })

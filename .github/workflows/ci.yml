@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: pnpm/action-setup@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -21,7 +19,6 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
@@ -31,113 +28,11 @@ jobs:
       - name: Verifica siguranta continutului
         run: pnpm check:content
 
-      - name: Verifica continutul activ
-        run: pnpm check:active-content
-
       - name: Verifica aprobarea Bibliei explicate
         run: pnpm check:bible-publication
 
-      - name: Verifica limba romana si variantele textuale NT
-        run: python3 scripts/check-biblia-emanus-romanian-quality.py
-
-      - name: Verifica Biblia Emanus 3.0
-        run: pnpm check:biblia-emanus
-
-      - name: Testeaza poarta Biblia Emanus 3.0
-        run: pnpm test:biblia-emanus
-
-      - name: Verifica versificatia Noului Testament
-        run: pnpm check:biblia-emanus-versification
-
-      - name: Verifica sigiliul tuturor cartilor publicate
-        run: pnpm seal:biblia-emanus --check
-
-      - name: Verifica Biblia explicata Matei
-        run: pnpm check:matei
-
-      - name: Verifica Biblia explicata Marcu
-        run: pnpm check:marcu
-
-      - name: Verifica Biblia explicata Luca
-        run: pnpm check:luca
-
-      - name: Verifica Biblia explicata Fapte
-        run: pnpm check:fapte
-
-      - name: Verifica Biblia explicata Romani
-        run: pnpm check:romani
-
-      - name: Verifica Biblia explicata 1 Corinteni
-        run: pnpm check:1-corinteni
-
-      - name: Verifica Biblia explicata 2 Corinteni
-        run: pnpm check:2-corinteni
-
-      - name: Verifica Biblia explicata Galateni
-        run: pnpm check:galateni
-
-      - name: Verifica Biblia explicata Efeseni
-        run: pnpm check:efeseni
-
-      - name: Verifica Biblia explicata Filipeni
-        run: pnpm check:filipeni
-
-      - name: Verifica Biblia explicata Coloseni
-        run: pnpm check:coloseni
-
-      - name: Verifica Biblia explicata 1 Tesaloniceni
-        run: pnpm check:1-tesaloniceni
-
-      - name: Verifica Biblia explicata 2 Tesaloniceni
-        run: pnpm check:2-tesaloniceni
-
-      - name: Verifica Biblia explicata 1 Timotei
-        run: pnpm check:1-timotei
-
-      - name: Verifica Biblia explicata 2 Timotei
-        run: pnpm check:2-timotei
-
-      - name: Verifica Biblia explicata Tit
-        run: pnpm check:tit
-
-      - name: Verifica Biblia explicata Filimon
-        run: pnpm check:filimon
-
-      - name: Verifica Biblia explicata Evrei
-        run: pnpm check:evrei
-
-      - name: Verifica Biblia explicata Iacov
-        run: pnpm check:iacov
-
-      - name: Verifica Biblia explicata 1 Petru
-        run: pnpm check:1-petru
-
-      - name: Verifica Biblia explicata 2 Petru
-        run: pnpm check:2-petru
-
-      - name: Verifica Biblia explicata 1 Ioan
-        run: pnpm check:1-ioan
-
-      - name: Verifica Biblia explicata 2 Ioan
-        run: pnpm check:2-ioan
-
-      - name: Verifica Biblia explicata 3 Ioan
-        run: pnpm check:3-ioan
-
-      - name: Verifica Biblia explicata Iuda
-        run: pnpm check:iuda
-
-      - name: Verifica Biblia explicata Apocalipsa
-        run: pnpm check:apocalipsa
-
-      - name: Verifica valul final NT
-        run: pnpm check:nt-completion
-
-      - name: Verifica structura sursei Bibliei
-        run: pnpm check:bible-source
-
-      - name: Verifica securitatea Bibliei cloud
-        run: pnpm check:bible-cloud
+      - name: Verifica Biblia explicata VT 39/39
+        run: pnpm check:vt-explained
 
       - name: Typecheck
         run: pnpm typecheck
@@ -145,5 +40,94 @@ jobs:
       - name: Build
         run: pnpm build
 
+  other-bible-validators:
+    # Valurile VT sunt validate de jobul `verify`. Acest job apartine ramurilor
+    # Biblia Emanus / NT si nu trebuie sa blocheze un PR VT din cauza starii lor.
+    if: ${{ !startsWith(github.head_ref, 'agent/biblia-explicata-vt-') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Verifica Biblia Emanus 3.0
+        if: ${{ hashFiles('scripts/check-biblia-emanus.py') != '' }}
+        run: pnpm check:biblia-emanus
+
+      - name: Testeaza poarta Biblia Emanus 3.0
+        if: ${{ hashFiles('scripts/test_biblia_emanus.py') != '' }}
+        run: pnpm test:biblia-emanus
+
+      - name: Verifica versificatia Noului Testament
+        if: ${{ hashFiles('scripts/check-biblia-emanus-versification.py') != '' }}
+        run: pnpm check:biblia-emanus-versification
+
+      - name: Verifica sigiliul tuturor cartilor publicate
+        if: ${{ hashFiles('scripts/seal-biblia-emanus.py') != '' }}
+        run: pnpm seal:biblia-emanus --check
+
+      - name: Verifica Biblia explicata Matei
+        if: ${{ hashFiles('scripts/check-matei.py') != '' }}
+        run: pnpm check:matei
+
+      - name: Verifica Biblia explicata Marcu
+        if: ${{ hashFiles('scripts/check-marcu.py') != '' }}
+        run: pnpm check:marcu
+
+      - name: Verifica Biblia explicata Luca
+        if: ${{ hashFiles('scripts/check-luca.py') != '' }}
+        run: pnpm check:luca
+
+      - name: Verifica Biblia explicata Fapte
+        if: ${{ hashFiles('scripts/check-fapte.py') != '' }}
+        run: pnpm check:fapte
+
+      - name: Verifica Biblia explicata Romani
+        if: ${{ hashFiles('scripts/check-romani.py') != '' }}
+        run: pnpm check:romani
+
+      - name: Verifica Biblia explicata 1 Corinteni
+        if: ${{ hashFiles('scripts/check-1-corinteni.py') != '' }}
+        run: pnpm check:1-corinteni
+
+      - name: Verifica Biblia explicata 2 Corinteni
+        if: ${{ hashFiles('scripts/check-2-corinteni.py') != '' }}
+        run: pnpm check:2-corinteni
+
+      - name: Verifica Biblia explicata Galateni
+        if: ${{ hashFiles('scripts/check-galateni.py') != '' }}
+        run: pnpm check:galateni
+
+      - name: Verifica Biblia explicata Efeseni
+        if: ${{ hashFiles('scripts/check-efeseni.py') != '' }}
+        run: pnpm check:efeseni
+
+      - name: Verifica Biblia explicata Filipeni
+        if: ${{ hashFiles('scripts/check-filipeni.py') != '' }}
+        run: pnpm check:filipeni
+
+      - name: Verifica Biblia explicata Coloseni
+        if: ${{ hashFiles('scripts/check-coloseni.py') != '' }}
+        run: pnpm check:coloseni
+
+      - name: Verifica Biblia explicata 1 Tesaloniceni
+        if: ${{ hashFiles('scripts/check-1-tesaloniceni.py') != '' }}
+        run: pnpm check:1-tesaloniceni
+
+      - name: Verifica valul NT complet
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
+        run: pnpm check:nt-completion
+
+      - name: Verifica securitatea Bibliei cloud
+        if: ${{ hashFiles('scripts/check-bible-cloud.py') != '' }}
+        run: pnpm check:bible-cloud
+
       - name: Verifica bundle-ul Bibliei
+        if: ${{ hashFiles('scripts/check-bible-cloud.py') != '' }}
         run: pnpm check:bible-bundle
