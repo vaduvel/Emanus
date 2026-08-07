@@ -52,6 +52,7 @@ EXACT = {
     "preoțease": "preoțească", "aleas": "ales", "mâncați": "mâncați",
     "Împregnată": "impregnată", "împartășește": "împărtășește",
     "înceoe": "începe", "Îrful": "vârful", "Înutul": "ținutul",
+    "tecăpațina": "încăpățânarea", "ambălăieșe": "ambiguă",
 }
 
 PHRASES = {
@@ -80,6 +81,7 @@ PHRASES = {
     "chiar În timp ce primești cele mai mari daruri de la Tine": "chiar în timp ce primim cele mai mari daruri de la Tine",
     "noi însuși Îl batem joc de el": "noi înșine ne batem joc de el",
     "fără să lase nicio relână de venerabile rămășițe": "fără să lase nicio fărâmă care să poată deveni obiect de venerare",
+    "Mulțumescu-Ți": "Îți mulțumesc",
 }
 
 TOKEN_PATTERNS = [
@@ -96,7 +98,6 @@ def lowercase_mid_sentence_in(value: str) -> str:
         prefix = value[:start].rstrip()
         if not prefix:
             continue
-        # După punct/semn de întrebare/exclamare păstrăm majuscula.
         if prefix[-1] in ".?!":
             continue
         chars[start] = "î"
@@ -110,8 +111,11 @@ def clean(value: str) -> str:
     for pattern, good in TOKEN_PATTERNS:
         value = pattern.sub(good, value)
     value = lowercase_mid_sentence_in(value)
-    # Ortografie modernă pentru câteva forme productive rămase.
-    value = re.sub(r"\b([A-Za-zĂÂÎȘȚăâîșț]+)înd\b", lambda m: m.group(1) + "ând" if m.group(0) in {"punînd", "arătînd", "adăugînd"} else m.group(0), value)
+    value = re.sub(
+        r"\b([A-Za-zĂÂÎȘȚăâîșț]+)înd\b",
+        lambda m: m.group(1) + "ând" if m.group(0) in {"punînd", "arătînd", "adăugînd"} else m.group(0),
+        value,
+    )
     return value
 
 
