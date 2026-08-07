@@ -1,6 +1,6 @@
 import type { Lesson } from "../domain.js"
 import { aproapeL1, aproapeL2, aproapeL3, aproapeL4, aproapeL5, aproapeL6, aproapeL7 } from "./aproape.js"
-import { DOCTRINE_LESSONS, doctrinaL1, doctrinaL2, doctrinaL3 } from "./doctrina.js"
+import { DOCTRINE_LESSONS } from "./doctrina.js"
 import { GREUTATE_LESSONS, GREUTATE_PRACTICES } from "./greutate.js"
 import { harL1, harL2, harL3, harL4, harL5, harL6, harL7 } from "./har.js"
 import {
@@ -20,6 +20,7 @@ import { rusineL1, rusineL2, rusineL3, rusineL4 } from "./rusineA.js"
 import { rusineL5, rusineL6, rusineL7 } from "./rusineB.js"
 import { schimbareL1, schimbareL2, schimbareL3, schimbareL4 } from "./schimbareA.js"
 import { schimbareL5, schimbareL6, schimbareL7 } from "./schimbareB.js"
+import { TEMELIE_LESSONS, TEMELIE_PRACTICES } from "./temelie.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
@@ -33,6 +34,7 @@ export * from "./rusineA.js"
 export * from "./rusineB.js"
 export * from "./schimbareA.js"
 export * from "./schimbareB.js"
+export * from "./temelie.js"
 export * from "./umblareA.js"
 export * from "./umblareB.js"
 
@@ -526,22 +528,47 @@ export const pathImpreuna: PathDef = {
  * Temelia. Camera 3 ("nu e real") și drumul propriu al omului care spune "vreau
  * doar să-L cunosc" — pentru el nu e supliment, e drumul.
  *
- * DE FĂCUT (docs/23 §3, defectul D3): trei lecții pentru o cameră întreagă e prea
- * puțin. `indoiala`, `nu_inteleg`, `biblia_inventata` și `alte_credinte` sunt
- * patru întrebări diferite și primesc același răspuns scurt.
+ * REZOLVAT (docs/23 §3, defectul D3): camera avea trei lecții împrumutate din
+ * doctrina generală. Erau trei probleme, nu una:
+ *   1. patru uși diferite — `indoiala`, `nu_inteleg`, `biblia_inventata` și
+ *      `alte_credinte` — primeau același răspuns scurt;
+ *   2. aceleași `doctrinaL1..L3` se dădeau oricum tuturor prin
+ *      `DOCTRINE_UNLOCK_AFTER`, deci cine intra aici le primea de două ori;
+ *   3. ușile `inceput` și `nu_stiu` cad tot aici, iar pentru ei ăsta e drumul,
+ *      nu un supliment.
+ * Acum sunt șapte lecții scrise, în `temelieA.ts`, `temelieB.ts`, `temelieC.ts`.
+ *
+ * ORDINEA: îndoiala are voie (Toma, Marcu 9:24) → ce se poate verifica (Luca 1:1-4)
+ * → cine a scris Biblia și cum a ajuns la noi → nu o religie, un Om (Marcu 2) →
+ * energii, karma, univers (Fapte 17, Areopag) → cum se citește ca să înțelegi
+ * (Fapte 8, famenul) → ce faci cu ce ai aflat (Ioan 7:17).
+ *
+ * ONESTITATE (docs/22 §1): lecția 2 spune explicit că nimic din ce urmează nu
+ * dovedește că Dumnezeu există, doar că documentele sunt documente. Lecția 3
+ * recunoaște că manuscrisele diferă între ele și trimite omul la notele de
+ * subsol din propria lui Biblie, la Marcu 16 și Ioan 8. Alternativa — să
+ * pretindem că nu există diferențe — se sparge prima dată când omul citește o
+ * notă de subsol și se simte mințit.
+ *
+ * FĂRĂ PRESIUNE: lecția 7 nu cere nicio rugăciune de decizie ca să treci mai
+ * departe, iar pasul `t7_10` are "Nu acum" ca opțiune la fel de validă.
+ *
+ * NU E FUNDĂTURĂ (docs/21 §7 pct. 5): pasul `t7_11` trimite omul la camera rănii
+ * care i-a ieșit la suprafață în cele șapte lecții, sau la Umblarea dacă vrea
+ * mai adânc.
+ *
+ * SIGURANȚĂ: nicio lecție de aici nu are ecran de avertizare, pentru că niciuna
+ * nu atinge abuz, autovătămare sau pierdere. Singura trimitere la ajutor real e
+ * în lecția 5, pentru frica rămasă după practici oculte (docs/22 §1).
  */
 export const pathTemelie: PathDef = {
   id: "path_temelie",
   roomId: "c3",
   title: "De la zero",
   promise:
-    "Trei lecții, una la două zile. Fără presupunerea că știi ceva dinainte și fără să te facă nimeni să te simți prost că întrebi.",
-  lessons: [doctrinaL1, doctrinaL2, doctrinaL3],
-  practices: [
-    "Azi citește singur zece versete din Evanghelia după Ioan, capitolul 1. Nu trebuie să înțelegi tot. Doar citește-le.",
-    "Azi observă de câte ori încerci să meriți ceva: la muncă, acasă, în cap. Nu schimba nimic. Doar observă.",
-    "Ai terminat. Azi spune-I, cu cuvintele tale, ce crezi și ce încă nu crezi. Nu Se supără de partea a doua.",
-  ],
+    "Șapte lecții, una la două zile. Fără presupunerea că știi ceva dinainte și fără să te facă nimeni să te simți prost că întrebi.",
+  lessons: TEMELIE_LESSONS,
+  practices: TEMELIE_PRACTICES,
 }
 
 /*
@@ -678,6 +705,11 @@ export function planToday(
  * Se deschide DUPĂ lecția 5 din parcursul personal — nu înainte.
  * Nimeni nu învață despre canonul Scripturii înainte să afle că e iubit.
  * Apoi: o lecție de doctrină la fiecare trei lecții personale.
+ *
+ * NOTĂ (docs/23 §3, D3): înainte, camera 3 servea `doctrinaL1..L3` ca parcurs
+ * propriu, deci omul intrat pe `path_temelie` primea aceleași trei lecții și
+ * aici, și prin deblocarea de mai jos. Acum camera 3 are lecțiile ei, iar
+ * doctrina generală rămâne un singur canal, pentru toate camerele.
  */
 export const DOCTRINE_UNLOCK_AFTER = 5
 
