@@ -30,6 +30,17 @@ Au fost revizuite toate cele 15 versete din `TIT.2`. Lectura principală a fost 
 | TIT.2.14 | `λυτρώσηται … λαὸν περιούσιον, ζηλωτὴν` | Dăruirea lui Hristos răscumpără din fărădelege și curățește un popor al Lui, plin de râvnă pentru fapte bune. |
 | TIT.2.15 | `μετὰ πάσης ἐπιταγῆς` | Tit trebuie să vorbească, să îndemne și să mustre cu toată autoritatea, fără ca cineva să-l disprețuiască. |
 
+## Completare red-team
+
+O reverificare independentă a surselor fixate a confirmat textul românesc și
+a completat deciziile editoriale pentru variantele relevante: `οἰκουργούς /
+οἰκουρούς` la 2:5, `ἀφθορίαν / ἀδιαφθορίαν` la 2:7 și `περὶ ἡμῶν /
+περὶ ὑμῶν` la 2:8. La 2:13, ambele surse grecești fixate au aceeași lectură;
+nota explică sintaxa, fără a pretinde o variantă textuală. Aceste decizii sunt
+înregistrate în `editorialNotes` din capitol.
+
 ## Rezultat
 
-Cele 15 texte au fost rescrise pe lectura principală SBLGNT. Coada editorială va fi regenerată pentru noile digesturi și rămâne integral `pending`; nici acest lot, nici capitolul nu sunt declarate `approved` ori `published`.
+Cele 15 texte au fost rescrise pe lectura principală SBLGNT. Coada editorială
+va fi regenerată pentru noile digesturi și rămâne integral `pending`; nici
+acest lot, nici capitolul nu sunt declarate `approved` ori `published`.

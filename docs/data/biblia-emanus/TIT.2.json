@@ -74,12 +74,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-tit-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -139,8 +140,8 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:4e5ee66f421629bb0f7149e85a5fdfef34e6a4dc6e30b75cf514b92f6c71cc91",
-    "contentDigest": "sha256:bf065f501545551b9f07c50f82a94818275715bac1bdca12cf91c639f153477c"
+    "textDigest": "sha256:17e21ce44394cb742ce2c8a7e21c3eac6c603857f6abae1e453f2c7bd77bc0bd",
+    "contentDigest": "sha256:a004f40fa9f36c4374751eb8763f7310553f5c3e673d4c83f1e49ba89c3b4526"
   },
   "verses": [
     {
@@ -204,7 +205,53 @@
       "text": "Spune aceste lucruri, îndeamnă și mustră cu toată autoritatea. Nimeni să nu te disprețuiască."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "variantă textuală SBLGNT/TR: οἰκουργούς / οἰκουρούς",
+      "decision": "„harnice în gospodărie”",
+      "alternatives": [
+        "TR-TIT din snapshot citește οἰκουρούς: „păstrătoare ale casei”."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; formularea românească redă lucrarea în gospodărie fără a suprima varianta tradițională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-TIT și TR-TIT au fost confruntate direct; textul principal păstrează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: ἀφθορίαν / ἀδιαφθορίαν",
+      "decision": "„integritate și seriozitate”",
+      "alternatives": [
+        "TR-TIT din snapshot citește ἀδιαφθορίαν, urmat de σεμνότητα."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; româna redă sensul de integritate al lecturii SBL fără a introduce automat dezvoltarea tradițională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-TIT și TR-TIT au fost confruntate direct; textul principal urmează ἀφθορίαν, σεμνότητα."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: περὶ ἡμῶν / περὶ ὑμῶν",
+      "decision": "Textul principal urmează SBLGNT 1.2: „... neavând nimic rău de spus despre noi.”",
+      "alternatives": [
+        "TR-TIT din snapshot citește περὶ ὑμῶν: „... despre voi.”"
+      ],
+      "reason": "SBLGNT este lectura principală fixată; diferența de persoană este materială și este consemnată, nu absorbită în text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-TIT și TR-TIT au fost confruntate direct; româna păstrează pronumele „noi” al lecturii SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "τοῦ μεγάλου θεοῦ καὶ σωτῆρος ἡμῶν Ἰησοῦ Χριστοῦ",
+      "decision": "„marelui nostru Dumnezeu și Mântuitor, Isus Hristos”",
+      "reason": "Articolul unic τοῦ guvernează cele două substantive coordonate, iar numele Ἰησοῦ Χριστοῦ identifică referentul construcției. Nota explică sintaxa sursei, fără adaos doctrinar în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-TIT și TR-TIT citesc aici ambele Ἰησοῦ Χριστοῦ; decizia documentează sintaxa, nu o variantă TR."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
