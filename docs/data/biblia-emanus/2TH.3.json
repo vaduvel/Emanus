@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-2TH.3.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-2TH",
+        "biblia-libera/2TH.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,23 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2th-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 18 versete pentru a elimina coruperile sintactice, diacriticele greșite și calcurile englezești.",
+        "Au fost păstrate distincțiile lexicale relevante, inclusiv contrastul dintre muncă și amestecul în treburile altora din versetul 11.",
+        "Diferențele dintre SBLGNT și Textus Receptus au fost verificate direct și nu au fost nivelate tacit în română."
       ]
     },
     "theologicalContext": {
@@ -123,100 +137,202 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:946aab2d9c8dd8a0e688aaaa67fd59ac413ab8416af9ea136af5b892a0b15717",
-    "contentDigest": "sha256:5ae0059b375f8a0cbaaa9d90058cbb4b5d86b4447af3079007eefa3a2a472e91"
+    "textDigest": "sha256:e30287eb986e30bb36a9925e8a2476d556e77282321a9b368c790e8d736bc26f",
+    "contentDigest": "sha256:d888ec51ff4c614e02b1c9ccb1f87cb143fa7cafdb98d1980e85ed5819d76f38"
   },
   "verses": [
     {
       "number": 1,
-      "text": "În cele din urmă, fraților, rugați-vă pentru noi, pentru ca Cuvântul Domnului să se răspândească rapid și să fie proslăvit, ca și cu voi,"
+      "text": "În cele din urmă, fraților, rugați-vă pentru noi, ca Cuvântul Domnului să se răspândească cu repeziciune și să fie glorificat, așa cum este și la voi,"
     },
     {
       "number": 2,
-      "text": "ca să fim izbăviți de oameni neprihăniți și răi, căci nu toți au credință."
+      "text": "și să fim scăpați de oamenii lipsiți de judecată și răi, căci nu toți au credință."
     },
     {
       "number": 3,
-      "text": "Dar Domnul este credincios, care vă va întări și vă va păzi de cel rău."
+      "text": "Dar Domnul este credincios; El vă va întări și vă va păzi de cel rău."
     },
     {
       "number": 4,
-      "text": "Avem încredere în Domnul cu privire la voi, că amândoi veți face și veți face ce vă poruncim."
+      "text": "Avem însă încredere în Domnul cu privire la voi: împliniți și veți împlini ceea ce vă poruncim."
     },
     {
       "number": 5,
-      "text": "Fie ca Domnul să vă îndrume inimile în dragostea lui Dumnezeu și în perseverența lui Hristos."
+      "text": "Domnul să vă îndrume inimile spre dragostea lui Dumnezeu și spre răbdarea lui Hristos."
     },
     {
       "number": 6,
-      "text": "Acum vă poruncim, fraților, în numele Domnului nostru Isus Hristos, să vă retrageți de la orice frate care umblă în răzvrătire și nu după tradiția pe care au primit-o de la noi."
+      "text": "Vă poruncim, fraților, în numele Domnului nostru Isus Hristos, să vă îndepărtați de orice frate care trăiește în neorânduială și nu urmează tradiția pe care au primit-o de la noi."
     },
     {
       "number": 7,
-      "text": "Căci știți cum trebuie să ne imitați, căci noi nu ne-am purtat neascultător printre voi,"
+      "text": "Voi înșivă știți cum se cuvine să ne urmați, fiindcă nu am trăit în neorânduială printre voi,"
     },
     {
       "number": 8,
-      "text": "Nici n-am mâncat pîne din mâna cuiva, fără să plătim pentru ea, ci am lucrat zi noapte, ca să nu vă împovărăm pe niciunul dintre voi."
+      "text": "nici nu am mâncat fără plată pâinea nimănui, ci am lucrat zi și noapte, cu trudă și osteneală, ca să nu împovărăm pe niciunul dintre voi."
     },
     {
       "number": 9,
-      "text": "Acest lucru nu s-a întâmplat pentru că nu avem dreptul, ci pentru a ne face un exemplu pentru voi, ca să ne imitați."
+      "text": "Nu pentru că nu avem dreptul, ci ca să vă oferim propriul nostru exemplu, pe care să-l urmați."
     },
     {
       "number": 10,
-      "text": "Căci chiar și atunci când am fost cu voi, v-am poruncit acest lucru: Dacă cineva nu este dispus să lucreze, nu-l lăsați să mănânce."
+      "text": "Într-adevăr, când eram cu voi, vă dădeam această poruncă: „Dacă cineva nu vrea să lucreze, nici să nu mănânce.”"
     },
     {
       "number": 11,
-      "text": "Căci auzim de unii care umblă printre voi în răzvrătire, care nu lucrează deloc, dar sunt ocupați."
+      "text": "Căci auzim că unii dintre voi trăiesc în neorânduială: nu lucrează deloc, ci se amestecă în treburile altora."
     },
     {
       "number": 12,
-      "text": "Iar pe cei ce sunt așa, poruncim îndemnăm în Domnul Isus Hristos ca ei să lucreze în liniște să-mănânce pâinea lor."
+      "text": "Le poruncim și îi îndemnăm pe cei de felul acesta, în Domnul Isus Hristos, ca, lucrând liniștiți, să-și mănânce propria pâine."
     },
     {
       "number": 13,
-      "text": "Dar voi, fraților, nu vă obosiți să faceți ceea ce este drept."
+      "text": "Voi însă, fraților, nu vă pierdeți curajul în a face binele."
     },
     {
       "number": 14,
-      "text": "Dacă cineva nu ascultă de cuvântul nostru din această scrisoare, notați că omul și nu are companie cu el, până la sfârșit ca să-i fie rușine."
+      "text": "Dacă însă cineva nu ascultă de cuvântul nostru din această scrisoare, luați notă de omul acela și nu vă asociați cu el, ca să se rușineze."
     },
     {
       "number": 15,
-      "text": "Nu-l socoti ca pe un dușman, ci avertizează-l ca pe un frate."
+      "text": "Nu-l considerați un dușman, ci mustrați-l ca pe un frate."
     },
     {
       "number": 16,
-      "text": "Fie ca Domnul păcii să vă dea pace tot timpul, în toate privințele. Domnul să fie cu voi toți."
+      "text": "Însuși Domnul păcii să vă dea pace mereu, în orice fel. Domnul să fie cu voi toți."
     },
     {
       "number": 17,
-      "text": "Eu, Pavel, scriu acest salut cu mâna mea, care este semnul din fiecare scrisoare. Acesta este modul în care scriu."
+      "text": "Eu, Pavel, scriu această salutare cu mâna mea: acesta este semnul în fiecare scrisoare. Așa scriu."
     },
     {
       "number": 18,
-      "text": "Harul Domnului nostru Isus Hristos să fie cu voi cu toți. Amin."
+      "text": "Harul Domnului nostru Isus Hristos să fie cu voi toți."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "ἀτόπων καὶ πονηρῶν ἀνθρώπων",
+      "decision": "„oamenii lipsiți de judecată și răi”",
+      "alternatives": [
+        "„oameni necuviincioși și răi”",
+        "„oameni iraționali și răi”"
+      ],
+      "reason": "ἄτοπος desemnează persoane ieșite din firesc sau fără judecată; redarea păstrează diferența față de πονηρός, „rău”, fără a introduce o etichetă confesională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul termenilor SBLGNT și controlul WEBP au fost verificate direct; opțiunea românească păstrează cele două calificări distincte."
+    },
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: παραγγέλλομεν / παραγγέλλομεν ὑμῖν",
+      "decision": "„împliniți și veți împlini ceea ce vă poruncim”",
+      "alternatives": [
+        "TR-2TH din snapshot repetă explicit dativul „vouă”."
+      ],
+      "reason": "În SBLGNT, destinatarii poruncii sunt deja determinați de construcție; româna îi păstrează prin „vă”, fără a trata adaosul TR drept lectura principală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "τὴν ὑπομονὴν τοῦ Χριστοῦ",
+      "decision": "„răbdarea lui Hristos”",
+      "alternatives": [
+        "„perseverența lui Hristos”",
+        "„răbdarea pentru Hristos”"
+      ],
+      "reason": "Genitivul poate fi înțeles fie ca răbdarea arătată de Hristos, fie ca statornicia credincioșilor raportată la El. Formularea aleasă păstrează ambiguitatea, fără glosă doctrinară în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT și formularea WEBP au fost confruntate direct; nu a fost adăugată o interpretare confesională."
+    },
+    {
+      "verse": 6,
+      "term": "variantă textuală SBLGNT/TR: παρελάβοσαν / παρέλαβε",
+      "decision": "„tradiția pe care au primit-o de la noi”",
+      "alternatives": [
+        "TR-2TH din snapshot are singularul παρέλαβε: „a primit”.",
+        "Aparatul SBLGNT înregistrează și παρελάβετε, respectiv παρέλαβον, în alți martori."
+      ],
+      "reason": "SBLGNT are pluralul παρελάβοσαν; româna păstrează pluralul și nu îl înlocuiește tacit cu lectura singulară din martorul TR fixat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: νυκτὸς καὶ ἡμέρας / νύκτα καὶ ἡμέραν",
+      "decision": "„zi și noapte”",
+      "alternatives": [
+        "TR-2TH schimbă cazul gramatical al celor doi termeni temporali."
+      ],
+      "reason": "Diferența de caz nu schimbă sensul temporal în română; formularea păstrează munca continuă, împreună cu „truda și osteneala” din context.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; nu a fost introdusă o diferență românească artificială."
+    },
+    {
+      "verse": 11,
+      "term": "μηδὲν ἐργαζομένους ἀλλὰ περιεργαζομένους",
+      "decision": "„nu lucrează deloc, ci se amestecă în treburile altora”",
+      "alternatives": [
+        "„nu muncesc, ci sunt băgăreți”"
+      ],
+      "reason": "Jocul de cuvinte dintre a lucra și a se ocupa de treburi străine este redat explicit; „ocupați” ar inversa sensul și ar pierde contrastul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenii SBLGNT și controlul WEBP au fost verificate direct; româna păstrează opoziția semantică fără calchiere literală."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: ἐν κυρίῳ Ἰησοῦ Χριστῷ / διὰ τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ",
+      "decision": "„în Domnul Isus Hristos”",
+      "alternatives": [
+        "TR-2TH formulează „prin Domnul nostru Isus Hristos”."
+      ],
+      "reason": "SBLGNT are prepoziția ἐν și nu include „nostru”; redarea românească urmează relația din textul principal, fără a o înlocui cu formularea TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: μὴ συναναμίγνυσθαι / καὶ μὴ συναναμίγνυσθε",
+      "decision": "„nu vă asociați cu el”",
+      "alternatives": [
+        "TR-2TH introduce καὶ și folosește forma finită „nu vă asociați”."
+      ],
+      "reason": "SBLGNT formulează interdicția prin infinitiv; româna o redă firesc ca poruncă, fără a adăuga conjuncția TR ori a dilua măsura cerută.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; sensul prohibitiv al lecturii SBLGNT este păstrat."
+    },
+    {
+      "verse": 18,
+      "term": "finalul doxologiei: SBLGNT fără Ἀμήν / TR cu Ἀμήν",
+      "decision": "Versetul se încheie cu „voi toți.”",
+      "alternatives": [
+        "TR-2TH din snapshot adaugă „Amin.”"
+      ],
+      "reason": "SBLGNT 1.2 nu are Ἀμήν la finalul versetului; adaosul din TR nu este inclus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; finalul urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
