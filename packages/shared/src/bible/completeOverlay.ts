@@ -30,8 +30,6 @@ function uncoveredRanges(lastVerse: number, units: readonly ExplainedOverlayUnit
 
 function materializeSourceKind(unit: ExplainedOverlayUnit): ExplainedOverlayUnit {
   if (unit.source.kind === "biblia-emanus") {
-    // Truth guard pentru registry-ul publicabil: un overview textual nu poate
-    // moșteni accidental aplicații pastorale sau studii lexicale dintr-un draft.
     const { forYourHeart: _forYourHeart, words: _words, ...textual } = unit
     return {
       ...textual,
@@ -45,10 +43,16 @@ function materializeSourceKind(unit: ExplainedOverlayUnit): ExplainedOverlayUnit
   }
 }
 
+function isPlaceholderTitle(bookName: string, chapterNumber: number, title: string): boolean {
+  const compact = title.trim().replace(/\s+/g, " ")
+  return compact === `${bookName} ${chapterNumber}` || compact.length < 8
+}
+
 /**
  * Completează numai golurile lăsate de transcript.
  * - unitățile Poonen existente rămân neschimbate semantic și sunt etichetate `exposition`;
  * - golurile primesc doar explicație textuală din Biblia Emanus și sunt etichetate `textual-overview`;
+ * - capitolele placeholder primesc titlul și rezumatul editorial complet din Biblia Emanus;
  * - aplicațiile pastorale și studiile lexicale nu pot trece în stratul textual;
  * - nu introduce doctrină, tipologie sau aplicații în golurile sursei;
  * - fiecare verset al fiecărui capitol ajunge acoperit de cel puțin o unitate.
@@ -65,6 +69,7 @@ export function completeOverlayCoverage(
     if (!narrative) throw new Error(`[${book.name} ${chapter.number}] lipsește explicația textuală.`)
 
     const sourceUnits = chapter.units.map(materializeSourceKind)
+    const hasExposition = sourceUnits.some((unit) => unit.source.kind !== "biblia-emanus")
     const gaps = uncoveredRanges(lastVerse, sourceUnits)
     const fillers: ExplainedOverlayUnit[] = gaps.map(([from, to]) => ({
       from,
@@ -75,13 +80,15 @@ export function completeOverlayCoverage(
       explanationKind: "textual-overview",
     }))
 
+    const useNarrativeMetadata =
+      !hasExposition ||
+      isPlaceholderTitle(book.name, chapter.number, chapter.title) ||
+      chapter.summary.includes("Transcriptul Poonen nu îl dezvoltă separat")
+
     return {
       ...chapter,
-      title: chapter.title || narrative.title,
-      summary:
-        chapter.summary.includes("Transcriptul Poonen nu îl dezvoltă separat")
-          ? narrative.summary
-          : chapter.summary,
+      title: useNarrativeMetadata ? narrative.title : chapter.title || narrative.title,
+      summary: useNarrativeMetadata ? narrative.summary : chapter.summary,
       units: [...sourceUnits, ...fillers].sort((a, b) => a.from - b.from || a.to - b.to),
     }
   })
