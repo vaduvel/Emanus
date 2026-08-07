@@ -173,7 +173,7 @@ def write_index(entries: list[tuple[str, str, str, int, int, int]]) -> None:
         lines.append(
             f"  {{ bookId: {ts_string(book_id)}, bibleEmanusBookId: {ts_string(code)}, "
             f"name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, "
-            'reason: "Biblia Emanus translation not yet available/approved" }},'
+            'reason: "Biblia Emanus translation not yet available/approved" },'
         )
     lines += ["] as const", ""]
     (OUT / "index.ts").write_text("\n".join(lines), encoding="utf-8")
