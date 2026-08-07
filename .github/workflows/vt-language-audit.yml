@@ -1,0 +1,75 @@
+name: VT Romanian Language Audit
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-complet
+  pull_request:
+    branches:
+      - agent/biblia-explicata-vt-maleahi
+
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract Romanian prose from Numeri and Deuteronom
+        run: |
+          python3 - <<'PY'
+          import ast
+          import re
+          from pathlib import Path
+
+          out = []
+          roots = [Path('packages/shared/src/bible')]
+          paths = []
+          for root in roots:
+              paths += sorted(root.glob('deuteronom*.ts'))
+              paths += sorted(root.glob('numeri*.ts'))
+
+          string_re = re.compile(r'"(?:\\.|[^"\\])*"')
+          for path in paths:
+              text = path.read_text(encoding='utf-8')
+              for m in string_re.finditer(text):
+                  raw = m.group(0)
+                  try:
+                      value = ast.literal_eval(raw)
+                  except Exception:
+                      continue
+                  if not isinstance(value, str):
+                      continue
+                  # Excludem importuri, id-uri, referințe și transliterări scurte.
+                  if value.startswith('./') or value.startswith('../'):
+                      continue
+                  if re.fullmatch(r'[A-Za-z0-9_.:/-]+', value):
+                      continue
+                  if len(value) < 20:
+                      continue
+                  out.append(value)
+
+          Path('/tmp/vt-ro.txt').write_text('\n'.join(out), encoding='utf-8')
+          print(f'Extrase {len(out)} fragmente românești din {len(paths)} fișiere.')
+          PY
+
+      - name: Configure Romanian dictionary
+        run: |
+          cat >/tmp/cspell.json <<'JSON'
+          {
+            "version": "0.2",
+            "language": "ro",
+            "useGitignore": false,
+            "caseSensitive": true,
+            "allowCompoundWords": true,
+            "import": ["@cspell/dict-ro-ro/cspell-ext.json"]
+          }
+          JSON
+
+      - name: Report unique spelling suspects
+        run: |
+          npm exec --yes \
+            --package=cspell@9.2.1 \
+            --package=@cspell/dict-ro-ro@2.0.6 \
+            -- cspell /tmp/vt-ro.txt \
+              --config /tmp/cspell.json \
+              --words-only --unique --no-progress --no-summary || true
