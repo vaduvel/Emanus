@@ -72,7 +72,6 @@ def parse_generated(path: Path) -> dict[int, list[str]]:
 def normalize_usfm_text(raw: str) -> str:
     text = raw.strip()
     text = NOTE_BLOCK.sub(" ", text)
-    # WLC pune frecvent textul în markeri \\w cu atribute morfologice.
     while WORD_PAYLOAD.search(text):
         text = WORD_PAYLOAD.sub(lambda m: m.group(1), text)
     text = ATTRIBUTE_BLOCK.sub("", text)
@@ -124,6 +123,11 @@ def parse_usfm(data: bytes) -> dict[int, dict[int, dict[str, str]]]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--book", required=True, choices=sorted(BOOK_FILES))
+    parser.add_argument(
+        "--allow-alignment-issues",
+        action="store_true",
+        help="Scrie pachetul și iese 0 pentru diagnostic, fără a considera alinierea aprobată.",
+    )
     args = parser.parse_args()
 
     code = args.book
@@ -159,10 +163,19 @@ def main() -> None:
     chapters = []
     total_verses = 0
     source_mismatches = []
+    chapter_counts = []
     for chapter_no in range(1, expected_chapters + 1):
         ro_verses = candidate[chapter_no]
         web_chapter = web.get(chapter_no, {})
         wlc_chapter = wlc.get(chapter_no, {})
+        chapter_counts.append(
+            {
+                "chapter": chapter_no,
+                "candidate": len(ro_verses),
+                "WEBU": len(web_chapter),
+                "WLC": len(wlc_chapter),
+            }
+        )
         verse_rows = []
         for verse_no, ro_text in enumerate(ro_verses, start=1):
             web_row = web_chapter.get(verse_no)
@@ -170,6 +183,7 @@ def main() -> None:
             if not web_row or not wlc_row:
                 source_mismatches.append(
                     {
+                        "kind": "candidate-verse-missing-in-source",
                         "chapter": chapter_no,
                         "verse": verse_no,
                         "missingWEBU": not bool(web_row),
@@ -182,10 +196,7 @@ def main() -> None:
                     "candidateRo": ro_text,
                     "WEBU": web_row,
                     "WLC": wlc_row,
-                    "review": {
-                        "status": "pending",
-                        "issues": [],
-                    },
+                    "review": {"status": "pending", "issues": []},
                 }
             )
         extras_web = sorted(set(web_chapter) - set(range(1, len(ro_verses) + 1)))
@@ -193,6 +204,7 @@ def main() -> None:
         if extras_web or extras_wlc:
             source_mismatches.append(
                 {
+                    "kind": "source-extra-verses",
                     "chapter": chapter_no,
                     "extraWEBUVerses": extras_web,
                     "extraWLCVerses": extras_wlc,
@@ -217,15 +229,13 @@ def main() -> None:
         "candidateStage": "temporary-editorial",
         "sourceLock": str(LOCK_PATH.relative_to(ROOT)).replace("\\", "/"),
         "sourceSnapshotSha256": lock["snapshot"]["sha256"],
-        "sourceMembers": {
-            "WEBU": book_lock["WEBU"],
-            "WLC": book_lock["WLC"],
-        },
+        "sourceMembers": {"WEBU": book_lock["WEBU"], "WLC": book_lock["WLC"]},
         "totals": {
             "chapters": expected_chapters,
             "verses": total_verses,
             "sourceAlignmentIssues": len(source_mismatches),
         },
+        "chapterVerseCounts": chapter_counts,
         "sourceAlignmentIssues": source_mismatches,
         "chapters": chapters,
     }
@@ -237,8 +247,14 @@ def main() -> None:
         f"{code} re-audit packet: {expected_chapters} capitole / {total_verses} versete / "
         f"source alignment issues={len(source_mismatches)} -> {out}"
     )
+    print("Chapter verse counts:")
+    print(json.dumps(chapter_counts, ensure_ascii=False, indent=2))
     if source_mismatches:
-        raise SystemExit(f"{code}: alinieri WEBU/WLC neclare; vezi pachetul")
+        print("Source alignment diagnostics:")
+        print(json.dumps(source_mismatches, ensure_ascii=False, indent=2))
+        if not args.allow_alignment_issues:
+            raise SystemExit(f"{code}: alinieri WEBU/WLC neclare; vezi diagnosticul")
+        print("DIAGNOSTIC ONLY: problemele de aliniere rămân neaprobate.")
 
 
 if __name__ == "__main__":
