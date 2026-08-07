@@ -7,8 +7,9 @@ P0 enumerate în inventarul de bază, dar **nu este aprobat și nu este
 publicabil**. Remedierile sunt loturi confirmate de schimbări de text, nu
 dovada unei revizii semantice complete sau a unei aprobări editoriale.
 
-Revizia editorială identificată, care urmează să fie efectuată de AI-ul
-desemnat, și registrul per-verset aferent sunt încă nefinalizate.
+Revizia editorială identificată este în curs la AI-ul desemnat. Primul lot
+documentat acoperă toate cele 14 versete BE din `3JN.1`, dar registrul
+per-verset aferent întregului NT este încă nefinalizat.
 
 ## Baza verificării
 
@@ -35,6 +36,11 @@ sau aprobată.
 | Registru de aprobare per-verset | lipsește; există numai schema |
 | Catalog runtime | `withheld`, cu `approval: null` |
 | Cărți NT expuse de catalogul runtime | listă goală |
+
+Revizia lotului `3JN.1` este consemnată în
+`NT-AI-REVIEW-BATCH-2026-08-07-3JN.1.md`. Documentul păstrează ancorele
+grecești, sursele consultate și deciziile de redactare, dar nu este un
+registru de aprobare și nu schimbă starea celor 14 intrări din coadă.
 
 Starea este verificată de `withhold-biblia-emanus-nt.py --check` și de
 generatorul catalogului runtime. Corpusul brut poate rămâne în repository,
@@ -77,9 +83,10 @@ semantică a unui verset. Prin urmare, aceste cifre nu dovedesc că toate cele
 
 ## Ce rămâne de făcut
 
-1. AI-ul desemnat efectuează revizia de sursă și de română pentru **fiecare
+1. AI-ul desemnat continuă revizia de sursă și de română pentru **fiecare
    dintre cele 7.941 de versete**, nu numai pentru cele 837 de locuri de
-   triere. Se începe cu semnalele cu risc mare și cu variantele textuale.
+   triere. Se începe cu semnalele cu risc mare și cu variantele textuale;
+   `3JN.1` este primul lot documentat, nu o substituire a reviziei complete.
 2. Se creează registrul per-verset legat de textul exact: referința, digestul
    BE, referințele/digesturile SBLGNT și WEBP, etaloanele românești consultate,
    ancorele relevante, decizia editorială și justificarea individuală.
