@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  php1-commit:
+  php2-commit:
     runs-on: ubuntu-22.04
     timeout-minutes: 60
     steps:
@@ -27,8 +27,8 @@ jobs:
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
           unzip -t "$ZIP" >/dev/null
 
-      - name: Materialize the already validated PHP 1 batch
-        run: python3 .github/nt-ai-review/php1.py
+      - name: Materialize the already validated PHP 2 batch
+        run: python3 .github/nt-ai-review/php2.py
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -56,12 +56,16 @@ jobs:
       - name: Commit only chapter and journal
         run: |
           set -euo pipefail
-          CHAPTER=docs/data/biblia-emanus/PHP.1.json
-          JOURNAL=docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.1.md
-          if git diff --quiet -- "$CHAPTER" && git diff --quiet -- "$JOURNAL"; then
-            echo 'Validated PHP.1 batch is already committed.'
+          CHAPTER=docs/data/biblia-emanus/PHP.2.json
+          JOURNAL=docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.2.md
+          mapfile -t changed < <(git status --short -- "$CHAPTER" "$JOURNAL" | awk '{print $2}' | sort)
+          if [ "${#changed[@]}" -eq 0 ]; then
+            echo 'Validated PHP.2 batch is already committed.'
             exit 0
           fi
+          test "${#changed[@]}" -eq 2
+          test "${changed[0]}" = "$JOURNAL"
+          test "${changed[1]}" = "$CHAPTER"
           git add "$CHAPTER" "$JOURNAL"
           mapfile -t staged < <(git diff --cached --name-only | sort)
           test "${#staged[@]}" -eq 2
@@ -69,5 +73,5 @@ jobs:
           test "${staged[1]}" = "$CHAPTER"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'fix(biblia): review Philippians 1 against SBLGNT'
+          git commit -m 'fix(biblia): review Philippians 2 against SBLGNT'
           git push origin HEAD:codex/nt-ai-review-handoff
