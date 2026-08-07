@@ -9,6 +9,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -175,6 +176,61 @@ def valid_approval(chapters: dict, source_data: dict) -> dict:
     }
 
 
+def confirmed_corruption_fixture() -> dict[str, dict]:
+    """The six confirmed incidents, isolated from the live corpus state."""
+    return {
+        "EPH.2": {
+            "bookId": "EPH",
+            "chapter": 2,
+            "verses": [{
+                "number": 11,
+                "text": (
+                    "De aceea,-vă că, odată ce voi, Neamurile în trup, care "
+                    "numitenecircumcizie„ prin ceea ce secircumcizie”"
+                ),
+            }],
+        },
+        "LUK.11": {
+            "bookId": "LUK",
+            "chapter": 11,
+            "verses": [{
+                "number": 33,
+                "text": "ca cei care vin în poate vedea lumina.",
+            }],
+        },
+        "ROM.14": {
+            "bookId": "ROM",
+            "chapter": 14,
+            "verses": [{
+                "number": 13,
+                "text": "să nu ne mai judecăm unii pe, ci mai degrabă să judecăm.",
+            }],
+        },
+        "JHN.7": {
+            "bookId": "JHN",
+            "chapter": 7,
+            "verses": [{
+                "number": 22,
+                "text": "în ziua de Sabat vă circumcizia un băiat.",
+            }],
+        },
+        "MAT.3": {
+            "bookId": "MAT",
+            "chapter": 3,
+            "verses": [{
+                "number": 12,
+                "text": "Furculița lui este în mâna lui și își va curăți aria.",
+            }],
+        },
+        "MAT.4": {
+            "bookId": "MAT",
+            "chapter": 4,
+            "verses": [{
+                "number": 24,
+                "text": "oameni chinuiți de lună și paralizați.",
+            }],
+        },
+    }
 class NewTestamentEditorialGateTests(unittest.TestCase):
     def test_editorial_register_schema_is_valid_json(self) -> None:
         schema = json.loads(
@@ -186,12 +242,10 @@ class NewTestamentEditorialGateTests(unittest.TestCase):
         self.assertEqual(schema["properties"]["verses"]["minItems"], 7941)
 
     def test_known_publication_corruptions_are_regressions(self) -> None:
-        ids = ["EPH.2", "LUK.11", "ROM.14", "JHN.7", "MAT.3", "MAT.4"]
-        chapters = {}
-        for chapter_id in ids:
-            path = ROOT / "docs" / "data" / "biblia-emanus" / f"{chapter_id}.json"
-            chapters[chapter_id] = json.loads(path.read_text(encoding="utf-8"))
-        findings = {(item.reference, item.code) for item in gate.scan_nt_quality(chapters)}
+        findings = {
+            (item.reference, item.code)
+            for item in gate.scan_nt_quality(confirmed_corruption_fixture())
+        }
         self.assertTrue(
             {
                 ("EPH.2.11", "punctuation-hyphen-corruption"),
@@ -204,9 +258,15 @@ class NewTestamentEditorialGateTests(unittest.TestCase):
         )
 
     def test_standalone_romanian_quality_command_fails_on_all_six_confirmed_cases(self) -> None:
-        output = io.StringIO()
-        with redirect_stdout(output):
-            result = quality_checker.main()
+        with tempfile.TemporaryDirectory() as directory:
+            data_dir = Path(directory)
+            for chapter_id, chapter in confirmed_corruption_fixture().items():
+                (data_dir / f"{chapter_id}.json").write_text(
+                    json.dumps(chapter, ensure_ascii=False), encoding="utf-8"
+                )
+            output = io.StringIO()
+            with patch.object(quality_checker, "DATA", data_dir), redirect_stdout(output):
+                result = quality_checker.main()
         rendered = output.getvalue()
         self.assertEqual(result, 1)
         for reference in ("EPH.2.11", "LUK.11.33", "ROM.14.13", "JHN.7.22", "MAT.3.12", "MAT.4.24"):
