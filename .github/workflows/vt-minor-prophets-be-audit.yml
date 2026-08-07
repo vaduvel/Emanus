@@ -21,6 +21,40 @@ jobs:
       - name: Fetch legacy BE source branch
         run: git fetch origin agent/biblia-emanus-ot-and-apocrypha:refs/remotes/origin/agent/biblia-emanus-ot-and-apocrypha
 
+      - name: Inspect exact legacy source snapshot stored in repo
+        run: |
+          set -euo pipefail
+          git show origin/agent/biblia-emanus-ot-and-apocrypha:docs/data/biblia-emanus/sources/ot-gen-jos-usfm.zip > /tmp/legacy-source-snapshot.zip
+          python3 - <<'PY'
+          import hashlib
+          import re
+          import zipfile
+          from pathlib import Path
+
+          path = Path('/tmp/legacy-source-snapshot.zip')
+          expected = 'a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931'
+          actual = hashlib.sha256(path.read_bytes()).hexdigest()
+          print(f'Legacy local snapshot SHA256: {actual}')
+          if actual != expected:
+              raise SystemExit(f'Legacy snapshot SHA mismatch: {actual} != {expected}')
+
+          wanted = ('HOS','JOL','AMO','OBA','JON','MIC','NAM','HAB','ZEP','HAG','ZEC','MAL')
+          found = {code: [] for code in wanted}
+          with zipfile.ZipFile(path) as archive:
+              names = archive.namelist()
+              print(f'Legacy snapshot members: {len(names)}')
+              for member in names:
+                  base = Path(member).name
+                  upper = base.upper()
+                  for code in wanted:
+                      if re.search(rf'(^|[-_/0-9]){code}([^A-Z]|$)', upper):
+                          found[code].append(member)
+          for code in wanted:
+              print(f'Legacy snapshot {code}: {found[code]}')
+          present = [code for code, members in found.items() if members]
+          print(f'Legacy snapshot minor prophets present: {len(present)}/12 -> {present}')
+          PY
+
       - name: Download current source archives
         run: |
           set -euo pipefail
@@ -68,7 +102,7 @@ jobs:
               cdx = 'https://web.archive.org/cdx/search/cdx?' + params
               try:
                   req = urllib.request.Request(cdx, headers={'User-Agent': 'Emanus-BE-source-recovery/1.0'})
-                  with urllib.request.urlopen(req, timeout=30) as response:
+                  with urllib.request.urlopen(req, timeout=20) as response:
                       rows = json.load(response)
               except Exception as exc:
                   print(f'Wayback CDX indisponibil pentru {original_url}: {exc}')
@@ -89,7 +123,7 @@ jobs:
               tmp = Path(f'/tmp/engwebp_wayback_{timestamp}.zip')
               try:
                   req = urllib.request.Request(archived, headers={'User-Agent': 'Emanus-BE-source-recovery/1.0'})
-                  with urllib.request.urlopen(req, timeout=60) as response, tmp.open('wb') as out:
+                  with urllib.request.urlopen(req, timeout=40) as response, tmp.open('wb') as out:
                       shutil.copyfileobj(response, out)
               except Exception as exc:
                   print(f'Nu pot descărca captura {timestamp}: {exc}')
@@ -101,8 +135,6 @@ jobs:
                   print(f'RECUPERAT exact snapshotul WEBU pin-uit din captura {timestamp}.')
                   raise SystemExit(0)
 
-          # Auditul de conținut continuă cu arhiva curentă, dar raportul va rămâne
-          # promotionEligible=false deoarece hash-ul istoric nu a fost recuperat.
           shutil.copyfile(current, target)
           print('Snapshotul WEBU istoric nu a fost recuperat; folosesc current numai pentru auditul structural, nu pentru promovare.')
           PY
