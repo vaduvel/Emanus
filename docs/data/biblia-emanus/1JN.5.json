@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1JN.5.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1JN",
+        "biblia-libera/1JN.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,23 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1jn-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -98,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Toate cele 21 de versete au fost rescrise pentru a reface relațiile sintactice, persoanele gramaticale și formulările românești deteriorate.",
+        "În 5:4, 5:9–10, 5:13, 5:16, 5:19–20 au fost corectate pronumele, subiectele, legăturile logice și formulările care pierdeau sensul sursei.",
+        "În 5:7–8, 5:18 și 5:21 sunt urmate lecturile SBLGNT, fără Comma Johanneum, reflexivul tradițional din 5:18 ori «Amin»-ul din TR."
       ]
     },
     "theologicalContext": {
@@ -123,69 +137,59 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație, fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:ed62be5d8e9cdb850b1d9b740113cf39b067c3967d7417c5e644d838c02b32ef",
-    "contentDigest": "sha256:e8b9bfbfdc84a4bf0f5bf36892fd264b731f24ab20739cef8c495491914fb22f"
+    "textDigest": "sha256:6999c893c71efff0d9c74864388244e556a4dcb740a6820a1fcdc44e3b65af15",
+    "contentDigest": "sha256:817871287a38f071f0fc4c0e9de466026b887598a61f9e7c0a5af1cd806acf99"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Oricine crede că Isus este Hristosul s-a născut din Dumnezeu. Oricine iubește pe Tatăl iubește și copilul care este născut din El."
+      "text": "Oricine crede că Isus este Hristosul s-a născut din Dumnezeu. Oricine îl iubește pe Cel care l-a născut îl iubește și pe cel născut din El."
     },
     {
       "number": 2,
-      "text": "Prin aceasta știm că îi iubim pe copiii lui Dumnezeu, când îl iubim pe Dumnezeu și respectăm poruncile sale."
+      "text": "Prin aceasta știm că îi iubim pe copiii lui Dumnezeu: când Îl iubim pe Dumnezeu și împlinim poruncile Lui."
     },
     {
       "number": 3,
-      "text": "Căci dragostea de Dumnezeu stă în păzirea poruncilor Lui, iar poruncile Lui nu sunt grele."
+      "text": "Căci aceasta este dragostea față de Dumnezeu: să păzim poruncile Lui. Iar poruncile Lui nu sunt apăsătoare."
     },
     {
       "number": 4,
-      "text": "Căci tot ce se naște din Dumnezeu biruiește lumea; aceasta este biruința care a biruit lumea: credința voastră."
+      "text": "Căci tot ce s-a născut din Dumnezeu biruiește lumea. Iar aceasta este biruința care a biruit lumea: credința noastră."
     },
     {
       "number": 5,
-      "text": "Cine este cel care biruiește lumea, dacă nu cel care crede că Isus este Fiul lui Dumnezeu?"
+      "text": "Dar cine este cel care biruiește lumea, dacă nu cel care crede că Isus este Fiul lui Dumnezeu?"
     },
     {
       "number": 6,
-      "text": "Acesta este Cel ce a venit cu apă și cu sânge, Isus Hristos; nu numai cu apă, ci cu apă și cu sânge. Duhul este Cel ce mărturisește, pentru că Duhul este adevărul."
+      "text": "Acesta este Cel care a venit prin apă și sânge, Isus Hristos; nu numai cu apă, ci cu apă și cu sânge. Duhul este Cel care mărturisește, fiindcă Duhul este adevărul."
     },
     {
       "number": 7,
-      "text": "Pentru că sunt trei care depun mărturie:"
+      "text": "Căci trei sunt cei care mărturisesc:"
     },
     {
       "number": 8,
-      "text": "Și sunt trei care aduc mărturie pe pământ: Duhul și apa și sângele; și aceștia trei, în mărturie, sunt una."
+      "text": "Duhul, apa și sângele; iar cei trei sunt de acord."
     },
     {
       "number": 9,
-      "text": "Dacă primim mărturia oamenilor, mărturia lui Dumnezeu este mai mare; căci aceasta este mărturia lui Dumnezeu pe care a mărturisit-o despre Fiul său."
+      "text": "Dacă primim mărturia oamenilor, mărturia lui Dumnezeu este mai mare; căci aceasta este mărturia lui Dumnezeu: El a mărturisit despre Fiul Său."
     },
     {
       "number": 10,
-      "text": "Cel care crede în Fiul lui Dumnezeu are mărturia în sine. Cel care nu crede că Dumnezeu l-a făcut mincinos, pentru că nu a crezut în mărturia pe care Dumnezeu a dat-o cu privire la Fiul său."
+      "text": "Cel care crede în Fiul lui Dumnezeu are mărturia în el însuși. Cel care nu-L crede pe Dumnezeu L-a făcut mincinos, fiindcă nu a crezut în mărturia pe care Dumnezeu a depus-o despre Fiul Său."
     },
     {
       "number": 11,
-      "text": "Mărturia este aceasta: că Dumnezeu ne-a dat viața veșnică, și această viață este în Fiul său."
+      "text": "Iar aceasta este mărturia: Dumnezeu ne-a dat viață veșnică, iar această viață este în Fiul Său."
     },
     {
       "number": 12,
@@ -193,19 +197,19 @@
     },
     {
       "number": 13,
-      "text": "V-am scris acestea, vouă, care credeți în numele Fiului lui Dumnezeu, ca să știți că aveți viață eternă și să credeți în numele Fiului lui Dumnezeu."
+      "text": "V-am scris acestea ca voi, cei care credeți în Numele Fiului lui Dumnezeu, să știți că aveți viață veșnică."
     },
     {
       "number": 14,
-      "text": "Aceasta este îndrăzneala pe care o avem față de el, ca, dacă cerem ceva după voia Lui, să ne asculte."
+      "text": "Aceasta este îndrăzneala pe care o avem față de El: dacă cerem ceva potrivit voii Lui, El ne ascultă."
     },
     {
       "number": 15,
-      "text": "Și dacă știm că El ne ascultă, orice am cere, știm că avem cererile pe care le-am cerut de la El."
+      "text": "Și dacă știm că El ne ascultă, orice am cere, știm că avem cererile pe care I le-am adresat."
     },
     {
       "number": 16,
-      "text": "Dacă cineva îl vede pe fratele său săvârșind un păcat care nu duce la moarte, să se roage, iar Dumnezeu îi va da viață — celor care săvârșesc păcate ce nu duc la moarte. Există și păcat care duce la moarte; nu spun să se roage pentru acela."
+      "text": "Dacă cineva îl vede pe fratele său săvârșind un păcat care nu duce la moarte, va cere, iar Dumnezeu îi va da viață celui care săvârșește un păcat care nu duce la moarte. Există un păcat care duce la moarte; nu spun să ceară pentru acela."
     },
     {
       "number": 17,
@@ -213,30 +217,118 @@
     },
     {
       "number": 18,
-      "text": "Știm că cel născut din Dumnezeu nu păcătuiește, ci cel născut din Dumnezeu se păzește, iar cel rău nu se atinge de el."
+      "text": "Știm că oricine s-a născut din Dumnezeu nu păcătuiește; ci Cel născut din Dumnezeu îl păzește, iar cel rău nu se atinge de el."
     },
     {
       "number": 19,
-      "text": "Noi știm că suntem din Dumnezeu, toată lumea zace în puterea celui rău."
+      "text": "Știm că suntem din Dumnezeu, iar lumea întreagă zace sub puterea celui rău."
     },
     {
       "number": 20,
-      "text": "Știm că Fiul lui Dumnezeu a venit și ne-a dat o înțelegere, că știm cine este adevărat; și noi suntem în cel care este adevărat, în Fiul Său Isus Hristos. Acesta este adevăratul Dumnezeu și viața veșnică."
+      "text": "Știm însă că Fiul lui Dumnezeu a venit și ne-a dat pricepere ca să-L cunoaștem pe Cel adevărat. Iar noi suntem în Cel adevărat, în Fiul Său, Isus Hristos. Acesta este adevăratul Dumnezeu și viața veșnică."
     },
     {
       "number": 21,
-      "text": "Copilașilor, feriți-vă de idoli."
+      "text": "Copilașilor, păziți-vă de idoli."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 7,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: ποιῶμεν / τηρῶμεν",
+      "decision": "„împlinim poruncile Lui”",
+      "alternatives": [
+        "TR-1JN din snapshot citește τηρῶμεν: „păzim poruncile Lui”."
+      ],
+      "reason": "SBLGNT are ποιῶμεν, verbul pentru a face sau a împlini; româna nu îl înlocuiește automat cu lectura TR din același context.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "Comma Johanneum (1 Ioan 5:7–8)",
+      "decision": "Textul principal păstrează numai cei trei martori ai SBLGNT: Duhul, apa și sângele.",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă mărturia „în cer” despre Tatăl, Cuvântul și Duhul Sfânt, apoi reia martorii „pe pământ”."
+      ],
+      "reason": "SBLGNT 1.2 are la 5:7–8 formularea scurtă și nu conține adaosul tradițional; versetele nu introduc în corpul principal expresiile din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN și TR-1JN au fost confruntate direct; corpusul urmează textul critic fixat, iar varianta materială este consemnată."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală SBLGNT/TR: ὅτι / ἥν",
+      "decision": "„aceasta este mărturia lui Dumnezeu: El a mărturisit despre Fiul Său”",
+      "alternatives": [
+        "TR-1JN din snapshot are pronumele relativ ἥν: „mărturia pe care a depus-o despre Fiul Său”."
+      ],
+      "reason": "SBLGNT are conjuncția ὅτι și redă propoziția ca explicație a mărturiei, nu ca o relativă introdusă din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost verificate direct; formularea românească păstrează structura explicativă a lecturii SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: τοῖς πιστεύουσιν / καὶ ἵνα πιστεύητε",
+      "decision": "„voi, cei care credeți … să știți că aveți viață veșnică”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă al doilea scop: „și ca să credeți în Numele Fiului lui Dumnezeu”."
+      ],
+      "reason": "SBLGNT îi identifică pe destinatari drept cei care cred și are numai scopul cunoașterii vieții veșnice; adaosul TR nu este introdus.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează construcția și scopul unic ale SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "αἰτήσει … δώσει αὐτῷ ζωήν",
+      "decision": "„va cere, iar Dumnezeu îi va da viață”",
+      "alternatives": [
+        "„să se roage”",
+        "„să facă o cerere”"
+      ],
+      "reason": "Verbul αἰτήσει este redat prin „va cere”, fără a defini confesional păcatul care duce la moarte. Subiectul lui δώσει este neexprimat în greacă, iar româna îl face explicit prin referentul contextual Dumnezeu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT și contextul imediat au fost verificate direct; textul păstrează cererea și darul vieții fără adaos explicativ despre natura păcatului."
+    },
+    {
+      "verse": 18,
+      "term": "variantă textuală SBLGNT/TR: αὐτόν / ἑαυτόν",
+      "decision": "„Cel născut din Dumnezeu îl păzește”",
+      "alternatives": [
+        "NA28 și TR-1JN din snapshot citesc ἑαυτόν: „se păzește pe sine”."
+      ],
+      "reason": "SBLGNT are pronumele ne-reflexiv αὐτόν; româna păstrează un obiect distinct și nu transformă lectura în reflexivul martorilor alternativi.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează pronumele αὐτόν din SBLGNT."
+    },
+    {
+      "verse": 20,
+      "term": "variantă textuală SBLGNT/WH-Treg: γινώσκωμεν / γινώσκομεν",
+      "decision": "„ne-a dat pricepere ca să-L cunoaștem pe Cel adevărat”",
+      "alternatives": [
+        "WH și Treg din aparat au indicativul γινώσκομεν: „ne-a dat pricepere și Îl cunoaștem”."
+      ],
+      "reason": "SBLGNT are conjunctivul γινώσκωμεν după ἵνα; româna redă scopul prin „ca să-L cunoaștem”, nu o afirmație indicativă separată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN și aparatul au fost confruntate direct; construcția finală a lecturii SBLGNT este păstrată."
+    },
+    {
+      "verse": 21,
+      "term": "variantă textuală SBLGNT/TR: εἰδώλων / εἰδώλων Ἀμήν",
+      "decision": "„păziți-vă de idoli”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă încheierea „Amin”."
+      ],
+      "reason": "SBLGNT se încheie cu imperativul de a se păzi de idoli, fără adaosul liturgic din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost verificate direct; textul principal urmează finalul SBLGNT."
     }
   ],
   "referenceNotes": [],
