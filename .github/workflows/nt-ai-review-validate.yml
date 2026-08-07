@@ -1,9 +1,6 @@
 name: NT AI Review Validate
 
 on:
-  push:
-    branches:
-      - codex/nt-ai-review-handoff
   pull_request:
     branches:
       - main
@@ -12,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  php1-candidate:
+  php2-candidate:
     runs-on: ubuntu-22.04
     timeout-minutes: 60
     steps:
@@ -33,12 +30,10 @@ jobs:
           ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
           unzip -t "$ZIP" >/dev/null
-          for entry in sblgnt/text/PHP.txt sblgnt/apparatus/text/PHP.txt tr/PHP.usfm webp/PHP.usfm btf/PHP.usfm cornilescu1924/PHP.usfm biblia-libera/PHP.usfm; do
-            unzip -p "$ZIP" "$entry" >/dev/null
-          done
+          for entry in sblgnt/text/PHP.txt sblgnt/apparatus/text/PHP.txt tr/PHP.usfm webp/PHP.usfm btf/PHP.usfm cornilescu1924/PHP.usfm biblia-libera/PHP.usfm; do unzip -p "$ZIP" "$entry" >/dev/null; done
 
-      - name: Materialize reviewed PHP 1 candidate in worktree
-        run: python3 .github/nt-ai-review/php1.py
+      - name: Materialize reviewed PHP 2 candidate in worktree
+        run: python3 .github/nt-ai-review/php2.py
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -69,5 +64,5 @@ jobs:
           mapfile -t changed < <(git status --short | awk '{print $2}' | grep -v '^.github/' | sort)
           printf '%s\n' "${changed[@]}"
           test "${#changed[@]}" -eq 2
-          test "${changed[0]}" = "docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.1.md"
-          test "${changed[1]}" = "docs/data/biblia-emanus/PHP.1.json"
+          test "${changed[0]}" = "docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.2.md"
+          test "${changed[1]}" = "docs/data/biblia-emanus/PHP.2.json"
