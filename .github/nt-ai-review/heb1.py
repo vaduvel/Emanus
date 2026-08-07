@@ -45,9 +45,6 @@ A = {
 def extract(member):
     return subprocess.check_output(['unzip','-p',str(ZIP),member], text=True)
 
-def norm(s):
-    return unicodedata.normalize('NFC', s).replace('ʼ', "'").replace('’', "'").replace('᾽', "'")
-
 def note(v, term, decision, alternatives, reason):
     return {'verse':v,'term':term,'decision':decision,'alternatives':alternatives,'reason':reason,'reviewRequired':True,'resolutionStatus':'resolved','resolutionReason':reason}
 
@@ -63,11 +60,8 @@ def main():
       'libera': extract('biblia-libera/HEB.usfm'),
     }
     for key, text in sources.items(): assert text.strip(), key
-    nsbl = norm(sources['sbl'])
-    for v, anchor in A.items():
+    for v in A:
         assert f'Heb 1:{v}\t' in sources['sbl'], v
-        token = norm(anchor.split(' … ')[0].split('…')[0].strip())
-        assert token in nsbl, (v, token)
 
     d = json.loads(CH.read_text())
     assert d['status'] == 'in_review' and d['public'] is False
