@@ -55,9 +55,7 @@ jobs:
 
           for key in ('JSON_PATH', 'JOURNAL_PATH'):
               path = Path(os.environ[key])
-              text = path.read_text()
-              normalized = unicodedata.normalize('NFC', text)
-              path.write_text(normalized)
+              path.write_text(unicodedata.normalize('NFC', path.read_text()))
           PY
             git diff --check
             pnpm check:biblia-emanus
@@ -74,6 +72,19 @@ jobs:
             git diff --cached --check
             git commit -m "review(biblia): audit Ephesians ${ch} verse by verse"
           done
+
+          python3 scripts/build-nt-editorial-review-queue.py
+          python3 scripts/build-nt-editorial-review-queue.py --check
+          pnpm check:biblia-emanus
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          git diff --check
+          if ! git diff --quiet -- docs/biblia-emanus/NT-EDITORIAL-REVIEW-QUEUE.json; then
+            git add docs/biblia-emanus/NT-EDITORIAL-REVIEW-QUEUE.json
+            test "$(git diff --cached --name-only | wc -l)" -eq 1
+            git diff --cached --check
+            git commit -m "chore(biblia): regenerate NT editorial review queue"
+          fi
+
           if git log --oneline "origin/codex/nt-ai-review-handoff..HEAD" | grep -q .; then
             git push origin HEAD:codex/nt-ai-review-handoff
           else
