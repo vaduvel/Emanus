@@ -15,18 +15,20 @@ său. `TR-2PE` a fost consultat ca martor de variante, iar `WEBP-2PE`,
 verificări auxiliare de sens și de română. Redactarea urmează lectura SBLGNT,
 fără copierea unei traduceri românești de referință.
 
-NTR nu a fost consultată pentru acest lot. Jurnalul nu este registrul final
-de aprobare și nu promovează niciun verset ori capitol.
+NTR nu a fost consultată pentru acest lot. Ea rămâne listată în metadatele
+capitolului ca etalon extern cerut de schema corpusului, cu
+`consultedInBatch: false`; jurnalul nu este registrul final de aprobare și nu
+promovează niciun verset ori capitol.
 
 ## Decizii pe verset
 
 | Referință BE | Ancoră SBLGNT verificată | Decizie de redactare |
 | --- | --- | --- |
-| 2PE.3.1 | `δευτέραν … ἐν ἀμφοτέραις … εἰλικρινῆ διάνοιαν` | A doua scrisoare și trezirea gândirii sincere prin aducere-aminte sunt redate la plural. |
+| 2PE.3.1 | `δευτέραν … ἐν αἷς … εἰλικρινῆ διάνοιαν` | A doua scrisoare și trezirea gândirii sincere prin aducere-aminte sunt redate la plural; pluralul face referire la cele două scrisori. |
 | 2PE.3.2 | `τῶν ἀποστόλων ὑμῶν … κυρίου καὶ σωτῆρος` | Porunca Domnului și Mântuitorului este dată prin „apostolii voștri”; TR citește „noștri”, consemnat în nota editorială. |
 | 2PE.3.3 | `ἐν ἐμπαιγμονῇ ἐμπαῖκται` | Sunt păstrate zilele din urmă, batjocura și urmarea propriilor pofte, fără a omite accentul dublu al expresiei. |
 | 2PE.3.4 | `ἡ ἐπαγγελία τῆς παρουσίας` | Întrebarea batjocoritorilor este pusă între ghilimele și include continuitatea pretinsă a creației. |
-| 2PE.3.5 | `γῆ ἐξ ὕδατος καὶ διʼ ὕδατος συνεστῶσα` | Pământul este redat ca întemeiat „din apă și prin apă”, nu ca aflat vag în mijlocul apei. |
+| 2PE.3.5 | `γῆ ἐξ ὕδατος καὶ διʼ ὕδατος συνεστῶσα` | Pământul este redat ca alcătuit „din apă și prin apă”, nu ca aflat vag în mijlocul apei. |
 | 2PE.3.6 | `διʼ ὧν … κατακλυσθεὶς ἀπώλετο` | Referința plurală este păstrată prin „Prin acestea”; lumea de atunci este acoperită de apă și piere. |
 | 2PE.3.7 | `τῷ αὐτῷ λόγῳ … πυρὶ τηρούμενοι` | Cerurile și pământul actual sunt ținute prin același Cuvânt pentru foc și judecată. |
 | 2PE.3.8 | `μὴ λανθανέτω ὑμᾶς` | Adresarea este la plural; comparația dintre o zi și o mie de ani este păstrată fără calcul cronologic adăugat. |

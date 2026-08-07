@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,7 +72,8 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
@@ -84,11 +88,6 @@
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -99,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 15 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -141,7 +140,7 @@
       "minimumScore": 0.553468476771151
     },
     "textDigest": "sha256:17e21ce44394cb742ce2c8a7e21c3eac6c603857f6abae1e453f2c7bd77bc0bd",
-    "contentDigest": "sha256:a004f40fa9f36c4374751eb8763f7310553f5c3e673d4c83f1e49ba89c3b4526"
+    "contentDigest": "sha256:706c36aae8f59dee823695fbb501447e8266d126bc66cefc6ab90e5969efad71"
   },
   "verses": [
     {

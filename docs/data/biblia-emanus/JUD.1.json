@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-jud-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:a582d35a50ef6b30c96f4217662295046842ae9b2e657d513c6eca57e8a1fe15",
-    "contentDigest": "sha256:b924ec91fb9e682a4c0315980992cd4a1bbed17d217af1251e417f02ad013188"
+    "textDigest": "sha256:5b179db2051eff010eae6325a16d9ce6fe1a0905fd52a8275e5e2bafdd584721",
+    "contentDigest": "sha256:256cb8c09010bd06e8797be5a190ecbf170823e80b25ff9961cb88135ca0253f"
   },
   "verses": [
     {
@@ -246,13 +246,64 @@
   ],
   "editorialNotes": [
     {
-      "verse": 5,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: ἠγαπημένοις / ἡγιασμένοις",
+      "decision": "„iubiți de Dumnezeu Tatăl”",
+      "alternatives": [
+        "TR-JUD din snapshot citește „sfințiți de Dumnezeu Tatăl”."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; textul românesc păstrează „iubiți”, nu introduce lectura TR „sfințiți”.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: δεσπότην / δεσπότην θεόν",
+      "decision": "„singurul nostru Stăpân și Domn, Isus Hristos”",
+      "alternatives": [
+        "TR-JUD din snapshot adaugă θεόν după δεσπότην."
+      ],
+      "reason": "SBLGNT nu conține adaosul θεόν; redarea nu îl introduce tacit în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦς / ὁ Κύριος",
+      "decision": "„Isus, după ce a izbăvit un popor din țara Egiptului”",
+      "alternatives": [
+        "TR-JUD din snapshot citește „Domnul”."
+      ],
+      "reason": "Lectura SBLGNT este „Isus”; numele este păstrat explicit, fără înlocuirea cu lectura tradițională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 22,
+      "term": "structura SBLGNT a grupurilor din 1:22–23",
+      "decision": "Mila pentru cei care se îndoiesc; salvarea celor smulși din foc; mila cu teamă pentru al treilea grup.",
+      "alternatives": [
+        "TR-JUD grupează diferit poruncile din 1:22–23."
+      ],
+      "reason": "SBLGNT distinge trei grupuri pe parcursul versetelor 22–23; traducerea păstrează succesiunea fără a o comprima.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; structura în trei grupe este păstrată în textul principal."
+    },
+    {
+      "verse": 25,
+      "term": "variantă textuală SBLGNT/TR: διὰ Ἰησοῦ Χριστοῦ … πρὸ παντὸς τοῦ αἰῶνος / σοφῷ",
+      "decision": "Doxologia include „prin Isus Hristos, Domnul nostru” și „mai înainte de toate veacurile”, fără „înțelept”.",
+      "alternatives": [
+        "TR-JUD din snapshot adaugă σοφῷ („înțelept”) și are o formulare mai scurtă a doxologiei."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; toate segmentele lui sunt păstrate, iar adaosul TR nu este introdus tacit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează SBLGNT."
     }
   ],
   "referenceNotes": [],

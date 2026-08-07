@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,7 +72,8 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "NTR este listată deoarece schema corpusului o cere ca etalon extern, dar nu a fost consultată în acest lot in_review; jurnalul lotului și câmpul consultedInBatch consemnează această limită."
     ]
   },
   "audit": {
@@ -125,8 +129,8 @@
       "result": "approved",
       "open": 0
     },
-    "textDigest": "sha256:f47b5f060c2a967ac401024611bfc7e2f48cd97ab790116e24a5bb0b11addcff",
-    "contentDigest": "sha256:c7ce90cb68b18a85fe2fbf029828e63b5fc0813c3c22769b4d450d0d53564d24"
+    "textDigest": "sha256:f29b54f1159a36309000f15b69a1f8e16859c200c9394064a02438fb7869afaf",
+    "contentDigest": "sha256:3ff46821116a29a274240f9b25044f085a8c21a700b4b0c5ac7ac2814c154e7b"
   },
   "verses": [
     {
@@ -147,7 +151,7 @@
     },
     {
       "number": 5,
-      "text": "Căci ei ignoră în mod voit acest lucru: că din vechime au existat ceruri și un pământ întemeiat din apă și prin apă, prin Cuvântul lui Dumnezeu,"
+      "text": "Căci ei ignoră în mod voit acest lucru: că din vechime au existat ceruri și un pământ alcătuit din apă și prin apă, prin Cuvântul lui Dumnezeu,"
     },
     {
       "number": 6,
@@ -232,6 +236,7 @@
       "term": "variantă textuală SBLGNT/TR: εὑρεθήσεται / κατακαήσεται",
       "decision": "„pământul și lucrările de pe el vor fi descoperite”",
       "alternatives": [
+        "TR-2PE din snapshot adaugă ἐν νυκτί: „în noapte”.",
         "TR-2PE din snapshot citește κατακαήσεται: „vor fi arse”.",
         "NA28 în aparat are conjectura οὐχ εὑρεθήσεται: „nu vor fi găsite”."
       ],
