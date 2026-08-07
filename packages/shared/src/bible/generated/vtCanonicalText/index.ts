@@ -45,9 +45,9 @@ export interface CanonicalOverlayTextBook {
 
 export const VT_CANONICAL_TEXT_BOOKS: readonly CanonicalOverlayTextBook[] = [
   { bookId: "judecatori", bibleEmanusBookId: "JDG", name: "Judecători", order: 7, chapterCount: 21, verseCount: 618, chapters: JUDECATORI_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
-  { bookId: "imparati2", bibleEmanusBookId: "2KI", name: "2 Împărați", order: 12, chapterCount: 25, verseCount: 719, chapters: IMPARATI2_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
-  { bookId: "cronici1", bibleEmanusBookId: "1CH", name: "1 Cronici", order: 13, chapterCount: 29, verseCount: 942, chapters: CRONICI1_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
-  { bookId: "cronici2", bibleEmanusBookId: "2CH", name: "2 Cronici", order: 14, chapterCount: 36, verseCount: 822, chapters: CRONICI2_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
+  { bookId: "2-imparati", bibleEmanusBookId: "2KI", name: "2 Împărați", order: 12, chapterCount: 25, verseCount: 719, chapters: IMPARATI2_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
+  { bookId: "1-cronici", bibleEmanusBookId: "1CH", name: "1 Cronici", order: 13, chapterCount: 29, verseCount: 942, chapters: CRONICI1_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
+  { bookId: "2-cronici", bibleEmanusBookId: "2CH", name: "2 Cronici", order: 14, chapterCount: 36, verseCount: 822, chapters: CRONICI2_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "ezra", bibleEmanusBookId: "EZR", name: "Ezra", order: 15, chapterCount: 10, verseCount: 280, chapters: EZRA_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "neemia", bibleEmanusBookId: "NEH", name: "Neemia", order: 16, chapterCount: 13, verseCount: 406, chapters: NEEMIA_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "estera", bibleEmanusBookId: "EST", name: "Estera", order: 17, chapterCount: 10, verseCount: 167, chapters: ESTERA_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
