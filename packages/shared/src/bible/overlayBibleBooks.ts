@@ -1,9 +1,8 @@
 import type { BibleBook, BibleChapter, BibleUnit, WordStudy } from "./types.js"
-import { BIBLIA_EMANUS_TRANSLATION } from "./types.js"
 import { VT_EXPLAINED_OVERLAYS } from "./overlays/index.js"
 import {
   VT_CANONICAL_TEXT_BY_BOOK,
-  VT_CANONICAL_TEXT_BLOCKED,
+  VT_TEMPORARY_TEXT_BOOKS,
 } from "./generated/vtCanonicalText/index.js"
 import type { ExplainedOverlayUnit } from "./explainedOverlay.js"
 
@@ -54,14 +53,16 @@ function toReaderUnit(
   }
 }
 
-export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.flatMap((overlay) => {
+export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((overlay) => {
   const textBook = VT_CANONICAL_TEXT_BY_BOOK.get(overlay.bookId)
-  if (!textBook) return []
+  if (!textBook) {
+    throw new Error(`[${overlay.name}] lipsește textul biblic de lucru materializat.`)
+  }
 
   const chapters: BibleChapter[] = overlay.chapters.map((chapter) => {
     const verseTexts = textBook.chapters[chapter.number]
     if (!verseTexts) {
-      throw new Error(`[${overlay.name} ${chapter.number}] lipsește textul Biblia Emanus materializat.`)
+      throw new Error(`[${overlay.name} ${chapter.number}] lipsește textul biblic de lucru.`)
     }
 
     return {
@@ -80,16 +81,22 @@ export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.flatMap
     }
   })
 
-  return [{
+  const temporary = textBook.textStage === "temporary-editorial"
+  return {
     id: overlay.bookId,
     name: overlay.name,
     testament: "vt" as const,
     order: overlay.order,
-    blurb:
-      "Text Biblia Emanus cu explicația separată de Scriptură. Expunerea doctrinară este trasabilă la Zac Poonen; pasajele pe care sursa nu le dezvoltă primesc numai rezumat textual Emanus.",
+    blurb: temporary
+      ? "Text biblic provizoriu pentru lucru editorial, separat de explicație și marcat pentru înlocuire cu Biblia Emanus. Expunerea doctrinară este trasabilă la Zac Poonen/CFC; pasajele pe care sursa nu le dezvoltă primesc numai rezumat textual Emanus."
+      : "Text Biblia Emanus cu explicația separată de Scriptură. Expunerea doctrinară este trasabilă la Zac Poonen; pasajele pe care sursa nu le dezvoltă primesc numai rezumat textual Emanus.",
     chapters,
-    translation: BIBLIA_EMANUS_TRANSLATION,
-  }]
+    translation: textBook.translationLabel,
+  }
 })
 
-export const VT_OVERLAY_TRANSLATION_BLOCKERS = VT_CANONICAL_TEXT_BLOCKED
+/** Cărți care pot fi lucrate acum, dar al căror text biblic trebuie schimbat cu BE înainte de publicare. */
+export const VT_OVERLAY_TEMPORARY_TEXTS = VT_TEMPORARY_TEXT_BOOKS
+
+/** Compatibilitate: explicațiile nu mai sunt blocate de traducerea finală. */
+export const VT_OVERLAY_TRANSLATION_BLOCKERS = [] as const
