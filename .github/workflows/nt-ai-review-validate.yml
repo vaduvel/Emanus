@@ -2,6 +2,7 @@ name: NT AI Review Validate
 
 on:
   pull_request:
+    types: [edited]
     branches:
       - main
 
@@ -13,16 +14,11 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 60
     steps:
-      - name: Checkout branch commit
-        env:
-          GH_TOKEN: ${{ github.token }}
-          HEAD_SHA: ${{ github.sha }}
-        run: |
-          set -euo pipefail
-          git init .
-          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git fetch --depth=1 origin "${HEAD_SHA}"
-          git checkout --detach FETCH_HEAD
+      - name: Checkout review branch head
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
 
       - name: Verify pinned PHP source bundle
         run: |
