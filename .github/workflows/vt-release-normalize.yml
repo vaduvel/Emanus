@@ -35,6 +35,9 @@ jobs:
       - name: Verify VT explained coverage
         run: pnpm check:vt-explained
 
+      - name: Verify VT publication runtime
+        run: pnpm check:vt-publication
+
       - name: Typecheck
         run: pnpm typecheck
 
