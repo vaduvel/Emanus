@@ -30,7 +30,7 @@ promovează niciun verset ori capitol.
 | 2TH.3.3 | `πιστὸς … φυλάξει ἀπὸ τοῦ πονηροῦ` | Domnul este credincios, întărește și păzește „de cel rău”; articolul permite această redare personală fără adaos explicativ. |
 | 2TH.3.4 | `ἃ παραγγέλλομεν καὶ ποιεῖτε καὶ ποιήσετε` | Sunt redate prezentul și viitorul: destinatarii împlinesc și vor împlini ceea ce li se poruncește. TR repetă `ὑμῖν`; SBLGNT nu. |
 | 2TH.3.5 | `κατευθύναι … εἰς τὴν ὑπομονὴν τοῦ Χριστοῦ` | Domnul îndrumă inimile spre dragostea lui Dumnezeu și răbdarea lui Hristos; genitivul rămâne deschis, fără explicație doctrinară adăugată. |
-| 2TH.3.6 | `στέλλεσθαι … παρελάβοσαν παρʼ ἡμῶν` | Este poruncită îndepărtarea de fratele care trăiește în neorânduială. SBLGNT are pluralul `παρελάβοσαν`; TR-2TH din snapshot are singularul `παρέλαβε`, iar româna urmează pluralul SBLGNT. |
+| 2TH.3.6 | `στέλλεσθαι … παρελάβοσαν παρʼ ἡμῶν` | Este poruncită îndepărtarea de fratele care trăiește în neorânduială. SBLGNT are pluralul `παρελάβοσαν`, iar TR-2TH din snapshot are singularul `παρέλαβε`; româna folosește participiul neutru „primită”, iar diferența rămâne consemnată în nota textuală. |
 | 2TH.3.7 | `πῶς δεῖ μιμεῖσθαι ἡμᾶς … οὐκ ἠτακτήσαμεν` | Destinatarii știu cum să urmeze exemplul apostolic; nu se spune că autorii au fost „neascultători”, ci că nu au trăit în neorânduială. |
 | 2TH.3.8 | `ἐν κόπῳ καὶ μόχθῳ νυκτὸς καὶ ἡμέρας` | Munca „cu trudă și osteneală, zi și noapte” este păstrată. TR schimbă cazul în `νύκτα καὶ ἡμέραν`, fără diferență semantică în română. |
 | 2TH.3.9 | `ἑαυτοὺς τύπον δῶμεν ὑμῖν` | Autorii se oferă drept propriul exemplu pentru destinatari, nu afirmă vag că un lucru „s-a întâmplat”. |
