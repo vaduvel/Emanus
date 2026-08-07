@@ -5,6 +5,7 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 BIBLE = ROOT / "packages" / "shared" / "src" / "bible"
 OVERLAYS = BIBLE / "overlays"
+GENERATED_TEXT_INDEX = BIBLE / "generated" / "vtCanonicalText" / "index.ts"
 
 LEGACY = [
     "geneza.ts", "exod.ts", "levitic.ts", "numeri.ts", "deuteronom.ts", "iosua.ts",
@@ -89,6 +90,19 @@ def main() -> None:
     ordered = [int(x) for x in re.findall(r"^\s*(?:legacy|overlay)\((\d+),", coverage, flags=re.MULTILINE)]
     need(ordered == list(range(1, 40)), f"ordine invalidă în manifest: {ordered}")
     need('coverage: "full"' in coverage, "manifestul nu declară acoperire full")
+
+    # ID-urile textului materializat trebuie să fie aceleași cu ID-urile celor
+    # 29 de overlay-uri. Trei fișiere au slug-uri istorice diferite
+    # (`imparati2`, `cronici1`, `cronici2`), dar catalogul public folosește
+    # `2-imparati`, `1-cronici`, `2-cronici`.
+    coverage_overlay_ids = re.findall(
+        r'^\s*overlay\(\d+,\s*"([^"]+)"', coverage, flags=re.MULTILINE
+    )
+    generated = read(GENERATED_TEXT_INDEX)
+    generated_ids = re.findall(r'^\s*\{ bookId: "([^"]+)"', generated, flags=re.MULTILINE)
+    need(len(generated_ids) == 29, f"catalogul textului de lucru are {len(generated_ids)}/29 cărți")
+    need(generated_ids == coverage_overlay_ids, "ID-urile textului de lucru nu corespund registry-ului overlay")
+    need(generated_ids[1:4] == ["2-imparati", "1-cronici", "2-cronici"], "ID-urile istorice Împărați/Cronici nu sunt normalizate")
 
     package = read(ROOT / "packages" / "shared" / "package.json")
     need('"./bible-explained"' in package, "registry-ul Bibliei explicate nu este exportat de @emanus/shared")
