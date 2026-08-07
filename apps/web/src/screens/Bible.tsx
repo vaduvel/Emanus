@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, ChevronDown, ChevronUp, HelpCircle, Search, Send } from "lucide-react"
 import type { BibleBook, BibleChapter, BibleUnit } from "@emanus/shared/bible"
-import { BIBLE_BOOKS, BIBLE_TRANSLATION, chapterIsOpen, findChapter } from "@emanus/shared/bible"
+import { BIBLE_TRANSLATION, chapterIsOpen } from "@emanus/shared/bible"
+import { PUBLICATION_BIBLE_BOOKS, findPublicationChapter } from "@emanus/shared/bible-publication"
 import { navigate } from "../router"
 import "../bible.css"
 import "../needs.css"
@@ -107,7 +108,7 @@ type Gasit = { bookId: string; bookName: string; chapter: number; ref: string; h
 
 function cauta(nevoie: Nevoie): Gasit[] {
   const out: Gasit[] = []
-  for (const book of BIBLE_BOOKS) {
+  for (const book of PUBLICATION_BIBLE_BOOKS) {
     for (const ch of book.chapters) {
       if (!chapterIsVisible(ch)) continue
       for (const u of ch.units) {
@@ -199,7 +200,7 @@ function Book({ book, query }: { book: BibleBook; query: string }) {
 export function Bible() {
   const [query, setQuery] = useState("")
   const last = readLast()
-  const books = BIBLE_BOOKS.filter((book) => book.chapters.some(chapterIsVisible))
+  const books = PUBLICATION_BIBLE_BOOKS.filter((book) => book.chapters.some(chapterIsVisible))
 
   return <section className="bible">
     <button type="button" className="ghost bible__back" onClick={() => navigate("/")}><ArrowLeft size={16} aria-hidden /> Azi</button>
@@ -233,7 +234,7 @@ export function Bible() {
       ? books.map((b) => <Book key={b.id} book={b} query={query} />)
       : <p className="muted bible__note">Capitolele sunt \u00een revizie \u0219i vor ap\u0103rea dup\u0103 aprobarea uman\u0103.</p>}
 
-    <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explica\u021biile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Traducerea textului biblic este afișată pentru fiecare carte. Explicația rămâne separată de Scriptură.</p>
   </section>
 }
 
@@ -271,8 +272,8 @@ function Unit({ unit, open, onToggle }: { unit: BibleUnit; open: boolean; onTogg
   const bodyId = `bunit-body-${unit.id}`
 
   return <article id={unit.id} className="bunit">
-    <p className="bunit__ref">{unit.ref}</p>
-    <h3 className="bunit__heading">{unit.heading}</h3>
+    <p className="bunit__ref">{unit.ref}</p>    <h3 className="bunit__heading">{unit.heading}</h3>
+    {unit.explanationSource && <p className="bunit__source">{unit.explanationSource}</p>}
 
     <blockquote className="bunit__text">{unit.text}</blockquote>
 
@@ -320,8 +321,8 @@ function Unit({ unit, open, onToggle }: { unit: BibleUnit; open: boolean; onTogg
 }
 
 export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapter: number }) {
-  const found = findChapter(bookId, chapter)
-  const book = BIBLE_BOOKS.find((b) => b.id === bookId)
+  const found = findPublicationChapter(bookId, chapter)
+  const book = PUBLICATION_BIBLE_BOOKS.find((b) => b.id === bookId)
   const visible = found ? chapterIsVisible(found) : false
 
   const [openUnits, setOpenUnits] = useState<Record<string, boolean>>({})
@@ -404,15 +405,14 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p className="bchead__sum">{found.summary}</p>
       {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit \u00eenc\u0103 de un om. Dac\u0103 vezi ceva gre\u0219it, spune-ne.</p>}
     </header>
-
-    <details className="bctx">
-      <summary>Unde suntem \u00een carte</summary>
+    {found.literaryContext && <details className="bctx">
+      <summary>Unde suntem în carte</summary>
       <p>{found.literaryContext}</p>
-    </details>
-    <details className="bctx">
+    </details>}
+    {found.historicalContext && <details className="bctx">
       <summary>Cum era pe atunci</summary>
       <p>{found.historicalContext}</p>
-    </details>
+    </details>}
 
     <nav className="bunits" aria-label="Pasaje">
       <div className="bunits__scroll">
@@ -430,11 +430,10 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
     </nav>
 
     {units.map((u) => <Unit key={u.id} unit={u} open={openUnits[u.id] === true} onToggle={() => toggleUnit(u.id)} />)}
-
-    <div className="bprayer">
-      <p className="today__kicker">Rug\u0103ciune</p>
+    {found.prayer && <div className="bprayer">
+      <p className="today__kicker">Rugăciune</p>
       {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}
-    </div>
+    </div>}
 
     <nav className="bnav" aria-label="Capitole">
       {prev !== undefined
@@ -445,6 +444,6 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
         : <span />}
     </nav>
 
-    <p className="muted bible__note">{BIBLE_TRANSLATION}</p>
+    <p className="muted bible__note">{book.translation ?? BIBLE_TRANSLATION}</p>
   </section>
 }
