@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  hebrews-3-review:
+  hebrews-4-review:
     runs-on: ubuntu-22.04
     timeout-minutes: 90
     steps:
@@ -29,17 +29,17 @@ jobs:
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
-      - name: Review, validate and commit Hebrews 3
+      - name: Review, validate and commit Hebrews 4
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          json='docs/data/biblia-emanus/HEB.3.json'
-          journal='docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-08-HEB.3.md'
+          json='docs/data/biblia-emanus/HEB.4.json'
+          journal='docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-08-HEB.4.md'
           if test -f "$journal"; then
-            echo 'HEB.3 already reviewed; skipping.'
+            echo 'HEB.4 already reviewed; skipping.'
           else
-            python3 .github/nt-ai-review/heb3.py
+            python3 .github/nt-ai-review/heb4.py
             git diff --check
             pnpm check:biblia-emanus
             python3 scripts/check-biblia-emanus-romanian-quality.py
@@ -52,7 +52,7 @@ jobs:
             printf '%s\n' "$changed" | grep -Fx "$json"
             printf '%s\n' "$changed" | grep -Fx "$journal"
             git diff --cached --check
-            git commit -m 'review(biblia): audit Hebrews 3 verse by verse'
+            git commit -m 'review(biblia): audit Hebrews 4 verse by verse'
           fi
 
           python3 scripts/build-nt-editorial-review-queue.py
