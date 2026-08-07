@@ -258,6 +258,18 @@ Porțile verifică:
 
 La runtime, `assertVerseCompleteOverlay()` refuză o carte dacă după compoziție rămâne vreun interval de versete neacoperit. `fullCoverage.ts` refuză acum și orice carte care ajunge la compoziție cu un capitol având `units: []`.
 
+## Verificări release candidate
+
+Pe head-ul release candidate, următoarele fluxuri trebuie să fie simultan verzi înainte de integrare:
+
+- CI: quote/typo/content gates + `check:vt-explained` + typecheck + build;
+- `VT Release Normalize`: normalizare, `check:vt-publication`, typecheck și build;
+- `VT Romanian Language Audit`;
+- `VT Materialize Work Texts`;
+- `VT Wire Publication Reader`: catalogul editorial, runtime, typecheck și production build.
+
+Ultima trecere validată a avut toate aceste fluxuri verzi simultan.
+
 ## Ce nu înseamnă „terminat”
 
 `39/39 full` descrie **acoperirea conținutului Bibliei explicate**, nu aprobarea finală de publicare.
