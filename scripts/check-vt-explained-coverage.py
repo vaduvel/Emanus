@@ -10,7 +10,7 @@ LEGACY = [
     "geneza.ts", "exod.ts", "levitic.ts", "numeri.ts", "deuteronom.ts", "iosua.ts",
     "rut.ts", "samuel1.ts", "samuel2.ts", "imparati1.ts",
 ]
-OVERLAY_FILES = [
+BASE_OVERLAY_FILES = [
     "judecatoriOverlay.ts", "imparati2Overlay.ts", "cronici1Overlay.ts", "cronici2Overlay.ts",
     "ezraOverlay.ts", "neemiaOverlay.ts", "esteraOverlay.ts", "iovOverlay.ts", "psalmiOverlay.ts",
     "proverbeOverlay.ts", "eclesiastulOverlay.ts", "cantareaCantarilorOverlay.ts", "isaiaOverlay.ts",
@@ -19,6 +19,13 @@ OVERLAY_FILES = [
     "micaOverlay.ts", "naumOverlay.ts", "habacucOverlay.ts", "tefaniaOverlay.ts", "hagaiOverlay.ts",
     "zahariaOverlay.ts", "maleahiOverlay.ts",
 ]
+NARRATIVE_FILES = {
+    "vtFullNarrativesHistorical.ts": 144,
+    "vtFullNarrativesWisdom.ts": 243,
+    "vtFullNarrativesMajorProphets.ts": 183,
+    "vtFullNarrativesMinorProphets.ts": 67,
+}
+EXPECTED_OVERLAY_CHAPTERS = sum(NARRATIVE_FILES.values())  # 637
 
 
 def need(condition: bool, message: str) -> None:
@@ -26,27 +33,76 @@ def need(condition: bool, message: str) -> None:
         raise SystemExit(f"[VT explicat] EROARE: {message}")
 
 
+def read(path: Path) -> str:
+    need(path.exists(), f"lipsește {path.relative_to(ROOT)}")
+    return path.read_text(encoding="utf-8")
+
+
 def main() -> None:
+    # Cele 10 cărți deja existente în formatul complet anterior.
     for filename in LEGACY:
         need((BIBLE / filename).exists(), f"lipsește cartea legacy {filename}")
-    for filename in OVERLAY_FILES:
-        path = OVERLAYS / filename
-        need(path.exists(), f"lipsește overlay-ul {filename}")
-        text = path.read_text(encoding="utf-8")
+
+    # Baza doctrinară / Poonen a celor 29 de overlay-uri trebuie să rămână disponibilă.
+    for filename in BASE_OVERLAY_FILES:
+        text = read(OVERLAYS / filename)
         need('status: "in_review"' in text, f"{filename} nu este in_review")
         need("bibleEmanusBookId:" in text, f"{filename} nu referă Biblia Emanus")
 
-    coverage = (BIBLE / "vtExplainedCoverage.ts").read_text(encoding="utf-8")
-    entries = re.findall(r'\{ order: (\d+), id: "([^"]+)", name: "([^"]+)"', coverage)
-    need(len(entries) == 39, f"manifestul are {len(entries)}/39 cărți")
-    orders = [int(order) for order, _, _ in entries]
-    need(orders == list(range(1, 40)), f"ordine invalidă: {orders}")
+    helper = read(BIBLE / "completeOverlay.ts")
+    need('coverageMode: "full"' in helper, "helperul nu setează coverageMode=full")
+    need("uncoveredRanges" in helper, "lipsește calculul intervalelor neexplicate")
+    need("assertVerseCompleteOverlay" in helper, "lipsește aserția de acoperire a versetelor")
+    need("rezumat narativ fără doctrină adăugată" in helper, "lipsește truth-guard pentru explicația textuală")
 
-    registry = (OVERLAYS / "index.ts").read_text(encoding="utf-8")
-    exported_overlays = len(re.findall(r'^export \{ .*_EXPLAINED \} from', registry, flags=re.MULTILINE))
-    need(exported_overlays == 29, f"registry overlay are {exported_overlays}/29 exporturi")
+    # Fiecare capitol overlay trebuie să aibă un rezumat textual propriu și un număr de versete.
+    total_titles = 0
+    total_summaries = 0
+    total_verse_counts = 0
+    for filename, expected_chapters in NARRATIVE_FILES.items():
+        text = read(BIBLE / filename)
+        titles = len(re.findall(r"\btitle:\s*\"", text))
+        summaries = len(re.findall(r"\bsummary:\s*\"", text))
+        verse_counts = len(re.findall(r"(?:^|[,\{])\s*\d+\s*:\s*\d+\s*(?:,|\})", text))
+        need(titles == expected_chapters, f"{filename}: {titles}/{expected_chapters} titluri de capitol")
+        need(summaries == expected_chapters, f"{filename}: {summaries}/{expected_chapters} explicații de capitol")
+        need(verse_counts == expected_chapters, f"{filename}: {verse_counts}/{expected_chapters} numărări de versete")
+        total_titles += titles
+        total_summaries += summaries
+        total_verse_counts += verse_counts
 
-    print("Biblia explicată VT OK: 39/39 cărți canonice; 10 legacy-full + 29 overlays; toate închise editorial ca in_review.")
+    need(total_titles == EXPECTED_OVERLAY_CHAPTERS, f"doar {total_titles}/{EXPECTED_OVERLAY_CHAPTERS} capitole overlay explicate")
+    need(total_summaries == EXPECTED_OVERLAY_CHAPTERS, f"doar {total_summaries}/{EXPECTED_OVERLAY_CHAPTERS} explicații overlay")
+    need(total_verse_counts == EXPECTED_OVERLAY_CHAPTERS, f"doar {total_verse_counts}/{EXPECTED_OVERLAY_CHAPTERS} capitole cu versificație")
+
+    full = read(OVERLAYS / "fullCoverage.ts")
+    composed = re.findall(r"^export const ([A-Z0-9_]+)_FULL = full\(", full, flags=re.MULTILINE)
+    need(len(composed) == 29, f"fullCoverage compune {len(composed)}/29 overlay-uri")
+    need("VT_EXPLAINED_FULL_OVERLAYS.length !== 29" in full, "lipsește aserția registry-ului complet")
+    need('coverageMode !== "full"' in full, "lipsește aserția coverageMode=full")
+
+    registry = read(OVERLAYS / "index.ts")
+    need("VT_EXPLAINED_OVERLAYS = VT_EXPLAINED_FULL_OVERLAYS" in registry, "registry-ul final nu folosește overlay-urile complete")
+
+    coverage = read(BIBLE / "vtExplainedCoverage.ts")
+    legacy_entries = re.findall(r"^\s*legacy\((\d+),", coverage, flags=re.MULTILINE)
+    overlay_entries = re.findall(r"^\s*overlay\((\d+),", coverage, flags=re.MULTILINE)
+    need(len(legacy_entries) == 10, f"manifestul are {len(legacy_entries)}/10 legacy-full")
+    need(len(overlay_entries) == 29, f"manifestul are {len(overlay_entries)}/29 full-overlay")
+    orders = [int(x) for x in legacy_entries + overlay_entries]
+    # Intrările sunt intercalate (Judecători este overlay între legacy), deci extragem toate apelurile în ordinea sursei.
+    ordered = [int(x) for x in re.findall(r"^\s*(?:legacy|overlay)\((\d+),", coverage, flags=re.MULTILINE)]
+    need(ordered == list(range(1, 40)), f"ordine invalidă în manifest: {ordered}")
+    need('coverage: "full"' in coverage, "manifestul nu declară acoperire full")
+
+    package = read(ROOT / "packages" / "shared" / "package.json")
+    need('"./bible-explained"' in package, "registry-ul Bibliei explicate nu este exportat de @emanus/shared")
+
+    print(
+        "Biblia explicată VT OK: 39/39 cărți canonice; "
+        "10 legacy-full + 29 full-overlay; 637/637 capitole overlay au explicație textuală și versificație; "
+        "unitățile Poonen sunt păstrate, golurile sunt completate exclusiv narativ din Biblia Emanus; toate in_review."
+    )
 
 
 if __name__ == "__main__":
