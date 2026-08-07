@@ -21,7 +21,6 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
       - name: Verifica ghilimelele
         run: pnpm check:quotes
 
@@ -37,103 +36,138 @@ jobs:
       - name: Verifica Biblia explicata VT 39/39
         run: pnpm check:vt-explained
 
+      # Urmatoarele validatoare apartin unor valuri/ramuri diferite ale Bibliei.
+      # Ele raman active automat atunci cand scriptul lor exista in checkout.
       - name: Verifica Biblia Emanus 3.0
+        if: ${{ hashFiles('scripts/check-biblia-emanus.py') != '' }}
         run: pnpm check:biblia-emanus
 
       - name: Testeaza poarta Biblia Emanus 3.0
+        if: ${{ hashFiles('scripts/test_biblia_emanus.py') != '' }}
         run: pnpm test:biblia-emanus
 
       - name: Verifica versificatia Noului Testament
+        if: ${{ hashFiles('scripts/check-biblia-emanus-versification.py') != '' }}
         run: pnpm check:biblia-emanus-versification
 
       - name: Verifica sigiliul tuturor cartilor publicate
+        if: ${{ hashFiles('scripts/seal-biblia-emanus.py') != '' }}
         run: pnpm seal:biblia-emanus --check
 
       - name: Verifica Biblia explicata Matei
+        if: ${{ hashFiles('scripts/check-matei.py') != '' }}
         run: pnpm check:matei
 
       - name: Verifica Biblia explicata Marcu
+        if: ${{ hashFiles('scripts/check-marcu.py') != '' }}
         run: pnpm check:marcu
 
       - name: Verifica Biblia explicata Luca
+        if: ${{ hashFiles('scripts/check-luca.py') != '' }}
         run: pnpm check:luca
 
       - name: Verifica Biblia explicata Fapte
+        if: ${{ hashFiles('scripts/check-fapte.py') != '' }}
         run: pnpm check:fapte
 
       - name: Verifica Biblia explicata Romani
+        if: ${{ hashFiles('scripts/check-romani.py') != '' }}
         run: pnpm check:romani
 
       - name: Verifica Biblia explicata 1 Corinteni
+        if: ${{ hashFiles('scripts/check-1-corinteni.py') != '' }}
         run: pnpm check:1-corinteni
 
       - name: Verifica Biblia explicata 2 Corinteni
+        if: ${{ hashFiles('scripts/check-2-corinteni.py') != '' }}
         run: pnpm check:2-corinteni
 
       - name: Verifica Biblia explicata Galateni
+        if: ${{ hashFiles('scripts/check-galateni.py') != '' }}
         run: pnpm check:galateni
 
       - name: Verifica Biblia explicata Efeseni
+        if: ${{ hashFiles('scripts/check-efeseni.py') != '' }}
         run: pnpm check:efeseni
 
       - name: Verifica Biblia explicata Filipeni
+        if: ${{ hashFiles('scripts/check-filipeni.py') != '' }}
         run: pnpm check:filipeni
 
       - name: Verifica Biblia explicata Coloseni
+        if: ${{ hashFiles('scripts/check-coloseni.py') != '' }}
         run: pnpm check:coloseni
 
       - name: Verifica Biblia explicata 1 Tesaloniceni
+        if: ${{ hashFiles('scripts/check-1-tesaloniceni.py') != '' }}
         run: pnpm check:1-tesaloniceni
 
       - name: Verifica Biblia explicata 2 Tesaloniceni
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:2-tesaloniceni
 
       - name: Verifica Biblia explicata 1 Timotei
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:1-timotei
 
       - name: Verifica Biblia explicata 2 Timotei
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:2-timotei
 
       - name: Verifica Biblia explicata Tit
+        if: ${{ hashFiles('scripts/check-tit.py') != '' }}
         run: pnpm check:tit
 
       - name: Verifica Biblia explicata Filimon
+        if: ${{ hashFiles('scripts/check-filimon.py') != '' }}
         run: pnpm check:filimon
 
       - name: Verifica Biblia explicata Evrei
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:evrei
 
       - name: Verifica Biblia explicata Iacov
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:iacov
 
       - name: Verifica Biblia explicata 1 Petru
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:1-petru
 
       - name: Verifica Biblia explicata 2 Petru
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:2-petru
 
       - name: Verifica Biblia explicata 1 Ioan
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:1-ioan
 
       - name: Verifica Biblia explicata 2 Ioan
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:2-ioan
 
       - name: Verifica Biblia explicata 3 Ioan
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:3-ioan
 
       - name: Verifica Biblia explicata Iuda
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:iuda
 
       - name: Verifica Biblia explicata Apocalipsa
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:apocalipsa
 
       - name: Verifica valul final NT
+        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:nt-completion
 
       - name: Verifica structura sursei Bibliei
+        if: ${{ hashFiles('apps/web/scripts/check-bible-source.*', 'apps/web/src/**/check-bible-source.*') != '' }}
         run: pnpm check:bible-source
 
       - name: Verifica securitatea Bibliei cloud
+        if: ${{ hashFiles('scripts/check-bible-cloud.py') != '' }}
         run: pnpm check:bible-cloud
 
       - name: Typecheck
@@ -143,4 +177,5 @@ jobs:
         run: pnpm build
 
       - name: Verifica bundle-ul Bibliei
+        if: ${{ hashFiles('scripts/check-bible-cloud.py') != '' }}
         run: pnpm check:bible-bundle
