@@ -31,7 +31,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
           transliteration: "esh dat lamo",
           language: "ebraica",
           meaning:
-            "o lege de foc pentru ei. Expresie dificila si rara, care leagă direct primirea Legii de imaginea focului teofanic vazut la Sinai, subliniind natura ei sacra si arzatoare.",
+            "o lege de foc pentru ei. Expresie dificila si rara, care leagă direct primirea Legii de imaginea focului teofanic văzut la Sinai, subliniind natura ei sacra si arzătoare.",
         },
       ],
       crossRefs: ["Exodul 19:18", "Evrei 12:29", "Geneza 49:1-2"],
@@ -53,7 +53,7 @@ export const DEUTERONOM_33 = deuteronomChapter({
           transliteration: "ki shameru imratekha",
           language: "ebraica",
           meaning:
-            "caci ei păzesc cuvantul Tau. Motivul dat pentru loialitatea radicala a lui Levi - nu duritate de caracter, ci pastrarea cu sfintenie a Cuvantului lui Dumnezeu, chiar cu pretul relatiilor de familie compromise de idolatrie.",
+            "căci ei păzesc cuvântul Tau. Motivul dat pentru loialitatea radicala a lui Levi - nu duritate de caracter, ci păstrarea cu sfintenie a Cuvantului lui Dumnezeu, chiar cu pretul relatiilor de familie compromise de idolatrie.",
         },
       ],
       crossRefs: ["Exodul 32:25-29", "Matei 10:37", "Maleahi 2:5-7"],

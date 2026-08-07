@@ -10,9 +10,9 @@ export const DEUTERONOM_34 = deuteronomChapter({
   number: 34,
   title: "Deuteronom 34 - Moartea lui Moise pe muntele Nebo, un proroc fara asemanare",
   summary:
-    "Moise vede tara promisa de pe muntele Nebo, moare acolo fara sa treaca Iordanul, este jelit treizeci de zile, iar cartea se încheie cu o evaluare finala unica: in Israel nu s-a mai ridicat un proroc ca el, pe care DOMNUL sa-l fi cunoscut fata in fata.",
+    "Moise vede tara promisa de pe muntele Nebo, moare acolo fara sa treacă Iordanul, este jelit treizeci de zile, iar cartea se încheie cu o evaluare finala unica: in Israel nu s-a mai ridicat un proroc ca el, pe care DOMNUL sa-l fi cunoscut fata in fata.",
   literaryContext:
-    "Acest capitol final, scris probabil de o alta mana dupa moartea lui Moise, încheie nu doar Deuteronomul, ci intregul Pentateuh, facand trecerea de la conducerea lui Moise la cea a lui Iosua si pregatind cartea Iosua pentru cucerirea tarii promise.",
+    "Acest capitol final, scris probabil de o alta mana dupa moartea lui Moise, încheie nu doar Deuteronomul, ci intregul Pentateuh, făcând trecerea de la conducerea lui Moise la cea a lui Iosua si pregatind cartea Iosua pentru cucerirea tarii promise.",
   historicalContext:
     "Necunoașterea locului mormantului lui Moise (v.6) a fost inteleasa tradițional ca o masura providențială impotriva transformarii locului in obiect de cult sau pelerinaj, păstrând centrul atentiei pe DOMNUL, nu pe conducătorul care L-a slujit.",
   units: [
@@ -31,7 +31,7 @@ export const DEUTERONOM_34 = deuteronomChapter({
           transliteration: "herithika be'einekha veshamah lo ta'avor",
           language: "ebraica",
           meaning:
-            "ti-am aratat-o cu ochii tai, dar acolo nu vei trece. Formula finala si directa care confirma limita rămasă asupra lui Moise, imblanzita de privilegiul de a vedea implinirea promisiunii înainte de moarte.",
+            "ti-am aratat-o cu ochii tai, dar acolo nu vei trece. Formula finala si directa care confirma limita rămasă asupra lui Moise, îmblânzită de privilegiul de a vedea implinirea promisiunii înainte de moarte.",
         },
       ],
       crossRefs: ["Numeri 27:12-14", "Evrei 11:13", "Geneza 15:18-21"],
@@ -58,7 +58,7 @@ export const DEUTERONOM_34 = deuteronomChapter({
       ],
       crossRefs: ["Iuda 1:9", "Numeri 20:29", "2 Regi 13:20-21"],
       forYourHeart:
-        "Cinstea adevarata pentru cei care ne-au slujit bine nu are nevoie de un loc fizic de pelerinaj; ea se arata prin recunoștința si ascultare fata de moștenirea lor.",
+        "Cinstea adevărată pentru cei care ne-au slujit bine nu are nevoie de un loc fizic de pelerinaj; ea se arata prin recunoștința si ascultare fata de moștenirea lor.",
     },
     {
       id: "deuteronom-34-9-12",
