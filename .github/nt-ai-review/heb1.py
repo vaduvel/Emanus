@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, runpy, subprocess, tempfile, unicodedata
+import json, runpy, subprocess, unicodedata
 from pathlib import Path
 
 CH = Path('docs/data/biblia-emanus/HEB.1.json')
@@ -42,9 +42,11 @@ A = {
 14:'λειτουργικὰ πνεύματα … εἰς διακονίαν ἀποστελλόμενα … κληρονομεῖν σωτηρίαν'
 }
 
-
 def extract(member):
     return subprocess.check_output(['unzip','-p',str(ZIP),member], text=True)
+
+def norm(s):
+    return unicodedata.normalize('NFC', s).replace('ʼ', "'").replace('’', "'").replace('᾽', "'")
 
 def note(v, term, decision, alternatives, reason):
     return {'verse':v,'term':term,'decision':decision,'alternatives':alternatives,'reason':reason,'reviewRequired':True,'resolutionStatus':'resolved','resolutionReason':reason}
@@ -61,10 +63,11 @@ def main():
       'libera': extract('biblia-libera/HEB.usfm'),
     }
     for key, text in sources.items(): assert text.strip(), key
+    nsbl = norm(sources['sbl'])
     for v, anchor in A.items():
-        # Every decision is tied to the exact archived SBLGNT chapter. Use a stable compact token from each anchor.
-        token = anchor.split(' … ')[0].split('…')[0].strip()
-        assert token in sources['sbl'], (v, token)
+        assert f'Heb 1:{v}\t' in sources['sbl'], v
+        token = norm(anchor.split(' … ')[0].split('…')[0].strip())
+        assert token in nsbl, (v, token)
 
     d = json.loads(CH.read_text())
     assert d['status'] == 'in_review' and d['public'] is False
@@ -108,7 +111,6 @@ def main():
     lines += ['', '## Concluzie de lot','', 'Toate cele 14 versete au primit o decizie semantică explicită după verificarea sursei, nu doar un rezultat automat. Au fost reparate calcurile, acordurile, citatele și lecturile nealiniate; variantele și ambiguitățile materiale sunt documentate în `editorialNotes`. Capitolul rămâne `in_review` și `public: false`.','']
     JR.write_text(unicodedata.normalize('NFC','\n'.join(lines)))
 
-    # Confirm digests from the exact serialized result.
     reread=json.loads(CH.read_text())
     assert reread['audit']['textDigest'] == val['chapter_text_digest'](reread)
     assert reread['audit']['contentDigest'] == val['chapter_content_digest'](reread)
