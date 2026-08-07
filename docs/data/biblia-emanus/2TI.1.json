@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2ti-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,100 +123,163 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:a8910f1e9741f4d57a0a0eb2881ce479cd1aae12b29a6a93047fdd1578f676cc",
-    "contentDigest": "sha256:33ee027a601df82375a99f2b13bea63d320b8e4ba3a734d5ceda39716f4493ab"
+    "textDigest": "sha256:f8e4d3a3786a69238dd8751f10610001472c2ec884fd552aa0ba3d0a173e2fc8",
+    "contentDigest": "sha256:bc51deea3d36dfa3300aa00bc2e0ecf99ba4877e29f3a9b04b7f2465937eea0b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, apostol al lui Isus Hristos, prin voia lui Dumnezeu, după făgăduința vieții care este în Hristos Isus,"
+      "text": "Pavel, apostol al lui Hristos Isus prin voia lui Dumnezeu, potrivit promisiunii vieții care este în Hristos Isus,"
     },
     {
       "number": 2,
-      "text": "către Timotei, preaiubitul meu copil: Har, îndurare și pace de la Dumnezeu Tatăl și Hristos Isus, Domnul nostru."
+      "text": "către Timotei, copilul meu iubit: har, îndurare și pace de la Dumnezeu Tatăl și de la Hristos Isus, Domnul nostru."
     },
     {
       "number": 3,
-      "text": "Îi mulțumesc lui Dumnezeu, pe care îl slujesc ca strămoșii mei, cu o conștiință curată. Cât de necurmată este amintirea mea despre tine în cererile mele, zi și noapte"
+      "text": "Îi mulțumesc lui Dumnezeu, pe care Îl slujesc, ca și înaintașii mei, cu o conștiință curată, pomenindu-te neîncetat în cererile mele, noaptea și ziua,"
     },
     {
       "number": 4,
-      "text": "tânjind să te văd, aducându-mi aminte de lacrimile tale, ca să fiu plin de bucurie;"
+      "text": "dorind să te văd și amintindu-mi de lacrimile tale, ca să fiu umplut de bucurie;"
     },
     {
       "number": 5,
-      "text": "Mi s-a amintit de credința sinceră care este în tine, care a trăit mai întâi în bunica ta Lois și mama ta Eunice și, sunt convins, și în tine."
+      "text": "Mi-am adus aminte de credința neprefăcută care este în tine, care a locuit mai întâi în bunica ta Lois și în mama ta Eunice și despre care sunt convins că este și în tine."
     },
     {
       "number": 6,
-      "text": "De aceea, vă reamintesc că trebuie să stârniți darul lui Dumnezeu care este în voi prin punerea mâinilor mele."
+      "text": "Din această cauză îți reamintesc să reaprinzi darul lui Dumnezeu care este în tine prin punerea mâinilor mele."
     },
     {
       "number": 7,
-      "text": "Căci Dumnezeu nu ne-a dat un duh de frică, ci de putere, de dragoste de stăpânire de sine."
+      "text": "Căci Dumnezeu nu ne-a dat un duh de lașitate, ci de putere, de dragoste și de chibzuință."
     },
     {
       "number": 8,
-      "text": "De aceea, nu vă rușina de mărturia Domnului nostru, nici de mine, prizonierul Lui; ci îndura pentru Vestea Bună, după puterea lui Dumnezeu,"
+      "text": "Așadar, să nu-ți fie rușine de mărturia despre Domnul nostru, nici de mine, prizonierul Lui; ci suferă împreună pentru Evanghelie, potrivit puterii lui Dumnezeu,"
     },
     {
       "number": 9,
-      "text": "care ne-a mântuit și ne-a chemat cu o chemare sfântă, nu după faptele noastre, ci după scopul și harul Său, care ne-a fost dat în Hristos Isus înainte de eternitate,"
+      "text": "care ne-a mântuit și ne-a chemat cu o chemare sfântă, nu după faptele noastre, ci după propriul Său plan și după harul care ne-a fost dat în Hristos Isus înainte de veacurile veșnice,"
     },
     {
       "number": 10,
-      "text": "Dar acum a fost revelat prin apariția Mântuitorului nostru, Hristos Isus, care a abolit moartea, și a adus viața și nemurirea la lumină prin Evanghelia."
+      "text": "și care acum a fost făcut cunoscut prin arătarea Mântuitorului nostru Isus Hristos, Cel care a nimicit moartea și a adus la lumină viața și nepierirea prin Evanghelie."
     },
     {
       "number": 11,
-      "text": "Pentru aceasta am fost numit predicator, apostol și învățător al neamurilor."
+      "text": "pentru care am fost rânduit predicator, apostol și învățător."
     },
     {
       "number": 12,
-      "text": "De aceea și eu sufăr aceste lucruri, dar nu mi-e rușine, căci cunosc pe cel pe care l-am crezut, și sunt convins că este capabil să păzească ceea ce i-am încredințat în ziua aceea."
+      "text": "Din această cauză sufăr și aceste lucruri, dar nu-mi este rușine; căci știu în Cine am crezut și sunt convins că El este în stare să păzească încredințarea mea până în ziua aceea."
     },
     {
       "number": 13,
-      "text": "Țineți modelul cuvintelor sănătoase pe care le-ați auzit de la mine, în credință și iubire care este în Hristos Isus."
+      "text": "Ține ca model cuvintele sănătoase pe care le-ai auzit de la mine, în credința și dragostea care sunt în Hristos Isus."
     },
     {
       "number": 14,
-      "text": "Acel lucru bun care ți-a fost încredințat, păzește-l prin Duhul Sfânt care locuiește în noi."
+      "text": "Păzește bunul lucru încredințat ție prin Duhul Sfânt care locuiește în noi."
     },
     {
       "number": 15,
-      "text": "Acest lucru știi, că toți cei care sunt în Asia întors de la mine, dintre care sunt Phygelus și Hermogenes."
+      "text": "Știi aceasta: toți cei din Asia s-au întors de la mine; printre ei sunt Figel și Ermogen."
     },
     {
       "number": 16,
-      "text": "Fie ca Domnul să dea îndurare casei lui Onisifor, căci de multe ori m-a înviorat și nu i-a fost rușine de lanțul meu,"
+      "text": "Domnul să dea îndurare casei lui Onisifor, deoarece de multe ori m-a înviorat și nu i-a fost rușine de lanțul meu;"
     },
     {
       "number": 17,
-      "text": "Dar când a fost la Roma, m-a căutat cu sârguință și m-a găsit"
+      "text": "ci, când a fost la Roma, m-a căutat cu râvnă și m-a găsit —"
     },
     {
       "number": 18,
-      "text": "(Domnul să-i dea să găsească milostivenia Domnului în acea zi); și în câte lucruri a slujit în Efes, știți foarte bine."
+      "text": "Domnul să-i dea să găsească îndurare de la Domnul în ziua aceea! Și cât de mult a slujit în Efes, tu știi mai bine."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„Hristos Isus”",
+      "alternatives": [
+        "TR-2TI din snapshot inversează ordinea numelui: „Isus Hristos”."
+      ],
+      "reason": "SBLGNT are Χριστοῦ Ἰησοῦ; româna urmează ordinea textului principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "variantă textuală SBLGNT/TR: λαβὼν / λαμβάνων",
+      "decision": "„Mi-am adus aminte”",
+      "alternatives": [
+        "TR-2TI din snapshot are participiul prezent λαμβάνων („primind/luând aminte”)."
+      ],
+      "reason": "SBLGNT are aoristul λαβὼν; româna redă amintirea ca act încheiat, fără a schimba numele sau continuitatea credinței lui Timotei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 10,
+      "term": "variantă a aparatului: Ἰησοῦ Χριστοῦ / Χριστοῦ Ἰησοῦ",
+      "decision": "„Isus Hristos”",
+      "alternatives": [
+        "SBLGNT și TR-2TI din snapshot au Ἰησοῦ Χριστοῦ; WH, Treg și NA28 au Χριστοῦ Ἰησοῦ."
+      ],
+      "reason": "Textul principal urmează SBLGNT și martorul TR fixat, fără a uniformiza automat ordinea numelui cu alte versete.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; lectura principală este consemnată explicit."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală SBLGNT/TR: διδάσκαλος / διδάσκαλος ἐθνῶν",
+      "decision": "„predicator, apostol și învățător”",
+      "alternatives": [
+        "TR-2TI din snapshot adaugă „al neamurilor”."
+      ],
+      "reason": "SBLGNT se oprește la διδάσκαλος; adaosul TR nu este introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 12,
+      "term": "τὴν παραθήκην μου",
+      "decision": "„încredințarea mea”",
+      "alternatives": [
+        "Genitivul poate fi citit ca lucrul încredințat lui Pavel sau ca lucrul încredințat de Pavel lui Dumnezeu."
+      ],
+      "reason": "Formularea românească păstrează ambiguitatea legitimă a expresiei fără a decide în corpul versetului una dintre cele două interpretări.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI a fost confruntat direct; decizia redă literal termenul și documentează ambiguitatea sintactică."
+    },
+    {
+      "verse": 17,
+      "term": "variantă textuală SBLGNT/TR: σπουδαίως / σπουδαιότερον",
+      "decision": "„m-a căutat cu râvnă”",
+      "alternatives": [
+        "TR-2TI din snapshot are comparativul σπουδαιότερον („cu și mai multă râvnă”)."
+      ],
+      "reason": "SBLGNT are adverbul simplu σπουδαίως; româna redă căutarea atentă fără intensificarea comparativă a TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
