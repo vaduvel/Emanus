@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 19 versete au fost revizuite direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; TR a fost folosit numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-review-2026-08-08-heb-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 19,
       "reviewed": 19,
@@ -98,22 +97,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 19 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 19 versete au fost confruntate direct cu SBLGNT/aparat din snapshotul fixat; TR a fost citit exclusiv ca martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă ca auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate calcurile și propozițiile nefirești din textul anterior.",
+        "Citatul din Psalmul 95 a fost punctuat coerent și repetarea lui din 3:15 a fost păstrată semantic.",
+        "Formulările condiționale din 3:6 și 3:14 au fost păstrate fără adaosuri preluate din martorul TR."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT la omisiunile și ordinea cuvintelor consemnate de aparat.",
+        "ὑπόστασις din 3:14 este redat contextual prin „încrederea” de la început, fără a importa aici sensul ontologic din alte contexte.",
+        "Textul nu atenuează avertismentul despre necredință și îndepărtare, dar nici nu îi adaugă o concluzie confesională."
       ]
     },
     "omissionAddition": {
@@ -123,104 +122,168 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:5a4c830f6642c2def8794487e6f46523c831cb2ba2b6355a28b052d92711106a",
-    "contentDigest": "sha256:924d9a49bb229feb720e9fb79b3137fa7f8cda3f6c288146344509f1a5c5ec31"
+    "textDigest": "sha256:c686b3231bd7983732244caa2c9f2b36ab9e5d47b0aced26a097f21a890c6be4",
+    "contentDigest": "sha256:4296139e10e32d18089bfdeef4a2c4672ef9412fb80b83cc89fabd50884d6b8c"
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, fraților sfinți, părtași ai unei chemări cerești, luați în considerare Apostolul și Marele Preot al mărturisirii noastre: Isus,"
+      "text": "De aceea, frați sfinți, părtași ai unei chemări cerești, priviți cu atenție la Isus, Apostolul și Marele-Preot al mărturisirii noastre,"
     },
     {
       "number": 2,
-      "text": "care a fost credincios celui ce l-a numit, cum a fost și Moise în toată casa lui."
+      "text": "care este credincios Celui ce L-a rânduit, așa cum și Moise a fost credincios în casa Lui."
     },
     {
       "number": 3,
-      "text": "Căci a fost socotit vrednic de mai multă slavă decât Moise, pentru că cel ce a zidit casa are mai multă cinste decât casa."
+      "text": "Căci El a fost socotit vrednic de mai multă slavă decât Moise, cu atât mai mult cu cât cel care construiește casa are mai multă cinste decât casa."
     },
     {
       "number": 4,
-      "text": "Căci fiecare casă este zidită de cineva, dar cel ce a zidit toate lucrurile este Dumnezeu."
+      "text": "Fiindcă orice casă este construită de cineva, dar Cel care a construit toate este Dumnezeu."
     },
     {
       "number": 5,
-      "text": "Moise a fost credincios în toată casa lui ca slugă, ca mărturie a celor ce aveau să fie spuse după aceea."
+      "text": "Și Moise a fost credincios în toată casa Lui ca slujitor, spre mărturie despre lucrurile care aveau să fie spuse,"
     },
     {
       "number": 6,
-      "text": "Dar Hristos este credincios ca un Fiu peste casa lui. Noi suntem casa Lui, dacă ne păstrăm încrederea noastră și glorificarea speranței noastre ferm până la sfârșit."
+      "text": "dar Hristos este credincios ca Fiu peste casa Lui; iar casa Lui suntem noi, dacă ținem cu tărie la îndrăzneala și lauda nădejdii."
     },
     {
       "number": 7,
-      "text": "De aceea, așa cum zice Duhul Sfânt, astăzi, dacă veți auzi glasul Lui,"
+      "text": "De aceea, după cum spune Duhul Sfânt: „Astăzi, dacă auziți glasul Lui,"
     },
     {
       "number": 8,
-      "text": "Nu vă împietriți inimile ca în răzvrătire, în ziua judecății în pustie,"
+      "text": "nu vă împietriți inimile ca în răzvrătire, în ziua încercării din pustiu,"
     },
     {
       "number": 9,
-      "text": "unde părinții voștri m-au pus la încercare, m-au pus la încercare, și au văzut faptele mele patruzeci de ani."
+      "text": "unde părinții voștri M-au pus la încercare, într-o probă, și au văzut lucrările Mele"
     },
     {
       "number": 10,
-      "text": "De aceea am fost nemulțumit de acea generație, și am spus: Ei întotdeauna greșesc în inima lor, dar ei nu știu căile mele."
+      "text": "timp de patruzeci de ani. De aceea M-am mâniat pe generația aceasta și am spus: «Ei rătăcesc mereu în inimă și nu au cunoscut căile Mele»,"
     },
     {
       "number": 11,
-      "text": "Așa cum am jurat în mânia mea, ei nu vor intra în odihna mea."
+      "text": "așa că am jurat în mânia Mea: «Nu vor intra în odihna Mea.»”"
     },
     {
       "number": 12,
-      "text": "Feriți-vă, fraților, ca nu cumva să fie în vreunul dintre voi o inimă rea de necredință, căzând de la Dumnezeul cel viu."
+      "text": "Aveți grijă, fraților, ca nu cumva să fie în vreunul dintre voi o inimă rea, necredincioasă, care să se îndepărteze de Dumnezeul cel viu."
     },
     {
       "number": 13,
-      "text": "ci îndemnați-vă unii pe alții zi de zi, cîtă vreme este numită azi, ca nu cumva vreunul dintre voi să fie împietrit de înșelătoria păcatului."
+      "text": "Ci încurajați-vă unii pe alții în fiecare zi, cât timp se spune „Astăzi”, ca niciunul dintre voi să nu fie împietrit prin înșelăciunea păcatului."
     },
     {
       "number": 14,
-      "text": "Căci am ajuns părtași ai lui Hristos, dacă ținem până la sfârșit începutul încrederii noastre,"
+      "text": "Căci am devenit părtași ai lui Hristos, dacă ținem ferm până la sfârșit încrederea pe care am avut-o de la început."
     },
     {
       "number": 15,
-      "text": "În timp ce se spune, astăzi, dacă veți auzi vocea lui, nu întări inimile voastre, ca în rebeliune."
+      "text": "Așa cum se spune: „Astăzi, dacă auziți glasul Lui, nu vă împietriți inimile ca în răzvrătire.”"
     },
     {
       "number": 16,
-      "text": "Căci cine, când au auzit ei, s-a răzvrătit? Oare toți cei ce au ieșit din Egipt au fost călăuziți de Moise?"
+      "text": "Căci cine au fost cei care, deși au auzit, s-au răzvrătit? Oare nu toți cei care au ieșit din Egipt prin Moise?"
     },
     {
       "number": 17,
-      "text": "Cu cine a fost nemulțumit patruzeci de ani? A fost oare cu cei ce au păcătuit, ale căror trupuri au căzut în pustie?"
+      "text": "Și pe cine S-a mâniat timp de patruzeci de ani? Oare nu pe cei care au păcătuit, ale căror trupuri au căzut în pustiu?"
     },
     {
       "number": 18,
-      "text": "Cui a jurat El că nu vor intra în odihna Lui, ci celor neascultători?"
+      "text": "Și cui i-a jurat că nu vor intra în odihna Lui, dacă nu celor care nu au ascultat?"
     },
     {
       "number": 19,
-      "text": "Noi vedem că ei nu au putut intra din cauza necredinței."
+      "text": "Și vedem că nu au putut să intre din cauza necredinței."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "Ἰησοῦν",
+      "decision": "„Isus”",
+      "alternatives": [
+        "TR/RP: „Isus Hristos”"
+      ],
+      "reason": "SBLGNT nu are Χριστόν în acest loc; numele „Hristos” din RP nu este importat în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are Χριστόν în acest loc; numele „Hristos” din RP nu este importat în textul principal."
+    },
+    {
+      "verse": 2,
+      "term": "ἐν τῷ οἴκῳ αὐτοῦ",
+      "decision": "„în casa Lui”",
+      "alternatives": [
+        "WH/Treg/RP: „în toată casa Lui”"
+      ],
+      "reason": "SBLGNT Holmes nu tipărește ὅλῳ în 3:2; „toată” este păstrat la 3:5, unde se află în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT Holmes nu tipărește ὅλῳ în 3:2; „toată” este păstrat la 3:5, unde se află în textul principal."
+    },
+    {
+      "verse": 6,
+      "term": "ὅς οἶκός ἐσμεν ἡμεῖς",
+      "decision": "„iar casa Lui suntem noi”",
+      "alternatives": [
+        "οὗ … în WH/Treg/RP"
+      ],
+      "reason": "Snapshotul Holmes tipărește ὅς; relația posesivă este redată firesc în română din antecedentul „casa Lui”, fără a transforma diferența într-o doctrină.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Snapshotul Holmes tipărește ὅς; relația posesivă este redată firesc în română din antecedentul „casa Lui”, fără a transforma diferența într-o doctrină."
+    },
+    {
+      "verse": 6,
+      "term": "τὸ καύχημα τῆς ἐλπίδος κατάσχωμεν",
+      "decision": "„ținem cu tărie la îndrăzneala și lauda nădejdii”",
+      "alternatives": [
+        "WH/Treg/RP adaugă „până la sfârșit, ferm”"
+      ],
+      "reason": "SBLGNT nu include adaosul μέχρι τέλους βεβαίαν la 3:6; acesta nu este importat, deși o formulare similară apare explicit în 3:14.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu include adaosul μέχρι τέλους βεβαίαν la 3:6; acesta nu este importat, deși o formulare similară apare explicit în 3:14."
+    },
+    {
+      "verse": 9,
+      "term": "ἐπείρασαν … ἐν δοκιμασίᾳ",
+      "decision": "„M-au pus la încercare, într-o probă”",
+      "alternatives": [
+        "RP: ἐπείρασαν με / ἐδοκιμασάν με"
+      ],
+      "reason": "SBLGNT omite pronumele με și păstrează expresia prepozițională; în română obiectul este recuperat semantic din vocea citatului, iar diferența textuală este consemnată aici.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT omite pronumele με și păstrează expresia prepozițională; în română obiectul este recuperat semantic din vocea citatului, iar diferența textuală este consemnată aici."
+    },
+    {
+      "verse": 14,
+      "term": "τὴν ἀρχὴν τῆς ὑποστάσεως",
+      "decision": "„încrederea pe care am avut-o de la început”",
+      "alternatives": [
+        "„temelia de la început”",
+        "„starea de la început”"
+      ],
+      "reason": "În acest context ὑπόστασις desemnează poziția/încrederea fermă asumată; formularea evită transferarea automată a sensului tehnic din Evrei 1:3.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "În acest context ὑπόστασις desemnează poziția/încrederea fermă asumată; formularea evită transferarea automată a sensului tehnic din Evrei 1:3."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
