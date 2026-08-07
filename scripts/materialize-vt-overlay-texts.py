@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Materializează textul canonic Biblia Emanus pentru cele 29 de cărți overlay.
+"""Materializează textul canonic Biblia Emanus pentru overlay-urile publicabile.
 
-Sursa este o ramură Git explicită care conține JSON-urile auditate Biblia Emanus.
-Scriptul copiază numai cele 29 de coduri canonice necesare overlay-urilor și
-refuză orice capitol care nu este BE + published + public + review aprobat.
+Sursa este ramura Git cu JSON-urile canonice auditate. Sunt materializate numai
+cărțile care declară explicit `translation: BE`, `published`, `public: true` și
+review complet aprobat. În starea actuală acestea acoperă Judecători–Daniel.
 
-Nu materializează deuterocanonice, texte etiopiene sau Qumran.
+Osea–Maleahi rămân într-un manifest de blocare: explicațiile există, dar nu pot
+fi publicate ca „Biblia Emanus” până când textul lor biblic nu este tradus și
+aprobat în format BE. Nu se folosesc fallback-uri RCCV/legacy sub eticheta BE.
 """
 
 from __future__ import annotations
@@ -18,7 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "packages" / "shared" / "src" / "bible" / "generated" / "vtCanonicalText"
 
-BOOKS = [
+BE_BOOKS = [
     ("judecatori", "JDG", "Judecători", 7, 21),
     ("imparati2", "2KI", "2 Împărați", 12, 25),
     ("cronici1", "1CH", "1 Cronici", 13, 29),
@@ -36,6 +38,9 @@ BOOKS = [
     ("plangerile", "LAM", "Plângerile lui Ieremia", 25, 5),
     ("ezechiel", "EZK", "Ezechiel", 26, 48),
     ("daniel", "DAN", "Daniel", 27, 12),
+]
+
+BLOCKED_BOOKS = [
     ("osea", "HOS", "Osea", 28, 14),
     ("ioel", "JOL", "Ioel", 29, 3),
     ("amos", "AMO", "Amos", 30, 9),
@@ -51,23 +56,13 @@ BOOKS = [
 ]
 
 APPROVED_FIELDS = (
-    "aiSourceLanguage",
-    "aiRomanianLanguage",
-    "aiTheologicalContext",
-    "omissionAddition",
-    "benchmarkComparison",
-    "copyrightDistance",
-    "criticalIssues",
+    "aiSourceLanguage", "aiRomanianLanguage", "aiTheologicalContext",
+    "omissionAddition", "benchmarkComparison", "copyrightDistance", "criticalIssues",
 )
 
 
 def git_show(ref: str, path: str) -> str:
-    proc = subprocess.run(
-        ["git", "show", f"{ref}:{path}"],
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-    )
+    proc = subprocess.run(["git", "show", f"{ref}:{path}"], cwd=ROOT, text=True, capture_output=True)
     if proc.returncode != 0:
         raise SystemExit(f"Nu pot citi {ref}:{path}\n{proc.stderr}")
     return proc.stdout
@@ -115,40 +110,36 @@ def symbol(book_id: str) -> str:
     return book_id.upper().replace("-", "_") + "_TEXT"
 
 
-def write_book(ref: str, book_id: str, code: str, name: str, order: int, chapters: int) -> tuple[str, int]:
+def write_book(ref: str, book_id: str, code: str, name: str, order: int, chapters: int) -> int:
     chapter_texts: dict[int, list[str]] = {}
     total = 0
     for chapter in range(1, chapters + 1):
-        path = f"docs/data/biblia-emanus/{code}.{chapter}.json"
-        raw = json.loads(git_show(ref, path))
+        raw = json.loads(git_show(ref, f"docs/data/biblia-emanus/{code}.{chapter}.json"))
         texts = validate(raw, code, chapter)
         chapter_texts[chapter] = texts
         total += len(texts)
 
-    const_name = symbol(book_id)
     lines = [
         "// GENERATED de scripts/materialize-vt-overlay-texts.py.",
         f"// Sursă: Biblia Emanus {code}, {chapters} capitole; nu edita manual.",
         "",
-        f"export const {const_name}: Readonly<Record<number, readonly string[]>> = {{",
+        f"export const {symbol(book_id)}: Readonly<Record<number, readonly string[]>> = {{",
     ]
     for chapter, texts in chapter_texts.items():
         lines.append(f"  {chapter}: [")
-        for text in texts:
-            lines.append(f"    {ts_string(text)},")
+        lines.extend(f"    {ts_string(text)}," for text in texts)
         lines.append("  ],")
     lines += ["}", ""]
 
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{book_id}Text.ts").write_text("\n".join(lines), encoding="utf-8")
-    return const_name, total
+    return total
 
 
 def write_index(entries: list[tuple[str, str, str, int, int, int]]) -> None:
     lines = ["// GENERATED de scripts/materialize-vt-overlay-texts.py."]
-    for book_id, _code, _name, _order, _chapters, _verses in entries:
-        const_name = symbol(book_id)
-        lines.append(f'import {{ {const_name} }} from "./{book_id}Text.js"')
+    for book_id, *_ in entries:
+        lines.append(f'import {{ {symbol(book_id)} }} from "./{book_id}Text.js"')
     lines += [
         "",
         "export interface CanonicalOverlayTextBook {",
@@ -165,10 +156,9 @@ def write_index(entries: list[tuple[str, str, str, int, int, int]]) -> None:
     ]
     for book_id, code, name, order, chapters, verses in entries:
         lines.append(
-            "  { "
-            f"bookId: {ts_string(book_id)}, bibleEmanusBookId: {ts_string(code)}, name: {ts_string(name)}, "
-            f"order: {order}, chapterCount: {chapters}, verseCount: {verses}, chapters: {symbol(book_id)}"
-            " },"
+            f"  {{ bookId: {ts_string(book_id)}, bibleEmanusBookId: {ts_string(code)}, "
+            f"name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, "
+            f"verseCount: {verses}, chapters: {symbol(book_id)} }},"
         )
     lines += [
         "] as const",
@@ -177,7 +167,15 @@ def write_index(entries: list[tuple[str, str, str, int, int, int]]) -> None:
         "  VT_CANONICAL_TEXT_BOOKS.map((book) => [book.bookId, book] as const),",
         ")",
         "",
+        "export const VT_CANONICAL_TEXT_BLOCKED = [",
     ]
+    for book_id, code, name, order, chapters in BLOCKED_BOOKS:
+        lines.append(
+            f"  {{ bookId: {ts_string(book_id)}, bibleEmanusBookId: {ts_string(code)}, "
+            f"name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, "
+            'reason: "Biblia Emanus translation not yet available/approved" }},'
+        )
+    lines += ["] as const", ""]
     (OUT / "index.ts").write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -189,21 +187,19 @@ def main() -> None:
     entries = []
     total_chapters = 0
     total_verses = 0
-    for book in BOOKS:
-        book_id, code, name, order, chapters = book
-        const_name, verses = write_book(args.source_ref, *book)
-        del const_name
+    for book in BE_BOOKS:
+        verses = write_book(args.source_ref, *book)
         entries.append((*book, verses))
-        total_chapters += chapters
+        total_chapters += book[4]
         total_verses += verses
     write_index(entries)
 
-    if total_chapters != 637:
-        raise SystemExit(f"Capitole materializate {total_chapters}, se așteptau 637")
+    if len(entries) != 17 or total_chapters != 570:
+        raise SystemExit(f"Materializare invalidă: {len(entries)} cărți / {total_chapters} capitole")
 
     print(
-        f"Biblia Emanus overlay text OK: {len(entries)}/29 cărți, "
-        f"{total_chapters}/637 capitole, {total_verses} versete auditate."
+        f"Biblia Emanus overlay text OK: 17/17 cărți BE, {total_chapters}/570 capitole, "
+        f"{total_verses} versete auditate. Osea–Maleahi: 12 cărți blocate până la traducerea BE."
     )
 
 
