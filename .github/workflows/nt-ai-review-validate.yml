@@ -7,40 +7,27 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  hebrews-source-materialize:
+  hebrews-5-source-inspect:
     runs-on: ubuntu-22.04
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - name: Checkout review branch
         uses: actions/checkout@v4
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-      - name: Materialize pinned Hebrews sources
+      - name: Print pinned Hebrews 5 source slices
         run: |
           set -euo pipefail
           ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
-          OUT=.github/nt-ai-review/heb-source
-          mkdir -p "$OUT"
-          unzip -p "$ZIP" sblgnt/text/HEB.txt > "$OUT/sblgnt.txt"
-          unzip -p "$ZIP" sblgnt/apparatus/text/HEB.txt > "$OUT/apparatus.txt"
-          unzip -p "$ZIP" tr/HEB.usfm > "$OUT/tr.usfm"
-          unzip -p "$ZIP" webp/HEB.usfm > "$OUT/webp.usfm"
-          unzip -p "$ZIP" btf/HEB.usfm > "$OUT/btf.usfm"
-          unzip -p "$ZIP" cornilescu1924/HEB.usfm > "$OUT/cornilescu1924.usfm"
-          unzip -p "$ZIP" biblia-libera/HEB.usfm > "$OUT/biblia-libera.usfm"
-          for f in "$OUT"/*; do test -s "$f"; done
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add "$OUT"
-          if ! git diff --cached --quiet; then
-            git diff --cached --check
-            git commit -m 'chore(biblia): materialize pinned Hebrews sources'
-            git push origin HEAD:codex/nt-ai-review-handoff
-          else
-            echo 'Hebrews sources already materialized.'
-          fi
+          unzip -p "$ZIP" sblgnt/text/HEB.txt | grep '^Heb 5:'
+          echo '--- APPARATUS HEBREWS 5 ---'
+          unzip -p "$ZIP" sblgnt/apparatus/text/HEB.txt | sed -n '/Hebrews 5:1/,/Hebrews 6:1/p'
+          echo '--- TR HEBREWS 5 ---'
+          unzip -p "$ZIP" tr/HEB.usfm | awk 'BEGIN{p=0} /^\\c 5/{p=1} /^\\c 6/{p=0} p'
+          echo '--- WEBP HEBREWS 5 ---'
+          unzip -p "$ZIP" webp/HEB.usfm | awk 'BEGIN{p=0} /^\\c 5/{p=1} /^\\c 6/{p=0} p'
