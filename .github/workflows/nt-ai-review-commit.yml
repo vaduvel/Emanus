@@ -7,10 +7,10 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  eph-source-dump:
+  eph-source-materialize:
     runs-on: ubuntu-22.04
     timeout-minutes: 10
     steps:
@@ -19,23 +19,27 @@ jobs:
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-      - name: Verify and print pinned Ephesians source bundle
+      - name: Verify and materialize pinned Ephesians sources
         run: |
           set -euo pipefail
+          OUT=.github/nt-ai-review/eph-source
+          if test -f "$OUT/sblgnt.txt" && test -f "$OUT/apparatus.txt" && test -f "$OUT/tr.usfm" && test -f "$OUT/webp.usfm" && test -f "$OUT/btf.usfm" && test -f "$OUT/cornilescu1924.usfm" && test -f "$OUT/biblia-libera.usfm"; then
+            echo "Ephesians sources already materialized."
+            exit 0
+          fi
           ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
           unzip -t "$ZIP" >/dev/null
-          for entry in \
-            sblgnt/text/EPH.txt \
-            sblgnt/apparatus/text/EPH.txt \
-            tr/EPH.usfm \
-            webp/EPH.usfm \
-            btf/EPH.usfm \
-            cornilescu1924/EPH.usfm \
-            biblia-libera/EPH.usfm
-          do
-            echo "===== BEGIN $entry ====="
-            unzip -p "$ZIP" "$entry"
-            echo
-            echo "===== END $entry ====="
-          done
+          mkdir -p "$OUT"
+          unzip -p "$ZIP" sblgnt/text/EPH.txt > "$OUT/sblgnt.txt"
+          unzip -p "$ZIP" sblgnt/apparatus/text/EPH.txt > "$OUT/apparatus.txt"
+          unzip -p "$ZIP" tr/EPH.usfm > "$OUT/tr.usfm"
+          unzip -p "$ZIP" webp/EPH.usfm > "$OUT/webp.usfm"
+          unzip -p "$ZIP" btf/EPH.usfm > "$OUT/btf.usfm"
+          unzip -p "$ZIP" cornilescu1924/EPH.usfm > "$OUT/cornilescu1924.usfm"
+          unzip -p "$ZIP" biblia-libera/EPH.usfm > "$OUT/biblia-libera.usfm"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add "$OUT/sblgnt.txt" "$OUT/apparatus.txt" "$OUT/tr.usfm" "$OUT/webp.usfm" "$OUT/btf.usfm" "$OUT/cornilescu1924.usfm" "$OUT/biblia-libera.usfm"
+          git commit -m "ci(biblia): materialize pinned Ephesians sources"
+          git push origin HEAD:codex/nt-ai-review-handoff
