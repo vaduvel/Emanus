@@ -1,18 +1,16 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, HelpCircle, Search, Send } from "lucide-react"
 import type { BibleBook, BibleChapter, BibleUnit } from "@emanus/shared/bible"
-import { BIBLE_BOOKS, BIBLE_TRANSLATION, findChapter } from "@emanus/shared/bible"
+import { BIBLE_TRANSLATION, chapterIsOpen } from "@emanus/shared/bible"
+import { PUBLICATION_BIBLE_BOOKS, findPublicationChapter } from "@emanus/shared/bible-publication"
 import { navigate } from "../router"
 import "../bible.css"
 import "../needs.css"
 
 /*
- * Biblia explicata. Textul (Cornilescu 1924, editia originala) sta intr-un
- * strat vizual separat de explicatie: cine vrea numai textul il poate citi
- * fara sa treaca prin comentariu.
- *
- * Capitolele cu status "in_review" se deschid, dar poarta un semn: nu au fost
- * inca citite de un om.
+ * Biblia explicată păstrează textul biblic separat de explicație. Traducerea
+ * este etichetată per carte; un text editorial provizoriu nu este prezentat
+ * drept Biblia Emanus. Capitolele in_review sunt vizibile numai în development.
  *
  * Intrarea nu este numai pe carti si capitole, ci si pe durere: "cand te
  * doare, citeste". Omul care sufera nu stie sa caute Geneza 37; stie sa spuna
@@ -21,6 +19,8 @@ import "../needs.css"
 
 const LAST_KEY = "emanus.bible.last"
 const SAVED_KEY = "emanus.bible.saved"
+
+const SHOW_EDITORIAL = import.meta.env.DEV
 
 type LastRead = { bookId: string; chapter: number; title: string }
 
@@ -70,6 +70,10 @@ function plat(text: string): string {
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
 }
 
+function visibleChapters(book: BibleBook): BibleChapter[] {
+  return SHOW_EDITORIAL ? book.chapters : book.chapters.filter(chapterIsOpen)
+}
+
 /* ------------------------------------------------- Cand te doare, citeste */
 
 type Nevoie = { eticheta: string; cuvinte: string[] }
@@ -95,8 +99,8 @@ type Gasit = { bookId: string; bookName: string; chapter: number; ref: string; h
 
 function cauta(nevoie: Nevoie): Gasit[] {
   const out: Gasit[] = []
-  for (const book of BIBLE_BOOKS) {
-    for (const ch of book.chapters) {
+  for (const book of PUBLICATION_BIBLE_BOOKS) {
+    for (const ch of visibleChapters(book)) {
       for (const u of ch.units) {
         const fan = plat(`${u.heading} ${u.text} ${u.teaching} ${u.forYourHeart ?? ""}`)
         if (nevoie.cuvinte.some((c) => fan.includes(plat(c)))) {
@@ -131,7 +135,7 @@ function Nevoi() {
         <button type="button" className="ghost" onClick={() => setAleasa(null)}>Închide</button>
       </div>
       {gasite.length === 0
-        ? <p className="muted">Deocamdată n-avem scris nimic pe durerea aceasta. Avem doar Geneza. Vine şi restul.</p>
+        ? <p className="muted">Deocamdată nu avem un pasaj disponibil pentru această căutare.</p>
         : gasite.map((g) => <button
             key={`${g.ref}-${g.heading}`}
             type="button"
@@ -155,15 +159,16 @@ function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter
       <span className="bchap__title">{chapter.title}</span>
       <span className="bchap__sum">{chapter.summary}</span>
     </span>
-    {review && <span className="bchap__flag" title="Scris, dar necitit inca de un om">în revizie</span>}
+    {review && SHOW_EDITORIAL && <span className="bchap__flag" title="Scris, dar necitit încă de un om">în revizie</span>}
   </button>
 }
 
 function Book({ book, query }: { book: BibleBook; query: string }) {
   const q = query.trim().toLowerCase()
   const chapters = useMemo(() => {
-    if (q.length === 0) return book.chapters
-    return book.chapters.filter((c) => {
+    const available = visibleChapters(book)
+    if (q.length === 0) return available
+    return available.filter((c) => {
       const hay = plat(`${c.number} ${c.title} ${c.summary}`)
       if (hay.includes(plat(q))) return true
       return c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
@@ -174,7 +179,8 @@ function Book({ book, query }: { book: BibleBook; query: string }) {
     <header className="bbook__head">
       <h2>{book.name}</h2>
       <p className="muted">{book.blurb}</p>
-      <p className="bbook__count">{book.chapters.length} capitole scrise</p>
+      {book.translation && <p className="muted">{book.translation}</p>}
+      <p className="bbook__count">{visibleChapters(book).length} capitole disponibile</p>
     </header>
     {chapters.length === 0
       ? <p className="muted bbook__none">Nimic cu cuvântul acesta în {book.name}.</p>
@@ -214,9 +220,9 @@ export function Bible() {
       />
     </label>
 
-    {BIBLE_BOOKS.map((b) => <Book key={b.id} book={b} query={query} />)}
+    {PUBLICATION_BIBLE_BOOKS.map((b) => <Book key={b.id} book={b} query={query} />)}
 
-    <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explicaţiile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Traducerea este indicată separat pentru fiecare carte. Explicaţiile sunt scrise pentru Emanus.</p>
   </section>
 }
 
@@ -285,21 +291,22 @@ function Unit({ unit }: { unit: BibleUnit }) {
 }
 
 export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapter: number }) {
-  const found = findChapter(bookId, chapter)
-  const book = BIBLE_BOOKS.find((b) => b.id === bookId)
+  const found = findPublicationChapter(bookId, chapter)
+  const book = PUBLICATION_BIBLE_BOOKS.find((b) => b.id === bookId)
+  const canRead = Boolean(found && (SHOW_EDITORIAL || chapterIsOpen(found)))
 
   useEffect(() => {
-    if (found) writeLast({ bookId, chapter, title: found.title })
-  }, [bookId, chapter, found])
+    if (found && canRead) writeLast({ bookId, chapter, title: found.title })
+  }, [bookId, chapter, found, canRead])
 
-  if (!found || !book) {
+  if (!found || !book || !canRead) {
     return <section className="bible">
       <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
       <p className="muted">Capitolul acesta nu este încă scris. Nu-l punem pe jumătate.</p>
     </section>
   }
 
-  const numbers = book.chapters.map((c) => c.number).sort((a, b) => a - b)
+  const numbers = visibleChapters(book).map((c) => c.number).sort((a, b) => a - b)
   const at = numbers.indexOf(chapter)
   const prev = at > 0 ? numbers[at - 1] : undefined
   const next = at >= 0 && at < numbers.length - 1 ? numbers[at + 1] : undefined
@@ -311,7 +318,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p className="today__kicker">{book.name} {found.number}</p>
       <h1>{found.title}</h1>
       <p className="bchead__sum">{found.summary}</p>
-      {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greşit, spune-ne.</p>}
+      {SHOW_EDITORIAL && found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greşit, spune-ne.</p>}
     </header>
 
     <details className="bctx">
@@ -339,6 +346,6 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
         : <span />}
     </nav>
 
-    <p className="muted bible__note">{BIBLE_TRANSLATION}</p>
+    <p className="muted bible__note">{book.translation ?? BIBLE_TRANSLATION}</p>
   </section>
 }
