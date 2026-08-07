@@ -3,133 +3,133 @@ import { deuteronomPassage } from "./deuteronomText.js"
 import { DEUTERONOM_STATUSES } from "./deuteronomPublication.js"
 
 /*
- * Cartea Deuteronom, explicat\u0103 pe unit\u0103\u021bi de sens.
+ * Cartea Deuteronom, explicată pe unități de sens.
  */
 
 export const DEUTERONOM_7 = deuteronomChapter({
   number: 7,
-  title: "Deuteronom 7 \u2014 Nu pentru c\u0103 sunte\u021bi mai mul\u021bi, ci pentru c\u0103 v-a iubit",
+  title: "Deuteronom 7 — Nu pentru că sunteți mai mulți, ci pentru că v-a iubit",
   summary:
-    "Moise porunce\u0219te nimicirea deplin\u0103 a celor \u0219apte neamuri din Canaan, f\u0103r\u0103 leg\u0103minte, f\u0103r\u0103 c\u0103s\u0103torii \u0219i f\u0103r\u0103 mil\u0103 pentru idolii lor. Motivul alegerii lui Israel nu este m\u0103rimea sau vrednicia poporului, ci iubirea \u0219i credincio\u0219ia lui Dumnezeu fa\u021b\u0103 de leg\u0103m\u00entul cu p\u0103rin\u021bii. Capitolul se \u00eencheie cu \u00cencredin\u021barea c\u0103 DOMNUL va scoate treptat pe vr\u0103jma\u0219i, ca s\u0103 nu-i \u00cempresoare fiarele s\u0103lbatice.",
+    "Moise poruncește nimicirea deplină a celor șapte neamuri din Canaan, fără legăminte, fără căsătorii și fără milă pentru idolii lor. Motivul alegerii lui Israel nu este mărimea sau vrednicia poporului, ci iubirea și credincioșia lui Dumnezeu față de legămîntul cu părinții. Capitolul se încheie cu Încredințarea că DOMNUL va scoate treptat pe vrăjmași, ca să nu-i Împresoare fiarele sălbatice.",
   literaryContext:
-    "Acest capitol dezvolt\u0103 tema aleas\u0103 de la Deuteronom 4: separarea absolut\u0103 de idolatrie, aplicat\u0103 aici concret la neamurile din \u021bara f\u0103g\u0103duit\u0103. Alegerea gratuit\u0103 a lui Israel, f\u0103r\u0103 vreun merit al lor, este una din marile teme teologice ale c\u0103r\u021bii.",
+    "Acest capitol dezvoltă tema aleasă de la Deuteronom 4: separarea absolută de idolatrie, aplicată aici concret la neamurile din țara făgăduită. Alegerea gratuită a lui Israel, fără vreun merit al lor, este una din marile teme teologice ale cărții.",
   historicalContext:
-    "Cele \u0219apte neamuri numite \u2014 hitit, ghirga\u0219it, amorit, canaanit, ferezit, hivit \u0219i iebusit \u2014 locuiau \u021bara pe care Israel avea s\u0103 o cucereasc\u0103. Practicile lor religioase includeau prostitu\u021bie ritual\u0103 \u0219i, potrivit altor texte biblice, jertfe de copii \u2014 fapt care explic\u0103 severitatea poruncii de nimicire deplin\u0103.",
+    "Cele șapte neamuri numite — hitit, ghirgașit, amorit, canaanit, ferezit, hivit și iebusit — locuiau țara pe care Israel avea să o cucerească. Practicile lor religioase includeau prostituție rituală și, potrivit altor texte biblice, jertfe de copii — fapt care explică severitatea poruncii de nimicire deplină.",
   units: [
     {
       id: "deuteronom-7-1-6",
       ref: "Deuteronom 7:1-6",
-      heading: "F\u0103r\u0103 leg\u0103minte, f\u0103r\u0103 c\u0103s\u0103torii, un popor sf\u00ent",
+      heading: "Fără legăminte, fără căsătorii, un popor sfînt",
       text: deuteronomPassage(7, 1, 6),
       teaching: teaching(
-        "Porunca este radical\u0103: \u201es\u0103 le nimice\u0219ti cu des\u0103v\u00er\u0219ire; s\u0103 nu faci nicio \u00celvoial\u0103 cu ele \u0219i s\u0103 nu ai mil\u0103 de ele\u201d. Aceast\u0103 asprime nu este cruzime f\u0103r\u0103 rost, ci un zid de ap\u0103rare \u00cempotriva unei religii care ar fi corupt total leg\u0103m\u00entul lui Israel cu Dumnezeu.",
-        "Interzicerea c\u0103s\u0103toriilor mixte are un motiv teologic clar: \u201ec\u0103ci ar abate pe fiii t\u0103i de la Mine \u0219i i-ar face s\u0103 slujeasc\u0103 altor dumnezei\u201d. Nu este xenofobie; este protec\u021bia unei loialit\u0103\u021bi exclusive, \u00celtr-un context \u00cen care c\u0103s\u0103toria \u00celsemna \u0219i \u00celp\u0103r\u021b\u0119ea religiei.",
-        "Temeiul deplin este numit direct: \u201etu e\u0219ti un popor sf\u00ent pentru DOMNUL, Dumnezeul t\u0103u; DOMNUL, Dumnezeul t\u0103u, te-a ales... ca s\u0103 fii un popor al Lui deosebit\u201d. Sfin\u021benia lui Israel nu vine din merit, ci din alegerea suveran\u0103 a lui Dumnezeu.",
+        "Porunca este radicală: „să le nimicești cu desăvîrșire; să nu faci nicio învoială cu ele și să nu ai milă de ele”. Această asprime nu este cruzime fără rost, ci un zid de apărare Împotriva unei religii care ar fi corupt total legămîntul lui Israel cu Dumnezeu.",
+        "Interzicerea căsătoriilor mixte are un motiv teologic clar: „căci ar abate pe fiii tăi de la Mine și i-ar face să slujească altor dumnezei”. Nu este xenofobie; este protecția unei loialități exclusive, într-un context În care căsătoria însemna și împărțęea religiei.",
+        "Temeiul deplin este numit direct: „tu ești un popor sfînt pentru DOMNUL, Dumnezeul tău; DOMNUL, Dumnezeul tău, te-a ales... ca să fii un popor al Lui deosebit”. Sfințenia lui Israel nu vine din merit, ci din alegerea suverană a lui Dumnezeu.",
       ),
       words: [
         {
-          original: "\u05d4\u05d7\u05e8\u05dd \u05aa\u05d7\u05e8\u05d9\u05dd \u05d0\u05aa\u05dd",
+          original: "החרם ֪חרים א֪ם",
           transliteration: "hacharem tacharim otam",
           language: "ebraica",
           meaning:
-            "s\u0103 le nimice\u0219ti cu des\u0103v\u00er\u0219ire. R\u0103d\u0103cina \u201echerem\u201d descrie o nimicire ritual\u0103 total\u0103, consacrat\u0103 lui Dumnezeu ca judecat\u0103.",
+            "să le nimicești cu desăvîrșire. Rădăcina „cherem” descrie o nimicire rituală totală, consacrată lui Dumnezeu ca judecată.",
         },
       ],
-      crossRefs: ["Exod 34:12-16", "Deuteronom 12:29-31", "1 \u00cempara\u021bi 11:1-4"],
+      crossRefs: ["Exod 34:12-16", "Deuteronom 12:29-31", "1 Împarați 11:1-4"],
       forYourHeart:
-        "Sfin\u021benia ta nu vine din vrednicia proprie; este darul alegerii lui Dumnezeu, care te-a scos deosebit pentru El.",
+        "Sfințenia ta nu vine din vrednicia proprie; este darul alegerii lui Dumnezeu, care te-a scos deosebit pentru El.",
     },
     {
       id: "deuteronom-7-7-11",
       ref: "Deuteronom 7:7-11",
-      heading: "Nu pentru c\u0103 erau mai mul\u021bi, ci pentru c\u0103 i-a iubit",
+      heading: "Nu pentru că erau mai mulți, ci pentru că i-a iubit",
       text: deuteronomPassage(7, 7, 11),
       teaching: teaching(
-        "Motivul alegerii lui Israel este spus f\u0103r\u0103 nicio urm\u0103 de m\u0103gulire: \u201eDOMNUL nu v-a ales \u0219i nu v-a iubit pentru c\u0103 a\u021bi fi mai la num\u0103r dec\u00et toate celelalte popoare, c\u0103ci erati cel mai mic dintre toate popoarele\u201d. Israel nu avea nimic care s\u0103-l fac\u0103 vrednic de alegere.",
-        "Cauza este numai \u00een Dumnezeu \u00cnsu\u0219i: \u201eDOMNUL v-a iubit \u0219i a voit s\u0103 \u021bin\u0103 jur\u0103m\u00entul pe care l-a f\u0103cut p\u0103rin\u021bilor vo\u0219tri\u201d. Iubirea aceasta nu are cauz\u0103 exterioar\u0103; este statornic\u0103 pentru c\u0103 vine din caracterul \u0219i credincio\u0219ia lui Dumnezeu.",
-        "Din aceast\u0103 credincio\u0219ie decurge o r\u0103spundere: \u201eEl \u021bine leg\u0103m\u00entul... fa\u021b\u0103 de cei care \u00cel iubesc \u0219i p\u0103zesc poruncile Lui... dar r\u0103spl\u0103te\u0219te p\u0103rilor s\u0103i, \u00cen fa\u021b\u0103, celor ce-L ur\u0103sc\u201d. Statornicia lui Dumnezeu \u00cen leg\u0103m\u00ent nu este pasiv\u0103 fa\u021b\u0103 de r\u0103zvr\u0103tire.",
+        "Motivul alegerii lui Israel este spus fără nicio urmă de măgulire: „DOMNUL nu v-a ales și nu v-a iubit pentru că ați fi mai la număr decît toate celelalte popoare, căci erati cel mai mic dintre toate popoarele”. Israel nu avea nimic care să-l facă vrednic de alegere.",
+        "Cauza este numai în Dumnezeu însuși: „DOMNUL v-a iubit și a voit să țină jurămîntul pe care l-a făcut părinților voștri”. Iubirea aceasta nu are cauză exterioară; este statornică pentru că vine din caracterul și credincioșia lui Dumnezeu.",
+        "Din această credincioșie decurge o răspundere: „El ține legămîntul... față de cei care Îl iubesc și păzesc poruncile Lui... dar răsplătește părilor săi, În față, celor ce-L urăsc”. Statornicia lui Dumnezeu În legămînt nu este pasivă față de răzvrătire.",
       ),
       words: [
         {
-          original: "\u05d7\u05e9\u05e7 \u05d9\u05d4\u05d5\u05d4 \u05d1\u05db\u05dd",
+          original: "חשק יהוה בכם",
           transliteration: "chashaq YHWH bakhem",
           language: "ebraica",
           meaning:
-            "DOMNUL s-a alipit/legat de voi cu iubire. Verbul descrie o afec\u021biune profund\u0103 \u0219i inten\u021bional\u0103, nu una \u00celt\u00empl\u0103toare sau meritat\u0103.",
+            "DOMNUL s-a alipit/legat de voi cu iubire. Verbul descrie o afecțiune profundă și intențională, nu una întâmplătoare sau meritată.",
         },
       ],
       crossRefs: ["Deuteronom 4:37", "Romani 9:11-16", "Efeseni 1:4-5"],
       forYourHeart:
-        "Nu e\u0219ti iubit de Dumnezeu pentru vrednicia ta; e\u0219ti iubit pentru c\u0103 a\u0219a a voit El, \u0219i aceast\u0103 iubire este statornic\u0103.",
+        "Nu ești iubit de Dumnezeu pentru vrednicia ta; ești iubit pentru că așa a voit El, și această iubire este statornică.",
     },
     {
       id: "deuteronom-7-12-16",
       ref: "Deuteronom 7:12-16",
-      heading: "Binecuv\u00entarea celui care ascult\u0103",
+      heading: "Binecuvîntarea celui care ascultă",
       text: deuteronomPassage(7, 12, 16),
       teaching: teaching(
-        "Ascultarea leg\u0103m\u00entului atrage o binecuv\u00entare cuprinz\u0103toare: rodul p\u00entecelui, rodul ogorului, gr\u00enele, vinul, untdelemnul, turmele \u2014 \u201evei fi binecuv\u00entat mai mult dec\u00et toate popoarele\u201d. Nimic din via\u021ba fizic\u0103 a poporului nu este exclus din grija leg\u0103m\u00entului.",
-        "Promisiunea se \u00centtinde \u0219i la s\u0103n\u0103tate: \u201eDOMNUL va \u00celdep\u0103rta de la tine orice boal\u0103\u201d, \u0219i include amintirea direct\u0103 a \u201erelelor Egiptului, pe care le cuno\u0219ti\u201d \u2014 f\u0103g\u0103duin\u021ba este contrastat\u0103 explicit cu suferin\u021bele robiei din care au fost sco\u0219i.",
+        "Ascultarea legămîntului atrage o binecuvîntare cuprinzătoare: rodul pîntecelui, rodul ogorului, grînele, vinul, untdelemnul, turmele — „vei fi binecuvîntat mai mult decît toate popoarele”. Nimic din viața fizică a poporului nu este exclus din grija legămîntului.",
+        "Promisiunea se Înttinde și la sănătate: „DOMNUL va îndepărta de la tine orice boală”, și include amintirea directă a „relelor Egiptului, pe care le cunoști” — făgăduința este contrastată explicit cu suferințele robiei din care au fost scoși.",
       ),
       words: [
         {
-          original: "\u05d1\u05e8\u05d5\u05da \u05aa\u05d4\u05d9\u05d4 \u05de\u05db\u05dc-\u05d4\u05e2\u05de\u05d9\u05dd",
+          original: "ברוך ֪היה מכל-העמים",
           transliteration: "barukh tihye mikol-ha-amim",
           language: "ebraica",
           meaning:
-            "binecuv\u00entat vei fi mai mult dec\u00et toate popoarele. F\u0103g\u0103duin\u021b\u0103 de bel\u0219ug \u0219i favoare condi\u021bionat\u0103 de ascultarea de leg\u0103m\u00ent.",
+            "binecuvîntat vei fi mai mult decît toate popoarele. Făgăduință de belșug și favoare condiționată de ascultarea de legămînt.",
         },
       ],
       crossRefs: ["Deuteronom 28:1-14", "Exod 15:26", "Psalmul 103:3"],
       forYourHeart:
-        "Grija lui Dumnezeu pentru via\u021ba ta se \u00centtinde peste tot ce ai nevoie, de la hran\u0103 la s\u0103n\u0103tate, nu doar la sufletul t\u0103u.",
+        "Grija lui Dumnezeu pentru viața ta se Înttinde peste tot ce ai nevoie, de la hrană la sănătate, nu doar la sufletul tău.",
     },
     {
       id: "deuteronom-7-17-21",
       ref: "Deuteronom 7:17-21",
-      heading: "Nu te teme; aminte\u0219te-\u021bi ce a f\u0103cut DOMNUL \u00cen Egipt",
+      heading: "Nu te teme; amintește-ți ce a făcut DOMNUL În Egipt",
       text: deuteronomPassage(7, 17, 21),
       teaching: teaching(
-        "Moise anticipeaz\u0103 obiec\u021bia fireasc\u0103: \u201epoate vei zice \u00cen inima ta: aceste neamuri sunt mai mari dec\u00et mine; cum le voi putea izgoni?\u201d. Frica fa\u021b\u0103 de o for\u021b\u0103 mai mare este \u00celeleas\u0103 \u0219i nu condamnat\u0103, dar nu este l\u0103sat\u0103 s\u0103 aib\u0103 ultimul cuv\u00ent.",
-        "Remediul cerut este memoria activ\u0103: \u201eaminte\u0219te-\u021bi bine ce a f\u0103cut DOMNUL, Dumnezeul t\u0103u, lui Faraon \u0219i \u00cttregului Egipt\u201d. Biruin\u021bele trecute nu sunt doar istorie de p\u0103strat, ci temei practic pentru \u00celcredere \u00cen fa\u021ba fricii viitoare.",
+        "Moise anticipează obiecția firească: „poate vei zice În inima ta: aceste neamuri sunt mai mari decît mine; cum le voi putea izgoni?”. Frica față de o forță mai mare este înțeleasă și nu condamnată, dar nu este lăsată să aibă ultimul cuvînt.",
+        "Remediul cerut este memoria activă: „amintește-ți bine ce a făcut DOMNUL, Dumnezeul tău, lui Faraon și îttregului Egipt”. Biruințele trecute nu sunt doar istorie de păstrat, ci temei practic pentru încredere În fața fricii viitoare.",
       ),
       words: [
         {
-          original: "\u05d6\u05db\u05e8 \u05aa\u05d6\u05db\u05e8",
+          original: "זכר ֪זכר",
           transliteration: "zakhor tizkor",
           language: "ebraica",
           meaning:
-            "s\u0103-\u021bi aminte\u0219ti bine (repetare a verbului pentru intensitate). Aducerea aminte activ\u0103 este remediul biblic pentru frica \u00cen fa\u021ba unui vr\u0103jma\u0219 mai mare.",
+            "să-ți amintești bine (repetare a verbului pentru intensitate). Aducerea aminte activă este remediul biblic pentru frica În fața unui vrăjmaș mai mare.",
         },
       ],
       crossRefs: ["Exod 14:13-14", "1 Samuel 17:36-37", "Filipeni 4:6-7"],
       forYourHeart:
-        "C\u00end frica \u00celtreab\u0103 \u201ecum voi putea?\u201d, r\u0103spunsul nu este puterea ta, ci amintirea a ceea ce Dumnezeu a f\u0103cut deja.",
+        "Cînd frica întreabă „cum voi putea?”, răspunsul nu este puterea ta, ci amintirea a ceea ce Dumnezeu a făcut deja.",
     },
     {
       id: "deuteronom-7-22-26",
       ref: "Deuteronom 7:22-26",
-      heading: "Nimicire treptat\u0103, \u0219i idoli care nu trebuie pofti\u021bi",
+      heading: "Nimicire treptată, și idoli care nu trebuie poftiți",
       text: deuteronomPassage(7, 22, 26),
       teaching: teaching(
-        "DOMNUL Se angajeaz\u0103 s\u0103 nimiceasc\u0103 neamurile \u201epu\u021bin c\u00te pu\u021bin\u201d, nu deodat\u0103, \u201eca s\u0103 nu te \u00celmul\u021beasc\u0103 fiarele c\u00mpului\u201d. C\u00e2teodat\u0103 mila lui Dumnezeu se arat\u0103 chiar \u00cen ritmul \u00cent\u00erziat al biruin\u021bei, nu numai \u00cen viteza ei.",
-        "Capitolul se \u00cencheie cu o porunc\u0103 practic\u0103: chipurile cioplite ale zeilor lor s\u0103 fie arse \u00cen foc, iar argintul \u0219i aurul lor s\u0103 nu fie poftite \u0219i luate acas\u0103, \u201eca s\u0103 nu cazi \u00cen curs\u0103\u201d. Comoara ob\u021bnut\u0103 dintr-un idol poart\u0103 cu ea puterea de a corupe pe cel care o r\u00evne\u0219te.",
+        "DOMNUL Se angajează să nimicească neamurile „puțin câte puțin”, nu deodată, „ca să nu te înmulțească fiarele câmpului”. Câteodată mila lui Dumnezeu se arată chiar În ritmul Întîrziat al biruinței, nu numai În viteza ei.",
+        "Capitolul se Încheie cu o poruncă practică: chipurile cioplite ale zeilor lor să fie arse În foc, iar argintul și aurul lor să nu fie poftite și luate acasă, „ca să nu cazi În cursă”. Comoara obțnută dintr-un idol poartă cu ea puterea de a corupe pe cel care o rîvnește.",
       ),
       words: [
         {
-          original: "\u05e9\u05e7\u05e5 \u05aa\u05e9\u05e7\u05e6\u05e0\u05d5 \u05d5\u05aa\u05e2\u05d1 \u05aa\u05aa\u05e2\u05d1\u05e0\u05d5",
+          original: "שקץ ֪שקצנו ו֪עב ֪֪עבנו",
           transliteration: "shaqetz tishaktzenu vetaev titaevenu",
           language: "ebraica",
           meaning:
-            "s\u0103-l urgise\u0219ti cu putere \u0219i s\u0103-l ur\u00e2\u0219ti cu putere (referire la chipul cioplit). Repetarea verbului subliniaz\u0103 refuzul total, f\u0103r\u0103 nicio urm\u0103 de fascina\u021bie fa\u021b\u0103 de idol.",
+            "să-l urgisești cu putere și să-l urâști cu putere (referire la chipul cioplit). Repetarea verbului subliniază refuzul total, fără nicio urmă de fascinație față de idol.",
         },
       ],
-      crossRefs: ["Ie\u0219ire 3:22", "Iosua 6:19", "Fapte 19:19"],
+      crossRefs: ["Ieșire 3:22", "Iosua 6:19", "Fapte 19:19"],
       forYourHeart:
-        "Comorile luate dintr-un lucru necurat pot deveni curs\u0103 pentru tine; refuz\u0103 s\u0103 le por\u021bi acas\u0103.",
+        "Comorile luate dintr-un lucru necurat pot deveni cursă pentru tine; refuză să le porți acasă.",
     },
   ],
   prayer:
-    "Doamne, Tu nu ne-ai ales pentru vrednicia noastr\u0103, ci pentru iubirea \u0219i credincio\u0219ia Ta statornic\u0103.\n\nAjut\u0103-ne s\u0103 ne aducem aminte de biruin\u021bele Tale c\u00end frica \u00celtreab\u0103 cum vom putea.\n\nP\u0103ze\u0219te-ne s\u0103 nu poftim comori care poart\u0103 cu ele puterea de a ne corupe.\n\n\u0218i \u00cenva\u021b\u0103-ne r\u0103bdarea Ta, care nimice\u0219te r\u0103ul pu\u021bin c\u00te pu\u021bin, la timpul potrivit. Amin.",
+    "Doamne, Tu nu ne-ai ales pentru vrednicia noastră, ci pentru iubirea și credincioșia Ta statornică.\n\nAjută-ne să ne aducem aminte de biruințele Tale cînd frica întreabă cum vom putea.\n\nPăzește-ne să nu poftim comori care poartă cu ele puterea de a ne corupe.\n\nȘi Învață-ne răbdarea Ta, care nimicește răul puțin câte puțin, la timpul potrivit. Amin.",
   status: DEUTERONOM_STATUSES[7],
 })

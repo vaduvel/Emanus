@@ -22,8 +22,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "DOMNUL vine din Sinai, Moise imparat in Iesurun",
       text: deuteronomPassage(33, 1, 5),
       teaching: teaching(
-        "Binecuvantarea se deschide cu o imagine teofanica: \u201eDOMNUL a venit din Sinai... a stralucit din muntele Paran si a venit cu zeci de mii de sfinti; din mana Lui dreapta le venea o lege de foc.\u201d Legea nu este prezentata ca o povara birocratica, ci ca stralucirea insasi a prezentei divine.",
-        "Moise este numit cel care \u201ea dat Legea, mostenirea adunarii lui Iacov\u201d, iar rolul sau de conducator este descris ca cel al unui \u201eimparat in Iesurun\u201d - o autoritate care nu vine din ambitie personala, ci din slujirea directa a poruncilor DOMNULUI.",
+        "Binecuvantarea se deschide cu o imagine teofanica: „DOMNUL a venit din Sinai... a stralucit din muntele Paran si a venit cu zeci de mii de sfinti; din mana Lui dreapta le venea o lege de foc.” Legea nu este prezentata ca o povara birocratica, ci ca stralucirea insasi a prezentei divine.",
+        "Moise este numit cel care „a dat Legea, mostenirea adunarii lui Iacov”, iar rolul sau de conducator este descris ca cel al unui „imparat in Iesurun” - o autoritate care nu vine din ambitie personala, ci din slujirea directa a poruncilor DOMNULUI.",
       ),
       words: [
         {
@@ -44,8 +44,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Ruben, Iuda si Levi - viata, ajutorul in lupta, devotamentul absolut",
       text: deuteronomPassage(33, 6, 11),
       teaching: teaching(
-        "Binecuvantarea lui Ruben este simpla si esentiala: \u201esa traiasca... si sa nu moara\u201d, iar pentru Iuda, Moise cere ajutor direct in lupta: \u201emainile lui sa se lupte pentru el si sa-i fii ajutor impotriva vrajmasilor lui\u201d.",
-        "Levi este descris prin devotamentul sau radical fata de DOMNUL, mai presus de legaturile de familie: \u201ecel ce zice despre tatal sau si despre mama sa: Nu i-am vazut... caci ei pazesc cuvantul Tau\u201d. Slujirea preoteasca cere o loialitate care trece dincolo de afectiunile naturale, cand acestea vin in conflict cu ascultarea de DOMNUL.",
+        "Binecuvantarea lui Ruben este simpla si esentiala: „sa traiasca... si sa nu moara”, iar pentru Iuda, Moise cere ajutor direct in lupta: „mainile lui sa se lupte pentru el si sa-i fii ajutor impotriva vrajmasilor lui”.",
+        "Levi este descris prin devotamentul sau radical fata de DOMNUL, mai presus de legaturile de familie: „cel ce zice despre tatal sau si despre mama sa: Nu i-am vazut... caci ei pazesc cuvantul Tau”. Slujirea preoteasca cere o loialitate care trece dincolo de afectiunile naturale, cand acestea vin in conflict cu ascultarea de DOMNUL.",
       ),
       words: [
         {
@@ -66,8 +66,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Beniamin si Iosif - siguranta si belsugul cel mai deplin",
       text: deuteronomPassage(33, 12, 17),
       teaching: teaching(
-        "Beniamin este descris cu tandrete rara: \u201epreaiubitul DOMNULUI va locui in siguranta langa El... si va locui intre umerii lui\u201d - imagine de proximitate si ocrotire intima.",
-        "Binecuvantarea lui Iosif este cea mai extinsa si mai generoasa: \u201ecu cele mai bune daruri ale cerului... cu frunatile muntilor stravechi\u201d - un belsug complet, material si topografic, incoronat de imaginea puterii: \u201ecoarnele lui sunt coarne de bivol; cu ele va impunge popoarele pana la marginile pamantului\u201d.",
+        "Beniamin este descris cu tandrete rara: „preaiubitul DOMNULUI va locui in siguranta langa El... si va locui intre umerii lui” - imagine de proximitate si ocrotire intima.",
+        "Binecuvantarea lui Iosif este cea mai extinsa si mai generoasa: „cu cele mai bune daruri ale cerului... cu frunatile muntilor stravechi” - un belsug complet, material si topografic, incoronat de imaginea puterii: „coarnele lui sunt coarne de bivol; cu ele va impunge popoarele pana la marginile pamantului”.",
       ),
       words: [
         {
@@ -88,8 +88,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Zabulon, Isahar, Gad, Dan, Neftali si Aser - daruri diferite, aceeasi binecuvantare",
       text: deuteronomPassage(33, 18, 25),
       teaching: teaching(
-        "Fiecare seminatie primeste o binecuvantare adaptata caracterului si pozitiei sale viitoare: Zabulon si Isahar se bucura in iesirile si corturile lor, Gad este descris ca o leoaica curajoasa care implineste dreptatea DOMNULUI, iar Dan este \u201eun pui de leu, care sare din Basan\u201d.",
-        "Neftali este \u201esaturat de bunavointa\u201d, iar Aser primeste o imagine plina de bogatie senzoriala: \u201esa-si moaie piciorul in ulei... zavoarele tale sa fie de fier si de arama\u201d - simbol de abundenta si de aparare puternica deopotriva.",
+        "Fiecare seminatie primeste o binecuvantare adaptata caracterului si pozitiei sale viitoare: Zabulon si Isahar se bucura in iesirile si corturile lor, Gad este descris ca o leoaica curajoasa care implineste dreptatea DOMNULUI, iar Dan este „un pui de leu, care sare din Basan”.",
+        "Neftali este „saturat de bunavointa”, iar Aser primeste o imagine plina de bogatie senzoriala: „sa-si moaie piciorul in ulei... zavoarele tale sa fie de fier si de arama” - simbol de abundenta si de aparare puternica deopotriva.",
       ),
       words: [
         {
@@ -110,8 +110,8 @@ export const DEUTERONOM_33 = deuteronomChapter({
       heading: "Dumnezeul lui Iesurun, bratele vesnice, Israel fericit",
       text: deuteronomPassage(33, 26, 29),
       teaching: teaching(
-        "Binecuvantarea se incheie cu afirmatia unicitatii absolute a Dumnezeului lui Israel: \u201enimeni nu este ca Dumnezeul lui Iesurun, Care trece pe ceruri ca sa-ti vina in ajutor\u201d, urmata de una dintre cele mai calduroase imagini din tot Deuteronomul: \u201esub tine sunt bratele vesnice\u201d.",
-        "Concluzia finala este o exclamatie de fericire: \u201eFerice de tine, Israele! Cine este ca tine, un popor mantuit de DOMNUL\u201d. Toata cartea Deuteronomul, cu legile, avertismentele si blestemele ei, se incheie pe aceasta nota de siguranta si bucurie intemeiata pe caracterul lui Dumnezeu, nu pe meritul poporului.",
+        "Binecuvantarea se incheie cu afirmatia unicitatii absolute a Dumnezeului lui Israel: „nimeni nu este ca Dumnezeul lui Iesurun, Care trece pe ceruri ca sa-ti vina in ajutor”, urmata de una dintre cele mai calduroase imagini din tot Deuteronomul: „sub tine sunt bratele vesnice”.",
+        "Concluzia finala este o exclamatie de fericire: „Ferice de tine, Israele! Cine este ca tine, un popor mantuit de DOMNUL”. Toata cartea Deuteronomul, cu legile, avertismentele si blestemele ei, se incheie pe aceasta nota de siguranta si bucurie intemeiata pe caracterul lui Dumnezeu, nu pe meritul poporului.",
       ),
       words: [
         {

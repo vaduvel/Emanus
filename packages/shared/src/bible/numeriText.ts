@@ -36,11 +36,11 @@ import { NUMERI_TEXT_35 } from "./numeriText35.js"
 import { NUMERI_TEXT_36 } from "./numeriText36.js"
 
 /*
- * Textul biblic al c\u0103r\u021bii Numeri, adunat pe capitole.
+ * Textul biblic al cărții Numeri, adunat pe capitole.
  *
  * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/NUM.*.json.
- * Structura r\u0103m\u00e2ne aceea\u015fi chiar dac\u0103 textul se schimb\u0103: se \u00eenlocuiesc doar
- * \u015firurile din fi\u015fierele numeriTextN.ts, nu num\u0103rul intr\u0103rilor \u0219i nu cheile.
+ * Structura rămâne aceeaşi chiar dacă textul se schimbă: se înlocuiesc doar
+ * şirurile din fişierele numeriTextN.ts, nu numărul intrărilor și nu cheile.
  */
 
 const NUMERI_TEXT: Record<number, readonly string[]> = {
@@ -85,7 +85,7 @@ const NUMERI_TEXT: Record<number, readonly string[]> = {
 export function numeriVerseCount(chapter: number): number {
   const verses = NUMERI_TEXT[chapter]
   if (!verses) {
-    throw new Error(`[Numeri ${chapter}] lipse\u015fte textul biblic \u00een numeriText.ts.`)
+    throw new Error(`[Numeri ${chapter}] lipseşte textul biblic în numeriText.ts.`)
   }
   return verses.length
 }
@@ -93,11 +93,11 @@ export function numeriVerseCount(chapter: number): number {
 export function numeriPassage(chapter: number, from: number, to: number): string {
   const verses = NUMERI_TEXT[chapter]
   if (!verses) {
-    throw new Error(`[Numeri ${chapter}] lipse\u015fte textul biblic \u00een numeriText.ts.`)
+    throw new Error(`[Numeri ${chapter}] lipseşte textul biblic în numeriText.ts.`)
   }
   if (from < 1 || to > verses.length || to < from) {
     throw new Error(
-      `[Numeri ${chapter}] interval cerut \u00een afara textului: ${from}-${to}; capitolul are ${verses.length} versete.`,
+      `[Numeri ${chapter}] interval cerut în afara textului: ${from}-${to}; capitolul are ${verses.length} versete.`,
     )
   }
   return verses.slice(from - 1, to).join(" ")

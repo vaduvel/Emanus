@@ -22,8 +22,8 @@ export const DEUTERONOM_34 = deuteronomChapter({
       heading: "Moise vede toata tara de pe muntele Nebo",
       text: deuteronomPassage(34, 1, 4),
       teaching: teaching(
-        "DOMNUL insusi ii arata lui Moise \u201etoata tara: Galaadul pana la Dan... toata tara lui Iuda pana la Marea de Apus\u201d - o panorama completa a promisiunii facute lui Avraam, Isaac si Iacov, vazuta cu proprii ochi chiar de cel care nu va intra in ea.",
-        "Cuvintele DOMNULUI sunt directe si fara ambiguitate: \u201eTi-am aratat-o cu ochii tai, dar nu vei trece in ea.\u201d Consecinta pacatului de la Meriba ramane in vigoare, dar este imblanzita de darul vederii depline a implinirii promisiunii, chiar fara a o experimenta personal.",
+        "DOMNUL insusi ii arata lui Moise „toata tara: Galaadul pana la Dan... toata tara lui Iuda pana la Marea de Apus” - o panorama completa a promisiunii facute lui Avraam, Isaac si Iacov, vazuta cu proprii ochi chiar de cel care nu va intra in ea.",
+        "Cuvintele DOMNULUI sunt directe si fara ambiguitate: „Ti-am aratat-o cu ochii tai, dar nu vei trece in ea.” Consecinta pacatului de la Meriba ramane in vigoare, dar este imblanzita de darul vederii depline a implinirii promisiunii, chiar fara a o experimenta personal.",
       ),
       words: [
         {
@@ -44,8 +44,8 @@ export const DEUTERONOM_34 = deuteronomChapter({
       heading: "Moartea lui Moise, mormantul necunoscut, jelirea poporului",
       text: deuteronomPassage(34, 5, 8),
       teaching: teaching(
-        "Moise este numit la finalul vietii sale \u201eslujitorul DOMNULUI\u201d - titlul cel mai inalt posibil, care rezuma intreaga sa activitate. Moartea sa vine \u201edupa cuvantul DOMNULUI\u201d, nu ca un accident, ci ca implinire a unei hotarari cunoscute dinainte.",
-        "Detaliul remarcabil este pastrarea tainei mormantului: \u201enimeni nu-i cunoaste mormantul pana in ziua de astazi\u201d. In ciuda acestui fapt, poporul il jeleste deplin - \u201etreizeci de zile\u201d - aratand cinstea reala pentru conducatorul lor, fara a avea nevoie de un loc de pelerinaj pentru a o exprima.",
+        "Moise este numit la finalul vietii sale „slujitorul DOMNULUI” - titlul cel mai inalt posibil, care rezuma intreaga sa activitate. Moartea sa vine „dupa cuvantul DOMNULUI”, nu ca un accident, ci ca implinire a unei hotarari cunoscute dinainte.",
+        "Detaliul remarcabil este pastrarea tainei mormantului: „nimeni nu-i cunoaste mormantul pana in ziua de astazi”. In ciuda acestui fapt, poporul il jeleste deplin - „treizeci de zile” - aratand cinstea reala pentru conducatorul lor, fara a avea nevoie de un loc de pelerinaj pentru a o exprima.",
       ),
       words: [
         {
@@ -66,8 +66,8 @@ export const DEUTERONOM_34 = deuteronomChapter({
       heading: "Iosua plin de duh, evaluarea finala unica a lui Moise",
       text: deuteronomPassage(34, 9, 12),
       teaching: teaching(
-        "Iosua este descris ca fiind \u201eplin de duhul intelepciunii, caci Moise isi pusese mainile peste el\u201d - transmiterea autoritatii nu este lasata la intamplare, ci este confirmata printr-un act deliberat de investire, iar poporul raspunde cu ascultare.",
-        "Cartea se incheie cu o evaluare finala fara egal: \u201ein Israel nu s-a mai ridicat un proroc ca Moise, pe care DOMNUL sa-l fi cunoscut fata in fata\u201d. Aceasta afirmatie, scrisa probabil mult mai tarziu, lasa deschisa asteptarea canonica a unui proroc viitor asemenea lui Moise, dar mai mare - asteptare pe care Noul Testament o va identifica cu Hristos.",
+        "Iosua este descris ca fiind „plin de duhul intelepciunii, caci Moise isi pusese mainile peste el” - transmiterea autoritatii nu este lasata la intamplare, ci este confirmata printr-un act deliberat de investire, iar poporul raspunde cu ascultare.",
+        "Cartea se incheie cu o evaluare finala fara egal: „in Israel nu s-a mai ridicat un proroc ca Moise, pe care DOMNUL sa-l fi cunoscut fata in fata”. Aceasta afirmatie, scrisa probabil mult mai tarziu, lasa deschisa asteptarea canonica a unui proroc viitor asemenea lui Moise, dar mai mare - asteptare pe care Noul Testament o va identifica cu Hristos.",
       ),
       words: [
         {

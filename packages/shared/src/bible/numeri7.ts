@@ -27,7 +27,7 @@ export const NUMERI_7 = numeriChapter({
       text: numeriPassage(7, 1, 11),
       teaching: teaching(
         "În chiar ziua în care Cortul a fost ridicat, uns și sfințit, căpeteniile celor douăsprezece seminții au adus primul lor dar: șase cărucioare acoperite și doisprezece boi, câte unul de la fiecare pereche de căpetenii. Nu este un dar personal păstrat pentru ei; DOMNUL le poruncește lui Moise să le ia și să le dea leviților.",
-        "Împarțirea cărucioarelor arată o înțelepciune practică: gherșoniții, care poartă covoare și învelitori ușoare, primesc două cărucioare și patru boi; merariții, care poartă scândurile și stâlpii grei, primesc patru cărucioare și opt boi — de două ori mai mult, potrivit greutății sarcinii lor. Chehatiții nu primesc niciunul, pentru că slujba lor cerea să poarte lucrurile sfinte "pe umeri", nu în căruță.",
+        "Împarțirea cărucioarelor arată o înțelepciune practică: gherșoniții, care poartă covoare și învelitori ușoare, primesc două cărucioare și patru boi; merariții, care poartă scândurile și stâlpii grei, primesc patru cărucioare și opt boi — de două ori mai mult, potrivit greutății sarcinii lor. Chehatiții nu primesc niciunul, pentru că slujba lor cerea să poarte lucrurile sfinte „pe umeri”, nu în căruță.",
         "Ia aminte cum dăruirea căpeteniilor este imediat pusă în slujba altcuiva: nu rămâne un tezaur strâns, ci devine unealtă de lucru pentru leviții care poartă Cortul. Darul cel mai frumos este cel care ajută pe altul să-și împlinească slujba lui.",
       ),
       words: [
@@ -109,9 +109,9 @@ export const NUMERI_7 = numeriChapter({
       heading: "Glasul de pe capacul ispășirii",
       text: numeriPassage(7, 89, 89),
       teaching: teaching(
-        "Ultimul verset al celui mai lung capitol din Numeri este și unul dintre cele mai intime din toată Scriptura: "când Moise intra în Cortul Întâlnirii ca să vorbească cu DOMNUL, auzea Glasul vorbindu-i de pe capacul ispășirii... dintre cei doi heruvimi".",
+        "Ultimul verset al celui mai lung capitol din Numeri este și unul dintre cele mai intime din toată Scriptura: „când Moise intra în Cortul Întâlnirii ca să vorbească cu DOMNUL, auzea Glasul vorbindu-i de pe capacul ispășirii... dintre cei doi heruvimi”.",
         "Toate darurile, toate jertfele, toate rânduielile capitolelor anterioare duc spre acest singur lucru: un loc în care Dumnezeu vorbește cu omul, față către față, de pe locul acoperirii păcatului. Nu de pe un tron depărtat, ci de pe chiar capacul care acoperea Mărturia, dintre cei doi heruvimi care străjuiau sfințenia Lui.",
-        "Acest verset încheie întreg parcursul de la Exod 25:22, unde DOMNUL făgăduise pentru întâia dată: "acolo Mă voi întâlni cu tine și îiți voi vorbi". După tot ce a fost construit, uns, sfințit, numit și rânduit, făgăduința s-a împlinit întocmai: Dumnezeu vorbește cu adevărat cu poporul Său, prin Moise, din chiar mijlocul taberei.",
+        "Acest verset încheie întreg parcursul de la Exod 25:22, unde DOMNUL făgăduise pentru întâia dată: „acolo Mă voi întâlni cu tine și îiți voi vorbi”. După tot ce a fost construit, uns, sfințit, numit și rânduit, făgăduința s-a împlinit întocmai: Dumnezeu vorbește cu adevărat cu poporul Său, prin Moise, din chiar mijlocul taberei.",
       ),
       words: [
         {
@@ -119,7 +119,7 @@ export const NUMERI_7 = numeriChapter({
           transliteration: "meal hakaporet",
           language: "ebraica",
           meaning:
-            "de pe capacul ispășirii. Același cuvânt, "kaporet", vine din rădăcina "a acoperi, a ispăși"; glasul DOMNULUI vine tocmai din locul în care sfânta Lege era acoperită de mila Să. Vorbirea Lui cu omul se naște din ispășire, nu din judecată rece.",
+            "de pe capacul ispășirii. Același cuvânt, „kaporet”, vine din rădăcina „a acoperi, a ispăși”; glasul DOMNULUI vine tocmai din locul în care sfânta Lege era acoperită de mila Să. Vorbirea Lui cu omul se naște din ispășire, nu din judecată rece.",
         },
       ],
       crossRefs: ["Exod 25:17-22", "Evrei 4:16", "Evrei 9:5"],

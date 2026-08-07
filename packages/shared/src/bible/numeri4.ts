@@ -27,7 +27,7 @@ export const NUMERI_4 = numeriChapter({
       text: numeriPassage(4, 1, 4),
       teaching: teaching(
         "Numărătoarea din acest capitol se deosebește limpede de cea din capitolul trei: acolo se numărau toți bărbații de la o lună în sus, ca semn al apartenenței; aici se numără doar cei între treizeci și cincizeci de ani, vârsta puterii depline a trupului. Slujba de purtare a Cortului cerea putere, nu doar apartenență.",
-        "Textul numește limpede sarcina chehatiților: "lucrurile preasfinte". Din cele trei familii ale lui Levi, tocmai cea mai numeroasă este însărcinată cu ce este mai aproape de sfințenia lui Dumnezeu. Nu este o întâmplare că unitatea următoare va arăta cu câtă grijă trebuiau acoperite aceste lucruri înainte ca ei să le poată atinge.",
+        "Textul numește limpede sarcina chehatiților: „lucrurile preasfinte”. Din cele trei familii ale lui Levi, tocmai cea mai numeroasă este însărcinată cu ce este mai aproape de sfințenia lui Dumnezeu. Nu este o întâmplare că unitatea următoare va arăta cu câtă grijă trebuiau acoperite aceste lucruri înainte ca ei să le poată atinge.",
       ),
       words: [
         {
@@ -71,7 +71,7 @@ export const NUMERI_4 = numeriChapter({
       heading: "Să poarte, dar să nu atingă",
       text: numeriPassage(4, 15, 16),
       teaching: teaching(
-        "Abia după ce Aaron și fiii lui termină de acoperit tot, chehatiții pot veni să poarte. Textul spune limpede: "să nu se atingă de lucrurile sfinte, ca să nu moară". Nu este o interdicție fără rost; este granița dintre viață și moarte pentru cei care se apropie prea mult de sfințenia neacoperită.",
+        "Abia după ce Aaron și fiii lui termină de acoperit tot, chehatiții pot veni să poarte. Textul spune limpede: „să nu se atingă de lucrurile sfinte, ca să nu moară”. Nu este o interdicție fără rost; este granița dintre viață și moarte pentru cei care se apropie prea mult de sfințenia neacoperită.",
         "În aceeași unitate, textul amintește ce stă în grija lui Eleazar: uleiul pentru lumină, tămâia, ofranda perpetuă, uleiul de ungere și supravegherea întregului Cort. Lucrurile de folosință zilnică, spre deosebire de cele preasfinte, rămân în grija directă a unui singur om, cu numele lui rostit anume.",
       ),
       words: [
@@ -93,9 +93,9 @@ export const NUMERI_4 = numeriChapter({
       heading: "Nici măcar o clipă să nu privească",
       text: numeriPassage(4, 17, 20),
       teaching: teaching(
-        "DOMNUL le dă lui Moise și lui Aaron o grijă aparte: "nu lăsați ca seminția familiilor chehatiților să fie nimicită". Nu este o amenințare rece; este o grijă părintească pentru un popor întreg de oameni puși să slujească chiar lângă ce este mai primejdios de apropiat.",
-        "Soluția nu este depărtarea chehatiților de slujbă, ci rânduirea preoțească așezată între ei și lucrurile sfinte: "Aaron și fiii lui să intre și să-i rânduiască". Și totuși, chiar și așa, rămâne limita ultimă: "să nu intre să privească lucrurile sfinte nici măcar o clipă". Nu doar atingerea, ci și privirea neautorizată este oprită.",
-        "Ia aminte că grija aceasta nu vine dintr-o răceală legalistă, ci din dorința lui Dumnezeu ca poporul Său să trăiască: "faceți așa pentru ei, ca să trăiască și să nu moară". Rânduiala nu este împotriva omului; este pentru viața lui.",
+        "DOMNUL le dă lui Moise și lui Aaron o grijă aparte: „nu lăsați ca seminția familiilor chehatiților să fie nimicită”. Nu este o amenințare rece; este o grijă părintească pentru un popor întreg de oameni puși să slujească chiar lângă ce este mai primejdios de apropiat.",
+        "Soluția nu este depărtarea chehatiților de slujbă, ci rânduirea preoțească așezată între ei și lucrurile sfinte: „Aaron și fiii lui să intre și să-i rânduiască”. Și totuși, chiar și așa, rămâne limita ultimă: „să nu intre să privească lucrurile sfinte nici măcar o clipă”. Nu doar atingerea, ci și privirea neautorizată este oprită.",
+        "Ia aminte că grija aceasta nu vine dintr-o răceală legalistă, ci din dorința lui Dumnezeu ca poporul Său să trăiască: „faceți așa pentru ei, ca să trăiască și să nu moară”. Rânduiala nu este împotriva omului; este pentru viața lui.",
       ),
       words: [
         {
@@ -117,7 +117,7 @@ export const NUMERI_4 = numeriChapter({
       text: numeriPassage(4, 21, 28),
       teaching: teaching(
         "Aceeași vârstă de numărare — treizeci până la cincizeci de ani — se aplică și familiilor gherșoniților, cu o slujbă diferită de a chehatiților: nu lucrurile preasfinte, ci covoarele Cortului, învelitorile lui, perdelele și pânzele curții.",
-        "Un amănunt nou apare aici: "toată slujba fiilor gherșoniților va fi sub porunca lui Aaron și a fiilor lui", iar însărcinarea lor concretă este pusă "sub supravegherea lui Itamar, fiul preotului Aaron". Fiecare familie de leviți are un supraveghetor numit: Eleazar peste chehatiți, Itamar peste gherșoniți și merariți. Râspunderea nu rămâne difuză; are un nume la fiecare capăt.",
+        "Un amănunt nou apare aici: „toată slujba fiilor gherșoniților va fi sub porunca lui Aaron și a fiilor lui”, iar însărcinarea lor concretă este pusă „sub supravegherea lui Itamar, fiul preotului Aaron”. Fiecare familie de leviți are un supraveghetor numit: Eleazar peste chehatiți, Itamar peste gherșoniți și merariți. Râspunderea nu rămâne difuză; are un nume la fiecare capăt.",
       ),
       words: [
         {
@@ -139,7 +139,7 @@ export const NUMERI_4 = numeriChapter({
       text: numeriPassage(4, 29, 33),
       teaching: teaching(
         "Familia lui Merari primește aceeași vârstă de numărare și sarcina cea mai grea din punct de vedere fizic: scândurile Cortului, drugii, stâlpii, picioarele, atât ale Lăcașului cât și ale curții dimprejur.",
-        "Un amănunt neobișnuit încheie unitatea: "veți rândui pe nume uneltele pe care le au de purtat". Nu doar oamenii sunt numiți pe nume în capitolele acestea, ci și lucrurile pe care le poartă. Fiecare scândură, fiecare stâlp avea locul lui știut, iar cel care o purta știa exact ce anume duce.",
+        "Un amănunt neobișnuit încheie unitatea: „veți rândui pe nume uneltele pe care le au de purtat”. Nu doar oamenii sunt numiți pe nume în capitolele acestea, ci și lucrurile pe care le poartă. Fiecare scândură, fiecare stâlp avea locul lui știut, iar cel care o purta știa exact ce anume duce.",
       ),
       words: [
         {
@@ -162,7 +162,7 @@ export const NUMERI_4 = numeriChapter({
       teaching: teaching(
         "După ce fiecare slujbă a fost descrisă în amănunt, vine și numărătoarea reală, făcută de Moise, Aaron și căpeteniile adunării împreună: chehatiții — două mii șapte sute cincizeci; gherșoniții — două mii șase sute treizeci; merariții — trei mii două sute.",
         "Observă că familia chehatiților, cea mai numeroasă la numărătoarea de la o lună în sus din capitolul trei (opt mii șase sute), rămâne acum cea mai puțin numeroasă dintre cele trei la vârsta de treizeci până la cincizeci de ani (două mii șapte sute cincizeci), iar merariții, cei mai puțin numeroși acolo, sunt acum cei mai numeroși. Vârsta și puterea nu urmează același tipar ca mărimea generală a unei familii.",
-        "De trei ori se repetă aceeași formulă de încheiere pentru fiecare familie: numărătorile s-au făcut "după porunca DOMNULUI dată prin Moise". Ascultarea nu se declară o singură dată pentru întregul capitol, ci se confirmă la fiecare pas în parte.",
+        "De trei ori se repetă aceeași formulă de încheiere pentru fiecare familie: numărătorile s-au făcut „după porunca DOMNULUI dată prin Moise”. Ascultarea nu se declară o singură dată pentru întregul capitol, ci se confirmă la fiecare pas în parte.",
       ),
       words: [],
       crossRefs: ["Numeri 3:14-39", "Numeri 26:57-62"],
@@ -175,8 +175,8 @@ export const NUMERI_4 = numeriChapter({
       heading: "Opt mii cinci sute optzeci, fiecare la slujba lui",
       text: numeriPassage(4, 46, 49),
       teaching: teaching(
-        "Capitolul se încheie cu totalul general al celor numărați între treizeci și cincizeci de ani, din toate cele trei familii ale lui Levi: opt mii cinci sute optzeci de bărbați, toți "la slujire și la purtarea sarcinilor în Cortul Întâlnirii".",
-        "Ultima propoziție a capitolului este și cea mai importantă: "au fost numărați fiecare la slujba lui și la sarcina lui". Numărul mare nu înseamnă o masă uniformă de oameni; înseamnă opt mii cinci sute optzeci de slăjitori, fiecare cu o slujbă anume, cu un loc anume, cu o răspundere anume.",
+        "Capitolul se încheie cu totalul general al celor numărați între treizeci și cincizeci de ani, din toate cele trei familii ale lui Levi: opt mii cinci sute optzeci de bărbați, toți „la slujire și la purtarea sarcinilor în Cortul Întâlnirii”.",
+        "Ultima propoziție a capitolului este și cea mai importantă: „au fost numărați fiecare la slujba lui și la sarcina lui”. Numărul mare nu înseamnă o masă uniformă de oameni; înseamnă opt mii cinci sute optzeci de slăjitori, fiecare cu o slujbă anume, cu un loc anume, cu o răspundere anume.",
         "Când tabăra pornea la drum, nu se mișca o mulțime dezorganizată, ci un întreg trup rânduit, în care fiecare mădular știa exact ce poartă, cum poartă și cui răspunde. Capitolul acesta, atât de plin de amănunte, este de fapt o pildă despre cum arată o slujire ordonată în jurul sfințeniei lui Dumnezeu.",
       ),
       words: [
