@@ -1,0 +1,42 @@
+name: VT Release Normalize
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-complet
+  pull_request:
+    branches:
+      - agent/biblia-explicata-vt-maleahi
+
+jobs:
+  normalize-and-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Normalize legacy VT source in workspace
+        run: python3 scripts/fix-vt-release-source.py --write
+
+      - name: Show normalization footprint
+        run: |
+          git diff --stat -- packages/shared/src/bible
+          git diff --check -- packages/shared/src/bible
+
+      - name: Verify VT explained coverage
+        run: pnpm check:vt-explained
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
