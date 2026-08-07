@@ -37,9 +37,9 @@ def main() -> None:
                     "WLC": verse["WLC"]["text"],
                     "review": {
                         "status": "pending",
-                        "severity": null,
-                        "issue": null,
-                        "proposedRo": null
+                        "severity": None,
+                        "issue": None,
+                        "proposedRo": None
                     }
                 }
             )
