@@ -16,14 +16,14 @@ Au fost revizuite toate cele 14 versete Emanus din `3JN.1`, inclusiv cele două 
 | --- | --- | --- |
 | 3JN.1.1 | `Ὁ πρεσβύτερος … ἐν ἀληθείᾳ` | Se păstrează titlul epistolar „Bătrânul”, vocativul singular pentru Gaius și „în adevăr”; formularea anterioară pierdea virgula de adresare. |
 | 3JN.1.2 | `Ἀγαπητέ … εὐοδοῦσθαι καὶ ὑγιαίνειν` | Vocativul este masculin singular („Preaiubitule”), nu feminin; dorința privește binele în toate și sănătatea, fără a transforma `ψυχή` într-o afirmație doctrinară suplimentară. |
-| 3JN.1.3 | `σου τῇ ἀληθείᾳ … σὺ … περιπατεῖς` | Toate formele de persoana a doua sunt la singular; versetul redă mărturia despre adevărul lui Gaius și umblarea lui în adevăr. |
+| 3JN.1.3 | `σου τῇ ἀληθείᾳ … καθὼς σὺ … περιπατεῖς` | Toate formele de persoana a doua sunt la singular; `καθὼς` leagă mărturia despre adevărul lui Gaius de felul în care el umblă în adevăr. |
 | 3JN.1.4 | `τὰ ἐμὰ τέκνα … περιπατοῦντα` | Participiul plural este redat firesc prin „ai mei copii umblă”; ortografia modernă este „umblă”, nu forma veche „umblînd”. |
 | 3JN.1.5 | `πιστὸν ποιεῖς … ἀδελφοὺς … ξένους` | `πιστὸν` este redat prin „cu credincioșie”; frații cărora Gaius le slujește sunt și străini, fără a introduce o funcție eclezială absentă din text. |
-| 3JN.1.6 | `ἐμαρτύρησάν σου τῇ ἀγάπῃ … προπέμψας` | Mărturia este despre dragostea lui Gaius; `προπέμπω` cere sprijinirea lor mai departe în călătorie, într-un mod vrednic de Dumnezeu. |
+| 3JN.1.6 | `ἐμαρτύρησάν σου τῇ ἀγάπῃ … προπέμψας` | Mărturia este despre dragostea lui Gaius; `προπέμπω` cere trimiterea lor mai departe pe drum, într-un mod vrednic de Dumnezeu. |
 | 3JN.1.7 | `ὑπὲρ τοῦ ὀνόματος … μηδὲν λαμβάνοντες` | SBLGNT are „pentru Nume” fără pronumele adăugat de unele tradiții; se păstrează plecarea lor și faptul că nu primesc nimic de la neamuri. |
 | 3JN.1.8 | `ὀφείλομεν ὑπολαμβάνειν … συνεργοὶ … τῇ ἀληθείᾳ` | Obligația de a-i primi este menținută, iar `συνεργοὶ` este redat „împreună-lucrători pentru adevăr”, nu printr-o construcție românească literală greșită. |
 | 3JN.1.9 | `Ἔγραψά τι … οὐκ ἐπιδέχεται ἡμᾶς` | SBLGNT include `τι` („ceva”), iar obiectul verbului este „pe noi”; Diotref nu îi primește pe autori, nu respinge doar ceea ce spun ei. |
-| 3JN.1.10 | `λόγοις πονηροῖς φλυαρῶν … κωλύει … ἐκβάλλει` | `φλυαρῶν` este redat prin „bârfindu-ne”, nu „acuzându-ne pe nedrept”; sunt păstrate trei acțiuni: nu primește, împiedică și dă afară. |
+| 3JN.1.10 | `λόγοις πονηροῖς φλυαρῶν … κωλύει … ἐκβάλλει` | `φλυαρῶν` este redat prin „bârfindu-ne”, nu „acuzându-ne pe nedrept”; sunt păstrate trei acțiuni: nu primește, împiedică și dă afară, fără a presupune cine primește reamintirea faptelor. |
 | 3JN.1.11 | `Ἀγαπητέ … μὴ μιμοῦ … οὐχ ἑώρακεν` | Adresarea și porunca sunt la singular. Antiteza rămâne între imitarea răului și a binelui; „nu L-a văzut pe Dumnezeu” păstrează perfectul grecesc. |
 | 3JN.1.12 | `Δημητρίῳ μεμαρτύρηται … οἶδας` | Numele este românizat „Dimitrie”; SBLGNT are forma singulară `οἶδας`, deci „știi”, spre deosebire de lectura plurală din TR. |
 | 3JN.1.13 | `Πολλὰ εἶχον γράψαι σοι … μέλανος καὶ καλάμου` | Adresarea este singulară pe tot parcursul. „Cerneală și condei” redă instrumentele de scris fără calchierea englezei. |
