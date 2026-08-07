@@ -1,6 +1,7 @@
 import type { Lesson } from "../domain.js"
 import { aproapeL1, aproapeL2, aproapeL3, aproapeL4, aproapeL5, aproapeL6, aproapeL7 } from "./aproape.js"
 import { DOCTRINE_LESSONS, doctrinaL1, doctrinaL2, doctrinaL3 } from "./doctrina.js"
+import { GREUTATE_LESSONS, GREUTATE_PRACTICES } from "./greutate.js"
 import { harL1, harL2, harL3, harL4, harL5, harL6, harL7 } from "./har.js"
 import {
   impreunaL1,
@@ -24,6 +25,7 @@ import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
 export * from "./aproape.js"
 export * from "./doctrina.js"
+export * from "./greutate.js"
 export * from "./har.js"
 export * from "./impreuna.js"
 export * from "./neiertareOpen.js"
@@ -38,6 +40,7 @@ export * from "./umblareB.js"
  * Uși, camere și parcursuri personal-generalizate.
  * Referință: docs/21-cum-lucreaza-Dumnezeu.md și docs/20-parcursuri-personal-generalizate.md
  * Siguranță și limite: docs/22-siguranta.md (are prioritate).
+ * Inventarul conținutului pe fiecare ușă: docs/23-porti-continut.md
  *
  * Modelul întreg stă pe un singur câmp salvat despre om: `pathId`.
  * Fără profil, fără scoruri, fără chestionar, fără memorie per utilizator.
@@ -47,24 +50,32 @@ export * from "./umblareB.js"
  * prin durerea lui, iar adevărul despre cine e Dumnezeu i se spune PRIN rană.
  *
  * GENERALIZAREA: nu grupăm după durere — durerile sunt infinite. Grupăm după
- * tiparul spiritual de dedesubt; alea sunt șapte. Ușile rămân multe și în
- * cuvintele omului; camerele sunt puține.
+ * tiparul spiritual de dedesubt. Au fost șapte; sunt opt de când anxietatea și
+ * tristețea au primit cameră proprie. Ușile rămân multe și în cuvintele omului;
+ * camerele sunt puține.
  *
- * ATENȚIE, limită asumată: cele șapte tipare sunt un instrument de orientare
+ * DE CE OPT ȘI NU ȘAPTE (docs/22 §1, NENEGOCIABIL): ușile `anxietate` și
+ * `tristete` cădeau până acum în camera 5, "Nu mă pot schimba", a cărei minciună
+ * este "Sunt defect, asta sunt". Adică omul care intra cu anxietate sau depresie
+ * primea din prima secundă mesajul că problema lui e caracterul. docs/22 §1
+ * interzice exact asta: anxietatea, tristețea, epuizarea și insomnia pot avea
+ * cauze medicale. De aceea există camera 8.
+ *
+ * ATENȚIE, limită asumată: cele opt tipare sunt un instrument de orientare
  * inițială, NU un diagnostic. O durere poate avea și cauze medicale, relaționale
  * sau sociale. Nu spunem niciodată omului "boala ta e că nu crezi X" — ar fi o
  * vină în plus pusă pe cineva care deja suferă. Vezi docs/22-siguranta.md.
  *
  * TREI INTRĂRI, nu două (docs/21 §3):
- *   1. vine cu o durere        → camera lui (c1…c7)
+ *   1. vine cu o durere        → camera lui (c1…c8)
  *   2. vine de la zero         → path_temelie
  *   3. vine să-și întărească relația → path_umblare
  *
- * STARE: toate cele șapte camere au acum parcurs scris. `FALLBACK_PATH_ID`
- * rămâne în cod ca plasă de siguranță, nu ca soluție pentru camere goale.
+ * STARE: toate cele opt camere au parcurs scris. `FALLBACK_PATH_ID` rămâne în
+ * cod ca plasă de siguranță, nu ca soluție pentru camere goale.
  */
 
-/** Cele șapte tipare spirituale dominante din care iese aproape orice durere. */
+/** Cele opt tipare spirituale dominante din care iese aproape orice durere. */
 export interface Room {
   id: string
   /** Numele camerei, cum îl vede omul. */
@@ -118,6 +129,12 @@ export const ROOMS: Room[] = [
     lie: "Nimeni nu înțelege și nimănui nu-i pasă.",
     pathId: "path_impreuna",
   },
+  {
+    id: "c8",
+    title: "Nu mai am putere / mi-e frică tot timpul",
+    lie: "Dacă aș avea destulă credință, aș fi bine.",
+    pathId: "path_greutate",
+  },
 ]
 
 export function getRoom(roomId: string | null | undefined): Room | undefined {
@@ -152,7 +169,7 @@ export const DOORS: Door[] = [
   { id: "indoiala", label: "Nu știu dacă există Dumnezeu", roomId: "c3", common: true },
   { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4", common: true },
   { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5", common: true },
-  { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c5", common: true },
+  { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c8", common: true },
   { id: "doliu", label: "Am pierdut pe cineva", roomId: "c2", common: true },
   { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6", common: true },
   { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7", common: true },
@@ -170,7 +187,7 @@ export const DOORS: Door[] = [
   { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7" },
   { id: "de_ce_permis", label: "Nu înțeleg de ce a permis Dumnezeu asta", roomId: "c2" },
   { id: "pornografie", label: "Mă lupt cu pornografia", roomId: "c1" },
-  { id: "tristete", label: "Nu mai am chef de nimic", roomId: "c5" },
+  { id: "tristete", label: "Nu mai am chef de nimic", roomId: "c8" },
   { id: "alte_credinte", label: "Am crezut alte lucruri înainte (energii, karma, univers)", roomId: "c3" },
   { id: "cum_citesc", label: "Nu știu cum să citesc Biblia", roomId: "c4" },
   { id: "epuizat_slujire", label: "Sunt obosit de slujire", roomId: "c6" },
@@ -216,8 +233,8 @@ export const FALLBACK_PATH_ID = "path_temelie"
 
 /**
  * Nicio ușă nu e fundătură. (docs/21 §7 pct. 5)
- * Toate cele șapte camere au parcurs scris, deci fallback-ul nu se mai atinge
- * în practică. Rămâne pentru uși noi adăugate înainte de contențutul lor.
+ * Toate cele opt camere au parcurs scris, deci fallback-ul nu se mai atinge
+ * în practică. Rămâne pentru uși noi adăugate înainte de conțențutul lor.
  */
 export function resolveDoorPath(doorId: string): string {
   const door = getDoor(doorId)
@@ -293,6 +310,10 @@ export const pathAcasa: PathDef = {
  * numerotare, iar `neiertare_l1` mai conține prezentarea "Sunt Daniel", care
  * acum se face în `neiertare_o1`. De curățat la o trecere separată; ordinea
  * reală a drumului e array-ul `lessons`, nu `order`.
+ *
+ * DE FĂCUT, PRIORITAR (docs/23 §3, defectul D2): ușile `doliu`, `boala`,
+ * `de_ce_permis` și `divort` ajung tot aici, adică omul în doliu primește un
+ * drum despre iertare. Au nevoie de camera lor, "Cred că sunt pedepsit".
  */
 export const pathNeiertare: PathDef = {
   id: "path_neiertare",
@@ -357,16 +378,21 @@ export const pathAproape: PathDef = {
 
 /*
  * Camera 5: "Nu mă pot schimba".
- * Intră aici dependența, recăderea, anxietatea, tristețea, furia.
+ * Intră aici dependența, recăderea și furia.
+ *
+ * MODIFICAT (docs/22 §1, docs/23 §3 defectul D1): anxietatea și tristețea au fost
+ * MUTATE de aici în camera 8, `path_greutate`. Camera asta spune omului "nu ești
+ * defect", dar minciuna ei de intrare rămâne "Sunt defect, asta sunt" — iar
+ * pentru un om cu anxietate sau depresie prima secundă conta cel mai mult.
  *
  * ORDINEA (docs/21 §2): nu începem cu "lasă-te de". Începem cu ce e omul — nu e
  * defect (Marcu 5; Psalmul 139). Apoi de ce cedează voința, apoi ce se taie, apoi
  * ce se pune în loc. Metoda vine după identitate, altfel e doar un alt program.
  *
- * SIGURANȚĂ (docs/22 §1, NENEGOCIABIL): aici sunt cele mai multe simptome cu
- * posibilă cauză medicală. Lecția 6 trimite explicit la medic și la 116 123,
- * lecția 5 la 0800 801 200 pentru alcool/droguri/jocuri. Nicio lecție din camera
- * asta nu spune omului că starea lui vine din lipsă de credință.
+ * SIGURANȚĂ (docs/22 §1, NENEGOCIABIL): și aici sunt simptome cu posibilă cauză
+ * medicală. Lecția 6 trimite explicit la medic și la 116 123, lecția 5 la
+ * 0800 801 200 pentru alcool/droguri/jocuri. Nicio lecție din camera asta nu
+ * spune omului că starea lui vine din lipsă de credință.
  */
 export const pathSchimbare: PathDef = {
   id: "path_schimbare",
@@ -392,6 +418,38 @@ export const pathSchimbare: PathDef = {
     "Azi un lucru pentru corp, nu pentru suflet: somn, mâncare, o plimbare. Și, dacă durează, sună la medic — nu e lipsă de credință.",
     "Ai terminat drumul. Azi spune UNUI om că te lupți cu ceva. Nu detalii — doar atât.",
   ],
+}
+
+/*
+ * Camera 8: "Nu mai am putere / mi-e frică tot timpul".
+ * Intră aici anxietatea și tristețea care nu trece.
+ *
+ * DE CE EXISTĂ (docs/22 §1, NENEGOCIABIL): ușile `anxietate` și `tristete` cădeau
+ * până acum în camera 5, lângă dependență, recădere și furie, sub minciuna
+ * "Sunt defect, asta sunt". docs/22 §1 spune limpede că anxietatea, tristețea,
+ * epuizarea și insomnia pot avea cauze medicale și că nu punem vina pe om.
+ *
+ * ORDINEA: durerea recunoscută (nu ești vinovat) → cap și corp separate →
+ * nevoia fizică (Ilie primește somn și mâncare, 1 Regi 19) → plânsul are voie în
+ * Biblie (psalmii de "până când", inclusiv Psalmul 88 care se termină în
+ * întuneric) → Iisus a spus-o cu gura Lui (Ghetsimani, Matei 26:38) → ce faci
+ * mâine dimineață → ziua grea care va reveni.
+ *
+ * SIGURANȚĂ: cinci din șapte lecții au `safety.topic: "mental_health"` și ecran
+ * separat de avertizare (docs/22 §2). Trimiterea la medic și la psiholog apare în
+ * lecția 1, nu în ultima. Numerele (112, 116 123, iar pentru minori 116 111) apar
+ * în același pas cu orice simptom care poate fi medical, înaintea oricărui verset.
+ * Nicio lecție nu promite vindecarea și niciuna nu prezintă tratamentul ca lipsă
+ * de credință.
+ */
+export const pathGreutate: PathDef = {
+  id: "path_greutate",
+  roomId: "c8",
+  title: "Când nu mai ai putere",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți promitem că trece și nu îți spunem că e din lipsă de credință.",
+  lessons: GREUTATE_LESSONS,
+  practices: GREUTATE_PRACTICES,
 }
 
 /*
@@ -467,6 +525,10 @@ export const pathImpreuna: PathDef = {
 /*
  * Temelia. Camera 3 ("nu e real") și drumul propriu al omului care spune "vreau
  * doar să-L cunosc" — pentru el nu e supliment, e drumul.
+ *
+ * DE FĂCUT (docs/23 §3, defectul D3): trei lecții pentru o cameră întreagă e prea
+ * puțin. `indoiala`, `nu_inteleg`, `biblia_inventata` și `alte_credinte` sunt
+ * patru întrebări diferite și primesc același răspuns scurt.
  */
 export const pathTemelie: PathDef = {
   id: "path_temelie",
@@ -516,6 +578,7 @@ export const PATHS: PathDef[] = [
   pathTemelie,
   pathAproape,
   pathSchimbare,
+  pathGreutate,
   pathHar,
   pathImpreuna,
   pathUmblare,
