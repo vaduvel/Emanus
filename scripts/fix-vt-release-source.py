@@ -4,7 +4,7 @@
 Nu schimbă doctrina și nu rescrie explicațiile. Repară exclusiv:
 - escape-uri Unicode literale/defecte rămase în Deuteronom/Numeri;
 - ghilimele ASCII neescape-uite aflate în interiorul stringurilor textuale;
-- câteva artefacte mecanice produse de serializarea veche a lui „î/în”.
+- câteva artefacte mecanice produse de serializarea veche a diacriticelor.
 
 Utilizare:
   python3 scripts/fix-vt-release-source.py --check
@@ -26,21 +26,39 @@ TARGET_GLOBS = (
 )
 
 UNICODE_ESCAPE = re.compile(r"\\u([0-9a-fA-F]{4})")
-MALFORMED_ROMANIAN_I = re.compile(r"\\u00c(?=[^0-9a-fA-F])")
+# Generatorul vechi a lăsat uneori prefixul lui î ca \u00c... sau \u00e...
+# fără a patra cifră hex. Ambele forme sunt mecanice, nu conținut editorial.
+MALFORMED_ROMANIAN_I = re.compile(r"\\u00[ce](?=[^0-9a-fA-F])")
 
-# Artefacte mecanice observate în serializarea legacy. Aceste înlocuiri repară
-# numai forme imposibile în română produse după decodarea unui \u00ce accidental.
+MECHANICAL_ESCAPE_FIXES = {
+    r"\u015s": "ș",
+    r"\u015S": "Ș",
+    r"\u103": "ă",
+}
+
+# Artefacte mecanice observate după decodarea unui \u00ce accidental.
+# Înlocuirile sunt limitate la forme imposibile în română produse de serializare.
 TOKEN_FIXES = {
     "Îltreag": "întreag",
     "îltreag": "întreag",
     "Îlocu": "înlocu",
     "îlocu": "înlocu",
+    "Îllocu": "înlocu",
+    "îllocu": "înlocu",
     "Îlseamn": "înseamn",
     "îlseamn": "înseamn",
+    "Îlsemna": "însemna",
+    "îlsemna": "însemna",
     "Îlche": "înche",
     "îlche": "înche",
+    "Îlceput": "început",
+    "îlceput": "început",
+    "Îlcepe": "începe",
+    "îlcepe": "începe",
     "Îlvăț": "învăț",
     "îlvăț": "învăț",
+    "Îlveț": "înveț",
+    "îlveț": "înveț",
     "Îlvaț": "învaț",
     "îlvaț": "învaț",
     "Îlchin": "închin",
@@ -49,18 +67,64 @@ TOKEN_FIXES = {
     "îlcred": "încred",
     "Îlfrunt": "înfrunt",
     "îlfrunt": "înfrunt",
+    "Îlfrico": "înfrico",
+    "îlfrico": "înfrico",
     "Îlving": "înving",
     "îlving": "înving",
     "Îlvi": "învi",
     "îlvi": "învi",
+    "Îlmulț": "înmulț",
+    "îlmulț": "înmulț",
+    "Îldepărt": "îndepărt",
+    "îldepărt": "îndepărt",
+    "Îldreapt": "îndreapt",
+    "îldreapt": "îndreapt",
+    "Îldurat": "îndurat",
+    "îldurat": "îndurat",
+    "Îldurare": "îndurare",
+    "îldurare": "îndurare",
+    "Îldoial": "îndoial",
+    "îldoial": "îndoial",
+    "Îltoarc": "întoarc",
+    "îltoarc": "întoarc",
+    "Îltors": "întors",
+    "îltors": "întors",
     "Îltorc": "întorc",
     "îltorc": "întorc",
     "Îltâi": "întâi",
     "îltâi": "întâi",
     "Îltăi": "întăi",
     "îltăi": "întăi",
+    "Îltind": "întind",
+    "îltind": "întind",
+    "Îltăr": "întăr",
+    "îltăr": "întăr",
     "Îltr": "într",
     "îltr": "într",
+    "Îlainte": "înainte",
+    "îlainte": "înainte",
+    "Îllături": "înlături",
+    "îllături": "înlături",
+    "Îllătur": "înlătur",
+    "îllătur": "înlătur",
+    "Îlcerc": "încerc",
+    "îlcerc": "încerc",
+    "Îlfrumuseț": "înfrumuseț",
+    "îlfrumuseț": "înfrumuseț",
+    "Îlpărț": "împărț",
+    "îlpărț": "împărț",
+    "Îlvoial": "învoial",
+    "îlvoial": "învoial",
+    "Îleleas": "înțeleas",
+    "îleleas": "înțeleas",
+    "Îleleag": "înțeleag",
+    "îleleag": "înțeleag",
+    "Îlalț": "înălț",
+    "îlalț": "înălț",
+    "Îlsuș": "însuș",
+    "îlsuș": "însuș",
+    "Îlsăș": "însăș",
+    "îlsăș": "însăș",
 }
 
 
@@ -68,8 +132,8 @@ def decode_unicode_escapes(text: str) -> str:
     # Decodăm numai forma explicită \uXXXX. Nu folosim unicode_escape peste
     # întregul fișier, ca să nu alterăm backslash-uri legitime precum \n.
     text = UNICODE_ESCAPE.sub(lambda m: chr(int(m.group(1), 16)), text)
-    # Serializarea veche a lăsat uneori „\u00c” urmat de o literă nehex.
-    # Intenția observabilă este litera românească „î”.
+    for bad, good in MECHANICAL_ESCAPE_FIXES.items():
+        text = text.replace(bad, good)
     text = MALFORMED_ROMANIAN_I.sub("î", text)
     for bad, good in TOKEN_FIXES.items():
         text = text.replace(bad, good)
@@ -90,13 +154,7 @@ def unescaped_quote_positions(line: str) -> list[int]:
 
 
 def fix_inner_quotes(line: str) -> str:
-    """Transformă doar ghilimelele INTERIOARE ale unui string pe o singură linie.
-
-    Exemple:
-      "text "citat" text",  -> "text „citat” text",
-
-    Importurile, array-urile și proprietățile cu string simplu nu sunt atinse.
-    """
+    """Transformă doar ghilimelele INTERIOARE ale unui string pe o singură linie."""
     stripped = line.lstrip()
     if not stripped.startswith('"'):
         return line
@@ -105,7 +163,6 @@ def fix_inner_quotes(line: str) -> str:
     if len(positions) <= 2:
         return line
 
-    first, last = positions[0], positions[-1]
     inner = positions[1:-1]
     chars = list(line)
     opening = True
@@ -131,7 +188,6 @@ def targets() -> list[Path]:
 
 def suspicious_tokens(text: str) -> set[str]:
     suspicious = set(re.findall(r"\\u[0-9A-Za-z]{1,8}", text))
-    # „Îl...” lipit de un cuvânt poate fi artefact, dar „Îl ” ca pronume este valid.
     suspicious.update(re.findall(r"\bÎl[a-zăâîșț]+", text))
     return suspicious
 
