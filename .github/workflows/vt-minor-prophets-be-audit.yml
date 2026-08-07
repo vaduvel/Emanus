@@ -1,4 +1,4 @@
-name: VT Minor Prophets BE Candidate Audit
+name: VT Minor Prophets Fresh Source Capture
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  audit:
+  capture-and-audit:
     if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -18,143 +18,40 @@ jobs:
           ref: agent/biblia-explicata-vt-integration-clean
           fetch-depth: 0
 
-      - name: Fetch legacy BE source branch
+      - name: Fetch legacy BE candidate branch
         run: git fetch origin agent/biblia-emanus-ot-and-apocrypha:refs/remotes/origin/agent/biblia-emanus-ot-and-apocrypha
 
-      - name: Inspect exact legacy source snapshot stored in repo
-        run: |
-          set -euo pipefail
-          git show origin/agent/biblia-emanus-ot-and-apocrypha:docs/data/biblia-emanus/sources/ot-gen-jos-usfm.zip > /tmp/legacy-source-snapshot.zip
-          python3 - <<'PY'
-          import hashlib
-          import re
-          import zipfile
-          from pathlib import Path
-
-          path = Path('/tmp/legacy-source-snapshot.zip')
-          expected = 'a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931'
-          actual = hashlib.sha256(path.read_bytes()).hexdigest()
-          print(f'Legacy local snapshot SHA256: {actual}')
-          if actual != expected:
-              raise SystemExit(f'Legacy snapshot SHA mismatch: {actual} != {expected}')
-
-          wanted = ('HOS','JOL','AMO','OBA','JON','MIC','NAM','HAB','ZEP','HAG','ZEC','MAL')
-          found = {code: [] for code in wanted}
-          with zipfile.ZipFile(path) as archive:
-              names = archive.namelist()
-              print(f'Legacy snapshot members: {len(names)}')
-              for member in names:
-                  base = Path(member).name
-                  upper = base.upper()
-                  for code in wanted:
-                      if re.search(rf'(^|[-_/0-9]){code}([^A-Z]|$)', upper):
-                          found[code].append(member)
-          for code in wanted:
-              print(f'Legacy snapshot {code}: {found[code]}')
-          present = [code for code, members in found.items() if members]
-          print(f'Legacy snapshot minor prophets present: {len(present)}/12 -> {present}')
-          PY
-
-      - name: Download current source archives
+      - name: Download current official source archives
         run: |
           set -euo pipefail
           curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
-          curl --fail --location --retry 3 --output /tmp/hboWLC_usfm.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/hboWLC_current.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
 
-      - name: Recover exact pinned WEBU snapshot when possible
+      - name: Capture NEW deterministic HOS-MAL source snapshot
         run: |
-          python3 - <<'PY'
-          import hashlib
-          import json
-          import shutil
-          import urllib.parse
-          import urllib.request
-          from pathlib import Path
+          python3 scripts/capture-minor-prophets-sources.py \
+            --webu-zip /tmp/engwebp_current.zip \
+            --wlc-zip /tmp/hboWLC_current.zip
 
-          expected = '9b4330ba6baf9bd5fa8ea63a8ff255c9ab326da8c843f0355c23734e61ee6276'
-          current = Path('/tmp/engwebp_current.zip')
-          target = Path('/tmp/engwebp_for_audit.zip')
-
-          def digest(path):
-              return hashlib.sha256(path.read_bytes()).hexdigest()
-
-          current_sha = digest(current)
-          print(f'WEBU current SHA256: {current_sha}')
-          if current_sha == expected:
-              shutil.copyfile(current, target)
-              print('Arhiva curentă reproduce pin-ul istoric.')
-              raise SystemExit(0)
-
-          captures = []
-          queries = [
-              'https://ebible.org/Scriptures/engwebp_usfm.zip',
-              'http://ebible.org/Scriptures/engwebp_usfm.zip',
-          ]
-          for original_url in queries:
-              params = urllib.parse.urlencode({
-                  'url': original_url,
-                  'from': '20260720',
-                  'to': '20260804',
-                  'output': 'json',
-                  'filter': 'statuscode:200',
-                  'collapse': 'digest',
-              })
-              cdx = 'https://web.archive.org/cdx/search/cdx?' + params
-              try:
-                  req = urllib.request.Request(cdx, headers={'User-Agent': 'Emanus-BE-source-recovery/1.0'})
-                  with urllib.request.urlopen(req, timeout=20) as response:
-                      rows = json.load(response)
-              except Exception as exc:
-                  print(f'Wayback CDX indisponibil pentru {original_url}: {exc}')
-                  continue
-              if not rows:
-                  continue
-              header = rows[0]
-              for row in rows[1:]:
-                  item = dict(zip(header, row))
-                  captures.append((item.get('timestamp', ''), item.get('original', original_url), item.get('digest', '')))
-
-          seen = set()
-          for timestamp, original, wayback_digest in sorted(captures):
-              if not timestamp or timestamp in seen:
-                  continue
-              seen.add(timestamp)
-              archived = f'https://web.archive.org/web/{timestamp}id_/{original}'
-              tmp = Path(f'/tmp/engwebp_wayback_{timestamp}.zip')
-              try:
-                  req = urllib.request.Request(archived, headers={'User-Agent': 'Emanus-BE-source-recovery/1.0'})
-                  with urllib.request.urlopen(req, timeout=40) as response, tmp.open('wb') as out:
-                      shutil.copyfileobj(response, out)
-              except Exception as exc:
-                  print(f'Nu pot descărca captura {timestamp}: {exc}')
-                  continue
-              sha = digest(tmp)
-              print(f'Wayback {timestamp}: sha256={sha} digest={wayback_digest}')
-              if sha == expected:
-                  shutil.copyfile(tmp, target)
-                  print(f'RECUPERAT exact snapshotul WEBU pin-uit din captura {timestamp}.')
-                  raise SystemExit(0)
-
-          shutil.copyfile(current, target)
-          print('Snapshotul WEBU istoric nu a fost recuperat; folosesc current numai pentru auditul structural, nu pentru promovare.')
-          PY
-
-      - name: Audit 12 books / 67 chapters
+      - name: Verify legacy candidates remain byte-identical in Romanian
         run: |
           python3 scripts/audit-minor-prophets-be-candidates.py \
             --source-ref origin/agent/biblia-emanus-ot-and-apocrypha \
-            --webu-zip /tmp/engwebp_for_audit.zip \
-            --wlc-zip /tmp/hboWLC_usfm.zip
+            --webu-zip /tmp/engwebp_current.zip \
+            --wlc-zip /tmp/hboWLC_current.zip
 
-      - name: Commit evidence only after audit passes
+      - name: Commit fresh source lock and evidence
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json
+          git add \
+            docs/data/biblia-emanus/sources/ot-minor-prophets-2026-08-07-usfm.zip \
+            docs/data/biblia-emanus/minor-prophets-source-lock.json \
+            docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json
           git diff --cached --check
           if git diff --cached --quiet; then
-            echo 'Raportul de audit este deja actual.'
+            echo 'Snapshotul și lock-ul nou sunt deja actuale.'
             exit 0
           fi
-          git commit -m "audit(bible): verify minor prophets BE candidates 67/67"
+          git commit -m "audit(bible): lock fresh HOS-MAL WEBU and WLC sources"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
