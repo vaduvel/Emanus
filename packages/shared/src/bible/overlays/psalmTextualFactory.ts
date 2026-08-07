@@ -6,9 +6,12 @@ const source = {
   note: "rezumat narativ fără doctrină adăugată" as const,
 }
 
+const verseCounts: Readonly<Record<number, number>> = VT_WISDOM_FULL.psalmi.verseCounts
+const narratives: Readonly<Record<number, { title: string; summary: string }>> = VT_WISDOM_FULL.psalmi.narratives
+
 export function textualPsalm(number: number, heading: string, teaching: string): ExplainedOverlayChapter {
-  const verseCount = VT_WISDOM_FULL.psalmi.verseCounts[number]
-  const narrative = VT_WISDOM_FULL.psalmi.narratives[number]
+  const verseCount = verseCounts[number]
+  const narrative = narratives[number]
   if (!verseCount || !narrative) {
     throw new Error(`[Psalm textual] lipsesc metadatele pentru Psalmul ${number}`)
   }
