@@ -7,6 +7,11 @@ export type ExplainedSource =
       anchor: string
     }
   | {
+      kind: "poonen-official"
+      sourceUrl: string
+      section: string
+    }
+  | {
       kind: "biblia-emanus"
       note: "rezumat narativ fără doctrină adăugată"
     }
@@ -61,7 +66,7 @@ export function transcriptFocusedChapters(
         number,
         title: `${bookName} ${number}`,
         summary:
-          "Capitol păstrat în overlay pentru continuitatea cărții. Transcriptul Poonen nu îl dezvoltă separat; textul și sensul narativ rămân în Biblia Emanus, fără completare doctrinară generată.",
+          "Capitol păstrat în overlay pentru continuitatea cărții. Sursa Poonen folosită în acest val nu îl dezvoltă separat; textul și sensul narativ rămân în Biblia Emanus, fără completare doctrinară generată.",
         units: [],
       }
     )
