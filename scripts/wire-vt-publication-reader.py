@@ -38,8 +38,10 @@ def main() -> None:
         "import catalog",
     )
 
-    text = text.replace("BIBLE_BOOKS", "PUBLICATION_BIBLE_BOOKS")
-    text = text.replace("findChapter(", "findPublicationChapter(")
+    # Tokeni exacți, nu substring-uri: `BIBLE_BOOKS` nu trebuie înlocuit încă o
+    # dată în interiorul lui `PUBLICATION_BIBLE_BOOKS` la rerularea workflow-ului.
+    text = re.sub(r"\bBIBLE_BOOKS\b", "PUBLICATION_BIBLE_BOOKS", text)
+    text = re.sub(r"\bfindChapter\(", "findPublicationChapter(", text)
 
     text = regex_once(
         text,
