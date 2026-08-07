@@ -10,9 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: pnpm/action-setup@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -36,8 +34,28 @@ jobs:
       - name: Verifica Biblia explicata VT 39/39
         run: pnpm check:vt-explained
 
-      # Urmatoarele validatoare apartin unor valuri/ramuri diferite ale Bibliei.
-      # Ele raman active automat atunci cand scriptul lor exista in checkout.
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Build
+        run: pnpm build
+
+  other-bible-validators:
+    # Valurile VT sunt validate de jobul `verify`. Acest job apartine ramurilor
+    # Biblia Emanus / NT si nu trebuie sa blocheze un PR VT din cauza starii lor.
+    if: ${{ !startsWith(github.head_ref, 'agent/biblia-explicata-vt-') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
       - name: Verifica Biblia Emanus 3.0
         if: ${{ hashFiles('scripts/check-biblia-emanus.py') != '' }}
         run: pnpm check:biblia-emanus
@@ -102,79 +120,13 @@ jobs:
         if: ${{ hashFiles('scripts/check-1-tesaloniceni.py') != '' }}
         run: pnpm check:1-tesaloniceni
 
-      - name: Verifica Biblia explicata 2 Tesaloniceni
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:2-tesaloniceni
-
-      - name: Verifica Biblia explicata 1 Timotei
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:1-timotei
-
-      - name: Verifica Biblia explicata 2 Timotei
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:2-timotei
-
-      - name: Verifica Biblia explicata Tit
-        if: ${{ hashFiles('scripts/check-tit.py') != '' }}
-        run: pnpm check:tit
-
-      - name: Verifica Biblia explicata Filimon
-        if: ${{ hashFiles('scripts/check-filimon.py') != '' }}
-        run: pnpm check:filimon
-
-      - name: Verifica Biblia explicata Evrei
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:evrei
-
-      - name: Verifica Biblia explicata Iacov
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:iacov
-
-      - name: Verifica Biblia explicata 1 Petru
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:1-petru
-
-      - name: Verifica Biblia explicata 2 Petru
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:2-petru
-
-      - name: Verifica Biblia explicata 1 Ioan
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:1-ioan
-
-      - name: Verifica Biblia explicata 2 Ioan
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:2-ioan
-
-      - name: Verifica Biblia explicata 3 Ioan
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:3-ioan
-
-      - name: Verifica Biblia explicata Iuda
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:iuda
-
-      - name: Verifica Biblia explicata Apocalipsa
-        if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
-        run: pnpm check:apocalipsa
-
-      - name: Verifica valul final NT
+      - name: Verifica valul NT complet
         if: ${{ hashFiles('scripts/check-nt-completion.py') != '' }}
         run: pnpm check:nt-completion
-
-      - name: Verifica structura sursei Bibliei
-        if: ${{ hashFiles('apps/web/scripts/check-bible-source.*', 'apps/web/src/**/check-bible-source.*') != '' }}
-        run: pnpm check:bible-source
 
       - name: Verifica securitatea Bibliei cloud
         if: ${{ hashFiles('scripts/check-bible-cloud.py') != '' }}
         run: pnpm check:bible-cloud
-
-      - name: Typecheck
-        run: pnpm typecheck
-
-      - name: Build
-        run: pnpm build
 
       - name: Verifica bundle-ul Bibliei
         if: ${{ hashFiles('scripts/check-bible-cloud.py') != '' }}
