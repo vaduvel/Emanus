@@ -27,6 +27,7 @@ jobs:
         run: |
           python3 scripts/assemble-vt-clean.py
           python3 scripts/patch-vt-bundle.py
+          python3 scripts/patch-vt-reader.py
 
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
@@ -90,6 +91,7 @@ jobs:
             packages/shared/src/bible \
             packages/shared/src/index.ts \
             packages/shared/package.json \
+            apps/web/src/screens/Bible.tsx \
             apps/web/vite.config.ts \
             package.json \
             scripts/check-vt-explained-coverage.py \
@@ -107,5 +109,5 @@ jobs:
             echo 'Arborele VT curat este deja asamblat.'
             exit 0
           fi
-          git commit -m "feat(bible): assemble clean explained OT integration"
+          git commit -m "feat(bible): wire clean explained OT reader"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
