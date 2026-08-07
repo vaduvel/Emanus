@@ -7,12 +7,64 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  event-probe:
+  eph-book-review:
     runs-on: ubuntu-22.04
-    timeout-minutes: 5
+    timeout-minutes: 90
     steps:
-      - name: Confirm edited event
-        run: echo 'nt-ai-review-edited-ok'
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.9'
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+      - name: Verify pinned source material
+        run: |
+          set -euo pipefail
+          test "$(sha256sum docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
+          for f in sblgnt.txt apparatus.txt tr.usfm webp.usfm btf.usfm cornilescu1924.usfm biblia-libera.usfm; do test -s ".github/nt-ai-review/eph-source/$f"; done
+      - name: Review, validate and commit Ephesians 1-6
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          for ch in 1 2 3 4 5 6; do
+            json="docs/data/biblia-emanus/EPH.${ch}.json"
+            journal="docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-EPH.${ch}.md"
+            if test -f "$journal"; then
+              echo "EPH.${ch} already reviewed; skipping."
+              continue
+            fi
+            echo "=== Editorial review EPH.${ch} ==="
+            CHAPTER="$ch" python3 .github/nt-ai-review/eph_all.py
+            git diff --check
+            pnpm check:biblia-emanus
+            python3 scripts/check-biblia-emanus-romanian-quality.py
+            pnpm check:biblia-emanus-nt-withheld
+            python3 scripts/withhold-biblia-emanus-nt.py --check
+            pnpm check:biblia-emanus-nt-runtime
+            pnpm test:biblia-emanus
+            changed="$(git diff --name-only)"
+            test "$(printf '%s\n' "$changed" | sed '/^$/d' | wc -l)" -eq 2
+            printf '%s\n' "$changed" | grep -Fx "$json"
+            printf '%s\n' "$changed" | grep -Fx "$journal"
+            git add "$json" "$journal"
+            git diff --cached --check
+            git commit -m "review(biblia): audit Ephesians ${ch} verse by verse"
+          done
+          if git log --oneline "origin/codex/nt-ai-review-handoff..HEAD" | grep -q .; then
+            git push origin HEAD:codex/nt-ai-review-handoff
+          else
+            echo 'No new editorial commits to push.'
+          fi
