@@ -3,17 +3,20 @@ import { BIBLE_BOOKS } from "./index.js"
 import { IMPARATI1 } from "./imparati1.js"
 import {
   VT_OVERLAY_BIBLE_BOOKS,
+  VT_OVERLAY_TEMPORARY_TEXTS,
   VT_OVERLAY_TRANSLATION_BLOCKERS,
 } from "./overlayBibleBooks.js"
 
 /**
- * Catalogul consumat de cititorul publicabil.
+ * Catalogul consumat de cititorul Bibliei explicate în lucru editorial.
  *
  * Nu modificăm `BIBLE_BOOKS` legacy până când toate integrările vechi sunt
- * migrate. Aici adăugăm explicit 1 Împărați și cărțile overlay care au text
- * Biblia Emanus materializat și auditat.
+ * migrate. Aici adăugăm explicit 1 Împărați și toate cele 29 de cărți overlay.
  *
- * Osea–Maleahi nu intră în acest array cât timp nu au text `translation: BE`.
+ * Judecători–Daniel folosesc Biblia Emanus validată. Osea–Maleahi folosesc
+ * temporar text biblic de lucru, etichetat explicit ca provizoriu. Toate
+ * explicațiile noi rămân `in_review`, deci textul provizoriu nu este prezentat
+ * ca release final. Când BE este gata, se schimbă numai stratul de versete.
  */
 const byId = new Map<string, BibleBook>()
 for (const book of BIBLE_BOOKS) byId.set(book.id, book)
@@ -32,4 +35,4 @@ export function findPublicationChapter(bookId: string, number: number) {
   return findPublicationBook(bookId)?.chapters.find((chapter) => chapter.number === number)
 }
 
-export { VT_OVERLAY_TRANSLATION_BLOCKERS }
+export { VT_OVERLAY_TEMPORARY_TEXTS, VT_OVERLAY_TRANSLATION_BLOCKERS }
