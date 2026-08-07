@@ -58,6 +58,15 @@ TEMP_BOOKS = [
     ("maleahi", "MAL", "Maleahi", 39, 4),
 ]
 
+# Numele fișierelor au fost create înainte ca ID-urile canonice ale reader-ului
+# să fie fixate. Păstrăm fișierele stabile, dar catalogul trebuie să folosească
+# exact aceleași ID-uri ca overlay-urile și VT_EXPLAINED_COVERAGE.
+OVERLAY_BOOK_IDS = {
+    "imparati2": "2-imparati",
+    "cronici1": "1-cronici",
+    "cronici2": "2-cronici",
+}
+
 APPROVED_FIELDS = (
     "aiSourceLanguage",
     "aiRomanianLanguage",
@@ -140,6 +149,10 @@ def symbol(book_id: str) -> str:
     return book_id.upper().replace("-", "_") + "_TEXT"
 
 
+def overlay_book_id(file_book_id: str) -> str:
+    return OVERLAY_BOOK_IDS.get(file_book_id, file_book_id)
+
+
 def write_book(
     ref: str,
     book_id: str,
@@ -205,8 +218,9 @@ def write_index(entries: list[tuple[str, str, str, int, int, int, bool]]) -> Non
     for book_id, code, name, order, chapters, verses, temporary in entries:
         stage = "temporary-editorial" if temporary else "biblia-emanus"
         label = TEMP_LABEL if temporary else BE_LABEL
+        reader_id = overlay_book_id(book_id)
         lines.append(
-            f"  {{ bookId: {ts_string(book_id)}, bibleEmanusBookId: {ts_string(code)}, "
+            f"  {{ bookId: {ts_string(reader_id)}, bibleEmanusBookId: {ts_string(code)}, "
             f"name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, "
             f"verseCount: {verses}, chapters: {symbol(book_id)}, "
             f"textStage: {ts_string(stage)}, translationLabel: {ts_string(label)} }},"
