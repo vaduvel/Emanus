@@ -28,10 +28,19 @@ function uncoveredRanges(lastVerse: number, units: readonly ExplainedOverlayUnit
   return gaps
 }
 
+function materializeSourceKind(unit: ExplainedOverlayUnit): ExplainedOverlayUnit {
+  return {
+    ...unit,
+    explanationKind:
+      unit.explanationKind ??
+      (unit.source.kind === "biblia-emanus" ? "textual-overview" : "exposition"),
+  }
+}
+
 /**
  * Completează numai golurile lăsate de transcript.
- * - unitățile Poonen existente rămân neschimbate;
- * - golurile primesc doar explicație textuală din Biblia Emanus;
+ * - unitățile Poonen existente rămân neschimbate semantic și sunt etichetate `exposition`;
+ * - golurile primesc doar explicație textuală din Biblia Emanus și sunt etichetate `textual-overview`;
  * - nu introduce doctrină, tipologie sau aplicații în golurile sursei;
  * - fiecare verset al fiecărui capitol ajunge acoperit de cel puțin o unitate.
  */
@@ -46,13 +55,15 @@ export function completeOverlayCoverage(
     if (!lastVerse) throw new Error(`[${book.name} ${chapter.number}] lipsește numărul de versete.`)
     if (!narrative) throw new Error(`[${book.name} ${chapter.number}] lipsește explicația textuală.`)
 
-    const gaps = uncoveredRanges(lastVerse, chapter.units)
+    const sourceUnits = chapter.units.map(materializeSourceKind)
+    const gaps = uncoveredRanges(lastVerse, sourceUnits)
     const fillers: ExplainedOverlayUnit[] = gaps.map(([from, to]) => ({
       from,
       to,
       heading: narrative.title,
       teaching: narrative.summary,
       source: narrativeSource,
+      explanationKind: "textual-overview",
     }))
 
     return {
@@ -62,7 +73,7 @@ export function completeOverlayCoverage(
         chapter.summary.includes("Transcriptul Poonen nu îl dezvoltă separat")
           ? narrative.summary
           : chapter.summary,
-      units: [...chapter.units, ...fillers].sort((a, b) => a.from - b.from || a.to - b.to),
+      units: [...sourceUnits, ...fillers].sort((a, b) => a.from - b.from || a.to - b.to),
     }
   })
 
@@ -88,6 +99,23 @@ export function assertVerseCompleteOverlay(
           .join(", ")}.`,
       )
     }
+    chapter.units.forEach((unit) => {
+      if (!unit.explanationKind) {
+        throw new Error(
+          `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] lipsește tipul explicației.`,
+        )
+      }
+      if (unit.source.kind === "biblia-emanus" && unit.explanationKind !== "textual-overview") {
+        throw new Error(
+          `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] sursa Biblia Emanus trebuie marcată textual-overview.`,
+        )
+      }
+      if (unit.source.kind !== "biblia-emanus" && unit.explanationKind !== "exposition") {
+        throw new Error(
+          `[${book.name} ${chapter.number}:${unit.from}-${unit.to}] sursa doctrinară trebuie marcată exposition.`,
+        )
+      }
+    })
   })
   return book
 }
