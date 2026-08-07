@@ -27,7 +27,10 @@ jobs:
       - name: Normalize legacy VT source in workspace
         run: python3 scripts/fix-vt-release-source.py --write
 
-      - name: Show normalization footprint
+      - name: Correct Romanian language in explanations only
+        run: python3 scripts/fix-vt-explanation-language.py --write
+
+      - name: Show cleanup footprint
         run: |
           git diff --stat -- packages/shared/src/bible
           git diff --check -- packages/shared/src/bible
