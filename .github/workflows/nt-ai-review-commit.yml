@@ -8,39 +8,34 @@ on:
 
 permissions:
   contents: read
-  models: read
 
 jobs:
-  model-probe:
+  php-source-dump:
     runs-on: ubuntu-22.04
     timeout-minutes: 10
     steps:
-      - name: Probe GPT-5 through GitHub Models
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Verify and print pinned Philippians source bundle
         run: |
           set -euo pipefail
-          cat > /tmp/request.json <<'JSON'
-          {
-            "model": "openai/gpt-5",
-            "messages": [
-              {
-                "role": "user",
-                "content": "Return exactly the JSON object {\"ok\":true,\"task\":\"nt-review\"} and nothing else."
-              }
-            ]
-          }
-          JSON
-          curl --fail-with-body --silent --show-error \
-            "https://models.github.ai/inference/chat/completions" \
-            -H "Content-Type: application/json" \
-            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-            --data-binary @/tmp/request.json \
-            | tee /tmp/response.json
-          python3 - <<'PY'
-          import json
-          data = json.load(open('/tmp/response.json', encoding='utf-8'))
-          text = data['choices'][0]['message']['content']
-          print('\nMODEL_CONTENT=' + text)
-          assert 'nt-review' in text
-          PY
+          ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
+          test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
+          unzip -t "$ZIP" >/dev/null
+          for entry in \
+            sblgnt/text/PHP.txt \
+            sblgnt/apparatus/text/PHP.txt \
+            tr/PHP.usfm \
+            webp/PHP.usfm \
+            btf/PHP.usfm \
+            cornilescu1924/PHP.usfm \
+            biblia-libera/PHP.usfm
+          do
+            echo "===== BEGIN $entry ====="
+            unzip -p "$ZIP" "$entry"
+            echo
+            echo "===== END $entry ====="
+          done
