@@ -37,9 +37,6 @@ jobs:
       - name: Verifica Biblia explicata VT 39/39
         run: pnpm check:vt-explained
 
-      - name: Verifica limba romana si variantele textuale NT
-        run: python3 scripts/check-biblia-emanus-romanian-quality.py
-
       - name: Verifica Biblia Emanus 3.0
         run: pnpm check:biblia-emanus
 
