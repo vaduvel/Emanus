@@ -2,9 +2,9 @@
 """Construiește un pachet de re-audit sursă-verset pentru un profet mic.
 
 Candidatul românesc și WEBU folosesc versificația de produs. WLC poate muta
-versete peste granițe de capitol (de ex. Osea). De aceea WLC este aliniat prin
-ordinea absolută a versetelor în carte, iar ref-ul masoretic real este păstrat
-explicit pentru fiecare rând. Scriptul nu aprobă și nu modifică traducerea.
+versete peste granițe de capitol. WLC este aliniat provizoriu prin ordinea
+absolută a versetelor în carte, iar ref-ul masoretic real este păstrat explicit.
+Mapările mutate rămân `manual-boundary-review-required` până la confirmare.
 """
 
 from __future__ import annotations
@@ -126,11 +126,11 @@ def parse_usfm(data: bytes) -> dict[int, dict[int, dict[str, object]]]:
 
 
 def flatten(source: dict[int, dict[int, dict[str, object]]]) -> list[tuple[int, int, dict[str, object]]]:
-    rows: list[tuple[int, int, dict[str, object]]] = []
-    for chapter in sorted(source):
-        for verse in sorted(source[chapter]):
-            rows.append((chapter, verse, source[chapter][verse]))
-    return rows
+    return [
+        (chapter, verse, source[chapter][verse])
+        for chapter in sorted(source)
+        for verse in sorted(source[chapter])
+    ]
 
 
 def strong_overlap(a: list[str], b: list[str]) -> dict[str, object]:
@@ -141,6 +141,7 @@ def strong_overlap(a: list[str], b: list[str]) -> dict[str, object]:
         "sharedTokens": shared,
         "smallerSideTokens": denom,
         "ratio": round(shared / denom, 3),
+        "advisoryOnly": True,
     }
 
 
@@ -185,8 +186,6 @@ def main() -> None:
     if len(wlc_flat) != candidate_count:
         raise SystemExit(f"{code}: WLC are {len(wlc_flat)} versete, candidatul are {candidate_count}")
 
-    # WEBU trebuie să fie în exact aceeași versificație cu produsul; altfel ref-urile
-    # utilizatorului nu mai au o bază stabilă.
     for chapter_no, ro_verses in candidate.items():
         web_numbers = sorted(web.get(chapter_no, {}))
         expected = list(range(1, len(ro_verses) + 1))
@@ -208,24 +207,15 @@ def main() -> None:
             direct = wlc_chapter == chapter_no and wlc_verse == verse_no
             if not direct:
                 versification_mappings.append(
-                    {
-                        "productRef": f"{chapter_no}:{verse_no}",
-                        "WLCRef": f"{wlc_chapter}:{wlc_verse}",
-                    }
+                    {"productRef": f"{chapter_no}:{verse_no}", "WLCRef": f"{wlc_chapter}:{wlc_verse}"}
                 )
             verse_rows.append(
                 {
                     "verse": verse_no,
                     "productRef": f"{chapter_no}:{verse_no}",
                     "candidateRo": ro_text,
-                    "WEBU": {
-                        "ref": f"{chapter_no}:{verse_no}",
-                        **web_row,
-                    },
-                    "WLC": {
-                        "ref": f"{wlc_chapter}:{wlc_verse}",
-                        **wlc_row,
-                    },
+                    "WEBU": {"ref": f"{chapter_no}:{verse_no}", **web_row},
+                    "WLC": {"ref": f"{wlc_chapter}:{wlc_verse}", **wlc_row},
                     "sourceSignatureEvidence": strong_overlap(
                         list(web_row.get("strongs", [])), list(wlc_row.get("strongs", []))
                     ),
@@ -241,43 +231,56 @@ def main() -> None:
             }
         )
 
-    # Diagnostic: alinierile mutate trebuie totuși să aibă semnal lexical între
-    # WEBU Strong's și WLC Strong's. Nu folosim această măsură ca audit semantic.
-    weak_shifted = []
-    for chapter in chapters:
-        for row in chapter["verses"]:
-            if row["WEBU"]["ref"] != row["WLC"]["ref"]:
-                evidence = row["sourceSignatureEvidence"]
-                if evidence["sharedTokens"] == 0:
-                    weak_shifted.append(
+    # Compact evidence around each chapter boundary where the WLC reference differs.
+    boundary_windows = []
+    affected_boundaries = sorted(
+        {
+            int(mapping["productRef"].split(":", 1)[0])
+            for mapping in versification_mappings
+            if mapping["productRef"].endswith(":1") or mapping["WLCRef"].endswith(":1")
+        }
+        | {
+            int(mapping["productRef"].split(":", 1)[0])
+            for mapping in versification_mappings
+            if int(mapping["productRef"].split(":", 1)[0]) != int(mapping["WLCRef"].split(":", 1)[0])
+        }
+    )
+    for chapter_no in affected_boundaries:
+        for chapter in chapters:
+            if chapter["chapter"] not in {max(1, chapter_no - 1), chapter_no, min(expected_chapters, chapter_no + 1)}:
+                continue
+            rows = chapter["verses"]
+            for row in rows:
+                if row["verse"] <= 2 or row["verse"] > max(0, len(rows) - 2):
+                    boundary_windows.append(
                         {
                             "productRef": row["productRef"],
+                            "candidateRo": row["candidateRo"],
+                            "WEBURef": row["WEBU"]["ref"],
+                            "WEBUText": row["WEBU"]["text"],
                             "WLCRef": row["WLC"]["ref"],
-                            "evidence": evidence,
+                            "WLCText": row["WLC"]["text"],
                         }
                     )
-    if weak_shifted:
-        raise SystemExit(
-            f"{code}: {len(weak_shifted)} mapări WLC mutate fără niciun Strong comun: "
-            + json.dumps(weak_shifted, ensure_ascii=False)
-        )
 
     packet = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "bookId": code,
         "bookName": book_lock["name"],
         "translationTarget": "BE",
-        "status": "fresh-source-reaudit-ready",
+        "status": "fresh-source-versification-review",
         "candidateStage": "temporary-editorial",
         "sourceLock": str(LOCK_PATH.relative_to(ROOT)).replace("\\", "/"),
         "sourceSnapshotSha256": lock["snapshot"]["sha256"],
         "sourceMembers": {"WEBU": book_lock["WEBU"], "WLC": book_lock["WLC"]},
         "versification": {
             "productBase": "WEBU",
-            "WLCAlignment": "absolute-verse-ordinal-across-book",
-            "note": "WLC păstrează referința masoretică reală per verset; mapările neidentice sunt enumerate explicit.",
+            "WLCAlignmentProposal": "absolute-verse-ordinal-across-book",
+            "approval": "manual-boundary-review-required" if versification_mappings else "identity",
+            "note": "Strong's overlap is stored only as advisory evidence because WEBU tagging is noisy; it is not an approval gate.",
             "mappedRefs": len(versification_mappings),
             "mappings": versification_mappings,
+            "boundaryReviewWindows": boundary_windows,
         },
         "totals": {
             "chapters": expected_chapters,
@@ -293,12 +296,10 @@ def main() -> None:
     out = OUT_ROOT / f"{code}-FRESH-SOURCE-REAUDIT.json"
     out.write_text(json.dumps(packet, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
-        f"{code} READY: {expected_chapters} capitole / {candidate_count} versete / "
-        f"WEBU={len(web_flat)} / WLC={len(wlc_flat)} / WLC remaps={len(versification_mappings)} / issues=0"
+        f"{code} SOURCE PACKET: {expected_chapters} capitole / {candidate_count} versete / "
+        f"WEBU={len(web_flat)} / WLC={len(wlc_flat)} / proposed WLC remaps={len(versification_mappings)}"
     )
-    if versification_mappings:
-        print("Versification boundary remaps:")
-        print(json.dumps(versification_mappings, ensure_ascii=False, indent=2))
+    print(f"Versification approval: {packet['versification']['approval']}")
 
 
 if __name__ == "__main__":
