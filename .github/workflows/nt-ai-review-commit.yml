@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  php2-commit:
+  php3-commit:
     runs-on: ubuntu-22.04
     timeout-minutes: 60
     steps:
@@ -19,29 +19,24 @@ jobs:
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-
       - name: Verify pinned PHP sources
         run: |
           set -euo pipefail
           ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
           unzip -t "$ZIP" >/dev/null
-
-      - name: Materialize the already validated PHP 2 batch
-        run: python3 .github/nt-ai-review/php2.py
-
+      - name: Materialize the already validated PHP 3 batch
+        run: python3 .github/nt-ai-review/php3.py
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11.9'
-
       - name: Install JavaScript dependencies
         run: |
           set -euo pipefail
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
-
       - name: Re-run all required post-batch gates
         run: |
           set -euo pipefail
@@ -52,17 +47,13 @@ jobs:
           pnpm check:biblia-emanus-nt-runtime
           pnpm test:biblia-emanus
           git diff --check
-
       - name: Commit only chapter and journal
         run: |
           set -euo pipefail
-          CHAPTER=docs/data/biblia-emanus/PHP.2.json
-          JOURNAL=docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.2.md
+          CHAPTER=docs/data/biblia-emanus/PHP.3.json
+          JOURNAL=docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-PHP.3.md
           mapfile -t changed < <(git status --short -- "$CHAPTER" "$JOURNAL" | awk '{print $2}' | sort)
-          if [ "${#changed[@]}" -eq 0 ]; then
-            echo 'Validated PHP.2 batch is already committed.'
-            exit 0
-          fi
+          if [ "${#changed[@]}" -eq 0 ]; then echo 'Validated PHP.3 batch is already committed.'; exit 0; fi
           test "${#changed[@]}" -eq 2
           test "${changed[0]}" = "$JOURNAL"
           test "${changed[1]}" = "$CHAPTER"
@@ -73,5 +64,5 @@ jobs:
           test "${staged[1]}" = "$CHAPTER"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'fix(biblia): review Philippians 2 against SBLGNT'
+          git commit -m 'fix(biblia): review Philippians 3 against SBLGNT'
           git push origin HEAD:codex/nt-ai-review-handoff
