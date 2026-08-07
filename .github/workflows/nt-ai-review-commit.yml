@@ -2,7 +2,7 @@ name: NT AI Review Commit
 
 on:
   pull_request:
-    types: [edited]
+    types: [synchronize]
     branches:
       - main
 
@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 5
     steps:
-      - name: Confirm pull request edited trigger
-        run: echo 'nt-ai-review-event-ok'
+      - name: Confirm pull request synchronize trigger
+        run: echo 'nt-ai-review-synchronize-ok'
