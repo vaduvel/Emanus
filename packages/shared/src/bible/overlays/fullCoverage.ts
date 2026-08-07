@@ -35,6 +35,15 @@ import { ZAHARIA_EXPLAINED as ZAHARIA_BASE } from "./zahariaOverlay.js"
 import { MALEAHI_EXPLAINED as MALEAHI_BASE } from "./maleahiOverlay.js"
 
 function full(base: Parameters<typeof completeOverlayCoverage>[0], data: { verseCounts: Readonly<Record<number, number>>; narratives: Readonly<Record<number, { title: string; summary: string }>> }) {
+  const empty = base.chapters.filter((chapter) => chapter.units.length === 0)
+  if (empty.length) {
+    throw new Error(
+      `[Biblia explicată VT] ${base.name} mai are capitole fără explicație directă: ${empty
+        .map((chapter) => chapter.number)
+        .join(", ")}.`,
+    )
+  }
+
   const completed = completeOverlayCoverage(base, data.verseCounts, data.narratives)
   return assertVerseCompleteOverlay(completed, data.verseCounts)
 }
