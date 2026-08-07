@@ -1,5 +1,6 @@
 import type { Lesson } from "../domain.js"
 import { aproapeL1, aproapeL2, aproapeL3, aproapeL4, aproapeL5, aproapeL6, aproapeL7 } from "./aproape.js"
+import { DIVORT_LESSONS, DIVORT_PRACTICES } from "./divort.js"
 import { DOCTRINE_LESSONS } from "./doctrina.js"
 import { GREUTATE_LESSONS, GREUTATE_PRACTICES } from "./greutate.js"
 import { harL1, harL2, harL3, harL4, harL5, harL6, harL7 } from "./har.js"
@@ -25,6 +26,7 @@ import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
 export * from "./aproape.js"
+export * from "./divort.js"
 export * from "./doctrina.js"
 export * from "./greutate.js"
 export * from "./har.js"
@@ -72,6 +74,11 @@ export * from "./umblareB.js"
  *   1. vine cu o durere        → camera lui (c1…c8)
  *   2. vine de la zero         → path_temelie
  *   3. vine să-și întărească relația → path_umblare
+ *
+ * DRUMURI FĂRĂ CAMERĂ: pe lângă cele opt camere există `path_umblare` (a treia
+ * intrare) și `path_divort` (ușă din camera 2 care a primit drum propriu, vezi
+ * comentariul de deasupra lui `pathDivort`). Se ajunge la ele prin `pathId` pus
+ * direct pe ușă, pe care `resolveDoorPath` îl citește înaintea camerei.
  *
  * STARE: toate cele opt camere au parcurs scris. `FALLBACK_PATH_ID` rămâne în
  * cod ca plasă de siguranță, nu ca soluție pentru camere goale.
@@ -150,7 +157,15 @@ export interface Door {
   label: string
   /** Camera în care duce ușa. `null` doar pentru ușile de la capătul listei. */
   roomId: string | null
-  /** Doar pentru ușile fără cameră: drumul către care duc direct. */
+  /**
+   * Drumul către care duce ușa direct, sărind peste cameră.
+   * `resolveDoorPath` îl citește ÎNAINTEA camerei, deci are prioritate.
+   *
+   * Se folosește în două feluri:
+   *   - ușile fără cameră (`inceput`, `umblare`, `nu_stiu`);
+   *   - ușile care stau într-o cameră, dar au primit drum propriu pentru că
+   *     răspunsul camerei nu li se potrivea. `divort` e prima de felul ăsta.
+   */
   pathId?: string
   /** True pentru cele 10 propoziții arătate înainte de "Arată-mi tot". */
   common?: boolean
@@ -194,7 +209,12 @@ export const DOORS: Door[] = [
   { id: "cum_citesc", label: "Nu știu cum să citesc Biblia", roomId: "c4" },
   { id: "epuizat_slujire", label: "Sunt obosit de slujire", roomId: "c6" },
   { id: "nou_venit", label: "Sunt nou și nu cunosc pe nimeni", roomId: "c7" },
-  { id: "divort", label: "Am trecut printr-un divorț", roomId: "c2" },
+  {
+    id: "divort",
+    label: "Am trecut printr-un divorț",
+    roomId: "c2",
+    pathId: "path_divort",
+  },
   { id: "prea_departe", label: "Cred că sunt prea departe ca să mă mai întorc", roomId: "c1" },
   { id: "furie", label: "Mă enervez și rănesc oamenii din jur", roomId: "c5" },
 ]
@@ -300,7 +320,7 @@ export const pathAcasa: PathDef = {
 
 /*
  * Camera 2: "Nu e bun / m-a lăsat".
- * Intră aici doliul, boala, nedreptatea, divorțul, neiertarea, "unde era El?".
+ * Intră aici doliul, boala, nedreptatea, neiertarea, "unde era El?".
  *
  * ORDINEA CONTEAZĂ (docs/21 §2): camera începe cu cele două lecții despre cine e
  * Dumnezeu, spuse PRIN rana asta — "nu El ți-a făcut asta" (Iacov 1:17) și
@@ -313,9 +333,15 @@ export const pathAcasa: PathDef = {
  * acum se face în `neiertare_o1`. De curățat la o trecere separată; ordinea
  * reală a drumului e array-ul `lessons`, nu `order`.
  *
- * DE FĂCUT, PRIORITAR (docs/23 §3, defectul D2): ușile `doliu`, `boala`,
- * `de_ce_permis` și `divort` ajung tot aici, adică omul în doliu primește un
- * drum despre iertare. Au nevoie de camera lor, "Cred că sunt pedepsit".
+ * PARȚIAL REZOLVAT (docs/23 §3, defectul D2): ușa `divort` cădea și ea aici,
+ * adică omul care tocmai își pierduse casa primea un drum despre iertare. A
+ * primit drum propriu, `path_divort`, prin `pathId` pus direct pe ușă.
+ *
+ * A RĂMAS: `doliu`, `boala` și `de_ce_permis` ajung tot aici. Omul în doliu
+ * primește în continuare un drum despre iertare. Au nevoie de camera lor,
+ * "Cred că sunt pedepsit". Conținutul lor există deja scris pe ramura
+ * `codex/nolan-short-courses`, în `suferinta.ts` — se aduce cu git, nu se
+ * rescrie de la zero.
  */
 export const pathNeiertare: PathDef = {
   id: "path_neiertare",
@@ -345,6 +371,51 @@ export const pathNeiertare: PathDef = {
     "Azi roagă-te pentru el o dată. O propoziție. Dacă nu-ți iese, spune-I lui Dumnezeu că nu-ți iese.",
     "Ai terminat drumul. Azi doar mulțumește. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+}
+
+/*
+ * DIVORȚUL. Ușă din camera 2, cu drum propriu.
+ *
+ * DE CE ARE DRUM PROPRIU (docs/23 §3, defectul D2): `divort` cădea în
+ * `path_neiertare`, adică omului care tocmai își pierduse casa i se dădea din
+ * prima zi un drum despre iertarea celui care l-a rănit. Uneori chiar asta e.
+ * De cele mai multe ori nu e: e doliu fără înmormântare, e vinovăție amestecată
+ * cu nedreptate, sunt copii la mijloc și e o întrebare despre recăsătorire la
+ * care nimeni nu i-a răspuns fără să-l judece.
+ *
+ * DE CE NU O CAMERĂ NOUĂ: `pathId` pe ușă e de ajuns, iar `resolveDoorPath` îl
+ * citește înaintea camerei. O cameră a noua ar fi însemnat un tipar spiritual
+ * nou, iar aici nu e vorba de un tipar nou. E o rană care nu încape întreagă în
+ * niciunul din cele opt.
+ *
+ * ORDINEA: doliu fără înmormântare (nimeni nu-ți spune "condoleanțe") → ce a
+ * spus Iisus, de fapt (Matei 19, "din pricina împietririi inimii voastre") →
+ * nu Dumnezeu ți-a rupt casa (1 Corinteni 7:15) → vina care e a ta și vina care
+ * nu e (Psalmul 51; 1 Ioan 1:9) → recăsătorirea → copiii, ceilalți, biserica
+ * (Romani 12:18) → ce urmează (Ioan 8:10-11; Isaia 43:19).
+ *
+ * REGULA CARE NU SE SCHIMBĂ (lecția 5): la recăsătorire Emanus NU dă verdict.
+ * Sunt puse pe masă trei citiri, toate ținute de creștini care iau Biblia în
+ * serios, iar omul e trimis la un păstor care îl cunoaște pe el, nu la noi. E
+ * singurul subiect din aplicație tratat așa. Nu se schimbă fără o decizie
+ * explicită în docs/14-carta-doctrinara.md.
+ *
+ * SIGURANȚĂ: lecția 1 are `safety.topic: "mental_health"`, lecția 3 are
+ * `"abuse"`. Nicăieri nu i se spune omului deja recăsătorit să-și rupă a doua
+ * căsnicie, și nicăieri nu se arată cu degetul către vreo denominațiune
+ * (docs/22 §6).
+ *
+ * NU E FUNDĂTURĂ (docs/21 §7 pct. 5): ultima practică trimite omul la ușa rănii
+ * care i-a rămas după cele șapte lecții.
+ */
+export const pathDivort: PathDef = {
+  id: "path_divort",
+  roomId: null,
+  title: "După divorț",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți spunem noi dacă ai voie să te recăsătorești și nu îți cerem să spui cine a fost de vină.",
+  lessons: DIVORT_LESSONS,
+  practices: DIVORT_PRACTICES,
 }
 
 /*
@@ -602,6 +673,7 @@ export const pathUmblare: PathDef = {
 export const PATHS: PathDef[] = [
   pathAcasa,
   pathNeiertare,
+  pathDivort,
   pathTemelie,
   pathAproape,
   pathSchimbare,
