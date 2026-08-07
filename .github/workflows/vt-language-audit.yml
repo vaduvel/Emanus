@@ -22,24 +22,18 @@ jobs:
           from pathlib import Path
 
           out = []
-          roots = [Path('packages/shared/src/bible')]
-          paths = []
-          for root in roots:
-              paths += sorted(root.glob('deuteronom*.ts'))
-              paths += sorted(root.glob('numeri*.ts'))
-
+          root = Path('packages/shared/src/bible')
+          paths = sorted(root.glob('deuteronom*.ts')) + sorted(root.glob('numeri*.ts'))
           string_re = re.compile(r'"(?:\\.|[^"\\])*"')
           for path in paths:
               text = path.read_text(encoding='utf-8')
               for m in string_re.finditer(text):
-                  raw = m.group(0)
                   try:
-                      value = ast.literal_eval(raw)
+                      value = ast.literal_eval(m.group(0))
                   except Exception:
                       continue
                   if not isinstance(value, str):
                       continue
-                  # Excludem importuri, id-uri, referințe și transliterări scurte.
                   if value.startswith('./') or value.startswith('../'):
                       continue
                   if re.fullmatch(r'[A-Za-z0-9_.:/-]+', value):
@@ -52,12 +46,16 @@ jobs:
           print(f'Extrase {len(out)} fragmente românești din {len(paths)} fișiere.')
           PY
 
-      - name: Configure Romanian dictionary
+      - name: Install spell checker and Romanian dictionary
         run: |
-          cat >/tmp/cspell.json <<'JSON'
+          mkdir -p /tmp/vt-spell
+          cd /tmp/vt-spell
+          npm init -y >/dev/null
+          npm install --silent cspell@9.2.1 @cspell/dict-ro-ro@2.0.6
+          cat >cspell.json <<'JSON'
           {
             "version": "0.2",
-            "language": "ro",
+            "language": "ro-RO",
             "useGitignore": false,
             "caseSensitive": true,
             "allowCompoundWords": true,
@@ -65,11 +63,23 @@ jobs:
           }
           JSON
 
+      - name: Sanity-check Romanian dictionary
+        run: |
+          cd /tmp/vt-spell
+          printf 'prtișniți\nrennoiește\nîmplânită\n' >/tmp/known-bad-ro.txt
+          set +e
+          output=$(npx cspell /tmp/known-bad-ro.txt --config ./cspell.json --words-only --unique --no-progress --no-summary 2>&1)
+          status=$?
+          set -e
+          printf '%s\n' "$output"
+          if [ "$status" -eq 0 ] || ! printf '%s\n' "$output" | grep -q 'prtișniți'; then
+            echo 'Dicționarul românesc nu a detectat typo-ul de control.'
+            exit 1
+          fi
+
       - name: Report unique spelling suspects
         run: |
-          npm exec --yes \
-            --package=cspell@9.2.1 \
-            --package=@cspell/dict-ro-ro@2.0.6 \
-            -- cspell /tmp/vt-ro.txt \
-              --config /tmp/cspell.json \
-              --words-only --unique --no-progress --no-summary || true
+          cd /tmp/vt-spell
+          npx cspell /tmp/vt-ro.txt \
+            --config ./cspell.json \
+            --words-only --unique --no-progress --no-summary || true
