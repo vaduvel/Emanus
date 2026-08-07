@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-07-1PE.3.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1PE",
+        "Biblia Liberă (snapshotul corpusului)"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,22 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "BTF și Cornilescu 1924 au fost consultate în acest lot numai pentru comparație de sens și română; NTR este configurată de schemă, dar nu a fost consultată.",
+      "WEBP-1PE și Biblia Liberă din snapshotul corpusului au fost folosite auxiliar; redactarea principală urmează SBLGNT și nu stochează sau copiază o traducere românească protejată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1pe-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -98,14 +111,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 22 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Toate cele 22 de versete au fost rescrise pentru sintaxă românească, acord, diacritice și continuitatea persoanei gramaticale.",
+        "Formulările corupte ori calchiate au fost înlocuite cu redactări verificate direct în textul grecesc fixat.",
+        "Locurile cu variante textuale păstrează lectura SBLGNT și sunt documentate în notele editoriale."
       ]
     },
     "theologicalContext": {
@@ -123,124 +136,190 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare directă din SBLGNT, verificată cu WEBP; BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru comparație auxiliară, fără copiere sau stocare a textelor lor."
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:ce29175265d702d26dab2311ad4fc3a3e3646eed37b4fbf0c59eececb8be6e00",
-    "contentDigest": "sha256:0ee90cb2c45ed294a121cc740634ecd23a9980580446893a136d1dbf804eb206"
+    "textDigest": "sha256:360982f570ea69424bd7f99ff73d1bdc8fe1dc432ef4ffc3936dd1012a855a9f",
+    "contentDigest": "sha256:80c5bc7b23fa30d64bac35dc1aeb999f315e3550f22d6c70dfc72c50577fe66b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "În același fel, soțiile, să fie supuse propriilor soți, astfel încât, chiar dacă cineva nu ascultă de Cuvânt, acestea pot fi câștigate prin comportamentul soțiilor lor fără un cuvânt,"
+      "text": "Tot astfel, voi, soțiilor, supuneți-vă propriilor soți, pentru ca, chiar dacă unii nu ascultă de cuvânt, să fie câștigați fără cuvânt prin purtarea soțiilor lor,"
     },
     {
       "number": 2,
-      "text": "văzând comportamentul tău pur în frică."
+      "text": "când vor vedea purtarea voastră curată și respectuoasă."
     },
     {
       "number": 3,
-      "text": "Frumusețea ta să nu vină din podoaba exterioară a împletirii părului tău, din purtarea de podoabe de aur sau de a pune pe haine fine,"
+      "text": "Podoaba voastră să nu fie cea din afară: împletirea părului, purtarea podoabelor de aur sau îmbrăcarea cu haine,"
     },
     {
       "number": 4,
-      "text": "dar de la persoana ascunsă a inimii, în podoaba incoruptibilă a unui spirit blând și liniștit, care este foarte prețios în ochii lui Dumnezeu."
+      "text": "ci omul ascuns al inimii, în podoaba nepieritoare a unui duh blând și liniștit, care este de mare preț înaintea lui Dumnezeu."
     },
     {
       "number": 5,
-      "text": "Căci astfel și în vechime sfintele femei care se încredeau în Dumnezeu, se înfrumusețau, fiind în supunere propriilor soți."
+      "text": "Căci așa se împodobeau odinioară și femeile sfinte care își puneau speranța în Dumnezeu, supunându-se propriilor soți."
     },
     {
       "number": 6,
-      "text": "Sara a ascultat de Avraam, numindu-l stăpân, ai cărui copii sunteți acum dacă faceți bine și nu vă temeți de vreo teroare."
+      "text": "Așa cum Sara a ascultat de Avraam, numindu-l domn, ale cărei fiice sunteți dacă faceți binele și nu vă lăsați înspăimântate de nicio amenințare."
     },
     {
       "number": 7,
-      "text": "Voi, soții, în același fel, trăiți cu soțiile voastre conform cunoștinței, dînd onoare femeii ca vasului mai slab, ca și moștenitori comuni ai harului vieții, ca rugăciunile voastre să nu fie împiedicate."
+      "text": "Tot astfel, voi, soților, trăiți cu soțiile voastre cu înțelegere, dând femeii cinste ca unui vas mai slab, ca uneia care este și împreună-moștenitoare a harului vieții, pentru ca rugăciunile voastre să nu fie împiedicate."
     },
     {
       "number": 8,
-      "text": "În cele din urmă, fiți toți uniți în gândire, plini de compasiune, iubindu-vă ca frații, miloși și smeriți."
+      "text": "În sfârșit, fiți toți de același gând, plini de compasiune, iubindu-vă ca frații, miloși și smeriți."
     },
     {
       "number": 9,
-      "text": "nu face rău pentru rău sau insultă pentru insultă, ci binecuvântează, știind că ai fost chemat la aceasta, ca să moștenești o binecuvântare."
+      "text": "Nu întoarceți rău pentru rău sau insultă pentru insultă, ci, dimpotrivă, binecuvântați; căci pentru aceasta ați fost chemați, ca să moșteniți o binecuvântare."
     },
     {
       "number": 10,
-      "text": "Căci cine vrea să iubească viața și să vadă zile bune, să-și țină limba departe de rău și de buzele lui, ca să nu spună minciuni."
+      "text": "Căci cine vrea să iubească viața și să vadă zile bune, să își ferească limba de rău și buzele de a rosti înșelăciune."
     },
     {
       "number": 11,
-      "text": "Să se întoarcă de la rău și să facă bine, să caute pacea și s-o urmărească."
+      "text": "Să se abată de la rău și să facă binele; să caute pacea și să o urmărească."
     },
     {
       "number": 12,
-      "text": "Căci ochii Domnului sunt peste cei neprihăniți, și urechile Lui sunt deschise la rugăciunea lor; dar Fața Domnului este împotriva celor ce fac răul."
+      "text": "Căci ochii Domnului sunt îndreptați spre cei drepți, iar urechile Lui spre rugăciunea lor; dar fața Domnului este împotriva celor care fac răul."
     },
     {
       "number": 13,
-      "text": "Cine vă va face rău dacă fi imitatori a ceea ce este bun?"
+      "text": "Și cine vă va face rău dacă sunteți plini de râvnă pentru bine?"
     },
     {
       "number": 14,
-      "text": "Dar chiar dacă suferiți pentru dreptate, sunteți fericiți. Nu vă temeți de amenințările lor și nu vă tulburați."
+      "text": "Dar chiar dacă suferiți pentru dreptate, sunteți fericiți. Nu vă temeți de teama lor și nu vă tulburați."
     },
     {
       "number": 15,
-      "text": "Dar sfințiți-L pe Domnul Dumnezeu în inimile voastre. Fiți întotdeauna gata să dați un răspuns oricui vă cere un motiv cu privire la care este în voi, cu umilință frică,"
+      "text": "Ci sfințiți-L pe Hristos ca Domn în inimile voastre. Fiți întotdeauna gata să dați un răspuns oricui vă cere temeiul speranței care este în voi,"
     },
     {
       "number": 16,
-      "text": "au o conștiință bună. Astfel, în timp ce se vorbește împotriva voastră ca răufăcători, ei pot fi dezamăgiți care blestemă calea voastră bună de viață în Hristos."
+      "text": "dar cu blândețe și respect, având o conștiință bună, pentru ca, atunci când sunteți vorbiți de rău, să fie rușinați cei care defăimează purtarea voastră bună în Hristos."
     },
     {
       "number": 17,
-      "text": "Pentru că este mai bine, dacă este voia lui Dumnezeu, să suferi pentru a face ceea ce este drept decât pentru a face rău."
+      "text": "Căci este mai bine, dacă aceasta este voia lui Dumnezeu, să suferiți făcând binele decât făcând răul."
     },
     {
       "number": 18,
-      "text": "Fiindcă și Hristos a suferit o dată pentru păcate, pe cei neprihăniți pentru cei nedrepți, ca să vă aducă la Dumnezeu, fiind uciși în carne, dar făcuți vii în Duhul,"
+      "text": "Fiindcă și Hristos a suferit o dată pentru păcate, cel drept pentru cei nedrepți, ca să vă aducă la Dumnezeu; a fost omorât în trup, dar a fost făcut viu în duh."
     },
     {
       "number": 19,
-      "text": "în care s-a dus a predicat spiritelor din închisoare,"
+      "text": "În care s-a dus și a vestit duhurilor aflate în închisoare,"
     },
     {
       "number": 20,
-      "text": "care mai înainte erau neascultători când Dumnezeu aștepta cu răbdare în zilele lui Noe, când era zidită corabia; în ea puțini, adică opt suflete, au fost mîntuiți prin apă."
+      "text": "care fuseseră neascultătoare odinioară, când îndelunga răbdare a lui Dumnezeu aștepta în zilele lui Noe, pe când se construia corabia. În ea, puțini, adică opt suflete, au fost salvați prin apă."
     },
     {
       "number": 21,
-      "text": "Acesta este un simbol al botezului, care acum te salvează nu pentru a îndepărta murdăria cărnii, ci pentru a răspunde unei conștiințe bune față de Dumnezeu prin învierea lui Isus Hristos,"
+      "text": "Ca imagine corespunzătoare, botezul vă salvează acum — nu ca îndepărtare a murdăriei de pe trup, ci ca apel al unei conștiințe bune către Dumnezeu — prin învierea lui Isus Hristos,"
     },
     {
       "number": 22,
-      "text": "care este la dreapta lui Dumnezeu, după ce a mers în cer, îngeri, autorități și puteri fiind supuse lui."
+      "text": "care este la dreapta lui Dumnezeu, după ce a intrat în cer, îngerii, autoritățile și puterile fiindu-I supuse."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 15,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: συγκληρονόμοις / συγκληρονόμοι",
+      "decision": "„deoarece și ele sunt împreună-moștenitoare ale harului vieții”",
+      "alternatives": [
+        "TR-1PE din snapshot are nominativul συγκληρονόμοι, care permite construirea propoziției cu soții ca subiect direct."
+      ],
+      "reason": "SBLGNT are dativul συγκληρονόμοις în continuarea obiectului „femeii”; româna păstrează explicit că femeile sunt și ele împreună-moștenitoare.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: ταπεινόφρονες / φιλόφρονες",
+      "decision": "„smeriți”",
+      "alternatives": [
+        "TR-1PE din snapshot citește φιλόφρονες, redabil prin „prietenoși” sau „binevoitori”."
+      ],
+      "reason": "SBLGNT are ταπεινόφρονες; redarea principală păstrează smerenia, fără a o înlocui cu lectura tradițională despre politețe ori bunăvoință.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: ζηλωταὶ / μιμηταὶ",
+      "decision": "„plini de râvnă pentru bine”",
+      "alternatives": [
+        "TR-1PE din snapshot citește μιμηταὶ, redabil prin „imitatori ai binelui”."
+      ],
+      "reason": "ζηλωταὶ exprimă râvna pentru bine; redarea principală nu importă tacit lectura TR despre imitare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "variantă textuală SBLGNT/TR: Χριστὸν / θεὸν",
+      "decision": "„sfințiți-L pe Hristos ca Domn”",
+      "alternatives": [
+        "TR-1PE din snapshot citește „Dumnezeu” în loc de „Hristos”."
+      ],
+      "reason": "Lectura SBLGNT este κύριον δὲ τὸν Χριστόν; româna păstrează explicit Hristos ca Domn, fără armonizare cu lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală SBLGNT/TR: καταλαλεῖσθε / καταλαλοῦσιν ὑμῶν ὡς κακοποιῶν",
+      "decision": "„atunci când sunteți vorbiți de rău”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă formularea „ca răufăcători”."
+      ],
+      "reason": "SBLGNT are forma pasivă καταλαλεῖσθε și nu include adaosul TR; versetul nu califică tacit destinatarii drept răufăcători.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "variante SBLGNT/TR: ἔπαθεν / ἀπέθανεν și ὑμᾶς / ἡμᾶς",
+      "decision": "„Hristos a suferit ... ca să vă aducă la Dumnezeu”",
+      "alternatives": [
+        "Martorii WH/Treg citați de aparat au ἀπέθανεν, „a murit”.",
+        "TR-1PE din snapshot citește ἡμᾶς, „ne”, în loc de ὑμᾶς, „vă”."
+      ],
+      "reason": "SBLGNT păstrează ἔπαθεν și ὑμᾶς; redarea românească conservă atât verbul „a suferit”, cât și adresarea la plural către destinatari.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 21,
+      "term": "ἀντίτυπον și ἐπερώτημα",
+      "decision": "„Ca imagine corespunzătoare, botezul vă salvează acum ... ca apel al unei conștiințe bune către Dumnezeu”",
+      "alternatives": [
+        "ἐπερώτημα poate fi redat lexical și prin „cerere” ori „angajament”; alegerea sa este disputată în traduceri."
+      ],
+      "reason": "„Imagine corespunzătoare” păstrează relația cu apa din versetul anterior, iar „apel” redă un sens lexical posibil fără a transforma versetul într-o explicație doctrinară suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT și sensurile lexicale posibile au fost confruntate direct; ambiguitatea rămâne semnalată, fără adaos interpretativ în verset."
     }
   ],
   "referenceNotes": [],
