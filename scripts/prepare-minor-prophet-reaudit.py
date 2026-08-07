@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Construiește un pachet de re-audit sursă-verset pentru un profet mic.
 
-Pachetul este numai material de review: candidat românesc + WEBU + WLC din
-snapshotul nou. Nu aprobă și nu modifică traducerea.
+Candidatul românesc și WEBU folosesc versificația de produs. WLC poate muta
+versete peste granițe de capitol (de ex. Osea). De aceea WLC este aliniat prin
+ordinea absolută a versetelor în carte, iar ref-ul masoretic real este păstrat
+explicit pentru fiecare rând. Scriptul nu aprobă și nu modifică traducerea.
 """
 
 from __future__ import annotations
@@ -13,6 +15,7 @@ import hashlib
 import json
 import re
 import zipfile
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,6 +46,7 @@ USFM_MARKER = re.compile(r"\\[a-zA-Z0-9+]+\*?(?:\s+)?")
 WORD_PAYLOAD = re.compile(r"\\w\s+([^|\\]+)(?:\|[^\\]*)?\\w\*")
 NOTE_BLOCK = re.compile(r"\\(?:f|x)\s.*?\\(?:f|x)\*", re.DOTALL)
 ATTRIBUTE_BLOCK = re.compile(r"\|[^\\]+")
+STRONG = re.compile(r'strong="(H\d+)"')
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -80,9 +84,9 @@ def normalize_usfm_text(raw: str) -> str:
     return text
 
 
-def parse_usfm(data: bytes) -> dict[int, dict[int, dict[str, str]]]:
+def parse_usfm(data: bytes) -> dict[int, dict[int, dict[str, object]]]:
     text = data.decode("utf-8-sig")
-    chapters: dict[int, dict[int, dict[str, str]]] = {}
+    chapters: dict[int, dict[int, dict[str, object]]] = {}
     chapter: int | None = None
     verse: int | None = None
     raw_parts: list[str] = []
@@ -96,6 +100,7 @@ def parse_usfm(data: bytes) -> dict[int, dict[int, dict[str, str]]]:
         chapters.setdefault(chapter, {})[verse] = {
             "raw": raw,
             "text": normalize_usfm_text(raw),
+            "strongs": STRONG.findall(raw),
         }
         raw_parts = []
 
@@ -120,14 +125,28 @@ def parse_usfm(data: bytes) -> dict[int, dict[int, dict[str, str]]]:
     return chapters
 
 
+def flatten(source: dict[int, dict[int, dict[str, object]]]) -> list[tuple[int, int, dict[str, object]]]:
+    rows: list[tuple[int, int, dict[str, object]]] = []
+    for chapter in sorted(source):
+        for verse in sorted(source[chapter]):
+            rows.append((chapter, verse, source[chapter][verse]))
+    return rows
+
+
+def strong_overlap(a: list[str], b: list[str]) -> dict[str, object]:
+    ca, cb = Counter(a), Counter(b)
+    shared = sum((ca & cb).values())
+    denom = max(1, min(sum(ca.values()), sum(cb.values())))
+    return {
+        "sharedTokens": shared,
+        "smallerSideTokens": denom,
+        "ratio": round(shared / denom, 3),
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--book", required=True, choices=sorted(BOOK_FILES))
-    parser.add_argument(
-        "--allow-alignment-issues",
-        action="store_true",
-        help="Scrie pachetul și iese 0 pentru diagnostic, fără a considera alinierea aprobată.",
-    )
     args = parser.parse_args()
 
     code = args.book
@@ -143,10 +162,8 @@ def main() -> None:
         raise SystemExit(f"{code}: lipsește din source-lock")
 
     with zipfile.ZipFile(snapshot_path) as archive:
-        web_member = book_lock["WEBU"]["snapshotMember"]
-        wlc_member = book_lock["WLC"]["snapshotMember"]
-        web_bytes = archive.read(web_member)
-        wlc_bytes = archive.read(wlc_member)
+        web_bytes = archive.read(book_lock["WEBU"]["snapshotMember"])
+        wlc_bytes = archive.read(book_lock["WLC"]["snapshotMember"])
 
     if sha256_bytes(web_bytes) != book_lock["WEBU"]["sha256"]:
         raise SystemExit(f"{code}: WEBU member SHA mismatch")
@@ -160,54 +177,59 @@ def main() -> None:
     if sorted(candidate) != list(range(1, expected_chapters + 1)):
         raise SystemExit(f"{code}: candidatul românesc nu are {expected_chapters} capitole")
 
+    candidate_count = sum(len(v) for v in candidate.values())
+    web_flat = flatten(web)
+    wlc_flat = flatten(wlc)
+    if len(web_flat) != candidate_count:
+        raise SystemExit(f"{code}: WEBU are {len(web_flat)} versete, candidatul are {candidate_count}")
+    if len(wlc_flat) != candidate_count:
+        raise SystemExit(f"{code}: WLC are {len(wlc_flat)} versete, candidatul are {candidate_count}")
+
+    # WEBU trebuie să fie în exact aceeași versificație cu produsul; altfel ref-urile
+    # utilizatorului nu mai au o bază stabilă.
+    for chapter_no, ro_verses in candidate.items():
+        web_numbers = sorted(web.get(chapter_no, {}))
+        expected = list(range(1, len(ro_verses) + 1))
+        if web_numbers != expected:
+            raise SystemExit(
+                f"{code} {chapter_no}: WEBU versification mismatch: {web_numbers} != {expected}"
+            )
+
     chapters = []
-    total_verses = 0
-    source_mismatches = []
-    chapter_counts = []
+    versification_mappings = []
+    ordinal = 0
     for chapter_no in range(1, expected_chapters + 1):
-        ro_verses = candidate[chapter_no]
-        web_chapter = web.get(chapter_no, {})
-        wlc_chapter = wlc.get(chapter_no, {})
-        chapter_counts.append(
-            {
-                "chapter": chapter_no,
-                "candidate": len(ro_verses),
-                "WEBU": len(web_chapter),
-                "WLC": len(wlc_chapter),
-            }
-        )
         verse_rows = []
+        ro_verses = candidate[chapter_no]
         for verse_no, ro_text in enumerate(ro_verses, start=1):
-            web_row = web_chapter.get(verse_no)
-            wlc_row = wlc_chapter.get(verse_no)
-            if not web_row or not wlc_row:
-                source_mismatches.append(
+            web_row = web[chapter_no][verse_no]
+            wlc_chapter, wlc_verse, wlc_row = wlc_flat[ordinal]
+            ordinal += 1
+            direct = wlc_chapter == chapter_no and wlc_verse == verse_no
+            if not direct:
+                versification_mappings.append(
                     {
-                        "kind": "candidate-verse-missing-in-source",
-                        "chapter": chapter_no,
-                        "verse": verse_no,
-                        "missingWEBU": not bool(web_row),
-                        "missingWLC": not bool(wlc_row),
+                        "productRef": f"{chapter_no}:{verse_no}",
+                        "WLCRef": f"{wlc_chapter}:{wlc_verse}",
                     }
                 )
             verse_rows.append(
                 {
                     "verse": verse_no,
+                    "productRef": f"{chapter_no}:{verse_no}",
                     "candidateRo": ro_text,
-                    "WEBU": web_row,
-                    "WLC": wlc_row,
+                    "WEBU": {
+                        "ref": f"{chapter_no}:{verse_no}",
+                        **web_row,
+                    },
+                    "WLC": {
+                        "ref": f"{wlc_chapter}:{wlc_verse}",
+                        **wlc_row,
+                    },
+                    "sourceSignatureEvidence": strong_overlap(
+                        list(web_row.get("strongs", [])), list(wlc_row.get("strongs", []))
+                    ),
                     "review": {"status": "pending", "issues": []},
-                }
-            )
-        extras_web = sorted(set(web_chapter) - set(range(1, len(ro_verses) + 1)))
-        extras_wlc = sorted(set(wlc_chapter) - set(range(1, len(ro_verses) + 1)))
-        if extras_web or extras_wlc:
-            source_mismatches.append(
-                {
-                    "kind": "source-extra-verses",
-                    "chapter": chapter_no,
-                    "extraWEBUVerses": extras_web,
-                    "extraWLCVerses": extras_wlc,
                 }
             )
         chapters.append(
@@ -218,25 +240,52 @@ def main() -> None:
                 "verses": verse_rows,
             }
         )
-        total_verses += len(ro_verses)
+
+    # Diagnostic: alinierile mutate trebuie totuși să aibă semnal lexical între
+    # WEBU Strong's și WLC Strong's. Nu folosim această măsură ca audit semantic.
+    weak_shifted = []
+    for chapter in chapters:
+        for row in chapter["verses"]:
+            if row["WEBU"]["ref"] != row["WLC"]["ref"]:
+                evidence = row["sourceSignatureEvidence"]
+                if evidence["sharedTokens"] == 0:
+                    weak_shifted.append(
+                        {
+                            "productRef": row["productRef"],
+                            "WLCRef": row["WLC"]["ref"],
+                            "evidence": evidence,
+                        }
+                    )
+    if weak_shifted:
+        raise SystemExit(
+            f"{code}: {len(weak_shifted)} mapări WLC mutate fără niciun Strong comun: "
+            + json.dumps(weak_shifted, ensure_ascii=False)
+        )
 
     packet = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "bookId": code,
         "bookName": book_lock["name"],
         "translationTarget": "BE",
-        "status": "fresh-source-reaudit-pending",
+        "status": "fresh-source-reaudit-ready",
         "candidateStage": "temporary-editorial",
         "sourceLock": str(LOCK_PATH.relative_to(ROOT)).replace("\\", "/"),
         "sourceSnapshotSha256": lock["snapshot"]["sha256"],
         "sourceMembers": {"WEBU": book_lock["WEBU"], "WLC": book_lock["WLC"]},
+        "versification": {
+            "productBase": "WEBU",
+            "WLCAlignment": "absolute-verse-ordinal-across-book",
+            "note": "WLC păstrează referința masoretică reală per verset; mapările neidentice sunt enumerate explicit.",
+            "mappedRefs": len(versification_mappings),
+            "mappings": versification_mappings,
+        },
         "totals": {
             "chapters": expected_chapters,
-            "verses": total_verses,
-            "sourceAlignmentIssues": len(source_mismatches),
+            "verses": candidate_count,
+            "WEBUVerses": len(web_flat),
+            "WLCVerses": len(wlc_flat),
+            "sourceAlignmentIssues": 0,
         },
-        "chapterVerseCounts": chapter_counts,
-        "sourceAlignmentIssues": source_mismatches,
         "chapters": chapters,
     }
 
@@ -244,17 +293,12 @@ def main() -> None:
     out = OUT_ROOT / f"{code}-FRESH-SOURCE-REAUDIT.json"
     out.write_text(json.dumps(packet, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
-        f"{code} re-audit packet: {expected_chapters} capitole / {total_verses} versete / "
-        f"source alignment issues={len(source_mismatches)} -> {out}"
+        f"{code} READY: {expected_chapters} capitole / {candidate_count} versete / "
+        f"WEBU={len(web_flat)} / WLC={len(wlc_flat)} / WLC remaps={len(versification_mappings)} / issues=0"
     )
-    print("Chapter verse counts:")
-    print(json.dumps(chapter_counts, ensure_ascii=False, indent=2))
-    if source_mismatches:
-        print("Source alignment diagnostics:")
-        print(json.dumps(source_mismatches, ensure_ascii=False, indent=2))
-        if not args.allow_alignment_issues:
-            raise SystemExit(f"{code}: alinieri WEBU/WLC neclare; vezi diagnosticul")
-        print("DIAGNOSTIC ONLY: problemele de aliniere rămân neaprobate.")
+    if versification_mappings:
+        print("Versification boundary remaps:")
+        print(json.dumps(versification_mappings, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
