@@ -1,14 +1,21 @@
 # Biblia explicată — Vechiul Testament canonic complet
 
-## Stare
+## Stare finală a conținutului
 
-**Acoperire structurală: 39 / 39 de cărți ale Vechiului Testament canonic protestant, Geneza–Maleahi.**
+**Acoperire: 39 / 39 de cărți canonice ale Vechiului Testament, Geneza–Maleahi.**
 
-Toate materialele noi sunt `in_review`. „Complet” în acest document înseamnă că fiecare carte este prezentă în arhitectura Bibliei explicate și că sursa de explicație a fost definită; nu înseamnă că revizia umană finală sau integrarea în `main` a fost făcută.
+În acest document, `full` înseamnă acum mai mult decât prezență structurală:
 
-## Cele două formate existente
+- fiecare carte este prezentă;
+- fiecare capitol este prezent;
+- fiecare interval de versete al celor 29 de cărți overlay este acoperit de cel puțin o explicație;
+- unitățile doctrinare existente din Zac Poonen sunt păstrate;
+- intervalele pe care Poonen nu le dezvoltă suficient primesc numai explicația textuală/narativă a ceea ce spune Biblia Emanus, fără doctrină, tipologie sau aplicație inventată;
+- toate materialele noi rămân `in_review` până la revizia editorială finală și integrarea în `main`.
 
-### Formatul anterior — `legacy-full` — 10 cărți
+## Formatele
+
+### `legacy-full` — 10 cărți
 
 1. Geneza
 2. Exodul
@@ -21,85 +28,131 @@ Toate materialele noi sunt `in_review`. „Complet” în acest document înseam
 9. 2 Samuel
 10. 1 Împărați
 
-Geneza folosește fluxul editorial anterior bazat pe Allen Nolan. Exod–Iosua și Rut–1 Împărați folosesc corpusul Poonen pregătit în repo și structura de explicație existentă.
+Acestea folosesc formatul complet existent. Geneza păstrează fluxul editorial Allen/Nolan; celelalte folosesc fluxul Poonen existent.
 
-### Formatul nou — explanation overlay — 29 de cărți
+### `full-overlay` — 29 de cărți / 637 de capitole
 
-1. Judecători
-2. 2 Împărați
-3. 1 Cronici
-4. 2 Cronici
-5. Ezra
-6. Neemia
-7. Estera
-8. Iov
-9. Psalmii
-10. Proverbele
-11. Eclesiastul
-12. Cântarea Cântărilor
-13. Isaia
-14. Ieremia
-15. Plângerile lui Ieremia
-16. Ezechiel
-17. Daniel
-18. Osea
-19. Ioel
-20. Amos
-21. Obadia
-22. Iona
-23. Mica
-24. Naum
-25. Habacuc
-26. Țefania
-27. Hagai
-28. Zaharia
-29. Maleahi
+1. Judecători — 21
+2. 2 Împărați — 25
+3. 1 Cronici — 29
+4. 2 Cronici — 36
+5. Ezra — 10
+6. Neemia — 13
+7. Estera — 10
+8. Iov — 42
+9. Psalmii — 150
+10. Proverbele — 31
+11. Eclesiastul — 12
+12. Cântarea Cântărilor — 8
+13. Isaia — 66
+14. Ieremia — 52
+15. Plângerile lui Ieremia — 5
+16. Ezechiel — 48
+17. Daniel — 12
+18. Osea — 14
+19. Ioel — 3
+20. Amos — 9
+21. Obadia — 1
+22. Iona — 4
+23. Mica — 7
+24. Naum — 3
+25. Habacuc — 3
+26. Țefania — 3
+27. Hagai — 2
+28. Zaharia — 14
+29. Maleahi — 4
 
-Overlay-ul nu copiază textul biblic. Fiecare carte referă `bibleEmanusBookId`, iar textul trebuie rezolvat din Biblia Emanus. Explicația rămâne un strat separat.
+**Total overlay: 637 capitole.**
 
-## Sursele explicației
+Overlay-ul nu copiază textul biblic. Fiecare carte referă `bibleEmanusBookId`, iar textul este rezolvat din Biblia Emanus. Explicația rămâne un strat separat.
 
-### Exod–Daniel
+## Cele trei straturi de adevăr
 
-Corpus local:
+### 1. Text biblic — Biblia Emanus
+
+Biblia Emanus este sursa textului afișat și a versificației. Explicația nu rescrie versetele.
+
+### 2. Explicație doctrinară — Zac Poonen / sursa editorială stabilită
+
+Pentru Exod–Daniel, baza locală este:
 
 `.research/poonen-through-the-bible-OT/`
 
-Manifestul local confirmă 21 de fișiere / 25 de episoade, Exodus–Daniel. Pentru că Poonen face în multe episoade overview, noul format folosește `coverageMode: "transcript-focused"`: toate capitolele există structural, dar explicație este adăugată numai acolo unde sursa dezvoltă tema/pasajul suficient.
+Manifestul corpusului confirmă 21 de fișiere și 25 de episoade, Exod–Daniel. Unitățile care provin din transcript păstrează `source.kind = "poonen"` și ancora de sursă.
 
-### Osea–Maleahi
+Pentru Osea–Maleahi, corpusul local nu avea încă transcript; au fost folosite episoadele/structura oficială CFC India `Through The Bible`, marcate distinct cu `source.kind = "poonen-official"`.
 
-Corpusul local se oprește la Daniel. Pentru a închide VT fără a inventa explicații, Osea–Maleahi folosesc direct sursa oficială CFC India `Through The Bible` pentru Zac Poonen, prin episoadele și structura editorială oficială a celor 12 profeți mici.
+Textul protejat al predicilor nu este reprodus integral; materialul Emanus este formulat în propriile cuvinte și păstrează trasabilitatea sursei.
 
-Aceste unități folosesc `source.kind = "poonen-official"` și păstrează URL-ul oficial și secțiunea sursă. Textul Poonen nu este copiat; explicația Emanus este parafrazată în limitele temei oficiale și ale textului Biblia Emanus.
+### 3. Explicație textuală de completare — Biblia Emanus
 
-## Regula doctrinară
+Când Poonen nu dezvoltă separat un capitol sau un interval, sistemul **nu inventează doctrina care lipsește**.
 
-1. **Textul biblic:** exclusiv Biblia Emanus.
-2. **Explicația doctrinară:** Poonen / sursa editorială stabilită pentru carte.
-3. **Gol în sursă:** nu se inventează doctrină; capitolul rămâne structural și cititorul vede textul Biblia Emanus.
-4. **Afirmație discutabilă a sursei:** se limitează prin textul biblic și este marcată ca interpretare când Scriptura nu o afirmă explicit.
-5. **Ebraică:** numai termeni importanți pentru sens, verificați în WLC-OSHB; nota lexicală nu este atribuită lui Poonen dacă nu vine de la el.
-6. **Aplicație tipologică:** nu înlocuiește sensul istoric al textului.
-7. **Pasaje sensibile:** narațiunile despre război, sinucidere, abuz, violență sexuală, divorț sau judecată nu sunt transformate în permisiuni moderne pentru rău.
+În schimb, intervalul primește o explicație textuală care spune ce se întâmplă sau ce afirmă pasajul însuși. Aceste unități au:
+
+`source.kind = "biblia-emanus"`
+
+și nota:
+
+`rezumat narativ fără doctrină adăugată`
+
+Acest strat este folosit exclusiv pentru acoperire textuală, nu pentru a introduce concluzii doctrinare noi.
+
+## Ebraica
+
+Cuvintele ebraice intră numai când sunt importante pentru sens. Ele sunt un strat lexical separat, verificat în WLC-OSHB.
+
+O notă lexicală:
+
+- nu este prezentată drept idee a lui Poonen dacă el nu explică acel cuvânt;
+- nu construiește doctrine din etimologii speculative;
+- nu transformă un posibil sens lexical în singurul sens al pasajului.
+
+## Reguli doctrinare
+
+1. Text biblic: Biblia Emanus.
+2. Doctrină/aplicație: numai în limitele Poonen sau ale sursei editoriale stabilite.
+3. Gol în Poonen: numai explicație textuală din Biblia Emanus.
+4. Afirmație discutabilă a sursei: este limitată de text și marcată drept interpretare când Scriptura nu o afirmă explicit.
+5. Părerea unui personaj biblic nu devine automat doctrina cărții. Exemplu: discursurile prietenilor lui Iov sunt explicate ca discursurile lor; Iov 42 păstrează evaluarea lui Dumnezeu.
+6. Aplicația tipologică nu șterge sensul istoric/literar.
+7. Narațiunile despre război, sinucidere, abuz, violență sexuală, divorț și judecată nu sunt transformate în permisiuni moderne pentru rău.
+8. Profeția apocaliptică este descrisă textual; schemele interpretative Poonen rămân interpretări Poonen unde textul nu oferă aceeași certitudine.
 
 ## Judecători
 
-PR-ul vechi #46 este metodologic depășit și nu trebuie folosit drept sursă finală. `Judecători v2` este varianta transcript-backed: Biblia Emanus `JDG` + `judges-ruth.txt`, fără explicațiile suplimentare inventate în primul draft.
+PR-ul vechi #46 rămâne metodologic depășit și nu trebuie folosit drept sursă finală.
 
-## Profeții mici
+`Judecători v2` păstrează unitățile transcript-backed din `judges-ruth.txt`. În registry-ul final, capitolele și intervalele neacoperite de transcript sunt completate numai cu rezumat textual din Biblia Emanus.
 
-Sursele oficiale Poonen folosite:
+## Implementare
 
-- Osea + Ioel — `Hosea, Joel`
-- Amos + Obadia — `Amos, Obadiah`
-- Iona + Mica — `Jonah, Micah`
-- Naum + Habacuc — `Nahum, Habakkuk`
-- Țefania + Hagai — `Zephaniah, Haggai`
-- Zaharia — `Zechariah`
-- Maleahi — `Malachi`
+Helper:
 
-Structura oficială Poonen este păstrată în fiecare val, inclusiv cele șapte poveri din Maleahi și cele cinci secțiuni mari din Zaharia.
+`packages/shared/src/bible/completeOverlay.ts`
+
+Datele complete de capitol:
+
+- `vtFullNarrativesHistorical.ts` — 144 capitole
+- `vtFullNarrativesWisdom.ts` — 243 capitole
+- `vtFullNarrativesMajorProphets.ts` — 183 capitole
+- `vtFullNarrativesMinorProphets.ts` — 67 capitole
+
+Compoziția finală:
+
+`packages/shared/src/bible/overlays/fullCoverage.ts`
+
+Registry-ul canonic:
+
+`packages/shared/src/bible/overlays/index.ts`
+
+Export public al pachetului:
+
+`@emanus/shared/bible-explained`
+
+Manifest 39/39:
+
+`packages/shared/src/bible/vtExplainedCoverage.ts`
 
 ## Validare
 
@@ -107,17 +160,27 @@ Structura oficială Poonen este păstrată în fiecare val, inclusiv cele șapte
 python3 scripts/check-vt-explained-coverage.py
 ```
 
-Poarta verifică:
+Poarta verifică static:
 
-- cele 10 cărți în formatul vechi;
-- cele 29 de overlay-uri;
-- `bibleEmanusBookId` pentru overlay-uri;
-- statusul `in_review`;
-- 39 de intrări canonice în ordine Geneza–Maleahi;
-- registry-ul celor 29 de overlay-uri.
+- cele 10 cărți `legacy-full`;
+- cele 29 de overlay-uri de bază și `bibleEmanusBookId`;
+- cele 637/637 explicații de capitol și cele 637 seturi de versificație;
+- compoziția celor 29 de `*_FULL`;
+- `coverageMode = "full"`;
+- registry-ul final bazat pe `VT_EXPLAINED_FULL_OVERLAYS`;
+- manifestul cu 39/39 cărți în ordine;
+- exportul public `@emanus/shared/bible-explained`.
 
-## Ce NU intră în acest „39/39”
+La runtime, `assertVerseCompleteOverlay()` refuză o carte dacă după compoziție rămâne vreun interval de versete neacoperit.
 
-Această închidere privește **VT-ul canonic de 39 de cărți, Geneza–Maleahi**.
+## Ce nu înseamnă „terminat”
 
-Cărțile deuterocanonice/ortodoxe, extensiile etiopiene și textele selectate de la Marea Moartă din Biblia Emanus sunt un corpus separat. Ele nu sunt declarate „Biblia explicată terminată” prin acest val, deoarece corpusul Poonen `Through The Bible` folosit aici urmează canonul de 66 de cărți și nu oferă aceeași bază pentru acele texte suplimentare.
+`39/39 full` descrie **acoperirea conținutului Bibliei explicate**, nu aprobarea finală de publicare.
+
+Toate materialele nou create rămân `in_review`. Înainte de `main` rămân:
+
+- typecheck/build/CI;
+- revizia editorială finală;
+- integrarea UI a registry-ului complet, dacă reader-ul curent încă folosește doar formatul legacy.
+
+Cărțile deuterocanonice/ortodoxe, extensiile etiopiene și textele selectate de la Marea Moartă sunt un corpus separat și nu intră în acest 39/39.
