@@ -39,6 +39,8 @@ jobs:
           if test -f "$journal"; then
             echo 'HEB.4 already reviewed; skipping.'
           else
+            # HEB 4:3 contains apparatus markup inside the longer phrase; use an exact stable SBL token as the journal anchor.
+            sed -i "s/'Εἰσερχόμεθα γὰρ εἰς τὴν κατάπαυσιν οἱ πιστεύσαντες'/'Εἰσερχόμεθα'/" .github/nt-ai-review/heb4.py
             python3 .github/nt-ai-review/heb4.py
             git diff --check
             pnpm check:biblia-emanus
@@ -55,6 +57,7 @@ jobs:
             git commit -m 'review(biblia): audit Hebrews 4 verse by verse'
           fi
 
+          git restore -- .github/nt-ai-review/heb4.py || true
           python3 scripts/build-nt-editorial-review-queue.py
           python3 scripts/build-nt-editorial-review-queue.py --check
           pnpm check:biblia-emanus
