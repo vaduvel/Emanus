@@ -7,9 +7,10 @@ P0 enumerate în inventarul de bază, dar **nu este aprobat și nu este
 publicabil**. Remedierile sunt loturi confirmate de schimbări de text, nu
 dovada unei revizii semantice complete sau a unei aprobări editoriale.
 
-Revizia editorială identificată este în curs la AI-ul desemnat. Primul lot
-documentat acoperă toate cele 14 versete BE din `3JN.1`, dar registrul
-per-verset aferent întregului NT este încă nefinalizat.
+Revizia editorială identificată este în curs la AI-ul desemnat. Până în acest
+punct au fost revizuite și documentate 123 din cele 7.941 de versete BE
+(1,55%), în șapte loturi. Aceste jurnale de lucru nu sunt registrul final
+per-verset și nu constituie aprobare de publicare.
 
 ## Baza verificării
 
@@ -37,10 +38,22 @@ sau aprobată.
 | Catalog runtime | `withheld`, cu `approval: null` |
 | Cărți NT expuse de catalogul runtime | listă goală |
 
-Revizia lotului `3JN.1` este consemnată în
-`NT-AI-REVIEW-BATCH-2026-08-07-3JN.1.md`. Documentul păstrează ancorele
-grecești, sursele consultate și deciziile de redactare, dar nu este un
-registru de aprobare și nu schimbă starea celor 14 intrări din coadă.
+Loturile revizuite până acum sunt:
+
+| Lot | Versete BE | Jurnal de revizie |
+| --- | ---: | --- |
+| `3JN.1` | 14 | `NT-AI-REVIEW-BATCH-2026-08-07-3JN.1.md` |
+| `2JN.1` | 13 | `NT-AI-REVIEW-BATCH-2026-08-07-2JN.1.md` |
+| `TIT.1` | 16 | `NT-AI-REVIEW-BATCH-2026-08-07-TIT.1.md` |
+| `TIT.2` | 15 | `NT-AI-REVIEW-BATCH-2026-08-07-TIT.2.md` |
+| `TIT.3` | 15 | `NT-AI-REVIEW-BATCH-2026-08-07-TIT.3.md` |
+| `PHM.1` | 25 | `NT-AI-REVIEW-BATCH-2026-08-07-PHM.1.md` |
+| `JUD.1` | 25 | `NT-AI-REVIEW-BATCH-2026-08-07-JUD.1.md` |
+| **Total** | **123** | **1,55% din NT** |
+
+Fiecare jurnal păstrează ancorele grecești, sursele consultate și deciziile
+de redactare, dar nu este un registru de aprobare. Niciunul nu schimbă
+starea `pending` a intrărilor din coadă și nici starea de publicare.
 
 Starea este verificată de `withhold-biblia-emanus-nt.py --check` și de
 generatorul catalogului runtime. Corpusul brut poate rămâne în repository,
@@ -85,8 +98,8 @@ semantică a unui verset. Prin urmare, aceste cifre nu dovedesc că toate cele
 
 1. AI-ul desemnat continuă revizia de sursă și de română pentru **fiecare
    dintre cele 7.941 de versete**, nu numai pentru cele 837 de locuri de
-   triere. Se începe cu semnalele cu risc mare și cu variantele textuale;
-   `3JN.1` este primul lot documentat, nu o substituire a reviziei complete.
+   triere. Se continuă cu semnalele cu risc mare și cu variantele textuale;
+   cele șapte loturi documentate nu substituie revizia completă.
 2. Se creează registrul per-verset legat de textul exact: referința, digestul
    BE, referințele/digesturile SBLGNT și WEBP, etaloanele românești consultate,
    ancorele relevante, decizia editorială și justificarea individuală.
