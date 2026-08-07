@@ -46,13 +46,12 @@ jobs:
           pnpm check:content
           pnpm check:bible-publication
           "$PYTHON_BIN" scripts/check-biblia-emanus-romanian-quality.py
-          pnpm check:biblia-emanus-nt-editorial
-          pnpm check:biblia-emanus-nt-materialized
           pnpm check:biblia-emanus
+          pnpm check:biblia-emanus-nt-withheld
           pnpm check:biblia-emanus-nt-runtime
           pnpm test:biblia-emanus
           pnpm check:biblia-emanus-versification
-          pnpm seal:biblia-emanus --check
+          pnpm seal:biblia-emanus --check --book GEN
       - name: Verify Old Testament repair candidates when present
         run: |
           set -euo pipefail

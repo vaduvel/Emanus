@@ -18,6 +18,7 @@
     "check:bible-publication": "python3 scripts/publica-geneza.py --check",
     "check:biblia-emanus": "python3 scripts/check-biblia-emanus.py",
     "check:biblia-emanus-nt-editorial": "python3 scripts/check-biblia-emanus-nt-editorial.py",
+    "check:biblia-emanus-nt-withheld": "python3 scripts/withhold-biblia-emanus-nt.py --check",
     "test:biblia-emanus": "python3 -m unittest scripts/test_biblia_emanus.py scripts/test_biblia_emanus_nt.py scripts/test_materialize_biblia_emanus_nt.py scripts/test_nt_editorial_gate.py scripts/test_biblia_emanus_nt_runtime_catalog.py",
     "seal:biblia-emanus": "python3 scripts/seal-biblia-emanus.py",
     "check:biblia-emanus-versification": "python3 scripts/check-biblia-emanus-versification.py",
