@@ -45,7 +45,7 @@ def main() -> None:
     for filename in BASE_OVERLAY_FILES:
         text = read(OVERLAYS / filename)
         need('status: "in_review"' in text, f"{filename} nu este in_review")
-        need("bibleEmanusBookId:" in text, f"{filename} nu referă Biblia Emanus")
+        need("bibleEmanusBookId:" in text, f"{filename} nu referă ID-ul canonic pentru Biblia Emanus")
 
     helper = read(BIBLE / "completeOverlay.ts")
     need('coverageMode: "full"' in helper, "helperul nu setează coverageMode=full")
@@ -60,8 +60,6 @@ def main() -> None:
         text = read(BIBLE / filename)
         titles = len(re.findall(r"\btitle:\s*\"", text))
         summaries = len(re.findall(r"\bsummary:\s*\"", text))
-        # Intrările verseCounts au forma 1:22, 2:13 etc. Nu consumăm virgula
-        # separator, altfel o expresie regex non-overlapping ar număra doar fiecare a doua intrare.
         verse_counts = len(re.findall(r"\b\d+\s*:\s*\d+\b", text))
         need(titles == expected_chapters, f"{filename}: {titles}/{expected_chapters} titluri de capitol")
         need(summaries == expected_chapters, f"{filename}: {summaries}/{expected_chapters} explicații de capitol")
@@ -98,7 +96,8 @@ def main() -> None:
     print(
         "Biblia explicată VT OK: 39/39 cărți canonice; "
         "10 legacy-full + 29 full-overlay; 637/637 capitole overlay au explicație textuală și versificație; "
-        "unitățile Poonen sunt păstrate, golurile sunt completate exclusiv narativ din Biblia Emanus; toate in_review."
+        "unitățile Poonen/CFC sunt păstrate, golurile sunt completate numai cu overview editorial fără doctrină nouă; "
+        "toate materialele noi rămân in_review."
     )
 
 
