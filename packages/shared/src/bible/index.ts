@@ -52,6 +52,7 @@ import { GENEZA_48 } from "./geneza48.js"
 import { GENEZA_49 } from "./geneza49.js"
 import { GENEZA_50 } from "./geneza50.js"
 import { normalizeGenezaChapter } from "./genezaExplanationReview.js"
+import { normalizeGeneza38Chapter } from "./geneza38ExplanationReview.js"
 import { EXOD } from "./exod.js"
 import { LEVITIC } from "./levitic.js"
 import { NUMERI } from "./numeri.js"
@@ -115,7 +116,7 @@ export const GENEZA: BibleBook = {
     GENEZA_48,
     GENEZA_49,
     GENEZA_50,
-  ].map(normalizeGenezaChapter),
+  ].map(normalizeGenezaChapter).map(normalizeGeneza38Chapter),
 }
 
 export { EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA, RUT, SAMUEL1, SAMUEL2 }
