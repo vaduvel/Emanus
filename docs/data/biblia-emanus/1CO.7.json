@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul local; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-1co-7",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 40,
       "reviewed": 40,
@@ -98,14 +97,13 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 40 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 40 de versete din 1CO.7 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "A fost eliminat adaosul «post» din v. 5, absent din SBLGNT, și au fost corectate construcțiile greșite sau nefirești.",
+        "Formulările despre stare civilă, chemare, libertate și dăruire Domnului urmează vocabularul și structura textului critic."
       ]
     },
     "theologicalContext": {
@@ -123,29 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:93fe036740feaa7ad3a37dd90c188afa1882516169bc8c8dc886e88a5381f77a",
-    "contentDigest": "sha256:18c46bbcc4264f1cb1d64472fa0a12c273a9c5eba87805f813ec5f4d1a7e4b74"
+    "textDigest": "sha256:75fd8c73efb76f02c1f34280fd28332284c4207f25736d5e1fdb9088f463326d",
+    "contentDigest": "sha256:a370dde58a74e008391a43beabd8b76b8f1ac8e177bef9ebe32421e850128c3a"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Cu privire la lucrurile despre care ați scris: este bine pentru un bărbat să nu se atingă de femeie."
+      "text": "Cu privire la cele despre care ați scris: este bine pentru un bărbat să nu se atingă de o femeie."
     },
     {
       "number": 2,
@@ -161,7 +149,7 @@
     },
     {
       "number": 5,
-      "text": "Nu vă lipsiți unii de alții, dacă nu este de acord pentru un timp, ca să vă dați pe voi înșivă la post și rugăciune și să fiți din nou împreună, ca Satana să nu vă ispitească din cauza lipsei de stăpânire de sine."
+      "text": "Nu vă lipsiți unul pe altul decât prin bună învoială, pentru un timp, ca să vă dedicați rugăciunii și apoi să fiți din nou împreună, ca Satana să nu vă ispitească din cauza lipsei voastre de stăpânire de sine."
     },
     {
       "number": 6,
@@ -169,7 +157,7 @@
     },
     {
       "number": 7,
-      "text": "Totuși, aș vrea ca toți oamenii să fie ca mine, dar fiecare om are darul lui de la Dumnezeu, unul de acest fel altul de acest fel."
+      "text": "Aș vrea ca toți oamenii să fie ca mine; dar fiecare are propriul dar de la Dumnezeu: unul într-un fel, altul într-alt fel."
     },
     {
       "number": 8,
@@ -177,11 +165,11 @@
     },
     {
       "number": 9,
-      "text": "Dar dacă nu se pot stăpâni, să se căsătorească; căci este mai bine să se căsătorească decât să ardă."
+      "text": "Dar dacă nu se pot stăpâni, să se căsătorească; căci este mai bine să se căsătorească decât să ardă de pasiune."
     },
     {
       "number": 10,
-      "text": "Celor căsătoriți le poruncesc, nu eu, ci Domnul, ca soția să nu se despartă de soț."
+      "text": "Celor căsătoriți le poruncesc, nu eu, ci Domnul: soția să nu se despartă de soț."
     },
     {
       "number": 11,
@@ -193,23 +181,23 @@
     },
     {
       "number": 13,
-      "text": "Femeia care are un soț necredincios, și el este mulțumit să trăiască cu ea, să nu-și părăsească soțul."
+      "text": "Iar dacă o femeie are un soț necredincios și el consimte să locuiască cu ea, să nu-și părăsească soțul."
     },
     {
       "number": 14,
-      "text": "Căci soțul necredincios este sfințit în soție, iar soția necredincioasă este sfințită în frate; altfel, copiii voștri ar fi necurați, dar acum sunt sfinți."
+      "text": "Căci soțul necredincios este sfințit prin soție, iar soția necredincioasă este sfințită prin frate; altfel, copiii voștri ar fi necurați, dar acum sunt sfinți."
     },
     {
       "number": 15,
-      "text": "Dar dacă necredinciosul se desparte, să se despartă. Fratele sau sora nu sunt înrobiți în astfel de cazuri, iar Dumnezeu ne-a chemat în pace."
+      "text": "Dar dacă cel necredincios se desparte, să se despartă. Fratele sau sora nu sunt legați în astfel de împrejurări, iar Dumnezeu ne-a chemat la pace."
     },
     {
       "number": 16,
-      "text": "De unde știi, nevastă, dacă îți vei salva soțul, sau de unde știi, soțule, dacă îți vei salva soția?"
+      "text": "Căci de unde știi, femeie, dacă îți vei mântui soțul? Sau de unde știi, bărbatule, dacă îți vei mântui soția?"
     },
     {
       "number": 17,
-      "text": "Numai, după cum Domnul a împărțit fiecăruia, așa cum a chemat Dumnezeu pe fiecare, așa să umble. Așa poruncesc eu în toate adunările."
+      "text": "În orice caz, fiecare să umble așa cum i-a împărțit Domnul, așa cum l-a chemat Dumnezeu. Aceasta o rânduiesc în toate adunările."
     },
     {
       "number": 18,
@@ -225,11 +213,11 @@
     },
     {
       "number": 21,
-      "text": "Ai fost chemat ca rob? Să nu te frământe; dar dacă poți să ajungi liber, folosește mai degrabă aceasta."
+      "text": "Ai fost chemat ca rob? Să nu te frământe; dar, dacă poți să devii liber, folosește mai degrabă această posibilitate."
     },
     {
       "number": 22,
-      "text": "Căci cel care a fost chemat în Domnul ca rob este omul liber al Domnului. Tot așa, cel care a fost chemat ca liber este robul lui Hristos."
+      "text": "Căci cel chemat în Domnul ca rob este omul eliberat al Domnului. Tot astfel, cel chemat ca liber este robul lui Hristos."
     },
     {
       "number": 23,
@@ -241,11 +229,11 @@
     },
     {
       "number": 25,
-      "text": "Acum, despre fecioare, nu am nici o poruncă de la Domnul, ci dau judecata mea ca unul care a obținut milă de la Domnul să fie demn de încredere."
+      "text": "Despre fecioare nu am o poruncă de la Domnul, dar îmi dau părerea ca unul care a primit milă de la Domnul ca să fie vrednic de încredere."
     },
     {
       "number": 26,
-      "text": "Prin urmare, cred că din cauza necazului care este pe noi, este bine pentru un om să rămână așa cum este el."
+      "text": "Așadar, socotesc că, din cauza necazului de acum, este bine ca omul să rămână așa cum este."
     },
     {
       "number": 27,
@@ -257,7 +245,7 @@
     },
     {
       "number": 29,
-      "text": "Dar eu spun aceasta, fraților: timpul este scurt; de acum încolo, amândoi cei care au neveste pot fi ca și cum n-ar avea;"
+      "text": "Iată ce spun, fraților: timpul s-a scurtat; de acum înainte, cei care au soții să fie ca și cum n-ar avea;"
     },
     {
       "number": 30,
@@ -265,7 +253,7 @@
     },
     {
       "number": 31,
-      "text": "și cei care se folosesc de lume, ca și cum nu s-ar folosi de ea din plin; căci chipul acestei lumi trece."
+      "text": "și cei care se folosesc de lume, ca și cum nu s-ar folosi de ea pe deplin; căci chipul lumii acesteia trece."
     },
     {
       "number": 32,
@@ -277,11 +265,11 @@
     },
     {
       "number": 34,
-      "text": "și este împărțit. Femeia necăsătorită și fecioara se îngrijesc de lucrurile Domnului, ca să fie sfinte și în trup, și în duh; dar cea căsătorită se îngrijește de lucrurile lumii, cum să-i placă soțului."
+      "text": "și este împărțit. Femeia necăsătorită și fecioara se îngrijesc de lucrurile Domnului, ca să fie sfinte și în trup, și în duh; dar femeia căsătorită se îngrijește de lucrurile lumii, cum să-i placă soțului."
     },
     {
       "number": 35,
-      "text": "Spun aceasta pentru folosul vostru, nu ca să vă pun un laț, ci pentru ceea ce este cuviincios și pentru a sta lângă Domnul fără distragere."
+      "text": "Spun aceasta pentru folosul vostru, nu ca să vă pun un laț, ci pentru ceea ce este cuviincios și pentru o dăruire neîmpărțită Domnului."
     },
     {
       "number": 36,
@@ -289,7 +277,7 @@
     },
     {
       "number": 37,
-      "text": "Dar cel ce stă ferm în inima lui, fără să aibă nici o urgență, dar are putere asupra voinței sale, și a hotărât în inima lui să-și păstreze propria fecioară, face bine."
+      "text": "Dar cel care stă neclintit în inima lui, fără să aibă vreo constrângere, ci având stăpânire asupra propriei voințe, și a hotărât în inima lui să-și păstreze fecioara, face bine."
     },
     {
       "number": 38,
@@ -297,7 +285,7 @@
     },
     {
       "number": 39,
-      "text": "O soție este legată prin lege atâta timp cât soțul ei trăiește; dar dacă soțul este mort, ea este liberă să se căsătorească cu cine dorește, numai în Domnul."
+      "text": "O femeie este legată cât timp trăiește soțul ei; dar, dacă soțul adoarme, ea este liberă să se căsătorească cu cine dorește, numai în Domnul."
     },
     {
       "number": 40,
@@ -313,6 +301,26 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Alternativa logodnică a fost păstrată implicit în motivare, iar textul principal urmează soluția care conservă cel mai direct verbul γαμίζω din unitate."
+    },
+    {
+      "verse": 5,
+      "term": "τῇ προσευχῇ",
+      "decision": "«ca să vă dedicați rugăciunii»",
+      "reason": "SBLGNT nu include «post»; acesta apare în lectura TR împreună cu rugăciunea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul critic este urmat fără adaosul martorului TR.",
+      "alternatives": ["«la post și rugăciune»"]
+    },
+    {
+      "verse": 39,
+      "term": "κοιμηθῇ",
+      "decision": "«dacă soțul adoarme»",
+      "reason": "Verbul este eufemismul uzual pentru moarte; nu este adăugat «prin lege» din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul eufemistic este păstrat, fără lecturi suplimentare TR.",
+      "alternatives": ["«dacă soțul moare»"]
     }
   ],
   "referenceNotes": [],
