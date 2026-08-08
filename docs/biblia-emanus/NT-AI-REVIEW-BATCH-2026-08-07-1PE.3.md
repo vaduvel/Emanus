@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08` (reverificare editorială)
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1pe-3`)
+`emanus-nt-editorial-2026-08-08-1pe-3-followup`)
 
 ## Domeniu și surse
 
@@ -26,7 +26,7 @@ registru final de aprobare.
 
 | Referință BE | Ancoră SBLGNT verificată | Decizie de redactare |
 | --- | --- | --- |
-| 1PE.3.1 | `ὑποτασσόμεναι … ἄνευ λόγου κερδηθήσονται` | Adresarea rămâne la plural către soții; cei care nu ascultă de cuvânt pot fi câștigați prin purtarea soțiilor, fără discurs adăugat. |
+| 1PE.3.1 | `ὑποτασσόμεναι … ἄνευ λόγου κερδηθήσονται` | Adresarea este la plural către soții; vocativul românesc este „soțiilor”, fără pronumele „voi” urmat de formă dativă; cei care nu ascultă de cuvânt pot fi câștigați prin purtarea soțiilor, fără discurs adăugat. |
 | 1PE.3.2 | `ἐν φόβῳ ἁγνὴν ἀναστροφήν` | Purtarea este redată ca „curată și respectuoasă”; nu se schimbă persoana gramaticală de la plural la singular. |
 | 1PE.3.3 | `ὁ ἔξωθεν … κόσμος` | Podoaba exterioară este enumerată ca împletire a părului, aur și haine; versetul rămâne legat sintactic de contrastul din versetul 4. |
 | 1PE.3.4 | `ὁ κρυπτὸς τῆς καρδίας ἄνθρωπος … πραέως καὶ ἡσυχίου πνεύματος` | Este păstrat omul ascuns al inimii și duhul blând, liniștit, cu caracterul lui nepieritor și prețios înaintea lui Dumnezeu. |
@@ -67,8 +67,8 @@ registru final de aprobare.
 
 ## Rezultat
 
-Toate cele 22 de texte din `1PE.3` au fost rescrise și verificate în acest
-lot AI. Coada editorială trebuie regenerată pentru noile digesturi și rămâne
+Toate cele 22 de texte din `1PE.3` au fost reverificate în acest lot AI; 3:1
+a primit o corecție de adresare românească. Coada editorială trebuie regenerată pentru noile digesturi și rămâne
 integral `pending`; nici acest lot, nici capitolul ori cartea nu sunt
 declarate `approved` sau `published`. Această revizie AI nu reprezintă
 revizie umană și nu îndeplinește registrul final de aprobare pentru
