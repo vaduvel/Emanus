@@ -1,0 +1,209 @@
+{
+  "translation": "BE",
+  "bookId": "JER",
+  "bookName": "Ieremia",
+  "chapter": 11,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/JER.11.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/JER.11.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/JER.11.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "fcf0dfa53363c0fadf8926bec987e18af31b2ad15185309e073eab18327871d2",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Iată cuvântul DOMNULUI care a vorbit lui Ieremia din partea DOMNULUI astfel:"
+    },
+    {
+      "number": 2,
+      "text": "„Ascultați cuvintele acestui legământ și spuneți-le oamenilor lui Iuda și locuitorilor Ierusalimului!”"
+    },
+    {
+      "number": 3,
+      "text": "Zi-le: „Așa vorbește DOMNUL Dumnezeul lui Israel: „Blestemat să fie omul care n-ascultă cuvintele legământului acestuia””"
+    },
+    {
+      "number": 4,
+      "text": "pe care l-am poruncit părinților voștri în ziua când i-am scos din țara Egiptului, din cuptorul de fier, zicând: „Ascultați glasul Meu și faceți tot ce vă voi porunci; și veți fi poporul Meu, iar Eu voi fi Dumnezeul vostru;”"
+    },
+    {
+      "number": 5,
+      "text": "„atunci voi împlini jurământul pe care l-am făcut părinților voștri că le voi da o țară în care curge lapte și miere, cum vedeți astăzi.” – Și eu am răspuns: „Amin, DOAMNE!”"
+    },
+    {
+      "number": 6,
+      "text": "DOMNUL mi-a zis iarăși: „Vestește toate cuvintele acestea în cetățile lui Iuda și pe ulițele Ierusalimului și zi: „Ascultați cuvintele legământului acestuia și împliniți-le!””"
+    },
+    {
+      "number": 7,
+      "text": "Căci am înștiințat pe părinții voștri, din ziua când i-am scos din țara Egiptului și până în ziua de azi; i-am înștiințat în toate diminețile, zicând: „Ascultați glasul Meu!”"
+    },
+    {
+      "number": 8,
+      "text": "„Dar ei n-au ascultat, n-au luat aminte, ci au urmat fiecare pornirile inimii lor rele. De aceea am împlinit asupra lor toate cuvintele legământului acestuia pe care le poruncisem să-l păzească, și pe care nu l-au păzit.”"
+    },
+    {
+      "number": 9,
+      "text": "DOMNUL mi-a zis: „Este o uneltire între bărbații lui Iuda și între locuitorii Ierusalimului.”"
+    },
+    {
+      "number": 10,
+      "text": "„S-au întors la nelegiuirile celor dintâi părinți ai lor care n-au vrut să asculte cuvintele Mele și s-au dus și ei după alți dumnezei ca să le slujească. Casa lui Israel și casa lui Iuda au călcat legământul Meu pe care-l făcusem cu părinții lor.”"
+    },
+    {
+      "number": 11,
+      "text": "De aceea, așa vorbește DOMNUL: „Iată, voi aduce peste ei niște nenorociri din care nu vor putea să scape. Vor striga la Mine, dar nu-i voi asculta!”"
+    },
+    {
+      "number": 12,
+      "text": "Cetățile lui Iuda și locuitorii Ierusalimului se vor duce să cheme pe dumnezeii cărora le aduc tămâie, dar nu-i vor scăpa la vremea nenorocirii lor."
+    },
+    {
+      "number": 13,
+      "text": "Căci câte cetăți ai, atâția dumnezei ai, Iuda! Și câte ulițe are Ierusalimul, atâtea altare ați ridicat idolilor, altare ca să aduceți tămâie lui Baal!… –"
+    },
+    {
+      "number": 14,
+      "text": "Tu însă nu mijloci pentru poporul acesta, nu înălța nici cereri, nici rugăciuni pentru ei; căci nu-i voi asculta nicidecum când Mă vor chema din pricina nenorocirii lor."
+    },
+    {
+      "number": 15,
+      "text": "Ce ar putea să facă preaiubitul Meu popor în Casa Mea? Să facă o mulțime de nelegiuiri în ea? Vor îndepărta juruințele și carnea sfântă, răutatea dinaintea ta? Atunci ai putea să te bucuri! –"
+    },
+    {
+      "number": 16,
+      "text": "DOMNUL te numise «măslin verde, frumos, cu rod bun». Dar, în vuietul unei mari furtuni, a aprins focul asupra lui, iar ramurile lui au fost frânte."
+    },
+    {
+      "number": 17,
+      "text": "„Căci DOMNUL oștirilor care te-a sădit cheamă nenorocirea peste tine din pricina răutății casei lui Israel și a casei lui Iuda pe care au făcut-o ca să Mă mânie, aducând tămâie lui Baal.”"
+    },
+    {
+      "number": 18,
+      "text": "DOMNUL mi-a dat de știre, și am știut; atunci Tu mi-ai arătat faptele lor."
+    },
+    {
+      "number": 19,
+      "text": "Dar eu eram ca un miel blând pe care-l duci la măcelărie și nu știam planurile rele pe care le urzeau ei împotriva mea zicând: „Să nimicim pomul cu rodul lui, să-l stârpim din pământul celor vii ca să nu i se mai pomenească numele.”"
+    },
+    {
+      "number": 20,
+      "text": "„O, DOAMNE Dumnezeul oștirilor, Tu care ești un judecător drept, care cercetezi rărunchii și inimile: fă-mă să văd răzbunarea Ta împotriva lor, căci Ție Îți încredințez pricina mea!”"
+    },
+    {
+      "number": 21,
+      "text": "De aceea așa vorbește DOMNUL împotriva oamenilor din Anatot care vor să-ți ia viața și zic: „Nu proroci în Numele DOMNULUI, căci vei muri ucis de mâna noastră!”"
+    },
+    {
+      "number": 22,
+      "text": "De aceea așa vorbește DOMNUL oștirilor: „Iată, îi voi pedepsi; tinerii vor muri uciși de sabie, iar fiii și fiicele lor vor muri de foamete.”"
+    },
+    {
+      "number": 23,
+      "text": "„„„„„Și niciunul din ei nu va scăpa, căci voi aduce nenorocirea peste oamenii din Anatot în anul când îi voi pedepsi.”””””"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 16,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau focul, vuietul și ruperea ramurilor.",
+      "previousTextDigest": "ba9ccd61396ab4ed06b4192a75a98cb566932d74ad9a4c1b793b906fd56b4f03",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

@@ -1,0 +1,118 @@
+{
+  "id": "ZEC.5",
+  "bookId": "ZEC",
+  "bookName": "Zaharia",
+  "chapter": 5,
+  "chapterNumber": 5,
+  "status": "in_review",
+  "public": false,
+  "verses": [
+    {
+      "number": 1,
+      "text": "Am ridicat din nou ochii și m-am uitat, și iată că era un sul de carte care zbura."
+    },
+    {
+      "number": 2,
+      "text": "El m-a întrebat: „Ce vezi?” Eu am răspuns: „Văd un sul de carte zburând; are o lungime de douăzeci de coți și o lățime de zece coți.”"
+    },
+    {
+      "number": 3,
+      "text": "Și el mi-a zis: „Acesta este blestemul care este peste toată țara; căci, după cum este scris pe el, orice hoț și oricine jură strâmb va fi nimicit cu desăvârșire de aici.”"
+    },
+    {
+      "number": 4,
+      "text": "„Îl trimit – zice DOMNUL oștirilor – ca să intre în casa hoțului și a celui ce jură strâmb în Numele Meu, ca să rămână în casa aceea și s-o mistuie împreună cu lemnele și pietrele ei.”"
+    },
+    {
+      "number": 5,
+      "text": "Îngerul care vorbea cu mine a înaintat și mi-a zis: „Ridică ochii și privește ce iese de acolo.”"
+    },
+    {
+      "number": 6,
+      "text": "Eu am răspuns: „Ce este aceasta?” Și el a zis: „Iese efa.” Și a adăugat: „Aceasta este nelegiuirea lor în toată țara.”"
+    },
+    {
+      "number": 7,
+      "text": "Și iată că se ridica un talant de plumb, și în mijlocul efei ședea o femeie."
+    },
+    {
+      "number": 8,
+      "text": "El a spus: „Aceasta este Răutatea!” A împins-o înapoi în mijlocul efei și a aruncat greutatea de plumb peste gura ei."
+    },
+    {
+      "number": 9,
+      "text": "Am ridicat ochii și m-am uitat, și iată că s-au arătat două femei. În aripile lor sufla vântul: ele aveau aripi ca ale cocostârcului. Au ridicat efa între pământ și cer."
+    },
+    {
+      "number": 10,
+      "text": "Atunci am întrebat pe îngerul care vorbea cu mine: „Unde duc ele efa?”"
+    },
+    {
+      "number": 11,
+      "text": "El mi-a răspuns: „Se duc să-i zidească o casă în țara Șinear, ca să fie așezată acolo și să rămână pe locul ei.”"
+    }
+  ],
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "d246121d64da6d45f4379e47ba4f25f92abec414aeaaa27b281ee8946113bbaf",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "editorialNotes": [
+    {
+      "verse": 8,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "a14d797ae0f62f3d297bf8e5c1a98d3e0e7fbc7e600443efe5b88f8694dfb2cd",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "translation": "BE",
+  "bookId": "ISA",
+  "bookName": "Isaia",
+  "chapter": 2,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ISA.2.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ISA.2.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ISA.2.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "b49b1cc3bdb17315425afc6c04676f42cd6eff67ebfa5dc06225451151e0ce83",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Prorocia lui Isaia, fiul lui Amoț, asupra lui Iuda și asupra Ierusalimului."
+    },
+    {
+      "number": 2,
+      "text": "Se va întâmpla în scurgerea vremurilor că muntele Casei DOMNULUI va fi întemeiat ca cel mai înalt munte; se va înălța deasupra dealurilor, și toate neamurile se vor îngrămădi spre el."
+    },
+    {
+      "number": 3,
+      "text": "Popoarele se vor duce cu grămada la el și vor zice: „Veniți să ne suim la muntele DOMNULUI, la Casa Dumnezeului lui Iacov, ca să ne învețe căile Lui, și să umblăm pe cărările Lui.”"
+    },
+    {
+      "number": 4,
+      "text": "El va fi Judecătorul neamurilor, El va hotărî între un mare număr de popoare; așa încât din săbiile lor își vor făuri fiare de plug, și din sulițele lor cosoare; niciun popor nu va mai scoate sabia împotriva altuia și nu vor mai învăța războiul. –"
+    },
+    {
+      "number": 5,
+      "text": "Veniți, casă a lui Iacov, să umblăm în lumina DOMNULUI! –"
+    },
+    {
+      "number": 6,
+      "text": "Căci ai părăsit pe poporul Tău, pe casa lui Iacov, pentru că sunt plini de idolii răsăritului și dedați la vrăjitorie ca filistenii, și se unesc cu fiii străinilor."
+    },
+    {
+      "number": 7,
+      "text": "Țara lor este plină de argint și de aur, și comorile lor n-au sfârșit; țara este plină de cai, și carele lor sunt fără număr."
+    },
+    {
+      "number": 8,
+      "text": "Dar țara lor este plină și de idoli, căci se închină înaintea lucrării mâinilor lor, înaintea lucrurilor făcute de degetele lor."
+    },
+    {
+      "number": 9,
+      "text": "De aceea, cei mici vor fi coborâți, și cei mari vor fi smeriți: nu-i vei ierta. –"
+    },
+    {
+      "number": 10,
+      "text": "Intră în stânci și ascunde-te în țărână, de frica DOMNULUI și de strălucirea măreției Lui! –"
+    },
+    {
+      "number": 11,
+      "text": "Omul va trebui să-și plece în jos privirea semeață, și îngâmfarea lui va fi smerită: numai DOMNUL va fi înălțat în ziua aceea."
+    },
+    {
+      "number": 12,
+      "text": "Căci este o zi a DOMNULUI oștirilor împotriva oricărui om mândru și trufaș, împotriva oricui se înalță, ca să fie plecat;"
+    },
+    {
+      "number": 13,
+      "text": "împotriva tuturor cedrilor înalți și falnici ai Libanului și împotriva tuturor stejarilor Basanului;"
+    },
+    {
+      "number": 14,
+      "text": "împotriva tuturor munților înalți și împotriva tuturor dealurilor falnice;"
+    },
+    {
+      "number": 15,
+      "text": "împotriva tuturor turnurilor înalte și împotriva tuturor zidurilor întărite;"
+    },
+    {
+      "number": 16,
+      "text": "împotriva tuturor corăbiilor din Tarsis și împotriva tuturor lucrurilor plăcute la vedere."
+    },
+    {
+      "number": 17,
+      "text": "Mândria omului va fi smerită, și trufia oamenilor va fi plecată; numai DOMNUL va fi înălțat în ziua aceea."
+    },
+    {
+      "number": 18,
+      "text": "Toți idolii vor pieri."
+    },
+    {
+      "number": 19,
+      "text": "Oamenii vor intra în peșterile stâncilor și în crăpăturile pământului, de frica DOMNULUI și de strălucirea măreției Lui, când Se va scula să îngrozească pământul."
+    },
+    {
+      "number": 20,
+      "text": "În ziua aceea, oamenii își vor arunca idolii de argint și idolii de aur pe care și-i făcuseră ca să se închine la ei, îi vor arunca la șobolani și la lilieci;"
+    },
+    {
+      "number": 21,
+      "text": "și vor intra în găurile stâncilor și în crăpăturile pietrelor, de frica DOMNULUI și de strălucirea măreției Lui, când Se va scula să îngrozească pământul."
+    },
+    {
+      "number": 22,
+      "text": "Nu vă mai încredeți, dar, în om, în ale cărui nări nu este decât suflare: căci ce preț are el?"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

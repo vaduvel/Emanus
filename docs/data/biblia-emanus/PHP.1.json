@@ -1,0 +1,270 @@
+{
+  "translation": "BE",
+  "bookId": "PHP",
+  "bookName": "Filipeni",
+  "chapter": 1,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/PHP01.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-PHP"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Phil.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-PHP",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-PHP",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 30,
+      "reviewed": 30,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:a8da6dc1099b8b38805d26f04c1e8a49b9d3870506f9586535105a3c3be64fdb"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 162,
+        "primary": 138,
+        "secondary": 35,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4993764885473809,
+      "minimumScore": 0.5987788757926972
+    },
+    "textDigest": "sha256:4374ee029972d1bc855aaf1cf17a0987b5a1aac10cfc2240321c8cf316ea8f1d",
+    "contentDigest": "sha256:47949ba1ad8009ed2aeade05eeb307e0424bff4808656348ca5360a5a349419f"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Pavel și Timotei, robi ai lui Hristos Isus, către toți sfinții în Hristos Isus care sunt în Filipi, împreună cu supraveghetorii și diaconii:"
+    },
+    {
+      "number": 2,
+      "text": "har vouă și pace de la Dumnezeu, Tatăl nostru, și de la Domnul Isus Hristos."
+    },
+    {
+      "number": 3,
+      "text": "Îi mulțumesc Dumnezeului meu pentru fiecare amintire a voastră,"
+    },
+    {
+      "number": 4,
+      "text": "întotdeauna, în fiecare rugăciune a mea pentru voi toți, făcând cererea mea cu bucurie,"
+    },
+    {
+      "number": 5,
+      "text": "pentru părtășia voastră în Evanghelie, din prima zi până acum,"
+    },
+    {
+      "number": 6,
+      "text": "fiind încredințat tocmai de aceasta, că Cel care a început în voi o lucrare bună o va duce la capăt până în ziua lui Hristos Isus."
+    },
+    {
+      "number": 7,
+      "text": "Așa este drept să gândesc aceasta despre voi toți, pentru că vă port în inimă, fiindcă, și în lanțurile mele, și în apărarea și confirmarea Evangheliei, voi toți sunteți părtași ai harului împreună cu mine."
+    },
+    {
+      "number": 8,
+      "text": "Căci Dumnezeu îmi este martor cât de mult tânjesc după voi toți, cu adânca afecțiune a lui Hristos Isus."
+    },
+    {
+      "number": 9,
+      "text": "Și mă rog aceasta: ca dragostea voastră să prisosească tot mai mult și mai mult în cunoaștere și în tot discernământul,"
+    },
+    {
+      "number": 10,
+      "text": "ca să puteți deosebi lucrurile care sunt mai bune, pentru ca să fiți curați și fără poticnire pentru ziua lui Hristos,"
+    },
+    {
+      "number": 11,
+      "text": "plini de rodul dreptății, care vine prin Isus Hristos, spre slava și lauda lui Dumnezeu."
+    },
+    {
+      "number": 12,
+      "text": "Acum doresc să știți, fraților, că lucrurile care mi s-au întâmplat s-au dovedit mai degrabă la progresul veștii bune,"
+    },
+    {
+      "number": 13,
+      "text": "așa că a devenit evident pentru toată garda palatului, pentru toți ceilalți, că legăturile mele sunt în Hristos,"
+    },
+    {
+      "number": 14,
+      "text": "și că cei mai mulți dintre frați în Domnul, având încredere din cauza lanțurilor mele, îndrăznesc și mai mult să vorbească fără teamă cuvântul."
+    },
+    {
+      "number": 15,
+      "text": "Unii, într-adevăr, îl propovăduiesc pe Hristos din invidie și ceartă, iar alții și din bunăvoință."
+    },
+    {
+      "number": 16,
+      "text": "Cel dintâi îl predică pe Hristos din ambiție egoistă, gândindu-se că ei adaugă suferință lanțurilor mele;"
+    },
+    {
+      "number": 17,
+      "text": "dar acesta din urmă din dragoste, știind că eu sunt numit pentru apărarea Vestea bună."
+    },
+    {
+      "number": 18,
+      "text": "Ce contează? Numai ca, în orice fel, fie din pretext, fie din adevăr, Hristos este vestit. Și în aceasta mă bucur; da, mă voi bucura și de acum înainte,"
+    },
+    {
+      "number": 19,
+      "text": "fiindcă știu că aceasta se va întoarce spre izbăvirea mea, prin rugăciunea voastră și prin sprijinul Duhului lui Isus Hristos,"
+    },
+    {
+      "number": 20,
+      "text": "după așteptarea mea stăruitoare și speranța mea că în nimic nu voi fi făcut de rușine, ci, cu toată îndrăzneala, ca întotdeauna, și acum Hristos va fi preamărit în trupul meu, fie prin viață, fie prin moarte."
+    },
+    {
+      "number": 21,
+      "text": "Căci pentru mine a trăi este Hristos și a muri, câștig."
+    },
+    {
+      "number": 22,
+      "text": "Dar dacă trăiesc în carne, acest lucru va aduce rod din munca mea; totuși nu știu ce voi alege."
+    },
+    {
+      "number": 23,
+      "text": "Sunt strâns din amândouă părțile: am dorința să plec și să fiu cu Hristos, căci aceasta este cu mult mai bine,"
+    },
+    {
+      "number": 24,
+      "text": "Totuși, a rămâne în carne este mai necesar pentru binele tău."
+    },
+    {
+      "number": 25,
+      "text": "Și, încredințat de aceasta, știu că voi rămâne și voi continua cu voi toți, pentru înaintarea și bucuria credinței voastre,"
+    },
+    {
+      "number": 26,
+      "text": "pentru ca lauda voastră în Hristos Isus să prisosească în mine, prin venirea mea din nou la voi."
+    },
+    {
+      "number": 27,
+      "text": "Numai purtați-vă ca cetățeni în chip vrednic de Evanghelia lui Hristos, pentru ca, fie că vin și vă văd, fie că lipsesc, să aud despre voi că stați tari într-un singur duh, luptând împreună, cu un singur suflet, pentru credința Evangheliei,"
+    },
+    {
+      "number": 28,
+      "text": "și fără să vă lăsați înspăimântați în nimic de potrivnici; aceasta este pentru ei un semn de pieire, dar pentru voi de izbăvire, și aceasta de la Dumnezeu,"
+    },
+    {
+      "number": 29,
+      "text": "fiindcă vouă v-a fost dăruit, pentru Hristos, nu numai să credeți în el, ci și să suferiți pentru el,"
+    },
+    {
+      "number": 30,
+      "text": "având același conflict pe care l-ai văzut în mine și acum auzi este în mine."
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

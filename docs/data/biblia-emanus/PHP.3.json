@@ -1,0 +1,248 @@
+{
+  "translation": "BE",
+  "bookId": "PHP",
+  "bookName": "Filipeni",
+  "chapter": 3,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/PHP03.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-PHP"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Phil.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-PHP",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-PHP",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 21,
+      "reviewed": 21,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 162,
+        "primary": 138,
+        "secondary": 35,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4993764885473809,
+      "minimumScore": 0.5987788757926972
+    },
+    "textDigest": "sha256:958c7fd2744911dbe043440d9d9e00086156d46bb77400f9d82178b5bd365e33",
+    "contentDigest": "sha256:c6e9cf7ae45131b23e50d6ac0cb99619fa67d162092c460057b35851e6a63d15"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Încolo, frații mei, bucurați-vă în Domnul. Să vă scriu aceleași lucruri nu-mi este greu, iar pentru voi este sigur."
+    },
+    {
+      "number": 2,
+      "text": "Păziți-vă de câini; păziți-vă de lucrătorii răi; păziți-vă de circumcizia falsă."
+    },
+    {
+      "number": 3,
+      "text": "Căci noi suntem circumcizia, cei care ne închinăm lui Dumnezeu prin Duhul și ne lăudăm în Hristos Isus, și nu ne încredem în carne,"
+    },
+    {
+      "number": 4,
+      "text": "deși eu aș putea avea încredere și în carne. Dacă altcineva crede că poate să se încreadă în carne, eu și mai mult:"
+    },
+    {
+      "number": 5,
+      "text": "circumcis a opta zi, din neamul lui Israel, din tribul lui Beniamin, evreu dintre evrei; în ce privește Legea, fariseu;"
+    },
+    {
+      "number": 6,
+      "text": "în ce privește zelul, persecutând biserica; în ce privește dreptatea care este în Lege, ajuns fără vină."
+    },
+    {
+      "number": 7,
+      "text": "Dar lucrurile care îmi erau câștiguri, pe acestea le-am socotit pierdere din pricina lui Hristos."
+    },
+    {
+      "number": 8,
+      "text": "Ba mai mult, chiar socotesc toate lucrurile pierdere din pricina valorii nespus mai mari a cunoașterii lui Hristos Isus, Domnul meu, pentru care am fost lipsit de toate și le socotesc gunoaie, ca să-l câștig pe Hristos"
+    },
+    {
+      "number": 9,
+      "text": "și să fiu găsit în el, neavând dreptatea mea, cea din Lege, ci pe aceea care este prin credința în Hristos, dreptatea din Dumnezeu pe baza credinței,"
+    },
+    {
+      "number": 10,
+      "text": "ca să-l cunosc pe el și puterea învierii lui și părtășia suferințelor lui, fiind făcut asemenea morții lui,"
+    },
+    {
+      "number": 11,
+      "text": "dacă, cumva, voi ajunge la învierea dintre cei morți."
+    },
+    {
+      "number": 12,
+      "text": "Nu că am deja, sau am fost deja făcut desăvârșit; dar eu continui, ca să pot pune stăpânire pe ceea pentru care, de asemenea, am fost prins de Hristos Isus."
+    },
+    {
+      "number": 13,
+      "text": "Fraților, nu mă consider încă prins, dar un singur lucru fac: uitând lucrurile care sunt în urmă și întinzându-se spre lucrurile care sunt înainte,"
+    },
+    {
+      "number": 14,
+      "text": "alerg spre țintă, către premiul chemării de sus a lui Dumnezeu, în Hristos Isus."
+    },
+    {
+      "number": 15,
+      "text": "Așadar, să gândim în felul acesta atât de mulți cât sunt perfecți. Dacă, în orice lucru gîndești altfel, Dumnezeu îți va arăta și ție lucrul acesta."
+    },
+    {
+      "number": 16,
+      "text": "Cu toate acestea, în măsura în care am atins deja, să mergem prin aceeași regulă. Să fie de aceeași minte."
+    },
+    {
+      "number": 17,
+      "text": "Fraților, fiți imitatori împreună cu mine, și observați-i pe cei care merg pe acest drum, așa cum ne aveți pe noi ca exemplu."
+    },
+    {
+      "number": 18,
+      "text": "Căci mulți umblă, despre care vă spuneam adesea, iar acum vă spun și plângând, că sunt dușmanii crucii lui Hristos,"
+    },
+    {
+      "number": 19,
+      "text": "al căror sfârșit este pieirea, al căror dumnezeu este pântecele și a căror slavă este în rușinea lor, cei care gândesc cele pământești."
+    },
+    {
+      "number": 20,
+      "text": "Căci cetățenia noastră este în ceruri, de unde îl și așteptăm pe Mântuitorul, pe Domnul Isus Hristos,"
+    },
+    {
+      "number": 21,
+      "text": "care va transforma trupul stării noastre umilite, făcându-l asemenea trupului slavei lui, potrivit lucrării puterii prin care poate să-și supună și toate lucrurile."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 9,
+      "term": "πίστεως Χριστοῦ",
+      "decision": "credința în Hristos",
+      "alternatives": [
+        "credincioșia lui Hristos",
+        "credința lui Hristos"
+      ],
+      "reason": "Genitivul poate fi înțeles obiectiv sau subiectiv; româna cere o alegere în textul principal, dar contextul imediat nu elimină complet alternativa.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal alege lectura obiectivă pentru claritate românească, iar alternativa genitivului subiectiv rămâne documentată ca ambiguitate materială."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

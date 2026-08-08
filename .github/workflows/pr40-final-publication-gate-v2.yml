@@ -1,0 +1,13 @@
+name: PR40 final publication gate v2 (retired)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  retired:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo 'Superseded by pr40-final-publication-authfix.yml'

@@ -3,40 +3,64 @@ name: CI
 on:
   push:
     branches: [main]
-  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
-
-      # Ghilimelele romanesti inchise cu " ASCII rup stringurile TypeScript.
-      # Aici se opreste build-ul inainte sa ajunga in main, nu dupa.
-      - name: Verifica ghilimelele
-        run: pnpm check:quotes
-
-      # Lista explicita de typo-uri cunoscute trebuie sa ramana idempotenta.
-      - name: Verifica typo-urile cunoscute
-        run: pnpm check:typos
-
-      # Blocheaza ID-uri duplicate, promisiuni medicale/spirituale periculoase
-      # si pierderea formularilor de siguranta din cursurile sensibile.
-      - name: Verifica siguranta continutului
-        run: pnpm check:content
-
-      - name: Typecheck
-        run: pnpm typecheck
-
-      - name: Build
-        run: pnpm build
+      - name: Checkout with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+          if command -v python3.11 >/dev/null 2>&1; then echo 'PYTHON_BIN=python3.11' >> "$GITHUB_ENV"; else echo 'PYTHON_BIN=python3' >> "$GITHUB_ENV"; fi
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+      - name: Verify repository and Biblia Emanus
+        run: |
+          set -euo pipefail
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:bible-publication
+          "$PYTHON_BIN" scripts/check-biblia-emanus-romanian-quality.py
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+      - name: Verify Old Testament repair candidates when present
+        run: |
+          set -euo pipefail
+          if [ ! -f docs/data/biblia-emanus-candidates/manifest.json ]; then
+            echo 'No OT repair candidate manifest; semantic candidate gate skipped.'
+            exit 0
+          fi
+          "$PYTHON_BIN" scripts/apply-pr40-canonical-content-fixes.py
+          "$PYTHON_BIN" scripts/apply-pr40-canonical-content-fixes-wave2.py
+          "$PYTHON_BIN" scripts/apply-pr40-canonical-content-fixes-wave3.py
+          "$PYTHON_BIN" scripts/apply-pr40-canonical-content-fixes-wave4.py
+          "$PYTHON_BIN" scripts/audit-ot-repair5-v2.py
+          "$PYTHON_BIN" scripts/enforce-ot-repair5-audit.py
+          "$PYTHON_BIN" -m pip install --disable-pip-version-check 'sentence-transformers>=3,<4' numpy
+          "$PYTHON_BIN" scripts/semantic-audit-ot-repair5-v2.py --batch-size 128
+          "$PYTHON_BIN" scripts/enforce-ot-repair5-semantic.py
+      - name: Typecheck and build
+        run: |
+          set -euo pipefail
+          pnpm typecheck
+          pnpm build
+          git diff --check

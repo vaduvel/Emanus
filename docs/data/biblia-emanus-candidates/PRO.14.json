@@ -1,0 +1,257 @@
+{
+  "translation": "BE",
+  "bookId": "PRO",
+  "bookName": "Proverbele",
+  "chapter": 14,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PRO.14.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PRO.14.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PRO.14.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "4bb8258996f6328c0bd2e8b4aca87657fe825395dc76a3bfa29ccd483c819942",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPasses": [
+      "ot-repair5-semantic-findings-1"
+    ]
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Femeia înțeleaptă își zidește casa, iar femeia nebună o dărâmă cu înseși mâinile ei. –"
+    },
+    {
+      "number": 2,
+      "text": "Cine umblă cu neprihănire, se teme de DOMNUL, dar cine apucă pe căi strâmbe, Îl nesocotește. –"
+    },
+    {
+      "number": 3,
+      "text": "În gura nebunului este o nuia pentru mândria lui, dar pe înțelepți îi păzesc buzele lor. –"
+    },
+    {
+      "number": 4,
+      "text": "Unde nu sunt boi, ieslea este curată, dar puterea boului aduce belșug de roade."
+    },
+    {
+      "number": 5,
+      "text": "Un martor credincios nu minte, dar un martor mincinos spune minciuni. –"
+    },
+    {
+      "number": 6,
+      "text": "Batjocoritorul caută înțelepciunea și n-o găsește, dar pentru omul priceput știința este lucru ușor. –"
+    },
+    {
+      "number": 7,
+      "text": "Depărtează-te de nebun, căci nu pe buzele lui vei găsi știința. –"
+    },
+    {
+      "number": 8,
+      "text": "Înțelepciunea omului chibzuit îl face să vadă pe ce cale să meargă, dar nebunia celor nesocotiți îi înșală pe ei înșiși. –"
+    },
+    {
+      "number": 9,
+      "text": "Cei nesocotiți glumesc cu păcatul, dar între cei fără prihană este bunăvoință. –"
+    },
+    {
+      "number": 10,
+      "text": "Inima își cunoaște necazurile și niciun străin nu se poate amesteca în bucuria ei. –"
+    },
+    {
+      "number": 11,
+      "text": "Casa celor răi va fi nimicită, dar cortul celor fără prihană va înflori. –"
+    },
+    {
+      "number": 12,
+      "text": "Multe căi pot părea bune omului, dar la urmă se văd că duc la moarte. –"
+    },
+    {
+      "number": 13,
+      "text": "De multe ori chiar în mijlocul râsului inima poate fi mâhnită, și bucuria poate sfârși prin necaz. –"
+    },
+    {
+      "number": 14,
+      "text": "Cel cu inima rătăcită se satură de căile lui, și omul de bine se satură și el de ce este în el. –"
+    },
+    {
+      "number": 15,
+      "text": "Omul lesne crezător crede orice vorbă, dar omul chibzuit ia seama bine cum merge. –"
+    },
+    {
+      "number": 16,
+      "text": "Înțeleptul se teme și se abate de la rău, dar nesocotitul este îngâmfat și fără frică. –"
+    },
+    {
+      "number": 17,
+      "text": "Cine este iute la mânie face prostii, și omul plin de răutate se face urât. –"
+    },
+    {
+      "number": 18,
+      "text": "Cei proști au parte de nebunie, dar oamenii chibzuiți sunt încununați cu știință. –"
+    },
+    {
+      "number": 19,
+      "text": "Cei răi se pleacă înaintea celor buni, și cei nelegiuiți înaintea porților celui neprihănit. –"
+    },
+    {
+      "number": 20,
+      "text": "Săracul este urât chiar și de prietenul său, dar bogatul are foarte mulți prieteni. –"
+    },
+    {
+      "number": 21,
+      "text": "Cine disprețuiește pe aproapele său face un păcat, dar ferice de cine are milă de cei nenorociți. –"
+    },
+    {
+      "number": 22,
+      "text": "În adevăr, cei ce gândesc rău se rătăcesc, dar cei ce gândesc binele lucrează cu bunătate și credincioșie."
+    },
+    {
+      "number": 23,
+      "text": "Oriunde se muncește este și câștig, dar oriunde numai se vorbește, este lipsă. –"
+    },
+    {
+      "number": 24,
+      "text": "Bogăția este o cunună pentru cei înțelepți, dar cei nesocotiți n-au altceva decât nebunie. –"
+    },
+    {
+      "number": 25,
+      "text": "Martorul care spune adevărul scapă suflete, dar cel înșelător spune minciuni. –"
+    },
+    {
+      "number": 26,
+      "text": "Cine se teme de DOMNUL are un sprijin tare în El, și copiii lui au un loc de adăpost la El. –"
+    },
+    {
+      "number": 27,
+      "text": "Frica de DOMNUL este un izvor de viață, ea ne ferește de cursele morții. –"
+    },
+    {
+      "number": 28,
+      "text": "Mulțimea poporului este slava împăratului, lipsa poporului este pieirea voievodului. –"
+    },
+    {
+      "number": 29,
+      "text": "Cine este încet la mânie are multă pricepere, dar cine se aprinde iute, face multe prostii. –"
+    },
+    {
+      "number": 30,
+      "text": "O inimă liniștită este viața trupului, dar pizma este putrezirea oaselor. –"
+    },
+    {
+      "number": 31,
+      "text": "Cine asuprește pe sărac, batjocorește pe Ziditorul său, dar cine are milă de cel lipsit, cinstește pe Ziditorul său. –"
+    },
+    {
+      "number": 32,
+      "text": "Cel rău este doborât de răutatea lui, dar cel neprihănit chiar și la moarte trage nădejde. –"
+    },
+    {
+      "number": 33,
+      "text": "Înțelepciunea se odihnește într-o inimă pricepută, dar în mijlocul celor nesocotiți ea se dă de gol. –"
+    },
+    {
+      "number": 34,
+      "text": "Neprihănirea înalță pe un popor, dar păcatul este rușinea popoarelor. –"
+    },
+    {
+      "number": 35,
+      "text": "Un împărat are plăcere de un slujitor chibzuit, dar pe cel de ocară îl atinge mânia lui."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "repair5-semantic-finding",
+      "decision": "Ieslea fără boi este curată, nu doar goală; antiteza privește curățenia și productivitatea.",
+      "previousTextDigest": "bdd41625494351fba1b5deed20a5798a4638f6b631f0ee16d44efc189939c783",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

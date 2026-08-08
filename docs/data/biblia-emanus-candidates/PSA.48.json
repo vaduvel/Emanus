@@ -1,0 +1,157 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 48,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.48.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.48.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.48.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "4be5d3aeeb5096287cef00b05cdc0c8c8c5f8c5527918f61d203cd2ddf1462d2",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(O cântare. Un psalm al fiilor lui Core.) Mare este DOMNUL și lăudat de toți în cetatea Dumnezeului nostru, pe muntele Lui cel sfânt."
+    },
+    {
+      "number": 2,
+      "text": "Frumoasă înălțime, bucuria întregului pământ, este muntele Sionului; în partea de miazănoapte este cetatea Marelui Împărat."
+    },
+    {
+      "number": 3,
+      "text": "Dumnezeu, în casele Lui împărătești, este cunoscut ca un turn de scăpare."
+    },
+    {
+      "number": 4,
+      "text": "Căci iată că împărații se adunaseră: doar au trecut împreună,"
+    },
+    {
+      "number": 5,
+      "text": "au privit-o, au înlemnit, s-au temut și au luat-o la fugă."
+    },
+    {
+      "number": 6,
+      "text": "I-a apucat un tremur acolo, ca durerea unei femei la facere."
+    },
+    {
+      "number": 7,
+      "text": "Au fost izgoniți de parcă ar fi fost luați de vântul de răsărit care sfărâmă corăbiile din Tarsis."
+    },
+    {
+      "number": 8,
+      "text": "Întocmai cum auzisem spunându-se, așa am văzut în cetatea DOMNULUI oștirilor, în cetatea Dumnezeului nostru: Dumnezeu o va face să dăinuie pe vecie. – (Oprire)"
+    },
+    {
+      "number": 9,
+      "text": "Dumnezeule, la bunătatea Ta ne gândim, în mijlocul Templului Tău!"
+    },
+    {
+      "number": 10,
+      "text": "Ca și Numele Tău, Dumnezeule, și lauda Ta răsună până la marginile pământului; dreapta Ta este plină de îndurare."
+    },
+    {
+      "number": 11,
+      "text": "Se bucură muntele Sionului și se înveselesc fiicele lui Iuda de judecățile Tale."
+    },
+    {
+      "number": 12,
+      "text": "Străbateți Sionul și ocoliți-l, numărați-i turnurile,"
+    },
+    {
+      "number": 13,
+      "text": "priviți-i întăritura și cercetați-i palatele, ca să povestiți celor ce vor veni după ei."
+    },
+    {
+      "number": 14,
+      "text": "Iată, Dumnezeul acesta este Dumnezeul nostru în veci de veci; El va fi călăuza noastră până la moarte."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

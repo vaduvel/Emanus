@@ -1,0 +1,242 @@
+{
+  "translation": "BE",
+  "bookId": "1CO",
+  "bookName": "1 Corinteni",
+  "chapter": 3,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/1CO03.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-1CO"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/1Cor.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-1CO",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-1CO",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "copyrightSimilarity": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "omissions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 23,
+      "reviewed": 23,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:b259b32138b834fae596411df595d7409a7245b85b71b758e2a46ee0dad93737"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 23 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 709,
+        "primary": 137,
+        "secondary": 24,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.41000612643816675,
+      "minimumScore": 0.5818865265537531
+    },
+    "textDigest": "sha256:5bbe491691c507c3eead1ac6f30848fd9da60fc08a5f4fe65e64d7d8050e0dcd",
+    "contentDigest": "sha256:c5f400d3071cd2bd3f625897bbc4516181809f261fc20b927c04789a81b722c3"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și eu, fraților, n-am putut să vă vorbesc ca unor oameni spirituali, ci ca unora de carne, ca unor prunci în Hristos."
+    },
+    {
+      "number": 2,
+      "text": "Te-am hrănit cu lapte, nu cu alimente solide, pentru că nu erai încă gata. Într-adevăr, nu ești gata chiar acum,"
+    },
+    {
+      "number": 3,
+      "text": "pentru că sunteți încă carnali. Căci, de vreme ce între voi sunt gelozie și ceartă, nu sunteți voi carnali și nu umblați în felul omului?"
+    },
+    {
+      "number": 4,
+      "text": "Când unul spune: „Eu sunt al lui Pavel”, iar altul: „Eu al lui Apolos”, nu sunteți oameni?"
+    },
+    {
+      "number": 5,
+      "text": "Așadar, ce este Apolos? Și ce este Pavel? Slujitori prin care ați crezut, așa cum Domnul i-a dat fiecăruia."
+    },
+    {
+      "number": 6,
+      "text": "Eu am sădit, Apolos a udat, dar Dumnezeu a făcut să crească."
+    },
+    {
+      "number": 7,
+      "text": "Așa că nici cel ce sădește, nici cel ce udă nu este ceva, ci Dumnezeu, care face să crească."
+    },
+    {
+      "number": 8,
+      "text": "Cel ce sădește și cel ce udă sunt una, iar fiecare își va primi propria răsplată după propria osteneală."
+    },
+    {
+      "number": 9,
+      "text": "Căci noi suntem împreună-lucrători ai lui Dumnezeu; voi sunteți ogorul lui Dumnezeu, clădirea lui Dumnezeu."
+    },
+    {
+      "number": 10,
+      "text": "După harul lui Dumnezeu, care mi-a fost dat, ca un clăditor înțelept, am pus o temelie, și altul a zidit-o. Dar fiecare să aibă grijă cum zidește pe ea."
+    },
+    {
+      "number": 11,
+      "text": "Căci nimeni nu poate pune o altă temelie decât cea care a fost pusă, care este Isus Hristos."
+    },
+    {
+      "number": 12,
+      "text": "Iar dacă cineva zidește pe temelie cu aur, argint, pietre prețioase, lemn, fân, paie,"
+    },
+    {
+      "number": 13,
+      "text": "lucrarea fiecăruia va deveni arătată; fiindcă ziua o va face cunoscută, pentru că se descoperă în foc, și focul va încerca lucrarea fiecăruia, cum este."
+    },
+    {
+      "number": 14,
+      "text": "Dacă lucrarea pe care a zidit-o cineva deasupra rămâne, el va primi răsplată."
+    },
+    {
+      "number": 15,
+      "text": "Dacă lucrarea cuiva va fi arsă, el va suferi pierdere; el însă va fi mântuit, dar așa, ca prin foc."
+    },
+    {
+      "number": 16,
+      "text": "Nu știți că sunteți templul lui Dumnezeu și că Duhul lui Dumnezeu locuiește în voi?"
+    },
+    {
+      "number": 17,
+      "text": "Dacă cineva nimicește templul lui Dumnezeu, Dumnezeu îl va nimici pe el; căci templul lui Dumnezeu este sfânt, și acest templu sunteți voi."
+    },
+    {
+      "number": 18,
+      "text": "Nimeni să nu se înșele pe sine. Dacă cineva dintre voi crede că este înțelept în veacul acesta, să devină nebun, ca să ajungă înțelept."
+    },
+    {
+      "number": 19,
+      "text": "Fiindcă înțelepciunea lumii acesteia este nebunie înaintea lui Dumnezeu. Căci este scris: „El îi prinde pe cei înțelepți în viclenia lor.”"
+    },
+    {
+      "number": 20,
+      "text": "Și iarăși: „Domnul cunoaște gândurile celor înțelepți, că sunt zadarnice.”"
+    },
+    {
+      "number": 21,
+      "text": "Așadar, nimeni să nu se laude cu oameni, pentru că toate sunt ale voastre:"
+    },
+    {
+      "number": 22,
+      "text": "fie Pavel, fie Apolos, fie Chifa, fie lumea, fie viața, fie moartea, fie lucrurile de acum, fie cele viitoare, toate sunt ale voastre,"
+    },
+    {
+      "number": 23,
+      "text": "iar voi sunteți ai lui Hristos, iar Hristos este al lui Dumnezeu."
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

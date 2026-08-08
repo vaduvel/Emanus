@@ -1,0 +1,238 @@
+{
+  "translation": "BE",
+  "bookId": "EPH",
+  "bookName": "Efeseni",
+  "chapter": 2,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/EPH02.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-EPH"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Eph.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-EPH",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-EPH",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "omissions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 22,
+      "reviewed": 22,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:3deaedaf2fa9d19b5467a331a79ca85f31218e3d232e46f97fc5df7f9439728e"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 22 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:01894a2884923d68b65f9bdbefe9dd5449afe5777f643626d792f0a3fd7d0a3e",
+    "contentDigest": "sha256:eeb68594da6bca563d478aaf1f42ec173067fa2db2ece6eca7b7b1379be66b0b"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Ai fost făcut viu când ai fost mort în fărădelegi și păcate,"
+    },
+    {
+      "number": 2,
+      "text": "în care ați umblat odinioară după mersul lumii acesteia, după prințul puterii văzduhului, duhul care lucrează acum în copiii neascultării."
+    },
+    {
+      "number": 3,
+      "text": "Toți am trăit odată printre ei în poftele cărnii noastre, împlinind dorințele cărnii și ale minții, și eram, prin natura lor, copii ai mâniei, ca și ceilalți."
+    },
+    {
+      "number": 4,
+      "text": "Dar Dumnezeu, fiind bogat în îndurare, pentru marea sa dragoste cu care ne-a iubit,"
+    },
+    {
+      "number": 5,
+      "text": "chiar atunci când eram morți prinle noastre, făcându-ne vii împreună cu Hristos — prin har ați fost mântuiți —"
+    },
+    {
+      "number": 6,
+      "text": "și ne-a sculat împreună cu El, și ne-a pus să stăm cu El în locurile cerești, în Hristos Isus,"
+    },
+    {
+      "number": 7,
+      "text": "pentruca, Ón veacurile viitoare, să arate bogățiile prea mari ale harului Său Ón bunătate față de noi, Ón Hristos Isus;"
+    },
+    {
+      "number": 8,
+      "text": "Căci prin har ați fost mântuiți prin credință, și nu prin voi înșivă; este darul lui Dumnezeu,"
+    },
+    {
+      "number": 9,
+      "text": "nu de lucrări, ca nimeni să nu se laude."
+    },
+    {
+      "number": 10,
+      "text": "Căci noi suntem lucrarea Lui, creați în Hristos Isus pentru fapte bune, pe care Dumnezeu le-a pregătit înainte ca noi să umblăm în ele."
+    },
+    {
+      "number": 11,
+      "text": "De aceea,-vă că, odată ce voi, Neamurile în trup, care numitenecircumcizie„ prin ceea ce secircumcizie” (în trup, făcute de mâini),"
+    },
+    {
+      "number": 12,
+      "text": "Că în vremea aceea erați despărțiți de Hristos, înstrăin de oba lui Israel străini de legămintele făgăduinței, neavând nici o nădejde fără Dumnezeu în lume."
+    },
+    {
+      "number": 13,
+      "text": "Dar acum, în Hristos Isus, voi, care odinioară erați departe, făcuți aproape în sângele lui Hristos."
+    },
+    {
+      "number": 14,
+      "text": "Căci El este pacea noastră, care a făcut pe unul și a dărâmat zidul de mijloc al despărțirii,"
+    },
+    {
+      "number": 15,
+      "text": "după ce a desființat în trupul său ostilitatea, legea poruncilor cuprinsă în rânduieli, ca să poată crea în sine un om nou dintre cei doi, făcând pace,"
+    },
+    {
+      "number": 16,
+      "text": "și le-ar putea împăca pe amândouă într-un singur trup cu Dumnezeu prin cruce, după ce ar fi ucis ostilitatea prin ea."
+    },
+    {
+      "number": 17,
+      "text": "El a venit și v-a propovăduit pacea, care era departe și celor apropiați."
+    },
+    {
+      "number": 18,
+      "text": "Căci prin El avem amândoi acces într-un singur Duh la Tatăl."
+    },
+    {
+      "number": 19,
+      "text": "Deci, atunci nu mai sunteți străini și străini, ci sunteți concetățeni cu sfinții și cu casa lui Dumnezeu,"
+    },
+    {
+      "number": 20,
+      "text": "fiind zidit pe temelia apostolilor și a proorocilor, Hristos Isus însuși fiind piatra de temelie principală;"
+    },
+    {
+      "number": 21,
+      "text": "în care toată clădirea, asamblată împreună, crește într-un templu sfânt în Domnul;"
+    },
+    {
+      "number": 22,
+      "text": "în care și voi sunteți zidiți împreună pentru o locuință a lui Dumnezeu în Duhul."
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

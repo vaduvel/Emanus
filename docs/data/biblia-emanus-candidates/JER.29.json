@@ -1,0 +1,229 @@
+{
+  "translation": "BE",
+  "bookId": "JER",
+  "bookName": "Ieremia",
+  "chapter": 29,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/JER.29.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/JER.29.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/JER.29.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "78afd3f0358aba65685c753a536a02606fda673bb3e75d20249fa9fe88900f57",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Iată cuprinsul epistolei pe care a trimis-o prorocul Ieremia din Ierusalim către rămășița bătrânilor din robie, preoților, prorocilor și întregului popor, pe care-i dusese în robie Nebucadnețar, din Ierusalim la Babilon,"
+    },
+    {
+      "number": 2,
+      "text": "după ce împăratul Ieconia, împărăteasa, famenii dregători, căpeteniile lui Iuda și ale Ierusalimului, lemnarii și fierarii au părăsit Ierusalimul."
+    },
+    {
+      "number": 3,
+      "text": "Le-a trimis-o prin Eleasa, fiul lui Șafan, și prin Ghemaria, fiul lui Hilchia, trimiși la Babilon de Zedechia, împăratul lui Iuda, la Nebucadnețar, împăratul Babilonului. Ea cuprindea următoarele:"
+    },
+    {
+      "number": 4,
+      "text": "„Așa vorbește DOMNUL oștirilor, Dumnezeul lui Israel, către toți prinșii de război pe care i-am dus din Ierusalim la Babilon:”"
+    },
+    {
+      "number": 5,
+      "text": "„Zidiți case și locuiți-le; sădiți grădini și mâncați din roadele lor!”"
+    },
+    {
+      "number": 6,
+      "text": "Luați-vă neveste și faceți fii și fiice; însurați-vă fiii și măritați-vă fetele, să facă fii și fiice, ca să vă înmulțiți acolo unde sunteți și să nu vă împuținați."
+    },
+    {
+      "number": 7,
+      "text": "Urmăriți binele cetății în care v-am dus în robie și rugați-vă DOMNULUI pentru ea, pentru că fericirea voastră atârnă de fericirea ei!"
+    },
+    {
+      "number": 8,
+      "text": "Căci așa vorbește DOMNUL oștirilor, Dumnezeul lui Israel: „Nu vă lăsați amăgiți de prorocii voștri care sunt în mijlocul vostru, nici de ghicitorii voștri; n-ascultați nici de visătorii voștri, ale căror vise voi le pricinuiți!”"
+    },
+    {
+      "number": 9,
+      "text": "Căci ei vă prorocesc minciuni în Numele Meu. Eu nu i-am trimis, zice DOMNUL."
+    },
+    {
+      "number": 10,
+      "text": "Dar iată ce zice DOMNUL: „De îndată ce vor trece șaptezeci de ani ai Babilonului, Îmi voi aduce aminte de voi și voi împlini față de voi făgăduința Mea cea bună, aducându-vă înapoi în locul acesta.”"
+    },
+    {
+      "number": 11,
+      "text": "Căci Eu știu gândurile pe care le am cu privire la voi, zice DOMNUL, gânduri de pace, și nu de nenorocire, ca să vă dau un viitor și o nădejde."
+    },
+    {
+      "number": 12,
+      "text": "Voi Mă veți chema și veți pleca; Mă veți ruga, și vă voi asculta."
+    },
+    {
+      "number": 13,
+      "text": "Mă veți căuta, și Mă veți găsi, dacă Mă veți căuta cu toată inima."
+    },
+    {
+      "number": 14,
+      "text": "Mă voi lăsa să fiu găsit de voi, zice DOMNUL, și voi aduce înapoi pe prinșii voștri de război; vă voi strânge din toate neamurile și din toate locurile în care v-am izgonit, zice DOMNUL, și vă voi aduce înapoi în locul de unde v-am dus în robie."
+    },
+    {
+      "number": 15,
+      "text": "Totuși voi ziceți: „Dumnezeu ne-a ridicat proroci în Babilon!”"
+    },
+    {
+      "number": 16,
+      "text": "Așa vorbește DOMNUL asupra împăratului care șade pe scaunul de domnie al lui David, asupra întregului popor care locuiește în cetatea aceasta, asupra fraților voștri care n-au mers cu voi în robie."
+    },
+    {
+      "number": 17,
+      "text": "Așa vorbește DOMNUL oștirilor: „Iată, voi trimite între ei sabie, foamete și ciumă și-i voi face ca niște smochine grozave care, de rele ce sunt, nu se pot mânca.”"
+    },
+    {
+      "number": 18,
+      "text": "Îi voi urmări cu sabie, cu foamete și cu ciumă, îi voi face o pricină de spaimă pentru toate împărățiile pământului, de blestem, de pustiire, de batjocură și de ocară printre toate neamurile pe unde îi voi izgoni,"
+    },
+    {
+      "number": 19,
+      "text": "pentru că n-au ascultat cuvintele Mele, zice DOMNUL, ei, cărora în nenumărate rânduri le-am trimis pe robii Mei prorocii; dar n-ați vrut să ascultați, zice DOMNUL."
+    },
+    {
+      "number": 20,
+      "text": "Voi însă ascultați cuvântul DOMNULUI, voi toți prinșii de război pe care v-am trimis din Ierusalim în Babilon!"
+    },
+    {
+      "number": 21,
+      "text": "Așa vorbește DOMNUL oștirilor, Dumnezeul lui Israel, despre Ahab, fiul lui Colaia, și despre Zedechia, fiul lui Maaseia, care vă prorocesc minciuni în Numele Meu: „Iată, îi dau în mâinile lui Nebucadnețar, împăratul Babilonului; și-i va omorî sub ochii voștri.”"
+    },
+    {
+      "number": 22,
+      "text": "Vor sluji ca prilej de blestem între toți prinșii de război ai lui Iuda care sunt la Babilon. Și se va zice: „Să-ți facă DOMNUL ca lui Zedechia și ca lui Ahab pe care împăratul Babilonului i-a fript în foc!”"
+    },
+    {
+      "number": 23,
+      "text": "Și lucrul acesta se va întâmpla pentru că au făcut o mișelie în Israel preacurvind cu nevestele aproapelui lor și pentru că au spus minciuni în Numele Meu, când Eu nu le dădusem nicio poruncă. Știu lucrul acesta și sunt martor, zice DOMNUL."
+    },
+    {
+      "number": 24,
+      "text": "Iar lui Șemaia, nehelamitul, să-i spui:"
+    },
+    {
+      "number": 25,
+      "text": "„Așa vorbește DOMNUL oștirilor, Dumnezeul lui Israel: „Tu ai trimis în numele tău întregului popor din Ierusalim, lui Țefania, fiul lui Maaseia, preotul, și tuturor preoților o scrisoare cu următorul cuprins:””"
+    },
+    {
+      "number": 26,
+      "text": "„DOMNUL te-a pus preot în locul preotului Iehoiada, ca să priveghezi în Casa DOMNULUI peste toți nebunii și peste toți cei ce se dau drept proroci, ca să-i arunci în butuci și în fiare.”"
+    },
+    {
+      "number": 27,
+      "text": "Acum, pentru ce nu pedepsești pe Ieremia din Anatot, care prorocește printre voi?"
+    },
+    {
+      "number": 28,
+      "text": "Ba încă a trimis chiar să ne spună în Babilon: „Robia va fi lungă; zidiți case și locuiți-le; sădiți grădini și mâncați din roadele lor!”"
+    },
+    {
+      "number": 29,
+      "text": "(Preotul Țefania citise în adevăr scrisoarea aceasta în fața prorocului Ieremia.) –"
+    },
+    {
+      "number": 30,
+      "text": "Și cuvântul DOMNULUI a vorbit lui Ieremia astfel:"
+    },
+    {
+      "number": 31,
+      "text": "„Trimite să spună tuturor celor din robie: „Așa vorbește DOMNUL despre Șemaia, nehelamitul: „Pentru că Șemaia vă prorocește fără să-l fi trimis Eu și vă insuflă o încredere mincinoasă,”””"
+    },
+    {
+      "number": 32,
+      "text": "„„„„„„„„„„„„iată ce zice DOMNUL: „Voi pedepsi pe Șemaia, nehelamitul, și sămânța lui: niciunul din ai lui nu va locui în mijlocul poporului acestuia și nu va vedea binele pe care-l voi face poporului Meu, zice DOMNUL; căci el a propovăduit răzvrătire împotriva DOMNULUI.”””””””””””””"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

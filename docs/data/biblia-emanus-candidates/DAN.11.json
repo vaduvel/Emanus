@@ -1,0 +1,281 @@
+{
+  "translation": "BE",
+  "bookId": "DAN",
+  "bookName": "Daniel",
+  "chapter": 11,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/DAN.11.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/DAN.11.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/DAN.11.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "d07a4f090296684f1442e9457bd63af2da7b36459ba5f3b8b78ef364c8f4f24a",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "„În anul dintâi al lui Darius, medul, eram și eu la el, ca să-l ajut și să-l sprijin.”"
+    },
+    {
+      "number": 2,
+      "text": "Acum, îți voi face cunoscut adevărul: Iată că vor mai fi încă trei împărați în Persia. Cel de al patrulea va strânge mai multă bogăție decât toți ceilalți; și când se va simți puternic prin bogățiile lui, va răscula totul împotriva împărăției Greciei."
+    },
+    {
+      "number": 3,
+      "text": "Dar se va ridica un împărat viteaz, care va stăpâni cu o mare putere și va face ce va voi."
+    },
+    {
+      "number": 4,
+      "text": "Și cum se va întări, așa se va și sfărâma împărăția lui și va fi împărțită în cele patru vânturi ale cerurilor, dar nu între urmașii lui, și nici nu va fi tot atât de puternică pe cât era sub el, căci va fi făcută bucățele și va trece la alții, afară de aceștia."
+    },
+    {
+      "number": 5,
+      "text": "Împăratul de la miazăzi va ajunge tare. Dar unul din mai marii lui va fi și mai tare decât el și va domni, întemeind o mare împărăție."
+    },
+    {
+      "number": 6,
+      "text": "După câțiva ani, se vor uni, și fata împăratului de la miazăzi va veni ca nevastă la împăratul de la miazănoapte, ca să facă o învoială. Dar aceste mijloace de ajutorare nu vor avea nicio putere și nici celelalte mijloace ale ei nu vor putea ține piept, ci ea va fi dată la moarte împreună cu alaiul ei, cu tatăl ei și cu cel ce s-a legat cu ea."
+    },
+    {
+      "number": 7,
+      "text": "În vremea aceea însă se va ridica în locul ei un lăstar din aceeași rădăcină cu ea și va veni împotriva oștirii Siriei, da, va intra în cetățuia împăratului de la miazănoapte, va face ce va voi cu ea și va fi biruitor."
+    },
+    {
+      "number": 8,
+      "text": "Va ridica și va strămuta în Egipt, odată cu prinșii de război, chiar și pe dumnezeii și chipurile lor turnate, împreună cu vasele lor scumpe de argint și de aur. Apoi va lăsa câțiva ani în pace pe împăratul de la miazănoapte."
+    },
+    {
+      "number": 9,
+      "text": "Acesta va porni împotriva împărăției împăratului de la miazăzi, dar se va întoarce iarăși în țara sa."
+    },
+    {
+      "number": 10,
+      "text": "Totuși fiii săi vor începe iarăși războiul și vor strânge o mare mulțime de oști, care va înainta, se va revărsa ca un râu care iese din matcă și-l vor împinge iarăși înapoi până la cetățuie."
+    },
+    {
+      "number": 11,
+      "text": "Împăratul de la miazăzi, mâniat de aceasta, va ieși și se va lupta cu împăratul de la miazănoapte; va ridica o mare oștire, dar oștile împăratului de la miazănoapte vor fi date în mâinile lui și nimicite."
+    },
+    {
+      "number": 12,
+      "text": "Atunci inima împăratului se va îngâmfa, va doborî zece mii, dar tot nu va birui."
+    },
+    {
+      "number": 13,
+      "text": "Căci împăratul de la miazănoapte se va întoarce și va strânge o oștire mai mare decât cea dintâi; și după câtăva vreme, după câțiva ani, va porni în fruntea unei mari oștiri bine înarmate."
+    },
+    {
+      "number": 14,
+      "text": "În vremea aceea, se vor ridica mulți împotriva împăratului de la miazăzi, și o ceată de derbedei din poporul tău se vor răscula, ca să împlinească vedenia; dar vor cădea."
+    },
+    {
+      "number": 15,
+      "text": "Împăratul de la miazănoapte va înainta, va ridica întărituri și va pune mâna pe cetățile întărite. Oștile de la miazăzi, nici chiar floarea oamenilor împăratului nu vor putea să țină piept, nu vor avea putere să se împotrivească."
+    },
+    {
+      "number": 16,
+      "text": "Cel ce va merge împotriva lui va face ce va voi, și nimeni nu i se va împotrivi; el se va opri în țara minunată, nimicind cu desăvârșire tot ce-i va cădea în mână."
+    },
+    {
+      "number": 17,
+      "text": "Își va pune de gând să ia în stăpânire toată împărăția lui și, făcându-se că are gânduri curate cu el, îi va da pe fiica sa de nevastă, cu gând să-l piardă; dar lucrul acesta nu se va întâmpla și nu-i va izbândi."
+    },
+    {
+      "number": 18,
+      "text": "Apoi își va întoarce privirile înspre ostroave și va lua pe multe din ele; dar o căpetenie va pune capăt rușinii pe care voia el să i-o aducă și o va întoarce asupra lui."
+    },
+    {
+      "number": 19,
+      "text": "Apoi se va îndrepta spre cetățuile țării lui; dar se va poticni, va cădea și nu-l vor mai găsi."
+    },
+    {
+      "number": 20,
+      "text": "Cel ce-i va lua locul va aduce un asupritor în cea mai frumoasă parte a împărăției; dar în câteva zile va fi zdrobit, și anume nu prin mânie, nici prin război."
+    },
+    {
+      "number": 21,
+      "text": "În locul lui se va ridica un om disprețuit, fără să aibă putere împărătească; dar se va ridica deodată și va pune mâna pe împărăție prin uneltire."
+    },
+    {
+      "number": 22,
+      "text": "Oștile se vor revărsa ca un râu înaintea lui, dar vor fi nimicite împreună cu o căpetenie a legământului."
+    },
+    {
+      "number": 23,
+      "text": "După ce se vor uni cu el, el va întrebuința o viclenie; va porni și va birui cu puțină lume."
+    },
+    {
+      "number": 24,
+      "text": "Va intra pe neașteptate în locurile cele mai roditoare ale ținutului; va face ce nu făcuseră nici părinții lui, nici părinții părinților lui: va împărți prada, jafurile și bogățiile; va urzi la planuri împotriva cetățuilor, și aceasta va ține o vreme."
+    },
+    {
+      "number": 25,
+      "text": "Apoi va porni în fruntea unei mari oștiri, cu puterea și mânia lui, împotriva împăratului de la miazăzi. Și împăratul de la miazăzi se va prinde la război cu o oaste mare și foarte puternică; dar nu va putea să țină piept, căci se vor urzi planuri rele împotriva lui."
+    },
+    {
+      "number": 26,
+      "text": "Cei ce vor mânca bucate de la masa lui îi vor aduce pieirea; oștile lui se vor împrăștia ca un râu, și morții vor cădea în mare număr."
+    },
+    {
+      "number": 27,
+      "text": "Cei doi împărați nu vor căuta decât să-și facă rău unul altuia, vor sta la aceeași masă și vor vorbi cu viclenie. Dar nu vor izbuti, căci sfârșitul nu va veni decât la vremea hotărâtă."
+    },
+    {
+      "number": 28,
+      "text": "Când se va întoarce în țara lui cu mari bogății, în inima lui va fi vrăjmaș legământului sfânt, va lucra împotriva lui, și apoi se va întoarce în țara lui."
+    },
+    {
+      "number": 29,
+      "text": "La o vreme hotărâtă, va porni din nou împotriva împăratului de miazăzi; dar de data aceasta lucrurile nu vor mai merge ca mai înainte."
+    },
+    {
+      "number": 30,
+      "text": "Ci niște corăbii din Chitim vor înainta împotriva lui; iar el, deznădăjduit, se va întoarce înapoi. Apoi, mânios împotriva legământului sfânt, nu va sta cu mâinile în sân; ci, la întoarcere, se va înțelege cu cei ce vor părăsi legământul sfânt."
+    },
+    {
+      "number": 31,
+      "text": "Niște oști trimise de el vor veni și vor spurca Sfântul Locaș, cetățuia, vor face să înceteze jertfa necurmată și vor așeza urâciunea pustiitorului. Va ademeni prin lingușiri pe cei ce rup legământul."
+    },
+    {
+      "number": 32,
+      "text": "Dar aceia din popor care vor cunoaște pe Dumnezeul lor vor rămâne tari și vor face mari isprăvi."
+    },
+    {
+      "number": 33,
+      "text": "Înțelepții poporului vor învăța pe mulți. Unii vor cădea pentru o vreme, loviți de sabie și de flacără, de robie și de jaf."
+    },
+    {
+      "number": 34,
+      "text": "Când vor cădea, vor fi ajutați puțin, și mulți se vor uni cu ei din fățărnicie."
+    },
+    {
+      "number": 35,
+      "text": "Chiar și din cei înțelepți, mulți vor cădea, ca să fie încercați, curățați și albiți, până la vremea sfârșitului, căci sfârșitul nu va fi decât la vremea hotărâtă."
+    },
+    {
+      "number": 36,
+      "text": "Împăratul va face ce va voi; se va înălța, se va slăvi mai presus de toți dumnezeii și va spune lucruri nemaiauzite împotriva Dumnezeului dumnezeilor; și va propăși până va trece mânia, căci ce este hotărât se va împlini."
+    },
+    {
+      "number": 37,
+      "text": "Nu va ține seamă nici de dumnezeii părinților săi, nici de dorința femeilor; cu un cuvânt, nu va ține seamă de niciun dumnezeu, ci se va slăvi pe sine mai presus de toți."
+    },
+    {
+      "number": 38,
+      "text": "În schimb, va cinsti pe dumnezeul cetățuilor; acestui dumnezeu, pe care nu-l cunoșteau părinții săi, îi va aduce cinste cu aur și argint, cu pietre scumpe și lucruri de preț."
+    },
+    {
+      "number": 39,
+      "text": "Cu ajutorul acestui dumnezeu străin va lucra împotriva locurilor întărite; cui îl va recunoaște, îi va da mare cinste, îl va face să domnească peste mulți și le va împărți moșii ca răsplată."
+    },
+    {
+      "number": 40,
+      "text": "La vremea sfârșitului, împăratul de la miazăzi se va împunge cu el. Și împăratul de la miazănoapte se va năpusti ca o furtună peste el, cu care și călăreți, și cu multe corăbii; va înainta asupra țărilor lui, se va revărsa ca un râu și le va îneca."
+    },
+    {
+      "number": 41,
+      "text": "Va intra și în țara cea minunată, și zeci de mii vor cădea. Dar Edomul, Moabul și fruntașii copiilor lui Amon vor scăpa din mâna lui."
+    },
+    {
+      "number": 42,
+      "text": "Își va întinde mâna peste felurite țări și nici țara Egiptului nu va scăpa."
+    },
+    {
+      "number": 43,
+      "text": "Ci se va face stăpân pe vistieriile de aur și de argint și pe toate lucrurile scumpe ale Egiptului. Libienii și etiopienii vor veni în alai după el."
+    },
+    {
+      "number": 44,
+      "text": "Dar niște zvonuri venite de la răsărit și de la miazănoapte îl vor înspăimânta, și atunci va porni cu o mare mânie ca să prăpădească și să nimicească cu desăvârșire pe mulți."
+    },
+    {
+      "number": 45,
+      "text": "„Își va întinde corturile palatului său între mare și muntele cel slăvit și sfânt. Apoi își va ajunge sfârșitul, și nimeni nu-i va fi într-ajutor.”"
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

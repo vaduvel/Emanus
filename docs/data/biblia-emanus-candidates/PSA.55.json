@@ -1,0 +1,201 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 55,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.55.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.55.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.55.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "cfb77d398c851de81728b9f92063afe81194db461d5ab7d86720eb729c3e6057",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Către mai marele cântăreților. De cântat pe instrumente cu corzi. O cântare a lui David.) Ia aminte, Dumnezeule, la rugăciunea mea și nu Te ascunde de cererile mele!"
+    },
+    {
+      "number": 2,
+      "text": "Ascultă-mă și răspunde-mi! Rătăcesc încoace și încolo și mă frământ,"
+    },
+    {
+      "number": 3,
+      "text": "din pricina zarvei vrăjmașului și din pricina apăsării celui rău. Căci ei aruncă nenorocirea peste mine și mă urmăresc cu mânie."
+    },
+    {
+      "number": 4,
+      "text": "Îmi tremură inima în mine și mă cuprinde spaima morții,"
+    },
+    {
+      "number": 5,
+      "text": "mă apucă frica și groaza și mă iau fiorii."
+    },
+    {
+      "number": 6,
+      "text": "Eu zic: „O, dacă aș avea aripile porumbelului, aș zbura și aș găsi undeva odihnă!”"
+    },
+    {
+      "number": 7,
+      "text": "Da, aș fugi departe de tot și m-aș duce să locuiesc în pustiu. – (Oprire)"
+    },
+    {
+      "number": 8,
+      "text": "Aș fugi în grabă la un adăpost de vântul acesta năprasnic și de furtuna aceasta."
+    },
+    {
+      "number": 9,
+      "text": "Nimicește-i, DOAMNE, împarte-le limbile, căci în cetate văd silă și certuri;"
+    },
+    {
+      "number": 10,
+      "text": "zi și noapte ei îi dau ocol pe ziduri: nelegiuirea și răutatea sunt în sânul ei;"
+    },
+    {
+      "number": 11,
+      "text": "răutatea este în mijlocul ei, și vicleșugul și înșelătoria nu lipsesc din piețele ei."
+    },
+    {
+      "number": 12,
+      "text": "Nu un vrăjmaș mă batjocorește, căci aș suferi: nu potrivnicul meu se ridică împotriva mea, căci m-aș ascunde dinaintea lui."
+    },
+    {
+      "number": 13,
+      "text": "Ci tu, pe care te socoteam una cu mine, tu, frate de cruce și prieten cu mine!"
+    },
+    {
+      "number": 14,
+      "text": "Noi, care trăiam împreună într-o plăcută prietenie și ne duceam împreună cu mulțimea în Casa lui Dumnezeu!"
+    },
+    {
+      "number": 15,
+      "text": "Să vină moartea peste ei și să se coboare de vii în Locuința morților! Căci răutatea este în locuința lor, în inima lor."
+    },
+    {
+      "number": 16,
+      "text": "Dar eu strig către Dumnezeu, și DOMNUL mă va scăpa."
+    },
+    {
+      "number": 17,
+      "text": "Seara, dimineața și la amiază oftez și gem, și El va auzi glasul meu."
+    },
+    {
+      "number": 18,
+      "text": "Mă va scăpa din lupta care se dă împotriva mea și-mi va aduce pacea, căci mulți mai sunt împotriva mea!"
+    },
+    {
+      "number": 19,
+      "text": "Dumnezeu va auzi și-i va smeri, El, care, din veșnicie, stă pe scaunul Lui de domnie. – (Oprire) Căci în ei nu este nicio nădejde de schimbare și nu se tem de Dumnezeu."
+    },
+    {
+      "number": 20,
+      "text": "El își întinde mâinile împotriva celor care trăiau în pace cu el și își încalcă legământul."
+    },
+    {
+      "number": 21,
+      "text": "Gura lor este dulce ca smântâna, dar în inimă poartă războiul: cuvintele lor sunt mai alunecoase decât untdelemnul, dar, când ies ele din gură, sunt niște săbii."
+    },
+    {
+      "number": 22,
+      "text": "Încredințează-ți soarta în mâna DOMNULUI, și El te va sprijini. El nu va lăsa niciodată să se clatine cel neprihănit."
+    },
+    {
+      "number": 23,
+      "text": "Și Tu, Dumnezeule, îi vei coborî în fundul gropii. Oamenii setoși de sânge și de înșelăciune nu vor ajunge nici jumătate din zilele lor. Eu însă mă încred în Tine!"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 20,
+      "term": "repair5-number-agreement",
+      "decision": "Subiectul ebraic și lectura WEBBE sunt la singular; pluralul moștenit schimba referentul.",
+      "previousTextDigest": "c0984769dbd9827460368d53a80759bd618daab7c0c98c7e92438e8e64d97d45",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

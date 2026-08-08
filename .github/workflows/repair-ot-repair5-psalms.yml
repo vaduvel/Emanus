@@ -1,0 +1,32 @@
+name: Repair OT repair 5 Psalm superscriptions
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-ot-repair5
+    paths:
+      - 'scripts/repair-ot-repair5-psalm-superscriptions.py'
+      - '.github/workflows/repair-ot-repair5-psalms.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-ot-repair5
+      - name: Restore omitted Psalm verse ones
+        run: python3 scripts/repair-ot-repair5-psalm-superscriptions.py
+      - name: Commit repaired Psalms
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus-candidates/PSA.*.json docs/biblia-emanus/OT-REPAIR5-PSALM-SUPERSCRIPTION-REPAIRS.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix(bible): restore Psalm verse ones omitted by superscriptions'
+            git push origin HEAD:agent/biblia-emanus-ot-repair5
+          fi

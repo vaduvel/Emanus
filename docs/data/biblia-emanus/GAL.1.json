@@ -1,0 +1,246 @@
+{
+  "translation": "BE",
+  "bookId": "GAL",
+  "bookName": "Galateni",
+  "chapter": 1,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/GAL01.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-GAL"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Gal.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-GAL",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-GAL",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved",
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "omissions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 24,
+      "reviewed": 24,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:ba47272dcebe6e73ff9bfc33cac2a2147a89bf18cc0d4e9db3eb0b21bb6523df"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 327,
+        "primary": 189,
+        "secondary": 45,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.33174470430626646,
+      "minimumScore": 0.5090738739653641
+    },
+    "textDigest": "sha256:965866f67dd90bd19798a14178e63d11328369cedd41de09a458d2018d3ae7a6",
+    "contentDigest": "sha256:954583fddd9f711cf00096668ab5694213fec115894b8ff576c43b387b88bc8d"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Pavel, apostol nu de la oameni, nici prin om, ci prin Isus Hristos și Dumnezeu Tatăl, care l-a înviat dintre cei morți,"
+    },
+    {
+      "number": 2,
+      "text": "și toți frații care sunt cu mine, către bisericile Galatiei:"
+    },
+    {
+      "number": 3,
+      "text": "har vouă și pace de la Dumnezeu Tatăl și Domnul nostru Isus Hristos,"
+    },
+    {
+      "number": 4,
+      "text": "care s-a dat pe sine pentru păcatele noastre, ca să ne smulgă din veacul rău de acum, după voia Dumnezeului și Tatălui nostru,"
+    },
+    {
+      "number": 5,
+      "text": "a căruia este slava în vecii vecilor. Amin."
+    },
+    {
+      "number": 6,
+      "text": "Mă mir că îl părăsiți atât de repede pe cel care v-a chemat în harul lui Hristos la o altă veste bună,"
+    },
+    {
+      "number": 7,
+      "text": "care nu este alta; doar că sunt unii care vă tulbură și vor să răstoarne evanghelia lui Hristos."
+    },
+    {
+      "number": 8,
+      "text": "Dar chiar dacă noi, sau un înger din cer, ar trebui să vă predice orice altă veste bună decât cea pe care v-am predicat-o, să fie blestemat."
+    },
+    {
+      "number": 9,
+      "text": "Așa cum am spus mai înainte, așa spun acum din nou: dacă cineva vă predică vreo veste bună, alta decât cea pe care ați primit-o, să fie blestemat."
+    },
+    {
+      "number": 10,
+      "text": "Căci acum caut eu bunăvoința oamenilor sau a lui Dumnezeu? Sau caut să plac oamenilor? Dacă aș mai plăcea oamenilor, n-aș fi rob al lui Hristos."
+    },
+    {
+      "number": 11,
+      "text": "Căci vă fac cunoscut, fraților, că evanghelia vestită de mine nu este după om;"
+    },
+    {
+      "number": 12,
+      "text": "fiindcă nici eu n-am primit-o de la om, nici n-am fost învățat-o, ci prin descoperirea lui Isus Hristos."
+    },
+    {
+      "number": 13,
+      "text": "Căci ați auzit despre purtarea mea de altădată în iudaism, cum persecutam peste măsură biserica lui Dumnezeu și o devastam,"
+    },
+    {
+      "number": 14,
+      "text": "și înaintam în iudaism mai mult decât mulți de vârsta mea din neamul meu, fiind mult mai zelos pentru tradițiile părintești."
+    },
+    {
+      "number": 15,
+      "text": "Dar când a fost plăcerea lui Dumnezeu, care m-a despărțit de pântecele mamei mele și m-a chemat prin harul Său,"
+    },
+    {
+      "number": 16,
+      "text": "să-l descopere pe Fiul lui în mine, ca să-l vestesc între neamuri, n-am cerut îndată sfat de la carne și sânge,"
+    },
+    {
+      "number": 17,
+      "text": "nici nu m-am suit la Ierusalim la cei care erau apostoli înainte de mine, ci am plecat în Arabia și apoi m-am întors iarăși la Damasc."
+    },
+    {
+      "number": 18,
+      "text": "După trei ani m-am suit la Ierusalim, ca să-l vizitez pe Petru, și am rămas cu el cincisprezece zile."
+    },
+    {
+      "number": 19,
+      "text": "dar pe altul dintre apostoli n-am văzut, decât pe Iacov, fratele Domnului."
+    },
+    {
+      "number": 20,
+      "text": "Iar în cele ce vă scriu, iată, înaintea lui Dumnezeu, nu mint."
+    },
+    {
+      "number": 21,
+      "text": "Apoi am venit în ținuturile Siriei și ale Ciliciei."
+    },
+    {
+      "number": 22,
+      "text": "Și eram necunoscut la față bisericilor din Iudeea care sunt în Hristos."
+    },
+    {
+      "number": 23,
+      "text": "Ele auzeau doar: „Cel care ne persecuta odinioară vestește acum credința pe care odinioară o devasta.”"
+    },
+    {
+      "number": 24,
+      "text": "Așa că l-au glorificat pe Dumnezeu în mine."
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

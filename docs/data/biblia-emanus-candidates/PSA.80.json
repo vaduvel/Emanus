@@ -1,0 +1,195 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 80,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.80:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.80.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.80.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.80.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "3faf63c7fb77e8193ad1fadad5717978b717b8076c29700648cb894ab426c9f1",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Deschide urechea Păstorul lui Israel, tu, care conduci pe Iosif ca pe o turmă; tu, care locuiești între heruvimi, strălucește!"
+    },
+    {
+      "number": 2,
+      "text": "Trezește-Ți puterea, înaintea lui Efraim, Beniamin și Manase, și vino în ajutorul nostru!"
+    },
+    {
+      "number": 3,
+      "text": "Ridică-ne, Dumnezeule, fă să strălucească fața Ta, și vom fi scăpați!"
+    },
+    {
+      "number": 4,
+      "text": "DOAMNE Dumnezeul oștirilor, până când Te vei mânia, cu toată rugăciunea poporului Tău?"
+    },
+    {
+      "number": 5,
+      "text": "Îi hrănești cu o pâine de lacrimi și-i adăpi cu lacrimi din plin."
+    },
+    {
+      "number": 6,
+      "text": "Ne faci să fim mărul de ceartă al vecinilor noștri, și vrăjmașii noștri râd de noi între ei."
+    },
+    {
+      "number": 7,
+      "text": "Ridică-ne, Dumnezeul oștirilor! Fă să strălucească fața Ta, și vom fi scăpați!"
+    },
+    {
+      "number": 8,
+      "text": "Tu ai adus o vie din Egipt, ai izgonit neamuri și ai sădit-o."
+    },
+    {
+      "number": 9,
+      "text": "Ai făcut loc înaintea ei, și ea a dat rădăcini și a umplut țara."
+    },
+    {
+      "number": 10,
+      "text": "Munții erau acoperiți de umbra ei, și ramurile ei erau ca niște cedri ai lui Dumnezeu."
+    },
+    {
+      "number": 11,
+      "text": "Își întindea mlădițele până la mare, și lăstarii până la Râu."
+    },
+    {
+      "number": 12,
+      "text": "Pentru ce i-ai rupt gardul acum, de-o jefuiesc toți trecătorii?"
+    },
+    {
+      "number": 13,
+      "text": "O râmă mistrețul din pădure și o mănâncă fiarele câmpului."
+    },
+    {
+      "number": 14,
+      "text": "Dumnezeul oștirilor, întoarce-Te iarăși! Privește din cer și vezi! Cercetează via aceasta!"
+    },
+    {
+      "number": 15,
+      "text": "Ocrotește ce a sădit dreapta Ta și pe fiul pe care Ți l-ai ales!…"
+    },
+    {
+      "number": 16,
+      "text": "Ea este arsă de foc, este tăiată! De mustrarea feței Tale, ei pier!"
+    },
+    {
+      "number": 17,
+      "text": "Mâna Ta să fie peste omul dreptei Tale, peste fiul omului pe care Ți l-ai ales!"
+    },
+    {
+      "number": 18,
+      "text": "Și atunci nu ne vom mai depărta de Tine. Înviorează-ne iarăși, și vom chema Numele Tău."
+    },
+    {
+      "number": 19,
+      "text": "DOAMNE Dumnezeul oștirilor, ridică-ne iarăși! Fă să strălucească fața Ta, și vom fi scăpați!"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. De cântat ca și „Crinii mărturiei”)"
+}

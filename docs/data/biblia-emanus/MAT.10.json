@@ -1,0 +1,318 @@
+{
+  "translation": "BE",
+  "bookId": "MAT",
+  "bookName": "Matei",
+  "chapter": 10,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/MAT10.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-MAT"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Matt.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-MAT",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-MAT",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 42,
+      "reviewed": 42,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:7546732d551e130d376dd4a2e09bc994d407e4b9f1efc2c7bcfc5fe6f84ff6ca"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 42 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:52517269734464a931d865b240785914a8df76b9634353a9b61061a3964f91c3",
+    "contentDigest": "sha256:a8ed23b356754232ff8c0f2469a91ef4d5bd46c658eda181c38e730a88350126"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Isus i-a chemat la El pe cei doisprezece ucenici ai Săi și le-a dat autoritate peste duhurile necurate, ca să le scoată și să vindece orice boală și orice neputință."
+    },
+    {
+      "number": 2,
+      "text": "Numele celor doisprezece apostoli sunt acestea: cel dintâi, Simon, numit Petru, și Andrei, fratele lui; Iacov, fiul lui Zebedei, și Ioan, fratele lui;"
+    },
+    {
+      "number": 3,
+      "text": "Filip și Bartolomeu; Toma și Matei, colectorul de taxe; Iacov, fiul lui Alfeu, și Tadeu;"
+    },
+    {
+      "number": 4,
+      "text": "Simon Cananeul și Iuda Iscariotul, cel care L-a și trădat."
+    },
+    {
+      "number": 5,
+      "text": "Isus i-a trimis pe acești doisprezece și le-a poruncit: „Să nu mergeți pe drumul națiunilor și să nu intrați în vreo cetate a samaritenilor,"
+    },
+    {
+      "number": 6,
+      "text": "ci mergeți mai degrabă la oile pierdute ale casei lui Israel."
+    },
+    {
+      "number": 7,
+      "text": "În timp ce mergeți, predicați, spunând: «Împărăția cerurilor s-a apropiat!»"
+    },
+    {
+      "number": 8,
+      "text": "Vindecați-i pe cei bolnavi, înviați-i pe cei morți, curățiți-i pe leproși, scoateți demonii. Fără plată ați primit, fără plată să dați."
+    },
+    {
+      "number": 9,
+      "text": "Să nu vă procurați aur, argint sau aramă pentru brâiele voastre,"
+    },
+    {
+      "number": 10,
+      "text": "nici traistă pentru drum, nici două tunici, nici sandale, nici toiag, căci lucrătorul își merită hrana."
+    },
+    {
+      "number": 11,
+      "text": "În orice cetate sau sat veți intra, cercetați cine este vrednic acolo și rămâneți la el până veți pleca."
+    },
+    {
+      "number": 12,
+      "text": "Când intrați în casă, salutați-o."
+    },
+    {
+      "number": 13,
+      "text": "Dacă acea casă este vrednică, pacea voastră să vină peste ea; dar, dacă nu este vrednică, pacea voastră să se întoarcă la voi."
+    },
+    {
+      "number": 14,
+      "text": "Dacă cineva nu vă primește și nu ascultă cuvintele voastre, când ieșiți din casa sau din cetatea aceea, scuturați-vă praful de pe picioare."
+    },
+    {
+      "number": 15,
+      "text": "Adevărat vă spun: în ziua judecății va fi mai ușor pentru ținutul Sodomei și Gomorei decât pentru cetatea aceea."
+    },
+    {
+      "number": 16,
+      "text": "Iată, Eu vă trimit ca pe niște oi în mijlocul lupilor. Fiți deci chibzuiți ca șerpii și nevinovați ca porumbeii."
+    },
+    {
+      "number": 17,
+      "text": "Dar păzește-te de oameni, căci te vor da la consilii, și în sinagogile lor te vor biciui."
+    },
+    {
+      "number": 18,
+      "text": "Da, și veți fi adus înaintea guvernatorilor și regilor de dragul meu, pentru o mărturie pentru ei și pentru națiuni."
+    },
+    {
+      "number": 19,
+      "text": "Când vă vor da pe mâna lor, nu vă îngrijorați cum sau ce veți spune, căci chiar în ceasul acela vi se va da ce să spuneți."
+    },
+    {
+      "number": 20,
+      "text": "Nu voi sunteți cei care vorbiți, ci Duhul Tatălui vostru este Cel care vorbește în voi."
+    },
+    {
+      "number": 21,
+      "text": "Fratele îl va da la moarte pe fratele său, iar tatăl pe copilul său. Copiii se vor ridica împotriva părinților și îi vor omorî."
+    },
+    {
+      "number": 22,
+      "text": "Veți fi urâți de toți din cauza numelui Meu, dar cel care va răbda până la sfârșit va fi salvat."
+    },
+    {
+      "number": 23,
+      "text": "Când vă vor persecuta într-o cetate, fugiți în alta; căci adevărat vă spun: nicidecum nu veți sfârși de străbătut cetățile lui Israel până va veni Fiul Omului."
+    },
+    {
+      "number": 24,
+      "text": "Ucenicul nu este mai presus de învățătorul lui, nici robul mai presus de stăpânul lui."
+    },
+    {
+      "number": 25,
+      "text": "Îi este de ajuns ucenicului să devină ca învățătorul lui și robului ca stăpânul lui. Dacă pe stăpânul casei l-au numit Beelzebul, cu cât mai mult îi vor numi astfel pe cei din casa lui!"
+    },
+    {
+      "number": 26,
+      "text": "Așadar, să nu vă temeți de ei, căci nu este nimic acoperit care să nu fie descoperit și nimic ascuns care să nu fie cunoscut."
+    },
+    {
+      "number": 27,
+      "text": "Ce vă spun la întuneric, spuneți la lumină; iar ce auziți la ureche, proclamați de pe acoperișuri."
+    },
+    {
+      "number": 28,
+      "text": "Nu vă temeți de cei care omoară trupul, dar nu pot omorî sufletul. Temeți-vă mai degrabă de Cel care poate să distrugă și sufletul, și trupul în Gheena."
+    },
+    {
+      "number": 29,
+      "text": "Oare nu se vând două vrăbii pe un asarion? Și niciuna dintre ele nu va cădea la pământ fără Tatăl vostru."
+    },
+    {
+      "number": 30,
+      "text": "Vouă însă, până și toate firele de păr de pe cap vă sunt numărate."
+    },
+    {
+      "number": 31,
+      "text": "Prin urmare, nu te teme. Sunteți de mai mare valoare decât multe vrabii."
+    },
+    {
+      "number": 32,
+      "text": "Deci, pe oricine Mă va mărturisi înaintea oamenilor îl voi mărturisi și Eu înaintea Tatălui Meu care este în ceruri."
+    },
+    {
+      "number": 33,
+      "text": "Dar pe oricine se va lepăda de Mine înaintea oamenilor îl voi respinge și Eu înaintea Tatălui Meu care este în ceruri."
+    },
+    {
+      "number": 34,
+      "text": "Să nu credeți că am venit să aduc pace pe pământ. N-am venit să aduc pace, ci sabie."
+    },
+    {
+      "number": 35,
+      "text": "Căci am venit să învrăjbesc pe un om împotriva tatălui său, pe o fiică împotriva mamei sale pe o noră împotriva soacrei sale."
+    },
+    {
+      "number": 36,
+      "text": "iar dușmanii omului vor fi cei din propria lui casă."
+    },
+    {
+      "number": 37,
+      "text": "Cine îl iubește pe tată sau pe mamă mai mult decât pe Mine nu este vrednic de Mine; și cine îl iubește pe fiu sau pe fiică mai mult decât pe Mine nu este vrednic de Mine."
+    },
+    {
+      "number": 38,
+      "text": "Cel care nu ia crucea și să urmeze după mine nu este demn de mine."
+    },
+    {
+      "number": 39,
+      "text": "Cel care își caută viața o va pierde; și cel care își pierde viața din cauza mea o va găsi."
+    },
+    {
+      "number": 40,
+      "text": "Cine vă primește pe voi Mă primește pe Mine, iar cine Mă primește pe Mine Îl primește pe Cel care M-a trimis."
+    },
+    {
+      "number": 41,
+      "text": "Cine primește un profet în numele unui profet va primi răsplata unui profet, iar cine primește un om drept în numele unui om drept va primi răsplata unui om drept."
+    },
+    {
+      "number": 42,
+      "text": "Și oricine îi va da de băut unuia dintre acești micuți fie și numai un pahar cu apă rece, în numele unui ucenic, adevărat vă spun: nicidecum nu-și va pierde răsplata.”"
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

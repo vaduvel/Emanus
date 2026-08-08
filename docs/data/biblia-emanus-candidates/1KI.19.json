@@ -1,0 +1,194 @@
+{
+  "translation": "BE",
+  "bookId": "1KI",
+  "bookName": "1 Împărați",
+  "chapter": 19,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/1KI.19.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/1KI.19.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/1KI.19.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "d7160a89b5ccb440d5347aca2e6214598808357ea88e1b720c5bc3a209ac115a",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Ahab a spus Izabelei tot ce făcuse Ilie și cum ucisese cu sabia pe toți prorocii."
+    },
+    {
+      "number": 2,
+      "text": "Izabela a trimis un sol la Ilie, să-i spună: „Să mă pedepsească zeii cu toată asprimea lor, dacă mâine, la ceasul acesta, nu voi face cu viața ta ce ai făcut tu cu viața fiecăruia din ei.”"
+    },
+    {
+      "number": 3,
+      "text": "Ilie, când a văzut lucrul acesta, s-a sculat și a plecat, ca să-și scape viața. A ajuns la Beer-Șeba, care ține de Iuda, și și-a lăsat slujitorul acolo."
+    },
+    {
+      "number": 4,
+      "text": "El s-a dus în pustiu unde, după un drum de o zi, a șezut sub un ienupăr și dorea să moară, zicând: „Destul! Acum, DOAMNE, ia-mi sufletul, căci nu sunt mai bun decât părinții mei.”"
+    },
+    {
+      "number": 5,
+      "text": "S-a culcat și a adormit sub un ienupăr. Și iată, l-a atins un înger și i-a zis: „Scoală-te și mănâncă.”"
+    },
+    {
+      "number": 6,
+      "text": "El s-a uitat, și la căpătâiul lui era o turtă coaptă pe niște pietre încălzite și un ulcior cu apă. A mâncat și a băut, apoi s-a culcat din nou."
+    },
+    {
+      "number": 7,
+      "text": "Îngerul DOMNULUI a venit a doua oară, l-a atins și a zis: „Scoală-te și mănâncă, fiindcă drumul pe care-l ai de făcut este prea lung pentru tine.”"
+    },
+    {
+      "number": 8,
+      "text": "El s-a sculat, a mâncat și a băut; și, cu puterea pe care i-a dat-o mâncarea aceasta, a mers patruzeci de zile și patruzeci de nopți până la muntele lui Dumnezeu, Horeb."
+    },
+    {
+      "number": 9,
+      "text": "Și acolo, Ilie a intrat într-o peșteră și a rămas în ea peste noapte. Și cuvântul DOMNULUI i-a vorbit astfel: „Ce faci tu aici, Ilie?”"
+    },
+    {
+      "number": 10,
+      "text": "El a răspuns: „Am fost plin de râvnă pentru DOMNUL Dumnezeul oștirilor; căci copiii lui Israel au părăsit legământul Tău, au sfărâmat altarele Tale și au ucis cu sabia pe prorocii Tăi; am rămas numai eu singur, și caută să-mi ia viața!”"
+    },
+    {
+      "number": 11,
+      "text": "El i-a spus: „Ieși și stai pe munte înaintea DOMNULUI!” Și iată, DOMNUL a trecut. Un vânt mare și puternic despica munții și sfărâma stâncile înaintea DOMNULUI, dar DOMNUL nu era în vânt. După vânt a venit un cutremur, dar DOMNUL nu era în cutremur."
+    },
+    {
+      "number": 12,
+      "text": "Și după cutremurul de pământ, a venit un foc: DOMNUL nu era în focul acela. Și după foc, a venit un susur blând și subțire."
+    },
+    {
+      "number": 13,
+      "text": "Când l-a auzit Ilie, și-a acoperit fața cu mantaua, a ieșit și a stat la gura peșterii. Și un glas i-a vorbit, zicând: „Ce faci tu aici, Ilie?”"
+    },
+    {
+      "number": 14,
+      "text": "El a răspuns: „Am fost plin de râvnă pentru DOMNUL Dumnezeul oștirilor, căci copiii lui Israel au părăsit legământul Tău, au sfărâmat altarele Tale și au ucis cu sabia pe prorocii Tăi; am rămas numai eu singur, și caută să-mi ia viața.”"
+    },
+    {
+      "number": 15,
+      "text": "DOMNUL i-a zis: „Du-te, întoarce-te pe drumul tău prin pustiu până la Damasc; și când vei ajunge, să ungi pe Hazael ca împărat al Siriei.”"
+    },
+    {
+      "number": 16,
+      "text": "Să ungi și pe Iehu, fiul lui Nimși, ca împărat al lui Israel; și să ungi pe Elisei, fiul lui Șafat, din Abel-Mehola, ca proroc în locul tău."
+    },
+    {
+      "number": 17,
+      "text": "Și se va întâmpla că, pe cel ce va scăpa de sabia lui Hazael îl va omorî Iehu; și pe cel ce va scăpa de sabia lui Iehu îl va omorî Elisei."
+    },
+    {
+      "number": 18,
+      "text": "„Dar voi lăsa în Israel șapte mii de bărbați, și anume pe toți cei ce nu și-au plecat genunchii înaintea lui Baal și a căror gură nu l-au sărutat.”"
+    },
+    {
+      "number": 19,
+      "text": "Ilie a plecat de acolo și a găsit pe Elisei, fiul lui Șafat, arând. Înaintea lui erau douăsprezece perechi de boi, și el era cu a douăsprezecea. Ilie s-a apropiat de el și și-a aruncat mantaua pe el."
+    },
+    {
+      "number": 20,
+      "text": "Elisei a părăsit boii, a alergat după Ilie și a zis: „Lasă-mă să sărut pe tatăl meu și pe mama mea și te voi urma.” Ilie i-a răspuns: „Du-te, și apoi întoarce-te: dar gândește-te la ce ți-am făcut.”"
+    },
+    {
+      "number": 21,
+      "text": "După ce s-a depărtat de Ilie, s-a întors și a luat o pereche de boi pe care i-a adus jertfă; cu uneltele boilor le-a fiert carnea și a dat-o oamenilor s-o mănânce. Apoi s-a sculat, a urmat pe Ilie și a fost în slujba lui."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 11,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "b5fbae3a051243e79fc01ea00d423d686f3206fe83be8a3cf30c65dcd0a090af",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

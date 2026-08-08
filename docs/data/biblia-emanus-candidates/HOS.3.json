@@ -1,0 +1,85 @@
+{
+  "id": "HOS.3",
+  "bookId": "HOS",
+  "bookName": "Osea",
+  "chapter": 3,
+  "chapterNumber": 3,
+  "status": "in_review",
+  "public": false,
+  "verses": [
+    {
+      "number": 1,
+      "text": "„DOMNUL mi-a zis: „Du-te iarăși și iubește o femeie iubită de un ibovnic și preacurvă; iubește-o cum iubește DOMNUL pe copiii lui Israel, care se îndreaptă spre alți dumnezei și care iubesc turtele de stafide!””"
+    },
+    {
+      "number": 2,
+      "text": "Mi-am cumpărat-o cu cincisprezece sicli de argint, un omer de orz și un letec de orz."
+    },
+    {
+      "number": 3,
+      "text": "Și i-am zis: „Rămâi multă vreme numai a mea, nu te deda la curvie, nu mai fi a niciunui alt bărbat, și voi fi și eu la fel cu tine!”"
+    },
+    {
+      "number": 4,
+      "text": "Căci copiii lui Israel vor rămâne multă vreme fără împărat, fără căpetenie, fără jertfă, fără chip de idol, fără efod și fără terafimi."
+    },
+    {
+      "number": 5,
+      "text": "„După aceea, copiii lui Israel se vor întoarce și vor căuta pe DOMNUL Dumnezeul lor și pe împăratul lor David; și vor tresări la vederea DOMNULui și a bunătății Lui, în vremurile de pe urmă.”"
+    }
+  ],
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "7dce1a803e9109d08b333d6ec8a60c2273b1da7bd0185eed40b617c0883ddb23",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic",
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  }
+}

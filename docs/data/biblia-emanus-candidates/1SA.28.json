@@ -1,0 +1,210 @@
+{
+  "translation": "BE",
+  "bookId": "1SA",
+  "bookName": "1 Samuel",
+  "chapter": 28,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/1SA.28.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/1SA.28.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/1SA.28.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "59e748d049a37462212c4d92b017b697b24e3fb0305aabb6f2465ade8975e5f1",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Pe vremea aceea, filistenii și-au strâns taberele și au făcut o oștire ca să pornească cu război împotriva lui Israel. Achiș a zis lui David: „Să știi că vei veni cu mine la oștire, tu și oamenii tăi.”"
+    },
+    {
+      "number": 2,
+      "text": "David a răspuns lui Achiș: „Ei bine, vei vedea ce va face robul tău.” Și Achiș a zis lui David: „De aceea, te voi pune păzitorul capului meu în tot timpul.”"
+    },
+    {
+      "number": 3,
+      "text": "Samuel murise. Tot Israelul îl plânsese și-l îngropaseră la Rama în cetatea lui. Saul îndepărtase din țară pe cei ce chemau morții și pe cei ce ghiceau. –"
+    },
+    {
+      "number": 4,
+      "text": "Filistenii s-au strâns și au venit de au tăbărât la Sunem: Saul a strâns pe tot Israelul și au tăbărât la Ghilboa."
+    },
+    {
+      "number": 5,
+      "text": "La vederea taberei filistenilor, Saul a fost cuprins de frică, și un tremur puternic i-a apucat inima."
+    },
+    {
+      "number": 6,
+      "text": "Saul a întrebat pe DOMNUL, și DOMNUL nu i-a răspuns nici prin vise, nici prin Urim, nici prin proroci."
+    },
+    {
+      "number": 7,
+      "text": "Atunci Saul a zis slujitorilor lui: „Căutați-mi o femeie care să cheme morții, ca să mă duc s-o întreb.” Slujitorii lui i-au zis: „Iată că în En-Dor este o femeie care cheamă morții.”"
+    },
+    {
+      "number": 8,
+      "text": "Atunci Saul s-a schimbat, a luat alte haine și a plecat cu doi oameni. Au ajuns la femeia aceea noaptea. Saul i-a zis: „Spune-mi viitorul chemând un mort și scoală-mi pe cine-ți voi spune.”"
+    },
+    {
+      "number": 9,
+      "text": "Femeia i-a răspuns: „Știi ce a făcut Saul, cum a nimicit din țară pe cei ce cheamă morții și pe cei ce ghicesc viitorul: pentru ce, dar, întinzi o cursă vieții mele, ca să mă omori?”"
+    },
+    {
+      "number": 10,
+      "text": "Saul i-a jurat pe DOMNUL și a zis: „Viu este DOMNUL, că nu ți se va întâmpla niciun rău pentru aceasta.”"
+    },
+    {
+      "number": 11,
+      "text": "Femeia a zis: „Pe cine vrei să-ți scol?” Și el a răspuns: „Scoală-mi pe Samuel.”"
+    },
+    {
+      "number": 12,
+      "text": "Când a văzut femeia pe Samuel, a scos un țipăt mare și a zis lui Saul: „Pentru ce m-ai înșelat? Tu ești Saul!”"
+    },
+    {
+      "number": 13,
+      "text": "Împăratul i-a zis: „Nu te teme de nimic; dar ce vezi?” Femeia a zis lui Saul: „Văd o ființă dumnezeiască sculându-se din pământ.”"
+    },
+    {
+      "number": 14,
+      "text": "El i-a zis: „Cum e la chip?” Și ea a răspuns: „Este un bătrân care se scoală și este învelit cu o mantie.”"
+    },
+    {
+      "number": 15,
+      "text": "Samuel a zis lui Saul: „Pentru ce m-ai tulburat, chemându-mă?” Saul a răspuns: „Sunt într-o mare strâmtorare: filistenii îmi fac război, și Dumnezeu S-a depărtat de la mine; nu mi-a răspuns nici prin proroci, nici prin vise. Și te-am chemat să-mi arăți ce să fac.”"
+    },
+    {
+      "number": 16,
+      "text": "Samuel a zis: „Pentru ce mă întrebi pe mine când DOMNUL S-a depărtat de tine și S-a făcut vrăjmașul tău?”"
+    },
+    {
+      "number": 17,
+      "text": "DOMNUL îți face așa cum îți vestisem din partea Lui; DOMNUL a rupt împărăția din mâinile tale și a dat-o altuia, lui David."
+    },
+    {
+      "number": 18,
+      "text": "N-ai ascultat de glasul DOMNULUI și n-ai făcut pe Amalec să simtă aprinderea mâniei Lui: de aceea îți face DOMNUL așa astăzi."
+    },
+    {
+      "number": 19,
+      "text": "„Și chiar DOMNUL va da pe Israel împreună cu tine în mâinile filistenilor. Mâine, tu și fiii tăi veți fi împreună cu mine, și DOMNUL va da tabăra lui Israel în mâinile filistenilor.”"
+    },
+    {
+      "number": 20,
+      "text": "Îndată Saul a căzut la pământ cât era de lung, și cuvintele lui Samuel l-au umplut de groază; nu mai avea nicio putere, căci nu mâncase toată ziua și toată noaptea."
+    },
+    {
+      "number": 21,
+      "text": "Femeia a venit la Saul și, văzându-l foarte înspăimântat, i-a zis: „Iată că roaba ta ți-a ascultat glasul; mi-am pus viața în primejdie, ascultând de cuvintele pe care mi le-ai spus.”"
+    },
+    {
+      "number": 22,
+      "text": "„Ascultă acum, și tu, glasul roabei tale și lasă-mă să-ți dau o bucată de pâine, ca să mănânci și să prinzi putere ca să pornești la drum.”"
+    },
+    {
+      "number": 23,
+      "text": "Dar el a refuzat și a spus: „Nu voi mânca.” Slujitorii lui și femeia au stăruit, iar el i-a ascultat. S-a ridicat de la pământ și s-a așezat pe pat."
+    },
+    {
+      "number": 24,
+      "text": "Femeia avea la ea un vițel gras, pe care l-a tăiat în grabă; a luat făină, a frământat-o și a copt azime."
+    },
+    {
+      "number": 25,
+      "text": "Le-a pus înaintea lui Saul și înaintea slujitorilor lui, și au mâncat. Apoi s-au sculat și au plecat chiar în noaptea aceea."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 23,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "5f7ed4a16df239e4f00798a8cc4cd65e8bd4a61e280145eb66bc968514eb9c31",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

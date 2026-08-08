@@ -1,0 +1,41 @@
+name: Pin OT repair 5 publication sources
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-ot-repair5
+    paths:
+      - 'scripts/pin-ot-repair5-publication-sources.py'
+      - '.github/workflows/pin-ot-repair5-publication-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-ot-repair5
+      - name: Download exact official USFM archives
+        run: |
+          set -euo pipefail
+          dir=docs/data/biblia-emanus-candidates/sources
+          mkdir -p "$dir"
+          curl --fail --location --retry 3 https://ebible.org/Scriptures/engwebp_usfm.zip --output "$dir/engwebp_usfm.zip"
+          curl --fail --location --retry 3 https://ebible.org/Scriptures/hboWLC_usfm.zip --output "$dir/hboWLC_usfm.zip"
+          curl --fail --location --retry 3 https://ebible.org/Scriptures/ronbtf_usfm.zip --output "$dir/ronbtf_usfm.zip"
+          curl --fail --location --retry 3 https://ebible.org/Scriptures/ron1924_usfm.zip --output "$dir/ron1924_usfm.zip"
+      - name: Update candidate source manifest
+        run: python3 scripts/pin-ot-repair5-publication-sources.py
+      - name: Commit pinned archives and hashes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus-candidates/manifest.json docs/data/biblia-emanus-candidates/sources
+          if ! git diff --cached --quiet; then
+            git commit -m 'fix(bible): pin exact WEBP WLC BTF and Cornilescu sources'
+            git push origin HEAD:agent/biblia-emanus-ot-repair5
+          fi

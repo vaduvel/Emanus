@@ -1,0 +1,213 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 35,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.35.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.35.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.35.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "a2f34922069b99a295e21067c22846e793de76adc4ec68493b2e116f1d8d1712",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "(Un psalm al lui David.) Apără-mă Tu, DOAMNE, de potrivnicii mei, luptă Tu cu cei ce se luptă cu mine!"
+    },
+    {
+      "number": 2,
+      "text": "Ia pavăza și scutul și scoală-Te să-mi ajuți."
+    },
+    {
+      "number": 3,
+      "text": "Învârte sulița și săgeata împotriva prigonitorilor mei! Zi sufletului meu: „Eu sunt mântuirea ta!”"
+    },
+    {
+      "number": 4,
+      "text": "Rușinați și înfruntați să fie cei ce vor să-mi ia viața! Să dea înapoi și să roșească cei ce-mi gândesc pieirea!"
+    },
+    {
+      "number": 5,
+      "text": "Să fie ca pleava luată de vânt și să-i gonească îngerul DOMNULUI!"
+    },
+    {
+      "number": 6,
+      "text": "Drumul să le fie întunecos și alunecos, și să-i urmărească îngerul DOMNULUI!"
+    },
+    {
+      "number": 7,
+      "text": "Căci mi-au întins lațul lor, fără pricină, pe o groapă pe care au săpat-o, fără temei, ca să-mi ia viața;"
+    },
+    {
+      "number": 8,
+      "text": "să-i ajungă prăpădul pe neașteptate, să fie prinși în lațul pe care l-au întins, să cadă în el și să piară!"
+    },
+    {
+      "number": 9,
+      "text": "Și atunci mi se va bucura sufletul în DOMNUL: se va înveseli de mântuirea Lui."
+    },
+    {
+      "number": 10,
+      "text": "Toate oasele mele vor zice: „DOAMNE, cine poate, ca Tine, să scape pe cel nenorocit de unul mai tare decât el, pe cel nenorocit și sărac de cel ce-l jefuiește?”"
+    },
+    {
+      "number": 11,
+      "text": "Niște martori mincinoși se ridică și mă întreabă de ceea ce nu știu."
+    },
+    {
+      "number": 12,
+      "text": "Îmi întorc rău pentru bine: mi-au lăsat sufletul pustiu."
+    },
+    {
+      "number": 13,
+      "text": "Și eu, când erau ei bolnavi, mă îmbrăcam cu sac, îmi smeream sufletul cu post și mă rugam cu capul plecat la sân."
+    },
+    {
+      "number": 14,
+      "text": "Umblam plin de durere ca pentru un prieten, pentru un frate; cu capul plecat, ca de jalea unei mame."
+    },
+    {
+      "number": 15,
+      "text": "Dar, când mă clatin eu, ei se bucură și se strâng; se strâng fără știrea mea, ca să mă batjocorească, și mă sfâșie neîncetat."
+    },
+    {
+      "number": 16,
+      "text": "Scrâșnesc din dinți împotriva mea împreună cu cei nelegiuiți, cu secăturile batjocoritoare."
+    },
+    {
+      "number": 17,
+      "text": "DOAMNE, până când Te vei uita la ei? Scapă-mi sufletul din cursele lor, scapă-mi viața din ghearele acestor pui de lei!"
+    },
+    {
+      "number": 18,
+      "text": "Și eu Te voi lăuda în adunarea cea mare și Te voi slăvi în mijlocul unui popor mare la număr."
+    },
+    {
+      "number": 19,
+      "text": "Să nu se bucure de mine cei ce pe nedrept îmi sunt vrăjmași, nici să nu-și facă semne cu ochiul cei ce mă urăsc fără temei!"
+    },
+    {
+      "number": 20,
+      "text": "Căci ei nu vorbesc de pace, ci urzesc înșelătorii împotriva oamenilor liniștiți din țară."
+    },
+    {
+      "number": 21,
+      "text": "Își deschid gura larg împotriva mea și zic: „Ha! Ha! Ochii noștri își văd acum dorința împlinită!”"
+    },
+    {
+      "number": 22,
+      "text": "DOAMNE, Tu vezi: Nu tăcea! Nu Te depărta de mine, DOAMNE!"
+    },
+    {
+      "number": 23,
+      "text": "Trezește-Te și scoală-Te să-mi faci dreptate! Dumnezeule și DOAMNE, apără-mi pricina!"
+    },
+    {
+      "number": 24,
+      "text": "Judecă-mă după dreptatea Ta, DOAMNE Dumnezeul meu, ca să nu se bucure ei de mine!"
+    },
+    {
+      "number": 25,
+      "text": "Să nu zică în inima lor: „Aha! iată ce doream!” Să nu zică: „L-am înghițit!”"
+    },
+    {
+      "number": 26,
+      "text": "Ci să fie rușinați și înfruntați toți cei ce se bucură de nenorocirea mea! Să se îmbrace cu rușine și ocară cei ce se ridică împotriva mea!"
+    },
+    {
+      "number": 27,
+      "text": "Să se bucure și să se înveselească cei ce găsesc plăcere în nevinovăția mea, și să zică neîncetat: „Mărit să fie DOMNUL, care vrea pacea robului Său!”"
+    },
+    {
+      "number": 28,
+      "text": "Și atunci limba mea va lăuda dreptatea Ta, în toate zilele va spune lauda Ta."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

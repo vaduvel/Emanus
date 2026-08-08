@@ -1,0 +1,258 @@
+{
+  "translation": "BE",
+  "bookId": "JER",
+  "bookName": "Ieremia",
+  "chapter": 2,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/JER.2.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/JER.2.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/JER.2.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "536269e90027d3d17f08102ed77cc3d9d6d625d04b9450058cbaecae602d6edf",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "repairPass": "ot-repair5-truncation-1"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Cuvântul DOMNULUI mi-a vorbit astfel:"
+    },
+    {
+      "number": 2,
+      "text": "„Du-te și strigă la urechile cetății Ierusalimului: „Așa vorbește DOMNUL: „Mi-aduc aminte încă de dragostea pe care o aveai când erai tânără, de iubirea ta, când erai logodită, când Mă urmai în pustiu, într-un pământ nesemănat.”””"
+    },
+    {
+      "number": 3,
+      "text": "„Atunci Israel era închinat DOMNULUI, era cele dintâi roade ale Lui; toți cei ce mâncau din ele se făceau vinovați, și venea nenorocirea peste ei, zice DOMNUL.”"
+    },
+    {
+      "number": 4,
+      "text": "Ascultați cuvântul DOMNULUI, casa lui Iacov, și voi, toate familiile casei lui Israel!"
+    },
+    {
+      "number": 5,
+      "text": "Așa vorbește DOMNUL: „Ce nelegiuire au găsit părinții voștri în Mine, de s-au depărtat de Mine și au mers după nimicuri, și au ajuns ei înșiși de nimic?”"
+    },
+    {
+      "number": 6,
+      "text": "Ei n-au întrebat: „Unde este DOMNUL care ne-a scos din țara Egiptului, care ne-a povățuit prin pustiu, printr-un pământ uscat și plin de gropi, printr-un pământ unde domnește seceta și umbra morții, printr-un pământ pe unde nimeni nu trece și unde nu locuiește niciun om?”"
+    },
+    {
+      "number": 7,
+      "text": "V-am adus într-o țară ca o livadă de pomi, ca să-i mâncați roadele și bunătățile; dar voi ați venit, Mi-ați spurcat țara și Mi-ați prefăcut moștenirea într-o urâciune."
+    },
+    {
+      "number": 8,
+      "text": "Preoții n-au întrebat: „Unde este DOMNUL?” Cei care mânuiau Legea nu M-au cunoscut; conducătorii s-au răzvrătit împotriva Mea, profeții au profețit prin Baal și au urmat lucruri fără folos."
+    },
+    {
+      "number": 9,
+      "text": "De aceea, Mă voi certa cu voi, zice DOMNUL, și Mă voi certa cu copiii copiilor voștri."
+    },
+    {
+      "number": 10,
+      "text": "Treceți în ostroavele Chitim și priviți! Trimiteți la Chedar, uitați-vă bine și vedeți dacă s-a întâmplat acolo așa ceva:"
+    },
+    {
+      "number": 11,
+      "text": "și-a schimbat vreodată un popor dumnezeii, măcar că ei nu sunt dumnezei? Dar poporul Meu și-a schimbat Slava cu ceva care nu este de niciun ajutor!"
+    },
+    {
+      "number": 12,
+      "text": "Mirați-vă de așa ceva, ceruri, înfiorați-vă de spaimă și groază, zice DOMNUL."
+    },
+    {
+      "number": 13,
+      "text": "Căci poporul Meu a săvârșit un îndoit păcat: M-au părăsit pe Mine, Izvorul apelor vii, și și-au săpat puțuri, puțuri crăpate care nu țin apă."
+    },
+    {
+      "number": 14,
+      "text": "Este Israel un rob cumpărat, sau fiu de rob născut în casă? Atunci pentru ce a ajuns de pradă?"
+    },
+    {
+      "number": 15,
+      "text": "Niște pui de lei mugesc și strigă împotriva lui și-i pustiesc țara; cetățile îi sunt arse și fără locuitori."
+    },
+    {
+      "number": 16,
+      "text": "Chiar și cei din Nof și Tahpanes îți vor zdrobi creștetul capului."
+    },
+    {
+      "number": 17,
+      "text": "Nu ți-ai făcut tu singur lucrul acesta pentru că ai părăsit pe DOMNUL Dumnezeul tău când te îndrepta pe calea cea bună?"
+    },
+    {
+      "number": 18,
+      "text": "Și acum, ce cauți să te duci în Egipt să bei apa Nilului? Ce cauți să te duci în Asiria să bei apa râului?"
+    },
+    {
+      "number": 19,
+      "text": "Tu singur te pedepsești cu răutatea ta și tu singur te lovești cu necredincioșia ta, și vei ști și vei vedea ce rău și amar este să părăsești pe DOMNUL Dumnezeul tău și să n-ai nicio frică de Mine, zice DOMNUL Dumnezeul oștirilor."
+    },
+    {
+      "number": 20,
+      "text": "Demult ți-ai sfărâmat jugul, ți-ai rupt legăturile și ai zis: „Nu mai vreau să slujesc ca un rob!”"
+    },
+    {
+      "number": 21,
+      "text": "Te sădisem ca o vie minunată și de cel mai bun soi: cum te-ai schimbat și te-ai prefăcut într-o coardă de viță sălbatică?"
+    },
+    {
+      "number": 22,
+      "text": "Chiar dacă te-ai spăla cu silitră, chiar dacă ai da cu multă sodă, nelegiuirea ta tot ar rămâne scrisă înaintea Mea, zice DOMNUL Dumnezeu."
+    },
+    {
+      "number": 23,
+      "text": "Cum poți să zici: „Nu m-am spurcat și nu m-am dus după Baali”"
+    },
+    {
+      "number": 24,
+      "text": "Măgăriță sălbatică deprinsă cu pustiul, care gâfâie în aprinderea patimii ei, cine o va împiedica să-și facă pofta? Toți cei ce o caută n-au nevoie să se ostenească: o găsesc în luna ei."
+    },
+    {
+      "number": 25,
+      "text": "Nu te lăsa cu picioarele goale, nu-ți usca gâtlejul de sete! Dar tu zici: „Degeaba, nu! Căci iubesc dumnezeii străini și vreau să merg după ei.”"
+    },
+    {
+      "number": 26,
+      "text": "Cum rămâne uluit un hoț când este prins, așa de uluiți vor rămâne cei din casa lui Israel, ei, împărații lor, căpeteniile lor, preoții lor și prorocii lor."
+    },
+    {
+      "number": 27,
+      "text": "Ei zic lemnului: „Tu ești tatăl meu!”, și pietrei: „Tu mi-ai dat viața!” Căci ei Îmi întorc spatele și nu se uită la Mine. Dar când sunt în nenorocire, zic: „Scoală-Te și scapă-ne!”"
+    },
+    {
+      "number": 28,
+      "text": "Unde sunt dumnezeii tăi pe care ți i-ai făcut? Să se scoale ei, dacă pot să te scape în vremea nenorocirii! Căci câte cetăți ai, atâția dumnezei ai, Iuda!"
+    },
+    {
+      "number": 29,
+      "text": "Pentru ce vă certați cu Mine? Toți Mi-ați fost necredincioși, zice DOMNUL."
+    },
+    {
+      "number": 30,
+      "text": "Degeaba v-am lovit copiii, n-au luat seama la certare; sabia voastră a mâncat pe prorocii voștri ca un leu nimicitor."
+    },
+    {
+      "number": 31,
+      "text": "O, neam rău de oameni, uitați-vă bine la cuvântul DOMNULUI care zice: „Am fost Eu un pustiu pentru Israel sau o țară plină de întuneric beznă? Pentru ce zice atunci poporul Meu: „Suntem slobozi, nu voim să ne întoarcem la Tine””"
+    },
+    {
+      "number": 32,
+      "text": "Își uită fata podoabele sau mireasa brâul? Dar poporul Meu M-a uitat de zile fără număr."
+    },
+    {
+      "number": 33,
+      "text": "Ce bine știi să-ți întocmești căile când este vorba să cauți ce iubești! Chiar și la nelegiuire te deprinzi."
+    },
+    {
+      "number": 34,
+      "text": "Până și pe poalele hainei tale se află sângele sărmanilor nevinovați pe care nu i-ai prins făcând nicio spargere."
+    },
+    {
+      "number": 35,
+      "text": "Și, cu toate acestea, tu zici: „Da, sunt nevinovat! Să se întoarcă acum mânia Lui de la mine!” Iată, Mă voi certa cu tine, pentru că zici: „N-am păcătuit!”"
+    },
+    {
+      "number": 36,
+      "text": "Pentru ce atâta grabă ca să-ți schimbi drumul? Din Egipt îți va veni rușinea, cum ți-a venit și din Asiria!"
+    },
+    {
+      "number": 37,
+      "text": "„„„„Tot de-acolo vei ieși cu mâinile pe cap; căci DOMNUL leapădă pe aceia în care te încrezi, și nu vei izbuti cu ei.””””"
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 8,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "98512188552a4221f901625a3d5a68c5912aaab173d6224832f18b0753e79390",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic"
+}

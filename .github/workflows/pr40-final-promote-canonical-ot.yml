@@ -1,0 +1,65 @@
+name: PR40 final — promote canonical OT
+
+on:
+  push:
+    branches:
+      - agent/biblia-emanus-pr40-final
+    paths:
+      - 'scripts/promote-pr40-canonical-ot.py'
+      - '.github/workflows/pr40-final-promote-canonical-ot.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pr40-final-canonical-promotion
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-emanus-pr40-final
+          fetch-depth: 1
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Install workspace
+        run: pnpm install --frozen-lockfile
+      - name: Build and validate atomic canonical publication
+        run: python3 scripts/promote-pr40-canonical-ot.py
+      - name: Verify textual and repository gates
+        run: |
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+      - name: Verify application
+        run: |
+          pnpm typecheck
+          pnpm build
+          git diff --check
+      - name: Show atomic change set
+        run: git status --short && git diff --stat
+      - name: Commit only the fully validated publication
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus
+          if git diff --cached --quiet; then
+            echo 'No canonical publication changes produced.'
+            exit 1
+          fi
+          git commit -m 'feat(bible): publish complete canonical Old Testament atomically'
+          git pull --rebase origin agent/biblia-emanus-pr40-final
+          git push origin HEAD:agent/biblia-emanus-pr40-final

@@ -1,0 +1,218 @@
+{
+  "translation": "BE",
+  "bookId": "MAT",
+  "bookName": "Matei",
+  "chapter": 3,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/MAT03.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-MAT"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Matt.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-MAT",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-MAT",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 17,
+      "reviewed": 17,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:c042dea00d1219ffd4f3d4c5e31de8198e284a568f4ffabe690d27f0a0a57ed2"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:bbf8ac75c7a5afcb644eeadc0a0042561c56dc8829bcdb53e73109234e40af14",
+    "contentDigest": "sha256:cbb25a5322f38048f962ed1fc7f265019116863fc4df4f7978d331356922e3f4"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Pe vremea aceea, Ioan Botezătorul a venit, propovăduind în pustia Iudeei, și a zis:"
+    },
+    {
+      "number": 2,
+      "text": "și spunând: Pocăiți-vă, căci Împărăția cerurilor s-a apropiat!"
+    },
+    {
+      "number": 3,
+      "text": "El este cel despre care s-a vorbit prin profetul Isaia, care spune: Glasul celui ce strigă în pustie: Pregătiți calea Domnului, faceți-I cărările drepte!"
+    },
+    {
+      "number": 4,
+      "text": "Ioan purta o haină din păr de cămilă și un brâu de piele în jurul mijlocului, iar hrana lui era alcătuită din lăcuste și miere sălbatică."
+    },
+    {
+      "number": 5,
+      "text": "Atunci oameni din Ierusalim, toată Iudeea, și toată regiunea din jurul Iordanului au ieșit la el."
+    },
+    {
+      "number": 6,
+      "text": "Erau botezați de el în râul Iordan, mărturisindu-și păcatele."
+    },
+    {
+      "number": 7,
+      "text": "Dar, când i-a văzut pe mulți dintre farisei și saduchei venind la botezul lui, le-a spus: Pui de vipere, cine v-a arătat cum să fugiți de mânia care vine?"
+    },
+    {
+      "number": 8,
+      "text": "De aceea, produce rod demn de pocăință!"
+    },
+    {
+      "number": 9,
+      "text": "și să nu vă gândiți să spuneți în voi înșivă: Îl avem ca tată pe Avraam! Căci vă spun că Dumnezeu poate să-i ridice lui Avraam copii chiar și din pietrele acestea."
+    },
+    {
+      "number": 10,
+      "text": "Securea este deja așezată la rădăcina pomilor; de aceea, orice pom care nu face rod bun este tăiat și aruncat în foc."
+    },
+    {
+      "number": 11,
+      "text": "Eu vă botez în apă pentru pocăință, dar Cel care vine după mine este mai puternic decât mine, iar eu nu sunt vrednic să-I duc sandalele. El vă va boteza în Duhul Sfânt și în foc."
+    },
+    {
+      "number": 12,
+      "text": "Furculița lui este în mâna lui și își va curăți cu desăvârșire aria; își va aduna grâul în hambar, dar pleava va arde cu foc de nestins."
+    },
+    {
+      "number": 13,
+      "text": "Atunci Isus a venit din Galileea la Iordan, la Ioan, ca să fie botezat de el."
+    },
+    {
+      "number": 14,
+      "text": "Dar Ioan încerca să-L oprească, spunând: Eu am nevoie să fiu botezat de Tine, și Tu vii la mine?"
+    },
+    {
+      "number": 15,
+      "text": "Isus i-a răspuns: Lasă acum, căci așa se cuvine să împlinim tot ce este drept. Atunci Ioan L-a lăsat."
+    },
+    {
+      "number": 16,
+      "text": "După ce a fost botezat, Isus a ieșit îndată din apă. Și iată că cerurile s-au deschis, iar El a văzut Duhul lui Dumnezeu coborând ca un porumbel și venind peste El."
+    },
+    {
+      "number": 17,
+      "text": "Și iată că un glas din ceruri a spus: Acesta este Fiul Meu preaiubit, în care Îmi găsesc plăcerea."
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

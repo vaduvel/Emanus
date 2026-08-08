@@ -1,0 +1,165 @@
+{
+  "translation": "BE",
+  "bookId": "ECC",
+  "bookName": "Ecleziastul",
+  "chapter": 4,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ECC.4.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ECC.4.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ECC.4.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "abd706f09086b45494d771cde912433fb34ba73dc4becdeeba292360ca066d77",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "M-am uitat apoi la toate asupririle care se fac sub soare; și iată că cei apăsați varsă lacrimi, și nu este nimeni să-i mângâie! Ei sunt pradă silniciei asupritorilor lor, și n-are cine să-i mângâie!"
+    },
+    {
+      "number": 2,
+      "text": "Și am găsit că morții, care au murit mai înainte, sunt mai fericiți decât cei vii, care sunt încă în viață."
+    },
+    {
+      "number": 3,
+      "text": "Dar mai fericit decât amândoi am găsit pe cel ce nu s-a născut încă, fiindcă n-a văzut toate relele care se petrec sub soare."
+    },
+    {
+      "number": 4,
+      "text": "Am mai văzut că orice muncă și orice iscusință la lucru își are temeiul numai în pizma unuia asupra altuia. Și aceasta este o deșertăciune și goană după vânt."
+    },
+    {
+      "number": 5,
+      "text": "Nebunul își încrucișează mâinile și își mănâncă însăși carnea lui."
+    },
+    {
+      "number": 6,
+      "text": "Mai bine o mână plină de odihnă decât amândoi pumnii plini de trudă și goană după vânt."
+    },
+    {
+      "number": 7,
+      "text": "Am mai văzut o altă deșertăciune sub soare:"
+    },
+    {
+      "number": 8,
+      "text": "un om este singur singurel, n-are nici fiu, nici frate, și totuși munca lui n-are sfârșit, ochii nu i se satură niciodată de bogății și nu se gândește: „Pentru cine muncesc eu și-mi lipsesc sufletul de plăceri?”"
+    },
+    {
+      "number": 9,
+      "text": "Mai bine doi decât unul, căci iau o plată cu atât mai bună pentru munca lor."
+    },
+    {
+      "number": 10,
+      "text": "Căci, dacă se întâmplă să cadă, se ridică unul pe altul; dar vai de cine este singur și cade fără să aibă pe altul care să-l ridice."
+    },
+    {
+      "number": 11,
+      "text": "Tot așa, dacă se culcă doi împreună, se încălzesc unul pe altul, dar cum are să se încălzească dacă e singur?"
+    },
+    {
+      "number": 12,
+      "text": "Și dacă se scoală cineva asupra unuia, doi pot să-i stea împotrivă; și funia împletită în trei nu se rupe ușor."
+    },
+    {
+      "number": 13,
+      "text": "Mai bine un copil sărac și înțelept decât un împărat bătrân și fără minte, care nu înțelege că trebuie să se lase îndrumat;"
+    },
+    {
+      "number": 14,
+      "text": "căci el poate să iasă din temniță ca să domnească, măcar că poate chiar să se fi născut sărac în împărăția celui din urmă."
+    },
+    {
+      "number": 15,
+      "text": "Am văzut pe toți cei vii, care umblă sub soare, înconjurând pe copilul care avea să urmeze după împărat și să domnească în locul lui."
+    },
+    {
+      "number": 16,
+      "text": "Fără sfârșit era tot poporul în fruntea căruia mergea el. Și totuși cei ce vor veni după el nu se vor bucura de el. Căci și aceasta este o deșertăciune și goană după vânt."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

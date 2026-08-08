@@ -1,0 +1,66 @@
+name: Cancel superseded PR runs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+  pull-requests: read
+
+jobs:
+  cancel-superseded:
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - name: Cancel obsolete PR43 runs through the REST API
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CURRENT_HEAD: ${{ github.sha }}
+          CURRENT_BRANCH: agent/biblia-emanus-pr40-final
+        run: |
+          @'
+          import json, os, time, urllib.error, urllib.request
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          token = os.environ['GH_TOKEN']
+          current_head = os.environ['CURRENT_HEAD']
+          current_branch = os.environ['CURRENT_BRANCH']
+          active = {'queued', 'in_progress', 'waiting', 'pending', 'requested'}
+          headers = {
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github+json',
+              'User-Agent': 'emanus-pr40-cleanup',
+          }
+          request = urllib.request.Request(
+              f'https://api.github.com/repos/{repo}/actions/runs?event=pull_request&per_page=100',
+              headers=headers,
+          )
+          with urllib.request.urlopen(request) as response:
+              runs = json.load(response)['workflow_runs']
+          obsolete = [
+              run for run in runs
+              if run.get('head_branch') == current_branch
+              and run.get('head_sha') != current_head
+              and run.get('status') in active
+          ]
+          print(f'Obsolete active runs: {len(obsolete)}')
+          for run in obsolete:
+              url = f"https://api.github.com/repos/{repo}/actions/runs/{run['id']}/cancel"
+              for attempt in range(1, 7):
+                  try:
+                      req = urllib.request.Request(url, data=b'', method='POST', headers=headers)
+                      with urllib.request.urlopen(req) as response:
+                          response.read()
+                      print(f"Cancelled {run['name']} #{run['run_number']} ({run['id']})")
+                      break
+                  except urllib.error.HTTPError as error:
+                      if error.code in {409, 422}:
+                          break
+                      if error.code in {502, 503, 504} and attempt < 6:
+                          time.sleep(min(30, 2 ** attempt))
+                          continue
+                      print(f"Could not cancel run {run['id']}: HTTP {error.code}")
+                      break
+          '@ | python -

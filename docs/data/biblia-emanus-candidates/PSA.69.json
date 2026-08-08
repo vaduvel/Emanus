@@ -1,0 +1,263 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 69,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false,
+    "publicDomainFallbackSegments": [
+      {
+        "reference": "PSA.69:1",
+        "source": "ronbtf_usfm.zip",
+        "sourceSha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+        "reason": "PR40 superscription replaced the actual first verse; restored from pinned public-domain Romanian benchmark",
+        "exactPublicDomainTextUsed": true
+      }
+    ]
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/PSA.69.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.69.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/PSA.69.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "d39cbc31b530f4720904141a685db75231b628d0c67bcc02a48e0a7d2d220d53",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    },
+    "psalmSuperscriptionPolicy": "separate-chapter-field"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Salvează-mă, Dumnezeule, căci apele mi-au intrat până la suflet."
+    },
+    {
+      "number": 2,
+      "text": "Mă afund în noroi și nu mă pot ține; am căzut în prăpastie, și dau apele peste mine."
+    },
+    {
+      "number": 3,
+      "text": "Nu mai pot strigând, mi se usucă gâtlejul, mi se topesc ochii privind spre Dumnezeul meu."
+    },
+    {
+      "number": 4,
+      "text": "Cei ce mă urăsc fără temei sunt mai mulți decât perii capului meu; ce puternici sunt cei ce vor să mă piardă, cei ce pe nedrept îmi sunt vrăjmași; trebuie să dau înapoi ce n-am furat."
+    },
+    {
+      "number": 5,
+      "text": "Dumnezeule, Tu cunoști nebunia mea, și greșelile mele nu-Ți sunt ascunse."
+    },
+    {
+      "number": 6,
+      "text": "Să nu rămână de rușine, din pricina mea, cei ce nădăjduiesc în Tine, DOAMNE Dumnezeul oștirilor! Să nu roșească de rușine, din pricina mea, cei ce Te caută, Dumnezeul lui Israel!"
+    },
+    {
+      "number": 7,
+      "text": "Căci pentru Tine port eu ocara, și îmi acoperă fața rușinea."
+    },
+    {
+      "number": 8,
+      "text": "Am ajuns un străin pentru frații mei și un necunoscut pentru fiii mamei mele."
+    },
+    {
+      "number": 9,
+      "text": "Căci râvna Casei Tale mă mănâncă, și ocările celor ce Te ocărăsc pe Tine cad asupra mea."
+    },
+    {
+      "number": 10,
+      "text": "Plâng și postesc, și ei mă ocărăsc."
+    },
+    {
+      "number": 11,
+      "text": "Mă îmbrac cu sac, și ei mă batjocoresc."
+    },
+    {
+      "number": 12,
+      "text": "Cei ce stau la poartă vorbesc de mine, și cei ce beau băuturi tari mă pun în cântece."
+    },
+    {
+      "number": 13,
+      "text": "Dar eu către Tine îmi înalț rugăciunea, DOAMNE, la vremea potrivită. În bunătatea Ta cea mare, răspunde-mi, Dumnezeule, și dă-mi ajutorul Tău!"
+    },
+    {
+      "number": 14,
+      "text": "Scoate-mă din noroi, ca să nu mă mai afund! Să fiu izbăvit de vrăjmașii mei și din prăpastie!"
+    },
+    {
+      "number": 15,
+      "text": "Să nu mai dea valurile peste mine, să nu mă înghită adâncul și să nu se închidă groapa peste mine!"
+    },
+    {
+      "number": 16,
+      "text": "Ascultă-mă, DOAMNE, căci bunătatea Ta este nemărginită. În îndurarea Ta cea mare, întoarce-Ți privirile spre mine"
+    },
+    {
+      "number": 17,
+      "text": "și nu-Ți ascunde fața de robul Tău! Căci sunt în necaz: grăbește de m-ascultă!"
+    },
+    {
+      "number": 18,
+      "text": "Apropie-Te de sufletul meu și izbăvește-l! Scapă-mă, din pricina vrăjmașilor mei!"
+    },
+    {
+      "number": 19,
+      "text": "Tu știi ce ocară, ce rușine și batjocură mi se face; toți potrivnicii mei sunt înaintea Ta."
+    },
+    {
+      "number": 20,
+      "text": "Ocara îmi rupe inima, și sunt bolnav; aștept să-i fie cuiva milă de mine, dar degeaba; aștept mângâietori, și nu găsesc niciunul."
+    },
+    {
+      "number": 21,
+      "text": "Ei îmi pun fiere în mâncare, și, când mi-e sete, îmi dau să beau oțet."
+    },
+    {
+      "number": 22,
+      "text": "Să li se prefacă masa într-o cursă, și liniștea într-un laț!"
+    },
+    {
+      "number": 23,
+      "text": "Să li se întunece ochii, și să nu mai vadă, și clatină-le mereu coapsele!"
+    },
+    {
+      "number": 24,
+      "text": "Varsă-Ți mânia peste ei, și să-i atingă urgia Ta aprinsă!"
+    },
+    {
+      "number": 25,
+      "text": "Pustie să le rămână locuința, și nimeni să nu mai locuiască în corturile lor!"
+    },
+    {
+      "number": 26,
+      "text": "Căci ei prigonesc pe cel lovit de Tine, povestesc suferințele celor răniți de Tine."
+    },
+    {
+      "number": 27,
+      "text": "Adaugă alte nelegiuiri la nelegiuirile lor, și să n-aibă parte de îndurarea Ta!"
+    },
+    {
+      "number": 28,
+      "text": "Să fie șterși din Cartea Vieții, și să nu fie scriși împreună cu cei neprihăniți!"
+    },
+    {
+      "number": 29,
+      "text": "Eu sunt nenorocit și sufăr: Dumnezeule, ajutorul Tău să mă ridice!"
+    },
+    {
+      "number": 30,
+      "text": "Atunci voi lăuda Numele lui Dumnezeu prin cântări, și prin laude Îl voi preamări."
+    },
+    {
+      "number": 31,
+      "text": "Lucrul acesta este mai plăcut DOMNULUI decât un vițel cu coarne și copite!"
+    },
+    {
+      "number": 32,
+      "text": "Nenorociții văd lucrul acesta, și se bucură; voi, care căutați pe Dumnezeu, veselă să vă fie inima!"
+    },
+    {
+      "number": 33,
+      "text": "Căci DOMNUL ascultă pe cei săraci și nu nesocotește pe prinșii Lui de război."
+    },
+    {
+      "number": 34,
+      "text": "Să-L laude cerurile și pământul, mările și tot ce mișună în ele!"
+    },
+    {
+      "number": 35,
+      "text": "Căci Dumnezeu va mântui Sionul și va zidi cetățile lui Iuda; ele vor fi locuite și luate în stăpânire;"
+    },
+    {
+      "number": 36,
+      "text": "sămânța robilor Lui le va moșteni, și cei ce iubesc Numele Lui vor locui în ele."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "psalm-superscription-repair",
+      "decision": "Superscrierea a fost mutată în câmpul chapter.superscription, iar versetul 1 real a fost restaurat din BTF public-domain fixată prin hash.",
+      "resolutionStatus": "resolved"
+    }
+  ],
+  "category": "Vechiul Testament Protocanonic",
+  "superscription": "(Către mai marele cântăreților. De cântat ca și „Crinii”)"
+}

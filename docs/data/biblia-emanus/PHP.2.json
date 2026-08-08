@@ -1,0 +1,284 @@
+{
+  "translation": "BE",
+  "bookId": "PHP",
+  "bookName": "Filipeni",
+  "chapter": 2,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/PHP02.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-PHP"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Phil.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-PHP",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-PHP",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "romanianNaturalness": "approved",
+      "additions": "approved",
+      "omissions": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 30,
+      "reviewed": 30,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:a8da6dc1099b8b38805d26f04c1e8a49b9d3870506f9586535105a3c3be64fdb"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 162,
+        "primary": 138,
+        "secondary": 35,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4993764885473809,
+      "minimumScore": 0.5987788757926972
+    },
+    "textDigest": "sha256:5e2a33f85ce91ecaa2b2185329fb8c4de9c813caaf0f2d69de4b3e315b27ffdb",
+    "contentDigest": "sha256:7087791d12c8cfd5604d493c8eb20198284118ef2ffde5df183da32f73d754db"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Dacă deci este vreo încurajare în Hristos, dacă este vreo mângâiere a dragostei, dacă este vreo părtășie a Duhului, dacă este vreo afecțiune adâncă și vreo îndurare,"
+    },
+    {
+      "number": 2,
+      "text": "faceți-mi bucuria deplină: să gândiți același lucru, având aceeași dragoste, uniți în suflet, gândind una,"
+    },
+    {
+      "number": 3,
+      "text": "nefăcând nimic din ambiție egoistă sau din slavă deșartă, ci, în smerenie, considerându-i pe alții mai presus de voi înșivă,"
+    },
+    {
+      "number": 4,
+      "text": "Fiecare dintre voi să privească nu numai la lucrurile lui, ci la lucrurile altora."
+    },
+    {
+      "number": 5,
+      "text": "Să fie în voi gândul acesta care a fost și în Hristos Isus,"
+    },
+    {
+      "number": 6,
+      "text": "El, fiind în forma lui Dumnezeu, nu a considerat că a fi egal cu Dumnezeu este ceva de care să profite,"
+    },
+    {
+      "number": 7,
+      "text": "ci S-a golit pe Sine, luând formă de rob, făcându-Se în asemănarea oamenilor. Și, fiind găsit la înfățișare ca un om,"
+    },
+    {
+      "number": 8,
+      "text": "Și fiind găsit în formă umană, el s-a umilit, devenind ascultător până la moarte, da, moartea crucii."
+    },
+    {
+      "number": 9,
+      "text": "De aceea și Dumnezeu l-a înălțat mai presus de toate și i-a dăruit numele care este mai presus de orice nume,"
+    },
+    {
+      "number": 10,
+      "text": "pentru ca, în numele lui Isus, orice genunchi să se plece, al celor cerești, al celor pământești și al celor de sub pământ,"
+    },
+    {
+      "number": 11,
+      "text": "și orice limbă să mărturisească că Isus Hristos este Domnul, spre slava lui Dumnezeu Tatăl."
+    },
+    {
+      "number": 12,
+      "text": "Astfel, preaiubiții mei, după cum ați ascultat întotdeauna, nu doar când eram eu de față, ci acum cu mult mai mult în absența mea, duceți până la capăt propria voastră mântuire, cu frică și cutremur,"
+    },
+    {
+      "number": 13,
+      "text": "căci Dumnezeu este Cel care lucrează în voi și voința, și înfăptuirea, după buna lui plăcere."
+    },
+    {
+      "number": 14,
+      "text": "Faceți toate lucrurile fără murmurări și fără dispute,"
+    },
+    {
+      "number": 15,
+      "text": "ca să deveniți fără vină și curați, copii ai lui Dumnezeu fără cusur, în mijlocul unei generații strâmbe și sucite, printre care străluciți ca niște luminători în lume,"
+    },
+    {
+      "number": 16,
+      "text": "ținând sus cuvântul vieții, spre lauda mea în ziua lui Hristos, că n-am alergat în zadar și n-am muncit în zadar."
+    },
+    {
+      "number": 17,
+      "text": "Da, și dacă voi fi turnat pe jertfa și serviciul credinței voastre, mă bucur și mă voi bucura împreună cu voi toți."
+    },
+    {
+      "number": 18,
+      "text": "La fel, și voi să vă bucurați și să vă bucurați împreună cu mine."
+    },
+    {
+      "number": 19,
+      "text": "Sper însă în Domnul Isus să vi-l trimit curând pe Timotei, ca să fiu și eu încurajat când voi afla cele despre voi."
+    },
+    {
+      "number": 20,
+      "text": "Căci n-am pe nimeni atât de apropiat în simțire, care să se îngrijească în mod sincer de cele despre voi,"
+    },
+    {
+      "number": 21,
+      "text": "fiindcă toți își caută ale lor, nu pe ale lui Isus Hristos."
+    },
+    {
+      "number": 22,
+      "text": "Dar îi cunoașteți caracterul încercat, căci, ca un fiu alături de tatăl său, a slujit împreună cu mine pentru înaintarea Evangheliei."
+    },
+    {
+      "number": 23,
+      "text": "Prin urmare, sper să-l trimit imediat, de îndată ce voi vedea cum va merge cu mine."
+    },
+    {
+      "number": 24,
+      "text": "și am încredere în Domnul că voi veni și eu curând."
+    },
+    {
+      "number": 25,
+      "text": "Am socotit însă necesar să vi-l trimit pe Epafrodit, fratele meu, împreună-lucrătorul meu și tovarășul meu de luptă, dar trimisul vostru și slujitorul nevoii mele,"
+    },
+    {
+      "number": 26,
+      "text": "fiindcă el tânjea după voi toți și era neliniștit pentru că ați auzit că s-a îmbolnăvit."
+    },
+    {
+      "number": 27,
+      "text": "Căci, într-adevăr, s-a îmbolnăvit aproape de moarte, dar Dumnezeu a avut milă de el, și nu doar de el, ci și de mine, ca să nu am întristare peste întristare."
+    },
+    {
+      "number": 28,
+      "text": "De aceea l-am trimis cu și mai mare grabă, ca, văzându-l din nou, să vă bucurați, iar eu să fiu mai puțin întristat."
+    },
+    {
+      "number": 29,
+      "text": "Așadar, primiți-l în Domnul cu toată bucuria și țineți-i în cinste pe astfel de oameni,"
+    },
+    {
+      "number": 30,
+      "text": "fiindcă, pentru lucrarea lui Hristos, s-a apropiat până la moarte, riscându-și viața, ca să împlinească lipsa slujirii voastre față de mine."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "ἁρπαγμός",
+      "decision": "ceva de care să profite",
+      "alternatives": [
+        "ceva de apucat",
+        "un avantaj de exploatat"
+      ],
+      "reason": "Substantivul poate exprima nu doar posesia smulsă, ci și un avantaj folosit în interes propriu; contextul imnului cere o redare care să nu importe automat o formulă doctrinară ulterioară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea păstrează contrastul cu autogolirea din versetul 7 și evită atât sensul tradițional de «tâlhărie», cât și o explicație doctrinară introdusă în text."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

@@ -1,0 +1,262 @@
+name: PR40 repair remaining 3 works
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/biblia-emanus/PR40-REPAIR-REMAINING-3.trigger'
+      - '.github/workflows/pr40-repair-remaining-3.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+env:
+  PRIOR_RUN_ID: '31110524525'
+  HF_HOME: ${{ github.workspace }}/.cache/huggingface
+  TOKENIZERS_PARALLELISM: 'false'
+
+jobs:
+  didascalia:
+    name: Repair and audit Didascalia
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/huggingface
+          key: pr40-repair-didascalia-v3-${{ runner.os }}
+      - name: Install pinned CPU translation and audit runtime
+        run: |
+          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
+          python -m pip install --disable-pip-version-check 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3' 'requests>=2,<3'
+      - name: Restore the verified Didascalia checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: pr40-early-DID
+          path: checkpoint
+          repository: vaduvel/Emanus
+          run-id: ${{ env.PRIOR_RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Restore checkpoint into the working tree
+        run: |
+          cp -R checkpoint/data/. docs/data/
+          cp -R checkpoint/biblia-emanus/. docs/biblia-emanus/
+      - name: Segment, retranslate, repair and audit all 43 chapters
+        env:
+          PR40_BOOKS: DID
+        run: python3 scripts/run-with-pinned-hf.py scripts/finalize-pr40-didascalia-checkpoint.py --batch-size 20
+      - name: Verify the final Didascalia verdict
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          files = sorted(Path('docs/data/biblia-emanus-early-audited').glob('DID.*.json'))
+          assert len(files) == 43, len(files)
+          for path in files:
+              doc = json.loads(path.read_text(encoding='utf-8'))
+              assert doc['status'] == 'published', path
+              assert doc['public'] is True, path
+              assert doc['runtimeEnabled'] is True, path
+              assert doc['audit']['blockingIssueCount'] == 0, path
+          print('Didascalia: 43/43 chapters published with zero blockers')
+          PY
+      - name: Upload final Didascalia evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-early-DID-final
+          path: |
+            docs/data/biblia-emanus-early-source-candidates
+            docs/data/biblia-emanus-early-romanian-candidates
+            docs/data/biblia-emanus-early-audited
+            docs/biblia-emanus/PR40-EARLY-WORKS-EXTRACTION.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-EARLY-WORKS-SEMANTIC-AUDIT.json
+          if-no-files-found: error
+          retention-days: 14
+
+  qumran:
+    name: Repair and audit ${{ matrix.id }}
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - id: TEMP_SCR
+            witnesses: 11Q19
+            checkpoint: pr40-qumran-TEMP_SCR
+          - id: ADD_PSA
+            witnesses: 11Q5,4Q381
+            checkpoint: pr40-qumran-ADD_PSA
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/huggingface
+          key: pr40-repair-qumran-v3-${{ runner.os }}
+      - name: Install pinned CPU translation and audit runtime
+        run: |
+          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu 'torch>=2.5,<3'
+          python -m pip install --disable-pip-version-check 'transformers>=4.45,<5' 'sentencepiece>=0.2,<1' 'huggingface-hub>=0.26,<1' 'sentence-transformers>=3,<4' 'numpy>=2,<3' 'requests>=2,<3'
+      - name: Restore verified Qumran source checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ matrix.checkpoint }}
+          path: checkpoint
+          repository: vaduvel/Emanus
+          run-id: ${{ env.PRIOR_RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Restore checkpoint into the working tree
+        run: |
+          cp -R checkpoint/data/. docs/data/
+          cp -R checkpoint/biblia-emanus/. docs/biblia-emanus/
+      - name: Translate only the selected witnesses
+        env:
+          PR40_WITNESSES: ${{ matrix.witnesses }}
+        run: python3 scripts/run-with-pinned-hf.py scripts/translate-pr40-qumran-shard.py --batch-size 20
+      - name: Repair degenerate lines and withhold unsafe fragments
+        env:
+          PR40_WITNESSES: ${{ matrix.witnesses }}
+        run: python3 scripts/run-with-pinned-hf.py scripts/refine-pr40-qumran-candidates.py --batch-size 20
+      - name: Audit source fidelity and fragment semantics
+        env:
+          PR40_WITNESSES: ${{ matrix.witnesses }}
+        run: python3 scripts/run-with-pinned-hf.py scripts/audit-pr40-qumran-shard-v2.py
+      - name: Verify the final Qumran verdict
+        env:
+          EXPECTED_WITNESSES: ${{ matrix.witnesses }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          expected = {item for item in os.environ['EXPECTED_WITNESSES'].split(',') if item}
+          paths = sorted(Path('docs/data/biblia-emanus-qumran-audited').glob('*.json'))
+          found = {path.stem for path in paths}
+          assert found == expected, (found, expected)
+          for path in paths:
+              doc = json.loads(path.read_text(encoding='utf-8'))
+              assert doc['status'] == 'published-research', path
+              assert doc['public'] is True, path
+              assert doc['runtimeEnabled'] is True, path
+              assert doc['audit']['blockingIssueCount'] == 0, path
+          print(f'Qumran {sorted(expected)}: published research edition with zero blockers')
+          PY
+      - name: Upload final Qumran evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-qumran-${{ matrix.id }}-final
+          path: |
+            docs/data/biblia-emanus-qumran-source
+            docs/data/biblia-emanus-qumran-romanian-candidates
+            docs/data/biblia-emanus-qumran-audited
+            docs/biblia-emanus/PR40-QUMRAN-SOURCE-CORPUS.json
+            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-DRAFT.json
+            docs/biblia-emanus/PR40-QUMRAN-ROMANIAN-AUDIT.json
+          if-no-files-found: error
+          retention-days: 14
+
+  publish-64:
+    name: Assemble and validate all 64 PR40 works
+    needs: [didascalia, qumran]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - name: Download all previously verified artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pr40-*
+          path: staging/prior
+          merge-multiple: false
+          repository: vaduvel/Emanus
+          run-id: ${{ env.PRIOR_RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download the three repaired artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pr40-*-final
+          path: staging/current
+          merge-multiple: false
+      - name: Assemble the exact 64-work publication tree
+        run: python3 scripts/assemble-pr40-final-publication.py --prior staging/prior --current staging/current
+      - name: Verify the atomic verdict before application checks
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json').read_text(encoding='utf-8'))
+          assert report['status'] == 'published'
+          assert report['counts']['works'] == 64
+          assert report['blockingIssues'] == 0
+          print('Atomic PR40 verdict: 64 works, zero blockers')
+          PY
+      - name: Verify application integrity
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          pnpm check:biblia-emanus
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+          pnpm typecheck
+          pnpm build
+          git diff --check
+      - name: Commit the verified 64-work corpus to the repair branch
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/data/biblia-emanus \
+            docs/data/biblia-emanus-deuterocanon-audited \
+            docs/data/biblia-emanus-early-audited \
+            docs/data/biblia-emanus-qumran-audited \
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          if git diff --cached --quiet; then
+            echo 'The 64-work corpus already matches the verified artifacts.'
+            exit 0
+          fi
+          git commit -m 'Repair and publish all 64 PR40 works'
+          git push origin "HEAD:${HEAD_BRANCH}"
+      - name: Upload the complete 64-work publication
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-all-64-repaired-publication
+          path: |
+            docs/data/biblia-emanus
+            docs/data/biblia-emanus-deuterocanon-audited
+            docs/data/biblia-emanus-early-audited
+            docs/data/biblia-emanus-qumran-audited
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          if-no-files-found: error
+          retention-days: 14

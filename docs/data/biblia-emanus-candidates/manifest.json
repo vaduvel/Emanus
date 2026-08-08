@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 2,
+  "sourcePr": 40,
+  "baseBranch": "main",
+  "runtimeEnabled": false,
+  "publicationAllowed": false,
+  "scope": {
+    "canonicalOldTestamentRemaining": [
+      "1CH",
+      "1KI",
+      "1SA",
+      "2CH",
+      "2KI",
+      "2SA",
+      "AMO",
+      "DAN",
+      "ECC",
+      "EST",
+      "EZK",
+      "EZR",
+      "HAB",
+      "HAG",
+      "HOS",
+      "ISA",
+      "JDG",
+      "JER",
+      "JOB",
+      "JOL",
+      "JON",
+      "LAM",
+      "MAL",
+      "MIC",
+      "NAM",
+      "NEH",
+      "OBA",
+      "PRO",
+      "PSA",
+      "RUT",
+      "SNG",
+      "ZEC",
+      "ZEP"
+    ],
+    "historicalSupplements": [
+      "MAN",
+      "PS2"
+    ],
+    "excludedFabricatedBooks": [
+      "1ES",
+      "1MA",
+      "2MA",
+      "3MA",
+      "BAR",
+      "ESG",
+      "JDT",
+      "SIR",
+      "TOB",
+      "WIS"
+    ]
+  },
+  "sources": {
+    "english": {
+      "id": "engwebp",
+      "name": "World English Bible, Protestant Edition",
+      "license": "Public Domain",
+      "snapshot": "sources/engwebp_usfm.zip",
+      "sha256": "2287d3d5b23e7badf09d81cb3a02528f8b6bd94977b1cbfb8038008b2df1f67b",
+      "role": "public-domain bridge and target versification"
+    },
+    "hebrew": {
+      "id": "hboWLC",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain text",
+      "snapshot": "sources/hboWLC_usfm.zip",
+      "sha256": "da7b33af7a23e0e9fce8a8adf3cb5bcb035a513f44b83865b390c52dc3dd2ce3",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBtf": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "comparison-only benchmark"
+    },
+    "romanianCornilescu1924": {
+      "id": "ron1924",
+      "name": "Biblia Dumitru Cornilescu 1924",
+      "license": "Public Domain",
+      "snapshot": "sources/ron1924_usfm.zip",
+      "sha256": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
+      "role": "comparison-only benchmark"
+    },
+    "deuterocanonBridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "supplement research only; not used to publish the 66-book canon"
+    }
+  },
+  "books": [
+    {
+      "bookId": "1CH",
+      "bookName": "1 Cronici",
+      "group": "canonical",
+      "chapters": 29,
+      "verses": 942,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "1KI",
+      "bookName": "1 Împărați",
+      "group": "canonical",
+      "chapters": 22,
+      "verses": 816,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "1SA",
+      "bookName": "1 Samuel",
+      "group": "canonical",
+      "chapters": 31,
+      "verses": 810,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "2CH",
+      "bookName": "2 Cronici",
+      "group": "canonical",
+      "chapters": 36,
+      "verses": 822,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "2KI",
+      "bookName": "2 Împărați",
+      "group": "canonical",
+      "chapters": 25,
+      "verses": 719,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "2SA",
+      "bookName": "2 Samuel",
+      "group": "canonical",
+      "chapters": 24,
+      "verses": 695,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "AMO",
+      "bookName": "Amos",
+      "group": "canonical",
+      "chapters": 9,
+      "verses": 146,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "DAN",
+      "bookName": "Daniel",
+      "group": "canonical",
+      "chapters": 12,
+      "verses": 357,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "ECC",
+      "bookName": "Ecleziastul",
+      "group": "canonical",
+      "chapters": 12,
+      "verses": 222,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "EST",
+      "bookName": "Estera",
+      "group": "canonical",
+      "chapters": 10,
+      "verses": 167,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "EZK",
+      "bookName": "Ezechiel",
+      "group": "canonical",
+      "chapters": 48,
+      "verses": 1273,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "EZR",
+      "bookName": "Ezra",
+      "group": "canonical",
+      "chapters": 10,
+      "verses": 280,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "HAB",
+      "bookName": "Habacuc",
+      "group": "canonical",
+      "chapters": 3,
+      "verses": 56,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "HAG",
+      "bookName": "Hagai",
+      "group": "canonical",
+      "chapters": 2,
+      "verses": 38,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "HOS",
+      "bookName": "Osea",
+      "group": "canonical",
+      "chapters": 14,
+      "verses": 197,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "ISA",
+      "bookName": "Isaia",
+      "group": "canonical",
+      "chapters": 66,
+      "verses": 1292,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "JDG",
+      "bookName": "Judecători",
+      "group": "canonical",
+      "chapters": 21,
+      "verses": 618,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "JER",
+      "bookName": "Ieremia",
+      "group": "canonical",
+      "chapters": 52,
+      "verses": 1364,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "JOB",
+      "bookName": "Iov",
+      "group": "canonical",
+      "chapters": 42,
+      "verses": 1070,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "JOL",
+      "bookName": "Ioel",
+      "group": "canonical",
+      "chapters": 3,
+      "verses": 73,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "JON",
+      "bookName": "Iona",
+      "group": "canonical",
+      "chapters": 4,
+      "verses": 48,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "LAM",
+      "bookName": "Plângerile lui Ieremia",
+      "group": "canonical",
+      "chapters": 5,
+      "verses": 154,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "MAL",
+      "bookName": "Maleahi",
+      "group": "canonical",
+      "chapters": 4,
+      "verses": 55,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "MAN",
+      "bookName": "Rugăciunea lui Manase",
+      "group": "supplement",
+      "chapters": 1,
+      "verses": 15,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "MIC",
+      "bookName": "Mica",
+      "group": "canonical",
+      "chapters": 7,
+      "verses": 105,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "NAM",
+      "bookName": "Naum",
+      "group": "canonical",
+      "chapters": 3,
+      "verses": 47,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "NEH",
+      "bookName": "Neemia",
+      "group": "canonical",
+      "chapters": 13,
+      "verses": 406,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "OBA",
+      "bookName": "Obadia",
+      "group": "canonical",
+      "chapters": 1,
+      "verses": 21,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "PRO",
+      "bookName": "Proverbele",
+      "group": "canonical",
+      "chapters": 31,
+      "verses": 915,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "PS2",
+      "bookName": "Psalmul 151",
+      "group": "supplement",
+      "chapters": 1,
+      "verses": 7,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "PSA",
+      "bookName": "Psalmii",
+      "group": "canonical",
+      "chapters": 150,
+      "verses": 2461,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "RUT",
+      "bookName": "Rut",
+      "group": "canonical",
+      "chapters": 4,
+      "verses": 85,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "SNG",
+      "bookName": "Cântarea Cântărilor",
+      "group": "canonical",
+      "chapters": 8,
+      "verses": 117,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "ZEC",
+      "bookName": "Zaharia",
+      "group": "canonical",
+      "chapters": 14,
+      "verses": 211,
+      "status": "in_review",
+      "public": false
+    },
+    {
+      "bookId": "ZEP",
+      "bookName": "Țefania",
+      "group": "canonical",
+      "chapters": 3,
+      "verses": 53,
+      "status": "in_review",
+      "public": false
+    }
+  ],
+  "progress": {
+    "canonicalChapters": 718,
+    "supplementChapters": 2,
+    "verses": 16657
+  }
+}

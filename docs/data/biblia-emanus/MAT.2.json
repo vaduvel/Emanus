@@ -1,0 +1,242 @@
+{
+  "translation": "BE",
+  "bookId": "MAT",
+  "bookName": "Matei",
+  "chapter": 2,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/MAT02.htm",
+      "license": "Public Domain",
+      "lockId": "WEBP-MAT"
+    },
+    "greek": {
+      "version": "SBLGNT-1.2",
+      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Matt.txt",
+      "license": "CC BY 4.0",
+      "lockId": "SBLGNT-MAT",
+      "supplementalWitnesses": [
+        {
+          "lockId": "TR-MAT",
+          "language": "greacă",
+          "role": "textual-witness"
+        }
+      ]
+    }
+  },
+  "review": {
+    "aiTheologicalContext": "approved",
+    "copyrightDistance": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "criticalIssues": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiSourceLanguage": "approved"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved",
+      "meaning": "approved",
+      "additions": "approved"
+    },
+    "observations": [
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-05",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "biblia-emanus-nt-repair-4.0",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 23,
+      "reviewed": 23,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:b259b32138b834fae596411df595d7409a7245b85b71b758e2a46ee0dad93737"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Au fost confruntate toate cele 23 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
+        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "modelEvidence": {
+      "selected": {
+        "existing": 741,
+        "primary": 228,
+        "secondary": 102,
+        "fixed": 0
+      },
+      "minimumSemantic": 0.4037089233135842,
+      "minimumScore": 0.5165308313030281
+    },
+    "textDigest": "sha256:a741584c80294cbbeaff3133626bcf1e8e0d6552f44dd44f53d1b0274f724dd4",
+    "contentDigest": "sha256:17bb893fe5ee4c393b7d5b2369bc31447fe387f4172f880725cc6ea9c8c83b12"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "După ce S-a născut Isus în Betleemul Iudeei, în zilele regelui Irod, iată că niște magi de la răsărit au venit la Ierusalim"
+    },
+    {
+      "number": 2,
+      "text": "și au întrebat: „Unde este regele iudeilor care S-a născut? Căci am văzut steaua Lui la răsărit și am venit să ne închinăm înaintea Lui.”"
+    },
+    {
+      "number": 3,
+      "text": "Când a auzit, regele Irod s-a tulburat și, împreună cu el, tot Ierusalimul."
+    },
+    {
+      "number": 4,
+      "text": "I-a adunat pe toți conducătorii preoților și pe cărturarii poporului și i-a întrebat unde urma să Se nască Hristosul."
+    },
+    {
+      "number": 5,
+      "text": "Ei i-au răspuns: „În Betleemul Iudeei, căci așa este scris prin profet:"
+    },
+    {
+      "number": 6,
+      "text": "«Și tu, Betleeme, ținut al lui Iuda, nicidecum nu ești cel mai neînsemnat dintre conducătorii lui Iuda, căci din tine va ieși un Conducător care va păstori poporul Meu, Israel.»”"
+    },
+    {
+      "number": 7,
+      "text": "Atunci Irod i-a chemat pe ascuns pe magi și a aflat precis de la ei timpul când se arătase steaua."
+    },
+    {
+      "number": 8,
+      "text": "Apoi i-a trimis la Betleem, spunându-le: „Mergeți și cercetați cu atenție unde este Copilul; iar când Îl veți găsi, dați-mi de știre, ca să vin și eu să mă închin înaintea Lui.”"
+    },
+    {
+      "number": 9,
+      "text": "După ce l-au ascultat pe rege, ei au plecat. Și iată că steaua pe care o văzuseră la răsărit mergea înaintea lor, până când a ajuns și s-a oprit deasupra locului unde era Copilul."
+    },
+    {
+      "number": 10,
+      "text": "Când au văzut steaua, s-au bucurat nespus, cu o bucurie foarte mare."
+    },
+    {
+      "number": 11,
+      "text": "Au intrat în casă și au văzut Copilul împreună cu Maria, mama Lui. Au căzut la pământ și s-au închinat înaintea Lui; apoi și-au deschis cuferele și I-au adus daruri: aur, tămâie și smirnă."
+    },
+    {
+      "number": 12,
+      "text": "Fiind avertizați într-un vis de a nu se mai întoarce la Irod, ei s-au întors în țara lor într-un alt mod."
+    },
+    {
+      "number": 13,
+      "text": "După plecarea lor, iată că un înger al Domnului i s-a arătat în vis lui Iosif și i-a spus: „Ridică-te, ia Copilul și pe mama Lui, fugi în Egipt și rămâi acolo până îți voi spune eu, căci Irod urmează să caute Copilul ca să-L omoare.”"
+    },
+    {
+      "number": 14,
+      "text": "S-a sculat, a luat pe copil și pe mama lui noaptea, și a plecat în Egipt."
+    },
+    {
+      "number": 15,
+      "text": "A rămas acolo până la moartea lui Irod, ca să se împlinească ce spusese Domnul prin profet: „Din Egipt L-am chemat pe Fiul Meu.”"
+    },
+    {
+      "number": 16,
+      "text": "Atunci Irod, văzând că fusese înșelat de magi, s-a înfuriat foarte tare. A trimis să fie omorâți toți băieții de doi ani și mai mici din Betleem și din toate împrejurimile lui, potrivit timpului pe care îl aflase precis de la magi."
+    },
+    {
+      "number": 17,
+      "text": "Atunci s-a împlinit ce fusese spus prin profetul Ieremia:"
+    },
+    {
+      "number": 18,
+      "text": "„Un glas s-a auzit în Rama, plâns și bocet mult: Rahela își plânge copiii și nu vrea să fie mângâiată, pentru că nu mai sunt.”"
+    },
+    {
+      "number": 19,
+      "text": "După moartea lui Irod, iată că un înger al Domnului i s-a arătat în vis lui Iosif, în Egipt,"
+    },
+    {
+      "number": 20,
+      "text": "și i-a spus: „Ridică-te, ia Copilul și pe mama Lui și mergi în țara lui Israel, căci au murit cei care căutau să ia viața Copilului.”"
+    },
+    {
+      "number": 21,
+      "text": "Iosif s-a ridicat, a luat Copilul și pe mama Lui și a intrat în țara lui Israel."
+    },
+    {
+      "number": 22,
+      "text": "Dar, auzind că Arhelau domnea în Iudeea în locul tatălui său, Irod, s-a temut să meargă acolo. Fiind înștiințat în vis, s-a retras în părțile Galileei"
+    },
+    {
+      "number": 23,
+      "text": "și a venit să locuiască într-o cetate numită Nazaret, ca să se împlinească ce fusese spus prin profeți: „Va fi numit Nazarinean.”"
+    }
+  ],
+  "editorialNotes": [],
+  "referenceNotes": [],
+  "alternateEndings": []
+}

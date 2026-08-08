@@ -1,0 +1,91 @@
+name: Aduce observatiile din studiul lui Nolan
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/nolan-*.py"
+      - "scripts/review-geneza-*.py"
+      - "scripts/curata-sursa.py"
+      - "scripts/dedup-paragrafe.py"
+      - "scripts/dedup-fraze.py"
+      - ".github/workflows/nolan.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aplica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Curata urmele sursei din textul biblic
+        run: python3 scripts/curata-sursa.py
+
+      - name: Aplica observatiile pentru Geneza 1 si blurbul cartii
+        run: python3 scripts/nolan-geneza-1.py
+
+      - name: Aplica observatiile pentru Geneza 2 si 3
+        run: python3 scripts/nolan-geneza-2-3.py
+
+      - name: Aplica observatiile pentru Geneza 3 si 4
+        run: python3 scripts/nolan-geneza-3-4.py
+
+      - name: Aplica observatiile pentru Geneza 3
+        run: python3 scripts/nolan-geneza-3.py
+
+      - name: Aplica observatiile pentru Geneza 5 si 6
+        run: python3 scripts/nolan-geneza-5-6.py
+
+      - name: Aplica observatiile pentru Geneza 6
+        run: python3 scripts/nolan-geneza-6.py
+
+      - name: Aplica observatiile despre nefilimi si duhuri
+        run: python3 scripts/nolan-geneza-6-duhuri.py
+
+      - name: Aplica observatiile pentru Geneza 9
+        run: python3 scripts/nolan-geneza-9.py
+
+      - name: Aplica observatiile pentru Geneza 10
+        run: python3 scripts/nolan-geneza-10.py
+
+      - name: Aplica observatiile pentru Geneza 11
+        run: python3 scripts/nolan-geneza-11.py
+
+      - name: Aplica observatiile pentru Geneza 12
+        run: python3 scripts/nolan-geneza-12.py
+
+      - name: Aplica observatiile pentru Geneza 17
+        run: python3 scripts/nolan-geneza-17.py
+
+      - name: Aplica observatiile pentru Geneza 48
+        run: python3 scripts/nolan-geneza-48.py
+
+      - name: Aplica observatiile pentru Geneza 3 si 11
+        run: python3 scripts/nolan-geneza-3-11.py
+
+      - name: Aplica transcrierile 2, 9, 15 si 20
+        run: python3 scripts/nolan-geneza-2-9-15-20.py
+
+      - name: Aplica primul val de revizie AI pentru Geneza 1-11
+        run: python3 scripts/review-geneza-1-11-v2.py
+
+      - name: Curata paragrafele repetate
+        run: python3 scripts/dedup-paragrafe.py
+
+      - name: Curata frazele repetate
+        run: python3 scripts/dedup-fraze.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "fix(biblia): aplica revizia si curata repetitiile"
+            git push
+          else
+            echo "Nimic de schimbat."
+          fi

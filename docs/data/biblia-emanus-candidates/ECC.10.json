@@ -1,0 +1,181 @@
+{
+  "translation": "BE",
+  "bookId": "ECC",
+  "bookName": "Ecleziastul",
+  "chapter": 10,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/ECC.10.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/ECC.10.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/ECC.10.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "799cfb87f7912b761046428f17847404a347f604e0c2016f27b468b8bdd01b66",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Muștele moarte strică și acresc untdelemnul negustorului de unsori; tot așa puțină nebunie biruie înțelepciunea și slava."
+    },
+    {
+      "number": 2,
+      "text": "Inima înțeleptului este la dreapta lui, iar inima nebunului la stânga lui."
+    },
+    {
+      "number": 3,
+      "text": "Și pe orice drum ar merge nebunul, peste tot îi lipsește mintea și spune tuturor că este un nebun!"
+    },
+    {
+      "number": 4,
+      "text": "Când izbucnește împotriva ta mânia celui ce stăpânește, nu-ți părăsi locul, căci sângele rece te păzește de mari păcate."
+    },
+    {
+      "number": 5,
+      "text": "Este un rău pe care l-am văzut sub soare, ca o greșeală care vine de la cel ce cârmuiește;"
+    },
+    {
+      "number": 6,
+      "text": "nebunia este pusă în dregătorii înalte, iar bogații stau în locuri de jos."
+    },
+    {
+      "number": 7,
+      "text": "Am văzut robi călare, și voievozi mergând pe jos ca niște robi."
+    },
+    {
+      "number": 8,
+      "text": "Cine sapă groapa altuia cade el în ea, și cine surpă un zid va fi mușcat de un șarpe."
+    },
+    {
+      "number": 9,
+      "text": "Cine sfărâmă pietre este rănit de ele, și cine despică lemne este în primejdie."
+    },
+    {
+      "number": 10,
+      "text": "Când se tocește fierul și rămâne neascuțit, trebuie să-ți îndoiești puterile; de aceea la izbândă ajungi prin înțelepciune."
+    },
+    {
+      "number": 11,
+      "text": "Când mușcă șarpele, fiindcă n-a fost vrăjit, vrăjitorul n-are niciun câștig din meșteșugul lui."
+    },
+    {
+      "number": 12,
+      "text": "Cuvintele unui înțelept sunt plăcute, dar buzele nebunului îi aduc pieirea."
+    },
+    {
+      "number": 13,
+      "text": "Cel dintâi cuvânt care-i iese din gură este nebunie, și cel din urmă este o nebunie și mai rea."
+    },
+    {
+      "number": 14,
+      "text": "Nebunul spune o mulțime de vorbe, măcar că omul nu știe ce se va întâmpla; și cine-i va spune ce va fi după el?"
+    },
+    {
+      "number": 15,
+      "text": "Truda nebunului obosește pe cel ce nu cunoaște drumul spre cetate."
+    },
+    {
+      "number": 16,
+      "text": "Vai de tine, țară al cărei împărat este un copil și ai cărei voievozi benchetuiesc de dimineață!"
+    },
+    {
+      "number": 17,
+      "text": "Ferice de tine, țară al cărei împărat este de neam mare și ai cărei voievozi mănâncă la vremea potrivită ca să-și întărească puterile, nu ca să se dedea la beție!"
+    },
+    {
+      "number": 18,
+      "text": "Când mâinile sunt leneșe, se lasă grinda, și, când se lenevesc mâinile, plouă în casă."
+    },
+    {
+      "number": 19,
+      "text": "Ospețele se fac pentru petrecere, vinul înveselește viața, iar argintul le dă pe toate."
+    },
+    {
+      "number": 20,
+      "text": "Nu blestema pe împărat, nici chiar în gând, și nu blestema pe cel bogat în odaia în care te culci; căci s-ar putea întâmpla ca pasărea cerului să-ți ducă vorba, și un sol înaripat să-ți dea pe față vorbele."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}

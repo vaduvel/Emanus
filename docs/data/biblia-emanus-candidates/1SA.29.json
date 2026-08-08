@@ -1,0 +1,145 @@
+{
+  "translation": "BE",
+  "bookId": "1SA",
+  "bookName": "1 Samuel",
+  "chapter": 29,
+  "status": "in_review",
+  "public": false,
+  "source": {
+    "policy": "independent-verification-of-inherited-romanian-candidate",
+    "bridge": {
+      "id": "eng-webbe",
+      "name": "World English Bible British Edition with Deuterocanon",
+      "license": "Public Domain",
+      "snapshot": "sources/eng-webbe_usfm.zip",
+      "sha256": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "role": "public-domain bridge and versification control"
+    },
+    "originalAuthority": {
+      "id": "hebwlc",
+      "name": "Westminster Leningrad Codex",
+      "license": "Public Domain",
+      "snapshot": "sources/hebwlc_usfm.zip",
+      "sha256": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "role": "Hebrew authority for canonical Old Testament"
+    },
+    "romanianBenchmark": {
+      "id": "ronbtf",
+      "name": "Biblia Traducerea Fidelă",
+      "license": "Public Domain",
+      "snapshot": "sources/ronbtf_usfm.zip",
+      "sha256": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
+      "role": "Romanian comparison-only benchmark"
+    },
+    "exactTextCopied": false
+  },
+  "review": {
+    "sourceCoverage": "pending",
+    "romanianLanguage": "pending",
+    "semanticAlignment": "pending",
+    "theologicalContext": "pending",
+    "versification": "pending",
+    "copyrightDistance": "pending",
+    "criticalIssues": "pending"
+  },
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "VDC-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/191/1SA.29.VDC"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/1SA.29.NTR"
+      },
+      {
+        "id": "BTF2015",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/903/1SA.29.BTF2015"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Etaloanele au fost folosite numai pentru triangularea sensului și a naturaleții în limba română.",
+      "Formulările au fost verificate independent în textul ebraic WLC-OSHB și în baza public-domain WEBU.",
+      "Nu a fost stocat textul integral al niciunui etalon românesc protejat."
+    ]
+  },
+  "audit": {
+    "engineVersion": "5.0.0",
+    "reviewLevel": "source-backed-candidate",
+    "reviewAgent": {
+      "type": "automated-adversarial-audit",
+      "engine": "biblia-emanus-ot-repair5",
+      "method": "WEBBE/WLC/BTF pinned-source comparison; no inherited approval retained"
+    },
+    "textDigest": "30a3bb6dd4b78bf2566b1dada34a04071e69c5d315f0831f073768bb481fde53",
+    "sourceSnapshots": {
+      "webbe": "f8aea05b8de61854de885e452d2bdc311e83988524801dc04ae5140205d42257",
+      "wlc": "a177507e7e85fd72fc36eb5de8c6a32648c5ec41a9363be63213501f5487432c",
+      "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Filistenii își strânseseră toate oștile la Afec, și Israel tăbărâse la fântâna lui Izreel."
+    },
+    {
+      "number": 2,
+      "text": "Domnii filistenilor au înaintat cu sutele și miile lor; și David și oamenii lui mergeau mai la coadă cu Achiș."
+    },
+    {
+      "number": 3,
+      "text": "Domnii filistenilor au zis: „Ce caută evreii aceștia aici?” Și Achiș a răspuns domnitorilor filistenilor: „Acesta este David, slujitorul lui Saul, împăratul lui Israel. De mult este cu mine și n-am găsit nici cel mai mic lucru de care să-l învinuiesc, de la venirea lui și până în ziua de azi.”"
+    },
+    {
+      "number": 4,
+      "text": "Dar domnitorii filistenilor s-au mâniat pe Achiș și i-au zis: „Trimite înapoi pe omul acesta, ca să se întoarcă în locul unde l-ai așezat; să nu se coboare cu noi pe câmpul de bătaie, ca să nu ne fie vrăjmaș în timpul luptei. Și cum ar putea să se facă omul acesta plăcut stăpânului său, decât cu capetele oamenilor noștri?”"
+    },
+    {
+      "number": 5,
+      "text": "„Nu este acesta David pentru care cântau jucând: „Saul și-a bătut miile lui, iar David zecile lui de mii”?”"
+    },
+    {
+      "number": 6,
+      "text": "Achiș a chemat pe David și i-a zis: „Viu este DOMNUL, că ești un om curat la suflet și-mi place să te văd mergând și venind cu mine în tabără, căci n-am găsit nimic rău în tine, de la venirea ta la mine până în ziua de azi; dar nu ești pe placul domnitorilor.”"
+    },
+    {
+      "number": 7,
+      "text": "„Întoarce-te, dar, și mergi în pace, ca să nu faci nimic neplăcut înaintea domnitorilor filistenilor.”"
+    },
+    {
+      "number": 8,
+      "text": "David a zis lui Achiș: „Dar ce am făcut și ce ai găsit în robul tău, de când sunt la tine până în ziua de azi, ca să nu merg să lupt împotriva vrăjmașilor domnului meu, împăratul?”"
+    },
+    {
+      "number": 9,
+      "text": "Achiș a răspuns lui David: „Știu că ești plăcut înaintea mea ca un înger al lui Dumnezeu; dar domnitorii filistenilor au zis: „Să nu se suie cu noi la luptă.””"
+    },
+    {
+      "number": 10,
+      "text": "„Astfel, scoală-te dis-de-dimineață, tu și slujitorii stăpânului tău care au venit cu tine; sculați-vă dis-de-dimineață și plecați de îndată ce se va lumina.”"
+    },
+    {
+      "number": 11,
+      "text": "David și oamenii lui s-au sculat de noapte de tot, ca să plece dimineața și să se întoarcă în țara filistenilor. Și filistenii s-au suit la Izreel."
+    }
+  ],
+  "editorialNotes": [],
+  "category": "Vechiul Testament Protocanonic"
+}
