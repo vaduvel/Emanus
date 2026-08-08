@@ -77,13 +77,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-php-1",
+      "runId": "emanus-nt-editorial-2026-08-08-php-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -128,8 +128,8 @@
       "result": "approved",
       "open": 0
     },
-    "textDigest": "sha256:b6f202328235ef32c6b0df9e627aa66612bba6c712f0f58f1945b95220fd4b11",
-    "contentDigest": "sha256:bcec4920674d34fa77737523f1818540002c871df5966906f3e7bd512d27ceff"
+    "textDigest": "sha256:3e44c1e6585dd32e6aaba4d3d7381a033ded8755057688987d218a649c546760",
+    "contentDigest": "sha256:67bc6965156a0cc613cbffdfaa734b60413689ba4332846c512c348eba9a71ea"
   },
   "verses": [
     {
@@ -182,7 +182,7 @@
     },
     {
       "number": 13,
-      "text": "astfel încât a devenit cunoscut întregului pretoriu și tuturor celorlalți că lanțurile mele sunt legate de Hristos,"
+      "text": "astfel încât, în întregul pretoriu și pentru toți ceilalți, a devenit cunoscut că lanțurile mele sunt pentru Hristos,"
     },
     {
       "number": 14,
@@ -313,6 +313,18 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "τοὺς δεσμούς μου φανεροὺς ἐν Χριστῷ γενέσθαι",
+      "decision": "„a devenit cunoscut că lanțurile mele sunt pentru Hristos”",
+      "alternatives": [
+        "„lanțurile mele sunt legate de Hristos”"
+      ],
+      "reason": "ἐν Χριστῷ marchează cadrul legăturii cu Hristos; formularea românească evită afirmația nenaturală că lanțurile ar fi legate literal de El.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP și aparatul au fost confruntate direct; TR-PHP rămâne martor suplimentar."
     },
     {
       "verse": 14,

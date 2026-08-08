@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08` (reverificare editorială)
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-php-1`)
+`emanus-nt-editorial-2026-08-08-php-1`)
 
 ## Domeniu și surse
 
@@ -63,3 +63,6 @@ avea schimbări greșite de persoană în 1:24 și 1:30 și mai multe formulări
 românești defecte ori calchiate. Toate cele 30 de versete au fost confruntate
 direct cu sursele fixate și revizuite; capitolul rămâne `in_review` și
 `public: false` până la registrul final de aprobare pentru întregul NT.
+
+Reverificarea din 2026-08-08 a corectat 1:13: `ἐν Χριστῷ` este redat „pentru
+Hristos”, nu ca și cum lanțurile ar fi legate literal de Hristos.
