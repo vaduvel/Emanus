@@ -100,7 +100,7 @@ export const familieRespingeL1: Lesson = {
       type: "world_vs_truth",
       order: 4,
       bubbles: [
-        { from: "guide", text: "Lumea spune: «tă-le legătura, nu îți mai bate capul». Simplu de zis și imposibil de făcut. Sunt ai tăi." },
+        { from: "guide", text: "Lumea spune: «taie-le legătura, nu îți mai bate capul». Simplu de zis și imposibil de făcut. Sunt ai tăi." },
         { from: "guide", text: "Iar din biserică vine, uneori: «dacă ai fi o mărturie mai bună, s-ar fi întors deja». Adică este vina ta că ei nu cred." },
         { from: "guide", text: "Este o cruzime spusă pios. Nimeni nu poate face pe altcineva să creadă — nici tu, nici cel mai bun predicator din lume." }
       ]
@@ -134,7 +134,7 @@ export const familieRespingeL1: Lesson = {
         ref: "Ioan 7:5"
       },
       bubbles: [
-        { from: "guide", text: "Un singur rând și închide o discuție întreagă. Dacă ai Tăi nu te cred, nu ești într-o companie proastă." }
+        { from: "guide", text: "Un singur rând și închide o discuție întreagă. Dacă ai tăi nu te cred, nu ești într-o companie proastă." }
       ]
     },
     {
@@ -183,7 +183,7 @@ export const familieRespingeL1: Lesson = {
           { text: "Că se poate întâmpla și celui nevinovat; nici frații Lui nu credeau în El", correct: true },
           { text: "Că Dumnezeu S-a depărtat de familia ta și nu mai are ce face", correct: false }
         ],
-        explanation: "Ioan 7:5 spune limpede că nici frații Lui nu credeau în El, iar Matei 10:36 spusese dinainte că despicătura poate trece chiar prin casă. Necredința alrom lor nu măsoară credincioșia ta și nu înseamnă că Dumnezeu a renunțat la ei."
+        explanation: "Ioan 7:5 spune limpede că nici frații Lui nu credeau în El, iar Matei 10:36 spusese dinainte că despicătura poate trece chiar prin casă. Necredința lor nu măsoară credincioșia ta și nu înseamnă că Dumnezeu a renunțat la ei."
       }
     },
     {
@@ -361,7 +361,7 @@ export const familieRespingeL2: Lesson = {
       order: 12,
       bubbles: [
         { from: "guide", text: "Două alegeri, scrise, nu gândite." },
-        { from: "guide", text: "Care dintre cele șase lucruri practice îl iei pentru luna asta? Și unde ai greșit tu, dacă ai greșit — cu mândrie, cu vorbe tari, cu dispreț?" },
+        { from: "guide", text: "Care două dintre cele șase lucruri practice le iei pentru luna asta? Și unde ai greșit tu, dacă ai greșit — cu mândrie, cu vorbe tari, cu dispreț?" },
         { from: "guide", text: "Partea ta o poți repara astăzi. Partea lor nu este a ta." }
       ]
     },
