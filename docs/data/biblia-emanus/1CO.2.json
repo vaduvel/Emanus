@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+          "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+          "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+          "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+          "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+          "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+          "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,19 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul local; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-1co-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,7 +102,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+                    "scope": "Toate cele 16 versete din 1CO.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,29 +127,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:d550b655357ceaeb5a65b00f33b2a4ce726a3393838ed34618352aa1eb7cd4c2",
-    "contentDigest": "sha256:6e745320a7c38b9090b12c8129c7d4af06b69221f8879744f5a92daa06c0c0f4"
+    "textDigest": "sha256:4e0b4ac99a78a03e982fb598b61c873a91ef1e20cbae112873681b94886dfb87",
+    "contentDigest": "sha256:4a0d432e8cda1fdf25ef3dbb76036f0122370a382db7deb89e2f0ed4f9dd7b78"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Cât despre mine, fraților, când am venit la voi, n-am venit vestindu-vă mărturia lui Dumnezeu cu superioritate de vorbire sau de înțelepciune."
+      "text": "Și eu, fraților, când am venit la voi, n-am venit vestindu-vă mărturia lui Dumnezeu cu superioritate de vorbire sau de înțelepciune."
     },
     {
       "number": 2,
@@ -157,7 +151,7 @@
     },
     {
       "number": 4,
-      "text": "iar cuvântul meu și predicarea mea n-au stat în cuvinte convingătoare de înțelepciune, ci în demonstrația Duhului și a puterii,"
+      "text": "iar cuvântul meu și propovăduirea mea n-au stat în cuvinte convingătoare ale înțelepciunii, ci în demonstrația Duhului și a puterii,"
     },
     {
       "number": 5,
@@ -165,27 +159,27 @@
     },
     {
       "number": 6,
-      "text": "Cu toate acestea, noi vorbim despre înțelepciune printre cei care au crescut pe deplin, dar nu despre această lume și nici despre conducătorii acestei lumi care nu ajung la nimic."
+      "text": "Noi însă vorbim despre înțelepciune printre cei desăvârșiți, dar nu despre înțelepciunea veacului acestuia și nici despre a conducătorilor veacului acestuia, care pier."
     },
     {
       "number": 7,
-      "text": "ci vorbim înțelepciunea lui Dumnezeu, tainică, ascunsă, pe care Dumnezeu a hotărât-o mai dinainte, înainte de veacuri, spre gloria noastră,"
+      "text": "ci vorbim în taină înțelepciunea lui Dumnezeu, cea ascunsă, pe care Dumnezeu a rânduit-o mai dinainte de veacuri, spre slava noastră,"
     },
     {
       "number": 8,
-      "text": "pe care niciunul dintre conducătorii veacului acestuia n-a cunoscut-o; căci, dacă ar fi cunoscut-o, nu L-ar fi răstignit pe Domnul gloriei."
+      "text": "pe care niciunul dintre conducătorii veacului acestuia n-a cunoscut-o; căci, dacă ar fi cunoscut-o, nu L-ar fi răstignit pe Domnul slavei."
     },
     {
       "number": 9,
-      "text": "Ci, după cum este scris: „Lucruri pe care ochiul nu le-a văzut, urechea nu le-a auzit și la inima omului nu s-au suit, lucrurile pe care Dumnezeu le-a pregătit pentru cei ce-L iubesc.”"
+      "text": "Ci, după cum este scris: „Cele pe care ochiul nu le-a văzut, urechea nu le-a auzit și la inima omului nu s-au suit, cele pe care Dumnezeu le-a pregătit pentru cei ce-L iubesc.”"
     },
     {
       "number": 10,
-      "text": "Nouă însă Dumnezeu ni le-a descoperit prin Duhul, fiindcă Duhul cercetează toate, chiar și adâncurile lui Dumnezeu."
+      "text": "Nouă însă Dumnezeu ni le-a descoperit prin Duhul, căci Duhul cercetează toate, chiar și adâncurile lui Dumnezeu."
     },
     {
       "number": 11,
-      "text": "Căci cine dintre oameni cunoaște lucrurile omului, în afară de duhul omului care este în el? Tot așa, nimeni n-a cunoscut lucrurile lui Dumnezeu, în afară de Duhul lui Dumnezeu."
+      "text": "Căci cine dintre oameni cunoaște lucrurile omului, în afară de duhul omului care este în el? Tot așa, nimeni nu a cunoscut lucrurile lui Dumnezeu, în afară de Duhul lui Dumnezeu."
     },
     {
       "number": 12,
@@ -193,11 +187,11 @@
     },
     {
       "number": 13,
-      "text": "De asemenea, noi vorbim aceste lucruri, nu în cuvinte pe care omul le învață înțelepciunea, ci pe care Duhul Sfânt le învață, comparând lucrurile spirituale cu lucrurile spirituale."
+      "text": "Și vorbim aceste lucruri nu în cuvinte învățate de la înțelepciunea omenească, ci învățate de la Duhul, explicând lucruri spirituale prin cuvinte spirituale."
     },
     {
       "number": 14,
-      "text": "Omul firesc nu primește lucrurile Duhului lui Dumnezeu, căci pentru el sunt nebunie; și nu le poate cunoaște, fiindcă ele se judecă spiritual."
+      "text": "Omul firesc nu primește lucrurile Duhului lui Dumnezeu, căci pentru el sunt nebunie și nu le poate cunoaște, fiindcă sunt judecate duhovnicește."
     },
     {
       "number": 15,
@@ -208,7 +202,48 @@
       "text": "Căci „cine a cunoscut mintea Domnului, ca să-L învețe?” Dar noi avem mintea lui Hristos."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "μαρτύριον",
+      "decision": "mărturia lui Dumnezeu",
+      "reason": "SBLGNT/Treg/RP au μαρτύριον; lectura μυστήριον din WH/NA28 nu este urmată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează μαρτύριον.",
+      "alternatives": ["taina lui Dumnezeu"]
+    },
+    {
+      "verse": 4,
+      "term": "πειθοῖς ... λόγοις",
+      "decision": "cuvinte convingătoare ale înțelepciunii",
+      "reason": "SBLGNT păstrează pluralul și complementul; formularea redă contrastul cu demonstrația Duhului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost păstrată lectura extinsă a textului principal.",
+      "alternatives": ["convingere a înțelepciunii"]
+    },
+    {
+      "verse": 10,
+      "term": "ἀπεκάλυψεν ὁ θεός",
+      "decision": "Dumnezeu ni le-a descoperit",
+      "reason": "Ordinea SBLGNT este păstrată; pronumele Duhului nu primește adaosul RP αὐτοῦ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nu s-a adăugat un pronume absent din SBLGNT.",
+      "alternatives": ["Duhul Său"]
+    },
+    {
+      "verse": 13,
+      "term": "πνεύματος",
+      "decision": "Duhul",
+      "reason": "SBLGNT nu are adaosul ἁγίου („Sfânt”) din RP; redarea nu îl introduce în text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura scurtă SBLGNT este urmată.",
+      "alternatives": ["Duhul Sfânt"]
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
