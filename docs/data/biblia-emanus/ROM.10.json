@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-rom-10",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -98,22 +97,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 21 de versete din ROM.10 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate formulările calchiate și completările tradiționale absente din textul principal SBLGNT.",
+        "ROM.10.15 păstrează formula SBLGNT fără adaosul tradițional despre pace.",
+        "ROM.10.17 redă «cuvântul lui Hristos», nu lectura tradițională «al lui Dumnezeu»."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +122,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:1939243fa93bc395f3bfee8f337386b6966f9623be0824110a83cd7bb69c3e05",
-    "contentDigest": "sha256:1b29b3fe6d26c8e40686bb0fef20367e38298937bf92f130cb54e763a783af34"
+    "textDigest": "sha256:3a3094c1a913a7a2a742538370791a482b4925ac5f00bc6e32d18ae98681e599",
+    "contentDigest": "sha256:77bdcd29d142878212fffcb24878e7017da15934ba34aba08d9e9ce99062247d"
   },
   "verses": [
     {
@@ -157,7 +146,7 @@
     },
     {
       "number": 4,
-      "text": "Căci Hristos este țelul Legii, spre dreptate pentru oricine crede."
+      "text": "Căci Hristos este scopul Legii, spre dreptate pentru oricine crede."
     },
     {
       "number": 5,
@@ -201,7 +190,7 @@
     },
     {
       "number": 15,
-      "text": "Și cum vor predica dacă nu vor fi trimiși? După cum este scris: Cât de frumoase sunt picioarele celor care predică Vestea Bună a păcii, care aduc vești bune!"
+      "text": "Și cum vor proclama dacă nu vor fi trimiși? După cum este scris: „Cât de frumoase sunt picioarele celor care aduc vești bune!”"
     },
     {
       "number": 16,
@@ -209,7 +198,7 @@
     },
     {
       "number": 17,
-      "text": "Credința vine prin auzire, iar auzirea prin Cuvântul lui Dumnezeu."
+      "text": "Așadar, credința vine prin auzire, iar auzirea prin cuvântul lui Hristos."
     },
     {
       "number": 18,
