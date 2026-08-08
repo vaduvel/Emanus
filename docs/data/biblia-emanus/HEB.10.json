@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,52 +71,48 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 39 de versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-review-2026-08-08-heb-10",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 39,
       "reviewed": 39,
       "continuous": true,
-      "verseNumbersSha256": "sha256:a3eb175a1b9398528e576a4eb7eef33a8bde7efa5459c21122016ba76803a3f6"
+      "verseNumbersSha256": "sha256:51cfd743344690c92aa5e7219210935ea6c82cdff92c102418f412b135fa63aa"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 39 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 39 de versete au fost confruntate direct cu SBLGNT/aparat; TR numai martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate calcurile, dezacordurile și frazele corupte din textul existent.",
+        "Citatele și unitățile sintactice din 10:5-10, 10:15-17 și 10:37-38 au fost delimitate în română după structura greacă.",
+        "Formulările din 10:20, 10:25, 10:29 și 10:34 au fost refăcute pentru sens și referenți corecți."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT la variantele materiale și nu importă automat adaosurile TR/RP.",
+        "La 10:34 este păstrată lectura SBLGNT „cei întemnițați” și nu lectura TR/RP „lanțurile mele”; nu este adăugat „în ceruri”, absent din textul principal.",
+        "La 10:38 este păstrat pronumele μου din SBLGNT, redat „dreptul Meu”."
       ]
     },
     "omissionAddition": {
@@ -123,192 +122,257 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:6cf0583917c7e645f9891a2df9617bdba83bebdb93371c67588fae251a47c85f",
-    "contentDigest": "sha256:f4639dd3d52294acadbe3a987b08fc6a7a51b874caf57017cfac205e5cdb1ac2"
+    "textDigest": "sha256:d34f713225ed41ddec0ece20fdd2af1961995b56572c48723008ec1febc34edf",
+    "contentDigest": "sha256:7d12470e7125003a2527276c5da8d9114a97a195b216bf818de91ec3f2282ee4"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Căci Legea, având o umbră a binelui care va veni, nu chiar imaginea lucrurilor, nu poate niciodată cu aceleași sacrificii an de an, pe care le oferă continuu, să-i facă perfecți pe cei care se apropie."
+      "text": "Căci Legea, având umbra bunurilor viitoare, nu însăși imaginea lucrurilor, nu-i poate desăvârși niciodată pe cei care se apropie, prin aceleași jertfe pe care le aduc neîncetat, an de an."
     },
     {
       "number": 2,
-      "text": "Altfel n-ar fi încetat să li se mai ofere, pentru că închinătorii, odată curățiți, nu ar mai fi avut conștiința păcatelor?"
+      "text": "Altfel, n-ar fi încetat oare să mai fie aduse, deoarece cei care se închină, odată curățiți, n-ar mai fi avut conștiința păcatelor?"
     },
     {
       "number": 3,
-      "text": "Dar în aceste sacrificii există o reamintire anuală a păcatelor."
+      "text": "Dar prin aceste jertfe se face, an de an, o aducere-aminte a păcatelor,"
     },
     {
       "number": 4,
-      "text": "Căci este imposibil ca sângele taurilor și al caprelor să ia păcatele."
+      "text": "căci este imposibil ca sângele taurilor și al țapilor să înlăture păcatele."
     },
     {
       "number": 5,
-      "text": "De aceea, când vine în lume, el spune: Tu n-ai voit jertfă jertfă, ci Mi-ai pregătit un trup."
+      "text": "De aceea, când intră în lume, El spune: „Jertfă și dar n-ai voit, ci Mi-ai pregătit un trup;"
     },
     {
       "number": 6,
-      "text": "Nu ai avut nici o plăcere în toate ofrandele arse și sacrificii pentru păcat."
+      "text": "în arderi-de-tot și jertfe pentru păcat nu Ți-ai găsit plăcerea."
     },
     {
       "number": 7,
-      "text": "Atunci am zis: Iată, am venit (în sulul este scris despre mine) să fac voia Ta, Dumnezeule!"
+      "text": "Atunci am spus: «Iată, vin — în sulul cărții este scris despre Mine — ca să fac voia Ta, Dumnezeule.»”"
     },
     {
       "number": 8,
-      "text": "Anterior, spunând: Sacrificii și ofrande și arderi de tot și jertfe pentru păcat nu ai dorit, nici nu au avut plăcere în ele (cele care sunt oferite conform legii),"
+      "text": "După ce spune mai sus: „Jertfe și daruri, arderi-de-tot și jertfe pentru păcat n-ai voit și nici nu Ți-ai găsit plăcerea în ele” — acestea fiind aduse potrivit Legii —,"
     },
     {
       "number": 9,
-      "text": "apoi a zis: Iată, am venit să fac voia ta. El îl ia pe primul, ca să-l întemeieze pe al doilea,"
+      "text": "apoi spune: „Iată, vin ca să fac voia Ta.” El îl înlătură pe cel dintâi ca să-l statornicească pe al doilea."
     },
     {
       "number": 10,
-      "text": "prin care vom fi fost sfințiți prin oferirea trupului lui Isus Hristos o dată pentru totdeauna."
+      "text": "Prin această voie am fost sfințiți, prin jertfirea trupului lui Isus Hristos, o dată pentru totdeauna."
     },
     {
       "number": 11,
-      "text": "Fiecare preot stă în picioare zi de zi slujind și oferind adesea aceleași sacrificii, care nu pot lua niciodată păcatele,"
+      "text": "Și orice preot stă în picioare zi de zi, slujind și aducând de multe ori aceleași jertfe, care nu pot niciodată să înlăture păcatele."
     },
     {
       "number": 12,
-      "text": "Dar El, după ce a adus o jertfă pentru păcate pentru totdeauna, S-a așezat la dreapta lui Dumnezeu,"
+      "text": "Dar El, după ce a adus o singură jertfă pentru păcate, S-a așezat pentru totdeauna la dreapta lui Dumnezeu,"
     },
     {
       "number": 13,
-      "text": "din acel moment așteptând până când dușmanii săi vor fi făcuți pentru picioarele lui."
+      "text": "așteptând de atunci până când dușmanii Lui vor fi puși ca așternut al picioarelor Lui."
     },
     {
       "number": 14,
-      "text": "Căci printr-o ofrandă El i-a desăvârșit pentru totdeauna pe cei care sunt sfințiți."
+      "text": "Căci printr-o singură jertfă i-a desăvârșit pentru totdeauna pe cei care sunt sfințiți."
     },
     {
       "number": 15,
-      "text": "Duhul Sfânt ne mărturisește și nouă, căci după ce a zis:"
+      "text": "Și Duhul Sfânt ne mărturisește aceasta; căci, după ce a spus:"
     },
     {
       "number": 16,
-      "text": "Iată legământul pe care-l voi face cu ei după acele zile, zice Domnul, voi pune legile Mele în inima lor le voi scrie în mintea lor, apoi spune:"
+      "text": "„Acesta este legământul pe care îl voi încheia cu ei după zilele acelea, spune Domnul: voi pune legile Mele în inimile lor și le voi scrie în mintea lor”,"
     },
     {
       "number": 17,
-      "text": "Nu-mi voi mai aminti de păcatele lor și de nelegiuirile lor."
+      "text": "„și nu-Mi voi mai aminti nicidecum de păcatele și fărădelegile lor.”"
     },
     {
       "number": 18,
-      "text": "Acum, unde este iertarea acestora, nu mai este nici o ofrandă pentru păcat."
+      "text": "Iar unde este iertarea acestora, nu mai este jertfă pentru păcat."
     },
     {
       "number": 19,
-      "text": "Având deci, fraților, îndrăzneala de a intra în locul sfânt prin sângele lui Isus,"
+      "text": "Așadar, fraților, având îndrăzneală să intrăm în Locul Sfânt prin sângele lui Isus,"
     },
     {
       "number": 20,
-      "text": "pe calea pe care ne-a închinat-o, o cale nouă și vie, prin văl, adică carnea lui,"
+      "text": "pe calea cea nouă și vie pe care El a inaugurat-o pentru noi prin perdea, adică prin trupul Său,"
     },
     {
       "number": 21,
-      "text": "având un mare preot peste casa lui Dumnezeu,"
+      "text": "și având un Mare Preot peste casa lui Dumnezeu,"
     },
     {
       "number": 22,
-      "text": "Să ne apropiem cu o inimă adevărată, plină de credință, cu inimile stropite de o conștiință rea și cu trupul spălat cu apă curată,"
+      "text": "să ne apropiem cu o inimă sinceră, în deplina siguranță a credinței, având inimile stropite și curățite de o conștiință rea și trupul spălat cu apă curată."
     },
     {
       "number": 23,
-      "text": "Să păstrăm fără ezitare mărturisirea speranței noastre, căci cel ce a promis este credincios."
+      "text": "Să ținem neclintită mărturisirea speranței, căci credincios este Cel care a promis."
     },
     {
       "number": 24,
-      "text": "Să ne gândim cum să ne provocăm unii pe alții la iubire și la fapte bune,"
+      "text": "Și să veghem unii asupra altora, ca să ne îndemnăm la dragoste și la fapte bune,"
     },
     {
       "number": 25,
-      "text": "nu părăsindu-ne împreună, așa cum este obiceiul unora, ci îndemnându-se unii pe alții, și cu atât mai mult cu cât vedeți că Ziua se apropie."
+      "text": "fără să părăsim adunarea noastră, cum au unii obiceiul, ci încurajându-ne unii pe alții, cu atât mai mult cu cât vedeți că Ziua se apropie."
     },
     {
       "number": 26,
-      "text": "Căci dacă păcătuim voit după ce am primit cunoștința adevărului, nu va mai rămâne o jertfă pentru păcate,"
+      "text": "Căci, dacă păcătuim de bunăvoie după ce am primit cunoașterea adevărului, nu mai rămâne nicio jertfă pentru păcate,"
     },
     {
       "number": 27,
-      "text": "ci o așteptare înfricoșătoare a judecății, și o aprigă rîvnă de foc, care va mistui pe vrăjmași."
+      "text": "ci numai o așteptare înfricoșătoare a judecății și ardoarea unui foc care îi va mistui pe cei potrivnici."
     },
     {
       "number": 28,
-      "text": "Un om care nesocot legea lui Moise moare fără milă pe cuvântul a doi sau trei martori."
+      "text": "Cine încalcă Legea lui Moise moare fără milă pe mărturia a doi sau trei martori."
     },
     {
       "number": 29,
-      "text": "Cu cât mai rea pedeapsă credeți că va fi el judecat vrednic de cel care a călcat în picioare pe Fiul lui Dumnezeu a numărat sângele legământului cu care a fost sfințit ca un lucru nesfânt a insultat Duhul harului?"
+      "text": "Cu cât mai aspră pedeapsă credeți că va merita cel care L-a călcat în picioare pe Fiul lui Dumnezeu, a socotit necurat sângele legământului prin care fusese sfințit și L-a insultat pe Duhul harului?"
     },
     {
       "number": 30,
-      "text": "Căci cunoaștem pe Cel ce a zis:, A Mea este răzbunarea, Eu voi răsplăti, zice Domnul. Și iarăși:, Domnul va judeca pe poporul Său."
+      "text": "Căci Îl cunoaștem pe Cel care a spus: „A Mea este răzbunarea; Eu voi răsplăti.” Și din nou: „Domnul Își va judeca poporul.”"
     },
     {
       "number": 31,
-      "text": "Este un lucru înfricoșător să cazi în mâinile Dumnezeului celui viu."
+      "text": "Este înfricoșător să cazi în mâinile Dumnezeului celui viu."
     },
     {
       "number": 32,
-      "text": "Dar-vă de zilele de mai înainte, în care, după ce ați fost luminați, ați îndurat o mare luptă cu suferințele:"
+      "text": "Aduceți-vă însă aminte de zilele de odinioară, când, după ce ați fost luminați, ați îndurat o mare luptă în suferințe:"
     },
     {
       "number": 33,
-      "text": "parțial, fiind expuși atât ocarelor, cât și opresiunilor, și, în parte, fiind părtași la cei care au fost tratați astfel."
+      "text": "uneori fiind făcuți spectacol prin insulte și necazuri, alteori devenind părtași cu cei tratați astfel."
     },
     {
       "number": 34,
-      "text": "Amândoi ați avut milă de mine în lanțurile mele și ați acceptat cu bucurie jefuirea averilor voastre, știind că aveți pentru voi o posesiune mai bună și una care dăinuie în ceruri."
+      "text": "Căci ați suferit împreună cu cei întemnițați și ați primit cu bucurie jefuirea bunurilor voastre, știind că voi înșivă aveți o avere mai bună și trainică."
     },
     {
       "number": 35,
-      "text": "De aceea, nu renunța la îndrăzneala ta, care are o mare răsplată."
+      "text": "Nu vă lepădați deci îndrăzneala, care are o mare răsplată."
     },
     {
       "number": 36,
-      "text": "Căci aveți nevoie de perseverență ca, după ce ați făcut voia lui Dumnezeu, să primiți promisiunea."
+      "text": "Căci aveți nevoie de răbdare, pentru ca, după ce ați făcut voia lui Dumnezeu, să primiți promisiunea."
     },
     {
       "number": 37,
-      "text": "Într-un timp foarte scurt, cel care vine va veni și nu va aștepta."
+      "text": "„Căci încă foarte puțin și Cel care vine va veni și nu va întârzia;"
     },
     {
       "number": 38,
-      "text": "Dar cel drept va trăi prin credință. Dacă el micșorează înapoi, sufletul meu nu are nici o plăcere în el."
+      "text": "iar dreptul Meu va trăi prin credință; dar, dacă se dă înapoi, sufletul Meu nu-Și găsește plăcerea în el.”"
     },
     {
       "number": 39,
-      "text": "Dar noi nu suntem dintre cei care se întorc la pieire, ci dintre cei care au credință în salvarea sufletului."
+      "text": "Noi însă nu suntem dintre cei care se dau înapoi spre pierzare, ci dintre cei care au credință spre păstrarea sufletului."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 34,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 1,
+      "term": "δύναται",
+      "decision": "Verbul este redat la singular, cu „Legea” ca subiect.",
+      "alternatives": [
+        "„jertfele ... nu pot”"
+      ],
+      "reason": "SBLGNT/NA28 are singularul δύναται; lectura plurală δύνανται este consemnată de aparat pentru WH/Treg/RP.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "SBLGNT/NA28 are singularul δύναται; lectura plurală δύνανται este consemnată de aparat pentru WH/Treg/RP."
+    },
+    {
+      "verse": 9,
+      "term": "ποιῆσαι",
+      "decision": "„Iată, vin ca să fac voia Ta.”",
+      "alternatives": [
+        "TR/RP: adaosul ὁ θεός"
+      ],
+      "reason": "Textul principal SBLGNT nu importă ὁ θεός după ποιῆσαι.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal SBLGNT nu importă ὁ θεός după ποιῆσαι."
+    },
+    {
+      "verse": 17,
+      "term": "καὶ τῶν ἁμαρτιῶν",
+      "decision": "Citatul continuă direct cu „și nu-Mi voi mai aminti...”",
+      "alternatives": [
+        "NIV/aparat: „apoi spune”"
+      ],
+      "reason": "SBLGNT nu are introducerea explicită „apoi spune”; aceasta nu este adăugată în corpul versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are introducerea explicită „apoi spune”; aceasta nu este adăugată în corpul versetului."
+    },
+    {
+      "verse": 30,
+      "term": "ἐγὼ ἀνταποδώσω",
+      "decision": "„Eu voi răsplăti.”",
+      "alternatives": [
+        "TR/RP: „Eu voi răsplăti, spune Domnul”"
+      ],
+      "reason": "Adaosul λέγει κύριος din RP nu este în textul principal SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul λέγει κύριος din RP nu este în textul principal SBLGNT."
+    },
+    {
+      "verse": 34,
+      "term": "τοῖς δεσμίοις",
+      "decision": "„ați suferit împreună cu cei întemnițați”",
+      "alternatives": [
+        "TR/RP: „lanțurile mele”"
+      ],
+      "reason": "SBLGNT are δεσμίοις, nu δεσμοῖς μου; referentul este plural și nu este personalizat în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT are δεσμίοις, nu δεσμοῖς μου; referentul este plural și nu este personalizat în textul principal."
+    },
+    {
+      "verse": 34,
+      "term": "κρείττονα ὕπαρξιν καὶ μένουσαν",
+      "decision": "„o avere mai bună și trainică”",
+      "alternatives": [
+        "TR/RP: adaos „în ceruri”"
+      ],
+      "reason": "SBLGNT nu conține ἐν οὐρανοῖς la finalul acestei propoziții; adaosul tradițional nu este importat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu conține ἐν οὐρανοῖς la finalul acestei propoziții; adaosul tradițional nu este importat."
+    },
+    {
+      "verse": 38,
+      "term": "ὁ δὲ δίκαιός μου",
+      "decision": "„dreptul Meu”",
+      "alternatives": [
+        "RP: fără μου"
+      ],
+      "reason": "Pronumele μου este prezent în SBLGNT și este reprezentat explicit în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pronumele μου este prezent în SBLGNT și este reprezentat explicit în română."
     }
   ],
   "referenceNotes": [],
