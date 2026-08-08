@@ -1,4 +1,4 @@
-import type { BibleChapter, BibleUnit, WordStudy } from "./types.js"
+import type { BibleChapter, BibleExplanationKind, BibleUnit, WordStudy } from "./types.js"
 import { exodPassage, exodVerseCount } from "./exodText.js"
 import { exodStatus } from "./exodPublication.js"
 
@@ -7,13 +7,25 @@ import { exodStatus } from "./exodPublication.js"
  * Textul biblic vine din exodText.ts și nu se scrie de mână în fișierele de capitol.
  * Helperul verifică acoperirea: unitățile trebuie să meargă din verset în verset,
  * fără goluri și fără suprapuneri, până la ultimul verset al capitolului.
+ *
+ * Proveniența legacy este declarată transparent: explicațiile existente sunt o
+ * sinteză editorială Emanus verificabilă în raport cu materialul Through The Bible
+ * al lui Zac Poonen, textul biblic și trimiterile indicate. Eticheta NU afirmă că
+ * Poonen a comentat individual fiecare verset din fiecare unitate.
  */
+
+const EXOD_LEGACY_EXPLANATION_SOURCE =
+  "Emanus legacy synthesis — Zac Poonen, Through The Bible: Exodus + biblical text/cross-references"
+const HEBREW_WORD_SOURCE = "WLC-OSHB"
 
 export type ExodUnitInput = {
   verses: readonly [number, number]
   heading: string
   teaching: string
+  explanationKind?: BibleExplanationKind
+  explanationSource?: string
   words?: readonly WordStudy[]
+  wordSource?: string
   crossRefs?: readonly string[]
   forYourHeart?: string
 }
@@ -54,7 +66,13 @@ export function exodChapter(input: ExodChapterInput): BibleChapter {
       heading: unit.heading,
       text: exodPassage(input.number, from, to),
       teaching: unit.teaching,
+      explanationKind: unit.explanationKind ?? "exposition",
+      explanationSource: unit.explanationSource ?? EXOD_LEGACY_EXPLANATION_SOURCE,
       words: unit.words ? [...unit.words] : undefined,
+      wordSource:
+        unit.words && unit.words.length > 0
+          ? unit.wordSource ?? HEBREW_WORD_SOURCE
+          : unit.wordSource,
       crossRefs: unit.crossRefs ? [...unit.crossRefs] : undefined,
       forYourHeart: unit.forYourHeart,
     }
