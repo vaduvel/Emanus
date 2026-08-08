@@ -4,140 +4,137 @@ Data: 2026-08-08
 
 ## Verdict
 
-**EXPLANATION_LAYER_APPROVED**
+**EXPLANATION_LAYER_REVIEWED_929_OF_929 — SOURCE_FIRST — CI_PENDING**
 
-Acest document consemnează review-ul stratului **Biblia explicată VT**. Traducerea Biblia Emanus este un flux separat și nu mai este folosită ca blocker pentru aprobarea explicațiilor.
+Acest document privește numai stratul **Biblia explicată VT**. Traducerea Biblia Emanus este un flux separat.
 
-Acoperirea explicativă este completă:
+Acoperire:
 
-- 39 / 39 cărți canonice VT;
-- 929 / 929 capitole în catalogul explicativ;
-- 10 `legacy-full`;
-- 29 `full-overlay`, total 637 / 637 capitole overlay.
+- 39 / 39 cărți;
+- 929 / 929 capitole;
+- 10 `legacy-full` = 292 capitole;
+- 29 `full-overlay` = 637 capitole.
 
-Statusul `published` folosit de registry-ul explicației înseamnă **explicație aprobată editorial**. El nu obligă reader-ul să afișeze un text biblic care este încă `temporary-editorial`.
+## Regula care controlează ediția
 
-## 1. Ce intră și ce nu intră în verdict
+Unde Poonen/CFC dezvoltă pasajul, explicația lui are prioritate editorială și este păstrată fidel. Nu o relativizăm prin formule de tip «o posibilă interpretare», «este disputat», «nu este doctrina Emanus» sau «textul nu spune explicit» atunci când acestea sunt introduse doar pentru a-i slăbi concluzia.
 
-### Intră
+Explicația generală/canonică intră numai unde sursa nu dezvoltă punctul respectiv. `textual-overview` este fallback conservator pentru goluri.
 
-- fidelitatea explicației față de pasajul biblic folosit pentru lucru;
-- separarea sensului explicit de tipologie și interpretări disputate;
-- coerența canonică;
-- protecțiile pentru violență, abuz, sexualitate, sclavie, ocult și profeție;
-- provenance intern al explicației;
-- note lexicale ebraice numai cu WLC-OSHB;
-- copy public fără atribuirea nominală a sursei editoriale.
+Numele sursei moderne rămâne intern; cititorul primește explicația direct.
 
-### Nu intră
+## Ce a fost retras din review-ul anterior
 
-- aprobarea finală a traducerii Biblia Emanus;
-- fresh re-auditul textului canonic;
-- promovarea fișierelor de traducere;
-- reconcilierea source-lock/WLC pentru fluxul de traducere.
+Override-urile introduse în ultima trecere asupra **Exod 21, Levitic 25 și Iosua 6/7/10/11** au fost eliminate complet și nu mai fac parte din materialul final.
 
-Explicațiile pot fi verificate pe textul biblic de lucru și apoi păstrate când textul afișat este înlocuit cu Biblia Emanus.
+Documentația veche care le numea «corecții doctrinare finale» era depășită și a fost înlocuită.
 
-## 2. Blocker-ul legacy este închis
+## Ce a fost restaurat după transcript
 
-Cele 10 cărți `legacy-full` folosesc acum normalizare de provenance la nivel de unitate.
+Au primit straturi finale de fidelitate, după review-urile vechi:
 
-Gate-ul `check-vt-legacy-provenance` cere:
+- Judecători 4;
+- Estera 1, 2, 8;
+- Iov 29, 31, 42;
+- Psalmii 32, 51, 69, 73, 74, 103, 105;
+- Proverbe 3, 22, 23, 31;
+- Cântarea Cântărilor 1, 2, 4, 5, 8;
+- Isaia 7, 10, 11, 14;
+- Ieremia 23, 29, 31;
+- Ezechiel 14, 16, 28, 36, 43, 47, 48;
+- Daniel 2, 3, 4, 6, 7, 9, 10, 12;
+- 1 Samuel 16, 28;
+- 2 Samuel 24.
 
-- `explanationKind`;
-- `explanationSource` intern;
-- lipsa aplicației și a lexicului inventat în `textual-overview`;
+Scopul acestor straturi nu este să adauge o nouă doctrină, ci să împiedice review-urile ulterioare să schimbe doctrina deja prezentă în materialul-sursă.
+
+## Review capitol cu capitol
+
+`check:vt-chapter-review` parcurge materialul final capitol cu capitol, nu doar pe totaluri. Cere fiecărui capitol:
+
+- titlu + rezumat;
+- explicație nenulă;
+- `teaching` nenul;
+- provenance valid;
+- `explanationKind` valid;
+- continuitate de versete la overlay;
+- truth-guards pentru `textual-overview`;
+- surse pentru `canonical-exegesis`;
 - WLC-OSHB pentru notele ebraice.
 
-Prin urmare vechiul verdict conform căruia cele 10 cărți nu pot demonstra proveniența nu mai descrie starea actuală a codului.
+Scriptul trebuie să închidă exact:
 
-## 3. Corecții doctrinare și exegetice finale
+- 10 cărți legacy / 292 capitole;
+- 29 overlay / 637 capitole;
+- 39 cărți / 929 capitole total.
 
-Pe lângă review-urile deja existente pentru Geneza, Deuteronom, Numeri, Samuel, Împărați, Psalmii, profeții mari și cărțile sapiențiale, această trecere finală a identificat și reparat următoarele zone:
+Matricea celor 39 de cărți este în `VT-CHAPTER-BY-CHAPTER-REVIEW-2026-08-08.md`.
 
-### Exod 21
+## Gate de fidelitate
 
-- regula celor șase ani este delimitată la robul evreu din cazul descris;
-- nu se mai afirmă fals că toate formele antice de servitute aveau aici un sfârșit automat;
-- Exod 21:21 este explicat conform formulării despre statutul economic al robului, nu printr-o parafrază inventată;
-- `onah` este tratat prudent ca drept/datorie conjugală, fără definiții moderne introduse în lexic;
-- răpirea de persoane este tratată ca infracțiune capitală fără a fi declarată identică în toate privințele cu omorul;
-- 21:30, prețul de răscumpărare al proprietarului boului cunoscut ca periculos, nu mai este omis;
-- cei treizeci de sicli sunt prezentați drept rezonanță canonică, nu profeție explicită inventată despre trădarea lui Isus.
+`check:vt-poonen-fidelity` verifică rezultatul final după toate transformările. Pentru capitolele care au fost vulnerabile la diluare cere simultan provenance Poonen și păstrarea unor afirmații distinctive din transcript.
 
-### Levitic 25
+Acest gate acoperă, între altele:
 
-- Jubileul nu mai este confundat cu remiterea generică a tuturor datoriilor; Deuteronom 15 este păstrat separat;
-- nu se mai inventează că surplusul anului al șaselea trebuia obligatoriu păstrat și nu putea fi vândut;
-- vv. 44–46 sunt prezentate direct: legea permite cumpărarea, moștenirea și slujirea permanentă a robilor străini;
-- această permisiune nu este rescrisă ca simplă servitute temporară și nici folosită pentru justificarea sclaviei moderne;
-- fraternitatea în Hristos și textele Noului Testament sunt prezentate ca lectură canonică ulterioară, nu ca traducere alternativă a legii vechi.
+- acoperire vs. curățire în Psalmul 32;
+- inima frântă la Cruce în Psalmul 69;
+- rațiunea sub Duhul Sfânt în Proverbe 3;
+- vinul de la Cana în Proverbe 23;
+- străjerii legaliști în Cântarea 5;
+- Lucifer și cele cinci «eu voi» în Isaia 14;
+- Satan/Edenul dintâi în Ezechiel 28;
+- sfințenia absolută în Ezechiel 43;
+- zece regate/Antihrist în Daniel 2/7/9;
+- poziția post-Calvar în Daniel 10;
+- cele două învieri în Daniel 12;
+- pierderea ungerii și degenerarea lui Saul în 1 Samuel 16/28;
+- numărul/puterea armatei și jertfa care costă în 2 Samuel 24.
 
-### Iosua 6, 7, 10, 11
+## Unde completarea generală rămâne corectă
 
-- judecata Canaanului nu este redusă la o analogie medicală care ar rezolva automat toate întrebările morale;
-- Rahab, Deuteronom 9 și exilul ulterior al Israelului limitează lectura de superioritate etnică;
-- războiul Canaanului nu devine mandat pentru violență religioasă creștină;
-- familia lui Acan nu este declarată nici inocentă, nici complice fără afirmația textului; tensiunea cu Deuteronom 24:16 este recunoscută;
-- «toată țara» și «odihna de război» sunt citite împreună cu Iosua 13 și cu teritoriile rămase;
-- distrugerea cailor și carelor nu este transformată într-o doctrină anti-tehnologie;
-- împietrirea din Iosua 11 este tratată ca judecată divină fără concluzia că Dumnezeu produce arbitrar răul moral în oameni inocenți.
+Dacă Poonen nu dezvoltă punctul, explicația directă a textului poate rămâne. Exemple re-verificate:
 
-## 4. Zone sensibile deja validate în review-urile dedicate
+- mecanica «duhului de minciună» din 1 Împărați 22;
+- detaliile despre captive din Numeri 31;
+- cazurile juridice din Deuteronom 22;
+- nota lexicală `ra` din Isaia 45:7;
+- capitolele care sunt numai `textual-overview`.
 
-Sunt păstrate review-urile dedicate pentru, între altele:
+Aceste completări nu au voie să suprascrie concluzia unei unități Poonen.
 
-- Geneza 38;
-- Levitic 18 și 20;
-- Numeri 31;
-- Deuteronom 20 și 22;
-- 1 Samuel 16 și 28;
-- 2 Samuel 24;
-- 1 Împărați 22;
-- Iov 29, 31, 38, 40, 42;
-- Psalmii 22, 32, 51, 69, 73, 74, 103, 105, 110;
-- Proverbe 3, 22, 23, 31;
-- Isaia 7, 9, 10, 11, 14, 45, 53;
-- Ieremia 23, 29, 31;
-- Ezechiel 14, 16, 18, 28, 36, 43, 47, 48;
-- Daniel 3, 4, 6, 7, 9, 10, 12.
+## Copy public și provenance
 
-## 5. Copy public și provenance
+Provenance-ul nominal rămâne intern. `publicationBible.ts` elimină numele modern, `explanationSource` și limbajul intern despre transcript din obiectul cititorului.
 
-Provenance-ul cu numele autorilor/surselor rămâne intern.
+Sanitizarea copy-ului nu are voie să schimbe doctrina; ea schimbă numai atribuirea în formulare directă și gramaticală.
 
-`publicationBible.ts` transformă formulările de atribuire în formulări directe și neutre, elimină `explanationSource` din obiectul public și verifică să nu rămână nume moderne ori limbaj despre transcript în copy-ul cititorului.
+## Separarea explicației de text
 
-Nu ne bazăm numai pe ștergerea numelui, deoarece aceasta putea produce fraze rupte. Formulele sunt neutralizate semantic, de exemplu în termeni precum «Se subliniază că…», «O posibilă lectură…» sau «În această interpretare…».
+Statusul explicației și statusul textului biblic rămân separate:
 
-## 6. Publicarea explicației este separată de text
+- explicație `published` + text `biblia-emanus` → poate fi deschis în reader;
+- explicație `published` + text `temporary-editorial` → reader-ul rămâne `in_review`.
 
-Cele 29 de overlay-uri finale sunt `published` la nivel explicativ.
+Prin urmare acest review nu declară traducerea Biblia Emanus terminată.
 
-Reader-ul aplică separat stadiul textului:
-
-- `biblia-emanus` → poate propaga statusul explicației;
-- `temporary-editorial` → capitolul rămâne `in_review` și nu este deschis în producție.
-
-Astfel nu publicăm accidental o traducere provizorie doar pentru că explicația ei este gata.
-
-## 7. Gate-uri obligatorii înainte de merge/release
-
-Verdictul editorial nu înlocuiește CI.
+## Gate-uri înainte de merge/release
 
 Trebuie să treacă:
 
-1. `check:vt-legacy-provenance`;
-2. `check:vt-explained`;
-3. `check:vt-publication`;
-4. typecheck pentru `@emanus/shared` și aplicațiile afectate;
-5. build-ul proiectului;
-6. verificările normale ale PR-ului și rezolvarea conflictelor de integrare.
+1. `check:vt-explained`;
+2. `check:vt-legacy-provenance`;
+3. `check:vt-poonen-fidelity`;
+4. `check:vt-chapter-review`;
+5. `check:vt-publication`;
+6. shared typecheck;
+7. shared build;
+8. `git diff --check`;
+9. rezolvarea conflictelor PR #85 cu `main`.
 
-La momentul actual GitHub nu raporta încă workflow-uri pentru ultimul head, iar mediul local nu a putut clona repo-ul din cauza lipsei DNS. Din acest motiv gate-urile nu sunt declarate verzi fără dovadă.
+GitHub nu raporta încă workflow runs/status checks pentru ultimul head la momentul acestui update. CI nu este declarat verde fără dovadă.
 
 ## Concluzie
 
-**Review-ul explicațiilor VT este închis editorial și aprobat: 39 / 39.**
+**Ultimul review editorial acoperă explicațiile tuturor celor 929 de capitole VT și aplică regula source-first cerută pentru materialul Poonen.**
 
-**Traducerea Bibliei nu face parte din acest verdict.** Cărțile cu text biblic provizoriu rămân închise în reader până la înlocuirea textului, dar explicația lor nu mai cere un nou review de conținut doar pentru această înlocuire.
+Publicarea tehnică rămâne condiționată de gate-uri și de integrarea PR-ului; traducerea Bibliei rămâne în fluxul ei separat.
