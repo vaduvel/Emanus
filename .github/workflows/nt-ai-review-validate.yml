@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  james-2-review:
+  james-3-review:
     runs-on: ubuntu-22.04
     timeout-minutes: 90
     steps:
@@ -29,18 +29,18 @@ jobs:
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
-      - name: Review, validate and commit James 2
+      - name: Review, validate and commit James 3
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          json='docs/data/biblia-emanus/JAS.2.json'
-          journal='docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-08-JAS.2.md'
+          json='docs/data/biblia-emanus/JAS.3.json'
+          journal='docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-08-JAS.3.md'
           python3 scripts/build-nt-editorial-review-queue.py --check
           if test -f "$journal"; then
-            echo 'JAS.2 already reviewed; skipping chapter commit.'
+            echo 'JAS.3 already reviewed; skipping chapter commit.'
           else
-            python3 .github/nt-ai-review/jas2.py
+            python3 .github/nt-ai-review/jas3.py
             git diff --check
             pnpm check:biblia-emanus
             python3 scripts/check-biblia-emanus-romanian-quality.py
@@ -54,7 +54,7 @@ jobs:
             printf '%s\n' "$changed" | grep -Fx "$json"
             printf '%s\n' "$changed" | grep -Fx "$journal"
             git diff --cached --check
-            git commit -m 'review(biblia): audit James 2 verse by verse'
+            git commit -m 'review(biblia): audit James 3 verse by verse'
           fi
           python3 scripts/build-nt-editorial-review-queue.py
           python3 scripts/build-nt-editorial-review-queue.py --check
