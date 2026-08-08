@@ -35,12 +35,13 @@ jobs:
             --webu-zip /tmp/engwebp_current.zip \
             --wlc-zip /tmp/hboWLC_current.zip
 
-      - name: Verify legacy candidates remain byte-identical in Romanian
+      - name: Verify remaining legacy candidates remain byte-identical in Romanian
         run: |
           python3 scripts/audit-minor-prophets-be-candidates.py \
             --source-ref origin/agent/biblia-emanus-ot-and-apocrypha \
             --webu-zip /tmp/engwebp_current.zip \
-            --wlc-zip /tmp/hboWLC_current.zip
+            --wlc-zip /tmp/hboWLC_current.zip \
+            --exclude-book HOS
 
       - name: Build Osea fresh-source re-audit packet with explicit WLC mapping
         run: python3 scripts/prepare-minor-prophet-reaudit.py --book HOS
