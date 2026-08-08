@@ -1,0 +1,65 @@
+name: Audit Legacy Doctrine Provenance Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-integration-clean
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:shared
+      - name: Count legacy provenance gaps
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs'
+          import { PUBLICATION_BIBLE_BOOKS } from './packages/shared/dist/bible/publicationBible.js'
+          const ids = new Set(['geneza','exod','levitic','numeri','deuteronom','iosua','rut','1-samuel','2-samuel','1-imparati'])
+          const books = []
+          const totals = { books: 0, chapters: 0, units: 0, missingExplanationKind: 0, missingExplanationSource: 0, unclassifiedApplications: 0, unclassifiedWordStudies: 0 }
+          for (const book of PUBLICATION_BIBLE_BOOKS.filter((b) => ids.has(b.id))) {
+            const row = { id: book.id, name: book.name, chapters: book.chapters.length, units: 0, missingExplanationKind: 0, missingExplanationSource: 0, unclassifiedApplications: 0, unclassifiedWordStudies: 0, examples: [] }
+            totals.books++; totals.chapters += book.chapters.length
+            for (const chapter of book.chapters) for (const unit of chapter.units) {
+              row.units++; totals.units++
+              const missingKind = !unit.explanationKind
+              const missingSource = !unit.explanationSource
+              if (missingKind) { row.missingExplanationKind++; totals.missingExplanationKind++ }
+              if (missingSource) { row.missingExplanationSource++; totals.missingExplanationSource++ }
+              if ((missingKind || missingSource) && unit.forYourHeart) { row.unclassifiedApplications++; totals.unclassifiedApplications++ }
+              const wordCount = (missingKind || missingSource) ? (unit.words?.length ?? 0) : 0
+              row.unclassifiedWordStudies += wordCount; totals.unclassifiedWordStudies += wordCount
+              if ((missingKind || missingSource) && row.examples.length < 6) row.examples.push({ chapter: chapter.number, ref: unit.ref, heading: unit.heading })
+            }
+            books.push(row)
+          }
+          const report = { generatedOn: '2026-08-08', rule: 'Doctrine/application requires explicit source provenance; source gaps may only carry textual overview.', totals, books }
+          fs.writeFileSync('docs/biblia-explicata/VT-LEGACY-PROVENANCE-AUDIT.json', JSON.stringify(report, null, 2) + '\n')
+          console.log(JSON.stringify(report, null, 2))
+          NODE
+      - name: Commit evidence and self-clean
+        run: |
+          git rm .github/workflows/audit-legacy-provenance-once.yml
+          test ! -f docs/biblia-explicata/.legacy-audit-trigger || git rm docs/biblia-explicata/.legacy-audit-trigger
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/biblia-explicata/VT-LEGACY-PROVENANCE-AUDIT.json
+          git commit -m 'Record legacy VT doctrine provenance audit'
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
