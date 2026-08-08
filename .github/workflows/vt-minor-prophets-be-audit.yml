@@ -1,4 +1,4 @@
-name: VT Minor Prophets Fresh Source Validation
+name: VT Minor Prophets Canonical Validation
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: vt-minor-prophets-audit-${{ github.event.pull_request.number }}
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   validate-all-minor-prophets:
-    if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
+    if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,18 +24,6 @@ jobs:
 
       - name: Fetch legacy BE candidate branch
         run: git fetch origin agent/biblia-emanus-ot-and-apocrypha:refs/remotes/origin/agent/biblia-emanus-ot-and-apocrypha
-
-      - name: Download current official source archives
-        run: |
-          set -euo pipefail
-          curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
-          curl --fail --location --retry 3 --output /tmp/hboWLC_current.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
-
-      - name: Capture deterministic HOS-MAL source snapshot
-        run: |
-          python3 scripts/capture-minor-prophets-sources.py \
-            --webu-zip /tmp/engwebp_current.zip \
-            --wlc-zip /tmp/hboWLC_current.zip
 
       - name: Validate all promoted minor prophets
         run: |
@@ -63,20 +51,3 @@ jobs:
           pnpm check:vt-explained
           pnpm check:vt-publication
           pnpm --filter @emanus/shared typecheck
-
-      - name: Commit refreshed source evidence only when changed
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add \
-            docs/data/biblia-emanus/sources/ot-minor-prophets-2026-08-07-usfm.zip \
-            docs/data/biblia-emanus/minor-prophets-source-lock.json \
-            packages/shared/src/bible/generated/vtCanonicalText
-          git diff --cached --check
-          if git diff --cached --quiet; then
-            echo 'Fresh source evidence is already current.'
-            exit 0
-          fi
-          git commit -m "audit(bible): refresh canonical minor prophet evidence"
-          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
