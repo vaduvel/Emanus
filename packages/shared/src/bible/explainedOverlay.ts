@@ -12,6 +12,16 @@ export type ExplainedSource =
       section: string
     }
   | {
+      kind: "canonical-exegesis"
+      /**
+       * Explicație doctrinară susținută direct de textul biblic, de trimiteri
+       * canonice explicite și, unde este cazul, de WLC-OSHB pentru lexical.
+       * Nu trebuie atribuită lui Poonen dacă transcriptul nu o dezvoltă.
+       */
+      sources: string[]
+      note: string
+    }
+  | {
       kind: "biblia-emanus"
       note:
         | "rezumat narativ fără doctrină adăugată"
