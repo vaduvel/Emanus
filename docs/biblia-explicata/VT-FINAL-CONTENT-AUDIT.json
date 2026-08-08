@@ -1,50 +1,69 @@
 {
   "generatedOn": "2026-08-08",
-  "verdict": "BLOCKED_FOR_FULL_PUBLICATION",
+  "verdict": "EXPLANATION_LAYER_APPROVED",
+  "reviewType": "final-ai-editorial-review",
+  "scope": {
+    "includes": "Old Testament explanation layer",
+    "excludes": [
+      "Biblia Emanus translation completion",
+      "canonical text promotion",
+      "WLC/source-lock reconciliation for translation pipeline"
+    ]
+  },
   "explanation": {
     "canonicalOtBooksCovered": 39,
     "canonicalOtBooksExpected": 39,
-    "coverageComplete": true,
-    "publicationApproved": false,
-    "legacyFullBooksNeedingUnitProvenanceNormalization": 10,
-    "overlayBooksUsingSourceTruthGuard": 29
-  },
-  "translation": {
-    "canonicalOtBooksExpected": 39,
+    "canonicalOtChaptersCovered": 929,
     "canonicalOtChaptersExpected": 929,
-    "canonicalOtBooksCurrent": 7,
-    "canonicalOtChaptersCurrent": 225,
-    "canonicalOtBooks": [
-      "Geneza",
-      "Exodul",
-      "Leviticul",
-      "Numeri",
-      "Deuteronomul",
-      "Iosua",
-      "Osea"
-    ],
-    "overlayReaderBooks": 29,
-    "overlayReaderBibliaEmanusBooks": ["Osea"],
-    "overlayReaderTemporaryEditorialBooks": 28,
-    "historicalCandidateJudgesThroughDanielRequiresFreshAudit": true,
-    "wlcSourceLockDriftRequiresInspection": true
+    "coverageComplete": true,
+    "publicationApproved": true,
+    "legacyFullBooks": 10,
+    "legacyFullBooksNeedingUnitProvenanceNormalization": 0,
+    "fullOverlayBooks": 29,
+    "fullOverlayChapters": 637,
+    "overlayExplanationStatus": "published"
   },
-  "confirmedCorrections": [
-    "Deuteronom 22:11 Romanian typo corrected and digest refreshed",
-    "Deuteronom 22 explanation Hebrew and abuse-sensitive interpretation corrected",
-    "Numeri 31 Romanian/lexical translation corrections and digest refreshed",
-    "Numeri 31 explanation reworked as textual overview with violence/captivity guardrails",
-    "Levitic 18 Romanian grammar corrections and digest refreshed",
-    "Deuteronom 20 Romanian grammar corrections and digest refreshed",
-    "Historical Judges-Daniel candidate reclassified as temporary-editorial in overlay reader",
-    "VT publication runtime truth-guard made dynamic and compatible with approved textual overview notes"
+  "textSeparation": {
+    "translationIsExplanationBlocker": false,
+    "temporaryBibleTextMayOpenPublicly": false,
+    "temporaryTextReaderStatus": "in_review",
+    "bibliaEmanusTextMayPropagateExplanationStatus": true,
+    "explanationReviewMustBeRepeatedOnlyBecauseTranslationChanges": false
+  },
+  "publicCopyPolicy": {
+    "namedModernAttributionAllowed": false,
+    "explanationSourceExposed": false,
+    "researchTranscriptLanguageAllowed": false,
+    "provenanceRetainedInternally": true
+  },
+  "confirmedExplanationCorrections": [
+    "Geneza 38: Onan/Tamar/Judah review keeps the narrative claims separate from later doctrinal overreach",
+    "Exod 21: Hebrew-servant scope, slavery language, onah, kidnapping, lex talionis, Exod 21:21 and ransom in 21:30 corrected",
+    "Levitic 18 and 20: abuse/sexuality/civil-sanction guardrails retained",
+    "Levitic 25: Jubilee separated from Deuteronomy 15 debt remission; permanent foreign slavery in 25:44-46 no longer softened",
+    "Numeri 31: war/captivity/children passage retains textual severity without modern violence mandate",
+    "Deuteronom 22: victim-blaming and consent guardrails retained",
+    "Iosua 6: Canaan judgment framed canonically without modern religious-violence authorization",
+    "Iosua 7: Achan family culpability is not invented; Deuteronomy 24:16 tension acknowledged",
+    "Iosua 10-11: conquest summaries, hardening, warfare typology and anti-technology overreach corrected",
+    "1 Samuel 16 and 28: divine sovereignty/occult passages reviewed",
+    "2 Samuel 24: divine anger, adversarial agency and David responsibility reviewed",
+    "1 Kings 22: lying-spirit judgment reviewed without making God morally deceptive",
+    "Job, Psalms, Proverbs, Isaiah, Jeremiah, Ezekiel and Daniel high-risk focus passages retain dedicated explanation reviews",
+    "Reader copy sanitizer now neutralizes attribution grammatically instead of deleting source names and leaving fragments"
   ],
   "releaseRequirements": [
-    "Fresh translation re-audit and canonical promotion for all 39 OT books",
-    "Reconcile WLC source-lock drift before new promotions",
-    "Normalize the 10 legacy-full books with explicit per-unit source provenance and explanation kind",
-    "Remove doctrine/application/lexical study from legacy source gaps",
-    "Re-run translation validators, VT explanation checks, VT publication checks, typecheck and build",
-    "Keep explanations in_review until all final gates pass"
-  ]
+    "Run check:vt-legacy-provenance",
+    "Run check:vt-explained",
+    "Run check:vt-publication",
+    "Run affected TypeScript typechecks",
+    "Run project build",
+    "Resolve PR integration conflicts and normal merge gates"
+  ],
+  "ciEvidence": {
+    "latestWorkflowRunObserved": false,
+    "localCloneValidationCompleted": false,
+    "localValidationBlocker": "execution environment could not resolve github.com",
+    "ciDeclaredGreen": false
+  }
 }
