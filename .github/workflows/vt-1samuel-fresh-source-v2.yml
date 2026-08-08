@@ -1,6 +1,9 @@
 name: VT 1 Samuel Fresh Source Packet v2
 
 on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-integration-clean
   pull_request:
     branches:
       - main
@@ -9,12 +12,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: vt-1samuel-fresh-source-v2-${{ github.event.pull_request.number }}
+  group: vt-1samuel-fresh-source-v2-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build-1samuel-review-packet:
-    if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
