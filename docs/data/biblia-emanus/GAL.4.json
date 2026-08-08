@@ -74,12 +74,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-gal-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,14 +99,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 31 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; TR a fost consultat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare. NTR nu a fost consultată."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate numărul, acordul, sintaxa și calchierile care schimbau sensul grecesc.",
+        "Lecturile SBLGNT pentru 4:6, 4:7 și 4:28 sunt păstrate față de variantele TR/RP.",
+        "Formulările românești au fost redactate propriu și confruntate ulterior cu reperele auxiliare."
       ]
     },
     "theologicalContext": {
@@ -139,8 +140,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:e8766ab86dbb007069113c9731993d197be26807148c8864e8046bbefad33749",
-    "contentDigest": "sha256:7c7ab48f441e8e74d17533d10c89ac9bff1848b6efd6240992d484f0c8353219"
+    "textDigest": "sha256:9cfc2b2b178fda8ad5b2e46ad3a1d7a8b49f26dfdaff9fc8dddb7eff4e5a38ec",
+    "contentDigest": "sha256:8c2de3ada49fb7651cb3383a227ac7b977e056f39a2d9e82760744bbed389696"
   },
   "verses": [
     {
@@ -161,15 +162,15 @@
     },
     {
       "number": 5,
-      "text": "ca să răscumpere pe cei ce erau sub Lege, ca să putem primi adopția ca copii."
+      "text": "ca să-i răscumpere pe cei de sub Lege, pentru ca noi să primim înfierea."
     },
     {
       "number": 6,
-      "text": "Și pentru că sunteți copii, Dumnezeu a trimis Duhul Fiului Său în inimile voastre, plângând, Abba, Tată!"
+      "text": "Și, pentru că sunteți fii, Dumnezeu a trimis în inimile noastre Duhul Fiului Său, care strigă: «Avva, Tată!»"
     },
     {
       "number": 7,
-      "text": "Deci, nu mai ești un rob, ci un fiu; și dacă un fiu, atunci un moștenitor al lui Dumnezeu prin Hristos."
+      "text": "Așadar, nu mai ești rob, ci fiu; iar dacă ești fiu, ești și moștenitor prin Dumnezeu."
     },
     {
       "number": 8,
@@ -177,7 +178,7 @@
     },
     {
       "number": 9,
-      "text": "Dar acum că ai ajuns să-L cunoști pe Dumnezeu, sau mai degrabă să fii cunoscut de Dumnezeu, de ce te întorci la cei slabi și mizerabili principii elementare, la care dorești să fii din nou în robie?"
+      "text": "Dar acum, după ce L-ați cunoscut pe Dumnezeu — sau, mai degrabă, după ce ați fost cunoscuți de Dumnezeu — cum de vă întoarceți din nou la elementele slabe și sărăcăcioase, cărora vreți iarăși să le slujiți?"
     },
     {
       "number": 10,
@@ -189,11 +190,11 @@
     },
     {
       "number": 12,
-      "text": "Fiți ca mine, pentru că și eu am devenit ca voi, fraților, vă rog. Cu nimic nu m-ați nedreptățit."
+      "text": "Deveniți ca mine, pentru că și eu am devenit ca voi, fraților, vă rog. Nu mi-ați făcut nicio nedreptate."
     },
     {
       "number": 13,
-      "text": "Dar știi că din cauza slăbiciunii trupești ți-am predicat pentru prima dată vestea bună."
+      "text": "Știți că, din pricina unei slăbiciuni a trupului, v-am vestit Evanghelia pentru prima dată."
     },
     {
       "number": 14,
@@ -201,11 +202,11 @@
     },
     {
       "number": 15,
-      "text": "Care a fost binecuvântarea de care v-ați bucurat? Pentru că vă mărturisesc că, dacă este posibil, v-ați fi scos ochii și mi i-ați fi dat."
+      "text": "Unde este, deci, fericirea voastră? Vă mărturisesc că, dacă ar fi fost posibil, v-ați fi scos ochii și mi i-ați fi dat."
     },
     {
       "number": 16,
-      "text": "Deci, am devenit dușmanul tău spunându-ți adevărul?"
+      "text": "Așadar, am devenit dușmanul vostru spunându-vă adevărul?"
     },
     {
       "number": 17,
@@ -213,7 +214,7 @@
     },
     {
       "number": 18,
-      "text": "Dar este întotdeauna bine să fie zelos într-o cauză bună, și nu numai atunci când eu sunt prezent cu tine."
+      "text": "Este bine să fii zelos întotdeauna pentru o cauză bună, nu doar când sunt prezent la voi."
     },
     {
       "number": 19,
@@ -237,7 +238,7 @@
     },
     {
       "number": 24,
-      "text": "Aceste lucruri conțin o alegorie, pentru că acestea sunt două legăminte. Unul este de la Muntele Sinai, care poartă copii la robie, care este Agar."
+      "text": "Acestea sunt o alegorie: ele reprezintă două legăminte. Unul este de la muntele Sinai, care naște pentru robie; acesta este Agar."
     },
     {
       "number": 25,
@@ -253,7 +254,7 @@
     },
     {
       "number": 28,
-      "text": "Acum noi, frații, așa cum a fost Isaac, suntem copii ai promisiunii."
+      "text": "Iar voi, fraților, sunteți, ca Isaac, copii ai promisiunii."
     },
     {
       "number": 29,
@@ -265,7 +266,7 @@
     },
     {
       "number": 31,
-      "text": "Așadar, fraților, nu suntem copiii unui rob, ci ai femeii libere."
+      "text": "Așadar, fraților, nu suntem copii ai roabei, ci ai femeii libere."
     }
   ],
   "editorialNotes": [
@@ -286,6 +287,42 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Persoana a doua a fost păstrată pentru a menține continuitatea retorică a adresării din contextul imediat."
+    },
+    {
+      "verse": 7,
+      "term": "κληρονόμος διὰ θεοῦ",
+      "decision": "«moștenitor prin Dumnezeu» urmează lectura SBLGNT; nu este introdusă formularea RP «prin Hristos».",
+      "reason": "Aparatul consemnează θεοῦ διὰ Χριστοῦ ca lectură RP, iar SBLGNT are διὰ θεοῦ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal păstrează martorul critic fără armonizare confesională."
+    },
+    {
+      "verse": 9,
+      "term": "γνόντες ... γνωσθέντες ὑπὸ θεοῦ",
+      "decision": "Persoana plurală este păstrată («ați cunoscut», «ați fost cunoscuți»), iar στοιχεῖα este redat «elemente», nu «principii». ",
+      "reason": "Adresarea către comunitate este plurală; termenul poate desemna elemente/puteri elementare, fără a decide o identificare teologică suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea respectă morfologia și ambiguitatea controlată a sursei."
+    },
+    {
+      "verse": 15,
+      "term": "ποῦ οὖν ὁ μακαρισμὸς ὑμῶν",
+      "decision": "Întrebarea este redată «Unde este, deci, fericirea voastră?», nu «Care a fost binecuvântarea».",
+      "reason": "ποῦ cere «unde», iar μακαρισμός indică fericire/declarație de binecuvântare; contextul este o mustrare despre schimbarea atitudinii galatenilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "S-a corectat calchierea care schimba întrebarea și timpul discursului."
+    },
+    {
+      "verse": 31,
+      "term": "οὐκ ἐσμὲν παιδίσκης τέκνα",
+      "decision": "«copii ai roabei» păstrează substantivul și genul sursei; nu «copiii unui rob».",
+      "reason": "παιδίσκη este feminin («roabă/slujnică»), iar τέκνα este neutru plural («copii»).",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost reparată eroarea de gen și referință din textul anterior."
     }
   ],
   "referenceNotes": [],
