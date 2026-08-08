@@ -40,24 +40,28 @@
     "translationsConsulted": [
       {
         "id": "BTF",
+        "consultedInBatch": true,
         "family": "fidela",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
+        "consultedInBatch": true,
         "family": "libera",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
+        "consultedInBatch": true,
         "family": "cornilescu",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
+        "consultedInBatch": false,
         "family": "biblica",
         "mode": "comparison-only",
         "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
@@ -74,26 +78,23 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost sursa principală; TR a fost martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparate auxiliar; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unui text românesc protejat."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
+    "completedOn": "2026-08-08",
+    "engineVersion": "Codex / GPT-5",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-jhn-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 2,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 36,
       "reviewed": 36,
@@ -104,14 +105,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 36 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 36 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul său; TR a fost verificat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Textul a fost revizuit verset cu verset pentru sens, sintaxă și română firească.",
+        "Au fost eliminate adaosurile TR din 3:13 și 3:15 și reparată formularea din 3:30.",
+        "Ambiguitățile din ἄνωθεν și πνεῦμα sunt menținute prin note editoriale, nu glosate în exces."
       ]
     },
     "theologicalContext": {
@@ -129,24 +130,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și WEBP; BTF, Cornilescu 1924 și Biblia Liberă au fost consultate numai pentru comparație, fără copiere."
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 223,
-        "primary": 345,
-        "secondary": 311,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5828511837833763,
-      "minimumScore": 0.5708264730944187
-    },
-    "textDigest": "sha256:7632efb67b74527e724f9965a62d3f7fd262df1232be365ad24d8559937c61db",
-    "contentDigest": "sha256:1fa513415911cc409c086963a2495474e1f953e2ed3ac6b79f798502f9619f72"
+    "textDigest": "sha256:14c433ad853d738d0419f0cf658055f531219835911eeb26968982152c7ee01f",
+    "contentDigest": "sha256:bff35f8849aebb2765afef5c8927174c85a7c0f7e6c5f1c24051c5351b2a02a8"
   },
   "verses": [
     {
@@ -171,11 +162,11 @@
     },
     {
       "number": 6,
-      "text": "Ceea ce este născut din carne este carne. Ceea ce este născut din Duh este spirit."
+      "text": "Ce este născut din carne este carne, iar ce este născut din Duh este duh."
     },
     {
       "number": 7,
-      "text": "Nu vă mirați că v-am spus: Trebuie să vă nașteți cu toții din nou."
+      "text": "Nu te mira că ți-am spus: Trebuie să vă nașteți de sus."
     },
     {
       "number": 8,
@@ -187,7 +178,7 @@
     },
     {
       "number": 10,
-      "text": "Isus i-a răspuns:„ Ești învățătorul lui Israel, și nu înțelegi aceste lucruri?"
+      "text": "Isus i-a răspuns: „Ești învățătorul lui Israel și nu înțelegi aceste lucruri?”"
     },
     {
       "number": 11,
@@ -199,7 +190,7 @@
     },
     {
       "number": 13,
-      "text": "Nimeni nu s-a suit în cer decât cel care a coborât din cer, Fiul Omului, care este în ceruri."
+      "text": "Nimeni nu s-a suit în cer decât Cel care a coborât din cer: Fiul Omului."
     },
     {
       "number": 14,
@@ -207,7 +198,7 @@
     },
     {
       "number": 15,
-      "text": "ca oricine crede în El să nu piară, ci să aibă viața veșnică."
+      "text": "ca oricine crede în El să aibă viață veșnică."
     },
     {
       "number": 16,
@@ -247,7 +238,7 @@
     },
     {
       "number": 25,
-      "text": "De aceea s-a ridicat o dispută din partea discipolilor lui Ioan cu unii iudei cu privire la purificare."
+      "text": "Atunci s-a ivit o dispută între discipolii lui Ioan și un iudeu cu privire la purificare."
     },
     {
       "number": 26,
@@ -267,7 +258,7 @@
     },
     {
       "number": 30,
-      "text": "El trebuie să crească, dar eu trebuie să scadă."
+      "text": "El trebuie să crească, iar eu trebuie să scad."
     },
     {
       "number": 31,
@@ -283,7 +274,7 @@
     },
     {
       "number": 34,
-      "text": "Căci cel pe care l-a trimis Dumnezeu vorbește cuvintele lui Dumnezeu, căci Dumnezeu dă Duhul fără măsură."
+      "text": "Căci Cel pe care L-a trimis Dumnezeu vorbește cuvintele lui Dumnezeu, pentru că nu dă Duhul cu măsură."
     },
     {
       "number": 35,
@@ -291,7 +282,7 @@
     },
     {
       "number": 36,
-      "text": "Cine crede în Fiul are viață veșnică; dar cine nu ascultă de Fiul nu va vedea viața, ci mânia lui Dumnezeu rămâne peste el.”"
+      "text": "Cine crede în Fiul are viață veșnică; dar cine nu ascultă de Fiul nu va vedea viața, ci mânia lui Dumnezeu rămâne peste el."
     }
   ],
   "editorialNotes": [
