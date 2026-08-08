@@ -52,6 +52,14 @@ jobs:
       - name: Validate completed Osea reviewed candidate
         run: python3 scripts/check-hosea-reviewed-candidate.py
 
+      - name: Validate Osea reader integration
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+          pnpm check:vt-publication
+
       - name: Commit fresh source lock and Osea re-audit evidence
         run: |
           git config user.name "github-actions[bot]"
