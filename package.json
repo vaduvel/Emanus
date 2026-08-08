@@ -26,6 +26,7 @@
     "check:osea-reviewed-candidate": "python3 scripts/check-hosea-reviewed-candidate.py",
     "check:vt-explained": "python3 scripts/check-vt-explained-coverage.py",
     "check:vt-legacy-provenance": "pnpm build:shared && node scripts/check-vt-legacy-provenance.mjs",
+    "check:vt-poonen-fidelity": "pnpm build:shared && node scripts/check-vt-poonen-fidelity.mjs",
     "check:vt-publication": "pnpm build:shared && node scripts/check-vt-publication-runtime.mjs"
   }
 }
