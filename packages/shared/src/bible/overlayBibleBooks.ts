@@ -61,6 +61,7 @@ export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((ov
     throw new Error(`[${overlay.name}] lipsește textul biblic de lucru materializat.`)
   }
 
+  const temporary = textBook.textStage === "temporary-editorial"
   const chapters: BibleChapter[] = overlay.chapters.map((chapter) => {
     const verseTexts = textBook.chapters[chapter.number]
     if (!verseTexts) {
@@ -79,26 +80,28 @@ export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((ov
         toReaderUnit(overlay.name, overlay.bookId, chapter.number, verseTexts, unit, index),
       ),
       prayer: "",
-      status: overlay.status,
+      // Explicația poate fi editorial `published`, dar un text biblic de lucru
+      // provizoriu nu trebuie deschis în ediția publică. Când Biblia Emanus
+      // înlocuiește acel text, statusul explicației se propagă automat aici.
+      status: temporary ? "in_review" : overlay.status,
     }
   })
 
-  const temporary = textBook.textStage === "temporary-editorial"
   return {
     id: overlay.bookId,
     name: overlay.name,
     testament: "vt" as const,
     order: overlay.order,
     blurb: temporary
-      ? "Text biblic provizoriu pentru lucru editorial, separat de explicație și marcat pentru înlocuire cu Biblia Emanus. Explicația folosește sursa editorială acolo unde pasajul este dezvoltat și completări biblice generale verificate acolo unde este nevoie."
-      : "Text Biblia Emanus cu explicația separată de Scriptură. Explicația folosește sursa editorială acolo unde pasajul este dezvoltat și completări biblice generale verificate acolo unde este nevoie.",
+      ? "Text biblic provizoriu pentru lucru editorial, separat de explicație și marcat pentru înlocuire cu Biblia Emanus. Explicația este revizuită separat și nu depinde editorial de această traducere de lucru."
+      : "Text Biblia Emanus cu explicația separată de Scriptură. Explicația a fost revizuită editorial independent de textul biblic afișat.",
     chapters,
     translation: textBook.translationLabel,
   }
 })
 
-/** Cărți care pot fi lucrate acum, dar al căror text biblic trebuie schimbat cu BE înainte de publicare. */
+/** Cărți al căror strat explicativ este gata, dar textul biblic trebuie schimbat cu BE înainte de deschiderea publică a capitolului. */
 export const VT_OVERLAY_TEMPORARY_TEXTS = VT_TEMPORARY_TEXT_BOOKS
 
-/** Compatibilitate: explicațiile nu mai sunt blocate de traducerea finală. */
+/** Explicațiile nu sunt blocate editorial de traducerea finală. */
 export const VT_OVERLAY_TRANSLATION_BLOCKERS = [] as const
