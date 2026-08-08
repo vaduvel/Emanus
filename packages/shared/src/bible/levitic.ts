@@ -26,12 +26,13 @@ import { LEVITIC_24 } from "./levitic24.js"
 import { LEVITIC_25 } from "./levitic25.js"
 import { LEVITIC_26 } from "./levitic26.js"
 import { LEVITIC_27 } from "./levitic27.js"
+import { reviewLevitic25Explanation } from "./levitic25ExplanationReview.js"
 
 /*
  * Cartea Levitic.
  *
- * Capitolele scrise sunt importate aici și așezate în lista `chapters`, ca să
- * nu fie nevoie de atins index.ts la fiecare capitol nou.
+ * Capitolele sunt păstrate separat de review-ul editorial final, astfel încât
+ * explicația poate fi corectată fără modificarea textului biblic.
  */
 
 export {
@@ -64,6 +65,36 @@ export {
   LEVITIC_27,
 }
 
+const LEVITIC_CHAPTERS = reviewLevitic25Explanation([
+  LEVITIC_1,
+  LEVITIC_2,
+  LEVITIC_3,
+  LEVITIC_4,
+  LEVITIC_5,
+  LEVITIC_6,
+  LEVITIC_7,
+  LEVITIC_8,
+  LEVITIC_9,
+  LEVITIC_10,
+  LEVITIC_11,
+  LEVITIC_12,
+  LEVITIC_13,
+  LEVITIC_14,
+  LEVITIC_15,
+  LEVITIC_16,
+  LEVITIC_17,
+  LEVITIC_18,
+  LEVITIC_19,
+  LEVITIC_20,
+  LEVITIC_21,
+  LEVITIC_22,
+  LEVITIC_23,
+  LEVITIC_24,
+  LEVITIC_25,
+  LEVITIC_26,
+  LEVITIC_27,
+])
+
 export const LEVITIC: BibleBook = {
   id: "levitic",
   name: "Levitic",
@@ -71,33 +102,5 @@ export const LEVITIC: BibleBook = {
   order: 3,
   blurb:
     "Cartea apropierii de Dumnezeu. În ebraică se numește „Și a chemat”, fiindcă începe cu un glas care iese din cortul abia ridicat. Aici se arată cum poate veni un om păcătos înaintea unui Dumnezeu sfânt, ce costă apropierea și cine o plătește.",
-  chapters: [
-    LEVITIC_1,
-    LEVITIC_2,
-    LEVITIC_3,
-    LEVITIC_4,
-    LEVITIC_5,
-    LEVITIC_6,
-    LEVITIC_7,
-    LEVITIC_8,
-    LEVITIC_9,
-    LEVITIC_10,
-    LEVITIC_11,
-    LEVITIC_12,
-    LEVITIC_13,
-    LEVITIC_14,
-    LEVITIC_15,
-    LEVITIC_16,
-    LEVITIC_17,
-    LEVITIC_18,
-    LEVITIC_19,
-    LEVITIC_20,
-    LEVITIC_21,
-    LEVITIC_22,
-    LEVITIC_23,
-    LEVITIC_24,
-    LEVITIC_25,
-    LEVITIC_26,
-    LEVITIC_27,
-  ],
+  chapters: LEVITIC_CHAPTERS,
 }
