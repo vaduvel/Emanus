@@ -3,87 +3,65 @@ import { deuteronomPassage } from "./deuteronomText.js"
 import { DEUTERONOM_STATUSES } from "./deuteronomPublication.js"
 
 /*
- * Cartea Deuteronom, explicată pe unități de sens.
+ * Deuteronom 20 — corecție finală de conținut.
+ *
+ * Textul biblic este păstrat separat prin deuteronomPassage(). Aici este doar
+ * stratul de explicație. Deoarece transcriptul aprobat nu dezvoltă în mod
+ * demonstrabil întreg capitolul, explicația rămâne textual-overview și nu
+ * adaugă aplicații pastorale, tipologie sau studii lexicale nesusținute.
  */
+
+const TEXTUAL_SOURCE =
+  "Emanus — rezumat textual după Deuteronom 20; fără doctrină adăugată"
 
 export const DEUTERONOM_20 = deuteronomChapter({
   number: 20,
-  title: "Deuteronom 20 — Nu te teme, DOMNUL merge cu tine la luptă",
+  title: "Deuteronom 20 — Rânduieli pentru război",
   summary:
-    "Moise dă legile războiului: încurajarea de a nu te teme căci DOMNUL luptă pentru Israel, scutirile pentru cei cu casă nouă, vie neculeasă, logodnă sau frică, oferta de pace pentru cetățile îndepărtate, nimicirea desăvârșită a neamurilor canaanite, și cruțarea pomilor roditori în timpul împresurării.",
+    "Capitolul stabilește rânduieli pentru Israel în vreme de război: încurajarea rostită înaintea luptei, cazurile în care un om este trimis acasă, procedura pentru cetățile îndepărtate, porunca distinctă privind cetățile popoarelor din Canaan și interdicția de a tăia pomii roditori în timpul unui asediu.",
   literaryContext:
-    "Acest capitol aplică principiile de dreptate din capitolele 17-19 la contextul războiului, arătând că și în luptă Israel trebuie să acționeze cu discernământ, nu cu cruzime nediscriminată.",
+    "Deuteronom 20 continuă seria de legi adresate vieții comunității lui Israel. Capitolul este alcătuit din instrucțiuni concrete pentru situații de război și face distincții între diferite tipuri de cetăți și diferite situații ale oamenilor chemați la luptă.",
   historicalContext:
-    "Cuceririle antice erau de obicei brutale și fără limite față de populația civilă sau resursele naturale ale inamicului. Legea lui Israel distinge net între neamurile canaanite condamnate la nimicire, pentru păcatul lor idolatru continuu, și cetățile îndepărtate care pot primi oferta de pace.",
+    "Pasajul aparține cadrului istoric al Israelului antic și al intrării în țară. Explicația nu transferă automat aceste porunci asupra conflictelor moderne și nu identifică popoare sau state contemporane cu grupurile numite în text.",
   units: [
     {
       id: "deuteronom-20-1-9",
       ref: "Deuteronom 20:1-9",
-      heading: "Nu te teme, și scutirile de la război",
+      heading: "Încurajarea înaintea luptei și cei trimiși acasă",
       text: deuteronomPassage(20, 1, 9),
       teaching: teaching(
-        "Preotul încurajează poporul înainte de luptă: „să nu vi se înmoaie inima, nu vă temeți... căci DOMNUL, Dumnezeul vostru, merge El Însuși cu voi”. Frica de superioritatea numerică sau militară a vrăjmașului este înlocuită cu încrederea în prezența activă a DOMNULUI în luptă.",
-        "Patru categorii sunt scutite de la luptă: cel cu casă nouă nesfințită, cel cu vie neculeasă, cel logodit neînsurat, și cel fricos la inimă — ultima categorie fiind trimisă acasă „ca să nu înmoaie inima fraților lui”. Armata lui Israel nu se bazează pe număr, ci pe curajul autentic al celor rămași.",
+        "Versetele 1–4 descriu cuvintele pe care preotul trebuie să le rostească înaintea luptei. Poporului i se spune să nu se teamă de cai, care și de o oștire mai numeroasă, iar motivul dat de text este că DOMNUL merge cu Israel pentru a lupta împotriva vrăjmașilor lui și pentru a-l izbăvi.",
+        "Versetele 5–9 enumeră cazurile în care un om este trimis acasă: cel care a zidit o casă și nu a inaugurat-o, cel care a sădit o vie și nu s-a bucurat încă de rodul ei, cel logodit care nu și-a luat încă soția și cel fricos. Despre ultimul caz textul spune explicit că este trimis acasă pentru ca inima fraților lui să nu se topească asemenea inimii lui. După aceste scutiri, căpeteniile sunt puse în fruntea poporului.",
       ),
-      words: [
-        {
-          original: "כי יהוה אלהיכם ההלך עמכם",
-          transliteration: "ki YHWH Eloheikhem hahole'kh imakhem",
-          language: "ebraica",
-          meaning:
-            "căci DOMNUL, Dumnezeul vostru, merge cu voi. Temeiul teologic al curajului cerut de la Israel în luptă — nu forța proprie, ci prezența activă a lui Dumnezeu.",
-        },
-      ],
-      crossRefs: ["Deuteronom 31:6", "Judecătorii 7:2-3", "2 Cronici 20:15"],
-      forYourHeart:
-        "Curajul tău nu vine din propriile resurse, ci din certitudinea că Dumnezeu Însuși luptă alături de tine.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
     {
       id: "deuteronom-20-10-15",
       ref: "Deuteronom 20:10-15",
-      heading: "Oferta de pace pentru cetățile îndepărtate",
+      heading: "Cetățile cărora li se oferă pace",
       text: deuteronomPassage(20, 10, 15),
       teaching: teaching(
-        "Pentru cetățile aflate „foarte departe” de Israel, care nu fac parte din neamurile canaanite condamnate, legea cere mai întâi oferta de pace: „să-i oferi mai întâi pacea”. Doar dacă cetatea refuză și alege lupta, Israel poate ataca.",
-        "Distincția este netă între cele două categorii de război: cetățile îndepărtate primesc o șansă reală de supunere pacifică (bir și slujire), pe când cetățile canaanite nu primesc această opțiune, din cauza idolatriei lor persistente descrise în versetele următoare.",
+        "Versetele 10–15 cer ca unei cetăți atacate să i se proclame mai întâi pacea. Dacă cetatea acceptă și își deschide porțile, locuitorii ei intră sub muncă impusă pentru Israel. Dacă refuză pacea și pornește războiul, urmează asediul; după ce cetatea este dată în mâna lui Israel, pasajul descrie uciderea bărbaților și luarea femeilor, copiilor, animalelor și prăzii.",
+        "Versetul 15 precizează că această procedură se aplică cetăților foarte îndepărtate, care nu aparțin cetăților popoarelor enumerate în versetele următoare. Explicația păstrează această distincție a textului fără a transforma «oferta de pace» într-o regulă pastorală generală pentru orice conflict interpersonal.",
       ),
-      words: [
-        {
-          original: "וקראת אליה לשלום",
-          transliteration: "veqarata eleha leshalom",
-          language: "ebraica",
-          meaning:
-            "să-i strigi/oferi pace. Formula care deschide procedura de război pentru cetățile îndepărtate — pacea este oferită mai întâi, nu presupusă absentă.",
-        },
-      ],
-      crossRefs: ["Iosua 9:3-27", "2 Regi 18:31-32", "Luca 14:31-32"],
-      forYourHeart:
-        "Chiar în conflict, oferta de pace vine înaintea escaladării; nu orice diferență cere imediat confruntare.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
     {
       id: "deuteronom-20-16-20",
       ref: "Deuteronom 20:16-20",
-      heading: "Nimicirea neamurilor canaanite, și pomii roditori cruțați",
+      heading: "Cetățile canaanite și pomii din timpul asediului",
       text: deuteronomPassage(20, 16, 20),
       teaching: teaching(
-        "Cetățile celor șapte neamuri canaanite — hetiți, amoriți, canaaniți, fereziți, heviți, iebusiți — sunt date spre „nimicire cu desăvârșire”, fără opțiunea de pace oferită celorlalte cetăți. Motivul dat explicit este prevenirea contaminării idolatre: „ca să nu vă învețe să faceți după toate urâciunile lor”.",
-        "În contrast cu această severitate, legea cere cruțarea pomilor roditori chiar în timpul unei împresurări prelungite: „să nu-i nimicești... să mănânci din ei, dar să nu-i tăiezi”. Doar pomii neroditori pot fi folosiți ca unelte de asediu. Chiar războiul are limite ecologice.",
+        "Versetele 16–18 dau o poruncă diferită pentru cetățile popoarelor numite în țara dată Israelului: textul cere să nu fie lăsată în viață nicio făptură care respiră și enumeră hetiții, amoriții, canaaniții, fereziții, heviții și iebusiții. Motivul formulat în pasaj este ca Israel să nu învețe practicile religioase descrise drept urâciuni și să păcătuiască împotriva DOMNULUI.",
+        "Versetele 19–20 tratează asediul prelungit al unei cetăți. Pomii din care se poate mânca nu trebuie tăiați pentru lucrările de asediu; pomii cunoscuți ca neroditori pot fi tăiați și folosiți până la căderea cetății. Explicația nu numește această regulă o doctrină ecologică modernă și nu folosește porunca de nimicire pentru a justifica violență religioasă sau politică astăzi.",
       ),
-      words: [
-        {
-          original: "החרם תחרימם",
-          transliteration: "hacharem tacharimem",
-          language: "ebraica",
-          meaning:
-            "să-i nimicești cu desăvârșire (repetare pentru intensitate). Termenul cherem descrie consacrarea unui lucru/persoană spre nimicire totală, aplicat aici exclusiv neamurilor canaanite idolatre.",
-        },
-      ],
-      crossRefs: ["Deuteronom 7:1-2", "Iosua 11:20-23", "Deuteronom 12:29-31"],
-      forYourHeart:
-        "Severitatea judecății lui Dumnezeu asupra răului statornic nu-i dă dreptul omului la distrugere nediscriminată; chiar în conflict, limitele rămân.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
   ],
   prayer:
-    "Doamne, Tu ești Cel care lupți pentru poporul Tău; scoate din inima noastră frica și dă-ne curaj adevărat.\n\nÎnvață-ne să oferim pace înainte de confruntare, oriunde este posibil.\n\nDă-ne discernământ să distingem răul care trebuie înfruntat de ceea ce merită încă o șansă.\n\nȘi păzește-ne de distrugere nediscriminată, chiar și în vremuri de conflict. Amin.",
+    "Doamne, ajută-ne să citim acest capitol așa cum este scris, fără să transformăm războaiele Israelului antic în permisiuni pentru violență modernă și fără să ascundem severitatea textului. Dă-ne discernământ să deosebim descrierea și porunca din contextul ei de aplicațiile doctrinare care trebuie argumentate separat. Amin.",
   status: DEUTERONOM_STATUSES[20],
 })
