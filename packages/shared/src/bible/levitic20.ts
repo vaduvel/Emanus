@@ -1,240 +1,206 @@
 import { leviticChapter, teaching } from "./leviticHelpers.js"
 
 /*
- * Cartea Levitic, explicată pe unități de sens.
- *
- * Textul biblic: păstrat separat în leviticText.ts (fișierele leviticTextN.ts).
- * Explicația: scrisă pentru Emanus după cercetarea textului. Nu se copiază
- * formularea niciunui predicator sau comentator.
+ * Levitic 20 — explanation-only review.
+ * Textul biblic este păstrat separat prin leviticChapter/leviticText.
  */
+
+const REVIEW_SOURCE =
+  "Emanus canonical exegesis — Levitic 20 + WLC/biblical cross-references; Zac Poonen, Through The Bible: Leviticus for the book-level holiness frame"
 
 export const LEVITIC_20 = leviticChapter({
   number: 20,
-  title: "Levitic 20 — Cât de greu atârnă păcatul",
+  title: "Levitic 20 — Sfințenia, vina și pedepsele legământului",
   summary:
-    "Ce a fost oprit la capitolul 18 este așezat aici cu pedeapsă: darea copiilor lui Moloh, întoarcerea la cei care cheamă duhuri, blestemarea părinților, preacurvia și legăturile oprite. Se spune și ce se întâmplă când poporul întoarce ochii și nu face nimic. La sfârșit se întoarce chemarea: fiți sfinți, căci Eu, Domnul, sunt sfânt, și Eu v-am despărțit de celelalte popoare.",
+    "Capitolul revine asupra unor păcate numite în Levitic 18 și le așază în cadrul sancțiunilor Israelului: darea copiilor lui Moloh, practicile oculte, blestemarea părinților, adulterul, incestul, relația sexuală între bărbați și bestialitatea. Textul nu îndulcește nici păcatul, nici judecata. Tot el repetă chemarea: «sfințiți-vă și fiți sfinți» și «Eu sunt DOMNUL care vă sfințesc». Pentru biserică, caracterul moral al sfințeniei rămâne; pedepsele capitale ale Israelului nu sunt transferate ca mandat de execuție asupra comunității creștine.",
   literaryContext:
-    "Ia aminte că acest capitol este oglinda capitolului 18: acolo s-a spus ce să nu se facă, aici se spune ce se întâmplă dacă se face. Între ele stă capitolul 19, despre viața de zi cu zi. Și vezi cum se încheie: nu cu osndă, ci cu o chemare la sfințenie și cu amintirea că Dumnezeu i-a scos afară dintre popoare. Osnda nu este ultimul cuvânt nici aici.",
+    "Levitic 18 enumerase relații și practici interzise; capitolul 20 revine asupra multora dintre ele și precizează sancțiuni în cadrul legământului și al vieții civile a Israelului. Între ele, Levitic 19 a arătat că sfințenia pătrunde și în munca zilnică, dreptate, vorbire, sexualitate și iubirea aproapelui. Poonen tratează Leviticul ca o carte despre sfințenia lui Dumnezeu și despre refuzul de a tolera păcatul ca pe o boală; capitolul 20 trebuie citit în această greutate, nu neutralizat.",
   historicalContext:
-    "Israelul era, în vremea aceea, și popor și țară și adunare, toate într-una; legile lui erau și legi de stat. De aceea unele păcate aveau aici pedeapsă de moarte, ca în orice așezământ de țară din vremea aceea. Se cade spus lămurit: hotărârile acelea au fost date poporului aceluia, sub așezământul acela, și nu au fost lăsate în mâna adunării de azi. Biserica nu are sabie; are Cuvântul, mustrarea și chemarea la pocăință.",
+    "Israelul antic era o comunitate de legământ cu ordine cultică și juridică proprie. Unele încălcări din acest capitol primesc pedeapsa capitală, altele «tăierea» din popor, purtarea vinei sau moartea fără copii. Noul Testament continuă să numească păcat mai multe dintre conduitele morale condamnate aici, dar disciplina bisericii este formulată diferit: mustrare, pocăință, excludere din comunitate în cazurile grave și restaurare când există pocăință. Nu spunem vag că «orice țară din vremea aceea» avea aceleași legi și nici nu transformăm sancțiunile Israelului în dreptul bisericii de a ucide.",
   units: [
     {
       verses: [1, 5],
-      heading: "Când poporul întoarce ochii",
+      heading: "Moloh — și vina celui care își închide ochii",
       teaching: teaching(
-        "Întâiul lucru judecat este darea copiilor lui Moloh. Ia aminte însă la ce se adaugă îndată: dacă poporul își întoarce ochii de la omul acela și nu face nimic, Dumnezeu Însuși își întoarce fața împotriva lui și împotriva casei lui. Nu numai fapta este judecată; și tăcerea celor care au știut și au tăcut.",
-        "Și vezi cât de greu atârnă lucrul acesta înaintea lui Dumnezeu. Unde se face rău unui copil, cel mai lesne păcat este al vecinului care spune că nu este treaba lui. În adunările noastre s-au acoperit lucruri grele tocmai cu vorba aceasta.",
-        "Ia seama pentru ce se spune că lucrul acela spurca locul sfânt și Numele Lui: fiindcă se făcea în numele închinării. Când răul se face sub acoperirea credinței, se lovește și în cel călcat și în Numele lui Dumnezeu.",
-        "Și ține minte că Dumnezeu nu a lăsat lucrul la voia adunării: dacă oamenii tac, spune El, Eu voi lucra. Cine nu apără pe cel mic nu scăpă fiindcă a tăcut frumos.",
+        "Capitolul începe cu omul care își dă urmașii lui Moloh. Pedeapsa formulată este moartea, iar «poporul țării» trebuie să-l ucidă cu pietre. Textul spune de ce fapta este atât de gravă: omul spurcă sanctuarul lui Dumnezeu și profanează Numele Lui.",
+        "Apoi Dumnezeu vorbește despre situația în care oamenii țării «își ascund ochii» față de acel om și nu-l omoară potrivit legii primite. DOMNUL spune că Își va pune El Însuși fața împotriva omului și a familiei/casei lui și îi va tăia din popor pe cei care se prostituează spiritual după Moloh. Așadar capitolul nu judecă numai actul cultic, ci și refuzul comunității de legământ de a aplica dreptatea pe care o primise.",
+        "Aplicația pentru biserică nu este că vecinii trebuie să execute pe cineva. Dar principiul împotriva acoperirii răului rămâne foarte puternic: o comunitate care știe despre abuz grav și își «închide ochii» nu poate numi tăcerea sfințenie. Noul Testament cere ca răul grav din comunitate să fie confruntat, iar cei vulnerabili să nu fie sacrificați pentru reputația instituției.",
+        "Și nu diluăm Moloh într-o metaforă atât de repede încât să uităm copiii reali ai textului. Abia după ce lăsăm porunca să condamne răul concret putem face cercetarea pastorală: orice religie care cere să distrugi copilul ca să-ți păstrezi zeul, statutul sau interesul este o profanare, nu închinare.",
       ),
+      explanationKind: "exposition",
+      explanationSource: REVIEW_SOURCE,
       words: [
         {
-          original: "ואם העלם יעלימו את עיניהם",
-          transliteration: "veim halem ialimu et eineihem",
+          original: "וְאִם הַעְלֵם יַעְלִימוּ עַם הָאָרֶץ אֶת־עֵינֵיהֶם",
+          transliteration: "ve'im ha'lem ya'limu am ha'areț et-eineihem",
           language: "ebraica",
-          meaning:
-            "dacă își vor întoarce ochii. Și tăcerea este judecată.",
+          meaning: "dacă poporul țării își va ascunde/închide ochii",
         },
         {
-          original: "ושמתי אני את פני באיש ההוא",
-          transliteration: "vesamti ani et panai baiș hahu",
+          original: "וְשַׂמְתִּי אֲנִי אֶת־פָּנַי",
+          transliteration: "vesamti ani et-panai",
           language: "ebraica",
-          meaning:
-            "Și Eu Îmi voi întoarce fața împotriva omului aceluia. Dacă oamenii tac, lucrează El.",
-        },
-        {
-          original: "לטמא את מקדשי",
-          transliteration: "letame et mikdași",
-          language: "ebraica",
-          meaning:
-            "ca să spurce locul Meu sfânt. Răul făcut în numele închinării.",
+          meaning: "Îmi voi pune Eu fața împotriva...",
         },
       ],
-      crossRefs: ["Iacov 4:17", "Proverbe 24:11-12", "Matei 18:6", "Ezechiel 34:2-4", "1 Corinteni 5:2"],
+      crossRefs: ["Levitic 18:21", "2 Împărați 23:10", "Ieremia 32:35", "1 Corinteni 5:1-13", "Proverbe 24:11-12"],
       forYourHeart:
-        "Cel mai lesne păcat este al celui care spune că nu este treaba lui. Ce știi și taci?",
+        "Există rău pe care îl vezi și pentru care «nu vreau să mă bag» a devenit o scuză? A închide ochii nu face răul mai sfânt.",
     },
     {
       verses: [6, 8],
-      heading: "Cine își caută liniștea în altă parte",
+      heading: "Duhuri, ghicitori și Dumnezeul care sfințește",
       teaching: teaching(
-        "Cine se întoarce la cei care cheamă duhuri și la ghicitori va fi tăiat din popor. Ia aminte la cuvântul folosit: se desfrânează după ei. Dumnezeu nu socotește lucrul o greșeală de nesocotință, ci o necredincioșie: omul își duce nădejdea și întrebarea la altcineva.",
-        "Și vezi ce urmează îndată, în locul unei alte amenințări: sfințiți-vă și fiți sfinți, căci Eu sunt Domnul, Dumnezeul vostru. Iar apoi cuvântul cel mai bun din capitol: Eu sunt Domnul care vă sfințesc. Se cere sfințenie și, în aceeași suflare, se făgăduiește că El o lucrează.",
-        "Ia seama că aici stă deosebirea dintre lege și har, chiar în Vechiul Testament. Nu se spune numai fiți sfinți; se spune și Eu vă sfințesc. Cine încearcă să se curețe singur ostenește și cade; cine se dă în mâna Lui este curățit.",
-        "Și ține minte că la ghicitori merge, de cele mai multe ori, omul îngrijorat, nu omul rău. Frica și durerea îl duc acolo. De aceea nu se cade să fie arătat cu degetul cel care a mers, ci să fie chemat înapoi la Cel care sfințește.",
+        "Cine se întoarce spre mediumuri și spiritiști este descris prin limbajul infidelității: se «desfrânează» după ei. Problema nu este numai curiozitatea. Omul caută de la alte puteri călăuzire, siguranță sau acces la lumea nevăzută care aparțin lui Dumnezeu.",
+        "Nu inventăm o psihologie universală spunând că omul care merge la asemenea practici este «de cele mai multe ori doar îngrijorat». Poate exista frică, durere, lăcomie, curiozitate sau revoltă; textul nu stabilește motivul interior al fiecăruia. El stabilește obiectul necredincioșiei.",
+        "În mijlocul acestor avertismente vine porunca: «sfințiți-vă și fiți sfinți», urmată de declarația: «Eu sunt DOMNUL care vă sfințesc». Cele două nu trebuie puse unul împotriva celuilalt. Dumnezeu poruncește răspunsul omului și, în același timp, Se prezintă ca Cel care pune poporul deoparte pentru Sine.",
+        "Poonen insistă în întreaga lui expunere asupra Leviticului că sfințenia nu trebuie tratată ca un cuvânt de care credinciosul se teme. El o compară cu sănătatea: după cum nu vrem să păstrăm boala în trup, nu trebuie să negociem cu păcatul în viață. Această chemare rămâne puternică; nu este «legalism» să vrei să fii curățit de ceea ce Dumnezeu numește păcat.",
       ),
+      explanationKind: "exposition",
+      explanationSource: REVIEW_SOURCE,
       words: [
         {
-          original: "לזנות אחריהם",
+          original: "לִזְנוֹת אַחֲרֵיהֶם",
           transliteration: "liznot ahareihem",
           language: "ebraica",
-          meaning:
-            "să se desfrâneze după ei. O necredincioșie, nu o simplă nesocotință.",
+          meaning: "a se prostitua/desfrâna după ei; metaforă a infidelității religioase",
         },
         {
-          original: "והתקדשתם והייתם קדשים",
-          transliteration: "vehitkadiștem vihiitem kedoșim",
+          original: "אֲנִי יְהוָה מְקַדִּשְׁכֶם",
+          transliteration: "ani YHWH mekadișhem",
           language: "ebraica",
-          meaning:
-            "sfințiți-vă și fiți sfinți. Pus în locul unei alte amenințări.",
-        },
-        {
-          original: "אני יהוה מקדשכם",
-          transliteration: "ani Domnul mekadișhem",
-          language: "ebraica",
-          meaning:
-            "Eu sunt Domnul care vă sfințesc. Cuvântul cel mai bun din capitol.",
+          meaning: "Eu sunt DOMNUL care vă sfințesc / vă pun deoparte",
         },
       ],
-      crossRefs: ["1 Tesaloniceni 5:23-24", "Filipeni 2:13", "Isaia 8:19", "Evrei 13:20-21", "Ioan 15:5"],
+      crossRefs: ["Levitic 19:2", "Isaia 8:19", "1 Petru 1:15-16", "1 Tesaloniceni 4:3-7", "1 Tesaloniceni 5:23-24"],
       forYourHeart:
-        "Se cere sfințenie și, în aceeași suflare, El făgăduiește că o lucrează El.",
+        "Unde cauți răspuns când Dumnezeu nu-ți spune imediat ce vrei să știi? Sfințenia include și refuzul de a cere luminii de la o sursă pe care El a interzis-o.",
     },
     {
       verses: [9, 16],
-      heading: "Pedepse grele, și Cel care le-a luat asupra Lui",
+      heading: "Pedepsele sunt severe; păcatele nu sunt redenumite",
       teaching: teaching(
-        "Urmează șirul cel greu: cine blestemă pe tatăl sau pe mama lui, preacurvia, legăturile oprite în casă, faptele pomenite la capitolul 18 — toate cu pedeapsă de moarte. Ia aminte că nu putem citi lucrurile acestea ca și când ar fi date nouă ca lege. Israelul era și țară, iar acestea erau legile țării aceleia. Adunarea de azi nu are sabie; are Cuvântul și chemarea la pocăință.",
-        "Și vezi totuși ce ne învață ele și astăzi: cât de greu atârnă păcatul înaintea lui Dumnezeu. Ne-am obișnuit să socotim aceste lucruri slăbiciuni, greșeli de tinerețe, întâmplări. Dumnezeu le-a socotit vrednice de moarte. Cine nu vede greutatea nu înțelege nici prețul Crucii.",
-        "Ia seama la ce se spune de fiecare dată: sângele lui va fi asupra lui. Vina stătea pe capul celui care făcuse. Iar la Golgota s-a făcut lucrul cel mai neaașteptat: vina noastră a stătut pe capul Altuia, și osnda pe care o cerea legea aceasta a căzut peste El.",
-        "Și ține minte cum a lucrat Domnul Iisus când I-au adus o femeie prinsă în preacurvie, cu litera acestui capitol în gură. Nu a zis că legea greșește și nu a zis că fapta nu este păcat. A spus două lucruri: cine este fără păcat să arunce întâi, și du-te și să nu mai păcătuiești. Așa se ține și greutatea păcatului și mila, într-o singură mână.",
+        "Versetele 9–16 sunt fără echivoc. Blestemarea tatălui sau a mamei, adulterul, raporturile incestuoase enumerate, relația sexuală între doi bărbați și bestialitatea primesc sancțiuni capitale în ordinea juridică a Israelului. Nu schimbăm cuvintele ca să facem textul mai acceptabil și nu pretindem că relația bărbat–bărbat din versetul 13 înseamnă altceva decât actul sexual pe care îl descrie.",
+        "Tot atât de important este să nu amestecăm două întrebări diferite. Prima este: «consideră Scriptura aceste fapte păcat?» Pentru mai multe dintre ele, Noul Testament răspunde din nou da — adulterul, incestul, conduita sexuală între persoane de același sex și alte forme de imoralitate sexuală sunt condamnate moral. A doua întrebare este: «a primit biserica pedeapsa cu moartea ca disciplină?» Răspunsul Noului Testament este nu; în 1 Corinteni 5, un caz de incest este tratat prin scoaterea omului din comunitate, nu prin execuție.",
+        "Astfel nu folosim schimbarea administrației legământului ca să spunem că păcatul a încetat să fie păcat și nu folosim continuitatea morală ca să dăm bisericii sabia civilă a Israelului. Cele două trebuie ținute împreună.",
+        "Formula repetată «sângele lui/lor este asupra lui/lor» plasează răspunderea pentru sentință asupra celor declarați vinovați în acea ordine juridică. Nota lexicală nu trebuie transformată în propoziția «la Golgota sângele nostru a stat pe Altul»; aceasta este o aplicație teologică separată. Legătura cu Crucea se face mai sigur prin textele care spun explicit că Hristos a purtat păcatele noastre și blestemul pentru noi.",
+        "Crucea nu dovedește că păcatul era mic. Dimpotrivă, Noul Testament spune că plata păcatului este moartea și că Hristos a purtat păcatele în trupul Său. Harul nu redenumește răul; oferă iertare, spălare și o viață nouă celui care vine la Hristos.",
       ),
+      explanationKind: "exposition",
+      explanationSource: REVIEW_SOURCE,
       words: [
         {
-          original: "אביו ואמו קלל",
-          transliteration: "aviv veimo kilel",
+          original: "אָבִיו וְאִמּוֹ קִלֵּל",
+          transliteration: "aviv ve'imo qilel",
           language: "ebraica",
-          meaning:
-            "a blestemat pe tatăl și pe mama lui. Nu o vorbă grea, ci o lepădare.",
+          meaning: "și-a blestemat / a tratat cu dispreț grav tatăl și mama",
         },
         {
-          original: "דמיו בו",
-          transliteration: "damav bo",
+          original: "מוֹת יוּמָתוּ",
+          transliteration: "mot yumatu",
           language: "ebraica",
-          meaning:
-            "sângele lui va fi asupra lui. La Golgota, vina noastră a stătut pe Altul.",
+          meaning: "să fie omorâți / pedepsiți cu moartea",
         },
         {
-          original: "מות יומת",
-          transliteration: "mot iumat",
+          original: "דְּמֵיהֶם בָּם",
+          transliteration: "demeihem bam",
           language: "ebraica",
-          meaning:
-            "să fie dat morții. Legea unei țări de atunci, nu a adunării de azi.",
+          meaning: "sângele lor este asupra lor; formula răspunderii pentru sentință",
         },
       ],
-      crossRefs: ["Ioan 8:7-11", "Romani 6:23", "Isaia 53:5-6", "Galateni 3:13", "Romani 8:1"],
+      crossRefs: ["1 Corinteni 5:1-13", "1 Corinteni 6:9-11", "Romani 1:26-27", "Evrei 13:4", "1 Petru 2:24", "Galateni 3:13"],
       forYourHeart:
-        "Cine nu vede greutatea păcatului nu înțelege nici prețul Crucii.",
+        "Harul nu îți cere să numești păcatul altfel. Îți cere să vii cu el la Hristos, să fii spălat și să nu mai trăiești ca înainte.",
     },
     {
       verses: [17, 21],
-      heading: "Ce rămâne fără rod",
+      heading: "Tăiere, purtarea vinei și moarte fără copii",
       teaching: teaching(
-        "Pentru alte fapte nu se cere moartea, ci tăierea din popor sau o altă urmare: vor rămâne fără copii, își vor purta fărădelegea, vor muri fără rod. Ia aminte că nu toate păcatele au fost măsurate la fel. Dumnezeu deosebește, și noi îi punem pe toți într-o grămadă.",
-        "Și vezi ce fel de urmare este pomenită aici: nu o lovitură pe loc, ci o viață care nu rodește. Sunt păcate care nu se plătesc îndată, dar usucă încet: casa rămâne, și bucuria nu mai vine în ea. Cine seamănă în carne culege stricăciune, scrie Pavel, cu alte vorbe, același lucru.",
-        "Ia seama că nu se cade să întoarcem versetul acesta împotriva oamenilor fără copii. Scriptura spune în alt loc lămurit că nu orice lipsă este pedeapsă, iar Domnul Iisus a oprit tocmai socoteala aceasta când au întrebat despre orbul din naștere. Aici se vorbește despre o urmare hotărâtă de Dumnezeu într-un caz anume, nu despre o regulă pentru toată lumea.",
-        "Și ține minte că rodul cel mai de preț nu se numără în copii, ci în viață schimbată. Un om poate avea casa plină și să fie uscăciune, și poate fi singur și să rodească în mulți. Rodul îl dă vița, nu mândria noastră.",
+        "Versetele 17–21 continuă cu relații incestuoase și sancțiuni diferite. Pentru relația cu sora, textul vorbește despre o «rușine» și despre tăierea celor doi înaintea poporului; pentru alte relații spune că își vor purta vina; iar în două cazuri apare consecința de a muri fără copii.",
+        "Aici explicația veche făcea o schimbare importantă de sens: `aririm` nu înseamnă vag «fără rod» în sens spiritual, ci fără copii / lipsit de urmași. Nu transformăm o sancțiune concretă asupra descendenței într-o promisiune că orice păcat secret va produce automat «uscăciune spirituală» într-un mod detectabil.",
+        "La fel, nu întoarcem versetele împotriva oamenilor care nu au copii. Textul nu spune că lipsa copiilor este în general dovada unui păcat sexual. Scriptura ne arată oameni credincioși care au trecut prin sterilitate, iar Domnul Isus respinge logica simplistă potrivit căreia orice suferință poate fi citită direct drept pedeapsă pentru o vină personală ascunsă.",
+        "Putem păstra o aplicație morală mai sigură: Dumnezeu ia relațiile sexuale și de familie mult mai în serios decât cultura care le tratează ca simple preferințe private. Dar aplicăm ceea ce textul spune, nu inventăm diagnostice despre familiile altora.",
       ),
+      explanationKind: "exposition",
+      explanationSource: REVIEW_SOURCE,
       words: [
         {
-          original: "ונכרתו לעיני בני עמם",
-          transliteration: "venihretu leeinei benei amam",
+          original: "עֲרִירִים יָמֻתוּ",
+          transliteration: "aririm yamutu",
           language: "ebraica",
-          meaning:
-            "vor fi tăiați înaintea ochilor poporului lor. Nu toate au fost măsurate la fel.",
+          meaning: "vor muri fără copii / fără urmași",
         },
         {
-          original: "ערירים ימתו",
-          transliteration: "aririm iamutu",
+          original: "עֲוֹנָם יִשָּׂאוּ",
+          transliteration: "avonam yisa'u",
           language: "ebraica",
-          meaning:
-            "vor muri fără rod. O viață care nu rodește, nu o lovitură pe loc.",
-        },
-        {
-          original: "עונם ישאו",
-          transliteration: "avonam isau",
-          language: "ebraica",
-          meaning:
-            "își vor purta fărădelegea. Ce nu se plătește îndată usucă încet.",
+          meaning: "își vor purta vina/nelegiuirea",
         },
       ],
-      crossRefs: ["Galateni 6:7-8", "Ioan 9:2-3", "Isaia 56:4-5", "Ioan 15:4-5", "Proverbe 13:15"],
+      crossRefs: ["Geneza 18:11-14", "1 Samuel 1:1-20", "Ioan 9:1-3", "Luca 1:5-25"],
       forYourHeart:
-        "Sunt păcate care nu lovesc îndată, dar usucă încet. Ce se usucă în tine?",
+        "Nu folosi o suferință vizibilă din viața altuia ca probă pentru un păcat pe care nu-l cunoști. Lasă-L pe Dumnezeu să judece și lasă textul să spună exact ce spune.",
     },
     {
       verses: [22, 24],
-      heading: "Țara nu ține pe cine face la fel",
+      heading: "«Mi-a fost scârbă de ele» — textul nu trebuie îndulcit",
       teaching: teaching(
-        "Să păziți toate legile Mele, ca să nu vă verse țara afară. Ia aminte că se întoarce vorba de la capitolul 18: țara nu ține pe cine face faptele acelea, oricine ar fi el. Poporul lui Dumnezeu nu era apărat de urmări fiindcă era al Lui. Cel ce se numește al Lui este judecat întâi.",
-        "Și vezi pricina pentru care se făcea scăderea popoarelor de acolo: fiindcă au făcut lucrurile acelea, și Dumnezeu le-a urât. Nu se spune că le-a urât pe ele, ci faptele lor. Deosebirea aceasta nu se cade uitată când vorbim despre oameni.",
-        "Ia seama la făgăduința pusă îndată după amenințare: vă voi da țara lor și o veți stăpâni, țara în care curge lapte și miere. Dumnezeu nu încheie cu frica. Și aici, și la capitolul 18, după vorba grea urmează o făgăduință.",
-        "Și ține minte cuvântul: Eu sunt Domnul, Dumnezeul vostru, care v-am despărțit de celelalte popoare. Nu poporul s-a deosebit prin osteneala lui; El i-a deosebit. Sfințenia începe cu o lucrare a Lui, nu cu o hotărâre a noastră.",
+        "Israel trebuie să păzească poruncile ca țara să nu-l verse afară, așa cum îi vărsase pe locuitorii anteriori. Aici se vede din nou că alegerea lui Israel nu înseamnă imunitate morală: dacă face aceleași lucruri, poporul poate ajunge sub aceeași judecată a legământului.",
+        "Apoi Dumnezeu spune despre popoarele ale căror obiceiuri Israel nu trebuie să le urmeze: «au făcut toate aceste lucruri și Mi-a fost scârbă de ele / le-am detestat». Explicația veche corecta textul spunând: «nu le-a urât pe ele, ci doar faptele lor». Ebraicul nu spune aceasta. Pronumele se referă la popoarele/natiunile despre care tocmai se vorbește. Motivul detestării lor este conduita lor, dar obiectul propoziției sunt ele.",
+        "Nu trebuie să ne sperie suficient de mult această formulare încât să o rescriem. Scriptura poate vorbi atât despre iubirea lui Dumnezeu pentru lume, cât și despre mânia, ura sau detestarea Lui față de cei care persistă în rău. Teologia noastră trebuie să fie suficient de mare pentru toate textele, nu să șteargă unele ca să le protejeze pe celelalte.",
+        "Și tocmai imparțialitatea judecății oprește folosirea acestui text pentru superioritate etnică. Israel nu primește voie să facă aceleași lucruri fiindcă este Israel. Poonen subliniază aceeași idee când explică judecata canaaniților în Iosua: când Israel și Iuda au persistat în păcat, Dumnezeu i-a scos și pe ei din țară.",
+        "După avertisment vine darul țării și declarația: «Eu sunt DOMNUL Dumnezeul vostru, care v-am despărțit de popoare». Separarea este actul lui Dumnezeu care cheamă apoi la o viață corespunzătoare Lui; nu este o diplomă prin care poporul devine moral deasupra judecății.",
       ),
+      explanationKind: "exposition",
+      explanationSource: REVIEW_SOURCE,
       words: [
         {
-          original: "ולא תקיא אתכם הארץ",
-          transliteration: "velo taki etkem haareț",
+          original: "וָאָקֻץ בָּם",
+          transliteration: "va'aquț bam",
           language: "ebraica",
-          meaning:
-            "și țara să nu vă verse afară. Nici pe voi nu vă ține, dacă faceți la fel.",
+          meaning: "și Mi-a fost scârbă de ei/ele; i-am detestat",
         },
         {
-          original: "ואקץ בם",
-          transliteration: "vaakuț bam",
+          original: "אֲשֶׁר הִבְדַּלְתִּי אֶתְכֶם מִן־הָעַמִּים",
+          transliteration: "așer hivdalti etkem min-ha'amim",
           language: "ebraica",
-          meaning:
-            "și Mi-a fost scârbă de ele. De fapte, nu de făptura omului.",
-        },
-        {
-          original: "אשר הבדלתי אתכם מן העמים",
-          transliteration: "așer hivdalti etkem min haamim",
-          language: "ebraica",
-          meaning:
-            "care v-am despărțit de popoare. El i-a deosebit, nu osteneala lor.",
+          meaning: "pe care v-am despărțit de popoare",
         },
       ],
-      crossRefs: ["1 Petru 4:17", "Romani 2:11", "1 Petru 2:9", "Ioan 15:16", "Evrei 12:14"],
+      crossRefs: ["Levitic 18:24-30", "Deuteronom 9:4-6", "Psalmul 5:5-6", "Romani 2:5-11", "2 Împărați 17:7-23"],
       forYourHeart:
-        "Nu ne-am deosebit noi; El ne-a deosebit. Sfințenia începe cu lucrarea Lui.",
+        "Nu folosi alegerea sau numele de «credincios» ca protecție împotriva pocăinței. Dumnezeul care judecă răul la alții nu îl numește bine când apare în poporul Lui.",
     },
     {
       verses: [25, 27],
-      heading: "Deosebirea de fiecare zi, și încheierea",
+      heading: "Deosebirea zilnică și ultimul avertisment despre ocult",
       teaching: teaching(
-        "La sfârșit se întoarce rânduiala despre făpturi curate și necurate, de la capitolul 11. Ia aminte pentru ce este pusă aici: ca deosebirea să se vadă în fiecare zi, la masă, nu numai în lucrurile mari. Un popor învață sfințenia din lucruri mărunte, care se repetă.",
-        "Și vezi încheierea întregii părți: să-Mi fiți sfinți, căci Eu, Domnul, sunt sfânt, și v-am despărțit de popoare ca să fiți ai Mei. Nu se spune să fiți sfinți ca să vă deosebiți de oameni, ci fiindcă sunteți ai Lui. Ținta nu este despărțirea, ci înrudirea cu El.",
-        "Ia seama că și rânduielile acestea de masă nu ne mai leagă; s-a spus lămurit în Noul Testament. Ce rămâne este învățătura din ele: cine nu deosebește în lucruri mici nu deosebește nici în lucruri mari.",
-        "Și ține minte ultimul verset, care se întoarce la ghicitori și la cei care cheamă duhuri. Capitolul începe cu Moloh și se încheie cu duhurile: de la început până la sfârșit, primejdia cea mai mare a poporului a fost să caute la altcineva ce numai Dumnezeu putea da.",
+        "Versetele 25–26 reiau deosebirea dintre animale curate și necurate și o leagă de chemarea: «să-Mi fiți sfinți, căci Eu, DOMNUL, sunt sfânt și v-am despărțit dintre popoare ca să fiți ai Mei». Pentru Israel, asemenea deosebiri alimentare făceau parte din identitatea cotidiană a legământului.",
+        "Noul Testament arată că regimul alimentar ceremonial nu este impus bisericii în aceeași formă. Dar chemarea la sfințenie rămâne explicită în 1 Petru 1. De aceea nu păstrăm lista alimentară ca lege a justificării creștinului, dar nici nu folosim împlinirea ei ceremonială ca argument împotriva sfințeniei morale.",
+        "Capitolul se încheie revenind la medium și spiritist: și ei primesc pedeapsa capitală în Israel. Din nou, nu dăm bisericii dreptul de execuție. Dar practicile oculte nu devin prin aceasta neutre; Noul Testament continuă să respingă vrăjitoria și practicile magice și cheamă oamenii să rupă cu ele.",
+        "Poonen spune despre Levitic că Dumnezeu urmărește sfințenia în detaliile vieții, nu numai în momentele mari. Aceasta este o aplicație potrivită aici: omul pus deoparte pentru Dumnezeu învață să deosebească în lucruri concrete, nu își rezervă religia pentru ritualuri rare.",
       ),
+      explanationKind: "exposition",
+      explanationSource: REVIEW_SOURCE,
       words: [
         {
-          original: "והבדלתם בין הבהמה הטהרה לטמאה",
-          transliteration: "vehivdaltem bein habehema hatehora latemea",
+          original: "וִהְיִיתֶם לִי קְדֹשִׁים",
+          transliteration: "vihyitem li qedoșim",
           language: "ebraica",
-          meaning:
-            "să deosebiți între vita curată și cea necurată. Deosebirea de fiecare zi.",
+          meaning: "să-Mi fiți sfinți / puși deoparte pentru Mine",
         },
         {
-          original: "והייתם לי קדשים",
-          transliteration: "vihiitem li kedoșim",
+          original: "אוֹב אוֹ יִדְּעֹנִי",
+          transliteration: "ov o yide'oni",
           language: "ebraica",
-          meaning:
-            "să-Mi fiți sfinți. Ținta este înrudirea cu El, nu despărțirea de oameni.",
-        },
-        {
-          original: "אוב או ידעני",
-          transliteration: "ov o iideoni",
-          language: "ebraica",
-          meaning:
-            "cel care cheamă duhuri sau ghicitorul. Capitolul se încheie unde a început.",
+          meaning: "medium sau spiritist/necromant",
         },
       ],
-      crossRefs: ["Marcu 7:18-19", "1 Petru 1:15-16", "Luca 16:10", "Coloseni 2:20-22", "Ieremia 17:5-7"],
+      crossRefs: ["Marcu 7:18-23", "Fapte 10:9-16", "1 Petru 1:15-16", "Galateni 5:19-21", "Fapte 19:18-20"],
       forYourHeart:
-        "Cine nu deosebește în lucruri mici nu deosebește nici în lucruri mari.",
+        "Sfințenia nu înseamnă doar să refuzi câteva păcate spectaculoase. Înseamnă să fii al Lui și în alegerile repetate, mici, pe care le faci când nimeni nu te aplaudă.",
     },
   ],
   prayer:
-    "Doamne, ne-ai arătat cât de greu atârnă păcatul, și cât de mare este mila Ta.\n\nMulțumim că osnda pe care o cerea legea a căzut peste Fiul Tău, nu peste noi.\n\nNu ne lăsa să tăcem când cineva slab este călcat în picioare.\n\nTu ești Domnul care ne sfințește; lucrează Tu ce noi nu putem lucra. Amin."
+    "Doamne, nu ne lăsa să îndulcim ceea ce Tu numești păcat și nici să luăm în mâinile noastre pedepse pe care nu le-ai dat bisericii. Fă-ne sfinți pentru că suntem ai Tăi. Rupe orice legătură cu ocultul, curăță sexualitatea noastră și păzește-ne să nu închidem ochii când cel slab este sacrificat. Tu ești DOMNUL care ne sfințește. Amin."
 })
