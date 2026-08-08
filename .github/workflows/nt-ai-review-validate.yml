@@ -40,7 +40,7 @@ jobs:
           if test -f "$journal"; then
             echo 'HEB.12 already reviewed; skipping chapter commit.'
           else
-            python3 .github/nt-ai-review/heb12.py
+            python3 .github/nt-ai-review/heb12_run.py
             git diff --check
             pnpm check:biblia-emanus
             python3 scripts/check-biblia-emanus-romanian-quality.py
