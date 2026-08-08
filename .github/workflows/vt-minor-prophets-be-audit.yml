@@ -74,7 +74,7 @@ jobs:
             --source-ref origin/agent/biblia-emanus-ot-and-apocrypha
 
       - name: Validate full Biblia Emanus corpus
-        run: python3 scripts/check-biblia-emanus.py
+        run: python3 scripts/check-biblia-emanus-corpus.py
 
       - name: Validate Osea reader integration
         run: |
