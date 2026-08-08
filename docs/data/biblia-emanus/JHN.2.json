@@ -40,24 +40,28 @@
     "translationsConsulted": [
       {
         "id": "BTF",
+        "consultedInBatch": true,
         "family": "fidela",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
+        "consultedInBatch": true,
         "family": "libera",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
+        "consultedInBatch": true,
         "family": "cornilescu",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
+        "consultedInBatch": false,
         "family": "biblica",
         "mode": "comparison-only",
         "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
@@ -74,26 +78,23 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost sursa principală; TR a fost martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparate auxiliar; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unui text românesc protejat."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
+    "completedOn": "2026-08-08",
+    "engineVersion": "Codex / GPT-5",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-jhn-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 2,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -104,14 +105,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 25 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul său; TR a fost verificat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Textul a fost revizuit verset cu verset pentru sens, sintaxă și română firească.",
+        "Formulările idiomatice și jocul verbal din 2:23–24 sunt menținute fără supratraducere.",
+        "Varianta de viitor din 2:17 și diferențele de aparat au fost tratate explicit."
       ]
     },
     "theologicalContext": {
@@ -129,24 +130,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și WEBP; BTF, Cornilescu 1924 și Biblia Liberă au fost consultate numai pentru comparație, fără copiere."
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 223,
-        "primary": 345,
-        "secondary": 311,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5828511837833763,
-      "minimumScore": 0.5708264730944187
-    },
     "textDigest": "sha256:90e1da057b4dfee1067f27d2af1df9a6258ecd49e0d13c5d6754c35317259b5b",
-    "contentDigest": "sha256:584c4e610f9eece357aaff47dad2fb54fefea973175971d785fae7baf1be9b24"
+    "contentDigest": "sha256:71c7107285c994bec880aef7339c1618a4ac9b3c26fa980af2c60a37935a66e3"
   },
   "verses": [
     {
