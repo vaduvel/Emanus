@@ -3,131 +3,88 @@ import { deuteronomPassage } from "./deuteronomText.js"
 import { DEUTERONOM_STATUSES } from "./deuteronomPublication.js"
 
 /*
- * Cartea Deuteronom, explicată pe unități de sens.
+ * Deuteronom 24 — explicație textuală.
+ * Textul biblic rămâne separat în deuteronomText; acest fișier modifică doar
+ * stratul de explicație. În lipsa unei expuneri aprobate care să acopere
+ * capitolul, nu se introduc aplicații pastorale, reconstrucții istorice sau
+ * studii lexicale ca și când ar fi concluzii ale textului.
  */
+
+const TEXTUAL_SOURCE =
+  "Emanus — rezumat textual după Deuteronom 24; fără doctrină adăugată"
 
 export const DEUTERONOM_24 = deuteronomChapter({
   number: 24,
-  title: "Deuteronom 24 — Demnitatea celui vulnerabil, în familie și în viața de fiecare zi",
+  title: "Deuteronom 24 — Rânduieli despre familie, datorii, muncă și cei vulnerabili",
   summary:
-    "Moise reglementează divorțul deja existent, protejează căsătoria proaspătă, interzice răpirea de oameni, cere grijă față de cel sărac în luarea zălogului și plata lucrătorului, respinge pedeapsa colectivă, și cere dreptate și generozitate față de străin, orfan și văduvă.",
+    "Capitolul cuprinde rânduieli despre divorț și recăsătorire, scutirea temporară a bărbatului proaspăt căsătorit, obiectele care nu pot fi luate ca zălog, răpirea unei persoane, regulile privind lepra, luarea zălogului, plata lucrătorului, responsabilitatea individuală în pedeapsă și protejarea străinului, orfanului și văduvei, inclusiv prin lăsarea unei părți din recoltă pentru ei.",
   literaryContext:
-    "Acest capitol continuă legile de ordine socială din 22-23, extinzându-le către protecția demnității celui vulnerabil — femeia divorțată, robul răpit, lucrătorul sărac, străinul, orfanul și văduva — într-un fir unitar de compasiune practică.",
+    "Deuteronom 24 continuă seria de rânduieli juridice și sociale din discursul lui Moise. Unitățile sunt scurte și tratează situații diferite, unite prin cerințe concrete privind relațiile dintre membrii comunității.",
   historicalContext:
-    "Cartea de despărțire menționată aici nu instituie divorțul, ci încearcă să-l limiteze și să-l facă formal, într-o cultură antică unde bărbații puteau alunga o nevastă fără nicio procedură; interdicția recompensei ei este o măsură împotriva ușurinței cu care s-ar fi luat această decizie.",
+    "Pasajul aparține legislației Israelului antic. Explicația descrie regulile formulate de text și evită să atribuie automat fiecărei reguli un scop social sau istoric care nu este declarat explicit în pasaj.",
   units: [
     {
       id: "deuteronom-24-1-4",
       ref: "Deuteronom 24:1-4",
-      heading: "Divorțul reglementat, nu poruncit",
+      heading: "Divorțul, recăsătorirea și interdicția revenirii la primul soț",
       text: deuteronomPassage(24, 1, 4),
       teaching: teaching(
-        "Legea nu instituie divorțul, ci îl reglementează — cartea de despărțire scrisă este o procedură formală care încetinește decizia și o face publică, într-o cultură unde bărbații aveau puterea de a alunga o nevastă fără nicio protecție pentru ea.",
-        "Interdicția de a o lua înapoi după o a doua căsătorie — „căci este o urâciune înaintea DOMNULUI” — arată că legământul căsătoriei nu este un joc reversibil de conveniență, ci o legătură serioasă cu consecințe permanente.",
+        "Versetele 1–4 descriu cazul în care un bărbat îi scrie soției un document de despărțire, femeia pleacă și se căsătorește cu un alt bărbat, iar a doua căsătorie se încheie prin divorț sau prin moartea celui de-al doilea soț. În această situație, primul soț nu are voie să o ia din nou de soție.",
+        "Textul numește această revenire o urâciune și avertizează să nu fie adus păcat asupra țării. Pasajul nu explică aici toate motivele teologice ale divorțului și recăsătoririi; acestea nu sunt completate în overview prin concluzii luate din alte texte fără sursă doctrinară explicită.",
       ),
-      words: [
-        {
-          original: "ספר כריתת",
-          transliteration: "sefer keritut",
-          language: "ebraica",
-          meaning:
-            "carte de tăiere/despărțire. Documentul formal care făcea publică și verificabilă despărțirea, protejând femeia de acuzația ulterioară de adulter dacă se recăsătorea.",
-        },
-      ],
-      crossRefs: ["Matei 5:31-32", "Matei 19:7-9", "Ieremia 3:1"],
-      forYourHeart:
-        "Legămintele serioase nu se desfac și refac cu ușurință; consecințele lor sunt reale și durabile.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
     {
       id: "deuteronom-24-5-9",
       ref: "Deuteronom 24:5-9",
-      heading: "Căsătoria proaspătă ocrotită, răpirea de oameni pedepsită cu moartea",
+      heading: "Căsătoria nouă, zălogul vital, răpirea și lepra",
       text: deuteronomPassage(24, 5, 9),
       teaching: teaching(
-        "Bărbatul proaspăt căsătorit este scutit un an întreg de oaste și sarcini, ca să poată „înveseli pe nevasta pe care a luat-o” — legătura de familie recent formată este prețuită mai mult decât nevoile imediate ale comunității.",
-        "Moara nu poate fi luată ca zălog, pentru că „s-ar lua ca zălog însăși viața omului” — mijlocul de existență zilnic nu poate fi confiscat. Răpirea unui om pentru robie sau vânzare este pedepsită cu moartea, iar bolile de lepră cer atenție strictă, cu amintirea judecății Mariei ca avertisment concret.",
+        "Versetul 5 scutește pentru un an de război și alte sarcini publice pe bărbatul care tocmai s-a căsătorit, ca să rămână acasă și să-și bucure soția. Versetul 6 interzice luarea pietrelor de moară ca zălog, deoarece sunt legate de mijlocul de trai.",
+        "Versetul 7 cere moartea celui prins că a răpit un israelit pentru a-l trata ca rob sau pentru a-l vinde. Versetele 8–9 cer respectarea instrucțiunilor preoților în cazurile de lepră și amintesc ce i s-a întâmplat Mariei pe drumul din Egipt. Explicația păstrează aceste patru reguli distincte și nu le transformă într-o singură doctrină generală.",
       ),
-      words: [
-        {
-          original: "גנב נפש",
-          transliteration: "gonev nefesh",
-          language: "ebraica",
-          meaning:
-            "cel care fură o viață/persoană. Termen distinct de furtul obișnuit al bunurilor — răpirea unei persoane pentru robie este tratată ca o crimă capitală, nu ca un simplu furt de proprietate.",
-        },
-      ],
-      crossRefs: ["Numeri 12:10-15", "Exod 21:16", "1 Timotei 1:10"],
-      forYourHeart:
-        "Mijlocul de existență al altuia și libertatea lui de persoană sunt lucruri pe care nici o nevoie proprie nu le poate confisca.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
     {
       id: "deuteronom-24-10-15",
       ref: "Deuteronom 24:10-15",
-      heading: "Zălogul cu demnitate, plata lucrătorului fără întârziere",
+      heading: "Zălogul și plata lucrătorului",
       text: deuteronomPassage(24, 10, 15),
       teaching: teaching(
-        "Cel care dă împrumut nu poate intra în casa datornicului să-și aleagă zălogul — trebuie să aștepte afară și să primească ce-i este oferit. Zălogul unui om sărac — probabil haina lui de noapte — trebuie returnat la apusul soarelui, ca să se poată culca acoperit.",
-        "Argatul sărac trebuie plătit „în aceeași zi, înainte de apusul soarelui; căci este sărac și își pune nădejdea în ea”. Întârzierea plății pentru cel care depinde de ea zilnic nu este o simplă neplăcere administrativă, ci o nedreptate care strigă către DOMNUL.",
+        "Versetele 10–13 spun că cel care dă un împrumut nu trebuie să intre în casa datornicului pentru a-și lua singur zălogul; trebuie să aștepte afară. Dacă datornicul este sărac și zălogul este haina lui, aceasta trebuie înapoiată până la apus pentru ca omul să poată dormi în ea.",
+        "Versetele 14–15 interzic asuprirea lucrătorului sărac, fie israelit, fie străin. Plata trebuie dată în aceeași zi, înainte de apus, deoarece lucrătorul depinde de ea. Textul avertizează că altfel el poate striga către DOMNUL, iar vina va fi pusă asupra celui care reține plata.",
       ),
-      words: [
-        {
-          original: "ביומו תתן שכרו",
-          transliteration: "beyomo titten sekharo",
-          language: "ebraica",
-          meaning:
-            "în ziua lui să-i dai plata. Formula care leagă direct plății de demnitatea celui sărac — pentru el, plata întârziată chiar cu o zi poate însemna o noapte fără hrană.",
-        },
-      ],
-      crossRefs: ["Leviticul 19:13", "Iacov 5:4", "Exod 22:26-27"],
-      forYourHeart:
-        "Demnitatea celui care depinde de tine se păzește în detalii concrete — când și cum îi dăm ce i se datorează.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
     {
       id: "deuteronom-24-16-18",
       ref: "Deuteronom 24:16-18",
-      heading: "Responsabilitate individuală, dreptate pentru cel fără apărător",
+      heading: "Pedeapsa individuală și dreptul străinului, orfanului și văduvei",
       text: deuteronomPassage(24, 16, 18),
       teaching: teaching(
-        "Legea respinge pedeapsa colectivă în cadrul familiei: „părinții să nu fie puși la moarte pentru copii și copiii... pentru părinți; fiecare... pentru păcatul lui”. Responsabilitatea morală este individuală, nu transferabilă prin înrudire.",
-        "Judecata străinului și a orfanului nu poate fi strâmbată, iar haina văduvei nu poate fi luată ca zălog — pe motivul concret al propriei istorii: „adu-ți aminte că ai fost rob în Egipt”. Amintirea propriei vulnerabilități trebuie să nască milă pentru vulnerabilitatea altuia.",
+        "Versetul 16 interzice ca părinții să fie omorâți pentru faptele copiilor sau copiii pentru faptele părinților; fiecare trebuie să fie omorât pentru propriul păcat în cadrul regulii juridice formulate aici.",
+        "Versetele 17–18 interzic strâmbarea dreptului străinului și orfanului și luarea hainei văduvei ca zălog. Motivația dată explicit este memoria robiei în Egipt și a răscumpărării de acolo; de aceea Israel primește porunca să împlinească această rânduială.",
       ),
-      words: [
-        {
-          original: "איש בחטאו יומתו",
-          transliteration: "ish bekhet'o yumatu",
-          language: "ebraica",
-          meaning:
-            "fiecare om să fie pus la moarte pentru păcatul lui. Principiul responsabilității individuale în dreptul penal, care distinge legea lui Israel de practicile de pedeapsă colectivă din culturile din jur.",
-        },
-      ],
-      crossRefs: ["Ezechiel 18:20", "2 Regi 14:6", "Exod 22:21-22"],
-      forYourHeart:
-        "Propria ta istorie de vulnerabilitate ar trebui să te facă mai atent, nu mai indiferent, la vulnerabilitatea altora.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
     {
       id: "deuteronom-24-19-22",
       ref: "Deuteronom 24:19-22",
-      heading: "Recolta împărțită cu străinul, orfanul și văduva",
+      heading: "Ce rămâne din recoltă pentru străin, orfan și văduvă",
       text: deuteronomPassage(24, 19, 22),
       teaching: teaching(
-        "Snopul uitat pe ogor, măslinele rămase pe ramuri, ciorchinele rămase în vie — toate acestea nu se recuperează, ci se lasă pentru străin, orfan și văduvă. Această generozitate obligatorie face parte structurală din economia agricolă a lui Israel, nu o opțiune de caritate.",
-        "Motivul repetat este identic cu cel din versetele precedente: „adu-ți aminte că ai fost rob în țara Egiptului”. Memoria eliberării proprii este forța motrice a generozității către cel fără protecție.",
+        "Versetele 19–22 cer ca snopul uitat pe ogor să nu fie recuperat, măslinii să nu fie scuturați a doua oară și via să nu fie culeasă din nou după recoltarea principală. Ceea ce rămâne este destinat străinului, orfanului și văduvei.",
+        "Și aici motivația exprimată în text este amintirea faptului că Israel fusese rob în Egipt. Explicația nu extinde automat aceste reguli agricole într-un sistem economic modern; consemnează destinatarii, acțiunile cerute și motivul formulat de pasaj.",
       ),
-      words: [
-        {
-          original: "לא תשוב לקחתו",
-          transliteration: "lo tashuv leqachto",
-          language: "ebraica",
-          meaning:
-            "să nu te întorci să-l iei. Interdicția recuperării deliberate a recoltei rămase, care transformă pierderea agricolă accidentală într-o formă sistematică de aprovizionare pentru cel vulnerabil.",
-        },
-      ],
-      crossRefs: ["Rut 2:2-3", "Leviticul 19:9-10", "Deuteronom 15:15"],
-      forYourHeart:
-        "Amintirea propriei eliberări ar trebui să se transforme în generozitate concretă, nu doar în recunoștință abstractă.",
+      explanationKind: "textual-overview",
+      explanationSource: TEXTUAL_SOURCE,
     },
   ],
   prayer:
-    "Doamne, învață-ne să prețuim legămintele noastre cu seriozitate, fără să le desfacem ușor.\n\nDă-ne grijă față de mijlocul de existență și libertatea altuia, și plătește-ne prin noi datoria față de cel sărac fără întârziere.\n\nAjută-ne să ținem responsabilitatea individuală, nu să pedepsim pe cei nevinovați.\n\nȘi adu-ne aminte mereu de unde ne-ai răscumpărat, ca să fim generatori față de cel fără apărător. Amin.",
+    "Doamne, ajută-ne să citim aceste rânduieli cu atenție și să nu le atribuim scopuri sau aplicații pe care textul nu le formulează. Dă-ne respect pentru dreptatea și grija față de aproapele pe care pasajul le cere în situațiile descrise. Amin.",
   status: DEUTERONOM_STATUSES[24],
 })
