@@ -3,6 +3,7 @@ import { VT_WISDOM_FULL } from "../vtFullNarrativesWisdom.js"
 import { reviewPsalmi22_32_51_110Explanations } from "./psalmi22_32_51_110ExplanationReview.js"
 import { reviewPsalmi69_73_74Explanations } from "./psalmi69_73_74ExplanationReview.js"
 import { reviewPsalmi103And105Explanations } from "./psalmi103And105ExplanationReview.js"
+import { restorePsalmiPoonenFidelity } from "./psalmiPoonenFidelityReview.js"
 import { PSALMI_EXPLAINED as POONEN_BASE } from "./psalmiOverlay.js"
 import { PSALMI_TEXTUAL_1_25 } from "./psalmiTextual1_25.js"
 import { PSALMI_TEXTUAL_26_50 } from "./psalmiTextual26_50.js"
@@ -33,9 +34,11 @@ const PSALMI_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const PSALMI_EDITORIAL_REVIEWED = reviewPsalmi103And105Explanations(
-  reviewPsalmi69_73_74Explanations(
-    reviewPsalmi22_32_51_110Explanations(PSALMI_EDITORIAL_BASE),
+const PSALMI_EDITORIAL_REVIEWED = restorePsalmiPoonenFidelity(
+  reviewPsalmi103And105Explanations(
+    reviewPsalmi69_73_74Explanations(
+      reviewPsalmi22_32_51_110Explanations(PSALMI_EDITORIAL_BASE),
+    ),
   ),
 )
 
