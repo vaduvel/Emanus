@@ -8,13 +8,13 @@ import { DEUTERONOM_STATUSES } from "./deuteronomPublication.js"
 
 export const DEUTERONOM_22 = deuteronomChapter({
   number: 22,
-  title: "Deuteronom 22 — Grijă pentru aproapele, ordine în creație, curatăție în familie",
+  title: "Deuteronom 22 — Grijă pentru aproapele, ordine în creație, curăție în familie",
   summary:
-    "Moise cere grijă activă pentru bunurile rătăcite ale fratelui, interzice amestecurile nefirești între genuri, specii și materiale, și reglementează acuzațiile de necurățenie și relațiile sexuale interzise, cu accent pe protejarea celui vulnerabil și pedepsirea celui care exploatează.",
+    "Moise cere grijă activă pentru bunurile rătăcite ale fratelui, așază mai multe rânduieli privind viața cotidiană și reglementează acuzațiile sexuale și relațiile interzise în dreptul Israelului antic. Pasajele despre agresiune trebuie citite cu grijă: textul distinge vinovăția de victimizare, iar regulile juridice antice nu devin criterii moderne pentru a învinovăți o victimă.",
   literaryContext:
-    "Acest capitol trece de la legile familiale din capitolul 21 la o serie mai largă de legi de ordine socială și morală, unind grija practică pentru bunurile aproapelui cu principii mai profunde despre păstrarea distincțiilor puse de Dumnezeu în creație.",
+    "Acest capitol trece de la legile familiale din capitolul 21 la o serie mai largă de rânduieli de ordine socială și morală. Capitolul alătură grija pentru bunul aproapelui, siguranța casei, practici agricole și vestimentare, precum și cazuri juridice privind sexualitatea; textul nu spune că toate aceste porunci au o singură explicație simbolică.",
   historicalContext:
-    "Multe dintre aceste legi — amestecul semințelor, jugul mixt, țesătura mixtă — aveau probabil o legătură cu practicile de fertilitate păgâne din Canaan, care încercau să manipuleze forțele naturii prin ritualuri de amestecare simbolică.",
+    "Cazurile juridice din a doua parte aparțin structurii civile a Israelului antic. Ele trebuie explicate în cadrul acelei lumi și al formulării exacte a textului, fără a transforma procedurile probatorii antice în standarde moderne pentru evaluarea consimțământului sau a traumelor și fără a deduce motive cultice acolo unde pasajul nu le precizează.",
   units: [
     {
       id: "deuteronom-22-1-4",
@@ -22,112 +22,112 @@ export const DEUTERONOM_22 = deuteronomChapter({
       heading: "Grijă activă pentru bunul rătăcit al fratelui",
       text: deuteronomPassage(22, 1, 4),
       teaching: teaching(
-        "Legea interzice indiferența față de bunurile pierdute ale altuia: „să nu te prefaci că nu le vezi, ci să i le duci neapărat fratelui tău”. Această poruncă se aplică la animale rătăcite, haine pierdute, și orice alt bun, indiferent dacă proprietarul este cunoscut sau nu.",
-        "Grija se extinde și la animalul căzut pe drum: „să-i ajuți neapărat să se ridice”. Legea nu acceptă pasivitatea morală — a vedea o nevoie și a trece pe lângă ea fără să intervii este și el un fel de nedreptate.",
+        "Legea interzice indiferența față de bunurile pierdute ale altuia: «să nu te prefaci că nu le vezi», ci să le duci înapoi proprietarului sau să le păstrezi până când acesta le caută.",
+        "Grija se extinde și la animalul căzut pe drum: omul nu trebuie să treacă nepăsător pe lângă situația pe care o poate îndrepta. Accentul imediat al textului este responsabilitatea concretă față de aproapele.",
       ),
       words: [
         {
-          original: "לא תתעלם",
-          transliteration: "lo tit'alam",
+          original: "לֹא תִתְעַלֵּם",
+          transliteration: "lo tit'alem",
           language: "ebraica",
           meaning:
-            "să nu te prefaci că nu vezi/să nu te ascunzi. Termenul descrie exact tentativa de a evita responsabilitatea morală prin ignorarea deliberată a nevoii văzute.",
+            "să nu te ascunzi / să nu te faci că nu vezi. Verbul descrie refuzul de a ignora deliberat responsabilitatea față de bunul pierdut al aproapelui.",
         },
       ],
       crossRefs: ["Exod 23:4-5", "Luca 10:30-37", "Iacov 2:15-16"],
       forYourHeart:
-        "Nu te preface că nu vezi nevoia de alături; grija activă pentru bunul aproapelui este poruncă, nu opțiune.",
+        "Nu transforma faptul că o nevoie nu este a ta în motiv pentru a te preface că nu o vezi.",
     },
     {
       id: "deuteronom-22-5-12",
       ref: "Deuteronom 22:5-12",
-      heading: "Fără amestecuri nefirești, ordinea din creație păzită",
+      heading: "Rânduieli diferite pentru viața de fiecare zi",
       text: deuteronomPassage(22, 5, 12),
       teaching: teaching(
-        "O serie de legi păzesc distincțiile puse de Dumnezeu în creație: îmbrăcămintea specifică fiecărui gen, cuibul păsării cruțat când mama stă pe pui, boul și măgarul care nu se înhamă împreună la jug — două specii cu forță diferită nu trebuie înjugate laolaltă.",
-        "Semințele mixte în vie, țesătura din lână și in împreună, sunt interzise, pe când ciucurii la cele patru colțuri ale hainei sunt porunciți ca amintire permanentă. Aceste legi, dincolo de aplicația lor practică, învață pe Israel să respecte categoriile pe care Dumnezeu le-a stabilit în lumea creată.",
+        "Versetele așază una lângă alta mai multe porunci: îmbrăcămintea asociată bărbatului și femeii, cruțarea păsării-mamă, parapetul acoperișului, amestecul semințelor, jugul dintre bou și măgar, țesătura din lână și in și ciucurii hainei. Se cuvine să nu le forțăm într-o singură explicație pe care capitolul nu o dă.",
+        "Unele rânduieli au o rațiune practică evidentă în text — de pildă parapetul previne vărsarea de sânge, iar porunca despre cuib cruță pasărea-mamă. Pentru celelalte, explicația trebuie să rămână prudentă și să nu transforme ipotezele istorice sau simbolice în doctrină sigură.",
       ),
       words: [
         {
-          original: "לא תמצאתוום",
-          transliteration: "lo tikach ha'em al habanim",
+          original: "לֹא־תִקַּח הָאֵם עַל־הַבָּנִים",
+          transliteration: "lo tiqqah ha'em al habanim",
           language: "ebraica",
           meaning:
-            "să nu iei mama împreună cu puii. Formula păstrată exact ca lege a compasiunii față de creație — chiar prinderea unei păsări respectă legătura de îngrijire părintească.",
+            "să nu iei mama împreună cu puii. Este formularea interdicției din cazul cuibului întâlnit pe drum.",
         },
       ],
-      crossRefs: ["Leviticul 19:19", "1 Corinteni 11:14-15", "Numeri 15:38-39"],
+      crossRefs: ["Deuteronom 22:8", "Leviticul 19:19", "Numeri 15:38-39"],
       forYourHeart:
-        "Ordinea pe care Dumnezeu a pus-o în creație — în genuri, în specii, în categorii — nu este întâmplătoare; păzirea ei este și ea o formă de ascultare.",
+        "Când textul nu explică toate motivele unei porunci, este mai cinstit să păstrăm limita textului decât să transformăm o ipoteză într-o certitudine.",
     },
     {
       id: "deuteronom-22-13-21",
       ref: "Deuteronom 22:13-21",
-      heading: "Acuzația de necurățenie, cercetată cu dovezi",
+      heading: "O acuzație gravă intră într-o procedură publică de judecată",
       text: deuteronomPassage(22, 13, 21),
       teaching: teaching(
-        "Când un bărbat acuză fals nevasta proaspăt căsătorită de necuratenie, tatăl fetei poate prezenta dovezi concrete înaintea bătrânilor cetății. Dacă acuzația este dovedită falsă, bărbatul este pedepsit, plătește o amendă, și nu poate niciodată s-o alunge — minciuna care ar fi ruinat viața fetei este pedepsită sever.",
-        "Dacă acuzația este însă adevărată, pedeapsa cade asupra fetei, pentru că „a săvârșit o faptă de rușine în Israel”. Legea antică protejează astfel integritatea legământului căsătoriei, dar cere și dovezi solide, nu doar afirmații, înainte de a aplica pedeapsa cea mai gravă.",
+        "Pasajul descrie un caz juridic al Israelului antic în care un soț își acuză soția proaspăt căsătorită și familia ei aduce înaintea bătrânilor ceea ce textul numește «semnele fecioriei». Dacă acuzația este declarată falsă, bărbatul este pedepsit și amendat pentru numele rău scos femeii.",
+        "Dacă verdictul este opus, textul prevede pedeapsa capitală a acelei legislații. Acest cadru trebuie redat fără cosmetizare, dar nu trebuie transformat într-o metodă medicală modernă de «verificare a virginității»: anatomia sau sângerarea nu pot demonstra în mod sigur istoricul sexual al unei persoane.",
       ),
       words: [
         {
-          original: "והוציאו את-בתולי הנערה",
+          original: "וְהוֹצִיאוּ אֶת־בְּתוּלֵי הַנַּעֲרָ",
           transliteration: "vehotzi'u et-betulei hana'arah",
           language: "ebraica",
           meaning:
-            "să aducă semnele fecioriei fetei. Formula legală pentru procedura de apărare împotriva unei acuzații false, care necesită dovadă concretă, nu doar cuvântul acuzatorului.",
+            "să aducă semnele fecioriei fetei. Este limbajul juridic al cazului descris de text; nu trebuie echivalat cu un test medical modern sigur al istoricului sexual.",
         },
       ],
       crossRefs: ["Deuteronom 24:1", "Matei 1:19", "1 Timotei 5:19"],
       forYourHeart:
-        "Acuzațiile grave care pot distruge o viață merită cercetare temeinică și dovezi, nu doar cuvinte aruncate cu ușurință.",
+        "Acuzațiile care pot distruge viața unui om cer cercetare și responsabilitate, nu rușinare publică pe baza presupunerilor.",
     },
     {
       id: "deuteronom-22-22-27",
       ref: "Deuteronom 22:22-27",
-      heading: "Adulter și logodnică violată, dreptatea față de victimă",
+      heading: "Adulterul și agresiunea sunt tratate ca situații moral diferite",
       text: deuteronomPassage(22, 22, 27),
       teaching: teaching(
-        "Adulterul consensual este pedepsit egal pentru amândoi participanții. Dar legea face o distincție morală esențială între logodnica găsită în cetate — unde absența strigătului ei este considerată relevantă — și cea găsită pe câmp, izolată, unde forța este evidentă și doar agresorul este pedepsit.",
-        "Explicația dată este remarcabil de sensibilă pentru vremea ei: „fata n-a săvârșit niciun păcat vrednic de moarte; căci este ca și cum un om s-ar ridica împotriva aproapelui său și l-ar omorâ”. Victima violului nu este făcută responsabilă pentru agresiunea suferită.",
+        "Textul distinge adulterul de cazul fetei logodite prinsă cu forța pe câmp. În al doilea caz spune explicit că fetei nu trebuie să i se facă nimic și compară agresiunea cu un omor: vinovăția este a agresorului, nu a victimei.",
+        "Cazul anterior, petrecut în cetate, folosește faptul că fata «n-a strigat» în logica probatorie a acelei legislații antice. Această formulare nu trebuie folosită astăzi pentru a concluziona că lipsa unui strigăt înseamnă consimțământ. Frica, amenințarea, înghețul traumatic, incapacitatea sau alte împrejurări pot face o victimă să nu strige. Standardul modern trebuie să fie consimțământul liber, nu o simplă reacție fizică presupusă.",
       ),
       words: [
         {
-          original: "ואין מושיע לה",
+          original: "וְאֵין מוֹשִׁיעַ לָהּ",
           transliteration: "ve'ein moshia lah",
           language: "ebraica",
           meaning:
-            "și nu era nimeni să o scape. Fraza care justifică nevinovăția deplină a fetei atacate pe câmp — izolarea ei fără ajutor este dovada forței folosite împotriva ei.",
+            "și nu era nimeni s-o scape. În cazul de pe câmp, textul subliniază lipsa ajutorului și declară victima nevinovată.",
         },
       ],
       crossRefs: ["Deuteronom 21:14", "Leviticul 20:10", "2 Samuel 13:12-14"],
       forYourHeart:
-        "Dreptatea adevărată distinge cu grijă între vinovăție și victimizare; nu toată suferința este vină.",
+        "Nu transforma reacția unei victime în proces împotriva ei. Constrângerea este vina agresorului.",
     },
     {
       id: "deuteronom-22-28-30",
       ref: "Deuteronom 22:28-30",
-      heading: "Fecioara neangajată, și interdicția incestului",
+      heading: "Fata ne-logodită și limita impusă bărbatului care a smerit-o",
       text: deuteronomPassage(22, 28, 30),
       teaching: teaching(
-        "Pentru fata fecioară neangajată, bărbatul care se culcă cu ea trebuie să plătească tatălui și să o ia de nevastă permanent, „pentru că a smerit-o”, fără dreptul de a o alunga vreodată. Legea nu permite exploatarea urmată de abandon.",
-        "Capitolul se încheie cu interdicția absolută a incestului cu nevasta tatălui: „un om să nu ia pe nevasta tatălui său”. Această graniță fundamentală protejează structura familială de la cea mai profundă formă de trădare posibilă.",
+        "Versetele 28-29 descriu un alt caz, cu o fată ne-logodită, folosind verbul ebraic care poate avea sensul de a apuca sau prinde. Interpretarea exactă a gradului de constrângere în raport cu cazul din Exod 22:16-17 este discutată, de aceea explicația nu trebuie să afirme mai mult decât permite formularea: bărbatul este făcut răspunzător financiar și nu primește dreptul de a o abandona după ce a smerit-o.",
+        "Această sancțiune civilă din Israelul antic nu este o poruncă modernă prin care o victimă a agresiunii sexuale ar trebui obligată să se căsătorească cu agresorul ei. Capitolul se încheie apoi cu interdicția relației cu nevasta tatălui, păstrând o graniță familială explicită.",
       ),
       words: [
         {
-          original: "לא-יגלה כנף אביו",
-          transliteration: "lo yigleh knaf aviv",
+          original: "לֹא־יְגַלֶּה כְּנַף אָבִיו",
+          transliteration: "lo yegalleh kenaf aviv",
           language: "ebraica",
           meaning:
-            "să nu descopere/dea la o parte poala/învelitoarea tatălui său. Expresie eufemistică ebraică pentru interzicerea absolută a relației sexuale cu nevasta tatălui.",
+            "să nu descopere învelitoarea tatălui său. Expresie eufemistică pentru interzicerea relației sexuale cu nevasta tatălui.",
         },
       ],
-      crossRefs: ["Leviticul 18:8", "1 Corinteni 5:1", "Geneza 35:22"],
+      crossRefs: ["Exod 22:16-17", "Leviticul 18:8", "1 Corinteni 5:1"],
       forYourHeart:
-        "Anumite granițe familiale nu sunt negociabile; încălcarea lor rupe fundamentul de încredere al întregii familii.",
+        "Un text juridic antic nu trebuie folosit pentru a împinge o victimă modernă într-o relație nesigură cu agresorul ei.",
     },
   ],
   prayer:
-    "Doamne, învață-ne să nu ne prefacem că nu vedem nevoia aproapelui, ci să intervenim cu grijă activă.\n\nAjută-ne să respectăm ordinea pe care ai pus-o în creație, fără să o amestecăm nesăbuit.\n\nDă-ne înțelepciune să cercetăm temeinic acuzațiile grave, și milă față de cei victimizați fără vină.\n\nȘi păzește-ne familiile de trădare, în cele mai intime legături de încredere. Amin.",
+    "Doamne, învață-ne să nu trecem nepăsători pe lângă nevoia aproapelui.\n\nDă-ne cinste față de text, ca să nu transformăm ipotezele în porunci și nici legile vechiului Israel în instrumente de rănire a victimelor.\n\nDă-ne dreptate, discernământ și grijă pentru cel vulnerabil. Amin.",
   status: DEUTERONOM_STATUSES[22],
 })
