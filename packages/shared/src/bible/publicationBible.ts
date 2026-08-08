@@ -8,6 +8,88 @@ import {
 } from "./overlayBibleBooks.js"
 
 /**
+ * Sursele editoriale rămân în metadata internă pentru audit, dar cititorul
+ * primește explicația direct, fără atribuirea ei unui autor modern.
+ */
+function directReaderText(value: string): string {
+  return value
+    .replace(/\bÎn lectura lui (?:Zac\s+)?Poonen,\s*/giu, "")
+    .replace(/\bPentru (?:Zac\s+)?Poonen,\s*/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen spune direct că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen spune că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen subliniază că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen insistă că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen observă că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen explică că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen arată că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen amintește că\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen se oprește la\s+/giu, "Accentul cade pe ")
+    .replace(/\b(?:Zac\s+)?Poonen pornește de la\s+/giu, "Punctul de plecare este ")
+    .replace(/\b(?:Zac\s+)?Poonen citește\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen urmărește\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen vede\s+/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen aplică\s+/giu, "Aplicația este ")
+    .replace(/\b(?:Zac\s+)?Poonen numește\s+/giu, "")
+    .replace(/\bTranscriptul lui (?:Zac\s+)?Poonen\s+/giu, "Sursa editorială ")
+    .replace(/\bTranscriptul (?:Zac\s+)?Poonen\s+/giu, "Sursa editorială ")
+    .replace(/\b(?:Zac\s+)?Poonen\b/giu, "")
+    .replace(/\bAllen\b/giu, "")
+    .replace(/\bNolan\b/giu, "")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .trim()
+}
+
+function withoutNamedAttribution(book: BibleBook): BibleBook {
+  return {
+    ...book,
+    blurb: directReaderText(book.blurb),
+    chapters: book.chapters.map((chapter) => ({
+      ...chapter,
+      title: directReaderText(chapter.title),
+      summary: directReaderText(chapter.summary),
+      literaryContext: directReaderText(chapter.literaryContext),
+      historicalContext: directReaderText(chapter.historicalContext),
+      prayer: directReaderText(chapter.prayer),
+      units: chapter.units.map((unit) => ({
+        ...unit,
+        heading: directReaderText(unit.heading),
+        teaching: directReaderText(unit.teaching),
+        forYourHeart: unit.forYourHeart ? directReaderText(unit.forYourHeart) : undefined,
+        // Proveniența nominală este internă; cititorul nu afișează numele autorului.
+        explanationSource: undefined,
+      })),
+    })),
+  }
+}
+
+function assertNoNamedAttribution(book: BibleBook): void {
+  const forbidden = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b/iu
+  const check = (value: string | undefined, where: string) => {
+    if (value && forbidden.test(value)) {
+      throw new Error(`[Biblia explicată] atribuire nominală vizibilă în ${where}.`)
+    }
+  }
+
+  check(book.blurb, `${book.name} blurb`)
+  book.chapters.forEach((chapter) => {
+    check(chapter.title, `${book.name} ${chapter.number} titlu`)
+    check(chapter.summary, `${book.name} ${chapter.number} rezumat`)
+    check(chapter.literaryContext, `${book.name} ${chapter.number} context literar`)
+    check(chapter.historicalContext, `${book.name} ${chapter.number} context istoric`)
+    check(chapter.prayer, `${book.name} ${chapter.number} rugăciune`)
+    chapter.units.forEach((unit) => {
+      check(unit.heading, `${unit.ref} titlu explicație`)
+      check(unit.teaching, `${unit.ref} explicație`)
+      check(unit.forYourHeart, `${unit.ref} aplicație`)
+      if (unit.explanationSource) {
+        throw new Error(`[Biblia explicată] explanationSource nu trebuie expus cititorului: ${unit.ref}.`)
+      }
+    })
+  })
+}
+
+/**
  * Catalogul consumat de cititorul Bibliei explicate în lucru editorial.
  *
  * Nu modificăm `BIBLE_BOOKS` legacy până când toate integrările vechi sunt
@@ -24,9 +106,11 @@ for (const book of BIBLE_BOOKS) byId.set(book.id, book)
 byId.set(IMPARATI1.id, IMPARATI1)
 for (const book of VT_OVERLAY_BIBLE_BOOKS) byId.set(book.id, book)
 
-export const PUBLICATION_BIBLE_BOOKS: BibleBook[] = [...byId.values()].sort(
-  (a, b) => a.testament.localeCompare(b.testament) || a.order - b.order,
-)
+export const PUBLICATION_BIBLE_BOOKS: BibleBook[] = [...byId.values()]
+  .sort((a, b) => a.testament.localeCompare(b.testament) || a.order - b.order)
+  .map(withoutNamedAttribution)
+
+PUBLICATION_BIBLE_BOOKS.forEach(assertNoNamedAttribution)
 
 export function findPublicationBook(id: string): BibleBook | undefined {
   return PUBLICATION_BIBLE_BOOKS.find((book) => book.id === id)
