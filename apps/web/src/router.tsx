@@ -19,6 +19,11 @@ import { useEffect, useState } from "react"
  * Întreabă, primește întrebarea și, când vine dintr-un capitol, ține minte
  * despre ce loc din Scriptură este vorba.
  *
+ * Cele trei daruri de zi (docs/27) nu primesc tab propriu, ca să nu se umple
+ * bara de jos: se intră din „Azi”. /mesaj/:id există ca link public — cine
+ * primește un card ajunge direct la verset, nu la un ecran de reclamă.
+ * /legamant e Legământul familiei (faza G): se intră din devoțional, nu din bară.
+ *
  * /drum e Drumul Emaus (docs/43): harta celor opt stații. NU e poartă de
  * intrare și nu e obligatorie. Se ajunge la ea de la finalul unui parcurs, dar
  * poate intra oricine, oricând, inclusiv cineva care nu a făcut nicio lecție —
@@ -37,11 +42,18 @@ export type Route =
   | { name: "crisis" }
   | { name: "ds" }
   | { name: "lesson"; id?: string }
+  | { name: "devotional" }
+  | { name: "scroll" }
+  | { name: "lamp" }
+  | { name: "message"; id?: string }
+  | { name: "covenant" }
 
 export function parseRoute(): Route {
   const h = window.location.hash.replace(/^#/, "")
   if (h.startsWith("/lesson/"))
     return { name: "lesson", id: decodeURIComponent(h.slice("/lesson/".length)) }
+  if (h.startsWith("/mesaj/"))
+    return { name: "message", id: decodeURIComponent(h.slice("/mesaj/".length)) }
   if (h.startsWith("/biblia/")) {
     const parts = h.slice("/biblia/".length).split("/")
     const bookId = decodeURIComponent(parts[0] ?? "")
@@ -64,6 +76,11 @@ export function parseRoute(): Route {
   if (h === "/final") return { name: "pathend" }
   if (h === "/drum") return { name: "emmaus" }
   if (h === "/criza" || h === "/crisis") return { name: "crisis" }
+  if (h === "/devotional") return { name: "devotional" }
+  if (h === "/pergament") return { name: "scroll" }
+  if (h === "/candela") return { name: "lamp" }
+  if (h === "/legamant") return { name: "covenant" }
+  if (h === "/mesaj") return { name: "message" }
   if (h === "/ds") return { name: "ds" }
   return { name: "today" }
 }
