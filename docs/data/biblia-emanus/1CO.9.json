@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul său; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-1co-9",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 27,
       "reviewed": 27,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 27 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 27 de versete din 1CO.9 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate citatul din Lege, formulările calchiate și construcțiile care mascau relațiile sintactice ale textului grec.",
+        "Sunt păstrate persoanele, negațiile, întrebările retorice și contrastul dintre dreptul apostolic și renunțarea la folosirea lui.",
+        "Lectura principală SBLGNT este urmată fără importarea automată a lecturilor Textus Receptus."
       ]
     },
     "theologicalContext": {
@@ -123,24 +122,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:06a7ae33fc892e893ad02be2eacca4085893f35f4f7550df237f93fc2359ce3d",
-    "contentDigest": "sha256:eced477811b5130e1242c5cad1ecf57ca54e318ccf434ff90812802ccea990d2"
+    "textDigest": "sha256:6cf713f6b0abee7855694477fb1e45c5c8b3d3edf9a556a31df7c3540abd22c4",
+    "contentDigest": "sha256:1412d4269dedc148a3b21769f9319aec3e77db924227f212f25044c5cb6296b0"
   },
   "verses": [
     {
@@ -161,15 +150,15 @@
     },
     {
       "number": 5,
-      "text": "N-avem dreptul să luăm cu noi o soră credincioasă ca soție, ca și ceilalți apostoli, și frații Domnului, și Chifa?"
+      "text": "Nu avem dreptul să luăm cu noi o soră, o soție, ca și ceilalți apostoli, frații Domnului și Chifa?"
     },
     {
       "number": 6,
-      "text": "Sau numai eu și Barnaba n-avem dreptul să nu lucrăm?"
+      "text": "Sau numai eu și Barnaba nu avem dreptul să nu lucrăm cu mâinile noastre?"
     },
     {
       "number": 7,
-      "text": "Ce soldat servește vreodată pe cheltuiala lui? Cine plantează o vie, și nu mănâncă din rodul ei? Sau cine hrănește o turmă, și nu bea lapte din turmă?"
+      "text": "Cine slujește vreodată ca soldat pe cheltuiala lui? Cine plantează o vie și nu mănâncă din rodul ei? Sau cine paște o turmă și nu mănâncă din laptele turmei?"
     },
     {
       "number": 8,
@@ -177,11 +166,11 @@
     },
     {
       "number": 9,
-      "text": "Căci este scris în Legea lui Moise: Să nu botni un bou în timp ce calcă în grâne. ' Este pentru boii care îi pasă lui Dumnezeu,"
+      "text": "Căci este scris în Legea lui Moise: „Să nu legi gura boului când treieră.” Oare Îi pasă lui Dumnezeu de boi?"
     },
     {
       "number": 10,
-      "text": "Sau vorbește, fără îndoială, pentru noi? Da, pentru noi a fost scris: cel care ară trebuie să are cu speranță, iar cel care treieră trebuie să o facă având speranța că va avea parte de rod."
+      "text": "Sau vorbește, fără îndoială, pentru noi? Da, pentru noi a fost scris: cel ce ară trebuie să are cu nădejde, iar cel ce treieră, cu nădejdea că va avea parte de recoltă."
     },
     {
       "number": 11,
@@ -201,23 +190,23 @@
     },
     {
       "number": 15,
-      "text": "Dar eu n-am folosit niciunul dintre aceste drepturi. Și n-am scris acestea ca să se facă așa cu mine; căci mai bine este pentru mine să mor decât să-mi golească cineva lauda."
+      "text": "Dar eu nu m-am folosit de niciunul dintre aceste drepturi. Și n-am scris acestea ca să se facă așa cu mine; căci mai bine pentru mine să mor, decât să-mi zădărnicească cineva motivul de laudă."
     },
     {
       "number": 16,
-      "text": "Căci, dacă predic Vestea cea Bună, nu am cu ce să mă laud, pentru că mi s-a pus asupra mea nevoia; dar vai de mine dacă nu predic Vestea cea Bună."
+      "text": "Căci, dacă vestesc Evanghelia, nu am cu ce să mă laud, fiindcă aceasta este obligația pusă asupra mea; vai de mine dacă nu vestesc Evanghelia!"
     },
     {
       "number": 17,
-      "text": "Căci dacă fac aceasta de bunăvoie, am o răsplată; dar dacă nu de bunăvoie, tot mi-a fost încredințată o administrare."
+      "text": "Căci, dacă fac aceasta de bunăvoie, am o răsplată; dar, dacă o fac fără voia mea, mi-a fost totuși încredințată o administrare."
     },
     {
       "number": 18,
-      "text": "Atunci ce este răsplata mea? Ca atunci când predic Evanghelia, să pot prezenta fără plată Evanghelia lui Hristos, ca să nu abuzez de autoritatea mea în Vestea bună."
+      "text": "Atunci care este răsplata mea? Ca, vestind Evanghelia, să o ofer fără plată, fără să mă folosesc pe deplin de dreptul meu în Evanghelie."
     },
     {
       "number": 19,
-      "text": "Căci, deși sunt liber față de toți, m-am făcut robul tuturor, ca să-i câștig pe cât mai mulți."
+      "text": "Căci, deși sunt liber față de toți, m-am făcut slujitorul tuturor, ca să câștig pe cât mai mulți."
     },
     {
       "number": 20,
@@ -229,11 +218,11 @@
     },
     {
       "number": 22,
-      "text": "Am fost slab cu cei slabi, ca să câștig pe cei slabi; am devenit toate lucrurile pentru toți oamenii, ca să pot salva pe unii."
+      "text": "M-am făcut slab cu cei slabi, ca să-i câștig pe cei slabi. M-am făcut totul pentru toți, ca să mântuiesc cu orice preț pe unii."
     },
     {
       "number": 23,
-      "text": "Acum fac asta de dragul veștii bune, ca să fiu părtaș comun la ea."
+      "text": "Fac toate acestea de dragul Evangheliei, ca să fiu părtaș la ea."
     },
     {
       "number": 24,
@@ -241,7 +230,7 @@
     },
     {
       "number": 25,
-      "text": "Fiecare om care se străduiește în jocuri exercită auto-control în toate lucrurile. Acum ei o fac pentru a primi o coroană coruptibil, dar noi o incoruptibil."
+      "text": "Oricine se întrece în jocuri se înfrânează în toate. Ei fac aceasta ca să primească o coroană pieritoare, iar noi una nepieritoare."
     },
     {
       "number": 26,
@@ -249,10 +238,38 @@
     },
     {
       "number": 27,
-      "text": "Ci îmi lovesc trupul și-l aduc în robie, ca nu cumva, după ce am predicat altora, eu însumi să fiu găsit respins."
+      "text": "Ci îmi asupresc trupul și îl țin în stăpânire, ca nu cumva, după ce am vestit altora, eu însumi să fiu găsit respins."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "ἀδελφὴν γυναῖκα",
+      "decision": "Este redat „o soră, o soție”.",
+      "reason": "Perechea greacă desemnează o femeie credincioasă în calitate de soție; formularea românească păstrează ambele elemente fără a introduce o interpretare confesională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul sintagmei și raportul ei cu lista apostolilor au fost păstrate."
+    },
+    {
+      "verse": 9,
+      "term": "Οὐ κημώσεις βοῦν ἀλοῶντα",
+      "decision": "Citatul este redat „Să nu legi gura boului când treieră”.",
+      "reason": "SBLGNT are κημώσεις, în timp ce WH/RP au φιμώσεις; ambele desemnează oprirea hrănirii animalului. Traducerea păstrează citatul ca întrebare urmată de argumentul apostolului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Varianta nu schimbă sensul românesc adoptat."
+    },
+    {
+      "verse": 18,
+      "term": "μὴ καταχρήσασθαι τῇ ἐξουσίᾳ μου",
+      "decision": "Este redat „fără să mă folosesc pe deplin de dreptul meu”.",
+      "reason": "Verbul descrie folosirea exhaustivă a unui drept, nu un abuz moral presupus de unele traduceri.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea păstrează sensul contextual al renunțării voluntare."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
