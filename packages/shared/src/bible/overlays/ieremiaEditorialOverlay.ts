@@ -4,6 +4,7 @@ import { IEREMIA_DEEPENED_08_22 } from "./ieremiaDeepened08_22.js"
 import { IEREMIA_DEEPENED_24_40 } from "./ieremiaDeepened24_40.js"
 import { IEREMIA_DEEPENED_41_52 } from "./ieremiaDeepened41_52.js"
 import { reviewIeremia23_29_31Explanations } from "./ieremia23_29_31ExplanationReview.js"
+import { restoreIeremiaPoonenFidelity } from "./ieremiaPoonenFidelityReview.js"
 import { IEREMIA_EXPLAINED as POONEN_BASE } from "./ieremiaOverlay.js"
 import { textualChapter } from "./textualChapterFactory.js"
 
@@ -27,6 +28,8 @@ const IEREMIA_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const IEREMIA_EDITORIAL_REVIEWED = reviewIeremia23_29_31Explanations(IEREMIA_EDITORIAL_BASE)
+const IEREMIA_EDITORIAL_REVIEWED = restoreIeremiaPoonenFidelity(
+  reviewIeremia23_29_31Explanations(IEREMIA_EDITORIAL_BASE),
+)
 
 export const IEREMIA_EDITORIAL_EXPLAINED = assertCompleteOverlay(IEREMIA_EDITORIAL_REVIEWED, 52)
