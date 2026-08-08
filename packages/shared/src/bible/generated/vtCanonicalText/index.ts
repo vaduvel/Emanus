@@ -71,7 +71,7 @@ export const VT_CANONICAL_TEXT_BOOKS: readonly CanonicalOverlayTextBook[] = [
   { bookId: "mica", bibleEmanusBookId: "MIC", name: "Mica", order: 33, chapterCount: 7, verseCount: 105, chapters: MICA_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
   { bookId: "naum", bibleEmanusBookId: "NAM", name: "Naum", order: 34, chapterCount: 3, verseCount: 47, chapters: NAUM_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "habacuc", bibleEmanusBookId: "HAB", name: "Habacuc", order: 35, chapterCount: 3, verseCount: 56, chapters: HABACUC_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
-  { bookId: "tefania", bibleEmanusBookId: "ZEP", name: "Țefania", order: 36, chapterCount: 3, verseCount: 53, chapters: TEFANIA_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
+  { bookId: "tefania", bibleEmanusBookId: "ZEP", name: "Țefania", order: 36, chapterCount: 3, verseCount: 53, chapters: TEFANIA_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "hagai", bibleEmanusBookId: "HAG", name: "Hagai", order: 37, chapterCount: 2, verseCount: 38, chapters: HAGAI_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "zaharia", bibleEmanusBookId: "ZEC", name: "Zaharia", order: 38, chapterCount: 14, verseCount: 211, chapters: ZAHARIA_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
   { bookId: "maleahi", bibleEmanusBookId: "MAL", name: "Maleahi", order: 39, chapterCount: 4, verseCount: 55, chapters: MALEAHI_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
