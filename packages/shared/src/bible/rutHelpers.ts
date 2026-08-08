@@ -1,7 +1,22 @@
 import type { BibleChapter, BibleUnit } from "./types.js"
 
+const RUT_EXPLANATION_SOURCE = "Zac Poonen — Through The Bible: Judges & Ruth"
+const HEBREW_WORD_SOURCE = "WLC-OSHB"
+
 function teaching(...paragraphs: string[]): string {
   return paragraphs.join("\n\n")
+}
+
+function normalizeUnit(unit: BibleUnit): BibleUnit {
+  return {
+    ...unit,
+    explanationKind: unit.explanationKind ?? "exposition",
+    explanationSource: unit.explanationSource ?? RUT_EXPLANATION_SOURCE,
+    wordSource:
+      unit.words && unit.words.length > 0
+        ? unit.wordSource ?? HEBREW_WORD_SOURCE
+        : unit.wordSource,
+  }
 }
 
 export function rutChapter(input: {
@@ -22,7 +37,7 @@ export function rutChapter(input: {
     summary: input.summary,
     literaryContext: input.literaryContext,
     historicalContext: input.historicalContext,
-    units: input.units,
+    units: input.units.map(normalizeUnit),
     prayer: input.prayer,
     status: input.status,
   }
