@@ -34,6 +34,93 @@ jobs:
           curl --fail --location --retry 3 --output /tmp/ronbtf_current.zip https://ebible.org/Scriptures/ronbtf_usfm.zip
           curl --fail --location --retry 3 --output /tmp/ron1924_current.zip https://ebible.org/Scriptures/ron1924_usfm.zip
 
+      - name: Prove current Naum source verses equal the reviewed snapshot
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import importlib.util
+          import json
+          import re
+          import zipfile
+          from pathlib import Path
+
+          root = Path('.')
+          code = 'NAM'
+          packet_dir = root / 'docs/biblia-explicata/minor-prophets-reaudit/NAM'
+          lock_path = root / 'docs/data/biblia-emanus/minor-prophets-source-lock.json'
+
+          spec = importlib.util.spec_from_file_location('validator', root / 'scripts/check-biblia-emanus.py')
+          validator = importlib.util.module_from_spec(spec)
+          assert spec and spec.loader
+          spec.loader.exec_module(validator)
+
+          def find_member(archive, code):
+              matches = []
+              for member in archive.namelist():
+                  base = Path(member).name
+                  if not base.lower().endswith(('.usfm', '.sfm')):
+                      continue
+                  stem = re.sub(r'^\d+[-_]?', '', base)
+                  if stem.upper().startswith(code):
+                      matches.append(member)
+              if len(matches) != 1:
+                  raise SystemExit(f'{code}: expected one USFM member, got {matches}')
+              return matches[0]
+
+          current = {}
+          raw_bytes = {}
+          for key, archive_path in [('WEBU', Path('/tmp/engwebp_current.zip')), ('WLC', Path('/tmp/hboWLC_current.zip'))]:
+              with zipfile.ZipFile(archive_path) as archive:
+                  member = find_member(archive, code)
+                  raw = archive.read(member)
+              raw_bytes[key] = raw
+              current[key] = validator.parse_usfm_verses(raw, f'{code}-{key}-current')
+
+          expected_web = {}
+          expected_wlc = {}
+          for chapter in range(1, 4):
+              packet = json.loads((packet_dir / f'{chapter:02d}.json').read_text(encoding='utf-8'))
+              for item in packet['verses']:
+                  product_ref = tuple(map(int, str(item['productRef']).split(':')))
+                  wlc_ref = tuple(map(int, str(item['WLCRef']).split(':')))
+                  expected_web[product_ref] = item['WEBU']
+                  expected_wlc[wlc_ref] = item['WLC']
+
+          def compare(label, actual, expected):
+              missing = sorted(set(expected) - set(actual))
+              extra = sorted(set(actual) - set(expected))
+              changed = sorted(ref for ref in set(actual) & set(expected) if actual[ref] != expected[ref])
+              if missing or extra or changed:
+                  print(f'{label} missing={missing} extra={extra} changed={changed}')
+                  for ref in changed[:10]:
+                      print(f'{label} {ref}: OLD={expected[ref]!r}')
+                      print(f'{label} {ref}: NEW={actual[ref]!r}')
+                  raise SystemExit(f'{label}: parsed biblical text changed; fresh semantic re-audit required')
+              print(f'{label}: {len(actual)}/{len(expected)} parsed verses identical to reviewed snapshot')
+
+          compare('WEBU', current['WEBU'], expected_web)
+          compare('WLC', current['WLC'], expected_wlc)
+
+          lock = json.loads(lock_path.read_text(encoding='utf-8'))
+          book = next((item for item in lock['books'] if item.get('bookId') == code), None)
+          if not book:
+              raise SystemExit('NAM missing from minor-prophets-source-lock.json')
+          for label in ('WEBU', 'WLC'):
+              old = book[label]['sha256']
+              new = hashlib.sha256(raw_bytes[label]).hexdigest()
+              book[label]['sha256'] = new
+              evidence = book.setdefault('contentDriftEvidence', {})
+              evidence[label] = {
+                  'verifiedOn': '2026-08-08',
+                  'previousRawUsfmSha256': old,
+                  'currentRawUsfmSha256': new,
+                  'parsedVerseContentIdentical': True,
+                  'verseCount': len(current[label]),
+              }
+              print(f'{label}: raw USFM pin refreshed {old} -> {new} only after parsed-verse identity proof')
+          lock_path.write_text(json.dumps(lock, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
       - name: Make authoritative source drift content-based per book
         run: |
           python3 - <<'PY'
@@ -91,6 +178,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             scripts/promote-minor-prophet-to-biblia-emanus.py \
+            docs/data/biblia-emanus/minor-prophets-source-lock.json \
             docs/data/biblia-emanus/sources/ot-nam-2026-08-08-usfm.zip \
             docs/data/biblia-emanus/source-lock.json \
             docs/data/biblia-emanus/source-ledger.json \
