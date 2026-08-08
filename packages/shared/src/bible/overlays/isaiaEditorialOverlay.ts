@@ -3,6 +3,8 @@ import { VT_MAJOR_PROPHETS_FULL } from "../vtFullNarrativesMajorProphets.js"
 import { ISAIA_DEEPENED_02_20 } from "./isaiaDeepened02_20.js"
 import { ISAIA_DEEPENED_21_39 } from "./isaiaDeepened21_39.js"
 import { ISAIA_DEEPENED_41_65 } from "./isaiaDeepened41_65.js"
+import { reviewIsaia14Explanation } from "./isaia14ExplanationReview.js"
+import { reviewIsaiaExplanations } from "./isaiaExplanationReview.js"
 import { ISAIA_EXPLAINED as POONEN_BASE } from "./isaiaOverlay.js"
 import { textualChapter } from "./textualChapterFactory.js"
 
@@ -26,4 +28,8 @@ const ISAIA_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-export const ISAIA_EDITORIAL_EXPLAINED = assertCompleteOverlay(ISAIA_EDITORIAL_BASE, 66)
+const ISAIA_EDITORIAL_REVIEWED = reviewIsaiaExplanations(
+  reviewIsaia14Explanation(ISAIA_EDITORIAL_BASE),
+)
+
+export const ISAIA_EDITORIAL_EXPLAINED = assertCompleteOverlay(ISAIA_EDITORIAL_REVIEWED, 66)
