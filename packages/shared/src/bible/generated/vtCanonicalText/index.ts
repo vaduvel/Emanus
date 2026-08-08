@@ -69,7 +69,7 @@ export const VT_CANONICAL_TEXT_BOOKS: readonly CanonicalOverlayTextBook[] = [
   { bookId: "obadia", bibleEmanusBookId: "OBA", name: "Obadia", order: 31, chapterCount: 1, verseCount: 21, chapters: OBADIA_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "iona", bibleEmanusBookId: "JON", name: "Iona", order: 32, chapterCount: 4, verseCount: 48, chapters: IONA_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "mica", bibleEmanusBookId: "MIC", name: "Mica", order: 33, chapterCount: 7, verseCount: 105, chapters: MICA_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
-  { bookId: "naum", bibleEmanusBookId: "NAM", name: "Naum", order: 34, chapterCount: 3, verseCount: 47, chapters: NAUM_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
+  { bookId: "naum", bibleEmanusBookId: "NAM", name: "Naum", order: 34, chapterCount: 3, verseCount: 47, chapters: NAUM_TEXT, textStage: "biblia-emanus", translationLabel: "Biblia Emanus" },
   { bookId: "habacuc", bibleEmanusBookId: "HAB", name: "Habacuc", order: 35, chapterCount: 3, verseCount: 56, chapters: HABACUC_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
   { bookId: "tefania", bibleEmanusBookId: "ZEP", name: "Țefania", order: 36, chapterCount: 3, verseCount: 53, chapters: TEFANIA_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },
   { bookId: "hagai", bibleEmanusBookId: "HAG", name: "Hagai", order: 37, chapterCount: 2, verseCount: 38, chapters: HAGAI_TEXT, textStage: "temporary-editorial", translationLabel: TEMP_LABEL },

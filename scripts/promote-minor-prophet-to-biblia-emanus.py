@@ -214,17 +214,16 @@ def review_bundle(code: str, config: dict[str, Any], legacy_ref: str) -> tuple[d
 
 
 def build_snapshot(validator, code: str, config: dict[str, Any], archive_paths: dict[str, Path]):
-    # WEBU + WLC are translation authority and stay hard-pinned.
-    # BTF + Cornilescu are comparison-only benchmarks. Archive drift is recorded
-    # in the new snapshot, while their per-book content must still parse and match
-    # product versification below.
+    # Whole-ZIP hashes are evidence about upstream packaging, not the identity
+    # of this biblical book. WEBU/WLC authority is enforced below by the exact
+    # per-book USFM hashes from the fresh source lock. Benchmark ZIP drift is
+    # comparison-only and is recaptured in the deterministic promotion snapshot.
     for key, path in archive_paths.items():
         actual = sha256_file(path)
         expected = EXPECTED_ARCHIVE_SHA256[key]
-        if key in {"webu", "wlc"} and actual != expected:
-            fail(f"{key} source archive drift: {actual} != {expected}")
-        if key in {"btf", "cornilescu"} and actual != expected:
-            print(f"{key} comparison benchmark archive drift: {actual} != {expected}; recapturing current benchmark")
+        if actual != expected:
+            role = "source archive packaging" if key in {"webu", "wlc"} else "comparison benchmark archive"
+            print(f"{key} {role} drift: {actual} != {expected}; verifying/recapturing per-book payload")
 
     extracted: dict[str, bytes] = {}
     parsed: dict[str, dict[tuple[int, int], str]] = {}
@@ -234,6 +233,23 @@ def build_snapshot(validator, code: str, config: dict[str, Any], archive_paths: 
             raw = archive.read(member)
         extracted[key] = raw
         parsed[key] = validator.parse_usfm_verses(raw, f"{code}-{key}")
+
+    fresh_lock = load_json(DATA / "minor-prophets-source-lock.json")
+    fresh_book = next(
+        (item for item in fresh_lock.get("books", []) if isinstance(item, dict) and item.get("bookId") == code),
+        None,
+    )
+    if not isinstance(fresh_book, dict):
+        fail(f"{code}: lipsește din minor-prophets-source-lock.json")
+    for key, label in (("webu", "WEBU"), ("wlc", "WLC")):
+        expected_payload = (fresh_book.get(label) or {}).get("sha256")
+        actual_payload = sha256_bytes(extracted[key])
+        if not isinstance(expected_payload, str) or actual_payload != expected_payload:
+            fail(
+                f"{code}: {label} source content drift: {actual_payload} != {expected_payload}; "
+                "fresh re-audit required before promotion"
+            )
+        print(f"{code}: {label} per-book USFM matches fresh source lock ({actual_payload})")
 
     target_refs = sorted(parsed["webu"])
     wlc_refs = sorted(parsed["wlc"])
