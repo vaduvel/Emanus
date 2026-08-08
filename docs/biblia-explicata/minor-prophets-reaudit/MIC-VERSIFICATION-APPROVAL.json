@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "MIC",
+  "bookName": "Mica",
+  "reviewType": "versification-only",
+  "status": "approved",
+  "approvedOn": "2026-08-08",
+  "productVersification": "WEBU",
+  "wlcAlignment": "absolute-verse-ordinal-across-book",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/MIC-FRESH-SOURCE-REAUDIT.json",
+  "sourceLock": "docs/data/biblia-emanus/minor-prophets-source-lock.json",
+  "evidenceFiles": [],
+  "approvedRanges": [
+    {
+      "product": "5:1",
+      "WLC": "4:14",
+      "identityBeforeThrough": "4:13"
+    },
+    {
+      "product": "5:2-5:15",
+      "WLC": "5:1-5:14",
+      "identityResumesAt": "6:1"
+    }
+  ],
+  "checks": {
+    "candidateVerseTotal": 105,
+    "WEBUVerseTotal": 105,
+    "WLCVerseTotal": 105,
+    "WEBUMatchesProductChapterCounts": true,
+    "boundaryStartsSemanticallyMatch": true,
+    "boundaryEndsSemanticallyMatch": true,
+    "noVerseLossOrDuplication": true
+  },
+  "scopeWarning": "Această aprobare certifică numai maparea referințelor WEBU ↔ WLC pentru Mica 5:1–15 ↔ WLC 4:14 și 5:1–14. Nu certifică fidelitatea sau calitatea textului românesc și nu schimbă candidateStage=temporary-editorial."
+}
