@@ -32,7 +32,7 @@ export interface BibleUnit {
   teaching: string
   /** Tipul explicației: expunere din sursa editorială sau overview textual de completare. */
   explanationKind?: BibleExplanationKind
-  /** Eticheta scurtă a provenienței explicației, folosită de cititor și de gate-urile editoriale. */
+  /** Eticheta scurtă a provenienței explicației, folosită numai intern de gate-urile editoriale. */
   explanationSource?: string
   words?: WordStudy[]
   /** Proveniența separată a notelor lexicale; nu este confundată cu sursa doctrinei. */
@@ -71,7 +71,11 @@ export const BIBLIA_EMANUS_TRANSLATION = "Biblia Emanus"
 /** Traducerea afisata. Editia originala 1924 este in domeniul public. */
 export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"
 
-/** Un capitol se deschide cititorului doar dupa revizie umana. */
+/**
+ * Un capitol se deschide cititorului numai când artefactul afișat este gata
+ * editorial pentru ediția publică. Review-ul explicației și stadiul textului
+ * biblic sunt verificate separat înainte ca statusul final să ajungă aici.
+ */
 export function chapterIsOpen(chapter: BibleChapter): boolean {
   return chapter.status === "published"
 }
