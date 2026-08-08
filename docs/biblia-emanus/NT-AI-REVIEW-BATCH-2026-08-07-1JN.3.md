@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08`
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1jn-3`)
+`emanus-nt-editorial-2026-08-08-1jn-3`)
 
 ## Domeniu și surse
 
@@ -69,8 +69,6 @@ promovează niciun verset ori capitol.
 
 ## Concluzie de lot
 
-Textul inițial avea negații inversate, acorduri greșite, expresii incomplete
-și adaosuri TR neidentificate, mai ales în 3:1, 3:5, 3:9, 3:14–15 și 3:19–24.
-Toate cele 24 de texte au fost revizuite și rămân `in_review` și `pending`
-până la registrul final de aprobare pentru întregul NT.
-
+Reverificarea independentă a confirmat toate cele 24 de decizii, inclusiv
+lecturile SBLGNT din 3:1, 3:5, 3:14, 3:19 și 3:23. Lotul rămâne `in_review`
+și `pending` până la registrul final de aprobare pentru întregul NT.
