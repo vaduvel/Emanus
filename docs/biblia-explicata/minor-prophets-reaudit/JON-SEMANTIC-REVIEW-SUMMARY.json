@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "JON",
+  "bookName": "Iona",
+  "status": "fresh-semantic-review-complete",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/JON-FRESH-SOURCE-REAUDIT.json",
+  "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/JON-VERSIFICATION-APPROVAL.json",
+  "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/JON/reviews",
+  "totals": {
+    "chapters": 4,
+    "verses": 48,
+    "approvedAsIs": 23,
+    "correctedVerses": 25,
+    "severity": {
+      "critical": 6,
+      "material": 10,
+      "minor": 9
+    }
+  },
+  "canonicalPublication": {
+    "chapterPattern": "docs/data/biblia-emanus/JON.{1..4}.json",
+    "snapshot": "docs/data/biblia-emanus/sources/ot-jon-2026-08-08-usfm.zip",
+    "snapshotSha256": "c3fcf2d2110fb8b785b2f0798564a444a06292fd01b03efae8208c24de07b771",
+    "textStage": "biblia-emanus",
+    "translationLabel": "Biblia Emanus",
+    "published": true,
+    "public": true,
+    "canonicalGate": "pending-external-validator"
+  },
+  "promotion": {
+    "candidateReady": true,
+    "promotionEligible": true,
+    "promotionStatus": "materialized-awaiting-canonical-gate"
+  }
+}
