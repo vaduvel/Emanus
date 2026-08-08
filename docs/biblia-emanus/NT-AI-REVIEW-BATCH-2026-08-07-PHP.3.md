@@ -2,7 +2,9 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare: `emanus-nt-publication-audit-2026-08-07-php-3`)
+Data: `2026-08-08` (reverificare editorială)
+
+Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare: `emanus-nt-editorial-2026-08-08-php-3`)
 
 ## Domeniu și surse
 
@@ -26,8 +28,8 @@ Toate cele 21 de versete au fost verificate direct cu SBLGNT-PHP și aparatul; T
 | PHP.3.12 | `οὐχ ὅτι ἤδη ἔλαβον … διώκω … καταλάβω` | Nu că am dobândit deja toate acestea sau că am fost deja făcut desăvârșit; dar urmăresc să apuc și eu lucrul pentru care am fost apucat de Hristos Isus. |
 | PHP.3.13 | `ἓν δέ … ἐπιλανθανόμενος … ἐπεκτεινόμενος` | Fraților, eu nu socotesc că l-am apucat încă; dar fac un singur lucru: uit ce este în urmă și mă întind spre ce este înainte, |
 | PHP.3.14 | `κατὰ σκοπὸν διώκω … βραβεῖον` | alerg spre țintă, pentru premiul chemării de sus a lui Dumnezeu, în Hristos Isus. |
-| PHP.3.15 | `ὅσοι οὖν τέλειοι … τοῦτο φρονῶμεν` | Așadar, toți câți suntem maturi să gândim astfel; iar dacă în vreo privință gândiți altfel, Dumnezeu vă va descoperi și lucrul acesta. |
-| PHP.3.16 | `εἰς ὃ ἐφθάσαμεν, τῷ αὐτῷ στοιχεῖν` | Totuși, până la ceea ce am ajuns, să continuăm pe aceeași cale. |
+| PHP.3.15 | `ὅσοι οὖν τέλειοι … τοῦτο φρονῶμεν` | Așadar, toți câți suntem maturi să gândim astfel; iar dacă în vreo privință gândiți altfel, Dumnezeu vă va descoperi și acest lucru. |
+| PHP.3.16 | `εἰς ὃ ἐφθάσαμεν, τῷ αὐτῷ στοιχεῖν` | Totuși, să umblăm potrivit cu măsura la care am ajuns. |
 | PHP.3.17 | `συμμιμηταί μου γίνεσθε … σκοπεῖτε` | Fraților, urmați-mi exemplul împreună și luați seama la cei care trăiesc astfel, după modelul pe care îl aveți în noi. |
 | PHP.3.18 | `τοὺς ἐχθροὺς τοῦ σταυροῦ τοῦ Χριστοῦ` | Căci mulți trăiesc ca dușmani ai crucii lui Hristos; despre ei v-am spus adesea, iar acum vă spun chiar plângând. |
 | PHP.3.19 | `ὧν τὸ τέλος ἀπώλεια … οἱ τὰ ἐπίγεια φρονοῦντες` | Sfârșitul lor este pieirea, dumnezeul lor este pântecele, iar slava lor este în rușinea lor; ei au gândul la cele pământești. |
