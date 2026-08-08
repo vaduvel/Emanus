@@ -48,12 +48,13 @@ jobs:
             --exclude-book AMO \
             --exclude-book OBA \
             --exclude-book JON \
-            --exclude-book NAM
+            --exclude-book NAM \
+            --exclude-book HAG
 
       - name: Rebuild fresh packets only for books still awaiting semantic review
         run: |
           set -euo pipefail
-          for book in MIC HAB ZEP HAG ZEC MAL; do
+          for book in MIC HAB ZEP ZEC MAL; do
             python3 scripts/prepare-minor-prophet-reaudit.py --book "$book"
             python3 scripts/split-minor-prophet-reaudit.py --book "$book"
           done
@@ -61,7 +62,7 @@ jobs:
       - name: Validate promoted minor prophets
         run: |
           set -euo pipefail
-          for book in HOS JOL AMO OBA JON NAM; do
+          for book in HOS JOL AMO OBA JON NAM HAG; do
             python3 scripts/check-biblia-emanus-book.py --book "$book"
             python3 scripts/seal-biblia-emanus.py --book "$book" --check
           done
@@ -92,7 +93,7 @@ jobs:
             docs/data/biblia-emanus/minor-prophets-source-lock.json \
             docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json \
             packages/shared/src/bible/generated/vtCanonicalText
-          for book in MIC HAB ZEP HAG ZEC MAL; do
+          for book in MIC HAB ZEP ZEC MAL; do
             git add "docs/biblia-explicata/minor-prophets-reaudit/${book}-FRESH-SOURCE-REAUDIT.json"
             git add "docs/biblia-explicata/minor-prophets-reaudit/${book}"
           done
