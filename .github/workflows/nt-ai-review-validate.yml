@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  first-peter-source-materialize:
+  galatians-source-materialize:
     runs-on: ubuntu-22.04
     timeout-minutes: 20
     steps:
@@ -19,30 +19,30 @@ jobs:
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-      - name: Materialize pinned 1 Peter witnesses
+      - name: Materialize pinned Galatians witnesses
         run: |
           set -euo pipefail
           ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
           EXPECTED=29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424
           test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "$EXPECTED"
           unzip -t "$ZIP" >/dev/null
-          OUT=.github/nt-ai-review/1pe-source
+          OUT=.github/nt-ai-review/gal-source
           mkdir -p "$OUT"
-          unzip -p "$ZIP" sblgnt/text/1PE.txt > "$OUT/sblgnt.txt"
-          unzip -p "$ZIP" sblgnt/apparatus/text/1PE.txt > "$OUT/apparatus.txt"
-          unzip -p "$ZIP" tr/1PE.usfm > "$OUT/tr.usfm"
-          unzip -p "$ZIP" webp/1PE.usfm > "$OUT/webp.usfm"
-          unzip -p "$ZIP" btf/1PE.usfm > "$OUT/btf.usfm"
-          unzip -p "$ZIP" cornilescu1924/1PE.usfm > "$OUT/cornilescu1924.usfm"
-          unzip -p "$ZIP" biblia-libera/1PE.usfm > "$OUT/biblia-libera.usfm"
+          unzip -p "$ZIP" sblgnt/text/GAL.txt > "$OUT/sblgnt.txt"
+          unzip -p "$ZIP" sblgnt/apparatus/text/GAL.txt > "$OUT/apparatus.txt"
+          unzip -p "$ZIP" tr/GAL.usfm > "$OUT/tr.usfm"
+          unzip -p "$ZIP" webp/GAL.usfm > "$OUT/webp.usfm"
+          unzip -p "$ZIP" btf/GAL.usfm > "$OUT/btf.usfm"
+          unzip -p "$ZIP" cornilescu1924/GAL.usfm > "$OUT/cornilescu1924.usfm"
+          unzip -p "$ZIP" biblia-libera/GAL.usfm > "$OUT/biblia-libera.usfm"
           for f in sblgnt.txt apparatus.txt tr.usfm webp.usfm btf.usfm cornilescu1924.usfm biblia-libera.usfm; do test -s "$OUT/$f"; done
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add "$OUT"
           if git diff --cached --quiet; then
-            echo '1 Peter sources already materialized.'
+            echo 'Galatians sources already materialized.'
           else
             git diff --cached --check
-            git commit -m 'chore(biblia): materialize pinned 1 Peter witnesses'
+            git commit -m 'chore(biblia): materialize pinned Galatians witnesses'
             git push origin HEAD:codex/nt-ai-review-handoff
           fi
