@@ -5,7 +5,9 @@ The Romanian candidate comes from docs/data/biblia-emanus-candidates. WEBU and
 WLC are supplied as freshly downloaded archives. Product versification follows
 WEBU. When WLC has the same total verse count but different chapter boundaries,
 its references are aligned by absolute verse ordinal and preserved explicitly.
-No inherited review/approval flag is copied into the fresh packet.
+For books whose Masoretic versification splits or moves verses relative to
+WEBU, an explicit book map is required and every WLC verse must be consumed
+exactly once. No inherited review/approval flag is copied into the fresh packet.
 """
 
 from __future__ import annotations
@@ -86,6 +88,32 @@ def load_candidate(book: str, expected_chapters: int) -> list[dict[str, Any]]:
     return chapters
 
 
+def explicit_wlc_refs(book: str, chapter: int, verse: int) -> list[tuple[int, int]] | None:
+    """Return explicit WLC refs for one WEBU/product ref when a book needs it.
+
+    1 Samuel follows the common Christian/WEBU numbering in the product while
+    the Masoretic/WLC numbering has two documented differences:
+
+    * WEBU 20:42 includes material numbered WLC 20:42 and 21:1; therefore
+      WEBU 21:1-15 correspond to WLC 21:2-16.
+    * WEBU 23:29 is WLC 24:1; therefore WEBU 24:1-22 correspond to WLC 24:2-23.
+
+    Returning None means the book has no explicit map and should use the
+    generic identity/ordinal path.
+    """
+    if book != "1SA":
+        return None
+    if chapter == 20 and verse == 42:
+        return [(20, 42), (21, 1)]
+    if chapter == 21:
+        return [(21, verse + 1)]
+    if chapter == 23 and verse == 29:
+        return [(24, 1)]
+    if chapter == 24:
+        return [(24, verse + 1)]
+    return [(chapter, verse)]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--book", required=True, choices=sorted(BOOKS))
@@ -107,7 +135,9 @@ def main() -> None:
     candidate_count = sum(len(c["verses"]) for c in candidate)
     if len(webu_book) != candidate_count:
         raise SystemExit(f"{code}: candidate={candidate_count}, current WEBU={len(webu_book)}")
-    if len(wlc_book) != candidate_count:
+
+    uses_explicit_map = explicit_wlc_refs(code, 1, 1) is not None
+    if not uses_explicit_map and len(wlc_book) != candidate_count:
         raise SystemExit(
             f"{code}: candidate={candidate_count}, current WLC={len(wlc_book)}; "
             "explicit versification reconciliation required before semantic review"
@@ -115,6 +145,7 @@ def main() -> None:
 
     mappings: list[dict[str, str]] = []
     ordinal = 0
+    used_wlc_refs: list[tuple[str, int, int]] = []
     chapter_packets: list[dict[str, Any]] = []
     for chapter in candidate:
         chapter_no = int(chapter["chapter"])
@@ -124,10 +155,23 @@ def main() -> None:
             webu_text = webu.get((code, chapter_no, verse_no))
             if webu_text is None:
                 raise SystemExit(f"{code} {chapter_no}:{verse_no}: current WEBU reference missing")
-            wlc_key, wlc_text = wlc_book[ordinal]
-            ordinal += 1
-            wlc_ref = f"{wlc_key[1]}:{wlc_key[2]}"
+
             product_ref = f"{chapter_no}:{verse_no}"
+            explicit_refs = explicit_wlc_refs(code, chapter_no, verse_no)
+            if explicit_refs is not None:
+                wlc_keys = [(code, ch, v) for ch, v in explicit_refs]
+                missing = [key for key in wlc_keys if key not in wlc]
+                if missing:
+                    raise SystemExit(f"{code} {product_ref}: explicit WLC refs missing: {missing}")
+                wlc_text = " ".join(str(wlc[key]).strip() for key in wlc_keys if str(wlc[key]).strip())
+                wlc_ref = "+".join(f"{key[1]}:{key[2]}" for key in wlc_keys)
+                used_wlc_refs.extend(wlc_keys)
+            else:
+                wlc_key, wlc_text = wlc_book[ordinal]
+                ordinal += 1
+                wlc_ref = f"{wlc_key[1]}:{wlc_key[2]}"
+                used_wlc_refs.append(wlc_key)
+
             if wlc_ref != product_ref:
                 mappings.append({"productRef": product_ref, "WLCRef": wlc_ref})
             rows.append(
@@ -155,8 +199,28 @@ def main() -> None:
             }
         )
 
+    expected_wlc_refs = {key for key, _text in wlc_book}
+    used_set = set(used_wlc_refs)
+    if len(used_wlc_refs) != len(used_set):
+        duplicates = sorted({key for key in used_wlc_refs if used_wlc_refs.count(key) > 1})
+        raise SystemExit(f"{code}: WLC mapping reuses refs: {duplicates}")
+    if used_set != expected_wlc_refs:
+        missing = sorted(expected_wlc_refs - used_set)
+        extra = sorted(used_set - expected_wlc_refs)
+        raise SystemExit(f"{code}: WLC mapping is not exhaustive; missing={missing}, extra={extra}")
+
+    if uses_explicit_map:
+        alignment = "explicit-book-versification-map"
+        approval = "explicit-map-source-verified"
+    elif mappings:
+        alignment = "absolute-verse-ordinal-across-book"
+        approval = "manual-boundary-review-required"
+    else:
+        alignment = "identity"
+        approval = "identity"
+
     packet = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "bookId": code,
         "bookName": name,
         "translationTarget": "BE",
@@ -177,12 +241,13 @@ def main() -> None:
             "verses": candidate_count,
             "WEBUVerses": len(webu_book),
             "WLCVerses": len(wlc_book),
+            "WLCRefsConsumed": len(used_wlc_refs),
         },
         "versification": {
             "productBase": "WEBU",
-            "WLCAlignment": "identity" if not mappings else "absolute-verse-ordinal-across-book",
+            "WLCAlignment": alignment,
             "mappedRefs": len(mappings),
-            "approval": "identity" if not mappings else "manual-boundary-review-required",
+            "approval": approval,
             "mappings": mappings,
         },
         "chapters": chapter_packets,
@@ -193,7 +258,8 @@ def main() -> None:
     out.write_text(json.dumps(packet, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"{code}: fresh packet {expected_chapters} chapters / {candidate_count} verses; "
-        f"WLC remaps={len(mappings)}; candidateDigest={packet['candidateDigest']}"
+        f"WLC source verses={len(wlc_book)}; WLC refs consumed={len(used_wlc_refs)}; "
+        f"mapped product refs={len(mappings)}; candidateDigest={packet['candidateDigest']}"
     )
 
 
