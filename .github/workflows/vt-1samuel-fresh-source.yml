@@ -27,6 +27,32 @@ jobs:
           set -euo pipefail
           curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
           curl --fail --location --retry 3 --output /tmp/hboWLC_current.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
+      - name: Diagnose 1 Samuel chapter versification
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from collections import Counter
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from ot_repair5_common import parse_usfm_zip
+
+          web = parse_usfm_zip(Path('/tmp/engwebp_current.zip'))
+          wlc = parse_usfm_zip(Path('/tmp/hboWLC_current.zip'))
+          web_counts = Counter(ch for (book, ch, _v) in web if book == '1SA')
+          wlc_counts = Counter(ch for (book, ch, _v) in wlc if book == '1SA')
+          candidate_counts = {}
+          for ch in range(1, 32):
+              doc = json.loads(Path(f'docs/data/biblia-emanus-candidates/1SA.{ch}.json').read_text(encoding='utf-8'))
+              candidate_counts[ch] = len(doc.get('verses', []))
+          print('chapter candidate WEBU WLC delta_wlc_vs_product')
+          for ch in range(1, 32):
+              c = candidate_counts[ch]
+              e = web_counts[ch]
+              h = wlc_counts[ch]
+              marker = ' <--' if c != h or c != e else ''
+              print(f'{ch:02d} {c:3d} {e:3d} {h:3d} {h-c:+d}{marker}')
+          print('TOTAL', sum(candidate_counts.values()), sum(web_counts.values()), sum(wlc_counts.values()))
+          PY
       - name: Build fresh 1 Samuel source packet and review chunks
         run: |
           set -euo pipefail
