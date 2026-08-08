@@ -8,49 +8,82 @@ import {
 } from "./overlayBibleBooks.js"
 
 /**
- * Sursele editoriale rămân în metadata internă pentru audit, dar cititorul
- * primește explicația direct, fără atribuirea ei unui autor modern.
+ * Proveniența rămâne în metadata internă. Cititorul primește explicația direct,
+ * fără numele autorului cercetat și fără limbaj de laborator despre transcript.
  */
 function directReaderText(value: string): string {
   return value
+    // Formule interpretative: păstrăm caracterul de interpretare, nu autorul.
     .replace(/\bAceasta este interpretarea lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o interpretare")
     .replace(/\bAceasta este schema lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o schemă")
     .replace(/\binterpretarea lui (?:Zac\s+)?Poonen\b/giu, "această interpretare")
     .replace(/\blectura lui (?:Zac\s+)?Poonen\b/giu, "această lectură")
     .replace(/\bschema lui (?:Zac\s+)?Poonen\b/giu, "această schemă")
-    .replace(/\bpredica lui (?:Zac\s+)?Poonen\b/giu, "expunerea")
+    .replace(/\bpredica lui (?:Zac\s+)?Poonen\b/giu, "această expunere")
     .replace(/\baplicația lui (?:Zac\s+)?Poonen\b/giu, "această aplicație")
     .replace(/\bteologia lui (?:Zac\s+)?Poonen\b/giu, "această formulare teologică")
-    .replace(/\bsursa (?:lui )?(?:Zac\s+)?Poonen\b/giu, "sursa editorială")
-    .replace(/\bmaterialul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "materialul sursă")
-    .replace(/\bÎn lectura lui (?:Zac\s+)?Poonen,\s*/giu, "")
-    .replace(/\bPentru (?:Zac\s+)?Poonen,\s*/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen spune direct că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen spune că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen subliniază că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen insistă că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen observă că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen explică că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen arată că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen amintește că\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen se oprește la\s+/giu, "Accentul cade pe ")
+    .replace(/\bargumentul lui (?:Zac\s+)?Poonen\b/giu, "argumentul acestei lecturi")
+    .replace(/\bimaginea folosită de (?:Zac\s+)?Poonen\b/giu, "o analogie folosită aici")
+    .replace(/\bÎn lectura lui (?:Zac\s+)?Poonen,\s*/giu, "În această lectură, ")
+    .replace(/\bPentru (?:Zac\s+)?Poonen,\s*/giu, "În această expunere, ")
+
+    // Verbe de atribuire: le transformăm în propoziții neutre și gramaticale.
+    .replace(/\b(?:Zac\s+)?Poonen spune foarte apăsat însă că\s+/giu, "Se subliniază însă că ")
+    .replace(/\b(?:Zac\s+)?Poonen spune (?:foarte )?direct că\s+/giu, "Se spune direct că ")
+    .replace(/\b(?:Zac\s+)?Poonen spune că\s+/giu, "Se subliniază că ")
+    .replace(/\b(?:Zac\s+)?Poonen subliniază că\s+/giu, "Se subliniază că ")
+    .replace(/\b(?:Zac\s+)?Poonen insistă că\s+/giu, "Se insistă asupra faptului că ")
+    .replace(/\b(?:Zac\s+)?Poonen observă că\s+/giu, "Se observă că ")
+    .replace(/\b(?:Zac\s+)?Poonen explică că\s+/giu, "Explicația arată că ")
+    .replace(/\b(?:Zac\s+)?Poonen arată că\s+/giu, "Se arată că ")
+    .replace(/\b(?:Zac\s+)?Poonen amintește că\s+/giu, "Se amintește că ")
+    .replace(/\b(?:Zac\s+)?Poonen se oprește (?:în mod special )?la\s+/giu, "Accentul cade pe ")
     .replace(/\b(?:Zac\s+)?Poonen pornește de la\s+/giu, "Punctul de plecare este ")
-    .replace(/\b(?:Zac\s+)?Poonen citește\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen urmărește\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen vede\s+/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen aplică\s+/giu, "Aplicația este ")
-    .replace(/\b(?:Zac\s+)?Poonen numește\s+/giu, "")
-    .replace(/\bTranscriptul lui (?:Zac\s+)?Poonen\s+/giu, "Sursa editorială ")
-    .replace(/\bTranscriptul (?:Zac\s+)?Poonen\s+/giu, "Sursa editorială ")
-    .replace(/\blui (?:Zac\s+)?Poonen\b/giu, "")
-    .replace(/\b(?:Zac\s+)?Poonen\b/giu, "")
+    .replace(/\b(?:Zac\s+)?Poonen citește\s+/giu, "O posibilă lectură citește ")
+    .replace(/\b(?:Zac\s+)?Poonen vede în\s+/giu, "O posibilă lectură vede în ")
+    .replace(/\b(?:Zac\s+)?Poonen vede\s+/giu, "O posibilă lectură vede ")
+    .replace(/\b(?:Zac\s+)?Poonen urmărește\s+/giu, "Explicația urmărește ")
+    .replace(/\b(?:Zac\s+)?Poonen aplică\s+/giu, "Aplicația pastorală leagă ")
+    .replace(/\b(?:Zac\s+)?Poonen numește\s+/giu, "Explicația numește ")
+    .replace(/\b(?:Zac\s+)?Poonen leagă\s+/giu, "Explicația leagă ")
+    .replace(/\b(?:Zac\s+)?Poonen tratează\s+/giu, "Explicația tratează ")
+    .replace(/\b(?:Zac\s+)?Poonen dezvoltă\s+/giu, "Explicația dezvoltă ")
+    .replace(/\b(?:Zac\s+)?Poonen rezumă\s+/giu, "Ideea este rezumată astfel: ")
+    .replace(/\b(?:Zac\s+)?Poonen revine\s+/giu, "Explicația revine ")
+    .replace(/\b(?:Zac\s+)?Poonen contrastează\s+/giu, "Explicația contrastează ")
+    .replace(/\b(?:Zac\s+)?Poonen folosește\s+/giu, "O aplicație folosește ")
+
+    // Limbaj de cercetare: în produs rămâne doar ideea explicativă.
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen aplică\s+/giu, "O aplicație pastorală leagă ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen contrastează\s+/giu, "Explicația contrastează ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen folosește\s+/giu, "O aplicație folosește ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen pregătește\s+/giu, "Aici se pregătește ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu dezvoltă\s+/giu, "Expunerea nu dezvoltă ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu repetă toate detaliile, ci se concentrează\s+/giu, "Accentul cade ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "Explicația")
+    .replace(/\bTranscriptul\b/giu, "Explicația")
+    .replace(/\bsursa (?:lui )?(?:Zac\s+)?Poonen\b/giu, "explicația")
+    .replace(/\bmaterialul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "explicația")
+    .replace(/\b(?:Zac\s+)?Poonen\s*\/\s*CFC\b/giu, "explicația")
+    .replace(/\bCFC India\b/giu, "explicația")
+    .replace(/\bThrough The Bible\b/giu, "expunerea")
+
+    // Genitiv sau apariție reziduală: păstrăm o expresie neutră, nu un gol.
+    .replace(/\blui (?:Zac\s+)?Poonen\b/giu, "acestei expuneri")
+    .replace(/\b(?:Zac\s+)?Poonen\b/giu, "această expunere")
     .replace(/\bAceasta este interpretarea lui escatologică\b/giu, "Aceasta este o interpretare escatologică")
     .replace(/\bîn interpretarea lui escatologică\b/giu, "în această interpretare escatologică")
-    .replace(/\bAllen\s+Nolan\b/giu, "")
-    .replace(/\bAllen\b/giu, "")
-    .replace(/\bNolan\b/giu, "")
+
+    // Geneza are un flux editorial separat; numele lui rămân doar în provenance.
+    .replace(/\bAllen\s*[\/]\s*Nolan\b/giu, "expunerea")
+    .replace(/\bAllen\s+Nolan\b/giu, "expunerea")
+    .replace(/\bAllen\b/giu, "expunerea")
+    .replace(/\bNolan\b/giu, "expunerea")
+
     .replace(/[ \t]{2,}/g, " ")
     .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/\bexplicația explicația\b/giu, "explicația")
+    .replace(/\bexpunerea expunerea\b/giu, "expunerea")
     .trim()
 }
 
@@ -74,7 +107,7 @@ function withoutNamedAttribution(book: BibleBook): BibleBook {
           meaning: directReaderText(word.meaning),
         })),
         forYourHeart: unit.forYourHeart ? directReaderText(unit.forYourHeart) : undefined,
-        // Proveniența nominală este internă; cititorul nu afișează numele autorului.
+        // Proveniența nominală este exclusiv internă.
         explanationSource: undefined,
       })),
     })),
@@ -82,7 +115,7 @@ function withoutNamedAttribution(book: BibleBook): BibleBook {
 }
 
 function assertNoNamedAttribution(book: BibleBook): void {
-  const forbidden = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b/iu
+  const forbidden = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b|\bCFC India\b|\bThrough The Bible\b/iu
   const danglingAttribution = /\b(?:lectura|interpretarea|schema|predica|aplicația|teologia)\s+lui(?=[,.;:!?]|\s+(?:este|rămâne|devine|despre)\b)/iu
   const check = (value: string | undefined, where: string) => {
     if (value && forbidden.test(value)) {
@@ -113,16 +146,12 @@ function assertNoNamedAttribution(book: BibleBook): void {
 }
 
 /**
- * Catalogul consumat de cititorul Bibliei explicate în lucru editorial.
+ * Catalogul consumat de reader.
  *
- * Nu modificăm `BIBLE_BOOKS` legacy până când toate integrările vechi sunt
- * migrate. Aici adăugăm explicit 1 Împărați și toate cele 29 de cărți overlay.
- *
- * Stadiul textului este luat exclusiv din catalogul generat. După review-ul
- * final de conținut, Judecători–Daniel rămân texte editoriale din candidatul
- * istoric până la un fresh re-audit în corpusul canonic curent. Osea este
- * Biblia Emanus canonică; ceilalți profeți mici rămân provizorii până la
- * promovarea lor individuală. Explicațiile noi rămân `in_review`.
+ * Statusul explicației și stadiul traducerii sunt independente. Un overlay
+ * explicativ poate fi `published`, dar overlayBibleBooks ține capitolul închis
+ * dacă textul biblic asociat este încă `temporary-editorial`. Când Biblia
+ * Emanus înlocuiește textul de lucru, explicația nu mai cere un nou review.
  */
 const byId = new Map<string, BibleBook>()
 for (const book of BIBLE_BOOKS) byId.set(book.id, book)
