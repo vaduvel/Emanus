@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -74,20 +77,16 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-rev-9",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -129,103 +128,93 @@
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:7e0924d1435f96e798ddbd43bf278ee8af2fb1262a5c19f38b90b889f903ebfd",
-    "contentDigest": "sha256:dc042d2a635b5906ad1a8c0111e9041bd453103dbbbfc19ff4ab7d6194c2f9e2"
+    "textDigest": "sha256:e5d60be94c3f3c8775731460c77c3f5c7c5124daee101521bd0da9ef2b948d66",
+    "contentDigest": "sha256:ad8a7989ed4dffeddd8877cf6687a98442beb37a47d00dd0d7da3d282a6e3671"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Al cincilea înger a sunat am văzut o stea din cer care căzuse pe pământ. I s-a dat cheia gropii abisului."
+      "text": "Al cincilea înger a sunat din trâmbiță. Am văzut o stea căzută din cer pe pământ; i s-a dat cheia puțului adâncului."
     },
     {
       "number": 2,
-      "text": "El a deschis groapa abisului, și fumul a ieșit din groapă, ca fumul dintr-un cuptor aprins. Soarele și aerul s-au întunecat din pricina fumului din groapă."
+      "text": "A deschis puțul adâncului și din puț s-a ridicat fum ca fumul unui cuptor mare; soarele și aerul s-au întunecat din pricina fumului puțului."
     },
     {
       "number": 3,
-      "text": "Din fum au ieșit lăcuste pe pământ, și li s-a dat putere, cum au putere scorpionii pământului."
+      "text": "Din fum au ieșit lăcuste pe pământ și li s-a dat putere, cum au putere scorpionii pământului."
     },
     {
       "number": 4,
-      "text": "Li s-a spus să nu rănească iarba pământului, nici vreun lucru verde, nici vreun copac, ci numai pe acei oameni care nu au pecetea lui Dumnezeu pe frunle lor."
+      "text": "Li s-a spus să nu vatăme iarba pământului, nici vreun lucru verde, nici vreun copac, ci numai pe oamenii care nu au pecetea lui Dumnezeu pe frunți."
     },
     {
       "number": 5,
-      "text": "Li s-a dat putere nu să-i omoare, ci să-i chinuiască cinci luni. Osânda lor a fost ca osânda unui scorpion când lovește un om."
+      "text": "Li s-a dat nu să-i omoare, ci să-i chinuiască timp de cinci luni; chinul lor era ca al unui scorpion când lovește un om."
     },
     {
       "number": 6,
-      "text": "În zilele acelea, oamenii vor căuta moartea, și nu o vor găsi în nici un fel; vor dori să moară, și moartea va fugi de ei."
+      "text": "În zilele acelea oamenii vor căuta moartea, dar nu o vor găsi; vor dori să moară, dar moartea va fugi de ei."
     },
     {
       "number": 7,
-      "text": "Formele lăcustelor erau ca niște cai pregătiți de război. Pe capetele lor erau ceva de genul coroanelor de aur, iar fețele lor erau ca fețele oamenilor."
+      "text": "Înfățișările lăcustelor erau asemenea unor cai pregătiți pentru război; pe capetele lor erau ca niște cununi asemenea aurului, iar fețele lor erau ca fețele oamenilor."
     },
     {
       "number": 8,
-      "text": "Aveau părul ca al femeilor, iar dinții lor erau ca ai leilor."
+      "text": "Aveau păr ca părul femeilor, iar dinții lor erau ca ai leilor."
     },
     {
       "number": 9,
-      "text": "Ei aveau platoșe ca niște platoșe de fier; sunetul aripilor lor era ca sunetul multor care și cai care se grăbeau la război."
+      "text": "Aveau platoșe ca platoșele de fier; zgomotul aripilor lor era ca zgomotul unor care cu mulți cai alergând la război."
     },
     {
       "number": 10,
-      "text": "Ei au cozi ca cele ale scorpionilor, cu ace, în cozile lor au puterea de a face rău oamenilor timp de cinci luni."
+      "text": "Au cozi asemenea scorpionilor și ace; în cozile lor este puterea de a vătăma oamenii timp de cinci luni."
     },
     {
       "number": 11,
-      "text": "Ei au peste ei ca rege îngerul abisului. Numele său în ebraică este"
+      "text": "Au peste ele ca împărat pe îngerul adâncului; numele lui în ebraică este Abadon, iar în greacă are numele Apolion."
     },
     {
       "number": 12,
-      "text": "Primul vai este trecut. Iată, există încă două vai care vin după aceasta."
+      "text": "Primul vai a trecut. Iată, mai vin încă două vai după acestea."
     },
     {
       "number": 13,
-      "text": "Al șaselea înger a sunat. Am auzit un glas din coarnele altarului de aur, care este înaintea lui Dumnezeu,"
+      "text": "Al șaselea înger a sunat din trâmbiță. Am auzit un glas din cele patru coarne ale altarului de aur care este înaintea lui Dumnezeu,"
     },
     {
       "number": 14,
-      "text": "Și i-a zis îngerului allea, care avea trâmbi: Eliberează pe cei patru îngeri care sunt legați la râul cel mare Eufrat!„"
+      "text": "spunând celui de-al șaselea înger care avea trâmbița: „Dezleagă-i pe cei patru îngeri legați la râul cel mare, Eufrat!”"
     },
     {
       "number": 15,
-      "text": "Cei patru îngeri au fost eliberați care fuseseră pregătiți pentru acea oră și zi și lună și an, astfel încât să poată ucide o treime din omenire."
+      "text": "Cei patru îngeri, pregătiți pentru ceasul, ziua, luna și anul acela, au fost dezlegați ca să omoare a treia parte dintre oameni."
     },
     {
       "number": 16,
-      "text": "Numărul armatelor călăre era de două sute de milioane. Am auzit numărul lor."
+      "text": "Numărul armatelor de călăreți era de două sute de milioane; le-am auzit numărul."
     },
     {
       "number": 17,
-      "text": "Astfel, am văzut caii în viziune și pe cei ce ședeau pe ei, având platoșe de roșu aprins, albastru de zambile și galben de sulf; și capetele de cai semănau cu capetele de lei. Din gurile lor ies foc, fum și sulf."
+      "text": "Așa am văzut în viziune caii și pe cei care ședeau pe ei: aveau platoșe roșii ca focul, albastre ca iacintul și galbene ca sulful; capetele cailor erau ca ale leilor, iar din gurile lor ieșeau foc, fum și sulf."
     },
     {
       "number": 18,
-      "text": "Prin aceste trei plăgi, o treime din omenire a fost ucisă: de focul, de fumul de sulful care ieșeau din gura lor."
+      "text": "Prin aceste trei plăgi a fost ucisă a treia parte dintre oameni: de focul, fumul și sulful care ieșeau din gurile lor."
     },
     {
       "number": 19,
-      "text": "Căci puterea cailor este în gurile lor și în cozile lor; căci cozile lor sunt ca șerpii, și au capete, și le fac rău."
+      "text": "Căci puterea cailor este în gura lor și în cozile lor; cozile lor sunt asemenea șerpilor, au capete și cu ele vatămă."
     },
     {
       "number": 20,
-      "text": "Restul omenirii, care nu au fost uciși cu aceste plăgi, nu s-au pocăit de lucrările mâinilor lor, ca să nu se închine demonilor, și idolilor de aur, și de argint, și de aramă, și de piatră, și de lemn, care nu pot vedea, auzi, sau umbla."
+      "text": "Ceilalți oameni, care nu fuseseră uciși de aceste plăgi, nu s-au pocăit de lucrările mâinilor lor, ca să nu se mai închine demonilor și idolilor de aur, argint, aramă, piatră și lemn, care nu pot să vadă, să audă sau să umble."
     },
     {
       "number": 21,
-      "text": "Ei nu s-au căit de crimele lor, de vrăjitoriile lor, de imoralitatea lor sexuală sau de furturile lor.”"
+      "text": "Nu s-au pocăit nici de crimele lor, nici de vrăjitoriile lor, nici de desfrâul lor, nici de furturile lor."
     }
   ],
   "editorialNotes": [],
