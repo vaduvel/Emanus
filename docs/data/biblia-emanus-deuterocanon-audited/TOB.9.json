@@ -1,0 +1,94 @@
+{
+  "translation": "BE-DEUT-DRAFT",
+  "bookId": "TOB",
+  "bookName": "Tobit",
+  "chapter": 9,
+  "collection": "deuterocanon",
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "id": "eng-webbe",
+      "sha256": "42e0dec882e3e94272dc7ed312233dd2b891613a230dece316ffbd6ae5aace67",
+      "license": "Public Domain"
+    },
+    "greek": [
+      {
+        "id": "grcbrent",
+        "sha256": "7c3d95d05b542bbf67348e6c28430b7cedfc83858b9125d3d05c574a423c28c6",
+        "license": "Public Domain"
+      },
+      {
+        "id": "grclxx",
+        "sha256": "2b0fc204f6a2e5283a4ef1654b25b76cf23c32a910f5534c4e076c9e85380b7e",
+        "license": "Public Domain"
+      }
+    ],
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "Apache-2.0",
+      "role": "first-pass draft only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Tobias a chemat pe Rafael, și i -a zis:"
+    },
+    {
+      "number": 2,
+      "text": "Frate Azarias, ia cu tine un servitor și două cămile, și du-te la Rage of Media la Gabael, și ia banii pentru mine, și adu-l la sărbătoarea de nuntă,"
+    },
+    {
+      "number": 3,
+      "text": "Pentru că Raguel a jurat că nu trebuie să plec."
+    },
+    {
+      "number": 4,
+      "text": "Tatăl meu contează zilele; și dacă aștept mult timp, el va fi foarte îndurerat."
+    },
+    {
+      "number": 5,
+      "text": "Rafael s'a dus, s'a culcat cu Gabael, și i -a dat scrisul. A adus sacii cu pecețile lor, și i -a dat."
+    },
+    {
+      "number": 6,
+      "text": "Apoi s'au sculat dis -de -dimineață împreună, și au venit la ospățul de nuntă. Tobias a binecuvîntat pe nevasta lui."
+    }
+  ],
+  "audit": {
+    "sourceVerseNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "continuous": true,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 6,
+    "semanticMinimumScore": 0.674245,
+    "blockingIssueCount": 0,
+    "textDigest": "d6eacf7e361b071c78d4e6d993b54a25e65be0c18be72c20c17e8ecb121f46c2",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  },
+  "runtimeEnabled": true
+}

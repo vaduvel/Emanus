@@ -1,0 +1,109 @@
+{
+  "translation": "BE-DEUT-DRAFT",
+  "bookId": "BAR",
+  "bookName": "Baruh",
+  "chapter": 5,
+  "collection": "deuterocanon",
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "id": "eng-webbe",
+      "sha256": "42e0dec882e3e94272dc7ed312233dd2b891613a230dece316ffbd6ae5aace67",
+      "license": "Public Domain"
+    },
+    "greek": [
+      {
+        "id": "grcbrent",
+        "sha256": "7c3d95d05b542bbf67348e6c28430b7cedfc83858b9125d3d05c574a423c28c6",
+        "license": "Public Domain"
+      },
+      {
+        "id": "grclxx",
+        "sha256": "2b0fc204f6a2e5283a4ef1654b25b76cf23c32a910f5534c4e076c9e85380b7e",
+        "license": "Public Domain"
+      }
+    ],
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "Apache-2.0",
+      "role": "first-pass draft only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Scoate-ți haina de jale și de nenorocire, Ierusalime, și îmbracă-te pentru totdeauna cu frumusețea gloriei lui Dumnezeu."
+    },
+    {
+      "number": 2,
+      "text": "Îmbrăcați roba dreptății de la Dumnezeu, puneți-vă pe cap o diademă a slavei veșniciei."
+    },
+    {
+      "number": 3,
+      "text": "Căci Dumnezeu îți va arăta splendoarea pretutindeni sub cer."
+    },
+    {
+      "number": 4,
+      "text": "Căci numele tău va fi chemat de Dumnezeu pentru totdeauna. Pace dreaptă, glorie sfântă."
+    },
+    {
+      "number": 5,
+      "text": "Ridică-te, Ierusalime, și stai pe înălțime. Uită-te în jurul tău spre răsărit și privește-ți copiii adunați de la apusul soarelui la răsăritul ei la cuvântul Sfântului, bucuros că Dumnezeu și-a adus aminte de ei."
+    },
+    {
+      "number": 6,
+      "text": "Căci ei au plecat de la tine pe jos, fiind îndepărtați de dușmanii lor, dar Dumnezeu ți i-a adus sus, cu slavă, pe un tron împărătesc."
+    },
+    {
+      "number": 7,
+      "text": "Căci Dumnezeu a rânduit ca fiecare munte înalt și dealurile veșnice să fie coborâte, și văile să se umple pentru a face nivelul solului, ca Israel să meargă în siguranță în slava lui Dumnezeu."
+    },
+    {
+      "number": 8,
+      "text": "Pădurea și orice copac mirositor au umbrit Israelul prin porunca lui Dumnezeu."
+    },
+    {
+      "number": 9,
+      "text": "Căci Dumnezeu va conduce pe Israel cu bucurie în lumina slavei Lui, cu îndurarea dreptatea care vin de la El."
+    }
+  ],
+  "audit": {
+    "sourceVerseNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "continuous": true,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 9,
+    "semanticMinimumScore": 0.766834,
+    "blockingIssueCount": 0,
+    "textDigest": "5f221fe7e98e679ebff68df37b0c443f6eab78214bc894281dfc7ae2570f4a77",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  },
+  "runtimeEnabled": true
+}

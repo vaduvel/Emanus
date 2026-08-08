@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 43,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/43/",
+    "pageSha256": "6c79585a43ea3a82891e623dcb69c546bff661f61e0537b3c7cd8c74b3ef23ce",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "ba7b55f3be0468346f06dfe30234818e909a9ec0366e318418f3cd6047300b7a",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și am văzut alte fulgere stelele cerului am văzut cum El le-a chemat pe toate pe nume ele L-au ascultat."
+    },
+    {
+      "number": 2,
+      "text": "Și am văzut cum sunt cântărite într-un echilibru drept în funcție de proporțiile lor de lumină: (Am văzut) lățimea spațiilor lor și ziua apariției lor, și modul în care revoluția lor produce fulgere; și (am văzut) revoluția lor în funcție de numărul îngerilor, și (cum) ei păstrează credința unii cu alții."
+    },
+    {
+      "number": 3,
+      "text": "Și l-am întrebat pe îngerul care a mers cu mine care mi-a arătat ce era ascuns: Ce sunt astea?"
+    },
+    {
+      "number": 4,
+      "text": "Și el mi-a zis: Domnul spiritelor ți-a arătat lor parabolică: „acestea sunt numele sfinților care locuiesc pe pământ cred în numele Domnului spiritelor în vecii vecilor”."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.897619,
+    "blockingIssueCount": 0,
+    "textDigest": "c9f4d01ac410c87dbf1fa806116a8613e1e09e73902e5fb237d547a522568957",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

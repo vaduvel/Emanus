@@ -1,0 +1,77 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 50,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/50/",
+    "pageSha256": "c655cd5ed4f6725e28e714c6929a163dd4d6916af82b1e432c93b9d0034936d6",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "0fc600019d712d74b86c183fb5b63b451c7427dd3645d99f7522069a17a97a20",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "În zilele acelea va avea loc o schimbare pentru cei sfinți și aleși, și lumina zilelor va rămâne peste ei, și slava și onoarea se vor întoarce spre cei sfinți,"
+    },
+    {
+      "number": 2,
+      "text": "În ziua nenorocirii, când răul va fi fost ascuns păcătoșilor, cei drepți vor fi biruitori în numele Domnului spiritelor, iar El îi va face pe ceilalți martori, ca ei să se căiască să la faptele mâinilor lor."
+    },
+    {
+      "number": 3,
+      "text": "Ei nu vor fi onorați în Numele Domnului spiritelor, dar vor fi mântuiți în Numele Lui, Domnul spiritelor va avea milă de ei, căci îndurarea Lui este mare."
+    },
+    {
+      "number": 4,
+      "text": "Și El este drept și în judecata Lui, și în prezența gloriei Lui nedreptatea nu se va păstra; la judecata Lui cei care nu se căiesc vor pieri înaintea Lui."
+    },
+    {
+      "number": 5,
+      "text": "Și de acum încolo nu voi mai avea milă de ei, zice Domnul Spiritelor."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 5,
+    "translatedUnits": 5,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 5,
+    "semanticMinimumScore": 0.866354,
+    "blockingIssueCount": 0,
+    "textDigest": "c68152d53a496fd0528ea39adb0828648eda3d3eff40dc17dcfd4ca5c518ae72",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

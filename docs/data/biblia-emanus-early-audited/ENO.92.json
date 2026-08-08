@@ -1,0 +1,77 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 92,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/92/",
+    "pageSha256": "1c6e9cbc2df5d33c47d41c878800b3df3ba511024788767b7df82b13eaedf2b9",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "5b165e5208c241eb140dd0c353899d158f6433a2de52406fa8e2b1fcd9511e13",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Cartea scrisă de Enoch[Enoch într-adevăr a scris această doctrină completă a înțelepciunii, (care este) lăudată de toți oamenii și de un judecător al întregului pământ] pentru toți copiii mei care vor locui pe pământ. Și pentru generațiile viitoare care vor păzi dreptatea și pacea."
+    },
+    {
+      "number": 2,
+      "text": "Duhul tău să nu se tulbure din pricina timpurilor; căci Sfîntul și Marele a hotărît zile pentru toate."
+    },
+    {
+      "number": 3,
+      "text": "Cel neprihănit se va scula din somn va umbla pe cărările dreptății, toată calea vorbirea lui va fi în bunătate har veșnic."
+    },
+    {
+      "number": 4,
+      "text": "El va fi milostiv cu cei drepți-i va da neprihănire veșnică-i va da putere ca să fie înzestrat cu bunătate cu dreptate să umble în lumină veșnică."
+    },
+    {
+      "number": 5,
+      "text": "Și păcatul va pieri în întuneric pentru totdeauna, și nu va mai fi văzut din ziua aceea pentru totdeauna."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 5,
+    "translatedUnits": 5,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 5,
+    "semanticMinimumScore": 0.847823,
+    "blockingIssueCount": 0,
+    "textDigest": "54c03f4247bd8d3e3237210f8aadf8e3a1b5c5b1e450fa4cb1cbe3c1709f411c",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

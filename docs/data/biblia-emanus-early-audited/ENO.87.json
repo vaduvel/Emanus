@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 87,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/87/",
+    "pageSha256": "fd6c10f261700df4e1c8afc102bcb17bc0698f616c96d3f803b719098c95bcc2",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "d11ee8dee349de34a096b9cb54947d3e0efda9d6ef87fffbc32212cb7671dad5",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și din nou am văzut cum au început să se împuște unii pe alții și să se mănânce unii pe alții, și pământul a început să strige cu voce tare."
+    },
+    {
+      "number": 2,
+      "text": "Și mi-am ridicat iarăși ochii spre cer am văzut în vedenie; iată că din cer au ieșit ființe ca oamenii albi; patru au ieșit din acel loc trei cu ei."
+    },
+    {
+      "number": 3,
+      "text": "Și cei trei care ieșiseră mai înainte m-au apucat de mână m-au luat, departe de neamurile pământului, m-au ridicat până la un loc înalt mi-au arătat un turn înălțat deasupra pământului toate dealurile erau mai jos."
+    },
+    {
+      "number": 4,
+      "text": "Unul mi -a zis: ,, Rămîi aici pînă cînd vei vedea tot ce cade asupra elefanților, cămilelor, măgarilor, stelelor, boilor și tuturor. „”"
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.863475,
+    "blockingIssueCount": 0,
+    "textDigest": "2d8ca87a23820fbf7aa84f0e53e4cd746c85d80c63c24e2446d2087269362e0a",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}
