@@ -1,5 +1,6 @@
 import type { BibleBook } from "./types.js"
 import { reviewSamuel2Explanations } from "./samuel2ExplanationReview.js"
+import { restoreSamuel2PoonenFidelity } from "./samuel2PoonenFidelityReview.js"
 import { SAMUEL2_1, SAMUEL2_2, SAMUEL2_3, SAMUEL2_4 } from "./samuel2_1_4.js"
 import { SAMUEL2_5, SAMUEL2_6, SAMUEL2_7, SAMUEL2_8 } from "./samuel2_5_8.js"
 import { SAMUEL2_9, SAMUEL2_10, SAMUEL2_11, SAMUEL2_12 } from "./samuel2_9_12.js"
@@ -34,32 +35,34 @@ export {
   SAMUEL2_24,
 }
 
-const chapters = reviewSamuel2Explanations([
-  SAMUEL2_1,
-  SAMUEL2_2,
-  SAMUEL2_3,
-  SAMUEL2_4,
-  SAMUEL2_5,
-  SAMUEL2_6,
-  SAMUEL2_7,
-  SAMUEL2_8,
-  SAMUEL2_9,
-  SAMUEL2_10,
-  SAMUEL2_11,
-  SAMUEL2_12,
-  SAMUEL2_13,
-  SAMUEL2_14,
-  SAMUEL2_15,
-  SAMUEL2_16,
-  SAMUEL2_17,
-  SAMUEL2_18,
-  SAMUEL2_19,
-  SAMUEL2_20,
-  SAMUEL2_21,
-  SAMUEL2_22,
-  SAMUEL2_23,
-  SAMUEL2_24,
-])
+const chapters = restoreSamuel2PoonenFidelity(
+  reviewSamuel2Explanations([
+    SAMUEL2_1,
+    SAMUEL2_2,
+    SAMUEL2_3,
+    SAMUEL2_4,
+    SAMUEL2_5,
+    SAMUEL2_6,
+    SAMUEL2_7,
+    SAMUEL2_8,
+    SAMUEL2_9,
+    SAMUEL2_10,
+    SAMUEL2_11,
+    SAMUEL2_12,
+    SAMUEL2_13,
+    SAMUEL2_14,
+    SAMUEL2_15,
+    SAMUEL2_16,
+    SAMUEL2_17,
+    SAMUEL2_18,
+    SAMUEL2_19,
+    SAMUEL2_20,
+    SAMUEL2_21,
+    SAMUEL2_22,
+    SAMUEL2_23,
+    SAMUEL2_24,
+  ]),
+)
 
 export const SAMUEL2: BibleBook = {
   id: "2-samuel",
