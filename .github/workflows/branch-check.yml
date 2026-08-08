@@ -1,0 +1,98 @@
+name: Branch check
+
+# Verificare rapida pentru ramurile de lucru.
+#
+# DE CE A APARUT PE RAMURA ASTA:
+# In descrierea PR-ului scrie, negru pe alb, "Nu exista CI pe repo, deci codul
+# n-a fost compilat niciodata". Sunt peste zece mii de linii propuse spre main.
+# Inainte sa intre in trunchi, trec o data prin compilator. Fisierul asta nu
+# schimba nicio linie de produs; doar pune intrebarea.
+#
+# DE CE E SEPARAT DE ci.yml:
+# ci.yml porneste doar la push pe main si ruleaza tot pipeline-ul Bibliei, cu
+# timeout de 120 de minute. E potrivit pentru textul sigilat, prea greu ca sa-ti
+# spuna in doua minute daca un ecran compileaza.
+#
+# DE CE ISI RAPORTEAZA SINGUR ESECUL:
+# Prin conexiunea MCP se poate citi doar CONCLUZIA unui check-run, niciodata
+# textul din log. Un "failure" fara mesaj inseamna diagnostic prin ghicit, iar
+# fiecare ghicire costa un ciclu intreg. Asa ca pasul de verificare isi strange
+# iesirea si, daca pica, o lipeste ca un comentariu pe pull request.
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: branch-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout with native git
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${HEAD_SHA}"
+          git checkout --detach FETCH_HEAD
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+      - name: Verify
+        run: |
+          set -euo pipefail
+          {
+            echo '=== pnpm typecheck ==='
+            pnpm typecheck
+            echo '=== pnpm build ==='
+            pnpm build
+            echo '=== check:quotes ==='
+            pnpm check:quotes
+            echo '=== check:typos ==='
+            pnpm check:typos
+            echo '=== check:content ==='
+            pnpm check:content
+            echo '=== git diff --check ==='
+            git diff --check
+          } 2>&1 | tee /tmp/verify.log
+      - name: Report the failure on the pull request
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_FROM_EVENT: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -uo pipefail
+          PR="${PR_FROM_EVENT:-}"
+          if [ -z "${PR}" ]; then
+            PR=$(gh pr list --repo "${GITHUB_REPOSITORY}" --head "${GITHUB_REF_NAME}" \
+              --state open --json number --jq '.[0].number' 2>/dev/null || true)
+          fi
+          if [ -z "${PR}" ] || [ "${PR}" = "null" ]; then
+            echo 'Nu exista pull request deschis pentru ramura asta; log-ul ramane doar in Actions.'
+            exit 0
+          fi
+          if [ ! -f /tmp/verify.log ]; then
+            echo 'Pasul a picat inainte sa scrie ceva in log.' > /tmp/verify.log
+          fi
+          tail -c 50000 /tmp/verify.log > /tmp/verify.tail
+          jq -Rs --arg sha "${HEAD_SHA}" \
+            '{body: ("Branch check a esuat pe `" + $sha + "`.\n\n<details><summary>Iesirea pasului de verificare</summary>\n\n~~~\n" + . + "\n~~~\n\n</details>")}' \
+            /tmp/verify.tail > /tmp/body.json
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --input /tmp/body.json
