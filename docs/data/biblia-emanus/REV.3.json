@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,23 @@
       "romanianNaturalness": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-rev-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -98,14 +98,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 22 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 22 de versete din REV.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate toate frazele corupte, calchiate sau cu diacritice eronate din capitol.",
+        "Adresarea, condițiile, negările și promisiunile către Sardes, Filadelfia și Laodiceea sunt păstrate.",
+        "Lecturile SBLGNT sunt urmate fără importarea automată a adaosurilor martorului tradițional."
       ]
     },
     "theologicalContext": {
@@ -123,73 +123,63 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:ca8c230fcde3020223c3b120e8f2d49642f6f9aea44d37a46d569aeaa6065e59",
-    "contentDigest": "sha256:71ed55fa69f1d5eac79487ddaf50e562ced2dec6862695bddf142ad868cc398e"
+    "textDigest": "sha256:4b3a7fb9663eaf47240d880469a1e2fd45f42610632e0490cc686c8fc637387a",
+    "contentDigest": "sha256:b7942877c4f9bc172b56d377ca9077f0f4f1e5f3a3f2c12266bb8b9f48de59fb"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Și îngerului bisericii din Sardes, scrie-i: Acestea le spune cel ce are cele șapte Duhuri ale lui Dumnezeu și cele șapte stele: Știu faptele tale, că ai numele că trăiești și ești mort."
+      "text": "Îngerului bisericii din Sardes scrie-i: Așa spune Cel care are cele șapte duhuri ale lui Dumnezeu și cele șapte stele: Îți cunosc lucrările; ai renumele că trăiești, dar ești mort."
     },
     {
       "number": 2,
-      "text": "Trezește-te și întărește lucrurile care rămân, pe care erai pe cale să le arunci, pentru că nu am găsit nici o lucrare a ta perfecționată înaintea Dumnezeului meu."
+      "text": "Veghează și întărește lucrurile rămase, care erau să moară, căci n-am găsit lucrările tale împlinite înaintea Dumnezeului Meu."
     },
     {
       "number": 3,
-      "text": "Amintiți-vă, prin urmare, cum ați primit și auzit. Păstrați-l și pocăiți-vă. Dacă, prin urmare, nu vei urmări, voi veni ca un hoț, și vei ști ce oră voi veni peste tine."
+      "text": "Adu-ți aminte, deci, cum ai primit și ai auzit; păzește și pocăiește-te. Dacă nu vei veghea, voi veni ca un hoț și nu vei ști în ce ceas voi veni peste tine."
     },
     {
       "number": 4,
-      "text": "Cu toate acestea, aveți câteva nume în Sardes care nu au pângărit hainele lor. Ei vor umbla cu mine în alb, pentru că ei sunt vrednici."
+      "text": "Dar ai în Sardes câteva nume care nu și-au întinat hainele; ei vor umbla cu Mine îmbrăcați în alb, fiindcă sunt vrednici."
     },
     {
       "number": 5,
-      "text": "Cel ce va birui va fi îmbrăcat în veșminte albe și nu voi șterge nicidecum numele lui din cartea vieții și voi mărturisi numele lui înaintea Tatălui Meu și înaintea îngerilor Lui."
+      "text": "Cel care biruie va fi îmbrăcat astfel în haine albe; nu-i voi șterge nicidecum numele din cartea vieții și îi voi mărturisi numele înaintea Tatălui Meu și înaintea îngerilor Săi."
     },
     {
       "number": 6,
-      "text": "Cine are ureche, să audă ce spune Bisericilor Duhul."
+      "text": "Cine are ureche să audă ce spune Duhul bisericilor."
     },
     {
       "number": 7,
-      "text": "Îngerului adunării din Filadelfia scrie-i: Cine este sfânt, cine este adevărat, cine are cheia lui David, cine deschide nimeni nu poate închide, cine închide nimeni nu deschide, spune aceste lucruri:"
+      "text": "Îngerului bisericii din Filadelfia scrie-i: Așa spune Cel sfânt, Cel adevărat, Cel care are cheia lui David, Cel care deschide și nimeni nu va închide, și închide și nimeni nu deschide:"
     },
     {
       "number": 8,
-      "text": "Știu lucrările tale (Iată, am stabilit înaintea ta o ușă deschisă, pe care nimeni nu poate închide), că ai un pic de putere, și a ținut cuvântul meu, și nu a negat numele meu."
+      "text": "Îți cunosc lucrările. Iată, am pus înaintea ta o ușă deschisă, pe care nimeni nu o poate închide, pentru că ai puțină putere, ai păzit Cuvântul Meu și nu Mi-ai tăgăduit Numele."
     },
     {
       "number": 9,
-      "text": "Iată, eu fac unele din sinagoga lui Satana, dintre cei care spun că sunt evrei, și ei nu sunt, ci mint, iată, îi voi face să vină și să se închine înaintea picioarelor tale, și să știe că te-am iubit."
+      "text": "Iată, îți dau dintre cei ai sinagogii Satanei, care spun că sunt iudei, dar nu sunt, ci mint. Iată, îi voi face să vină și să se plece înaintea picioarelor tale și vor cunoaște că Eu te-am iubit."
     },
     {
       "number": 10,
-      "text": "Pentru că ai păstrat porunca mea de a persevera, de asemenea, te voi ține de ora de testare care este de a veni pe întreaga lume, pentru a testa pe cei care locuiesc pe pământ."
+      "text": "Fiindcă ai păzit cuvântul răbdării Mele, te voi păzi și Eu de ceasul încercării care urmează să vină peste întreg pământul locuit, ca să-i pună la încercare pe cei care locuiesc pe pământ."
     },
     {
       "number": 11,
-      "text": "Eu vin repede! ferm ceea ce aveți, astfel încât nimeni nu ia coroana."
+      "text": "Vin curând. Ține cu tărie ce ai, ca nimeni să nu-ți ia cununa."
     },
     {
       "number": 12,
-      "text": "Cel care va birui, îl voi face un stâlp în templul Dumnezeului meu, și el nu va mai ieși de acolo. Voi scrie pe el numele Dumnezeului meu și numele cetății Dumnezeului meu, noul Ierusalim, care vine din cer de la Dumnezeul meu, și propriul meu nume nou."
+      "text": "Pe cel care biruie îl voi face un stâlp în templul Dumnezeului Meu și nu va mai ieși afară; voi scrie pe el Numele Dumnezeului Meu, numele cetății Dumnezeului Meu, noul Ierusalim, care coboară din cer de la Dumnezeul Meu, și Numele Meu cel nou."
     },
     {
       "number": 13,
@@ -197,39 +187,39 @@
     },
     {
       "number": 14,
-      "text": "Îngerului adunării din Laodicea scrie-i: Amin, Martorul Credincios Adevărat, Începutul creației lui Dumnezeu, spune aceste lucruri:"
+      "text": "Îngerului bisericii din Laodiceea scrie-i: Așa spune Amin, martorul credincios și adevărat, începutul creației lui Dumnezeu:"
     },
     {
       "number": 15,
-      "text": "tiu lucrările tale, că nu ești nici rece, nici fierbinte. Îmi doresc să fi fost rece sau fierbinte."
+      "text": "Îți cunosc lucrările: nu ești nici rece, nici fierbinte. O, de ai fi rece sau fierbinte!"
     },
     {
       "number": 16,
-      "text": "Deci, pentru că ești călduță, și nici caldă, nici rece, te voi vomita din gura mea."
+      "text": "Dar fiindcă ești călduț și nici fierbinte, nici rece, am să te vărs din gura Mea."
     },
     {
       "number": 17,
-      "text": "Pentru că tu spui, Sunt bogat, și au ajuns bogății, și au nevoie de nimic, Și nu știu că ești cel mizerabil, mizerabil, sărac, orb, și gol;"
+      "text": "Pentru că spui: „Sunt bogat, m-am îmbogățit și n-am nevoie de nimic”, dar nu știi că tu ești nenorocit, vrednic de plâns, sărac, orb și gol,"
     },
     {
       "number": 18,
-      "text": "Te sfătuiesc să cumperi de la mine aur rafinat prin foc, ca să te îmbogățești; și haine albe, ca să te îmbraci, și ca rușinea goliciunii tale să nu fie revelată; și ochi alifie pentru a unge ochii tăi, ca să poți vedea."
+      "text": "te sfătuiesc să cumperi de la Mine aur rafinat în foc, ca să te îmbogățești, haine albe, ca să te îmbraci și să nu se arate rușinea goliciunii tale, și alifie pentru ochi, ca să-ți ungi ochii și să vezi."
     },
     {
       "number": 19,
-      "text": "Oricât de mulți aș iubi, mustr și pedepsesc. Fii deci zelos, și pocăiește-te."
+      "text": "Eu îi mustru și îi disciplinez pe toți cei pe care îi iubesc. Fii deci plin de râvnă și pocăiește-te."
     },
     {
       "number": 20,
-      "text": "Iată, stau la ușă și bat. Dacă cineva aude vocea mea și deschide ușa, atunci voi veni la el și va cina cu el, și el cu mine."
+      "text": "Iată, stau la ușă și bat. Dacă cineva aude glasul Meu și deschide ușa, voi intra la el, voi cina cu el, iar el cu Mine."
     },
     {
       "number": 21,
-      "text": "Cel care va birui, îi voi da să stea jos cu mine pe tronul meu, așa cum și eu am biruit și am șezut cu Tatăl meu pe tronul său."
+      "text": "Celui care biruie îi voi da să șadă cu Mine pe tronul Meu, după cum și Eu am biruit și M-am așezat cu Tatăl Meu pe tronul Său."
     },
     {
       "number": 22,
-      "text": "Cine are ureche, să audă ce le spune adunărilor Duhului."
+      "text": "Cine are ureche să audă ce spune Duhul bisericilor."
     }
   ],
   "editorialNotes": [],
