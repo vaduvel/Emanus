@@ -4,33 +4,37 @@
 // (ambele pe ramura spec/drumul-emaus). Aici e etapa 1 din 43 §16: datele si algoritmul, fara UI
 // si fara ilustratii. Nu depinde de nimic si nu atinge gamification.ts, conform 43 §13.
 //
-// Trei abateri fata de spec, toate deliberate:
+// Patru abateri fata de spec, toate deliberate:
 //
 // 1. Tipul returnat se numeste EmmausJourney, nu JourneyState. In apps/web/src/journey.ts exista
 //    deja un JourneyState — starea parcursului dintr-o usa. Ecranul hartii le importa pe amandoua,
 //    deci nu pot purta acelasi nume.
 //
-// 2. Statia poarta doar referinta versetului, nu si textul lui (verseRo in spec). Textul se ia din
+// 2. Toate numele exportate sunt prefixate cu Emmaus sau EMMAUS. Fisierul intra in barrel-ul
+//    packages/shared/src/index.ts, care re-exporta cu export *. Un nume duplicat acolo nu e
+//    avertisment, e eroare de compilare. AxisProgress si StationId erau prea generice.
+//
+// 3. Statia poarta doar referinta versetului, nu si textul lui (verseRo in spec). Textul se ia din
 //    Biblie la afisare. Motivul e docs/23-inlocuirea-textului.md: textul biblic are o singura sursa.
 //    O a doua copie scrisa de mana se desincronizeaza — s-a intamplat deja de doua ori pe ramura asta.
 //
-// 3. Scorul numara si lectiile din Porti, nu doar modulele din library/. Specul presupunea ca tot
-//    continutul e in library. Nu mai e. Fara PATH_AXES de mai jos, cine termina cele sapte lectii
-//    de suferinta deschide harta si vede zero la suta — adica exact mesajul ca nimic din ce a facut
-//    nu conteaza.
+// 4. Scorul numara si lectiile din Porti, nu doar modulele din library/. Specul presupunea ca tot
+//    continutul e in library. Nu mai e. Fara EMMAUS_PATH_AXES de mai jos, cine termina cele sapte
+//    lectii de suferinta deschide harta si vede zero la suta — adica exact mesajul ca nimic din ce
+//    a facut nu conteaza.
 
 import type { GrowthAxisId } from "./domain.js"
 import { GROWTH_AXES } from "./domain.js"
 
-export type StationId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+export type EmmausStationId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 
 export type EmmausUnlock = "cross_meditation" | "thanksgiving_prayer" | "discipleship"
 
 export interface EmmausStation {
-  id: StationId
+  id: EmmausStationId
   slug: string
   labelRo: string
-  /** Referinta, nu textul. Vezi abaterea 2 din antet. */
+  /** Referinta, nu textul. Vezi abaterea 3 din antet. */
   verseRef: string
   /** Prag pe journeyScore, 0..1. */
   threshold: number
@@ -43,8 +47,8 @@ export interface EmmausStation {
   mapPosition: number
 }
 
-// Ordinea cronologica din 43 §2 (P2): Golgota este statia 4, la mijloc. Drumul nu se termina la
-// cruce, pentru ca nici in Luca 24 nu se termina acolo.
+// Ordinea cronologica din 43 §2, principiul P2: Golgota este statia 4, la mijloc. Drumul nu se
+// termina la cruce, pentru ca nici in Luca 24 nu se termina acolo.
 export const EMMAUS_STATIONS: EmmausStation[] = [
   {
     id: 1,
@@ -131,8 +135,8 @@ export const EMMAUS_STATIONS: EmmausStation[] = [
 
 // 43 §2, principiul P1. Crucea nu se blocheaza niciodata, in nicio stare, nici la scor zero.
 // Daca deblocarea crucii ar depinde de procent, mesajul implicit al aplicatiei ar fi ca mantuirea
-// vine dupa cursuri. Constanta exista ca sa se poata testa runtime, nu doar la tipuri.
-export const CROSS_IS_ALWAYS_OPEN = true
+// vine dupa cursuri. Constanta exista ca sa se poata verifica runtime, nu doar la tipuri.
+export const EMMAUS_CROSS_IS_ALWAYS_OPEN = true
 
 /** O unitate de continut care contribuie la scor: un modul din library sau un drum din Porti. */
 export type EmmausUnitKind = "module" | "path"
@@ -147,7 +151,7 @@ export interface EmmausUnit {
 // Axa fiecarui drum din Porti. Modulele din library isi poarta axa in date; drumurile nu, pentru ca
 // PathDef nu are camp de axa. Maparea de aici e o propunere de continut, nu un adevar tehnic — se
 // schimba pe un rand per drum. Reperul folosit e firul tematic din docs/27 §2.4.
-export const PATH_AXES: Record<string, GrowthAxisId> = {
+export const EMMAUS_PATH_AXES: Record<string, GrowthAxisId> = {
   path_acasa: "freedom",
   path_schimbare: "freedom",
   path_neiertare: "relationships",
@@ -170,9 +174,14 @@ export function emmausUnitsFromPaths(
 ): EmmausUnit[] {
   const units: EmmausUnit[] = []
   for (const path of paths) {
-    const axis = PATH_AXES[path.id]
+    const axis = EMMAUS_PATH_AXES[path.id]
     if (!axis) continue
-    units.push({ id: path.id, axis, kind: "path", lessonIds: path.lessons.map((lesson) => lesson.id) })
+    units.push({
+      id: path.id,
+      axis,
+      kind: "path",
+      lessonIds: path.lessons.map((lesson) => lesson.id),
+    })
   }
   return units
 }
@@ -189,7 +198,7 @@ export function emmausUnitsFromModules(
   }))
 }
 
-export interface AxisProgress {
+export interface EmmausAxisProgress {
   axis: GrowthAxisId
   lessonsDone: number
   lessonsTotal: number
@@ -203,7 +212,7 @@ export interface ComputeEmmausInput {
   units: EmmausUnit[]
   completedLessonIds: string[]
   /** Statia maxima atinsa vreodata, persistata. Scorul nu scade cand se publica continut nou. */
-  maxStationReached?: StationId
+  maxStationReached?: EmmausStationId
 }
 
 export interface EmmausJourney {
@@ -211,7 +220,7 @@ export interface EmmausJourney {
   breadth: number
   balance: number
   depth: number
-  axisProgress: Record<GrowthAxisId, AxisProgress>
+  axisProgress: Record<GrowthAxisId, EmmausAxisProgress>
   axesTouched: number
   /** Cel mult doua, pentru cararea laterala si pentru recommendation.ts. */
   weakestAxes: GrowthAxisId[]
@@ -229,7 +238,7 @@ function clamp01(value: number): number {
   return value
 }
 
-export function stationById(id: StationId): EmmausStation {
+export function emmausStationById(id: EmmausStationId): EmmausStation {
   const found = EMMAUS_STATIONS.find((station) => station.id === id)
   return found ?? EMMAUS_STATIONS[0]
 }
@@ -238,12 +247,12 @@ export function stationById(id: StationId): EmmausStation {
  * Calculeaza pozitia pe Drumul Emaus.
  *
  * Nu masoara doar cat a parcurs cineva, ci si cat de echilibrat. Un om cu sase unitati pe o singura
- * axa e mai putin departe decat unul cu sase unitati pe sase axe. 43 §5.
+ * axa e mai putin departe pe drum decat unul cu sase unitati pe sase axe. 43 §5.
  */
 export function computeEmmausJourney(input: ComputeEmmausInput): EmmausJourney {
   const done = new Set(input.completedLessonIds)
 
-  const axisProgress = {} as Record<GrowthAxisId, AxisProgress>
+  const axisProgress = {} as Record<GrowthAxisId, EmmausAxisProgress>
   for (const axis of GROWTH_AXES) {
     axisProgress[axis] = {
       axis,
@@ -296,7 +305,7 @@ export function computeEmmausJourney(input: ComputeEmmausInput): EmmausJourney {
   }
 
   // O axa fara continut publicat se exclude din echilibru si din pragul dur. Altfel n-ar putea
-  // nimeni sa treaca de statia 5 pana nu scriem continut pe toate cele sase axe. 43 §5.6.
+  // trece nimeni de statia 5 pana nu scriem continut pe toate cele sase axe. 43 §5.6.
   const activeAxes = GROWTH_AXES.filter((axis) => axisProgress[axis].lessonsTotal > 0)
   const ratios = activeAxes.map((axis) => axisProgress[axis].ratio)
 
@@ -332,18 +341,17 @@ export function computeEmmausJourney(input: ComputeEmmausInput): EmmausJourney {
   }
 
   // Scorul nu da niciodata inapoi. Fara asta, fiecare carte biblica publicata ar retrograda oamenii
-  // care erau deja departe pe drum. 43 §5.6, ultimul rand.
-  const floorId: StationId = input.maxStationReached ?? 1
-  const currentStation = reached.id >= floorId ? reached : stationById(floorId)
+  // care erau deja departe pe drum. 43 §5.6, ultimul rand din tabel.
+  const floorId: EmmausStationId = input.maxStationReached ?? 1
+  const currentStation = reached.id >= floorId ? reached : emmausStationById(floorId)
 
   const nextStation =
-    currentStation.id < 8 ? stationById((currentStation.id + 1) as StationId) : null
+    currentStation.id < 8 ? emmausStationById((currentStation.id + 1) as EmmausStationId) : null
 
   let progressToNext = 0
   if (nextStation) {
     const span = nextStation.threshold - currentStation.threshold
-    progressToNext =
-      span > 0 ? clamp01((journeyScore - currentStation.threshold) / span) : 1
+    progressToNext = span > 0 ? clamp01((journeyScore - currentStation.threshold) / span) : 1
   }
 
   // Scorul a trecut pragul, dar echilibrul nu. Statia urmatoare ramane in ceata si se deschide
