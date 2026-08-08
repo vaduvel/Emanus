@@ -115,7 +115,7 @@ export const nouVenitL1: Lesson = {
         { from: "guide", text: "Trei lucruri pe care le găsești în text și pe care nu ți le poate lua nimeni." },
         { from: "guide", text: "Unu: cuvântul folosit pentru tine nu este «musafir», ci «om din casă». Este o schimbare de statut, nu o politețe." },
         { from: "guide", text: "Doi: nu există o probă de intrare. Cine vine nu este dat afară." },
-        { from: "guide", text: "Trei: nici la rugăciune nu ai nevoie de vocabular. Cea mai lăudată rugăciune din Evanghelii are șapte cuvinte și a fost spusă de un om care stătea în spate." }
+        { from: "guide", text: "Trei: nici la rugăciune nu ai nevoie de vocabular. Cea mai lăudată rugăciune din Evanghelii are șase cuvinte și a fost spusă de un om care stătea în spate." }
       ]
     },
     {
@@ -269,7 +269,7 @@ export const nouVenitL2: Lesson = {
         { from: "guide", text: "Doi, spune din prima că ești nou. Nu este o slăbiciune, este o ușă deschisă pentru celălalt. Majoritatea oamenilor vor să ajute, dar nu știu cui." },
         { from: "guide", text: "Trei, pune întrebările proaste. «Ce înseamnă cuvântul ăsta?», «de ce faceți asta așa?». Răspunsul îți spune și despre cuvânt, și despre om." },
         { from: "guide", text: "Patru, caută grupul mic, nu sala mare. Zece oameni într-o bucătărie fac mai mult decât trei sute într-o sală." },
-        { from: "guide", text: "Cinci, dă-i patru dăți. Nu judeca un loc după o singură duminică, așa cum nu judeci un om după o singură propoziție." },
+        { from: "guide", text: "Cinci, dă-i patru șanse. Nu judeca un loc după o singură duminică, așa cum nu judeci un om după o singură propoziție." },
         { from: "guide", text: "Șase, cere să faci ceva. Un scaun mutat, o mână la bucătărie. Oamenii se cunosc muncind alături mai repede decât stând față în față." }
       ]
     },
@@ -349,7 +349,7 @@ export const nouVenitL2: Lesson = {
         ref: "Iacov 2:9"
       },
       bubbles: [
-        { from: "guide", text: "Dacă ai simțit că ești cântărit după haine, după mașină sau după fel de a vorbi, nu ți s-a părut. Și nu este o scăpare mică — textul îi spune păcat." },
+        { from: "guide", text: "Dacă ai simțit că ești cântărit după haine, după mașină sau după felul de a vorbi, nu ți s-a părut. Și nu este o scăpare mică — textul îi spune păcat." },
         { from: "guide", text: "Deci greșeala este a lor, nu a hainelor tale." }
       ]
     },
@@ -372,7 +372,7 @@ export const nouVenitL2: Lesson = {
         options: [
           { text: "Te oprești; dacă ar fi fost locul tău, te-ar fi căutat cineva până acum", correct: false },
           { text: "Rămâi zece minute după program, spui unui singur om că ești nou și cauți un grup mic", correct: true },
-          { text: "Te muta la altă biserică în fiecare duminică, până când te întreabă cineva cum te cheamă", correct: false }
+          { text: "Te muți la altă biserică în fiecare duminică, până când te întreabă cineva cum te cheamă", correct: false }
         ],
         explanation: "Porunca de a primi le este dată lor (Romani 15:7), dar asta nu te ține pe loc pe tine. Cea dintâi biserică se ținea prin legătură și masă (Faptele apostolilor 2:42), lucruri care se întâmplă în grupuri mici, nu în săli mari. Un singur om cunoscut schimbă totul."
       }
