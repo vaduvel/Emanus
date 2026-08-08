@@ -61,7 +61,7 @@
       }
     ],
     "batchConsultation": {
-      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-2TH.2.md",
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-08-2TH.2.md",
       "consultedBenchmarkIds": [
         "CORNILESCU-1924",
         "BTF"
@@ -92,13 +92,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-2th-2",
+      "runId": "emanus-nt-editorial-2026-08-08-2th-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -112,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
+      "scope": "SBLGNT și aparatul au fost confruntate direct, verset cu verset; TR a fost verificat numai ca martor de variante. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost rescrise cele 17 versete pentru a elimina erorile sintactice, calcurile englezești și acordurile greșite.",
-        "Lecturile SBLGNT distincte de Textus Receptus, inclusiv 2:2, 2:3, 2:8, 2:11, 2:13 și 2:17, au fost redate explicit și notate.",
-        "Ambiguitatea neidentificată a celui care reține din 2:6–7 și caracterul de rugăciune al lui 2:16–17 au fost păstrate fără glosă confesională."
+        "Au fost reverificate toate cele 17 versete față de SBLGNT și aparat; au fost ajustate v. 2–9 pentru elipsă, timp verbal și valoare lexicală.",
+        "Lecturile distincte de TR, inclusiv 2:2, 2:3, 2:8, 2:11, 2:13 și 2:17, au fost păstrate în text sau documentate.",
+        "Ambiguitatea celui care reține din 2:6–7 și caracterul de rugăciune al lui 2:16–17 sunt păstrate fără glosă confesională."
       ]
     },
     "theologicalContext": {
@@ -137,24 +137,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație"
+      "method": "redactare editorială AI din SBLGNT și aparat; WEBP și etaloanele românești au fost folosite numai pentru comparație"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:dd88cb1a188a217a7ffcf249db283cc8bc34e57d85726cb1966cd11d6aaa679c",
-    "contentDigest": "sha256:7cf65a3f2028ad4145dbe737078759b1fa703a80cd4f89496166f466dc7a70ee"
+    "textDigest": "sha256:a4d9769b76e8f6a5707389fa638fe3d2fb449c7f91b8300af21331aafede7dda",
+    "contentDigest": "sha256:4249d86de3b58f2c1f2f2e661942a2b8a6def1f87d57bab47d11f5e2107aee63"
   },
   "verses": [
     {
@@ -163,11 +153,11 @@
     },
     {
       "number": 2,
-      "text": "să nu vă lăsați atât de repede clătinați în minte și să nu vă tulburați nici printr-un duh, nici printr-un cuvânt, nici printr-o scrisoare care pare să fie de la noi, cum că ziua Domnului a sosit."
+      "text": "să nu vă lăsați atât de repede clătinați în minte și să nu vă tulburați nici printr-un duh, nici printr-un cuvânt, nici printr-o scrisoare ca și cum ar fi de la noi, spunând că ziua Domnului a sosit."
     },
     {
       "number": 3,
-      "text": "Nimeni să nu vă înșele în niciun fel. Căci acea zi nu va veni dacă nu vine mai întâi apostazia și nu este descoperit omul nelegiuirii, fiul pierzării."
+      "text": "Nimeni să nu vă înșele în niciun fel. Căci ziua aceea nu va veni până nu vine mai întâi apostazia și nu este descoperit omul nelegiuirii, fiul pierzării."
     },
     {
       "number": 4,
@@ -179,19 +169,19 @@
     },
     {
       "number": 6,
-      "text": "Acum știți ce îl reține, ca el să fie descoperit la timpul lui."
+      "text": "Acum știți ceea ce îl reține, ca el să fie descoperit la timpul său."
     },
     {
       "number": 7,
-      "text": "Căci taina nelegiuirii este deja la lucru; numai că cel care îl reține acum va continua să-l rețină până când cel care reține va fi îndepărtat."
+      "text": "Căci taina nelegiuirii lucrează deja; numai că cel care reține acum va rămâne până când va fi înlăturat din mijloc."
     },
     {
       "number": 8,
-      "text": "Și atunci va fi descoperit cel fără de lege, pe care Domnul Isus îl va ucide cu suflarea gurii Sale și îl va nimici prin arătarea venirii Sale,"
+      "text": "Și atunci va fi descoperit cel fără de lege, pe care Domnul Isus îl va ucide cu suflarea gurii Sale și îl va reduce la neputință prin arătarea venirii Sale,"
     },
     {
       "number": 9,
-      "text": "Cel a cărui venire are loc potrivit lucrării Satanei, cu toată puterea, cu semne și cu minuni mincinoase,"
+      "text": "El, a cărui venire este potrivit lucrării Satanei, vine cu toată puterea, cu semne și cu minuni mincinoase,"
     },
     {
       "number": 10,
@@ -207,7 +197,7 @@
     },
     {
       "number": 13,
-      "text": "Dar noi suntem datori să-I mulțumim întotdeauna lui Dumnezeu pentru voi, frați iubiți de Domnul, deoarece Dumnezeu v-a ales ca prim rod pentru mântuire, prin sfințirea Duhului și credința în adevăr,"
+      "text": "Dar noi suntem datori să-I mulțumim întotdeauna lui Dumnezeu pentru voi, frați iubiți de Domnul, fiindcă Dumnezeu v-a ales ca prim rod pentru mântuire, prin sfințirea Duhului și credința în adevăr,"
     },
     {
       "number": 14,
