@@ -83,7 +83,7 @@ function restorePsalm69(chapter: ExplainedOverlayChapter): ExplainedOverlayChapt
     ...chapter,
     title: "Psalmul 69 — Suferința lui Hristos și inima frântă la Cruce",
     summary:
-      "Psalmul 69 vorbește profetic despre suferința lui Hristos: ura fără temei, râvna pentru Casa lui Dumnezeu, ocara, oțetul dat în sete și inima frântă. Explicația arată că Isus a murit literalmente de inimă frântă; când sulița I-a străpuns coasta, sângele și apa care au curs confirmă această realitate. După suferință, psalmul se ridică spre laudă, înălțare și restaurarea Sionului.",
+      "Psalmul 69 vorbește profetic despre suferința lui Hristos: ura fără temei, râvna pentru Casa lui Dumnezeu, ocara, oțetul dat în sete și inima frântă. Isus a murit literalmente de inimă frântă; când sulița I-a străpuns coasta, sângele și apa care au curs confirmă această realitate. După suferință, psalmul se ridică spre laudă, înălțare și restaurarea Sionului.",
     units: chapter.units.map((unit) => {
       if (unit.from === 13 && unit.to === 29) {
         return {
@@ -156,11 +156,65 @@ function restorePsalm74(chapter: ExplainedOverlayChapter): ExplainedOverlayChapt
   }
 }
 
+function restorePsalm103(chapter: ExplainedOverlayChapter): ExplainedOverlayChapter {
+  if (chapter.number !== 103) return chapter
+  return {
+    ...chapter,
+    summary:
+      "David își cheamă sufletul să nu uite binefacerile DOMNULUI. El iartă toate păcatele, vindecă toate bolile, răscumpără viața, încununează cu bunătate și satisface cu bine. Iertarea și vindecarea erau beneficii disponibile în Vechiul Legământ. Tocmai de aceea întrebarea Evangheliei Noului Legământ este: ce ne-a adus Hristos mai mult? Biruința asupra păcatului, părtășirea naturii dumnezeiești și viața în Trupul lui Hristos aparțin acestei bogății mai mari.",
+    units: chapter.units.map((unit) => {
+      if (unit.from !== 1 || unit.to !== 5) return unit
+      return {
+        ...unit,
+        heading: "Iertarea și vindecarea existau deja — ce aduce Noul Legământ mai mult?",
+        teaching:
+          "«Binecuvântează, suflete, pe DOMNUL și nu uita niciuna din binefacerile Lui.» David putea spune: «El îmi iartă toate păcatele» și «El îmi vindecă toate bolile». Aceasta dovedește că iertarea și vindecarea erau disponibile în Vechiul Legământ.\n\nBeneficiile vechiului legământ includeau iertarea, vindecarea, răscumpărarea vieții, bunătatea și binecuvântările prin care Dumnezeu purta de grijă poporului Său. Dacă acestea existau deja, Evanghelia Noului Legământ nu poate fi redusă la promisiunea acelorași beneficii.\n\nÎn Noul Legământ vine ceva mai mare: păcatul nu mai trebuie să stăpânească asupra noastră; Dumnezeu ne dă tot ce privește viața și evlavia și ne face părtași naturii Sale; ne așază într-un Trup în care trăim în părtășie cu ceilalți credincioși.\n\nDe aceea nu trebuie să predicăm Evanghelia ca și cum ținta ei cea mai înaltă ar fi doar iertarea, sănătatea și prosperitatea. Hristos ne aduce într-o viață de biruință asupra păcatului și de părtășie cu Dumnezeu.",
+        source: source(
+          "Psalm 103 ... forgives all my sins ... heals all your diseases ... that was also available under the old covenant ... old covenant benefits ... what is the new covenant gospel ... victory over sin",
+        ),
+        explanationKind: "exposition",
+        forYourHeart:
+          "Nu te opri la lucrurile pe care Dumnezeu le dădea deja în Vechiul Legământ. Caută viața de biruință și părtășie pentru care Hristos a adus Noul Legământ.",
+      }
+    }),
+  }
+}
+
+function restorePsalm105(chapter: ExplainedOverlayChapter): ExplainedOverlayChapter {
+  if (chapter.number !== 105) return chapter
+  return {
+    ...chapter,
+    summary:
+      "Psalmul își amintește legământul și protecția lui Dumnezeu asupra patriarhilor, apoi viața lui Iosif. «Nu vă atingeți de unșii Mei și nu faceți rău prorocilor Mei» devine un avertisment să nu vorbim rău despre slujitorii lui Dumnezeu. Putem spune că nu suntem de acord cu o lucrare sau cu felul în care cineva înțelege Scriptura, dar nu trebuie să trecem la vorbire de rău. Apoi Iosif arată cum Dumnezeu formează omul prin așteptare înainte să-i dea responsabilitate.",
+    units: chapter.units.map((unit) => {
+      if (unit.from === 1 && unit.to === 15) {
+        return {
+          ...unit,
+          heading: "Nu vorbi rău despre unșii și prorocii lui Dumnezeu",
+          teaching:
+            "Psalmul spune: «Nu vă atingeți de unșii Mei și nu faceți rău prorocilor Mei». Acesta este un cuvânt de care trebuie să ne temem când vorbim despre oamenii pe care Dumnezeu îi folosește.\n\nPutem să nu fim de acord cu lucrarea cuiva. Putem spune deschis: «nu sunt de acord cu felul acesta de slujire» sau «nu înțeleg Scriptura în felul acesta și nu cred că aceasta este calea în care Isus vrea să se facă lucrarea». Dar există o diferență între dezacord și vorbirea de rău.\n\nNu trebuie să calomniem, să disprețuim sau să ne hrănim inima cu atacuri împotriva slujitorilor lui Dumnezeu. Dumnezeu Își păzește oamenii, iar gura noastră trebuie păzită în felul în care vorbim despre ei.\n\nAceastă frică de Dumnezeu nu cere să numești corect ceea ce crezi că este greșit. Poonen însuși spune că poate afirma «nu sunt de acord»; limita este trecerea de la discernământ la vorbire de rău.",
+          source: source(
+            "Psalm 105 ... I will not speak evil of them, but I will say I don't agree with their ministry ... touch not my anointed and don't do any harm to my prophets",
+          ),
+          explanationKind: "exposition",
+          forYourHeart:
+            "Învață să spui «nu sunt de acord» fără să-ți hrănești inima și gura cu vorbire de rău.",
+        }
+      }
+      return unit
+    }),
+  }
+}
+
 export function restorePsalmiPoonenFidelity(book: ExplainedBookOverlay): ExplainedBookOverlay {
   return {
     ...book,
     chapters: book.chapters.map((chapter) =>
-      restorePsalm74(restorePsalm73(restorePsalm69(restorePsalm51(restorePsalm32(chapter))))),
+      restorePsalm105(
+        restorePsalm103(
+          restorePsalm74(restorePsalm73(restorePsalm69(restorePsalm51(restorePsalm32(chapter))))),
+        ),
+      ),
     ),
   }
 }
