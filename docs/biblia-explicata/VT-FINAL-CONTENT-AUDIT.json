@@ -1,7 +1,7 @@
 {
   "generatedOn": "2026-08-08",
-  "verdict": "EXPLANATION_LAYER_APPROVED",
-  "reviewType": "final-ai-editorial-review",
+  "verdict": "EXPLANATION_LAYER_REVIEWED_929_OF_929_SOURCE_FIRST_CI_PENDING",
+  "reviewType": "final-ai-editorial-source-fidelity-review",
   "scope": {
     "includes": "Old Testament explanation layer",
     "excludes": [
@@ -10,19 +10,80 @@
       "WLC/source-lock reconciliation for translation pipeline"
     ]
   },
+  "sourcePriority": {
+    "poonenWhereDeveloped": "authoritative editorial source for this project",
+    "mayCanonicalExegesisOverridePoonen": false,
+    "canonicalExegesisAllowedOnlyForSourceGaps": true,
+    "textualOverviewAllowedOnlyForCoverageGaps": true,
+    "namedModernAttributionPublic": false,
+    "provenanceInternal": true
+  },
   "explanation": {
-    "canonicalOtBooksCovered": 39,
+    "canonicalOtBooksReviewed": 39,
     "canonicalOtBooksExpected": 39,
-    "canonicalOtChaptersCovered": 929,
+    "canonicalOtChaptersReviewed": 929,
     "canonicalOtChaptersExpected": 929,
     "coverageComplete": true,
-    "publicationApproved": true,
+    "editorialReviewComplete": true,
+    "technicalReleaseApproved": false,
     "legacyFullBooks": 10,
-    "legacyFullBooksNeedingUnitProvenanceNormalization": 0,
+    "legacyFullChapters": 292,
     "fullOverlayBooks": 29,
     "fullOverlayChapters": 637,
     "overlayExplanationStatus": "published"
   },
+  "chapterByChapterGate": {
+    "script": "scripts/check-vt-chapter-by-chapter-review.mjs",
+    "packageCommand": "pnpm check:vt-chapter-review",
+    "checksEveryFinalChapter": true,
+    "checks": [
+      "canonical chapter continuity",
+      "non-empty title and summary",
+      "at least one explanation unit",
+      "non-empty teaching",
+      "valid explanationKind",
+      "valid internal provenance",
+      "continuous overlay verse ranges",
+      "textual-overview truth guards",
+      "canonical-exegesis source presence",
+      "WLC-OSHB lexical provenance",
+      "exact totals: 10/292 legacy + 29/637 overlay = 39/929"
+    ]
+  },
+  "poonenFidelityGate": {
+    "script": "scripts/check-vt-poonen-fidelity.mjs",
+    "packageCommand": "pnpm check:vt-poonen-fidelity",
+    "runsOnFinalMaterialAfterEditorialReviews": true,
+    "requiresPoonenProvenance": true,
+    "requiresDistinctiveSourceTeachingToSurvive": true,
+    "criticalOverlayChaptersProtected": 46,
+    "criticalLegacyUnitsProtected": 4
+  },
+  "revertedIncorrectOverrides": [
+    "Exod 21 canonical override removed",
+    "Levitic 25 canonical override removed",
+    "Iosua 6/7/10/11 canonical override removed"
+  ],
+  "sourceFidelityRestorations": [
+    "Judecatori 4",
+    "Estera 1, 2, 8",
+    "Iov 29, 31, 42",
+    "Psalmii 32, 51, 69, 73, 74, 103, 105",
+    "Proverbe 3, 22, 23, 31",
+    "Cantarea Cantarilor 1, 2, 4, 5, 8",
+    "Isaia 7, 10, 11, 14",
+    "Ieremia 23, 29, 31",
+    "Ezechiel 14, 16, 28, 36, 43, 47, 48",
+    "Daniel 2, 3, 4, 6, 7, 9, 10, 12",
+    "1 Samuel 16, 28",
+    "2 Samuel 24"
+  ],
+  "verifiedGeneralExegesisGaps": [
+    "1 Imparati 22 lying-spirit mechanics not materially developed by source",
+    "Numeri 31 captive details not materially developed by source",
+    "Deuteronom 22 legal/sexual cases not materially developed by source transcript",
+    "Isaia 45:7 ra lexical point not materially developed by source"
+  ],
   "textSeparation": {
     "translationIsExplanationBlocker": false,
     "temporaryBibleTextMayOpenPublicly": false,
@@ -34,36 +95,23 @@
     "namedModernAttributionAllowed": false,
     "explanationSourceExposed": false,
     "researchTranscriptLanguageAllowed": false,
-    "provenanceRetainedInternally": true
+    "provenanceRetainedInternally": true,
+    "sanitizerMayChangeDoctrine": false
   },
-  "confirmedExplanationCorrections": [
-    "Geneza 38: Onan/Tamar/Judah review keeps the narrative claims separate from later doctrinal overreach",
-    "Exod 21: Hebrew-servant scope, slavery language, onah, kidnapping, lex talionis, Exod 21:21 and ransom in 21:30 corrected",
-    "Levitic 18 and 20: abuse/sexuality/civil-sanction guardrails retained",
-    "Levitic 25: Jubilee separated from Deuteronomy 15 debt remission; permanent foreign slavery in 25:44-46 no longer softened",
-    "Numeri 31: war/captivity/children passage retains textual severity without modern violence mandate",
-    "Deuteronom 22: victim-blaming and consent guardrails retained",
-    "Iosua 6: Canaan judgment framed canonically without modern religious-violence authorization",
-    "Iosua 7: Achan family culpability is not invented; Deuteronomy 24:16 tension acknowledged",
-    "Iosua 10-11: conquest summaries, hardening, warfare typology and anti-technology overreach corrected",
-    "1 Samuel 16 and 28: divine sovereignty/occult passages reviewed",
-    "2 Samuel 24: divine anger, adversarial agency and David responsibility reviewed",
-    "1 Kings 22: lying-spirit judgment reviewed without making God morally deceptive",
-    "Job, Psalms, Proverbs, Isaiah, Jeremiah, Ezekiel and Daniel high-risk focus passages retain dedicated explanation reviews",
-    "Reader copy sanitizer now neutralizes attribution grammatically instead of deleting source names and leaving fragments"
-  ],
   "releaseRequirements": [
-    "Run check:vt-legacy-provenance",
     "Run check:vt-explained",
+    "Run check:vt-legacy-provenance",
+    "Run check:vt-poonen-fidelity",
+    "Run check:vt-chapter-review",
     "Run check:vt-publication",
-    "Run affected TypeScript typechecks",
-    "Run project build",
-    "Resolve PR integration conflicts and normal merge gates"
+    "Run @emanus/shared typecheck",
+    "Run @emanus/shared build",
+    "Run git diff --check",
+    "Resolve PR #85 integration conflicts and normal merge gates"
   ],
   "ciEvidence": {
     "latestWorkflowRunObserved": false,
-    "localCloneValidationCompleted": false,
-    "localValidationBlocker": "execution environment could not resolve github.com",
+    "combinedStatusChecksObserved": 0,
     "ciDeclaredGreen": false
   }
 }
