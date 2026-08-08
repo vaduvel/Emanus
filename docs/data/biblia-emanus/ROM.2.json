@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,19 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
+    "completedOn": "2026-08-08",
+    "runId": "emanus-nt-editorial-2026-08-08-rom-2",
+    "engineVersion": "4.0.0",
+    "reviewLevel": "in_review",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,7 +102,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 29 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,8 +143,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:624c819ba8e8352f1ef01c29db9666087b4a633a1f394ef444112e56a6ee8c6d",
-    "contentDigest": "sha256:e47c4bbef137684ef5d12e3b217f8a7c2162eee06412f9d62ac0a04a76bc53ec"
+    "textDigest": "sha256:b5fd144519194770abac09e4079171df4fded85efe23baf97dd647828b548a02",
+    "contentDigest": "sha256:52d8185f882a471454350c9212272cbaabdacddf4a778b9bd30cc287148e8bba"
   },
   "verses": [
     {
@@ -173,15 +177,15 @@
     },
     {
       "number": 8,
-      "text": "dar pentru cei care urmăresc folosul propriu, nu ascultă de adevăr, ci ascultă de nedreptate, vor fi mânie și furie,"
+      "text": "dar celor din ambiție egoistă și care nu ascultă de adevăr, ci ascultă de nedreptate, le va da mânie și furie,"
     },
     {
       "number": 9,
-      "text": "necaz și strâmtorare peste orice suflet omenesc care săvârșește răul: mai întâi peste iudeu, apoi și peste grec;"
+      "text": "necaz și strâmtorare peste orice suflet omenesc care face răul, al iudeului mai întâi și al grecului;"
     },
     {
       "number": 10,
-      "text": "dar glorie, onoare și pace pentru oricine săvârșește binele: mai întâi pentru iudeu, apoi și pentru grec."
+      "text": "dar glorie, onoare și pace pentru oricine face binele, al iudeului mai întâi și al grecului."
     },
     {
       "number": 11,
@@ -209,7 +213,7 @@
     },
     {
       "number": 17,
-      "text": "Dar dacă tu porți numele de iudeu, te bizui pe Lege și te lauzi cu Dumnezeu,"
+      "text": "Dar dacă tu te numești iudeu, te bizui pe Lege și te lauzi cu Dumnezeu,"
     },
     {
       "number": 18,
@@ -221,7 +225,7 @@
     },
     {
       "number": 20,
-      "text": "îndrumător al celor fără minte, învățător al copiilor, având în Lege întruchiparea cunoașterii și a adevărului—"
+      "text": "îndrumător al celor fără minte, învățător al copiilor, având în Lege forma cunoașterii și a adevărului—"
     },
     {
       "number": 21,
@@ -245,7 +249,7 @@
     },
     {
       "number": 26,
-      "text": "Așadar, dacă cel necircumcis păzește hotărârile drepte ale Legii, oare necircumcizia lui nu va fi socotită drept circumcizie?"
+      "text": "Așadar, dacă necircumcizia păzește cerințele Legii, oare necircumcizia lui nu va fi socotită drept circumcizie?"
     },
     {
       "number": 27,
@@ -253,11 +257,11 @@
     },
     {
       "number": 28,
-      "text": "Căci iudeu nu este cel care este astfel pe dinafară și circumcizie nu este cea văzută în carne,"
+      "text": "Căci iudeu nu este cel care este astfel în exterior și circumcizie nu este cea în carne,"
     },
     {
       "number": 29,
-      "text": "Dar el este un Iudeu care este unul din interior, și circumcizia este aceea a inimii, în duh, nu în scrisoare; a cărui laudă nu este de la oameni, ci de la Dumnezeu."
+      "text": "Ci iudeu este cel care este astfel în interior, iar circumcizia este a inimii, în duh, nu în literă; lauda lui nu este de la oameni, ci de la Dumnezeu."
     }
   ],
   "editorialNotes": [
