@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08` (reverificare editorială)
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1ti-4`)
+`emanus-nt-editorial-2026-08-08-1ti-4`)
 
 ## Domeniu și surse
 
@@ -29,7 +29,7 @@ promovează niciun verset ori capitol.
 | 1TI.4.2 | `ἐν ὑποκρίσει ψευδολόγων, κεκαυστηριασμένων` | Ipocrizia oamenilor care rostesc minciuni este unită cu conștiința lor însemnată cu fierul roșu. |
 | 1TI.4.3 | `κωλυόντων γαμεῖν … μετὰ εὐχαριστίας` | Sunt redate interzicerea căsătoriei și porunca abținerii de la alimentele create pentru primire cu mulțumire de cei care cred și cunosc adevărul. |
 | 1TI.4.4 | `πᾶν κτίσμα θεοῦ καλόν … οὐδὲν ἀπόβλητον` | Orice lucru creat de Dumnezeu este bun și nu trebuie respins dacă este primit cu mulțumire. |
-| 1TI.4.5 | `ἁγιάζεται … διὰ λόγου θεοῦ καὶ ἐντεύξεως` | Lucrul primit este sfințit prin cuvântul lui Dumnezeu și prin rugăciune; acordul românesc urmărește „lucru”. |
+| 1TI.4.5 | `ἁγιάζεται … διὰ λόγου θεοῦ καὶ ἐντεύξεως` | Lucrul primit este sfințit prin cuvântul lui Dumnezeu și prin mijlocire; sensul lui `ἐντεύξεως` este păstrat distinct de termenul generic pentru rugăciune. |
 | 1TI.4.6 | `ὑποτιθέμενος τοῖς ἀδελφοῖς … Χριστοῦ Ἰησοῦ` | Timotei pune aceste lucruri înaintea fraților și devine un bun slujitor al lui Hristos Isus, hrănit de credință și învățătura urmată. |
 | 1TI.4.7 | `βεβήλους καὶ γραώδεις μύθους … γύμναζε` | Sunt respinse miturile profane și băbești; expresia peiorativă a textului antic nu este cosmetizată printr-un referent modern. |
 | 1TI.4.8 | `σωματικὴ γυμνασία … εὐσέβεια … ζωῆς τῆς νῦν καὶ τῆς μελλούσης` | Exercițiul trupesc are folos limitat, iar evlavia este folositoare pentru toate, având promisiunea vieții de acum și a celei viitoare. |

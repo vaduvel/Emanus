@@ -78,13 +78,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-1ti-4",
+      "runId": "emanus-nt-editorial-2026-08-08-1ti-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -129,8 +129,8 @@
       "result": "approved",
       "open": 0
     },
-    "textDigest": "sha256:06f9807c2adbce6d54f529c5fb6c34cd206bbe477f45852c5600c0e75c1f2fab",
-    "contentDigest": "sha256:27623edd1a6d1304c89f4e2e0a7e324b8217c7fed3c82cd19b769408749d0405"
+    "textDigest": "sha256:43f70d5b203722a39fac17274e988db7c52f9a57aee6d41af921f11a14d28dbb",
+    "contentDigest": "sha256:e0eb86c21216dea42f9dabc7aff94d3eab9de8e80e2edc30c14eea49cd3ada4f"
   },
   "verses": [
     {
@@ -151,7 +151,7 @@
     },
     {
       "number": 5,
-      "text": "căci este sfințit prin cuvântul lui Dumnezeu și prin rugăciune."
+      "text": "căci este sfințit prin cuvântul lui Dumnezeu și prin mijlocire."
     },
     {
       "number": 6,
@@ -270,6 +270,18 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "ἐντεύξεως",
+      "decision": "„prin mijlocire”",
+      "alternatives": [
+        "„prin rugăciune”"
+      ],
+      "reason": "ἐντεύξις desemnează o cerere adresată în favoarea cuiva; „mijlocire” păstrează distincția lexicală față de termenul generic pentru rugăciune.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI și utilizarea termenului în 2:1 au fost confruntate direct; formularea românească redă mai precis substantivul grec."
     }
   ],
   "referenceNotes": [],
