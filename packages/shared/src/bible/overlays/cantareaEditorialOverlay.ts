@@ -1,9 +1,15 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOverlay.js"
+import { CANTAREA_DEEPENED } from "./cantareaDeepened.js"
 import { CANTAREA_CANTARILOR_EXPLAINED as POONEN_BASE } from "./cantareaCantarilorOverlay.js"
 import { CANTAREA_TEXTUAL_CHAPTERS } from "./cantareaTextualChapters.js"
 
 const chapters = POONEN_BASE.chapters.map((chapter) => {
+  // Păstrăm expunerea Poonen acolo unde transcriptul tratează capitolul.
   if (chapter.units.length > 0) return chapter
+
+  const deepened = CANTAREA_DEEPENED[chapter.number]
+  if (deepened) return deepened
+
   const textual = CANTAREA_TEXTUAL_CHAPTERS[chapter.number]
   if (!textual) {
     throw new Error(`[Cântarea Cântărilor ${chapter.number}] lipsește explicația textuală directă.`)
