@@ -47,6 +47,32 @@ def runtime_corrections() -> dict[str, dict[str, str]]:
     return parsed
 
 
+def describe_runtime_mismatch(
+    runtime: dict[str, dict[str, str]], expected: dict[str, dict[str, str]]
+) -> str:
+    problems: list[str] = []
+    for chapter in sorted(set(runtime) | set(expected), key=int):
+        actual_chapter = runtime.get(chapter, {})
+        expected_chapter = expected.get(chapter, {})
+        for verse in sorted(set(actual_chapter) | set(expected_chapter), key=int):
+            actual = actual_chapter.get(verse)
+            wanted = expected_chapter.get(verse)
+            if actual == wanted:
+                continue
+            ref = f"{chapter}:{verse}"
+            if actual is None:
+                problems.append(f"{ref} lipsește din runtime")
+            elif wanted is None:
+                problems.append(f"{ref} există numai în runtime")
+            else:
+                problems.append(f"{ref} text diferit: runtime={actual!r}; review={wanted!r}")
+            if len(problems) >= 8:
+                break
+        if len(problems) >= 8:
+            break
+    return "; ".join(problems) or "structură diferită fără diferență localizată"
+
+
 def main() -> None:
     expected_runtime: dict[str, dict[str, str]] = {}
     severity = Counter()
@@ -129,7 +155,10 @@ def main() -> None:
 
     runtime = runtime_corrections()
     if runtime != expected_runtime:
-        fail("corecțiile runtime nu sunt identice cu proposedRo din cele 14 review-uri")
+        fail(
+            "corecțiile runtime nu sunt identice cu proposedRo din cele 14 review-uri; "
+            + describe_runtime_mismatch(runtime, expected_runtime)
+        )
 
     summary = load_json(SUMMARY)
     totals = summary.get("totals") or {}
@@ -150,10 +179,16 @@ def main() -> None:
         fail("overlayBibleBooks.ts nu importă OSEA_REVIEWED_TEXT")
     if "overlay.bookId === \"osea\" ? OSEA_REVIEWED_TEXT[chapter.number] : textBook.chapters[chapter.number]" not in adapter:
         fail("overlayBibleBooks.ts nu folosește candidatul revizuit pentru Osea")
-    if 'textStage: "temporary-editorial"' not in (
-        ROOT / "packages/shared/src/bible/generated/vtCanonicalText/index.ts"
-    ).read_text(encoding="utf-8"):
-        fail("catalogul nu mai păstrează textStage temporary-editorial")
+    catalog = (ROOT / "packages/shared/src/bible/generated/vtCanonicalText/index.ts").read_text(
+        encoding="utf-8"
+    )
+    if 'bookId: "osea"' not in catalog or 'bibleEmanusBookId: "HOS"' not in catalog:
+        fail("Osea lipsește din catalogul VT")
+    osea_catalog_line = next(
+        (line for line in catalog.splitlines() if 'bookId: "osea"' in line), ""
+    )
+    if 'textStage: "temporary-editorial"' not in osea_catalog_line:
+        fail("Osea nu mai păstrează textStage temporary-editorial")
 
     print(
         "Osea reviewed candidate OK: "
