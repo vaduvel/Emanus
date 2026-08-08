@@ -6,15 +6,39 @@ export interface VtExplainedCoverageEntry {
   name: string
   format: VtExplainedFormat
   coverage: "full"
-  status: "in_review"
+  /** Statusul explicației, independent de stadiul traducerii biblice afișate. */
+  status: "published"
   sourceFamily: "allen-nolan" | "poonen-transcript" | "poonen-official"
 }
 
-const legacy = (order: number, id: string, name: string, sourceFamily: VtExplainedCoverageEntry["sourceFamily"]): VtExplainedCoverageEntry => ({
-  order, id, name, format: "legacy-full", coverage: "full", status: "in_review", sourceFamily,
+const legacy = (
+  order: number,
+  id: string,
+  name: string,
+  sourceFamily: VtExplainedCoverageEntry["sourceFamily"],
+): VtExplainedCoverageEntry => ({
+  order,
+  id,
+  name,
+  format: "legacy-full",
+  coverage: "full",
+  status: "published",
+  sourceFamily,
 })
-const overlay = (order: number, id: string, name: string, sourceFamily: VtExplainedCoverageEntry["sourceFamily"]): VtExplainedCoverageEntry => ({
-  order, id, name, format: "full-overlay", coverage: "full", status: "in_review", sourceFamily,
+
+const overlay = (
+  order: number,
+  id: string,
+  name: string,
+  sourceFamily: VtExplainedCoverageEntry["sourceFamily"],
+): VtExplainedCoverageEntry => ({
+  order,
+  id,
+  name,
+  format: "full-overlay",
+  coverage: "full",
+  status: "published",
+  sourceFamily,
 })
 
 export const VT_EXPLAINED_COVERAGE: readonly VtExplainedCoverageEntry[] = [
@@ -69,5 +93,8 @@ VT_EXPLAINED_COVERAGE.forEach((book, index) => {
   }
   if (book.coverage !== "full") {
     throw new Error(`[Biblia explicată VT] ${book.name} nu are acoperire completă.`)
+  }
+  if (book.status !== "published") {
+    throw new Error(`[Biblia explicată VT] ${book.name} nu are explicația aprobată pentru publicare.`)
   }
 })
