@@ -15,6 +15,14 @@ name: Branch check
 # nu pot fi citite prin conexiunea MCP (nu există unelte de Actions), dar
 # check-run-urile unui pull request pot. Un PR draft devine astfel bancul de
 # test, nu o cerere de merge.
+#
+# DE CE ÎȘI RAPORTEAZĂ SINGUR EȘECUL:
+# Prin aceeași conexiune se poate citi doar CONCLUZIA unui check-run, niciodată
+# textul din log. Un "failure" fără mesaj înseamnă diagnostic prin ghicit, iar
+# fiecare ghicire costă un ciclu întreg de CI. Așa că pasul de verificare își
+# strânge ieșirea și, dacă pică, o lipește ca un comentariu pe pull request —
+# singurul loc de unde poate fi citită înapoi. Nu se schimbă CE se verifică și nu
+# se slăbește nimic; se face doar eșecul lizibil.
 
 on:
   pull_request:
@@ -24,6 +32,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 concurrency:
   group: branch-check-${{ github.ref }}
@@ -50,18 +59,36 @@ jobs:
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
-      - name: Typecheck and build
+      - name: Verify
         run: |
           set -euo pipefail
-          pnpm typecheck
-          pnpm build
-      - name: Content checks
+          {
+            echo '=== pnpm typecheck ==='
+            pnpm typecheck
+            echo '=== pnpm build ==='
+            pnpm build
+            echo '=== check:quotes ==='
+            pnpm check:quotes
+            echo '=== check:typos ==='
+            pnpm check:typos
+            echo '=== check:content ==='
+            pnpm check:content
+            echo '=== git diff --check ==='
+            git diff --check
+          } 2>&1 | tee /tmp/verify.log
+      - name: Report the failure on the pull request
+        if: failure() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          set -euo pipefail
-          pnpm check:quotes
-          pnpm check:typos
-          pnpm check:content
-      - name: Whitespace check
-        run: |
-          set -euo pipefail
-          git diff --check
+          set -uo pipefail
+          if [ ! -f /tmp/verify.log ]; then
+            echo 'Pasul a picat inainte sa scrie ceva in log.' > /tmp/verify.log
+          fi
+          tail -c 50000 /tmp/verify.log > /tmp/verify.tail
+          jq -Rs --arg sha "${HEAD_SHA}" \
+            '{body: ("Branch check a esuat pe `" + $sha + "`.\n\n<details><summary>Iesirea pasului de verificare</summary>\n\n~~~\n" + . + "\n~~~\n\n</details>")}' \
+            /tmp/verify.tail > /tmp/body.json
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments" --input /tmp/body.json
