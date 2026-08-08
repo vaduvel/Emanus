@@ -37,7 +37,13 @@ import { HAGAI_EXPLAINED as HAGAI_BASE } from "./hagaiOverlay.js"
 import { ZAHARIA_EXPLAINED as ZAHARIA_BASE } from "./zahariaOverlay.js"
 import { MALEAHI_EXPLAINED as MALEAHI_BASE } from "./maleahiOverlay.js"
 
-function full(base: Parameters<typeof completeOverlayCoverage>[0], data: { verseCounts: Readonly<Record<number, number>>; narratives: Readonly<Record<number, { title: string; summary: string }>> }) {
+function full(
+  base: Parameters<typeof completeOverlayCoverage>[0],
+  data: {
+    verseCounts: Readonly<Record<number, number>>
+    narratives: Readonly<Record<number, { title: string; summary: string }>>
+  },
+) {
   const empty = base.chapters.filter((chapter) => chapter.units.length === 0)
   if (empty.length) {
     throw new Error(
@@ -48,7 +54,14 @@ function full(base: Parameters<typeof completeOverlayCoverage>[0], data: { verse
   }
 
   const completed = completeOverlayCoverage(base, data.verseCounts, data.narratives)
-  return assertVerseCompleteOverlay(completed, data.verseCounts)
+  const reviewed = assertVerseCompleteOverlay(completed, data.verseCounts)
+
+  // Acesta este statusul stratului explicativ, nu al traducerii biblice.
+  // Reader-ul decide separat dacă textul biblic asociat este încă provizoriu.
+  return {
+    ...reviewed,
+    status: "published" as const,
+  }
 }
 
 export const JUDECATORI_FULL = full(
@@ -126,5 +139,8 @@ if (VT_EXPLAINED_FULL_OVERLAYS.length !== 29) {
 VT_EXPLAINED_FULL_OVERLAYS.forEach((book) => {
   if (book.coverageMode !== "full") {
     throw new Error(`[Biblia explicată VT] ${book.name} nu este marcată full.`)
+  }
+  if (book.status !== "published") {
+    throw new Error(`[Biblia explicată VT] ${book.name} nu are explicația aprobată pentru publicare.`)
   }
 })
