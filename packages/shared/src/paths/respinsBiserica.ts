@@ -16,7 +16,7 @@ import type { Lesson } from "../domain.js"
  * ---------------------------
  * 1. Nu îl convinge să se întoarcă. Nici măcar la sfârșit. Îi dă criterii și îl
  *    lasă să aleagă când și unde.
- * 2. Nu apără instituția. Dumnezeu Însăși vorbește împotriva păstorilor care
+ * 2. Nu apără instituția. Dumnezeu Însuși vorbește împotriva păstorilor care
  *    risipesc, iar lecția 1 îl lasă pe El să o spună, cu Ieremia 23 și
  *    Ezechiel 34. Asta este mișcarea centrală a setului: omul trebuie să vadă
  *    negru pe alb că Dumnezeu nu este de partea celui care l-a rănit.
@@ -260,7 +260,7 @@ export const respinsBisericaL2: Lesson = {
       bubbles: [
         { from: "guide", text: "Ți s-a citat, poate, versetul: «să nu părăsim adunarea noastră». Ți s-a citat ca pe un bici." },
         { from: "guide", text: "Numai că versetul acela vine după altul, iar acela spune de ce ne adunăm: ca să veghem unii asupra altora și să ne îndemnăm la dragoste și la fapte bune." },
-        { from: "guide", text: "Un loc în care nu se face versetul 24 nu îmiplinește nici versetul 25. Nu poți fi certat cu al doilea de către un loc care nu îl face pe primul." },
+        { from: "guide", text: "Un loc în care nu se face versetul 24 nu împlinește nici versetul 25. Nu poți fi certat cu al doilea de către un loc care nu îl face pe primul." },
         { from: "guide", text: "Dumnezeu nu te cheamă la o clădire. Te cheamă la oameni care veghează asupra ta." }
       ]
     },
