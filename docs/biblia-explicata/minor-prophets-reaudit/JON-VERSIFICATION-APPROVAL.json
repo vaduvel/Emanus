@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "JON",
+  "bookName": "Iona",
+  "reviewType": "versification-only",
+  "status": "approved",
+  "approvedOn": "2026-08-08",
+  "productVersification": "WEBU",
+  "wlcAlignment": "absolute-verse-ordinal-across-book",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/JON-FRESH-SOURCE-REAUDIT.json",
+  "sourceLock": "docs/data/biblia-emanus/minor-prophets-source-lock.json",
+  "evidenceFiles": [],
+  "approvedRanges": [
+    {
+      "product": "1:17",
+      "WLC": "2:1",
+      "identityBeforeThrough": "1:16"
+    },
+    {
+      "product": "2:1-2:10",
+      "WLC": "2:2-2:11",
+      "identityResumesAt": "3:1"
+    }
+  ],
+  "checks": {
+    "candidateVerseTotal": 48,
+    "WEBUVerseTotal": 48,
+    "WLCVerseTotal": 48,
+    "WEBUMatchesProductChapterCounts": true,
+    "boundaryStartsSemanticallyMatch": true,
+    "boundaryEndsSemanticallyMatch": true,
+    "noVerseLossOrDuplication": true
+  },
+  "scopeWarning": "Această aprobare certifică numai maparea referințelor WEBU ↔ WLC pentru mutarea versetului cu peștele mare la WLC 2:1 și deplasarea rugăciunii 2:1–10. Nu certifică fidelitatea sau calitatea textului românesc și nu schimbă candidateStage=temporary-editorial."
+}
