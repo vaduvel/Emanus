@@ -2,6 +2,7 @@ import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOv
 import { VT_WISDOM_FULL } from "../vtFullNarrativesWisdom.js"
 import { reviewIov29_31_38_40_42Explanations } from "./iov29_31_38_40_42ExplanationReview.js"
 import { IOV_EXPLAINED as POONEN_BASE } from "./iovOverlay.js"
+import { restoreIovPoonenFidelity } from "./iovPoonenFidelityReview.js"
 import { IOV_TEXTUAL_CHAPTERS } from "./iovTextualChapters.js"
 import { textualChapter } from "./textualChapterFactory.js"
 
@@ -17,6 +18,8 @@ const IOV_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const IOV_EDITORIAL_REVIEWED = reviewIov29_31_38_40_42Explanations(IOV_EDITORIAL_BASE)
+const IOV_EDITORIAL_REVIEWED = restoreIovPoonenFidelity(
+  reviewIov29_31_38_40_42Explanations(IOV_EDITORIAL_BASE),
+)
 
 export const IOV_EDITORIAL_EXPLAINED = assertCompleteOverlay(IOV_EDITORIAL_REVIEWED, 42)
