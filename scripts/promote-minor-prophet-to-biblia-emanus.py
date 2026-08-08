@@ -47,7 +47,7 @@ BOOKS: dict[str, dict[str, Any]] = {
 
 EXPECTED_ARCHIVE_SHA256 = {
     "webu": "1c5957d487d9473c87ea5c7e6acffd0caa402ce98c4a577f3164cfd94b9b437d",
-    "wlc": "da7b33af7a23e0e9fce8a8adf3cb5bcb035a513f44b83865b390c52dc3dd2ce3",
+    "wlc": "0b0b9416b941550ef780b8fb8efd114c3ba141a4e9c094a43da70d1458122ded",
     "btf": "69dbdd9c09e7cdd88db4d4ab95ffa572be861b680bf1c7fd5718f127a8910e26",
     "cornilescu": "9c999dc1722c2e376e64e6506b95846b0b3e4622731cfc550c7e661455f6e3f4",
 }
