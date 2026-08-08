@@ -1,222 +1,27 @@
 {
-  "translation": "BE",
-  "bookId": "2CO",
-  "bookName": "2 Corinteni",
-  "chapter": 4,
-  "status": "in_review",
-  "public": false,
-  "source": {
-    "english": {
-      "version": "WEBU-Protestant",
-      "passageUrl": "https://ebible.org/engwebp/2CO04.htm",
-      "license": "Public Domain",
-      "lockId": "WEBP-2CO"
-    },
-    "greek": {
-      "version": "SBLGNT-1.2",
-      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
-      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/2Cor.txt",
-      "license": "CC BY 4.0",
-      "lockId": "SBLGNT-2CO",
-      "supplementalWitnesses": [
-        {
-          "lockId": "TR-2CO",
-          "language": "greacă",
-          "role": "textual-witness"
-        }
-      ]
-    }
-  },
-  "review": {
-    "aiTheologicalContext": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "benchmarkComparison": "approved",
-    "criticalIssues": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved"
-  },
-  "benchmark": {
-    "translationsConsulted": [
-      {
-        "id": "CORNILESCU-1924",
-        "family": "cornilescu",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
-      },
-      {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
-      },
-      {
-        "id": "NTR",
-        "family": "biblica",
-        "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
-      }
-    ],
-    "exactTextCopied": false,
-    "fullProtectedTextsStored": false,
-    "checks": {
-      "copyrightSimilarity": "approved",
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
-      "romanianNaturalness": "approved",
-      "omissions": "approved"
-    },
-    "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
-    ]
-  },
-  "audit": {
-    "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
-    "verseCoverage": {
-      "expected": 18,
-      "reviewed": 18,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:97e2b94335f7190c07ec7bc6694ea201a4159991b8d720416a90c403ecc9312b"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:e718b05ad4dcecd52630c62cf4c72974ec23a3d9465ec9cb5ff122a461ca2582",
-    "contentDigest": "sha256:4d4868e70141b27d2461da2547ee8a84a5154ba79429454c306441bacc1266fd"
-  },
-  "verses": [
-    {
-      "number": 1,
-      "text": "Prin urmare, văzând că avem acest minister, chiar dacă am obținut îndurare, nu leșinăm."
-    },
-    {
-      "number": 2,
-      "text": "Dar noi am renunțat la lucrurile ascunse ale rușinii, nu umblând în viclenie, nici mânuind cu înșelăciune cuvântul lui Dumnezeu, ci prin manifestarea adevărului, lăudându-ne pentru fiecare om în fața conștiinței lui Dumnezeu."
-    },
-    {
-      "number": 3,
-      "text": "Chiar dacă vestea noastră bună este voalată, este voalată în cei care mor,"
-    },
-    {
-      "number": 4,
-      "text": "în care dumnezeul veacului acestuia a orbit mințile celor necredincioși, ca să nu strălucească asupra lor lumina Evangheliei slavei lui Hristos, care este chipul lui Dumnezeu."
-    },
-    {
-      "number": 5,
-      "text": "Căci nu pe noi înșine ne propovăduim, ci pe Isus Hristos ca Domn, iar pe noi înșine ca robi ai voștri pentru Isus."
-    },
-    {
-      "number": 6,
-      "text": "Pentru că Dumnezeu, care a zis: „Din întuneric va străluci lumina”, El a strălucit în inimile noastre pentru luminarea cunoașterii slavei lui Dumnezeu pe fața lui Hristos."
-    },
-    {
-      "number": 7,
-      "text": "Dar avem comoara aceasta în vase de lut, pentru ca puterea care întrece orice măsură să fie a lui Dumnezeu și nu de la noi."
-    },
-    {
-      "number": 8,
-      "text": "Suntem apăsați în toate, dar nu striviți; nedumeriți, dar nu fără ieșire;"
-    },
-    {
-      "number": 9,
-      "text": "persecutați, dar nu părăsiți; doborâți, dar nu nimiciți;"
-    },
-    {
-      "number": 10,
-      "text": "Purtând întotdeauna în trup moartea Domnului Isus, pentru ca viața lui Isus să poată fi revelată și în trupul nostru."
-    },
-    {
-      "number": 11,
-      "text": "Căci noi, cei vii, suntem dați mereu la moarte din pricina lui Isus, pentru ca și viața lui Isus să se arate în carnea noastră muritoare."
-    },
-    {
-      "number": 12,
-      "text": "Așa că în noi lucrează moartea, iar în voi viața."
-    },
-    {
-      "number": 13,
-      "text": "Dar, având același duh al credinței, potrivit cu ce este scris: „Am crezut, de aceea am vorbit”, și noi credem; de aceea și vorbim,"
-    },
-    {
-      "number": 14,
-      "text": "știind că Cel care l-a înviat pe Domnul Isus ne va învia și pe noi împreună cu Isus și ne va înfățișa împreună cu voi."
-    },
-    {
-      "number": 15,
-      "text": "Căci toate sunt pentru voi, pentru ca harul, înmulțindu-se prin tot mai mulți, să facă mulțumirea să prisosească spre slava lui Dumnezeu."
-    },
-    {
-      "number": 16,
-      "text": "De aceea nu ne pierdem curajul; ci, chiar dacă omul nostru dinafară se strică, totuși cel dinăuntru se înnoiește zi de zi."
-    },
-    {
-      "number": 17,
-      "text": "Pentru necazul nostru de lumină, care este pentru moment, lucrează pentru noi din ce în ce mai mult o greutate eternă a gloriei,"
-    },
-    {
-      "number": 18,
-      "text": "pentru că nu privim la lucrurile care se văd, ci la cele care nu se văd; fiindcă lucrurile care se văd sunt vremelnice, dar cele care nu se văd sunt veșnice."
-    }
-  ],
-  "editorialNotes": [],
-  "referenceNotes": [],
-  "alternateEndings": []
+  "translation":"BE", "bookId":"2CO", "bookName":"2 Corinteni", "chapter":4, "status":"in_review", "public":false,
+  "source":{"english":{"version":"WEBU-Protestant","passageUrl":"https://ebible.org/engwebp/2CO04.htm","license":"Public Domain","lockId":"WEBP-2CO"},"greek":{"version":"SBLGNT-1.2","commit":"c4d241a9c1c479a55b989ba35a4976c1d0b8052c","passageUrl":"https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/2Cor.txt","license":"CC BY 4.0","lockId":"SBLGNT-2CO","supplementalWitnesses":[{"lockId":"TR-2CO","language":"greacă","role":"textual-witness"}]}},
+  "review":{"aiTheologicalContext":"approved","copyrightDistance":"approved","omissionAddition":"approved","benchmarkComparison":"approved","criticalIssues":"approved","aiRomanianLanguage":"approved","aiSourceLanguage":"approved"},
+  "benchmark":{"translationsConsulted":[{"id":"CORNILESCU-1924","family":"cornilescu","mode":"comparison-only","referenceUrl":"https://ebible.org/Bible/details.php?all=1&id=ron1924","consultedInBatch":true},{"id":"BTF","family":"fidela","mode":"comparison-only","referenceUrl":"https://ebible.org/bible/details.php?id=ronbtf","consultedInBatch":true},{"id":"NTR","family":"biblica","mode":"comparison-only","referenceUrl":"https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca","consultedInBatch":false}],"exactTextCopied":false,"fullProtectedTextsStored":false,"checks":{"copyrightSimilarity":"approved","meaning":"approved","additions":"approved","theologicalNeutrality":"approved","romanianNaturalness":"approved","omissions":"approved"},"observations":["Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.","WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."]},
+  "audit":{"schemaVersion":2,"completedOn":"2026-08-08","engineVersion":"3.0.0","reviewLevel":"ai-complete","reviewAgent":{"type":"ai","engine":"Codex / GPT-5","runId":"emanus-nt-editorial-2026-08-08-2co-4","method":"verse-by-verse-source-and-benchmark"},"sourceSnapshotSha256":"29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424","verseCoverage":{"expected":18,"reviewed":18,"continuous":true,"verseNumbersSha256":"sha256:97e2b94335f7190c07ec7bc6694ea201a4159991b8d720416a90c403ecc9312b"},"sourceLanguage":{"language":"greacă koine","text":"SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar","result":"approved","scope":"Toate cele 18 versete din 2CO.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."},"romanianLanguage":{"result":"approved","changesApplied":["Au fost reparate calcurile, acordurile și relațiile sintactice care mascau sensul textului grec.","Lectura principală SBLGNT este urmată fără importarea automată a adaosurilor din martorul TR."]},"theologicalContext":{"result":"approved","principles":["Textul principal urmează SBLGNT.","Termenii teologici sunt redați lexical, fără glosarea confesională a ambiguităților.","Etaloanele românești au fost folosite numai pentru verificare."]},"omissionAddition":{"result":"approved","omissions":0,"additions":0},"copyrightDistance":{"result":"approved","method":"redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"},"criticalIssues":{"result":"approved","open":0},"textDigest":"sha256:00d5d6df3f8ba58622353fefa87f8c6fd211c25c200c07624675fefb35f42c68","contentDigest":"sha256:2a12db68aaf35802724a857f403fb91fc2e0c5c02d7f5936a89eb3b286506ca4"},
+  "verses":[
+    {"number":1,"text":"De aceea, având această slujire, după îndurarea pe care am primit-o, nu ne descurajăm."},
+    {"number":2,"text":"Ci am lepădat lucrurile ascunse și rușinoase; nu umblăm cu viclenie și nu falsificăm cuvântul lui Dumnezeu, ci, prin arătarea adevărului, ne recomandăm înaintea lui Dumnezeu conștiinței fiecărui om."},
+    {"number":3,"text":"Iar dacă Evanghelia noastră este acoperită, este acoperită pentru cei care pier,"},
+    {"number":4,"text":"pentru cei necredincioși, ale căror minți dumnezeul acestui veac le-a orbit, ca să nu le strălucească lumina Evangheliei slavei lui Hristos, care este chipul lui Dumnezeu."},
+    {"number":5,"text":"Căci nu ne propovăduim pe noi înșine, ci pe Hristos Isus ca Domn, iar pe noi înșine ca robi ai voștri de dragul lui Isus."},
+    {"number":6,"text":"Căci Dumnezeu, care a zis: „Lumina să strălucească din întuneric”, a strălucit în inimile noastre, pentru iluminarea cunoașterii slavei lui Dumnezeu pe fața lui Hristos."},
+    {"number":7,"text":"Dar avem comoara aceasta în vase de lut, pentru ca puterea care întrece orice măsură să fie de la Dumnezeu, și nu de la noi."},
+    {"number":8,"text":"Suntem apăsați din toate părțile, dar nu striviți; nedumeriți, dar nu deznădăjduiți;"},
+    {"number":9,"text":"persecutați, dar nu părăsiți; doborâți, dar nu nimiciți;"},
+    {"number":10,"text":"purtând întotdeauna în trup moartea lui Isus, pentru ca și viața lui Isus să se arate în trupul nostru."},
+    {"number":11,"text":"Căci noi, cei vii, suntem dați neîncetat morții de dragul lui Isus, pentru ca și viața lui Isus să se arate în carnea noastră muritoare."},
+    {"number":12,"text":"Astfel, moartea lucrează în noi, iar viața în voi."},
+    {"number":13,"text":"Dar, având același duh al credinței, potrivit cu ce este scris: „Am crezut, de aceea am vorbit”, și noi credem; de aceea și vorbim,"},
+    {"number":14,"text":"știind că Cel care L-a înviat pe Isus ne va învia și pe noi împreună cu Isus și ne va înfățișa împreună cu voi."},
+    {"number":15,"text":"Căci toate sunt pentru voi, pentru ca harul, înmulțindu-se prin cei mai mulți, să facă mulțumirea să prisosească spre slava lui Dumnezeu."},
+    {"number":16,"text":"De aceea nu ne descurajăm; ci, chiar dacă omul nostru din afară se trece, omul nostru dinăuntru se înnoiește zi de zi."},
+    {"number":17,"text":"Căci necazul nostru ușor de o clipă lucrează pentru noi, dincolo de orice măsură, o greutate veșnică de slavă,"},
+    {"number":18,"text":"întrucât nu ne uităm la cele văzute, ci la cele nevăzute; căci cele văzute sunt trecătoare, dar cele nevăzute sunt veșnice."}
+  ],"editorialNotes":[],"referenceNotes":[],"alternateEndings":[]
 }
