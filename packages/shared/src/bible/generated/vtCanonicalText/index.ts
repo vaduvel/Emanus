@@ -83,5 +83,4 @@ export const VT_TEMPORARY_TEXT_BOOKS = VT_CANONICAL_TEXT_BOOKS.filter(
   (book) => book.textStage === "temporary-editorial",
 )
 
-// Compatibilitate cu consumatorii vechi: nu mai există blocaje de lucru.
 export const VT_CANONICAL_TEXT_BLOCKED = [] as const
