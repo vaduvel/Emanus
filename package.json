@@ -23,6 +23,7 @@
     "check:biblia-emanus-book": "python3 scripts/check-biblia-emanus-book.py",
     "materialize:biblia-emanus-nt": "python3 scripts/materialize-biblia-emanus-nt.py",
     "check:biblia-emanus-nt-materialized": "python3 scripts/materialize-biblia-emanus-nt.py --check",
+    "check:osea-reviewed-candidate": "python3 scripts/check-hosea-reviewed-candidate.py",
     "check:vt-explained": "python3 scripts/check-vt-explained-coverage.py",
     "check:vt-publication": "pnpm build:shared && node scripts/check-vt-publication-runtime.mjs"
   }
