@@ -3,8 +3,8 @@
   "bookId": "1TH",
   "bookName": "1 Tesaloniceni",
   "chapter": 5,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1TH.5.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1TH",
+        "biblia-libera/1TH.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,23 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1th-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 28,
       "reviewed": 28,
@@ -98,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 28 de versete pentru a elimina persoanele greșite, acordurile defectuoase, repetițiile și calcurile englezești.",
+        "Contrastul dintre veghe, somn și cumpătare (5:4–10), precum și seria de îndemnuri din 5:12–22 au fost redate cu persoane și raporturi sintactice coerente.",
+        "În 5:27–28 au fost păstrate formularea SBLGNT «tuturor fraților» și încheierea fără adaosul tradițional «Amin»."
       ]
     },
     "theologicalContext": {
@@ -123,85 +137,75 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație, fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:b9f4e03d7dc95f9df9312194436b9ddb96370f7ef5e530788a30db71938a7b5a",
-    "contentDigest": "sha256:b37a2169db0b224ad081bc0b3c41bf74df2afb0d3f79793373fd4d953aeda45b"
+    "textDigest": "sha256:68543ea033cb79a6d6ea4cff7b4c43388c058dc5bd44ba30540266fef8db66c9",
+    "contentDigest": "sha256:ac2dd8fa1b182b5f9eda5b54814359abe1d4a66f1aa84a61e0e639fefa9b2799"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Dar cu privire la timp și la anotimpuri, fraților, nu aveți nevoie să vi se scrie nimic."
+      "text": "Cât despre timpuri și vremuri, fraților, nu aveți nevoie să vi se scrie."
     },
     {
       "number": 2,
-      "text": "Căci voi înșivă știți bine că ziua Domnului vine ca un hoț noaptea."
+      "text": "Căci voi înșivă știți foarte bine că ziua Domnului vine ca un hoț în timpul nopții."
     },
     {
       "number": 3,
-      "text": "Căci atunci când ei spun: Pace și siguranță, atunci distrugerea bruscă va veni peste ei, ca durerile de naștere pe o femeie gravidă. Atunci ei nu vor scăpa în nici un fel."
+      "text": "Când vor spune: „Pace și siguranță!”, atunci o distrugere bruscă va veni peste ei, asemenea durerii nașterii peste o femeie însărcinată, și nu vor scăpa cu niciun chip."
     },
     {
       "number": 4,
-      "text": "Dar voi, fraților, nu în întuneric, ca ziua să vă cuprindă ca un hoț."
+      "text": "Dar voi, fraților, nu sunteți în întuneric, astfel încât ziua să vă surprindă ca un hoț."
     },
     {
       "number": 5,
-      "text": "Voi toți sunteți fii ai luminii și ai zilei. Noi nu aparținem nopții, nici întunericului."
+      "text": "Căci voi toți sunteți fii ai luminii și fii ai zilei. Noi nu suntem ai nopții, nici ai întunericului."
     },
     {
       "number": 6,
-      "text": "Așa că să nu dormim, ca ceilalți, ci să privim și să fim treji."
+      "text": "Așadar, să nu dormim ca ceilalți, ci să veghem și să fim cumpătați."
     },
     {
       "number": 7,
-      "text": "Pentru cei ce dorm, dorm noaptea, și cei beți se îmbată noaptea."
+      "text": "Căci cei care dorm dorm noaptea, iar cei care se îmbată se îmbată noaptea."
     },
     {
       "number": 8,
-      "text": "Dar din moment ce aparținem zilei, să fim treji, punându-ne platoșa credinței și a iubirii, și pentru o cască, speranța mântuirii."
+      "text": "Dar noi, fiind ai zilei, să fim cumpătați, îmbrăcându-ne cu platoșa credinței și a dragostei și purtând drept coif speranța mântuirii."
     },
     {
       "number": 9,
-      "text": "Căci Dumnezeu nu ne-a făcut să ne mâniem, ci să obținem mântuirea prin Domnul nostru Isus Hristos,"
+      "text": "Căci Dumnezeu nu ne-a rânduit pentru mânie, ci pentru dobândirea mântuirii prin Domnul nostru Isus Hristos,"
     },
     {
       "number": 10,
-      "text": "care a murit pentru noi, că, fie că ne trezim sau dormim, ar trebui să trăim împreună cu el."
+      "text": "care a murit pentru noi, ca, fie că veghem, fie că dormim, să trăim împreună cu el."
     },
     {
       "number": 11,
-      "text": "De aceea, îndemnați-vă unii pe alții, și zidiți-vă unii pe alții, cum faceți și voi."
+      "text": "De aceea, încurajați-vă reciproc și clădiți-vă unul pe altul, așa cum faceți."
     },
     {
       "number": 12,
-      "text": "Dar vă implorăm, fraților, să-i cunoașteți pe cei ce lucrează printre voi, și să fiți peste voi în Domnul și să vă sfătuim,"
+      "text": "Vă rugăm, fraților, să-i recunoașteți pe cei care se ostenesc între voi, vă conduc în Domnul și vă avertizează,"
     },
     {
       "number": 13,
-      "text": "să-i respectați să-i onorați din dragoste pentru munca lor. Fiți în pace între voi."
+      "text": "și să-i prețuiți peste măsură, în dragoste, pentru lucrarea lor. Trăiți în pace unii cu alții."
     },
     {
       "number": 14,
-      "text": "Vă îndemnăm, fraților: Încurajați pe cei slabi, încurajați-i pe cei slabi, sprijiniți-i pe cei slabi, fiți răbdători față de toți."
+      "text": "Vă îndemnăm, fraților: mustrați-i pe cei neorânduiți, încurajați-i pe cei descurajați, sprijiniți-i pe cei slabi și aveți răbdare cu toți."
     },
     {
       "number": 15,
-      "text": "Vezi ca nimeni să nu întoarcă rău pentru rău nimănui, ci să urmeze întotdeauna ceea ce este bine unii pentru alții și pentru toți."
+      "text": "Aveți grijă ca nimeni să nu întoarcă nimănui rău pentru rău; urmăriți însă întotdeauna binele unii față de alții și față de toți."
     },
     {
       "number": 16,
@@ -213,7 +217,7 @@
     },
     {
       "number": 18,
-      "text": "În toate, mulțumiți, căci aceasta este voia lui Dumnezeu în Hristos Isus față de voi."
+      "text": "În orice împrejurare, aduceți mulțumiri, căci aceasta este voia lui Dumnezeu în Hristos Isus pentru voi."
     },
     {
       "number": 19,
@@ -221,23 +225,23 @@
     },
     {
       "number": 20,
-      "text": "Nu disprețui profețiile."
+      "text": "Nu disprețuiți profețiile."
     },
     {
       "number": 21,
-      "text": "Testați toate lucrurile, și țineți ferm ceea ce este bun."
+      "text": "Cercetați toate lucrurile; țineți-vă de ceea ce este bun."
     },
     {
       "number": 22,
-      "text": "Abține-te de la orice formă de rău."
+      "text": "Țineți-vă departe de orice formă de rău."
     },
     {
       "number": 23,
-      "text": "Fie ca Dumnezeul păcii să vă sfințească întru totul; tot spiritul, sufletul și trupul vostru să fie păzit fără prihană la venirea Domnului nostru Isus Hristos."
+      "text": "Însuși Dumnezeul păcii să vă sfințească pe deplin; iar duhul, sufletul și trupul vostru să fie păstrate în întregime și fără vină la venirea Domnului nostru Isus Hristos."
     },
     {
       "number": 24,
-      "text": "Cel care te cheamă este credincios, care o va face și el."
+      "text": "Cel care vă cheamă este credincios și va face și aceasta."
     },
     {
       "number": 25,
@@ -245,18 +249,55 @@
     },
     {
       "number": 26,
-      "text": "Salută-i pe toți frații cu un sărut sfânt."
+      "text": "Salutați-i pe toți frații cu un sărut sfânt."
     },
     {
       "number": 27,
-      "text": "Îți poruncesc solemn prin Domnul ca această scrisoare să fie citită tuturor fraților sfinți."
+      "text": "Vă pun sub jurământ înaintea Domnului ca această scrisoare să fie citită tuturor fraților."
     },
     {
       "number": 28,
-      "text": "Harul Domnului nostru Isus Hristos să fie cu voi. Amin."
+      "text": "Harul Domnului nostru Isus Hristos să fie cu voi."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 10,
+      "term": "variantă textuală SBLGNT/TR: περὶ ἡμῶν / ὑπὲρ ἡμῶν",
+      "decision": "„care a murit pentru noi”",
+      "alternatives": [
+        "TR-1TH din snapshot citește ὑπὲρ ἡμῶν."
+      ],
+      "reason": "SBLGNT are περὶ ἡμῶν; româna «pentru noi» păstrează relația cu destinatarii fără a introduce o explicație doctrinară suplimentară pentru prepoziție.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 27,
+      "term": "variantă textuală SBLGNT/TR: ἐνορκίζω / ὁρκίζω; τοῖς ἀδελφοῖς / τοῖς ἁγίοις ἀδελφοῖς",
+      "decision": "„Vă pun sub jurământ înaintea Domnului ... tuturor fraților”",
+      "alternatives": [
+        "TR-1TH din snapshot are ὁρκίζω și adaugă «sfinți» înainte de «frați»."
+      ],
+      "reason": "SBLGNT păstrează formula de jurământ și cere citirea pentru toți frații, fără adjectivul suplimentar din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 28,
+      "term": "variantă textuală SBLGNT/TR: ὑμῶν / ὑμῶν Ἀμήν",
+      "decision": "„Harul Domnului nostru Isus Hristos să fie cu voi.”",
+      "alternatives": [
+        "TR-1TH din snapshot adaugă «Amin»."
+      ],
+      "reason": "SBLGNT se încheie cu ὑμῶν; adaosul doxologic al TR este consemnat, dar nu este introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

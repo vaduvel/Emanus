@@ -3,8 +3,8 @@
   "bookId": "JAS",
   "bookName": "Iacov",
   "chapter": 2,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,52 +71,45 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Revizie semantică verset-cu-verset din snapshotul fixat SBLGNT 1.2 și aparat; TR a fost numai martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost auxiliare. NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-jas-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:66f396c11f7d352910573cbc62ff9d62516c36d9103520f74c56e287f6d5dc27"
+      "continuous": true
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 26 de versete au fost confruntate direct cu snapshotul SBLGNT și aparatul; TR a fost doar martor."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate calcurile, acordurile și propozițiile corupte din textul anterior.",
+        "Distincțiile de număr, persoană și raport sintactic au fost refăcute după greacă."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "δικαιόω din 2:21,24,25 este redat consecvent prin „a socoti drept”, fără extinderea sensului prin glosă doctrinară.",
+        "În 2:14 articolul din ἡ πίστις este reflectat prin „credința aceea”, pentru a păstra referirea la credința declarată fără fapte."
       ]
     },
     "omissionAddition": {
@@ -123,140 +119,181 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT; sursele românești doar pentru verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:4dab06731386e068c95ec917a74e3836b62bc0194ee1539a7834e1c22949941d",
-    "contentDigest": "sha256:5d4191a267f4a179b5991cc96922a42e5b4498dcc41d5606968bed3a4c6de13f"
+    "textDigest": "sha256:6d35576baa24920ba68bedc3122278b088dfa9162175c32af0500dc70fec88cb",
+    "contentDigest": "sha256:bd077d4f991bd0d6017384cb7fc009cf3f04eb89c603466c86c00a1072b765d6"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Fraților, nu țineți cu părtinire credința gloriosului nostru Domn Isus Hristos."
+      "text": "Frații mei, să nu țineți credința în Domnul nostru Isus Hristos, Domnul slavei, cu părtinire."
     },
     {
       "number": 2,
-      "text": "Căci dacă un om cu un inel de aur, îmbrăcat frumos, intră în sinagoga ta, și intră și un sărac în haine murdare,"
+      "text": "Căci, dacă intră în adunarea voastră un om cu inel de aur, îmbrăcat strălucitor, și intră și un sărac în haine murdare,"
     },
     {
       "number": 3,
-      "text": "să-i acord o deosebită celui care poartă haine frumoase spuneți: ezi aici într-un loc bun„; spuneți săracului: Stai acolo” sauezi lângă așternutul picioarelor mele„."
+      "text": "iar voi vă uitați cu atenție la cel care poartă hainele strălucitoare și îi spuneți: „Tu așază-te aici, la loc bun”, iar săracului îi spuneți: „Tu stai acolo” sau „Așază-te jos, lângă scăunelul meu”,"
     },
     {
       "number": 4,
-      "text": "Nu ați arătat părtinire între voi, și ați devenit judecători cu gânduri rele?"
+      "text": "oare nu faceți deosebiri între voi și nu deveniți judecători cu gânduri rele?"
     },
     {
       "number": 5,
-      "text": "Ascultați, preaiubiții mei frați. Oare Dumnezeu i-a ales pe cei săraci în această lume ca să fie bogați în credință și moștenitori ai Regatului pe care le-a promis celor ce-l iubesc?"
+      "text": "Ascultați, frații mei iubiți! Nu i-a ales Dumnezeu pe cei săraci în ochii lumii ca să fie bogați în credință și moștenitori ai Împărăției pe care a promis-o celor ce-L iubesc?"
     },
     {
       "number": 6,
-      "text": "Dar l-ai dezonorat pe bietul om. Nu te opresează cei bogați și te târăsc personal în fața tribunalelor?"
+      "text": "Dar voi l-ați dezonorat pe cel sărac. Nu cei bogați vă asupresc și nu ei vă târăsc înaintea tribunalelor?"
     },
     {
       "number": 7,
-      "text": "Nu batjocoresc ei onorabilul nume pe care-l purtați?"
+      "text": "Nu ei blasfemiază numele cel bun care a fost chemat peste voi?"
     },
     {
       "number": 8,
-      "text": "Totuși, dacă împlinești legea regală conform Scripturii, vei iubi pe aproapele tău ca pe tine însuți, faci bine."
+      "text": "Dacă împliniți cu adevărat legea împărătească, potrivit Scripturii: „Să-l iubești pe aproapele tău ca pe tine însuți”, bine faceți."
     },
     {
       "number": 9,
-      "text": "Dar dacă arătați părtinire, păcătuiți, fiind condamnați de lege ca niște călcători de lege."
+      "text": "Dar, dacă arătați părtinire, săvârșiți păcat și sunteți dovediți de lege ca niște călcători ai ei."
     },
     {
       "number": 10,
-      "text": "Căci oricine păzește toată legea, și totuși se poticnește într-un singur moment, s-a făcut vinovat de toate."
+      "text": "Căci cine păzește toată legea, dar se poticnește într-o singură poruncă, se face vinovat de toate."
     },
     {
       "number": 11,
-      "text": "Căci cel ce a zis: Să nu preacurv”, a mai zis: Să nu ucizi.„ Dacă nu preacurv, ci ucizi, ai devenit un călcător al legii."
+      "text": "Fiindcă Cel care a spus: „Să nu comiți adulter” a spus și: „Să nu ucizi”. Dacă nu comiți adulter, dar ucizi, ai devenit călcător al legii."
     },
     {
       "number": 12,
-      "text": "Vorbiți și faceți la fel ca oamenii care vor fi judecați după legea libertății."
+      "text": "Așa să vorbiți și așa să faceți, ca unii care urmează să fie judecați prin legea libertății."
     },
     {
       "number": 13,
-      "text": "Căci judecata este fără milostivenie pentru cel ce n-a arătat milă, iar milostivenia triumfă asupra judecății."
+      "text": "Căci judecata este fără milă pentru cel care n-a arătat milă; mila triumfă asupra judecății."
     },
     {
       "number": 14,
-      "text": "La ce bun, fraților, dacă un om spune că are credință, dar nu are fapte? Poate credința să-l salveze?"
+      "text": "Ce folos este, frații mei, dacă cineva spune că are credință, dar nu are fapte? Poate oare credința aceea să-l mântuiască?"
     },
     {
       "number": 15,
-      "text": "Și dacă un frate sau o soră e dezbrăcat și nu mănâncă zilnic,"
+      "text": "Dacă un frate sau o soră nu au haine și duc lipsă de hrana de fiecare zi,"
     },
     {
       "number": 16,
-      "text": "unul dintre voi le spune: Duceți-vă în pace. Încălziți-vă săturați-vă!” Și, nu le-dat lucrurile de care are nevoie trupul, la ce bun?"
+      "text": "iar unul dintre voi le spune: „Mergeți în pace, încălziți-vă și săturați-vă!”, dar nu le dați cele necesare trupului, ce folos este?"
     },
     {
       "number": 17,
-      "text": "Chiar și așa credința, dacă nu are fapte, este moartă în sine."
+      "text": "Tot așa și credința, dacă nu are fapte, este moartă în ea însăși."
     },
     {
       "number": 18,
-      "text": "Da, un om va zice: Tu ai credință, eu am fapte.„ Arată-mi credința ta fără fapte,-ți voi arăta credința mea prin faptele mele."
+      "text": "Dar va spune cineva: „Tu ai credință, iar eu am fapte.” Arată-mi credința ta fără fapte, iar eu îți voi arăta credința mea prin faptele mele."
     },
     {
       "number": 19,
-      "text": "Tu crezi că Dumnezeu este unul. Tu faci bine. Demonii, de asemenea, cred și se cutremură."
+      "text": "Tu crezi că Dumnezeu este unul; bine faci. Și demonii cred și se cutremură."
     },
     {
       "number": 20,
-      "text": "Dar vrei să știi, om zadarnic, că credința în afară de fapte este mort?"
+      "text": "Vrei să înțelegi, om fără minte, că credința fără fapte este neroditoare?"
     },
     {
       "number": 21,
-      "text": "Oare Avraam, tatăl nostru, a fost socotit drept prin fapte, prin faptul că a adus pe altar pe fiul său Isaac?"
+      "text": "Avraam, tatăl nostru, nu a fost oare socotit drept prin fapte, când l-a adus pe altar pe Isaac, fiul său?"
     },
     {
       "number": 22,
-      "text": "Veți vedea că credința a lucrat cu lucrările sale, și prin fapte credința a fost perfecționată."
+      "text": "Vezi că credința lucra împreună cu faptele lui și că, prin fapte, credința a ajuns la maturitate."
     },
     {
       "number": 23,
-      "text": "Astfel s-a împlinit Scriptura care spune: Avraam a crezut pe Dumnezeu i s-a socotit ca neprihănire” el a fost numit prietenul lui Dumnezeu."
+      "text": "Și s-a împlinit Scriptura care spune: „Avraam L-a crezut pe Dumnezeu și aceasta i-a fost socotită ca dreptate”, iar el a fost numit prieten al lui Dumnezeu."
     },
     {
       "number": 24,
-      "text": "Vezi deci că prin fapte un om este justificat, și nu numai prin credință."
+      "text": "Vedeți că omul este socotit drept prin fapte, și nu numai prin credință."
     },
     {
       "number": 25,
-      "text": "În fel, nu a fost prostituata Rahav îndreptățită prin fapte când i-a primit pe mesageri i-a trimis pe altă cale?"
+      "text": "Tot așa, Rahav, prostituata, nu a fost oare socotită dreaptă prin fapte, când i-a primit pe mesageri și i-a trimis pe alt drum?"
     },
     {
       "number": 26,
-      "text": "Căci așa cum trupul, în afară de duh, este mort, tot așa credința, în afară de fapte, este moartă."
+      "text": "Căci, după cum trupul fără duh este mort, tot așa și credința fără fapte este moartă."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 20,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 1,
+      "term": "τῆς δόξης",
+      "decision": "„Domnul slavei”",
+      "alternatives": [
+        "„al slavei”"
+      ],
+      "reason": "Genitivul este legat de titulatura lui Isus Hristos; formularea românească evită un genitiv suspendat.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 14,
+      "term": "μὴ δύναται ἡ πίστις σῶσαι αὐτόν;",
+      "decision": "„Poate oare credința aceea să-l mântuiască?”",
+      "alternatives": [
+        "„Poate credința să-l mântuiască?”"
+      ],
+      "reason": "Articolul anaforic indică tipul de credință tocmai descris, fără fapte.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 20,
+      "term": "ἡ πίστις χωρὶς τῶν ἔργων ἀργή ἐστιν",
+      "decision": "„credința fără fapte este neroditoare”",
+      "alternatives": [
+        "TR/RP: „moartă”"
+      ],
+      "reason": "Textul principal SBLGNT are ἀργή; lectura „moartă” nu este importată aici din tradiția alternativă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 21,
+      "term": "ἐξ ἔργων ἐδικαιώθη",
+      "decision": "„a fost socotit drept prin fapte”",
+      "alternatives": [
+        "„a fost justificat prin fapte”"
+      ],
+      "reason": "Redarea lexicală păstrează termenul fără a introduce explicație confesională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 22,
+      "term": "ἡ πίστις συνήργει τοῖς ἔργοις",
+      "decision": "„credința lucra împreună cu faptele”",
+      "alternatives": [
+        "„credința producea faptele”"
+      ],
+      "reason": "συνεργέω exprimă cooperarea, nu o relație unilaterală adăugată textului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
     }
   ],
   "referenceNotes": [],

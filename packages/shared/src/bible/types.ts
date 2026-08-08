@@ -10,6 +10,67 @@ export type BibleStatus = "draft" | "in_review" | "published"
 
 export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
 
+/** Identitatea unei traduceri afişate în catalog. */
+export interface BibleTranslation {
+  id: string
+  name: string
+  attribution?: string
+}
+
+/** Un verset dintr-un capitol publicat fără comentariu Emanus ataşat. */
+export interface BibleVerse {
+  number: number
+  text: string
+  /** De exemplu, o marcă pentru un loc absent din textul critic principal. */
+  textualStatus?: string
+}
+
+export type BibleTextualNoteKind = "absent-from-critical-main-text" | "textual-variant"
+
+/** O notă textuală afişată separat de textul versetului. */
+export interface BibleTextualNote {
+  verse: number
+  kind: BibleTextualNoteKind
+  note: string
+  traditionalReading?: string
+  reason?: string
+}
+
+/** Un final alternativ nenumerotat, păstrat separat de textul principal. */
+export interface BibleAlternateEnding {
+  status: string
+  text: string
+  sourceNote?: string
+}
+
+/**
+ * Poarta de publicare a corpusului NT Biblia Emanus.
+ *
+ * Nu este suficient ca fişierele sursă să pretindă `published`: catalogul
+ * runtime acceptă corpusul numai după ce registrul canonic per-verset trece
+ * din nou şi artefactul livrat corespunde exact materializării acelui corpus.
+ */
+export type BibliaEmanusNtRuntimeGate =
+  | {
+      status: "withheld"
+      reason: string
+      approval: null
+    }
+  | {
+      status: "approved"
+      reason: string
+      approval: {
+        releaseId: string
+        approvedAt: string
+        approvedBy: string[]
+        corpusSha256: string
+        /** Digestul per-verset validat de NT-EDITORIAL-APPROVAL.json. */
+        editorialCorpusDigest: string
+        evidence: Array<{ kind: string; path: string; sha256: string }>
+        reviewScope: { books: 27; chapters: 260; verses: 7941 }
+      }
+    }
+
 /** Un cuvant din limba originala, explicat pe intelesul cititorului. */
 export interface WordStudy {
   original: string
@@ -43,6 +104,14 @@ export interface BibleChapter {
   literaryContext: string
   historicalContext: string
   units: BibleUnit[]
+  /**
+   * Text biblic simplu, pentru traduceri care nu au încă explicaţii Emanus.
+   * Rămâne separat de `units`, pentru ca explicaţia să nu fie confundată cu
+   * Scriptura şi pentru ca fiecare fel de conţinut să fie redat onest în UI.
+   */
+  verses?: BibleVerse[]
+  textualNotes?: BibleTextualNote[]
+  alternateEndings?: BibleAlternateEnding[]
   prayer: string
   status: BibleStatus
 }
@@ -54,10 +123,15 @@ export interface BibleBook {
   order: number
   blurb: string
   chapters: BibleChapter[]
+  translation?: BibleTranslation
 }
 
 /** Traducerea afisata. Editia originala 1924 este in domeniul public. */
 export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"
+
+export function translationForBook(book: BibleBook): string {
+  return book.translation?.name ?? BIBLE_TRANSLATION
+}
 
 /** Un capitol se deschide cititorului doar dupa revizie umana. */
 export function chapterIsOpen(chapter: BibleChapter): boolean {

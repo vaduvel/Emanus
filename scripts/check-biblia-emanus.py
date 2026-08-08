@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import re
 import sys
@@ -248,6 +249,7 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Path]:
         "pinned-romanian-benchmark-comparison",
         "deterministic-verse-integrity",
         "audit-text-digest",
+        "nt-editorial-evidence-register",
     }
     if not isinstance(required_checks, list) or not mandatory_checks.issubset(required_checks):
         fail("manifest.json: lista requiredChecks este incompletă")
@@ -256,6 +258,25 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Path]:
         fail("manifest.json: policyDocument nu corespunde politicii aprobate")
     if not (DATA_DIR / policy_document).resolve().is_file():
         fail("manifest.json: documentul politicii de publicare lipsește")
+    nt_editorial_gate = gate.get("newTestamentEditorialApproval")
+    if not isinstance(nt_editorial_gate, dict):
+        fail("manifest.json: lipsește poarta editorială individuală pentru Noul Testament")
+    expected_nt_editorial_gate = {
+        "required": True,
+        "registry": "../../biblia-emanus/NT-EDITORIAL-APPROVAL.json",
+        "schema": "../../biblia-emanus/NT-EDITORIAL-APPROVAL.schema.json",
+        "method": "verse-by-verse-source-and-romanian-benchmark",
+    }
+    for key, value in expected_nt_editorial_gate.items():
+        if nt_editorial_gate.get(key) != value:
+            fail(
+                "manifest.json: newTestamentEditorialApproval."
+                f"{key} trebuie să fie {value!r}"
+            )
+    if nt_editorial_gate.get("reviewerType") not in {"human", "ai"}:
+        fail("manifest.json: newTestamentEditorialApproval.reviewerType trebuie să fie human sau ai")
+    if not (DATA_DIR / nt_editorial_gate["schema"]).resolve().is_file():
+        fail("manifest.json: schema registrului editorial NT lipsește")
 
     sources = manifest.get("sources")
     if not isinstance(sources, dict):
@@ -937,7 +958,11 @@ def validate_source_coverage(
                 f"declarate={sorted(declared_extra)[:8]}"
             )
         if record["role"] == "benchmark" and declared_missing:
-            fail(f"source-lock.json: etalonul fixat {lock_id} nu poate avea versete lipsă")
+            benchmark_id = record.get("benchmarkId")
+            if not isinstance(benchmark_id, str) or not benchmark_id:
+                fail(f"source-lock.json: etalonul fixat {lock_id} nu are benchmarkId")
+            if benchmark_id == "BTF":
+                fail(f"source-lock.json: etalonul fixat {lock_id} nu poate avea versete lipsă")
 
     for book_id, target_references in targets_by_book.items():
         book = books[book_id]
@@ -1240,10 +1265,36 @@ def validate_pinned_benchmark_comparison(
     for verse in data["verses"]:
         reference = (chapter, verse["number"])
         emanus = normalize_for_comparison(verse["text"])
-        benchmark_texts = [
-            normalize_for_comparison(source_data["texts"][lock_id][reference])
-            for lock_id in lock_ids
-        ]
+        benchmark_texts: list[str] = []
+        for lock_id in lock_ids:
+            source_references = source_references_for_target(
+                lock_id, book_id, reference[0], reference[1], source_data["rules"]
+            )
+            values = [source_data["texts"][lock_id].get(item) for item in source_references]
+            if all(isinstance(value, str) and value for value in values):
+                benchmark_text = normalize_for_comparison("\n".join(values))
+                benchmark_texts.append(benchmark_text)
+                chapter_texts[lock_id].append(benchmark_text)
+                continue
+
+            record = source_data["files"][lock_id]
+            benchmark_id = record.get("benchmarkId")
+            if record.get("role") != "benchmark" or benchmark_id == "BTF":
+                fail(
+                    f"{path.name}: sursa fixată obligatorie {lock_id} "
+                    f"nu are text la versetul {verse['number']}"
+                )
+            declared_missing = parse_source_references(
+                f"{lock_id}.missingTargetReferences", record.get("missingTargetReferences")
+            )
+            if reference not in declared_missing:
+                fail(
+                    f"{path.name}: lacuna etalonului {lock_id} la versetul "
+                    f"{verse['number']} nu este declarată în snapshot"
+                )
+
+        if not benchmark_texts:
+            fail(f"{path.name}: niciun etalon românesc fixat nu acoperă versetul {verse['number']}")
         benchmark_lengths = [len(text.split()) for text in benchmark_texts]
         expected_length = median(benchmark_lengths)
         length_ratio = len(emanus.split()) / expected_length
@@ -1265,11 +1316,11 @@ def validate_pinned_benchmark_comparison(
                     f"{verse['number']} ({max(overlaps):.2f})"
                 )
         emanus_chapter.append(emanus)
-        for lock_id, benchmark_text in zip(lock_ids, benchmark_texts):
-            chapter_texts[lock_id].append(benchmark_text)
 
     normalized_emanus = " ".join(emanus_chapter)
     for lock_id, values in chapter_texts.items():
+        if not values:
+            continue
         similarity = SequenceMatcher(None, normalized_emanus, " ".join(values)).ratio()
         if similarity > thresholds["maximumChapterSequenceSimilarity"]:
             fail(
@@ -1609,6 +1660,40 @@ def validate_chapter(
     return chapter_id, expected_verses, note_count, status, compared_verses
 
 
+def validate_new_testament_editorial_gate(
+    source_data: dict[str, Any],
+    ledger_chapters: dict[str, dict[str, Any]],
+) -> None:
+    """Require individual editorial evidence before any NT can be approved.
+
+    Chapter-level AI metadata is deliberately not passed as semantic evidence:
+    it can describe a process, but cannot establish that the 7,941 individual
+    translations were inspected.  The dedicated gate verifies a source-bound
+    record for every verse instead.
+    """
+    path = ROOT / "scripts" / "nt_editorial_gate.py"
+    spec = importlib.util.spec_from_file_location("nt_editorial_gate", path)
+    if spec is None or spec.loader is None:
+        fail("nu pot încărca poarta editorială a Noului Testament")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    bound_source_data = module.bind_source_reference_mapper(
+        source_data,
+        lambda lock_id, book_id, chapter, verse: source_references_for_target(
+            lock_id, book_id, chapter, verse, source_data["rules"]
+        ),
+    )
+    try:
+        module.validate_nt_editorial_approval(
+            DATA_DIR,
+            bound_source_data,
+            ledger_chapters,
+        )
+    except module.EditorialGateError as error:
+        fail(str(error))
+
+
 def chapter_sort_key(path: Path) -> tuple[int, int]:
     try:
         book_id, chapter_text = path.stem.rsplit(".", 1)
@@ -1697,6 +1782,8 @@ def main() -> int:
             }
             if nt_status != expected_nt_status:
                 fail("manifest.json: starea Noului Testament nu corespunde corpusului validat")
+            if any(item[3] in {"approved", "published"} for item in nt_validated):
+                validate_new_testament_editorial_gate(source_data, ledger_chapters)
 
     except ValidationError as error:
         print(f"[biblia-emanus] EROARE: {error}", file=sys.stderr)

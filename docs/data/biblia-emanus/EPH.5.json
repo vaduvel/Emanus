@@ -3,8 +3,8 @@
   "bookId": "EPH",
   "bookName": "Efeseni",
   "chapter": 5,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset-cu-verset din SBLGNT 1.2 și aparat, cu Textus Receptus numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost repere auxiliare de sens și limbă; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-eph-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 33,
       "reviewed": 33,
@@ -98,22 +97,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 33 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 33 versete din EPH.5 au fost confruntate direct cu SBLGNT și aparatul fixat; TR a fost folosit numai ca martor de variante."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile, acordurile greșite, fragmentele corupte și formulările nenaturale.",
+        "Persoana, numărul, relațiile sintactice și termenii teologici au fost reașezați după textul grec.",
+        "Lecturile TR/RP absente din textul principal SBLGNT nu au fost importate automat."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT la variantele consemnate în aparat.",
+        "Ambiguitățile lexicale sunt redate cât mai direct, fără glosare confesională în corpul versetului."
       ]
     },
     "omissionAddition": {
@@ -123,160 +121,355 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:749a24f7b975bcf8e03dbcfe354054f704a26f73a48a7407ef4d97ade132407b",
-    "contentDigest": "sha256:b150ddb0bfd09830410afb908273e81d572c607302f92f87cc48d970ba4f0272"
+    "textDigest": "sha256:1771939ced74340e97dfd5e0dbef972dfbb5e0155392d5782aedb95de8dc6a2d",
+    "contentDigest": "sha256:1a22b43325d3d35b31e875453bbf7c2bb965d2bd654894e9c3f3a8cbf7e2cf4f"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Fiți deci imitatori ai lui Dumnezeu, ca niște copii iubiți."
+      "text": "Fiți deci imitatori ai lui Dumnezeu, ca niște copii iubiți,"
     },
     {
       "number": 2,
-      "text": "Umblați în dragoste, așa cum și Hristos ne-a iubit și s-a dat pe Sine pentru noi, o ofrandă și o jertfă pentru Dumnezeu pentru un parfum dulce mirositor."
+      "text": "și umblați în dragoste, după cum și Hristos ne-a iubit și S-a dat pe Sine pentru noi, ca dar și jertfă lui Dumnezeu, de bună mireasmă."
     },
     {
       "number": 3,
-      "text": "Dar imoralitatea sexuală și orice necurăție sau lăcomie, să nu fie nici măcar menționate printre voi, așa cum devin sfinții;"
+      "text": "Iar desfrânarea și orice necurăție sau lăcomie nici să nu fie pomenite între voi, așa cum se cuvine sfinților,"
     },
     {
       "number": 4,
-      "text": "nici mizerie, nici vorbe prostești, nici glume, care nu sunt potrivite, ci mai degrabă mulțumiri."
+      "text": "nici nerușinare, vorbire prostească sau glume vulgare, care nu se potrivesc, ci mai degrabă mulțumire."
     },
     {
       "number": 5,
-      "text": "Să știți aceasta cu, că nici o persoană imorală sexual, nici o persoană necurată, nici un om lacom (care este idolatru), nu are vreo moștenire în Împărăția lui Hristos a lui Dumnezeu."
+      "text": "Căci știți bine aceasta: niciun desfrânat, necurat sau lacom — care este un idolatru — nu are moștenire în Împărăția lui Hristos și a lui Dumnezeu."
     },
     {
       "number": 6,
-      "text": "Nimeni să nu vă înșele cu vorbe goale, căci din pricina acestor lucruri vine mâinia lui Dumnezeu peste copiii neascultării."
+      "text": "Nimeni să nu vă înșele cu vorbe goale, căci din cauza acestor lucruri vine mânia lui Dumnezeu peste fiii neascultării."
     },
     {
       "number": 7,
-      "text": "Prin urmare, nu părtași cu ei."
+      "text": "Așadar, nu deveniți părtași cu ei."
     },
     {
       "number": 8,
-      "text": "Căci odinioară erați întunecați, dar acum sunteți lumină în Domnul. Umblați ca niște copii ai luminii,"
+      "text": "Căci odinioară erați întuneric, dar acum sunteți lumină în Domnul. Umblați ca niște copii ai luminii,"
     },
     {
       "number": 9,
-      "text": "căci rodul Duhului este în toată bunătatea, dreptatea și adevărul,"
+      "text": "căci rodul luminii este în orice bunătate, dreptate și adevăr,"
     },
     {
       "number": 10,
-      "text": "dovedind ceea ce este plăcut Domnului."
+      "text": "căutând să înțelegeți ce este plăcut Domnului."
     },
     {
       "number": 11,
-      "text": "Să nu aveți părtășie cu faptele neroditoare ale întunericului, ci mai degrabă să le mustrați."
+      "text": "Nu luați parte la lucrările neroditoare ale întunericului, ci mai degrabă demascați-le,"
     },
     {
       "number": 12,
-      "text": "Căci este o rușine chiar să vorbești despre lucrurile care sunt făcute de ei în secret."
+      "text": "căci este rușinos chiar și să vorbești despre cele făcute de ei pe ascuns."
     },
     {
       "number": 13,
-      "text": "Dar toate lucrurile, când sunt mustrate, sunt revelate de lumină, pentru că tot ceea ce revelează este lumină."
+      "text": "Dar toate lucrurile, când sunt demascate de lumină, devin vizibile,"
     },
     {
       "number": 14,
-      "text": "De aceea zice: Deșteaptă-te tu, care dormi înviezi din morți, Hristos va străluci peste tine.„"
+      "text": "căci tot ce devine vizibil este lumină. De aceea spune: „Trezește-te, tu care dormi, ridică-te dintre cei morți și Hristos va străluci peste tine.”"
     },
     {
       "number": 15,
-      "text": "De aceea priviți cu atenție cum umblați, nu ca niște neînțelepți, ci ca niște înțelepți,"
+      "text": "Luați seama deci cu grijă cum umblați: nu ca niște neînțelepți, ci ca niște înțelepți,"
     },
     {
       "number": 16,
-      "text": "Răscumpărând timpul, pentru că zilele sunt rele."
+      "text": "răscumpărând vremea, pentru că zilele sunt rele."
     },
     {
       "number": 17,
-      "text": "De aceea, nu fi nesăbuit, ci înțelege care este voia Domnului."
+      "text": "De aceea nu fiți nechibzuiți, ci înțelegeți care este voia Domnului."
     },
     {
       "number": 18,
-      "text": "Nu te îmbăta cu vin, în care este disipare, dar să fie umplut cu Duhul,"
+      "text": "Nu vă îmbătați cu vin, în care este destrăbălare, ci fiți plini de Duh,"
     },
     {
       "number": 19,
-      "text": "să vă vorbiți unii altora în psalmi, în imnuri și în cântări spirituale; să cântați și să cântați în inima voastră Domnului;"
+      "text": "vorbind între voi cu psalmi, imnuri și cântări spirituale, cântând și intonând din inimă Domnului,"
     },
     {
       "number": 20,
-      "text": "și mulțumiți totdeauna lui Dumnezeu pentru toate lucrurile, în Numele Domnului nostru Isus Hristos, Tatăl."
+      "text": "mulțumind întotdeauna pentru toate lui Dumnezeu Tatăl, în Numele Domnului nostru Isus Hristos,"
     },
     {
       "number": 21,
-      "text": "Supuneți-vă unii altora în frica de Hristos."
+      "text": "supunându-vă unii altora în frica de Hristos."
     },
     {
       "number": 22,
-      "text": "Soțiilor, fiți supuse soților voștri, precum și Domnului."
+      "text": "Soțiile să se supună soților lor ca Domnului,"
     },
     {
       "number": 23,
-      "text": "Căci bărbatul este capul nevestei, așa cum și Hristos este capul adunării, fiind El însuși salvatorul trupului."
+      "text": "căci soțul este capul soției, după cum și Hristos este Capul Bisericii, fiind El Însuși Mântuitorul trupului."
     },
     {
       "number": 24,
-      "text": "Dar, așa cum adunarea este supusă lui Hristos, tot așa și nevestele să fie pentru soții lor în toate."
+      "text": "Dar, după cum Biserica se supune lui Hristos, tot așa să se supună și soțiile soților lor în toate."
     },
     {
       "number": 25,
-      "text": "Soților, iubiți-vă nevestele, așa cum și Hristos a iubit adunarea și s-a dat pe sine pentru ea."
+      "text": "Soților, iubiți-vă soțiile, după cum și Hristos a iubit Biserica și S-a dat pe Sine pentru ea,"
     },
     {
       "number": 26,
-      "text": "ca s-o sfințească, după ce a curățit-o prin spălarea cu apă, prin Cuvânt,"
+      "text": "ca s-o sfințească, după ce a curățit-o prin spălarea cu apă, prin cuvânt,"
     },
     {
       "number": 27,
-      "text": "pentru ca el să-și prezinte în mod glorios adunarea, fără să aibă nici loc, nici riduri sau ceva de genul acesta, ci pentru ca ea să fie sfântă și fără defect."
+      "text": "ca să-Și înfățișeze Sieși Biserica slăvită, fără pată, zbârcitură sau ceva asemănător, ci sfântă și fără vină."
     },
     {
       "number": 28,
-      "text": "Tot așa și soții trebuie să-și iubească soțiile ca pe propriile lor trupuri. Cine își iubește soția se iubește pe sine însuși."
+      "text": "Tot așa sunt datori și soții să-și iubească soțiile ca pe propriile trupuri. Cel care își iubește soția se iubește pe sine însuși."
     },
     {
       "number": 29,
-      "text": "Căci nimeni nu și-a urât vreodată trupul, ci îl hrănește și îl prețuiește, așa cum face și Domnul cu adunarea,"
+      "text": "Căci nimeni nu și-a urât vreodată propriul trup, ci îl hrănește și îl îngrijește, după cum și Hristos Biserica,"
     },
     {
       "number": 30,
-      "text": "căci noi suntem mădulare ale trupului Lui, din carnea și oasele Lui."
+      "text": "pentru că suntem mădulare ale trupului Lui."
     },
     {
       "number": 31,
-      "text": "De aceea, un bărbat va părăsi pe tatăl său pe mama sa se va uni cu soția sa; cei doi vor fi un singur trup.”"
+      "text": "De aceea omul își va lăsa tatăl și mama și se va lipi de soția lui, iar cei doi vor fi un singur trup."
     },
     {
       "number": 32,
-      "text": "Acest mister este mare, dar eu vorbesc despre Hristos și adunare."
+      "text": "Taina aceasta este mare; eu însă vorbesc despre Hristos și despre Biserică."
     },
     {
       "number": 33,
-      "text": "Cu toate acestea, fiecare dintre voi trebuie să-și iubească soția ca pe el însuși; și soția să vadă că ea își respectă soțul."
+      "text": "Totuși, fiecare dintre voi să-și iubească soția ca pe sine însuși, iar soția să-și respecte soțul."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "și umblați în dragoste, după cum și Hristos ne-a iubit și S-a dat pe Sine pentru noi, ca dar și jertfă lui Dumnezeu, de bună mireasmă.",
+      "alternatives": [
+        "5:2 ἡμᾶς RP NA28 ] ὑμᾶς WH Treg / • ἡμῶν RP NA28 Treg ] ὑμῶν WH"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 3,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Iar desfrânarea și orice necurăție sau lăcomie nici să nu fie pomenite între voi, așa cum se cuvine sfinților,",
+      "alternatives": [
+        "3 ἀκαθαρσία πᾶσα WH Treg NA28 ] πᾶσα ἀκαθαρσία RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 4,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "nici nerușinare, vorbire prostească sau glume vulgare, care nu se potrivesc, ci mai degrabă mulțumire.",
+      "alternatives": [
+        "4 ἃ οὐκ ἀνῆκεν WH Treg NA28 ] τὰ οὐκ ἀνήκοντα RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 5,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Căci știți bine aceasta: niciun desfrânat, necurat sau lacom — care este un idolatru — nu are moștenire în Împărăția lui Hristos și a lui Dumnezeu.",
+      "alternatives": [
+        "5 ἴστε WH Treg NA28 ] ἔστε RP / • ὅ WH Treg NA28 ] ὅς RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "căci rodul luminii este în orice bunătate, dreptate și adevăr,",
+      "alternatives": [
+        "9 φωτὸς WH Treg NA28 ] πνεύματος RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 15,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Luați seama deci cu grijă cum umblați: nu ca niște neînțelepți, ci ca niște înțelepți,",
+      "alternatives": [
+        "15 ἀκριβῶς πῶς WH NA28 ] πῶς ἀκριβῶς Treg RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 17,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "De aceea nu fiți nechibzuiți, ci înțelegeți care este voia Domnului.",
+      "alternatives": [
+        "17 συνίετε WH Treg NA28 ] συνιέντες RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 19,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "vorbind între voi cu psalmi, imnuri și cântări spirituale, cântând și intonând din inimă Domnului,",
+      "alternatives": [
+        "19 ἑαυτοῖς WH Treg RP ] + ἐν NA28 / • ψάλλοντες WH NA28 ] + ἐν Treg RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 22,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Soțiile să se supună soților lor ca Domnului,",
+      "alternatives": [
+        "22 ἀνδράσιν WH NA28 ] + ὑποτασσέσθωσαν Treg; + ὑποτάσσεσθε RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 23,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "căci soțul este capul soției, după cum și Hristos este Capul Bisericii, fiind El Însuși Mântuitorul trupului.",
+      "alternatives": [
+        "23 αὐτὸς WH Treg NA28 ] καὶ αὐτὸς ἐστιν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 24,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Dar, după cum Biserica se supune lui Hristos, tot așa să se supună și soțiile soților lor în toate.",
+      "alternatives": [
+        "24 ὡς WH Treg NA28 ] ὡσπερ RP / • τοῖς WH Treg NA28 ] + ἰδίοις RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 25,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Soților, iubiți-vă soțiile, după cum și Hristos a iubit Biserica și S-a dat pe Sine pentru ea,",
+      "alternatives": [
+        "25 γυναῖκας WH Treg NA28 ] + ἑαυτῶν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 27,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "ca să-Și înfățișeze Sieși Biserica slăvită, fără pată, zbârcitură sau ceva asemănător, ci sfântă și fără vină.",
+      "alternatives": [
+        "27 αὐτὸς WH Treg NA28 ] αὐτὴν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 28,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Tot așa sunt datori și soții să-și iubească soțiile ca pe propriile trupuri. Cel care își iubește soția se iubește pe sine însuși.",
+      "alternatives": [
+        "28 καὶ WH Treg NA28 ] – RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 29,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Căci nimeni nu și-a urât vreodată propriul trup, ci îl hrănește și îl îngrijește, după cum și Hristos Biserica,",
+      "alternatives": [
+        "29 Χριστὸς WH Treg NA28 ] κύριος RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 30,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "pentru că suntem mădulare ale trupului Lui.",
+      "alternatives": [
+        "30 αὐτοῦ WH Treg NA28 ] + ἐκ τῆς σαρκός αὐτοῦ καί ἐκ τῶν ὀστέων αὐτοῦ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 31,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "De aceea omul își va lăsa tatăl și mama și se va lipi de soția lui, iar cei doi vor fi un singur trup.",
+      "alternatives": [
+        "31 τὸν WH NA28 RP ] – Treg / • πατέρα WH Treg NA28 ] + αὐτοῦ RP / • τὴν WH NA28 RP ] – Treg / • τῇ γυναικὶ Treg ] πρὸς τὴν γυναῖκα WH NA28 RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

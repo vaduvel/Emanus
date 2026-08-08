@@ -120,6 +120,13 @@ class BibliaEmanusNtMaterializerTests(unittest.TestCase):
             ):
                 materializer.build_payload(root, versification)
 
+    def test_current_withheld_nt_cannot_be_materialized(self) -> None:
+        with self.assertRaisesRegex(
+            materializer.MaterializationError,
+            "numai capitole published/public",
+        ):
+            materializer.build_payload()
+
 
 if __name__ == "__main__":
     unittest.main()

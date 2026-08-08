@@ -3,8 +3,8 @@
   "bookId": "2TI",
   "bookName": "2 Timotei",
   "chapter": 4,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,23 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat prin revizie directă din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2ti-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -98,14 +98,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 22 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 22 de versete pentru a elimina fragmentele rupte, numele în engleză, acordurile greșite și calcurile care alterau sensul.",
+        "Au fost restabilite construcțiile imperative, metafora jertfei de băutură, formulele de rugăciune și referințele la slujire după sintaxa greacă.",
+        "În 4:1, 4:14, 4:17 și 4:22, lectura SBLGNT este urmată explicit, fără a introduce adaosurile sau formele Textus Receptus."
       ]
     },
     "theologicalContext": {
@@ -123,116 +123,218 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:e2d4e01179160b318ac168d0b9c2ceb34d99f7acddcd631f7490f1a9485526ce",
-    "contentDigest": "sha256:89d12447b7994f348efe9f35c95fc78fcb100f781b22c6e085dba4613b576689"
+    "textDigest": "sha256:e632a8afe0796b2a4e8b77937ce2a72e08e4517028dea44a21a7f84ac4866e43",
+    "contentDigest": "sha256:a5f31c264c08fb76fe6d44dc1c33048998ea907ef419515e4fc9b2bb1acfaebc"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Vă poruncesc deci înaintea lui Dumnezeu și înaintea Domnului Isus Hristos, care va judeca pe cei vii și pe cei morți la apariția Lui și la Împărăția Lui:"
+      "text": "Înaintea lui Dumnezeu și a lui Hristos Isus, care urmează să-i judece pe cei vii și pe cei morți, și în vederea arătării Lui și a împărăției Lui, te îndemn solemn:"
     },
     {
       "number": 2,
-      "text": "Predică Cuvântul; fii stăruitor la vreme la vreme nepotrivită; mustră, mustră îndeamnă cu toată răbdarea învățătura."
+      "text": "Predică mesajul; fii pregătit la vreme potrivită și nepotrivită; mustră, dojenește, îndeamnă, cu toată răbdarea și învățătura."
     },
     {
       "number": 3,
-      "text": "Căci va veni vremea când nu vor asculta de învățătura sănătoasă, ci vor avea urechi pline de mâncărime, vor strânge pentru ei învățători, după poftele lor,"
+      "text": "Căci va veni vremea când nu vor suporta învățătura sănătoasă, ci, mânați de propriile dorințe și dorind să li se spună ceea ce le place, își vor strânge învățători,"
     },
     {
       "number": 4,
-      "text": "El le va întoarce urechea de la Adevăr și le va întoarce spatele la fabule."
+      "text": "își vor abate urechile de la adevăr și se vor întoarce spre mituri."
     },
     {
       "number": 5,
-      "text": "Dar voi să fiți treji în toate lucrurile, să suferiți greutăți, să faceți lucrarea unui evanghelist și să vă împliniți serviciul."
+      "text": "Tu însă fii lucid în toate, îndură greutățile, fă lucrarea unui evanghelist și du-ți slujirea până la capăt."
     },
     {
       "number": 6,
-      "text": "Căci mi s-a oferit deja, și a sosit vremea plecării mele."
+      "text": "Căci eu sunt deja turnat ca o jertfă de băutură, iar vremea plecării mele a sosit."
     },
     {
       "number": 7,
-      "text": "Am luptat lupta cea bună, am terminat cursul, am păstrat credința."
+      "text": "Am dus lupta cea bună, mi-am încheiat alergarea, am păzit credința."
     },
     {
       "number": 8,
-      "text": "De acum înainte, cununa neprihănirii este păstrată pentru mine, pe care Domnul, judecătorul cel drept, mi-o va da în ziua aceea; și nu numai mie, ci și tuturor celor ce iubesc înfățișarea Lui."
+      "text": "De acum înainte, cununa dreptății îmi este păstrată; Domnul, Judecătorul cel drept, mi-o va da în ziua aceea — și nu numai mie, ci și tuturor celor care au iubit arătarea Lui."
     },
     {
       "number": 9,
-      "text": "Fii sârguincios să vii la mine curând,"
+      "text": "Străduiește-te să vii la mine cât mai curând."
     },
     {
       "number": 10,
-      "text": "Căci Demas m-a părăsit, iubind lumea de acum, s-a dus la Tesalonic; Crescens la Galatia Titus în Dalm."
+      "text": "Dima m-a părăsit, iubind lumea de acum, și a plecat la Tesalonic; Crescens a plecat în Galatia, iar Tit, în Dalmația."
     },
     {
       "number": 11,
-      "text": "Numai Luke este cu mine. Ia-l pe Marcu și adu-l cu tine, pentru că el este util pentru mine pentru serviciu."
+      "text": "Numai Luca este cu mine. Ia-l pe Marcu și adu-l cu tine, căci îmi este folositor pentru slujire."
     },
     {
       "number": 12,
-      "text": "Dar l-am trimis pe Tihic la Efes."
+      "text": "Iar pe Tihic l-am trimis la Efes."
     },
     {
       "number": 13,
-      "text": "Adu mantia pe care am lăsat-o la Troas cu Carpus când vii și cărțile, mai ales pergamentele."
+      "text": "Când vei veni, adu mantia pe care am lăsat-o la Carp, în Troa, precum și cărțile, mai ales pergamentele."
     },
     {
       "number": 14,
-      "text": "Alexandru, arămarul, mi-a făcut mult rău, Domnul îi va răsplăti după faptele lui."
+      "text": "Alexandru, arămarul, mi-a făcut mult rău; Domnul îi va răsplăti după faptele lui."
     },
     {
       "number": 15,
-      "text": "Ferește-te de el, căci s-a împotrivit foarte mult cuvintelor noastre."
+      "text": "Ferește-te și tu de el, căci s-a împotrivit cu mare tărie cuvintelor noastre."
     },
     {
       "number": 16,
-      "text": "La prima mea apărare, nimeni nu a venit să mă ajute, dar toți m-au părăsit."
+      "text": "La prima mea apărare, nimeni nu mi-a fost alături, ci toți m-au părăsit — să nu li se socotească aceasta!"
     },
     {
       "number": 17,
-      "text": "Dar Domnul a stat lîngă mine și m-a întărit, ca prin mine să se vestească pe deplin mesajul, și ca toți Neamurile să audă. Astfel, am fost izbăvit din gura leului."
+      "text": "Dar Domnul mi-a stat alături și m-a întărit, ca prin mine mesajul să fie proclamat pe deplin și toate neamurile să audă; și am fost izbăvit din gura leului."
     },
     {
       "number": 18,
-      "text": "Și Domnul mă va izbăvi de orice faptă rea și mă va păzi pentru Împărăția Sa cerească. A Lui să fie slava veșnică și veșnică. Amin."
+      "text": "Domnul mă va izbăvi de orice lucrare rea și mă va salva pentru Împărăția Lui cerească. A Lui să fie slava în vecii vecilor! Amin."
     },
     {
       "number": 19,
-      "text": "Salută pe Prisca și pe Aquila și casa lui Onisifor."
+      "text": "Transmite salutări Priscăi, lui Aquila și casei lui Onisifor."
     },
     {
       "number": 20,
-      "text": "Erastus a rămas în Corint, dar l-am lăsat pe Trofim la Milet bolnav."
+      "text": "Erast a rămas în Corint, iar pe Trofim l-am lăsat bolnav în Milet."
     },
     {
       "number": 21,
-      "text": "Fii sârguincios să vii înainte de iarnă. Eubulus te salută, la fel ca Pudens, Linus, Claudia și toți frații."
+      "text": "Străduiește-te să vii înainte de iarnă. Eubul te salută, precum și Pudens, Linus, Claudia și toți frații."
     },
     {
       "number": 22,
-      "text": "Domnul Isus Hristos să fie cu duhul tău. Harul să fie cu tine. Amin."
+      "text": "Domnul să fie cu duhul tău. Harul să fie cu voi."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variante textuale SBLGNT/TR: Διαμαρτύρομαι / Διαμαρτύρομαι οὖν ἐγώ; Χριστοῦ Ἰησοῦ / τοῦ κυρίου Ἰησοῦ χριστοῦ; καὶ / κατὰ",
+      "decision": "„Hristos Isus ... în vederea arătării Lui și a împărăției Lui”",
+      "alternatives": [
+        "TR-2TI din snapshot adaugă „de aceea eu”, „Domnul Isus Hristos” și are prepoziția κατὰ înaintea arătării și împărăției."
+      ],
+      "reason": "SBLGNT îl numește pe judecător Hristos Isus și leagă arătarea de împărăție prin καὶ. Româna redă lizibil construcția eliptică prin „în vederea”, fără să introducă adaosurile ori formula TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 3,
+      "term": "κνηθόμενοι τὴν ἀκοήν",
+      "decision": "„dorind să li se spună ceea ce le place”",
+      "alternatives": [
+        "Redare strict figurativă: „având urechile care îi gâdilă”."
+      ],
+      "reason": "Idiomul descrie dorința după o învățătură agreabilă. Redarea românească păstrează faptul că subiectul are această dorință, fără să transforme învățătorii în agentul expresiei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lexicul SBLGNT-2TI, contextul imediat și sursele auxiliare au fost confruntate direct."
+    },
+    {
+      "verse": 6,
+      "term": "σπένδομαι ... ἀναλύσεώς μου",
+      "decision": "„sunt deja turnat ca o jertfă de băutură ... vremea plecării mele”",
+      "alternatives": [
+        "„sunt deja oferit”",
+        "„vremea dezlegării mele”"
+      ],
+      "reason": "Verbul păstrează imaginea unei jertfe de băutură în desfășurare, iar ἀνάλυσις indică plecarea sau despărțirea; nu este redus la o ofertă nespecificată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI și WEBP-2TI au fost confruntate direct; decizia păstrează metafora și sensul contextual."
+    },
+    {
+      "verse": 8,
+      "term": "ὁ τῆς δικαιοσύνης στέφανος ... τοῖς ἠγαπηκόσι τὴν ἐπιφάνειαν αὐτοῦ",
+      "decision": "„cununa dreptății ... celor care au iubit arătarea Lui”",
+      "alternatives": [
+        "„coroana dreptății”",
+        "„celor care iubesc venirea Lui”"
+      ],
+      "reason": "„Cununa dreptății” păstrează genitivul fără a decide în corpul versetului raportul său teologic, iar perfectul ἠγαπηκόσι este redat prin „au iubit”; ἐπιφάνεια este redată prin „arătare”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT-2TI și contextul imediat au fost verificate direct."
+    },
+    {
+      "verse": 10,
+      "term": "τὸν νῦν αἰῶνα",
+      "decision": "„lumea de acum”",
+      "alternatives": [
+        "„veacul de acum”",
+        "„epoca de acum”"
+      ],
+      "reason": "αἰών desemnează ordinea sau veacul prezent; „lumea de acum” este formularea românească firească și nu reduce expresia la simpla realitate materială.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, WEBP-2TI și sursele românești auxiliare au fost confruntate direct."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: ἀποδώσει / ἀποδῴη",
+      "decision": "„Domnul îi va răsplăti”",
+      "alternatives": [
+        "TR-2TI din snapshot are optativul ἀποδῴη: „Domnul să îi răsplătească”."
+      ],
+      "reason": "SBLGNT are viitorul ἀποδώσει, o afirmație despre răsplătire; textul principal nu îl transformă în dorința optativă din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "μὴ αὐτοῖς λογισθείη",
+      "decision": "„să nu li se socotească aceasta!”",
+      "alternatives": [
+        "„să nu li se pună în socoteală”"
+      ],
+      "reason": "Optativul pasiv este o dorință ca părăsirea lui Pavel să nu le fie imputată; propoziția, omisă din textul anterior, este păstrată explicit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI și sursele auxiliare au fost confruntate direct."
+    },
+    {
+      "verse": 17,
+      "term": "variantă textuală SBLGNT/TR: ἀκούσωσιν / ἀκούσῃ",
+      "decision": "„toate neamurile să audă”",
+      "alternatives": [
+        "TR-2TI din snapshot are singularul ἀκούσῃ, care poate lega auzirea de κήρυγμα."
+      ],
+      "reason": "SBLGNT are pluralul ἀκούσωσιν; româna păstrează explicit toate neamurile ca subiect al auzirii, fără a introduce un alt conținut al proclamării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 22,
+      "term": "variantă textuală SBLGNT/TR: ὁ κύριος / ὁ κύριος Ἰησοῦς Χριστός; ὑμῶν / ὑμῶν Ἀμήν",
+      "decision": "„Domnul să fie cu duhul tău. Harul să fie cu voi.”",
+      "alternatives": [
+        "TR-2TI din snapshot adaugă „Isus Hristos” și „Amin”."
+      ],
+      "reason": "SBLGNT spune numai „Domnul” și nu încheie cu „Amin”. Textul românesc păstrează și schimbarea de adresare: duhul este la singular, iar harul este pentru plural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

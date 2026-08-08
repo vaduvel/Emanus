@@ -1,0 +1,13 @@
+name: NT AI Review Commit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  disabled-auto-runner:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo 'Book review runs through nt-ai-review-validate.yml.'

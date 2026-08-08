@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +18,54 @@ OUTPUT_PATH = ROOT / "packages" / "shared" / "src" / "bible" / "bibliaEmanusNt.g
 
 class MaterializationError(Exception):
     pass
+
+
+def load_module(name: str, path: Path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None or spec.loader is None:
+        raise MaterializationError(f"Nu pot încărca {path.name}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def validate_nt_editorial_approval(
+    data_dir: Path,
+    chapters: dict[str, dict[str, Any]],
+) -> None:
+    """Block generated application data until the NT has real editorial proof.
+
+    A generated TypeScript payload is a publication boundary.  It must not be
+    possible to bypass the main checker by running this materializer directly.
+    """
+    validator = load_module(
+        "biblia_emanus_validator_for_materialization",
+        ROOT / "scripts" / "check-biblia-emanus.py",
+    )
+    gate = load_module("nt_editorial_gate_for_materialization", ROOT / "scripts" / "nt_editorial_gate.py")
+    original_data_dir = validator.DATA_DIR
+    original_manifest_path = validator.MANIFEST_PATH
+    validator.DATA_DIR = data_dir
+    validator.MANIFEST_PATH = data_dir / "manifest.json"
+    try:
+        manifest = validator.load_json(validator.MANIFEST_PATH)
+        paths = validator.validate_manifest(manifest)
+        source_data = validator.validate_source_lock(validator.load_json(paths["sourceLock"]))
+        ledger = validator.validate_ledger(validator.load_json(paths["sourceLedger"]), source_data)
+        validator.validate_source_coverage(ledger, source_data)
+        bound_source_data = gate.bind_source_reference_mapper(
+            source_data,
+            lambda lock_id, book_id, chapter, verse: validator.source_references_for_target(
+                lock_id, book_id, chapter, verse, source_data["rules"]
+            ),
+        )
+        gate.validate_nt_editorial_approval(data_dir, bound_source_data, ledger, chapters)
+    except (validator.ValidationError, gate.EditorialGateError) as error:
+        raise MaterializationError(f"poarta editorială NT nu permite materializarea: {error}") from error
+    finally:
+        validator.DATA_DIR = original_data_dir
+        validator.MANIFEST_PATH = original_manifest_path
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -45,6 +95,7 @@ def build_payload(
         raise MaterializationError("Versificația NT nu mai are totalurile canonice fixate")
 
     payload: dict[str, dict[str, dict[str, Any]]] = {}
+    chapter_data: dict[str, dict[str, Any]] = {}
     chapter_total = 0
     verse_total = 0
     for book in books:
@@ -122,6 +173,7 @@ def build_payload(
                 "notes": notes,
                 "alternateEndings": chapter.get("alternateEndings", []),
             }
+            chapter_data[f"{book_id}.{number}"] = chapter
             chapter_total += 1
             verse_total += len(verse_map)
         payload[book_id] = rendered_chapters
@@ -130,6 +182,7 @@ def build_payload(
         raise MaterializationError(
             f"Corpus incomplet: {len(payload)} cărți, {chapter_total} capitole, {verse_total} versete"
         )
+    validate_nt_editorial_approval(data_dir, chapter_data)
     return payload
 
 

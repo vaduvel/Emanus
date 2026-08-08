@@ -1,0 +1,61 @@
+name: NT AI Review Validate
+
+on:
+  pull_request:
+    types: [edited]
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  galatians-source-materialize:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Materialize pinned Galatians witnesses
+        run: |
+          set -euo pipefail
+          ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
+          EXPECTED=29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424
+          test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "$EXPECTED"
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          zpath=Path('docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip')
+          out=Path('.github/nt-ai-review/gal-source')
+          out.mkdir(parents=True, exist_ok=True)
+          wanted={
+            'sblgnt/text/GAL.txt':'sblgnt.txt',
+            'sblgnt/apparatus/text/GAL.txt':'apparatus.txt',
+            'tr/GAL.usfm':'tr.usfm',
+            'webp/GAL.usfm':'webp.usfm',
+            'btf/GAL.usfm':'btf.usfm',
+            'cornilescu1924/GAL.usfm':'cornilescu1924.usfm',
+            'biblia-libera/GAL.usfm':'biblia-libera.usfm',
+          }
+          with ZipFile(zpath) as z:
+              names=set(z.namelist())
+              missing=set(wanted)-names
+              assert not missing, missing
+              for src,dst in wanted.items():
+                  data=z.read(src)
+                  assert data, src
+                  (out/dst).write_bytes(data)
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .github/nt-ai-review/gal-source
+          if git diff --cached --quiet; then
+            echo 'Galatians sources already materialized.'
+          else
+            git diff --cached --check
+            git commit -m 'chore(biblia): materialize pinned Galatians witnesses'
+            git push origin HEAD:codex/nt-ai-review-handoff
+          fi

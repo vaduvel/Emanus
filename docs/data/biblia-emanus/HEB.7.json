@@ -3,8 +3,8 @@
   "bookId": "HEB",
   "bookName": "Evrei",
   "chapter": 7,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,52 +71,48 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 28 de versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-review-2026-08-08-heb-7",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 28,
       "reviewed": 28,
       "continuous": true,
-      "verseNumbersSha256": "sha256:9a107a160e9a74d5e92434ea013a7fa5ead7b122a283f2855eb5da2b0d55f33f"
+      "verseNumbersSha256": "sha256:f82fe60705ce34e6d42d1a29c275d2ac09dde667c659d058c03c310a7f55879d"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 28 de versete au fost confruntate direct cu SBLGNT/aparat; TR numai martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile, fragmentele corupte și acordurile defectuoase din candidatul anterior.",
+        "Argumentul despre Melhisedec, preoție, Lege și jurământ a fost reconstruit în fraze românești coerente fără glosare confesională.",
+        "Citatele și contrastele retorice din 7:18-22 au fost punctuate astfel încât relațiile logice ale textului grec să rămână vizibile."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Descrierea lui Melhisedec din 7:3 este redată textual fără a o transforma într-o afirmație ontologică suplimentară despre persoana lui.",
+        "σαρκίνης din 7:16 este redat prin „privitoare la trup”, evitând sensul moral peiorativ al lui „carnal”.",
+        "La 7:21 textul principal nu importă adaosul RP „după rânduiala lui Melhisedec”, iar la 7:22 este respectată lectura SBLGNT a aparatului."
       ]
     },
     "omissionAddition": {
@@ -123,140 +122,228 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:47a64eed1a8f1c0d8d3745c170ee4313cb75b1412ade7838502c358cf3d316bc",
-    "contentDigest": "sha256:cc3d08917e4bc8112ae6269bc05812d93b80e0f2c734149d4f3e29995c923809"
+    "textDigest": "sha256:5b61a706db477f87a0dfa6f6d6fc8104fa79456da76fcf31c3770cee1ed65ddc",
+    "contentDigest": "sha256:1970a032422ba663e86d313037f39448c00564ca81d5c0daf8dfde36d61dfd2f"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pentru acest Melhisedec, regele Salemului, preot al Dumnezeului Preaînalt, care l-a întâlnit pe Avraam întorcându-se de la măcelul împăraților și l-a binecuvântat,"
+      "text": "Căci acest Melhisedec, rege al Salemului, preot al Dumnezeului Preaînalt, l-a întâmpinat pe Avraam când se întorcea de la înfrângerea regilor și l-a binecuvântat."
     },
     {
       "number": 2,
-      "text": "Lui Avraam i-a împărțit, de asemenea, o zecime din toate (în primul rând, prin interpretare, rege al neprihănirii și apoi, de asemenea, rege al Salemului), ceea ce înseamnă rege al păcii."
+      "text": "Lui Avraam i-a dat și zeciuială din toate. Numele lui se tâlcuiește mai întâi „rege al dreptății”, iar apoi este și „rege al Salemului”, adică „rege al păcii”."
     },
     {
       "number": 3,
-      "text": "Fără tată, fără mamă, fără genealogie, neavând nici început al zilelor, nici sfârșit al, ci făcându-se asemenea Fiului lui Dumnezeu, rămâne preot încontinuu."
+      "text": "Fără tată, fără mamă, fără genealogie, neavând nici început al zilelor, nici sfârșit al vieții, dar asemănat cu Fiul lui Dumnezeu, rămâne preot neîncetat."
     },
     {
       "number": 4,
-      "text": "Să vedem acum cât de mare era omul acesta, căruia chiar Avraam, patriarhul, i-a dat o zecime din cea mai bună pradă."
+      "text": "Priviți cât de mare a fost acesta, căruia până și patriarhul Avraam i-a dat zeciuială din cele mai bune prăzi."
     },
     {
       "number": 5,
-      "text": "Și, într-adevăr, cei dintre fiii lui Levi, care primesc serviciul preoției, conform legii au poruncă să ia zeciuieli de la popor, adică de la frații lor, cu toate că au ieșit din coapsele lui Avraam."
+      "text": "Cei dintre fiii lui Levi care primesc preoția au poruncă, potrivit Legii, să ia zeciuială de la popor, adică de la frații lor, deși și aceștia au ieșit din coapsele lui Avraam."
     },
     {
       "number": 6,
-      "text": "Dar cel a cărui genealogie nu este socotită de la ei a primit zeciuială de la Avraam, și a binecuvântat pe cel ce are promisiunile."
+      "text": "Dar cel a cărui genealogie nu se trage din ei a primit zeciuială de la Avraam și l-a binecuvântat pe cel care avea promisiunile."
     },
     {
       "number": 7,
-      "text": "Dar fără nici o dispută cel mai mic este binecuvântat de cel mai mare."
+      "text": "Fără nicio îndoială, cel mai mic este binecuvântat de cel mai mare."
     },
     {
       "number": 8,
-      "text": "Aici oamenii care mor primesc zeciuială, dar acolo cineva zeciuială despre care se mărturisește că trăiește."
+      "text": "Aici, cei care primesc zeciuieli sunt oameni muritori; acolo însă, este unul despre care se mărturisește că trăiește."
     },
     {
       "number": 9,
-      "text": "Putem spune că prin Avraam, chiar Levi, care primește zeciuială, a plătit zeciuială,"
+      "text": "Și, ca să spunem așa, prin Avraam chiar și Levi, cel care primește zeciuieli, a dat zeciuială,"
     },
     {
       "number": 10,
-      "text": "căci era încă în trupul tatălui său când l-a întâlnit Melchizedek."
+      "text": "căci era încă în coapsele strămoșului său când Melhisedec l-a întâmpinat pe Avraam."
     },
     {
       "number": 11,
-      "text": "Acum, dacă perfecțiunea a fost prin preoția Levitică (căci sub ea poporul a primit legea), ce mai era nevoie ca un alt preot să se ridice după porunca lui Melhisedec, și să nu fie chemat după porunca lui Aaron?"
+      "text": "Dacă, așadar, desăvârșirea ar fi venit prin preoția levitică — căci pe baza ei poporului i-a fost dată Legea — ce nevoie mai era să se ridice un alt preot după rânduiala lui Melhisedec și să nu fie numit după rânduiala lui Aaron?"
     },
     {
       "number": 12,
-      "text": "Pentru că preoția s-a schimbat, este necesar să se facă și o schimbare în lege."
+      "text": "Căci, când se schimbă preoția, are loc în mod necesar și o schimbare a legii."
     },
     {
       "number": 13,
-      "text": "Căci cel despre care se spune aceste lucruri este al altei seminții, din care nimeni nu a oficiat la altar."
+      "text": "Cel despre care se spun aceste lucruri a aparținut unei alte seminții, din care nimeni nu a slujit la altar."
     },
     {
       "number": 14,
-      "text": "Căci este evident că Domnul nostru a ieșit din Iuda, despre care semin Moise n-a vorbit nimic cu privire la preoție."
+      "text": "Este limpede că Domnul nostru S-a ridicat din Iuda, seminție despre ai cărei preoți Moise nu a spus nimic."
     },
     {
       "number": 15,
-      "text": "Acest lucru este încă mult mai evident, dacă după asemănarea lui Melchizedek apare un alt preot,"
+      "text": "Lucrul este și mai limpede dacă se ridică un alt preot, după asemănarea lui Melhisedec,"
     },
     {
       "number": 16,
-      "text": "care a fost făcut nu după legea unei porunci carnale, ci după puterea unei vieți nesfârșite;"
+      "text": "care a devenit preot nu potrivit unei legi a unei porunci privitoare la trup, ci potrivit puterii unei vieți nepieritoare."
     },
     {
       "number": 17,
-      "text": "Căci este mărturisită, ești preot pentru totdeauna, după porunca lui Melchizedek."
+      "text": "Căci se mărturisește: „Tu ești preot pentru totdeauna, după rânduiala lui Melhisedec.”"
     },
     {
       "number": 18,
-      "text": "Pentru că există o anulare a unei porunci de mai sus din cauza slăbiciunii și inutilității sale"
+      "text": "Pe de o parte, porunca anterioară este înlăturată din cauza slăbiciunii și inutilității ei,"
     },
     {
       "number": 19,
-      "text": "căci Legea nu a făcut nimic desăvârșit, și aducerea unei speranțe mai bune, prin care ne apropiem de Dumnezeu."
+      "text": "căci Legea nu a dus nimic la desăvârșire; pe de altă parte, este adusă o speranță mai bună, prin care ne apropiem de Dumnezeu."
     },
     {
       "number": 20,
-      "text": "În măsura în care el nu a fost făcut preot fără a lua un jurământ"
+      "text": "Și aceasta nu s-a făcut fără jurământ — ceilalți au devenit preoți fără jurământ,"
     },
     {
       "number": 21,
-      "text": "(căci ei au fost făcuți preoți fără jurământ), dar el, cu jurământ pe cel ce zice despre el: Domnul a jurat nu se va răzgândi: Tu ești preot pe vecie, după rânduiala lui Melhisedec."
+      "text": "dar El a devenit preot cu jurământ, prin Cel care I-a spus: „Domnul a jurat și nu-I va părea rău: «Tu ești preot pentru totdeauna.»”"
     },
     {
       "number": 22,
-      "text": "Prin atât de multe, Isus a devenit garanția unui legământ mai bun."
+      "text": "Cu atât mai mult, Isus a devenit garantul unui legământ mai bun."
     },
     {
       "number": 23,
-      "text": "Mulți, într-adevăr, au fost făcuți preoți, deoarece sunt împiedicați să continue prin moarte."
+      "text": "Mai mult, aceia au devenit preoți în număr mare, fiindcă moartea îi împiedica să rămână în slujire;"
     },
     {
       "number": 24,
-      "text": "Dar el, pentru că trăiește veșnic, are preoția lui de neschimbat."
+      "text": "dar El, fiindcă rămâne pentru totdeauna, are o preoție netrecătoare."
     },
     {
       "number": 25,
-      "text": "De aceea, El este și în stare să-i mântuiască pe cei ce se apropie de Dumnezeu prin El, fiindcă trăiește veșnic ca să mijlocească pentru ei."
+      "text": "De aceea poate și să-i mântuiască pe deplin pe cei care se apropie prin El de Dumnezeu, fiindcă trăiește întotdeauna ca să mijlocească pentru ei."
     },
     {
       "number": 26,
-      "text": "Căci un astfel de mare preot era potrivit pentru noi: sfînt, fără vină, neîntinat, separat de păcătoși, și făcut mai mare decât cerurile;"
+      "text": "Un astfel de Mare Preot ni se potrivea: sfânt, fără răutate, neîntinat, despărțit de păcătoși și înălțat mai presus de ceruri."
     },
     {
       "number": 27,
-      "text": "care nu are nevoie, ca acei mari preoți, să aducă zilnic jertfe, mai întâi pentru păcatele lui și apoi pentru păcatele poporului. Căci a făcut aceasta o dată pentru totdeauna, când s-a dat pe Sine."
+      "text": "El nu are nevoie, ca ceilalți mari preoți, să aducă jertfe în fiecare zi, mai întâi pentru propriile păcate și apoi pentru ale poporului; căci aceasta a făcut-o o dată pentru totdeauna, când S-a adus pe Sine."
     },
     {
       "number": 28,
-      "text": "Căci legea îi pe oameni ca înalți preoți care au slăbiciune, dar cuvântul jurământului, care a venit după lege, pentru totdeauna un Fiu care a fost desăvârșit."
+      "text": "Căci Legea pune ca mari preoți oameni care au slăbiciune, dar cuvântul jurământului, venit după Lege, Îl pune pe Fiul, făcut desăvârșit pentru totdeauna."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "ἀπάτωρ, ἀμήτωρ, ἀγενεαλόγητος",
+      "decision": "„Fără tată, fără mamă, fără genealogie”",
+      "alternatives": [
+        "explicații ontologice în corpul versetului"
+      ],
+      "reason": "Termenii sunt redați lexical; interpretarea tipologică este lăsată argumentului autorului, fără completări doctrinare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenii sunt redați lexical; interpretarea tipologică este lăsată argumentului autorului, fără completări doctrinare."
+    },
+    {
+      "verse": 11,
+      "term": "ἐπʼ αὐτῆς νενομοθέτηται",
+      "decision": "„pe baza ei poporului i-a fost dată Legea”",
+      "alternatives": [
+        "RP: αὐτῇ / νενομοθέτητο"
+      ],
+      "reason": "SBLGNT păstrează genitivul și perfectul; formularea românească redă relația dintre preoția levitică și darea Legii fără a importa lectura RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT păstrează genitivul și perfectul; formularea românească redă relația dintre preoția levitică și darea Legii fără a importa lectura RP."
+    },
+    {
+      "verse": 14,
+      "term": "περὶ ἱερέων οὐδὲν",
+      "decision": "„despre ai cărei preoți Moise nu a spus nimic”",
+      "alternatives": [
+        "RP: „nimic despre preoție”"
+      ],
+      "reason": "Textul principal vorbește despre preoți, nu folosește substantivul abstract „preoție” din lectura RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal vorbește despre preoți, nu folosește substantivul abstract „preoție” din lectura RP."
+    },
+    {
+      "verse": 16,
+      "term": "ἐντολῆς σαρκίνης",
+      "decision": "„unei porunci privitoare la trup”",
+      "alternatives": [
+        "„porunci carnale”"
+      ],
+      "reason": "Adjectivul descrie ordinul legat de descendența trupească, nu o calitate morală păcătoasă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adjectivul descrie ordinul legat de descendența trupească, nu o calitate morală păcătoasă."
+    },
+    {
+      "verse": 21,
+      "term": "Σὺ ἱερεὺς εἰς τὸν αἰῶνα",
+      "decision": "„Tu ești preot pentru totdeauna.”",
+      "alternatives": [
+        "RP: + „după rânduiala lui Melhisedec”"
+      ],
+      "reason": "Adaosul RP nu este în textul principal SBLGNT la 7:21 și nu este importat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul RP nu este în textul principal SBLGNT la 7:21 și nu este importat."
+    },
+    {
+      "verse": 22,
+      "term": "ἔγγυος … διαθήκης",
+      "decision": "„garantul unui legământ mai bun”",
+      "alternatives": [
+        "„chezaș”"
+      ],
+      "reason": "ἔγγυος indică garantul unei obligații; termenul este redat natural, iar varianta cu καὶ înainte de κρείττονος nu schimbă nucleul semantic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "ἔγγυος indică garantul unei obligații; termenul este redat natural, iar varianta cu καὶ înainte de κρείττονος nu schimbă nucleul semantic."
+    },
+    {
+      "verse": 24,
+      "term": "ἀπαράβατον … ἱερωσύνην",
+      "decision": "„o preoție netrecătoare”",
+      "alternatives": [
+        "„preoție netransmisibilă”",
+        "„preoție neschimbătoare”"
+      ],
+      "reason": "Contextul contrastează preoții împiedicați de moarte cu Hristos care rămâne; „netrecătoare” păstrează permanența fără a supraexplica termenul disputat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul contrastează preoții împiedicați de moarte cu Hristos care rămâne; „netrecătoare” păstrează permanența fără a supraexplica termenul disputat."
+    },
+    {
+      "verse": 25,
+      "term": "εἰς τὸ παντελὲς",
+      "decision": "„să-i mântuiască pe deplin”",
+      "alternatives": [
+        "„pentru totdeauna”"
+      ],
+      "reason": "Expresia poate sublinia deplinătatea/extinderea completă; „pe deplin” păstrează sensul adverbial fără a dubla nejustificat ideea temporală din „trăiește întotdeauna”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Expresia poate sublinia deplinătatea/extinderea completă; „pe deplin” păstrează sensul adverbial fără a dubla nejustificat ideea temporală din „trăiește întotdeauna”."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

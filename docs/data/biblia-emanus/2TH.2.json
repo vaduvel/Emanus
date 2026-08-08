@@ -3,8 +3,8 @@
   "bookId": "2TH",
   "bookName": "2 Tesaloniceni",
   "chapter": 2,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-2TH.2.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-2TH",
+        "biblia-libera/2TH.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,23 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2th-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 17,
       "reviewed": 17,
@@ -98,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise cele 17 versete pentru a elimina erorile sintactice, calcurile englezești și acordurile greșite.",
+        "Lecturile SBLGNT distincte de Textus Receptus, inclusiv 2:2, 2:3, 2:8, 2:11, 2:13 și 2:17, au fost redate explicit și notate.",
+        "Ambiguitatea neidentificată a celui care reține din 2:6–7 și caracterul de rugăciune al lui 2:16–17 au fost păstrate fără glosă confesională."
       ]
     },
     "theologicalContext": {
@@ -123,7 +137,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație"
     },
     "criticalIssues": {
       "result": "approved",
@@ -139,80 +153,239 @@
       "minimumSemantic": 0.4993764885473809,
       "minimumScore": 0.5987788757926972
     },
-    "textDigest": "sha256:9b9e92c2e241d724b700bc939dc99da85e071d12d414c23e236e148e57b38600",
-    "contentDigest": "sha256:aa04a83e3c9862acdf9e67666d884c1f37a3ee40049d3a38b731a1594b8f9ae2"
+    "textDigest": "sha256:dd88cb1a188a217a7ffcf249db283cc8bc34e57d85726cb1966cd11d6aaa679c",
+    "contentDigest": "sha256:7cf65a3f2028ad4145dbe737078759b1fa703a80cd4f89496166f466dc7a70ee"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Acum, fraților, cu privire la venirea Domnului nostru Isus Hristos și la strângerea noastră la El, vă rugăm"
+      "text": "Vă rugăm însă, fraților, cu privire la venirea Domnului nostru Isus Hristos și la adunarea noastră la El,"
     },
     {
       "number": 2,
-      "text": "să nu fiți clătinați repede în mintea voastră sau tulburați, nici prin duh, nici prin cuvânt, nici prin scrisoare ca de la noi, spunând că ziua lui Hristos a venit deja."
+      "text": "să nu vă lăsați atât de repede clătinați în minte și să nu vă tulburați nici printr-un duh, nici printr-un cuvânt, nici printr-o scrisoare care pare să fie de la noi, cum că ziua Domnului a sosit."
     },
     {
       "number": 3,
-      "text": "Nimeni să nu vă înșele în nici un fel, căci nu va fi dacă rebeliunea nu va fi pe primul loc, și omul păcatului va fi descoperit, fiul distrugerii."
+      "text": "Nimeni să nu vă înșele în niciun fel. Căci acea zi nu va veni dacă nu vine mai întâi apostazia și nu este descoperit omul nelegiuirii, fiul pierzării."
     },
     {
       "number": 4,
-      "text": "El se opune și se înalță împotriva a tot ceea ce este numit Dumnezeu sau care este venerat, astfel încât el stă ca Dumnezeu în templul lui Dumnezeu, întinzându-se ca Dumnezeu."
+      "text": "El se împotrivește și se înalță mai presus de tot ceea ce este numit dumnezeu sau de orice obiect al închinării, până acolo încât se așază în templul lui Dumnezeu, prezentându-se pe sine ca fiind Dumnezeu."
     },
     {
       "number": 5,
-      "text": "Nu-ți amintești că atunci când eram încă cu tine, ți-am spus lucrurile astea?"
+      "text": "Nu vă amintiți că, atunci când eram încă cu voi, v-am spus aceste lucruri?"
     },
     {
       "number": 6,
-      "text": "Acum știi ce îl reține, până la sfârșit ca să fie dezvăluit în propriul său sezon."
+      "text": "Acum știți ce îl reține, ca el să fie descoperit la timpul lui."
     },
     {
       "number": 7,
-      "text": "Căci taina nelegiuirii lucrează deja; numai unul singur stă în loc acum, până va fi dat la o parte."
+      "text": "Căci taina nelegiuirii este deja la lucru; numai că cel care îl reține acum va continua să-l rețină până când cel care reține va fi îndepărtat."
     },
     {
       "number": 8,
-      "text": "Atunci cel fără de lege va fi descoperit, pe care Domnul îl va ucide cu suflarea gurii sale și îl va nimici prin manifestarea venirii Lui;"
+      "text": "Și atunci va fi descoperit cel fără de lege, pe care Domnul Isus îl va ucide cu suflarea gurii Sale și îl va nimici prin arătarea venirii Sale,"
     },
     {
       "number": 9,
-      "text": "Cel al cărui venire este după lucrarea Diavolului cu toată puterea, semnele și minunile mincinoase,"
+      "text": "Cel a cărui venire are loc potrivit lucrării Satanei, cu toată puterea, cu semne și cu minuni mincinoase,"
     },
     {
       "number": 10,
-      "text": "și cu toată înșelăciunea răutății pentru cei pierduți, pentru că n-au primit dragostea adevărului, ca să fie salvați."
+      "text": "și cu tot felul de amăgiri ale nedreptății pentru cei care se pierd, deoarece n-au primit dragostea adevărului ca să fie mântuiți."
     },
     {
       "number": 11,
-      "text": "Din această cauză, Dumnezeu le trimite o amăgire puternică, ca ei să creadă o minciună,"
+      "text": "Din această cauză, Dumnezeu le trimite o lucrare de rătăcire, ca ei să creadă minciuna,"
     },
     {
       "number": 12,
-      "text": "ca să fie judecați toți cei ce n-au crezut adevărul, ci au găsit plăcere în nedreptate."
+      "text": "pentru ca toți cei care n-au crezut adevărul, ci și-au găsit plăcerea în nedreptate, să fie judecați."
     },
     {
       "number": 13,
-      "text": "Dar noi suntem obligați să aducem întotdeauna mulțumiri lui Dumnezeu pentru voi, fraților iubiți de Domnul, pentru că Dumnezeu v-a ales de la început pentru mântuire prin sfințirea Duhului și credința în adevăr,"
+      "text": "Dar noi suntem datori să-I mulțumim întotdeauna lui Dumnezeu pentru voi, frați iubiți de Domnul, deoarece Dumnezeu v-a ales ca prim rod pentru mântuire, prin sfințirea Duhului și credința în adevăr,"
     },
     {
       "number": 14,
-      "text": "El v-a chemat prin Evanghelia noastră, ca să capete slava Domnului nostru Isus Hristos."
+      "text": "pentru aceasta v-a chemat prin Evanghelia noastră, ca să dobândiți slava Domnului nostru Isus Hristos."
     },
     {
       "number": 15,
-      "text": "Așadar, fraților, stați fermi și țineți tradițiile pe care le-ați învățat de la noi, fie prin cuvânt, fie prin scrisoare."
+      "text": "Așadar, fraților, rămâneți neclintiți și țineți cu fermitate tradițiile pe care le-ați învățat, fie prin cuvânt, fie prin scrisoarea noastră."
     },
     {
       "number": 16,
-      "text": "Acum, Domnul nostru Isus Hristos însuși, și Dumnezeu Tatăl nostru, care ne-a iubit și ne-a dat mângâiere veșnică și bună speranță prin har,"
+      "text": "Iar Domnul nostru Isus Hristos însuși și Dumnezeu, Tatăl nostru, care ne-a iubit și ne-a dat prin har o mângâiere veșnică și o bună speranță,"
     },
     {
       "number": 17,
-      "text": "mângâiați-vă inimile și întăriți-vă în orice lucrare bună și cuvânt."
+      "text": "să vă mângâie inimile și să vă întărească în orice lucrare bună și în orice cuvânt bun."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "ἐπισυναγωγῆς ἐπʼ αὐτόν",
+      "decision": "„adunarea noastră la El”",
+      "alternatives": [
+        "„strângerea noastră la El”",
+        "„reunirea noastră cu El”"
+      ],
+      "reason": "ἐπισυναγωγή desemnează adunarea împreună, iar ἐπʼ αὐτόν păstrează direcția către Hristos; formularea nu transformă termenul într-un program escatologic explicativ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, WEBP-2TH și contextul sintactic al versetelor 1–2 au fost confruntate direct."
+    },
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: κυρίου / Χριστοῦ; μηδὲ / μήτε",
+      "decision": "„ziua Domnului a sosit”; tulburarea este legată separat de clătinarea minții.",
+      "alternatives": [
+        "TR-2TH citește „ziua lui Hristos” și are μήτε în loc de μηδέ."
+      ],
+      "reason": "SBLGNT numește explicit „ziua Domnului”; lectura tradițională nu este importată. Prima conjuncție negativă SBL separă tulburarea, fără a schimba lista celor trei pretinse surse.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 3,
+      "term": "variantă textuală SBLGNT/TR: ἀνομίας / ἁμαρτίας",
+      "decision": "„omul nelegiuirii”",
+      "alternatives": [
+        "TR-2TH citește „omul păcatului”."
+      ],
+      "reason": "ἀνομία exprimă lipsa legii sau nelegiuirea; redarea SBLGNT nu înlocuiește acest termen cu „păcatul” din lectura TR. „Apostazia” și „fiul pierzării” păstrează celelalte două expresii ale versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: τοῦ θεοῦ / τοῦ θεοῦ ὡς θεόν",
+      "decision": "„se așază în templul lui Dumnezeu, prezentându-se pe sine ca fiind Dumnezeu”",
+      "alternatives": [
+        "TR-2TH adaugă ὡς θεόν („ca Dumnezeu”) la actul așezării în templu."
+      ],
+      "reason": "SBLGNT nu adaugă „ca Dumnezeu” după templu; afirmația despre sine din ἀποδεικνύντα ἑαυτόν ὅτι ἔστιν θεός este totuși redată explicit la final.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; formularea românească păstrează lectura principală."
+    },
+    {
+      "verse": 6,
+      "term": "τὸ κατέχον … ἐν τῷ ἑαυτοῦ καιρῷ",
+      "decision": "„ce îl reține, ca el să fie descoperit la timpul lui”",
+      "alternatives": [
+        "Nu este numită identitatea a ceea ce sau a celui care îl reține."
+      ],
+      "reason": "Neutrul τὸ κατέχον și referința temporală rămân deschise în text. Româna nu introduce o identificare confesională a reținătorului și nu transformă „timpul lui” într-un „sfârșit” absent din verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT-2TH și contextul imediat au fost verificate direct."
+    },
+    {
+      "verse": 7,
+      "term": "ὁ κατέχων ἄρτι ἕως ἐκ μέσου γένηται",
+      "decision": "„cel care îl reține acum va continua să-l rețină până când cel care reține va fi îndepărtat”",
+      "alternatives": [
+        "„va fi dat la o parte”",
+        "„va fi scos din cale”"
+      ],
+      "reason": "Construcția greacă este eliptică și nu identifică subiectul. Redarea exprimă continuitatea implicită a reținerii și face explicit că participiul ὁ κατέχων, nu obiectul reținut, este cel îndepărtat; nu explică cine este reținătorul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, WEBP-2TH și traducerile auxiliare au fost confruntate direct, fără a folosi o interpretare confesională ca text."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦς / omis; ἀνελεῖ / ἀναλώσει",
+      "decision": "„Domnul Isus îl va ucide”",
+      "alternatives": [
+        "TR-2TH omite Ἰησοῦς și citește ἀναλώσει, „îl va mistui / nimici”."
+      ],
+      "reason": "SBLGNT îl numește pe Isus și folosește viitorul ἀνελεῖ, cu sens de a ucide sau a nimici. Ambele verbe viitoare ale versetului sunt păstrate, fără a adopta lectura mai scurtă a TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 10,
+      "term": "variantă textuală SBLGNT/TR: ἀδικίας / τῆς ἀδικίας ἐν",
+      "decision": "„cu tot felul de amăgiri ale nedreptății pentru cei care se pierd”",
+      "alternatives": [
+        "TR-2TH are articolul și prepoziția suplimentare înainte de „cei care pier”."
+      ],
+      "reason": "SBLGNT leagă direct amăgirea nedreptății de cei care se pierd; formularea românească evită adăugarea pozițională a TR și păstrează primirea refuzată a dragostei adevărului ca motiv.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală SBLGNT/TR: πέμπει / πέμψει",
+      "decision": "„Dumnezeu le trimite”",
+      "alternatives": [
+        "TR-2TH are viitorul „Dumnezeu le va trimite”."
+      ],
+      "reason": "SBLGNT are prezentul πέμπει; româna păstrează prezentul și redă ἐνέργειαν πλάνης prin „o lucrare de rătăcire”, fără a introduce adjectivul „puternică” absent din text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; lectura SBLGNT este urmată."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: ἀπαρχὴν / ἀπʼ ἀρχῆς",
+      "decision": "„Dumnezeu v-a ales ca prim rod pentru mântuire”",
+      "alternatives": [
+        "TR-2TH citește „Dumnezeu v-a ales de la început pentru mântuire”."
+      ],
+      "reason": "ἀπαρχή înseamnă primul rod sau pârgă, nu adverbul temporal „de la început”. Diferența este materială și este păstrată explicit în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "παραδόσεις",
+      "decision": "„tradițiile pe care le-ați învățat”",
+      "alternatives": [
+        "„învățăturile transmise”"
+      ],
+      "reason": "Termenul desemnează lucruri predate sau transmise în contextul scrisorii. Redarea literală „tradițiile” nu transferă automat versetul la o instituție contemporană și păstrează atât comunicarea orală, cât și cea prin scrisoare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul lexical și contextul SBLGNT-2TH au fost verificate direct."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală SBLGNT/TR: θεὸς ὁ πατὴρ / ὁ θεὸς καὶ πατήρ",
+      "decision": "„Dumnezeu, Tatăl nostru”",
+      "alternatives": [
+        "TR-2TH are „Dumnezeu și Tatăl nostru”."
+      ],
+      "reason": "SBLGNT leagă θεός de ὁ πατήρ prin apoziție; virgula românească păstrează această relație fără a modifica conținutul rugăciunii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; formularea urmează lectura principală."
+    },
+    {
+      "verse": 17,
+      "term": "variantă textuală SBLGNT/TR: στηρίξαι / στηρίξαι ὑμᾶς; ἔργῳ καὶ λόγῳ / λόγῳ καὶ ἔργῳ",
+      "decision": "„să vă mângâie inimile și să vă întărească în orice lucrare bună și în orice cuvânt bun”",
+      "alternatives": [
+        "TR-2TH repetă ὑμᾶς după στηρίξαι și inversează ordinea: „cuvânt și lucrare”."
+      ],
+      "reason": "SBLGNT nu repetă pronumele după al doilea verb; româna reia firesc „vă” din construcția de rugăciune, fără a pretinde un cuvânt grec suplimentar. Ordinea SBL, lucrare apoi cuvânt, este păstrată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

@@ -3,8 +3,8 @@
   "bookId": "1TI",
   "bookName": "1 Timotei",
   "chapter": 4,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1ti-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,92 +123,155 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:ac79445c9638a385afccde6ee56afdfb33996edbb91399b979327d243a8aa1f8",
-    "contentDigest": "sha256:e9ffdd27b14dbed3b93885a63ef2d281d4d965829d5f27c6d0000db991403b1b"
+    "textDigest": "sha256:06f9807c2adbce6d54f529c5fb6c34cd206bbe477f45852c5600c0e75c1f2fab",
+    "contentDigest": "sha256:27623edd1a6d1304c89f4e2e0a7e324b8217c7fed3c82cd19b769408749d0405"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Dar Duhul spune în mod expres că, în cele din urmă, unii vor cădea departe de credință, acordând atenție spiritelor seducătoare și doctrinelor demonilor,"
+      "text": "Dar Duhul spune limpede că, în vremurile de mai târziu, unii se vor depărta de credință, dând atenție duhurilor amăgitoare și învățăturilor demonilor,"
     },
     {
       "number": 2,
-      "text": "prin ipocrizia oamenilor care vorbesc minciuni, marcați în propria lor conștiință ca cu un fier fierbinte,"
+      "text": "prin ipocrizia unor oameni care rostesc minciuni și au propria conștiință însemnată cu fierul roșu,"
     },
     {
       "number": 3,
-      "text": "interzicând căsătoria și poruncind să se abțină de la alimentele pe care Dumnezeu le-a creat pentru a fi primite cu de către cei care cred și cunosc adevărul."
+      "text": "care interzic căsătoria și poruncesc abținerea de la alimentele pe care Dumnezeu le-a creat ca să fie primite cu mulțumire de cei care cred și cunosc adevărul."
     },
     {
       "number": 4,
-      "text": "Căci orice făptură a lui Dumnezeu este bună, și nimic nu poate fi lepădat dacă este primită cu mulțumiri."
+      "text": "Căci orice lucru creat de Dumnezeu este bun și nimic nu trebuie respins, dacă este primit cu mulțumire,"
     },
     {
       "number": 5,
-      "text": "Căci este sfințită prin cuvântul lui Dumnezeu și prin rugăciune."
+      "text": "căci este sfințit prin cuvântul lui Dumnezeu și prin rugăciune."
     },
     {
       "number": 6,
-      "text": "Dacă îi instruiți pe frații acestor lucruri, veți fi un bun slujitor al lui Hristos Isus, hrăniți cu cuvintele credinței și cu doctrina bună pe care ați urmat-o."
+      "text": "Dacă le vei pune înainte fraților aceste lucruri, vei fi un bun slujitor al lui Hristos Isus, hrănindu-te cu cuvintele credinței și ale bunei învățături pe care ai urmat-o îndeaproape."
     },
     {
       "number": 7,
-      "text": "Dar refuză fabulele profane ale soțiilor bătrâne. Exersează spre evlavie."
+      "text": "Dar respinge miturile profane și băbești. Exersează-te pentru evlavie;"
     },
     {
       "number": 8,
-      "text": "Căci exercitarea trupească are o anumită valoare, dar evlavia are valoare în toate lucrurile, având promisiunea vieții care este acum și a ceea ce urmează."
+      "text": "Căci exercițiul trupesc este de puțin folos, dar evlavia este folositoare pentru toate, având promisiunea vieții de acum și a celei viitoare."
     },
     {
       "number": 9,
-      "text": "Această zicală este fidelă și demnă de orice acceptare."
+      "text": "Vrednic de crezare este cuvântul și demn de toată primirea."
     },
     {
       "number": 10,
-      "text": "Căci în acest scop amândoi muncim și suferim ocara, pentru că ne-am pus încrederea în Dumnezeul cel viu, care este Mântuitorul tuturor oamenilor, mai ales al celor care cred."
+      "text": "Pentru aceasta ne ostenim și suntem ocărâți, fiindcă ne-am pus speranța în Dumnezeul viu, care este Mântuitorul tuturor oamenilor, mai ales al celor credincioși."
     },
     {
       "number": 11,
-      "text": "Comandă și învață aceste lucruri."
+      "text": "Poruncește aceste lucruri și învață-le."
     },
     {
       "number": 12,
-      "text": "Nimeni să nu-ți disprețuiască tinerețea; ci fii un exemplu pentru cei care cred, în cuvânt, în modul tău de, în dragoste, în spirit, în credință în puritate."
+      "text": "Nimeni să nu-ți disprețuiască tinerețea, ci fii un exemplu pentru credincioși în vorbire, în purtare, în dragoste, în credință și în curăție."
     },
     {
       "number": 13,
-      "text": "Până când voi veni, să acorde o atenție la lectură, la îndemn, și la predare."
+      "text": "Până voi veni, ocupă-te de citire, de îndemnare și de învățătură."
     },
     {
       "number": 14,
-      "text": "Nu neglija darul care este în tine, care ți-a fost dat prin profeție cu punerea mâinilor bătrânilor."
+      "text": "Nu neglija darul din tine, care ți-a fost dat prin profeție, cu punerea mâinilor de către grupul de prezbiteri."
     },
     {
       "number": 15,
-      "text": "Fii sârguincios în aceste lucruri. Dăruiește-te în întregime lor, pentru ca progresul tău să fie descoperit tuturor."
+      "text": "Cugetă la aceste lucruri, ocupă-te pe deplin de ele, pentru ca înaintarea ta să fie limpede pentru toți."
     },
     {
       "number": 16,
-      "text": "Fiți atenți la voi înșivă și la învățătura voastră. Continuați în aceste lucruri, căci făcând aceasta vă veți salva pe voi înșivă și pe cei care vă aud."
+      "text": "Veghează asupra ta și asupra învățăturii; stăruie în acestea, căci făcând astfel te vei mântui atât pe tine, cât și pe cei care te ascultă."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "variantă textuală SBLGNT/TR: Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„Hristos Isus”",
+      "alternatives": [
+        "TR-1TI din snapshot inversează ordinea numelui: „Isus Hristos”."
+      ],
+      "reason": "SBLGNT are Χριστοῦ Ἰησοῦ; româna urmează ordinea textului principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "βεβήλους καὶ γραώδεις μύθους",
+      "decision": "„miturile profane și băbești”",
+      "alternatives": [
+        "γραώδεις este un idiom peiorativ al epocii despre povești asociate femeilor bătrâne."
+      ],
+      "reason": "Redarea păstrează registrul negativ al textului fără a inventa un referent contemporan sau a elimina termenul incomod.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI a fost confruntat direct; formularea păstrează sensul și tonul idiomatic al termenului grec."
+    },
+    {
+      "verse": 10,
+      "term": "variante ale aparatului: ὀνειδιζόμεθα / ἀγωνιζόμεθα; γὰρ / γὰρ καὶ",
+      "decision": "„ne ostenim și suntem ocărâți”",
+      "alternatives": [
+        "SBLGNT și TR-1TI din snapshot au ὀνειδιζόμεθα; WH, Treg și NA28 au ἀγωνιζόμεθα („luptăm/ne străduim”). TR adaugă și καὶ după γάρ."
+      ],
+      "reason": "Textul principal urmează lectura SBLGNT și a martorului TR: osteneală și ocară, fără a înlocui ocara cu lupta altor martori.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; lectura principală este consemnată explicit."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: ἐν ἀγάπῃ, ἐν πίστει, ἐν ἁγνείᾳ / + ἐν πνεύματι",
+      "decision": "lista fără „în duh”",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă „în duh” între dragoste și credință."
+      ],
+      "reason": "SBLGNT are cinci domenii ale exemplului și nu include ἐν πνεύματι; adaosul TR nu este introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "πρεσβυτερίου",
+      "decision": "„grupul de prezbiteri”",
+      "alternatives": [
+        "Termenul desemnează un corp/colegiu de bătrâni sau prezbiteri; nu este un nume propriu de instituție modernă."
+      ],
+      "reason": "Româna păstrează caracterul colectiv al termenului și continuitatea lexicală a corpusului cu „prezbiteri”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI a fost confruntat direct; decizia evită atât reducerea la o singură persoană, cât și un adaos instituțional nejustificat."
+    },
+    {
+      "verse": 15,
+      "term": "variantă textuală SBLGNT/TR: φανερὰ ᾖ πᾶσιν / φανερὰ ἐν πᾶσιν",
+      "decision": "„înaintarea ta să fie limpede pentru toți”",
+      "alternatives": [
+        "TR-1TI din snapshot are „evidentă în toate/printre toate”, fără verbul ᾖ din SBLGNT."
+      ],
+      "reason": "SBLGNT exprimă ca rezultat ca înaintarea să devină evidentă tuturor; româna păstrează destinatarul plural și valoarea verbală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

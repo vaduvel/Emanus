@@ -3,8 +3,8 @@
   "bookId": "2PE",
   "bookName": "2 Petru",
   "chapter": 2,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2pe-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 22 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,97 +139,97 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:f01f58b4f4a6f00cc5ed552a126ab9bf871c0d2786b6c9dfe723f4a28970d4bb",
-    "contentDigest": "sha256:7e30d1e4181a1d085f88a772391c57e44c1050107d1216e62dcaad2c43f4b76d"
+    "textDigest": "sha256:e45b8965326380cde2799aa0b8e7577b45cf9a4c941b6d37cc7c6356aac05a85",
+    "contentDigest": "sha256:79898b10cc3d3d85872a08728d85754fdba6100fcbb30d300074bd5717f585d3"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Dar au fost și falși profeți în popor, așa cum vor fi falși învățători printre voi, care vor introduce în ascuns erezii damnabile, negând chiar pe Domnul care i-a răscumpărat, și își aduc asupra lor o nimicire grabnică."
+      "text": "În popor au apărut însă și profeți mincinoși, după cum și printre voi vor fi învățători mincinoși. Ei vor introduce pe ascuns erezii care duc la pierzare, Îl vor tăgădui chiar pe Stăpânul care i-a răscumpărat și vor atrage asupra lor o pierzare grabnică."
     },
     {
       "number": 2,
-      "text": "Mulți vor urma căile lor imorale și, ca urmare, calea adevărului va fi maltratată."
+      "text": "Mulți vor urma căile lor de desfrâu, iar din cauza lor calea adevărului va fi defăimată."
     },
     {
       "number": 3,
-      "text": "În lăcomie, ei te vor exploata cu cuvinte înșelătoare, a căror propoziție din vechime nu zăbovește, și nimicirea lor nu va adormi."
+      "text": "În lăcomia lor, vă vor exploata prin cuvinte născocite. Judecata lor, hotărâtă de demult, nu întârzie, iar pierzarea lor nu ațipește."
     },
     {
       "number": 4,
-      "text": "Căci dacă Dumnezeu n-a cruțat pe îngeri când au păcătuit, ci i-a aruncat la Tartar, și i-a pus în gropile întunericului, ca să fie păstrați pentru judecată,"
+      "text": "Căci, dacă Dumnezeu nu i-a cruțat pe îngerii care au păcătuit, ci i-a aruncat în Tartar și i-a pus în lanțurile întunericului, ca să fie păstrați pentru judecată,"
     },
     {
       "number": 5,
-      "text": "și nu a cruțat lumea antică, ci l-a păstrat pe Noe cu alți șapte, predicator al dreptății, când a adus potopul în lumea celor nelegiuiți,"
+      "text": "și nu a cruțat lumea de odinioară, ci l-a păstrat pe Noe, al optulea om, vestitor al dreptății, când a adus potopul peste lumea celor neevlavioși,"
     },
     {
       "number": 6,
-      "text": "și au întors cetățile Sodomei și Gomorei în cenușă, i-au condamnat la nimicire, făcându-le un exemplu pentru cei ce aveau să trăiască într-un mod nelegiuit,"
+      "text": "și a prefăcut în cenușă cetățile Sodomei și Gomorei, condamnându-le la nimicire și făcându-le un exemplu pentru cei ce aveau să trăiască fără evlavie,"
     },
     {
       "number": 7,
-      "text": "și L-a izbăvit pe Lot cel neprihănit, care era foarte mâhnit de poftele celor răi"
+      "text": "și l-a izbăvit pe dreptul Lot, apăsat de purtarea desfrânată a celor fără lege —"
     },
     {
       "number": 8,
-      "text": "Acel om drept care locuia printre ei a fost chinuit în sufletul său drept zi de zi cu vederea și cu auzirea faptelor nelegiuite."
+      "text": "căci omul acela drept, locuind printre ei, își chinuia zi de zi sufletul drept prin vederea și auzirea faptelor lor nelegiuite —"
     },
     {
       "number": 9,
-      "text": "Domnul știe cum să scape pe cei temători de Dumnezeu din ispită și să-i pedepsească pentru ziua judecății."
+      "text": "atunci Domnul știe să-i izbăvească din încercare pe cei evlavioși și să-i păstreze sub pedeapsă pe cei nedrepți pentru ziua judecății,"
     },
     {
       "number": 10,
-      "text": "Ci, mai ales, pe cei ce umblă după carne în dorința de spurcare și disprețuire a autorității. Îndrăzneț, voit de sine, ei nu se tem să vorbească rău despre demnitari,"
+      "text": "mai ales pe cei care umblă după carne, în pofta necurăției, și disprețuiesc autoritatea. Îndrăzneți și îngâmfați, ei nu tremură când defăimează ființele glorioase,"
     },
     {
       "number": 11,
-      "text": "În timp ce îngerii, deși mai mari în putere și putere, nu aduc o judecată calomnioasă împotriva lor înaintea Domnului."
+      "text": "pe când îngerii, deși sunt mai mari în tărie și putere, nu pronunță împotriva lor o judecată defăimătoare."
     },
     {
       "number": 12,
-      "text": "Dar acestea, ca creaturi lipsite de rațiune, născute animale naturale care urmează să fie luate și distruse, vorbind răul despre care sunt ignoranți, vor fi distruse în distrugerea lor cu siguranță,"
+      "text": "Dar aceștia, ca niște animale fără rațiune, născute prin fire ca să fie prinse și nimicite, defăimând lucruri pe care nu le cunosc, vor fi și ei nimiciți în nimicirea lor,"
     },
     {
       "number": 13,
-      "text": "să primească plata nedrepțității; oamenii care socotesc plăcerea de a se desfăta în timpul zilei, pete și defecte, bucurându-se de înșelăciunea lor în timp ce se hrănesc cu voi;"
+      "text": "îndurând nedreptatea ca răsplată pentru nedreptatea lor. Ei socotesc o plăcere să se desfete în plină zi; sunt pete și cusururi, desfătându-se în înșelăciunile lor în timp ce ospătează cu voi,"
     },
     {
       "number": 14,
-      "text": "având ochii plini de adulter și care nu pot înceta să păcătuiască, ispitind suflete tulburi, având o inimă instruită în lăcomie, copii blestemați!"
+      "text": "Au ochii plini de adulter și nu se opresc din păcat; ademenesc suflete nestatornice, au inima deprinsă cu lăcomia și sunt copii ai blestemului!"
     },
     {
       "number": 15,
-      "text": "Au părăsit calea cea dreaptă, au rătăcit, și au urmat calea lui Balaam, fiul lui Beor, care iubea plata nelegiuirii."
+      "text": "Au părăsit calea dreaptă și s-au rătăcit; au urmat calea lui Balaam, fiul lui Bosor, care a iubit plata nedreptății."
     },
     {
       "number": 16,
-      "text": "Dar el a fost mustrat pentru neascultarea lui. Un măgar fără cuvinte a vorbit cu un om și a oprit nebunia profetului."
+      "text": "Dar a primit mustrare pentru propria fărădelege: un animal de povară fără glas, vorbind cu glas omenesc, a oprit nebunia profetului."
     },
     {
       "number": 17,
-      "text": "Acestea sunt fântâni fără apă, nori conduși de o furtună, pentru care întunericul a fost rezervat pentru totdeauna."
+      "text": "Aceștia sunt izvoare fără apă și neguri purtate de furtună, pentru care este păstrată negura întunericului."
     },
     {
       "number": 18,
-      "text": "Căci, rostind cuvinte mari de deșertăciune, ei ademenesc în poftele trupului, prin umilință, pe cei care scapă într-adevăr de cei care trăiesc în rătăcire;"
+      "text": "Căci, rostind vorbe umflate și deșarte, ei îi ademenesc, prin poftele cărnii și prin desfrânări, pe cei care abia se desprind de cei ce trăiesc în rătăcire,"
     },
     {
       "number": 19,
-      "text": "Promițîndu-le libertate, în timp ce ei înșiși sunt robi ai stricăciunii, căci omul este adus în robie de cel ce-l biruiește."
+      "text": "Le promit libertate, deși ei înșiși sunt robi ai stricăciunii; căci fiecare este înrobit de ceea ce l-a biruit."
     },
     {
       "number": 20,
-      "text": "Căci dacă, după ce au scăpat de pângărirea lumii prin cunoașterea Domnului și Mântuitorului Isus Hristos, ei sunt din nou amestecați în ea și biruiți, ultima stare a devenit mai rea pentru ei decât prima."
+      "text": "Căci, dacă, după ce au scăpat de pângăririle lumii prin cunoașterea Domnului și Mântuitorului Isus Hristos, se încurcă din nou în ele și sunt biruiți, starea lor de pe urmă a devenit mai rea decât cea dintâi."
     },
     {
       "number": 21,
-      "text": "Căci ar fi mai bine pentru ei să nu fi cunoscut calea dreptății, decât după ce au cunoscut-o, să se întoarcă de la porunca sfântă care le-a fost dată."
+      "text": "Le-ar fi fost mai bine să nu fi cunoscut calea dreptății decât ca, după ce au cunoscut-o, să se întoarcă de la porunca sfântă care le-a fost dată."
     },
     {
       "number": 22,
-      "text": "Dar sa întâmplat cu ei în conformitate cu proverbul adevărat, câinele se întoarce la propria vomă din nou, și semenul care a spălat la înghițire în noroi."
+      "text": "Li s-a întâmplat ceea ce spune proverbul adevărat: „Câinele se întoarce la propria vomă” și „scroafa, după ce s-a spălat, se tăvălește în noroi”."
     }
   ],
   "editorialNotes": [],

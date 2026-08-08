@@ -3,8 +3,8 @@
   "bookId": "2TH",
   "bookName": "2 Tesaloniceni",
   "chapter": 1,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-2TH.1.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-2TH",
+        "biblia-libera/2TH.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,23 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2th-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 12,
       "reviewed": 12,
@@ -98,13 +112,13 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 12 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
+        "Au fost rescrise toate cele 12 versete pentru a elimina coruperile sintactice, acordurile greșite și calcurile englezești.",
+        "Diferențele care schimbă lectura SBLGNT, inclusiv cele din 1:2, 1:8, 1:10 și 1:12, sunt documentate în notele editoriale.",
         "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
@@ -123,76 +137,151 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:99f1d9b059a1e437d173574e738a95f31802682a0d1ffefa7f3d751b81d8d92a",
-    "contentDigest": "sha256:bdc96d7d7b8a8eb41f3d557fa8e9c4956c17719dae02487939b967de29f257d5"
+    "textDigest": "sha256:aa26c7843c806e9b216917990df44114a893366771e8b6d0e8abdb8cceeaa52f",
+    "contentDigest": "sha256:79075832b5577f2cf7cecc3c90527adafb2b89fbce2d87803cdfa6954ab71a0b"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, Silvan și Timotei, la adunarea Tesalonicenilor în Dumnezeu, Tatăl nostru, și Domnul Isus Hristos."
+      "text": "Pavel, Silvan și Timotei, către adunarea tesalonicenilor, care este în Dumnezeu, Tatăl nostru, și în Domnul Isus Hristos:"
     },
     {
       "number": 2,
-      "text": "Har vouă și pace de la Dumnezeu Tatăl nostru și Domnul Isus Hristos."
+      "text": "Har vouă și pace de la Dumnezeu Tatăl și de la Domnul Isus Hristos."
     },
     {
       "number": 3,
-      "text": "Suntem obligați să mulțumim totdeauna lui Dumnezeu pentru voi, fraților, după cum se cuvine, pentru că credința voastră crește foarte mult, și dragostea fiecăruia dintre voi față de ceilalți abundă,"
+      "text": "Suntem datori să-I mulțumim întotdeauna lui Dumnezeu pentru voi, fraților, așa cum se cuvine, fiindcă credința voastră crește peste măsură, iar dragostea fiecăruia dintre voi față de ceilalți sporește,"
     },
     {
       "number": 4,
-      "text": "ca noi înșine să ne lăudăm cu voi în adunările lui Dumnezeu pentru perseverența și credința voastră în toate persecuțiile voastre și în necazurile pe care le suportați."
+      "text": "astfel încât noi înșine ne lăudăm cu voi în adunările lui Dumnezeu pentru statornicia și credința voastră, în toate persecuțiile și necazurile pe care le îndurați."
     },
     {
       "number": 5,
-      "text": "Acesta este un semn evident al judecății drepte a lui Dumnezeu, ca să fiți socotiți vrednici de Regatul lui Dumnezeu, pentru care și voi suferiți."
+      "text": "Aceasta este o dovadă a judecății drepte a lui Dumnezeu, ca să fiți socotiți vrednici de Împărăția lui Dumnezeu, pentru care și suferiți."
     },
     {
       "number": 6,
-      "text": "Căci este un lucru drept la Dumnezeu să răsplătești nenorocirea celor ce te necăjesc,"
+      "text": "Căci este drept ca Dumnezeu să-i răsplătească cu necaz pe cei care vă necăjesc,"
     },
     {
       "number": 7,
-      "text": "și ca să vă ușurați pe voi, cei chinuiți de noi, când Domnul Isus va fi pogorât din cer cu îngerii Lui puternici, în focul aprins,"
+      "text": "și să vă dea vouă, celor necăjiți, ușurare împreună cu noi, când Domnul Isus Se va descoperi din cer cu îngerii puterii Sale,"
     },
     {
       "number": 8,
-      "text": "pedepsindu-i pe cei care nu-L cunosc pe Dumnezeu pe cei care nu ascultă de Vestea Bună a Domnului nostru Isus,"
+      "text": "în flacără de foc, pedepsindu-i pe cei care nu-L cunosc pe Dumnezeu și pe cei care nu ascultă de Evanghelia Domnului nostru Isus,"
     },
     {
       "number": 9,
-      "text": "care va plăti pedeapsa: nimicire veșnică de la fața Domnului și de la slava puterii Lui,"
+      "text": "Aceștia vor plăti pedeapsa: nimicire veșnică de la fața Domnului și de la slava puterii Sale,"
     },
     {
       "number": 10,
-      "text": "când vine în ziua aceea să fie glorificat în sfinții Săi și să fie admirat printre toți cei care au crezut, pentru că mărturia noastră către voi a fost crezută."
+      "text": "când va veni, în ziua aceea, ca să fie glorificat în sfinții Săi și privit cu uimire de toți cei care au crezut, deoarece mărturia noastră către voi a fost crezută."
     },
     {
       "number": 11,
-      "text": "În acest scop ne rugăm totdeauna pentru voi ca Dumnezeul nostru să vă socotească vrednici de chemarea voastră, și să împlinească orice dorință de bunătate și lucrare a credinței cu putere,"
+      "text": "În acest scop ne rugăm mereu pentru voi, ca Dumnezeul nostru să vă socotească vrednici de chemare și să aducă la împlinire, cu putere, orice hotărâre bună și lucrare a credinței,"
     },
     {
       "number": 12,
-      "text": "pentru ca Numele Domnului nostru Isus să fie proslăvit în voi voi în El, după harul Dumnezeului nostru al Domnului Isus Hristos."
+      "text": "pentru ca Numele Domnului nostru Isus să fie glorificat în voi, iar voi în El, potrivit harului Dumnezeului nostru și al Domnului Isus Hristos."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: πατρὸς / πατρὸς ἡμῶν",
+      "decision": "„de la Dumnezeu Tatăl”",
+      "alternatives": [
+        "TR-2TH citește „de la Dumnezeu, Tatăl nostru”."
+      ],
+      "reason": "SBLGNT nu are pronumele ἡμῶν după πατρός; redarea românească nu introduce „nostru” în primul membru al salutului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "variante textuale SBLGNT/TR: αὐτοὺς ἡμᾶς / ἡμᾶς αὐτούς; ἐγκαυχᾶσθαι / καυχᾶσθαι",
+      "decision": "„noi înșine ne lăudăm cu voi”",
+      "alternatives": [
+        "TR-2TH inversează pronumele și folosește forma simplă καυχᾶσθαι."
+      ],
+      "reason": "SBLGNT pune accentul pe „noi înșine” și are verbul ἐγκαυχᾶσθαι; diferențele nu cer o schimbare suplimentară de sens în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; formularea urmează lectura SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "variante textuale SBLGNT/TR: φλογὶ πυρός / πυρὶ φλογός; Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„în flacără de foc ... Evanghelia Domnului nostru Isus”",
+      "alternatives": [
+        "TR-2TH inversează ordinea termenilor pentru foc și adaugă Χριστοῦ după prima ocurență a lui Ἰησοῦ."
+      ],
+      "reason": "„În flacără de foc” păstrează lectura SBLGNT φλογὶ πυρός. Textul nu introduce „Hristos” după primul „Isus”, deoarece acea completare aparține lecturii TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "δίκην τίσουσιν ὄλεθρον αἰώνιον",
+      "decision": "„vor plăti pedeapsa: nimicire veșnică”",
+      "alternatives": [
+        "„vor suferi pedeapsa unei pierzări veșnice”"
+      ],
+      "reason": "δίκην τίσουσιν exprimă suportarea sau plata pedepsei, iar ὄλεθρον desemnează nimicirea. Redarea nu adaugă o explicație despre natura acestei pedepse.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția SBLGNT și contextul imediat au fost verificate direct; alegerea rămâne lexicală."
+    },
+    {
+      "verse": 10,
+      "term": "variantă textuală SBLGNT/TR: πιστεύσασιν / πιστεύουσιν",
+      "decision": "„toți cei care au crezut”",
+      "alternatives": [
+        "TR-2TH are participiul prezent: „toți cei care cred”."
+      ],
+      "reason": "SBLGNT are participiul aorist πιστεύσασιν; perfectul compus românesc marchează credința ca răspuns deja dat mărturiei, fără a importa prezentul TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH și TR-2TH au fost confruntate direct; textul principal urmează aspectul lecturii SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "πᾶσαν εὐδοκίαν ἀγαθωσύνης",
+      "decision": "„orice hotărâre bună”",
+      "alternatives": [
+        "„orice dorință de bunătate”"
+      ],
+      "reason": "εὐδοκία poate desemna o hotărâre sau o intenție favorabilă, iar ἀγαθωσύνη bunătatea; formularea aleasă evită un calc abstract fără a introduce un agent ori o doctrină suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenii SBLGNT și construcția versetului au fost verificați direct; redarea urmărește sensul lexical."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦ / Ἰησοῦ Χριστοῦ (prima ocurență)",
+      "decision": "„Numele Domnului nostru Isus ... Domnului Isus Hristos”",
+      "alternatives": [
+        "TR-2TH adaugă „Hristos” după primul „Isus”; ambele texte au „Isus Hristos” în formula finală a versetului."
+      ],
+      "reason": "SBLGNT numește mai întâi „Domnul nostru Isus”, apoi păstrează formula finală „Domnul Isus Hristos”. Româna conservă această distincție textuală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TH și TR-2TH au fost verificate direct; formularea urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

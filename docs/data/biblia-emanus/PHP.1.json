@@ -3,8 +3,8 @@
   "bookId": "PHP",
   "bookName": "Filipeni",
   "chapter": 1,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit direct din SBLGNT; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar pentru sens și română, fără copierea unei traduceri românești.",
+      "Câmpurile consultedInBatch disting etaloanele configurate de cele efectiv confruntate în acest lot; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-php-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
@@ -98,20 +97,20 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 30 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate ordinea textuală SBLGNT în 1:16–17, acordurile de persoană din 1:24 și 1:30 și formulările românești defecte ori calchiate.",
+        "Au fost netezite sintaxa și coeziunea în 1:3–14 și 1:18–28 fără a importa lecturi din etaloanele auxiliare.",
+        "Locurile cu variante textuale urmează SBLGNT și nu folosesc automat Textus Receptus sau etaloanele tradiționale drept text principal."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri sau transpuneri din Textus Receptus.",
         "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
         "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
       ]
@@ -123,24 +122,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:4374ee029972d1bc855aaf1cf17a0987b5a1aac10cfc2240321c8cf316ea8f1d",
-    "contentDigest": "sha256:47949ba1ad8009ed2aeade05eeb307e0424bff4808656348ca5360a5a349419f"
+    "textDigest": "sha256:b6f202328235ef32c6b0df9e627aa66612bba6c712f0f58f1945b95220fd4b11",
+    "contentDigest": "sha256:bcec4920674d34fa77737523f1818540002c871df5966906f3e7bd512d27ceff"
   },
   "verses": [
     {
@@ -153,118 +142,287 @@
     },
     {
       "number": 3,
-      "text": "Îi mulțumesc Dumnezeului meu pentru fiecare amintire a voastră,"
+      "text": "Îi mulțumesc Dumnezeului meu ori de câte ori îmi amintesc de voi,"
     },
     {
       "number": 4,
-      "text": "întotdeauna, în fiecare rugăciune a mea pentru voi toți, făcând cererea mea cu bucurie,"
+      "text": "întotdeauna, în fiecare rugăciune a mea pentru voi toți, rugându-mă cu bucurie,"
     },
     {
       "number": 5,
-      "text": "pentru părtășia voastră în Evanghelie, din prima zi până acum,"
+      "text": "pentru părtășia voastră la Evanghelie, din prima zi până acum,"
     },
     {
       "number": 6,
-      "text": "fiind încredințat tocmai de aceasta, că Cel care a început în voi o lucrare bună o va duce la capăt până în ziua lui Hristos Isus."
+      "text": "fiind încredințat de aceasta: Cel care a început în voi o lucrare bună o va duce la capăt până în ziua lui Hristos Isus."
     },
     {
       "number": 7,
-      "text": "Așa este drept să gândesc aceasta despre voi toți, pentru că vă port în inimă, fiindcă, și în lanțurile mele, și în apărarea și confirmarea Evangheliei, voi toți sunteți părtași ai harului împreună cu mine."
+      "text": "Este drept să gândesc astfel despre voi toți, pentru că vă port în inimă, întrucât, atât în lanțurile mele, cât și în apărarea și întărirea Evangheliei, voi toți sunteți părtași împreună cu mine la har."
     },
     {
       "number": 8,
-      "text": "Căci Dumnezeu îmi este martor cât de mult tânjesc după voi toți, cu adânca afecțiune a lui Hristos Isus."
+      "text": "Căci Dumnezeu îmi este martor cât de mult tânjesc după voi toți cu afecțiunea lui Hristos Isus."
     },
     {
       "number": 9,
-      "text": "Și mă rog aceasta: ca dragostea voastră să prisosească tot mai mult și mai mult în cunoaștere și în tot discernământul,"
+      "text": "Și mă rog ca dragostea voastră să prisosească tot mai mult în cunoaștere deplină și în orice discernământ,"
     },
     {
       "number": 10,
-      "text": "ca să puteți deosebi lucrurile care sunt mai bune, pentru ca să fiți curați și fără poticnire pentru ziua lui Hristos,"
+      "text": "ca să deosebiți lucrurile care sunt mai bune, pentru a fi curați și fără pricină de poticnire până în ziua lui Hristos,"
     },
     {
       "number": 11,
-      "text": "plini de rodul dreptății, care vine prin Isus Hristos, spre slava și lauda lui Dumnezeu."
+      "text": "plini de rodul dreptății care vine prin Isus Hristos, spre slava și lauda lui Dumnezeu."
     },
     {
       "number": 12,
-      "text": "Acum doresc să știți, fraților, că lucrurile care mi s-au întâmplat s-au dovedit mai degrabă la progresul veștii bune,"
+      "text": "Vreau să știți, fraților, că lucrurile prin care am trecut au dus mai degrabă la înaintarea Evangheliei,"
     },
     {
       "number": 13,
-      "text": "așa că a devenit evident pentru toată garda palatului, pentru toți ceilalți, că legăturile mele sunt în Hristos,"
+      "text": "astfel încât a devenit cunoscut întregului pretoriu și tuturor celorlalți că lanțurile mele sunt legate de Hristos,"
     },
     {
       "number": 14,
-      "text": "și că cei mai mulți dintre frați în Domnul, având încredere din cauza lanțurilor mele, îndrăznesc și mai mult să vorbească fără teamă cuvântul."
+      "text": "iar cei mai mulți dintre frați, încrezători în Domnul datorită lanțurilor mele, îndrăznesc cu atât mai mult să vestească fără teamă cuvântul."
     },
     {
       "number": 15,
-      "text": "Unii, într-adevăr, îl propovăduiesc pe Hristos din invidie și ceartă, iar alții și din bunăvoință."
+      "text": "Unii îl vestesc pe Hristos chiar din invidie și rivalitate, iar alții din bunăvoință."
     },
     {
       "number": 16,
-      "text": "Cel dintâi îl predică pe Hristos din ambiție egoistă, gândindu-se că ei adaugă suferință lanțurilor mele;"
+      "text": "Aceștia din urmă o fac din dragoste, știind că sunt pus aici pentru apărarea Evangheliei;"
     },
     {
       "number": 17,
-      "text": "dar acesta din urmă din dragoste, știind că eu sunt numit pentru apărarea Vestea bună."
+      "text": "ceilalți îl vestesc pe Hristos din ambiție egoistă, nu cu gând curat, crezând că îmi vor spori necazul în lanțuri."
     },
     {
       "number": 18,
-      "text": "Ce contează? Numai ca, în orice fel, fie din pretext, fie din adevăr, Hristos este vestit. Și în aceasta mă bucur; da, mă voi bucura și de acum înainte,"
+      "text": "Și ce dacă? În orice fel, fie din motive prefăcute, fie în adevăr, Hristos este vestit, iar în aceasta mă bucur. Și mă voi bucura,"
     },
     {
       "number": 19,
-      "text": "fiindcă știu că aceasta se va întoarce spre izbăvirea mea, prin rugăciunea voastră și prin sprijinul Duhului lui Isus Hristos,"
+      "text": "căci știu că aceasta va duce la mântuirea mea, prin rugăciunea voastră și prin ajutorul Duhului lui Isus Hristos,"
     },
     {
       "number": 20,
-      "text": "după așteptarea mea stăruitoare și speranța mea că în nimic nu voi fi făcut de rușine, ci, cu toată îndrăzneala, ca întotdeauna, și acum Hristos va fi preamărit în trupul meu, fie prin viață, fie prin moarte."
+      "text": "potrivit așteptării mele arzătoare și speranței mele că nu voi fi făcut de rușine în nimic, ci, cu toată îndrăzneala, ca întotdeauna, și acum Hristos va fi preamărit în trupul meu, fie prin viață, fie prin moarte."
     },
     {
       "number": 21,
-      "text": "Căci pentru mine a trăi este Hristos și a muri, câștig."
+      "text": "Căci pentru mine a trăi este Hristos, iar a muri este câștig."
     },
     {
       "number": 22,
-      "text": "Dar dacă trăiesc în carne, acest lucru va aduce rod din munca mea; totuși nu știu ce voi alege."
+      "text": "Dar dacă voi continua să trăiesc în trup, aceasta înseamnă pentru mine o lucrare roditoare; și ce voi alege nu știu."
     },
     {
       "number": 23,
-      "text": "Sunt strâns din amândouă părțile: am dorința să plec și să fiu cu Hristos, căci aceasta este cu mult mai bine,"
+      "text": "Sunt constrâns de amândouă: doresc să plec și să fiu împreună cu Hristos, căci aceasta este cu mult mai bine;"
     },
     {
       "number": 24,
-      "text": "Totuși, a rămâne în carne este mai necesar pentru binele tău."
+      "text": "dar să rămân în trup este mai necesar pentru voi."
     },
     {
       "number": 25,
-      "text": "Și, încredințat de aceasta, știu că voi rămâne și voi continua cu voi toți, pentru înaintarea și bucuria credinței voastre,"
+      "text": "Și, fiind încredințat de aceasta, știu că voi rămâne și voi continua alături de voi toți, pentru înaintarea și bucuria voastră în credință,"
     },
     {
       "number": 26,
-      "text": "pentru ca lauda voastră în Hristos Isus să prisosească în mine, prin venirea mea din nou la voi."
+      "text": "pentru ca, prin venirea mea din nou la voi, motivul vostru de laudă în Hristos Isus să prisosească datorită mie."
     },
     {
       "number": 27,
-      "text": "Numai purtați-vă ca cetățeni în chip vrednic de Evanghelia lui Hristos, pentru ca, fie că vin și vă văd, fie că lipsesc, să aud despre voi că stați tari într-un singur duh, luptând împreună, cu un singur suflet, pentru credința Evangheliei,"
+      "text": "Numai purtați-vă ca cetățeni într-un chip vrednic de Evanghelia lui Hristos, pentru ca, fie că vin să vă văd, fie că lipsesc, să aud despre voi că stați tari într-un singur duh, luptând împreună, cu un singur suflet, pentru credința Evangheliei,"
     },
     {
       "number": 28,
-      "text": "și fără să vă lăsați înspăimântați în nimic de potrivnici; aceasta este pentru ei un semn de pieire, dar pentru voi de izbăvire, și aceasta de la Dumnezeu,"
+      "text": "fără să vă lăsați înspăimântați în nimic de potrivnici. Pentru ei, aceasta este o dovadă a pieirii, iar pentru voi, a mântuirii — și aceasta vine de la Dumnezeu."
     },
     {
       "number": 29,
-      "text": "fiindcă vouă v-a fost dăruit, pentru Hristos, nu numai să credeți în el, ci și să suferiți pentru el,"
+      "text": "Căci vouă vi s-a dăruit, pentru Hristos, nu numai să credeți în El, ci și să suferiți pentru El,"
     },
     {
       "number": 30,
-      "text": "având același conflict pe care l-ai văzut în mine și acum auzi este în mine."
+      "text": "având aceeași luptă pe care ați văzut-o la mine și despre care auziți că o am și acum."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variantă SBLGNT/TR: Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„Hristos Isus”",
+      "alternatives": [
+        "TR-PHP inversează ordinea."
+      ],
+      "reason": "Se păstrează ordinea din SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "τῆς πρώτης ἡμέρας / omiterea lui τῆς",
+      "decision": "„din prima zi”",
+      "alternatives": [
+        "RP/TR omit articolul."
+      ],
+      "reason": "Diferența nu cere o opoziție artificială în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 6,
+      "term": "Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„ziua lui Hristos Isus”",
+      "alternatives": [
+        "WH inversează ordinea."
+      ],
+      "reason": "SBLGNT păstrează Χριστοῦ Ἰησοῦ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "μου / μου ἐστιν și ordinea numelui",
+      "decision": "„Dumnezeu îmi este martor … Hristos Isus”",
+      "alternatives": [
+        "TR adaugă ἐστιν și inversează ordinea numelui."
+      ],
+      "reason": "Adaosul și ordinea TR nu sunt importate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "καρπὸν / καρπῶν δικαιοσύνης",
+      "decision": "„rodul dreptății”",
+      "alternatives": [
+        "RP/TR au pluralul."
+      ],
+      "reason": "SBLGNT are singularul καρπὸν.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "λόγον / λόγον τοῦ θεοῦ",
+      "decision": "„să vestească fără teamă cuvântul”",
+      "alternatives": [
+        "WH/Treg și unele etaloane au „cuvântul lui Dumnezeu”."
+      ],
+      "reason": "SBLGNT tipărește numai λόγον.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "ordinea SBLGNT 1:16–17 față de TR",
+      "decision": "1:16 redă grupul care vestește din dragoste.",
+      "alternatives": [
+        "TR și unele etaloane pun aici grupul din ambiție egoistă."
+      ],
+      "reason": "SBLGNT are ἐξ ἀγάπης și apărarea Evangheliei la 1:16.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 17,
+      "term": "ordinea SBLGNT 1:16–17 și ἐγείρειν",
+      "decision": "1:17 redă ambiția egoistă și sporirea necazului în lanțuri.",
+      "alternatives": [
+        "TR transpune cele două enunțuri."
+      ],
+      "reason": "Textul este realiniat cu versificarea SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "ὅτι / omiterea lui ὅτι",
+      "decision": "„În orice fel … Hristos este vestit”",
+      "alternatives": [
+        "RP/TR omit particula."
+      ],
+      "reason": "Structura SBLGNT este păstrată fără diferență lexicală forțată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 23,
+      "term": "γὰρ / omiterea lui γὰρ",
+      "decision": "„căci aceasta este cu mult mai bine”",
+      "alternatives": [
+        "RP omite γὰρ."
+      ],
+      "reason": "Conectorul cauzal SBLGNT este redat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 25,
+      "term": "παραμενῶ / συμπαραμενῶ",
+      "decision": "„voi continua alături de voi toți”",
+      "alternatives": [
+        "RP/TR au συμπαραμενῶ."
+      ],
+      "reason": "Textul principal urmează παραμενῶ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 27,
+      "term": "ἀκούω / ἀκούσω",
+      "decision": "„să aud despre voi”",
+      "alternatives": [
+        "RP/TR au viitorul ἀκούσω."
+      ],
+      "reason": "SBLGNT are ἀκούω.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 28,
+      "term": "ἐστὶν αὐτοῖς / αὐτοῖς μέν ἐστιν și ὑμῶν / ὑμῖν",
+      "decision": "„Pentru ei … pieirii, iar pentru voi, a mântuirii”",
+      "alternatives": [
+        "RP/TR schimbă ordinea și cazul în a doua expresie."
+      ],
+      "reason": "Se păstrează opoziția SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP, aparatul și TR-PHP din snapshot au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 22,
+      "term": "elipsa εἰ δὲ τὸ ζῆν ἐν σαρκί, τοῦτό μοι καρπὸς ἔργου",
+      "decision": "„dacă voi continua să trăiesc în trup, aceasta înseamnă pentru mine o lucrare roditoare”",
+      "alternatives": [
+        "Construcția greacă este eliptică și admite mai multe punctuații/redări."
+      ],
+      "reason": "Se explicitează minim legătura sintactică dintre viața în trup și rodul lucrării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHP 1:22 și martorii auxiliari au fost confruntați; ambiguitatea este consemnată pentru registrul final."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

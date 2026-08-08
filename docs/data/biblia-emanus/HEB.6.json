@@ -3,8 +3,8 @@
   "bookId": "HEB",
   "bookName": "Evrei",
   "chapter": 6,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,52 +71,48 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 20 de versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-review-2026-08-08-heb-6",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
       "continuous": true,
-      "verseNumbersSha256": "sha256:ce02aec498756856567446a2f4cb35b219ea726d81089769eddd1499c99ba95f"
+      "verseNumbersSha256": "sha256:7747a514fec0c8bbe73acdb5ef9e4ca3a6b9d2be346c2b97de3d0560fa2a415f"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 20 de versete au fost confruntate direct cu SBLGNT/aparat; TR numai martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile, dezacordurile și formulările corupte din candidatul anterior.",
+        "Fraza dificilă 6:4-6 a fost reconstruită ca o singură structură logică, fără inserții doctrinare.",
+        "Metaforele agricole, juridice și cultice au fost păstrate în română naturală."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "6:4-6 este redat sintactic după greacă fără a decide în corpul versetului o controversă soteriologică.",
+        "βαπτισμοί din 6:2 este redat generic „spălări”, fără a-l identifica automat exclusiv cu botezul creștin.",
+        "La 6:10 nu este importat adaosul RP/TR „osteneala” absent din textul principal SBLGNT."
       ]
     },
     "omissionAddition": {
@@ -123,108 +122,183 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:670b7a8964876dbbd7c2343165ffe9524704c53086346a41f386d72df33640c0",
-    "contentDigest": "sha256:2569009cc5b8665a4dd6d10275aec43b0e23c4dad8364f61d66b91f2172dbc62"
+    "textDigest": "sha256:e53f6e3a3164552a23916a08e2850be4a747a4aa2e332d28a36b046e7989a5e0",
+    "contentDigest": "sha256:25e468454fd221794ecd9c9593c2b8c1831ba10e25aad0f4f10e213487904f31"
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, lăsând învățătura primelor principii ale lui Hristos, să mergem înainte spre desăvârșire — fără a pune din nou temelia pocăinței de faptele moarte, a credinței de Dumnezeu,"
+      "text": "De aceea, lăsând învățătura de început despre Hristos, să înaintăm spre maturitate, fără să punem din nou temelia pocăinței de faptele moarte și a credinței în Dumnezeu,"
     },
     {
       "number": 2,
-      "text": "a învățăturii botezurilor, a întinderii mâinilor, a învierii morților și a judecății veșnice."
+      "text": "a învățăturii despre spălări, a punerii mâinilor, a învierii morților și a judecății veșnice."
     },
     {
       "number": 3,
-      "text": "Vom face acest lucru, dacă ne permite Dumnezeu."
+      "text": "Și vom face aceasta, dacă Dumnezeu îngăduie."
     },
     {
       "number": 4,
-      "text": "Căci despre cei care odinioară au fost luminați au gustat din darul ceresc au fost făcuți părtași ai Duhului Sfânt,"
+      "text": "Căci este imposibil ca aceia care au fost luminați o dată, au gustat darul ceresc și au devenit părtași ai Duhului Sfânt,"
     },
     {
       "number": 5,
-      "text": "și au gustat cuvântul cel bun al lui Dumnezeu și puterea veacului care va veni,"
+      "text": "au gustat cuvântul bun al lui Dumnezeu și puterile veacului viitor,"
     },
     {
       "number": 6,
-      "text": "Și apoi a căzut, este imposibil să-i reînnoim din nou la pocăință; văzând că ei răstignesc pe Fiul lui Dumnezeu pentru ei înșiși din nou, și l-au pus să deschidă rușinea."
+      "text": "iar apoi au căzut, să fie înnoiți din nou spre pocăință, deoarece Îl răstignesc din nou, pentru ei înșiși, pe Fiul lui Dumnezeu și Îl expun rușinii publice."
     },
     {
       "number": 7,
-      "text": "Căci țara care a băut ploaia care vine des pe ea și produce o recoltă potrivită pentru ei, pentru al cărui motiv este de asemenea arsă, primește binecuvântare de la Dumnezeu;"
+      "text": "Căci pământul care bea ploaia ce cade adesea peste el și produce plante folositoare celor pentru care este și cultivat primește binecuvântare de la Dumnezeu;"
     },
     {
       "number": 8,
-      "text": "Dar dacă poartă spini și ciulini, este respins și aproape blestemat, al cărui sfârșit va fi ars."
+      "text": "dar dacă produce spini și mărăcini, este fără valoare și aproape de blestem, iar sfârșitul lui este arderea."
     },
     {
       "number": 9,
-      "text": "Dar, preaiubiților, suntem convinși de lucruri mai bune pentru voi și de lucruri care însoțesc mântuirea, chiar dacă vorbim."
+      "text": "Dar, iubiților, cu privire la voi suntem convinși de lucruri mai bune, lucruri care țin de mântuire, chiar dacă vorbim astfel."
     },
     {
       "number": 10,
-      "text": "Căci Dumnezeu nu este nedrept, ca să uite lucrarea voastră și munca dragostei pe care ați arătat-o față de Numele Lui, în faptul că ați slujit sfinților, și încă le slujiți."
+      "text": "Căci Dumnezeu nu este nedrept ca să uite lucrarea voastră și dragostea pe care ați arătat-o față de Numele Lui, slujindu-i pe sfinți și continuând să-i slujiți."
     },
     {
       "number": 11,
-      "text": "Dorim ca fiecare dintre voi să arate aceeași sârguință la deplina speranță până la sfârșit,"
+      "text": "Dorim însă ca fiecare dintre voi să arate aceeași sârguință pentru deplina încredințare a speranței până la sfârșit,"
     },
     {
       "number": 12,
-      "text": "că nu veți fi leneși, ci imitatori ai celor care prin credință și perseverență au moștenit promisiunile."
+      "text": "ca să nu deveniți nepăsători, ci imitatori ai celor care, prin credință și îndelungă răbdare, moștenesc promisiunile."
     },
     {
       "number": 13,
-      "text": "Căci atunci când Dumnezeu a făcut o promisiune lui Avraam, din moment ce el nu a putut jura pe nimeni mai mare, el a jurat pe el,"
+      "text": "Căci, când Dumnezeu i-a făcut promisiunea lui Avraam, pentru că nu avea pe nimeni mai mare pe care să jure, a jurat pe Sine Însuși,"
     },
     {
       "number": 14,
-      "text": "Și a zis: Binecuvântat să te binecuvântez înmulțit să te înmulțesc!„"
+      "text": "spunând: „Cu adevărat, te voi binecuvânta și te voi înmulți.”"
     },
     {
       "number": 15,
-      "text": "Astfel, după ce a perseverat cu răbdare, el a obținut promisiunea."
+      "text": "Și astfel, după ce a așteptat cu îndelungă răbdare, Avraam a dobândit promisiunea."
     },
     {
       "number": 16,
-      "text": "Oamenii jură pe unul mai mare, iar în fiecare ceartă a lor jurământul este definitiv pentru confirmare."
+      "text": "Oamenii jură pe cineva mai mare decât ei, iar jurământul de confirmare pune capăt oricărei dispute dintre ei."
     },
     {
       "number": 17,
-      "text": "În felul acesta, Dumnezeu, fiind hotărât să arate din ce în ce mai mult moștenitorilor promisiunii imuabilitatea sfatului său, a intervenit printr-un jurământ,"
+      "text": "De aceea Dumnezeu, dorind să le arate și mai limpede moștenitorilor promisiunii caracterul neschimbător al hotărârii Sale, a garantat-o printr-un jurământ,"
     },
     {
       "number": 18,
-      "text": "ca prin două lucruri imuabile, în care este imposibil pentru Dumnezeu să mintă, să avem o încurajare puternică, care au fugit pentru refugiu pentru a apuca speranța pusă înaintea noastră."
+      "text": "pentru ca, prin două lucruri neschimbătoare, în care este imposibil ca Dumnezeu să mintă, noi, cei care am fugit la adăpost, să avem o puternică încurajare să ținem cu tărie speranța pusă înaintea noastră."
     },
     {
       "number": 19,
-      "text": "Această speranță pe care o avem ca ancoră a sufletului, o speranță sigură și neclintită și care intră în ceea ce este în interiorul vălului,"
+      "text": "Pe aceasta o avem ca ancoră a sufletului, sigură și trainică, o speranță care intră dincolo de perdea, în partea dinăuntru,"
     },
     {
       "number": 20,
-      "text": "Isus a intrat pentru noi ca premergător, după ce a ajuns mare preot pentru totdeauna, după porunca lui Melhisedec.”"
+      "text": "unde Isus a intrat pentru noi ca înainte-mergător, devenind Mare Preot pentru totdeauna, după rânduiala lui Melhisedec."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "βαπτισμῶν διδαχὴν",
+      "decision": "„învățăturii despre spălări”",
+      "alternatives": [
+        "TR/NA28/RP: διδαχῆς"
+      ],
+      "reason": "SBLGNT urmează aici acuzativul διδαχήν; βαπτισμοί este păstrat generic, fără restrângere confesională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT urmează aici acuzativul διδαχήν; βαπτισμοί este păstrat generic, fără restrângere confesională."
+    },
+    {
+      "verse": 3,
+      "term": "ποιήσομεν",
+      "decision": "„vom face aceasta”",
+      "alternatives": [
+        "RP: ποιήσωμεν „să facem”"
+      ],
+      "reason": "Textul principal are indicativ viitor, nu conjunctiv; româna păstrează afirmația condiționată de îngăduința lui Dumnezeu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal are indicativ viitor, nu conjunctiv; româna păstrează afirmația condiționată de îngăduința lui Dumnezeu."
+    },
+    {
+      "verse": 6,
+      "term": "παραπεσόντας … ἀνακαινίζειν",
+      "decision": "„iar apoi au căzut, să fie înnoiți din nou spre pocăință”",
+      "alternatives": [
+        "parafraze doctrinare despre imposibilitatea mântuirii"
+      ],
+      "reason": "Participiul este integrat în seria începută la 6:4; textul nu primește explicații confesionale suplimentare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Participiul este integrat în seria începută la 6:4; textul nu primește explicații confesionale suplimentare."
+    },
+    {
+      "verse": 10,
+      "term": "τοῦ ἔργου ὑμῶν καὶ τῆς ἀγάπης",
+      "decision": "„lucrarea voastră și dragostea”",
+      "alternatives": [
+        "RP/TR: adaos „osteneala”"
+      ],
+      "reason": "SBLGNT nu conține τοῦ κόπου; adaosul martorului tradițional nu este importat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu conține τοῦ κόπου; adaosul martorului tradițional nu este importat."
+    },
+    {
+      "verse": 14,
+      "term": "Εἰ μὴν εὐλογῶν εὐλογήσω … πληθύνων πληθυνῶ",
+      "decision": "„Cu adevărat, te voi binecuvânta și te voi înmulți.”",
+      "alternatives": [
+        "redare mecanică a infinitivului intern"
+      ],
+      "reason": "Construcțiile semitizante intensive sunt redate idiomatic, păstrând certitudinea jurământului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcțiile semitizante intensive sunt redate idiomatic, păstrând certitudinea jurământului."
+    },
+    {
+      "verse": 17,
+      "term": "ἐμεσίτευσεν ὅρκῳ",
+      "decision": "„a garantat-o printr-un jurământ”",
+      "alternatives": [
+        "„a mijlocit cu un jurământ”"
+      ],
+      "reason": "Verbul descrie intervenția confirmatoare a jurământului; „a garantat” redă funcția în context juridic fără a introduce un mediator separat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul descrie intervenția confirmatoare a jurământului; „a garantat” redă funcția în context juridic fără a introduce un mediator separat."
+    },
+    {
+      "verse": 19,
+      "term": "εἰς τὸ ἐσώτερον τοῦ καταπετάσματος",
+      "decision": "„dincolo de perdea, în partea dinăuntru”",
+      "alternatives": [
+        "„în interiorul vălului”"
+      ],
+      "reason": "Imaginea cultică este păstrată fără identificări explicative care aparțin argumentului următor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Imaginea cultică este păstrată fără identificări explicative care aparțin argumentului următor."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

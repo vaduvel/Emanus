@@ -339,11 +339,22 @@ Motorul NU POATE demonstra singur:
 - că un text este pastoral adecvat în toate situațiile;
 - că trecerea unui prag statistic înseamnă fidelitate.
 
-Aceste aspecte cer justificare editorială în audit. Politica repository-ului nu impune o aprobare umană separată, dar nu permite înlocuirea argumentului editorial cu un rezultat boolean al scriptului.
+Aceste aspecte cer justificare editorială. Pentru Noul Testament, politica repository-ului cere o aprobare editorială identificată, umană sau AI trasabilă; această identificare nu se confundă cu o garanție teologică sau academică absolută.
 
-### 11.4 Regula fără aprobare umană obligatorie
+### 11.4 Registrul obligatoriu de aprobare editorială per-verset
 
-`humanApprovalRequired: false` rămâne regula proiectului. Ea înseamnă că un capitol poate fi publicat după audit editorial AI complet și verificări deterministe, nu că poate fi publicat fără raționament verificabil.
+Pentru NT, `NT-EDITORIAL-APPROVAL.json` este artefact obligatoriu. El TREBUIE să aibă exact o intrare pentru fiecare verset cu text principal și să fie valid față de `NT-EDITORIAL-APPROVAL.schema.json` și sursele fixate.
+
+Fiecare intrare TREBUIE să conțină:
+
+- digestul textului românesc publicat;
+- referințele și digesturile SBLGNT, WEBU, BTF și ale fiecărui etalon fixat disponibil, conform mapării fixate;
+- pentru un etalon fixat non-BTF cu lacună declarată, `availability: "missing-in-pinned-source"` și exact referințele lipsă din snapshot, fără un digest inventat;
+- dovada fiecărui etalon extern cerut de `source-lock.json`, fără a stoca text protejat;
+- o ancoră grecească din SBLGNT, o ancoră din redarea românească și justificări individuale;
+- aprobarea unui reviewer cu rol editorial; dacă este AI, `reviewerSystem` și `reviewerRunId` trebuie să identifice rularea.
+
+Justificările duplicate sau frazele generale repetate între capitole NU sunt audit semantic. AI poate asista procesul, dar metadatele sale de capitol nu înlocuiesc acest registru. Lipsa, acoperirea incompletă, un digest inconsistent sau un șablon detectat blochează `approved`, `published`, sigilarea și materializarea aplicației.
 
 Oricare dintre următoarele stări este blocantă:
 
@@ -353,7 +364,7 @@ Oricare dintre următoarele stări este blocantă:
 - notă `reviewRequired` nerezolvată;
 - omisiune sau adaos neexplicat;
 - contradicție între text și motivarea deciziei;
-- etalon lipsă sau folosit în alt mod decât `comparison-only`;
+- SBLGNT, WEBU sau BTF lipsă; ori o lacună de etalon non-BTF nedeclarată, cu referințe greșite sau prezentată fals ca text disponibil;
 - digest învechit;
 - abatere de la glosar sau onomastică fără justificare;
 - afirmație doctrinară introdusă în traducere fără suport lexical și sintactic.
@@ -371,6 +382,7 @@ Un capitol este gata de publicare numai dacă:
 - toate controalele de română, omisiuni, adaosuri și copyright sunt `approved`;
 - toate deciziile sunt urmărite și `resolved`;
 - digestul textului, notelor și surselor este actual;
+- registrul editorial NT are o dovadă validă, individuală și actuală pentru fiecare verset;
 - `status` este `published` și `public` este `true` numai după trecerea porții.
 
 ### 12.2 Carte
@@ -393,6 +405,7 @@ Noul Testament este gata numai dacă:
 - terminologia și onomastica au trecut verificarea globală;
 - toate citatele VT/LXX au referințe valide;
 - toate atribuirile și licențele sunt incluse în produs;
+- cele 7.941 de versete cu text principal au dovezi editoriale individuale, fără intrări șablon;
 - buildul, testele și poarta Biblia Emanus trec pe commitul care urmează să fie publicat.
 
 ## 13. Atribuire și licențiere

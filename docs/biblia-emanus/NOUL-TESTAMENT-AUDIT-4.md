@@ -10,6 +10,12 @@
 - Punte public-domain: WEBU Protestant Edition
 - Textus Receptus: martor suplimentar, nu sursă automată a textului principal
 
+## Statut curent — verdict de publicare revocat
+
+Acest raport consemnează procesul automat rulat la data lui, dar concluzia sa de publicare nu mai este validă. Auditul ulterior a confirmat coruperi reale în textul marcat atunci `published/public` și a arătat că declarațiile AI de capitol erau șablonate, nu dovezi semantice individuale.
+
+Noul Testament nu poate fi declarat gata de publicare până la remedierea corpusului și la existența unui `NT-EDITORIAL-APPROVAL.json` complet, validat verset-cu-verset față de SBLGNT, WEBU și etaloanele românești. Această cerință dovedește trasabilitatea reviziei editoriale, nu infailibilitatea teologică a traducerii.
+
 ## Proveniența reparațiilor
 
 - candidat curat din PR #37: 14;

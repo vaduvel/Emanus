@@ -8,6 +8,7 @@ import copy
 import importlib.util
 import json
 import re
+import sys
 from pathlib import Path
 from types import ModuleType
 from typing import Any
@@ -23,6 +24,18 @@ def load_validator() -> ModuleType:
     if spec is None or spec.loader is None:
         raise RuntimeError("Nu pot încărca motorul Biblia Emanus")
     module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_editorial_gate() -> ModuleType:
+    path = ROOT / "scripts" / "nt_editorial_gate.py"
+    spec = importlib.util.spec_from_file_location("nt_editorial_gate", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("Nu pot încărca poarta editorială NT")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -41,12 +54,17 @@ def seal_chapter(
     data: dict[str, Any],
     source_data: dict[str, Any],
     engine_name: str,
+    editorial_approved: bool = False,
 ) -> dict[str, Any]:
     candidate = copy.deepcopy(data)
     book = source_data["books"][candidate["bookId"]]
     audit = candidate.get("audit")
     if not isinstance(audit, dict):
         validator.fail("capitolul nu are audit semantic AI")
+    if book["testament"] == "NT" and not editorial_approved:
+        validator.fail(
+            "Noul Testament nu poate fi publicat fără registrul editorial per-verset aprobat"
+        )
     candidate["status"] = "published"
     candidate["public"] = True
     if book["testament"] == "NT":
@@ -112,13 +130,43 @@ def main() -> int:
         candidates: dict[Path, dict[str, Any]] = {
             path: validator.load_json(path) for path in chapter_paths
         }
+        selected_book_ids = {
+            CHAPTER_FILE.match(path.name).group(1) for path in selected
+        }
+        nt_editorial_approved = False
+        if selected_book_ids.intersection(validator.NT_CHAPTER_COUNTS):
+            gate = load_editorial_gate()
+            bound_source_data = gate.bind_source_reference_mapper(
+                source_data,
+                lambda lock_id, book_id, chapter, verse: validator.source_references_for_target(
+                    lock_id, book_id, chapter, verse, source_data["rules"]
+                ),
+            )
+            try:
+                gate.validate_nt_editorial_approval(
+                    DATA_DIR,
+                    bound_source_data,
+                    ledger,
+                    {
+                        f"{data['bookId']}.{data['chapter']}": data
+                        for data in candidates.values()
+                        if data.get("bookId") in validator.NT_CHAPTER_COUNTS
+                    },
+                )
+            except gate.EditorialGateError as error:
+                validator.fail(str(error))
+            nt_editorial_approved = True
         for path in selected:
             existing_agent = (candidates[path].get("audit") or {}).get("reviewAgent") or {}
             engine_name = args.engine or existing_agent.get("engine")
             if not isinstance(engine_name, str) or not engine_name.strip():
                 validator.fail(f"{path.name}: folosește --engine pentru a identifica agentul AI")
             candidates[path] = seal_chapter(
-                validator, candidates[path], source_data, engine_name.strip()
+                validator,
+                candidates[path],
+                source_data,
+                engine_name.strip(),
+                editorial_approved=nt_editorial_approved,
             )
 
         validated = [

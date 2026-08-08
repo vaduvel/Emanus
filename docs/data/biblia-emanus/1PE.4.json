@@ -3,8 +3,8 @@
   "bookId": "1PE",
   "bookName": "1 Petru",
   "chapter": 4,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-1pe-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 19,
       "reviewed": 19,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 19 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,104 +123,179 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:819eb9afaab510b2314df1bfe66220c181a3c38892110aeeb9a67f14c56f38b7",
-    "contentDigest": "sha256:f398c9c392386ec54df28cc3dc680953e32187b5735fc97e33e6da7c234161f7"
+    "textDigest": "sha256:5bdf570840575a90eeed1b3a8ef40223f44eaadfa8e2689aa210784817b6ba72",
+    "contentDigest": "sha256:935557026dc8529cfe8d41e9bd9e08de3fa61ca5deb359d5c9294fcd602ec039"
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, din moment ce Hristos a suferit pentru noi în carne, înarmați-vă și voi cu aceeași minte, pentru că cel care a suferit în carne a încetat de la păcat,"
+      "text": "Deci, fiindcă Hristos a suferit în trup, înarmați-vă și voi cu aceeași gândire, căci cel care a suferit în trup a încetat cu păcatul,"
     },
     {
       "number": 2,
-      "text": "ca să nu mai trăiți tot restul timpului vostru în trup pentru poftele oamenilor, ci pentru voia lui Dumnezeu."
+      "text": "pentru a nu mai trăi restul timpului în trup după poftele oamenilor, ci după voia lui Dumnezeu."
     },
     {
       "number": 3,
-      "text": "Căci am petrecut destul din timpul nostru trecut făcând dorința neamurilor, și umblând în obscenitate, pofte, chefuri de beție, orgii, caruseluri și idolatre abominabile."
+      "text": "Căci este de ajuns timpul trecut în care ați împlinit voia neamurilor, umblând în desfrânări, pofte, beții, petreceri dezmățate, chefuri și idolatrii nelegiuite."
     },
     {
       "number": 4,
-      "text": "Ei cred că este ciudat că nu alerga cu ei în același exces de revoltă, vorbind rău de tine."
+      "text": "De aceea li se pare ciudat că nu alergați împreună cu ei în același potop de destrăbălare și vă vorbesc de rău."
     },
     {
       "number": 5,
-      "text": "Ei vor da socoteală celui care este gata să judece pe cei vii și pe cei morți."
+      "text": "Ei vor da socoteală celui care este gata să judece vii și morți."
     },
     {
       "number": 6,
-      "text": "Căci, în acest scop, Evanghelia a fost propovăduită morților, ca să fie judecați ca oameni în carne, dar să trăiască ca lui Dumnezeu în duh."
+      "text": "Căci tocmai pentru aceasta a fost vestită vestea bună și celor morți: ca să fie judecați după oameni în trup, dar să trăiască după Dumnezeu în duh."
     },
     {
       "number": 7,
-      "text": "Dar sfârșitul tuturor lucrurilor este aproape. De aceea, fiți cu mintea sănătoasă, stăpâniți de sine și treji în rugăciune."
+      "text": "Dar sfârșitul tuturor lucrurilor s-a apropiat. Fiți deci cumpătați și treji pentru rugăciune."
     },
     {
       "number": 8,
-      "text": "Și mai presus de toate, fiți sinceri în dragostea voastră între voi, căci dragostea acoperă o mulțime de păcate."
+      "text": "Mai presus de toate, păstrați între voi o dragoste stăruitoare, căci dragostea acoperă o mulțime de păcate."
     },
     {
       "number": 9,
-      "text": "Fiți ospitalieri unii cu alții fără să vă plângeți."
+      "text": "Fiți ospitalieri unii față de alții, fără cârtire."
     },
     {
       "number": 10,
-      "text": "Așa cum fiecare a primit un dar, folosiți-l în a vă sluji unii pe alții, ca buni manageri ai harului lui Dumnezeu în diferitele sale forme."
+      "text": "Fiecare, după cum a primit un dar, să-l folosească în slujirea celorlalți, ca bun administrator al harului felurit al lui Dumnezeu."
     },
     {
       "number": 11,
-      "text": "Dacă vorbește cineva, să fie așa cum au fost cuvintele lui Dumnezeu. Dacă cineva servește, să fie ca puterea pe care o dă Dumnezeu, ca în toate lucrurile Dumnezeu să fie glorificat prin Isus Hristos, căruia îi aparține gloria și stăpânirea pentru totdeauna și pentru totdeauna. Amin."
+      "text": "Cel ce vorbește, să rostească cuvinte ale lui Dumnezeu; cel ce slujește, să slujească din puterea pe care o dă Dumnezeu, pentru ca în toate Dumnezeu să fie glorificat prin Isus Hristos, căruia îi aparțin slava și puterea în vecii vecilor. Amin."
     },
     {
       "number": 12,
-      "text": "Preaiubiților, nu vă mi de încercarea de foc care a venit peste voi ca să vă pună la încercare, ca și cum vi s-ar fi întâmplat un lucru ciudat."
+      "text": "Preaiubiților, nu vă mirați de încercarea de foc din mijlocul vostru, care vine ca să vă pună la încercare, ca și cum vi s-ar întâmpla ceva ciudat,"
     },
     {
       "number": 13,
-      "text": "Dar, pentru că sunteți părtași la suferințele lui Hristos, bucurați-vă, pentru ca și voi să vă bucurați cu mare bucurie la revelarea gloriei Lui."
+      "text": "ci, în măsura în care sunteți părtași la suferințele lui Hristos, bucurați-vă, pentru ca, la descoperirea slavei lui, să vă bucurați și voi cu veselie."
     },
     {
       "number": 14,
-      "text": "Dacă ești insultat pentru Numele lui Hristos, ești binecuvântat, pentru că Duhul slavei al lui Dumnezeu se odihnește peste tine. Din partea lor este blasfemiat, dar din partea ta este glorificat."
+      "text": "Dacă sunteți ocărâți pentru numele lui Hristos, sunteți fericiți, fiindcă Duhul slavei și al lui Dumnezeu se odihnește peste voi."
     },
     {
       "number": 15,
-      "text": "Dar nici unul dintre voi să nu sufere ca ucigaș, ca hoț, ca făcător de rele sau ca băgăreț în treburile altora."
+      "text": "Fiindcă niciunul dintre voi să nu sufere ca ucigaș, hoț, făcător de rele sau ca unul care se amestecă în treburile altora."
     },
     {
       "number": 16,
-      "text": "Dar dacă unul dintre voi suferă pentru că este creștin, să nu se rușineze; ci să glorifice pe Dumnezeu în această privință."
+      "text": "Dar dacă suferă ca creștin, să nu-i fie rușine, ci să-L slăvească pe Dumnezeu în acest nume."
     },
     {
       "number": 17,
-      "text": "Căci a venit timpul ca judecata să înceapă cu casa lui Dumnezeu. Dacă ea începe mai întâi cu noi, ce se va întâmpla cu cei care nu ascultă de Evanghelia lui Dumnezeu?"
+      "text": "Fiindcă este vremea ca judecata să înceapă de la casa lui Dumnezeu; iar dacă începe mai întâi de la noi, care va fi sfârșitul celor care nu ascultă de evanghelia lui Dumnezeu?"
     },
     {
       "number": 18,
-      "text": "Dacă este greu pentru cei neprihăniți să fie salvați, ce se va întâmpla cu cei nelegiuiți și păcătoși?"
+      "text": "Și dacă cel drept este salvat cu greu, unde se va arăta cel neevlavios și păcătos?"
     },
     {
       "number": 19,
-      "text": "De aceea, cei care suferă după voia lui Dumnezeu să facă binele să-i încredințeze sufletele lor, ca unui Creator fidel."
+      "text": "De aceea, și cei care suferă după voia lui Dumnezeu să-și încredințeze sufletele unui Creator credincios, făcând binele."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: παθόντος σαρκὶ / παθόντος ὑπὲρ ἡμῶν σαρκί",
+      "decision": "„Hristos a suferit în trup”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă „pentru noi”."
+      ],
+      "reason": "SBLGNT nu include complementul „pentru noi”; textul principal păstrează suferința în trup fără adaosul tradiției receptă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul urmează lectura SBLGNT."
+    },
+    {
+      "verse": 3,
+      "term": "variante SBLGNT/TR: χρόνος … βούλημα … κατειργάσθαι / ἡμῖν … χρόνος τοῦ βίου … θέλημα … κατεργάσασθαι",
+      "decision": "„timpul trecut în care ați împlinit voia neamurilor”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă „nouă” și „al vieții”, are θέλημα în loc de βούλημα și o formă aoristă a verbului."
+      ],
+      "reason": "SBLGNT vorbește despre timpul trecut și voia neamurilor fără adaosurile TR; româna păstrează destinatarul implicit și nu îngustează timpul la „viață”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; formularea urmează lectura SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: καλύπτει / καλύψει",
+      "decision": "„dragostea acoperă o mulțime de păcate”",
+      "alternatives": [
+        "TR-1PE din snapshot folosește viitorul „va acoperi”."
+      ],
+      "reason": "SBLGNT are prezentul καλύπτει; româna păstrează afirmația generală la prezent.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal urmează timpul SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală SBLGNT/TR: ἧς / ὡς",
+      "decision": "„din puterea pe care o dă Dumnezeu”",
+      "alternatives": [
+        "TR-1PE din snapshot are ὡς, „ca din puterea”."
+      ],
+      "reason": "SBLGNT are pronumele relativ ἧς; româna redă puterea concretă pe care Dumnezeu o oferă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; formularea urmează lectura SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: ἀναπαύεται / adaosul κατὰ μὲν αὐτοὺς … δοξάζεται",
+      "decision": "„Duhul slavei și al lui Dumnezeu se odihnește peste voi”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă afirmația despre hula din partea lor și slăvirea din partea voastră."
+      ],
+      "reason": "SBLGNT se oprește la ἀναπαύεται; adaosul tradiției receptă nu este introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală SBLGNT/TR: ὀνόματι / μέρει",
+      "decision": "„să-L slăvească pe Dumnezeu în acest nume”",
+      "alternatives": [
+        "TR-1PE din snapshot are „în această privință”."
+      ],
+      "reason": "SBLGNT păstrează explicit ὀνόματι; româna nu îl înlocuiește cu generalizarea din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 19,
+      "term": "variantă textuală SBLGNT/TR: πιστῷ κτίστῃ / ὡς πιστῷ κτίστῃ",
+      "decision": "„unui Creator credincios, făcând binele”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă ὡς, „ca unui Creator credincios”."
+      ],
+      "reason": "SBLGNT are dativul direct πιστῷ κτίστῃ; româna păstrează încredințarea sufletelor unui Creator credincios, în timp ce se face binele.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; formularea urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

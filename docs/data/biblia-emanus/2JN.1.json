@@ -3,8 +3,8 @@
   "bookId": "2JN",
   "bookName": "2 Ioan",
   "chapter": 1,
-  "status": "published",
-  "public": true,
+  "status": "in_review",
+  "public": false,
   "source": {
     "english": {
       "version": "WEBU-Protestant",
@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,22 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-publication-audit-2026-08-07-2jn-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 13 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,64 +139,149 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:74bef78293d18b2b6f2275a8b02165c858b0777c9d078f3470970ce59e5f59ea",
-    "contentDigest": "sha256:2447418060ae084951fb216b153148ff2777250dab0e8e0772f6ff5720d16ba9"
+    "textDigest": "sha256:2306f60195ba363401d4934487e2c3049c921bdf481f3088da6a871b8abcc235",
+    "contentDigest": "sha256:6a0e62ad043d20b4443edce90afcc854f9fbefd683a8f65aa359a8518764bebe"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Bătrânul, către doamna aleasă copiii ei, pe care îi iubesc în adevăr, nu numai eu, ci toți cei care cunosc adevărul,"
+      "text": "Bătrânul, către doamna aleasă și copiii ei, pe care îi iubesc în adevăr, și nu numai eu, ci și toți cei care cunosc adevărul,"
     },
     {
       "number": 2,
-      "text": "pentru adevăr, care rămâne în noi va fi cu noi pentru totdeauna:"
+      "text": "pentru adevărul care rămâne în noi și va fi cu noi pentru totdeauna:"
     },
     {
       "number": 3,
-      "text": "Harul, îndurarea și pacea vor fi cu noi, de la Dumnezeu Tatăl și de la Domnul Isus Hristos, Fiul Tatălui, în adevăr și iubire."
+      "text": "Harul, îndurarea și pacea vor fi cu noi, de la Dumnezeu Tatăl și de la Isus Hristos, Fiul Tatălui, în adevăr și dragoste."
     },
     {
       "number": 4,
-      "text": "Mă bucur foarte mult că am găsit pe unii dintre copiii voștri umblând în adevăr, așa cum ni s-a poruncit de către Tatăl."
+      "text": "M-am bucurat foarte mult că am găsit pe unii dintre copiii tăi umblând în adevăr, așa cum am primit poruncă de la Tatăl."
     },
     {
       "number": 5,
-      "text": "Acum te implor, dragă doamnă, nu ca și cum ți-aș fi scris o poruncă nouă, ci ceea ce am avut de la început, ca să ne iubim unii pe alții."
+      "text": "Și acum te rog, doamnă, nu ca și cum ți-aș scrie o poruncă nouă, ci pe cea pe care o aveam de la început: să ne iubim unii pe alții."
     },
     {
       "number": 6,
-      "text": "Aceasta este dragostea, ca să umblăm după poruncile Lui. Aceasta este porunca, după cum ați auzit de la început, ca să umblați în ea."
+      "text": "Și aceasta este dragostea: să umblăm potrivit poruncilor Lui. Iar aceasta este porunca, după cum ați auzit de la început: să umblați în ea."
     },
     {
       "number": 7,
-      "text": "Pentru că mulți mincinoși au ieșit în lume, cei care nu mărturisesc că Isus Hristos a venit în carne. Acesta este înșelătorul și Anticristul."
+      "text": "Pentru că mulți înșelători au ieșit în lume, care nu mărturisesc venirea în trup a lui Isus Hristos. Acesta este înșelătorul și anticristul."
     },
     {
       "number": 8,
-      "text": "Aveți grijă, să nu pierdem lucrurile pe care le-am realizat, ci să primim o răsplată deplină."
+      "text": "Luați seama la voi înșivă, ca să nu pierdeți ceea ce am lucrat, ci să primiți o răsplată deplină."
     },
     {
       "number": 9,
-      "text": "Cine calcă strâmb și nu rămâne în învățătura lui Hristos nu are pe Dumnezeu. Cel care rămâne în învățătură are atât Tatăl, cât și Fiul."
+      "text": "Oricine merge mai departe și nu rămâne în învățătura lui Hristos nu-L are pe Dumnezeu. Cel care rămâne în învățătură îi are atât pe Tatăl, cât și pe Fiul."
     },
     {
       "number": 10,
-      "text": "Dacă cineva vine la tine și nu aduce această învățătură, nu-l primi în casa ta, și nu-l primi,"
+      "text": "Dacă vine cineva la voi și nu aduce această învățătură, nu-l primiți în casă și nici nu-l salutați,"
     },
     {
       "number": 11,
-      "text": "Căci cine-l, ia parte la faptele lui rele."
+      "text": "căci cel care îl salută se face părtaș faptelor lui rele."
     },
     {
       "number": 12,
-      "text": "Având multe lucruri să vă scriu, nu vreau să fac acest lucru cu hârtie și cerneală, dar sper să vin la voi și să vorbesc față în față, pentru ca bucuria noastră să fie deplină."
+      "text": "Am multe să vă scriu, dar n-am vrut să o fac cu hârtie și cerneală; sper însă să ajung la voi și să vorbesc cu voi față în față, pentru ca bucuria voastră să fie deplină."
     },
     {
       "number": 13,
-      "text": "Copiii surorii tale alese te saluta. Amin."
+      "text": "Copiii surorii tale alese te salută."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "παρὰ Ἰησοῦ Χριστοῦ / κυρίου",
+      "decision": "Textul principal spune „de la Isus Hristos”, fără titlul „Domnul”.",
+      "alternatives": [
+        "de la Domnul Isus Hristos"
+      ],
+      "reason": "SBLGNT are παρὰ Ἰησοῦ Χριστοῦ, iar aparatul și martorul TR adaugă κυρίου; adaosul nu a fost introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formula românească urmează lectura SBLGNT fixată și păstrează explicit diferența față de martorul TR."
+    },
+    {
+      "verse": 7,
+      "term": "ἐξῆλθον / εἰσῆλθον",
+      "decision": "Textul principal redă lectura SBLGNT „au ieșit în lume”.",
+      "alternatives": [
+        "au intrat în lume"
+      ],
+      "reason": "SBLGNT are ἐξῆλθον, în timp ce martorul TR are εἰσῆλθον; direcția mișcării nu a fost armonizată cu lectura tradițională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează verbul principal al lecturii SBLGNT și nu introduce forma TR."
+    },
+    {
+      "verse": 8,
+      "term": "ἀπολέσητε … ἀπολάβητε / ἀπολέσωμεν … ἀπολάβωμεν",
+      "decision": "Avertismentul se adresează destinatarilor: „să nu pierdeți … să primiți”.",
+      "alternatives": [
+        "să nu pierdem … să primim"
+      ],
+      "reason": "SBLGNT are formele persoanei a doua plural ἀπολέσητε și ἀπολάβητε; TR are persoana întâi plural în ambele locuri.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Persoana gramaticală a lecturii SBLGNT a fost păstrată consecvent în română."
+    },
+    {
+      "verse": 9,
+      "term": "προάγων / παραβαίνων",
+      "decision": "προάγων este redat „merge mai departe”, nu „calcă strâmb” sau „încalcă”.",
+      "alternatives": [
+        "oricine încalcă"
+      ],
+      "reason": "SBLGNT are participiul προάγων, în timp ce TR are παραβαίνων; textul principal păstrează contrastul SBL dintre a merge mai departe și a rămâne în învățătură.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea românească urmează lectura SBLGNT, fără înlocuirea ei cu verbul martorului TR."
+    },
+    {
+      "verse": 9,
+      "term": "τῇ διδαχῇ / τῇ διδαχῇ τοῦ Χριστοῦ",
+      "decision": "A doua propoziție spune „Cel care rămâne în învățătură”, fără repetarea lui „lui Hristos”.",
+      "alternatives": [
+        "Cel care rămâne în învățătura lui Hristos"
+      ],
+      "reason": "SBLGNT omite τοῦ Χριστοῦ după a doua ocurență a lui διδαχῇ, pe când TR repetă genitivul; referința rămâne recuperabilă din prima propoziție.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Omiterea SBLGNT a fost păstrată în textul principal fără a afecta coerența românească."
+    },
+    {
+      "verse": 12,
+      "term": "γενέσθαι / ἐλθεῖν; ὑμῶν / ἡμῶν",
+      "decision": "Speranța este redată prin „să ajung la voi”, iar finalul spune „bucuria voastră”.",
+      "alternatives": [
+        "să vin la voi; bucuria noastră"
+      ],
+      "reason": "SBLGNT are γενέσθαι și pronumele ὑμῶν; TR are ἐλθεῖν și ἡμῶν. Româna păstrează atât apropierea de „a ajunge”, cât și adresarea către destinatari.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Finalul urmează lectura SBLGNT de persoana a doua plural și nu preia forma TR de persoana întâi plural."
+    },
+    {
+      "verse": 13,
+      "term": "ἐκλεκτῆς / + Ἀμήν",
+      "decision": "Salutul se încheie cu „te salută”, fără „Amin”.",
+      "alternatives": [
+        "Copiii surorii tale alese te salută. Amin."
+      ],
+      "reason": "SBLGNT se încheie cu ἐκλεκτῆς; aparatul indică adăugarea Ἀμήν în tradiția RP/TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Finalul românesc nu adaugă formula absentă din lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
