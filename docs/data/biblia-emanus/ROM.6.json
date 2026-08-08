@@ -72,64 +72,8 @@
     },
     "observations": [
       "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
-      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
+      "BTF și Cornilescu 1924 au fost folosite numai ca repere auxiliare de contrast; NTR nu a fost folosită ca benchmark și nu s-a copiat o traducere românească."
     ]
-  },
-  "audit": {
-    "schemaVersion": 2,
-    "completedOn": "2026-08-08",
-    "runId": "emanus-nt-editorial-2026-08-08-rom-6",
-    "engineVersion": "4.0.0",
-    "reviewLevel": "in_review",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "Codex / GPT-5",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "verseCoverage": {
-      "expected": 23,
-      "reviewed": 23,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:b259b32138b834fae596411df595d7409a7245b85b71b758e2a46ee0dad93737"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Toate cele 23 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost corectate construcțiile care omiteau referentul ori deformau relațiile de slujire, eliberare și sfințire.",
-        "Termenii păcat, har, dreptate și sfințire sunt redați consecvent în argumentul capitolului.",
-        "Adaosurile din Textus Receptus la versetele 11 și 12 nu au fost introduse în textul principal."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "textDigest": "sha256:f66eb40466aad4baa51c324937f615b9d3ab3dd0ba748aa28d0e84ea59fa36e1",
-    "contentDigest": "sha256:3722b87df76347da65c381c8922f94029056dadad6951c3ab1cac5f5e270be45"
   },
   "verses": [
     {
@@ -150,7 +94,7 @@
     },
     {
       "number": 5,
-      "text": "Căci, dacă am devenit uniți cu El în asemănarea morții Lui, vom fi uniți cu El și în asemănarea învierii Lui."
+      "text": "Căci, dacă am devenit uniți cu El printr-o moarte asemănătoare cu a Lui, vom fi uniți cu El și printr-o înviere asemănătoare cu a Lui."
     },
     {
       "number": 6,
@@ -166,11 +110,11 @@
     },
     {
       "number": 9,
-      "text": "Știind că Hristos, înviat din morți, nu mai moare; moartea nu mai are stăpânire asupra Lui."
+      "text": "știind că Hristos, înviat din morți, nu mai moare; moartea nu mai are stăpânire asupra Lui."
     },
     {
       "number": 10,
-      "text": "Căci, prin moartea pe care a murit-o, a murit o dată pentru totdeauna față de păcat, iar prin viața pe care o trăiește, trăiește pentru Dumnezeu."
+      "text": "Căci, murind, a murit față de păcat o dată pentru totdeauna; iar trăind, trăiește pentru Dumnezeu."
     },
     {
       "number": 11,
@@ -182,7 +126,7 @@
     },
     {
       "number": 13,
-      "text": "Nici să nu puneți mădularele voastre la dispoziția păcatului ca arme ale nedreptății, ci puneți-vă pe voi înșivă la dispoziția lui Dumnezeu, ca unii care au devenit vii dintre cei morți, iar mădularele voastre, ca arme ale dreptății pentru Dumnezeu."
+      "text": "Nici să nu puneți mădularele voastre la dispoziția păcatului ca arme ale nedreptății, ci puneți-vă pe voi înșivă la dispoziția lui Dumnezeu, ca unii vii dintre cei morți, iar mădularele voastre, ca arme ale dreptății pentru Dumnezeu."
     },
     {
       "number": 14,
@@ -227,30 +171,160 @@
   ],
   "editorialNotes": [
     {
-      "verse": 11,
-      "term": "variantă textuală SBLGNT / Textus Receptus",
-      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
-      "reason": "Textus Receptus adaugă τῷ Κυρίῳ ἡμῶν după ἐν Χριστῷ Ἰησοῦ; sintagma lipsește din textul principal SBLGNT.",
+      "verse": 1,
+      "term": "ἐπιμένωμεν",
+      "decision": "Să rămânem în păcat?",
+      "reason": "SBLGNT are conjunctivul deliberativ ἐπιμένωμεν; RP/TR are forma indicativă/futură în tradiția receptă, dar întrebarea românească urmează valoarea deliberativă a textului principal.",
+      "alternatives": [
+        "Vom continua în păcat?"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează SBLGNT și păstrează întrebarea deliberativă."
+    },
+    {
+      "verse": 5,
+      "term": "σύμφυτοι γεγόναμεν τῷ ὁμοιώματι",
+      "decision": "am devenit uniți cu El printr-o moarte asemănătoare cu a Lui",
+      "reason": "σύμφυτοι exprimă unirea organică/creșterea împreună, iar dativul cu ὁμοίωμα leagă unirea de asemănarea morții Lui; redarea evită metafora botanică rigidă fără a pierde unirea.",
       "alternatives": [
-        "Tot astfel și voi, socotiți-vă morți față de păcat, dar vii pentru Dumnezeu în Hristos Isus, Domnul nostru."
+        "am fost sădiți împreună în asemănarea morții Lui"
       ],
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul botezului și al învierii susține redarea relațională, iar metafora lexicală rămâne documentată."
+    },
+    {
+      "verse": 7,
+      "term": "δεδικαίωται ἀπὸ τῆς ἁμαρτίας",
+      "decision": "a fost eliberat de păcat",
+      "reason": "Forma lui δικαιόω poate fi redată literal «a fost îndreptățit», dar construcția ἀπό și contextul robiei păcatului susțin aici sensul de eliberare de pretenția/stăpânirea păcatului.",
+      "alternatives": [
+        "a fost îndreptățit față de păcat"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Alegerea contextuală păstrează jocul juridic fără a rupe argumentul despre robie și eliberare."
+    },
+    {
+      "verse": 10,
+      "term": "ὃ γὰρ ἀπέθανεν … ὃ δὲ ζῇ",
+      "decision": "murind, a murit … iar trăind, trăiește",
+      "reason": "Construcția cu acuzativ intern este redată idiomatic; formula anterioară «prin moartea pe care a murit-o» era un calc românesc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul aspectual și contrastul moarte/viață sunt păstrate."
+    },
+    {
+      "verse": 11,
+      "term": "ἐν Χριστῷ Ἰησοῦ",
+      "decision": "în Hristos Isus",
+      "reason": "SBLGNT se încheie aici; RP/TR adaugă τῷ κυρίῳ ἡμῶν, care nu este introdus în textul principal.",
+      "alternatives": [
+        "în Hristos Isus, Domnul nostru"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală urmează SBLGNT."
     },
     {
       "verse": 12,
-      "term": "variantă textuală SBLGNT / Textus Receptus",
-      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
-      "reason": "Textus Receptus adaugă pronumele αὐτῇ și prepoziția ἐν, făcând explicită ascultarea de păcat în poftele trupului.",
+      "term": "ὑπακούειν ταῖς ἐπιθυμίαις αὐτοῦ",
+      "decision": "ca să ascultați de poftele lui",
+      "reason": "SBLGNT nu are extinderea RP/TR αὐτῇ ἐν; pronumele românesc se referă la trupul muritor conform sintaxei textului critic.",
+      "alternatives": [
+        "ca să ascultați de el în poftele lui"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul recept nu este importat."
+    },
+    {
+      "verse": 13,
+      "term": "ὡσεὶ ἐκ νεκρῶν ζῶντας",
+      "decision": "ca unii vii dintre cei morți",
+      "reason": "ὡσεὶ păstrează comparația «ca unii»; formularea este mai directă decât «care au devenit vii».",
       "alternatives": [
-        "Păcatul să nu domnească în trupul vostru muritor, ca să ascultați de el în poftele trupului."
+        "ca unii care au devenit vii dintre cei morți"
       ],
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează valoarea comparativă și rezultatul vieții."
+    },
+    {
+      "verse": 15,
+      "term": "ἁμαρτήσωμεν",
+      "decision": "Să păcătuim?",
+      "reason": "SBLGNT are conjunctivul deliberativ; RP/TR are viitorul ἁμαρτήσομεν. Textul românesc urmează întrebarea deliberativă din textul principal.",
+      "alternatives": [
+        "Vom păcătui?"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT rămâne text principal; diferența receptă este documentată."
     }
   ],
   "referenceNotes": [],
-  "alternateEndings": []
+  "alternateEndings": [],
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-08",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "GPT-5.6 Sol",
+      "runId": "emanus-nt-editorial-2026-08-08-rom-6-gpt56sol-2215",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 23,
+      "reviewed": 23,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:b259b32138b834fae596411df595d7409a7245b85b71b758e2a46ee0dad93737"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Toate cele 23 de versete din ROM.6 au fost reverificate față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual. BTF și Cornilescu 1924 au fost folosite numai pentru contrast românesc auxiliar."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "ROM.6.5 a fost clarificat pentru unirea exprimată de σύμφυτοι fără calc botanic rigid.",
+        "ROM.6.10 și 6.13 au fost netezite pentru română idiomatică, păstrând structura greacă.",
+        "Variantele SBL/TR la 6.1, 6.11, 6.12 și 6.15 sunt documentate și nu au fost amestecate în textul principal."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT; TR rămâne martor textual.",
+        "ROM.6.7 păstrează sensul contextual de eliberare pentru δεδικαίωται ἀπὸ τῆς ἁμαρτίας, cu alternativa juridică documentată.",
+        "Limbajul robiei, dreptății și sfințirii este menținut consecvent fără glosare confesională."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu sursele auxiliare declarate; fără copiere de text românesc protejat"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "textDigest": "sha256:134f57960c9e8900766a756d31e07ea4c17a0bb078a38521ce12c5def9e84656",
+    "contentDigest": "sha256:975f7f6514848bed231db8217f6c5f501bb6e6022b544f10fa0e3de2e5530535"
+  }
 }
