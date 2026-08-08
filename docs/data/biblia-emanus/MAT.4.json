@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-mat-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,22 +97,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 25 de versete din MAT.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost revizuite persoanele, verbele de mișcare și citatele din ispitire, precum și formulările narațiunii galileene.",
+        "Termenii pentru arestarea lui Ioan, mreajă și bolnavi au fost redați fără explicații adăugate în corpul versetelor.",
+        "Sunt păstrate numai alegerile românești care redau natural persoana, numărul, aspectul verbal și referentul din textul principal SBLGNT."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+      "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+      "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,33 +122,23 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:0e9ec95017b832f38b41346c0aece9996a33079380cd4dfaf256688ed9943f58",
-    "contentDigest": "sha256:b37cb2b11cf0541c25e316dcbb360026d1382100c5b017cd3e88943fbf54fa12"
+    "textDigest": "sha256:432fa4f6de1af52ebdc7ddab526ea25b66c326f2c55b6c4d455d0554c20c0183",
+    "contentDigest": "sha256:d10522618204ca40fb15b38c8c283e6dc901b67a744cc81b26377b9f6ab6df62"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Atunci Isus a fost dus de Duhul în pustie ca să fie ispitit de diavolul."
+      "text": "Atunci Isus a fost dus de Duhul în pustie ca să fie ispitit de diavol."
     },
     {
       "number": 2,
-      "text": "După ce a postit patruzeci de zile și patruzeci de nopți, la urmă I s-a făcut foame."
+      "text": "După ce a postit patruzeci de zile și patruzeci de nopți, după aceea a flămânzit."
     },
     {
       "number": 3,
@@ -157,11 +146,11 @@
     },
     {
       "number": 4,
-      "text": "Dar Isus i-a răspuns: „Este scris: «Omul nu va trăi numai cu pâine, ci cu orice cuvânt care iese din gura lui Dumnezeu.»”"
+      "text": "Dar Isus i-a răspuns: „Este scris: «Omul nu va trăi numai cu pâine, ci cu fiecare cuvânt care iese din gura lui Dumnezeu.»”"
     },
     {
       "number": 5,
-      "text": "Atunci diavolul L-a luat în cetatea sfântă și L-a așezat pe streașina templului."
+      "text": "Atunci diavolul L-a luat în cetatea sfântă și L-a așezat pe marginea templului."
     },
     {
       "number": 6,
@@ -169,7 +158,7 @@
     },
     {
       "number": 7,
-      "text": "Isus i-a zis: „De asemenea este scris: «Să nu-L pui la încercare pe Domnul Dumnezeul tău.»”"
+      "text": "Isus i-a zis: „Este scris și: «Să nu-L pui la încercare pe Domnul Dumnezeul tău.»”"
     },
     {
       "number": 8,
@@ -177,11 +166,11 @@
     },
     {
       "number": 9,
-      "text": "Apoi I-a spus: „Toate acestea Ți le voi da, dacă vei cădea la pământ și Te vei închina înaintea mea.”"
+      "text": "Apoi I-a spus: „Toate acestea Ți le voi da, dacă, căzând la pământ, Te vei închina mie.”"
     },
     {
       "number": 10,
-      "text": "Atunci Isus i-a zis: „Pleacă, Satan, căci este scris: «Domnului Dumnezeului tău să I te închini și numai Lui să-I slujești.»”"
+      "text": "Atunci Isus i-a zis: „Pleacă, Satano, căci este scris: «Domnului Dumnezeului tău să I te închini și numai Lui să-I slujești.»”"
     },
     {
       "number": 11,
@@ -189,11 +178,11 @@
     },
     {
       "number": 12,
-      "text": "Când a auzit că Ioan fusese dat pe mâna autorităților, Isus S-a retras în Galileea."
+      "text": "Când a auzit că Ioan fusese arestat, Isus S-a retras în Galileea."
     },
     {
       "number": 13,
-      "text": "A părăsit Nazaretul, a venit și a locuit în Capernaum, lângă mare, în ținuturile lui Zabulon și Neftali,"
+      "text": "A părăsit Nazaretul, a venit și a locuit în Capernaum, pe țărmul mării, în ținuturile lui Zabulon și Neftali,"
     },
     {
       "number": 14,
@@ -205,7 +194,7 @@
     },
     {
       "number": 16,
-      "text": "poporul care stătea în întuneric a văzut o lumină mare, iar peste cei ce stăteau în ținutul și în umbra morții a răsărit lumina.”"
+      "text": "poporul care ședea în întuneric a văzut o lumină mare, iar peste cei ce ședeau în ținutul și în umbra morții a răsărit lumina.”"
     },
     {
       "number": 17,
@@ -213,7 +202,7 @@
     },
     {
       "number": 18,
-      "text": "Pe când mergea de-a lungul Mării Galileei, Isus a văzut doi frați: pe Simon, numit Petru, și pe Andrei, fratele lui. Ei aruncau un năvod în mare, căci erau pescari."
+      "text": "Pe când mergea de-a lungul Mării Galileei, Isus a văzut doi frați: pe Simon, numit Petru, și pe Andrei, fratele lui. Ei aruncau o mreajă în mare, căci erau pescari."
     },
     {
       "number": 19,
@@ -244,7 +233,28 @@
       "text": "L-au urmat mulțimi mari din Galileea, Decapole, Ierusalim, Iudeea și de dincolo de Iordan."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 10,
+      "term": "Ὕπαγε, Σατανᾶ",
+      "decision": "„Pleacă, Satano”",
+      "alternatives": ["„Înapoia Mea, Satano” (adaos RP)"],
+      "reason": "SBLGNT are numai imperativul „Pleacă”; formularea extinsă este consemnată de aparat pentru RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nu a fost importat automat adaosul tradițional în textul principal."
+    },
+    {
+      "verse": 12,
+      "term": "παρεδόθη",
+      "decision": "„fusese arestat”",
+      "alternatives": ["„fusese predat”"],
+      "reason": "Verbul pasiv indică predarea în custodie; în contextul narativ, „arestat” redă natural rezultatul fără a identifica un agent absent din verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul pasiv și retragerea ulterioară a lui Isus sunt păstrate."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
