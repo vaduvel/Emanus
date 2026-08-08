@@ -75,62 +75,6 @@
       "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
-  "audit": {
-    "schemaVersion": 2,
-    "completedOn": "2026-08-08",
-    "runId": "emanus-nt-editorial-2026-08-08-rom-5",
-    "engineVersion": "4.0.0",
-    "reviewLevel": "in_review",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "Codex / GPT-5",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "verseCoverage": {
-      "expected": 21,
-      "reviewed": 21,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Toate cele 21 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost înlocuite formele arhaice și formulările imprecise care estompau termenii grecești ai argumentului.",
-        "Contrastul dintre abatere, har, condamnare și îndreptățire este păstrat consecvent în română.",
-        "Varianta hortativă din Romani 5:1 nu a fost amestecată cu lectura indicativă din SBLGNT."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "textDigest": "sha256:a006fb10cbe8ef179f40839c13bbcd81d6a1290a437eebc53a7f93514c551ce6",
-    "contentDigest": "sha256:b8102cba0940b40add71b3113b6c90c54cd93a949b22a94cb30ab5591b34ffce"
-  },
   "verses": [
     {
       "number": 1,
@@ -154,7 +98,7 @@
     },
     {
       "number": 6,
-      "text": "Căci, pe când eram încă neputincioși, Hristos a murit la vremea potrivită pentru cei neevlavioși."
+      "text": "Căci, pe când eram încă neputincioși, Hristos a murit, la vremea potrivită, pentru cei neevlavioși."
     },
     {
       "number": 7,
@@ -182,7 +126,7 @@
     },
     {
       "number": 13,
-      "text": "căci păcatul era în lume înainte de Lege, dar păcatul nu este imputat când nu există lege."
+      "text": "căci păcatul era în lume înainte de Lege, dar păcatul nu este pus în socoteală când nu există lege."
     },
     {
       "number": 14,
@@ -194,11 +138,11 @@
     },
     {
       "number": 16,
-      "text": "Iar darul nu este ca urmarea păcatului unuia singur. Căci judecata, pornită de la unul singur, a dus la condamnare, dar darul harului, pornit de la multe abateri, a dus la îndreptățire."
+      "text": "Iar darul nu este ca ceea ce a venit printr-un singur om care a păcătuit. Căci judecata, pornită de la unul singur, a dus la condamnare, dar darul harului, pornit de la multe abateri, a dus la îndreptățire."
     },
     {
       "number": 17,
-      "text": "Căci, dacă prin abaterea unuia singur moartea a domnit prin acel unul, cu atât mai mult cei care primesc belșugul harului și darul dreptății vor domni în viață prin Unul singur, Isus Hristos."
+      "text": "Căci, dacă prin abaterea unuia singur moartea a domnit prin acela singur, cu atât mai mult cei care primesc belșugul harului și darul dreptății vor domni în viață prin Unul singur, Isus Hristos."
     },
     {
       "number": 18,
@@ -210,7 +154,7 @@
     },
     {
       "number": 20,
-      "text": "Legea a intrat între timp, pentru ca abaterea să se înmulțească; dar unde s-a înmulțit păcatul, harul a prisosit cu mult mai mult,"
+      "text": "Legea a intervenit, pentru ca abaterea să se înmulțească; dar unde s-a înmulțit păcatul, harul a prisosit cu mult mai mult,"
     },
     {
       "number": 21,
@@ -222,12 +166,138 @@
       "verse": 1,
       "term": "ἔχομεν",
       "decision": "Indicativul prezent este redat «avem pace cu Dumnezeu».",
-      "reason": "Textul principal SBLGNT și TR au ἔχομεν, o afirmație; aparatul păstrează ἔχωμεν, conjunctivul hortativ «să avem pace», în WH și Tregelles. Contextul continuă cu indicativele ἐσχήκαμεν și ἑστήκαμεν din 5:2.",
+      "reason": "Textul principal SBLGNT și RP au ἔχομεν, o afirmație; aparatul păstrează ἔχωμεν, conjunctivul hortativ «să avem pace», în WH și Tregelles.",
+      "alternatives": [
+        "să avem pace cu Dumnezeu"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Lectura principală este tradusă conform formei verbale, iar alternativa din aparat este descrisă fără a o amesteca în text."
+    },
+    {
+      "verse": 6,
+      "term": "Ἔτι γὰρ … ἔτι κατὰ καιρόν",
+      "decision": "pe când eram încă neputincioși, Hristos a murit, la vremea potrivită, pentru cei neevlavioși",
+      "reason": "SBLGNT păstrează ambele elemente Ἔτι și ἔτι; RP omite al doilea ἔτι, iar WH are Εἴ γε la început. Româna evită o repetare mecanică, păstrând sensul temporal.",
+      "alternatives": [
+        "Dacă într-adevăr, pe când eram neputincioși, Hristos a murit la vremea potrivită pentru cei neevlavioși"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează SBLGNT; diferențele din aparat sunt documentate."
+    },
+    {
+      "verse": 12,
+      "term": "ἐφʼ ᾧ πάντες ἥμαρτον",
+      "decision": "pentru că toți au păcătuit",
+      "reason": "Construcția ἐφʼ ᾧ poate fi discutată în nuanță, dar în contextul propoziției cauzale redarea «pentru că» este naturală și nu introduce în text o explicație doctrinară despre mecanismul transmiterii păcatului.",
+      "alternatives": [
+        "întrucât toți au păcătuit",
+        "pe baza faptului că toți au păcătuit"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Se păstrează relația cauzală minimală și se evită glosarea confesională."
+    },
+    {
+      "verse": 13,
+      "term": "ἁμαρτία δὲ οὐκ ἐλλογεῖται",
+      "decision": "păcatul nu este pus în socoteală",
+      "reason": "ἐλλογέω are sens contabil de a pune în socoteală; «imputat» era tehnic și mai puțin natural în româna curentă.",
+      "alternatives": [
+        "păcatul nu este socotit"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează metafora contabilă fără jargon inutil."
+    },
+    {
+      "verse": 16,
+      "term": "οὐχ ὡς διʼ ἑνὸς ἁμαρτήσαντος τὸ δώρημα",
+      "decision": "darul nu este ca ceea ce a venit printr-un singur om care a păcătuit",
+      "reason": "Construcția eliptică contrastează efectul darului cu ceea ce a venit prin păcatul unuia; formularea românească anterioară «ca urmarea păcatului unuia singur» era mai interpretativă.",
+      "alternatives": [
+        "darul nu este ca urmarea păcatului unuia singur"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează elipsa comparativă și pregătește explicit contrastul judecată/dar."
+    },
+    {
+      "verse": 20,
+      "term": "νόμος δὲ παρεισῆλθεν",
+      "decision": "Legea a intervenit",
+      "reason": "παρεισέρχομαι exprimă intrarea pe lângă/în plus într-un fir deja în desfășurare; «a intervenit» este mai idiomatic decât «a intrat între timp».",
+      "alternatives": [
+        "Legea a intrat pe lângă aceasta",
+        "Legea a venit între timp"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Alegerea păstrează rolul inserării Legii în argument fără a-i adăuga o evaluare doctrinară."
     }
   ],
   "referenceNotes": [],
-  "alternateEndings": []
+  "alternateEndings": [],
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-08",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "GPT-5.6 Sol",
+      "runId": "emanus-nt-editorial-2026-08-08-rom-5-gpt56sol-2155",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 21,
+      "reviewed": 21,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:8a85290f4d23158747422d436f19028878c715f5220877e54351f8a4e137c8db"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Toate cele 21 de versete din ROM.5 au fost reverificate verset cu verset față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual, iar etaloanele românești declarate numai auxiliar."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "ROM.5.6 a fost punctuat pentru a păstra clar dublul reper temporal fără repetare mecanică.",
+        "ROM.5.13, 5.16 și 5.17 au fost netezite pentru precizie lexicală și sintactică.",
+        "ROM.5.20 redă παρεισῆλθεν prin «a intervenit», mai natural în contextul argumentului."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și variantele din aparat nu sunt amestecate în textul de bază.",
+        "ROM.5.12 păstrează o redare cauzală minimă pentru ἐφʼ ᾧ fără glosarea unei teorii confesionale a păcatului originar.",
+        "Contrastul παράπτωμα/χάρισμα/κατάκριμα/δικαίωμα este menținut lexical și argumentativ."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu sursele auxiliare declarate; fără copiere de text românesc protejat"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "textDigest": "sha256:4bc7fc7c09e849a62d588b3c442371b4bd20ff3e30dd301959ec31392c22d50d",
+    "contentDigest": "sha256:53915126f33cd4cfc62c2391966eea402b5a4695b767877c2e49433d33dbe270"
+  }
 }
