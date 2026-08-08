@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,19 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
+    "completedOn": "2026-08-08",
+    "runId": "emanus-nt-editorial-2026-08-08-rom-3",
+    "engineVersion": "4.0.0",
+    "reviewLevel": "in_review",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,7 +102,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 31 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,8 +143,8 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:a78c438d9ec46a180f25f8a91f5037f0d55bfa8c5bd76ebe83c4f488f4f8e51a",
-    "contentDigest": "sha256:56be085b680cd6c1a2ac6eeab11b97dbeab9a49c7525e45ce11cb2660657c261"
+    "textDigest": "sha256:5781d24fbf1bd985788483bb834a68a716acee101deef6206c22fe2fb4f28b43",
+    "contentDigest": "sha256:999bb442830089eb8cdca0db45c6cb4eeaf5ad26aa7f007a5c77bd9ba8d4d822"
   },
   "verses": [
     {
@@ -149,7 +153,7 @@
     },
     {
       "number": 2,
-      "text": "Este mare, în toate privințele. Mai întâi, fiindcă lor le-au fost încredințate cuvintele lui Dumnezeu."
+      "text": "Este mare, în toate privințele. Mai întâi, pentru că lor le-au fost încredințate cuvintele lui Dumnezeu."
     },
     {
       "number": 3,
@@ -157,11 +161,11 @@
     },
     {
       "number": 4,
-      "text": "Nicidecum! Dimpotrivă, Dumnezeu să fie găsit adevărat, iar orice om, mincinos, după cum este scris: „Ca să fii găsit drept în cuvintele Tale și să biruiești când ești judecat.”"
+      "text": "Nicidecum! Dimpotrivă, Dumnezeu să fie găsit adevărat, iar orice om mincinos, după cum este scris: „Ca să fii găsit drept în cuvintele Tale și să biruiești când ești judecat.”"
     },
     {
       "number": 5,
-      "text": "Dar, dacă nedreptatea noastră scoate în evidență dreptatea lui Dumnezeu, ce vom spune? Oare este nedrept Dumnezeu când aduce mânia? Vorbesc în felul oamenilor."
+      "text": "Dar, dacă nedreptatea noastră pune în lumină dreptatea lui Dumnezeu, ce vom spune? Oare este nedrept Dumnezeu când aduce mânia? Vorbesc omenește."
     },
     {
       "number": 6,
@@ -173,11 +177,11 @@
     },
     {
       "number": 8,
-      "text": "Și de ce să nu spunem: „Să facem cele rele ca să vină cele bune”, așa cum suntem defăimați și cum susțin unii că spunem? Condamnarea lor este dreaptă."
+      "text": "Și de ce să nu spunem, așa cum suntem defăimați și cum susțin unii că spunem: „Să facem cele rele ca să vină cele bune”? Condamnarea lor este dreaptă."
     },
     {
       "number": 9,
-      "text": "Atunci ce? Suntem noi mai buni decât ei? Nu, în nici un caz. Pentru că am avertizat înainte atât evreii, cât și grecii că toți sunt sub păcat."
+      "text": "Atunci ce? Suntem noi în avantaj? Nicidecum! Căci am arătat mai înainte că toți, atât iudeii, cât și grecii, sunt sub păcat,"
     },
     {
       "number": 10,
@@ -193,7 +197,7 @@
     },
     {
       "number": 13,
-      "text": "Gâtul lor este un mormânt deschis; cu limbile lor au înșelat; venin de vipere este sub buzele lor;"
+      "text": "Gâtul lor este un mormânt deschis; cu limbile lor înșală; venin de vipere este sub buzele lor;"
     },
     {
       "number": 14,
@@ -205,11 +209,11 @@
     },
     {
       "number": 16,
-      "text": "Distrugerea și mizeria sunt în căile lor."
+      "text": "distrugerea și nenorocirea sunt pe căile lor;"
     },
     {
       "number": 17,
-      "text": "și n-au cunoscut calea păcii."
+      "text": "iar calea păcii n-au cunoscut-o."
     },
     {
       "number": 18,
@@ -241,11 +245,11 @@
     },
     {
       "number": 25,
-      "text": "pe care Dumnezeu l-a trimis să fie o jertfă ispășitoare prin credința în sângele Său, pentru o demonstrație a neprihănirii Lui, prin trecerea păcatelor anterioare, în Dumnezeu."
+      "text": "pe care Dumnezeu L-a rânduit ca jertfă de ispășire, prin credință, în sângele Lui, pentru arătarea dreptății Sale, prin trecerea cu vederea a păcatelor săvârșite mai înainte,"
     },
     {
       "number": 26,
-      "text": "în îngăduința lui Dumnezeu, ca dovadă a dreptății Sale în vremea de acum, astfel încât El să fie drept și să-l îndreptățească pe cel ce are credință în Isus."
+      "text": "în îngăduința lui Dumnezeu, pentru arătarea dreptății Sale în vremea de acum, ca El să fie drept și să-l îndreptățească pe cel care are credință în Isus."
     },
     {
       "number": 27,
@@ -257,11 +261,11 @@
     },
     {
       "number": 29,
-      "text": "Sau este El numai Dumnezeul iudeilor? Nu este și al neamurilor? Da, și al neamurilor,"
+      "text": "Sau este Dumnezeu numai al iudeilor? Nu este și al neamurilor? Da, și al neamurilor,"
     },
     {
       "number": 30,
-      "text": "de vreme ce este un singur Dumnezeu, care îi va îndreptăți pe cei circumciși din credință și pe cei necircumciși prin credință."
+      "text": "de vreme ce este un singur Dumnezeu, care-i va îndreptăți pe cei circumciși prin credință și pe cei necircumciși prin credință."
     },
     {
       "number": 31,
