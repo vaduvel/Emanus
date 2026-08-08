@@ -121,7 +121,7 @@ export const inselatL1: Lesson = {
       bubbles: [
         { from: "guide", text: "Nu ți se cere să te rogi frumos în zilele astea." },
         { from: "guide", text: "În Psalmi sunt rugăciuni scrise de oameni trădați de prieteni apropiați. Sunt aspre. Nu au fost șterse din carte." },
-        { from: "guide", text: "Poți să Îți spui exact ce simți, inclusiv că ești furios. Dumnezeu nu Se sperie și nu Se supără." }
+        { from: "guide", text: "Poți să Îi spui exact ce simți, inclusiv că ești furios. Dumnezeu nu Se sperie și nu Se supără." }
       ]
     },
     {
@@ -372,7 +372,7 @@ export const inselatL3: Lesson = {
       bubbles: [
         { from: "guide", text: "Lumea măsoară finalul în două feluri: ori ați rămas împreună, ori nu." },
         { from: "guide", text: "Dumnezeu se uită la altceva: ce fel de om ieși tu din lunile astea." },
-        { from: "guide", text: "Poți să rămâi împreună și să ieși amarățit pe viață. Și poți să te desperți și să nu duci ură mai departe. Finalul nu spune totul." }
+        { from: "guide", text: "Poți să rămâi împreună și să ieși amărât pe viață. Și poți să te desparți și să nu duci ură mai departe. Finalul nu spune totul." }
       ]
     },
     {
