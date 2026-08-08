@@ -4,40 +4,40 @@ Statut: `in_review` — **nu este aprobare de publicare**.
 
 Data: `2026-08-08`
 
-Reviewer: `Codex / GPT-5` (`ai`; rulare: `emanus-nt-editorial-2026-08-08-rom-6`)
+Reviewer: `GPT-5.6 Sol` (`ai`; rulare: `emanus-nt-editorial-2026-08-08-rom-6-gpt56sol-2215`)
 
 ## Surse consultate
 
-Toate cele 23 de versete au fost confruntate cu SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost repere auxiliare. **NTR nu a fost consultată.**
+Toate cele 23 de versete au fost reverificate față de SBLGNT 1.2 și aparatul critic. Textus Receptus a fost folosit numai ca martor textual. BTF și Cornilescu 1924 au fost repere auxiliare de contrast; NTR nu a fost folosită ca benchmark. Nu s-a copiat o traducere românească.
 
-Hash snapshot: `29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424`.
+Snapshot NT: `docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip`; SHA-256: `29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424`.
 
 ## Decizii pe verset
 
 | Referință | Ancoră SBLGNT verificată | Decizie |
 | --- | --- | --- |
-| ROM.6.1 | `ἐπιμένωμεν τῇ ἁμαρτίᾳ` | Întrebarea folosește conjunctivul: „Să rămânem în păcat?”. |
-| ROM.6.2 | `ἀπεθάνομεν τῇ ἁμαρτίᾳ` | Moartea față de păcat și imposibilitatea de a mai trăi în el sunt păstrate. |
-| ROM.6.3 | `ἐβαπτίσθημεν εἰς Χριστὸν ... εἰς τὸν θάνατον` | Botezul în Hristos Isus și în moartea Lui sunt redate. |
-| ROM.6.4 | `συνετάφημεν ... ἐν καινότητι ζωῆς` | Îngroparea împreună cu Hristos și umblarea în noutatea vieții sunt păstrate. |
-| ROM.6.5 | `σύμφυτοι ... ἀναστάσεως` | Unirea cu Hristos în asemănarea morții și a învierii Lui este redată. |
-| ROM.6.6 | `ὁ παλαιὸς ... καταργηθῇ` | Omul vechi răstignit și desființarea puterii trupului păcatului sunt păstrate. |
-| ROM.6.7 | `δεδικαίωται ἀπὸ τῆς ἁμαρτίας` | Eliberarea celui mort de păcat redă efectul perfectului pasiv. |
-| ROM.6.8 | `σὺν Χριστῷ ... συζήσομεν` | Moartea și viața împreună cu Hristos sunt păstrate. |
-| ROM.6.9 | `θάνατος ... οὐκέτι κυριεύει` | Învierea lui Hristos și lipsa stăpânirii morții asupra Lui sunt redate. |
-| ROM.6.10 | `τῇ ἁμαρτίᾳ ... ἐφάπαξ` | Moartea o dată pentru totdeauna față de păcat și viața pentru Dumnezeu sunt păstrate. |
-| ROM.6.11 | `εἶναι νεκροὺς ... ἐν Χριστῷ Ἰησοῦ` | Credincioșii se socotesc morți față de păcat și vii pentru Dumnezeu; adaosul TR nu intră în text. |
-| ROM.6.12 | `μὴ ... βασιλευέτω ... ὑπακούειν` | Porunca să nu domnească păcatul în trupul muritor este păstrată fără adaosul TR. |
-| ROM.6.13 | `παριστάνετε ... ὅπλα δικαιοσύνης` | Mădularele nu sunt oferite păcatului, ci lui Dumnezeu ca arme ale dreptății. |
-| ROM.6.14 | `οὐ κυριεύσει ... ὑπὸ χάριν` | Lipsa stăpânirii păcatului, sub har și nu sub Lege, este redată. |
-| ROM.6.15 | `ἁμαρτήσωμεν ... μὴ γένοιτο` | Întrebarea la conjunctiv și respingerea fermă sunt păstrate. |
-| ROM.6.16 | `δούλους εἰς ὑπακοήν` | Slujirea celui ascultat, spre moarte ori dreptate, este reprodusă semantic. |
-| ROM.6.17 | `τύπον διδαχῆς` | Ascultarea din inimă de modelul învățăturii căruia le-au fost încredințați este păstrată. |
-| ROM.6.18 | `ἐλευθερωθέντες ... ἐδουλώθητε` | Eliberarea de păcat și slujirea dreptății sunt redate. |
-| ROM.6.19 | `ἀκαθαρσίᾳ ... ἀνομίᾳ ... ἁγιασμόν` | Paralelismul punerii mădularelor la dispoziția nelegiuirii, apoi a dreptății spre sfințire, este păstrat. |
-| ROM.6.20 | `ἐλεύθεροι ... τῇ δικαιοσύνῃ` | Libertatea față de dreptate a robilor păcatului este redată. |
-| ROM.6.21 | `τίνα ... καρπὸν ... τέλος ... θάνατος` | Rodul rușinos și sfârșitul lui, moartea, sunt păstrate. |
-| ROM.6.22 | `καρπὸν ... εἰς ἁγιασμόν ... ζωὴν αἰώνιον` | Rodul spre sfințire și sfârșitul, viața veșnică, sunt redate. |
-| ROM.6.23 | `ὀψώνια ... χάρισμα τοῦ θεοῦ` | Plata păcatului este contrastată cu darul lui Dumnezeu, viața veșnică în Hristos Isus. |
+| ROM.6.1 | `ἐπιμένωμεν τῇ ἁμαρτίᾳ` | Păstrat conjunctivul deliberativ „Să rămânem”; forma receptă diferită rămâne în notă. |
+| ROM.6.2 | `ἀπεθάνομεν τῇ ἁμαρτίᾳ` | Păstrată moartea față de păcat și imposibilitatea continuării în el. |
+| ROM.6.3 | `ἐβαπτίσθημεν εἰς Χριστὸν Ἰησοῦν … θάνατον` | Păstrat botezul în Hristos Isus și în moartea Lui. |
+| ROM.6.4 | `συνετάφημεν … ἐν καινότητι ζωῆς περιπατήσωμεν` | Păstrate îngroparea împreună și umblarea în noutatea vieții. |
+| ROM.6.5 | `σύμφυτοι γεγόναμεν τῷ ὁμοιώματι` | Clarificat ca unire cu El printr-o moarte și înviere asemănătoare cu ale Lui; metafora lui `σύμφυτοι` este documentată. |
+| ROM.6.6 | `ὁ παλαιὸς … ἄνθρωπος συνεσταυρώθη` | Păstrate omul vechi răstignit împreună și slăbirea trupului păcatului. |
+| ROM.6.7 | `δεδικαίωται ἀπὸ τῆς ἁμαρτίας` | Păstrat contextual „a fost eliberat de păcat”; alternativa juridică este documentată. |
+| ROM.6.8 | `ἀπεθάνομεν σὺν Χριστῷ … συζήσομεν` | Păstrate moartea și viața împreună cu Hristos. |
+| ROM.6.9 | `θάνατος αὐτοῦ οὐκέτι κυριεύει` | Păstrată lipsa stăpânirii morții asupra lui Hristos înviat. |
+| ROM.6.10 | `ὃ … ἀπέθανεν … ὃ … ζῇ` | Eliminat calc-ul „moartea pe care a murit-o”; redat idiomatic „murind… iar trăind…”. |
+| ROM.6.11 | `ἐν Χριστῷ Ἰησοῦ` | Păstrat SBLGNT fără adaosul RP/TR `τῷ κυρίῳ ἡμῶν`. |
+| ROM.6.12 | `ὑπακούειν ταῖς ἐπιθυμίαις αὐτοῦ` | Păstrat textul critic fără extinderea RP/TR `αὐτῇ ἐν`. |
+| ROM.6.13 | `ὡσεὶ ἐκ νεκρῶν ζῶντας` | Netezit la „ca unii vii dintre cei morți”; `ὡσεὶ` rămâne comparativ. |
+| ROM.6.14 | `οὐ … ὑπὸ νόμον ἀλλὰ ὑπὸ χάριν` | Păstrat contrastul Lege–har și lipsa stăpânirii păcatului. |
+| ROM.6.15 | `ἁμαρτήσωμεν` | Păstrat deliberativ „Să păcătuim?”; viitorul recept rămâne doar variantă. |
+| ROM.6.16 | `δούλους εἰς ὑπακοήν … ἁμαρτίας … ὑπακοῆς` | Păstrată alegerea robiei față de păcat sau ascultare. |
+| ROM.6.17 | `τύπον διδαχῆς … παρεδόθητε` | Păstrat „modelul de învățătură căruia i-ați fost încredințați”. |
+| ROM.6.18 | `ἐλευθερωθέντες … ἐδουλώθητε τῇ δικαιοσύνῃ` | Păstrate eliberarea de păcat și robia față de dreptate. |
+| ROM.6.19 | `ἀσθένειαν τῆς σαρκὸς … εἰς ἁγιασμόν` | Păstrată slăbiciunea firii și orientarea spre sfințire. |
+| ROM.6.20 | `δοῦλοι … ἁμαρτίας … ἐλεύθεροι … δικαιοσύνῃ` | Păstrat contrastul robie față de păcat / libertate față de dreptate. |
+| ROM.6.21 | `τίνα … καρπὸν … τὸ τέλος … θάνατος` | Păstrate întrebarea despre rod și concluzia morții. |
+| ROM.6.22 | `καρπὸν … εἰς ἁγιασμόν … ζωὴν αἰώνιον` | Păstrate rodul spre sfințire și sfârșitul vieții veșnice. |
+| ROM.6.23 | `ὀψώνια … θάνατος … χάρισμα … ζωὴ αἰώνιος` | Păstrat contrastul plata păcatului / darul lui Dumnezeu în Hristos Isus. |
 
-Toate cele 23 de versete din ROM.6 au fost revizuite semantic. Capitolul rămâne `in_review` și `public: false`.
+Toate cele 23 de versete din ROM.6 au revizie AI trasabilă pentru această rulare. Capitolul rămâne `status: "in_review"` și `public: false` până la poarta editorială globală a NT.
