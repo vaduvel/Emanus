@@ -61,7 +61,7 @@
       }
     ],
     "batchConsultation": {
-      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-2TH.3.md",
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-08-2TH.3.md",
       "consultedBenchmarkIds": [
         "CORNILESCU-1924",
         "BTF"
@@ -92,13 +92,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-2th-3",
+      "runId": "emanus-nt-editorial-2026-08-08-2th-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -112,14 +112,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
+      "scope": "SBLGNT și aparatul au fost confruntate direct, verset cu verset; TR a fost verificat numai ca martor de variante. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost rescrise toate cele 18 versete pentru a elimina coruperile sintactice, diacriticele greșite și calcurile englezești.",
-        "Au fost păstrate distincțiile lexicale relevante, inclusiv contrastul dintre muncă și amestecul în treburile altora din versetul 11.",
-        "Diferențele dintre SBLGNT și Textus Receptus au fost verificate direct și nu au fost nivelate tacit în română."
+        "Au fost reverificate toate cele 18 versete față de SBLGNT și aparat; au fost ajustate v. 3 și v. 6 pentru a nu impune o interpretare a termenului ambiguu ori a tradiției.",
+        "Sunt păstrate contrastul dintre muncă și amestecul în treburile altora din v. 11 și caracterul condițional al v. 10.",
+        "Diferențele dintre SBLGNT și TR au fost verificate direct și nu au fost nivelate tacit în română."
       ]
     },
     "theologicalContext": {
@@ -137,14 +137,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație"
+      "method": "redactare editorială AI din SBLGNT și aparat; WEBP și etaloanele românești au fost folosite numai pentru comparație"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "textDigest": "sha256:4a46c9b750b9fb260944e766f471e803ce08567fc2a1e552930b9e14ed8c08f9",
-    "contentDigest": "sha256:88984cb7cf6754d68dac730d29ccad961db71c3d874d0d1781275ef36cfa934f"
+    "textDigest": "sha256:7b8ad9b7b44815a5f36c0480f02ceb35e521565488c7f53dc0f6697c8d1ad96e",
+    "contentDigest": "sha256:4e7dc506cf49d7c3ad72b6d96b7fef2e466ee6d3eae769e72dd30432d966ea34"
   },
   "verses": [
     {
@@ -157,7 +157,7 @@
     },
     {
       "number": 3,
-      "text": "Dar Domnul este credincios; El vă va întări și vă va păzi de cel rău."
+      "text": "Dar Domnul este credincios; El vă va întări și vă va păzi de rău."
     },
     {
       "number": 4,
@@ -169,7 +169,7 @@
     },
     {
       "number": 6,
-      "text": "Vă poruncim, fraților, în numele Domnului nostru Isus Hristos, să vă îndepărtați de orice frate care trăiește în neorânduială, fără să urmeze tradiția primită de la noi."
+      "text": "Vă poruncim, fraților, în numele Domnului nostru Isus Hristos, să vă îndepărtați de orice frate care umblă în neorânduială și nu urmează tradiția primită de la noi."
     },
     {
       "number": 7,
@@ -261,13 +261,13 @@
     },
     {
       "verse": 6,
-      "term": "variantă textuală SBLGNT/TR: παρελάβοσαν / παρέλαβε",
+      "term": "variantă textuală SBLGNT/TR: παρελάβοσαν / παρέλαβον",
       "decision": "„tradiția primită de la noi”",
       "alternatives": [
-        "TR-2TH din snapshot are singularul παρέλαβε: „a primit”.",
+        "TR-2TH din snapshot are pluralul παρέλαβον: „au primit”.",
         "Aparatul SBLGNT înregistrează și παρελάβετε, respectiv παρέλαβον, în alți martori."
       ],
-      "reason": "SBLGNT are pluralul παρελάβοσαν, iar TR-ul fixat are singularul παρέλαβε. Româna formulează neutru participiul „primită”, fără să introducă lectura singulară; diferența de persoană rămâne consemnată explicit în notă.",
+      "reason": "SBLGNT are pluralul παρελάβοσαν, iar TR-ul fixat are pluralul παρέλαβον. Româna formulează neutru participiul „primită”, fără să pretindă rezolvarea neobișnuitei persoane a lecturii SBLGNT; diferența rămâne consemnată explicit în notă.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "SBLGNT-2TH, aparatul și TR-2TH au fost verificate direct; textul principal urmează lectura SBLGNT."
