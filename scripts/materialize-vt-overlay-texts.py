@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Materializează textul biblic de lucru pentru toate cele 29 de cărți overlay VT.
 
-Judecători–Daniel sunt Biblia Emanus stabilă din sursa canonică istorică.
+Judecători–Daniel provin dintr-un candidat Biblia Emanus istoric și rămân
+`temporary-editorial` până la un fresh re-audit în corpusul canonic curent.
 Pentru Osea–Maleahi, fiecare carte trece automat la Biblia Emanus numai dacă
 toate capitolele ei canonice există în worktree și sunt `BE/published/public`
 cu review complet aprobat. Altfel, cartea rămâne explicit `temporary-editorial`
@@ -19,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "data" / "biblia-emanus"
 OUT = ROOT / "packages" / "shared" / "src" / "bible" / "generated" / "vtCanonicalText"
 
-ESTABLISHED_BE_BOOKS = [
+HISTORICAL_BE_CANDIDATE_BOOKS = [
     ("judecatori", "JDG", "Judecători", 7, 21),
     ("imparati2", "2KI", "2 Împărați", 12, 25),
     ("cronici1", "1CH", "1 Cronici", 13, 29),
@@ -168,11 +169,11 @@ def write_index(entries: list[tuple[str, str, str, int, int, int, bool]]) -> Non
     lines = ["// GENERATED de scripts/materialize-vt-overlay-texts.py."]
     for book_id, *_ in entries:
         lines.append(f'import {{ {symbol(book_id)} }} from "./{book_id}Text.js"')
-    lines += ["", 'export type OverlayTextStage = "biblia-emanus" | "temporary-editorial"', "", "export interface CanonicalOverlayTextBook {", "  bookId: string", "  bibleEmanusBookId: string", "  name: string", "  order: number", "  chapterCount: number", "  verseCount: number", "  chapters: Readonly<Record<number, readonly string[]>>", "  textStage: OverlayTextStage", "  translationLabel: string", "}", "", "export const VT_CANONICAL_TEXT_BOOKS: readonly CanonicalOverlayTextBook[] = ["]
+    lines += ["", 'export type OverlayTextStage = "biblia-emanus" | "temporary-editorial"', "", "export interface CanonicalOverlayTextBook {", "  bookId: string", "  bibleEmanusBookId: string", "  name: string", "  order: number", "  chapterCount: number", "  verseCount: number", "  chapters: Readonly<Record<number, readonly string[]>>", "  textStage: OverlayTextStage", "  translationLabel: string", "}", "", f"const TEMP_LABEL = {ts_string(TEMP_LABEL)}", "", "export const VT_CANONICAL_TEXT_BOOKS: readonly CanonicalOverlayTextBook[] = ["]
     for book_id, code, name, order, chapters, verses, temporary in entries:
         stage = "temporary-editorial" if temporary else "biblia-emanus"
-        label = TEMP_LABEL if temporary else BE_LABEL
-        lines.append(f"  {{ bookId: {ts_string(overlay_book_id(book_id))}, bibleEmanusBookId: {ts_string(code)}, name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, verseCount: {verses}, chapters: {symbol(book_id)}, textStage: {ts_string(stage)}, translationLabel: {ts_string(label)} }},")
+        label = "TEMP_LABEL" if temporary else ts_string(BE_LABEL)
+        lines.append(f"  {{ bookId: {ts_string(overlay_book_id(book_id))}, bibleEmanusBookId: {ts_string(code)}, name: {ts_string(name)}, order: {order}, chapterCount: {chapters}, verseCount: {verses}, chapters: {symbol(book_id)}, textStage: {ts_string(stage)}, translationLabel: {label} }},")
     lines += ["] as const", "", "export const VT_CANONICAL_TEXT_BY_BOOK = new Map(", "  VT_CANONICAL_TEXT_BOOKS.map((book) => [book.bookId, book] as const),", ")", "", "export const VT_TEMPORARY_TEXT_BOOKS = VT_CANONICAL_TEXT_BOOKS.filter(", '  (book) => book.textStage === "temporary-editorial",', ")", "", "export const VT_CANONICAL_TEXT_BLOCKED = [] as const", ""]
     (OUT / "index.ts").write_text("\n".join(lines), encoding="utf-8")
 
@@ -184,9 +185,12 @@ def main() -> None:
     entries: list[tuple[str, str, str, int, int, int, bool]] = []
     total_chapters = total_verses = 0
 
-    for book_id, code, name, order, chapters in ESTABLISHED_BE_BOOKS:
-        verses = write_book(args.source_ref, book_id, code, chapters, temporary=False, local=False)
-        entries.append((book_id, code, name, order, chapters, verses, False))
+    # Candidatul istoric rămâne text de lucru până la fresh re-audit în
+    # corpusul canonic curent. Un vechi `published` nu este suficient pentru
+    # eticheta Biblia Emanus după review-ul final de conținut.
+    for book_id, code, name, order, chapters in HISTORICAL_BE_CANDIDATE_BOOKS:
+        verses = write_book(args.source_ref, book_id, code, chapters, temporary=True, local=False)
+        entries.append((book_id, code, name, order, chapters, verses, True))
         total_chapters += chapters
         total_verses += verses
 
