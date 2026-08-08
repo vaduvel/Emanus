@@ -41,7 +41,8 @@ import type { Lesson } from "../domain.js"
  * ----------------------
  * Toate versetele sunt verificate după Cornilescu 1924. Ioan 8:34 este citat
  * doar ca vorbire directă, fără rama „le-a răspuns", pentru că rama conține
- * Numele în forma din traducere.
+ * Numele în forma din traducere. Eclesiastul 4:10 păstrează forma „să-l
+ * ridice", cum stă în text; nu se desface în „să îl ridice".
  */
 
 export const clarificareaDependenteiL1: Lesson = {
@@ -126,7 +127,7 @@ export const clarificareaDependenteiL1: Lesson = {
         { from: "guide", text: "Două explicații circulă peste tot și amândouă sunt comode." },
         { from: "guide", text: "Prima: «ești doar leneș și fără caracter, strânge din dinți». Asta nu explică de ce oameni cu voință de fier cad exact aici." },
         { from: "guide", text: "A doua: «este o boală, deci nu ai ce face și nu răspunzi de nimic». Asta te scutește de rușine și, în același timp, de speranță." },
-        { from: "guide", text: "Adevărul le taie pe amândouă: este și o robie reala a corpului și a minții, și o serie de alegeri care se pot schimba. Se lucrează și cu medicul, și cu Dumnezeu, și cu oamenii." }
+        { from: "guide", text: "Adevărul le taie pe amândouă: este și o robie reală a corpului și a minții, și o serie de alegeri care se pot schimba. Se lucrează și cu medicul, și cu Dumnezeu, și cu oamenii." }
       ]
     },
     {
@@ -134,7 +135,7 @@ export const clarificareaDependenteiL1: Lesson = {
       type: "truth_simple",
       order: 7,
       bubbles: [
-        { from: "guide", text: "Adevărul de astăzi: nu ești nici doar slăbănog, nici doar bolnav. Ești un om ținut de ceva și ținut se poate înceta." },
+        { from: "guide", text: "Adevărul de astăzi: nu ești nici doar slăbănog, nici doar bolnav. Ești un om ținut de ceva, iar strânsoarea aceea poate slăbi." },
         { from: "guide", text: "Dar mai întâi trebuie să vezi limpede ce te ține. Nu se scoate un cui pe care nu îl privești." }
       ]
     },
@@ -205,7 +206,7 @@ export const clarificareaDependenteiL1: Lesson = {
       type: "scripture",
       order: 13,
       scripture: {
-        text: "Mai bine doi decât unul, căci iau o plată cu atât mai bună pentru munca lor. Căci, dacă se întâmplă să cadă, se ridică unul pe altul; dar vai de cine este singur și cade fără să aibă pe altul care să îl ridice!",
+        text: "Mai bine doi decât unul, căci iau o plată cu atât mai bună pentru munca lor. Căci, dacă se întâmplă să cadă, se ridică unul pe altul; dar vai de cine este singur și cade fără să aibă pe altul care să-l ridice!",
         ref: "Eclesiastul 4:9-10"
       },
       bubbles: [
@@ -246,7 +247,7 @@ export const clarificareaDependenteiL1: Lesson = {
         ref: "1 Corinteni 6:12"
       },
       bubbles: [
-        { from: "guide", text: "Ține minte ultimele opt cuvinte. Sunt cea mai bună întrebare pe care ți-o poți pune despre orice, toată viața." }
+        { from: "guide", text: "Ține minte ultima jumătate. Este cea mai bună întrebare pe care ți-o poți pune despre orice, toată viața." }
       ]
     },
     {
