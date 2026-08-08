@@ -2,6 +2,31 @@ import type { ExplainedBookOverlay, ExplainedOverlayChapter } from "../explained
 
 const transcript = ".research/poonen-through-the-bible-OT/transcripts/daniel.txt"
 
+function restoreDaniel2(chapter: ExplainedOverlayChapter): ExplainedOverlayChapter {
+  if (chapter.number !== 2) return chapter
+  return {
+    ...chapter,
+    units: chapter.units.map((unit) => {
+      if (unit.from !== 31 || unit.to !== 49) return unit
+      return {
+        ...unit,
+        heading: "Statuia, cele patru imperii, cele zece regate și împărăția lui Hristos",
+        teaching:
+          "Statuia văzută de Nebucadnețar prezintă cursul imperiilor: capul de aur este Babilonul, pieptul și brațele de argint sunt Medo-Persia, pântecele și coapsele de bronz sunt Grecia, iar picioarele de fier sunt Imperiul Roman.\n\nLa sfârșit apar picioarele amestecate din fier și lut. Fierul vorbește despre dictatură, iar lutul despre democrație. Cele zece degete arată zece împărății care vor veni împreună la sfârșitul vremurilor, posibil în Europa, sub conducerea Antihristului, înainte de venirea lui Isus pe pământ.\n\nApoi o piatră tăiată fără ajutorul mâinilor lovește statuia și sfărâmă împărățiile omenești. Piatra devine un munte care umple pământul: este împărăția lui Hristos, ridicată de Dumnezeul cerului, o împărăție care nu va fi distrusă niciodată.\n\nViziunea arată că istoria politică nu merge la întâmplare. Dumnezeu i-a arătat unui împărat păgân cursul imperiilor până la sfârșit și venirea împărăției lui Hristos. Ultimul cuvânt nu îl au Babilonul, Roma sau Antihristul, ci Dumnezeu.",
+        source: {
+          kind: "poonen",
+          transcript,
+          anchor:
+            "Daniel 2 ... gold Babylon ... silver Medo-Persian ... bronze Grecian ... iron Roman Empire ... iron dictatorship clay democracy ... ten kingdoms possibly in Europe headed by the Antichrist ... rock ... reign of Christ",
+        },
+        explanationKind: "exposition",
+        forYourHeart:
+          "Nu-ți ancora speranța în niciun sistem politic. Toate împărățiile omenești trec; împărăția lui Hristos rămâne.",
+      }
+    }),
+  }
+}
+
 function restoreDaniel7(chapter: ExplainedOverlayChapter): ExplainedOverlayChapter {
   if (chapter.number !== 7) return chapter
   return {
@@ -132,7 +157,7 @@ export function restoreDanielPoonenFidelity(book: ExplainedBookOverlay): Explain
   return {
     ...book,
     chapters: book.chapters.map((chapter) =>
-      restoreDaniel12(restoreDaniel10(restoreDaniel9(restoreDaniel7(chapter)))),
+      restoreDaniel12(restoreDaniel10(restoreDaniel9(restoreDaniel7(restoreDaniel2(chapter))))),
     ),
   }
 }
