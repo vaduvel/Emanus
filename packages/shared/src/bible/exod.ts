@@ -39,6 +39,7 @@ import { EXOD_37 } from "./exod37.js"
 import { EXOD_38 } from "./exod38.js"
 import { EXOD_39 } from "./exod39.js"
 import { EXOD_40 } from "./exod40.js"
+import { reviewExodExplanations } from "./exod21ExplanationReview.js"
 
 /*
  * Cartea Exod (Ieșirea).
@@ -47,8 +48,8 @@ import { EXOD_40 } from "./exod40.js"
  * Explicația stă în fișierele de capitol: exod1.ts, exod2.ts, exod3.ts, ...
  *
  * Fișierul acesta doar adună cartea. Toate cele patruzeci de capitole sunt
- * importate aici și așezate în lista `chapters`, ca să nu fie nevoie de atins
- * index.ts.
+ * importate aici și așezate în lista `chapters`, iar review-urile editoriale
+ * finale pot corecta explicația fără să atingă textul biblic.
  */
 
 export { EXOD_1 } from "./exod1.js"
@@ -92,6 +93,49 @@ export { EXOD_38 } from "./exod38.js"
 export { EXOD_39 } from "./exod39.js"
 export { EXOD_40 } from "./exod40.js"
 
+const EXOD_CHAPTERS = reviewExodExplanations([
+  EXOD_1,
+  EXOD_2,
+  EXOD_3,
+  EXOD_4,
+  EXOD_5,
+  EXOD_6,
+  EXOD_7,
+  EXOD_8,
+  EXOD_9,
+  EXOD_10,
+  EXOD_11,
+  EXOD_12,
+  EXOD_13,
+  EXOD_14,
+  EXOD_15,
+  EXOD_16,
+  EXOD_17,
+  EXOD_18,
+  EXOD_19,
+  EXOD_20,
+  EXOD_21,
+  EXOD_22,
+  EXOD_23,
+  EXOD_24,
+  EXOD_25,
+  EXOD_26,
+  EXOD_27,
+  EXOD_28,
+  EXOD_29,
+  EXOD_30,
+  EXOD_31,
+  EXOD_32,
+  EXOD_33,
+  EXOD_34,
+  EXOD_35,
+  EXOD_36,
+  EXOD_37,
+  EXOD_38,
+  EXOD_39,
+  EXOD_40,
+])
+
 export const EXOD: BibleBook = {
   id: "exod",
   name: "Exod",
@@ -99,46 +143,5 @@ export const EXOD: BibleBook = {
   order: 2,
   blurb:
     "Cartea ieșirii din robie. În ebraică se numește „Numele”, fiindcă începe cu oameni chemați pe nume. Aici Dumnezeu Se coboară în suferința unui popor, Își descoperă Numele, scoate cu mână tare, dă Legea și vine să locuiască în mijlocul alor Săi.",
-  chapters: [
-    EXOD_1,
-    EXOD_2,
-    EXOD_3,
-    EXOD_4,
-    EXOD_5,
-    EXOD_6,
-    EXOD_7,
-    EXOD_8,
-    EXOD_9,
-    EXOD_10,
-    EXOD_11,
-    EXOD_12,
-    EXOD_13,
-    EXOD_14,
-    EXOD_15,
-    EXOD_16,
-    EXOD_17,
-    EXOD_18,
-    EXOD_19,
-    EXOD_20,
-    EXOD_21,
-    EXOD_22,
-    EXOD_23,
-    EXOD_24,
-    EXOD_25,
-    EXOD_26,
-    EXOD_27,
-    EXOD_28,
-    EXOD_29,
-    EXOD_30,
-    EXOD_31,
-    EXOD_32,
-    EXOD_33,
-    EXOD_34,
-    EXOD_35,
-    EXOD_36,
-    EXOD_37,
-    EXOD_38,
-    EXOD_39,
-    EXOD_40,
-  ],
+  chapters: EXOD_CHAPTERS,
 }
