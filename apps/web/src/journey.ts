@@ -109,17 +109,35 @@ function daysBetween(fromIso: string, toIso: string): number {
  *
  * Ce s-a pierdut definitiv — drumuri terminate înainte de a schimba drumul — nu se
  * poate recupera. Nu a fost salvat niciodată.
+ *
+ * DE CE SE VERIFICĂ `raw` ȘI NU `s`:
+ *
+ * Ce iese din `JSON.parse` sau din nor NU are tipul pe care i-l dăm noi.
+ * `Partial<JourneyState>` e o promisiune despre date scrise de o versiune mai veche
+ * a aplicației, nu o garanție. Dacă verificăm pe `s`, compilatorul citește tipul
+ * declarat și consideră verificarea imposibilă: pentru el `emmausStationSeenAt` e
+ * `Record<string, string>`, deci `=== null` nu se poate întâmpla niciodată și e
+ * eroare de compilare, nu avertisment. În realitate se poate întâmpla foarte bine —
+ * exact de-aia există funcția asta. Verificăm deci pe valoarea netipizată, unde
+ * întrebarea are sens, și scriem rezultatul în `s`, unde tipul e din nou ferm.
+ *
+ * Asta a picat CI-ul o dată; typecheck-ul nu vede diferența dintre date pe care le
+ * scriem noi și date pe care doar le primim.
  */
 function normalizeJourneyState(parsed: Partial<JourneyState>): JourneyState {
   const s: JourneyState = { ...EMPTY, ...parsed }
+  const raw = parsed as Record<string, unknown>
 
-  if (!Array.isArray(s.completedLessonIds)) s.completedLessonIds = []
-  if (!Array.isArray(s.journal)) s.journal = []
-  if (!Array.isArray(s.prayers)) s.prayers = []
-  if (typeof s.emmausMaxStation !== "number" || s.emmausMaxStation < 1) s.emmausMaxStation = 1
-  if (s.emmausStationSeenAt === null || typeof s.emmausStationSeenAt !== "object") {
+  if (!Array.isArray(raw.completedLessonIds)) s.completedLessonIds = []
+  if (!Array.isArray(raw.journal)) s.journal = []
+  if (!Array.isArray(raw.prayers)) s.prayers = []
+  if (typeof raw.emmausMaxStation !== "number" || raw.emmausMaxStation < 1) {
+    s.emmausMaxStation = 1
+  }
+  if (typeof raw.emmausStationSeenAt !== "object" || raw.emmausStationSeenAt === null) {
     s.emmausStationSeenAt = {}
   }
+  if (typeof raw.crossVisitedAt !== "string") s.crossVisitedAt = null
 
   if (s.completedLessonIds.length === 0) {
     const recovered = new Set<string>()
