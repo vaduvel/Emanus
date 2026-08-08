@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08` (reverificare editorială)
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1ti-2`)
+`emanus-nt-editorial-2026-08-08-1ti-2`)
 
 ## Domeniu și surse
 
