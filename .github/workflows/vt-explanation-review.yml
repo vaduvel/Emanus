@@ -8,6 +8,7 @@ on:
       - "scripts/check-vt-explained-coverage.py"
       - "scripts/check-vt-legacy-provenance.mjs"
       - "scripts/check-vt-poonen-fidelity.mjs"
+      - "scripts/check-vt-chapter-by-chapter-review.mjs"
       - "scripts/check-vt-publication-runtime.mjs"
       - "docs/biblia-explicata/**"
       - "package.json"
@@ -45,6 +46,9 @@ jobs:
 
       - name: Verify source-doctrine fidelity
         run: pnpm check:vt-poonen-fidelity
+
+      - name: Verify all 929 chapters individually
+        run: pnpm check:vt-chapter-review
 
       - name: Verify publication copy and runtime separation
         run: pnpm check:vt-publication
