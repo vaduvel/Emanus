@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,19 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
+    "completedOn": "2026-08-08",
+    "runId": "emanus-nt-editorial-2026-08-08-rom-1",
+    "engineVersion": "4.0.0",
+    "reviewLevel": "in_review",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,7 +102,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 32 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 32 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,137 +143,137 @@
       "minimumSemantic": 0.41000612643816675,
       "minimumScore": 0.5818865265537531
     },
-    "textDigest": "sha256:8373a4edf860e9d31635b59b53738e41db8fd1c511614ca5c520cf5191a6377c",
-    "contentDigest": "sha256:6b9950fd0d81b164e20ffdfede10d6e9fa474004712bc9312f8820df51bc2100"
+    "textDigest": "sha256:50e415daa433e1a86179825e8bfb5e4d5e498f2dd5ecd76f3eae0c03d6876caa",
+    "contentDigest": "sha256:2be7d575db5993f09dc3a9e7fd7162fd695c6e2077ea19ea78a82f04b94d7104"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, rob al lui Hristos Isus, chemat să fie apostol, pus deoparte pentru Evanghelia lui Dumnezeu,"
+      "text": "Pavel, rob al lui Isus Hristos, chemat apostol, pus deoparte pentru Evanghelia lui Dumnezeu,"
     },
     {
       "number": 2,
-      "text": "pe care El a promis-o mai dinainte prin profeții Săi în Scripturile sfinte,"
+      "text": "pe care a promis-o mai dinainte prin profeții Săi în Sfintele Scripturi,"
     },
     {
       "number": 3,
-      "text": "despre Fiul Său, care s-a născut din sămânța lui David, după trup,"
+      "text": "despre Fiul Său, născut din sămânța lui David după trup,"
     },
     {
       "number": 4,
-      "text": "și a fost desemnat drept Fiu al lui Dumnezeu în putere, potrivit duhului sfințeniei, prin învierea dintre cei morți: Isus Hristos, Domnul nostru."
+      "text": "care a fost rânduit Fiu al lui Dumnezeu în putere, potrivit Duhului sfințeniei, prin învierea morților, Isus Hristos, Domnul nostru,"
     },
     {
       "number": 5,
-      "text": "Prin El am primit har și apostolie pentru ascultarea credinței între toate neamurile, de dragul Numelui Său,"
+      "text": "Prin El am primit har și apostolie pentru ascultarea credinței între toate neamurile, pentru Numele Lui,"
     },
     {
       "number": 6,
-      "text": "între care sunteți și voi, chemați să fiți ai lui Isus Hristos."
+      "text": "între care sunteți și voi, chemați ai lui Isus Hristos,"
     },
     {
       "number": 7,
-      "text": "Tuturor celor din Roma, iubiți de Dumnezeu, chemați să fie sfinți: har și pace vouă de la Dumnezeu, Tatăl nostru, și de la Domnul Isus Hristos!"
+      "text": "tuturor celor care sunt în Roma, iubiți de Dumnezeu, chemați sfinți: har și pace de la Dumnezeu, Tatăl nostru, și Domnul Isus Hristos."
     },
     {
       "number": 8,
-      "text": "Mai întâi, Îi mulțumesc Dumnezeului meu prin Isus Hristos pentru voi toți, fiindcă despre credința voastră se vestește în lumea întreagă."
+      "text": "Mai întâi, mulțumesc Dumnezeului meu prin Isus Hristos pentru voi toți, pentru că credința voastră este vestită în toată lumea."
     },
     {
       "number": 9,
-      "text": "Căci Dumnezeu, Căruia Îi slujesc în duhul meu în Evanghelia Fiului Său, îmi este martor că vă pomenesc neîncetat,"
+      "text": "Căci martor îmi este Dumnezeu, Căruia Îi slujesc în duhul meu în Evanghelia Fiului Său, că vă pomenesc neîncetat,"
     },
     {
       "number": 10,
-      "text": "cerând întotdeauna în rugăciunile mele ca, dacă este cu putință, să-mi fie în sfârșit deschisă calea, prin voia lui Dumnezeu, să vin la voi."
+      "text": "cerând în rugăciunile mele ca, într-un fel sau altul, să am acum, în sfârșit, parte de un drum bun, prin voia lui Dumnezeu, ca să vin la voi."
     },
     {
       "number": 11,
-      "text": "Căci tânjesc să vă văd, ca să vă împărtășesc vreun dar spiritual pentru întărirea voastră,"
+      "text": "Căci doresc mult să vă văd, ca să vă împărtășesc vreun dar spiritual spre întărirea voastră,"
     },
     {
       "number": 12,
-      "text": "adică să fim încurajați împreună între voi prin credința pe care o împărtășim, atât a voastră, cât și a mea."
+      "text": "adică să fim încurajați împreună între voi, prin credința fiecăruia, atât a voastră, cât și a mea."
     },
     {
       "number": 13,
-      "text": "Nu vreau să nu știți, fraților, că de multe ori mi-am propus să vin la voi, dar am fost împiedicat până acum, ca să am ceva rod și între voi, așa cum am și între celelalte neamuri."
+      "text": "Nu vreau să nu știți, fraților, că de multe ori mi-am propus să vin la voi, dar am fost împiedicat până acum, ca să am vreun rod și între voi, ca și între celelalte neamuri."
     },
     {
       "number": 14,
-      "text": "Le sunt dator și grecilor, și barbarilor, și celor înțelepți, și celor nepricepuți."
+      "text": "Sunt dator și grecilor, și barbarilor, și celor înțelepți, și celor fără minte."
     },
     {
       "number": 15,
-      "text": "Așadar, oricât de mult aș fi în mine, sunt nerăbdător să vă predic și vouă vestea bună care se află în Roma."
+      "text": "Astfel, cât depinde de mine, sunt gata să vă vestesc Evanghelia și vouă, celor din Roma."
     },
     {
       "number": 16,
-      "text": "Căci nu mi-e rușine de Evanghelia lui Hristos, pentru că este puterea lui Dumnezeu pentru mântuire pentru oricine crede, pentru Iudeu mai întâi, și pentru Grec."
+      "text": "Căci nu-mi este rușine de Evanghelie, pentru că este puterea lui Dumnezeu spre mântuire pentru oricine crede, întâi pentru iudeu și apoi pentru grec."
     },
     {
       "number": 17,
-      "text": "Căci în ea se descoperă dreptatea lui Dumnezeu din credință spre credință, după cum este scris: „Cel drept va trăi din credință.”"
+      "text": "Căci în ea se descoperă dreptatea lui Dumnezeu, din credință spre credință, după cum este scris: „Cel drept va trăi prin credință.”"
     },
     {
       "number": 18,
-      "text": "Căci mânia lui Dumnezeu se descoperă din cer împotriva oricărei lipse de evlavie și nedreptăți a oamenilor care înăbușă adevărul prin nedreptate,"
+      "text": "Căci mânia lui Dumnezeu se descoperă din cer împotriva oricărei neevlavii și nedreptăți a oamenilor care înăbușă adevărul în nedreptate,"
     },
     {
       "number": 19,
-      "text": "fiindcă ceea ce se poate cunoaște despre Dumnezeu este limpede între ei, căci Dumnezeu le-a făcut cunoscut."
+      "text": "fiindcă ceea ce se poate cunoaște despre Dumnezeu este manifest în ei, căci Dumnezeu le-a făcut cunoscut."
     },
     {
       "number": 20,
-      "text": "Căci lucrurile nevăzute ale lui, de la crearea lumii, sunt văzute clar, fiind percepute prin lucrurile care sunt făcute, chiar și puterea veșnică și divinitatea lui, pentru ca ele să fie fără scuză."
+      "text": "Căci cele nevăzute ale Lui, atât puterea Lui veșnică, cât și dumnezeirea Lui, se văd limpede de la facerea lumii, fiind înțelese prin cele făcute, astfel că ei sunt fără scuză."
     },
     {
       "number": 21,
-      "text": "Fiindcă, deși L-au cunoscut pe Dumnezeu, nu L-au glorificat ca Dumnezeu și nici nu I-au mulțumit, ci au ajuns deșerți în gândurile lor, iar inima lor fără pricepere s-a întunecat."
+      "text": "Fiindcă, deși L-au cunoscut pe Dumnezeu, nu L-au glorificat ca Dumnezeu și nici nu I-au mulțumit, ci au devenit deșerți în raționamentele lor și inima lor fără pricepere s-a întunecat."
     },
     {
       "number": 22,
-      "text": "Pretinzând că sunt înțelepți, au înnebunit"
+      "text": "Pretinzând că sunt înțelepți, au ajuns nebuni"
     },
     {
       "number": 23,
-      "text": "și au schimbat gloria Dumnezeului nepieritor cu asemănarea unui chip de om pieritor, de păsări, de animale cu patru picioare și de târâtoare."
+      "text": "și au schimbat gloria Dumnezeului nepieritor cu asemănarea chipului omului pieritor, al păsărilor, al animalelor cu patru picioare și al târâtoarelor."
     },
     {
       "number": 24,
-      "text": "De aceea, Dumnezeu i-a dat pradă necurăției, în poftele inimilor lor, ca trupurile lor să fie dezonorate între ei."
+      "text": "De aceea Dumnezeu i-a dat pradă necurăției, în poftele inimilor lor, ca trupurile lor să fie dezonorate între ei."
     },
     {
       "number": 25,
-      "text": "care au schimbat adevărul lui Dumnezeu cu o minciună, s-au închinat și au slujit mai degrabă creaturii decât Creatorului, care este binecuvîntat pentru totdeauna. Amin."
+      "text": "Ei au schimbat adevărul lui Dumnezeu cu minciuna și s-au închinat și au slujit creaturii în locul Creatorului, care este binecuvântat în veci. Amin."
     },
     {
       "number": 26,
-      "text": "Din acest motiv, Dumnezeu le-a dat la pasiuni josnice. Pentru femeile lor a schimbat funcția naturală în ceea ce este împotriva naturii."
+      "text": "De aceea Dumnezeu i-a dat pradă unor patimi de ocară; căci femeile lor au schimbat întrebuințarea firească într-una împotriva firii."
     },
     {
       "number": 27,
-      "text": "tot astfel și bărbații, părăsind folosirea firească a femeii, s-au aprins în pofta lor unii pentru alții; bărbați cu bărbați au săvârșit ceea ce este rușinos și au primit în ei înșiși răsplata cuvenită rătăcirii lor."
+      "text": "Tot astfel și bărbații, părăsind întrebuințarea firească a femeii, s-au aprins în pofta lor unii pentru alții; bărbați cu bărbați făcând lucruri rușinoase și primind în ei înșiși răsplata cuvenită rătăcirii lor."
     },
     {
       "number": 28,
-      "text": "Și, pentru că n-au găsit de cuviință să-L păstreze pe Dumnezeu în cunoașterea lor, Dumnezeu i-a dat pradă unei minți nevrednice, ca să facă lucruri nepotrivite."
+      "text": "Și, după cum nu au considerat demn să-L aibă pe Dumnezeu în cunoaștere, Dumnezeu i-a dat pradă unei minți nevrednice, să facă cele care nu se cuvin,"
     },
     {
       "number": 29,
-      "text": "fiind umplut de orice nedreptate, imoralitate sexuală, răutate, lăcomie, răutate; plin de invidie, crimă, ceartă, înșelăciune, obiceiuri rele, calomniatori secrete,"
+      "text": "fiind plini de orice nedreptate, răutate, lăcomie și ticăloșie; plini de invidie, crimă, ceartă, înșelăciune și răutate; șoptitori,"
     },
     {
       "number": 30,
-      "text": "defăimători, urâtori de Dumnezeu, obraznici, trufași, lăudăroși, născocitori de rele, neascultători de părinți,"
+      "text": "bârfitori, urâtori de Dumnezeu, obraznici, trufași, lăudăroși, născocitori de rele, neascultători de părinți,"
     },
     {
       "number": 31,
-      "text": "fără înțelegere, fără legământ, fără afecțiune naturală, neiertătoare, nemiloasă;"
+      "text": "fără minte, fără cuvânt, fără dragoste firească, fără milă;"
     },
     {
       "number": 32,
-      "text": "Deși cunosc hotărârea dreaptă a lui Dumnezeu, că cei care fac asemenea lucruri sunt vrednici de moarte, nu numai că le fac, ci îi și aprobă pe cei care le săvârșesc."
+      "text": "Deși cunosc rânduiala dreaptă a lui Dumnezeu, că cei care fac asemenea lucruri sunt vrednici de moarte, nu numai că le fac, ci și aprobă pe cei care le fac."
     }
   ],
   "editorialNotes": [
