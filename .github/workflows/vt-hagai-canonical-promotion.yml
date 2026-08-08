@@ -1,0 +1,101 @@
+name: VT Hagai Canonical Promotion
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vt-hagai-canonical-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  promote-hagai:
+    if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+
+      - name: Fetch legacy BE candidate branch
+        run: git fetch origin agent/biblia-emanus-ot-and-apocrypha:refs/remotes/origin/agent/biblia-emanus-ot-and-apocrypha
+
+      - name: Download source and comparison archives
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/hboWLC_current.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/ronbtf_current.zip https://ebible.org/Scriptures/ronbtf_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/ron1924_current.zip https://ebible.org/Scriptures/ron1924_usfm.zip
+
+      - name: Upgrade promoter to semantic source-drift verification
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/promote-minor-prophet-to-biblia-emanus.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''    fresh_lock = load_json(DATA / "minor-prophets-source-lock.json")\n    fresh_book = next(\n        (item for item in fresh_lock.get("books", []) if isinstance(item, dict) and item.get("bookId") == code),\n        None,\n    )\n    if not isinstance(fresh_book, dict):\n        fail(f"{code}: lipsește din minor-prophets-source-lock.json")\n    for key, label in (("webu", "WEBU"), ("wlc", "WLC")):\n        expected_payload = (fresh_book.get(label) or {}).get("sha256")\n        actual_payload = sha256_bytes(extracted[key])\n        if not isinstance(expected_payload, str) or actual_payload != expected_payload:\n            fail(\n                f"{code}: {label} source content drift: {actual_payload} != {expected_payload}; "\n                "fresh re-audit required before promotion"\n            )\n        print(f"{code}: {label} per-book USFM matches fresh source lock ({actual_payload})")\n\n    target_refs = sorted(parsed["webu"])\n'''
+          new = '''    lock_path = DATA / "minor-prophets-source-lock.json"\n    fresh_lock = load_json(lock_path)\n    fresh_book = next(\n        (item for item in fresh_lock.get("books", []) if isinstance(item, dict) and item.get("bookId") == code),\n        None,\n    )\n    if not isinstance(fresh_book, dict):\n        fail(f"{code}: lipsește din minor-prophets-source-lock.json")\n\n    lock_changed = False\n    for key, label in (("webu", "WEBU"), ("wlc", "WLC")):\n        expected_payload = (fresh_book.get(label) or {}).get("sha256")\n        actual_payload = sha256_bytes(extracted[key])\n        if isinstance(expected_payload, str) and actual_payload == expected_payload:\n            print(f"{code}: {label} per-book USFM matches fresh source lock ({actual_payload})")\n            continue\n\n        expected_texts: dict[tuple[int, int], str] = {}\n        for chapter in range(1, int(config["chapters"]) + 1):\n            source_chapter = load_json(REAUDIT / code / f"{chapter:02d}.json")\n            for item in source_chapter.get("verses", []):\n                ref_name = "productRef" if label == "WEBU" else "WLCRef"\n                text_name = "WEBU" if label == "WEBU" else "WLC"\n                ref_value = item.get(ref_name)\n                source_text = item.get(text_name)\n                if not isinstance(ref_value, str) or not isinstance(source_text, str):\n                    fail(f"{code}: source packet incomplet pentru {label} capitol {chapter}")\n                parts = ref_value.split(":")\n                if len(parts) != 2:\n                    fail(f"{code}: referință {label} invalidă: {ref_value}")\n                expected_texts[(int(parts[0]), int(parts[1]))] = source_text\n\n        actual_texts = parsed[key]\n        missing = sorted(set(expected_texts) - set(actual_texts))\n        extra = sorted(set(actual_texts) - set(expected_texts))\n        changed = sorted(\n            ref for ref in set(actual_texts) & set(expected_texts)\n            if actual_texts[ref] != expected_texts[ref]\n        )\n        if missing or extra or changed:\n            fail(\n                f"{code}: {label} parsed biblical text changed; missing={missing}, "\n                f"extra={extra}, changed={changed}. Fresh semantic re-audit required."\n            )\n\n        old_payload = expected_payload\n        fresh_book.setdefault(label, {})["sha256"] = actual_payload\n        evidence = fresh_book.setdefault("contentDriftEvidence", {})\n        evidence[label] = {\n            "verifiedOn": TODAY,\n            "previousRawUsfmSha256": old_payload,\n            "currentRawUsfmSha256": actual_payload,\n            "parsedVerseContentIdentical": True,\n            "verseCount": len(actual_texts),\n        }\n        lock_changed = True\n        print(\n            f"{code}: {label} raw USFM drift accepted only after "\n            f"{len(actual_texts)} parsed verses matched the reviewed snapshot"\n        )\n\n    if lock_changed:\n        lock_path.write_text(json.dumps(fresh_lock, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")\n\n    target_refs = sorted(parsed["webu"])\n'''
+          if old not in text:
+              if 'parsed biblical text changed' in text and 'contentDriftEvidence' in text:
+                  print('Promoter already has semantic source-drift verification.')
+              else:
+                  raise SystemExit('Expected per-book source gate not found')
+          else:
+              path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+
+      - name: Materialize Hagai from fresh semantic review
+        run: |
+          python3 scripts/promote-minor-prophet-to-biblia-emanus.py \
+            --book HAG \
+            --webu-zip /tmp/engwebp_current.zip \
+            --wlc-zip /tmp/hboWLC_current.zip \
+            --btf-zip /tmp/ronbtf_current.zip \
+            --cornilescu-zip /tmp/ron1924_current.zip
+
+      - name: Validate canonical Hagai publication gate
+        run: python3 scripts/check-biblia-emanus-book.py --book HAG
+
+      - name: Verify Hagai seal eligibility
+        run: python3 scripts/seal-biblia-emanus.py --book HAG --check
+
+      - name: Materialize VT catalog with promoted Hagai
+        run: python3 scripts/materialize-vt-overlay-texts.py --source-ref origin/agent/biblia-emanus-ot-and-apocrypha
+
+      - name: Validate full Biblia Emanus corpus
+        run: python3 scripts/check-biblia-emanus-corpus.py
+
+      - name: Validate VT reader integration
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+          pnpm check:vt-publication
+
+      - name: Commit canonical Hagai only after all gates pass
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            scripts/promote-minor-prophet-to-biblia-emanus.py \
+            docs/data/biblia-emanus/minor-prophets-source-lock.json \
+            docs/data/biblia-emanus/sources/ot-hag-2026-08-08-usfm.zip \
+            docs/data/biblia-emanus/source-lock.json \
+            docs/data/biblia-emanus/source-ledger.json \
+            docs/data/biblia-emanus/manifest.json \
+            docs/data/biblia-emanus/HAG.*.json \
+            docs/biblia-explicata/minor-prophets-reaudit/HAG-SEMANTIC-REVIEW-SUMMARY.json \
+            packages/shared/src/bible/generated/vtCanonicalText
+          git diff --cached --check
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "feat(bible): materialize canonical Hagai"
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
