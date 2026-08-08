@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "bookId": "HOS",
   "bookName": "Osea",
-  "status": "fresh-semantic-review-complete",
+  "status": "canonical-biblia-emanus-published",
   "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json",
   "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-APPROVAL.json",
   "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/HOS/reviews",
@@ -17,20 +17,31 @@
       "minor": 41
     }
   },
-  "runtimeCandidate": {
+  "reviewMaterialization": {
     "module": "packages/shared/src/bible/generated/vtCanonicalText/oseaReviewedText.ts",
     "symbol": "OSEA_REVIEWED_TEXT",
-    "adapter": "packages/shared/src/bible/overlayBibleBooks.ts",
-    "textStage": "temporary-editorial",
-    "translationLabel": "Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus",
-    "materializedFromFreshReview": true
+    "materializedFromFreshReview": true,
+    "purpose": "audit evidence; runtime source of truth is the canonical Biblia Emanus corpus"
+  },
+  "canonicalPublication": {
+    "chapterPattern": "docs/data/biblia-emanus/HOS.{1..14}.json",
+    "snapshot": "docs/data/biblia-emanus/sources/ot-hosea-2026-08-08-usfm.zip",
+    "snapshotSha256": "71112c63c27319b2d6fdb3399ce26cc4ec82f471447db8972775a60786cf9647",
+    "textStage": "biblia-emanus",
+    "translationLabel": "Biblia Emanus",
+    "published": true,
+    "public": true,
+    "canonicalGate": "passed",
+    "fullCorpusGate": "passed",
+    "readerIntegrationGate": "passed"
   },
   "promotion": {
     "candidateReady": true,
-    "promotionEligible": false,
-    "reason": "Fresh-source semantic review and runtime candidate are complete, but promotion to Biblia Emanus remains a separate editorial/publication gate."
+    "promotionEligible": true,
+    "promotionStatus": "promoted-to-biblia-emanus",
+    "reason": "Fresh-source semantic review, canonical source/benchmark snapshot, HOS publication gate, full Biblia Emanus corpus gate and VT reader integration gate all passed."
   },
-  "blockingCriticalRefsResolvedInCandidate": [
+  "blockingCriticalRefsResolved": [
     "2:12",
     "6:5",
     "8:10",
