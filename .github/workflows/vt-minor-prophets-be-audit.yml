@@ -49,6 +49,9 @@ jobs:
       - name: Split Osea into semantic-review chapters
         run: python3 scripts/split-minor-prophet-reaudit.py --book HOS
 
+      - name: Validate completed Osea reviewed candidate
+        run: python3 scripts/check-hosea-reviewed-candidate.py
+
       - name: Commit fresh source lock and Osea re-audit evidence
         run: |
           git config user.name "github-actions[bot]"
