@@ -39,6 +39,7 @@ jobs:
           pnpm check:bible-publication
           pnpm check:osea-reviewed-candidate
           pnpm check:vt-explained
+          pnpm check:vt-legacy-provenance
           pnpm check:vt-publication
           "$PYTHON_BIN" scripts/check-biblia-emanus-romanian-quality.py
           pnpm check:biblia-emanus
