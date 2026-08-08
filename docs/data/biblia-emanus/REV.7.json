@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,23 @@
       "romanianNaturalness": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-rev-7",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 17,
       "reviewed": 17,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 17 versete din REV.7 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -129,87 +129,77 @@
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:2bf6e0cab6928564f725fe130eae49c9009d23a32f6dd7f79d26f5085e1eef6b",
-    "contentDigest": "sha256:723e3a438352ee196958e50a1cd77936d6e820f542dc49eb0f6b47a5a0afc42f"
+    "textDigest": "sha256:f06c23848a363ec3989aa4ae716cb40fa77da9485aa1bee6ee4c36de57ac80cb",
+    "contentDigest": "sha256:4bb80a011a95167efbe2c7010711e252deb025df1aa04d4a8a25b13b5f2e08e5"
   },
   "verses": [
     {
       "number": 1,
-      "text": "După aceasta, am văzut patru îngeri stând în picioare în cele patru colțuri ale pământului, ținând cele patru vânturi ale pământului, astfel încât nici un vânt să nu sufle pe pământ, nici pe mare, nici pe vreun copac."
+      "text": "După aceasta am văzut patru îngeri stând la cele patru colțuri ale pământului și ținând cele patru vânturi ale pământului, ca să nu sufle vânt pe pământ, pe mare sau peste vreun copac."
     },
     {
       "number": 2,
-      "text": "Am văzut un alt înger înălțîndu-se de la răsăritul soarelui, cu pecetea Dumnezeului celui viu. El a strigat cu glas tare celor patru îngeri cărora li s-a dat să facă rău pământului și mării,"
+      "text": "Am văzut un alt înger urcând de la răsăritul soarelui, având pecetea Dumnezeului celui viu. El a strigat cu glas tare către cei patru îngeri cărora li se dăduse să vatăme pământul și marea,"
     },
     {
       "number": 3,
-      "text": "zicând: Nu vătăm pământul, nici marea, nici copacii, până ce nu vom pecetlui pe frunțile lor robii Dumnezeului nostru!„"
+      "text": "spunând: „Nu vătămați pământul, nici marea, nici copacii, până nu îi vom pecetlui pe frunte pe slujitorii Dumnezeului nostru!”"
     },
     {
       "number": 4,
-      "text": "Am auzit numărul celor pecetluiți, o sută patruzeci și patru de mii, pecetluiți din fiecare seminție a copiilor lui Israel."
+      "text": "Am auzit numărul celor pecetluiți: o sută patruzeci și patru de mii, pecetluiți din fiecare trib al fiilor lui Israel:"
     },
     {
       "number": 5,
-      "text": "din seminția lui Iuda, douăsprezece mii au fost pecetluiți din seminția lui Ruben douăsprezece mii, din seminția lui Gad douăsprezece mii,"
+      "text": "din tribul lui Iuda, douăsprezece mii pecetluiți; din tribul lui Ruben, douăsprezece mii; din tribul lui Gad, douăsprezece mii;"
     },
     {
       "number": 6,
-      "text": "din seminția lui Așer douăsprezece mii, din seminția lui Neftali douăsprezece mii, din seminția lui Manase douăsprezece mii,"
+      "text": "din tribul lui Așer, douăsprezece mii; din tribul lui Neftali, douăsprezece mii; din tribul lui Manase, douăsprezece mii;"
     },
     {
       "number": 7,
-      "text": "din seminția lui Simeon douăsprezece mii, din seminția lui Levi douăsprezece mii, din seminția lui Isahar douăsprezece mii,"
+      "text": "din tribul lui Simeon, douăsprezece mii; din tribul lui Levi, douăsprezece mii; din tribul lui Isahar, douăsprezece mii;"
     },
     {
       "number": 8,
-      "text": "din seminția lui Zabulon douăsprezece mii, din seminția lui Iosif douăsprezece mii, și din seminția lui Beniamin douăsprezece mii au fost pecetluiți."
+      "text": "din tribul lui Zabulon, douăsprezece mii; din tribul lui Iosif, douăsprezece mii; din tribul lui Beniamin, douăsprezece mii pecetluiți."
     },
     {
       "number": 9,
-      "text": "După aceste lucruri m-am uitat, și iată o mare mulțime, pe care nimeni n-a putut s-o numere, din orice neam și din toate semințiile, popoarele și limbile, stând în picioare înaintea scaunului de domnie și înaintea Mielului, îmbrăcați în robe albe, cu ramuri de palmier în mâinile lor."
+      "text": "După acestea m-am uitat și, iată, o mare mulțime, pe care nimeni nu putea s-o numere, din orice neam, trib, popor și limbă, stând înaintea tronului și înaintea Mielului, îmbrăcați în haine albe și având ramuri de palmier în mâini."
     },
     {
       "number": 10,
-      "text": "Ei strigau cu glas tare, zicând: Mântuirea să fie Dumnezeului nostru, care șade pe scaunul de domnie, Mielului!”"
+      "text": "Strigau cu glas mare: „Mântuirea este a Dumnezeului nostru, care șade pe tron, și a Mielului!”"
     },
     {
       "number": 11,
-      "text": "Toți îngerii stăteau Ón picioare Ón jurul scaunului de domnie, bătrânii și cele patru făpturi vii; și au căzut cu fața la pământ Ónaintea scaunului său de domnie, și s-au închinat lui Dumnezeu."
+      "text": "Toți îngerii stăteau în jurul tronului, al bătrânilor și al celor patru făpturi vii; au căzut cu fața la pământ înaintea tronului și s-au închinat lui Dumnezeu,"
     },
     {
       "number": 12,
-      "text": "spunând: Amin! Binecuvântare, glorie, înțelepciune, mulțumire, onoare, putere și putere, fie pentru Dumnezeul nostru pentru totdeauna și pentru totdeauna! Amin."
+      "text": "spunând: „Amin! Binecuvântarea, slava, înțelepciunea, mulțumirea, cinstea, puterea și tăria să fie ale Dumnezeului nostru în vecii vecilor! Amin.”"
     },
     {
       "number": 13,
-      "text": "Unul din bătrâni mi-a răspuns: Aceștia care sunt îmbrăcați în haine albe, cine sunt de unde au venit?„"
+      "text": "Unul dintre bătrâni a luat cuvântul și mi-a zis: „Aceștia, îmbrăcați în haine albe, cine sunt și de unde au venit?”"
     },
     {
       "number": 14,
-      "text": "Și i-am zis: Domnule, tu știi. Iar el mi-a spus: Aceștia sunt aceia care au ieșit din mare necaz și și-au spălat robele și le-au albit în sângele Mielului."
+      "text": "I-am spus: „Domnul meu, tu știi.” El mi-a zis: „Aceștia sunt cei care vin din necazul cel mare; și-au spălat hainele și le-au albit în sângele Mielului."
     },
     {
       "number": 15,
-      "text": "De aceea ei sunt înaintea scaunului de domnie al lui Dumnezeu, și îi slujesc zi și noapte în Templul Lui. Cel ce șade pe scaunul de domnie își va întinde cortul peste ei."
+      "text": "De aceea sunt înaintea tronului lui Dumnezeu și Îi slujesc zi și noapte în templul Său; Cel care șade pe tron Își va întinde cortul peste ei."
     },
     {
       "number": 16,
-      "text": "Nu le va mai fi niciodată foame sau sete. Soarele nu-i va mai bate, nici căldura nu-i va mai bate."
+      "text": "Nu le va mai fi foame și nu le va mai fi sete; nu va mai cădea peste ei nici soarele, nici vreo arșiță."
     },
     {
       "number": 17,
-      "text": "Mielul, care este în mijlocul tronului, îi păstorește și îi duce la izvoarele apelor dătătoare de viață. Dumnezeu va șterge orice lacrimă din ochii lor.”"
+      "text": "Căci Mielul, care este în mijlocul tronului, îi va păstori și îi va călăuzi la izvoarele apelor vieții; Dumnezeu va șterge orice lacrimă din ochii lor.”"
     }
   ],
   "editorialNotes": [],
