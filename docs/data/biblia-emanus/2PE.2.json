@@ -71,20 +71,20 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
-      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
+      "Textul a fost confruntat verset cu verset cu SBLGNT 1.2 și aparatul său; TR a fost folosit numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar pentru sens și română; nu s-a copiat o traducere românească.",
+      "NTR nu a fost consultată în acest lot, fapt declarat atât aici, cât și în jurnal."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-2pe-2",
+      "runId": "emanus-nt-editorial-2026-08-08-2pe-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
+      "scope": "Toate cele 22 de versete din 2PE.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate capitalizarea nejustificată din continuările sintactice ale versetelor 13–15.",
+        "Formulările au fost revăzute pentru persoană, număr, diateză, negare și referent, fără a importa automat lectura tradițională.",
+        "Româna rămâne redactare proprie, verificată auxiliar față de reperele declarate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +123,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:e45b8965326380cde2799aa0b8e7577b45cf9a4c941b6d37cc7c6356aac05a85",
-    "contentDigest": "sha256:79898b10cc3d3d85872a08728d85754fdba6100fcbb30d300074bd5717f585d3"
+    "textDigest": "sha256:30ccd4a946c841fe93df7baa9fed4b164e861925fa3f6a148ee868ae899f3d18",
+    "contentDigest": "sha256:7fd5fd5f1f75ff269d5cb6db568be1a6517cd8310fd3bfdd0f5c85c77b544322"
   },
   "verses": [
     {
@@ -197,11 +187,11 @@
     },
     {
       "number": 14,
-      "text": "Au ochii plini de adulter și nu se opresc din păcat; ademenesc suflete nestatornice, au inima deprinsă cu lăcomia și sunt copii ai blestemului!"
+      "text": "au ochii plini de adulter și nu se opresc din păcat; ademenesc suflete nestatornice, au inima deprinsă cu lăcomia și sunt copii ai blestemului!"
     },
     {
       "number": 15,
-      "text": "Au părăsit calea dreaptă și s-au rătăcit; au urmat calea lui Balaam, fiul lui Bosor, care a iubit plata nedreptății."
+      "text": "au părăsit calea dreaptă și s-au rătăcit; au urmat calea lui Balaam, fiul lui Bosor, care a iubit plata nedreptății."
     },
     {
       "number": 16,
@@ -232,7 +222,56 @@
       "text": "Li s-a întâmplat ceea ce spune proverbul adevărat: „Câinele se întoarce la propria vomă” și „scroafa, după ce s-a spălat, se tăvălește în noroi”."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: σειραῖς ζόφου / σιροῖς ζόφου",
+      "decision": "„în lanțurile întunericului”",
+      "alternatives": [
+        "„în gropile întunericului”"
+      ],
+      "reason": "SBLGNT are σειραῖς, „lanțuri”; textul nu schimbă lectura cu forma «gropi» consemnată în aparat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2PE și aparatul local au fost confruntate direct."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: ἀπάταις / ἀγάπαις",
+      "decision": "„înșelăciunile lor”",
+      "alternatives": [
+        "„mesele lor de dragoste”"
+      ],
+      "reason": "Lectura principală SBLGNT este ἀπάταις, «înșelăciuni», nu ἀγάπαις, «agape»; sensul nu este înlocuit tacit cu lectura Treg.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Aparatul a fost verificat, iar textul românesc urmează SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "variantă textuală SBLGNT: Βοσὸρ / Βεὼρ",
+      "decision": "„Bosor”",
+      "alternatives": [
+        "„Beor”"
+      ],
+      "reason": "SBLGNT și martorul TR consemnează Βοσὸρ; forma românească păstrează această lectură, deși aparatul notează Βεὼρ în WH/NIV.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numele propriu urmează lectura textului principal fixat."
+    },
+    {
+      "verse": 18,
+      "term": "variantă textuală SBLGNT/TR: ὀλίγως / ὄντως",
+      "decision": "„cei care abia se desprind”",
+      "alternatives": [
+        "„cei care într-adevăr se desprind”"
+      ],
+      "reason": "SBLGNT are adverbul ὀλίγως, care justifică «abia»; lectura RP ὄντως nu este introdusă în corpul versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal și aparatul au fost verificate verset cu verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
