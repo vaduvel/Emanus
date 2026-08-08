@@ -6,13 +6,13 @@ import { ISAIA_DEEPENED_41_65 } from "./isaiaDeepened41_65.js"
 import { reviewIsaia07And09Explanations } from "./isaia07And09ExplanationReview.js"
 import { reviewIsaia10And11Explanations } from "./isaia10And11ExplanationReview.js"
 import { reviewIsaia14Explanation } from "./isaia14ExplanationReview.js"
+import { reviewIsaia45Explanation } from "./isaia45ExplanationReview.js"
 import { reviewIsaiaExplanations } from "./isaiaExplanationReview.js"
 import { ISAIA_EXPLAINED as POONEN_BASE } from "./isaiaOverlay.js"
 import { textualChapter } from "./textualChapterFactory.js"
 
 const data = VT_MAJOR_PROPHETS_FULL.isaia
 const chapters = POONEN_BASE.chapters.map((chapter) => {
-  // Expunerea Poonen are prioritate oriunde transcriptul tratează capitolul.
   if (chapter.units.length > 0) return chapter
 
   const deepened =
@@ -31,9 +31,11 @@ const ISAIA_EDITORIAL_BASE: ExplainedBookOverlay = {
 }
 
 const ISAIA_EDITORIAL_REVIEWED = reviewIsaiaExplanations(
-  reviewIsaia14Explanation(
-    reviewIsaia10And11Explanations(
-      reviewIsaia07And09Explanations(ISAIA_EDITORIAL_BASE),
+  reviewIsaia45Explanation(
+    reviewIsaia14Explanation(
+      reviewIsaia10And11Explanations(
+        reviewIsaia07And09Explanations(ISAIA_EDITORIAL_BASE),
+      ),
     ),
   ),
 )
