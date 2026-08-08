@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+          "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+          "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+          "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+          "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+          "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+          "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,19 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul local; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-1co-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,7 +102,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+                    "scope": "Toate cele 31 de versete din 1CO.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,33 +127,23 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:d47829f7300ec5798623875ac3ca28196b2dad83d2d3c7c4452ef07522ac5739",
-    "contentDigest": "sha256:a6e606db7270f503a4a5ada36883475f878b159747349d088038d5391a623ed3"
+    "textDigest": "sha256:11d098cd7c7f8058bbbaa63a64a5748fff9e8f25f4bd2eb3061cf4204f349c0c",
+    "contentDigest": "sha256:91b227e6e5f1d2793fabebc14b3f0e2b93b224d891e1fe700543d4585faf78c7"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, chemat să fie apostol al lui Hristos Isus prin voia lui Dumnezeu, și fratele Sosten,"
+      "text": "Pavel, chemat apostol al lui Hristos Isus prin voia lui Dumnezeu, și fratele Sosten,"
     },
     {
       "number": 2,
-      "text": "către biserica lui Dumnezeu care este în Corint, către cei sfințiți în Hristos Isus, chemați să fie sfinți, împreună cu toți cei care cheamă în orice loc numele Domnului nostru Isus Hristos, atât al lor, cât și al nostru:"
+      "text": "către biserica lui Dumnezeu care este în Corint, către cei sfințiți în Hristos Isus, chemați să fie sfinți, împreună cu toți cei ce cheamă în orice loc numele Domnului nostru Isus Hristos, al lor și al nostru:"
     },
     {
       "number": 3,
@@ -157,23 +151,23 @@
     },
     {
       "number": 4,
-      "text": "Îi mulțumesc întotdeauna Dumnezeului meu pentru voi, pentru harul lui Dumnezeu care v-a fost dat în Hristos Isus,"
+      "text": "Îi mulțumesc mereu Dumnezeului meu pentru voi, pentru harul lui Dumnezeu care v-a fost dat în Hristos Isus,"
     },
     {
       "number": 5,
-      "text": "fiindcă în El ați fost îmbogățiți în toate, în orice vorbire și în orice cunoaștere,"
+      "text": "căci în El ați fost îmbogățiți în toate, în orice cuvânt și în orice cunoaștere,"
     },
     {
       "number": 6,
-      "text": "Așa cum mărturia lui Hristos a fost confirmată în tine."
+      "text": "după cum mărturia lui Hristos a fost întărită în voi,"
     },
     {
       "number": 7,
-      "text": "așa încât nu duceți lipsă de niciun dar, așteptând descoperirea Domnului nostru Isus Hristos,"
+      "text": "astfel încât nu duceți lipsă de niciun dar, așteptând descoperirea Domnului nostru Isus Hristos,"
     },
     {
       "number": 8,
-      "text": "care vă va și întări până la sfârșit, fără vină în ziua Domnului nostru Isus Hristos."
+      "text": "care vă va întări și până la sfârșit, ca să fiți fără vină în ziua Domnului nostru Isus Hristos."
     },
     {
       "number": 9,
@@ -181,19 +175,19 @@
     },
     {
       "number": 10,
-      "text": "Vă îndemn însă, fraților, prin numele Domnului nostru Isus Hristos, să spuneți toți același lucru și să nu fie dezbinări între voi, ci să fiți uniți deplin în aceeași minte și în aceeași judecată."
+      "text": "Vă îndemn, fraților, prin numele Domnului nostru Isus Hristos, să spuneți toți același lucru și să nu fie dezbinări între voi, ci să fiți desăvârșit uniți în aceeași minte și în aceeași judecată."
     },
     {
       "number": 11,
-      "text": "Pentru că mi s-a spus despre voi, frații mei, de către cei din casa lui Chloe, că sunt certuri între voi."
+      "text": "Căci mi s-a făcut cunoscut despre voi, frații mei, de către cei ai casei lui Chloe, că sunt certuri între voi."
     },
     {
       "number": 12,
-      "text": "Vreau să spun că fiecare dintre voi zice: „Eu sunt al lui Pavel”, „Eu al lui Apolos”, „Eu al lui Chifa”, iar „Eu al lui Hristos”."
+      "text": "Spun aceasta: fiecare dintre voi zice: „Eu sunt al lui Pavel”, „Eu, al lui Apolos”, „Eu, al lui Chifa”, „Eu, al lui Hristos”."
     },
     {
       "number": 13,
-      "text": "A fost Hristos împărțit? Pavel a fost răstignit pentru voi? Sau în numele lui Pavel ați fost botezați?"
+      "text": "Este Hristos împărțit? Pavel a fost răstignit pentru voi? Sau în numele lui Pavel ați fost botezați?"
     },
     {
       "number": 14,
@@ -201,39 +195,39 @@
     },
     {
       "number": 15,
-      "text": "ca nimeni să nu poată spune că ați fost botezați în numele meu."
+      "text": "pentru ca nimeni să nu spună că ați fost botezați în numele meu."
     },
     {
       "number": 16,
-      "text": "Am botezat și casa lui Stefana. În afară de aceștia, nu știu să fi botezat pe altcineva."
+      "text": "I-am botezat și pe cei din casa lui Stefana; în afară de aceștia, nu știu să mai fi botezat pe altcineva."
     },
     {
       "number": 17,
-      "text": "Căci Hristos nu m-a trimis să botez, ci să vestesc Evanghelia, nu cu înțelepciune de vorbire, ca să nu fie golită crucea lui Hristos."
+      "text": "Căci Hristos nu m-a trimis să botez, ci să vestesc Evanghelia, nu în înțelepciunea cuvântului, ca să nu fie golită crucea lui Hristos."
     },
     {
       "number": 18,
-      "text": "Fiindcă cuvântul crucii este nebunie pentru cei ce pier, dar pentru noi, cei ce suntem mântuiți, este puterea lui Dumnezeu."
+      "text": "Căci cuvântul crucii este nebunie pentru cei care pier, dar pentru noi, cei care suntem mântuiți, este puterea lui Dumnezeu."
     },
     {
       "number": 19,
-      "text": "Căci este scris: „Voi nimici înțelepciunea celor înțelepți și voi zădărnici priceperea celor pricepuți.”"
+      "text": "Căci este scris: „Voi nimici înțelepciunea celor înțelepți și voi înlătura priceperea celor pricepuți.”"
     },
     {
       "number": 20,
-      "text": "Unde este înțeleptul? Unde este cărturarul? Unde este disputatorul veacului acestuia? N-a făcut Dumnezeu nebună înțelepciunea lumii?"
+      "text": "Unde este înțeleptul? Unde este cărturarul? Unde este disputatorul veacului acestuia? Oare n-a făcut Dumnezeu nebună înțelepciunea lumii?"
     },
     {
       "number": 21,
-      "text": "Fiindcă, întrucât lumea, prin înțelepciunea ei, nu L-a cunoscut pe Dumnezeu în înțelepciunea lui Dumnezeu, Dumnezeu a binevoit să-i mântuiască pe cei ce cred prin nebunia vestirii."
+      "text": "Căci, întrucât lumea, prin înțelepciunea ei, nu L-a cunoscut pe Dumnezeu în înțelepciunea lui Dumnezeu, Dumnezeu a binevoit să-i mântuiască pe cei care cred prin nebunia propovăduirii."
     },
     {
       "number": 22,
-      "text": "Fiindcă iudeii cer semne și grecii caută înțelepciune,"
+      "text": "Căci iudeii cer semne, iar grecii caută înțelepciune,"
     },
     {
       "number": 23,
-      "text": "Dar noi propovăduim pe Hristos răstignit, o piatră de poticnire pentru Iudei și nebunie pentru Greci,"
+      "text": "dar noi Îl propovăduim pe Hristos răstignit: pentru iudei, piatră de poticnire, iar pentru neamuri, nebunie;"
     },
     {
       "number": 24,
@@ -241,34 +235,85 @@
     },
     {
       "number": 25,
-      "text": "căci nebunia lui Dumnezeu este mai înțeleaptă decât oamenii, și slăbiciunea lui Dumnezeu este mai puternică decât oamenii."
+      "text": "Căci nebunia lui Dumnezeu este mai înțeleaptă decât oamenii și slăbiciunea lui Dumnezeu este mai puternică decât oamenii."
     },
     {
       "number": 26,
-      "text": "Căci veți vedea chemarea voastră, fraților, că nu mulți sunt înțelepți după trup, nu mulți viteji, și nu mulți nobili;"
+      "text": "Priviți chemarea voastră, fraților: nu sunt mulți înțelepți după trup, nici mulți puternici, nici mulți de neam ales;"
     },
     {
       "number": 27,
-      "text": "Ci Dumnezeu a ales lucrurile nebune ale lumii, ca să-i facă de rușine pe cei înțelepți, și Dumnezeu a ales lucrurile slabe ale lumii, ca să le facă de rușine pe cele tari."
+      "text": "ci Dumnezeu a ales lucrurile nebune ale lumii ca să-i facă de rușine pe cei înțelepți; Dumnezeu a ales lucrurile slabe ale lumii ca să le facă de rușine pe cele puternice;"
     },
     {
       "number": 28,
-      "text": "Dumnezeu a ales lucrurile de jos ale lumii și pe cele disprețuite, pe cele ce nu sunt, ca să le desființeze pe cele ce sunt,"
+      "text": "și Dumnezeu a ales lucrurile de neam jos ale lumii și pe cele disprețuite, pe cele ce nu sunt, ca să le desființeze pe cele ce sunt,"
     },
     {
       "number": 29,
-      "text": "pentru ca nicio carne să nu se laude înaintea lui Dumnezeu."
+      "text": "pentru ca nicio făptură să nu se laude înaintea lui Dumnezeu."
     },
     {
       "number": 30,
-      "text": "Dar din El sunteți voi în Hristos Isus, care a devenit pentru noi înțelepciune de la Dumnezeu, și dreptate, și sfințire, și răscumpărare,"
+      "text": "Din El sunteți voi în Hristos Isus, care a devenit pentru noi înțelepciune de la Dumnezeu, dreptate, sfințire și răscumpărare,"
     },
     {
       "number": 31,
-      "text": "pentru ca, după cum este scris, „Cine se laudă să se laude în Domnul.”"
+      "text": "pentru ca, după cum este scris: „Cine se laudă să se laude în Domnul.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "Χριστοῦ Ἰησοῦ",
+      "decision": "Hristos Isus",
+      "reason": "SBLGNT citește Χριστοῦ Ἰησοῦ; ordinea alternativă din WH/RP nu schimbă sensul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT este urmat ca text principal.",
+      "alternatives": ["Isus Hristos"]
+    },
+    {
+      "verse": 14,
+      "term": "τῷ θεῷ",
+      "decision": "Îi mulțumesc lui Dumnezeu",
+      "reason": "SBLGNT/NA28 păstrează complementul; WH îl omite.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura SBLGNT este redată explicit.",
+      "alternatives": ["Îi mulțumesc"]
+    },
+    {
+      "verse": 15,
+      "term": "ἐβαπτίσθητε",
+      "decision": "ați fost botezați",
+      "reason": "Forma pasivă SBLGNT diferă de lectura activă RP ἐβάπτισα.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează SBLGNT.",
+      "alternatives": ["v-am botezat"]
+    },
+    {
+      "verse": 22,
+      "term": "σημεῖα",
+      "decision": "semne",
+      "reason": "SBLGNT are pluralul; Textus Receptus are singularul σημεῖον.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pluralul din SBLGNT este păstrat.",
+      "alternatives": ["un semn"]
+    },
+    {
+      "verse": 23,
+      "term": "ἔθνεσιν",
+      "decision": "neamuri",
+      "reason": "SBLGNT are ἔθνεσιν; lectura RP Ἕλλησιν („greci”) este martor secundar.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul generic „neamuri” urmează textul principal.",
+      "alternatives": ["greci"]
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
