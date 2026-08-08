@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "docs" / "data" / "biblia-emanus" / "sources"
-LOCK_PATH = ROOT / "docs" / "data" / "biblia-emanus" / "minor-prophets-source-lock.json"
+LOCK_PATH = ROOT / "docs" / "biblia-explicata" / "minor-prophets-reaudit" / "minor-prophets-source-lock.json"
 SNAPSHOT_PATH = OUT_DIR / "ot-minor-prophets-2026-08-07-usfm.zip"
 
 BOOKS = [
