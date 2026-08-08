@@ -6,272 +6,73 @@
   "status": "in_review",
   "public": false,
   "source": {
-    "english": {
-      "version": "WEBU-Protestant",
-      "passageUrl": "https://ebible.org/engwebp/ROM04.htm",
-      "license": "Public Domain",
-      "lockId": "WEBP-ROM"
-    },
-    "greek": {
-      "version": "SBLGNT-1.2",
-      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
-      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Rom.txt",
-      "license": "CC BY 4.0",
-      "lockId": "SBLGNT-ROM",
-      "supplementalWitnesses": [
-        {
-          "lockId": "TR-ROM",
-          "language": "greacă",
-          "role": "textual-witness"
-        }
-      ]
-    }
+    "english": {"version": "WEBU-Protestant", "passageUrl": "https://ebible.org/engwebp/ROM04.htm", "license": "Public Domain", "lockId": "WEBP-ROM"},
+    "greek": {"version": "SBLGNT-1.2", "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c", "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/Rom.txt", "license": "CC BY 4.0", "lockId": "SBLGNT-ROM", "supplementalWitnesses": [{"lockId": "TR-ROM", "language": "greacă", "role": "textual-witness"}]}
   },
-  "review": {
-    "aiTheologicalContext": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "benchmarkComparison": "approved",
-    "criticalIssues": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved"
-  },
+  "review": {"aiTheologicalContext": "approved", "copyrightDistance": "approved", "omissionAddition": "approved", "benchmarkComparison": "approved", "criticalIssues": "approved", "aiRomanianLanguage": "approved", "aiSourceLanguage": "approved"},
   "benchmark": {
     "translationsConsulted": [
-      {
-        "id": "CORNILESCU-1924",
-        "family": "cornilescu",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
-        "consultedInBatch": true
-      },
-      {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
-        "consultedInBatch": true
-      },
-      {
-        "id": "NTR",
-        "family": "biblica",
-        "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
-        "consultedInBatch": false
-      }
+      {"id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924", "consultedInBatch": true},
+      {"id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf", "consultedInBatch": true},
+      {"id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca", "consultedInBatch": false}
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
-    "checks": {
-      "copyrightSimilarity": "approved",
-      "theologicalNeutrality": "approved",
-      "romanianNaturalness": "approved",
-      "additions": "approved",
-      "meaning": "approved",
-      "omissions": "approved"
-    },
-    "observations": [
-      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
-      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
-    ]
+    "checks": {"copyrightSimilarity": "approved", "theologicalNeutrality": "approved", "romanianNaturalness": "approved", "additions": "approved", "meaning": "approved", "omissions": "approved"},
+    "observations": ["Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.", "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."]
   },
+  "verses": [
+    {"number": 1, "text": "Ce vom spune deci că a dobândit Avraam, strămoșul nostru după trup?"},
+    {"number": 2, "text": "Căci, dacă Avraam a fost îndreptățit prin fapte, are cu ce să se laude, dar nu înaintea lui Dumnezeu."},
+    {"number": 3, "text": "Căci ce spune Scriptura? „Avraam a crezut în Dumnezeu și i s-a socotit ca dreptate.”"},
+    {"number": 4, "text": "Iar celui ce lucrează, răsplata nu i se socotește ca har, ci ca ceva datorat."},
+    {"number": 5, "text": "dar celui care nu lucrează, ci crede în Cel care-l îndreptățește pe cel neevlavios, credința lui îi este socotită ca dreptate."},
+    {"number": 6, "text": "Tot astfel și David vorbește despre fericirea omului căruia Dumnezeu îi socotește dreptatea fără fapte:"},
+    {"number": 7, "text": "„Fericiți sunt cei ale căror nelegiuiri au fost iertate și ale căror păcate au fost acoperite!"},
+    {"number": 8, "text": "Fericit este omul căruia Domnul nicidecum nu-i va socoti păcatul!”"},
+    {"number": 9, "text": "Așadar, fericirea aceasta este numai pentru cei circumciși sau și pentru cei necircumciși? Căci spunem: „Credința i-a fost socotită lui Avraam ca dreptate.”"},
+    {"number": 10, "text": "Cum i-a fost deci socotită? Pe când era circumcis sau pe când era necircumcis? Nu pe când era circumcis, ci pe când era necircumcis."},
+    {"number": 11, "text": "El a primit semnul circumciziei, o pecete a dreptății credinței pe care o avea în necircumcizie, pentru ca el să fie tatăl tuturor celor care cred în necircumcizie, astfel încât și lor să li se socotească dreptatea,"},
+    {"number": 12, "text": "și tatăl celor circumciși: al celor care nu numai că sunt circumciși, ci și umblă pe urmele credinței pe care tatăl nostru Avraam o avea în necircumcizie."},
+    {"number": 13, "text": "Căci promisiunea că va fi moștenitor al lumii nu i-a fost făcută prin Lege lui Avraam sau seminței lui, ci prin dreptatea credinței."},
+    {"number": 14, "text": "Căci, dacă moștenitorii sunt cei din Lege, credința este golită de conținut și promisiunea este desființată."},
+    {"number": 15, "text": "Căci Legea produce mânie, dar unde nu este lege nu este nici încălcare."},
+    {"number": 16, "text": "De aceea, promisiunea vine din credință, ca să fie potrivit harului și să rămână sigură pentru toată sămânța, nu numai pentru cea din Lege, ci și pentru cea din credința lui Avraam, care este tatăl nostru al tuturor,"},
+    {"number": 17, "text": "după cum este scris: „Te-am rânduit tată al multor neamuri.” El este tatăl nostru înaintea Celui în care a crezut, a lui Dumnezeu, care dă viață morților și cheamă cele ce nu sunt ca și cum ar fi."},
+    {"number": 18, "text": "Sperând împotriva oricărei speranțe, el a crezut, ca să devină tatăl multor neamuri, potrivit cu ceea ce fusese spus: „Așa va fi sămânța ta.”"},
+    {"number": 19, "text": "Și, fără să slăbească în credință, și-a privit propriul trup ca mort—fiind aproape de o sută de ani—și amorțeala pântecelui Sarei,"},
+    {"number": 20, "text": "dar, în fața promisiunii lui Dumnezeu, nu s-a clătinat prin necredință, ci s-a întărit prin credință, dând glorie lui Dumnezeu"},
+    {"number": 21, "text": "și fiind pe deplin încredințat că El este în stare să împlinească și ceea ce a promis."},
+    {"number": 22, "text": "De aceea i s-a socotit ca dreptate."},
+    {"number": 23, "text": "Dar nu numai pentru el a fost scris că i s-a socotit,"},
+    {"number": 24, "text": "ci și pentru noi, cărora ni se va socoti, nouă, celor care credem în Cel care L-a înviat dintre morți pe Isus, Domnul nostru,"},
+    {"number": 25, "text": "care a fost dat pentru abaterile noastre și a fost înviat pentru îndreptățirea noastră."}
+  ],
+  "editorialNotes": [
+    {"verse": 12, "term": "πατέρα περιτομῆς … τοῖς … στοιχοῦσιν τοῖς ἴχνεσιν", "decision": "tatăl celor circumciși: al celor care nu numai că sunt circumciși, ci și umblă pe urmele credinței", "reason": "Construcția descrie grupul celor circumciși care și urmează pașii credinței lui Avraam; punctuația și reluarea elimină o formulare românească rigidă.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Sensul grupului nominal este păstrat fără a adăuga ideea unei baze meritorii."},
+    {"verse": 17, "term": "κατέναντι οὗ ἐπίστευσεν θεοῦ", "decision": "înaintea Celui în care a crezut, a lui Dumnezeu", "reason": "Relativul se referă la Dumnezeu; formularea anterioară «înaintea lui Dumnezeu, în care a crezut» era gramatical stângace.", "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Referentul este făcut explicit fără schimbare semantică."},
+    {"verse": 18, "term": "παρʼ ἐλπίδα ἐπʼ ἐλπίδι ἐπίστευσεν", "decision": "Sperând împotriva oricărei speranțe, el a crezut", "reason": "Formula păstrează tensiunea semantică dintre lipsa unui temei omenesc de speranță și speranța credinței.", "alternatives": ["Împotriva oricărei speranțe, el a crezut cu speranță"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea este mai firească în română și păstrează jocul lexical."},
+    {"verse": 19, "term": "μὴ ἀσθενήσας τῇ πίστει κατενόησεν τὸ ἑαυτοῦ σῶμα νενεκρωμένον", "decision": "fără să slăbească în credință, și-a privit propriul trup ca mort", "reason": "În SBLGNT, negația aparține participiului «fără să slăbească», nu verbului κατενόησεν. Lectura TR cu οὐ înaintea verbului inversează polaritatea și nu este introdusă.", "alternatives": ["nu s-a uitat la propriul trup deja mort"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul principal urmează sintaxa SBLGNT; de asemenea, `ἤδη` nu este importat în redarea principală."},
+    {"verse": 25, "term": "διὰ τὰ παραπτώματα / διὰ τὴν δικαίωσιν", "decision": "pentru abaterile noastre / pentru îndreptățirea noastră", "reason": "Aceeași prepoziție cu acuzativ este păstrată fără a construi o explicație doctrinară suplimentară; contextul distinge predarea și învierea.", "alternatives": ["din cauza abaterilor noastre și pentru îndreptățirea noastră"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul rămâne aproape de paralelismul grec, iar nuanța cauzală/finală este documentată."}
+  ],
+  "referenceNotes": [],
+  "alternateEndings": [],
   "audit": {
     "schemaVersion": 2,
     "completedOn": "2026-08-08",
-    "runId": "emanus-nt-editorial-2026-08-08-rom-4",
-    "engineVersion": "4.0.0",
-    "reviewLevel": "in_review",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "Codex / GPT-5",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {"type": "ai", "engine": "GPT-5.6 Sol", "runId": "emanus-nt-editorial-2026-08-08-rom-4-gpt56sol-2140", "method": "verse-by-verse-source-and-benchmark"},
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
-    "verseCoverage": {
-      "expected": 25,
-      "reviewed": 25,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Toate cele 25 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:c9ba8a0d761c5320dbdc947d1656d1bd368fcf8c1a53bd1cb725f4b05d71fa35",
-    "contentDigest": "sha256:c924599bcc14048caccf90eb92b0c0978537d1dd9c7261791b36f4bd5a461066"
-  },
-  "verses": [
-    {
-      "number": 1,
-      "text": "Ce vom spune deci că a dobândit Avraam, strămoșul nostru după trup?"
-    },
-    {
-      "number": 2,
-      "text": "Căci, dacă Avraam a fost îndreptățit prin fapte, are cu ce să se laude, dar nu înaintea lui Dumnezeu."
-    },
-    {
-      "number": 3,
-      "text": "Căci ce spune Scriptura? „Avraam a crezut în Dumnezeu și i s-a socotit ca dreptate.”"
-    },
-    {
-      "number": 4,
-      "text": "Iar celui ce lucrează, răsplata nu i se socotește ca har, ci ca ceva datorat."
-    },
-    {
-      "number": 5,
-      "text": "dar celui care nu lucrează, ci crede în Cel care-l îndreptățește pe cel neevlavios, credința lui îi este socotită ca dreptate."
-    },
-    {
-      "number": 6,
-      "text": "Tot astfel și David vorbește despre fericirea omului căruia Dumnezeu îi socotește dreptatea fără fapte:"
-    },
-    {
-      "number": 7,
-      "text": "„Fericiți sunt cei ale căror nelegiuiri au fost iertate și ale căror păcate au fost acoperite!"
-    },
-    {
-      "number": 8,
-      "text": "Fericit este omul căruia Domnul nicidecum nu-i va socoti păcatul!”"
-    },
-    {
-      "number": 9,
-      "text": "Așadar, fericirea aceasta este numai pentru cei circumciși sau și pentru cei necircumciși? Căci spunem: „Credința i-a fost socotită lui Avraam ca dreptate.”"
-    },
-    {
-      "number": 10,
-      "text": "Cum i-a fost deci socotită? Pe când era circumcis sau pe când era necircumcis? Nu pe când era circumcis, ci pe când era necircumcis."
-    },
-    {
-      "number": 11,
-      "text": "El a primit semnul circumciziei, o pecete a dreptății credinței pe care o avea în necircumcizie, pentru ca el să fie tatăl tuturor celor care cred în necircumcizie, astfel încât și lor să li se socotească dreptatea,"
-    },
-    {
-      "number": 12,
-      "text": "și tatăl celor circumciși care nu sunt doar circumciși, ci și umblă pe urmele credinței pe care tatăl nostru Avraam o avea în necircumcizie."
-    },
-    {
-      "number": 13,
-      "text": "Căci promisiunea că va fi moștenitor al lumii nu i-a fost făcută prin Lege lui Avraam sau seminței lui, ci prin dreptatea credinței."
-    },
-    {
-      "number": 14,
-      "text": "Căci, dacă moștenitorii sunt cei din Lege, credința este golită de conținut și promisiunea este desființată."
-    },
-    {
-      "number": 15,
-      "text": "Căci Legea produce mânie, dar unde nu este lege nu este nici încălcare."
-    },
-    {
-      "number": 16,
-      "text": "De aceea, promisiunea vine din credință, ca să fie potrivit harului și să rămână sigură pentru toată sămânța, nu numai pentru cea din Lege, ci și pentru cea din credința lui Avraam, care este tatăl nostru al tuturor,"
-    },
-    {
-      "number": 17,
-      "text": "după cum este scris: „Te-am rânduit tată al multor neamuri.” El este tatăl nostru înaintea lui Dumnezeu, în care a crezut, Cel care dă viață morților și cheamă cele ce nu sunt ca și cum ar fi."
-    },
-    {
-      "number": 18,
-      "text": "Împotriva oricărei speranțe, el a crezut cu speranță, ca să devină tatăl multor neamuri, potrivit cu ceea ce fusese spus: „Așa va fi sămânța ta.”"
-    },
-    {
-      "number": 19,
-      "text": "Și, fără să slăbească în credință, a luat aminte la propriul său trup, deja mort—fiind aproape de o sută de ani—și la amorțeala pântecelui Sarei,"
-    },
-    {
-      "number": 20,
-      "text": "dar, în fața promisiunii lui Dumnezeu, nu s-a clătinat prin necredință, ci s-a întărit prin credință, dând glorie lui Dumnezeu"
-    },
-    {
-      "number": 21,
-      "text": "și fiind pe deplin încredințat că El este în stare să împlinească și ceea ce a promis."
-    },
-    {
-      "number": 22,
-      "text": "De aceea i s-a socotit ca dreptate."
-    },
-    {
-      "number": 23,
-      "text": "Dar nu numai pentru el a fost scris că i s-a socotit,"
-    },
-    {
-      "number": 24,
-      "text": "ci și pentru noi, cărora ni se va socoti, nouă, celor care credem în Cel care L-a înviat dintre morți pe Isus, Domnul nostru,"
-    },
-    {
-      "number": 25,
-      "text": "care a fost dat pentru abaterile noastre și a fost înviat pentru îndreptățirea noastră."
-    }
-  ],
-  "editorialNotes": [
-    {
-      "verse": 19,
-      "term": "κατενόησεν",
-      "decision": "Indicativul aorist afirmativ este redat «și-a privit trupul ca mort».",
-      "reason": "Lectura SBLGNT nu conține negația οὐ înaintea verbului; negația μὴ aparține participiului ἀσθενήσας, «fără să slăbească». TR schimbă polaritatea propoziției și este documentat separat.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Textul principal urmează exact sintaxa SBLGNT, iar lectura negativă receptă rămâne vizibilă în notă."
-    },
-    {
-      "verse": 25,
-      "term": "διὰ τὰ παραπτώματα / διὰ τὴν δικαίωσιν",
-      "decision": "din cauza abaterilor noastre / pentru îndreptățirea noastră",
-      "reason": "Aceeași prepoziție διὰ cu acuzativ poate exprima cauza sau scopul/rezultatul contextual; redarea diferențiată păstrează paralelismul fără a-l transforma într-o formulă doctrinară suplimentară.",
-      "alternatives": [
-        "pentru abaterile noastre și pentru îndreptățirea noastră",
-        "din cauza abaterilor noastre și din cauza îndreptățirii noastre"
-      ],
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Prima jumătate privește motivul predării, iar a doua exprimă orientarea învierii spre îndreptățire; nota păstrează polisemia."
-    }
-  ],
-  "referenceNotes": [],
-  "alternateEndings": []
+    "benchmarkEvidence": {"pinnedBenchmarks": 2, "externalBenchmarks": 1, "result": "approved"},
+    "verseCoverage": {"expected": 25, "reviewed": 25, "continuous": true, "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"},
+    "sourceLanguage": {"language": "greacă koine", "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar", "result": "approved", "scope": "Toate cele 25 de versete din ROM.4 au fost reverificate față de SBLGNT 1.2 și aparatul critic; TR a fost folosit numai ca martor textual, iar etaloanele declarate numai auxiliar."},
+    "romanianLanguage": {"result": "approved", "changesApplied": ["ROM.4.12 a fost restructurat pentru claritatea grupului celor circumciși care umblă în credința lui Avraam.", "ROM.4.17–18 au fost netezite pentru referent și idiom.", "ROM.4.19 a fost corectat pentru polaritatea exactă a textului SBLGNT și fără importarea adverbului tradițional absent din lectura SBL."]},
+    "theologicalContext": {"result": "approved", "principles": ["Textul principal urmează SBLGNT; lectura TR din ROM.4.19 nu este importată.", "Limbajul socotirii dreptății și al îndreptățirii este păstrat consecvent fără glosare confesională.", "Paralelismul din ROM.4.25 este păstrat și nu transformat într-o formulă doctrinară extinsă."]},
+    "omissionAddition": {"result": "approved", "omissions": 0, "additions": 0},
+    "copyrightDistance": {"result": "approved", "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu sursele auxiliare declarate; fără copiere de text românesc protejat"},
+    "criticalIssues": {"result": "approved", "open": 0},
+    "textDigest": "sha256:5ceeb87e857679e5a76f4b867954c7dc9569a0b46031ad4ff1ff83e39a3817cb",
+    "contentDigest": "sha256:e8c33c5561a9949c9b93bce239f2f83c4c4f398a4e2c51915db5be28f6fc68ca"
+  }
 }
