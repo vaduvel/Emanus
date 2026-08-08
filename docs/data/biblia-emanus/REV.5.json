@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,23 @@
       "romanianNaturalness": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-rev-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -98,7 +98,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 14 versete din REV.5 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,81 +123,71 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:17187896ed7a470bba0429c2c8aad28ab1f8dc3d554a538bd7e4c58c42b8b690",
-    "contentDigest": "sha256:a5d5116879008a2bf5c8ab24ef339ae830d6f70da94c67d408f34f12126acc32"
+    "textDigest": "sha256:b9dd429d748daed099509da058287e7003ad0903494befe93f0d37434aae9d30",
+    "contentDigest": "sha256:9adb54d2d01c45bc6e8ec4b7f73460a71e9570d2dd014f1a7c9b1039b8f4f1fb"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Am văzut, în mâna dreaptă a celui care ședea pe tron, o carte scrisă înăuntru și afară, sigilată cu șapte peceți."
+      "text": "Am văzut în mâna dreaptă a Celui care ședea pe tron o carte scrisă pe dinăuntru și pe dinafară, pecetluită cu șapte peceți."
     },
     {
       "number": 2,
-      "text": "Și am văzut un înger puternic, proclamând cu voce tare: Cine este demn să deschidă cartea și să desfacă sigiliile ei?"
+      "text": "Am văzut un înger puternic, vestind cu glas mare: „Cine este vrednic să deschidă cartea și să-i desfacă pecețile?”"
     },
     {
       "number": 3,
-      "text": "Nimeni din cer, nici de pe pământ, nici de sub pământ, nu a putut deschide cartea sau să privească în ea."
+      "text": "Nimeni din cer, de pe pământ sau de sub pământ nu putea să deschidă cartea și nici să privească în ea."
     },
     {
       "number": 4,
-      "text": "Apoi am plâns mult, pentru că nimeni nu a fost găsit demn să deschidă cartea sau să se uite în ea."
+      "text": "Plângeam mult, fiindcă nu fusese găsit nimeni vrednic să deschidă cartea și nici să privească în ea."
     },
     {
       "number": 5,
-      "text": "Unul dintre bătrâni mi-a spus: «Nu plânge! Iată, Leul din seminția lui Iuda, Rădăcina lui David, a biruit ca să deschidă cartea și cele șapte peceți ale ei.»"
+      "text": "Unul dintre bătrâni mi-a spus: „Nu plânge! Iată, Leul din tribul lui Iuda, Rădăcina lui David, a biruit ca să deschidă cartea și cele șapte peceți ale ei.”"
     },
     {
       "number": 6,
-      "text": "Am văzut în mijlocul tronului al celor patru făpturi vii, în mijlocul bătrânilor, un Miel stând în picioare, ca cum ar fi fost înjunghiat, având coarne ochi, care sunt cele Duhuri ale lui Dumnezeu, trimise în tot pământul."
+      "text": "Am văzut în mijlocul tronului și al celor patru făpturi vii, în mijlocul bătrânilor, un Miel stând în picioare, ca înjunghiat; avea șapte coarne și șapte ochi, care sunt cele șapte duhuri ale lui Dumnezeu trimise în tot pământul."
     },
     {
       "number": 7,
-      "text": "Apoi a venit, și a luat-o din dreapta celui ce ședea pe scaunul de domnie."
+      "text": "El a venit și a luat cartea din mâna dreaptă a Celui care ședea pe tron."
     },
     {
       "number": 8,
-      "text": "După ce a luat cartea, cele patru făpturi vii cei douăzeci patru de bătrâni au căzut înaintea Mielului, fiecare având o harpă vase de aur pline cu tămâie, care sunt rugăciunile sfinților."
+      "text": "Când a luat cartea, cele patru făpturi vii și cei douăzeci și patru de bătrâni au căzut înaintea Mielului; fiecare avea o harpă și vase de aur pline cu tămâie, care sunt rugăciunile sfinților."
     },
     {
       "number": 9,
-      "text": "Ei au cântat un cântec nou, spunând: Ești vrednic să iei cartea și să deschizi pecețile ei, căci ai fost ucis, și ne-ai cumpărat pentru Dumnezeu cu sângele tău din fiecare trib, limbă, popor și națiune,"
+      "text": "Cântau o cântare nouă: „Vrednic ești să iei cartea și să-i deschizi pecețile, căci ai fost înjunghiat și ai cumpărat pentru Dumnezeu, prin sângele Tău, oameni din orice trib, limbă, popor și neam;"
     },
     {
       "number": 10,
-      "text": "și ne-a făcut împărați și preoți înaintea Dumnezeului nostru, și vom împărăți pe pământ."
+      "text": "i-ai făcut pentru Dumnezeul nostru o împărăție și preoți, iar ei vor împărăți pe pământ.”"
     },
     {
       "number": 11,
-      "text": "M-am uitat, și am auzit ceva ca o voce de mulți îngeri în jurul tronului, creaturile vii și bătrânii. Numărul lor a fost de zece mii de mii și mii de mii,"
+      "text": "M-am uitat și am auzit glasul multor îngeri în jurul tronului, al făpturilor vii și al bătrânilor; numărul lor era zeci de mii de zeci de mii și mii de mii,"
     },
     {
       "number": 12,
-      "text": "El a spus cu glas tare: Vrednic este Mielul care a fost ucis pentru a primi puterea înțelepciunea, puterea, onoarea, gloria binecuvântarea!"
+      "text": "care spuneau cu glas mare: „Vrednic este Mielul care a fost înjunghiat să primească puterea, bogăția, înțelepciunea, tăria, cinstea, slava și binecuvântarea!”"
     },
     {
       "number": 13,
-      "text": "Am auzit tot ce este în cer, pe pământ, sub pământ, pe mare tot ce este în ele, zicând: A Celui ce șade pe tron a Mielului să fie binecuvântarea, cinstea, slava stăpânirea, în vecii vecilor! Amin!"
+      "text": "Am auzit orice făptură din cer, de pe pământ, de sub pământ și de pe mare, precum și toate cele din ele, spunând: „Celui care șade pe tron și Mielului să-I fie binecuvântarea, cinstea, slava și puterea în vecii vecilor!”"
     },
     {
       "number": 14,
-      "text": "Cele patru făpturi vii au zis: Amin! Bătrânii s-au aruncat la pământ s-au închinat."
+      "text": "Cele patru făpturi vii spuneau: „Amin!” Iar bătrânii au căzut și s-au închinat."
     }
   ],
   "editorialNotes": [],
