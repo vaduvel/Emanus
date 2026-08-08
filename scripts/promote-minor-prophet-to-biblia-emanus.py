@@ -53,35 +53,10 @@ EXPECTED_ARCHIVE_SHA256 = {
 }
 
 SOURCE_META = {
-    "webu": {
-        "prefix": "engwebp",
-        "url": "https://ebible.org/Scriptures/engwebp_usfm.zip",
-        "language": "en",
-        "license": "Public Domain",
-        "snapshotDir": "web",
-    },
-    "wlc": {
-        "prefix": "hboWLC",
-        "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip",
-        "language": "he",
-        "textLicense": "Public Domain",
-        "annotationLicense": "CC BY 4.0",
-        "snapshotDir": "wlc",
-    },
-    "btf": {
-        "prefix": "ronbtf",
-        "url": "https://ebible.org/Scriptures/ronbtf_usfm.zip",
-        "language": "ro",
-        "license": "Public Domain",
-        "snapshotDir": "btf",
-    },
-    "cornilescu": {
-        "prefix": "ron1924",
-        "url": "https://ebible.org/Scriptures/ron1924_usfm.zip",
-        "language": "ro-Cyrl",
-        "license": "Public Domain",
-        "snapshotDir": "cornilescu1924",
-    },
+    "webu": {"prefix": "engwebp", "url": "https://ebible.org/Scriptures/engwebp_usfm.zip", "language": "en", "license": "Public Domain", "snapshotDir": "web"},
+    "wlc": {"prefix": "hboWLC", "url": "https://ebible.org/Scriptures/hboWLC_usfm.zip", "language": "he", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "snapshotDir": "wlc"},
+    "btf": {"prefix": "ronbtf", "url": "https://ebible.org/Scriptures/ronbtf_usfm.zip", "language": "ro", "license": "Public Domain", "snapshotDir": "btf"},
+    "cornilescu": {"prefix": "ron1924", "url": "https://ebible.org/Scriptures/ron1924_usfm.zip", "language": "ro-Cyrl", "license": "Public Domain", "snapshotDir": "cornilescu1924"},
 }
 
 
@@ -97,6 +72,16 @@ def sha256_file(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
 
 
+def normalize_nfc(value: Any) -> Any:
+    if isinstance(value, str):
+        return unicodedata.normalize("NFC", value)
+    if isinstance(value, list):
+        return [normalize_nfc(item) for item in value]
+    if isinstance(value, dict):
+        return {normalize_nfc(key): normalize_nfc(item) for key, item in value.items()}
+    return value
+
+
 def load_json(path: Path) -> dict[str, Any]:
     if not path.is_file():
         fail(f"lipsește {path.relative_to(ROOT)}")
@@ -108,21 +93,8 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def write_json(path: Path, value: dict[str, Any], *, minified: bool = False) -> None:
     value = normalize_nfc(value)
-    if minified:
-        text = json.dumps(value, ensure_ascii=False, separators=(",", ":"))
-    else:
-        text = json.dumps(value, ensure_ascii=False, indent=2)
+    text = json.dumps(value, ensure_ascii=False, separators=(",", ":")) if minified else json.dumps(value, ensure_ascii=False, indent=2)
     path.write_text(unicodedata.normalize("NFC", text) + "\n", encoding="utf-8")
-
-
-def normalize_nfc(value: Any) -> Any:
-    if isinstance(value, str):
-        return unicodedata.normalize("NFC", value)
-    if isinstance(value, list):
-        return [normalize_nfc(item) for item in value]
-    if isinstance(value, dict):
-        return {normalize_nfc(key): normalize_nfc(item) for key, item in value.items()}
-    return value
 
 
 def load_validator():
@@ -176,7 +148,7 @@ def chapter_counts(refs: list[tuple[int, int]]) -> dict[int, int]:
     return dict(sorted(Counter(chapter for chapter, _verse in refs).items()))
 
 
-def review_bundle(code: str, config: dict[str, Any]) -> tuple[dict[int, tuple[list[str], dict[str, Any]]], Counter[str], int, int]:
+def review_bundle(code: str, config: dict[str, Any], legacy_ref: str) -> tuple[dict[int, tuple[list[str], dict[str, Any]]], Counter[str], int, int]:
     reviews_dir = REAUDIT / code / "reviews"
     result: dict[int, tuple[list[str], dict[str, Any]]] = {}
     severity: Counter[str] = Counter()
@@ -217,7 +189,7 @@ def review_bundle(code: str, config: dict[str, Any]) -> tuple[dict[int, tuple[li
         if approved_set & changed or approved_set | changed != expected:
             fail(f"{code} review {chapter:02d}: coverage semantic invalid")
 
-        legacy = git_show_json(LEGACY_REF_DEFAULT, f"docs/data/biblia-emanus/{code}.{chapter}.json")
+        legacy = git_show_json(legacy_ref, f"docs/data/biblia-emanus/{code}.{chapter}.json")
         legacy_verses = legacy.get("verses")
         if not isinstance(legacy_verses, list) or len(legacy_verses) != verse_count:
             fail(f"{code}.{chapter}: candidatul legacy nu are {verse_count} versete")
@@ -266,10 +238,7 @@ def build_snapshot(validator, code: str, config: dict[str, Any], archive_paths: 
         if refs != target_refs:
             fail(f"{code}: {benchmark} nu urmează versificația produsului")
 
-    split_counts = {
-        chapter: int(load_json(REAUDIT / code / f"{chapter:02d}.json")["verseCount"])
-        for chapter in range(1, int(config["chapters"]) + 1)
-    }
+    split_counts = {chapter: int(load_json(REAUDIT / code / f"{chapter:02d}.json")["verseCount"]) for chapter in range(1, int(config["chapters"]) + 1)}
     if chapter_counts(target_refs) != split_counts:
         fail(f"{code}: WEBU chapter counts diferă de split packet")
 
@@ -277,13 +246,8 @@ def build_snapshot(validator, code: str, config: dict[str, Any], archive_paths: 
     if approval.get("status") != "approved" or approval.get("checks", {}).get("noVerseLossOrDuplication") is not True:
         fail(f"{code}: versification approval nu este aprobat")
 
-    # Packetul fresh este dovada explicită a mapării WLC folosite în review.
     packet = load_json(REAUDIT / f"{code}-FRESH-SOURCE-REAUDIT.json")
-    mapped = {
-        item.get("productRef"): item.get("WLCRef")
-        for item in (packet.get("versification", {}).get("mappings") or [])
-        if isinstance(item, dict)
-    }
+    mapped = {item.get("productRef"): item.get("WLCRef") for item in (packet.get("versification", {}).get("mappings") or []) if isinstance(item, dict)}
     ordinal_map = {ref_text(a): ref_text(b) for a, b in zip(target_refs, wlc_refs, strict=True)}
     for product_ref, source_ref in mapped.items():
         if ordinal_map.get(str(product_ref)) != source_ref:
@@ -307,69 +271,31 @@ def update_source_lock(source_lock: dict[str, Any], code: str, config: dict[str,
     source_lock["capturedOn"] = COMPLETED_ON
     source_lock.setdefault("snapshots", {})[snapshot_id] = {"path": snapshot_rel, "sha256": snapshot_sha}
     upstream = source_lock.setdefault("upstreamArtifacts", {})
-
     source_ids: dict[str, str] = {}
     lock_ids: dict[str, str] = {}
+
     for key, meta in SOURCE_META.items():
         source_id = f"{meta['prefix']}-{code.lower()}"
         source_ids[key] = source_id
-        record: dict[str, Any] = {
-            "url": meta["url"],
-            "archiveDate": COMPLETED_ON,
-            "sha256": sha256_file(archive_paths[key]),
-            "language": meta["language"],
-            "snapshotId": snapshot_id,
-            "archiveEmbedded": True,
-            "archivePath": f"upstream/{meta['prefix']}_usfm.zip",
-        }
+        record: dict[str, Any] = {"url": meta["url"], "archiveDate": COMPLETED_ON, "sha256": sha256_file(archive_paths[key]), "language": meta["language"], "snapshotId": snapshot_id, "archiveEmbedded": True, "archivePath": f"upstream/{meta['prefix']}_usfm.zip"}
         for optional in ("license", "textLicense", "annotationLicense"):
             if optional in meta:
                 record[optional] = meta[optional]
         upstream[source_id] = record
-
         lock_name = {"webu": "WEBU", "wlc": "WLC", "btf": "BTF", "cornilescu": "CORNILESCU1924"}[key]
         lock_ids[key] = f"{lock_name}-{code}"
 
-    source_lock.setdefault("books", {})[code] = {
-        "name": config["name"],
-        "order": config["order"],
-        "testament": "OT",
-        "baseLockId": lock_ids["webu"],
-        "originalLockId": lock_ids["wlc"],
-        "benchmarkLockIds": [lock_ids["cornilescu"], lock_ids["btf"]],
-        "externalBenchmarkIds": ["NTR"],
-    }
-
+    source_lock.setdefault("books", {})[code] = {"name": config["name"], "order": config["order"], "testament": "OT", "baseLockId": lock_ids["webu"], "originalLockId": lock_ids["wlc"], "benchmarkLockIds": [lock_ids["cornilescu"], lock_ids["btf"]], "externalBenchmarkIds": ["NTR"]}
     files = source_lock.setdefault("files", {})
     for key, meta in SOURCE_META.items():
-        record: dict[str, Any] = {
-            "bookId": code,
-            "language": meta["language"],
-            "role": "base" if key == "webu" else "original" if key == "wlc" else "benchmark",
-            "archivePath": f"{meta['snapshotDir']}/{code}.usfm",
-            "sha256": sha256_bytes(extracted[key]),
-            "sourceId": source_ids[key],
-            "snapshotId": snapshot_id,
-            "format": "usfm",
-            "missingTargetReferences": [],
-            "extraSourceReferences": [],
-        }
-        if key == "btf":
-            record.update({"benchmarkId": "BTF", "family": "fidela"})
-        if key == "cornilescu":
-            record.update({"benchmarkId": "CORNILESCU-1924", "family": "cornilescu"})
+        record: dict[str, Any] = {"bookId": code, "language": meta["language"], "role": "base" if key == "webu" else "original" if key == "wlc" else "benchmark", "archivePath": f"{meta['snapshotDir']}/{code}.usfm", "sha256": sha256_bytes(extracted[key]), "sourceId": source_ids[key], "snapshotId": snapshot_id, "format": "usfm", "missingTargetReferences": [], "extraSourceReferences": []}
+        if key == "btf": record.update({"benchmarkId": "BTF", "family": "fidela"})
+        if key == "cornilescu": record.update({"benchmarkId": "CORNILESCU-1924", "family": "cornilescu"})
         files[lock_ids[key]] = record
 
     rule_id = f"WLC-{code}-ABSOLUTE-ORDINAL-{len(target_refs)}"
     rules = [rule for rule in source_lock.setdefault("versificationRules", []) if not (isinstance(rule, dict) and rule.get("bookId") == code)]
-    rules.append({
-        "id": rule_id,
-        "sourceLockId": lock_ids["wlc"],
-        "bookId": code,
-        "mapping": "pairwise",
-        "targetReferences": [ref_text(ref) for ref in target_refs],
-        "sourceReferences": [ref_text(ref) for ref in wlc_refs],
-    })
+    rules.append({"id": rule_id, "sourceLockId": lock_ids["wlc"], "bookId": code, "mapping": "pairwise", "targetReferences": [ref_text(ref) for ref in target_refs], "sourceReferences": [ref_text(ref) for ref in wlc_refs]})
     source_lock["versificationRules"] = rules
     return rule_id
 
@@ -378,12 +304,7 @@ def update_ledger(ledger: dict[str, Any], validator, code: str, config: dict[str
     counts = chapter_counts(target_refs)
     chapters = ledger.setdefault("chapters", {})
     for chapter in range(1, int(config["chapters"]) + 1):
-        chapters[f"{code}.{chapter}"] = {
-            "expectedVerses": counts[chapter],
-            "englishUrl": f"https://ebible.org/engwebp/{code}{chapter:02d}.htm",
-            "hebrewUrl": f"https://ebible.org/hboWLC/{code}{chapter:02d}.htm",
-            "versificationRuleIds": [rule_id],
-        }
+        chapters[f"{code}.{chapter}"] = {"expectedVerses": counts[chapter], "englishUrl": f"https://ebible.org/engwebp/{code}{chapter:02d}.htm", "hebrewUrl": f"https://ebible.org/hboWLC/{code}{chapter:02d}.htm", "versificationRuleIds": [rule_id]}
     def key(item: tuple[str, Any]) -> tuple[int, int]:
         book, chapter_text = item[0].split(".", 1)
         return validator.BOOK_ORDER.get(book, 999), int(chapter_text)
@@ -399,65 +320,18 @@ def chapter_payload(validator, code: str, config: dict[str, Any], chapter: int, 
         verse = int(change["verse"])
         severity = str(change["severity"])
         issue = str(change["issue"]).strip()
-        notes.append({
-            "verse": verse,
-            "term": f"fresh-source semantic review / {severity}",
-            "decision": f"Corecția pentru {name} {chapter}:{verse} a fost aplicată în textul canonic.",
-            "reason": issue,
-            "reviewRequired": True,
-            "resolutionStatus": "resolved",
-            "resolutionReason": f"Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate {severity}.",
-        })
-    changes_applied = [f"{name} {chapter}:{item['verse']} — {item['severity']}: {str(item['issue']).strip()}" for item in changes]
-    if not changes_applied:
-        changes_applied = [f"{name} {chapter}: text verificat integral; nu au fost necesare corecții semantice."]
+        notes.append({"verse": verse, "term": f"fresh-source semantic review / {severity}", "decision": f"Corecția pentru {name} {chapter}:{verse} a fost aplicată în textul canonic.", "reason": issue, "reviewRequired": True, "resolutionStatus": "resolved", "resolutionReason": f"Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate {severity}."})
+    changes_applied = [f"{name} {chapter}:{item['verse']} — {item['severity']}: {str(item['issue']).strip()}" for item in changes] or [f"{name} {chapter}: text verificat integral; nu au fost necesare corecții semantice."]
 
     payload: dict[str, Any] = {
-        "translation": "BE",
-        "bookId": code,
-        "bookName": name,
-        "chapter": chapter,
-        "status": "published",
-        "public": True,
-        "source": {
-            "english": {"version": "WEBU-Protestant", "passageUrl": f"https://ebible.org/engwebp/{code}{chapter:02d}.htm", "license": "Public Domain", "lockId": f"WEBU-{code}"},
-            "hebrew": {"version": "WLC-OSHB", "passageUrl": f"https://ebible.org/hboWLC/{code}{chapter:02d}.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": f"WLC-{code}"},
-        },
+        "translation": "BE", "bookId": code, "bookName": name, "chapter": chapter, "status": "published", "public": True,
+        "source": {"english": {"version": "WEBU-Protestant", "passageUrl": f"https://ebible.org/engwebp/{code}{chapter:02d}.htm", "license": "Public Domain", "lockId": f"WEBU-{code}"}, "hebrew": {"version": "WLC-OSHB", "passageUrl": f"https://ebible.org/hboWLC/{code}{chapter:02d}.htm", "textLicense": "Public Domain", "annotationLicense": "CC BY 4.0", "lockId": f"WLC-{code}"}},
         "review": {field: "approved" for field in ("aiSourceLanguage", "aiRomanianLanguage", "aiTheologicalContext", "omissionAddition", "benchmarkComparison", "copyrightDistance", "criticalIssues")},
         "verses": [{"number": number, "text": text} for number, text in enumerate(texts, start=1)],
         "editorialNotes": notes,
-        "benchmark": {
-            "translationsConsulted": [
-                {"id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": f"https://ebible.org/ron1924/{code}{chapter:02d}.htm"},
-                {"id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": f"https://ebible.org/ronbtf/{code}{chapter:02d}.htm"},
-                {"id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": f"https://www.bible.com/ro/bible/126/{code}.{chapter}.NTR"},
-            ],
-            "exactTextCopied": False,
-            "fullProtectedTextsStored": False,
-            "checks": {field: "approved" for field in ("omissions", "additions", "meaning", "romanianNaturalness", "theologicalNeutrality", "copyrightSimilarity")},
-            "observations": [
-                "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-                "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-                f"Corecțiile materializate provin exclusiv din review-urile fresh {code}.",
-            ],
-        },
+        "benchmark": {"translationsConsulted": [{"id": "CORNILESCU-1924", "family": "cornilescu", "mode": "comparison-only", "referenceUrl": f"https://ebible.org/ron1924/{code}{chapter:02d}.htm"}, {"id": "BTF", "family": "fidela", "mode": "comparison-only", "referenceUrl": f"https://ebible.org/ronbtf/{code}{chapter:02d}.htm"}, {"id": "NTR", "family": "biblica", "mode": "comparison-only", "referenceUrl": f"https://www.bible.com/ro/bible/126/{code}.{chapter}.NTR"}], "exactTextCopied": False, "fullProtectedTextsStored": False, "checks": {field: "approved" for field in ("omissions", "additions", "meaning", "romanianNaturalness", "theologicalNeutrality", "copyrightSimilarity")}, "observations": ["WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.", "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.", f"Corecțiile materializate provin exclusiv din review-urile fresh {code}."]},
     }
-    payload["audit"] = {
-        "schemaVersion": 1,
-        "completedOn": COMPLETED_ON,
-        "verseCoverage": {"expected": len(texts), "reviewed": len(texts), "continuous": True},
-        "sourceLanguage": {"language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": f"{name} {chapter}: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."},
-        "romanianLanguage": {"result": "approved", "changesApplied": changes_applied},
-        "theologicalContext": {"result": "approved", "principles": ["Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.", "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."]},
-        "omissionAddition": {"result": "approved", "omissions": 0, "additions": 0},
-        "copyrightDistance": {"result": "approved", "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"},
-        "criticalIssues": {"result": "approved", "open": 0},
-        "reviewLevel": "ai-complete",
-        "engineVersion": "2.0.0",
-        "reviewAgent": {"type": "ai", "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit", "method": "verse-by-verse-source-and-benchmark"},
-        "sourceSnapshotSha256": snapshot_sha,
-        "benchmarkEvidence": {"pinnedBenchmarks": 2, "externalBenchmarks": 1, "result": "approved"},
-    }
+    payload["audit"] = {"schemaVersion": 1, "completedOn": COMPLETED_ON, "verseCoverage": {"expected": len(texts), "reviewed": len(texts), "continuous": True}, "sourceLanguage": {"language": "ebraică biblică", "text": "WLC-OSHB", "result": "approved", "scope": f"{name} {chapter}: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."}, "romanianLanguage": {"result": "approved", "changesApplied": changes_applied}, "theologicalContext": {"result": "approved", "principles": ["Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.", "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."]}, "omissionAddition": {"result": "approved", "omissions": 0, "additions": 0}, "copyrightDistance": {"result": "approved", "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"}, "criticalIssues": {"result": "approved", "open": 0}, "reviewLevel": "ai-complete", "engineVersion": "2.0.0", "reviewAgent": {"type": "ai", "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit", "method": "verse-by-verse-source-and-benchmark"}, "sourceSnapshotSha256": snapshot_sha, "benchmarkEvidence": {"pinnedBenchmarks": 2, "externalBenchmarks": 1, "result": "approved"}}
     payload = normalize_nfc(payload)
     payload["audit"]["textDigest"] = validator.chapter_text_digest(payload)
     return payload
@@ -472,8 +346,7 @@ def update_manifest(manifest: dict[str, Any], validator) -> None:
     for path in paths:
         data = load_json(path)
         verses = data.get("verses")
-        if not isinstance(verses, list):
-            fail(f"{path.name}: verses invalid")
+        if not isinstance(verses, list): fail(f"{path.name}: verses invalid")
         total_verses += len(verses)
         if data.get("status") in {"approved", "published"}: approved += 1
         if data.get("status") == "published": published += 1
@@ -483,18 +356,7 @@ def update_manifest(manifest: dict[str, Any], validator) -> None:
 
 
 def write_summary(code: str, config: dict[str, Any], severity: Counter[str], corrected: int, approved: int, snapshot_rel: str, snapshot_sha: str) -> None:
-    summary = {
-        "schemaVersion": 1,
-        "bookId": code,
-        "bookName": config["name"],
-        "status": "fresh-semantic-review-complete",
-        "sourcePacket": f"docs/biblia-explicata/minor-prophets-reaudit/{code}-FRESH-SOURCE-REAUDIT.json",
-        "versificationApproval": f"docs/biblia-explicata/minor-prophets-reaudit/{code}-VERSIFICATION-APPROVAL.json",
-        "reviewDirectory": f"docs/biblia-explicata/minor-prophets-reaudit/{code}/reviews",
-        "totals": {"chapters": config["chapters"], "verses": config["verses"], "approvedAsIs": approved, "correctedVerses": corrected, "severity": {"critical": severity.get("critical", 0), "material": severity.get("material", 0), "minor": severity.get("minor", 0)}},
-        "canonicalPublication": {"chapterPattern": f"docs/data/biblia-emanus/{code}.{{1..{config['chapters']}}}.json", "snapshot": f"docs/data/biblia-emanus/{snapshot_rel}", "snapshotSha256": snapshot_sha, "textStage": "biblia-emanus", "translationLabel": "Biblia Emanus", "published": True, "public": True, "canonicalGate": "pending-external-validator"},
-        "promotion": {"candidateReady": True, "promotionEligible": True, "promotionStatus": "materialized-awaiting-canonical-gate"},
-    }
+    summary = {"schemaVersion": 1, "bookId": code, "bookName": config["name"], "status": "fresh-semantic-review-complete", "sourcePacket": f"docs/biblia-explicata/minor-prophets-reaudit/{code}-FRESH-SOURCE-REAUDIT.json", "versificationApproval": f"docs/biblia-explicata/minor-prophets-reaudit/{code}-VERSIFICATION-APPROVAL.json", "reviewDirectory": f"docs/biblia-explicata/minor-prophets-reaudit/{code}/reviews", "totals": {"chapters": config["chapters"], "verses": config["verses"], "approvedAsIs": approved, "correctedVerses": corrected, "severity": {"critical": severity.get("critical", 0), "material": severity.get("material", 0), "minor": severity.get("minor", 0)}}, "canonicalPublication": {"chapterPattern": f"docs/data/biblia-emanus/{code}.{{1..{config['chapters']}}}.json", "snapshot": f"docs/data/biblia-emanus/{snapshot_rel}", "snapshotSha256": snapshot_sha, "textStage": "biblia-emanus", "translationLabel": "Biblia Emanus", "published": True, "public": True, "canonicalGate": "pending-external-validator"}, "promotion": {"candidateReady": True, "promotionEligible": True, "promotionStatus": "materialized-awaiting-canonical-gate"}}
     write_json(REAUDIT / f"{code}-SEMANTIC-REVIEW-SUMMARY.json", summary)
 
 
@@ -507,13 +369,11 @@ def main() -> None:
     parser.add_argument("--cornilescu-zip", type=Path, required=True)
     parser.add_argument("--legacy-ref", default=LEGACY_REF_DEFAULT)
     args = parser.parse_args()
-    global LEGACY_REF_DEFAULT
-    LEGACY_REF_DEFAULT = args.legacy_ref
 
     code = args.book
     config = BOOKS[code]
     validator = load_validator()
-    reviews, severity, corrected, approved = review_bundle(code, config)
+    reviews, severity, corrected, approved = review_bundle(code, config, args.legacy_ref)
     archive_paths = {"webu": args.webu_zip, "wlc": args.wlc_zip, "btf": args.btf_zip, "cornilescu": args.cornilescu_zip}
     for key, path in archive_paths.items():
         if not path.is_file(): fail(f"lipsește arhiva {key}: {path}")
@@ -524,11 +384,8 @@ def main() -> None:
     manifest = load_json(DATA / "manifest.json")
     rule_id = update_source_lock(source_lock, code, config, archive_paths, extracted, snapshot_sha, snapshot_id, snapshot_rel, target_refs, wlc_refs)
     update_ledger(ledger, validator, code, config, target_refs, rule_id)
-
     for chapter, (texts, review) in reviews.items():
-        payload = chapter_payload(validator, code, config, chapter, texts, review, snapshot_sha)
-        write_json(DATA / f"{code}.{chapter}.json", payload)
-
+        write_json(DATA / f"{code}.{chapter}.json", chapter_payload(validator, code, config, chapter, texts, review, snapshot_sha))
     update_manifest(manifest, validator)
     write_json(DATA / "source-lock.json", source_lock, minified=True)
     write_json(DATA / "source-ledger.json", ledger, minified=True)
