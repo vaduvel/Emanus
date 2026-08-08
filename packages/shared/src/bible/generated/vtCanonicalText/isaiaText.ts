@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă de lucru: Biblia Emanus; ISA, 66 capitole; nu edita manual.
+// Sursă de lucru: Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus; ISA, 66 capitole; nu edita manual.
 
 export const ISAIA_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [

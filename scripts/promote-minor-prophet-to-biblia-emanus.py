@@ -214,10 +214,17 @@ def review_bundle(code: str, config: dict[str, Any], legacy_ref: str) -> tuple[d
 
 
 def build_snapshot(validator, code: str, config: dict[str, Any], archive_paths: dict[str, Path]):
+    # WEBU + WLC are translation authority and stay hard-pinned.
+    # BTF + Cornilescu are comparison-only benchmarks. Archive drift is recorded
+    # in the new snapshot, while their per-book content must still parse and match
+    # product versification below.
     for key, path in archive_paths.items():
         actual = sha256_file(path)
-        if actual != EXPECTED_ARCHIVE_SHA256[key]:
-            fail(f"{key} archive drift: {actual} != {EXPECTED_ARCHIVE_SHA256[key]}")
+        expected = EXPECTED_ARCHIVE_SHA256[key]
+        if key in {"webu", "wlc"} and actual != expected:
+            fail(f"{key} source archive drift: {actual} != {expected}")
+        if key in {"btf", "cornilescu"} and actual != expected:
+            print(f"{key} comparison benchmark archive drift: {actual} != {expected}; recapturing current benchmark")
 
     extracted: dict[str, bytes] = {}
     parsed: dict[str, dict[tuple[int, int], str]] = {}

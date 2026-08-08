@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă de lucru: Biblia Emanus; 2CH, 36 capitole; nu edita manual.
+// Sursă de lucru: Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus; 2CH, 36 capitole; nu edita manual.
 
 export const CRONICI2_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [

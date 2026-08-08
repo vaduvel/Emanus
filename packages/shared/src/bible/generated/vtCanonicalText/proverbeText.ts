@@ -1,5 +1,5 @@
 // GENERATED de scripts/materialize-vt-overlay-texts.py.
-// Sursă de lucru: Biblia Emanus; PRO, 31 capitole; nu edita manual.
+// Sursă de lucru: Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus; PRO, 31 capitole; nu edita manual.
 
 export const PROVERBE_TEXT: Readonly<Record<number, readonly string[]>> = {
   1: [
