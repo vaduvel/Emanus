@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-gal-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -98,22 +97,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 21 de versete din GAL.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate expresiile nefirești, acordurile și relațiile sintactice care mascau sensul textului grec.",
+        "Formulările despre justificare, Lege și părtășie sunt păstrate fără adaosuri confesionale în corpul versetului.",
+        "Lecturile SBLGNT «Chifa» din GAL.2.9, GAL.2.11 și GAL.2.14 nu au fost înlocuite automat cu lectura RP «Petru»."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și genitivele disputate sunt redați fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,97 +122,87 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:f97e7adf080c2d31cb52bbfcec03b7a2672ae5453005c5a1a02a95e3e2195699",
-    "contentDigest": "sha256:42fc5d9948eced342d4ff784c7659a4e5baef66db98df24d43351184a72b1dbd"
+    "textDigest": "sha256:cac4b763cc7338336b9cbe8320b917f6d593fce67d91c9274a3ae7d16ce89640",
+    "contentDigest": "sha256:217045e225879bca22f1ec8ac149def3b36ca77de36d579c86f255620947c53e"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Apoi, după paisprezece ani, m-am suit iarăși la Ierusalim cu Barnaba, luându-l cu mine și pe Tit."
+      "text": "Apoi, după paisprezece ani, m-am suit din nou la Ierusalim cu Barnaba, luându-l cu mine și pe Tit."
     },
     {
       "number": 2,
-      "text": "M-am suit însă potrivit unei descoperiri și le-am pus înainte evanghelia pe care o vestesc între neamuri, dar în privat celor socotiți de seamă, ca nu cumva să alerg sau să fi alergat în zadar."
+      "text": "M-am suit potrivit unei descoperiri și le-am expus evanghelia pe care o vestesc printre neamuri, dar în particular celor socotiți de seamă, ca nu cumva să alerg sau să fi alergat în zadar."
     },
     {
       "number": 3,
-      "text": "Dar nici Tit, care era cu mine, deși era grec, n-a fost constrâns să fie circumcis;"
+      "text": "Dar nici Tit, care era cu mine, grec fiind, n-a fost constrâns să se circumcidă;"
     },
     {
       "number": 4,
-      "text": "și asta din cauza fraților falși strecurați pe furiș, care s-au infiltrat ca să ne spioneze libertatea pe care o avem în Hristos Isus, ca să ne înrobească —"
+      "text": "Iar aceasta din cauza fraților falși, strecurați pe furiș, care s-au infiltrat ca să ne spioneze libertatea pe care o avem în Hristos Isus, ca să ne aducă în robie —"
     },
     {
       "number": 5,
-      "text": "cărora nu le-am cedat prin supunere nici măcar pentru o oră, pentru ca adevărul evangheliei să rămână la voi."
+      "text": "Cărora nu le-am cedat prin supunere nici măcar pentru o clipă, pentru ca adevărul Evangheliei să rămână cu voi."
     },
     {
       "number": 6,
-      "text": "Dar de la cei despre care s-a spus că sunt importanți — oricare ar fi fost ei, nu contează pentru mine; Dumnezeu nu arată părtinire față de om — ei, spun eu, care au fost respecta nu mi-au împărtășit nimic,"
+      "text": "Dar cei socotiți a fi ceva — oricare ar fi fost ei, nu contează pentru mine; Dumnezeu nu caută la fața omului — aceștia, cei socotiți de seamă, nu mi-au adăugat nimic,"
     },
     {
       "number": 7,
-      "text": "ci, dimpotrivă, văzând că mie mi-a fost încredințată evanghelia pentru necircumciși, așa cum lui Petru pentru circumciși,"
+      "text": "ci, dimpotrivă, văzând că mie îmi fusese încredințată evanghelia pentru cei necircumciși, așa cum lui Petru cea pentru cei circumciși,"
     },
     {
       "number": 8,
-      "text": "căci cel care a lucrat în Petru pentru apostolia față de circumciși a lucrat și în mine pentru neamuri,"
+      "text": "căci Cel care a lucrat prin Petru pentru apostolia celor circumciși a lucrat și prin mine pentru neamuri,"
     },
     {
       "number": 9,
-      "text": "și cunoscând harul care mi-a fost dat, Iacov și Chifa și Ioan, cei socotiți a fi stâlpi, ne-au dat mie și lui Barnaba dreapta părtășiei, ca noi să mergem la neamuri, iar ei la circumcizie;"
+      "text": "și cunoscând harul care mi-a fost dat, Iacov, Chifa și Ioan, cei socotiți a fi stâlpi, ne-au dat mie și lui Barnaba mâinile drepte ale părtășiei, ca noi să mergem la neamuri, iar ei la cei circumciși;"
     },
     {
       "number": 10,
-      "text": "doar să ne aducem aminte de săraci, lucru pe care tocmai m-am și străduit să-l fac."
+      "text": "doar să ne aducem aminte de săraci, tocmai lucrul pe care m-am și străduit să-l fac."
     },
     {
       "number": 11,
-      "text": "Dar când a venit Chifa la Antiohia, i-am stat împotrivă în față, pentru că era de condamnat."
+      "text": "Dar când a venit Chifa la Antiohia, m-am împotrivit lui pe față, pentru că era de condamnat."
     },
     {
       "number": 12,
-      "text": "Căci înainte de a veni unii de la Iacov, mânca împreună cu neamurile; dar când au venit, se retrăgea și se despărțea, temându-se de cei din circumcizie."
+      "text": "Căci, înainte să vină unii de la Iacov, mânca împreună cu neamurile; dar, când au venit ei, se retrăgea și se separa, temându-se de cei din circumcizie."
     },
     {
       "number": 13,
-      "text": "Și împreună cu el s-au fățărnicit și ceilalți iudei, astfel că până și Barnaba a fost atras de fățărnicia lor."
+      "text": "Și ceilalți iudei i s-au alăturat în fățărnicia lui, așa încât și Barnaba a fost atras în fățărnicia lor."
     },
     {
       "number": 14,
-      "text": "Dar când am văzut că nu umblă drept în acord cu adevărul evangheliei, i-am spus lui Chifa înaintea tuturor: „Dacă tu, fiind iudeu, trăiești ca neamurile și nu ca iudeii, cum silești neamurile să trăiască după obiceiul iudeilor?”"
+      "text": "Dar când am văzut că nu umblă drept potrivit adevărului Evangheliei, i-am spus lui Chifa înaintea tuturor: „Dacă tu, fiind iudeu, trăiești ca neamurile și nu ca iudeii, cum silești neamurile să trăiască asemenea iudeilor?”"
     },
     {
       "number": 15,
-      "text": "Noi suntem din fire iudei și nu păcătoși dintre neamuri;"
+      "text": "Noi suntem din fire iudei, nu păcătoși dintre neamuri;"
     },
     {
       "number": 16,
-      "text": "totuși, știind că omul nu este îndreptățit din fapte ale Legii, decât prin credință în Isus Hristos, și noi am crezut în Hristos Isus, ca să fim îndreptățiți din credință în Hristos, iar nu din fapte ale Legii, fiindcă din fapte ale Legii nicio carne nu va fi îndreptățită."
+      "text": "totuși, știind că omul nu este îndreptățit prin faptele Legii, ci numai prin credință în Isus Hristos, și noi am crezut în Hristos Isus, ca să fim îndreptățiți prin credința în Hristos, și nu prin faptele Legii; căci prin faptele Legii nicio ființă omenească nu va fi îndreptățită."
     },
     {
       "number": 17,
-      "text": "Dar dacă, în timp ce căutăm să fim îndreptățiți în Hristos, am fost găsiți și noi înșine păcătoși, este oare Hristos un slujitor al păcatului? Nicidecum!"
+      "text": "Dar dacă, în timp ce căutăm să fim îndreptățiți în Hristos, ne-am aflat și noi păcătoși, este atunci Hristos un slujitor al păcatului? Nicidecum!"
     },
     {
       "number": 18,
-      "text": "Căci dacă zidesc din nou tocmai lucrurile pe care le-am dărâmat, mă arăt pe mine însumi călcător de Lege."
+      "text": "Căci, dacă zidesc din nou lucrurile pe care le-am dărâmat, mă dovedesc pe mine însumi călcător."
     },
     {
       "number": 19,
@@ -221,14 +210,23 @@
     },
     {
       "number": 20,
-      "text": "și nu mai trăiesc eu, ci Hristos trăiește în mine. Iar viața pe care o trăiesc acum în carne o trăiesc în credință în Fiul lui Dumnezeu, care m-a iubit și s-a dat pe sine pentru mine."
+      "text": "nu mai trăiesc eu, ci Hristos trăiește în mine. Iar viața pe care o trăiesc acum în trup o trăiesc prin credința în Fiul lui Dumnezeu, care m-a iubit și S-a dat pe Sine pentru mine."
     },
     {
       "number": 21,
-      "text": "Nu resping harul lui Dumnezeu; căci dacă dreptatea este prin Lege, atunci Hristos a murit degeaba."
+      "text": "Nu resping harul lui Dumnezeu; căci, dacă dreptatea este prin Lege, atunci Hristos a murit în zadar."
     }
   ],
   "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "καταδουλώσουσιν",
+      "decision": "redat prin „să ne aducă în robie”",
+      "reason": "SBLGNT are forma activă «să ne înrobească / să ne aducă în robie», în timp ce aparatul notează forma RP καταδουλώσωνται; textul păstrează sensul constrângerii fără a introduce un obiect suplimentar.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Forma critică și contextul libertății în Hristos susțin redarea activă și idiomatică «să ne aducă în robie»."
+    },
     {
       "verse": 16,
       "term": "πίστεως Ἰησοῦ Χριστοῦ / πίστεως Χριστοῦ",
@@ -246,6 +244,15 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Textul principal urmează lectura SBL/NA28/RP și păstrează coerența personală a propoziției „care m-a iubit și s-a dat pe sine pentru mine”."
+    },
+    {
+      "verse": 18,
+      "term": "παραβάτην",
+      "decision": "redat prin „călcător”",
+      "reason": "Substantivul indică încălcătorul, fără ca greaca să repete explicit «de Lege» în acest verset; adaosul explicativ a fost eliminat din textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Româna păstrează acuzația fără completarea unui complement absent din forma greacă."
     }
   ],
   "referenceNotes": [],
