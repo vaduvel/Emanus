@@ -30,7 +30,7 @@ export const DEUTERONOM_20 = deuteronomChapter({
       heading: "Încurajarea înaintea luptei și cei trimiși acasă",
       text: deuteronomPassage(20, 1, 9),
       teaching: teaching(
-        "Versetele 1–4 descriu cuvintele pe care preotul trebuie să le rostească înaintea luptei. Poporului i se spune să nu se teamă de cai, care și de o oștire mai numeroasă, iar motivul dat de text este că DOMNUL merge cu Israel pentru a lupta împotriva vrăjmașilor lui și pentru a-l izbăvi.",
+        "Versetele 1–4 descriu cuvintele pe care preotul trebuie să le rostească înaintea luptei. Poporului i se spune să nu se teamă de cai, care de luptă sau de o oștire mai numeroasă, iar motivul dat de text este că DOMNUL merge cu Israel pentru a lupta împotriva vrăjmașilor lui și pentru a-l izbăvi.",
         "Versetele 5–9 enumeră cazurile în care un om este trimis acasă: cel care a zidit o casă și nu a inaugurat-o, cel care a sădit o vie și nu s-a bucurat încă de rodul ei, cel logodit care nu și-a luat încă soția și cel fricos. Despre ultimul caz textul spune explicit că este trimis acasă pentru ca inima fraților lui să nu se topească asemenea inimii lui. După aceste scutiri, căpeteniile sunt puse în fruntea poporului.",
       ),
       explanationKind: "textual-overview",
