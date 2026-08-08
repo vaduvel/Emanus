@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-mrk-4",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 41,
       "reviewed": 41,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 41 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 41 de versete din MRK.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate coruperile de diacritice, acord, sintaxă și punctuație din MRK.4.12, MRK.4.19, MRK.4.29 și MRK.4.35.",
+        "Sunt păstrate imaginea semănătorului, progresia rodului și succesiunea logică a pildelor din textul SBLGNT.",
+        "Textul urmează SBLGNT la locurile consemnate de aparat, fără armonizare automată cu TR."
       ]
     },
     "theologicalContext": {
@@ -123,29 +122,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 515,
-        "primary": 119,
-        "secondary": 43,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.39728811051665835,
-      "minimumScore": 0.5313914534272478
-    },
-    "textDigest": "sha256:32d5fe4d79325f8e034420925336d5d8e8a9fb4e4c8ce5b7fd9776b2c0fef741",
-    "contentDigest": "sha256:e0f7194dbbb54524c305042b16992ae1a96e37c215ecf5a1ff7311f179380467"
+    "textDigest": "sha256:f2282071cec88e5adde0f18a58a5a72ad2ba8206ea36bd3d9891ada41aee51ef",
+    "contentDigest": "sha256:7b4d6f7fc335ffbb1f33ab0929fcfac57ad560a8cff72fa6eaef1efecf7046b0"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Isus a început din nou să-i învețe lângă mare. În jurul Lui s-a adunat o mulțime foarte mare, așa că S-a urcat într-o barcă și S-a așezat pe mare, iar toată mulțimea stătea pe uscat, lângă mare."
+      "text": "Isus a început din nou să-i învețe lângă mare. În jurul Lui s-a adunat o mulțime foarte mare, așa că a intrat într-o barcă și S-a așezat în ea, pe mare, iar toată mulțimea era pe uscat, lângă mare."
     },
     {
       "number": 2,
@@ -153,7 +142,7 @@
     },
     {
       "number": 3,
-      "text": "Ascultă! Iată, fermierul a ieșit să semene."
+      "text": "Ascultați! Iată, semănătorul a ieșit să semene."
     },
     {
       "number": 4,
@@ -189,7 +178,7 @@
     },
     {
       "number": 12,
-      "text": "ca sa vada ei pot vedea si nu percep, si auzind ei pot auzi si nu inteleg, ca nu cumva ar trebui sa se intoarca din nou, si pacatele lor ar trebui sa le fie iertate."
+      "text": "ca, privind, să privească și să nu vadă, iar auzind, să audă și să nu înțeleagă, ca nu cumva să se întoarcă și să fie iertați."
     },
     {
       "number": 13,
@@ -197,7 +186,7 @@
     },
     {
       "number": 14,
-      "text": "Fermierul seamănă cuvântul."
+      "text": "Semănătorul seamănă Cuvântul."
     },
     {
       "number": 15,
@@ -217,7 +206,7 @@
     },
     {
       "number": 19,
-      "text": "și grijile acestei epoci, și înșelăciunea bogățiilor, și poftele altor lucruri care intră în sufoca cuvântul, și devine neroditor."
+      "text": "iar grijile veacului, înșelăciunea bogăției și poftele pentru celelalte lucruri pătrund și înăbușă Cuvântul, iar acesta devine neroditor."
     },
     {
       "number": 20,
@@ -257,7 +246,7 @@
     },
     {
       "number": 29,
-      "text": "Dar atunci când fructul este copt, el pune imediat în secera, pentru că recolta a venit."
+      "text": "Dar, când rodul se coace, trimite îndată secera, pentru că a sosit secerișul."
     },
     {
       "number": 30,
@@ -277,11 +266,11 @@
     },
     {
       "number": 34,
-      "text": "Fără o parabolă, el nu le-a vorbit; dar în particular, el le-a explicat discipolilor săi totul."
+      "text": "Fără pildă nu le vorbea; dar, în particular, le explica ucenicilor Săi totul."
     },
     {
       "number": 35,
-      "text": "În acea zi, când a venit seara, el le-a spus, Le-s du-te pe partea cealaltă."
+      "text": "În acea zi, când s-a făcut seară, le-a spus: „Să trecem pe partea cealaltă.”"
     },
     {
       "number": 36,
