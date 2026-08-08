@@ -42,19 +42,19 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924", "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf", "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca", "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +68,20 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
+    "completedOn": "2026-08-08", "runId": "emanus-nt-editorial-2026-08-08-rom-8",
+    "engineVersion": "4.0.0", "reviewLevel": "in_review",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 39,
       "reviewed": 39,
@@ -98,14 +92,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 39 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 39 de versete au fost confruntate cu SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate tiparul din 8:26 și referenții care afectau sensul în română.",
+        "Termenii fii, înfiere, slăbiciune și mai mult decât biruitori au fost redați direct din textul critic.",
+        "Adaosul TR de la 8:1 și diferențele materiale de persoană ori caz sunt păstrate numai în note."
       ]
     },
     "theologicalContext": {
@@ -123,24 +117,13 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:cc994aeca4b6984d954bb6a506873e21ded071ab7fe34f21d0b16dfd4afbb2d5",
-    "contentDigest": "sha256:7947531385b1389ddfc99a56756df310c4a337b00d0cafeefe2bd269b58e1a31"
+    "textDigest": "sha256:0e6344d1dc7983dd543caf5603901787874f969711c8f5546493fac3e30c88c3", "contentDigest": "sha256:82489e4854e367fbf23122ef964211240ddf847666b9523922bfe648247f0b7d"
   },
   "verses": [
     {
@@ -169,7 +152,7 @@
     },
     {
       "number": 7,
-      "text": "pentru că mintea cărnii este ostilă față de Dumnezeu, pentru că ea nu este supusă legii lui Dumnezeu și nici nu poate fi."
+      "text": "pentru că gândirea cărnii este ostilă față de Dumnezeu; ea nu se supune Legii lui Dumnezeu și nici nu poate."
     },
     {
       "number": 8,
@@ -197,11 +180,11 @@
     },
     {
       "number": 14,
-      "text": "Căci toți cei care sunt conduși de Duhul lui Dumnezeu, aceștia sunt copiii lui Dumnezeu."
+      "text": "Căci toți cei care sunt conduși de Duhul lui Dumnezeu, aceștia sunt fii ai lui Dumnezeu."
     },
     {
       "number": 15,
-      "text": "Fiindcă n-ați primit un duh de robie ca să vă fie din nou frică, ci ați primit Duhul înfierii, prin care strigăm: „Abba, Tată!”"
+      "text": "Fiindcă n-ați primit un duh de robie ca să vă fie din nou frică, ci ați primit un duh de înfiere, prin care strigăm: „Abba, Tată!”"
     },
     {
       "number": 16,
@@ -213,7 +196,7 @@
     },
     {
       "number": 18,
-      "text": "Căci eu consider că suferințele din acest timp nu sunt demne să fie comparate cu gloria care va fi revelată față de noi."
+      "text": "Căci socotesc că suferințele timpului de acum nu sunt vrednice de comparat cu gloria care urmează să fie descoperită față de noi."
     },
     {
       "number": 19,
@@ -233,7 +216,7 @@
     },
     {
       "number": 23,
-      "text": "Nu numai așa, ci și noi înșine, care avem primele roade ale Duhului, chiar și noi gemem în noi înșine, așteptând adopția, răscumpărarea trupului nostru."
+      "text": "Nu numai ea, ci și noi înșine, care avem primele roade ale Duhului, gemem în noi înșine, așteptând înfierea, răscumpărarea trupului nostru."
     },
     {
       "number": 24,
@@ -245,7 +228,7 @@
     },
     {
       "number": 26,
-      "text": "În fel, Duhul ajută slăbiciunile noastre, pentru că nu știm cum să ne rugăm așa cum ar trebui. Dar Duhul Însuși mijlocește pentru noi cu gemete care nu pot fi rostite."
+      "text": "Tot astfel, Duhul ne vine în ajutor în slăbiciunea noastră, căci nu știm pentru ce să ne rugăm cum se cuvine. Dar Duhul Însuși mijlocește cu gemete de nerostit."
     },
     {
       "number": 27,
@@ -289,7 +272,7 @@
     },
     {
       "number": 37,
-      "text": "Nu, în toate aceste lucruri suntem mai mult decât cuceritori prin cel care ne-a iubit."
+      "text": "Nu, în toate aceste lucruri suntem mai mult decât biruitori prin Cel care ne-a iubit."
     },
     {
       "number": 38,
