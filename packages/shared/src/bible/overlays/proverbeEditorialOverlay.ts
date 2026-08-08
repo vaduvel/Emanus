@@ -1,9 +1,14 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOverlay.js"
 import { PROVERBE_EXPLAINED as POONEN_BASE } from "./proverbeOverlay.js"
+import { PROVERBE_DEEPENED_11_20 } from "./proverbeDeepened11_20.js"
 import { PROVERBE_TEXTUAL_CHAPTERS } from "./proverbeTextualChapters.js"
 
 const chapters = POONEN_BASE.chapters.map((chapter) => {
   if (chapter.units.length > 0) return chapter
+
+  const deepened = PROVERBE_DEEPENED_11_20[chapter.number]
+  if (deepened) return deepened
+
   const textual = PROVERBE_TEXTUAL_CHAPTERS[chapter.number]
   if (!textual) {
     throw new Error(`[Proverbele ${chapter.number}] lipsește explicația textuală directă.`)
