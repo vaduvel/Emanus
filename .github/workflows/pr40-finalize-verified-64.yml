@@ -6,8 +6,6 @@ on:
     paths:
       - 'docs/biblia-emanus/PR40-FINALIZE-64.trigger'
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
 
 permissions:
   actions: read
