@@ -60,6 +60,20 @@
         "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1PE.4.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1PE",
+        "BIBLIA-LIBERA-1PE"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -78,13 +92,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-1pe-4",
+      "runId": "emanus-nt-editorial-2026-08-08-1pe-4-followup",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,7 +117,8 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Toate cele 19 versete au fost reverificate față de SBLGNT, aparat și martorul TR.",
+        "În 4:15, imperativul negativ a fost corectat în română ca „Nimeni dintre voi să nu sufere”, fără conectorul impropriu „Fiindcă”.",
         "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
         "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
@@ -129,8 +144,8 @@
       "result": "approved",
       "open": 0
     },
-    "textDigest": "sha256:5bdf570840575a90eeed1b3a8ef40223f44eaadfa8e2689aa210784817b6ba72",
-    "contentDigest": "sha256:935557026dc8529cfe8d41e9bd9e08de3fa61ca5deb359d5c9294fcd602ec039"
+    "textDigest": "sha256:557b0c5abf10e20982c98db4cecd2f6dc1effcd2d8c5473c46511603c3ae9035",
+    "contentDigest": "sha256:d8a3b01d3341645b15e0e465c213b00e3d798e7dae9468c9df5dcda9116b1219"
   },
   "verses": [
     {
@@ -191,7 +206,7 @@
     },
     {
       "number": 15,
-      "text": "Fiindcă niciunul dintre voi să nu sufere ca ucigaș, hoț, făcător de rele sau ca unul care se amestecă în treburile altora."
+      "text": "Nimeni dintre voi să nu sufere ca ucigaș, hoț, făcător de rele sau ca unul care se amestecă în treburile altora."
     },
     {
       "number": 16,

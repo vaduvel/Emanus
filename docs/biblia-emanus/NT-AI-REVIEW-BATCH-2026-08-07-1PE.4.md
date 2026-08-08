@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08` (reverificare editorială)
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1pe-4`)
+`emanus-nt-editorial-2026-08-08-1pe-4-followup`)
 
 ## Domeniu și surse
 
@@ -39,7 +39,7 @@ promovează niciun verset ori capitol.
 | 1PE.4.12 | `μὴ ξενίζεσθε τῇ … πυρώσει` | Încercarea de foc care are loc între destinatari nu trebuie tratată ca ceva străin ori ciudat. |
 | 1PE.4.13 | `καθὸ κοινωνεῖτε … χαρῆτε ἀγαλλιώμενοι` | Bucuria corespunde participării la suferințele lui Hristos și se îndreaptă spre descoperirea slavei lui. |
 | 1PE.4.14 | `τὸ τῆς δόξης καὶ τὸ τοῦ θεοῦ πνεῦμα … ἀναπαύεται` | Cei ocărâți pentru numele lui Hristos sunt fericiți, deoarece Duhul slavei și al lui Dumnezeu se odihnește peste ei; adaosul TR este omis. |
-| 1PE.4.15 | `ἀλλοτριεπίσκοπος` | Suferința nu trebuie să provină din omor, furt, rău sau amestecul în treburile altora. |
+| 1PE.4.15 | `μὴ γάρ τις ὑμῶν πασχέτω … ἀλλοτριεπίσκοπος` | Imperativul negativ este redat firesc: „Nimeni dintre voi să nu sufere” ca ucigaș, hoț, făcător de rele sau ca unul care se amestecă în treburile altora. |
 | 1PE.4.16 | `ἐν τῷ ὀνόματι τούτῳ` | Cel care suferă ca creștin nu se rușinează, ci îl slăvește pe Dumnezeu în acest nume; nu este substituită lectura TR „în această privință”. |
 | 1PE.4.17 | `ἄρξασθαι τὸ κρίμα ἀπὸ τοῦ οἴκου` | Judecata începe de la casa lui Dumnezeu; întrebarea păstrează „sfârșitul” celor neascultători de evanghelie. |
 | 1PE.4.18 | `ὁ δίκαιος μόλις σῴζεται` | Proverbul este păstrat prin salvarea cu greu a celui drept și întrebarea despre cel neevlavios și păcătos. |
@@ -47,7 +47,7 @@ promovează niciun verset ori capitol.
 
 ## Concluzie de lot
 
-Capitolul anterior conținea numeroase trunchieri, schimbări nejustificate de
-persoană și număr, formulări românești corupte și adaosuri din TR. Toate cele
-19 texte au fost rescrise și rămân `in_review` și `pending` până la registrul
+Capitolul a fost reverificat verset cu verset; 4:15 a primit o corecție
+gramaticală care păstrează imperativul negativ SBLGNT. Toate cele 19 texte
+rămân `in_review` și `pending` până la registrul
 final de aprobare pentru întregul NT.
