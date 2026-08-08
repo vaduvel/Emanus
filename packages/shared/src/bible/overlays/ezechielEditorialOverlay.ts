@@ -1,5 +1,6 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOverlay.js"
 import { VT_MAJOR_PROPHETS_FULL } from "../vtFullNarrativesMajorProphets.js"
+import { reviewEzechiel14And18Explanations } from "./ezechiel14And18ExplanationReview.js"
 import { reviewEzechiel16And28Explanations } from "./ezechiel16And28ExplanationReview.js"
 import { EZECHIEL_EXPLAINED as POONEN_BASE } from "./ezechielOverlay.js"
 import { textualChapter } from "./textualChapterFactory.js"
@@ -15,6 +16,8 @@ const EZECHIEL_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const EZECHIEL_EDITORIAL_REVIEWED = reviewEzechiel16And28Explanations(EZECHIEL_EDITORIAL_BASE)
+const EZECHIEL_EDITORIAL_REVIEWED = reviewEzechiel16And28Explanations(
+  reviewEzechiel14And18Explanations(EZECHIEL_EDITORIAL_BASE),
+)
 
 export const EZECHIEL_EDITORIAL_EXPLAINED = assertCompleteOverlay(EZECHIEL_EDITORIAL_REVIEWED, 48)
