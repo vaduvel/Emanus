@@ -72,7 +72,7 @@ export const pornografieL1: Lesson = {
       order: 2,
       bubbles: [
         { from: "guide", text: "Cercul arată cam așa, și îl știi pe de rost." },
-        { from: "guide", text: "Ești obosit, singur sau golit. Vine gândul. Zici că nu. Zici că nu încă o dată. Apoi cedezi. Urmează câteva minute și, imediat după, greța și rușinea." },
+        { from: "guide", text: "Ești obosit, singur sau golit. Vine gândul. Zici că nu. Zici că nu încă o dată. Apoi cedezi. Urmează câteva minute și, imediat după, greața și rușinea." },
         { from: "guide", text: "Și aici este partea pe care puțini o spun: tocmai rușinea de după pregătește întoarcerea următoare. Pentru că un om care se disprețuiește caută iarăși ceva care să îl amorțească." },
         { from: "guide", text: "Nu ești într-o linie dreaptă spre mai rău. Ești într-un cerc. Iar un cerc se rupe altfel decât o linie." }
       ]
@@ -105,7 +105,7 @@ export const pornografieL1: Lesson = {
       order: 5,
       bubbles: [
         { from: "guide", text: "Adevărul de astăzi: Dumnezeu știe deja. De ani de zile." },
-        { from: "guide", text: "Nu Îl șochezi și nu Îl pierzi astăzi. Ceea ce ascunzi îl ascunzi de oameni, nu de El." }
+        { from: "guide", text: "Nu Îl șochezi și nu Îl pierzi astăzi. Ceea ce ascunzi, ascunzi de oameni, nu de El." }
       ]
     },
     {
@@ -171,7 +171,7 @@ export const pornografieL1: Lesson = {
       quiz: {
         question: "Ce rol are rușinea de după, în cercul acesta?",
         options: [
-          { text: "Este pedeapsa care, dacă este destul de mare, opredește repetarea", correct: false },
+          { text: "Este pedeapsa care, dacă este destul de mare, oprește repetarea", correct: false },
           { text: "De obicei îl împinge pe om înapoi, pentru că un om care se disprețuiește caută din nou ceva care să îl amorțească", correct: true },
           { text: "Nu are niciun rol; contează doar voința", correct: false }
         ],
@@ -195,7 +195,7 @@ export const pornografieL1: Lesson = {
       type: "prayer",
       order: 13,
       bubbles: [
-        { from: "guide", text: "«Doamne, Știi de ani de zile și nu ai plecat. Nu Îți promit astăzi nimic, pentru că am mai promis. Îți cer doar să nu mă lași singur în asta. Amin.»" }
+        { from: "guide", text: "«Doamne, știi de ani de zile și nu ai plecat. Nu Îți promit astăzi nimic, pentru că am mai promis. Îți cer doar să nu mă lași singur în asta. Amin.»" }
       ]
     },
     {
