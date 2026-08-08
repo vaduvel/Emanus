@@ -42,19 +42,19 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924", "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf", "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca", "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +68,20 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
+    "completedOn": "2026-08-08", "runId": "emanus-nt-editorial-2026-08-08-rom-7",
+    "engineVersion": "4.0.0", "reviewLevel": "in_review",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,14 +92,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 25 de versete au fost confruntate cu SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost verificate relațiile logice, persoanele verbale și terminologia argumentului despre Lege și păcat.",
+        "Varianta σάρκινος din 7:14 este păstrată prin «de carne», distinct de lectura TR.",
+        "Variantele și elipsele aparatului sunt documentate fără adaos în textul principal."
       ]
     },
     "theologicalContext": {
@@ -123,29 +117,18 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:c509851efbfabad06d1ed98cb14e3eb943d628a588d2ca2cfb3b15b35bb07dfe",
-    "contentDigest": "sha256:d236f93f2e4fd702724bacaf0bad65d6aa42d195f4f8bd60cb6d5402cf3c0e6f"
+    "textDigest": "sha256:e35ee47d89f6d38d42089a6a68a13651dcc9d8cdefe68564e30b67e6ae63db05", "contentDigest": "sha256:7ccc283e57f208fdefccefad8454498f08d38b92073442507bf21cece72c8b04"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Sau nu știți, fraților—căci le vorbesc unora care cunosc legea—că legea stăpânește peste om cât timp trăiește?"
+      "text": "Sau nu știți, fraților — căci le vorbesc celor care cunosc Legea — că Legea stăpânește asupra omului cât timp trăiește?"
     },
     {
       "number": 2,
@@ -165,7 +148,7 @@
     },
     {
       "number": 6,
-      "text": "Dar acum am fost eliberați de Lege, murind față de lucrul în care eram ținuți, ca să fim robi în înnoirea duhului, nu în învechirea literei."
+      "text": "Dar acum am fost eliberați de Lege, murind față de ceea ce ne ținea legați, ca să slujim în noutatea Duhului, nu în vechimea literei."
     },
     {
       "number": 7,
@@ -177,11 +160,11 @@
     },
     {
       "number": 9,
-      "text": "Am fost în viață în afară de lege odată, dar când a venit porunca, păcatul a înviat și am murit."
+      "text": "Eu trăiam odinioară fără Lege, dar, când a venit porunca, păcatul a prins viață,"
     },
     {
       "number": 10,
-      "text": "Porunca care a fost pentru viață, aceasta am găsit-o pentru moarte;"
+      "text": "iar eu am murit. Și am constatat că tocmai porunca dată pentru viață mi-a dus la moarte;"
     },
     {
       "number": 11,
@@ -213,7 +196,7 @@
     },
     {
       "number": 18,
-      "text": "Căci știu că în mine, adică în carnea mea, nu locuiește nimic bun; căci dorința este prezentă la mine, dar nu o găsesc făcând ceea ce este bine."
+      "text": "Căci știu că în mine, adică în carnea mea, nu locuiește nimic bun; voința îmi stă la îndemână, dar împlinirea binelui, nu."
     },
     {
       "number": 19,
@@ -237,7 +220,7 @@
     },
     {
       "number": 24,
-      "text": "Nenorocit om sunt eu! Cine mă va elibera din trupul morții acesteia?"
+      "text": "Ce om nenorocit sunt! Cine mă va izbăvi de trupul acestei morți?"
     },
     {
       "number": 25,
