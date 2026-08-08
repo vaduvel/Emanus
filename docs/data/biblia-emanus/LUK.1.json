@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-luk-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 80,
       "reviewed": 80,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 80 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 80 de versete din LUK.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate formulările calchiate, acordurile și relațiile sintactice care mascau sensul textului grec.",
+        "Sunt păstrate persoana, numărul, negările, timpul verbal și referenții din textul principal SBLGNT într-o română firească.",
+        "LUK.1.28 urmează lectura scurtă SBLGNT, fără adaosul tradițional «Binecuvântată ești tu între femei»."
       ]
     },
     "theologicalContext": {
@@ -123,29 +122,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 246,
-        "primary": 575,
-        "secondary": 329,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.4739268246110474,
-      "minimumScore": 0.4668938388149379
-    },
-    "textDigest": "sha256:82f9e54322e38506c6d820814ad65305af82ea70e07a9768b97c95c875b93e70",
-    "contentDigest": "sha256:2243ebb92963ad5352a9029f5fadb531b25e329358d94eaa2399fabd7382a34c"
+    "textDigest": "sha256:64059a216c929cf2aa049b9a21c17d61ce611c80ec27a2052ccf41c4419da323",
+    "contentDigest": "sha256:ef5af561eb5dd2df5b8456064d69b0163b5b6e2c0d901553e27eeaaa525411d1"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Din moment ce mulți s-au angajat să stabilească în ordine o narativă cu privire la acele probleme care au fost îndeplinite printre noi,"
+      "text": "Fiindcă mulți au încercat să alcătuiască în ordine o relatare despre faptele împlinite printre noi,"
     },
     {
       "number": 2,
@@ -153,7 +142,7 @@
     },
     {
       "number": 3,
-      "text": "Mi s-a părut bine și mie, după ce am urmărit cursul tuturor lucrurilor cu exactitate de la început, să vă scriu în ordine, cel mai excelent Teofil;"
+      "text": "mi s-a părut bine și mie, după ce am cercetat cu grijă toate lucrurile de la început, să ți le scriu în ordine, preaalesule Teofil,"
     },
     {
       "number": 4,
@@ -189,7 +178,7 @@
     },
     {
       "number": 12,
-      "text": "Când l-a văzut, Zaharia s-a tulburat și a căzut frica peste el."
+      "text": "Când l-a văzut, Zaharia s-a tulburat și l-a cuprins frica."
     },
     {
       "number": 13,
@@ -209,7 +198,7 @@
     },
     {
       "number": 17,
-      "text": "El va merge înaintea Lui în duhul și puterea lui Ilie, ca să întoarcă inimile părinților spre copii și pe cei neascultători la înțelepciunea celor drepți, ca să pregătească pentru Domnul un popor pregătit."
+      "text": "El va merge înaintea Lui, în duhul și puterea lui Ilie, ca să întoarcă inimile părinților spre copii și pe cei neascultători la înțelepciunea celor drepți, ca să pregătească pentru Domnul un popor gata pregătit."
     },
     {
       "number": 18,
@@ -245,7 +234,7 @@
     },
     {
       "number": 26,
-      "text": "În luna a șasea, îngerul Gabriel a fost trimis de la Dumnezeu într'o cetate din Galileea, numită Nazaret,"
+      "text": "În luna a șasea, îngerul Gabriel a fost trimis de la Dumnezeu într-o cetate din Galileea, numită Nazaret,"
     },
     {
       "number": 27,
@@ -253,11 +242,11 @@
     },
     {
       "number": 28,
-      "text": "După ce a intrat, îngerul i-a zis: Bucură-te, preaiubitule! Domnul este cu tine. Binecuvântată ești tu între femei!"
+      "text": "După ce a intrat la ea, i-a spus: Bucură-te, tu căreia ți s-a arătat har! Domnul este cu tine."
     },
     {
       "number": 29,
-      "text": "Dar când l-a văzut, a fost foarte tulburată de vorbă, și a văzut ce fel de salut ar putea fi acesta."
+      "text": "Ea s-a tulburat de cuvântul acesta și se întreba ce fel de salut ar putea fi."
     },
     {
       "number": 30,
@@ -289,7 +278,7 @@
     },
     {
       "number": 37,
-      "text": "Căci niciun cuvânt de la Dumnezeu nu va fi imposibil."
+      "text": "Căci niciun cuvânt nu va fi imposibil pentru Dumnezeu."
     },
     {
       "number": 38,
@@ -333,7 +322,7 @@
     },
     {
       "number": 48,
-      "text": "Căci el a privit starea umilă a robului Său; căci iată, de acum înainte, toate neamurile mă vor numi binecuvântat."
+      "text": "căci a privit la starea smerită a roabei Sale. Iată, de acum înainte toate generațiile mă vor numi fericită,"
     },
     {
       "number": 49,
@@ -353,15 +342,15 @@
     },
     {
       "number": 53,
-      "text": "El i-a umplut pe cei flămânzi cu lucruri bune și i-a trimis pe cei bogați în pustietate."
+      "text": "I-a umplut pe cei flămânzi cu bunătăți și i-a trimis pe cei bogați cu mâinile goale."
     },
     {
       "number": 54,
-      "text": "L-a ajutat pe Israel, slujitorul Său, ca să-Și aducă aminte de milă,"
+      "text": "A venit în ajutorul lui Israel, slujitorul Său, aducându-Și aminte de milă,"
     },
     {
       "number": 55,
-      "text": "El le-a vorbit părinților noștri, lui Avraam și urmașilor săi pentru totdeauna."
+      "text": "după cum a vorbit părinților noștri, lui Avraam și seminței lui, pentru totdeauna."
     },
     {
       "number": 56,
@@ -389,7 +378,7 @@
     },
     {
       "number": 62,
-      "text": "Atunci îi făceau semne tatălui lui, ca să afle cum ar vrea să fie numit."
+      "text": "Atunci i-au făcut semne tatălui lui, ca să afle ce nume ar vrea să-i dea copilului."
     },
     {
       "number": 63,
@@ -397,7 +386,7 @@
     },
     {
       "number": 64,
-      "text": "Gura i s-a deschis imediat și limba i-a fost eliberată, iar el a vorbit, binecuvântându-L pe Dumnezeu."
+      "text": "Îndată i s-a deschis gura și i s-a dezlegat limba; a început să vorbească, binecuvântându-L pe Dumnezeu."
     },
     {
       "number": 65,
@@ -413,11 +402,11 @@
     },
     {
       "number": 68,
-      "text": "Binecuvântat este Domnul, Dumnezeul lui Israel, pentru că a cercetat și a făcut răscumpărare pentru poporul Său"
+      "text": "Binecuvântat este Domnul, Dumnezeul lui Israel, căci Și-a cercetat poporul și i-a adus izbăvire"
     },
     {
       "number": 69,
-      "text": "și ne-a ridicat un corn de mântuire în casa lui David, slujitorul Său,"
+      "text": "și ne-a înălțat o putere de mântuire în casa lui David, slujitorul Său,"
     },
     {
       "number": 70,
@@ -433,11 +422,11 @@
     },
     {
       "number": 73,
-      "text": "jurământul pe care i l-a jurat tatălui nostru Avraam,"
+      "text": "jurământul pe care l-a făcut lui Avraam, părintele nostru,"
     },
     {
       "number": 74,
-      "text": "ca să ne dea nouă că noi, fiind eliberați din mâna dușmanilor noștri, să-I slujim fără teamă,"
+      "text": "ca să ne dea ca, izbăviți din mâna vrăjmașilor noștri, să-I slujim fără teamă,"
     },
     {
       "number": 75,
@@ -453,7 +442,7 @@
     },
     {
       "number": 78,
-      "text": "datorită îndurărilor adânci de milă ale Dumnezeului nostru, prin care ne va cerceta Răsăritul din înălțime,"
+      "text": "datorită îndurării pline de milă a Dumnezeului nostru, prin care Răsăritul de sus ne va cerceta,"
     },
     {
       "number": 79,
@@ -468,7 +457,7 @@
     {
       "verse": 28,
       "term": "κεχαριτωμένη",
-      "decision": "Redat prin «cea favorizată», cu omisiunea adaosului TR «εὐλογημένη σὺ ἐν γυναιξίν» din textul principal.",
+      "decision": "Redat prin «tu căreia ți s-a arătat har», cu omisiunea adaosului TR «εὐλογημένη σὺ ἐν γυναιξίν» din textul principal.",
       "reason": "Participiul perfect pasiv de la `χαριτόω` exprimă harul/favoarea primită; formula consacrată «plină de har» sau introducerea adaosului recept nu sunt cerute de lectura principală SBLGNT în Luca 1:28.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -477,7 +466,7 @@
     {
       "verse": 37,
       "term": "οὐκ ἀδυνατήσει παρὰ τοῦ θεοῦ πᾶν ῥῆμα",
-      "decision": "Redat prin «niciun cuvânt de la Dumnezeu nu va fi imposibil».",
+      "decision": "Redat prin «niciun cuvânt nu va fi imposibil pentru Dumnezeu».",
       "reason": "Subiectul explicit este `πᾶν ῥῆμα` («orice cuvânt»), iar construcția cu `παρὰ τοῦ θεοῦ` cere păstrarea raportării la cuvântul rostit de Dumnezeu, nu înlocuirea cu parafraza mai largă «nimic nu este imposibil la Dumnezeu».",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -486,7 +475,7 @@
     {
       "verse": 78,
       "term": "ἐπισκέψεται ἡμᾶς ἀνατολὴ ἐξ ὕψους",
-      "decision": "Redat prin «ne va cerceta Răsăritul din înălțime».",
+      "decision": "Redat prin «Răsăritul de sus ne va cerceta».",
       "reason": "SBLGNT are viitorul `ἐπισκέψεται`, în timp ce TR citește aoristul `ἐπεσκέψατο`; metafora `ἀνατολὴ ἐξ ὕψους` a fost păstrată fără reducere la «soare» sau la o explicație doctrinară introdusă în verset.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
