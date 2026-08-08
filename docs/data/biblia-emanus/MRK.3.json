@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-mrk-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 35,
       "reviewed": 35,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 35 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 35 de versete din MRK.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate versetul corupt MRK.3.19, formulările cu referent greșit și punctuația defectă.",
+        "Sunt păstrate «mâna uscată», autoritatea de a scoate demoni și relațiile sintactice din textul SBLGNT.",
+        "Lectura principală SBLGNT nu introduce vindecarea bolilor în MRK.3.15 și nu este armonizată automat cu TR."
       ]
     },
     "theologicalContext": {
@@ -123,29 +122,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 515,
-        "primary": 119,
-        "secondary": 43,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.39728811051665835,
-      "minimumScore": 0.5313914534272478
-    },
-    "textDigest": "sha256:00557f57317b3256f97b88022c8691726ac89e056b4638e9328520ea766cc4b7",
-    "contentDigest": "sha256:51f1017b6b800314f04745abd7323864386cc011929dd3f627a60ee0dc9b882d"
+    "textDigest": "sha256:c1b71465a6c3e298efe1aa51ade003eb637605df6bd974392f574589bd4557a5",
+    "contentDigest": "sha256:4de13f15169092cb5682e04df72a0e42e46b5cf3e06e0c8a651193979ec69427"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Isus a intrat din nou în sinagogă. Acolo era un om care avea o mână paralizată."
+      "text": "Isus a intrat din nou în sinagogă. Acolo era un om care avea o mână uscată."
     },
     {
       "number": 2,
@@ -153,7 +142,7 @@
     },
     {
       "number": 3,
-      "text": "Isus i-a spus omului care avea mâna paralizată: Ridică-te în mijloc!"
+      "text": "Isus i-a spus omului care avea mâna uscată: Ridică-te în mijloc!"
     },
     {
       "number": 4,
@@ -177,7 +166,7 @@
     },
     {
       "number": 9,
-      "text": "El le-a spus discipolilor săi că o mică barcă trebuie să stea lângă el din cauza mulțimii, ca să nu-l preseze."
+      "text": "Le-a spus ucenicilor Săi să țină pregătită pentru El o barcă mică, din cauza mulțimii, ca să nu-L îmbulzească."
     },
     {
       "number": 10,
@@ -189,7 +178,7 @@
     },
     {
       "number": 12,
-      "text": "El i-a avertizat cu asprime că nu trebuie să-l facă cunoscut."
+      "text": "El i-a avertizat cu asprime să nu-L facă cunoscut."
     },
     {
       "number": 13,
@@ -201,7 +190,7 @@
     },
     {
       "number": 15,
-      "text": "să aibă putere să vindece bolile să scoată demoni,"
+      "text": "și să aibă autoritatea de a scoate demonii;"
     },
     {
       "number": 16,
@@ -217,11 +206,11 @@
     },
     {
       "number": 19,
-      "text": "Iuda Iscarioteanul, care l-a trădat și el, a intrat într'o casă."
+      "text": "și Iuda Iscarioteanul, cel care L-a predat."
     },
     {
       "number": 20,
-      "text": "Apoi Isus a intrat într-o casă. Mulțimea s-a adunat din nou, astfel încât ei nu puteau nici măcar să mănânce pâine."
+      "text": "Apoi a intrat într-o casă. Mulțimea s-a adunat din nou, astfel încât ei nu puteau nici măcar să mănânce pâine."
     },
     {
       "number": 21,
@@ -229,19 +218,19 @@
     },
     {
       "number": 22,
-      "text": "Cărturarii coborâți din Ierusalim spuneau: Îl are pe Beelzebul și: Prin conducătorul demonilor scoate demonii."
+      "text": "Cărturarii coborâți din Ierusalim spuneau: „Are pe Beelzebul” și „Scoate demonii prin conducătorul demonilor.”"
     },
     {
       "number": 23,
-      "text": "El i-a chemat și le-a zis în parabole:! Cum poate Satana să-l izgonească pe Satan?"
+      "text": "I-a chemat și le-a spus în parabole: „Cum poate Satan să-l scoată pe Satan?”"
     },
     {
       "number": 24,
-      "text": "Dacă o împărăție este dezbinată împotriva ei înseși, împărăția aceea nu poate dăinui."
+      "text": "Dacă o împărăție este dezbinată împotriva ei însăși, împărăția aceea nu poate dăinui."
     },
     {
       "number": 25,
-      "text": "Și dacă o casă este dezbinată împotriva ei înseși, casa aceea nu va putea dăinui."
+      "text": "Și dacă o casă este dezbinată împotriva ei însăși, casa aceea nu va putea dăinui."
     },
     {
       "number": 26,
