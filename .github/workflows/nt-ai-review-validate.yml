@@ -7,38 +7,72 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  hebrews-10-13-source-inspect:
+  hebrews-10-review:
     runs-on: ubuntu-22.04
-    timeout-minutes: 15
+    timeout-minutes: 90
     steps:
       - name: Checkout review branch
         uses: actions/checkout@v4
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-      - name: Print pinned Hebrews 10-13 source slices
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11.9'
+      - name: Install JavaScript dependencies
         run: |
           set -euo pipefail
-          ZIP=docs/data/biblia-emanus/sources/nt-sblgnt-1.2.zip
-          test "$(sha256sum "$ZIP" | cut -d' ' -f1)" = "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424"
-          for ch in 10 11 12 13; do
-            echo "=== SBLGNT HEBREWS $ch ==="
-            unzip -p "$ZIP" sblgnt/text/HEB.txt | grep "^Heb ${ch}:"
-            echo "=== APPARATUS HEBREWS $ch ==="
-            next=$((ch+1))
-            if [ "$ch" -eq 13 ]; then
-              unzip -p "$ZIP" sblgnt/apparatus/text/HEB.txt | sed -n "/Hebrews 13:/,$ p"
-            else
-              unzip -p "$ZIP" sblgnt/apparatus/text/HEB.txt | sed -n "/Hebrews ${ch}:/,/Hebrews ${next}:/p"
-            fi
-          done
-          echo '=== AUX COUNTS ==='
-          for ch in 10 11 12 13; do
-            expected=$(case "$ch" in 10) echo 39;; 11) echo 40;; 12) echo 29;; 13) echo 25;; esac)
-            for f in webp btf cornilescu1924 biblia-libera; do
-              unzip -p "$ZIP" "$f/HEB.usfm" | awk -v c="$ch" 'BEGIN{p=0;n=0} $0=="\\c " c "  "{p=1;next} p&&/^\\c /{p=0} p&&/^\\v /{n++} END{print n}' | grep -Fx "$expected"
-            done
-          done
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+      - name: Review, validate and commit Hebrews 10
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          json='docs/data/biblia-emanus/HEB.10.json'
+          journal='docs/biblia-emanus/NT-AI-REVIEW-BATCH-2026-08-08-HEB.10.md'
+          python3 scripts/build-nt-editorial-review-queue.py --check
+          if test -f "$journal"; then
+            echo 'HEB.10 already reviewed; skipping chapter commit.'
+          else
+            python3 .github/nt-ai-review/heb10.py
+            git diff --check
+            pnpm check:biblia-emanus
+            python3 scripts/check-biblia-emanus-romanian-quality.py
+            pnpm check:biblia-emanus-nt-withheld
+            python3 scripts/withhold-biblia-emanus-nt.py --check
+            pnpm check:biblia-emanus-nt-runtime
+            pnpm test:biblia-emanus
+            git add "$json" "$journal"
+            changed="$(git diff --cached --name-only)"
+            test "$(printf '%s\n' "$changed" | sed '/^$/d' | wc -l)" -eq 2
+            printf '%s\n' "$changed" | grep -Fx "$json"
+            printf '%s\n' "$changed" | grep -Fx "$journal"
+            git diff --cached --check
+            git commit -m 'review(biblia): audit Hebrews 10 verse by verse'
+          fi
+          python3 scripts/build-nt-editorial-review-queue.py
+          python3 scripts/build-nt-editorial-review-queue.py --check
+          pnpm check:biblia-emanus
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          pnpm check:biblia-emanus-nt-withheld
+          python3 scripts/withhold-biblia-emanus-nt.py --check
+          pnpm check:biblia-emanus-nt-runtime
+          pnpm test:biblia-emanus
+          git diff --check
+          if ! git diff --quiet -- docs/biblia-emanus/NT-EDITORIAL-REVIEW-QUEUE.json; then
+            git add docs/biblia-emanus/NT-EDITORIAL-REVIEW-QUEUE.json
+            test "$(git diff --cached --name-only | wc -l)" -eq 1
+            git diff --cached --check
+            git commit -m 'chore(biblia): regenerate NT editorial review queue'
+          fi
+          if git log --oneline "origin/codex/nt-ai-review-handoff..HEAD" | grep -q .; then
+            git push origin HEAD:codex/nt-ai-review-handoff
+          else
+            echo 'No new editorial commits to push.'
+          fi
