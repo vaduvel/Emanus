@@ -78,13 +78,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-1th-1",
+      "runId": "emanus-nt-editorial-2026-08-08-1th-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -96,16 +96,16 @@
     },
     "sourceLanguage": {
       "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus numai ca martor suplimentar",
       "result": "approved",
       "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Toate cele 10 versete au fost confruntate semantic cu SBLGNT 1.2, aparatul și TR ca martor.",
+        "S-au păstrat persoanele, negările, timpul verbal și relațiile sintactice ale lecturii SBLGNT.",
+        "Formulările românești au fost comparate auxiliar cu WEBP, BTF, Cornilescu 1924 și Biblia Liberă, fără copiere."
       ]
     },
     "theologicalContext": {
@@ -123,14 +123,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
+      "method": "revizie AI directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "textDigest": "sha256:1964f0edc216b7408bb3580e97af68341c9ba8502e26af0c923fe389bc017074",
-    "contentDigest": "sha256:5d29f4e6bcc662c865406ca2dc62919bd2820a2f3476d155933e3974366c9326"
+    "textDigest": "sha256:cb133aa51e074b32c41470503a32daef90f5ba82d66ade6bb68e27f95f3758c3",
+    "contentDigest": "sha256:7c02aab6e7b82dc09906ccc0e5eb92f6c6b6154df14993b23c6a9f10a9713009"
   },
   "verses": [
     {
@@ -147,7 +147,7 @@
     },
     {
       "number": 4,
-      "text": "căci știm, frați iubiți de Dumnezeu, că sunteți aleși,"
+      "text": "căci știm, frați iubiți de Dumnezeu, alegerea voastră,"
     },
     {
       "number": 5,
