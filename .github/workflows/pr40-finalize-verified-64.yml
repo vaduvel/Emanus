@@ -1,6 +1,10 @@
 name: PR40 finalize verified 64 works
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/biblia-emanus/PR40-FINALIZE-64.trigger'
   workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *'
