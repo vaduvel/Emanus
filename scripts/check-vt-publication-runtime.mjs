@@ -8,8 +8,8 @@ import {
 
 const EXPECTED_BOOKS = 29
 const EXPECTED_CHAPTERS = 637
-const EXPECTED_BE_TEXT_BOOKS = 17
-const EXPECTED_TEMP_TEXT_BOOKS = 12
+const EXPECTED_BE_TEXT_BOOKS = 18
+const EXPECTED_TEMP_TEXT_BOOKS = 11
 const PLACEHOLDER = "Transcriptul Poonen nu îl dezvoltă separat"
 const TEMP_LABEL = "Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus"
 
