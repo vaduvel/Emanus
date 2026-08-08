@@ -1,6 +1,7 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay, type ExplainedOverlayChapter } from "../explainedOverlay.js"
 import { VT_WISDOM_FULL } from "../vtFullNarrativesWisdom.js"
 import { reviewPsalmi22_32_51_110Explanations } from "./psalmi22_32_51_110ExplanationReview.js"
+import { reviewPsalmi103And105Explanations } from "./psalmi103And105ExplanationReview.js"
 import { PSALMI_EXPLAINED as POONEN_BASE } from "./psalmiOverlay.js"
 import { PSALMI_TEXTUAL_1_25 } from "./psalmiTextual1_25.js"
 import { PSALMI_TEXTUAL_26_50 } from "./psalmiTextual26_50.js"
@@ -21,9 +22,6 @@ const TEXTUAL: Readonly<Record<number, ExplainedOverlayChapter>> = {
 
 const data = VT_WISDOM_FULL.psalmi
 const chapters = POONEN_BASE.chapters.map((chapter) => {
-  // Expunerea Poonen are prioritate. Unde transcriptul nu dezvoltă capitolul,
-  // folosim mai întâi explicația textuală scrisă manual; orice gaură rămasă este
-  // materializată explicit din registry-ul editorial verificat, niciodată lăsată goală.
   if (chapter.units.length > 0) return chapter
   return TEXTUAL[chapter.number] ?? textualChapter("Psalmii", data, chapter.number)
 })
@@ -34,6 +32,8 @@ const PSALMI_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const PSALMI_EDITORIAL_REVIEWED = reviewPsalmi22_32_51_110Explanations(PSALMI_EDITORIAL_BASE)
+const PSALMI_EDITORIAL_REVIEWED = reviewPsalmi103And105Explanations(
+  reviewPsalmi22_32_51_110Explanations(PSALMI_EDITORIAL_BASE),
+)
 
 export const PSALMI_EDITORIAL_EXPLAINED = assertCompleteOverlay(PSALMI_EDITORIAL_REVIEWED, 150)
