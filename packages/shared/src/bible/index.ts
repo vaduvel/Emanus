@@ -1,6 +1,6 @@
 export * from "./types.js"
 
-import type { BibleBook } from "./types.js"
+import type { BibleBook, BibleChapter, BibleUnit } from "./types.js"
 import { GENEZA as GENEZA_BASE } from "./geneza.js"
 import { GENEZA_2 } from "./geneza2.js"
 import { GENEZA_3 } from "./geneza3.js"
@@ -60,7 +60,30 @@ import { RUT } from "./rut.js"
 import { SAMUEL1 } from "./samuel1.js"
 import { SAMUEL2 } from "./samuel2.js"
 
-/** Geneza, cu toate cele 50 de capitole. */
+const GENEZA_LEGACY_EXPLANATION_SOURCE =
+  "Emanus legacy synthesis — Allen/Nolan editorial flow + biblical text/cross-references"
+const HEBREW_WORD_SOURCE = "WLC-OSHB"
+
+function normalizeGenezaUnit(unit: BibleUnit): BibleUnit {
+  return {
+    ...unit,
+    explanationKind: unit.explanationKind ?? "exposition",
+    explanationSource: unit.explanationSource ?? GENEZA_LEGACY_EXPLANATION_SOURCE,
+    wordSource:
+      unit.words && unit.words.length > 0
+        ? unit.wordSource ?? HEBREW_WORD_SOURCE
+        : unit.wordSource,
+  }
+}
+
+function normalizeGenezaChapter(chapter: BibleChapter): BibleChapter {
+  return {
+    ...chapter,
+    units: chapter.units.map(normalizeGenezaUnit),
+  }
+}
+
+/** Geneza, cu toate cele 50 de capitole și proveniență explicită pe fiecare unitate. */
 export const GENEZA: BibleBook = {
   ...GENEZA_BASE,
   chapters: [
@@ -114,7 +137,7 @@ export const GENEZA: BibleBook = {
     GENEZA_48,
     GENEZA_49,
     GENEZA_50,
-  ],
+  ].map(normalizeGenezaChapter),
 }
 
 export { EXOD, LEVITIC, NUMERI, DEUTERONOM, IOSUA, RUT, SAMUEL1, SAMUEL2 }
