@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: vt-amos-canonical-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   promote-amos:
     if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
