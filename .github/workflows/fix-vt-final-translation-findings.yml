@@ -1,0 +1,80 @@
+name: Fix VT Final Translation Findings
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-integration-clean
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+      - name: Apply confirmed Romanian corrections
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          def save(path, data):
+              canonical = '\n'.join(f"{v['number']}\t{v['text']}" for v in data['verses'])
+              data['audit']['completedOn'] = '2026-08-08'
+              data['audit']['textDigest'] = 'sha256:' + hashlib.sha256(canonical.encode('utf-8')).hexdigest()
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          lev_path = Path('docs/data/biblia-emanus/LEV.18.json')
+          lev = json.loads(lev_path.read_text(encoding='utf-8'))
+          lv = {v['number']: v for v in lev['verses']}
+          lv[14]['text'] = 'Să nu descoperi goliciunea fratelui tatălui tău: să nu te apropii de nevasta lui, căci este mătușa ta.'
+          lv[19]['text'] = 'Să nu te apropii de o femeie în timpul necurăției menstruației ei, ca să-i descoperi goliciunea.'
+          lv[29]['text'] = 'Căci toate sufletele care vor face vreuna din aceste urâciuni vor fi nimicite din mijlocul poporului lor.'
+          lv[30]['text'] = 'Păziți dar rânduiala Mea și să nu urmați obiceiurile urâcioase care s-au practicat înaintea voastră, ca să nu vă întinați prin ele. Eu sunt DOMNUL Dumnezeul vostru!”'
+          changes = lev['audit']['romanianLanguage'].setdefault('changesApplied', [])
+          for note in [
+              'Levitic 18:14 — corectat „să nu te meargă” în „să nu te apropii”.',
+              'Levitic 18:19 — corectat „să nu te apropi” în „să nu te apropii”.',
+              'Levitic 18:29 — corectat acordul plural „sufletele ... vor fi nimicite”.',
+              'Levitic 18:30 — corectat „să nu urmați din obiceiurile” în „să nu urmați obiceiurile”.',
+          ]:
+              if note not in changes: changes.append(note)
+          save(lev_path, lev)
+
+          deu_path = Path('docs/data/biblia-emanus/DEU.20.json')
+          deu = json.loads(deu_path.read_text(encoding='utf-8'))
+          dv = {v['number']: v for v in deu['verses']}
+          dv[1]['text'] = '„Când vei ieși la război împotriva vrăjmașilor tăi și vei vedea cai, care și un popor mai numeros decât tine, să nu te temi de ei, căci DOMNUL, Dumnezeul tău, Care te-a scos din țara Egiptului, este cu tine.'
+          dv[2]['text'] = 'Când vă veți apropia de luptă, preotul să se apropie și să vorbească poporului,'
+          dv[4]['text'] = 'căci DOMNUL, Dumnezeul vostru, merge El Însuși cu voi ca să lupte pentru voi împotriva vrăjmașilor voștri și să vă mântuiască.»'
+          dv[5]['text'] = dv[5]['text'].replace('să vorbescă', 'să vorbească')
+          dv[10]['text'] = dv[10]['text'].replace('s-o bati', 's-o bați')
+          dv[19]['text'] = dv[19]['text'].replace('să nu-i tăieci', 'să nu-i tai')
+          dv[20]['text'] = dv[20]['text'].replace('să-i tazi', 'să-i tai')
+          changes = deu['audit']['romanianLanguage'].setdefault('changesApplied', [])
+          for note in [
+              'Deuteronom 20:1 — corectat acordul „să nu te temeți” în „să nu te temi”.',
+              'Deuteronom 20:2 — corectat sintaxa în „Când vă veți apropia de luptă”.',
+              'Deuteronom 20:4 — corectat „să Se luple” în „să lupte”.',
+              'Deuteronom 20:5,10,19,20 — corectate forme românești greșite (vorbească, bați, tai).',
+          ]:
+              if note not in changes: changes.append(note)
+          save(deu_path, deu)
+
+          print('LEV.18', lev['audit']['textDigest'])
+          print('DEU.20', deu['audit']['textDigest'])
+          PY
+      - name: Commit and self-clean
+        run: |
+          git rm .github/workflows/fix-vt-final-translation-findings.yml
+          test ! -f docs/biblia-explicata/.translation-fix-trigger || git rm docs/biblia-explicata/.translation-fix-trigger
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus/LEV.18.json docs/data/biblia-emanus/DEU.20.json
+          git commit -m 'Correct final-review VT Romanian findings'
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
