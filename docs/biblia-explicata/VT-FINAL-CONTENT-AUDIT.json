@@ -1,0 +1,50 @@
+{
+  "generatedOn": "2026-08-08",
+  "verdict": "BLOCKED_FOR_FULL_PUBLICATION",
+  "explanation": {
+    "canonicalOtBooksCovered": 39,
+    "canonicalOtBooksExpected": 39,
+    "coverageComplete": true,
+    "publicationApproved": false,
+    "legacyFullBooksNeedingUnitProvenanceNormalization": 10,
+    "overlayBooksUsingSourceTruthGuard": 29
+  },
+  "translation": {
+    "canonicalOtBooksExpected": 39,
+    "canonicalOtChaptersExpected": 929,
+    "canonicalOtBooksCurrent": 7,
+    "canonicalOtChaptersCurrent": 225,
+    "canonicalOtBooks": [
+      "Geneza",
+      "Exodul",
+      "Leviticul",
+      "Numeri",
+      "Deuteronomul",
+      "Iosua",
+      "Osea"
+    ],
+    "overlayReaderBooks": 29,
+    "overlayReaderBibliaEmanusBooks": ["Osea"],
+    "overlayReaderTemporaryEditorialBooks": 28,
+    "historicalCandidateJudgesThroughDanielRequiresFreshAudit": true,
+    "wlcSourceLockDriftRequiresInspection": true
+  },
+  "confirmedCorrections": [
+    "Deuteronom 22:11 Romanian typo corrected and digest refreshed",
+    "Deuteronom 22 explanation Hebrew and abuse-sensitive interpretation corrected",
+    "Numeri 31 Romanian/lexical translation corrections and digest refreshed",
+    "Numeri 31 explanation reworked as textual overview with violence/captivity guardrails",
+    "Levitic 18 Romanian grammar corrections and digest refreshed",
+    "Deuteronom 20 Romanian grammar corrections and digest refreshed",
+    "Historical Judges-Daniel candidate reclassified as temporary-editorial in overlay reader",
+    "VT publication runtime truth-guard made dynamic and compatible with approved textual overview notes"
+  ],
+  "releaseRequirements": [
+    "Fresh translation re-audit and canonical promotion for all 39 OT books",
+    "Reconcile WLC source-lock drift before new promotions",
+    "Normalize the 10 legacy-full books with explicit per-unit source provenance and explanation kind",
+    "Remove doctrine/application/lexical study from legacy source gaps",
+    "Re-run translation validators, VT explanation checks, VT publication checks, typecheck and build",
+    "Keep explanations in_review until all final gates pass"
+  ]
+}
