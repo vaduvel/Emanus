@@ -171,7 +171,11 @@ export function familyCovenantText(
     chosen ? "Tema noastră: " + chosen.title + ". " + chosen.focus : "",
     "Promitem: " + draft.promise.trim(),
     "Când cădem: " + draft.onFall.trim(),
-    "„" + FAMILY_COVENANT_VERSE_TEXT + "” (" + FAMILY_COVENANT_VERSE_REF + ")",
+    // Ghilimelele stau într-un singur literal, nu lipite din bucăți. Verificarea
+    // check:quotes urmărește deschiderea și închiderea în același string; o
+    // deschidere singură într-un literal îi pare ghilimea neterminată și oprește
+    // CI-ul. Textul afișat rămâne neschimbat.
+    `„${FAMILY_COVENANT_VERSE_TEXT}” (${FAMILY_COVENANT_VERSE_REF})`,
   ]
   return lines.filter(Boolean).join("\n")
 }
