@@ -5,7 +5,6 @@ import {
   VT_TEMPORARY_TEXT_BOOKS,
 } from "./generated/vtCanonicalText/index.js"
 import type { ExplainedOverlayUnit } from "./explainedOverlay.js"
-import { OSEA_REVIEWED_TEXT } from "./generated/vtCanonicalText/oseaReviewedText.js"
 
 function sourceLabel(unit: ExplainedOverlayUnit): string {
   switch (unit.source.kind) {
@@ -61,8 +60,7 @@ export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((ov
   }
 
   const chapters: BibleChapter[] = overlay.chapters.map((chapter) => {
-    const verseTexts =
-      overlay.bookId === "osea" ? OSEA_REVIEWED_TEXT[chapter.number] : textBook.chapters[chapter.number]
+    const verseTexts = textBook.chapters[chapter.number]
     if (!verseTexts) {
       throw new Error(`[${overlay.name} ${chapter.number}] lipsește textul biblic de lucru.`)
     }
