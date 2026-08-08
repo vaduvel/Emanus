@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": false
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": false
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,19 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 42 de versete au fost reverificate direct față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual.",
+      "WEBP a fost consultată ca reper auxiliar. BTF, Cornilescu 1924, Biblia Liberă și NTR nu au fost consultate în această rulare și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "GPT-5.6 Sol",
+      "runId": "emanus-nt-editorial-2026-08-08-act-5-gpt56sol-2205",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +102,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 42 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 42 de versete din ACT.5 au fost reverificate semantic față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual. WEBP a fost reper auxiliar; BTF, Cornilescu 1924, Biblia Liberă și NTR nu au fost consultate în această rulare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "ACT.5.16–21: au fost eliminate forme arhaice, acorduri defecte și calcuri instituționale.",
+        "ACT.5.24, ACT.5.28, ACT.5.32, ACT.5.39 și ACT.5.41: textul principal urmează explicit lecturile SBLGNT față de variantele RP/TR.",
+        "ACT.5.31, ACT.5.33 și ACT.5.39–42: au fost reparate sensul lexical, sintaxa și româna nefirească."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri ori pronume din Textus Receptus.",
+        "ACT.5.31 redă ἀρχηγός lexical prin „Conducător”, fără a impune o terminologie confesională.",
+        "ACT.5.41 păstrează expresia absolută „pentru Nume”, conform textului principal SBLGNT."
       ]
     },
     "omissionAddition": {
@@ -123,246 +127,71 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu WEBP; fără copiere a unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 720,
-        "primary": 239,
-        "secondary": 48,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5075266817973916,
-      "minimumScore": 0.6309563052154472
-    },
-    "textDigest": "sha256:464c2432e2c71852ffacc434755fb087e1fc04526b80d7fc5130b84329895afb",
-    "contentDigest": "sha256:9a655e64f5cff5a8f19a11e25ae4dc94c1c48978a9e61c45df92022f988ef146"
+    "textDigest": "sha256:02f040916ce14d23d7426f1f68db7f32d7aaca4eb8d4ae883d6c6db4f511ae61",
+    "contentDigest": "sha256:a8953ff3712c34c8e538a0ae3f238855a279eba3d3069f1d2101b15e48eeb187"
   },
   "verses": [
-    {
-      "number": 1,
-      "text": "Dar un bărbat numit Anania a vândut o proprietate împreună cu soția lui, Safira,"
-    },
-    {
-      "number": 2,
-      "text": "și și-a oprit pentru sine o parte din preț, cu știința soției lui; apoi a adus o parte și a pus-o la picioarele apostolilor."
-    },
-    {
-      "number": 3,
-      "text": "Petru i-a zis: „Anania, de ce ți-a umplut Satan inima ca să-L minți pe Duhul Sfânt și să-ți oprești o parte din prețul ogorului?"
-    },
-    {
-      "number": 4,
-      "text": "Cât timp rămânea nevândut, nu rămânea al tău? Și, după ce a fost vândut, nu era prețul în stăpânirea ta? De ce ai pus în inima ta lucrul acesta? Nu oamenilor i-ai mințit, ci lui Dumnezeu.”"
-    },
-    {
-      "number": 5,
-      "text": "Când a auzit cuvintele acestea, Anania a căzut și a murit. O mare frică i-a cuprins pe toți cei care au auzit."
-    },
-    {
-      "number": 6,
-      "text": "Tinerii s-au sculat și l-au înfășurat, și l-au dus afară și l-au îngropat."
-    },
-    {
-      "number": 7,
-      "text": "După un răstimp de aproape trei ore, a intrat și soția lui, fără să știe ce se întâmplase."
-    },
-    {
-      "number": 8,
-      "text": "Petru i-a zis: „Spune-mi, cu atât ați vândut ogorul?” Ea a răspuns: „Da, cu atât.”"
-    },
-    {
-      "number": 9,
-      "text": "Petru i-a zis: „De ce v-ați înțeles să puneți la încercare Duhul Domnului? Iată, picioarele celor care l-au înmormântat pe soțul tău sunt la ușă și te vor scoate și pe tine.”"
-    },
-    {
-      "number": 10,
-      "text": "Ea a căzut îndată la picioarele lui și a murit. Când au intrat, tinerii au găsit-o moartă, au scos-o afară și au înmormântat-o lângă soțul ei."
-    },
-    {
-      "number": 11,
-      "text": "O mare frică a cuprins întreaga biserică și pe toți cei care au auzit aceste lucruri."
-    },
-    {
-      "number": 12,
-      "text": "Prin mâinile apostolilor se făceau multe semne și minuni în popor. Toți erau într-un cuget în Porticul lui Solomon."
-    },
-    {
-      "number": 13,
-      "text": "Nici unul dintre ceilalți nu a îndrăznit să li se alăture; totuși, poporul i-a onorat."
-    },
-    {
-      "number": 14,
-      "text": "Și tot mai mulți credincioși în Domnul li se adăugau, mulțimi de bărbați și de femei,"
-    },
-    {
-      "number": 15,
-      "text": "așa încât îi scoteau pe bolnavi chiar și pe străzi și îi așezau pe paturi mici și pe tărgi, pentru ca, atunci când venea Petru, măcar umbra lui să cadă peste vreunul dintre ei."
-    },
-    {
-      "number": 16,
-      "text": "Mulțimea s-a strâns din cetățile din jurul Ierusalimului, aducînd pe oameni bolnavi și pe cei chinuiți de duhuri necurate, și toți au fost vindecați."
-    },
-    {
-      "number": 17,
-      "text": "Dar marele preot s-a sculat, și toți cei ce erau cu el (care este secta Saducheilor) s-au umplut de gelozie."
-    },
-    {
-      "number": 18,
-      "text": "au pus mâna pe apostoli și i-au aruncat în închisoarea publică."
-    },
-    {
-      "number": 19,
-      "text": "Însă, în timpul nopții, un înger al Domnului a deschis ușile închisorii, i-a scos afară și le-a zis:"
-    },
-    {
-      "number": 20,
-      "text": "„Duceți-vă, stați în Templu și spuneți poporului toate cuvintele Vieții acesteia!”"
-    },
-    {
-      "number": 21,
-      "text": "Când au auzit ei lucrul acesta, au intrat în Templu, în zori, și au învățat. Dar marele preot și cei ce erau cu el au venit și au chemat sfetnicii, împreună cu tot Senatul copiilor lui Israel, și au trimes la închisoare să-i aducă."
-    },
-    {
-      "number": 22,
-      "text": "Dar ofițerii care au venit nu i-au găsit în închisoare. S-au întors și au raportat,"
-    },
-    {
-      "number": 23,
-      "text": "zicând: „Am găsit temnița încuiată în deplină siguranță și pe paznici stând la uși, dar, când am deschis, n-am găsit pe nimeni înăuntru.”"
-    },
-    {
-      "number": 24,
-      "text": "Când au auzit aceste cuvinte, căpetenia Templului și marii preoți erau nedumeriți cu privire la ei și se întrebau ce avea să urmeze."
-    },
-    {
-      "number": 25,
-      "text": "Dar a venit cineva și le-a dat de veste: „Iată, bărbații pe care i-ați pus în închisoare sunt în Templu, stau și învață poporul!”"
-    },
-    {
-      "number": 26,
-      "text": "Atunci căpitanul s-a dus cu ofițerii, și i-a adus fără violență, pentru că se temeau că poporul îi va omorî cu pietre."
-    },
-    {
-      "number": 27,
-      "text": "După ce i-au adus, i-au pus înaintea consiliului. Marele preot i-a întrebat:"
-    },
-    {
-      "number": 28,
-      "text": "zicând: „V-am poruncit cu strictețe să nu învățați în Numele acesta și iată că ați umplut Ierusalimul cu învățătura voastră și vreți să aduceți peste noi sângele Omului acestuia!”"
-    },
-    {
-      "number": 29,
-      "text": "Petru și apostolii au răspuns: „Trebuie să ascultăm de Dumnezeu mai mult decât de oameni."
-    },
-    {
-      "number": 30,
-      "text": "Dumnezeul părinților noștri L-a înviat pe Isus, pe care voi L-ați omorât, atârnându-L pe lemn."
-    },
-    {
-      "number": 31,
-      "text": "Pe El L-a înălțat Dumnezeu la dreapta Sa ca Prinț și Salvator, ca să-i dea lui Israel pocăință și iertarea păcatelor."
-    },
-    {
-      "number": 32,
-      "text": "Noi suntem martorii Lui pentru aceste lucruri; la fel este Duhul Sfânt, pe care Dumnezeu L-a dat celor ce ascultă de El.”"
-    },
-    {
-      "number": 33,
-      "text": "Dar când au auzit lucrul acesta, au fost tăiați la inimă, și au fost hotărîți să-i omoare."
-    },
-    {
-      "number": 34,
-      "text": "Dar în Sinedriu s-a ridicat un fariseu numit Gamaliel, învățător al Legii, prețuit de tot poporul, și a poruncit ca oamenii să fie scoși afară pentru puțin timp."
-    },
-    {
-      "number": 35,
-      "text": "Apoi le-a zis: „Bărbați israeliți, luați seama la voi înșivă cu privire la ce sunteți pe cale să le faceți acestor oameni!"
-    },
-    {
-      "number": 36,
-      "text": "Căci, înainte de zilele acestea, s-a ridicat Teuda, spunând despre sine că este cineva, și i s-au alăturat aproape patru sute de bărbați. El a fost omorât, iar toți cei care îl ascultau au fost împrăștiați și au ajuns la nimic."
-    },
-    {
-      "number": 37,
-      "text": "După el s-a ridicat Iuda Galileeanul, în zilele recensământului, și a atras popor după el. A pierit și el, iar toți cei care îl ascultau au fost risipiți."
-    },
-    {
-      "number": 38,
-      "text": "Acum vă spun, retrageți-vă de la acești oameni și lăsați-i în pace, căci dacă acest sfat sau această lucrare este a oamenilor, ea va fi răsturnată."
-    },
-    {
-      "number": 39,
-      "text": "Dar dacă este de la Dumnezeu, nu vei putea să-l răstoarne, și v-ar fi găsit chiar să lupte împotriva lui Dumnezeu!"
-    },
-    {
-      "number": 40,
-      "text": "Ei au fost de acord cu el. Chemînd pe apostoli, i-au bătut și le-au poruncit să nu vorbească în numele lui Isus, și să-i lase să plece."
-    },
-    {
-      "number": 41,
-      "text": "De aceea, ei au plecat de la prezența consiliului, bucurîndu-se că erau socotiți vrednici să sufere de rușine pentru numele lui Isus."
-    },
-    {
-      "number": 42,
-      "text": "Și, în fiecare zi, în Templu și din casă în casă, nu încetau să învețe și să vestească Evanghelia despre Hristos Isus.”"
-    }
+    {"number": 1, "text": "Un bărbat însă, numit Anania, împreună cu Safira, soția lui, a vândut o proprietate,"},
+    {"number": 2, "text": "și și-a oprit pentru sine o parte din preț, cu știrea soției lui; apoi a adus o parte și a pus-o la picioarele apostolilor."},
+    {"number": 3, "text": "Dar Petru a zis: „Anania, de ce ți-a umplut Satan inima ca să-L minți pe Duhul Sfânt și să-ți oprești pentru tine o parte din prețul ogorului?"},
+    {"number": 4, "text": "Cât timp rămânea nevândut, nu rămânea al tău? Iar după ce a fost vândut, nu era în puterea ta? De ce ai pus în inima ta acest lucru? Nu ai mințit oamenilor, ci lui Dumnezeu.”"},
+    {"number": 5, "text": "Când a auzit cuvintele acestea, Anania a căzut și a murit. O mare frică i-a cuprins pe toți cei care au auzit."},
+    {"number": 6, "text": "Tinerii s-au ridicat, l-au înfășurat, l-au scos afară și l-au îngropat."},
+    {"number": 7, "text": "După aproape trei ore, a intrat și soția lui, fără să știe ce se întâmplase."},
+    {"number": 8, "text": "Petru i-a spus: „Spune-mi: cu atât ați vândut ogorul?” Ea a zis: „Da, cu atât.”"},
+    {"number": 9, "text": "Petru i-a zis: „Cum de v-ați înțeles să puneți la încercare Duhul Domnului? Iată, picioarele celor care l-au îngropat pe soțul tău sunt la ușă și te vor scoate și pe tine.”"},
+    {"number": 10, "text": "Ea a căzut imediat la picioarele lui și a murit. Tinerii au intrat, au găsit-o moartă, au scos-o afară și au îngropat-o lângă soțul ei."},
+    {"number": 11, "text": "O mare frică a cuprins întreaga biserică și pe toți cei care au auzit aceste lucruri."},
+    {"number": 12, "text": "Prin mâinile apostolilor se făceau multe semne și minuni în popor; iar toți erau într-un cuget în Porticul lui Solomon."},
+    {"number": 13, "text": "Niciunul dintre ceilalți nu îndrăznea să li se alăture, dar poporul îi prețuia."},
+    {"number": 14, "text": "Și tot mai mulți credincioși se adăugau Domnului — mulțimi de bărbați și de femei —,"},
+    {"number": 15, "text": "astfel încât îi scoteau pe bolnavi chiar și pe străzi și îi așezau pe paturi și tărgi, pentru ca, atunci când trecea Petru, măcar umbra lui să-l umbrească pe vreunul dintre ei."},
+    {"number": 16, "text": "Se aduna și mulțimea din cetățile din jurul Ierusalimului, aducând bolnavi și oameni chinuiți de duhuri necurate, și toți erau vindecați."},
+    {"number": 17, "text": "Atunci marele preot s-a ridicat, împreună cu toți cei care erau cu el — gruparea saducheilor —, și s-au umplut de gelozie."},
+    {"number": 18, "text": "Au pus mâna pe apostoli și i-au aruncat în închisoarea publică."},
+    {"number": 19, "text": "Dar, în timpul nopții, un înger al Domnului a deschis ușile închisorii, i-a scos afară și le-a zis:"},
+    {"number": 20, "text": "„Duceți-vă, stați în Templu și spuneți poporului toate cuvintele acestei Vieți!”"},
+    {"number": 21, "text": "După ce au auzit aceasta, au intrat în Templu în zori și îi învățau pe oameni. Când au sosit marele preot și cei cu el, au convocat Sinedriul și întregul sfat al bătrânilor fiilor lui Israel și au trimis la închisoare să-i aducă."},
+    {"number": 22, "text": "Dar slujitorii care au ajuns nu i-au găsit în închisoare. S-au întors și au raportat,"},
+    {"number": 23, "text": "zicând: „Am găsit închisoarea încuiată în deplină siguranță și paznicii stând la uși; dar, când am deschis, n-am găsit pe nimeni înăuntru.”"},
+    {"number": 24, "text": "Când au auzit aceste cuvinte, căpetenia Templului și marii preoți erau nedumeriți cu privire la ei și se întrebau ce avea să însemne aceasta."},
+    {"number": 25, "text": "Dar a venit cineva și le-a dat de veste: „Iată, bărbații pe care i-ați pus în închisoare sunt în Templu, stau și învață poporul!”"},
+    {"number": 26, "text": "Atunci căpetenia s-a dus cu slujitorii și i-a adus, dar fără forță, căci se temeau de popor, ca nu cumva să fie omorâți cu pietre."},
+    {"number": 27, "text": "După ce i-au adus, i-au pus înaintea Sinedriului. Marele preot i-a întrebat,"},
+    {"number": 28, "text": "zicând: „V-am poruncit cu strictețe să nu învățați în numele acesta și iată că ați umplut Ierusalimul cu învățătura voastră și vreți să aduceți asupra noastră sângele acestui om!”"},
+    {"number": 29, "text": "Dar Petru și apostolii au răspuns: „Trebuie să ascultăm de Dumnezeu mai degrabă decât de oameni."},
+    {"number": 30, "text": "Dumnezeul părinților noștri L-a înviat pe Isus, pe care voi L-ați ucis atârnându-L pe lemn."},
+    {"number": 31, "text": "Pe El Dumnezeu L-a înălțat la dreapta Sa ca Conducător și Mântuitor, ca să-i dea lui Israel pocăință și iertarea păcatelor."},
+    {"number": 32, "text": "Iar noi suntem martori ai acestor lucruri, și Duhul Sfânt, pe care Dumnezeu L-a dat celor ce ascultă de El.”"},
+    {"number": 33, "text": "Când au auzit acestea, s-au înfuriat și voiau să-i omoare."},
+    {"number": 34, "text": "Dar în Sinedriu s-a ridicat un fariseu numit Gamaliel, învățător al Legii, prețuit de tot poporul, și a poruncit ca oamenii să fie scoși afară pentru puțin timp."},
+    {"number": 35, "text": "Apoi le-a zis: „Bărbați israeliți, fiți cu băgare de seamă cu privire la oamenii aceștia și la ce aveți de gând să faceți."},
+    {"number": 36, "text": "Căci înainte de zilele acestea s-a ridicat Teuda, pretinzând că este cineva, și i s-au alăturat aproape patru sute de bărbați. El a fost omorât, iar toți cei care îl ascultau s-au risipit și au ajuns la nimic."},
+    {"number": 37, "text": "După el s-a ridicat Iuda Galileeanul, în zilele recensământului, și a atras popor după el. Și el a pierit, iar toți cei care îl ascultau au fost împrăștiați."},
+    {"number": 38, "text": "Iar acum vă spun: depărtați-vă de oamenii aceștia și lăsați-i, căci dacă planul acesta sau lucrarea aceasta este de la oameni, se va destrăma;"},
+    {"number": 39, "text": "dar, dacă este de la Dumnezeu, nu-i veți putea nimici; ca nu cumva să fiți găsiți chiar luptând împotriva lui Dumnezeu.” Ei l-au ascultat."},
+    {"number": 40, "text": "I-au chemat pe apostoli, i-au bătut și le-au poruncit să nu vorbească în numele lui Isus, apoi le-au dat drumul."},
+    {"number": 41, "text": "Ei au plecat deci dinaintea Sinedriului, bucurându-se că fuseseră socotiți vrednici să sufere ocară pentru Nume."},
+    {"number": 42, "text": "Și în fiecare zi, în Templu și din casă în casă, nu încetau să învețe și să vestească Evanghelia despre Hristos Isus."}
   ],
   "editorialNotes": [
-    {
-      "verse": 2,
-      "term": "ἐνοσφίσατο",
-      "decision": "și-a oprit pentru sine",
-      "alternatives": [
-        "a păstrat",
-        "a delapidat"
-      ],
-      "reason": "Verbul arată însușirea ascunsă a unei părți, dar 5:4 precizează că problema nu era dreptul de proprietate, ci prezentarea mincinoasă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Formularea redă caracterul secret și interesul propriu fără a adăuga o acuzație juridică modernă."
-    },
-    {
-      "verse": 28,
-      "term": "Παραγγελίᾳ παρηγγείλαμεν",
-      "decision": "V-am poruncit cu strictețe",
-      "alternatives": [
-        "Nu v-am poruncit cu strictețe?"
-      ],
-      "reason": "Textul principal SBLGNT nu are particula negativă οὐκ a întrebării din TR; construcția este o afirmație emfatică prin substantiv și verb înrudite.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Afirmația românească păstrează lectura SBLGNT și intensitatea figurii etimologice."
-    },
-    {
-      "verse": 33,
-      "term": "διεπρίοντο",
-      "decision": "erau sfâșiați de mânie",
-      "alternatives": [
-        "erau tăiați la inimă",
-        "scrâșneau în ei"
-      ],
-      "reason": "Verbul are imaginea tăierii cu fierăstrăul și, în context, descrie reacția furioasă care duce la dorința de a-i omorî.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Redarea păstrează violența metaforei și o face inteligibilă în română fără a o confunda cu reacția din 2:37."
-    },
-    {
-      "verse": 41,
-      "term": "ὑπὲρ τοῦ ὀνόματος",
-      "decision": "pentru Nume",
-      "alternatives": [
-        "pentru Numele lui Isus"
-      ],
-      "reason": "SBLGNT păstrează expresia absolută «pentru Nume»; explicitarea lui Isus aparține altor lecturi și nu este necesară pentru identificarea contextuală.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Formularea dificilă, dar inteligibilă, păstrează exact lectura critică și referentul dat de context."
-    }
+    {"verse": 2, "term": "ἐνοσφίσατο ἀπὸ τῆς τιμῆς", "decision": "„și și-a oprit pentru sine o parte din preț”", "reason": "νοσφίζομαι exprimă însușirea/reținerea unei părți; formularea păstrează caracterul deliberat al acțiunii.", "alternatives": ["a ascuns o parte din preț"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea este lexicală și naturală, fără a adăuga detalii."},
+    {"verse": 17, "term": "ἡ οὖσα αἵρεσις τῶν Σαδδουκαίων", "decision": "„gruparea saducheilor”", "reason": "αἵρεσις desemnează aici gruparea/partida saducheilor; acordul vechi „care este secta” era defect în română.", "alternatives": ["secta saducheilor"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Formularea păstrează identificarea grupului fără acord defect."},
+    {"verse": 21, "term": "τὸ συνέδριον καὶ πᾶσαν τὴν γερουσίαν τῶν υἱῶν Ἰσραήλ", "decision": "„Sinedriul și întregul sfat al bătrânilor fiilor lui Israel”", "reason": "συνέδριον și γερουσία sunt două expresii coordonate; „Senatul copiilor lui Israel” era un calc impropriu.", "alternatives": ["consiliul și întregul senat al fiilor lui Israel"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Termenii instituționali sunt diferențiați și redați natural."},
+    {"verse": 24, "term": "ὅ τε στρατηγὸς τοῦ ἱεροῦ καὶ οἱ ἀρχιερεῖς", "decision": "„căpetenia Templului și marii preoți”", "reason": "Textul principal SBLGNT nu include aici ἱερεὺς καὶ ὁ înainte de στρατηγός; RP adaugă referirea explicită la marele preot.", "alternatives": ["marele preot, căpetenia Templului și marii preoți"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Nu este importat adaosul RP în textul principal."},
+    {"verse": 28, "term": "λέγων· Παραγγελίᾳ παρηγγείλαμεν ὑμῖν", "decision": "„V-am poruncit cu strictețe…”", "reason": "SBLGNT/Holmes afișează afirmația fără Οὐ; RP și NA28 au Οὐ, care produce întrebarea negativă.", "alternatives": ["Nu v-am poruncit cu strictețe…?"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul principal urmează lectura afișată de SBLGNT."},
+    {"verse": 31, "term": "ἀρχηγὸν καὶ σωτῆρα", "decision": "„Conducător și Mântuitor”", "reason": "ἀρχηγός are aici sensul de conducător/inițiator, iar σωτήρ de mântuitor; „Prinț și Salvator” era o alegere lexicală nefirească pentru registrul românesc.", "alternatives": ["Prinț și Mântuitor", "Căpetenie și Mântuitor"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea este neutră confesional și naturală în română."},
+    {"verse": 32, "term": "καὶ ἡμεῖς ἐσμεν μάρτυρες τῶν ῥημάτων τούτων", "decision": "„noi suntem martori ai acestor lucruri”", "reason": "Textul principal nu are αὐτοῦ după ἐσμεν; RP îl adaugă, ceea ce ar permite explicit „martorii Lui”.", "alternatives": ["noi suntem martorii Lui pentru aceste lucruri"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Nu este importat pronumele posesiv din RP."},
+    {"verse": 33, "term": "διεπρίοντο καὶ ἐβούλοντο ἀνελεῖν αὐτούς", "decision": "„s-au înfuriat și voiau să-i omoare”", "reason": "διεπρίοντο descrie o reacție intensă, ca și cum ar fi fost tăiați/sfâșiați lăuntric; în context conduce la intenția de a-i ucide. „Au fost tăiați la inimă” poate sugera greșit reacția de pocăință din Fapte 2:37.", "alternatives": ["erau sfâșiați de mânie"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Sensul afectiv este redat fără confuzie cu verbul diferit din Fapte 2:37."},
+    {"verse": 39, "term": "οὐ δυνήσεσθε καταλῦσαι αὐτούς", "decision": "„nu-i veți putea nimici”", "reason": "SBLGNT are αὐτούς, plural, referindu-se la oamenii din v.38; RP are αὐτό, singular, referitor la plan/lucrare.", "alternatives": ["nu o veți putea nimici"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Pronumele românesc urmează lectura principală SBLGNT."},
+    {"verse": 41, "term": "κατηξιώθησαν ὑπὲρ τοῦ ὀνόματος ἀτιμασθῆναι", "decision": "„fuseseră socotiți vrednici să sufere ocară pentru Nume”", "reason": "SBLGNT are expresia absolută „pentru Nume”; RP adaugă τοῦ Ἰησοῦ și schimbă ordinea.", "alternatives": ["să sufere ocară pentru numele lui Isus"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Textul principal nu explicitează numele acolo unde SBLGNT îl lasă absolut."},
+    {"verse": 42, "term": "εὐαγγελιζόμενοι τὸν χριστὸν Ἰησοῦν", "decision": "„să vestească Evanghelia despre Hristos Isus”", "reason": "SBLGNT are ordinea τὸν χριστὸν Ἰησοῦν; RP inversează în Ἰησοῦν τὸν χριστόν. Sensul proclamării lui Hristos Isus rămâne explicit.", "alternatives": ["să vestească faptul că Isus este Hristosul"], "reviewRequired": true, "resolutionStatus": "resolved", "resolutionReason": "Redarea păstrează sintagma textului principal fără a forța o analiză predicativă."}
   ],
   "referenceNotes": [],
   "alternateEndings": []
