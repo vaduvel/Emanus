@@ -1,0 +1,135 @@
+name: VT 1 Samuel Canonical Promotion
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-integration-clean
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vt-1samuel-canonical-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  promote-1-samuel:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+
+      - name: Verify complete 1 Samuel fresh review and map approval
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('docs/biblia-explicata/ot-reaudit/1SA/reviews')
+          total = 0
+          for chapter in range(1, 32):
+              path = root / f'{chapter:03d}.json'
+              if not path.is_file():
+                  raise SystemExit(f'Missing review: {path}')
+              data = json.loads(path.read_text(encoding='utf-8'))
+              if data.get('status') != 'fresh-semantic-review-complete':
+                  raise SystemExit(f'{path}: review incomplete')
+              total += int(data.get('reviewedVerses', 0))
+          if total != 810:
+              raise SystemExit(f'1 Samuel semantic review: {total}/810 verses')
+
+          approval = json.loads(Path('docs/biblia-explicata/ot-reaudit/1SA-VERSIFICATION-APPROVAL.json').read_text(encoding='utf-8'))
+          if approval.get('status') != 'explicit-versification-map-approved':
+              raise SystemExit('1 Samuel versification map is not explicitly approved')
+          totals = approval.get('totals', {})
+          if (totals.get('productVerses'), totals.get('WEBUVerses'), totals.get('WLCVerses')) != (810, 810, 811):
+              raise SystemExit(f'1 Samuel map totals invalid: {totals}')
+          print('1 Samuel review complete: 31/31 chapters, 810/810 product verses; explicit WLC 810→811 map approved')
+          PY
+
+      - name: Download current sources and public-domain benchmarks
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/hboWLC_current.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/ronbtf_current.zip https://ebible.org/Scriptures/ronbtf_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/ron1924_current.zip https://ebible.org/Scriptures/ron1924_usfm.zip
+
+      - name: Materialize 1 Samuel from fresh semantic review
+        run: |
+          set -euo pipefail
+          python3 scripts/promote-reviewed-1-samuel.py \
+            --webu-zip /tmp/engwebp_current.zip \
+            --wlc-zip /tmp/hboWLC_current.zip \
+            --btf-zip /tmp/ronbtf_current.zip \
+            --cornilescu-zip /tmp/ron1924_current.zip
+
+      - name: Sync canonical 1 Samuel text into the explained-reader package
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          source = Path('docs/data/biblia-emanus')
+          target = Path('packages/shared/src/bible/data/1-samuel')
+          target.mkdir(parents=True, exist_ok=True)
+          for chapter in range(1, 32):
+              src = source / f'1SA.{chapter}.json'
+              dst = target / f'1SA.{chapter}.json'
+              data = json.loads(src.read_text(encoding='utf-8'))
+              if data.get('status') != 'published' or data.get('public') is not True:
+                  raise SystemExit(f'{src}: canonical chapter is not published')
+              dst.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('Synced canonical 1 Samuel 31/31 into reader data')
+          PY
+
+      - name: Validate canonical 1 Samuel publication gate
+        run: python3 scripts/check-biblia-emanus-book.py --book 1SA
+
+      - name: Verify 1 Samuel seal eligibility
+        run: python3 scripts/seal-biblia-emanus.py --book 1SA --check
+
+      - name: Validate full Biblia Emanus corpus
+        run: python3 scripts/check-biblia-emanus-corpus.py
+
+      - name: Validate explained OT and reader copy
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+          pnpm check:vt-legacy-provenance
+          pnpm check:vt-explained
+          pnpm check:vt-publication
+          pnpm --filter @emanus/shared typecheck
+
+      - name: Commit canonical 1 Samuel only after all gates pass
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/data/biblia-emanus/sources/ot-1sa-2026-08-08-usfm.zip \
+            docs/data/biblia-emanus/source-lock.json \
+            docs/data/biblia-emanus/source-ledger.json \
+            docs/data/biblia-emanus/manifest.json \
+            docs/data/biblia-emanus/1SA.*.json \
+            docs/biblia-explicata/ot-reaudit/1SA-SEMANTIC-REVIEW-SUMMARY.json \
+            packages/shared/src/bible/data/1-samuel
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo '1 Samuel canonical state already materialized.'
+            exit 0
+          fi
+          git commit -m "feat(bible): materialize canonical 1 Samuel"
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
