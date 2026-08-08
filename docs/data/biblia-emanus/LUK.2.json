@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-luk-2",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 52,
       "reviewed": 52,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 52 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 52 de versete din LUK.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate acordurile, formulările calchiate și referenții care mascau sensul textului grec.",
+        "Sunt păstrate persoana, numărul, negările și relațiile sintactice din textul principal SBLGNT într-o română firească.",
+        "LUK.2.33 păstrează formularea SBLGNT «tatăl și mama lui», fără a substitui lectura RP «Iosif»."
       ]
     },
     "theologicalContext": {
@@ -123,24 +122,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 246,
-        "primary": 575,
-        "secondary": 329,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.4739268246110474,
-      "minimumScore": 0.4668938388149379
-    },
-    "textDigest": "sha256:6c77967baf9464ade5d15400bd2eb08997e99db886c4d750933eaba3b68af4c5",
-    "contentDigest": "sha256:1fdf4856acd5891e452b6e7561c76a2974ba9e93e6f3b51f1abd074f8892dd8e"
+    "textDigest": "sha256:d8c26fb40ea4f6c0943be48d219dd0306489ca1247cabf81fb39b043933e3600",
+    "contentDigest": "sha256:3903e2ce60da84057982079ac895fcaf4e9c250123a574ebc6a0e62aefd26109"
   },
   "verses": [
     {
@@ -177,7 +166,7 @@
     },
     {
       "number": 9,
-      "text": "Și iată, un înger al Domnului li s-a arătat, iar slava Domnului a strălucit în jurul lor; și s-au înfricoșat foarte tare."
+      "text": "Un înger al Domnului a stat lângă ei, iar slava Domnului a strălucit în jurul lor; și s-au înfricoșat foarte tare."
     },
     {
       "number": 10,
@@ -197,7 +186,7 @@
     },
     {
       "number": 14,
-      "text": "Slavă lui Dumnezeu în cele preaînalte și pe pământ pace între oamenii bunăvoinței Lui."
+      "text": "Slavă lui Dumnezeu în cele preaînalte și pe pământ pace între oamenii în care Își găsește plăcerea."
     },
     {
       "number": 15,
@@ -213,7 +202,7 @@
     },
     {
       "number": 18,
-      "text": "Toți cei care l-au auzit s-au întrebat ce li s-a vorbit prin păstori."
+      "text": "Toți cei care au auzit s-au minunat de cele spuse de păstori."
     },
     {
       "number": 19,
@@ -273,7 +262,7 @@
     },
     {
       "number": 33,
-      "text": "Iosif și mama lui se mirau de lucrurile care se vorbeau despre el."
+      "text": "Tatăl și mama Lui se mirau de lucrurile care se vorbeau despre El."
     },
     {
       "number": 34,
@@ -285,11 +274,11 @@
     },
     {
       "number": 36,
-      "text": "A fost o Ana, o profetesă, fiica lui Phanuel, din tribul lui Așer (Era de o vârstă mare, trăind cu un soț șapte ani de la fecioria ei,"
+      "text": "Era și Ana, o profetesă, fiica lui Fanuel, din tribul lui Așer. Era foarte înaintată în vârstă; trăise cu soțul ei șapte ani după fecioria ei,"
     },
     {
       "number": 37,
-      "text": "și ea era văduvă până la vârsta de optzeci și patru de ani. Nu se depărta de templu, slujind cu posturi și rugăciuni noapte și zi."
+      "text": "și era văduvă, în vârstă de optzeci și patru de ani. Nu se depărta de templu, slujind noapte și zi cu posturi și rugăciuni."
     },
     {
       "number": 38,
@@ -356,7 +345,7 @@
     {
       "verse": 14,
       "term": "εὐδοκίας",
-      "decision": "Textul principal urmează lectura critică «ἐν ἀνθρώποις εὐδοκίας» și redă: «pace între oamenii bunăvoinței Lui».",
+      "decision": "Textul principal urmează lectura critică «ἐν ἀνθρώποις εὐδοκίας» și redă: «pace între oamenii în care Își găsește plăcerea».",
       "alternatives": [
         "pace, bunăvoință între oameni",
         "pace între oamenii plăcuți Lui"
@@ -365,6 +354,18 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Lectura critică a fost păstrată în textul principal, iar efectul semantic al variantei TR a fost documentat fără armonizare la tradiția receptă."
+    },
+    {
+      "verse": 33,
+      "term": "ὁ πατὴρ αὐτοῦ καὶ ἡ μήτηρ",
+      "decision": "„Tatăl și mama Lui”",
+      "alternatives": [
+        "„Iosif și mama Lui”"
+      ],
+      "reason": "SBLGNT citește expresia familială generală; aparatul consemnează numele «Iosif» drept lectură RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează lectura SBLGNT, fără substituirea automată a lecturii Textus Receptus."
     }
   ],
   "referenceNotes": [],
