@@ -75,13 +75,6 @@ def ref_text(ref: tuple[int, int]) -> str:
     return f"{ref[0]}:{ref[1]}"
 
 
-def parse_ref(value: str) -> tuple[int, int]:
-    parts = value.split(":")
-    if len(parts) != 2:
-        fail(f"referință invalidă: {value}")
-    return int(parts[0]), int(parts[1])
-
-
 def explicit_refs(chapter: int, verse: int) -> list[tuple[int, int]]:
     if chapter == 20 and verse == 42:
         return [(20, 42), (21, 1)]
@@ -302,7 +295,67 @@ def build_snapshot(minor, validator, packet: dict[str, Any], archives: dict[str,
     return snapshot_sha, snapshot_id, snapshot_rel, extracted, sorted(webu), sorted(wlc), mapped_rows
 
 
-def update_source_lock(minor, source_lock: dict[str, Any], archives: dict[str, Path], extracted: dict[str, bytes], snapshot_sha: str, snapshot_id: str, snapshot_rel: str, target_refs: list[tuple[int, int]], wlc_refs: list[tuple[int, int]], mapped_rows: dict[str, str]) -> str:
+def source_rule_bundle(target_refs: list[tuple[int, int]]) -> tuple[list[dict[str, Any]], dict[int, list[str]]]:
+    normal_targets = [ref for ref in target_refs if explicit_refs(*ref) == [ref]]
+    normal_id = "WLC-1SA-PAIRWISE-NORMAL"
+    combine_id = "WLC-1SA-COMBINE-20-42"
+    chapter21_id = "WLC-1SA-SHIFT-21"
+    verse2329_id = "WLC-1SA-SHIFT-23-29"
+    chapter24_id = "WLC-1SA-SHIFT-24"
+
+    rules: list[dict[str, Any]] = [
+        {
+            "id": normal_id,
+            "bookId": CODE,
+            "mapping": "pairwise",
+            "targetReferences": [ref_text(ref) for ref in normal_targets],
+            "sourceReferences": [ref_text(ref) for ref in normal_targets],
+        },
+        {
+            "id": combine_id,
+            "bookId": CODE,
+            "mapping": "combine",
+            "targetReferences": ["20:42"],
+            "sourceReferences": ["20:42", "21:1"],
+        },
+        {
+            "id": chapter21_id,
+            "bookId": CODE,
+            "mapping": "pairwise",
+            "targetReferences": [f"21:{verse}" for verse in range(1, 16)],
+            "sourceReferences": [f"21:{verse}" for verse in range(2, 17)],
+        },
+        {
+            "id": verse2329_id,
+            "bookId": CODE,
+            "mapping": "pairwise",
+            "targetReferences": ["23:29"],
+            "sourceReferences": ["24:1"],
+        },
+        {
+            "id": chapter24_id,
+            "bookId": CODE,
+            "mapping": "pairwise",
+            "targetReferences": [f"24:{verse}" for verse in range(1, 23)],
+            "sourceReferences": [f"24:{verse}" for verse in range(2, 24)],
+        },
+    ]
+    ledger_rules: dict[int, list[str]] = {}
+    for chapter in range(1, CONFIG["chapters"] + 1):
+        if chapter == 20:
+            ledger_rules[chapter] = [normal_id, combine_id]
+        elif chapter == 21:
+            ledger_rules[chapter] = [chapter21_id]
+        elif chapter == 23:
+            ledger_rules[chapter] = [normal_id, verse2329_id]
+        elif chapter == 24:
+            ledger_rules[chapter] = [chapter24_id]
+        else:
+            ledger_rules[chapter] = [normal_id]
+    return rules, ledger_rules
+
+
+def update_source_lock(minor, source_lock: dict[str, Any], archives: dict[str, Path], extracted: dict[str, bytes], snapshot_sha: str, snapshot_id: str, snapshot_rel: str, target_refs: list[tuple[int, int]], wlc_refs: list[tuple[int, int]]) -> dict[int, list[str]]:
     source_lock["capturedOn"] = COMPLETED_ON
     source_lock.setdefault("snapshots", {})[snapshot_id] = {"path": snapshot_rel, "sha256": snapshot_sha}
     upstream = source_lock.setdefault("upstreamArtifacts", {})
@@ -357,27 +410,47 @@ def update_source_lock(minor, source_lock: dict[str, Any], archives: dict[str, P
             record.update({"benchmarkId": "CORNILESCU-1924", "family": "cornilescu"})
         files[lock_ids[key]] = record
 
-    rule_id = "WLC-1SA-EXPLICIT-MASORETIC-MAP-810-811"
+    new_rules, ledger_rules = source_rule_bundle(target_refs)
     rules = [
         rule for rule in source_lock.setdefault("versificationRules", [])
         if not (isinstance(rule, dict) and rule.get("bookId") == CODE)
     ]
-    rules.append({
-        "id": rule_id,
-        "sourceLockId": lock_ids["wlc"],
-        "bookId": CODE,
-        "mapping": "explicit-product-to-source",
-        "targetReferences": [ref_text(ref) for ref in target_refs],
-        "sourceReferences": [ref_text(ref) for ref in wlc_refs],
-        "explicitMappings": mapped_rows,
-        "coverage": {
-            "targetReferences": len(target_refs),
-            "sourceReferences": len(wlc_refs),
-            "sourceReferencesConsumedExactlyOnce": True,
-        },
-    })
+    for rule in new_rules:
+        rule["sourceLockId"] = lock_ids["wlc"]
+        rules.append(rule)
     source_lock["versificationRules"] = rules
-    return rule_id
+
+    represented_targets: set[str] = set()
+    represented_sources: list[str] = []
+    for rule in new_rules:
+        represented_targets.update(rule["targetReferences"])
+        represented_sources.extend(rule["sourceReferences"])
+    if represented_targets != {ref_text(ref) for ref in target_refs}:
+        fail("regulile source-lock nu acoperă exact cele 810 referințe produs")
+    if len(represented_sources) != EXPECTED_WLC_VERSES or len(set(represented_sources)) != EXPECTED_WLC_VERSES:
+        fail("regulile source-lock nu consumă exact o dată cele 811 referințe WLC")
+    if set(represented_sources) != {ref_text(ref) for ref in wlc_refs}:
+        fail("regulile source-lock nu corespund inventarului WLC curent")
+    return ledger_rules
+
+
+def update_ledger(ledger: dict[str, Any], validator, target_refs: list[tuple[int, int]], ledger_rules: dict[int, list[str]]) -> None:
+    counts = Counter(chapter for chapter, _verse in target_refs)
+    chapters = ledger.setdefault("chapters", {})
+    for chapter in range(1, CONFIG["chapters"] + 1):
+        chapters[f"{CODE}.{chapter}"] = {
+            "expectedVerses": int(counts[chapter]),
+            "englishUrl": f"https://ebible.org/engwebp/{CODE}{chapter:02d}.htm",
+            "hebrewUrl": f"https://ebible.org/hboWLC/{CODE}{chapter:02d}.htm",
+            "versificationRuleIds": ledger_rules[chapter],
+        }
+
+    def key(item: tuple[str, Any]) -> tuple[int, int]:
+        book, chapter_text = item[0].split(".", 1)
+        return validator.BOOK_ORDER.get(book, 999), int(chapter_text)
+
+    ledger["chapters"] = dict(sorted(chapters.items(), key=key))
+    ledger["verifiedOn"] = COMPLETED_ON
 
 
 def write_summary(severity: Counter[str], corrected: int, approved: int, snapshot_rel: str, snapshot_sha: str) -> None:
@@ -443,18 +516,18 @@ def main() -> None:
         "btf": args.btf_zip,
         "cornilescu": args.cornilescu_zip,
     }
-    snapshot_sha, snapshot_id, snapshot_rel, extracted, target_refs, wlc_refs, mapped_rows = build_snapshot(
+    snapshot_sha, snapshot_id, snapshot_rel, extracted, target_refs, wlc_refs, _mapped_rows = build_snapshot(
         minor, validator, packet, archives
     )
 
     source_lock = load_json(DATA / "source-lock.json")
     ledger = load_json(DATA / "source-ledger.json")
     manifest = load_json(DATA / "manifest.json")
-    rule_id = update_source_lock(
+    ledger_rules = update_source_lock(
         minor, source_lock, archives, extracted, snapshot_sha, snapshot_id, snapshot_rel,
-        target_refs, wlc_refs, mapped_rows,
+        target_refs, wlc_refs,
     )
-    minor.update_ledger(ledger, validator, CODE, CONFIG, target_refs, rule_id)
+    update_ledger(ledger, validator, target_refs, ledger_rules)
 
     for chapter, (texts, review) in reviews.items():
         payload = minor.chapter_payload(validator, CODE, CONFIG, chapter, texts, review, snapshot_sha)
