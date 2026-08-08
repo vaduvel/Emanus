@@ -1,0 +1,114 @@
+{
+  "translation": "BE-DEUT-DRAFT",
+  "bookId": "ESG",
+  "bookName": "Adăugirile grecești la Estera",
+  "chapter": 7,
+  "collection": "deuterocanon",
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "id": "eng-webbe",
+      "sha256": "42e0dec882e3e94272dc7ed312233dd2b891613a230dece316ffbd6ae5aace67",
+      "license": "Public Domain"
+    },
+    "greek": [
+      {
+        "id": "grcbrent",
+        "sha256": "7c3d95d05b542bbf67348e6c28430b7cedfc83858b9125d3d05c574a423c28c6",
+        "license": "Public Domain"
+      },
+      {
+        "id": "grclxx",
+        "sha256": "2b0fc204f6a2e5283a4ef1654b25b76cf23c32a910f5534c4e076c9e85380b7e",
+        "license": "Public Domain"
+      }
+    ],
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "Apache-2.0",
+      "role": "first-pass draft only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și împăratul Haman au intrat să bea cu regina."
+    },
+    {
+      "number": 2,
+      "text": "Împăratul a zis Esterei, la ospă, a doua zi: „Ce este, împărăteasă Estera? Care este cererea ta? Care este cererea ta? Ți se va face până la jumătate din regatul meu.”"
+    },
+    {
+      "number": 3,
+      "text": "Ea a răspuns a zis: Dacă am căpătat trecere înaintea regelui, să-mi fie dată viața ca cerere a mea poporul meu ca cerere a mea."
+    },
+    {
+      "number": 4,
+      "text": "Atât eu, cât și poporul meu sunt vândute pentru distrugere, jaf și genocid. Dacă atât noi, cât și copiii noștri au fost vândute pentru sclavi de sex masculin și feminin, nu te-ar fi deranjat, pentru că acest lucru nu este demn de palatul regelui."
+    },
+    {
+      "number": 5,
+      "text": "Regele spuse: „Cine a îndrăznit să facă lucrul acesta? ”"
+    },
+    {
+      "number": 6,
+      "text": "Estera a zis: Dmanul este Haman, omul acesta rău! „ Atunci Haman s-a înspăimântat în regelui a reginei.”"
+    },
+    {
+      "number": 7,
+      "text": "Împăratul s'a sculat dela ospă ca să intre în grădină. Haman a început să ceară îndurare reginei, căci a văzut că avea mari necazuri."
+    },
+    {
+      "number": 8,
+      "text": "Împăratul s-a întors din grădină, iar Haman s-a aruncat pe canapea, implorînd-o pe regină să-i dea îndurare. Împăratul a zis: ,, Vrei să-mi ataci nevasta în casa mea? Și cînd Haman a auzit lucrul acesta, -a schimbat."
+    },
+    {
+      "number": 9,
+      "text": "Și Bugathan, unul dintreambelani, a zis împăratului: Iată, Haman a pregătit o spânzurătoare pentru Mardoheu, care a vorbit despre rege, o spânzurătoare înaltă de cincizeci de coți a fost pusă pe proprietatea lui Haman.„ Împăratul a zis: Să fie spânzurat pe ea! „””"
+    },
+    {
+      "number": 10,
+      "text": "Astfel Haman a fost spînzurat de spânzurătoarea care fusese pregătită pentru Mardoheu. Atunci mânia împăratului a încetat."
+    }
+  ],
+  "audit": {
+    "sourceVerseNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "continuous": true,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 10,
+    "semanticMinimumScore": 0.794984,
+    "blockingIssueCount": 0,
+    "textDigest": "0853529a4e731d8aefbf3ffee00598459510859dbb18f44c8dba7037eb41fa2a",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  },
+  "runtimeEnabled": true
+}

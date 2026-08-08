@@ -1,0 +1,69 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 88,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/88/",
+    "pageSha256": "5874be8f5c11bbb2b4780f8fa75afa50985de1b25d04ee5c6284d8c5a6ab1d8a",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "371bcb67b036449249825eb1580c17f46e570587c625a9b42a9ec417e21a8d92",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și am văzut pe unul din cei patru care ieșiseră cei dintâi; el a luat prima stea care căzuse din cer, a legat-o de mână de picior a aruncat-o într-un abis; acum abisul era îngust adânc, oribil întunecat."
+    },
+    {
+      "number": 2,
+      "text": "Unul dintre ei a scos sabia, a dat -o elefanților, cămilelor măgarilor. Apoi au început să se lovească unul pe altul, tot pămîntul s'a cutremurat din pricina lor."
+    },
+    {
+      "number": 3,
+      "text": "Și, pe când priveam în viziune, iată că unul din cei patru care ieșiseră din cer loviți cu pietre, s-a adunat a luat toate stelele mari, ale căror mădulare erau ca niște cai, i-a legat pe toți de mână de picior i-a aruncat într-un abis al pământului."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 3,
+    "translatedUnits": 3,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 3,
+    "semanticMinimumScore": 0.867118,
+    "blockingIssueCount": 0,
+    "textDigest": "ad9c957167f9a4966d75390d0ea7cfdac061ea9c744f7b597ae926516eb983f6",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

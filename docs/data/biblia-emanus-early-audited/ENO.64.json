@@ -1,0 +1,65 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 64,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/64/",
+    "pageSha256": "5a4cd7367c5543c4f4e083ff5ed9923d3eed0f325f34727e1995f3a8db90ff80",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "5b3d27bc68521e3c4598da54330e31fa34df550f587d6995a566ab7817a171ba",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și alte forme pe care le-am văzut ascunse în acel loc."
+    },
+    {
+      "number": 2,
+      "text": "Am auzit glasul îngerului spunând: „Aceștia sunt îngerii care au coborât pe pământ și au descoperit ceea ce era ascuns copiilor oamenilor și au sedus pe copiii oamenilor să comită păcat.”"
+    }
+  ],
+  "audit": {
+    "sourceUnits": 2,
+    "translatedUnits": 2,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 2,
+    "semanticMinimumScore": 0.942518,
+    "blockingIssueCount": 0,
+    "textDigest": "0df6868e4a5c849298e14efdaa491a08f1b93a76d74d29b799030268c4b3063c",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

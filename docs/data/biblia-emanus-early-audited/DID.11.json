@@ -1,0 +1,90 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 11,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-11",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 11
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/11/",
+      "sha256": "4ce7bc7a1378f6063608d91b919c41d92f446ebdf76959c869cb39d4aef46c1d"
+    },
+    "sourceTextDigest": "191cb141eb8ac066417f4b8c492b54c58f0ebd7b4528c90f1c59b76ca2cd608f",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Dar dacă voiți să fiți într-adevăr, umblați pe calea Domnului dezleg orice grupare a păcatului; pentru că Mântuitorul v-a poruncit să iertațile aproapelui vostru chiar până lazeci de ori câte. Și dacă nu vreți să-i iertați, ascultați ce spune profetul Ieremia. Dar dacă răul în inima voastră, dacă vă hrăniți cu ură judecați cu mânie, rugăciunea voastră nu va putea să se înalte la Dumnezeu, căci tu ai împlinit poruncile tale. Dar dacă ai iertat greșeala fratelui tău de patru sute nouăzeci de ori, vei deveni încet la mânie mare în milă, ca să te mântui pe tine însuți. Și dacă faci astfel, vei fi un fiu al Tatălui tău care este în ceruri, când Îl vei ruga, El va auzi rugăciunea ta ca un prieten credincios. De aceea, episcopilor, când vă adunați pentru rugăciune, laudă închinare, când citi Scriptura, El va citi. Diaconul să stea în mijlocul vostru, strigând cu glas tare, zicând: Dacă este cineva care are în inimă răzbunare, invidie, înșelăciune sau răutate împotriva aproapelui său, să se împace repede cu el, atunci Dumnezeu va primi rugăciunea implorarea lor. Și când intra într-o casă, spuneți așa: Pacea lui Dumnezeu să fie în casa aceasta. Și dacă vor fi fii ai păcii, pacea voastră se va odihni peste ei. După cum este scris, El este pace pentru cei ce sunt departe, pentru cei ce se află aproape, chiar pentru poporul care crede în Hristos. Toți cei care intră în Biserica lui Dumnezeu trebuie să se roage Lui să trimită pace peste poporul Său."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "longUnitRecovery": [
+      {
+        "reference": "DID.11:1",
+        "reason": "severe-length-loss-or-runaway-repetition",
+        "model": {
+          "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+          "revision": "3853a10c485323cbcd870553e846071052c0c070"
+        },
+        "sourceDigest": "191cb141eb8ac066417f4b8c492b54c58f0ebd7b4528c90f1c59b76ca2cd608f",
+        "previousTargetDigest": "cf4aa5939d2d5dc19b42a14185945907d40040882ccdf512c993b6dbbe8968bc",
+        "recoveredTargetDigest": "918888c1c51289c0ca56e63d357c647a41a705052945fa3a30eb791be0311f1e",
+        "segments": 4,
+        "recursiveRepairs": 0,
+        "sourceWords": 308,
+        "targetWords": 255,
+        "coverageRatio": 0.827922
+      }
+    ],
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.818955,
+    "blockingIssueCount": 0,
+    "textDigest": "918888c1c51289c0ca56e63d357c647a41a705052945fa3a30eb791be0311f1e",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

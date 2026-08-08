@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "collectionId": "GIANTS",
+  "witness": "2Q26",
+  "status": "published-research",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationForm": "parallel-fragment-research-edition",
+  "license": "CC BY-NC 4.0 for derived Romanian research edition",
+  "source": {
+    "repository": "https://github.com/ETCBC/dss.git",
+    "commit": "2403d16654984fc5567a5bd263086d9ad2a7a1dd",
+    "dataset": "ETCBC/dss Text-Fabric 2.0",
+    "sourceTextRole": "Hebrew/Aramaic diplomatic and normalized transcription",
+    "sourceDigest": "abe6565ce210fc9c089a4632bfc2f5d253fced30f4fb195126e3689e34482bf2",
+    "normalizedDigest": "8b71e08a13400957918b1886f79590291604f76650d2b1560be964702edd8a59",
+    "translationModel": {
+      "id": "facebook/nllb-200-distilled-600M",
+      "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d",
+      "license": "CC-BY-NC-4.0",
+      "sourceLanguage": "heb_Hebr",
+      "targetLanguage": "ron_Latn",
+      "role": "first-pass candidate only"
+    }
+  },
+  "lines": [
+    {
+      "collectionId": "GIANTS",
+      "fragment": "f1",
+      "line": "1",
+      "diplomatic": "ε ]ה##דיחו לוחא לממ##[ חק ε",
+      "normalized": "ε הדיחו לוחא לממחק ε",
+      "transliteration": "-- hdyjw lwja lmmjq --",
+      "romanian": "E-a întârziat să şteargă.",
+      "isTotalLacuna": false,
+      "translationAllowed": true,
+      "translationMethod": "NLLB Hebrew-script provisional pass; Aramaic review required",
+      "translationConfidence": "low-provisional"
+    },
+    {
+      "collectionId": "GIANTS",
+      "fragment": "f1",
+      "line": "2",
+      "diplomatic": "ε ]וסלקו מיא עלא מן [ לו ]ח##א[ ε",
+      "normalized": "ε וסלקו מיא עלא מן לוחא ε",
+      "transliteration": "-- wslqw mya ola mN lwja --",
+      "romanian": "E-a scos-o de pe placă.",
+      "isTotalLacuna": false,
+      "translationAllowed": true,
+      "translationMethod": "NLLB Hebrew-script provisional pass; Aramaic review required",
+      "translationConfidence": "low-provisional"
+    },
+    {
+      "collectionId": "GIANTS",
+      "fragment": "f1",
+      "line": "3",
+      "diplomatic": "ε ] # # ו#?נ?ט#לו לוחא מן מיא לוחא די#?[ ε",
+      "normalized": "ε # # ונטלו לוחא מן מיא לוחא די ε",
+      "transliteration": "-- \\\\ wnflw lwja mN mya lwja dy --",
+      "romanian": "Vântule cântăreşte de la Maya cântăreaţă destul",
+      "isTotalLacuna": false,
+      "translationAllowed": true,
+      "translationMethod": "NLLB cleaned-source corrective pass",
+      "translationConfidence": "machine-draft-corrected"
+    },
+    {
+      "collectionId": "GIANTS",
+      "fragment": "f1",
+      "line": "4",
+      "diplomatic": "ε ] # ה##ר## # [ ]ל׳ה#ן? כ##ו#?ל # [ ε ׃",
+      "normalized": "ε # הר # ל׳הן כול # ε ׃",
+      "transliteration": "-- \\hr\\ □l/hN kwl\\ -- .",
+      "romanian": "Ei sunt cu toţii.",
+      "isTotalLacuna": false,
+      "translationAllowed": true,
+      "translationMethod": "NLLB Hebrew-script provisional pass; Aramaic review required",
+      "translationConfidence": "low-provisional"
+    }
+  ],
+  "audit": {
+    "sourceLineCount": 4,
+    "translatedOrLacunaCount": 4,
+    "publicationBlocked": false,
+    "correctivePass": {
+      "model": {
+        "id": "facebook/nllb-200-distilled-600M",
+        "revision": "f8d333a098d19b4fd9a8b18f94170487ad3f821d"
+      },
+      "insufficientTextMarker": "[… fragment prea deteriorat pentru o traducere sigură …]",
+      "editoriallyUntranslatableFragments": [
+        "4Q531:f18",
+        "4Q531:f6"
+      ],
+      "policy": "translate only recoverable continuous source; never reconstruct lacunae"
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/LaBSE",
+      "revision": "836121a0533e5664b21c7aacc5d22951f2b8b25b"
+    },
+    "blockingIssueCount": 0,
+    "researchEditionWarningRequired": true,
+    "lacunaPolicy": "No Romanian reconstruction when the surviving source does not preserve continuous translatable syntax.",
+    "editoriallyUntranslatableFragments": [
+      "4Q531:f18",
+      "4Q531:f6"
+    ],
+    "textDigest": "48b57fd8619c85b7e71084a7b40c577bcdfe406bb01a29d1ff5e1202a44b42d7",
+    "completedGate": "source-language-editorial-and-multimodel-review"
+  }
+}

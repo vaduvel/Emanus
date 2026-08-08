@@ -1,0 +1,114 @@
+{
+  "translation": "BE-DEUT-DRAFT",
+  "bookId": "JDT",
+  "bookName": "Iudita",
+  "chapter": 3,
+  "collection": "deuterocanon",
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "id": "eng-webbe",
+      "sha256": "42e0dec882e3e94272dc7ed312233dd2b891613a230dece316ffbd6ae5aace67",
+      "license": "Public Domain"
+    },
+    "greek": [
+      {
+        "id": "grcbrent",
+        "sha256": "7c3d95d05b542bbf67348e6c28430b7cedfc83858b9125d3d05c574a423c28c6",
+        "license": "Public Domain"
+      },
+      {
+        "id": "grclxx",
+        "sha256": "2b0fc204f6a2e5283a4ef1654b25b76cf23c32a910f5534c4e076c9e85380b7e",
+        "license": "Public Domain"
+      }
+    ],
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "Apache-2.0",
+      "role": "first-pass draft only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Ei au trimis la el soli cu cuvinte de pace, spunând:"
+    },
+    {
+      "number": 2,
+      "text": "Iată, noi, slujitorii lui Nebucadnețar, marele rege, mințim înaintea ta. Folosește-ne așa cum este plăcut înaintea ta."
+    },
+    {
+      "number": 3,
+      "text": "Iată, locuințele noastre, toată țara noastră, toate ogoarele noastre de grâu, turmele și turmele noastre, și toate coapsele corturilor noastre, culcați-vă înaintea voastră; folosiți-le cum vă place."
+    },
+    {
+      "number": 4,
+      "text": "Iată, cetățile noastre și cei ce locuiesc în ele sunt robii tăi; vino și poartă-te cu ei cum este bine în ochii tăi."
+    },
+    {
+      "number": 5,
+      "text": "Bărbații aceia au venit la Holofern i-au spus cuvintele acestea."
+    },
+    {
+      "number": 6,
+      "text": "A coborât spre coasta mării, el orea lui, a pus garnizoane în cetățile cele înalte a luat dintre ei ale ca."
+    },
+    {
+      "number": 7,
+      "text": "Ei l-au primit, ei și toată țara în jurul lor, cu ghirlande și dansuri și timbrele."
+    },
+    {
+      "number": 8,
+      "text": "Le -a dărâmat toate hotarele, le -a tăiat livezile sfinte, i s'a dat să nimicească pe toți dumnezeii țării, ca toate neamurile să se închine numai lui Nebucadnețar, și toate limbile și semințiile lor să -L cheme ca pe un dumnezeu."
+    },
+    {
+      "number": 9,
+      "text": "Apoi a venit spre Esdraelon, aproape de Dotaea, care este vizavi de creasta cea mare a Iudeii."
+    },
+    {
+      "number": 10,
+      "text": "A tăbărît între Geba și Scythopolis, și a stat acolo o lună întreagă, ca să adune toate bagajele oștirii lui."
+    }
+  ],
+  "audit": {
+    "sourceVerseNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "continuous": true,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 10,
+    "semanticMinimumScore": 0.773539,
+    "blockingIssueCount": 0,
+    "textDigest": "0f5b2800fb840cea4cc36fc74e29ae871b374b7e968cfa3dc686b0760475baf1",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  },
+  "runtimeEnabled": true
+}

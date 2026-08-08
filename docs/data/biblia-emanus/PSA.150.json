@@ -1,0 +1,151 @@
+{
+  "translation": "BE",
+  "bookId": "PSA",
+  "bookName": "Psalmii",
+  "chapter": 150,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/PSA150.htm",
+      "license": "Public Domain",
+      "lockId": "WEBU-R5-PSA"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/PSA150.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-OSHB-REMAP-R5-PSA",
+      "rawLockId": "WLC-RAW-R5-PSA",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
+    }
+  },
+  "review": {
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Lăudați pe DOMNUL! Lăudați pe Dumnezeu în Locașul Lui cel Sfânt, lăudați-L în întinderea cerului, unde se arată puterea Lui!"
+    },
+    {
+      "number": 2,
+      "text": "Lăudați-L pentru isprăvile Lui cele mari, lăudați-L, după mărimea Lui nemărginită!"
+    },
+    {
+      "number": 3,
+      "text": "Lăudați-L cu sunet de trâmbiță, lăudați-L cu lăuta și harpa!"
+    },
+    {
+      "number": 4,
+      "text": "Lăudați-L cu timpane și cu jocuri, lăudați-L cântând cu instrumente cu corzi și cu cavalul."
+    },
+    {
+      "number": 5,
+      "text": "Lăudați-L cu chimvale sunătoare, lăudați-L cu chimvale zăngănitoare!"
+    },
+    {
+      "number": 6,
+      "text": "Tot ce are suflare să laude pe DOMNUL! Lăudați pe DOMNUL!"
+    }
+  ],
+  "editorialNotes": [],
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ron1924/PSA150.htm"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ronbtf/PSA150.htm"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/PSA.150.NTR"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-06",
+    "verseCoverage": {
+      "expected": 6,
+      "reviewed": 6,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:9e59c98a933ba4426646cdc048efe804be99ad6d4bbc50a9c54ef34239aabf6c"
+  }
+}

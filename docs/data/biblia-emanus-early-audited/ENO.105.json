@@ -1,0 +1,65 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 105,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/105/",
+    "pageSha256": "0d7b9342f02059e5394b07f8988d03d5d50585d71094caa617c2b692f9c35613",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "0697b3992350b7732e2e2668a7844a7e0ba13164e1575136f0e5fab4f50fc244",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "În zilele acelea, Domnul le-a poruncit să cheme să mărturisească fiilor pământului despre înțelepciunea lor: Arăt-le-o, căci voi călăuzele lor o răsplată pentru tot pământul."
+    },
+    {
+      "number": 2,
+      "text": "Căci Eu și Fiul Meu vom fi uniți cu ei pentru totdeauna pe cărări drepte în viața lor; și veți avea pace; bucurați-vă, fii de dreptate. Amin."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 2,
+    "translatedUnits": 2,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 2,
+    "semanticMinimumScore": 0.84039,
+    "blockingIssueCount": 0,
+    "textDigest": "8c4681a6e4d9da869c8e67b1c11c4ba4c0fd9c6172ad62d92b5c1dd5989f36b7",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

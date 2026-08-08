@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 49,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/49/",
+    "pageSha256": "735944bf363207746de496320613ad93c456855d924b6c5f68652b6546c98ec8",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "7602689fcb2ae0cbb02b884e18e175ae807c00b469f39ee3750979489b15d5b0",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Căci înțelepciunea este vărsată ca apa, și slava nu va mai cădea înaintea Lui pentru totdeauna."
+    },
+    {
+      "number": 2,
+      "text": "Căci El este puternic în toate secretele neprihănirii, și fărădelegea va dispărea ca o umbră, și nu va mai rămînea; căci Cel ce alege stă înaintea Domnului duhurilor, și slava Lui este pentru totdeauna și pentru totdeauna, și puterea Lui pentru toate neamurile."
+    },
+    {
+      "number": 3,
+      "text": "Și în El locuiește duhul înțelepciunii, și duhul care dă pricepere, și duhul înțelegerii și al puterii, și duhul celor ce au adormit în dreptate."
+    },
+    {
+      "number": 4,
+      "text": "El va judeca lucrurile ascunse, și nimeni nu va putea rosti înaintea Lui un cuvînt mincinos; căci El este Cel ales înaintea Domnului duhurilor, după plăcerea Lui."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.839695,
+    "blockingIssueCount": 0,
+    "textDigest": "a4d679f9cc9d1029b0fb2b02188f050111f6d1ae56107cd12ea12431ae518d08",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

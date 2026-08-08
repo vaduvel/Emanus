@@ -1,0 +1,77 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 51,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/51/",
+    "pageSha256": "7f87fac07a37fe09956b109d1cc9138f3eee79709d8c1da2c85886e5b39c9efe",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "240dd16153334c413dee0dbf2747f66d60ecf0f9cb81c37270d5dc7c9dd801fd",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și în zilele acelea pământul va da înapoi ceea ce i s-a încredințat, eolul va da înapoi ceea ce a primit, iadul va da înapoi ceea ce datorează."
+    },
+    {
+      "number": 2,
+      "text": "El va alege din mijlocul lor pe cei drepți sfinți, căci ziua s-a apropiat ca să fie mântuiți."
+    },
+    {
+      "number": 3,
+      "text": "În zilele acelea, Cel ales va ședea pe scaunul Meu de domnie, și gura Lui va turna toate secretele înțelepciunii și sfaturilor: căci Domnul Duhurilor i le -a dat și l -a proslăvit."
+    },
+    {
+      "number": 4,
+      "text": "În zilele acelea, munții vor sări ca berbecii, și dealurile vor sări ca niște miei săturați de lapte, și fețele tuturor îngerilor din cer vor fi luminate de bucurie."
+    },
+    {
+      "number": 5,
+      "text": "Căci în zilele acelea se va scula Cel Ales, se va bucura pământul, cei drepți vor locui pe el, iar cei ale vor umbla pe el."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 5,
+    "translatedUnits": 5,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 5,
+    "semanticMinimumScore": 0.802866,
+    "blockingIssueCount": 0,
+    "textDigest": "6475cd27e141f53180039842faa372a221f185d74133a409310ec6cebd6ca90b",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

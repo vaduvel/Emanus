@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 8,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/8/",
+    "pageSha256": "7bf5d083a12cbc9c86477ccfe5aecf597c15b6cc9b55b91e9be266b7ead9595f",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "58add5bfc4422f9f92f461a4f04e7a6b3c1c2ca9be433008fcf3772638bb034e",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Azâțêl a învățat pe oameni să facă săbii, cuțite, scuturi și platoșe, și le-a făcut cunoscut metalele pământului și arta de a le lucra, brățările și podoabele, folosirea antimoniului, înfrumusețarea pleoapelor, tot felul de pietre scumpe și toate tincturile colorate."
+    },
+    {
+      "number": 2,
+      "text": "s-au ridicat mulți necredinci și au curvit și s-au rătăcit și s-au stricat în toate căile lor."
+    },
+    {
+      "number": 3,
+      "text": "Semjâzâ a predat vrăji, și tăieri de rădăcini, Armârôs rezolvarea vrăjilor, Barâqîjâl (învățat) astrologie, Kôkabêl constelațiile, řezêqêêl cunoașterea norilor, Araqiêl semnele pământului, Shamsiêl semnele soarelui, și Sariêl cursul lunii."
+    },
+    {
+      "number": 4,
+      "text": "Și pe măsură ce oamenii pieriseră, ei strigau, iar strigătul lor se suia la cer..."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.573033,
+    "blockingIssueCount": 0,
+    "textDigest": "d63654db9c9f8672ff7e57048d22abda0a0a09e17ad95a576c204911f08efb17",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

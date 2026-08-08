@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 23,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-23",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 23
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/23/",
+      "sha256": "75cd2277b318772721e8711a8f1debd9cdf10489932dbaa12d5255d7bcd8b394"
+    },
+    "sourceTextDigest": "4c7aeec6e7100b2d786b8dc8d26d01b7c3fff0510174f3bec0c54614527c71b8",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Ce spuneți voi atunci despre servitori? Să fie prudenți și să-și slujească stăpânii în frica lui Dumnezeu. Și dacă un slujitor și stăpânul său sunt creștini, să-l slujească ca Dumnezeu, să-l considere ca pe un tată și un stăpân bun. Și pentru aceasta el va primi o bună răsplată pentru serviciul cu care a servit stăpânul său. Și dacă există un stăpân care are un servitor, un credincios, și el face voia lui, să-l iubească ca pe Dumnezeu, și să-l socotească ca pe un tată și un bun stăpân. Și pentru aceasta el va primi o bună răsplată pentru serviciul cu care el a servit pe stăpânul său. Și dacă există un stăpân care are un slujitor, un credincios, și el face voia lui, să-l iubească ca pe fiul său, și să-l socotească ca pe fratele său pentru dragostea credinței. Umiți-vă și ascultați de regi și domni care se tem de Dumnezeu, pentru că ei sunt servitori ai lui Dumnezeu. Temeți-i așa cum i-a poruncit Domnul nostru prin Dumnezeu."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.876402,
+    "blockingIssueCount": 0,
+    "textDigest": "4f5444387dfdbc33d6bbe55e4286d5a3584f27d83983a7437ee7657612dd70dd",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

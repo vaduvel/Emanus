@@ -1,0 +1,69 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 57,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/57/",
+    "pageSha256": "0f047bcfc67f13b549a0443ca5eb2c89985f0cb45dd6a64c03fbd4387b7a89be",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "6866914cf7dece7a4ff01c32be2cdaba2525200a6596b424a20da8e7a4cafc53",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "După aceea, am văzut o altă ceată de căruțe, oameni călări pe ea, venind pe vânturile de la răsărit de la apus la miazăzi."
+    },
+    {
+      "number": 2,
+      "text": "s-a auzit zgomotul cărulor lor și, când a avut loc această tulburare, i din cer au remarcat-o și stâlpii pământului au fost mutați de la locul lor și sunetul lor s-a auzit de la un capăt al cerului la celălalt, într-o singură zi."
+    },
+    {
+      "number": 3,
+      "text": "Și toți vor cădea se vor închina Domnului spiritelor. Și acesta este celei de-a doua parabole."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 3,
+    "translatedUnits": 3,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 3,
+    "semanticMinimumScore": 0.823928,
+    "blockingIssueCount": 0,
+    "textDigest": "dff787d37bc381dd973de31be9040abb011aa90659db0c61cea1a8a11645aa70",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}
