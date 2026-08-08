@@ -3,7 +3,7 @@ name: PR40 finalize verified 64 works
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 18 8 8 *'
+    - cron: '*/5 * * * *'
 
 permissions:
   actions: read
