@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,23 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-2co-11",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 33,
       "reviewed": 33,
@@ -98,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 33 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 33 de versete din 2CO.11 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate acordurile, persoanele gramaticale și construcțiile nefirești din textul de lucru.",
+        "Au fost păstrate lista dificultăților lui Pavel, contrastul ironic și referințele personale fără a importa adaosuri tradiționale.",
+        "Lectura principală SBLGNT este urmată în pasajele unde aparatul notează diferențe de ordine, formă sau adaos."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +123,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:04ba882e2d6dd3dae397996ae181521d735133d3c5e94fbff70e5de90ac43667",
-    "contentDigest": "sha256:d1603aedfcd728e77036b06b71334bf1acee7dec26269cca5df89e74090ecdd7"
+    "textDigest": "sha256:53fc2e2a668959e1a19e60f17c84c92a8fb0e86c41c325eb6b480a62b8e2d5db",
+    "contentDigest": "sha256:b8aebee9be988c30e8362434f9400d92dd11cbcb92cece63c1faaa31157ba0af"
   },
   "verses": [
     {
@@ -153,7 +143,7 @@
     },
     {
       "number": 3,
-      "text": "Dar mă tem ca nu cumva, așa cum șarpele a înșelat-o pe Eva prin viclenia lui, tot așa mințile voastre să fie stricate de la sinceritatea și curăția față de Hristos."
+      "text": "Dar mă tem ca nu cumva, așa cum șarpele a înșelat-o pe Eva prin viclenia lui, mințile voastre să fie corupte de la sinceritatea și curăția care sunt față de Hristos."
     },
     {
       "number": 4,
@@ -161,11 +151,11 @@
     },
     {
       "number": 5,
-      "text": "Căci socotesc că nu sunt deloc în spatele celor mai buni apostoli."
+      "text": "Căci socotesc că nu sunt cu nimic mai prejos decât apostolii aceia de seamă."
     },
     {
       "number": 6,
-      "text": "Dar chiar dacă sunt neiscusit în vorbire, totuși nu sunt în cunoaștere; ba în toate v-am făcut lucrul acesta pe deplin cunoscut între voi."
+      "text": "Dar chiar dacă sunt neiscusit în vorbire, nu sunt totuși în cunoaștere; dimpotrivă, în toate v-am făcut aceasta deplin cunoscută în toate privințele."
     },
     {
       "number": 7,
@@ -173,7 +163,7 @@
     },
     {
       "number": 8,
-      "text": "Am jefuit alte adunări, luând salarii de la ele, ca să te pot sluji."
+      "text": "Am jefuit alte biserici, luând plată de la ele ca să vă pot sluji pe voi."
     },
     {
       "number": 9,
@@ -181,7 +171,7 @@
     },
     {
       "number": 10,
-      "text": "Cum adevărul lui Hristos este în mine, nimeni nu mă va opri de la această laudă în regiunile Ahaia."
+      "text": "Adevărul lui Hristos este în mine: lauda aceasta nu va fi oprită pentru mine în ținuturile Ahaiei."
     },
     {
       "number": 11,
@@ -205,15 +195,15 @@
     },
     {
       "number": 16,
-      "text": "Iarăși spun: nimeni să nu mă creadă nebun; dar, dacă totuși, primiți-mă măcar ca pe un nebun, ca să mă laud și eu puțin."
+      "text": "Iarăși spun: nimeni să nu mă creadă nebun; dar, dacă nu, primiți-mă măcar ca pe un nebun, ca să mă laud și eu puțin."
     },
     {
       "number": 17,
-      "text": "Ceea ce spun, nu spun după Domnul, ci ca în nebunie, în această încredere a laudei."
+      "text": "Ceea ce spun nu o spun potrivit Domnului, ci ca în nebunie, în această încredere a laudei."
     },
     {
       "number": 18,
-      "text": "De vreme ce mulți se laudă după carne, mă voi lăuda și eu."
+      "text": "De vreme ce mulți se laudă în privința firii pământești, mă voi lăuda și eu."
     },
     {
       "number": 19,
@@ -225,7 +215,7 @@
     },
     {
       "number": 21,
-      "text": "Spre rușinea mea o spun: ca și cum noi am fi fost slabi. Dar, în orice îndrăznește cineva — vorbesc în nebunie — îndrăznesc și eu."
+      "text": "Spre rușinea mea o spun, ca și cum noi am fi fost prea slabi! Dar în orice îndrăznește cineva — vorbesc în nebunie — îndrăznesc și eu."
     },
     {
       "number": 22,
@@ -233,7 +223,7 @@
     },
     {
       "number": 23,
-      "text": "Sunt ei slujitori ai lui Hristos? Vorbesc ca unul ieșit din minți: eu și mai mult; în osteneli, mai mult; în închisori, mai mult; în lovituri, peste măsură; adesea, în primejdii de moarte."
+      "text": "Sunt ei slujitori ai lui Hristos? Vorbesc ca unul ieșit din minți: eu, cu atât mai mult; în osteneli, mai mult; în închisori, mai mult; în lovituri, peste măsură; adesea, în primejdii de moarte."
     },
     {
       "number": 24,
@@ -253,11 +243,11 @@
     },
     {
       "number": 28,
-      "text": "În afară de cele de afară, este ceea ce mă presează zilnic: neliniștea pentru toate adunările."
+      "text": "Pe lângă cele din afară, este presiunea care apasă zilnic asupra mea: grija pentru toate bisericile."
     },
     {
       "number": 29,
-      "text": "Cine este slab, și eu să nu fiu slab? Cine este făcut să se poticnească, și eu să nu ard?"
+      "text": "Cine este slab, iar eu să nu fiu slab? Cine este făcut să se poticnească, iar eu să nu ard?"
     },
     {
       "number": 30,
@@ -265,18 +255,37 @@
     },
     {
       "number": 31,
-      "text": "Dumnezeul și Tatăl Domnului Isus Hristos, care este binecuvântat pentru totdeauna mai mult, știe că eu nu mint."
+      "text": "Dumnezeu și Tatăl Domnului Isus, Cel binecuvântat în veci, știe că nu mint."
     },
     {
       "number": 32,
-      "text": "În Damasc, guvernatorul de sub regele Aretas păzea cetatea Damascenilor, dorind să mă aresteze."
+      "text": "În Damasc, dregătorul regelui Areta păzea cetatea damascenilor ca să mă prindă."
     },
     {
       "number": 33,
-      "text": "și am fost coborât într-un coș, printr-o fereastră, de-a lungul zidului, și am scăpat din mâinile lui."
+      "text": "Și am fost coborât într-un coș printr-o fereastră, de-a lungul zidului, și am scăpat din mâinile lui."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "φανερώσαντες / φανερωθέντες",
+      "decision": "«v-am făcut aceasta deplin cunoscută în toate privințele»",
+      "reason": "SBLGNT are participiul activ; româna redă comunicarea făcută corintenilor fără a transforma Pavel și colaboratorii în obiect pasiv.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia urmează lectura SBLGNT; martorul RP rămâne numai consemnat în aparat."
+    },
+    {
+      "verse": 28,
+      "term": "ἐπίστασίς μοι",
+      "decision": "«presiunea care apasă zilnic asupra mea»",
+      "reason": "Termenul exprimă apăsarea zilnică, apoi explicată prin grija pentru biserici; varianta RP este documentată în aparat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul presiunii și al grijii pastorale este păstrat integral."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
