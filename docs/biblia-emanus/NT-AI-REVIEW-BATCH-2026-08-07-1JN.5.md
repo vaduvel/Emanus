@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08`
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1jn-5`)
+`emanus-nt-editorial-2026-08-08-1jn-5`)
 
 ## Domeniu și surse
 
@@ -49,12 +49,7 @@ per-verset și nu promovează niciun verset ori capitol.
 
 ## Concluzie de lot
 
-Textul anterior conținea, între altele, pronumele greșit „credința voastră” în
-5:4, o inversare gravă de sens în 5:10, un al doilea scop introdus în 5:13,
-formulări defectuoase în 5:16 și lectura reflexivă neacceptată de SBLGNT în
-5:18. Comma Johanneum a fost eliminat din corpul versetelor 7–8 și consemnat
-explicit ca variantă a martorului TR.
-
-Toate cele 21 de texte au fost revizuite din sursele fixate. Capitolul rămâne
+Reverificarea independentă a confirmat toate cele 21 de decizii, inclusiv
+lecturile SBLGNT din 5:2, 5:7–8, 5:10, 5:13, 5:18 și 5:21. Capitolul rămâne
 `in_review`, `public: false`, iar coada editorială rămâne `pending` până la
 registrul final de aprobare pentru întregul NT.
