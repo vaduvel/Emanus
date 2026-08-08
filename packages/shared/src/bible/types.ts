@@ -32,9 +32,11 @@ export interface BibleUnit {
   teaching: string
   /** Tipul explicației: expunere din sursa editorială sau overview textual de completare. */
   explanationKind?: BibleExplanationKind
-  /** Eticheta scurtă a provenienței explicației, folosită de cititor. */
+  /** Eticheta scurtă a provenienței explicației, folosită de cititor și de gate-urile editoriale. */
   explanationSource?: string
   words?: WordStudy[]
+  /** Proveniența separată a notelor lexicale; nu este confundată cu sursa doctrinei. */
+  wordSource?: string
   crossRefs?: string[]
   /** Aplicatia pastorala, adresata direct cititorului. */
   forYourHeart?: string
