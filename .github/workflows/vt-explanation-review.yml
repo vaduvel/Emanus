@@ -1,0 +1,55 @@
+name: VT Explanation Review
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/shared/src/bible/**"
+      - "scripts/check-vt-explained-coverage.py"
+      - "scripts/check-vt-legacy-provenance.mjs"
+      - "scripts/check-vt-publication-runtime.mjs"
+      - "docs/biblia-explicata/**"
+      - "package.json"
+      - "packages/shared/package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/vt-explanation-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vt-explanation-review-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-explanations:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install JavaScript dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Verify VT explanation coverage
+        run: pnpm check:vt-explained
+
+      - name: Verify legacy explanation provenance
+        run: pnpm check:vt-legacy-provenance
+
+      - name: Verify publication copy and runtime separation
+        run: pnpm check:vt-publication
+
+      - name: Typecheck shared Bible package
+        run: pnpm --filter @emanus/shared typecheck
+
+      - name: Build shared Bible package
+        run: pnpm --filter @emanus/shared build
+
+      - name: Verify patch cleanliness
+        run: git diff --check
