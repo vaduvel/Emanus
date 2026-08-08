@@ -23,16 +23,13 @@ import { IOSUA_21 } from "./iosua21.js"
 import { IOSUA_22 } from "./iosua22.js"
 import { IOSUA_23 } from "./iosua23.js"
 import { IOSUA_24 } from "./iosua24.js"
+import { reviewIosuaExplanations } from "./iosuaExplanationReview.js"
 
 /*
  * Cartea Iosua.
  *
- * Textul biblic sta in iosuaText.ts (fisierul central, cu iosuaPassage).
- * Explicatia sta in fisierele de capitol: iosua1.ts, iosua2.ts, ...
- *
- * Fisierul acesta doar aduna cartea. Toate cele douazeci si patru de capitole
- * sunt importate aici si asezate in lista `chapters`, ca sa nu fie nevoie de
- * atins index.ts pentru fiecare capitol in parte.
+ * Textul biblic stă în iosuaText.ts. Explicația stă în fișierele de capitol,
+ * iar review-ul editorial final poate corecta explicația separat de text.
  */
 
 export { IOSUA_1 } from "./iosua1.js"
@@ -60,37 +57,39 @@ export { IOSUA_22 } from "./iosua22.js"
 export { IOSUA_23 } from "./iosua23.js"
 export { IOSUA_24 } from "./iosua24.js"
 
+const IOSUA_CHAPTERS = reviewIosuaExplanations([
+  IOSUA_1,
+  IOSUA_2,
+  IOSUA_3,
+  IOSUA_4,
+  IOSUA_5,
+  IOSUA_6,
+  IOSUA_7,
+  IOSUA_8,
+  IOSUA_9,
+  IOSUA_10,
+  IOSUA_11,
+  IOSUA_12,
+  IOSUA_13,
+  IOSUA_14,
+  IOSUA_15,
+  IOSUA_16,
+  IOSUA_17,
+  IOSUA_18,
+  IOSUA_19,
+  IOSUA_20,
+  IOSUA_21,
+  IOSUA_22,
+  IOSUA_23,
+  IOSUA_24,
+])
+
 export const IOSUA: BibleBook = {
   id: "iosua",
   name: "Iosua",
   testament: "vt",
   order: 6,
   blurb:
-    "Cartea intrarii in tara fagaduita. Iosua conduce poporul peste Iordan, Ierihonul cade, Israel cucereste tara prin puterea DOMNULUI, iar pamantul este impartit intre semintii. Cartea se incheie cu chemarea lui Iosua la Sihem: alegeti astazi cui vreti sa slujiti.",
-  chapters: [
-    IOSUA_1,
-    IOSUA_2,
-    IOSUA_3,
-    IOSUA_4,
-    IOSUA_5,
-    IOSUA_6,
-    IOSUA_7,
-    IOSUA_8,
-    IOSUA_9,
-    IOSUA_10,
-    IOSUA_11,
-    IOSUA_12,
-    IOSUA_13,
-    IOSUA_14,
-    IOSUA_15,
-    IOSUA_16,
-    IOSUA_17,
-    IOSUA_18,
-    IOSUA_19,
-    IOSUA_20,
-    IOSUA_21,
-    IOSUA_22,
-    IOSUA_23,
-    IOSUA_24,
-  ],
+    "Cartea intrării în țara făgăduită. Iosua conduce poporul peste Iordan, Ierihonul cade, urmează campaniile și împărțirea țării între seminții, iar cartea se încheie cu chemarea de la Sihem: alegeți astăzi cui vreți să slujiți. Războaiele aparțin unei etape precise din istoria legământului și nu sunt transformate în mandat pentru violență religioasă creștină.",
+  chapters: IOSUA_CHAPTERS,
 }
