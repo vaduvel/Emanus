@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul local; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-1co-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -98,14 +97,13 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 13 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 13 versete din 1CO.5 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate persoana imperativului din v. 5, referenții, acordurile și formulările românești nefirești.",
+        "Omiterea lui «Isus» din SBLGNT în v. 5 și omisiunea lui «pentru noi» din v. 7 nu au fost completate din TR."
       ]
     },
     "theologicalContext": {
@@ -123,53 +121,43 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:0a478ecb5d15c21797d062599da3abc0dd800f19e75e49dfb62d68347bd9c9d2",
-    "contentDigest": "sha256:0b99d44b4b7882bb62a63fdf53f3651dd38456dacd10216c4a23a9fcb6c1536e"
+    "textDigest": "sha256:7b9f852237362b87baaeba4ba68cd78ee3e7fb173ead225f2020b73c10be9c4d",
+    "contentDigest": "sha256:5f8ef4d55d92f1ab74158452d3e5d23064ef90e22adfdb81f8a66cd679b5f76d"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Se aude pretutindeni că între voi este imoralitate sexuală, și o astfel de imoralitate sexuală cum nici între neamuri nu este: anume, că cineva îl are pe femeia tatălui său."
+      "text": "Se aude pretutindeni că între voi este imoralitate sexuală, și una de felul acesta cum nici măcar între neamuri nu se întâlnește: cineva o are pe soția tatălui său."
     },
     {
       "number": 2,
-      "text": "Și voi sunteți umflați de mândrie! N-ar fi trebuit mai degrabă să jeliți, pentru ca cel ce a făcut fapta aceasta să fie înlăturat din mijlocul vostru?"
+      "text": "Iar voi sunteți îngâmfați! N-ar fi trebuit mai degrabă să jeliți, ca acela care a făcut fapta aceasta să fie îndepărtat din mijlocul vostru?"
     },
     {
       "number": 3,
-      "text": "Căci eu, fără îndoială, ca fiind absent în trup, dar prezent în spirit, l-am judecat deja, ca și cum aș fi fost prezent, pe cel care a făcut acest lucru."
+      "text": "Căci eu, deși absent cu trupul, dar prezent cu duhul, l-am judecat deja, ca și cum aș fi de față, pe cel care a săvârșit această faptă."
     },
     {
       "number": 4,
-      "text": "Când vă adunați în numele Domnului Isus, și duhul meu fiind cu voi, cu puterea Domnului nostru Isus,"
+      "text": "când sunteți adunați în Numele Domnului nostru Isus, iar duhul meu este cu voi, prin puterea Domnului nostru Isus,"
     },
     {
       "number": 5,
-      "text": "Tu vei da lui Satan un astfel de om pentru nimicirea cărnii, ca Duhul să fie mântuit în ziua Domnului Isus."
+      "text": "să-l dați pe un asemenea om Satanei spre nimicirea cărnii, pentru ca duhul să fie mântuit în ziua Domnului."
     },
     {
       "number": 6,
-      "text": "Lauda voastră nu este bună. Nu știți că puțin aluat dospește tot aluatul?"
+      "text": "Lauda voastră nu este bună. Nu știți că puțin aluat dospește toată plămădeala?"
     },
     {
       "number": 7,
-      "text": "Curățiți aluatul vechi, ca să fiți o plămădeală nouă, așa cum și sunteți fără aluat. Căci și Paștele nostru, Hristos, a fost jertfit."
+      "text": "Curățiți aluatul vechi, ca să fiți o plămădeală nouă, așa cum sunteți fără aluat. Căci Hristos, Paștele nostru, a fost jertfit."
     },
     {
       "number": 8,
@@ -177,26 +165,47 @@
     },
     {
       "number": 9,
-      "text": "V-am scris în epistolă să nu vă asociați cu oamenii imorali sexual,"
+      "text": "V-am scris în scrisoarea mea să nu vă asociați cu cei imorali sexual,"
     },
     {
       "number": 10,
-      "text": "nu în mod absolut cu oamenii imorali sexual din lumea aceasta, sau cu cei lacomi și răpitori, sau cu idolatrii, fiindcă atunci ar trebui să ieșiți din lume."
+      "text": "nu în mod absolut cu cei imorali sexual din lumea aceasta, sau cu cei lacomi și jefuitori, sau cu idolatrii; altfel ar trebui să ieșiți din lume."
     },
     {
       "number": 11,
-      "text": "Dar acum v-am scris să nu vă asociați cu nimeni care, deși se numește frate, este imoral sexual, sau lacom, sau idolatru, sau batjocoritor, sau bețiv, sau răpitor; cu unul ca acesta nici să nu mâncați."
+      "text": "Dar acum v-am scris să nu vă asociați cu nimeni care poartă numele de frate, dar este imoral sexual, lacom, idolatru, batjocoritor, bețiv sau jefuitor; cu unul ca acesta nici să nu mâncați."
     },
     {
       "number": 12,
-      "text": "Căci ce am eu să-i judec pe cei de afară? Nu-i judecați voi pe cei dinăuntru?"
+      "text": "Căci ce treabă am eu să-i judec pe cei de afară? Nu pe cei dinăuntru îi judecați voi?"
     },
     {
       "number": 13,
       "text": "Pe cei de afară îi judecă Dumnezeu. „Dați afară dintre voi pe omul rău!”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "τοῦ κυρίου",
+      "decision": "Textul redă «în ziua Domnului», fără adaosul «Isus».",
+      "alternatives": ["«în ziua Domnului Isus» (TR)"],
+      "reason": "SBLGNT nu conține Ἰησοῦ în această poziție; TR a fost păstrat doar ca martor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT este urmat fără completarea lecturii TR."
+    },
+    {
+      "verse": 7,
+      "term": "τὸ πάσχα ἡμῶν ἐτύθη Χριστός",
+      "decision": "Textul redă «Hristos, Paștele nostru, a fost jertfit».",
+      "alternatives": ["«Hristos a fost jertfit pentru noi» (TR)"],
+      "reason": "Nu a fost introdus «pentru noi», absent din SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul critic nu susține adaosul «pentru noi»."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
