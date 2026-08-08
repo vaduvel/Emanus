@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08` (reverificare editorială)
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1pe-5`)
+`emanus-nt-editorial-2026-08-08-1pe-5-followup`)
 
 ## Domeniu și surse
 
@@ -42,7 +42,6 @@ promovează niciun verset ori capitol.
 
 ## Concluzie de lot
 
-Capitolul a fost rescris deoarece forma anterioară avea erori de acord,
-trunchieri, pronume și număr greșite, formulări nefirești și adaosuri ale
-tradiției receptă. Toate cele 14 unități rămân `in_review` și `pending` în
+Toate cele 14 unități au fost reverificate în acest lot; nu a fost necesară o
+modificare a textului românesc. Ele rămân `in_review` și `pending` în
 coada editorială până la registrul final de aprobare pentru întregul NT.

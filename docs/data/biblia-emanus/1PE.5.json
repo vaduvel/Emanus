@@ -60,6 +60,20 @@
         "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1PE.5.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1PE",
+        "BIBLIA-LIBERA-1PE"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -78,13 +92,13 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-1pe-5",
+      "runId": "emanus-nt-editorial-2026-08-08-1pe-5-followup",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -103,7 +117,7 @@
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Toate cele 14 versete au fost reverificate față de SBLGNT, aparat și martorul TR; nu a fost necesară o corecție a textului românesc.",
         "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
         "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
@@ -130,7 +144,7 @@
       "open": 0
     },
     "textDigest": "sha256:8a64475020f7febce7493b128d91e31df90aad302e0802699fafa21eee1f6137",
-    "contentDigest": "sha256:ef0c8506e995e5966a2bfa8b64cc213871c7bacc076cbf5ac3263c9bdf46028c"
+    "contentDigest": "sha256:2271dd2ca1eb02bac0860176ebd78d052bac461830092c63c45d65271567aa96"
   },
   "verses": [
     {
