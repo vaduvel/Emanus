@@ -8,10 +8,12 @@ import {
 
 const EXPECTED_BOOKS = 29
 const EXPECTED_CHAPTERS = 637
-const EXPECTED_BE_TEXT_BOOKS = 18
-const EXPECTED_TEMP_TEXT_BOOKS = 11
 const PLACEHOLDER = "Transcriptul Poonen nu îl dezvoltă separat"
 const TEMP_LABEL = "Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus"
+const TEXTUAL_TRUTH_GUARDS = new Set([
+  "rezumat narativ fără doctrină adăugată",
+  "rezumat textual fără doctrină adăugată",
+])
 
 function need(condition, message) {
   if (!condition) throw new Error(`[VT publication] ${message}`)
@@ -19,10 +21,16 @@ function need(condition, message) {
 
 need(VT_EXPLAINED_OVERLAYS.length === EXPECTED_BOOKS, `registry ${VT_EXPLAINED_OVERLAYS.length}/${EXPECTED_BOOKS} overlay-uri`)
 need(VT_CANONICAL_TEXT_BOOKS.length === EXPECTED_BOOKS, `texte de lucru ${VT_CANONICAL_TEXT_BOOKS.length}/${EXPECTED_BOOKS}`)
-need(VT_TEMPORARY_TEXT_BOOKS.length === EXPECTED_TEMP_TEXT_BOOKS, `texte provizorii ${VT_TEMPORARY_TEXT_BOOKS.length}/${EXPECTED_TEMP_TEXT_BOOKS}`)
+
+const beTextBooks = VT_CANONICAL_TEXT_BOOKS.filter((book) => book.textStage === "biblia-emanus")
+const temporaryTextBooks = VT_CANONICAL_TEXT_BOOKS.filter((book) => book.textStage === "temporary-editorial")
 need(
-  VT_CANONICAL_TEXT_BOOKS.filter((book) => book.textStage === "biblia-emanus").length === EXPECTED_BE_TEXT_BOOKS,
-  `texte Biblia Emanus trebuie să fie ${EXPECTED_BE_TEXT_BOOKS}`,
+  beTextBooks.length + temporaryTextBooks.length === EXPECTED_BOOKS,
+  `stări text invalide: ${beTextBooks.length} BE + ${temporaryTextBooks.length} provizorii != ${EXPECTED_BOOKS}`,
+)
+need(
+  VT_TEMPORARY_TEXT_BOOKS.length === temporaryTextBooks.length,
+  `registry-ul textelor provizorii nu corespunde stării materializate: ${VT_TEMPORARY_TEXT_BOOKS.length}/${temporaryTextBooks.length}`,
 )
 
 const textByBook = new Map(VT_CANONICAL_TEXT_BOOKS.map((book) => [book.bookId, book]))
@@ -90,7 +98,7 @@ for (const book of VT_EXPLAINED_OVERLAYS) {
       if (unit.source.kind === "biblia-emanus") {
         overviewUnits += 1
         need(unit.explanationKind === "textual-overview", `${book.name} ${chapter.number}:${unit.from}-${unit.to}: overview-ul editorial trebuie etichetat textual-overview`)
-        need(unit.source.note === "rezumat narativ fără doctrină adăugată", `${book.name} ${chapter.number}:${unit.from}-${unit.to}: truth-guard overview invalid`)
+        need(TEXTUAL_TRUTH_GUARDS.has(unit.source.note), `${book.name} ${chapter.number}:${unit.from}-${unit.to}: truth-guard overview invalid`)
         need(!unit.forYourHeart, `${book.name} ${chapter.number}:${unit.from}-${unit.to}: overview-ul textual nu poate inventa aplicație pastorală`)
         need(!unit.words?.length, `${book.name} ${chapter.number}:${unit.from}-${unit.to}: overview-ul textual nu poate inventa studiu lexical`)
       } else {
@@ -129,7 +137,7 @@ need(overviewUnits > 0, "nu există unități textuale editoriale")
 
 console.log(
   `VT publication runtime OK: ${EXPECTED_BOOKS}/29 overlay-uri, ${chapters}/637 capitole, ` +
-  `${EXPECTED_BE_TEXT_BOOKS} cărți cu text Biblia Emanus + ${EXPECTED_TEMP_TEXT_BOOKS} cu text provizoriu marcat, ` +
+  `${beTextBooks.length} cărți cu text Biblia Emanus + ${temporaryTextBooks.length} cu text provizoriu marcat, ` +
   `${units} unități (${expositionUnits} expuneri Poonen/CFC + ${overviewUnits} overview-uri editoriale), ` +
   `${hebrewNotes} note ebraice WLC-OSHB. Versificația textului de lucru corespunde exact explicațiilor.`,
 )
