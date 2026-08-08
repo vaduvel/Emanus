@@ -7,6 +7,7 @@ on:
       - "packages/shared/src/bible/**"
       - "scripts/check-vt-explained-coverage.py"
       - "scripts/check-vt-legacy-provenance.mjs"
+      - "scripts/check-vt-poonen-fidelity.mjs"
       - "scripts/check-vt-publication-runtime.mjs"
       - "docs/biblia-explicata/**"
       - "package.json"
@@ -41,6 +42,9 @@ jobs:
 
       - name: Verify legacy explanation provenance
         run: pnpm check:vt-legacy-provenance
+
+      - name: Verify source-doctrine fidelity
+        run: pnpm check:vt-poonen-fidelity
 
       - name: Verify publication copy and runtime separation
         run: pnpm check:vt-publication
