@@ -1,28 +1,23 @@
 name: Branch check
 
-# Verificare rapidă pentru ramurile de lucru.
+# Verificare rapida pentru ramurile de lucru.
 #
-# DE CE EXISTĂ SEPARAT DE ci.yml:
-# `ci.yml` pornește doar la push pe main și rulează tot pipeline-ul Bibliei —
-# audituri semantice, sentence-transformers, `timeout-minutes: 120`. E potrivit
-# pentru textul biblic sigilat, dar prea greu ca să-ți spună în două minute dacă
-# o lecție nouă compilează.
+# DE CE A APARUT PE RAMURA ASTA:
+# In descrierea PR-ului scrie, negru pe alb, "Nu exista CI pe repo, deci codul
+# n-a fost compilat niciodata". Sunt peste zece mii de linii propuse spre main.
+# Inainte sa intre in trunchi, trec o data prin compilator. Fisierul asta nu
+# schimba nicio linie de produs; doar pune intrebarea.
 #
-# Fișierul ăsta rulează doar ce e relevant pentru conținut și cod de aplicație:
-# typecheck, build și cele trei verificări de conținut care există deja în repo.
+# DE CE E SEPARAT DE ci.yml:
+# ci.yml porneste doar la push pe main si ruleaza tot pipeline-ul Bibliei, cu
+# timeout de 120 de minute. E potrivit pentru textul sigilat, prea greu ca sa-ti
+# spuna in doua minute daca un ecran compileaza.
 #
-# Declanșatorul `pull_request` e intenționat: rezultatele unui run pornit de push
-# nu pot fi citite prin conexiunea MCP (nu există unelte de Actions), dar
-# check-run-urile unui pull request pot. Un PR draft devine astfel bancul de
-# test, nu o cerere de merge.
-#
-# DE CE ÎȘI RAPORTEAZĂ SINGUR EȘECUL:
-# Prin aceeași conexiune se poate citi doar CONCLUZIA unui check-run, niciodată
-# textul din log. Un "failure" fără mesaj înseamnă diagnostic prin ghicit, iar
-# fiecare ghicire costă un ciclu întreg de CI. Așa că pasul de verificare își
-# strânge ieșirea și, dacă pică, o lipește ca un comentariu pe pull request —
-# singurul loc de unde poate fi citită înapoi. Nu se schimbă CE se verifică și nu
-# se slăbește nimic; se face doar eșecul lizibil.
+# DE CE ISI RAPORTEAZA SINGUR ESECUL:
+# Prin conexiunea MCP se poate citi doar CONCLUZIA unui check-run, niciodata
+# textul din log. Un "failure" fara mesaj inseamna diagnostic prin ghicit, iar
+# fiecare ghicire costa un ciclu intreg. Asa ca pasul de verificare isi strange
+# iesirea si, daca pica, o lipeste ca un comentariu pe pull request.
 
 on:
   pull_request:
@@ -77,13 +72,22 @@ jobs:
             git diff --check
           } 2>&1 | tee /tmp/verify.log
       - name: Report the failure on the pull request
-        if: failure() && github.event_name == 'pull_request'
+        if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_FROM_EVENT: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
           set -uo pipefail
+          PR="${PR_FROM_EVENT:-}"
+          if [ -z "${PR}" ]; then
+            PR=$(gh pr list --repo "${GITHUB_REPOSITORY}" --head "${GITHUB_REF_NAME}" \
+              --state open --json number --jq '.[0].number' 2>/dev/null || true)
+          fi
+          if [ -z "${PR}" ] || [ "${PR}" = "null" ]; then
+            echo 'Nu exista pull request deschis pentru ramura asta; log-ul ramane doar in Actions.'
+            exit 0
+          fi
           if [ ! -f /tmp/verify.log ]; then
             echo 'Pasul a picat inainte sa scrie ceva in log.' > /tmp/verify.log
           fi
@@ -91,4 +95,4 @@ jobs:
           jq -Rs --arg sha "${HEAD_SHA}" \
             '{body: ("Branch check a esuat pe `" + $sha + "`.\n\n<details><summary>Iesirea pasului de verificare</summary>\n\n~~~\n" + . + "\n~~~\n\n</details>")}' \
             /tmp/verify.tail > /tmp/body.json
-          gh api "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments" --input /tmp/body.json
+          gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --input /tmp/body.json

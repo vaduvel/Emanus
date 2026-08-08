@@ -17,6 +17,23 @@ import "../needs.css"
  * Intrarea nu este numai pe carti si capitole, ci si pe durere: "cand te
  * doare, citeste". Omul care sufera nu stie sa caute Geneza 37; stie sa spuna
  * ca l-a lasat cineva.
+ *
+ * ORTOGRAFIE. In tot ce se vede pe ecran folosim s si t cu virgula dedesubt
+ * (U+0219 / U+021B), nu cu sedila (U+015F / U+0163).
+ *
+ * DIACRITICE, NU SECVENTE DE EVADARE. Textul care se vede pe ecran se scrie cu
+ * litera adevarata, nu cu evadari de forma backslash-u-0103. Intr-un sir
+ * JavaScript evadarea devine litera, dar in text JSX si in atribute JSX
+ * (placeholder=, aria-label=, title=) nu devine nimic: omul vede pe ecran
+ * chiar semnele acelea. O trecere de indreptare a ortografiei a scris asa tot
+ * ecranul acesta si l-a stricat. Nu se repeta. Evadarile raman numai unde sunt
+ * cu adevarat necesare: intervalul de semne combinate din regexul lui plat()
+ * si trecerea la rand nou din sabloane.
+ *
+ * ATENTIE LA UNIRE. Versiunea buna a acestui ecran este cea de pe ramura
+ * codex/matei-verse-by-verse: acolo explicatia se deschide la cerere si exista
+ * un navigator de pasaje. Fisierul de fata este cel vechi, indreptat numai la
+ * ortografie. La unirea ramurilor se pastreaza versiunea de acolo.
  */
 
 const LAST_KEY = "emanus.bible.last"
@@ -76,16 +93,16 @@ type Nevoie = { eticheta: string; cuvinte: string[] }
 
 const NEVOI: Nevoie[] = [
   { eticheta: "Mi-a murit cineva", cuvinte: ["a murit", "jelit", "mormant", "ingropat", "plans dupa", "doliu"] },
-  { eticheta: "Boală şi spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
+  { eticheta: "Boală și spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
   { eticheta: "S-a rupt casa mea", cuvinte: ["nevasta", "barbatul ei", "casnicie", "despartit", "s-a dus de langa"] },
-  { eticheta: "Bani şi datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
+  { eticheta: "Bani și datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
   { eticheta: "Sunt departe de ai mei", cuvinte: ["strain", "instrainat", "tara straina", "departe de casa", "pribeag"] },
   { eticheta: "Beau. Nu mă pot opri", cuvinte: ["vin", "beat", "s-a imbatat", "patima"] },
-  { eticheta: "Pofta care mă ţine", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
+  { eticheta: "Pofta care mă ține", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
   { eticheta: "Nu pot să iert în familie", cuvinte: ["fratii lui", "ura", "il urau", "iertare", "a iertat", "razbunare"] },
-  { eticheta: "Mi-e ruşine de ce am făcut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
+  { eticheta: "Mi-e rușine de ce am făcut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
   { eticheta: "Mi-e frică de moarte", cuvinte: ["frica", "nu te teme", "moartea", "mor"] },
-  { eticheta: "Mă rog şi nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
+  { eticheta: "Mă rog și nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
   { eticheta: "De ce a îngăduit Dumnezeu", cuvinte: ["de ce", "ai avut in gand sa-mi faceti rau", "incercare", "a ingaduit"] },
   { eticheta: "Am umblat cu descântece", cuvinte: ["idoli", "ghicire", "vraji", "dumnezei straini"] },
   { eticheta: "Copilul meu s-a depărtat", cuvinte: ["fiul meu", "copilul", "s-a dus de la", "tatal lui plangea"] },
@@ -113,8 +130,8 @@ function Nevoi() {
   const gasite = useMemo(() => (aleasa ? cauta(aleasa) : []), [aleasa])
 
   return <section className="bneeds">
-    <h2 className="bneeds__title">Când te doare, citeşte</h2>
-    <p className="bneeds__intro">Spune ce te apasă acum. Îţi arătăm locurile din Scriptură unde se vorbeşte despre asta — nu versete rupte, ci întâmplări întregi, cu explicaţie.</p>
+    <h2 className="bneeds__title">Când te doare, citește</h2>
+    <p className="bneeds__intro">Spune ce te apasă acum. Îți arătăm locurile din Scriptură unde se vorbește despre asta — nu versete rupte, ci întâmplări întregi, cu explicație.</p>
 
     <div className="bneeds__list">
       {NEVOI.map((n) => <button
@@ -131,7 +148,7 @@ function Nevoi() {
         <button type="button" className="ghost" onClick={() => setAleasa(null)}>Închide</button>
       </div>
       {gasite.length === 0
-        ? <p className="muted">Deocamdată n-avem scris nimic pe durerea aceasta. Avem doar Geneza. Vine şi restul.</p>
+        ? <p className="muted">Deocamdată n-avem scris nimic pe durerea aceasta. Vine și restul.</p>
         : gasite.map((g) => <button
             key={`${g.ref}-${g.heading}`}
             type="button"
@@ -155,7 +172,7 @@ function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter
       <span className="bchap__title">{chapter.title}</span>
       <span className="bchap__sum">{chapter.summary}</span>
     </span>
-    {review && <span className="bchap__flag" title="Scris, dar necitit inca de un om">în revizie</span>}
+    {review && <span className="bchap__flag" title="Scris, dar necitit încă de un om">în revizie</span>}
   </button>
 }
 
@@ -193,7 +210,7 @@ export function Bible() {
       <BookOpen size={22} strokeWidth={1.7} aria-hidden />
       <h1>Biblia explicată</h1>
     </header>
-    <p className="bible__intro">Textul întreg, aşa cum este scris, şi lângă el explicaţia verset cu verset. Nu ca să treci peste Scriptură, ci ca să nu rămâi în faţa ei fără să înţelegi.</p>
+    <p className="bible__intro">Textul întreg, așa cum este scris, și lângă el explicația verset cu verset. Nu ca să treci peste Scriptură, ci ca să nu rămâi în fața ei fără să înțelegi.</p>
 
     {last && <button type="button" className="tile bible__resume" onClick={() => navigate(`/biblia/${last.bookId}/${last.chapter}`)}>
       <span className="today__kicker">Unde ai rămas</span>
@@ -216,7 +233,7 @@ export function Bible() {
 
     {BIBLE_BOOKS.map((b) => <Book key={b.id} book={b} query={query} />)}
 
-    <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explicaţiile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Traducere: {BIBLE_TRANSLATION}. Explicațiile sunt scrise pentru Emanus.</p>
   </section>
 }
 
@@ -311,7 +328,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p className="today__kicker">{book.name} {found.number}</p>
       <h1>{found.title}</h1>
       <p className="bchead__sum">{found.summary}</p>
-      {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greşit, spune-ne.</p>}
+      {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greșit, spune-ne.</p>}
     </header>
 
     <details className="bctx">
