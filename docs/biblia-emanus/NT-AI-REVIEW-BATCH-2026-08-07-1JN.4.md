@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08`
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1jn-4`)
+`emanus-nt-editorial-2026-08-08-1jn-4`)
 
 ## Domeniu și surse
 
@@ -49,9 +49,7 @@ promovează niciun verset ori capitol.
 
 ## Concluzie de lot
 
-Textul anterior conținea o adresare singulară în 4:1, o repetare nejustificată
-a lecturii TR în 4:3, un sens greșit al originii în 4:5, erori de acord și de
-punctuație în 4:10 și 4:20–21, forma coruptă „a fost făcută perfectă” în 4:17
-și obiectul suplimentar „Îl” în 4:19. Toate cele 21 de texte au fost revizuite
-din sursele fixate și rămân `in_review` și `pending` până la registrul final
-de aprobare pentru întregul NT.
+Reverificarea independentă a confirmat deciziile de fond în toate cele 21 de
+versete, inclusiv lecturile SBLGNT din 4:3, 4:15, 4:19 și 4:20. Lotul rămâne
+`in_review` și `pending` până la registrul final de aprobare pentru întregul
+NT.
