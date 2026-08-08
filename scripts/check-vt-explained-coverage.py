@@ -43,9 +43,11 @@ def main() -> None:
     for filename in LEGACY:
         need((BIBLE / filename).exists(), f"lipsește cartea legacy {filename}")
 
+    # Fișierele-sursă de overlay rămân artefacte editoriale in_review.
+    # Statusul final al explicației este stabilit numai după compunere/review.
     for filename in BASE_OVERLAY_FILES:
         text = read(OVERLAYS / filename)
-        need('status: "in_review"' in text, f"{filename} nu este in_review")
+        need('status: "in_review"' in text, f"{filename} nu păstrează starea editorială de bază")
         need("bibleEmanusBookId:" in text, f"{filename} nu referă ID-ul canonic pentru Biblia Emanus")
 
     helper = read(BIBLE / "completeOverlay.ts")
@@ -78,6 +80,8 @@ def main() -> None:
     need(len(composed) == 29, f"fullCoverage compune {len(composed)}/29 overlay-uri")
     need("VT_EXPLAINED_FULL_OVERLAYS.length !== 29" in full, "lipsește aserția registry-ului complet")
     need('coverageMode !== "full"' in full, "lipsește aserția coverageMode=full")
+    need('status: "published" as const' in full, "registry-ul final nu marchează explicația published")
+    need('book.status !== "published"' in full, "lipsește aserția statusului final published")
 
     registry = read(OVERLAYS / "index.ts")
     need("VT_EXPLAINED_OVERLAYS = VT_EXPLAINED_FULL_OVERLAYS" in registry, "registry-ul final nu folosește overlay-urile complete")
@@ -90,11 +94,11 @@ def main() -> None:
     ordered = [int(x) for x in re.findall(r"^\s*(?:legacy|overlay)\((\d+),", coverage, flags=re.MULTILINE)]
     need(ordered == list(range(1, 40)), f"ordine invalidă în manifest: {ordered}")
     need('coverage: "full"' in coverage, "manifestul nu declară acoperire full")
+    need('status: "published"' in coverage, "manifestul nu declară explicațiile published")
+    need('book.status !== "published"' in coverage, "manifestul nu verifică statusul final published")
 
     # ID-urile textului materializat trebuie să fie aceleași cu ID-urile celor
-    # 29 de overlay-uri. Trei fișiere au slug-uri istorice diferite
-    # (`imparati2`, `cronici1`, `cronici2`), dar catalogul public folosește
-    # `2-imparati`, `1-cronici`, `2-cronici`.
+    # 29 de overlay-uri. Stadiul traducerii nu decide statusul explicației.
     coverage_overlay_ids = re.findall(
         r'^\s*overlay\(\d+,\s*"([^"]+)"', coverage, flags=re.MULTILINE
     )
@@ -104,14 +108,18 @@ def main() -> None:
     need(generated_ids == coverage_overlay_ids, "ID-urile textului de lucru nu corespund registry-ului overlay")
     need(generated_ids[1:4] == ["2-imparati", "1-cronici", "2-cronici"], "ID-urile istorice Împărați/Cronici nu sunt normalizate")
 
+    overlay_reader = read(BIBLE / "overlayBibleBooks.ts")
+    need('status: temporary ? "in_review" : overlay.status' in overlay_reader, "reader-ul nu separă statusul explicației de textul biblic provizoriu")
+    need("VT_OVERLAY_TRANSLATION_BLOCKERS = []" in overlay_reader, "traducerea este încă tratată ca blocker editorial al explicației")
+
     package = read(ROOT / "packages" / "shared" / "package.json")
     need('"./bible-explained"' in package, "registry-ul Bibliei explicate nu este exportat de @emanus/shared")
 
     print(
-        "Biblia explicată VT OK: 39/39 cărți canonice; "
-        "10 legacy-full + 29 full-overlay; 637/637 capitole overlay au explicație textuală și versificație; "
-        "unitățile Poonen/CFC sunt păstrate, golurile sunt completate numai cu overview editorial fără doctrină nouă; "
-        "toate materialele noi rămân in_review."
+        "Biblia explicată VT OK: 39/39 cărți canonice au explicația publication-approved; "
+        "10 legacy-full + 29 full-overlay; 637/637 capitole overlay au explicație și versificație; "
+        "golurile de sursă doctrinară rămân numai overview textual cu truth-guard; "
+        "stadiul traducerii biblice este verificat separat și nu anulează aprobarea explicației."
     )
 
 
