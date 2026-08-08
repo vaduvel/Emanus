@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
+    "completedOn": "2026-08-08",
+    "runId": "emanus-nt-editorial-2026-08-08-rom-5",
+    "engineVersion": "4.0.0",
+    "reviewLevel": "in_review",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 21 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost înlocuite formele arhaice și formulările imprecise care estompau termenii grecești ai argumentului.",
+        "Contrastul dintre abatere, har, condamnare și îndreptățire este păstrat consecvent în română.",
+        "Varianta hortativă din Romani 5:1 nu a fost amestecată cu lectura indicativă din SBLGNT."
       ]
     },
     "theologicalContext": {
@@ -123,49 +122,39 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:5fc85ca7b22f57d58d6711ff3b496ec801e2dbf4408493e24ade66074e553289",
-    "contentDigest": "sha256:c8cfdeccedc12937f53e7ac02fb68ab9cd9185e739ef1f9276dee3c77cc9af0c"
+    "textDigest": "sha256:a006fb10cbe8ef179f40839c13bbcd81d6a1290a437eebc53a7f93514c551ce6",
+    "contentDigest": "sha256:b8102cba0940b40add71b3113b6c90c54cd93a949b22a94cb30ab5591b34ffce"
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, fiind socotiți neprihăniți prin credință, avem pace cu Dumnezeu prin Domnul nostru Isus Hristos;"
+      "text": "Așadar, fiind îndreptățiți prin credință, avem pace cu Dumnezeu prin Domnul nostru Isus Hristos,"
     },
     {
       "number": 2,
-      "text": "prin care avem, de asemenea, acces prin credință la acest har în care stăm. Ne bucurăm în speranța gloriei lui Dumnezeu."
+      "text": "prin care am primit și acces, prin credință, la acest har în care stăm; și ne lăudăm în speranța gloriei lui Dumnezeu."
     },
     {
       "number": 3,
-      "text": "Nu numai aceasta, dar ne bucurăm și în suferințele noastre, știind că suferința produce perseverență;"
+      "text": "Și nu numai atât, ci ne lăudăm și în suferințe, știind că suferința produce statornicie,"
     },
     {
       "number": 4,
-      "text": "și perseverență, caracter dovedit; și caracterul dovedit, speranță;"
+      "text": "iar statornicia, caracter încercat; iar caracterul încercat, speranță."
     },
     {
       "number": 5,
-      "text": "Iar speranța nu ne face de rușine, fiindcă dragostea lui Dumnezeu a fost turnată în inimile noastre prin Duhul Sfânt care ne-a fost dat."
+      "text": "Iar speranța nu dezamăgește, fiindcă dragostea lui Dumnezeu a fost revărsată în inimile noastre prin Duhul Sfânt, care ne-a fost dat."
     },
     {
       "number": 6,
-      "text": "Căci, încă pe când eram neputincioși, Hristos a murit, tot atunci, la vremea potrivită, pentru cei lipsiți de evlavie."
+      "text": "Căci, pe când eram încă neputincioși, Hristos a murit la vremea potrivită pentru cei neevlavioși."
     },
     {
       "number": 7,
@@ -173,15 +162,15 @@
     },
     {
       "number": 8,
-      "text": "Dar Dumnezeu Își dovedește dragostea față de noi prin faptul că, pe când eram încă păcătoși, Hristos a murit pentru noi."
+      "text": "Dar Dumnezeu Își arată dragostea față de noi prin faptul că, pe când eram încă păcătoși, Hristos a murit pentru noi."
     },
     {
       "number": 9,
-      "text": "Cu mult mai mult atunci, fiind îndreptățiți acum prin sângele Lui, vom fi salvați de mânia lui Dumnezeu prin El."
+      "text": "Cu atât mai mult deci, fiind îndreptățiți acum prin sângele Lui, vom fi mântuiți prin El de mânie."
     },
     {
       "number": 10,
-      "text": "Căci, dacă, pe când eram dușmani, am fost împăcați cu Dumnezeu prin moartea Fiului Său, cu atât mai mult, fiind împăcați, vom fi mântuiți prin viața Lui."
+      "text": "Căci, dacă pe când eram dușmani am fost împăcați cu Dumnezeu prin moartea Fiului Său, cu atât mai mult, fiind împăcați, vom fi mântuiți prin viața Lui."
     },
     {
       "number": 11,
@@ -193,19 +182,19 @@
     },
     {
       "number": 13,
-      "text": "căci păcatul era în lume până la Lege, dar păcatul nu este pus la socoteală când nu este lege."
+      "text": "căci păcatul era în lume înainte de Lege, dar păcatul nu este imputat când nu există lege."
     },
     {
       "number": 14,
-      "text": "Totuși, moartea a domnit de la Adam până la Moise chiar și peste cei care nu păcătuiseră după asemănarea încălcării lui Adam, care este un tip al Celui ce avea să vină."
+      "text": "Totuși, moartea a domnit de la Adam până la Moise chiar și peste cei care nu păcătuiseră printr-o încălcare asemenea celei a lui Adam, care este o prefigurare a Celui care urma să vină."
     },
     {
       "number": 15,
-      "text": "Dar darul nu este ca abaterea. Căci, dacă prin abaterea unuia singur cei mulți au murit, cu atât mai mult harul lui Dumnezeu și darul venit prin harul unui singur Om, Isus Hristos, au prisosit pentru cei mulți."
+      "text": "Dar darul nu este ca abaterea. Căci, dacă prin abaterea unuia singur cei mulți au murit, cu atât mai mult harul lui Dumnezeu și darul prin harul unui singur om, Isus Hristos, s-au revărsat din belșug peste cei mulți."
     },
     {
       "number": 16,
-      "text": "Iar darul nu este ca urmarea unuia singur care a păcătuit. Căci judecata pornită de la unul singur a dus la condamnare, dar darul harului, pornit de la multe abateri, a dus la o hotărâre de îndreptățire."
+      "text": "Iar darul nu este ca urmarea păcatului unuia singur. Căci judecata, pornită de la unul singur, a dus la condamnare, dar darul harului, pornit de la multe abateri, a dus la îndreptățire."
     },
     {
       "number": 17,
@@ -221,7 +210,7 @@
     },
     {
       "number": 20,
-      "text": "Legea a intervenit pentru ca abaterea să se înmulțească; dar, acolo unde s-a înmulțit păcatul, harul a prisosit cu mult mai mult,"
+      "text": "Legea a intrat între timp, pentru ca abaterea să se înmulțească; dar unde s-a înmulțit păcatul, harul a prisosit cu mult mai mult,"
     },
     {
       "number": 21,
