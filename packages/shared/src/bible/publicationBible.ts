@@ -13,10 +13,11 @@ import {
  * Nu modificăm `BIBLE_BOOKS` legacy până când toate integrările vechi sunt
  * migrate. Aici adăugăm explicit 1 Împărați și toate cele 29 de cărți overlay.
  *
- * Judecători–Daniel folosesc Biblia Emanus validată. Osea–Maleahi folosesc
- * temporar text biblic de lucru, etichetat explicit ca provizoriu. Toate
- * explicațiile noi rămân `in_review`, deci textul provizoriu nu este prezentat
- * ca release final. Când BE este gata, se schimbă numai stratul de versete.
+ * Stadiul textului este luat exclusiv din catalogul generat. După review-ul
+ * final de conținut, Judecători–Daniel rămân texte editoriale din candidatul
+ * istoric până la un fresh re-audit în corpusul canonic curent. Osea este
+ * Biblia Emanus canonică; ceilalți profeți mici rămân provizorii până la
+ * promovarea lor individuală. Explicațiile noi rămân `in_review`.
  */
 const byId = new Map<string, BibleBook>()
 for (const book of BIBLE_BOOKS) byId.set(book.id, book)
