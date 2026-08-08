@@ -4,6 +4,7 @@ import { reviewProverbe23Explanation } from "./proverbe23ExplanationReview.js"
 import { PROVERBE_EXPLAINED as POONEN_BASE } from "./proverbeOverlay.js"
 import { PROVERBE_DEEPENED_11_20 } from "./proverbeDeepened11_20.js"
 import { PROVERBE_DEEPENED_21_30 } from "./proverbeDeepened21_30.js"
+import { restoreProverbe23PoonenFidelity } from "./proverbe23PoonenFidelityReview.js"
 import { restoreProverbePoonenFidelity } from "./proverbePoonenFidelityReview.js"
 import { PROVERBE_TEXTUAL_CHAPTERS } from "./proverbeTextualChapters.js"
 
@@ -28,9 +29,11 @@ const PROVERBE_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const PROVERBE_EDITORIAL_REVIEWED = restoreProverbePoonenFidelity(
-  reviewProverbe23Explanation(
-    reviewProverbe03_22_31Explanations(PROVERBE_EDITORIAL_BASE),
+const PROVERBE_EDITORIAL_REVIEWED = restoreProverbe23PoonenFidelity(
+  restoreProverbePoonenFidelity(
+    reviewProverbe23Explanation(
+      reviewProverbe03_22_31Explanations(PROVERBE_EDITORIAL_BASE),
+    ),
   ),
 )
 
