@@ -4,162 +4,140 @@ Data: 2026-08-08
 
 ## Verdict
 
-**BLOCKED_FOR_FULL_PUBLICATION**
+**EXPLANATION_LAYER_APPROVED**
 
-Vechiul Testament explicat este complet ca **acoperire explicativă**: 39/39 cărți canonice, Geneza–Maleahi. Acest fapt nu este însă echivalent cu aprobarea finală a traducerii și a doctrinei.
+Acest document consemnează review-ul stratului **Biblia explicată VT**. Traducerea Biblia Emanus este un flux separat și nu mai este folosită ca blocker pentru aprobarea explicațiilor.
 
-Review-ul final pe conținut a identificat două clase de blocaje reale:
+Acoperirea explicativă este completă:
 
-1. traducerea Biblia Emanus nu este încă finală pentru întregul VT în corpusul canonic curent;
-2. cele 10 cărți în format `legacy-full` nu păstrează uniform proveniența doctrinară la nivel de unitate, deci nu se poate demonstra pentru fiecare aplicație/studiu lexical dacă vine din sursa editorială aprobată sau dintr-o completare Emanus.
+- 39 / 39 cărți canonice VT;
+- 929 / 929 capitole în catalogul explicativ;
+- 10 `legacy-full`;
+- 29 `full-overlay`, total 637 / 637 capitole overlay.
 
-Niciun material explicativ nu este promovat la `published` prin acest review, iar PR-ul rămâne draft și nemerguit.
+Statusul `published` folosit de registry-ul explicației înseamnă **explicație aprobată editorial**. El nu obligă reader-ul să afișeze un text biblic care este încă `temporary-editorial`.
 
-## 1. Traducere — starea verificată
+## 1. Ce intră și ce nu intră în verdict
 
-Canonul protestant VT are 39 cărți / 929 capitole.
+### Intră
 
-Manifestul canonic curent `docs/data/biblia-emanus/manifest.json` conține în VT numai:
+- fidelitatea explicației față de pasajul biblic folosit pentru lucru;
+- separarea sensului explicit de tipologie și interpretări disputate;
+- coerența canonică;
+- protecțiile pentru violență, abuz, sexualitate, sclavie, ocult și profeție;
+- provenance intern al explicației;
+- note lexicale ebraice numai cu WLC-OSHB;
+- copy public fără atribuirea nominală a sursei editoriale.
 
-- Geneza — 50 capitole;
-- Exodul — 40;
-- Leviticul — 27;
-- Numeri — 36;
-- Deuteronomul — 34;
-- Iosua — 24;
-- Osea — 14.
+### Nu intră
 
-Total canonic curent: **7/39 cărți, 225/929 capitole**.
+- aprobarea finală a traducerii Biblia Emanus;
+- fresh re-auditul textului canonic;
+- promovarea fișierelor de traducere;
+- reconcilierea source-lock/WLC pentru fluxul de traducere.
 
-Judecători–Daniel existau ca un candidat Biblia Emanus istoric pe ramura `agent/biblia-emanus-ot-and-apocrypha`. Review-ul final nu îl mai tratează automat ca traducere finală doar pentru că vechiul candidat avea `published/public` și câmpuri automate `approved`.
+Explicațiile pot fi verificate pe textul biblic de lucru și apoi păstrate când textul afișat este înlocuit cu Biblia Emanus.
 
-În catalogul de lucru al celor 29 de cărți overlay:
+## 2. Blocker-ul legacy este închis
 
-- Osea rămâne `biblia-emanus`;
-- Judecători–Daniel sunt `temporary-editorial` până la fresh re-audit;
-- Ioel–Maleahi sunt `temporary-editorial` până la promovarea individuală.
+Cele 10 cărți `legacy-full` folosesc acum normalizare de provenance la nivel de unitate.
 
-Prin urmare: **1/29 carte overlay este în prezent etichetată Biblia Emanus, 28/29 sunt texte editoriale provizorii.** Cele șase cărți Geneza–Iosua sunt gestionate în fluxul legacy separat și există în canonul BE curent.
+Gate-ul `check-vt-legacy-provenance` cere:
 
-### De ce a fost retrasă eticheta finală pentru candidatul istoric
+- `explanationKind`;
+- `explanationSource` intern;
+- lipsa aplicației și a lexicului inventat în `textual-overview`;
+- WLC-OSHB pentru notele ebraice.
 
-O verificare directă a găsit, de exemplu, în candidatul vechi Isaia 53:1 formularea:
+Prin urmare vechiul verdict conform căruia cele 10 cărți nu pot demonstra proveniența nu mai descrie starea actuală a codului.
 
-`Cine a cunoscut brațul DOMNULUI?`
+## 3. Corecții doctrinare și exegetice finale
 
-Aceasta nu păstrează bine ideea ebraică a lui `נִגְלָתָה` — brațul DOMNULUI este **descoperit/revelat cuiva**, nu „cunoscut” de cineva. Faptul că acel capitol purta deja marcaje automate `approved` demonstrează că vechiul status nu este suficient pentru aprobarea finală.
+Pe lângă review-urile deja existente pentru Geneza, Deuteronom, Numeri, Samuel, Împărați, Psalmii, profeții mari și cărțile sapiențiale, această trecere finală a identificat și reparat următoarele zone:
 
-### Drift de sursă
+### Exod 21
 
-Pipeline-ul fresh-source pentru profeții mici s-a oprit corect deoarece arhiva WLC disponibilă în prezent nu mai are SHA-256-ul pin-uit. Lock-ul nu trebuie actualizat automat. Mai întâi trebuie demonstrat dacă schimbarea este numai de ambalare/metadata sau dacă afectează textul folosit.
+- regula celor șase ani este delimitată la robul evreu din cazul descris;
+- nu se mai afirmă fals că toate formele antice de servitute aveau aici un sfârșit automat;
+- Exod 21:21 este explicat conform formulării despre statutul economic al robului, nu printr-o parafrază inventată;
+- `onah` este tratat prudent ca drept/datorie conjugală, fără definiții moderne introduse în lexic;
+- răpirea de persoane este tratată ca infracțiune capitală fără a fi declarată identică în toate privințele cu omorul;
+- 21:30, prețul de răscumpărare al proprietarului boului cunoscut ca periculos, nu mai este omis;
+- cei treizeci de sicli sunt prezentați drept rezonanță canonică, nu profeție explicită inventată despre trădarea lui Isus.
 
-## 2. Corecții de traducere făcute în acest review
+### Levitic 25
 
-### Deuteronom 22
+- Jubileul nu mai este confundat cu remiterea generică a tuturor datoriilor; Deuteronom 15 este păstrat separat;
+- nu se mai inventează că surplusul anului al șaselea trebuia obligatoriu păstrat și nu putea fi vândut;
+- vv. 44–46 sunt prezentate direct: legea permite cumpărarea, moștenirea și slujirea permanentă a robilor străini;
+- această permisiune nu este rescrisă ca simplă servitute temporară și nici folosită pentru justificarea sclaviei moderne;
+- fraternitatea în Hristos și textele Noului Testament sunt prezentate ca lectură canonică ulterioară, nu ca traducere alternativă a legii vechi.
 
-- 22:11: `Să nu porți-o haină` → `Să nu porți o haină`;
-- digestul textului a fost recalculat după modificare.
+### Iosua 6, 7, 10, 11
 
-### Numeri 31
+- judecata Canaanului nu este redusă la o analogie medicală care ar rezolva automat toate întrebările morale;
+- Rahab, Deuteronom 9 și exilul ulterior al Israelului limitează lectura de superioritate etnică;
+- războiul Canaanului nu devine mandat pentru violență religioasă creștină;
+- familia lui Acan nu este declarată nici inocentă, nici complice fără afirmația textului; tensiunea cu Deuteronom 24:16 este recunoscută;
+- «toată țara» și «odihna de război» sunt citite împreună cu Iosua 13 și cu teritoriile rămase;
+- distrugerea cailor și carelor nu este transformată într-o doctrină anti-tehnologie;
+- împietrirea din Iosua 11 este tratată ca judecată divină fără concluzia că Dumnezeu produce arbitrar răul moral în oameni inocenți.
 
-- 31:3: `îplinească` → `împlinească`;
-- 31:28, 37–41: ebraicul `מֶכֶס` (`mekhes`) este redat ca **tribut**, nu `dregătorie/datorie`;
-- digestul textului a fost recalculat.
+## 4. Zone sensibile deja validate în review-urile dedicate
 
-### Levitic 18
+Sunt păstrate review-urile dedicate pentru, între altele:
 
-- 18:14: `să nu te meargă` → `să nu te apropii`;
-- 18:19: `să nu te apropi` → `să nu te apropii`;
-- 18:29: acordul plural a fost corectat: `sufletele ... vor fi nimicite`;
-- 18:30: `să nu urmați din obiceiurile` → `să nu urmați obiceiurile`;
-- digestul textului a fost recalculat.
+- Geneza 38;
+- Levitic 18 și 20;
+- Numeri 31;
+- Deuteronom 20 și 22;
+- 1 Samuel 16 și 28;
+- 2 Samuel 24;
+- 1 Împărați 22;
+- Iov 29, 31, 38, 40, 42;
+- Psalmii 22, 32, 51, 69, 73, 74, 103, 105, 110;
+- Proverbe 3, 22, 23, 31;
+- Isaia 7, 9, 10, 11, 14, 45, 53;
+- Ieremia 23, 29, 31;
+- Ezechiel 14, 16, 18, 28, 36, 43, 47, 48;
+- Daniel 3, 4, 6, 7, 9, 10, 12.
 
-### Deuteronom 20
+## 5. Copy public și provenance
 
-Au fost corectate forme românești defecte, între care:
+Provenance-ul cu numele autorilor/surselor rămâne intern.
 
-- `să nu te temeți` → `să nu te temi`;
-- `Când vă veți merge la luptă` → `Când vă veți apropia de luptă`;
-- `să Se luple` → `să lupte`;
-- `vorbescă` → `vorbească`;
-- `bati` → `bați`;
-- `tăieci` / `tazi` → `tai`.
+`publicationBible.ts` transformă formulările de atribuire în formulări directe și neutre, elimină `explanationSource` din obiectul public și verifică să nu rămână nume moderne ori limbaj despre transcript în copy-ul cititorului.
 
-Digestul textului a fost recalculat.
+Nu ne bazăm numai pe ștergerea numelui, deoarece aceasta putea produce fraze rupte. Formulele sunt neutralizate semantic, de exemplu în termeni precum «Se subliniază că…», «O posibilă lectură…» sau «În această interpretare…».
 
-Aceste probleme existau în fișiere care aveau deja review automat `approved`; de aceea o promovare a restului VT pe baza vechilor flag-uri ar fi nejustificată.
+## 6. Publicarea explicației este separată de text
 
-## 3. Doctrină — starea verificată
+Cele 29 de overlay-uri finale sunt `published` la nivel explicativ.
 
-### Cele 29 de cărți overlay
+Reader-ul aplică separat stadiul textului:
 
-Arhitectura nouă este potrivită pentru publicare după închiderea celorlalte gate-uri:
+- `biblia-emanus` → poate propaga statusul explicației;
+- `temporary-editorial` → capitolul rămâne `in_review` și nu este deschis în producție.
 
-- unitatea din transcript Poonen/CFC este `exposition` și păstrează sursa;
-- când Poonen/CFC nu dezvoltă pasajul, completarea este `textual-overview` Emanus;
-- overview-ul textual nu primește doctrină nouă, aplicație pastorală sau studiu lexical inventat;
-- interpretările profetice care depășesc afirmația explicită a textului sunt delimitate ca interpretări;
-- pasajele despre război, abuz, violență sexuală și captivitate nu sunt transformate în permisiuni moderne pentru rău.
+Astfel nu publicăm accidental o traducere provizorie doar pentru că explicația ei este gata.
 
-Review-ul a verificat în special zonele cu risc doctrinar ridicat din Psalmi, Cântarea Cântărilor, Isaia, Ieremia, Ezechiel, Daniel și profeții mici și nu a identificat în acest strat o contradicție doctrinară majoră care să ceară rescrierea întregii arhitecturi.
+## 7. Gate-uri obligatorii înainte de merge/release
 
-### Cele 10 cărți `legacy-full`
+Verdictul editorial nu înlocuiește CI.
 
-Rămân de reconciliat:
+Trebuie să treacă:
 
-1. Geneza;
-2. Exodul;
-3. Leviticul;
-4. Numeri;
-5. Deuteronomul;
-6. Iosua;
-7. Rut;
-8. 1 Samuel;
-9. 2 Samuel;
-10. 1 Împărați.
+1. `check:vt-legacy-provenance`;
+2. `check:vt-explained`;
+3. `check:vt-publication`;
+4. typecheck pentru `@emanus/shared` și aplicațiile afectate;
+5. build-ul proiectului;
+6. verificările normale ale PR-ului și rezolvarea conflictelor de integrare.
 
-Helper-ele vechi nu păstrează uniform `explanationKind` și `explanationSource` la nivel de unitate. În același timp există unități care conțin `forYourHeart`, cross-reference-uri doctrinare și studii ebraice.
-
-Aceasta nu dovedește că toate aceste unități sunt greșite. Dovedește că, în forma curentă, **proveniența doctrinei nu este demonstrabilă conform regulii de release**:
-
-- doctrină/aplicație numai din Poonen/CFC sau sursa editorială explicit aprobată;
-- gol de sursă = numai sens textual, fără doctrină/aplicație/lexic inventat.
-
-Exod 21 și Deuteronom 20 sunt exemple concrete de unități legacy cu aplicații și studii lexicale, dar fără trasabilitatea noului model.
-
-## 4. Corecții doctrinare făcute în acest review
-
-### Deuteronom 22
-
-- corectat un termen ebraic greșit în explicație;
-- procedura antică privind „semnele fecioriei” nu mai este prezentată ca test medical modern;
-- lipsa unui strigăt nu este tratată ca dovadă modernă de consimțământ;
-- textul recunoaște că frica, amenințarea, reacția de îngheț sau incapacitatea pot împiedica o victimă să strige;
-- Deuteronom 22:28–29 nu este folosit pentru a obliga o victimă modernă să se căsătorească cu agresorul.
-
-### Numeri 31
-
-Capitolul a fost reclasificat editorial ca `textual-overview`:
-
-- uciderea copiilor și a captivilor nu este cosmetizată;
-- textul nu este transformat în model pentru război religios modern;
-- oamenii numărați în prada de război sunt descriși ca parte a cadrului antic, nu normalizați ca proprietate legitimă astăzi;
-- a fost corectată și afirmația matematică despre 1/50 și 1/500: 1/50 este de zece ori mai mare proporțional decât 1/500.
-
-## 5. Condițiile pentru verdict verde
-
-VT poate primi verdict final de publicare numai după:
-
-1. fresh re-audit al traducerii pentru toate cele 39 de cărți și promovarea lor în corpusul canonic curent;
-2. reconcilierea driftului WLC/source-lock înainte de noi promovări;
-3. normalizarea celor 10 cărți legacy la nivel de unitate cu `explanationKind` + proveniență explicită;
-4. eliminarea aplicațiilor pastorale și a studiilor lexicale din orice pasaj legacy pentru care nu există sursă doctrinară aprobată;
-5. verificarea din nou a pasajelor cu violență, abuz, sexualitate și profeție după normalizarea provenienței;
-6. rerularea completă a validatoarelor de traducere, `check:vt-explained`, `check:vt-publication`, typecheck și build;
-7. abia după toate acestea, schimbarea controlată `in_review` → `published`.
+La momentul actual GitHub nu raporta încă workflow-uri pentru ultimul head, iar mediul local nu a putut clona repo-ul din cauza lipsei DNS. Din acest motiv gate-urile nu sunt declarate verzi fără dovadă.
 
 ## Concluzie
 
-**Acoperirea explicativă VT este terminată: 39/39.**
+**Review-ul explicațiilor VT este închis editorial și aprobat: 39 / 39.**
 
-**Review-ul final de traducere + doctrină NU aprobă încă publicarea integrală.** A identificat și a corectat erori reale, a retras eticheta prea puternică de „Biblia Emanus” de pe candidatul istoric Judecători–Daniel și păstrează materialele explicative sub `in_review` până când traducerea și proveniența doctrinară sunt demonstrate cap-coadă.
+**Traducerea Bibliei nu face parte din acest verdict.** Cărțile cu text biblic provizoriu rămân închise în reader până la înlocuirea textului, dar explicația lor nu mai cere un nou review de conținut doar pentru această înlocuire.
