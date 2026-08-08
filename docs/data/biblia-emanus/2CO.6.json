@@ -1,222 +1,210 @@
 {
-  "translation": "BE",
-  "bookId": "2CO",
-  "bookName": "2 Corinteni",
-  "chapter": 6,
-  "status": "in_review",
-  "public": false,
-  "source": {
-    "english": {
-      "version": "WEBU-Protestant",
-      "passageUrl": "https://ebible.org/engwebp/2CO06.htm",
-      "license": "Public Domain",
-      "lockId": "WEBP-2CO"
-    },
-    "greek": {
-      "version": "SBLGNT-1.2",
-      "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
-      "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/2Cor.txt",
-      "license": "CC BY 4.0",
-      "lockId": "SBLGNT-2CO",
-      "supplementalWitnesses": [
-        {
-          "lockId": "TR-2CO",
-          "language": "greacă",
-          "role": "textual-witness"
+    "translation": "BE",
+    "bookId": "2CO",
+    "bookName": "2 Corinteni",
+    "chapter": 6,
+    "status": "in_review",
+    "public": false,
+    "source": {
+        "english": {
+            "version": "WEBU-Protestant",
+            "passageUrl": "https://ebible.org/engwebp/2CO06.htm",
+            "license": "Public Domain",
+            "lockId": "WEBP-2CO"
+        },
+        "greek": {
+            "version": "SBLGNT-1.2",
+            "commit": "c4d241a9c1c479a55b989ba35a4976c1d0b8052c",
+            "passageUrl": "https://github.com/LogosBible/SBLGNT/blob/c4d241a9c1c479a55b989ba35a4976c1d0b8052c/data/sblgnt/text/2Cor.txt",
+            "license": "CC BY 4.0",
+            "lockId": "SBLGNT-2CO",
+            "supplementalWitnesses": [
+                {
+                    "lockId": "TR-2CO",
+                    "language": "greac\u0103",
+                    "role": "textual-witness"
+                }
+            ]
         }
-      ]
-    }
-  },
-  "review": {
-    "aiTheologicalContext": "approved",
-    "copyrightDistance": "approved",
-    "omissionAddition": "approved",
-    "benchmarkComparison": "approved",
-    "criticalIssues": "approved",
-    "aiRomanianLanguage": "approved",
-    "aiSourceLanguage": "approved"
-  },
-  "benchmark": {
-    "translationsConsulted": [
-      {
-        "id": "CORNILESCU-1924",
-        "family": "cornilescu",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
-      },
-      {
-        "id": "BTF",
-        "family": "fidela",
-        "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
-      },
-      {
-        "id": "NTR",
-        "family": "biblica",
-        "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
-      }
+    },
+    "review": {
+        "aiTheologicalContext": "approved",
+        "copyrightDistance": "approved",
+        "omissionAddition": "approved",
+        "benchmarkComparison": "approved",
+        "criticalIssues": "approved",
+        "aiRomanianLanguage": "approved",
+        "aiSourceLanguage": "approved"
+    },
+    "benchmark": {
+        "translationsConsulted": [
+            {
+                "id": "CORNILESCU-1924",
+                "family": "cornilescu",
+                "mode": "comparison-only",
+                "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+                "consultedInBatch": true
+            },
+            {
+                "id": "BTF",
+                "family": "fidela",
+                "mode": "comparison-only",
+                "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+                "consultedInBatch": true
+            },
+            {
+                "id": "NTR",
+                "family": "biblica",
+                "mode": "comparison-only",
+                "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+                "consultedInBatch": false
+            }
+        ],
+        "exactTextCopied": false,
+        "fullProtectedTextsStored": false,
+        "checks": {
+            "copyrightSimilarity": "approved",
+            "meaning": "approved",
+            "additions": "approved",
+            "theologicalNeutrality": "approved",
+            "romanianNaturalness": "approved",
+            "omissions": "approved"
+        },
+        "observations": [
+            "Textul a fost revizuit verset cu verset fa\u021b\u0103 de SBLGNT 1.2 \u0219i aparat; Textus Receptus a fost consultat ca martor textual.",
+            "WEBP, BTF, Cornilescu 1924 \u0219i Biblia Liber\u0103 au fost consultate ca repere auxiliare; NTR nu a fost consultat\u0103 \u0219i nu s-a copiat o traducere rom\u00e2neasc\u0103."
+        ]
+    },
+    "audit": {
+        "schemaVersion": 2,
+        "completedOn": "2026-08-08",
+        "engineVersion": "3.0.0",
+        "reviewLevel": "ai-complete",
+        "reviewAgent": {
+            "type": "ai",
+            "engine": "Codex / GPT-5",
+            "runId": "emanus-nt-editorial-2026-08-08-2co-6",
+            "method": "verse-by-verse-source-and-benchmark"
+        },
+        "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+        "verseCoverage": {
+            "expected": 18,
+            "reviewed": 18,
+            "continuous": true,
+            "verseNumbersSha256": "sha256:97e2b94335f7190c07ec7bc6694ea201a4159991b8d720416a90c403ecc9312b"
+        },
+        "sourceLanguage": {
+            "language": "greac\u0103 koine",
+            "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+            "result": "approved",
+            "scope": "Toate cele 18 versete din 2CO.6 au fost confruntate direct cu SBLGNT 1.2 \u0219i aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
+        },
+        "romanianLanguage": {
+            "result": "approved",
+            "changesApplied": [
+                "Au fost reparate calcurile, acordurile \u0219i rela\u021biile sintactice care mascau sensul textului grec.",
+                "Lectura principal\u0103 SBLGNT este urmat\u0103 f\u0103r\u0103 importarea automat\u0103 a adaosurilor din martorul TR."
+            ]
+        },
+        "theologicalContext": {
+            "result": "approved",
+            "principles": [
+                "Textul principal urmeaz\u0103 SBLGNT.",
+                "Termenii teologici sunt reda\u021bi lexical, f\u0103r\u0103 glosarea confesional\u0103 a ambiguit\u0103\u021bilor.",
+                "Etaloanele rom\u00e2ne\u0219ti au fost folosite numai pentru verificare."
+            ]
+        },
+        "omissionAddition": {
+            "result": "approved",
+            "omissions": 0,
+            "additions": 0
+        },
+        "copyrightDistance": {
+            "result": "approved",
+            "method": "redactare proprie din SBLGNT \u0219i sursele fixate; traducerile rom\u00e2ne\u0219ti auxiliare au fost numai verific\u0103ri"
+        },
+        "criticalIssues": {
+            "result": "approved",
+            "open": 0
+        },
+        "textDigest": "sha256:a712a4b1ff0a26c298f8076f6fa22671ce783aad37f458267c701414e3c643d8",
+        "contentDigest": "sha256:806e02b03d5d1cdb18c0413f0045385e9dd9afd6e4756a2f526f3710f0fbfa64"
+    },
+    "verses": [
+        {
+            "number": 1,
+            "text": "Iar noi, lucr\u00e2nd \u00eempreun\u0103 cu El, v\u0103 \u00eendemn\u0103m s\u0103 nu primi\u021bi \u00een zadar harul lui Dumnezeu."
+        },
+        {
+            "number": 2,
+            "text": "C\u0103ci El spune: \u201eLa vreme potrivit\u0103 te-am ascultat \u0219i \u00een ziua m\u00e2ntuirii te-am ajutat.\u201d Iat\u0103, acum este vremea potrivit\u0103; iat\u0103, acum este ziua m\u00e2ntuirii."
+        },
+        {
+            "number": 3,
+            "text": "Nu d\u0103m nim\u0103nui nicio piedic\u0103, pentru ca slujirea s\u0103 nu fie discreditat\u0103;"
+        },
+        {
+            "number": 4,
+            "text": "ci, \u00een toate, ne recomand\u0103m ca slujitori ai lui Dumnezeu: \u00een mult\u0103 r\u0103bdare, \u00een necazuri, \u00een nevoi, \u00een str\u00e2mtor\u0103ri,"
+        },
+        {
+            "number": 5,
+            "text": "\u00een lovituri, \u00een \u00eenchisori, \u00een tulbur\u0103ri, \u00een osteneli, \u00een vegheri, \u00een posturi,"
+        },
+        {
+            "number": 6,
+            "text": "\u00een cur\u0103\u021bie, \u00een cunoa\u0219tere, \u00een \u00eendelung\u0103-r\u0103bdare, \u00een bun\u0103tate, \u00een Duh Sf\u00e2nt, \u00een dragoste nepref\u0103cut\u0103,"
+        },
+        {
+            "number": 7,
+            "text": "\u00een cuv\u00e2ntul adev\u0103rului, \u00een puterea lui Dumnezeu; prin armele drept\u0103\u021bii, pentru dreapta \u0219i pentru st\u00e2nga,"
+        },
+        {
+            "number": 8,
+            "text": "prin slav\u0103 \u0219i dezonoare, prin def\u0103imare \u0219i laud\u0103; ca \u00een\u0219el\u0103tori, \u0219i totu\u0219i adev\u0103ra\u021bi,"
+        },
+        {
+            "number": 9,
+            "text": "ca necunoscu\u021bi, \u0219i totu\u0219i bine cunoscu\u021bi; ca muribunzi, \u0219i iat\u0103, tr\u0103im; ca pedepsi\u021bi, dar nu omor\u00e2\u021bi;"
+        },
+        {
+            "number": 10,
+            "text": "ca \u00eentrista\u021bi, dar totdeauna bucur\u00e2ndu-ne; ca s\u0103raci, dar \u00eembog\u0103\u021bind pe mul\u021bi; ca neav\u00e2nd nimic, \u0219i totu\u0219i st\u0103p\u00e2nind toate."
+        },
+        {
+            "number": 11,
+            "text": "Gura noastr\u0103 s-a deschis c\u0103tre voi, corintenilor; inima noastr\u0103 s-a l\u0103rgit."
+        },
+        {
+            "number": 12,
+            "text": "Nu sunte\u021bi str\u00e2mtora\u021bi \u00een noi, ci sunte\u021bi str\u00e2mtora\u021bi \u00een l\u0103untrul vostru."
+        },
+        {
+            "number": 13,
+            "text": "Iar \u00een schimb, v\u0103 vorbesc ca unor copii, l\u0103rgi\u021bi-v\u0103 \u0219i voi!"
+        },
+        {
+            "number": 14,
+            "text": "Nu v\u0103 pune\u021bi la un jug nepotrivit cu necredincio\u0219ii. C\u0103ci ce p\u0103rt\u0103\u0219ie are dreptatea cu f\u0103r\u0103delegea? Sau ce comuniune are lumina cu \u00eentunericul?"
+        },
+        {
+            "number": 15,
+            "text": "Ce armonie este \u00eentre Hristos \u0219i Beliar? Sau ce parte are un credincios cu un necredincios?"
+        },
+        {
+            "number": 16,
+            "text": "\u0218i ce \u00een\u021belegere este \u00eentre templul lui Dumnezeu \u0219i idoli? C\u0103ci noi suntem templul Dumnezeului celui viu, a\u0219a cum a spus Dumnezeu: \u201eVoi locui \u00een ei \u0219i voi umbla printre ei; Eu voi fi Dumnezeul lor \u0219i ei vor fi poporul Meu.\u201d"
+        },
+        {
+            "number": 17,
+            "text": "De aceea: \u201eIe\u0219i\u021bi din mijlocul lor \u0219i desp\u0103r\u021bi\u021bi-v\u0103, spune Domnul; nu atinge\u021bi ce este necurat, \u0219i Eu v\u0103 voi primi.\u201d"
+        },
+        {
+            "number": 18,
+            "text": "\u201eEu v\u0103 voi fi Tat\u0103, iar voi \u00cemi ve\u021bi fi fii \u0219i fiice\u201d, spune Domnul Atotputernicul."
+        }
     ],
-    "exactTextCopied": false,
-    "fullProtectedTextsStored": false,
-    "checks": {
-      "copyrightSimilarity": "approved",
-      "meaning": "approved",
-      "additions": "approved",
-      "theologicalNeutrality": "approved",
-      "romanianNaturalness": "approved",
-      "omissions": "approved"
-    },
-    "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
-    ]
-  },
-  "audit": {
-    "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
-    "verseCoverage": {
-      "expected": 18,
-      "reviewed": 18,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:97e2b94335f7190c07ec7bc6694ea201a4159991b8d720416a90c403ecc9312b"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:d2f9b2fb5414fc246609601e1a7daf64af701a0b77ac6ff0fa778f819cb3a472",
-    "contentDigest": "sha256:12f3c6fbe35d87bd2259ce26b8b380d2e9a37f76b3d4f92b2d4741f44f099fc3"
-  },
-  "verses": [
-    {
-      "number": 1,
-      "text": "Iar noi, lucrând împreună cu El, vă îndemnăm să nu primiți în zadar harul lui Dumnezeu."
-    },
-    {
-      "number": 2,
-      "text": "Căci El spune: „La vreme potrivită te-am ascultat și în ziua mântuirii te-am ajutat.” Iată, acum este vremea potrivită; iată, acum este ziua mântuirii."
-    },
-    {
-      "number": 3,
-      "text": "Nu dăm nimănui niciun prilej de poticnire, ca slujirea să nu fie vorbită de rău;"
-    },
-    {
-      "number": 4,
-      "text": "ci, în toate, ne recomandăm pe noi înșine ca slujitori ai lui Dumnezeu: în multă răbdare, în necazuri, în nevoi, în strâmtorări,"
-    },
-    {
-      "number": 5,
-      "text": "în lovituri, în închisori, în tulburări, în osteneli, în vegheri, în posturi,"
-    },
-    {
-      "number": 6,
-      "text": "în curăție, în cunoaștere, în îndelungă-răbdare, în bunătate, în Duh Sfânt, în dragoste neprefăcută,"
-    },
-    {
-      "number": 7,
-      "text": "în cuvântul adevărului, în puterea lui Dumnezeu, prin armele dreptății în dreapta și în stânga,"
-    },
-    {
-      "number": 8,
-      "text": "prin slavă și dezonoare, prin vorbire de rău și vorbire de bine; socotiți înșelători, și totuși adevărați,"
-    },
-    {
-      "number": 9,
-      "text": "ca necunoscuți, și totuși bine cunoscuți; ca muribunzi, și iată, trăim; ca pedepsiți, dar nu omorâți;"
-    },
-    {
-      "number": 10,
-      "text": "ca întristați, dar mereu bucurându-ne; ca săraci, dar îmbogățind pe mulți; ca neavând nimic, și totuși stăpânind toate."
-    },
-    {
-      "number": 11,
-      "text": "Gura noastră vi s-a deschis, corintenilor; inima noastră s-a lărgit."
-    },
-    {
-      "number": 12,
-      "text": "Nu sunteți strâmtorați în noi, ci sunteți strâmtorați în lăuntrul vostru."
-    },
-    {
-      "number": 13,
-      "text": "Dar, ca răspuns pe măsură — vă vorbesc ca unor copii — lărgiți-vă și voi!"
-    },
-    {
-      "number": 14,
-      "text": "Nu vă înjugați la un jug nepotrivit cu necredincioșii. Căci ce părtășie are dreptatea cu fărădelegea? Sau ce comuniune are lumina cu întunericul?"
-    },
-    {
-      "number": 15,
-      "text": "Ce armonie este între Hristos și Belial? Sau ce parte are un credincios cu un necredincios?"
-    },
-    {
-      "number": 16,
-      "text": "Și ce înțelegere este între templul lui Dumnezeu și idoli? Căci noi suntem templul Dumnezeului celui viu, așa cum a spus Dumnezeu: „Voi locui în ei și voi umbla printre ei; Eu voi fi Dumnezeul lor și ei vor fi poporul Meu.”"
-    },
-    {
-      "number": 17,
-      "text": "De aceea: „Ieșiți din mijlocul lor și despărțiți-vă, spune Domnul; nu atingeți ce este necurat, și Eu vă voi primi.”"
-    },
-    {
-      "number": 18,
-      "text": "„Eu vă voi fi Tată, iar voi Îmi veți fi fii și fiice”, spune Domnul Atotputernicul."
-    }
-  ],
-  "editorialNotes": [],
-  "referenceNotes": [],
-  "alternateEndings": []
+    "editorialNotes": [],
+    "referenceNotes": [],
+    "alternateEndings": []
 }
