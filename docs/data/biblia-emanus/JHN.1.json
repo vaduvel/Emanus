@@ -40,24 +40,28 @@
     "translationsConsulted": [
       {
         "id": "BTF",
+        "consultedInBatch": true,
         "family": "fidela",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
+        "consultedInBatch": true,
         "family": "libera",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
+        "consultedInBatch": true,
         "family": "cornilescu",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
+        "consultedInBatch": false,
         "family": "biblica",
         "mode": "comparison-only",
         "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
@@ -74,26 +78,23 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost sursa principală; TR a fost martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparate auxiliar; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unui text românesc protejat."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
+    "completedOn": "2026-08-08",
+    "engineVersion": "Codex / GPT-5",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-jhn-1",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 2,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 51,
       "reviewed": 51,
@@ -104,14 +105,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 51 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 51 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul său; TR a fost verificat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Textul a fost revizuit verset cu verset pentru sens, sintaxă și română firească.",
+        "Formularea din 1:9 a fost restrânsă la «fiecare om», iar 1:34 urmează lectura SBLGNT «Alesul lui Dumnezeu».",
+        "Variantele nu sunt rezolvate prin import automat din Textus Receptus."
       ]
     },
     "theologicalContext": {
@@ -129,24 +130,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și WEBP; BTF, Cornilescu 1924 și Biblia Liberă au fost consultate numai pentru comparație, fără copiere."
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 223,
-        "primary": 345,
-        "secondary": 311,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5828511837833763,
-      "minimumScore": 0.5708264730944187
-    },
-    "textDigest": "sha256:7d0cc031ceeefd2e0e37c1b36aa02e8d81338ea501e9c4d314e4a9b6d3580446",
-    "contentDigest": "sha256:f3be2eb195f391aa3fc8e44c17b04030375b9210137538a736adf56a26b1f0f4"
+    "textDigest": "sha256:52a0048e838ea30fb36113ec895854596ca58ca969ceb56714252211260b9cdd",
+    "contentDigest": "sha256:ac45117212132fb7024ac18de14b25c5df404db93061c2b1ae5b7d46e46d2745"
   },
   "verses": [
     {
@@ -183,7 +174,7 @@
     },
     {
       "number": 9,
-      "text": "Adevărata lumină care luminează pe toată lumea venea în lume."
+      "text": "Lumina adevărată, care luminează pe fiecare om, venea în lume."
     },
     {
       "number": 10,
@@ -203,7 +194,7 @@
     },
     {
       "number": 14,
-      "text": "Și Cuvântul S-a făcut carne și a locuit printre noi, și noi I-am privit gloria, glorie ca a Singurului de la Tatăl, plin de har și de adevăr."
+      "text": "Și Cuvântul S-a făcut carne și a locuit printre noi; noi I-am privit gloria, glorie ca a singurului Fiu de la Tatăl, plin de har și de adevăr."
     },
     {
       "number": 15,
@@ -283,7 +274,7 @@
     },
     {
       "number": 34,
-      "text": "Am văzut și am mărturisit că acesta este Fiul lui Dumnezeu."
+      "text": "Am văzut și am mărturisit că acesta este Alesul lui Dumnezeu."
     },
     {
       "number": 35,
