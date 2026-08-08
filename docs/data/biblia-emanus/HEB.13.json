@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,52 +71,48 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 25 de versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-review-2026-08-08-heb-13",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
       "continuous": true,
-      "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
+      "verseNumbersSha256": "sha256:f9a2bea60146a1718da881cb1df9081bcd548cba6f3fbc553b0f72fc99d3b4d0"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 25 de versete au fost confruntate direct cu SBLGNT/aparat; TR numai martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost refăcute pasajele corupte și calcurile din textul anterior în română naturală.",
+        "Persoanele, numărul, imperativele, citatele și referenții au fost verificate verset cu verset.",
+        "Formulările din 13:3-6, 13:9, 13:15-21 și 13:23-25 au fost rezolvate direct din greacă și aparat."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT și nu importă automat lecturile TR/RP.",
+        "La 13:21 nu este introdus substantivul „lucrare”, absent din textul principal SBLGNT, iar ἡμῖν este redat „în noi”.",
+        "La 13:25 nu este adăugat „Amin”, prezent în tradiția Treg/RP, dar absent din SBLGNT."
       ]
     },
     "omissionAddition": {
@@ -123,128 +122,239 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:ee55c4d250a94f79a72a7f52d19b3c597c8bfa954d8a4ec199c606739a8a868c",
-    "contentDigest": "sha256:51f7e85b5106251152fd5e092d095db5a41979990875b514caf7bcd352ef515e"
+    "textDigest": "sha256:d82b74b8a0d60d2afd1f0d5331e01656dc0b1ef219aa699ef043172be2a9d0b1",
+    "contentDigest": "sha256:d666d3304b86c9913ba803750fbb777b4d9ce316e05f24f253b8a4fcde35c5c6"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Să continuăm iubirea frățească."
+      "text": "Dragostea frățească să rămână."
     },
     {
       "number": 2,
-      "text": "Nu uita să le arăți ospitalitate străinilor, căci în felul acesta, unii i-au distrat pe îngeri fără să știe."
+      "text": "Nu uitați ospitalitatea, căci prin ea unii, fără să știe, au găzduit îngeri."
     },
     {
       "number": 3,
-      "text": "Aduceți-vă aminte de cei ce sunt legați cu ei de cei ce sunt maltrat, căci voi în trup."
+      "text": "Aduceți-vă aminte de cei întemnițați ca și cum ați fi întemnițați împreună cu ei, și de cei chinuiți, ca unii care sunteți și voi în trup."
     },
     {
       "number": 4,
-      "text": "Căsătoria să fie ținută în cinste printre toți, și patul să fie nepătruns; dar Dumnezeu îi va judeca pe cei imorali sexual și adulteri."
+      "text": "Căsătoria să fie cinstită în toate și patul conjugal neîntinat, căci Dumnezeu îi va judeca pe cei desfrânați și pe adulteri."
     },
     {
       "number": 5,
-      "text": "Fii liber de dragostea de bani, mulțumit cu lucrurile pe care le ai, pentru că el a spus, nu te voi părăsi în nici un fel, nici nu te voi părăsi în nici un fel."
+      "text": "Felul vostru de viață să fie fără iubire de bani; mulțumiți-vă cu ce aveți, fiindcă El Însuși a spus: „Nicidecum nu te voi lăsa și nicidecum nu te voi părăsi.”"
     },
     {
       "number": 6,
-      "text": "Astfel încât, cu curaj bun spunem, Domnul este ajutorul meu. Nu mă voi teme. Ce poate omul face pentru mine?"
+      "text": "Astfel putem spune cu îndrăzneală: „Domnul este ajutorul meu; nu mă voi teme. Ce-mi va face omul?”"
     },
     {
       "number": 7,
-      "text": "Amintiți-vă de conducătorii voștri, de oamenii care v-au vorbit cuvântul lui Dumnezeu și luând în considerare rezultatele conduitei lor, imitați-le credința."
+      "text": "Aduceți-vă aminte de conducătorii voștri, care v-au vorbit cuvântul lui Dumnezeu; privind la sfârșitul felului lor de viață, urmați-le credința."
     },
     {
       "number": 8,
-      "text": "Isus Hristos este același ieri, astăzi și pentru totdeauna."
+      "text": "Isus Hristos este același ieri și astăzi și în veci."
     },
     {
       "number": 9,
-      "text": "Nu te lăsa purtat de învățături diverse și ciudate, pentru că este bine ca inima să fie stabilită prin har, nu prin alimente, prin care cei care au fost atât de ocupați nu au beneficiat."
+      "text": "Nu vă lăsați purtați de învățături felurite și străine; căci este bine ca inima să fie întărită prin har, nu prin mâncăruri, din care n-au avut folos cei care umblă în ele."
     },
     {
       "number": 10,
-      "text": "Avem un altar din care cei care servesc cortul sfânt nu au nici un drept să mănânce."
+      "text": "Avem un altar din care n-au dreptul să mănânce cei care slujesc cortului."
     },
     {
       "number": 11,
-      "text": "Căci trupurile acelor animale, al căror sânge este adus în locul sfânt de către marele preot ca ofrandă pentru păcat, sunt arse în afara taberei."
+      "text": "Căci trupurile animalelor al căror sânge este adus de marele preot în Locul Sfânt pentru păcat sunt arse în afara taberei."
     },
     {
       "number": 12,
-      "text": "De aceea Isus, de asemenea, ca să sfințească poporul prin propriul său sânge, a suferit în afara porții."
+      "text": "De aceea și Isus, ca să sfințească poporul prin propriul Său sânge, a suferit în afara porții."
     },
     {
       "number": 13,
-      "text": "Să ieșim deci la el afară din tabără, purtând ocara lui."
+      "text": "Să ieșim, deci, la El, în afara taberei, purtând ocara Lui."
     },
     {
       "number": 14,
-      "text": "Căci noi nu avem aici un oraș îndurător, ci căutăm ceea ce va veni."
+      "text": "Căci aici nu avem o cetate care rămâne, ci o căutăm pe cea viitoare."
     },
     {
       "number": 15,
-      "text": "Așadar, prin el, să aducem în permanență o jertfă de laudă lui Dumnezeu, adică rodul buzelor care proclamă supunere față de numele său."
+      "text": "Prin El, deci, să-I aducem neîncetat lui Dumnezeu o jertfă de laudă, adică rodul buzelor care mărturisesc Numele Lui."
     },
     {
       "number": 16,
-      "text": "Dar nu uitați să bine săți, căci cu astfel de sacrificii Dumnezeu este mulțumit."
+      "text": "Nu uitați binefacerea și părtășia, căci astfel de jertfe Îi sunt plăcute lui Dumnezeu."
     },
     {
       "number": 17,
-      "text": "Asculta de conducătorii și supune-vă lor, căci ei veghează pentru sufletele voastre, ca aceia care vor da socoteală, ca să poată face aceasta cu bucurie și nu cu gemete, căci aceasta ar fi nefolositor pentru voi."
+      "text": "Ascultați de conducătorii voștri și supuneți-vă lor, căci ei veghează asupra sufletelor voastre ca unii care vor da socoteală, pentru ca să facă aceasta cu bucurie și nu suspinând, căci aceasta nu v-ar fi de folos."
     },
     {
       "number": 18,
-      "text": "Rugați-vă pentru noi, căci suntem convinși că avem o conștiință bună, dorind să trăim onorabil în toate lucrurile."
+      "text": "Rugați-vă pentru noi, căci suntem convinși că avem o conștiință bună, dorind să ne purtăm bine în toate."
     },
     {
       "number": 19,
-      "text": "Vă îndemn cu tărie să faceți acest lucru, pentru a putea fi restaurat la tine mai devreme."
+      "text": "Vă îndemn cu atât mai mult să faceți aceasta, ca să vă fiu redat mai curând."
     },
     {
       "number": 20,
-      "text": "Iar Dumnezeul păcii, care l-a adus înapoi dintre morți pe Domnul nostru Isus, marele păstor al oilor, prin sângele legământului veșnic,"
+      "text": "Iar Dumnezeul păcii, care L-a adus dintre morți pe marele Păstor al oilor, pe Domnul nostru Isus, prin sângele legământului veșnic,"
     },
     {
       "number": 21,
-      "text": "să vă desăvârșiți în orice lucrare bună, ca să faceți voia Lui, și să lucrați în voi ce este plăcut înaintea Lui, prin Isus Hristos, care este slava veșnică și veșnică. Amin."
+      "text": "să vă înzestreze cu tot ce este bun ca să faceți voia Lui, lucrând în noi ceea ce este plăcut înaintea Lui, prin Isus Hristos, căruia să-I fie slava în veci. Amin."
     },
     {
       "number": 22,
-      "text": "Dar vă îndemn, fraților, să îndurați cuvântul îndemnului, căci v-am scris în puține cuvinte."
+      "text": "Vă îndemn, fraților, să primiți cu răbdare cuvântul de îndemn, căci v-am scris pe scurt."
     },
     {
       "number": 23,
-      "text": "Să știți că fratele nostru Timotei a fost eliberat, cu care, dacă vine în scurt timp, vă voi vedea."
+      "text": "Să știți că fratele nostru Timotei a fost eliberat; dacă vine curând, vă voi vedea împreună cu el."
     },
     {
       "number": 24,
-      "text": "Salutați-i pe toți conducătorii voștri și pe toți sfinții."
+      "text": "Salutați-i pe toți conducătorii voștri și pe toți sfinții. Vă salută cei din Italia."
     },
     {
       "number": 25,
       "text": "Harul să fie cu voi toți."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "γὰρ",
+      "decision": "„căci Dumnezeu îi va judeca...”",
+      "alternatives": [
+        "RP: δὲ, „dar”"
+      ],
+      "reason": "SBLGNT păstrează particula explicativă γάρ; relația logică este redată prin „căci”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT păstrează particula explicativă γάρ; relația logică este redată prin „căci”."
+    },
+    {
+      "verse": 6,
+      "term": "οὐ φοβηθήσομαι",
+      "decision": "„nu mă voi teme”",
+      "alternatives": [
+        "Treg/RP: καὶ οὐ φοβηθήσομαι"
+      ],
+      "reason": "SBLGNT nu are καί înaintea negației; nu se adaugă o coordonare absentă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are καί înaintea negației; nu se adaugă o coordonare absentă."
+    },
+    {
+      "verse": 9,
+      "term": "οἱ περιπατοῦντες",
+      "decision": "„cei care umblă în ele”",
+      "alternatives": [
+        "RP: οἱ περιπατήσαντες, aorist"
+      ],
+      "reason": "SBLGNT are participiu prezent, nu aorist; traducerea evită schimbarea aspectului în trecut încheiat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT are participiu prezent, nu aorist; traducerea evită schimbarea aspectului în trecut încheiat."
+    },
+    {
+      "verse": 15,
+      "term": "οὖν",
+      "decision": "„Prin El, deci...”",
+      "alternatives": [
+        "WH: omite οὖν"
+      ],
+      "reason": "SBLGNT include particula; legătura inferențială este redată prin „deci”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT include particula; legătura inferențială este redată prin „deci”."
+    },
+    {
+      "verse": 18,
+      "term": "πειθόμεθα",
+      "decision": "„suntem convinși”",
+      "alternatives": [
+        "RP: πεποίθαμεν"
+      ],
+      "reason": "SBLGNT are forma de prezent; traducerea nu importă perfectul RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT are forma de prezent; traducerea nu importă perfectul RP."
+    },
+    {
+      "verse": 21,
+      "term": "ἐν παντὶ ἀγαθῷ",
+      "decision": "„cu tot ce este bun”",
+      "alternatives": [
+        "Treg/RP adaugă ἔργῳ, „lucrare”"
+      ],
+      "reason": "SBLGNT nu are ἔργῳ; nu se introduce „orice lucrare bună” în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are ἔργῳ; nu se introduce „orice lucrare bună” în textul principal."
+    },
+    {
+      "verse": 21,
+      "term": "ποιῶν ἐν ἡμῖν",
+      "decision": "„lucrând în noi”",
+      "alternatives": [
+        "Treg/RP: ἐν ὑμῖν, „în voi”"
+      ],
+      "reason": "SBLGNT are pronumele de persoana I plural; referentul este păstrat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT are pronumele de persoana I plural; referentul este păstrat."
+    },
+    {
+      "verse": 21,
+      "term": "εἰς τοὺς αἰῶνας",
+      "decision": "„în veci”",
+      "alternatives": [
+        "WH/Treg/RP: + τῶν αἰώνων"
+      ],
+      "reason": "SBLGNT nu are extensia „veacurilor”; formula românească nu o adaugă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are extensia „veacurilor”; formula românească nu o adaugă."
+    },
+    {
+      "verse": 23,
+      "term": "τὸν ἀδελφὸν ἡμῶν Τιμόθεον",
+      "decision": "„fratele nostru Timotei”",
+      "alternatives": [
+        "RP: omite ἡμῶν"
+      ],
+      "reason": "SBLGNT păstrează posesivul „nostru”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT păstrează posesivul „nostru”."
+    },
+    {
+      "verse": 25,
+      "term": "ἡ χάρις μετὰ πάντων ὑμῶν",
+      "decision": "„Harul să fie cu voi toți.”",
+      "alternatives": [
+        "Treg/RP: + ἀμήν"
+      ],
+      "reason": "SBLGNT nu are adaosul final „Amin”; acesta nu este importat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are adaosul final „Amin”; acesta nu este importat."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
