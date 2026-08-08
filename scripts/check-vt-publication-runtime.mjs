@@ -2,6 +2,7 @@
 
 import { VT_EXPLAINED_OVERLAYS } from "../packages/shared/dist/bible/overlays/index.js"
 import { PUBLICATION_BIBLE_BOOKS } from "../packages/shared/dist/bible/publicationBible.js"
+import { VT_EXPLAINED_COVERAGE } from "../packages/shared/dist/bible/vtExplainedCoverage.js"
 import {
   VT_CANONICAL_TEXT_BOOKS,
   VT_TEMPORARY_TEXT_BOOKS,
@@ -20,7 +21,8 @@ const TEXTUAL_TRUTH_GUARDS = new Set([
   "rezumat narativ fără doctrină adăugată",
   "rezumat textual fără doctrină adăugată",
 ])
-const FORBIDDEN_READER_ATTRIBUTION = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b/iu
+const FORBIDDEN_READER_ATTRIBUTION = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b|\bCFC India\b|\bThrough The Bible\b/iu
+const FORBIDDEN_READER_RESEARCH_META = /\btranscript(?:ul|ului|e)?\b/iu
 
 function need(condition, message) {
   if (!condition) throw new Error(`[VT publication] ${message}`)
@@ -33,6 +35,13 @@ function hasPlaceholder(value) {
 function assertReaderText(value, where) {
   if (typeof value !== "string" || value.length === 0) return
   need(!FORBIDDEN_READER_ATTRIBUTION.test(value), `atribuire nominală vizibilă în ${where}`)
+  need(!FORBIDDEN_READER_RESEARCH_META.test(value), `limbaj intern de cercetare vizibil în ${where}`)
+}
+
+need(VT_EXPLAINED_COVERAGE.length === EXPECTED_OT_BOOKS, `coverage manifest ${VT_EXPLAINED_COVERAGE.length}/${EXPECTED_OT_BOOKS}`)
+for (const book of VT_EXPLAINED_COVERAGE) {
+  need(book.coverage === "full", `${book.name}: coverage manifest nu este full`)
+  need(book.status === "published", `${book.name}: explicația nu este aprobată pentru publicare`)
 }
 
 need(VT_EXPLAINED_OVERLAYS.length === EXPECTED_OVERLAY_BOOKS, `registry ${VT_EXPLAINED_OVERLAYS.length}/${EXPECTED_OVERLAY_BOOKS} overlay-uri`)
@@ -75,7 +84,7 @@ let hebrewNotes = 0
 for (const book of VT_EXPLAINED_OVERLAYS) {
   need(book.testament === "vt", `${book.name}: testament invalid`)
   need(book.coverageMode === "full", `${book.name}: coverageMode trebuie să fie full`)
-  need(book.status === "in_review", `${book.name}: release candidate trebuie să rămână in_review până la aprobarea umană`)
+  need(book.status === "published", `${book.name}: stratul explicativ final trebuie să fie published`)
   need(book.bibleEmanusBookId?.trim(), `${book.name}: lipsește bibleEmanusBookId`)
   need(book.chapters.length > 0, `${book.name}: fără capitole`)
 
@@ -127,8 +136,8 @@ for (const book of VT_EXPLAINED_OVERLAYS) {
 
         if (unit.source.kind === "poonen") {
           poonenUnits += 1
-          need(unit.source.transcript?.endsWith(".txt"), `${book.name} ${chapter.number}: transcript Poonen invalid`)
-          need(unit.source.anchor?.trim().length >= 12, `${book.name} ${chapter.number}: ancora transcriptului este prea slabă`)
+          need(unit.source.transcript?.endsWith(".txt"), `${book.name} ${chapter.number}: transcript intern invalid`)
+          need(unit.source.anchor?.trim().length >= 12, `${book.name} ${chapter.number}: ancora internă este prea slabă`)
         } else if (unit.source.kind === "poonen-official") {
           officialUnits += 1
           need(unit.source.sourceUrl?.startsWith("https://"), `${book.name} ${chapter.number}: URL oficial invalid`)
@@ -137,7 +146,7 @@ for (const book of VT_EXPLAINED_OVERLAYS) {
           canonicalExegesisUnits += 1
           need(Array.isArray(unit.source.sources) && unit.source.sources.length > 0, `${book.name} ${chapter.number}: exegeza canonică nu are surse`)
           need(unit.source.sources.every((source) => typeof source === "string" && source.trim().length >= 3), `${book.name} ${chapter.number}: sursă canonică invalidă`)
-          need(unit.source.note?.trim().length >= 12, `${book.name} ${chapter.number}: nota de exegeza canonică este prea slabă`)
+          need(unit.source.note?.trim().length >= 12, `${book.name} ${chapter.number}: nota de exegeză canonică este prea slabă`)
         } else {
           throw new Error(`[VT publication] ${book.name} ${chapter.number}: sursă necunoscută ${unit.source.kind}`)
         }
@@ -168,7 +177,21 @@ let readerChapters = 0
 for (const book of readerOtBooks) {
   assertReaderText(book.blurb, `${book.name} blurb`)
   readerChapters += book.chapters.length
+
+  const overlayText = textByBook.get(book.id)
+  const expectedOverlayReaderStatus = overlayText
+    ? overlayText.textStage === "temporary-editorial"
+      ? "in_review"
+      : "published"
+    : null
+
   for (const chapter of book.chapters) {
+    if (expectedOverlayReaderStatus) {
+      need(
+        chapter.status === expectedOverlayReaderStatus,
+        `${book.name} ${chapter.number}: status reader ${chapter.status}, așteptat ${expectedOverlayReaderStatus} după stadiul textului`,
+      )
+    }
     assertReaderText(chapter.title, `${book.name} ${chapter.number} titlu`)
     assertReaderText(chapter.summary, `${book.name} ${chapter.number} rezumat`)
     assertReaderText(chapter.literaryContext, `${book.name} ${chapter.number} context literar`)
@@ -188,8 +211,9 @@ for (const book of readerOtBooks) {
 need(readerChapters === EXPECTED_OT_CHAPTERS, `catalog cititor VT ${readerChapters}/${EXPECTED_OT_CHAPTERS} capitole`)
 
 console.log(
-  `VT publication runtime OK: ${EXPECTED_OT_BOOKS}/39 cărți și ${readerChapters}/929 capitole în catalogul cititorului; ` +
-  `${EXPECTED_OVERLAY_BOOKS}/29 overlay-uri și ${chapters}/637 capitole overlay; ` +
-  `${units} unități (${poonenUnits} transcript + ${officialUnits} sursă oficială + ${canonicalExegesisUnits} exegeze canonice + ${overviewUnits} overview-uri textuale); ` +
+  `VT explanation publication OK: ${EXPECTED_OT_BOOKS}/39 explicații de carte aprobate; ` +
+  `${EXPECTED_OVERLAY_BOOKS}/29 overlay-uri published și ${chapters}/637 capitole overlay; ` +
+  `${readerChapters}/929 capitole prezente în catalog, cu textele provizorii ținute separat în review; ` +
+  `${units} unități (${poonenUnits} transcript intern + ${officialUnits} sursă oficială internă + ${canonicalExegesisUnits} exegeze canonice + ${overviewUnits} overview-uri textuale); ` +
   `${hebrewNotes} note ebraice WLC-OSHB; zero atribuiri nominale în copy-ul cititorului.`,
 )
