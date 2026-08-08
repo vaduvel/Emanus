@@ -12,6 +12,22 @@ import { getSupabase } from "./supabase"
  *  3. La prima pornire pe un telefon nou, dacă local e gol și în nor există ceva,
  *     se aduce din nor. Altfel, localul învinge și se urcă.
  *  4. Nu se urcă nimic ce nu vede și omul: fără scoruri, fără evenimente, fără analitică.
+ *
+ * DRUMUL EMAUS ȘI NORUL:
+ *
+ * `JourneyState` a primit patru câmpuri noi: `completedLessonIds`, `emmausMaxStation`,
+ * `emmausStationSeenAt`, `crossVisitedAt`. Aici se CITESC, dar deocamdată NU se urcă,
+ * și asta e intenționat. Tabela `journey` din Supabase nu are coloanele lor. Dacă le-am
+ * pune în `upsert` acum, Supabase ar respinge întregul rând, deci s-ar opri și salvarea
+ * lucrurilor care merg azi. Se adaugă după migrarea tabelei, ca pas separat.
+ *
+ * Până atunci nu se pierde drumul: jurnalul SE sincronizează, iar `normalizeJourneyState`
+ * din `journey.ts` reconstruiește lecțiile terminate din intrările de jurnal. Un telefon
+ * nou reia harta de unde era, eventual cu o stație în urmă, niciodată de la zero.
+ *
+ * LECȚIE, ca să nu se repete: `JourneyState` se construiește în DOUĂ locuri — `EMPTY`
+ * în `journey.ts` și rândul citit aici. Cine adaugă un câmp obligatoriu trebuie să treacă
+ * pe la amândouă.
  */
 
 let userId: string | null = null
@@ -47,6 +63,7 @@ export async function pushState(s: JourneyState): Promise<void> {
   const uid = await ensureUser()
   if (!sb || !uid) return
   try {
+    // Fără câmpurile Emaus: vezi nota din antet. Coloanele nu există încă în tabelă.
     await sb.from("journey").upsert({
       user_id: uid,
       seen_welcome: s.seenWelcome,
@@ -100,6 +117,15 @@ export async function pullState(): Promise<JourneyState | null> {
       sb.from("prayers").select("*").eq("user_id", uid).order("created_date", { ascending: false }),
     ])
     if (!j) return null
+
+    /*
+     * Rândul se citește ca valoare netipizată, nu ca `JourneyState`. Coloanele Emaus pot
+     * lipsi cu totul (tabela nu e migrată încă), iar o coloană absentă vine `undefined`.
+     * Aici se decide o singură dată ce înseamnă "lipsă", ca ecranele să primească mereu
+     * forma întreagă.
+     */
+    const row = j as Record<string, unknown>
+
     return {
       seenWelcome: Boolean(j.seen_welcome),
       pathId: (j.path_id as string | null) ?? null,
@@ -108,6 +134,18 @@ export async function pullState(): Promise<JourneyState | null> {
       lastLessonDate: (j.last_lesson_date as string | null) ?? null,
       prayerInviteSeen: Boolean(j.prayer_invite_seen),
       pathCompletedSeen: Boolean(j.path_completed_seen),
+      completedLessonIds: Array.isArray(row.completed_lesson_ids)
+        ? row.completed_lesson_ids.map((id) => String(id))
+        : [],
+      emmausMaxStation:
+        typeof row.emmaus_max_station === "number" && row.emmaus_max_station >= 1
+          ? row.emmaus_max_station
+          : 1,
+      emmausStationSeenAt:
+        typeof row.emmaus_station_seen_at === "object" && row.emmaus_station_seen_at !== null
+          ? (row.emmaus_station_seen_at as Record<string, string>)
+          : {},
+      crossVisitedAt: typeof row.cross_visited_at === "string" ? row.cross_visited_at : null,
       journal: (jr ?? []).map((r) => ({
         lessonId: String(r.lesson_id),
         text: String(r.text),

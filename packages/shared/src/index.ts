@@ -43,6 +43,11 @@ export type { Need, NeedKind } from "./needs.js"
 export * from "./messageCards.js"
 export * from "./scroll.js"
 export * from "./gamification.js"
+// Drumul Emaus (docs/43): cele opt stații și scorul de parcurs. Toate numele
+// exportate de aici încep cu Emmaus sau EMMAUS, dinadins: `export *` pune
+// totul în aceeași găleată, iar `gamification.js` are și el un `JourneyState`
+// al lui. Două nume la fel înseamnă TS2308 și nu mai compilează nimic.
+export * from "./emmausRoad.js"
 export * from "./diagnostic.js"
 export * from "./recommendation.js"
 export * from "./moderation.js"

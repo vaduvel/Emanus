@@ -1,6 +1,9 @@
 import type { Lesson } from "../domain.js"
+import { ANXIETATE_LESSONS, ANXIETATE_PRACTICES } from "./anxietate.js"
 import { aproapeL1, aproapeL2, aproapeL3, aproapeL4, aproapeL5, aproapeL6, aproapeL7 } from "./aproape.js"
-import { DOCTRINE_LESSONS, doctrinaL1, doctrinaL2, doctrinaL3 } from "./doctrina.js"
+import { DIVORT_LESSONS, DIVORT_PRACTICES } from "./divort.js"
+import { DOCTRINE_LESSONS } from "./doctrina.js"
+import { GREUTATE_LESSONS, GREUTATE_PRACTICES } from "./greutate.js"
 import { harL1, harL2, harL3, harL4, harL5, harL6, harL7 } from "./har.js"
 import {
   impreunaL1,
@@ -19,11 +22,18 @@ import { rusineL1, rusineL2, rusineL3, rusineL4 } from "./rusineA.js"
 import { rusineL5, rusineL6, rusineL7 } from "./rusineB.js"
 import { schimbareL1, schimbareL2, schimbareL3, schimbareL4 } from "./schimbareA.js"
 import { schimbareL5, schimbareL6, schimbareL7 } from "./schimbareB.js"
+import { SUFERINTA_LESSONS, SUFERINTA_PRACTICES } from "./suferinta.js"
+import { TEMELIE_LESSONS, TEMELIE_PRACTICES } from "./temelie.js"
+import { TRISTETE_LESSONS, TRISTETE_PRACTICES } from "./tristete.js"
 import { umblareL1, umblareL2, umblareL3 } from "./umblareA.js"
 import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
+export * from "./anxietate.js"
 export * from "./aproape.js"
+export * from "./divort.js"
 export * from "./doctrina.js"
+export * from "./doorEntries.js"
+export * from "./greutate.js"
 export * from "./har.js"
 export * from "./impreuna.js"
 export * from "./neiertareOpen.js"
@@ -31,6 +41,9 @@ export * from "./rusineA.js"
 export * from "./rusineB.js"
 export * from "./schimbareA.js"
 export * from "./schimbareB.js"
+export * from "./suferinta.js"
+export * from "./temelie.js"
+export * from "./tristete.js"
 export * from "./umblareA.js"
 export * from "./umblareB.js"
 
@@ -38,6 +51,8 @@ export * from "./umblareB.js"
  * Uși, camere și parcursuri personal-generalizate.
  * Referință: docs/21-cum-lucreaza-Dumnezeu.md și docs/20-parcursuri-personal-generalizate.md
  * Siguranță și limite: docs/22-siguranta.md (are prioritate).
+ * Inventarul conținutului pe fiecare ușă: docs/23-porti-continut.md
+ * Taxonomia etichetă → ușă → drum → cameră: docs/24-taxonomia-usilor.md
  *
  * Modelul întreg stă pe un singur câmp salvat despre om: `pathId`.
  * Fără profil, fără scoruri, fără chestionar, fără memorie per utilizator.
@@ -47,31 +62,59 @@ export * from "./umblareB.js"
  * prin durerea lui, iar adevărul despre cine e Dumnezeu i se spune PRIN rană.
  *
  * GENERALIZAREA: nu grupăm după durere — durerile sunt infinite. Grupăm după
- * tiparul spiritual de dedesubt; alea sunt șapte. Ușile rămân multe și în
- * cuvintele omului; camerele sunt puține.
+ * tiparul spiritual de dedesubt. Au fost șapte; sunt opt de când anxietatea și
+ * tristețea au primit cameră proprie. Ușile rămân multe și în cuvintele omului;
+ * camerele sunt puține.
  *
- * ATENȚIE, limită asumată: cele șapte tipare sunt un instrument de orientare
+ * O CAMERĂ NU ÎNSEAMNĂ UN SINGUR DRUM. Camera adună oamenii care cred aceeași
+ * minciună; drumul e răspunsul scris pentru ei. Când sub aceeași minciună stau
+ * două suferințe care nu se tratează la fel, camera rămâne una și drumurile
+ * sunt două. Așa e camera 8: `path_tristete` și `path_anxietate`. Ruta se ia
+ * de pe ușă (`Door.pathId`), pe care `resolveDoorPath` o citește înaintea
+ * camerei. `Room.pathId` rămâne doar implicitul, pentru o ușă nouă adăugată
+ * fără drum.
+ *
+ * DE CE OPT ȘI NU ȘAPTE (docs/22 §1, NENEGOCIABIL): ușile `anxietate` și
+ * `tristete` cădeau până acum în camera 5, "Nu mă pot schimba", a cărei minciună
+ * este "Sunt defect, asta sunt". Adică omul care intra cu anxietate sau depresie
+ * primea din prima secundă mesajul că problema lui e caracterul. docs/22 §1
+ * interzice exact asta: anxietatea, tristețea, epuizarea și insomnia pot avea
+ * cauze medicale. De aceea există camera 8.
+ *
+ * ATENȚIE, limită asumată: cele opt tipare sunt un instrument de orientare
  * inițială, NU un diagnostic. O durere poate avea și cauze medicale, relaționale
  * sau sociale. Nu spunem niciodată omului "boala ta e că nu crezi X" — ar fi o
  * vină în plus pusă pe cineva care deja suferă. Vezi docs/22-siguranta.md.
  *
  * TREI INTRĂRI, nu două (docs/21 §3):
- *   1. vine cu o durere        → camera lui (c1…c7)
+ *   1. vine cu o durere        → camera lui (c1…c8)
  *   2. vine de la zero         → path_temelie
  *   3. vine să-și întărească relația → path_umblare
  *
- * STARE: toate cele șapte camere au acum parcurs scris. `FALLBACK_PATH_ID`
- * rămâne în cod ca plasă de siguranță, nu ca soluție pentru camere goale.
+ * DRUMURI FĂRĂ CAMERĂ: pe lângă cele opt camere există `path_umblare` (a treia
+ * intrare) și două drumuri născute din uși ale camerei 2 cărora răspunsul
+ * camerei nu li se potrivea: `path_divort` și `path_suferinta`. Se ajunge la ele
+ * prin `pathId` pus direct pe ușă, pe care `resolveDoorPath` îl citește
+ * înaintea camerei.
+ *
+ * STARE: toate cele opt camere au parcurs scris. `path_greutate` e RETRAS —
+ * a fost înlocuit de cele două drumuri separate ale camerei 8; rămâne în cod
+ * doar ca să nu rupă o stare salvată veche. `FALLBACK_PATH_ID` rămâne ca plasă
+ * de siguranță, nu ca soluție pentru camere goale.
  */
 
-/** Cele șapte tipare spirituale dominante din care iese aproape orice durere. */
+/** Cele opt tipare spirituale dominante din care iese aproape orice durere. */
 export interface Room {
   id: string
   /** Numele camerei, cum îl vede omul. */
   title: string
   /** Ce crede omul care intră aici. Nu se afișează niciodată ca etichetă. */
   lie: string
-  /** Parcursul scris pentru camera asta; null = încă nescris. */
+  /**
+   * Parcursul IMPLICIT al camerei; null = încă nescris.
+   * Se folosește doar pentru ușile care nu au `pathId` propriu. Camera 8 are
+   * două drumuri, deci aici stă cel pe care vrem să cadă o ușă nouă nescrisă.
+   */
   pathId: string | null
 }
 
@@ -118,6 +161,19 @@ export const ROOMS: Room[] = [
     lie: "Nimeni nu înțelege și nimănui nu-i pasă.",
     pathId: "path_impreuna",
   },
+  {
+    /*
+     * Camera 8 are DOUĂ drumuri: `path_tristete` și `path_anxietate`.
+     * Implicitul e tristețea, nu pentru că ar fi mai importantă, ci pentru că
+     * prima ei lecție face triajul complet de siguranță. Dacă cineva adaugă
+     * mâine o ușă în camera asta și uită să-i pună drum, e mai bine să cadă
+     * acolo unde întâi se întreabă dacă omul e în siguranță.
+     */
+    id: "c8",
+    title: "Nu mai am putere / mi-e frică tot timpul",
+    lie: "Dacă aș avea destulă credință, aș fi bine.",
+    pathId: "path_tristete",
+  },
 ]
 
 export function getRoom(roomId: string | null | undefined): Room | undefined {
@@ -131,7 +187,20 @@ export interface Door {
   label: string
   /** Camera în care duce ușa. `null` doar pentru ușile de la capătul listei. */
   roomId: string | null
-  /** Doar pentru ușile fără cameră: drumul către care duc direct. */
+  /**
+   * Drumul către care duce ușa direct, sărind peste cameră.
+   * `resolveDoorPath` îl citește ÎNAINTEA camerei, deci are prioritate.
+   *
+   * Se folosește în trei feluri:
+   *   - ușile fără cameră (`inceput`, `umblare`, `nu_stiu`);
+   *   - ușile care stau într-o cameră, dar au primit drum propriu pentru că
+   *     răspunsul camerei nu li se potrivea. Sunt patru, toate din camera 2:
+   *     `divort` către `path_divort`, iar `doliu`, `boala` și `de_ce_permis`
+   *     către `path_suferinta`. `roomId` le rămâne "c2", pentru că tiparul
+   *     spiritual chiar acela e; se schimbă doar răspunsul primit.
+   *   - ușile dintr-o cameră cu mai multe drumuri: `anxietate` și `tristete`
+   *     stau amândouă în camera 8 și au fiecare drumul ei.
+   */
   pathId?: string
   /** True pentru cele 10 propoziții arătate înainte de "Arată-mi tot". */
   common?: boolean
@@ -152,8 +221,20 @@ export const DOORS: Door[] = [
   { id: "indoiala", label: "Nu știu dacă există Dumnezeu", roomId: "c3", common: true },
   { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4", common: true },
   { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5", common: true },
-  { id: "anxietate", label: "Trăiesc cu anxietate", roomId: "c5", common: true },
-  { id: "doliu", label: "Am pierdut pe cineva", roomId: "c2", common: true },
+  {
+    id: "anxietate",
+    label: "Trăiesc cu anxietate",
+    roomId: "c8",
+    pathId: "path_anxietate",
+    common: true,
+  },
+  {
+    id: "doliu",
+    label: "Am pierdut pe cineva",
+    roomId: "c2",
+    pathId: "path_suferinta",
+    common: true,
+  },
   { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6", common: true },
   { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7", common: true },
   { id: "nu_inteleg", label: "Sunt creștin, dar nu înțeleg ce citesc", roomId: "c3", common: true },
@@ -163,19 +244,39 @@ export const DOORS: Door[] = [
   { id: "recadere", label: "Am promis de o sută de ori și tot cad", roomId: "c5" },
   { id: "uscaciune", label: "Nu mai simt nimic când mă rog", roomId: "c4" },
   { id: "familie_respinge", label: "Familia mea nu mă înțelege", roomId: "c7" },
-  { id: "boala", label: "Sunt bolnav sau e bolnav cineva drag", roomId: "c2" },
+  {
+    id: "boala",
+    label: "Sunt bolnav sau e bolnav cineva drag",
+    roomId: "c2",
+    pathId: "path_suferinta",
+  },
   { id: "infidelitate", label: "Mi-am înșelat soțul sau soția", roomId: "c1" },
   { id: "flacara", label: "Am fost aproape de Dumnezeu cândva", roomId: "c4" },
   { id: "frica_pedeapsa", label: "Mi-e frică să nu mă pedepsească", roomId: "c6" },
   { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7" },
-  { id: "de_ce_permis", label: "Nu înțeleg de ce a permis Dumnezeu asta", roomId: "c2" },
+  {
+    id: "de_ce_permis",
+    label: "Nu înțeleg de ce a permis Dumnezeu asta",
+    roomId: "c2",
+    pathId: "path_suferinta",
+  },
   { id: "pornografie", label: "Mă lupt cu pornografia", roomId: "c1" },
-  { id: "tristete", label: "Nu mai am chef de nimic", roomId: "c5" },
+  {
+    id: "tristete",
+    label: "Nu mai am chef de nimic",
+    roomId: "c8",
+    pathId: "path_tristete",
+  },
   { id: "alte_credinte", label: "Am crezut alte lucruri înainte (energii, karma, univers)", roomId: "c3" },
   { id: "cum_citesc", label: "Nu știu cum să citesc Biblia", roomId: "c4" },
   { id: "epuizat_slujire", label: "Sunt obosit de slujire", roomId: "c6" },
   { id: "nou_venit", label: "Sunt nou și nu cunosc pe nimeni", roomId: "c7" },
-  { id: "divort", label: "Am trecut printr-un divorț", roomId: "c2" },
+  {
+    id: "divort",
+    label: "Am trecut printr-un divorț",
+    roomId: "c2",
+    pathId: "path_divort",
+  },
   { id: "prea_departe", label: "Cred că sunt prea departe ca să mă mai întorc", roomId: "c1" },
   { id: "furie", label: "Mă enervez și rănesc oamenii din jur", roomId: "c5" },
 ]
@@ -216,8 +317,8 @@ export const FALLBACK_PATH_ID = "path_temelie"
 
 /**
  * Nicio ușă nu e fundătură. (docs/21 §7 pct. 5)
- * Toate cele șapte camere au parcurs scris, deci fallback-ul nu se mai atinge
- * în practică. Rămâne pentru uși noi adăugate înainte de contențutul lor.
+ * Toate cele opt camere au parcurs scris, deci fallback-ul nu se mai atinge
+ * în practică. Rămâne pentru uși noi adăugate înainte de conțențutul lor.
  */
 export function resolveDoorPath(doorId: string): string {
   const door = getDoor(doorId)
@@ -246,6 +347,22 @@ export interface PathDef {
   lessons: Lesson[]
   /** Ziua dintre lecții. Index aliniat cu lessons: practices[i] urmează după lessons[i]. */
   practices: string[]
+  /**
+   * Dacă drumul are voie să fie PROPUS cuiva care tocmai a terminat alt drum.
+   *
+   * Nu e o setare de afișare, e o poartă de siguranță. Un drum ajunge aici cu
+   * `false` în două situații:
+   *   - e provizoriu, adică scris dar încă netrecut prin revizia cerută
+   *     (clinică pentru tristețe și anxietate, pastorală pentru ce atinge
+   *     căsnicia). Omul care l-a ales singur, prin ușa lui, îl primește; dar
+   *     nu i-l punem în față cuiva care nu l-a cerut. Un curs nerevizuit oferit
+   *     din proprie inițiativă e altceva decât unul cerut.
+   *   - e retras din circulație și rămâne doar pentru stările salvate vechi.
+   *
+   * Câmpul e OBLIGATORIU intenționat. Cine adaugă un drum nou trebuie să
+   * răspundă la întrebarea asta, nu să o uite.
+   */
+  offerAtPathEnd: boolean
 }
 
 /*
@@ -273,15 +390,17 @@ export const pathAcasa: PathDef = {
     "Azi doar observă: de câte ori spui «sunt» în loc de «am făcut». Nu te certa cu gândul — tradu-l într-o faptă anume.",
     "Azi, când îți revine fapta în minte, spune cu voce tare, o singură dată: «s-a plătit». Nu de zece ori.",
     "Azi ascultă cum te numești tu pe tine. Când vine eticheta, răspunde-i: «asta am făcut, nu asta sunt».",
-    "Ieri ai spus cu voce tare ce ascundeai. Azi nu adaugă nimic. Dacă vrei să spui și unui om, gândește-te o zi — nu e obligatoriu și nu e o condiție.",
+    "Ieri ai spus cu voce tare ce ascundeai. Azi nu adăuga nimic. Dacă vrei să spui și unui om, gândește-te o zi — nu e obligatoriu și nu e o condiție.",
     "Azi citește singur Romani 8, primele patru versete. Încet. Dacă gândul te ține treaz nopțile, sună 116 123 — nu e lipsă de credință.",
     "Ai terminat drumul. Azi caută omul căruia îi poți spune «m-am întors» când se întâmplă. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  offerAtPathEnd: true,
 }
 
 /*
  * Camera 2: "Nu e bun / m-a lăsat".
- * Intră aici doliul, boala, nedreptatea, divorțul, neiertarea, "unde era El?".
+ * Intră aici nedreptatea și neiertarea. Doliul, boala și "unde era El?" pornesc
+ * tot de aici ca tipar, dar primesc alt răspuns — vezi mai jos.
  *
  * ORDINEA CONTEAZĂ (docs/21 §2): camera începe cu cele două lecții despre cine e
  * Dumnezeu, spuse PRIN rana asta — "nu El ți-a făcut asta" (Iacov 1:17) și
@@ -293,6 +412,15 @@ export const pathAcasa: PathDef = {
  * numerotare, iar `neiertare_l1` mai conține prezentarea "Sunt Daniel", care
  * acum se face în `neiertare_o1`. De curățat la o trecere separată; ordinea
  * reală a drumului e array-ul `lessons`, nu `order`.
+ *
+ * REZOLVAT (docs/23 §3, defectul D2): patru uși cădeau aici și primeau un drum
+ * despre iertare, deși nu aveau pe cine ierta. `divort` a primit `path_divort`,
+ * iar `doliu`, `boala` și `de_ce_permis` au primit `path_suferinta`. Camera
+ * rămâne cu ușa pentru care a fost scrisă: `neiertare`.
+ *
+ * DE CE NU AU FOST MUTATE ÎN ALTĂ CAMERĂ: tiparul spiritual e chiar cel de aici
+ * — "dacă era bun, nu s-ar fi întâmplat". Nu tiparul era greșit, ci răspunsul.
+ * De aceea `roomId` le rămâne "c2" și doar `pathId` diferă.
  */
 export const pathNeiertare: PathDef = {
   id: "path_neiertare",
@@ -322,6 +450,109 @@ export const pathNeiertare: PathDef = {
     "Azi roagă-te pentru el o dată. O propoziție. Dacă nu-ți iese, spune-I lui Dumnezeu că nu-ți iese.",
     "Ai terminat drumul. Azi doar mulțumește. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  offerAtPathEnd: true,
+}
+
+/*
+ * DIVORȚUL. Ușă din camera 2, cu drum propriu.
+ *
+ * DE CE ARE DRUM PROPRIU (docs/23 §3, defectul D2): `divort` cădea în
+ * `path_neiertare`, adică omului care tocmai își pierduse casa i se dădea din
+ * prima zi un drum despre iertarea celui care l-a rănit. Uneori chiar asta e.
+ * De cele mai multe ori nu e: e doliu fără înmormântare, e vinovăție amestecată
+ * cu nedreptate, sunt copii la mijloc și e o întrebare despre recăsătorire la
+ * care nimeni nu i-a răspuns fără să-l judece.
+ *
+ * DE CE NU O CAMERĂ NOUĂ: `pathId` pe ușă e de ajuns, iar `resolveDoorPath` îl
+ * citește înaintea camerei. O cameră a noua ar fi însemnat un tipar spiritual
+ * nou, iar aici nu e vorba de un tipar nou. E o rană care nu încape întreagă în
+ * niciunul din cele opt.
+ *
+ * ORDINEA: doliu fără înmormântare (nimeni nu-ți spune "condoleanțe") → ce a
+ * spus Iisus, de fapt (Matei 19, "din pricina împietririi inimii voastre") →
+ * nu Dumnezeu ți-a rupt casa (1 Corinteni 7:15) → vina care e a ta și vina care
+ * nu e (Psalmul 51; 1 Ioan 1:9) → recăsătorirea → copiii, ceilalți, biserica
+ * (Romani 12:18) → ce urmează (Ioan 8:10-11; Isaia 43:19).
+ *
+ * REGULA CARE NU SE SCHIMBĂ (lecția 5): la recăsătorire Emanus NU dă verdict.
+ * Sunt puse pe masă trei citiri, toate ținute de creștini care iau Biblia în
+ * serios, iar omul e trimis la un păstor care îl cunoaște pe el, nu la noi. E
+ * singurul subiect din aplicație tratat așa. Nu se schimbă fără o decizie
+ * explicită în docs/14-carta-doctrinara.md.
+ *
+ * SIGURANȚĂ: lecția 1 are `safety.topic: "mental_health"`, lecția 3 are
+ * `"abuse"`. Nicăieri nu i se spune omului deja recăsătorit să-și rupă a doua
+ * căsnicie, și nicăieri nu se arată cu degetul către vreo denominațiune
+ * (docs/22 §6).
+ *
+ * NU E FUNDĂTURĂ (docs/21 §7 pct. 5): ultima practică trimite omul la ușa rănii
+ * care i-a rămas după cele șapte lecții.
+ */
+export const pathDivort: PathDef = {
+  id: "path_divort",
+  roomId: null,
+  title: "După divorț",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți spunem noi dacă ai voie să te recăsătorești și nu îți cerem să spui cine a fost de vină.",
+  lessons: DIVORT_LESSONS,
+  practices: DIVORT_PRACTICES,
+  offerAtPathEnd: true,
+}
+
+/*
+ * SUFERINȚA. Trei uși din camera 2, cu drum propriu: `doliu`, `boala`,
+ * `de_ce_permis`.
+ *
+ * DE CE ARE DRUM PROPRIU (docs/23 §3, defectul D2): toate trei cădeau în
+ * `path_neiertare`. Adică omul care tocmai își îngropase un părinte primea un
+ * drum despre cum să ierte pe cineva. De cele mai multe ori nu există niciun
+ * agresor de iertat. Moartea nu e o nedreptate făcută de o persoană, boala nu
+ * are pe cine să ierte, iar "de ce a permis Dumnezeu?" nu e o rană de la un om.
+ * `doliu` e ușă `common`, deci stătea în primele zece de pe ecran — era cel mai
+ * vizibil răspuns greșit din toată aplicația.
+ *
+ * PROVENIENȚĂ: lecțiile sunt aduse de pe ramura `codex/nolan-short-courses`
+ * (`suferinta.ts`, blob d0e68097), împărțite în `suferintaA.ts` și
+ * `suferintaB.ts`. Practicile nu existau acolo și au fost scrise pentru drumul
+ * ăsta.
+ *
+ * ORDINEA: pierderea e reală și are voie să fie numită (Psalmul 34:18) → e
+ * pedeapsă sau e o lume ruptă? (Ioan 9:1-3) → Iisus a plâns (Ioan 11:35) → când
+ * nu vine explicația (Iov 42:7; Psalmul 13) → ascultarea de astăzi, inclusiv
+ * medicul și oamenii (Galateni 6:2; 1 Regi 19) → speranță fără promisiuni false
+ * (Romani 8:22-25; Apocalipsa 21:4) → mergi mai departe fără să negi ce a fost
+ * (Plângerile 3:22-23).
+ *
+ * DE REPARAT (docs/25, decizia 9): cele trei uși trebuie să primească SECVENȚE
+ * diferite peste același bazin de lecții — `doliu` L1→L3→L4→L6→L7, `boala`
+ * L1→L2→L3→L4→L5→L6, `de_ce_permis` L1→L2→L4→L6. Acum toate trei primesc
+ * aceeași secvență fixă de șapte, deci omul cu doliu proaspăt ajunge a doua zi
+ * la lecția "e pedeapsă sau e o lume ruptă?", care e exact legătura interzisă.
+ * Reparația cere o structură peste `PathDef.lessons`, nu doar altă ordine în
+ * array, și se face separat.
+ *
+ * REGULA DOCTRINARĂ CARE NU SE SCHIMBĂ: Scriptura arată cazuri în care suferința
+ * e consecință sau disciplinare (1 Corinteni 11:29-32; Ioan 5:14), dar refuză
+ * transformarea lor în diagnostic universal (Iov 42:7; Ioan 9:1-3; Luca 13:1-5).
+ * Lecția 2 ține ambele capete și nu îi pune omului o vină în plus.
+ *
+ * SIGURANȚĂ (docs/22 §1): lecțiile 1 și 5 au `safety.topic: "mental_health"`.
+ * Nicio lecție nu promite vindecarea în viața aceasta, niciuna nu prezintă
+ * consultul medical ca lipsă de credință și niciuna nu cere iertare acolo unde
+ * nu există agresor.
+ *
+ * NU E FUNDĂTURĂ (docs/21 §7 pct. 5): ultima practică trimite omul către ușa
+ * rănii rămase, dacă a rămas una.
+ */
+export const pathSuferinta: PathDef = {
+  id: "path_suferinta",
+  roomId: null,
+  title: "Când doare și nu știi de ce",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți promitem că se vindecă și nu îți spunem că suferi pentru că ai greșit undeva.",
+  lessons: SUFERINTA_LESSONS,
+  practices: SUFERINTA_PRACTICES,
+  offerAtPathEnd: true,
 }
 
 /*
@@ -353,20 +584,26 @@ export const pathAproape: PathDef = {
     "Lucrul de la început pe care l-ai reluat ieri — fă-l și azi. A doua zi e mai greu decât prima.",
     "Ai terminat drumul. Azi ține întâlnirea de zece minute la ora pe care ai scris-o. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  offerAtPathEnd: true,
 }
 
 /*
  * Camera 5: "Nu mă pot schimba".
- * Intră aici dependența, recăderea, anxietatea, tristețea, furia.
+ * Intră aici dependența, recăderea și furia.
+ *
+ * MODIFICAT (docs/22 §1, docs/23 §3 defectul D1): anxietatea și tristețea au fost
+ * MUTATE de aici în camera 8. Camera asta spune omului "nu ești defect", dar
+ * minciuna ei de intrare rămâne "Sunt defect, asta sunt" — iar pentru un om cu
+ * anxietate sau depresie prima secundă conta cel mai mult.
  *
  * ORDINEA (docs/21 §2): nu începem cu "lasă-te de". Începem cu ce e omul — nu e
  * defect (Marcu 5; Psalmul 139). Apoi de ce cedează voința, apoi ce se taie, apoi
  * ce se pune în loc. Metoda vine după identitate, altfel e doar un alt program.
  *
- * SIGURANȚĂ (docs/22 §1, NENEGOCIABIL): aici sunt cele mai multe simptome cu
- * posibilă cauză medicală. Lecția 6 trimite explicit la medic și la 116 123,
- * lecția 5 la 0800 801 200 pentru alcool/droguri/jocuri. Nicio lecție din camera
- * asta nu spune omului că starea lui vine din lipsă de credință.
+ * SIGURANȚĂ (docs/22 §1, NENEGOCIABIL): și aici sunt simptome cu posibilă cauză
+ * medicală. Lecția 6 trimite explicit la medic și la 116 123, lecția 5 la
+ * 0800 801 200 pentru alcool/droguri/jocuri. Nicio lecție din camera asta nu
+ * spune omului că starea lui vine din lipsă de credință.
  */
 export const pathSchimbare: PathDef = {
   id: "path_schimbare",
@@ -392,6 +629,116 @@ export const pathSchimbare: PathDef = {
     "Azi un lucru pentru corp, nu pentru suflet: somn, mâncare, o plimbare. Și, dacă durează, sună la medic — nu e lipsă de credință.",
     "Ai terminat drumul. Azi spune UNUI om că te lupți cu ceva. Nu detalii — doar atât.",
   ],
+  offerAtPathEnd: true,
+}
+
+/*
+ * TRISTEȚEA. Camera 8, drum propriu. Ușa `tristete`.
+ *
+ * DE CE EXISTĂ SEPARAT (docs/25, decizia 7): până acum `tristete` și `anxietate`
+ * mergeau amândouă în `path_greutate`, adică primeau cuvânt cu cuvânt aceleași
+ * șapte lecții. Era exact defectul pe care camera 8 fusese creată să-l repare,
+ * doar mutat cu un nivel mai sus: în loc să le trimitem pe amândouă în `s1c_b`,
+ * le trimiteam pe amândouă în același drum. Frica și lipsa de chef nu se ating
+ * la fel. Unuia îi spui "doar până diseară"; celuilalt, care nu mai vede rostul
+ * lui diseară, propoziția asta nu-i spune nimic.
+ *
+ * ORDINEA: întâi siguranța (triaj, apoi numere, apoi orice altceva) → nu e lene
+ * și nu e lipsă de credință → trupul are cuvântul lui (Ilie primește somn și
+ * mâncare, 1 Regi 19) → cui îi spui și ce îi spui (Galateni 6:2) → dimineața,
+ * fără să mint (Plângerile 3:22-23).
+ *
+ * SIGURANȚĂ (docs/22 §1-§3, NENEGOCIABIL): lecția 1 începe cu ecran de
+ * avertizare și cu 112, 116 123 și 116 111 ÎNAINTEA oricărui verset. Triajul din
+ * `tr1_3` nu are niciun buton — nu e din lene, e ca să nu se salveze nimic
+ * (decizia 6: răspunsurile de screening sunt efemere prin construcție). Nicio
+ * lecție nu promite că trece, niciuna nu prezintă medicul sau psihologul ca
+ * lipsă de credință și niciuna nu cere omului să se bucure.
+ *
+ * PROVIZORIU (`offerAtPathEnd: false`, decizia 11): drumul are nevoie de revizie
+ * CLINICĂ înainte de merge, nu după. Omul care intră pe ușa lui îl primește;
+ * nu i-l propunem cuiva care tocmai a terminat alt drum.
+ *
+ * DE FĂCUT ÎN UI: ecranul de final al drumurilor provizorii trebuie să ofere
+ * Azi, Biblia, Ajutor ȘI Rugăciuni — `shouldInviteFirstPrayer()` nu se declanșează
+ * singur la cinci lecții. `PathEnd.tsx`, separat.
+ */
+export const pathTristete: PathDef = {
+  id: "path_tristete",
+  roomId: "c8",
+  title: "Când nu mai ai chef de nimic",
+  promise:
+    "Cinci lecții, una la două zile. Nu îți promitem că trece și nu îți spunem că e din lipsă de credință.",
+  lessons: TRISTETE_LESSONS,
+  practices: TRISTETE_PRACTICES,
+  offerAtPathEnd: false,
+}
+
+/*
+ * ANXIETATEA. Camera 8, drum propriu. Ușa `anxietate`.
+ *
+ * DE CE EXISTĂ SEPARAT: vezi `pathTristete` mai sus. Aceeași cameră, aceeași
+ * minciună de intrare — "dacă aș avea destulă credință, aș fi bine" — dar alt
+ * răspuns.
+ *
+ * CE E INTERZIS AICI (docs/25, harta ușilor): "schimbarea comportamentului ca
+ * ramă". Omului cu anxietate nu i se dă un program de îndreptare, pentru că
+ * exact asta a fost defectul care ținea ușa în `path_schimbare`. Nu are nimic
+ * de corectat la el; are nevoie de unelte care se folosesc în autobuz, la trei
+ * noaptea.
+ *
+ * ORDINEA: frica nu e dovada că ai credință puțină (Isaia 41:10) → trupul tău nu
+ * te minte, ce e un atac de panică (1 Regi 19) → doar până mâine dimineață
+ * (Matei 6:34) → ce faci cu grija, concret (Filipeni 4:6-7) → nu e făcut să fie
+ * dus singur (1 Petru 5:7).
+ *
+ * SIGURANȚĂ (docs/22 §1-§3): lecția 1 are `safety.topic: "mental_health"` și
+ * numerele înaintea versetelor. Se spune explicit că anxietatea poate avea cauze
+ * medicale, că tratamentul nu e lipsă de credință și că un atac de panică nu e
+ * un atac spiritual.
+ *
+ * PROVIZORIU (`offerAtPathEnd: false`, decizia 11): la fel ca tristețea, cere
+ * revizie clinică înainte de merge.
+ */
+export const pathAnxietate: PathDef = {
+  id: "path_anxietate",
+  roomId: "c8",
+  title: "Când ți-e frică tot timpul",
+  promise:
+    "Cinci lecții, una la două zile. Nu îți cerem să te calmezi și nu îți spunem că frica e semn de credință slabă.",
+  lessons: ANXIETATE_LESSONS,
+  practices: ANXIETATE_PRACTICES,
+  offerAtPathEnd: false,
+}
+
+/*
+ * RETRAS. `path_greutate` a fost drumul comun al camerei 8 și nu mai e folosit
+ * de nicio ușă.
+ *
+ * DE CE A FOST RETRAS (docs/25, decizia 7): dădea aceleași șapte lecții și
+ * omului cu anxietate, și celui care nu mai are chef de nimic. Camera 8 a fost
+ * făcută ca să repare exact genul ăsta de amestec; drumul comun îl reproducea
+ * pe dinăuntru. Acum ușile merg în `path_tristete` și `path_anxietate`.
+ *
+ * DE CE NU E ȘTERS DE TOT: dacă cineva are deja `pathId: "path_greutate"` salvat
+ * în `emanus_journey_v1`, `getPath` trebuie să-i întoarcă tot ceva, nu
+ * `undefined`. Rămâne în `PATHS` ca stările vechi să se citească, dar cu
+ * `offerAtPathEnd: false`, deci nu se propune nimănui. Ștergerea completă,
+ * împreună cu `greutate.ts` și cu o migrare care mută stările vechi pe unul din
+ * cele două drumuri noi, se face separat.
+ *
+ * NU SE ADAUGĂ UȘI AICI. Dacă îți trebuie o ușă nouă în camera 8, alege între
+ * `path_tristete` și `path_anxietate` sau scrie un drum al treilea.
+ */
+export const pathGreutate: PathDef = {
+  id: "path_greutate",
+  roomId: "c8",
+  title: "Când nu mai ai putere",
+  promise:
+    "Șapte lecții, una la două zile. Nu îți promitem că trece și nu îți spunem că e din lipsă de credință.",
+  lessons: GREUTATE_LESSONS,
+  practices: GREUTATE_PRACTICES,
+  offerAtPathEnd: false,
 }
 
 /*
@@ -423,6 +770,7 @@ export const pathHar: PathDef = {
     "Lucrul pe care l-ai umplut ieri — fă-l și azi la fel, încet, uitându-te la El.",
     "Ai terminat drumul. Azi primește ceva fără să dai nimic în schimb. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  offerAtPathEnd: true,
 }
 
 /*
@@ -462,24 +810,55 @@ export const pathImpreuna: PathDef = {
     "Dacă ai trimis mesajul și ți-a răspuns, propune ceva concret: o cafea, o plimbare, o oră. Dacă nu ți-a răspuns, nu înseamnă nimic despre tine.",
     "Ai terminat drumul. Azi fă un lucru pentru cineva mai singur decât tine. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  offerAtPathEnd: true,
 }
 
 /*
  * Temelia. Camera 3 ("nu e real") și drumul propriu al omului care spune "vreau
  * doar să-L cunosc" — pentru el nu e supliment, e drumul.
+ *
+ * REZOLVAT (docs/23 §3, defectul D3): camera avea trei lecții împrumutate din
+ * doctrina generală. Erau trei probleme, nu una:
+ *   1. patru uși diferite — `indoiala`, `nu_inteleg`, `biblia_inventata` și
+ *      `alte_credinte` — primeau același răspuns scurt;
+ *   2. aceleași `doctrinaL1..L3` se dădeau oricum tuturor prin
+ *      `DOCTRINE_UNLOCK_AFTER`, deci cine intra aici le primea de două ori;
+ *   3. ușile `inceput` și `nu_stiu` cad tot aici, iar pentru ei ăsta e drumul,
+ *      nu un supliment.
+ * Acum sunt șapte lecții scrise, în `temelieA.ts`, `temelieB.ts`, `temelieC.ts`.
+ *
+ * ORDINEA: îndoiala are voie (Toma, Marcu 9:24) → ce se poate verifica (Luca 1:1-4)
+ * → cine a scris Biblia și cum a ajuns la noi → nu o religie, un Om (Marcu 2) →
+ * energii, karma, univers (Fapte 17, Areopag) → cum se citește ca să înțelegi
+ * (Fapte 8, famenul) → ce faci cu ce ai aflat (Ioan 7:17).
+ *
+ * ONESTITATE (docs/22 §1): lecția 2 spune explicit că nimic din ce urmează nu
+ * dovedește că Dumnezeu există, doar că documentele sunt documente. Lecția 3
+ * recunoaște că manuscrisele diferă între ele și trimite omul la notele de
+ * subsol din propria lui Biblie, la Marcu 16 și Ioan 8. Alternativa — să
+ * pretindem că nu există diferențe — se sparge prima dată când omul citește o
+ * notă de subsol și se simte mințit.
+ *
+ * FĂRĂ PRESIUNE: lecția 7 nu cere nicio rugăciune de decizie ca să treci mai
+ * departe, iar pasul `t7_10` are "Nu acum" ca opțiune la fel de validă.
+ *
+ * NU E FUNDĂTURĂ (docs/21 §7 pct. 5): pasul `t7_11` trimite omul la camera rănii
+ * care i-a ieșit la suprafață în cele șapte lecții, sau la Umblarea dacă vrea
+ * mai adânc.
+ *
+ * SIGURANȚĂ: nicio lecție de aici nu are ecran de avertizare, pentru că niciuna
+ * nu atinge abuz, autovătămare sau pierdere. Singura trimitere la ajutor real e
+ * în lecția 5, pentru frica rămasă după practici oculte (docs/22 §1).
  */
 export const pathTemelie: PathDef = {
   id: "path_temelie",
   roomId: "c3",
   title: "De la zero",
   promise:
-    "Trei lecții, una la două zile. Fără presupunerea că știi ceva dinainte și fără să te facă nimeni să te simți prost că întrebi.",
-  lessons: [doctrinaL1, doctrinaL2, doctrinaL3],
-  practices: [
-    "Azi citește singur zece versete din Evanghelia după Ioan, capitolul 1. Nu trebuie să înțelegi tot. Doar citește-le.",
-    "Azi observă de câte ori încerci să meriți ceva: la muncă, acasă, în cap. Nu schimba nimic. Doar observă.",
-    "Ai terminat. Azi spune-I, cu cuvintele tale, ce crezi și ce încă nu crezi. Nu Se supără de partea a doua.",
-  ],
+    "Șapte lecții, una la două zile. Fără presupunerea că știi ceva dinainte și fără să te facă nimeni să te simți prost că întrebi.",
+  lessons: TEMELIE_LESSONS,
+  practices: TEMELIE_PRACTICES,
+  offerAtPathEnd: true,
 }
 
 /*
@@ -508,14 +887,20 @@ export const pathUmblare: PathDef = {
     "Azi fă exact ce ai face dacă ai simți. Și spune-I: «nu simt nimic și totuși sunt aici».",
     "Ai terminat drumul. Azi caută omul căruia îi spui cele trei propoziții. Întreabă-l ce mai face.",
   ],
+  offerAtPathEnd: true,
 }
 
 export const PATHS: PathDef[] = [
   pathAcasa,
   pathNeiertare,
+  pathDivort,
+  pathSuferinta,
   pathTemelie,
   pathAproape,
   pathSchimbare,
+  pathTristete,
+  pathAnxietate,
+  pathGreutate,
   pathHar,
   pathImpreuna,
   pathUmblare,
@@ -538,9 +923,15 @@ export function findLessonAnywhere(lessonId: string): Lesson | undefined {
   return DOCTRINE_LESSONS.find((l) => l.id === lessonId)
 }
 
-/** Drumurile pe care le poate începe cineva care tocmai a terminat `pathId`. */
+/**
+ * Drumurile pe care le poate începe cineva care tocmai a terminat `pathId`.
+ *
+ * Se filtrează pe `offerAtPathEnd`, nu doar pe id. (docs/25, decizia 11)
+ * Un drum provizoriu sau retras nu se propune din inițiativa noastră: omul care
+ * intră pe ușa lui l-a cerut, cel care tocmai a terminat altceva nu.
+ */
 export function otherPaths(pathId: string | null | undefined): PathDef[] {
-  return PATHS.filter((p) => p.id !== pathId)
+  return PATHS.filter((p) => p.id !== pathId && p.offerAtPathEnd)
 }
 
 /*
@@ -615,6 +1006,15 @@ export function planToday(
  * Se deschide DUPĂ lecția 5 din parcursul personal — nu înainte.
  * Nimeni nu învață despre canonul Scripturii înainte să afle că e iubit.
  * Apoi: o lecție de doctrină la fiecare trei lecții personale.
+ *
+ * NOTĂ (docs/23 §3, D3): înainte, camera 3 servea `doctrinaL1..L3` ca parcurs
+ * propriu, deci omul intrat pe `path_temelie` primea aceleași trei lecții și
+ * aici, și prin deblocarea de mai jos. Acum camera 3 are lecțiile ei, iar
+ * doctrina generală rămâne un singur canal, pentru toate camerele.
+ *
+ * DE ȘTIUT PENTRU DRUMURILE DE CINCI LECȚII: `path_tristete` și `path_anxietate`
+ * au cinci lecții, iar deblocarea se face la a cincea. Cine termină drumul
+ * primește doctrina exact atunci, nu mai devreme.
  */
 export const DOCTRINE_UNLOCK_AFTER = 5
 

@@ -34,6 +34,7 @@ export interface JourneyState {
   /** A văzut ecranele de primul contact (ce e Emanus). */
   seenWelcome: boolean
   pathId: string | null
+  /** Cursor pe drumul CURENT. Se pune la zero la fiecare schimbare de drum. */
   lessonsDone: number
   /** Câte lecții de doctrină generală a terminat, în ordine. */
   doctrineDone: number
@@ -45,6 +46,27 @@ export interface JourneyState {
   prayers: Prayer[]
   /** Marcat când omul a văzut ecranul de final de parcurs. */
   pathCompletedSeen: boolean
+
+  /*
+   * ISTORICUL, nu cursorul.
+   *
+   * `lessonsDone` de mai sus se pierde la fiecare `chooseDoor` sau `switchPath`.
+   * Așa trebuie: e poziția pe drumul curent. Dar înseamnă că până acum aplicația
+   * nu ținea minte NIMIC din ce a făcut omul înainte. Cine termina tristețea,
+   * apoi anxietatea, apoi neiertarea avea trei drumuri în spate și zero în
+   * memorie.
+   *
+   * Drumul Emaus numără lecții pe cele șase axe, din tot ce a făcut omul, oricând.
+   * Fără lista asta, harta ar arăta ceată unui om care a mers luni de zile — adică
+   * exact mesajul că nimic nu contează.
+   */
+  completedLessonIds: string[]
+  /** Stația maximă atinsă vreodată. Progresul nu dă înapoi când publicăm conținut nou. */
+  emmausMaxStation: number
+  /** Prima dată când a fost văzută fiecare stație, ca să nu repetăm animația de sosire. */
+  emmausStationSeenAt: Record<string, string>
+  /** Crucea e deschisă de la zero. Ținem minte doar că a fost, niciodată ca scor. */
+  crossVisitedAt: string | null
 }
 
 const EMPTY: JourneyState = {
@@ -57,6 +79,10 @@ const EMPTY: JourneyState = {
   journal: [],
   prayers: [],
   pathCompletedSeen: false,
+  completedLessonIds: [],
+  emmausMaxStation: 1,
+  emmausStationSeenAt: {},
+  crossVisitedAt: null,
 }
 
 export function today(): string {
@@ -72,11 +98,67 @@ function daysBetween(fromIso: string, toIso: string): number {
   return Math.round((b.getTime() - a.getTime()) / 86400000)
 }
 
+/**
+ * Aduce o stare salvată la forma curentă.
+ *
+ * Oamenii care au aplicația de dinainte de Drumul Emaus au în localStorage o stare
+ * fără `completedLessonIds`. Dacă i-am lăsa așa, harta lor ar porni de la zero deși
+ * au muncit. Recuperăm ce se poate din două surse sigure: lecțiile din drumul curent
+ * până la cursor, și lecțiile la care au scris ceva în jurnal (acelea sunt terminate
+ * prin definiție, indiferent pe ce drum erau).
+ *
+ * Ce s-a pierdut definitiv — drumuri terminate înainte de a schimba drumul — nu se
+ * poate recupera. Nu a fost salvat niciodată.
+ *
+ * DE CE SE VERIFICĂ `raw` ȘI NU `s`:
+ *
+ * Ce iese din `JSON.parse` sau din nor NU are tipul pe care i-l dăm noi.
+ * `Partial<JourneyState>` e o promisiune despre date scrise de o versiune mai veche
+ * a aplicației, nu o garanție. Dacă verificăm pe `s`, compilatorul citește tipul
+ * declarat și consideră verificarea imposibilă: pentru el `emmausStationSeenAt` e
+ * `Record<string, string>`, deci `=== null` nu se poate întâmpla niciodată și e
+ * eroare de compilare, nu avertisment. În realitate se poate întâmpla foarte bine —
+ * exact de-aia există funcția asta. Verificăm deci pe valoarea netipizată, unde
+ * întrebarea are sens, și scriem rezultatul în `s`, unde tipul e din nou ferm.
+ *
+ * Asta a picat CI-ul o dată; typecheck-ul nu vede diferența dintre date pe care le
+ * scriem noi și date pe care doar le primim.
+ */
+function normalizeJourneyState(parsed: Partial<JourneyState>): JourneyState {
+  const s: JourneyState = { ...EMPTY, ...parsed }
+  const raw = parsed as Record<string, unknown>
+
+  if (!Array.isArray(raw.completedLessonIds)) s.completedLessonIds = []
+  if (!Array.isArray(raw.journal)) s.journal = []
+  if (!Array.isArray(raw.prayers)) s.prayers = []
+  if (typeof raw.emmausMaxStation !== "number" || raw.emmausMaxStation < 1) {
+    s.emmausMaxStation = 1
+  }
+  if (typeof raw.emmausStationSeenAt !== "object" || raw.emmausStationSeenAt === null) {
+    s.emmausStationSeenAt = {}
+  }
+  if (typeof raw.crossVisitedAt !== "string") s.crossVisitedAt = null
+
+  if (s.completedLessonIds.length === 0) {
+    const recovered = new Set<string>()
+    const path = getPath(s.pathId)
+    if (path && s.lessonsDone > 0) {
+      for (const lesson of path.lessons.slice(0, s.lessonsDone)) recovered.add(lesson.id)
+    }
+    for (const entry of s.journal) {
+      if (entry?.lessonId) recovered.add(entry.lessonId)
+    }
+    if (recovered.size > 0) s.completedLessonIds = [...recovered]
+  }
+
+  return s
+}
+
 export function load(): JourneyState {
   try {
     const raw = localStorage.getItem(K)
     if (!raw) return { ...EMPTY }
-    return { ...EMPTY, ...(JSON.parse(raw) as Partial<JourneyState>) }
+    return normalizeJourneyState(JSON.parse(raw) as Partial<JourneyState>)
   } catch {
     return { ...EMPTY }
   }
@@ -112,7 +194,7 @@ export async function hydrateFromCloud(): Promise<boolean> {
   const local = load()
   const remote = await pullState()
   if (remote && isEmpty(local) && !isEmpty(remote)) {
-    writeLocal(remote)
+    writeLocal(normalizeJourneyState(remote))
     return true
   }
   if (!isEmpty(local)) void pushState(local)
@@ -133,6 +215,11 @@ export function hasStarted(): boolean {
   return load().pathId !== null
 }
 
+/*
+ * Atenție la `chooseDoor` și `switchPath`: amândouă pun `lessonsDone` la zero, și
+ * așa trebuie să facă — e cursorul pe drumul nou. Dar NU au voie să atingă
+ * `completedLessonIds`. Ce a făcut omul rămâne făcut, oricare ușă alege după aceea.
+ */
 export function chooseDoor(pathId: string): JourneyState {
   const s = load()
   return save({
@@ -178,10 +265,15 @@ export function completeLesson(lessonId: string, journalText: string): JourneySt
     ? [...s.journal.filter((j) => j.lessonId !== lessonId), { lessonId, text: journalText.trim(), date: today() }]
     : s.journal
 
+  // Istoricul crește o singură dată per lecție, indiferent de câte ori se reia.
+  const completedLessonIds = s.completedLessonIds.includes(lessonId)
+    ? s.completedLessonIds
+    : [...s.completedLessonIds, lessonId]
+
   // Doctrina făcută ca supliment nu consumă ziua și nu avansează parcursul personal.
   // Excepție: pe drumul "De la zero", aceleași lecții sunt chiar parcursul.
   if (lessonId.startsWith("doctrina_") && s.pathId !== "path_temelie") {
-    return save({ ...s, doctrineDone: s.doctrineDone + 1, journal })
+    return save({ ...s, doctrineDone: s.doctrineDone + 1, journal, completedLessonIds })
   }
 
   return save({
@@ -189,6 +281,7 @@ export function completeLesson(lessonId: string, journalText: string): JourneySt
     lessonsDone: Math.max(s.lessonsDone, indexOfLesson(lessonId) + 1),
     lastLessonDate: today(),
     journal,
+    completedLessonIds,
   })
 }
 
@@ -206,7 +299,7 @@ export function markPathSeen(): void {
   save({ ...load(), pathCompletedSeen: true })
 }
 
-/** Trece pe alt drum, păstrând tot ce a scris (jurnal și rugăciuni). */
+/** Trece pe alt drum, păstrând tot ce a scris (jurnal și rugăciuni) și tot ce a terminat. */
 export function switchPath(pathId: string): JourneyState {
   const s = load()
   return save({
@@ -228,6 +321,39 @@ export function resetJourney(): void {
     prayers: s.prayers,
     journal: s.journal,
   })
+}
+
+// --- Drumul Emaus (docs/43) ---
+
+/** Toate lecțiile terminate, din toate drumurile. Intrarea în motorul hărții. */
+export function completedLessons(): string[] {
+  return load().completedLessonIds
+}
+
+/**
+ * Ține minte că s-a ajuns la o stație. Se scrie doar în sus, niciodată în jos:
+ * când publicăm conținut nou, numitorul crește și procentul ar scădea de la sine.
+ * Un om care a ajuns la mormântul gol nu are voie să fie trimis înapoi la deal
+ * pentru că noi am mai scris trei cărți.
+ */
+export function recordEmmausStation(stationId: number): JourneyState {
+  const s = load()
+  if (stationId <= s.emmausMaxStation && s.emmausStationSeenAt[String(stationId)]) return s
+  return save({
+    ...s,
+    emmausMaxStation: Math.max(s.emmausMaxStation, stationId),
+    emmausStationSeenAt: {
+      ...s.emmausStationSeenAt,
+      [String(stationId)]: s.emmausStationSeenAt[String(stationId)] ?? today(),
+    },
+  })
+}
+
+/** A fost la Cruce. Fără procent, fără XP, nu se marchează ca lecție. (docs/43 §2, P1) */
+export function markCrossVisited(): void {
+  const s = load()
+  if (s.crossVisitedAt) return
+  save({ ...s, crossVisitedAt: today() })
 }
 
 // --- Memorialul: rugăciuni și răspunsuri (docs/20; cârligul lung) ---

@@ -13,6 +13,7 @@ const Bible = lazy(() => import("./screens/Bible").then((m) => ({ default: m.Bib
 const BibleChapterScreen = lazy(() => import("./screens/Bible").then((m) => ({ default: m.BibleChapterScreen })))
 const Ask = lazy(() => import("./screens/Ask").then((m) => ({ default: m.Ask })))
 const PathEnd = lazy(() => import("./screens/PathEnd").then((m) => ({ default: m.PathEnd })))
+const EmmausMap = lazy(() => import("./screens/EmmausMap").then((m) => ({ default: m.EmmausMap })))
 const Prayers = lazy(() => import("./screens/Prayers").then((m) => ({ default: m.Prayers })))
 const Today = lazy(() => import("./screens/Today").then((m) => ({ default: m.Today })))
 const Welcome = lazy(() => import("./screens/Welcome").then((m) => ({ default: m.Welcome })))
@@ -41,6 +42,7 @@ export default function App() {
   if (route.name === "ds") screen = <Gallery />
   else if (route.name === "crisis") screen = <Crisis onBack={() => navigate("/")} />
   // Cardul primit de la cineva se deschide si fara cont: ajungi la verset, nu la un zid.
+  // Randul asta sta dinadins INAINTEA portii de bun venit.
   else if (route.name === "message") screen = <main key={route.id ?? "mesaj"} className="app route-anim"><HelpButton /><Mesaj cardId={route.id} /></main>
   else if (!hasStarted() && !hasSeenWelcome() && route.name !== "doors") screen = <main className="app route-anim"><Welcome /></main>
   else if (route.name === "doors" || !hasStarted()) screen = <main className="app route-anim"><HelpButton /><Doors /></main>
@@ -50,6 +52,7 @@ export default function App() {
   else if (route.name === "bibleChapter") screen = <main key={`${route.bookId}-${route.chapter}`} className="app route-anim app--tabbed"><HelpButton /><BibleChapterScreen bookId={route.bookId} chapter={route.chapter} /><Tabs active="bible" /></main>
   else if (route.name === "ask") screen = <main key={route.despre ?? "ask"} className="app route-anim app--tabbed"><HelpButton /><Ask despre={route.despre} /><Tabs active="ask" /></main>
   else if (route.name === "pathend") screen = <main className="app route-anim app--tabbed"><HelpButton /><PathEnd /><Tabs active="today" /></main>
+  else if (route.name === "emmaus") screen = <main className="app route-anim app--tabbed"><HelpButton /><EmmausMap /><Tabs active="today" /></main>
   else if (route.name === "devotional") screen = <main className="app route-anim app--tabbed"><HelpButton /><Devotional /><Tabs active="today" /></main>
   else if (route.name === "scroll") screen = <main className="app route-anim app--tabbed"><HelpButton /><Pergament /><Tabs active="today" /></main>
   else if (route.name === "lamp") screen = <main className="app route-anim app--tabbed"><HelpButton /><Candela /><Tabs active="today" /></main>

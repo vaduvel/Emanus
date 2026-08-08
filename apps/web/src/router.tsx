@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
  * Rutele aplicației, după reducere. (docs/20 §8)
  *
  * Ecrane vii: /intrare, / (Azi), /lesson/:id, /rugaciuni, /biblioteca, /biblia,
- * /biblia/:carte/:capitol, /intreaba, /final, /criza.
+ * /biblia/:carte/:capitol, /intreaba, /final, /drum, /criza.
  * Ecranele vechi (comunitate, familie, mentorat, dashboard, recomandare,
  * creștere) rămân în cod, dar nu mai sunt legate nicăieri: se reintroduc pe
  * rând, după ce parcursul e testat pe oameni reali. Din bara de jos lipsesc
@@ -23,6 +23,11 @@ import { useEffect, useState } from "react"
  * bara de jos: se intră din „Azi”. /mesaj/:id există ca link public — cine
  * primește un card ajunge direct la verset, nu la un ecran de reclamă.
  * /legamant e Legământul familiei (faza G): se intră din devoțional, nu din bară.
+ *
+ * /drum e Drumul Emaus (docs/43): harta celor opt stații. NU e poartă de
+ * intrare și nu e obligatorie. Se ajunge la ea de la finalul unui parcurs, dar
+ * poate intra oricine, oricând, inclusiv cineva care nu a făcut nicio lecție —
+ * pentru că pe ea stă butonul către Cruce, iar acela nu se blochează niciodată.
  */
 export type Route =
   | { name: "today" }
@@ -33,6 +38,7 @@ export type Route =
   | { name: "bibleChapter"; bookId: string; chapter: number }
   | { name: "ask"; despre?: string }
   | { name: "pathend" }
+  | { name: "emmaus" }
   | { name: "crisis" }
   | { name: "ds" }
   | { name: "lesson"; id?: string }
@@ -68,6 +74,7 @@ export function parseRoute(): Route {
   if (h === "/rugaciuni") return { name: "prayers" }
   if (h === "/biblioteca") return { name: "library" }
   if (h === "/final") return { name: "pathend" }
+  if (h === "/drum") return { name: "emmaus" }
   if (h === "/criza" || h === "/crisis") return { name: "crisis" }
   if (h === "/devotional") return { name: "devotional" }
   if (h === "/pergament") return { name: "scroll" }
