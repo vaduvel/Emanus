@@ -14,6 +14,19 @@ import { navigate } from "../router"
  * Și, imediat după: ce urmează. Un om care termină un drum și rămâne cu un ecran
  * gol închide aplicația și nu mai revine.
  *
+ * ORDINEA DE AICI E STRATEGIA APLICAȚIEI, nu o preferință de așezare în pagină.
+ *
+ * Omul intră printr-o durere: o ușă, sau o categorie de vârstă. Face un parcurs
+ * scurt și ajunge aici. Dacă tot ce-i oferim în clipa asta e o listă de alte
+ * dureri prin care ar putea trece, aplicația e un raft de cursuri despre
+ * suferință. De aceea primul lucru de după parcurs e Drumul Emaus: nu încă o
+ * rană de rezolvat, ci drumul întreg, în care rana prin care a intrat era doar
+ * primul kilometru. Abia după ce merge acolo se deschide ucenicia — exact
+ * ordinea din Luca 24, unde trimiterea vine după ce Iisus li Se descoperă, nu
+ * înainte.
+ *
+ * Celelalte ieșiri rămân toate, dedesubt. Nu îl obligăm nimeni pe hartă.
+ *
  * PATRU IEȘIRI, NU UNA (docs/25, drumurile provizorii): pe lângă lista de
  * drumuri, ecranul trebuie să ofere Azi, Biblia, Ajutor și Rugăciuni. Motivul e
  * concret: `path_tristete` și `path_anxietate` au cinci lecții, nu șapte, deci
@@ -71,10 +84,35 @@ export function PathEnd() {
         Drumul ăsta s-a terminat. Relația, nu. Mâine e tot o zi în care poți vorbi cu El.
       </p>
 
-      {/* Ce urmează — concret, cu nume, nu „explorează”. */}
+      {/*
+        * Drumul Emaus. Primul lucru de după parcurs, înaintea oricărei alte uși.
+        * Fără procent și fără "ai deblocat" — e o invitație, nu o recompensă.
+        */}
+      <div className="pathend__emmaus">
+        <p className="today__kicker">Mai e ceva</p>
+        <h2 style={{ marginTop: 4 }}>Drumul Emaus</h2>
+        <p>
+          În ziua învierii, doi oameni mergeau spre satul Emaus. Plecau din Ierusalim cu spatele
+          la tot ce speraseră. Cineva S-a apropiat și a mers alături de ei kilometri întregi,
+          și ei nu L-au recunoscut.
+        </p>
+        <p>
+          Drumul acela are opt opriri. A patra e Golgota — la mijloc, nu la sfârșit, pentru că
+          nici acolo nu s-a terminat. E harta pe care se vede tot ce ai mers, nu doar drumul de
+          acum.
+        </p>
+        <p className="muted">Ce ai făcut până azi e deja pe ea.</p>
+        <button type="button" onClick={() => leave("/drum")}>
+          Vezi unde ai ajuns <ArrowRight size={18} aria-hidden />
+        </button>
+      </div>
+
+      {/* Alte uși — concret, cu nume, nu „explorează”. Dar după hartă, nu înaintea ei. */}
       {next.length > 0 && (
         <>
-          <p className="today__kicker">De aici poți merge mai departe</p>
+          <p className="today__kicker" style={{ marginTop: 22 }}>
+            Sau, dacă te doare și altceva
+          </p>
           <ul className="doors__list">
             {next.map((p) => (
               <li key={p.id}>
