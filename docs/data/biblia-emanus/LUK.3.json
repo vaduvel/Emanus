@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-editorial-2026-08-08-luk-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 38,
       "reviewed": 38,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 38 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 38 de versete din LUK.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost verificate referenții, negările, imperativele, formele verbale și numele proprii față de textul principal SBLGNT.",
+        "Genealogia urmează numele și ordinea SBLGNT, inclusiv Ioseh, Isus și Sala, fără armonizare automată cu RP.",
+        "Formulările rămân română proprie, după confruntare directă cu sursele fixate."
       ]
     },
     "theologicalContext": {
@@ -123,24 +122,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 246,
-        "primary": 575,
-        "secondary": 329,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.4739268246110474,
-      "minimumScore": 0.4668938388149379
-    },
-    "textDigest": "sha256:2e9327740980699a0412e51d774b72ef150fa0e5b7a2603742b15c213c12a952",
-    "contentDigest": "sha256:e30745229a5e58fd9a6fc2bd2e3d59c4dd82892d14e88db8d8918c041c92fdf7"
+    "textDigest": "sha256:658f6e7d0eb3c921de4d6cd84048c72fd771aee48c52e1c5795d334c216adb82",
+    "contentDigest": "sha256:b950a9727fd9b2db9f537dd235ae0a5e7a4a2f4a3959b47c66feedcb9ed569fd"
   },
   "verses": [
     {
@@ -245,7 +234,7 @@
     },
     {
       "number": 26,
-      "text": "fiul lui Maat, fiul lui Matatia, fiul lui Semein, fiul lui Iosif, fiul lui Iuda,"
+      "text": "fiul lui Maat, fiul lui Matatia, fiul lui Semein, fiul lui Ioseh, fiul lui Iuda,"
     },
     {
       "number": 27,
@@ -257,7 +246,7 @@
     },
     {
       "number": 29,
-      "text": "fiul lui Iose, fiul lui Eliezer, fiul lui Iorim, fiul lui Matat, fiul lui Levi,"
+      "text": "fiul lui Isus, fiul lui Eliezer, fiul lui Iorim, fiul lui Matat, fiul lui Levi,"
     },
     {
       "number": 30,
@@ -269,7 +258,7 @@
     },
     {
       "number": 32,
-      "text": "fiul lui Isai, fiul lui Obed, fiul lui Boaz, fiul lui Salmon, fiul lui Nahșon,"
+      "text": "fiul lui Isai, fiul lui Obed, fiul lui Boaz, fiul lui Sala, fiul lui Nahșon,"
     },
     {
       "number": 33,
