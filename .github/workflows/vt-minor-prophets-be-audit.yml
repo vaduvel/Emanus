@@ -26,6 +26,8 @@ jobs:
           set -euo pipefail
           curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
           curl --fail --location --retry 3 --output /tmp/hboWLC_current.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/ronbtf_current.zip https://ebible.org/Scriptures/ronbtf_usfm.zip
+          curl --fail --location --retry 3 --output /tmp/ron1924_current.zip https://ebible.org/Scriptures/ron1924_usfm.zip
 
       - name: Capture NEW deterministic HOS-MAL source snapshot
         run: |
@@ -52,6 +54,17 @@ jobs:
       - name: Validate completed Osea reviewed candidate
         run: python3 scripts/check-hosea-reviewed-candidate.py
 
+      - name: Materialize canonical Osea BE candidate
+        run: |
+          python3 scripts/promote-hosea-to-biblia-emanus.py \
+            --webu-zip /tmp/engwebp_current.zip \
+            --wlc-zip /tmp/hboWLC_current.zip \
+            --btf-zip /tmp/ronbtf_current.zip \
+            --cornilescu-zip /tmp/ron1924_current.zip
+
+      - name: Validate canonical Osea publication gate
+        run: python3 scripts/check-biblia-emanus-book.py --book HOS
+
       - name: Validate Osea reader integration
         run: |
           set -euo pipefail
@@ -60,13 +73,18 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm check:vt-publication
 
-      - name: Commit fresh source lock and Osea re-audit evidence
+      - name: Commit fresh source lock and Osea canonical evidence
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             docs/data/biblia-emanus/sources/ot-minor-prophets-2026-08-07-usfm.zip \
+            docs/data/biblia-emanus/sources/ot-hosea-2026-08-08-usfm.zip \
             docs/data/biblia-emanus/minor-prophets-source-lock.json \
+            docs/data/biblia-emanus/source-lock.json \
+            docs/data/biblia-emanus/source-ledger.json \
+            docs/data/biblia-emanus/manifest.json \
+            docs/data/biblia-emanus/HOS.*.json \
             docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json \
             docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json \
             docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-1-2.json \
@@ -75,8 +93,8 @@ jobs:
             docs/biblia-explicata/minor-prophets-reaudit/HOS
           git diff --cached --check
           if git diff --cached --quiet; then
-            echo 'Snapshotul, lock-ul și pachetul Osea sunt deja actuale.'
+            echo 'Snapshoturile, registrele și candidatul canonic Osea sunt deja actuale.'
             exit 0
           fi
-          git commit -m "audit(bible): split Osea for semantic re-audit"
+          git commit -m "feat(bible): materialize canonical Osea candidate"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
