@@ -13,7 +13,9 @@ export type ExplainedSource =
     }
   | {
       kind: "biblia-emanus"
-      note: "rezumat narativ fără doctrină adăugată"
+      note:
+        | "rezumat narativ fără doctrină adăugată"
+        | "rezumat textual fără doctrină adăugată"
     }
 
 export type ExplanationKind = "exposition" | "textual-overview"
