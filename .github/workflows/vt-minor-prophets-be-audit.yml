@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: vt-minor-prophets-audit-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   capture-and-audit:
     if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
@@ -26,76 +30,42 @@ jobs:
           set -euo pipefail
           curl --fail --location --retry 3 --output /tmp/engwebp_current.zip https://ebible.org/Scriptures/engwebp_usfm.zip
           curl --fail --location --retry 3 --output /tmp/hboWLC_current.zip https://ebible.org/Scriptures/hboWLC_usfm.zip
-          curl --fail --location --retry 3 --output /tmp/ronbtf_current.zip https://ebible.org/Scriptures/ronbtf_usfm.zip
-          curl --fail --location --retry 3 --output /tmp/ron1924_current.zip https://ebible.org/Scriptures/ron1924_usfm.zip
 
-      - name: Capture NEW deterministic HOS-MAL source snapshot
+      - name: Capture deterministic HOS-MAL source snapshot
         run: |
           python3 scripts/capture-minor-prophets-sources.py \
             --webu-zip /tmp/engwebp_current.zip \
             --wlc-zip /tmp/hboWLC_current.zip
 
-      - name: Verify remaining legacy candidates against fresh per-book source locks
+      - name: Verify only the still-unpromoted legacy candidates
         run: |
           python3 scripts/audit-minor-prophets-be-candidates.py \
             --source-ref origin/agent/biblia-emanus-ot-and-apocrypha \
             --webu-zip /tmp/engwebp_current.zip \
             --wlc-zip /tmp/hboWLC_current.zip \
             --exclude-book HOS \
-            --exclude-book JOL
+            --exclude-book JOL \
+            --exclude-book AMO \
+            --exclude-book OBA \
+            --exclude-book JON
 
-      - name: Build Osea fresh-source re-audit packet with explicit WLC mapping
-        run: python3 scripts/prepare-minor-prophet-reaudit.py --book HOS
-
-      - name: Extract compact Osea boundary reviews
-        run: python3 scripts/extract-hosea-versification-boundaries.py
-
-      - name: Split Osea into semantic-review chapters
-        run: python3 scripts/split-minor-prophet-reaudit.py --book HOS
-
-      - name: Build remaining minor-prophet fresh-source packets
+      - name: Rebuild fresh packets only for books still awaiting semantic review
         run: |
           set -euo pipefail
-          for book in JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL; do
+          for book in MIC NAM HAB ZEP HAG ZEC MAL; do
             python3 scripts/prepare-minor-prophet-reaudit.py --book "$book"
             python3 scripts/split-minor-prophet-reaudit.py --book "$book"
           done
 
-      - name: Validate completed Osea reviewed candidate
-        run: python3 scripts/check-hosea-reviewed-candidate.py
-
-      - name: Align legacy Osea promotion with comparison-only benchmark policy
+      - name: Validate promoted minor prophets
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          path = Path('scripts/promote-hosea-to-biblia-emanus.py')
-          text = path.read_text(encoding='utf-8')
-          old = '''    for key, path in archive_paths.items():\n        actual = sha256_file(path)\n        if actual != EXPECTED_ARCHIVE_SHA256[key]:\n            fail(f"{key} archive drift: {actual} != {EXPECTED_ARCHIVE_SHA256[key]}")\n'''
-          new = '''    # WEBU + WLC are translation authority and stay hard-pinned.\n    # BTF + Cornilescu are comparison-only benchmarks: recapture current bytes\n    # when their ZIP packaging changes, while validating per-book content below.\n    for key, path in archive_paths.items():\n        actual = sha256_file(path)\n        expected = EXPECTED_ARCHIVE_SHA256[key]\n        if key in {"webu", "wlc"} and actual != expected:\n            fail(f"{key} source archive drift: {actual} != {expected}")\n        if key in {"btf", "cornilescu"} and actual != expected:\n            print(f"{key} comparison benchmark archive drift: {actual} != {expected}; recapturing current benchmark")\n'''
-          if old in text:
-              path.write_text(text.replace(old, new, 1), encoding='utf-8')
-          elif 'comparison benchmark archive drift' not in text:
-              raise SystemExit('Unexpected Osea promotion drift policy block')
-          PY
+          set -euo pipefail
+          for book in HOS JOL AMO OBA JON; do
+            python3 scripts/check-biblia-emanus-book.py --book "$book"
+            python3 scripts/seal-biblia-emanus.py --book "$book" --check
+          done
 
-      - name: Materialize canonical Osea BE candidate
-        run: |
-          python3 scripts/promote-hosea-to-biblia-emanus.py \
-            --webu-zip /tmp/engwebp_current.zip \
-            --wlc-zip /tmp/hboWLC_current.zip \
-            --btf-zip /tmp/ronbtf_current.zip \
-            --cornilescu-zip /tmp/ron1924_current.zip
-
-      - name: Normalize canonical Osea candidate
-        run: python3 scripts/normalize-hosea-be-candidate.py
-
-      - name: Validate canonical Osea publication gate
-        run: python3 scripts/check-biblia-emanus-book.py --book HOS
-
-      - name: Verify canonical Osea seal eligibility
-        run: python3 scripts/seal-biblia-emanus.py --book HOS --check
-
-      - name: Materialize promoted books into VT catalog
+      - name: Materialize current VT catalog
         run: |
           python3 scripts/materialize-vt-overlay-texts.py \
             --source-ref origin/agent/biblia-emanus-ot-and-apocrypha
@@ -111,28 +81,17 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm check:vt-publication
 
-      - name: Commit source evidence and stable promotion policy
+      - name: Commit refreshed source evidence only when changed
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
-            scripts/promote-hosea-to-biblia-emanus.py \
             docs/data/biblia-emanus/sources/ot-minor-prophets-2026-08-07-usfm.zip \
-            docs/data/biblia-emanus/sources/ot-hosea-2026-08-08-usfm.zip \
             docs/data/biblia-emanus/minor-prophets-source-lock.json \
-            docs/data/biblia-emanus/source-lock.json \
-            docs/data/biblia-emanus/source-ledger.json \
-            docs/data/biblia-emanus/manifest.json \
-            docs/data/biblia-emanus/HOS.*.json \
-            packages/shared/src/bible/generated/vtCanonicalText \
             docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json \
-            docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json \
-            docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-1-2.json \
-            docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-11-12.json \
-            docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-13-14.json \
-            docs/biblia-explicata/minor-prophets-reaudit/HOS
-          for book in JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL; do
+            packages/shared/src/bible/generated/vtCanonicalText
+          for book in MIC NAM HAB ZEP HAG ZEC MAL; do
             git add "docs/biblia-explicata/minor-prophets-reaudit/${book}-FRESH-SOURCE-REAUDIT.json"
             git add "docs/biblia-explicata/minor-prophets-reaudit/${book}"
           done
@@ -141,5 +100,5 @@ jobs:
             echo 'Fresh source evidence is already current.'
             exit 0
           fi
-          git commit -m "audit(bible): refresh minor prophet source evidence"
+          git commit -m "audit(bible): refresh unpromoted minor prophet evidence"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
