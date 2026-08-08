@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "bookId": "1SA",
+  "bookName": "1 Samuel",
+  "productVersification": "WEBU-Protestant",
+  "hebrewAuthority": "WLC-OSHB",
+  "status": "explicit-versification-map-approved",
+  "reviewedOn": "2026-08-08",
+  "totals": {
+    "productVerses": 810,
+    "WEBUVerses": 810,
+    "WLCVerses": 811
+  },
+  "rules": [
+    {
+      "productRef": "20:42",
+      "WLCRefs": ["20:42", "21:1"],
+      "reason": "The common Christian/WEBU verse 20:42 contains material divided by the Masoretic numbering between WLC 20:42 and 21:1."
+    },
+    {
+      "productRange": "21:1-15",
+      "WLCRange": "21:2-16",
+      "reason": "After the WLC split at the preceding boundary, the fifteen product verses are shifted by one within WLC chapter 21."
+    },
+    {
+      "productRef": "23:29",
+      "WLCRefs": ["24:1"],
+      "reason": "The final product verse of chapter 23 is numbered as the first verse of WLC chapter 24."
+    },
+    {
+      "productRange": "24:1-22",
+      "WLCRange": "24:2-23",
+      "reason": "After WLC 24:1 corresponds to product 23:29, product chapter 24 is shifted by one verse within WLC chapter 24."
+    }
+  ],
+  "verification": {
+    "chapterCounts": {
+      "20": {"product": 42, "WEBU": 42, "WLC": 42},
+      "21": {"product": 15, "WEBU": 15, "WLC": 16},
+      "23": {"product": 29, "WEBU": 29, "WLC": 28},
+      "24": {"product": 22, "WEBU": 22, "WLC": 23}
+    },
+    "requiredGate": "The packet generator must consume every one of the 811 current WLC verse references exactly once, with no duplicate or unconsumed Hebrew reference.",
+    "inheritedApprovalsAccepted": false
+  },
+  "notes": [
+    "This approval changes verse addressing only; it does not approve the Romanian candidate text.",
+    "Fresh semantic review remains required for all 810 product verses before canonical promotion."
+  ]
+}
