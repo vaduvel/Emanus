@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "AMO",
+  "bookName": "Amos",
+  "status": "fresh-semantic-review-complete",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/AMO-FRESH-SOURCE-REAUDIT.json",
+  "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/AMO-VERSIFICATION-APPROVAL.json",
+  "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/AMO/reviews",
+  "totals": {
+    "chapters": 9,
+    "verses": 146,
+    "approvedAsIs": 96,
+    "correctedVerses": 50,
+    "severity": {
+      "critical": 9,
+      "material": 29,
+      "minor": 12
+    }
+  },
+  "canonicalPublication": {
+    "chapterPattern": "docs/data/biblia-emanus/AMO.{1..9}.json",
+    "snapshot": "docs/data/biblia-emanus/sources/ot-amo-2026-08-08-usfm.zip",
+    "snapshotSha256": "c2e915dacf472bc0af72d9ba71d18e3b575246c7ddd4e4bcbcfaec7fc98abfac",
+    "textStage": "biblia-emanus",
+    "translationLabel": "Biblia Emanus",
+    "published": true,
+    "public": true,
+    "canonicalGate": "pending-external-validator"
+  },
+  "promotion": {
+    "candidateReady": true,
+    "promotionEligible": true,
+    "promotionStatus": "materialized-awaiting-canonical-gate"
+  }
+}
