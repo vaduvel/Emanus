@@ -71,20 +71,20 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
-      "NTR este listată deoarece schema corpusului o cere ca etalon extern, dar nu a fost consultată în acest lot in_review; jurnalul lotului și câmpul consultedInBatch consemnează această limită."
+      "Textul a fost confruntat verset cu verset cu SBLGNT 1.2 și aparatul său; TR a fost folosit numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar pentru sens și română; nu s-a copiat o traducere românească.",
+      "NTR nu a fost consultată în acest lot, fapt declarat atât aici, cât și în jurnal."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-07",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
       "engine": "Codex / GPT-5",
-      "runId": "emanus-nt-publication-audit-2026-08-07-2pe-3",
+      "runId": "emanus-nt-editorial-2026-08-08-2pe-3",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +98,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF și Cornilescu 1924 au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
+      "scope": "Toate cele 18 versete din 2PE.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "A fost reparată capitalizarea nejustificată a continuării sintactice din versetul 6.",
+        "Formulările au fost revăzute pentru persoană, număr, diateză, negare și referent, fără a importa automat lectura tradițională.",
+        "Româna rămâne redactare proprie, verificată auxiliar față de reperele declarate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,14 +123,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "textDigest": "sha256:f29b54f1159a36309000f15b69a1f8e16859c200c9394064a02438fb7869afaf",
-    "contentDigest": "sha256:3ff46821116a29a274240f9b25044f085a8c21a700b4b0c5ac7ac2814c154e7b"
+    "textDigest": "sha256:18038a4339e909d1a09c7e374cbaafe945ffafd7b3a3c88d3e6309574dd863ba",
+    "contentDigest": "sha256:9822894d3ff0ea4fdebf87e99220d308a60b0591fa45eb227943e95044369ecc"
   },
   "verses": [
     {
@@ -155,7 +155,7 @@
     },
     {
       "number": 6,
-      "text": "Prin acestea, lumea de atunci, acoperită de apă, a pierit."
+      "text": "prin acestea, lumea de atunci, acoperită de apă, a pierit."
     },
     {
       "number": 7,
