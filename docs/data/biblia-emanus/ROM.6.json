@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
+    "completedOn": "2026-08-08",
+    "runId": "emanus-nt-editorial-2026-08-08-rom-6",
+    "engineVersion": "4.0.0",
+    "reviewLevel": "in_review",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 23,
       "reviewed": 23,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 23 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 23 de versete au fost confruntate cu textul SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate construcțiile care omiteau referentul ori deformau relațiile de slujire, eliberare și sfințire.",
+        "Termenii păcat, har, dreptate și sfințire sunt redați consecvent în argumentul capitolului.",
+        "Adaosurile din Textus Receptus la versetele 11 și 12 nu au fost introduse în textul principal."
       ]
     },
     "theologicalContext": {
@@ -123,24 +122,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:31df3f88ed4462d52f93b2f517230eac1710c5b072c3017d8bac5f8972d6d02a",
-    "contentDigest": "sha256:b3f9d763ab5cca6e7a15db3bfb2737e0c455d44d27a35f4cd3228f6e6c374d03"
+    "textDigest": "sha256:f66eb40466aad4baa51c324937f615b9d3ab3dd0ba748aa28d0e84ea59fa36e1",
+    "contentDigest": "sha256:3722b87df76347da65c381c8922f94029056dadad6951c3ab1cac5f5e270be45"
   },
   "verses": [
     {
@@ -157,11 +146,11 @@
     },
     {
       "number": 4,
-      "text": "Așadar, am fost îngropați împreună cu El, prin botez, în moarte, pentru ca, după cum Hristos a fost înviat dintre cei morți prin gloria Tatălui, tot astfel și noi să umblăm într-o viață nouă."
+      "text": "Așadar, am fost îngropați împreună cu El prin botez în moarte, pentru ca, după cum Hristos a fost înviat dintre cei morți prin gloria Tatălui, tot astfel și noi să umblăm în noutatea vieții."
     },
     {
       "number": 5,
-      "text": "Căci, dacă am devenit una cu El într-o moarte asemănătoare cu a Lui, vom fi una cu El și în înviere."
+      "text": "Căci, dacă am devenit uniți cu El în asemănarea morții Lui, vom fi uniți cu El și în asemănarea învierii Lui."
     },
     {
       "number": 6,
@@ -177,7 +166,7 @@
     },
     {
       "number": 9,
-      "text": "Știind că Hristos, fiind înviat din morți, nu mai moare. Moartea nu mai are stăpânire asupra lui!"
+      "text": "Știind că Hristos, înviat din morți, nu mai moare; moartea nu mai are stăpânire asupra Lui."
     },
     {
       "number": 10,
@@ -193,7 +182,7 @@
     },
     {
       "number": 13,
-      "text": "Nici să nu vă puneți mădularele la dispoziția păcatului ca arme ale nedreptății, ci puneți-vă pe voi înșivă la dispoziția lui Dumnezeu, ca unii vii dintre cei morți, iar mădularele voastre, ca arme ale dreptății pentru Dumnezeu."
+      "text": "Nici să nu puneți mădularele voastre la dispoziția păcatului ca arme ale nedreptății, ci puneți-vă pe voi înșivă la dispoziția lui Dumnezeu, ca unii care au devenit vii dintre cei morți, iar mădularele voastre, ca arme ale dreptății pentru Dumnezeu."
     },
     {
       "number": 14,
@@ -209,7 +198,7 @@
     },
     {
       "number": 17,
-      "text": "Dar mulțumiri fie aduse lui Dumnezeu, fiindcă, deși erați robi ai păcatului, ați ascultat din inimă de modelul de învățătură căruia i-ați fost încredințați"
+      "text": "Dar mulțumiri fie aduse lui Dumnezeu, fiindcă, deși erați robi ai păcatului, ați ascultat din inimă de modelul de învățătură căruia i-ați fost încredințați,"
     },
     {
       "number": 18,
@@ -217,7 +206,7 @@
     },
     {
       "number": 19,
-      "text": "Eu vorbesc în termeni umani, din pricina slăbiciunii cărnii voastre; căci așa cum v-ați prezentat pe mădularele voastre ca slujitori ai necurăției și ai răutății asupra răutății, tot așa și acum prezentați-vă mădularele voastre ca slujitori ai dreptății pentru sfințire."
+      "text": "Vorbesc în termeni omenești, din cauza slăbiciunii firii voastre; căci, după cum v-ați pus mădularele la dispoziția necurăției și a nelegiuirii, spre nelegiuire, tot astfel puneți-vă acum mădularele la dispoziția dreptății, spre sfințire."
     },
     {
       "number": 20,
@@ -233,7 +222,7 @@
     },
     {
       "number": 23,
-      "text": "Căci plata păcatului este moartea, dar darul harului lui Dumnezeu este viața veșnică în Hristos Isus, Domnul nostru."
+      "text": "Căci plata păcatului este moartea, dar darul lui Dumnezeu este viața veșnică în Hristos Isus, Domnul nostru."
     }
   ],
   "editorialNotes": [
