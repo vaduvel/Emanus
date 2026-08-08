@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "bookId": "HOS",
+  "bookName": "Osea",
+  "status": "fresh-semantic-review-complete",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json",
+  "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-APPROVAL.json",
+  "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/HOS/reviews",
+  "totals": {
+    "chapters": 14,
+    "verses": 197,
+    "approvedAsIs": 81,
+    "correctedVerses": 116,
+    "severity": {
+      "critical": 15,
+      "material": 60,
+      "minor": 41
+    }
+  },
+  "runtimeCandidate": {
+    "module": "packages/shared/src/bible/generated/vtCanonicalText/oseaReviewedText.ts",
+    "symbol": "OSEA_REVIEWED_TEXT",
+    "adapter": "packages/shared/src/bible/overlayBibleBooks.ts",
+    "textStage": "temporary-editorial",
+    "translationLabel": "Text biblic provizoriu pentru lucru editorial — de înlocuit cu Biblia Emanus",
+    "materializedFromFreshReview": true
+  },
+  "promotion": {
+    "candidateReady": true,
+    "promotionEligible": false,
+    "reason": "Fresh-source semantic review and runtime candidate are complete, but promotion to Biblia Emanus remains a separate editorial/publication gate."
+  },
+  "blockingCriticalRefsResolvedInCandidate": [
+    "2:12",
+    "6:5",
+    "8:10",
+    "9:8",
+    "9:12",
+    "9:13",
+    "10:12",
+    "10:13",
+    "12:6",
+    "12:11",
+    "13:1",
+    "13:14",
+    "14:2",
+    "14:3",
+    "14:8"
+  ]
+}
