@@ -17,11 +17,11 @@ function directReaderText(value: string): string {
     // continuă cu „El ...”, neutralizăm mai întâi pronumele cât timp referentul
     // este încă demonstrabil. Altfel, ștergerea numelui ar lăsa un „El” fără referent.
     .replace(
-      /((?:Zac\s+)?Poonen[^.!?]*[.!?]\s+)El (?=(?:nu\s+)?(?:leagă|subliniază|observă|explică|insistă|folosește|vede|citește|aplică|dezvoltă|rezumă|tratează|revine|amintește|contrastează|urmărește|numește)\b)/giu,
+      /((?:Zac\s+)?Poonen[^.!?]*[.!?]\s+)El (?=(?:nu\s+)?(?:leagă|subliniază|observă|explică|insistă|folosește|vede|citește|aplică|dezvoltă|rezumă|tratează|revine|amintește|contrastează|urmărește|numește|exprimă|descrie)\b)/giu,
       "$1Explicația ",
     )
     .replace(
-      /(Transcriptul(?: lui (?:Zac\s+)?Poonen)?[^.!?]*[.!?]\s+)El (?=(?:nu\s+)?(?:leagă|subliniază|observă|explică|insistă|folosește|vede|citește|aplică|dezvoltă|rezumă|tratează|revine|amintește|contrastează|urmărește|numește)\b)/giu,
+      /(Transcriptul(?: lui (?:Zac\s+)?Poonen)?[^.!?]*[.!?]\s+)El (?=(?:nu\s+)?(?:leagă|subliniază|observă|explică|insistă|folosește|vede|citește|aplică|dezvoltă|rezumă|tratează|revine|amintește|contrastează|urmărește|numește|exprimă|descrie)\b)/giu,
       "$1Explicația ",
     )
 
@@ -40,6 +40,7 @@ function directReaderText(value: string): string {
     .replace(/\bPentru (?:Zac\s+)?Poonen,\s*/giu, "În această expunere, ")
 
     // Verbe de atribuire: le transformăm în propoziții neutre și gramaticale.
+    .replace(/\b(?:Zac\s+)?Poonen spune direct în transcript că\s+/giu, "Se spune direct că ")
     .replace(/\b(?:Zac\s+)?Poonen spune foarte apăsat însă că\s+/giu, "Se subliniază însă că ")
     .replace(/\b(?:Zac\s+)?Poonen spune (?:foarte )?direct că\s+/giu, "Se spune direct că ")
     .replace(/\b(?:Zac\s+)?Poonen spune că\s+/giu, "Se subliniază că ")
@@ -65,7 +66,7 @@ function directReaderText(value: string): string {
     .replace(/\b(?:Zac\s+)?Poonen contrastează\s+/giu, "Explicația contrastează ")
     .replace(/\b(?:Zac\s+)?Poonen folosește\s+/giu, "O aplicație folosește ")
 
-    // Limbaj de cercetare: în produs rămâne doar ideea explicativă.
+    // Limbaj de cercetare: în produs rămâne numai ideea explicativă.
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen aplică\s+/giu, "O aplicație pastorală leagă ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen contrastează\s+/giu, "Explicația contrastează ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen folosește\s+/giu, "O aplicație folosește ")
@@ -73,8 +74,13 @@ function directReaderText(value: string): string {
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu dezvoltă\s+/giu, "Expunerea nu dezvoltă ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu repetă toate detaliile, ci se concentrează\s+/giu, "Accentul cade ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "Explicația")
-    .replace(/\bTranscriptul lui\b/giu, "Explicația")
-    .replace(/\bTranscriptul\b/giu, "Explicația")
+    .replace(/\bPentru transcript(?:ul)?[:,]?\s*/giu, "În această expunere, ")
+    .replace(/\bîn transcript(?:ul)?\b/giu, "în această expunere")
+    .replace(/\bdin transcript(?:ul)?\b/giu, "din această expunere")
+    .replace(/\btranscriptului\b/giu, "expunerii")
+    .replace(/\btranscriptul lui\b/giu, "explicația")
+    .replace(/\btranscriptul\b/giu, "explicația")
+    .replace(/\btranscript\b/giu, "expunere")
     .replace(/\bsursa (?:lui )?(?:Zac\s+)?Poonen\b/giu, "explicația")
     .replace(/\bmaterialul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "explicația")
     .replace(/\b(?:Zac\s+)?Poonen\s*\/\s*CFC\b/giu, "explicația")
@@ -95,6 +101,7 @@ function directReaderText(value: string): string {
 
     // Curățări finale după neutralizarea sursei.
     .replace(/\bExplicația lui\b/giu, "Explicația")
+    .replace(/\bExplicația exprimă în această expunere și\b/giu, "Explicația prezintă și")
     .replace(/\bEl leagă\b/giu, "Explicația leagă")
     .replace(/[ \t]{2,}/g, " ")
     .replace(/\s+([,.;:!?])/g, "$1")
