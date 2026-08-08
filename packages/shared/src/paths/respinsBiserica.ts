@@ -98,7 +98,7 @@ export const respinsBisericaL1: Lesson = {
       order: 4,
       bubbles: [
         { from: "guide", text: "Ai auzit două răspunsuri și amândouă te-au lăsat singur." },
-        { from: "guide", text: "Din afară: «toate bisericile sunt la fel, lasă-le baltlă». Comod, dar nu îți pune nimic în loc." },
+        { from: "guide", text: "Din afară: «toate bisericile sunt la fel, lasă-le baltă». Comod, dar nu îți pune nimic în loc." },
         { from: "guide", text: "Dinăuntru, poate: «nu te atinge de unsul Domnului», «nu vorbi, ca să nu faci rușine lucrării», «roagă-te și taci»." },
         { from: "guide", text: "A doua este mai rea, pentru că folosește Numele lui Dumnezeu ca să îți închidă gura. Nu Dumnezeu ți-a închis gura acolo." }
       ]
@@ -354,7 +354,7 @@ export const respinsBisericaL2: Lesson = {
           { text: "Împreună cu versetul dinainte: ne adunăm ca să veghem unii asupra altora și să ne îndemnăm la dragoste", correct: true },
           { text: "Ca un îndemn valabil doar pentru cei care nu au fost răniți", correct: false }
         ],
-        explanation: "Versetul 25 nu stă singur. Versetul 24 dă scopul adunării: vegherea unora asupra altora și îndemnul la dragoste și la fapte bune. Îndemnul este spre oameni care fac lucrul acesta, nu spre o clădire anume, și nu poate fi folosit ca să fie ținut cineva într-un loc care îl vătămaă."
+        explanation: "Versetul 25 nu stă singur. Versetul 24 dă scopul adunării: vegherea unora asupra altora și îndemnul la dragoste și la fapte bune. Îndemnul este spre oameni care fac lucrul acesta, nu spre o clădire anume, și nu poate fi folosit ca să fie ținut cineva într-un loc care îl vatămă."
       }
     },
     {
@@ -374,7 +374,7 @@ export const respinsBisericaL2: Lesson = {
       type: "prayer",
       order: 14,
       bubbles: [
-        { from: "guide", text: "«Doamne, nu am putere să intru pe o ușă de biserică. Nu Îmi cere astăzi mai mult decât pot. Adu-mi în cale doi-trei oameni care veghează și dă-mi curaj când vine ziua. Amin.»" }
+        { from: "guide", text: "«Doamne, nu am putere să intru pe o ușă de biserică. Nu îmi cere astăzi mai mult decât pot. Adu-mi în cale doi-trei oameni care veghează și dă-mi curaj când vine ziua. Amin.»" }
       ]
     },
     {
@@ -398,6 +398,6 @@ export const RESPINS_BISERICA_LESSONS: Lesson[] = [
  * cel care a rănit.
  */
 export const RESPINS_BISERICA_PRACTICES: string[] = [
-  "Astăzi spune-I lui Dumnezeu, cu voce tare, ce ți-au făcut oamenii aceia. Fără să înmoi cuvintele și fără să încheiate cu o scuză pentru ei.",
+  "Astăzi spune-I lui Dumnezeu, cu voce tare, ce ți-au făcut oamenii aceia. Fără să înmoi cuvintele și fără să închei cu o scuză pentru ei.",
   "Astăzi scrie-i unui singur om credincios din afara locului aceluia și propune-i o cafea. Nu ești obligat să vorbești despre biserică."
 ]
