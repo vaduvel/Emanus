@@ -2,10 +2,10 @@
 
 Statut: `in_review` — **nu este aprobare de publicare**.
 
-Data: `2026-08-07`
+Data: `2026-08-08`
 
 Reviewer: `codex-gpt-5` (`ai`; sistem: `Codex / GPT-5`; rulare:
-`emanus-nt-publication-audit-2026-08-07-1jn-1`)
+`emanus-nt-editorial-2026-08-08-1jn-1`)
 
 ## Domeniu și surse
 
@@ -38,8 +38,7 @@ promovează niciun verset ori capitol.
 
 ## Concluzie de lot
 
-Textul anterior duplica un verb de percepție în prolog, netezea conexiunile
-sintactice din versetele 2–4, importa adaosul TR „Hristos” în 1:7 și avea o
-coordonare lipsă în 1:9. Toate cele 10 texte au fost revizuite din sursele
-fixate și rămân `in_review` și `pending` până la registrul final de aprobare
-pentru întregul NT.
+Reverificarea independentă a confirmat deciziile de fond ale lotului și a
+reparat coordonarea românească din prolog. Toate cele 10 texte au fost
+confruntate din nou cu sursele fixate și rămân `in_review` și `pending` până
+la registrul final de aprobare pentru întregul NT.
