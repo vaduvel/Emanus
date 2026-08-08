@@ -2,6 +2,7 @@ import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOv
 import { VT_MAJOR_PROPHETS_FULL } from "../vtFullNarrativesMajorProphets.js"
 import { IEREMIA_DEEPENED_08_22 } from "./ieremiaDeepened08_22.js"
 import { IEREMIA_DEEPENED_24_40 } from "./ieremiaDeepened24_40.js"
+import { IEREMIA_DEEPENED_41_52 } from "./ieremiaDeepened41_52.js"
 import { IEREMIA_EXPLAINED as POONEN_BASE } from "./ieremiaOverlay.js"
 import { textualChapter } from "./textualChapterFactory.js"
 
@@ -12,7 +13,8 @@ const chapters = POONEN_BASE.chapters.map((chapter) => {
 
   const deepened =
     IEREMIA_DEEPENED_08_22[chapter.number] ??
-    IEREMIA_DEEPENED_24_40[chapter.number]
+    IEREMIA_DEEPENED_24_40[chapter.number] ??
+    IEREMIA_DEEPENED_41_52[chapter.number]
   if (deepened) return deepened
 
   return textualChapter("Ieremia", data, chapter.number)
