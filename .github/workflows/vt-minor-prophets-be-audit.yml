@@ -68,6 +68,11 @@ jobs:
       - name: Validate canonical Osea publication gate
         run: python3 scripts/check-biblia-emanus-book.py --book HOS
 
+      - name: Materialize promoted Osea into VT catalog
+        run: |
+          python3 scripts/materialize-vt-overlay-texts.py \
+            --source-ref origin/agent/biblia-emanus-ot-and-apocrypha
+
       - name: Validate Osea reader integration
         run: |
           set -euo pipefail
@@ -88,6 +93,7 @@ jobs:
             docs/data/biblia-emanus/source-ledger.json \
             docs/data/biblia-emanus/manifest.json \
             docs/data/biblia-emanus/HOS.*.json \
+            packages/shared/src/bible/generated/vtCanonicalText \
             docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json \
             docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json \
             docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-1-2.json \
