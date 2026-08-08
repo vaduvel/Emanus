@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924", "consultedInBatch": true
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf", "consultedInBatch": true
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca", "consultedInBatch": false
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,61 +72,8 @@
     },
     "observations": [
       "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
-      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
+      "BTF și Cornilescu 1924 au fost folosite numai ca repere auxiliare de contrast; NTR nu a fost folosită ca benchmark și nu s-a copiat o traducere românească."
     ]
-  },
-  "audit": {
-    "schemaVersion": 2,
-    "completedOn": "2026-08-08", "runId": "emanus-nt-editorial-2026-08-08-rom-7",
-    "engineVersion": "4.0.0", "reviewLevel": "in_review",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "Codex / GPT-5",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "verseCoverage": {
-      "expected": 25,
-      "reviewed": 25,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Toate cele 25 de versete au fost confruntate cu SBLGNT 1.2, aparatul critic și Textus Receptus ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparații auxiliare."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost verificate relațiile logice, persoanele verbale și terminologia argumentului despre Lege și păcat.",
-        "Varianta σάρκινος din 7:14 este păstrată prin «de carne», distinct de lectura TR.",
-        "Variantele și elipsele aparatului sunt documentate fără adaos în textul principal."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "textDigest": "sha256:e35ee47d89f6d38d42089a6a68a13651dcc9d8cdefe68564e30b67e6ae63db05", "contentDigest": "sha256:7ccc283e57f208fdefccefad8454498f08d38b92073442507bf21cece72c8b04"
   },
   "verses": [
     {
@@ -164,7 +114,7 @@
     },
     {
       "number": 10,
-      "text": "iar eu am murit. Și am constatat că tocmai porunca dată pentru viață mi-a dus la moarte;"
+      "text": "iar eu am murit. Și am constatat că tocmai porunca dată pentru viață s-a dovedit pentru mine spre moarte;"
     },
     {
       "number": 11,
@@ -172,7 +122,7 @@
     },
     {
       "number": 12,
-      "text": "De aceea legea este într-adevăr sfântă, și porunca sfântă, dreaptă și bună."
+      "text": "Așadar, Legea este sfântă, iar porunca este sfântă, dreaptă și bună."
     },
     {
       "number": 13,
@@ -196,7 +146,7 @@
     },
     {
       "number": 18,
-      "text": "Căci știu că în mine, adică în carnea mea, nu locuiește nimic bun; voința îmi stă la îndemână, dar împlinirea binelui, nu."
+      "text": "Căci știu că în mine, adică în carnea mea, nu locuiește nimic bun; voința îmi stă la îndemână, dar nu și înfăptuirea binelui."
     },
     {
       "number": 19,
@@ -229,48 +179,164 @@
   ],
   "editorialNotes": [
     {
-      "verse": 9,
-      "term": "segmentare de versificație SBLGNT / numerotare tradițională",
-      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
-      "reason": "TR așază ἐγὼ δὲ ἀπέθανον la sfârșitul versetului 9, în timp ce SBLGNT îl așază la începutul versetului 10.",
+      "verse": 6,
+      "term": "ἐν καινότητι πνεύματος καὶ οὐ παλαιότητι γράμματος",
+      "decision": "în noutatea Duhului, nu în vechimea literei",
+      "reason": "Contrastul πνεῦμα/γράμμα este paulin și poate fi citit ca Duhul Sfânt sau ca noul mod spiritual de slujire; majuscula reflectă contextul, dar nota păstrează ambiguitatea lexicală.",
+      "alternatives": [
+        "în noutatea duhului, nu în vechimea literei"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
+      "resolutionReason": "Alegerea este contextuală, nu bazată exclusiv pe lipsa articolului, iar alternativa rămâne explicită."
+    },
+    {
+      "verse": 9,
+      "term": "segmentare de versificație SBLGNT / numerotare tradițională",
+      "decision": "Versificarea textului românesc urmează SBLGNT: «iar eu am murit» începe v.10.",
+      "reason": "TR așază ἐγὼ δὲ ἀπέθανον la sfârșitul versetului 9, în timp ce SBLGNT îl numerotează la începutul versetului 10.",
       "alternatives": [
         "dar, când a venit porunca, păcatul a prins viață, iar eu am murit."
       ],
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numerotarea urmează sursa critică fixată a proiectului."
+    },
+    {
+      "verse": 10,
+      "term": "εὑρέθη μοι ἡ ἐντολὴ … εἰς θάνατον",
+      "decision": "porunca … s-a dovedit pentru mine spre moarte",
+      "reason": "εὑρίσκω la pasiv exprimă rezultatul constatat; formularea anterioară conținea defectul românesc «mi-a dus la moarte».",
+      "alternatives": [
+        "am constatat că porunca … era pentru mine spre moarte"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corecția repară gramatica românească și păstrează relația predicativă a grecei."
+    },
+    {
+      "verse": 13,
+      "term": "ἐγένετο",
+      "decision": "a devenit moarte pentru mine?",
+      "reason": "SBLGNT are aoristul ἐγένετο; RP/TR are perfectul γέγονεν. Româna urmează forma textului critic fără efect semantic artificial.",
+      "alternatives": [
+        "a ajuns să fie moarte pentru mine?"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura SBLGNT este păstrată."
     },
     {
       "verse": 14,
       "term": "σάρκινός",
-      "decision": "Adjectivul este redat «de carne».",
-      "reason": "Forma SBLGNT σάρκινος indică alcătuirea sau caracterizarea prin carne și este distinctă de lectura TR σαρκικός, redată de regulă «carnal» ori «firesc». Alegerea păstrează contrastul cu Legea «spirituală» fără adaos moralizator.",
+      "decision": "de carne",
+      "reason": "SBLGNT are σάρκινος, distinct de RP/TR σαρκικός; «de carne» păstrează mai bine diferența lexicală față de «carnal/firesc».",
+      "alternatives": [
+        "carnal"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Diferența lexicală față de TR este reflectată direct și consecvent cu glosarul pentru σάρξ."
+      "resolutionReason": "Diferența lexicală față de TR este reflectată în corpul textului."
     },
     {
       "verse": 18,
-      "term": "variantă textuală SBLGNT / Textus Receptus",
-      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
-      "reason": "Textus Receptus adaugă εὑρίσκω după negație, făcând explicit «nu găsesc»; SBLGNT păstrează elipsa cu οὔ.",
+      "term": "τὸ δὲ κατεργάζεσθαι τὸ καλὸν οὔ",
+      "decision": "dar nu și înfăptuirea binelui",
+      "reason": "SBLGNT păstrează elipsa cu οὔ; RP/TR adaugă οὐχ εὑρίσκω («nu găsesc»). Redarea românească păstrează elipsa într-o formă naturală.",
+      "alternatives": [
+        "dar nu găsesc cum să înfăptuiesc binele"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
+      "resolutionReason": "Nu este introdus verbul suplimentar din lectura receptă."
+    },
+    {
+      "verse": 23,
+      "term": "αἰχμαλωτίζοντά με ἐν τῷ νόμῳ τῆς ἁμαρτίας",
+      "decision": "mă ia captiv în legea păcatului",
+      "reason": "SBLGNT are prepoziția ἐν, absentă în RP; textul românesc păstrează relația locativă/metaforică a lecturii critice.",
       "alternatives": [
-        "Fiindcă voința îmi stă la îndemână, dar nu găsesc cum să împlinesc binele."
+        "mă ia captiv legii păcatului"
       ],
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală urmează SBLGNT."
     },
     {
       "verse": 25,
       "term": "χάρις τῷ θεῷ",
-      "decision": "χάρις este redat contextual «Mulțumire lui Dumnezeu».",
-      "reason": "În răspunsul exclamativ la întrebarea din 7:24, χάρις are valoarea de mulțumire; redarea «har lui Dumnezeu» ar fi nefirească și ar obscuriza funcția dativului. TR exprimă aceeași funcție prin verbul εὐχαριστῶ.",
+      "decision": "Mulțumire lui Dumnezeu",
+      "reason": "În răspunsul exclamativ, χάρις are funcție de mulțumire; TR are explicit εὐχαριστῶ («mulțumesc»), iar WH/NIV au χάρις δέ.",
+      "alternatives": [
+        "Har lui Dumnezeu",
+        "Mulțumesc lui Dumnezeu"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Sensul contextual permis de glosar este păstrat, iar lectura verbală TR este separată în notă."
+      "resolutionReason": "Se păstrează substantivul SBLGNT într-o redare românească idiomatică și se documentează lectura receptă."
     }
   ],
   "referenceNotes": [],
-  "alternateEndings": []
+  "alternateEndings": [],
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-08",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "GPT-5.6 Sol",
+      "runId": "emanus-nt-editorial-2026-08-08-rom-7-gpt56sol-2240",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 25,
+      "reviewed": 25,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:25fbb38760f5098b13900edc6cb50c2eec8f261f860558d8ad7775787f109e55"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Toate cele 25 de versete din ROM.7 au fost reverificate față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual. BTF și Cornilescu 1924 au fost folosite numai pentru contrast românesc auxiliar."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "ROM.7.10 a fost reparat gramatical și aliniat cu εὑρέθη μοι.",
+        "ROM.7.12 a fost simplificat pentru structura concluzivă a textului grec.",
+        "ROM.7.18 păstrează elipsa SBLGNT într-o română naturală, fără a importa «nu găsesc» din TR."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat completările RP/TR.",
+        "Diferența σάρκινος/σαρκικός din ROM.7.14 este păstrată lexical.",
+        "Ambiguitatea πνεῦμα din ROM.7.6 este documentată fără a pretinde că forma gramaticală singură decide referentul."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu sursele auxiliare declarate; fără copiere de text românesc protejat"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "textDigest": "sha256:fcf255f18540c60e73dacadda8c2cf6266b43bf7aa402b29944e87012b5d8862",
+    "contentDigest": "sha256:9f151e56e6bb9d0d0595e44d5d56cd94ddd031c0c56a552099677bd84bd8085f"
+  }
 }
