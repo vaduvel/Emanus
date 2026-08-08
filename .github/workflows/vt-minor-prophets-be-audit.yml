@@ -62,6 +62,9 @@ jobs:
             --btf-zip /tmp/ronbtf_current.zip \
             --cornilescu-zip /tmp/ron1924_current.zip
 
+      - name: Normalize canonical Osea candidate
+        run: python3 scripts/normalize-hosea-be-candidate.py
+
       - name: Validate canonical Osea publication gate
         run: python3 scripts/check-biblia-emanus-book.py --book HOS
 
