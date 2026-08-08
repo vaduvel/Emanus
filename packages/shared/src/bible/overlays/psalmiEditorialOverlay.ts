@@ -1,5 +1,6 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay, type ExplainedOverlayChapter } from "../explainedOverlay.js"
 import { VT_WISDOM_FULL } from "../vtFullNarrativesWisdom.js"
+import { reviewPsalmi22_32_51_110Explanations } from "./psalmi22_32_51_110ExplanationReview.js"
 import { PSALMI_EXPLAINED as POONEN_BASE } from "./psalmiOverlay.js"
 import { PSALMI_TEXTUAL_1_25 } from "./psalmiTextual1_25.js"
 import { PSALMI_TEXTUAL_26_50 } from "./psalmiTextual26_50.js"
@@ -33,4 +34,6 @@ const PSALMI_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-export const PSALMI_EDITORIAL_EXPLAINED = assertCompleteOverlay(PSALMI_EDITORIAL_BASE, 150)
+const PSALMI_EDITORIAL_REVIEWED = reviewPsalmi22_32_51_110Explanations(PSALMI_EDITORIAL_BASE)
+
+export const PSALMI_EDITORIAL_EXPLAINED = assertCompleteOverlay(PSALMI_EDITORIAL_REVIEWED, 150)
