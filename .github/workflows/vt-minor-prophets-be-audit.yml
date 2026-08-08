@@ -51,6 +51,14 @@ jobs:
       - name: Split Osea into semantic-review chapters
         run: python3 scripts/split-minor-prophet-reaudit.py --book HOS
 
+      - name: Build remaining minor-prophet fresh-source packets
+        run: |
+          set -euo pipefail
+          for book in JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL; do
+            python3 scripts/prepare-minor-prophet-reaudit.py --book "$book"
+            python3 scripts/split-minor-prophet-reaudit.py --book "$book"
+          done
+
       - name: Validate completed Osea reviewed candidate
         run: python3 scripts/check-hosea-reviewed-candidate.py
 
@@ -68,6 +76,9 @@ jobs:
       - name: Validate canonical Osea publication gate
         run: python3 scripts/check-biblia-emanus-book.py --book HOS
 
+      - name: Verify canonical Osea seal eligibility
+        run: python3 scripts/seal-biblia-emanus.py --book HOS --check
+
       - name: Materialize promoted Osea into VT catalog
         run: |
           python3 scripts/materialize-vt-overlay-texts.py \
@@ -84,8 +95,9 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm check:vt-publication
 
-      - name: Commit fresh source lock and Osea canonical evidence
+      - name: Commit canonical Osea and fresh audit packets
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
@@ -103,10 +115,14 @@ jobs:
             docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-11-12.json \
             docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-13-14.json \
             docs/biblia-explicata/minor-prophets-reaudit/HOS
+          for book in JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL; do
+            git add "docs/biblia-explicata/minor-prophets-reaudit/${book}-FRESH-SOURCE-REAUDIT.json"
+            git add "docs/biblia-explicata/minor-prophets-reaudit/${book}"
+          done
           git diff --cached --check
           if git diff --cached --quiet; then
-            echo 'Snapshoturile, registrele și candidatul canonic Osea sunt deja actuale.'
+            echo 'Snapshoturile, Osea canonică și pachetele fresh-source sunt deja actuale.'
             exit 0
           fi
-          git commit -m "feat(bible): materialize canonical Osea candidate"
+          git commit -m "audit(bible): prepare remaining minor prophets"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
