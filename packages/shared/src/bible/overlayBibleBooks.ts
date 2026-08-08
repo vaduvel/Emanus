@@ -12,6 +12,8 @@ function sourceLabel(unit: ExplainedOverlayUnit): string {
       return "Zac Poonen — transcript"
     case "poonen-official":
       return "Zac Poonen — CFC"
+    case "canonical-exegesis":
+      return "Emanus — exegeza canonică verificată"
     case "biblia-emanus":
       return "Emanus — rezumat textual"
   }
@@ -88,8 +90,8 @@ export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((ov
     testament: "vt" as const,
     order: overlay.order,
     blurb: temporary
-      ? "Text biblic provizoriu pentru lucru editorial, separat de explicație și marcat pentru înlocuire cu Biblia Emanus. Expunerea doctrinară este trasabilă la Zac Poonen/CFC; pasajele pe care sursa nu le dezvoltă primesc numai rezumat textual Emanus."
-      : "Text Biblia Emanus cu explicația separată de Scriptură. Expunerea doctrinară este trasabilă la Zac Poonen; pasajele pe care sursa nu le dezvoltă primesc numai rezumat textual Emanus.",
+      ? "Text biblic provizoriu pentru lucru editorial, separat de explicație și marcat pentru înlocuire cu Biblia Emanus. Explicația folosește sursa editorială acolo unde pasajul este dezvoltat și completări biblice generale verificate acolo unde este nevoie."
+      : "Text Biblia Emanus cu explicația separată de Scriptură. Explicația folosește sursa editorială acolo unde pasajul este dezvoltat și completări biblice generale verificate acolo unde este nevoie.",
     chapters,
     translation: textBook.translationLabel,
   }
