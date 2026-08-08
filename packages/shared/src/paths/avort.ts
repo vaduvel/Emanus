@@ -125,7 +125,7 @@ export const avortL1: Lesson = {
       type: "how_god_helps",
       order: 6,
       bubbles: [
-        { from: "guide", text: "Ce cere Dumnezeu nu este ispășire. Ispașirea a fost făcută și nu se repetă." },
+        { from: "guide", text: "Ce cere Dumnezeu nu este ispășire. Ispășirea a fost făcută și nu se repetă." },
         { from: "guide", text: "Cere mărturisire. Adică să numești înaintea Lui, o singură dată, cu cuvintele tale, ce s-a întâmplat. Nu Îi spui ceva ce nu știe. Ți-o spui ție în prezența Lui." },
         { from: "guide", text: "Și mai este ceva în versetul de mai jos, ușor de trecut cu vederea: nu scrie că este bun, ci că este «credincios și drept». Iertarea nu îți este făcută ca o favoare de care să te rușinezi. Este dată pentru că prețul a fost plătit și Dumnezeu este drept." }
       ]
@@ -196,7 +196,7 @@ export const avortL1: Lesson = {
       type: "prayer",
       order: 12,
       bubbles: [
-        { from: "guide", text: "«Doamne, Știi ce am făcut. Nu mai ascund și nu mai caut scuze. Îl pun înaintea Ta așa cum este. Te rog să mă ierți și să mă cureți, pentru că așa ai spus că faci. Amin.»" }
+        { from: "guide", text: "«Doamne, Știi ce am făcut. Nu mai ascund și nu mai caut scuze. Pun totul înaintea Ta așa cum este. Te rog să mă ierți și să mă cureți, pentru că așa ai spus că faci. Amin.»" }
       ]
     },
     {
@@ -434,7 +434,7 @@ export const avortL3: Lesson = {
         ref: "Psalmul 103:12"
       },
       bubbles: [
-        { from: "guide", text: "Nordul și sudul au capăt: mergi destul și ajungi la pol. Răsăritul și apusul nu au. Poți merge la nesfârșit și nu întors nici o dată." }
+        { from: "guide", text: "Nordul și sudul au capăt: mergi destul și ajungi la pol, iar de acolo începi să cobori înapoi. Răsăritul și apusul nu au capăt. Poți merge la nesfârșit și distanța dintre ele rămâne la fel de mare." }
       ]
     },
     {
@@ -455,7 +455,7 @@ export const avortL3: Lesson = {
       order: 9,
       bubbles: [
         { from: "guide", text: "Ce mai duci, după cele trei lecții?" },
-        { from: "guide", text: "Frica să nu afle cineva? Furia pe cel care te-a lăsat singură atunci? Gândul că nu meriți copiii pe care îi ai acum?" },
+        { from: "guide", text: "Frica să nu afle cineva? Furia pe omul care nu a stat lângă tine atunci? Gândul că nu meriți copiii pe care îi ai acum?" },
         { from: "guide", text: "Numește-l. Ce rămâne nenumit lucrează pe întuneric." }
       ]
     },
