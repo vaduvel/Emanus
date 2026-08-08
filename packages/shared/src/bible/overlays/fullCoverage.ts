@@ -5,6 +5,7 @@ import { VT_MAJOR_PROPHETS_FULL } from "../vtFullNarrativesMajorProphets.js"
 import { VT_MINOR_PROPHETS_FULL } from "../vtFullNarrativesMinorProphets.js"
 
 import { JUDECATORI_EXPLAINED as JUDECATORI_BASE } from "./judecatoriOverlay.js"
+import { reviewJudecatoriExplanations } from "./judecatoriExplanationReview.js"
 import { IMPARATI2_EXPLAINED as IMPARATI2_BASE } from "./imparati2Overlay.js"
 import { CRONICI1_EXPLAINED as CRONICI1_BASE } from "./cronici1Overlay.js"
 import { CRONICI2_EXPLAINED as CRONICI2_BASE } from "./cronici2Overlay.js"
@@ -48,7 +49,7 @@ function full(base: Parameters<typeof completeOverlayCoverage>[0], data: { verse
   return assertVerseCompleteOverlay(completed, data.verseCounts)
 }
 
-export const JUDECATORI_FULL = full(JUDECATORI_BASE, VT_HISTORICAL_FULL.judecatori)
+export const JUDECATORI_FULL = full(reviewJudecatoriExplanations(JUDECATORI_BASE), VT_HISTORICAL_FULL.judecatori)
 export const IMPARATI2_FULL = full(IMPARATI2_BASE, VT_HISTORICAL_FULL.imparati2)
 export const CRONICI1_FULL = full(CRONICI1_BASE, VT_HISTORICAL_FULL.cronici1)
 export const CRONICI2_FULL = full(CRONICI2_BASE, VT_HISTORICAL_FULL.cronici2)
