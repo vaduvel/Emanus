@@ -1,4 +1,4 @@
-name: VT Minor Prophets Fresh Source Capture
+name: VT Minor Prophets Fresh Source Validation
 
 on:
   pull_request:
@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  capture-and-audit:
+  validate-all-minor-prophets:
     if: github.head_ref == 'agent/biblia-explicata-vt-integration-clean' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -37,34 +37,10 @@ jobs:
             --webu-zip /tmp/engwebp_current.zip \
             --wlc-zip /tmp/hboWLC_current.zip
 
-      - name: Verify only the still-unpromoted legacy candidate
-        run: |
-          python3 scripts/audit-minor-prophets-be-candidates.py \
-            --source-ref origin/agent/biblia-emanus-ot-and-apocrypha \
-            --webu-zip /tmp/engwebp_current.zip \
-            --wlc-zip /tmp/hboWLC_current.zip \
-            --exclude-book HOS \
-            --exclude-book JOL \
-            --exclude-book AMO \
-            --exclude-book OBA \
-            --exclude-book JON \
-            --exclude-book MIC \
-            --exclude-book NAM \
-            --exclude-book HAB \
-            --exclude-book ZEP \
-            --exclude-book HAG \
-            --exclude-book ZEC
-
-      - name: Rebuild fresh packet only for Maleahi while promotion is pending
+      - name: Validate all promoted minor prophets
         run: |
           set -euo pipefail
-          python3 scripts/prepare-minor-prophet-reaudit.py --book MAL
-          python3 scripts/split-minor-prophet-reaudit.py --book MAL
-
-      - name: Validate promoted minor prophets
-        run: |
-          set -euo pipefail
-          for book in HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC; do
+          for book in HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL; do
             python3 scripts/check-biblia-emanus-book.py --book "$book"
             python3 scripts/seal-biblia-emanus.py --book "$book" --check
           done
@@ -93,14 +69,11 @@ jobs:
           git add \
             docs/data/biblia-emanus/sources/ot-minor-prophets-2026-08-07-usfm.zip \
             docs/data/biblia-emanus/minor-prophets-source-lock.json \
-            docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json \
-            packages/shared/src/bible/generated/vtCanonicalText \
-            docs/biblia-explicata/minor-prophets-reaudit/MAL-FRESH-SOURCE-REAUDIT.json \
-            docs/biblia-explicata/minor-prophets-reaudit/MAL
+            packages/shared/src/bible/generated/vtCanonicalText
           git diff --cached --check
           if git diff --cached --quiet; then
             echo 'Fresh source evidence is already current.'
             exit 0
           fi
-          git commit -m "audit(bible): refresh remaining Maleahi evidence"
+          git commit -m "audit(bible): refresh canonical minor prophet evidence"
           git push origin HEAD:agent/biblia-explicata-vt-integration-clean
