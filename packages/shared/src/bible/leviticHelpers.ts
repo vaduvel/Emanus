@@ -1,4 +1,4 @@
-import type { BibleChapter, BibleUnit, WordStudy } from "./types.js"
+import type { BibleChapter, BibleExplanationKind, BibleUnit, WordStudy } from "./types.js"
 import { leviticPassage, leviticVerseCount } from "./leviticText.js"
 import { leviticStatus } from "./leviticPublication.js"
 
@@ -8,13 +8,24 @@ import { leviticStatus } from "./leviticPublication.js"
  * Același tipar ca la Exod: textul biblic stă separat, în leviticText.ts
  * (fișierele leviticTextN.ts), iar aici se adună unitățile de sens și se
  * verifică să acopere capitolul de la primul până la ultimul verset.
+ *
+ * Proveniența legacy este o sinteză editorială Emanus verificată în raport cu
+ * materialul Through The Bible al lui Zac Poonen, textul biblic și trimiterile
+ * indicate. Orice unitate care are deja o clasificare/sursă explicită o păstrează.
  */
+
+const LEVITIC_LEGACY_EXPLANATION_SOURCE =
+  "Emanus legacy synthesis — Zac Poonen, Through The Bible: Leviticus + biblical text/cross-references"
+const HEBREW_WORD_SOURCE = "WLC-OSHB"
 
 export type LeviticUnitInput = {
   verses: [number, number]
   heading: string
   teaching: string
+  explanationKind?: BibleExplanationKind
+  explanationSource?: string
   words?: WordStudy[]
+  wordSource?: string
   crossRefs?: string[]
   forYourHeart?: string
 }
@@ -52,7 +63,13 @@ export function leviticChapter(input: LeviticChapterInput): BibleChapter {
       heading: unit.heading,
       text: leviticPassage(input.number, from, to),
       teaching: unit.teaching,
+      explanationKind: unit.explanationKind ?? "exposition",
+      explanationSource: unit.explanationSource ?? LEVITIC_LEGACY_EXPLANATION_SOURCE,
       words: unit.words,
+      wordSource:
+        unit.words && unit.words.length > 0
+          ? unit.wordSource ?? HEBREW_WORD_SOURCE
+          : unit.wordSource,
       crossRefs: unit.crossRefs,
       forYourHeart: unit.forYourHeart,
     }
