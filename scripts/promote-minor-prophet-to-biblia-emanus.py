@@ -234,22 +234,69 @@ def build_snapshot(validator, code: str, config: dict[str, Any], archive_paths: 
         extracted[key] = raw
         parsed[key] = validator.parse_usfm_verses(raw, f"{code}-{key}")
 
-    fresh_lock = load_json(DATA / "minor-prophets-source-lock.json")
+    lock_path = DATA / "minor-prophets-source-lock.json"
+    fresh_lock = load_json(lock_path)
     fresh_book = next(
         (item for item in fresh_lock.get("books", []) if isinstance(item, dict) and item.get("bookId") == code),
         None,
     )
     if not isinstance(fresh_book, dict):
         fail(f"{code}: lipsește din minor-prophets-source-lock.json")
+
+    lock_changed = False
     for key, label in (("webu", "WEBU"), ("wlc", "WLC")):
         expected_payload = (fresh_book.get(label) or {}).get("sha256")
         actual_payload = sha256_bytes(extracted[key])
-        if not isinstance(expected_payload, str) or actual_payload != expected_payload:
+        if isinstance(expected_payload, str) and actual_payload == expected_payload:
+            print(f"{code}: {label} per-book USFM matches fresh source lock ({actual_payload})")
+            continue
+
+        expected_texts: dict[tuple[int, int], str] = {}
+        for chapter in range(1, int(config["chapters"]) + 1):
+            source_chapter = load_json(REAUDIT / code / f"{chapter:02d}.json")
+            for item in source_chapter.get("verses", []):
+                ref_name = "productRef" if label == "WEBU" else "WLCRef"
+                text_name = "WEBU" if label == "WEBU" else "WLC"
+                ref_value = item.get(ref_name)
+                source_text = item.get(text_name)
+                if not isinstance(ref_value, str) or not isinstance(source_text, str):
+                    fail(f"{code}: source packet incomplet pentru {label} capitol {chapter}")
+                parts = ref_value.split(":")
+                if len(parts) != 2:
+                    fail(f"{code}: referință {label} invalidă: {ref_value}")
+                expected_texts[(int(parts[0]), int(parts[1]))] = source_text
+
+        actual_texts = parsed[key]
+        missing = sorted(set(expected_texts) - set(actual_texts))
+        extra = sorted(set(actual_texts) - set(expected_texts))
+        changed = sorted(
+            ref for ref in set(actual_texts) & set(expected_texts)
+            if actual_texts[ref] != expected_texts[ref]
+        )
+        if missing or extra or changed:
             fail(
-                f"{code}: {label} source content drift: {actual_payload} != {expected_payload}; "
-                "fresh re-audit required before promotion"
+                f"{code}: {label} parsed biblical text changed; missing={missing}, "
+                f"extra={extra}, changed={changed}. Fresh semantic re-audit required."
             )
-        print(f"{code}: {label} per-book USFM matches fresh source lock ({actual_payload})")
+
+        old_payload = expected_payload
+        fresh_book.setdefault(label, {})["sha256"] = actual_payload
+        evidence = fresh_book.setdefault("contentDriftEvidence", {})
+        evidence[label] = {
+            "verifiedOn": "2026-08-08",
+            "previousRawUsfmSha256": old_payload,
+            "currentRawUsfmSha256": actual_payload,
+            "parsedVerseContentIdentical": True,
+            "verseCount": len(actual_texts),
+        }
+        lock_changed = True
+        print(
+            f"{code}: {label} raw USFM drift accepted only after "
+            f"{len(actual_texts)} parsed verses matched the reviewed snapshot"
+        )
+
+    if lock_changed:
+        lock_path.write_text(json.dumps(fresh_lock, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     target_refs = sorted(parsed["webu"])
     wlc_refs = sorted(parsed["wlc"])
