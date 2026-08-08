@@ -8,6 +8,7 @@ import { reviewIsaia10And11Explanations } from "./isaia10And11ExplanationReview.
 import { reviewIsaia14Explanation } from "./isaia14ExplanationReview.js"
 import { reviewIsaia45Explanation } from "./isaia45ExplanationReview.js"
 import { reviewIsaiaExplanations } from "./isaiaExplanationReview.js"
+import { restoreIsaia7PoonenFidelity } from "./isaia7PoonenFidelityReview.js"
 import { restoreIsaiaPoonenFidelity } from "./isaiaPoonenFidelityReview.js"
 import { ISAIA_EXPLAINED as POONEN_BASE } from "./isaiaOverlay.js"
 import { textualChapter } from "./textualChapterFactory.js"
@@ -31,12 +32,14 @@ const ISAIA_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const ISAIA_EDITORIAL_REVIEWED = restoreIsaiaPoonenFidelity(
-  reviewIsaiaExplanations(
-    reviewIsaia45Explanation(
-      reviewIsaia14Explanation(
-        reviewIsaia10And11Explanations(
-          reviewIsaia07And09Explanations(ISAIA_EDITORIAL_BASE),
+const ISAIA_EDITORIAL_REVIEWED = restoreIsaia7PoonenFidelity(
+  restoreIsaiaPoonenFidelity(
+    reviewIsaiaExplanations(
+      reviewIsaia45Explanation(
+        reviewIsaia14Explanation(
+          reviewIsaia10And11Explanations(
+            reviewIsaia07And09Explanations(ISAIA_EDITORIAL_BASE),
+          ),
         ),
       ),
     ),
