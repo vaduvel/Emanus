@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Materializează textul biblic de lucru pentru toate cele 29 de cărți overlay VT.
 
-Judecători–Daniel folosesc numai capitole validate explicit ca Biblia Emanus
-(`translation: BE`, published/public și review complet aprobat).
+Cele 17 cărți overlay Judecători–Daniel și Osea folosesc numai capitole validate
+explicit ca Biblia Emanus (`translation: BE`, published/public și review complet
+aprobat). Osea este citită din corpusul canonic al ramurii curente, deoarece
+fresh-source auditul HOS 1–14 și snapshotul său sunt acum parte din acest PR.
 
-Osea–Maleahi folosesc temporar textul biblic existent în corpusul de lucru.
+Ioel–Maleahi folosesc temporar textul biblic existent în corpusul de lucru.
 Acest text NU este etichetat Biblia Emanus și NU este release text: este păstrat
 strict ca suport editorial pentru ca explicațiile să poată fi finalizate fără a
 bloca lucrul după traducerea BE. Când Biblia Emanus este gata, se înlocuiește
@@ -41,10 +43,10 @@ BE_BOOKS = [
     ("plangerile", "LAM", "Plângerile lui Ieremia", 25, 5),
     ("ezechiel", "EZK", "Ezechiel", 26, 48),
     ("daniel", "DAN", "Daniel", 27, 12),
+    ("osea", "HOS", "Osea", 28, 14),
 ]
 
 TEMP_BOOKS = [
-    ("osea", "HOS", "Osea", 28, 14),
     ("ioel", "JOL", "Ioel", 29, 3),
     ("amos", "AMO", "Amos", 30, 9),
     ("obadia", "OBA", "Obadia", 31, 1),
@@ -91,6 +93,19 @@ def git_show(ref: str, path: str) -> str:
     if proc.returncode != 0:
         raise SystemExit(f"Nu pot citi {ref}:{path}\n{proc.stderr}")
     return proc.stdout
+
+
+def read_source_json(ref: str, code: str, chapter: int) -> dict:
+    relative = f"docs/data/biblia-emanus/{code}.{chapter}.json"
+    if code == "HOS":
+        # Osea a fost promovată pe baza fresh-source auditului din această ramură.
+        # Citirea din worktree permite workflow-ului să valideze/materializeze textul
+        # canonic înainte de commitul botului, fără a recădea pe candidatul legacy.
+        path = ROOT / relative
+        if not path.is_file():
+            raise SystemExit(f"{code}.{chapter}: lipsește corpusul canonic local {relative}")
+        return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(git_show(ref, relative))
 
 
 def read_verses(raw: dict, code: str, chapter: int) -> list[str]:
@@ -169,7 +184,7 @@ def write_book(
     validator = validate_temp if temporary else validate_be
 
     for chapter in range(1, chapters + 1):
-        raw = json.loads(git_show(ref, f"docs/data/biblia-emanus/{code}.{chapter}.json"))
+        raw = read_source_json(ref, code, chapter)
         texts = validator(raw, code, chapter)
         chapter_texts[chapter] = texts
         total += len(texts)
@@ -274,7 +289,7 @@ def main() -> None:
 
     print(
         f"VT work text OK: 29/29 cărți, {total_chapters}/637 capitole, {total_verses} versete; "
-        "17 cărți Biblia Emanus validate + 12 cărți cu text editorial provizoriu."
+        "18 cărți Biblia Emanus validate + 11 cărți cu text editorial provizoriu."
     )
 
 
