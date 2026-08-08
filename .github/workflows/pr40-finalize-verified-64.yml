@@ -1,0 +1,106 @@
+name: PR40 finalize verified 64 works
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 18 8 8 *'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    steps:
+      - name: Check out repaired PR40 branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/pr40-repair-remaining-3
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Download the 61 previously verified artifact packages
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pr40-*
+          path: staging/prior
+          merge-multiple: false
+          repository: vaduvel/Emanus
+          run-id: '31110524525'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download the three final repaired artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pr40-*-final
+          path: staging/current
+          merge-multiple: false
+          repository: vaduvel/Emanus
+          run-id: '31152967863'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assemble exact 64-work publication
+        run: python3 scripts/assemble-pr40-final-publication.py --prior staging/prior --current staging/current
+
+      - name: Verify atomic publication verdict
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json').read_text(encoding='utf-8'))
+          assert report['status'] == 'published', report
+          assert report['counts']['works'] == 64, report['counts']
+          assert report['blockingIssues'] == 0, report
+          print('PR40 atomic verdict: 64 works, zero blockers')
+          PY
+
+      - name: Verify application integrity against published corpus
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm check:quotes
+          pnpm check:typos
+          pnpm check:content
+          python3 scripts/check-biblia-emanus-published.py
+          pnpm test:biblia-emanus
+          pnpm check:biblia-emanus-versification
+          pnpm seal:biblia-emanus --check
+          pnpm typecheck
+          pnpm build
+          git diff --check
+
+      - name: Commit verified 64-work corpus to PR branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/data/biblia-emanus \
+            docs/data/biblia-emanus-deuterocanon-audited \
+            docs/data/biblia-emanus-early-audited \
+            docs/data/biblia-emanus-qumran-audited \
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          if git diff --cached --quiet; then
+            echo 'Verified corpus already committed on repair branch.'
+            exit 0
+          fi
+          git commit -m 'Publish verified 64-work PR40 corpus'
+          git push origin HEAD:agent/pr40-repair-remaining-3
+
+      - name: Upload complete verified publication
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr40-final-verified-64-publication
+          path: |
+            docs/data/biblia-emanus
+            docs/data/biblia-emanus-deuterocanon-audited
+            docs/data/biblia-emanus-early-audited
+            docs/data/biblia-emanus-qumran-audited
+            docs/biblia-emanus/PR40-FINAL-PUBLICATION-VERDICT.json
+          if-no-files-found: error
+          retention-days: 14
