@@ -320,7 +320,7 @@ export const inselatL2: Lesson = {
       id: "in2_12",
       type: "journal",
       order: 12,
-      journalPrompt: "Scrie propoziția din oglindă. Tă-o cu o linie. Sub ea scrie: «Alegerea a fost a lui, nu măsura mea.»",
+      journalPrompt: "Scrie propoziția din oglindă. Taie-o cu o linie. Sub ea scrie: «Alegerea a fost a lui, nu măsura mea.»",
       reward: { xp: 0, axisDeltas: { identity: 1 } }
     }
   ]
@@ -360,7 +360,7 @@ export const inselatL3: Lesson = {
       order: 3,
       bubbles: [
         { from: "guide", text: "Ce îți pot spune sunt lucrurile care rămân adevărate indiferent de decizie." },
-        { from: "guide", text: "Unu: iertarea nu înseamnă împacare, iar împacarea nu înseamnă încredere refacută. Sunt trei lucruri, și lecția 5 din camera asta le desparte pe fiecare." },
+        { from: "guide", text: "Unu: iertarea nu înseamnă împăcare, iar împăcarea nu înseamnă încredere refăcută. Sunt trei lucruri, și lecția 5 din camera asta le desparte pe fiecare." },
         { from: "guide", text: "Doi: poți ierta și să nu te întorci. Nu ești dator să stai într-un loc în care ești în pericol." },
         { from: "guide", text: "Trei: decizia despre căsnicie se ia cu oameni reali, nu într-o aplicație. Un păstor care nu se grăbește, un consilier, un om care vă cunoaște pe amândoi." }
       ]
@@ -372,7 +372,7 @@ export const inselatL3: Lesson = {
       bubbles: [
         { from: "guide", text: "Lumea măsoară finalul în două feluri: ori ați rămas împreună, ori nu." },
         { from: "guide", text: "Dumnezeu se uită la altceva: ce fel de om ieși tu din lunile astea." },
-        { from: "guide", text: "Poți să rămâi împreună și să ieși amarățit pe viață. Și poți să te desparti și să nu duci ură mai departe. Finalul nu spune totul." }
+        { from: "guide", text: "Poți să rămâi împreună și să ieși amarățit pe viață. Și poți să te desperți și să nu duci ură mai departe. Finalul nu spune totul." }
       ]
     },
     {
@@ -439,7 +439,7 @@ export const inselatL3: Lesson = {
         options: [
           { text: "Că iertarea cere reluarea relației ca înainte", correct: false },
           { text: "Că iertarea este partea care nu depinde de celălalt și nu obligă la întoarcere", correct: true },
-          { text: "Că trebuie făcută înt-o singură zi, altfel nu este reală", correct: false }
+          { text: "Că trebuie făcută într-o singură zi, altfel nu este reală", correct: false }
         ],
         explanation: "Iertarea, împăcarea și încrederea sunt trei lucruri distincte, așa cum le desparte lecția 5 a acestei camere. Iertarea se face între om și Dumnezeu și eliberează; împăcarea cere doi oameni și o schimbare reală; încrederea se reclădește în timp, prin fapte. Și niciuna nu cere cuiva să rămână într-un loc periculos."
       }
