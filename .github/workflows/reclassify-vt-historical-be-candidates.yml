@@ -1,0 +1,78 @@
+name: Reclassify Historical VT Translation Candidates
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-integration-clean
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reclassify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+
+      - name: Fetch historical candidate source
+        run: git fetch origin agent/biblia-emanus-ot-and-apocrypha:refs/remotes/origin/agent/biblia-emanus-ot-and-apocrypha
+
+      - name: Make historical candidate status explicit
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('scripts/materialize-vt-overlay-texts.py')
+          text = path.read_text(encoding='utf-8')
+          text = text.replace(
+              'Judecători–Daniel sunt Biblia Emanus stabilă din sursa canonică istorică.\nPentru Osea–Maleahi, fiecare carte trece automat la Biblia Emanus numai dacă',
+              'Judecători–Daniel provin dintr-un candidat Biblia Emanus istoric și rămân\n`temporary-editorial` până la un fresh re-audit în corpusul canonic curent.\nPentru Osea–Maleahi, fiecare carte trece automat la Biblia Emanus numai dacă',
+          )
+          text = text.replace('ESTABLISHED_BE_BOOKS = [', 'HISTORICAL_BE_CANDIDATE_BOOKS = [')
+          old = '''    for book_id, code, name, order, chapters in ESTABLISHED_BE_BOOKS:\n        verses = write_book(args.source_ref, book_id, code, chapters, temporary=False, local=False)\n        entries.append((book_id, code, name, order, chapters, verses, False))\n        total_chapters += chapters\n        total_verses += verses\n'''
+          new = '''    # Aceste texte rămân utile pentru lucru editorial, dar nu sunt declarate\n    # Biblia Emanus canonică doar fiindcă un candidat istoric avea status published.\n    # Promovarea cere re-audit în corpusul curent, la fel ca pentru profeții mici.\n    for book_id, code, name, order, chapters in HISTORICAL_BE_CANDIDATE_BOOKS:\n        verses = write_book(args.source_ref, book_id, code, chapters, temporary=True, local=False)\n        entries.append((book_id, code, name, order, chapters, verses, True))\n        total_chapters += chapters\n        total_verses += verses\n'''
+          if old not in text:
+              raise SystemExit('Nu găsesc blocul ESTABLISHED_BE_BOOKS așteptat')
+          text = text.replace(old, new)
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Regenerate VT work-text catalog
+        run: |
+          python3 scripts/materialize-vt-overlay-texts.py \
+            --source-ref origin/agent/biblia-emanus-ot-and-apocrypha
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.14.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate regenerated reader state
+        run: |
+          pnpm build:shared
+          node scripts/check-vt-publication-runtime.mjs
+          python3 scripts/check-vt-explained-coverage.py
+
+      - name: Commit truthful translation status
+        run: |
+          if git diff --quiet; then
+            echo 'No status correction needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/materialize-vt-overlay-texts.py packages/shared/src/bible/generated/vtCanonicalText
+          git commit -m 'Mark historical VT translation candidates as editorial text'
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
