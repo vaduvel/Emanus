@@ -61,13 +61,16 @@ jobs:
           print('PR40 atomic verdict: 64 works, zero blockers')
           PY
 
+      - name: Upgrade legacy validator for atomic published state
+        run: python3 scripts/upgrade-biblia-validator-published.py
+
       - name: Verify application integrity against published corpus
         run: |
           pnpm install --frozen-lockfile
           pnpm check:quotes
           pnpm check:typos
           pnpm check:content
-          python3 scripts/check-biblia-emanus-published.py
+          pnpm check:biblia-emanus
           pnpm test:biblia-emanus
           pnpm check:biblia-emanus-versification
           pnpm seal:biblia-emanus --check
@@ -80,6 +83,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
+            scripts/check-biblia-emanus.py \
             docs/data/biblia-emanus \
             docs/data/biblia-emanus-deuterocanon-audited \
             docs/data/biblia-emanus-early-audited \
