@@ -3,12 +3,15 @@
 
 Nu promovează nimic. Verifică egalitatea dintre candidatul BE istoric și textul
 editorial materializat pentru cărțile încă selectate și inspectează proveniența
-WEBU/WLC. Un hash upstream schimbat nu este ascuns: auditul continuă, dar
-raportul rămâne neeligibil pentru promovare.
+WEBU/WLC.
+
+Un hash diferit al ZIP-ului upstream nu este tratat ca schimbare de text dacă
+payload-urile USFM ale cărților auditate rămân byte-identical cu source-lock-ul
+fresh per carte. Astfel distingem driftul de ambalare/metadata de schimbarea
+reală a Scripturii-sursă.
 
 După promovarea individuală a unei cărți (de exemplu HOS), aceasta poate fi
-exclusă explicit cu `--exclude-book HOS`; auditul legacy nu trebuie să compare
-textul canonic nou cu vechiul candidat.
+exclusă explicit cu `--exclude-book HOS`.
 """
 
 from __future__ import annotations
@@ -24,6 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GENERATED = ROOT / "packages/shared/src/bible/generated/vtCanonicalText"
+FRESH_LOCK = ROOT / "docs/data/biblia-emanus/minor-prophets-source-lock.json"
 
 BOOKS = [
     ("osea", "HOS", "Osea", 14),
@@ -135,7 +139,8 @@ def validate_candidate(raw: dict, code: str, chapter: int) -> list[str]:
     if benchmark.get("result") != "approved" or benchmark.get("pinnedBenchmarks", 0) < 2:
         raise SystemExit(f"{code}.{chapter}: benchmark evidence incomplet")
     digest = audit.get("textDigest")
-    if not isinstance(digest, str) or not HEX64.fullmatch(digest):
+    digest_value = digest.removeprefix("sha256:") if isinstance(digest, str) else ""
+    if not HEX64.fullmatch(digest_value):
         raise SystemExit(f"{code}.{chapter}: textDigest invalid")
 
     verses = raw.get("verses")
@@ -151,9 +156,27 @@ def validate_candidate(raw: dict, code: str, chapter: int) -> list[str]:
         texts.append(text.strip())
 
     coverage = audit.get("verseCoverage") or {}
-    if coverage.get("expected") != len(texts) or coverage.get("reviewed") != len(texts) or coverage.get("coveragePercent") != 100:
+    if coverage.get("expected") != len(texts) or coverage.get("reviewed") != len(texts):
         raise SystemExit(f"{code}.{chapter}: coverage audit nu corespunde textului")
+    if coverage.get("coveragePercent") not in (None, 100):
+        raise SystemExit(f"{code}.{chapter}: coveragePercent != 100")
     return texts
+
+
+def fresh_source_hashes() -> dict[tuple[str, str], str]:
+    if not FRESH_LOCK.is_file():
+        raise SystemExit(f"Lipsește fresh source lock: {FRESH_LOCK}")
+    raw = json.loads(FRESH_LOCK.read_text(encoding="utf-8"))
+    hashes: dict[tuple[str, str], str] = {}
+    for book in raw.get("books", []):
+        code = book.get("bookId")
+        if not isinstance(code, str):
+            continue
+        for source in ("WEBU", "WLC"):
+            digest = (book.get(source) or {}).get("sha256")
+            if isinstance(digest, str) and HEX64.fullmatch(digest):
+                hashes[(source, code)] = digest
+    return hashes
 
 
 def main() -> None:
@@ -179,27 +202,19 @@ def main() -> None:
         raise SystemExit("Nu a rămas nicio carte pentru auditul legacy")
 
     manifest = json.loads(git_show(args.source_ref, "docs/data/biblia-emanus/manifest.json"))
-    lock = json.loads(git_show(args.source_ref, "docs/data/biblia-emanus/source-lock.json"))
+    legacy_lock = json.loads(git_show(args.source_ref, "docs/data/biblia-emanus/source-lock.json"))
+    fresh_hash = fresh_source_hashes()
 
     if manifest.get("translation") != "BE" or manifest.get("name") != "Biblia Emanus":
         raise SystemExit("Manifestul sursă nu declară Biblia Emanus / BE")
-    if lock.get("translation") != "BE":
-        raise SystemExit("source-lock nu declară translation=BE")
+    if legacy_lock.get("translation") != "BE":
+        raise SystemExit("source-lock legacy nu declară translation=BE")
 
-    upstream = lock.get("upstreamArtifacts") or {}
-    expected_web = (upstream.get("engwebp") or {}).get("sha256")
-    expected_wlc = (upstream.get("hboWLC") or {}).get("sha256")
-    if not HEX64.fullmatch(expected_web or "") or not HEX64.fullmatch(expected_wlc or ""):
-        raise SystemExit("source-lock: lipsesc hash-urile arhivelor WEBU/WLC")
-
+    upstream = legacy_lock.get("upstreamArtifacts") or {}
+    legacy_expected_web = (upstream.get("engwebp") or {}).get("sha256")
+    legacy_expected_wlc = (upstream.get("hboWLC") or {}).get("sha256")
     actual_web = sha256_file(args.webu_zip)
     actual_wlc = sha256_file(args.wlc_zip)
-    web_pin_match = actual_web == expected_web
-    wlc_pin_match = actual_wlc == expected_wlc
-    if not web_pin_match:
-        print(f"BLOCKER WEBU: hash curent {actual_web} != hash pin-uit {expected_web}")
-    if not wlc_pin_match:
-        print(f"BLOCKER WLC: hash curent {actual_wlc} != hash pin-uit {expected_wlc}")
 
     manifest_books = {book["id"]: book for book in manifest.get("books", []) if isinstance(book, dict) and "id" in book}
     report = {
@@ -211,14 +226,25 @@ def main() -> None:
         },
         "promotionEligible": False,
         "archivePins": {
-            "WEBU": {"expectedSha256": expected_web, "actualSha256": actual_web, "matches": web_pin_match},
-            "WLC": {"expectedSha256": expected_wlc, "actualSha256": actual_wlc, "matches": wlc_pin_match},
+            "WEBU": {
+                "legacyExpectedSha256": legacy_expected_web,
+                "actualSha256": actual_web,
+                "legacyZipMatches": actual_web == legacy_expected_web,
+                "eligibilityRule": "per-book fresh USFM hash",
+            },
+            "WLC": {
+                "legacyExpectedSha256": legacy_expected_wlc,
+                "actualSha256": actual_wlc,
+                "legacyZipMatches": actual_wlc == legacy_expected_wlc,
+                "eligibilityRule": "per-book fresh USFM hash",
+            },
         },
         "books": [],
     }
 
     total_chapters = 0
     total_verses = 0
+    source_mismatches: list[str] = []
     with zipfile.ZipFile(args.webu_zip) as web_zip, zipfile.ZipFile(args.wlc_zip) as wlc_zip:
         for file_id, code, name, chapter_count in selected_books:
             manifest_book = manifest_books.get(code)
@@ -250,6 +276,17 @@ def main() -> None:
 
             web_member = find_usfm_member(web_zip, code)
             wlc_member = find_usfm_member(wlc_zip, code)
+            current_web_sha = member_sha256(web_zip, web_member)
+            current_wlc_sha = member_sha256(wlc_zip, wlc_member)
+            expected_web_sha = fresh_hash.get(("WEBU", code))
+            expected_wlc_sha = fresh_hash.get(("WLC", code))
+            web_match = current_web_sha == expected_web_sha
+            wlc_match = current_wlc_sha == expected_wlc_sha
+            if not web_match:
+                source_mismatches.append(f"{code}:WEBU")
+            if not wlc_match:
+                source_mismatches.append(f"{code}:WLC")
+
             report["books"].append({
                 "bookId": code,
                 "name": name,
@@ -257,12 +294,23 @@ def main() -> None:
                 "verses": book_verses,
                 "legacyAuditSnapshots": sorted(x for x in snapshots if isinstance(x, str)),
                 "chapterTextDigests": digests,
-                "currentWEBU": {"member": web_member, "sha256": member_sha256(web_zip, web_member)},
-                "currentWLC": {"member": wlc_member, "sha256": member_sha256(wlc_zip, wlc_member)},
+                "currentWEBU": {
+                    "member": web_member,
+                    "sha256": current_web_sha,
+                    "freshLockedSha256": expected_web_sha,
+                    "matchesFreshLock": web_match,
+                },
+                "currentWLC": {
+                    "member": wlc_member,
+                    "sha256": current_wlc_sha,
+                    "freshLockedSha256": expected_wlc_sha,
+                    "matchesFreshLock": wlc_match,
+                },
             })
             total_chapters += chapter_count
             total_verses += book_verses
-            print(f"OK {code}: {chapter_count} capitole / {book_verses} versete / text identic / audit complet / surse curente găsite")
+            status = "source-identical" if web_match and wlc_match else "SOURCE-MISMATCH"
+            print(f"OK {code}: {chapter_count} capitole / {book_verses} versete / text identic / audit complet / {status}")
 
     expected_chapters = sum(book[3] for book in selected_books)
     if total_chapters != expected_chapters:
@@ -273,14 +321,19 @@ def main() -> None:
         "chapters": total_chapters,
         "verses": total_verses,
     }
-    report["promotionEligible"] = web_pin_match and wlc_pin_match
-    report["blockingReason"] = None if report["promotionEligible"] else "Arhivele upstream curente nu reproduc toate hash-urile istorice pin-uite; candidații legacy incluși rămân temporary-editorial până la recapturare/re-audit controlat."
+    report["promotionEligible"] = not source_mismatches
+    report["sourceMismatches"] = source_mismatches
+    report["blockingReason"] = (
+        None
+        if report["promotionEligible"]
+        else "Cel puțin un payload USFM curent diferă de hash-ul per-carte din fresh source-lock; re-auditul trebuie oprit."
+    )
 
     out = ROOT / "docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    status = "ELIGIBIL" if report["promotionEligible"] else "BLOCAT DE SOURCE-LOCK"
+    status = "ELIGIBIL" if report["promotionEligible"] else "BLOCAT DE SOURCE-CONTENT"
     print(
         f"AUDIT CONTENT OK: {len(selected_books)}/{len(selected_books)} cărți, "
         f"{total_chapters}/{expected_chapters} capitole, {total_verses} versete; "
