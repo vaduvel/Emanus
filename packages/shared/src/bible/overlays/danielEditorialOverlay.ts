@@ -1,5 +1,6 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOverlay.js"
 import { VT_MAJOR_PROPHETS_FULL } from "../vtFullNarrativesMajorProphets.js"
+import { reviewDaniel03_07_09_10_12Explanations } from "./daniel03_07_09_10_12ExplanationReview.js"
 import { DANIEL_EXPLAINED as POONEN_BASE } from "./danielOverlay.js"
 import { textualChapter } from "./textualChapterFactory.js"
 
@@ -14,4 +15,6 @@ const DANIEL_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-export const DANIEL_EDITORIAL_EXPLAINED = assertCompleteOverlay(DANIEL_EDITORIAL_BASE, 12)
+const DANIEL_EDITORIAL_REVIEWED = reviewDaniel03_07_09_10_12Explanations(DANIEL_EDITORIAL_BASE)
+
+export const DANIEL_EDITORIAL_EXPLAINED = assertCompleteOverlay(DANIEL_EDITORIAL_REVIEWED, 12)
