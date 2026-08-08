@@ -13,6 +13,16 @@ import {
  */
 function directReaderText(value: string): string {
   return value
+    .replace(/\bAceasta este interpretarea lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o interpretare")
+    .replace(/\bAceasta este schema lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o schemă")
+    .replace(/\binterpretarea lui (?:Zac\s+)?Poonen\b/giu, "această interpretare")
+    .replace(/\blectura lui (?:Zac\s+)?Poonen\b/giu, "această lectură")
+    .replace(/\bschema lui (?:Zac\s+)?Poonen\b/giu, "această schemă")
+    .replace(/\bpredica lui (?:Zac\s+)?Poonen\b/giu, "expunerea")
+    .replace(/\baplicația lui (?:Zac\s+)?Poonen\b/giu, "această aplicație")
+    .replace(/\bteologia lui (?:Zac\s+)?Poonen\b/giu, "această formulare teologică")
+    .replace(/\bsursa (?:lui )?(?:Zac\s+)?Poonen\b/giu, "sursa editorială")
+    .replace(/\bmaterialul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "materialul sursă")
     .replace(/\bÎn lectura lui (?:Zac\s+)?Poonen,\s*/giu, "")
     .replace(/\bPentru (?:Zac\s+)?Poonen,\s*/giu, "")
     .replace(/\b(?:Zac\s+)?Poonen spune direct că\s+/giu, "")
@@ -32,7 +42,11 @@ function directReaderText(value: string): string {
     .replace(/\b(?:Zac\s+)?Poonen numește\s+/giu, "")
     .replace(/\bTranscriptul lui (?:Zac\s+)?Poonen\s+/giu, "Sursa editorială ")
     .replace(/\bTranscriptul (?:Zac\s+)?Poonen\s+/giu, "Sursa editorială ")
+    .replace(/\blui (?:Zac\s+)?Poonen\b/giu, "")
     .replace(/\b(?:Zac\s+)?Poonen\b/giu, "")
+    .replace(/\bAceasta este interpretarea lui escatologică\b/giu, "Aceasta este o interpretare escatologică")
+    .replace(/\bîn interpretarea lui escatologică\b/giu, "în această interpretare escatologică")
+    .replace(/\bAllen\s+Nolan\b/giu, "")
     .replace(/\bAllen\b/giu, "")
     .replace(/\bNolan\b/giu, "")
     .replace(/[ \t]{2,}/g, " ")
@@ -55,6 +69,10 @@ function withoutNamedAttribution(book: BibleBook): BibleBook {
         ...unit,
         heading: directReaderText(unit.heading),
         teaching: directReaderText(unit.teaching),
+        words: unit.words?.map((word) => ({
+          ...word,
+          meaning: directReaderText(word.meaning),
+        })),
         forYourHeart: unit.forYourHeart ? directReaderText(unit.forYourHeart) : undefined,
         // Proveniența nominală este internă; cititorul nu afișează numele autorului.
         explanationSource: undefined,
@@ -65,9 +83,13 @@ function withoutNamedAttribution(book: BibleBook): BibleBook {
 
 function assertNoNamedAttribution(book: BibleBook): void {
   const forbidden = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b/iu
+  const danglingAttribution = /\b(?:lectura|interpretarea|schema|predica|aplicația|teologia)\s+lui(?=[,.;:!?]|\s+(?:este|rămâne|devine|despre)\b)/iu
   const check = (value: string | undefined, where: string) => {
     if (value && forbidden.test(value)) {
       throw new Error(`[Biblia explicată] atribuire nominală vizibilă în ${where}.`)
+    }
+    if (value && danglingAttribution.test(value)) {
+      throw new Error(`[Biblia explicată] atribuire editorială incompletă în ${where}.`)
     }
   }
 
@@ -82,6 +104,7 @@ function assertNoNamedAttribution(book: BibleBook): void {
       check(unit.heading, `${unit.ref} titlu explicație`)
       check(unit.teaching, `${unit.ref} explicație`)
       check(unit.forYourHeart, `${unit.ref} aplicație`)
+      unit.words?.forEach((word) => check(word.meaning, `${unit.ref} explicație lexicală ${word.transliteration}`))
       if (unit.explanationSource) {
         throw new Error(`[Biblia explicată] explanationSource nu trebuie expus cititorului: ${unit.ref}.`)
       }
