@@ -1,6 +1,6 @@
 import { OSEA_TEXT } from "./oseaText.js"
 
-export const OSEA_REVIEWED_CORRECTIONS =
+export const OSEA_REVIEWED_CORRECTIONS = (
   // OSEA_REVIEWED_CORRECTIONS_JSON_START
 {
   "1": {
@@ -149,7 +149,7 @@ export const OSEA_REVIEWED_CORRECTIONS =
   }
 }
   // OSEA_REVIEWED_CORRECTIONS_JSON_END
-  as const
+) as const
 
 function applyOseaReviewedCorrections(): Readonly<Record<number, readonly string[]>> {
   const reviewed: Record<number, readonly string[]> = {}
