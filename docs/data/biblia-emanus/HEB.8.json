@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,52 +71,48 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 13 versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5",
+      "runId": "emanus-nt-review-2026-08-08-heb-8",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
       "continuous": true,
-      "verseNumbersSha256": "sha256:6fe61cca0dde8b48dc2c0b4241afd597ec079c8be02ca21296076aaa3af51eab"
+      "verseNumbersSha256": "sha256:79df609df996249165955441ee54cef9fe088083caa61c5cb43bd484b1541829"
     },
     "sourceLanguage": {
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 13 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 13 versete au fost confruntate direct cu SBLGNT/aparat; TR numai martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate calcurile și frazele rupte din 8:5-6 și 8:13.",
+        "Citatul din Ieremia 31 a fost redat coerent și consecvent în română, păstrând structura textului grec din Evrei.",
+        "Termenii cultici și juridici au fost uniformizați fără parafraze confesionale."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "ὑπόδειγμα și σκιά din 8:5 sunt redate ca „reprezentare” și „umbră”, fără a transforma metafora într-o schemă doctrinară suplimentară.",
+        "La 8:8 textul principal urmează acuzativul αὐτούς din SBLGNT, iar la 8:12 nu importă adaosul RP despre fărădelegi.",
+        "διαθήκη este redat consecvent „legământ” în argumentul capitolului."
       ]
     },
     "omissionAddition": {
@@ -123,90 +122,153 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:f620f1504dc86ec55ed6c3c4fe411571b866420c506cb3a0d75952e2690ff94d",
-    "contentDigest": "sha256:77804d03df5695386b9ec7cbfa6a9565f68b779884da35335eeae0e873cd30a0"
+    "textDigest": "sha256:849d73b8335f15fa3398f9de8c7141a48fea8d3cb233f94a79fc7608aa62e6e3",
+    "contentDigest": "sha256:930746b6a44f06a84851568709aa70658757acfd75fdb95a0979e9f596510fab"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Acum, în lucrurile pe care le spunem, punctul principal este aceasta: avem un astfel de mare preot, care a șezut la dreapta tronului Majestății în ceruri,"
+      "text": "Punctul principal al celor spuse este acesta: avem un astfel de Mare Preot, care S-a așezat la dreapta tronului Măreției în ceruri,"
     },
     {
       "number": 2,
-      "text": "un slujitor al sanctuarului și al adevăratului tabernacol pe care Domnul l-a așezat, nu omul."
+      "text": "slujitor al sanctuarului și al adevăratului cort, pe care l-a ridicat Domnul, nu un om."
     },
     {
       "number": 3,
-      "text": "Căci fiecare mare preot este numit să aducă daruri și jertfe. De aceea este necesar ca și acest mare preot să aibă ceva de oferit."
+      "text": "Căci orice mare preot este pus să aducă daruri și jertfe; de aceea este necesar ca și Acesta să aibă ceva de adus."
     },
     {
       "number": 4,
-      "text": "Căci dacă ar fi pe pământ, nu ar fi preot, văzând că sunt preoți ce oferă daruri conform legii,"
+      "text": "Dacă ar fi pe pământ, nici n-ar fi preot, fiindcă sunt cei care aduc darurile potrivit Legii."
     },
     {
       "number": 5,
-      "text": "care slujesc o copie o umbră a lucrurilor ce, așa cum Moise a fost avertizat de Dumnezeu când era pe punctul de a face cortul, pentru că el a spus: Iată, vei face totul după modelul care ți-a fost arătat pe munte."
+      "text": "Ei slujesc unei reprezentări și unei umbre a lucrurilor cerești, așa cum a fost înștiințat Moise când urma să ridice cortul: „Vezi”, spune El, „să faci toate după modelul care ți-a fost arătat pe munte.”"
     },
     {
       "number": 6,
-      "text": "Dar acum el a obținut un serviciu mai excelent, prin la fel de mult ca el este, de asemenea, mediatorul unui legământ mai bun, care pe promisiuni mai bune a fost dat ca lege."
+      "text": "Dar acum El a primit o slujire cu atât mai înaltă, cu cât este și Mijlocitorul unui legământ mai bun, întemeiat prin lege pe promisiuni mai bune."
     },
     {
       "number": 7,
-      "text": "Căci dacă acest prim legământ ar fi fost fără cusur, atunci nu s-ar fi căutat nici un loc pentru o a doua."
+      "text": "Căci, dacă acel prim legământ ar fi fost fără cusur, nu s-ar mai fi căutat loc pentru un al doilea."
     },
     {
       "number": 8,
-      "text": "Căci, găsindu-i vinovați, le spune: «Iată, vin zile, zice Domnul, când voi încheia un legământ nou cu casa lui Israel și cu casa lui Iuda,"
+      "text": "Dar, găsindu-le vină, El spune: „Iată, vin zile, spune Domnul, când voi încheia cu casa lui Israel și cu casa lui Iuda un legământ nou,"
     },
     {
       "number": 9,
-      "text": "Nu conform legământului pe care l-am făcut cu părinții lor în ziua în care i-am luat de mână ca să-i scot din țara Egiptului; căci ei nu au continuat în legământul meu și i-am disprețuit, zice Domnul."
+      "text": "nu ca legământul pe care l-am făcut cu părinții lor în ziua când i-am luat de mână ca să-i scot din țara Egiptului; fiindcă ei n-au rămas în legământul Meu, iar Eu nu M-am mai îngrijit de ei, spune Domnul."
     },
     {
       "number": 10,
-      "text": "Pentru că acesta este legământul pe care îl voi face cu casa lui Israel după acele zile, spune Domnul: Voi pune legile mele în mintea lor; le voi scrie și pe inima lor. Eu voi fi Dumnezeul lor și ei vor fi poporul meu."
+      "text": "Căci acesta este legământul pe care îl voi încheia cu casa lui Israel după acele zile, spune Domnul: voi pune legile Mele în mintea lor și le voi scrie pe inimile lor; Eu voi fi Dumnezeul lor, iar ei vor fi poporul Meu."
     },
     {
       "number": 11,
-      "text": "Niciunul nu-l va mai învăța pe aproapele său și niciunul pe fratele său, zicând: Cunoaște-L pe Domnul!, căci toți Mă vor cunoaște, de la cel mai mic până la cel mai mare dintre ei."
+      "text": "Și nu va mai învăța fiecare pe concetățeanul său și fiecare pe fratele său, spunând: „Cunoaște-L pe Domnul!”, fiindcă toți Mă vor cunoaște, de la cel mai mic până la cel mai mare dintre ei."
     },
     {
       "number": 12,
-      "text": "Căci voi fi milostiv față de nedreptățile lor și nu-Mi voi mai aduce aminte de păcatele lor.»"
+      "text": "Căci voi fi îndurător față de nedreptățile lor și nu-Mi voi mai aminti de păcatele lor.”"
     },
     {
       "number": 13,
-      "text": "Prin faptul că spune el, un nou legământ, el a făcut primul învechit. Dar ceea ce devine învechit și crește în vârstă este aproape de a dispărea."
+      "text": "Spunând „un legământ nou”, El l-a făcut învechit pe cel dintâi; iar ceea ce se învechește și îmbătrânește este aproape de dispariție."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 12,
-      "term": "variantă textuală SBLGNT/TR",
-      "decision": "Textul principal urmează lectura SBLGNT 1.2 și se oprește după „păcatele lor”.",
+      "verse": 2,
+      "term": "οὐκ ἄνθρωπος",
+      "decision": "„nu un om”",
       "alternatives": [
-        "Textus Receptus adaugă „și fărădelegile lor” după „păcatele lor”."
+        "RP: καὶ οὐκ ἄνθρωπος"
       ],
-      "reason": "SBLGNT 1.2 nu conține adaosul tradițional; varianta rămâne semnalată pentru revizia AI per-verset.",
+      "reason": "SBLGNT nu are conjuncția suplimentară înainte de negație; româna păstrează opoziția directă.",
       "reviewRequired": true,
-      "resolutionStatus": "needs_ai_review"
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are conjuncția suplimentară înainte de negație; româna păstrează opoziția directă."
+    },
+    {
+      "verse": 4,
+      "term": "οὖν … ὄντων … νόμον",
+      "decision": "„Dacă ar fi pe pământ … fiindcă sunt cei care aduc darurile potrivit Legii”",
+      "alternatives": [
+        "RP: γὰρ; + „preoții”; articol înainte de νόμον"
+      ],
+      "reason": "Textul principal nu importă explicit substantivul „preoții” adăugat în RP, deși referentul este clar din context.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal nu importă explicit substantivul „preoții” adăugat în RP, deși referentul este clar din context."
+    },
+    {
+      "verse": 8,
+      "term": "μεμφόμενος … αὐτούς",
+      "decision": "„găsindu-le vină”",
+      "alternatives": [
+        "Treg/RP: αὐτοῖς"
+      ],
+      "reason": "SBLGNT/WH/NA28 au acuzativul αὐτούς; formularea românească păstrează oamenii ca obiect al mustrării, fără a altera citatul care urmează.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT/WH/NA28 au acuzativul αὐτούς; formularea românească păstrează oamenii ca obiect al mustrării, fără a altera citatul care urmează."
+    },
+    {
+      "verse": 9,
+      "term": "κἀγὼ ἠμέλησα αὐτῶν",
+      "decision": "„iar Eu nu M-am mai îngrijit de ei”",
+      "alternatives": [
+        "„i-am disprețuit”"
+      ],
+      "reason": "ἀμελέω indică neglijare/lipsa grijii; alegerea evită intensificarea semantică nejustificată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "ἀμελέω indică neglijare/lipsa grijii; alegerea evită intensificarea semantică nejustificată."
+    },
+    {
+      "verse": 11,
+      "term": "ἀπὸ μικροῦ ἕως μεγάλου αὐτῶν",
+      "decision": "„de la cel mai mic până la cel mai mare dintre ei”",
+      "alternatives": [
+        "RP: + αὐτῶν după μικροῦ"
+      ],
+      "reason": "Textul principal nu are primul pronume suplimentar din RP; sensul distributiv este păstrat natural în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal nu are primul pronume suplimentar din RP; sensul distributiv este păstrat natural în română."
+    },
+    {
+      "verse": 12,
+      "term": "τῶν ἁμαρτιῶν αὐτῶν",
+      "decision": "„păcatele lor”",
+      "alternatives": [
+        "RP: + „și fărădelegile lor”"
+      ],
+      "reason": "Adaosul tradițional καὶ τῶν ἀνομιῶν αὐτῶν este absent din SBLGNT și nu este importat în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul tradițional καὶ τῶν ἀνομιῶν αὐτῶν este absent din SBLGNT și nu este importat în textul principal."
+    },
+    {
+      "verse": 13,
+      "term": "πεπαλαίωκεν … ἐγγὺς ἀφανισμοῦ",
+      "decision": "„l-a făcut învechit … aproape de dispariție”",
+      "alternatives": [
+        "„l-a desființat”"
+      ],
+      "reason": "Verbele descriu învechirea și apropierea dispariției; formularea evită a anticipa o concluzie mai tare decât textul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbele descriu învechirea și apropierea dispariției; formularea evită a anticipa o concluzie mai tare decât textul."
     }
   ],
   "referenceNotes": [],
