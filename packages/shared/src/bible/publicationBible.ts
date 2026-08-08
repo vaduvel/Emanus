@@ -13,6 +13,18 @@ import {
  */
 function directReaderText(value: string): string {
   return value
+    // Dacă o propoziție îl numește pe autor/sursa de cercetare, iar următoarea
+    // continuă cu „El ...”, neutralizăm mai întâi pronumele cât timp referentul
+    // este încă demonstrabil. Altfel, ștergerea numelui ar lăsa un „El” fără referent.
+    .replace(
+      /((?:Zac\s+)?Poonen[^.!?]*[.!?]\s+)El (?=(?:nu\s+)?(?:leagă|subliniază|observă|explică|insistă|folosește|vede|citește|aplică|dezvoltă|rezumă|tratează|revine|amintește|contrastează|urmărește|numește)\b)/giu,
+      "$1Explicația ",
+    )
+    .replace(
+      /(Transcriptul(?: lui (?:Zac\s+)?Poonen)?[^.!?]*[.!?]\s+)El (?=(?:nu\s+)?(?:leagă|subliniază|observă|explică|insistă|folosește|vede|citește|aplică|dezvoltă|rezumă|tratează|revine|amintește|contrastează|urmărește|numește)\b)/giu,
+      "$1Explicația ",
+    )
+
     // Formule interpretative: păstrăm caracterul de interpretare, nu autorul.
     .replace(/\bAceasta este interpretarea lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o interpretare")
     .replace(/\bAceasta este schema lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o schemă")
@@ -61,6 +73,7 @@ function directReaderText(value: string): string {
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu dezvoltă\s+/giu, "Expunerea nu dezvoltă ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu repetă toate detaliile, ci se concentrează\s+/giu, "Accentul cade ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "Explicația")
+    .replace(/\bTranscriptul lui\b/giu, "Explicația")
     .replace(/\bTranscriptul\b/giu, "Explicația")
     .replace(/\bsursa (?:lui )?(?:Zac\s+)?Poonen\b/giu, "explicația")
     .replace(/\bmaterialul (?:lui )?(?:Zac\s+)?Poonen\b/giu, "explicația")
@@ -80,6 +93,9 @@ function directReaderText(value: string): string {
     .replace(/\bAllen\b/giu, "expunerea")
     .replace(/\bNolan\b/giu, "expunerea")
 
+    // Curățări finale după neutralizarea sursei.
+    .replace(/\bExplicația lui\b/giu, "Explicația")
+    .replace(/\bEl leagă\b/giu, "Explicația leagă")
     .replace(/[ \t]{2,}/g, " ")
     .replace(/\s+([,.;:!?])/g, "$1")
     .replace(/\bexplicația explicația\b/giu, "explicația")
@@ -116,10 +132,14 @@ function withoutNamedAttribution(book: BibleBook): BibleBook {
 
 function assertNoNamedAttribution(book: BibleBook): void {
   const forbidden = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b|\bCFC India\b|\bThrough The Bible\b/iu
+  const researchMeta = /\btranscript(?:ul|ului|e)?\b/iu
   const danglingAttribution = /\b(?:lectura|interpretarea|schema|predica|aplicația|teologia)\s+lui(?=[,.;:!?]|\s+(?:este|rămâne|devine|despre)\b)/iu
   const check = (value: string | undefined, where: string) => {
     if (value && forbidden.test(value)) {
       throw new Error(`[Biblia explicată] atribuire nominală vizibilă în ${where}.`)
+    }
+    if (value && researchMeta.test(value)) {
+      throw new Error(`[Biblia explicată] limbaj intern de cercetare vizibil în ${where}.`)
     }
     if (value && danglingAttribution.test(value)) {
       throw new Error(`[Biblia explicată] atribuire editorială incompletă în ${where}.`)
