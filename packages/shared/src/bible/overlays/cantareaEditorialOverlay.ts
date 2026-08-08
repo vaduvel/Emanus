@@ -1,10 +1,10 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOverlay.js"
+import { reviewCantarea01_02_04_05_08Explanations } from "./cantarea01_02_04_05_08ExplanationReview.js"
 import { CANTAREA_DEEPENED } from "./cantareaDeepened.js"
 import { CANTAREA_CANTARILOR_EXPLAINED as POONEN_BASE } from "./cantareaCantarilorOverlay.js"
 import { CANTAREA_TEXTUAL_CHAPTERS } from "./cantareaTextualChapters.js"
 
 const chapters = POONEN_BASE.chapters.map((chapter) => {
-  // Păstrăm expunerea Poonen acolo unde transcriptul tratează capitolul.
   if (chapter.units.length > 0) return chapter
 
   const deepened = CANTAREA_DEEPENED[chapter.number]
@@ -23,4 +23,6 @@ const CANTAREA_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-export const CANTAREA_EDITORIAL_EXPLAINED = assertCompleteOverlay(CANTAREA_EDITORIAL_BASE, 8)
+const CANTAREA_EDITORIAL_REVIEWED = reviewCantarea01_02_04_05_08Explanations(CANTAREA_EDITORIAL_BASE)
+
+export const CANTAREA_EDITORIAL_EXPLAINED = assertCompleteOverlay(CANTAREA_EDITORIAL_REVIEWED, 8)
