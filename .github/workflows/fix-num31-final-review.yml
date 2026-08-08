@@ -1,0 +1,69 @@
+name: Fix NUM 31 Final Review
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-vt-integration-clean
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-vt-integration-clean
+          fetch-depth: 0
+
+      - name: Correct Romanian text and refresh audit digest
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          path = Path('docs/data/biblia-emanus/NUM.31.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          verses = {v['number']: v for v in data['verses']}
+
+          verses[3]['text'] = verses[3]['text'].replace('să îplinească', 'să împlinească')
+          verses[28]['text'] = verses[28]['text'].replace('ca dregătorie pentru DOMNUL', 'ca tribut pentru DOMNUL')
+          for n in (37, 38, 39, 40):
+              verses[n]['text'] = verses[n]['text'].replace('datoria pentru DOMNUL', 'tributul pentru DOMNUL')
+          verses[41]['text'] = verses[41]['text'].replace(
+              'datoria prinosului ridicat pentru DOMNUL',
+              'tributul, ca prinos ridicat pentru DOMNUL',
+          )
+
+          assert 'împlinească răzbunarea DOMNULUI' in verses[3]['text']
+          assert 'tribut pentru DOMNUL' in verses[28]['text']
+          assert all('tributul pentru DOMNUL' in verses[n]['text'] for n in (37,38,39,40))
+          assert 'tributul, ca prinos ridicat pentru DOMNUL' in verses[41]['text']
+
+          changes = data['audit']['romanianLanguage'].setdefault('changesApplied', [])
+          notes = [
+              'Numeri 31:3 — corectat „îplinească” în „împlinească”.',
+              'Numeri 31:28,37–41 — redat consecvent ebraicul „mekhes” ca „tribut”, nu „dregătorie/datorie”.',
+          ]
+          for note in notes:
+              if note not in changes:
+                  changes.append(note)
+          data['audit']['completedOn'] = '2026-08-08'
+          canonical = '\n'.join(f"{v['number']}\t{v['text']}" for v in data['verses'])
+          data['audit']['textDigest'] = 'sha256:' + hashlib.sha256(canonical.encode('utf-8')).hexdigest()
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('NUM 31 correction digest:', data['audit']['textDigest'])
+          PY
+
+      - name: Commit correction
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-emanus/NUM.31.json
+          git commit -m 'Correct NUM 31 Romanian and levy terminology'
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
