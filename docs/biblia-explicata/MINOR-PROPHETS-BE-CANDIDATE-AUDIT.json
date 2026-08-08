@@ -1,6 +1,24 @@
 {
   "translation": "BE",
   "sourceBranch": "origin/agent/biblia-emanus-ot-and-apocrypha",
+  "scope": {
+    "includedBooks": [
+      "JOL",
+      "AMO",
+      "OBA",
+      "JON",
+      "MIC",
+      "NAM",
+      "HAB",
+      "ZEP",
+      "HAG",
+      "ZEC",
+      "MAL"
+    ],
+    "excludedPromotedBooks": [
+      "HOS"
+    ]
+  },
   "promotionEligible": false,
   "archivePins": {
     "WEBU": {
@@ -15,39 +33,6 @@
     }
   },
   "books": [
-    {
-      "bookId": "HOS",
-      "name": "Osea",
-      "chapters": 14,
-      "verses": 197,
-      "legacyAuditSnapshots": [
-        "a7f6c529a1fd8c45522f6cdaea89f3a1698d7e434a9a5acb9f9eeec5962ac931"
-      ],
-      "chapterTextDigests": [
-        "12f9fc6040b66ffbd1bc73e2abc534aa03a6bf15cdf9dc10e2b7c00af7433446",
-        "b56c81fb805c308ef5d9271d8145e91c76bba23ef747ae56e6b2f648eb6fee1e",
-        "ebca86169f0003288c1913a6c8575859ada626ba3cd524e2385ff0a40a185fbc",
-        "04c2bcc27c43893d7a464cd82211fbf0f5087531f03230db2b9b7420f821aee0",
-        "d68752244b0c77dbb4eaaa6e75c9ba14f8d9a893f9a563eda2130e257e047c22",
-        "94f76db0ed7b5dfee8e5f23817d79c8c1393a9f4139b94325740d2047928cd5c",
-        "abf572fedfef1a6127b9ca2a905f7a34dea83137d8100f9f9112d01408b191e0",
-        "536636a0376b2edb6e4f12119bbc67aade4cd7817284669003bc0134612d4ac6",
-        "b7bb57a009d6c2bd871b3bc7dc284fe9259a24bfdae1f4a063692de9a4f7893c",
-        "819acaa100f30efef7f0a33de709ca2df18c76169367ecb9ba4d2f0ef830c3a9",
-        "c90af3acd83cbcfa81e5288be96058ea8e5fa14c211f421b7f046b20550a3ed6",
-        "faf4452a281a9ff6896e30c9282a04a7635949535dba4c1d0f44dd8fa599dd5c",
-        "43538bda3f230eec0ef5fc61340957f9398b11dca787bf681e556be90f0a72e5",
-        "16096b7c166996ca98484753c2ba1b871f6ccf8bc8064d4756f1f45bfa518bce"
-      ],
-      "currentWEBU": {
-        "member": "29-HOSengwebp.usfm",
-        "sha256": "385ee4ee4af9222c022065abee82f47b0cbd5c820d8b57d19e6f7de8d6e6be08"
-      },
-      "currentWLC": {
-        "member": "29-HOShboWLC.usfm",
-        "sha256": "59d8a689fffd943a8a871ff741f21f1bfc05937ba2221f6a6181d947155c3531"
-      }
-    },
     {
       "bookId": "JOL",
       "name": "Ioel",
@@ -312,9 +297,9 @@
     }
   ],
   "totals": {
-    "books": 12,
-    "chapters": 67,
-    "verses": 1050
+    "books": 11,
+    "chapters": 53,
+    "verses": 853
   },
-  "blockingReason": "Arhivele upstream curente nu reproduc toate hash-urile istorice pin-uite; textul rămâne temporary-editorial până la recapturare/re-audit controlat."
+  "blockingReason": "Arhivele upstream curente nu reproduc toate hash-urile istorice pin-uite; candidații legacy incluși rămân temporary-editorial până la recapturare/re-audit controlat."
 }
