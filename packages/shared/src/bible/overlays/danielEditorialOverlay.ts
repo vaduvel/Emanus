@@ -2,6 +2,7 @@ import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOv
 import { VT_MAJOR_PROPHETS_FULL } from "../vtFullNarrativesMajorProphets.js"
 import { reviewDaniel03_07_09_10_12Explanations } from "./daniel03_07_09_10_12ExplanationReview.js"
 import { reviewDaniel04And06Explanations } from "./daniel04And06ExplanationReview.js"
+import { restoreDaniel3PoonenFidelity } from "./daniel3PoonenFidelityReview.js"
 import { restoreDaniel04And06PoonenFidelity } from "./daniel04And06PoonenFidelityReview.js"
 import { restoreDanielPoonenFidelity } from "./danielPoonenFidelityReview.js"
 import { DANIEL_EXPLAINED as POONEN_BASE } from "./danielOverlay.js"
@@ -18,10 +19,12 @@ const DANIEL_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const DANIEL_EDITORIAL_REVIEWED = restoreDaniel04And06PoonenFidelity(
-  restoreDanielPoonenFidelity(
-    reviewDaniel04And06Explanations(
-      reviewDaniel03_07_09_10_12Explanations(DANIEL_EDITORIAL_BASE),
+const DANIEL_EDITORIAL_REVIEWED = restoreDaniel3PoonenFidelity(
+  restoreDaniel04And06PoonenFidelity(
+    restoreDanielPoonenFidelity(
+      reviewDaniel04And06Explanations(
+        reviewDaniel03_07_09_10_12Explanations(DANIEL_EDITORIAL_BASE),
+      ),
     ),
   ),
 )
