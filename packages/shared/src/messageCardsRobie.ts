@@ -1,0 +1,363 @@
+// Carduri pentru lanțuri și lipsuri: băutura, pofta, banii, depărtarea de ai tăi
+// (docs/41 §3).
+//
+// REGULA (docs/00-DIRECTIE §7, D-005): fiecare `body` este parafraza unui
+// verset REAL, iar `verseRef` apare pe card, la vedere.
+//
+// REGULĂ DE TON (docs/41 §6.5): la patimă, cardul NU ține loc de ajutor. Sub el
+// stă rândul către /criza și numerele (docs/22-siguranta). Vezi
+// `needsCrisisLine` în `needs.ts`. Un pergament frumos pus singur înaintea unui
+// om care bea de zece ani este o cruzime politicoasă.
+//
+// LA BANI: niciun card nu făgăduiește îmbogățire. Nu se scrie din Maleahi 3:10
+// și nu se atinge „evanghelia prosperității” (docs/14-carta-doctrinara).
+//
+// `verseText` este fraza-cheie, nu versetul întreg (docs/39).
+// DE COLAȚIONAT: versetele nu au trecut încă prin citirea de om (docs/41 §6.6).
+//
+// NESCRIS Încă: `ocult` („am umblat cu descântece”). Acolo stă o hotărâre de om
+// (docs/41 §7): dacă se scriu pergamente deloc, sau numai Biblie explicată.
+import type { MessageCard } from "./messageCards.js"
+
+/** Beau și nu mă pot opri. */
+export const CARDS_PATIMA_BAUTURA: MessageCard[] = [
+  {
+    id: "msg_mijlocul_sa_iesiti",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Nu te-a ajuns o ispită nemaivăzută. Și dau, odată cu ea, și calea de ieșire.",
+    verseRef: "1 Corinteni 10:13",
+    verseText: "Va da și mijlocul să ieșiți din ea, ca s-o puteți răbda.",
+    axis: "freedom",
+    needs: ["patima_bautura", "pofta"],
+    background: "pergament",
+  },
+  {
+    id: "msg_cine_ma_va_izbavi",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Poți să strigi: cine mă va izbăvi? Întrebarea aceasta are un răspuns cu nume.",
+    verseRef: "Romani 7:24-25",
+    verseText: "O, nenorocitul de mine! Cine mă va izbăvi? Mulțumiri fie aduse lui Dumnezeu, prin Isus Hristos.",
+    axis: "freedom",
+    needs: ["patima_bautura", "pofta", "vinovat"],
+    background: "pergament-umbra",
+  },
+  {
+    id: "msg_de_sapte_ori_cade",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Cel neprihănit de șapte ori cade — și tot de atâtea ori se ridică.",
+    verseRef: "Proverbele 24:16",
+    verseText: "Căci cel neprihănit de șapte ori cade și se ridică.",
+    axis: "character",
+    needs: ["patima_bautura", "pofta", "vinovat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_pacatul_nu_va_mai_stapani",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Păcatul nu va mai stăpâni peste tine. Nu ești sub Lege, ci sub har.",
+    verseRef: "Romani 6:14",
+    verseText: "Căci păcatul nu va mai stăpâni asupra voastră.",
+    axis: "freedom",
+    needs: ["patima_bautura", "pofta"],
+    background: "pergament",
+  },
+  {
+    id: "msg_din_fundul_mocirlei",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Te scot din fundul mocirlei și îți pun picioarele pe stâncă.",
+    verseRef: "Psalmul 40:2",
+    verseText: "M-a scos din groapa pieirii, din fundul mocirlei; mi-a pus picioarele pe stâncă.",
+    axis: "freedom",
+    needs: ["patima_bautura"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_spune_i_unui_om",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Spune-i unui om. Ce stă ascuns nu se vindecă.",
+    verseRef: "Iacov 5:16",
+    verseText: "Mărturisiți-vă unii altora păcatele și rugați-vă unii pentru alții, ca să fiți vindecați.",
+    axis: "relationships",
+    needs: ["patima_bautura", "pofta", "vinovat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_fiti_plini_de_Duh",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Nu te umple cu vin. Este altceva cu care poți fi plin.",
+    verseRef: "Efeseni 5:18",
+    verseText: "Nu vă îmbătați de vin, ci fiți plini de Duh.",
+    axis: "freedom",
+    needs: ["patima_bautura"],
+    background: "pergament",
+  },
+  {
+    id: "msg_de_ce_dai_banii",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "De ce dai banii pe ce nu hrănește? Vino la apă, fără plată.",
+    verseRef: "Isaia 55:1-2",
+    verseText: "Voi toți cei însetați, veniți la ape... Pentru ce cântăriți argint pentru un lucru care nu hrănește?",
+    axis: "freedom",
+    needs: ["patima_bautura", "pofta", "bani"],
+    background: "pergament-cald",
+  },
+]
+
+/** Pofta care mă ține. */
+export const CARDS_POFTA: MessageCard[] = [
+  {
+    id: "msg_templul_Duhului",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Trupul tău este Templul Duhului Sfânt. Ai fost cumpărat cu un preț.",
+    verseRef: "1 Corinteni 6:19-20",
+    verseText: "Nu știți că trupul vostru este Templul Duhului Sfânt? Căci ați fost cumpărați cu un preț.",
+    axis: "identity",
+    needs: ["pofta"],
+    background: "pergament",
+  },
+  {
+    id: "msg_inima_curata_vor_vedea",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Ferice de cei cu inima curată, căci ei vor vedea pe Dumnezeu.",
+    verseRef: "Matei 5:8",
+    verseText: "Ferice de cei cu inima curată, căci ei vor vedea pe Dumnezeu!",
+    axis: "character",
+    needs: ["pofta"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_legamant_cu_ochii",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Poți face un legământ cu ochii tăi. Iov l-a făcut.",
+    verseRef: "Iov 31:1",
+    verseText: "Făcusem un legământ cu ochii mei.",
+    axis: "character",
+    needs: ["pofta"],
+    background: "pergament",
+  },
+  {
+    id: "msg_zideste_in_mine_o_inima_curata",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Cere-Mi o inimă curată și un duh statornic. Rugăciunea asta e scrisă deja.",
+    verseRef: "Psalmul 51:10",
+    verseText: "Zidește în mine o inimă curată, Dumnezeule, pune în mine un duh nou și statornic!",
+    axis: "character",
+    needs: ["pofta", "vinovat"],
+    background: "pergament-umbra",
+  },
+  {
+    id: "msg_fugi_de_poftele_tineretii",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Fugi de poftele tinereții. Nu sta pe loc să te lupți cu ele.",
+    verseRef: "2 Timotei 2:22",
+    verseText: "Fugi de poftele tinereții și urmărește neprihănirea, credința, dragostea, pacea.",
+    axis: "freedom",
+    needs: ["pofta"],
+    background: "pergament",
+  },
+  {
+    id: "msg_pofta_zamisleste",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Pofta zămislește păcatul. Dar nu ești obligat să ajungi până acolo.",
+    verseRef: "Iacov 1:14-15",
+    verseText: "Fiecare este ispitit când este atras de pofta lui însăși.",
+    axis: "character",
+    needs: ["pofta", "patima_bautura"],
+    background: "pergament-umbra",
+  },
+  {
+    id: "msg_curata_cararea",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Cum îți ții curată cărarea? Îndreptându-te după Cuvântul Meu.",
+    verseRef: "Psalmul 119:9",
+    verseText: "Cum își va ține tânărul curată cărarea? Îndreptându-se după Cuvântul Tău.",
+    axis: "living_faith",
+    needs: ["pofta", "fara_directie"],
+    background: "pergament",
+  },
+  {
+    id: "msg_lumea_si_pofta_ei_trece",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Lumea și pofta ei trec. Cine face voia lui Dumnezeu rămâne în veac.",
+    verseRef: "1 Ioan 2:17",
+    verseText: "Și lumea și pofta ei trece; dar cine face voia lui Dumnezeu rămâne în veac.",
+    axis: "living_faith",
+    needs: ["pofta"],
+    background: "pergament",
+  },
+]
+
+/** Bani și datorii. */
+export const CARDS_BANI: MessageCard[] = [
+  {
+    id: "msg_toate_trebuintele",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Îngrijesc de toate trebuințele tale, după bogăția Mea.",
+    verseRef: "Filipeni 4:19",
+    verseText: "Și Dumnezeul meu să îngrijească de toate trebuințele voastre, după bogăția Sa.",
+    axis: "living_faith",
+    needs: ["bani", "speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_cautati_mai_intai",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Tatăl vostru știe de ce aveți trebuință. Căutați mai întâi Împărăția.",
+    verseRef: "Matei 6:32-33",
+    verseText: "Căutați mai întâi Împărăția lui Dumnezeu, și toate aceste lucruri vi se vor da pe deasupra.",
+    axis: "living_faith",
+    needs: ["bani", "fara_directie"],
+    background: "pergament",
+  },
+  {
+    id: "msg_n_am_vazut_pe_cel_neprihanit_parasit",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Am fost tânăr și am îmbătrânit — și n-am văzut pe cel neprihănit părăsit.",
+    verseRef: "Psalmul 37:25",
+    verseText: "Am fost tânăr și am îmbătrânit, dar n-am văzut pe cel neprihănit părăsit.",
+    axis: "living_faith",
+    needs: ["bani", "speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_cu_ce_sa_ne_hranim",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Dacă ai cu ce să te hrănești și cu ce să te îmbraci, îți este de ajuns.",
+    verseRef: "1 Timotei 6:8",
+    verseText: "Dacă avem, dar, cu ce să ne hrănim și cu ce să ne îmbrăcăm, ne va fi de ajuns.",
+    axis: "character",
+    needs: ["bani"],
+    background: "pergament",
+  },
+  {
+    id: "msg_nu_duc_lipsa_de_niciun_bine",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Cei ce Mă caută nu duc lipsă de niciun bine.",
+    verseRef: "Psalmul 34:10",
+    verseText: "Cei ce caută pe Domnul nu duc lipsă de niciun bine.",
+    axis: "living_faith",
+    needs: ["bani", "obosit"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_viata_nu_sta_in_belsug",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Viața ta nu stă în belșugul avuției tale.",
+    verseRef: "Luca 12:15",
+    verseText: "Căci viața cuiva nu stă în belșugul avuției lui.",
+    axis: "character",
+    needs: ["bani"],
+    background: "pergament",
+  },
+  {
+    id: "msg_orice_har",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Pot să te umplu cu orice har, ca să ai totdeauna îndestularea.",
+    verseRef: "2 Corinteni 9:8",
+    verseText: "Și Dumnezeu poate să vă umple cu orice har.",
+    axis: "living_faith",
+    needs: ["bani", "in_asteptare"],
+    background: "pergament",
+  },
+  {
+    id: "msg_painea_de_astazi",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Ai voie să ceri pâinea de astăzi. Doar pe cea de astăzi.",
+    verseRef: "Matei 6:11",
+    verseText: "Pâinea noastră cea de toate zilele dă-ne-o nouă astăzi.",
+    axis: "living_faith",
+    needs: ["bani", "obosit"],
+    background: "pergament",
+  },
+]
+
+/** Sunt departe de ai mei. */
+export const CARDS_DEPARTE: MessageCard[] = [
+  {
+    id: "msg_la_plecare_si_la_venire",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Te păzesc la plecare și la venire, de acum și până în veac.",
+    verseRef: "Psalmul 121:8",
+    verseText: "Domnul te va păzi la plecare și la venire, de acum și până în veac.",
+    axis: "emotional_peace",
+    needs: ["departe"],
+    background: "pergament",
+  },
+  {
+    id: "msg_te_voi_aduce_inapoi",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Sunt cu tine oriunde te duci și te aduc înapoi.",
+    verseRef: "Geneza 28:15",
+    verseText: "Iată, Eu sunt cu tine; te voi păzi pretutindeni pe unde vei merge și te voi aduce înapoi.",
+    axis: "identity",
+    needs: ["departe", "singur"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_la_marginea_marii",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Chiar la marginea mării de te-ai duce, mâna Mea te călăuzește și acolo.",
+    verseRef: "Psalmul 139:9-10",
+    verseText: "Dacă mă voi duce să locuiesc la marginea mării, și acolo mâna Ta mă va călăuzi.",
+    axis: "identity",
+    needs: ["departe", "singur"],
+    background: "pergament",
+  },
+  {
+    id: "msg_binele_cetatii",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Caută binele cetății în care te-am dus. Roagă-te pentru ea.",
+    verseRef: "Ieremia 29:7",
+    verseText: "Urmăriți binele cetății în care v-am dus în robie și rugați-vă Domnului pentru ea.",
+    axis: "living_faith",
+    needs: ["departe", "fara_directie"],
+    background: "pergament",
+  },
+  {
+    id: "msg_daca_treci_prin_ape",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Dacă treci prin ape, Eu sunt cu tine; râurile nu te vor îneca.",
+    verseRef: "Isaia 43:2",
+    verseText: "Dacă vei trece prin ape, Eu voi fi cu tine.",
+    axis: "emotional_peace",
+    needs: ["departe", "speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_strain_si_calator",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Ești străin și călător aici. Ai o patrie mai bună.",
+    verseRef: "Evrei 11:13-16",
+    verseText: "Mărturiseau că sunt străini și călători pe pământ... doreau o patrie mai bună.",
+    axis: "identity",
+    needs: ["departe"],
+    background: "pergament",
+  },
+  {
+    id: "msg_cum_sa_cantam_pe_pamant_strain",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Poți să întrebi cum să cânți pe un pământ străin. Întrebarea e în Cartea Mea.",
+    verseRef: "Psalmul 137:4",
+    verseText: "Cum să cântăm noi cântările Domnului pe un pământ străin?",
+    axis: "emotional_peace",
+    needs: ["departe", "singur"],
+    background: "pergament-umbra",
+  },
+  {
+    id: "msg_hotarele_locuintei",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Am hotărât și hotarele locuinței tale. Nu sunt departe de tine.",
+    verseRef: "Faptele Apostolilor 17:26-27",
+    verseText: "Așezat hotarele locuinței lor... măcar că nu este departe de fiecare din noi.",
+    axis: "identity",
+    needs: ["departe", "fara_directie"],
+    background: "pergament",
+  },
+]
+
+export const MESSAGE_CARDS_ROBIE: MessageCard[] = [
+  ...CARDS_PATIMA_BAUTURA,
+  ...CARDS_POFTA,
+  ...CARDS_BANI,
+  ...CARDS_DEPARTE,
+]
