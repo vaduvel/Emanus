@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Validează candidatul Osea rezultat din fresh semantic review 1–14."""
+"""Validează pachetul fresh semantic review Osea 1–14.
+
+Acest gate certifică review-urile și materializarea corecțiilor `proposedRo`.
+Starea de publicare Biblia Emanus este verificată separat de
+`check-biblia-emanus-book.py --book HOS`, astfel încât auditul semantic nu este
+cuplat de ordinea pașilor de materializare a reader-ului.
+"""
 
 from __future__ import annotations
 
@@ -12,7 +18,6 @@ REAUDIT = ROOT / "docs/biblia-explicata/minor-prophets-reaudit/HOS"
 REVIEWS = REAUDIT / "reviews"
 SUMMARY = ROOT / "docs/biblia-explicata/minor-prophets-reaudit/HOS-SEMANTIC-REVIEW-SUMMARY.json"
 RUNTIME = ROOT / "packages/shared/src/bible/generated/vtCanonicalText/oseaReviewedText.ts"
-ADAPTER = ROOT / "packages/shared/src/bible/overlayBibleBooks.ts"
 
 START = "// OSEA_REVIEWED_CORRECTIONS_JSON_START"
 END = "// OSEA_REVIEWED_CORRECTIONS_JSON_END"
@@ -41,9 +46,9 @@ def runtime_corrections() -> dict[str, dict[str, str]]:
     try:
         parsed = json.loads(block)
     except json.JSONDecodeError as exc:
-        fail(f"blocul runtime de corecții nu este JSON valid: {exc}")
+        fail(f"blocul de corecții nu este JSON valid: {exc}")
     if not isinstance(parsed, dict):
-        fail("blocul runtime de corecții nu este obiect")
+        fail("blocul de corecții nu este obiect")
     return parsed
 
 
@@ -61,11 +66,11 @@ def describe_runtime_mismatch(
                 continue
             ref = f"{chapter}:{verse}"
             if actual is None:
-                problems.append(f"{ref} lipsește din runtime")
+                problems.append(f"{ref} lipsește din materializare")
             elif wanted is None:
-                problems.append(f"{ref} există numai în runtime")
+                problems.append(f"{ref} există numai în materializare")
             else:
-                problems.append(f"{ref} text diferit: runtime={actual!r}; review={wanted!r}")
+                problems.append(f"{ref} text diferit: materializat={actual!r}; review={wanted!r}")
             if len(problems) >= 8:
                 break
         if len(problems) >= 8:
@@ -156,7 +161,7 @@ def main() -> None:
     runtime = runtime_corrections()
     if runtime != expected_runtime:
         fail(
-            "corecțiile runtime nu sunt identice cu proposedRo din cele 14 review-uri; "
+            "corecțiile materializate nu sunt identice cu proposedRo din cele 14 review-uri; "
             + describe_runtime_mismatch(runtime, expected_runtime)
         )
 
@@ -171,33 +176,16 @@ def main() -> None:
     if totals.get("severity") != EXPECTED_SEVERITY:
         fail("summary severity nu corespunde")
     promotion = summary.get("promotion") or {}
-    if promotion.get("candidateReady") is not True or promotion.get("promotionEligible") is not False:
-        fail("summary trebuie să marcheze candidateReady=true și promotionEligible=false")
-
-    adapter = ADAPTER.read_text(encoding="utf-8")
-    if 'import { OSEA_REVIEWED_TEXT } from "./generated/vtCanonicalText/oseaReviewedText.js"' not in adapter:
-        fail("overlayBibleBooks.ts nu importă OSEA_REVIEWED_TEXT")
-    if "overlay.bookId === \"osea\" ? OSEA_REVIEWED_TEXT[chapter.number] : textBook.chapters[chapter.number]" not in adapter:
-        fail("overlayBibleBooks.ts nu folosește candidatul revizuit pentru Osea")
-    catalog = (ROOT / "packages/shared/src/bible/generated/vtCanonicalText/index.ts").read_text(
-        encoding="utf-8"
-    )
-    if 'bookId: "osea"' not in catalog or 'bibleEmanusBookId: "HOS"' not in catalog:
-        fail("Osea lipsește din catalogul VT")
-    osea_catalog_line = next(
-        (line for line in catalog.splitlines() if 'bookId: "osea"' in line), ""
-    )
-    if 'textStage: "temporary-editorial"' not in osea_catalog_line:
-        fail("Osea nu mai păstrează textStage temporary-editorial")
+    if promotion.get("candidateReady") is not True:
+        fail("summary trebuie să marcheze candidateReady=true")
 
     print(
-        "Osea reviewed candidate OK: "
+        "Osea fresh semantic review OK: "
         f"{EXPECTED_CHAPTERS}/{EXPECTED_CHAPTERS} capitole, "
         f"{EXPECTED_VERSES}/{EXPECTED_VERSES} versete, "
         f"{EXPECTED_CORRECTIONS} corecții, {EXPECTED_APPROVED} aprobate ca atare; "
         f"critical={EXPECTED_SEVERITY['critical']} "
-        f"material={EXPECTED_SEVERITY['material']} minor={EXPECTED_SEVERITY['minor']}; "
-        "runtime rămâne temporary-editorial."
+        f"material={EXPECTED_SEVERITY['material']} minor={EXPECTED_SEVERITY['minor']}."
     )
 
 
