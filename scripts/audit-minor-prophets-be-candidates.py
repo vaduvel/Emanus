@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Audit de migrare pentru Osea–Maleahi din schema BE v2 veche.
+"""Audit de migrare pentru candidații vechi Osea–Maleahi din schema BE v2.
 
-Nu promovează nimic. Verifică 67/67 capitole, egalitatea cu textul editorial
-materializat și inspectează proveniența WEBU/WLC. Un hash upstream schimbat nu
-este ascuns: auditul continuă, dar raportul devine neeligibil pentru promovare.
+Nu promovează nimic. Verifică egalitatea dintre candidatul BE istoric și textul
+editorial materializat pentru cărțile încă selectate și inspectează proveniența
+WEBU/WLC. Un hash upstream schimbat nu este ascuns: auditul continuă, dar
+raportul rămâne neeligibil pentru promovare.
+
+După promovarea individuală a unei cărți (de exemplu HOS), aceasta poate fi
+exclusă explicit cu `--exclude-book HOS`; auditul legacy nu trebuie să compare
+textul canonic nou cu vechiul candidat.
 """
 
 from __future__ import annotations
@@ -156,7 +161,22 @@ def main() -> None:
     parser.add_argument("--source-ref", required=True)
     parser.add_argument("--webu-zip", type=Path, required=True)
     parser.add_argument("--wlc-zip", type=Path, required=True)
+    parser.add_argument(
+        "--exclude-book",
+        action="append",
+        default=[],
+        help="Exclude un bookId USFM deja promovat (poate fi repetat), de exemplu HOS.",
+    )
     args = parser.parse_args()
+
+    excluded = {str(code).upper() for code in args.exclude_book}
+    known_codes = {code for _file_id, code, _name, _chapters in BOOKS}
+    unknown_excluded = excluded - known_codes
+    if unknown_excluded:
+        raise SystemExit(f"--exclude-book necunoscut: {', '.join(sorted(unknown_excluded))}")
+    selected_books = [book for book in BOOKS if book[1] not in excluded]
+    if not selected_books:
+        raise SystemExit("Nu a rămas nicio carte pentru auditul legacy")
 
     manifest = json.loads(git_show(args.source_ref, "docs/data/biblia-emanus/manifest.json"))
     lock = json.loads(git_show(args.source_ref, "docs/data/biblia-emanus/source-lock.json"))
@@ -185,6 +205,10 @@ def main() -> None:
     report = {
         "translation": "BE",
         "sourceBranch": args.source_ref,
+        "scope": {
+            "includedBooks": [code for _file_id, code, _name, _chapters in selected_books],
+            "excludedPromotedBooks": sorted(excluded),
+        },
         "promotionEligible": False,
         "archivePins": {
             "WEBU": {"expectedSha256": expected_web, "actualSha256": actual_web, "matches": web_pin_match},
@@ -196,7 +220,7 @@ def main() -> None:
     total_chapters = 0
     total_verses = 0
     with zipfile.ZipFile(args.webu_zip) as web_zip, zipfile.ZipFile(args.wlc_zip) as wlc_zip:
-        for file_id, code, name, chapter_count in BOOKS:
+        for file_id, code, name, chapter_count in selected_books:
             manifest_book = manifest_books.get(code)
             if not manifest_book:
                 raise SystemExit(f"{code}: lipsește din manifest")
@@ -240,19 +264,28 @@ def main() -> None:
             total_verses += book_verses
             print(f"OK {code}: {chapter_count} capitole / {book_verses} versete / text identic / audit complet / surse curente găsite")
 
-    if total_chapters != 67:
-        raise SystemExit(f"Așteptam 67 capitole, găsite {total_chapters}")
+    expected_chapters = sum(book[3] for book in selected_books)
+    if total_chapters != expected_chapters:
+        raise SystemExit(f"Așteptam {expected_chapters} capitole, găsite {total_chapters}")
 
-    report["totals"] = {"books": 12, "chapters": total_chapters, "verses": total_verses}
+    report["totals"] = {
+        "books": len(selected_books),
+        "chapters": total_chapters,
+        "verses": total_verses,
+    }
     report["promotionEligible"] = web_pin_match and wlc_pin_match
-    report["blockingReason"] = None if report["promotionEligible"] else "Arhivele upstream curente nu reproduc toate hash-urile istorice pin-uite; textul rămâne temporary-editorial până la recapturare/re-audit controlat."
+    report["blockingReason"] = None if report["promotionEligible"] else "Arhivele upstream curente nu reproduc toate hash-urile istorice pin-uite; candidații legacy incluși rămân temporary-editorial până la recapturare/re-audit controlat."
 
     out = ROOT / "docs/biblia-explicata/MINOR-PROPHETS-BE-CANDIDATE-AUDIT.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     status = "ELIGIBIL" if report["promotionEligible"] else "BLOCAT DE SOURCE-LOCK"
-    print(f"AUDIT CONTENT OK: 12/12 cărți, 67/67 capitole, {total_verses} versete; promovare: {status}. Raport: {out}")
+    print(
+        f"AUDIT CONTENT OK: {len(selected_books)}/{len(selected_books)} cărți, "
+        f"{total_chapters}/{expected_chapters} capitole, {total_verses} versete; "
+        f"promovare legacy: {status}. Raport: {out}"
+    )
 
 
 if __name__ == "__main__":
