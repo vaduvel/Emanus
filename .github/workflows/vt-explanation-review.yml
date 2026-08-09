@@ -85,13 +85,24 @@ jobs:
           fi
 
           mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+          corpus=0
+          noncorpus=0
           post_status "vt/merge-dry-run" failure "${#conflicts[@]} merge conflicts with main"
+
           for path in "${conflicts[@]}"; do
-            safe=$(echo "$path" | sed -E 's/[^[:alnum:]_.-]+/_/g' | cut -c1-72)
-            post_status "vt/conflict-${safe}" failure "merge conflict"
+            if [[ "$path" == docs/data/biblia-emanus/* ]]; then
+              corpus=$((corpus + 1))
+            else
+              noncorpus=$((noncorpus + 1))
+              safe=$(echo "$path" | sed -E 's/[^[:alnum:]_.-]+/_/g' | cut -c1-70)
+              post_status "vt/noncorpus-${safe}" failure "non-corpus merge conflict"
+            fi
           done
+
+          post_status "vt/conflicts-total-${#conflicts[@]}" failure "total merge conflicts"
+          post_status "vt/corpus-conflicts-${corpus}" failure "Biblia Emanus corpus conflicts"
+          post_status "vt/noncorpus-conflicts-${noncorpus}" failure "non-corpus conflicts"
           cat /tmp/vt-merge.log
-          printf 'Conflicts:\n%s\n' "${conflicts[*]}"
           git merge --abort || true
           exit 0
 
