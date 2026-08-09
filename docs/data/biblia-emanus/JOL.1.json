@@ -34,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Cuvântul DOMNULui care a fost spus lui Ioel, fiul lui Petuel."
+      "text": "Cuvântul DOMNULUI care a fost spus lui Ioel, fiul lui Petuel."
     },
     {
       "number": 2,
@@ -46,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "Ce a lăsat nemâncat lăcusta Gazam a mâncat lăcusta Arbeh, ce a lăsat lăcusta Arbeh a mâncat lăcusta Ielec, ce a lăsat lăcusta Ielec a mâncat lăcusta Hasil."
+      "text": "Ce a lăsat nemâncat lăcusta gazam a mâncat lăcusta arbeh; ce a lăsat lăcusta arbeh a mâncat lăcusta ielec; iar ce a lăsat lăcusta ielec a mâncat lăcusta hasil."
     },
     {
       "number": 5,
@@ -66,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "Au încetat darurile de mâncare și jertfele de băutură din Casa DOMNULui; preoții, slujitorii DOMNULui, jelesc."
+      "text": "Au încetat darurile de mâncare și jertfele de băutură din Casa DOMNULUI; preoții, slujitorii DOMNULUI, jelesc."
     },
     {
       "number": 10,
@@ -86,7 +86,7 @@
     },
     {
       "number": 14,
-      "text": "Vestiți un post, chemați o adunare de sărbătoare; strângeți pe bătrâni, pe toți locuitorii țării, în Casa DOMNULui Dumnezeului vostru și strigați către DOMNUL."
+      "text": "Vestiți un post, chemați o adunare de sărbătoare; strângeți pe bătrâni, pe toți locuitorii țării, în Casa DOMNULUI Dumnezeului vostru și strigați către DOMNUL."
     },
     {
       "number": 15,
@@ -120,6 +120,11 @@
       "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
       "previousTextDigest": "b3e0bfa27e0ba17f928d0d90d70e5fa1ba257d636a845edb4430fbb246430070",
       "resolutionStatus": "resolved"
+    },
+    {
+      "verse": 4,
+      "term": "gazam / arbeh / ielec / hasil",
+      "decision": "Termenii ebraici pentru cele patru insecte sau stadii de dezvoltare au fost transliterați cu inițială mică, deoarece identificarea zoologică exactă este disputată."
     }
   ],
   "benchmark": {
@@ -160,7 +165,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -201,7 +206,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -210,6 +215,24 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:18a7a1edbe606ad7e68ad73533ab2a1dbee66e9fc00334f8d340b36ff80e3a48"
+    "textDigest": "sha256:d0aa495931af8736b592beacf29c5dbff276a744f9dc0c785610490cb7c4268f",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-mechanical-2026-08-07",
+        "verseNumbers": [
+          1,
+          9,
+          14
+        ],
+        "scope": "capitalizare a Numelui divin și repararea formei onomastice corupte"
+      },
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          4
+        ]
+      }
+    ]
   }
 }

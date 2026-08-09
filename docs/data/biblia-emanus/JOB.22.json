@@ -58,11 +58,11 @@
     },
     {
       "number": 7,
-      "text": "Nu dădeai apă omului însetat, nu voiai să dai pâine omului flămând."
+      "text": "Nu dădeai apă omului obosit, nu voiai să dai pâine omului flămând."
     },
     {
       "number": 8,
-      "text": "Țara era a ta, fiindcă erai mai tare, te așezai în ea, fiindcă erai cu vază."
+      "text": "Cel puternic avea țara, iar cel cu vază locuia în ea."
     },
     {
       "number": 9,
@@ -82,7 +82,7 @@
     },
     {
       "number": 13,
-      "text": "Și tu zici: „Ce știe Dumnezeu? Poate să judece El prin întunericul de nori?”"
+      "text": "Și tu zici: „Ce știe Dumnezeu? Poate El să vadă prin întunericul norilor?”"
     },
     {
       "number": 14,
@@ -94,7 +94,7 @@
     },
     {
       "number": 16,
-      "text": "care au fost luați înainte de vreme și au ținut cât ține un pârâu care se scurge?"
+      "text": "care au fost luați înainte de vreme, a căror temelie a fost revărsată ca un pârâu,"
     },
     {
       "number": 17,
@@ -102,15 +102,15 @@
     },
     {
       "number": 18,
-      "text": "Și totuși Dumnezeu le umpluse casele de bunătăți. – Departe de mine sfatul celor răi! –"
+      "text": "Și totuși Dumnezeu le umpluse casele de bunătăți. Departe de mine sfatul celor răi!"
     },
     {
       "number": 19,
-      "text": "Cei fără prihană vor fi martori ai căderii lor și se vor bucura, cel nevinovat va râde de ei"
+      "text": "Cei fără prihană vor fi martori ai căderii lor și se vor bucura, cel nevinovat va râde de ei."
     },
     {
       "number": 20,
-      "text": "și va zice: „Iată pe potrivnicii noștri nimiciți! Iată-le bogățiile arse de foc!”"
+      "text": "și va zice: „Iată pe potrivnicii noștri nimiciți! Iată-le rămășița arsă de foc!”"
     },
     {
       "number": 21,
@@ -146,14 +146,24 @@
     },
     {
       "number": 29,
-      "text": "Vină smerirea, tu te vei ruga pentru ridicarea ta: Dumnezeu ajută pe cel cu ochii plecați."
+      "text": "Când vor fi doborâți, tu vei zice: „Să fie ridicați!” El va salva persoana smerită."
     },
     {
       "number": 30,
       "text": "„El va izbăvi chiar și pe cel vinovat, care își va datora scăparea curăției mâinilor tale.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 8,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Cel puternic avea țara, iar cel cu vază locuia în ea.",
+      "reason": "Afirmația generală despre omul puternic și cel cu vază a fost schimbată în adresare directă cu o cauzalitate adăugată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -192,7 +202,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
@@ -233,7 +243,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -242,6 +252,15 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:ae85e07225cce7519e6fd542a8bd8d4e354ba4c8695ef8b492090ece496acb25"
+    "textDigest": "sha256:58b6b018f90fdc0b840e362613ede61218d74e6ab296d5c4254a8e3681e74a4d",
+    "repairHistory": [
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          29
+        ]
+      }
+    ]
   }
 }

@@ -46,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "Adu-Ți aminte de mine, DOAMNE, în bunăvoința Ta pentru poporul Tău! Adu-Ți aminte de mine și dă-i ajutorul Tău,"
+      "text": "Adu-Ți aminte de mine, DOAMNE, în bunăvoința Ta pentru poporul Tău! Cercetează-mă cu mântuirea Ta,"
     },
     {
       "number": 5,
@@ -90,7 +90,7 @@
     },
     {
       "number": 15,
-      "text": "El le-a dat ce cereau; dar a trimis o molimă printre ei."
+      "text": "Le-a dat ce cereau, dar a trimis uscăciune în sufletul lor."
     },
     {
       "number": 16,
@@ -106,7 +106,7 @@
     },
     {
       "number": 19,
-      "text": "Au făcut un vițel în Horeb. S-au închinat înaintea unui chip turnat"
+      "text": "Au făcut un vițel în Horeb. S-au închinat înaintea unui chip turnat."
     },
     {
       "number": 20,
@@ -150,15 +150,15 @@
     },
     {
       "number": 30,
-      "text": "Dar Fineas s-a sculat și a făcut judecată, și astfel urgia s-a oprit."
+      "text": "Fineas s-a sculat și a mijlocit, și urgia s-a oprit."
     },
     {
       "number": 31,
-      "text": "Lucrul acesta i-a fost socotit ca o stare de neprihănire, din neam în neam, pe vecie."
+      "text": "Lucrul acesta i-a fost socotit ca dreptate, din neam în neam, pe vecie."
     },
     {
       "number": 32,
-      "text": "Ei au mâniat pe DOMNUL la apele Meriba; și Moise a fost pedepsit din pricina lor."
+      "text": "Au mâniat pe DOMNUL la apele Meriba, și lui Moise i-a fost rău din pricina lor,"
     },
     {
       "number": 33,
@@ -178,7 +178,7 @@
     },
     {
       "number": 37,
-      "text": "Și-au jertfit fiii și fiicele la idoli,"
+      "text": "și-au jertfit fiii și fiicele demonilor."
     },
     {
       "number": 38,
@@ -214,7 +214,7 @@
     },
     {
       "number": 46,
-      "text": "a stârnit pentru ei mila tuturor celor ce îi țineau prinși de război."
+      "text": "a stârnit pentru ei mila tuturor celor ce îi țineau captivi."
     },
     {
       "number": 47,
@@ -225,7 +225,17 @@
       "text": "Binecuvântat să fie DOMNUL Dumnezeul lui Israel, din veșnicie în veșnicie! Și tot poporul să zică: „Amin! Lăudați pe DOMNUL!”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 31,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Lucrul acesta i-a fost socotit ca dreptate, din neam în neam, pe vecie.",
+      "reason": "Expresia „ca o stare de” nu apare în textul ebraic; actul este socotit ca dreptate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -264,7 +274,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 48,
       "reviewed": 48,
@@ -305,7 +315,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -314,6 +324,15 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:b92f724447cfedc792cdf75ec2df62b7e2debd4ed2363cbd83763a8711910943"
+    "textDigest": "sha256:481752beb7ca068133dc35a7d72a2b73161a2fc60e5cc6f19d82bf5490b24cb3",
+    "repairHistory": [
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          46
+        ]
+      }
+    ]
   }
 }

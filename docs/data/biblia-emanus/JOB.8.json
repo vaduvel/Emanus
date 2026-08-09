@@ -58,15 +58,15 @@
     },
     {
       "number": 7,
-      "text": "Vechea ta propășire va fi mică față de cea de mai târziu."
+      "text": "Deși începutul tău a fost mic, sfârșitul tău va crește foarte mult."
     },
     {
       "number": 8,
-      "text": "Întreabă pe cei din neamurile trecute și ia aminte la pățania părinților lor. –"
+      "text": "Întreabă pe cei din neamurile trecute și ia aminte la pățania părinților lor."
     },
     {
       "number": 9,
-      "text": "Căci noi suntem de ieri și nu știm nimic, zilele noastre pe pământ nu sunt decât o umbră. –"
+      "text": "Căci noi suntem de ieri și nu știm nimic, zilele noastre pe pământ nu sunt decât o umbră."
     },
     {
       "number": 10,
@@ -118,10 +118,20 @@
     },
     {
       "number": 22,
-      "text": "„„Vrăjmașii tăi vor fi acoperiți de rușine, iar cortul celor răi va pieri.””"
+      "text": "„Vrăjmașii tăi vor fi acoperiți de rușine, iar cortul celor răi va pieri.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 7,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Deși începutul tău a fost mic, sfârșitul tău va crește foarte mult.",
+      "reason": "Textul afirmă creșterea foarte mare a sfârșitului, nu doar o comparație vagă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -160,7 +170,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -201,7 +211,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -210,6 +220,6 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:a0e6d9fc4643091c28829a3672f5a503b52f2ecfd378c0598891e7f775ab7ea8"
+    "textDigest": "sha256:e8d4ca59264e66d71254e83416e6ef7b4655b91c87934fa599c2b8627e04b482"
   }
 }

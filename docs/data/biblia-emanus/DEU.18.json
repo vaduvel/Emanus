@@ -68,7 +68,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -112,7 +112,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
@@ -121,7 +121,7 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:7e7ac0f16293188cc2964474209ea0ab87257a713c3c9e852f51a41df06916dc"
+    "textDigest": "sha256:ecc79c920634f75229629b352cc0d3955c59ebef6ff36b69d20b13d1d2a32b83"
   },
   "verses": [
     {
@@ -166,7 +166,7 @@
     },
     {
       "number": 11,
-      "text": "nicio legătură cu duhurile, nimeni care să întrebe pe cei ce cheamă morții sau care să întrebe pe morți."
+      "text": "nici cel care face descântece, nici cel care consultă un duh sau un spirit familiar, nici cel care întreabă pe morți."
     },
     {
       "number": 12,
@@ -210,7 +210,7 @@
     },
     {
       "number": 22,
-      "text": "când ceea ce va spune prorocul în Numele DOMNULUI nu se va întâmpla și nu se va adeveri, va fi un cuvânt pe care nu l-a rostit DOMNUL. Prorocul l-a spus din îndrăzneală: să nu te temei de el.”"
+      "text": "când ceea ce va spune prorocul în Numele DOMNULUI nu se va întâmpla și nu se va adeveri, va fi un cuvânt pe care nu l-a rostit DOMNUL. Prorocul l-a spus din îndrăzneală: să nu te temi de el.”"
     }
   ],
   "editorialNotes": [
@@ -243,6 +243,15 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Promisiunea are un orizont istoric al prorocilor și permite lectura mesianică fără a o impune tipografic în verset."
+    },
+    {
+      "verse": 11,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "nici cel care face descântece, nici cel care consultă un duh sau un spirit familiar, nici cel care întreabă pe morți.",
+      "reason": "Sunt păstrate trei practici distincte: descântecul, consultarea unui ov/yidoni și întrebarea morților.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
     }
   ]
 }

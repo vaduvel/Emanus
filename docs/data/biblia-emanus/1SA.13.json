@@ -34,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Saul era în vârstă de treizeci de ani când a ajuns împărat și a domnit doi ani peste Israel."
+      "text": "Saul era în vârstă de un an când a ajuns împărat și a domnit doi ani peste Israel."
     },
     {
       "number": 2,
@@ -46,11 +46,11 @@
     },
     {
       "number": 4,
-      "text": "Tot Israelul a auzit zicându-se: „Saul a bătut tabăra filistenilor, și Israel s-a făcut urât filistenilor.”"
+      "text": "Tot Israelul a auzit zicându-se: „Saul a bătut tabăra filistenilor, și Israel s-a făcut urât filistenilor.” Poporul s-a strâns după Saul la Ghilgal."
     },
     {
       "number": 5,
-      "text": "Filistenii s-au strâns să lupte cu Israel. Aveau o mie de care și șase mii de călăreți; și poporul acesta era fără număr: ca nisipul de pe țărmul mării. Au venit și au tăbărât la Micmaș, la răsărit de Bet-Aven."
+      "text": "Filistenii s-au strâns să lupte cu Israel. Aveau treizeci de mii de care și șase mii de călăreți; și poporul acesta era fără număr: ca nisipul de pe țărmul mării. Au venit și au tăbărât la Micmaș, la răsărit de Bet-Aven."
     },
     {
       "number": 6,
@@ -66,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "Atunci Saul a zis: „Aduceți-mi arderea de tot și jertfele de mulțumire.”"
+      "text": "Atunci Saul a zis: „Aduceți-mi arderea de tot și jertfele de mulțumire.” Și el a adus arderea de tot."
     },
     {
       "number": 10,
@@ -78,7 +78,7 @@
     },
     {
       "number": 12,
-      "text": "„mi-am zis: „Filistenii se vor coborî împotriva mea la Ghilgal, și eu nu m-am rugat DOMNULUI!” Atunci am îndrăznit și am adus arderea de tot.”"
+      "text": "„mi-am zis: «Filistenii se vor coborî împotriva mea la Ghilgal, și eu nu m-am rugat DOMNULUI!» Atunci am îndrăznit și am adus arderea de tot.”"
     },
     {
       "number": 13,
@@ -114,7 +114,7 @@
     },
     {
       "number": 21,
-      "text": "când se tocea sapa, coasa, furca cu trei coarne și securea, și ca să facă vârf țepușului cu care mâna boii."
+      "text": "Iar prețul era de un pim pentru a ascuți sapa, fierul de plug, furca cu trei coarne, securea și țepușa."
     },
     {
       "number": 22,
@@ -164,7 +164,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 23,
       "reviewed": 23,
@@ -205,7 +205,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -214,6 +214,29 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:efa1269a2b39f7484619ea8eb5a4a26df12f99b65a8f3f7588338a008c903c26"
+    "textDigest": "sha256:4655872f371edb212b4f92fc8350f6e9cf682a2540feb74fbab00327cb78c5e0",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          4
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-historical-kings-wlc-webu-audit-2026-08-08",
+        "scope": "corecții istorice confirmate direct în WLC/OSHB și WEBU fixate",
+        "verseNumbers": [
+          5
+        ]
+      },
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          12
+        ]
+      }
+    ]
   }
 }

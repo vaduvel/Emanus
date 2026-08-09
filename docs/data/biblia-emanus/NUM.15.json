@@ -68,7 +68,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 41,
       "reviewed": 41,
@@ -112,7 +112,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
@@ -121,7 +121,7 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:86656dbbfba3e4b573b0e10da409d535488d7d96acc94a46be8e8dfcdfe2c4ec"
+    "textDigest": "sha256:b79b71fbfce773e5f2a3be8590626ac0575452ec6cb4697ca7d910ce9c61442f"
   },
   "verses": [
     {
@@ -158,7 +158,7 @@
     },
     {
       "number": 9,
-      "text": "să aduci pe lângă taur o dar de cereale de trei zecimi de efă de făină aleasă, frământată cu jumătate de hin de ulei;"
+      "text": "să aduci pe lângă taur un dar de cereale de trei zecimi de efă de făină aleasă, frământată cu jumătate de hin de ulei;"
     },
     {
       "number": 10,
@@ -178,11 +178,11 @@
     },
     {
       "number": 14,
-      "text": "Dacă un străin locuiește la voi sau cineva se află în mijlocul vostru în neamurile voastre și aduce o jertfă prin foc de un miros plăcut DOMNULUI, cum faceți voi, așa să facă și el."
+      "text": "Dacă un străin locuiește la voi sau cineva se află în mijlocul vostru, de-a lungul generațiilor voastre, și aduce o jertfă prin foc de un miros plăcut DOMNULUI, cum faceți voi, așa să facă și el."
     },
     {
       "number": 15,
-      "text": "Să fie o singură orânduială pentru adunare și pentru străinul care locuiește la voi, o orânduială veșnică în neamurile voastre: cum sunteți voi, așa va fi și străinul înaintea DOMNULUI."
+      "text": "Să fie o singură orânduială pentru adunare și pentru străinul care locuiește la voi, o orânduială veșnică de-a lungul generațiilor voastre: cum sunteți voi, așa va fi și străinul înaintea DOMNULUI."
     },
     {
       "number": 16,
@@ -202,19 +202,19 @@
     },
     {
       "number": 20,
-      "text": "Din prima voastră maia să aduceți o turtă ca prinos; cum aduceți prinosul din arie, așa să o aduceți."
+      "text": "Din primul vostru aluat să aduceți o turtă ca prinos; cum aduceți prinosul din arie, așa să o aduceți."
     },
     {
       "number": 21,
-      "text": "Din prima voastră maia să-I dați DOMNULUI un prinos în neamurile voastre."
+      "text": "Din primul vostru aluat să-I dați DOMNULUI un prinos de-a lungul generațiilor voastre."
     },
     {
       "number": 22,
-      "text": "Dacă veți greși din neștiință și nu veți împlini toate aceste porunci pe care le-a vorbit DOMNUL lui Moise,"
+      "text": "Dacă veți greși din neștiință și nu veți împlini toate aceste porunci pe care DOMNUL i le-a spus lui Moise,"
     },
     {
       "number": 23,
-      "text": "tot ce v-a poruncit DOMNUL prin Moise, din ziua în care DOMNUL a dat poruncă și în neamurile voastre,"
+      "text": "tot ce v-a poruncit DOMNUL prin Moise, din ziua în care DOMNUL a dat poruncă și de-a lungul generațiilor voastre,"
     },
     {
       "number": 24,
@@ -331,6 +331,15 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Semnul vestimentar are rol de aducere-aminte a poruncilor."
+    },
+    {
+      "verse": 20,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Din primul vostru aluat să aduceți o turtă ca prinos; cum aduceți prinosul din arie, așa să o aduceți.",
+      "reason": "Termenul desemnează aluatul, nu maiaua.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
     }
   ]
 }

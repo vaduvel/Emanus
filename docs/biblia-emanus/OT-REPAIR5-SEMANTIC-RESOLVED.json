@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "threshold": 0.3,
+  "canonicalLowScoreCount": 5,
+  "acceptedReviewedExceptions": [
+    {
+      "reference": "PSA.106:31",
+      "bookId": "PSA",
+      "romanian": "Lucrul acesta i-a fost socotit ca o stare de neprihănire, din neam în neam, pe vecie.",
+      "english": "That was credited to him for righteousness, for all generations to come.",
+      "score": 0.161411,
+      "review": {
+        "reason": "«i-a fost socotit ca neprihănire» redă corect «was credited to him for righteousness»; diferența lexicală română–engleză produce un scor artificial mic.",
+        "decision": "accept"
+      }
+    },
+    {
+      "reference": "1CH.1:12",
+      "bookId": "1CH",
+      "romanian": "patrusiți, casluhiți, din care au ieșit filistenii și caftoriții. –",
+      "english": "Pathrusim, Casluhim (where the Philistines came from), and Caphtorim.",
+      "score": 0.240234,
+      "review": {
+        "reason": "Verset genealogic compus aproape exclusiv din nume proprii transliterate; embeddings multilingve nu sunt relevante pentru aceste forme onomastice.",
+        "decision": "accept"
+      }
+    },
+    {
+      "reference": "JOB.37:8",
+      "bookId": "JOB",
+      "romanian": "Fiara sălbatică se trage într-o peșteră și se culcă în vizuina ei.",
+      "english": "Then the animals take cover, and remain in their dens.",
+      "score": 0.262481,
+      "review": {
+        "reason": "«fiarele se retrag în peșteri și rămân în vizuini» păstrează integral sensul adăpostirii animalelor în culcușurile lor.",
+        "decision": "accept"
+      }
+    },
+    {
+      "reference": "JER.3:9",
+      "bookId": "JER",
+      "romanian": "Și astfel, prin necurăția ei strigătoare, Israel a spurcat țara, a preacurvit cu piatra și lemnul.",
+      "english": "Because she took her prostitution lightly, the land was polluted, and she committed adultery with stones and with wood.",
+      "score": 0.266399,
+      "review": {
+        "reason": "Referentul pronominal feminin este Israelul personificat; explicitarea numelui și formularea «a tratat ușor desfrânarea»/«necurăția strigătoare» păstrează sensul poluării țării și adulterului cu piatra și lemnul.",
+        "decision": "accept"
+      }
+    },
+    {
+      "reference": "JOB.32:22",
+      "bookId": "JOB",
+      "romanian": "„căci nu știu să lingușesc: altfel, într-o clipită m-ar lua Ziditorul meu.”",
+      "english": "For I don’t know how to give flattering titles, or else my Maker would soon take me away.",
+      "score": 0.294346,
+      "review": {
+        "reason": "«nu știu să lingușesc; altfel Ziditorul m-ar lua repede» păstrează ambele propoziții și relația lor cauzală.",
+        "decision": "accept"
+      }
+    }
+  ],
+  "unresolved": [],
+  "inactiveReviewedExceptions": []
+}

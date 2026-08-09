@@ -34,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Iată, vine ziua DOMNULui, când prăzile tale vor fi împărțite în mijlocul tău."
+      "text": "Iată, vine ziua DOMNULUI, când prăzile tale vor fi împărțite în mijlocul tău."
     },
     {
       "number": 2,
@@ -50,11 +50,11 @@
     },
     {
       "number": 5,
-      "text": "Veți fugi atunci în valea munților Mei, căci valea dintre munți se va întinde până la Ațel; și veți fugi cum ați fugit de cutremurul de pământ de pe vremea lui Ozia, împăratul lui Iuda. Și atunci va veni DOMNUL Dumnezeul meu, și toți sfinții, împreună cu El!"
+      "text": "Veți fugi atunci în valea munților Mei, căci valea dintre munți se va întinde până la Ațel; și veți fugi cum ați fugit de cutremurul de pământ de pe vremea lui Ozia, împăratul lui Iuda. Și atunci va veni DOMNUL Dumnezeul meu, și toți sfinții, împreună cu Tine!"
     },
     {
       "number": 6,
-      "text": "În ziua aceea, nu va mai fi lumină; stelele strălucitoare se vor ascunde."
+      "text": "În ziua aceea, nu va mai fi lumină, nici frig, nici îngheț."
     },
     {
       "number": 7,
@@ -110,11 +110,11 @@
     },
     {
       "number": 20,
-      "text": "În ziua aceea, va sta scris până și pe zurgălăii cailor: „Sfinți DOMNULui!”"
+      "text": "În ziua aceea, va sta scris până și pe zurgălăii cailor: „Sfințenie DOMNULUI!” Și oalele din Casa DOMNULUI vor fi ca potirele înaintea altarului."
     },
     {
       "number": 21,
-      "text": "Orice oală din Ierusalim și din Iuda va fi închinată DOMNULui oștirilor; toți cei ce vor aduce jertfe vor veni și se vor sluji de ele ca să-și fiarbă carnea; și nu vor mai fi canaaniți în Casa DOMNULui oștirilor, în ziua aceea."
+      "text": "Orice oală din Ierusalim și din Iuda va fi închinată DOMNULUI oștirilor; toți cei ce vor aduce jertfe vor veni și se vor sluji de ele ca să-și fiarbă carnea; și nu vor mai fi canaaniți în Casa DOMNULUI oștirilor, în ziua aceea."
     }
   ],
   "editorialNotes": [],
@@ -156,7 +156,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -197,7 +197,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -206,6 +206,31 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:c1a51489d3f4742bbd97754e266b7c6c6ab506adee6e8076fb5a6d19eca289fd"
+    "textDigest": "sha256:c130cc9e829467b447d809547362f3d0efcae59bda5aa232c4d45e25736ee384",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-mechanical-2026-08-07",
+        "verseNumbers": [
+          1,
+          20,
+          21
+        ],
+        "scope": "capitalizare a Numelui divin și repararea formei onomastice corupte"
+      },
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          20
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-minor-prophets-wlc-webu-audit-2026-08-08",
+        "scope": "corecții confirmate direct în WLC/OSHB și WEBU fixate",
+        "verseNumbers": [
+          5
+        ]
+      }
+    ]
   }
 }

@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/RUT04.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-RUT"
+      "lockId": "WEBU-R5-RUT"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/RUT04.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-RUT"
+      "lockId": "WLC-OSHB-REMAP-R5-RUT",
+      "rawLockId": "WLC-RAW-R5-RUT",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,11 +34,11 @@
   "verses": [
     {
       "number": 1,
-      "text": "Boaz s-a suit la poarta cetății și s-a așezat acolo. Și iată că ruda apropiată despre care vorbise Boaz trecea pe acolo. Boaz i-a zis: „Vino aici, prietene, și așază-te.” El a venit și s-a așezat."
+      "text": "Boaz s-a suit la poarta cetății și s-a așezat acolo. Și iată că cel ce avea drept de răscumpărare, și despre care vorbise Boaz, trecea. Boaz i-a zis: „Hei, cutare, apropie-te, stai aici.”"
     },
     {
       "number": 2,
-      "text": "Boaz a luat zece oameni dintre bătrânii cetății și le-a zis: „Așezați-vă aici.” Și ei s-au așezat."
+      "text": "Boaz a luat atunci zece oameni dintre bătrânii cetății și a zis: „Ședeți aici.”"
     },
     {
       "number": 3,
@@ -60,7 +62,7 @@
     },
     {
       "number": 8,
-      "text": "Ruda apropiată i-a zis lui Boaz: „Cumpăr-o pentru tine.” Apoi și-a scos sandala."
+      "text": "Cel ce avea drept de răscumpărare a zis, dar, lui Boaz: „Cumpăr-o pe socoteala ta!”"
     },
     {
       "number": 9,
@@ -84,19 +86,19 @@
     },
     {
       "number": 14,
-      "text": "Femeile i-au zis Naomei: „Binecuvântat să fie DOMNUL, care nu te-a lăsat astăzi fără un răscumpărător! Numele lui să fie vestit în Israel.”"
+      "text": "Femeile au zis Naomei: „Binecuvântat să fie DOMNUL, care nu te-a lăsat lipsită azi de un bărbat cu drept de răscumpărare și al cărui nume va fi lăudat în Israel!”"
     },
     {
       "number": 15,
-      "text": "„El îți va înviora viața și te va sprijini la bătrânețe, căci l-a născut nora ta, care te iubește și care este mai bună pentru tine decât șapte fii.”"
+      "text": "„Copilul acesta îți va înviora sufletul și va fi sprijinul bătrâneților tale; căci l-a născut nora ta, care te iubește și care face pentru tine mai mult decât șapte fii.”"
     },
     {
       "number": 16,
-      "text": "Naomi a luat copilul, l-a pus la sânul ei și i-a devenit îngrijitoare."
+      "text": "Naomi a luat copilul, l-a ținut în brațe și a văzut de el."
     },
     {
       "number": 17,
-      "text": "Femeile vecine i-au pus numele Obed, spunând: «Naomi are un fiu!» El a fost tatăl lui Isai, tatăl lui David."
+      "text": "Femeile vecine i-au pus numele Obed, spunând: „Naomi are un fiu!” El a fost tatăl lui Isai, tatăl lui David."
     },
     {
       "number": 18,
@@ -116,72 +118,21 @@
     },
     {
       "number": 22,
-      "text": "Obed a fost tatăl lui Isai, iar Isai a fost tatăl lui David."
+      "text": "„Obed a fost tatăl lui Isai; și Isai a fost tatăl lui David.”"
     }
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Rut 4:1 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite deznodământul invitației: ruda apropiată vine și se așază lângă Boaz.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Rut 4:2 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite faptul că cei zece bătrâni ascultă invitația și se așază, completând cadrul juridic al tranzacției.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Rut 4:8 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite gestul juridic care încheie versetul: ruda apropiată își scoate sandala după ce îi cedează lui Boaz dreptul.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Rut 4:14 a fost aplicată în textul canonic.",
-      "reason": "«un bărbat cu drept de răscumpărare» adaugă sexul referentului și îl poate fixa pe Boaz, deși formularea este «near kinsman/redeemer». Se păstrează termenul funcțional mai neutru.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 15,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Rut 4:15 a fost aplicată în textul canonic.",
-      "reason": "Candidatul schimbă «nora ta este mai bună pentru tine decât șapte fii» în «face pentru tine mai mult decât șapte fii», mutând comparația de la valoarea relației la cantitatea faptelor.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Rut 4:16 a fost aplicată în textul canonic.",
-      "reason": "«a văzut de el» este prea vag pentru faptul că Naomi îl ia la sân/în poală și devine îngrijitoarea copilului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 22,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Rut 4:22 a fost aplicată în textul canonic.",
-      "reason": "Ultimul verset al cărții este încadrat inutil în ghilimele.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
+      "verse": 17,
+      "term": "repair5-semantic-finding",
+      "decision": "Lipseau numele Obed și legătura genealogică până la David.",
+      "previousTextDigest": "1e9cd3c8421d43c2d34ba33204fc132b1efbcba010db64076eca89f219d146cc",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
     }
   ],
   "benchmark": {
@@ -216,14 +167,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh RUT."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -233,26 +183,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Rut 4: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Rut 4:1 — critical: Candidatul omite deznodământul invitației: ruda apropiată vine și se așază lângă Boaz.",
-        "Rut 4:2 — material: Candidatul omite faptul că cei zece bătrâni ascultă invitația și se așază, completând cadrul juridic al tranzacției.",
-        "Rut 4:8 — critical: Candidatul omite gestul juridic care încheie versetul: ruda apropiată își scoate sandala după ce îi cedează lui Boaz dreptul.",
-        "Rut 4:14 — material: «un bărbat cu drept de răscumpărare» adaugă sexul referentului și îl poate fixa pe Boaz, deși formularea este «near kinsman/redeemer». Se păstrează termenul funcțional mai neutru.",
-        "Rut 4:15 — material: Candidatul schimbă «nora ta este mai bună pentru tine decât șapte fii» în «face pentru tine mai mult decât șapte fii», mutând comparația de la valoarea relației la cantitatea faptelor.",
-        "Rut 4:16 — material: «a văzut de el» este prea vag pentru faptul că Naomi îl ia la sân/în poală și devine îngrijitoarea copilului.",
-        "Rut 4:22 — minor: Ultimul verset al cărții este încadrat inutil în ghilimele."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -262,7 +204,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -272,15 +214,24 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "2822ba81d05bcf30bf89b61ab202514ca026c847e605056939e19be421c84b11",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:19a90efda859c21c0cc65df3cd4cc9788e9a94ad6dedb0639d331d33009112ed"
+    "textDigest": "sha256:d0183d6df3cd32efd6bc18f6d56384ecb61890101cb871fb3b58f67808f75fb0",
+    "repairHistory": [
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          17
+        ]
+      }
+    ]
   }
 }

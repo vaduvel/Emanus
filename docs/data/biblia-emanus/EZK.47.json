@@ -54,7 +54,7 @@
     },
     {
       "number": 6,
-      "text": "El mi-a zis: „Ai văzut, fiul omului?”"
+      "text": "El mi-a zis: „Ai văzut, fiul omului?” Apoi m-a dus și m-a făcut să mă întorc la marginea râului."
     },
     {
       "number": 7,
@@ -164,7 +164,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 23,
       "reviewed": 23,
@@ -205,7 +205,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -214,6 +214,15 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:388888e3e87fd7c74cfe26471c4126c00e125a8830433e6b8b78a13661f15475"
+    "textDigest": "sha256:a245f4d642bc960632165794e7c1e75fe359f76b499ba81d503dcad089c53d48",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          6
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      }
+    ]
   }
 }
