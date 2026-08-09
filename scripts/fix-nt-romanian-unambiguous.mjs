@@ -74,6 +74,7 @@ const REPLACEMENTS = new Map([
   ["raspicat", "răspicat"],
   ["capatul", "capătul"],
   ["aceeasi", "aceeași"],
+  ["simpla", "simplă"],
   ["inalte", "înalte"],
   ["decat", "decât"],
   ["incurcatura", "încurcătură"],
