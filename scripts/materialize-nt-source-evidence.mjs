@@ -8,6 +8,7 @@ import { NT_SOURCE_EVIDENCE_WAVE_A } from "./nt-source-evidence-wave-a.mjs"
 import { NT_SOURCE_EVIDENCE_WAVE_B } from "./nt-source-evidence-wave-b.mjs"
 import { NT_SOURCE_EVIDENCE_WAVE_C } from "./nt-source-evidence-wave-c.mjs"
 import { NT_SOURCE_EVIDENCE_WAVE_D } from "./nt-source-evidence-wave-d.mjs"
+import { NT_SOURCE_EVIDENCE_RECOVERED_GAP } from "./nt-source-evidence-recovered-gap.mjs"
 
 const ROOT = process.cwd()
 const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-evidence.json")
@@ -94,6 +95,7 @@ const allBlueprints = [
   ...NT_SOURCE_EVIDENCE_WAVE_B,
   ...NT_SOURCE_EVIDENCE_WAVE_C,
   ...NT_SOURCE_EVIDENCE_WAVE_D,
+  ...NT_SOURCE_EVIDENCE_RECOVERED_GAP,
   ...recoveredEpisodeBlueprints(),
 ]
 const ids = new Set()
@@ -115,13 +117,15 @@ const records = allBlueprints.map((input) => {
 })
 
 const recoveredEpisodeRecords = records.filter((record) => record.evidenceKind === "official-episode-range").length
+const recoveredOfficialGapRecords = NT_SOURCE_EVIDENCE_RECOVERED_GAP.length
 const output = {
   schema: "emanus-nt-source-evidence-v1",
   policy: "Each evidenceSha256 hashes the stable local evidence record (source URL + locator + reviewed or registry-derived claim). It is not represented as a hash of third-party source bytes. Final source traceability also requires the locator to remain independently reviewable.",
   count: records.length,
   recoveredEpisodeRecords,
+  recoveredOfficialGapRecords,
   records,
 }
 fs.mkdirSync(path.dirname(outputPath), { recursive: true })
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n", "utf8")
-console.log(`NT source evidence materialized: ${records.length} locator records (${recoveredEpisodeRecords} recovered-book episode records).`)
+console.log(`NT source evidence materialized: ${records.length} locator records (${recoveredEpisodeRecords} recovered-book episode records + ${recoveredOfficialGapRecords} direct official John/Titus records).`)
