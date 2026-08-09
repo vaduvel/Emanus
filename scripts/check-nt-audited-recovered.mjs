@@ -8,6 +8,7 @@ const ROOT = process.cwd()
 const inputDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-recovered")
 const dir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered")
 const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-manifest.json")
+const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-ledger.json")
 const registryPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-registry", "source-first-15.json")
 const beDir = path.join(ROOT, "docs", "data", "biblia-emanus")
 const EXPECTED = { books: 15, chapters: 191, units: 762 }
@@ -58,12 +59,19 @@ function inspectBe(bookId, chapter) {
   return { verseEntryCount: be.verses.length, lastVerseNumber: Math.max(...main, ...critical), criticalReferenceNumbers: critical }
 }
 
-if (!fs.existsSync(dir) || !fs.existsSync(manifestPath) || !fs.existsSync(registryPath)) fail("audited recovery outputs missing")
+if (!fs.existsSync(dir) || !fs.existsSync(manifestPath) || !fs.existsSync(ledgerPath) || !fs.existsSync(registryPath)) fail("audited recovery outputs missing")
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"))
+const ledger = JSON.parse(fs.readFileSync(ledgerPath, "utf8"))
 const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"))
 const sourceIds = new Set(registry.sources.map((source) => source.id))
 for (const [key, value] of Object.entries(EXPECTED)) if (manifest.counts?.[key] !== value) fail(`manifest ${key} ${manifest.counts?.[key]}/${value}`)
 if (manifest.status !== "in_review" || manifest.publicationReady !== false) fail("manifest must remain in_review and non-public")
+
+const removedCharsByLocation = new Map()
+for (const change of ledger.changes ?? []) {
+  if (change.kind !== "removed-legacy-editorial-sentence" || typeof change.location !== "string" || typeof change.before !== "string") continue
+  removedCharsByLocation.set(change.location, (removedCharsByLocation.get(change.location) ?? 0) + change.before.length)
+}
 
 const inputById = new Map()
 for (const file of fs.readdirSync(inputDir).filter((name) => name.endsWith(".json"))) {
@@ -77,6 +85,7 @@ let chapters = 0
 let units = 0
 let recoveredTeachingChars = 0
 let auditedTeachingChars = 0
+let ledgerVerifiedLargeRemovals = 0
 
 for (const file of files) {
   const raw = fs.readFileSync(path.join(dir, file), "utf8")
@@ -117,7 +126,16 @@ for (const file of files) {
       const auditedChars = unit.teaching.length
       recoveredTeachingChars += originalChars
       auditedTeachingChars += auditedChars
-      if (originalChars >= 180 && auditedChars / originalChars < 0.45) fail(`${file} ${chapter.number}: too much teaching removed at ${unit.ref} (${auditedChars}/${originalChars})`)
+      if (originalChars >= 180 && auditedChars / originalChars < 0.45) {
+        const location = `${book.id}.${chapter.number}.units[${j}].teaching`
+        const removedChars = removedCharsByLocation.get(location) ?? 0
+        const deletedChars = originalChars - auditedChars
+        const deletionIsLedgerProven = auditedChars >= 180 && removedChars >= deletedChars * 0.85
+        if (!deletionIsLedgerProven) {
+          fail(`${file} ${chapter.number}: too much unproven teaching removed at ${unit.ref} (${auditedChars}/${originalChars}; ledger ${removedChars})`)
+        }
+        ledgerVerifiedLargeRemovals += 1
+      }
     }
     if (expectedNext !== canonical.lastVerseNumber + 1) fail(`${file} ${chapter.number}: coverage incomplete`)
 
@@ -139,4 +157,5 @@ const retention = auditedTeachingChars / recoveredTeachingChars
 if (retention < 0.80) fail(`global teaching retention too low: ${(retention * 100).toFixed(2)}%`)
 console.log(`NT audited recovery gate OK: ${files.length} books / ${chapters} chapters / ${units} units.`)
 console.log(`Teaching retained after removal of source labels and legacy editorial safety copy: ${(retention * 100).toFixed(2)}%.`)
+console.log(`Large removals accepted only with ledger proof: ${ledgerVerifiedLargeRemovals}.`)
 console.log("No modern source names, RCCV text, generic completion, or flagged legacy safety boilerplate remains in public explanation copy.")
