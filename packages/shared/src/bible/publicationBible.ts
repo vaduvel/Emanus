@@ -10,6 +10,10 @@ import {
 /**
  * Proveniența rămâne în metadata internă. Cititorul primește explicația direct,
  * fără numele autorului cercetat și fără limbaj de laborator despre transcript.
+ *
+ * Regulă source-first: neutralizarea atribuirii nu are voie să slăbească
+ * certitudinea, doctrina, tipologia sau aplicația sursei. Eliminăm numele,
+ * nu transformăm afirmația în „o posibilă lectură”.
  */
 function directReaderText(value: string): string {
   return value
@@ -25,21 +29,22 @@ function directReaderText(value: string): string {
       "$1Explicația ",
     )
 
-    // Formule interpretative: păstrăm caracterul de interpretare, nu autorul.
-    .replace(/\bAceasta este interpretarea lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o interpretare")
-    .replace(/\bAceasta este schema lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este o schemă")
-    .replace(/\binterpretarea lui (?:Zac\s+)?Poonen\b/giu, "această interpretare")
-    .replace(/\blectura lui (?:Zac\s+)?Poonen\b/giu, "această lectură")
-    .replace(/\bschema lui (?:Zac\s+)?Poonen\b/giu, "această schemă")
-    .replace(/\bpredica lui (?:Zac\s+)?Poonen\b/giu, "această expunere")
-    .replace(/\baplicația lui (?:Zac\s+)?Poonen\b/giu, "această aplicație")
-    .replace(/\bteologia lui (?:Zac\s+)?Poonen\b/giu, "această formulare teologică")
-    .replace(/\bargumentul lui (?:Zac\s+)?Poonen\b/giu, "argumentul acestei lecturi")
-    .replace(/\bimaginea folosită de (?:Zac\s+)?Poonen\b/giu, "o analogie folosită aici")
-    .replace(/\bÎn lectura lui (?:Zac\s+)?Poonen,\s*/giu, "În această lectură, ")
+    // Formule de atribuire: păstrăm afirmația exact la același nivel de certitudine.
+    .replace(/\bAceasta este interpretarea lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este interpretarea prezentată aici")
+    .replace(/\bAceasta este schema lui (?:Zac\s+)?Poonen\b/giu, "Aceasta este schema prezentată aici")
+    .replace(/\binterpretarea lui (?:Zac\s+)?Poonen\b/giu, "interpretarea prezentată aici")
+    .replace(/\blectura lui (?:Zac\s+)?Poonen\b/giu, "lectura prezentată aici")
+    .replace(/\bschema lui (?:Zac\s+)?Poonen\b/giu, "schema prezentată aici")
+    .replace(/\bpredica lui (?:Zac\s+)?Poonen\b/giu, "expunerea prezentată aici")
+    .replace(/\baplicația lui (?:Zac\s+)?Poonen\b/giu, "aplicația prezentată aici")
+    .replace(/\bteologia lui (?:Zac\s+)?Poonen\b/giu, "formularea teologică prezentată aici")
+    .replace(/\bargumentul lui (?:Zac\s+)?Poonen\b/giu, "argumentul prezentat aici")
+    .replace(/\bimaginea folosită de (?:Zac\s+)?Poonen\b/giu, "analogia folosită aici")
+    .replace(/\bÎn lectura lui (?:Zac\s+)?Poonen,\s*/giu, "În lectura prezentată aici, ")
     .replace(/\bPentru (?:Zac\s+)?Poonen,\s*/giu, "În această expunere, ")
 
-    // Verbe de atribuire: le transformăm în propoziții neutre și gramaticale.
+    // Verbe de atribuire: le transformăm în propoziții neutre și gramaticale,
+    // fără „posibil”, „o lectură” sau alte marcaje de relativizare.
     .replace(/\b(?:Zac\s+)?Poonen spune direct în transcript că\s+/giu, "Se spune direct că ")
     .replace(/\b(?:Zac\s+)?Poonen spune foarte apăsat însă că\s+/giu, "Se subliniază însă că ")
     .replace(/\b(?:Zac\s+)?Poonen spune (?:foarte )?direct că\s+/giu, "Se spune direct că ")
@@ -52,9 +57,9 @@ function directReaderText(value: string): string {
     .replace(/\b(?:Zac\s+)?Poonen amintește că\s+/giu, "Se amintește că ")
     .replace(/\b(?:Zac\s+)?Poonen se oprește (?:în mod special )?la\s+/giu, "Accentul cade pe ")
     .replace(/\b(?:Zac\s+)?Poonen pornește de la\s+/giu, "Punctul de plecare este ")
-    .replace(/\b(?:Zac\s+)?Poonen citește\s+/giu, "O posibilă lectură citește ")
-    .replace(/\b(?:Zac\s+)?Poonen vede în\s+/giu, "O posibilă lectură vede în ")
-    .replace(/\b(?:Zac\s+)?Poonen vede\s+/giu, "O posibilă lectură vede ")
+    .replace(/\b(?:Zac\s+)?Poonen citește\s+/giu, "Explicația citește ")
+    .replace(/\b(?:Zac\s+)?Poonen vede în\s+/giu, "Explicația vede în ")
+    .replace(/\b(?:Zac\s+)?Poonen vede\s+/giu, "Explicația vede ")
     .replace(/\b(?:Zac\s+)?Poonen urmărește\s+/giu, "Explicația urmărește ")
     .replace(/\b(?:Zac\s+)?Poonen aplică\s+/giu, "Aplicația pastorală leagă ")
     .replace(/\b(?:Zac\s+)?Poonen numește\s+/giu, "Explicația numește ")
@@ -64,12 +69,12 @@ function directReaderText(value: string): string {
     .replace(/\b(?:Zac\s+)?Poonen rezumă\s+/giu, "Ideea este rezumată astfel: ")
     .replace(/\b(?:Zac\s+)?Poonen revine\s+/giu, "Explicația revine ")
     .replace(/\b(?:Zac\s+)?Poonen contrastează\s+/giu, "Explicația contrastează ")
-    .replace(/\b(?:Zac\s+)?Poonen folosește\s+/giu, "O aplicație folosește ")
+    .replace(/\b(?:Zac\s+)?Poonen folosește\s+/giu, "Explicația folosește ")
 
     // Limbaj de cercetare: în produs rămâne numai ideea explicativă.
-    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen aplică\s+/giu, "O aplicație pastorală leagă ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen aplică\s+/giu, "Aplicația pastorală leagă ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen contrastează\s+/giu, "Explicația contrastează ")
-    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen folosește\s+/giu, "O aplicație folosește ")
+    .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen folosește\s+/giu, "Explicația folosește ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen pregătește\s+/giu, "Aici se pregătește ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu dezvoltă\s+/giu, "Expunerea nu dezvoltă ")
     .replace(/\bTranscriptul (?:lui )?(?:Zac\s+)?Poonen nu repetă toate detaliile, ci se concentrează\s+/giu, "Accentul cade ")
@@ -90,8 +95,8 @@ function directReaderText(value: string): string {
     // Genitiv sau apariție reziduală: păstrăm o expresie neutră, nu un gol.
     .replace(/\blui (?:Zac\s+)?Poonen\b/giu, "acestei expuneri")
     .replace(/\b(?:Zac\s+)?Poonen\b/giu, "această expunere")
-    .replace(/\bAceasta este interpretarea lui escatologică\b/giu, "Aceasta este o interpretare escatologică")
-    .replace(/\bîn interpretarea lui escatologică\b/giu, "în această interpretare escatologică")
+    .replace(/\bAceasta este interpretarea lui escatologică\b/giu, "Aceasta este interpretarea escatologică prezentată aici")
+    .replace(/\bîn interpretarea lui escatologică\b/giu, "în interpretarea escatologică prezentată aici")
 
     // Geneza are un flux editorial separat; numele lui rămân doar în provenance.
     .replace(/\bAllen\s*[\/]\s*Nolan\b/giu, "expunerea")
@@ -140,6 +145,7 @@ function withoutNamedAttribution(book: BibleBook): BibleBook {
 function assertNoNamedAttribution(book: BibleBook): void {
   const forbidden = /\b(?:Zac\s+)?Poonen\b|\bAllen\b|\bNolan\b|\bCFC India\b|\bThrough The Bible\b/iu
   const researchMeta = /\btranscript(?:ul|ului|e)?\b/iu
+  const weakenedAttribution = /\bo posibilă (?:lectură|interpretare)\b/iu
   const danglingAttribution = /\b(?:lectura|interpretarea|schema|predica|aplicația|teologia)\s+lui(?=[,.;:!?]|\s+(?:este|rămâne|devine|despre)\b)/iu
   const check = (value: string | undefined, where: string) => {
     if (value && forbidden.test(value)) {
@@ -147,6 +153,9 @@ function assertNoNamedAttribution(book: BibleBook): void {
     }
     if (value && researchMeta.test(value)) {
       throw new Error(`[Biblia explicată] limbaj intern de cercetare vizibil în ${where}.`)
+    }
+    if (value && weakenedAttribution.test(value)) {
+      throw new Error(`[Biblia explicată] neutralizarea sursei a slăbit afirmația în ${where}.`)
     }
     if (value && danglingAttribution.test(value)) {
       throw new Error(`[Biblia explicată] atribuire editorială incompletă în ${where}.`)
