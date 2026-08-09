@@ -68,7 +68,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 29,
       "reviewed": 29,
@@ -112,7 +112,7 @@
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus audit 2.0",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "045966ba6331fee2d556cb219e4afe4122d027f69971f7f8e4a1e2f7b4595847",
@@ -121,7 +121,16 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:88551141aa4c7f142a29a6ffd812a5d30c8d526f6c7c67c08ba83cab6e0c4c39"
+    "textDigest": "sha256:bbfde6552eb06dd3c96f4885bdd52b7e2c56f570d22210d2fe9ea855ec5d8831",
+    "repairHistory": [
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          8
+        ]
+      }
+    ]
   },
   "verses": [
     {
@@ -130,7 +139,7 @@
     },
     {
       "number": 2,
-      "text": "căci tu ești un popor sfânt pentru DOMNUL, Dumnezeul tău, și DOMNUL te-a ales ca să-I fiți un popor deosebit dintre toate popoarele de pe fața pământului."
+      "text": "căci tu ești un popor sfânt pentru DOMNUL, Dumnezeul tău, și DOMNUL te-a ales ca să-I fii un popor deosebit dintre toate popoarele de pe fața pământului."
     },
     {
       "number": 3,
@@ -146,7 +155,7 @@
     },
     {
       "number": 6,
-      "text": "Să mâncați orice animal care are copita despicată, adică despărțită în două gheare, și care rumegă printre animale."
+      "text": "Să mâncați orice animal care are copita despicată, adică despărțită în două, și care rumegă printre animale."
     },
     {
       "number": 7,
@@ -154,7 +163,7 @@
     },
     {
       "number": 8,
-      "text": "de asemenea porcul, care are copita despicată, dar nu rumegă: acesta să vă fie necurat. Să nu mâncați din carnea lor și să nu vă atingeți de stărvurile lor."
+      "text": "de asemenea porcul, care are copita despicată, dar nu rumegă: acesta să vă fie necurat. Să nu mâncați din carnea lor și să nu vă atingeți de stârvurile lor."
     },
     {
       "number": 9,
@@ -174,7 +183,7 @@
     },
     {
       "number": 13,
-      "text": "șoimul, gaia și tot ce ține de neamul ei,"
+      "text": "gaia roșie, șoimul și gaia, după soiurile ei,"
     },
     {
       "number": 14,
@@ -283,6 +292,15 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Construcția intensivă este păstrată fără transformarea zeciuielii într-un mecanism de câștig."
+    },
+    {
+      "verse": 13,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "gaia roșie, șoimul și gaia, după soiurile ei,",
+      "reason": "Sunt enumerați trei termeni de păsări; versiunea anterioară reducea lista la doi.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
     }
   ]
 }

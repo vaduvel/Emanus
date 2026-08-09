@@ -1,0 +1,13 @@
+{
+  "model": "qwen2.5:14b",
+  "eligibleForPublicationEvidence": false,
+  "reason": "A direct compact review of GEN.1.1 marked an omission of 'cerurile' although the bound Romanian text is 'La inceput, Dumnezeu a creat cerurile si pamantul.' and the bound WEBU control is 'In the beginning, God created the heavens and the earth.'",
+  "case": {
+    "reference": "GEN.1.1",
+    "romanian": "La inceput, Dumnezeu a creat cerurile si pamantul.",
+    "webu": "In the beginning, God created the heavens and the earth.",
+    "modelVerdict": "unresolved",
+    "modelRationale": "Romanian omite cerul, spune doar pamant; WEBU si ebraic mentioneaza ambele."
+  },
+  "policy": "The model may be used only for non-publication screening until it passes a reproducible controlled calibration without false approvals or false discrepancy claims."
+}

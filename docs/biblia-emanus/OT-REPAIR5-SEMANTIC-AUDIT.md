@@ -1,0 +1,1512 @@
+# OT Repair 5 — semantic screening v3
+
+- Sursă: `engwebp`
+- Model: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
+- Alinieri canonice: **16635**
+- Minim: **0.161411**
+- P01: **0.477005**
+- Mediană: **0.778661**
+
+> Screening: un scor mic cere verificare textuală și nu dovedește singur o eroare.
+
+## Cele mai slabe 500
+- `PSA.106:31` — **0.161411**
+  - RO: Lucrul acesta i-a fost socotit ca o stare de neprihănire, din neam în neam, pe vecie.
+  - EN: That was credited to him for righteousness, for all generations to come.
+- `1CH.1:12` — **0.240234**
+  - RO: patrusiți, casluhiți, din care au ieșit filistenii și caftoriții. –
+  - EN: Pathrusim, Casluhim (where the Philistines came from), and Caphtorim.
+- `JOB.37:8` — **0.262481**
+  - RO: Fiara sălbatică se trage într-o peșteră și se culcă în vizuina ei.
+  - EN: Then the animals take cover, and remain in their dens.
+- `JER.3:9` — **0.266399**
+  - RO: Și astfel, prin necurăția ei strigătoare, Israel a spurcat țara, a preacurvit cu piatra și lemnul.
+  - EN: Because she took her prostitution lightly, the land was polluted, and she committed adultery with stones and with wood.
+- `JOB.32:22` — **0.294346**
+  - RO: „căci nu știu să lingușesc: altfel, într-o clipită m-ar lua Ziditorul meu.”
+  - EN: For I don’t know how to give flattering titles, or else my Maker would soon take me away.
+- `DAN.5:27` — **0.305931**
+  - RO: Cântărit înseamnă că ai fost cântărit în cumpănă și ai fost găsit ușor!
+  - EN: TEKEL: you are weighed in the balances, and are found wanting.
+- `JOB.41:12` — **0.306254**
+  - RO: Vreau să mai vorbesc iarăși de mădularele lui și de tăria lui, și de frumusețea întocmirii lui.
+  - EN: “I will not keep silence concerning his limbs, nor his mighty strength, nor his goodly frame.
+- `PSA.73:8` — **0.309045**
+  - RO: Râd și vorbesc cu răutate de asuprire: vorbesc de sus,
+  - EN: They scoff and speak with malice. In arrogance, they threaten oppression.
+- `PSA.75:2` — **0.311254**
+  - RO: „Atunci când va veni vremea hotărâtă”, zice DOMNUL, „voi judeca fără părtinire.”
+  - EN: When I choose the appointed time, I will judge blamelessly.
+- `PSA.36:8` — **0.32156**
+  - RO: Se satură de belșugul Casei Tale, și-i adăpi din șuvoiul desfătărilor Tale.
+  - EN: They shall be abundantly satisfied with the abundance of your house. You will make them drink of the river of your pleasures.
+- `JER.51:18` — **0.321804**
+  - RO: Sunt o nimica toată și o lucrare de râs: când le vine pedeapsa, pier cu desăvârșire!
+  - EN: They are vanity, a work of delusion. In the time of their visitation, they will perish.
+- `PSA.119:15` — **0.334948**
+  - RO: Mă gândesc adânc la poruncile Tale, și cărările Tale le am sub ochi.
+  - EN: I will meditate on your precepts, and consider your ways.
+- `PSA.107:37` — **0.336452**
+  - RO: însămânțează ogoare, sădesc vii și-i culeg roadele.
+  - EN: sow fields, plant vineyards, and reap the fruits of increase.
+- `PRO.16:31` — **0.343833**
+  - RO: Perii albi sunt o cunună de cinste, ea se găsește pe calea neprihănirii. –
+  - EN: Gray hair is a crown of glory. It is attained by a life of righteousness.
+- `1CH.24:29` — **0.348197**
+  - RO: din Chis, fiii lui Chis: Ierahmeel.
+  - EN: Of Kish, the son of Kish: Jerahmeel.
+- `1CH.11:8` — **0.350399**
+  - RO: Au făcut zid împrejurul cetății, de la Milo de jur împrejur; și Ioab a dres cealaltă parte a cetății.
+  - EN: He built the city all around, from Millo even around; and Joab repaired the rest of the city.
+- `JOB.6:19` — **0.350995**
+  - RO: Cetele celor din Tema se uită țintă la ele, călătorii din Seba sunt plini de nădejde când le văd.
+  - EN: The caravans of Tema looked. The companies of Sheba waited for them.
+- `EZK.45:10` — **0.351995**
+  - RO: Să aveți cumpene drepte, o efă dreaptă și un bat drept.
+  - EN: “You shall have just balances, a just ephah, and a just bath.
+- `JOB.21:10` — **0.360026**
+  - RO: Taurii lor sunt plini de vlagă și prăsitori, juncanele lor zămislesc și nu leapădă.
+  - EN: Their bulls breed without fail. Their cows calve, and don’t miscarry.
+- `PRO.14:4` — **0.365195**
+  - RO: Unde nu sunt boi, ieslea este curată, dar puterea boului aduce belșug de roade.
+  - EN: Where no oxen are, the crib is clean, but much increase is by the strength of the ox.
+- `PSA.83:5` — **0.3669**
+  - RO: Se strâng toți cu o inimă, fac un legământ împotriva Ta:
+  - EN: For they have conspired together with one mind. They form an alliance against you.
+- `2CH.4:14` — **0.367093**
+  - RO: cele zece temelii și cele zece lighene de pe temelii;
+  - EN: He also made the bases, and he made the basins on the bases—
+- `ZEC.4:3` — **0.369446**
+  - RO: „Și lângă el sunt doi măslini, unul la dreapta vasului, și altul, la stânga lui.”
+  - EN: and two olive trees by it, one on the right side of the bowl, and the other on the left side of it.”
+- `PRO.24:4` — **0.374142**
+  - RO: prin știință se umplu cămările ei de toate bunătățile de preț și plăcute.
+  - EN: by knowledge the rooms are filled with all rare and beautiful treasure.
+- `PSA.78:46` — **0.37488**
+  - RO: Cum le-a dat holdele pradă omizilor, rodul muncii lor pradă lăcustelor.
+  - EN: He also gave their increase to the caterpillar, and their labor to the locust.
+- `PSA.119:96` — **0.375107**
+  - RO: Văd că tot ce este desăvârșit are margini: poruncile Tale însă sunt fără margini.
+  - EN: I have seen a limit to all perfection, but your commands are boundless.
+- `1CH.26:23` — **0.379709**
+  - RO: Dintre amramiți, ițehariți, hebroniți și uzieliți,
+  - EN: Of the Amramites, of the Izharites, of the Hebronites, of the Uzzielites:
+- `JER.7:8` — **0.382912**
+  - RO: Dar iată că voi vă hrăniți cu nădejdi înșelătoare care nu slujesc la nimic.
+  - EN: Behold, you trust in lying words that can’t profit.
+- `NEH.12:10` — **0.385879**
+  - RO: Iosua a născut pe Ioiachim, Ioiachim a născut pe Eliașib, Eliașib a născut pe Ioiada,
+  - EN: Jeshua became the father of Joiakim, and Joiakim became the father of Eliashib, and Eliashib became the father of Joiada,
+- `ISA.32:8` — **0.391809**
+  - RO: Dar cel ales la suflet face planuri alese și stăruie în planurile lui alese.
+  - EN: But the noble devises noble things, and he will continue in noble things.
+- `PRO.9:3` — **0.39379**
+  - RO: Și-a trimis slujnicele și strigă, de pe vârful înălțimilor cetății:
+  - EN: She has sent out her maidens. She cries from the highest places of the city:
+- `ISA.5:29` — **0.395118**
+  - RO: Răcnesc ca niște lei, mugesc ca niște pui de lei; sforăie și apucă prada, o iau cu ei, și nimeni nu vine în ajutor.
+  - EN: Their roaring will be like a lioness. They will roar like young lions. Yes, they shall roar, and seize their prey and carry it off, and there will be no one to deliver.
+- `JOB.13:19` — **0.396097**
+  - RO: Are cineva ceva de spus împotriva mea? Atunci tac și vreau să mor.
+  - EN: Who is he who will contend with me? For then I would hold my peace and give up the spirit.
+- `2KI.22:7` — **0.396988**
+  - RO: „Dar să nu li se ceară socoteala de argintul dat în mâinile lor, căci ei lucrează cinstit.”
+  - EN: However, no accounting shall be asked of them for the money delivered into their hand, for they deal faithfully.”
+- `PRO.5:14` — **0.397471**
+  - RO: „Cât pe ce să mă nenorocesc de tot în mijlocul poporului și adunării!”
+  - EN: I have come to the brink of utter ruin, among the gathered assembly.”
+- `ISA.42:12` — **0.397545**
+  - RO: „Să dea slavă DOMNULUI și să vestească laudele Lui în ostroave!”
+  - EN: Let them give glory to the LORD, and declare his praise in the islands.
+- `ZEP.3:1` — **0.39828**
+  - RO: Vai de cetatea îndărătnică și spurcată, vai de cetatea plină de asuprire!
+  - EN: Woe to her who is rebellious and polluted, the oppressing city!
+- `PSA.106:46` — **0.398519**
+  - RO: a stârnit pentru ei mila tuturor celor ce îi țineau prinși de război.
+  - EN: He made them also to be pitied by all those who carried them captive.
+- `PRO.14:18` — **0.399622**
+  - RO: Cei proști au parte de nebunie, dar oamenii chibzuiți sunt încununați cu știință. –
+  - EN: The simple inherit folly, but the prudent are crowned with knowledge.
+- `1CH.1:16` — **0.400674**
+  - RO: arvadiți, țemariți, hamatiți.
+  - EN: the Arvadite, the Zemarite, and the Hamathite.
+- `PSA.22:5` — **0.401131**
+  - RO: Strigau către Tine, și erau scăpați; se încredeau în Tine, și nu rămâneau de rușine.
+  - EN: They cried to you, and were delivered. They trusted in you, and were not disappointed.
+- `ZEC.13:5` — **0.401137**
+  - RO: Ci fiecare din ei va zice: „Eu nu sunt proroc, ci sunt plugar, căci am fost cumpărat din tinerețea mea!”
+  - EN: but he will say, ‘I am no prophet, I am a tiller of the ground; for I have been made a bondservant from my youth.’
+- `EZK.45:14` — **0.401211**
+  - RO: Pentru untdelemn, la un bat de untdelemn, veți datora a zecea parte dintr-un bat la un cor, care este totuna cu un omer de zece bați, căci zece bați fac un omer.
+  - EN: and the set portion of oil, of the bath of oil, one tenth of a bath out of the cor, which is ten baths, even a homer (for ten baths are a homer),
+- `JOL.1:4` — **0.402955**
+  - RO: Ce a lăsat nemâncat lăcusta Gazam a mâncat lăcusta Arbeh, ce a lăsat lăcusta Arbeh a mâncat lăcusta Ielec, ce a lăsat lăcusta Ielec a mâncat lăcusta Hasil.
+  - EN: What the swarming locust has left, the great locust has eaten. What the great locust has left, the grasshopper has eaten. What the grasshopper has left, the caterpillar has eaten.
+- `EZR.2:62` — **0.404344**
+  - RO: Și-au căutat însemnarea în cărțile spițelor de neam, dar n-au găsit-o. De aceea, au fost îndepărtați de la preoție,
+  - EN: These sought their place among those who were registered by genealogy, but they were not found; therefore they were deemed disqualified and removed from the priesthood.
+- `PSA.104:11` — **0.405077**
+  - RO: Tu adăpi la ele toate fiarele câmpului; în ele își potolesc setea măgarii sălbatici.
+  - EN: They give drink to every animal of the field. The wild donkeys quench their thirst.
+- `JOB.3:2` — **0.405271**
+  - RO: A luat cuvântul și a zis:
+  - EN: Job answered:
+- `JOB.27:12` — **0.40572**
+  - RO: Dar voi le cunoașteți și sunteți de același gând; pentru ce dar vorbiți așa de prostește?
+  - EN: Behold, all of you have seen it yourselves; why then have you become altogether vain?
+- `1KI.7:17` — **0.406919**
+  - RO: A mai făcut niște împletituri în chip de rețea, niște ciucuri făcuți cu lănțișoare, pentru acoperișurile de pe vârful stâlpilor, șapte pentru acoperișul dintâi, și șapte pentru acoperișul al doilea.
+  - EN: There were nets of checker work and wreaths of chain work for the capitals which were on the top of the pillars: seven for the one capital, and seven for the other capital.
+- `PSA.105:34` — **0.408954**
+  - RO: El a zis și au venit lăcuste, lăcuste fără număr,
+  - EN: He spoke, and the locusts came with the grasshoppers, without number.
+- `JOB.40:10` — **0.408961**
+  - RO: Împodobește-te cu măreție și mărime, îmbracă-te cu strălucire și cu slavă!
+  - EN: “Now deck yourself with excellency and dignity. Array yourself with honor and majesty.
+- `ISA.28:24` — **0.409609**
+  - RO: Cel ce ară pentru semănătură ară oare necontenit? Necontenit își brăzdează și își grăpează el pământul?
+  - EN: Does he who plows to sow plow continually? Does he keep turning the soil and breaking the clods?
+- `PRO.30:29` — **0.409952**
+  - RO: Trei ființe au o ținută frumoasă și patru au mers măreț:
+  - EN: “There are three things which are stately in their march, four which are stately in going:
+- `JOB.22:8` — **0.410309**
+  - RO: Țara era a ta, fiindcă erai mai tare, te așezai în ea, fiindcă erai cu vază.
+  - EN: But as for the mighty man, he had the earth. The honorable man, he lived in it.
+- `PRO.13:2` — **0.410671**
+  - RO: Prin rodul gurii ai parte de bine, dar cei stricați au parte de silnicie. –
+  - EN: By the fruit of his lips, a man enjoys good things, but the unfaithful crave violence.
+- `PRO.27:20` — **0.411857**
+  - RO: După cum Locuința morților și adâncul nu se pot sătura, tot așa nici ochii omului nu se pot sătura. –
+  - EN: Sheol and Abaddon are never satisfied; and a man’s eyes are never satisfied.
+- `PRO.11:1` — **0.412503**
+  - RO: Cumpăna înșelătoare este urâtă DOMNULUI, dar cântăreala dreaptă Îi este plăcută.
+  - EN: A false balance is an abomination to the LORD, but accurate weights are his delight.
+- `JOB.21:24` — **0.412851**
+  - RO: cu coapsele încărcate de grăsime și măduva oaselor plină de suc.
+  - EN: His pails are full of milk. The marrow of his bones is moistened.
+- `1CH.9:24` — **0.414897**
+  - RO: Erau ușieri în cele patru vânturi: la răsărit, la apus, la miazănoapte și la miazăzi.
+  - EN: On the four sides were the gatekeepers, toward the east, west, north, and south.
+- `PSA.12:7` — **0.415905**
+  - RO: Tu, DOAMNE, îi vei păzi și-i vei apăra de neamul acesta pe vecie.
+  - EN: You will keep them, LORD. You will preserve them from this generation forever.
+- `ECC.1:2` — **0.416831**
+  - RO: O, deșertăciune a deșertăciunilor, zice Eclesiastul, o, deșertăciune a deșertăciunilor! Totul este deșertăciune.
+  - EN: “Vanity of vanities,” says the Preacher; “Vanity of vanities, all is vanity.”
+- `1CH.6:81` — **0.419621**
+  - RO: Hesbonul cu locurile lui de pășunat și Iaezer cu locurile lui de pășunat.
+  - EN: Heshbon with its pasture lands, and Jazer with its pasture lands.
+- `ECC.12:8` — **0.420344**
+  - RO: O, deșertăciune a deșertăciunilor, zice Eclesiastul; totul este deșertăciune.
+  - EN: “Vanity of vanities,” says the Preacher. “All is vanity!”
+- `1CH.1:14` — **0.420483**
+  - RO: și pe iebusiți, amoriți, ghirgasiți,
+  - EN: the Jebusite, the Amorite, the Girgashite,
+- `JOL.2:24` — **0.421239**
+  - RO: Ariile se vor umple de grâu, vor geme tocitoarele și teascurile de must și de untdelemn,
+  - EN: The threshing floors will be full of wheat, and the vats will overflow with new wine and oil.
+- `ISA.24:17` — **0.421722**
+  - RO: Groaza, groapa și lațul vin peste tine, locuitor al țării!
+  - EN: Fear, the pit, and the snare are on you who inhabit the earth.
+- `JER.10:15` — **0.423177**
+  - RO: sunt un lucru de nimic, o lucrare înșelătoare, și vor pieri, când va veni pedeapsa.
+  - EN: They are vanity, a work of delusion. In the time of their visitation they will perish.
+- `JOB.18:15` — **0.423214**
+  - RO: Nimeni din ai lui nu locuiește în cortul lui, pucioasă este presărată pe locuința lui.
+  - EN: There will dwell in his tent that which is none of his. Sulfur will be scattered on his habitation.
+- `HOS.1:2` — **0.42355**
+  - RO: Întâia dată când a vorbit DOMNUL către Osea, DOMNUL a zis lui Osea: „Du-te și ia-ți o nevastă curvă și copii din curvie; căci țara a săvârșit o mare curvie, părăsind pe DOMNUL!”
+  - EN: When the LORD spoke at first by Hosea, the LORD said to Hosea, “Go, take for yourself a wife of prostitution and children of unfaithfulness; for the land commits great adultery, forsaking the LORD.”
+- `2CH.5:8` — **0.423608**
+  - RO: Heruvimii aveau aripile întinse peste locul chivotului și acopereau chivotul și drugii lui pe deasupra.
+  - EN: For the cherubim spread out their wings over the place of the ark, and the cherubim covered the ark and its poles above.
+- `PSA.74:20` — **0.423697**
+  - RO: Ai în vedere legământul! Căci locurile dosnice din țară sunt pline de bârloguri de tâlhari.
+  - EN: Honor your covenant, for haunts of violence fill the dark places of the earth.
+- `JER.2:16` — **0.423758**
+  - RO: Chiar și cei din Nof și Tahpanes îți vor zdrobi creștetul capului.
+  - EN: The children also of Memphis and Tahpanhes have broken the crown of your head.
+- `PRO.15:22` — **0.424521**
+  - RO: „Planurile nu izbutesc, când lipsește o adunare care să chibzuiască, dar izbutesc când sunt mulți sfetnici.”
+  - EN: Where there is no counsel, plans fail; but in a multitude of counselors they are established.
+- `JOB.21:13` — **0.424586**
+  - RO: Își petrec zilele în fericire și se coboară într-o clipă în Locuința morților.
+  - EN: They spend their days in prosperity. In an instant they go down to Sheol.
+- `JOB.24:11` — **0.424997**
+  - RO: în grădinile nelegiuitului ei fac untdelemn, calcă teascul și le este sete;
+  - EN: They make oil within the walls of these men. They tread wine presses, and suffer thirst.
+- `ISA.5:15` — **0.425558**
+  - RO: Și astfel, cei mici vor fi doborâți, cei mari vor fi smeriți, și privirile trufașe vor fi plecate.
+  - EN: So man is brought low, mankind is humbled, and the eyes of the arrogant ones are humbled;
+- `JOB.39:24` — **0.425799**
+  - RO: fierbe de aprindere, mănâncă pământul, n-are astâmpăr când răsună trâmbița.
+  - EN: He eats up the ground with fierceness and rage, neither does he stand still at the sound of the trumpet.
+- `PRO.8:9` — **0.426459**
+  - RO: Toate sunt lămurite pentru cel priceput și drepte pentru cei ce au găsit știința.
+  - EN: They are all plain to him who understands, right to those who find knowledge.
+- `PRO.23:18` — **0.427144**
+  - RO: căci este o răsplată, și nu ți se va tăia nădejdea.
+  - EN: Indeed surely there is a future hope, and your hope will not be cut off.
+- `PRO.27:26` — **0.429424**
+  - RO: Mieii sunt pentru îmbrăcăminte, și țapii pentru plata ogorului;
+  - EN: The lambs are for your clothing, and the goats are the price of a field.
+- `PRO.18:1` — **0.429625**
+  - RO: Cel ursuz caută ce-i place lui, se supără de orice lucru bun. –
+  - EN: A man who isolates himself pursues selfishness, and defies all sound judgment.
+- `PSA.18:45` — **0.43118**
+  - RO: Fiilor străinului li se înmoaie inima de mine și ies tremurând din cetățuile lor.
+  - EN: The foreigners shall fade away, and shall come trembling out of their strongholds.
+- `PSA.9:9` — **0.432386**
+  - RO: DOMNUL este scăparea celui asuprit, scăpare la vreme de necaz.
+  - EN: The LORD will also be a high tower for the oppressed; a high tower in times of trouble.
+- `PRO.20:10` — **0.432904**
+  - RO: Două feluri de greutăți și două feluri de măsuri sunt o scârbă înaintea DOMNULUI. –
+  - EN: Differing weights and differing measures, both of them alike are an abomination to the LORD.
+- `PSA.89:31` — **0.435173**
+  - RO: dacă vor călca orânduirile Mele și nu vor păzi poruncile Mele,
+  - EN: if they break my statutes, and don’t keep my commandments;
+- `PSA.49:9` — **0.436209**
+  - RO: ca să trăiască pe vecie și să nu vadă groapa.
+  - EN: that he should live on forever, that he should not see corruption.
+- `JER.4:26` — **0.436232**
+  - RO: Mă uit, și iată, Carmelul este un pustiu; și toate cetățile sale sunt nimicite înaintea DOMNULUI și înaintea mâniei Lui aprinse!
+  - EN: I saw, and behold, the fruitful field was a wilderness, and all its cities were broken down at the presence of the LORD, before his fierce anger.
+- `ISA.17:2` — **0.437911**
+  - RO: cetățile Aroerului sunt părăsite, sunt date spre pășune turmelor care se culcă nestingherite acolo.
+  - EN: The cities of Aroer are forsaken. They will be for flocks, which shall lie down, and no one shall make them afraid.
+- `ZEC.9:6` — **0.439021**
+  - RO: „Străinul se va așeza în Asdod, și voi frânge mândria filistenilor.”
+  - EN: Foreigners will dwell in Ashdod, and I will cut off the pride of the Philistines.
+- `PSA.145:6` — **0.439338**
+  - RO: Oamenii vor vorbi de puterea Ta cea înfricoșată, și eu voi povesti mărimea Ta.
+  - EN: Men will speak of the might of your awesome acts. I will declare your greatness.
+- `PSA.74:4` — **0.440262**
+  - RO: Potrivnicii Tăi au mugit în mijlocul Templului Tău; și-au pus semnele lor drept semne.
+  - EN: Your adversaries have roared in the middle of your assembly. They have set up their standards as signs.
+- `SNG.6:7` — **0.441674**
+  - RO: Obrazul tău este ca o jumătate de rodie, sub marama ta…
+  - EN: Your temples are like a piece of a pomegranate behind your veil.
+- `ISA.24:4` — **0.442528**
+  - RO: Țara este tristă, sleită de puteri; locuitorii sunt mâhniți și tânjesc; căpeteniile poporului sunt fără putere,
+  - EN: The earth mourns and fades away. The world languishes and fades away. The lofty people of the earth languish.
+- `EZK.23:16` — **0.442909**
+  - RO: De îndată ce i-a văzut, s-a aprins de dorință după ei și le-a trimis soli în Haldeea.
+  - EN: As soon as she saw them, she lusted after them and sent messengers to them into Chaldea.
+- `HOS.12:5` — **0.442984**
+  - RO: DOMNUL este Dumnezeul oștirilor; numele Lui este DOMNUL.
+  - EN: even the LORD, the God of Armies. The LORD is his name of renown!
+- `PSA.9:6` — **0.443486**
+  - RO: S-au dus vrăjmașii! N-au rămas din ei decât niște dărâmături veșnice! Niște cetăți dărâmate de Tine! Li s-a șters pomenirea!
+  - EN: The enemy is overtaken by endless ruin. The very memory of the cities which you have overthrown has perished.
+- `JOB.41:29` — **0.443575**
+  - RO: Nu vede în ghioagă decât un fir de pai și râde la șuieratul săgeților.
+  - EN: Clubs are counted as stubble. He laughs at the rushing of the javelin.
+- `PSA.39:9` — **0.444182**
+  - RO: Stau mut, nu deschid gura, căci Tu lucrezi.
+  - EN: I was mute. I didn’t open my mouth, because you did it.
+- `JOB.39:7` — **0.444272**
+  - RO: El râde de zarva cetăților și n-aude strigătele stăpânului, care-l mână.
+  - EN: He scorns the tumult of the city, neither does he hear the shouting of the driver.
+- `1KI.8:7` — **0.444406**
+  - RO: Căci heruvimii aveau aripile întinse peste locul chivotului și acopereau chivotul și drugii lui pe deasupra.
+  - EN: For the cherubim spread their wings out over the place of the ark, and the cherubim covered the ark and its poles above.
+- `PSA.71:1` — **0.444711**
+  - RO: În Tine, DOAMNE, îmi caut scăparea: să nu rămân de rușine niciodată!
+  - EN: In you, LORD, I take refuge. Never let me be disappointed.
+- `JOB.41:22` — **0.44494**
+  - RO: Tăria lui stă în grumaz, și înaintea lui sare groaza.
+  - EN: There is strength in his neck. Terror dances before him.
+- `PSA.73:4` — **0.445556**
+  - RO: Într-adevăr, nimic nu-i tulbură până la moarte, și trupul le este încărcat de grăsime.
+  - EN: For there are no struggles in their death, but their strength is firm.
+- `JOB.21:29` — **0.446262**
+  - RO: Dar ce! N-ați întrebat pe călători și nu știți ce istorisesc ei?
+  - EN: Haven’t you asked wayfaring men? Don’t you know their evidences,
+- `DAN.8:12` — **0.446285**
+  - RO: Oastea a fost pedepsită din pricina păcatului săvârșit împotriva jertfei necurmate; cornul a aruncat adevărul la pământ și a izbutit în ce a început.
+  - EN: The army was given over to it together with the continual burnt offering through disobedience. It cast down truth to the ground, and it did its pleasure and prospered.
+- `ISA.32:19` — **0.447172**
+  - RO: Chiar dacă grindina va doborî pădurea, iar cetatea va fi făcută una cu pământul.
+  - EN: though hail flattens the forest, and the city is leveled completely.
+- `ISA.3:12` — **0.447209**
+  - RO: „Poporul meu este asuprit de niște copii și-l stăpânesc niște femei! Poporul meu, cârmuitorii tăi te duc în rătăcire și pustiesc calea pe care umbli!”
+  - EN: As for my people, children are their oppressors, and women rule over them. My people, those who lead you cause you to err, and destroy the way of your paths.
+- `PSA.68:11` — **0.447619**
+  - RO: Un cuvânt spune DOMNUL, și femeile aducătoare de vești bune sunt o mare oștire: –
+  - EN: The Lord announced the word. The ones who proclaim it are a great company.
+- `ISA.24:12` — **0.447828**
+  - RO: Numai pustiire a mai rămas în cetate, și porțile stau dărâmate.
+  - EN: The city is left in desolation, and the gate is struck with destruction.
+- `JOB.11:11` — **0.447854**
+  - RO: Căci El cunoaște pe făcătorii de rele, vede ușor pe vinovați.
+  - EN: For he knows false men. He sees iniquity also, even though he doesn’t consider it.
+- `HOS.7:8` — **0.448096**
+  - RO: Efraim se amestecă printre popoare, Efraim este o turtă care n-a fost întoarsă.
+  - EN: Ephraim mixes himself among the nations. Ephraim is a pancake not turned over.
+- `PRO.3:15` — **0.449355**
+  - RO: ea este mai de preț decât mărgăritarele, și toate comorile tale nu se pot asemui cu ea.
+  - EN: She is more precious than rubies. None of the things you can desire are to be compared to her.
+- `PSA.7:13` — **0.449383**
+  - RO: îndreaptă asupra lui săgeți omorâtoare și-i aruncă săgeți arzătoare!
+  - EN: He has also prepared for himself the instruments of death. He makes ready his flaming arrows.
+- `PSA.49:14` — **0.449639**
+  - RO: Sunt duși ca o turmă în Locuința morților, îi paște moartea, și în curând oamenii fără prihană îi calcă în picioare: li se duce frumusețea, și Locuința morților le este locașul.
+  - EN: They are appointed as a flock for Sheol. Death shall be their shepherd. The upright shall have dominion over them in the morning. Their beauty shall decay in Sheol, far from their mansion.
+- `PSA.119:131` — **0.450116**
+  - RO: Deschid gura și oftez, căci sunt lacom după poruncile Tale.
+  - EN: I opened my mouth wide and panted, for I longed for your commandments.
+- `PSA.17:4` — **0.450122**
+  - RO: Cât privește legăturile cu oamenii, eu, după cuvântul buzelor Tale, mă feresc de calea celor asupritori;
+  - EN: As for the deeds of men, by the word of your lips, I have kept myself from the ways of the violent.
+- `PSA.89:4` — **0.451155**
+  - RO: „Îți voi întări sămânța pe vecie și-n veci îți voi așeza scaunul de domnie.”
+  - EN: ‘I will establish your offspring forever, and build up your throne to all generations.’” Selah.
+- `PSA.33:11` — **0.451433**
+  - RO: Dar sfaturile DOMNULUI dăinuie pe vecie, și planurile inimii Lui, din neam în neam.
+  - EN: The counsel of the LORD stands fast forever, the thoughts of his heart to all generations.
+- `NEH.12:11` — **0.452682**
+  - RO: Ioiada a născut pe Ionatan, și Ionatan a născut pe Iadua.
+  - EN: and Joiada became the father of Jonathan, and Jonathan became the father of Jaddua.
+- `ISA.2:16` — **0.453511**
+  - RO: împotriva tuturor corăbiilor din Tarsis și împotriva tuturor lucrurilor plăcute la vedere.
+  - EN: for all the ships of Tarshish, and for all pleasant imagery.
+- `PRO.13:17` — **0.453764**
+  - RO: Un sol rău cade în nenorocire, dar un sol credincios aduce tămăduire. –
+  - EN: A wicked messenger falls into trouble, but a trustworthy envoy gains healing.
+- `JOB.38:10` — **0.454186**
+  - RO: când i-am pus hotar și când i-am pus zăvoare și porți;
+  - EN: marked out for it my bound, set bars and doors,
+- `1CH.9:31` — **0.455573**
+  - RO: Matitia, unul din leviți, întâiul născut al lui Șalum, coreitul, avea grijă de turtele coapte în tigaie.
+  - EN: Mattithiah, one of the Levites, who was the firstborn of Shallum the Korahite, had the office of trust over the things that were baked in pans.
+- `PSA.73:16` — **0.456056**
+  - RO: M-am gândit la aceste lucruri ca să le pricep, dar zadarnică mi-a fost truda,
+  - EN: When I tried to understand this, it was too painful for me—
+- `1CH.6:69` — **0.456324**
+  - RO: Aialon cu locurile lui de pășunat și Gat-Rimon cu locurile lui de pășunat;
+  - EN: Aijalon with its pasture lands, Gath Rimmon with its pasture lands;
+- `PSA.119:8` — **0.456383**
+  - RO: Vreau să păzesc orânduirile Tale: nu mă părăsi de tot!
+  - EN: I will observe your statutes. Don’t utterly forsake me.
+- `JOB.29:20` — **0.457585**
+  - RO: „Slava mea va înverzi neîncetat, și arcul îmi va întineri în mână.”
+  - EN: My glory is fresh in me. My bow is renewed in my hand.’
+- `HAB.1:7` — **0.458222**
+  - RO: El este grozav și înfricoșat; numai din el însuși îi iese dreptul și mărirea lui.
+  - EN: They are feared and dreaded. Their judgment and their dignity proceed from themselves.
+- `JER.32:43` — **0.459794**
+  - RO: Se vor cumpăra iarăși ogoare în țara aceasta despre care ziceți că este un pustiu fără oameni și fără dobitoace și că este dată în mâinile haldeilor.
+  - EN: Fields will be bought in this land, about which you say, ‘It is desolate, without man or animal. It is given into the hand of the Chaldeans.’
+- `1SA.3:21` — **0.459858**
+  - RO: „DOMNUL nu înceta să Se arate în Silo; căci DOMNUL Se descoperea lui Samuel, în Silo, prin cuvântul DOMNULUI.”
+  - EN: The LORD appeared again in Shiloh; for the LORD revealed himself to Samuel in Shiloh by the LORD’s word.
+- `PSA.119:39` — **0.460857**
+  - RO: Depărtează de la mine ocara de care mă tem! Căci judecățile Tale sunt pline de bunătate.
+  - EN: Take away my disgrace that I dread, for your ordinances are good.
+- `JOB.16:6` — **0.461618**
+  - RO: Dacă vorbesc, durerea nu mi s-alină, iar dacă tac, cu ce se micșorează?
+  - EN: “Though I speak, my grief is not subsided. Though I forbear, what am I eased?
+- `JOB.15:35` — **0.462262**
+  - RO: „„El zămislește răul și naște răul: în sânul lui coace roade care-l înșală.””
+  - EN: They conceive mischief and produce iniquity. Their heart prepares deceit.”
+- `PRO.16:33` — **0.46241**
+  - RO: Se aruncă sorțul în poala hainei, dar orice hotărâre vine de la DOMNUL.
+  - EN: The lot is cast into the lap, but its every decision is from the LORD.
+- `ISA.32:16` — **0.463736**
+  - RO: Atunci nepărtinirea va locui în pustiu, și neprihănirea își va avea locuința în pomet.
+  - EN: Then justice will dwell in the wilderness; and righteousness will remain in the fruitful field.
+- `JOB.36:33` — **0.463876**
+  - RO: „Dă de veste că e de față printr-un bubuit, și până și turmele Îi simt apropierea.”
+  - EN: Its noise tells about him, and the livestock also, concerning the storm that comes up.
+- `JOL.2:29` — **0.464214**
+  - RO: Chiar și peste robi și peste roabe voi turna Duhul Meu în zilele acelea.
+  - EN: And also on the servants and on the handmaids in those days, I will pour out my Spirit.
+- `PSA.119:35` — **0.464309**
+  - RO: Povățuiește-mă pe cărarea poruncilor Tale, căci îmi place de ea.
+  - EN: Direct me in the path of your commandments, for I delight in them.
+- `JOB.4:21` — **0.467192**
+  - RO: „„Li se taie firul vieții: mor și tot n-au căpătat înțelepciunea!””
+  - EN: Isn’t their tent cord plucked up within them? They die, and that without wisdom.’
+- `EZK.41:18` — **0.467909**
+  - RO: și împodobit cu heruvimi și finici. Între doi heruvimi era un finic. Fiecare heruvim avea două fețe,
+  - EN: It was made with cherubim and palm trees. A palm tree was between cherub and cherub, and every cherub had two faces,
+- `PRO.24:6` — **0.468402**
+  - RO: Căci prin măsuri chibzuite câștigi bătălia, și prin marele număr al sfetnicilor ai biruința. –
+  - EN: for by wise guidance you wage your war, and victory is in many advisors.
+- `RUT.4:18` — **0.468757**
+  - RO: Iată sămânța lui Pereț: Pereț a fost tatăl lui Hețron;
+  - EN: Now this is the history of the generations of Perez: Perez became the father of Hezron,
+- `ISA.65:6` — **0.468873**
+  - RO: Iată ce am hotărât în Mine: Nici gând să tac, ci îi voi pedepsi; da, îi voi pedepsi.
+  - EN: “Behold, it is written before me: I will not keep silence, but will repay, yes, I will repay into their bosom
+- `JOB.15:26` — **0.469721**
+  - RO: și a avut îndrăzneala să se năpustească asupra Lui cu partea cea mai tare a scuturilor lui.
+  - EN: he runs at him with a stiff neck, with the thick shields of his bucklers,
+- `JER.50:36` — **0.470406**
+  - RO: Sabia împotriva prorocilor minciunii, ca să ajungă ca niște oameni fără minte! Sabia împotriva vitejilor lui, ca să rămână încremeniți!
+  - EN: A sword is on the boasters, and they will become fools. A sword is on her mighty men, and they will be dismayed.
+- `PSA.17:11` — **0.472193**
+  - RO: Se țin de pașii mei, mă înconjoară chiar, mă pândesc, ca să mă trântească la pământ.
+  - EN: They have now surrounded us in our steps. They set their eyes to cast us down to the earth.
+- `PSA.140:5` — **0.472767**
+  - RO: Niște îngâmfați îmi întind curse și lațuri, pun rețele de-a lungul drumului și îmi întind capcane. – (Oprire)
+  - EN: The proud have hidden a snare for me, they have spread the cords of a net by the path. They have set traps for me. Selah.
+- `JOB.6:27` — **0.472816**
+  - RO: Voi ați arunca sorții chiar și pentru un orfan și v-ați târgui pentru prietenul vostru.
+  - EN: Yes, you would even cast lots for the fatherless, and make merchandise of your friend.
+- `SNG.6:13` — **0.472835**
+  - RO: Întoarce-te, întoarce-te, Sulamito! Întoarce-te, întoarce-te, ca să te privim. – Ce aveți voi să vă uitați la Sulamita ca la niște fete ce joacă în cor?
+  - EN: Return, return, Shulammite! Return, return, that we may gaze at you. Why do you desire to gaze at the Shulammite, as at the dance of Mahanaim?
+- `PSA.104:26` — **0.47338**
+  - RO: Acolo în ea umblă corăbiile, și în ea este leviatanul acela pe care l-ai făcut să se joace în valurile ei.
+  - EN: There the ships go, and leviathan, whom you formed to play there.
+- `PSA.38:5` — **0.473872**
+  - RO: Rănile mele miros greu și sunt pline de coptură, în urma nebuniei mele.
+  - EN: My wounds are loathsome and corrupt because of my foolishness.
+- `EZK.40:37` — **0.473959**
+  - RO: Tinda ei dădea în curtea de afară; de fiecare parte erau finici pe stâlpii ei și opt trepte pentru suit la poartă.
+  - EN: Its posts were toward the outer court. Palm trees were on its posts on this side and on that side. The ascent to it had eight steps.
+- `PSA.33:10` — **0.473967**
+  - RO: DOMNUL răstoarnă sfaturile neamurilor, zădărnicește planurile popoarelor.
+  - EN: The LORD brings the counsel of the nations to nothing. He makes the thoughts of the peoples to be of no effect.
+- `PSA.47:2` — **0.474078**
+  - RO: Căci DOMNUL, Cel Preaînalt, este înfricoșat: El este Împărat mare peste tot pământul.
+  - EN: For the LORD Most High is awesome. He is a great King over all the earth.
+- `EZK.40:31` — **0.474808**
+  - RO: Tinda porții dădea în curtea de afară; pe stâlpii ei erau finici și opt trepte pentru suit la poartă.
+  - EN: Its arches were toward the outer court. Palm trees were on its posts. The ascent to it had eight steps.
+- `JOB.40:17` — **0.474845**
+  - RO: Își îndoaie coada tare ca un cedru, și vinele coapselor lui sunt întrețesute.
+  - EN: He moves his tail like a cedar. The sinews of his thighs are knit together.
+- `PSA.119:87` — **0.474871**
+  - RO: Gata, gata să mă doboare și să mă prăpădească, dar eu nu părăsesc poruncile Tale.
+  - EN: They had almost wiped me from the earth, but I didn’t forsake your precepts.
+- `PSA.118:25` — **0.474956**
+  - RO: DOAMNE, ajută! DOAMNE, dă izbândă!
+  - EN: Save us now, we beg you, LORD! LORD, we beg you, send prosperity now.
+- `1CH.2:41` — **0.475475**
+  - RO: Șalum a născut pe Iecamia; Iecamia a născut pe Elișama.
+  - EN: and Shallum became the father of Jekamiah, and Jekamiah became the father of Elishama.
+- `ECC.8:14` — **0.475495**
+  - RO: Este o deșertăciune care se petrece pe pământ: și anume, sunt oameni neprihăniți cărora le merge ca și celor răi, care fac fapte rele, și sunt răi cărora le merge ca și celor neprihăniți, care fac fapte bune. Eu zic că și aceasta este o deșertăciune.
+  - EN: There is a vanity which is done on the earth, that there are righteous men to whom it happens according to the work of the wicked. Again, there are wicked men to whom it happens according to the work of the righteous. I said that this also is vanity.
+- `DAN.11:22` — **0.475571**
+  - RO: Oștile se vor revărsa ca un râu înaintea lui, dar vor fi nimicite împreună cu o căpetenie a legământului.
+  - EN: The overwhelming forces will be overwhelmed from before him, and will be broken. Yes, also the prince of the covenant.
+- `JOB.27:20` — **0.475594**
+  - RO: Îl apucă groaza ca niște ape; și noaptea, îl ia vârtejul.
+  - EN: Terrors overtake him like waters. A storm steals him away in the night.
+- `EZK.27:28` — **0.475837**
+  - RO: Toate valurile mării se vor cutremura de țipetele cârmacilor tăi!
+  - EN: At the sound of the cry of your pilots, the pasture lands will shake.
+- `PRO.25:4` — **0.475865**
+  - RO: Scoate zgura din argint, și argintarul va face din el un vas ales.
+  - EN: Take away the dross from the silver, and material comes out for the refiner.
+- `1CH.1:53` — **0.475904**
+  - RO: căpetenia Chenaz, căpetenia Teman, căpetenia Mibțar,
+  - EN: chief Kenaz, chief Teman, chief Mibzar,
+- `PSA.119:45` — **0.476251**
+  - RO: Voi umbla în loc larg, căci caut poruncile Tale.
+  - EN: I will walk in liberty, for I have sought your precepts.
+- `PSA.145:5` — **0.476985**
+  - RO: Voi spune strălucirea slăvită a măreției Tale și voi cânta minunile Tale.
+  - EN: I will meditate on the glorious majesty of your honor, on your wondrous works.
+- `PSA.80:15` — **0.477044**
+  - RO: Ocrotește ce a sădit dreapta Ta și pe fiul pe care Ți l-ai ales!…
+  - EN: the stock which your right hand planted, the branch that you made strong for yourself.
+- `ECC.7:27` — **0.477068**
+  - RO: Iată ce am găsit, zice Eclesiastul, cercetând lucrurile unul câte unul ca să le pătrund rostul;
+  - EN: “Behold, I have found this,” says the Preacher, “to one another, to find an explanation
+- `PSA.119:36` — **0.477129**
+  - RO: Pleacă-mi inima spre învățăturile Tale, și nu spre câștig!
+  - EN: Turn my heart toward your statutes, not toward selfish gain.
+- `JOB.15:33` — **0.477283**
+  - RO: Va fi ca o viță despuiată de roadele ei încă verzi, ca un măslin ale cărui flori au căzut.
+  - EN: He will shake off his unripe grape as the vine, and will cast off his flower as the olive tree.
+- `ISA.30:4` — **0.477531**
+  - RO: Căci voievozii lui au și ajuns la Țoan, și trimișii lui au și atins Hanesul.
+  - EN: For their princes are at Zoan, and their ambassadors have come to Hanes.
+- `ZEC.8:7` — **0.477534**
+  - RO: Așa vorbește DOMNUL oștirilor: „Iată, Eu izbăvesc pe poporul Meu din țara de la răsărit și din țara de la asfințitul soarelui.”
+  - EN: The LORD of Armies says: “Behold, I will save my people from the east country and from the west country.
+- `1KI.7:36` — **0.478222**
+  - RO: Pe plăcile proptelelor și pe tăblii, a săpat heruvimi, lei și finici, după locurile goale, și ciucuri de jur împrejur.
+  - EN: On the plates of its supports and on its panels, he engraved cherubim, lions, and palm trees, each in its space, with wreaths all around.
+- `PSA.106:27` — **0.479352**
+  - RO: că le va doborî sămânța printre neamuri și-i va împrăștia în mijlocul țărilor.
+  - EN: that he would overthrow their offspring among the nations, and scatter them in the lands.
+- `PRO.18:2` — **0.479958**
+  - RO: Nebunului nu-i este de învățătură, ci vrea să arate ce știe el. –
+  - EN: A fool has no delight in understanding, but only in revealing his own opinion.
+- `PSA.29:7` — **0.47998**
+  - RO: Glasul DOMNULUI face să țâșnească flăcări de foc,
+  - EN: The LORD’s voice strikes with flashes of lightning.
+- `JOB.21:33` — **0.480158**
+  - RO: Bulgării din vale îi sunt mai ușori, căci toți oamenii merg după el, și o mulțime îi merge înainte.
+  - EN: The clods of the valley will be sweet to him. All men will draw after him, as there were innumerable before him.
+- `PSA.119:140` — **0.480399**
+  - RO: Cuvântul Tău este cu totul încercat, și robul Tău îl iubește.
+  - EN: Your promises have been thoroughly tested, and your servant loves them.
+- `JOB.8:7` — **0.480438**
+  - RO: Vechea ta propășire va fi mică față de cea de mai târziu.
+  - EN: Though your beginning was small, yet your latter end would greatly increase.
+- `JOB.41:31` — **0.480783**
+  - RO: Face să clocotească fundul mării ca un cazan și-l clatină ca pe un vas plin cu mir.
+  - EN: He makes the deep to boil like a pot. He makes the sea like a pot of ointment.
+- `PSA.119:48` — **0.480957**
+  - RO: Îmi întind mâinile spre poruncile Tale pe care le iubesc și vreau să mă gândesc adânc la orânduirile Tale.
+  - EN: I reach out my hands for your commandments, which I love. I will meditate on your statutes.
+- `ISA.10:4` — **0.481346**
+  - RO: „Unii vor fi îngenuncheați între cei prinși în război, iar alții vor cădea între cei morți.”
+  - EN: They will only bow down under the prisoners, and will fall under the slain. For all this his anger is not turned away, but his hand is stretched out still.
+- `JOB.34:27` — **0.481787**
+  - RO: Abătându-se de la El și părăsind toate căile Lui,
+  - EN: because they turned away from following him, and wouldn’t pay attention to any of his ways,
+- `ZEC.8:2` — **0.481801**
+  - RO: „Așa vorbește DOMNUL oștirilor: „Am o mare râvnă pentru Sion și sunt stăpânit de o râvnă plină de mânie pentru el.””
+  - EN: The LORD of Armies says: “I am jealous for Zion with great jealousy, and I am jealous for her with great wrath.”
+- `JER.23:38` — **0.482188**
+  - RO: Dar dacă veți mai zice: „O amenințare a DOMNULUI”, atunci așa vorbește DOMNUL: „Pentru că spuneți cuvintele acestea: „O amenințare a DOMNULUI”, măcar că am trimis să vă spună: „Să nu mai ziceți: „O amenințare a DOMNULUI”””
+  - EN: Although you say, ‘The message from the LORD,’ therefore the LORD says: ‘Because you say this word, “The message from the LORD,” and I have sent to you, telling you not to say, “The message from the LORD,”
+- `NEH.11:26` — **0.482339**
+  - RO: la Ieșua, la Molada, la Bet-Palet,
+  - EN: in Jeshua, in Moladah, Beth Pelet,
+- `PSA.119:57` — **0.482413**
+  - RO: Partea mea, DOAMNE, o spun, este să păzesc cuvintele Tale.
+  - EN: The LORD is my portion. I promised to obey your words.
+- `JOB.41:25` — **0.482826**
+  - RO: Când se scoală el, tremură vitejii, și spaima îi pune pe fugă.
+  - EN: When he raises himself up, the mighty are afraid. They retreat before his thrashing.
+- `JOB.18:11` — **0.482885**
+  - RO: De jur împrejur îl apucă spaima și-l urmărește pas cu pas.
+  - EN: Terrors will make him afraid on every side, and will chase him at his heels.
+- `JER.2:10` — **0.483149**
+  - RO: Treceți în ostroavele Chitim și priviți! Trimiteți la Chedar, uitați-vă bine și vedeți dacă s-a întâmplat acolo așa ceva:
+  - EN: For pass over to the islands of Kittim, and see. Send to Kedar, and consider diligently, and see if there has been such a thing.
+- `ISA.24:5` — **0.483386**
+  - RO: căci țara a fost spurcată de locuitorii ei; ei călcau legile, nu țineau poruncile și rupeau legământul cel veșnic!
+  - EN: The earth also is polluted under its inhabitants, because they have transgressed the laws, violated the statutes, and broken the everlasting covenant.
+- `PRO.19:11` — **0.483619**
+  - RO: Înțelepciunea face pe om răbdător și este o cinste pentru el să uite greșelile. –
+  - EN: The discretion of a man makes him slow to anger. It is his glory to overlook an offense.
+- `1CH.2:39` — **0.483699**
+  - RO: Azaria a născut pe Haleț; Haleț a născut pe Elasa.
+  - EN: and Azariah became the father of Helez, and Helez became the father of Eleasah,
+- `PSA.29:10` — **0.483766**
+  - RO: DOMNUL stătea pe scaunul Lui de domnie când cu potopul, și DOMNUL împărățește în veci pe scaunul Lui de domnie.
+  - EN: The LORD sat enthroned at the Flood. Yes, the LORD sits as King forever.
+- `JOB.38:20` — **0.483965**
+  - RO: Poți să le urmărești până la hotarul lor și să cunoști cărările locuinței lor?
+  - EN: that you should take it to its bound, that you should discern the paths to its house?
+- `JOB.18:8` — **0.484745**
+  - RO: Căci calcă cu picioarele pe laț și umblă prin ochiuri de rețea;
+  - EN: For he is cast into a net by his own feet, and he wanders into its mesh.
+- `EZK.40:8` — **0.484848**
+  - RO: A măsurat și tinda porții dinăuntru; era de o prăjină.
+  - EN: He measured also the porch of the gate toward the house, one reed.
+- `JER.4:17` — **0.485004**
+  - RO: Ca cei ce păzesc un ogor ei înconjoară Ierusalimul, căci s-a răzvrătit împotriva Mea, zice DOMNUL. –
+  - EN: As keepers of a field, they are against her all around, because she has been rebellious against me,’” says the LORD.
+- `PRO.16:7` — **0.485006**
+  - RO: Când sunt plăcute DOMNULUI căile cuiva, îi face prieteni chiar și pe vrăjmașii lui. –
+  - EN: When a man’s ways please the LORD, he makes even his enemies to be at peace with him.
+- `PRO.16:11` — **0.485487**
+  - RO: Cântarul și cumpăna dreaptă vin de la DOMNUL; toate greutățile de cântărit sunt lucrarea Lui. –
+  - EN: Honest balances and scales are the LORD’s; all the weights in the bag are his work.
+- `1SA.13:21` — **0.48568**
+  - RO: când se tocea sapa, coasa, furca cu trei coarne și securea, și ca să facă vârf țepușului cu care mâna boii.
+  - EN: The price was one payim each to sharpen mattocks, plowshares, pitchforks, axes, and goads.
+- `EZK.7:25` — **0.485961**
+  - RO: Vine prăpădul! – Ei caută scăpare, dar scăpare nu-i!
+  - EN: Destruction comes! They will seek peace, and there will be none.
+- `JOB.39:16` — **0.486305**
+  - RO: Este aspră cu puii săi de parcă nici n-ar fi ai ei. Că s-a trudit degeaba, nu-i pasă nicidecum!
+  - EN: She deals harshly with her young ones, as if they were not hers. Though her labor is in vain, she is without fear,
+- `2KI.17:33` — **0.486994**
+  - RO: Astfel se închinau DOMNULUI, dar slujeau în același timp și dumnezeilor lor, după obiceiul neamurilor de unde fuseseră mutați.
+  - EN: They feared the LORD, and also served their own gods, after the ways of the nations from among whom they had been carried away.
+- `JOB.34:36` — **0.487236**
+  - RO: Să fie încercat dar mai departe, fiindcă răspunde ca cei răi!
+  - EN: I wish that Job were tried to the end, because of his answering like wicked men.
+- `EZK.13:7` — **0.488641**
+  - RO: Nu sunt înșelătoare vedeniile pe care le aveți și nu sunt mincinoase prorociile pe care le rostiți? Voi ziceți: „Așa vorbește DOMNUL!”
+  - EN: Haven’t you seen a false vision, and haven’t you spoken a lying divination, in that you say, ‘The LORD says;’ but I have not spoken?”
+- `PSA.119:3` — **0.488643**
+  - RO: care nu săvârșesc nicio nelegiuire, și umblă în căile Lui!
+  - EN: Yes, they do nothing wrong. They walk in his ways.
+- `PRO.24:15` — **0.48901**
+  - RO: Nu întinde curse, nelegiuitule, la locuința celui neprihănit și nu-i tulbura odihna.
+  - EN: Don’t lay in wait, wicked man, against the habitation of the righteous. Don’t destroy his resting place;
+- `PSA.9:7` — **0.489101**
+  - RO: Ei s-au dus, dar DOMNUL împărățește în veac și Și-a pregătit scaunul de domnie pentru judecată.
+  - EN: But the LORD reigns forever. He has prepared his throne for judgment.
+- `JER.15:8` — **0.489214**
+  - RO: Văduvele lor sunt mai multe decât boabele de nisip din mare; peste mama tânărului aduc un pustiitor ziua în amiaza mare; fac să cadă deodată peste ea necazul și groaza.
+  - EN: Their widows are increased more than the sand of the seas. I have brought on them against the mother of the young men a destroyer at noonday. I have caused anguish and terrors to fall on her suddenly.
+- `PSA.50:9` — **0.489239**
+  - RO: Nu voi lua tauri din casa ta, nici țapi din staulele tale.
+  - EN: I have no need for a bull from your stall, nor male goats from your pens.
+- `ISA.41:19` — **0.489578**
+  - RO: voi sădi cedri, salcâmi, mirți și măslini în pustiu; voi pune chiparoși, ulmi și merișori turcești la un loc în pustiu,
+  - EN: I will put cedar, acacia, myrtle, and oil trees in the wilderness. I will set cypress trees, pine, and box trees together in the desert;
+- `DAN.8:21` — **0.489579**
+  - RO: Țapul însă este împărăția Greciei, și cornul cel mare dintre ochii lui este cel dintâi împărat.
+  - EN: The rough male goat is the king of Greece. The great horn that is between his eyes is the first king.
+- `JOB.31:8` — **0.490452**
+  - RO: atunci eu să semăn și altul să secere, și odraslele mele să fie dezrădăcinate!
+  - EN: then let me sow, and let another eat. Yes, let the produce of my field be rooted out.
+- `1KI.7:29` — **0.490469**
+  - RO: Pe tăbliile dintre încheieturi erau niște lei, boi și heruvimi; și pe încheieturi, deasupra și dedesubtul leilor și boilor, erau niște împletituri care atârnau în chip de ciucuri.
+  - EN: and on the panels that were between the ledges were lions, oxen, and cherubim; and on the ledges there was a pedestal above; and beneath the lions and oxen were wreaths of hanging work.
+- `PSA.107:29` — **0.490548**
+  - RO: A oprit furtuna, a adus liniștea, și valurile s-au potolit.
+  - EN: He makes the storm a calm, so that its waves are still.
+- `ISA.19:9` — **0.490728**
+  - RO: Cei ce lucrează inul dărăcit și cei ce țes țesături albe vor fi acoperiți de rușine,
+  - EN: Moreover those who work in combed flax, and those who weave white cloth, will be confounded.
+- `JOB.15:3` — **0.490788**
+  - RO: Să se apere prin cuvinte care n-ajută la nimic și prin cuvântări care nu slujesc la nimic?
+  - EN: Should he reason with unprofitable talk, or with speeches with which he can do no good?
+- `2KI.20:21` — **0.491616**
+  - RO: „„„„„Ezechia a adormit cu părinții săi. Și în locul lui a domnit fiul său Manase.”””””
+  - EN: Hezekiah slept with his fathers, and Manasseh his son reigned in his place.
+- `1CH.23:26` — **0.491816**
+  - RO: „și leviții nu vor mai avea să poarte Cortul și toate uneltele pentru slujba lui.”
+  - EN: Also the Levites will no longer need to carry the tabernacle and all its vessels for its service.”
+- `PRO.11:14` — **0.491995**
+  - RO: Când nu este chibzuință, poporul cade; dar biruința vine prin marele număr de sfetnici. –
+  - EN: Where there is no wise guidance, the nation falls, but in the multitude of counselors there is victory.
+- `1CH.26:27` — **0.491998**
+  - RO: din prada luată la război, pentru întreținerea Casei DOMNULUI.
+  - EN: They dedicated some of the plunder won in battles to repair the LORD’s house.
+- `NEH.3:5` — **0.492106**
+  - RO: alături de ei au lucrat tecoiții, ai căror fruntași nu s-au supus în slujba DOMNULUI.
+  - EN: Next to them, the Tekoites made repairs; but their nobles didn’t put their necks to the Lord’s work.
+- `JOB.37:20` — **0.492438**
+  - RO: Cine-I va da de veste că Îi voi vorbi? Dar care este omul care-și dorește pierderea?
+  - EN: Will it be told him that I would speak? Or should a man wish that he were swallowed up?
+- `PSA.113:8` — **0.492446**
+  - RO: ca să-i facă să șadă împreună cu cei mari: cu mai marii poporului Său.
+  - EN: that he may set him with princes, even with the princes of his people.
+- `1KI.14:28` — **0.492478**
+  - RO: Ori de câte ori se ducea împăratul la Casa DOMNULUI, alergătorii le purtau; apoi le aduceau iarăși în odaia alergătorilor.
+  - EN: It was so, that as often as the king went into the LORD’s house, the guard bore them, and brought them back into the guard room.
+- `SNG.1:14` — **0.492542**
+  - RO: Preaiubitul meu este pentru mine un strugure de măliniță din viile din En-Ghedi. –
+  - EN: My beloved is to me a cluster of henna blossoms from the vineyards of En Gedi.
+- `ISA.23:3` — **0.492744**
+  - RO: Veniturile lui erau grâul Nilului și secerișul Râului, aduse pe ape mari, așa că el era târgul neamurilor. –
+  - EN: On great waters, the seed of the Shihor, the harvest of the Nile, was her revenue. She was the market of nations.
+- `JOB.41:9` — **0.49371**
+  - RO: Iată că ești înșelat în așteptarea ta de a-l prinde: numai să-l vezi și cazi la pământ!
+  - EN: Behold, the hope of him is in vain. Won’t one be cast down even at the sight of him?
+- `PSA.86:1` — **0.493801**
+  - RO: Ia aminte, DOAMNE, și ascultă-mă! Căci sunt nenorocit și lipsit.
+  - EN: Hear, LORD, and answer me, for I am poor and needy.
+- `JOB.21:23` — **0.493884**
+  - RO: Unul moare în mijlocul propășirii, păcii și fericirii,
+  - EN: One dies in his full strength, being wholly at ease and quiet.
+- `PRO.3:10` — **0.49414**
+  - RO: căci atunci grânarele îți vor fi pline de belșug, și teascurile tale vor geme de must.
+  - EN: so your barns will be filled with plenty, and your vats will overflow with new wine.
+- `HAB.2:18` — **0.494185**
+  - RO: La ce ar putea folosi un chip cioplit, pe care-l cioplește lucrătorul? La ce ar putea folosi un chip turnat care învață pe oameni minciuni, pentru ca lucrătorul care l-a făcut să-și pună încrederea în el, pe când el făurește numai niște idoli muți?
+  - EN: “What value does the engraved image have, that its maker has engraved it; the molten image, even the teacher of lies, that he who fashions its form trusts in it, to make mute idols?
+- `ZEC.8:6` — **0.494576**
+  - RO: Așa vorbește DOMNUL oștirilor: „Dacă lucrul acesta va părea de mirat în ochii rămășiței poporului acestuia în zilele acelea, va fi de mirat oare și în ochii Mei? – zice DOMNUL oștirilor.”
+  - EN: The LORD of Armies says: “If it is marvelous in the eyes of the remnant of this people in those days, should it also be marvelous in my eyes?” says the LORD of Armies.
+- `PSA.75:3` — **0.494651**
+  - RO: „Poate să se cutremure pământul cu locuitorii lui: căci Eu îi întăresc stâlpii.”
+  - EN: The earth and all its inhabitants quake. I firmly hold its pillars. Selah.
+- `PSA.116:11` — **0.495342**
+  - RO: În neliniștea mea, ziceam: „Orice om este înșelător.”
+  - EN: I said in my haste, “All people are liars.”
+- `JDG.5:13` — **0.496513**
+  - RO: Atunci o rămășiță din popor a biruit pe cei puternici, DOMNUL mi-a dat biruința asupra celor viteji.
+  - EN: “Then a remnant of the nobles and the people came down. The LORD came down for me against the mighty.
+- `JER.10:22` — **0.497634**
+  - RO: „Iată, se aude un vuiet! O mare zarvă vine de la miazănoapte să prefacă cetățile lui Iuda într-un pustiu, într-o vizuină de șacali.”
+  - EN: The voice of news, behold, it comes, and a great commotion out of the north country, to make the cities of Judah a desolation, a dwelling place of jackals.
+- `ZEC.9:17` — **0.49768**
+  - RO: O! cât sunt de înfloritori! Cât sunt de frumoși! Grâul va înveseli pe tineri, și mustul, pe fete.
+  - EN: For how great is his goodness, and how great is his beauty! Grain will make the young men flourish, and new wine the virgins.
+- `2CH.30:10` — **0.49771**
+  - RO: Alergătorii au mers astfel din cetate în cetate prin țara lui Efraim și Manase până la Zabulon. Dar ei râdeau și își băteau joc de ei.
+  - EN: So the couriers passed from city to city through the country of Ephraim and Manasseh, even to Zebulun, but people ridiculed them and mocked them.
+- `JOB.26:6` — **0.497734**
+  - RO: înaintea Lui Locuința morților este goală, adâncul n-are acoperiș.
+  - EN: Sheol is naked before God, and Abaddon has no covering.
+- `JOB.23:17` — **0.497773**
+  - RO: „Căci nu întunericul durerii mele mă nimicește, nici negura în care sunt înfășurat.”
+  - EN: Because I was not cut off before the darkness, neither did he cover the thick darkness from my face.
+- `JER.25:23` — **0.49873**
+  - RO: Dedanului, Temei, Buzului și tuturor celor ce își rad colțurile bărbii;
+  - EN: Dedan, Tema, Buz, and all who have the corners of their beard cut off;
+- `ISA.30:8` — **0.498741**
+  - RO: „Du-te acum – zice DOMNUL – de scrie aceste lucruri înaintea lor pe o tăbliță și sapă-le într-o carte, ca să rămână până în ziua de apoi ca mărturie pe vecie și în veci de veci.”
+  - EN: Now go, write it before them on a tablet, and inscribe it in a book, that it may be for the time to come forever and ever.
+- `2KI.25:15` — **0.499286**
+  - RO: Căpetenia străjerilor a mai luat și tigăile pentru cărbuni și lighenele, tot ce era de aur și tot ce era de argint.
+  - EN: The captain of the guard took away the fire pans, the basins, that which was of gold, for gold, and that which was of silver, for silver.
+- `PSA.119:59` — **0.500005**
+  - RO: Mă gândesc la căile mele și îmi îndrept picioarele spre învățăturile Tale.
+  - EN: I considered my ways, and turned my steps to your statutes.
+- `JOB.3:18` — **0.50074**
+  - RO: Acolo cei puși în lanțuri sunt lăsați toți în pace, nu mai aud glasul asupritorului;
+  - EN: There the prisoners are at ease together. They don’t hear the voice of the taskmaster.
+- `PSA.13:4` — **0.501683**
+  - RO: ca să nu spună vrăjmașul meu: «L-am biruit!» și potrivnicii mei să nu se bucure când mă clatin.
+  - EN: lest my enemy say, “I have prevailed against him;” lest my adversaries rejoice when I fall.
+- `PSA.49:13` — **0.501818**
+  - RO: Iată ce soartă au ei, cei plini de atâta încredere, precum și cei ce îi urmează, cărora le plac cuvintele lor. – (Oprire)
+  - EN: This is the destiny of those who are foolish, and of those who approve their sayings. Selah.
+- `PRO.3:20` — **0.501984**
+  - RO: prin știința Lui s-au deschis adâncurile și strecoară norii roua.
+  - EN: By his knowledge, the depths were broken up, and the skies drop down the dew.
+- `ISA.8:16` — **0.502138**
+  - RO: Învelește această mărturie, pecetluiește această descoperire, între ucenicii Mei. –
+  - EN: Wrap up the covenant. Seal the law among my disciples.
+- `JER.52:18` — **0.502199**
+  - RO: Au luat oalele, lopețile, cuțitele, potirele, ceștile și toate uneltele de aramă cu care se făcea slujba.
+  - EN: They also took away the pots, the shovels, the snuffers, the basins, the spoons, and all the vessels of bronze with which they ministered.
+- `LAM.3:34` — **0.502396**
+  - RO: Când se calcă în picioare toți prinșii de război ai unei țări,
+  - EN: To crush under foot all the prisoners of the earth,
+- `NEH.12:32` — **0.502587**
+  - RO: În urma acestui cor mergeau Hosea și jumătate din căpeteniile lui Iuda:
+  - EN: and after them went Hoshaiah, with half of the princes of Judah,
+- `PRO.10:29` — **0.502656**
+  - RO: Calea DOMNULUI este un zid de apărare pentru cel nevinovat, dar este o topenie pentru cei ce fac răul. –
+  - EN: The way of the LORD is a stronghold to the upright, but it is a destruction to the workers of iniquity.
+- `HOS.9:13` — **0.502834**
+  - RO: „Efraim, după cum văd, își dă copiii la pradă; și Efraim își va duce singur copiii la cel ce-i va ucide!”
+  - EN: I have seen Ephraim, like Tyre, planted in a pleasant place; but Ephraim will bring out his children to the murderer.
+- `ISA.22:1` — **0.502839**
+  - RO: Prorocie asupra văii vedeniilor. Ce este de vă suiți cu toții pe acoperișuri,
+  - EN: The burden of the valley of vision. What ails you now, that you have all gone up to the housetops?
+- `PSA.81:15` — **0.503019**
+  - RO: cei ce urăsc pe DOMNUL L-ar linguși, și fericirea lui Israel ar dăinui în veci.
+  - EN: The haters of the LORD would cringe before him, and their punishment would last forever.
+- `EZK.14:15` — **0.503109**
+  - RO: Dacă aș lăsa ca țara să fie cutreierată de fiare sălbatice, care ar lăsa-o fără popor, dacă ar ajunge un pustiu pe unde n-ar mai putea trece nimeni, din pricina acestor fiare,
+  - EN: “If I cause evil animals to pass through the land, and they ravage it and it is made desolate, so that no man may pass through because of the animals—
+- `ISA.9:11` — **0.503403**
+  - RO: De aceea, DOMNUL va ridica împotriva lor pe vrăjmașii lui Rețin și va stârni pe vrăjmașii lor:
+  - EN: Therefore the LORD will set up on high against him the adversaries of Rezin, and will stir up his enemies,
+- `PSA.118:21` — **0.503516**
+  - RO: Te laud, pentru că m-ai ascultat, pentru că m-ai mântuit.
+  - EN: I will give thanks to you, for you have answered me, and have become my salvation.
+- `JDG.10:14` — **0.503602**
+  - RO: „Duceți-vă și chemați pe dumnezeii pe care i-ați ales; ei să vă izbăvească în vremea strâmtorării voastre!”
+  - EN: Go and cry to the gods which you have chosen. Let them save you in the time of your distress!”
+- `ISA.27:2` — **0.503795**
+  - RO: În ziua aceea, cântați o cântare asupra viei celei mai alese:
+  - EN: In that day, sing to her, “A pleasant vineyard!
+- `JOB.22:3` — **0.504037**
+  - RO: Dacă ești fără prihană, are Cel Atotputernic vreun folos? Și dacă trăiești fără vină, ce va câștiga El?
+  - EN: Is it any pleasure to the Almighty that you are righteous? Or does it benefit him that you make your ways perfect?
+- `JOL.2:18` — **0.504044**
+  - RO: DOMNUL a fost plin de râvnă pentru țara Lui și S-a îndurat de poporul Său.
+  - EN: Then the LORD was jealous for his land, and had pity on his people.
+- `JOB.36:3` — **0.504103**
+  - RO: Îmi voi lua temeiurile de dreptate și voi dovedi dreptatea Ziditorului meu.
+  - EN: I will get my knowledge from afar, and will ascribe righteousness to my Maker.
+- `PRO.14:14` — **0.504969**
+  - RO: Cel cu inima rătăcită se satură de căile lui, și omul de bine se satură și el de ce este în el. –
+  - EN: The unfaithful will be repaid for his own ways; likewise a good man will be rewarded for his ways.
+- `JOB.31:13` — **0.505173**
+  - RO: De aș fi nesocotit dreptul slugii sau slujnicei mele, când se certau cu mine,
+  - EN: “If I have despised the cause of my male servant or of my female servant, when they contended with me,
+- `NEH.9:16` — **0.505354**
+  - RO: Dar părinții noștri s-au îngâmfat și și-au înțepenit grumazul. N-au urmat poruncile Tale,
+  - EN: “But they and our fathers behaved proudly, hardened their neck, didn’t listen to your commandments,
+- `1CH.7:32` — **0.50537**
+  - RO: Malchiel a fost tatăl lui Birzavit. Și Eber a născut pe Iaflet, pe Șomer și pe Hotam, și pe sora lor Șua. –
+  - EN: Heber became the father of Japhlet, Shomer, Hotham, and Shua their sister.
+- `HAB.3:7` — **0.505883**
+  - RO: Văd corturile Etiopiei pline de groază, și se cutremură colibele din țara Madianului.
+  - EN: I saw the tents of Cushan in affliction. The dwellings of the land of Midian trembled.
+- `PSA.111:8` — **0.505997**
+  - RO: întărite pentru veșnicie, făcute cu credincioșie și neprihănire.
+  - EN: They are established forever and ever. They are done in truth and uprightness.
+- `EZK.16:35` — **0.506146**
+  - RO: De aceea, ascultă, curvo, cuvântul DOMNULUI!
+  - EN: “Therefore, prostitute, hear the LORD’s word:
+- `EZK.16:29` — **0.506703**
+  - RO: Ți-ai înmulțit curviile cu țara Canaanului și până în Haldeea, dar nici acolo nu te-ai săturat.
+  - EN: You have moreover multiplied your prostitution to the land of merchants, to Chaldea; and yet you weren’t satisfied with this.
+- `PSA.118:7` — **0.507049**
+  - RO: DOMNUL este ajutorul meu, și mă bucur când îmi văd împlinită dorința față de vrăjmașii mei.
+  - EN: The LORD is on my side among those who help me. Therefore I will look in triumph at those who hate me.
+- `ISA.34:7` — **0.507218**
+  - RO: „Bivolii cad împreună cu ei, și boii, împreună cu taurii; țara lor se adapă cu sânge, și țărâna se umple de grăsime.”
+  - EN: The wild oxen will come down with them, and the young bulls with the mighty bulls; and their land will be drunken with blood, and their dust made greasy with fat.
+- `JDG.9:50` — **0.507699**
+  - RO: Abimelec a pornit împotriva Tebețului. A împresurat Tebețul și l-a luat.
+  - EN: Then Abimelech went to Thebez and encamped against Thebez, and took it.
+- `JOB.4:6` — **0.507732**
+  - RO: Nădejdea ta, nu-i neprihănirea ta?
+  - EN: Isn’t your piety your confidence? Isn’t the integrity of your ways your hope?
+- `JOL.2:25` — **0.507845**
+  - RO: vă voi răsplăti astfel anii pe care i-au mâncat lăcustele Arbeh, Ielec, Hasil și Gazam, oștirea Mea cea mare pe care am trimis-o împotriva voastră.
+  - EN: I will restore to you the years that the swarming locust has eaten, the great locust, the grasshopper, and the caterpillar, my great army, which I sent among you.
+- `JOL.3:10` — **0.508002**
+  - RO: Fiarele plugurilor voastre prefaceți-le în săbii, și cosoarele, în sulițe! Cel slab să zică: „Sunt tare!”
+  - EN: Beat your plowshares into swords, and your pruning hooks into spears. Let the weak say, ‘I am strong.’
+- `ECC.12:9` — **0.508259**
+  - RO: Pe lângă că Eclesiastul a fost înțelept, el a mai învățat și știința pe popor, a cercetat, a adâncit și a întocmit un mare număr de zicători.
+  - EN: Further, because the Preacher was wise, he still taught the people knowledge. Yes, he pondered, sought out, and set in order many proverbs.
+- `PSA.119:95` — **0.508425**
+  - RO: Niște răi mă așteaptă ca să mă piardă; dar eu iau aminte la învățăturile Tale.
+  - EN: The wicked have waited for me, to destroy me. I will consider your statutes.
+- `JER.50:26` — **0.508626**
+  - RO: Pătrundeți din toate părțile în Babilon, deschideți-i grânarele, faceți-le niște mormane ca niște grămezi de snopi și nimiciți-le. Nimic să nu mai rămână din el!
+  - EN: Come against her from the farthest border. Open her storehouses. Cast her up as heaps. Destroy her utterly. Let nothing of her be left.
+- `1SA.20:38` — **0.508668**
+  - RO: I-a strigat iarăși: „Iute, grăbește-te, nu te opri!”
+  - EN: Jonathan cried after the boy, “Go fast! Hurry! Don’t delay!” Jonathan’s boy gathered up the arrows, and came to his master.
+- `1CH.6:68` — **0.508982**
+  - RO: Iocmeam cu locurile lui de pășunat, Bet-Horon cu locurile lui de pășunat,
+  - EN: Jokmeam with its pasture lands, Beth Horon with its pasture lands,
+- `JER.24:2` — **0.509238**
+  - RO: Unul din coșuri avea smochine foarte bune, ca smochinele care se coc întâi, iar celălalt coș avea smochine foarte rele, care nu se puteau mânca de rele ce erau.
+  - EN: One basket had very good figs, like the figs that are first-ripe; and the other basket had very bad figs, which could not be eaten, they were so bad.
+- `JOB.14:6` — **0.509297**
+  - RO: întoarce-Ți măcar privirile de la el și dă-i răgaz, să aibă măcar bucuria pe care o are simbriașul la sfârșitul zilei.
+  - EN: Look away from him, that he may rest, until he accomplishes, as a hireling, his day.
+- `PSA.122:4` — **0.509845**
+  - RO: Acolo se suie semințiile, semințiile DOMNULUI, după legea lui Israel, ca să laude Numele DOMNULUI.
+  - EN: where the tribes go up, even the LORD’s tribes, according to an ordinance for Israel, to give thanks to the LORD’s name.
+- `HAB.1:16` — **0.510395**
+  - RO: De aceea aduce jertfe mrejei sale, aduce tămâie năvodului său; căci lor le datorează partea lui cea grasă și bucatele lui gustoase!
+  - EN: Therefore he sacrifices to his net and burns incense to his dragnet, because by them his life is luxurious and his food is good.
+- `ISA.3:11` — **0.510716**
+  - RO: Vai de cel rău! Lui îi va merge rău, căci va culege rodul faptelor lui.
+  - EN: Woe to the wicked! Disaster is upon them, for the deeds of their hands will be paid back to them.
+- `ISA.5:10` — **0.511008**
+  - RO: „Chiar zece pogoane de vie nu vor da decât un bat, și un omer de sămânță nu va da decât o efă.”
+  - EN: For ten acres of vineyard shall yield one bath, and a homer of seed shall yield an ephah.”
+- `JOB.39:3` — **0.511013**
+  - RO: Ele se pleacă, fată puii și scapă iute de durerile lor.
+  - EN: They bow themselves. They bear their young. They end their labor pains.
+- `2CH.4:2` — **0.511087**
+  - RO: A făcut marea turnată. Ea avea zece coți de la o margine la alta, era rotundă de tot, înaltă de cinci coți, și un fir de treizeci de coți ar fi înconjurat-o.
+  - EN: Also he made the molten sea of ten cubits from brim to brim. It was round, five cubits high, and thirty cubits in circumference.
+- `JER.29:7` — **0.511323**
+  - RO: Urmăriți binele cetății în care v-am dus în robie și rugați-vă DOMNULUI pentru ea, pentru că fericirea voastră atârnă de fericirea ei!
+  - EN: Seek the peace of the city where I have caused you to be carried away captive, and pray to the LORD for it; for in its peace you will have peace.”
+- `JOB.5:11` — **0.51212**
+  - RO: El înalță pe cei smeriți și izbăvește pe cei necăjiți.
+  - EN: so that he sets up on high those who are low, those who mourn are exalted to safety.
+- `1KI.7:18` — **0.512803**
+  - RO: A făcut câte două șiruri de rodii împrejurul uneia din rețele, ca să acopere acoperișul de pe vârful unuia din stâlpi; tot așa a făcut și pentru al doilea.
+  - EN: So he made the pillars; and there were two rows of pomegranates around the one network, to cover the capitals that were on the top of the pillars; and he did so for the other capital.
+- `PSA.40:5` — **0.512843**
+  - RO: DOAMNE Dumnezeule, multe sunt minunile și planurile Tale pentru mine: nimeni nu se poate asemăna cu Tine. Aș vrea să le vestesc și să le trâmbițez, dar numărul lor este prea mare, ca să le povestesc.
+  - EN: Many, LORD, my God, are the wonderful works which you have done, and your thoughts which are toward us. They can’t be declared back to you. If I would declare and speak of them, they are more than can be counted.
+- `ISA.63:19` — **0.5129**
+  - RO: „Am ajuns ca un popor pe care niciodată nu l-ai cârmuit Tu și peste care niciodată nu s-a chemat Numele Tău…”
+  - EN: We have become like those over whom you never ruled, like those who were not called by your name.
+- `PSA.77:12` — **0.512938**
+  - RO: da, mă voi gândi la toate lucrările Tale și voi lua aminte la toate isprăvile Tale.
+  - EN: I will also meditate on all your work, and consider your doings.
+- `PSA.94:11` — **0.513261**
+  - RO: DOMNUL cunoaște gândurile omului: știe că sunt deșarte.
+  - EN: The LORD knows the thoughts of man, that they are futile.
+- `ECC.5:9` — **0.513418**
+  - RO: Dar un folos pentru țară, în toate privințele, este un împărat prețuit în țară.
+  - EN: Moreover the profit of the earth is for all. The king profits from the field.
+- `MIC.2:2` — **0.513607**
+  - RO: Dacă poftesc ogoare, pun mâna pe ele, dacă doresc case, le răpesc; asupresc pe om și casa lui, pe om și moștenirea lui.
+  - EN: They covet fields and seize them, and houses, then take them away. They oppress a man and his house, even a man and his heritage.
+- `2KI.17:25` — **0.513608**
+  - RO: Când au început să locuiască aici, nu se temeau de DOMNUL, și DOMNUL a trimis împotriva lor niște lei care-i omorau.
+  - EN: So it was, at the beginning of their dwelling there, that they didn’t fear the LORD. Therefore the LORD sent lions among them, which killed some of them.
+- `RUT.2:16` — **0.513609**
+  - RO: „și chiar voi să-i scoateți din snopi câteva spice; s-o lăsați să culeagă spice și să n-o înfruntați.”
+  - EN: Also pull out some for her from the bundles, and leave it. Let her glean, and don’t rebuke her.”
+- `EZK.40:34` — **0.513625**
+  - RO: Tinda ei dădea în curtea de afară; de fiecare parte erau finici pe stâlpi și opt trepte pentru suit la poartă.
+  - EN: Its arches were toward the outer court. Palm trees were on its posts on this side and on that side. The ascent to it had eight steps.
+- `JOB.36:28` — **0.513666**
+  - RO: pe care norii o strecoară, și o picură peste mulțimea oamenilor.
+  - EN: which the skies pour down and which drop on man abundantly.
+- `PRO.20:29` — **0.514295**
+  - RO: Slava tinerilor este tăria, dar podoaba bătrânilor sunt perii albi. –
+  - EN: The glory of young men is their strength. The splendor of old men is their gray hair.
+- `LAM.3:28` — **0.514332**
+  - RO: Să stea singur și să tacă, pentru că DOMNUL i l-a pus pe grumaz;
+  - EN: Let him sit alone and keep silence, because he has laid it on him.
+- `PSA.92:12` — **0.51461**
+  - RO: Cel fără prihană înverzește ca finicul și crește ca cedrul din Liban.
+  - EN: The righteous shall flourish like the palm tree. He will grow like a cedar in Lebanon.
+- `PSA.14:6` — **0.514627**
+  - RO: Râdeți voi de nădejdea celui nenorocit…, dar scăparea lui este DOMNUL.
+  - EN: You frustrate the plan of the poor, because the LORD is his refuge.
+- `EZK.36:7` — **0.514839**
+  - RO: De aceea, așa vorbește DOMNUL Dumnezeu: „Îmi ridic mâna și jur că neamurile care vă înconjoară își vor purta ele însele ocara!”
+  - EN: Therefore the Lord GOD says: “I have sworn, ‘Surely the nations that are around you will bear their shame.’
+- `PSA.135:13` — **0.514905**
+  - RO: DOAMNE, Numele Tău rămâne pe vecie; DOAMNE, pomenirea Ta ține din neam în neam,
+  - EN: Your name, LORD, endures forever; your renown, LORD, throughout all generations.
+- `PSA.69:22` — **0.515186**
+  - RO: Să li se prefacă masa într-o cursă, și liniștea într-un laț!
+  - EN: Let their table before them become a snare. May it become a retribution and a trap.
+- `JER.2:21` — **0.515224**
+  - RO: Te sădisem ca o vie minunată și de cel mai bun soi: cum te-ai schimbat și te-ai prefăcut într-o coardă de viță sălbatică?
+  - EN: Yet I had planted you a noble vine, a pure and faithful seed. How then have you turned into the degenerate branches of a foreign vine to me?
+- `JDG.3:28` — **0.515346**
+  - RO: El le-a zis: „Veniți după mine, căci DOMNUL a dat în mâinile voastre pe vrăjmașii voștri moabiți.”
+  - EN: He said to them, “Follow me; for the LORD has delivered your enemies the Moabites into your hand.” They followed him, and took the fords of the Jordan against the Moabites, and didn’t allow any man to pass over.
+- `ISA.11:8` — **0.515464**
+  - RO: pruncul de țâță se va juca la gura bortei năpârcii, și copilul înțărcat va băga mâna în vizuina basilicului.
+  - EN: The nursing child will play near a cobra’s hole, and the weaned child will put his hand on the viper’s den.
+- `JOB.32:8` — **0.515581**
+  - RO: Dar, de fapt, în om, duhul, suflarea Celui Atotputernic, dă priceperea.
+  - EN: But there is a spirit in man, and the Spirit of the Almighty gives them understanding.
+- `JER.2:37` — **0.515754**
+  - RO: „„„„Tot de-acolo vei ieși cu mâinile pe cap; căci DOMNUL leapădă pe aceia în care te încrezi, și nu vei izbuti cu ei.””””
+  - EN: You will also leave that place with your hands on your head; for the LORD has rejected those in whom you trust, and you won’t prosper with them.
+- `PSA.73:15` — **0.515758**
+  - RO: Dacă aș zice: „Vreau să vorbesc ca ei”
+  - EN: If I had said, “I will speak thus”, behold, I would have betrayed the generation of your children.
+- `JER.50:37` — **0.515861**
+  - RO: Sabia împotriva cailor și carelor lui, împotriva oamenilor de tot felul care sunt în mijlocul lui, ca să ajungă ca femeile! Sabia împotriva vistieriilor lui, ca să fie jefuite!
+  - EN: A sword is on their horses, on their chariots, and on all the mixed people who are in the middle of her; and they will become as women. A sword is on her treasures, and they will be robbed.
+- `1KI.16:16` — **0.5159**
+  - RO: Și poporul a auzit în tabără vestea aceasta: „Zimri a uneltit și chiar a ucis pe împărat!”
+  - EN: The people who were encamped heard that Zimri had conspired, and had also killed the king. Therefore all Israel made Omri, the captain of the army, king over Israel that day in the camp.
+- `JOB.24:23` — **0.516029**
+  - RO: El le dă liniște și încredere, are privirile îndreptate spre căile lor.
+  - EN: God gives them security, and they rest in it. His eyes are on their ways.
+- `PSA.118:4` — **0.516032**
+  - RO: Cei ce se tem de DOMNUL să zică: „Căci în veac ține îndurarea Lui!”
+  - EN: Now let those who fear the LORD say that his loving kindness endures forever.
+- `JOB.12:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `JOB.16:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `JOB.19:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `JOB.21:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `JOB.23:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `JOB.26:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `JOB.6:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `JOB.9:1` — **0.516442**
+  - RO: Iov a luat cuvântul și a zis:
+  - EN: Then Job answered,
+- `PRO.19:29` — **0.516608**
+  - RO: Pedepsele sunt pregătite pentru batjocoritori, și loviturile pentru spinările nebunilor. –
+  - EN: Penalties are prepared for scoffers, and beatings for the backs of fools.
+- `1CH.24:22` — **0.51672**
+  - RO: Din ițehariți: Șelomot; din fiii lui Șelomot: Iahat.
+  - EN: Of the Izharites, Shelomoth; of the sons of Shelomoth, Jahath.
+- `LAM.1:5` — **0.516799**
+  - RO: Asupritorii lui sar biruitori, vrăjmașii lui sunt mulțumiți. Căci DOMNUL l-a smerit din pricina mulțimii păcatelor lui; copiii lui au mers în robie înaintea asupritorului.
+  - EN: Her adversaries have become the head. Her enemies prosper; for the LORD has afflicted her for the multitude of her transgressions. Her young children have gone into captivity before the adversary.
+- `PRO.20:4` — **0.51703**
+  - RO: Toamna, leneșul nu ară; la secerat, ar vrea să strângă roade, dar nu este nimic! –
+  - EN: The sluggard will not plow by reason of the winter; therefore he shall beg in harvest, and have nothing.
+- `JER.12:11` — **0.517521**
+  - RO: Îl pustiesc, și el stă trist și pustiit înaintea Mea. Toată țara este pustiită, căci nimeni nu ia seama la ea.
+  - EN: They have made it a desolation. It mourns to me, being desolate. The whole land is made desolate, because no one cares.
+- `PSA.16:5` — **0.517591**
+  - RO: DOMNUL este partea mea de moștenire și paharul meu, Tu îmi îndrepți sorțul meu.
+  - EN: The LORD assigned my portion and my cup. You made my lot secure.
+- `JOB.17:2` — **0.517691**
+  - RO: Sunt înconjurat de batjocoritori, și ochiul meu trebuie să privească spre ocările lor.
+  - EN: Surely there are mockers with me. My eye dwells on their provocation.
+- `RUT.4:22` — **0.517975**
+  - RO: „Obed a fost tatăl lui Isai; și Isai a fost tatăl lui David.”
+  - EN: and Obed became the father of Jesse, and Jesse became the father of David.
+- `PRO.19:2` — **0.518084**
+  - RO: Lipsa de știință este o pagubă pentru cineva, și cine aleargă neghiobește înainte o nimerește rău. –
+  - EN: It isn’t good to have zeal without knowledge, nor to be hasty with one’s feet and miss the way.
+- `JER.32:10` — **0.518186**
+  - RO: Am scris un zapis, pe care l-am pecetluit, am pus martori și am cântărit argintul într-o cumpănă.
+  - EN: I signed the deed, sealed it, called witnesses, and weighed the money in the balances to him.
+- `JOB.40:22` — **0.518198**
+  - RO: Desișul lotusului îl acoperă cu umbra lui, sălciile pârâului îl înconjoară.
+  - EN: The lotuses cover him with their shade. The willows of the brook surround him.
+- `PSA.119:78` — **0.518245**
+  - RO: Să fie înfruntați îngâmfații care mă asupresc fără temei! Căci eu mă gândesc adânc la poruncile Tale.
+  - EN: Let the proud be disappointed, for they have overthrown me wrongfully. I will meditate on your precepts.
+- `PRO.13:13` — **0.518477**
+  - RO: Cine nesocotește Cuvântul DOMNULUI se pierde, dar cine se teme de poruncă este răsplătit. –
+  - EN: Whoever despises instruction will pay for it, but he who respects a command will be rewarded.
+- `ECC.4:4` — **0.518606**
+  - RO: Am mai văzut că orice muncă și orice iscusință la lucru își are temeiul numai în pizma unuia asupra altuia. Și aceasta este o deșertăciune și goană după vânt.
+  - EN: Then I saw all the labor and achievement that is the envy of a man’s neighbor. This also is vanity and a striving after wind.
+- `EZK.26:18` — **0.519028**
+  - RO: „Acum tremură ostroavele în ziua căderii tale, stau îngrozite ostroavele mării de sfârșitul tău.”
+  - EN: Now the islands will tremble in the day of your fall. Yes, the islands that are in the sea will be dismayed at your departure.’
+- `JOB.38:14` — **0.519194**
+  - RO: Ca pământul să se schimbe ca lutul pe care se pune o pecete, și toate lucrurile să se arate îmbrăcate ca în haina lor adevărată?
+  - EN: It is changed as clay under the seal, and presented as a garment.
+- `2SA.2:13` — **0.519241**
+  - RO: Ioab, fiul Țeruiei, și oamenii lui David, au pornit și ei. S-au întâlnit la iazul din Gabaon și s-au oprit unii dincoace de iaz, și ceilalți dincolo.
+  - EN: Joab the son of Zeruiah and David’s servants went out, and met them by the pool of Gibeon; and they sat down, the one on the one side of the pool and the other on the other side of the pool.
+- `JER.27:19` — **0.520071**
+  - RO: Căci așa vorbește DOMNUL oștirilor cu privire la stâlpi, la marea de aramă, la temelii și la toate celelalte unelte care au mai rămas în cetatea aceasta
+  - EN: For the LORD of Armies says concerning the pillars, concerning the sea, concerning the bases, and concerning the rest of the vessels that are left in this city,
+- `PSA.78:60` — **0.520187**
+  - RO: A părăsit Locuința Lui din Silo, Cortul în care locuia între oameni.
+  - EN: so that he abandoned the tent of Shiloh, the tent which he placed among men,
+- `ISA.28:5` — **0.520534**
+  - RO: În ziua aceea, DOMNUL oștirilor va fi o cunună strălucitoare și o podoabă măreață pentru rămășița poporului
+  - EN: In that day, the LORD of Armies will become a crown of glory and a diadem of beauty to the residue of his people,
+- `PRO.15:11` — **0.520655**
+  - RO: Locuința morților și Adâncul sunt cunoscute DOMNULUI, cu cât mai mult inimile oamenilor! –
+  - EN: Sheol and Abaddon are before the LORD— how much more then the hearts of the children of men!
+- `ZEP.2:1` — **0.520684**
+  - RO: Veniți-vă în fire și cercetați-vă, neam fără rușine,
+  - EN: Gather yourselves together, yes, gather together, you nation that has no shame,
+- `JOB.4:8` — **0.520691**
+  - RO: După câte am văzut eu, numai cei ce ară fărădelegea și seamănă nelegiuirea îi seceră roadele!
+  - EN: According to what I have seen, those who plow iniquity and sow trouble, reap the same.
+- `JOB.17:8` — **0.520738**
+  - RO: Oamenii fără prihană sunt înmărmuriți de aceasta, și cel nevinovat se răscoală împotriva celui nelegiuit.
+  - EN: Upright men will be astonished at this. The innocent will stir himself up against the godless.
+- `LAM.3:29` — **0.52094**
+  - RO: să-și umple gura cu țărână și să nu-și piardă nădejdea;
+  - EN: Let him put his mouth in the dust, if it is so that there may be hope.
+- `RUT.3:12` — **0.521282**
+  - RO: Este adevărat că am drept de răscumpărare, dar este o altă rudă mai aproape decât mine.
+  - EN: Now it is true that I am a near kinsman. However, there is a kinsman nearer than I.
+- `PSA.118:10` — **0.521521**
+  - RO: Toate neamurile mă înconjurau: în Numele DOMNULUI le tai în bucăți.
+  - EN: All the nations surrounded me, but in the LORD’s name I cut them off.
+- `PRO.26:10` — **0.521654**
+  - RO: Ca un arcaș care rănește pe toată lumea, așa este cel ce tocmește pe nebuni și pe întâii veniți. –
+  - EN: As an archer who wounds all, so is he who hires a fool or he who hires those who pass by.
+- `ZEP.1:2` — **0.521884**
+  - RO: „Voi nimici totul de pe fața pământului, zice DOMNUL.”
+  - EN: I will utterly sweep away everything from the surface of the earth, says the LORD.
+- `2SA.12:28` — **0.522088**
+  - RO: „strânge acum cealaltă parte a poporului, tăbărăște împotriva cetății și ia-o, ca să n-o iau eu și să vină asupra mea cinstea.”
+  - EN: Now therefore gather the rest of the people together, and encamp against the city and take it; lest I take the city, and it be called by my name.”
+- `AMO.5:7` — **0.522186**
+  - RO: „voi care prefaceți dreptul în pelin și călcați dreptatea în picioare!”
+  - EN: You who turn justice to wormwood, and cast down righteousness to the earth!
+- `PSA.119:80` — **0.522211**
+  - RO: Inima să-mi fie neîmpărțită în orânduirile Tale, ca să nu fiu dat de rușine!
+  - EN: Let my heart be blameless toward your decrees, that I may not be disappointed.
+- `JOB.34:5` — **0.522276**
+  - RO: Iov a zis: „Sunt nevinovat și Dumnezeu nu vrea să-mi dea dreptate;”
+  - EN: For Job has said, ‘I am righteous, God has taken away my right.
+- `PSA.5:5` — **0.522278**
+  - RO: Nebunii nu pot să stea în preajma ochilor Tăi; Tu urăști pe cei ce fac fărădelegea
+  - EN: The arrogant will not stand in your sight. You hate all workers of iniquity.
+- `EZK.41:14` — **0.52236**
+  - RO: Lățimea feței Casei și a locului gol dinspre răsărit era de o sută de coți.
+  - EN: also the width of the face of the temple, and of the separate place toward the east, one hundred cubits.
+- `ISA.43:6` — **0.522536**
+  - RO: Voi zice miazănoaptei: „Dă încoace!”, și miazăzilei: „Nu opri”
+  - EN: I will tell the north, ‘Give them up!’ and tell the south, ‘Don’t hold them back! Bring my sons from far away, and my daughters from the ends of the earth—
+- `ISA.24:6` — **0.522556**
+  - RO: De aceea mănâncă blestemul țara și suferă locuitorii ei pedeapsa nelegiuirilor lor; de aceea sunt prăpădiți locuitorii țării și nu mai rămâne decât un mic număr din ei.
+  - EN: Therefore the curse has devoured the earth, and those who dwell therein are found guilty. Therefore the inhabitants of the earth are burned, and few men are left.
+- `PRO.3:34` — **0.522568**
+  - RO: Când are a face cu cei batjocoritori, Își bate joc de ei, dar celor smeriți le dă har.
+  - EN: Surely he mocks the mockers, but he gives grace to the humble.
+- `JER.15:11` — **0.522716**
+  - RO: DOMNUL a răspuns: „Da, vei avea un viitor fericit; da, voi sili pe vrăjmaș să te roage la vreme de nenorocire și la vreme de necaz!”
+  - EN: The LORD said, “Most certainly I will strengthen you for good. Most certainly I will cause the enemy to make supplication to you in the time of evil and in the time of affliction.
+- `1KI.6:25` — **0.522758**
+  - RO: Al doilea heruvim avea tot zece coți. Măsura și chipul erau aceleași pentru amândoi heruvimii.
+  - EN: The other cherub was ten cubits. Both the cherubim were of one measure and one form.
+- `ISA.2:22` — **0.522788**
+  - RO: Nu vă mai încredeți, dar, în om, în ale cărui nări nu este decât suflare: căci ce preț are el?
+  - EN: Stop trusting in man, whose breath is in his nostrils; for of what account is he?
+- `PSA.64:6` — **0.52286**
+  - RO: Pun la cale nelegiuiri și zic: „Iată-ne gata, planul este făcut!”
+  - EN: They plot injustice, saying, “We have made a perfect plan!” Surely man’s mind and heart are cunning.
+- `ISA.3:19` — **0.523086**
+  - RO: cerceii, brățările și maramele;
+  - EN: the earrings, the bracelets, the veils,
+- `PSA.79:11` — **0.523269**
+  - RO: Să ajungă până la Tine gemetele prinșilor de război! Scapă, prin brațul Tău cel puternic, pe cei ce pier!
+  - EN: Let the sighing of the prisoner come before you. According to the greatness of your power, preserve those who are sentenced to death.
+- `ISA.11:1` — **0.523289**
+  - RO: Apoi o Odraslă va ieși din tulpina lui Isai, și un Vlăstar va da din rădăcinile lui.
+  - EN: A shoot will come out of the stock of Jesse, and a branch out of his roots will bear fruit.
+- `PSA.10:10` — **0.523549**
+  - RO: se îndoaie, se pleacă și-i cad săracii în gheare!
+  - EN: The helpless are crushed. They collapse. They fall under his strength.
+- `NEH.3:22` — **0.523894**
+  - RO: După el au lucrat preoții din împrejurimile Ierusalimului.
+  - EN: After him, the priests, the men of the surrounding area made repairs.
+- `JOB.39:20` — **0.52438**
+  - RO: Tu-l faci să sară ca lăcusta? Nechezatul lui puternic răspândește groaza.
+  - EN: Have you made him to leap as a locust? The glory of his snorting is awesome.
+- `JOB.16:7` — **0.524389**
+  - RO: Dar acum, vai! El m-a stors de puteri… Mi-ai pustiit toată casa!
+  - EN: But now, God, you have surely worn me out. You have made all my company desolate.
+- `PSA.83:10` — **0.52448**
+  - RO: care au fost nimiciți la En-Dor, și au ajuns un gunoi pentru îngrășarea pământului.
+  - EN: who perished at Endor, who became as dung for the earth.
+- `PSA.10:4` — **0.524674**
+  - RO: Cel rău zice cu trufie: „Nu pedepsește DOMNUL! Nu este Dumnezeu!”
+  - EN: The wicked, in the pride of his face, has no room in his thoughts for God.
+- `JOB.12:20` — **0.524896**
+  - RO: El taie vorba celor meșteri la vorbă; El ia mintea celor bătrâni.
+  - EN: He removes the speech of those who are trusted, and takes away the understanding of the elders.
+- `PRO.5:16` — **0.524916**
+  - RO: Ce, vrei să ți se verse izvoarele afară? Și să-ți curgă râurile pe piețele de obște?
+  - EN: Should your springs overflow in the streets, streams of water in the public squares?
+- `PRO.1:25` — **0.52497**
+  - RO: fiindcă lepădați toate sfaturile mele și nu vă plac mustrările mele,
+  - EN: but you have ignored all my counsel, and wanted none of my reproof;
+- `2KI.9:37` — **0.525219**
+  - RO: Hoita Izabelei va fi ca gunoiul pe fața câmpului, pe ogorul din Izreel, astfel încât nimeni nu va mai putea spune: «Aceasta este Izabela.»
+  - EN: and the body of Jezebel will be as dung on the surface of the field on Jezreel’s land, so that they won’t say, “This is Jezebel.”’”
+- `JDG.5:16` — **0.525242**
+  - RO: Pentru ce ai rămas în mijlocul staulelor să asculți behăitul turmelor? La pâraiele lui Ruben mari au fost sfaturile!
+  - EN: Why did you sit among the sheepfolds? To hear the whistling for the flocks? At the watercourses of Reuben, there were great searchings of heart.
+- `DAN.8:5` — **0.525523**
+  - RO: Pe când mă uitam cu băgare de seamă, iată că a venit un țap de la apus și a cutreierat toată fața pământului, fără să se atingă de el; țapul acesta însă avea un corn mare între ochi.
+  - EN: As I was considering, behold, a male goat came from the west over the surface of the whole earth, and didn’t touch the ground. The goat had a notable horn between his eyes.
+- `2CH.12:11` — **0.525608**
+  - RO: Ori de câte ori se ducea împăratul la Casa DOMNULUI, alergătorii veneau și le purtau înaintea lui; apoi le aduceau iarăși în odaia alergătorilor.
+  - EN: As often as the king entered into the LORD’s house, the guard came and bore them, then brought them back into the guard room.
+- `PSA.119:22` — **0.525746**
+  - RO: Ridică de peste mine ocara și disprețul! Căci păzesc învățăturile Tale.
+  - EN: Take reproach and contempt away from me, for I have kept your statutes.
+- `PSA.83:3` — **0.525766**
+  - RO: Fac planuri pline de vicleșug împotriva poporului Tău și se sfătuiesc împotriva celor ocrotiți de Tine.
+  - EN: They conspire with cunning against your people. They plot against your cherished ones.
+- `MIC.6:11` — **0.525897**
+  - RO: Pot socoti Eu curat pe cel ce are o cumpănă nedreaptă și greutăți strâmbe în sac?
+  - EN: Shall I tolerate dishonest scales, and a bag of deceitful weights?
+- `1KI.7:35` — **0.526031**
+  - RO: Partea de sus a temeliei se sfârșea cu un cerc înalt de o jumătate de cot și își avea proptelele cu tăbliile ei făcute dintr-o bucată cu ea.
+  - EN: In the top of the base there was a round band half a cubit high; and on the top of the base its supports and its panels were the same.
+- `JER.25:35` — **0.526345**
+  - RO: Nu mai este niciun loc de adăpost pentru păstori! Nu mai este nicio scăpare pentru povățuitorii turmelor!
+  - EN: The shepherds will have no way to flee. The leader of the flock will have no escape.
+- `PRO.23:27` — **0.52638**
+  - RO: Căci curva este o groapă adâncă, și străina o fântână strâmtă.
+  - EN: For a prostitute is a deep pit; and a wayward wife is a narrow well.
+- `LAM.5:19` — **0.526473**
+  - RO: Dar Tu, DOAMNE, împărățești pe vecie; scaunul Tău de domnie dăinuie din neam în neam!
+  - EN: You, LORD, remain forever. Your throne is from generation to generation.
+- `PSA.132:6` — **0.526476**
+  - RO: Iată, am auzit vorbindu-se despre el la Efrata, l-am găsit în ogorul Iaar…
+  - EN: Behold, we heard of it in Ephrathah. We found it in the field of Jaar.
+- `2CH.17:12` — **0.526504**
+  - RO: Iosafat se ridicase la cea mai înaltă treaptă de mărire. A zidit în Iuda cetățui și cetăți pentru merinde.
+  - EN: Jehoshaphat grew great exceedingly; and he built fortresses and store cities in Judah.
+- `JOB.17:5` — **0.526671**
+  - RO: Cine dă pe prieteni să fie prădați, copiilor aceluia li se vor topi ochii.
+  - EN: He who denounces his friends for plunder, even the eyes of his children will fail.
+- `PSA.44:5` — **0.526904**
+  - RO: Cu Tine doborâm pe vrăjmașii noștri, cu Numele Tău zdrobim pe potrivnicii noștri.
+  - EN: Through you, we will push down our adversaries. Through your name, we will tread down those who rise up against us.
+- `1CH.11:6` — **0.526995**
+  - RO: David zisese: „Oricine va bate cel dintâi pe iebusiți va fi căpetenie și domn.”
+  - EN: David had said, “Whoever strikes the Jebusites first shall be chief and captain.” Joab the son of Zeruiah went up first, and was made chief.
+- `ISA.8:1` — **0.527053**
+  - RO: DOMNUL mi-a zis: „Ia o tablă mare și scrie pe ea, așa ca să se înțeleagă: „Grăbește-te de pradă, aruncă-te asupra prăzii.””
+  - EN: The LORD said to me, “Take a large tablet, and write on it with a man’s pen, ‘For Maher Shalal Hash Baz’;
+- `JOB.32:21` — **0.527454**
+  - RO: Nu voi căuta la înfățișare, nu voi linguși pe nimeni;
+  - EN: Please don’t let me respect any man’s person, neither will I give flattering titles to any man.
+- `PSA.89:51` — **0.527717**
+  - RO: adu-Ți aminte de ocările vrăjmașilor Tăi, DOAMNE; de ocările lor împotriva pașilor unsului Tău!
+  - EN: With which your enemies have mocked, LORD, with which they have mocked the footsteps of your anointed one.
+- `JER.4:20` — **0.528209**
+  - RO: Se vestește dărâmare peste dărâmare, căci toată țara este pustiită; colibele îmi sunt pustiite deodată, și corturile, într-o clipă!
+  - EN: Destruction on destruction is decreed, for the whole land is laid waste. Suddenly my tents are destroyed, and my curtains gone in a moment.
+- `PRO.14:23` — **0.528535**
+  - RO: Oriunde se muncește este și câștig, dar oriunde numai se vorbește, este lipsă. –
+  - EN: In all hard work there is profit, but the talk of the lips leads only to poverty.
+- `ISA.15:7` — **0.529064**
+  - RO: De aceea strâng ce le mai rămâne și își strămută averile dincolo de pârâul sălciilor.
+  - EN: Therefore they will carry away the abundance they have gotten, and that which they have stored up, over the brook of the willows.
+- `PSA.3:1` — **0.529113**
+  - RO: DOAMNE, ce mulți sunt vrăjmașii mei! Ce mulțime se scoală împotriva mea!
+  - EN: LORD, how my adversaries have increased! Many are those who rise up against me.
+- `ISA.48:5` — **0.529209**
+  - RO: ți-am vestit demult aceste lucruri, ți le-am spus mai înainte ca să se întâmple, ca să nu poți să zici: „Idolul meu le-a făcut, chipul meu cioplit sau chipul meu turnat le-a poruncit!”
+  - EN: therefore I have declared it to you from of old; before it came to pass I showed it to you; lest you should say, ‘My idol has done them. My engraved image and my molten image has commanded them.’
+- `ISA.22:19` — **0.529291**
+  - RO: Vei fi izgonit din dregătoria ta și te va smulge DOMNUL din locul tău.
+  - EN: I will thrust you from your office. You will be pulled down from your station.
+- `1CH.6:12` — **0.529374**
+  - RO: Ahitub a născut pe Țadoc; Țadoc a născut pe Șalum;
+  - EN: Ahitub became the father of Zadok. Zadok became the father of Shallum.
+- `PSA.24:8` — **0.529697**
+  - RO: „Cine este acest Împărat al slavei?”
+  - EN: Who is the King of glory? The LORD strong and mighty, the LORD mighty in battle.
+- `JOB.6:21` — **0.529709**
+  - RO: Așa sunteți și voi acum pentru mine. Voi îmi vedeți necazul și vă îngroziți!
+  - EN: For now you are nothing. You see a terror, and are afraid.
+- `PSA.27:13` — **0.529912**
+  - RO: O! dacă n-aș fi încredințat că voi vedea bunătatea DOMNULUI pe pământul celor vii!…
+  - EN: I am still confident of this: I will see the goodness of the LORD in the land of the living.
+- `PSA.141:9` — **0.530054**
+  - RO: Păzește-mă de cursa pe care mi-o întind ei și de piedicile celor ce fac răul!
+  - EN: Keep me from the snare which they have laid for me, from the traps of the workers of iniquity.
+- `ISA.24:13` — **0.530122**
+  - RO: Da, în țară, în mijlocul popoarelor este ca atunci când se scutură măslinul sau ca la culesul ciorchinilor rămași după culesul viei.
+  - EN: For it will be so within the earth among the peoples, as the shaking of an olive tree, as the gleanings when the vintage is done.
+- `ISA.27:3` — **0.53019**
+  - RO: „Eu, DOMNUL, sunt Păzitorul ei, Eu o ud în fiecare clipă; Eu o păzesc zi și noapte ca să n-o vatăme nimeni.”
+  - EN: I, the LORD, am its keeper. I will water it every moment. Lest anyone damage it, I will keep it night and day.
+- `ISA.14:8` — **0.530286**
+  - RO: Până și chiparoșii și cedrii din Liban se bucură de căderea ta și zic: „De când ai căzut tu, nu se mai suie nimeni să ne taie!”
+  - EN: Yes, the cypress trees rejoice with you, with the cedars of Lebanon, saying, “Since you are humbled, no lumberjack has come up against us.”
+- `JER.50:10` — **0.530296**
+  - RO: Astfel va fi dată pradă jafului Haldeea, și toți cei ce o vor jefui se vor sătura de jaf, zice DOMNUL.
+  - EN: Chaldea will be a prey. All who prey on her will be satisfied,” says the LORD.
+- `NEH.10:12` — **0.530473**
+  - RO: Zacur, Șerebia, Șebania,
+  - EN: Zaccur, Sherebiah, Shebaniah,
+- `PSA.69:10` — **0.531029**
+  - RO: Plâng și postesc, și ei mă ocărăsc.
+  - EN: When I wept and I fasted, that was to my reproach.
+- `PSA.78:47` — **0.531039**
+  - RO: Cum le-a prăpădit viile, bătându-le cu piatră, și smochinii din Egipt, cu grindină.
+  - EN: He destroyed their vines with hail, their sycamore fig trees with frost.
+- `JOB.22:10` — **0.531285**
+  - RO: Pentru aceea ești înconjurat de curse și te-a apucat groaza dintr-odată.
+  - EN: Therefore snares are around you. Sudden fear troubles you,
+- `PSA.119:79` — **0.531487**
+  - RO: Să se întoarcă la mine cei ce se tem de Tine și cei ce cunosc învățăturile Tale!
+  - EN: Let those who fear you turn to me. They will know your statutes.
+- `PSA.10:16` — **0.531567**
+  - RO: DOMNUL este Împărat în veci de veci; neamurile sunt nimicite din țara Lui.
+  - EN: The LORD is King forever and ever! The nations will perish out of his land.
+- `JOB.16:14` — **0.531654**
+  - RO: mă frânge bucăți, bucăți, se aruncă asupra mea ca un războinic.
+  - EN: He breaks me with breach on breach. He runs at me like a giant.
+- `PRO.1:31` — **0.531781**
+  - RO: De aceea se vor hrăni cu roada umbletelor lor și se vor sătura cu sfaturile lor.
+  - EN: Therefore they will eat of the fruit of their own way, and be filled with their own schemes.
+- `1KI.6:26` — **0.531876**
+  - RO: Înălțimea fiecăruia din cei doi heruvimi era de zece coți.
+  - EN: One cherub was ten cubits high, and so was the other cherub.
+- `HOS.13:5` — **0.531899**
+  - RO: Eu te-am cunoscut în pustiu, într-un pământ fără apă.
+  - EN: I knew you in the wilderness, in the land of great drought.
+- `JER.18:17` — **0.532565**
+  - RO: „Ca vântul de la răsărit îi voi risipi înaintea vrăjmașului; iar în ziua necazului lor le voi întoarce spatele și nu Mă voi uita la ei!”
+  - EN: I will scatter them as with an east wind before the enemy. I will show them the back, and not the face, in the day of their calamity.
+- `ISA.13:22` — **0.53313**
+  - RO: „Șacalii vor urla în casele lui împărătești pustii, și câinii sălbatici, în casele lui de petrecere. Vremea lui este aproape să vină, și zilele nu i se vor lungi.”
+  - EN: Hyenas will cry in their fortresses, and jackals in the pleasant palaces. Her time is near to come, and her days will not be prolonged.
+- `PSA.105:32` — **0.533169**
+  - RO: În loc de ploaie le-a dat grindină și flăcări de foc în țara lor.
+  - EN: He gave them hail for rain, with lightning in their land.
+- `PSA.55:9` — **0.533262**
+  - RO: Nimicește-i, DOAMNE, împarte-le limbile, căci în cetate văd silă și certuri;
+  - EN: Confuse them, Lord, and confound their language, for I have seen violence and strife in the city.
+- `ISA.33:4` — **0.533436**
+  - RO: Și prada voastră va fi strânsă cum strânge mușița: sar peste ea cum sar lăcustele.
+  - EN: Your plunder will be gathered as the caterpillar gathers. Men will leap on it as locusts leap.
+- `JER.14:6` — **0.533908**
+  - RO: „Măgarii sălbatici stau pe locuri înalte și pleșuve, trăgând aer ca niște șerpi; li se topesc ochii, pentru că nu este iarbă.”
+  - EN: The wild donkeys stand on the bare heights. They pant for air like jackals. Their eyes fail, because there is no vegetation.
+- `PRO.22:29` — **0.533915**
+  - RO: Dacă vezi un om iscusit în lucrul lui, acela poate sta lângă împărați, nu lângă oamenii de rând.
+  - EN: Do you see a man skilled in his work? He will serve kings. He won’t serve obscure men.
+- `ZEC.11:14` — **0.533947**
+  - RO: Apoi mi-am rupt al doilea toiag „Legământ”
+  - EN: Then I cut apart my other staff, Union, that I might break the brotherhood between Judah and Israel.
+- `JOB.20:20` — **0.534136**
+  - RO: Lăcomia lui n-a cunoscut margini; dar nu va scăpa ce are mai scump.
+  - EN: “Because he knew no quietness within him, he will not save anything of that in which he delights.
+- `PSA.87:5` — **0.534187**
+  - RO: Iar despre Sion este zis: „Toți s-au născut în el”
+  - EN: Yes, of Zion it will be said, “This one and that one was born in her;” the Most High himself will establish her.
+- `PSA.107:3` — **0.534242**
+  - RO: și pe care i-a strâns din toate țările: de la răsărit și de la apus, de la miazănoapte și de la mare.
+  - EN: and gathered out of the lands, from the east and from the west, from the north and from the south.
+- `EZR.6:11` — **0.534347**
+  - RO: Și iată porunca pe care o dau cu privire la oricine va călca porunca aceasta: să se scoată din casa lui o bârnă, s-o ridice ca să fie spânzurat pe ea, și casa să i se prefacă într-o grămadă de gunoi.
+  - EN: I have also made a decree that whoever alters this message, let a beam be pulled out from his house, and let him be lifted up and fastened on it; and let his house be made a dunghill for this.
+- `2KI.11:13` — **0.5344**
+  - RO: Atalia a auzit vuietul alergătorilor și poporului și a venit la popor în Casa DOMNULUI.
+  - EN: When Athaliah heard the noise of the guard and of the people, she came to the people into the LORD’s house;
+- `PSA.2:1` — **0.534413**
+  - RO: Pentru ce se întărâtă neamurile și pentru ce cugetă popoarele lucruri deșarte?
+  - EN: Why do the nations rage, and the peoples plot a vain thing?
+- `PRO.27:16` — **0.534505**
+  - RO: Cine o oprește, parcă oprește vântul și parcă ține untdelemnul în mâna dreaptă. –
+  - EN: restraining her is like restraining the wind, or like grasping oil in his right hand.
+- `JOL.2:20` — **0.534746**
+  - RO: Voi depărta de la voi pe vrăjmașul de la miazănoapte, îl voi izgoni spre un pământ fără apă și pustiu, îi voi împinge partea dinainte a oștirii lui în marea de răsărit și coada oștirii în marea de apus; iar duhoarea lui se va ridica în sus, și mirosul lui de putregai se va înălța în văzduh, căci s-a crezut grozav.
+  - EN: But I will remove the northern army far away from you, and will drive it into a barren and desolate land, its front into the eastern sea, and its back into the western sea; and its stench will come up, and its bad smell will rise.” Surely he has done great things.
+- `PSA.68:15` — **0.534951**
+  - RO: Munții lui Dumnezeu, munții Basanului, munți cu multe piscuri, munții Basanului,
+  - EN: The mountains of Bashan are majestic mountains. The mountains of Bashan are rugged.
+- `JOB.39:30` — **0.534969**
+  - RO: „Puii lui îi beau sângele; și acolo unde sunt hoituri, acolo-i și vulturul.”
+  - EN: His young ones also suck up blood. Where the slain are, there he is.”
+- `PSA.119:24` — **0.535208**
+  - RO: Învățăturile Tale sunt desfătarea mea și sfătuitorii mei.
+  - EN: Indeed your statutes are my delight, and my counselors.
+- `JOB.26:12` — **0.535374**
+  - RO: Prin puterea Lui tulbură marea, prin priceperea Lui îi sfărâmă furia.
+  - EN: He stirs up the sea with his power, and by his understanding he strikes through Rahab.
+- `JOL.2:15` — **0.535656**
+  - RO: Sunați cu trâmbița în Sion! Vestiți un post, chemați o adunare de sărbătoare!
+  - EN: Blow the trumpet in Zion! Sanctify a fast. Call a solemn assembly.
+- `PSA.119:6` — **0.535791**
+  - RO: Atunci nu voi roși de rușine la vederea tuturor poruncilor Tale!
+  - EN: Then I wouldn’t be disappointed, when I consider all of your commandments.
+- `2CH.24:4` — **0.535921**
+  - RO: După aceea, Ioas și-a pus de gând să dreagă Casa DOMNULUI.
+  - EN: After this, Joash intended to restore the LORD’s house.
+- `JOB.40:16` — **0.535933**
+  - RO: Uită-te ce tărie are în coapse și ce putere are în mușchii pântecelui său!
+  - EN: Look now, his strength is in his thighs. His force is in the muscles of his belly.
+- `PSA.92:8` — **0.536084**
+  - RO: Dar Tu, DOAMNE, ești înălțat în veci de veci!
+  - EN: But you, LORD, are on high forever more.
+- `JOB.40:24` — **0.536097**
+  - RO: „Crezi că-l poți prinde lovindu-l în față? Sau crezi că-i vei putea străpunge nasul cu ajutorul lațurilor?”
+  - EN: Shall any take him when he is on the watch, or pierce through his nose with a snare?
+- `JER.34:11` — **0.536139**
+  - RO: Dar mai pe urmă s-au răzgândit, au luat înapoi pe robii și roabele pe care-i sloboziseră și i-au silit să le fie iarăși robi și roabe.
+  - EN: but afterwards they turned, and caused the servants and the handmaids whom they had let go free to return, and brought them into subjection for servants and for handmaids.
+- `ISA.6:12` — **0.536533**
+  - RO: până va îndepărta DOMNUL pe oameni, și țara va ajunge un mare pustiu.
+  - EN: and the LORD has removed men far away, and the forsaken places are many within the land.
+- `PSA.119:14` — **0.536635**
+  - RO: Când urmez învățăturile Tale, mă bucur de parc-aș avea toate comorile.
+  - EN: I have rejoiced in the way of your testimonies, as much as in all riches.
+- `JER.25:37` — **0.536985**
+  - RO: și colibele cele liniștite sunt nimicite de mânia aprinsă a DOMNULUI.
+  - EN: The peaceful folds are brought to silence because of the fierce anger of the LORD.
+- `HAG.1:5` — **0.537127**
+  - RO: Așa vorbește acum DOMNUL oștirilor: „Uitați-vă cu băgare de seamă la căile voastre!”
+  - EN: Now therefore this is what the LORD of Armies says: ‘Consider your ways.
+- `HOS.6:11` — **0.537172**
+  - RO: Și ție, Iudo, îți este pregătit un seceriș, când voi aduce înapoi pe robii de război ai poporului Meu!
+  - EN: “Also, Judah, there is a harvest appointed for you, when I restore the fortunes of my people.
+- `HOS.5:2` — **0.537259**
+  - RO: Necredincioșii se afundă în nelegiuire, dar voi avea Eu pedepse pentru toți!
+  - EN: The rebels are deep in slaughter, but I discipline all of them.
+- `JOB.11:12` — **0.537409**
+  - RO: Omul dimpotrivă, are minte de nebun și s-a născut ca mânzul unui măgar sălbatic!
+  - EN: An empty-headed man becomes wise when a man is born as a wild donkey’s colt.
+- `PRO.20:23` — **0.537512**
+  - RO: DOMNUL urăște două feluri de greutăți, și cântarul mincinos nu este un lucru bun. –
+  - EN: The LORD detests differing weights, and dishonest scales are not pleasing.
+- `ISA.9:13` — **0.537528**
+  - RO: Căci nici poporul nu se întoarce la Cel ce-l lovește și nu caută pe DOMNUL oștirilor.
+  - EN: Yet the people have not turned to him who struck them, neither have they sought the LORD of Armies.
+- `PRO.23:14` — **0.53772**
+  - RO: Lovindu-l cu nuiaua, îi scoți sufletul din Locuința morților.
+  - EN: Punish him with the rod, and save his soul from Sheol.
+- `PRO.10:25` — **0.537759**
+  - RO: Cum trece vârtejul, așa piere cel rău; dar cel neprihănit are temelii veșnice. –
+  - EN: When the whirlwind passes, the wicked is no more; but the righteous stand firm forever.
+- `RUT.1:9` — **0.537781**
+  - RO: „Să vă dea DOMNUL să găsiți odihnă fiecare în casa unui bărbat!”
+  - EN: May the LORD grant you that you may find rest, each of you in the house of her husband.” Then she kissed them, and they lifted up their voices, and wept.
+- `JER.46:21` — **0.537821**
+  - RO: Simbriașii lui de asemenea sunt ca niște viței îngrășați în mijlocul lui. Dar și ei dau dosul, fug toți fără să poată ține piept. Căci vine peste ei ziua nenorocirii lor, ziua pedepsirii lor!
+  - EN: Also her hired men in the middle of her are like calves of the stall, for they also are turned back. They have fled away together. They didn’t stand, for the day of their calamity has come on them, the time of their visitation.
+- `2KI.25:14` — **0.538374**
+  - RO: Au luat cenușarele, lopețile, mucările, ceștile și toate uneltele de aramă cu care se făcea slujba.
+  - EN: They took away the pots, the shovels, the snuffers, the spoons, and all the vessels of bronze with which they ministered.
+- `NAM.3:19` — **0.538411**
+  - RO: „Rana ta nu se alină prin nimic, rana ta este fără leac! Toți cei ce vor auzi de tine vor bate din palme, căci cine este acela pe care să nu-l fi atins răutatea ta?”
+  - EN: There is no healing your wound, for your injury is fatal. All who hear the report of you clap their hands over you, for who hasn’t felt your endless cruelty?
+- `1CH.6:59` — **0.538469**
+  - RO: Așan cu locurile lui de pășunat, Bet-Șemeș cu locurile lui de pășunat;
+  - EN: Ashan with its pasture lands, and Beth Shemesh with its pasture lands;
+- `EZK.3:12` — **0.538507**
+  - RO: Și Duhul m-a răpit și am auzit înapoia mea dârdâitul unui mare cutremur de pământ: slava DOMNULUI s-a ridicat din locul ei.
+  - EN: Then the Spirit lifted me up, and I heard behind me the voice of a great rushing, saying, “Blessed be the LORD’s glory from his place.”
+- `PSA.61:4` — **0.538511**
+  - RO: Aș vrea să locuiesc pe vecie în cortul Tău, să alerg la adăpostul aripilor Tale. – (Oprire)
+  - EN: I will dwell in your tent forever. I will take refuge in the shelter of your wings. Selah.
+- `EZR.10:19` — **0.53862**
+  - RO: dând mâna să-și izgonească nevestele și să aducă un berbec ca jertfă pentru vină;
+  - EN: They gave their hand that they would put away their wives; and being guilty, they offered a ram of the flock for their guilt.
+- `1CH.26:14` — **0.538649**
+  - RO: Sorțul a căzut pe Șelemia pentru partea de răsărit. Au tras la sorți pentru fiul său Zaharia, care era un sfetnic înțelept, și i-a căzut la sorți partea de miazănoapte.
+  - EN: The lot eastward fell to Shelemiah. Then for Zechariah his son, a wise counselor, they cast lots; and his lot came out northward.
+- `JOB.31:40` — **0.538818**
+  - RO: „atunci să crească spini din el în loc de grâu, și neghină în loc de orz!”
+  - EN: let briers grow instead of wheat, and stinkweed instead of barley.” The words of Job are ended.
+- `HOS.2:22` — **0.538943**
+  - RO: pământul va asculta grâul, mustul și untdelemnul, și acestea vor asculta pe Izreel.
+  - EN: and the earth will respond to the grain, and the new wine, and the oil; and they will respond to Jezreel.
+- `EZK.21:23` — **0.53909**
+  - RO: „Copiii lui Israel nu văd în aceasta decât niște vrăjitorii deșarte, ei care au făcut jurăminte mincinoase. Dar împăratul Babilonului își aduce aminte de nelegiuirea lor, așa că vor fi prinși.”
+  - EN: It will be to them as a false divination in their sight, who have sworn oaths to them; but he brings iniquity to memory, that they may be taken.
+- `2KI.3:18` — **0.539385**
+  - RO: Dar aceasta este puțin lucru înaintea DOMNULUI. El va da pe Moab în mâinile voastre;
+  - EN: This is an easy thing in the LORD’s sight. He will also deliver the Moabites into your hand.
+- `PRO.30:27` — **0.539419**
+  - RO: lăcustele n-au împărat, și totuși pornesc toate în cete;
+  - EN: The locusts have no king, yet they advance in ranks.
+- `NEH.12:25` — **0.539547**
+  - RO: Matania, Bacbuchia, Obadia, Meșulam, Talmon și Acub, ușieri, făceau de strajă la cămările de la porți.
+  - EN: Mattaniah, Bakbukiah, Obadiah, Meshullam, Talmon, and Akkub were gatekeepers keeping the watch at the storehouses of the gates.
+- `JOB.33:20` — **0.539604**
+  - RO: Atunci îi este greață de pâine, chiar și de bucatele cele mai alese.
+  - EN: so that his life abhors bread, and his soul dainty food.
+- `2SA.15:17` — **0.539667**
+  - RO: Împăratul a ieșit astfel, și tot poporul îl urma. Și s-au oprit la cea din urmă casă.
+  - EN: The king went out, and all the people after him; and they stayed in Beth Merhak.
+- `PSA.119:138` — **0.539673**
+  - RO: Tu Îți întemeiezi învățăturile pe dreptate și pe cea mai mare credincioșie.
+  - EN: You have commanded your statutes in righteousness. They are fully trustworthy.
+- `MIC.7:13` — **0.539735**
+  - RO: Dar mai întâi țara va fi pustiită din pricina locuitorilor ei, în urma faptelor lor rele.
+  - EN: Yet the land will be desolate because of those who dwell therein, for the fruit of their doings.
+- `PRO.11:25` — **0.53988**
+  - RO: Sufletul binefăcător va fi săturat, și cel ce udă pe alții va fi udat și el. –
+  - EN: The liberal soul shall be made fat. He who waters shall be watered also himself.
+- `JER.10:2` — **0.5399**
+  - RO: Așa vorbește DOMNUL: „Nu vă luați după felul de viețuire al neamurilor și nu vă temeți de semnele cerului, pentru că neamurile se tem de ele.”
+  - EN: The LORD says, “Don’t learn the way of the nations, and don’t be dismayed at the signs of the sky; for the nations are dismayed at them.
+- `AMO.5:12` — **0.539903**
+  - RO: „Căci Eu știu că nelegiuirile voastre sunt multe și că păcatele voastre sunt fără număr: asupriți pe cel drept, luați mită și călcați în picioare la poarta cetății dreptul săracilor.”
+  - EN: For I know how many are your offenses, and how great are your sins— you who afflict the just, who take a bribe, and who turn away the needy in the courts.
+- `ECC.5:5` — **0.540066**
+  - RO: Mai bine să nu faci nicio juruință decât să faci o juruință, și să n-o împlinești.
+  - EN: It is better that you should not vow, than that you should vow and not pay.
+- `HAB.2:5` — **0.540079**
+  - RO: Ca și cel beat și semeț, cel mândru nu stă liniștit; ci își lărgește gura ca Locuința morților, este nesățios ca moartea, așa că pe toate neamurile vrea să le strângă la el și toate popoarele le trage la el.
+  - EN: Yes, moreover, wine is treacherous: an arrogant man who doesn’t stay at home, who enlarges his desire as Sheol; he is like death and can’t be satisfied, but gathers to himself all nations and heaps to himself all peoples.
+- `EZK.40:39` — **0.540099**
+  - RO: În tinda porții erau de fiecare parte două mese pe care trebuia înjunghiată arderea de tot, jertfa de ispășire și jertfa pentru vină.
+  - EN: In the porch of the gate were two tables on this side and two tables on that side, on which to kill the burnt offering, the sin offering, and the trespass offering.
+- `JOB.11:3` — **0.540195**
+  - RO: Vor face vorbele tale deșarte pe oameni să tacă? Și-ți vei bate joc de alții, fără să te facă cineva de rușine?
+  - EN: Should your boastings make men hold their peace? When you mock, will no man make you ashamed?
+- `PSA.12:2` — **0.540273**
+  - RO: Oamenii își spun minciuni unii altora, pe buze au lucruri lingușitoare, vorbesc cu inimă prefăcută.
+  - EN: Everyone lies to his neighbor. They speak with flattering lips, and with a double heart.
+- `2SA.21:18` — **0.540274**
+  - RO: După aceea, a mai fost o bătălie la Gob cu filistenii. Atunci Sibecai, hușatitul, a omorât pe Saf, care era unul din copiii lui Rafa.
+  - EN: After this, there was again war with the Philistines at Gob. Then Sibbecai the Hushathite killed Saph, who was of the sons of the giant.
+- `EZK.44:24` — **0.540493**
+  - RO: Vor judeca în neînțelegeri și vor hotărî după legile Mele. Vor păzi de asemenea legile și poruncile Mele, la toate sărbătorile Mele, și vor sfinți Sabatele Mele.
+  - EN: “‘“In a controversy they shall stand to judge. They shall judge it according to my ordinances. They shall keep my laws and my statutes in all my appointed feasts. They shall make my Sabbaths holy.
+- `ISA.47:5` — **0.540702**
+  - RO: Șezi într-un colț și taci, fata haldeilor! Căci nu te vor mai numi împărăteasa împărățiilor.
+  - EN: “Sit in silence, and go into darkness, daughter of the Chaldeans. For you shall no longer be called the mistress of kingdoms.
+- `PRO.6:7` — **0.540985**
+  - RO: Ea n-are nici căpetenie, nici priveghetor, nici stăpân;
+  - EN: which having no chief, overseer, or ruler,
+- `NAM.2:4` — **0.541001**
+  - RO: Duruiesc carele pe ulițe, se năpustesc unele peste altele în piețe; parcă sunt niște făclii la vedere și aleargă ca fulgerele…
+  - EN: The chariots rage in the streets. They rush back and forth in the wide ways. Their appearance is like torches. They run like the lightnings.

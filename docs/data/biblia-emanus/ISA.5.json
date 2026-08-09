@@ -62,7 +62,7 @@
     },
     {
       "number": 8,
-      "text": "Vai de cei ce înșiră casă lângă casă și lipesc ogor lângă ogor până nu mai rămâne loc, și locuiesc în mijlocul țării!"
+      "text": "Vai de cei ce înșiră casă lângă casă și lipesc ogor lângă ogor până nu mai rămâne loc și ajungeți să locuiți singuri în mijlocul țării!"
     },
     {
       "number": 9,
@@ -82,7 +82,7 @@
     },
     {
       "number": 13,
-      "text": "De aceea, poporul meu va fi dus pe neașteptate în robie; boierimea lui va muri de foame, și gloata lui se va usca de sete."
+      "text": "De aceea poporul Meu va merge în robie din lipsă de cunoștință; boierimea lui va muri de foame, și gloata lui se va usca de sete."
     },
     {
       "number": 14,
@@ -90,7 +90,7 @@
     },
     {
       "number": 15,
-      "text": "Și astfel, cei mici vor fi doborâți, cei mari vor fi smeriți, și privirile trufașe vor fi plecate."
+      "text": "Omul va fi plecat, omenirea va fi smerită, iar ochii celor trufași vor fi smeriți."
     },
     {
       "number": 16,
@@ -146,14 +146,24 @@
     },
     {
       "number": 29,
-      "text": "Răcnesc ca niște lei, mugesc ca niște pui de lei; sforăie și apucă prada, o iau cu ei, și nimeni nu vine în ajutor."
+      "text": "Răcnetul lor va fi ca al leoaicei. Vor răcni ca niște pui de leu; vor răcni și vor apuca prada, o vor lua și nimeni nu o va scăpa."
     },
     {
       "number": 30,
       "text": "În ziua aceea, va fi asupra lui Iuda un muget ca mugetul unei furtuni pe mare; uitându-se la pământ, nu vor vedea decât întuneric și strâmtorare, iar lumina se va întuneca în norii lui."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 15,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Omul va fi plecat, omenirea va fi smerită, iar ochii celor trufași vor fi smeriți.",
+      "reason": "Perechea ebraică este omul/omenirea, nu o clasificare socială în cei mici și cei mari.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -192,7 +202,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
@@ -233,7 +243,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -242,6 +252,15 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:9bf1b3a039e7b8a5e1d1c469f15bbff5b155913e1a9cabb97411ede02770b0d7"
+    "textDigest": "sha256:3d52163674930b922a3fa95d5a076c6797ce968f8c2f1fd313eac0a077530bb0",
+    "repairHistory": [
+      {
+        "id": "ot-semantic-review-2026-08-08",
+        "scope": "corecție semantică confirmată în WLC/WEBU",
+        "verseNumbers": [
+          29
+        ]
+      }
+    ]
   }
 }

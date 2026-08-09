@@ -46,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "„Cine este prost, să vină încoace!”"
+      "text": "„Cine este prost, să vină încoace!” Celor lipsiți de pricepere le zice:"
     },
     {
       "number": 5,
@@ -82,7 +82,7 @@
     },
     {
       "number": 13,
-      "text": "Nebunia este o femeie gălăgioasă, proastă și care nu știe nimic."
+      "text": "Femeia nebună este gălăgioasă, neînfrânată și nu știe nimic."
     },
     {
       "number": 14,
@@ -94,7 +94,7 @@
     },
     {
       "number": 16,
-      "text": "„Cine este prost, să vină aici!”"
+      "text": "„Cine este prost, să vină aici!” Iar celui fără minte îi zice:"
     },
     {
       "number": 17,
@@ -144,7 +144,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -185,7 +185,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -194,6 +194,22 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:c065eb847d163641e3a32705cf751650038d98bb411e7e01a21b2bc86659b6d5"
+    "textDigest": "sha256:2111c3f6dc96c3ac753fa5f42accf6d655f32658ed06e669a4dc12fce0f41581",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          4
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          16
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      }
+    ]
   }
 }

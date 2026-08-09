@@ -62,7 +62,7 @@
     },
     {
       "number": 8,
-      "text": "Ei ziceau în inima lor: „Să-i prăpădim pe toți!”"
+      "text": "Ei ziceau în inima lor: „Să-i prăpădim pe toți!” Au ars toate locașurile sfinte din țară."
     },
     {
       "number": 9,
@@ -78,7 +78,7 @@
     },
     {
       "number": 12,
-      "text": "Totuși, Dumnezeu este Împăratul meu, care din vremuri străvechi dă izbăviri în mijlocul acestei țări."
+      "text": "Totuși, Dumnezeu este Împăratul meu din vremuri străvechi, Cel ce lucrează izbăviri pe tot pământul."
     },
     {
       "number": 13,
@@ -86,11 +86,11 @@
     },
     {
       "number": 14,
-      "text": "ai zdrobit capul leviatanului, l-ai dat să-l mănânce fiarele din pustiu."
+      "text": "ai zdrobit capetele leviatanului, l-ai dat ca hrană poporului, fiarelor pustiului."
     },
     {
       "number": 15,
-      "text": "Ai făcut să țâșnească izvoare în pâraie, ai uscat râuri care nu seacă."
+      "text": "Ai făcut să țâșnească izvoare și pâraie; ai uscat râuri puternice."
     },
     {
       "number": 16,
@@ -110,7 +110,7 @@
     },
     {
       "number": 20,
-      "text": "Ai în vedere legământul! Căci locurile dosnice din țară sunt pline de bârloguri de tâlhari."
+      "text": "Privește la legământ! Căci locurile întunecate ale țării sunt pline de lăcașuri ale violenței."
     },
     {
       "number": 21,
@@ -125,7 +125,17 @@
       "text": "Nu uita strigătele potrivnicilor Tăi, zarva care crește necurmat a celor ce se ridică împotriva Ta!"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 20,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Privește la legământ! Căci locurile întunecate ale țării sunt pline de lăcașuri ale violenței.",
+      "reason": "Textul vorbește despre locuri întunecate și lăcașuri ale violenței, nu despre bârloguri de tâlhari.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -164,7 +174,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 23,
       "reviewed": 23,
@@ -205,7 +215,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -214,7 +224,23 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:d653da2c66305ac41eb5245b8fbacb9c5011bcee808da82fa01a73664e00c2c4"
+    "textDigest": "sha256:f785f56fa5973dea42ed09bb1ef2dae7aaf832e1b970620a24a7f6611c6b3de5",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          8
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-direct-wlc-webu-audit-2026-08-08",
+        "scope": "corecții confirmate direct în WLC/OSHB și WEBU fixate",
+        "verseNumbers": [
+          12
+        ]
+      }
+    ]
   },
   "superscription": "(O cântare a lui Asaf.)"
 }

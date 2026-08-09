@@ -34,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Unde s-a dus iubitul tău, cea mai frumoasă dintre femei? Încotro a apucat iubitul tău, ca să-l căutăm și noi împreună cu tine? –"
+      "text": "Unde s-a dus iubitul tău, cea mai frumoasă dintre femei? Încotro a apucat iubitul tău, ca să-l căutăm și noi împreună cu tine?"
     },
     {
       "number": 2,
@@ -42,7 +42,7 @@
     },
     {
       "number": 3,
-      "text": "Eu sunt a iubitului meu, și iubitul meu este al meu; el își paște turma între crini. –"
+      "text": "Eu sunt a iubitului meu, și iubitul meu este al meu; el își paște turma între crini."
     },
     {
       "number": 4,
@@ -50,7 +50,7 @@
     },
     {
       "number": 5,
-      "text": "Întoarce-ți ochii de la mine, căci mă tulbură. Perii tăi sunt ca o turmă de capre care poposesc pe coama Galaadului."
+      "text": "Întoarce-ți ochii de la mine, căci mă tulbură. Părul tău este ca o turmă de capre care coboară din Galaad."
     },
     {
       "number": 6,
@@ -58,7 +58,7 @@
     },
     {
       "number": 7,
-      "text": "Obrazul tău este ca o jumătate de rodie, sub marama ta…"
+      "text": "Tâmplele tale sunt ca o felie de rodie, sub marama ta."
     },
     {
       "number": 8,
@@ -66,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "dar numai una singură este porumbița mea, neprihănita mea; ea este singură la mama sa, cea mai aleasă a celei ce a născut-o. Fetele o văd și o numesc fericită; împărătesele și țiitoarele de asemenea o laudă. –"
+      "text": "dar numai una singură este porumbița mea, neprihănita mea; ea este singură la mama sa, cea mai aleasă a celei ce a născut-o. Fetele o văd și o numesc fericită; împărătesele și țiitoarele de asemenea o laudă."
     },
     {
       "number": 10,
@@ -78,14 +78,24 @@
     },
     {
       "number": 12,
-      "text": "Dar fără să bag de seamă, dorința mea m-a dus la carele poporului unui om ales. –"
+      "text": "Fără să-mi dau seama, sufletul meu m-a pus în carele poporului nobil."
     },
     {
       "number": 13,
-      "text": "Întoarce-te, întoarce-te, Sulamito! Întoarce-te, întoarce-te, ca să te privim. – Ce aveți voi să vă uitați la Sulamita ca la niște fete ce joacă în cor?"
+      "text": "Întoarce-te, întoarce-te, Sulamito! Întoarce-te, întoarce-te, ca să te privim! Ce priviți la Sulamita ca la dansul Mahanaimului?"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 7,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Tâmplele tale sunt ca o felie de rodie, sub marama ta.",
+      "reason": "Imaginea privește tâmplele, nu obrazul în general.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -124,7 +134,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -165,7 +175,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -174,6 +184,22 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:b20946b5547bb6ff53cf4d012bc2d890c686854f8c23ef0a8fb552788ea259d9"
+    "textDigest": "sha256:205c83937e793791217067390671cd85c95829b62fd7c9c1205f2a5d371ad788",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          5
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          13
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      }
+    ]
   }
 }
