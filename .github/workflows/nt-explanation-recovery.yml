@@ -85,6 +85,7 @@ jobs:
           node scripts/refine-nt-audited-recovered.mjs
           node scripts/check-nt-refined-recovered.mjs
           node scripts/fix-nt-lexicon-known-errors.mjs
+          node scripts/fix-nt-romanian-unambiguous.mjs
           node scripts/audit-nt-subtle-editorial.mjs
 
       - name: Combine and verify final 27-book source-first corpus
