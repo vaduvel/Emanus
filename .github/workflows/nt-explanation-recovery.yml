@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: nt-explanation-recovery-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   recover:
     if: >-
@@ -59,8 +63,9 @@ jobs:
           node scripts/materialize-nt-explanations-from-legacy.mjs --legacy-root ../nt-legacy
           node scripts/check-nt-explanation-recovery.mjs
           # Recovery refreshes the legacy provenance directory. Restore the
-          # source-first registry owned by this clean branch before rebuilding.
+          # two source-first registries owned by this clean branch.
           git checkout HEAD -- docs/data/biblia-explicata/nt-source-registry/source-first-12.json
+          git checkout HEAD -- docs/data/biblia-explicata/nt-source-registry/source-first-15.json
 
       - name: Rebuild quarantined books source-first
         run: |
@@ -68,10 +73,12 @@ jobs:
           node scripts/materialize-nt-source-first.mjs
           node scripts/check-nt-source-first.mjs
 
-      - name: Inventory recovered-book audit candidates
+      - name: Audit and clean recovered source-first books
         run: |
           set -euo pipefail
           node scripts/audit-nt-recovered-source-first.mjs
+          node scripts/materialize-nt-audited-recovered.mjs
+          node scripts/check-nt-audited-recovered.mjs
           git diff --check
 
       - name: Commit deterministic NT editorial snapshots
@@ -84,5 +91,6 @@ jobs:
             echo "NT snapshots already current."
             exit 0
           fi
-          git commit -m "Materialize source-first NT explanation snapshots"
+          git commit -m "Materialize audited NT explanation snapshots"
+          git pull --rebase origin agent/biblia-explicata-nt-integration-clean
           git push origin HEAD:agent/biblia-explicata-nt-integration-clean
