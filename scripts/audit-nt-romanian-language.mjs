@@ -8,7 +8,7 @@ const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-
 const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-language-audit.json")
 
 const REQUIRED_DIACRITICS = new Map([
-  ["cuvant", "cuvânt"], ["cuvantul", "cuvântul"], ["tatal", "tatăl"], ["tata", "tată"],
+  ["cuvant", "cuvânt"], ["cuvantul", "cuvântul"], ["tatal", "tatăl"],
   ["intai", "întâi"], ["intaia", "întâia"], ["invatator", "învățător"], ["invatatura", "învățătură"],
   ["imparatie", "împărăție"], ["imparatia", "împărăția"], ["credinta", "credință"], ["pacat", "păcat"],
   ["pacate", "păcate"], ["mantuire", "mântuire"], ["mantuit", "mântuit"], ["inceput", "început"],
@@ -18,7 +18,7 @@ const REQUIRED_DIACRITICS = new Map([
   ["inainte", "înainte"], ["inapoi", "înapoi"], ["intelege", "înțelege"], ["intelegere", "înțelegere"],
   ["marturisire", "mărturisire"], ["marturie", "mărturie"], ["marturia", "mărturia"],
   ["Botezatorul", "Botezătorul"], ["botezatorul", "botezătorul"], ["fagaduise", "făgăduise"],
-  ["fagaduit", "făgăduit"], ["fagaduinta", "făgăduință"], ["slava", "slavă"], ["curata", "curată"],
+  ["fagaduit", "făgăduit"], ["fagaduinta", "făgăduință"], ["curata", "curată"],
 ])
 const TYPO_PATTERNS = [
   [/\bmangaie-re\b/giu, "mângâiere"],
@@ -58,7 +58,7 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
 const report = {
   schema: "emanus-nt-romanian-language-audit-v1",
   status: findings.length ? "manual-edit-required" : "clean",
-  policy: "Reader-facing Romanian must use standard diacritics and contain no known corruption tokens. This gate is intentionally narrower than a full stylistic review.",
+  policy: "Reader-facing Romanian must use standard diacritics and contain no known corruption tokens. Only unambiguous missing-diacritic forms are flagged automatically; ambiguous Romanian morphology is left for manual review.",
   count: findings.reduce((sum, finding) => sum + finding.occurrences, 0),
   findingGroups: findings.length,
   findings,
