@@ -6,6 +6,7 @@ import crypto from "node:crypto"
 import { NT_SOURCE_FIRST_BLUEPRINTS } from "./nt-source-first-blueprints.mjs"
 import { NT_SOURCE_FIRST_PASSAGE_OVERRIDES } from "./nt-source-first-passage-overrides.mjs"
 import { NT_SOURCE_FIRST_WAVE_A_OVERRIDES } from "./nt-source-first-wave-a-overrides.mjs"
+import { NT_SOURCE_FIRST_WAVE_B_OVERRIDES } from "./nt-source-first-wave-b-overrides.mjs"
 
 const ROOT = process.cwd()
 const recoveredDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-recovered")
@@ -67,7 +68,7 @@ for (const [id, blueprint] of Object.entries(NT_SOURCE_FIRST_BLUEPRINTS)) {
   for (const sourceId of blueprint.sources) if (!sourceIds.has(sourceId)) fail(`${id}: source ID necunoscut ${sourceId}`)
   if (!Array.isArray(blueprint.chapters) || blueprint.chapters.length !== recovered.chapters.length) fail(`${id}: blueprint chapters ${blueprint.chapters?.length ?? 0}/${recovered.chapters.length}`)
 
-  const override = NT_SOURCE_FIRST_WAVE_A_OVERRIDES[id] ?? NT_SOURCE_FIRST_PASSAGE_OVERRIDES[id]
+  const override = NT_SOURCE_FIRST_WAVE_B_OVERRIDES[id] ?? NT_SOURCE_FIRST_WAVE_A_OVERRIDES[id] ?? NT_SOURCE_FIRST_PASSAGE_OVERRIDES[id]
   const chapters = blueprint.chapters.map((chapterBlueprint, index) => {
     const recoveredChapter = recovered.chapters[index]
     const number = index + 1
