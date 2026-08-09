@@ -1,0 +1,67 @@
+name: NT Explanation Recovery
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout clean integration branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.7.0
+          run_install: false
+
+      - name: Fetch immutable legacy explanation source
+        run: |
+          set -euo pipefail
+          git fetch origin agent/complete-new-testament:refs/remotes/origin/agent/complete-new-testament
+          rm -rf ../nt-legacy
+          git worktree add --detach ../nt-legacy refs/remotes/origin/agent/complete-new-testament
+
+      - name: Compile legacy shared catalog only
+        working-directory: ../nt-legacy
+        run: |
+          set -euo pipefail
+          pnpm install --frozen-lockfile
+          pnpm --filter @emanus/shared build
+
+      - name: Materialize explanation-only NT recovery
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-explanations-from-legacy.mjs --legacy-root ../nt-legacy
+          node scripts/check-nt-explanation-recovery.mjs
+          git diff --check
+
+      - name: Commit deterministic recovery snapshot
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata docs/biblia-explicata
+          if git diff --cached --quiet; then
+            echo "Recovery snapshot already current."
+            exit 0
+          fi
+          git commit -m "Materialize clean NT explanation recovery"
+          git push origin HEAD:agent/biblia-explicata-nt-integration-clean
