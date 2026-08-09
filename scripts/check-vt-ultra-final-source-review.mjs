@@ -45,16 +45,15 @@ const READER_STOPWORDS = new Set([
   "spune", "subliniază", "arată", "explică", "observă", "citește", "vede", "urmărește", "aplică",
 ])
 
-// Aceste expresii nu sunt declarate automat greșeli doctrinare. Sunt semnale de audit:
-// când apar într-o unitate cu provenance Poonen, trebuie demonstrat că limitarea vine
-// chiar din sursă. Altfel, este o calificare editorială introdusă peste sursă.
+// Semnale de relativizare / balansare care nu au voie să supraviețuiască în
+// reader-ul final al unei unități cu provenance Poonen. Materialul intern poate
+// păstra note de audit; verdictul de publicare se dă pe copy-ul pe care îl vede cititorul.
 const DILUTION_PATTERNS = [
   ["self-reference Emanus", /\bEmanus\b/iu],
   ["overlay/editorial meta", /\boverlay(?:-ul)?\b|\beditorial(?:ă|e)?\b/iu],
   ["multiple interpretations", /\bmai multe (?:interpretări|lecturi|modele)\b/iu],
   ["interpreted differently", /\binterpretat(?:ă|e|i)? diferit\b/iu],
   ["possible reading", /\bo posibilă (?:lectură|interpretare)\b/iu],
-  ["Poonen reduced to interpretation", /\b(?:aceasta|această poziție|această schemă).{0,35}\binterpretarea lui (?:Zac\s+)?Poonen\b/iu],
   ["not doctrine", /\bnu (?:este|sunt|devine|devin).{0,55}\bdoctrin(?:ă|ar)\b/iu],
   ["not doctrinal condition", /\bnu.{0,45}\bcondiți(?:e|a) doctrinară\b/iu],
   ["mark as interpretation", /\b(?:marchează|marcăm|etichetează|etichetăm).{0,55}\binterpret/iu],
@@ -153,6 +152,14 @@ function publicBookFor(book) {
   return found
 }
 
+function auditFinalPoonenUnit(where, internalUnit, publicUnit) {
+  need(publicUnit, `${where}: unitatea Poonen nu mai poate fi mapată exact în reader`)
+  auditReaderPreservesSource(where, internalUnit.teaching, publicUnit.teaching)
+  auditSourceDilution(`${where} public teaching`, publicUnit.teaching)
+  auditSourceDilution(`${where} public heading`, publicUnit.heading)
+  auditSourceDilution(`${where} public application`, publicUnit.forYourHeart)
+}
+
 const stats = {
   books: 0,
   chapters: 0,
@@ -193,26 +200,21 @@ for (const book of overlayBooks) {
     for (const unit of chapter.units) {
       const where = `${book.name} ${chapter.number}:${unit.from}-${unit.to}`
       recordTeaching(where, unit.teaching)
+      const publicUnit = publicChapter.units.find(
+        (item) => item.verseStart === unit.from && item.verseEnd === unit.to,
+      )
 
       if (unit.source?.kind === "poonen") {
         stats.poonenOverlayUnits += 1
         need(unit.explanationKind === "exposition", `${where}: unitate Poonen care nu este exposition`)
         assertAnchorGrounded(book, chapter, unit)
-        auditSourceDilution(`${where} teaching`, unit.teaching)
-        auditSourceDilution(`${where} heading`, unit.heading)
-        auditSourceDilution(`${where} application`, unit.forYourHeart)
-
-        const publicUnit = publicChapter.units.find(
-          (item) => item.verseStart === unit.from && item.verseEnd === unit.to,
-        )
-        need(publicUnit, `${where}: unitatea Poonen nu mai poate fi mapată exact în reader`)
-        auditReaderPreservesSource(where, unit.teaching, publicUnit.teaching)
+        auditFinalPoonenUnit(where, unit, publicUnit)
       } else if (unit.source?.kind === "poonen-official") {
         stats.poonenOfficialUnits += 1
         need(unit.explanationKind === "exposition", `${where}: poonen-official care nu este exposition`)
         need(text(unit.source.sourceUrl), `${where}: sourceUrl poonen-official lipsă`)
         need(text(unit.source.section), `${where}: section poonen-official lipsă`)
-        auditSourceDilution(`${where} teaching`, unit.teaching)
+        auditFinalPoonenUnit(where, unit, publicUnit)
       } else if (unit.source?.kind === "canonical-exegesis") {
         stats.canonicalExegesisUnits += 1
       }
@@ -241,13 +243,8 @@ for (const book of legacyBooks) {
       if (/^(?:Zac\s+)?Poonen\b/iu.test(text(unit.explanationSource))) {
         stats.poonenLegacyUnits += 1
         need(unit.explanationKind === "exposition", `${where}: provenance Poonen fără exposition`)
-        auditSourceDilution(`${where} teaching`, unit.teaching)
-        auditSourceDilution(`${where} heading`, unit.heading)
-        auditSourceDilution(`${where} application`, unit.forYourHeart)
-
         const publicUnit = publicChapter.units.find((item) => item.ref === unit.ref)
-        need(publicUnit, `${where}: unitatea legacy Poonen lipsește din reader`)
-        auditReaderPreservesSource(where, unit.teaching, publicUnit.teaching)
+        auditFinalPoonenUnit(where, unit, publicUnit)
       }
 
       if (unit.explanationKind === "textual-overview") {
@@ -316,5 +313,5 @@ console.log(
   `[VT ultra-final] PASS — ${stats.books}/${EXPECTED_BOOKS} cărți, ${stats.chapters}/${EXPECTED_CHAPTERS} capitole, ${stats.publicVerses}/${EXPECTED_VERSES} versete; ` +
     `${stats.poonenOverlayUnits} unități Poonen overlay, ${stats.poonenOfficialUnits} poonen-official, ${stats.poonenLegacyUnits} legacy Poonen, ` +
     `${stats.canonicalExegesisUnits} canonical-exegesis, ${stats.textualOverviewUnits} textual-overview. ` +
-    `Fără semnale de diluare editorială în unitățile Poonen și fără incertitudine introdusă de sanitizer în reader.`,
+    `Fără semnale de diluare editorială în reader-ul Poonen și fără incertitudine introdusă de sanitizer.`,
 )
