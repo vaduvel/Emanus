@@ -43,7 +43,7 @@ function assertOverlayChapter(book, chapterNumber, expected) {
 
 const overlayTargets = [
   // Judecători / Estera
-  [JUDECATORI_FULL, 4, ["Dumnezeu a rânduit bărbații", "a ridicat o femeie: Debora"]],
+  [JUDECATORI_FULL, 4, ["Dumnezeu a rânduit bărbații", "Dumnezeu poate ridica o Debora"]],
   [ESTERA_FULL, 1, ["Numele lui Dumnezeu nu apare", "nu Se identifică public"]],
   [ESTERA_FULL, 2, ["împărat păgân", "compromis"]],
   [ESTERA_FULL, 8, ["Dumnezeu nu îi abandonase", "îi protejează"]],
