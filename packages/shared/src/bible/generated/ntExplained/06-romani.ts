@@ -218,7 +218,7 @@ export const NT_BOOK_06: BibleBook = {
       "number": 6,
       "title": "Romani 6 — Morți față de păcat, vii pentru Dumnezeu",
       "summary": "Unirea cu Hristos în moarte și înviere rupe dreptul păcatului de a domni. Credinciosul este chemat să se socotească mort față de păcat, să-și ofere mădularele lui Dumnezeu și să trăiască drept rob al dreptății.",
-      "literaryContext": "Pavel răspunde obiecției că harul ar încuraja păcatul. El mută discuția de la simplă iertare la identitatea și viața nouă a celui unit cu Hristos.",
+      "literaryContext": "Pavel răspunde obiecției că harul ar încuraja păcatul. El mută discuția de la simpla iertare la identitatea și viața nouă a celui unit cu Hristos.",
       "historicalContext": "Botezul era mărturisirea publică a rupturii cu viața veche și a unirii cu comunitatea lui Hristos. Imaginea robiei era imediat inteligibilă într-o societate în care sclavia era vizibilă.",
       "units": [
         {
@@ -368,7 +368,7 @@ export const NT_BOOK_06: BibleBook = {
         {
           "id": "romani-9-6-13",
           "ref": "Romani 9:6-13",
-          "heading": "Copiii promisiunii, nu simplă descendență",
+          "heading": "Copiii promisiunii, nu simpla descendență",
           "text": "Dar nu este ca și cum Cuvântul lui Dumnezeu a ajuns la nimic, căci ei nu sunt tot Israelul care este al lui Israel. și nici nu sunt toți copii pentru că sunt sămânța lui Avraam, ci: „În Isaac îți va fi numită sămânța.” Adică nu copiii cărnii sunt copii ai lui Dumnezeu, ci copiii promisiunii sunt socotiți ca sămânță. Căci cuvântul promisiunii este acesta: „Pe vremea aceasta voi veni și Sara va avea un fiu.” Și nu numai atât, ci și Rebeca, după ce a rămas însărcinată de la unul singur, Isaac, tatăl nostru. Căci nu s-a născut încă, nici n-a făcut ceva bun, nici rău, pentruca scopul lui Dumnezeu, potrivit cu alegerea, să nu fie al lucrărilor, ci al celui ce cheamă, nu din fapte, ci din Cel care cheamă, i s-a spus: „Cel mai mare îi va sluji celui mai mic”; după cum este scris: „Pe Iacov l-am iubit, iar pe Esau l-am urât.”",
           "teaching": "Cuvântul lui Dumnezeu nu a căzut. Nu toți cei descendenți fizic din Israel aparțîn realității spirituale a lui Israel, iar istoria lui Isaac și Iacov arată că planul lui Dumnezeu nu este controlat de drepturile naturale ale omului.\n\nAlegerea anterioară faptelor închide orice laudă. Ea nu spune că Dumnezeu aprobă caracterul rău sau că omul nu are responsabilitate, ci că inițiativa mântuirii și chemării Îi aparține lui Dumnezeu."
         },
