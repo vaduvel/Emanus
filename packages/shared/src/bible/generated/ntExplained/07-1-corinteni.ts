@@ -286,8 +286,7 @@ export const NT_BOOK_07: BibleBook = {
             "Matei 5:38-42",
             "Romani 12:17-21",
             "Fapte 25:10-12"
-          ],
-          "forYourHeart": "Renunță la răzbunare, dar caută protecție și dreptate responsabilă când cineva este în pericol."
+          ]
         },
         {
           "id": "1-corinteni-6-9-11",
@@ -350,8 +349,7 @@ export const NT_BOOK_07: BibleBook = {
             "Maleahi 2:15-16",
             "Romani 12:18",
             "Psalmul 82:3-4"
-          ],
-          "forYourHeart": "Urmărește pacea fără a ascunde pericolul; cere ajutor când legământul este folosit pentru control sau violență."
+          ]
         },
         {
           "id": "1-corinteni-7-17-24",
@@ -454,8 +452,7 @@ export const NT_BOOK_07: BibleBook = {
             "Fapte 20:33-35",
             "1 Timotei 6:5-10",
             "2 Corinteni 8:20-21"
-          ],
-          "forYourHeart": "Slujește fără să folosești nevoia oamenilor pentru câștig, presiune financiară sau prestigiu."
+          ]
         },
         {
           "id": "1-corinteni-9-19-23",
@@ -592,7 +589,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 11:23-34",
           "heading": "Vestiți moartea Domnului și cercetați-vă",
           "text": "Căci eu am primit de la Domnul ce v-am și predat: că Domnul Isus, în noaptea în care era predat, a luat pâine, Când el a dat mulțumiri, el a rupt-o și a spus, Ia, mânca. Acesta este corpul meu, care este rupt pentru tine. Fă acest lucru în memoria mea. Tot astfel a luat și paharul, după cină, zicând: „Acest pahar este noul legământ în sângele Meu. Faceți aceasta, ori de câte ori îl beți, spre amintirea Mea.” Căci ori de câte ori mâncați pâinea aceasta și beți paharul, vestiți moartea Domnului până vine El. Astfel, oricine mănâncă pâinea sau bea paharul Domnului în chip nevrednic va fi vinovat față de trupul și sângele Domnului. Dar fiecare om să se cerceteze pe sine, și așa să mănânce din pâine și să bea din pahar. Căci cel care mănâncă și bea într-un mod nevrednic mănâncă și bea judecata pentru el însuși dacă nu discerne trupul Domnului. Din această pricină sunt între voi mulți slabi și bolnavi, și destui au adormit. Dacă ne-am judeca pe noi înșine, n-am fi judecați. Dar, fiind judecați de Domnul, suntem disciplinați, ca să nu fim condamnați împreună cu lumea. Așadar, frații mei, când vă adunați ca să mâncați, așteptați-vă unii pe alții. Dacă îi este foame cuiva, să mănânce acasă, ca să nu vă adunați spre judecată. Celelalte lucruri le voi rândui când voi veni.",
-          "teaching": "Pâinea și paharul ne întorc la trupul dat și sângele vărsat al lui Isus. Cina nu este o recompensă pentru cei perfecți, ci o proclamare a harului primită cu pocăință, discernământ și împăcare.\n\nA ne cerceta nu înseamnă introspecție fără sfârșit sau frică superstițioasă, ci să judecăm egoismul, disprețul și păcatul pe care Duhul îl arată. Afirmațiile despre boală nu justifică oprirea tratamentului medical și nici declararea suferinței cuiva drept pedeapsă divină.",
+          "teaching": "Pâinea și paharul ne întorc la trupul dat și sângele vărsat al lui Isus. Cina nu este o recompensă pentru cei perfecți, ci o proclamare a harului primită cu pocăință, discernământ și împăcare.\n\nA ne cerceta nu înseamnă introspecție fără sfârșit sau frică superstițioasă, ci să judecăm egoismul, disprețul și păcatul pe care Duhul îl arată.",
           "crossRefs": [
             "Luca 22:19-20",
             "2 Corinteni 13:5",
@@ -683,13 +680,12 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 13:4-7",
           "heading": "Dragostea nu caută folosul său",
           "text": "Dragostea îndelung rabdă, dragostea este bună; dragostea nu pizmuiește, nu se laudă, nu se umflă de mândrie, nu se poartă necuviincios, nu-și caută ale ei, nu se aprinde de mânie, nu ține seama de rău, nu se bucură de nedreptate, ci se bucură de adevăr; acoperă totul, crede totul, speră totul și îndură totul.",
-          "teaching": "Dragostea este răbdătoare, bună, fără invidie, laudă și aroganță. Ea nu ține registrul răului pentru a hrăni resentimentul și nu se bucură când adversarul cade.\n\nDragostea se bucură de adevăr, protejează persoana vulnerabilă și poate stabili limite, cere răspundere și implica autoritățile.",
+          "teaching": "Dragostea este răbdătoare, bună, fără invidie, laudă și aroganță. Ea nu ține registrul răului pentru a hrăni resentimentul și nu se bucură când adversarul cade.",
           "crossRefs": [
             "Romani 12:9-21",
             "Efeseni 4:31-32",
             "Psalmul 82:3-4"
-          ],
-          "forYourHeart": "Alege astăzi o expresie concretă a răbdării sau bunătății, păstrând limite sănătoase față de rău."
+          ]
         },
         {
           "id": "1-corinteni-13-8-13",
@@ -766,8 +762,7 @@ export const NT_BOOK_07: BibleBook = {
             "1 Corinteni 11:5",
             "Fapte 2:17-18",
             "Galateni 3:28"
-          ],
-          "forYourHeart": "Folosește ordinea pentru a crea un spațiu sigur în care adevărul poate fi auzit, nu pentru a proteja puterea cuiva."
+          ]
         }
       ],
       "prayer": "Doamne, dă-ne dragoste și daruri care zidesc. Păstrează-ne adunările vii, clare și ordonate, cu spațiu pentru fiecare glas pe care Tu îl folosești. Amin.",
@@ -891,7 +886,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 16:5-12",
           "heading": "O ușă mare și mulți potrivnici",
           "text": "Voi veni la voi când voi trece prin Macedonia, căci prin Macedonia trec. La voi poate voi rămâne sau chiar voi ierna, ca voi să mă însoțiți mai departe oriunde mă voi duce. Căci nu vreau să vă văd acum doar în trecere; sper să rămân o vreme la voi, dacă Domnul îngăduie. Dar voi rămâne în Efes până la Cincizecime, fiindcă mi s-a deschis o ușă mare și lucrătoare, și sunt mulți potrivnici. Dacă vine Timotei, să vedeți că este cu voi fără teamă, căci El face lucrarea Domnului, cum fac și eu. Așadar, nimeni să nu-l disprețuiască. Însoțiți-l în pace, ca să vină la mine, fiindcă îl aștept cu frații. Cât despre fratele Apolos, l-am rugat mult să vină la voi cu frații, dar nicidecum n-a fost voia lui să vină acum; va veni însă când va avea prilej.",
-          "teaching": "Pavel își face planuri, dar le ține sub voia Domnului. O ușă deschisă nu înseamnă absența împotrivirii; uneori oportunitatea și adversarii apar împreună.\n\nTimotei trebuia primit fără intimidare, iar Apolo nu putea fi comandat de Pavel. Colaborarea apostolică respectă chemarea, timpul și conștiința celuilalt, în loc să funcționeze prin control.",
+          "teaching": "Pavel își face planuri, dar le ține sub voia Domnului. O ușă deschisă nu înseamnă absența împotrivirii; uneori oportunitatea și adversarii apar împreună.\n\nTimotei trebuia primit fără intimidare, iar Apolo nu putea fi comandat de Pavel.",
           "crossRefs": [
             "Fapte 14:27",
             "Coloseni 4:3-4",

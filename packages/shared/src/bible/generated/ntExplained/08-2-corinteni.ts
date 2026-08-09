@@ -409,7 +409,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 8:10-15",
           "heading": "Bunăvoință, nu constrângere",
           "text": "Vă dau un sfat în acest sens: este bine pentru voi care ați fost primii care ați început acum un an, nu numai să faceți, ci și să fiți dispuși. Acum, dar, duceți și la capăt lucrarea, pentru ca, după cum a fost gata voința, tot așa să fie și împlinirea din ceea ce aveți. Căci dacă disponibilitatea este acolo, este acceptabilă în funcție de ceea ce aveți, nu în funcție de ceea ce nu aveți. Căci aceasta nu este pentru ca alții să fie ușurați și voi mâhniți, dar pentru egalitate: abundența voastră, în acest moment, le dă lipsă, pentru ca abundența lor să devină și ea o sursă pentru lipsa voastră, ca să existe egalitate. După cum este scris, cel care a adunat mult a rămas nimic peste, și cel care a adunat puțin nu a avut nici o lipsă.",
-          "teaching": "Pavel cere ducerea la capăt a hotărârii după posibilități. Dumnezeu primește disponibilitatea în raport cu ceea ce are omul, nu cu ceea ce nu are.\n\nScopul este o echitate a purtării poverilor, nu sărăcirea unei persoane pentru confortul alteia. Niciun lider nu poate folosi aceste versete pentru presiune, datorii, manipulare financiară sau promisiuni de câștig garantat.",
+          "teaching": "Pavel cere ducerea la capăt a hotărârii după posibilități. Dumnezeu primește disponibilitatea în raport cu ceea ce are omul, nu cu ceea ce nu are.\n\nScopul este o echitate a purtării poverilor, nu sărăcirea unei persoane pentru confortul alteia.",
           "crossRefs": [
             "Exodul 16:18",
             "Fapte 4:34-35",
@@ -578,7 +578,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 11:16-21",
           "heading": "",
           "text": "Iarăși spun: nimeni să nu mă creadă nebun; dar, dacă totuși, primiți-mă măcar ca pe un nebun, ca să mă laud și eu puțin. Ceea ce spun, nu spun după Domnul, ci ca în nebunie, în această încredere a laudei. De vreme ce mulți se laudă după carne, mă voi lăuda și eu. Căci voi suportați cu bucurie pe cei fără minte, fiind voi înșivă înțelepți. Fiindcă suportați dacă cineva vă înrobește, dacă cineva vă devorează, dacă cineva vă exploatează, dacă cineva se înalță, dacă cineva vă lovește peste față. Spre rușinea mea o spun: ca și cum noi am fi fost slabi. Dar, în orice îndrăznește cineva — vorbesc în nebunie — îndrăznesc și eu.",
-          "teaching": "Corintenii tolerau oameni care îi robeau, îi exploatau, îi prindeau și îi umileau.\n\nO victimă poate cere ajutor, poate stabili limite și poate apela la autorități fără să-L trădeze pe Hristos.",
+          "teaching": "Corintenii tolerau oameni care îi robeau, îi exploatau, îi prindeau și îi umileau.",
           "crossRefs": [
             "Marcu 10:42-45",
             "Fapte 16:37-39",
@@ -616,7 +616,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 12:1-10",
           "heading": "Puterea lui Hristos în slăbiciune",
           "text": "Trebuie să mă laud. De folos nu este, ce-i drept, dar voi veni la vedenii și descoperiri ale Domnului. Cunosc un om în Hristos care, acum paisprezece ani — fie în trup, nu știu; fie în afara trupului, nu știu; Dumnezeu știe — a fost răpit până la al treilea cer. Și știu despre un astfel de om — fie în trup, fie în afara trupului, nu știu; Dumnezeu știe — că a fost răpit în Paradis și a auzit cuvinte de nespus, pe care nu-i este îngăduit omului să le rostească. Cu privire la unul ca acesta mă voi lăuda, dar cu privire la mine însumi nu mă voi lăuda decât cu slăbiciunile mele. Căci, dacă aș vrea să mă laud, n-aș fi fără minte, pentru că aș spune adevărul. Dar mă abțin, ca nu cumva cineva să creadă despre mine mai mult decât vede în mine sau aude de la mine. Și din cauza măreției covârșitoare a descoperirilor. De aceea, ca să nu mă înalț prea mult, mi-a fost dat un țepuș în carne, un mesager al Satanei, ca să mă lovească cu pumnii, ca să nu mă înalț prea mult. Cu privire la acesta, de trei ori L-am rugat pe Domnul să se depărteze de la mine. Și El mi-a spus: „Harul Meu îți este de ajuns, pentru că puterea se desăvârșește în slăbiciune.” Așadar, cu cea mai mare bucurie mă voi lăuda mai degrabă cu slăbiciunile mele, ca puterea lui Hristos să se așeze peste mine. De aceea îmi găsesc plăcerea în slăbiciuni, în insulte, în nevoi, în persecuții și în strâmtorări pentru Hristos; căci atunci când sunt slab, atunci sunt tare.",
-          "teaching": "Pavel vorbește la persoana a treia și refuză să-și clădească autoritatea pe experiența paradisului. Revelația reală nu îl face să se considere deasupra altora.\n\nȚepușul îl păstrează smerit, iar răspunsul lui Dumnezeu este har suficient și putere desăvârșită în slăbiciune. Textul nu justifică oprirea tratamentului medical, refuzul ajutorului competent sau afirmația că orice boală are aceeași cauză spirituală.",
+          "teaching": "Pavel vorbește la persoana a treia și refuză să-și clădească autoritatea pe experiența paradisului. Revelația reală nu îl face să se considere deasupra altora.\n\nȚepușul îl păstrează smerit, iar răspunsul lui Dumnezeu este har suficient și putere desăvârșită în slăbiciune.",
           "crossRefs": [
             "Deuteronom 29:29",
             "Galateni 4:13-14",
@@ -668,7 +668,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 13:1-4",
           "heading": "Hristos nu este slab față de voi",
           "text": "Aceasta este a treia oară când vin la voi. „Prin gura a doi martori și a trei va fi întărit orice cuvânt.” Am spus mai înainte și spun iarăși dinainte, ca atunci când eram de față a doua oară și acum, fiind absent, celor care au păcătuit mai înainte și tuturor celorlalți, că, dacă voi veni din nou, nu voi cruța, de vreme ce căutați o dovadă a lui Hristos care vorbește în mine, El care față de voi nu este slab, ci este puternic în voi. Căci, într-adevăr, a fost răstignit din slăbiciune, dar trăiește prin puterea lui Dumnezeu. Căci și noi suntem slabi în El, dar vom trăi împreună cu El prin puterea lui Dumnezeu față de voi.",
-          "teaching": "Pavel respectă principiul martorilor și refuză judecata bazată pe zvon. Autoritatea lui va confrunta păcatul dacă este necesar, dar modelul ei rămâne Hristos răstignit în slăbiciune și viu prin puterea lui Dumnezeu.\n\nDisciplina sănătoasă cere fapte verificate, posibilitatea unui răspuns și proporționalitate. Ea nu autorizează anchete secrete, umilire publică sau protejarea liderilor de aceeași răspundere.",
+          "teaching": "Pavel respectă principiul martorilor și refuză judecata bazată pe zvon. Autoritatea lui va confrunta păcatul dacă este necesar, dar modelul ei rămâne Hristos răstignit în slăbiciune și viu prin puterea lui Dumnezeu.\n\nDisciplina sănătoasă cere fapte verificate, posibilitatea unui răspuns și proporționalitate.",
           "crossRefs": [
             "Deuteronom 19:15",
             "Matei 18:15-17",

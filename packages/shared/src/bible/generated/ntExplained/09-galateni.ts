@@ -268,7 +268,7 @@ export const NT_BOOK_09: BibleBook = {
           "ref": "Galateni 5:7-15",
           "heading": "Libertatea slujește prin dragoste",
           "text": "Alergați bine; cine v-a tăiat calea, ca să nu ascultați de adevăr? Convingerea aceasta nu vine de la cel care vă cheamă. Puțin aluat dospește toată frământătura. Eu am încredere în voi, în Domnul, că nu veți gândi altfel; dar cel care vă tulbură își va purta judecata, oricine ar fi el. Iar eu, fraților, dacă încă vestesc circumcizia, de ce mai sunt persecutat? Atunci a fost înlăturată piatra de poticnire a crucii. Măcar de s-ar și mutila cei care vă răscolesc! Căci voi ați fost chemați la libertate, fraților; numai nu faceți din libertate un prilej pentru carne, ci prin dragoste fiți robi unii altora. Căci toată Legea este împlinită într-un singur cuvânt, în acesta: „Să-l iubești pe aproapele tău ca pe tine însuți.” Dar, dacă vă mușcați și vă mâncați unii pe alții, vedeți să nu fiți nimiciți unii de alții.",
-          "teaching": "Puțin aluat poate influența toată plămădeala; o eroare despre temelie afectează întreaga viață. Pavel vorbește ferm despre învățătorii care tulbură, dar nu îi autorizează pe credincioși la violență, ură sau răzbunare.\n\nLibertatea nu este ocazie pentru fire, ci puterea de a sluji prin dragoste. Când oamenii se mușcă și se devorează prin bârfă, critică și resentiment, arată că au părăsit lucrarea harului.",
+          "teaching": "Puțin aluat poate influența toată plămădeala; o eroare despre temelie afectează întreaga viață.\n\nLibertatea nu este ocazie pentru fire, ci puterea de a sluji prin dragoste. Când oamenii se mușcă și se devorează prin bârfă, critică și resentiment, arată că au părăsit lucrarea harului.",
           "crossRefs": [
             "Marcu 10:43-45",
             "Romani 13:8-10",
@@ -333,7 +333,7 @@ export const NT_BOOK_09: BibleBook = {
           "ref": "Galateni 6:6-10",
           "heading": "Ce seamănă omul, aceea va secera",
           "text": "Iar cel care primește învățătură în cuvânt să împartă toate cele bune cu cel care-l învață. Nu vă amăgiți: Dumnezeu nu este batjocorit; căci ce seamănă omul, aceea va și secera. Pentru că cine seamănă în carnea lui, din carne va secera stricăciune; dar cine seamănă în Duhul, din Duhul va secera viață veșnică. Iar făcând binele, să nu obosim, căci la vremea potrivită vom secera, dacă nu slăbim. Așadar, cât avem vreme, să facem binele față de toți, dar mai ales față de cei din casa credinței.",
-          "teaching": "Cei hrăniți spiritual sunt chemați să împartă bunurile cu cei care îi învață, dar această poruncă nu autorizează presiune financiară, promisiuni de câștig sau manipularea donatorilor. Dărnicia rămâne liberă, responsabilă și transparentă.\n\nFiecare gând, cuvânt, faptă și ambiție seamănă fie în fire, fie în Duhul. Recolta poate întârzia, de aceea Pavel ne îndeamnă să nu obosim în facerea binelui, mai ales față de familia credinței.",
+          "teaching": "Dărnicia rămâne liberă, responsabilă și transparentă.\n\nFiecare gând, cuvânt, faptă și ambiție seamănă fie în fire, fie în Duhul. Recolta poate întârzia, de aceea Pavel ne îndeamnă să nu obosim în facerea binelui, mai ales față de familia credinței.",
           "crossRefs": [
             "2 Corinteni 9:6-8",
             "1 Timotei 5:17-18",

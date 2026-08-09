@@ -241,7 +241,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:18-19",
           "heading": "Soția și soțul sub autoritatea Domnului",
           "text": "Soțiilor, fiți supuse soților voștri, așa cum se cuvine în Domnul. Bărbaților, iubiți-vă soțiile și nu fiți aspri cu ele.",
-          "teaching": "Supunerea soției este limitată de expresia «cum se cuvine în Domnul» și nu transformă soțul într-un stăpân al conștiinței. Soțul este chemat să iubească și să nu fie aspru, urmând grija lui Hristos pentru Trup, nu modelele de dominație ale culturii.\n\nO victimă poate căuta siguranță, ajutor pastoral sănătos, servicii specializate și autorități. Adevărata ordine a familiei se recunoaște prin dragoste jertfitoare, libertate morală și protecție.",
+          "teaching": "Supunerea soției este limitată de expresia «cum se cuvine în Domnul» și nu transformă soțul într-un stăpân al conștiinței. Soțul este chemat să iubească și să nu fie aspru, urmând grija lui Hristos pentru Trup, nu modelele de dominație ale culturii.\n\nAdevărata ordine a familiei se recunoaște prin dragoste jertfitoare, libertate morală și protecție.",
           "crossRefs": [
             "Efeseni 5:21-33",
             "1 Petru 3:7",
@@ -254,7 +254,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:20-21",
           "heading": "Copii ascultători și părinți care nu zdrobesc curajul",
           "text": "Copii, ascultați de părinții voștri în toate, căci aceasta este plăcută în Domnul. Taților, nu vă întărâtați copiii, ca să nu se descurajeze.",
-          "teaching": "Ascultarea copiilor este plăcută Domnului, iar Isus Însuși a trăit în supunere în familie. Totuși, ascultarea nu se extinde la porunci păcătoase, sexuale, violente sau nesigure. Un copil trebuie învățat că poate spune nu, poate cere ajutor și poate vorbi despre orice atingere, amenințare sau secret care îl sperie.\n\nPărinții, în special tații menționați de Pavel, nu trebuie să provoace, să umilească sau să descurajeze copiii. Disciplina sănătoasă este clară și consecventă, dar niciodată crudă.",
+          "teaching": "Ascultarea copiilor este plăcută Domnului, iar Isus Însuși a trăit în supunere în familie. Totuși, ascultarea nu se extinde la porunci păcătoase, sexuale, violente sau nesigure.\n\nPărinții, în special tații menționați de Pavel, nu trebuie să provoace, să umilească sau să descurajeze copiii. Disciplina sănătoasă este clară și consecventă, dar niciodată crudă.",
           "crossRefs": [
             "Luca 2:51-52",
             "Efeseni 6:1-4",
@@ -272,8 +272,7 @@ export const NT_BOOK_12: BibleBook = {
             "1 Corinteni 7:21-23",
             "Iacov 5:1-6",
             "Filimon 15-16"
-          ],
-          "forYourHeart": "Lucrează cu integritate, dar nu numi exploatarea «supunere»; documentează nedreptatea și caută ajutorul potrivit când drepturile sau siguranța sunt încălcate."
+          ]
         }
       ],
       "prayer": "Doamne Isuse, orientează-mi mintea spre împărăția Ta și fă vizibilă viața Ta în dorințele, cuvintele și relațiile mele. Îmbracă-mă în adevăr, compasiune, dragoste și mulțumire. Amin.",
@@ -293,7 +292,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 4:1-1",
           "heading": "Autoritatea pământească răspunde Stăpânului din cer",
           "text": "Stăpânilor, dați robilor ceea ce este drept și echitabil, știind că și voi aveți un Stăpân în cer.",
-          "teaching": "Celor care aveau putere asupra sclavilor li se cere dreptate și echitate, deoarece și ei au un Stăpân în cer. Explicația aplică principiul relațiilor de muncă: credința unui angajator se vede în felul în care plătește, ascultă, corectează și poartă greșelile celor aflați sub autoritatea lui.\n\nTraficul, munca forțată, confiscarea documentelor, amenințările și exploatarea sunt rele și trebuie oprite. Autoritatea creștină respectă legea, drepturile, demnitatea și siguranța lucrătorului, știind că Dumnezeu judecă fără favoritism.",
+          "teaching": "Celor care aveau putere asupra sclavilor li se cere dreptate și echitate, deoarece și ei au un Stăpân în cer. Explicația aplică principiul relațiilor de muncă: credința unui angajator se vede în felul în care plătește, ascultă, corectează și poartă greșelile celor aflați sub autoritatea lui.\n\nTraficul, munca forțată, confiscarea documentelor, amenințările și exploatarea sunt rele și trebuie oprite.",
           "crossRefs": [
             "Deuteronomul 24:14-15",
             "Efeseni 6:9",
