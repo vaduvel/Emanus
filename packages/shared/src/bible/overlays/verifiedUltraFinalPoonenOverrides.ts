@@ -66,6 +66,18 @@ function overrideUnit(
     }
   }
 
+  // Daniel 10: păstrăm observația Poonen despre forma diferită de post,
+  // dar eliminăm disclaimerul editorial adăugat ulterior despre un «post Daniel» universal.
+  if (bookOrder === 27 && chapterNumber === 10 && unit.from === 1 && unit.to === 9) {
+    return {
+      ...unit,
+      teaching: unit.teaching.replace(
+        /\s*Nu rezultă de aici o formulă obligatorie de «post Daniel» cu listă universală de alimente\./u,
+        "",
+      ),
+    }
+  }
+
   // Zaharia 14: lectura escatologică a lui Poonen este afirmată direct, nu relativizată.
   // Materialele oficiale CFC o leagă de atacul final asupra Ierusalimului, Antihrist,
   // întoarcerea lui Iisus pe Muntele Măslinilor și instaurarea împărăției Sale pe pământ.
