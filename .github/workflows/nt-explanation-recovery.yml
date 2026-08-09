@@ -76,7 +76,7 @@ jobs:
           node scripts/materialize-nt-source-first.mjs
           node scripts/check-nt-source-first.mjs
 
-      - name: Audit, clean and refine recovered source-first books
+      - name: Audit, clean, refine and resolve recovered source-first books
         run: |
           set -euo pipefail
           node scripts/audit-nt-recovered-source-first.mjs
@@ -87,6 +87,7 @@ jobs:
           node scripts/fix-nt-lexicon-known-errors.mjs
           node scripts/fix-nt-romanian-unambiguous.mjs
           node scripts/audit-nt-subtle-editorial.mjs
+          node scripts/resolve-nt-subtle-editorial.mjs
 
       - name: Combine and verify final 27-book source-first corpus
         run: |
