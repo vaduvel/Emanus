@@ -2,9 +2,9 @@
   "schema": "emanus-nt-embedded-quote-audit-v1",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
-  "quotedFragments": 152,
+  "quotedFragments": 153,
   "exactMatches": 27,
-  "count": 125,
+  "count": 126,
   "findings": [
     {
       "bookId": "matei",
@@ -1127,6 +1127,15 @@
       "field": "units[3].teaching",
       "quote": "Primește-l ca pe mine însumi",
       "wordCount": 6
+    },
+    {
+      "bookId": "1-ioan",
+      "canonicalBookId": "1JN",
+      "book": "1 Ioan",
+      "chapter": 1,
+      "field": "units[1].teaching",
+      "quote": "dacă zicem că nu avem păcat, ne înșelăm",
+      "wordCount": 8
     },
     {
       "bookId": "apocalipsa",

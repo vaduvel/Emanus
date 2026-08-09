@@ -21,7 +21,7 @@ export const NT_BOOK_09: BibleBook = {
           "ref": "Galateni 1:1-5",
           "heading": "Trimis de Dumnezeu, pentru slava Lui",
           "text": "Pavel, apostol nu de la oameni, nici prin om, ci prin Isus Hristos și Dumnezeu Tatăl, care l-a înviat dintre cei morți, și toți frații care sunt cu mine, către bisericile Galatiei: har vouă și pace de la Dumnezeu Tatăl și Domnul nostru Isus Hristos, care s-a dat pe sine pentru păcatele noastre, ca să ne smulgă din veacul rău de acum, după voia Dumnezeului și Tatălui nostru, a căruia este slava în vecii vecilor. Amin.",
-          "teaching": "Pavel nu folosește titlul de apostol ca să obțină prestigiu, ci pentru ca bisericile să recunoască autoritatea mesajului primit de la Hristos. Chemarea spirituală nu este produsă de o funcție, un comitet sau o etichetă religioasă.\n\nMoartea și învierea lui Isus trebuie ținute împreună. Hristos S-a dat pentru păcatele noastre nu doar ca să ne ierte, ci ca să ne scoată din sistemul acestui veac rău și să ne aducă sub voia Tatălui.",
+          "teaching": "Pavel nu folosește titlul de apostol ca să obțînă prestigiu, ci pentru ca bisericile să recunoască autoritatea mesajului primit de la Hristos. Chemarea spirituală nu este produsă de o funcție, un comitet sau o etichetă religioasă.\n\nMoartea și învierea lui Isus trebuie ținute împreună. Hristos S-a dat pentru păcatele noastre nu doar ca să ne ierte, ci ca să ne scoată din sistemul acestui veac rău și să ne aducă sub voia Tatălui.",
           "crossRefs": [
             "Faptele 9:15-16",
             "1 Corinteni 15:3-4",
@@ -268,7 +268,7 @@ export const NT_BOOK_09: BibleBook = {
           "ref": "Galateni 5:7-15",
           "heading": "Libertatea slujește prin dragoste",
           "text": "Alergați bine; cine v-a tăiat calea, ca să nu ascultați de adevăr? Convingerea aceasta nu vine de la cel care vă cheamă. Puțin aluat dospește toată frământătura. Eu am încredere în voi, în Domnul, că nu veți gândi altfel; dar cel care vă tulbură își va purta judecata, oricine ar fi el. Iar eu, fraților, dacă încă vestesc circumcizia, de ce mai sunt persecutat? Atunci a fost înlăturată piatra de poticnire a crucii. Măcar de s-ar și mutila cei care vă răscolesc! Căci voi ați fost chemați la libertate, fraților; numai nu faceți din libertate un prilej pentru carne, ci prin dragoste fiți robi unii altora. Căci toată Legea este împlinită într-un singur cuvânt, în acesta: „Să-l iubești pe aproapele tău ca pe tine însuți.” Dar, dacă vă mușcați și vă mâncați unii pe alții, vedeți să nu fiți nimiciți unii de alții.",
-          "teaching": "Puțin aluat poate influența toată plămădeala; o eroare despre temelie afectează întreaga viață.\n\nLibertatea nu este ocazie pentru fire, ci puterea de a sluji prin dragoste. Când oamenii se mușcă și se devorează prin bârfă, critică și resentiment, arată că au părăsit lucrarea harului.",
+          "teaching": "Puțîn aluat poate influența toată plămădeala; o eroare despre temelie afectează întreaga viață.\n\nLibertatea nu este ocazie pentru fire, ci puterea de a sluji prin dragoste. Când oamenii se mușcă și se devorează prin bârfă, critică și resentiment, arată că au părăsit lucrarea harului.",
           "crossRefs": [
             "Marcu 10:43-45",
             "Romani 13:8-10",

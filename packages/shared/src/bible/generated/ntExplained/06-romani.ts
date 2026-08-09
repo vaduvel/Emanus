@@ -52,7 +52,7 @@ export const NT_BOOK_06: BibleBook = {
       "id": "romani-2",
       "bookId": "romani",
       "number": 2,
-      "title": "Romani 2 — Bunătatea lui Dumnezeu te îndeamnă la pocăință",
+      "title": "Romani 2 — Bunătatea lui Dumnezeu te îndeamnă la pocăînță",
       "summary": "Pavel arată că omul religios care îi judecă pe alții este la fel de vinovat înaintea lui Dumnezeu. Judecata este nepărtinitoare, conștiința mărturisește, iar adevărata apartenență la Dumnezeu este lucrarea Duhului în inimă.",
       "literaryContext": "După descrierea păcatului evident din capitolul 1, Pavel se întoarce spre omul moral și religios. Scopul este ca orice gură să fie închisă și nimeni să nu-și construiască speranța pe comparația cu alții.",
       "historicalContext": "Iudeii aveau Legea, circumcizia și privilegiile legământului. Pavel nu disprețuiește aceste daruri, ci arată că privilegiul mărește responsabilitatea atunci când viața contrazice mărturisirea.",
@@ -62,7 +62,7 @@ export const NT_BOOK_06: BibleBook = {
           "ref": "Romani 2:1-11",
           "heading": "Judecătorul altora se condamnă singur",
           "text": "De aceea ești fără scuză, omule, oricine ai fi tu, care judeci. Căci, prin lucrul în care îl judeci pe altul, te condamni pe tine însuți, fiindcă tu, care judeci, faci aceleași lucruri. Știm însă că judecata lui Dumnezeu împotriva celor ce fac astfel de lucruri este potrivit adevărului. Dar îți închipui tu, omule, care îi judeci pe cei ce fac astfel de lucruri, deși le faci și tu, că vei scăpa de judecata lui Dumnezeu? Sau disprețuiești bogăția bunătății, îngăduinței și îndelungii Lui răbdări, fără să știi că bunătatea lui Dumnezeu te conduce la pocăință? Dar, din cauza împietririi tale și a inimii tale nepocăite, îți aduni mânie pentru ziua mâniei și a descoperirii dreptei judecăți a lui Dumnezeu, care „îi va răsplăti fiecăruia după faptele lui”: celor care, stăruind în lucrarea binelui, caută glorie, onoare și nepierire, le va da viață veșnică; dar pentru cei care urmăresc folosul propriu, nu ascultă de adevăr, ci ascultă de nedreptate, vor fi mânie și furie, necaz și strâmtorare peste orice suflet omenesc care săvârșește răul: mai întâi peste iudeu, apoi și peste grec; dar glorie, onoare și pace pentru oricine săvârșește binele: mai întâi pentru iudeu, apoi și pentru grec. Căci la Dumnezeu nu este părtinire.",
-          "teaching": "Când condamnăm păcatul altuia în timp ce păstrăm aceeași rădăcină în inimă, propria noastră judecată ne mărturisește vinovăția. Dumnezeu nu judecă după reputație, etichetă religioasă sau comparație, ci după adevăr.\n\nBunătatea, îngăduința și răbdarea lui Dumnezeu nu arată că păcatul este neimportant. Scopul bunătății este pocăința. O inimă care folosește răbdarea lui Dumnezeu drept permisiune se împietrește și își adună singură consecințe."
+          "teaching": "Când condamnăm păcatul altuia în timp ce păstrăm aceeași rădăcină în inimă, propria noastră judecată ne mărturisește vinovăția. Dumnezeu nu judecă după reputație, etichetă religioasă sau comparație, ci după adevăr.\n\nBunătatea, îngăduința și răbdarea lui Dumnezeu nu arată că păcatul este neimportant. Scopul bunătății este pocăînța. O inimă care folosește răbdarea lui Dumnezeu drept permisiune se împietrește și își adună singură consecințe."
         },
         {
           "id": "romani-2-12-16",
@@ -86,7 +86,7 @@ export const NT_BOOK_06: BibleBook = {
           "teaching": "Semnul exterior are valoare numai când corespunde unei realități interioare. Ascultarea unui om fără privilegiul religios poate demasca goliciunea celui care posedă semnul, dar nu și viața.\n\nAdevăratul iudeu este unul înăuntru, iar tăierea împrejur este a inimii, prin Duhul. Lauda lui nu vine de la oameni, ci de la Dumnezeu. Explicația accentuează eliberarea de nevoia de reputație religioasă și căutarea aprobării Tatălui."
         }
       ],
-      "prayer": "Dumnezeule, scapă-mă de duhul care îi judecă pe alții și lasă bunătatea Ta să mă conducă la pocăință. Scrie voia Ta în inima mea și fă ca mărturisirea mea să fie susținută de o viață ascultătoare. Amin.",
+      "prayer": "Dumnezeule, scapă-mă de duhul care îi judecă pe alții și lasă bunătatea Ta să mă conducă la pocăînță. Scrie voia Ta în inima mea și fă ca mărturisirea mea să fie susținută de o viață ascultătoare. Amin.",
       "status": "in_review"
     },
     {
@@ -370,7 +370,7 @@ export const NT_BOOK_06: BibleBook = {
           "ref": "Romani 9:6-13",
           "heading": "Copiii promisiunii, nu simpla descendență",
           "text": "Dar nu este ca și cum Cuvântul lui Dumnezeu a ajuns la nimic, căci ei nu sunt tot Israelul care este al lui Israel. și nici nu sunt toți copii pentru că sunt sămânța lui Avraam, ci: „În Isaac îți va fi numită sămânța.” Adică nu copiii cărnii sunt copii ai lui Dumnezeu, ci copiii promisiunii sunt socotiți ca sămânță. Căci cuvântul promisiunii este acesta: „Pe vremea aceasta voi veni și Sara va avea un fiu.” Și nu numai atât, ci și Rebeca, după ce a rămas însărcinată de la unul singur, Isaac, tatăl nostru. Căci nu s-a născut încă, nici n-a făcut ceva bun, nici rău, pentruca scopul lui Dumnezeu, potrivit cu alegerea, să nu fie al lucrărilor, ci al celui ce cheamă, nu din fapte, ci din Cel care cheamă, i s-a spus: „Cel mai mare îi va sluji celui mai mic”; după cum este scris: „Pe Iacov l-am iubit, iar pe Esau l-am urât.”",
-          "teaching": "Cuvântul lui Dumnezeu nu a căzut. Nu toți cei descendenți fizic din Israel aparțin realității spirituale a lui Israel, iar istoria lui Isaac și Iacov arată că planul lui Dumnezeu nu este controlat de drepturile naturale ale omului.\n\nAlegerea anterioară faptelor închide orice laudă. Ea nu spune că Dumnezeu aprobă caracterul rău sau că omul nu are responsabilitate, ci că inițiativa mântuirii și chemării Îi aparține lui Dumnezeu."
+          "teaching": "Cuvântul lui Dumnezeu nu a căzut. Nu toți cei descendenți fizic din Israel aparțîn realității spirituale a lui Israel, iar istoria lui Isaac și Iacov arată că planul lui Dumnezeu nu este controlat de drepturile naturale ale omului.\n\nAlegerea anterioară faptelor închide orice laudă. Ea nu spune că Dumnezeu aprobă caracterul rău sau că omul nu are responsabilitate, ci că inițiativa mântuirii și chemării Îi aparține lui Dumnezeu."
         },
         {
           "id": "romani-9-14-21",
@@ -575,7 +575,7 @@ export const NT_BOOK_06: BibleBook = {
           "ref": "Romani 14:1-4",
           "heading": "Primiți-l pe cel slab, nu pentru dispute",
           "text": "Primiți-l pe cel slab în credință, dar nu pentru a-i judeca părerile. Un om are credință să mănânce toate lucrurile, dar cel care este slab mănâncă numai legume. Cel care mănâncă să nu-l disprețuiască pe cel care nu mănâncă, iar cel care nu mănâncă să nu-l judece pe cel care mănâncă, fiindcă Dumnezeu l-a primit. Cine ești tu, care judeci un alt slujitor? El stă în picioare sau cade stăpânului său. Da, el va fi făcut să stea în picioare, pentru că Dumnezeu are puterea să-l facă să stea în picioare.",
-          "teaching": "Cel slab în credință este primit, nu adus aproape doar ca să fie câștigată o dispută. Unul mănâncă de toate, altul se abține; unul nu trebuie să disprețuiască, iar celălalt nu trebuie să judece.\n\nRobul aparține Domnului său. Hristos este în stare să-l țină în picioare. Biserica nu trebuie să uzurpe locul Stăpânului prin controlul conștiinței în chestiuni pe care Scriptura nu le face condiții ale mântuirii."
+          "teaching": "Cel slab în credință este primit, nu adus aproape doar ca să fie câștigată o dispută. Unul mănâncă de toate, altul se abține; unul nu trebuie să disprețuiască, iar celălalt nu trebuie să judece.\n\nRobul aparține Domnului său. Hristos este în stare să-l țînă în picioare. Biserica nu trebuie să uzurpe locul Stăpânului prin controlul conștiinței în chestiuni pe care Scriptura nu le face condiții ale mântuirii."
         },
         {
           "id": "romani-14-5-12",
@@ -637,7 +637,7 @@ export const NT_BOOK_06: BibleBook = {
           "ref": "Romani 15:22-29",
           "heading": "Planuri făcute sub călăuzirea lui Dumnezeu",
           "text": "De aceea am și fost împiedicat de multe ori să vin la voi. Dar acum, nu mai are nici un loc în aceste regiuni, și având în acești mulți ani o dorință de a veni la tine, când voi merge spre Spania, sper să vă văd în trecere și să fiu trimis mai departe de voi într-acolo, după ce îmi voi fi împlinit mai întâi, măcar în parte, dorul de voi. Dar acum, spun eu, mă duc la Ierusalim, slujind sfinților. Căci Macedonia și Ahaia au considerat potrivit să facă o contribuție pentru săracii dintre sfinții din Ierusalim. Da, a fost plăcerea lor cea bună, și ei sunt datornicii lor; căci dacă neamurile au fost făcute părtași la lucrurile lor spirituale, le datorează și lor să le slujească în lucruri materiale. După ce voi fi dus la capăt aceasta și le voi fi pecetluit rodul acesta, voi pleca prin locurile voastre spre Spania. Știu că, atunci când voi veni la voi, voi veni în plinătatea binecuvântării lui Hristos.",
-          "teaching": "Pavel fusese împiedicat de lucrarea sa din răsărit să vină la Roma, dar își face planuri pentru Spania. Planificarea și dependența de Dumnezeu nu sunt opuse.\n\nEl merge mai întâi cu darul pentru săracii din Ierusalim, văzând dărnicia ca o recunoaștere a datoriei spirituale a neamurilor. Misiunea și grija concretă față de cei în nevoie aparțin aceleiași Evanghelii."
+          "teaching": "Pavel fusese împiedicat de lucrarea sa din răsărit să vină la Roma, dar își face planuri pentru Spania. Planificarea și dependența de Dumnezeu nu sunt opuse.\n\nEl merge mai întâi cu darul pentru săracii din Ierusalim, văzând dărnicia ca o recunoaștere a datoriei spirituale a neamurilor. Misiunea și grija concretă față de cei în nevoie aparțîn aceleiași Evanghelii."
         },
         {
           "id": "romani-15-30-33",

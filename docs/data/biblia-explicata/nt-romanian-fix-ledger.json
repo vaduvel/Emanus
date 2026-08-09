@@ -1,12 +1,2247 @@
 {
-  "schema": "emanus-nt-romanian-fix-ledger-v1",
-  "policy": "context-free-corruptions-only",
-  "count": 3,
+  "schema": "emanus-nt-romanian-fix-ledger-v2",
+  "policy": "context-free-corruptions-and-unambiguous-diacritics-only",
+  "count": 1635,
   "fixes": [
+    {
+      "location": "matei.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.3.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.3.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "matei.3.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.3.units[0].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.3.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.3.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.3.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.4.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.4.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.4.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.5.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.5.units[7].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.5.units[7].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.6.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "matei.6.units[3].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.7.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.7.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.7.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.7.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.7.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.7.units[3].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.8.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.9.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.10.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.11.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.12.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.13.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.13.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.14.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.15.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "matei.16.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.18.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.19.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.21.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.21.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.21.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.21.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.22.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.22.units[4].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.25.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "matei.26.units[3].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "matei.26.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.1.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.1.units[1].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.1.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.2.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.3.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.3.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.4.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.4.units[5].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.4.units[5].teaching",
+      "before": "in",
+      "after": "în"
+    },
     {
       "location": "marcu.5.units[0].teaching",
       "before": "omensec",
       "after": "omenesc"
+    },
+    {
+      "location": "marcu.5.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.5.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.6.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.6.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.8.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "marcu.8.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.8.units[2].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "marcu.8.units[2].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "marcu.10.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.10.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "marcu.11.units[0].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "marcu.11.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.1.units[5].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.title",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.units[1].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.3.units[4].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.4.units[0].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "luca.4.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.5.units[3].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.5.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.6.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.7.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "luca.7.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.8.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.9.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.9.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.9.units[4].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.11.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.12.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.12.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.12.units[5].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.13.title",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.13.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.13.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.13.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.13.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.13.units[3].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.15.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.15.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.15.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.15.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.15.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.16.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.16.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.16.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.17.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.18.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.18.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "luca.19.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.19.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.19.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.20.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.22.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.22.units[5].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.23.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.23.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.23.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.24.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.24.units[2].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.24.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "luca.24.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.title",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.title",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "dintai",
+      "after": "dintâi"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "vesnic",
+      "after": "veșnic"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.1.summary",
+      "before": "urmareste",
+      "after": "urmărește"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "dintai",
+      "after": "dintâi"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "vesnicia",
+      "after": "veșnicia"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "nascut",
+      "after": "născut"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "pamantesc",
+      "after": "pământesc"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "marturisire",
+      "after": "mărturisire"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "miscari",
+      "after": "mișcări"
+    },
+    {
+      "location": "ioan.1.literaryContext",
+      "before": "nouasprezece",
+      "after": "nouăsprezece"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "randurile",
+      "after": "rândurile"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "preoti",
+      "after": "preoți"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "asteptau",
+      "after": "așteptau"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "asteptarea",
+      "after": "așteptarea"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "asteptarea",
+      "after": "așteptarea"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "ratiunii",
+      "after": "rațiunii"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "raspicat",
+      "after": "răspicat"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "capatul",
+      "after": "capătul"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "Cuvant",
+      "after": "Cuvânt"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "dintai",
+      "after": "dintâi"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "Invatator",
+      "after": "Învățător"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "vesnic",
+      "after": "veșnic"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.units[0].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].heading",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Fara",
+      "after": "Fără"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "invatator",
+      "after": "învățător"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Inainte",
+      "after": "Înainte"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Facatorului",
+      "after": "Făcătorului"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "randul",
+      "after": "rândul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "inalte",
+      "after": "înalte"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "incurcatura",
+      "after": "încurcătură"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "crestine",
+      "after": "creștine"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "fapturii",
+      "after": "făpturii"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "Amandoua",
+      "after": "Amândouă"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.units[0].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].words[0].meaning",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[0].words[1].meaning",
+      "before": "daruieste",
+      "after": "dăruiește"
+    },
+    {
+      "location": "ioan.1.units[0].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[0].words[2].meaning",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.1.units[1].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "sange",
+      "after": "sânge"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "pamant",
+      "after": "pământ"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "randurile",
+      "after": "rândurile"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.1.units[1].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.1.units[1].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.1.units[1].words[0].meaning",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.1.units[2].heading",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[2].heading",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "amandoua",
+      "after": "amândouă"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.1.units[2].forYourHeart",
+      "before": "amandoua",
+      "after": "amândouă"
+    },
+    {
+      "location": "ioan.1.units[2].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[2].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[2].words[1].meaning",
+      "before": "Cuvant",
+      "after": "Cuvânt"
+    },
+    {
+      "location": "ioan.1.units[2].words[2].meaning",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.1.units[2].words[2].meaning",
+      "before": "nascut",
+      "after": "născut"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.1.units[3].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[3].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[3].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[3].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.1.units[3].forYourHeart",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.1.units[3].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[3].words[0].meaning",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.1.units[3].words[2].meaning",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.1.units[3].words[2].meaning",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "pamant",
+      "after": "pământ"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "inapoi",
+      "after": "înapoi"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.1.units[4].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.1.units[4].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.1.units[4].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.1.units[4].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "dintai",
+      "after": "dintâi"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "miscari",
+      "after": "mișcări"
+    },
+    {
+      "location": "ioan.2.literaryContext",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.2.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.2.historicalContext",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.2.units[0].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "urmareste",
+      "after": "urmărește"
+    },
+    {
+      "location": "ioan.2.units[0].forYourHeart",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.2.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[0].words[2].meaning",
+      "before": "in",
+      "after": "în"
     },
     {
       "location": "ioan.2.units[1].teaching",
@@ -14,9 +2249,5934 @@
       "after": "mângâiere"
     },
     {
+      "location": "ioan.2.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "inviere",
+      "after": "înviere"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "inviere",
+      "after": "înviere"
+    },
+    {
+      "location": "ioan.2.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[1].words[1].meaning",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.2.units[2].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.2.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.2.units[2].forYourHeart",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.2.units[2].forYourHeart",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.2.units[2].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[2].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.2.units[2].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.summary",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.3.summary",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.3.literaryContext",
+      "before": "randul",
+      "after": "rândul"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "nastere",
+      "after": "naștere"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "invatator",
+      "after": "învățător"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "Invatator",
+      "after": "Învățător"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.3.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].forYourHeart",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.3.units[0].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[0].words[0].meaning",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.3.units[0].words[0].meaning",
+      "before": "nastere",
+      "after": "naștere"
+    },
+    {
+      "location": "ioan.3.units[0].words[0].meaning",
+      "before": "nastere",
+      "after": "naștere"
+    },
+    {
+      "location": "ioan.3.units[0].words[0].meaning",
+      "before": "amandoua",
+      "after": "amândouă"
+    },
+    {
+      "location": "ioan.3.units[0].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[0].words[1].meaning",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.3.units[1].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
       "location": "ioan.3.units[1].teaching",
       "before": "mangaie-re",
       "after": "mângâiere"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "Intai",
+      "after": "Întâi"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "intelege",
+      "after": "înțelege"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "randul",
+      "after": "rândul"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.3.units[1].forYourHeart",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.3.units[1].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.3.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[1].words[0].meaning",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.3.units[1].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "crestine",
+      "after": "creștine"
+    },
+    {
+      "location": "ioan.3.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.3.units[2].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.3.units[2].words[1].meaning",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.3.units[2].words[1].meaning",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.4.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.title",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.4.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.summary",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "invatator",
+      "after": "învățător"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.4.units[0].heading",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "pacat",
+      "after": "păcat"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.4.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[0].forYourHeart",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.4.units[0].forYourHeart",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.4.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].words[1].meaning",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.4.units[0].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[0].words[2].meaning",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.4.units[1].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "crestine",
+      "after": "creștine"
+    },
+    {
+      "location": "ioan.4.units[1].forYourHeart",
+      "before": "incurcatura",
+      "after": "încurcătură"
+    },
+    {
+      "location": "ioan.4.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[1].words[0].meaning",
+      "before": "Adevar",
+      "after": "Adevăr"
+    },
+    {
+      "location": "ioan.4.units[1].words[0].meaning",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.4.units[1].words[1].meaning",
+      "before": "Marturisire",
+      "after": "Mărturisire"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.4.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.4.units[2].forYourHeart",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.4.units[2].forYourHeart",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.4.units[2].forYourHeart",
+      "before": "inapoi",
+      "after": "înapoi"
+    },
+    {
+      "location": "ioan.4.units[2].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[2].words[0].meaning",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.4.units[2].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[2].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.units[2].words[1].meaning",
+      "before": "Cuvant",
+      "after": "Cuvânt"
+    },
+    {
+      "location": "ioan.5.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.title",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.5.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.summary",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.summary",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.5.summary",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "miscari",
+      "after": "mișcări"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "pacat",
+      "after": "păcat"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.5.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[0].forYourHeart",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "capatul",
+      "after": "capătul"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.5.units[1].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[1].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[1].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "stapanit",
+      "after": "stăpânit"
+    },
+    {
+      "location": "ioan.5.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].forYourHeart",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.5.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.5.units[2].forYourHeart",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.5.units[2].words[0].meaning",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.5.units[2].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.5.units[2].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.title",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.title",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.summary",
+      "before": "raman",
+      "after": "rămân"
+    },
+    {
+      "location": "ioan.6.summary",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.6.summary",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.summary",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "raman",
+      "after": "rămân"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "inapoi",
+      "after": "înapoi"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "raman",
+      "after": "rămân"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.units[0].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.6.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[0].forYourHeart",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.6.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].heading",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "raspuns",
+      "after": "răspuns"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.6.units[1].forYourHeart",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.6.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].words[0].meaning",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.units[1].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[1].words[2].meaning",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.6.units[2].heading",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "inapoi",
+      "after": "înapoi"
+    },
+    {
+      "location": "ioan.6.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[2].forYourHeart",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.6.units[2].forYourHeart",
+      "before": "intelege",
+      "after": "înțelege"
+    },
+    {
+      "location": "ioan.6.units[2].words[0].meaning",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.6.units[2].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.6.units[2].words[1].meaning",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.7.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.title",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.7.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.7.literaryContext",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.7.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.7.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.7.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.7.units[0].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[1].heading",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.7.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[1].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.7.units[1].words[1].meaning",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.7.units[1].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[1].words[2].meaning",
+      "before": "inviere",
+      "after": "înviere"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "raman",
+      "after": "rămân"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "miscari",
+      "after": "mișcări"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "randul",
+      "after": "rândul"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.7.units[2].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.summary",
+      "before": "Cuvant",
+      "after": "Cuvânt"
+    },
+    {
+      "location": "ioan.8.summary",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.8.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.literaryContext",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.8.literaryContext",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.8.literaryContext",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.8.historicalContext",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "dintai",
+      "after": "dintâi"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "pacat",
+      "after": "păcat"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.8.units[0].forYourHeart",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.8.units[0].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[0].words[1].meaning",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "pacat",
+      "after": "păcat"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.8.units[1].teaching",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.8.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].forYourHeart",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.8.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[1].words[0].meaning",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.8.units[1].words[0].meaning",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.8.units[1].words[2].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[1].words[2].meaning",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.8.units[1].words[2].meaning",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.8.units[2].heading",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.8.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.8.units[2].forYourHeart",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.8.units[2].words[1].meaning",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.9.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.title",
+      "before": "nastere",
+      "after": "naștere"
+    },
+    {
+      "location": "ioan.9.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.summary",
+      "before": "nastere",
+      "after": "naștere"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "nastere",
+      "after": "naștere"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "raman",
+      "after": "rămân"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "miscari",
+      "after": "mișcări"
+    },
+    {
+      "location": "ioan.9.literaryContext",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "nastere",
+      "after": "naștere"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.9.units[0].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "nascut",
+      "after": "născut"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "intelege",
+      "after": "înțelege"
+    },
+    {
+      "location": "ioan.9.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[0].forYourHeart",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.9.units[0].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[0].words[0].meaning",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.9.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[1].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "Marturia",
+      "after": "Mărturia"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.9.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[1].forYourHeart",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.9.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[1].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[1].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[1].words[1].meaning",
+      "before": "vietii",
+      "after": "vieții"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "inceput",
+      "after": "început"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "raspuns",
+      "after": "răspuns"
+    },
+    {
+      "location": "ioan.9.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.9.units[2].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.9.units[2].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "Isi",
+      "after": "Își"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "invatator",
+      "after": "învățător"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "Isi",
+      "after": "Își"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "isi",
+      "after": "își"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "mantuire",
+      "after": "mântuire"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.10.units[0].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.10.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[0].forYourHeart",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.10.units[0].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].words[0].meaning",
+      "before": "mantuire",
+      "after": "mântuire"
+    },
+    {
+      "location": "ioan.10.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[0].words[1].meaning",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "cuvantul",
+      "after": "cuvântul"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "intelegere",
+      "after": "înțelegere"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.10.units[1].forYourHeart",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.10.units[1].forYourHeart",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.10.units[1].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].words[2].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[1].words[2].meaning",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.10.units[2].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[2].heading",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "Il",
+      "after": "Îl"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "Isi",
+      "after": "Își"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "cuvant",
+      "after": "cuvânt"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "Botezatorul",
+      "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.10.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.10.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.10.units[2].forYourHeart",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.10.units[2].forYourHeart",
+      "before": "marturie",
+      "after": "mărturie"
+    },
+    {
+      "location": "ioan.10.units[2].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.summary",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.11.summary",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.11.summary",
+      "before": "Invierea",
+      "after": "Învierea"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "invierea",
+      "after": "învierea"
+    },
+    {
+      "location": "ioan.11.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.historicalContext",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.11.historicalContext",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "Invierea",
+      "after": "Învierea"
+    },
+    {
+      "location": "ioan.11.units[0].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[0].heading",
+      "before": "invierea",
+      "after": "învierea"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "intelege",
+      "after": "înțelege"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "Marturia",
+      "after": "Mărturia"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "urmareste",
+      "after": "urmărește"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "invierea",
+      "after": "învierea"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "invierea",
+      "after": "învierea"
+    },
+    {
+      "location": "ioan.11.units[0].words[0].meaning",
+      "before": "inviere",
+      "after": "înviere"
+    },
+    {
+      "location": "ioan.11.units[0].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.units[1].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "inainte",
+      "after": "înainte"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "ioan.11.units[1].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.11.units[1].forYourHeart",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.11.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "Fara",
+      "after": "Fără"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "adevar",
+      "after": "adevăr"
+    },
+    {
+      "location": "ioan.11.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.11.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.title",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.summary",
+      "before": "raman",
+      "after": "rămân"
+    },
+    {
+      "location": "ioan.12.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "facut",
+      "after": "făcut"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "inapoi",
+      "after": "înapoi"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.12.units[0].heading",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[0].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.12.units[0].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.12.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].words[0].meaning",
+      "before": "mantuire",
+      "after": "mântuire"
+    },
+    {
+      "location": "ioan.12.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].words[1].meaning",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "adevarat",
+      "after": "adevărat"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.12.units[1].teaching",
+      "before": "aceeasi",
+      "after": "aceeași"
+    },
+    {
+      "location": "ioan.12.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[1].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[1].forYourHeart",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.12.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[1].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "Isi",
+      "after": "Își"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "Cuvantul",
+      "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "marturia",
+      "after": "mărturia"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.12.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.12.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.12.units[2].words[0].meaning",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.12.units[2].words[1].meaning",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.13.title",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.summary",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.summary",
+      "before": "In",
+      "after": "În"
+    },
+    {
+      "location": "ioan.13.summary",
+      "before": "descopera",
+      "after": "descoperă"
+    },
+    {
+      "location": "ioan.13.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.literaryContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.literaryContext",
+      "before": "incepe",
+      "after": "începe"
+    },
+    {
+      "location": "ioan.13.literaryContext",
+      "before": "randurile",
+      "after": "rândurile"
+    },
+    {
+      "location": "ioan.13.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "aseaza",
+      "after": "așază"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "Daca",
+      "after": "Dacă"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "Tatal",
+      "after": "Tatăl"
+    },
+    {
+      "location": "ioan.13.units[0].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[0].forYourHeart",
+      "before": "intai",
+      "after": "întâi"
+    },
+    {
+      "location": "ioan.13.units[0].forYourHeart",
+      "before": "decat",
+      "after": "decât"
+    },
+    {
+      "location": "ioan.13.units[0].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[0].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "Si",
+      "after": "Și"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.13.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].forYourHeart",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.13.units[1].words[0].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[1].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[1].words[1].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[1].words[1].meaning",
+      "before": "Intuneric",
+      "after": "Întuneric"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "il",
+      "after": "îl"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "daca",
+      "after": "dacă"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.13.units[2].forYourHeart",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.13.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[2].forYourHeart",
+      "before": "fara",
+      "after": "fără"
+    },
+    {
+      "location": "ioan.13.units[2].forYourHeart",
+      "before": "ramane",
+      "after": "rămâne"
+    },
+    {
+      "location": "ioan.13.units[2].words[0].meaning",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.13.units[2].words[1].meaning",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.15.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.16.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.16.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.16.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.16.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.18.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.18.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.18.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.18.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "ioan.19.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.1.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.2.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.2.units[3].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.2.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.2.units[3].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.3.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.3.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.3.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.5.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.7.units[4].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.8.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.8.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.15.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.16.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.17.summary",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.17.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.18.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "fapte.18.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.19.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.19.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.20.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.20.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.24.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.24.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.24.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.26.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.26.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.26.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.26.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "fapte.26.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "romani.2.title",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "romani.2.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "romani.2.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "romani.9.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "romani.14.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "romani.15.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-corinteni.5.units[0].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-corinteni.5.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-corinteni.10.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-corinteni.11.units[1].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-corinteni.11.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-corinteni.12.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.2.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.2.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.2.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.title",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.literaryContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.historicalContext",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.prayer",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.units[2].heading",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.7.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.10.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.12.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "2-corinteni.13.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "galateni.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "galateni.5.units[1].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "filipeni.1.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "filipeni.2.literaryContext",
+      "before": "doua",
+      "after": "două"
+    },
+    {
+      "location": "filipeni.4.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "coloseni.3.units[2].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "coloseni.3.units[3].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-tesaloniceni.1.units[3].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-tesaloniceni.2.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "1-tesaloniceni.5.units[0].teaching",
+      "before": "in",
+      "after": "în"
+    },
+    {
+      "location": "filimon.1.units[2].forYourHeart",
+      "before": "in",
+      "after": "în"
     }
   ]
 }

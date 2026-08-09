@@ -78,7 +78,7 @@ export const NT_BOOK_08: BibleBook = {
       "number": 2,
       "title": "2 Corinteni 2 — Iertare, restaurare și mireasma lui Hristos",
       "summary": "Pavel explică durerea corectării, cere restaurarea celui pocăit și arată că slujirea Evangheliei răspândește pretutindeni mireasma cunoașterii lui Hristos.",
-      "literaryContext": "Capitolul continuă explicația schimbării planului de călătorie și arată scopul disciplinei: pocăință, vindecare și părtășie restaurată.",
+      "literaryContext": "Capitolul continuă explicația schimbării planului de călătorie și arată scopul disciplinei: pocăînță, vindecare și părtășie restaurată.",
       "historicalContext": "Un membru al comunității fusese disciplinat, iar majoritatea ascultase. Pavel se teme acum ca severitatea prelungită să nu-l zdrobească pe omul care s-a pocăit.",
       "units": [
         {
@@ -99,7 +99,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 2:5-11",
           "heading": "Să nu fie copleșit de prea multă întristare",
           "text": "Dar, dacă cineva a întristat, nu pe mine m-a întristat, ci, într-o anumită măsură, ca să nu vă împovărez pe toți, pe voi toți. Această pedeapsă care a fost provocată de cei mulți este suficientă pentru aceasta; așa încât, dimpotrivă, mai degrabă să-l iertați și să-l mângâiați, ca nu cumva unul ca acesta să fie înghițit de prea multă întristare. De aceea vă rog să întăriți față de el dragostea. Căci pentru aceasta v-am și scris: ca să cunosc dovada voastră, dacă sunteți ascultători în toate. Celui căruia îi iertați ceva, îi iert și eu; căci și eu, dacă am iertat ceva, am iertat pentru voi în fața lui Hristos, ca Satan să nu ne poată fi de folos, căci nu suntem neștiutori de planurile lui.",
-          "teaching": "După pocăință, comunitatea trebuie să ierte, să mângâie și să-și confirme dragostea. Disciplina fără cale de întoarcere devine pedeapsă omenească, nu restaurare creștină.\n\nEa refuză răzbunarea personală, în timp ce adevărul, limitele și dreptatea pot rămâne necesare.",
+          "teaching": "După pocăînță, comunitatea trebuie să ierte, să mângâie și să-și confirme dragostea. Disciplina fără cale de întoarcere devine pedeapsă omenească, nu restaurare creștină.\n\nEa refuză răzbunarea personală, în timp ce adevărul, limitele și dreptatea pot rămâne necesare.",
           "crossRefs": [
             "Luca 15:20-24",
             "Efeseni 4:31-32",
@@ -111,7 +111,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 2:12-17",
           "heading": "Mireasma cunoașterii lui Hristos",
           "text": "Când am venit la Troa pentru Evanghelia lui Hristos și mi s-a deschis o ușă în Domnul, n-am avut odihnă în duhul meu fiindcă nu l-am găsit pe Titus, fratele meu; ci, luându-mi rămas-bun de la ei, am plecat spre Macedonia. Dar mulțumiri fie aduse lui Dumnezeu, care ne poartă întotdeauna în triumf în Hristos și face cunoscută prin noi, în orice loc, mireasma cunoașterii Lui. Căci noi suntem o aromă dulce a lui Hristos pentru Dumnezeu, în cei ce sunt mîntuiți și în cei ce pier. pentru unul duhoare de la moarte la moarte, pentru celălalt o aromă dulce de la viață la viață. Cine este suficient pentru aceste lucruri? Căci noi nu suntem ca cei mulți, care negustoresc cuvântul lui Dumnezeu, ci vorbim în Hristos cu sinceritate, ca unii care suntem de la Dumnezeu, înaintea lui Dumnezeu.",
-          "teaching": "Pavel nu găsește odihnă când nu-l întâlnește pe Tit, deși o ușă de lucrare era deschisă. Relațiile și responsabilitatea față de oameni nu sunt mai puțin spirituale decât oportunitățile publice.\n\nEl refuză să comercializeze Cuvântul lui Dumnezeu. Slujirea autentică se face înaintea lui Dumnezeu, cu sinceritate, nu prin adaptarea mesajului pentru profit, imagine sau control.",
+          "teaching": "Pavel nu găsește odihnă când nu-l întâlnește pe Tit, deși o ușă de lucrare era deschisă. Relațiile și responsabilitatea față de oameni nu sunt mai puțîn spirituale decât oportunitățile publice.\n\nEl refuză să comercializeze Cuvântul lui Dumnezeu. Slujirea autentică se face înaintea lui Dumnezeu, cu sinceritate, nu prin adaptarea mesajului pentru profit, imagine sau control.",
           "crossRefs": [
             "1 Tesaloniceni 2:3-6",
             "1 Petru 4:11",
@@ -334,10 +334,10 @@ export const NT_BOOK_08: BibleBook = {
       "id": "2-corinteni-7",
       "bookId": "2-corinteni",
       "number": 7,
-      "title": "2 Corinteni 7 — Întristarea care duce la pocăință",
+      "title": "2 Corinteni 7 — Întristarea care duce la pocăînță",
       "summary": "Pavel cheamă la curățire, se bucură de venirea lui Tit și distinge întristarea după voia lui Dumnezeu de regretul fără schimbare.",
-      "literaryContext": "Capitolul încheie apelul la sfințenie și descrie rezultatul scrisorii severe: durere, pocăință, dor și refacerea încrederii.",
-      "historicalContext": "Tit aduce vești despre răspunsul corintenilor. Pavel privește nu doar emoția lor, ci roadele concrete ale pocăinței.",
+      "literaryContext": "Capitolul încheie apelul la sfințenie și descrie rezultatul scrisorii severe: durere, pocăînță, dor și refacerea încrederii.",
+      "historicalContext": "Tit aduce vești despre răspunsul corintenilor. Pavel privește nu doar emoția lor, ci roadele concrete ale pocăînței.",
       "units": [
         {
           "id": "2-corinteni-7-1-5",
@@ -357,7 +357,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 7:6-10",
           "heading": "Dumnezeu îi mângâie pe cei smeriți",
           "text": "Dar Dumnezeu, care îi mângâie pe cei smeriți, ne-a mângâiat prin venirea lui Titus, și nu numai prin venirea lui, ci și prin mângâierea cu care a fost mângâiat cu privire la voi, când ne-a povestit dorul vostru, plângerea voastră, râvna voastră pentru mine, așa încât m-am bucurat și mai mult. Căci, chiar dacă v-am întristat prin scrisoarea mea, nu-mi pare rău. Și dacă mi-a părut rău — văd că scrisoarea aceea v-a întristat, deși doar pentru o vreme — acum mă bucur, nu pentru că ați fost întristați, ci pentru că ați fost întristați spre pocăință; căci ați fost întristați după Dumnezeu, ca să nu suferiți nicio pagubă din partea noastră. Pentru că întristarea după Dumnezeu lucrează o pocăință spre mântuire, fără părere de rău, dar întristarea lumii lucrează moartea.",
-          "teaching": "Dumnezeu îl mângâie pe Pavel prin venirea lui Tit și prin vestea dorului corintenilor. Ajutorul lui Dumnezeu vine adesea printr-un om concret, la momentul potrivit.\n\nÎntristarea după voia lui Dumnezeu produce pocăință și viață; întristarea lumii se învârte în jurul rușinii, imaginii pierdute sau consecințelor. Pocăința schimbă direcția, nu doar intensitatea emoției.",
+          "teaching": "Dumnezeu îl mângâie pe Pavel prin venirea lui Tit și prin vestea dorului corintenilor. Ajutorul lui Dumnezeu vine adesea printr-un om concret, la momentul potrivit.\n\nÎntristarea după voia lui Dumnezeu produce pocăînță și viață; întristarea lumii se învârte în jurul rușinii, imaginii pierdute sau consecințelor. Pocăînța schimbă direcția, nu doar intensitatea emoției.",
           "crossRefs": [
             "Psalmul 147:3",
             "Luca 22:61-62",
@@ -368,18 +368,18 @@ export const NT_BOOK_08: BibleBook = {
         {
           "id": "2-corinteni-7-11-16",
           "ref": "2 Corinteni 7:11-16",
-          "heading": "Roadele unei pocăințe serioase",
+          "heading": "Roadele unei pocăînțe serioase",
           "text": "Căci iată, tocmai faptul că ați fost întristați după Dumnezeu, câtă seriozitate a produs în voi, ba mai mult, ce apărare, ce indignare, ce teamă, ce dor, ce zel, ce pedepsire! În toate v-ați dovedit curați în privința lucrului acestuia. Așa că, deși v-am scris, nu am scris pentru cauza lui care a făcut răul, nici pentru cauza lui care a suferit răul, ci pentru ca grija voastră sinceră față de noi să poată fi dezvăluită în voi înaintea lui Dumnezeu. De aceea am fost mângâiați. Iar pe lângă mângâierea noastră, ne-am bucurat și mai mult pentru bucuria lui Titus, fiindcă duhul lui a fost înviorat de voi toți. Căci, dacă m-am lăudat cu ceva înaintea lui despre voi, n-am fost dat de rușine; ci, după cum v-am vorbit toate în adevăr, tot așa și lauda noastră înaintea lui Titus s-a dovedit adevărată. Și inima lui simte și mai multă dragoste față de voi, când își aduce aminte de ascultarea voastră a tuturor, cum l-ați primit cu frică și cu tremur. Mă bucur că în toate pot avea încredere în voi.",
-          "teaching": "Pavel enumeră râvna, dezvinovățirea, indignarea față de rău, dorul și disponibilitatea de a face dreptate. Acestea nu cumpără iertarea, dar arată că pocăința este reală.\n\nRestaurarea încrederii poate cere timp și verificarea roadelor. Iertarea creștină nu cere unei persoane rănite să acorde imediat același acces celui care a abuzat de încredere.",
+          "teaching": "Pavel enumeră râvna, dezvinovățirea, indignarea față de rău, dorul și disponibilitatea de a face dreptate. Acestea nu cumpără iertarea, dar arată că pocăînța este reală.\n\nRestaurarea încrederii poate cere timp și verificarea roadelor. Iertarea creștină nu cere unei persoane rănite să acorde imediat același acces celui care a abuzat de încredere.",
           "crossRefs": [
             "Matei 3:8",
             "Luca 19:8-9",
             "Iacov 2:17"
           ],
-          "forYourHeart": "Caută roade concrete ale pocăinței, nu o formulă care închide repede conversația."
+          "forYourHeart": "Caută roade concrete ale pocăînței, nu o formulă care închide repede conversația."
         }
       ],
-      "prayer": "Dumnezeule care îi mângâi pe cei smeriți, curăță-mă și dă-mi o pocăință care schimbă direcția. Ajută-mă să repar cu răbdare ceea ce am rănit. Amin.",
+      "prayer": "Dumnezeule care îi mângâi pe cei smeriți, curăță-mă și dă-mi o pocăînță care schimbă direcția. Ajută-mă să repar cu răbdare ceea ce am rănit. Amin.",
       "status": "in_review"
     },
     {
@@ -532,7 +532,7 @@ export const NT_BOOK_08: BibleBook = {
             "1 Corinteni 3:5-9",
             "Galateni 6:4"
           ],
-          "forYourHeart": "Compară-te mai puțin cu alții și întreabă dacă ești credincios în responsabilitatea primită."
+          "forYourHeart": "Compară-te mai puțîn cu alții și întreabă dacă ești credincios în responsabilitatea primită."
         }
       ],
       "prayer": "Doamne Isuse, învață-mă blândețea și curajul Tău. Curăță-mi armele de firea pământească și păzește-mă de comparație și laudă de sine. Amin.",
@@ -642,7 +642,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 12:19-21",
           "heading": "Totul pentru zidirea voastră",
           "text": "Din nou, crezi că ne scuzăm față de tine? În ochii lui Dumnezeu vorbim în Hristos. Dar toate lucrurile, preaiubiților, sunt pentru edificarea ta. căci mă tem ca nu cumva, atunci când voi veni, să nu vă găsesc așa cum vreau și eu să fiu găsit de voi așa cum nu vreți: nu cumva să fie ceartă, gelozie, izbucniri de mânie, ambiții egoiste, vorbiri de rău, șoapte, îngâmfări, tulburări, și nu cumva, când voi veni din nou, Dumnezeul meu să mă smerească înaintea voastră și să plâng pe mulți dintre cei care au păcătuit mai înainte și nu s-au pocăit de necurăția și imoralitatea sexuală și destrăbălarea pe care le-au săvârșit.",
-          "teaching": "Apărarea lui Pavel nu urmărește protejarea ego-ului, ci zidirea bisericii înaintea lui Dumnezeu. El se teme să găsească certuri, gelozii, mânii și păcate nepărăsite.\n\nHarul care este suficient în slăbiciune nu tratează păcatul ca neimportant. El oferă putere pentru pocăință și pentru o viață schimbată.",
+          "teaching": "Apărarea lui Pavel nu urmărește protejarea ego-ului, ci zidirea bisericii înaintea lui Dumnezeu. El se teme să găsească certuri, gelozii, mânii și păcate nepărăsite.\n\nHarul care este suficient în slăbiciune nu tratează păcatul ca neimportant. El oferă putere pentru pocăînță și pentru o viață schimbată.",
           "crossRefs": [
             "Efeseni 4:29-32",
             "Tit 2:11-14",
@@ -694,7 +694,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 13:11-14",
           "heading": "Desăvârșiți-vă, încurajați-vă și trăiți în pace",
           "text": "În sfârșit, fraților, bucurați-vă, desăvârșiți-vă, fiți încurajați, gândiți la fel, trăiți în pace, și Dumnezeul dragostei și al păcii va fi cu voi. Salutați-vă unii pe alții cu o sărutare sfântă. Vă salută toți sfinții. Harul Domnului Isus Hristos și dragostea lui Dumnezeu și părtășia Duhului Sfânt să fie cu voi toți.",
-          "teaching": "Îndemnurile finale unesc maturizarea, încurajarea, unitatea și pacea. Pacea biblică nu este tăcerea forțată în jurul răului, ci rodul adevărului, pocăinței și dragostei.\n\nHarul Domnului Isus, dragostea lui Dumnezeu și părtășia Duhului Sfânt înconjoară întreaga viață a bisericii. Comunitatea nu este construită de personalitatea unui lider, ci de prezența Dumnezeului triunic.",
+          "teaching": "Îndemnurile finale unesc maturizarea, încurajarea, unitatea și pacea. Pacea biblică nu este tăcerea forțată în jurul răului, ci rodul adevărului, pocăînței și dragostei.\n\nHarul Domnului Isus, dragostea lui Dumnezeu și părtășia Duhului Sfânt înconjoară întreaga viață a bisericii. Comunitatea nu este construită de personalitatea unui lider, ci de prezența Dumnezeului triunic.",
           "crossRefs": [
             "Efeseni 4:1-6",
             "Filipeni 2:1-4",

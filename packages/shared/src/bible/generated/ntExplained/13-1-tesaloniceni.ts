@@ -60,7 +60,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 1:9-10",
           "heading": "Întorși de la idoli ca să slujim și să așteptăm",
           "text": "Căci ei înșiși spun despre noi ce fel de primire am avut de la voi și cum v-ați întors la Dumnezeu de la idoli pentru a sluji unui Dumnezeu viu și adevărat, să pe Fiul Său din cer, pe care L-a înviat din morți: pe Isus, care ne izbăvește de mânia viitoare.",
-          "teaching": "Convertirea tesalonicenilor avea două direcții: s-au întors de la idoli și s-au întors spre Dumnezeu ca să-I slujească. Un idol poate fi o imagine religioasă, dar și banii, reputația, confortul, succesul, o relație sau propria voință. Pocăința reală schimbă stăpânul vieții.\n\nEi Îl așteptau pe Fiul lui Dumnezeu din cer, pe Isus înviat, Cel care ne scapă de mânia viitoare. Așteptarea nu este pasivitate, panică sau calcularea datelor, ci slujire fidelă în prezent. Venirea Domnului produce curăție, perseverență și speranță, nu frică exploatată de predicatori sau teorii care domină viața.",
+          "teaching": "Convertirea tesalonicenilor avea două direcții: s-au întors de la idoli și s-au întors spre Dumnezeu ca să-I slujească. Un idol poate fi o imagine religioasă, dar și banii, reputația, confortul, succesul, o relație sau propria voință. Pocăînța reală schimbă stăpânul vieții.\n\nEi Îl așteptau pe Fiul lui Dumnezeu din cer, pe Isus înviat, Cel care ne scapă de mânia viitoare. Așteptarea nu este pasivitate, panică sau calcularea datelor, ci slujire fidelă în prezent. Venirea Domnului produce curăție, perseverență și speranță, nu frică exploatată de predicatori sau teorii care domină viața.",
           "crossRefs": [
             "Faptele 14:15",
             "1 Ioan 3:2-3",
@@ -118,7 +118,7 @@ export const NT_BOOK_13: BibleBook = {
             "1 Corinteni 9:7-14",
             "Efeseni 4:1"
           ],
-          "forYourHeart": "Lasă exemplul tău zilnic să susțină lucrurile pe care le ceri altora."
+          "forYourHeart": "Lasă exemplul tău zilnic să susțînă lucrurile pe care le ceri altora."
         },
         {
           "id": "1-tesaloniceni-2-13-16",
@@ -279,7 +279,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 5:1-5",
           "heading": "Ziua Domnului și identitatea fiilor luminii",
           "text": "Dar cu privire la timp și la anotimpuri, fraților, nu aveți nevoie să vi se scrie nimic. Căci voi înșivă știți bine că ziua Domnului vine ca un hoț noaptea. Căci atunci când ei spun: Pace și siguranță, atunci distrugerea bruscă va veni peste ei, ca durerile de naștere pe o femeie gravidă. Atunci ei nu vor scăpa în nici un fel. Dar voi, fraților, nu în întuneric, ca ziua să vă cuprindă ca un hoț. Voi toți sunteți fii ai luminii și ai zilei. Noi nu aparținem nopții, nici întunericului.",
-          "teaching": "Pavel spune că nu este nevoie de calcule suplimentare despre timpuri și perioade. Ziua Domnului va veni neașteptat, ca un hoț în noapte, iar promisiunile omenești de pace și siguranță nu pot anula judecata lui Dumnezeu.\n\nCredincioșii nu aparțin întunericului, ci luminii și zilei. Siguranța lor nu vine din descifrarea unui calendar secret, ci din relația cu Hristos și dintr-o viață care poate fi adusă la lumină. Textul nu fixează date și nu alimentează panică, conspirații sau retragerea iresponsabilă din familie și societate.",
+          "teaching": "Pavel spune că nu este nevoie de calcule suplimentare despre timpuri și perioade. Ziua Domnului va veni neașteptat, ca un hoț în noapte, iar promisiunile omenești de pace și siguranță nu pot anula judecata lui Dumnezeu.\n\nCredincioșii nu aparțîn întunericului, ci luminii și zilei. Siguranța lor nu vine din descifrarea unui calendar secret, ci din relația cu Hristos și dintr-o viață care poate fi adusă la lumină. Textul nu fixează date și nu alimentează panică, conspirații sau retragerea iresponsabilă din familie și societate.",
           "crossRefs": [
             "Matei 24:36-44",
             "2 Petru 3:10-14",

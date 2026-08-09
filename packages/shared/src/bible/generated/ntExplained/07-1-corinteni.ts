@@ -240,7 +240,7 @@ export const NT_BOOK_07: BibleBook = {
         {
           "id": "1-corinteni-5-1-8",
           "ref": "1 Corinteni 5:1-8",
-          "heading": "Puțin aluat dospește toată plămădeala",
+          "heading": "Puțîn aluat dospește toată plămădeala",
           "text": "Se aude pretutindeni că între voi este imoralitate sexuală, și o astfel de imoralitate sexuală cum nici între neamuri nu este: anume, că cineva îl are pe femeia tatălui său. Și voi sunteți umflați de mândrie! N-ar fi trebuit mai degrabă să jeliți, pentru ca cel ce a făcut fapta aceasta să fie înlăturat din mijlocul vostru? Căci eu, fără îndoială, ca fiind absent în trup, dar prezent în spirit, l-am judecat deja, ca și cum aș fi fost prezent, pe cel care a făcut acest lucru. Când vă adunați în numele Domnului Isus, și duhul meu fiind cu voi, cu puterea Domnului nostru Isus, Tu vei da lui Satan un astfel de om pentru nimicirea cărnii, ca Duhul să fie mântuit în ziua Domnului Isus. Lauda voastră nu este bună. Nu știți că puțin aluat dospește tot aluatul? Curățiți aluatul vechi, ca să fiți o plămădeală nouă, așa cum și sunteți fără aluat. Căci și Paștele nostru, Hristos, a fost jertfit. De aceea să ținem sărbătoarea nu cu aluat vechi, nici cu aluatul răutății și al ticăloșiei, ci cu azimele sincerității și ale adevărului.",
           "teaching": "Păcatul public, persistent și nepocăit nu trebuie acoperit prin limbaj despre iubire. Explicația ține împreună două adevăruri: Dumnezeu este dragoste și Dumnezeu este lumină, fără întuneric.\n\nÎndepărtarea din părtășie urmărește trezirea și restaurarea, nu răzbunarea.",
           "crossRefs": [
@@ -255,7 +255,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 5:9-13",
           "heading": "Judecata responsabilă începe înăuntru",
           "text": "V-am scris în epistolă să nu vă asociați cu oamenii imorali sexual, nu în mod absolut cu oamenii imorali sexual din lumea aceasta, sau cu cei lacomi și răpitori, sau cu idolatrii, fiindcă atunci ar trebui să ieșiți din lume. Dar acum v-am scris să nu vă asociați cu nimeni care, deși se numește frate, este imoral sexual, sau lacom, sau idolatru, sau batjocoritor, sau bețiv, sau răpitor; cu unul ca acesta nici să nu mâncați. Căci ce am eu să-i judec pe cei de afară? Nu-i judecați voi pe cei dinăuntru? Pe cei de afară îi judecă Dumnezeu. „Dați afară dintre voi pe omul rău!”",
-          "teaching": "Pavel nu cere izolarea de oamenii lumii, altfel credincioșii ar trebui să iasă din lume. El cere discernământ în relația de părtășie cu cel care se numește frate, dar apără o viață evident contrară lui Hristos. Ea se aplică faptelor serioase și confirmate, cu procedură dreaptă, chemare la pocăință și disponibilitate pentru restaurare.",
+          "teaching": "Pavel nu cere izolarea de oamenii lumii, altfel credincioșii ar trebui să iasă din lume. El cere discernământ în relația de părtășie cu cel care se numește frate, dar apără o viață evident contrară lui Hristos. Ea se aplică faptelor serioase și confirmate, cu procedură dreaptă, chemare la pocăînță și disponibilitate pentru restaurare.",
           "crossRefs": [
             "1 Timotei 5:19-21",
             "2 Corinteni 2:6-8",
@@ -530,7 +530,7 @@ export const NT_BOOK_07: BibleBook = {
             "1 Ioan 5:21",
             "Matei 6:24"
           ],
-          "forYourHeart": "Numește lucrul căruia îi dai timpul, frica și speranța care Îi aparțin lui Dumnezeu și îndepărtează-te de el."
+          "forYourHeart": "Numește lucrul căruia îi dai timpul, frica și speranța care Îi aparțîn lui Dumnezeu și îndepărtează-te de el."
         },
         {
           "id": "1-corinteni-10-23-33",
@@ -582,14 +582,14 @@ export const NT_BOOK_07: BibleBook = {
             "Fapte 2:44-47",
             "1 Ioan 3:16-18"
           ],
-          "forYourHeart": "Privește masa și comunitatea prin ochii celui cu mai puțin și corectează obiceiul care îl face invizibil."
+          "forYourHeart": "Privește masa și comunitatea prin ochii celui cu mai puțîn și corectează obiceiul care îl face invizibil."
         },
         {
           "id": "1-corinteni-11-23-34",
           "ref": "1 Corinteni 11:23-34",
           "heading": "Vestiți moartea Domnului și cercetați-vă",
           "text": "Căci eu am primit de la Domnul ce v-am și predat: că Domnul Isus, în noaptea în care era predat, a luat pâine, Când el a dat mulțumiri, el a rupt-o și a spus, Ia, mânca. Acesta este corpul meu, care este rupt pentru tine. Fă acest lucru în memoria mea. Tot astfel a luat și paharul, după cină, zicând: „Acest pahar este noul legământ în sângele Meu. Faceți aceasta, ori de câte ori îl beți, spre amintirea Mea.” Căci ori de câte ori mâncați pâinea aceasta și beți paharul, vestiți moartea Domnului până vine El. Astfel, oricine mănâncă pâinea sau bea paharul Domnului în chip nevrednic va fi vinovat față de trupul și sângele Domnului. Dar fiecare om să se cerceteze pe sine, și așa să mănânce din pâine și să bea din pahar. Căci cel care mănâncă și bea într-un mod nevrednic mănâncă și bea judecata pentru el însuși dacă nu discerne trupul Domnului. Din această pricină sunt între voi mulți slabi și bolnavi, și destui au adormit. Dacă ne-am judeca pe noi înșine, n-am fi judecați. Dar, fiind judecați de Domnul, suntem disciplinați, ca să nu fim condamnați împreună cu lumea. Așadar, frații mei, când vă adunați ca să mâncați, așteptați-vă unii pe alții. Dacă îi este foame cuiva, să mănânce acasă, ca să nu vă adunați spre judecată. Celelalte lucruri le voi rândui când voi veni.",
-          "teaching": "Pâinea și paharul ne întorc la trupul dat și sângele vărsat al lui Isus. Cina nu este o recompensă pentru cei perfecți, ci o proclamare a harului primită cu pocăință, discernământ și împăcare.\n\nA ne cerceta nu înseamnă introspecție fără sfârșit sau frică superstițioasă, ci să judecăm egoismul, disprețul și păcatul pe care Duhul îl arată.",
+          "teaching": "Pâinea și paharul ne întorc la trupul dat și sângele vărsat al lui Isus. Cina nu este o recompensă pentru cei perfecți, ci o proclamare a harului primită cu pocăînță, discernământ și împăcare.\n\nA ne cerceta nu înseamnă introspecție fără sfârșit sau frică superstițioasă, ci să judecăm egoismul, disprețul și păcatul pe care Duhul îl arată.",
           "crossRefs": [
             "Luca 22:19-20",
             "2 Corinteni 13:5",
@@ -628,7 +628,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 12:12-21",
           "heading": "Botezați de Duhul într-un singur trup",
           "text": "Căci, așa cum trupul este unul și are multe mădulare, iar toate mădularele trupului, deși sunt multe, sunt un singur trup, tot așa este și Hristos. Fiindcă toți am fost botezați într-un singur Duh într-un singur trup, fie iudei, fie greci, fie robi, fie liberi, și tuturor ni s-a dat să bem dintr-un singur Duh. Căci trupul nu este un singur membru, ci mai multe. Dacă piciorul ar zice: „Fiindcă nu sunt mână, nu sunt din trup”, nu de aceea nu este din trup. Și dacă urechea ar zice: „Fiindcă nu sunt ochi, nu sunt din trup”, nu de aceea nu este din trup. Dacă tot trupul ar fi ochi, unde ar fi auzul? Dacă totul ar fi auz, unde ar fi mirosul? Dar acum Dumnezeu a pus mădularele, pe fiecare dintre ele, în trup, așa cum a vrut. Dacă toate ar fi un singur mădular, unde ar fi trupul? Dar acum sunt mai multe membre, dar un singur corp. Ochiul nu poate spune mâinii: „N-am nevoie de tine”; sau, iarăși, capul nu poate spune picioarelor: „N-am nevoie de voi.”",
-          "teaching": "Originea, statutul și trecutul nu creează trupuri separate. Duhul îi unește pe credincioși cu Hristos și între ei, astfel încât diversitatea nu mai trebuie să producă rivalitate.\n\nMădularul care se simte inferior nu încetează să aparțină trupului, iar cel vizibil nu poate spune altuia «nu am nevoie de tine». Individualismul și cultul unui singur dar contrazic însăși imaginea trupului.",
+          "teaching": "Originea, statutul și trecutul nu creează trupuri separate. Duhul îi unește pe credincioși cu Hristos și între ei, astfel încât diversitatea nu mai trebuie să producă rivalitate.\n\nMădularul care se simte inferior nu încetează să aparțînă trupului, iar cel vizibil nu poate spune altuia «nu am nevoie de tine». Individualismul și cultul unui singur dar contrazic însăși imaginea trupului.",
           "crossRefs": [
             "Efeseni 4:1-7",
             "Coloseni 2:19",

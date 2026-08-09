@@ -7,16 +7,16 @@
     "blockerClasses": 8,
     "books": 27,
     "chapters": 260,
-    "units": 913,
-    "wholeChapterSummaryUnits": 35,
+    "units": 938,
+    "wholeChapterSummaryUnits": 22,
     "thinUnits": 42,
     "emptyHeadings": 2,
-    "missingSourceAnchors": 797,
+    "missingSourceAnchors": 784,
     "rawEditorialFindings": 96,
     "editorialClassificationUnresolved": 0,
     "editorialSourceTraceabilityPending": 95,
-    "embeddedQuoteFindings": 125,
-    "romanianLanguageFindings": 1915,
+    "embeddedQuoteFindings": 126,
+    "romanianLanguageFindings": 287,
     "lexiconFindings": 219
   },
   "blockers": [
@@ -29,74 +29,9 @@
     },
     {
       "id": "whole-chapter-summary-units",
-      "count": 35,
-      "message": "35 rebuilt chapters are still one whole-chapter unit.",
+      "count": 22,
+      "message": "22 rebuilt chapters are still one whole-chapter unit.",
       "examples": [
-        {
-          "bookId": "1-petru",
-          "chapter": 1,
-          "ref": "1 Petru 1:1-25"
-        },
-        {
-          "bookId": "1-petru",
-          "chapter": 2,
-          "ref": "1 Petru 2:1-25"
-        },
-        {
-          "bookId": "1-petru",
-          "chapter": 3,
-          "ref": "1 Petru 3:1-22"
-        },
-        {
-          "bookId": "1-petru",
-          "chapter": 4,
-          "ref": "1 Petru 4:1-19"
-        },
-        {
-          "bookId": "1-petru",
-          "chapter": 5,
-          "ref": "1 Petru 5:1-14"
-        },
-        {
-          "bookId": "2-petru",
-          "chapter": 1,
-          "ref": "2 Petru 1:1-21"
-        },
-        {
-          "bookId": "2-petru",
-          "chapter": 2,
-          "ref": "2 Petru 2:1-22"
-        },
-        {
-          "bookId": "2-petru",
-          "chapter": 3,
-          "ref": "2 Petru 3:1-18"
-        },
-        {
-          "bookId": "1-ioan",
-          "chapter": 1,
-          "ref": "1 Ioan 1:1-10"
-        },
-        {
-          "bookId": "1-ioan",
-          "chapter": 2,
-          "ref": "1 Ioan 2:1-29"
-        },
-        {
-          "bookId": "1-ioan",
-          "chapter": 3,
-          "ref": "1 Ioan 3:1-24"
-        },
-        {
-          "bookId": "1-ioan",
-          "chapter": 4,
-          "ref": "1 Ioan 4:1-21"
-        },
-        {
-          "bookId": "1-ioan",
-          "chapter": 5,
-          "ref": "1 Ioan 5:1-21"
-        },
         {
           "bookId": "apocalipsa",
           "chapter": 1,
@@ -131,6 +66,71 @@
           "bookId": "apocalipsa",
           "chapter": 7,
           "ref": "Apocalipsa 7:1-17"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 8,
+          "ref": "Apocalipsa 8:1-13"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 9,
+          "ref": "Apocalipsa 9:1-21"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 10,
+          "ref": "Apocalipsa 10:1-11"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 11,
+          "ref": "Apocalipsa 11:1-19"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 12,
+          "ref": "Apocalipsa 12:1-17"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 13,
+          "ref": "Apocalipsa 13:1-18"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 14,
+          "ref": "Apocalipsa 14:1-20"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 15,
+          "ref": "Apocalipsa 15:1-8"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 16,
+          "ref": "Apocalipsa 16:1-21"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 17,
+          "ref": "Apocalipsa 17:1-18"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 18,
+          "ref": "Apocalipsa 18:1-24"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 19,
+          "ref": "Apocalipsa 19:1-21"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 20,
+          "ref": "Apocalipsa 20:1-15"
         }
       ]
     },
@@ -280,8 +280,8 @@
     },
     {
       "id": "missing-source-anchors",
-      "count": 797,
-      "message": "797/913 units lack reproducible sourceAnchors.",
+      "count": 784,
+      "message": "784/938 units lack reproducible sourceAnchors.",
       "examples": [
         {
           "bookId": "matei",
@@ -387,13 +387,13 @@
     },
     {
       "id": "embedded-quote-audit",
-      "count": 125,
+      "count": 126,
       "message": "embedded quote audit is manual-source-check-required.",
       "status": "manual-source-check-required"
     },
     {
       "id": "romanian-language-audit",
-      "count": 1915,
+      "count": 287,
       "message": "Romanian language audit is manual-edit-required.",
       "status": "manual-edit-required"
     },

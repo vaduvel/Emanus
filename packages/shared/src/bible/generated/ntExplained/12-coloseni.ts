@@ -202,7 +202,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:8-11",
           "heading": "Lăsați minciuna și îmbrăcați omul nou",
           "text": "Dar acum trebuie să le pui pe toate deoparte: mânie, mânie, răutate, calomnie și vorbe rușinoase din gura ta. Nu vă mințiți unii pe alții, după ce v-ați dezbrăcat de omul vechi împreună cu faptele lui și v-ați îmbrăcat cu omul nou, care se înnoiește spre cunoaștere după chipul celui care l-a creat, unde nu mai este grec și iudeu, circumcizie și necircumcizie, barbar, scit, rob, liber, ci Hristos este totul și în toți.",
-          "teaching": "Mânia păstrată, răutatea, defăimarea, vorbirea degradantă și minciuna aparțin omului vechi. Explicația acordă o atenție deosebită limbii: vorbele dezvăluie inima, iar ipocrizia spirituală oprește creșterea. A spune adevărul înseamnă să nu construim o imagine religioasă mai înaltă decât realitatea.\n\nOmul nou este reînnoit după chipul Creatorului. În această nouă umanitate, originea etnică, ritualul, cultura, educația și poziția socială nu stabilesc valoarea. Hristos este totul și în toți; de aceea rasismul, antisemitismul, disprețul de clasă și superioritatea culturală contrazic direct viața nouă.",
+          "teaching": "Mânia păstrată, răutatea, defăimarea, vorbirea degradantă și minciuna aparțîn omului vechi. Explicația acordă o atenție deosebită limbii: vorbele dezvăluie inima, iar ipocrizia spirituală oprește creșterea. A spune adevărul înseamnă să nu construim o imagine religioasă mai înaltă decât realitatea.\n\nOmul nou este reînnoit după chipul Creatorului. În această nouă umanitate, originea etnică, ritualul, cultura, educația și poziția socială nu stabilesc valoarea. Hristos este totul și în toți; de aceea rasismul, antisemitismul, disprețul de clasă și superioritatea culturală contrazic direct viața nouă.",
           "crossRefs": [
             "Efeseni 4:22-25",
             "Iacov 1:26",
@@ -221,7 +221,7 @@ export const NT_BOOK_12: BibleBook = {
             "Efeseni 4:31-32",
             "1 Corinteni 13:4-7"
           ],
-          "forYourHeart": "Alege să renunți la răzbunare, dar păstrează sau construiește limita necesară pentru adevăr, siguranță și pocăință reală."
+          "forYourHeart": "Alege să renunți la răzbunare, dar păstrează sau construiește limita necesară pentru adevăr, siguranță și pocăînță reală."
         },
         {
           "id": "coloseni-3-15-17",
