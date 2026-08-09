@@ -21,7 +21,7 @@ permissions:
 
 concurrency:
   group: vt-explanation-review-integrate-main
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   integrate-and-verify:
@@ -33,7 +33,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Merge published VT from main without changing canonical text
+      - name: Integrate published Emanus VT and validate explained runtime
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRE_SHA: ${{ github.sha }}
@@ -52,6 +52,22 @@ jobs:
               -d "{\"state\":\"${state}\",\"context\":\"${context}\",\"description\":\"${description}\"}" >/dev/null
           }
 
+          phase="startup"
+          done_ok=0
+          on_exit() {
+            rc=$?
+            if [ "$done_ok" -ne 1 ] && [ "$rc" -ne 0 ]; then
+              post_status "$PRE_SHA" "vt/emanus-final-integration" failure "failed during ${phase}"
+              post_status "$PRE_SHA" "vt/emanus-sync-stage" failure "${phase} failed"
+            fi
+          }
+          trap on_exit EXIT
+
+          mark_phase() {
+            phase="$1"
+            post_status "$PRE_SHA" "vt/emanus-sync-stage" pending "$2"
+          }
+
           fail() {
             post_status "$PRE_SHA" "vt/emanus-final-integration" failure "$1"
             echo "ERROR: $1" >&2
@@ -61,11 +77,13 @@ jobs:
           post_status "$PRE_SHA" "vt/emanus-final-integration" pending "syncing PR85 with published Emanus VT"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin main:refs/remotes/origin/main
 
+          mark_phase "fetch-main" "fetching main with PR87"
+          git fetch origin main:refs/remotes/origin/main
           git merge-base --is-ancestor 9d40cd53643d1568f8c806645d9b576f6c70b961 origin/main \
             || fail "main does not contain published VT commit 9d40cd53"
 
+          mark_phase "merge-main" "merging current main"
           set +e
           git merge --no-commit --no-ff origin/main >/tmp/vt-main-merge.log 2>&1
           merge_rc=$?
@@ -102,11 +120,10 @@ jobs:
               fail "unexpected merge conflicts; canonical text was not altered"
             fi
           fi
-
           unresolved=$(git diff --name-only --diff-filter=U)
           [ -z "$unresolved" ] || fail "unresolved merge conflicts remain"
 
-          # Canonical VT in this branch must be byte-for-byte the current main tree.
+          mark_phase "canonical-sync" "copying canonical VT exactly from main"
           if [ -d docs/data/biblia-emanus ]; then
             git rm -r -f docs/data/biblia-emanus >/dev/null
           fi
@@ -117,7 +134,7 @@ jobs:
           test -e docs/data/biblia-emanus/ot-source-evidence.jsonl.gz \
             || fail "compressed source evidence archive is missing"
 
-          # Keep all scripts introduced by main, then add/override only VT-explanation commands.
+          mark_phase "runtime-config" "configuring final Emanus publication runtime"
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -145,30 +162,41 @@ jobs:
           PY
           git add package.json packages/shared/package.json
 
+          mark_phase "materialization" "materializing 39 books / 929 chapters"
           python3 scripts/materialize-published-emanus-ot-runtime.py
           git add packages/shared/src/bible/generated/publishedEmanusOtText.ts
 
+          mark_phase "dependencies" "installing dependencies"
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
 
-          # Dedicated VT source/publication gate from PR87. NT failures are intentionally out of scope.
+          mark_phase "vt-source-gate" "checking published VT source evidence"
           python3 scripts/check-biblia-emanus-ot-publication-gate.py
+
+          mark_phase "explanation-gates" "checking 929 explanations and source fidelity"
           pnpm check:vt-explained
           pnpm check:vt-legacy-provenance
           pnpm check:vt-poonen-fidelity
           pnpm check:vt-chapter-review
           pnpm check:vt-publication
+
+          mark_phase "build-gates" "typechecking and building final reader"
           pnpm --filter @emanus/shared typecheck
           pnpm --filter @emanus/shared build
           pnpm --filter @emanus/web typecheck
           git diff --check
           git diff --cached --check
 
+          mark_phase "commit" "committing validated Emanus binding"
           git add -A
-          git commit -m "Bind explained VT to published Biblia Emanus"
-          merge_sha=$(git rev-parse HEAD)
-          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
+          if git rev-parse -q --verify MERGE_HEAD >/dev/null 2>&1 || ! git diff --cached --quiet; then
+            git commit -m "Bind explained VT to published Biblia Emanus"
+          fi
+          final_sha=$(git rev-parse HEAD)
+          if [ "$final_sha" != "$PRE_SHA" ]; then
+            git push origin HEAD:agent/biblia-explicata-vt-integration-clean
+          fi
 
           for item in \
             "vt/check-explained:39/39 explanation coverage passed" \
@@ -184,6 +212,8 @@ jobs:
             "vt/emanus-final-integration:main VT integrated without canonical edits"; do
             context=${item%%:*}
             description=${item#*:}
-            post_status "$merge_sha" "$context" success "$description"
+            post_status "$final_sha" "$context" success "$description"
           done
+          post_status "$final_sha" "vt/emanus-sync-stage" success "final Emanus VT runtime ready"
           post_status "$PRE_SHA" "vt/emanus-final-integration" success "published Emanus VT integrated and validated"
+          done_ok=1
