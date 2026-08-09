@@ -84,18 +84,27 @@ jobs:
           set -euo pipefail
           node scripts/materialize-nt-final-source-first.mjs
           node scripts/check-nt-final-source-first.mjs
+
+      - name: Materialize and verify Biblia Emanus NT runtime
+        run: |
+          set -euo pipefail
+          pnpm install --frozen-lockfile
+          node scripts/materialize-nt-publication-runtime.mjs
+          pnpm --filter @emanus/shared typecheck
+          pnpm --filter @emanus/shared build
+          node scripts/check-nt-publication-runtime.mjs
           git diff --check
 
-      - name: Commit deterministic NT editorial snapshots
+      - name: Commit deterministic NT editorial and runtime snapshots
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/biblia-explicata docs/biblia-explicata
+          git add docs/data/biblia-explicata docs/biblia-explicata packages/shared/src/bible/generated/ntExplained packages/shared/src/bible/generated/ntExplained.ts packages/shared/src/bible/ntPublicationBible.ts
           if git diff --cached --quiet; then
             echo "NT snapshots already current."
             exit 0
           fi
-          git commit -m "Materialize final NT source-first corpus"
+          git commit -m "Materialize final NT source-first publication runtime"
           git pull --rebase origin agent/biblia-explicata-nt-integration-clean
           git push origin HEAD:agent/biblia-explicata-nt-integration-clean
