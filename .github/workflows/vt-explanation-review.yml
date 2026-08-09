@@ -12,198 +12,70 @@ on:
       - "scripts/materialize-published-emanus-ot-runtime.py"
       - "package.json"
       - ".github/workflows/vt-explanation-review.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/shared/src/bible/**"
+      - "packages/shared/package.json"
+      - "apps/web/src/screens/Bible.tsx"
+      - "scripts/check-vt-*.mjs"
+      - "scripts/check-vt-*.py"
+      - "scripts/materialize-published-emanus-ot-runtime.py"
+      - "package.json"
+      - ".github/workflows/vt-explanation-review.yml"
   workflow_dispatch:
 
 permissions:
-  contents: write
-  statuses: write
+  contents: read
 
 concurrency:
-  group: vt-explanation-review-integrate-main
-  cancel-in-progress: false
+  group: vt-explanation-review-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  integrate-and-verify:
+  verify:
     runs-on: ubuntu-22.04
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
 
-      - name: Integrate published Emanus VT and validate explained runtime
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PRE_SHA: ${{ github.sha }}
-        shell: bash
+      - name: Install dependencies
         run: |
           set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
 
-          status() {
-            local sha="$1" context="$2" state="$3" description="$4"
-            curl --fail --silent --show-error -X POST \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer ${GH_TOKEN}" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${sha}" \
-              -d "{\"state\":\"${state}\",\"context\":\"${context}\",\"description\":\"${description}\"}" >/dev/null
-          }
+      - name: Verify published Biblia Emanus VT source
+        run: |
+          set -euo pipefail
+          test ! -e docs/data/biblia-emanus/ot-source-evidence.jsonl
+          test -e docs/data/biblia-emanus/ot-source-evidence.jsonl.gz
+          python3 scripts/check-biblia-emanus-ot-publication-gate.py
+          python3 scripts/materialize-published-emanus-ot-runtime.py --check
 
-          current_phase="startup"
-          completed=0
-          trap 'rc=$?; if [ "$completed" -ne 1 ] && [ "$rc" -ne 0 ]; then safe=$(echo "$current_phase" | tr -cd "[:alnum:]_-"); status "$PRE_SHA" "vt/emanus-final-integration" failure "failed during $current_phase"; status "$PRE_SHA" "vt/error-$safe" failure "$current_phase failed"; fi' EXIT
+      - name: Verify 39-book explained VT and source fidelity
+        run: |
+          set -euo pipefail
+          pnpm check:vt-explained
+          pnpm check:vt-legacy-provenance
+          pnpm check:vt-poonen-fidelity
+          pnpm check:vt-chapter-review
+          pnpm check:vt-publication
 
-          phase() {
-            current_phase="$1"
-            status "$PRE_SHA" "vt/emanus-sync-stage" pending "$2"
-          }
+      - name: Typecheck and build reader packages
+        run: |
+          set -euo pipefail
+          pnpm --filter @emanus/shared typecheck
+          pnpm --filter @emanus/shared build
+          pnpm --filter @emanus/web typecheck
 
-          die() {
-            echo "ERROR: $1" >&2
-            status "$PRE_SHA" "vt/emanus-final-integration" failure "$1"
-            exit 1
-          }
-
-          run_gate() {
-            local key="$1" label="$2" command="$3" log="/tmp/${1}.log"
-            phase "$key" "$label"
-            set +e
-            bash -lc "$command" >"$log" 2>&1
-            rc=$?
-            set -e
-            cat "$log"
-            if [ "$rc" -ne 0 ]; then
-              line=$(grep -E -m1 'Error:|error TS[0-9]+|EROARE|AssertionError|Traceback|ERR_PNPM|does not exist|Cannot find|lipsește|invalid|mismatch' "$log" || tail -n 1 "$log")
-              safe=$(echo "$line" | tr '\n\r' '  ' | sed -E 's/[^[:alnum:]_.()\/-]+/_/g' | cut -c1-70)
-              status "$PRE_SHA" "vt/fail-$key" failure "$label failed"
-              status "$PRE_SHA" "vt/diag-$safe" failure "first diagnostic"
-              exit "$rc"
-            fi
-            status "$PRE_SHA" "vt/pass-$key" success "$label passed"
-          }
-
-          status "$PRE_SHA" "vt/emanus-final-integration" pending "syncing PR85 with published Emanus VT"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          phase fetch-main "fetching main with PR87"
+      - name: Verify clean diff and main mergeability
+        run: |
+          set -euo pipefail
+          git diff --check
           git fetch origin main:refs/remotes/origin/main
-          git merge-base --is-ancestor 9d40cd53643d1568f8c806645d9b576f6c70b961 origin/main || die "main missing published VT commit"
-
-          phase merge-main "merging current main"
-          set +e
-          git merge --no-commit --no-ff origin/main >/tmp/merge.log 2>&1
-          merge_rc=$?
-          set -e
-          if [ "$merge_rc" -ne 0 ]; then
-            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
-            unexpected=()
-            for path in "${conflicts[@]}"; do
-              case "$path" in
-                docs/data/biblia-emanus/*|docs/data/biblia-emanus-candidates/*|docs/biblia-emanus/*|.github/workflows/ci.yml|.github/workflows/review-ot-source-evidence.yml|scripts/*biblia-emanus*|scripts/test_biblia_emanus*|package.json)
-                  git checkout --theirs -- "$path"; git add "$path" ;;
-                apps/web/src/screens/Bible.tsx|packages/shared/package.json|.github/workflows/vt-explanation-review.yml)
-                  git checkout --ours -- "$path"; git add "$path" ;;
-                *) unexpected+=("$path") ;;
-              esac
-            done
-            if [ "${#unexpected[@]}" -ne 0 ]; then
-              for p in "${unexpected[@]}"; do safe=$(echo "$p" | sed -E 's/[^[:alnum:]_.-]+/_/g' | cut -c1-60); status "$PRE_SHA" "vt/conflict-$safe" failure "unexpected merge conflict"; done
-              die "unexpected merge conflicts"
-            fi
-          fi
-          [ -z "$(git diff --name-only --diff-filter=U)" ] || die "unresolved merge conflicts"
-
-          phase canonical-sync "copying canonical VT exactly from main"
-          if [ -d docs/data/biblia-emanus ]; then git rm -r -f docs/data/biblia-emanus >/dev/null; fi
-          git checkout origin/main -- docs/data/biblia-emanus
-          git add docs/data/biblia-emanus
-          test ! -e docs/data/biblia-emanus/ot-source-evidence.jsonl || die "raw 53 MB JSONL present"
-          test -e docs/data/biblia-emanus/ot-source-evidence.jsonl.gz || die "gzip evidence missing"
-
-          phase runtime-config "configuring final Emanus runtime"
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          p=Path('package.json'); d=json.loads(p.read_text()); s=d.setdefault('scripts', {})
-          s.update({
-            'materialize:vt-emanus-runtime':'python3 scripts/materialize-published-emanus-ot-runtime.py',
-            'check:vt-explained':'python3 scripts/check-vt-explained-coverage.py',
-            'check:vt-legacy-provenance':'pnpm build:shared && node scripts/check-vt-legacy-provenance.mjs',
-            'check:vt-poonen-fidelity':'pnpm build:shared && node scripts/check-vt-poonen-fidelity.mjs',
-            'check:vt-chapter-review':'pnpm build:shared && node scripts/check-vt-chapter-by-chapter-review.mjs',
-            'check:vt-emanus-binding':'python3 scripts/materialize-published-emanus-ot-runtime.py --check && pnpm build:shared && node scripts/check-vt-emanus-binding.mjs',
-            'check:vt-publication':'python3 scripts/materialize-published-emanus-ot-runtime.py --check && pnpm build:shared && node scripts/check-vt-emanus-binding.mjs',
-          }); p.write_text(json.dumps(d, ensure_ascii=False, indent=2)+'\n')
-          p=Path('packages/shared/package.json'); d=json.loads(p.read_text()); d.setdefault('exports', {})['./bible-publication']={'types':'./dist/bible/publicationBibleFinal.d.ts','default':'./dist/bible/publicationBibleFinal.js'}; p.write_text(json.dumps(d, ensure_ascii=False, indent=2)+'\n')
-          PY
-          git add package.json packages/shared/package.json
-
-          phase materialization "materializing 39 books / 929 chapters / 23145 verses"
-          python3 scripts/materialize-published-emanus-ot-runtime.py
-          git add packages/shared/src/bible/generated/publishedEmanusOtText.ts
-
-          run_gate dependencies "pnpm install" "corepack enable && corepack prepare pnpm@9.7.0 --activate && pnpm install --frozen-lockfile"
-          run_gate vt-source "PR87 VT publication gate" "python3 scripts/check-biblia-emanus-ot-publication-gate.py"
-          run_gate explained "check:vt-explained" "pnpm check:vt-explained"
-          run_gate legacy "check:vt-legacy-provenance" "pnpm check:vt-legacy-provenance"
-          run_gate fidelity "check:vt-poonen-fidelity" "pnpm check:vt-poonen-fidelity"
-          run_gate chapters "check:vt-chapter-review" "pnpm check:vt-chapter-review"
-          run_gate publication "check:vt-publication / final Emanus binding" "pnpm check:vt-publication"
-          run_gate shared-typecheck "shared TypeScript typecheck" "pnpm --filter @emanus/shared typecheck"
-          run_gate shared-build "shared build" "pnpm --filter @emanus/shared build"
-          run_gate web-typecheck "web TypeScript typecheck" "pnpm --filter @emanus/web typecheck"
-          run_gate diff "git diff --check" "git diff --check && git diff --cached --check"
-
-          git add -A
-          phase git-commit "creating validated merge commit"
-          set +e
-          git commit --no-verify -m "Bind explained VT to published Biblia Emanus" >/tmp/vt-commit.log 2>&1
-          commit_rc=$?
-          set -e
-          cat /tmp/vt-commit.log
-          if [ "$commit_rc" -ne 0 ]; then
-            if grep -qiE 'nothing to commit|nothing added to commit' /tmp/vt-commit.log; then
-              echo "No new commit needed."
-            else
-              line=$(tail -n 2 /tmp/vt-commit.log | tr '\n\r' '  ' | sed -E 's/[^[:alnum:]_.()\/-]+/_/g' | cut -c1-70)
-              status "$PRE_SHA" "vt/fail-git-commit" failure "git commit failed"
-              status "$PRE_SHA" "vt/diag-$line" failure "commit diagnostic"
-              exit "$commit_rc"
-            fi
-          fi
-
-          final_sha=$(git rev-parse HEAD)
-          phase git-push "pushing validated integration branch"
-          if [ "$final_sha" != "$PRE_SHA" ]; then
-            set +e
-            git push origin HEAD:agent/biblia-explicata-vt-integration-clean >/tmp/vt-push.log 2>&1
-            push_rc=$?
-            set -e
-            cat /tmp/vt-push.log
-            if [ "$push_rc" -ne 0 ]; then
-              line=$(tail -n 3 /tmp/vt-push.log | tr '\n\r' '  ' | sed -E 's/[^[:alnum:]_.()\/-]+/_/g' | cut -c1-70)
-              status "$PRE_SHA" "vt/fail-git-push" failure "git push failed"
-              status "$PRE_SHA" "vt/diag-$line" failure "push diagnostic"
-              exit "$push_rc"
-            fi
-          fi
-
-          for item in \
-            "vt/check-explained:39/39 explanation coverage passed" \
-            "vt/legacy-provenance:legacy provenance passed" \
-            "vt/poonen-fidelity:Poonen fidelity passed" \
-            "vt/chapter-review:929/929 explanation chapters passed" \
-            "vt/publication:published Emanus VT binding passed" \
-            "vt/emanus-binding:39 books 929 chapters 23145 verses bound" \
-            "vt/shared-typecheck:shared typecheck passed" \
-            "vt/shared-build:shared build passed" \
-            "vt/web-typecheck:web typecheck passed" \
-            "vt/diff-check:diff check passed" \
-            "vt/emanus-final-integration:main VT integrated without canonical edits"; do
-            context=${item%%:*}; description=${item#*:}; status "$final_sha" "$context" success "$description"
-          done
-          status "$final_sha" "vt/emanus-sync-stage" success "final Emanus VT runtime ready"
-          status "$PRE_SHA" "vt/emanus-final-integration" success "published Emanus VT integrated and validated"
-          completed=1
+          git diff --check origin/main...HEAD
+          git merge-tree --write-tree HEAD origin/main >/dev/null
