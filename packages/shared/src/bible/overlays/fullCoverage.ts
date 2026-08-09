@@ -39,6 +39,7 @@ import { ZAHARIA_EXPLAINED as ZAHARIA_BASE } from "./zahariaOverlay.js"
 import { MALEAHI_EXPLAINED as MALEAHI_BASE } from "./maleahiOverlay.js"
 import { guardOverlayPublicAttribution } from "./publicCopyAttributionGuard.js"
 import { applyUltraFinalSourceFirstReview } from "./ultraFinalSourceFirstReview.js"
+import { applyVerifiedUltraFinalPoonenOverrides } from "./verifiedUltraFinalPoonenOverrides.js"
 
 function full(
   base: Parameters<typeof completeOverlayCoverage>[0],
@@ -58,7 +59,8 @@ function full(
 
   const completed = completeOverlayCoverage(base, data.verseCounts, data.narratives)
   const sourceFirstReviewed = applyUltraFinalSourceFirstReview(completed)
-  const reviewed = assertVerseCompleteOverlay(sourceFirstReviewed, data.verseCounts)
+  const sourceVerified = applyVerifiedUltraFinalPoonenOverrides(sourceFirstReviewed)
+  const reviewed = assertVerseCompleteOverlay(sourceVerified, data.verseCounts)
   const readerSafe = guardOverlayPublicAttribution(reviewed)
 
   // Acesta este statusul stratului explicativ, nu al traducerii biblice.
