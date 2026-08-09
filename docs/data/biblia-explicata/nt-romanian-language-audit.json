@@ -2,8 +2,8 @@
   "schema": "emanus-nt-romanian-language-audit-v2",
   "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
-  "count": 1898,
-  "findingGroups": 1268,
+  "count": 1905,
+  "findingGroups": 1275,
   "findings": [
     {
       "bookId": "matei",
@@ -12528,8 +12528,48 @@
     {
       "bookId": "1-timotei",
       "book": "1 Timotei",
+      "chapter": 1,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-timotei",
+      "book": "1 Timotei",
+      "chapter": 1,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-timotei",
+      "book": "1 Timotei",
       "chapter": 3,
       "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-timotei",
+      "book": "1 Timotei",
+      "chapter": 3,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-timotei",
+      "book": "1 Timotei",
+      "chapter": 3,
+      "field": "units[2].heading",
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",
@@ -12539,10 +12579,30 @@
       "bookId": "2-timotei",
       "book": "2 Timotei",
       "chapter": 1,
-      "field": "units[0].teaching",
+      "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-timotei",
+      "book": "2 Timotei",
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-timotei",
+      "book": "2 Timotei",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "si",
+      "expected": "și",
       "occurrences": 1
     },
     {
@@ -12599,7 +12659,17 @@
       "bookId": "3-ioan",
       "book": "3 Ioan",
       "chapter": 1,
-      "field": "units[0].teaching",
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "iuda",
+      "book": "Iuda",
+      "chapter": 1,
+      "field": "units[4].teaching",
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",

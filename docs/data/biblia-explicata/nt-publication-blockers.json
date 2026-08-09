@@ -7,15 +7,15 @@
     "blockerClasses": 7,
     "books": 27,
     "chapters": 260,
-    "units": 839,
-    "wholeChapterSummaryUnits": 66,
+    "units": 875,
+    "wholeChapterSummaryUnits": 53,
     "thinUnits": 42,
     "emptyHeadings": 2,
-    "missingSourceAnchors": 828,
+    "missingSourceAnchors": 815,
     "rawEditorialFindings": 96,
     "unresolvedEditorialFindings": 0,
-    "embeddedQuoteFindings": 122,
-    "romanianLanguageFindings": 1898,
+    "embeddedQuoteFindings": 121,
+    "romanianLanguageFindings": 1905,
     "lexiconFindings": 0
   },
   "blockers": [
@@ -28,59 +28,9 @@
     },
     {
       "id": "whole-chapter-summary-units",
-      "count": 66,
-      "message": "66 rebuilt chapters are still one whole-chapter unit.",
+      "count": 53,
+      "message": "53 rebuilt chapters are still one whole-chapter unit.",
       "examples": [
-        {
-          "bookId": "1-timotei",
-          "chapter": 1,
-          "ref": "1 Timotei 1:1-20"
-        },
-        {
-          "bookId": "1-timotei",
-          "chapter": 2,
-          "ref": "1 Timotei 2:1-15"
-        },
-        {
-          "bookId": "1-timotei",
-          "chapter": 3,
-          "ref": "1 Timotei 3:1-16"
-        },
-        {
-          "bookId": "1-timotei",
-          "chapter": 4,
-          "ref": "1 Timotei 4:1-16"
-        },
-        {
-          "bookId": "1-timotei",
-          "chapter": 5,
-          "ref": "1 Timotei 5:1-25"
-        },
-        {
-          "bookId": "1-timotei",
-          "chapter": 6,
-          "ref": "1 Timotei 6:1-21"
-        },
-        {
-          "bookId": "2-timotei",
-          "chapter": 1,
-          "ref": "2 Timotei 1:1-18"
-        },
-        {
-          "bookId": "2-timotei",
-          "chapter": 2,
-          "ref": "2 Timotei 2:1-26"
-        },
-        {
-          "bookId": "2-timotei",
-          "chapter": 3,
-          "ref": "2 Timotei 3:1-17"
-        },
-        {
-          "bookId": "2-timotei",
-          "chapter": 4,
-          "ref": "2 Timotei 4:1-22"
-        },
         {
           "bookId": "evrei",
           "chapter": 1,
@@ -130,6 +80,56 @@
           "bookId": "evrei",
           "chapter": 10,
           "ref": "Evrei 10:1-39"
+        },
+        {
+          "bookId": "evrei",
+          "chapter": 11,
+          "ref": "Evrei 11:1-40"
+        },
+        {
+          "bookId": "evrei",
+          "chapter": 12,
+          "ref": "Evrei 12:1-29"
+        },
+        {
+          "bookId": "evrei",
+          "chapter": 13,
+          "ref": "Evrei 13:1-25"
+        },
+        {
+          "bookId": "iacov",
+          "chapter": 1,
+          "ref": "Iacov 1:1-27"
+        },
+        {
+          "bookId": "iacov",
+          "chapter": 2,
+          "ref": "Iacov 2:1-26"
+        },
+        {
+          "bookId": "iacov",
+          "chapter": 3,
+          "ref": "Iacov 3:1-18"
+        },
+        {
+          "bookId": "iacov",
+          "chapter": 4,
+          "ref": "Iacov 4:1-17"
+        },
+        {
+          "bookId": "iacov",
+          "chapter": 5,
+          "ref": "Iacov 5:1-20"
+        },
+        {
+          "bookId": "1-petru",
+          "chapter": 1,
+          "ref": "1 Petru 1:1-25"
+        },
+        {
+          "bookId": "1-petru",
+          "chapter": 2,
+          "ref": "1 Petru 2:1-25"
         }
       ]
     },
@@ -279,8 +279,8 @@
     },
     {
       "id": "missing-source-anchors",
-      "count": 828,
-      "message": "828/839 units lack reproducible sourceAnchors.",
+      "count": 815,
+      "message": "815/875 units lack reproducible sourceAnchors.",
       "examples": [
         {
           "bookId": "matei",
@@ -386,13 +386,13 @@
     },
     {
       "id": "embedded-quote-audit",
-      "count": 122,
+      "count": 121,
       "message": "embedded quote audit is manual-source-check-required.",
       "status": "manual-source-check-required"
     },
     {
       "id": "romanian-language-audit",
-      "count": 1898,
+      "count": 1905,
       "message": "Romanian language audit is manual-edit-required.",
       "status": "manual-edit-required"
     }
