@@ -1,235 +1,652 @@
 {
-  "schema": "emanus-nt-romanian-language-audit-v2",
+  "schema": "emanus-nt-romanian-language-audit-v3",
   "status": "manual-edit-required",
-  "policy": "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
-  "count": 481,
-  "findingGroups": 433,
+  "policy": "Reader-facing Romanian must use standard diacritics. Audit contexts support deterministic grammar-aware review; automatic fixes remain limited to unambiguous forms or explicitly reviewed contextual rules.",
+  "count": 240,
+  "findingGroups": 206,
   "tokenSummary": [
-    {
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 235,
-      "groups": 221
-    },
     {
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 62,
-      "groups": 45
+      "groups": 45,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "literaryContext",
+          "context": "…i. Mai întâi, prologul arata cine este Isus: Cuvântul, viata, lumina, Singurul născut din Tatăl. Apoi, de la verset…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].heading",
+          "context": "Cuvântul, viata și lumina"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].teaching",
+          "context": "…partea făpturii. Și mai ia aminte la legatura dintre viata și lumina. În El era viata; nu doar darul vieții, ci i…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].forYourHeart",
+          "context": "…ui n-a fost biruita de întuneric, nici intunericul din viata ta nu este mai tare decât El."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].words[1].meaning",
+          "context": "viata. La Ioan, nu numai suflare biologica, ci viata deplina…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[3].teaching",
+          "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlauntru."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "prayer",
+          "context": "…Intoarce-ne ochii spre Fiul inaltat, ca sa nu cautam viata în noi insine. Acolo unde iubim intunericul, adu-ne la…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "units[1].teaching",
+          "context": "…ezeu, apoi darul Fiului, apoi chemarea credintei, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "units[2].teaching",
+          "context": "…oan, ci cu chemarea fata de Fiul: cine crede în El are viata vesnica. Cine Îl refuza nu rămâne neutru, ci sub mania…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[0].teaching",
+          "context": "…vine sa fim cinstiti cu noi insine: omul poate merge o viata intreaga la aceeași fantana, repetand aceleasi drumuri…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[0].forYourHeart",
+          "context": "…poate intalni tocmai în locul repetitiilor obosite din viata ta. El nu Se sperie nici de setea ta, nici de trecutul…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[2].words[1].meaning",
+          "context": "…ieste. Cuvânt scurt și puternic prin care Domnul aduce viata și mangaiere."
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
       "occurrences": 49,
-      "groups": 42
+      "groups": 42,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "summary",
+          "context": "Capitolul întâi Îl arata pe Domnul Isus ca pe Cuvântul veșnic, Lumina adevarata…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "literaryContext",
+          "context": "…apitolul sta în două mișcări mari. Mai întâi, prologul arata cine este Isus: Cuvântul, viata, lumina, Singurul născ…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].words[2].meaning",
+          "context": "lumina. Ceea ce descoperă, curata și arata drumul."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[1].teaching",
+          "context": "…ui Dumnezeu, omul nu este izvorul luminii, ci cel care arata spre ea. Apoi vine una dintre cele mai dureroase prop…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[2].teaching",
+          "context": "…oi. Cuvântul acesta suna ca asezarea cortului. Ioan ne arata astfel ca în Isus Dumnezeu a venit sa locuiasca în mij…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[2].words[0].meaning",
+          "context": "trup, carne. Aici arata omenitatea adevarata asumata de Fiul."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[2].words[2].meaning",
+          "context": "singurul născut, unicul de acest fel. Arata unicitatea Fiului fata de Tatăl."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "summary",
+          "context": "Capitolul al doilea arata inceputul semnelor Domnului Isus la nunta din Cana, ap…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "literaryContext",
+          "context": "…sta în trei mișcări. Mai întâi, la Cana, slava Lui se arata în taina unui sat și în bucuria unei case. Apoi, la Ie…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[0].teaching",
+          "context": "…vie și cu masura. Domnul nu o cinsteste mai putin, dar arata ca lucrarea Lui nu este condusa nici de apropierea de…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[0].words[0].meaning",
+          "context": "semn. La Ioan, nu minune goala, ci lucrare care arata cine este Isus."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[1].words[1].meaning",
+          "context": "templu. În vorba Domnului de aici, Ioan arata ca se refera la trupul Sau."
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 44,
-      "groups": 37
+      "groups": 37,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].forYourHeart",
+          "context": "…Domnul Isus este Cuvântul care era la început, atunci credinta nu se sprijina pe o emotie trecatoare, ci pe Cel ce er…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[1].teaching",
+          "context": "…ca l-au cumparat prin ravna lor. L-au primit. La Ioan, credinta nu este o plata adusa lui Dumnezeu, ci mana intinsa ca…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[4].teaching",
+          "context": "…Și ia aminte la raspunsul Domnului: Veniti de vedeti. Credinta nu începe cu un tratat rece, ci cu apropierea de Perso…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "summary",
+          "context": "…in Cana, apoi curatirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "prayer",
+          "context": "…este în om. Cerceteaza-ne cu adevăr și atrage-ne la o credinta mai adanca, mai curata și mai smerita. Amin."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[0].teaching",
+          "context": "…Nu inseamna ca pana atunci nu avusesera niciun fel de credinta, ci ca prin semnul acesta credinta lor a fost adancita…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].teaching",
+          "context": "…ea în ei. Ioan foloseste aproape acelasi cuvânt pentru credinta lor și pentru increderea pe care El nu Și-o pune în ei…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].forYourHeart",
+          "context": "…decât oricine și totusi nu-ti inchide drumul spre El. Credinta adevarata începe cand omul inceteaza sa mai joace un r…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].words[0].meaning",
+          "context": "a crede, a se increde. Acelasi verb arata aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "historicalContext",
+          "context": "…spre pustie și spre vindecarea primita prin privire și credinta. Iar la sfarsit, vorbele lui Ioan Botezătorul se roste…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "title",
+          "context": "Ioan 4 — Apa vie, secerisul și credinta care se sprijina pe cuvânt"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "summary",
+          "context": "…hinarea în duh și în adevăr, aduce multi samariteni la credinta și vindeca de departe pe fiul unui slujbas imparatesc."
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 29,
-      "groups": 29
+      "groups": 29,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "summary",
+          "context": "…Îl arata pe Domnul Isus ca pe Cuvântul veșnic, Lumina adevarata și Fiul lui Dumnezeu, apoi urmărește mărturia lui Ioan…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "prayer",
+          "context": "…a: Veniti de vedeti, cheama-ne și pe noi la o ramanere adevarata cu Tine. Amin."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].teaching",
+          "context": "…eea venirea lui Hristos nu este doar ajutor, ci lumina adevarata pentru omul care nu mai vede drumul spre Tatăl. La ur…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[2].words[0].meaning",
+          "context": "trup, carne. Aici arata omenitatea adevarata asumata de Fiul."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[4].teaching",
+          "context": "…venit, au vazut și au ramas la El. Asa începe ucenicia adevarata: omul vine, vede și rămâne. De acolo, mărturia curge…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[1].teaching",
+          "context": "…l vorbea despre templul trupului Sau. Cu alte cuvinte, adevarata intalnire dintre Dumnezeu și om nu se va mai odihni în…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].teaching",
+          "context": "…i de puterea vazuta, care inca nu a ajuns la zdrobirea adevarata inaintea Fiului. Domnul nu dispretuieste omul aflat la…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].forYourHeart",
+          "context": "…icine și totusi nu-ti inchide drumul spre El. Credinta adevarata începe cand omul inceteaza sa mai joace un rol inainte…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "literaryContext",
+          "context": "…din Cana. Peste toate se aude o tema comuna: credinta adevarata nu se hraneste numai din uimire, ci se sprijina pe Per…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[0].teaching",
+          "context": "…uta la Tatăl. Asta este o schimbare uriasa. Inchinarea adevarata nu se va masura prin geografie, ci prin adevarul cu ca…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[2].words[0].meaning",
+          "context": "a crede, a se increde. La Ioan, credinta adevarata se sprijina pe Fiul și pe cuvântul Lui."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 5,
+          "field": "units[0].words[1].meaning",
+          "context": "…a odihnei, aici devenita loc de conflict cu privire la adevarata ei implinire."
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
+      "expected": "simplă / simpla",
       "occurrences": 21,
-      "groups": 19
+      "groups": 19,
+      "samples": [
+        {
+          "bookId": "matei",
+          "chapter": 4,
+          "field": "units[0].teaching",
+          "context": "…ceea un verset smuls din context nu devine adevăr prin simpla citare. Cele trei scurtături sunt încă înaintea omulu…"
+        },
+        {
+          "bookId": "matei",
+          "chapter": 5,
+          "field": "units[2].teaching",
+          "context": "…duce la har, apoi harul ne învață o ascultare pe care simpla aparență nu o poate produce."
+        },
+        {
+          "bookId": "matei",
+          "chapter": 12,
+          "field": "units[4].teaching",
+          "context": "…ata. Imaginea duhului care se întoarce avertizează că simpla curățare exterioară lasă casa goală. Reforma fără prez…"
+        },
+        {
+          "bookId": "matei",
+          "chapter": 23,
+          "field": "units[0].teaching",
+          "context": "…saluturi, titluri și primele locuri. Problema nu este simpla folosire a unui cuvânt de respect, ci construirea unei…"
+        },
+        {
+          "bookId": "matei",
+          "chapter": 28,
+          "field": "units[0].teaching",
+          "context": "…cum spusese. Învierea este trupească și istorică, nu simpla continuare a influenței lui Isus în memoria ucenicilor…"
+        },
+        {
+          "bookId": "marcu",
+          "chapter": 12,
+          "field": "units[1].teaching",
+          "context": "…ripturile, nici puterea lui Dumnezeu. Învierea nu este simpla continuare a rânduielilor de acum; Dumnezeu este Dumne…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].words[0].meaning",
+          "context": "Cuvântul. Nu o simpla vorbire, ci Persoana prin care Dumnezeu Se face cunosc…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[4].teaching",
+          "context": "…us Natanael. Nu prin constrangere, ci printr-o chemare simpla: vino și vezi. La urma, Domnul Isus își spune numele…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[0].forYourHeart",
+          "context": "…sa-Și arate slava și sa te aseze intr-o ascultare mai simpla și mai adanca."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].words[1].meaning",
+          "context": "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "historicalContext",
+          "context": "…la Cana arata ca chemarea lui Hristos atinge și lumea simpla, și casa celui cu rang."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 8,
+          "field": "units[1].words[0].meaning",
+          "context": "adevăr. La Ioan, adevăr viu și mantuitor, nu simpla informatie."
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
       "occurrences": 17,
-      "groups": 16
+      "groups": 16,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "prayer",
+          "context": "…e adevăr. Lumina Ta lumineaza și astazi în întuneric. Lasa lumina aceasta sa intre și în noi, acolo unde inca ne…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].teaching",
+          "context": "…ntul. Se cuvine sa fim cinstiti cu textul. Ioan nu ne lasa loc sa coboram pe Domnul Isus la rangul unui învățător…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].teaching",
+          "context": "…nu dispretuieste omul aflat la început, dar nici nu se lasa inselat de entuziasmul de suprafata. Apoi vine una di…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[2].forYourHeart",
+          "context": "Domnul Isus nu Se lasa impresionat de masca omului, dar tocmai aici este și n…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "units[0].words[0].meaning",
+          "context": "din nou, de sus. La Ioan, cuvântul lasa sa se auda amândouă: naștere noua și naștere venita de…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "units[1].teaching",
+          "context": "…are îl stie aproape toata lumea, dar pe care putini îl lasa sa-i judece cu adevărat inima: atat de mult a iubit Du…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "units[2].teaching",
+          "context": "…ne neutru, ci sub mania lui Dumnezeu. Evanghelia nu ne lasa intr-un loc de mijloc."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[1].teaching",
+          "context": "…l nu transforma trecutul intr-o lauda, dar nici nu mai lasa rusinea sa inchida gura martorului. Domnul, intre tim…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[2].teaching",
+          "context": "…it fel în care ar trebui sa lucreze. Dar Hristos nu Se lasa inchis în asteptarile noastre. El da un cuvânt: fiul t…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 5,
+          "field": "prayer",
+          "context": "…a fără impotrivire. Și cand deschidem Scripturile, nu lasa sa ne oprim la litera fără sa venim la Tine. Da-ne via…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 5,
+          "field": "units[1].teaching",
+          "context": "…al judecatii finale. Tocmai de aceea Evanghelia nu ne lasa sa-L luam usor."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 7,
+          "field": "units[2].forYourHeart",
+          "context": "…ă Hristos aduce și tulburare în jurul tau. Adevarul nu lasa lucrurile amestecate. Și dacă esti inca la pasii mici…"
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
       "occurrences": 8,
-      "groups": 8
+      "groups": 8,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].words[2].meaning",
+          "context": "lumina. Ceea ce descoperă, curata și arata drumul."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[3].teaching",
+          "context": "…nu este lumina. În casa lui Dumnezeu, lucrarea cea mai curata este aceea care nu strange oamenii în jurul numelui no…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "prayer",
+          "context": "…e cu adevăr și atrage-ne la o credinta mai adanca, mai curata și mai smerita. Amin."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[0].teaching",
+          "context": "…nunta. Evanghelia nu intra în lume ca sa usuce bucuria curata a omului, ci sa o curateasca și sa o umple de slava lu…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 2,
+          "field": "units[1].teaching",
+          "context": "…Domn care a umplut lipsa unei case este și Domnul care curata casa Tatalui Sau. Harul Lui nu inseamna nepasare fata…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 12,
+          "field": "prayer",
+          "context": "…Ta trece prin jertfa. Invata-ne sa pretuim inchinarea curata mai mult decât socotelile inimii interesate. Da-ne ha…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 12,
+          "field": "units[0].teaching",
+          "context": "…nu orice vorba dreapta la suprafata vine dintr-o inima curata. Uneori omul foloseste chiar și cauza buna ca sa ascun…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 12,
+          "field": "units[0].forYourHeart",
+          "context": "…s nu cauta mereu cea mai eficienta imagine, ci cea mai curata inchinare. Intre calculele lui Iuda și risipa sfanta a…"
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
       "occurrences": 7,
-      "groups": 7
-    },
-    {
-      "kind": "missing-diacritics",
-      "token": "si",
-      "expected": "și",
-      "occurrences": 6,
-      "groups": 6
+      "groups": 7,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].teaching",
+          "context": "…cătorului, nu de partea făpturii. Și mai ia aminte la legatura dintre viata și lumina. În El era viata; nu doar darul…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 3,
+          "field": "units[0].teaching",
+          "context": "…tirea fagaduita de Dumnezeu și lucrarea Duhului, altii legatura stransa dintre spalare și nasterea launtrica. Lucrul l…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 4,
+          "field": "units[2].teaching",
+          "context": "…ste spre mărturia unei case. Se cuvine sa observam și legatura cu tot capitolul. Samaritenii au ajuns sa creada din p…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 6,
+          "field": "units[1].words[2].meaning",
+          "context": "a rămâne. Legatura vie și statornica dintre credincios și Hristos."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 8,
+          "field": "units[0].teaching",
+          "context": "…arele cuvânt: Eu sunt Lumina lumii. Se cuvine sa vedem legatura. Dupa o scena în care intunericul moral și religios a…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 10,
+          "field": "units[1].teaching",
+          "context": "Sa luam bine seama la legatura dintre credinta și ascultarea glasului. Domnul nu spun…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 13,
+          "field": "units[2].teaching",
+          "context": "Sa luam bine seama la legatura dintre slava și iesirea lui Iuda. Omul ar spune ca tot…"
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "biruinta",
       "expected": "biruință / biruința",
       "occurrences": 2,
-      "groups": 2
+      "groups": 2,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].teaching",
+          "context": "…pe deplin și nici nu L-a putut stinge. Crucea nu este biruinta intunericului asupra luminii, ci locul în care lumina…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 12,
+          "field": "units[1].teaching",
+          "context": "…și cruce, și slava. Lumea vede rusine, Dumnezeu arata biruinta. Stapanitorul lumii este judecat tocmai în ceasul în c…"
+        }
+      ]
     },
     {
       "kind": "missing-diacritics",
       "token": "usurinta",
       "expected": "ușurință / ușurința",
       "occurrences": 1,
-      "groups": 1
+      "groups": 1,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 1,
+          "field": "units[0].teaching",
+          "context": "Sa ne oprim aici și sa nu trecem mai departe cu usurinta. Ioan deschide Evanghelia aproape cu aceeași poarta cu…"
+        }
+      ]
     }
   ],
   "findings": [
     {
       "bookId": "matei",
       "book": "Matei",
-      "chapter": 1,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 2,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 2,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 3,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 3,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 3,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 3,
-      "field": "units[0].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 3,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 3,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 4,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 4,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
       "chapter": 4,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 4,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…ceea un verset smuls din context nu devine adevăr prin simpla citare. Cele trei scurtături sunt încă înaintea omulu…"
     },
     {
       "bookId": "matei",
@@ -238,148 +655,9 @@
       "field": "units[2].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 5,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 5,
-      "field": "units[7].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 5,
-      "field": "units[7].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 6,
-      "field": "units[3].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 7,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 7,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 7,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 7,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 7,
-      "field": "units[3].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 8,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 9,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 10,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 11,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 12,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…duce la har, apoi harul ne învață o ascultare pe care simpla aparență nu o poate produce."
     },
     {
       "bookId": "matei",
@@ -388,118 +666,9 @@
       "field": "units[4].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 13,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 14,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 16,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 18,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 19,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 21,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 21,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 21,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 21,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 22,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 22,
-      "field": "units[4].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…ata. Imaginea duhului care se întoarce avertizează că simpla curățare exterioară lasă casa goală. Reforma fără prez…"
     },
     {
       "bookId": "matei",
@@ -508,38 +677,9 @@
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 25,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 26,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "si",
-      "expected": "și",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 26,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…saluturi, titluri și primele locuri. Problema nu este simpla folosire a unui cuvânt de respect, ci construirea unei…"
     },
     {
       "bookId": "matei",
@@ -548,178 +688,9 @@
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 1,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 1,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 1,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 2,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 2,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 3,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 4,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 4,
-      "field": "units[5].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 5,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 5,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 6,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 6,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 10,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 10,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 11,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…cum spusese. Învierea este trupească și istorică, nu simpla continuare a influenței lui Isus în memoria ucenicilor…"
     },
     {
       "bookId": "marcu",
@@ -728,518 +699,9 @@
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 1,
-      "field": "units[5].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 3,
-      "field": "units[4].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 4,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 5,
-      "field": "units[3].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 5,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 6,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 7,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "si",
-      "expected": "și",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 7,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 8,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 9,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 9,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 9,
-      "field": "units[4].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 11,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 12,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 12,
-      "field": "units[5].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 13,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 13,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 13,
-      "field": "units[0].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 13,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 13,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 13,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 13,
-      "field": "units[3].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 15,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 15,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 15,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 15,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 16,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 3
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 17,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 18,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 18,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "si",
-      "expected": "și",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 19,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 19,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 19,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 20,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 22,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 22,
-      "field": "units[5].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 23,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 23,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 23,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 24,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 24,
-      "field": "units[2].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 24,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 24,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…ripturile, nici puterea lui Dumnezeu. Învierea nu este simpla continuare a rânduielilor de acum; Dumnezeu este Dumne…"
     },
     {
       "bookId": "ioan",
@@ -1249,7 +711,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Îl arata pe Domnul Isus ca pe Cuvântul veșnic, Lumina adevarata și Fiul lui Dumnezeu, apoi urmărește mărturia lui Ioan…"
     },
     {
       "bookId": "ioan",
@@ -1259,7 +722,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Capitolul întâi Îl arata pe Domnul Isus ca pe Cuvântul veșnic, Lumina adevarata…"
     },
     {
       "bookId": "ioan",
@@ -1269,7 +733,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…apitolul sta în două mișcări mari. Mai întâi, prologul arata cine este Isus: Cuvântul, viata, lumina, Singurul născ…"
     },
     {
       "bookId": "ioan",
@@ -1279,7 +744,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…i. Mai întâi, prologul arata cine este Isus: Cuvântul, viata, lumina, Singurul născut din Tatăl. Apoi, de la verset…"
     },
     {
       "bookId": "ioan",
@@ -1289,7 +755,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…a: Veniti de vedeti, cheama-ne și pe noi la o ramanere adevarata cu Tine. Amin."
     },
     {
       "bookId": "ioan",
@@ -1299,7 +766,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…e adevăr. Lumina Ta lumineaza și astazi în întuneric. Lasa lumina aceasta sa intre și în noi, acolo unde inca ne…"
     },
     {
       "bookId": "ioan",
@@ -1309,7 +777,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Cuvântul, viata și lumina"
     },
     {
       "bookId": "ioan",
@@ -1319,7 +788,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…eea venirea lui Hristos nu este doar ajutor, ci lumina adevarata pentru omul care nu mai vede drumul spre Tatăl. La ur…"
     },
     {
       "bookId": "ioan",
@@ -1329,7 +799,8 @@
       "kind": "missing-diacritics",
       "token": "usurinta",
       "expected": "ușurință / ușurința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Sa ne oprim aici și sa nu trecem mai departe cu usurinta. Ioan deschide Evanghelia aproape cu aceeași poarta cu…"
     },
     {
       "bookId": "ioan",
@@ -1339,7 +810,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ntul. Se cuvine sa fim cinstiti cu textul. Ioan nu ne lasa loc sa coboram pe Domnul Isus la rangul unui învățător…"
     },
     {
       "bookId": "ioan",
@@ -1349,7 +821,8 @@
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…cătorului, nu de partea făpturii. Și mai ia aminte la legatura dintre viata și lumina. În El era viata; nu doar darul…"
     },
     {
       "bookId": "ioan",
@@ -1359,7 +832,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 3
+      "occurrences": 3,
+      "context": "…partea făpturii. Și mai ia aminte la legatura dintre viata și lumina. În El era viata; nu doar darul vieții, ci i…"
     },
     {
       "bookId": "ioan",
@@ -1369,7 +843,8 @@
       "kind": "missing-diacritics",
       "token": "biruinta",
       "expected": "biruință / biruința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…pe deplin și nici nu L-a putut stinge. Crucea nu este biruinta intunericului asupra luminii, ci locul în care lumina…"
     },
     {
       "bookId": "ioan",
@@ -1379,7 +854,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Domnul Isus este Cuvântul care era la început, atunci credinta nu se sprijina pe o emotie trecatoare, ci pe Cel ce er…"
     },
     {
       "bookId": "ioan",
@@ -1389,7 +865,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ui n-a fost biruita de întuneric, nici intunericul din viata ta nu este mai tare decât El."
     },
     {
       "bookId": "ioan",
@@ -1398,8 +875,9 @@
       "field": "units[0].words[0].meaning",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "Cuvântul. Nu o simpla vorbire, ci Persoana prin care Dumnezeu Se face cunosc…"
     },
     {
       "bookId": "ioan",
@@ -1409,7 +887,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "viata. La Ioan, nu numai suflare biologica, ci viata deplina…"
     },
     {
       "bookId": "ioan",
@@ -1419,7 +898,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "lumina. Ceea ce descoperă, curata și arata drumul."
     },
     {
       "bookId": "ioan",
@@ -1429,7 +909,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "lumina. Ceea ce descoperă, curata și arata drumul."
     },
     {
       "bookId": "ioan",
@@ -1439,7 +920,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ca l-au cumparat prin ravna lor. L-au primit. La Ioan, credinta nu este o plata adusa lui Dumnezeu, ci mana intinsa ca…"
     },
     {
       "bookId": "ioan",
@@ -1449,7 +931,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ui Dumnezeu, omul nu este izvorul luminii, ci cel care arata spre ea. Apoi vine una dintre cele mai dureroase prop…"
     },
     {
       "bookId": "ioan",
@@ -1459,7 +942,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…oi. Cuvântul acesta suna ca asezarea cortului. Ioan ne arata astfel ca în Isus Dumnezeu a venit sa locuiasca în mij…"
     },
     {
       "bookId": "ioan",
@@ -1469,7 +953,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "trup, carne. Aici arata omenitatea adevarata asumata de Fiul."
     },
     {
       "bookId": "ioan",
@@ -1479,7 +964,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "trup, carne. Aici arata omenitatea adevarata asumata de Fiul."
     },
     {
       "bookId": "ioan",
@@ -1489,7 +975,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "singurul născut, unicul de acest fel. Arata unicitatea Fiului fata de Tatăl."
     },
     {
       "bookId": "ioan",
@@ -1499,7 +986,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlauntru."
     },
     {
       "bookId": "ioan",
@@ -1509,7 +997,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…nu este lumina. În casa lui Dumnezeu, lucrarea cea mai curata este aceea care nu strange oamenii în jurul numelui no…"
     },
     {
       "bookId": "ioan",
@@ -1519,7 +1008,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Și ia aminte la raspunsul Domnului: Veniti de vedeti. Credinta nu începe cu un tratat rece, ci cu apropierea de Perso…"
     },
     {
       "bookId": "ioan",
@@ -1529,7 +1019,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…venit, au vazut și au ramas la El. Asa începe ucenicia adevarata: omul vine, vede și rămâne. De acolo, mărturia curge…"
     },
     {
       "bookId": "ioan",
@@ -1538,8 +1029,9 @@
       "field": "units[4].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…us Natanael. Nu prin constrangere, ci printr-o chemare simpla: vino și vezi. La urma, Domnul Isus își spune numele…"
     },
     {
       "bookId": "ioan",
@@ -1549,7 +1041,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…in Cana, apoi curatirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
     },
     {
       "bookId": "ioan",
@@ -1559,7 +1052,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Capitolul al doilea arata inceputul semnelor Domnului Isus la nunta din Cana, ap…"
     },
     {
       "bookId": "ioan",
@@ -1569,7 +1063,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…sta în trei mișcări. Mai întâi, la Cana, slava Lui se arata în taina unui sat și în bucuria unei case. Apoi, la Ie…"
     },
     {
       "bookId": "ioan",
@@ -1579,7 +1074,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…este în om. Cerceteaza-ne cu adevăr și atrage-ne la o credinta mai adanca, mai curata și mai smerita. Amin."
     },
     {
       "bookId": "ioan",
@@ -1589,7 +1085,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…e cu adevăr și atrage-ne la o credinta mai adanca, mai curata și mai smerita. Amin."
     },
     {
       "bookId": "ioan",
@@ -1599,7 +1096,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…Nu inseamna ca pana atunci nu avusesera niciun fel de credinta, ci ca prin semnul acesta credinta lor a fost adancita…"
     },
     {
       "bookId": "ioan",
@@ -1609,7 +1107,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…vie și cu masura. Domnul nu o cinsteste mai putin, dar arata ca lucrarea Lui nu este condusa nici de apropierea de…"
     },
     {
       "bookId": "ioan",
@@ -1619,7 +1118,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…nunta. Evanghelia nu intra în lume ca sa usuce bucuria curata a omului, ci sa o curateasca și sa o umple de slava lu…"
     },
     {
       "bookId": "ioan",
@@ -1628,8 +1128,9 @@
       "field": "units[0].forYourHeart",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…sa-Și arate slava și sa te aseze intr-o ascultare mai simpla și mai adanca."
     },
     {
       "bookId": "ioan",
@@ -1639,7 +1140,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "semn. La Ioan, nu minune goala, ci lucrare care arata cine este Isus."
     },
     {
       "bookId": "ioan",
@@ -1649,7 +1151,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…l vorbea despre templul trupului Sau. Cu alte cuvinte, adevarata intalnire dintre Dumnezeu și om nu se va mai odihni în…"
     },
     {
       "bookId": "ioan",
@@ -1659,7 +1162,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Domn care a umplut lipsa unei case este și Domnul care curata casa Tatalui Sau. Harul Lui nu inseamna nepasare fata…"
     },
     {
       "bookId": "ioan",
@@ -1669,7 +1173,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "templu. În vorba Domnului de aici, Ioan arata ca se refera la trupul Sau."
     },
     {
       "bookId": "ioan",
@@ -1679,7 +1184,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…ea în ei. Ioan foloseste aproape acelasi cuvânt pentru credinta lor și pentru increderea pe care El nu Și-o pune în ei…"
     },
     {
       "bookId": "ioan",
@@ -1689,7 +1195,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…i de puterea vazuta, care inca nu a ajuns la zdrobirea adevarata inaintea Fiului. Domnul nu dispretuieste omul aflat la…"
     },
     {
       "bookId": "ioan",
@@ -1699,7 +1206,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ia ce este în om. Nu doar ce spune omul, nici numai ce arata în clipa aceea, ci ce este în om. De aceea Evanghelia…"
     },
     {
       "bookId": "ioan",
@@ -1709,7 +1217,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…nu dispretuieste omul aflat la început, dar nici nu se lasa inselat de entuziasmul de suprafata. Apoi vine una di…"
     },
     {
       "bookId": "ioan",
@@ -1719,7 +1228,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…decât oricine și totusi nu-ti inchide drumul spre El. Credinta adevarata începe cand omul inceteaza sa mai joace un r…"
     },
     {
       "bookId": "ioan",
@@ -1729,7 +1239,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…icine și totusi nu-ti inchide drumul spre El. Credinta adevarata începe cand omul inceteaza sa mai joace un rol inainte…"
     },
     {
       "bookId": "ioan",
@@ -1739,7 +1250,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Domnul Isus nu Se lasa impresionat de masca omului, dar tocmai aici este și n…"
     },
     {
       "bookId": "ioan",
@@ -1749,7 +1261,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a crede, a se increde. Acelasi verb arata aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
     },
     {
       "bookId": "ioan",
@@ -1759,7 +1272,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a crede, a se increde. Acelasi verb arata aici și credinta oamenilor, și faptul ca Isus nu Se in…"
     },
     {
       "bookId": "ioan",
@@ -1768,8 +1282,9 @@
       "field": "units[2].words[1].meaning",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie."
     },
     {
       "bookId": "ioan",
@@ -1779,7 +1294,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…rturia deschisa despre Fiul. Mai întâi, Domnul Isus ii arata lui Nicodim ca problema omului nu este lipsa de inform…"
     },
     {
       "bookId": "ioan",
@@ -1789,7 +1305,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…spre pustie și spre vindecarea primita prin privire și credinta. Iar la sfarsit, vorbele lui Ioan Botezătorul se roste…"
     },
     {
       "bookId": "ioan",
@@ -1799,7 +1316,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Intoarce-ne ochii spre Fiul inaltat, ca sa nu cautam viata în noi insine. Acolo unde iubim intunericul, adu-ne la…"
     },
     {
       "bookId": "ioan",
@@ -1809,7 +1327,8 @@
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…tirea fagaduita de Dumnezeu și lucrarea Duhului, altii legatura stransa dintre spalare și nasterea launtrica. Lucrul l…"
     },
     {
       "bookId": "ioan",
@@ -1819,7 +1338,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "din nou, de sus. La Ioan, cuvântul lasa sa se auda amândouă: naștere noua și naștere venita de…"
     },
     {
       "bookId": "ioan",
@@ -1829,7 +1349,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ul Lui lasa omul în ceea ce era deja. La urma, Domnul arata radacina adanca a impotrivirii: oamenii au iubit mai m…"
     },
     {
       "bookId": "ioan",
@@ -1839,7 +1360,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…are îl stie aproape toata lumea, dar pe care putini îl lasa sa-i judece cu adevărat inima: atat de mult a iubit Du…"
     },
     {
       "bookId": "ioan",
@@ -1849,7 +1371,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ezeu, apoi darul Fiului, apoi chemarea credintei, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
     },
     {
       "bookId": "ioan",
@@ -1859,7 +1382,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ne neutru, ci sub mania lui Dumnezeu. Evanghelia nu ne lasa intr-un loc de mijloc."
     },
     {
       "bookId": "ioan",
@@ -1869,7 +1393,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…oan, ci cu chemarea fata de Fiul: cine crede în El are viata vesnica. Cine Îl refuza nu rămâne neutru, ci sub mania…"
     },
     {
       "bookId": "ioan",
@@ -1879,7 +1404,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Ioan 4 — Apa vie, secerisul și credinta care se sprijina pe cuvânt"
     },
     {
       "bookId": "ioan",
@@ -1889,7 +1415,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…hinarea în duh și în adevăr, aduce multi samariteni la credinta și vindeca de departe pe fiul unui slujbas imparatesc."
     },
     {
       "bookId": "ioan",
@@ -1899,7 +1426,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ilea semn din Cana. Peste toate se aude o tema comuna: credinta adevarata nu se hraneste numai din uimire, ci se sprij…"
     },
     {
       "bookId": "ioan",
@@ -1909,7 +1437,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…din Cana. Peste toate se aude o tema comuna: credinta adevarata nu se hraneste numai din uimire, ci se sprijina pe Per…"
     },
     {
       "bookId": "ioan",
@@ -1919,7 +1448,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…în lumina unei zile obisnuite, la o fantana. Capitolul arata astfel largimea lucrarii Domnului: El vorbeste și cu f…"
     },
     {
       "bookId": "ioan",
@@ -1929,7 +1459,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…venirea unui slujbas imparatesc din Capernaum la Cana arata ca chemarea lui Hristos atinge și lumea simpla, și cas…"
     },
     {
       "bookId": "ioan",
@@ -1938,8 +1469,9 @@
       "field": "historicalContext",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…la Cana arata ca chemarea lui Hristos atinge și lumea simpla, și casa celui cu rang."
     },
     {
       "bookId": "ioan",
@@ -1949,7 +1481,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…lo unde ne ceri sa mergem numai pe cuvântul Tau, da-ne credinta slujbasului imparatesc. Amin."
     },
     {
       "bookId": "ioan",
@@ -1959,7 +1492,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…uta la Tatăl. Asta este o schimbare uriasa. Inchinarea adevarata nu se va masura prin geografie, ci prin adevarul cu ca…"
     },
     {
       "bookId": "ioan",
@@ -1969,7 +1503,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…vine sa fim cinstiti cu noi insine: omul poate merge o viata intreaga la aceeași fantana, repetand aceleasi drumuri…"
     },
     {
       "bookId": "ioan",
@@ -1979,7 +1514,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…poate intalni tocmai în locul repetitiilor obosite din viata ta. El nu Se sperie nici de setea ta, nici de trecutul…"
     },
     {
       "bookId": "ioan",
@@ -1989,7 +1525,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…soara puterea dupa painea care intra în trup; Fiul își arata bucuria în ascultarea de Tatăl. Nu inseamna ca nevoile…"
     },
     {
       "bookId": "ioan",
@@ -1999,7 +1536,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…l nu transforma trecutul intr-o lauda, dar nici nu mai lasa rusinea sa inchida gura martorului. Domnul, intre tim…"
     },
     {
       "bookId": "ioan",
@@ -2009,7 +1547,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…doar cuvântul Domnului. Și a mers pe el. Aici se coace credinta: cand omul se sprijina pe cuvântul lui Hristos înainte…"
     },
     {
       "bookId": "ioan",
@@ -2019,7 +1558,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…it fel în care ar trebui sa lucreze. Dar Hristos nu Se lasa inchis în asteptarile noastre. El da un cuvânt: fiul t…"
     },
     {
       "bookId": "ioan",
@@ -2029,7 +1569,8 @@
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ste spre mărturia unei case. Se cuvine sa observam și legatura cu tot capitolul. Samaritenii au ajuns sa creada din p…"
     },
     {
       "bookId": "ioan",
@@ -2039,7 +1580,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a crede, a se increde. La Ioan, credinta adevarata se sprijina pe Fiul și pe cuvântul Lui."
     },
     {
       "bookId": "ioan",
@@ -2049,7 +1591,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a crede, a se increde. La Ioan, credinta adevarata se sprijina pe Fiul și pe cuvântul Lui."
     },
     {
       "bookId": "ioan",
@@ -2059,7 +1602,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ieste. Cuvânt scurt și puternic prin care Domnul aduce viata și mangaiere."
     },
     {
       "bookId": "ioan",
@@ -2069,7 +1613,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…cu Tatăl și aduce o mărturie ampla despre autoritatea, viata și judecata incredintate Lui."
     },
     {
       "bookId": "ioan",
@@ -2079,7 +1624,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…viata, autoritatea Lui de a judeca și marturiile care arata cine este El."
     },
     {
       "bookId": "ioan",
@@ -2089,7 +1635,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…espre Fiul: unitatea Lui cu Tatăl, puterea Lui de a da viata, autoritatea Lui de a judeca și marturiile care arata…"
     },
     {
       "bookId": "ioan",
@@ -2099,7 +1646,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…a fără impotrivire. Și cand deschidem Scripturile, nu lasa sa ne oprim la litera fără sa venim la Tine. Da-ne via…"
     },
     {
       "bookId": "ioan",
@@ -2109,7 +1657,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…asa sa ne oprim la litera fără sa venim la Tine. Da-ne viata, lumina și smerenie inaintea Ta. Amin."
     },
     {
       "bookId": "ioan",
@@ -2119,7 +1668,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…te sa intre tocmai în locul unde ai ajuns sa-ti masori viata doar prin neputinta, asteptare și comparatia cu altii."
     },
     {
       "bookId": "ioan",
@@ -2129,7 +1679,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…a odihnei, aici devenita loc de conflict cu privire la adevarata ei implinire."
     },
     {
       "bookId": "ioan",
@@ -2139,7 +1690,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Fiul da viata cui vrea"
     },
     {
       "bookId": "ioan",
@@ -2149,7 +1701,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…sine. Cand spune ca nu poate face nimic de la Sine, nu arata lipsa de putere, ci desavarsita unitate cu Tatăl. Fiul…"
     },
     {
       "bookId": "ioan",
@@ -2159,7 +1712,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…al judecatii finale. Tocmai de aceea Evanghelia nu ne lasa sa-L luam usor."
     },
     {
       "bookId": "ioan",
@@ -2169,7 +1723,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 7
+      "occurrences": 7,
+      "context": "…ă lucruri pe care numai Dumnezeu le poate face: sa dea viata și sa judece. Și tocmai acestea sunt puse în mana Fiul…"
     },
     {
       "bookId": "ioan",
@@ -2179,7 +1734,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijina pe taria ta de a te tine în viata, c…"
     },
     {
       "bookId": "ioan",
@@ -2189,7 +1745,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 3
+      "occurrences": 3,
+      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijina pe taria ta…"
     },
     {
       "bookId": "ioan",
@@ -2199,7 +1756,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "viata în Sine. Viata neimprumutata, proprie dumnezeirii."
     },
     {
       "bookId": "ioan",
@@ -2209,7 +1767,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…Scripturi. Domnul nu le dispretuieste cercetarea, dar arata primejdia ei: poti cerceta Scripturile și totusi sa nu…"
     },
     {
       "bookId": "ioan",
@@ -2219,7 +1778,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…are Biblia în mana, dar nu vrea sa vina la Fiul pentru viata. Apoi Domnul descoperă o radacina adanca a necredinte…"
     },
     {
       "bookId": "ioan",
@@ -2229,7 +1789,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…la adanc. Multi vin pentru paine, insa Domnul le cere credinta în Persoana Lui. De aceea capitolul se sfarseste cu o…"
     },
     {
       "bookId": "ioan",
@@ -2239,7 +1800,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…imim de la Tine. Invata-ne sa venim la Tine cu foamea adevarata a sufletului și sa ramanem langa cuvântul Tau chiar at…"
     },
     {
       "bookId": "ioan",
@@ -2249,7 +1811,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…i semnul nu trebuie citit doar ca indestulare. Ioan va arata imediat ca oamenii au vazut în minune o cale spre un i…"
     },
     {
       "bookId": "ioan",
@@ -2259,7 +1822,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "semn. Lucrare care arata cine este Hristos, nu doar puterea Lui."
     },
     {
       "bookId": "ioan",
@@ -2269,7 +1833,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…ea lui Dumnezeu începe nu cu acumularea noastra, ci cu credinta în Fiul. Apoi vine marele Eu sunt: Painea vieții. Man…"
     },
     {
       "bookId": "ioan",
@@ -2279,7 +1844,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Hristos nu este un ajutor pentru cateva zile, ci hrana adevarata pentru viata vesnica. De aceea cine vine la El și cred…"
     },
     {
       "bookId": "ioan",
@@ -2289,7 +1855,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…n ajutor pentru cateva zile, ci hrana adevarata pentru viata vesnica. De aceea cine vine la El și crede în El gases…"
     },
     {
       "bookId": "ioan",
@@ -2299,7 +1866,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…e doar mai mult ajutor, ci Hristos Insusi, primit prin credinta și tinut aproape."
     },
     {
       "bookId": "ioan",
@@ -2309,7 +1877,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Painea vieții. Hristos ca hrana adevarata și de neocolit a sufletului."
     },
     {
       "bookId": "ioan",
@@ -2319,7 +1888,8 @@
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a rămâne. Legatura vie și statornica dintre credincios și Hristos."
     },
     {
       "bookId": "ioan",
@@ -2329,7 +1899,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…curate raspunsuri ale credintei: la cine sa ne ducem? Credinta adevarata nu spune doar Tu ne ajuti, ci Tu esti singur…"
     },
     {
       "bookId": "ioan",
@@ -2339,7 +1910,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…aspunsuri ale credintei: la cine sa ne ducem? Credinta adevarata nu spune doar Tu ne ajuti, ci Tu esti singurul la care…"
     },
     {
       "bookId": "ioan",
@@ -2349,7 +1921,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…iluand adevarul. Cand spune: Duhul este acela care da viata, carnea nu foloseste la nimic, Domnul nu dispretuieste…"
     },
     {
       "bookId": "ioan",
@@ -2359,7 +1932,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…une Domnul, dar intrebarea rămâne: la cine sa te duci? Credinta matura nu inseamna ca toate au devenit usoare, ci ca a…"
     },
     {
       "bookId": "ioan",
@@ -2369,7 +1943,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ca toate au devenit usoare, ci ca ai ajuns sa stii ca viata nu este în alta parte."
     },
     {
       "bookId": "ioan",
@@ -2379,7 +1954,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ntele vieții vesnice. Vorbirea lui Hristos ca izvor de viata."
     },
     {
       "bookId": "ioan",
@@ -2389,7 +1965,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Capitolul arata necredinta fratilor lui Isus, învățătură Lui în Templu…"
     },
     {
       "bookId": "ioan",
@@ -2399,7 +1976,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…zbinarea starnita de cuvântul și Persoana Lui. Ioan ne arata iarasi ca nimeni nu poate rămâne neutru fata de Hristo…"
     },
     {
       "bookId": "ioan",
@@ -2409,7 +1987,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ina la Mine, adu-ne și pe noi la Tine cu setea noastra adevarata. Da-ne Duhul Tau, ca în noi sa nu stea uscaciunea, ci…"
     },
     {
       "bookId": "ioan",
@@ -2419,7 +1998,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…. Da-ne Duhul Tau, ca în noi sa nu stea uscaciunea, ci viata care curge. Fereste-ne de mandria religioasa care jud…"
     },
     {
       "bookId": "ioan",
@@ -2429,7 +2009,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…tare potrivita mintii lumii: dacă faci aceste lucruri, arata-Te lumii. Lumea iubeste ceea ce se impune repede, vizi…"
     },
     {
       "bookId": "ioan",
@@ -2439,7 +2020,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ea apropierii omenesti, ci dupa vremea Tatalui. Uneori credinta adevarata inseamna tocmai sa nu te arati cand lumea ce…"
     },
     {
       "bookId": "ioan",
@@ -2449,7 +2031,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…erii omenesti, ci dupa vremea Tatalui. Uneori credinta adevarata inseamna tocmai sa nu te arati cand lumea cere spectac…"
     },
     {
       "bookId": "ioan",
@@ -2459,7 +2042,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a inseta. Foamea adanca a omului dupa viata lui Dumnezeu."
     },
     {
       "bookId": "ioan",
@@ -2469,7 +2053,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…in salturi spectaculoase, ci prin mișcări smerite care arata ca lumina începe sa biruie frica. În acelasi timp, far…"
     },
     {
       "bookId": "ioan",
@@ -2479,7 +2064,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ă Hristos aduce și tulburare în jurul tau. Adevarul nu lasa lucrurile amestecate. Și dacă esti inca la pasii mici…"
     },
     {
       "bookId": "ioan",
@@ -2489,7 +2075,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ca Lumina lumii, chemarea la ramasul în Cuvânt pentru adevarata slobozire și mărturia Lui dumnezeiasca dinainte de Avr…"
     },
     {
       "bookId": "ioan",
@@ -2499,7 +2086,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…umina. Lumina Lui nu numai ca descoperă pacatul, ci și arata iesirea din el. De aceea cine Îl urmeaza nu umbla în î…"
     },
     {
       "bookId": "ioan",
@@ -2509,7 +2097,8 @@
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…arele cuvânt: Eu sunt Lumina lumii. Se cuvine sa vedem legatura. Dupa o scena în care intunericul moral și religios a…"
     },
     {
       "bookId": "ioan",
@@ -2519,7 +2108,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…n lumina Lui, vina este descoperita, iar drumul spre o viata noua este deschis."
     },
     {
       "bookId": "ioan",
@@ -2529,7 +2119,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Lumina lumii. Hristos ca descoperire, calauzire și viata pentru om."
     },
     {
       "bookId": "ioan",
@@ -2539,7 +2130,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…aneti în Cuvântul Meu, sunteti în adevăr ucenicii Mei. Credinta care se coace rămâne, asculta și lasa cuvântul sa patr…"
     },
     {
       "bookId": "ioan",
@@ -2549,7 +2141,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Cuvântul Lui. Nu orice miscare de moment este ucenicie adevarata. Dacă ramaneti în Cuvântul Meu, sunteti în adevăr ucen…"
     },
     {
       "bookId": "ioan",
@@ -2559,7 +2152,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…espre tata merge mai adanc decât genealogia. Domnul le arata ca faptele descoperă paternitatea reala. Cine iubeste…"
     },
     {
       "bookId": "ioan",
@@ -2569,7 +2163,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…cenicii Mei. Credinta care se coace rămâne, asculta și lasa cuvântul sa patrunda adanc. Apoi vine una dintre cele…"
     },
     {
       "bookId": "ioan",
@@ -2579,7 +2174,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…confunda libertatea cu a face ce vrei. Domnul spune ca adevarata slobozire vine atunci cand Fiul rupe lantul pacatului.…"
     },
     {
       "bookId": "ioan",
@@ -2589,7 +2185,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…d Fiul rupe lantul pacatului. Ramai în Cuvântul Lui și lasa-l sa-ti descopere și robia, și iesirea."
     },
     {
       "bookId": "ioan",
@@ -2598,8 +2195,9 @@
       "field": "units[1].words[0].meaning",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "adevăr. La Ioan, adevăr viu și mantuitor, nu simpla informatie."
     },
     {
       "bookId": "ioan",
@@ -2609,7 +2207,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…tura finala, ci trecere sub stapanirea Celui care este viata. Și iarasi, Avraam nu este pus impotriva lui Hristos.…"
     },
     {
       "bookId": "ioan",
@@ -2619,7 +2218,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Cand tot ce poate fi clatinat se clatina, credinta ta se poate odihni în Acesta: mai înainte de Avraam, E…"
     },
     {
       "bookId": "ioan",
@@ -2629,7 +2229,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…m, Eu sunt. Hristos nu este o sprijinire tarzie pentru viata ta, ci temelia ei vesnica."
     },
     {
       "bookId": "ioan",
@@ -2639,7 +2240,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…risei, urmata de intalnirea lui finala cu Domnul. Ioan arata astfel contrastul dintre omul care primeste lumina și…"
     },
     {
       "bookId": "ioan",
@@ -2649,7 +2251,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…intrebarea despre originea lui Isus taie din nou intre credinta și impotrivire."
     },
     {
       "bookId": "ioan",
@@ -2659,7 +2262,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…i vindecat, sa marturisim cu simplitate ce ai făcut în viata noastra. Fereste-ne de orbirea care se lauda ca vede.…"
     },
     {
       "bookId": "ioan",
@@ -2669,7 +2273,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…-te. El s-a dus, s-a spalat și s-a intors vazand bine. Credinta nu inseamna ca omul înțelege mai întâi totul, ci ca me…"
     },
     {
       "bookId": "ioan",
@@ -2678,8 +2283,9 @@
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 2
+      "expected": "simplă / simpla",
+      "occurrences": 2,
+      "context": "…es cand se intalneste cu durerea altuia. Vrea o schema simpla, o cauza rapida, o ordine usor de purtat. Dar Domnul n…"
     },
     {
       "bookId": "ioan",
@@ -2689,7 +2295,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…a, dar poate face chiar din locul acela un loc unde se arata lucrarea Lui."
     },
     {
       "bookId": "ioan",
@@ -2699,7 +2306,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…arturisesti ce a făcut Hristos în tine. Uneori cea mai adevarata vorba este tocmai aceasta: eram orb, și acum vad."
     },
     {
       "bookId": "ioan",
@@ -2709,7 +2317,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "semne. Lucrari care arata prezenta și autoritatea lui Dumnezeu în Hristos."
     },
     {
       "bookId": "ioan",
@@ -2719,7 +2328,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a se inchina. Plecare inaintea lui Hristos cu credinta și cinstire."
     },
     {
       "bookId": "ioan",
@@ -2729,7 +2339,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…bun, vorbeste despre oile care-I cunosc glasul, despre viata data cu belsug și despre unitatea Lui cu Tatăl, starni…"
     },
     {
       "bookId": "ioan",
@@ -2739,7 +2350,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…aznicului Innoirii Templului, unde Domnul leaga iarasi credinta de lucrarile Sale și de ascultarea oilor. Totul culmin…"
     },
     {
       "bookId": "ioan",
@@ -2749,7 +2361,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…catre Tatăl capata o forta aparte. Disputa despre hula arata ca ascultatorii au înțeles ca El vorbeste intr-un regi…"
     },
     {
       "bookId": "ioan",
@@ -2759,7 +2372,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…i era adanc inradacinata în Scriptura lui Israel și în viata de zi cu zi. Proorocii vorbisera despre pastorii rai ș…"
     },
     {
       "bookId": "ioan",
@@ -2769,7 +2383,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ător, ci Usa oilor și Pastorul cel bun, care Ti-ai dat viata pentru noi. Invata-ne sa ascultam glasul Tau mai mult…"
     },
     {
       "bookId": "ioan",
@@ -2779,7 +2394,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…cunosc pe Mine trebuie primite cu mangaiere și sfiala. Credinta nu este o simpla adeziune la o învățătură rece, ci che…"
     },
     {
       "bookId": "ioan",
@@ -2789,7 +2405,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…stor. Aici se vede largimea Evangheliei și unitatea ei adevarata."
     },
     {
       "bookId": "ioan",
@@ -2799,7 +2416,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ma la bogatia acestor imagini. Domnul nu spune doar ca arata usa, ci ca El Insusi este Usa. Intrarea în mântuire, î…"
     },
     {
       "bookId": "ioan",
@@ -2809,7 +2427,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…recere, alta scurtatura și alta poarta care sa duca la viata. Apoi vine mărturia despre Pastorul cel bun. Se cuvin…"
     },
     {
       "bookId": "ioan",
@@ -2818,8 +2437,9 @@
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…uie primite cu mangaiere și sfiala. Credinta nu este o simpla adeziune la o învățătură rece, ci chemare personala su…"
     },
     {
       "bookId": "ioan",
@@ -2829,7 +2449,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…a, poarta. Hristos ca singura intrare spre mântuire și viata."
     },
     {
       "bookId": "ioan",
@@ -2839,7 +2460,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "din belsug. Viata data de Hristos nu este saraca, ci plina."
     },
     {
       "bookId": "ioan",
@@ -2849,7 +2471,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "Sa luam bine seama la legatura dintre credinta și ascultarea glasului. Domnul nu spune doar ca oile L…"
     },
     {
       "bookId": "ioan",
@@ -2859,7 +2482,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…El, ci ca asculta glasul Lui și vin dupa El. Credinta adevarata nu este simpla simpatie, ci urmare. Apoi vine unul di…"
     },
     {
       "bookId": "ioan",
@@ -2869,7 +2493,8 @@
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Sa luam bine seama la legatura dintre credinta și ascultarea glasului. Domnul nu spun…"
     },
     {
       "bookId": "ioan",
@@ -2878,8 +2503,9 @@
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 2
+      "expected": "simplă / simpla",
+      "occurrences": 2,
+      "context": "…glasul Lui și vin dupa El. Credinta adevarata nu este simpla simpatie, ci urmare. Apoi vine unul dintre cele mai m…"
     },
     {
       "bookId": "ioan",
@@ -2889,7 +2515,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "viata vesnica. Viata data acum și purtata pana la capat de H…"
     },
     {
       "bookId": "ioan",
@@ -2899,7 +2526,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Credinta ta nu se sprijina pe o mărturie moale, ci pe lucrarile…"
     },
     {
       "bookId": "ioan",
@@ -2909,7 +2537,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Domnul Isus lasa ca boala lui Lazar sa ajunga pana la moarte, plange im…"
     },
     {
       "bookId": "ioan",
@@ -2919,7 +2548,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…plange impreuna cu ai Sai, Se descoperă ca Învierea și Viata, îl cheama pe Lazar afara din mormant și, prin acest s…"
     },
     {
       "bookId": "ioan",
@@ -2929,7 +2559,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…azar. Totul merge în aceeași directie: slava Fiului se arata tocmai în locul unde ochii omenesti vad intarziere, pl…"
     },
     {
       "bookId": "ioan",
@@ -2939,7 +2570,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…umple de intrebari, ajuta-ne sa ramanem inaintea Ta cu credinta Martei: Tu esti Hristosul, Fiul lui Dumnezeu. Multumi…"
     },
     {
       "bookId": "ioan",
@@ -2949,7 +2581,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Doamne Isuse, Iti multumim ca Tu esti Învierea și Viata și ca nici mormantul nu sta în afara puterii Tale. Can…"
     },
     {
       "bookId": "ioan",
@@ -2959,7 +2592,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Eu sunt învierea și viata"
     },
     {
       "bookId": "ioan",
@@ -2969,7 +2603,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…curt al usurarii grabite. El urmărește slava Fiului și credinta celor ai Sai chiar și prin intarziere. Apoi vine mare…"
     },
     {
       "bookId": "ioan",
@@ -2979,7 +2614,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…rin intarziere. Apoi vine marele Eu sunt: învierea și viata. Domnul nu spune doar ca poate invia, ci ca El Insusi…"
     },
     {
       "bookId": "ioan",
@@ -2989,7 +2625,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…acit. Uneori tocmai drumul greu este locul unde iti va arata mai adanc cine este El."
     },
     {
       "bookId": "ioan",
@@ -2999,7 +2636,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "viata. La Ioan, viata deplina, aflata în Fiul."
     },
     {
       "bookId": "ioan",
@@ -3009,7 +2647,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…exista nadejde, ori sa credem ca plansul este lipsa de credinta. În Domnul vedem și slava, și lacrima. Apoi, înainte…"
     },
     {
       "bookId": "ioan",
@@ -3019,7 +2658,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…easul proslavirii prin moarte și cheama inca o data la credinta în Lumina, în timp ce multi rămân impietriti ori ascun…"
     },
     {
       "bookId": "ioan",
@@ -3029,7 +2669,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 2
+      "occurrences": 2,
+      "context": "…intr-un chip smerit, nu razboinic. Venirea unor greci arata ca orizontul lucrarii Domnului se largeste. În acelasi…"
     },
     {
       "bookId": "ioan",
@@ -3039,7 +2680,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…Ta trece prin jertfa. Invata-ne sa pretuim inchinarea curata mai mult decât socotelile inimii interesate. Da-ne ha…"
     },
     {
       "bookId": "ioan",
@@ -3049,7 +2691,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…nu orice vorba dreapta la suprafata vine dintr-o inima curata. Uneori omul foloseste chiar și cauza buna ca sa ascun…"
     },
     {
       "bookId": "ioan",
@@ -3059,7 +2702,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Dragostea adevarata fata de Hristos nu cauta mereu cea mai eficienta imagi…"
     },
     {
       "bookId": "ioan",
@@ -3069,7 +2713,8 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…s nu cauta mereu cea mai eficienta imagine, ci cea mai curata inchinare. Intre calculele lui Iuda și risipa sfanta a…"
     },
     {
       "bookId": "ioan",
@@ -3079,7 +2724,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…aspunsul Lui merge direct spre cruce. Asta inseamna ca adevarata vedere a lui Isus nu se opreste la curiozitate, ci aju…"
     },
     {
       "bookId": "ioan",
@@ -3089,7 +2735,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…a este și cruce, și slava. Lumea vede rusine, Dumnezeu arata biruinta. Stapanitorul lumii este judecat tocmai în ce…"
     },
     {
       "bookId": "ioan",
@@ -3099,7 +2746,8 @@
       "kind": "missing-diacritics",
       "token": "biruinta",
       "expected": "biruință / biruința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…și cruce, și slava. Lumea vede rusine, Dumnezeu arata biruinta. Stapanitorul lumii este judecat tocmai în ceasul în c…"
     },
     {
       "bookId": "ioan",
@@ -3109,7 +2757,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…e naste rodul, și cum se pierde lumea ca sa se castige viata."
     },
     {
       "bookId": "ioan",
@@ -3119,7 +2768,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "voi fi inaltat. La Ioan, arata spre cruce și spre slava ei."
     },
     {
       "bookId": "ioan",
@@ -3129,7 +2779,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ine Ma vede pe Mine vede pe Cel ce M-a trimis pe Mine. Credinta în Hristos nu este o abatere de la Dumnezeu, ci intrar…"
     },
     {
       "bookId": "ioan",
@@ -3139,7 +2790,8 @@
       "kind": "missing-diacritics",
       "token": "lasa",
       "expected": "lasă / lăsa",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…rea lui Iuda, leaga slava Sa de plecarea spre cruce și lasa ucenicilor porunca noua a dragostei fratesti."
     },
     {
       "bookId": "ioan",
@@ -3149,7 +2801,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata marime nu se teme sa slujeasca. Omul mic fuge de sluji…"
     },
     {
       "bookId": "ioan",
@@ -3159,7 +2812,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…de Se duce, coboara fără frica. Cuvintele catre Petru arata și mai mult. Dacă nu te spal Eu, nu vei avea parte del…"
     },
     {
       "bookId": "ioan",
@@ -3169,7 +2823,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…ca trebuie mai întâi sa te lase spalat de El. Smerenia adevarata nu este doar sa cobori, ci și sa primesti curatirea pe…"
     },
     {
       "bookId": "ioan",
@@ -3178,8 +2833,9 @@
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…cime sfanta a suferintei. Tradarea nu este pentru El o simpla mutare în istorie, ci rana traita pana în adanc. Apoi…"
     },
     {
       "bookId": "ioan",
@@ -3189,7 +2845,8 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "…in pe sine. Se cuvine sa luam aminte la aceasta. Ravna adevarata, dacă nu este trecuta prin zdrobire, se poate bizui pr…"
     },
     {
       "bookId": "ioan",
@@ -3199,7 +2856,8 @@
       "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "Sa luam bine seama la legatura dintre slava și iesirea lui Iuda. Omul ar spune ca tot…"
     },
     {
       "bookId": "ioan",
@@ -3209,407 +2867,8 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 15,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 16,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 16,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 16,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 16,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 18,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 18,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 18,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 18,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 19,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 1,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 2,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 2,
-      "field": "units[3].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 2,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 2,
-      "field": "units[3].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 3,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 3,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 5,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 7,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 8,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 15,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 16,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 17,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 17,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 18,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 19,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 19,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 20,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 20,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 24,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 24,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 24,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 26,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 26,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 26,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 2,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 2,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 2,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "occurrences": 1,
+      "context": "a proslavi. A arata slava prin ascultare și jertfa."
     },
     {
       "bookId": "romani",
@@ -3618,8 +2877,9 @@
       "field": "literaryContext",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…i că harul ar încuraja păcatul. El mută discuția de la simpla iertare la identitatea și viața nouă a celui unit cu H…"
     },
     {
       "bookId": "romani",
@@ -3628,278 +2888,9 @@
       "field": "units[1].heading",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 9,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 14,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 15,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 5,
-      "field": "units[0].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 5,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 10,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 11,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 11,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 12,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 2,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 2,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 2,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "units[2].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 7,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 10,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 12,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 13,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "galateni",
-      "book": "Galateni",
-      "chapter": 1,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "galateni",
-      "book": "Galateni",
-      "chapter": 5,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "filipeni",
-      "book": "Filipeni",
-      "chapter": 1,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "filipeni",
-      "book": "Filipeni",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "Copiii promisiunii, nu simpla descendență"
     },
     {
       "bookId": "coloseni",
@@ -3908,518 +2899,9 @@
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "coloseni",
-      "book": "Coloseni",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "coloseni",
-      "book": "Coloseni",
-      "chapter": 3,
-      "field": "units[3].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-tesaloniceni",
-      "book": "1 Tesaloniceni",
-      "chapter": 1,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-tesaloniceni",
-      "book": "1 Tesaloniceni",
-      "chapter": 2,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-tesaloniceni",
-      "book": "1 Tesaloniceni",
-      "chapter": 5,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-tesaloniceni",
-      "book": "2 Tesaloniceni",
-      "chapter": 1,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-tesaloniceni",
-      "book": "2 Tesaloniceni",
-      "chapter": 2,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-tesaloniceni",
-      "book": "2 Tesaloniceni",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-timotei",
-      "book": "1 Timotei",
-      "chapter": 1,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-timotei",
-      "book": "1 Timotei",
-      "chapter": 1,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-timotei",
-      "book": "1 Timotei",
-      "chapter": 3,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-timotei",
-      "book": "1 Timotei",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-timotei",
-      "book": "1 Timotei",
-      "chapter": 3,
-      "field": "units[2].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-timotei",
-      "book": "2 Timotei",
-      "chapter": 1,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-timotei",
-      "book": "2 Timotei",
-      "chapter": 2,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-timotei",
-      "book": "2 Timotei",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "si",
-      "expected": "și",
-      "occurrences": 1
-    },
-    {
-      "bookId": "filimon",
-      "book": "Filimon",
-      "chapter": 1,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
-      "chapter": 1,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
-      "chapter": 2,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
-      "chapter": 3,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "si",
-      "expected": "și",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
-      "chapter": 6,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
-      "chapter": 9,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
-      "chapter": 11,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "iacov",
-      "book": "Iacov",
-      "chapter": 4,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "iacov",
-      "book": "Iacov",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-petru",
-      "book": "1 Petru",
-      "chapter": 2,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-petru",
-      "book": "1 Petru",
-      "chapter": 4,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-petru",
-      "book": "2 Petru",
-      "chapter": 3,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-petru",
-      "book": "2 Petru",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-petru",
-      "book": "2 Petru",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "si",
-      "expected": "și",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-ioan",
-      "book": "1 Ioan",
-      "chapter": 5,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "3-ioan",
-      "book": "3 Ioan",
-      "chapter": 1,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "iuda",
-      "book": "Iuda",
-      "chapter": 1,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 2,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 2,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 2,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 3,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 7,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 9,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 9,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 9,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 12,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 14,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 14,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 16,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 2
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 16,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 18,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 20,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
+      "expected": "simplă / simpla",
+      "occurrences": 1,
+      "context": "…r la grupul apropiat. Speranța păstrată în cer nu este simpla scăpare din necaz, ci transformarea după chipul lui Hr…"
     }
   ]
 }
