@@ -57,8 +57,10 @@ jobs:
           on_exit() {
             rc=$?
             if [ "$done_ok" -ne 1 ] && [ "$rc" -ne 0 ]; then
+              safe_phase=$(echo "$phase" | tr -cd '[:alnum:]_-')
               post_status "$PRE_SHA" "vt/emanus-final-integration" failure "failed during ${phase}"
               post_status "$PRE_SHA" "vt/emanus-sync-stage" failure "${phase} failed"
+              post_status "$PRE_SHA" "vt/error-${safe_phase}" failure "${phase} failed"
             fi
           }
           trap on_exit EXIT
@@ -117,6 +119,10 @@ jobs:
             done
             if [ "${#unexpected[@]}" -ne 0 ]; then
               printf 'Unexpected conflicts:\n%s\n' "${unexpected[*]}" >&2
+              for p in "${unexpected[@]}"; do
+                safe=$(echo "$p" | sed -E 's/[^[:alnum:]_.-]+/_/g' | cut -c1-60)
+                post_status "$PRE_SHA" "vt/conflict-${safe}" failure "unexpected merge conflict"
+              done
               fail "unexpected merge conflicts; canonical text was not altered"
             fi
           fi
