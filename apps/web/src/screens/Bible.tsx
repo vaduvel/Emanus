@@ -1,8 +1,17 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, HelpCircle, Search, Send } from "lucide-react"
-import type { BibleBook, BibleChapter, BibleUnit } from "@emanus/shared/bible"
-import { BIBLE_TRANSLATION, chapterIsOpen } from "@emanus/shared/bible"
-import { PUBLICATION_BIBLE_BOOKS, findPublicationChapter } from "@emanus/shared/bible-publication"
+import type { BibleBook, BibleChapter, BibleStatus, BibleUnit } from "@emanus/shared/bible-types"
+import { BIBLE_TRANSLATION } from "@emanus/shared/bible-types"
+import needs from "../data/bible-needs.json"
+import {
+  loadAllBibleBooks,
+  loadBibleBook,
+  loadBibleCatalog,
+  loadBibleNeeds,
+  type BibleBookSummary,
+  type BibleChapterSummary,
+  type BibleNeedResult,
+} from "../bibleReader"
 import { navigate } from "../router"
 import "../bible.css"
 import "../needs.css"
@@ -70,71 +79,56 @@ function plat(text: string): string {
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
 }
 
-function visibleChapters(book: BibleBook): BibleChapter[] {
-  return SHOW_EDITORIAL ? book.chapters : book.chapters.filter(chapterIsOpen)
+function chapterIsOpen(chapter: { status: BibleStatus }): boolean {
+  return chapter.status === "published"
+}
+
+function visibleChapters<T extends { status: BibleStatus }>(chapters: T[]): T[] {
+  return SHOW_EDITORIAL ? chapters : chapters.filter(chapterIsOpen)
 }
 
 /* ------------------------------------------------- Cand te doare, citeste */
 
-type Nevoie = { eticheta: string; cuvinte: string[] }
-
-const NEVOI: Nevoie[] = [
-  { eticheta: "Mi-a murit cineva", cuvinte: ["a murit", "jelit", "mormant", "ingropat", "plans dupa", "doliu"] },
-  { eticheta: "Boală și spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
-  { eticheta: "S-a rupt casa mea", cuvinte: ["nevasta", "barbatul ei", "casnicie", "despartit", "s-a dus de langa"] },
-  { eticheta: "Bani și datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
-  { eticheta: "Sunt departe de ai mei", cuvinte: ["strain", "instrainat", "tara straina", "departe de casa", "pribeag"] },
-  { eticheta: "Beau. Nu mă pot opri", cuvinte: ["vin", "beat", "s-a imbatat", "patima"] },
-  { eticheta: "Pofta care mă ține", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
-  { eticheta: "Nu pot să iert în familie", cuvinte: ["fratii lui", "ura", "il urau", "iertare", "a iertat", "razbunare"] },
-  { eticheta: "Mi-e rușine de ce am făcut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
-  { eticheta: "Mi-e frică de moarte", cuvinte: ["frica", "nu te teme", "moartea", "mor"] },
-  { eticheta: "Mă rog și nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
-  { eticheta: "De ce a îngăduit Dumnezeu", cuvinte: ["de ce", "ai avut in gand sa-mi faceti rau", "incercare", "a ingaduit"] },
-  { eticheta: "Am umblat cu descântece", cuvinte: ["idoli", "ghicire", "vraji", "dumnezei straini"] },
-  { eticheta: "Copilul meu s-a depărtat", cuvinte: ["fiul meu", "copilul", "s-a dus de la", "tatal lui plangea"] },
-]
-
-type Gasit = { bookId: string; bookName: string; chapter: number; ref: string; heading: string }
-
-function cauta(nevoie: Nevoie): Gasit[] {
-  const out: Gasit[] = []
-  for (const book of PUBLICATION_BIBLE_BOOKS) {
-    for (const ch of visibleChapters(book)) {
-      for (const u of ch.units) {
-        const fan = plat(`${u.heading} ${u.text} ${u.teaching} ${u.forYourHeart ?? ""}`)
-        if (nevoie.cuvinte.some((c) => fan.includes(plat(c)))) {
-          out.push({ bookId: book.id, bookName: book.name, chapter: ch.number, ref: u.ref, heading: u.heading })
-        }
-      }
-    }
-  }
-  return out.slice(0, 12)
-}
+type Nevoie = (typeof needs)[number]
 
 function Nevoi() {
   const [aleasa, setAleasa] = useState<Nevoie | null>(null)
-  const gasite = useMemo(() => (aleasa ? cauta(aleasa) : []), [aleasa])
+  const [index, setIndex] = useState<Record<string, BibleNeedResult[]> | null>(null)
+  const [failed, setFailed] = useState(false)
+
+  useEffect(() => {
+    let active = true
+    void loadBibleNeeds()
+      .then((value) => { if (active) setIndex(value.results) })
+      .catch(() => { if (active) setFailed(true) })
+    return () => { active = false }
+  }, [])
+
+  const gasite = aleasa && index ? (index[aleasa.id] ?? []) : []
 
   return <section className="bneeds">
     <h2 className="bneeds__title">Când te doare, citește</h2>
     <p className="bneeds__intro">Spune ce te apasă acum. Îți arătăm locurile din Scriptură unde se vorbește despre asta — nu versete rupte, ci întâmplări întregi, cu explicație.</p>
 
     <div className="bneeds__list">
-      {NEVOI.map((n) => <button
-        key={n.eticheta}
+      {needs.map((n) => <button
+        key={n.id}
         type="button"
-        className={aleasa?.eticheta === n.eticheta ? "bneed is-on" : "bneed"}
-        onClick={() => setAleasa(aleasa?.eticheta === n.eticheta ? null : n)}
-      >{n.eticheta}</button>)}
+        className={aleasa?.id === n.id ? "bneed is-on" : "bneed"}
+        onClick={() => setAleasa(aleasa?.id === n.id ? null : n)}
+      >{n.label}</button>)}
     </div>
 
     {aleasa && <div className="bfound">
       <div className="bfound__head">
-        <h3>{aleasa.eticheta}</h3>
+        <h3>{aleasa.label}</h3>
         <button type="button" className="ghost" onClick={() => setAleasa(null)}>Închide</button>
       </div>
-      {gasite.length === 0
+      {!index && !failed
+        ? <p className="muted">Căutăm pasajele potrivite…</p>
+        : failed
+          ? <p className="muted">Pasajele nu s-au putut încărca. Verifică legătura și încearcă din nou.</p>
+          : gasite.length === 0
         ? <p className="muted">Deocamdată nu avem un pasaj disponibil pentru această căutare.</p>
         : gasite.map((g) => <button
             key={`${g.ref}-${g.heading}`}
@@ -151,7 +145,14 @@ function Nevoi() {
 
 /* ---------------------------------------------------------------- Acasa */
 
-function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter }) {
+type ListedBook = BibleBook | BibleBookSummary
+type ListedChapter = BibleChapter | BibleChapterSummary
+
+function isFullChapter(chapter: ListedChapter): chapter is BibleChapter {
+  return "units" in chapter && Array.isArray(chapter.units)
+}
+
+function ChapterLink({ book, chapter }: { book: ListedBook; chapter: ListedChapter }) {
   const review = chapter.status !== "published"
   return <button type="button" className="bchap" onClick={() => navigate(`/biblia/${book.id}/${chapter.number}`)}>
     <span className="bchap__no">{chapter.number}</span>
@@ -163,34 +164,84 @@ function ChapterLink({ book, chapter }: { book: BibleBook; chapter: BibleChapter
   </button>
 }
 
-function Book({ book, query }: { book: BibleBook; query: string }) {
+function Book({ book, query }: { book: ListedBook; query: string }) {
   const q = query.trim().toLowerCase()
+  const [expanded, setExpanded] = useState(book.order === 1)
   const chapters = useMemo(() => {
-    const available = visibleChapters(book)
+    const available = visibleChapters(book.chapters)
     if (q.length === 0) return available
     return available.filter((c) => {
       const hay = plat(`${c.number} ${c.title} ${c.summary}`)
       if (hay.includes(plat(q))) return true
-      return c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
+      return isFullChapter(c) && c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
     })
   }, [book, q])
+  const showChapters = expanded || q.length > 0
 
   return <section className="bbook">
     <header className="bbook__head">
-      <h2>{book.name}</h2>
-      <p className="muted">{book.blurb}</p>
-      {book.translation && <p className="muted">{book.translation}</p>}
-      <p className="bbook__count">{visibleChapters(book).length} capitole disponibile</p>
+      <button
+        type="button"
+        className="bbook__toggle"
+        aria-expanded={showChapters}
+        aria-label={`${showChapters ? "Închide" : "Deschide"} ${book.name}`}
+        onClick={() => setExpanded((value) => !value)}
+      >
+        <span className="bbook__meta">
+          <span className="bbook__name">{book.name}</span>
+          <span className="muted">{book.blurb}</span>
+          {book.translation && <span className="muted">{book.translation}</span>}
+          <span className="bbook__count">{visibleChapters(book.chapters).length} capitole disponibile</span>
+        </span>
+        <ArrowRight className={showChapters ? "bbook__arrow is-open" : "bbook__arrow"} size={18} aria-hidden />
+      </button>
     </header>
-    {chapters.length === 0
+    {showChapters && (chapters.length === 0
       ? <p className="muted bbook__none">Nimic cu cuvântul acesta în {book.name}.</p>
-      : <div className="bbook__list">{chapters.map((c) => <ChapterLink key={c.id} book={book} chapter={c} />)}</div>}
+      : <div className="bbook__list">{chapters.map((c) => <ChapterLink key={c.id} book={book} chapter={c} />)}</div>)}
   </section>
 }
 
 export function Bible() {
   const [query, setQuery] = useState("")
+  const [catalog, setCatalog] = useState<BibleBookSummary[] | null>(null)
+  const [searchBooks, setSearchBooks] = useState<BibleBook[] | null>(null)
+  const [loadingSearch, setLoadingSearch] = useState(false)
+  const [loadError, setLoadError] = useState(false)
   const last = readLast()
+
+  useEffect(() => {
+    let active = true
+    void loadBibleCatalog()
+      .then((value) => { if (active) setCatalog(value.books) })
+      .catch(() => { if (active) setLoadError(true) })
+    return () => { active = false }
+  }, [])
+
+  useEffect(() => {
+    const term = query.trim()
+    if (!catalog || term.length === 0) {
+      setSearchBooks(null)
+      setLoadingSearch(false)
+      return
+    }
+
+    let active = true
+    const timer = window.setTimeout(() => {
+      setLoadingSearch(true)
+      void loadAllBibleBooks(catalog)
+        .then((books) => { if (active) setSearchBooks(books) })
+        .catch(() => { if (active) setLoadError(true) })
+        .finally(() => { if (active) setLoadingSearch(false) })
+    }, 250)
+
+    return () => {
+      active = false
+      window.clearTimeout(timer)
+    }
+  }, [catalog, query])
+
+  const listedBooks: ListedBook[] = query.trim() ? (searchBooks ?? []) : (catalog ?? [])
 
   return <section className="bible">
     <button type="button" className="ghost bible__back" onClick={() => navigate("/")}><ArrowLeft size={16} aria-hidden /> Azi</button>
@@ -220,7 +271,10 @@ export function Bible() {
       />
     </label>
 
-    {PUBLICATION_BIBLE_BOOKS.map((b) => <Book key={b.id} book={b} query={query} />)}
+    {!catalog && !loadError && <p className="muted">Se deschide catalogul Bibliei Emanus…</p>}
+    {loadingSearch && <p className="muted">Căutăm în textul întreg…</p>}
+    {loadError && <p className="muted">Biblia Emanus nu s-a putut încărca. Verifică legătura și încearcă din nou.</p>}
+    {listedBooks.map((b) => <Book key={b.id} book={b} query={query} />)}
 
     <p className="muted bible__note">Traducerea este indicată separat pentru fiecare carte. Explicațiile sunt scrise pentru Emanus.</p>
   </section>
@@ -291,13 +345,38 @@ function Unit({ unit }: { unit: BibleUnit }) {
 }
 
 export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapter: number }) {
-  const found = findPublicationChapter(bookId, chapter)
-  const book = PUBLICATION_BIBLE_BOOKS.find((b) => b.id === bookId)
+  const [book, setBook] = useState<BibleBook | null>(null)
+  const [failed, setFailed] = useState(false)
+  const found = book?.chapters.find((candidate) => candidate.number === chapter)
   const canRead = Boolean(found && (SHOW_EDITORIAL || chapterIsOpen(found)))
+
+  useEffect(() => {
+    let active = true
+    setBook(null)
+    setFailed(false)
+    void loadBibleBook(bookId)
+      .then((value) => { if (active) setBook(value) })
+      .catch(() => { if (active) setFailed(true) })
+    return () => { active = false }
+  }, [bookId])
 
   useEffect(() => {
     if (found && canRead) writeLast({ bookId, chapter, title: found.title })
   }, [bookId, chapter, found, canRead])
+
+  if (!book && !failed) {
+    return <section className="bible">
+      <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
+      <p className="muted">Se deschide cartea…</p>
+    </section>
+  }
+
+  if (failed) {
+    return <section className="bible">
+      <button type="button" className="ghost bible__back" onClick={() => navigate("/biblia")}><ArrowLeft size={16} aria-hidden /> Biblia</button>
+      <p className="muted">Cartea nu s-a putut încărca. Verifică legătura și încearcă din nou.</p>
+    </section>
+  }
 
   if (!found || !book || !canRead) {
     return <section className="bible">
@@ -306,7 +385,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
     </section>
   }
 
-  const numbers = visibleChapters(book).map((c) => c.number).sort((a, b) => a - b)
+  const numbers = visibleChapters(book.chapters).map((c) => c.number).sort((a, b) => a - b)
   const at = numbers.indexOf(chapter)
   const prev = at > 0 ? numbers[at - 1] : undefined
   const next = at >= 0 && at < numbers.length - 1 ? numbers[at + 1] : undefined

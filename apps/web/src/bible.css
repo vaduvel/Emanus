@@ -72,14 +72,45 @@
   gap: 10px;
 }
 
-.bbook__head h2 {
-  margin: 0 0 2px;
-  font-size: 1.15rem;
+.bbook__toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-.bbook__head p {
-  margin: 0;
+.bbook__meta {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bbook__name {
+  margin: 0 0 2px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.bbook__meta > span {
   line-height: 1.5;
+}
+
+.bbook__arrow {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  transition: transform 180ms ease;
+}
+
+.bbook__arrow.is-open {
+  transform: rotate(90deg);
 }
 
 .bbook__count {

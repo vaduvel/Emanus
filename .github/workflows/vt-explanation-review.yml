@@ -7,23 +7,37 @@ on:
       - "packages/shared/src/bible/**"
       - "packages/shared/package.json"
       - "apps/web/src/screens/Bible.tsx"
+      - "apps/web/src/bibleReader.ts"
+      - "apps/web/src/data/bible-needs.json"
+      - "apps/web/tests/bible-reader.spec.ts"
+      - "apps/web/playwright.config.ts"
+      - "apps/web/package.json"
       - "apps/web/vite.config.ts"
+      - "scripts/materialize-bible-reader.mjs"
       - "scripts/check-vt-*.mjs"
       - "scripts/check-vt-*.py"
       - "scripts/materialize-published-emanus-ot-runtime.py"
       - "package.json"
+      - "pnpm-lock.yaml"
       - ".github/workflows/vt-explanation-review.yml"
   pull_request:
-    branches: [main]
+    branches: [main, agent/biblia-explicata-vt-integration-clean]
     paths:
       - "packages/shared/src/bible/**"
       - "packages/shared/package.json"
       - "apps/web/src/screens/Bible.tsx"
+      - "apps/web/src/bibleReader.ts"
+      - "apps/web/src/data/bible-needs.json"
+      - "apps/web/tests/bible-reader.spec.ts"
+      - "apps/web/playwright.config.ts"
+      - "apps/web/package.json"
       - "apps/web/vite.config.ts"
+      - "scripts/materialize-bible-reader.mjs"
       - "scripts/check-vt-*.mjs"
       - "scripts/check-vt-*.py"
       - "scripts/materialize-published-emanus-ot-runtime.py"
       - "package.json"
+      - "pnpm-lock.yaml"
       - ".github/workflows/vt-explanation-review.yml"
   workflow_dispatch:
 
@@ -77,10 +91,23 @@ jobs:
           pnpm --filter @emanus/web typecheck
           pnpm --filter @emanus/web build
 
+      - name: Smoke-test production Bible reader
+        run: |
+          set -euo pipefail
+          pnpm --filter @emanus/web exec playwright install --with-deps chromium
+          pnpm --filter @emanus/web test:smoke:bible
+
       - name: Verify clean diff and main mergeability
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
         run: |
           set -euo pipefail
           git diff --check
+          if [ "${EVENT_NAME}" = "pull_request" ] && [ "${PR_BASE_REF}" != "main" ]; then
+            echo "Stacked PR verificat față de ${PR_BASE_REF}; mergeability cu main rămâne pe PR-ul final."
+            exit 0
+          fi
           git fetch origin main:refs/remotes/origin/main
           git diff --check origin/main...HEAD
           git merge-tree --write-tree HEAD origin/main >/dev/null
