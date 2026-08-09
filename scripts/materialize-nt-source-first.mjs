@@ -18,10 +18,33 @@ const evidencePath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-sou
 const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-first-manifest.json")
 
 const EXPECTED = { books: 12, chapters: 69 }
+const SAFE_RO_REPLACEMENTS = new Map([
+  ["si", "și"],
+  ["in", "în"],
+  ["doua", "două"],
+  ["invatatura", "învățătură"],
+  ["simpla", "simplă"],
+  ["fagaduinta", "făgăduință"],
+])
 
 function fail(message) { console.error(`[NT source-first] ${message}`); process.exit(1) }
 function stable(value) { return JSON.stringify(value, null, 2) + "\n" }
 function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex") }
+function preserveCase(match, replacement) {
+  if (match === match.toUpperCase()) return replacement.toUpperCase()
+  if (match[0] === match[0].toUpperCase()) return replacement[0].toUpperCase() + replacement.slice(1)
+  return replacement
+}
+function safeRomanian(value) {
+  if (typeof value !== "string" || !value) return value
+  let out = value
+  for (const [wrong, expected] of SAFE_RO_REPLACEMENTS) {
+    const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
+    out = out.replace(regex, (match) => preserveCase(match, expected))
+  }
+  return out
+}
 
 if (!fs.existsSync(registryPath)) fail("lipsește source-first-12.json")
 if (!fs.existsSync(recoveredDir)) fail("lipsește nt-recovered; rulează mai întâi recovery")
@@ -98,8 +121,8 @@ for (const [id, blueprint] of Object.entries(NT_SOURCE_FIRST_BLUEPRINTS)) {
           verseStart: item.from,
           verseEnd: item.to,
           ...(unitCritical.length ? { criticalReferenceNumbers: unitCritical } : {}),
-          heading: item.heading,
-          teaching: item.teaching,
+          heading: safeRomanian(item.heading),
+          teaching: safeRomanian(item.teaching),
           sourceKind: "poonen-source-first",
           sourceIds: [...new Set(anchors.map((anchor) => anchor.sourceId))],
           sourceAnchors: anchors,
@@ -114,8 +137,8 @@ for (const [id, blueprint] of Object.entries(NT_SOURCE_FIRST_BLUEPRINTS)) {
         verseStart: 1,
         verseEnd: binding.lastVerseNumber,
         ...(criticalReferenceNumbers.length ? { criticalReferenceNumbers } : {}),
-        heading: chapterBlueprint.title,
-        teaching: chapterBlueprint.teaching,
+        heading: safeRomanian(chapterBlueprint.title),
+        teaching: safeRomanian(chapterBlueprint.teaching),
         sourceKind: "poonen-source-first",
         sourceIds: blueprint.sources,
       }]
@@ -124,8 +147,8 @@ for (const [id, blueprint] of Object.entries(NT_SOURCE_FIRST_BLUEPRINTS)) {
     totalUnits += units.length
     return {
       number,
-      title: `${recovered.name} ${number} — ${chapterBlueprint.title}`,
-      summary: chapterBlueprint.summary,
+      title: safeRomanian(`${recovered.name} ${number} — ${chapterBlueprint.title}`),
+      summary: safeRomanian(chapterBlueprint.summary),
       units,
       status: "in_review",
       reviewState,
