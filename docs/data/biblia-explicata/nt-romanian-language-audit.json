@@ -4,6 +4,113 @@
   "policy": "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
   "count": 284,
   "findingGroups": 247,
+  "tokenSummary": [
+    {
+      "kind": "missing-diacritics",
+      "token": "viata",
+      "expected": "viață / viața",
+      "occurrences": 62,
+      "groups": 45
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "arata",
+      "expected": "arată / arăta",
+      "occurrences": 49,
+      "groups": 42
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 46,
+      "groups": 43
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "credinta",
+      "expected": "credință / credința",
+      "occurrences": 44,
+      "groups": 37
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "adevarata",
+      "expected": "adevărată / adevărata",
+      "occurrences": 29,
+      "groups": 29
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "lasa",
+      "expected": "lasă / lăsa",
+      "occurrences": 17,
+      "groups": 16
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "curata",
+      "expected": "curată / curăță",
+      "occurrences": 8,
+      "groups": 8
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 7,
+      "groups": 7
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "legatura",
+      "expected": "legătură / legătura",
+      "occurrences": 7,
+      "groups": 7
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "invatatura",
+      "expected": "învățătură",
+      "occurrences": 6,
+      "groups": 4
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "si",
+      "expected": "și",
+      "occurrences": 3,
+      "groups": 3
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "biruinta",
+      "expected": "biruință / biruința",
+      "occurrences": 2,
+      "groups": 2
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "simpla",
+      "expected": "simplă",
+      "occurrences": 2,
+      "groups": 2
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "fagaduinta",
+      "expected": "făgăduință",
+      "occurrences": 1,
+      "groups": 1
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "usurinta",
+      "expected": "ușurință / ușurința",
+      "occurrences": 1,
+      "groups": 1
+    }
+  ],
   "findings": [
     {
       "bookId": "ioan",
