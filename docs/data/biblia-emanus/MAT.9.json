@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,19 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 38 de versete au fost reverificate față de SBLGNT 1.2 la revizia fixată și de aparatul critic; Textus Receptus a fost folosit numai ca martor textual.",
+      "BTF și Cornilescu 1924 au fost consultate efectiv ca repere auxiliare. Biblia Liberă ronbl a fost identificată și verificată ca artefact public-domain fixat în snapshot, dar textul ei din ZIP nu a putut fi materializat în această rulare; NTR nu a fost consultată. Nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-09",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "GPT-5.6 Sol",
+      "runId": "emanus-nt-editorial-2026-08-09-mat-9-gpt56sol-0723",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +102,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 38 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 38 de versete din MAT.9 au fost confruntate cu SBLGNT 1.2 la commitul fixat și cu aparatul critic; Textus Receptus a fost folosit doar pentru variante. BTF și Cornilescu 1924 au fost repere românești efectiv consultate, iar identitatea/digestul artefactului Biblia Liberă ronbl din snapshot au fost verificate."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "MAT.9.3, 8, 19, 21, 24 și 32: au fost reparate calcuri, forme nefirești, persoana și pronumele.",
+        "MAT.9.8, 13, 14, 19 și 35: textul românesc a fost aliniat explicit la lectura SBLGNT, fără importarea automată a extensiilor RP/TR.",
+        "Terminologia a fost uniformizată la „ucenici”, „vameși”, „mulțimi”, „autoritate”, „neputință” și formulări românești naturale."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT 1.2; Textus Receptus este numai martor de variantă.",
+        "Formulele despre iertarea păcatelor, chemarea păcătoșilor, credință și vindecare sunt redate lexical, fără glosare confesională adăugată.",
+        "Reperele românești sunt folosite numai pentru control de sens și naturalețe, după redactarea independentă."
       ]
     },
     "omissionAddition": {
@@ -123,49 +127,39 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare românească independentă din SBLGNT/WEBP; BTF și Cornilescu au fost folosite numai comparativ, fără copiere de text"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:673be0d2aceb77be85b3a8c76a54529ad90e771a38b26dfb5a5ba1d4f3c116e8",
-    "contentDigest": "sha256:5562f074d9369afaa0c4729db9b2bf4821ca8200f67909874f4b726ccdfc6ec8"
+    "textDigest": "sha256:a6ad8dcae1b515e2cadf34bf9a660561bfabd8cdf725dbac00216823a49abc72",
+    "contentDigest": "sha256:f5de0b6a9cc069e65b065b2db28fed364f812c35c3a9a4c7f1330575ddbbb29f"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Isus S-a urcat într-o barcă, a trecut pe celălalt țărm și a venit în cetatea Sa."
+      "text": "Urcându-Se într-o barcă, a trecut dincolo și a venit în cetatea Sa."
     },
     {
       "number": 2,
-      "text": "Și iată că I-au adus un paralizat culcat pe un pat. Când le-a văzut credința, Isus i-a spus paralizatului: Îndrăznește, copile! Păcatele îți sunt iertate."
+      "text": "Și iată că I-au adus un paralitic întins pe un pat. Văzând Isus credința lor, i-a spus paraliticului: „Îndrăznește, fiule! Păcatele îți sunt iertate.”"
     },
     {
       "number": 3,
-      "text": "Atunci unii dintre cărturari și-au spus în sinea lor: Omul acesta blasfemiază!"
+      "text": "Și iată că unii dintre cărturari și-au spus în sinea lor: „Acesta blasfemiază.”"
     },
     {
       "number": 4,
-      "text": "Isus, cunoscându-le gândurile, a spus: De ce vă gândiți la lucruri rele în inimile voastre?"
+      "text": "Dar Isus, cunoscându-le gândurile, a spus: „De ce gândiți lucruri rele în inimile voastre?"
     },
     {
       "number": 5,
-      "text": "Căci ce este mai ușor: să spun Păcatele îți sunt iertate sau să spun Ridică-te și umblă?"
+      "text": "Căci ce este mai ușor: să spui «Păcatele îți sunt iertate» sau să spui «Ridică-te și umblă»?"
     },
     {
       "number": 6,
-      "text": "Dar, ca să știți că Fiul Omului are autoritate pe pământ să ierte păcatele... Atunci i-a spus paralizatului: Ridică-te, ia-ți patul și du-te acasă!"
+      "text": "Dar, ca să știți că Fiul Omului are autoritate pe pământ să ierte păcatele...” — atunci i-a spus paraliticului: „Ridică-te, ia-ți patul și du-te acasă.”"
     },
     {
       "number": 7,
@@ -173,75 +167,75 @@
     },
     {
       "number": 8,
-      "text": "Dar când au văzut noroadele lucrul acesta, s-au mirat și au glorificat pe Dumnezeu, care dăduse oamenilor o astfel de autoritate."
+      "text": "Când au văzut mulțimile, s-au temut și L-au glorificat pe Dumnezeu, care le dăduse oamenilor o astfel de autoritate."
     },
     {
       "number": 9,
-      "text": "Plecând de acolo, Isus a văzut un om numit Matei, așezat la postul de colectare a taxelor, și i-a spus: Urmează-Mă! El s-a ridicat și L-a urmat."
+      "text": "Plecând de acolo, Isus a văzut un om numit Matei, șezând la vamă, și i-a spus: „Urmează-Mă!” Iar el s-a ridicat și L-a urmat."
     },
     {
       "number": 10,
-      "text": "Pe când Isus stătea la masă în casă, iată că mulți colectori de taxe și păcătoși au venit și s-au așezat la masă împreună cu El și cu ucenicii Lui."
+      "text": "Pe când Isus stătea la masă în casă, iată că mulți vameși și păcătoși au venit și au stat la masă cu Isus și cu ucenicii Lui."
     },
     {
       "number": 11,
-      "text": "Când au văzut, fariseii le-au spus ucenicilor Lui: De ce mănâncă Învățătorul vostru cu colectorii de taxe și cu păcătoșii?"
+      "text": "Văzând aceasta, fariseii le spuneau ucenicilor Lui: „De ce mănâncă Învățătorul vostru cu vameșii și cu păcătoșii?”"
     },
     {
       "number": 12,
-      "text": "Când Isus a auzit aceasta, le-a zis: Cei sănătoși nu au nevoie de medic, dar cei bolnavi au nevoie."
+      "text": "Auzind, El a spus: „Nu cei sănătoși au nevoie de medic, ci cei bolnavi."
     },
     {
       "number": 13,
-      "text": "Duceți-vă și învățați ce înseamnă: Milă vreau, nu jertfă. Căci n-am venit să-i chem pe cei drepți, ci pe cei păcătoși."
+      "text": "Duceți-vă și învățați ce înseamnă: «Milă voiesc, nu jertfă.» Căci n-am venit să-i chem pe cei drepți, ci pe cei păcătoși.”"
     },
     {
       "number": 14,
-      "text": "Atunci ucenicii lui Ioan au venit la El și L-au întrebat: De ce noi și fariseii postim des, dar ucenicii Tăi nu postesc?"
+      "text": "Atunci s-au apropiat de El ucenicii lui Ioan și au spus: „De ce noi și fariseii postim mult, iar ucenicii Tăi nu postesc?”"
     },
     {
       "number": 15,
-      "text": "Isus le-a spus: Pot oare nuntașii să jelească atâta timp cât mirele este cu ei? Dar vor veni zile când mirele va fi luat de la ei și atunci vor posti."
+      "text": "Isus le-a spus: „Pot oare nuntașii să jelească atât timp cât mirele este cu ei? Vor veni însă zile când mirele va fi luat de la ei și atunci vor posti."
     },
     {
       "number": 16,
-      "text": "Nimeni nu pune un petic de pânză nouă pe o haină veche, căci peticul trage din haină și ruptura se face mai rea."
+      "text": "Nimeni nu pune un petic de pânză neînălbită pe o haină veche, căci peticul trage din haină și ruptura se face mai rea."
     },
     {
       "number": 17,
-      "text": "Nici nu se pune vin nou în burdufuri vechi; altfel, burdufurile plesnesc, vinul se varsă, iar burdufurile se distrug. Ci vinul nou se pune în burdufuri noi și amândouă se păstrează."
+      "text": "Nici nu se pune vin nou în burdufuri vechi; altfel, burdufurile plesnesc, vinul se varsă, iar burdufurile se pierd. Ci vinul nou se pune în burdufuri noi și astfel se păstrează amândouă.”"
     },
     {
       "number": 18,
-      "text": "În timp ce le spunea acestea, iată că a venit un conducător, s-a închinat înaintea Lui și I-a spus: Fiica mea tocmai a murit; dar vino, pune-Ți mâna peste ea și va trăi."
+      "text": "Pe când le spunea acestea, iată că a venit un conducător, I s-a închinat și a spus: „Fiica mea tocmai a murit; dar vino, pune-Ți mâna peste ea și va trăi.”"
     },
     {
       "number": 19,
-      "text": "Isus s-a ridicat și l-a urmat, la fel ca discipolii săi."
+      "text": "Isus S-a ridicat și a mers după el, iar ucenicii Săi Îl însoțeau."
     },
     {
       "number": 20,
-      "text": "Și iată că o femeie care suferea de doisprezece ani de o scurgere de sânge s-a apropiat din spate și a atins marginea hainei Lui,"
+      "text": "Și iată că o femeie care suferea de hemoragie de doisprezece ani s-a apropiat din spate și s-a atins de marginea hainei Lui."
     },
     {
       "number": 21,
-      "text": "Căci ea a zis în sinea ei: Dacă mă voi atinge de haina Lui, voi fi făcută sănătoasă."
+      "text": "Căci își spunea în sine: „Dacă mă ating măcar de haina Lui, voi fi vindecată.”"
     },
     {
       "number": 22,
-      "text": "Isus S-a întors, a văzut-o și i-a spus: Îndrăznește, fiică! Credința ta te-a vindecat. Și femeia a fost vindecată chiar din ceasul acela."
+      "text": "Isus S-a întors, a văzut-o și i-a spus: „Îndrăznește, fiică! Credința ta te-a vindecat.” Și femeia a fost vindecată din ceasul acela."
     },
     {
       "number": 23,
-      "text": "Când a ajuns Isus în casa conducătorului și i-a văzut pe cântăreții din fluier și mulțimea care făcea zarvă,"
+      "text": "Când Isus a ajuns la casa conducătorului și i-a văzut pe cei ce cântau din flaut și mulțimea făcând zarvă,"
     },
     {
       "number": 24,
-      "text": "El le-a zis: Faceți loc, pentru că fata nu este moartă, ci doarme. Ei îl ridiculizau."
+      "text": "le-a spus: „Plecați, căci fata n-a murit, ci doarme.” Dar ei râdeau de El."
     },
     {
       "number": 25,
-      "text": "După ce mulțimea a fost scoasă afară, El a intrat, a luat-o pe fetiță de mână, iar ea s-a ridicat."
+      "text": "După ce mulțimea a fost scoasă afară, El a intrat, a luat-o de mână, iar fata s-a ridicat."
     },
     {
       "number": 26,
@@ -249,19 +243,19 @@
     },
     {
       "number": 27,
-      "text": "În timp ce Isus pleca de acolo, doi orbi L-au urmat, strigând: Ai milă de noi, Fiul lui David!"
+      "text": "Pe când Isus pleca de acolo, doi orbi L-au urmat, strigând: „Ai milă de noi, Fiul lui David!”"
     },
     {
       "number": 28,
-      "text": "După ce a intrat în casă, orbii s-au apropiat de El, iar Isus i-a întrebat: Credeți că pot face aceasta? Ei I-au răspuns: Da, Doamne."
+      "text": "După ce a intrat în casă, orbii s-au apropiat de El, iar Isus i-a întrebat: „Credeți că pot face lucrul acesta?” Ei I-au răspuns: „Da, Doamne.”"
     },
     {
       "number": 29,
-      "text": "Atunci le-a atins ochii și le-a spus: Să vi se facă potrivit credinței voastre!"
+      "text": "Atunci le-a atins ochii și a spus: „Să vi se facă după credința voastră.”"
     },
     {
       "number": 30,
-      "text": "Și ochii li s-au deschis. Isus le-a poruncit cu asprime: Vedeți să nu afle nimeni!"
+      "text": "Și li s-au deschis ochii. Isus i-a avertizat cu fermitate: „Vedeți să nu afle nimeni!”"
     },
     {
       "number": 31,
@@ -269,15 +263,15 @@
     },
     {
       "number": 32,
-      "text": "Pe când ieșeau, iată că un om mut, posedat de demoni, a fost adus la el."
+      "text": "Pe când ieșeau ei, iată că I-au adus un om mut, stăpânit de un demon."
     },
     {
       "number": 33,
-      "text": "După ce demonul a fost scos, omul mut a vorbit. Mulțimile se mirau și spuneau: Niciodată nu s-a văzut așa ceva în Israel!"
+      "text": "După ce demonul a fost scos, mutul a vorbit, iar mulțimile s-au minunat și spuneau: „Niciodată nu s-a mai văzut așa ceva în Israel!”"
     },
     {
       "number": 34,
-      "text": "Dar fariseii spuneau: El scoate demonii cu ajutorul conducătorului demonilor."
+      "text": "Dar fariseii spuneau: „Prin căpetenia demonilor scoate demonii.”"
     },
     {
       "number": 35,
@@ -285,18 +279,76 @@
     },
     {
       "number": 36,
-      "text": "Când a văzut mulțimile, I s-a făcut milă de ele, pentru că erau necăjite și doborâte, ca niște oi care n-au păstor."
+      "text": "Văzând mulțimile, I s-a făcut milă de ele, pentru că erau istovite și risipite, ca niște oi fără păstor."
     },
     {
       "number": 37,
-      "text": "Atunci le-a spus ucenicilor Săi: Secerișul este mare, dar lucrătorii sunt puțini."
+      "text": "Atunci le-a spus ucenicilor Săi: „Secerișul este mare, dar lucrătorii sunt puțini."
     },
     {
       "number": 38,
-      "text": "Rugați-L deci pe Domnul secerișului să scoată lucrători la secerișul Lui."
+      "text": "Rugați-L deci pe Domnul secerișului să trimită lucrători la secerișul Său.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 8,
+      "term": "ἐφοβήθησαν / varianta RP ἐθαύμασαν",
+      "decision": "Textul principal redă SBLGNT 1.2 prin „s-au temut”; lectura de tip RP/TR „s-au minunat” rămâne doar martor de variantă.",
+      "alternatives": [
+        "s-au minunat"
+      ],
+      "reason": "SBLGNT 1.2 afișează ἐφοβήθησαν, în timp ce familia receptă are ἐθαύμασαν.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost urmat textul critic principal SBLGNT 1.2."
+    },
+    {
+      "verse": 13,
+      "term": "ἀλλὰ ἁμαρτωλούς / adaosul RP εἰς μετάνοιαν",
+      "decision": "Textul principal se încheie cu „ci pe cei păcătoși”, fără adaosul „la pocăință”.",
+      "alternatives": [
+        "ci pe cei păcătoși la pocăință"
+      ],
+      "reason": "Expresia εἰς μετάνοιαν este prezentă în tradiția receptă, dar nu în textul principal SBLGNT 1.2.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul recept nu a fost importat în textul Emanus."
+    },
+    {
+      "verse": 14,
+      "term": "νηστεύομεν πολλά",
+      "decision": "A fost păstrat adverbul cantitativ prin „postim mult”, nu redus la simplul „postim”.",
+      "reason": "SBLGNT 1.2 include explicit πολλά.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nuanța lexicală explicită din textul principal a fost păstrată."
+    },
+    {
+      "verse": 19,
+      "term": "ἠκολούθει / varianta ἠκολούθησεν",
+      "decision": "Imperfectul SBLGNT este redat narativ prin „a mers după el”, cu continuitatea acțiunii exprimată în context; nu se construiește o diferență doctrinară din varianta de aspect.",
+      "alternatives": [
+        "l-a urmat"
+      ],
+      "reason": "Textul afișat de SBLGNT are ἠκολούθει, iar NA28/RP consemnează ἠκολούθησεν.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost păstrat sensul de urmărire continuă într-o formulare românească naturală."
+    },
+    {
+      "verse": 35,
+      "term": "πᾶσαν νόσον καὶ πᾶσαν μαλακίαν / adaosul RP ἐν τῷ λαῷ",
+      "decision": "Textul principal se încheie cu „orice boală și orice neputință”, fără „în popor”.",
+      "alternatives": [
+        "orice boală și orice neputință în popor"
+      ],
+      "reason": "SBLGNT 1.2 nu include ἐν τῷ λαῷ în textul principal; expresia apare în tradiția receptă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul RP/TR nu a fost importat."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }
