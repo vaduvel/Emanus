@@ -3,14 +3,23 @@ import type { CSSProperties } from "react"
 import type { LucideIcon } from "lucide-react"
 import {
   BookOpen, Brain, Footprints, Frown, HandHeart, HeartCrack, Laugh,
-  Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
+  LifeBuoy, Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
 } from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
 import { ScriptureReveal } from "./components/ScriptureReveal"
+import { navigate } from "./router"
 
-export interface LessonResult { choicesMade: Record<string, string>; journal: string }
+export interface LessonResult {
+  choicesMade: Record<string, string>
+  multiChoicesMade: Record<string, string[]>
+  textResponses: Record<string, string>
+  journal: string
+}
 const GUIDE_NAME = "Emanus"
-const INTERACTION_TYPES = new Set<LessonStep["type"]>(["choice", "check_in", "journal", "prayer", "step"])
+const INTERACTION_TYPES = new Set<LessonStep["type"]>([
+  "choice", "multi_choice", "check_in", "reflection", "declaration",
+  "name_struggle", "journal", "prayer", "step",
+])
 function stepIcon(type: LessonStep["type"]): LucideIcon {
   switch (type) {
     case "scripture": return BookOpen
@@ -43,22 +52,30 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
   const [revealed, setRevealed] = useState<LessonStep[]>(() => mainSteps.length ? [mainSteps[0]] : [])
   const [mainIdx, setMainIdx] = useState(0)
   const [choices, setChoices] = useState<Record<string, string>>({})
+  const [multiChoices, setMultiChoices] = useState<Record<string, string[]>>({})
+  const [textResponses, setTextResponses] = useState<Record<string, string>>({})
   const [quizAnswers, setQuizAnswers] = useState<Record<string, number>>({})
   const [checkIns, setCheckIns] = useState<Record<string, string>>({})
   const [bubbleCounts, setBubbleCounts] = useState<Record<string, number>>({})
   const [journal, setJournal] = useState("")
   const [autoPaused, setAutoPaused] = useState(false)
+  const [safetyCleared, setSafetyCleared] = useState(() => !lesson.safety)
   const scrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => { scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" }) }, [revealed.length, bubbleCounts, quizAnswers, checkIns])
 
   const current = revealed[revealed.length - 1]
   const inBranch = current ? !mainSteps.includes(current) : false
   const atLastMain = mainIdx >= mainSteps.length - 1
-  function toNextMain(nextChoices = choices, nextJournal = journal) {
-    if (atLastMain) { onComplete({ choicesMade: nextChoices, journal: nextJournal }); return }
+  function toNextMain(
+    nextChoices = choices,
+    nextJournal = journal,
+    nextMultiChoices = multiChoices,
+    nextTextResponses = textResponses,
+  ) {
+    if (atLastMain) { onComplete({ choicesMade: nextChoices, multiChoicesMade: nextMultiChoices, textResponses: nextTextResponses, journal: nextJournal }); return }
     const ni = mainIdx + 1
     const nextStep = mainSteps[ni]
-    if (!nextStep) { onComplete({ choicesMade: nextChoices, journal: nextJournal }); return }
+    if (!nextStep) { onComplete({ choicesMade: nextChoices, multiChoicesMade: nextMultiChoices, textResponses: nextTextResponses, journal: nextJournal }); return }
     setMainIdx(ni)
     setRevealed((r) => [...r, nextStep])
   }
@@ -76,6 +93,20 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
     if (!checkIns[step.id]) setCheckIns((s) => ({ ...s, [step.id]: mood }))
   }
   function finishJournal(skip = false) { if (skip) setJournal(""); toNextMain(choices, skip ? "" : journal) }
+  function toggleMulti(step: LessonStep, optionId: string) {
+    const currentValues = multiChoices[step.id] ?? []
+    const selected = currentValues.includes(optionId)
+    const max = step.multiChoice?.maxSelections ?? Number.POSITIVE_INFINITY
+    const next = selected
+      ? currentValues.filter((id) => id !== optionId)
+      : currentValues.length < max ? [...currentValues, optionId] : currentValues
+    setMultiChoices((values) => ({ ...values, [step.id]: next }))
+  }
+  function finishText(step: LessonStep, skip = false) {
+    const nextTextResponses = skip ? { ...textResponses, [step.id]: "" } : textResponses
+    if (skip) setTextResponses(nextTextResponses)
+    toNextMain(choices, journal, multiChoices, nextTextResponses)
+  }
 
   useEffect(() => {
     if (!current || autoPaused || submitting) return
@@ -101,6 +132,7 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
     return () => window.clearTimeout(timer)
   }, [current, autoPaused, submitting, bubbleCounts, quizAnswers, checkIns])
 
+  if (lesson.safety && !safetyCleared) return <section className="player"><div className="tile"><LifeBuoy size={26} aria-hidden /><p className="today__kicker">Înainte de lecție</p><h1>Siguranța vine prima</h1><p>{lesson.safety.notice}</p><p className="muted">Alegerea de aici este efemeră: nu intră în progres, jurnal sau cloud.</p><button type="button" onClick={() => navigate("/criza")}>Am nevoie de ajutor acum</button><button type="button" className="ghost" onClick={() => setSafetyCleared(true)}>Sunt în siguranță acum și continui</button></div></section>
   if (!current) return <section className="player"><p className="muted">Lecția nu are pași încă.</p></section>
   const total = Math.max(1, mainSteps.length)
   const stepNo = Math.min(mainIdx + 1, total)
@@ -114,6 +146,8 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
         visibleBubbleCount={s.id === current.id ? visibleBubbleCount : (s.bubbles?.length ?? 0)} interactionReady={i !== revealed.length - 1 || interactionReady}
         pickedOptionId={choices[s.id]} pickedMoodId={checkIns[s.id]} quizAnswerIdx={quizAnswers[s.id]} journal={journal} onJournal={setJournal}
         onJournalDone={finishJournal} onExerciseDone={advance} onQuiz={(idx) => setQuizAnswers((q) => ({ ...q, [s.id]: idx }))}
+        selectedMulti={multiChoices[s.id] ?? []} onToggleMulti={(id) => toggleMulti(s, id)} onMultiDone={advance}
+        textResponse={textResponses[s.id] ?? ""} onTextResponse={(value) => setTextResponses((values) => ({ ...values, [s.id]: value }))} onTextDone={(skip) => finishText(s, skip)}
         onMood={(m) => pickMood(s, m)} onPick={(o) => pickChoice(s, o)} />)}
     </div>
     <footer className="player__foot"><span className="muted">{inBranch ? "↪ răspuns pentru alegerea ta" : `Pas ${stepNo}/${total}`}</span><button type="button" className="ghost" onClick={() => setAutoPaused((p) => !p)}>{autoPaused ? "Continuă conversația" : "Pauză"}</button></footer>
@@ -124,9 +158,11 @@ function GuideMsg({ icon: Glyph, text }: { icon: LucideIcon; text: string }) {
   return <div className="msg msg--guide"><div className="msg__avatar"><Glyph size={18} strokeWidth={1.8} aria-hidden /></div><div className="msg__body"><span className="msg__name">{GUIDE_NAME}</span><div className="bubble">{text}</div></div></div>
 }
 
-function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, pickedOptionId, pickedMoodId, quizAnswerIdx, onQuiz, journal, onJournal, onJournalDone, onExerciseDone, onMood, onPick }: {
+function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, pickedOptionId, pickedMoodId, quizAnswerIdx, onQuiz, journal, onJournal, onJournalDone, onExerciseDone, selectedMulti, onToggleMulti, onMultiDone, textResponse, onTextResponse, onTextDone, onMood, onPick }: {
   step: LessonStep; lesson: Lesson; isCurrent: boolean; visibleBubbleCount: number; interactionReady: boolean; pickedOptionId?: string; pickedMoodId?: string; quizAnswerIdx?: number;
   onQuiz: (idx: number) => void; journal: string; onJournal: (v: string) => void; onJournalDone: (skip?: boolean) => void; onExerciseDone: () => void; onMood: (mood: string) => void; onPick: (opt: ChoiceOption) => void
+  selectedMulti: string[]; onToggleMulti: (optionId: string) => void; onMultiDone: () => void
+  textResponse: string; onTextResponse: (value: string) => void; onTextDone: (skip?: boolean) => void
 }) {
   const bubbles = (step.bubbles ?? []).slice(0, visibleBubbleCount)
   /*
@@ -141,7 +177,11 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
   if (step.type === "check_in") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}{isCurrent && interactionReady && <MoodChips picked={pickedMoodId} onPick={onMood} />}</>
   if (step.type === "choice") {
     const picked = step.choice?.options.find((o) => o.id === pickedOptionId)
-    return <>{step.choice?.prompt && <GuideMsg icon={MessageSquare} text={step.choice.prompt} />}{picked ? <div className="msg msg--me"><div className="bubble bubble--me">{picked.label}</div></div> : isCurrent ? <div className="choice__opts">{step.choice?.options.map((o) => <button key={o.id} className="ghost" onClick={() => onPick(o)}>{o.label}</button>)}</div> : null}</>
+    return <>{step.choice?.prompt && <GuideMsg icon={MessageSquare} text={step.choice.prompt} />}{picked ? <><div className="msg msg--me"><div className="bubble bubble--me">{picked.label}</div></div>{picked.feedback && <GuideMsg icon={MessageCircle} text={picked.feedback} />}</> : isCurrent ? <div className="choice__opts">{step.choice?.options.map((o) => <button key={o.id} className="ghost" onClick={() => onPick(o)}>{o.label}</button>)}</div> : null}</>
+  }
+  if (step.type === "multi_choice") {
+    const min = step.multiChoice?.minSelections ?? 1
+    return <>{step.multiChoice?.prompt && <GuideMsg icon={MessageSquare} text={step.multiChoice.prompt} />}<div className="choice__opts">{step.multiChoice?.options.map((option) => <button key={option.id} type="button" className={selectedMulti.includes(option.id) ? "" : "ghost"} onClick={() => onToggleMulti(option.id)} disabled={!isCurrent}>{option.label}</button>)}</div>{isCurrent && <button type="button" disabled={selectedMulti.length < min} onClick={onMultiDone}>Continuă</button>}</>
   }
   if (step.type === "quiz") {
     const answered = quizAnswerIdx !== undefined
@@ -151,6 +191,11 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
     })}</div>{answered && step.quiz?.explanation && <GuideMsg icon={Lightbulb} text={step.quiz.explanation} />}</>
   }
   if (step.type === "journal") return <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici… (privat, doar pentru tine)" rows={4} /><div className="choice__opts"><button onClick={() => onJournalDone(false)}>Am terminat</button><button className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</>
+  if (["reflection", "declaration", "name_struggle"].includes(step.type)) {
+    const prompt = step.response?.prompt ?? (step.bubbles ?? []).map((bubble) => bubble.text).join(" ")
+    const requiredLength = step.response?.required ? (step.response.minLength ?? 1) : 0
+    return <>{bubbles.map((bubble, index) => <GuideMsg key={index} icon={stepIcon(step.type)} text={bubble.text} />)}{isCurrent && interactionReady && <div className="journal">{step.response && <><label htmlFor={`response-${step.id}`}>{prompt}</label><textarea id={`response-${step.id}`} value={textResponse} onChange={(event) => onTextResponse(event.target.value)} placeholder={step.response.placeholder ?? "Scrie pentru tine…"} rows={3} /></>}<div className="choice__opts"><button type="button" disabled={textResponse.trim().length < requiredLength} onClick={() => onTextDone(false)}>{step.response ? "Am terminat" : "Am răspuns pentru mine"}</button>{!step.response?.required && <button type="button" className="ghost" onClick={() => onTextDone(true)}>Sar peste</button>}</div></div>}</>
+  }
   if (step.type === "reward") return <GuideMsg icon={Sunrise} text={bubbles.map((b) => b.text).join(" ") || "Atât pentru azi. Revino când ești pregătit."} />
   return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={stepIcon(step.type)} text={b.text} />)}</>
 }

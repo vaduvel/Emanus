@@ -1,8 +1,12 @@
 import type { Lesson } from "../domain.js"
 import { ANXIETATE_LESSONS, ANXIETATE_PRACTICES } from "./anxietate.js"
+import { AVORT_LESSONS, AVORT_PRACTICES } from "./avort.js"
 import { aproapeL1, aproapeL2, aproapeL3, aproapeL4, aproapeL5, aproapeL6, aproapeL7 } from "./aproape.js"
+import { CLARIFICAREA_DEPENDENTEI_LESSONS, CLARIFICAREA_DEPENDENTEI_PRACTICES } from "./clarificareaDependentei.js"
 import { DIVORT_LESSONS, DIVORT_PRACTICES } from "./divort.js"
+import { DIVORT_POZITII_LESSONS, DIVORT_POZITII_PRACTICES } from "./divortPozitii.js"
 import { DOCTRINE_LESSONS } from "./doctrina.js"
+import { FAMILIE_RESPINGE_LESSONS, FAMILIE_RESPINGE_PRACTICES } from "./familieRespinge.js"
 import { GREUTATE_LESSONS, GREUTATE_PRACTICES } from "./greutate.js"
 import { harL1, harL2, harL3, harL4, harL5, harL6, harL7 } from "./har.js"
 import {
@@ -18,6 +22,12 @@ import { neiertareL1, neiertareL2, neiertareL3 } from "./neiertareA.js"
 import { neiertareL4, neiertareL5 } from "./neiertareB.js"
 import { neiertareL6, neiertareL7 } from "./neiertareC.js"
 import { neiertareO1, neiertareO2 } from "./neiertareOpen.js"
+import { INSELAT_LESSONS, INSELAT_PRACTICES } from "./inselat.js"
+import { LEGATURA_LESSONS, LEGATURA_PRACTICES } from "./legatura.js"
+import { NOU_VENIT_LESSONS, NOU_VENIT_PRACTICES } from "./nouVenit.js"
+import { PAINE_LESSONS, PAINE_PRACTICES } from "./paine.js"
+import { PORNOGRAFIE_LESSONS, PORNOGRAFIE_PRACTICES } from "./pornografie.js"
+import { RESPINS_BISERICA_LESSONS, RESPINS_BISERICA_PRACTICES } from "./respinsBiserica.js"
 import { rusineL1, rusineL2, rusineL3, rusineL4 } from "./rusineA.js"
 import { rusineL5, rusineL6, rusineL7 } from "./rusineB.js"
 import { schimbareL1, schimbareL2, schimbareL3, schimbareL4 } from "./schimbareA.js"
@@ -30,13 +40,24 @@ import { umblareL4, umblareL5, umblareL6, umblareL7 } from "./umblareB.js"
 
 export * from "./anxietate.js"
 export * from "./aproape.js"
+export * from "./avort.js"
+export * from "./bridges.js"
+export * from "./clarificareaDependentei.js"
 export * from "./divort.js"
+export * from "./divortPozitii.js"
 export * from "./doctrina.js"
 export * from "./doorEntries.js"
+export * from "./familieRespinge.js"
 export * from "./greutate.js"
 export * from "./har.js"
 export * from "./impreuna.js"
+export * from "./inselat.js"
+export * from "./legatura.js"
 export * from "./neiertareOpen.js"
+export * from "./nouVenit.js"
+export * from "./paine.js"
+export * from "./pornografie.js"
+export * from "./respinsBiserica.js"
 export * from "./rusineA.js"
 export * from "./rusineB.js"
 export * from "./schimbareA.js"
@@ -74,36 +95,36 @@ export * from "./umblareB.js"
  * camerei. `Room.pathId` rămâne doar implicitul, pentru o ușă nouă adăugată
  * fără drum.
  *
- * DE CE OPT ȘI NU ȘAPTE (docs/22 §1, NENEGOCIABIL): ușile `anxietate` și
+ * DE CE ZECE ȘI NU ȘAPTE (docs/22 §1 și amendamentul din docs/24): ușile `anxietate` și
  * `tristete` cădeau până acum în camera 5, "Nu mă pot schimba", a cărei minciună
  * este "Sunt defect, asta sunt". Adică omul care intra cu anxietate sau depresie
  * primea din prima secundă mesajul că problema lui e caracterul. docs/22 §1
  * interzice exact asta: anxietatea, tristețea, epuizarea și insomnia pot avea
  * cauze medicale. De aceea există camera 8.
  *
- * ATENȚIE, limită asumată: cele opt tipare sunt un instrument de orientare
+ * ATENȚIE, limită asumată: cele zece tipare sunt un instrument de orientare
  * inițială, NU un diagnostic. O durere poate avea și cauze medicale, relaționale
  * sau sociale. Nu spunem niciodată omului "boala ta e că nu crezi X" — ar fi o
  * vină în plus pusă pe cineva care deja suferă. Vezi docs/22-siguranta.md.
  *
  * TREI INTRĂRI, nu două (docs/21 §3):
- *   1. vine cu o durere        → camera lui (c1…c8)
+ *   1. vine cu o durere        → camera lui (c1…c10)
  *   2. vine de la zero         → path_temelie
  *   3. vine să-și întărească relația → path_umblare
  *
- * DRUMURI FĂRĂ CAMERĂ: pe lângă cele opt camere există `path_umblare` (a treia
+ * DRUMURI FĂRĂ CAMERĂ: pe lângă cele zece camere există `path_umblare` (a treia
  * intrare) și două drumuri născute din uși ale camerei 2 cărora răspunsul
  * camerei nu li se potrivea: `path_divort` și `path_suferinta`. Se ajunge la ele
  * prin `pathId` pus direct pe ușă, pe care `resolveDoorPath` îl citește
  * înaintea camerei.
  *
- * STARE: toate cele opt camere au parcurs scris. `path_greutate` e RETRAS —
+ * STARE: toate cele zece camere au parcurs scris. `path_greutate` e RETRAS —
  * a fost înlocuit de cele două drumuri separate ale camerei 8; rămâne în cod
  * doar ca să nu rupă o stare salvată veche. `FALLBACK_PATH_ID` rămâne ca plasă
  * de siguranță, nu ca soluție pentru camere goale.
  */
 
-/** Cele opt tipare spirituale dominante din care iese aproape orice durere. */
+/** Cele zece tipare de orientare pastorală în care sunt grupate ușile. */
 export interface Room {
   id: string
   /** Numele camerei, cum îl vede omul. */
@@ -174,6 +195,18 @@ export const ROOMS: Room[] = [
     lie: "Dacă aș avea destulă credință, aș fi bine.",
     pathId: "path_tristete",
   },
+  {
+    id: "c9",
+    title: "Cu ei nu se mai poate",
+    lie: "Cu ei nu se mai poate.",
+    pathId: "path_legatura",
+  },
+  {
+    id: "c10",
+    title: "Valorez cât aduc în casă",
+    lie: "Valorez cât aduc în casă.",
+    pathId: "path_paine",
+  },
 ]
 
 export function getRoom(roomId: string | null | undefined): Room | undefined {
@@ -194,39 +227,41 @@ export interface Door {
    * Se folosește în trei feluri:
    *   - ușile fără cameră (`inceput`, `umblare`, `nu_stiu`);
    *   - ușile care stau într-o cameră, dar au primit drum propriu pentru că
-   *     răspunsul camerei nu li se potrivea. Sunt patru, toate din camera 2:
-   *     `divort` către `path_divort`, iar `doliu`, `boala` și `de_ce_permis`
-   *     către `path_suferinta`. `roomId` le rămâne "c2", pentru că tiparul
-   *     spiritual chiar acela e; se schimbă doar răspunsul primit.
+   *     răspunsul implicit al camerei nu li se potrivea: `divort` către
+   *     `path_divort`, iar `doliu`, `boala` și `de_ce_permis` către
+   *     `path_suferinta`;
    *   - ușile dintr-o cameră cu mai multe drumuri: `anxietate` și `tristete`
    *     stau amândouă în camera 8 și au fiecare drumul ei.
    */
   pathId?: string
+  /** Formulări alternative folosite numai la căutare; nu creează uși noi. */
+  aliases?: string[]
   /** True pentru cele 10 propoziții arătate înainte de "Arată-mi tot". */
   common?: boolean
 }
 
 /*
- * Cele 31 de uși. (docs/21 §3)
+ * Cele 41 de uși. (docs/21 §3 și amendamentul din docs/24)
  * Omul nu alege o cameră — alege o propoziție. Nu află niciodată că e pe același
  * culoar cu alți patru. Ordinea e intenționat amestecată între camere, ca lista
  * să nu arate ca niște categorii.
  *
  * `common: true` = intră în primele 10 de pe ecran. Restul se văd la
- * "Arată-mi tot". 31 de opțiuni deodată obosesc pe telefon.
+ * "Arată-mi tot". 41 de opțiuni deodată obosesc pe telefon.
  */
 export const DOORS: Door[] = [
-  { id: "rusine", label: "Am făcut lucruri de care mi-e rușine", roomId: "c1", common: true },
+  { id: "rusine", label: "Am făcut lucruri de care mi-e rușine", roomId: "c1", common: true, aliases: ["mă simt vinovat", "am făcut ceva grav", "păcate ascunse", "mi-e rușine să mă mărturisesc"] },
   { id: "neiertare", label: "Mi s-a făcut ceva și nu pot ierta", roomId: "c2", common: true },
   { id: "indoiala", label: "Nu știu dacă există Dumnezeu", roomId: "c3", common: true },
   { id: "perete", label: "Mă rog și parcă vorbesc în perete", roomId: "c4", common: true },
-  { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5", common: true },
+  { id: "dependenta", label: "Nu mă pot lăsa de un lucru", roomId: "c5", pathId: "path_schimbare", common: true, aliases: ["alcool", "droguri", "jocuri de noroc", "dependență digitală", "internet", "adicție"] },
   {
     id: "anxietate",
     label: "Trăiesc cu anxietate",
     roomId: "c8",
     pathId: "path_anxietate",
     common: true,
+    aliases: ["atacuri de panică", "panică", "neliniște", "îngrijorare", "mi-e frică de viitor"],
   },
   {
     id: "doliu",
@@ -234,16 +269,17 @@ export const DOORS: Door[] = [
     roomId: "c2",
     pathId: "path_suferinta",
     common: true,
+    aliases: ["cum trec peste moartea cuiva", "văduvie", "am pierdut pe cineva drag"],
   },
   { id: "merit", label: "Fac tot ce trebuie și tot nu-mi ajunge", roomId: "c6", common: true },
   { id: "singuratate", label: "Nu am pe nimeni", roomId: "c7", common: true },
   { id: "nu_inteleg", label: "Sunt creștin, dar nu înțeleg ce citesc", roomId: "c3", common: true },
   { id: "obisnuinta", label: "Merg la biserică din obișnuință", roomId: "c6" },
-  { id: "avort", label: "Am făcut un avort", roomId: "c1" },
+  { id: "avort", label: "Am făcut un avort", roomId: "c1", pathId: "path_acasa", aliases: ["port un avort", "am pierdut copilul prin avort"] },
   { id: "biblia_inventata", label: "Cred că Biblia e inventată de oameni", roomId: "c3" },
   { id: "recadere", label: "Am promis de o sută de ori și tot cad", roomId: "c5" },
   { id: "uscaciune", label: "Nu mai simt nimic când mă rog", roomId: "c4" },
-  { id: "familie_respinge", label: "Familia mea nu mă înțelege", roomId: "c7" },
+  { id: "familie_respinge", label: "Familia mea nu mă înțelege", roomId: "c7", pathId: "path_impreuna", aliases: ["familia mă respinge", "ai mei nu acceptă credința mea"] },
   {
     id: "boala",
     label: "Sunt bolnav sau e bolnav cineva drag",
@@ -253,32 +289,43 @@ export const DOORS: Door[] = [
   { id: "infidelitate", label: "Mi-am înșelat soțul sau soția", roomId: "c1" },
   { id: "flacara", label: "Am fost aproape de Dumnezeu cândva", roomId: "c4" },
   { id: "frica_pedeapsa", label: "Mi-e frică să nu mă pedepsească", roomId: "c6" },
-  { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7" },
+  { id: "respins_biserica", label: "M-am simțit respins în biserică", roomId: "c7", pathId: "path_impreuna", aliases: ["rănit în biserică", "abuz spiritual", "biserica m-a respins"] },
   {
     id: "de_ce_permis",
     label: "Nu înțeleg de ce a permis Dumnezeu asta",
     roomId: "c2",
     pathId: "path_suferinta",
   },
-  { id: "pornografie", label: "Mă lupt cu pornografia", roomId: "c1" },
+  { id: "pornografie", label: "Mă lupt cu pornografia", roomId: "c5", pathId: "path_schimbare", aliases: ["nu mă pot opri din pornografie", "conținut sexual", "masturbare"] },
   {
     id: "tristete",
     label: "Nu mai am chef de nimic",
     roomId: "c8",
     pathId: "path_tristete",
+    aliases: ["nu mai am chef de viață", "de ce mă simt gol", "nu mă mai pot bucura", "deznădejde", "depresie"],
   },
   { id: "alte_credinte", label: "Am crezut alte lucruri înainte (energii, karma, univers)", roomId: "c3" },
-  { id: "cum_citesc", label: "Nu știu cum să citesc Biblia", roomId: "c4" },
+  { id: "cum_citesc", label: "Nu știu cum să citesc Biblia", roomId: "c3", pathId: "path_temelie", aliases: ["cum înțeleg Biblia", "Biblia mi se pare grea"] },
   { id: "epuizat_slujire", label: "Sunt obosit de slujire", roomId: "c6" },
-  { id: "nou_venit", label: "Sunt nou și nu cunosc pe nimeni", roomId: "c7" },
+  { id: "nou_venit", label: "Sunt nou și nu cunosc pe nimeni", roomId: "c7", pathId: "path_impreuna", aliases: ["sunt nou în biserică", "nu cunosc pe nimeni la biserică"] },
   {
     id: "divort",
     label: "Am trecut printr-un divorț",
-    roomId: "c2",
+    roomId: "c9",
     pathId: "path_divort",
   },
   { id: "prea_departe", label: "Cred că sunt prea departe ca să mă mai întorc", roomId: "c1" },
   { id: "furie", label: "Mă enervez și rănesc oamenii din jur", roomId: "c5" },
+  { id: "casnicie_rece", label: "Suntem străini în aceeași casă", roomId: "c9", common: true, aliases: ["căsnicie rece", "singur în căsnicie", "nu mai există iubire între noi"] },
+  { id: "inselat", label: "Am fost înșelat", roomId: "c9", pathId: "path_legatura", aliases: ["soțul m-a înșelat", "soția m-a înșelat", "infidelitate suferită", "trădare în căsnicie"] },
+  { id: "conflict_familie", label: "Nu ne mai vorbim", roomId: "c9", aliases: ["conflict în familie", "conflict cu prietenii", "conflict cu colegii"] },
+  { id: "copil_departe", label: "Copilul meu s-a îndepărtat", roomId: "c9", aliases: ["copil rebel", "nu mai vorbesc cu copilul meu"] },
+  { id: "crestere_copii", label: "Nu știu cum să-mi cresc copilul", roomId: "c9", aliases: ["educarea copiilor", "nu mă descurc ca părinte"] },
+  { id: "parinti_varstnici", label: "Ai mei au îmbătrânit și eu nu mai pot", roomId: "c9", aliases: ["părinți vârstnici", "îngrijesc un părinte bolnav"] },
+  { id: "fara_lucru", label: "Mi-am pierdut slujba", roomId: "c10", common: true, aliases: ["șomaj", "nu am de lucru", "nu-mi găsesc rostul"] },
+  { id: "datorii", label: "Nu mai fac față la bani", roomId: "c10", aliases: ["datorii", "stres financiar", "nu ajung banii"] },
+  { id: "plecat_departe", label: "Muncesc departe de familia mea", roomId: "c10", aliases: ["plecat la muncă în străinătate", "familie despărțită geografic"] },
+  { id: "ramas_acasa", label: "Ai mei sunt plecați", roomId: "c10", aliases: ["părinți plecați la muncă", "soț plecat la muncă", "soție plecată la muncă"] },
 ]
 
 export const COMMON_DOORS: Door[] = DOORS.filter((d) => d.common)
@@ -307,6 +354,45 @@ export const EXPLORE_DOORS: Door[] = [
 
 export const ALL_DOORS: Door[] = [...DOORS, ...EXPLORE_DOORS]
 
+export function normalizeDoorQuery(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("ro")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+const SAFETY_SIGNALS = [
+  "nu mai vreau sa traiesc",
+  "vreau sa mor",
+  "vreau sa termin cu tot",
+  "imi fac rau",
+  "m am ranit",
+  "ma bate",
+  "m a lovit",
+  "ma ameninta",
+  "mi e frica de el",
+  "mi e frica de ea",
+]
+
+/** Pericolul nu este niciodată tratat ca sinonim pentru o ușă. */
+export function hasSafetySignal(value: string): boolean {
+  const query = normalizeDoorQuery(value)
+  return SAFETY_SIGNALS.some((signal) => query.includes(signal))
+}
+
+export function searchDoors(value: string): Door[] {
+  const query = normalizeDoorQuery(value)
+  if (!query || hasSafetySignal(query)) return []
+  return DOORS.filter((door) =>
+    [door.label, ...(door.aliases ?? [])]
+      .map(normalizeDoorQuery)
+      .some((candidate) => candidate.includes(query) || query.includes(candidate)),
+  )
+}
+
 export function getDoor(doorId: string | null | undefined): Door | undefined {
   if (!doorId) return undefined
   return ALL_DOORS.find((d) => d.id === doorId)
@@ -317,7 +403,7 @@ export const FALLBACK_PATH_ID = "path_temelie"
 
 /**
  * Nicio ușă nu e fundătură. (docs/21 §7 pct. 5)
- * Toate cele opt camere au parcurs scris, deci fallback-ul nu se mai atinge
+ * Toate cele zece camere au parcurs scris, deci fallback-ul nu se mai atinge
  * în practică. Rămâne pentru uși noi adăugate înainte de conțențutul lor.
  */
 export function resolveDoorPath(doorId: string): string {
@@ -347,6 +433,13 @@ export interface PathDef {
   lessons: Lesson[]
   /** Ziua dintre lecții. Index aliniat cu lessons: practices[i] urmează după lessons[i]. */
   practices: string[]
+  /** Modul în care lecțiile generale de doctrină se raportează la acest drum. */
+  doctrineMode?: "parallel" | "embedded" | "none"
+  /** Puntea contextuală afișată înaintea oricărei continuări opționale. */
+  bridgeId?: string
+  /** Secvențe care diferă pentru o ușă, fără a duplica întregul drum. */
+  doorVariants?: Record<string, PathDoorVariant>
+  review?: PathReviewGate
   /**
    * Dacă drumul are voie să fie PROPUS cuiva care tocmai a terminat alt drum.
    *
@@ -363,6 +456,20 @@ export interface PathDef {
    * răspundă la întrebarea asta, nu să o uite.
    */
   offerAtPathEnd: boolean
+}
+
+export interface PathDoorVariant {
+  title?: string
+  promise?: string
+  lessons: Lesson[]
+  practices: string[]
+  review?: PathReviewGate
+}
+
+export type PathReviewKind = "editorial" | "pastoral" | "clinical"
+export interface PathReviewGate {
+  required: PathReviewKind[]
+  approved: PathReviewKind[]
 }
 
 /*
@@ -394,6 +501,16 @@ export const pathAcasa: PathDef = {
     "Azi citește singur Romani 8, primele patru versete. Încet. Dacă gândul te ține treaz nopțile, sună 116 123 — nu e lipsă de credință.",
     "Ai terminat drumul. Azi caută omul căruia îi poți spune «m-am întors» când se întâmplă. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  bridgeId: "path_acasa",
+  doorVariants: {
+    avort: {
+      title: "După avort",
+      promise: "Trei lecții care numesc păcatul, pierderea și iertarea fără să micșoreze niciuna dintre ele.",
+      lessons: AVORT_LESSONS,
+      practices: AVORT_PRACTICES,
+      review: { required: ["pastoral"], approved: [] },
+    },
+  },
   offerAtPathEnd: true,
 }
 
@@ -450,11 +567,12 @@ export const pathNeiertare: PathDef = {
     "Azi roagă-te pentru el o dată. O propoziție. Dacă nu-ți iese, spune-I lui Dumnezeu că nu-ți iese.",
     "Ai terminat drumul. Azi doar mulțumește. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  bridgeId: "path_neiertare",
   offerAtPathEnd: true,
 }
 
 /*
- * DIVORȚUL. Ușă din camera 2, cu drum propriu.
+ * DIVORȚUL. Ușă din camera relațiilor, cu drum propriu.
  *
  * DE CE ARE DRUM PROPRIU (docs/23 §3, defectul D2): `divort` cădea în
  * `path_neiertare`, adică omului care tocmai își pierduse casa i se dădea din
@@ -463,10 +581,9 @@ export const pathNeiertare: PathDef = {
  * cu nedreptate, sunt copii la mijloc și e o întrebare despre recăsătorire la
  * care nimeni nu i-a răspuns fără să-l judece.
  *
- * DE CE NU O CAMERĂ NOUĂ: `pathId` pe ușă e de ajuns, iar `resolveDoorPath` îl
- * citește înaintea camerei. O cameră a noua ar fi însemnat un tipar spiritual
- * nou, iar aici nu e vorba de un tipar nou. E o rană care nu încape întreagă în
- * niciunul din cele opt.
+ * Camera relațiilor a fost adăugată ulterior prin amendamentul din docs/24.
+ * `pathId` rămâne explicit pentru că răspunsul divorțului este distinct de
+ * parcursul relațional general.
  *
  * ORDINEA: doliu fără înmormântare (nimeni nu-ți spune "condoleanțe") → ce a
  * spus Iisus, de fapt (Matei 19, "din pricina împietririi inimii voastre") →
@@ -496,6 +613,14 @@ export const pathDivort: PathDef = {
     "Șapte lecții, una la două zile. Nu îți spunem noi dacă ai voie să te recăsătorești și nu îți cerem să spui cine a fost de vină.",
   lessons: DIVORT_LESSONS,
   practices: DIVORT_PRACTICES,
+  bridgeId: "path_divort",
+  review: { required: ["pastoral"], approved: [] },
+  doorVariants: {
+    divort: {
+      lessons: [...DIVORT_POZITII_LESSONS, ...DIVORT_LESSONS],
+      practices: [...DIVORT_POZITII_PRACTICES, ...DIVORT_PRACTICES],
+    },
+  },
   offerAtPathEnd: true,
 }
 
@@ -523,13 +648,10 @@ export const pathDivort: PathDef = {
  * (Romani 8:22-25; Apocalipsa 21:4) → mergi mai departe fără să negi ce a fost
  * (Plângerile 3:22-23).
  *
- * DE REPARAT (docs/25, decizia 9): cele trei uși trebuie să primească SECVENȚE
+ * REPARAT (docs/25, decizia 9): cele trei uși primesc SECVENȚE
  * diferite peste același bazin de lecții — `doliu` L1→L3→L4→L6→L7, `boala`
- * L1→L2→L3→L4→L5→L6, `de_ce_permis` L1→L2→L4→L6. Acum toate trei primesc
- * aceeași secvență fixă de șapte, deci omul cu doliu proaspăt ajunge a doua zi
- * la lecția "e pedeapsă sau e o lume ruptă?", care e exact legătura interzisă.
- * Reparația cere o structură peste `PathDef.lessons`, nu doar altă ordine în
- * array, și se face separat.
+ * L1→L2→L3→L4→L5→L6, `de_ce_permis` L1→L2→L4→L6. Variantele sunt selectate
+ * prin `PathDef.doorVariants`, păstrând bazinul canonic fără duplicarea textului.
  *
  * REGULA DOCTRINARĂ CARE NU SE SCHIMBĂ: Scriptura arată cazuri în care suferința
  * e consecință sau disciplinare (1 Corinteni 11:29-32; Ioan 5:14), dar refuză
@@ -552,6 +674,27 @@ export const pathSuferinta: PathDef = {
     "Șapte lecții, una la două zile. Nu îți promitem că se vindecă și nu îți spunem că suferi pentru că ai greșit undeva.",
   lessons: SUFERINTA_LESSONS,
   practices: SUFERINTA_PRACTICES,
+  bridgeId: "path_suferinta",
+  doorVariants: {
+    doliu: {
+      title: "După pierdere",
+      promise: "Cinci lecții care lasă doliul să vorbească fără să îl transforme într-o acuzație.",
+      lessons: [SUFERINTA_LESSONS[0], SUFERINTA_LESSONS[2], SUFERINTA_LESSONS[3], SUFERINTA_LESSONS[5], SUFERINTA_LESSONS[6]],
+      practices: [SUFERINTA_PRACTICES[0], SUFERINTA_PRACTICES[2], SUFERINTA_PRACTICES[3], SUFERINTA_PRACTICES[5], SUFERINTA_PRACTICES[6]],
+    },
+    boala: {
+      title: "Când boala intră în casă",
+      promise: "Șase lecții despre boală, ajutor și speranță, fără diagnostice spirituale inventate.",
+      lessons: [SUFERINTA_LESSONS[0], SUFERINTA_LESSONS[1], SUFERINTA_LESSONS[2], SUFERINTA_LESSONS[3], SUFERINTA_LESSONS[4], SUFERINTA_LESSONS[5]],
+      practices: [SUFERINTA_PRACTICES[0], SUFERINTA_PRACTICES[1], SUFERINTA_PRACTICES[2], SUFERINTA_PRACTICES[3], SUFERINTA_PRACTICES[4], SUFERINTA_PRACTICES[5]],
+    },
+    de_ce_permis: {
+      title: "De ce a permis Dumnezeu?",
+      promise: "Patru lecții care țin împreună providența, lumea căzută și limitele explicațiilor noastre.",
+      lessons: [SUFERINTA_LESSONS[0], SUFERINTA_LESSONS[1], SUFERINTA_LESSONS[3], SUFERINTA_LESSONS[5]],
+      practices: [SUFERINTA_PRACTICES[0], SUFERINTA_PRACTICES[1], SUFERINTA_PRACTICES[3], SUFERINTA_PRACTICES[5]],
+    },
+  },
   offerAtPathEnd: true,
 }
 
@@ -584,6 +727,7 @@ export const pathAproape: PathDef = {
     "Lucrul de la început pe care l-ai reluat ieri — fă-l și azi. A doua zi e mai greu decât prima.",
     "Ai terminat drumul. Azi ține întâlnirea de zece minute la ora pe care ai scris-o. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  bridgeId: "path_aproape",
   offerAtPathEnd: true,
 }
 
@@ -601,8 +745,8 @@ export const pathAproape: PathDef = {
  * ce se pune în loc. Metoda vine după identitate, altfel e doar un alt program.
  *
  * SIGURANȚĂ (docs/22 §1, NENEGOCIABIL): și aici sunt simptome cu posibilă cauză
- * medicală. Lecția 6 trimite explicit la medic și la 116 123, lecția 5 la
- * 0800 801 200 pentru alcool/droguri/jocuri. Nicio lecție din camera asta nu
+ * medicală. Lecțiile 5 și 6 trimit explicit la medic, la servicii competente
+ * pentru adicții și la 116 123 pentru sprijin emoțional. Nicio lecție nu
  * spune omului că starea lui vine din lipsă de credință.
  */
 export const pathSchimbare: PathDef = {
@@ -629,6 +773,33 @@ export const pathSchimbare: PathDef = {
     "Azi un lucru pentru corp, nu pentru suflet: somn, mâncare, o plimbare. Și, dacă durează, sună la medic — nu e lipsă de credință.",
     "Ai terminat drumul. Azi spune UNUI om că te lupți cu ceva. Nu detalii — doar atât.",
   ],
+  bridgeId: "path_schimbare",
+  doorVariants: {
+    dependenta: {
+      lessons: [...CLARIFICAREA_DEPENDENTEI_LESSONS, schimbareL1, schimbareL2, schimbareL3, schimbareL4, schimbareL5, schimbareL6, schimbareL7],
+      practices: [...CLARIFICAREA_DEPENDENTEI_PRACTICES,
+        "Azi nu încerca să te lași de nimic. Doar observă când îți spui «așa sunt eu» și oprește propoziția acolo.",
+        "Azi, când vine impulsul, scrie un singur cuvânt: ce simțeai în minutul dinainte.",
+        "Lucrul pe care l-ai scos ieri — verifică dacă e chiar scos. Și vezi ce faci azi la ora aia.",
+        "Azi ține programarea pe care ai scris-o. Zece minute cu El, la ora la care cădeai.",
+        "Citește-ți protocolul de trei rânduri o dată, cu voce tare.",
+        "Azi un lucru pentru corp, nu pentru suflet: somn, mâncare, o plimbare.",
+        "Ai terminat drumul. Azi spune unui om că te lupți cu ceva. Nu detalii — doar atât."],
+    },
+    pornografie: {
+      title: "Ieșirea din ascundere",
+      promise: "Două lecții despre rușine, acces și declanșatori, apoi drumul concret al schimbării.",
+      lessons: [...PORNOGRAFIE_LESSONS, schimbareL1, schimbareL2, schimbareL3, schimbareL4, schimbareL5, schimbareL6, schimbareL7],
+      practices: [...PORNOGRAFIE_PRACTICES,
+        "Azi nu încerca să te lași de nimic. Observă doar propoziția «așa sunt eu».",
+        "Când vine impulsul, scrie ce simțeai în minutul dinainte.",
+        "Verifică dacă accesul pe care l-ai scos este chiar scos.",
+        "Ține programarea scrisă, la ora la care cădeai.",
+        "Citește-ți protocolul de trei rânduri o dată.",
+        "Fă un lucru pentru corp și caută ajutor competent dacă lupta te depășește.",
+        "Spune unui om de încredere că te lupți. Nu trebuie să dai detalii în aplicație."],
+    },
+  },
   offerAtPathEnd: true,
 }
 
@@ -671,6 +842,8 @@ export const pathTristete: PathDef = {
     "Cinci lecții, una la două zile. Nu îți promitem că trece și nu îți spunem că e din lipsă de credință.",
   lessons: TRISTETE_LESSONS,
   practices: TRISTETE_PRACTICES,
+  bridgeId: "path_tristete",
+  review: { required: ["clinical"], approved: [] },
   offerAtPathEnd: false,
 }
 
@@ -708,6 +881,8 @@ export const pathAnxietate: PathDef = {
     "Cinci lecții, una la două zile. Nu îți cerem să te calmezi și nu îți spunem că frica e semn de credință slabă.",
   lessons: ANXIETATE_LESSONS,
   practices: ANXIETATE_PRACTICES,
+  bridgeId: "path_anxietate",
+  review: { required: ["clinical"], approved: [] },
   offerAtPathEnd: false,
 }
 
@@ -738,6 +913,7 @@ export const pathGreutate: PathDef = {
     "Șapte lecții, una la două zile. Nu îți promitem că trece și nu îți spunem că e din lipsă de credință.",
   lessons: GREUTATE_LESSONS,
   practices: GREUTATE_PRACTICES,
+  bridgeId: "path_greutate",
   offerAtPathEnd: false,
 }
 
@@ -770,6 +946,7 @@ export const pathHar: PathDef = {
     "Lucrul pe care l-ai umplut ieri — fă-l și azi la fel, încet, uitându-te la El.",
     "Ai terminat drumul. Azi primește ceva fără să dai nimic în schimb. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  bridgeId: "path_har",
   offerAtPathEnd: true,
 }
 
@@ -810,6 +987,60 @@ export const pathImpreuna: PathDef = {
     "Dacă ai trimis mesajul și ți-a răspuns, propune ceva concret: o cafea, o plimbare, o oră. Dacă nu ți-a răspuns, nu înseamnă nimic despre tine.",
     "Ai terminat drumul. Azi fă un lucru pentru cineva mai singur decât tine. Și scrie undeva o rugăciune la care aștepți răspuns.",
   ],
+  bridgeId: "path_impreuna",
+  doorVariants: {
+    familie_respinge: {
+      lessons: [...FAMILIE_RESPINGE_LESSONS, impreunaL1, impreunaL2, impreunaL3, impreunaL4, impreunaL5, impreunaL6, impreunaL7],
+      practices: [...FAMILIE_RESPINGE_PRACTICES,
+        "Spune-I simplu că te simți singur.", "Cere un lucru mic unui om sigur.", "Roagă-te pe nume pentru cineva din casă.",
+        "Nu te întoarce într-un loc nesigur ca să dovedești iertarea.", "Scrie două nume de oameni siguri.",
+        "Propune o întâlnire concretă unuia dintre ei.", "Fă un lucru pentru cineva care este singur."],
+    },
+    respins_biserica: {
+      lessons: [...RESPINS_BISERICA_LESSONS, impreunaL1, impreunaL2, impreunaL3, impreunaL4, impreunaL5, impreunaL6, impreunaL7],
+      practices: [...RESPINS_BISERICA_PRACTICES,
+        "Spune-I simplu că te simți singur.", "Cere un lucru mic unui om sigur.", "Roagă-te pe nume pentru cineva care nu te-a rănit.",
+        "Nu te întoarce într-un loc nesigur ca să dovedești credință.", "Scrie două nume de oameni siguri.",
+        "Propune o întâlnire concretă unuia dintre ei.", "Fă un lucru pentru cineva care este singur."],
+    },
+    nou_venit: {
+      title: "Primii pași într-o comunitate",
+      promise: "Două lecții practice, fără să presupunem că ai fost abandonat sau rănit.",
+      lessons: NOU_VENIT_LESSONS,
+      practices: NOU_VENIT_PRACTICES,
+    },
+  },
+  offerAtPathEnd: true,
+}
+
+export const pathLegatura: PathDef = {
+  id: "path_legatura",
+  roomId: "c9",
+  title: "Când legătura s-a rupt",
+  promise: "Șapte lecții despre partea ta, limite, iertare și ce rămâne când celălalt nu vine.",
+  lessons: LEGATURA_LESSONS,
+  practices: LEGATURA_PRACTICES,
+  bridgeId: "path_legatura",
+  review: { required: ["pastoral"], approved: [] },
+  doorVariants: {
+    inselat: {
+      title: "După trădare",
+      promise: "Trei lecții pentru omul înșelat, fără presiune spre împăcare și fără vina celui care a trădat.",
+      lessons: INSELAT_LESSONS,
+      practices: INSELAT_PRACTICES,
+    },
+  },
+  offerAtPathEnd: true,
+}
+
+export const pathPaine: PathDef = {
+  id: "path_paine",
+  roomId: "c10",
+  title: "Pâinea de astăzi",
+  promise: "Șapte lecții despre muncă, bani, rușine și valoarea care nu se măsoară în ce aduci în casă.",
+  lessons: PAINE_LESSONS,
+  practices: PAINE_PRACTICES,
+  bridgeId: "path_paine",
   offerAtPathEnd: true,
 }
 
@@ -858,6 +1089,8 @@ export const pathTemelie: PathDef = {
     "Șapte lecții, una la două zile. Fără presupunerea că știi ceva dinainte și fără să te facă nimeni să te simți prost că întrebi.",
   lessons: TEMELIE_LESSONS,
   practices: TEMELIE_PRACTICES,
+  doctrineMode: "embedded",
+  bridgeId: "path_temelie",
   offerAtPathEnd: true,
 }
 
@@ -887,6 +1120,7 @@ export const pathUmblare: PathDef = {
     "Azi fă exact ce ai face dacă ai simți. Și spune-I: «nu simt nimic și totuși sunt aici».",
     "Ai terminat drumul. Azi caută omul căruia îi spui cele trei propoziții. Întreabă-l ce mai face.",
   ],
+  bridgeId: "path_umblare",
   offerAtPathEnd: true,
 }
 
@@ -903,12 +1137,41 @@ export const PATHS: PathDef[] = [
   pathGreutate,
   pathHar,
   pathImpreuna,
+  pathLegatura,
+  pathPaine,
   pathUmblare,
 ]
 
 export function getPath(pathId: string | null | undefined): PathDef | undefined {
   if (!pathId) return undefined
   return PATHS.find((p) => p.id === pathId)
+}
+
+/** Aplică secvența ușii fără să modifice definiția canonică a parcursului. */
+export function getPathForDoor(doorId: string | null | undefined): PathDef | undefined {
+  if (!doorId) return undefined
+  const path = getPath(resolveDoorPath(doorId))
+  if (!path) return undefined
+  const variant = path.doorVariants?.[doorId]
+  return variant
+    ? {
+        ...path,
+        title: variant.title ?? path.title,
+        promise: variant.promise ?? path.promise,
+        lessons: variant.lessons,
+        practices: variant.practices,
+        review: variant.review ?? path.review,
+      }
+    : path
+}
+
+export function isPathReviewed(path: PathDef | undefined): boolean {
+  if (!path?.review) return true
+  return path.review.required.every((kind) => path.review?.approved.includes(kind))
+}
+
+export function canStartDoor(doorId: string): boolean {
+  return isPathReviewed(getPathForDoor(doorId))
 }
 
 export function getPathLesson(pathId: string, lessonId: string): Lesson | undefined {
@@ -919,6 +1182,10 @@ export function findLessonAnywhere(lessonId: string): Lesson | undefined {
   for (const p of PATHS) {
     const l = p.lessons.find((x) => x.id === lessonId)
     if (l) return l
+    for (const variant of Object.values(p.doorVariants ?? {})) {
+      const variantLesson = variant.lessons.find((x) => x.id === lessonId)
+      if (variantLesson) return variantLesson
+    }
   }
   return DOCTRINE_LESSONS.find((l) => l.id === lessonId)
 }
@@ -1018,17 +1285,23 @@ export function planToday(
  */
 export const DOCTRINE_UNLOCK_AFTER = 5
 
-export function doctrineAllowance(lessonsDone: number, pathLength: number): number {
+export function doctrineAllowance(path: PathDef, lessonsDone: number): number {
+  if ((path.doctrineMode ?? "parallel") !== "parallel") return 0
   if (lessonsDone < DOCTRINE_UNLOCK_AFTER) return 0
-  if (lessonsDone >= pathLength) return DOCTRINE_LESSONS.length
-  return Math.floor((lessonsDone - DOCTRINE_UNLOCK_AFTER) / 3) + 1
+  if (lessonsDone >= path.lessons.length) return DOCTRINE_LESSONS.length
+  return Math.min(
+    DOCTRINE_LESSONS.length,
+    Math.max(0, Math.floor((lessonsDone - DOCTRINE_UNLOCK_AFTER) / 3) + 1),
+  )
 }
 
 export function nextDoctrineLesson(
+  path: PathDef,
   lessonsDone: number,
-  pathLength: number,
-  doctrineDone: number,
+  completedDoctrineLessonIds: string[],
 ): Lesson | undefined {
-  if (doctrineDone >= doctrineAllowance(lessonsDone, pathLength)) return undefined
-  return DOCTRINE_LESSONS[doctrineDone]
+  const completed = new Set(completedDoctrineLessonIds)
+  return DOCTRINE_LESSONS
+    .slice(0, doctrineAllowance(path, lessonsDone))
+    .find((lesson) => !completed.has(lesson.id))
 }

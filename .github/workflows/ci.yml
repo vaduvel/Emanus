@@ -3,6 +3,8 @@ name: CI
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -36,6 +38,7 @@ jobs:
           pnpm check:quotes
           pnpm check:typos
           pnpm check:content
+          pnpm check:porti
           pnpm check:bible-publication
           "$PYTHON_BIN" scripts/check-biblia-emanus-romanian-quality.py
           pnpm check:biblia-emanus

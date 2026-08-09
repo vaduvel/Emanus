@@ -278,7 +278,7 @@ export const pornografieL2: Lesson = {
       type: "how_god_helps",
       order: 6,
       bubbles: [
-        { from: "guide", text: "Scriptura leagă vindecarea de mărturisirea către un om, nu doar către Dumnezeu. Este un amănunt uriaș și aproape ignorat." },
+        { from: "guide", text: "Iacov așază mărturisirea reciprocă și rugăciunea în viața comunității. Nu este o formulă care garantează vindecarea după o singură conversație, dar arată limpede că lupta nu este făcută pentru ascundere." },
         { from: "guide", text: "Și mai spune ceva foarte concret: împreună cu ispita, Dumnezeu pregătește și mijlocul de ieșire. Mijlocul acela este de obicei banal: un telefon dat la timp, o ușă deschisă, o plimbare afară." },
         { from: "guide", text: "Iar Iov arată că se poate face un legământ cu ochii. Nu o dorință vagă. O hotărâre cu limite scrise." }
       ]
@@ -292,7 +292,7 @@ export const pornografieL2: Lesson = {
         ref: "Proverbe 28:13"
       },
       bubbles: [
-        { from: "guide", text: "Două verbe din nou, în aceeași ordine: le mărturisește și se lasă de ele. Întâi iese la lumină, apoi se schimbă." }
+        { from: "guide", text: "Două lucruri stau împreună: mărturisirea și părăsirea păcatului. Proverbul nu le transformă într-o tehnică și nu promite că schimbarea va fi instantanee." }
       ]
     },
     {
@@ -364,7 +364,7 @@ export const pornografieL2: Lesson = {
           { text: "Ieșirea din ascunzătoare către un singur om potrivit, plus câteva schimbări practice", correct: true },
           { text: "Așteptarea unei zile în care nu vei mai simți nicio ispită", correct: false }
         ],
-        explanation: "Secretul este combustibilul. Atât Proverbe 28:13, cât și Iacov 5:16 leagă schimbarea de ieșirea la lumină, iar Iacov o leagă anume de mărturisirea către un om. Promisiunile făcute singur au fost încercate deja și nu au ținut; schimbările practice sunt mijlocul de ieșire despre care vorbește 1 Corinteni 10:13."
+        explanation: "Secretul hrănește lupta. Proverbe 28:13 ține împreună mărturisirea și părăsirea păcatului, iar Iacov 5:16 așază mărturisirea reciprocă lângă rugăciune. Niciun text nu promite o vindecare automată; responsabilitatea și schimbările practice scot însă lupta din izolare."
       }
     },
     {
@@ -376,7 +376,7 @@ export const pornografieL2: Lesson = {
         ref: "Iacov 5:16"
       },
       bubbles: [
-        { from: "guide", text: "Ține minte ordinea: întâi unii altora, apoi vindecarea. Nu invers." }
+        { from: "guide", text: "Ține minte cadrul: unii altora și rugăciune, nu singur în ascundere. Vindecarea rămâne lucrarea lui Dumnezeu, nu rezultatul mecanic al unei formule." }
       ]
     },
     {

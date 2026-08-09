@@ -232,7 +232,7 @@ export const avortL2: Lesson = {
       type: "hook",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Ai observat, poate, un lucru ciudat: ești iertat și totuși te doare la fel." },
+        { from: "guide", text: "Dacă ți-ai mărturisit păcatul și te-ai întors la Hristos, iertarea Lui nu depinde de cât de repede încetează durerea. Poți fi iertat și totuși să te doară." },
         { from: "guide", text: "Nu înseamnă că iertarea nu a fost reală. Înseamnă că mai era ceva în tine, de care nu s-a ocupat nimeni: o pierdere pe care nu ai avut voie să o jelești." },
         { from: "guide", text: "Nu a fost înmormântare. Nu a fost nume. Nimeni nu ți-a spus «condoleanțe». Nimeni nu a adus o floare. Iar tu ai înțeles din tăcerea aceea că nu ai dreptul să plângi." }
       ]
@@ -285,7 +285,7 @@ export const avortL2: Lesson = {
         ref: "2 Samuel 12:23"
       },
       bubbles: [
-        { from: "guide", text: "«Eu mă voi duce la el.» David nu spune că s-a terminat. Spune că drumul merge într-o singură direcție și că el este cel care va face drumul." },
+        { from: "guide", text: "«Eu mă voi duce la el.» Textul spune că David însuși va muri și nu își poate aduce copilul înapoi. Nu descrie în detaliu starea copilului după moarte, de aceea nu îl transformăm într-o promisiune pe care pasajul nu o formulează." },
         { from: "guide", text: "Nu îți construiesc pe versetul acesta o învățătură întreagă, pentru că Scriptura nu ne dă mai mult. Îți spun doar atât: așa a vorbit un om al lui Dumnezeu despre copilul lui mort și nimeni nu l-a corectat." }
       ]
     },

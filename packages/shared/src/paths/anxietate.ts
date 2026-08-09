@@ -88,7 +88,7 @@ export const anxietateL1: Lesson = {
         },
         {
           from: "guide",
-          text: "Dacă frica ar fi fost un păcat, răspunsul ar fi fost «pocăiește-te». Nu e. Răspunsul e altul și e mereu același.",
+          text: "Faptul că frica apare nu dovedește singur un păcat sau o credință mică. Scriptura mustră uneori necredința, dar nu ne dă voie să numim orice panică neascultare și nici să punem un diagnostic spiritual peste o suferință care poate avea cauze medicale.",
         },
       ],
     },
@@ -174,7 +174,7 @@ export const anxietateL1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Doamne, mi-e frică și m-am săturat să mă mai rușinez că mi-e frică. Tu n-ai certat pe nimeni pentru asta. Fii cu mine. Atât Îți cer în seara asta. Amin.",
+          text: "Doamne, mi-e frică și m-am săturat să mă mai rușinez că mi-e frică. Arată-mi ce trebuie mărturisit și ce trebuie dus la un medic sau la un om competent. Fii cu mine. Atât Îți cer în seara asta. Amin.",
         },
       ],
     },

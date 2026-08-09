@@ -72,7 +72,7 @@ export const nouVenitL1: Lesson = {
       type: "step",
       order: 3,
       bubbles: [
-        { from: "guide", text: "Întâi, o veste care ușurează: nimic din ce ai simțit acolo nu are legătură cu Dumnezeu. Are legătură cu obiceiurile unui grup de oameni." },
+        { from: "guide", text: "Întâi, o despărțire importantă: stângăcia sau răceala unui grup nu dovedește că Dumnezeu te respinge. Uneori problema este doar felul în care oamenii acelui loc au învățat să se poarte." },
         { from: "guide", text: "Fiecare grup are obiceiurile lui — și o echipă de fotbal, și o familie mare la masă de Crăciun. Cine intră din afară se simte străin câteva dăți. Este normal și trece." },
         { from: "guide", text: "Ce nu este normal ar fi să crezi că Dumnezeu îți cere școală înainte de intrare." }
       ]

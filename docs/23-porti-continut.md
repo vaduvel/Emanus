@@ -222,3 +222,25 @@ singur punct.
     **112**, **116 123**, iar pentru minori **116 111**.
 11. `reward.xp` rămâne **0**. Nu se afișează scor, nivel, streak sau procent
     (docs/22 §8).
+
+---
+
+## 7. Starea integrării runtime (2026-08-09)
+
+Conținutul scris pe ramurile editoriale este conectat în runtime, fără să fie
+duplicat sau rescris:
+
+- 41 de uși explicite, grupate în 10 camere de orientare;
+- variante distincte de lecții pentru doliu, boală, suferință fără explicație,
+  avort, divorț, dependență, pornografie, respingere, nou-venit și înșelare;
+- toate lecțiile variantelor sunt rezolvabile direct după navigare și refresh;
+- fiecare parcurs activ are o punte contextuală către Drumul Emaus;
+- răspunsurile de triaj, reflecție, declarație și multi-select rămân efemere;
+- identitatea ușii și ID-urile lecțiilor terminate se sincronizează în Supabase;
+- instalațiile Supabase nemigrate păstrează temporar sincronizarea veche, fără
+  să blocheze aplicația; migrarea este în
+  `supabase/migrations/202608090001_porti_runtime.sql`;
+- parcursurile care cer aprobare pastorală sau clinică sunt conectate, dar nu
+  pot fi pornite până când aprobările lor explicite sunt completate.
+
+Contractul este verificat prin `pnpm check:porti` și rulează obligatoriu în CI.

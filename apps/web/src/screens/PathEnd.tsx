@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 import { ArrowRight, BookOpen, HandHeart, LifeBuoy, Mountain } from "lucide-react"
-import { otherPaths } from "@emanus/shared"
-import { currentPath, firstJournalEntry, load, markPathSeen, switchPath } from "../journey"
+import { bridgeForPath } from "@emanus/shared"
+import { currentPath, firstJournalEntry, load, markPathSeen } from "../journey"
 import { navigate } from "../router"
 
 /*
@@ -42,18 +42,12 @@ import { navigate } from "../router"
  */
 export function PathEnd() {
   const path = currentPath()
-  const state = load()
   const first = useMemo(() => firstJournalEntry(), [])
   const last = useMemo(() => {
     const j = load().journal
     return j[j.length - 1]
   }, [])
-  const next = useMemo(() => otherPaths(state.pathId), [state.pathId])
-
-  function go(pathId: string) {
-    switchPath(pathId)
-    navigate("/")
-  }
+  const bridge = useMemo(() => bridgeForPath(path?.bridgeId ?? path?.id ?? ""), [path])
 
   function leave(to: string) {
     markPathSeen()
@@ -90,45 +84,12 @@ export function PathEnd() {
         */}
       <div className="pathend__emmaus">
         <p className="today__kicker">Mai e ceva</p>
-        <h2 style={{ marginTop: 4 }}>Drumul Emaus</h2>
-        <p>
-          În ziua învierii, doi oameni mergeau spre satul Emaus. Plecau din Ierusalim cu spatele
-          la tot ce speraseră. Cineva S-a apropiat și a mers alături de ei kilometri întregi,
-          și ei nu L-au recunoscut.
-        </p>
-        <p>
-          Drumul acela are opt opriri. A patra e Golgota — la mijloc, nu la sfârșit, pentru că
-          nici acolo nu s-a terminat. E harta pe care se vede tot ce ai mers, nu doar drumul de
-          acum.
-        </p>
-        <p className="muted">Ce ai făcut până azi e deja pe ea.</p>
+        <h2 style={{ marginTop: 4 }}>{bridge?.title ?? "Drumul Emaus"}</h2>
+        {bridge ? <><p>{bridge.lookBack}</p><p>{bridge.nameIt}</p>{bridge.handoff.map((line) => <p key={line}>{line}</p>)}<p className="muted">{bridge.invitation}</p></> : <p>Drumul acesta nu se închide cu încă o rană. Poți continua pe Drumul Emaus când alegi tu.</p>}
         <button type="button" onClick={() => leave("/drum")}>
-          Vezi unde ai ajuns <ArrowRight size={18} aria-hidden />
+          Continuă pe Drumul Emaus <ArrowRight size={18} aria-hidden />
         </button>
       </div>
-
-      {/* Alte uși — concret, cu nume, nu „explorează”. Dar după hartă, nu înaintea ei. */}
-      {next.length > 0 && (
-        <>
-          <p className="today__kicker" style={{ marginTop: 22 }}>
-            Sau, dacă te doare și altceva
-          </p>
-          <ul className="doors__list">
-            {next.map((p) => (
-              <li key={p.id}>
-                <button type="button" className="door" onClick={() => go(p.id)}>
-                  <span>
-                    <strong>{p.title}</strong>
-                    <br />
-                    <small className="muted">{p.promise}</small>
-                  </span>
-                  <ArrowRight size={18} aria-hidden />
-                </button>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
 
       {/*
         * Ieșirile care nu înseamnă "încă un curs": ziua de azi, Biblia,

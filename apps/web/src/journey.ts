@@ -1,6 +1,14 @@
 import type { Lesson } from "@emanus/shared/domain"
 import type { DayPlan, PathDef } from "@emanus/shared/paths"
-import { getPath, nextDoctrineLesson, planToday } from "@emanus/shared/paths"
+import {
+  DOCTRINE_LESSONS,
+  getPath,
+  getPathForDoor,
+  isPathReviewed,
+  nextDoctrineLesson,
+  planToday,
+  resolveDoorPath,
+} from "@emanus/shared/paths"
 import { cloudEnabled, pullState, pushState } from "./cloud"
 
 /*
@@ -31,13 +39,16 @@ export interface Prayer {
 }
 
 export interface JourneyState {
+  schemaVersion: 2
   /** A văzut ecranele de primul contact (ce e Emanus). */
   seenWelcome: boolean
   pathId: string | null
+  /** Ușa păstrează contextul și selectează secvența potrivită din același drum. */
+  doorId: string | null
   /** Cursor pe drumul CURENT. Se pune la zero la fiecare schimbare de drum. */
   lessonsDone: number
-  /** Câte lecții de doctrină generală a terminat, în ordine. */
-  doctrineDone: number
+  /** Doctrina este progres global; schimbarea drumului nu o resetează. */
+  completedDoctrineLessonIds: string[]
   /** YYYY-MM-DD */
   lastLessonDate: string | null
   /** Invitația la prima rugăciune se face O SINGURĂ DATĂ, apoi nu mai insistăm. */
@@ -70,10 +81,12 @@ export interface JourneyState {
 }
 
 const EMPTY: JourneyState = {
+  schemaVersion: 2,
   seenWelcome: false,
   pathId: null,
+  doorId: null,
   lessonsDone: 0,
-  doctrineDone: 0,
+  completedDoctrineLessonIds: [],
   lastLessonDate: null,
   prayerInviteSeen: false,
   journal: [],
@@ -124,11 +137,21 @@ function daysBetween(fromIso: string, toIso: string): number {
  * Asta a picat CI-ul o dată; typecheck-ul nu vede diferența dintre date pe care le
  * scriem noi și date pe care doar le primim.
  */
-function normalizeJourneyState(parsed: Partial<JourneyState>): JourneyState {
-  const s: JourneyState = { ...EMPTY, ...parsed }
-  const raw = parsed as Record<string, unknown>
+export function normalizeJourneyState(parsed: unknown): JourneyState {
+  const raw = typeof parsed === "object" && parsed !== null
+    ? parsed as Record<string, unknown>
+    : {}
+  const s: JourneyState = { ...EMPTY, ...raw, schemaVersion: 2 } as JourneyState
 
+  s.doorId = typeof raw.doorId === "string" ? raw.doorId : null
+  s.pathId = typeof raw.pathId === "string" ? raw.pathId : null
   if (!Array.isArray(raw.completedLessonIds)) s.completedLessonIds = []
+  if (Array.isArray(raw.completedDoctrineLessonIds)) {
+    s.completedDoctrineLessonIds = raw.completedDoctrineLessonIds.map(String)
+  } else {
+    const legacyCount = typeof raw.doctrineDone === "number" ? Math.max(0, raw.doctrineDone) : 0
+    s.completedDoctrineLessonIds = DOCTRINE_LESSONS.slice(0, legacyCount).map((lesson) => lesson.id)
+  }
   if (!Array.isArray(raw.journal)) s.journal = []
   if (!Array.isArray(raw.prayers)) s.prayers = []
   if (typeof raw.emmausMaxStation !== "number" || raw.emmausMaxStation < 1) {
@@ -141,7 +164,7 @@ function normalizeJourneyState(parsed: Partial<JourneyState>): JourneyState {
 
   if (s.completedLessonIds.length === 0) {
     const recovered = new Set<string>()
-    const path = getPath(s.pathId)
+    const path = getPathForDoor(s.doorId) ?? getPath(s.pathId)
     if (path && s.lessonsDone > 0) {
       for (const lesson of path.lessons.slice(0, s.lessonsDone)) recovered.add(lesson.id)
     }
@@ -151,6 +174,12 @@ function normalizeJourneyState(parsed: Partial<JourneyState>): JourneyState {
     if (recovered.size > 0) s.completedLessonIds = [...recovered]
   }
 
+  for (const id of s.completedLessonIds) {
+    if (DOCTRINE_LESSONS.some((lesson) => lesson.id === id) && !s.completedDoctrineLessonIds.includes(id)) {
+      s.completedDoctrineLessonIds.push(id)
+    }
+  }
+
   return s
 }
 
@@ -158,7 +187,7 @@ export function load(): JourneyState {
   try {
     const raw = localStorage.getItem(K)
     if (!raw) return { ...EMPTY }
-    return normalizeJourneyState(JSON.parse(raw) as Partial<JourneyState>)
+    return normalizeJourneyState(JSON.parse(raw))
   } catch {
     return { ...EMPTY }
   }
@@ -220,12 +249,15 @@ export function hasStarted(): boolean {
  * așa trebuie să facă — e cursorul pe drumul nou. Dar NU au voie să atingă
  * `completedLessonIds`. Ce a făcut omul rămâne făcut, oricare ușă alege după aceea.
  */
-export function chooseDoor(pathId: string): JourneyState {
+export function chooseDoor(doorId: string): JourneyState {
   const s = load()
+  const path = getPathForDoor(doorId)
+  if (!path || !isPathReviewed(path)) return s
   return save({
     ...s,
     seenWelcome: true,
-    pathId,
+    pathId: resolveDoorPath(doorId),
+    doorId,
     lessonsDone: 0,
     lastLessonDate: null,
     pathCompletedSeen: false,
@@ -233,12 +265,13 @@ export function chooseDoor(pathId: string): JourneyState {
 }
 
 export function currentPath(): PathDef | undefined {
-  return getPath(load().pathId)
+  const state = load()
+  return getPathForDoor(state.doorId) ?? getPath(state.pathId)
 }
 
 export function plan(): DayPlan | null {
   const s = load()
-  const path = getPath(s.pathId)
+  const path = getPathForDoor(s.doorId) ?? getPath(s.pathId)
   if (!path) return null
   const since = s.lastLessonDate === null ? null : daysBetween(s.lastLessonDate, today())
   return planToday(path, s.lessonsDone, since)
@@ -253,10 +286,9 @@ export function plan(): DayPlan | null {
  */
 export function doctrineAvailable(): Lesson | undefined {
   const s = load()
-  if (s.pathId === "path_temelie") return undefined
-  const path = getPath(s.pathId)
+  const path = getPathForDoor(s.doorId) ?? getPath(s.pathId)
   if (!path) return undefined
-  return nextDoctrineLesson(s.lessonsDone, path.lessons.length, s.doctrineDone)
+  return nextDoctrineLesson(path, s.lessonsDone, s.completedDoctrineLessonIds)
 }
 
 export function completeLesson(lessonId: string, journalText: string): JourneyState {
@@ -272,8 +304,11 @@ export function completeLesson(lessonId: string, journalText: string): JourneySt
 
   // Doctrina făcută ca supliment nu consumă ziua și nu avansează parcursul personal.
   // Excepție: pe drumul "De la zero", aceleași lecții sunt chiar parcursul.
-  if (lessonId.startsWith("doctrina_") && s.pathId !== "path_temelie") {
-    return save({ ...s, doctrineDone: s.doctrineDone + 1, journal, completedLessonIds })
+  if (DOCTRINE_LESSONS.some((lesson) => lesson.id === lessonId)) {
+    const completedDoctrineLessonIds = s.completedDoctrineLessonIds.includes(lessonId)
+      ? s.completedDoctrineLessonIds
+      : [...s.completedDoctrineLessonIds, lessonId]
+    return save({ ...s, completedDoctrineLessonIds, journal, completedLessonIds })
   }
 
   return save({
@@ -305,8 +340,8 @@ export function switchPath(pathId: string): JourneyState {
   return save({
     ...s,
     pathId,
+    doorId: null,
     lessonsDone: 0,
-    doctrineDone: 0,
     lastLessonDate: null,
     pathCompletedSeen: false,
   })

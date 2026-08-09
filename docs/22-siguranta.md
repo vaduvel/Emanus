@@ -51,7 +51,7 @@ Accesibil permanent din `.helpbar`, fara sa fie nevoie de cont si fara sa treaca
 | Urgenta, pericol imediat | **112** |
 | Copii si adolescenti (Telefonul Copilului) | **116 111** |
 | Suport emotional / gand de suicid | **116 123** |
-| TelVerde antidrog | **0800 801 200** |
+| TelVerde Antisuicid (program limitat) | **0800 801 200** |
 | Violenta domestica | **0800 500 333** |
 
 Reguli pe ecranul de criza:
