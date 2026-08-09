@@ -73,6 +73,7 @@ jobs:
       - name: Rebuild quarantined books source-first
         run: |
           set -euo pipefail
+          node scripts/materialize-nt-source-evidence.mjs
           node scripts/materialize-nt-source-first.mjs
           node scripts/check-nt-source-first.mjs
 
