@@ -3,6 +3,7 @@ import { VT_MAJOR_PROPHETS_FULL } from "../vtFullNarrativesMajorProphets.js"
 import { reviewEzechiel14And18Explanations } from "./ezechiel14And18ExplanationReview.js"
 import { reviewEzechiel16And28Explanations } from "./ezechiel16And28ExplanationReview.js"
 import { reviewEzechiel36_43_47_48Explanations } from "./ezechiel36_43_47_48ExplanationReview.js"
+import { clarifyEzechiel36LexicalPublication } from "./ezechiel36LexicalPublicationReview.js"
 import { restoreEzechiel14PoonenFidelity } from "./ezechiel14PoonenFidelityReview.js"
 import { restoreEzechiel36_43_47_48PoonenFidelity } from "./ezechiel36_43_47_48PoonenFidelityReview.js"
 import { restoreEzechielPoonenFidelity } from "./ezechielPoonenFidelityReview.js"
@@ -20,12 +21,14 @@ const EZECHIEL_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const EZECHIEL_EDITORIAL_REVIEWED = restoreEzechiel14PoonenFidelity(
-  restoreEzechiel36_43_47_48PoonenFidelity(
-    restoreEzechielPoonenFidelity(
-      reviewEzechiel36_43_47_48Explanations(
-        reviewEzechiel16And28Explanations(
-          reviewEzechiel14And18Explanations(EZECHIEL_EDITORIAL_BASE),
+const EZECHIEL_EDITORIAL_REVIEWED = clarifyEzechiel36LexicalPublication(
+  restoreEzechiel14PoonenFidelity(
+    restoreEzechiel36_43_47_48PoonenFidelity(
+      restoreEzechielPoonenFidelity(
+        reviewEzechiel36_43_47_48Explanations(
+          reviewEzechiel16And28Explanations(
+            reviewEzechiel14And18Explanations(EZECHIEL_EDITORIAL_BASE),
+          ),
         ),
       ),
     ),
