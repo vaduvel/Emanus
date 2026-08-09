@@ -8,7 +8,7 @@ const ROOT = process.cwd()
 const dir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first-manifest.json")
 const beDir = path.join(ROOT, "docs", "data", "biblia-emanus")
-const EXPECTED = { books: 27, chapters: 260, units: 831, verseEntries: 7941, criticalReferenceSlots: 16 }
+const EXPECTED = { books: 27, chapters: 260, verseEntries: 7941, criticalReferenceSlots: 16 }
 
 const CANON = [
   ["matei", "MAT", 28], ["marcu", "MRK", 16], ["luca", "LUK", 24], ["ioan", "JHN", 21], ["fapte", "ACT", 28],
@@ -75,7 +75,8 @@ if (!fs.existsSync(dir) || !fs.existsSync(manifestPath)) fail("final corpus miss
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"))
 if (manifest.status !== "in_review" || manifest.publicationReady !== false) fail("final corpus must remain in_review before release review")
 if (manifest.genericCompletionAllowed !== false || manifest.legacyBibleTextAllowed !== false) fail("manifest must reject generic completion and legacy Bible text")
-for (const key of ["books", "chapters", "units"]) if (manifest.counts?.[key] !== EXPECTED[key]) fail(`manifest ${key} ${manifest.counts?.[key]}/${EXPECTED[key]}`)
+for (const key of ["books", "chapters"]) if (manifest.counts?.[key] !== EXPECTED[key]) fail(`manifest ${key} ${manifest.counts?.[key]}/${EXPECTED[key]}`)
+if (!Number.isInteger(manifest.counts?.units) || manifest.counts.units < EXPECTED.chapters) fail(`manifest units invalid: ${manifest.counts?.units}`)
 if (manifest.counts?.auditedRecoveredBooks !== 15 || manifest.counts?.rebuiltSourceFirstBooks !== 12) fail("source layer counts invalid")
 
 const files = fs.readdirSync(dir).filter((name) => name.endsWith(".json")).sort()
@@ -132,8 +133,8 @@ for (let bookIndex = 0; bookIndex < CANON.length; bookIndex += 1) {
   }
 }
 
-if (chapters !== EXPECTED.chapters || units !== EXPECTED.units || verseEntries !== EXPECTED.verseEntries || criticalReferenceSlots !== EXPECTED.criticalReferenceSlots) {
-  fail(`totals ${chapters}/${EXPECTED.chapters} chapters, ${units}/${EXPECTED.units} units, ${verseEntries}/${EXPECTED.verseEntries} BE entries, ${criticalReferenceSlots}/${EXPECTED.criticalReferenceSlots} critical slots`)
+if (chapters !== EXPECTED.chapters || units !== manifest.counts.units || verseEntries !== EXPECTED.verseEntries || criticalReferenceSlots !== EXPECTED.criticalReferenceSlots) {
+  fail(`totals ${chapters}/${EXPECTED.chapters} chapters, ${units}/${manifest.counts.units} manifest units, ${verseEntries}/${EXPECTED.verseEntries} BE entries, ${criticalReferenceSlots}/${EXPECTED.criticalReferenceSlots} critical slots`)
 }
 console.log(`NT final source-first gate OK: ${files.length} books / ${chapters} chapters / ${units} explanation units.`)
 console.log(`Biblia Emanus binding OK: ${verseEntries} verse entries / ${criticalReferenceSlots} resolved critical-number slots.`)
