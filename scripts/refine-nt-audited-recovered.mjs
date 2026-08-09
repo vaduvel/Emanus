@@ -67,6 +67,11 @@ const DROP = [
   /\b(?:presiune religioasa|presiune de grup).{0,80}\b(?:bani|donatii|sexual|relatii)\b/,
 ]
 
+const EMPTY_HEADING_OVERRIDES = new Map([
+  ["luca.13.Luca 13:1-9", "Pocăință și rod înaintea lui Dumnezeu"],
+  ["2-corinteni.11.2 Corinteni 11:16-21", "Îi suportați pe cei care vă robesc"],
+])
+
 function shouldDrop(sentence) {
   const text = norm(sentence)
   return DROP.some((pattern) => pattern.test(text))
@@ -94,6 +99,14 @@ function cleanOptional(value, location) {
   const cleaned = cleanString(value, location)
   return typeof cleaned === "string" && cleaned.trim() ? cleaned : undefined
 }
+function cleanHeading(sourceId, chapterNumber, unit, location) {
+  const cleaned = cleanString(unit.heading, location)
+  if (typeof cleaned === "string" && cleaned.trim()) return cleaned
+  const replacement = EMPTY_HEADING_OVERRIDES.get(`${sourceId}.${chapterNumber}.${unit.ref}`)
+  if (!replacement) return cleaned
+  ledger.push({ location, kind: "filled-known-empty-heading", before: cleaned ?? "", after: replacement })
+  return replacement
+}
 
 if (!fs.existsSync(inputDir)) fail("missing nt-audited-recovered")
 fs.rmSync(outputDir, { recursive: true, force: true })
@@ -115,7 +128,7 @@ for (const file of files) {
       if (!teaching || teaching.length < 80) fail(`${prefix} ${unit.ref}: refinement emptied/over-thinned teaching`)
       const out = {
         ...unit,
-        heading: cleanString(unit.heading, `${prefix}.units[${index}].heading`),
+        heading: cleanHeading(source.id, chapter.number, unit, `${prefix}.units[${index}].heading`),
         teaching,
       }
       const heart = cleanOptional(unit.forYourHeart, `${prefix}.units[${index}].forYourHeart`)
@@ -153,4 +166,4 @@ fs.writeFileSync(manifestPath, stable({
   books: manifestBooks,
 }), "utf8")
 fs.writeFileSync(ledgerPath, stable({ schema: "emanus-nt-audited-recovered-refined-ledger-v1", changes: ledger }), "utf8")
-console.log(`NT refined recovery: ${books} books / ${chapters} chapters / ${units} units; ${ledger.length} additional high-confidence editorial sentences removed.`)
+console.log(`NT refined recovery: ${books} books / ${chapters} chapters / ${units} units; ${ledger.length} additional high-confidence editorial changes applied.`)
