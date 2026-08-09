@@ -58,6 +58,9 @@ jobs:
           set -euo pipefail
           node scripts/materialize-nt-explanations-from-legacy.mjs --legacy-root ../nt-legacy
           node scripts/check-nt-explanation-recovery.mjs
+          # Recovery refreshes the legacy provenance directory. Restore the
+          # source-first registry owned by this clean branch before rebuilding.
+          git checkout HEAD -- docs/data/biblia-explicata/nt-source-registry/source-first-12.json
 
       - name: Rebuild quarantined books source-first
         run: |
