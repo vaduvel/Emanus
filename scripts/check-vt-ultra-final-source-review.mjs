@@ -238,7 +238,7 @@ for (const book of legacyBooks) {
     for (const unit of chapter.units) {
       const where = `${book.name} ${chapter.number} ${unit.ref}`
       recordTeaching(where, unit.teaching)
-      if (/\bPoonen\b/iu.test(unit.explanationSource ?? "")) {
+      if (/^(?:Zac\s+)?Poonen\b/iu.test(text(unit.explanationSource))) {
         stats.poonenLegacyUnits += 1
         need(unit.explanationKind === "exposition", `${where}: provenance Poonen fără exposition`)
         auditSourceDilution(`${where} teaching`, unit.teaching)
