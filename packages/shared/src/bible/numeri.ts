@@ -30,6 +30,7 @@ import { NUMERI_28 } from "./numeri28.js"
 import { NUMERI_29 } from "./numeri29.js"
 import { NUMERI_30 } from "./numeri30.js"
 import { NUMERI_31 } from "./numeri31.js"
+import { normalizeNumeri31PublicationCopy } from "./numeri31PublicationCopyReview.js"
 import { NUMERI_32 } from "./numeri32.js"
 import { NUMERI_33 } from "./numeri33.js"
 import { NUMERI_34 } from "./numeri34.js"
@@ -84,6 +85,8 @@ export { NUMERI_34 } from "./numeri34.js"
 export { NUMERI_35 } from "./numeri35.js"
 export { NUMERI_36 } from "./numeri36.js"
 
+const NUMERI_31_FINAL = normalizeNumeri31PublicationCopy(NUMERI_31)
+
 export const NUMERI: BibleBook = {
   id: "numeri",
   name: "Numeri",
@@ -122,7 +125,7 @@ export const NUMERI: BibleBook = {
     NUMERI_28,
     NUMERI_29,
     NUMERI_30,
-    NUMERI_31,
+    NUMERI_31_FINAL,
     NUMERI_32,
     NUMERI_33,
     NUMERI_34,
