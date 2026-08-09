@@ -10,6 +10,7 @@ const bindingPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-cano
 const sourceEvidencePath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-evidence.json")
 const editorialRawPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-refined-findings.json")
 const editorialDecisionsPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-decisions.json")
+const editorialTraceabilityPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-editorial-traceability-audit.json")
 const quoteAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-embedded-quote-audit.json")
 const languageAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-language-audit.json")
 const lexiconAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-audit.json")
@@ -26,6 +27,7 @@ const binding = readJson(bindingPath, "canonical binding")
 const sourceEvidence = readJson(sourceEvidencePath, "source evidence")
 const editorialRaw = readJson(editorialRawPath, "editorial raw audit")
 const editorialDecisions = readJson(editorialDecisionsPath, "editorial decisions")
+const editorialTraceability = readJson(editorialTraceabilityPath, "editorial traceability audit")
 const quoteAudit = readJson(quoteAuditPath, "embedded quote audit")
 const languageAudit = readJson(languageAuditPath, "Romanian language audit")
 const lexiconAudit = readJson(lexiconAuditPath, "lexicon audit")
@@ -53,10 +55,7 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
         missingAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref })
       } else {
         for (const anchor of anchors) {
-          const formatValid = typeof anchor?.sourceId === "string" && anchor.sourceId &&
-            typeof anchor?.locator === "string" && anchor.locator &&
-            typeof anchor?.evidenceId === "string" && anchor.evidenceId &&
-            typeof anchor?.evidenceSha256 === "string" && /^sha256:[0-9a-f]{64}$/i.test(anchor.evidenceSha256)
+          const formatValid = typeof anchor?.sourceId === "string" && anchor.sourceId && typeof anchor?.locator === "string" && anchor.locator && typeof anchor?.evidenceId === "string" && anchor.evidenceId && typeof anchor?.evidenceSha256 === "string" && /^sha256:[0-9a-f]{64}$/i.test(anchor.evidenceSha256)
           if (!formatValid) {
             invalidAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, evidenceId: anchor?.evidenceId ?? null, reason: "invalid-anchor-format" })
             continue
@@ -66,9 +65,7 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
             invalidAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, evidenceId: anchor.evidenceId, reason: "evidence-record-missing" })
             continue
           }
-          if (evidence.sourceId !== anchor.sourceId || evidence.locator !== anchor.locator || evidence.evidenceSha256 !== anchor.evidenceSha256) {
-            invalidAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, evidenceId: anchor.evidenceId, reason: "anchor-evidence-mismatch" })
-          }
+          if (evidence.sourceId !== anchor.sourceId || evidence.locator !== anchor.locator || evidence.evidenceSha256 !== anchor.evidenceSha256) invalidAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, evidenceId: anchor.evidenceId, reason: "anchor-evidence-mismatch" })
         }
       }
     }
@@ -85,8 +82,6 @@ else if (binding.releaseState !== "final" || binding.publicationReady !== true) 
 if (sourceEvidence.missing) pushBlocker(blockers, "source-evidence-missing", 1, "Source evidence registry is missing.")
 
 let editorialClassificationUnresolved = null
-let editorialSourceTraceabilityPending = null
-let editorialSourceTraceabilityExamples = []
 if (editorialRaw.missing) {
   pushBlocker(blockers, "editorial-audit-missing", 1, "Editorial raw audit is missing.")
 } else if (editorialDecisions.missing) {
@@ -102,22 +97,17 @@ if (editorialRaw.missing) {
   if (editorialDecisions.rawFindings !== raw || unique !== decisions.length || decided !== decisions.length || !validActions) {
     editorialClassificationUnresolved = raw >= 0 ? raw : 1
     pushBlocker(blockers, "editorial-decisions-incomplete", editorialClassificationUnresolved, "Editorial decisions do not completely and validly cover the raw findings ledger.", { rawFindings: raw, uniqueCandidateSentences: unique, decisions: decisions.length, decided })
-  } else {
-    editorialClassificationUnresolved = 0
-  }
-  const retainedOrRewritten = decisions.filter((item) => item.action === "keep-reviewed" || item.action === "rewrite-reviewed")
-  const pendingTraceability = retainedOrRewritten.filter((item) => item.sourceTraceabilityState !== "verified")
-  editorialSourceTraceabilityPending = pendingTraceability.length
-  editorialSourceTraceabilityExamples = pendingTraceability.slice(0, 20).map((item) => ({
-    bookId: item.bookId,
-    chapter: item.chapter,
-    field: item.field,
-    action: item.action,
-    sentence: item.sentence,
-  }))
+  } else editorialClassificationUnresolved = 0
 }
 
-pushBlocker(blockers, "editorial-source-traceability-pending", editorialSourceTraceabilityPending, `${editorialSourceTraceabilityPending ?? 0} retained or rewritten editorial decisions still require explicit source verification.`, { examples: editorialSourceTraceabilityExamples })
+let editorialSourceTraceabilityPending = null
+if (editorialTraceability.missing) {
+  pushBlocker(blockers, "editorial-traceability-audit-missing", 1, "Final editorial source-context traceability audit is missing.")
+} else {
+  editorialSourceTraceabilityPending = Number(editorialTraceability.counts?.pending ?? 0)
+  pushBlocker(blockers, "editorial-source-traceability-pending", editorialSourceTraceabilityPending, `${editorialSourceTraceabilityPending} retained or rewritten editorial decisions lack reproducible final source context.`, { status: editorialTraceability.status ?? null, examples: (editorialTraceability.findings ?? []).filter((item) => item.traceabilityState === "pending-source-context" || item.traceabilityState === "missing-final-chapter-context").slice(0, 20) })
+}
+
 pushBlocker(blockers, "whole-chapter-summary-units", wholeChapterSummaries.length, `${wholeChapterSummaries.length} rebuilt chapters are still one whole-chapter unit.`, { examples: wholeChapterSummaries.slice(0, 20) })
 pushBlocker(blockers, "thin-explanation-units", thin.length, `${thin.length} explanation units are under 45 words.`, { examples: thin.slice(0, 20) })
 pushBlocker(blockers, "empty-unit-headings", empty.length, `${empty.length} explanation units have empty headings.`, { examples: empty.slice(0, 20) })
@@ -130,7 +120,7 @@ for (const [audit, label, id] of [[quoteAudit, "embedded quote", "embedded-quote
 }
 
 const report = {
-  schema: "emanus-nt-publication-blockers-v1",
+  schema: "emanus-nt-publication-blockers-v2",
   status: blockers.length ? "blocked" : "clear",
   manifestStatus: manifest.status,
   manifestPublicationReady: manifest.publicationReady,
