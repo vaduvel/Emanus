@@ -23,10 +23,7 @@ const CANON = [
 ]
 const EXPECTED = { books: 27, chapters: 260, units: 831 }
 
-function fail(message) {
-  console.error(`[NT final source-first] ${message}`)
-  process.exit(1)
-}
+function fail(message) { console.error(`[NT final source-first] ${message}`); process.exit(1) }
 function stable(value) { return JSON.stringify(value, null, 2) + "\n" }
 function hash(value) { return crypto.createHash("sha256").update(value).digest("hex") }
 function readBooks(dir, sourceClass) {
@@ -40,7 +37,7 @@ function readBooks(dir, sourceClass) {
   return map
 }
 
-const audited = readBooks(recoveredDir, "refined-audited-recovered-poonen")
+const audited = readBooks(recoveredDir, "audited-recovered-poonen")
 const rebuilt = readBooks(rebuiltDir, "rebuilt-poonen-source-first")
 if (audited.size !== 15) fail(`audited books ${audited.size}/15`)
 if (rebuilt.size !== 12) fail(`rebuilt books ${rebuilt.size}/12`)
@@ -58,7 +55,6 @@ for (let index = 0; index < CANON.length; index += 1) {
   const source = entry.data
   if (source.bookId !== bookId || source.name !== name) fail(`${id}: canonical metadata mismatch`)
   if (!Array.isArray(source.chapters) || source.chapters.length !== expectedChapters) fail(`${id}: chapters ${source.chapters?.length ?? 0}/${expectedChapters}`)
-
   const chapters = source.chapters.map((chapter, chapterIndex) => {
     if (chapter.number !== chapterIndex + 1) fail(`${id}: non-contiguous chapter numbering`)
     if (chapter.status !== "in_review") fail(`${id} ${chapter.number}: must remain in_review before final release review`)
@@ -67,39 +63,17 @@ for (let index = 0; index < CANON.length; index += 1) {
     totalUnits += units.length
     return { ...chapter, finalSourceClass: entry.sourceClass }
   })
-
   const payload = {
-    schema: "emanus-nt-final-source-first-v1",
-    id,
-    bookId,
-    name,
-    testament: "nt",
-    order: 40 + index,
-    status: "in_review",
-    publicationReady: false,
-    sourceClass: entry.sourceClass,
-    chapters,
+    schema: "emanus-nt-final-source-first-v1", id, bookId, name, testament: "nt", order: 40 + index,
+    status: "in_review", publicationReady: false, sourceClass: entry.sourceClass, chapters,
   }
   const rendered = stable(payload)
   const fileName = `${String(index + 1).padStart(2, "0")}-${id}.json`
   fs.writeFileSync(path.join(outputDir, fileName), rendered, "utf8")
   totalChapters += chapters.length
-  manifestBooks.push({
-    order: 40 + index,
-    id,
-    bookId,
-    name,
-    sourceClass: entry.sourceClass,
-    chapters: chapters.length,
-    units: chapters.reduce((sum, chapter) => sum + chapter.units.length, 0),
-    sha256: hash(rendered),
-  })
+  manifestBooks.push({ order: 40 + index, id, bookId, name, sourceClass: entry.sourceClass, chapters: chapters.length, units: chapters.reduce((sum, chapter) => sum + chapter.units.length, 0), sha256: hash(rendered) })
 }
-
-if (manifestBooks.length !== EXPECTED.books || totalChapters !== EXPECTED.chapters || totalUnits !== EXPECTED.units) {
-  fail(`totals ${manifestBooks.length}/${EXPECTED.books} books, ${totalChapters}/${EXPECTED.chapters} chapters, ${totalUnits}/${EXPECTED.units} units`)
-}
-
+if (manifestBooks.length !== EXPECTED.books || totalChapters !== EXPECTED.chapters || totalUnits !== EXPECTED.units) fail(`totals ${manifestBooks.length}/${EXPECTED.books} books, ${totalChapters}/${EXPECTED.chapters} chapters, ${totalUnits}/${EXPECTED.units} units`)
 const manifest = {
   schema: "emanus-nt-final-source-first-manifest-v1",
   status: "in_review",
@@ -108,13 +82,7 @@ const manifest = {
   doctrinePolicy: "Poonen/CFC source-first. Where the source develops the passage, preserve its doctrine, interpretation, typology and application without dilution. Modern provenance remains internal.",
   genericCompletionAllowed: false,
   legacyBibleTextAllowed: false,
-  counts: {
-    books: manifestBooks.length,
-    chapters: totalChapters,
-    units: totalUnits,
-    auditedRecoveredBooks: 15,
-    rebuiltSourceFirstBooks: 12,
-  },
+  counts: { books: manifestBooks.length, chapters: totalChapters, units: totalUnits, auditedRecoveredBooks: 15, rebuiltSourceFirstBooks: 12, refinedRecoveredBooks: 15 },
   books: manifestBooks,
 }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
