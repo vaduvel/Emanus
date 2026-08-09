@@ -3,11 +3,11 @@ import type { ExplainedBookOverlay } from "../explainedOverlay.js"
 function clean(value: string): string {
   return value
     .replace(
-      /\b(Lectura|Interpretarea|Schema|Predica|Aplicația|Teologia) lui(?=\s+(?:este|rămâne|devine|despre)\b)/giu,
+      /\b(Lectura|Interpretarea|Schema|Predica|Aplicația|Teologia) lui(?=[,.;:!?]|\s+(?:este|rămâne|devine|despre)\b)/giu,
       "$1",
     )
     .replace(
-      /\b(lectura|interpretarea|schema|predica|aplicația|teologia) lui(?=\s+(?:este|rămâne|devine|despre)\b)/giu,
+      /\b(lectura|interpretarea|schema|predica|aplicația|teologia) lui(?=[,.;:!?]|\s+(?:este|rămâne|devine|despre)\b)/giu,
       "$1",
     )
 }
