@@ -1,10 +1,10 @@
 {
-  "schema": "emanus-nt-publication-blockers-v1",
+  "schema": "emanus-nt-publication-blockers-v2",
   "status": "blocked",
   "manifestStatus": "in_review",
   "manifestPublicationReady": false,
   "counts": {
-    "blockerClasses": 6,
+    "blockerClasses": 5,
     "books": 27,
     "chapters": 260,
     "units": 970,
@@ -15,9 +15,9 @@
     "invalidSourceAnchors": 0,
     "rawEditorialFindings": 96,
     "editorialClassificationUnresolved": 0,
-    "editorialSourceTraceabilityPending": 36,
+    "editorialSourceTraceabilityPending": 0,
     "embeddedQuoteFindings": 124,
-    "romanianLanguageFindings": 305,
+    "romanianLanguageFindings": 481,
     "lexiconFindings": 219
   },
   "blockers": [
@@ -27,153 +27,6 @@
       "message": "Canonical text is provisional, not final.",
       "canonicalTextVersion": "BE-NT-PROVISIONAL-2026-08-09",
       "corpusSha256": "c65e31515638ec7082836d5d7cd3fa675827cd868eba61b2946fd4240687f412"
-    },
-    {
-      "id": "editorial-source-traceability-pending",
-      "count": 36,
-      "message": "36 retained or rewritten editorial decisions still require explicit source verification.",
-      "examples": [
-        {
-          "bookId": "matei",
-          "chapter": 1,
-          "field": "historicalContext",
-          "action": "keep-reviewed",
-          "sentence": "Logodna iudaică era un legământ juridic serios, iar o sarcină înainte de viața împreună o expunea pe Maria rușinii și primejdiei."
-        },
-        {
-          "bookId": "matei",
-          "chapter": 22,
-          "field": "units[0].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Totuși, omul fără haină de nuntă arată că intrarea neașteptată nu justifică disprețuirea Regelui."
-        },
-        {
-          "bookId": "matei",
-          "chapter": 27,
-          "field": "units[1].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Spălarea mâinilor nu șterge verdictul pe care îl autorizează."
-        },
-        {
-          "bookId": "marcu",
-          "chapter": 1,
-          "field": "units[1].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Deși era rudă cu Isus, nu își permite nicio familiaritate: «nu sunt vrednic să mă plec să-I dezleg curelele încălțămintei»."
-        },
-        {
-          "bookId": "marcu",
-          "chapter": 11,
-          "field": "literaryContext",
-          "action": "keep-reviewed",
-          "sentence": "Conflictul cu autoritățile intră în etapa finală."
-        },
-        {
-          "bookId": "marcu",
-          "chapter": 13,
-          "field": "units[0].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Semnele timpurii — hristoși mincinoși, războaie, cutremure și foamete — sunt începutul durerilor, nu un calendar care permite calcule."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 4,
-          "field": "units[0].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Mesajul rămâne actual: o lucrare mai largă nu justifică tăcerea asupra adevărului."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 9,
-          "field": "units[0].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Minunea nu justifică promisiuni de prosperitate, ci cheamă la generozitate și încredere."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 9,
-          "field": "units[4].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Respingerea nu ne autorizează să dorim judecata imediată asupra oamenilor; misiunea prezentă este vestirea harului, iar judecata rămâne în mâna lui Dumnezeu."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 10,
-          "field": "units[0].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Nevoia mare nu justifică independența, graba sau metodele prin care omul își construiește propriul nume."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 15,
-          "field": "historicalContext",
-          "action": "keep-reviewed",
-          "sentence": "Un fiu care cerea partea înainte de moarte își umilea tatăl, iar munca la porci reprezenta degradare profundă pentru un iudeu."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 20,
-          "field": "literaryContext",
-          "action": "keep-reviewed",
-          "sentence": "După curățirea templului, autoritățile cer legitimația lui Isus."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 21,
-          "field": "units[1].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Isus promite cuvinte și înțelepciune când ucenicii sunt trași pe neașteptate înaintea autorităților."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 22,
-          "field": "units[4].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Chiar în ceasul puterii întunericului, El nu își abandonează caracterul și nu permite ucenicilor să-I apere Împărăția prin forță."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 23,
-          "field": "literaryContext",
-          "action": "keep-reviewed",
-          "sentence": "Procesul religios din capitolul anterior este dus înaintea autorităților romane."
-        },
-        {
-          "bookId": "luca",
-          "chapter": 23,
-          "field": "historicalContext",
-          "action": "keep-reviewed",
-          "sentence": "Numai Roma putea aplica în mod legal răstignirea."
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 2,
-          "field": "units[3].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Dărnicia este liberă, nu confiscare religioasă; capitolul nu autorizează liderii să constrângă oamenii să renunțe la proprietate."
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 4,
-          "field": "summary",
-          "action": "keep-reviewed",
-          "sentence": "Petru și Ioan mărturisesc cu îndrăzneală înaintea autorităților, Biserica se roagă pentru curaj, iar unitatea credincioșilor se exprimă prin grijă concretă unii pentru alții."
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 4,
-          "field": "units[1].teaching",
-          "action": "keep-reviewed",
-          "sentence": "Aceasta nu justifică disprețul general față de autorități; este ascultarea de Dumnezeu atunci când o poruncă omenească cere negarea adevărului."
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 11,
-          "field": "units[2].teaching",
-          "action": "rewrite-reviewed",
-          "sentence": "Dărnicia este voluntară și proporțională; textul nu autorizează presiunea financiară sau promisiunea că darul va cumpăra protecția lui Dumnezeu."
-        }
-      ]
     },
     {
       "id": "thin-explanation-units",
@@ -310,7 +163,7 @@
     },
     {
       "id": "romanian-language-audit",
-      "count": 305,
+      "count": 481,
       "message": "Romanian language audit is manual-edit-required.",
       "status": "manual-edit-required"
     },

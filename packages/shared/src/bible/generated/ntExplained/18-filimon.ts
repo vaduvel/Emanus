@@ -61,7 +61,7 @@ export const NT_BOOK_18: BibleBook = {
             "Luca 19:8",
             "2 Corinteni 7:10-11"
           ],
-          "forYourHeart": "Harul nu spune doar «ești iertat»; îți dă puterea să te întorci, să spui adevărul și să repari cât poți. Nu lăsa rușinea să te țînă departe de ascultare."
+          "forYourHeart": "Harul nu spune doar «ești iertat»; îți dă puterea să te întorci, să spui adevărul și să repari cât poți. Nu lăsa rușinea să te țină departe de ascultare."
         },
         {
           "id": "filimon-1-17-22",

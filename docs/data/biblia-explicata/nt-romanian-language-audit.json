@@ -2,9 +2,16 @@
   "schema": "emanus-nt-romanian-language-audit-v2",
   "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
-  "count": 305,
-  "findingGroups": 266,
+  "count": 481,
+  "findingGroups": 433,
   "tokenSummary": [
+    {
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 235,
+      "groups": 221
+    },
     {
       "kind": "missing-diacritics",
       "token": "viata",
@@ -18,13 +25,6 @@
       "expected": "arată / arăta",
       "occurrences": 49,
       "groups": 42
-    },
-    {
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 46,
-      "groups": 43
     },
     {
       "kind": "missing-diacritics",
@@ -44,8 +44,8 @@
       "kind": "missing-diacritics",
       "token": "simpla",
       "expected": "simplă",
-      "occurrences": 23,
-      "groups": 21
+      "occurrences": 21,
+      "groups": 19
     },
     {
       "kind": "missing-diacritics",
@@ -63,13 +63,6 @@
     },
     {
       "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
-      "occurrences": 7,
-      "groups": 7
-    },
-    {
-      "kind": "missing-diacritics",
       "token": "legatura",
       "expected": "legătură / legătura",
       "occurrences": 7,
@@ -77,17 +70,10 @@
     },
     {
       "kind": "missing-diacritics",
-      "token": "invatatura",
-      "expected": "învățătură",
-      "occurrences": 6,
-      "groups": 4
-    },
-    {
-      "kind": "missing-diacritics",
       "token": "si",
       "expected": "și",
-      "occurrences": 3,
-      "groups": 3
+      "occurrences": 6,
+      "groups": 6
     },
     {
       "kind": "missing-diacritics",
@@ -95,13 +81,6 @@
       "expected": "biruință / biruința",
       "occurrences": 2,
       "groups": 2
-    },
-    {
-      "kind": "missing-diacritics",
-      "token": "fagaduinta",
-      "expected": "făgăduință",
-      "occurrences": 1,
-      "groups": 1
     },
     {
       "kind": "missing-diacritics",
@@ -115,11 +94,141 @@
     {
       "bookId": "matei",
       "book": "Matei",
+      "chapter": 1,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 2,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 2,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 3,
+      "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 3,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 3,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 3,
+      "field": "units[0].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 3,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 3,
+      "field": "units[0].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 3,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 4,
+      "field": "literaryContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 4,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
       "chapter": 4,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
       "expected": "simplă",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 4,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
       "occurrences": 1
     },
     {
@@ -135,11 +244,261 @@
     {
       "bookId": "matei",
       "book": "Matei",
+      "chapter": 5,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 5,
+      "field": "units[7].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 5,
+      "field": "units[7].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 6,
+      "field": "units[3].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 7,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 7,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 7,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 7,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 7,
+      "field": "units[3].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 8,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 9,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 10,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 11,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 12,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
       "chapter": 12,
       "field": "units[4].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
       "expected": "simplă",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 13,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 14,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 16,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 18,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 19,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 21,
+      "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 21,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 21,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 21,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 22,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 22,
+      "field": "units[4].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
       "occurrences": 1
     },
     {
@@ -155,6 +514,36 @@
     {
       "bookId": "matei",
       "book": "Matei",
+      "chapter": 25,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 26,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "si",
+      "expected": "și",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
+      "chapter": 26,
+      "field": "units[4].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "matei",
+      "book": "Matei",
       "chapter": 28,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
@@ -165,11 +554,691 @@
     {
       "bookId": "marcu",
       "book": "Marcu",
+      "chapter": 1,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 1,
+      "field": "units[1].words[0].meaning",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 1,
+      "field": "units[4].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 2,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 2,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 3,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 3,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 4,
+      "field": "units[4].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 4,
+      "field": "units[5].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 5,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 5,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 6,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 6,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 8,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 10,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 10,
+      "field": "units[0].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 11,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
       "chapter": 12,
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "simpla",
       "expected": "simplă",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 1,
+      "field": "units[5].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "title",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "units[1].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "units[1].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 3,
+      "field": "units[4].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 4,
+      "field": "units[4].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 5,
+      "field": "units[3].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 5,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 6,
+      "field": "units[4].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 7,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "si",
+      "expected": "și",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 7,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 8,
+      "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 9,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 9,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 9,
+      "field": "units[4].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 11,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 12,
+      "field": "units[5].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 13,
+      "field": "title",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 13,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 13,
+      "field": "units[0].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 13,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 13,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 13,
+      "field": "units[3].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 15,
+      "field": "literaryContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 15,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 15,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 15,
+      "field": "units[1].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 16,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 3
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 17,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 18,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 18,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "si",
+      "expected": "și",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 19,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 19,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 19,
+      "field": "units[0].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 20,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 22,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 22,
+      "field": "units[5].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 23,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 23,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 23,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 24,
+      "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 24,
+      "field": "units[2].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 24,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "luca",
+      "book": "Luca",
+      "chapter": 24,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
       "occurrences": 1
     },
     {
@@ -1318,28 +2387,8 @@
       "chapter": 7,
       "field": "summary",
       "kind": "missing-diacritics",
-      "token": "invatatura",
-      "expected": "învățătură",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
-      "field": "summary",
-      "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "invatatura",
-      "expected": "învățătură",
       "occurrences": 1
     },
     {
@@ -1371,16 +2420,6 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "invatatura",
-      "expected": "învățătură",
-      "occurrences": 3
     },
     {
       "bookId": "ioan",
@@ -1738,16 +2777,6 @@
       "chapter": 10,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
-      "token": "invatatura",
-      "expected": "învățătură",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1
@@ -1830,16 +2859,6 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "fagaduinta",
-      "expected": "făgăduință",
       "occurrences": 1
     },
     {
@@ -2193,6 +3212,406 @@
       "occurrences": 1
     },
     {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 15,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 16,
+      "field": "literaryContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 16,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 16,
+      "field": "units[1].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 16,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 18,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 18,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 18,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 18,
+      "field": "units[1].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "ioan",
+      "book": "Ioan",
+      "chapter": 19,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 1,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 2,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 2,
+      "field": "units[3].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 2,
+      "field": "units[3].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 3,
+      "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 3,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 3,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 5,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 7,
+      "field": "units[4].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 8,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 8,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 15,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 16,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 17,
+      "field": "summary",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 17,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 18,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 19,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 19,
+      "field": "units[1].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 20,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 20,
+      "field": "units[1].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 24,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 24,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 24,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 26,
+      "field": "literaryContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 26,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "fapte",
+      "book": "Faptele Apostolilor",
+      "chapter": 26,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "romani",
+      "book": "Romani",
+      "chapter": 2,
+      "field": "title",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "romani",
+      "book": "Romani",
+      "chapter": 2,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "romani",
+      "book": "Romani",
+      "chapter": 2,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
       "bookId": "romani",
       "book": "Romani",
       "chapter": 6,
@@ -2213,6 +3632,276 @@
       "occurrences": 1
     },
     {
+      "bookId": "romani",
+      "book": "Romani",
+      "chapter": 9,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "romani",
+      "book": "Romani",
+      "chapter": 14,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "romani",
+      "book": "Romani",
+      "chapter": 15,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-corinteni",
+      "book": "1 Corinteni",
+      "chapter": 5,
+      "field": "units[0].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-corinteni",
+      "book": "1 Corinteni",
+      "chapter": 5,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-corinteni",
+      "book": "1 Corinteni",
+      "chapter": 10,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-corinteni",
+      "book": "1 Corinteni",
+      "chapter": 11,
+      "field": "units[1].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-corinteni",
+      "book": "1 Corinteni",
+      "chapter": 11,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-corinteni",
+      "book": "1 Corinteni",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 2,
+      "field": "literaryContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 2,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 2,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "title",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "literaryContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "historicalContext",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "prayer",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "units[2].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 7,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 10,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 12,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-corinteni",
+      "book": "2 Corinteni",
+      "chapter": 13,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "galateni",
+      "book": "Galateni",
+      "chapter": 1,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "galateni",
+      "book": "Galateni",
+      "chapter": 5,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "filipeni",
+      "book": "Filipeni",
+      "chapter": 1,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "filipeni",
+      "book": "Filipeni",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
       "bookId": "coloseni",
       "book": "Coloseni",
       "chapter": 1,
@@ -2220,6 +3909,56 @@
       "kind": "missing-diacritics",
       "token": "simpla",
       "expected": "simplă",
+      "occurrences": 1
+    },
+    {
+      "bookId": "coloseni",
+      "book": "Coloseni",
+      "chapter": 3,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "coloseni",
+      "book": "Coloseni",
+      "chapter": 3,
+      "field": "units[3].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "book": "1 Tesaloniceni",
+      "chapter": 1,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "book": "1 Tesaloniceni",
+      "chapter": 2,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "book": "1 Tesaloniceni",
+      "chapter": 5,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
       "occurrences": 1
     },
     {
@@ -2333,6 +4072,16 @@
       "occurrences": 1
     },
     {
+      "bookId": "filimon",
+      "book": "Filimon",
+      "chapter": 1,
+      "field": "units[2].forYourHeart",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
       "bookId": "evrei",
       "book": "Evrei",
       "chapter": 1,
@@ -2395,16 +4144,6 @@
     {
       "bookId": "evrei",
       "book": "Evrei",
-      "chapter": 9,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
-      "occurrences": 1
-    },
-    {
-      "bookId": "evrei",
-      "book": "Evrei",
       "chapter": 11,
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
@@ -2430,16 +4169,6 @@
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "iacov",
-      "book": "Iacov",
-      "chapter": 5,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
       "occurrences": 1
     },
     {
@@ -2495,16 +4224,6 @@
     {
       "bookId": "1-ioan",
       "book": "1 Ioan",
-      "chapter": 2,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-ioan",
-      "book": "1 Ioan",
       "chapter": 5,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
@@ -2541,16 +4260,6 @@
       "token": "in",
       "expected": "în",
       "occurrences": 2
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 2,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
-      "occurrences": 1
     },
     {
       "bookId": "apocalipsa",
@@ -2655,26 +4364,6 @@
     {
       "bookId": "apocalipsa",
       "book": "Apocalipsa",
-      "chapter": 13,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 13,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
       "chapter": 14,
       "field": "summary",
       "kind": "missing-diacritics",
@@ -2725,51 +4414,11 @@
     {
       "bookId": "apocalipsa",
       "book": "Apocalipsa",
-      "chapter": 19,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "in",
-      "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
       "chapter": 20,
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 20,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 21,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 22,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "doua",
-      "expected": "două",
       "occurrences": 1
     }
   ]

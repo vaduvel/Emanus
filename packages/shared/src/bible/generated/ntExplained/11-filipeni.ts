@@ -21,7 +21,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 1:1-2",
           "heading": "Robi ai lui Hristos și sfinți prin har",
           "text": "Pavel și Timotei, robi ai lui Hristos Isus, către toți sfinții în Hristos Isus care sunt în Filipi, împreună cu supraveghetorii și diaconii: har vouă și pace de la Dumnezeu, Tatăl nostru, și de la Domnul Isus Hristos.",
-          "teaching": "Pavel și Timotei se prezintă ca oameni care Îi aparțîn lui Hristos, nu ca personalități care cer privilegii. Explicația subliniază că slujirea adevărată renunță la revendicarea recompensei și caută voia Stăpânului din dragoste.\n\nLiderii, prezbiterii și diaconii rămân slujitori ai comunității, fără drept asupra conștiinței, trupului, banilor sau libertății altuia.",
+          "teaching": "Pavel și Timotei se prezintă ca oameni care Îi aparțin lui Hristos, nu ca personalități care cer privilegii. Explicația subliniază că slujirea adevărată renunță la revendicarea recompensei și caută voia Stăpânului din dragoste.\n\nLiderii, prezbiterii și diaconii rămân slujitori ai comunității, fără drept asupra conștiinței, trupului, banilor sau libertății altuia.",
           "crossRefs": [
             "Marcu 10:42-45",
             "Romani 12:1",
@@ -266,7 +266,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 4:10-13",
           "heading": "Pot face toate lucrurile prin Hristos",
           "text": "M-am bucurat însă foarte mult în Domnul că, în sfârșit, a înflorit din nou grija voastră pentru mine; la aceasta vă gândeați și înainte, dar vă lipsea prilejul. Nu spun aceasta din lipsă, căci eu am învățat să fiu mulțumit în starea în care sunt. Știu și să fiu smerit, știu și să am din belșug; în orice împrejurare și în toate am învățat taina și a sațului, și a foamei, și a belșugului, și a lipsei. Eu pot totul în Hristos, care mă întărește.",
-          "teaching": "Pavel se bucură de grija filipenilor, dar explică faptul că a învățat mulțumirea atât în lipsă, cât și în belșug. Secretul nu este stoicismul, ci puterea lui Hristos care îl face liber față de controlul împrejurărilor materiale.\n\n«Pot totul în Hristos» nu promite succes în orice ambiție aleasă de noi. În context, Pavel spune că poate rămâne credincios, pașnic și mulțumit când are mult sau puțîn. Textul nu trebuie folosit pentru a cere performanțe imposibile, a ignora limitele sau a învinovăți bolnavii și săracii.",
+          "teaching": "Pavel se bucură de grija filipenilor, dar explică faptul că a învățat mulțumirea atât în lipsă, cât și în belșug. Secretul nu este stoicismul, ci puterea lui Hristos care îl face liber față de controlul împrejurărilor materiale.\n\n«Pot totul în Hristos» nu promite succes în orice ambiție aleasă de noi. În context, Pavel spune că poate rămâne credincios, pașnic și mulțumit când are mult sau puțin. Textul nu trebuie folosit pentru a cere performanțe imposibile, a ignora limitele sau a învinovăți bolnavii și săracii.",
           "crossRefs": [
             "2 Corinteni 12:9-10",
             "1 Timotei 6:6-8",
