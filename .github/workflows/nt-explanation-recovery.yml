@@ -84,6 +84,7 @@ jobs:
           set -euo pipefail
           node scripts/materialize-nt-final-source-first.mjs
           node scripts/check-nt-final-source-first.mjs
+          node scripts/check-nt-poonen-doctrine.mjs
 
       - name: Materialize and verify Biblia Emanus NT runtime
         run: |
