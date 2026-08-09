@@ -8,6 +8,7 @@ import copy
 import importlib.util
 import json
 import re
+import sys
 from pathlib import Path
 from types import ModuleType
 from typing import Any
@@ -25,6 +26,26 @@ def load_validator() -> ModuleType:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def validate_ot_source_evidence_if_needed(
+    selected: list[Path], source_data: dict[str, Any], validator: ModuleType
+) -> None:
+    """OT publication is all-or-nothing and requires the hash-bound verse evidence."""
+    selected_books = {CHAPTER_FILE.match(path.name).group(1) for path in selected}
+    if not any(source_data["books"][book]["testament"] == "OT" for book in selected_books):
+        return
+    path = ROOT / "scripts" / "check-biblia-emanus-ot-source-evidence.py"
+    spec = importlib.util.spec_from_file_location("biblia_emanus_ot_evidence", path)
+    if spec is None or spec.loader is None:
+        validator.fail("Nu pot încărca poarta de dovadă semantică pentru VT")
+    evidence = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = evidence
+    spec.loader.exec_module(evidence)
+    try:
+        evidence.validate_repository(ROOT)
+    except evidence.ValidationError as error:
+        validator.fail(f"VT nu poate fi publicat fără dovadă per-verset: {error}")
 
 
 def write_json(path: Path, data: dict[str, Any]) -> None:
@@ -87,6 +108,16 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     validator = load_validator()
+    if args.check and not args.books:
+        # CI must validate the current corpus, not pretend every chapter is
+        # ready to publish. Use --book to simulate sealing a selected book.
+        result = validator.main()
+        if result == 0:
+            print(
+                "[biblia-emanus-seal] OK: starea curentă a corpusului este validă; "
+                "nu s-a simulat publicarea capitolelor in_review."
+            )
+        return result
     try:
         manifest = validator.load_json(validator.MANIFEST_PATH)
         paths = validator.validate_manifest(manifest)
@@ -108,6 +139,7 @@ def main() -> int:
         selected = [path for path in chapter_paths if CHAPTER_FILE.match(path.name).group(1) in requested]
         if not selected:
             validator.fail("nu există capitole selectate")
+        validate_ot_source_evidence_if_needed(selected, source_data, validator)
 
         candidates: dict[Path, dict[str, Any]] = {
             path: validator.load_json(path) for path in chapter_paths
@@ -137,6 +169,27 @@ def main() -> int:
         candidate_manifest["public"] = published > 0
         candidate_manifest["progress"]["chaptersApproved"] = approved
         candidate_manifest["progress"]["chaptersPublished"] = published
+        if published == len(validated):
+            candidate_manifest["status"] = "published"
+            candidate_manifest.pop("publicationBlock", None)
+        else:
+            candidate_manifest["status"] = "in_review"
+            candidate_manifest["publicationBlock"] = "automated-audit-required"
+        ot_chapter_ids = {
+            chapter_id for chapter_id in ledger
+            if source_data["books"][chapter_id.split(".", 1)[0]]["testament"] == "OT"
+        }
+        published_ot = {
+            item[0] for item in validated
+            if item[0] in ot_chapter_ids and item[3] == "published"
+        }
+        candidate_manifest["oldTestament"] = {
+            "books": len({chapter_id.split(".", 1)[0] for chapter_id in ot_chapter_ids}),
+            "chapters": len(ot_chapter_ids),
+            "verses": sum(item[1] for item in validated if item[0] in ot_chapter_ids),
+            "status": "published" if published_ot == ot_chapter_ids else "in_review",
+            "public": published_ot == ot_chapter_ids,
+        }
         nt_chapter_ids = {
             chapter_id for chapter_id in ledger
             if chapter_id.split(".", 1)[0] in validator.NT_CHAPTER_COUNTS

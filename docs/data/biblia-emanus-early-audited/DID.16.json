@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 16,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-16",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 16
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/16/",
+      "sha256": "cc0bc00d656c0b4b067149985f0ac0f1b0305abafc65d6a0e0586e649954041b"
+    },
+    "sourceTextDigest": "d284d2960d5801ba1e5c3be36a47ec37efa15719e6496be3daff6b0d290f4c15",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Noi vă poruncim, atunci, că nici un laic nu poate îndeplini această funcție de preoție, că el nu oferă tămâie, nici botez, nici nu pune pe mâini, nici nu binecuvântează, nici nu dă pâinea binecuvântării. Pentru că nu este nimeni care să poată primi această har, dacă nu i se dă el de la Dumnezeu. Dar ei trebuie să primească acest har și onoare de la episcop. Și cel căruia nu i s-a dat demnitatea preoției va găsi condamnare, dacă el încalcă, ca Ozia, Regele. Mai mult, noi nu comandăm ca tot ce este în Biserică să boteze, care nu este, nici cititorii, nici cântăreții, nici portarii, ci numai episcopii și prezbiterii, și nici cititorii, nici cântăreții, nici paznicii; iar cei care calcă și fac astfel să găsească condamnarea care îi mallează pe fiii lui Core. Iată noi comandăm că prezbiterii nu sunt nici diaconi."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.901918,
+    "blockingIssueCount": 0,
+    "textDigest": "26fd1e2e0bdbff9f8470ab2640c3c990d890af15854b099cde815caae9935777",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

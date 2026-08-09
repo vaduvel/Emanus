@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 70,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/70/",
+    "pageSha256": "e3b118c217bd5c029cdbe5994d9abb9662c60b09e4e07807495ecfcbcd6e7bd2",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "c1a0c2b641654cdf222272695a2b11d06cbbf2a366104c331eec00c3fb230b58",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și s-a întâmplat după aceea că numele său în timpul sale a fost ridicat sus la acel Fiu al Omului la Domnul Spiritelor dintre cei care locuiesc pe pământ."
+    },
+    {
+      "number": 2,
+      "text": "Și el a fost ridicat sus pe carele spiritului numele lui a dispărut printre ei."
+    },
+    {
+      "number": 3,
+      "text": "din ziua aceea nu mai eram numărat între ei; și m-a pus între cele două vânturi, între Nord și Apus, unde îngerii au luat funiile ca să măsoare pentru mine locul pentru cei aleși și drepți."
+    },
+    {
+      "number": 4,
+      "text": "Și acolo i-am văzut pe primii tați și pe cei drepți care de la început locuiesc în acel loc."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.805156,
+    "blockingIssueCount": 0,
+    "textDigest": "17d0b4e281fb7feffb0a99b1fab4d2a0c19398c2ef41de2ed243cafe99e8a503",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 13,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-13",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 13
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/13/",
+      "sha256": "e014e2e5ace4faf0c191346b54788887b24d12078b363d212ddba08598e5d241"
+    },
+    "sourceTextDigest": "88a9f457452ba9704f759c45c23a911da1c4dbee033bc614a64bac68c1e9adec",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Feriți-vă, atunci, de fapte ca acestea, și nu luați parte la adunarea Neamurilor și țineți departe de planurile lui Satan, căci diavolul nu are iubire față de Dumnezeu. Căci cel care are părtășie cu un cântăreț pentru a face voia vrăjmașului, nu va fi socotit cu diavolul, și va moșteni un blestem. Țineți departe de faptele rele, în care nu este nimic bun în Israel. Depărtați-vă apoi de aceste fapte ca acestea pe care idolatrii le fac pentru a-i conduce pe oameni în rătăcire: ei sunt lucrările lui Satan, auguri și necromanți. Credincioșii ar trebui să se se separe de congregația celor nelegiuiți, și să nu se alăture unui ospăț cu ei. Și astfel să ne ferim de ele, și să nu intrăm în casele lor, nici să nu le dăm de mâncare; ei nu sunt plini de faptele lui Satan, nici să ne ferim de închinarea lor, nici să nu ne ferim de cei care se închină lor, nici să nu se teamă de ei. Să nu stea omul leneș cu cei care ascultă de Dumnezeu Tatăl, care sunt cinste și slavă pentru totdeauna și pentru totdeauna. Amin."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.793735,
+    "blockingIssueCount": 0,
+    "textDigest": "186de1f298af62d7825a3a6351b596c3a59c8d5507555895cf1ab2929a00e79e",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

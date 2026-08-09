@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 33,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/33/",
+    "pageSha256": "b8cce9395e6efaafac466079aab7c30c96e8cebf93bf6be9240284f2138e33b6",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "068b19b5c6a518264202943af19e1580bd8a9623ca494cb1d509aae445d1187e",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "de acolo m-am dus până la marginile pământului și am văzut acolo fiare mari și fiecare se deosebea de celălalt; și (am văzut) păsări, de asemenea, diferite în aparență, frumusețe și voce, una diferită de cealaltă."
+    },
+    {
+      "number": 2,
+      "text": "Și la est de aceste fiare am văzut marginile pământului pe care se odihnește cerul, și porțile cerului deschise."
+    },
+    {
+      "number": 3,
+      "text": "am văzut cum ies stelele cerului și am numărat portalurile din care ies și am notat toate prizele fiecărei stele în parte, în funcție de numărul și numele lor, de cursurile și pozițiile lor, de timpurile și lunile lor, după cum mi-a arătat Uriel, îngerul sfânt care era cu mine."
+    },
+    {
+      "number": 4,
+      "text": "El mi-a arătat toate lucrurile mi le-a scris: de asemenea, numele lor le-a scris pentru mine, legile lor companiile lor."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.724683,
+    "blockingIssueCount": 0,
+    "textDigest": "b7c3c4dc3e920d9af34baaaa9dddd1020d73f850bec382d04f3867511d15ac17",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

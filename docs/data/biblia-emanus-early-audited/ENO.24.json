@@ -1,0 +1,81 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 24,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/24/",
+    "pageSha256": "287a07ab09b58c468a2af03fd246d80660ae43f4f1a2875e12f6d638ac911c3c",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "020f72c2f9ce29b0a62ec8ee8953dcd2c11d39e5793d8b8b52f4d1a322308eb7",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și de acolo m-am dus în alt loc al pământului mi-a arătat un lanț muntos de foc care ardea zi noapte."
+    },
+    {
+      "number": 2,
+      "text": "Și am mers dincolo de ea și am văzut șapte munți magnifici care se deosebeau unii de alții, iar pietrele (de acolo) erau magnifice și frumoase, magnifice ca un întreg, de înfățișare glorioasă și exterioare frumoase: trei spre est, unul spre sud, și trei spre sud, unul peste altul, și ravene profunde, dintre care niciunul nu s-a unit cu altul."
+    },
+    {
+      "number": 3,
+      "text": "Iar al șaptelea munte era în mijlocul acestora și le întrecea în înălțime, semănând cu scaunul de domnie; și copaci parfumați încunjurau tronul."
+    },
+    {
+      "number": 4,
+      "text": "Printre ei era un copac pe care nu l-am mirosit niciodată, nici unul dintre ei, nici altul nu era asemenea lui. Avea un miros dincolo de orice mireasmă, frunzele, florile și lemnul lui nu se usucau pentru totdeauna; și rodul lui este frumos, și rodul lui seamănă cu datele unui palmier."
+    },
+    {
+      "number": 5,
+      "text": "Apoi i-am spus: „Cât de frumos este acest copac, parfumat și frunzele sale sunt frumoase, și florile sale sunt foarte încântătoare în aparență.”"
+    },
+    {
+      "number": 6,
+      "text": "Apoi a răspuns Mihail, unul dintre îngerii sfinți onorați care era cu mine care era conducătorul lor."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 6,
+    "translatedUnits": 6,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 6,
+    "semanticMinimumScore": 0.867095,
+    "blockingIssueCount": 0,
+    "textDigest": "46b4ff812d57924c316b99be66c92cda530c74c20d54c7ed54180828791926c4",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

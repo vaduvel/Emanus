@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 26,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-26",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 26
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/26/",
+      "sha256": "92a44b62c63da54cb8bcb745fceda2b00b1948b0f88181c997a10982b1273411"
+    },
+    "sourceTextDigest": "8bd296109d5a881441b927722b63656b85bb190701f59b6f9524a38a87315754",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Iată ce vă spun: preamăriți și preamăriți-i cu două onoruri pe martiri, așa cum binecuvântații Iacov și Ștefan, primul martir, sunt în onoarea noastră. Aceștia sunt binecuvântați înaintea lui Dumnezeu, aleși și sfinți, un popor curat de păcat și fără să se gândească la răzbunare; mai degrabă sunt ei pacificatori și neobosiți, de asemenea, în înfăptuirea voinței Sale și în respectarea poruncii Sale. Și despre ei David spune: Prețiosul în ochii Domnului nostru este moartea celor drepți. Și iată, noi înțelegem și știm că cei care onorează martirii și credincioșii lui vor fi înălțați cu onoare. Acest lucru am spus despre cei care au fost martiri în adevăr pentru numele Domnului nostru Isus Cristos. Iată, atunci, noi înțelegem și știm că cei care au onorat martirii și credincioșii care au luptat o luptă bună și au terminat calea lor, și au murit de dragul lui Hristos în credința corectă, vor câștiga o recompensă bună și viață veșnică."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.892299,
+    "blockingIssueCount": 0,
+    "textDigest": "c1d6b8257571c54395f3cbab03f46504a0f20dffc1df6711c89d7eade1741f99",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

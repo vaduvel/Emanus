@@ -1,0 +1,90 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 22,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-22",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 22
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/22/",
+      "sha256": "167ee257cff754fbbb7d5ae2be1b8c01a63d38d11c10c31ff999c15c544616c5"
+    },
+    "sourceTextDigest": "360ded91e9a709e571d8a7dd16f6b2f70e1479bba62457545b56997ea1fe687e",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și voi, ta, -i pe copiii voștri să păzească porunca Domnului să urmeze calea lui Hristos porunciți-le să o meșteg să nu stea cu mâinile în sân. Acum ei vor fi umflați în duh vor fi departe de a face bine. De aceea, instruiți-i nu vă cruț să-i îndreptați; căci copiii nu mor prin îndreptare, ci mai degrabă sunt salvați de condamnare. Căci se zice: ,, Nu-ți cruța toiagul de fiul tău, căci nădejdea este bună; cînd îl vei bate cu toiagul, să-i scapi sufletul de la moarte. Și mai mult, se spune: ,, Cine nu- îndreaptă fiul este un nebun. Bate-l pe fiul tău biciuiește-i cît este tînăr, ca să nu se împietrească să se depărteze de tine. cine nu nu-l corectează pe fiul său. Învăț-i, deci, pe copiii voștri îndreptați-i în tinerețea lor cu oe ascuțită, pentru ca ei să fie umili ascultători de toți. Învăț-le să scrie să citească Sfintele Scripturi-le voie să nu trăiască nepăsători, ca nu cumva să calce poruncile voastre. Și nu-i lăsa să intre într-o tavernă, ca să nu uite mustrarea voastră să fie corupți cu de curvie. Dar dacă tații lor sunt leneși în a-a-i în a-i a-i-i-le-i-a-le-a-a-n-le-le-n-a-l-a-u-i-l-i. Și când vor ajunge la timpul tinereții, fiecare să se căsătorească cu o soție în căsătorie curată, ca nu cumva necurate ale tinereții să-i atace, ei să fie păcat pentru ei. Și din această cauză Dumnezeu va cere păcatul din mâinile lor în ziua răsplătirii."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "longUnitRecovery": [
+      {
+        "reference": "DID.22:1",
+        "reason": "severe-length-loss-or-runaway-repetition",
+        "model": {
+          "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+          "revision": "3853a10c485323cbcd870553e846071052c0c070"
+        },
+        "sourceDigest": "360ded91e9a709e571d8a7dd16f6b2f70e1479bba62457545b56997ea1fe687e",
+        "previousTargetDigest": "27d8ed677299315e5c5023eb71dc4cff5290b3ec4789f7991025628ba144102f",
+        "recoveredTargetDigest": "c3e7de6688c1023ffd4777e742b2189b938f7d6d220df5b697ef6cdc5d4ee031",
+        "segments": 4,
+        "recursiveRepairs": 0,
+        "sourceWords": 280,
+        "targetWords": 241,
+        "coverageRatio": 0.860714
+      }
+    ],
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.864726,
+    "blockingIssueCount": 0,
+    "textDigest": "c3e7de6688c1023ffd4777e742b2189b938f7d6d220df5b697ef6cdc5d4ee031",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

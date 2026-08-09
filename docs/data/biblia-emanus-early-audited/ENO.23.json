@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 23,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/23/",
+    "pageSha256": "bb65b3de7718e1fbbd1fecdde892a2aafeeb7da5e1f2e1e19bc32a73c4a39d68",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "256c811a55bf0921beb94fe72285eb62e02fb8fdba936843ccc49cc59354a41d",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "De acolo m-am dus într-un alt loc la vest de marginile pământului."
+    },
+    {
+      "number": 2,
+      "text": "Am văzut un foc aprins, care alerga fără odihnă, și nu s-a oprit nici de la drum nici zi, nici noapte, ci cu regularitate."
+    },
+    {
+      "number": 3,
+      "text": "Și am întrebat: „Ce este aceasta care nu se odihnește? ”"
+    },
+    {
+      "number": 4,
+      "text": "Atunci Raguel, unul dintre îngerii sfinți care era cu mine, mi-a răspuns mi-a zis: „Acest curs de foc pe care l-ai văzut este focul din vest care persecută toți luminatorii cerului.”"
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.885786,
+    "blockingIssueCount": 0,
+    "textDigest": "114d5457a1162ae6fe4126560f9800628584b2b4136d0c757257c07e7670a7c6",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

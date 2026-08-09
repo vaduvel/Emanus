@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 20,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-20",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 20
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/20/",
+      "sha256": "5ba597781825bee8c2c893734265a8399af06cb9647e310ecfb7d4a3a79121fb"
+    },
+    "sourceTextDigest": "c468eba79c1d6ef2571b117ee7c6169d808e91c3be573cc6ffd4266991b088e9",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Să ne îndemnăm văduvele și femeile necăsătorite să primească ceea ce Dumnezeu le-a dat cu mulțumiri cu teamă și cutremur și să mulțumim lui Dumnezeu care dă hrană celor flămânzi. Care dintre voi este acolo care mănâncă și bea cu moderare? Nu este Dumnezeu care îi dăruiește cu mulțumire? Cel care își întinde mâna și înmulțește lucrurile bune după voia Sa; cine dă porumb tinerilor, vin fecioarelor și untdelemnul de bucurie pentru cei vii; abundență pentru vite, libertate pentru servitori, carne pentru fiare și fructe pentru păsări, și hrană pentru toți, după cum se cuvine. De aceea Domnul nostru spune: Să fiți ca păsările cerului, care nu seamănă, nici nu seceră, nici nu adună în hambare, și Tatăl vostru ceresc îi hrănește: voi sunteți mult mai buni decât multe păsări. Nu credeți, ce vom mânca? Sau, ce vom bea noi, vom fi îmbrăcați cu Tatăl vostru, care este în ceruri, și care voi îi dați moștenire tuturor acestor lucruri, dar voi, pe Cristos, pe care îl veți primi cu bucurie, pe Dumnezeu, pe care îl veți primi, pe Dumnezeu, dacă îl veți primi, pe Dumnezeu."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.90602,
+    "blockingIssueCount": 0,
+    "textDigest": "1447385479886c24e4d703f2310eecf8ef56f2a51a84c6bb6d30a2e730a596bd",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

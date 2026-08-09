@@ -1,0 +1,73 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 16,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/16/",
+    "pageSha256": "2b91ce1457f1700eb309f0ebbfb88c2801e226aabce9988eb6e96204db3c49da",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "97d0bff0e31ffef92084df4894e80e8b5389c0c47ba573f981921e1ced8ed7ea",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Din zilele măcelului și distrugerii și morții giganților, din sufletele ale căror trupuri au ieșit spiritele, vor nimici fără să-și dea seama, până în ziua împlinirii, marea judecată în care va fi împlinită epoca, peste Observatori și peste cei fără de Dumnezeu, da, va fi pe deplin consumată.„”"
+    },
+    {
+      "number": 2,
+      "text": "Și acum, privitorii care te-au trimis să mijloc pentru ei, care au fost mai înainte în cer, (spune-le):"
+    },
+    {
+      "number": 3,
+      "text": "Ai fost în cer, dar toate misterele nu au fost încă dezvăluite pentru tine, și ai cunoscut pe cei fără valoare, și acestea în duritatea inimile voastre le-ați făcut cunoscute femeilor, și prin aceste mistere femeile și bărbații lucrează mult rău pe pământ.„”"
+    },
+    {
+      "number": 4,
+      "text": "Spune-le deci: „Nu aveți pace! ”"
+    }
+  ],
+  "audit": {
+    "sourceUnits": 4,
+    "translatedUnits": 4,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 4,
+    "semanticMinimumScore": 0.79111,
+    "blockingIssueCount": 0,
+    "textDigest": "cc5346d31518a93b90c1db92f9ad0f6090b9e70b135a0beb9b03f549d431fffc",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

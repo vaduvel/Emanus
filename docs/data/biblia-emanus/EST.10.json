@@ -1,0 +1,139 @@
+{
+  "translation": "BE",
+  "bookId": "EST",
+  "bookName": "Estera",
+  "chapter": 10,
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "version": "WEBU-Protestant",
+      "passageUrl": "https://ebible.org/engwebp/EST10.htm",
+      "license": "Public Domain",
+      "lockId": "WEBU-R5-EST"
+    },
+    "hebrew": {
+      "version": "WLC-OSHB",
+      "passageUrl": "https://ebible.org/hboWLC/EST10.htm",
+      "textLicense": "Public Domain",
+      "annotationLicense": "CC BY 4.0",
+      "lockId": "WLC-OSHB-REMAP-R5-EST",
+      "rawLockId": "WLC-RAW-R5-EST",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
+    }
+  },
+  "review": {
+    "aiSourceLanguage": "approved",
+    "aiRomanianLanguage": "approved",
+    "aiTheologicalContext": "approved",
+    "omissionAddition": "approved",
+    "benchmarkComparison": "approved",
+    "copyrightDistance": "approved",
+    "criticalIssues": "approved"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Regele Ahașveroș a impus tribut ținuturilor sale, până și insulelor mării."
+    },
+    {
+      "number": 2,
+      "text": "Nu sunt oare consemnate în Cartea Cronicilor regilor Mediei și Persiei faptele prin care și-a arătat tăria, precum și relatarea deplină despre rangul înalt la care regele l-a ridicat pe Mardoheu?"
+    },
+    {
+      "number": 3,
+      "text": "Mardoheu, iudeul, era al doilea după regele Ahașveroș. Se bucura de mare cinste între iudei și de prețuirea numeroșilor săi frați, fiindcă urmărea binele poporului său și pleda pentru pacea tuturor urmașilor lui."
+    }
+  ],
+  "editorialNotes": [],
+  "benchmark": {
+    "translationsConsulted": [
+      {
+        "id": "CORNILESCU-1924",
+        "family": "cornilescu",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ron1924/EST10.htm"
+      },
+      {
+        "id": "BTF",
+        "family": "fidela",
+        "mode": "comparison-only",
+        "referenceUrl": "https://ebible.org/ronbtf/EST10.htm"
+      },
+      {
+        "id": "NTR",
+        "family": "biblica",
+        "mode": "comparison-only",
+        "referenceUrl": "https://www.bible.com/ro/bible/126/EST.10.NTR"
+      }
+    ],
+    "exactTextCopied": false,
+    "fullProtectedTextsStored": false,
+    "checks": {
+      "omissions": "approved",
+      "additions": "approved",
+      "meaning": "approved",
+      "romanianNaturalness": "approved",
+      "theologicalNeutrality": "approved",
+      "copyrightSimilarity": "approved"
+    },
+    "observations": [
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
+    ]
+  },
+  "audit": {
+    "schemaVersion": 1,
+    "completedOn": "2026-08-09",
+    "verseCoverage": {
+      "expected": 3,
+      "reviewed": 3,
+      "continuous": true
+    },
+    "sourceLanguage": {
+      "language": "ebraică biblică",
+      "text": "WLC-OSHB",
+      "result": "approved",
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "reviewLevel": "ai-complete",
+    "engineVersion": "2.0.0",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "textDigest": "sha256:cd2d7c62c52641c576753bbdaeed502d87b7bfedf6d78a4aec55ca2160d6e851"
+  }
+}

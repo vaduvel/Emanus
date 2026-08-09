@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 43,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-43",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 43
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/43/",
+      "sha256": "587acc3a6ed203f8bae8ae668dcd657a46589416373b5a2b900c7ba6b8b838c7"
+    },
+    "sourceTextDigest": "33c599456b7311c3f38f2de1982015790bd57a9a7fab207caed8a9719667bae8",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Acestea sunt numele celor care au fost rânduiți de noi. În primul rând în Ierusalim, Iacov, fratele Domnului nostru; și după el a fost hirotonisit în locul lui Simeon, fiul lui Cleopa; și după el Iuda, fiul lui Iacov. Și în Cezareea Palestinei, mai întâi, Zacheu, vameșul; și după el, Corneliu; și după el, Teofil; și după el, Avilius, mai întâi, Evodius, rânduit de Petru; și după el Ignatius, de Pavel. Și în Alexandria, mai întâi, Annianus, care a fost hirotonit de către Marcu Evanghelistul; și după el, Avilius, rânduit de Luca Evanghelistul. Și după el a fost ordonat de Ioan al Romei, întâi, Linus, rânduit de către Pavel, Peren, pe Petru, pe Petru, pe Petru, pe Petru. Și în Efes, mai întâi, pe Timotei, pe Pavel; și după el l-a ordonat pe Ioan, pe Ioan Evanghelist, pe Petru, pe Petru, pe Ari, pe Petru, pe Ari. Și în Macedonia și în Bereea, Onisim, servitorul lui Filimon. Și în Biserica Galatiei, Crescens. În regiunea Asiei, Aquila și Nisetas. Și în Biserica Aegina, Crispus. Aceștia sunt ei cărora le-am încredințat bisericile, și le-am rânduit în Ierusalim, și au trimis să predice și să predea în mai multe regiuni ale lor. Amintiți-vă atunci, truda lor, și primiți sfatul lor, și respectați cuvintele lor. Fie ca Domnul să fie cu voi de acum și pentru totdeauna, așa cum ne-a spus și nouă când S-a înălțat la cer la Tatăl, iată-mă în toate zilele până la sfârșitul lumii. Glorie lui Dumnezeu, care este glorie și onoare pentru totdeauna, și pentru totdeauna. Amin și Amin. Așa se termină doctrina Didaccaliei taților Apostolilor."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.838263,
+    "blockingIssueCount": 0,
+    "textDigest": "ab6c65fe0f2bf85b257d162deff316f6710409f2d09ad40c138787d75408e3c6",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

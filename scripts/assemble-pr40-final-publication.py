@@ -109,11 +109,51 @@ def chapter_map(directory: Path) -> dict[str, list[Path]]:
     return result
 
 
-def expected_chapters() -> dict[str, int]:
+def audited_chapter_count(prior: Path, current: Path, collection: str, id_: str) -> int:
+    """Return the authoritative chapter count from the audited publication artifact."""
+    artifact = final_artifact(prior, current, collection, id_)
+    if collection == "deuterocanon":
+        audited = artifact / "data" / "biblia-emanus-deuterocanon-audited"
+    elif collection == "early":
+        audited = artifact / "data" / "biblia-emanus-early-audited"
+    else:
+        raise ValueError(f"Unsupported chapter collection: {collection}")
+
+    paths = sorted(audited.glob(f"{id_}.*.json"))
+    chapters: list[int] = []
+    for path in paths:
+        suffix = path.stem.rsplit(".", 1)[-1]
+        if suffix.isdigit():
+            chapters.append(int(suffix))
+    chapters.sort()
+    if not chapters:
+        raise RuntimeError(f"{id_}: audited artifact contains no chapter files")
+    expected_sequence = list(range(1, len(chapters) + 1))
+    if chapters != expected_sequence:
+        raise RuntimeError(
+            f"{id_}: audited chapter sequence is not contiguous: {chapters}"
+        )
+    return len(chapters)
+
+
+def expected_chapters(prior: Path, current: Path) -> dict[str, int]:
     inventory = read_json(INVENTORY_PATH)
     if int(inventory.get("bookCount", 0)) != 64:
         raise RuntimeError("Pinned PR40 inventory no longer contains exactly 64 works")
-    return {str(item["bookId"]): int(item["chapterCount"]) for item in inventory["books"]}
+    expected = {
+        str(item["bookId"]): int(item["chapterCount"]) for item in inventory["books"]
+    }
+
+    # The historical inventory describes the placeholder-era scope. For every
+    # noncanonical work being published, the green audited artifact is the
+    # authoritative source of chapter boundaries. This corrects ESG (10 audited
+    # chapters rather than the historical 6) and prevents equivalent drift in
+    # any other deuterocanonical or early work.
+    for id_ in sorted(DEUTEROCANON):
+        expected[id_] = audited_chapter_count(prior, current, "deuterocanon", id_)
+    for id_ in sorted(EARLY):
+        expected[id_] = audited_chapter_count(prior, current, "early", id_)
+    return expected
 
 
 def copy_canonical(prior: Path, expected: dict[str, int]) -> dict[str, Any]:
@@ -288,7 +328,7 @@ def main() -> None:
     args = parser.parse_args()
     prior = args.prior.resolve()
     current = args.current.resolve()
-    expected = expected_chapters()
+    expected = expected_chapters(prior, current)
     expected_ids = CANONICAL | DEUTEROCANON | EARLY | set(QUMRAN_WITNESSES)
     if set(expected) != expected_ids:
         raise RuntimeError(

@@ -1,0 +1,124 @@
+{
+  "translation": "BE-DEUT-DRAFT",
+  "bookId": "TOB",
+  "bookName": "Tobit",
+  "chapter": 10,
+  "collection": "deuterocanon",
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "id": "eng-webbe",
+      "sha256": "42e0dec882e3e94272dc7ed312233dd2b891613a230dece316ffbd6ae5aace67",
+      "license": "Public Domain"
+    },
+    "greek": [
+      {
+        "id": "grcbrent",
+        "sha256": "7c3d95d05b542bbf67348e6c28430b7cedfc83858b9125d3d05c574a423c28c6",
+        "license": "Public Domain"
+      },
+      {
+        "id": "grclxx",
+        "sha256": "2b0fc204f6a2e5283a4ef1654b25b76cf23c32a910f5534c4e076c9e85380b7e",
+        "license": "Public Domain"
+      }
+    ],
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "Apache-2.0",
+      "role": "first-pass draft only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Tobit, tatăl său, număra în fiecare zi. Când zilele călătoriei au expirat, iar ei nu au venit,"
+    },
+    {
+      "number": 2,
+      "text": "A spus: „Este cumva reținut? Sau este Gabael probabil mort, și nu este nimeni care să-i dea banii? ”"
+    },
+    {
+      "number": 3,
+      "text": "Era foarte mâhnit."
+    },
+    {
+      "number": 4,
+      "text": "Dar soția lui i-a zis: Copilul a pierit, căci așteaptă mult.„ Ea a început să-l plângă i-a zis: ”"
+    },
+    {
+      "number": 5,
+      "text": "„Nu-mi pasă de nimic, copila mea, de vreme ce te-am lăsat să pleci, lumina ochilor mei.”"
+    },
+    {
+      "number": 6,
+      "text": "Tobit i-a spus: „Stai liniștit. Nu-ți face griji. El este în stare bună de sănătate.”"
+    },
+    {
+      "number": 7,
+      "text": "Și ea i-a zis: „Țineți-vă linistea. Nu mă înșelați. Copilul meu a pierit. ” Și ea a ieșit în fiecare zi pe drumul pe care mergeau și n-a mâncat pâine în timpul zilei, și n-a încetat să-l mai plângă pe fiul ei Tobias toată noaptea, până când cele paisprezece zile ale sărbătorii de nuntă au expirat, pe care Raguel jurase că ar trebui să-l petreacă acolo. Apoi Tobias i-a spus lui Raguel, trimite-mi-o, pentru că tatăl meu și mama mea nu mai caută să mă vadă."
+    },
+    {
+      "number": 8,
+      "text": "Dar socrul său i-a zis: Rămâi cu mine și voi trimite la tatăl tău și-i vor spune cum merg lucrurile cu tine„.”"
+    },
+    {
+      "number": 9,
+      "text": "Tobias a zis: „Nu, trimite-mă la tatăl meu.”"
+    },
+    {
+      "number": 10,
+      "text": "Raguel s'a sculat, i -a dat pe Sara, nevasta lui, jumătate din averile lui, slujitorii lui, vitele și banii lui."
+    },
+    {
+      "number": 11,
+      "text": "i-a binecuvântat și i-a trimis, zicând: Dumnezeul cerului vă va izbândi, copiii mei, înainte de a muri„.”"
+    },
+    {
+      "number": 12,
+      "text": "Și el a zis fiicei sale: Cinstește pe socrul tău pe soacra ta. Acum sunt părinții tăi. Să aud o veste bună despre tine.„ Apoi a sărutat-o. Edna i-a zis lui Tobie: Fie ca Domnul cerului să te readucă, frate drag, să-mi dea să-i văd pe copiii fiicei mele Sara, ca să mă bucur înaintea Domnului. Iată, îmi încrediz fiica pentru tine o pricină deosebită.„””"
+    }
+  ],
+  "audit": {
+    "sourceVerseNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "continuous": true,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 12,
+    "semanticMinimumScore": 0.740104,
+    "blockingIssueCount": 0,
+    "textDigest": "1bbbe19c912fc8968ad9edec83fc926dfd45acb9410cf3f7e76c935b32c06cf7",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  },
+  "runtimeEnabled": true
+}

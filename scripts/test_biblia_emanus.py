@@ -42,6 +42,28 @@ class BibliaEmanusValidatorTests(unittest.TestCase):
         self.assertNotIn("needs_human_review", validator.ALLOWED_NOTE_RESOLUTION_VALUES)
         self.assertIn("needs_ai_review", validator.ALLOWED_NOTE_RESOLUTION_VALUES)
 
+    def test_published_manifest_has_no_stale_publication_block(self) -> None:
+        published = copy.deepcopy(self.manifest)
+        published["status"] = "published"
+        published["public"] = True
+        published.pop("publicationBlock", None)
+        validator.validate_manifest(published)
+
+        published["publicationBlock"] = "automated-audit-required"
+        with self.assertRaisesRegex(validator.ValidationError, "nu poate păstra publicationBlock"):
+            validator.validate_manifest(published)
+
+    def test_unpublished_manifest_keeps_automatic_gate(self) -> None:
+        draft = copy.deepcopy(self.manifest)
+        draft["status"] = "draft"
+        draft["public"] = False
+        draft["publicationBlock"] = "automated-audit-required"
+        validator.validate_manifest(draft)
+
+        draft.pop("publicationBlock")
+        with self.assertRaisesRegex(validator.ValidationError, "publicationBlock"):
+            validator.validate_manifest(draft)
+
     def test_geneza_versification_shift_is_explicit(self) -> None:
         rules = self.source_data["rules"]
         self.assertEqual(
@@ -56,6 +78,20 @@ class BibliaEmanusValidatorTests(unittest.TestCase):
     def test_changed_text_invalidates_ai_audit(self) -> None:
         data = validator.load_json(validator.DATA_DIR / "GEN.1.json")
         changed = copy.deepcopy(data)
+        changed["audit"]["reviewLevel"] = "ai-complete"
+        changed["audit"].pop("invalidatedOn", None)
+        changed["audit"].pop("invalidationReason", None)
+        for section in (
+            "sourceLanguage",
+            "romanianLanguage",
+            "theologicalContext",
+            "omissionAddition",
+            "copyrightDistance",
+            "criticalIssues",
+            "benchmarkEvidence",
+        ):
+            changed["audit"][section]["result"] = "approved"
+        changed["audit"]["criticalIssues"]["open"] = 0
         changed["verses"][0]["text"] += " Adaos străin."
         with self.assertRaisesRegex(validator.ValidationError, "nu corespunde textului curent"):
             validator.validate_automated_audit(

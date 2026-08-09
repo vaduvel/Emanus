@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 15,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-15",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 15
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/15/",
+      "sha256": "fe46b723193288a8f5a1ae4977f90cac6f825b6f4e82343e3d257d687d6695a9"
+    },
+    "sourceTextDigest": "1478078695ae2bd71f68bc6740980b5dadc23ec6d61812c012e44e358eaa9996",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Iată că vă declarăm că mare este condamnarea celor care fac astfel aceste fapte. Noi vă poruncim să nu faceți aceasta, pentru că acest lucru este o încălcare a legii. Pentru că capul femeii este omul, care este numit pentru preoție. Atunci nu ar trebui să păcătuim împotriva Creatorului, să lăsăm capul și să urmăm membrul. Pentru că femeia este membrul bărbatului și a ieșit din el; și din copiii ei se nasc. Pentru că El i-a spus: El este stăpânul tău, așa cum am spus deja, nu suferi femeile să avertizeze sau să predea, sau să execute funcția de preoție, care nu este poruncită în lege. Și cine face astfel a încălcat împotriva lui Dumnezeu, și este ca cei care sunt fără cunoștință, chiar și cei care numesc femeile să fie preotețe să îngroape imagini ale femeilor. Astfel de femei păstrează departe de instituția lui Hristos. Astfel, femeile nu ar trebui niciodată să boteze pe nimeni. Dacă ar fi fost îngăduite pentru femei, Domnul nostru Cristos ar fi fost botezate de mamă, și nu ar fi fost botezate de Ioan, dar ei nu ne-ar fi botezat."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.874484,
+    "blockingIssueCount": 0,
+    "textDigest": "0691b8054cda95246b676b677584c5344f370f4c8d7467301c8b239681859cfb",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}
