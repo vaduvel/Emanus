@@ -78,6 +78,7 @@ jobs:
           node scripts/audit-nt-recovered-source-first.mjs
           node scripts/materialize-nt-audited-recovered.mjs
           node scripts/check-nt-audited-recovered.mjs
+          node scripts/audit-nt-subtle-editorial.mjs
 
       - name: Combine and verify final 27-book source-first corpus
         run: |
