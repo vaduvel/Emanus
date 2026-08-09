@@ -68,13 +68,24 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
   }
 }
 
+const tokenSummaryMap = new Map()
+for (const finding of findings) {
+  const key = `${finding.kind}\u0000${String(finding.token).toLowerCase()}\u0000${finding.expected}`
+  const current = tokenSummaryMap.get(key) ?? { kind: finding.kind, token: String(finding.token).toLowerCase(), expected: finding.expected, occurrences: 0, groups: 0 }
+  current.occurrences += finding.occurrences
+  current.groups += 1
+  tokenSummaryMap.set(key, current)
+}
+const tokenSummary = [...tokenSummaryMap.values()].sort((a, b) => b.occurrences - a.occurrences || a.token.localeCompare(b.token, "ro"))
+
 const report = {
   schema: "emanus-nt-romanian-language-audit-v2",
   status: findings.length ? "manual-edit-required" : "clean",
   policy: "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
   count: findings.reduce((sum, finding) => sum + finding.occurrences, 0),
   findingGroups: findings.length,
+  tokenSummary,
   findings,
 }
 fs.writeFileSync(outputPath, JSON.stringify(report, null, 2) + "\n", "utf8")
-console.log(`NT Romanian language audit: ${report.count} suspect occurrences in ${findings.length} groups.`)
+console.log(`NT Romanian language audit: ${report.count} suspect occurrences in ${findings.length} groups across ${tokenSummary.length} token classes.`)
