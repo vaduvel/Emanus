@@ -113,36 +113,151 @@ const PSALMUL_51: ExplainedOverlayChapter = {
   number: 51,
   title: "Psalmul 51 — Pocăință după Bat-Șeba: adevăr înăuntru, inimă curată și un duh zdrobit",
   summary:
-    "Psalmul este mărturisirea lui David după Bat-Șeba: el cere milă, spălare și o inimă curată, recunoaște că Dumnezeu dorește adevăr în omul dinăuntru, cere să nu fie lepădat și să nu-i fie luat Duhul Sfânt, apoi promite să-i învețe pe alții căile lui Dumnezeu. Finalul cere bine pentru Sion, mutând pocăința dincolo de individ spre comunitatea pe care păcatul liderului o afectează.",
+    "Titlul leagă psalmul de momentul în care profetul Natan vine la David după păcatul cu Bat-Șeba. David nu cere cosmetizarea reputației, ci milă, spălare, curățire, adevăr în omul dinăuntru, inimă curată și duh statornic. El se teme de pierderea prezenței și a Duhului lui Dumnezeu, cere restaurarea bucuriei mântuirii și promite să-i învețe pe alții căile lui Dumnezeu. Finalul declară că jertfa pe care Dumnezeu nu o disprețuiește este un duh zdrobit și o inimă zdrobită și smerită.",
   units: [
     {
       from: 1,
       to: 6,
-      heading: "Pocăința nu începe cu autoexplicarea, ci cu «ai milă de mine»",
+      heading: "David nu redenumește păcatul ca «greșeală» și nu dă vina pe context",
       teaching:
-        "David nu începe prin a explica presiunea, singurătatea sau circumstanțele în care a căzut. El începe cu caracterul lui Dumnezeu: bunătate și îndurare, apoi cere ștergerea fărădelegii și spălarea de vină.\n\n«Împotriva Ta, numai împotriva Ta am păcătuit» nu șterge răul făcut Bat-Șebei, lui Urie și casei lui David. În contextul rugăciunii, David recunoaște dimensiunea ultimă a păcatului: orice rău făcut omului este și răzvrătire împotriva lui Dumnezeu. 2 Samuel 12 tocmai arătase efectele asupra altora.\n\nVersetul 5 spune că a fost născut în nelegiuire și conceput în păcat. Textul exprimă cât de adâncă este problema păcatului în om; nu învinovățește actul conjugal al părinților lui David și nici nu numește sarcina sau sexualitatea conjugală păcat.\n\nVersetul 6 mută atenția spre interior: Dumnezeu dorește adevăr în omul dinăuntru. Poonen se oprește exact aici. Pocăința adevărată nu este numai controlul imaginii publice, ci adevăr acolo unde numai Dumnezeu vede.",
+        "Titlul pune rugăciunea după confruntarea lui Natan privind Bat-Șeba. Narațiunea din 2 Samuel 11–12 include adulter, folosirea puterii, încercarea de acoperire și uciderea lui Urie prin ordin militar. Psalmul nu poate fi folosit ca și cum problema ar fi fost doar o relație privată consensuală care a ieșit prost.\n\nDavid cere milă după bunătatea statornică a lui Dumnezeu și folosește un vocabular bogat: fărădelege, nelegiuire, păcat. «Îmi cunosc fărădelegile» este opusul strategiei din 2 Samuel 11, unde a încercat să controleze aparențele. Pocăința începe când gestionarea imaginii încetează.\n\n«Împotriva Ta, numai împotriva Ta am păcătuit» nu înseamnă că David nu a păcătuit împotriva Bat-Șebei, a lui Urie și a comunității. Chiar narațiunea arată victime umane concrete. Expresia declară că orice păcat împotriva oamenilor este în ultimă instanță și revoltă împotriva lui Dumnezeu, nu că victimele umane dispar din contabilitatea morală.\n\nVersetul 6 spune că Dumnezeu dorește adevăr în omul lăuntric. Poonen se oprește aici: David recunoaște că nu are acel adevăr și cere ca Dumnezeu să lucreze în el. Aceasta este mai mult decât remușcarea pentru consecințe; este dorința ca interiorul care a produs minciuna să fie schimbat.",
       source: {
-        kind: "poonen",
-        transcript,
-        anchor: "Psalm 51 ... David wrote when he sinned with Bathsheba ... wash me Lord ... truth in the inward parts",
+        kind: "canonical-exegesis",
+        sources: ["Psalmul 51:1-6", "2 Samuel 11-12", "Zac Poonen — Through The Bible: Psalms"],
+        note: "Poonen numește psalmul rugăciunea de pocăință după Bat-Șeba și evidențiază adevărul interior; contextul din 2 Samuel păstrează gravitatea abuzului de putere și a uciderii lui Urie.",
       },
       explanationKind: "exposition",
-      words: [
-        {
-          original: "בָּאֱמֶת",
-          transliteration: "ba'emet",
-          language: "ebraica",
-          meaning: "în adevăr / cu adevăr; în v.6 accentul cade pe adevărul dorit de Dumnezeu în lăuntrul omului",
-          verseRef: "Psalmul 51:6",
-          lexicalSource: "WLC-OSHB",
-        },
-      ],
       forYourHeart:
-        "Pocăința începe când încetezi să-ți administrezi imaginea și vrei adevăr înaintea lui Dumnezeu chiar în locul pe care ceilalți nu-l văd.",
+        "Pocăința adevărată începe când nu mai încerci să controlezi povestea despre ce ai făcut și Îl lași pe Dumnezeu să numească păcatul cu adevărul lui.",
     },
     {
       from: 7,
       to: 12,
-      heading: "«Creează în mine o inimă curată» și frica lui David de a pierde Duhul lui Dumnezeu",
+      heading: "«Creează în mine o inimă curată» — David nu cere doar să fie lăsat nepedepsit",
       teaching:
-        "David cere să fie curățit cu isop, să audă iarăși bucurie și să primească o inimă curată. Verbul `bara`, «a crea», este puternic: el nu cere doar o cosmetizare a vechii inimi, ci lucrarea lui Dumnezeu în centru... (truncated)
+        "David cere să fie curățit, spălat, să audă din nou bucurie și să primească o inimă curată și un duh statornic. Verbul `bara` din «creează în mine» este verbul folosit în Geneza 1 pentru acțiunea creatoare a lui Dumnezeu. Nu trebuie transformat într-o regulă că verbul ar avea întotdeauna numai un subiect divin în orice formă posibilă, dar aici cererea este limpede: David nu se consideră capabil să repare singur centrul moral al ființei sale.\n\nPoonen evidențiază în special v.11: «nu lua Duhul Tău cel Sfânt de la mine» și spune că aceasta era frica lui David cea mai mare. În istoria lui Israel, David văzuse Duhul DOMNULUI depărtându-Se de Saul (1 Samuel 16:14), de aceea cererea are un context de legământ și regalitate foarte concret.\n\nNu trebuie transferată mecanic această rugăciune ca și cum fiecare credincios din Noul Legământ ar trebui să trăiască zilnic în panică că Duhul Sfânt îl abandonează la primul păcat. Noul Testament vorbește despre pecetluirea cu Duhul, despre prezența Lui și despre faptul că El poate fi întristat. Aceste texte trebuie ținute împreună. Pocăința rămâne urgentă, iar siguranța Noului Legământ nu este identică cu experiența regală a lui Saul și David.\n\nVersetul 12 cere «redă-mi bucuria mântuirii Tale». David nu cere o nouă reputație religioasă înaintea oamenilor, ci restaurarea unei relații interioare cu Dumnezeu. Bucuria pierdută prin păcat este tratată ca ceva ce numai Dumnezeu poate reface.",
+      source: {
+        kind: "poonen",
+        transcript,
+        anchor: "Psalm 51 ... wash me ... create in me a clean heart ... don't take your Holy Spirit from me ... that's what he scared about the most",
+      },
+      explanationKind: "exposition",
+      words: [
+        {
+          original: "לֵב טָהוֹר בְּרָא־לִי",
+          transliteration: "lev tahor bera-li",
+          language: "ebraica",
+          meaning: "creează pentru mine/în mine o inimă curată",
+          verseRef: "Psalmul 51:10",
+          lexicalSource: "WLC-OSHB",
+        },
+      ],
+      forYourHeart:
+        "Dacă tot ce vrei după păcat este să dispară consecința, încă n-ai ajuns în centrul Psalmului 51. David cere ca inima care a produs răul să fie refăcută.",
+    },
+    {
+      from: 13,
+      to: 17,
+      heading: "Cel iertat îi învață pe alții, dar Dumnezeu caută mai întâi o inimă zdrobită",
+      teaching:
+        "David spune că după restaurare îi va învăța pe cei fărădelege căile lui Dumnezeu și păcătoșii se vor întoarce. Mărturia lui nu va fi «n-am căzut niciodată», ci «Dumnezeu m-a confruntat, m-a iertat și m-a schimbat».\n\nEl cere eliberare de vina sângelui vărsat, detaliu care nu ne permite să reducem contextul la adulter: moartea lui Urie stă în continuare în fața lui. Apoi declară că Dumnezeu nu este impresionat de jertfa exterioară folosită ca substitut pentru pocăință.\n\n«Jertfele lui Dumnezeu sunt un duh zdrobit; o inimă zdrobită și smerită nu o vei disprețui.» Aceasta nu înseamnă că Dumnezeu iubește persoana distrusă psihologic sau că abuzatorul trebuie să-i «frângă» victima. `Nishbar` și `nidkeh` descriu aici omul a cărui mândrie și rezistență înaintea adevărului au fost zdrobite în pocăință.\n\nÎn lumina întregului canon, pocăința nu cumpără iertarea prin intensitatea durerii. Ea renunță la apărare și vine la mila lui Dumnezeu, iar pentru creștin temelia iertării este jertfa lui Hristos.",
+      source: {
+        kind: "canonical-exegesis",
+        sources: ["Psalmul 51:13-17", "2 Samuel 12:13", "1 Ioan 1:7-9"],
+        note: "Expunere canonică a mărturiei, vinei de sânge și inimii zdrobite în pocăință.",
+      },
+      explanationKind: "exposition",
+      forYourHeart:
+        "Dumnezeu nu cere spectacolul rușinii; cere să încetezi să te aperi împotriva adevărului și să vii cu inima deschisă la mila Lui.",
+    },
+    {
+      from: 18,
+      to: 19,
+      heading: "Rugăciunea pentru Sion împiedică pocăința să rămână doar o problemă privată",
+      teaching:
+        "Psalmul se încheie cerând bine pentru Sion și zidirea Ierusalimului, după care jertfele drepte își au locul. Oricare ar fi istoria editorială exactă a acestor ultime versete, forma canonică a psalmului mută privirea de la individ la comunitate.\n\nPăcatul unui conducător nu este niciodată pur privat. David a afectat oameni, casă și națiune. Este potrivit ca rugăciunea de restaurare să includă și binele comunității, nu numai pacea conștiinței lui personale.",
+      source: {
+        kind: "canonical-exegesis",
+        sources: ["Psalmul 51:18-19"],
+        note: "Finalul canonic lărgește rugăciunea de la pocăința personală la binele Sionului.",
+      },
+      explanationKind: "exposition",
+    },
+  ],
+}
+
+const PSALMUL_110: ExplainedOverlayChapter = {
+  number: 110,
+  title: "Psalmul 110 — «DOMNUL a zis Domnului meu»: Mesia-Rege și Preot după rânduiala lui Melhisedec",
+  summary:
+    "Psalmul unește domnia la dreapta lui Dumnezeu cu un jurământ preoțesc unic: «Tu ești preot în veac după rânduiala lui Melhisedec». Isus folosește primul verset în discuția despre identitatea Mesiei, Petru îl citează la Cincizecime despre înălțarea lui Hristos, iar Evrei construiește extensiv doctrina preoției lui Isus pe versetul 4. Zac Poonen evidențiază mai ales rânduiala lui Melhisedec și trimiterea din Evrei 7; explicația completă trebuie să păstreze întregul traseu neotestamentar fără speculații despre Melhisedec dincolo de text.",
+  units: [
+    {
+      from: 1,
+      to: 3,
+      heading: "David Îl numește pe Mesia «Domnul meu», iar Isus pune chiar această întrebare",
+      teaching:
+        "Psalmul începe: `ne'um YHWH la'adoni` — «DOMNUL a zis Domnului meu: șezi la dreapta Mea până voi pune pe vrăjmașii Tăi așternut picioarelor Tale». În ebraică, primul Nume este YHWH, iar al doilea este `adoni`, «domnul meu».\n\nIsus citează acest verset în Matei 22, Marcu 12 și Luca 20 și întreabă: dacă Mesia este fiul lui David, cum Îl numește David «Domnul meu»? El nu neagă descendența davidică; împinge interlocutorii să recunoască o identitate a Mesiei mai mare decât simpla succesiune biologică.\n\nPetru citează același text în Fapte 2 pentru înălțarea lui Isus la dreapta lui Dumnezeu și concluzionează că Dumnezeu L-a făcut Domn și Hristos pe Isus cel răstignit. Așadar lectura mesianică nu este o tradiție târzie adăugată psalmului, ci o piesă majoră a argumentului apostolic.\n\n«Vrăjmașii sub picioare» aparțin domniei Mesiei. Creștinului nu i se dă aici autoritatea de a transforma adversarii personali în ținte de violență religioasă. Noul Testament însuși dezvoltă supunerea finală a tuturor puterilor lui Hristos, nu o miliție a bisericii.",
+      source: {
+        kind: "canonical-exegesis",
+        sources: ["Psalmul 110:1-3", "Matei 22:41-46", "Fapte 2:32-36", "1 Corinteni 15:24-28"],
+        note: "Isus și apostolii aplică explicit Psalmul 110:1 Mesiei/Hristosului înălțat.",
+      },
+      explanationKind: "exposition",
+      words: [
+        {
+          original: "נְאֻם יְהוָה לַאדֹנִי",
+          transliteration: "ne'um YHWH la'adoni",
+          language: "ebraica",
+          meaning: "rostirea DOMNULUI către Domnul meu",
+          verseRef: "Psalmul 110:1",
+          lexicalSource: "WLC-OSHB",
+        },
+      ],
+      forYourHeart:
+        "Hristos nu este doar un ajutor adăugat proiectului tău; David Îl numește Domnul lui și Noul Testament Îl așază la dreapta lui Dumnezeu.",
+    },
+    {
+      from: 4,
+      to: 4,
+      heading: "Jurământul pe care Dumnezeu nu-l va retrage: Preot în veac după rânduiala lui Melhisedec",
+      teaching:
+        "Versetul 4 schimbă aparent categoria: Regele este și Preot. «DOMNUL a jurat și nu-I va părea rău: Tu ești preot în veac după rânduiala lui Melhisedec.» În Israel, regatul davidic și preoția levitică erau instituții distincte; tocmai de aceea afirmația este extraordinară.\n\nPoonen se oprește aici și trimite la Evrei 7. Epistola către Evrei folosește Psalmul 110:4 repetat în cap.5–7 pentru a explica preoția lui Hristos: nu după genealogia lui Levi, ci după o rânduială asociată lui Melhisedec, întărită prin jurământ și caracterizată prin permanență.\n\nNu este nevoie să identificăm speculativ cine «a fost de fapt» Melhisedec dincolo de datele Genezei 14 și modul în care Evrei îl folosește literar. Evrei spune că este făcut asemănător Fiului lui Dumnezeu în prezentarea textului; nu ne cere să afirmăm fără nuanță că Melhisedec era literalmente o apariție preîntrupată a lui Hristos. Poonen aici nici nu dezvoltă o asemenea speculație, iar Emanus nu o adaugă.\n\nMiezul este Hristos: preoția Lui nu expiră și nu depinde de succesiune omenească. Evrei 7:25 trage consecința pastorală — El poate mântui deplin pe cei ce se apropie de Dumnezeu prin El, fiindcă trăiește pururea ca să mijlocească pentru ei.",
+      source: {
+        kind: "poonen",
+        transcript,
+        anchor: "Psalm 110 refers to the priesthood of Melchizedek verse 4 which is quoted in Hebrews 7 referring to the Lord",
+      },
+      explanationKind: "exposition",
+      forYourHeart:
+        "Siguranța mijlocirii tale nu stă într-un preot omenesc care poate muri sau eșua; Psalmul 110 și Evrei te trimit la Preotul care rămâne în veac.",
+    },
+    {
+      from: 5,
+      to: 7,
+      heading: "Regele-Preot judecă — finalul nu este o imagine decorativă despre victorie",
+      teaching:
+        "Ultimele versete revin la limbajul luptei și judecății: Domnul zdrobește regi în ziua mâniei și judecă între neamuri. Acesta este limbajul regal-escatologic al psalmului și trebuie păstrat, nu transformat într-o imagine vagă despre succes personal.\n\nNoul Testament ține împreună preoția care mijlocește și domnia care va supune toate puterile. Același Hristos care mântuiește deplin este și Judecătorul căruia Îi aparține ultimul cuvânt. Harul preoțesc nu anulează judecata, iar judecata nu transformă biserica în executorul violent al vrăjmașilor Lui.\n\nImaginea finală a celui care bea din pârâu și își ridică capul este poetică și dificilă; nu construim o doctrină separată din ea. Direcția clară a psalmului rămâne domnia victorioasă a Regelui-Preot.",
+      source: {
+        kind: "canonical-exegesis",
+        sources: ["Psalmul 110:5-7", "1 Corinteni 15:24-28", "Evrei 10:12-13"],
+        note: "Finalul este păstrat în registrul judecății și domniei mesianice, fără aplicații de violență eclesială.",
+      },
+      explanationKind: "exposition",
+    },
+  ],
+}
+
+const reviewed: Readonly<Record<number, ExplainedOverlayChapter>> = {
+  22: PSALMUL_22,
+  32: PSALMUL_32,
+  51: PSALMUL_51,
+  110: PSALMUL_110,
+}
+
+export function reviewPsalmi22_32_51_110Explanations(book: ExplainedBookOverlay): ExplainedBookOverlay {
+  return {
+    ...book,
+    chapters: book.chapters.map((chapter) => reviewed[chapter.number] ?? chapter),
+  }
+}
