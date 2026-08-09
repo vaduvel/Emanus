@@ -34,7 +34,7 @@ export function restoreIov29FinalPoonenFidelity(book: ExplainedBookOverlay): Exp
             return {
               ...unit,
               teaching:
-                `${unit.teaching}\n\nDiagnosticul lui Poonen nu este că binele lui Iov ar fi fost fals. El spune că Iov avea «mândrie în propria lui evlavie»: era evlavios și mândru de aceasta, iar conștiința propriei dreptăți îi alimenta autojustificarea.`,
+                `${unit.teaching}\n\nDiagnosticul lui Poonen nu este că binele lui Iov ar fi fost fals. El spune că problema era «mândria în propria lui evlavie»: Iov era evlavios și mândru de aceasta, iar conștiința propriei dreptăți îi alimenta autojustificarea.`,
               source,
               explanationKind: "exposition" as const,
             }
