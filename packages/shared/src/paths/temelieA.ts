@@ -257,7 +257,7 @@ export const temelieL1: Lesson = {
       order: 14,
       journalPrompt:
         "Ce ar trebui să se întâmple ca să te răzgândești? Scrie sincer, chiar dacă răspunsul e «nu știu».",
-      bubbles: [{ from: "guide", text: "Rămâne pe telefonul tău. Nu îl citește nimeni." }],
+      bubbles: [{ from: "guide", text: "Răspunsul este opțional. Nu scrie nimic ce nu vrei să rămână salvat pe dispozitivul tău." }],
       reward: { xp: 0 },
     },
   ],

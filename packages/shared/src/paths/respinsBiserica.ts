@@ -59,7 +59,7 @@ export const respinsBisericaL1: Lesson = {
   memoryVerseRef: "Psalmul 147:3",
   safety: {
     topic: "mental_health",
-    notice: "Dacă ce ți s-a făcut a fost o faptă penală — abuz, atingere nepotrivită, violență, bani luați sau orice faptă împotriva unui copil — se anunță la poliție, chiar dacă a trecut timp. 112 în caz de urgență, 116 111 pentru copii și tineri, 116 123 pentru linia de sprijin emoțional. Iertarea este o discuție separată și nu ține locul unei sesizări."
+    notice: "Dacă ce ți s-a făcut a fost o faptă penală — abuz, atingere nepotrivită, violență, bani luați sau orice faptă împotriva unui copil — se anunță la poliție, chiar dacă a trecut timp. Pentru pericol imediat sună la 112; abuzul, neglijarea, exploatarea sau violența asupra unui copil se raportează la 119; copiii și adolescenții pot încerca 116 111 pentru consiliere, iar pentru sprijin emoțional poți încerca 116 123. Iertarea este o discuție separată și nu ține locul unei sesizări."
   },
   steps: [
     {
@@ -247,7 +247,7 @@ export const respinsBisericaL2: Lesson = {
       order: 3,
       bubbles: [
         { from: "guide", text: "Patru lucruri practice, dacă te gândești vreodată la o adunare." },
-        { from: "guide", text: "Unu, timpul: nu ai termen. Câteva luni în care nu intri nicăieri nu înseamnă cădere din credință." },
+        { from: "guide", text: "Unu, timpul: rana poate cere o perioadă de oprire și vindecare. Dar nu transforma izolarea într-o destinație; Hristos te cheamă în poporul Lui, într-un loc sigur și sănătos, nu neapărat în locul care te-a rănit." },
         { from: "guide", text: "Doi, alt loc: ai voie să mergi în altă parte. Nu ești dator să te vindeci fix în locul care te-a rănit." },
         { from: "guide", text: "Trei, cum intri: du-te cu cineva, stai în spate, pleacă înainte de final dacă simți nevoia. Nimeni nu îți dă note." },
         { from: "guide", text: "Patru, fără responsabilități: nu primi nicio slujbă în primele luni. Ai fost rănit într-un loc de muncă; nu te angaja a doua zi în altul." }
@@ -260,8 +260,8 @@ export const respinsBisericaL2: Lesson = {
       bubbles: [
         { from: "guide", text: "Ți s-a citat, poate, versetul: «să nu părăsim adunarea noastră». Ți s-a citat ca pe un bici." },
         { from: "guide", text: "Numai că versetul acela vine după altul, iar acela spune de ce ne adunăm: ca să veghem unii asupra altora și să ne îndemnăm la dragoste și la fapte bune." },
-        { from: "guide", text: "Un loc în care nu se face versetul 24 nu împlinește nici versetul 25. Nu poți fi certat cu al doilea de către un loc care nu îl face pe primul." },
-        { from: "guide", text: "Dumnezeu nu te cheamă la o clădire. Te cheamă la oameni care veghează asupra ta." }
+        { from: "guide", text: "Versetul 25 nu obligă pe nimeni să rămână într-o comunitate abuzivă și nu oferă conducerii dreptul să ascundă păcatul. Dar porunca de a nu abandona adunarea rămâne: caută, în timp și cu discernământ, o comunitate în care adevărul, dragostea și răspunderea sunt reale." },
+        { from: "guide", text: "Dumnezeu nu te cheamă la o clădire anume. Te cheamă la trupul lui Hristos, la oameni care veghează unii asupra altora și se supun ei înșiși Cuvântului." }
       ]
     },
     {

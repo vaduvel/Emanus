@@ -399,7 +399,7 @@ export const temelieL5: Lesson = {
         },
         {
           from: "guide",
-          text: "Iar dacă frica te ține treaz nopți la rând, mergi și la medic. Poți suna 116 123, gratuit, oricând. Nu e lipsă de credință.",
+          text: "Iar dacă frica te ține treaz nopți la rând, mergi și la medic. Pentru sprijin emoțional poți încerca 116 123, iar pentru pericol imediat sună la 112. A cere ajutor nu este lipsă de credință.",
         },
         {
           from: "guide",
@@ -433,7 +433,7 @@ export const temelieL5: Lesson = {
       order: 14,
       journalPrompt:
         "Ce ți-a dat, concret, ce ai practicat înainte? Și ce nu ți-a dat niciodată, oricât ai fi încercat?",
-      bubbles: [{ from: "guide", text: "Rămâne pe telefonul tău. Nu îl citește nimeni." }],
+      bubbles: [{ from: "guide", text: "Răspunsul este opțional. Nu scrie nimic ce nu vrei să rămână salvat pe dispozitivul tău." }],
       reward: { xp: 0 },
     },
   ],

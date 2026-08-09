@@ -447,7 +447,7 @@ export const temelieL7: Lesson = {
       order: 14,
       journalPrompt:
         "Scrie o rugăciune la care aștepți răspuns. Datează-o. Peste câteva luni, recitește-o.",
-      bubbles: [{ from: "guide", text: "Rămâne pe telefonul tău. Nu o citește nimeni." }],
+      bubbles: [{ from: "guide", text: "Răspunsul este opțional. Nu scrie nimic ce nu vrei să rămână salvat pe dispozitivul tău." }],
       reward: { xp: 0 },
     },
   ],

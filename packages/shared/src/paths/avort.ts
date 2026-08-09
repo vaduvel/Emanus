@@ -378,9 +378,9 @@ export const avortL3: Lesson = {
       type: "hook",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Este o zi în calendar pe care numai tu o știi." },
-        { from: "guide", text: "Vine în fiecare an și, chiar dacă nu te uiți la dată, corpul o știe: dormi prost cu o săptămână înainte și nu înțelegi de ce." },
-        { from: "guide", text: "Iar undeva în minte ai și o vârstă care crește. «Ar fi avut acum șapte ani.» Nu ești nebun. Așa face aproape toată lumea care duce lucrul ăsta." }
+        { from: "guide", text: "Poate exista o zi din calendar care te apasă: data avortului, termenul nașterii sau o perioadă a anului." },
+        { from: "guide", text: "Unii oameni observă înaintea acelei zile somn tulburat, tristețe sau amintiri mai puternice; alții nu trăiesc asta. Nu îți spunem ce trebuie să simți." },
+        { from: "guide", text: "Poate îți vine în minte și vârsta pe care ar fi avut-o copilul. Durerea nu dovedește că nu ai fost iertat, iar absența acestei reacții nu dovedește că păcatul a fost mai mic." }
       ]
     },
     {
@@ -389,7 +389,7 @@ export const avortL3: Lesson = {
       order: 3,
       bubbles: [
         { from: "guide", text: "Patru lucruri practice pentru anii care vin." },
-        { from: "guide", text: "Unu, ziua aceea: nu o lăsa să te ia din spate. Înseamnă-ți-o și pregătește-o. În ziua aceea nu programa lucruri grele și nu rămâne singur toată seara." },
+        { from: "guide", text: "Unu, dacă există o zi care te lovește în fiecare an, noteaz-o și pregătește sprijin pentru ea. Dacă nu există, nu inventa una și nu te obliga să simți ce au simțit alții." },
         { from: "guide", text: "Doi, un singur om: cândva, când vei fi gata, spune-i unui om de încredere. Nu bisericii, nu familiei. Unul. Tăcerea totală este cea care apasă, nu discreția." },
         { from: "guide", text: "Trei, fără pedeapsă: mulți încep să slujească peste puteri, ca să plătească. Nu se plătește nimic așa. Faci binele din mulțumire, nu din datorie." },
         { from: "guide", text: "Patru, pentru bărbat: dacă tu ai fost cel care a cerut sau cel care a tăcut, partea ta este a ta și se pune jos la fel. Iar dacă femeia aceea îți este și acum soție, la un moment dat veți avea de vorbit despre asta — nu astăzi și, cel mai bine, cu cineva de față." }
@@ -411,7 +411,7 @@ export const avortL3: Lesson = {
       order: 5,
       bubbles: [
         { from: "guide", text: "Adevărul de astăzi: ai voie să fii fericit și asta nu înseamnă că ai uitat." },
-        { from: "guide", text: "Bucuria nu este trădare. Este semnul că povara a fost luată de altcineva." }
+        { from: "guide", text: "Bucuria nu este trădare și nici dovada obligatorie că vindecarea s-a încheiat. Dacă păcatul a fost mărturisit și ai venit la Hristos, iertarea se sprijină pe promisiunea Lui, nu pe starea ta dintr-o anumită zi." }
       ]
     },
     {
@@ -464,13 +464,13 @@ export const avortL3: Lesson = {
       type: "quiz",
       order: 10,
       quiz: {
-        question: "Ce se face cu ziua aniversară, an de an?",
+        question: "Ce faci dacă o anumită zi îți redeschide rana?",
         options: [
           { text: "Se ignoră complet, ca să nu se redeschidă rana", correct: false },
-          { text: "Se pregătește dinainte: zi mai ușoară și cineva aproape spre seară", correct: true },
+          { text: "Recunoști tiparul și pregătești sprijin, fără să transformi reacția într-o regulă pentru toți", correct: true },
           { text: "Se ține post și se cere iertare din nou", correct: false }
         ],
-        explanation: "Ignorarea nu funcționează, pentru că trupul ține minte data chiar dacă mintea o ocolește. Iar cererea de iertare repetată pentru același lucru deja mărturisit nu aduce nimic nou și întărește acuzarea. Ziua se pregătește dinainte, ca orice zi grea din calendar."
+        explanation: "Dacă ai observat că o dată sau o perioadă te apasă repetat, este înțelept să nu rămâi singur și să pregătești ajutor. Nu toți oamenii au aceeași reacție. Iar dacă păcatul a fost mărturisit, nu cumpăra iertarea prin pedepsire de sine; pocăința adevărată aduce adevăr și roade, nu o plată concurentă cu crucea."
       }
     },
     {

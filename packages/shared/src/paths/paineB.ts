@@ -64,7 +64,7 @@ export const paineL5: Lesson = {
       bubbles: [
         { from: "guide", text: "Lumea îți spune că scăparea de frică este o sumă: când voi avea atât, mă liniștesc." },
         { from: "guide", text: "Dar oamenii care au ajuns la suma aceea îți vor spune, dacă sunt cinstiți, că frica nu a plecat. Și-a schimbat doar obiectul." },
-        { from: "guide", text: "Frica nu se vindecă prin cantitate. Se vindecă prin Cineva care rămâne și când cantitatea scade." }
+        { from: "guide", text: "O sumă mai mare poate rezolva o nevoie reală, dar nu poate purta singură sufletul. Prezența lui Dumnezeu rupe stăpânirea banilor asupra identității tale; frica persistentă cere și pași financiari, medicali sau psihologici, după caz." }
       ]
     },
     {

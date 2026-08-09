@@ -202,7 +202,7 @@ export const divortL4: Lesson = {
         },
         {
           from: "guide",
-          text: "Spune-i unui om real: un păstor, un consilier, un psiholog. Iar dacă vina te ține treaz nopțile sau îți trece prin cap să îți faci rău, sună 116 123. Non-stop și gratuit.",
+          text: "Spune-i unui om real: un păstor, un consilier, un psiholog. Iar dacă îți trece prin cap să îți faci rău, nu rămâne singur: pentru pericol imediat sună la 112, iar pentru sprijin emoțional poți încerca 116 123 și poți merge la camera de gardă.",
         },
       ],
     },
@@ -342,7 +342,7 @@ export const divortL5: Lesson = {
         { from: "guide", text: "PRIMA CITIRE, cea mai răspândită în bisericile evanghelice." },
         {
           from: "guide",
-          text: "«Afară de pricină de curvie» e o excepție pusă chiar de Iisus. Unde a fost infidelitate, legământul a fost deja rupt de cel care a trădat, iar cel nevinovat e liber să se recăsătorească.",
+          text: "Această citire înțelege «afară de pricină de curvie» ca excepție pusă de Iisus: unde a fost infidelitate, cel care a trădat a rupt legământul, iar partea nevinovată este liberă să se recăsătorească.",
         },
       ],
     },

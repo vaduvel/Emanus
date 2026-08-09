@@ -136,7 +136,7 @@ export const greutateL1: Lesson = {
         },
         {
           from: "guide",
-          text: "Iar dacă acum te gândești să îți faci rău, oprește lecția aici. 112. Sau 116 123, gratuit, non-stop. Dacă ai sub 18 ani, 116 111. Nu ești singur. Sună. Ne întoarcem la drum când ești în siguranță.",
+          text: "Iar dacă acum te gândești să îți faci rău, oprește lecția aici. Pentru pericol imediat sună la 112. Pentru sprijin emoțional poți încerca 116 123; dacă ai sub 18 ani, 116 111. Nu rămâne singur: sună o persoană de încredere și mergi la camera de gardă dacă nu ești în siguranță. Ne întoarcem la drum după ce ești în siguranță.",
         },
       ],
     },
@@ -486,7 +486,7 @@ export const greutateL3: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Înainte să citim: în pagina asta omul Îi cere lui Dumnezeu să-i ia viața. Dacă gândul ăsta e și al tău acum, oprește aici. 112. Sau 116 123, gratuit, non-stop. Dacă ai sub 18 ani, 116 111. Sună întâi. Citim după.",
+          text: "Înainte să citim: în pagina asta omul Îi cere lui Dumnezeu să-i ia viața. Dacă gândul ăsta e și al tău acum, oprește aici. Pentru pericol imediat sună la 112. Pentru sprijin emoțional poți încerca 116 123; dacă ai sub 18 ani, 116 111. Nu rămâne singur și mergi la camera de gardă dacă nu ești în siguranță. Sună întâi. Citim după.",
         },
       ],
     },

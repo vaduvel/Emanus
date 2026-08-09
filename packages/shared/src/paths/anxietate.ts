@@ -214,7 +214,7 @@ export const anxietateL2: Lesson = {
         },
         {
           from: "guide",
-          text: "Și uite ce se întâmplă: trupul intră în alarmă, mintea caută un motiv pentru alarmă și îl găsește întotdeauna. Așa se învârte roata.",
+          text: "Și uite ce se poate întâmpla: trupul intră în alarmă, iar mintea caută un motiv și poate lega alarma de primul pericol pe care îl găsește. Așa se poate învârti roata.",
         },
       ],
     },
@@ -343,7 +343,7 @@ export const anxietateL3: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Anxietatea are un obicei pe care merită să-l vezi limpede: nu stă niciodată în ziua de azi.",
+          text: "Anxietatea mută adesea mintea din ce este real acum spre ce s-ar putea întâmpla mai târziu. Uneori însă pericolul este prezent și atunci nu îl negăm: căutăm siguranță și ajutor concret.",
         },
         {
           from: "guide",
@@ -520,7 +520,7 @@ export const anxietateL4: Lesson = {
         { from: "guide", text: "Pasul de azi. Ia hârtie și scrie, unul sub altul, lucrurile care te țin treaz. Toate. Nu le aranja frumos." },
         {
           from: "guide",
-          text: "Pe urmă taie-le pe cele care nu sunt în următoarele douăzeci și patru de ore. Rămân mai puține decât credeai. Întotdeauna rămân mai puține.",
+          text: "Pe urmă marchează ce cere un pas în următoarele douăzeci și patru de ore. Uneori lista se scurtează, alteori rămâne grea; scopul nu este să negi problemele, ci să vezi ce poți face astăzi și ce trebuie încredințat ori cerut ca ajutor.",
         },
         {
           from: "guide",

@@ -61,7 +61,7 @@ export const familieRespingeL1: Lesson = {
   memoryVerseRef: "Psalmul 27:10",
   safety: {
     topic: "mental_health",
-    notice: "Dacă ești dat afară din casă, lovit sau amenințat, aceea nu mai este o neînțelegere în familie și nu se rezolvă cu răbdare. Dacă ești copil sau tânăr, sună la 116 111. În caz de urgență, 112. Pentru sprijin emoțional, 116 123. Nu ești neascultător pentru că ceri ajutor."
+    notice: "Dacă ești dat afară din casă, lovit sau amenințat, aceea nu mai este o neînțelegere în familie și nu se rezolvă cu răbdare. Dacă este implicat un copil, abuzul, neglijarea sau violența se raportează la 119; pentru consilierea copiilor și adolescenților poți încerca 116 111. În caz de pericol imediat, 112. Pentru sprijin emoțional poți încerca 116 123. Nu ești neascultător pentru că ceri ajutor."
   },
   steps: [
     {

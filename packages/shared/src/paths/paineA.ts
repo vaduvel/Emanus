@@ -223,7 +223,7 @@ export const paineL2: Lesson = {
         { from: "guide", text: "Aici trebuie spus ceva pe față, pentru că se predică des și face mult rău." },
         { from: "guide", text: "Nu este adevărat că, dacă ai credință destulă, Dumnezeu îți dă bani. Nu scrie asta nicăieri." },
         { from: "guide", text: "Învățătura aceea are un preț ascuns: când omul rămâne fără bani, rămâne și cu verdictul că nu a crezut destul. Două răni în loc de una." },
-        { from: "guide", text: "Adevărul este mai simplu și mai greu: ni se promite pâinea de azi, nu belșugul de mâine." }
+        { from: "guide", text: "Adevărul este mai simplu și mai greu: Iisus ne învață să cerem pâinea de azi și să depindem de Tatăl, nu să folosim credința drept metodă de îmbogățire." }
       ]
     },
     {
@@ -241,8 +241,8 @@ export const paineL2: Lesson = {
       order: 6,
       bubbles: [
         { from: "guide", text: "Poporul care a mers prin pustie a primit hrană zi de zi. Ce strângeau peste măsură, pentru siguranță, se strica până dimineața." },
-        { from: "guide", text: "A fost o școală lungă de patruzeci de ani pentru o lecție de o propoziție: Dumnezeu dă azi." },
-        { from: "guide", text: "Nu este o școală plăcută. Dar nimeni nu a murit de foame în ea." }
+        { from: "guide", text: "A fost o școală lungă de patruzeci de ani: mana era darul lui Dumnezeu pentru ziua aceea, nu un depozit controlat de om." },
+        { from: "guide", text: "Textul acesta arată purtarea Lui de grijă pentru Israel în pustie. Nu îl transformăm într-un contract prin care niciun credincios nu va cunoaște vreodată foamea sau lipsa." }
       ]
     },
     {
@@ -347,9 +347,9 @@ export const paineL3: Lesson = {
       type: "hook",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Cunosc două feluri de oboseală și nu seamănă între ele." },
-        { from: "guide", text: "Una vine din muncă multă. Se vindecă prin somn." },
-        { from: "guide", text: "Cealaltă vine din muncă nevăzută. Aceea nu se vindecă prin somn, pentru că nu mușchii sunt obosiți, ci sufletul." }
+        { from: "guide", text: "Oboseala nu are o singură cauză și nu se citește corect dintr-un ecran." },
+        { from: "guide", text: "Uneori vine din lipsa somnului sau din muncă multă. Alteori intră împreună boala, depresia, stresul, nedreptatea și munca nevăzută." },
+        { from: "guide", text: "Odihnește trupul, dar dacă oboseala persistă, verifică și sănătatea. Iar când munca te zdrobește sau te dezumanizează, numește adevărul și caută ajutor, nu doar încă o noapte de somn." }
       ]
     },
     {
@@ -468,7 +468,7 @@ export const paineL4: Lesson = {
   memoryVerseRef: "Matei 6:33",
   safety: {
     topic: "mental_health",
-    notice: "Dacă din cauza banilor ai ajuns să te gândești că ai tăi ar sta mai bine fără tine, spune cuiva astăzi. 112 în caz de urgență, 116 123 pentru linia de sprijin emoțional, 116 111 pentru copii. Datoria se poate reeșalona. Tu nu poți fi înlocuit."
+    notice: "Dacă din cauza banilor ai ajuns să te gândești că ai tăi ar sta mai bine fără tine, spune cuiva astăzi. Pentru pericol imediat sună la 112; pentru sprijin emoțional poți încerca 116 123, iar copiii și adolescenții pot încerca 116 111. Chiar dacă datoria nu poate fi rezolvată repede, moartea ta nu este soluția. Tu nu poți fi înlocuit."
   },
   steps: [
     {
@@ -498,7 +498,7 @@ export const paineL4: Lesson = {
         { from: "guide", text: "Trebuie să spun un lucru clar aici, pentru că uneori disperarea din bani ajunge foarte departe." },
         { from: "guide", text: "Dacă ai ajuns să te gândești că familia ta ar sta mai bine fără tine, acela nu este un calcul. Este oboseala care a început să mintă." },
         { from: "guide", text: "Sună astăzi: 112 dacă este urgent, 116 123 dacă ai nevoie să vorbești cu cineva, 116 111 dacă ești copil." },
-        { from: "guide", text: "Datoriile se reeșalonează. Casele se vând și se cumpără la loc. Tu nu ai înlocuitor la masa aceea." }
+        { from: "guide", text: "Unele datorii se pot renegocia, iar pentru altele există ajutor financiar sau juridic. Chiar când pierderea materială nu mai poate fi oprită, moartea ta nu este soluția. Tu nu ai înlocuitor la masa aceea." }
       ]
     },
     {
@@ -508,7 +508,7 @@ export const paineL4: Lesson = {
       bubbles: [
         { from: "guide", text: "Lumea are un singur răspuns la lipsă: mai mult. Mai multe ore, al doilea job, un credit peste celălalt." },
         { from: "guide", text: "Iar unii creștini adaugă o povară deasupra: «dacă ai fi dat mai mult, ai fi primit mai mult». Nu răspunde nimeni pentru omul care rămâne apoi și fără bani, și fără credință." },
-        { from: "guide", text: "Iisus nu promite belșug celor care caută Împărăția. Promite că cele necesare nu vor fi uitate." }
+        { from: "guide", text: "Iisus nu promite belșug și nici nu ne dă voie să judecăm credința omului după cont. El poruncește să căutăm mai întâi Împărăția și ne așază nevoile sub grija Tatălui, fără să ascundă că oamenii credincioși pot trece prin foame și lipsă." }
       ]
     },
     {
@@ -558,13 +558,13 @@ export const paineL4: Lesson = {
       type: "quiz",
       order: 9,
       quiz: {
-        question: "Ce promite Matei 6:33 celui care caută mai întâi Împărăția?",
+        question: "Cum citim corect Matei 6:33?",
         options: [
           { text: "Bogăție, dacă are destulă credință", correct: false },
-          { text: "Că cele necesare i se vor da pe deasupra", correct: true },
+          { text: "Să caute mai întâi Împărăția și să-și încredințeze nevoile Tatălui, fără să facă din verset o formulă de prosperitate", correct: true },
           { text: "Că nu va mai avea niciodată griji materiale", correct: false }
         ],
-        explanation: "Versetul vorbește despre hrană, băutură și îmbrăcăminte, adică despre strictul necesar, și le numește lucruri date «pe deasupra», nu răsplată pentru credință. Lipsa nu este dovada că ai crezut prea puțin."
+        explanation: "Versetul vorbește despre hrană, băutură și îmbrăcăminte și cere prioritatea Împărăției, nu o negociere cu Dumnezeu. Pavel spune și că a cunoscut foamea și lipsa (Filipeni 4:12), deci nu folosim Matei 6:33 ca să acuzăm omul sărac că nu a crezut destul."
       }
     },
     {

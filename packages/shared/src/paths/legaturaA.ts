@@ -86,7 +86,7 @@ export const legaturaL1: Lesson = {
       bubbles: [
         { from: "guide", text: "Înainte să mergem mai departe, trebuie să spun un lucru clar, o singură dată, dar apăsat." },
         { from: "guide", text: "Dacă în relația aceasta ești lovit, amenințat sau ținut sub control, drumul acesta nu este primul lucru de care ai nevoie. Siguranța este." },
-        { from: "guide", text: "112 dacă ești în pericol acum. 116 123 dacă ai nevoie să vorbești cu cineva. 116 111 dacă ești copil sau știi un copil în pericol." },
+        { from: "guide", text: "112 dacă ești în pericol acum. Pentru sprijin emoțional poți încerca 116 123. Copiii și adolescenții pot încerca 116 111 pentru consiliere; dacă un copil este abuzat, neglijat, exploatat sau în pericol, raportează la 119." },
         { from: "guide", text: "Nimic din ce citești aici nu îți cere să rămâi într-un loc care te rănește." }
       ]
     },
@@ -245,9 +245,9 @@ export const legaturaL2: Lesson = {
       type: "truth_simple",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Adevărul de astăzi: nu poți cere de la celălalt ceva ce tu nu ai dat." },
-        { from: "guide", text: "Și nu poți aștepta ca el să înceapă, pentru că și el așteaptă." },
-        { from: "guide", text: "Cineva trebuie să se oprească din așteptat. Tu ești aici, deci tu ești acela." }
+        { from: "guide", text: "Adevărul de astăzi: dacă tu ai păcătuit, nu aștepta ca cel rănit să facă primul pas. Numește ce ai făcut, cere iertare fără scuze și repară ce se poate repara." },
+        { from: "guide", text: "Dacă tu ai fost rănit, nu ești obligat să pornești împăcarea și nu te întorci în pericol. Poți pune limite și poți cere ajutor." },
+        { from: "guide", text: "Nu folosi greșeala celuilalt ca să ascunzi partea ta, dar nici această lecție ca să iei asupra ta vina lui." }
       ]
     },
     {
@@ -510,7 +510,7 @@ export const legaturaL4: Lesson = {
       bubbles: [
         { from: "guide", text: "Aici trebuie să repet ce am spus în prima lecție, pentru că aici se poate înțelege greșit." },
         { from: "guide", text: "A nu întoarce răul cu rău nu înseamnă a sta sub pumn. Nu înseamnă a nu chema ajutor. Nu înseamnă a nu pleca dintr-o casă periculoasă." },
-        { from: "guide", text: "Dacă ești în pericol: 112. Dacă ai nevoie să vorbești: 116 123. Pentru copii: 116 111." },
+        { from: "guide", text: "Dacă ești în pericol: 112. Pentru sprijin emoțional poți încerca 116 123. Pentru consilierea copiilor și adolescenților poți încerca 116 111; abuzul sau pericolul asupra unui copil se raportează la 119." },
         { from: "guide", text: "Lecția aceasta este despre vorbe și despre răzbunările mici de fiecare zi. Nu este despre a răbda violența." }
       ]
     },

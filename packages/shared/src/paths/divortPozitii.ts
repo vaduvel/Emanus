@@ -61,7 +61,7 @@ export const divortPozitiiL0: Lesson = {
   memoryVerseRef: "Maleahi 2:16",
   safety: {
     topic: "mental_health",
-    notice: "Dacă ești lovit, amenințat sau ți-e frică în casa ta, asta nu este o problemă de doctrină, este o problemă de siguranță. Sună 112 în caz de urgență, 116 123 pentru linia de sprijin emoțional, 116 111 dacă ești copil sau tânăr. Nicio lecție de aici nu îți cere să rămâi într-un loc în care ești în pericol."
+    notice: "Dacă ești lovit, amenințat sau ți-e frică în casa ta, asta nu este o problemă de doctrină, este o problemă de siguranță. Pentru pericol imediat sună la 112; pentru sprijin emoțional poți încerca 116 123; copiii și adolescenții pot încerca 116 111 pentru consiliere, iar abuzul sau pericolul asupra unui copil se raportează la 119. Nicio lecție de aici nu îți cere să rămâi într-un loc în care ești în pericol."
   },
   steps: [
     {

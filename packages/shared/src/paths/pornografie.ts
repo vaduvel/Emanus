@@ -54,7 +54,7 @@ export const pornografieL1: Lesson = {
   memoryVerseRef: "Psalmul 32:5",
   safety: {
     topic: "mental_health",
-    notice: "Dacă nu mai poți opri, dacă îți afectează somnul, munca sau căsnicia, sau dacă ai început să cauți lucruri tot mai dure, cere ajutor de specialitate: un psiholog sau un psihoterapeut. Nu este o înfrângere spirituală, este îngrijire. Pentru sprijin emoțional: 116 123. Dacă ești copil sau tânăr: 116 111. În caz de urgență: 112. Iar dacă ai dat peste materiale cu copii sau fără consimțământ, acelea nu sunt o luptă personală, sunt fapte penale și se anunță la poliție."
+    notice: "Dacă nu mai poți opri, dacă îți afectează somnul, munca sau căsnicia, sau dacă ai început să cauți lucruri tot mai dure, cere ajutor de specialitate: un psiholog sau un psihoterapeut. Nu este o înfrângere spirituală, este îngrijire. Pentru sprijin emoțional poți încerca 116 123. Dacă ești copil sau adolescent, spune unui adult sigur ori încearcă 116 111; abuzul, exploatarea sau violența asupra unui copil se raportează la 119. În caz de pericol imediat: 112. Materialele cu copii sau fără consimțământ nu sunt o luptă personală, sunt fapte penale și se anunță la poliție."
   },
   steps: [
     {
@@ -86,7 +86,7 @@ export const pornografieL1: Lesson = {
         { from: "guide", text: "Unu: nu ești singurul și nu ești doar bărbat. Femeile se luptă cu asta și sunt și mai singure, pentru că nimeni nu vorbește despre ele." },
         { from: "guide", text: "Doi: dacă nu mai poți opri sau dacă ai început să cauți lucruri tot mai dure, ai nevoie de un specialist, nu doar de rugăciune. Un psiholog nu înlocuiește credința; îți dă unelte." },
         { from: "guide", text: "Trei: dacă este vorba de materiale cu copii sau fără consimțământ, aceea nu este o luptă personală. Este o faptă penală, se oprește acum și se anunță." },
-        { from: "guide", text: "Patru: dacă ești minor, spune-i unui adult în care ai încredere sau sună la 116 111. Nu ești în bucluc pentru că ceri ajutor." }
+        { from: "guide", text: "Patru: dacă ești minor, oprește parcursul pentru adulți și spune-i unui adult sigur sau încearcă 116 111. Dacă cineva te-a expus, constrâns ori exploatat, se raportează la 119 sau la poliție; pentru pericol imediat sună la 112. Nu ești în bucluc pentru că ceri ajutor." }
       ]
     },
     {
@@ -236,9 +236,9 @@ export const pornografieL2: Lesson = {
       type: "hook",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Un singur lucru ține cercul în viață mai mult decât orice altceva: faptul că nu știe nimeni." },
-        { from: "guide", text: "Nu pofta este combustibilul principal. Secretul este. Cât timp nu știe nimeni, nu se schimbă nimic, oricâte promisiuni ai face noaptea." },
-        { from: "guide", text: "De aceea, cel mai greu pas nu este să nu te uiți. Este să spui unui om." }
+        { from: "guide", text: "Păcatul acesta crește în ascuns. Pofta este reală, dar secretul îi lasă loc să lucreze fără lumină, fără răspundere și fără ajutor." },
+        { from: "guide", text: "Nu îl numim doar obicei și nu îl scuzăm prin stres: pornografia folosește trupul altuia pentru propria plăcere și trebuie părăsită, nu administrată." },
+        { from: "guide", text: "De aceea, pe lângă mărturisirea înaintea lui Dumnezeu, spui adevărul unui om matur și de încredere care te poate ține răspunzător." }
       ]
     },
     {
@@ -247,7 +247,7 @@ export const pornografieL2: Lesson = {
       order: 3,
       bubbles: [
         { from: "guide", text: "Cinci lucruri practice. Nu sunt spirituale și tocmai de aceea lipsesc de obicei." },
-        { from: "guide", text: "Unu, omul: alege unul singur. Nu zece și nu grupul de pe telefon. Un om care nu se va îngrozi și nu va povesti mai departe. Dacă ești căsătorit, soțul sau soția poate fi al doilea pas, nu primul, și de preferat cu cineva de față." },
+        { from: "guide", text: "Unu, omul: alege unul singur. Nu zece și nu grupul de pe telefon. Un om matur, discret și capabil să te țină răspunzător. Dacă ești căsătorit, soțul sau soția este direct rănit de secret și adevărul nu trebuie ascuns în continuare; pregătește mărturisirea curând, cu ajutor pastoral sau terapeutic dacă există risc de violență ori dacă nu știi cum să o faci fără manipulare." },
         { from: "guide", text: "Doi, dispozitivul: filtru pe telefon și pe calculator, iar telefonul încărcat în altă cameră peste noapte. Nu este lipsă de credință, este bun-simț. Nu ții sticla în casă dacă te lupți cu băutura." },
         { from: "guide", text: "Trei, ora: dacă se întâmplă după miezul nopții, problema este și ora de culcare. Culcă-te mai devreme o săptămână și vezi ce se schimbă." },
         { from: "guide", text: "Patru, golul: întreabă-te ce căutai de fapt. Odihnă? Alăturare? Să nu mai simți nimic o vreme? Pune ceva adevărat în locul acela, altfel rămâne gol și se umple singur." },
@@ -269,8 +269,8 @@ export const pornografieL2: Lesson = {
       type: "truth_simple",
       order: 5,
       bubbles: [
-        { from: "guide", text: "Adevărul de astăzi: nu ieși singur și nu ieși într-o zi." },
-        { from: "guide", text: "Nu îți promit că se termină repede. Îți spun că se poate și că alții au ieșit, pe drumul ăsta, nu pe altul." }
+        { from: "guide", text: "Adevărul de astăzi: pocăința nu este o promisiune spusă noaptea, ci întoarcere la lumină, tăierea accesului, mărturisire și roade văzute în timp." },
+        { from: "guide", text: "Nu îți promit că ispita se termină repede. Calea biblică rămâne aceeași — adevăr, pocăință, fugă de prilej și oameni cărora le dai socoteală — chiar dacă planul concret de ajutor diferă de la om la om." }
       ]
     },
     {

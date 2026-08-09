@@ -57,7 +57,7 @@ export const legaturaL5: Lesson = {
         { from: "guide", text: "Iertarea: renunți să mai ceri plată pentru ce ți s-a făcut. Se face între tine și Dumnezeu și nu are nevoie de acordul celuilalt." },
         { from: "guide", text: "Împăcarea: relația se reia. Are nevoie de doi oameni și de o schimbare reală din partea celui care a rănit." },
         { from: "guide", text: "Încrederea: se reclădește în timp, prin fapte repetate. Nu se dă înapoi cu o propoziție." },
-        { from: "guide", text: "Poți să ierți astăzi și să nu te împaci niciodată. Nu ești un creștin pe jumătate dacă faci așa." }
+        { from: "guide", text: "Poți să alegi astăzi înaintea lui Dumnezeu să renunți la răzbunare și totuși să nu te împaci niciodată. Iertarea nu numește răul bine, nu șterge adevărul și poate trebui reafirmată când rana revine." }
       ]
     },
     {
@@ -193,9 +193,9 @@ export const legaturaL6: Lesson = {
       type: "hook",
       order: 2,
       bubbles: [
-        { from: "guide", text: "Când cineva ne rănește, aproape niciodată nu mergem la el. Mergem la altcineva." },
-        { from: "guide", text: "Îi povestim unei prietene, unui frate, unui coleg. Și de fiecare dată când povestim, mai punem un strat." },
-        { from: "guide", text: "După zece povestiri, omul din capul nostru nu mai seamănă cu omul adevărat. Și cu omul din capul nostru nu se poate împăca nimeni." }
+        { from: "guide", text: "Când cineva ne rănește, avem nevoie uneori de un om sigur înainte de orice confruntare: consilier, păstor, terapeut, martor sau autoritate. În abuz, amenințare ori infracțiune, nu mergi singur la cel care te-a rănit." },
+        { from: "guide", text: "A cere ajutor și a spune adevărul nu este bârfă. Altceva este să aduni o tabără, să exagerezi sau să folosești povestea ca armă." },
+        { from: "guide", text: "Spune faptele cât mai exact, fără să micșorezi răul și fără să adaugi ce nu știi. Adevărul protejează și victima, și dreptatea." }
       ]
     },
     {

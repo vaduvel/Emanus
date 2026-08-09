@@ -183,7 +183,7 @@ export const divortL1: Lesson = {
         },
         {
           from: "guide",
-          text: "Dacă asta ține de săptămâni, mergi la medic. Dacă te ține treaz nopțile sau îți trece prin cap să îți faci rău, sună 116 123, e gratuit și non-stop. Dacă e acum, 112.",
+          text: "Dacă asta ține de săptămâni, mergi la medic sau la psiholog. Dacă îți trece prin cap să îți faci rău, nu rămâne singur: pentru pericol imediat sună la 112, iar pentru sprijin emoțional poți încerca 116 123 și poți merge la camera de gardă.",
         },
         { from: "guide", text: "Nu e lipsă de credință. E îngrijire, ca la orice altă rană." },
       ],
@@ -229,7 +229,7 @@ export const divortL1: Lesson = {
       order: 13,
       journalPrompt:
         "Scrie tot ce ai pierdut. Nu doar persoana — și lucrurile mici: o zi din săptămână, un obicei, un loc unde nu mai mergi. Lasă lista neterminată.",
-      bubbles: [{ from: "guide", text: "Rămâne pe telefonul tău. Nu o citește nimeni." }],
+      bubbles: [{ from: "guide", text: "Răspunsul este opțional. Nu scrie nimic ce nu vrei să rămână salvat pe dispozitivul tău." }],
       reward: { xp: 0 },
     },
   ],
@@ -485,7 +485,7 @@ export const divortL3: Lesson = {
       type: "step",
       order: 1,
       bubbles: [
-        { from: "guide", text: "Înainte de orice, numerele. Sunt gratuite și răspund non-stop." },
+        { from: "guide", text: "Înainte de orice, numerele. Pentru pericol imediat sună la 112; celelalte servicii au roluri și programe diferite." },
         { from: "guide", text: "Pericol imediat: 112." },
         { from: "guide", text: "Violență în familie: 0800 500 333." },
         { from: "guide", text: "Pentru un copil în pericol: 119." },
@@ -588,7 +588,7 @@ export const divortL3: Lesson = {
         { from: "guide", text: "Și partea despre care se tace cel mai mult." },
         {
           from: "guide",
-          text: "Dacă ai plecat dintr-o casă în care erai lovit, amenințat sau în care copiii erau în pericol, n-ai «stricat» un legământ. Legământul fusese deja rupt de cel care lovea.",
+          text: "Dacă ai plecat dintr-o casă în care erai lovit, amenințat sau în care copiii erau în pericol, plecarea pentru siguranță nu te face vinovat de violența celuilalt și nu te obligă să te întorci. Creștinii formulează diferit ce înseamnă abuzul pentru legământ; asupra siguranței nu negociem.",
         },
         {
           from: "guide",
@@ -652,7 +652,7 @@ export const divortL3: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Dacă ai scris ceva acolo: acel lucru, oricare ar fi, se rezolvă la cruce, nu printr-o căsnicie distrusă ca pedeapsă. Dumnezeu nu pedepsește de două ori același lucru.",
+          text: "Dacă ai scris un păcat real, nu îl micșora: numește-l, mărturisește-l, repară ce se poate repara și acceptă urmările pe care nu le poți șterge. Dar nu declara automat că păcatul celuilalt sau destrămarea căsniciei este măsura condamnării lui Dumnezeu asupra ta. În Hristos nu mai este condamnare; consecințele pământești și disciplina pot rămâne.",
         },
         {
           from: "guide",
