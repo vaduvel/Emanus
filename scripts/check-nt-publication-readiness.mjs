@@ -86,6 +86,7 @@ if (sourceEvidence.missing) pushBlocker(blockers, "source-evidence-missing", 1, 
 
 let editorialClassificationUnresolved = null
 let editorialSourceTraceabilityPending = null
+let editorialSourceTraceabilityExamples = []
 if (editorialRaw.missing) {
   pushBlocker(blockers, "editorial-audit-missing", 1, "Editorial raw audit is missing.")
 } else if (editorialDecisions.missing) {
@@ -104,9 +105,19 @@ if (editorialRaw.missing) {
   } else {
     editorialClassificationUnresolved = 0
   }
-  editorialSourceTraceabilityPending = decisions.filter((item) => item.sourceTraceabilityState !== "verified").length
+  const retainedOrRewritten = decisions.filter((item) => item.action === "keep-reviewed" || item.action === "rewrite-reviewed")
+  const pendingTraceability = retainedOrRewritten.filter((item) => item.sourceTraceabilityState !== "verified")
+  editorialSourceTraceabilityPending = pendingTraceability.length
+  editorialSourceTraceabilityExamples = pendingTraceability.slice(0, 20).map((item) => ({
+    bookId: item.bookId,
+    chapter: item.chapter,
+    field: item.field,
+    action: item.action,
+    sentence: item.sentence,
+  }))
 }
 
+pushBlocker(blockers, "editorial-source-traceability-pending", editorialSourceTraceabilityPending, `${editorialSourceTraceabilityPending ?? 0} retained or rewritten editorial decisions still require explicit source verification.`, { examples: editorialSourceTraceabilityExamples })
 pushBlocker(blockers, "whole-chapter-summary-units", wholeChapterSummaries.length, `${wholeChapterSummaries.length} rebuilt chapters are still one whole-chapter unit.`, { examples: wholeChapterSummaries.slice(0, 20) })
 pushBlocker(blockers, "thin-explanation-units", thin.length, `${thin.length} explanation units are under 45 words.`, { examples: thin.slice(0, 20) })
 pushBlocker(blockers, "empty-unit-headings", empty.length, `${empty.length} explanation units have empty headings.`, { examples: empty.slice(0, 20) })
